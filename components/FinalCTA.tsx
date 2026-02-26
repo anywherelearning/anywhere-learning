@@ -4,7 +4,7 @@ export default function FinalCTA() {
   return (
     <section className="bg-forest py-16 sm:py-20">
       <div className="mx-auto max-w-xl px-4 text-center">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-cream sm:text-4xl">
+        <h2 className="font-display text-3xl text-cream sm:text-4xl">
           Ready to start?
         </h2>
         <p className="mt-4 text-lg text-cream/80">

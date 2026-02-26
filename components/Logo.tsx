@@ -47,7 +47,7 @@ export function LogoFull({ iconSize = 36, className = "" }: { iconSize?: number;
     <div className={`flex items-center gap-2.5 ${className}`}>
       <LogoIcon size={iconSize} />
       <div className="flex flex-col">
-        <span className="font-[family-name:var(--font-display)] text-lg leading-tight text-forest">
+        <span className="font-display text-lg leading-tight text-forest">
           Anywhere Learning
         </span>
       </div>

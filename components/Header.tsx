@@ -28,32 +28,17 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        {/* Logo + Wordmark */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
-          {/* Placeholder logo circle */}
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <img
+            src="/logo-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8"
             aria-hidden="true"
-          >
-            <circle cx="14" cy="14" r="14" fill="#588157" />
-            <path
-              d="M8 18c2-4 4-8 6-8s4 4 6 8"
-              stroke="#faf9f6"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M11 16c1-2 2-4 3-4s2 2 3 4"
-              stroke="#faf9f6"
-              strokeWidth="1"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="font-[family-name:var(--font-display)] text-lg text-forest">
+          />
+          <span className="font-display text-lg text-forest">
             Anywhere Learning
           </span>
         </div>

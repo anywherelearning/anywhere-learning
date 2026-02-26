@@ -17,29 +17,21 @@ function PDFMockup() {
 
         {/* Mini logo */}
         <div className="mb-4 flex items-center gap-1.5">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 28 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <img
+            src="/logo-icon.png"
+            alt=""
+            width={18}
+            height={18}
+            className="h-[18px] w-[18px]"
             aria-hidden="true"
-          >
-            <circle cx="14" cy="14" r="14" fill="#588157" />
-            <path
-              d="M8 18c2-4 4-8 6-8s4 4 6 8"
-              stroke="#faf9f6"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="font-[family-name:var(--font-display)] text-xs text-forest">
+          />
+          <span className="font-display text-xs text-forest">
             Anywhere Learning
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="font-[family-name:var(--font-body)] text-sm font-bold leading-snug text-forest">
+        <h2 className="font-body text-sm font-bold leading-snug text-forest">
           10 Life Skills Your Kids Can Learn This Week
         </h2>
 
@@ -66,7 +58,7 @@ export default function Hero() {
 
           {/* Text + Form */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="font-[family-name:var(--font-display)] text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl">
               10 life skills your kids can learn this week
             </h1>
 

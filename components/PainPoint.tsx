@@ -2,7 +2,7 @@ export default function PainPoint() {
   return (
     <section className="bg-gold-light/30 py-16 sm:py-20">
       <div className="mx-auto max-w-2xl px-4 text-center">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-forest sm:text-4xl">
+        <h2 className="font-display text-3xl text-forest sm:text-4xl">
           Does this sound familiar?
         </h2>
 
