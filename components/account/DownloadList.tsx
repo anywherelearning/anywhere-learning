@@ -20,16 +20,17 @@ interface DownloadListProps {
 export default function DownloadList({ purchases }: DownloadListProps) {
   if (purchases.length === 0) {
     return (
-      <div className="mt-8 rounded-xl border border-gray-100 bg-white p-8 text-center shadow-sm">
-        <p className="text-lg text-gray-600">No purchases yet.</p>
-        <p className="mt-2 text-gray-500">
-          Browse our activity packs and start learning today.
+      <div className="mt-10 text-center py-20">
+        <div className="text-6xl mb-6">&#x1F331;</div>
+        <h2 className="text-xl font-semibold text-gray-800 mb-2">No packs yet</h2>
+        <p className="text-gray-500 mb-6">
+          Your activity packs will appear here after your first purchase.
         </p>
         <Link
           href="/shop"
-          className="mt-4 inline-block rounded-lg bg-forest px-6 py-3 font-semibold text-cream transition-colors hover:bg-forest-dark"
+          className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-3 px-8 rounded-xl transition-colors"
         >
-          Browse Activity Packs &rarr;
+          Browse Activity Packs
         </Link>
       </div>
     );

@@ -12,6 +12,8 @@ interface Product {
   imageUrl: string | null;
   category: string;
   isBundle: boolean;
+  activityCount?: number | null;
+  ageRange?: string | null;
 }
 
 interface ProductGridProps {
@@ -56,7 +58,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <div
       ref={gridRef}
-      className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
     >
       {products.map((product) => (
         <div key={product.slug} data-animate className="opacity-0">

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { formatDate } from '@/lib/utils';
 
 interface DownloadCardProps {
@@ -11,32 +10,25 @@ interface DownloadCardProps {
 export default function DownloadCard({
   productId,
   productName,
-  imageUrl,
   purchasedAt,
 }: DownloadCardProps) {
   return (
-    <div className="flex items-center gap-4 rounded-xl border border-gray-100 bg-white p-4 shadow-sm sm:p-5">
-      {/* Product image */}
-      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-forest/10 to-gold-light/30 sm:h-20 sm:w-20">
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={productName}
-            fill
-            className="object-cover"
-            sizes="80px"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center">
-            <span className="text-xs text-forest/30">PDF</span>
+    <div className="bg-white rounded-2xl border border-gray-100 p-6 flex items-center gap-6 hover:shadow-sm transition-shadow">
+      {/* Small product mockup */}
+      <div className="w-16 h-20 bg-gradient-to-br from-cream to-gold-light/30 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="w-10 h-12 bg-white rounded-lg shadow-sm border border-forest/10 p-1">
+          <div className="w-3 h-3 rounded-full bg-forest/20 mx-auto mb-1" />
+          <div className="space-y-0.5 px-0.5">
+            <div className="h-0.5 bg-gray-200 rounded-full" />
+            <div className="h-0.5 bg-gray-200 rounded-full w-3/4" />
           </div>
-        )}
+        </div>
       </div>
 
       {/* Info */}
       <div className="flex-1 min-w-0">
         <h3 className="font-semibold text-gray-900 truncate">{productName}</h3>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="text-sm text-gray-400">
           Purchased {formatDate(purchasedAt)}
         </p>
       </div>
@@ -44,9 +36,9 @@ export default function DownloadCard({
       {/* Download button */}
       <a
         href={`/api/download/${productId}`}
-        className="shrink-0 rounded-lg bg-forest px-4 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+        className="flex-shrink-0 bg-forest hover:bg-forest-dark text-cream font-medium py-2.5 px-5 rounded-xl transition-colors text-sm"
       >
-        <span className="hidden sm:inline">Download PDF</span>
+        <span className="hidden sm:inline">Download PDF &darr;</span>
         <span className="sm:hidden" aria-label="Download PDF">&darr;</span>
       </a>
     </div>

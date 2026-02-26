@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { LogoFull } from '@/components/Logo';
+import { LogoIcon } from '@/components/Logo';
 import AuthNav from './AuthNav';
 
 export default function SiteHeader() {
@@ -17,33 +17,77 @@ export default function SiteHeader() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Close mobile menu on escape key
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape' && mobileOpen) setMobileOpen(false);
+    }
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [mobileOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 bg-cream/95 backdrop-blur-sm transition-shadow ${
-        scrolled ? 'shadow-md' : ''
+      className={`sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b transition-all ${
+        scrolled ? 'border-forest/10 shadow-sm' : 'border-transparent'
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-16">
-        {/* Logo */}
-        <Link href="/" aria-label="Anywhere Learning home">
-          <LogoFull iconSize={32} />
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+        {/* Left: Logo */}
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Anywhere Learning home">
+          <LogoIcon size={28} />
+          <span className="font-display text-xl text-forest">
+            Anywhere Learning
+          </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 md:flex">
+        {/* Center: Nav links (desktop only) */}
+        <nav className="hidden items-center gap-8 md:flex">
           <Link
             href="/shop"
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-forest"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
           >
-            Shop
+            Activity Packs
           </Link>
+          <Link
+            href="/shop?category=bundle"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
+          >
+            Bundles
+          </Link>
+          <Link
+            href="/#about"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
+          >
+            Our Philosophy
+          </Link>
+        </nav>
+
+        {/* Right: Account + CTA */}
+        <div className="hidden items-center gap-4 md:flex">
           <AuthNav />
+          <Link
+            href="/shop"
+            className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+          >
+            Shop Packs
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors hover:bg-forest/5 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-forest/5 md:hidden"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
         >
@@ -71,23 +115,44 @@ export default function SiteHeader() {
             )}
           </svg>
         </button>
-      </nav>
+      </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full screen overlay */}
       {mobileOpen && (
-        <div className="border-t border-gray-100 bg-cream px-4 pb-4 md:hidden">
-          <div className="flex flex-col gap-3 pt-3">
+        <div className="fixed inset-0 top-16 z-40 bg-cream md:hidden">
+          <nav className="flex flex-col items-center justify-center gap-8 pt-20">
             <Link
               href="/shop"
               onClick={() => setMobileOpen(false)}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-forest/5 hover:text-forest"
+              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Shop
+              Activity Packs
             </Link>
-            <div className="px-3 py-2">
+            <Link
+              href="/shop?category=bundle"
+              onClick={() => setMobileOpen(false)}
+              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
+            >
+              Bundles
+            </Link>
+            <Link
+              href="/#about"
+              onClick={() => setMobileOpen(false)}
+              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
+            >
+              Our Philosophy
+            </Link>
+            <div className="text-2xl font-medium text-forest">
               <AuthNav onLinkClick={() => setMobileOpen(false)} />
             </div>
-          </div>
+            <Link
+              href="/shop"
+              onClick={() => setMobileOpen(false)}
+              className="mt-4 rounded-xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-colors hover:bg-forest-dark"
+            >
+              Shop Packs
+            </Link>
+          </nav>
         </div>
       )}
     </header>

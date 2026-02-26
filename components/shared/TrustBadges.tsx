@@ -6,39 +6,24 @@ const approaches = [
   'Eclectic',
 ];
 
-const badges = [
-  { icon: '🚫', label: 'No curriculum needed' },
-  { icon: '🌍', label: 'Works anywhere' },
-  { icon: '🎯', label: 'Adapts to your child' },
-];
-
 export default function TrustBadges() {
   return (
-    <div className="rounded-xl bg-gold-light/20 p-6">
-      {/* Philosophy approaches */}
-      <p className="mb-3 text-sm font-medium text-gray-600">Works for:</p>
-      <div className="mb-4 flex flex-wrap gap-2">
+    <div className="bg-gold-light/20 rounded-2xl p-6">
+      <p className="text-sm text-gray-500 mb-3">Works beautifully with:</p>
+      <div className="flex flex-wrap gap-2 mb-4">
         {approaches.map((a) => (
           <span
             key={a}
-            className="rounded-full bg-cream px-3 py-1 text-xs font-medium text-forest"
+            className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
           >
             {a}
           </span>
         ))}
       </div>
-
-      {/* Icon badges */}
-      <div className="flex flex-wrap gap-4">
-        {badges.map((b) => (
-          <span
-            key={b.label}
-            className="flex items-center gap-1.5 text-sm text-gray-700"
-          >
-            <span aria-hidden="true">{b.icon}</span>
-            {b.label}
-          </span>
-        ))}
+      <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <span>&#x1F6AB; No curriculum needed</span>
+        <span>&#x1F30D; Works anywhere</span>
+        <span>&#x1F3AF; Adapts to your child</span>
       </div>
     </div>
   );

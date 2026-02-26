@@ -3,9 +3,9 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 
 const categories = [
-  { value: '', label: 'All' },
+  { value: '', label: 'All Packs' },
   { value: 'seasonal', label: 'Seasonal' },
-  { value: 'nature', label: 'Nature' },
+  { value: 'nature', label: 'Nature & Outdoor' },
   { value: 'creativity', label: 'Creativity' },
   { value: 'real-world', label: 'Real-World Skills' },
   { value: 'life-skills', label: 'Life Skills' },
@@ -29,16 +29,16 @@ export default function CategoryFilter() {
   }
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none" role="tablist">
+    <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide" role="tablist">
       {categories.map((cat) => (
         <button
           key={cat.value}
           role="tab"
           aria-selected={active === cat.value}
           onClick={() => handleFilter(cat.value)}
-          className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+          className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
             active === cat.value
-              ? 'bg-forest text-cream'
+              ? 'bg-forest text-cream shadow-sm'
               : 'bg-white text-gray-600 hover:bg-forest/5 hover:text-forest border border-gray-200'
           }`}
         >

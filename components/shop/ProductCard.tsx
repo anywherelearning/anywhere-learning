@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import PriceDisplay from './PriceDisplay';
 
 interface ProductCardProps {
   name: string;
@@ -11,12 +9,14 @@ interface ProductCardProps {
   imageUrl?: string | null;
   category: string;
   isBundle: boolean;
+  activityCount?: number | null;
+  ageRange?: string | null;
 }
 
 const categoryLabels: Record<string, string> = {
   seasonal: 'Seasonal',
   creativity: 'Creativity',
-  nature: 'Nature',
+  nature: 'Nature & Outdoor',
   'real-world': 'Real-World Skills',
   'life-skills': 'Life Skills',
   'ai-literacy': 'AI & Digital',
@@ -29,63 +29,82 @@ export default function ProductCard({
   shortDescription,
   priceCents,
   compareAtPriceCents,
-  imageUrl,
   category,
   isBundle,
+  activityCount,
+  ageRange,
 }: ProductCardProps) {
   return (
-    <Link
-      href={`/shop/${slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-    >
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-forest/10 to-gold-light/30">
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center">
-            <span className="font-display text-2xl text-forest/30">
+    <Link href={`/shop/${slug}`} className="group block">
+      <div className="bg-white rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 border border-gray-100/50 overflow-hidden">
+        {/* Product Image / Mockup Area */}
+        <div className="relative aspect-[4/3] bg-gradient-to-br from-cream to-gold-light/30 flex items-center justify-center p-6 overflow-hidden">
+          {/* CSS Product Mockup — a "floating document" card */}
+          <div className="w-3/4 aspect-[3/4] bg-white rounded-xl shadow-lg border border-forest/10 p-4 transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
+            {/* Small forest green circle at top (logo placeholder) */}
+            <div className="w-6 h-6 rounded-full bg-forest/20 mx-auto mb-3" />
+            {/* Product title on the mockup */}
+            <p className="text-center text-forest font-semibold text-xs leading-snug mb-2">
               {name}
+            </p>
+            {/* Decorative lines representing content */}
+            <div className="space-y-1.5 px-2">
+              <div className="h-1 bg-gray-200 rounded-full w-full" />
+              <div className="h-1 bg-gray-200 rounded-full w-4/5" />
+              <div className="h-1 bg-gray-200 rounded-full w-3/5" />
+            </div>
+          </div>
+
+          {/* Bundle badge (only on bundles) */}
+          {isBundle && (
+            <div className="absolute top-3 right-3 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+              BEST VALUE
+            </div>
+          )}
+
+          {/* Category pill */}
+          <div className="absolute bottom-3 left-3 bg-forest/90 text-cream text-xs font-medium px-3 py-1 rounded-full">
+            {categoryLabels[category] || category}
+          </div>
+        </div>
+
+        {/* Card Content */}
+        <div className="p-5 md:p-6">
+          <h3 className="font-semibold text-gray-900 text-lg mb-1.5 group-hover:text-forest transition-colors leading-snug">
+            {name}
+          </h3>
+
+          <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">
+            {shortDescription}
+          </p>
+
+          {/* Meta info row */}
+          <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
+            {activityCount && (
+              <span>{activityCount} activities</span>
+            )}
+            {activityCount && ageRange && <span>&middot;</span>}
+            {ageRange && <span>{ageRange}</span>}
+            {(activityCount || ageRange) && <span>&middot;</span>}
+            <span>PDF download</span>
+          </div>
+
+          {/* Price + CTA row */}
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-xl font-bold text-forest">
+                ${(priceCents / 100).toFixed(2)}
+              </span>
+              {compareAtPriceCents && (
+                <span className="text-sm text-gray-400 line-through ml-2">
+                  ${(compareAtPriceCents / 100).toFixed(2)}
+                </span>
+              )}
+            </div>
+            <span className="text-forest font-medium text-sm group-hover:translate-x-1 transition-transform">
+              View pack &rarr;
             </span>
           </div>
-        )}
-        {isBundle && (
-          <span className="absolute top-3 right-3 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-gray-900">
-            Best Value
-          </span>
-        )}
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-1 flex-col p-5">
-        {/* Category pill */}
-        <span className="mb-2 inline-block w-fit rounded-full bg-forest px-2.5 py-0.5 text-xs font-medium text-cream">
-          {categoryLabels[category] || category}
-        </span>
-
-        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-forest">
-          {name}
-        </h3>
-
-        <p className="mt-1 line-clamp-2 text-sm text-gray-600">
-          {shortDescription}
-        </p>
-
-        <div className="mt-auto pt-4">
-          <PriceDisplay
-            priceCents={priceCents}
-            compareAtPriceCents={compareAtPriceCents}
-          />
-
-          <span className="mt-3 block w-full rounded-lg bg-forest py-2.5 text-center text-sm font-semibold text-cream transition-colors group-hover:bg-forest-dark">
-            Get This Pack &rarr;
-          </span>
         </div>
       </div>
     </Link>

@@ -19,9 +19,9 @@ async function seed() {
       name: 'Master Bundle (Everything)',
       slug: 'master-bundle',
       description:
-        'Every single activity pack we make — in one download. That\'s 220+ activities covering seasonal outdoor learning, creativity challenges, nature exploration, real-world skills, life skills, and AI literacy. This is the complete Anywhere Learning library.\n\nPerfect for families who want it all, or for co-ops and learning groups who want variety for every season and every interest. Print what you need, when you need it.\n\nIncludes all 17 individual packs plus any new packs added to the library.',
+        'Every single activity pack we make \u2014 in one download. That\'s 220+ activities covering seasonal outdoor learning, creativity challenges, nature exploration, real-world skills, life skills, and AI literacy. This is the complete Anywhere Learning library.\n\nPerfect for families who want it all, or for co-ops and learning groups who want variety for every season and every interest. Print what you need, when you need it.\n\nIncludes all 17 individual packs plus any new packs added to the library.',
       shortDescription:
-        'Every activity pack we make — 220+ activities in one download.',
+        'Every activity pack we make \u2014 220+ activities in one download.',
       priceCents: 8999,
       compareAtPriceCents: 19883,
       lemonVariantId: 'LEMON_VARIANT_master-bundle',
@@ -30,7 +30,7 @@ async function seed() {
       isBundle: true,
       bundleProductIds: '[]',
       activityCount: 220,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 1,
       active: true,
     },
@@ -38,9 +38,9 @@ async function seed() {
       name: 'Full Seasonal Bundle (All 4 Seasons)',
       slug: 'seasonal-bundle',
       description:
-        'All four seasonal outdoor learning packs in one bundle. Spring, summer, fall, and winter — 80 activities that get your family outside no matter the weather.\n\nEach season brings unique opportunities to explore, create, and learn from the world around you. These packs rotate naturally through the year so you always have fresh ideas ready.\n\nSave over individual pack pricing and never run out of outdoor activity ideas.',
+        'All four seasonal outdoor learning packs in one bundle. Spring, summer, fall, and winter \u2014 80 activities that get your family outside no matter the weather.\n\nEach season brings unique opportunities to explore, create, and learn from the world around you. These packs rotate naturally through the year so you always have fresh ideas ready.\n\nSave over individual pack pricing and never run out of outdoor activity ideas.',
       shortDescription:
-        'All 4 seasonal packs — 80 outdoor activities for every time of year.',
+        'All 4 seasonal packs \u2014 80 outdoor activities for every time of year.',
       priceCents: 4999,
       compareAtPriceCents: 5996,
       lemonVariantId: 'LEMON_VARIANT_seasonal-bundle',
@@ -49,7 +49,7 @@ async function seed() {
       isBundle: true,
       bundleProductIds: '[]',
       activityCount: 80,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 2,
       active: true,
     },
@@ -59,7 +59,7 @@ async function seed() {
       description:
         'All four real-world skills packs: Budget Challenge, Kitchen Math & Meal Planning, Smart Shopper Lab, and Micro-Business Challenge. 49 activities that teach kids practical skills they\'ll actually use.\n\nFrom grocery math to running a lemonade stand, these packs turn everyday situations into meaningful learning moments. Kids build confidence by solving real problems.\n\nPerfect for families who believe the best education happens in the real world.',
       shortDescription:
-        'All 4 real-world skills packs — 49 practical activities kids actually use.',
+        'All 4 real-world skills packs \u2014 49 practical activities kids actually use.',
       priceCents: 3499,
       compareAtPriceCents: 3996,
       lemonVariantId: 'LEMON_VARIANT_real-world-bundle',
@@ -68,7 +68,7 @@ async function seed() {
       isBundle: true,
       bundleProductIds: '[]',
       activityCount: 49,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 3,
       active: true,
     },
@@ -76,9 +76,9 @@ async function seed() {
       name: 'Creativity Bundle (All 3 Packs)',
       slug: 'creativity-bundle',
       description:
-        'All three creativity packs: Board Game Studio, Rube Goldberg Machine, and Invent a Sport. 45 activities that stretch your child\'s imagination and problem-solving skills.\n\nThese aren\'t arts and crafts — they\'re design challenges that ask kids to think, build, test, and iterate. The kind of creative thinking that transfers to everything else they do.\n\nGreat for kids who love making things and asking "what if?"',
+        'All three creativity packs: Board Game Studio, Rube Goldberg Machine, and Invent a Sport. 45 activities that stretch your child\'s imagination and problem-solving skills.\n\nThese aren\'t arts and crafts \u2014 they\'re design challenges that ask kids to think, build, test, and iterate. The kind of creative thinking that transfers to everything else they do.\n\nGreat for kids who love making things and asking "what if?"',
       shortDescription:
-        'All 3 creativity packs — 45 design challenges for imaginative kids.',
+        'All 3 creativity packs \u2014 45 design challenges for imaginative kids.',
       priceCents: 3299,
       compareAtPriceCents: 3897,
       lemonVariantId: 'LEMON_VARIANT_creativity-bundle',
@@ -87,7 +87,7 @@ async function seed() {
       isBundle: true,
       bundleProductIds: '[]',
       activityCount: 45,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 4,
       active: true,
     },
@@ -95,9 +95,9 @@ async function seed() {
       name: 'Nature & Outdoor Bundle (All 3 Packs)',
       slug: 'nature-bundle',
       description:
-        'All three nature packs: Nature Journal & Walk Cards, Outdoor STEM Challenge Cards, and Land Art Challenge Cards. 60 activities for families who love being outside.\n\nFrom nature journaling to building ephemeral art from found materials, these packs turn any outdoor space into a learning environment.\n\nNo fancy equipment needed — just curiosity and a willingness to explore.',
+        'All three nature packs: Nature Journal & Walk Cards, Outdoor STEM Challenge Cards, and Land Art Challenge Cards. 60 activities for families who love being outside.\n\nFrom nature journaling to building ephemeral art from found materials, these packs turn any outdoor space into a learning environment.\n\nNo fancy equipment needed \u2014 just curiosity and a willingness to explore.',
       shortDescription:
-        'All 3 nature packs — 60 outdoor activities for curious families.',
+        'All 3 nature packs \u2014 60 outdoor activities for curious families.',
       priceCents: 2499,
       compareAtPriceCents: 2997,
       lemonVariantId: 'LEMON_VARIANT_nature-bundle',
@@ -106,7 +106,7 @@ async function seed() {
       isBundle: true,
       bundleProductIds: '[]',
       activityCount: 60,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 5,
       active: true,
     },
@@ -116,9 +116,9 @@ async function seed() {
       name: 'Spring Outdoor Learning Pack',
       slug: 'spring-outdoor-pack',
       description:
-        'Twenty real-world activities designed for spring weather and seasonal changes. Watch seeds sprout, track bird migrations, measure rainfall, and explore your neighborhood as it comes alive.\n\nEach activity card includes adaptation notes so kids ages 4–14 can all participate at their own level. Younger kids work alongside a parent; older kids take the lead independently.\n\nNo special materials, no lesson plans, no prep. Just print, pick a card, and go outside.',
+        'Spring is your best teaching window. The world is waking up, energy is high, and learning happens naturally when you step outside. This pack gives you 20 carefully designed activity cards that turn spring moments into real skills \u2014 budgeting at the garden centre, measuring rainfall, mapping your neighbourhood, starting a container garden, and more.\n\nEvery card includes age adaptation notes so kids 4\u201314 can work at their own level. No lesson plans. No prep. Just print, pick one, and go outside.',
       shortDescription:
-        '20 real-world spring activities. Print, pick a card, go outside.',
+        '20 outdoor activities that use spring\u2019s energy to build real-world skills \u2014 from planting to weather science to neighbourhood explorations.',
       priceCents: 1499,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_spring-outdoor-pack',
@@ -127,7 +127,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 20,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 10,
       active: true,
     },
@@ -135,9 +135,9 @@ async function seed() {
       name: 'Summer Outdoor Learning Pack',
       slug: 'summer-outdoor-pack',
       description:
-        'Twenty activities built for long summer days. Water science experiments, nature scavenger hunts, night sky observations, and adventures that make the most of warm weather.\n\nPerfect for road trips, camping, beach days, or just your own backyard. These cards keep kids engaged without screens.\n\nEvery activity adapts to ages 4–14 and requires no special materials.',
+        'Summer is wide open. No schedules, no routines, no excuses. This pack gives you 20 activity cards designed for the season when learning should feel effortless \u2014 building with sand, tracking constellations, planning a day trip, running a lemonade stand, and more.\n\nPerfect for families at home, on the road, or anywhere the sun shines. Every card includes age adaptations for 4\u201314 and requires nothing you don\'t already have.',
       shortDescription:
-        '20 summer activities for long days, road trips, and outdoor adventures.',
+        '20 summer activities for families who learn on the move \u2014 road trips, beach days, backyard explorations, and warm-weather adventures.',
       priceCents: 1499,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_summer-outdoor-pack',
@@ -146,7 +146,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 20,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 11,
       active: true,
     },
@@ -154,9 +154,9 @@ async function seed() {
       name: 'Fall Outdoor Learning Pack',
       slug: 'fall-outdoor-pack',
       description:
-        'Twenty activities that celebrate autumn changes. Leaf science, harvest math, weather tracking, and cozy outdoor projects for crisp fall days.\n\nWatch your kids notice the world changing around them — and understand why. These activities turn seasonal shifts into natural science lessons.\n\nWorks in any climate, any setting. Adapts to ages 4–14.',
+        'Fall is a masterclass in change \u2014 and change is where the best learning happens. This pack gives you 20 activity cards that use autumn\'s shifts to build real skills: leaf identification and pressing, harvest-season cooking math, weather journaling, seed saving, nature colour mixing, and more.\n\nDesigned for families who learn outdoors, at home, or on the go. Ages 4\u201314, no prep needed.',
       shortDescription:
-        '20 fall activities — leaf science, harvest math, and cozy outdoor projects.',
+        '20 autumn activities that use the changing season to build observation, science, and creative skills \u2014 from leaf pressing to harvest math.',
       priceCents: 1499,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_fall-outdoor-pack',
@@ -165,7 +165,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 20,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 12,
       active: true,
     },
@@ -173,9 +173,9 @@ async function seed() {
       name: 'Winter Outdoor Learning Pack',
       slug: 'winter-outdoor-pack',
       description:
-        'Twenty activities for cold weather and short days. Ice experiments, winter bird watching, shadow tracking, and indoor-outdoor challenges that keep learning going all season.\n\nDesigned for families who refuse to hibernate. Whether you have snow or just chilly days, these activities keep kids curious and moving.\n\nAdapts to ages 4–14. No special materials needed.',
+        'Winter doesn\'t mean learning stops \u2014 it means learning moves closer to home. This pack gives you 20 activity cards for the colder months: kitchen chemistry experiments, snow and ice science, indoor engineering challenges, storytelling projects, winter bird watching, and budgeting for holiday gifts.\n\nWorks whether you\'re snowed in or somewhere warm. Ages 4\u201314, no prep needed.',
       shortDescription:
-        '20 winter activities — ice science, bird watching, and cold-weather challenges.',
+        '20 winter activities for cosy indoor days and cold outdoor adventures \u2014 from kitchen science to snow geometry to storytelling by firelight.',
       priceCents: 1499,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_winter-outdoor-pack',
@@ -184,7 +184,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 20,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 13,
       active: true,
     },
@@ -194,9 +194,9 @@ async function seed() {
       name: 'Creativity Anywhere: Board Game Studio',
       slug: 'creativity-board-game',
       description:
-        'Fifteen design challenges that guide kids through creating their own board games from scratch. From game mechanics to artwork to playtesting, kids learn design thinking by doing.\n\nThis isn\'t "follow the instructions" — it\'s "figure it out." Kids make real decisions, test their ideas, and iterate based on what works.\n\nWorks with materials you already have at home. Ages 6–14.',
+        'Your kids don\'t just play games \u2014 they design one from scratch. This pack walks them through the entire process: brainstorming a theme, designing game mechanics, creating a board and cards, writing rules, and playtesting with family.\n\nAlong the way they\'re building maths (probability, scoring systems), logic (game balance), storytelling (theme and narrative), and design thinking (iteration, feedback). One of our most-loved packs because the end result is something the whole family plays together.',
       shortDescription:
-        '15 challenges to design and build original board games from scratch.',
+        'Design, build, and playtest an original board game \u2014 a project that builds maths, logic, storytelling, and design thinking all at once.',
       priceCents: 1299,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_creativity-board-game',
@@ -205,7 +205,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 15,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 20,
       active: true,
     },
@@ -213,9 +213,9 @@ async function seed() {
       name: 'Creativity Anywhere: Rube Goldberg Machine',
       slug: 'creativity-rube-goldberg',
       description:
-        'Fifteen engineering challenges that build toward creating elaborate chain-reaction machines. Kids learn about simple machines, energy transfer, and creative problem-solving.\n\nStart with simple cause-and-effect setups, then combine them into increasingly complex contraptions. The kind of building that kids don\'t want to stop.\n\nUses household items. Ages 6–14.',
+        'The goal: make a machine that does something ridiculously simple (turn a page, ring a bell, pop a balloon) in the most complicated way possible. This pack gives kids a structured approach to an open-ended engineering challenge \u2014 starting small, adding chain reactions, troubleshooting failures, and documenting their design.\n\nUses only household materials. Teaches physics, cause-and-effect, persistence through failure, and the kind of creative problem-solving that no worksheet ever will.',
       shortDescription:
-        '15 engineering challenges to build chain-reaction machines.',
+        'Build an absurdly complicated machine to do something simple \u2014 a hands-on engineering challenge that teaches physics, problem-solving, and persistence.',
       priceCents: 1299,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_creativity-rube-goldberg',
@@ -224,7 +224,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 15,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 21,
       active: true,
     },
@@ -232,9 +232,9 @@ async function seed() {
       name: 'Creativity Anywhere: Invent a Sport',
       slug: 'creativity-invent-sport',
       description:
-        'Fifteen challenges that guide kids through inventing their own sports and physical games. Rules design, equipment creation, scoring systems, and competitive play.\n\nKids learn about fairness, game balance, and physical design by creating something entirely new. Then they actually play it.\n\nWorks indoors or outdoors, with any number of players. Ages 6–14.',
+        'What if your kids invented their own sport? This pack challenges them to design a game from the ground up: define the rules, create or repurpose equipment, design a scoring system, and then teach it to friends or family.\n\nIt builds communication (explaining rules clearly), negotiation (agreeing on changes), maths (scorekeeping, statistics), and physical creativity. Works indoors or out, for one kid or a whole group. One of the most fun, surprising packs we\'ve ever created.',
       shortDescription:
-        '15 challenges to design original sports and physical games.',
+        'Create an entirely new sport with original rules, equipment, and scoring \u2014 then teach it to someone else.',
       priceCents: 1299,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_creativity-invent-sport',
@@ -243,7 +243,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 15,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 22,
       active: true,
     },
@@ -253,9 +253,9 @@ async function seed() {
       name: 'Nature Journal & Walk Cards',
       slug: 'nature-journal-walks',
       description:
-        'Twenty-five guided nature walk activities with journaling prompts. Each card focuses on a different observation skill — sound mapping, texture hunting, seasonal change tracking, and more.\n\nKids learn to slow down and really notice the natural world. The journal prompts work for any environment, from city parks to rural trails.\n\nNo nature expertise required. Ages 4–14.',
+        'Every walk is a lesson \u2014 if you know where to look. This pack gives you 25 beautifully designed prompt cards that turn a regular walk into a nature observation experience. Track weather patterns, sketch plants, identify bird calls, measure shadows, map animal habitats, and build a season-long nature journal.\n\nTeaches scientific observation, patience, and a deep connection to the natural world. Works in a city park, a forest, a beach, or your own backyard.',
       shortDescription:
-        '25 guided nature walks with observation and journaling prompts.',
+        '25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_nature-journal-walks',
@@ -264,7 +264,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 25,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 30,
       active: true,
     },
@@ -272,9 +272,9 @@ async function seed() {
       name: 'Outdoor STEM Challenge Cards',
       slug: 'outdoor-stem-challenges',
       description:
-        'Twenty outdoor science and engineering challenges. Build bridges from sticks, measure tree heights using shadows, design water filtration systems, and more.\n\nReal science, real engineering, real outdoors. These challenges use the scientific method in contexts that make sense to kids.\n\nNo lab equipment needed. Ages 6–14.',
+        'The best science lab is outside your front door. This pack gives you 20 hands-on STEM challenge cards that use the natural world as raw material: build a bridge that holds weight using only sticks, filter water through layers of natural materials, create natural dyes from plants, measure tree height with shadows, engineer a shelter that stays dry.\n\nReal engineering, real science, real problem-solving \u2014 no worksheets, no textbooks, no special materials.',
       shortDescription:
-        '20 outdoor science and engineering challenges — no lab needed.',
+        '20 outdoor STEM challenges that use the natural world as a laboratory \u2014 from bridge building to water filtration to natural dye making.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_outdoor-stem-challenges',
@@ -283,7 +283,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 20,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 31,
       active: true,
     },
@@ -291,9 +291,9 @@ async function seed() {
       name: 'Land Art Challenge Cards',
       slug: 'land-art-challenges',
       description:
-        'Fifteen creative challenges inspired by land artists like Andy Goldsworthy. Kids create temporary art from natural materials — leaves, stones, sticks, flowers, and shadows.\n\nArt meets nature meets mindfulness. Kids learn to see beauty in natural materials and create something meaningful that returns to the earth.\n\nWorks anywhere outdoors. Ages 4–14.',
+        'Art doesn\'t need a canvas \u2014 it needs a curious kid and whatever nature provides. Inspired by land artists like Andy Goldsworthy, this pack gives you 15 challenge cards for creating beautiful, temporary artwork using only natural materials: spirals from stones, colour gradients from leaves, mandalas from petals, sculptures from driftwood.\n\nTeaches composition, colour theory, patience, and a deep respect for natural materials. Every creation is photographed then left for nature to reclaim.',
       shortDescription:
-        '15 challenges to create art from natural materials — leaves, stones, sticks.',
+        '15 land art challenges inspired by Andy Goldsworthy \u2014 creating beautiful, temporary art using only natural materials found outdoors.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_land-art-challenges',
@@ -302,7 +302,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 15,
-      ageRange: 'Ages 4–14',
+      ageRange: 'Ages 4\u201314',
       sortOrder: 32,
       active: true,
     },
@@ -312,9 +312,9 @@ async function seed() {
       name: 'Budget Challenge',
       slug: 'budget-challenge',
       description:
-        'Twelve real-world budgeting activities that teach kids to plan, track, and make decisions about money. From planning a family outing on a budget to comparing unit prices at the store.\n\nKids practice math in context — and learn that budgeting is about choices, not just numbers.\n\nUses real situations your family encounters every week. Ages 8–14.',
+        'Kids don\'t learn money skills from worksheets about pretend shops. They learn by handling real money with real consequences. This pack gives you 12 challenges that put kids in charge of actual budget decisions: planning a grocery shop within a set budget, comparing prices across shops, saving for a goal, managing a weekly allowance, and understanding the difference between needs and wants.\n\nAges 8\u201314, with scaffolding notes for younger kids working with a parent.',
       shortDescription:
-        '12 budgeting activities using real situations your family encounters.',
+        '12 real-money challenges that teach kids budgeting, saving, and smart spending through actual decisions \u2014 not pretend ones.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_budget-challenge',
@@ -323,7 +323,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 12,
-      ageRange: 'Ages 8–14',
+      ageRange: 'Ages 8\u201314',
       sortOrder: 40,
       active: true,
     },
@@ -331,9 +331,9 @@ async function seed() {
       name: 'Kitchen Math & Meal Planning',
       slug: 'kitchen-math',
       description:
-        'Fifteen activities that turn your kitchen into a math lab. Scaling recipes, measuring ingredients, calculating nutrition, and planning meals for a week on a budget.\n\nKids learn fractions, ratios, and estimation while making food they actually want to eat.\n\nPractical, delicious, and genuinely useful. Ages 6–14.',
+        'The kitchen is the most underrated classroom in your home. This pack gives you 15 activity cards that turn cooking into real learning: doubling and halving recipes (fractions), converting measurements (unit conversion), planning meals within a budget (money maths), understanding nutrition labels (data literacy), and calculating cost per serving (division).\n\nEvery activity ends with something your family actually eats. Ages 6\u201314.',
       shortDescription:
-        '15 kitchen activities — fractions, recipes, and meal planning made real.',
+        '15 activities that turn cooking and meal planning into a rich maths and science experience \u2014 fractions, measurement, budgeting, and nutrition.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_kitchen-math',
@@ -342,7 +342,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 15,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 41,
       active: true,
     },
@@ -350,9 +350,9 @@ async function seed() {
       name: 'Smart Shopper Lab',
       slug: 'smart-shopper',
       description:
-        'Twelve activities that teach comparison shopping, unit pricing, marketing awareness, and consumer math. Kids learn to be thoughtful consumers by analyzing real products and prices.\n\nTake these cards to the grocery store, the mall, or use them with online shopping. Real-world math meets critical thinking.\n\nAges 8–14.',
+        'Every trip to the shops is an economics lesson waiting to happen. This pack turns grocery runs into learning opportunities: compare unit prices, decode marketing claims, read nutrition labels critically, calculate savings from bulk buying, and understand the psychology behind product placement.\n\nYour kids become sharper, more critical consumers \u2014 a skill they\'ll use every day for the rest of their lives. Ages 8\u201314.',
       shortDescription:
-        '12 activities on comparison shopping, unit pricing, and smart spending.',
+        '12 activities that teach kids to be critical, informed consumers \u2014 comparing prices, reading labels, understanding marketing, and spotting value.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_smart-shopper',
@@ -361,7 +361,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 12,
-      ageRange: 'Ages 8–14',
+      ageRange: 'Ages 8\u201314',
       sortOrder: 42,
       active: true,
     },
@@ -369,9 +369,9 @@ async function seed() {
       name: 'Micro-Business Challenge',
       slug: 'micro-business',
       description:
-        'Ten activities that walk kids through starting a tiny real business. From brainstorming ideas to making a product to tracking profit and loss.\n\nKids learn entrepreneurship by doing it — not reading about it. Lemonade stands, craft sales, service businesses, and more.\n\nReal stakes, real learning. Ages 9–14.',
+        'What if your child ran their own business \u2014 even a small one? This pack walks them through the entire process: finding a problem to solve, designing a product or service, calculating costs and pricing, creating marketing materials, making their first sale, and reflecting on what they learned.\n\nPast projects from families using this pack include: handmade cards, dog walking services, baked goods, garden produce stands, and tech help for neighbours. Entrepreneurship isn\'t an abstract concept when you\'ve actually done it. Ages 9\u201314.',
       shortDescription:
-        '10 activities to start a real micro-business — from idea to profit.',
+        '10 guided activities to help your child plan, launch, and run a simple real business \u2014 from idea to first sale.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_micro-business',
@@ -380,7 +380,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 10,
-      ageRange: 'Ages 9–14',
+      ageRange: 'Ages 9\u201314',
       sortOrder: 43,
       active: true,
     },
@@ -390,9 +390,9 @@ async function seed() {
       name: '10 Life Skills Guide',
       slug: 'life-skills-guide',
       description:
-        'Ten essential life skills activities covering everything from reading a map to writing a meaningful letter to negotiating respectfully. These are the skills schools don\'t teach but every kid needs.\n\nEach activity takes 15–45 minutes and can be done at home or on the go. The adaptation notes help you adjust for any age from 6–14.\n\nThe foundation of the Anywhere Learning approach — real skills, real world.',
+        'This is where most families start. 10 carefully chosen activities that cover the skills that matter most for future-ready kids: budgeting, cooking, navigation, communication, negotiation, money management, growing something, learning from others, and real problem-solving.\n\nEach activity takes 30\u201360 minutes, needs no special materials, and includes notes on how to adapt for ages 6\u201314. Perfect as a first taste of the Anywhere Learning approach.',
       shortDescription:
-        '10 essential life skills activities — the ones schools don\'t teach.',
+        '10 real-world activities your kids can try this week \u2014 from budgeting a grocery run to writing a real letter to navigating somewhere new.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_life-skills-guide',
@@ -401,7 +401,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 10,
-      ageRange: 'Ages 6–14',
+      ageRange: 'Ages 6\u201314',
       sortOrder: 50,
       active: true,
     },
@@ -411,9 +411,9 @@ async function seed() {
       name: 'AI Basics: Myths, Facts & Smart Rules',
       slug: 'ai-basics',
       description:
-        'Twelve activities that help kids understand what AI actually is, what it can and can\'t do, and how to use it responsibly. Covers common myths, real capabilities, and family-friendly rules for AI use.\n\nNot a coding course — it\'s a thinking course. Kids learn to be smart, critical consumers of AI technology.\n\nDesigned for curious kids and parents navigating AI together. Ages 9–14.',
+        'AI is part of your child\'s world \u2014 and they deserve to understand it, not fear it. This pack gives you 12 activities that build real AI literacy: separating myths from facts, understanding how AI \'learns\' from data, exploring bias in AI systems, creating smart personal rules for AI use, and thinking critically about AI-generated content.\n\nDesigned to be balanced and skills-focused \u2014 not fear-based, not hype-based. Ages 9\u201314.',
       shortDescription:
-        '12 activities on understanding AI — myths, facts, and responsible use.',
+        '12 age-appropriate activities that help kids understand what AI actually is, what it can and can\'t do, and how to use it wisely.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_ai-basics',
@@ -422,7 +422,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 12,
-      ageRange: 'Ages 9–14',
+      ageRange: 'Ages 9\u201314',
       sortOrder: 60,
       active: true,
     },
@@ -430,9 +430,9 @@ async function seed() {
       name: 'Hallucination Detective',
       slug: 'hallucination-detective',
       description:
-        'Ten activities that teach kids to spot AI-generated errors, hallucinations, and misinformation. They learn to fact-check AI output and develop critical evaluation skills.\n\nKids become detectives — testing AI claims against reality, finding where AI confidently gets things wrong, and learning why it happens.\n\nEssential digital literacy for the AI age. Ages 9–14.',
+        'AI makes things up. It sounds confident when it\'s wrong. And your kids need to know how to catch it. This pack gives you 10 detective-style activities where kids fact-check AI outputs, identify hallucinations, compare AI answers to real sources, and build a personal checklist for evaluating AI-generated content.\n\nIt\'s the most important digital literacy skill of the next decade \u2014 and it\'s also genuinely fun. Ages 9\u201314.',
       shortDescription:
-        '10 activities to spot AI errors and build critical thinking skills.',
+        '10 investigation activities that teach kids to spot when AI gets things wrong \u2014 building critical thinking and media literacy skills.',
       priceCents: 999,
       compareAtPriceCents: null,
       lemonVariantId: 'LEMON_VARIANT_hallucination-detective',
@@ -441,7 +441,7 @@ async function seed() {
       isBundle: false,
       bundleProductIds: null,
       activityCount: 10,
-      ageRange: 'Ages 9–14',
+      ageRange: 'Ages 9\u201314',
       sortOrder: 61,
       active: true,
     },
@@ -450,7 +450,7 @@ async function seed() {
   // Insert all products
   for (const product of productData) {
     await db.insert(products).values(product).onConflictDoNothing();
-    console.log(`  ✓ ${product.name}`);
+    console.log(`  \u2713 ${product.name}`);
   }
 
   console.log(`\nSeeded ${productData.length} products successfully!`);

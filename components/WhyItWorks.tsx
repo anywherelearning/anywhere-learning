@@ -13,7 +13,6 @@ function PillarIcon({ index }: { index: number }) {
   };
 
   switch (index) {
-    // Feather — no curriculum, keep it light
     case 0:
       return (
         <svg {...svgProps}>
@@ -22,7 +21,6 @@ function PillarIcon({ index }: { index: number }) {
           <path d="M17.5 15H9" />
         </svg>
       );
-    // Globe — works anywhere
     case 1:
       return (
         <svg {...svgProps}>
@@ -31,7 +29,6 @@ function PillarIcon({ index }: { index: number }) {
           <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
         </svg>
       );
-    // Sliders — adapts to your child
     case 2:
       return (
         <svg {...svgProps}>
@@ -54,7 +51,7 @@ function PillarIcon({ index }: { index: number }) {
 const pillars = [
   {
     title: "No curriculum",
-    description: "Pick one activity. Try it this week. That's enough.",
+    description: "Pick one activity. Try it this week. That\u2019s enough.",
   },
   {
     title: "Works anywhere",
@@ -70,22 +67,22 @@ const pillars = [
 
 export default function WhyItWorks() {
   return (
-    <section className="bg-gold-light/20 py-16 sm:py-20">
-      <div className="mx-auto max-w-4xl px-4 text-center">
-        <h2 className="font-display text-3xl text-forest sm:text-4xl">
+    <section className="bg-gold-light/20 py-20 md:py-28">
+      <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+        <h2 className="font-display text-3xl md:text-5xl text-forest mb-3">
           The goal isn&apos;t to teach kids about life
         </h2>
-        <p className="mt-3 text-lg text-gray-600">
-          It&apos;s to let them live it — with your guidance.
+        <p className="text-lg text-gray-600">
+          It&apos;s to let them live it &mdash; with your guidance.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {pillars.map((pillar, i) => (
             <div key={i} className="flex flex-col items-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-forest/8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-forest/10">
                 <PillarIcon index={i} />
               </div>
-              <h3 className="mt-3 text-lg font-semibold text-forest">
+              <h3 className="mt-4 text-lg font-semibold text-forest">
                 {pillar.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">

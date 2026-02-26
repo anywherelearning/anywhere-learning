@@ -5,13 +5,14 @@ import { getActiveProducts, getProductsByCategory } from '@/lib/db/queries';
 import ProductGrid from '@/components/shop/ProductGrid';
 import CategoryFilter from '@/components/shop/CategoryFilter';
 import BundleHighlight from '@/components/shop/BundleHighlight';
+import EmailForm from '@/components/EmailForm';
 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Shop Activity Packs',
   description:
-    'Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.',
+    'Printable activity packs that turn everyday moments into meaningful learning. No curriculum, no worksheets, no prep.',
 };
 
 interface ShopPageProps {
@@ -39,48 +40,63 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h1 className="font-display text-4xl text-forest sm:text-5xl">
-            Activity Packs That Make Real Life the Lesson
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
-            Printable. No-prep. Built for families who learn everywhere.
+      {/* ─── Section 1: Shop Hero ─── */}
+      <section className="py-20 md:py-28 bg-cream">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 text-center">
+          <p className="text-sm font-medium text-gold uppercase tracking-widest mb-4">
+            Printable Activity Packs
           </p>
+          <h1 className="font-display text-4xl md:text-6xl text-forest leading-tight mb-6">
+            Real Life Is the Best Classroom
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Printable activity packs that turn everyday moments into meaningful learning.
+            No curriculum. No lesson plans. No prep &mdash; just print, pick one, and start.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+            <span className="flex items-center gap-1.5">
+              <span className="text-forest">&#10003;</span> Instant PDF download
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-forest">&#10003;</span> Ages 4&ndash;14
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-forest">&#10003;</span> Works for any learning style
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* Filter + Products */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          {/* Category filter */}
+      {/* ─── Section 2: Featured Bundle Banner ─── */}
+      {!category && masterBundle && (
+        <section className="py-12 bg-gold-light/20">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <BundleHighlight
+              name={masterBundle.name}
+              slug={masterBundle.slug}
+              priceCents={masterBundle.priceCents}
+              compareAtPriceCents={masterBundle.compareAtPriceCents}
+              activityCount={masterBundle.activityCount}
+            />
+          </div>
+        </section>
+      )}
+
+      {/* ─── Section 3: Category Filter + Product Grid ─── */}
+      <section className="py-20 bg-cream">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Suspense fallback={null}>
             <CategoryFilter />
           </Suspense>
 
-          {/* Master bundle highlight */}
-          {!category && masterBundle && (
-            <div className="mt-8">
-              <BundleHighlight
-                name={masterBundle.name}
-                slug={masterBundle.slug}
-                priceCents={masterBundle.priceCents}
-                compareAtPriceCents={masterBundle.compareAtPriceCents}
-                activityCount={masterBundle.activityCount}
-              />
-            </div>
-          )}
-
-          {/* Product grid — bundles first, then individual */}
           <div className="mt-10">
             {!category && bundles.length > 0 && (
               <>
-                <h2 className="mb-6 text-xl font-semibold text-gray-900">
-                  Bundles
+                <h2 className="mb-6 font-display text-2xl text-forest">
+                  Bundles &mdash; Best Value
                 </h2>
                 <ProductGrid products={bundles} />
-                <h2 className="mt-12 mb-6 text-xl font-semibold text-gray-900">
+                <h2 className="mt-16 mb-6 font-display text-2xl text-forest">
                   Individual Packs
                 </h2>
               </>
@@ -90,22 +106,20 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="bg-gold-light/20 py-16">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h2 className="font-display text-2xl text-forest sm:text-3xl">
+      {/* ─── Section 4: Bottom CTA (Email Capture) ─── */}
+      <section className="py-20 md:py-28 bg-forest text-cream">
+        <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+          <h2 className="font-display text-3xl md:text-5xl mb-4">
             Not sure where to start?
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-gray-600">
-            Grab our free guide with 10 real-world life skills activities your
-            kids can try this week.
+          <p className="text-cream/80 text-lg mb-8 leading-relaxed">
+            Grab our free Future-Ready Skills Map &mdash; a simple guide to what matters now,
+            without the overwhelm. We&apos;ll send you ideas and inspiration every week.
           </p>
-          <Link
-            href="/free-guide"
-            className="mt-6 inline-block rounded-lg bg-forest px-6 py-3 font-semibold text-cream transition-colors hover:bg-forest-dark"
-          >
-            Get the Free Guide &rarr;
-          </Link>
+          <EmailForm variant="dark" />
+          <p className="text-cream/50 text-sm mt-4">
+            No spam. No fluff. Unsubscribe any time.
+          </p>
         </div>
       </section>
     </>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { LogoIcon } from "@/components/Logo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,33 +25,26 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 bg-cream/95 backdrop-blur-sm transition-shadow ${
-        scrolled ? "shadow-md" : ""
+      className={`sticky top-0 right-0 left-0 z-50 bg-cream/95 backdrop-blur-sm border-b transition-all ${
+        scrolled ? "border-forest/10 shadow-sm" : "border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img
-            src="/logo-icon.png"
-            alt=""
-            width={32}
-            height={32}
-            className="h-8 w-8"
-            aria-hidden="true"
-          />
-          <span className="font-display text-lg text-forest">
+        <Link href="/" className="flex items-center gap-2.5">
+          <LogoIcon size={28} />
+          <span className="font-display text-xl text-forest">
             Anywhere Learning
           </span>
-        </div>
+        </Link>
 
         {/* CTA */}
         <a
           href="#hero-form"
           onClick={scrollToForm}
-          className="rounded-lg bg-forest px-3.5 py-1.5 text-sm font-semibold text-cream transition-all hover:scale-[1.02] hover:bg-forest-dark"
+          className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
         >
-          Get the free guide →
+          Get the free guide &rarr;
         </a>
       </div>
     </header>

@@ -1,9 +1,10 @@
+import { LogoIcon } from "./Logo";
 import EmailForm from "./EmailForm";
 
 function PDFMockup() {
   return (
-    <div className="animate-float mx-auto w-56 sm:w-64">
-      <div className="relative rounded-lg border-2 border-forest bg-cream p-6 shadow-xl">
+    <div className="animate-gentle-float mx-auto w-56 sm:w-64">
+      <div className="relative rounded-2xl border-2 border-forest bg-cream p-6 shadow-xl">
         {/* Gold badge */}
         <div className="absolute -top-3 -right-3 flex h-14 w-14 items-center justify-center rounded-full bg-gold shadow-md">
           <span className="text-center text-[10px] font-bold leading-tight text-white">
@@ -17,14 +18,7 @@ function PDFMockup() {
 
         {/* Mini logo */}
         <div className="mb-4 flex items-center gap-1.5">
-          <img
-            src="/logo-icon.png"
-            alt=""
-            width={18}
-            height={18}
-            className="h-[18px] w-[18px]"
-            aria-hidden="true"
-          />
+          <LogoIcon size={18} />
           <span className="font-display text-xs text-forest">
             Anywhere Learning
           </span>
@@ -48,8 +42,8 @@ function PDFMockup() {
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20">
-      <div className="mx-auto max-w-5xl px-4">
+    <section className="relative bg-cream py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-16">
           {/* Mobile: PDF mockup on top */}
           <div className="lg:hidden">
@@ -58,11 +52,15 @@ export default function Hero() {
 
           {/* Text + Form */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="font-display text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl">
-              10 life skills your kids can learn this week
+            <p className="text-sm font-medium text-gold uppercase tracking-widest mb-4">
+              Free Download
+            </p>
+            <h1 className="font-display text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl mb-5">
+              <span className="heading-accent">10 life skills</span> your kids
+              can learn this week
             </h1>
 
-            <p className="mx-auto mt-5 max-w-lg text-lg text-gray-600 lg:mx-0">
+            <p className="mx-auto max-w-lg text-lg md:text-xl text-gray-600 lg:mx-0 leading-relaxed">
               A free, no-prep guide for homeschool and worldschool families.
               Real activities. Real life. No curriculum required.
             </p>

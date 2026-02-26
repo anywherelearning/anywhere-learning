@@ -25,14 +25,17 @@ export default async function DownloadsPage() {
   }
 
   return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <p className="text-gray-600">
+    <section className="bg-cream min-h-screen py-12">
+      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <p className="text-gray-500 mb-1">
           Welcome back{user?.firstName ? `, ${user.firstName}` : ''}!
         </p>
-        <h1 className="mt-1 font-display text-3xl text-forest sm:text-4xl">
-          Your Downloads
+        <h1 className="font-display text-3xl md:text-4xl text-forest mb-2">
+          Your Activity Packs
         </h1>
+        <p className="text-gray-500 mb-10">
+          Ready to print, pick one, and start learning.
+        </p>
 
         <DownloadList purchases={purchases} />
       </div>

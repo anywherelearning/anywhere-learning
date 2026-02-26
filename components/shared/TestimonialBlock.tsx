@@ -10,16 +10,16 @@ interface TestimonialBlockProps {
 
 export default function TestimonialBlock({ testimonials }: TestimonialBlockProps) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {testimonials.map((t, i) => (
         <blockquote
           key={i}
-          className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
+          className="bg-white rounded-2xl border border-gray-100/50 p-5 shadow-sm hover:shadow-md transition-shadow"
         >
-          <p className="text-lg leading-relaxed text-gray-700 italic">
+          <p className="text-gray-700 italic mb-2 leading-relaxed">
             &ldquo;{t.quote}&rdquo;
           </p>
-          <footer className="mt-3 text-sm font-semibold text-forest">
+          <footer className="text-sm text-gray-500">
             &mdash; {t.name}, {t.location}
           </footer>
         </blockquote>

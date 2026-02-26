@@ -1,7 +1,3 @@
-'use client';
-
-import { useState } from 'react';
-
 interface FAQItem {
   question: string;
   answer: string;
@@ -12,41 +8,20 @@ interface FAQSectionProps {
 }
 
 export default function FAQSection({ items }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <div className="divide-y divide-gray-100">
+    <div className="space-y-3">
       {items.map((item, i) => (
-        <div key={i}>
-          <button
-            onClick={() => setOpenIndex(openIndex === i ? null : i)}
-            className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-forest"
-            aria-expanded={openIndex === i}
-          >
-            <span className="pr-4 text-base font-semibold text-gray-900">
-              {item.question}
+        <details key={i} className="group bg-white rounded-2xl border border-gray-100/50 overflow-hidden">
+          <summary className="flex justify-between items-center p-5 cursor-pointer text-gray-800 font-medium hover:text-forest transition-colors">
+            {item.question}
+            <span className="text-forest group-open:rotate-45 transition-transform text-xl flex-shrink-0 ml-4">
+              +
             </span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              className={`shrink-0 text-forest transition-transform ${
-                openIndex === i ? 'rotate-180' : ''
-              }`}
-            >
-              <path d="M5 7.5L10 12.5L15 7.5" />
-            </svg>
-          </button>
-          {openIndex === i && (
-            <div className="pb-5">
-              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-            </div>
-          )}
-        </div>
+          </summary>
+          <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
       ))}
     </div>
   );

@@ -17,7 +17,6 @@ function SkillIcon({ index }: { index: number }) {
   };
 
   switch (index) {
-    // Cart — grocery run
     case 0:
       return (
         <svg {...svgProps}>
@@ -26,14 +25,12 @@ function SkillIcon({ index }: { index: number }) {
           <path d="M16 10a4 4 0 01-8 0" />
         </svg>
       );
-    // Flame — cooking
     case 1:
       return (
         <svg {...svgProps}>
           <path d="M12 22c4-2.5 6-6 6-10a8.5 8.5 0 00-3-6c0 3.5-2 5-3 6-1.5-2-2-4-2-6a8.5 8.5 0 00-4 6c0 4 2 7.5 6 10z" />
         </svg>
       );
-    // Map — read a real map
     case 2:
       return (
         <svg {...svgProps}>
@@ -42,14 +39,12 @@ function SkillIcon({ index }: { index: number }) {
           <path d="M16 6v16" />
         </svg>
       );
-    // Pen — write a letter
     case 3:
       return (
         <svg {...svgProps}>
           <path d="M17 3a2.83 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
         </svg>
       );
-    // Balance — negotiate
     case 4:
       return (
         <svg {...svgProps}>
@@ -59,7 +54,6 @@ function SkillIcon({ index }: { index: number }) {
           <path d="M17 13l2-6 2 6a3 3 0 01-4 0z" />
         </svg>
       );
-    // Wallet — manage a budget
     case 5:
       return (
         <svg {...svgProps}>
@@ -68,7 +62,6 @@ function SkillIcon({ index }: { index: number }) {
           <circle cx="17" cy="14" r="1.5" fill="currentColor" stroke="none" />
         </svg>
       );
-    // Compass — navigate somewhere new
     case 6:
       return (
         <svg {...svgProps}>
@@ -76,7 +69,6 @@ function SkillIcon({ index }: { index: number }) {
           <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" />
         </svg>
       );
-    // Leaf — grow something
     case 7:
       return (
         <svg {...svgProps}>
@@ -85,14 +77,12 @@ function SkillIcon({ index }: { index: number }) {
           <path d="M12 15c0-4 4-6 8-6 0 4-2.5 6-8 6" />
         </svg>
       );
-    // Speech bubble — learn from a local
     case 8:
       return (
         <svg {...svgProps}>
           <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5A8.48 8.48 0 0121 11v.5z" />
         </svg>
       );
-    // Lightbulb — solve a real problem
     case 9:
       return (
         <svg {...svgProps}>
@@ -109,7 +99,7 @@ function SkillIcon({ index }: { index: number }) {
 const skills = [
   {
     name: "Budget a family grocery run",
-    why: "Money management starts with real decisions — not abstract lessons",
+    why: "Money management starts with real decisions \u2014 not abstract lessons",
   },
   {
     name: "Plan a meal from scratch",
@@ -121,15 +111,15 @@ const skills = [
   },
   {
     name: "Write a meaningful letter",
-    why: "Writing with a real purpose — to a real person, expecting a real response — develops communication in a way no worksheet ever will",
+    why: "Writing with a real purpose \u2014 to a real person, expecting a real response \u2014 develops communication in a way no worksheet ever will",
   },
   {
     name: "Negotiate (respectfully)",
-    why: "Negotiation is one of the most underrated life skills — kids who learn it early are more confident, more articulate, and better at resolving conflict",
+    why: "Negotiation is one of the most underrated life skills \u2014 kids who learn it early are more confident, more articulate, and better at resolving conflict",
   },
   {
     name: "Manage a simple budget",
-    why: "Kids who manage their own money — even small amounts — build judgment, patience, and an understanding of trade-offs that lasts a lifetime",
+    why: "Kids who manage their own money \u2014 even small amounts \u2014 build judgment, patience, and an understanding of trade-offs that lasts a lifetime",
   },
   {
     name: "Navigate somewhere new",
@@ -145,7 +135,7 @@ const skills = [
   },
   {
     name: "Solve a real problem",
-    why: "Problem-solving confidence comes from actually solving problems — not practising on hypothetical ones",
+    why: "Problem-solving confidence comes from actually solving problems \u2014 not practising on hypothetical ones",
   },
 ];
 
@@ -172,14 +162,14 @@ export default function SkillsGrid() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20">
-      <div className="mx-auto max-w-5xl px-4">
+    <section className="bg-cream py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="text-center">
-          <h2 className="font-display text-3xl text-forest sm:text-4xl">
+          <h2 className="font-display text-3xl md:text-5xl text-forest">
             What&apos;s inside the guide
           </h2>
           <p className="mt-3 text-lg text-gray-600">
-            10 real-world activities your kids can try this week — wherever you
+            10 real-world activities your kids can try this week &mdash; wherever you
             are.
           </p>
         </div>
@@ -193,13 +183,13 @@ export default function SkillsGrid() {
               key={i}
               data-skill-card
               style={{ animationDelay: `${i * 80}ms` }}
-              className="flex gap-4 rounded-xl border-l-4 border-forest bg-cream p-5 opacity-0 shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
+              className="flex gap-4 rounded-2xl bg-white p-5 opacity-0 shadow-sm border border-gray-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-forest/8">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-forest/10">
                 <SkillIcon index={i} />
               </div>
               <div>
-                <h3 className="font-semibold text-forest">{skill.name}</h3>
+                <h3 className="font-semibold text-gray-800">{skill.name}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-gray-600">
                   {skill.why}
                 </p>

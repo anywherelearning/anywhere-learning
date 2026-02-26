@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import { getProductBySlug, getActiveProducts, getRelatedProducts } from '@/lib/db/queries';
 import AddToCartButton from '@/components/shop/AddToCartButton';
 import PriceDisplay from '@/components/shop/PriceDisplay';
@@ -46,26 +45,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
+const categoryLabels: Record<string, string> = {
+  seasonal: 'Seasonal',
+  creativity: 'Creativity',
+  nature: 'Nature & Outdoor',
+  'real-world': 'Real-World Skills',
+  'life-skills': 'Life Skills',
+  'ai-literacy': 'AI & Digital',
+  bundle: 'Bundle',
+};
+
 const defaultFAQ = [
   {
     question: 'What age is this for?',
     answer:
-      'Every pack includes adaptation notes for ages 4\u201314. Younger kids work with a parent; older kids work independently.',
+      'Every pack includes adaptation notes for ages 4\u201314. Younger kids work with a parent; older kids work independently. The activities are designed so siblings of different ages can do them together at their own level.',
   },
   {
     question: 'How do I use it?',
     answer:
-      'Print the cards. Pick one. Go. There\u2019s no lesson plan, no prep, and no special materials.',
+      'Print the cards. Pick one. Go. There\u2019s no lesson plan, no prep, and no special materials. You can do one activity a day or one a week \u2014 whatever fits your family\u2019s rhythm.',
   },
   {
     question: 'Can I use this with multiple kids?',
     answer:
-      'Yes \u2014 every activity works for one child or five. Multi-age families love these because siblings can do the same activity at their own level.',
+      'Absolutely \u2014 every activity works for one child or five. Multi-age families love these because siblings can do the same activity at their own level. Many worldschool families use them with kids ranging from 4 to 14.',
   },
   {
     question: 'What if my kids don\u2019t like it?',
     answer:
-      'We\u2019re confident they will \u2014 but if not, email us within 14 days for a full refund.',
+      'We\u2019re confident they will \u2014 these activities are designed around natural curiosity, not forced learning. But if it\u2019s not the right fit, email us within 14 days for a full refund. No questions, no hassle.',
   },
 ];
 
@@ -74,13 +83,13 @@ const testimonials = [
     quote:
       'My kids asked to do activities every single day. That\u2019s never happened before.',
     name: 'Sarah',
-    location: 'Tennessee / homeschool of 3',
+    location: 'Tennessee \u00b7 homeschool of 3',
   },
   {
     quote:
       'We took these on our road trip and the kids were engaged the entire drive.',
     name: 'Mia',
-    location: 'Colorado / worldschool family of 4',
+    location: 'Colorado \u00b7 worldschool family of 4',
   },
 ];
 
@@ -128,167 +137,162 @@ export default async function ProductPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Product hero */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="grid gap-10 md:grid-cols-2 md:gap-12">
-            {/* Left: image */}
-            <div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br from-forest/10 to-gold-light/30 shadow-sm">
-                {product.imageUrl ? (
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center">
-                    <span className="font-display text-3xl text-forest/20">
-                      {product.name}
-                    </span>
+      <main className="bg-cream min-h-screen">
+        {/* Breadcrumb */}
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 py-4">
+          <nav className="text-sm text-gray-400">
+            <a href="/shop" className="hover:text-forest transition-colors">Shop</a>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="text-gray-600">{product.name}</span>
+          </nav>
+        </div>
+
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+            {/* LEFT: Product Visual */}
+            <div className="md:sticky md:top-24 md:self-start">
+              <div className="aspect-[3/4] bg-gradient-to-br from-cream to-gold-light/30 rounded-2xl flex items-center justify-center p-12 relative">
+                {/* Large floating document mockup */}
+                <div className="w-4/5 aspect-[3/4] bg-white rounded-xl shadow-2xl border border-forest/10 p-8 transform rotate-1 animate-gentle-float">
+                  <div className="w-10 h-10 rounded-full bg-forest/20 mx-auto mb-4" />
+                  <p className="font-display text-center text-forest text-lg mb-4">
+                    {product.name}
+                  </p>
+                  <div className="space-y-2 px-4">
+                    <div className="h-1.5 bg-gray-200 rounded-full w-full" />
+                    <div className="h-1.5 bg-gray-200 rounded-full w-4/5" />
+                    <div className="h-1.5 bg-gray-200 rounded-full w-3/5" />
+                    <div className="h-1.5 bg-gray-200 rounded-full w-4/5 mt-4" />
+                    <div className="h-1.5 bg-gray-200 rounded-full w-2/3" />
+                  </div>
+                </div>
+
+                {/* Activity count badge */}
+                {product.activityCount && (
+                  <div className="absolute bottom-6 right-6 bg-forest text-cream text-sm font-bold px-4 py-2 rounded-full shadow-md">
+                    {product.activityCount} activities
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Right: details */}
-            <div>
-              {/* Category pill */}
-              <span className="inline-block rounded-full bg-forest px-3 py-1 text-xs font-medium text-cream">
-                {product.category === 'real-world'
-                  ? 'Real-World Skills'
-                  : product.category === 'life-skills'
-                    ? 'Life Skills'
-                    : product.category === 'ai-literacy'
-                      ? 'AI & Digital'
-                      : product.category.charAt(0).toUpperCase() + product.category.slice(1)}{' '}
-                Pack
-              </span>
+            {/* RIGHT: Copy + Purchase */}
+            <div className="py-4">
+              {/* Category label */}
+              <p className="text-sm font-medium text-gold uppercase tracking-widest mb-3">
+                {categoryLabels[product.category] || product.category}
+              </p>
 
-              <h1 className="mt-3 text-3xl font-bold text-gray-900 sm:text-4xl">
+              {/* H1 */}
+              <h1 className="font-display text-3xl md:text-4xl text-forest leading-tight mb-3">
                 {product.name}
               </h1>
 
-              {product.activityCount && product.ageRange && (
-                <p className="mt-2 text-lg text-gray-600">
-                  {product.activityCount} real-world activities your kids will actually choose
-                </p>
-              )}
+              {/* Subtitle */}
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                {product.shortDescription}
+              </p>
 
-              {/* Price */}
-              <div className="mt-4">
+              {/* Star rating */}
+              <div className="flex items-center gap-2 mb-6">
+                <div className="flex text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span className="text-sm text-gray-400">Loved by families everywhere</span>
+              </div>
+
+              <hr className="border-gray-200 mb-6" />
+
+              {/* Price block */}
+              <div className="mb-6">
                 <PriceDisplay
                   priceCents={product.priceCents}
                   compareAtPriceCents={product.compareAtPriceCents}
+                  size="lg"
                 />
               </div>
 
-              {/* Buy button */}
-              <div className="mt-6">
-                <AddToCartButton
-                  lemonVariantId={product.lemonVariantId}
-                  productName={product.name}
-                  priceCents={product.priceCents}
-                />
-              </div>
+              {/* BUY BUTTON */}
+              <AddToCartButton
+                lemonVariantId={product.lemonVariantId}
+                productName={product.name}
+                priceCents={product.priceCents}
+              />
 
               {/* Trust line */}
-              <p className="mt-3 text-center text-sm text-gray-500">
-                Instant PDF download &middot; Print at home
-                {product.ageRange && <> &middot; {product.ageRange}</>}
-              </p>
+              <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-500">
+                <span>&#x1F4E5; Instant PDF download</span>
+                <span>&#x1F5A8;&#xFE0F; Print at home</span>
+                {product.ageRange && <span>&#x1F476; {product.ageRange}</span>}
+              </div>
 
-              {/* What's inside */}
-              <div className="mt-8 border-t border-gray-100 pt-8">
-                <h2 className="text-lg font-semibold text-gray-900">
-                  What&apos;s Inside
-                </h2>
-                <ul className="mt-4 space-y-2">
+              <hr className="border-gray-200 my-8" />
+
+              {/* WHAT'S INSIDE */}
+              <div className="mb-8">
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">What&apos;s inside</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {product.activityCount && (
-                    <li className="flex items-start gap-2 text-gray-600">
-                      <span className="mt-1 text-forest">&#10003;</span>
-                      {product.activityCount} age-flexible activity cards
-                    </li>
+                    <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                      <span className="text-forest text-lg">&#10003;</span>
+                      <span className="text-sm text-gray-700">{product.activityCount} age-flexible activity cards</span>
+                    </div>
                   )}
-                  <li className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-1 text-forest">&#10003;</span>
-                    Each takes 15&ndash;45 minutes
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-1 text-forest">&#10003;</span>
-                    No special materials needed
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-1 text-forest">&#10003;</span>
-                    Printable PDF &mdash; instant download
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-1 text-forest">&#10003;</span>
-                    Works for one child or five
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-600">
-                    <span className="mt-1 text-forest">&#10003;</span>
-                    Includes age adaptation notes
-                  </li>
-                </ul>
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                    <span className="text-forest text-lg">&#10003;</span>
+                    <span className="text-sm text-gray-700">Each takes 15&ndash;45 minutes</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                    <span className="text-forest text-lg">&#10003;</span>
+                    <span className="text-sm text-gray-700">No special materials needed</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                    <span className="text-forest text-lg">&#10003;</span>
+                    <span className="text-sm text-gray-700">Works for one child or five</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                    <span className="text-forest text-lg">&#10003;</span>
+                    <span className="text-sm text-gray-700">Age adaptation notes included</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
+                    <span className="text-forest text-lg">&#10003;</span>
+                    <span className="text-sm text-gray-700">Printable PDF &mdash; instant download</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* FULL DESCRIPTION */}
+              <div className="prose prose-gray max-w-none mb-8">
+                {product.description.split('\n').map((paragraph, i) => (
+                  <p key={i} className="text-gray-700 leading-relaxed">{paragraph}</p>
+                ))}
+              </div>
+
+              {/* PHILOSOPHY BADGES */}
+              <TrustBadges />
+
+              {/* TESTIMONIALS */}
+              <div className="mt-8 mb-8">
+                <TestimonialBlock testimonials={testimonials} />
+              </div>
+
+              {/* FAQ */}
+              <div className="mb-8">
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">Common questions</h2>
+                <FAQSection items={defaultFAQ} />
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Description */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed">
-            {product.description.split('\n').map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
+          {/* Related Products */}
+          {related.length > 0 && (
+            <section className="mt-20 pt-16 border-t border-gray-200">
+              <h2 className="font-display text-3xl text-forest mb-8 text-center">
+                You might also like
+              </h2>
+              <ProductGrid products={related} />
+            </section>
+          )}
         </div>
-      </section>
-
-      {/* Trust badges */}
-      <section className="py-8">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <TrustBadges />
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-6 font-display text-2xl text-forest">
-            What families are saying
-          </h2>
-          <TestimonialBlock testimonials={testimonials} />
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 font-display text-2xl text-forest">
-            Frequently Asked Questions
-          </h2>
-          <FAQSection items={defaultFAQ} />
-        </div>
-      </section>
-
-      {/* Related products */}
-      {related.length > 0 && (
-        <section className="bg-gold-light/10 py-12 md:py-16">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <h2 className="mb-8 text-center font-display text-2xl text-forest">
-              You might also like
-            </h2>
-            <ProductGrid products={related} />
-          </div>
-        </section>
-      )}
+      </main>
     </>
   );
 }
