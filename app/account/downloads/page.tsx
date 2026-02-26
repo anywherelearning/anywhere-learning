@@ -7,7 +7,7 @@ import DownloadList from '@/components/account/DownloadList';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Your Downloads | Anywhere Learning',
+  title: 'Your Downloads',
 };
 
 export default async function DownloadsPage() {

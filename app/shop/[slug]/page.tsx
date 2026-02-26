@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       return { title: 'Product Not Found' };
     }
     return {
-      title: `${product.name} | Anywhere Learning`,
+      title: product.name,
       description: product.shortDescription,
       openGraph: {
         title: product.name,

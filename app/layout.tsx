@@ -17,16 +17,18 @@ const bodyFont = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title:
-    "10 Life Skills Your Kids Can Learn This Week — Free Guide | Anywhere Learning",
+  title: {
+    template: "%s | Anywhere Learning",
+    default: "Anywhere Learning — Meaningful Learning, Wherever You Are",
+  },
   description:
-    "A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.",
+    "Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.",
   openGraph: {
-    title:
-      "10 Life Skills Your Kids Can Learn This Week — Free Guide | Anywhere Learning",
+    title: "Anywhere Learning — Meaningful Learning, Wherever You Are",
     description:
-      "A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.",
+      "Printable, no-prep activity packs for homeschool and worldschool families.",
     type: "website",
+    siteName: "Anywhere Learning",
   },
 };
 

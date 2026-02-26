@@ -9,7 +9,7 @@ import BundleHighlight from '@/components/shop/BundleHighlight';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Shop Activity Packs | Anywhere Learning',
+  title: 'Shop Activity Packs',
   description:
     'Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.',
 };
