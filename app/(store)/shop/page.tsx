@@ -1,11 +1,11 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getActiveProducts, getProductsByCategory } from "@/lib/db/queries";
 import ProductGrid from "@/components/shop/ProductGrid";
 import CategoryFilter from "@/components/shop/CategoryFilter";
 import BundleHighlight from "@/components/shop/BundleHighlight";
 import TrustBadges from "@/components/shared/TrustBadges";
+import EmailForm from "@/components/EmailForm";
 
 export const dynamic = "force-dynamic";
 
@@ -45,13 +45,18 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   return (
     <div className="bg-cream">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
-          <h1 className="font-[family-name:var(--font-display)] text-4xl text-forest sm:text-5xl lg:text-6xl">
-            Activity Packs That Make Real Life the Lesson
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 text-center">
+          <p className="text-sm font-medium text-gold uppercase tracking-widest mb-4">
+            Printable Activity Packs
+          </p>
+          <h1 className="font-display text-4xl text-forest sm:text-5xl md:text-6xl leading-tight">
+            Real Life Is the Best Classroom
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Printable. No-prep. Built for families who learn everywhere.
+          <p className="mx-auto mt-4 max-w-2xl text-lg md:text-xl text-gray-600">
+            Printable activity packs that turn everyday moments into meaningful
+            learning. No curriculum. No lesson plans. No prep &mdash; just
+            print, pick one, and start.
           </p>
           <div className="mt-8">
             <TrustBadges />
@@ -59,7 +64,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-16">
         {/* Featured Bundle */}
         {masterBundle && !category && (
           <section className="mb-10">
@@ -84,18 +89,22 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         <section>
           <ProductGrid products={displayProducts} />
         </section>
-
-        {/* Bottom CTA */}
-        <section className="mt-16 text-center">
-          <p className="text-gray-600">Not sure where to start?</p>
-          <Link
-            href="/"
-            className="mt-2 inline-block text-forest font-medium underline underline-offset-2 hover:text-forest-dark"
-          >
-            Grab our free guide first →
-          </Link>
-        </section>
       </div>
+
+      {/* Bottom CTA — Dark Section */}
+      <section className="bg-forest text-cream py-20 md:py-28">
+        <div className="mx-auto max-w-xl px-5 sm:px-8 text-center">
+          <h2 className="font-display text-3xl md:text-5xl mb-4">
+            Not sure where to start?
+          </h2>
+          <p className="text-cream/80 text-lg mb-8">
+            Grab our free Future-Ready Skills Map &mdash; a simple guide to
+            what matters now, without the overwhelm. We&rsquo;ll send you ideas
+            and inspiration every week.
+          </p>
+          <EmailForm variant="dark" />
+        </div>
+      </section>
     </div>
   );
 }
