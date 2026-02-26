@@ -265,18 +265,20 @@ export default async function ProductPage({
             <h2 className="mb-8 text-center font-[family-name:var(--font-display)] text-2xl text-forest sm:text-3xl">
               What families are saying
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <TestimonialBlock
-                quote="My kids asked to do activities every single day. That's never happened before."
-                name="Sarah"
-                detail="Tennessee / homeschool of 3"
-              />
-              <TestimonialBlock
-                quote="We took these on our road trip and the kids were engaged the entire drive."
-                name="Mia"
-                detail="Colorado / worldschool family of 4"
-              />
-            </div>
+            <TestimonialBlock
+              testimonials={[
+                {
+                  quote: "My kids asked to do activities every single day. That's never happened before.",
+                  name: "Sarah",
+                  location: "Tennessee / homeschool of 3",
+                },
+                {
+                  quote: "We took these on our road trip and the kids were engaged the entire drive.",
+                  name: "Mia",
+                  location: "Colorado / worldschool family of 4",
+                },
+              ]}
+            />
           </div>
         </section>
 

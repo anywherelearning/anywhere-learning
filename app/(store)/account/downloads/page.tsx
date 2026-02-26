@@ -26,7 +26,7 @@ export default async function DownloadsPage() {
       </h1>
       <h2 className="mt-2 text-lg text-gray-600">Your Downloads</h2>
       <div className="mt-8">
-        <DownloadList orders={purchases} />
+        <DownloadList purchases={purchases} />
       </div>
     </div>
   );

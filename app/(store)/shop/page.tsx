@@ -63,7 +63,13 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         {/* Featured Bundle */}
         {masterBundle && !category && (
           <section className="mb-10">
-            <BundleHighlight bundle={masterBundle} />
+            <BundleHighlight
+              name={masterBundle.name}
+              slug={masterBundle.slug}
+              priceCents={masterBundle.priceCents}
+              compareAtPriceCents={masterBundle.compareAtPriceCents}
+              activityCount={masterBundle.activityCount}
+            />
           </section>
         )}
 
