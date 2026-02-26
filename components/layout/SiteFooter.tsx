@@ -45,7 +45,7 @@ export default function SiteFooter() {
                 My Downloads
               </Link>
               <Link
-                href="/free-guide"
+                href="/"
                 className="block text-sm text-gray-500 transition-colors hover:text-forest"
               >
                 Free Skills Map

@@ -1,30 +1,9 @@
-const approaches = [
-  'Charlotte Mason',
-  'Montessori',
-  'Unschool',
-  'Worldschool',
-  'Eclectic',
-];
-
 export default function TrustBadges() {
   return (
-    <div className="bg-gold-light/20 rounded-2xl p-6">
-      <p className="text-sm text-gray-500 mb-3">Works beautifully with:</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {approaches.map((a) => (
-          <span
-            key={a}
-            className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
-          >
-            {a}
-          </span>
-        ))}
-      </div>
-      <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
-        <span>&#x1F6AB; No curriculum needed</span>
-        <span>&#x1F30D; Works anywhere</span>
-        <span>&#x1F3AF; Adapts to your child</span>
-      </div>
+    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+      <span>&#x2713; Instant PDF download</span>
+      <span>&#x2713; Ages 4&ndash;14</span>
+      <span>&#x2713; Works for any learning style</span>
     </div>
   );
 }
