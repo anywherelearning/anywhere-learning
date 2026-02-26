@@ -101,7 +101,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             kids can try this week.
           </p>
           <Link
-            href="/"
+            href="/free-guide"
             className="mt-6 inline-block rounded-lg bg-forest px-6 py-3 font-semibold text-cream transition-colors hover:bg-forest-dark"
           >
             Get the Free Guide &rarr;
