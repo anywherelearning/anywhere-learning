@@ -10,6 +10,8 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
     "db:seed": "npx tsx scripts/seed.ts"
   },
   "repository": {
@@ -24,7 +26,7 @@
   },
   "homepage": "https://github.com/ameliedrouin-coder/anywhere-learning#readme",
   "dependencies": {
-    "@clerk/nextjs": "^6.38.2",
+    "@clerk/nextjs": "^6.38.3",
     "@lemonsqueezy/lemonsqueezy.js": "^4.0.0",
     "@neondatabase/serverless": "^1.0.2",
     "@react-email/components": "^1.0.8",

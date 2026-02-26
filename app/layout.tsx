@@ -18,40 +18,43 @@ const bodyFont = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Anywhere Learning",
     default: "Anywhere Learning — Meaningful Learning, Wherever You Are",
+    template: "%s | Anywhere Learning",
   },
   description:
-    "Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.",
+    "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://anywherelearning.co",
+    siteName: "Anywhere Learning",
     title: "Anywhere Learning — Meaningful Learning, Wherever You Are",
     description:
-      "Printable, no-prep activity packs for homeschool and worldschool families.",
-    type: "website",
-    siteName: "Anywhere Learning",
+      "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
 const clerkAppearance = {
   variables: {
-    colorPrimary: '#588157',
-    colorBackground: '#faf9f6',
-    colorText: '#1a1a1a',
-    colorInputBackground: '#ffffff',
-    borderRadius: '0.5rem',
-    fontFamily: 'DM Sans, sans-serif',
+    colorPrimary: "#588157",
+    colorBackground: "#faf9f6",
+    colorText: "#1a1a1a",
+    colorInputBackground: "#ffffff",
+    borderRadius: "0.5rem",
+    fontFamily: "DM Sans, sans-serif",
   },
 };
 
-function Providers({ children }: { children: React.ReactNode }) {
+function ClerkWrapper({ children }: { children: React.ReactNode }) {
+  // ClerkProvider requires a publishableKey. When building without env vars
+  // (e.g. CI or first build), skip the provider so static pages can render.
   if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
     return <>{children}</>;
   }
-  return (
-    <ClerkProvider appearance={clerkAppearance}>
-      {children}
-    </ClerkProvider>
-  );
+  return <ClerkProvider appearance={clerkAppearance}>{children}</ClerkProvider>;
 }
 
 export default function RootLayout({
@@ -60,15 +63,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Providers>
-      <html lang="en">
-        <body
-          className={`${bodyFont.variable} ${displayFont.variable} font-body bg-cream text-gray-900 antialiased`}
-        >
-          {children}
-          <SpeedInsights />
-        </body>
-      </html>
-    </Providers>
+    <html lang="en">
+      <body
+        className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
+      >
+        <ClerkWrapper>{children}</ClerkWrapper>
+        <SpeedInsights />
+      </body>
+    </html>
   );
 }
