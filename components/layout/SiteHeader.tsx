@@ -57,13 +57,13 @@ export default function SiteHeader() {
             href="/shop"
             className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
           >
-            Activity Packs
+            Shop
           </Link>
           <Link
-            href="/shop?category=bundle"
+            href="/free-guide"
             className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
           >
-            Bundles
+            Free Guide
           </Link>
           <Link
             href="/#about"
@@ -80,7 +80,7 @@ export default function SiteHeader() {
             href="/shop"
             className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
           >
-            Shop Packs
+            Browse Packs
           </Link>
         </div>
 
@@ -126,14 +126,14 @@ export default function SiteHeader() {
               onClick={() => setMobileOpen(false)}
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Activity Packs
+              Shop
             </Link>
             <Link
-              href="/shop?category=bundle"
+              href="/free-guide"
               onClick={() => setMobileOpen(false)}
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Bundles
+              Free Guide
             </Link>
             <Link
               href="/#about"
@@ -150,7 +150,7 @@ export default function SiteHeader() {
               onClick={() => setMobileOpen(false)}
               className="mt-4 rounded-xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-colors hover:bg-forest-dark"
             >
-              Shop Packs
+              Browse Packs
             </Link>
           </nav>
         </div>
