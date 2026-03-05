@@ -3,8 +3,15 @@ import { LogoIcon } from '@/components/Logo';
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-cream border-t border-forest/10 py-16">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <footer className="relative bg-[#f7f5f0] pt-0 pb-16">
+      {/* Decorative organic top edge */}
+      <div className="relative h-12 -mt-1 overflow-hidden" aria-hidden="true">
+        <svg viewBox="0 0 1200 48" fill="none" preserveAspectRatio="none" className="absolute top-0 w-full h-12">
+          <path d="M0 0 Q200 40 400 24 T800 32 T1200 16 V48 H0 Z" fill="#f7f5f0" />
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Column 1: Brand */}
           <div>
@@ -14,7 +21,7 @@ export default function SiteFooter() {
                 Anywhere Learning
               </span>
             </Link>
-            <p className="text-sm text-gray-500 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed">
               Meaningful learning, wherever you are. Real-world activity packs
               for homeschool and worldschool families.
             </p>
@@ -22,31 +29,31 @@ export default function SiteFooter() {
 
           {/* Column 2: Quick links */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
               Explore
             </h3>
             <nav className="space-y-2.5">
               <Link
                 href="/shop"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 Activity Packs
               </Link>
               <Link
                 href="/shop?category=bundle"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 Bundles
               </Link>
               <Link
                 href="/account/downloads"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 My Downloads
               </Link>
               <Link
                 href="/free-guide"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 Free Skills Map
               </Link>
@@ -55,19 +62,19 @@ export default function SiteFooter() {
 
           {/* Column 3: Connect */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
               Connect
             </h3>
             <nav className="space-y-2.5">
               <a
                 href="mailto:info@anywherelearning.co"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 info@anywherelearning.co
               </a>
               <a
                 href="https://instagram.com/anywherelearning"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,7 +82,7 @@ export default function SiteFooter() {
               </a>
               <a
                 href="https://pinterest.com/anywherelearning"
-                className="block text-sm text-gray-500 transition-colors hover:text-forest"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -86,11 +93,11 @@ export default function SiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-xs text-gray-400">
+        <div className="mt-12 pt-8 border-t border-gray-200/60 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+          <p className="text-xs text-gray-300">
             &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.
           </p>
-          <p className="font-display text-sm text-forest/50">
+          <p className="font-display text-sm text-forest/40">
             Meaningful Learning, Wherever You Are
           </p>
         </div>
