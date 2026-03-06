@@ -68,9 +68,16 @@ function slugify(text: string): string {
 }
 
 function getTableOfContents(content: BlogContentBlock[]) {
-  return content
+  const items = content
     .filter((b): b is { type: 'heading'; level: 2; text: string } => b.type === 'heading' && b.level === 2)
     .map((b) => ({ text: b.text, id: slugify(b.text) }));
+
+  // Add FAQ to TOC if the post has an FAQ block
+  if (content.some((b) => b.type === 'faq')) {
+    items.push({ text: 'Frequently asked questions', id: 'faq' });
+  }
+
+  return items;
 }
 
 /* ─── Content Block Renderer ─── */
@@ -203,7 +210,7 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
     case 'faq':
       return (
         <div key={index} className="my-12 md:my-16">
-          <h2 className="font-semibold text-[1.35rem] text-forest mb-6">Frequently asked questions</h2>
+          <h2 id="faq" className="font-semibold text-[1.35rem] text-forest mb-6 scroll-mt-24">Frequently asked questions</h2>
           <div className="space-y-3">
             {block.items.map((item, i) => (
               <details
