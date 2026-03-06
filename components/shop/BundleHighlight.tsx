@@ -19,7 +19,10 @@ export default function BundleHighlight({
   const savings = compareAtPriceCents ? compareAtPriceCents - priceCents : 0;
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+    <div className="relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 overflow-hidden border border-gold/10">
+      {/* Subtle warm gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gold-light/[0.06] to-transparent pointer-events-none" />
+
       {/* Left: Stack of 4 product mockups, slightly overlapping and rotated */}
       <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
         {/* Back cards peeking out */}
@@ -41,18 +44,18 @@ export default function BundleHighlight({
       </div>
 
       {/* Right: Copy + CTA */}
-      <div className="text-center md:text-left">
-        <p className="text-sm font-medium text-gold uppercase tracking-widest mb-2">
+      <div className="relative text-center md:text-left">
+        <p className="text-sm font-medium text-gold uppercase tracking-[0.2em] mb-2">
           Best Value
         </p>
         <h2 className="font-display text-3xl md:text-4xl text-forest mb-3">
           The Master Bundle
         </h2>
-        <p className="text-gray-600 mb-2 text-lg">
+        <p className="text-gray-500 mb-2 text-lg">
           Every single activity pack we make.{' '}
           {activityCount ? `${activityCount}+` : '220+'} activities across all categories.
         </p>
-        <p className="text-gray-500 mb-6">
+        <p className="text-gray-400 mb-6">
           Seasonal &middot; Nature &middot; Creativity &middot; Real-World Skills &middot; Life Skills &middot; AI Literacy
         </p>
 
@@ -66,7 +69,7 @@ export default function BundleHighlight({
               <span className="text-lg text-gray-400 line-through">
                 {formatPrice(compareAtPriceCents)}
               </span>
-              <span className="bg-gold/20 text-gold text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-gold/15 text-gold text-sm font-semibold px-3 py-1 rounded-full">
                 Save {formatPrice(savings)}
               </span>
             </>
@@ -75,7 +78,7 @@ export default function BundleHighlight({
 
         <Link
           href={`/shop/${slug}`}
-          className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-sm hover:shadow-md text-lg"
+          className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-lg text-lg"
         >
           Get the Master Bundle &rarr;
         </Link>

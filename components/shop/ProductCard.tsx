@@ -23,6 +23,16 @@ const categoryLabels: Record<string, string> = {
   bundle: 'Bundle',
 };
 
+const categoryAccents: Record<string, string> = {
+  seasonal: 'card-accent-seasonal',
+  creativity: 'card-accent-creativity',
+  nature: 'card-accent-nature',
+  'real-world': 'card-accent-real-world',
+  'life-skills': 'card-accent-life-skills',
+  'ai-literacy': 'card-accent-ai-literacy',
+  bundle: 'card-accent-bundle',
+};
+
 export default function ProductCard({
   name,
   slug,
@@ -36,11 +46,11 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Link href={`/shop/${slug}`} className="group block">
-      <div className="bg-white rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 border border-gray-100/50 overflow-hidden">
+      <div className={`bg-white rounded-2xl shadow-sm group-hover:shadow-xl group-hover:shadow-forest/[0.06] transition-all duration-300 group-hover:-translate-y-1.5 border border-gray-100/50 overflow-hidden ${categoryAccents[category] || ''}`}>
         {/* Product Image / Mockup Area */}
         <div className="relative aspect-[4/3] bg-gradient-to-br from-cream to-gold-light/30 flex items-center justify-center p-6 overflow-hidden">
           {/* CSS Product Mockup — a "floating document" card */}
-          <div className="w-3/4 aspect-[3/4] bg-white rounded-xl shadow-lg border border-forest/10 p-4 transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
+          <div className="w-3/4 aspect-[3/4] bg-white rounded-xl shadow-lg border border-forest/10 p-4 transform rotate-2 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500">
             {/* Small forest green circle at top (logo placeholder) */}
             <div className="w-6 h-6 rounded-full bg-forest/20 mx-auto mb-3" />
             {/* Product title on the mockup */}

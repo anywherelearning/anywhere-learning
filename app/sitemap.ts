@@ -2,8 +2,11 @@ import type { MetadataRoute } from 'next';
 import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { getAllPosts } from '@/lib/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const blogPosts = getAllPosts();
+
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: 'https://anywherelearning.co',
@@ -18,6 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: 'https://anywherelearning.co/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: 'https://anywherelearning.co/free-guide',
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -25,7 +34,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  if (!process.env.DATABASE_URL) return staticRoutes;
+  const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `https://anywherelearning.co/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const baseRoutes = [...staticRoutes, ...blogUrls];
+
+  if (!process.env.DATABASE_URL) return baseRoutes;
 
   try {
     const allProducts = await db
@@ -40,8 +58,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     }));
 
-    return [...staticRoutes, ...productUrls];
+    return [...baseRoutes, ...productUrls];
   } catch {
-    return staticRoutes;
+    return baseRoutes;
   }
 }

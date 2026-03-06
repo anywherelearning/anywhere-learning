@@ -76,6 +76,26 @@ const categoryLabels: Record<string, string> = {
   bundle: "Bundle",
 };
 
+const categoryIcons: Record<string, string> = {
+  seasonal: "\u2600\uFE0F",
+  creativity: "\uD83C\uDFA8",
+  nature: "\uD83C\uDF3F",
+  "real-world": "\uD83D\uDCA1",
+  "life-skills": "\uD83E\uDDED",
+  "ai-literacy": "\uD83E\uDD16",
+  bundle: "\uD83D\uDCE6",
+};
+
+const coverClasses: Record<string, string> = {
+  seasonal: "cover-seasonal",
+  creativity: "cover-creativity",
+  nature: "cover-nature",
+  "real-world": "cover-real-world",
+  "life-skills": "cover-life-skills",
+  "ai-literacy": "cover-ai-literacy",
+  bundle: "cover-bundle",
+};
+
 export default async function ProductPage({
   params,
 }: {
@@ -145,25 +165,40 @@ export default async function ProductPage({
           <div className="grid gap-8 lg:grid-cols-[55fr_45fr] lg:gap-12">
             {/* Left: Product Visual (sticky on desktop) */}
             <div className="lg:sticky lg:top-24 lg:self-start">
-              <div className="relative aspect-[3/4] bg-gradient-to-br from-cream to-gold-light/30 rounded-2xl flex items-center justify-center">
-                {/* Floating document mockup */}
-                <div className="w-4/5 aspect-[3/4] bg-white rounded-xl shadow-2xl border border-forest/10 p-8 transform rotate-1 animate-gentle-float flex flex-col items-center justify-center">
-                  <div className="w-10 h-10 rounded-full bg-forest/20 mb-4" />
-                  <p className="font-display text-center text-forest text-lg leading-snug mb-4">
-                    {product.name}
+              <div
+                className={`relative aspect-[3/4] ${
+                  coverClasses[product.category] || "cover-nature"
+                } rounded-2xl flex flex-col items-center justify-center p-8 text-white overflow-hidden`}
+              >
+                {/* Category icon watermark */}
+                <span
+                  className="absolute top-6 right-6 text-7xl opacity-20"
+                  aria-hidden="true"
+                >
+                  {categoryIcons[product.category] || "\uD83D\uDCC4"}
+                </span>
+
+                {/* Product name */}
+                <p className="font-display text-3xl md:text-4xl text-center leading-snug text-white drop-shadow-sm max-w-[85%]">
+                  {product.name}
+                </p>
+
+                {/* Activity count */}
+                {product.activityCount && (
+                  <p className="mt-3 text-lg text-white/80 font-medium">
+                    {product.activityCount} activities
                   </p>
-                  <div className="space-y-2 w-full px-4">
-                    <div className="h-1.5 bg-gray-200 rounded-full w-full" />
-                    <div className="h-1.5 bg-gray-200 rounded-full w-4/5" />
-                    <div className="h-1.5 bg-gray-200 rounded-full w-3/5" />
-                    <div className="h-1.5 bg-gray-200 rounded-full w-4/5" />
-                  </div>
+                )}
+
+                {/* Category pill */}
+                <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                  {categoryLabels[product.category] || product.category}
                 </div>
 
-                {/* Activity count badge */}
-                {product.activityCount && (
-                  <div className="absolute bottom-6 right-6 bg-forest text-cream text-sm font-bold px-4 py-2 rounded-full shadow-md">
-                    {product.activityCount} activities
+                {/* Bundle badge */}
+                {product.isBundle && (
+                  <div className="absolute top-4 left-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                    BEST VALUE
                   </div>
                 )}
               </div>
@@ -216,10 +251,25 @@ export default async function ProductPage({
 
               {/* Trust line */}
               <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
-                <span>&#x1F4E5; Instant PDF download</span>
-                <span>&#x1F5A8;&#xFE0F; Print at home</span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Instant PDF download
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Print at home
+                </span>
                 {product.ageRange && (
-                  <span>&#x1F476; Ages {product.ageRange}</span>
+                  <span className="flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Ages {product.ageRange}
+                  </span>
                 )}
               </div>
 
@@ -233,7 +283,9 @@ export default async function ProductPage({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {product.activityCount && (
                     <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                      <span className="text-forest font-semibold">&#x2713;</span>
+                      <svg className="w-4 h-4 text-forest flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                       <span className="text-sm text-gray-700">
                         {product.activityCount} age-flexible activity cards
                       </span>
@@ -280,7 +332,7 @@ export default async function ProductPage({
               </div>
 
               {/* Philosophy Badges */}
-              <div className="bg-gold-light/20 rounded-2xl p-6 mb-8">
+              <div className="bg-gold-light/10 rounded-2xl p-6 mb-8">
                 <p className="text-sm text-gray-500 mb-3">
                   Works beautifully with:
                 </p>
@@ -301,9 +353,11 @@ export default async function ProductPage({
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                  <span>&#x1F6AB; No curriculum needed</span>
-                  <span>&#x1F30D; Works anywhere</span>
-                  <span>&#x1F3AF; Adapts to your child</span>
+                  <span>No curriculum needed</span>
+                  <span>&middot;</span>
+                  <span>Works anywhere</span>
+                  <span>&middot;</span>
+                  <span>Adapts to your child</span>
                 </div>
               </div>
 

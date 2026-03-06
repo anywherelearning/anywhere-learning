@@ -99,7 +99,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`rounded-lg px-6 py-3.5 text-base font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 ${
+          className={`rounded-lg px-6 py-3.5 text-base font-semibold transition-all active:scale-[0.98] disabled:opacity-70 ${
             isLight
               ? "bg-forest text-cream hover:bg-forest-dark"
               : "bg-gold text-forest-dark hover:bg-gold-light"
