@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  verification: {
+    other: {
+      "p:domain_verify": "5a031867515fed8ef0f33a4809525261",
+    },
+  },
 };
 
 const clerkAppearance = {
