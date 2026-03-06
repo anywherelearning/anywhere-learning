@@ -8,6 +8,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import AnimatedCounter from '@/components/shared/AnimatedCounter';
 import PeekInsidePack from '@/components/shared/PeekInsidePack';
+import EmailForm from '@/components/EmailForm';
 
 export const metadata: Metadata = {
   title: 'Anywhere Learning — Meaningful Learning, Wherever You Are',
@@ -585,6 +586,35 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            EMAIL CAPTURE — Lead magnet pitch
+        ═══════════════════════════════════════════ */}
+        <section className="bg-cream py-16 md:py-20">
+          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+                Free Resource
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
+                Get Your Future-Ready Skills Map
+              </h2>
+              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
+                Discover the 10 real-world skills your kids can build through everyday
+                moments — no curriculum, no prep, no screen time.
+              </p>
+              <EmailForm variant="light" />
+              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
+                <span className="flex -space-x-1.5">
+                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
+                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
+                  ))}
+                </span>
+                Join 500+ families learning differently
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             MEET THE MAKER — Personal brand
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
@@ -666,6 +696,9 @@ export default function HomePage() {
               </div>
               <p className="mt-8 text-cream/40 text-sm">
                 14-day money-back guarantee &middot; Instant download &middot; Print unlimited copies
+              </p>
+              <p className="mt-3 text-cream/25 text-xs">
+                Most popular this month: Master Bundle
               </p>
             </ScrollReveal>
           </div>
