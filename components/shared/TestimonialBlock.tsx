@@ -14,12 +14,13 @@ export default function TestimonialBlock({ testimonials }: TestimonialBlockProps
       {testimonials.map((t, i) => (
         <blockquote
           key={i}
-          className="bg-white rounded-2xl border border-gray-100/50 p-5 shadow-sm hover:shadow-md transition-shadow"
+          className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"
         >
-          <p className="text-gray-700 italic mb-2 leading-relaxed">
+          <span className="text-gold text-sm tracking-wide">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p className="mt-2 text-gray-700 leading-relaxed">
             &ldquo;{t.quote}&rdquo;
           </p>
-          <footer className="text-sm text-gray-500">
+          <footer className="mt-3 text-sm text-gray-500">
             &mdash; {t.name}, {t.location}
           </footer>
         </blockquote>

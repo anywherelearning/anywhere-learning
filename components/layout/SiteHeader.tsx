@@ -38,7 +38,7 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b transition-all ${
+      className={`sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b transition-all duration-300 ${
         scrolled ? 'border-forest/10 shadow-sm' : 'border-transparent'
       }`}
     >
@@ -55,21 +55,27 @@ export default function SiteHeader() {
         <nav className="hidden items-center gap-8 md:flex">
           <Link
             href="/shop"
-            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
+            className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
           >
-            Activity Packs
+            Shop
           </Link>
           <Link
-            href="/shop?category=bundle"
-            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
+            href="/blog"
+            className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
           >
-            Bundles
+            Blog
           </Link>
           <Link
             href="/#about"
-            className="text-sm font-medium text-gray-600 transition-colors hover:text-forest"
+            className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
           >
             Our Philosophy
+          </Link>
+          <Link
+            href="/free-guide"
+            className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
+          >
+            Free Guide
           </Link>
         </nav>
 
@@ -78,9 +84,9 @@ export default function SiteHeader() {
           <AuthNav />
           <Link
             href="/shop"
-            className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+            className="rounded-2xl bg-forest px-5 py-2.5 text-sm font-semibold text-cream transition-all duration-200 hover:bg-forest-dark hover:shadow-md"
           >
-            Shop Packs
+            Browse Packs
           </Link>
         </div>
 
@@ -126,14 +132,14 @@ export default function SiteHeader() {
               onClick={() => setMobileOpen(false)}
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Activity Packs
+              Shop
             </Link>
             <Link
-              href="/shop?category=bundle"
+              href="/blog"
               onClick={() => setMobileOpen(false)}
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Bundles
+              Blog
             </Link>
             <Link
               href="/#about"
@@ -142,15 +148,22 @@ export default function SiteHeader() {
             >
               Our Philosophy
             </Link>
+            <Link
+              href="/free-guide"
+              onClick={() => setMobileOpen(false)}
+              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
+            >
+              Free Guide
+            </Link>
             <div className="text-2xl font-medium text-forest">
               <AuthNav onLinkClick={() => setMobileOpen(false)} />
             </div>
             <Link
               href="/shop"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 rounded-xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-colors hover:bg-forest-dark"
+              className="mt-4 rounded-2xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-colors hover:bg-forest-dark"
             >
-              Shop Packs
+              Browse Packs
             </Link>
           </nav>
         </div>

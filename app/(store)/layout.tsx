@@ -9,7 +9,7 @@ export default function StoreLayout({
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen pt-16">{children}</main>
+      <main className="min-h-screen">{children}</main>
       <SiteFooter />
     </>
   );

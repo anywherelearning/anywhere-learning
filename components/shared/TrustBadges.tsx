@@ -8,22 +8,39 @@ const approaches = [
 
 export default function TrustBadges() {
   return (
-    <div className="bg-gold-light/20 rounded-2xl p-6">
-      <p className="text-sm text-gray-500 mb-3">Works beautifully with:</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {approaches.map((a) => (
-          <span
-            key={a}
-            className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
-          >
-            {a}
+    <div className="max-w-xl mx-auto">
+      {/* Approach pills — subtle, inline */}
+      <div className="flex flex-wrap justify-center gap-2">
+        {approaches.map((a, i) => (
+          <span key={a} className="flex items-center gap-1.5">
+            <span className="text-sm text-gray-400 font-medium">{a}</span>
+            {i < approaches.length - 1 && (
+              <span className="text-forest/20 text-xs mx-1" aria-hidden="true">&bull;</span>
+            )}
           </span>
         ))}
       </div>
-      <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
-        <span>&#x1F6AB; No curriculum needed</span>
-        <span>&#x1F30D; Works anywhere</span>
-        <span>&#x1F3AF; Adapts to your child</span>
+
+      {/* Benefits — minimal, spaced */}
+      <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-2">
+        <span className="flex items-center gap-2 text-sm text-gray-400">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-forest/40" aria-hidden="true">
+            <path d="M13.3 4L6 11.3 2.7 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          No curriculum needed
+        </span>
+        <span className="flex items-center gap-2 text-sm text-gray-400">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-forest/40" aria-hidden="true">
+            <path d="M13.3 4L6 11.3 2.7 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Works anywhere
+        </span>
+        <span className="flex items-center gap-2 text-sm text-gray-400">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-forest/40" aria-hidden="true">
+            <path d="M13.3 4L6 11.3 2.7 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Adapts to your child
+        </span>
       </div>
     </div>
   );

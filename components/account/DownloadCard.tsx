@@ -5,24 +5,34 @@ interface DownloadCardProps {
   productName: string;
   imageUrl: string | null;
   purchasedAt: Date | string;
+  productCategory?: string;
 }
+
+const coverClasses: Record<string, string> = {
+  seasonal: 'cover-seasonal',
+  creativity: 'cover-creativity',
+  nature: 'cover-nature',
+  'real-world': 'cover-real-world',
+  'life-skills': 'cover-life-skills',
+  'ai-literacy': 'cover-ai-literacy',
+  bundle: 'cover-bundle',
+};
 
 export default function DownloadCard({
   productId,
   productName,
   purchasedAt,
+  productCategory,
 }: DownloadCardProps) {
   return (
     <div className="bg-white rounded-2xl border border-gray-100 p-6 flex items-center gap-6 hover:shadow-sm transition-shadow">
-      {/* Small product mockup */}
-      <div className="w-16 h-20 bg-gradient-to-br from-cream to-gold-light/30 rounded-xl flex items-center justify-center flex-shrink-0">
-        <div className="w-10 h-12 bg-white rounded-lg shadow-sm border border-forest/10 p-1">
-          <div className="w-3 h-3 rounded-full bg-forest/20 mx-auto mb-1" />
-          <div className="space-y-0.5 px-0.5">
-            <div className="h-0.5 bg-gray-200 rounded-full" />
-            <div className="h-0.5 bg-gray-200 rounded-full w-3/4" />
-          </div>
-        </div>
+      {/* Category colour strip */}
+      <div
+        className={`w-14 h-18 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 ${
+          productCategory ? coverClasses[productCategory] || 'cover-nature' : 'cover-nature'
+        }`}
+      >
+        {'\uD83D\uDCC4'}
       </div>
 
       {/* Info */}

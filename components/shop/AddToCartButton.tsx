@@ -32,7 +32,7 @@ export default function AddToCartButton({
   return (
     <a
       href={checkoutUrl}
-      className="lemonsqueezy-button block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-sm hover:shadow-md text-center text-lg"
+      className="lemonsqueezy-button block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-center text-lg"
     >
       Get {productName} &mdash; {formatPrice(priceCents)}
     </a>

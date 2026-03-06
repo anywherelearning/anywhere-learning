@@ -67,7 +67,7 @@ const pillars = [
 
 export default function WhyItWorks() {
   return (
-    <section className="bg-gold-light/20 py-20 md:py-28">
+    <section className="bg-gold-light/10 py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
         <h2 className="font-display text-3xl md:text-5xl text-forest mb-3">
           The goal isn&apos;t to teach kids about life
