@@ -274,7 +274,8 @@ export default async function ProductPage({
               {/* Buy Button */}
               <div className="mt-6">
                 <AddToCartButton
-                  lemonVariantId={product.lemonVariantId}
+                  stripePriceId={product.stripePriceId}
+                  slug={product.slug}
                   productName={product.name}
                   priceCents={product.priceCents}
                 />
