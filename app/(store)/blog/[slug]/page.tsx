@@ -200,6 +200,30 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
           </div>
         </div>
       );
+    case 'faq':
+      return (
+        <div key={index} className="my-12 md:my-16">
+          <h2 className="font-semibold text-[1.35rem] text-forest mb-6">Frequently asked questions</h2>
+          <div className="space-y-3">
+            {block.items.map((item, i) => (
+              <details
+                key={i}
+                className="group rounded-xl border border-gray-100/60 bg-white shadow-[0_1px_8px_-2px_rgba(0,0,0,0.03)] overflow-hidden"
+              >
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer text-[1.05rem] font-medium text-gray-800 leading-snug hover:text-forest transition-colors [&::-webkit-details-marker]:hidden list-none">
+                  {item.question}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="flex-shrink-0 text-gray-300 group-open:rotate-180 transition-transform">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-5 text-gray-600 text-[1.02rem] leading-[1.75]">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      );
   }
 }
 
@@ -243,12 +267,47 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   };
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://anywherelearning.co' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://anywherelearning.co/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://anywherelearning.co/blog/${post.slug}` },
+    ],
+  };
+
+  // Collect FAQ items from all faq content blocks
+  const faqItems = post.content
+    .filter((b): b is { type: 'faq'; items: { question: string; answer: string }[] } => b.type === 'faq')
+    .flatMap((b) => b.items);
+
+  const faqLd = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  } : null;
+
   return (
     <div className="bg-cream min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <ReadingProgress />
 
       {/* ─── Hero ─── */}

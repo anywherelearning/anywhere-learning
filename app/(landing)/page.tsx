@@ -127,9 +127,42 @@ const counterStats = [
   { end: 14, suffix: '-day', label: 'Guarantee', duration: 1600 },
 ];
 
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Anywhere Learning',
+  url: 'https://anywherelearning.co',
+  logo: 'https://anywherelearning.co/logo.png',
+  description: 'Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+  email: 'info@anywherelearning.co',
+  sameAs: [
+    'https://www.pinterest.com/anywherelearning',
+  ],
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Anywhere Learning',
+  url: 'https://anywherelearning.co',
+};
+
+const homepageFaqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqLd) }} />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-cream"
