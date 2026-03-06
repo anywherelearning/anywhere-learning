@@ -628,11 +628,11 @@ export default function HomePage() {
                 Free Resource
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
-                Get Your Future-Ready Skills Map
+                10 Life Skills Your Kids Can Learn This Week
               </h2>
               <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                Discover the 10 real-world skills your kids can build through everyday
-                moments — no curriculum, no prep, no screen time.
+                A free guide with 10 real-world life skills and activities your kids
+                can try this week — no curriculum, no prep, no screen time.
               </p>
               <EmailForm variant="light" />
               <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
