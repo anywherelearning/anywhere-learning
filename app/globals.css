@@ -243,6 +243,15 @@ body::after {
   animation: card-peek 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Blog prose: all styling is now inline via Tailwind in renderBlock() */
+
+/* ─── Blog category accent colors ─── */
+.blog-accent-homeschool-life { border-color: #588157; }
+.blog-accent-nature-learning { border-color: #6b8e6b; }
+.blog-accent-real-world-skills { border-color: #8b7355; }
+.blog-accent-travel-worldschool { border-color: #c4836a; }
+.blog-accent-getting-started { border-color: #d4a373; }
+
 /* ─── Hide scrollbar for category filter ─── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
