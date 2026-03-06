@@ -20,6 +20,7 @@ import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -383,11 +384,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="mx-auto max-w-5xl px-5 sm:px-8 mb-12 md:mb-16">
         <ScrollReveal delay={100}>
           <div
-            className="relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
+            className="group relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             style={{
               background: `linear-gradient(160deg, ${cat.color}12, ${cat.color}30, ${cat.color}08)`,
             }}
           >
+            <PinterestSaveButton
+              url={`https://anywherelearning.co/blog/${post.slug}`}
+              description={`${post.title} — ${post.excerpt}`}
+            />
             {/* Organic shapes */}
             <div
               className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"

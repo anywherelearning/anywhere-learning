@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt — just what works.',
+  openGraph: {
+    title: 'Blog — Anywhere Learning',
+    description:
+      'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families.',
+    url: 'https://anywherelearning.co/blog',
+    type: 'website',
+    images: [
+      {
+        url: 'https://anywherelearning.co/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Anywhere Learning Blog',
+      },
+    ],
+  },
 };
 
 interface BlogPageProps {
