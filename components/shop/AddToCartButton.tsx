@@ -1,40 +1,53 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { formatPrice } from '@/lib/utils';
 
 interface AddToCartButtonProps {
-  lemonVariantId: string;
+  stripePriceId: string;
+  slug: string;
   productName: string;
   priceCents: number;
 }
 
 export default function AddToCartButton({
-  lemonVariantId,
+  stripePriceId,
+  slug,
   productName,
   priceCents,
 }: AddToCartButtonProps) {
-  useEffect(() => {
-    // Load Lemon Squeezy embed script
-    if (document.querySelector('script[src*="lemonsqueezy"]')) return;
-    const script = document.createElement('script');
-    script.src = 'https://assets.lemonsqueezy.com/lemon.js';
-    script.defer = true;
-    document.body.appendChild(script);
+  const [loading, setLoading] = useState(false);
 
-    return () => {
-      // Don't remove on unmount since other buttons may use it
-    };
-  }, []);
-
-  const checkoutUrl = `https://anywherelearning.lemonsqueezy.com/checkout/buy/${lemonVariantId}?embed=1`;
+  async function handleCheckout() {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stripePriceId, slug }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        console.error('Checkout error:', data.error);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error('Checkout failed:', error);
+      setLoading(false);
+    }
+  }
 
   return (
-    <a
-      href={checkoutUrl}
-      className="lemonsqueezy-button block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-center text-lg"
+    <button
+      onClick={handleCheckout}
+      disabled={loading}
+      className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-center text-lg disabled:opacity-60 disabled:cursor-not-allowed"
     >
-      Get {productName} &mdash; {formatPrice(priceCents)}
-    </a>
+      {loading
+        ? 'Redirecting to checkout...'
+        : `Get ${productName} \u2014 ${formatPrice(priceCents)}`}
+    </button>
   );
 }

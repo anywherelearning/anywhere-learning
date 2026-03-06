@@ -21,7 +21,7 @@
 - **Styling:** Tailwind CSS 4
 - **Auth:** Clerk (conditional — works without env vars)
 - **Database:** Neon PostgreSQL + Drizzle ORM
-- **Payments:** Lemon Squeezy
+- **Payments:** Stripe
 - **Transactional Email:** Resend + React Email
 - **Marketing Email:** ConvertKit (Kit)
 - **File Storage:** Vercel Blob (secure PDF delivery)
@@ -44,7 +44,8 @@
 /account/downloads    → User's purchased PDFs (requires Clerk auth)
 /sign-in, /sign-up    → Clerk auth pages
 /api/subscribe        → ConvertKit email subscription
-/api/webhooks/lemon   → Lemon Squeezy purchase webhook
+/api/checkout          → Stripe Checkout session creation
+/api/webhooks/stripe  → Stripe purchase webhook
 /api/download/[fileId] → Secure PDF delivery (signed Blob URL)
 ```
 
@@ -68,16 +69,16 @@ Phase 1 (MVP Store) in progress:
 - [x] Lead magnet landing page (at /free-guide)
 - [x] Homepage with product showcase
 - [x] Shop listing page with category filtering
-- [x] Product detail pages with Lemon Squeezy checkout
+- [x] Product detail pages with Stripe checkout
 - [x] User account / downloads page
 - [x] Clerk authentication
 - [x] Database schema (Drizzle/Neon)
-- [x] Lemon Squeezy webhook handler
+- [x] Stripe webhook handler
 - [x] Secure PDF delivery endpoint
 - [x] Purchase confirmation email (Resend)
 - [x] ConvertKit buyer tagging
 - [x] SEO: robots.ts, sitemap.ts, JSON-LD product schema
-- [ ] Set up Lemon Squeezy store account + upload products
+- [ ] Run `npm run stripe:sync` to create Stripe products + get price IDs
 - [ ] Set up Neon database + run seed script
 - [ ] Set up Clerk project
 - [ ] Lighthouse audit (target 95+)
