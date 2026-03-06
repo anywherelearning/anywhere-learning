@@ -106,9 +106,14 @@ export default function ProductCard({
                 ${(priceCents / 100).toFixed(2)}
               </span>
               {compareAtPriceCents && (
-                <span className="text-sm text-gray-400 line-through ml-2">
-                  ${(compareAtPriceCents / 100).toFixed(2)}
-                </span>
+                <>
+                  <span className="text-sm text-gray-400 line-through ml-2">
+                    ${(compareAtPriceCents / 100).toFixed(2)}
+                  </span>
+                  <span className="block mt-1 text-xs font-semibold text-gold">
+                    Save ${((compareAtPriceCents - priceCents) / 100).toFixed(2)}
+                  </span>
+                </>
               )}
             </div>
             <span className="text-forest font-medium text-sm group-hover:translate-x-1 transition-transform">

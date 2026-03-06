@@ -138,11 +138,42 @@ export default async function ProductPage({
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://anywherelearning.co" },
+      { "@type": "ListItem", position: 2, name: "Shop", item: "https://anywherelearning.co/shop" },
+      { "@type": "ListItem", position: 3, name: product.name, item: `https://anywherelearning.co/shop/${product.slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: productFAQ.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
       />
 
       <div className="bg-cream">
@@ -271,6 +302,17 @@ export default async function ProductPage({
                     Ages {product.ageRange}
                   </span>
                 )}
+              </div>
+
+              {/* Mini testimonial near CTA */}
+              <div className="mt-5 flex items-start gap-3 bg-gold-light/10 rounded-xl p-4 border border-gold/10">
+                <span className="text-gold text-sm mt-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div>
+                  <p className="text-sm text-gray-600 italic leading-relaxed">
+                    &ldquo;My kids asked to do activities every single day. That has never happened before.&rdquo;
+                  </p>
+                  <p className="text-xs text-gray-400 mt-1">&mdash; Sarah M., Tennessee</p>
+                </div>
               </div>
 
               <hr className="my-8 border-gray-200" />

@@ -243,43 +243,7 @@ body::after {
   animation: card-peek 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* ─── Blog prose spacing ─── */
-.blog-prose > p {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: #4b5563;
-  margin-bottom: 1.75rem;
-}
-.blog-prose > h2 {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #1f2937;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-.blog-prose > h3 {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #374151;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-.blog-prose > ul,
-.blog-prose > ol {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: #4b5563;
-  margin-bottom: 1.75rem;
-  padding-left: 1.5rem;
-}
-.blog-prose > ul { list-style-type: disc; }
-.blog-prose > ol { list-style-type: decimal; }
-.blog-prose > ul li,
-.blog-prose > ol li {
-  margin-bottom: 0.5rem;
-}
+/* Blog prose: all styling is now inline via Tailwind in renderBlock() */
 
 /* ─── Blog category accent colors ─── */
 .blog-accent-homeschool-life { border-color: #588157; }
