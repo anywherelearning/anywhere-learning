@@ -13,6 +13,21 @@ export const metadata: Metadata = {
   title: "Shop Activity Packs",
   description:
     "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+  openGraph: {
+    title: "Shop Activity Packs — Anywhere Learning",
+    description:
+      "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+    url: "https://anywherelearning.co/shop",
+    type: "website",
+    images: [
+      {
+        url: "https://anywherelearning.co/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Anywhere Learning Activity Packs",
+      },
+    ],
+  },
 };
 
 /* Hardcoded fallback when DB is unavailable */

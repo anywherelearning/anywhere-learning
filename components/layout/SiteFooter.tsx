@@ -87,7 +87,7 @@ export default function SiteFooter() {
                 Instagram
               </a>
               <a
-                href="https://pinterest.com/anywherelearning"
+                href="https://ca.pinterest.com/anywherelearning/"
                 className="block text-sm text-gray-400 transition-colors hover:text-forest"
                 target="_blank"
                 rel="noopener noreferrer"

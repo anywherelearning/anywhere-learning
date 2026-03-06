@@ -136,7 +136,7 @@ const organizationLd = {
   description: 'Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   email: 'info@anywherelearning.co',
   sameAs: [
-    'https://www.pinterest.com/anywherelearning',
+    'https://ca.pinterest.com/anywherelearning/',
   ],
 };
 
