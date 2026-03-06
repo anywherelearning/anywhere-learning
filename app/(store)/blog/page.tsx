@@ -42,8 +42,37 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     ? posts
     : posts.filter((p) => p.slug !== featured.slug);
 
+  const allPosts = getAllPosts();
+
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Anywhere Learning Blog',
+    description: 'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families.',
+    url: 'https://anywherelearning.co/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Anywhere Learning',
+      url: 'https://anywherelearning.co',
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: allPosts.map((post, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://anywherelearning.co/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+
   return (
     <main className="bg-cream min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+
       {/* Hero intro */}
       <section className="pt-12 pb-8 md:pt-20 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
