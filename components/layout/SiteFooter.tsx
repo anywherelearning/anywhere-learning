@@ -63,6 +63,12 @@ export default function SiteFooter() {
               >
                 Blog
               </Link>
+              <Link
+                href="/about"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
+              >
+                About
+              </Link>
             </nav>
           </div>
 

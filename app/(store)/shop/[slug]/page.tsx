@@ -329,6 +329,8 @@ export default async function ProductPage({
                   slug={product.slug}
                   productName={product.name}
                   priceCents={product.priceCents}
+                  category={product.category}
+                  isBundle={product.isBundle ?? false}
                 />
               </div>
 
@@ -469,6 +471,8 @@ export default async function ProductPage({
         priceCents={product.priceCents}
         stripePriceId={product.stripePriceId}
         slug={product.slug}
+        category={product.category}
+        isBundle={product.isBundle ?? false}
       />
     </>
   );

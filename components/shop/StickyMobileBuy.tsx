@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useCart } from '@/components/cart/CartProvider';
 import { formatPrice } from '@/lib/utils';
 
 interface StickyMobileBuyProps {
@@ -8,6 +9,8 @@ interface StickyMobileBuyProps {
   priceCents: number;
   stripePriceId: string;
   slug: string;
+  category: string;
+  isBundle: boolean;
 }
 
 export default function StickyMobileBuy({
@@ -15,9 +18,11 @@ export default function StickyMobileBuy({
   priceCents,
   stripePriceId,
   slug,
+  category,
+  isBundle,
 }: StickyMobileBuyProps) {
   const [visible, setVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const { addItem, isInCart, openCart } = useCart();
 
   useEffect(() => {
     const buyButton = document.getElementById('buy-button');
@@ -34,23 +39,24 @@ export default function StickyMobileBuy({
     return () => observer.disconnect();
   }, []);
 
-  async function handleCheckout() {
-    setLoading(true);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ stripePriceId, slug }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        setLoading(false);
-      }
-    } catch {
-      setLoading(false);
+  const alreadyInCart = isInCart(slug);
+
+  function handleClick() {
+    if (alreadyInCart) {
+      openCart();
+      return;
     }
+
+    addItem({
+      slug,
+      name: productName,
+      priceCents,
+      stripePriceId,
+      category,
+      isBundle,
+      imageUrl: null,
+    });
+    openCart();
   }
 
   if (!visible) return null;
@@ -63,11 +69,10 @@ export default function StickyMobileBuy({
           <p className="text-cream/70 text-xs">{formatPrice(priceCents)}</p>
         </div>
         <button
-          onClick={handleCheckout}
-          disabled={loading}
-          className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all disabled:opacity-60 flex-shrink-0"
+          onClick={handleClick}
+          className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
         >
-          {loading ? 'Loading...' : 'Get Now'}
+          {alreadyInCart ? 'View Cart' : 'Add to Cart'}
         </button>
       </div>
     </div>
