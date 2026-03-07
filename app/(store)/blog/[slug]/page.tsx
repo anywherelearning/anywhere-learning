@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -84,6 +85,50 @@ function getTableOfContents(content: BlogContentBlock[]) {
   return items;
 }
 
+/* ─── Inline Markdown Link Parser ─── */
+
+function parseInlineLinks(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const isExternal = match[2].startsWith('http');
+    parts.push(
+      isExternal ? (
+        <a
+          key={match.index}
+          href={match[2]}
+          className="text-forest underline decoration-forest/30 underline-offset-2 hover:decoration-forest/60 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {match[1]}
+        </a>
+      ) : (
+        <Link
+          key={match.index}
+          href={match[2]}
+          className="text-forest underline decoration-forest/30 underline-offset-2 hover:decoration-forest/60 transition-colors"
+        >
+          {match[1]}
+        </Link>
+      )
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [text];
+}
+
 /* ─── Content Block Renderer ─── */
 
 function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: boolean) {
@@ -98,7 +143,7 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
               : ''
           }`}
         >
-          {block.text}
+          {parseInlineLinks(block.text)}
         </p>
       );
     case 'heading':
