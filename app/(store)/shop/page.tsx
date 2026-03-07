@@ -8,7 +8,7 @@ import CategoryFilter from "@/components/shop/CategoryFilter";
 import BundleHighlight from "@/components/shop/BundleHighlight";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600; // ISR: revalidate hourly
 
 export const metadata: Metadata = {
   title: "Shop Activity Packs",
