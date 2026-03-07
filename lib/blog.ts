@@ -1181,6 +1181,309 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['kitchen-learning-lab', 'life-skills-before-12'],
   },
+  {
+    slug: 'raise-creative-kids',
+    title: 'How to Raise Creative Kids (Without Buying More Craft Supplies)',
+    excerpt: 'Creativity isn\'t about glitter and pipe cleaners. It\'s about how your kids think. Here\'s how to nurture it through everyday life — no Pinterest projects required.',
+    category: 'real-world-skills',
+    publishedAt: '2026-03-05',
+    keywords: ['creative kids', 'creativity homeschool', 'raise creative children', 'creative thinking kids', 'homeschool creativity', 'divergent thinking children'],
+    readTimeMinutes: 10,
+    author: amelie,
+    heroImageAlt: 'Child building something inventive out of household objects on a kitchen table',
+    content: [
+      { type: 'paragraph', text: 'I used to think creative kids were the ones who drew well. The ones who made things that looked good on a fridge door. Then I became a parent and realised I had it completely backwards.' },
+      { type: 'paragraph', text: 'My son once spent an entire afternoon building a "delivery system" out of cardboard boxes, string, and a broken umbrella handle. It was a mess. It barely worked. And it was one of the most creative things I\u2019ve ever watched a kid do — because he identified a problem, imagined a solution, and built it from scratch using whatever he could find.' },
+      { type: 'paragraph', text: 'That\u2019s creativity. Not the Pinterest version with perfect edges and colour-coordinated supplies. The real kind — the kind that actually matters.' },
+
+      { type: 'heading', level: 2, text: 'What creativity actually is (and isn\u2019t)' },
+      { type: 'paragraph', text: 'Creativity isn\u2019t art class. It\u2019s not being "good at drawing" or "artistic." Those things are fine, but they\u2019re a tiny slice of what creative thinking really means.' },
+      { type: 'paragraph', text: 'Creativity is the ability to look at something familiar and see it differently. To come up with more than one solution. To make connections between things that don\u2019t seem related. To try something, fail, and try a different way.' },
+      { type: 'paragraph', text: 'It\u2019s the skill behind every invention, every business, every scientific breakthrough. And it\u2019s the skill most at risk of being squeezed out of childhood by overscheduled days, screen habits, and activities where every step is pre-determined.' },
+      { type: 'pull-quote', text: 'The most creative thing a child can hear is: "I don\u2019t know — what do you think?"' },
+
+      { type: 'heading', level: 2, text: 'Why craft kits won\u2019t get you there' },
+      { type: 'paragraph', text: 'I\u2019m not against craft supplies. We have plenty. But there\u2019s a difference between handing a child a box with instructions and 47 pre-cut pieces versus handing them a roll of tape and saying "figure it out."' },
+      { type: 'paragraph', text: 'Pre-made craft kits are basically assembly instructions. Follow step one, then step two, get the expected result. It keeps kids busy, and the end product looks cute, but it exercises exactly zero creative thinking. The child is executing someone else\u2019s idea, not generating their own.' },
+      { type: 'paragraph', text: 'Real creativity starts with open-ended problems. No instructions. No "right answer." Just a question or a challenge and the freedom to approach it however they want.' },
+
+      { type: 'heading', level: 2, text: '7 ways to grow creative thinkers (no supplies needed)' },
+      { type: 'heading', level: 3, text: '1. Let them be bored' },
+      { type: 'paragraph', text: 'This is the hardest one, and the most important. Boredom is where creativity is born. When there\u2019s nothing to do and no screen to grab, kids start inventing. They make up games, build things, create imaginary worlds, find bugs to investigate.' },
+      { type: 'paragraph', text: 'I know it\u2019s uncomfortable to sit through the whining phase. But if you rescue them from boredom every time, they never learn to rescue themselves. And that self-rescue? That\u2019s creative thinking in its purest form.' },
+
+      { type: 'heading', level: 3, text: '2. Ask "what if" questions' },
+      { type: 'paragraph', text: 'At dinner, on walks, in the car. "What if gravity worked sideways?" "What if dogs could talk — what would ours say?" "What if you had to design a house for a penguin?" These questions have no right answer, which is exactly the point. They stretch your kid\u2019s thinking muscles without feeling like school.' },
+
+      { type: 'heading', level: 3, text: '3. Give them real problems to solve' },
+      { type: 'paragraph', text: 'Next time something breaks, don\u2019t fix it immediately. Ask your kid how they\u2019d fix it. Need to reorganise a closet? Let them design the system. Planning a meal with limited ingredients? That\u2019s a creative challenge. Real problems are better than invented ones because the stakes feel real, and the satisfaction of solving them is genuine.' },
+
+      { type: 'heading', level: 3, text: '4. Stop finishing their sentences (and their projects)' },
+      { type: 'paragraph', text: 'When a kid is building something and it\u2019s clearly not going to work, it\u2019s so tempting to step in. "Maybe try it this way." But every time we shortcut their process, we rob them of the chance to figure it out — or to fail and try again. Let the tower fall. Let the design flop. Let them feel the frustration and work through it.' },
+
+      { type: 'heading', level: 3, text: '5. Expose them to things outside their bubble' },
+      { type: 'paragraph', text: 'Creativity thrives on new inputs. Take a different route home. Visit a neighbourhood you\u2019ve never been to. Cook food from a culture you\u2019re unfamiliar with. Listen to music in a language no one in your family speaks. You don\u2019t need to travel the world (though that helps) — you just need to regularly break the routine.' },
+
+      { type: 'heading', level: 3, text: '6. Model creative thinking yourself' },
+      { type: 'paragraph', text: 'Talk through your own problem-solving out loud. "I\u2019m trying to figure out how to fit all this into the car. What if we...?" When you make a mistake, narrate your recovery. "Well, that didn\u2019t work. Let me think about this differently." Kids learn creative thinking by watching you do it, not by being told to be creative.' },
+
+      { type: 'heading', level: 3, text: '7. Celebrate the process, not the product' },
+      { type: 'paragraph', text: 'Instead of "that\u2019s beautiful!" try "tell me about this." Instead of praising the end result, ask about the decisions they made along the way. "Why did you choose that colour?" "What was the hardest part?" "What would you do differently next time?" This teaches kids that creative thinking is valuable — not just creative output.' },
+
+      { type: 'heading', level: 2, text: 'The creativity killers (we\u2019re all guilty of some)' },
+      { type: 'list', ordered: false, items: [
+        'Over-scheduling. If every hour is accounted for, there\u2019s no space for spontaneous creation.',
+        'Too many toys. Counterintuitive, but fewer options force more creative play. A stick becomes a sword, a wand, a fishing rod.',
+        'Screens as default. Not because screens are evil, but because they\u2019re passive. A kid watching someone else create isn\u2019t creating.',
+        'Correcting too quickly. "That\u2019s not how a horse looks" shuts down experimentation faster than anything.',
+        'Praising only outcomes. If we only celebrate the finished painting, kids learn to avoid the messy, uncertain process that leads to real creative thinking.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'What this looks like in real life' },
+      { type: 'paragraph', text: 'Last week my daughter wanted to make a birthday card for a friend. I could have pulled out the card-making kit. Instead, I pointed at the recycling bin and said, "Use whatever you find."' },
+      { type: 'paragraph', text: 'She came back with a cereal box, a receipt, some foil from a chocolate wrapper, and a marker. The card was weird and wonderful and completely hers. Her friend loved it.' },
+      { type: 'paragraph', text: 'That\u2019s the kind of creative thinking that transfers to everything — school projects, job interviews, problem-solving as adults. Not "follow these steps to make a nice card" but "here\u2019s a constraint, figure it out."' },
+
+      { type: 'tip', title: 'The one-material challenge', text: 'Pick a single material — cardboard, string, newspaper, aluminium foil — and challenge your kids to make something useful out of it. No instructions, no examples, no help unless they ask. This one exercise builds more creative muscle than a whole shelf of craft kits.' },
+
+      { type: 'heading', level: 2, text: 'Creativity is a life skill, not a hobby' },
+      { type: 'paragraph', text: 'The world is changing fast. AI can follow instructions better than any human. The skill that won\u2019t be automated is the ability to think originally — to ask a question nobody asked, to solve a problem nobody\u2019s solved, to see a possibility nobody imagined.' },
+      { type: 'paragraph', text: 'That\u2019s creativity. And the best way to build it isn\u2019t with more supplies or structured activities. It\u2019s with less. Less instruction, less intervention, less "here\u2019s how." More space, more boredom, more "what do you think?"' },
+      { type: 'paragraph', text: 'Your kids are already creative. You don\u2019t need to teach it. You just need to stop accidentally squashing it.' },
+
+      { type: 'cta', text: 'Our Creative Thinking Activity Pack is full of open-ended challenges that exercise creative problem-solving — no craft supplies required.', href: '/shop/creative-thinking-activity-pack', label: 'Get the Creative Thinking Pack' },
+
+      { type: 'faq', items: [
+        { question: 'How do I raise a creative child?', answer: 'Give them unstructured time, open-ended materials, and real problems to solve. Ask "what if" questions, let them be bored, and resist the urge to step in when their approach seems wrong. Creativity grows when kids have the freedom to experiment, fail, and try again without someone handing them the answer.' },
+        { question: 'Are craft kits good for creativity?', answer: 'Craft kits are fun and keep kids busy, but they mostly teach kids to follow instructions — which is the opposite of creative thinking. For building real creativity, open-ended activities with no predetermined outcome are much more effective. Give kids raw materials and a challenge instead of a step-by-step kit.' },
+        { question: 'Why is boredom important for creativity?', answer: 'Boredom forces the brain to generate its own stimulation. When there\u2019s no screen or structured activity to fill the gap, kids start inventing — making up games, building things, creating stories. This self-directed play is where creative thinking develops most naturally.' },
+        { question: 'Can creativity be taught?', answer: 'Creativity isn\u2019t so much taught as it is nurtured. All kids are naturally creative — what matters is whether their environment supports or suppresses it. You can build creative thinking by asking open-ended questions, celebrating the process (not just the product), and giving kids opportunities to solve real problems in their own way.' },
+      ]},
+    ],
+    relatedSlugs: ['life-skills-before-12', 'real-world-learning-guide'],
+  },
+  {
+    slug: 'what-kids-should-know-before-18',
+    title: 'What Should Kids Know Before They Turn 18?',
+    excerpt: 'Forget the academic checklist. Here are the real-world skills, habits, and knowledge that actually prepare kids for adulthood — and most schools never teach.',
+    category: 'real-world-skills',
+    publishedAt: '2026-03-03',
+    keywords: ['life skills for teens', 'what kids should know', 'prepare kids for adulthood', 'real world skills teenagers', 'homeschool life skills', 'skills before 18'],
+    readTimeMinutes: 12,
+    author: amelie,
+    heroImageAlt: 'Teenager confidently navigating a city street with a backpack',
+    content: [
+      { type: 'paragraph', text: 'There\u2019s a moment that hits every parent at some point — usually around age 14 or 15. You look at your kid and think: in a few years, this person is going to be an adult. Like, a real one. Making decisions, managing money, feeding themselves, navigating the world without me standing behind them.' },
+      { type: 'paragraph', text: 'And then you think: do they know how to do any of that?' },
+      { type: 'paragraph', text: 'I was a teacher. I watched 18-year-olds graduate who could solve quadratic equations but couldn\u2019t cook a meal, read a lease, or manage a basic budget. The system gave them grades and credentials but not the actual skills they needed to function as independent humans.' },
+      { type: 'paragraph', text: 'So I made a list. Not an academic one — a real one. The things I want my kids to genuinely know and be able to do before they leave home. Not perfectly. Just enough to not be helpless.' },
+
+      { type: 'heading', level: 2, text: 'Money skills' },
+      { type: 'paragraph', text: 'This is the biggest gap in traditional education, and it shows. Most adults are figuring out money as they go, making expensive mistakes along the way. Your kids don\u2019t have to.' },
+      { type: 'list', ordered: false, items: [
+        'Budget basics — understanding income vs. expenses, tracking where money goes, and making a simple plan for it.',
+        'Banking — how to open and manage a bank account, what fees to watch for, how interest works (both for savings and debt).',
+        'Earning — they should have earned money at least once, whether through a job, selling something they made, or providing a service. Understanding that money represents traded time and effort changes how they spend it.',
+        'Smart spending — comparing prices, understanding marketing tactics, knowing the difference between wanting and needing something. This is especially important in a world designed to make them buy things.',
+        'Basic taxes — what they are, why they exist, and roughly how they work. They don\u2019t need to file their own taxes yet, but they should know that a $50,000 salary doesn\u2019t mean $50,000 in their pocket.',
+        'Debt literacy — what interest rates mean in practice, why minimum payments are a trap, and how credit cards actually work.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Kitchen confidence' },
+      { type: 'paragraph', text: 'I\u2019m not talking about gourmet cooking. I\u2019m talking about being able to feed yourself without relying on takeaway or packaged food every day.' },
+      { type: 'list', ordered: false, items: [
+        'Cook at least 5–7 simple meals from scratch. Pasta, rice, eggs, a basic stir-fry, a soup — nothing fancy.',
+        'Read and follow a recipe they\u2019ve never seen before.',
+        'Know basic food safety — what needs to be refrigerated, how long leftovers last, when something\u2019s gone bad.',
+        'Grocery shop with a list and a budget.',
+        'Meal plan for a week. Even loosely. Even badly. The skill is thinking ahead about food instead of panicking at 6 pm.',
+      ]},
+      { type: 'tip', title: 'Start early', text: 'Don\u2019t wait until they\u2019re teenagers to involve them in the kitchen. A five-year-old can wash vegetables, stir things, and help set the table. By the time they\u2019re 12, they should be able to make a full meal with minimal help. By 16, they should be doing it regularly.' },
+
+      { type: 'heading', level: 2, text: 'People skills' },
+      { type: 'paragraph', text: 'This is the category most parents assume will "just happen." Sometimes it does. Sometimes it doesn\u2019t.' },
+      { type: 'list', ordered: false, items: [
+        'Make a phone call to a stranger — schedule an appointment, ask a question, order something. This is genuinely hard for a lot of young people now, and it\u2019s a basic life skill.',
+        'Have a conversation with an adult they don\u2019t know. Introduce themselves, ask questions, listen.',
+        'Disagree with someone respectfully. Not avoid conflict — handle it.',
+        'Ask for help when they need it. Many kids would rather suffer silently than admit they\u2019re stuck. Asking for help is a skill, not a weakness.',
+        'Read basic social situations. Know when someone is uncomfortable, when a joke has landed badly, when it\u2019s time to stop talking and listen.',
+        'Write a clear email. Subject line, greeting, point, closing. It\u2019s simple, but an alarming number of adults can\u2019t do it.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Household basics' },
+      { type: 'paragraph', text: 'The mundane stuff nobody thinks to teach until the kid moves out and calls home asking how to unclog a drain.' },
+      { type: 'list', ordered: false, items: [
+        'Laundry — the full cycle. Sort, wash, dry, fold, put away. Know what settings to use and what happens if you wash something wrong.',
+        'Basic cleaning — bathroom, kitchen, floors. Not to a professional standard, just enough to live in a space that isn\u2019t gross.',
+        'Simple repairs — change a lightbulb, unclog a drain, tighten a screw, hang a picture, reset a tripped breaker.',
+        'Organisation — keep track of their own stuff. Know where their important documents are. Manage a calendar.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Navigation and logistics' },
+      { type: 'paragraph', text: 'Being able to get yourself from point A to point B without someone else handling the details.' },
+      { type: 'list', ordered: false, items: [
+        'Read a map — a real one, not just follow a blue dot on a phone. Understanding cardinal directions, scale, and basic geography.',
+        'Navigate public transport. Read a schedule, buy a ticket, figure out transfers.',
+        'Plan a trip. Even a day trip. Research where to go, how to get there, what it costs, what to bring.',
+        'Know how to get home if their phone dies. This sounds dramatic but it\u2019s a real scenario, and kids who\u2019ve never navigated without GPS genuinely struggle with it.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Critical thinking' },
+      { type: 'paragraph', text: 'In a world full of misinformation, ads disguised as content, and algorithms designed to keep you scrolling, this might be the most important category of all.' },
+      { type: 'list', ordered: false, items: [
+        'Question what they read online. Who wrote it? Why? What are they selling?',
+        'Spot manipulation — in advertising, in news, in social dynamics. Understand that most content they consume is designed to make them feel or do something specific.',
+        'Form their own opinions and explain why they hold them. Not just repeat what they\u2019ve heard from friends or influencers.',
+        'Change their mind when presented with better information. This is rare and incredibly valuable.',
+        'Evaluate risk. Not just "is this dangerous" but "how dangerous, compared to what, and is it worth it?"',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Self-care and wellbeing' },
+      { type: 'paragraph', text: 'Not the bubble-bath kind. The actual "keeping yourself functional and healthy" kind.' },
+      { type: 'list', ordered: false, items: [
+        'Know how to make a doctor\u2019s appointment. Know what their medications are (if any) and how to get refills.',
+        'Understand sleep. Not just "you should sleep more" but why it matters and what happens when you don\u2019t.',
+        'Recognise when they\u2019re not okay — and know what to do about it. Whether that\u2019s talking to someone, taking a break, or asking for professional help.',
+        'Basic first aid. Clean a wound, recognise signs of serious illness or injury, know when to call for help.',
+        'Have at least one physical activity they enjoy. Not for fitness goals — for stress relief, energy, and the habit of moving their body.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Digital literacy' },
+      { type: 'paragraph', text: 'They\u2019re digital natives, sure. But being able to use technology isn\u2019t the same as understanding it.' },
+      { type: 'list', ordered: false, items: [
+        'Online privacy. What they share, where it goes, who can see it, and what can\u2019t be taken back.',
+        'Password management. Not using the same password everywhere. Understanding two-factor authentication.',
+        'Recognise scams and phishing attempts.',
+        'Understand algorithms. Why their feed shows what it shows. Why they suddenly want things they didn\u2019t know existed five minutes ago.',
+        'Use technology as a tool, not just entertainment. Research, create, build, organise — not just scroll and consume.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'How to actually teach all this' },
+      { type: 'paragraph', text: 'You don\u2019t sit them down with a curriculum. You just stop doing things for them.' },
+      { type: 'paragraph', text: 'It sounds harsh, but it\u2019s the truth. Every time you handle something your teenager could handle, you\u2019re sending the message that they\u2019re not capable. And they\u2019ll believe you.' },
+      { type: 'list', ordered: false, items: [
+        'Let them make the phone call to book the appointment.',
+        'Hand them the grocery list and the budget and wait in the car.',
+        'When something breaks, Google it together instead of calling someone immediately.',
+        'Give them a real say in the family budget — even a small part of it.',
+        'Let them plan the next family outing from start to finish.',
+        'When they ask you a question they could figure out themselves, say: "What do you think?" and mean it.',
+      ]},
+      { type: 'paragraph', text: 'Will they make mistakes? Yes. Will it take longer than doing it yourself? Absolutely. But every mistake they make at 14 while you\u2019re nearby is one they won\u2019t have to make at 22 when no one\u2019s around to help.' },
+
+      { type: 'pull-quote', text: 'The goal isn\u2019t to raise kids who never struggle. It\u2019s to raise kids who know what to do when they do.' },
+
+      { type: 'heading', level: 2, text: 'The real checklist' },
+      { type: 'paragraph', text: 'Forget grades and test scores for a moment. When your kid walks out the door at 18, can they:' },
+      { type: 'list', ordered: false, items: [
+        'Feed themselves?',
+        'Manage their money?',
+        'Have a hard conversation?',
+        'Solve a problem they haven\u2019t seen before?',
+        'Take care of their health?',
+        'Navigate a city?',
+        'Think critically about what they read and hear?',
+        'Ask for help without shame?',
+      ]},
+      { type: 'paragraph', text: 'If yes, they\u2019re ready. Not because they have all the answers, but because they have the skills to find them.' },
+      { type: 'paragraph', text: 'That\u2019s what I\u2019m building towards with my kids. Not a transcript. Not a test score. A human who can handle real life.' },
+
+      { type: 'cta', text: 'Our activity packs build these exact skills through everyday experiences — no lesson plans needed.', href: '/shop', label: 'Browse Activity Packs' },
+
+      { type: 'faq', items: [
+        { question: 'What life skills should a teenager know?', answer: 'By 18, teenagers should be able to cook basic meals, manage a budget, do laundry, navigate public transport, make phone calls, write emails, handle basic first aid, and think critically about information they encounter online. These practical skills matter far more for daily adult life than most academic knowledge.' },
+        { question: 'How do I teach my child life skills?', answer: 'The most effective approach is to gradually stop doing things for them. Let them make phone calls, handle money, cook meals, and solve problems while you\u2019re still nearby to help if needed. Real life is the best classroom — every errand, chore, and family decision is an opportunity to practice.' },
+        { question: 'What do schools not teach that kids need to know?', answer: 'Most schools don\u2019t cover personal finance (budgeting, taxes, debt), practical cooking, household maintenance, emotional intelligence, digital literacy beyond basic usage, critical thinking about media and advertising, or how to navigate real-world logistics like appointments, travel, and official paperwork.' },
+        { question: 'At what age should kids start learning life skills?', answer: 'From the earliest ages possible. Toddlers can help with simple tasks like putting away toys. By 5-6, kids can help cook, clean, and sort laundry. By 10-12, they should handle many household tasks independently. The key is gradually increasing responsibility so that by 18, independence feels natural rather than overwhelming.' },
+      ]},
+    ],
+    relatedSlugs: ['life-skills-before-12', 'raise-creative-kids', 'real-world-learning-guide'],
+  },
+  {
+    slug: 'worldschool-day-structure',
+    title: 'How We Structure Our Worldschool Day (Spoiler: We Don\u2019t)',
+    excerpt: 'People always ask what our "schedule" looks like. The honest answer? There isn\u2019t one. Here\u2019s what our days actually look like — and why the lack of structure is the whole point.',
+    category: 'travel-worldschool',
+    publishedAt: '2026-03-01',
+    keywords: ['worldschool schedule', 'worldschool daily routine', 'homeschool while traveling schedule', 'unschool daily rhythm', 'worldschool day in the life', 'relaxed homeschool routine'],
+    readTimeMinutes: 9,
+    author: amelie,
+    heroImageAlt: 'Family exploring a tropical town street with colourful buildings',
+    content: [
+      { type: 'paragraph', text: 'The question I get asked more than any other is: "What does your day actually look like?"' },
+      { type: 'paragraph', text: 'People want a schedule. A timetable. Something they can pin to a fridge and follow. I get it — I wanted that too when we started. I\u2019m a former teacher. I love a good plan.' },
+      { type: 'paragraph', text: 'But the honest answer is: we don\u2019t have a schedule. We don\u2019t have a set curriculum. We don\u2019t have "school hours." And it took me a while to stop feeling guilty about that.' },
+
+      { type: 'heading', level: 2, text: 'Why we stopped trying to schedule learning' },
+      { type: 'paragraph', text: 'When we first started worldschooling, I made a beautiful weekly plan. Morning lessons, afternoon activities, reading time before bed. It was colour-coded. It was laminated. It lasted three days.' },
+      { type: 'paragraph', text: 'The problem wasn\u2019t discipline. The problem was that the best learning kept happening outside the plan. My son would get obsessed with something he saw at a market and spend two hours researching it. My daughter would start a conversation with a local and come back with more cultural knowledge than any lesson I could design.' },
+      { type: 'paragraph', text: 'Every time I pulled them away from something real to do something I\u2019d planned, I was interrupting actual learning to do pretend learning. Once I saw that, I couldn\u2019t unsee it.' },
+
+      { type: 'heading', level: 2, text: 'What we have instead: a rhythm' },
+      { type: 'paragraph', text: 'We don\u2019t have a schedule, but we\u2019re not totally chaotic either. We have a loose rhythm that shapes our days — it just flexes depending on where we are, what\u2019s happening, and what the kids are into.' },
+
+      { type: 'heading', level: 3, text: 'Morning: slow start' },
+      { type: 'paragraph', text: 'Nobody\u2019s doing maths at 7 am. Mornings are for waking up, eating breakfast, and easing into the day. The kids usually read, draw, or mess around. Sometimes they help make breakfast — especially if we\u2019re somewhere with a kitchen and local ingredients to experiment with.' },
+      { type: 'paragraph', text: 'If anyone has something they want to work on — a project, a question from yesterday, a book they\u2019re into — this is usually when it happens. But it\u2019s not assigned. It\u2019s just the natural energy of morning.' },
+
+      { type: 'heading', level: 3, text: 'Mid-morning to afternoon: out in the world' },
+      { type: 'paragraph', text: 'This is where the real stuff happens. We go somewhere. A market, a beach, a museum, a neighbourhood we haven\u2019t explored, a hike. We talk to people. We try food. We get lost on purpose sometimes.' },
+      { type: 'paragraph', text: 'The learning isn\u2019t planned, but it\u2019s not random either. I\u2019m always looking for moments. A menu in another language is a reading lesson. A street vendor making change is maths. A conversation about local history is, well, history. I don\u2019t always point these out — sometimes I do, sometimes I just let it happen.' },
+
+      { type: 'heading', level: 3, text: 'Late afternoon: downtime' },
+      { type: 'paragraph', text: 'After a full day out, everyone needs to decompress. The kids might journal, build something, play, or just zone out. I try to protect this time because it\u2019s when they process everything they\u2019ve absorbed. Some of their best questions and ideas come during downtime, not during activities.' },
+
+      { type: 'heading', level: 3, text: 'Evening: together time' },
+      { type: 'paragraph', text: 'Dinner is usually our most "educational" time, though it doesn\u2019t feel like it. We talk about the day. What was weird. What was cool. What we want to do tomorrow. Sometimes we read aloud. Sometimes we play a game. Sometimes we just eat and are tired and that\u2019s fine too.' },
+
+      { type: 'pull-quote', text: 'The best learning days are the ones that don\u2019t feel like learning days. They just feel like good days.' },
+
+      { type: 'heading', level: 2, text: 'A real day, unfiltered' },
+      { type: 'paragraph', text: 'Here\u2019s what last Tuesday actually looked like. Not a highlight reel — just a regular day.' },
+      { type: 'list', ordered: true, items: [
+        'Woke up around 7:30. Kids had cereal while I had coffee. My son read a book about ocean animals. My daughter drew.',
+        'Around 9:30, we walked to the beach. The kids found a tide pool and spent 45 minutes examining what was in it. My son wanted to know why barnacles stick to rocks. We looked it up on my phone right there.',
+        'Stopped at a little shop on the way back. The kids ordered drinks in Spanish. It wasn\u2019t perfect, but they communicated and got what they wanted. That counts.',
+        'Came back, had lunch. My daughter decided she wanted to write a story. My son practised some maths problems he\u2019d been working through — not because I told him to, but because he wanted to finish a section.',
+        'Afternoon: we explored a part of town we hadn\u2019t been to. Found a mural and talked about the history behind it. Tried a new fruit from a vendor neither of us could name.',
+        'Evening: cooked dinner together. The kids helped chop and measure. Talked about our favourite part of the day. Read a chapter of a book before bed.',
+      ]},
+      { type: 'paragraph', text: 'Was it "enough"? I used to worry about that constantly. Now I look at that day and see: reading, biology, language practice, maths, writing, history, cooking, nutrition, social skills, cultural awareness. All before dinner. None of it from a textbook.' },
+
+      { type: 'heading', level: 2, text: 'But what about the "real" subjects?' },
+      { type: 'paragraph', text: 'I\u2019m not going to pretend we never do anything structured. We do. My kids work through maths on their own — they have workbooks they use at their own pace. They read every day, though what they read is entirely their choice. And when one of them gets deeply interested in something — volcanoes, coding, ancient Egypt — we lean into it hard. Library books, documentaries, projects, visits if we can.' },
+      { type: 'paragraph', text: 'But these structured bits aren\u2019t the core of our education. They\u2019re supplements. The core is living in the world and learning from it directly.' },
+
+      { type: 'heading', level: 2, text: 'The "what about socialisation" thing' },
+      { type: 'paragraph', text: 'I\u2019ll keep this short because it comes up every time. My kids interact with more diverse groups of people in a single week of worldschooling than most kids do in a year of school. They talk to adults, other travellers, local kids who don\u2019t speak their language, shopkeepers, guides, other families. They\u2019re not sitting in a room with 25 kids the same age all day — they\u2019re navigating the actual social world.' },
+      { type: 'paragraph', text: 'That doesn\u2019t mean it\u2019s always easy. Making friends on the road is hard sometimes. Leaving friends behind is harder. But the social skills they\u2019re building — adaptability, confidence with strangers, cross-cultural communication — are skills most adults are still working on.' },
+
+      { type: 'heading', level: 2, text: 'What I\u2019d tell someone just starting out' },
+      { type: 'list', ordered: false, items: [
+        'Throw away the schedule. Or at least hold it very loosely. A rhythm is better than a routine.',
+        'Trust the slow days. Not every day needs a field trip or a big experience. Some days are quiet. That\u2019s when the processing happens.',
+        'Stop counting hours. If you\u2019re tracking "school hours" you\u2019re still thinking in school terms. Learning doesn\u2019t punch a clock.',
+        'Follow their lead more than you think you should. The things they choose to explore will stick longer than anything you assign.',
+        'Write things down — for yourself, not for anyone else. I keep a simple journal of what we did and what came up. Not as proof of learning. Just because it helps me see how much is actually happening on the days that feel like "nothing."',
+        'Forgive yourself for the messy days. Some days nobody learns anything notable and everyone argues and the whole thing feels like a mistake. Those days are part of it. They pass.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'The point isn\u2019t the structure' },
+      { type: 'paragraph', text: 'People want to know our schedule because they want permission to do it differently. So here it is: you have permission. There is no right way to structure a worldschool day. There\u2019s your way, and it\u2019ll look different from mine, and that\u2019s the whole point.' },
+      { type: 'paragraph', text: 'The best education I can give my kids isn\u2019t a perfect plan. It\u2019s the confidence to figure things out without one.' },
+
+      { type: 'cta', text: 'Want ready-to-use activities for your unstructured days? Our packs give you open-ended prompts you can pull out whenever the moment feels right.', href: '/shop', label: 'Browse Activity Packs' },
+
+      { type: 'faq', items: [
+        { question: 'Do worldschool families follow a schedule?', answer: 'Most worldschool families use a loose daily rhythm rather than a strict schedule. This might include a quiet morning for reading and projects, an active middle of the day for exploring and experiences, and downtime in the afternoon for processing and play. The specifics flex based on location, weather, and what the kids are interested in.' },
+        { question: 'How many hours a day do worldschoolers study?', answer: 'Worldschooling doesn\u2019t separate "study time" from "life time" the way traditional school does. Kids might do 30 minutes of focused maths practice but also spend three hours at a market practising a language, learning about local agriculture, and handling money. The formal study time is usually minimal; the experiential learning time is constant.' },
+        { question: 'How do worldschoolers handle maths and reading?', answer: 'Many worldschool families use workbooks or online programmes for maths at the child\u2019s own pace. Reading happens naturally through books, menus, signs, maps, and online research. The key difference from traditional school is that these skills are practised in real contexts — budgeting at a shop, reading a trail map, measuring ingredients — not just in worksheets.' },
+        { question: 'Is worldschooling legal?', answer: 'Homeschooling is legal in most countries, though requirements vary significantly. In the US, laws differ by state — some require notification, some require standardised testing, and some are very relaxed. Many worldschool families establish legal residency in a homeschool-friendly state. Research your specific jurisdiction\u2019s requirements before starting.' },
+      ]},
+    ],
+    relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling'],
+  },
 ];
 
 // ─── Helper Functions ───
