@@ -101,7 +101,7 @@ const posts: BlogPost[] = [
         { question: 'What are the best recipes for learning with kids?', answer: 'Start with anything that involves measuring: baking is brilliant for fractions. Soup is great for estimation and tasting. Pizza dough teaches chemistry (yeast and rising). The best recipe is whatever your child actually wants to eat.' },
       ]},
     ],
-    relatedSlugs: ['nature-walks-science', 'curriculum-guilt-permission-slip'],
+    relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'teach-kids-about-money'],
   },
   {
     slug: 'nature-walks-science',
@@ -162,7 +162,7 @@ const posts: BlogPost[] = [
         { question: 'Do nature walks count as real science for homeschooling?', answer: 'Absolutely. Observation, classification, hypothesis, and recording are the foundations of scientific method. A child who regularly explores nature is practising real science \u2014 the same process professional scientists use.' },
       ]},
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'worldschool-two-kids'],
+    relatedSlugs: ['seasonal-scavenger-hunts', 'outdoor-stem-challenges', 'real-world-learning-guide'],
   },
   {
     slug: 'curriculum-guilt-permission-slip',
@@ -217,7 +217,7 @@ const posts: BlogPost[] = [
         { question: 'Will my child fall behind without structured lessons?', answer: 'Behind whom? Grade-level benchmarks are averages, not requirements. Children learn at different paces, and a child who\u2019s genuinely curious and engaged will fill their own gaps when they\u2019re ready.' },
       ]},
     ],
-    relatedSlugs: ['new-to-homeschooling', 'kitchen-learning-lab'],
+    relatedSlugs: ['new-to-homeschooling', 'five-stages-deschooling', 'start-homeschooling-mid-year'],
   },
   {
     slug: 'worldschool-two-kids',
@@ -270,7 +270,7 @@ const posts: BlogPost[] = [
         { question: 'How do you handle different ages while worldschooling?', answer: 'Give the same experience with different expectations. A younger child might count market stall items while an older one calculates exchange rates. Shared experiences with tiered depth keep everyone engaged.' },
       ]},
     ],
-    relatedSlugs: ['nature-walks-science', 'curriculum-guilt-permission-slip'],
+    relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling', 'worldschool-day-structure'],
   },
   {
     slug: 'new-to-homeschooling',
@@ -333,7 +333,7 @@ const posts: BlogPost[] = [
         { question: 'What if I\u2019m not smart enough to teach my child?', answer: 'You\u2019re not teaching \u2014 you\u2019re facilitating. You don\u2019t need to know all the answers. \u201cI don\u2019t know \u2014 let\u2019s find out together\u201d is the most powerful sentence in home education.' },
       ]},
     ],
-    relatedSlugs: ['curriculum-guilt-permission-slip', 'kitchen-learning-lab'],
+    relatedSlugs: ['start-homeschooling-mid-year', 'five-stages-deschooling', 'curriculum-guilt-permission-slip'],
   },
 
   // ─── New Tier 1 Posts ───
@@ -474,7 +474,7 @@ const posts: BlogPost[] = [
         { question: 'How do these compare to what kids learn in school?', answer: 'They complement each other. School teaches academic knowledge. Life skills teach practical competence. A child without the ability to cook, budget, or communicate will struggle in adult life regardless of grades.' },
       ] },
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'teach-kids-about-money'],
+    relatedSlugs: ['real-world-learning-guide', 'kitchen-learning-lab', 'what-kids-should-know-before-18'],
   },
 
   {
@@ -537,7 +537,7 @@ const posts: BlogPost[] = [
         { question: 'How do I talk to kids about money without making them anxious?', answer: 'Be matter-of-fact, not fearful. Frame money as choices, not scarcity. \u201cWe\u2019re choosing to spend on this instead of that\u201d is very different from \u201cwe can\u2019t afford it.\u201d Involve them in decisions so they feel empowered, not worried.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'kitchen-learning-lab'],
+    relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'kitchen-learning-lab'],
   },
 
   {
@@ -602,7 +602,7 @@ const posts: BlogPost[] = [
         { question: 'When should I consider putting my kids back in school?', answer: 'If burnout has lasted months, if your mental health is seriously suffering, or if the home environment has become consistently tense, it\u2019s worth considering all options. There\u2019s no shame in changing course. The goal is a thriving family, not homeschooling at any cost.' },
       ]},
     ],
-    relatedSlugs: ['curriculum-guilt-permission-slip', 'new-to-homeschooling'],
+    relatedSlugs: ['what-no-prep-means', 'curriculum-guilt-permission-slip', 'five-stages-deschooling'],
   },
 
   {
@@ -676,7 +676,7 @@ const posts: BlogPost[] = [
         { question: 'What AI skills will kids actually need in the future?', answer: 'Prompt crafting (asking clear questions), fact-checking AI outputs, understanding bias in data, knowing when to use AI vs. when to think independently, and the ethical judgement to use these tools responsibly. These are all teachable at home.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'teach-kids-about-money'],
+    relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'what-kids-should-know-before-18'],
   },
 
   {
@@ -819,7 +819,7 @@ const posts: BlogPost[] = [
         { question: 'How do I explain deschooling to my family?', answer: 'Describe it as a transition period \u2014 like adjusting to a new job or moving to a new country. Your child is adapting to a completely different way of learning, and that takes time. Share specific examples of what they\u2019re doing and learning to help relatives see the value.' },
       ] },
     ],
-    relatedSlugs: ['new-to-homeschooling', 'curriculum-guilt-permission-slip'],
+    relatedSlugs: ['start-homeschooling-mid-year', 'new-to-homeschooling', 'curriculum-guilt-permission-slip'],
   },
 
   // ─── Post #6: What "No Prep" Actually Means ───
@@ -874,7 +874,7 @@ const posts: BlogPost[] = [
         { question: 'Won\u2019t my kids have gaps if I don\u2019t follow a curriculum?', answer: 'Every child has gaps, including traditionally schooled children. The difference is that a curious child who knows how to learn will fill their own gaps when motivated. A child burned out by over-structured learning won\u2019t.' },
       ] },
     ],
-    relatedSlugs: ['homeschool-burnout', 'curriculum-guilt-permission-slip'],
+    relatedSlugs: ['homeschool-burnout', 'curriculum-guilt-permission-slip', 'start-homeschooling-mid-year'],
   },
 
   // ─── Post #26: Why "Just Let Them Play" ───
@@ -935,7 +935,7 @@ const posts: BlogPost[] = [
         { question: 'How do I explain a play-based approach to sceptical family members?', answer: 'Share specific examples of what your child creates, solves, and discovers through play. Describe the skills being practised in language they understand: "She built a business with a pricing system \u2014 that\u2019s maths, writing, and economics." Evidence is more convincing than philosophy.' },
       ] },
     ],
-    relatedSlugs: ['curriculum-guilt-permission-slip', 'new-to-homeschooling'],
+    relatedSlugs: ['raise-creative-kids', 'curriculum-guilt-permission-slip', 'nature-walks-science'],
   },
   {
     slug: 'worldschooling-el-salvador',
@@ -1005,7 +1005,7 @@ const posts: BlogPost[] = [
         { question: 'What do you do about internet and connectivity while worldschooling?', answer: 'It depends on where you are. We use a combination of local SIM cards, co-working spaces, and caf\u00e9 Wi-Fi. Some days connectivity is great, some days it isn\u2019t. The kids have learned to work offline, use downloaded resources, and \u2014 honestly \u2014 some of our best days are the ones where the internet doesn\u2019t work.' },
       ]},
     ],
-    relatedSlugs: ['worldschool-two-kids', 'homeschool-while-traveling'],
+    relatedSlugs: ['slow-travel-over-bucket-list', 'teach-kids-second-language', 'worldschool-day-structure'],
   },
   {
     slug: 'homeschool-while-traveling',
@@ -1086,7 +1086,7 @@ const posts: BlogPost[] = [
         { question: 'What about screen time while traveling?', answer: 'We use screens intentionally: language apps during transit, documentaries about where we\u2019re going, video calls with friends and family. Long travel days are a natural time for screens. The key is that screens don\u2019t replace the real-world experiences \u2014 they supplement them. On exploration days, screens stay in the bag.' },
       ]},
     ],
-    relatedSlugs: ['worldschooling-el-salvador', 'worldschool-two-kids'],
+    relatedSlugs: ['what-we-packed-worldschooling', 'slow-travel-over-bucket-list', 'worldschooling-el-salvador'],
   },
   {
     slug: 'real-world-learning-guide',
@@ -1176,7 +1176,7 @@ const posts: BlogPost[] = [
         { question: 'Can real-world learning prepare kids for standardised tests?', answer: 'Yes, though it may require some targeted practice closer to test time. Kids who learn through real-world experiences often have stronger conceptual understanding than those who drill worksheets. They may need to learn test-specific formats (multiple choice, timed sections), but the underlying knowledge is typically solid because they\u2019ve learned it through doing, not memorising.' },
       ]},
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'life-skills-before-12'],
+    relatedSlugs: ['kitchen-learning-lab', 'life-skills-before-12', 'teach-kids-second-language'],
   },
   {
     slug: 'raise-creative-kids',
@@ -1255,7 +1255,7 @@ const posts: BlogPost[] = [
         { question: 'Can creativity be taught?', answer: 'Creativity isn\u2019t so much taught as it is nurtured. All kids are naturally creative — what matters is whether their environment supports or suppresses it. You can build creative thinking by asking open-ended questions, celebrating the process (not just the product), and giving kids opportunities to solve real problems in their own way.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'real-world-learning-guide'],
+    relatedSlugs: ['just-let-them-play', 'real-world-learning-guide', 'outdoor-stem-challenges'],
   },
   {
     slug: 'what-kids-should-know-before-18',
@@ -1393,7 +1393,7 @@ const posts: BlogPost[] = [
         { question: 'At what age should kids start learning life skills?', answer: 'From the earliest ages possible. Toddlers can help with simple tasks like putting away toys. By 5-6, kids can help cook, clean, and sort laundry. By 10-12, they should handle many household tasks independently. The key is gradually increasing responsibility so that by 18, independence feels natural rather than overwhelming.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'raise-creative-kids', 'real-world-learning-guide'],
+    relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'teach-kids-about-money'],
   },
   {
     slug: 'worldschool-day-structure',
