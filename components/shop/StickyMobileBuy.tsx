@@ -1,0 +1,75 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { formatPrice } from '@/lib/utils';
+
+interface StickyMobileBuyProps {
+  productName: string;
+  priceCents: number;
+  stripePriceId: string;
+  slug: string;
+}
+
+export default function StickyMobileBuy({
+  productName,
+  priceCents,
+  stripePriceId,
+  slug,
+}: StickyMobileBuyProps) {
+  const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const buyButton = document.getElementById('buy-button');
+    if (!buyButton) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(buyButton);
+    return () => observer.disconnect();
+  }, []);
+
+  async function handleCheckout() {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stripePriceId, slug }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        setLoading(false);
+      }
+    } catch {
+      setLoading(false);
+    }
+  }
+
+  if (!visible) return null;
+
+  return (
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden animate-slide-up-bar">
+      <div className="bg-forest border-t border-forest-dark shadow-2xl px-4 py-3 flex items-center gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="text-cream text-sm font-medium truncate">{productName}</p>
+          <p className="text-cream/70 text-xs">{formatPrice(priceCents)}</p>
+        </div>
+        <button
+          onClick={handleCheckout}
+          disabled={loading}
+          className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all disabled:opacity-60 flex-shrink-0"
+        >
+          {loading ? 'Loading...' : 'Get Now'}
+        </button>
+      </div>
+    </div>
+  );
+}

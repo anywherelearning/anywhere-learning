@@ -78,9 +78,13 @@ Phase 1 (MVP Store) in progress:
 - [x] Purchase confirmation email (Resend)
 - [x] ConvertKit buyer tagging
 - [x] SEO: robots.ts, sitemap.ts, JSON-LD product schema
-- [ ] Run `npm run stripe:sync` to create Stripe products + get price IDs
-- [ ] Set up Neon database + run seed script
+- [x] Run `npm run stripe:sync` to create Stripe products + get price IDs
+- [x] Set up Neon database + run seed script
+- [x] Stripe webhook tested end-to-end (local via Stripe CLI)
+- [x] Shop pages redesign (category theming, SVG icons, animations, sticky mobile buy bar)
+- [x] Lighthouse/SEO audit fixes (font swap, server components, aria-labels, structured data)
+- [x] Pinterest Business account setup
 - [ ] Set up Clerk project
-- [ ] Lighthouse audit (target 95+)
 - [ ] Google Search Console + GA4
-- [ ] Pinterest Business account setup
+- [ ] Deploy to Vercel + set up production Stripe webhook
+- [ ] Upload PDFs to Vercel Blob
