@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getProductBySlug, getActiveProducts } from "@/lib/db/queries";
+import { getFallbackProductBySlug, getFallbackProducts } from "@/lib/fallback-products";
 import AddToCartButton from "@/components/shop/AddToCartButton";
 import PriceDisplay from "@/components/shop/PriceDisplay";
 import TestimonialBlock from "@/components/shared/TestimonialBlock";
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
     const allProducts = await getActiveProducts();
     return allProducts.map((p) => ({ slug: p.slug }));
   } catch {
-    return [];
+    return getFallbackProducts().map((p) => ({ slug: p.slug }));
   }
 }
 
@@ -29,7 +30,7 @@ export async function generateMetadata({
   try {
     product = await getProductBySlug(slug);
   } catch {
-    return {};
+    product = getFallbackProductBySlug(slug);
   }
   if (!product) return {};
   return {
@@ -107,7 +108,7 @@ export default async function ProductPage({
   try {
     product = await getProductBySlug(slug);
   } catch {
-    notFound();
+    product = getFallbackProductBySlug(slug);
   }
 
   if (!product) notFound();
@@ -120,7 +121,9 @@ export default async function ProductPage({
       .filter((p) => p.category === product.category && p.id !== product.id)
       .slice(0, 3);
   } catch {
-    // DB unavailable for related products
+    relatedProducts = getFallbackProducts()
+      .filter((p) => p.category === product.category && p.id !== product.id)
+      .slice(0, 3);
   }
 
   const jsonLd = {
