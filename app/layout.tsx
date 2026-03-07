@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Dancing_Script, DM_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import CartProvider from "@/components/cart/CartProvider";
+import CartDrawer from "@/components/cart/CartDrawer";
 import "./globals.css";
 
 const displayFont = Dancing_Script({
@@ -74,7 +76,12 @@ export default function RootLayout({
       <body
         className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
       >
-        <ClerkWrapper>{children}</ClerkWrapper>
+        <ClerkWrapper>
+          <CartProvider>
+            {children}
+            <CartDrawer />
+          </CartProvider>
+        </ClerkWrapper>
         <SpeedInsights />
       </body>
     </html>

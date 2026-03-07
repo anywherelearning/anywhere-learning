@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { orders, users, products } from '@/lib/db/schema';
-import { eq } from 'drizzle-orm';
+import { eq, inArray } from 'drizzle-orm';
 import { sendPurchaseEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit } from '@/lib/convertkit';
 import type Stripe from 'stripe';
@@ -43,13 +43,24 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ received: true });
     }
 
-    // Get the price ID from line items
-    const lineItems = await stripe.checkout.sessions.listLineItems(stripeSessionId);
-    const priceId = lineItems.data[0]?.price?.id;
-    const productSlug = session.metadata?.product_slug;
+    // Get ALL line items (supports multi-item cart checkout)
+    const lineItems = await stripe.checkout.sessions.listLineItems(stripeSessionId, {
+      limit: 100,
+    });
 
-    if (!priceId && !productSlug) {
-      console.error('No price ID or slug found for session:', stripeSessionId);
+    // Collect price IDs from line items
+    const priceIds = lineItems.data
+      .map((li) => li.price?.id)
+      .filter((id): id is string => !!id);
+
+    // Fallback: slugs from metadata (supports both legacy single and new comma-separated)
+    const metaSlugs = (session.metadata?.product_slugs || session.metadata?.product_slug || '')
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    if (priceIds.length === 0 && metaSlugs.length === 0) {
+      console.error('No price IDs or slugs found for session:', stripeSessionId);
       return NextResponse.json({ received: true });
     }
 
@@ -71,64 +82,87 @@ export async function POST(req: NextRequest) {
       user = [newUser];
     }
 
-    // Find product by Stripe price ID (primary) or slug (fallback)
-    let product;
-    if (priceId) {
-      product = await db
+    // Find all purchased products by price ID (primary) or slugs (fallback)
+    let purchasedProducts: typeof products.$inferSelect[] = [];
+
+    if (priceIds.length > 0) {
+      purchasedProducts = await db
         .select()
         .from(products)
-        .where(eq(products.stripePriceId, priceId))
-        .limit(1);
-    }
-    if ((!product || product.length === 0) && productSlug) {
-      product = await db
-        .select()
-        .from(products)
-        .where(eq(products.slug, productSlug))
-        .limit(1);
+        .where(inArray(products.stripePriceId, priceIds));
     }
 
-    if (product && product.length > 0) {
+    // If we didn't find products for all price IDs, try slug fallback
+    if (purchasedProducts.length < priceIds.length && metaSlugs.length > 0) {
+      const foundSlugs = new Set(purchasedProducts.map((p) => p.slug));
+      const missingSlugs = metaSlugs.filter((s) => !foundSlugs.has(s));
+      if (missingSlugs.length > 0) {
+        const fallbackProducts = await db
+          .select()
+          .from(products)
+          .where(inArray(products.slug, missingSlugs));
+        purchasedProducts = [...purchasedProducts, ...fallbackProducts];
+      }
+    }
+
+    if (purchasedProducts.length > 0) {
+      // Distribute total across products proportionally
+      const totalProductCents = purchasedProducts.reduce((sum, p) => sum + p.priceCents, 0);
+
       // Create order(s) atomically in a transaction
       await db.transaction(async (tx) => {
-        await tx.insert(orders).values({
-          userId: user[0].id,
-          productId: product[0].id,
-          stripeSessionId,
-          amountCents: amountTotal,
-          status: 'completed',
-        });
+        for (const product of purchasedProducts) {
+          // Distribute amount proportionally (last product gets remainder)
+          const isLast = product === purchasedProducts[purchasedProducts.length - 1];
+          const proportionalAmount = isLast
+            ? amountTotal - purchasedProducts.slice(0, -1).reduce(
+                (sum, p) => sum + Math.round((p.priceCents / totalProductCents) * amountTotal), 0
+              )
+            : Math.round((product.priceCents / totalProductCents) * amountTotal);
 
-        // If bundle, create orders for each included product
-        if (product[0].isBundle && product[0].bundleProductIds) {
-          const bundledIds = JSON.parse(product[0].bundleProductIds) as string[];
-          for (const pid of bundledIds) {
-            await tx.insert(orders).values({
-              userId: user[0].id,
-              productId: pid,
-              stripeSessionId,
-              amountCents: 0,
-              status: 'completed',
-            });
+          await tx.insert(orders).values({
+            userId: user[0].id,
+            productId: product.id,
+            stripeSessionId,
+            amountCents: proportionalAmount,
+            status: 'completed',
+          });
+
+          // If bundle, create orders for each included product
+          if (product.isBundle && product.bundleProductIds) {
+            const bundledIds = JSON.parse(product.bundleProductIds) as string[];
+            for (const pid of bundledIds) {
+              await tx.insert(orders).values({
+                userId: user[0].id,
+                productId: pid,
+                stripeSessionId,
+                amountCents: 0,
+                status: 'completed',
+              });
+            }
           }
         }
       });
 
-      // Post-transaction: send email + tag (non-critical, outside transaction)
+      // Post-transaction: send email with all product names (non-critical)
+      const productNames = purchasedProducts.map((p) => p.name).join(', ');
       try {
         await sendPurchaseEmail({
           to: customerEmail,
-          productName: product[0].name,
+          productName: productNames,
           downloadUrl: `${process.env.NEXT_PUBLIC_URL}/account/downloads`,
         });
       } catch (error) {
         console.error('Failed to send purchase email:', error);
       }
 
-      try {
-        await tagBuyerInConvertKit(customerEmail, product[0].slug);
-      } catch (error) {
-        console.error('Failed to tag buyer in ConvertKit:', error);
+      // Tag in ConvertKit for each product (non-critical)
+      for (const product of purchasedProducts) {
+        try {
+          await tagBuyerInConvertKit(customerEmail, product.slug);
+        } catch (error) {
+          console.error('Failed to tag buyer in ConvertKit:', error);
+        }
       }
     }
   }
