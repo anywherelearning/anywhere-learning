@@ -89,30 +89,32 @@ export async function POST(req: NextRequest) {
     }
 
     if (product && product.length > 0) {
-      // Create order
-      await db.insert(orders).values({
-        userId: user[0].id,
-        productId: product[0].id,
-        stripeSessionId,
-        amountCents: amountTotal,
-        status: 'completed',
+      // Create order(s) atomically in a transaction
+      await db.transaction(async (tx) => {
+        await tx.insert(orders).values({
+          userId: user[0].id,
+          productId: product[0].id,
+          stripeSessionId,
+          amountCents: amountTotal,
+          status: 'completed',
+        });
+
+        // If bundle, create orders for each included product
+        if (product[0].isBundle && product[0].bundleProductIds) {
+          const bundledIds = JSON.parse(product[0].bundleProductIds) as string[];
+          for (const pid of bundledIds) {
+            await tx.insert(orders).values({
+              userId: user[0].id,
+              productId: pid,
+              stripeSessionId,
+              amountCents: 0,
+              status: 'completed',
+            });
+          }
+        }
       });
 
-      // If bundle, create orders for each included product
-      if (product[0].isBundle && product[0].bundleProductIds) {
-        const bundledIds = JSON.parse(product[0].bundleProductIds) as string[];
-        for (const pid of bundledIds) {
-          await db.insert(orders).values({
-            userId: user[0].id,
-            productId: pid,
-            stripeSessionId,
-            amountCents: 0,
-            status: 'completed',
-          });
-        }
-      }
-
-      // Send purchase confirmation email
+      // Post-transaction: send email + tag (non-critical, outside transaction)
       try {
         await sendPurchaseEmail({
           to: customerEmail,
@@ -123,8 +125,11 @@ export async function POST(req: NextRequest) {
         console.error('Failed to send purchase email:', error);
       }
 
-      // Tag buyer in ConvertKit
-      await tagBuyerInConvertKit(customerEmail, product[0].slug);
+      try {
+        await tagBuyerInConvertKit(customerEmail, product[0].slug);
+      } catch (error) {
+        console.error('Failed to tag buyer in ConvertKit:', error);
+      }
     }
   }
 

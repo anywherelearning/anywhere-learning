@@ -1,4 +1,4 @@
-import { pgTable, uuid, text, integer, boolean, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, text, integer, boolean, timestamp, index } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -26,7 +26,11 @@ export const products = pgTable('products', {
   sortOrder: integer('sort_order').default(0).notNull(),
   active: boolean('active').default(true).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
-});
+}, (table) => [
+  index('idx_products_active_category').on(table.active, table.category),
+  index('idx_products_active_sort').on(table.active, table.sortOrder),
+  index('idx_products_stripe_price').on(table.stripePriceId),
+]);
 
 export const orders = pgTable('orders', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -36,7 +40,9 @@ export const orders = pgTable('orders', {
   amountCents: integer('amount_cents').notNull(),
   status: text('status').default('completed').notNull(),
   purchasedAt: timestamp('purchased_at').defaultNow().notNull(),
-});
+}, (table) => [
+  index('idx_orders_user_status').on(table.userId, table.status),
+]);
 
 export const downloads = pgTable('downloads', {
   id: uuid('id').defaultRandom().primaryKey(),

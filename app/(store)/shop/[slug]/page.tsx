@@ -20,7 +20,7 @@ import {
   ShieldCheckIcon,
 } from "@/components/shop/icons";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // ISR: revalidate daily
 
 export async function generateStaticParams() {
   try {
