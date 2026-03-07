@@ -48,10 +48,16 @@ export async function generateMetadata({
   return {
     title: product.name,
     description: product.shortDescription,
+    alternates: {
+      canonical: `https://anywherelearning.co/shop/${product.slug}`,
+    },
     openGraph: {
       title: product.name,
       description: product.shortDescription,
-      images: product.imageUrl ? [{ url: product.imageUrl }] : [],
+      url: `https://anywherelearning.co/shop/${product.slug}`,
+      images: product.imageUrl
+        ? [{ url: product.imageUrl }]
+        : [{ url: 'https://anywherelearning.co/og-default.png', width: 1200, height: 630 }],
     },
   };
 }
@@ -142,7 +148,12 @@ export default async function ProductPage({
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: product.imageUrl,
+    image: product.imageUrl || "https://anywherelearning.co/og-default.png",
+    sku: product.slug,
+    brand: {
+      "@type": "Brand",
+      name: "Anywhere Learning",
+    },
     offers: {
       "@type": "Offer",
       price: (product.priceCents / 100).toFixed(2),

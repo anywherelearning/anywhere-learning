@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt — just what works.',
+  alternates: {
+    canonical: 'https://anywherelearning.co/blog',
+  },
   openGraph: {
     title: 'Blog — Anywhere Learning',
     description:

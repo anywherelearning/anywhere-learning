@@ -41,6 +41,9 @@ export async function generateMetadata({
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
+    alternates: {
+      canonical: `https://anywherelearning.co/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,

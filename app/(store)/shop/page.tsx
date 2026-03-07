@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Shop Activity Packs",
   description:
     "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+  alternates: {
+    canonical: "https://anywherelearning.co/shop",
+  },
   openGraph: {
     title: "Shop Activity Packs — Anywhere Learning",
     description:

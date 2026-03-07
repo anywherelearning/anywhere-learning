@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Anywhere Learning — Meaningful Learning, Wherever You Are',
   description:
     'Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+  alternates: {
+    canonical: 'https://anywherelearning.co',
+  },
 };
 
 const featuredProducts = [
