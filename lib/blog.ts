@@ -1424,7 +1424,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'We don\u2019t have a schedule, but we\u2019re not totally chaotic either. We have a loose rhythm that shapes our days — it just flexes depending on where we are, what\u2019s happening, and what the kids are into.' },
 
       { type: 'heading', level: 3, text: 'Morning: slow start' },
-      { type: 'paragraph', text: 'Nobody\u2019s doing maths at 7 am. Mornings are for waking up, eating breakfast, and easing into the day. The kids usually read, draw, or mess around. Sometimes they help make breakfast — especially if we\u2019re somewhere with a kitchen and local ingredients to experiment with.' },
+      { type: 'paragraph', text: 'In El Zonte, the heat wakes everyone up. Nobody needs an alarm. We eat breakfast at home — most of our meals happen at home, actually — and ease into the day. The kids read, draw, or mess around. They do the dishes from breakfast without being asked (most days).' },
       { type: 'paragraph', text: 'If anyone has something they want to work on — a project, a question from yesterday, a book they\u2019re into — this is usually when it happens. But it\u2019s not assigned. It\u2019s just the natural energy of morning.' },
 
       { type: 'heading', level: 3, text: 'Mid-morning to afternoon: out in the world' },
@@ -1435,29 +1435,29 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'After a full day out, everyone needs to decompress. The kids might journal, build something, play, or just zone out. I try to protect this time because it\u2019s when they process everything they\u2019ve absorbed. Some of their best questions and ideas come during downtime, not during activities.' },
 
       { type: 'heading', level: 3, text: 'Evening: together time' },
-      { type: 'paragraph', text: 'Dinner is usually our most "educational" time, though it doesn\u2019t feel like it. We talk about the day. What was weird. What was cool. What we want to do tomorrow. Sometimes we read aloud. Sometimes we play a game. Sometimes we just eat and are tired and that\u2019s fine too.' },
+      { type: 'paragraph', text: 'We cook most of our meals at home, and dinner is usually our best conversation of the day. We talk about what we saw, what was weird, what was cool, what we want to do tomorrow. The kids help cook and do the dishes — that\u2019s non-negotiable. Sometimes we read aloud after. Sometimes we play a game. Sometimes we just eat and are tired and that\u2019s fine too.' },
 
       { type: 'pull-quote', text: 'The best learning days are the ones that don\u2019t feel like learning days. They just feel like good days.' },
 
       { type: 'heading', level: 2, text: 'A real day, unfiltered' },
-      { type: 'paragraph', text: 'Here\u2019s what last Tuesday actually looked like. Not a highlight reel — just a regular day.' },
+      { type: 'paragraph', text: 'Here\u2019s what last Tuesday actually looked like. Not a highlight reel — just a regular day in El Zonte.' },
       { type: 'list', ordered: true, items: [
-        'Woke up around 7:30. Kids had cereal while I had coffee. My son read a book about ocean animals. My daughter drew.',
-        'Around 9:30, we walked to the beach. The kids found a tide pool and spent 45 minutes examining what was in it. My son wanted to know why barnacles stick to rocks. We looked it up on my phone right there.',
-        'Stopped at a little shop on the way back. The kids ordered drinks in Spanish. It wasn\u2019t perfect, but they communicated and got what they wanted. That counts.',
-        'Came back, had lunch. My daughter decided she wanted to write a story. My son practised some maths problems he\u2019d been working through — not because I told him to, but because he wanted to finish a section.',
-        'Afternoon: we explored a part of town we hadn\u2019t been to. Found a mural and talked about the history behind it. Tried a new fruit from a vendor neither of us could name.',
-        'Evening: cooked dinner together. The kids helped chop and measure. Talked about our favourite part of the day. Read a chapter of a book before bed.',
+        'Heat woke everyone up around 7. Breakfast at home. Kids did the dishes while I had my second coffee.',
+        'Spanish lesson in the morning — they\u2019ve been doing these regularly. After, they walked to the tienda to buy snacks and practised ordering in Spanish. It\u2019s not fluent, but they get what they need.',
+        'Beach time. The kids rented surf boards — they took one lesson a while back and now they just practise on their own. Lots of wiping out. Lots of getting back up.',
+        'Lunch at home. My daughter worked on a story she\u2019s been writing. My son did some maths — not because I told him to, but because he wanted to finish a section he\u2019d been stuck on.',
+        'Walked to a part of town we hadn\u2019t explored yet. Found a mural, tried a fruit from a vendor that none of us could name.',
+        'Cooked dinner together at home. Kids helped chop and did the dishes after. Talked about our favourite part of the day. Read before bed.',
       ]},
-      { type: 'paragraph', text: 'Was it "enough"? I used to worry about that constantly. Now I look at that day and see: reading, biology, language practice, maths, writing, history, cooking, nutrition, social skills, cultural awareness. All before dinner. None of it from a textbook.' },
+      { type: 'paragraph', text: 'Was it "enough"? I used to worry about that constantly. Now I look at that day and see: language practice, physical activity, independence, maths, writing, exploring, cooking. None of it from a textbook.' },
 
       { type: 'heading', level: 2, text: 'But what about the "real" subjects?' },
-      { type: 'paragraph', text: 'I\u2019m not going to pretend we never do anything structured. We do. My kids work through maths on their own — they have workbooks they use at their own pace. They read every day, though what they read is entirely their choice. And when one of them gets deeply interested in something — volcanoes, coding, ancient Egypt — we lean into it hard. Library books, documentaries, projects, visits if we can.' },
+      { type: 'paragraph', text: 'I\u2019m not going to pretend we never do anything structured. We do. The kids take Spanish lessons. They work through maths on their own. They read every day, though what they read is entirely their choice. And when we can lean into something real — hiking a volcano, visiting the San Salvador library, taking a pupusa-making class — we do.' },
       { type: 'paragraph', text: 'But these structured bits aren\u2019t the core of our education. They\u2019re supplements. The core is living in the world and learning from it directly.' },
 
       { type: 'heading', level: 2, text: 'The "what about socialisation" thing' },
-      { type: 'paragraph', text: 'I\u2019ll keep this short because it comes up every time. My kids interact with more diverse groups of people in a single week of worldschooling than most kids do in a year of school. They talk to adults, other travellers, local kids who don\u2019t speak their language, shopkeepers, guides, other families. They\u2019re not sitting in a room with 25 kids the same age all day — they\u2019re navigating the actual social world.' },
-      { type: 'paragraph', text: 'That doesn\u2019t mean it\u2019s always easy. Making friends on the road is hard sometimes. Leaving friends behind is harder. But the social skills they\u2019re building — adaptability, confidence with strangers, cross-cultural communication — are skills most adults are still working on.' },
+      { type: 'paragraph', text: 'I\u2019ll keep this short because it comes up every time. Our kids talk to adults, other travellers, local kids who don\u2019t speak their language, shopkeepers, guides, other families. It\u2019s different from a school environment, not necessarily better — just different kinds of social experience.' },
+      { type: 'paragraph', text: 'That doesn\u2019t mean it\u2019s always easy. Making friends on the road is hard sometimes. Leaving friends behind is harder. There are tradeoffs. But they\u2019re learning to adapt, to be comfortable with strangers, to communicate across cultures — and those are skills we\u2019re glad they\u2019re building.' },
 
       { type: 'heading', level: 2, text: 'What I\u2019d tell someone just starting out' },
       { type: 'list', ordered: false, items: [
