@@ -165,12 +165,13 @@ export async function POST(req: NextRequest) {
         console.error('Failed to send purchase email:', error);
       }
 
-      // Tag in ConvertKit with all product slugs + purchase-type tags (non-critical)
+      // Tag in ConvertKit with all product slugs + purchase-type + cross-sell tags (non-critical)
       try {
+        const categories = [...new Set(purchasedProducts.map((p) => p.category))];
         await tagBuyerInConvertKit(
           customerEmail,
           purchasedProducts.map((p) => p.slug),
-          { isFirstPurchase, hasBundles },
+          { isFirstPurchase, hasBundles, categories },
         );
       } catch (error) {
         console.error('Failed to tag buyer in ConvertKit:', error);
