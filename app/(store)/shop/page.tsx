@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getActiveProducts, getProductsByCategory } from "@/lib/db/queries";
+import { getFallbackProducts } from "@/lib/fallback-products";
 import ProductGrid from "@/components/shop/ProductGrid";
 import CategoryFilter from "@/components/shop/CategoryFilter";
 import BundleHighlight from "@/components/shop/BundleHighlight";
@@ -30,81 +31,8 @@ export const metadata: Metadata = {
   },
 };
 
-/* Hardcoded fallback when DB is unavailable */
-const fallbackProducts = [
-  {
-    name: "Master Bundle (Everything)",
-    slug: "master-bundle",
-    shortDescription: "Every activity pack we make — 220+ activities in one download.",
-    priceCents: 8999,
-    compareAtPriceCents: 19883,
-    imageUrl: null,
-    category: "bundle",
-    isBundle: true,
-    activityCount: 220,
-    ageRange: "Ages 4–14",
-  },
-  {
-    name: "Full Seasonal Bundle",
-    slug: "seasonal-bundle",
-    shortDescription: "All 4 seasonal packs — 80 outdoor activities for every time of year.",
-    priceCents: 4999,
-    compareAtPriceCents: 5996,
-    imageUrl: null,
-    category: "bundle",
-    isBundle: true,
-    activityCount: 80,
-    ageRange: "Ages 4–14",
-  },
-  {
-    name: "Nature Journal & Walk Cards",
-    slug: "nature-journal-walks",
-    shortDescription: "25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience.",
-    priceCents: 999,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: "nature",
-    isBundle: false,
-    activityCount: 25,
-    ageRange: "Ages 4–14",
-  },
-  {
-    name: "Spring Outdoor Learning Pack",
-    slug: "spring-outdoor-pack",
-    shortDescription: "20 outdoor activities that use spring\u2019s energy to build real-world skills.",
-    priceCents: 1499,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: "seasonal",
-    isBundle: false,
-    activityCount: 20,
-    ageRange: "Ages 4–14",
-  },
-  {
-    name: "Kitchen Maths & Cooking Cards",
-    slug: "kitchen-maths-cooking",
-    shortDescription: "20 recipe-based activities that turn cooking into real maths, science, and life skills practice.",
-    priceCents: 999,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: "real-world",
-    isBundle: false,
-    activityCount: 20,
-    ageRange: "Ages 4–14",
-  },
-  {
-    name: "Creative Thinking Pack",
-    slug: "creative-thinking-pack",
-    shortDescription: "25 open-ended creative challenges that build divergent thinking and artistic confidence.",
-    priceCents: 999,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: "creativity",
-    isBundle: false,
-    activityCount: 25,
-    ageRange: "Ages 4–14",
-  },
-];
+/* Use shared fallback when DB is unavailable */
+const fallbackProducts = getFallbackProducts();
 
 interface ShopPageProps {
   searchParams: Promise<{ category?: string }>;
