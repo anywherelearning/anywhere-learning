@@ -115,7 +115,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Parent and child walking through a forest trail',
     content: [
-      { type: 'paragraph', text: 'Last Tuesday, my youngest found a snail on our front path. Within five minutes, we\u2019d talked about molluscs, shells as protection, why snails leave trails, and whether they have eyes. No lesson plan. No curriculum guide. Just a kid, a snail, and curiosity.' },
+      { type: 'paragraph', text: 'Kids find things on walks. Bugs, feathers, weird mushrooms, a snail leaving a trail. And they want to know why. Why does the snail have a shell? Why is this rock sparkly? Why do some trees lose their leaves and others don\u2019t? You don\u2019t need a lesson plan for that. You just need to be outside.' },
       { type: 'paragraph', text: 'This is what real science looks like. Not a fill-in-the-blank worksheet about ecosystems \u2014 but a real, living creature that sparks genuine wonder. And it costs nothing. It requires nothing. It\u2019s just... outside.' },
       { type: 'heading', level: 2, text: 'Observation is the foundation of science' },
       { type: 'paragraph', text: 'Every great scientist started by noticing things. Darwin noticed finches. Marie Curie noticed glowing residue. Your kid notices that puddles disappear on hot days. That\u2019s evaporation. That\u2019s science. And it happened without you planning a thing.' },
@@ -243,7 +243,7 @@ const posts: BlogPost[] = [
       { type: 'pull-quote', text: 'Travel doesn\u2019t replace education. Travel is education. Every new city is a living textbook.' },
       { type: 'heading', level: 2, text: 'The secret: low expectations, high curiosity' },
       { type: 'paragraph', text: 'If you expect your kids to sit still and write essays about the Roman Colosseum, you\u2019ll be disappointed. If you expect them to run around it, ask weird questions, and remember the gladiator facts from the audio guide three months later \u2014 you\u2019ll be thrilled.' },
-      { type: 'paragraph', text: 'The biggest shift for us was letting go of what learning \u201cshould\u201d look like. My 9-year-old learned more about ancient civilisations from playing in ruins than she ever would from a textbook. My 12-year-old learned maths by figuring out currency conversions at market stalls. None of it was planned. All of it stuck.' },
+      { type: 'paragraph', text: 'The biggest shift for us was letting go of what learning \u201cshould\u201d look like. Kids absorb things when they\u2019re interested and engaged. None of it looks like school. All of it sticks.' },
       { type: 'tip', title: 'Key Insight', text: 'Start a \u201cfamily meeting\u201d ritual at the end of each travel day. Ask three questions: What surprised you? What did you learn? What do you want to know more about? This takes 10 minutes and turns experiences into lasting memories.' },
       { type: 'heading', level: 2, text: 'Resources that travel well' },
       { type: 'list', ordered: false, items: [
@@ -352,7 +352,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'paragraph', text: 'There\u2019s a certain kind of magic that happens when you hand a kid a list and say, \u201cGo find these things.\u201d They move differently. They look up, look down, turn over rocks, crouch near puddles. Their whole body becomes a sensor.' },
       { type: 'paragraph', text: 'Scavenger hunts are one of my favourite low-prep, high-payoff activities. But most printable ones are underwhelming — \u201cfind a leaf, find a rock, find something green.\u201d That\u2019s fine for toddlers, but for school-age kids who need to build observation and thinking skills, we can do so much better.' },
-      { type: 'paragraph', text: 'I\u2019ve been making seasonal scavenger hunts for my two kids for years, and the ones that work best aren\u2019t just about finding things. They\u2019re about noticing, comparing, questioning, and recording. That\u2019s science.' },
+      { type: 'paragraph', text: 'The scavenger hunts that work best aren\u2019t just about finding things. They\u2019re about noticing, comparing, questioning, and recording.' },
       { type: 'heading', level: 2, text: 'Why scavenger hunts work as a learning tool' },
       { type: 'paragraph', text: 'A good scavenger hunt is a field study in disguise. When you ask a child to \u201cfind three different seed dispersal methods,\u201d they\u2019re not just picking up seeds — they\u2019re classifying, comparing, and building a mental model of how plants reproduce. That\u2019s exactly the kind of thinking that sticks.' },
       { type: 'list', ordered: false, items: [
@@ -372,7 +372,7 @@ const posts: BlogPost[] = [
         'Locate a puddle ecosystem — what\u2019s living in or near it?',
         'Find something that wasn\u2019t here last month',
       ] },
-      { type: 'tip', title: 'Make it a journal', text: 'Give each child a small notebook to sketch or describe their finds. Over the year, these become incredible records of seasonal change. My daughter\u2019s spring journal from last year is one of our most treasured \u201cschoolwork\u201d items.' },
+      { type: 'tip', title: 'Make it a journal', text: 'Give each child a small notebook to sketch or describe their finds. Over the year, these become incredible records of seasonal change \u2014 and a portfolio you\u2019ll actually want to keep.' },
       { type: 'heading', level: 2, text: 'Summer: abundance and detail' },
       { type: 'paragraph', text: 'Summer hunts can push deeper because there\u2019s so much to find. This is the season to slow down and zoom in. Bring a magnifying glass and let the hunt last longer.' },
       { type: 'list', ordered: false, items: [
@@ -489,7 +489,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child counting coins at a market stall with a parent',
     content: [
-      { type: 'paragraph', text: 'My 10-year-old recently asked why we couldn\u2019t just \u201cget more money from the wall.\u201d She meant the ATM. And in that moment I realised: we talk about money constantly in our house, but we\u2019d never actually let her experience what money means.' },
+      { type: 'paragraph', text: 'Most kids have no idea where money actually comes from. They see a card get tapped, or a phone held up to a reader, and the thing they want appears. The connection between work, money, and spending is completely invisible to them \u2014 unless we make it visible.' },
       { type: 'paragraph', text: 'Most kids\u2019 financial education comes from one of two extremes: either they get a rigid allowance chart with jars labelled \u201csave, spend, give,\u201d or they get nothing at all. Both approaches miss the point. Money isn\u2019t a worksheet topic. It\u2019s a daily reality that kids can learn through real participation.' },
       { type: 'paragraph', text: 'Here\u2019s what actually works, based on our family\u2019s experience and a lot of trial and error.' },
       { type: 'heading', level: 2, text: 'Start with visibility, not lessons' },
@@ -498,7 +498,7 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'Use cash more often', text: 'Digital payments are invisible to kids. Use physical cash for some purchases so children can see money leaving your hand. The tactile experience of handing over notes makes spending feel real in a way that tapping a card never will.' },
       { type: 'heading', level: 2, text: 'The grocery budget challenge' },
       { type: 'paragraph', text: 'This is our favourite family money activity. Give your child $30 and a meal to plan. They have to choose the recipes, write the list, and buy everything within budget. They\u2019ll learn about unit pricing, needs vs. wants, substitutions, and trade-offs — all in a single trip.' },
-      { type: 'paragraph', text: 'The first time my daughter did this, she was shocked that her dream meal of steak and chocolate cake blew the budget. The second time, she meal-planned around what was on sale. That\u2019s financial thinking.' },
+      { type: 'paragraph', text: 'The first time is usually a mess \u2014 big plans, blown budget. But by the second or third try, kids start checking prices, making substitutions, and planning around what\u2019s actually affordable. That shift happens naturally when they\u2019re in charge.' },
       { type: 'list', ordered: false, items: [
         'Start with a simple budget — one meal, clear limit',
         'Let them make mistakes (overspending is a powerful teacher)',
@@ -507,7 +507,7 @@ const posts: BlogPost[] = [
       ] },
       { type: 'heading', level: 2, text: 'Saving with a real goal' },
       { type: 'paragraph', text: 'Generic saving (\u201cput 20% in the jar\u201d) doesn\u2019t motivate anyone, let alone a kid. Saving works when there\u2019s something specific they want. A skateboard. A particular book series. A trip to the science museum.' },
-      { type: 'paragraph', text: 'Help them calculate how long it will take. Make a simple tracker they can colour in. Watch their behaviour change when the goal is real. My son saved for three months for a telescope — and he treats that thing like gold because he knows exactly what it cost.' },
+      { type: 'paragraph', text: 'Help them calculate how long it will take. Make a simple tracker they can colour in. Watch their behaviour change when the goal is real. Kids treat things differently when they\u2019ve saved for them \u2014 because they know exactly what it cost in time and effort.' },
       { type: 'heading', level: 2, text: 'Understanding value vs. price' },
       { type: 'paragraph', text: 'This is the most important money concept for kids: price is what you pay, value is what you get. A $5 toy that breaks in a day is more expensive than a $20 toy that lasts three years. A $1 app that wastes time is more costly than a $10 book that changes how they think.' },
       { type: 'paragraph', text: 'We play a game called \u201cworth it or not\u201d when we\u2019re out shopping. I point to something, they decide whether it\u2019s worth the price, and they have to explain why. It\u2019s become a genuine thinking habit.' },
@@ -577,7 +577,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What actually helps' },
       { type: 'heading', level: 3, text: '1. Lower the bar — way down' },
       { type: 'paragraph', text: 'Whatever you think \u201cgood homeschooling\u201d looks like, cut it in half. Then cut it again. You don\u2019t need five subjects a day. You need your kids to read, be curious, and feel safe. Everything else is a bonus.' },
-      { type: 'paragraph', text: 'During our worst burnout period, our entire \u201cschool day\u201d was reading aloud for 30 minutes and going outside. That\u2019s it. And you know what? The kids were fine. Better than fine — they were happy, creative, and self-directed.' },
+      { type: 'paragraph', text: 'On the hardest days, sometimes all you can manage is reading aloud for 30 minutes and going outside. That\u2019s it. And that\u2019s okay. Kids are more resilient than we give them credit for. They don\u2019t need a full day of structured learning \u2014 they need a parent who\u2019s present and not running on empty.' },
       { type: 'heading', level: 3, text: '2. Drop the guilt about screens and workbooks' },
       { type: 'paragraph', text: 'If you need a morning where the kids watch documentaries while you stare at a wall, that is a valid educational choice. I\u2019m serious. A burned-out parent is a worse \u201ccurriculum\u201d than any screen. Take the break without the shame.' },
       { type: 'heading', level: 3, text: '3. Get out of the house every single day' },
@@ -617,8 +617,8 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child and parent looking at a tablet screen together, discussing',
     content: [
-      { type: 'paragraph', text: 'My 8-year-old asked me last week if the robot on his tablet was \u201calive.\u201d He wasn\u2019t joking. He\u2019d been using a chatbot and it said \u201cI feel happy to help you.\u201d In his mind, something that talks about feelings must have them.' },
-      { type: 'paragraph', text: 'That conversation made me realise: we can\u2019t wait to teach kids about AI. They\u2019re already using it. They\u2019re already forming opinions about it. And without guidance, those opinions are being shaped by marketing, science fiction, and playground rumours.' },
+      { type: 'paragraph', text: 'Kids are already using AI. They\u2019re talking to chatbots, asking voice assistants questions, and watching content that\u2019s been recommended by algorithms. Most of them have no idea how any of it works \u2014 and they\u2019re forming opinions about it based on whatever they happen to encounter.' },
+      { type: 'paragraph', text: 'That\u2019s why we can\u2019t wait to have these conversations. Without guidance, kids\u2019 understanding of AI gets shaped by marketing, science fiction, and playground rumours.' },
       { type: 'paragraph', text: 'Whether you\u2019re enthusiastic or cautious about AI, one thing is clear: your kids need to understand what it is, what it isn\u2019t, and how to think critically about it. And you don\u2019t need a computer science degree to teach them.' },
       { type: 'heading', level: 2, text: 'What kids actually need to understand about AI' },
       { type: 'paragraph', text: 'Forget the technical details. Kids don\u2019t need to know about neural networks or training data. They need to understand four core concepts:' },
@@ -691,7 +691,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Kids building a stick bridge over a small stream',
     content: [
-      { type: 'paragraph', text: 'The best STEM education I\u2019ve ever seen happened in a muddy creek bed. My kids were trying to build a bridge out of sticks that could hold a heavy rock. They tested, failed, redesigned, argued about structural integrity, and eventually built something that worked. Nobody called it \u201cengineering.\u201d They called it \u201cthe bridge game.\u201d' },
+      { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d \u2014 it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
       { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science — all using materials you can find in your garden, a park, or a hiking trail.' },
       { type: 'heading', level: 2, text: 'Engineering challenges' },
@@ -890,8 +890,8 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Children playing freely outdoors, building with sticks and natural materials',
     content: [
-      { type: 'paragraph', text: 'My daughter spent four hours yesterday building a city out of cardboard boxes, tape, and markers. She designed roads, named businesses, created a currency, established laws, and had a full argument with her brother about property rights. At no point did anyone call it "school."' },
-      { type: 'paragraph', text: 'But here\u2019s what she practised in those four hours: urban planning, creative writing, basic economics, negotiation, conflict resolution, fine motor skills, spatial reasoning, and persuasive argument. If I\u2019d tried to teach any of those things with a worksheet, it would have taken three minutes before she said "this is boring."' },
+      { type: 'paragraph', text: 'Give a kid some cardboard boxes, tape, and markers, and watch what happens. They build things. They make up rules for imaginary worlds. They negotiate with siblings about whose territory is whose. It goes on for hours, and at no point does anyone call it "school."' },
+      { type: 'paragraph', text: 'But there\u2019s a lot happening in those hours \u2014 problem-solving, negotiation, creativity, fine motor skills, spatial thinking. It just doesn\u2019t look like learning because nobody\u2019s sitting at a desk.' },
       { type: 'heading', level: 2, text: 'Why play gets dismissed' },
       { type: 'paragraph', text: 'In a culture obsessed with measurable outcomes, play is the first casualty. It doesn\u2019t produce a grade. It doesn\u2019t fill a portfolio. When your child spends an afternoon playing, there\u2019s nothing to photograph for Instagram and nothing to show your mother-in-law when she asks "what did they learn today?"' },
       { type: 'paragraph', text: 'So we fill the day with structured activities, lessons, and curriculum. Not because children need them, but because we need the evidence. We need proof that we\u2019re doing enough. Play doesn\u2019t give us that proof \u2014 and that makes us nervous.' },
@@ -1031,7 +1031,7 @@ const posts: BlogPost[] = [
         'Museum or landmark: history, art, architecture, storytelling, asking questions',
         'Getting lost: problem-solving, asking for help, staying calm under pressure',
       ]},
-      { type: 'paragraph', text: 'None of this requires a lesson plan. It just requires you to be present and to name what\u2019s happening. \u201cYou just converted currency in your head. That\u2019s maths.\u201d \u201cYou asked a stranger for directions in Spanish. That\u2019s brave and that\u2019s language learning.\u201d' },
+      { type: 'paragraph', text: 'None of this requires a lesson plan. It just requires you to be present and pay attention to what\u2019s already happening.' },
       { type: 'pull-quote', text: 'Travel doesn\u2019t interrupt learning. It IS learning. You just have to stop looking for it in a workbook.' },
       { type: 'heading', level: 2, text: 'What to bring (and what to leave behind)' },
       { type: 'heading', level: 3, text: 'Bring these' },
@@ -1164,10 +1164,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'You\u2019re not teaching \u2014 you\u2019re facilitating. You don\u2019t need to know the answer to every question. You need to be willing to say \u201cI don\u2019t know \u2014 let\u2019s find out together.\u201d That sentence models the most important skill of all: how to learn.' },
       { type: 'heading', level: 2, text: 'Getting started today' },
       { type: 'paragraph', text: 'You don\u2019t need a plan. You don\u2019t need a curriculum. You don\u2019t even need to change your schedule. Just start noticing the learning that\u2019s already happening in your daily life \u2014 and naming it.' },
-      { type: 'paragraph', text: '\u201cYou just figured out how to split that evenly between three people. That\u2019s division.\u201d' },
-      { type: 'paragraph', text: '\u201cYou navigated us to the restaurant using the map. That\u2019s geography.\u201d' },
-      { type: 'paragraph', text: '\u201cYou noticed the bread rose higher this time. That\u2019s the scientific method.\u201d' },
-      { type: 'paragraph', text: 'Once you start seeing it, you can\u2019t unsee it. Learning is everywhere. It always was. You just need to stop looking for it in a textbook.' },
+      { type: 'paragraph', text: 'Your kid splits something evenly between three people. They navigate you to a restaurant using a map. They notice the bread rose higher this time and want to know why. It\u2019s all learning. You don\u2019t need to label it \u2014 just notice it happening.' },
+      { type: 'paragraph', text: 'Once you start seeing it, you can\u2019t unsee it. Learning is everywhere. It always was.' },
       { type: 'cta', text: 'Not sure where to begin? Our free guide gives you 10 real-world skills your kids can start building this week.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is real-world learning in homeschooling?', answer: 'Real-world learning is an approach to home education that uses everyday experiences as the primary teaching tool. Instead of following a textbook curriculum, families learn through cooking, shopping, building, traveling, and exploring \u2014 drawing out natural connections to maths, science, literacy, and life skills from activities that already happen in daily life.' },
@@ -1192,8 +1190,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Child building something inventive out of household objects on a kitchen table',
     content: [
       { type: 'paragraph', text: 'I used to think creative kids were the ones who drew well. The ones who made things that looked good on a fridge door. Then I became a parent and realised I had it completely backwards.' },
-      { type: 'paragraph', text: 'My son once spent an entire afternoon building a "delivery system" out of cardboard boxes, string, and a broken umbrella handle. It was a mess. It barely worked. And it was one of the most creative things I\u2019ve ever watched a kid do — because he identified a problem, imagined a solution, and built it from scratch using whatever he could find.' },
-      { type: 'paragraph', text: 'That\u2019s creativity. Not the Pinterest version with perfect edges and colour-coordinated supplies. The real kind — the kind that actually matters.' },
+      { type: 'paragraph', text: 'Watch a kid with a pile of random stuff and no instructions. They\u2019ll build something. It\u2019ll be messy. It probably won\u2019t work the first time. But they\u2019ll keep going \u2014 because they identified a problem, imagined a solution, and want to figure it out. That\u2019s creativity. The real kind.' },
 
       { type: 'heading', level: 2, text: 'What creativity actually is (and isn\u2019t)' },
       { type: 'paragraph', text: 'Creativity isn\u2019t art class. It\u2019s not being "good at drawing" or "artistic." Those things are fine, but they\u2019re a tiny slice of what creative thinking really means.' },
@@ -1239,9 +1236,8 @@ const posts: BlogPost[] = [
       ]},
 
       { type: 'heading', level: 2, text: 'What this looks like in real life' },
-      { type: 'paragraph', text: 'Last week my daughter wanted to make a birthday card for a friend. I could have pulled out the card-making kit. Instead, I pointed at the recycling bin and said, "Use whatever you find."' },
-      { type: 'paragraph', text: 'She came back with a cereal box, a receipt, some foil from a chocolate wrapper, and a marker. The card was weird and wonderful and completely hers. Her friend loved it.' },
-      { type: 'paragraph', text: 'That\u2019s the kind of creative thinking that transfers to everything — school projects, job interviews, problem-solving as adults. Not "follow these steps to make a nice card" but "here\u2019s a constraint, figure it out."' },
+      { type: 'paragraph', text: 'Next time your kid wants to make something, skip the kit. Point them at whatever\u2019s lying around — cardboard, tape, markers, scraps — and say "use what you find." The result won\u2019t be Pinterest-perfect. It\u2019ll be better, because it\u2019ll be entirely theirs.' },
+      { type: 'paragraph', text: 'That\u2019s the kind of creative thinking that transfers to everything. Not "follow these steps to make a nice thing" but "here\u2019s a constraint, figure it out."' },
 
       { type: 'tip', title: 'The one-material challenge', text: 'Pick a single material — cardboard, string, newspaper, aluminium foil — and challenge your kids to make something useful out of it. No instructions, no examples, no help unless they ask. This one exercise builds more creative muscle than a whole shelf of craft kits.' },
 
@@ -1416,7 +1412,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Why we stopped trying to schedule learning' },
       { type: 'paragraph', text: 'When we first started worldschooling, I made a beautiful weekly plan. Morning lessons, afternoon activities, reading time before bed. It was colour-coded. It was laminated. It lasted three days.' },
-      { type: 'paragraph', text: 'The problem wasn\u2019t discipline. The problem was that the best learning kept happening outside the plan. My son would get obsessed with something he saw at a market and spend two hours researching it. My daughter would start a conversation with a local and come back with more cultural knowledge than any lesson I could design.' },
+      { type: 'paragraph', text: 'The problem wasn\u2019t discipline. The problem was that the best learning kept happening outside the plan. The kids would get curious about something they saw or heard, and I\u2019d either have to pull them away to stick to the schedule or let them follow it. I kept choosing the schedule. And it kept feeling wrong.' },
       { type: 'paragraph', text: 'Every time I pulled them away from something real to do something I\u2019d planned, I was interrupting actual learning to do pretend learning. Once I saw that, I couldn\u2019t unsee it.' },
 
       { type: 'heading', level: 2, text: 'What we have instead: a rhythm' },
