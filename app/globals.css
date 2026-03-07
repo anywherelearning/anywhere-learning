@@ -197,6 +197,10 @@ body::after {
   .animate-pulse-glow,
   .animate-card-peek,
   .animate-count-up,
+  .animate-soft-float,
+  .animate-slide-up-fade,
+  .animate-slide-up-bar,
+  .shimmer-effect::after,
   .hero-stagger > * {
     animation: none !important;
     opacity: 1 !important;
@@ -255,3 +259,94 @@ body::after {
 /* ─── Hide scrollbar for category filter ─── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─── Cover backgrounds for product detail page (category-specific) ─── */
+.cover-seasonal {
+  background: linear-gradient(135deg, #d4a373 0%, #e8c99a 40%, #c4836a 100%);
+}
+.cover-nature {
+  background: linear-gradient(135deg, #588157 0%, #6b9e6b 40%, #3d5c3b 100%);
+}
+.cover-creativity {
+  background: linear-gradient(135deg, #c47a8f 0%, #d4a0b0 40%, #a25d72 100%);
+}
+.cover-real-world {
+  background: linear-gradient(135deg, #8b7355 0%, #a89070 40%, #6d5a42 100%);
+}
+.cover-life-skills {
+  background: linear-gradient(135deg, #6b8e8b 0%, #8db3af 40%, #527270 100%);
+}
+.cover-ai-literacy {
+  background: linear-gradient(135deg, #7b88a8 0%, #9aa3bd 40%, #5e6a88 100%);
+}
+.cover-bundle {
+  background: linear-gradient(135deg, #3d5c3b 0%, #588157 30%, #d4a373 100%);
+}
+
+/* ─── Category card backgrounds for ProductCard ─── */
+.card-bg-seasonal {
+  background: linear-gradient(145deg, #fdf4ec 0%, #fceee0 50%, #faf2e8 100%);
+}
+.card-bg-nature {
+  background: linear-gradient(145deg, #eef5ee 0%, #e4f0e4 50%, #edf4ed 100%);
+}
+.card-bg-creativity {
+  background: linear-gradient(145deg, #fdf0f3 0%, #fce8ed 50%, #fdf1f4 100%);
+}
+.card-bg-real-world {
+  background: linear-gradient(145deg, #f5f1ec 0%, #f0ebe2 50%, #f4f0eb 100%);
+}
+.card-bg-life-skills {
+  background: linear-gradient(145deg, #eef4f3 0%, #e6f0ef 50%, #edf3f2 100%);
+}
+.card-bg-ai-literacy {
+  background: linear-gradient(145deg, #f0f1f5 0%, #e8eaf1 50%, #eff0f4 100%);
+}
+.card-bg-bundle {
+  background: linear-gradient(145deg, #f5f0e8 0%, #efe8da 50%, #f4efe6 100%);
+}
+
+/* ─── Shimmer sweep animation for CTAs and badges ─── */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%);
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ─── Soft float for decorative elements ─── */
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+.animate-soft-float {
+  animation: soft-float 6s ease-in-out infinite;
+}
+
+/* ─── Slide up + fade entrance ─── */
+@keyframes slide-up-fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up-fade {
+  animation: slide-up-fade 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Sticky buy bar slide up ─── */
+@keyframes slide-up-bar {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.animate-slide-up-bar {
+  animation: slide-up-bar 0.3s ease-out forwards;
+}

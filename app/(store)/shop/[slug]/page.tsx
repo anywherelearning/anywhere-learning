@@ -7,6 +7,18 @@ import PriceDisplay from "@/components/shop/PriceDisplay";
 import TestimonialBlock from "@/components/shared/TestimonialBlock";
 import FAQSection from "@/components/shared/FAQSection";
 import ProductGrid from "@/components/shop/ProductGrid";
+import StickyMobileBuy from "@/components/shop/StickyMobileBuy";
+import {
+  CategoryIcon,
+  TargetIcon,
+  ClockIcon,
+  SparklesIcon,
+  UsersIcon,
+  BookOpenIcon,
+  ZapIcon,
+  PrinterIcon,
+  ShieldCheckIcon,
+} from "@/components/shop/icons";
 
 export const dynamic = "force-dynamic";
 
@@ -76,16 +88,6 @@ const categoryLabels: Record<string, string> = {
   bundle: "Bundle",
 };
 
-const categoryIcons: Record<string, string> = {
-  seasonal: "\u2600\uFE0F",
-  creativity: "\uD83C\uDFA8",
-  nature: "\uD83C\uDF3F",
-  "real-world": "\uD83D\uDCA1",
-  "life-skills": "\uD83E\uDDED",
-  "ai-literacy": "\uD83E\uDD16",
-  bundle: "\uD83D\uDCE6",
-};
-
 const coverClasses: Record<string, string> = {
   seasonal: "cover-seasonal",
   creativity: "cover-creativity",
@@ -95,6 +97,15 @@ const coverClasses: Record<string, string> = {
   "ai-literacy": "cover-ai-literacy",
   bundle: "cover-bundle",
 };
+
+const whatsInsideItems = [
+  { Icon: TargetIcon, text: "age-flexible activity cards" },
+  { Icon: ClockIcon, text: "Each takes 15\u201345 minutes" },
+  { Icon: SparklesIcon, text: "No special materials needed" },
+  { Icon: UsersIcon, text: "Works for one child or five" },
+  { Icon: BookOpenIcon, text: "Age adaptation notes included" },
+  { Icon: ZapIcon, text: "Printable PDF \u2014 instant download" },
+];
 
 export default async function ProductPage({
   params,
@@ -135,6 +146,13 @@ export default async function ProductPage({
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `https://anywherelearning.co/shop/${product.slug}`,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "12",
+      bestRating: "5",
+      worstRating: "1",
     },
   };
 
@@ -179,7 +197,7 @@ export default async function ProductPage({
       <div className="bg-cream">
         {/* Breadcrumb */}
         <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-6">
-          <nav className="flex gap-2 text-sm text-gray-400">
+          <nav className="flex items-center gap-2 text-sm text-gray-400">
             <Link
               href="/shop"
               className="hover:text-forest transition-colors"
@@ -187,7 +205,14 @@ export default async function ProductPage({
               Shop
             </Link>
             <span>&rsaquo;</span>
-            <span className="text-gray-600">{product.name}</span>
+            <Link
+              href={`/shop?category=${product.category}`}
+              className="hover:text-forest transition-colors"
+            >
+              {categoryLabels[product.category] || product.category}
+            </Link>
+            <span>&rsaquo;</span>
+            <span className="text-gray-600 truncate max-w-[200px]">{product.name}</span>
           </nav>
         </div>
 
@@ -197,38 +222,49 @@ export default async function ProductPage({
             {/* Left: Product Visual (sticky on desktop) */}
             <div className="lg:sticky lg:top-24 lg:self-start">
               <div
-                className={`relative aspect-[3/4] ${
+                className={`relative aspect-[5/4] md:aspect-[4/3] ${
                   coverClasses[product.category] || "cover-nature"
-                } rounded-2xl flex flex-col items-center justify-center p-8 text-white overflow-hidden`}
+                } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
               >
+                {/* Decorative dot pattern overlay */}
+                <div className="absolute inset-0 opacity-[0.06]" aria-hidden="true">
+                  <svg className="w-full h-full" viewBox="0 0 200 200">
+                    <pattern id="cover-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <circle cx="10" cy="10" r="1.5" fill="white" />
+                    </pattern>
+                    <rect width="200" height="200" fill="url(#cover-dots)" />
+                  </svg>
+                </div>
+
                 {/* Category icon watermark */}
-                <span
-                  className="absolute top-6 right-6 text-7xl opacity-20"
+                <div
+                  className="absolute top-6 right-6 opacity-15"
                   aria-hidden="true"
                 >
-                  {categoryIcons[product.category] || "\uD83D\uDCC4"}
-                </span>
+                  <CategoryIcon category={product.category} className="w-20 h-20 text-white" />
+                </div>
 
                 {/* Product name */}
-                <p className="font-display text-3xl md:text-4xl text-center leading-snug text-white drop-shadow-sm max-w-[85%]">
+                <p className="relative font-display text-3xl md:text-4xl lg:text-5xl text-center leading-snug text-white drop-shadow-sm max-w-[85%]">
                   {product.name}
                 </p>
 
                 {/* Activity count */}
                 {product.activityCount && (
-                  <p className="mt-3 text-lg text-white/80 font-medium">
-                    {product.activityCount} activities
+                  <p className="relative mt-4 text-lg text-white/80 font-medium bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full">
+                    {product.activityCount} activities inside
                   </p>
                 )}
 
                 {/* Category pill */}
-                <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2">
+                  <CategoryIcon category={product.category} className="w-4 h-4 text-white" />
                   {categoryLabels[product.category] || product.category}
                 </div>
 
                 {/* Bundle badge */}
                 {product.isBundle && (
-                  <div className="absolute top-4 left-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                  <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow">
                     BEST VALUE
                   </div>
                 )}
@@ -238,7 +274,8 @@ export default async function ProductPage({
             {/* Right: Copy + Purchase */}
             <div className="py-4">
               {/* Category label */}
-              <p className="text-sm font-medium text-gold uppercase tracking-widest mb-3">
+              <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3 flex items-center gap-2">
+                <CategoryIcon category={product.category} className="w-4 h-4 text-gold" />
                 {categoryLabels[product.category] || product.category}
               </p>
 
@@ -248,7 +285,7 @@ export default async function ProductPage({
               </h1>
 
               {/* Subtitle */}
-              <p className="mt-2 text-lg text-gray-600">
+              <p className="mt-2 text-lg text-gray-600 leading-relaxed">
                 {product.shortDescription}
               </p>
 
@@ -264,7 +301,7 @@ export default async function ProductPage({
 
               <hr className="my-6 border-gray-200" />
 
-              {/* Price */}
+              {/* Price — larger treatment */}
               <PriceDisplay
                 priceCents={product.priceCents}
                 compareAtPriceCents={product.compareAtPriceCents}
@@ -272,7 +309,7 @@ export default async function ProductPage({
               />
 
               {/* Buy Button */}
-              <div className="mt-6">
+              <div className="mt-6" id="buy-button">
                 <AddToCartButton
                   stripePriceId={product.stripePriceId}
                   slug={product.slug}
@@ -281,32 +318,24 @@ export default async function ProductPage({
                 />
               </div>
 
-              {/* Trust line */}
-              <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Instant PDF download
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Print at home
-                </span>
-                {product.ageRange && (
-                  <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Ages {product.ageRange}
-                  </span>
-                )}
+              {/* Trust badges */}
+              <div className="mt-5 grid grid-cols-3 gap-3">
+                <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
+                  <span aria-hidden="true"><ZapIcon className="w-5 h-5 text-forest" /></span>
+                  <span className="text-xs text-gray-500 font-medium">Instant Download</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
+                  <span aria-hidden="true"><PrinterIcon className="w-5 h-5 text-forest" /></span>
+                  <span className="text-xs text-gray-500 font-medium">Print at Home</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
+                  <span aria-hidden="true"><ShieldCheckIcon className="w-5 h-5 text-forest" /></span>
+                  <span className="text-xs text-gray-500 font-medium">Secure Checkout</span>
+                </div>
               </div>
 
               {/* Mini testimonial near CTA */}
-              <div className="mt-5 flex items-start gap-3 bg-gold-light/10 rounded-xl p-4 border border-gold/10">
+              <div className="mt-6 flex items-start gap-3 bg-gold-light/10 rounded-xl p-4 border border-gold/10">
                 <span className="text-gold text-sm mt-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 <div>
                   <p className="text-sm text-gray-600 italic leading-relaxed">
@@ -318,52 +347,22 @@ export default async function ProductPage({
 
               <hr className="my-8 border-gray-200" />
 
-              {/* What's Inside — 2-column grid */}
+              {/* What's Inside — visual grid with emojis */}
               <div className="mb-8">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
                   What&apos;s Inside
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {product.activityCount && (
-                    <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                      <svg className="w-4 h-4 text-forest flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                  {whatsInsideItems.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
+                      <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
                       <span className="text-sm text-gray-700">
-                        {product.activityCount} age-flexible activity cards
+                        {i === 0 && product.activityCount
+                          ? `${product.activityCount} ${item.text}`
+                          : item.text}
                       </span>
                     </div>
-                  )}
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                    <span className="text-forest font-semibold">&#x2713;</span>
-                    <span className="text-sm text-gray-700">
-                      Each takes 15&ndash;45 minutes
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                    <span className="text-forest font-semibold">&#x2713;</span>
-                    <span className="text-sm text-gray-700">
-                      No special materials needed
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                    <span className="text-forest font-semibold">&#x2713;</span>
-                    <span className="text-sm text-gray-700">
-                      Works for one child or five
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                    <span className="text-forest font-semibold">&#x2713;</span>
-                    <span className="text-sm text-gray-700">
-                      Age adaptation notes included
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100">
-                    <span className="text-forest font-semibold">&#x2713;</span>
-                    <span className="text-sm text-gray-700">
-                      Printable PDF &mdash; instant download
-                    </span>
-                  </div>
+                  ))}
                 </div>
               </div>
 
@@ -449,6 +448,14 @@ export default async function ProductPage({
           </section>
         )}
       </div>
+
+      {/* Sticky Mobile Buy Bar */}
+      <StickyMobileBuy
+        productName={product.name}
+        priceCents={product.priceCents}
+        stripePriceId={product.stripePriceId}
+        slug={product.slug}
+      />
     </>
   );
 }

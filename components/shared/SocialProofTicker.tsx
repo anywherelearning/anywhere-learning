@@ -1,5 +1,3 @@
-'use client';
-
 const items = [
   '500+ families learning differently',
   '220+ real-world activities',
@@ -13,12 +11,12 @@ const items = [
 
 export default function SocialProofTicker() {
   return (
-    <div className="relative bg-forest overflow-hidden py-3">
+    <div className="relative bg-forest overflow-hidden py-3" role="marquee" aria-label="Social proof highlights">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-forest to-transparent z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-forest to-transparent z-10" />
 
-      <div className="flex animate-marquee">
+      <div className="flex animate-marquee" aria-hidden="true">
         {[...items, ...items, ...items].map((item, i) => (
           <span
             key={i}
@@ -27,6 +25,13 @@ export default function SocialProofTicker() {
             <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
             {item}
           </span>
+        ))}
+      </div>
+
+      {/* Screen-reader accessible version */}
+      <div className="sr-only">
+        {items.map((item, i) => (
+          <span key={i}>{item}. </span>
         ))}
       </div>
     </div>
