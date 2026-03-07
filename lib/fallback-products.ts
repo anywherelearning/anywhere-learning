@@ -162,9 +162,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "The Future-Ready Skills Map",
     slug: "future-ready-skills-map",
     description:
-      "A comprehensive 39-page parent guide to the 10 skills that matter most for your child's future — from emotional intelligence and critical thinking to AI literacy and life skills. Organised into three age bands (0–6, 6–11, 11–14+), each section includes what to develop, what mastery looks like, hands-on activities, a sample week, and a one-page skills-at-a-glance overview. This isn't a curriculum — it's a map. It shows you what to prioritise so you can stop second-guessing and start trusting the learning that's already happening.",
+      "A comprehensive 42-page parent guide to the 10 skills that matter most for your child's future — from emotional intelligence and critical thinking to AI literacy and life skills. Organised into three age bands (0–6, 6–11, 11–14+), each section includes what to develop, what mastery looks like, hands-on activities, a sample week, and a one-page skills-at-a-glance overview. This isn't a curriculum — it's a map. It shows you what to prioritise so you can stop second-guessing and start trusting the learning that's already happening.",
     shortDescription:
-      "A 39-page parent guide to the 10 skills that matter most — with activities, milestones, and sample weeks for ages 0–14+.",
+      "A 42-page parent guide to the 10 skills that matter most — with activities, milestones, and sample weeks for ages 0–14+.",
     priceCents: 999,
     compareAtPriceCents: null,
     lemonVariantId: "",
