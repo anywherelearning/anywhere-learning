@@ -8,6 +8,8 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "My Downloads",
+  description: "Access and download your purchased activity packs. Print and start learning anywhere.",
+  robots: { index: false, follow: false },
 };
 
 export default async function DownloadsPage() {

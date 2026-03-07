@@ -12,6 +12,24 @@ export const metadata: Metadata = {
   title: '10 Life Skills Your Kids Can Learn This Week \u2014 Free Guide',
   description:
     'A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
+  alternates: {
+    canonical: 'https://anywherelearning.co/free-guide',
+  },
+  openGraph: {
+    title: '10 Life Skills Your Kids Can Learn This Week — Free Guide',
+    description:
+      'A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
+    url: 'https://anywherelearning.co/free-guide',
+    type: 'website',
+    images: [
+      {
+        url: 'https://anywherelearning.co/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: '10 Life Skills Free Guide — Anywhere Learning',
+      },
+    ],
+  },
 };
 
 export default function FreeGuidePage() {
