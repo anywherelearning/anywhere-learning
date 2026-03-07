@@ -106,6 +106,15 @@ export async function POST(req: NextRequest) {
     }
 
     if (purchasedProducts.length > 0) {
+      // Check if this is a first-time buyer (no existing orders)
+      const existingOrders = await db
+        .select({ id: orders.id })
+        .from(orders)
+        .where(eq(orders.userId, user[0].id))
+        .limit(1);
+      const isFirstPurchase = existingOrders.length === 0;
+      const hasBundles = purchasedProducts.some((p) => p.isBundle);
+
       // Distribute total across products proportionally
       const totalProductCents = purchasedProducts.reduce((sum, p) => sum + p.priceCents, 0);
 
@@ -156,13 +165,15 @@ export async function POST(req: NextRequest) {
         console.error('Failed to send purchase email:', error);
       }
 
-      // Tag in ConvertKit for each product (non-critical)
-      for (const product of purchasedProducts) {
-        try {
-          await tagBuyerInConvertKit(customerEmail, product.slug);
-        } catch (error) {
-          console.error('Failed to tag buyer in ConvertKit:', error);
-        }
+      // Tag in ConvertKit with all product slugs + purchase-type tags (non-critical)
+      try {
+        await tagBuyerInConvertKit(
+          customerEmail,
+          purchasedProducts.map((p) => p.slug),
+          { isFirstPurchase, hasBundles },
+        );
+      } catch (error) {
+        console.error('Failed to tag buyer in ConvertKit:', error);
       }
     }
   }

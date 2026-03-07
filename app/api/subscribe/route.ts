@@ -15,6 +15,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Subscribe + apply 'lead' tag (triggers welcome sequence in Kit)
     await subscribeToConvertKit(email);
 
     return NextResponse.json({ success: true });
