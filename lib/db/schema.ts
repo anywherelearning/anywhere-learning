@@ -18,6 +18,7 @@ export const products = pgTable('products', {
   stripePriceId: text('stripe_price_id').notNull(),
   blobUrl: text('blob_url').notNull(),
   imageUrl: text('image_url'),
+  previewBlobUrl: text('preview_blob_url'),
   category: text('category').notNull(),
   isBundle: boolean('is_bundle').default(false).notNull(),
   bundleProductIds: text('bundle_product_ids'),

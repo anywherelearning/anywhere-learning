@@ -9,12 +9,11 @@ interface DownloadCardProps {
 }
 
 const coverClasses: Record<string, string> = {
-  seasonal: 'cover-seasonal',
+  'ai-literacy': 'cover-ai-literacy',
   creativity: 'cover-creativity',
+  'life-skills': 'cover-life-skills',
   nature: 'cover-nature',
   'real-world': 'cover-real-world',
-  'life-skills': 'cover-life-skills',
-  'ai-literacy': 'cover-ai-literacy',
   bundle: 'cover-bundle',
 };
 

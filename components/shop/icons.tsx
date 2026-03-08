@@ -151,12 +151,11 @@ export function ShieldCheckIcon({ className = 'w-5 h-5' }: IconProps) {
 // ─── Lookup Maps ───
 
 const categoryIconMap: Record<string, React.FC<IconProps>> = {
-  seasonal: SunIcon,
-  nature: LeafIcon,
-  creativity: PaletteIcon,
-  'real-world': LightbulbIcon,
-  'life-skills': CompassIcon,
   'ai-literacy': CpuIcon,
+  creativity: PaletteIcon,
+  'life-skills': CompassIcon,
+  nature: LeafIcon,
+  'real-world': LightbulbIcon,
   bundle: LayersIcon,
 };
 

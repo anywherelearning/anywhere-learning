@@ -1,10 +1,13 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getProductBySlug, getActiveProducts } from "@/lib/db/queries";
 import { getFallbackProductBySlug, getFallbackProducts } from "@/lib/fallback-products";
 import AddToCartButton from "@/components/shop/AddToCartButton";
+import PreviewButton from "@/components/shop/PreviewButton";
 import PriceDisplay from "@/components/shop/PriceDisplay";
+import { hasPreview } from "@/lib/preview-map";
 import TestimonialBlock from "@/components/shared/TestimonialBlock";
 import FAQSection from "@/components/shared/FAQSection";
 import ProductGrid from "@/components/shop/ProductGrid";
@@ -86,22 +89,20 @@ const productFAQ = [
 ];
 
 const categoryLabels: Record<string, string> = {
-  seasonal: "Seasonal Pack",
+  "ai-literacy": "AI & Digital",
   creativity: "Creativity Series",
+  "life-skills": "Life Skills",
   nature: "Nature Learning",
   "real-world": "Real-World Skills",
-  "life-skills": "Life Skills",
-  "ai-literacy": "AI & Digital",
   bundle: "Bundle",
 };
 
 const coverClasses: Record<string, string> = {
-  seasonal: "cover-seasonal",
+  "ai-literacy": "cover-ai-literacy",
   creativity: "cover-creativity",
+  "life-skills": "cover-life-skills",
   nature: "cover-nature",
   "real-world": "cover-real-world",
-  "life-skills": "cover-life-skills",
-  "ai-literacy": "cover-ai-literacy",
   bundle: "cover-bundle",
 };
 
@@ -235,54 +236,82 @@ export default async function ProductPage({
           <div className="grid gap-8 lg:grid-cols-[55fr_45fr] lg:gap-12">
             {/* Left: Product Visual (sticky on desktop) */}
             <div className="lg:sticky lg:top-24 lg:self-start">
-              <div
-                className={`relative aspect-[5/4] md:aspect-[4/3] ${
-                  coverClasses[product.category] || "cover-nature"
-                } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
-              >
-                {/* Decorative dot pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.06]" aria-hidden="true">
-                  <svg className="w-full h-full" viewBox="0 0 200 200">
-                    <pattern id="cover-dots" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <circle cx="10" cy="10" r="1.5" fill="white" />
-                    </pattern>
-                    <rect width="200" height="200" fill="url(#cover-dots)" />
-                  </svg>
-                </div>
+              {product.imageUrl ? (
+                /* Real cover image */
+                <div className="relative aspect-[5/4] md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                    className="object-cover"
+                    priority
+                  />
 
-                {/* Category icon watermark */}
-                <div
-                  className="absolute top-6 right-6 opacity-15"
-                  aria-hidden="true"
-                >
-                  <CategoryIcon category={product.category} className="w-20 h-20 text-white" />
-                </div>
+                  {/* Bundle badge */}
+                  {product.isBundle && (
+                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow z-10">
+                      BEST VALUE
+                    </div>
+                  )}
 
-                {/* Product name */}
-                <p className="relative font-display text-3xl md:text-4xl lg:text-5xl text-center leading-snug text-white drop-shadow-sm max-w-[85%]">
-                  {product.name}
-                </p>
-
-                {/* Activity count */}
-                {product.activityCount && (
-                  <p className="relative mt-4 text-lg text-white/80 font-medium bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full">
-                    {product.activityCount} activities inside
-                  </p>
-                )}
-
-                {/* Category pill */}
-                <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2">
-                  <CategoryIcon category={product.category} className="w-4 h-4 text-white" />
-                  {categoryLabels[product.category] || product.category}
-                </div>
-
-                {/* Bundle badge */}
-                {product.isBundle && (
-                  <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow">
-                    BEST VALUE
+                  {/* Category pill */}
+                  <div className="absolute bottom-5 left-5 bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2 z-10">
+                    <CategoryIcon category={product.category} className="w-4 h-4" />
+                    {categoryLabels[product.category] || product.category}
                   </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                /* Category gradient cover */
+                <div
+                  className={`relative aspect-[5/4] md:aspect-[4/3] ${
+                    coverClasses[product.category] || "cover-nature"
+                  } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
+                >
+                  {/* Decorative dot pattern overlay */}
+                  <div className="absolute inset-0 opacity-[0.06]" aria-hidden="true">
+                    <svg className="w-full h-full" viewBox="0 0 200 200">
+                      <pattern id="cover-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="1.5" fill="white" />
+                      </pattern>
+                      <rect width="200" height="200" fill="url(#cover-dots)" />
+                    </svg>
+                  </div>
+
+                  {/* Category icon watermark */}
+                  <div
+                    className="absolute top-6 right-6 opacity-15"
+                    aria-hidden="true"
+                  >
+                    <CategoryIcon category={product.category} className="w-20 h-20 text-white" />
+                  </div>
+
+                  {/* Product name */}
+                  <p className="relative font-display text-3xl md:text-4xl lg:text-5xl text-center leading-snug text-white drop-shadow-sm max-w-[85%]">
+                    {product.name}
+                  </p>
+
+                  {/* Activity count */}
+                  {product.activityCount && (
+                    <p className="relative mt-4 text-lg text-white/80 font-medium bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full">
+                      {product.activityCount} activities inside
+                    </p>
+                  )}
+
+                  {/* Category pill */}
+                  <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2">
+                    <CategoryIcon category={product.category} className="w-4 h-4 text-white" />
+                    {categoryLabels[product.category] || product.category}
+                  </div>
+
+                  {/* Bundle badge */}
+                  {product.isBundle && (
+                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow">
+                      BEST VALUE
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Right: Copy + Purchase */}
@@ -333,6 +362,13 @@ export default async function ProductPage({
                   isBundle={product.isBundle ?? false}
                 />
               </div>
+
+              {/* Preview Button */}
+              {hasPreview(product.slug) && (
+                <div className="mt-3">
+                  <PreviewButton slug={product.slug} productName={product.name} />
+                </div>
+              )}
 
               {/* Trust badges */}
               <div className="mt-5 grid grid-cols-3 gap-3">

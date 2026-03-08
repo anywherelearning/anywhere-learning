@@ -61,7 +61,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
       className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
     >
       {products.map((product) => (
-        <div key={product.slug} data-animate className="opacity-0">
+        <div key={product.slug} data-animate className="opacity-0 h-full">
           <ProductCard {...product} />
         </div>
       ))}

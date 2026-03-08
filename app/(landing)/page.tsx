@@ -7,6 +7,7 @@ import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import AnimatedCounter from '@/components/shared/AnimatedCounter';
+import BundleCarousel from '@/components/shop/BundleCarousel';
 import PeekInsidePack from '@/components/shared/PeekInsidePack';
 import EmailForm from '@/components/EmailForm';
 
@@ -24,10 +25,10 @@ const featuredProducts = [
     name: 'Master Bundle (Everything)',
     slug: 'master-bundle',
     shortDescription:
-      'Every activity pack we make — 220+ activities in one download.',
+      'Every activity pack we make — all categories, all ages, one download.',
     priceCents: 8999,
-    compareAtPriceCents: 19883,
-    imageUrl: null,
+    compareAtPriceCents: 25954,
+    imageUrl: '/products/mega-bundle-preview.jpg',
     category: 'bundle',
     isBundle: true,
     activityCount: 220,
@@ -39,37 +40,76 @@ const featuredProducts = [
     shortDescription:
       'All 4 seasonal packs — 80 outdoor activities for every time of year.',
     priceCents: 4999,
-    compareAtPriceCents: 5996,
-    imageUrl: null,
+    compareAtPriceCents: 2995,
+    imageUrl: '/products/four-seasons-bundle.jpg',
     category: 'bundle',
     isBundle: true,
     activityCount: 80,
     ageRange: 'Ages 4–14',
   },
   {
-    name: 'Nature Journal & Walk Cards',
-    slug: 'nature-journal-walks',
+    name: 'Creativity Mega Bundle',
+    slug: 'creativity-mega-bundle',
     shortDescription:
-      '25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience.',
-    priceCents: 999,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: 'nature',
-    isBundle: false,
-    activityCount: 25,
+      'All 10 Creativity Anywhere projects — design, build, and create without limits.',
+    priceCents: 2999,
+    compareAtPriceCents: 4990,
+    imageUrl: '/products/mega-bundle-creativity.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Real-World Relevance Mega Bundle',
+    slug: 'real-world-mega-bundle',
+    shortDescription:
+      'All 10 Real-World Relevance challenges — life skills, financial literacy, and project-based learning.',
+    priceCents: 2999,
+    compareAtPriceCents: 4990,
+    imageUrl: '/products/mega-bundle-real-world.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 9–14',
+  },
+  {
+    name: 'AI & Digital Literacy Bundle',
+    slug: 'ai-digital-bundle',
+    shortDescription:
+      'All 10 AI & Digital Literacy activities — responsible tech, critical thinking, and digital citizenship.',
+    priceCents: 2999,
+    compareAtPriceCents: 4990,
+    imageUrl: '/products/mega-bundle-ai-digital.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 9–14',
+  },
+  {
+    name: 'Nature Art Bundle',
+    slug: 'nature-art-bundle',
+    shortDescription:
+      'Land Art + Nature Crafts + Nature Journal — turn the outdoors into an art studio.',
+    priceCents: 2999,
+    compareAtPriceCents: 1497,
+    imageUrl: '/products/nature-art-bundle.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: null,
     ageRange: 'Ages 4–14',
   },
   {
-    name: 'Spring Outdoor Learning Pack',
-    slug: 'spring-outdoor-pack',
+    name: 'Outdoor Toolkit Bundle',
+    slug: 'outdoor-toolkit-bundle',
     shortDescription:
-      '20 outdoor activities that use spring\u2019s energy to build real-world skills.',
-    priceCents: 1499,
-    compareAtPriceCents: null,
-    imageUrl: null,
-    category: 'seasonal',
-    isBundle: false,
-    activityCount: 20,
+      'Nature Walk Cards + Missions + STEM Challenges + Choice Boards — your complete outdoor toolkit.',
+    priceCents: 2999,
+    compareAtPriceCents: 1996,
+    imageUrl: '/products/outdoor-toolkit-bundle.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: null,
     ageRange: 'Ages 4–14',
   },
 ];
@@ -439,13 +479,7 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
-              {featuredProducts.map((product, i) => (
-                <ScrollReveal key={product.slug} delay={i * 100}>
-                  <ProductCard {...product} />
-                </ScrollReveal>
-              ))}
-            </div>
+            <BundleCarousel products={featuredProducts} />
 
             <ScrollReveal delay={400}>
               <div className="mt-14 text-center">

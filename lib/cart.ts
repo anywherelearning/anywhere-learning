@@ -15,18 +15,49 @@ export const CART_STORAGE_KEY = 'al_cart';
 /** Bundle slug → individual product slugs it contains. */
 export const BUNDLE_CONTENTS: Record<string, string[]> = {
   'master-bundle': [
-    'spring-outdoor-pack', 'summer-outdoor-pack', 'autumn-outdoor-pack', 'winter-outdoor-pack',
-    'nature-journal-walks', 'backyard-science-experiments',
-    'creative-thinking-pack', 'storytelling-writing-pack',
-    'kitchen-maths-cooking', 'map-reading-navigation', 'money-budgeting-pack',
-    'critical-thinking-pack', 'problem-solving-pack',
-    'ai-literacy-starter',
+    // Seasonal
+    'spring-outdoor-pack', 'summer-outdoor-pack', 'fall-outdoor-pack', 'winter-outdoor-pack',
+    // Nature
+    'nature-journal-walks', 'nature-walk-task-cards', 'nature-choice-boards',
+    'outdoor-learning-missions', 'outdoor-stem-challenges', 'land-art-challenges', 'nature-crafts',
+    // Creativity
+    'creative-thinking-pack', 'board-game-studio', 'rube-goldberg-machine', 'survival-base',
+    'imaginary-world', 'creature-habitat', 'theme-park', 'mini-movie',
+    'invent-a-sport', 'kinetic-sculpture', 'build-a-museum',
+    // Real-World
+    'kitchen-maths-cooking', 'budget-challenge', 'community-impact', 'kitchen-math-challenge',
+    'media-info-check', 'micro-business', 'problem-solver', 'smart-shopper',
+    'time-energy-planner', 'travel-day', 'write-like-a-pro',
+    // AI & Digital
+    'ai-basics', 'algorithm-awareness', 'bias-fairness-lab', 'build-ai-helper',
+    'create-with-ai', 'deepfake-spotter', 'hallucination-detective',
+    'healthy-tech-boundaries', 'privacy-footprint', 'prompt-like-a-coach',
+    // Life Skills
+    'future-ready-skills-map', 'my-small-business-project', 'time-capsule',
   ],
   'seasonal-bundle': [
-    'spring-outdoor-pack', 'summer-outdoor-pack', 'autumn-outdoor-pack', 'winter-outdoor-pack',
+    'spring-outdoor-pack', 'summer-outdoor-pack', 'fall-outdoor-pack', 'winter-outdoor-pack',
   ],
-  'real-world-bundle': [
-    'kitchen-maths-cooking', 'map-reading-navigation', 'money-budgeting-pack',
+  'creativity-mega-bundle': [
+    'creative-thinking-pack', 'board-game-studio', 'rube-goldberg-machine', 'survival-base',
+    'imaginary-world', 'creature-habitat', 'theme-park', 'mini-movie',
+    'invent-a-sport', 'kinetic-sculpture', 'build-a-museum',
+  ],
+  'real-world-mega-bundle': [
+    'kitchen-maths-cooking', 'budget-challenge', 'community-impact', 'kitchen-math-challenge',
+    'media-info-check', 'micro-business', 'problem-solver', 'smart-shopper',
+    'time-energy-planner', 'travel-day', 'write-like-a-pro',
+  ],
+  'ai-digital-bundle': [
+    'ai-basics', 'algorithm-awareness', 'bias-fairness-lab', 'build-ai-helper',
+    'create-with-ai', 'deepfake-spotter', 'hallucination-detective',
+    'healthy-tech-boundaries', 'privacy-footprint', 'prompt-like-a-coach',
+  ],
+  'nature-art-bundle': [
+    'land-art-challenges', 'nature-crafts', 'nature-journal-walks',
+  ],
+  'outdoor-toolkit-bundle': [
+    'nature-walk-task-cards', 'outdoor-learning-missions', 'outdoor-stem-challenges', 'nature-choice-boards',
   ],
 };
 

@@ -28,7 +28,6 @@
   "homepage": "https://github.com/ameliedrouin-coder/anywhere-learning#readme",
   "dependencies": {
     "@clerk/nextjs": "^6.38.3",
-    "stripe": "^17.7.0",
     "@neondatabase/serverless": "^1.0.2",
     "@react-email/components": "^1.0.8",
     "@vercel/blob": "^2.3.0",
@@ -39,7 +38,9 @@
     "next": "^16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-pdf": "^10.4.1",
     "resend": "^6.9.2",
+    "stripe": "^17.7.0",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {

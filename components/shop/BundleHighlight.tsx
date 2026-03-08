@@ -1,14 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
-import {
-  SparklesIcon,
-  SunIcon,
-  LeafIcon,
-  PaletteIcon,
-  LightbulbIcon,
-  CompassIcon,
-  CpuIcon,
-} from './icons';
 
 interface BundleHighlightProps {
   name: string;
@@ -16,6 +8,8 @@ interface BundleHighlightProps {
   priceCents: number;
   compareAtPriceCents: number | null;
   activityCount: number | null;
+  imageUrl?: string | null;
+  shortDescription?: string | null;
 }
 
 export default function BundleHighlight({
@@ -24,6 +18,8 @@ export default function BundleHighlight({
   priceCents,
   compareAtPriceCents,
   activityCount,
+  imageUrl,
+  shortDescription,
 }: BundleHighlightProps) {
   const savings = compareAtPriceCents ? compareAtPriceCents - priceCents : 0;
 
@@ -33,31 +29,43 @@ export default function BundleHighlight({
       <div className="absolute inset-0 bg-gradient-to-br from-gold-light/[0.08] via-transparent to-forest/[0.03] pointer-events-none" />
 
       <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-        {/* Left: Stack of product mockups with category colors */}
+        {/* Left: Bundle image or fallback mockup */}
         <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
-          {/* Back cards with category color hints */}
-          <div className="absolute inset-5 bg-[#fce8ed] rounded-xl shadow-sm border border-[#c47a8f]/15 transform -rotate-[6deg]" />
-          <div className="absolute inset-4 bg-[#eef5ee] rounded-xl shadow-sm border border-forest/10 transform -rotate-[3deg]" />
-          <div className="absolute inset-3 bg-[#fdf4ec] rounded-xl shadow border border-gold/15 transform rotate-[1deg]" />
-          {/* Front card */}
-          <div className="absolute inset-1 bg-white rounded-xl shadow-lg border border-forest/10 p-4 transform rotate-[3deg] flex flex-col items-center justify-center group-hover:rotate-0 transition-transform duration-500">
-            <div className="w-8 h-8 rounded-full bg-forest/15 mb-3 flex items-center justify-center">
-              <SparklesIcon className="w-4 h-4 text-forest" />
+          {imageUrl ? (
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+              <Image
+                src={imageUrl}
+                alt={name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 192px, 256px"
+              />
+              {/* Best Value floating badge */}
+              <div className="absolute -top-0 -right-0 bg-gold text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-2xl shadow-lg z-10">
+                BUNDLE
+              </div>
             </div>
-            <p className="text-forest font-semibold text-xs text-center leading-snug mb-2">
-              {name}
-            </p>
-            <div className="space-y-1.5 w-full px-3">
-              <div className="h-1 bg-gray-200/80 rounded-full w-full" />
-              <div className="h-1 bg-gray-200/80 rounded-full w-4/5" />
-              <div className="h-1 bg-gray-200/80 rounded-full w-3/5" />
-            </div>
-          </div>
-
-          {/* Best Value floating badge */}
-          <div className="absolute -top-2 -right-2 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse-glow z-10">
-            BEST VALUE
-          </div>
+          ) : (
+            <>
+              {/* Fallback: stacked card mockup for Master Bundle */}
+              <div className="absolute inset-5 bg-[#fce8ed] rounded-xl shadow-sm border border-[#c47a8f]/15 transform -rotate-[6deg]" />
+              <div className="absolute inset-4 bg-[#eef5ee] rounded-xl shadow-sm border border-forest/10 transform -rotate-[3deg]" />
+              <div className="absolute inset-3 bg-[#fdf4ec] rounded-xl shadow border border-gold/15 transform rotate-[1deg]" />
+              <div className="absolute inset-1 bg-white rounded-xl shadow-lg border border-forest/10 p-4 transform rotate-[3deg] flex flex-col items-center justify-center">
+                <p className="text-forest font-semibold text-xs text-center leading-snug mb-2">
+                  {name}
+                </p>
+                <div className="space-y-1.5 w-full px-3">
+                  <div className="h-1 bg-gray-200/80 rounded-full w-full" />
+                  <div className="h-1 bg-gray-200/80 rounded-full w-4/5" />
+                  <div className="h-1 bg-gray-200/80 rounded-full w-3/5" />
+                </div>
+              </div>
+              <div className="absolute -top-2 -right-2 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse-glow z-10">
+                BEST VALUE
+              </div>
+            </>
+          )}
         </div>
 
         {/* Right: Copy + CTA */}
@@ -66,32 +74,12 @@ export default function BundleHighlight({
             Save {savings > 0 ? Math.round((savings / (compareAtPriceCents || 1)) * 100) : 50}%
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-forest mb-3">
-            The Master Bundle
+            {name}
           </h2>
-          <p className="text-gray-500 mb-2 text-lg leading-relaxed">
-            Every single activity pack we make.{' '}
-            {activityCount ? `${activityCount}+` : '220+'} activities across all categories.
+          <p className="text-gray-500 mb-6 text-lg leading-relaxed">
+            {shortDescription ||
+              `Every single activity pack we make. ${activityCount ? `${activityCount}+` : '220+'} activities across all categories.`}
           </p>
-
-          {/* Category tags */}
-          <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
-            {[
-              { Icon: SunIcon, label: 'Seasonal' },
-              { Icon: LeafIcon, label: 'Nature' },
-              { Icon: PaletteIcon, label: 'Creativity' },
-              { Icon: LightbulbIcon, label: 'Real-World' },
-              { Icon: CompassIcon, label: 'Life Skills' },
-              { Icon: CpuIcon, label: 'AI Literacy' },
-            ].map((cat) => (
-              <span
-                key={cat.label}
-                className="inline-flex items-center gap-1.5 bg-cream text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200/60"
-              >
-                <cat.Icon className="w-3.5 h-3.5" />
-                {cat.label}
-              </span>
-            ))}
-          </div>
 
           {/* Price block */}
           <div className="flex items-baseline gap-3 justify-center md:justify-start mb-6">
@@ -114,7 +102,7 @@ export default function BundleHighlight({
             href={`/shop/${slug}`}
             className="shimmer-effect inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-xl text-lg"
           >
-            Get the Master Bundle &rarr;
+            Get the {name} &rarr;
           </Link>
         </div>
       </div>
