@@ -7,9 +7,7 @@ import ProductCard from '@/components/shop/ProductCard';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
-import AnimatedCounter from '@/components/shared/AnimatedCounter';
 import BundleCarousel from '@/components/shop/BundleCarousel';
-import PeekInsidePack from '@/components/shared/PeekInsidePack';
 import EmailForm from '@/components/EmailForm';
 
 export const metadata: Metadata = {
@@ -151,12 +149,6 @@ const faqItems = [
   },
 ];
 
-const counterStats = [
-  { end: 220, suffix: '+', label: 'Activities', duration: 2200 },
-  { end: 500, suffix: '+', label: 'Families', duration: 2500 },
-  { end: 9, suffix: '', label: 'Categories', duration: 1800 },
-  { end: 48, suffix: '-hr', label: 'Guarantee', duration: 1600 },
-];
 
 const organizationLd = {
   '@context': 'https://schema.org',
@@ -273,144 +265,6 @@ export default function HomePage() {
         <SocialProofTicker />
 
         {/* ═══════════════════════════════════════════
-            PROBLEM — Pure typography, no cards
-        ═══════════════════════════════════════════ */}
-        <section className="bg-forest-section py-20 md:py-28 relative overflow-hidden">
-          <div className="absolute top-10 right-[10%] w-64 h-64 rounded-full border border-white/[0.04]" aria-hidden="true" />
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full border border-white/[0.03]" aria-hidden="true" />
-
-          <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
-            <ScrollReveal>
-              <p className="text-cream/40 text-sm font-semibold uppercase tracking-[0.2em] mb-8 md:mb-10">
-                Sound familiar?
-              </p>
-            </ScrollReveal>
-
-            {/* Pain points as bold typographic statements */}
-            <div className="space-y-10 md:space-y-14">
-              <ScrollReveal delay={0}>
-                <div className="group">
-                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream/90 leading-[1.15] mb-3">
-                    You&apos;ve saved 200 Pinterest boards
-                  </h3>
-                  <p className="text-cream/40 text-lg md:text-xl max-w-lg">
-                    and still don&apos;t know what to do Monday morning.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              {/* Divider */}
-              <div className="w-16 h-px bg-cream/10" aria-hidden="true" />
-
-              <ScrollReveal delay={100}>
-                <div className="md:pl-16 lg:pl-24">
-                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream/90 leading-[1.15] mb-3">
-                    The worksheets get done
-                  </h3>
-                  <p className="text-cream/40 text-lg md:text-xl max-w-lg">
-                    but nobody&apos;s excited. Your kid sighs when you say &ldquo;time for school.&rdquo;
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <div className="w-16 h-px bg-cream/10 md:ml-16 lg:ml-24" aria-hidden="true" />
-
-              <ScrollReveal delay={200}>
-                <div className="md:pl-32 lg:pl-48">
-                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream/90 leading-[1.15] mb-3">
-                    Sunday night lesson prep
-                  </h3>
-                  <p className="text-cream/40 text-lg md:text-xl max-w-lg">
-                    became a second job. You chose homeschooling for freedom &mdash; not this.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Transition */}
-            <ScrollReveal delay={300}>
-              <div className="mt-16 md:mt-20 pt-10 border-t border-cream/10">
-                <p className="font-display text-2xl sm:text-3xl md:text-4xl text-gold leading-snug max-w-xl">
-                  What if the learning was already happening &mdash; and you just needed a way to see it?
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            PERMISSION SHIFT — The emotional turn
-        ═══════════════════════════════════════════ */}
-        <section id="about" className="bg-cream py-20 md:py-28 overflow-hidden">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Left: Big typography statement */}
-              <ScrollReveal direction="left">
-                <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-forest leading-[1.1] text-balance">
-                  The learning is already happening.
-                  <span className="block text-gold mt-2">You just can&apos;t see it yet.</span>
-                </h2>
-              </ScrollReveal>
-
-              {/* Right: Body text */}
-              <ScrollReveal direction="right" delay={200}>
-                <div className="space-y-6">
-                  <p className="text-lg md:text-xl leading-relaxed text-gray-500">
-                    Cooking dinner? That&apos;s maths. A puddle walk? Science.
-                    Planning a road trip? Geography, budgeting, decision-making.
-                    The world is the curriculum &mdash; you just need activities
-                    that make it click.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed text-gray-600 font-medium">
-                    You don&apos;t need another subscription box or a 36-week plan.
-                    You need something that works with{' '}
-                    <span className="font-display text-2xl md:text-3xl text-forest">
-                      your life, not against it
-                    </span>.
-                  </p>
-                  {/* Methodology pills */}
-                  <div className="flex flex-wrap gap-4 pt-4">
-                    {['Charlotte Mason', 'Montessori', 'Worldschool', 'Unschool', 'Eclectic'].map((style) => (
-                      <span key={style} className="inline-flex items-center gap-2 text-sm font-medium text-forest/70 bg-forest/[0.06] px-4 py-2 rounded-full">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-                        {style}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            PEEK INSIDE — Show, don't tell
-        ═══════════════════════════════════════════ */}
-        <section className="bg-warm-gradient py-20 md:py-28">
-          <ScrollReveal>
-            <div className="text-center mb-14 px-5">
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                Peek Inside a Pack
-              </p>
-              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                See what your kids will actually be doing.
-              </h2>
-              <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                Not worksheets. Not lectures. Real activities they&apos;ll beg to do again.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <PeekInsidePack />
-          </ScrollReveal>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            ANIMATED STATS — Dopamine numbers
-        ═══════════════════════════════════════════ */}
-        <AnimatedCounter items={counterStats} />
-
-        {/* ═══════════════════════════════════════════
             PRODUCT SHOWCASE
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
@@ -446,77 +300,9 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            TESTIMONIALS — Editorial magazine layout
-        ═══════════════════════════════════════════ */}
-        <section className="bg-warm-gradient py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-5 sm:px-8">
-            <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] text-center mb-4">
-                Don&apos;t take our word for it
-              </p>
-              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-16 text-balance">
-                Hear It From Families
-                <br className="hidden sm:block" /> Who Made the Leap
-              </h2>
-            </ScrollReveal>
-
-            {/* Featured large testimonial */}
-            <ScrollReveal>
-              <blockquote className="relative bg-forest-section rounded-3xl p-10 md:p-14 mb-8 shadow-2xl">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-cream/15 mb-6">
-                  <path d="M11 7.5C11 9.433 9.433 11 7.5 11C6.571 11 4 11 4 14.5C4 18 6.5 19 7.5 19C9.433 19 11 17.433 11 15.5V7.5Z" fill="currentColor"/>
-                  <path d="M20 7.5C20 9.433 18.433 11 16.5 11C15.571 11 13 11 13 14.5C13 18 15.5 19 16.5 19C18.433 19 20 17.433 20 15.5V7.5Z" fill="currentColor"/>
-                </svg>
-                <p className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-8">
-                  {testimonials[2].quote}
-                </p>
-                <footer className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gold/30 flex items-center justify-center text-cream font-semibold text-sm">
-                    {testimonials[2].name.charAt(0)}
-                  </div>
-                  <div>
-                    <span className="text-cream font-medium block text-sm">{testimonials[2].name}</span>
-                    <span className="text-cream/50 text-sm">{testimonials[2].location}</span>
-                  </div>
-                </footer>
-              </blockquote>
-            </ScrollReveal>
-
-            {/* Two smaller testimonials */}
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.slice(0, 2).map((t, i) => (
-                <ScrollReveal key={i} delay={i * 150}>
-                  <blockquote className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="flex gap-1 mb-5">
-                      {[...Array(5)].map((_, j) => (
-                        <svg key={j} width="18" height="18" viewBox="0 0 24 24" fill="#d4a373">
-                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <footer className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-semibold text-sm">
-                        {t.name.charAt(0)}
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-800 text-sm block">{t.name}</span>
-                        <span className="text-gray-400 text-sm">{t.location}</span>
-                      </div>
-                    </footer>
-                  </blockquote>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
             HOW IT WORKS — Dead simple
         ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-28">
+        <section className="bg-warm-gradient py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <ScrollReveal>
               <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
@@ -590,47 +376,70 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            FAQ
+            TESTIMONIALS — Editorial magazine layout
         ═══════════════════════════════════════════ */}
-        <section className="bg-warm-gradient py-20 md:py-28">
-          <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <section className="bg-cream py-20 md:py-28">
+          <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <ScrollReveal>
-              <h2 className="text-center font-display text-3xl md:text-5xl text-forest mb-12 text-balance">
-                Questions? We&apos;ve Got Answers.
+              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] text-center mb-4">
+                Don&apos;t take our word for it
+              </p>
+              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-16 text-balance">
+                Hear It From Families
+                <br className="hidden sm:block" /> Who Made the Leap
               </h2>
             </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <FAQSection items={faqItems} />
-            </ScrollReveal>
-          </div>
-        </section>
 
-        {/* ═══════════════════════════════════════════
-            EMAIL CAPTURE — Lead magnet pitch
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-16 md:py-20">
-          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+            {/* Featured large testimonial */}
             <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                Free Resource
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
-                10 Life Skills Your Kids Can Learn This Week
-              </h2>
-              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                A free guide with 10 real-world life skills and activities your kids
-                can try this week — no curriculum, no prep, no screen time.
-              </p>
-              <EmailForm variant="light" />
-              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
-                <span className="flex -space-x-1.5">
-                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
-                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
-                  ))}
-                </span>
-                Join 500+ families learning differently
-              </p>
+              <blockquote className="relative bg-forest-section rounded-3xl p-10 md:p-14 mb-8 shadow-2xl">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-cream/15 mb-6">
+                  <path d="M11 7.5C11 9.433 9.433 11 7.5 11C6.571 11 4 11 4 14.5C4 18 6.5 19 7.5 19C9.433 19 11 17.433 11 15.5V7.5Z" fill="currentColor"/>
+                  <path d="M20 7.5C20 9.433 18.433 11 16.5 11C15.571 11 13 11 13 14.5C13 18 15.5 19 16.5 19C18.433 19 20 17.433 20 15.5V7.5Z" fill="currentColor"/>
+                </svg>
+                <p className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-8">
+                  {testimonials[2].quote}
+                </p>
+                <footer className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gold/30 flex items-center justify-center text-cream font-semibold text-sm">
+                    {testimonials[2].name.charAt(0)}
+                  </div>
+                  <div>
+                    <span className="text-cream font-medium block text-sm">{testimonials[2].name}</span>
+                    <span className="text-cream/50 text-sm">{testimonials[2].location}</span>
+                  </div>
+                </footer>
+              </blockquote>
             </ScrollReveal>
+
+            {/* Two smaller testimonials */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {testimonials.slice(0, 2).map((t, i) => (
+                <ScrollReveal key={i} delay={i * 150}>
+                  <blockquote className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="flex gap-1 mb-5">
+                      {[...Array(5)].map((_, j) => (
+                        <svg key={j} width="18" height="18" viewBox="0 0 24 24" fill="#d4a373">
+                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <footer className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-semibold text-sm">
+                        {t.name.charAt(0)}
+                      </div>
+                      <div>
+                        <span className="font-medium text-gray-800 text-sm block">{t.name}</span>
+                        <span className="text-gray-400 text-sm">{t.location}</span>
+                      </div>
+                    </footer>
+                  </blockquote>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -681,6 +490,51 @@ export default function HomePage() {
                 </div>
               </ScrollReveal>
             </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            FAQ
+        ═══════════════════════════════════════════ */}
+        <section className="bg-warm-gradient py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-5 sm:px-8">
+            <ScrollReveal>
+              <h2 className="text-center font-display text-3xl md:text-5xl text-forest mb-12 text-balance">
+                Questions? We&apos;ve Got Answers.
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <FAQSection items={faqItems} />
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            EMAIL CAPTURE — Lead magnet pitch
+        ═══════════════════════════════════════════ */}
+        <section className="bg-cream py-16 md:py-20">
+          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+                Free Resource
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
+                10 Life Skills Your Kids Can Learn This Week
+              </h2>
+              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
+                A free guide with 10 real-world life skills and activities your kids
+                can try this week — no curriculum, no prep, no screen time.
+              </p>
+              <EmailForm variant="light" />
+              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
+                <span className="flex -space-x-1.5">
+                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
+                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
+                  ))}
+                </span>
+                Join 500+ families learning differently
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
