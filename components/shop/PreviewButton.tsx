@@ -30,7 +30,7 @@ export default function PreviewButton({ slug, productName, compact }: PreviewBut
         className={
           compact
             ? 'inline-flex items-center gap-1 text-xs font-medium text-forest/70 hover:text-forest transition-colors'
-            : 'w-full flex items-center justify-center gap-2 py-3 px-5 border-2 border-forest/20 text-forest font-semibold rounded-full hover:border-forest/40 hover:bg-forest/5 transition-all text-sm'
+            : 'flex items-center justify-center gap-2 py-2.5 px-5 text-forest font-semibold rounded-full hover:bg-forest/5 transition-all text-sm'
         }
       >
         <svg className={compact ? 'w-3 h-3' : 'w-4 h-4'} fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

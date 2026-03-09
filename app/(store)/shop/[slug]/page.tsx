@@ -267,6 +267,13 @@ export default async function ProductPage({
                     <CategoryIcon category={product.category} className="w-4 h-4" />
                     {categoryLabels[product.category] || product.category}
                   </div>
+
+                  {/* Preview button on image */}
+                  {!product.isBundle && hasPreview(product.slug) && (
+                    <div className="absolute bottom-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-shadow">
+                      <PreviewButton slug={product.slug} productName={product.name} />
+                    </div>
+                  )}
                 </div>
               ) : (
                 /* Category gradient cover */
@@ -317,24 +324,31 @@ export default async function ProductPage({
                       BEST VALUE
                     </div>
                   )}
+
+                  {/* Preview button on image */}
+                  {!product.isBundle && hasPreview(product.slug) && (
+                    <div className="absolute bottom-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-shadow">
+                      <PreviewButton slug={product.slug} productName={product.name} />
+                    </div>
+                  )}
                 </div>
               )}
 
               {/* Buy section — under image, sticky on desktop */}
               <div className="mt-4" id="buy-button">
                 <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                  <div className="flex items-center justify-between mb-3">
-                    <PriceDisplay
-                      priceCents={product.priceCents}
-                      compareAtPriceCents={product.compareAtPriceCents}
-                      size="sm"
-                    />
-                    {product.isBundle && (
+                  {product.isBundle && (
+                    <div className="flex items-center justify-between mb-3">
+                      <PriceDisplay
+                        priceCents={product.priceCents}
+                        compareAtPriceCents={product.compareAtPriceCents}
+                        size="sm"
+                      />
                       <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
                         BEST VALUE
                       </span>
-                    )}
-                  </div>
+                    </div>
+                  )}
                   <AddToCartButton
                     stripePriceId={product.stripePriceId}
                     slug={product.slug}
@@ -343,11 +357,6 @@ export default async function ProductPage({
                     category={product.category}
                     isBundle={product.isBundle ?? false}
                   />
-                  {!product.isBundle && hasPreview(product.slug) && (
-                    <div className="mt-3">
-                      <PreviewButton slug={product.slug} productName={product.name} />
-                    </div>
-                  )}
                   <p className="text-xs text-gray-400 text-center mt-2">
                     Instant download &middot; Use on any device
                   </p>
