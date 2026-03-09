@@ -125,7 +125,7 @@ export default function SiteHeader() {
 
       {/* Mobile menu — full screen overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-16 z-40 bg-cream md:hidden">
+        <div className="fixed inset-x-0 top-16 bottom-0 z-[60] bg-[#faf9f6] md:hidden">
           <nav className="flex flex-col items-center justify-center gap-8 pt-20">
             <Link
               href="/"
