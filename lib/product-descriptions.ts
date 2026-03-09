@@ -15,8 +15,6 @@ export interface ProductDescription {
   skillTags: string[];
   /** Product format label */
   format: 'Activity Pack' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
-  /** Duration estimate shown in highlights */
-  duration: string;
 }
 
 // ─── Shared template sections ────────────────────────────────────────
@@ -123,7 +121,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
     format: 'Bundle',
-    duration: '15–45 min each',
   },
   'creativity-mega-bundle': {
     opening:
@@ -137,7 +134,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Design Thinking', 'Engineering', 'Art', 'Writing', 'Problem-Solving'],
     format: 'Bundle',
-    duration: 'Multi-session projects',
   },
   'real-world-mega-bundle': {
     opening:
@@ -151,7 +147,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Financial Literacy', 'Critical Thinking', 'Writing', 'Planning', 'Problem-Solving'],
     format: 'Bundle',
-    duration: '30–60 min each',
   },
   'ai-digital-bundle': {
     opening:
@@ -165,7 +160,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['AI Literacy', 'Critical Thinking', 'Digital Citizenship', 'Ethics', 'Privacy'],
     format: 'Bundle',
-    duration: '30–60 min each',
   },
   'nature-art-bundle': {
     opening:
@@ -179,7 +173,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Art', 'Nature', 'Observation', 'Creativity', 'Journaling'],
     format: 'Bundle',
-    duration: '20–45 min each',
   },
   'outdoor-toolkit-bundle': {
     opening:
@@ -193,7 +186,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['STEM', 'Nature', 'Observation', 'Engineering', 'Self-Direction'],
     format: 'Bundle',
-    duration: '15–45 min each',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -211,7 +203,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
     format: 'Activity Pack',
-    duration: '15–45 min each',
   },
   'summer-outdoor-pack': {
     opening:
@@ -225,7 +216,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Water Science', 'Nature', 'PE'],
     format: 'Activity Pack',
-    duration: '15–45 min each',
   },
   'fall-outdoor-pack': {
     opening:
@@ -239,7 +229,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
     format: 'Activity Pack',
-    duration: '15–45 min each',
   },
   'winter-outdoor-pack': {
     opening:
@@ -253,7 +242,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Astronomy', 'Nature', 'PE'],
     format: 'Activity Pack',
-    duration: '15–45 min each',
   },
   'nature-journal-walks': {
     opening:
@@ -267,7 +255,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Observation', 'Journaling', 'Science', 'Art', 'Writing'],
     format: 'Card Pack',
-    duration: '20–40 min each',
   },
   'nature-walk-task-cards': {
     opening:
@@ -281,7 +268,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Observation', 'Nature', 'Sensory Learning', 'Science'],
     format: 'Card Pack',
-    duration: '15–30 min each',
   },
   'nature-choice-boards': {
     opening:
@@ -295,7 +281,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Self-Direction', 'Nature', 'Science', 'Art', 'Decision-Making'],
     format: 'Card Pack',
-    duration: '15–45 min each',
   },
   'outdoor-learning-missions': {
     opening:
@@ -309,7 +294,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Problem-Solving', 'Nature', 'Engineering', 'Observation', 'Science'],
     format: 'Card Pack',
-    duration: '20–45 min each',
   },
   'outdoor-stem-challenges': {
     opening:
@@ -323,7 +307,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
     format: 'Card Pack',
-    duration: '20–45 min each',
   },
   'land-art-challenges': {
     opening:
@@ -337,7 +320,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Art', 'Nature', 'Patterns', 'Creativity', 'Observation'],
     format: 'Card Pack',
-    duration: '20–45 min each',
   },
   'nature-crafts': {
     opening:
@@ -351,7 +333,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Art', 'Nature', 'Crafts', 'Observation', 'Fine Motor Skills'],
     format: 'Activity Pack',
-    duration: '30–60 min each',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -369,7 +350,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Design Thinking', 'Maths', 'Writing', 'Strategy', 'Art'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'rube-goldberg-machine': {
     opening:
@@ -383,7 +363,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Engineering', 'Physics', 'Problem-Solving', 'Design', 'Cause & Effect'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'survival-base': {
     opening:
@@ -397,7 +376,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Geography', 'Engineering', 'Science', 'Design', 'Presentation'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'imaginary-world': {
     opening:
@@ -411,7 +389,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Writing', 'Art', 'Geography', 'Worldbuilding', 'Imagination'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'creature-habitat': {
     opening:
@@ -425,7 +402,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Biology', 'Art', 'Engineering', 'Scientific Thinking', 'Design'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'theme-park': {
     opening:
@@ -439,7 +415,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Maths', 'Design', 'Engineering', 'Business', 'Art'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'mini-movie': {
     opening:
@@ -453,7 +428,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Storytelling', 'Writing', 'Technology', 'Art', 'Collaboration'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'invent-a-sport': {
     opening:
@@ -467,7 +441,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Design Thinking', 'Writing', 'Physical Literacy', 'Problem-Solving', 'Creativity'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'kinetic-sculpture': {
     opening:
@@ -481,7 +454,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Physics', 'Art', 'Engineering', 'Design', 'Expression'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'build-a-museum': {
     opening:
@@ -495,7 +467,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Research', 'Writing', 'Design', 'Curation', 'Presentation'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -513,7 +484,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Financial Literacy', 'Maths', 'Planning', 'Decision-Making'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
   'kitchen-math-challenge': {
     opening:
@@ -527,7 +497,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Maths', 'Financial Literacy', 'Measurement', 'Planning'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
   'smart-shopper': {
     opening:
@@ -541,7 +510,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Financial Literacy', 'Critical Thinking', 'Maths', 'Consumer Skills'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -559,7 +527,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Critical Thinking', 'Media Literacy', 'Research', 'Analysis'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
   'micro-business': {
     opening:
@@ -573,7 +540,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Entrepreneurship', 'Maths', 'Marketing', 'Planning', 'Communication'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'problem-solver': {
     opening:
@@ -587,7 +553,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Design Thinking', 'Problem-Solving', 'Engineering', 'Creativity'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
   'travel-day': {
     opening:
@@ -601,7 +566,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Geography', 'Maths', 'Planning', 'Research', 'Decision-Making'],
     format: 'Project Guide',
-    duration: '45–90 min',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -619,7 +583,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Time Management', 'Self-Regulation', 'Planning', 'Goal Setting'],
     format: 'Project Guide',
-    duration: '20–40 min each',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -637,7 +600,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Leadership', 'Empathy', 'Project Management', 'Communication', 'Writing'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'write-like-a-pro': {
     opening:
@@ -651,7 +613,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Writing', 'Communication', 'Persuasion', 'Design', 'Digital Literacy'],
     format: 'Project Guide',
-    duration: '30–60 min each',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -669,7 +630,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['AI Literacy', 'Critical Thinking', 'Digital Citizenship'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'algorithm-awareness': {
     opening:
@@ -683,7 +643,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Algorithm Literacy', 'Critical Thinking', 'Digital Citizenship', 'Self-Awareness'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'bias-fairness-lab': {
     opening:
@@ -697,7 +656,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Ethics', 'Critical Thinking', 'AI Literacy', 'Empathy', 'Fairness'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'build-ai-helper': {
     opening:
@@ -711,7 +669,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['AI Literacy', 'Design Thinking', 'Ethics', 'Planning', 'Creativity'],
     format: 'Project Guide',
-    duration: '45–60 min',
   },
   'create-with-ai': {
     opening:
@@ -725,7 +682,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['AI Literacy', 'Creativity', 'Ethics', 'Digital Citizenship', 'Art'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'deepfake-spotter': {
     opening:
@@ -739,7 +695,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Media Literacy', 'Critical Thinking', 'AI Literacy', 'Verification'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'hallucination-detective': {
     opening:
@@ -753,7 +708,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Critical Thinking', 'AI Literacy', 'Research', 'Verification'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'healthy-tech-boundaries': {
     opening:
@@ -767,7 +721,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Digital Wellbeing', 'Self-Management', 'Boundaries', 'Self-Awareness'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'privacy-footprint': {
     opening:
@@ -781,7 +734,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Privacy', 'Digital Citizenship', 'Critical Thinking', 'Self-Protection'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
   'prompt-like-a-coach': {
     opening:
@@ -795,7 +747,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['AI Literacy', 'Communication', 'Critical Thinking', 'Writing'],
     format: 'Project Guide',
-    duration: '30–45 min',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -813,7 +764,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Parenting', 'Life Skills', 'Critical Thinking', 'Emotional Intelligence'],
     format: 'Parent Guide',
-    duration: 'Reference guide',
   },
   'my-small-business-project': {
     opening:
@@ -827,7 +777,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Entrepreneurship', 'Maths', 'Marketing', 'Planning', 'Creativity'],
     format: 'Project Guide',
-    duration: 'Multi-session project',
   },
   'time-capsule': {
     opening:
@@ -841,7 +790,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Self-Reflection', 'Writing', 'Creativity', 'Memory', 'Growth Mindset'],
     format: 'Project Guide',
-    duration: '45–60 min',
   },
 };
 
@@ -870,7 +818,6 @@ export function getProductDescription(
     whatsIncluded,
     skillTags: [],
     format: isBundle ? 'Bundle' : 'Project Guide',
-    duration: activityCount ? '15–45 min each' : '30–60 min',
   };
 }
 

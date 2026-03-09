@@ -2,7 +2,6 @@ import { getProductDescription } from '@/lib/product-descriptions';
 import {
   TargetIcon,
   UsersIcon,
-  ClockIcon,
   ZapIcon,
   BookOpenIcon,
 } from '@/components/shop/icons';
@@ -38,7 +37,6 @@ export default function ProductHighlights({
     pills.push({ icon: UsersIcon, label: ageRange });
   }
 
-  pills.push({ icon: ClockIcon, label: desc.duration });
   pills.push({ icon: ZapIcon, label: 'Instant PDF Download' });
 
   return (
