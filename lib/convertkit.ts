@@ -30,8 +30,8 @@ export function getCrossSellTag(
     }
   }
 
-  // Fallback: suggest the master bundle for any individual purchase
-  return 'cross-sell:master-bundle';
+  // Fallback: suggest the seasonal bundle for any individual purchase
+  return 'cross-sell:seasonal-bundle';
 }
 
 // ─── Core ConvertKit API ───

@@ -14,26 +14,13 @@ import EmailForm from '@/components/EmailForm';
 export const metadata: Metadata = {
   title: 'Anywhere Learning — Meaningful Learning, Wherever You Are',
   description:
-    'Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+    'No-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
 };
 
 const featuredProducts = [
-  {
-    name: 'Master Bundle (Everything)',
-    slug: 'master-bundle',
-    shortDescription:
-      'Every activity pack we make — all categories, all ages, one download.',
-    priceCents: 8999,
-    compareAtPriceCents: 25954,
-    imageUrl: '/products/mega-bundle-preview.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 220,
-    ageRange: 'Ages 4–14',
-  },
   {
     name: 'Full Seasonal Bundle',
     slug: 'seasonal-bundle',
@@ -176,7 +163,7 @@ const organizationLd = {
   name: 'Anywhere Learning',
   url: 'https://anywherelearning.co',
   logo: 'https://anywherelearning.co/logo.png',
-  description: 'Printable, no-prep activity packs for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+  description: 'No-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   email: 'info@anywherelearning.co',
   sameAs: [
     'https://ca.pinterest.com/anywherelearning/',
@@ -239,7 +226,7 @@ export default function HomePage() {
                   <br /><span className="text-gold">Everywhere</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-lg">
-                  Stop planning. Start living. Printable activity cards that
+                  Stop planning. Start living. Activity guides that
                   turn your everyday life into the richest education your
                   kids will ever get.
                 </p>
@@ -471,10 +458,10 @@ export default function HomePage() {
                   Our Activity Packs
                 </p>
                 <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                  Grab a Pack. Print. Go.
+                  Grab a Pack. Open. Go.
                 </h2>
                 <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Each pack is a collection of printable activity cards. No prep. No extra materials. Just open and start.
+                  Each pack is a step-by-step guide you follow on any device. No prep. No extra materials. Just open and start.
                 </p>
               </div>
             </ScrollReveal>
@@ -573,7 +560,7 @@ export default function HomePage() {
                 Three Steps. That&apos;s It.
               </h2>
               <p className="text-center text-gray-500 text-lg mb-16 max-w-md mx-auto">
-                No onboarding. No learning curve. Just print and go.
+                No onboarding. No learning curve. Just download and go.
               </p>
             </ScrollReveal>
 
@@ -603,16 +590,16 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gold/12 rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
                     <div className="relative w-full h-full bg-white rounded-3xl shadow-md flex items-center justify-center border border-gold/15 group-hover:shadow-lg transition-shadow">
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-gold">
-                        <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-                        <path d="M9 7H15M9 11H15M9 15H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                        <path d="M16 17L19 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                        <rect x="5" y="2" width="14" height="20" rx="3" stroke="currentColor" strokeWidth="1.5"/>
+                        <path d="M10 18H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                        <path d="M9 7H15M9 10H15M9 13H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                       </svg>
                     </div>
                   </div>
                   <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 2</span>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Print</h3>
+                  <h3 className="text-xl font-semibold text-forest mb-2">Open</h3>
                   <p className="text-sm leading-relaxed text-gray-500">
-                    Download. Print. Done. No laminating, no cutting, no extra supplies.
+                    Download. Open on any device. Done. No printing required — just follow along.
                   </p>
                 </div>
               </ScrollReveal>
@@ -748,7 +735,7 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-cream/60 mb-10 leading-relaxed max-w-lg mx-auto">
                 Every day without intentional activities is a day of untapped potential.
-                Pick a pack. Print the cards. Start this week.
+                Pick a pack. Open the guide. Start this week.
               </p>
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
@@ -765,7 +752,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-8 text-cream/40 text-sm">
-                14-day money-back guarantee &middot; Instant download &middot; Print unlimited copies
+                14-day money-back guarantee &middot; Instant download &middot; Use year after year
               </p>
               <p className="mt-3 text-cream/25 text-xs">
                 Most popular this month: Master Bundle

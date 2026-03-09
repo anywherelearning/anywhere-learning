@@ -14,27 +14,6 @@ export const CART_STORAGE_KEY = 'al_cart';
 
 /** Bundle slug → individual product slugs it contains. */
 export const BUNDLE_CONTENTS: Record<string, string[]> = {
-  'master-bundle': [
-    // Seasonal
-    'spring-outdoor-pack', 'summer-outdoor-pack', 'fall-outdoor-pack', 'winter-outdoor-pack',
-    // Nature
-    'nature-journal-walks', 'nature-walk-task-cards', 'nature-choice-boards',
-    'outdoor-learning-missions', 'outdoor-stem-challenges', 'land-art-challenges', 'nature-crafts',
-    // Creativity
-    'board-game-studio', 'rube-goldberg-machine', 'survival-base',
-    'imaginary-world', 'creature-habitat', 'theme-park', 'mini-movie',
-    'invent-a-sport', 'kinetic-sculpture', 'build-a-museum',
-    // Real-World
-    'budget-challenge', 'community-impact', 'kitchen-math-challenge',
-    'media-info-check', 'micro-business', 'problem-solver', 'smart-shopper',
-    'time-energy-planner', 'travel-day', 'write-like-a-pro',
-    // AI & Digital
-    'ai-basics', 'algorithm-awareness', 'bias-fairness-lab', 'build-ai-helper',
-    'create-with-ai', 'deepfake-spotter', 'hallucination-detective',
-    'healthy-tech-boundaries', 'privacy-footprint', 'prompt-like-a-coach',
-    // Life Skills
-    'future-ready-skills-map', 'my-small-business-project', 'time-capsule',
-  ],
   'seasonal-bundle': [
     'spring-outdoor-pack', 'summer-outdoor-pack', 'fall-outdoor-pack', 'winter-outdoor-pack',
   ],

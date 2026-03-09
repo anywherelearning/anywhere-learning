@@ -242,12 +242,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const isCategoryView = !!category && !isSearchActive;
   const isAllView = !category && !isSearchActive;
 
-  // All view: master bundle + other bundles
-  const masterBundle = isAllView
-    ? filteredProducts.find((b) => b.slug === "master-bundle")
-    : null;
-  const otherBundles = isAllView
-    ? filteredProducts.filter((p) => p.isBundle && p.slug !== "master-bundle")
+  // All view: bundles carousel
+  const allBundles = isAllView
+    ? filteredProducts.filter((p) => p.isBundle)
     : [];
 
   // Category view: relevant bundle + cross-sell products
@@ -429,21 +426,8 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         ════════════════════════════════════════ */}
         {isAllView && (
           <>
-            {/* Master Bundle */}
-            {masterBundle && (
-              <section className="mb-12">
-                <BundleHighlight
-                  name={masterBundle.name}
-                  slug={masterBundle.slug}
-                  priceCents={masterBundle.priceCents}
-                  compareAtPriceCents={masterBundle.compareAtPriceCents}
-                  activityCount={masterBundle.activityCount}
-                />
-              </section>
-            )}
-
-            {/* Other bundles */}
-            {otherBundles.length > 0 && (
+            {/* Bundles */}
+            {allBundles.length > 0 && (
               <section className="mb-14">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="font-semibold text-gray-900 text-xl">
@@ -456,7 +440,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                     View all bundles &rarr;
                   </Link>
                 </div>
-                <BundleCarousel products={otherBundles} />
+                <BundleCarousel products={allBundles} />
               </section>
             )}
 

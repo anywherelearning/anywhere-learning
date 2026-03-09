@@ -18,24 +18,6 @@ async function seed() {
   const productData = [
     // === BUNDLES (sortOrder 1–7) ===
     {
-      name: 'Master Bundle (Everything)',
-      slug: 'master-bundle',
-      description: 'Every activity pack we make, in one instant download. Nature, creativity, real-world skills, AI literacy, seasonal adventures, and life skills \u2014 all of it.',
-      shortDescription: 'Every activity pack we make \u2014 all categories, all ages, one download.',
-      priceCents: 3999,
-      compareAtPriceCents: 16856,
-      stripePriceId: '',
-      blobUrl: '',
-      imageUrl: '/products/mega-bundle-preview.jpg',
-      category: 'bundle',
-      isBundle: true,
-      bundleProductIds: null,
-      activityCount: 220,
-      ageRange: 'Ages 4\u201314',
-      sortOrder: 1,
-      active: true,
-    },
-    {
       name: 'Full Seasonal Bundle (All 4 Seasons)',
       slug: 'seasonal-bundle',
       description: 'All four seasonal outdoor learning packs in one bundle. 80 activities for every time of year.',

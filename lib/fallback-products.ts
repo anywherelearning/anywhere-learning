@@ -35,29 +35,6 @@ export const fallbackProducts: FallbackProduct[] = [
   // BUNDLES
   // ─────────────────────────────────────────────────────────────
   {
-    id: "fb-master-bundle",
-    name: "Master Bundle (Everything)",
-    slug: "master-bundle",
-    description:
-      "Every activity pack we make, in one instant download. Nature, creativity, real-world skills, AI literacy, seasonal adventures, and life skills — all of it. New packs are added as we create them, and you'll get those too. This is everything your family needs for years of meaningful, no-prep learning.",
-    shortDescription:
-      "Every activity pack we make — all categories, all ages, one download.",
-    priceCents: 3999,
-    compareAtPriceCents: 16856,
-    stripePriceId: "",
-    blobUrl: "",
-    imageUrl: "/products/mega-bundle-preview.jpg",
-    previewFile: "Mega bundle preview.pdf",
-    category: "bundle",
-    isBundle: true,
-    bundleProductIds: null,
-    activityCount: 220,
-    ageRange: "Ages 4–14",
-    sortOrder: 0,
-    active: true,
-    createdAt: new Date("2025-01-01"),
-  },
-  {
     id: "fb-seasonal-bundle",
     name: "Full Seasonal Bundle",
     slug: "seasonal-bundle",

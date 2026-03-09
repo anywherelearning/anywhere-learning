@@ -10,7 +10,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Product catalog — same slugs as fallback-products.ts, only the fields Stripe needs
 const catalog = [
   // ─── Bundles ───
-  { slug: 'master-bundle', name: 'Master Bundle (Everything)', priceCents: 3999, description: 'Every activity pack we make — all categories, all ages, one download.' },
   { slug: 'seasonal-bundle', name: 'Full Seasonal Bundle (All 4 Seasons)', priceCents: 2499, description: 'All 4 seasonal packs — 80 outdoor activities for every time of year.' },
   { slug: 'creativity-mega-bundle', name: 'Creativity Mega Bundle', priceCents: 1999, description: 'All 11 creativity packs — game design, filmmaking, invention, and more.' },
   { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 1999, description: 'All 11 real-world skills packs — budgeting, cooking, business, and more.' },
