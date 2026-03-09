@@ -320,8 +320,8 @@ export default async function ProductPage({
                 </div>
               )}
 
-              {/* Desktop sticky buy — stays visible as customer scrolls long pages */}
-              <div className="hidden lg:block mt-4">
+              {/* Buy section — under image, sticky on desktop */}
+              <div className="mt-4" id="buy-button">
                 <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
                   <div className="flex items-center justify-between mb-3">
                     <PriceDisplay
@@ -343,6 +343,11 @@ export default async function ProductPage({
                     category={product.category}
                     isBundle={product.isBundle ?? false}
                   />
+                  {!product.isBundle && hasPreview(product.slug) && (
+                    <div className="mt-3">
+                      <PreviewButton slug={product.slug} productName={product.name} />
+                    </div>
+                  )}
                   <p className="text-xs text-gray-400 text-center mt-2">
                     Instant download &middot; Use on any device
                   </p>
@@ -379,32 +384,6 @@ export default async function ProductPage({
               </div>
 
               <hr className="my-6 border-gray-200" />
-
-              {/* Price — larger treatment */}
-              <PriceDisplay
-                priceCents={product.priceCents}
-                compareAtPriceCents={product.compareAtPriceCents}
-                size="lg"
-              />
-
-              {/* Buy Button */}
-              <div className="mt-6" id="buy-button">
-                <AddToCartButton
-                  stripePriceId={product.stripePriceId}
-                  slug={product.slug}
-                  productName={product.name}
-                  priceCents={product.priceCents}
-                  category={product.category}
-                  isBundle={product.isBundle ?? false}
-                />
-              </div>
-
-              {/* Preview Button — individual products only (bundles have per-pack previews below) */}
-              {!product.isBundle && hasPreview(product.slug) && (
-                <div className="mt-3">
-                  <PreviewButton slug={product.slug} productName={product.name} />
-                </div>
-              )}
 
               {/* Trust badges */}
               <div className="mt-5 grid grid-cols-3 gap-3">
