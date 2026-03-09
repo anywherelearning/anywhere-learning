@@ -14,6 +14,7 @@ import BundleContents from "@/components/shop/BundleContents";
 import ProductHighlights from "@/components/shop/ProductHighlights";
 import ProductDescriptionSection from "@/components/shop/ProductDescriptionSection";
 import ProductReviews from "@/components/shop/ProductReviews";
+import { getProductReviewStats } from "@/lib/db/queries";
 import {
   CategoryIcon,
   ZapIcon,
@@ -117,6 +118,12 @@ export default async function ProductPage({
       .slice(0, 3);
   }
 
+  // Get review stats for JSON-LD
+  let reviewStats = { averageRating: 0, reviewCount: 0 };
+  try {
+    reviewStats = await getProductReviewStats(product.id);
+  } catch { /* DB unavailable */ }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -135,6 +142,15 @@ export default async function ProductPage({
       availability: "https://schema.org/InStock",
       url: `https://anywherelearning.co/shop/${product.slug}`,
     },
+    ...(reviewStats.reviewCount > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: reviewStats.averageRating.toFixed(1),
+        reviewCount: String(reviewStats.reviewCount),
+        bestRating: "5",
+        worstRating: "1",
+      },
+    }),
   };
 
   const breadcrumbLd = {
@@ -404,7 +420,11 @@ export default async function ProductPage({
               </div>
 
               {/* Reviews */}
-              <ProductReviews productName={product.name} />
+              <ProductReviews
+                productId={product.id}
+                productSlug={product.slug}
+                productName={product.name}
+              />
             </div>
           </div>
         </section>

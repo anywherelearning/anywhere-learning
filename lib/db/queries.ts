@@ -1,6 +1,6 @@
 import { db } from './index';
-import { products, orders, users } from './schema';
-import { eq, and, desc, ne } from 'drizzle-orm';
+import { products, orders, users, reviews } from './schema';
+import { eq, and, desc, ne, avg, count } from 'drizzle-orm';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -57,4 +57,52 @@ export async function getUserPurchases(clerkId: string) {
       eq(orders.status, 'completed'),
     ))
     .orderBy(desc(orders.purchasedAt));
+}
+
+// ─── Reviews ────────────────────────────────────────────────────────
+
+export async function getProductReviews(productId: string) {
+  return db.select({
+    id: reviews.id,
+    rating: reviews.rating,
+    comment: reviews.comment,
+    createdAt: reviews.createdAt,
+    updatedAt: reviews.updatedAt,
+    userEmail: users.email,
+  })
+    .from(reviews)
+    .innerJoin(users, eq(reviews.userId, users.id))
+    .where(eq(reviews.productId, productId))
+    .orderBy(desc(reviews.createdAt));
+}
+
+export async function getUserReviewForProduct(userId: string, productId: string) {
+  const result = await db.select().from(reviews)
+    .where(and(eq(reviews.userId, userId), eq(reviews.productId, productId)))
+    .limit(1);
+  return result[0] || null;
+}
+
+export async function getProductReviewStats(productId: string) {
+  const result = await db.select({
+    avgRating: avg(reviews.rating),
+    reviewCount: count(reviews.id),
+  })
+    .from(reviews)
+    .where(eq(reviews.productId, productId));
+  return {
+    averageRating: result[0]?.avgRating ? parseFloat(result[0].avgRating) : 0,
+    reviewCount: Number(result[0]?.reviewCount ?? 0),
+  };
+}
+
+export async function hasUserPurchasedProduct(userId: string, productId: string) {
+  const result = await db.select().from(orders)
+    .where(and(
+      eq(orders.userId, userId),
+      eq(orders.productId, productId),
+      eq(orders.status, 'completed'),
+    ))
+    .limit(1);
+  return result.length > 0;
 }

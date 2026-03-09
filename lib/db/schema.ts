@@ -53,3 +53,16 @@ export const downloads = pgTable('downloads', {
   downloadedAt: timestamp('downloaded_at').defaultNow().notNull(),
   ipAddress: text('ip_address'),
 });
+
+export const reviews = pgTable('reviews', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id).notNull(),
+  productId: uuid('product_id').references(() => products.id).notNull(),
+  rating: integer('rating').notNull(),
+  comment: text('comment').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_reviews_product').on(table.productId),
+  index('idx_reviews_user_product').on(table.userId, table.productId),
+]);
