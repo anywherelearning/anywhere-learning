@@ -21,11 +21,11 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
     'nature-journal-walks', 'nature-walk-task-cards', 'nature-choice-boards',
     'outdoor-learning-missions', 'outdoor-stem-challenges', 'land-art-challenges', 'nature-crafts',
     // Creativity
-    'creative-thinking-pack', 'board-game-studio', 'rube-goldberg-machine', 'survival-base',
+    'board-game-studio', 'rube-goldberg-machine', 'survival-base',
     'imaginary-world', 'creature-habitat', 'theme-park', 'mini-movie',
     'invent-a-sport', 'kinetic-sculpture', 'build-a-museum',
     // Real-World
-    'kitchen-maths-cooking', 'budget-challenge', 'community-impact', 'kitchen-math-challenge',
+    'budget-challenge', 'community-impact', 'kitchen-math-challenge',
     'media-info-check', 'micro-business', 'problem-solver', 'smart-shopper',
     'time-energy-planner', 'travel-day', 'write-like-a-pro',
     // AI & Digital
@@ -39,12 +39,12 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
     'spring-outdoor-pack', 'summer-outdoor-pack', 'fall-outdoor-pack', 'winter-outdoor-pack',
   ],
   'creativity-mega-bundle': [
-    'creative-thinking-pack', 'board-game-studio', 'rube-goldberg-machine', 'survival-base',
+    'board-game-studio', 'rube-goldberg-machine', 'survival-base',
     'imaginary-world', 'creature-habitat', 'theme-park', 'mini-movie',
     'invent-a-sport', 'kinetic-sculpture', 'build-a-museum',
   ],
   'real-world-mega-bundle': [
-    'kitchen-maths-cooking', 'budget-challenge', 'community-impact', 'kitchen-math-challenge',
+    'budget-challenge', 'community-impact', 'kitchen-math-challenge',
     'media-info-check', 'micro-business', 'problem-solver', 'smart-shopper',
     'time-energy-planner', 'travel-day', 'write-like-a-pro',
   ],

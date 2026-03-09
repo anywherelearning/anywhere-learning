@@ -3,36 +3,48 @@ import { CategoryIcon } from './icons';
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital Literacy',
   creativity: 'Creativity',
+  'critical-thinking': 'Critical Thinking',
   'life-skills': 'Life Skills',
+  literacy: 'Literacy',
   nature: 'Nature & Outdoor',
-  'real-world': 'Real-World Skills',
+  'real-world-math': 'Real-World Math & Money',
+  'self-management': 'Self-Management',
   bundle: 'Bundles',
 };
 
 const categoryDescriptions: Record<string, string> = {
   'ai-literacy': 'Responsible tech, critical thinking about AI, and digital citizenship.',
   creativity: 'Open-ended projects that build design thinking and creative confidence.',
-  'life-skills': 'Planning, cooking, self-management \u2014 skills they\u2019ll use forever.',
+  'critical-thinking': 'Data analysis, business planning, design challenges, and spatial reasoning.',
+  'life-skills': 'Cooking, first aid, sewing, repairs \u2014 hands-on skills they\u2019ll use forever.',
+  literacy: 'Communication, active listening, interviewing, and writing in the real world.',
   nature: 'Turn your backyard, park, or trail into a hands-on learning space.',
-  'real-world': 'Financial literacy, entrepreneurship, and real problem-solving.',
+  'real-world-math': 'Budgeting, shopping math, fractions in the kitchen, and financial thinking.',
+  'self-management': 'Morning routines, time management, organization, and emotional skills.',
   bundle: 'Get more value with curated activity pack bundles.',
 };
 
 const categoryBgColors: Record<string, string> = {
   'ai-literacy': 'from-[#7b88a8]/[0.08]',
   creativity: 'from-[#c47a8f]/[0.08]',
+  'critical-thinking': 'from-[#7a6da8]/[0.08]',
   'life-skills': 'from-[#6b8e8b]/[0.08]',
+  literacy: 'from-[#5b8fa8]/[0.08]',
   nature: 'from-[#588157]/[0.08]',
-  'real-world': 'from-[#8b7355]/[0.08]',
+  'real-world-math': 'from-[#8b7355]/[0.08]',
+  'self-management': 'from-[#b07d4b]/[0.08]',
   bundle: 'from-[#d4a373]/[0.08]',
 };
 
 const categoryIconColors: Record<string, string> = {
   'ai-literacy': 'text-[#7b88a8]',
   creativity: 'text-[#c47a8f]',
+  'critical-thinking': 'text-[#7a6da8]',
   'life-skills': 'text-[#6b8e8b]',
+  literacy: 'text-[#5b8fa8]',
   nature: 'text-forest',
-  'real-world': 'text-[#8b7355]',
+  'real-world-math': 'text-[#8b7355]',
+  'self-management': 'text-[#b07d4b]',
   bundle: 'text-gold',
 };
 

@@ -31,20 +31,35 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
     description:
       "Open-ended design projects \u2014 game design, filmmaking, sculpture, and more. Ages 6\u201314.",
   },
+  "critical-thinking": {
+    title: "Critical Thinking Activity Packs",
+    description:
+      "Data analysis, business planning, design challenges, and problem-solving. Ages 9\u201314.",
+  },
   "life-skills": {
     title: "Life Skills Activity Packs",
     description:
-      "Planning, cooking, self-management \u2014 skills they\u2019ll use forever. Ages 4\u201314.",
+      "Cooking, first aid, sewing, repairs \u2014 hands-on skills they\u2019ll use forever. Ages 4\u201314.",
+  },
+  literacy: {
+    title: "Literacy & Communication Packs",
+    description:
+      "Real-world writing, active listening, interviewing, and communication skills. Ages 9\u201314.",
   },
   nature: {
     title: "Nature & Outdoor Activity Packs",
     description:
       "Hands-on nature and seasonal activities \u2014 task cards, STEM challenges, land art, and more. Ages 4\u201314.",
   },
-  "real-world": {
-    title: "Real-World Skills Packs",
+  "real-world-math": {
+    title: "Real-World Math & Money Packs",
     description:
-      "Financial literacy, entrepreneurship, and problem-solving activities. Ages 9\u201314.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 4\u201314.",
+  },
+  "self-management": {
+    title: "Self-Management Activity Packs",
+    description:
+      "Morning routines, time management, organization, and emotional skills. Ages 9\u201314.",
   },
   bundle: {
     title: "Activity Pack Bundles",
@@ -106,10 +121,22 @@ const categorySections = [
       "Open-ended projects that build design thinking and creative confidence.",
   },
   {
+    value: "critical-thinking",
+    label: "Critical Thinking",
+    description:
+      "Data analysis, business planning, design challenges, and spatial reasoning.",
+  },
+  {
     value: "life-skills",
     label: "Life Skills",
     description:
-      "Planning, cooking, self-management \u2014 skills they\u2019ll use forever.",
+      "Cooking, first aid, sewing, repairs \u2014 hands-on skills they\u2019ll use forever.",
+  },
+  {
+    value: "literacy",
+    label: "Literacy",
+    description:
+      "Communication, active listening, interviewing, and writing in the real world.",
   },
   {
     value: "nature",
@@ -118,10 +145,16 @@ const categorySections = [
       "Turn your backyard, park, or trail into a hands-on learning space.",
   },
   {
-    value: "real-world",
-    label: "Real-World Skills",
+    value: "real-world-math",
+    label: "Math & Money",
     description:
-      "Financial literacy, entrepreneurship, and real problem-solving.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
+  },
+  {
+    value: "self-management",
+    label: "Self-Management",
+    description:
+      "Morning routines, time management, organization, and emotional skills.",
   },
 ];
 
@@ -132,17 +165,20 @@ const categoryBundleMap: Record<string, string> = {
   creativity: "creativity-mega-bundle",
   "life-skills": "real-world-mega-bundle",
   nature: "outdoor-toolkit-bundle",
-  "real-world": "real-world-mega-bundle",
+  "real-world-math": "real-world-mega-bundle",
 };
 
 // ── Cross-sell mapping ──
 
 const crossSellMap: Record<string, string> = {
-  "ai-literacy": "creativity",
-  creativity: "real-world",
-  "life-skills": "real-world",
-  nature: "life-skills",
-  "real-world": "creativity",
+  "ai-literacy": "critical-thinking",
+  creativity: "ai-literacy",
+  "critical-thinking": "ai-literacy",
+  "life-skills": "self-management",
+  literacy: "creativity",
+  nature: "creativity",
+  "real-world-math": "life-skills",
+  "self-management": "life-skills",
 };
 
 // ── Page ──
@@ -304,14 +340,14 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             </div>
             <div className="relative mx-auto max-w-6xl px-5 sm:px-8 text-center hero-stagger">
               <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                Print &amp; Use Activity Packs
+                Ready-to-Use Activity Guides
               </p>
               <h1 className="font-display text-4xl text-forest sm:text-5xl lg:text-6xl text-balance mb-4">
                 Activity Packs That Make
                 <br className="hidden sm:block" /> Real Life the Lesson
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-lg text-gray-500">
-                Printable. No-prep. Built for families who learn everywhere.
+                No-prep. Open on any device. Built for families who learn everywhere.
               </p>
             </div>
           </section>
@@ -322,7 +358,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-gray-500">
                 {[
                   "No Prep Required",
-                  "Print & Use Instantly",
+                  "Download & Use Instantly",
                   "Ages 4\u201314",
                   "14-day refund guarantee",
                 ].map((text) => (
@@ -487,7 +523,11 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             {/* Full grid */}
             <section>
               <ProductGrid
-                products={filteredProducts.filter((p) => !p.isBundle)}
+                products={
+                  category === "bundle"
+                    ? filteredProducts.filter((p) => p.isBundle)
+                    : filteredProducts.filter((p) => !p.isBundle)
+                }
               />
             </section>
 

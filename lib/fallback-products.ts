@@ -62,7 +62,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Full Seasonal Bundle",
     slug: "seasonal-bundle",
     description:
-      "All four seasonal packs in one download — spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to print whenever the season changes.",
+      "All four seasonal packs in one download — spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to use whenever the season changes.",
     shortDescription:
       "All 4 seasonal packs — 80 outdoor activities for every time of year.",
     priceCents: 4999,
@@ -300,7 +300,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Journal & Walk Cards",
     slug: "nature-journal-walks",
     description:
-      "25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience. Each card gives your child a specific focus — tracking shadows, sketching bark patterns, listening for bird calls, mapping a puddle ecosystem. No nature expertise required from you. Just print a card, step outside, and let curiosity lead.",
+      "25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience. Each card gives your child a specific focus — tracking shadows, sketching bark patterns, listening for bird calls, mapping a puddle ecosystem. No nature expertise required from you. Just open a card, step outside, and let curiosity lead.",
     shortDescription:
       "25 nature walk prompts and journaling activities for rich outdoor observation.",
     priceCents: 999,
@@ -323,9 +323,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Walk Task Cards",
     slug: "nature-walk-task-cards",
     description:
-      "Printable task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission — find three textures, listen for five sounds, sketch the smallest thing you can find. Works in any outdoor space, any season, any weather.",
+      "Task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission — find three textures, listen for five sounds, sketch the smallest thing you can find. Works in any outdoor space, any season, any weather.",
     shortDescription:
-      "Printable task cards that turn any walk into a focused nature exploration.",
+      "Task cards that turn any walk into a focused nature exploration.",
     priceCents: 499,
     compareAtPriceCents: null,
     stripePriceId: "",
@@ -460,29 +460,6 @@ export const fallbackProducts: FallbackProduct[] = [
   // ─────────────────────────────────────────────────────────────
   // CREATIVITY
   // ─────────────────────────────────────────────────────────────
-  {
-    id: "fb-creative-thinking",
-    name: "Creative Thinking Pack",
-    slug: "creative-thinking-pack",
-    description:
-      "25 open-ended creative challenges that build divergent thinking and artistic confidence. Design a new animal species. Invent a game with rules. Create a map of an imaginary island. Build a structure from newspaper. These aren't crafts with a 'right' answer — they're invitations to think differently.",
-    shortDescription:
-      "25 open-ended creative challenges that build divergent thinking and artistic confidence.",
-    priceCents: 999,
-    compareAtPriceCents: null,
-    stripePriceId: "",
-    blobUrl: "",
-    imageUrl: "/products/creative-thinking-pack.jpg",
-    previewFile: null,
-    category: "creativity",
-    isBundle: false,
-    bundleProductIds: null,
-    activityCount: 25,
-    ageRange: "Ages 4–14",
-    sortOrder: 30,
-    active: true,
-    createdAt: new Date("2025-01-01"),
-  },
   {
     id: "fb-board-game-studio",
     name: "Board Game Studio",
@@ -715,31 +692,8 @@ export const fallbackProducts: FallbackProduct[] = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // REAL-WORLD
+  // REAL-WORLD MATH, CRITICAL THINKING, SELF-MANAGEMENT & LITERACY
   // ─────────────────────────────────────────────────────────────
-  {
-    id: "fb-kitchen-maths",
-    name: "Kitchen Maths & Cooking Cards",
-    slug: "kitchen-maths-cooking",
-    description:
-      "20 recipe-based activities that turn cooking into real maths, science, and life skills practice. Double a recipe to practise fractions. Estimate cooking times. Convert measurements. Calculate the cost per serving. Your kids learn by making real food your family actually eats.",
-    shortDescription:
-      "20 recipe-based activities that turn cooking into real maths, science, and life skills practice.",
-    priceCents: 999,
-    compareAtPriceCents: null,
-    stripePriceId: "",
-    blobUrl: "",
-    imageUrl: "/products/kitchen-maths-cooking.jpg",
-    previewFile: null,
-    category: "real-world",
-    isBundle: false,
-    bundleProductIds: null,
-    activityCount: 20,
-    ageRange: "Ages 4–14",
-    sortOrder: 50,
-    active: true,
-    createdAt: new Date("2025-01-01"),
-  },
   {
     id: "fb-budget-challenge",
     name: "Real-Life Budget Challenge",
@@ -754,7 +708,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/budget-challenge.jpg",
     previewFile: "Preview Real-world relevance Budget challenge.pdf",
-    category: "real-world",
+    category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -777,7 +731,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/community-impact.jpg",
     previewFile: "Preview Real-world relevance Community impact project.pdf",
-    category: "real-world",
+    category: "literacy",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -800,7 +754,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/kitchen-math-challenge.jpg",
     previewFile: "Preview Real-world relevance Kitchen math & meal planning challenge.pdf",
-    category: "real-world",
+    category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -823,7 +777,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/media-info-check.jpg",
     previewFile: "Preview Real-world relevance Media & info check.pdf",
-    category: "real-world",
+    category: "critical-thinking",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -846,7 +800,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/micro-business.jpg",
     previewFile: "Preview Real-world relevance Micro-business challenge.pdf",
-    category: "real-world",
+    category: "critical-thinking",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -869,7 +823,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/problem-solver.jpg",
     previewFile: "Preview Real-world relevance Problem-solver studio.pdf",
-    category: "real-world",
+    category: "critical-thinking",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -892,7 +846,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/smart-shopper.jpg",
     previewFile: "Preview Real-world relevance Smart shopper lab.pdf",
-    category: "real-world",
+    category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -915,7 +869,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/time-energy-planner.jpg",
     previewFile: "Preview Real-world relevance Time & energy planner.pdf",
-    category: "real-world",
+    category: "self-management",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -938,7 +892,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/travel-day.jpg",
     previewFile: "Preview Real-world relevance Travel Day itinerary challenge.pdf",
-    category: "real-world",
+    category: "critical-thinking",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,
@@ -961,7 +915,7 @@ export const fallbackProducts: FallbackProduct[] = [
     blobUrl: "",
     imageUrl: "/products/write-like-a-pro.jpg",
     previewFile: "Preview Real-world relevance Write it like a pro.pdf",
-    category: "real-world",
+    category: "literacy",
     isBundle: false,
     bundleProductIds: null,
     activityCount: null,

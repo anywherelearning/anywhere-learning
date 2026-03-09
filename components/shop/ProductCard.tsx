@@ -18,27 +18,36 @@ interface ProductCardProps {
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
   creativity: 'Creativity',
+  'critical-thinking': 'Critical Thinking',
   'life-skills': 'Life Skills',
+  literacy: 'Literacy',
   nature: 'Nature & Outdoor',
-  'real-world': 'Real-World Skills',
+  'real-world-math': 'Math & Money',
+  'self-management': 'Self-Management',
   bundle: 'Bundle',
 };
 
 const categoryBgClasses: Record<string, string> = {
   'ai-literacy': 'card-bg-ai-literacy',
   creativity: 'card-bg-creativity',
+  'critical-thinking': 'card-bg-critical-thinking',
   'life-skills': 'card-bg-life-skills',
+  literacy: 'card-bg-literacy',
   nature: 'card-bg-nature',
-  'real-world': 'card-bg-real-world',
+  'real-world-math': 'card-bg-real-world-math',
+  'self-management': 'card-bg-self-management',
   bundle: 'card-bg-bundle',
 };
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'border-l-[#7b88a8]',
   creativity: 'border-l-[#c47a8f]',
+  'critical-thinking': 'border-l-[#7a6da8]',
   'life-skills': 'border-l-[#6b8e8b]',
+  literacy: 'border-l-[#5b8fa8]',
   nature: 'border-l-[#588157]',
-  'real-world': 'border-l-[#8b7355]',
+  'real-world-math': 'border-l-[#8b7355]',
+  'self-management': 'border-l-[#b07d4b]',
   bundle: 'border-l-[#d4a373]',
 };
 

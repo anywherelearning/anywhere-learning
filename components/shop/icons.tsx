@@ -127,6 +127,16 @@ export function ZapIcon({ className = 'w-5 h-5' }: IconProps) {
   );
 }
 
+export function CalculatorIcon({ className = 'w-5 h-5' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <rect x="8" y="6" width="8" height="4" rx="1" />
+      <path d="M8 14h2M14 14h2M8 18h2M14 18h2" />
+    </svg>
+  );
+}
+
 // ─── Trust Badge Icons ───
 
 export function PrinterIcon({ className = 'w-5 h-5' }: IconProps) {
@@ -135,6 +145,15 @@ export function PrinterIcon({ className = 'w-5 h-5' }: IconProps) {
       <polyline points="6 9 6 2 18 2 18 9" />
       <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
       <rect x="6" y="14" width="12" height="8" />
+    </svg>
+  );
+}
+
+export function DeviceIcon({ className = 'w-5 h-5' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="3" />
+      <path d="M10 18h4" />
     </svg>
   );
 }
@@ -153,9 +172,12 @@ export function ShieldCheckIcon({ className = 'w-5 h-5' }: IconProps) {
 const categoryIconMap: Record<string, React.FC<IconProps>> = {
   'ai-literacy': CpuIcon,
   creativity: PaletteIcon,
+  'critical-thinking': LightbulbIcon,
   'life-skills': CompassIcon,
+  literacy: BookOpenIcon,
   nature: LeafIcon,
-  'real-world': LightbulbIcon,
+  'real-world-math': CalculatorIcon,
+  'self-management': ClockIcon,
   bundle: LayersIcon,
 };
 

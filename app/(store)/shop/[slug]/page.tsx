@@ -12,6 +12,7 @@ import TestimonialBlock from "@/components/shared/TestimonialBlock";
 import FAQSection from "@/components/shared/FAQSection";
 import ProductGrid from "@/components/shop/ProductGrid";
 import StickyMobileBuy from "@/components/shop/StickyMobileBuy";
+import BundleContents from "@/components/shop/BundleContents";
 import {
   CategoryIcon,
   TargetIcon,
@@ -20,7 +21,7 @@ import {
   UsersIcon,
   BookOpenIcon,
   ZapIcon,
-  PrinterIcon,
+  DeviceIcon,
   ShieldCheckIcon,
 } from "@/components/shop/icons";
 
@@ -74,7 +75,7 @@ const productFAQ = [
   {
     question: "How do I use it?",
     answer:
-      "Print the cards. Pick one. Go. There\u2019s no lesson plan, no prep, and no special materials. You can do one activity a day or one a week \u2014 whatever fits your family\u2019s rhythm.",
+      "Open the guide. Pick an activity. Go. There\u2019s no lesson plan, no prep, and no special materials. You can do one activity a day or one a week \u2014 whatever fits your family\u2019s rhythm.",
   },
   {
     question: "Can I use this with multiple kids?",
@@ -91,18 +92,24 @@ const productFAQ = [
 const categoryLabels: Record<string, string> = {
   "ai-literacy": "AI & Digital",
   creativity: "Creativity Series",
+  "critical-thinking": "Critical Thinking",
   "life-skills": "Life Skills",
+  literacy: "Literacy",
   nature: "Nature Learning",
-  "real-world": "Real-World Skills",
+  "real-world-math": "Math & Money",
+  "self-management": "Self-Management",
   bundle: "Bundle",
 };
 
 const coverClasses: Record<string, string> = {
   "ai-literacy": "cover-ai-literacy",
   creativity: "cover-creativity",
+  "critical-thinking": "cover-critical-thinking",
   "life-skills": "cover-life-skills",
+  literacy: "cover-literacy",
   nature: "cover-nature",
-  "real-world": "cover-real-world",
+  "real-world-math": "cover-real-world-math",
+  "self-management": "cover-self-management",
   bundle: "cover-bundle",
 };
 
@@ -112,7 +119,7 @@ const whatsInsideItems = [
   { Icon: SparklesIcon, text: "No special materials needed" },
   { Icon: UsersIcon, text: "Works for one child or five" },
   { Icon: BookOpenIcon, text: "Age adaptation notes included" },
-  { Icon: ZapIcon, text: "Printable PDF \u2014 instant download" },
+  { Icon: ZapIcon, text: "PDF guide \u2014 instant download" },
 ];
 
 export default async function ProductPage({
@@ -377,8 +384,8 @@ export default async function ProductPage({
                   <span className="text-xs text-gray-500 font-medium">Instant Download</span>
                 </div>
                 <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
-                  <span aria-hidden="true"><PrinterIcon className="w-5 h-5 text-forest" /></span>
-                  <span className="text-xs text-gray-500 font-medium">Print at Home</span>
+                  <span aria-hidden="true"><DeviceIcon className="w-5 h-5 text-forest" /></span>
+                  <span className="text-xs text-gray-500 font-medium">Use on Any Device</span>
                 </div>
                 <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
                   <span aria-hidden="true"><ShieldCheckIcon className="w-5 h-5 text-forest" /></span>
@@ -399,23 +406,41 @@ export default async function ProductPage({
 
               <hr className="my-8 border-gray-200" />
 
-              {/* What's Inside — visual grid with emojis */}
+              {/* What's Inside — visual grid */}
               <div className="mb-8">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
                   What&apos;s Inside
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {whatsInsideItems.map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
-                      <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
-                      <span className="text-sm text-gray-700">
-                        {i === 0 && product.activityCount
-                          ? `${product.activityCount} ${item.text}`
-                          : item.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                {product.isBundle ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      { Icon: UsersIcon, text: `${product.activityCount || 'Multiple'} activities across all packs` },
+                      { Icon: BookOpenIcon, text: 'Every pack includes age adaptation notes' },
+                      { Icon: SparklesIcon, text: 'No special materials needed' },
+                      { Icon: ZapIcon, text: 'Instant download — one purchase' },
+                      { Icon: TargetIcon, text: 'Works for ages 4–14' },
+                      { Icon: DeviceIcon, text: 'Open on any device' },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
+                        <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
+                        <span className="text-sm text-gray-700">{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {whatsInsideItems.map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
+                        <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
+                        <span className="text-sm text-gray-700">
+                          {i === 0 && product.activityCount
+                            ? `${product.activityCount} ${item.text}`
+                            : item.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Full Description */}
@@ -424,6 +449,14 @@ export default async function ProductPage({
                   {product.description}
                 </p>
               </div>
+
+              {/* Bundle: Included Products */}
+              {product.isBundle && (
+                <BundleContents
+                  bundleSlug={product.slug}
+                  bundlePriceCents={product.priceCents}
+                />
+              )}
 
               {/* Philosophy Badges */}
               <div className="bg-gold-light/10 rounded-2xl p-6 mb-8">

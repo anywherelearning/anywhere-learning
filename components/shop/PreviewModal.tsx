@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -22,9 +22,10 @@ export default function PreviewModal({
   onGetPack,
 }: PreviewModalProps) {
   const [numPages, setNumPages] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [pageWidth, setPageWidth] = useState(700);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const onDocumentLoadSuccess = useCallback(({ numPages: total }: { numPages: number }) => {
     setNumPages(total);
@@ -36,24 +37,30 @@ export default function PreviewModal({
     setLoading(false);
   }, []);
 
-  const goToPrev = useCallback(() => {
-    setCurrentPage((p) => Math.max(1, p - 1));
+  // Calculate page width based on container
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        // Leave some padding on each side
+        const available = containerRef.current.clientWidth - 32;
+        setPageWidth(Math.min(available, 800));
+      } else {
+        setPageWidth(Math.min(window.innerWidth - 32, 800));
+      }
+    };
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  const goToNext = useCallback(() => {
-    setCurrentPage((p) => Math.min(numPages, p + 1));
-  }, [numPages]);
-
-  // Keyboard navigation
+  // Keyboard: Escape to close
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') goToPrev();
-      if (e.key === 'ArrowRight') goToNext();
     };
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
-  }, [onClose, goToPrev, goToNext]);
+  }, [onClose]);
 
   // Lock body scroll while open
   useEffect(() => {
@@ -75,7 +82,9 @@ export default function PreviewModal({
           <h2 className="text-sm sm:text-base font-semibold text-gray-900 truncate">
             {productName}
           </h2>
-          <p className="text-xs text-gray-400">Sample preview</p>
+          <p className="text-xs text-gray-400">
+            {loading ? 'Loading preview\u2026' : `${numPages} page preview`}
+          </p>
         </div>
         <button
           onClick={onClose}
@@ -88,69 +97,51 @@ export default function PreviewModal({
         </button>
       </div>
 
-      {/* PDF Viewer */}
-      <div className="flex-1 overflow-auto flex items-start justify-center py-4 sm:py-8 px-2">
+      {/* Scrollable PDF Viewer — all pages */}
+      <div ref={containerRef} className="flex-1 overflow-auto px-2 sm:px-4 py-4 sm:py-6">
         {error ? (
           <div className="text-center py-20">
             <p className="text-white/80 text-lg mb-2">Preview unavailable</p>
             <p className="text-white/50 text-sm">This preview is not available right now.</p>
           </div>
         ) : (
-          <Document
-            file={`/api/preview/${slug}`}
-            onLoadSuccess={onDocumentLoadSuccess}
-            onLoadError={onDocumentLoadError}
-            loading={
-              <div className="flex flex-col items-center py-20 gap-3">
-                <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                <p className="text-white/60 text-sm">Loading preview&hellip;</p>
-              </div>
-            }
-          >
-            <Page
-              pageNumber={currentPage}
-              width={Math.min(typeof window !== 'undefined' ? window.innerWidth - 32 : 700, 700)}
-              className="shadow-2xl rounded-lg overflow-hidden"
-              renderAnnotationLayer={false}
-            />
-          </Document>
+          <div className="flex flex-col items-center gap-4">
+            <Document
+              file={`/api/preview/${slug}`}
+              onLoadSuccess={onDocumentLoadSuccess}
+              onLoadError={onDocumentLoadError}
+              loading={
+                <div className="flex flex-col items-center py-20 gap-3">
+                  <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <p className="text-white/60 text-sm">Loading preview&hellip;</p>
+                </div>
+              }
+            >
+              {numPages > 0 &&
+                Array.from({ length: numPages }, (_, i) => (
+                  <div key={i} className="mb-4 last:mb-0">
+                    <Page
+                      pageNumber={i + 1}
+                      width={pageWidth}
+                      className="shadow-2xl rounded-lg overflow-hidden"
+                      renderAnnotationLayer={false}
+                    />
+                  </div>
+                ))}
+            </Document>
+          </div>
         )}
       </div>
 
-      {/* Footer: Navigation + CTA */}
+      {/* Footer: CTA */}
       {!error && !loading && (
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white/95 backdrop-blur-sm border-t border-gray-200 flex-shrink-0">
-          {/* Page nav */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <button
-              onClick={goToPrev}
-              disabled={currentPage <= 1}
-              className="p-2 text-gray-500 hover:text-forest disabled:opacity-30 disabled:cursor-not-allowed rounded-full hover:bg-forest/5 transition-colors"
-              aria-label="Previous page"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-            <span className="text-sm text-gray-600 tabular-nums">
-              {currentPage} / {numPages}
-            </span>
-            <button
-              onClick={goToNext}
-              disabled={currentPage >= numPages}
-              className="p-2 text-gray-500 hover:text-forest disabled:opacity-30 disabled:cursor-not-allowed rounded-full hover:bg-forest/5 transition-colors"
-              aria-label="Next page"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          </div>
-
-          {/* CTA */}
+          <p className="text-sm text-gray-500 hidden sm:block">
+            {numPages} pages &middot; Scroll to browse
+          </p>
           <button
             onClick={onGetPack}
-            className="bg-forest text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-forest-dark transition-colors shadow-sm"
+            className="bg-forest text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-forest-dark transition-colors shadow-sm ml-auto"
           >
             Get This Pack
           </button>

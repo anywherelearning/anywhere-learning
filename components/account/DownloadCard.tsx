@@ -11,9 +11,12 @@ interface DownloadCardProps {
 const coverClasses: Record<string, string> = {
   'ai-literacy': 'cover-ai-literacy',
   creativity: 'cover-creativity',
+  'critical-thinking': 'cover-critical-thinking',
   'life-skills': 'cover-life-skills',
+  literacy: 'cover-literacy',
   nature: 'cover-nature',
-  'real-world': 'cover-real-world',
+  'real-world-math': 'cover-real-world-math',
+  'self-management': 'cover-self-management',
   bundle: 'cover-bundle',
 };
 

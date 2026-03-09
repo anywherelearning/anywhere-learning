@@ -1,11 +1,14 @@
 // ─── Cross-sell mapping: category → recommended bundle slug ───
 // When a buyer purchases from a category, suggest a complementary bundle.
 const CROSS_SELL_MAP: Record<string, string> = {
-  'ai-literacy': 'creativity-mega-bundle',  // AI Literacy → Creativity Mega ($29.99)
-  creativity: 'real-world-mega-bundle',     // Creativity → Real-World Mega ($29.99)
-  'life-skills': 'real-world-mega-bundle',  // Life Skills → Real-World Mega ($29.99)
-  nature: 'creativity-mega-bundle',         // Nature → Creativity Mega ($29.99)
-  'real-world': 'creativity-mega-bundle',   // Real-World → Creativity Mega ($29.99)
+  'ai-literacy': 'creativity-mega-bundle',       // AI Literacy → Creativity Mega ($29.99)
+  creativity: 'real-world-mega-bundle',           // Creativity → Real-World Mega ($29.99)
+  'critical-thinking': 'creativity-mega-bundle',  // Critical Thinking → Creativity Mega ($29.99)
+  'life-skills': 'real-world-mega-bundle',        // Life Skills → Real-World Mega ($29.99)
+  literacy: 'creativity-mega-bundle',             // Literacy → Creativity Mega ($29.99)
+  nature: 'creativity-mega-bundle',               // Nature → Creativity Mega ($29.99)
+  'real-world-math': 'creativity-mega-bundle',    // Math & Money → Creativity Mega ($29.99)
+  'self-management': 'real-world-mega-bundle',    // Self-Management → Real-World Mega ($29.99)
 };
 
 /**

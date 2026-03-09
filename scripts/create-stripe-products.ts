@@ -31,7 +31,6 @@ const catalog = [
   { slug: 'land-art-challenges', name: 'Land Art Challenge Cards', priceCents: 499, description: '15 land art challenges using natural materials.' },
   { slug: 'nature-crafts', name: 'Nature Crafts for Kids', priceCents: 499, description: 'Hands-on crafting projects using natural materials.' },
   // ─── Creativity ───
-  { slug: 'creative-thinking-pack', name: 'Creative Thinking Pack', priceCents: 999, description: '20 open-ended challenges that build creative problem-solving.' },
   { slug: 'board-game-studio', name: 'Board Game Studio', priceCents: 499, description: 'Design, build, and playtest an original board game.' },
   { slug: 'rube-goldberg-machine', name: 'Rube Goldberg Machine', priceCents: 499, description: 'Build an absurdly complicated machine to do something simple.' },
   { slug: 'survival-base', name: 'Build a Survival Base', priceCents: 499, description: 'Plan and build a survival base for an imaginary expedition.' },
@@ -43,7 +42,6 @@ const catalog = [
   { slug: 'kinetic-sculpture', name: 'Kinetic Sculpture', priceCents: 499, description: 'Build a moving sculpture or art installation.' },
   { slug: 'build-a-museum', name: 'Build a Museum', priceCents: 499, description: 'Create a museum or interactive exhibit from scratch.' },
   // ─── Real-World Skills ───
-  { slug: 'kitchen-maths-cooking', name: 'Kitchen Maths & Cooking', priceCents: 999, description: '15 cooking activities that teach real maths and science.' },
   { slug: 'budget-challenge', name: 'Budget Challenge', priceCents: 499, description: '12 real-money challenges that teach budgeting.' },
   { slug: 'community-impact', name: 'Community Impact Project', priceCents: 499, description: 'Plan and run a project that helps your local community.' },
   { slug: 'kitchen-math-challenge', name: 'Kitchen Math & Meal Planning Challenge', priceCents: 499, description: 'Advanced kitchen maths and meal planning activities.' },

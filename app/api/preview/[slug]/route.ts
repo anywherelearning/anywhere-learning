@@ -22,7 +22,7 @@ export async function GET(
   // Dev: read from local filesystem
   const previewDir =
     process.env.PREVIEW_PDF_DIR ||
-    '/Users/ameliedrouin/Desktop/Anywhere Learning/Activities/Previews';
+    '/Users/ameliedrouin/Desktop/Anywhere Learning/Previews';
 
   const filePath = path.join(previewDir, fileName);
 

@@ -9,15 +9,21 @@ import {
   CompassIcon,
   CpuIcon,
   LayersIcon,
+  CalculatorIcon,
+  ClockIcon,
+  BookOpenIcon,
 } from './icons';
 
 const categories = [
   { value: '', label: 'All Packs', Icon: SparklesIcon },
   { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
   { value: 'creativity', label: 'Creativity', Icon: PaletteIcon },
+  { value: 'critical-thinking', label: 'Critical Thinking', Icon: LightbulbIcon },
   { value: 'life-skills', label: 'Life Skills', Icon: CompassIcon },
+  { value: 'literacy', label: 'Literacy', Icon: BookOpenIcon },
   { value: 'nature', label: 'Nature', Icon: LeafIcon },
-  { value: 'real-world', label: 'Real-World', Icon: LightbulbIcon },
+  { value: 'real-world-math', label: 'Math & Money', Icon: CalculatorIcon },
+  { value: 'self-management', label: 'Self-Management', Icon: ClockIcon },
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
 ];
 
@@ -25,9 +31,12 @@ const categoryActiveColors: Record<string, string> = {
   '': 'bg-forest text-cream shadow-sm',
   'ai-literacy': 'bg-[#7b88a8] text-white shadow-sm',
   creativity: 'bg-[#c47a8f] text-white shadow-sm',
+  'critical-thinking': 'bg-[#7a6da8] text-white shadow-sm',
   'life-skills': 'bg-[#6b8e8b] text-white shadow-sm',
+  literacy: 'bg-[#5b8fa8] text-white shadow-sm',
   nature: 'bg-forest text-cream shadow-sm',
-  'real-world': 'bg-[#8b7355] text-white shadow-sm',
+  'real-world-math': 'bg-[#8b7355] text-white shadow-sm',
+  'self-management': 'bg-[#b07d4b] text-white shadow-sm',
   bundle: 'bg-gold text-white shadow-sm',
 };
 

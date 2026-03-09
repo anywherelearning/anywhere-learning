@@ -18,9 +18,12 @@ interface Product {
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'text-[#7b88a8]',
   creativity: 'text-[#c47a8f]',
+  'critical-thinking': 'text-[#7a6da8]',
   'life-skills': 'text-[#6b8e8b]',
+  literacy: 'text-[#5b8fa8]',
   nature: 'text-forest',
-  'real-world': 'text-[#8b7355]',
+  'real-world-math': 'text-[#8b7355]',
+  'self-management': 'text-[#b07d4b]',
 };
 
 interface CategorySectionProps {
