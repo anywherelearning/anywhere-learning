@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import ProductCard from '@/components/shop/ProductCard';
@@ -213,17 +214,16 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 w-[40%] h-[60%] bg-[radial-gradient(ellipse_at_20%_80%,rgba(88,129,87,0.06)_0%,transparent_60%)]" />
 
           <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-16 md:py-24 lg:py-28">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
               {/* Left: Text content — punchier */}
               <div className="hero-stagger max-w-xl">
                 <p className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-5">
                   For Homeschool &amp; Worldschool Families
                 </p>
-                <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.05] text-forest mb-6">
-                  <span className="heading-underline">Meaningful</span>
-                  <br />Learning Happens
-                  <br /><span className="text-gold">Everywhere</span>
+                <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.05] mb-6">
+                  <span className="text-forest heading-underline">Meaningful Learning</span>
+                  <br /><span className="text-gold">Happens Everywhere</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-lg">
                   Stop planning. Start living. Activity guides that
@@ -255,44 +255,17 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Right: Warm lifestyle illustration */}
-              {/* TIP: Replace this entire div with <Image src="/hero.jpg" ... /> when you have a real photo */}
-              <div className="relative hidden lg:block" aria-hidden="true">
+              {/* Right: Hero photo */}
+              <div className="relative hidden lg:block">
                 <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                  {/* Warm golden-hour sky gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#f0d9b5] via-[#e8c99a] to-[#8faa8b]" />
-                  {/* Sun glow */}
-                  <div className="absolute top-[15%] right-[25%] w-24 h-24 rounded-full bg-[#f5deb3] blur-2xl opacity-80" />
-                  <div className="absolute top-[18%] right-[27%] w-14 h-14 rounded-full bg-[#faf0dc] blur-sm opacity-90" />
-                  {/* Distant hills */}
-                  <svg className="absolute bottom-0 w-full" viewBox="0 0 400 200" fill="none" preserveAspectRatio="none">
-                    <path d="M0 140 Q60 90 120 120 T240 100 T360 115 T400 105 V200 H0Z" fill="#6b8e6b" opacity="0.5"/>
-                    <path d="M0 160 Q80 120 160 145 T320 130 T400 140 V200 H0Z" fill="#588157" opacity="0.7"/>
-                    <path d="M0 175 Q50 155 120 165 T280 158 T400 170 V200 H0Z" fill="#3d5c3b" opacity="0.85"/>
-                    <path d="M0 185 Q100 175 200 180 T400 178 V200 H0Z" fill="#2d4a2b"/>
-                  </svg>
-                  {/* Simple tree silhouettes */}
-                  <svg className="absolute bottom-[15%] left-[10%] w-16 h-24" viewBox="0 0 60 90" fill="#2d4a2b">
-                    <ellipse cx="30" cy="30" rx="22" ry="28"/>
-                    <rect x="27" y="50" width="6" height="35" rx="2"/>
-                  </svg>
-                  <svg className="absolute bottom-[18%] right-[8%] w-12 h-20" viewBox="0 0 60 90" fill="#3d5c3b" opacity="0.8">
-                    <ellipse cx="30" cy="28" rx="18" ry="24"/>
-                    <rect x="27" y="46" width="6" height="35" rx="2"/>
-                  </svg>
-                  {/* Parent + child silhouette walking */}
-                  <svg className="absolute bottom-[12%] left-[35%] w-20 h-20" viewBox="0 0 80 80" fill="#2d4a2b">
-                    <circle cx="30" cy="12" r="7"/>
-                    <path d="M30 19 L30 48 M30 28 L18 38 M30 28 L42 34 M30 48 L22 68 M30 48 L38 68" stroke="#2d4a2b" strokeWidth="4" strokeLinecap="round" fill="none"/>
-                    <circle cx="55" cy="25" r="5"/>
-                    <path d="M55 30 L55 50 M55 36 L47 43 M55 36 L63 42 M55 50 L49 64 M55 50 L61 64" stroke="#2d4a2b" strokeWidth="3" strokeLinecap="round" fill="none"/>
-                    <path d="M42 34 L47 43" stroke="#2d4a2b" strokeWidth="3" strokeLinecap="round" fill="none"/>
-                  </svg>
-                  {/* Birds */}
-                  <svg className="absolute top-[22%] left-[15%]" width="30" height="12" viewBox="0 0 30 12" fill="none">
-                    <path d="M2 8 Q8 2 14 8" stroke="#5a4a3a" strokeWidth="1.2" strokeLinecap="round" opacity="0.4"/>
-                    <path d="M16 6 Q22 1 28 6" stroke="#5a4a3a" strokeWidth="1" strokeLinecap="round" opacity="0.3"/>
-                  </svg>
+                  <Image
+                    src="/hero.jpg"
+                    alt="Children exploring and learning together outdoors"
+                    fill
+                    sizes="(max-width: 1024px) 0px, 50vw"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 {/* Frame overlay */}
                 <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
