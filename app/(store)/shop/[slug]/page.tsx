@@ -319,6 +319,35 @@ export default async function ProductPage({
                   )}
                 </div>
               )}
+
+              {/* Desktop sticky buy — stays visible as customer scrolls long pages */}
+              <div className="hidden lg:block mt-4">
+                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                  <div className="flex items-center justify-between mb-3">
+                    <PriceDisplay
+                      priceCents={product.priceCents}
+                      compareAtPriceCents={product.compareAtPriceCents}
+                      size="sm"
+                    />
+                    {product.isBundle && (
+                      <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
+                        BEST VALUE
+                      </span>
+                    )}
+                  </div>
+                  <AddToCartButton
+                    stripePriceId={product.stripePriceId}
+                    slug={product.slug}
+                    productName={product.name}
+                    priceCents={product.priceCents}
+                    category={product.category}
+                    isBundle={product.isBundle ?? false}
+                  />
+                  <p className="text-xs text-gray-400 text-center mt-2">
+                    Instant download &middot; Use on any device
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Right: Copy + Purchase */}
@@ -370,8 +399,8 @@ export default async function ProductPage({
                 />
               </div>
 
-              {/* Preview Button */}
-              {hasPreview(product.slug) && (
+              {/* Preview Button — individual products only (bundles have per-pack previews below) */}
+              {!product.isBundle && hasPreview(product.slug) && (
                 <div className="mt-3">
                   <PreviewButton slug={product.slug} productName={product.name} />
                 </div>

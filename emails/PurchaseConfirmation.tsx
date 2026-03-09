@@ -41,7 +41,7 @@ export default function PurchaseConfirmation({
           </Section>
 
           <Text style={text}>
-            Print it out. Pick an activity. Start today.
+            Open it up. Pick an activity. Start today.
           </Text>
 
           <Text style={text}>

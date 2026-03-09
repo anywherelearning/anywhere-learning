@@ -27,7 +27,7 @@ const activityCards = [
     age: 'Ages 5–14',
     color: 'bg-[#c47a8f]',
     borderColor: 'border-[#c47a8f]',
-    description: 'Roll the printable story dice and build a wild story together. Each roll adds a character, setting, or plot twist.',
+    description: 'Roll the story dice and build a wild story together. Each roll adds a character, setting, or plot twist.',
     skills: ['Writing', 'Imagination', 'Collaboration'],
   },
   {

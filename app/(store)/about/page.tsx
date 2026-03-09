@@ -52,7 +52,7 @@ const values = [
     ),
     title: "No prep, no stress",
     description:
-      "Print it, pick an activity, and go. I do the thinking so you can focus on being present with your family.",
+      "Open it, pick an activity, and go. I do the thinking so you can focus on being present with your family.",
   },
   {
     icon: (

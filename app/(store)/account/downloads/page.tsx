@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "My Downloads",
-  description: "Access and download your purchased activity packs. Print and start learning anywhere.",
+  description: "Access and download your purchased activity packs. Start learning anywhere.",
   robots: { index: false, follow: false },
 };
 
@@ -24,7 +24,7 @@ export default async function DownloadsPage() {
         Your Activity Packs
       </h1>
       <p className="mt-2 text-gray-500">
-        Ready to print, pick one, and start learning.
+        Ready to open, pick one, and start learning.
       </p>
       <div className="mt-8">
         <DownloadList purchases={purchases} />

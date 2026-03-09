@@ -4,7 +4,7 @@ const items = [
   'Works with any homeschool style',
   'No curriculum needed',
   'Ages 4–14',
-  'Print and use in minutes',
+  'Download and use in minutes',
   '14-day money-back guarantee',
   'Created by a worldschool mom',
 ];

@@ -29,8 +29,9 @@
 
 ## Copy Rules
 
-- **Use:** meaningful, natural curiosity, real-world, no prep, permission, already happening, flexible, print and use, together time
+- **Use:** meaningful, natural curiosity, real-world, no prep, permission, already happening, flexible, download and use, open and follow along, use year after year, together time
 - **Avoid:** curriculum-aligned, worksheets, academic performance, accelerate learning, teacher resources, busywork
+- **Product framing:** Activities are digital guides for parents — not printables. Parents download, open on any device, and follow step-by-step. Printing is optional, never the primary experience. Every activity is reusable year after year and adjustable to different kids' abilities.
 - **CTAs:** "Get [Product]" not "Buy" — "Get" implies gaining
 - **Lead with bundles** on listings (highest AOV)
 
