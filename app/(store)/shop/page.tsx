@@ -357,7 +357,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                   "No Prep Required",
                   "Download & Use Instantly",
                   "Ages 4\u201314",
-                  "14-day refund guarantee",
+                  "48-hour refund guarantee",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-2">
                     <svg

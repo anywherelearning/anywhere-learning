@@ -69,6 +69,18 @@ export default function SiteFooter() {
               >
                 About
               </Link>
+              <Link
+                href="/faq"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/contact"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
+              >
+                Contact
+              </Link>
             </nav>
           </div>
 
@@ -109,6 +121,14 @@ export default function SiteFooter() {
           <p className="text-xs text-gray-300">
             &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.
           </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-xs text-gray-300 hover:text-forest transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-xs text-gray-300 hover:text-forest transition-colors">
+              Terms
+            </Link>
+          </div>
           <p className="font-display text-sm text-forest/40">
             Meaningful Learning, Wherever You Are
           </p>
