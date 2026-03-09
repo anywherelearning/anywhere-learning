@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 
 const PreviewModal = dynamic(() => import('./PreviewModal'), {
@@ -14,12 +14,36 @@ interface PreviewButtonProps {
   compact?: boolean;
 }
 
+/**
+ * Renders a portal container at the body level so the modal
+ * escapes any ancestor overflow-hidden / backdrop-filter.
+ */
+function BodyPortal({ children }: { children: React.ReactNode }) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const el = document.createElement('div');
+    document.body.appendChild(el);
+    containerRef.current = el;
+    setMounted(true);
+    return () => {
+      document.body.removeChild(el);
+    };
+  }, []);
+
+  if (!mounted || !containerRef.current) return null;
+
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const ReactDOM = require('react-dom') as { createPortal: (children: React.ReactNode, container: Element) => React.ReactNode };
+  return ReactDOM.createPortal(children, containerRef.current);
+}
+
 export default function PreviewButton({ slug, productName, compact }: PreviewButtonProps) {
   const [open, setOpen] = useState(false);
 
   const handleGetPack = useCallback(() => {
     setOpen(false);
-    // Scroll to the buy button
     document.getElementById('buy-button')?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
@@ -41,12 +65,14 @@ export default function PreviewButton({ slug, productName, compact }: PreviewBut
       </button>
 
       {open && (
-        <PreviewModal
-          slug={slug}
-          productName={productName}
-          onClose={() => setOpen(false)}
-          onGetPack={handleGetPack}
-        />
+        <BodyPortal>
+          <PreviewModal
+            slug={slug}
+            productName={productName}
+            onClose={() => setOpen(false)}
+            onGetPack={handleGetPack}
+          />
+        </BodyPortal>
       )}
     </>
   );
