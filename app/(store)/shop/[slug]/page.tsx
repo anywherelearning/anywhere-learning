@@ -8,18 +8,14 @@ import AddToCartButton from "@/components/shop/AddToCartButton";
 import PreviewButton from "@/components/shop/PreviewButton";
 import PriceDisplay from "@/components/shop/PriceDisplay";
 import { hasPreview } from "@/lib/preview-map";
-import TestimonialBlock from "@/components/shared/TestimonialBlock";
-import FAQSection from "@/components/shared/FAQSection";
 import ProductGrid from "@/components/shop/ProductGrid";
 import StickyMobileBuy from "@/components/shop/StickyMobileBuy";
 import BundleContents from "@/components/shop/BundleContents";
+import ProductHighlights from "@/components/shop/ProductHighlights";
+import ProductDescriptionSection from "@/components/shop/ProductDescriptionSection";
+import ProductReviews from "@/components/shop/ProductReviews";
 import {
   CategoryIcon,
-  TargetIcon,
-  ClockIcon,
-  SparklesIcon,
-  UsersIcon,
-  BookOpenIcon,
   ZapIcon,
   DeviceIcon,
   ShieldCheckIcon,
@@ -66,28 +62,6 @@ export async function generateMetadata({
   };
 }
 
-const productFAQ = [
-  {
-    question: "What age is this for?",
-    answer:
-      "Every pack includes adaptation notes for ages 4\u201314. Younger kids work with a parent; older kids work independently. The activities are designed so siblings of different ages can do them together at their own level.",
-  },
-  {
-    question: "How do I use it?",
-    answer:
-      "Open the guide. Pick an activity. Go. There\u2019s no lesson plan, no prep, and no special materials. You can do one activity a day or one a week \u2014 whatever fits your family\u2019s rhythm.",
-  },
-  {
-    question: "Can I use this with multiple kids?",
-    answer:
-      "Absolutely \u2014 every activity works for one child or five. Multi-age families love these because siblings can do the same activity at their own level. Many worldschool families use them with kids ranging from 4 to 14.",
-  },
-  {
-    question: "What if my kids don\u2019t like it?",
-    answer:
-      "We\u2019re confident they will \u2014 these activities are designed around natural curiosity, not forced learning. But if it\u2019s not the right fit, email us within 14 days for a full refund. No questions, no hassle.",
-  },
-];
 
 const categoryLabels: Record<string, string> = {
   "ai-literacy": "AI & Digital",
@@ -113,14 +87,6 @@ const coverClasses: Record<string, string> = {
   bundle: "cover-bundle",
 };
 
-const whatsInsideItems = [
-  { Icon: TargetIcon, text: "age-flexible activity cards" },
-  { Icon: ClockIcon, text: "Each takes 15\u201345 minutes" },
-  { Icon: SparklesIcon, text: "No special materials needed" },
-  { Icon: UsersIcon, text: "Works for one child or five" },
-  { Icon: BookOpenIcon, text: "Age adaptation notes included" },
-  { Icon: ZapIcon, text: "PDF guide \u2014 instant download" },
-];
 
 export default async function ProductPage({
   params,
@@ -169,13 +135,6 @@ export default async function ProductPage({
       availability: "https://schema.org/InStock",
       url: `https://anywherelearning.co/shop/${product.slug}`,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "12",
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 
   const breadcrumbLd = {
@@ -197,23 +156,6 @@ export default async function ProductPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: productFAQ.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
       />
 
       <div className="bg-cream">
@@ -382,20 +324,20 @@ export default async function ProductPage({
                 {product.shortDescription}
               </p>
 
-              {/* Star rating */}
-              <div className="mt-3 flex items-center gap-2">
-                <span className="text-gold text-lg tracking-wide">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-                <span className="text-sm text-gray-400">
-                  Loved by families everywhere
-                </span>
-              </div>
-
               <hr className="my-6 border-gray-200" />
 
+              {/* Highlights strip */}
+              <ProductHighlights
+                slug={product.slug}
+                description={product.description}
+                category={product.category}
+                activityCount={product.activityCount}
+                ageRange={product.ageRange}
+                isBundle={product.isBundle ?? false}
+              />
+
               {/* Trust badges */}
-              <div className="mt-5 grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl border border-gray-100 py-3 px-2 text-center">
                   <span aria-hidden="true"><ZapIcon className="w-5 h-5 text-forest" /></span>
                   <span className="text-xs text-gray-500 font-medium">Instant Download</span>
@@ -410,73 +352,29 @@ export default async function ProductPage({
                 </div>
               </div>
 
-              {/* Mini testimonial near CTA */}
-              <div className="mt-6 flex items-start gap-3 bg-gold-light/10 rounded-xl p-4 border border-gold/10">
-                <span className="text-gold text-sm mt-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <div>
-                  <p className="text-sm text-gray-600 italic leading-relaxed">
-                    &ldquo;My kids asked to do activities every single day. That has never happened before.&rdquo;
-                  </p>
-                  <p className="text-xs text-gray-400 mt-1">&mdash; Sarah M., Tennessee</p>
-                </div>
-              </div>
-
               <hr className="my-8 border-gray-200" />
 
-              {/* What's Inside — visual grid */}
-              <div className="mb-8">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  What&apos;s Inside
-                </h2>
-                {product.isBundle ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {[
-                      { Icon: UsersIcon, text: `${product.activityCount || 'Multiple'} activities across all packs` },
-                      { Icon: BookOpenIcon, text: 'Every pack includes age adaptation notes' },
-                      { Icon: SparklesIcon, text: 'No special materials needed' },
-                      { Icon: ZapIcon, text: 'Instant download — one purchase' },
-                      { Icon: TargetIcon, text: 'Works for ages 4–14' },
-                      { Icon: DeviceIcon, text: 'Open on any device' },
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
-                        <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {whatsInsideItems.map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-100 hover:border-forest/20 hover:shadow-sm transition-all">
-                        <item.Icon className="w-5 h-5 text-forest flex-shrink-0" />
-                        <span className="text-sm text-gray-700">
-                          {i === 0 && product.activityCount
-                            ? `${product.activityCount} ${item.text}`
-                            : item.text}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Full Description */}
-              <div className="prose prose-gray max-w-none mb-8">
-                <p className="text-gray-700 leading-relaxed">
-                  {product.description}
-                </p>
-              </div>
+              {/* Rich Description */}
+              <ProductDescriptionSection
+                slug={product.slug}
+                description={product.description}
+                category={product.category}
+                activityCount={product.activityCount}
+                isBundle={product.isBundle ?? false}
+              />
 
               {/* Bundle: Included Products */}
               {product.isBundle && (
-                <BundleContents
-                  bundleSlug={product.slug}
-                  bundlePriceCents={product.priceCents}
-                />
+                <div className="mt-8">
+                  <BundleContents
+                    bundleSlug={product.slug}
+                    bundlePriceCents={product.priceCents}
+                  />
+                </div>
               )}
 
               {/* Philosophy Badges */}
-              <div className="bg-gold-light/10 rounded-2xl p-6 mb-8">
+              <div className="bg-gold-light/10 rounded-2xl p-6 my-8">
                 <p className="text-sm text-gray-500 mb-3">
                   Works beautifully with:
                 </p>
@@ -505,35 +403,8 @@ export default async function ProductPage({
                 </div>
               </div>
 
-              {/* Testimonials */}
-              <div className="mb-8">
-                <TestimonialBlock
-                  testimonials={[
-                    {
-                      quote:
-                        "My kids asked to do activities every single day. That\u2019s never happened before.",
-                      name: "Sarah",
-                      location:
-                        "Tennessee \u00b7 homeschool of 3",
-                    },
-                    {
-                      quote:
-                        "We took these on our road trip and the kids were engaged the entire drive.",
-                      name: "Mia",
-                      location:
-                        "Colorado \u00b7 worldschool family of 4",
-                    },
-                  ]}
-                />
-              </div>
-
-              {/* FAQ */}
-              <div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Common Questions
-                </h2>
-                <FAQSection items={productFAQ} />
-              </div>
+              {/* Reviews */}
+              <ProductReviews productName={product.name} />
             </div>
           </div>
         </section>
