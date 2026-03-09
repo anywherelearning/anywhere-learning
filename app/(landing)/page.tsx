@@ -136,7 +136,7 @@ const faqItems = [
   {
     question: 'What if my kids don\u2019t like it?',
     answer:
-      'We\u2019re confident they will, but if not, email us within 14 days for a full refund. No questions asked.',
+      'We\u2019re confident they will, but if not, email us at info@anywherelearning.co within 48 hours of purchase for a full refund. No questions asked.',
   },
   {
     question: 'How is this different from free printables I can find online?',
@@ -153,8 +153,8 @@ const faqItems = [
 const counterStats = [
   { end: 220, suffix: '+', label: 'Activities', duration: 2200 },
   { end: 500, suffix: '+', label: 'Families', duration: 2500 },
-  { end: 7, suffix: '', label: 'Categories', duration: 1800 },
-  { end: 14, suffix: '-day', label: 'Guarantee', duration: 1600 },
+  { end: 9, suffix: '', label: 'Categories', duration: 1800 },
+  { end: 48, suffix: '-hr', label: 'Guarantee', duration: 1600 },
 ];
 
 const organizationLd = {
@@ -752,7 +752,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-8 text-cream/40 text-sm">
-                14-day money-back guarantee &middot; Instant download &middot; Use year after year
+                48-hour money-back guarantee &middot; Instant download &middot; Use year after year
               </p>
               <p className="mt-3 text-cream/25 text-xs">
                 Most popular this month: Master Bundle

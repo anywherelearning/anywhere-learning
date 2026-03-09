@@ -5,7 +5,7 @@ const items = [
   'No curriculum needed',
   'Ages 4–14',
   'Download and use in minutes',
-  '14-day money-back guarantee',
+  '48-hour money-back guarantee',
   'Created by a worldschool mom',
 ];
 
