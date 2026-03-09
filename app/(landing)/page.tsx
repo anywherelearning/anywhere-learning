@@ -265,6 +265,40 @@ export default function HomePage() {
         <SocialProofTicker />
 
         {/* ═══════════════════════════════════════════
+            PAIN POINTS — Compact emotional hook
+        ═══════════════════════════════════════════ */}
+        <section className="bg-forest-section py-14 md:py-16 relative overflow-hidden">
+          <div className="absolute top-6 right-[10%] w-48 h-48 rounded-full border border-white/[0.04]" aria-hidden="true" />
+          <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
+            <ScrollReveal>
+              <div className="grid sm:grid-cols-3 gap-8 md:gap-12 text-center sm:text-left">
+                <div>
+                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
+                    200 Pinterest boards saved.
+                  </h3>
+                  <p className="text-cream/40 text-sm">Still no plan for Monday.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
+                    The worksheets get done.
+                  </h3>
+                  <p className="text-cream/40 text-sm">But nobody&apos;s excited.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
+                    Sunday night lesson prep
+                  </h3>
+                  <p className="text-cream/40 text-sm">became a second job.</p>
+                </div>
+              </div>
+              <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
+                What if the learning was already happening &mdash; and you just needed a way to see it?
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             PRODUCT SHOWCASE
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
