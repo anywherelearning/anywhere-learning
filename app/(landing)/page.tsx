@@ -206,18 +206,24 @@ export default function HomePage() {
         {/* ═══════════════════════════════════════════
             HERO — Punchy, warm, direct
         ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden">
-          {/* Warm golden-hour gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cream via-[#f7f0e4] to-[#f0ead8]" />
-          {/* Subtle warm light glow */}
-          <div className="absolute top-0 right-0 w-[60%] h-full bg-[radial-gradient(ellipse_at_70%_30%,rgba(212,163,115,0.15)_0%,transparent_60%)]" />
-          <div className="absolute bottom-0 left-0 w-[40%] h-[60%] bg-[radial-gradient(ellipse_at_20%_80%,rgba(88,129,87,0.06)_0%,transparent_60%)]" />
+        <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
+          {/* Full-bleed background image */}
+          <Image
+            src="/hero.jpg"
+            alt="Children exploring and learning together outdoors"
+            fill
+            sizes="100vw"
+            className="object-cover object-bottom"
+            priority
+          />
+          {/* Gradient overlay — heavier on the left for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/30 lg:from-cream/95 lg:via-cream/70 lg:to-transparent" />
+          {/* Bottom fade to cream */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
 
-          <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-16 md:py-24 lg:py-28">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-
-              {/* Left: Text content — punchier */}
-              <div className="hero-stagger max-w-xl">
+          <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-12 md:py-16 lg:py-20">
+            <div className="max-w-xl lg:max-w-2xl">
+              <div className="hero-stagger">
                 <p className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-5">
                   For Homeschool &amp; Worldschool Families
                 </p>
@@ -225,7 +231,7 @@ export default function HomePage() {
                   <span className="text-forest heading-underline">Meaningful Learning</span>
                   <br /><span className="text-gold">Happens Everywhere</span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-lg">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
                   Stop planning. Start living. Activity guides that
                   turn your everyday life into the richest education your
                   kids will ever get.
@@ -239,13 +245,13 @@ export default function HomePage() {
                   </Link>
                   <Link
                     href="/free-guide"
-                    className="inline-flex items-center justify-center border-2 border-forest/20 hover:border-forest/40 text-forest font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:bg-forest/[0.04] text-lg"
+                    className="inline-flex items-center justify-center border-2 border-forest/30 hover:border-forest/50 text-forest font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:bg-forest/[0.06] text-lg backdrop-blur-sm"
                   >
                     Free Guide &rarr;
                   </Link>
                 </div>
                 {/* Micro social proof */}
-                <p className="mt-6 text-sm text-gray-400 flex items-center gap-2">
+                <p className="mt-6 text-sm text-gray-500 flex items-center gap-2">
                   <span className="flex -space-x-1.5">
                     {['#8faa8b', '#d4a373', '#c4836a', '#588157'].map((c, i) => (
                       <span key={i} className="w-6 h-6 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
@@ -253,22 +259,6 @@ export default function HomePage() {
                   </span>
                   Trusted by 500+ families worldwide
                 </p>
-              </div>
-
-              {/* Right: Hero photo */}
-              <div className="relative hidden lg:block">
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/hero.jpg"
-                    alt="Children exploring and learning together outdoors"
-                    fill
-                    sizes="(max-width: 1024px) 0px, 50vw"
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                {/* Frame overlay */}
-                <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
               </div>
             </div>
           </div>
