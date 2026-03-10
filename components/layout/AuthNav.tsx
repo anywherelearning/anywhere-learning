@@ -22,11 +22,11 @@ export default function AuthNav({ onLinkClick }: { onLinkClick?: () => void }) {
     <>
       <SignedIn>
         <Link
-          href="/account/downloads"
+          href="/account"
           onClick={onLinkClick}
           className="text-sm font-medium text-gray-700 transition-colors hover:text-forest"
         >
-          My Downloads
+          My Account
         </Link>
         <UserButton afterSignOutUrl="/" />
       </SignedIn>

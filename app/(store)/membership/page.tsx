@@ -95,8 +95,9 @@ export default async function MembershipPage({
         if (isMember) redirect('/account/library');
       }
     }
-  } catch {
-    // Auth may not be configured — continue showing page
+  } catch (e) {
+    // Re-throw Next.js redirects — only swallow auth errors
+    if (e && typeof e === 'object' && 'digest' in e) throw e;
   }
 
   const { expired } = await searchParams;
