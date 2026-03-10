@@ -25,8 +25,8 @@ const featuredProducts = [
     slug: 'seasonal-bundle',
     shortDescription:
       'All 4 seasonal packs — 80 outdoor activities for every time of year.',
-    priceCents: 4999,
-    compareAtPriceCents: 2995,
+    priceCents: 3999,
+    compareAtPriceCents: 5196,
     imageUrl: '/products/four-seasons-bundle.jpg',
     category: 'bundle',
     isBundle: true,
@@ -77,8 +77,8 @@ const featuredProducts = [
     slug: 'nature-art-bundle',
     shortDescription:
       'Land Art + Nature Crafts + Nature Journal — turn the outdoors into an art studio.',
-    priceCents: 2999,
-    compareAtPriceCents: 1497,
+    priceCents: 1499,
+    compareAtPriceCents: 2097,
     imageUrl: '/products/nature-art-bundle.jpg',
     category: 'bundle',
     isBundle: true,
@@ -90,8 +90,8 @@ const featuredProducts = [
     slug: 'outdoor-toolkit-bundle',
     shortDescription:
       'Nature Walk Cards + Missions + STEM Challenges + Choice Boards — your complete outdoor toolkit.',
-    priceCents: 2999,
-    compareAtPriceCents: 1996,
+    priceCents: 1999,
+    compareAtPriceCents: 2796,
     imageUrl: '/products/outdoor-toolkit-bundle.jpg',
     category: 'bundle',
     isBundle: true,
@@ -249,7 +249,7 @@ export default function HomePage() {
                       <span key={i} className="w-6 h-6 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
                     ))}
                   </span>
-                  Trusted by 500+ families worldwide
+                  Joined by families in 10+ countries
                 </p>
               </div>
             </div>
@@ -483,16 +483,15 @@ export default function HomePage() {
         <section className="bg-cream py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <div className="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
-              {/* Photo placeholder — replace with real headshot */}
               <ScrollReveal direction="left">
                 <div className="relative mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
-                  {/* TIP: Replace this with <Image src="/amelie.jpg" ... /> */}
-                  <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#e8d5bc] via-[#d4b896] to-[#c4a07a] flex items-center justify-center shadow-xl overflow-hidden">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" className="text-white/40">
-                      <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.5"/>
-                      <path d="M5 20C5 16.134 8.134 13 12 13C15.866 13 19 16.134 19 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
+                  <Image
+                    src="/amelie.jpg"
+                    alt="Amelie and her kids on a mountain hike"
+                    fill
+                    sizes="(max-width: 768px) 192px, 256px"
+                    className="object-cover rounded-3xl shadow-xl"
+                  />
                   <div className="absolute -bottom-2 -right-2 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
                 </div>
               </ScrollReveal>
@@ -508,17 +507,19 @@ export default function HomePage() {
                   </h2>
                   <div className="space-y-4 text-gray-500 text-lg leading-relaxed">
                     <p>
-                      I&apos;m a worldschooling mom who got tired of choosing between
-                      a rigid curriculum that killed curiosity and &ldquo;free play&rdquo;
-                      days where I secretly worried they weren&apos;t learning anything.
+                      I spent years working in schools &mdash; and I loved it. But
+                      over time, I couldn&apos;t ignore what I was seeing. The system
+                      wasn&apos;t keeping up. The curriculum wasn&apos;t getting kids
+                      ready for the world they&apos;d actually grow up in.
                     </p>
                     <p>
-                      So I made the activity cards I wished existed &mdash; things that
-                      feel like play but build real skills. Cooking, exploring, creating,
-                      questioning. No prep. No guilt. Just connection.
+                      When it came time to choose for my own kids, I chose
+                      something different. I built the kind of learning I wished
+                      the system offered &mdash; real-world, hands-on, no busywork.
+                      Things that feel like play but build real skills.
                     </p>
                     <p className="text-forest font-semibold">
-                      These packs are what I wish I&apos;d had from day one. Now your family can have them too.
+                      These activity packs are what came out of that leap. Now your family can have them too.
                     </p>
                   </div>
                 </div>
@@ -566,7 +567,7 @@ export default function HomePage() {
                     <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
                   ))}
                 </span>
-                Join 500+ families learning differently
+                Join families learning differently
               </p>
             </ScrollReveal>
           </div>
@@ -606,7 +607,7 @@ export default function HomePage() {
                 48-hour money-back guarantee &middot; Instant download &middot; Use year after year
               </p>
               <p className="mt-3 text-cream/25 text-xs">
-                Most popular this month: Master Bundle
+                Most families start with a bundle
               </p>
             </ScrollReveal>
           </div>
