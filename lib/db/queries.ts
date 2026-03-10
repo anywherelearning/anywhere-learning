@@ -1,6 +1,6 @@
 import { db } from './index';
-import { products, orders, users, reviews } from './schema';
-import { eq, and, desc, ne, avg, count } from 'drizzle-orm';
+import { products, orders, users, reviews, subscriptions } from './schema';
+import { eq, and, desc, ne, avg, count, gt } from 'drizzle-orm';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -105,4 +105,29 @@ export async function hasUserPurchasedProduct(userId: string, productId: string)
     ))
     .limit(1);
   return result.length > 0;
+}
+
+// ─── Subscriptions / Membership ─────────────────────────────────────
+
+export async function getActiveSubscription(userId: string) {
+  const result = await db.select().from(subscriptions)
+    .where(and(
+      eq(subscriptions.userId, userId),
+      eq(subscriptions.status, 'active'),
+      gt(subscriptions.currentPeriodEnd, new Date()),
+    ))
+    .limit(1);
+  return result[0] || null;
+}
+
+export async function hasActiveMembership(userId: string): Promise<boolean> {
+  const sub = await getActiveSubscription(userId);
+  return sub !== null;
+}
+
+export async function getSubscriptionByStripeId(stripeSubscriptionId: string) {
+  const result = await db.select().from(subscriptions)
+    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId))
+    .limit(1);
+  return result[0] || null;
 }

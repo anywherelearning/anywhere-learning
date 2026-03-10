@@ -318,6 +318,14 @@ export default async function ProductPage({
                   <p className="text-xs text-gray-400 text-center mt-2">
                     Instant download &middot; Use on any device
                   </p>
+                  <div className="mt-3 pt-3 border-t border-gray-100 text-center">
+                    <Link
+                      href="/membership"
+                      className="text-xs text-forest/70 hover:text-forest transition-colors"
+                    >
+                      Or access everything with a membership &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

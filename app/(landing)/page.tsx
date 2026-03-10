@@ -478,6 +478,38 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            MEMBERSHIP PITCH — Access everything
+        ═══════════════════════════════════════════ */}
+        <section className="bg-forest-section py-16 md:py-20 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-white/[0.04]" aria-hidden="true" />
+          <div className="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <p className="text-sm font-semibold text-gold-light uppercase tracking-[0.2em] mb-4">
+                Membership
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-cream mb-4 text-balance">
+                Get access to everything.
+              </h2>
+              <p className="text-lg text-cream/70 mb-8 max-w-xl mx-auto leading-relaxed">
+                One membership. Every activity pack in the library &mdash; plus everything new we add.
+                Open and use on any device, anytime.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/membership"
+                  className="rounded-2xl bg-gold px-8 py-3.5 text-lg font-semibold text-white transition-all hover:bg-gold/90 hover:shadow-md"
+                >
+                  Learn More
+                </Link>
+                <span className="text-cream/50 text-sm">
+                  From $12.49/mo &middot; Cancel anytime
+                </span>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             MEET THE MAKER — Personal brand
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">

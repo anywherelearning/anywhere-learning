@@ -46,6 +46,12 @@ export default function SiteFooter() {
                 Bundles
               </Link>
               <Link
+                href="/membership"
+                className="block text-sm text-gray-400 transition-colors hover:text-forest"
+              >
+                Membership
+              </Link>
+              <Link
                 href="/account/downloads"
                 className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >

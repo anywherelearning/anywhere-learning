@@ -1,9 +1,10 @@
-import { pgTable, uuid, text, integer, boolean, timestamp, index } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, text, integer, boolean, timestamp, index, uniqueIndex } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
   id: uuid('id').defaultRandom().primaryKey(),
   clerkId: text('clerk_id').notNull().unique(),
   email: text('email').notNull(),
+  stripeCustomerId: text('stripe_customer_id'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
@@ -65,4 +66,21 @@ export const reviews = pgTable('reviews', {
 }, (table) => [
   index('idx_reviews_product').on(table.productId),
   index('idx_reviews_user_product').on(table.userId, table.productId),
+]);
+
+export const subscriptions = pgTable('subscriptions', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id).notNull(),
+  stripeCustomerId: text('stripe_customer_id').notNull(),
+  stripeSubscriptionId: text('stripe_subscription_id').notNull(),
+  stripePriceId: text('stripe_price_id').notNull(),
+  status: text('status').notNull(), // 'active' | 'canceled' | 'past_due' | 'incomplete'
+  currentPeriodEnd: timestamp('current_period_end').notNull(),
+  cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_subscriptions_user_status').on(table.userId, table.status),
+  uniqueIndex('idx_subscriptions_stripe_sub').on(table.stripeSubscriptionId),
+  index('idx_subscriptions_stripe_customer').on(table.stripeCustomerId),
 ]);
