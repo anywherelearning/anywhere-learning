@@ -8,15 +8,15 @@ let _redis: Redis | null | undefined;
 
 function getRedis(): Redis | null {
   if (_redis !== undefined) return _redis;
-  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  // Support both Vercel KV naming (KV_REST_API_*) and standard Upstash naming
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  if (!url || !token) {
     console.warn('Upstash Redis env vars not set — rate limiting disabled');
     _redis = null;
     return null;
   }
-  _redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL,
-    token: process.env.UPSTASH_REDIS_REST_TOKEN,
-  });
+  _redis = new Redis({ url, token });
   return _redis;
 }
 
