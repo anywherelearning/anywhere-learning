@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
         quantity: 1,
       })),
       customer_creation: 'always',
-      success_url: `${origin}/account/downloads?success=true`,
+      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/shop`,
       metadata: {
         product_slugs: verifiedSlugs.join(','),

@@ -60,12 +60,7 @@ const SEASON_LABELS: Record<string, string> = {
 
 // ── Page ──
 
-interface PageProps {
-  searchParams: Promise<{ success?: string }>;
-}
-
-export default async function DownloadsPage({ searchParams }: PageProps) {
-  const { success } = await searchParams;
+export default async function DownloadsPage() {
   const { userId: clerkId } = await auth();
   if (!clerkId) redirect("/sign-in");
 
@@ -117,47 +112,10 @@ export default async function DownloadsPage({ searchParams }: PageProps) {
       getNewProducts(purchasedProductIds).catch(() => []),
     ]);
 
-  const isPostPurchase = success === "true";
   const packCount = purchases.length;
-
-  // Find the most recently purchased product name for the success banner
-  const latestProduct = purchases[0]?.product;
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
-      {/* ── Post-purchase success banner ── */}
-      {isPostPurchase && latestProduct && (
-        <div className="bg-forest/5 border border-forest/15 rounded-2xl p-5 sm:p-6 mb-8 animate-in fade-in slide-in-from-top-2 duration-500">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
-              <svg
-                className="w-5 h-5 text-forest"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-            </div>
-            <div>
-              <h2 className="font-semibold text-forest text-lg">
-                You&apos;re all set!
-              </h2>
-              <p className="text-gray-600 mt-1 text-sm leading-relaxed">
-                <strong>{latestProduct.name}</strong> is ready to download.
-                Open it on your phone or tablet, pick an activity, and try it
-                today.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* ── Member banner ── */}
       {isMember && (
         <Link
