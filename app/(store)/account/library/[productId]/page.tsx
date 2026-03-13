@@ -6,18 +6,7 @@ import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { checkProductAccess } from '@/lib/access';
-import nextDynamic from 'next/dynamic';
-
-// Dynamic import — react-pdf requires client-side rendering
-const PDFViewer = nextDynamic(() => import('@/components/account/PDFViewer'), {
-  ssr: false,
-  loading: () => (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] gap-3">
-      <div className="w-8 h-8 border-2 border-forest/30 border-t-forest rounded-full animate-spin" />
-      <p className="text-gray-400 text-sm">Loading viewer&hellip;</p>
-    </div>
-  ),
-});
+import PDFViewer from '@/components/account/PDFViewerLoader';
 
 export const dynamic = 'force-dynamic';
 
