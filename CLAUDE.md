@@ -85,7 +85,33 @@ Phase 1 (MVP Store) in progress:
 - [x] Shop pages redesign (category theming, SVG icons, animations, sticky mobile buy bar)
 - [x] Lighthouse/SEO audit fixes (font swap, server components, aria-labels, structured data)
 - [x] Pinterest Business account setup
+- [x] Security hardening (rate limiting, CSP headers, input validation, honeypot, origin fix)
+- [x] Post-purchase confirmation page (`/checkout/success`)
+- [x] Checkout error feedback (inline error banners)
+- [x] Cart bundle upsell (upgrade + savings frames)
+- [x] Cart email capture for abandonment recovery (ConvertKit `cart-abandoner` tag)
 - [ ] Set up Clerk project
 - [ ] Google Search Console + GA4
 - [ ] Deploy to Vercel + set up production Stripe webhook
 - [ ] Upload PDFs to Vercel Blob
+
+## Pre-Launch Checklist
+
+These must be done before going live:
+
+1. **Set `NEXT_PUBLIC_URL` in Vercel** — without this, checkout success/cancel redirects go to `localhost:3000`
+2. **Register the production Stripe webhook** — in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
+3. **Set `STRIPE_WEBHOOK_SECRET` in Vercel** — use the signing secret from step 2 (starts with `whsec_`)
+4. **Switch to live Stripe keys** — replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
+5. **Upload PDFs to Vercel Blob** — product files for the download endpoint
+6. **Set up Clerk project** — configure Clerk for production (custom domain, social logins)
+7. **Connect custom domain** in Vercel project settings
+8. **Google Search Console + GA4** — verify site, submit sitemap
+9. **Clean up test orders** in Neon database before launch
+10. **ConvertKit cart-abandonment automation** — in Kit UI:
+    - Create automation: trigger = subscriber receives tag `cart-abandoner`
+    - Add wait step: 1 hour
+    - Add condition: subscriber does NOT have tag `buyer`
+    - Send recovery email (warm, on-brand: "Still thinking it over? Your cart is waiting...")
+    - Optional: second email at 24 hours with different angle
+    - Tags `cart-abandoner` and `buyer` are auto-created by the app — no manual tag setup needed

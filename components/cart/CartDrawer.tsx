@@ -128,21 +128,42 @@ export default function CartDrawer() {
   const upsell: BundleUpsell | null = getBundleUpsell(items);
   const showUpsell = upsell && upsell.bundle.slug !== dismissedUpsell;
 
-  function handleBundleSwap(suggestion: BundleUpsell) {
-    // Remove the individual packs that the bundle replaces
-    for (const slug of suggestion.matchingSlugs) {
-      removeItem(slug);
+  const [swappingBundle, setSwappingBundle] = useState(false);
+
+  async function handleBundleSwap(suggestion: BundleUpsell) {
+    setSwappingBundle(true);
+    try {
+      // Fetch real product data from DB (BUNDLE_DATA has empty stripePriceId)
+      const res = await fetch(`/api/products/lookup?slug=${encodeURIComponent(suggestion.bundle.slug)}`);
+      if (!res.ok) {
+        console.error('Bundle lookup failed:', res.status);
+        return;
+      }
+      const product = await res.json();
+      if (!product.stripePriceId) {
+        console.error('Bundle has no stripePriceId:', suggestion.bundle.slug);
+        return;
+      }
+
+      // Remove the individual packs that the bundle replaces
+      for (const slug of suggestion.matchingSlugs) {
+        removeItem(slug);
+      }
+      // Add the bundle with real DB data (including valid stripePriceId)
+      addItem({
+        slug: product.slug,
+        name: product.name,
+        priceCents: product.priceCents,
+        stripePriceId: product.stripePriceId,
+        category: product.category,
+        isBundle: product.isBundle,
+        imageUrl: product.imageUrl,
+      });
+    } catch (error) {
+      console.error('Bundle swap error:', error);
+    } finally {
+      setSwappingBundle(false);
     }
-    // Add the bundle
-    addItem({
-      slug: suggestion.bundle.slug,
-      name: suggestion.bundle.name,
-      priceCents: suggestion.bundle.priceCents,
-      stripePriceId: suggestion.bundle.stripePriceId,
-      category: suggestion.bundle.category,
-      isBundle: true,
-      imageUrl: suggestion.bundle.imageUrl,
-    });
   }
 
   if (!isCartOpen) return null;
@@ -313,9 +334,10 @@ export default function CartDrawer() {
 
               <button
                 onClick={() => handleBundleSwap(upsell)}
-                className="w-full bg-forest hover:bg-forest-dark text-cream text-sm font-semibold py-2.5 rounded-xl transition-colors"
+                disabled={swappingBundle}
+                className="w-full bg-forest hover:bg-forest-dark text-cream text-sm font-semibold py-2.5 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Get the Bundle Instead
+                {swappingBundle ? 'Switching to bundle...' : 'Get the Bundle Instead'}
               </button>
             </div>
           )}
