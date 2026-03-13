@@ -39,10 +39,26 @@ export async function getUserByClerkId(clerkId: string) {
   return result[0] || null;
 }
 
-export async function getUserPurchases(clerkId: string) {
-  const user = await db.select().from(users)
+export async function getUserPurchases(clerkId: string, email?: string) {
+  let user = await db.select().from(users)
     .where(eq(users.clerkId, clerkId))
     .limit(1);
+
+  // If no user found by clerkId but we have an email, check for a pending user
+  // created by the Stripe webhook (before the user ever signed in with Clerk)
+  if (user.length === 0 && email) {
+    const pendingUser = await db.select().from(users)
+      .where(eq(users.email, email))
+      .limit(1);
+
+    if (pendingUser.length > 0 && pendingUser[0].clerkId.startsWith('pending_')) {
+      // Link this Clerk account to the existing user
+      await db.update(users)
+        .set({ clerkId })
+        .where(eq(users.id, pendingUser[0].id));
+      user = [{ ...pendingUser[0], clerkId }];
+    }
+  }
 
   if (user.length === 0) return [];
 

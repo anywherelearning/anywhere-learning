@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { auth } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getUserPurchases, getUserByClerkId, hasActiveMembership } from "@/lib/db/queries";
@@ -17,7 +17,11 @@ export default async function DownloadsPage() {
   const { userId: clerkId } = await auth();
   if (!clerkId) redirect("/sign-in");
 
-  const purchases = await getUserPurchases(clerkId);
+  // Get email from Clerk to link pending webhook-created users
+  const clerkUser = await currentUser();
+  const email = clerkUser?.emailAddresses?.[0]?.emailAddress;
+
+  const purchases = await getUserPurchases(clerkId, email);
 
   // Check membership for banner
   let isMember = false;
