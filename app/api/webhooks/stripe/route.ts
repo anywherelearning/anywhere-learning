@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { orders, users, products, subscriptions } from '@/lib/db/schema';
-import { eq, inArray } from 'drizzle-orm';
+import { eq, and, inArray } from 'drizzle-orm';
 import { sendPurchaseEmail, sendMembershipWelcomeEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
 import { getSubscriptionByStripeId } from '@/lib/db/queries';
@@ -374,8 +374,47 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       }
     }
 
+    // ── Auto-grant Future-Ready Skills Map with any bundle purchase ──
+    if (hasBundles) {
+      try {
+        const skillsMap = await db
+          .select()
+          .from(products)
+          .where(eq(products.slug, 'future-ready-skills-map'))
+          .limit(1);
+
+        if (skillsMap.length > 0) {
+          // Check if user already owns the Skills Map
+          const existingSkillsMap = await db
+            .select({ id: orders.id })
+            .from(orders)
+            .where(
+              and(
+                eq(orders.userId, user[0].id),
+                eq(orders.productId, skillsMap[0].id),
+                eq(orders.status, 'completed'),
+              ),
+            )
+            .limit(1);
+
+          if (existingSkillsMap.length === 0) {
+            await db.insert(orders).values({
+              userId: user[0].id,
+              productId: skillsMap[0].id,
+              stripeSessionId,
+              amountCents: 0,
+              status: 'completed',
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Failed to auto-grant Skills Map:', error);
+      }
+    }
+
     // Post-transaction: send email with all product names (non-critical)
-    const productNames = purchasedProducts.map((p) => p.name).join(', ');
+    const skillsMapBonus = hasBundles ? ' + The Future-Ready Skills Map (FREE bonus!)' : '';
+    const productNames = purchasedProducts.map((p) => p.name).join(', ') + skillsMapBonus;
     try {
       await sendPurchaseEmail({
         to: customerEmail,
