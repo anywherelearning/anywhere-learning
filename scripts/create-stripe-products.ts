@@ -69,6 +69,14 @@ const catalog = [
   { slug: 'time-capsule', name: 'Time Capsule', priceCents: 499, description: 'Create a meaningful time capsule project.' },
 ];
 
+// Slugs where the image filename doesn't match {slug}.jpg
+const imageOverrides: Record<string, string> = {
+  'seasonal-bundle': 'four-seasons-bundle.jpg',
+  'creativity-mega-bundle': 'mega-bundle-creativity.jpg',
+  'real-world-mega-bundle': 'mega-bundle-real-world.jpg',
+  'ai-digital-bundle': 'mega-bundle-ai-digital.jpg',
+};
+
 async function createStripeProducts() {
   const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
   console.log(`Creating ${catalog.length} products in Stripe...\n`);
@@ -83,14 +91,16 @@ async function createStripeProducts() {
 
     let productId: string;
 
-    const imageUrl = `${siteUrl}/products/${item.slug}.jpg`;
+    const imageFile = imageOverrides[item.slug] || `${item.slug}.jpg`;
+    const imageUrl = `${siteUrl}/products/${imageFile}`;
 
     if (existing.data.length > 0) {
       productId = existing.data[0].id;
-      // Update image if missing
-      if (!existing.data[0].images || existing.data[0].images.length === 0) {
+      // Update image if missing or different
+      const currentImage = existing.data[0].images?.[0];
+      if (currentImage !== imageUrl) {
         await stripe.products.update(productId, { images: [imageUrl] });
-        console.log(`  updated ${item.name} (${productId}) — added image`);
+        console.log(`  updated ${item.name} (${productId}) — set image`);
       } else {
         console.log(`  exists  ${item.name} (${productId})`);
       }
