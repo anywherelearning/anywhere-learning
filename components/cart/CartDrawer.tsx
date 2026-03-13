@@ -5,12 +5,14 @@ import Link from 'next/link';
 import { useCart } from './CartProvider';
 import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
-import { getBundleOverlaps } from '@/lib/cart';
+import { getBundleOverlaps, getBundleUpsell } from '@/lib/cart';
+import type { BundleUpsell } from '@/lib/cart';
 
 export default function CartDrawer() {
-  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem } = useCart();
+  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Lock body scroll when open
@@ -85,6 +87,27 @@ export default function CartDrawer() {
       if (overlapping.length === 0) return [];
       return [{ bundleName: bundle.name, overlapping }];
     });
+
+  // Bundle upsell suggestion
+  const upsell: BundleUpsell | null = getBundleUpsell(items);
+  const showUpsell = upsell && upsell.bundle.slug !== dismissedUpsell;
+
+  function handleBundleSwap(suggestion: BundleUpsell) {
+    // Remove the individual packs that the bundle replaces
+    for (const slug of suggestion.matchingSlugs) {
+      removeItem(slug);
+    }
+    // Add the bundle
+    addItem({
+      slug: suggestion.bundle.slug,
+      name: suggestion.bundle.name,
+      priceCents: suggestion.bundle.priceCents,
+      stripePriceId: suggestion.bundle.stripePriceId,
+      category: suggestion.bundle.category,
+      isBundle: true,
+      imageUrl: suggestion.bundle.imageUrl,
+    });
+  }
 
   if (!isCartOpen) return null;
 
@@ -182,6 +205,55 @@ export default function CartDrawer() {
                   You can remove {overlapping.length === 1 ? 'it' : 'them'} to avoid paying twice.
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* Bundle upsell suggestion */}
+          {showUpsell && upsell && (
+            <div className="mt-4 bg-forest/5 border border-forest/15 rounded-2xl p-4 animate-fade-in-up">
+              <div className="flex items-start justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                  </svg>
+                  <span className="text-sm font-semibold text-forest">Bundle & save</span>
+                </div>
+                <button
+                  onClick={() => setDismissedUpsell(upsell.bundle.slug)}
+                  className="text-gray-300 hover:text-gray-400 transition-colors p-0.5"
+                  aria-label="Dismiss suggestion"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                    <line x1="6" y1="18" x2="18" y2="6" />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                You have {upsell.matchingSlugs.length} packs from the{' '}
+                <span className="font-medium">{upsell.bundle.name}</span>.
+                Get the full bundle and save{' '}
+                <span className="font-semibold text-forest">{formatPrice(upsell.savingsCents)}</span>.
+              </p>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-gray-400 line-through">
+                    {formatPrice(upsell.individualTotal)}
+                  </span>
+                  <span className="text-sm font-semibold text-forest">
+                    {formatPrice(upsell.bundle.priceCents)}
+                  </span>
+                </div>
+                <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
+                  Save {formatPrice(upsell.savingsCents)}
+                </span>
+              </div>
+              <button
+                onClick={() => handleBundleSwap(upsell)}
+                className="w-full bg-forest hover:bg-forest-dark text-cream text-sm font-semibold py-2.5 rounded-xl transition-colors"
+              >
+                Get the Bundle Instead
+              </button>
             </div>
           )}
         </div>
