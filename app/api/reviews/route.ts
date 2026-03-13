@@ -4,9 +4,14 @@ import { revalidatePath } from 'next/cache';
 import { db } from '@/lib/db';
 import { reviews, orders, users } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit: 10 requests per 60 seconds
+    const limited = await checkRateLimit(req, standardLimiter());
+    if (limited) return limited;
+
     const { userId: clerkId } = await auth();
     if (!clerkId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

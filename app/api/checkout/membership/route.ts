@@ -5,6 +5,7 @@ import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 import { hasActiveMembership } from '@/lib/db/queries';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 const MEMBERSHIP_PRICES: Record<string, string | undefined> = {
   monthly: process.env.STRIPE_MEMBERSHIP_MONTHLY_PRICE_ID,
@@ -13,6 +14,10 @@ const MEMBERSHIP_PRICES: Record<string, string | undefined> = {
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit: 10 requests per 60 seconds
+    const limited = await checkRateLimit(req, standardLimiter());
+    if (limited) return limited;
+
     const { userId: clerkId } = await auth();
     if (!clerkId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

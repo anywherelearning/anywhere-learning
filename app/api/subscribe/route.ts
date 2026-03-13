@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { subscribeToConvertKit } from "@/lib/convertkit";
+import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit: 5 requests per 60 seconds (prevents spam abuse)
+    const limited = await checkRateLimit(request, strictLimiter());
+    if (limited) return limited;
+
     const body = await request.json();
     const { email } = body as { email: string };
 

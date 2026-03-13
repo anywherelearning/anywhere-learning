@@ -3,6 +3,7 @@ import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 interface CheckoutItem {
   stripePriceId: string;
@@ -11,6 +12,10 @@ interface CheckoutItem {
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit: 10 requests per 60 seconds
+    const limited = await checkRateLimit(req, standardLimiter());
+    if (limited) return limited;
+
     const body = await req.json();
 
     // Support both legacy single-item { stripePriceId, slug } and new multi-item { items: [...] }
