@@ -4,6 +4,7 @@ import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
+import { subscribeAndTag } from '@/lib/convertkit';
 
 interface CheckoutItem {
   stripePriceId: string;
@@ -31,6 +32,13 @@ export async function POST(req: NextRequest) {
 
     if (items.length === 0) {
       return NextResponse.json({ error: 'Cart is empty' }, { status: 400 });
+    }
+
+    // Extract and validate email for receipt / cart-abandonment recovery
+    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Valid email is required' }, { status: 400 });
     }
 
     // Validate all items have price IDs
@@ -77,6 +85,7 @@ export async function POST(req: NextRequest) {
         price: item.stripePriceId,
         quantity: 1,
       })),
+      customer_email: email,
       customer_creation: 'always',
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/shop`,
@@ -84,6 +93,12 @@ export async function POST(req: NextRequest) {
         product_slugs: verifiedSlugs.join(','),
       },
       allow_promotion_codes: true,
+    });
+
+    // Tag as cart-abandoner in ConvertKit — fire-and-forget (non-blocking).
+    // If they complete purchase, the webhook adds 'buyer' which supersedes this.
+    subscribeAndTag(email, ['cart-abandoner']).catch((err) => {
+      console.error('Failed to tag cart-abandoner in ConvertKit:', err);
     });
 
     return NextResponse.json({ url: session.url });
