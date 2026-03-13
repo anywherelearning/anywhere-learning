@@ -69,9 +69,15 @@ export default function CartProvider({ children }: { children: React.ReactNode }
   const [state, dispatch] = useReducer(cartReducer, { items: [], isOpen: false });
   const [isMounted, setIsMounted] = useState(false);
 
-  // Load cart from localStorage on mount
+  // Load cart from localStorage on mount — drop stale items missing a price ID
   useEffect(() => {
-    dispatch({ type: 'SET_ITEMS', items: loadCart() });
+    const loaded = loadCart();
+    const valid = loaded.filter((item) => !!item.stripePriceId);
+    if (valid.length !== loaded.length) {
+      // Some items had empty price IDs (cached before Stripe sync) — remove them
+      saveCart(valid);
+    }
+    dispatch({ type: 'SET_ITEMS', items: valid });
     setIsMounted(true);
   }, []);
 

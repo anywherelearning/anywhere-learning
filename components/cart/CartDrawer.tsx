@@ -40,6 +40,14 @@ export default function CartDrawer() {
 
   async function handleCheckout() {
     if (items.length === 0) return;
+
+    // Guard: if any item is missing a price ID, remove them and abort
+    const invalid = items.filter((i) => !i.stripePriceId);
+    if (invalid.length > 0) {
+      invalid.forEach((i) => removeItem(i.slug));
+      return;
+    }
+
     setCheckingOut(true);
     try {
       const res = await fetch('/api/checkout', {
