@@ -4,7 +4,6 @@ import Link from "next/link";
 import { getActiveProducts, getProductsByCategory } from "@/lib/db/queries";
 import {
   getFallbackProducts,
-  filterByAge,
   getProductCounts,
 } from "@/lib/fallback-products";
 import ProductGrid from "@/components/shop/ProductGrid";
@@ -186,11 +185,11 @@ const crossSellMap: Record<string, string> = {
 const fallbackProducts = getFallbackProducts();
 
 interface ShopPageProps {
-  searchParams: Promise<{ category?: string; q?: string; age?: string; sort?: string }>;
+  searchParams: Promise<{ category?: string; q?: string; sort?: string }>;
 }
 
 export default async function ShopPage({ searchParams }: ShopPageProps) {
-  const { category, q, age, sort } = await searchParams;
+  const { category, q, sort } = await searchParams;
 
   // Fetch products from DB, fallback if unavailable
   let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
@@ -223,14 +222,6 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     );
   }
 
-  // Apply age filter
-  if (age) {
-    const minAge = parseInt(age, 10);
-    if (!isNaN(minAge)) {
-      filteredProducts = filterByAge(filteredProducts, minAge);
-    }
-  }
-
   // Apply sort
   const isSorted = !!sort && sort !== 'featured';
   if (isSorted) {
@@ -255,7 +246,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const productCounts = getProductCounts(allIndividual);
 
   // View mode
-  const isSearchActive = !!(q || age);
+  const isSearchActive = !!q;
   const isCategoryView = !!category && !isSearchActive;
   const isAllView = !category && !isSearchActive && !isSorted;
   const isSortedAllView = !category && !isSearchActive && isSorted;
@@ -400,7 +391,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         {/* ════════════════════════════════════════
-            SEARCH BAR + AGE FILTER
+            SEARCH BAR + SORT
         ════════════════════════════════════════ */}
         <section className="my-8">
           <Suspense fallback={null}>
@@ -409,7 +400,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         </section>
 
         {/* ════════════════════════════════════════
-            SEARCH / AGE RESULTS VIEW
+            SEARCH RESULTS VIEW
         ════════════════════════════════════════ */}
         {isSearchActive && (
           <>
@@ -424,12 +415,6 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                     <span className="font-medium text-gray-700">{q}</span>
                     &rdquo;
                   </>
-                )}
-                {age && (
-                  <span className="text-gray-400">
-                    {" "}
-                    &middot; Ages {age}+
-                  </span>
                 )}
               </p>
             </div>
