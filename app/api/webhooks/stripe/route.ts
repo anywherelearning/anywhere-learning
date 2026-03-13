@@ -267,24 +267,20 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     return;
   }
 
-  // Get ALL line items (supports multi-item cart checkout)
+  // ── SECURITY: Only trust Stripe-verified line items ──────────────
+  // Never fall back to client-supplied metadata slugs. The line items
+  // come directly from Stripe's records and cannot be spoofed.
   const lineItems = await stripe.checkout.sessions.listLineItems(stripeSessionId, {
     limit: 100,
   });
 
-  // Collect price IDs from line items
+  // Collect price IDs from Stripe-verified line items
   const priceIds = lineItems.data
     .map((li) => li.price?.id)
     .filter((id): id is string => !!id);
 
-  // Fallback: slugs from metadata (supports both legacy single and new comma-separated)
-  const metaSlugs = (session.metadata?.product_slugs || session.metadata?.product_slug || '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean);
-
-  if (priceIds.length === 0 && metaSlugs.length === 0) {
-    console.error('No price IDs or slugs found for session:', stripeSessionId);
+  if (priceIds.length === 0) {
+    console.error('No price IDs found in Stripe line items for session:', stripeSessionId);
     return;
   }
 
@@ -315,27 +311,21 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       .where(eq(users.id, user[0].id));
   }
 
-  // Find all purchased products by price ID (primary) or slugs (fallback)
-  let purchasedProducts: typeof products.$inferSelect[] = [];
+  // Look up products ONLY by Stripe-verified price IDs
+  const purchasedProducts = await db
+    .select()
+    .from(products)
+    .where(inArray(products.stripePriceId, priceIds));
 
-  if (priceIds.length > 0) {
-    purchasedProducts = await db
-      .select()
-      .from(products)
-      .where(inArray(products.stripePriceId, priceIds));
-  }
-
-  // If we didn't find products for all price IDs, try slug fallback
-  if (purchasedProducts.length < priceIds.length && metaSlugs.length > 0) {
-    const foundSlugs = new Set(purchasedProducts.map((p) => p.slug));
-    const missingSlugs = metaSlugs.filter((s) => !foundSlugs.has(s));
-    if (missingSlugs.length > 0) {
-      const fallbackProducts = await db
-        .select()
-        .from(products)
-        .where(inArray(products.slug, missingSlugs));
-      purchasedProducts = [...purchasedProducts, ...fallbackProducts];
-    }
+  if (purchasedProducts.length < priceIds.length) {
+    const foundPriceIds = new Set(purchasedProducts.map((p) => p.stripePriceId));
+    const missingPriceIds = priceIds.filter((id) => !foundPriceIds.has(id));
+    console.error(
+      'Some Stripe price IDs did not match any product in the database:',
+      missingPriceIds,
+      'session:',
+      stripeSessionId,
+    );
   }
 
   if (purchasedProducts.length > 0) {
