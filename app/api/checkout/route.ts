@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
     // Build line items from verified cart
     const lineItems: Array<{
       price?: string;
-      price_data?: { currency: string; product_data: { name: string; description?: string }; unit_amount: number };
+      price_data?: { currency: string; product_data: { name: string; description?: string; images?: string[] }; unit_amount: number };
       quantity: number;
     }> = items.map((item) => ({
       price: item.stripePriceId,
