@@ -5,7 +5,7 @@ import { getPreviewFileName } from '@/lib/preview-map';
 
 /**
  * Serve preview PDF for a product.
- * Dev: reads from the local Activities/Previews folder.
+ * Dev: reads from the local Activities/Previews folder (set PREVIEW_PDF_DIR).
  * Prod: will read from Vercel Blob (previewBlobUrl) once uploaded.
  */
 export async function GET(
@@ -19,12 +19,24 @@ export async function GET(
     return NextResponse.json({ error: 'Preview not found' }, { status: 404 });
   }
 
-  // Dev: read from local filesystem
-  const previewDir =
-    process.env.PREVIEW_PDF_DIR ||
-    '/Users/ameliedrouin/Desktop/Anywhere Learning/Previews';
+  // ── SECURITY: Require explicit env var — never leak a dev home path ──
+  const previewDir = process.env.PREVIEW_PDF_DIR;
+  if (!previewDir) {
+    console.error('PREVIEW_PDF_DIR is not set — cannot serve local previews');
+    return NextResponse.json({ error: 'Preview not available' }, { status: 404 });
+  }
 
-  const filePath = path.join(previewDir, fileName);
+  // ── SECURITY: Sanitize filename and validate resolved path ──
+  // Strip any directory components to prevent path traversal
+  const sanitized = path.basename(fileName);
+  const resolvedDir = path.resolve(previewDir);
+  const filePath = path.resolve(resolvedDir, sanitized);
+
+  // Ensure the resolved path is still inside the preview directory
+  if (!filePath.startsWith(resolvedDir + path.sep) && filePath !== resolvedDir) {
+    console.error('Path traversal attempt blocked:', { slug, fileName, filePath });
+    return NextResponse.json({ error: 'Preview not found' }, { status: 404 });
+  }
 
   try {
     const buffer = await readFile(filePath);
@@ -32,7 +44,7 @@ export async function GET(
       headers: {
         'Content-Type': 'application/pdf',
         'Cache-Control': 'public, max-age=86400, s-maxage=604800',
-        'Content-Disposition': `inline; filename="${encodeURIComponent(fileName)}"`,
+        'Content-Disposition': `inline; filename="${encodeURIComponent(sanitized)}"`,
       },
     });
   } catch {
