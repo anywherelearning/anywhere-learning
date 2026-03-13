@@ -68,7 +68,7 @@ export default function CategoryFilter({ hideBundles, productCounts }: CategoryF
   }
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide" role="tablist">
+    <div className="flex flex-wrap gap-2" role="tablist">
       {visibleCategories.map((cat) => {
         const count = cat.value && productCounts ? productCounts[cat.value] : null;
         return (
