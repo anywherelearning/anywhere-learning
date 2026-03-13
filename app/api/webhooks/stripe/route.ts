@@ -351,40 +351,38 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     // Distribute total across products proportionally
     const totalProductCents = purchasedProducts.reduce((sum, p) => sum + p.priceCents, 0);
 
-    // Create order(s) atomically in a transaction
-    await db.transaction(async (tx) => {
-      for (const product of purchasedProducts) {
-        // Distribute amount proportionally (last product gets remainder)
-        const isLast = product === purchasedProducts[purchasedProducts.length - 1];
-        const proportionalAmount = isLast
-          ? amountTotal - purchasedProducts.slice(0, -1).reduce(
-              (sum, p) => sum + Math.round((p.priceCents / totalProductCents) * amountTotal), 0
-            )
-          : Math.round((product.priceCents / totalProductCents) * amountTotal);
+    // Create order(s) for each purchased product
+    for (const product of purchasedProducts) {
+      // Distribute amount proportionally (last product gets remainder)
+      const isLast = product === purchasedProducts[purchasedProducts.length - 1];
+      const proportionalAmount = isLast
+        ? amountTotal - purchasedProducts.slice(0, -1).reduce(
+            (sum, p) => sum + Math.round((p.priceCents / totalProductCents) * amountTotal), 0
+          )
+        : Math.round((product.priceCents / totalProductCents) * amountTotal);
 
-        await tx.insert(orders).values({
-          userId: user[0].id,
-          productId: product.id,
-          stripeSessionId,
-          amountCents: proportionalAmount,
-          status: 'completed',
-        });
+      await db.insert(orders).values({
+        userId: user[0].id,
+        productId: product.id,
+        stripeSessionId,
+        amountCents: proportionalAmount,
+        status: 'completed',
+      });
 
-        // If bundle, create orders for each included product
-        if (product.isBundle && product.bundleProductIds) {
-          const bundledIds = JSON.parse(product.bundleProductIds) as string[];
-          for (const pid of bundledIds) {
-            await tx.insert(orders).values({
-              userId: user[0].id,
-              productId: pid,
-              stripeSessionId,
-              amountCents: 0,
-              status: 'completed',
-            });
-          }
+      // If bundle, create orders for each included product
+      if (product.isBundle && product.bundleProductIds) {
+        const bundledIds = JSON.parse(product.bundleProductIds) as string[];
+        for (const pid of bundledIds) {
+          await db.insert(orders).values({
+            userId: user[0].id,
+            productId: pid,
+            stripeSessionId,
+            amountCents: 0,
+            status: 'completed',
+          });
         }
       }
-    });
+    }
 
     // Post-transaction: send email with all product names (non-critical)
     const productNames = purchasedProducts.map((p) => p.name).join(', ');
