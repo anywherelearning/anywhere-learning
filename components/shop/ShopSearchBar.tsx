@@ -3,15 +3,8 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useRef, useCallback, useEffect, useState } from 'react';
 
-const ageOptions = [
-  { value: '', label: 'All Ages' },
-  { value: '4', label: 'Ages 4+' },
-  { value: '6', label: 'Ages 6+' },
-  { value: '9', label: 'Ages 9+' },
-];
-
 const sortOptions = [
-  { value: '', label: 'Featured' },
+  { value: '', label: 'Categories' },
   { value: 'price-asc', label: 'Price: Low → High' },
   { value: 'price-desc', label: 'Price: High → Low' },
   { value: 'newest', label: 'Newest' },
@@ -20,7 +13,6 @@ const sortOptions = [
 export default function ShopSearchBar() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const activeAge = searchParams.get('age') || '';
   const activeSort = searchParams.get('sort') || '';
   const initialQuery = searchParams.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
@@ -52,10 +44,6 @@ export default function ShopSearchBar() {
     timerRef.current = setTimeout(() => {
       pushParams({ q: value });
     }, 300);
-  }
-
-  function handleAge(age: string) {
-    pushParams({ age });
   }
 
   function handleSort(sort: string) {
@@ -102,23 +90,6 @@ export default function ShopSearchBar() {
             </svg>
           </button>
         )}
-      </div>
-
-      {/* Age filter pills */}
-      <div className="flex gap-1.5 overflow-x-auto scrollbar-hide">
-        {ageOptions.map((opt) => (
-          <button
-            key={opt.value}
-            onClick={() => handleAge(opt.value)}
-            className={`whitespace-nowrap px-3.5 py-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-              activeAge === opt.value
-                ? 'bg-forest text-cream shadow-sm'
-                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
-            }`}
-          >
-            {opt.label}
-          </button>
-        ))}
       </div>
 
       {/* Sort dropdown */}
