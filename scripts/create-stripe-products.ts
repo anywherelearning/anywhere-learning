@@ -70,7 +70,9 @@ const catalog = [
 ];
 
 async function createStripeProducts() {
+  const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
   console.log(`Creating ${catalog.length} products in Stripe...\n`);
+  console.log(`Using image base URL: ${siteUrl}/products/\n`);
   const mapping: Record<string, string> = {};
 
   for (const item of catalog) {
@@ -81,14 +83,23 @@ async function createStripeProducts() {
 
     let productId: string;
 
+    const imageUrl = `${siteUrl}/products/${item.slug}.jpg`;
+
     if (existing.data.length > 0) {
       productId = existing.data[0].id;
-      console.log(`  exists  ${item.name} (${productId})`);
+      // Update image if missing
+      if (!existing.data[0].images || existing.data[0].images.length === 0) {
+        await stripe.products.update(productId, { images: [imageUrl] });
+        console.log(`  updated ${item.name} (${productId}) — added image`);
+      } else {
+        console.log(`  exists  ${item.name} (${productId})`);
+      }
     } else {
       const product = await stripe.products.create({
         name: item.name,
         description: item.description,
         metadata: { slug: item.slug },
+        images: [imageUrl],
       });
       productId = product.id;
       console.log(`  created ${item.name} (${productId})`);
