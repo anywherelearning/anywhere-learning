@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
     // product for each price ID and use the DB-verified slugs in metadata.
     const clientPriceIds = items.map((item) => item.stripePriceId);
     const verifiedProducts = await db
-      .select({ stripePriceId: products.stripePriceId, slug: products.slug })
+      .select({ stripePriceId: products.stripePriceId, slug: products.slug, isBundle: products.isBundle })
       .from(products)
       .where(and(
         inArray(products.stripePriceId, clientPriceIds),
@@ -74,6 +74,33 @@ export async function POST(req: NextRequest) {
     // Use DB-verified slugs (not client-supplied) for metadata
     const verifiedSlugs = verifiedProducts.map((p) => p.slug);
 
+    // Build line items from verified cart
+    const lineItems: Array<{
+      price?: string;
+      price_data?: { currency: string; product_data: { name: string; description?: string }; unit_amount: number };
+      quantity: number;
+    }> = items.map((item) => ({
+      price: item.stripePriceId,
+      quantity: 1,
+    }));
+
+    // Add free Skills Map bonus when any bundle is in the cart
+    const hasBundle = verifiedProducts.some((p) => p.isBundle);
+    const skillsMapAlreadyInCart = verifiedProducts.some((p) => p.slug === 'future-ready-skills-map');
+    if (hasBundle && !skillsMapAlreadyInCart) {
+      lineItems.push({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
+            description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+          },
+          unit_amount: 0,
+        },
+        quantity: 1,
+      });
+    }
+
     // SECURITY: Never trust the Origin header — it can be spoofed to redirect
     // users to phishing sites after checkout. Only use our own configured URL.
     const origin = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
@@ -81,10 +108,7 @@ export async function POST(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
-      line_items: items.map((item) => ({
-        price: item.stripePriceId,
-        quantity: 1,
-      })),
+      line_items: lineItems,
       customer_email: email,
       customer_creation: 'always',
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
