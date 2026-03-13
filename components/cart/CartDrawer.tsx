@@ -225,9 +225,19 @@ export default function CartDrawer() {
                   key={item.slug}
                   className="flex items-start gap-4 bg-white rounded-xl border border-gray-100 p-4"
                 >
-                  {/* Category icon */}
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center">
-                    <CategoryIcon category={item.category} className="w-5 h-5 text-forest" />
+                  {/* Product image */}
+                  <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-gray-50 overflow-hidden">
+                    {item.imageUrl ? (
+                      <img
+                        src={item.imageUrl}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <CategoryIcon category={item.category} className="w-5 h-5 text-forest" />
+                      </div>
+                    )}
                   </div>
 
                   {/* Info */}

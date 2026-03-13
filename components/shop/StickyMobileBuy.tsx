@@ -11,6 +11,7 @@ interface StickyMobileBuyProps {
   slug: string;
   category: string;
   isBundle: boolean;
+  imageUrl?: string | null;
 }
 
 export default function StickyMobileBuy({
@@ -20,6 +21,7 @@ export default function StickyMobileBuy({
   slug,
   category,
   isBundle,
+  imageUrl,
 }: StickyMobileBuyProps) {
   const [visible, setVisible] = useState(false);
   const { addItem, isInCart, openCart } = useCart();
@@ -54,7 +56,7 @@ export default function StickyMobileBuy({
       stripePriceId,
       category,
       isBundle,
-      imageUrl: null,
+      imageUrl: imageUrl ?? null,
     });
     openCart();
   }

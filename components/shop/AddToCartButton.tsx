@@ -11,6 +11,7 @@ interface AddToCartButtonProps {
   priceCents: number;
   category: string;
   isBundle: boolean;
+  imageUrl?: string | null;
 }
 
 export default function AddToCartButton({
@@ -20,6 +21,7 @@ export default function AddToCartButton({
   priceCents,
   category,
   isBundle,
+  imageUrl,
 }: AddToCartButtonProps) {
   const { addItem, isInCart, openCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
@@ -39,7 +41,7 @@ export default function AddToCartButton({
       stripePriceId,
       category,
       isBundle,
-      imageUrl: null,
+      imageUrl: imageUrl ?? null,
     });
 
     if (added) {

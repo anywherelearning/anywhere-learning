@@ -314,6 +314,7 @@ export default async function ProductPage({
                     priceCents={product.priceCents}
                     category={product.category}
                     isBundle={product.isBundle ?? false}
+                    imageUrl={product.imageUrl}
                   />
                   <p className="text-xs text-gray-400 text-center mt-2">
                     Instant download &middot; Use on any device
@@ -370,6 +371,7 @@ export default async function ProductPage({
                     priceCents={product.priceCents}
                     category={product.category}
                     isBundle={product.isBundle ?? false}
+                    imageUrl={product.imageUrl}
                   />
                   <p className="text-xs text-gray-400 text-center mt-2">
                     Instant download &middot; Use on any device
@@ -490,6 +492,7 @@ export default async function ProductPage({
                   priceCents={product.priceCents}
                   category={product.category}
                   isBundle={product.isBundle ?? false}
+                  imageUrl={product.imageUrl}
                 />
                 <p className="text-xs text-gray-400 mt-2">
                   Instant download &middot; Use on any device
@@ -520,6 +523,7 @@ export default async function ProductPage({
         slug={product.slug}
         category={product.category}
         isBundle={product.isBundle ?? false}
+        imageUrl={product.imageUrl}
       />
     </>
   );
