@@ -348,6 +348,43 @@ export default async function ProductPage({
                 {product.shortDescription}
               </p>
 
+              {/* Buy CTA — top of right column (desktop only) */}
+              <div className="hidden lg:block mt-6">
+                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                  {product.isBundle && (
+                    <div className="flex items-center justify-between mb-3">
+                      <PriceDisplay
+                        priceCents={product.priceCents}
+                        compareAtPriceCents={product.compareAtPriceCents}
+                        size="sm"
+                      />
+                      <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
+                        BEST VALUE
+                      </span>
+                    </div>
+                  )}
+                  <AddToCartButton
+                    stripePriceId={product.stripePriceId}
+                    slug={product.slug}
+                    productName={product.name}
+                    priceCents={product.priceCents}
+                    category={product.category}
+                    isBundle={product.isBundle ?? false}
+                  />
+                  <p className="text-xs text-gray-400 text-center mt-2">
+                    Instant download &middot; Use on any device
+                  </p>
+                  <div className="mt-3 pt-3 border-t border-gray-100 text-center">
+                    <Link
+                      href="/membership"
+                      className="text-xs text-forest/70 hover:text-forest transition-colors"
+                    >
+                      Or access everything with a membership &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               <hr className="my-6 border-gray-200" />
 
               {/* Highlights strip */}
@@ -433,6 +470,31 @@ export default async function ProductPage({
                 productSlug={product.slug}
                 productName={product.name}
               />
+
+              {/* Buy CTA — bottom of right column (all screen sizes) */}
+              <div className="bg-forest/5 border border-forest/15 rounded-2xl p-6 mt-8 text-center">
+                <p className="font-display text-xl text-forest mb-4">
+                  Ready to get started?
+                </p>
+                <div className="flex justify-center mb-4">
+                  <PriceDisplay
+                    priceCents={product.priceCents}
+                    compareAtPriceCents={product.compareAtPriceCents}
+                    size="sm"
+                  />
+                </div>
+                <AddToCartButton
+                  stripePriceId={product.stripePriceId}
+                  slug={product.slug}
+                  productName={product.name}
+                  priceCents={product.priceCents}
+                  category={product.category}
+                  isBundle={product.isBundle ?? false}
+                />
+                <p className="text-xs text-gray-400 mt-2">
+                  Instant download &middot; Use on any device
+                </p>
+              </div>
             </div>
           </div>
         </section>
