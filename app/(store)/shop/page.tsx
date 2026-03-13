@@ -186,11 +186,11 @@ const crossSellMap: Record<string, string> = {
 const fallbackProducts = getFallbackProducts();
 
 interface ShopPageProps {
-  searchParams: Promise<{ category?: string; q?: string; age?: string }>;
+  searchParams: Promise<{ category?: string; q?: string; age?: string; sort?: string }>;
 }
 
 export default async function ShopPage({ searchParams }: ShopPageProps) {
-  const { category, q, age } = await searchParams;
+  const { category, q, age, sort } = await searchParams;
 
   // Fetch products from DB, fallback if unavailable
   let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
@@ -231,6 +231,23 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     }
   }
 
+  // Apply sort
+  const isSorted = !!sort && sort !== 'featured';
+  if (isSorted) {
+    filteredProducts = [...filteredProducts].sort((a, b) => {
+      switch (sort) {
+        case 'price-asc':
+          return a.priceCents - b.priceCents;
+        case 'price-desc':
+          return b.priceCents - a.priceCents;
+        case 'newest':
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        default:
+          return 0;
+      }
+    });
+  }
+
   // Product counts for category pills (individual products only, from full catalog)
   const allIndividual = (
     allProducts.length > 0 ? products : fallbackProducts
@@ -240,7 +257,8 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   // View mode
   const isSearchActive = !!(q || age);
   const isCategoryView = !!category && !isSearchActive;
-  const isAllView = !category && !isSearchActive;
+  const isAllView = !category && !isSearchActive && !isSorted;
+  const isSortedAllView = !category && !isSearchActive && isSorted;
 
   // All view: bundles carousel
   const allBundles = isAllView
@@ -474,6 +492,27 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 </ScrollReveal>
               );
             })}
+          </>
+        )}
+
+        {/* ════════════════════════════════════════
+            SORTED ALL VIEW — flat grid when sorting
+        ════════════════════════════════════════ */}
+        {isSortedAllView && (
+          <>
+            <div className="mb-6">
+              <p className="text-sm text-gray-500">
+                {filteredProducts.length} packs &middot; sorted by{' '}
+                <span className="font-medium text-gray-700">
+                  {sort === 'price-asc' ? 'price (low to high)' :
+                   sort === 'price-desc' ? 'price (high to low)' :
+                   sort === 'newest' ? 'newest first' : sort}
+                </span>
+              </p>
+            </div>
+            <section>
+              <ProductGrid products={filteredProducts} />
+            </section>
           </>
         )}
 

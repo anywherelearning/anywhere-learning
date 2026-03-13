@@ -10,10 +10,18 @@ const ageOptions = [
   { value: '9', label: 'Ages 9+' },
 ];
 
+const sortOptions = [
+  { value: '', label: 'Featured' },
+  { value: 'price-asc', label: 'Price: Low → High' },
+  { value: 'price-desc', label: 'Price: High → Low' },
+  { value: 'newest', label: 'Newest' },
+];
+
 export default function ShopSearchBar() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeAge = searchParams.get('age') || '';
+  const activeSort = searchParams.get('sort') || '';
   const initialQuery = searchParams.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -48,6 +56,10 @@ export default function ShopSearchBar() {
 
   function handleAge(age: string) {
     pushParams({ age });
+  }
+
+  function handleSort(sort: string) {
+    pushParams({ sort });
   }
 
   function clearSearch() {
@@ -107,6 +119,33 @@ export default function ShopSearchBar() {
             {opt.label}
           </button>
         ))}
+      </div>
+
+      {/* Sort dropdown */}
+      <div className="relative flex-shrink-0">
+        <select
+          value={activeSort}
+          onChange={(e) => handleSort(e.target.value)}
+          className="appearance-none bg-white border border-gray-200 rounded-xl pl-3.5 pr-8 py-2.5 text-xs font-medium text-gray-600 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition-all cursor-pointer"
+          aria-label="Sort products"
+        >
+          {sortOptions.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+        <svg
+          className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400 pointer-events-none"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </div>
     </div>
   );
