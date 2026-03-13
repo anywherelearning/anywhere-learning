@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Link from "next/link";
 
 interface EmailFormProps {
   variant?: "light" | "dark";
@@ -68,6 +69,23 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
         >
           🎉 Check your inbox! Your guide is on its way.
         </p>
+        <p
+          className={`mt-2 text-sm ${
+            isLight ? "text-gray-500" : "text-cream/60"
+          }`}
+        >
+          While you wait, explore our ready-to-use activity packs.
+        </p>
+        <Link
+          href="/shop"
+          className={`mt-4 inline-block rounded-xl px-6 py-3 text-sm font-semibold transition-all hover:scale-[1.02] ${
+            isLight
+              ? "bg-forest text-cream hover:bg-forest-dark"
+              : "bg-gold text-forest-dark hover:bg-gold-light"
+          }`}
+        >
+          Browse Activity Packs &rarr;
+        </Link>
       </div>
     );
   }

@@ -38,14 +38,22 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* CTA */}
-        <a
-          href="#hero-form"
-          onClick={scrollToForm}
-          className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
-        >
-          Get the free guide &rarr;
-        </a>
+        {/* Nav */}
+        <div className="flex items-center gap-4 sm:gap-6">
+          <Link
+            href="/shop"
+            className="text-sm font-medium text-gray-600 hover:text-forest transition-colors"
+          >
+            Shop
+          </Link>
+          <a
+            href="#hero-form"
+            onClick={scrollToForm}
+            className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+          >
+            Get the free guide &rarr;
+          </a>
+        </div>
       </div>
     </header>
   );
