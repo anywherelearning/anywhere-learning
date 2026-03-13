@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import ExitIntentPopup from "@/components/shop/ExitIntentPopup";
 
 export default function StoreLayout({
   children,
@@ -11,6 +12,7 @@ export default function StoreLayout({
       <SiteHeader />
       <main className="min-h-screen">{children}</main>
       <SiteFooter />
+      <ExitIntentPopup />
     </>
   );
 }
