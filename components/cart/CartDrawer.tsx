@@ -262,6 +262,33 @@ export default function CartDrawer() {
             </ul>
           )}
 
+          {/* Free Skills Map bonus with any bundle */}
+          {items.some((i) => i.isBundle) && !items.some((i) => i.slug === 'future-ready-skills-map') && (
+            <div className="mt-4">
+              <div className="flex items-start gap-4 bg-gold/5 border border-gold/20 rounded-xl p-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden">
+                  <img
+                    src="/products/future-ready-skills-map.jpg"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-gray-800 leading-snug">
+                    The Future-Ready Skills Map
+                  </p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-sm font-semibold text-forest">FREE</span>
+                    <span className="text-xs text-gray-400 line-through">$9.99</span>
+                    <span className="text-xs font-medium text-gold-dark bg-gold/15 px-1.5 py-0.5 rounded-full">
+                      Bundle bonus
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Bundle overlap warnings */}
           {bundleOverlaps.length > 0 && (
             <div className="mt-4 space-y-2">
