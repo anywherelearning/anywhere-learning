@@ -28,46 +28,54 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
   }
 
-  // ─── checkout.session.completed ──────────────────────────────────
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object as Stripe.Checkout.Session;
+  try {
+    // ─── checkout.session.completed ──────────────────────────────────
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object as Stripe.Checkout.Session;
 
-    if (session.payment_status !== 'paid') {
-      return NextResponse.json({ received: true });
+      if (session.payment_status !== 'paid') {
+        return NextResponse.json({ received: true });
+      }
+
+      // ── Subscription checkout ──────────────────────────────────────
+      if (session.mode === 'subscription') {
+        await handleSubscriptionCheckout(session);
+        return NextResponse.json({ received: true });
+      }
+
+      // ── One-time payment checkout (existing logic) ─────────────────
+      await handlePaymentCheckout(session);
     }
 
-    // ── Subscription checkout ──────────────────────────────────────
-    if (session.mode === 'subscription') {
-      await handleSubscriptionCheckout(session);
-      return NextResponse.json({ received: true });
+    // ─── customer.subscription.updated ───────────────────────────────
+    if (event.type === 'customer.subscription.updated') {
+      const sub = event.data.object as Stripe.Subscription;
+      await handleSubscriptionUpdated(sub);
     }
 
-    // ── One-time payment checkout (existing logic) ─────────────────
-    await handlePaymentCheckout(session);
-  }
+    // ─── customer.subscription.deleted ───────────────────────────────
+    if (event.type === 'customer.subscription.deleted') {
+      const sub = event.data.object as Stripe.Subscription;
+      await handleSubscriptionDeleted(sub);
+    }
 
-  // ─── customer.subscription.updated ───────────────────────────────
-  if (event.type === 'customer.subscription.updated') {
-    const sub = event.data.object as Stripe.Subscription;
-    await handleSubscriptionUpdated(sub);
-  }
+    // ─── invoice.payment_failed ──────────────────────────────────────
+    if (event.type === 'invoice.payment_failed') {
+      const invoice = event.data.object as Stripe.Invoice;
+      await handleInvoicePaymentFailed(invoice);
+    }
 
-  // ─── customer.subscription.deleted ───────────────────────────────
-  if (event.type === 'customer.subscription.deleted') {
-    const sub = event.data.object as Stripe.Subscription;
-    await handleSubscriptionDeleted(sub);
-  }
-
-  // ─── invoice.payment_failed ──────────────────────────────────────
-  if (event.type === 'invoice.payment_failed') {
-    const invoice = event.data.object as Stripe.Invoice;
-    await handleInvoicePaymentFailed(invoice);
-  }
-
-  // ─── invoice.payment_succeeded ───────────────────────────────────
-  if (event.type === 'invoice.payment_succeeded') {
-    const invoice = event.data.object as Stripe.Invoice;
-    await handleInvoicePaymentSucceeded(invoice);
+    // ─── invoice.payment_succeeded ───────────────────────────────────
+    if (event.type === 'invoice.payment_succeeded') {
+      const invoice = event.data.object as Stripe.Invoice;
+      await handleInvoicePaymentSucceeded(invoice);
+    }
+  } catch (error) {
+    console.error(`Webhook handler failed for ${event.type}:`, error);
+    return NextResponse.json(
+      { error: 'Webhook handler failed', detail: String(error) },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ received: true });
