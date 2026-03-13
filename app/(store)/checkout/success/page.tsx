@@ -87,10 +87,14 @@ async function getSessionProducts(sessionId: string) {
       });
     }
 
+    // Check if a bundle was purchased (triggers free Skills Map bonus)
+    const hasBundles = purchasedProducts.some((p) => p.isBundle);
+
     return {
       products: purchasedProducts,
       bundleUpgrades: bundleUpgrades.slice(0, 2),
       customerEmail: session.customer_details?.email,
+      hasBundles,
     };
   } catch {
     return null;
@@ -103,6 +107,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const data = session_id ? await getSessionProducts(session_id) : null;
   const purchasedProducts = data?.products || [];
   const bundleUpgrades = data?.bundleUpgrades || [];
+  const hasBundles = data?.hasBundles || false;
 
   return (
     <>
@@ -216,6 +221,27 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+        )}
+
+        {/* ── Skills Map Bonus ── */}
+        {hasBundles && (
+          <section className="mt-10">
+            <div className="bg-gold/10 border border-gold/20 rounded-2xl p-5 sm:p-6 flex items-center gap-4 animate-fade-in-up">
+              <div className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  Bonus: The Future-Ready Skills Map
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  A $9.99 parent guide — included free with your bundle. Find it in your downloads.
+                </p>
+              </div>
             </div>
           </section>
         )}
