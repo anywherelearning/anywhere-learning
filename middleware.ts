@@ -1,12 +1,27 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 const isProtectedRoute = createRouteMatcher(['/account(.*)']);
 
-export default clerkMiddleware(async (auth, req) => {
+// Only run Clerk middleware when keys are configured
+const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+function fallbackMiddleware(req: NextRequest) {
+  // Without Clerk, redirect /account routes to sign-in
   if (isProtectedRoute(req)) {
-    await auth.protect();
+    return NextResponse.redirect(new URL('/sign-in', req.url));
   }
-});
+  return NextResponse.next();
+}
+
+export default hasClerk
+  ? clerkMiddleware(async (auth, req) => {
+      if (isProtectedRoute(req)) {
+        await auth.protect();
+      }
+    })
+  : fallbackMiddleware;
 
 export const config = {
   matcher: [

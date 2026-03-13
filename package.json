@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ameliedrouin-coder/anywhere-learning.git"
+    "url": "git+https://github.com/anywherelearning/anywhere-learning.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ameliedrouin-coder/anywhere-learning/issues"
+    "url": "https://github.com/anywherelearning/anywhere-learning/issues"
   },
-  "homepage": "https://github.com/ameliedrouin-coder/anywhere-learning#readme",
+  "homepage": "https://github.com/anywherelearning/anywhere-learning#readme",
   "dependencies": {
     "@clerk/nextjs": "^6.38.3",
     "@neondatabase/serverless": "^1.0.2",
