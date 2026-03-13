@@ -94,6 +94,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
             description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+            images: [`${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/products/future-ready-skills-map.jpg`],
           },
           unit_amount: 0,
         },
