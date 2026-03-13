@@ -206,7 +206,8 @@ body::after {
   .animate-slide-in-right,
   .animate-cart-badge,
   .shimmer-effect::after,
-  .hero-stagger > * {
+  .hero-stagger > *,
+  .popup-stagger > * {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -395,3 +396,26 @@ body::after {
 .animate-cart-badge {
   animation: cart-badge 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+/* ─── Popup content stagger ─── */
+@keyframes popup-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.popup-stagger > * {
+  opacity: 0;
+  animation: popup-content-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.popup-stagger > *:nth-child(1) { animation-delay: 150ms; }
+.popup-stagger > *:nth-child(2) { animation-delay: 250ms; }
+.popup-stagger > *:nth-child(3) { animation-delay: 350ms; }
+.popup-stagger > *:nth-child(4) { animation-delay: 420ms; }
+.popup-stagger > *:nth-child(5) { animation-delay: 490ms; }
+.popup-stagger > *:nth-child(6) { animation-delay: 540ms; }
+.popup-stagger > *:nth-child(7) { animation-delay: 590ms; }
