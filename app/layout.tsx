@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, DM_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import "./globals.css";
@@ -73,6 +74,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WF83M4HF46');
+          `}
+        </Script>
+      </head>
       <body
         className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
       >
