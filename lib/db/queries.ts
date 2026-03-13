@@ -1,6 +1,6 @@
 import { db } from './index';
 import { products, orders, users, reviews, subscriptions } from './schema';
-import { eq, and, desc, ne, avg, count, gt } from 'drizzle-orm';
+import { eq, and, desc, ne, avg, count, gt, inArray } from 'drizzle-orm';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -73,6 +73,166 @@ export async function getUserPurchases(clerkId: string, email?: string) {
       eq(orders.status, 'completed'),
     ))
     .orderBy(desc(orders.purchasedAt));
+}
+
+// ─── Downloads Page: Growth Queries ──────────────────────────────────
+
+/** Cross-sell mapping: category → complementary category */
+const crossSellMap: Record<string, string> = {
+  'ai-literacy': 'critical-thinking',
+  creativity: 'ai-literacy',
+  'critical-thinking': 'ai-literacy',
+  'life-skills': 'self-management',
+  literacy: 'creativity',
+  nature: 'creativity',
+  'real-world-math': 'life-skills',
+  'self-management': 'life-skills',
+};
+
+/** Season slug mapping for seasonal prompts */
+const seasonalSlugs: Record<string, string> = {
+  spring: 'spring-outdoor-pack',
+  summer: 'summer-outdoor-pack',
+  fall: 'fall-outdoor-pack',
+  winter: 'winter-outdoor-pack',
+};
+
+function getCurrentSeason(): string {
+  const month = new Date().getMonth(); // 0-indexed
+  if (month >= 2 && month <= 4) return 'spring';
+  if (month >= 5 && month <= 7) return 'summer';
+  if (month >= 8 && month <= 10) return 'fall';
+  return 'winter';
+}
+
+/**
+ * Get bundle upgrade suggestions.
+ * For each bundle where the user owns >= 1 child product but not all,
+ * return the bundle info, how many they own, and how much they already paid.
+ */
+export async function getBundleUpgrades(purchasedProductIds: string[], purchasedAmountByProduct: Record<string, number>) {
+  if (purchasedProductIds.length === 0) return [];
+
+  const allBundles = await db.select().from(products)
+    .where(and(eq(products.active, true), eq(products.isBundle, true)));
+
+  const upgrades: {
+    bundle: typeof allBundles[0];
+    ownedCount: number;
+    totalCount: number;
+    amountAlreadyPaid: number;
+    upgradePrice: number;
+  }[] = [];
+
+  for (const bundle of allBundles) {
+    if (!bundle.bundleProductIds) continue;
+    let childIds: string[];
+    try {
+      childIds = JSON.parse(bundle.bundleProductIds) as string[];
+    } catch { continue; }
+    if (childIds.length === 0) continue;
+
+    const ownedIds = childIds.filter(id => purchasedProductIds.includes(id));
+    if (ownedIds.length === 0 || ownedIds.length >= childIds.length) continue;
+
+    // Sum what user already paid for owned products in this bundle
+    const amountAlreadyPaid = ownedIds.reduce(
+      (sum, id) => sum + (purchasedAmountByProduct[id] || 0), 0
+    );
+    const upgradePrice = Math.max(0, bundle.priceCents - amountAlreadyPaid);
+
+    upgrades.push({
+      bundle,
+      ownedCount: ownedIds.length,
+      totalCount: childIds.length,
+      amountAlreadyPaid,
+      upgradePrice,
+    });
+  }
+
+  // Sort by most owned (closest to completing)
+  return upgrades.sort((a, b) => (b.ownedCount / b.totalCount) - (a.ownedCount / a.totalCount));
+}
+
+/**
+ * Get seasonal product suggestion if user doesn't own the current season's pack.
+ */
+export async function getSeasonalSuggestion(purchasedProductIds: string[]) {
+  const season = getCurrentSeason();
+  const slug = seasonalSlugs[season];
+  if (!slug) return null;
+
+  const product = await getProductBySlug(slug);
+  if (!product) return null;
+  if (purchasedProductIds.includes(product.id)) return null;
+
+  return { product, season };
+}
+
+/**
+ * Get cross-sell products from complementary categories.
+ * Returns up to 3 products the user hasn't purchased yet.
+ */
+export async function getCrossSellProducts(
+  purchasedProductIds: string[],
+  purchasedCategories: string[],
+  limit = 3,
+) {
+  // Find complementary categories the user hasn't bought from yet
+  const targetCategories = new Set<string>();
+  for (const cat of purchasedCategories) {
+    const target = crossSellMap[cat];
+    if (target && !purchasedCategories.includes(target)) {
+      targetCategories.add(target);
+    }
+  }
+
+  if (targetCategories.size === 0) {
+    // Fallback: suggest from any category user hasn't bought from
+    const allCats = Object.keys(crossSellMap);
+    for (const cat of allCats) {
+      if (!purchasedCategories.includes(cat)) {
+        targetCategories.add(cat);
+        if (targetCategories.size >= 2) break;
+      }
+    }
+  }
+
+  if (targetCategories.size === 0) return [];
+
+  const targetArray = Array.from(targetCategories);
+  const allResults = await db.select().from(products)
+    .where(and(
+      eq(products.active, true),
+      eq(products.isBundle, false),
+      inArray(products.category, targetArray),
+    ))
+    .orderBy(products.sortOrder)
+    .limit(limit + purchasedProductIds.length);
+
+  // Filter out already-purchased
+  return allResults
+    .filter(p => !purchasedProductIds.includes(p.id))
+    .slice(0, limit);
+}
+
+/**
+ * Get products added in the last 30 days that the user hasn't purchased.
+ */
+export async function getNewProducts(purchasedProductIds: string[], limit = 2) {
+  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  const results = await db.select().from(products)
+    .where(and(
+      eq(products.active, true),
+      eq(products.isBundle, false),
+      gt(products.createdAt, thirtyDaysAgo),
+    ))
+    .orderBy(desc(products.createdAt))
+    .limit(limit + purchasedProductIds.length);
+
+  return results
+    .filter(p => !purchasedProductIds.includes(p.id))
+    .slice(0, limit);
 }
 
 // ─── Reviews ────────────────────────────────────────────────────────
