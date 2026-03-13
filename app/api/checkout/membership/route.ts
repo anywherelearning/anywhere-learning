@@ -44,10 +44,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const origin =
-      process.env.NEXT_PUBLIC_URL ||
-      req.headers.get('origin') ||
-      'http://localhost:3000';
+    // SECURITY: Never trust the Origin header — it can be spoofed to redirect
+    // users to phishing sites after checkout. Only use our own configured URL.
+    const origin = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
 
     // Build session params
     const sessionParams: Record<string, unknown> = {
