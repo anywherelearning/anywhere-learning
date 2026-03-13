@@ -154,14 +154,19 @@ export interface BundleUpsell {
   bundle: BundleInfo;
   matchingSlugs: string[];
   individualTotal: number;
+  /** Positive = user saves money switching to bundle. Negative = bundle costs more. */
   savingsCents: number;
+  /** How many more cents the bundle costs vs what's already in cart (0 if bundle is cheaper). */
+  additionalCostCents: number;
+  /** Total number of individual packs in this bundle. */
+  totalChildCount: number;
 }
 
 /**
  * Find the best bundle upsell for the current cart.
- * Returns the bundle where the user has 2+ matching individual packs
- * and would save the most money by switching to the bundle.
- * Returns null if no upsell applies or if the bundle is already in the cart.
+ * Returns the bundle where the user has 2+ matching individual packs.
+ * Prioritises bundles that save money, then lowest additional cost.
+ * Returns null if no upsell applies or the bundle is already in cart.
  */
 export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
   const individualItems = cartItems.filter((item) => !item.isBundle);
@@ -187,17 +192,32 @@ export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
       0
     );
 
-    // Only suggest if bundle actually saves money vs what they'd pay for individuals
     const savingsCents = individualTotal - bundleInfo.priceCents;
-    if (savingsCents <= 0) continue;
+    const additionalCostCents = Math.max(0, bundleInfo.priceCents - individualTotal);
 
-    if (!bestUpsell || savingsCents > bestUpsell.savingsCents) {
-      bestUpsell = {
-        bundle: bundleInfo,
-        matchingSlugs: matchingItems.map((item) => item.slug),
-        individualTotal,
-        savingsCents,
-      };
+    const candidate: BundleUpsell = {
+      bundle: bundleInfo,
+      matchingSlugs: matchingItems.map((item) => item.slug),
+      individualTotal,
+      savingsCents,
+      additionalCostCents,
+      totalChildCount: childSlugs.length,
+    };
+
+    if (!bestUpsell) {
+      bestUpsell = candidate;
+      continue;
+    }
+
+    // Prefer bundles that save money; among upgrade offers prefer lowest additional cost
+    const bestSaves = bestUpsell.savingsCents > 0;
+    const candidateSaves = savingsCents > 0;
+    if (candidateSaves && !bestSaves) {
+      bestUpsell = candidate;
+    } else if (candidateSaves && bestSaves && savingsCents > bestUpsell.savingsCents) {
+      bestUpsell = candidate;
+    } else if (!candidateSaves && !bestSaves && additionalCostCents < bestUpsell.additionalCostCents) {
+      bestUpsell = candidate;
     }
   }
 
