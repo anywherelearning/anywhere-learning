@@ -11,6 +11,7 @@ export interface CartItem {
 }
 
 export const CART_STORAGE_KEY = 'al_cart';
+export const CART_EMAIL_STORAGE_KEY = 'al_cart_email';
 
 /** Bundle slug → individual product slugs it contains. */
 export const BUNDLE_CONTENTS: Record<string, string[]> = {
@@ -58,6 +59,24 @@ export function saveCart(items: CartItem[]): void {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
   } catch {
     // localStorage full or unavailable — cart works as session-only
+  }
+}
+
+export function loadCartEmail(): string {
+  if (typeof window === 'undefined') return '';
+  try {
+    return localStorage.getItem(CART_EMAIL_STORAGE_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+export function saveCartEmail(email: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(CART_EMAIL_STORAGE_KEY, email);
+  } catch {
+    // localStorage full or unavailable
   }
 }
 

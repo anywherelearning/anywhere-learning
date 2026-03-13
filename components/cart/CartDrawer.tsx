@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useCart } from './CartProvider';
 import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
-import { getBundleOverlaps, getBundleUpsell } from '@/lib/cart';
+import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
 
 export default function CartDrawer() {
@@ -13,6 +13,9 @@ export default function CartDrawer() {
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
+  const [cartEmail, setCartEmail] = useState('');
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [emailLoaded, setEmailLoaded] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Lock body scroll when open
@@ -41,8 +44,40 @@ export default function CartDrawer() {
     }
   }, [isCartOpen]);
 
+  // Load persisted email on mount
+  useEffect(() => {
+    const saved = loadCartEmail();
+    if (saved) setCartEmail(saved);
+    setEmailLoaded(true);
+  }, []);
+
+  // Persist email to localStorage on change
+  useEffect(() => {
+    if (emailLoaded && cartEmail) {
+      saveCartEmail(cartEmail);
+    }
+  }, [cartEmail, emailLoaded]);
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail(): boolean {
+    if (!cartEmail.trim()) {
+      setEmailError('Please enter your email for your receipt.');
+      return false;
+    }
+    if (!EMAIL_REGEX.test(cartEmail.trim())) {
+      setEmailError('Please enter a valid email address.');
+      return false;
+    }
+    setEmailError(null);
+    return true;
+  }
+
   async function handleCheckout() {
     if (items.length === 0) return;
+
+    // Validate email before proceeding
+    if (!validateEmail()) return;
 
     // Guard: if any item is missing a price ID, remove them and abort
     const invalid = items.filter((i) => !i.stripePriceId);
@@ -62,6 +97,7 @@ export default function CartDrawer() {
             stripePriceId: item.stripePriceId,
             slug: item.slug,
           })),
+          email: cartEmail.trim(),
         }),
       });
       const data = await res.json();
@@ -291,6 +327,35 @@ export default function CartDrawer() {
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm text-gray-500">Subtotal</span>
               <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
+            </div>
+            {/* Email for receipt */}
+            <div className="mb-4">
+              <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">
+                Where should we send your receipt?
+              </label>
+              <input
+                id="cart-email"
+                type="email"
+                placeholder="you@example.com"
+                value={cartEmail}
+                onChange={(e) => {
+                  setCartEmail(e.target.value);
+                  if (emailError) setEmailError(null);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleCheckout();
+                  }
+                }}
+                className={`w-full rounded-xl border bg-white px-4 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none transition-shadow focus:ring-2 focus:ring-forest/30 ${
+                  emailError ? 'border-red-300' : 'border-gray-200'
+                }`}
+                autoComplete="email"
+              />
+              {emailError && (
+                <p className="mt-1 text-xs text-red-500">{emailError}</p>
+              )}
             </div>
             {checkoutError && (
               <div className="mb-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700 animate-shake">
