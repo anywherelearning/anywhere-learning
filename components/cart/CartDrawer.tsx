@@ -10,6 +10,7 @@ import { getBundleOverlaps } from '@/lib/cart';
 export default function CartDrawer() {
   const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Lock body scroll when open
@@ -49,6 +50,7 @@ export default function CartDrawer() {
     }
 
     setCheckingOut(true);
+    setCheckoutError(null);
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -65,10 +67,12 @@ export default function CartDrawer() {
         window.location.href = data.url;
       } else {
         console.error('Checkout error:', data.error);
+        setCheckoutError('Something went wrong. Please try again.');
         setCheckingOut(false);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
+      setCheckoutError('Could not connect. Please check your internet and try again.');
       setCheckingOut(false);
     }
   }
@@ -189,6 +193,14 @@ export default function CartDrawer() {
               <span className="text-sm text-gray-500">Subtotal</span>
               <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
             </div>
+            {checkoutError && (
+              <div className="mb-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700 animate-shake">
+                <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                </svg>
+                {checkoutError}
+              </div>
+            )}
             <button
               onClick={handleCheckout}
               disabled={checkingOut}

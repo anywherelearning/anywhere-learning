@@ -7,9 +7,11 @@ type Plan = 'monthly' | 'annual';
 export default function PricingToggle() {
   const [plan, setPlan] = useState<Plan>('annual');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleCheckout = async () => {
     setLoading(true);
+    setError(null);
     try {
       const res = await fetch('/api/checkout/membership', {
         method: 'POST',
@@ -31,9 +33,11 @@ export default function PricingToggle() {
 
       if (data.url) {
         window.location.href = data.url;
+      } else {
+        setError('Something went wrong. Please try again.');
       }
     } catch {
-      // Silently handle — user can retry
+      setError('Could not connect. Please check your internet and try again.');
     } finally {
       setLoading(false);
     }
@@ -85,6 +89,14 @@ export default function PricingToggle() {
           </p>
         )}
 
+        {error && (
+          <div className="mb-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700 text-left animate-shake">
+            <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            {error}
+          </div>
+        )}
         <button
           onClick={handleCheckout}
           disabled={loading}
