@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
+import { db } from '@/lib/db';
+import { products } from '@/lib/db/schema';
+import { inArray, eq, and } from 'drizzle-orm';
 
 interface CheckoutItem {
   stripePriceId: string;
@@ -30,6 +33,34 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing price ID for one or more items' }, { status: 400 });
     }
 
+    // ── SECURITY: Validate every stripePriceId against the database ──
+    // Never trust client-supplied price IDs or slugs. Look up the real
+    // product for each price ID and use the DB-verified slugs in metadata.
+    const clientPriceIds = items.map((item) => item.stripePriceId);
+    const verifiedProducts = await db
+      .select({ stripePriceId: products.stripePriceId, slug: products.slug })
+      .from(products)
+      .where(and(
+        inArray(products.stripePriceId, clientPriceIds),
+        eq(products.active, true),
+      ));
+
+    // Build a set of verified price IDs for quick lookup
+    const verifiedPriceIds = new Set(verifiedProducts.map((p) => p.stripePriceId));
+
+    // Reject if ANY price ID doesn't match a real, active product
+    const invalidPriceIds = clientPriceIds.filter((id) => !verifiedPriceIds.has(id));
+    if (invalidPriceIds.length > 0) {
+      console.error('Checkout rejected — unrecognised price IDs:', invalidPriceIds);
+      return NextResponse.json(
+        { error: 'One or more products could not be found' },
+        { status: 400 },
+      );
+    }
+
+    // Use DB-verified slugs (not client-supplied) for metadata
+    const verifiedSlugs = verifiedProducts.map((p) => p.slug);
+
     const origin =
       process.env.NEXT_PUBLIC_URL ||
       req.headers.get('origin') ||
@@ -46,7 +77,7 @@ export async function POST(req: NextRequest) {
       success_url: `${origin}/account/downloads?success=true`,
       cancel_url: `${origin}/shop`,
       metadata: {
-        product_slugs: items.map((item) => item.slug).join(','),
+        product_slugs: verifiedSlugs.join(','),
       },
       allow_promotion_codes: true,
     });
