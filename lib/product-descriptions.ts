@@ -512,6 +512,150 @@ export const productDescriptions: Record<string, ProductDescription> = {
     format: 'Project Guide',
   },
 
+  'real-world-math-bundle': {
+    opening:
+      'All 10 Real-World Math guides in one download. Campout planning, garage sales, garden plots, road trips, sports stats, and more. Every activity puts kids in real-life scenarios where they use maths to plan, budget, measure, and make smart decisions. The kind of maths that sticks because it actually matters.',
+    whatsIncluded: [
+      '10 complete real-world maths guides',
+      'Backyard Campout Planner, Garage Sale Math, Garden Plot Planner',
+      'Farmers Market Challenge, Party Planner Math, Road Trip Calculator',
+      'Clothing Swap & Thrift Math, Family Electricity Audit',
+      'Savings Goal Tracker, Sports Stats Lab',
+    ],
+    skillTags: ['Financial Literacy', 'Measurement', 'Budgeting', 'Data', 'Problem-Solving'],
+    format: 'Bundle',
+  },
+  'backyard-campout-planner': {
+    opening:
+      'Plan a backyard campout from start to finish — gear checklists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.',
+    whatsIncluded: [
+      'Complete campout planning guide with step-by-step phases',
+      'Gear checklist with quantity and cost calculations',
+      'Meal planning with shopping list and budget',
+      'Stargazing schedule with time and direction planning',
+      'Campfire activity plan with timing estimates',
+    ],
+    skillTags: ['Measurement', 'Budgeting', 'Time Planning', 'Estimation', 'Organisation'],
+    format: 'Project Guide',
+  },
+  'clothing-swap-thrift-math': {
+    opening:
+      'Organise a clothing swap or plan a thrift store haul using real budgeting and value skills. Kids calculate cost-per-wear, compare prices, assess quality versus cost, and make smart spending decisions. Financial literacy meets sustainability.',
+    whatsIncluded: [
+      'Clothing swap organisation and planning guide',
+      'Cost-per-wear calculation activities',
+      'Price comparison and value assessment',
+      'Budget planning and tracking',
+      'Sustainability and smart spending reflection',
+    ],
+    skillTags: ['Financial Literacy', 'Budgeting', 'Value Assessment', 'Sustainability'],
+    format: 'Project Guide',
+  },
+  'family-electricity-audit': {
+    opening:
+      'Audit your household electricity use — read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.',
+    whatsIncluded: [
+      'Household electricity audit guide',
+      'Meter reading and usage tracking',
+      'Appliance comparison and cost calculations',
+      'Energy-saving plan with estimated savings',
+      'Kilowatt-hour and unit pricing activities',
+    ],
+    skillTags: ['Measurement', 'Data Analysis', 'Environmental Maths', 'Budgeting'],
+    format: 'Project Guide',
+  },
+  'farmers-market-challenge': {
+    opening:
+      'Navigate a farmers market with a real budget — compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.',
+    whatsIncluded: [
+      'Farmers market shopping challenge guide',
+      'Budget planning and tracking sheet',
+      'Price comparison and mental maths activities',
+      'Change calculation and estimation practice',
+      'Post-shop reflection and value assessment',
+    ],
+    skillTags: ['Mental Maths', 'Budgeting', 'Estimation', 'Decision-Making'],
+    format: 'Project Guide',
+  },
+  'garage-sale-math': {
+    opening:
+      'Plan, price, and run a real garage sale using maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling — all in one hands-on project.',
+    whatsIncluded: [
+      'Complete garage sale planning and running guide',
+      'Pricing strategy and research activities',
+      'Change-making and money handling practice',
+      'Earnings tracking and profit calculation',
+      'Post-sale analysis and reflection',
+    ],
+    skillTags: ['Money Handling', 'Pricing', 'Percentages', 'Multiplication', 'Entrepreneurship'],
+    format: 'Project Guide',
+  },
+  'garden-plot-planner': {
+    opening:
+      'Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. Geometry, budgeting, and science growing together.',
+    whatsIncluded: [
+      'Garden plot design and planning guide',
+      'Area and measurement calculations',
+      'Plant spacing and row planning',
+      'Seed budget and cost estimation',
+      'Seasonal planting schedule',
+    ],
+    skillTags: ['Geometry', 'Measurement', 'Budgeting', 'Science', 'Planning'],
+    format: 'Project Guide',
+  },
+  'party-planner-math': {
+    opening:
+      'Plan a party from guest list to budget — calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real celebration. Maths that ends with a party.',
+    whatsIncluded: [
+      'Complete party planning guide with maths challenges',
+      'Guest list and food quantity calculations',
+      'Supply cost comparison and budgeting',
+      'Timeline planning and scheduling',
+      'Budget tracking and final cost analysis',
+    ],
+    skillTags: ['Multiplication', 'Budgeting', 'Estimation', 'Planning', 'Division'],
+    format: 'Project Guide',
+  },
+  'road-trip-calculator': {
+    opening:
+      'Plan a road trip using real distances, fuel costs, driving times, and travel budgets. Kids calculate mileage, compare routes, estimate fuel expenses, plan stops, and build a complete trip budget. Geography meets maths on the open road.',
+    whatsIncluded: [
+      'Road trip planning and calculation guide',
+      'Distance and driving time calculations',
+      'Fuel cost estimation and route comparison',
+      'Stop planning and scheduling',
+      'Complete trip budget with contingency',
+    ],
+    skillTags: ['Geography', 'Estimation', 'Budgeting', 'Distance', 'Planning'],
+    format: 'Project Guide',
+  },
+  'savings-goal-tracker': {
+    opening:
+      'Set a real savings goal and track progress with actual money maths. Kids choose a goal, calculate how long it will take, track deposits, visualise progress, and learn about the power of consistent saving. Financial literacy that builds real habits.',
+    whatsIncluded: [
+      'Savings goal setting and planning guide',
+      'Timeline and deposit calculations',
+      'Progress tracking and visualisation',
+      'Deposit schedule and consistency tracking',
+      'Reflection on saving habits and strategies',
+    ],
+    skillTags: ['Financial Literacy', 'Goal Setting', 'Data Tracking', 'Percentages'],
+    format: 'Project Guide',
+  },
+  'sports-stats-lab': {
+    opening:
+      'Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player or team stats. Data literacy and statistics brought to life through the sports they love.',
+    whatsIncluded: [
+      'Sports data collection and analysis guide',
+      'Average and percentage calculation activities',
+      'Chart and graph creation',
+      'Player and team comparison',
+      'Data interpretation and prediction challenges',
+    ],
+    skillTags: ['Statistics', 'Data Visualisation', 'Averages', 'Percentages', 'Analysis'],
+    format: 'Project Guide',
+  },
+
   // ═══════════════════════════════════════════════════════════════════
   // CRITICAL THINKING
   // ═══════════════════════════════════════════════════════════════════

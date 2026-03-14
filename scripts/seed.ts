@@ -90,6 +90,24 @@ async function seed() {
       active: true,
     },
     {
+      name: 'Real-World Math Mega Bundle',
+      slug: 'real-world-math-bundle',
+      description: 'All 10 Real-World Math guides in one download — campout planning, garage sales, garden plots, road trips, sports stats, and more. Every activity puts kids in real-life scenarios where they use maths to plan, budget, and make smart decisions.',
+      shortDescription: 'All 10 Real-World Math guides in one download.',
+      priceCents: 2999,
+      compareAtPriceCents: 4990,
+      stripePriceId: '',
+      blobUrl: '',
+      imageUrl: '/products/mega-bundle-real-world-math.jpg',
+      category: 'bundle',
+      isBundle: true,
+      bundleProductIds: null,
+      activityCount: 10,
+      ageRange: 'Ages 6–14',
+      sortOrder: 8,
+      active: true,
+    },
+    {
       name: 'Nature Art Bundle',
       slug: 'nature-art-bundle',
       description: 'Land Art + Nature Crafts + Nature Journal \u2014 three packs for families who love creating with nature.',
@@ -176,6 +194,18 @@ async function seed() {
     { name: 'Healthy Tech & AI Boundaries', slug: 'healthy-tech-boundaries', description: 'Build healthy boundaries with technology.', shortDescription: 'Healthy tech boundaries.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 77, active: true },
     { name: 'Privacy & Digital Footprint Map', slug: 'privacy-footprint', description: 'Understand and manage your digital footprint.', shortDescription: 'Digital privacy skills.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 78, active: true },
     { name: 'Prompt Like a Coach', slug: 'prompt-like-a-coach', description: 'Master the art of talking to AI effectively.', shortDescription: 'AI prompt skills.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 79, active: true },
+
+    // === REAL-WORLD MATH — New guides (sortOrder 100–109) ===
+    { name: 'Backyard Campout Planner', slug: 'backyard-campout-planner', description: 'Plan a backyard campout from gear lists to meal prep and stargazing schedule.', shortDescription: 'Plan a backyard campout with real maths.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 100, active: true },
+    { name: 'Clothing Swap & Thrift Math', slug: 'clothing-swap-thrift-math', description: 'Organise a clothing swap or thrift haul using real budgeting and value skills.', shortDescription: 'Thrift shopping and clothing swap maths.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8–14', sortOrder: 101, active: true },
+    { name: 'Family Electricity Audit', slug: 'family-electricity-audit', description: 'Audit your household electricity use, calculate costs, and find ways to save.', shortDescription: 'Audit electricity use and calculate savings.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8–14', sortOrder: 102, active: true },
+    { name: 'Farmers Market Challenge', slug: 'farmers-market-challenge', description: 'Navigate a farmers market with a budget — compare prices, make choices, and track spending.', shortDescription: 'Budget and shop at a farmers market.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 103, active: true },
+    { name: 'Garage Sale Math', slug: 'garage-sale-math', description: 'Plan, price, and run a garage sale using real-world maths and money skills.', shortDescription: 'Price, sell, and count change at a garage sale.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 104, active: true },
+    { name: 'Garden Plot Planner', slug: 'garden-plot-planner', description: 'Design a garden plot using area, spacing, budgets, and seasonal planning.', shortDescription: 'Design a garden with real measurements and budgets.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 105, active: true },
+    { name: 'Party Planner Math', slug: 'party-planner-math', description: 'Plan a party from guest list to budget — food quantities, costs, and timing.', shortDescription: 'Plan a party with real budgets and quantities.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 106, active: true },
+    { name: 'Road Trip Calculator', slug: 'road-trip-calculator', description: 'Plan a road trip — calculate distances, fuel costs, timing, and budgets.', shortDescription: 'Calculate distances, fuel, and budgets for a road trip.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8–14', sortOrder: 107, active: true },
+    { name: 'Savings Goal Tracker', slug: 'savings-goal-tracker', description: 'Set a savings goal and track progress with real money maths.', shortDescription: 'Set and track a real savings goal.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 108, active: true },
+    { name: 'Sports Stats Lab', slug: 'sports-stats-lab', description: 'Collect, analyse, and visualise real sports data — averages, percentages, and charts.', shortDescription: 'Analyse real sports stats and create charts.', priceCents: 499, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8–14', sortOrder: 109, active: true },
 
     // === START HERE & DEACTIVATED (sortOrder 90–92) ===
     { name: 'The Future-Ready Skills Map', slug: 'future-ready-skills-map', description: 'A complete roadmap of real-world skills every kid needs.', shortDescription: 'Future-ready skills roadmap.', priceCents: 999, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', category: 'start-here', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 90, active: true },

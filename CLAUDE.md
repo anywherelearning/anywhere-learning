@@ -96,6 +96,34 @@ Phase 1 (MVP Store) in progress:
 - [ ] Deploy to Vercel + set up production Stripe webhook
 - [ ] Upload PDFs to Vercel Blob
 
+## Adding a New Product (Checklist)
+
+When adding new products, follow this order:
+
+### 1. Code changes (Claude does these)
+- [ ] **`scripts/seed.ts`** — Add product entry (name, slug, description, price, category, ageRange, sortOrder)
+- [ ] **`lib/fallback-products.ts`** — Add full product object with descriptions, previewFile reference
+- [ ] **`lib/product-descriptions.ts`** — Add opening, whatsIncluded, skillTags, format
+- [ ] **`lib/cart.ts`** — If bundle: add to `BUNDLE_CONTENTS` (child slugs) and `BUNDLE_DATA` (pricing/image)
+- [ ] **`app/(store)/shop/page.tsx`** — If bundle: update `categoryBundleMap`. If new category: update `categoryMeta`, `categorySections`, `crossSellMap`
+- [ ] **Product cover image** — Extract first page of PDF → `public/products/[slug].jpg` (use `pdftoppm -jpeg -f 1 -l 1 -r 300` then `sips --resampleWidth 800`)
+- [ ] **Bundle cover image** — Copy from Previews folder → `public/products/mega-bundle-[name].jpg`
+
+### 2. Service updates (run after code changes)
+- [ ] **Run `npm run stripe:sync`** — Creates Stripe products and populates price IDs
+- [ ] **Seed Neon database** — Run `npx tsx scripts/seed.ts` or insert via Drizzle migration
+
+### 3. Manual steps (Amelie does these)
+- [ ] **Upload activity PDFs to Vercel Blob** — The actual downloadable files
+- [ ] **Upload preview PDFs to Vercel Blob** — Free preview samples (if applicable)
+- [ ] **Verify on live site** — Check shop page, product detail page, cart upsell, and bundle contents
+
+### File location reference
+- Activity PDFs: `/Users/ameliedrouin/Desktop/Anywhere Learning/Activities/`
+- Preview PDFs: `/Users/ameliedrouin/Desktop/Anywhere Learning/Previews/`
+- Bundle cover images: `/Users/ameliedrouin/Desktop/Anywhere Learning/Previews/Mega Bundle - [name].jpg`
+- Product cover images (generated): `public/products/[slug].jpg`
+
 ## Pre-Launch Checklist
 
 These must be done before going live:

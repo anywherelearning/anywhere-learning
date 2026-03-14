@@ -33,6 +33,11 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
     'create-with-ai', 'deepfake-spotter', 'hallucination-detective',
     'healthy-tech-boundaries', 'privacy-footprint', 'prompt-like-a-coach',
   ],
+  'real-world-math-bundle': [
+    'backyard-campout-planner', 'clothing-swap-thrift-math', 'family-electricity-audit',
+    'farmers-market-challenge', 'garage-sale-math', 'garden-plot-planner',
+    'party-planner-math', 'road-trip-calculator', 'savings-goal-tracker', 'sports-stats-lab',
+  ],
   'nature-art-bundle': [
     'land-art-challenges', 'nature-crafts', 'nature-journal-walks',
   ],
@@ -145,6 +150,16 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     category: 'bundle',
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
     activityCount: null,
+  },
+  'real-world-math-bundle': {
+    slug: 'real-world-math-bundle',
+    name: 'Real-World Math Mega Bundle',
+    priceCents: 2999,
+    compareAtPriceCents: 4990,
+    stripePriceId: '',
+    category: 'bundle',
+    imageUrl: '/products/mega-bundle-real-world-math.jpg',
+    activityCount: 10,
   },
   'nature-art-bundle': {
     slug: 'nature-art-bundle',
