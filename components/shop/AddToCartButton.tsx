@@ -46,7 +46,6 @@ export default function AddToCartButton({
 
     if (added) {
       setJustAdded(true);
-      openCart();
       setTimeout(() => setJustAdded(false), 1500);
     }
   }
@@ -54,7 +53,7 @@ export default function AddToCartButton({
   return (
     <button
       onClick={handleClick}
-      className="shimmer-effect block w-full bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center text-lg"
+      className="shimmer-effect block w-full bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center text-lg cursor-pointer"
     >
       {justAdded ? (
         <span className="flex items-center justify-center gap-2">

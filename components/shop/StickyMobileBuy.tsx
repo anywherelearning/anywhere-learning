@@ -43,13 +43,15 @@ export default function StickyMobileBuy({
 
   const alreadyInCart = isInCart(slug);
 
+  const [justAdded, setJustAdded] = useState(false);
+
   function handleClick() {
     if (alreadyInCart) {
       openCart();
       return;
     }
 
-    addItem({
+    const added = addItem({
       slug,
       name: productName,
       priceCents,
@@ -58,7 +60,11 @@ export default function StickyMobileBuy({
       isBundle,
       imageUrl: imageUrl ?? null,
     });
-    openCart();
+
+    if (added) {
+      setJustAdded(true);
+      setTimeout(() => setJustAdded(false), 1500);
+    }
   }
 
   if (!visible) return null;
@@ -74,7 +80,7 @@ export default function StickyMobileBuy({
           onClick={handleClick}
           className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
         >
-          {alreadyInCart ? 'View Cart' : 'Add to Cart'}
+          {justAdded ? '✓ Added!' : alreadyInCart ? 'View Cart' : 'Add to Cart'}
         </button>
       </div>
     </div>
