@@ -67,12 +67,6 @@ export default function SiteHeader() {
             Shop
           </Link>
           <Link
-            href="/membership"
-            className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
-          >
-            Membership
-          </Link>
-          <Link
             href="/blog"
             className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
           >
@@ -146,13 +140,6 @@ export default function SiteHeader() {
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
               Shop
-            </Link>
-            <Link
-              href="/membership"
-              onClick={() => setMobileOpen(false)}
-              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
-            >
-              Membership
             </Link>
             <Link
               href="/blog"

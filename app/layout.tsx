@@ -21,6 +21,10 @@ const bodyFont = DM_Sans({
   display: "swap",
 });
 
+export const viewport = {
+  viewportFit: 'cover' as const,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Anywhere Learning — Meaningful Learning, Wherever You Are",
@@ -75,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="alternate" type="application/rss+xml" title="Anywhere Learning Blog" href="/blog/feed.xml" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"
           strategy="afterInteractive"

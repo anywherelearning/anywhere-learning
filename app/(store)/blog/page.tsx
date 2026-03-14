@@ -96,7 +96,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <ScrollReveal>
             <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
-              The Journal
+              The Blog
             </p>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest mb-4">
               Ideas for the Everyday Explorer

@@ -70,6 +70,18 @@ export async function POST(req: NextRequest) {
       const invoice = event.data.object as Stripe.Invoice;
       await handleInvoicePaymentSucceeded(invoice);
     }
+
+    // ─── charge.refunded ──────────────────────────────────────────────
+    if (event.type === 'charge.refunded') {
+      const charge = event.data.object as Stripe.Charge;
+      await handleChargeRefunded(charge);
+    }
+
+    // ─── charge.dispute.created ───────────────────────────────────────
+    if (event.type === 'charge.dispute.created') {
+      const dispute = event.data.object as Stripe.Dispute;
+      await handleDisputeCreated(dispute);
+    }
   } catch (error) {
     console.error(`Webhook handler failed for ${event.type}:`, error);
     return NextResponse.json(
@@ -91,6 +103,13 @@ async function handleSubscriptionCheckout(session: Stripe.Checkout.Session) {
   const plan = session.metadata?.plan || 'monthly';
   const stripeCustomerId = session.customer as string;
   const stripeSubscriptionId = session.subscription as string;
+
+  // ── Idempotency: skip if subscription already exists ──────────────
+  const existingSub = await getSubscriptionByStripeId(stripeSubscriptionId);
+  if (existingSub) {
+    console.log('Duplicate webhook for subscription (skipping):', stripeSubscriptionId);
+    return;
+  }
 
   if (!customerEmail || !clerkId) {
     console.error('Missing email or clerkId in subscription checkout:', session.id);
@@ -267,6 +286,18 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     return;
   }
 
+  // ── Idempotency: skip if we already processed this session ────────
+  const existingOrders = await db
+    .select({ id: orders.id })
+    .from(orders)
+    .where(eq(orders.stripeSessionId, stripeSessionId))
+    .limit(1);
+
+  if (existingOrders.length > 0) {
+    console.log('Duplicate webhook for session (skipping):', stripeSessionId);
+    return;
+  }
+
   // ── SECURITY: Only trust Stripe-verified line items ──────────────
   // Never fall back to client-supplied metadata slugs. The line items
   // come directly from Stripe's records and cannot be spoofed.
@@ -437,4 +468,67 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       console.error('Failed to tag buyer in ConvertKit:', error);
     }
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// Refund & dispute handlers
+// ═══════════════════════════════════════════════════════════════════
+
+async function handleChargeRefunded(charge: Stripe.Charge) {
+  // The payment_intent links back to the checkout session
+  const paymentIntentId = charge.payment_intent as string | null;
+  if (!paymentIntentId) return;
+
+  // Find the checkout session that created this charge
+  const sessions = await stripe.checkout.sessions.list({
+    payment_intent: paymentIntentId,
+    limit: 1,
+  });
+
+  const session = sessions.data[0];
+  if (!session) {
+    console.error('No checkout session found for refunded charge:', charge.id);
+    return;
+  }
+
+  const isFullRefund = charge.amount_captured === charge.amount_refunded;
+  const newStatus = isFullRefund ? 'refunded' : 'partially_refunded';
+
+  await db
+    .update(orders)
+    .set({ status: newStatus })
+    .where(eq(orders.stripeSessionId, session.id));
+
+  console.log(
+    `Orders for session ${session.id} marked as ${newStatus} (charge: ${charge.id})`,
+  );
+}
+
+async function handleDisputeCreated(dispute: Stripe.Dispute) {
+  const charge = dispute.charge as string;
+
+  // Retrieve the charge to get the payment intent
+  const chargeObj = await stripe.charges.retrieve(charge);
+  const paymentIntentId = chargeObj.payment_intent as string | null;
+  if (!paymentIntentId) return;
+
+  const sessions = await stripe.checkout.sessions.list({
+    payment_intent: paymentIntentId,
+    limit: 1,
+  });
+
+  const session = sessions.data[0];
+  if (!session) {
+    console.error('No checkout session found for disputed charge:', charge);
+    return;
+  }
+
+  await db
+    .update(orders)
+    .set({ status: 'disputed' })
+    .where(eq(orders.stripeSessionId, session.id));
+
+  console.error(
+    `DISPUTE OPENED: session ${session.id}, charge ${charge}, reason: ${dispute.reason}`,
+  );
 }

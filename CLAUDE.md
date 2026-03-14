@@ -11,6 +11,7 @@
 ## Brand Design
 
 - **Colors:** Cream `#faf9f6` · Forest `#588157` · Gold `#d4a373` · Forest-dark `#3d5c3b` · Gold-light `#e8c99a`
+- **Category accents:** Nature `#6b8e6b` · Earthy brown `#8b7355` · Terracotta `#c4836a` · Dusty rose `#c47a8f` · Warm gray `#f7f5f0`
 - **Typography:** Dancing Script (display/headlines, weight 700) · DM Sans (body, weights 400/500/600)
 - **Tone:** Warm, practical, empowering, conversational — never preachy or institutional
 - **Visual style:** Nature-inspired, generous white space, never textbook-like
@@ -115,3 +116,5 @@ These must be done before going live:
     - Send recovery email (warm, on-brand: "Still thinking it over? Your cart is waiting...")
     - Optional: second email at 24 hours with different angle
     - Tags `cart-abandoner` and `buyer` are auto-created by the app — no manual tag setup needed
+11. **Pinterest Rich Pins** — validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
+12. **Directory submissions** — submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)

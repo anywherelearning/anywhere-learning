@@ -9,6 +9,8 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import BundleCarousel from '@/components/shop/BundleCarousel';
 import EmailForm from '@/components/EmailForm';
+import { getAllPosts } from '@/lib/blog';
+import BlogCard from '@/components/blog/BlogCard';
 
 export const metadata: Metadata = {
   title: 'Anywhere Learning — Meaningful Learning, Wherever You Are',
@@ -97,27 +99,6 @@ const featuredProducts = [
     isBundle: true,
     activityCount: null,
     ageRange: 'Ages 4–14',
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      'My kids asked to do activities every single day. That has never happened before.',
-    name: 'Sarah M.',
-    location: 'Tennessee, homeschool family of 3',
-  },
-  {
-    quote:
-      'We took these on our road trip and the kids were engaged the entire drive.',
-    name: 'Mia R.',
-    location: 'Colorado, worldschool family of 4',
-  },
-  {
-    quote:
-      'I stopped planning and started living. These packs gave me permission to let go of the curriculum guilt.',
-    name: 'Jen K.',
-    location: 'Oregon, eclectic homeschool',
   },
 ];
 
@@ -242,14 +223,9 @@ export default function HomePage() {
                     Free Guide &rarr;
                   </Link>
                 </div>
-                {/* Micro social proof */}
-                <p className="mt-6 text-sm text-gray-500 flex items-center gap-2">
-                  <span className="flex -space-x-1.5">
-                    {['#8faa8b', '#d4a373', '#c4836a', '#588157'].map((c, i) => (
-                      <span key={i} className="w-6 h-6 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
-                    ))}
-                  </span>
-                  Joined by families in 10+ countries
+                {/* Trust signals */}
+                <p className="mt-6 text-sm text-gray-500">
+                  For families who chose a different path &middot; 48-hour money-back guarantee
                 </p>
               </div>
             </div>
@@ -410,102 +386,84 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            TESTIMONIALS — Editorial magazine layout
+            WHY FAMILIES CHOOSE THIS — Verifiable product facts
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <ScrollReveal>
               <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] text-center mb-4">
-                Don&apos;t take our word for it
+                Built for real life
               </p>
-              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-16 text-balance">
-                Hear It From Families
-                <br className="hidden sm:block" /> Who Made the Leap
+              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-6 text-balance">
+                Why Families Choose This
               </h2>
+              <p className="text-center text-gray-500 text-lg mb-16 max-w-xl mx-auto">
+                No gimmicks, no fluff &mdash; just activity guides designed around the way your family actually lives.
+              </p>
             </ScrollReveal>
 
-            {/* Featured large testimonial */}
+            {/* Featured card */}
             <ScrollReveal>
-              <blockquote className="relative bg-forest-section rounded-3xl p-10 md:p-14 mb-8 shadow-2xl">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-cream/15 mb-6">
-                  <path d="M11 7.5C11 9.433 9.433 11 7.5 11C6.571 11 4 11 4 14.5C4 18 6.5 19 7.5 19C9.433 19 11 17.433 11 15.5V7.5Z" fill="currentColor"/>
-                  <path d="M20 7.5C20 9.433 18.433 11 16.5 11C15.571 11 13 11 13 14.5C13 18 15.5 19 16.5 19C18.433 19 20 17.433 20 15.5V7.5Z" fill="currentColor"/>
-                </svg>
-                <p className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-8">
-                  {testimonials[2].quote}
-                </p>
-                <footer className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gold/30 flex items-center justify-center text-cream font-semibold text-sm">
-                    {testimonials[2].name.charAt(0)}
+              <div className="relative bg-forest-section rounded-3xl p-10 md:p-14 mb-8 shadow-2xl">
+                <div className="flex items-start gap-5">
+                  <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-gold/20 items-center justify-center flex-shrink-0">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold">
+                      <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
+                    </svg>
                   </div>
                   <div>
-                    <span className="text-cream font-medium block text-sm">{testimonials[2].name}</span>
-                    <span className="text-cream/50 text-sm">{testimonials[2].location}</span>
-                  </div>
-                </footer>
-              </blockquote>
-            </ScrollReveal>
-
-            {/* Two smaller testimonials */}
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.slice(0, 2).map((t, i) => (
-                <ScrollReveal key={i} delay={i * 150}>
-                  <blockquote className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="flex gap-1 mb-5">
-                      {[...Array(5)].map((_, j) => (
-                        <svg key={j} width="18" height="18" viewBox="0 0 24 24" fill="#d4a373">
-                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
-                      &ldquo;{t.quote}&rdquo;
+                    <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-4">
+                      No Prep Required
+                    </h3>
+                    <p className="text-cream/70 text-lg leading-relaxed max-w-2xl">
+                      Open on any device and follow along. No printing, no extra materials,
+                      no Sunday night planning. Just pick an activity and go.
                     </p>
-                    <footer className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-semibold text-sm">
-                        {t.name.charAt(0)}
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-800 text-sm block">{t.name}</span>
-                        <span className="text-gray-400 text-sm">{t.location}</span>
-                      </div>
-                    </footer>
-                  </blockquote>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            MEMBERSHIP PITCH — Access everything
-        ═══════════════════════════════════════════ */}
-        <section className="bg-forest-section py-16 md:py-20 relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-white/[0.04]" aria-hidden="true" />
-          <div className="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
-            <ScrollReveal>
-              <p className="text-sm font-semibold text-gold-light uppercase tracking-[0.2em] mb-4">
-                Membership
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-cream mb-4 text-balance">
-                Get access to everything.
-              </h2>
-              <p className="text-lg text-cream/70 mb-8 max-w-xl mx-auto leading-relaxed">
-                One membership. Every activity pack in the library &mdash; plus everything new we add.
-                Open and use on any device, anytime.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="/membership"
-                  className="rounded-2xl bg-gold px-8 py-3.5 text-lg font-semibold text-white transition-all hover:bg-gold/90 hover:shadow-md"
-                >
-                  Learn More
-                </Link>
-                <span className="text-cream/50 text-sm">
-                  From $12.49/mo &middot; Cancel anytime
-                </span>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
+
+            {/* Two supporting cards */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <ScrollReveal delay={0}>
+                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="w-12 h-12 rounded-2xl bg-forest/8 flex items-center justify-center mb-5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-forest">
+                      <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                      <path d="M23 21V19C23 17.1362 21.7252 15.5701 20 15.126" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M16 3.12598C17.7252 3.57004 19 5.13616 19 7C19 8.86384 17.7252 10.43 16 10.874" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-forest mb-2">Works for Ages 4&ndash;14</h3>
+                  <p className="text-gray-500 text-lg leading-relaxed">
+                    Every activity includes adaptation notes so siblings at different levels
+                    can do the same thing together.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={150}>
+                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center mb-5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gold">
+                      <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M3.05078 11.0002C3.27441 7.10088 5.72266 3.55127 9.5 2.14648" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M14.5 2.14648C18.2773 3.55127 20.7256 7.10088 20.9492 11.0002" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M20.9492 13C20.5977 17.3389 17.1309 20.8057 12.792 21.1572" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M11.208 21.1572C6.86914 20.8057 3.40234 17.3389 3.05078 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-forest mb-2">Use Year After Year</h3>
+                  <p className="text-gray-500 text-lg leading-relaxed">
+                    These aren&apos;t one-time worksheets. Come back to the same activities as your
+                    kids grow &mdash; they&apos;ll get something new every time.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
@@ -577,6 +535,55 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            FROM THE BLOG — SEO link equity to blog
+        ═══════════════════════════════════════════ */}
+        <section className="bg-cream py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-14">
+                <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+                  From the Blog
+                </p>
+                <h2 className="font-display text-3xl md:text-5xl text-forest mb-4 text-balance">
+                  Ideas for Your Next Adventure
+                </h2>
+                <p className="mx-auto max-w-xl text-gray-500 text-lg">
+                  Practical tips, real stories, and fresh inspiration for families learning outside the box.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {getAllPosts().slice(0, 3).map((post, i) => (
+                <ScrollReveal key={post.slug} delay={i * 100}>
+                  <BlogCard
+                    slug={post.slug}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    category={post.category}
+                    publishedAt={post.publishedAt}
+                    readTimeMinutes={post.readTimeMinutes}
+                    author={post.author}
+                  />
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={350}>
+              <div className="mt-12 text-center">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 text-forest font-semibold text-lg group hover:text-forest-dark transition-colors"
+                >
+                  Read more on the blog
+                  <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             EMAIL CAPTURE — Lead magnet pitch
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-16 md:py-20">
@@ -589,8 +596,8 @@ export default function HomePage() {
                 10 Life Skills Your Kids Can Learn This Week
               </h2>
               <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                A free guide with 10 real-world life skills and activities your kids
-                can try this week — no curriculum, no prep, no screen time.
+                Join families who chose a different path. 10 real-world life skills
+                and activities your kids can try this week — no curriculum, no prep, no screen time.
               </p>
               <EmailForm variant="light" />
               <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
@@ -618,8 +625,8 @@ export default function HomePage() {
                 Your kids are ready.<br />Are you?
               </h2>
               <p className="text-lg text-cream/60 mb-10 leading-relaxed max-w-lg mx-auto">
-                Every day without intentional activities is a day of untapped potential.
-                Pick a pack. Open the guide. Start this week.
+                Thousands of families are ditching the curriculum and trusting their kids to learn through real life.
+                You&apos;re not behind &mdash; you&apos;re ahead. Pick a pack and start this week.
               </p>
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
