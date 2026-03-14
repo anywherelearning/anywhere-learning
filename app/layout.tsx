@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Anywhere Learning",
   },
   description:
-    "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+    "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 4 to 14.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Anywhere Learning",
     title: "Anywhere Learning — Meaningful Learning, Wherever You Are",
     description:
-      "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+      "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 4 to 14.",
   },
   twitter: {
     card: "summary_large_image",

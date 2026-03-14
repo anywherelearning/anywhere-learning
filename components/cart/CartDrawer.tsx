@@ -103,12 +103,12 @@ export default function CartDrawer() {
         window.location.href = data.url;
       } else {
         console.error('Checkout error:', data.error);
-        setCheckoutError('Something went wrong. Please try again.');
+        setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');
         setCheckingOut(false);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
-      setCheckoutError('Could not connect. Please check your internet and try again.');
+      setCheckoutError('Couldn\u2019t connect \u2014 check your internet and try again.');
       setCheckingOut(false);
     }
   }
@@ -206,8 +206,8 @@ export default function CartDrawer() {
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
-              <p className="text-gray-400 mb-1 font-medium">Your cart is empty</p>
-              <p className="text-gray-400 text-sm mb-6">Browse our activity packs and add some to get started.</p>
+              <p className="text-gray-400 mb-1 font-medium">Nothing here yet!</p>
+              <p className="text-gray-400 text-sm mb-6">Find your family&apos;s next adventure in our activity packs.</p>
               <Link
                 href="/shop"
                 onClick={closeCart}

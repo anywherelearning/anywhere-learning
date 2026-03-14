@@ -3,11 +3,11 @@ import { LogoIcon } from '@/components/Logo';
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-[#f7f5f0] pt-0 pb-[max(4rem,calc(1rem+env(safe-area-inset-bottom)))]">
+    <footer className="relative bg-[#faf9f6] pt-0 pb-[max(4rem,calc(1rem+env(safe-area-inset-bottom)))]">
       {/* Decorative organic top edge */}
       <div className="relative h-12 -mt-1 overflow-hidden" aria-hidden="true">
         <svg viewBox="0 0 1200 48" fill="none" preserveAspectRatio="none" className="absolute top-0 w-full h-12">
-          <path d="M0 0 Q200 40 400 24 T800 32 T1200 16 V48 H0 Z" fill="#f7f5f0" />
+          <path d="M0 0 Q200 40 400 24 T800 32 T1200 16 V48 H0 Z" fill="#faf9f6" />
         </svg>
       </div>
 
