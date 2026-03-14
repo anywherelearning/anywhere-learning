@@ -172,7 +172,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
 
           <Link
             href="/account/downloads"
-            className="inline-flex items-center gap-2 mt-6 bg-forest hover:bg-forest-dark text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
+            className="inline-flex items-center gap-2 mt-6 bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
           >
             <svg
               className="w-5 h-5"

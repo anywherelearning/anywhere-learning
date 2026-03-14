@@ -10,58 +10,61 @@ import { getAllPosts } from '@/lib/blog';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getAllPosts();
 
+  // Use a fixed date for static pages so crawlers see real change signals
+  const siteLastUpdated = new Date('2026-03-14');
+
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: 'https://anywherelearning.co',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: 'https://anywherelearning.co/shop',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: 'https://anywherelearning.co/blog',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: 'https://anywherelearning.co/about',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: 'https://anywherelearning.co/free-guide',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: 'https://anywherelearning.co/faq',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: 'https://anywherelearning.co/contact',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'yearly',
       priority: 0.4,
     },
     {
       url: 'https://anywherelearning.co/privacy',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: 'https://anywherelearning.co/terms',
-      lastModified: new Date(),
+      lastModified: siteLastUpdated,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
@@ -86,7 +89,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const productUrls = allProducts.map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
-      lastModified: new Date(),
+      lastModified: p.updatedAt ? new Date(p.updatedAt) : siteLastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));
