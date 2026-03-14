@@ -1,9 +1,12 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useCart } from '@/components/cart/CartProvider';
+import { getBundleUpsell } from '@/lib/cart';
+import { formatPrice } from '@/lib/utils';
 
 const DISMISS_KEY = 'exit-popup-dismissed';
 const DISMISS_DAYS = 7;
@@ -12,8 +15,14 @@ export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const pathname = usePathname();
+  const { items, itemCount, totalCents, openCart, nextByobTier } = useCart();
 
   const isShopPage = pathname.startsWith('/shop');
+
+  const upsell = useMemo(() => getBundleUpsell(items), [items]);
+
+  // Variant: 'bundle-upgrade' | 'cart-recovery' | 'bundle-promo'
+  const variant = upsell ? 'bundle-upgrade' : itemCount > 0 ? 'cart-recovery' : 'bundle-promo';
 
   const dismiss = useCallback(() => {
     setAnimating(false);
@@ -93,6 +102,13 @@ export default function ExitIntentPopup() {
 
   if (!show || !isShopPage) return null;
 
+  const ariaLabel =
+    variant === 'bundle-upgrade'
+      ? 'Bundle upgrade suggestion'
+      : variant === 'cart-recovery'
+        ? 'Cart reminder'
+        : 'Free guide offer with bundle purchase';
+
   return (
     <div
       className={`fixed inset-0 z-[60] flex items-center justify-center p-4 transition-all duration-300 ${
@@ -103,10 +119,12 @@ export default function ExitIntentPopup() {
       }}
       role="dialog"
       aria-modal="true"
-      aria-label="Free guide offer with bundle purchase"
+      aria-label={ariaLabel}
     >
       <div
-        className={`relative w-full max-w-[500px] bg-cream rounded-3xl shadow-2xl overflow-hidden flex flex-col sm:flex-row max-h-[85vh] sm:max-h-none transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`relative w-full max-w-[500px] bg-cream rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          variant === 'bundle-promo' ? 'flex flex-col sm:flex-row max-h-[85vh] sm:max-h-none' : 'max-h-[85vh]'
+        } ${
           animating
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-6'
@@ -115,7 +133,11 @@ export default function ExitIntentPopup() {
         {/* Close button */}
         <button
           onClick={dismiss}
-          className="absolute top-2.5 right-2.5 z-20 w-7 h-7 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 text-white/90 hover:text-white transition-all duration-200"
+          className={`absolute top-2.5 right-2.5 z-20 w-7 h-7 flex items-center justify-center rounded-full transition-all duration-200 ${
+            variant === 'bundle-promo'
+              ? 'bg-black/20 hover:bg-black/40 text-white/90 hover:text-white'
+              : 'bg-gray-200/60 hover:bg-gray-200 text-gray-500 hover:text-gray-700'
+          }`}
           aria-label="Close"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
@@ -124,126 +146,351 @@ export default function ExitIntentPopup() {
           </svg>
         </button>
 
-        {/* ── Top banner (full width) ── */}
-        <div className="w-full sm:absolute sm:top-0 sm:left-0 sm:right-0 sm:z-10 bg-forest-dark px-5 py-2.5 text-center">
-          <p className="text-gold-light text-[11px] font-semibold uppercase tracking-[0.2em]">
-            Free with any bundle
-          </p>
-        </div>
-
-        {/* ── Mobile image band ── */}
-        <div className="sm:hidden relative w-full h-40 overflow-hidden">
-          <Image
-            src="/products/future-ready-skills-map.jpg"
-            alt="The Future-Ready Skills Map"
-            fill
-            sizes="500px"
-            className="object-cover"
-            loading="lazy"
+        {variant === 'bundle-promo' && <BundlePromoContent dismiss={dismiss} />}
+        {variant === 'cart-recovery' && (
+          <CartRecoveryContent
+            items={items}
+            itemCount={itemCount}
+            totalCents={totalCents}
+            nextByobTier={nextByobTier}
+            openCart={openCart}
+            dismiss={dismiss}
           />
-          {/* Page count badge */}
-          <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
-            42 pages
-          </div>
-        </div>
-
-        {/* ── Desktop image column ── */}
-        <div className="hidden sm:block sm:w-[44%] relative sm:mt-[36px]">
-          <Image
-            src="/products/future-ready-skills-map.jpg"
-            alt="The Future-Ready Skills Map"
-            fill
-            sizes="220px"
-            className="object-cover"
-            loading="lazy"
-          />
-          {/* Page count badge */}
-          <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
-            42 pages
-          </div>
-        </div>
-
-        {/* ── Content column ── */}
-        <div className="w-full sm:w-[56%] px-5 py-5 sm:px-6 sm:py-7 sm:mt-[36px] popup-stagger overflow-y-auto">
-          {/* Eyebrow badge */}
-          <div className="inline-flex items-center gap-1.5 bg-gold/15 text-forest-dark text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
-            <svg className="w-3.5 h-3.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
-            </svg>
-            Your starting point
-          </div>
-
-          {/* Headline */}
-          <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-2">
-            Start with the big picture
-          </h2>
-
-          {/* Subheading */}
-          <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            The Future-Ready Skills Map covers the 10 skills that matter most for your
-            child&rsquo;s future. It&rsquo;s the foundation for every activity pack we make.
-          </p>
-
-          {/* Feature chips */}
-          <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-4">
-            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
-              <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-              </svg>
-              <span className="text-[12px] font-medium text-gray-700">10 key skills</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
-              <svg className="w-4 h-4 text-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                <line x1="16" y1="2" x2="16" y2="6" />
-                <line x1="8" y1="2" x2="8" y2="6" />
-                <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>
-              <span className="text-[12px] font-medium text-gray-700">Sample weeks</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
-              <svg className="w-4 h-4 text-forest flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span className="text-[12px] font-medium text-gray-700">Ages 0&ndash;14+</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
-              <svg className="w-4 h-4 text-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <span className="text-[12px] font-medium text-gray-700">No-prep activities</span>
-            </div>
-          </div>
-
-          {/* Price badge */}
-          <div className="inline-flex items-center gap-2.5 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[13px] text-gray-400 line-through">$9.99</span>
-            <span className="text-[13px] font-bold text-forest">FREE</span>
-          </div>
-
-          {/* CTA */}
-          <Link
-            href="/shop?category=bundle"
-            onClick={dismiss}
-            className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
-          >
-            Browse Bundles &rarr;
-          </Link>
-
-          {/* Dismiss */}
-          <button
-            onClick={dismiss}
-            className="mt-2.5 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
-          >
-            No thanks, I&rsquo;ll keep browsing
-          </button>
-        </div>
+        )}
+        {variant === 'bundle-upgrade' && upsell && (
+          <BundleUpgradeContent upsell={upsell} openCart={openCart} dismiss={dismiss} />
+        )}
       </div>
     </div>
   );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Variant B: Bundle Promo (empty cart — original popup)
+   ═══════════════════════════════════════════════════════════════════ */
+
+function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
+  return (
+    <>
+      {/* Top banner */}
+      <div className="w-full sm:absolute sm:top-0 sm:left-0 sm:right-0 sm:z-10 bg-forest-dark px-5 py-2.5 text-center">
+        <p className="text-gold-light text-[11px] font-semibold uppercase tracking-[0.2em]">
+          Free with any bundle
+        </p>
+      </div>
+
+      {/* Mobile image band */}
+      <div className="sm:hidden relative w-full h-40 overflow-hidden">
+        <Image
+          src="/products/future-ready-skills-map.jpg"
+          alt="The Future-Ready Skills Map"
+          fill
+          sizes="500px"
+          className="object-cover"
+          loading="lazy"
+        />
+        <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
+          42 pages
+        </div>
+      </div>
+
+      {/* Desktop image column */}
+      <div className="hidden sm:block sm:w-[44%] relative sm:mt-[36px]">
+        <Image
+          src="/products/future-ready-skills-map.jpg"
+          alt="The Future-Ready Skills Map"
+          fill
+          sizes="220px"
+          className="object-cover"
+          loading="lazy"
+        />
+        <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
+          42 pages
+        </div>
+      </div>
+
+      {/* Content column */}
+      <div className="w-full sm:w-[56%] px-5 py-5 sm:px-6 sm:py-7 sm:mt-[36px] popup-stagger overflow-y-auto">
+        <div className="inline-flex items-center gap-1.5 bg-gold/15 text-forest-dark text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+          <svg className="w-3.5 h-3.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
+          </svg>
+          Your starting point
+        </div>
+
+        <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-2">
+          Start with the big picture
+        </h2>
+
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          The Future-Ready Skills Map covers the 10 skills that matter most for your
+          child&rsquo;s future. It&rsquo;s the foundation for every activity pack we make.
+        </p>
+
+        <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-4">
+          {[
+            { icon: 'compass', label: '10 key skills', color: 'text-forest' },
+            { icon: 'calendar', label: 'Sample weeks', color: 'text-gold' },
+            { icon: 'users', label: 'Ages 0\u201314+', color: 'text-forest' },
+            { icon: 'check', label: 'No-prep activities', color: 'text-gold' },
+          ].map((chip) => (
+            <div key={chip.label} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
+              <FeatureIcon type={chip.icon} className={`w-4 h-4 ${chip.color} flex-shrink-0`} />
+              <span className="text-[12px] font-medium text-gray-700">{chip.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="inline-flex items-center gap-2.5 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-5">
+          <span className="text-[13px] text-gray-400 line-through">$9.99</span>
+          <span className="text-[13px] font-bold text-forest">FREE</span>
+        </div>
+
+        <Link
+          href="/shop?category=bundle"
+          onClick={dismiss}
+          className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+        >
+          Browse Bundles &rarr;
+        </Link>
+
+        <button
+          onClick={dismiss}
+          className="mt-2.5 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+        >
+          No thanks, I&rsquo;ll keep browsing
+        </button>
+      </div>
+    </>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Variant A: Cart Recovery (has items, no bundle upsell)
+   ═══════════════════════════════════════════════════════════════════ */
+
+function CartRecoveryContent({
+  items,
+  itemCount,
+  totalCents,
+  nextByobTier,
+  openCart,
+  dismiss,
+}: {
+  items: { slug: string; name: string; priceCents: number; imageUrl: string | null; category: string }[];
+  itemCount: number;
+  totalCents: number;
+  nextByobTier: { tier: { minItems: number; discountPercent: number }; itemsNeeded: number } | null;
+  openCart: () => void;
+  dismiss: () => void;
+}) {
+  const previewItems = items.slice(0, 3);
+  const remaining = itemCount - previewItems.length;
+
+  return (
+    <div className="px-6 py-7 popup-stagger overflow-y-auto">
+      {/* Top banner */}
+      <div className="bg-forest-dark rounded-2xl px-5 py-3 text-center mb-5 -mx-1">
+        <p className="text-gold-light text-[11px] font-semibold uppercase tracking-[0.2em]">
+          Don&rsquo;t forget your picks
+        </p>
+      </div>
+
+      {/* Headline */}
+      <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-1 text-center">
+        You&rsquo;ve got great taste
+      </h2>
+      <p className="text-sm text-gray-500 text-center mb-5">
+        {itemCount} {itemCount === 1 ? 'item' : 'items'} &middot; {formatPrice(totalCents)}
+      </p>
+
+      {/* Item previews */}
+      <div className="space-y-2.5 mb-5">
+        {previewItems.map((item) => (
+          <div key={item.slug} className="flex items-center gap-3 bg-white rounded-xl px-3.5 py-2.5 border border-gray-100">
+            <div className="w-10 h-10 rounded-lg bg-gray-50 overflow-hidden flex-shrink-0 relative">
+              {item.imageUrl ? (
+                <Image
+                  src={item.imageUrl}
+                  alt={item.name}
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-gray-300">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg>
+                </div>
+              )}
+            </div>
+            <span className="text-[13px] font-medium text-gray-700 flex-1 line-clamp-1">{item.name}</span>
+            <span className="text-[13px] font-semibold text-forest flex-shrink-0">{formatPrice(item.priceCents)}</span>
+          </div>
+        ))}
+        {remaining > 0 && (
+          <p className="text-[12px] text-gray-400 text-center">
+            +{remaining} more {remaining === 1 ? 'item' : 'items'}
+          </p>
+        )}
+      </div>
+
+      {/* BYOB nudge */}
+      {nextByobTier && nextByobTier.itemsNeeded <= 3 && (
+        <div className="bg-gold/10 border border-gold/20 rounded-xl px-4 py-2.5 mb-5 text-center">
+          <p className="text-[13px] text-forest-dark font-medium">
+            Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+            <span className="font-bold">{nextByobTier.tier.discountPercent}% off</span>
+          </p>
+        </div>
+      )}
+
+      {/* CTA */}
+      <button
+        onClick={() => {
+          dismiss();
+          // Small delay so popup closes before drawer opens
+          setTimeout(() => openCart(), 350);
+        }}
+        className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+      >
+        View Cart &rarr;
+      </button>
+
+      <button
+        onClick={dismiss}
+        className="mt-2.5 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+      >
+        I&rsquo;ll come back later
+      </button>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Variant C: Bundle Upgrade (has items matching a bundle)
+   ═══════════════════════════════════════════════════════════════════ */
+
+function BundleUpgradeContent({
+  upsell,
+  openCart,
+  dismiss,
+}: {
+  upsell: { bundle: { slug: string; name: string; priceCents: number; imageUrl: string; totalChildCount?: number }; matchingSlugs: string[]; savingsCents: number; additionalCostCents: number; totalChildCount: number };
+  openCart: () => void;
+  dismiss: () => void;
+}) {
+  const saves = upsell.savingsCents > 0;
+
+  return (
+    <div className="popup-stagger overflow-y-auto">
+      {/* Bundle image banner */}
+      <div className="relative w-full h-36 sm:h-44 overflow-hidden">
+        <Image
+          src={upsell.bundle.imageUrl}
+          alt={upsell.bundle.name}
+          fill
+          sizes="500px"
+          className="object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        {saves && (
+          <div className="absolute bottom-3 left-3 bg-gold text-forest-dark text-[11px] font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+            Save {formatPrice(upsell.savingsCents)}
+          </div>
+        )}
+      </div>
+
+      <div className="px-6 py-5 sm:py-6">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-1.5 bg-forest/10 text-forest-dark text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+          <svg className="w-3.5 h-3.5 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+          </svg>
+          Smart upgrade
+        </div>
+
+        {/* Headline */}
+        <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-2">
+          You&rsquo;re {upsell.matchingSlugs.length} of {upsell.totalChildCount} packs in
+        </h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          Get the <span className="font-semibold text-forest-dark">{upsell.bundle.name}</span>{' '}
+          {saves
+            ? `and save ${formatPrice(upsell.savingsCents)} vs buying individually.`
+            : `\u2014 all ${upsell.totalChildCount} packs for just ${formatPrice(upsell.bundle.priceCents)}.`}
+          {' '}Plus a free Future-Ready Skills Map.
+        </p>
+
+        {/* Price comparison */}
+        <div className="flex items-center justify-center gap-3 bg-white rounded-xl border border-gray-100 px-4 py-3 mb-5">
+          <div className="text-center">
+            <p className="text-[11px] text-gray-400 uppercase tracking-wide">Bundle price</p>
+            <p className="text-lg font-bold text-forest">{formatPrice(upsell.bundle.priceCents)}</p>
+          </div>
+          {saves && (
+            <>
+              <div className="w-px h-8 bg-gray-200" />
+              <div className="text-center">
+                <p className="text-[11px] text-gray-400 uppercase tracking-wide">You save</p>
+                <p className="text-lg font-bold text-gold">{formatPrice(upsell.savingsCents)}</p>
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* CTA */}
+        <Link
+          href={`/shop/${upsell.bundle.slug}`}
+          onClick={dismiss}
+          className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+        >
+          View Bundle &rarr;
+        </Link>
+
+        {/* Secondary CTA */}
+        <button
+          onClick={() => {
+            dismiss();
+            setTimeout(() => openCart(), 350);
+          }}
+          className="mt-2 text-[13px] text-forest hover:text-forest-dark font-medium transition-colors text-center w-full py-1"
+        >
+          View my cart instead
+        </button>
+
+        <button
+          onClick={dismiss}
+          className="mt-1 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+        >
+          No thanks, I&rsquo;ll keep browsing
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Shared tiny icon helper for the bundle promo feature chips
+   ═══════════════════════════════════════════════════════════════════ */
+
+function FeatureIcon({ type, className }: { type: string; className?: string }) {
+  const props = { className, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, 'aria-hidden': true as const };
+  switch (type) {
+    case 'compass':
+      return <svg {...props}><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></svg>;
+    case 'calendar':
+      return <svg {...props}><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>;
+    case 'users':
+      return <svg {...props}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+    case 'check':
+      return <svg {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>;
+    default:
+      return null;
+  }
 }
