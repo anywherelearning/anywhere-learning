@@ -93,10 +93,11 @@ export default function CartProvider({ children }: { children: React.ReactNode }
   }, [state.items, isMounted]);
 
   // Clear cart on successful purchase return
+  // Checkout redirects to /checkout/success?session_id=xxx
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const params = new URLSearchParams(window.location.search);
-    if (params.get('success') === 'true') {
+    if (params.has('session_id') && window.location.pathname.includes('/checkout/success')) {
       dispatch({ type: 'CLEAR' });
     }
   }, []);

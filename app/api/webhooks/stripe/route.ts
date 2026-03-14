@@ -16,12 +16,18 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing signature' }, { status: 400 });
   }
 
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  if (!webhookSecret) {
+    console.error('STRIPE_WEBHOOK_SECRET is not set — cannot verify webhook signatures');
+    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+  }
+
   let event: Stripe.Event;
   try {
     event = stripe.webhooks.constructEvent(
       rawBody,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!,
+      webhookSecret,
     );
   } catch (err) {
     console.error('Webhook signature verification failed:', err);
@@ -85,7 +91,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error(`Webhook handler failed for ${event.type}:`, error);
     return NextResponse.json(
-      { error: 'Webhook handler failed', detail: String(error) },
+      { error: 'Webhook handler failed' },
       { status: 500 },
     );
   }
@@ -303,18 +309,23 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
   // come directly from Stripe's records and cannot be spoofed.
   const lineItems = await stripe.checkout.sessions.listLineItems(stripeSessionId, {
     limit: 100,
-    expand: ['data.price'],
+    expand: ['data.price', 'data.price.product'],
   });
 
   // Collect price IDs from Stripe-verified line items.
   // Standard items have a price ID matching our DB. BYOB-discounted items
-  // use price_data with the original stripePriceId stored in price.metadata.
+  // use price_data with the original stripePriceId stored in product_data.metadata
+  // (Stripe puts product_data.metadata on the Product object, NOT the Price object).
   const priceIds: string[] = [];
   for (const li of lineItems.data) {
     const priceObj = li.price;
     if (!priceObj) continue;
-    // Check for BYOB metadata first (price_data items embed the original ID)
-    const originalPriceId = (priceObj.metadata as Record<string, string>)?.stripePriceId;
+    // Check for BYOB metadata on the expanded product (product_data.metadata → product.metadata)
+    const product = priceObj.product as Stripe.Product | string | null;
+    const productMeta = typeof product === 'object' && product !== null
+      ? (product.metadata as Record<string, string>)
+      : null;
+    const originalPriceId = productMeta?.stripePriceId;
     if (originalPriceId) {
       priceIds.push(originalPriceId);
     } else if (priceObj.id && !priceObj.id.startsWith('price_')) {
