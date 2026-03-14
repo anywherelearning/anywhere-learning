@@ -94,7 +94,11 @@ export async function POST(req: NextRequest) {
       if (individualCount >= tier.minItems) byobDiscount = tier.discountPercent;
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+    const siteUrl = process.env.NEXT_PUBLIC_URL;
+    if (!siteUrl) {
+      console.error('NEXT_PUBLIC_URL is not set — checkout cannot create valid redirect URLs');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
 
     // Build line items — apply BYOB discount to individual items via price_data
     const lineItems: Array<{
@@ -151,18 +155,14 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // SECURITY: Never trust the Origin header — it can be spoofed to redirect
-    // users to phishing sites after checkout. Only use our own configured URL.
-    const origin = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
-
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
       line_items: lineItems,
       customer_email: email,
       customer_creation: 'always',
-      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/shop`,
+      success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${siteUrl}/shop`,
       metadata: {
         product_slugs: verifiedSlugs.join(','),
         ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),
