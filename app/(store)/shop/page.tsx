@@ -14,7 +14,6 @@ import CategorySection from "@/components/shop/CategorySection";
 import CategoryHero from "@/components/shop/CategoryHero";
 import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ScrollReveal from "@/components/shared/ScrollReveal";
-import SavingsExplainer from "@/components/shop/SavingsExplainer";
 
 export const revalidate = 3600; // ISR: revalidate hourly
 
@@ -350,11 +349,12 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 Ready-to-Use Activity Guides
               </p>
               <h1 className="font-display text-4xl text-forest sm:text-5xl lg:text-6xl text-balance mb-4">
-                Activity Packs That Make
-                <br className="hidden sm:block" /> Real Life the Lesson
+                Homeschool Activity Packs
+                <br className="hidden sm:block" /> for Real-World Learning
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-lg text-gray-500">
-                No-prep. Open on any device. Built for families who learn everywhere.
+                No-prep activities for homeschool and worldschool families.
+                Open on any device, use year after year.
               </p>
             </div>
           </section>
@@ -388,15 +388,6 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             </div>
           </div>
         </>
-      )}
-
-      {/* ════════════════════════════════════════
-          SAVINGS EXPLAINER (all view only)
-      ════════════════════════════════════════ */}
-      {isAllView && (
-        <ScrollReveal>
-          <SavingsExplainer />
-        </ScrollReveal>
       )}
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
@@ -458,7 +449,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             )}
 
             {/* Category filter */}
-            <section id="pick-packs" className="mb-10 scroll-mt-24">
+            <section className="mb-10">
               <Suspense fallback={null}>
                 <CategoryFilter
                   hideBundles

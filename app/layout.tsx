@@ -21,10 +21,6 @@ const bodyFont = DM_Sans({
   display: "swap",
 });
 
-export const viewport = {
-  viewportFit: 'cover' as const,
-};
-
 export const metadata: Metadata = {
   title: {
     default: "Anywhere Learning — Meaningful Learning, Wherever You Are",
@@ -79,7 +75,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="alternate" type="application/rss+xml" title="Anywhere Learning Blog" href="/blog/feed.xml" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"
           strategy="afterInteractive"
@@ -92,6 +87,43 @@ export default function RootLayout({
             gtag('config', 'G-WF83M4HF46');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://anywherelearning.co/#organization",
+                  "name": "Anywhere Learning",
+                  "url": "https://anywherelearning.co",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://anywherelearning.co/logo.png",
+                  },
+                  "description":
+                    "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+                  "email": "info@anywherelearning.co",
+                  "sameAs": [
+                    "https://www.pinterest.com/anywherelearningco/",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://anywherelearning.co/#website",
+                  "url": "https://anywherelearning.co",
+                  "name": "Anywhere Learning",
+                  "description":
+                    "Meaningful Learning, Wherever You Are",
+                  "publisher": {
+                    "@id": "https://anywherelearning.co/#organization",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body
         className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
