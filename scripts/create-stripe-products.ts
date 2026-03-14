@@ -15,6 +15,7 @@ const catalog = [
   { slug: 'creativity-mega-bundle', name: 'Creativity Mega Bundle', priceCents: 2999, description: 'All 10 creativity packs — game design, filmmaking, invention, and more.' },
   { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 2999, description: 'All 10 real-world skills packs — budgeting, cooking, business, and more.' },
   { slug: 'ai-digital-bundle', name: 'AI & Digital Literacy Bundle', priceCents: 2999, description: 'All 10 AI & digital literacy packs.' },
+  { slug: 'real-world-math-bundle', name: 'Real-World Math Mega Bundle', priceCents: 2999, description: 'All 10 Real-World Math guides — campout planning, garage sales, garden plots, road trips, and more.' },
   { slug: 'nature-art-bundle', name: 'Nature Art Bundle', priceCents: 1499, description: 'Land Art + Nature Crafts + Nature Journal.' },
   { slug: 'outdoor-toolkit-bundle', name: 'Outdoor Toolkit Bundle', priceCents: 1999, description: 'Walk Cards + Missions + STEM + Choice Boards.' },
   // ─── Seasonal ($12.99) ───
@@ -63,6 +64,17 @@ const catalog = [
   { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries', priceCents: 499, description: 'Build healthy boundaries with technology and AI tools.' },
   { slug: 'privacy-footprint', name: 'Privacy & Digital Footprint Map', priceCents: 499, description: 'Understand and manage your digital footprint and privacy.' },
   { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 499, description: 'Master the art of talking to AI effectively.' },
+  // ─── Real-World Math singles ($4.99) ───
+  { slug: 'backyard-campout-planner', name: 'Backyard Campout Planner', priceCents: 499, description: 'Plan a backyard campout — gear lists, meal prep, stargazing, and budgets.' },
+  { slug: 'clothing-swap-thrift-math', name: 'Clothing Swap & Thrift Math', priceCents: 499, description: 'Thrift shopping and clothing swap maths — budgets, value, and smart spending.' },
+  { slug: 'family-electricity-audit', name: 'Family Electricity Audit', priceCents: 499, description: 'Audit electricity use, calculate costs, and find real ways to save.' },
+  { slug: 'farmers-market-challenge', name: 'Farmers Market Challenge', priceCents: 499, description: 'Budget and shop at a farmers market — prices, change, and smart choices.' },
+  { slug: 'garage-sale-math', name: 'Garage Sale Math', priceCents: 499, description: 'Price, sell, and count change at a real garage sale.' },
+  { slug: 'garden-plot-planner', name: 'Garden Plot Planner', priceCents: 499, description: 'Design a garden with real measurements, spacing, and budgets.' },
+  { slug: 'party-planner-math', name: 'Party Planner Math', priceCents: 499, description: 'Plan a party with real budgets, quantities, and timing.' },
+  { slug: 'road-trip-calculator', name: 'Road Trip Calculator', priceCents: 499, description: 'Calculate distances, fuel costs, and budgets for a real road trip.' },
+  { slug: 'savings-goal-tracker', name: 'Savings Goal Tracker', priceCents: 499, description: 'Set and track a real savings goal — deposits, progress, and money maths.' },
+  { slug: 'sports-stats-lab', name: 'Sports Stats Lab', priceCents: 499, description: 'Analyse real sports stats — averages, percentages, and data visualisation.' },
   // ─── Life Skills ───
   { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A complete roadmap of real-world skills every kid needs.' },
   { slug: 'my-small-business-project', name: 'My Small Business Project', priceCents: 499, description: 'Full small business project from idea to launch.' },
@@ -75,6 +87,7 @@ const imageOverrides: Record<string, string> = {
   'creativity-mega-bundle': 'mega-bundle-creativity.jpg',
   'real-world-mega-bundle': 'mega-bundle-real-world.jpg',
   'ai-digital-bundle': 'mega-bundle-ai-digital.jpg',
+  'real-world-math-bundle': 'mega-bundle-real-world-math.jpg',
 };
 
 async function createStripeProducts() {

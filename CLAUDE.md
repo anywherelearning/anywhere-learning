@@ -102,6 +102,7 @@ When adding new products, follow this order:
 
 ### 1. Code changes (Claude does these)
 - [ ] **`scripts/seed.ts`** — Add product entry (name, slug, description, price, category, ageRange, sortOrder)
+- [ ] **`scripts/create-stripe-products.ts`** — Add to `catalog[]` array (slug, name, priceCents, description). If bundle: add image override to `imageOverrides`
 - [ ] **`lib/fallback-products.ts`** — Add full product object with descriptions, previewFile reference
 - [ ] **`lib/product-descriptions.ts`** — Add opening, whatsIncluded, skillTags, format
 - [ ] **`lib/cart.ts`** — If bundle: add to `BUNDLE_CONTENTS` (child slugs) and `BUNDLE_DATA` (pricing/image)
@@ -109,9 +110,10 @@ When adding new products, follow this order:
 - [ ] **Product cover image** — Extract first page of PDF → `public/products/[slug].jpg` (use `pdftoppm -jpeg -f 1 -l 1 -r 300` then `sips --resampleWidth 800`)
 - [ ] **Bundle cover image** — Copy from Previews folder → `public/products/mega-bundle-[name].jpg`
 
-### 2. Service updates (run after code changes)
+### 2. Service updates (Claude runs these after code changes)
 - [ ] **Run `npm run stripe:sync`** — Creates Stripe products and populates price IDs
-- [ ] **Seed Neon database** — Run `npx tsx scripts/seed.ts` or insert via Drizzle migration
+- [ ] **Seed Neon database** — Run `npx tsx scripts/seed.ts` to insert new products
+- [ ] **Update `stripePriceId`** in `lib/fallback-products.ts` with the new IDs from stripe:sync output
 
 ### 3. Manual steps (Amelie does these)
 - [ ] **Upload activity PDFs to Vercel Blob** — The actual downloadable files
