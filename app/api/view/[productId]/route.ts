@@ -5,6 +5,7 @@ import { products, users } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { checkProductAccess } from '@/lib/access';
 import { streamBlobToResponse } from '@/lib/blob';
+import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 /**
  * PDF viewing route for members and purchasers.
@@ -16,6 +17,10 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ productId: string }> },
 ) {
+  // Rate limit: 30 req / 60s — blob streaming is resource-intensive
+  const limited = await checkRateLimit(req, relaxedLimiter());
+  if (limited) return limited;
+
   const { productId } = await params;
   const { userId: clerkId } = await auth();
 

@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import path from 'path';
 import { getPreviewFileName } from '@/lib/preview-map';
+import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 /**
  * Serve preview PDF for a product.
@@ -9,9 +10,13 @@ import { getPreviewFileName } from '@/lib/preview-map';
  * Prod: will read from Vercel Blob (previewBlobUrl) once uploaded.
  */
 export async function GET(
-  _request: Request,
+  req: NextRequest,
   { params }: { params: Promise<{ slug: string }> },
 ) {
+  // Rate limit: 30 req / 60s — public endpoint with file I/O
+  const limited = await checkRateLimit(req, relaxedLimiter());
+  if (limited) return limited;
+
   const { slug } = await params;
   const fileName = getPreviewFileName(slug);
 
