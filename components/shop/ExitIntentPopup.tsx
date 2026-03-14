@@ -139,7 +139,7 @@ export default function ExitIntentPopup() {
             fill
             sizes="500px"
             className="object-cover"
-            priority
+            loading="lazy"
           />
           {/* Page count badge */}
           <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
@@ -155,7 +155,7 @@ export default function ExitIntentPopup() {
             fill
             sizes="220px"
             className="object-cover"
-            priority
+            loading="lazy"
           />
           {/* Page count badge */}
           <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">

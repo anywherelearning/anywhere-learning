@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
   getAllPosts,
@@ -55,7 +56,9 @@ export async function generateMetadata({
       url: `https://anywherelearning.co/blog/${post.slug}`,
       images: [
         {
-          url: 'https://anywherelearning.co/og-default.png',
+          url: post.heroImage
+            ? `https://anywherelearning.co${post.heroImage}`
+            : 'https://anywherelearning.co/og-default.png',
           width: 1200,
           height: 630,
           alt: post.title,
@@ -201,9 +204,21 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
     case 'image':
       return (
         <figure key={index} className="my-12 md:my-16">
-          <div className="aspect-[16/9] rounded-2xl bg-warm-gradient border border-gray-100/50 flex items-center justify-center">
-            <span className="text-gray-300 text-sm">{block.alt}</span>
-          </div>
+          {block.src ? (
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
+              <Image
+                src={block.src}
+                alt={block.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 680px"
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <div className="aspect-[16/9] rounded-2xl bg-warm-gradient border border-gray-100/50 flex items-center justify-center">
+              <span className="text-gray-300 text-sm">{block.alt}</span>
+            </div>
+          )}
           {block.caption && (
             <figcaption className="mt-3 text-center text-[13px] text-gray-400 italic">
               {block.caption}
@@ -300,7 +315,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.excerpt,
     datePublished: post.publishedAt,
     dateModified: post.dateModified || post.publishedAt,
-    image: 'https://anywherelearning.co/og-default.png',
+    image: post.heroImage
+      ? `https://anywherelearning.co${post.heroImage}`
+      : 'https://anywherelearning.co/og-default.png',
     keywords: post.keywords?.join(', '),
     articleBody,
     wordCount: articleBody.split(/\s+/).length,
@@ -434,27 +451,39 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div
             className="group relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             style={{
-              background: `linear-gradient(160deg, ${cat.color}12, ${cat.color}30, ${cat.color}08)`,
+              background: post.heroImage ? undefined : `linear-gradient(160deg, ${cat.color}12, ${cat.color}30, ${cat.color}08)`,
             }}
           >
             <PinterestSaveButton
               url={`https://anywherelearning.co/blog/${post.slug}`}
               description={`${post.title} — ${post.excerpt}`}
             />
-            {/* Organic shapes */}
-            <div
-              className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"
-              style={{ backgroundColor: cat.color }}
-            />
-            <div
-              className="absolute bottom-[15%] left-[8%] w-52 h-52 rounded-full opacity-10 blur-[80px]"
-              style={{ backgroundColor: cat.color }}
-            />
-            <div
-              className="absolute top-[40%] left-[45%] w-24 h-24 rounded-full opacity-8 blur-2xl"
-              style={{ backgroundColor: cat.color }}
-            />
-            <span className="text-gray-400/40 text-sm relative z-10 font-medium">{post.heroImageAlt}</span>
+            {post.heroImage ? (
+              <Image
+                src={post.heroImage}
+                alt={post.heroImageAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, 1024px"
+                className="object-cover"
+              />
+            ) : (
+              <>
+                {/* Organic shapes */}
+                <div
+                  className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"
+                  style={{ backgroundColor: cat.color }}
+                />
+                <div
+                  className="absolute bottom-[15%] left-[8%] w-52 h-52 rounded-full opacity-10 blur-[80px]"
+                  style={{ backgroundColor: cat.color }}
+                />
+                <div
+                  className="absolute top-[40%] left-[45%] w-24 h-24 rounded-full opacity-8 blur-2xl"
+                  style={{ backgroundColor: cat.color }}
+                />
+                <span className="text-gray-400/40 text-sm relative z-10 font-medium">{post.heroImageAlt}</span>
+              </>
+            )}
           </div>
         </ScrollReveal>
       </div>

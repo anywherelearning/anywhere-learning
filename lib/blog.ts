@@ -20,7 +20,7 @@ export type BlogContentBlock =
   | { type: 'heading'; level: 2 | 3; text: string }
   | { type: 'pull-quote'; text: string; attribution?: string }
   | { type: 'list'; ordered: boolean; items: string[] }
-  | { type: 'image'; alt: string; caption?: string }
+  | { type: 'image'; alt: string; caption?: string; src?: string }
   | { type: 'cta'; text: string; href: string; label: string }
   | { type: 'tip'; title: string; text: string }
   | { type: 'faq'; items: { question: string; answer: string }[] };
@@ -35,6 +35,7 @@ export interface BlogPost {
   keywords?: string[];
   readTimeMinutes: number;
   author: BlogAuthor;
+  heroImage?: string;
   heroImageAlt: string;
   content: BlogContentBlock[];
   relatedSlugs: string[];

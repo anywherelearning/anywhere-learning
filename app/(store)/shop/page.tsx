@@ -74,6 +74,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category } = await searchParams;
   const meta = category ? categoryMeta[category] : null;
+  const canonicalUrl = category
+    ? `https://anywherelearning.co/shop?category=${category}`
+    : "https://anywherelearning.co/shop";
 
   return {
     title: meta?.title || "Shop Activity Packs",
@@ -81,7 +84,7 @@ export async function generateMetadata({
       meta?.description ||
       "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
     alternates: {
-      canonical: "https://anywherelearning.co/shop",
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: meta
@@ -90,7 +93,7 @@ export async function generateMetadata({
       description:
         meta?.description ||
         "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
-      url: "https://anywherelearning.co/shop",
+      url: canonicalUrl,
       type: "website",
       images: [
         {
