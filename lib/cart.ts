@@ -181,13 +181,77 @@ export interface BundleUpsell {
   totalChildCount: number;
 }
 
+// ═══════════════════════════════════════════════════════════════════
+// Build Your Own Bundle (BYOB) — tiered discounts on individual items
+// ═══════════════════════════════════════════════════════════════════
+
+export interface ByobTier {
+  minItems: number;
+  discountPercent: number;
+}
+
+export const BYOB_TIERS: ByobTier[] = [
+  { minItems: 5,  discountPercent: 10 },
+  { minItems: 7,  discountPercent: 15 },
+  { minItems: 10, discountPercent: 20 },
+];
+
+/** Get the highest qualifying BYOB tier based on non-bundle item count, or null. */
+export function getByobTier(items: CartItem[]): ByobTier | null {
+  const individualCount = items.filter((i) => !i.isBundle).length;
+  let activeTier: ByobTier | null = null;
+  for (const tier of BYOB_TIERS) {
+    if (individualCount >= tier.minItems) activeTier = tier;
+  }
+  return activeTier;
+}
+
+/** Get the next BYOB tier the user is approaching, or null if at max. */
+export function getNextByobTier(items: CartItem[]): { tier: ByobTier; itemsNeeded: number } | null {
+  const individualCount = items.filter((i) => !i.isBundle).length;
+  for (const tier of BYOB_TIERS) {
+    if (individualCount < tier.minItems) {
+      return { tier, itemsNeeded: tier.minItems - individualCount };
+    }
+  }
+  return null;
+}
+
+/** Calculate cart total with BYOB discount applied to individual items only. */
+export function cartTotalWithByob(items: CartItem[]): {
+  subtotalCents: number;
+  discountCents: number;
+  totalCents: number;
+  tier: ByobTier | null;
+} {
+  const subtotalCents = cartTotalCents(items);
+  const tier = getByobTier(items);
+  if (!tier) return { subtotalCents, discountCents: 0, totalCents: subtotalCents, tier: null };
+
+  const individualTotal = items
+    .filter((i) => !i.isBundle)
+    .reduce((sum, i) => sum + i.priceCents, 0);
+  const discountCents = Math.round(individualTotal * (tier.discountPercent / 100));
+
+  return {
+    subtotalCents,
+    discountCents,
+    totalCents: subtotalCents - discountCents,
+    tier,
+  };
+}
+
 /**
  * Find the best bundle upsell for the current cart.
  * Returns the bundle where the user has 2+ matching individual packs.
  * Prioritises bundles that save money, then lowest additional cost.
- * Returns null if no upsell applies or the bundle is already in cart.
+ * Returns null if no upsell applies, the bundle is already in cart,
+ * or BYOB discount is active (user is already getting a discount).
  */
 export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
+  // Suppress bundle upsell when BYOB discount is active
+  if (getByobTier(cartItems)) return null;
+
   const individualItems = cartItems.filter((item) => !item.isBundle);
   if (individualItems.length < 2) return null;
 

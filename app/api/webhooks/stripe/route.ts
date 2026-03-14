@@ -303,12 +303,27 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
   // come directly from Stripe's records and cannot be spoofed.
   const lineItems = await stripe.checkout.sessions.listLineItems(stripeSessionId, {
     limit: 100,
+    expand: ['data.price'],
   });
 
-  // Collect price IDs from Stripe-verified line items
-  const priceIds = lineItems.data
-    .map((li) => li.price?.id)
-    .filter((id): id is string => !!id);
+  // Collect price IDs from Stripe-verified line items.
+  // Standard items have a price ID matching our DB. BYOB-discounted items
+  // use price_data with the original stripePriceId stored in price.metadata.
+  const priceIds: string[] = [];
+  for (const li of lineItems.data) {
+    const priceObj = li.price;
+    if (!priceObj) continue;
+    // Check for BYOB metadata first (price_data items embed the original ID)
+    const originalPriceId = (priceObj.metadata as Record<string, string>)?.stripePriceId;
+    if (originalPriceId) {
+      priceIds.push(originalPriceId);
+    } else if (priceObj.id && !priceObj.id.startsWith('price_')) {
+      // Skip ad-hoc prices without metadata (e.g., free Skills Map bonus)
+      continue;
+    } else {
+      priceIds.push(priceObj.id);
+    }
+  }
 
   if (priceIds.length === 0) {
     console.error('No price IDs found in Stripe line items for session:', stripeSessionId);

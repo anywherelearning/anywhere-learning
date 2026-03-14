@@ -51,7 +51,14 @@ export async function POST(req: NextRequest) {
     // product for each price ID and use the DB-verified slugs in metadata.
     const clientPriceIds = items.map((item) => item.stripePriceId);
     const verifiedProducts = await db
-      .select({ stripePriceId: products.stripePriceId, slug: products.slug, isBundle: products.isBundle })
+      .select({
+        stripePriceId: products.stripePriceId,
+        slug: products.slug,
+        isBundle: products.isBundle,
+        name: products.name,
+        priceCents: products.priceCents,
+        imageUrl: products.imageUrl,
+      })
       .from(products)
       .where(and(
         inArray(products.stripePriceId, clientPriceIds),
@@ -74,15 +81,57 @@ export async function POST(req: NextRequest) {
     // Use DB-verified slugs (not client-supplied) for metadata
     const verifiedSlugs = verifiedProducts.map((p) => p.slug);
 
-    // Build line items from verified cart
+    // ── BYOB tier calculation (server-side, never trust client) ─────
+    const individualProducts = verifiedProducts.filter((p) => !p.isBundle);
+    const individualCount = individualProducts.length;
+    const BYOB_TIERS = [
+      { minItems: 5,  discountPercent: 10 },
+      { minItems: 7,  discountPercent: 15 },
+      { minItems: 10, discountPercent: 20 },
+    ];
+    let byobDiscount = 0;
+    for (const tier of BYOB_TIERS) {
+      if (individualCount >= tier.minItems) byobDiscount = tier.discountPercent;
+    }
+
+    const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+
+    // Build line items — apply BYOB discount to individual items via price_data
     const lineItems: Array<{
       price?: string;
-      price_data?: { currency: string; product_data: { name: string; description?: string; images?: string[] }; unit_amount: number };
+      price_data?: {
+        currency: string;
+        product_data: {
+          name: string;
+          description?: string;
+          images?: string[];
+          metadata?: Record<string, string>;
+        };
+        unit_amount: number;
+      };
       quantity: number;
-    }> = items.map((item) => ({
-      price: item.stripePriceId,
-      quantity: 1,
-    }));
+    }> = verifiedProducts.map((product) => {
+      if (!product.isBundle && byobDiscount > 0) {
+        // BYOB-discounted individual item — use price_data with adjusted amount
+        const discountedAmount = Math.round(product.priceCents * (1 - byobDiscount / 100));
+        return {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: `${product.name} (${byobDiscount}% off)`,
+              images: product.imageUrl
+                ? [`${siteUrl}${product.imageUrl}`]
+                : undefined,
+              metadata: { stripePriceId: product.stripePriceId },
+            },
+            unit_amount: discountedAmount,
+          },
+          quantity: 1,
+        };
+      }
+      // Bundles and non-discounted items use their existing Stripe price
+      return { price: product.stripePriceId, quantity: 1 };
+    });
 
     // Add free Skills Map bonus when any bundle is in the cart
     const hasBundle = verifiedProducts.some((p) => p.isBundle);
@@ -94,7 +143,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
             description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
-            images: [`${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/products/future-ready-skills-map.jpg`],
+            images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
           },
           unit_amount: 0,
         },
@@ -116,6 +165,7 @@ export async function POST(req: NextRequest) {
       cancel_url: `${origin}/shop`,
       metadata: {
         product_slugs: verifiedSlugs.join(','),
+        ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),
       },
       allow_promotion_codes: true,
     });
