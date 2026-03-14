@@ -8,35 +8,35 @@ import PreviewButton from './PreviewButton';
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  creativity: 'Creativity',
-  'critical-thinking': 'Critical Thinking',
-  'life-skills': 'Life Skills',
-  literacy: 'Literacy',
-  nature: 'Nature',
-  'real-world-math': 'Math & Money',
-  'self-management': 'Self-Management',
+  'creativity-anywhere': 'Creativity Anywhere',
+  'communication-writing': 'Communication & Writing',
+  'outdoor-learning': 'Outdoor Learning',
+  'real-world-math': 'Real-World Math',
+  'entrepreneurship': 'Entrepreneurship',
+  'planning-problem-solving': 'Planning & Problem-Solving',
+  'start-here': 'Start Here',
 };
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'border-t-[#7b88a8]',
-  creativity: 'border-t-[#c47a8f]',
-  'critical-thinking': 'border-t-[#7a6da8]',
-  'life-skills': 'border-t-[#6b8e8b]',
-  literacy: 'border-t-[#5b8fa8]',
-  nature: 'border-t-[#588157]',
+  'creativity-anywhere': 'border-t-[#c47a8f]',
+  'communication-writing': 'border-t-[#5b8fa8]',
+  'outdoor-learning': 'border-t-[#588157]',
   'real-world-math': 'border-t-[#8b7355]',
-  'self-management': 'border-t-[#b07d4b]',
+  'entrepreneurship': 'border-t-[#c4836a]',
+  'planning-problem-solving': 'border-t-[#7a6da8]',
+  'start-here': 'border-t-[#d4a373]',
 };
 
 const categoryBgClasses: Record<string, string> = {
   'ai-literacy': 'card-bg-ai-literacy',
-  creativity: 'card-bg-creativity',
-  'critical-thinking': 'card-bg-critical-thinking',
-  'life-skills': 'card-bg-life-skills',
-  literacy: 'card-bg-literacy',
-  nature: 'card-bg-nature',
+  'creativity-anywhere': 'card-bg-creativity-anywhere',
+  'communication-writing': 'card-bg-communication-writing',
+  'outdoor-learning': 'card-bg-outdoor-learning',
   'real-world-math': 'card-bg-real-world-math',
-  'self-management': 'card-bg-self-management',
+  'entrepreneurship': 'card-bg-entrepreneurship',
+  'planning-problem-solving': 'card-bg-planning-problem-solving',
+  'start-here': 'card-bg-start-here',
 };
 
 interface BundleContentsProps {

@@ -19,37 +19,37 @@ interface ProductCardProps {
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  creativity: 'Creativity',
-  'critical-thinking': 'Critical Thinking',
-  'life-skills': 'Life Skills',
-  literacy: 'Literacy',
-  nature: 'Nature & Outdoor',
-  'real-world-math': 'Math & Money',
-  'self-management': 'Self-Management',
+  'creativity-anywhere': 'Creativity Anywhere',
+  'communication-writing': 'Communication & Writing',
+  'outdoor-learning': 'Outdoor Learning',
+  'real-world-math': 'Real-World Math',
+  'entrepreneurship': 'Entrepreneurship',
+  'planning-problem-solving': 'Planning & Problem-Solving',
+  'start-here': 'Start Here',
   bundle: 'Bundle',
 };
 
 const categoryBgClasses: Record<string, string> = {
   'ai-literacy': 'card-bg-ai-literacy',
-  creativity: 'card-bg-creativity',
-  'critical-thinking': 'card-bg-critical-thinking',
-  'life-skills': 'card-bg-life-skills',
-  literacy: 'card-bg-literacy',
-  nature: 'card-bg-nature',
+  'creativity-anywhere': 'card-bg-creativity-anywhere',
+  'communication-writing': 'card-bg-communication-writing',
+  'outdoor-learning': 'card-bg-outdoor-learning',
   'real-world-math': 'card-bg-real-world-math',
-  'self-management': 'card-bg-self-management',
+  'entrepreneurship': 'card-bg-entrepreneurship',
+  'planning-problem-solving': 'card-bg-planning-problem-solving',
+  'start-here': 'card-bg-start-here',
   bundle: 'card-bg-bundle',
 };
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'border-l-[#7b88a8]',
-  creativity: 'border-l-[#c47a8f]',
-  'critical-thinking': 'border-l-[#7a6da8]',
-  'life-skills': 'border-l-[#6b8e8b]',
-  literacy: 'border-l-[#5b8fa8]',
-  nature: 'border-l-[#588157]',
+  'creativity-anywhere': 'border-l-[#c47a8f]',
+  'communication-writing': 'border-l-[#5b8fa8]',
+  'outdoor-learning': 'border-l-[#588157]',
   'real-world-math': 'border-l-[#8b7355]',
-  'self-management': 'border-l-[#b07d4b]',
+  'entrepreneurship': 'border-l-[#c4836a]',
+  'planning-problem-solving': 'border-l-[#7a6da8]',
+  'start-here': 'border-l-[#d4a373]',
   bundle: 'border-l-[#d4a373]',
 };
 

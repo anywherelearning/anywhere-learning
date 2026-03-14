@@ -79,14 +79,14 @@ export async function getUserPurchases(clerkId: string, email?: string) {
 
 /** Cross-sell mapping: category → complementary category */
 const crossSellMap: Record<string, string> = {
-  'ai-literacy': 'critical-thinking',
-  creativity: 'ai-literacy',
-  'critical-thinking': 'ai-literacy',
-  'life-skills': 'self-management',
-  literacy: 'creativity',
-  nature: 'creativity',
-  'real-world-math': 'life-skills',
-  'self-management': 'life-skills',
+  'ai-literacy': 'creativity-anywhere',
+  'creativity-anywhere': 'ai-literacy',
+  'outdoor-learning': 'creativity-anywhere',
+  'real-world-math': 'entrepreneurship',
+  'communication-writing': 'creativity-anywhere',
+  'entrepreneurship': 'planning-problem-solving',
+  'planning-problem-solving': 'entrepreneurship',
+  'start-here': 'outdoor-learning',
 };
 
 /** Season slug mapping for seasonal prompts */

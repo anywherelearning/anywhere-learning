@@ -167,17 +167,44 @@ export function ShieldCheckIcon({ className = 'w-5 h-5' }: IconProps) {
   );
 }
 
+export function RocketIcon({ className = 'w-5 h-5' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z" />
+      <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
+      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0" />
+      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3" />
+    </svg>
+  );
+}
+
+export function PuzzleIcon({ className = 'w-5 h-5' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 01-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 10-3.214 3.214c.446.166.855.497.925.968a.979.979 0 01-.276.837l-1.61 1.611a2.404 2.404 0 01-1.705.707 2.402 2.402 0 01-1.704-.707l-1.568-1.568a1.026 1.026 0 00-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 11-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 00-.289-.877L2.293 12.439A2.403 2.403 0 011.586 10.734c0-.617.236-1.234.707-1.705L3.904 7.42a.981.981 0 01.837-.276c.47.07.802.48.968.925a2.501 2.501 0 103.214-3.214c-.446-.166-.855-.497-.925-.968a.98.98 0 01.276-.837L9.885 1.54A2.403 2.403 0 0113.293 1.54l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 113.237 3.237c-.464.18-.894.527-.967 1.02z" />
+    </svg>
+  );
+}
+
+export function StarIcon({ className = 'w-5 h-5' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  );
+}
+
 // ─── Lookup Maps ───
 
 const categoryIconMap: Record<string, React.FC<IconProps>> = {
   'ai-literacy': CpuIcon,
-  creativity: PaletteIcon,
-  'critical-thinking': LightbulbIcon,
-  'life-skills': CompassIcon,
-  literacy: BookOpenIcon,
-  nature: LeafIcon,
+  'creativity-anywhere': PaletteIcon,
+  'communication-writing': BookOpenIcon,
+  'outdoor-learning': LeafIcon,
   'real-world-math': CalculatorIcon,
-  'self-management': ClockIcon,
+  'entrepreneurship': RocketIcon,
+  'planning-problem-solving': PuzzleIcon,
+  'start-here': StarIcon,
   bundle: LayersIcon,
 };
 

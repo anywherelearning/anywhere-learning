@@ -26,40 +26,40 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
     description:
       "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9\u201314.",
   },
-  creativity: {
-    title: "Creativity & Imagination Packs",
+  "creativity-anywhere": {
+    title: "Creativity Anywhere Activity Packs",
     description:
-      "Open-ended design projects \u2014 game design, filmmaking, sculpture, and more. Ages 6\u201314.",
+      "Open-ended projects that build design thinking and creative confidence. Ages 6\u201314.",
   },
-  "critical-thinking": {
-    title: "Critical Thinking Activity Packs",
+  "communication-writing": {
+    title: "Communication & Writing Packs",
     description:
-      "Data analysis, business planning, design challenges, and problem-solving. Ages 9\u201314.",
+      "Real-world writing and communication skills for kids who have something to say. Ages 9\u201314.",
   },
-  "life-skills": {
-    title: "Life Skills Activity Packs",
+  "outdoor-learning": {
+    title: "Outdoor Learning Activity Packs",
     description:
-      "Cooking, first aid, sewing, repairs \u2014 hands-on skills they\u2019ll use forever. Ages 4\u201314.",
-  },
-  literacy: {
-    title: "Literacy & Communication Packs",
-    description:
-      "Real-world writing, active listening, interviewing, and communication skills. Ages 9\u201314.",
-  },
-  nature: {
-    title: "Nature & Outdoor Activity Packs",
-    description:
-      "Hands-on nature and seasonal activities \u2014 task cards, STEM challenges, land art, and more. Ages 4\u201314.",
+      "Turn your backyard, park, or trail into a hands-on learning space. Ages 4\u201314.",
   },
   "real-world-math": {
-    title: "Real-World Math & Money Packs",
+    title: "Real-World Math Packs",
     description:
       "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 4\u201314.",
   },
-  "self-management": {
-    title: "Self-Management Activity Packs",
+  "entrepreneurship": {
+    title: "Entrepreneurship Activity Packs",
     description:
-      "Morning routines, time management, organization, and emotional skills. Ages 9\u201314.",
+      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses. Ages 9\u201314.",
+  },
+  "planning-problem-solving": {
+    title: "Planning & Problem-Solving Packs",
+    description:
+      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9\u201314.",
+  },
+  "start-here": {
+    title: "Start Here Packs",
+    description:
+      "The foundation for your learning journey \u2014 start with the big picture.",
   },
   bundle: {
     title: "Activity Pack Bundles",
@@ -118,46 +118,40 @@ const categorySections = [
       "Responsible tech, critical thinking about AI, and digital citizenship.",
   },
   {
-    value: "creativity",
-    label: "Creativity",
+    value: "creativity-anywhere",
+    label: "Creativity Anywhere",
     description:
       "Open-ended projects that build design thinking and creative confidence.",
   },
   {
-    value: "critical-thinking",
-    label: "Critical Thinking",
-    description:
-      "Data analysis, business planning, design challenges, and spatial reasoning.",
-  },
-  {
-    value: "life-skills",
-    label: "Life Skills",
-    description:
-      "Cooking, first aid, sewing, repairs \u2014 hands-on skills they\u2019ll use forever.",
-  },
-  {
-    value: "literacy",
-    label: "Literacy",
-    description:
-      "Communication, active listening, interviewing, and writing in the real world.",
-  },
-  {
-    value: "nature",
-    label: "Nature & Outdoor",
+    value: "outdoor-learning",
+    label: "Outdoor Learning",
     description:
       "Turn your backyard, park, or trail into a hands-on learning space.",
   },
   {
     value: "real-world-math",
-    label: "Math & Money",
+    label: "Real-World Math",
     description:
       "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
   },
   {
-    value: "self-management",
-    label: "Self-Management",
+    value: "communication-writing",
+    label: "Communication & Writing",
     description:
-      "Morning routines, time management, organization, and emotional skills.",
+      "Real-world writing and communication skills for kids who have something to say.",
+  },
+  {
+    value: "entrepreneurship",
+    label: "Entrepreneurship",
+    description:
+      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses.",
+  },
+  {
+    value: "planning-problem-solving",
+    label: "Planning & Problem-Solving",
+    description:
+      "Tackle real logistics, plan adventures, and solve problems that actually matter.",
   },
 ];
 
@@ -165,23 +159,22 @@ const categorySections = [
 
 const categoryBundleMap: Record<string, string> = {
   "ai-literacy": "ai-digital-bundle",
-  creativity: "creativity-mega-bundle",
-  "life-skills": "real-world-mega-bundle",
-  nature: "outdoor-toolkit-bundle",
+  "creativity-anywhere": "creativity-mega-bundle",
+  "outdoor-learning": "outdoor-toolkit-bundle",
   "real-world-math": "real-world-mega-bundle",
 };
 
 // ── Cross-sell mapping ──
 
 const crossSellMap: Record<string, string> = {
-  "ai-literacy": "critical-thinking",
-  creativity: "ai-literacy",
-  "critical-thinking": "ai-literacy",
-  "life-skills": "self-management",
-  literacy: "creativity",
-  nature: "creativity",
-  "real-world-math": "life-skills",
-  "self-management": "life-skills",
+  "ai-literacy": "creativity-anywhere",
+  "creativity-anywhere": "ai-literacy",
+  "outdoor-learning": "creativity-anywhere",
+  "real-world-math": "entrepreneurship",
+  "communication-writing": "creativity-anywhere",
+  "entrepreneurship": "planning-problem-solving",
+  "planning-problem-solving": "entrepreneurship",
+  "start-here": "outdoor-learning",
 };
 
 // ── Page ──

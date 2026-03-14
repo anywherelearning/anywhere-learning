@@ -1,14 +1,14 @@
 // ─── Cross-sell mapping: category → recommended bundle slug ───
 // When a buyer purchases from a category, suggest a complementary bundle.
 const CROSS_SELL_MAP: Record<string, string> = {
-  'ai-literacy': 'creativity-mega-bundle',       // AI Literacy → Creativity Mega ($29.99)
-  creativity: 'real-world-mega-bundle',           // Creativity → Real-World Mega ($29.99)
-  'critical-thinking': 'creativity-mega-bundle',  // Critical Thinking → Creativity Mega ($29.99)
-  'life-skills': 'real-world-mega-bundle',        // Life Skills → Real-World Mega ($29.99)
-  literacy: 'creativity-mega-bundle',             // Literacy → Creativity Mega ($29.99)
-  nature: 'creativity-mega-bundle',               // Nature → Creativity Mega ($29.99)
-  'real-world-math': 'creativity-mega-bundle',    // Math & Money → Creativity Mega ($29.99)
-  'self-management': 'real-world-mega-bundle',    // Self-Management → Real-World Mega ($29.99)
+  'ai-literacy': 'creativity-mega-bundle',              // AI & Digital → Creativity Mega ($29.99)
+  'creativity-anywhere': 'real-world-mega-bundle',      // Creativity Anywhere → Real-World Mega ($29.99)
+  'outdoor-learning': 'creativity-mega-bundle',         // Outdoor Learning → Creativity Mega ($29.99)
+  'real-world-math': 'creativity-mega-bundle',          // Real-World Math → Creativity Mega ($29.99)
+  'communication-writing': 'creativity-mega-bundle',    // Communication & Writing → Creativity Mega ($29.99)
+  'entrepreneurship': 'real-world-mega-bundle',         // Entrepreneurship → Real-World Mega ($29.99)
+  'planning-problem-solving': 'real-world-mega-bundle', // Planning & Problem-Solving → Real-World Mega ($29.99)
+  'start-here': 'outdoor-toolkit-bundle',               // Start Here → Outdoor Toolkit ($19.99)
 };
 
 /**

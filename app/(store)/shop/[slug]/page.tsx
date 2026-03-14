@@ -66,25 +66,25 @@ export async function generateMetadata({
 
 const categoryLabels: Record<string, string> = {
   "ai-literacy": "AI & Digital",
-  creativity: "Creativity Series",
-  "critical-thinking": "Critical Thinking",
-  "life-skills": "Life Skills",
-  literacy: "Literacy",
-  nature: "Nature Learning",
-  "real-world-math": "Math & Money",
-  "self-management": "Self-Management",
+  "creativity-anywhere": "Creativity Anywhere",
+  "communication-writing": "Communication & Writing",
+  "outdoor-learning": "Outdoor Learning",
+  "real-world-math": "Real-World Math",
+  "entrepreneurship": "Entrepreneurship",
+  "planning-problem-solving": "Planning & Problem-Solving",
+  "start-here": "Start Here",
   bundle: "Bundle",
 };
 
 const coverClasses: Record<string, string> = {
   "ai-literacy": "cover-ai-literacy",
-  creativity: "cover-creativity",
-  "critical-thinking": "cover-critical-thinking",
-  "life-skills": "cover-life-skills",
-  literacy: "cover-literacy",
-  nature: "cover-nature",
+  "creativity-anywhere": "cover-creativity-anywhere",
+  "communication-writing": "cover-communication-writing",
+  "outdoor-learning": "cover-outdoor-learning",
   "real-world-math": "cover-real-world-math",
-  "self-management": "cover-self-management",
+  "entrepreneurship": "cover-entrepreneurship",
+  "planning-problem-solving": "cover-planning-problem-solving",
+  "start-here": "cover-start-here",
   bundle: "cover-bundle",
 };
 
@@ -239,7 +239,7 @@ export default async function ProductPage({
                 /* Category gradient cover */
                 <div
                   className={`relative aspect-[5/4] md:aspect-[4/3] ${
-                    coverClasses[product.category] || "cover-nature"
+                    coverClasses[product.category] || "cover-outdoor-learning"
                   } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
                 >
                   {/* Decorative dot pattern overlay */}

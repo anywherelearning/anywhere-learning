@@ -47,13 +47,13 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
     'Families who want meaningful, no-prep activities',
     'Parents who value real-world learning',
   ],
-  nature: [
+  'outdoor-learning': [
     'Homeschool families',
     'Worldschool families',
     'Outdoor classrooms & nature programs',
     'Families who love learning outside',
   ],
-  creativity: [
+  'creativity-anywhere': [
     'Homeschool families',
     'Worldschool families',
     'Project-based learning',
@@ -71,29 +71,29 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
     'Practical maths & financial literacy',
     'Families who learn through everyday life',
   ],
-  'critical-thinking': [
-    'Homeschool families',
-    'Worldschool families',
-    'Problem-solving & design thinking',
-    'Families who value independent thinking',
-  ],
-  'life-skills': [
-    'Homeschool families',
-    'Worldschool families',
-    'Life skills & personal development',
-    'Families preparing kids for the real world',
-  ],
-  'self-management': [
-    'Homeschool families',
-    'Worldschool families',
-    'Executive function & self-regulation',
-    'Families building independence & responsibility',
-  ],
-  literacy: [
+  'communication-writing': [
     'Homeschool families',
     'Worldschool families',
     'Real-world writing & communication',
-    'Families who value practical literacy skills',
+    'Families who value practical communication skills',
+  ],
+  'entrepreneurship': [
+    'Homeschool families',
+    'Worldschool families',
+    'Business & entrepreneurship education',
+    'Families raising future founders & problem-solvers',
+  ],
+  'planning-problem-solving': [
+    'Homeschool families',
+    'Worldschool families',
+    'Project planning & logistics',
+    'Families who value independent thinking',
+  ],
+  'start-here': [
+    'Homeschool families',
+    'Worldschool families',
+    'Families new to real-world learning',
+    'Parents looking for a starting framework',
   ],
   bundle: [
     'Homeschool families',

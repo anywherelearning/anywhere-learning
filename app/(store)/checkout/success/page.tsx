@@ -20,25 +20,25 @@ export const metadata: Metadata = {
 
 const CATEGORY_LABELS: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  creativity: 'Creativity',
-  'critical-thinking': 'Critical Thinking',
-  'life-skills': 'Life Skills',
-  literacy: 'Literacy',
-  nature: 'Nature & Outdoor',
-  'real-world-math': 'Math & Money',
-  'self-management': 'Self-Management',
+  'creativity-anywhere': 'Creativity Anywhere',
+  'communication-writing': 'Communication & Writing',
+  'outdoor-learning': 'Outdoor Learning',
+  'real-world-math': 'Real-World Math',
+  'entrepreneurship': 'Entrepreneurship',
+  'planning-problem-solving': 'Planning & Problem-Solving',
+  'start-here': 'Start Here',
   bundle: 'Bundle',
 };
 
 const coverClasses: Record<string, string> = {
   'ai-literacy': 'cover-ai-literacy',
-  creativity: 'cover-creativity',
-  'critical-thinking': 'cover-critical-thinking',
-  'life-skills': 'cover-life-skills',
-  literacy: 'cover-literacy',
-  nature: 'cover-nature',
+  'creativity-anywhere': 'cover-creativity-anywhere',
+  'communication-writing': 'cover-communication-writing',
+  'outdoor-learning': 'cover-outdoor-learning',
   'real-world-math': 'cover-real-world-math',
-  'self-management': 'cover-self-management',
+  'entrepreneurship': 'cover-entrepreneurship',
+  'planning-problem-solving': 'cover-planning-problem-solving',
+  'start-here': 'cover-start-here',
   bundle: 'cover-bundle',
 };
 
@@ -206,7 +206,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 animate-fade-in-up"
                 >
                   <div
-                    className={`w-14 h-18 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[product.category] || 'cover-nature'}`}
+                    className={`w-14 h-18 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[product.category] || 'cover-outdoor-learning'}`}
                   >
                     {product.imageUrl ? (
                       <Image

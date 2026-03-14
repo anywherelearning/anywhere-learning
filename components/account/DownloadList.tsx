@@ -29,13 +29,13 @@ interface DownloadListProps {
 
 const CATEGORY_LABELS: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  creativity: 'Creativity',
-  'critical-thinking': 'Critical Thinking',
-  'life-skills': 'Life Skills',
-  literacy: 'Literacy',
-  nature: 'Nature',
-  'real-world-math': 'Math & Money',
-  'self-management': 'Self-Management',
+  'creativity-anywhere': 'Creativity Anywhere',
+  'communication-writing': 'Communication & Writing',
+  'outdoor-learning': 'Outdoor Learning',
+  'real-world-math': 'Real-World Math',
+  'entrepreneurship': 'Entrepreneurship',
+  'planning-problem-solving': 'Planning & Problem-Solving',
+  'start-here': 'Start Here',
   bundle: 'Bundles',
 };
 
