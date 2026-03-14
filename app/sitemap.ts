@@ -4,6 +4,9 @@ import { products } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAllPosts } from '@/lib/blog';
 
+// When adding a new public page, add it to staticRoutes below.
+// Excluded (not indexable): /sign-in, /sign-up, /account/*, /checkout/success
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getAllPosts();
 
@@ -27,10 +30,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: 'https://anywherelearning.co/membership',
+      url: 'https://anywherelearning.co/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.6,
     },
     {
       url: 'https://anywherelearning.co/free-guide',

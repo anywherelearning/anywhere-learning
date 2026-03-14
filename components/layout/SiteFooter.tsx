@@ -3,7 +3,7 @@ import { LogoIcon } from '@/components/Logo';
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-[#f7f5f0] pt-0 pb-16">
+    <footer className="relative bg-[#f7f5f0] pt-0 pb-[max(4rem,calc(1rem+env(safe-area-inset-bottom)))]">
       {/* Decorative organic top edge */}
       <div className="relative h-12 -mt-1 overflow-hidden" aria-hidden="true">
         <svg viewBox="0 0 1200 48" fill="none" preserveAspectRatio="none" className="absolute top-0 w-full h-12">
@@ -44,12 +44,6 @@ export default function SiteFooter() {
                 className="block text-sm text-gray-400 transition-colors hover:text-forest"
               >
                 Bundles
-              </Link>
-              <Link
-                href="/membership"
-                className="block text-sm text-gray-400 transition-colors hover:text-forest"
-              >
-                Membership
               </Link>
               <Link
                 href="/account/downloads"

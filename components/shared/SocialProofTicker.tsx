@@ -1,5 +1,5 @@
 const items = [
-  '500+ families learning differently',
+  'Created for families learning differently',
   '220+ real-world activities',
   'Works with any homeschool style',
   'No curriculum needed',

@@ -10,18 +10,6 @@
   --font-family-body: var(--font-body);
 }
 
-/* ─── Paper grain texture on body ─── */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.022;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
-}
-
 /* ─── Utility ─── */
 .text-balance { text-wrap: balance; }
 
@@ -242,7 +230,6 @@ body::after {
 }
 .animate-pulse-glow {
   animation: pulse-glow 2.5s ease-in-out infinite;
-  will-change: transform, opacity;
 }
 
 /* ─── Peek card reveal (GPU-accelerated, no 3D) ─── */
