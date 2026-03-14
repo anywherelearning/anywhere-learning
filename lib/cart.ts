@@ -243,10 +243,15 @@ export function cartTotalWithByob(items: CartItem[]): {
   const tier = getByobTier(items);
   if (!tier) return { subtotalCents, discountCents: 0, totalCents: subtotalCents, tier: null };
 
-  const individualTotal = items
-    .filter((i) => !i.isBundle)
-    .reduce((sum, i) => sum + i.priceCents, 0);
-  const discountCents = Math.round(individualTotal * (tier.discountPercent / 100));
+  // Round per-item (same as server/Stripe) to avoid 1-2 cent drift
+  const individualItems = items.filter((i) => !i.isBundle);
+  const multiplier = 1 - tier.discountPercent / 100;
+  const discountedTotal = individualItems.reduce(
+    (sum, i) => sum + Math.round(i.priceCents * multiplier),
+    0,
+  );
+  const individualTotal = individualItems.reduce((sum, i) => sum + i.priceCents, 0);
+  const discountCents = individualTotal - discountedTotal;
 
   return {
     subtotalCents,
@@ -260,15 +265,17 @@ export function cartTotalWithByob(items: CartItem[]): {
  * Find the best bundle upsell for the current cart.
  * Returns the bundle where the user has 2+ matching individual packs.
  * Prioritises bundles that save money, then lowest additional cost.
- * Returns null if no upsell applies, the bundle is already in cart,
- * or BYOB discount is active (user is already getting a discount).
+ * When BYOB discount is active, factors it into the comparison so
+ * the customer sees honest numbers (e.g. "even with your 10% off,
+ * the bundle gets you 5 more activities for just $7.53 more").
  */
 export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
-  // Suppress bundle upsell when BYOB discount is active
-  if (getByobTier(cartItems)) return null;
-
   const individualItems = cartItems.filter((item) => !item.isBundle);
   if (individualItems.length < 2) return null;
+
+  // Factor BYOB discount into comparison so numbers are honest
+  const byobTier = getByobTier(cartItems);
+  const byobMultiplier = byobTier ? 1 - byobTier.discountPercent / 100 : 1;
 
   let bestUpsell: BundleUpsell | null = null;
 
@@ -285,10 +292,13 @@ export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
 
     if (matchingItems.length < 2) continue;
 
-    const individualTotal = matchingItems.reduce(
+    const rawTotal = matchingItems.reduce(
       (sum, item) => sum + item.priceCents,
       0
     );
+
+    // What the customer is actually paying for these items (with BYOB applied)
+    const individualTotal = Math.round(rawTotal * byobMultiplier);
 
     const savingsCents = individualTotal - bundleInfo.priceCents;
     const additionalCostCents = Math.max(0, bundleInfo.priceCents - individualTotal);

@@ -39,7 +39,7 @@ export default function SavingsExplainer() {
             Two Ways to Save
           </h2>
           <p className="text-cream/60 mt-2">
-            No codes, no hoops. Pick your path and savings happen automatically.
+            No codes, no hoops. Savings happen automatically at checkout.
           </p>
         </div>
 
@@ -54,20 +54,20 @@ export default function SavingsExplainer() {
                 </svg>
               </div>
               <span className="text-xs font-semibold text-forest bg-forest/10 px-3 py-1 rounded-full uppercase tracking-wider">
-                Best Savings
+                Best Deal
               </span>
             </div>
 
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
-              Curated Bundles
+              Grab a Bundle
             </h3>
 
             <p className="text-3xl md:text-4xl font-bold text-forest-dark mb-3">
-              ~25% off
+              Save 25%+
             </p>
 
             <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1">
-              Themed collections that spark the same kind of curiosity — nature, creativity, big questions. A meaningful set, ready the moment you download.
+              The biggest savings and the easiest choice. Pick a themed collection and you&apos;re set — no decisions, no math, just download and go.
             </p>
 
             {/* Bundle cover thumbnails */}
@@ -124,7 +124,7 @@ export default function SavingsExplainer() {
                 </svg>
               </div>
               <span className="text-xs font-semibold text-gold-dark bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">
-                Flexible
+                Want Flexibility?
               </span>
             </div>
 
@@ -133,7 +133,7 @@ export default function SavingsExplainer() {
             </h3>
 
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              You know your kids best. Choose any combination and savings kick in automatically:
+              Want to pick across categories? Choose any combination and discounts kick in automatically:
             </p>
 
             {/* Tier rows */}

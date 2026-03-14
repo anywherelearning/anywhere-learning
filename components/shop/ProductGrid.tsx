@@ -1,22 +1,9 @@
 import ProductCard from './ProductCard';
 import AnimateOnScroll from './AnimateOnScroll';
-
-interface Product {
-  name: string;
-  slug: string;
-  shortDescription: string;
-  priceCents: number;
-  compareAtPriceCents: number | null;
-  stripePriceId?: string;
-  imageUrl: string | null;
-  category: string;
-  isBundle: boolean;
-  activityCount?: number | null;
-  ageRange?: string | null;
-}
+import type { ShopProduct } from '@/lib/types';
 
 interface ProductGridProps {
-  products: Product[];
+  products: ShopProduct[];
 }
 
 export default function ProductGrid({ products }: ProductGridProps) {

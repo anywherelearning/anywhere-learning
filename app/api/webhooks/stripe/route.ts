@@ -88,6 +88,13 @@ export async function POST(req: NextRequest) {
       const dispute = event.data.object as Stripe.Dispute;
       await handleDisputeCreated(dispute);
     }
+
+    // ─── checkout.session.expired ──────────────────────────────────────
+    // Tag as cart-abandoner only AFTER the session expires without payment.
+    if (event.type === 'checkout.session.expired') {
+      const session = event.data.object as Stripe.Checkout.Session;
+      await handleCheckoutExpired(session);
+    }
   } catch (error) {
     console.error(`Webhook handler failed for ${event.type}:`, error);
     return NextResponse.json(
@@ -528,6 +535,17 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
   console.log(
     `Orders for session ${session.id} marked as ${newStatus} (charge: ${charge.id})`,
   );
+}
+
+async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
+  const email = session.customer_email || session.customer_details?.email;
+  if (!email) return;
+
+  try {
+    await subscribeAndTag(email, ['cart-abandoner']);
+  } catch (error) {
+    console.error('Failed to tag cart-abandoner in ConvertKit:', error);
+  }
 }
 
 async function handleDisputeCreated(dispute: Stripe.Dispute) {

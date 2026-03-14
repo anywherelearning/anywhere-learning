@@ -2,22 +2,9 @@
 
 import { useRef, useState, useEffect, useCallback } from 'react';
 import ProductCard from './ProductCard';
+import type { ShopProduct } from '@/lib/types';
 
-interface Product {
-  name: string;
-  slug: string;
-  shortDescription: string;
-  priceCents: number;
-  compareAtPriceCents?: number | null;
-  stripePriceId?: string;
-  imageUrl?: string | null;
-  category: string;
-  isBundle: boolean;
-  activityCount?: number | null;
-  ageRange?: string | null;
-}
-
-export default function BundleCarousel({ products }: { products: Product[] }) {
+export default function BundleCarousel({ products }: { products: ShopProduct[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);

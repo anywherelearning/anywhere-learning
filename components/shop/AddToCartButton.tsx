@@ -72,7 +72,7 @@ export default function AddToCartButton({
           In Your Cart
         </span>
       ) : (
-        `Add to Cart — ${formatPrice(priceCents)}`
+        `Get This — ${formatPrice(priceCents)}`
       )}
     </button>
   );

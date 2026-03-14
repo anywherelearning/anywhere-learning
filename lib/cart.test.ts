@@ -243,14 +243,23 @@ describe('getBundleUpsell', () => {
     expect(getBundleUpsell([makeItem()])).toBeNull();
   });
 
-  it('returns null when BYOB tier is active (5+ individual items)', () => {
-    // 5 items from the seasonal bundle — would normally match, but BYOB suppresses
+  it('factors BYOB discount into upsell comparison when active', () => {
+    // 4 seasonal items + 1 extra = 5 items → BYOB 10% kicks in
     const items = BUNDLE_CONTENTS['seasonal-bundle'].map((slug) =>
       makeItem({ slug, priceCents: 1299 }),
     );
-    // Add a 5th item to ensure BYOB kicks in
     items.push(makeItem({ slug: 'extra-pack', priceCents: 499 }));
-    expect(getBundleUpsell(items)).toBeNull();
+
+    const upsell = getBundleUpsell(items);
+    expect(upsell).not.toBeNull();
+    expect(upsell!.bundle.slug).toBe('seasonal-bundle');
+
+    // individualTotal should reflect BYOB-discounted price: 4 × 1299 × 0.9 = 4676
+    const rawTotal = 4 * 1299; // 5196
+    const byobTotal = Math.round(rawTotal * 0.9); // 4676
+    expect(upsell!.individualTotal).toBe(byobTotal);
+    // Bundle ($39.99) vs BYOB-discounted ($46.76) → saves $6.77
+    expect(upsell!.savingsCents).toBe(byobTotal - 3999);
   });
 
   it('returns null when bundle already in cart', () => {

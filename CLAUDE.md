@@ -131,7 +131,7 @@ When adding new products, follow this order:
 These must be done before going live:
 
 1. **Set `NEXT_PUBLIC_URL` in Vercel** — without this, checkout success/cancel redirects go to `localhost:3000`
-2. **Register the production Stripe webhook** — in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
+2. **Register the production Stripe webhook** — in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
 3. **Set `STRIPE_WEBHOOK_SECRET` in Vercel** — use the signing secret from step 2 (starts with `whsec_`)
 4. **Switch to live Stripe keys** — replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
 5. **Upgrade Vercel Blob storage** — current free-tier Blob storage is full; upgrade plan or increase Blob quota before uploading remaining PDFs

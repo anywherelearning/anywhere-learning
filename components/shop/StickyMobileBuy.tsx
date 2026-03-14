@@ -80,7 +80,7 @@ export default function StickyMobileBuy({
           onClick={handleClick}
           className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
         >
-          {justAdded ? '✓ Added!' : alreadyInCart ? 'View Cart' : 'Add to Cart'}
+          {justAdded ? '✓ Added!' : alreadyInCart ? 'View Cart' : 'Get This'}
         </button>
       </div>
     </div>
