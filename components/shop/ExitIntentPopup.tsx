@@ -379,7 +379,7 @@ function BundleUpgradeContent({
   openCart,
   dismiss,
 }: {
-  upsell: { bundle: { slug: string; name: string; priceCents: number; imageUrl: string; totalChildCount?: number }; matchingSlugs: string[]; savingsCents: number; additionalCostCents: number; totalChildCount: number };
+  upsell: { bundle: { slug: string; name: string; priceCents: number; imageUrl: string | null; totalChildCount?: number }; matchingSlugs: string[]; savingsCents: number; additionalCostCents: number; totalChildCount: number };
   openCart: () => void;
   dismiss: () => void;
 }) {
@@ -390,7 +390,7 @@ function BundleUpgradeContent({
       {/* Bundle image banner */}
       <div className="relative w-full h-36 sm:h-44 overflow-hidden">
         <Image
-          src={upsell.bundle.imageUrl}
+          src={upsell.bundle.imageUrl || '/products/mega-bundle-preview.jpg'}
           alt={upsell.bundle.name}
           fill
           sizes="500px"
