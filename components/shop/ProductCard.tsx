@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CategoryIcon } from './icons';
+import QuickAddButton from './QuickAddButton';
 
 interface ProductCardProps {
   name: string;
@@ -8,6 +9,7 @@ interface ProductCardProps {
   shortDescription: string;
   priceCents: number;
   compareAtPriceCents?: number | null;
+  stripePriceId?: string;
   imageUrl?: string | null;
   category: string;
   isBundle: boolean;
@@ -57,6 +59,7 @@ export default function ProductCard({
   shortDescription,
   priceCents,
   compareAtPriceCents,
+  stripePriceId,
   imageUrl,
   category,
   isBundle,
@@ -158,9 +161,22 @@ export default function ProductCard({
                 </span>
               )}
             </div>
-            <span className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full group-hover:bg-forest group-hover:text-cream transition-all duration-300">
-              View pack &rarr;
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full group-hover:bg-forest group-hover:text-cream transition-all duration-300">
+                View pack &rarr;
+              </span>
+              {stripePriceId && (
+                <QuickAddButton
+                  stripePriceId={stripePriceId}
+                  slug={slug}
+                  name={name}
+                  priceCents={priceCents}
+                  category={category}
+                  isBundle={isBundle}
+                  imageUrl={imageUrl ?? null}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

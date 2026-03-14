@@ -8,6 +8,7 @@ interface Product {
   shortDescription: string;
   priceCents: number;
   compareAtPriceCents: number | null;
+  stripePriceId?: string;
   imageUrl: string | null;
   category: string;
   isBundle: boolean;
