@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { stripe } from '@/lib/stripe';
+import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
+import { getUserByClerkId } from '@/lib/db/queries';
 import { formatPrice } from '@/lib/utils';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
@@ -52,6 +54,23 @@ async function getSessionProducts(sessionId: string) {
 
     if (session.payment_status !== 'paid') return null;
 
+    // ── SECURITY: Only show details for sessions created within the last hour ──
+    const ONE_HOUR = 60 * 60;
+    if (session.created < Math.floor(Date.now() / 1000) - ONE_HOUR) return null;
+
+    // ── SECURITY: If the user is logged in, verify they own this session ──
+    try {
+      const { userId: clerkId } = await auth();
+      if (clerkId) {
+        const user = await getUserByClerkId(clerkId);
+        if (user?.email && session.customer_details?.email !== user.email) {
+          return null;
+        }
+      }
+    } catch {
+      // Clerk auth may not be configured — continue with time-window guard only
+    }
+
     const priceIds = session.line_items?.data
       ?.map((item) => item.price?.id)
       .filter(Boolean) as string[];
@@ -93,7 +112,6 @@ async function getSessionProducts(sessionId: string) {
     return {
       products: purchasedProducts,
       bundleUpgrades: bundleUpgrades.slice(0, 2),
-      customerEmail: session.customer_details?.email,
       hasBundles,
     };
   } catch {
