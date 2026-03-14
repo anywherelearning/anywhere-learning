@@ -9,7 +9,10 @@ import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail } from
 import type { BundleUpsell } from '@/lib/cart';
 
 export default function CartDrawer() {
-  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem } = useCart();
+  const {
+    items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem,
+    byobTier, byobDiscountCents, byobTotalCents, nextByobTier,
+  } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
@@ -397,15 +400,88 @@ export default function CartDrawer() {
               </button>
             </div>
           )}
+
+          {/* BYOB progress bar */}
+          {items.length > 0 && (byobTier || nextByobTier) && (
+            <div className="mt-4 bg-forest/5 border border-forest/15 rounded-2xl p-4">
+              {byobTier ? (
+                <>
+                  <div className="flex items-center gap-2 mb-2">
+                    <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm font-semibold text-forest">
+                      {byobTier.discountPercent}% off unlocked!
+                    </span>
+                  </div>
+                  {nextByobTier ? (
+                    <>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div
+                          className="bg-forest h-2 rounded-full transition-all duration-500"
+                          style={{ width: `${Math.min(100, (items.filter(i => !i.isBundle).length / nextByobTier.tier.minItems) * 100)}%` }}
+                        />
+                      </div>
+                      <p className="text-xs text-gray-500">
+                        Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+                        <span className="font-semibold text-forest">{nextByobTier.tier.discountPercent}% off</span>
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div className="bg-forest h-2 rounded-full w-full" />
+                      </div>
+                      <p className="text-xs text-gray-500">Maximum discount reached</p>
+                    </>
+                  )}
+                </>
+              ) : nextByobTier ? (
+                <>
+                  <div className="flex items-center gap-2 mb-2">
+                    <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                    </svg>
+                    <span className="text-sm font-semibold text-forest">Build Your Own Bundle</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                    <div
+                      className="bg-forest/60 h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${(items.filter(i => !i.isBundle).length / nextByobTier.tier.minItems) * 100}%` }}
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500">
+                    Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+                    <span className="font-semibold text-forest">{nextByobTier.tier.discountPercent}% off</span>
+                  </p>
+                </>
+              ) : null}
+            </div>
+          )}
         </div>
 
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-gray-200/60 px-6 py-5 bg-white/50">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-1">
               <span className="text-sm text-gray-500">Subtotal</span>
-              <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
+              <span className={`text-sm ${byobTier ? 'text-gray-400' : 'text-lg font-semibold text-forest'}`}>{formatPrice(totalCents)}</span>
             </div>
+            {byobTier && (
+              <>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm text-forest font-medium">
+                    Mix & Match &minus;{byobTier.discountPercent}%
+                  </span>
+                  <span className="text-sm font-semibold text-forest">&minus;{formatPrice(byobDiscountCents)}</span>
+                </div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm font-semibold text-gray-700">Total</span>
+                  <span className="text-lg font-semibold text-forest">{formatPrice(byobTotalCents)}</span>
+                </div>
+              </>
+            )}
+            <div className="mb-3" />
             {/* Email for receipt */}
             <div className="mb-4">
               <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">

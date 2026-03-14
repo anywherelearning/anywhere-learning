@@ -1,8 +1,8 @@
 'use client';
 
 import { createContext, useContext, useReducer, useEffect, useState, useCallback, useMemo } from 'react';
-import type { CartItem } from '@/lib/cart';
-import { loadCart, saveCart, cartTotalCents } from '@/lib/cart';
+import type { CartItem, ByobTier } from '@/lib/cart';
+import { loadCart, saveCart, cartTotalCents, cartTotalWithByob, getNextByobTier } from '@/lib/cart';
 
 // ─── State & Actions ───
 
@@ -53,6 +53,10 @@ interface CartContextValue {
   isInCart: (slug: string) => boolean;
   openCart: () => void;
   closeCart: () => void;
+  byobTier: ByobTier | null;
+  byobDiscountCents: number;
+  byobTotalCents: number;
+  nextByobTier: { tier: ByobTier; itemsNeeded: number } | null;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -118,6 +122,9 @@ export default function CartProvider({ children }: { children: React.ReactNode }
   const openCart = useCallback(() => dispatch({ type: 'OPEN' }), []);
   const closeCart = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
+  const byob = cartTotalWithByob(state.items);
+  const nextTier = getNextByobTier(state.items);
+
   const value = useMemo<CartContextValue>(() => ({
     items: state.items,
     itemCount: state.items.length,
@@ -130,7 +137,11 @@ export default function CartProvider({ children }: { children: React.ReactNode }
     isInCart,
     openCart,
     closeCart,
-  }), [state.items, state.isOpen, isMounted, addItem, removeItem, clearCart, isInCart, openCart, closeCart]);
+    byobTier: byob.tier,
+    byobDiscountCents: byob.discountCents,
+    byobTotalCents: byob.totalCents,
+    nextByobTier: nextTier,
+  }), [state.items, state.isOpen, isMounted, addItem, removeItem, clearCart, isInCart, openCart, closeCart, byob.tier, byob.discountCents, byob.totalCents, nextTier]);
 
   return (
     <CartContext.Provider value={value}>
