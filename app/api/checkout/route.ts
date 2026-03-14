@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { products } from '@/lib/db/schema';
+import { products, orders, users } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { subscribeAndTag } from '@/lib/convertkit';
@@ -137,22 +137,63 @@ export async function POST(req: NextRequest) {
       return { price: product.stripePriceId, quantity: 1 };
     });
 
-    // Add free Skills Map bonus when any bundle is in the cart
+    // Add free Skills Map bonus when any bundle is in the cart,
+    // but skip if the customer already owns it from a previous purchase.
     const hasBundle = verifiedProducts.some((p) => p.isBundle);
     const skillsMapAlreadyInCart = verifiedProducts.some((p) => p.slug === 'future-ready-skills-map');
+    let alreadyOwnsSkillsMap = false;
+
     if (hasBundle && !skillsMapAlreadyInCart) {
-      lineItems.push({
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
-            description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
-            images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
+      // Check if this email has a past completed order for the Skills Map
+      try {
+        const existingUser = await db
+          .select({ id: users.id })
+          .from(users)
+          .where(eq(users.email, email))
+          .limit(1);
+
+        if (existingUser.length > 0) {
+          const skillsMapProduct = await db
+            .select({ id: products.id })
+            .from(products)
+            .where(eq(products.slug, 'future-ready-skills-map'))
+            .limit(1);
+
+          if (skillsMapProduct.length > 0) {
+            const pastOrder = await db
+              .select({ id: orders.id })
+              .from(orders)
+              .where(
+                and(
+                  eq(orders.userId, existingUser[0].id),
+                  eq(orders.productId, skillsMapProduct[0].id),
+                  eq(orders.status, 'completed'),
+                ),
+              )
+              .limit(1);
+
+            alreadyOwnsSkillsMap = pastOrder.length > 0;
+          }
+        }
+      } catch (error) {
+        // Non-critical — if the check fails, still offer the bonus
+        console.error('Failed to check past Skills Map ownership:', error);
+      }
+
+      if (!alreadyOwnsSkillsMap) {
+        lineItems.push({
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
+              description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+              images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
+            },
+            unit_amount: 0,
           },
-          unit_amount: 0,
-        },
-        quantity: 1,
-      });
+          quantity: 1,
+        });
+      }
     }
 
     const session = await stripe.checkout.sessions.create({

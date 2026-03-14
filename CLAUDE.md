@@ -109,7 +109,8 @@ These must be done before going live:
 7. **Connect custom domain** in Vercel project settings
 8. **Google Search Console + GA4** — verify site, submit sitemap
 9. **Clean up test orders** in Neon database before launch
-10. **ConvertKit cart-abandonment automation** — in Kit UI:
+10. **Re-run `npm run stripe:sync`** — after switching to live Stripe keys and setting `NEXT_PUBLIC_URL` to `https://anywherelearning.co`, re-run the sync so all Stripe product images point to the production domain
+11. **ConvertKit cart-abandonment automation** — in Kit UI:
     - Create automation: trigger = subscriber receives tag `cart-abandoner`
     - Add wait step: 1 hour
     - Add condition: subscriber does NOT have tag `buyer`
