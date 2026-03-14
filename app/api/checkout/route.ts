@@ -208,7 +208,8 @@ export async function POST(req: NextRequest) {
         product_slugs: verifiedSlugs.join(','),
         ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),
       },
-      allow_promotion_codes: true,
+      // Disable promo codes when BYOB discount is active to prevent stacking
+      ...(byobDiscount === 0 && { allow_promotion_codes: true }),
     });
 
     // Tag as cart-abandoner in ConvertKit — fire-and-forget (non-blocking).
