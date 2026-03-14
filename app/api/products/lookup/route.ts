@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getProductBySlug } from '@/lib/db/queries';
+import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 /**
  * GET /api/products/lookup?slug=seasonal-bundle
@@ -10,6 +11,10 @@ import { getProductBySlug } from '@/lib/db/queries';
  * BUNDLE_DATA map doesn't contain Stripe price IDs.
  */
 export async function GET(req: NextRequest) {
+  // Rate limit: 30 req / 60s — public DB query
+  const limited = await checkRateLimit(req, relaxedLimiter());
+  if (limited) return limited;
+
   const slug = req.nextUrl.searchParams.get('slug');
 
   if (!slug) {

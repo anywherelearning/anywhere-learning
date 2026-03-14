@@ -2,8 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { stripe } from '@/lib/stripe';
 import { getUserByClerkId } from '@/lib/db/queries';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(req: NextRequest) {
+  // Rate limit: 10 req / 60s — external Stripe API call
+  const limited = await checkRateLimit(req, standardLimiter());
+  if (limited) return limited;
+
   try {
     const { userId: clerkId } = await auth();
     if (!clerkId) {

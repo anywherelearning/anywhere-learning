@@ -4,11 +4,16 @@ import { db } from '@/lib/db';
 import { orders, products, downloads, users } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 import { streamBlobToResponse } from '@/lib/blob';
+import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ fileId: string }> },
 ) {
+  // Rate limit: 30 req / 60s — blob streaming is resource-intensive
+  const limited = await checkRateLimit(req, relaxedLimiter());
+  if (limited) return limited;
+
   const { fileId: productId } = await params;
   const { userId: clerkId } = await auth();
 
