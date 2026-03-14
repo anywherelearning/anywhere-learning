@@ -62,11 +62,8 @@ export default function CartDrawer() {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function validateEmail(): boolean {
-    if (!cartEmail.trim()) {
-      setEmailError('Please enter your email for your receipt.');
-      return false;
-    }
-    if (!EMAIL_REGEX.test(cartEmail.trim())) {
+    // Email is optional — only validate format if they entered something
+    if (cartEmail.trim() && !EMAIL_REGEX.test(cartEmail.trim())) {
       setEmailError('Please enter a valid email address.');
       return false;
     }
@@ -393,7 +390,7 @@ export default function CartDrawer() {
             {/* Email for receipt */}
             <div className="mb-4">
               <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">
-                Where should we send your receipt?
+                Email <span className="text-gray-400">(for your receipt)</span>
               </label>
               <input
                 id="cart-email"
@@ -427,6 +424,27 @@ export default function CartDrawer() {
                 {checkoutError}
               </div>
             )}
+            {/* Trust signals */}
+            <div className="flex items-center justify-center gap-4 mb-4 text-xs text-gray-400">
+              <span className="flex items-center gap-1">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
+                </svg>
+                Secure checkout
+              </span>
+              <span className="flex items-center gap-1">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                </svg>
+                Instant download
+              </span>
+              <span className="flex items-center gap-1">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 2a.75.75 0 01.75.75v.258a33.186 33.186 0 016.668.83.75.75 0 01-.336 1.461 31.28 31.28 0 00-1.103-.232l1.702 7.545a.75.75 0 01-.387.832A4.981 4.981 0 0115 14c-.825 0-1.606-.2-2.294-.556a.75.75 0 01-.387-.832l1.77-7.849a31.743 31.743 0 00-3.339-.254v11.505a20.01 20.01 0 013.78.501.75.75 0 11-.339 1.462A18.558 18.558 0 0010 17.5c-1.442 0-2.845.165-4.191.477a.75.75 0 01-.338-1.462 20.01 20.01 0 013.779-.501V4.509c-1.129.026-2.243.112-3.34.254l1.771 7.85a.75.75 0 01-.387.83A4.981 4.981 0 015 14a4.981 4.981 0 01-2.294-.556.75.75 0 01-.387-.832L4.02 5.067c-.37.07-.738.148-1.103.232a.75.75 0 01-.336-1.462 33.186 33.186 0 016.668-.829V2.75A.75.75 0 0110 2zM5 12.662l-1.395-6.177C4.6 6.32 5.283 6.246 6 6.2L5 12.662zm10 0l-1-6.462c.717.046 1.4.12 2.395.285L15 12.662z" clipRule="evenodd" />
+                </svg>
+                48-hr refund guarantee
+              </span>
+            </div>
             <button
               onClick={handleCheckout}
               disabled={checkingOut}
@@ -441,7 +459,7 @@ export default function CartDrawer() {
                   Preparing checkout...
                 </span>
               ) : (
-                'Checkout'
+                'Get Started'
               )}
             </button>
             <button

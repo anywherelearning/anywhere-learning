@@ -61,7 +61,7 @@ export default function QuickAddButton({
       ? 'Removed'
       : alreadyInCart
         ? 'Remove from cart'
-        : 'Add to cart';
+        : 'Get this';
 
   return (
     <button

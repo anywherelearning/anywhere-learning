@@ -4,7 +4,7 @@ import { db } from '@/lib/db';
 import { products, orders, users } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
-import { subscribeAndTag } from '@/lib/convertkit';
+import { BYOB_TIERS } from '@/lib/cart';
 
 interface CheckoutItem {
   stripePriceId: string;
@@ -34,11 +34,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Cart is empty' }, { status: 400 });
     }
 
-    // Extract and validate email for receipt / cart-abandonment recovery
-    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    // Extract and validate email (optional — Stripe collects if not provided)
+    const rawEmail = typeof body.email === 'string' ? body.email.trim() : '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      return NextResponse.json({ error: 'Valid email is required' }, { status: 400 });
+    const email = rawEmail && emailRegex.test(rawEmail) ? rawEmail : '';
+    if (rawEmail && !email) {
+      return NextResponse.json({ error: 'Please enter a valid email address' }, { status: 400 });
     }
 
     // Validate all items have price IDs
@@ -84,11 +85,6 @@ export async function POST(req: NextRequest) {
     // ── BYOB tier calculation (server-side, never trust client) ─────
     const individualProducts = verifiedProducts.filter((p) => !p.isBundle);
     const individualCount = individualProducts.length;
-    const BYOB_TIERS = [
-      { minItems: 5,  discountPercent: 10 },
-      { minItems: 7,  discountPercent: 15 },
-      { minItems: 10, discountPercent: 20 },
-    ];
     let byobDiscount = 0;
     for (const tier of BYOB_TIERS) {
       if (individualCount >= tier.minItems) byobDiscount = tier.discountPercent;
@@ -144,8 +140,8 @@ export async function POST(req: NextRequest) {
     let alreadyOwnsSkillsMap = false;
 
     if (hasBundle && !skillsMapAlreadyInCart) {
-      // Check if this email has a past completed order for the Skills Map
-      try {
+      // Check if this email has a past completed order for the Skills Map (skip if no email)
+      if (email) try {
         const existingUser = await db
           .select({ id: users.id })
           .from(users)
@@ -200,7 +196,7 @@ export async function POST(req: NextRequest) {
       mode: 'payment',
       payment_method_types: ['card'],
       line_items: lineItems,
-      customer_email: email,
+      ...(email && { customer_email: email }),
       customer_creation: 'always',
       success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/shop`,
@@ -210,12 +206,6 @@ export async function POST(req: NextRequest) {
       },
       // Disable promo codes when BYOB discount is active to prevent stacking
       ...(byobDiscount === 0 && { allow_promotion_codes: true }),
-    });
-
-    // Tag as cart-abandoner in ConvertKit — fire-and-forget (non-blocking).
-    // If they complete purchase, the webhook adds 'buyer' which supersedes this.
-    subscribeAndTag(email, ['cart-abandoner']).catch((err) => {
-      console.error('Failed to tag cart-abandoner in ConvertKit:', err);
     });
 
     return NextResponse.json({ url: session.url });

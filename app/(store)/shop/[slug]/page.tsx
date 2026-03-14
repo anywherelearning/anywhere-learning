@@ -401,6 +401,10 @@ export default async function ProductPage({
                 </div>
               </div>
 
+              <p className="text-sm text-gray-400 text-center mt-3">
+                Designed by a teacher who left the classroom to homeschool her own kids.
+              </p>
+
               <hr className="my-8 border-gray-200" />
 
               {/* Rich Description */}

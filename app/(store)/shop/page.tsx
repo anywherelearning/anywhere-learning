@@ -382,19 +382,20 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                   </span>
                 ))}
               </div>
+              <p className="text-center text-sm text-gray-400 mt-3">
+                Designed by a teacher who left the classroom to homeschool her own kids.
+              </p>
             </div>
           </div>
         </>
       )}
 
       {/* ════════════════════════════════════════
-          SAVINGS EXPLAINER (all view only)
+          SAVINGS EXPLAINER
       ════════════════════════════════════════ */}
-      {isAllView && (
-        <ScrollReveal>
-          <SavingsExplainer />
-        </ScrollReveal>
-      )}
+      <ScrollReveal>
+        <SavingsExplainer />
+      </ScrollReveal>
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         {/* ════════════════════════════════════════

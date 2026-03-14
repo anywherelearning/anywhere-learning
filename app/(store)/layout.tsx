@@ -1,6 +1,8 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-import ExitIntentPopup from "@/components/shop/ExitIntentPopup";
+import dynamic from "next/dynamic";
+
+const ExitIntentPopup = dynamic(() => import("@/components/shop/ExitIntentPopup"));
 
 export default function StoreLayout({
   children,

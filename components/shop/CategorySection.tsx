@@ -1,20 +1,7 @@
 import Link from 'next/link';
 import ProductCard from './ProductCard';
 import { CategoryIcon } from './icons';
-
-interface Product {
-  name: string;
-  slug: string;
-  shortDescription: string;
-  priceCents: number;
-  compareAtPriceCents: number | null;
-  stripePriceId?: string;
-  imageUrl: string | null;
-  category: string;
-  isBundle: boolean;
-  activityCount?: number | null;
-  ageRange?: string | null;
-}
+import type { ShopProduct } from '@/lib/types';
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'text-[#7b88a8]',
@@ -31,7 +18,7 @@ interface CategorySectionProps {
   category: string;
   label: string;
   description: string;
-  products: Product[];
+  products: ShopProduct[];
   totalCount: number;
 }
 

@@ -2,20 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CategoryIcon } from './icons';
 import QuickAddButton from './QuickAddButton';
+import type { ShopProduct } from '@/lib/types';
 
-interface ProductCardProps {
-  name: string;
-  slug: string;
-  shortDescription: string;
-  priceCents: number;
-  compareAtPriceCents?: number | null;
-  stripePriceId?: string;
-  imageUrl?: string | null;
-  category: string;
-  isBundle: boolean;
-  activityCount?: number | null;
-  ageRange?: string | null;
-}
+type ProductCardProps = ShopProduct;
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
@@ -106,8 +95,8 @@ export default function ProductCard({
 
           {/* Bundle badge */}
           {isBundle && (
-            <div className="absolute top-3 right-3 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-pulse-glow z-10">
-              BEST VALUE
+            <div className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm z-10">
+              Best value
             </div>
           )}
 
@@ -145,7 +134,7 @@ export default function ProductCard({
           {/* Meta info row */}
           {ageRange && (
             <p className="text-xs text-gray-400 mb-4">
-              {ageRange} &middot; PDF download
+              {ageRange} &middot; Digital guide
             </p>
           )}
 
