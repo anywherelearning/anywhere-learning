@@ -14,6 +14,7 @@ import CategorySection from "@/components/shop/CategorySection";
 import CategoryHero from "@/components/shop/CategoryHero";
 import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ScrollReveal from "@/components/shared/ScrollReveal";
+import SavingsExplainer from "@/components/shop/SavingsExplainer";
 
 export const revalidate = 3600; // ISR: revalidate hourly
 
@@ -393,6 +394,15 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         </>
       )}
 
+      {/* ════════════════════════════════════════
+          SAVINGS EXPLAINER (all view only)
+      ════════════════════════════════════════ */}
+      {isAllView && (
+        <ScrollReveal>
+          <SavingsExplainer />
+        </ScrollReveal>
+      )}
+
       <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         {/* ════════════════════════════════════════
             SEARCH BAR + SORT
@@ -452,7 +462,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             )}
 
             {/* Category filter */}
-            <section className="mb-10">
+            <section id="pick-packs" className="mb-10 scroll-mt-24">
               <Suspense fallback={null}>
                 <CategoryFilter
                   hideBundles
