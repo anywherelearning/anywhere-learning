@@ -179,22 +179,28 @@ export default async function ProductPage({
       <div className="bg-cream">
         {/* Breadcrumb */}
         <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-6">
-          <nav className="flex items-center gap-2 text-sm text-gray-400">
-            <Link
-              href="/shop"
-              className="hover:text-forest transition-colors"
-            >
-              Shop
-            </Link>
-            <span>&rsaquo;</span>
-            <Link
-              href={`/shop?category=${product.category}`}
-              className="hover:text-forest transition-colors"
-            >
-              {categoryLabels[product.category] || product.category}
-            </Link>
-            <span>&rsaquo;</span>
-            <span className="text-gray-600 truncate max-w-[200px]">{product.name}</span>
+          <nav aria-label="Breadcrumb" className="text-sm text-gray-400">
+            <ol className="flex items-center gap-2 list-none p-0 m-0">
+              <li>
+                <Link
+                  href="/shop"
+                  className="hover:text-forest transition-colors"
+                >
+                  Shop
+                </Link>
+              </li>
+              <li aria-hidden="true">&rsaquo;</li>
+              <li>
+                <Link
+                  href={`/shop?category=${product.category}`}
+                  className="hover:text-forest transition-colors"
+                >
+                  {categoryLabels[product.category] || product.category}
+                </Link>
+              </li>
+              <li aria-hidden="true">&rsaquo;</li>
+              <li aria-current="page" className="text-gray-600 truncate max-w-[200px]">{product.name}</li>
+            </ol>
           </nav>
         </div>
 

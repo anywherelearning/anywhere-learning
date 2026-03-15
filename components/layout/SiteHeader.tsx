@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { LogoIcon } from '@/components/Logo';
 import AuthNav from './AuthNav';
 import CartIcon from '@/components/cart/CartIcon';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const focusTrapRef = useFocusTrap(mobileOpen);
 
   useEffect(() => {
     function onScroll() {
@@ -125,7 +127,13 @@ export default function SiteHeader() {
 
       {/* Mobile menu — full screen overlay */}
       {mobileOpen && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-[60] bg-[#faf9f6] md:hidden">
+        <div
+          ref={focusTrapRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className="fixed inset-x-0 top-16 bottom-0 z-[60] bg-[#faf9f6] md:hidden"
+        >
           <nav className="flex flex-col items-center justify-center gap-8 pt-20">
             <Link
               href="/"
