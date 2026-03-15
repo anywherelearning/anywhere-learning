@@ -32,9 +32,39 @@ export const metadata: Metadata = {
   },
 };
 
+const freeGuideLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: '10 Life Skills Your Kids Can Learn This Week',
+  description:
+    'A free, no-prep activity guide with 10 real-world life skills activities for homeschool and worldschool families. Ages 6–14.',
+  image: 'https://anywherelearning.co/images/free-guide-cover.jpg',
+  url: 'https://anywherelearning.co/free-guide',
+  brand: {
+    '@type': 'Organization',
+    name: 'Anywhere Learning',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Amelie',
+    jobTitle: 'Former Teacher & Founder',
+    url: 'https://anywherelearning.co/about',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+};
+
 export default function FreeGuidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(freeGuideLd) }}
+      />
       <Header />
       <main>
         <Hero />

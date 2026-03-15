@@ -68,9 +68,51 @@ const values = [
   },
 ];
 
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Amelie",
+  jobTitle: "Former Teacher & Founder of Anywhere Learning",
+  description:
+    "Former classroom teacher (B.Ed, M.Ed) with 15 years of experience who left to homeschool and worldschool her own kids. Creator of Anywhere Learning activity guides.",
+  url: "https://anywherelearning.co/about",
+  sameAs: ["https://ca.pinterest.com/anywherelearning/"],
+  worksFor: {
+    "@type": "Organization",
+    name: "Anywhere Learning",
+    url: "https://anywherelearning.co",
+  },
+  knowsAbout: [
+    "Homeschooling",
+    "Worldschooling",
+    "Real-world learning",
+    "Experiential education",
+    "Charlotte Mason method",
+    "Unschooling",
+  ],
+};
+
+const profilePageLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@id": "https://anywherelearning.co/about#amelie",
+  },
+  name: "About Amelie — Anywhere Learning",
+  url: "https://anywherelearning.co/about",
+};
+
 export default function AboutPage() {
   return (
     <div className="bg-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageLd) }}
+      />
       {/* Hero — personal, warm, sets the tone */}
       <section className="relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
         <Image

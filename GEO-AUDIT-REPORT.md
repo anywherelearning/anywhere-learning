@@ -73,13 +73,13 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ## Medium Priority Issues
 
-### 7. Free guide landing page missing JSON-LD schema
-- **Detail:** `/free-guide` has no structured data; should have Product or DigitalDocument schema
-- **Fix:** Add JSON-LD with offer price of $0, description, and creator info
+### 7. ~~Free guide landing page missing JSON-LD schema~~ ✅ FIXED
+- **Detail:** ~~`/free-guide` has no structured data; should have Product or DigitalDocument schema~~
+- **Status:** Fixed — Added Product schema with offer price $0, brand, author, and image.
 
-### 8. About page missing JSON-LD schema
-- **Detail:** `/about` has no structured data; should have Person or ProfilePage schema
-- **Fix:** Add Person schema with founder credentials, sameAs links to social profiles
+### 8. ~~About page missing JSON-LD schema~~ ✅ FIXED
+- **Detail:** ~~`/about` has no structured data; should have Person or ProfilePage schema~~
+- **Status:** Fixed — Added Person schema (credentials, knowsAbout, worksFor, sameAs) and ProfilePage schema.
 
 ### 9. Content is narrative-first, not claims-first
 - **Detail:** Blog posts use conversational tone ("Let me tell you about...") rather than assertive claims ("Deschooling is the process of..."). AI systems prefer extractable definitions.
