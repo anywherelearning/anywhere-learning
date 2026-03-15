@@ -199,7 +199,7 @@ export async function POST(req: NextRequest) {
       ...(email && { customer_email: email }),
       customer_creation: 'always',
       success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${siteUrl}/shop`,
+      cancel_url: `${siteUrl}/shop?cart=open`,
       metadata: {
         product_slugs: verifiedSlugs.join(','),
         ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),

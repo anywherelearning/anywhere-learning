@@ -102,6 +102,19 @@ export default function CartProvider({ children }: { children: React.ReactNode }
     }
   }, []);
 
+  // Re-open cart when returning from cancelled Stripe checkout (?cart=open)
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('cart') === 'open' && state.items.length > 0) {
+      dispatch({ type: 'OPEN' });
+      // Clean up the URL param without a reload
+      const url = new URL(window.location.href);
+      url.searchParams.delete('cart');
+      window.history.replaceState({}, '', url.pathname + url.search);
+    }
+  }, [isMounted]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const addItem = useCallback((item: CartItem): boolean => {
     if (state.items.some((i) => i.slug === item.slug)) return false;
     dispatch({ type: 'ADD_ITEM', item });
