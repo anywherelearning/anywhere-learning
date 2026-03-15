@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "I'm Amelie — a former teacher who left the classroom to give my own kids what the school system couldn't. Anywhere Learning is what I built along the way.",
+    "I'm Amelie — a teacher with 15 years in the classroom, a B.Ed, and a Master's in Education. I left to give my own kids what the school system couldn't. Anywhere Learning is what I built along the way.",
   alternates: {
     canonical: "https://anywherelearning.co/about",
   },
@@ -99,12 +99,12 @@ export default function AboutPage() {
             Meet Amelie
           </p>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest leading-[1.1] mb-6 text-balance">
-            I spent years in the classroom. Then I took my kids out of it.
+            I spent 15 years in the classroom. Then I took my kids out of it.
           </h1>
           <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
             Anywhere Learning didn&apos;t start as a business. It started as a
-            question I couldn&apos;t stop asking: why does the system I spent years
-            working in fail so many of the kids sitting right in front of me?
+            question I couldn&apos;t stop asking: why does the system I spent 15 years
+            working in &mdash; with a B.Ed and a Master&apos;s in Education &mdash; fail so many of the kids sitting right in front of me?
           </p>
         </div>
       </section>

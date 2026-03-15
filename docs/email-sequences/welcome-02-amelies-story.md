@@ -8,7 +8,7 @@
 
 ---
 
-I spent years in a classroom watching kids ace tests and then struggle to count change at a store.
+I spent 15 years in a classroom watching kids ace tests and then struggle to count change at a store.
 
 Kids who could recite facts about ecosystems but had never planted a seed. Kids who could solve equations but couldn't figure out how to split a restaurant bill. Something was off, and once I saw it, I couldn't unsee it.
 

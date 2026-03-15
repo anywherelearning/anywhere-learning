@@ -391,7 +391,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 ))}
               </div>
               <p className="text-center text-sm text-gray-400 mt-3">
-                Designed by a teacher who left the classroom to homeschool her own kids.
+                Designed by a teacher with 15 years of classroom experience (B.Ed, M.Ed) who left to homeschool her own kids.
               </p>
             </div>
           </div>

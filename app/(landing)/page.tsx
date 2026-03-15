@@ -490,11 +490,12 @@ export default function HomePage() {
                   </h2>
                   <div className="space-y-4 text-gray-500 text-lg leading-relaxed">
                     <p>
-                      I spent years as a teacher, and I loved watching kids light
-                      up when something clicked. But the longer I was in the
-                      classroom, the harder it became to ignore what wasn&apos;t
-                      working &mdash; kids who walked in loving to learn were slowly
-                      checking out.
+                      I spent 15 years as a teacher &mdash; with a B.Ed and a
+                      Master&apos;s in Education &mdash; and I loved watching kids
+                      light up when something clicked. But the longer I was in
+                      the classroom, the harder it became to ignore what
+                      wasn&apos;t working &mdash; kids who walked in loving to
+                      learn were slowly checking out.
                     </p>
                     <p>
                       When it came time to choose for my own kids, I chose
