@@ -112,6 +112,12 @@ export async function generateMetadata({
 
 const categorySections = [
   {
+    value: "start-here",
+    label: "Start Here",
+    description:
+      "The foundation for your learning journey — start with the big picture.",
+  },
+  {
     value: "ai-literacy",
     label: "AI & Digital",
     description:
@@ -188,25 +194,20 @@ interface ShopPageProps {
 export default async function ShopPage({ searchParams }: ShopPageProps) {
   const { category, q, sort } = await searchParams;
 
-  // Fetch products from DB, fallback if unavailable
-  let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
+  // Fetch ALL products from DB for counts + catalog, fallback if unavailable
+  let dbProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
   try {
-    allProducts = category
-      ? await getProductsByCategory(category)
-      : await getActiveProducts();
+    dbProducts = await getActiveProducts();
   } catch {
     // DB not available — use fallback products
   }
 
-  const products = allProducts.length > 0 ? allProducts : fallbackProducts;
+  const fullCatalog = dbProducts.length > 0 ? dbProducts : fallbackProducts;
 
-  // Filter by category (only needed for fallback path)
-  let filteredProducts =
-    allProducts.length > 0
-      ? products
-      : category
-        ? products.filter((p) => p.category === category)
-        : products;
+  // Filter to current category view
+  let filteredProducts = category
+    ? fullCatalog.filter((p) => p.category === category || (category === 'bundle' && p.isBundle))
+    : fullCatalog;
 
   // Apply search filter
   if (q) {
@@ -236,11 +237,12 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     });
   }
 
-  // Product counts for category pills (individual products only, from full catalog)
-  const allIndividual = (
-    allProducts.length > 0 ? products : fallbackProducts
-  ).filter((p) => !p.isBundle);
-  const productCounts = getProductCounts(allIndividual);
+  // Product counts for category pills (always from full catalog)
+  const individualProducts = fullCatalog.filter((p) => !p.isBundle);
+  const productCounts: Record<string, number> = getProductCounts(individualProducts);
+  // Add bundle count separately (bundles use category "bundle")
+  const bundleCount = fullCatalog.filter((p) => p.isBundle).length;
+  if (bundleCount > 0) productCounts['bundle'] = bundleCount;
 
   // View mode
   const isSearchActive = !!q;
@@ -256,7 +258,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   // Category view: relevant bundle + cross-sell products
   const categoryBundle =
     isCategoryView && category && category !== "bundle"
-      ? (allProducts.length > 0 ? products : fallbackProducts).find(
+      ? fullCatalog.find(
           (p) => p.slug === categoryBundleMap[category] && p.isBundle,
         )
       : null;
@@ -264,7 +266,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const crossSellCategory =
     isCategoryView && category ? crossSellMap[category] : null;
   const crossSellProducts = crossSellCategory
-    ? (allProducts.length > 0 ? products : fallbackProducts)
+    ? fullCatalog
         .filter((p) => p.category === crossSellCategory && !p.isBundle)
         .slice(0, 3)
     : [];
@@ -459,7 +461,6 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             <section id="pick-packs" className="mb-10 scroll-mt-24">
               <Suspense fallback={null}>
                 <CategoryFilter
-                  hideBundles
                   productCounts={productCounts}
                 />
               </Suspense>

@@ -16,6 +16,7 @@ import {
 
 const categories = [
   { value: '', label: 'All Packs', Icon: SparklesIcon },
+  { value: 'start-here', label: 'Start Here', Icon: StarIcon },
   { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
   { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
   { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
@@ -23,7 +24,6 @@ const categories = [
   { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
   { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
   { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
-  { value: 'start-here', label: 'Start Here', Icon: StarIcon },
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
 ];
 
@@ -50,9 +50,14 @@ export default function CategoryFilter({ hideBundles, productCounts }: CategoryF
   const searchParams = useSearchParams();
   const active = searchParams.get('category') || '';
 
-  const visibleCategories = hideBundles
-    ? categories.filter((c) => c.value !== 'bundle')
-    : categories;
+  // Filter out categories with no products (when counts are available)
+  // Always keep "All Packs" (empty value) and "Bundles" (if not hidden)
+  const visibleCategories = categories.filter((cat) => {
+    if (cat.value === '') return true; // Always show "All Packs"
+    if (cat.value === 'bundle') return !hideBundles;
+    if (productCounts && !productCounts[cat.value]) return false; // Hide empty categories
+    return true;
+  });
 
   function handleFilter(category: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -85,7 +90,7 @@ export default function CategoryFilter({ hideBundles, productCounts }: CategoryF
           >
             <cat.Icon className="w-4 h-4" />
             {cat.label}
-            {count != null && (
+            {count != null && count > 0 && (
               <span className={`text-xs ${active === cat.value ? 'opacity-75' : 'text-gray-400'}`}>
                 ({count})
               </span>
