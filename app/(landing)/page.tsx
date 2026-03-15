@@ -11,6 +11,7 @@ import BundleCarousel from '@/components/shop/BundleCarousel';
 import EmailForm from '@/components/EmailForm';
 import { getAllPosts } from '@/lib/blog';
 import BlogCard from '@/components/blog/BlogCard';
+import { coreFaqItems } from '@/lib/faq-data';
 
 export const metadata: Metadata = {
   title: 'Anywhere Learning — Meaningful Learning, Wherever You Are',
@@ -39,7 +40,7 @@ const featuredProducts = [
     name: 'Creativity Mega Bundle',
     slug: 'creativity-mega-bundle',
     shortDescription:
-      'All 10 Creativity Anywhere projects — design, build, and create without limits.',
+      'All 10 Creativity Anywhere activities \u2014 design, build, and create without limits.',
     priceCents: 2999,
     compareAtPriceCents: 4990,
     imageUrl: '/products/mega-bundle-creativity.jpg',
@@ -102,35 +103,6 @@ const featuredProducts = [
   },
 ];
 
-const faqItems = [
-  {
-    question: 'What ages are these for?',
-    answer:
-      'Every activity pack includes adaptation notes for ages 4\u201314. Younger kids work alongside a parent; older kids can tackle activities independently.',
-  },
-  {
-    question: 'Do I need to follow a specific schedule or curriculum?',
-    answer:
-      'Nope. These are standalone activity cards. Pick one when you have 15 minutes or spend a whole afternoon. There\u2019s no sequence, no lesson plan, no curriculum to follow.',
-  },
-  {
-    question: 'What if my kids don\u2019t like it?',
-    answer:
-      'We\u2019re confident they will, but if not, email us at info@anywherelearning.co within 48 hours of purchase for a full refund. No questions asked.',
-  },
-  {
-    question: 'How is this different from free printables I can find online?',
-    answer:
-      'These aren\u2019t worksheets. They\u2019re real-world activity cards that get kids doing things \u2014 cooking, budgeting, building, exploring outside. No fill-in-the-blanks, no busywork.',
-  },
-  {
-    question: 'Can I use these with multiple kids at different ages?',
-    answer:
-      'Absolutely. Every activity includes adaptation notes so siblings can do the same activity at their own level. Families with kids ages 4\u201314 use these together.',
-  },
-];
-
-
 const organizationLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -154,7 +126,7 @@ const websiteLd = {
 const homepageFaqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqItems.map((item) => ({
+  mainEntity: coreFaqItems.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -205,9 +177,8 @@ export default function HomePage() {
                   <br /><span className="text-gold">Happens Everywhere</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                  Stop planning. Start living. Activity guides that
-                  turn your everyday life into the richest education your
-                  kids will ever get.
+                  No-prep activity guides you open on any device and follow
+                  along with your kids. Real-world learning in 15 minutes &mdash; from $4.99.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
@@ -225,7 +196,7 @@ export default function HomePage() {
                 </div>
                 {/* Trust signals */}
                 <p className="mt-6 text-sm text-gray-500">
-                  For families who chose a different path &middot; 48-hour money-back guarantee
+                  Instant download &middot; Ages 4&ndash;14 &middot; 48-hour money-back guarantee
                 </p>
               </div>
             </div>
@@ -252,19 +223,19 @@ export default function HomePage() {
                   <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
                     200 Pinterest boards saved.
                   </h3>
-                  <p className="text-cream/40 text-sm">Still no plan for Monday.</p>
+                  <p className="text-cream/60 text-sm">Still no plan for Monday.</p>
                 </div>
                 <div>
                   <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
                     The worksheets get done.
                   </h3>
-                  <p className="text-cream/40 text-sm">But nobody&apos;s excited.</p>
+                  <p className="text-cream/60 text-sm">But nobody&apos;s excited.</p>
                 </div>
                 <div>
                   <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
                     Sunday night lesson prep
                   </h3>
-                  <p className="text-cream/40 text-sm">became a second job.</p>
+                  <p className="text-cream/60 text-sm">became a second job.</p>
                 </div>
               </div>
               <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
@@ -285,10 +256,10 @@ export default function HomePage() {
                   Our Activity Packs
                 </p>
                 <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                  Grab a Pack. Open. Go.
+                  Activity Packs for Every Family
                 </h2>
                 <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Each pack is a step-by-step guide you follow on any device. No prep. No extra materials. Just open and start.
+                  Bundles save 30&ndash;50%. Pick the one that fits your family &mdash; or grab them all.
                 </p>
               </div>
             </ScrollReveal>
@@ -338,7 +309,7 @@ export default function HomePage() {
                   <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 1</span>
                   <h3 className="text-xl font-semibold text-forest mb-2">Choose</h3>
                   <p className="text-sm leading-relaxed text-gray-500">
-                    Pick a pack that matches your family. Or just grab them all &mdash; most families do.
+                    Filter by age, season, or subject. Not sure where to start? Bundles cover everything.
                   </p>
                 </div>
               </ScrollReveal>
@@ -395,10 +366,10 @@ export default function HomePage() {
                 Built for real life
               </p>
               <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-6 text-balance">
-                Why Families Choose This
+                Built for How Your Family Actually Lives
               </h2>
               <p className="text-center text-gray-500 text-lg mb-16 max-w-xl mx-auto">
-                No gimmicks, no fluff &mdash; just activity guides designed around the way your family actually lives.
+                No gimmicks, no fluff &mdash; just activity guides designed around the way your family actually learns.
               </p>
             </ScrollReveal>
 
@@ -414,11 +385,11 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-4">
-                      No Prep Required
+                      Real Skills, Not Busywork
                     </h3>
                     <p className="text-cream/70 text-lg leading-relaxed max-w-2xl">
-                      Open on any device and follow along. No printing, no extra materials,
-                      no Sunday night planning. Just pick an activity and go.
+                      Kids cook a meal on a budget, build a birdhouse, plan a neighbourhood clean-up,
+                      learn how AI works. Skills they&apos;ll actually use &mdash; through activities that feel like play.
                     </p>
                   </div>
                 </div>
@@ -497,21 +468,36 @@ export default function HomePage() {
                   </h2>
                   <div className="space-y-4 text-gray-500 text-lg leading-relaxed">
                     <p>
-                      I spent years working in schools &mdash; and I loved it. But
-                      over time, I couldn&apos;t ignore what I was seeing. The system
-                      wasn&apos;t keeping up. The curriculum wasn&apos;t getting kids
-                      ready for the world they&apos;d actually grow up in.
+                      I spent years as a teacher, and I loved watching kids light
+                      up when something clicked. But the longer I was in the
+                      classroom, the harder it became to ignore what wasn&apos;t
+                      working &mdash; kids who walked in loving to learn were slowly
+                      checking out.
                     </p>
                     <p>
                       When it came time to choose for my own kids, I chose
-                      something different. I built the kind of learning I wished
-                      the system offered &mdash; real-world, hands-on, no busywork.
-                      Things that feel like play but build real skills.
+                      differently. We took seven months to travel as a family,
+                      and I saw something I couldn&apos;t unsee: my kids learned more
+                      from real life in a week than they had in a semester of
+                      fill-in-the-blanks.
+                    </p>
+                    <p>
+                      I left the classroom for good and started creating the
+                      activities I wished the system offered &mdash; hands-on,
+                      real-world, zero prep. Things that feel like play but
+                      build real skills.
                     </p>
                     <p className="text-forest font-semibold">
-                      These activity packs are what came out of that leap. Now your family can have them too.
+                      That&apos;s what became Anywhere Learning. Now your family can have them too.
                     </p>
                   </div>
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-1.5 text-forest font-medium text-base mt-4 group"
+                  >
+                    Read my full story
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                  </Link>
                 </div>
               </ScrollReveal>
             </div>
@@ -529,7 +515,84 @@ export default function HomePage() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <FAQSection items={faqItems} />
+              <FAQSection items={coreFaqItems} />
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="mt-10 text-center">
+                <Link
+                  href="/shop"
+                  className="inline-flex items-center gap-2 text-forest font-semibold text-lg group hover:text-forest-dark transition-colors"
+                >
+                  Browse the Activity Packs
+                  <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            EMAIL CAPTURE — Soft opt-in for visitors not ready to buy
+        ═══════════════════════════════════════════ */}
+        <section className="bg-cream py-16 md:py-20">
+          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+                Free Resource
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
+                Not Sure Where to Start?
+              </h2>
+              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
+                Grab the free guide &mdash; 10 real-world activities you can try this week
+                with zero prep. See if this approach works for your family.
+              </p>
+              <EmailForm variant="light" />
+              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
+                <span className="flex -space-x-1.5">
+                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
+                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
+                  ))}
+                </span>
+                Join families learning differently
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            FINAL CTA — Bold, warm
+        ═══════════════════════════════════════════ */}
+        <section className="relative bg-forest-texture py-20 md:py-28 overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" aria-hidden="true" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.03]" aria-hidden="true" />
+
+          <div className="relative mx-auto max-w-2xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <h2 className="font-display text-4xl md:text-6xl text-cream mb-5">
+                Start This Week.
+              </h2>
+              <p className="text-lg text-cream/60 mb-10 leading-relaxed max-w-lg mx-auto">
+                Pick a pack, open it on your phone or tablet, and do the first activity together.
+                No planning, no prep &mdash; just 15 minutes and your kids.
+              </p>
+              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Link
+                  href="/shop"
+                  className="bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl animate-pulse-glow"
+                >
+                  Get the Activity Packs
+                </Link>
+                <Link
+                  href="/free-guide"
+                  className="border-2 border-cream/20 hover:border-cream/50 hover:bg-cream/[0.08] text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 text-lg"
+                >
+                  Or Grab the Free Guide
+                </Link>
+              </div>
+              <p className="mt-8 text-cream/60 text-sm">
+                48-hour money-back guarantee &middot; Instant download &middot; Use year after year
+              </p>
             </ScrollReveal>
           </div>
         </section>
@@ -579,75 +642,6 @@ export default function HomePage() {
                   <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
                 </Link>
               </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            EMAIL CAPTURE — Lead magnet pitch
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-16 md:py-20">
-          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
-            <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                Free Resource
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
-                10 Life Skills Your Kids Can Learn This Week
-              </h2>
-              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                Join families who chose a different path. 10 real-world life skills
-                and activities your kids can try this week — no curriculum, no prep, no screen time.
-              </p>
-              <EmailForm variant="light" />
-              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
-                <span className="flex -space-x-1.5">
-                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
-                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
-                  ))}
-                </span>
-                Join families learning differently
-              </p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            FINAL CTA — Bold, urgent
-        ═══════════════════════════════════════════ */}
-        <section className="relative bg-forest-texture py-20 md:py-28 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" aria-hidden="true" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.03]" aria-hidden="true" />
-
-          <div className="relative mx-auto max-w-2xl px-5 sm:px-8 text-center">
-            <ScrollReveal>
-              <h2 className="font-display text-4xl md:text-6xl text-cream mb-5">
-                Your kids are ready.<br />Are you?
-              </h2>
-              <p className="text-lg text-cream/60 mb-10 leading-relaxed max-w-lg mx-auto">
-                Thousands of families are ditching the curriculum and trusting their kids to learn through real life.
-                You&apos;re not behind &mdash; you&apos;re ahead. Pick a pack and start this week.
-              </p>
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Link
-                  href="/shop"
-                  className="bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl animate-pulse-glow"
-                >
-                  Get the Activity Packs
-                </Link>
-                <Link
-                  href="/free-guide"
-                  className="border-2 border-cream/20 hover:border-cream/50 hover:bg-cream/[0.08] text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 text-lg"
-                >
-                  Or Grab the Free Guide
-                </Link>
-              </div>
-              <p className="mt-8 text-cream/40 text-sm">
-                48-hour money-back guarantee &middot; Instant download &middot; Use year after year
-              </p>
-              <p className="mt-3 text-cream/25 text-xs">
-                Most families start with a bundle
-              </p>
             </ScrollReveal>
           </div>
         </section>

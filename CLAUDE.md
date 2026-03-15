@@ -141,12 +141,41 @@ These must be done before going live:
 9. **Google Search Console + GA4** — verify site, submit sitemap
 10. **Clean up test orders** in Neon database before launch
 11. **Re-run `npm run stripe:sync`** — after switching to live Stripe keys and setting `NEXT_PUBLIC_URL` to `https://anywherelearning.co`, re-run the sync so all Stripe product images point to the production domain
-12. **ConvertKit cart-abandonment automation** — in Kit UI:
+12. **ConvertKit lead magnet automation** — in Kit UI:
+    - Create automation: trigger = subscriber receives tag `lead`
+    - Send email with free guide PDF attached or linked (subject: "Here's your free guide!")
+    - Optional: add 2-3 follow-up emails (Day 2: getting started tips, Day 5: shop intro)
+    - The `lead` tag is auto-applied by the app when someone submits the free guide form
+13. **ConvertKit cart-abandonment automation** — in Kit UI:
     - Create automation: trigger = subscriber receives tag `cart-abandoner`
     - Add wait step: 1 hour
     - Add condition: subscriber does NOT have tag `buyer`
     - Send recovery email (warm, on-brand: "Still thinking it over? Your cart is waiting...")
     - Optional: second email at 24 hours with different angle
     - Tags `cart-abandoner` and `buyer` are auto-created by the app — no manual tag setup needed
-13. **Pinterest Rich Pins** — validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
-14. **Directory submissions** — submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
+14. **Pinterest Rich Pins** — validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
+15. **Directory submissions** — submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
+
+## Post-Launch Growth Ideas
+
+Feature ideas surfaced during the pre-launch audit (March 2026). Prioritize based on data.
+
+### Conversion
+- **Referral incentive on success page** — discount code or "share with a friend" after purchase
+- **"Frequently Bought Together" section** on product pages
+- **Cross-sell non-category items** on product detail pages (e.g. show math packs on a nature page)
+- **Bundle value callout on product cards** — show "Part of the Nature Bundle — save 40%" on individual cards
+- **Cart badge re-animation** on item add for visual feedback
+- **Sticky mobile buy bar** — show bundle savings info, not just price
+- **Free guide post-submit CTA** — after email capture, show a "Browse the shop" button
+
+### SEO
+- **Product title tags with category keywords** — e.g. "Spring Outdoor Pack | Homeschool Nature Activities"
+- **BreadcrumbList schema on shop listing page**
+- **Category descriptions targeting SEO keywords** — write keyword-rich intros for each category section
+- **Stronger internal linking** to FAQ, About, Contact from header/footer
+
+### Infrastructure
+- **Upgrade to Redis-based rate limiting** (Upstash) when traffic grows
+- **Stripe Tax collection** — configure in Stripe Dashboard when hitting state tax thresholds
+- **Nonce-based CSP** — replace `unsafe-inline`/`unsafe-eval` for stricter Content Security Policy
