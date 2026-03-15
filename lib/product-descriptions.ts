@@ -193,7 +193,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'spring-outdoor-pack': {
     opening:
-      'Bring learning outside this spring — without prep, worksheets, or special supplies. 20 nature-based outdoor activities for families who want meaningful seasonal learning that feels calm, flexible, and doable. Spring offers endless learning moments: buds opening, puddles changing, birds returning, insects appearing.',
+      'Bring learning outside this spring \u2014 without prep, printables, or special supplies. 20 nature-based outdoor activities for families who want meaningful seasonal learning that feels calm, flexible, and doable. Spring offers endless learning moments: buds opening, puddles changing, birds returning, insects appearing.',
     whatsIncluded: [
       '20 spring-themed outdoor activities across 4 subjects',
       'Language Arts (5): descriptive writing, discussion prompts, how-to writing',
@@ -474,7 +474,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'budget-challenge': {
     opening:
-      'Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy that happens in real life, not on a worksheet.',
+      'Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy that happens in real life, not on a screen.',
     whatsIncluded: [
       'Multiple real-world budgeting challenges',
       'Meal planning on a budget with real prices',

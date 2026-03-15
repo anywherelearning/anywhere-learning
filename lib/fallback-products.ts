@@ -697,7 +697,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Real-Life Budget Challenge",
     slug: "budget-challenge",
     description:
-      "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, not worksheets.",
+      "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, no prep needed.",
     shortDescription:
       "Real-money challenges that teach kids budgeting, saving, and smart spending.",
     priceCents: 499,
