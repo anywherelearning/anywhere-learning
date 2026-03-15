@@ -486,9 +486,9 @@ export default function HomePage() {
                     <p>
                       When it came time to choose for my own kids, I chose
                       differently. We took seven months to travel as a family,
-                      and I saw something I couldn&apos;t unsee: my kids learned more
-                      from real life in a week than they had in a semester of
-                      fill-in-the-blanks.
+                      and I noticed something shift &mdash; they were curious
+                      again, figuring things out on their own, learning without
+                      even realizing it.
                     </p>
                     <p>
                       I left the classroom for good and started creating the
