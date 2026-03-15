@@ -14,8 +14,11 @@ import { eq } from 'drizzle-orm';
  * corresponding product slugs in the database — they are skipped.
  */
 
-const BLOB_BASE_URL =
-  'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/';
+const BLOB_BASE_URL = process.env.BLOB_BASE_URL;
+if (!BLOB_BASE_URL) {
+  console.error('BLOB_BASE_URL is required. Set it in .env.local (e.g. https://xxx.public.blob.vercel-storage.com/)');
+  process.exit(1);
+}
 
 // slug → blob file name (URL-encoded where necessary)
 const blobMap: Record<string, string> = {

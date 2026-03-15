@@ -6,6 +6,7 @@ import { eq, and, inArray } from 'drizzle-orm';
 import { sendPurchaseEmail, sendMembershipWelcomeEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
 import { getSubscriptionByStripeId } from '@/lib/db/queries';
+import { BUNDLE_CONTENTS } from '@/lib/cart';
 import type Stripe from 'stripe';
 
 export async function POST(req: NextRequest) {
@@ -424,16 +425,23 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       });
 
       // If bundle, create orders for each included product
-      if (product.isBundle && product.bundleProductIds) {
-        const bundledIds = JSON.parse(product.bundleProductIds) as string[];
-        for (const pid of bundledIds) {
-          await db.insert(orders).values({
-            userId: user[0].id,
-            productId: pid,
-            stripeSessionId,
-            amountCents: 0,
-            status: 'completed',
-          });
+      if (product.isBundle) {
+        const childSlugs = BUNDLE_CONTENTS[product.slug] || [];
+        if (childSlugs.length > 0) {
+          const childProducts = await db
+            .select({ id: products.id })
+            .from(products)
+            .where(inArray(products.slug, childSlugs));
+
+          for (const child of childProducts) {
+            await db.insert(orders).values({
+              userId: user[0].id,
+              productId: child.id,
+              stripeSessionId,
+              amountCents: 0,
+              status: 'completed',
+            });
+          }
         }
       }
     }

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useCart } from '@/components/cart/CartProvider';
 import { getBundleUpsell } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 
 const DISMISS_KEY = 'exit-popup-dismissed';
 const DISMISS_DAYS = 7;
@@ -100,6 +101,8 @@ export default function ExitIntentPopup() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [show, dismiss]);
 
+  const focusTrapRef = useFocusTrap(show && animating);
+
   if (!show || !isShopPage) return null;
 
   const ariaLabel =
@@ -122,6 +125,7 @@ export default function ExitIntentPopup() {
       aria-label={ariaLabel}
     >
       <div
+        ref={focusTrapRef}
         className={`relative w-full max-w-[500px] bg-cream rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           variant === 'bundle-promo' ? 'flex flex-col sm:flex-row max-h-[85vh] sm:max-h-none' : 'max-h-[85vh]'
         } ${

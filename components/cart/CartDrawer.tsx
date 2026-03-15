@@ -8,16 +8,17 @@ import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
 import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 
 export default function CartDrawer() {
-  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem } = useCart();
+  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem, byobTier, byobDiscountCents, byobTotalCents, nextByobTier } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
   const [cartEmail, setCartEmail] = useState('');
   const [emailError, setEmailError] = useState<string | null>(null);
   const [emailLoaded, setEmailLoaded] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
+  const focusTrapRef = useFocusTrap(isCartOpen);
 
   // Lock body scroll when open
   useEffect(() => {
@@ -37,13 +38,6 @@ export default function CartDrawer() {
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [isCartOpen, closeCart]);
-
-  // Focus trap — focus the panel when it opens
-  useEffect(() => {
-    if (isCartOpen && panelRef.current) {
-      panelRef.current.focus();
-    }
-  }, [isCartOpen]);
 
   // Load persisted email on mount
   useEffect(() => {
@@ -176,7 +170,7 @@ export default function CartDrawer() {
 
       {/* Panel */}
       <div
-        ref={panelRef}
+        ref={focusTrapRef}
         tabIndex={-1}
         className="absolute right-0 top-0 bottom-0 w-full max-w-md bg-cream shadow-2xl flex flex-col animate-slide-in-right outline-none"
       >
@@ -383,10 +377,46 @@ export default function CartDrawer() {
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-gray-200/60 px-6 py-5 bg-white/50">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-sm text-gray-500">Subtotal</span>
-              <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
-            </div>
+            {/* BYOB next-tier nudge */}
+            {nextByobTier && !items.some((i) => i.isBundle) && (
+              <div className="mb-3 flex items-center gap-2 bg-forest/5 border border-forest/15 rounded-xl px-4 py-2.5 text-sm text-forest">
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                </svg>
+                <span>
+                  Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+                  <span className="font-semibold">{nextByobTier.tier.discountPercent}% off</span>
+                </span>
+              </div>
+            )}
+
+            {/* Subtotal with BYOB discount */}
+            {byobTier ? (
+              <div className="mb-4 space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Subtotal</span>
+                  <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-forest font-medium flex items-center gap-1.5">
+                    <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
+                      {byobTier.discountPercent}% off
+                    </span>
+                    Multi-pack discount
+                  </span>
+                  <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
+                </div>
+                <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
+                  <span className="text-sm font-medium text-gray-700">Total</span>
+                  <span className="text-lg font-semibold text-forest">{formatPrice(byobTotalCents)}</span>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm text-gray-500">Subtotal</span>
+                <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
+              </div>
+            )}
             {/* Email for receipt */}
             <div className="mb-4">
               <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">

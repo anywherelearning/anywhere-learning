@@ -8,6 +8,7 @@ import { products } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { getUserByClerkId } from '@/lib/db/queries';
 import { formatPrice } from '@/lib/utils';
+import { BUNDLE_CONTENTS } from '@/lib/cart';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 
@@ -71,38 +72,48 @@ async function getSessionProducts(sessionId: string) {
       // Clerk auth may not be configured — continue with time-window guard only
     }
 
+    // Try price-ID lookup first (standard purchases)
     const priceIds = session.line_items?.data
       ?.map((item) => item.price?.id)
       .filter(Boolean) as string[];
 
-    if (!priceIds || priceIds.length === 0) return null;
+    let purchasedProducts = priceIds?.length
+      ? await db
+          .select()
+          .from(products)
+          .where(and(inArray(products.stripePriceId, priceIds), eq(products.active, true)))
+      : [];
 
-    const purchasedProducts = await db
-      .select()
-      .from(products)
-      .where(and(inArray(products.stripePriceId, priceIds), eq(products.active, true)));
+    // Fallback: BYOB purchases use ad-hoc price_data, so price IDs won't match.
+    // Use the product_slugs metadata written at checkout time instead.
+    if (purchasedProducts.length === 0 && session.metadata?.product_slugs) {
+      const slugs = session.metadata.product_slugs.split(',').filter(Boolean);
+      if (slugs.length > 0) {
+        purchasedProducts = await db
+          .select()
+          .from(products)
+          .where(and(inArray(products.slug, slugs), eq(products.active, true)));
+      }
+    }
+
+    if (purchasedProducts.length === 0) return null;
 
     // Find bundles that could be upgrades (user bought individual packs)
     const isIndividualPurchase = purchasedProducts.some((p) => !p.isBundle);
     let bundleUpgrades: typeof purchasedProducts = [];
 
     if (isIndividualPurchase) {
-      const purchasedIds = purchasedProducts.map((p) => p.id);
+      const purchasedSlugs = new Set(purchasedProducts.map((p) => p.slug));
       const allBundles = await db
         .select()
         .from(products)
         .where(and(eq(products.active, true), eq(products.isBundle, true)));
 
       bundleUpgrades = allBundles.filter((bundle) => {
-        if (!bundle.bundleProductIds) return false;
-        try {
-          const childIds = JSON.parse(bundle.bundleProductIds) as string[];
-          // Show bundle if it contains any of the purchased products
-          const overlap = childIds.filter((id) => purchasedIds.includes(id));
-          return overlap.length > 0 && overlap.length < childIds.length;
-        } catch {
-          return false;
-        }
+        const childSlugs = BUNDLE_CONTENTS[bundle.slug] || [];
+        if (childSlugs.length === 0) return false;
+        const overlap = childSlugs.filter((s) => purchasedSlugs.has(s));
+        return overlap.length > 0 && overlap.length < childSlugs.length;
       });
     }
 
