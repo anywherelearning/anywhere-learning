@@ -47,6 +47,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
       }
 
       setStatus("success");
+      try { localStorage.setItem('free-guide-submitted', 'true'); } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");
       setStatus("error");

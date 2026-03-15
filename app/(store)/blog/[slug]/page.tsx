@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import {
   getAllPosts,
@@ -27,6 +28,8 @@ import BlogProductCallout from '@/components/blog/BlogProductCallout';
 import BlogBundleCallout from '@/components/blog/BlogBundleCallout';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
+
+const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -619,6 +622,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <RelatedPosts posts={related} />
         </div>
       </section>
+
+      {/* Exit-intent lead magnet popup */}
+      <BlogExitIntentPopup />
     </div>
   );
 }
