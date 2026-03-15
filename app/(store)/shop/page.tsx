@@ -278,6 +278,15 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     : [];
 
   // Structured data
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://anywherelearning.co" },
+      { "@type": "ListItem", position: 2, name: "Shop", item: "https://anywherelearning.co/shop" },
+    ],
+  };
+
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -295,6 +304,10 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
   return (
     <div className="bg-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}

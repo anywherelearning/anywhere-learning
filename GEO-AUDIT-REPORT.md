@@ -102,8 +102,9 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ## Low Priority Issues
 
-### 13. BreadcrumbList schema missing from shop listing page
-- **Detail:** Only product detail and blog post pages have breadcrumb schema; shop listing page does not
+### 13. ~~BreadcrumbList schema missing from shop listing page~~ ✅ FIXED
+- **Detail:** ~~Only product detail and blog post pages have breadcrumb schema; shop listing page does not~~
+- **Status:** Fixed — Added BreadcrumbList schema (Home → Shop) to shop listing page.
 
 ### 14. ~~Homepage has duplicate Organization schema~~ ✅ FIXED
 - **Detail:** ~~Organization JSON-LD is defined in both root layout and homepage, creating redundancy~~
@@ -113,8 +114,9 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - **Detail:** Heavy reliance on shared template sections (SHARED_ACTIVITY_STRUCTURE, SHARED_WHY_FAMILIES_LOVE_IT) makes some product pages feel similar
 - **Fix:** Add unique selling points or specific activity examples to differentiate
 
-### 16. Blog posts lack dateModified on older posts
-- **Detail:** Most recent posts have dateModified but some older posts only have publishedAt
+### 16. ~~Blog posts lack dateModified on older posts~~ ✅ FIXED
+- **Detail:** ~~Most recent posts have dateModified but some older posts only have publishedAt~~
+- **Status:** Fixed — All 28 blog posts now have explicit dateModified values.
 
 ---
 
