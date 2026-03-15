@@ -12,7 +12,7 @@ If you've ever lain awake at night wondering whether your kids are "getting enou
 
 I know that feeling. The 2 a.m. spiral. The mental checklist of everything they *should* know by now. The well-meaning relative who asks, "But what about math?" The voice in your head that sounds suspiciously like every report card you ever received.
 
-The guilt is real. I get it. I had a B.Ed, a Master's in Education, 15 years in the classroom, and all the "right" credentials — and I *still* felt it. Especially in the early months, when our days looked nothing like school and I kept waiting for someone to tell me I was doing it wrong.
+The guilt is real. I get it. I had a teaching degree, 15 years in the classroom, and all the "right" credentials — and I *still* felt it. Especially in the early months, when our days looked nothing like school and I kept waiting for someone to tell me I was doing it wrong.
 
 Then I started actually looking at what my kids were learning.
 

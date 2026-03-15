@@ -104,7 +104,7 @@ export default function AboutPage() {
           <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
             Anywhere Learning didn&apos;t start as a business. It started as a
             question I couldn&apos;t stop asking: why does the system I spent 15 years
-            working in &mdash; with a B.Ed and a Master&apos;s in Education &mdash; fail so many of the kids sitting right in front of me?
+            working in fail so many of the kids sitting right in front of me?
           </p>
         </div>
       </section>

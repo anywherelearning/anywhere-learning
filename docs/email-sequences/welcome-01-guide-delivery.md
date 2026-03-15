@@ -18,7 +18,7 @@ Here's my best advice for using it: don't try to do everything at once. Pick *on
 
 A quick intro, since we're going to be hanging out in your inbox for a bit.
 
-I'm Amelie — former teacher (B.Ed, M.Ed, 15 years in the classroom), current worldschooler, mom of two kids who are currently learning Spanish at a corner store in El Salvador. Before I pulled my kids out of the classroom, I spent 15 years watching bright students ace tests but freeze when faced with real-world problem-solving. It didn't sit right with me. So I changed everything.
+I'm Amelie — former teacher, current worldschooler, mom of two kids who are currently learning Spanish at a corner store in El Salvador. Before I pulled my kids out of the classroom, I spent 15 years watching bright students ace tests but freeze when faced with real-world problem-solving. It didn't sit right with me. So I changed everything.
 
 Now my family is seven months into a trip through Florida, Panama, Costa Rica, and El Salvador — and my kids are learning more from ordering pupusas and hiking volcanoes than they ever did from a textbook.
 

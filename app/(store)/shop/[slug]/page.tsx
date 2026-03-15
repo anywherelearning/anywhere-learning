@@ -408,7 +408,7 @@ export default async function ProductPage({
               </div>
 
               <p className="text-sm text-gray-400 text-center mt-3">
-                Designed by a teacher with 15 years of classroom experience (B.Ed, M.Ed) who left to homeschool her own kids.
+                Designed by a teacher with 15 years of classroom experience who left to homeschool her own kids.
               </p>
 
               <hr className="my-8 border-gray-200" />
