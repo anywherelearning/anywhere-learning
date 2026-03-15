@@ -15,6 +15,7 @@ import CategoryHero from "@/components/shop/CategoryHero";
 import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import SavingsExplainer from "@/components/shop/SavingsExplainer";
+import SkillsMapBanner from "@/components/shop/SkillsMapBanner";
 
 export const revalidate = 3600; // ISR: revalidate hourly
 
@@ -396,6 +397,11 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
           </div>
         </>
       )}
+
+      {/* ════════════════════════════════════════
+          SKILLS MAP BANNER (All Packs view only)
+      ════════════════════════════════════════ */}
+      {!isCategoryView && <SkillsMapBanner />}
 
       {/* ════════════════════════════════════════
           SAVINGS EXPLAINER

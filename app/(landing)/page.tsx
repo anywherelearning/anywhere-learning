@@ -22,6 +22,19 @@ export const metadata: Metadata = {
 
 const featuredProducts = [
   {
+    name: 'The Future-Ready Skills Map',
+    slug: 'future-ready-skills-map',
+    shortDescription:
+      'The 10 skills your kids actually need — mapped by age with activities, milestones, and sample weeks. Start here.',
+    priceCents: 999,
+    compareAtPriceCents: null,
+    imageUrl: '/products/future-ready-skills-map.jpg',
+    category: 'start-here',
+    isBundle: false,
+    activityCount: null,
+    ageRange: 'Ages 0–14+',
+  },
+  {
     name: 'Full Seasonal Bundle',
     slug: 'seasonal-bundle',
     shortDescription:

@@ -115,13 +115,10 @@ export default function BundleContents({ bundleSlug, bundlePriceCents }: BundleC
                 <p className="text-sm font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-forest transition-colors">
                   {product.name}
                 </p>
-                <div className="flex items-center justify-between mt-2">
+                <div className="flex items-center mt-2">
                   <span className="flex items-center gap-1 text-xs text-gray-400">
                     <CategoryIcon category={product.category} className="w-3 h-3" />
                     {categoryLabels[product.category] || product.category}
-                  </span>
-                  <span className="text-xs font-semibold text-gray-500">
-                    ${(product.priceCents / 100).toFixed(2)}
                   </span>
                 </div>
 
