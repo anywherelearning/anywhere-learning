@@ -59,6 +59,7 @@
 - **Homepage uses hardcoded product data** — no DB dependency for the most important page
 - **Lead magnet page** uses its own Header/Footer; rest of site uses SiteHeader/SiteFooter
 - **Metadata template pattern** — layout provides `%s | Anywhere Learning` suffix
+- **Blog summary boxes** — Pillar and guide-style posts should include a `{ type: 'summary', text: '...' }` block as the first content item. Write claims-first, definition-style text that AI search engines can extract (e.g. "Deschooling is the transition period after leaving traditional school where..."). Keep it to 2-3 sentences. Don't add summary boxes to short or personal/story posts — only substantial, reference-worthy articles.
 
 ## Strategic Blueprint
 
