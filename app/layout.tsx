@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Anywhere Learning",
   },
   description:
-    "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 4 to 14.",
+    "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 6 to 14.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Anywhere Learning",
     title: "Anywhere Learning — Meaningful Learning, Wherever You Are",
     description:
-      "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 4 to 14.",
+      "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 6 to 14.",
   },
   twitter: {
     card: "summary_large_image",
@@ -97,16 +97,23 @@ export default function RootLayout({
                   "@type": "Organization",
                   "@id": "https://anywherelearning.co/#organization",
                   "name": "Anywhere Learning",
+                  "alternateName": "anywherelearning.co",
                   "url": "https://anywherelearning.co",
                   "logo": {
                     "@type": "ImageObject",
                     "url": "https://anywherelearning.co/logo.png",
                   },
                   "description":
-                    "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+                    "No-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6–14 — download, open on any device, and follow along with your kids.",
+                  "slogan": "Meaningful Learning, Wherever You Are",
                   "email": "info@anywherelearning.co",
+                  "founder": {
+                    "@type": "Person",
+                    "name": "Amelie",
+                    "url": "https://anywherelearning.co/about",
+                  },
                   "sameAs": [
-                    "https://www.pinterest.com/anywherelearningco/",
+                    "https://ca.pinterest.com/anywherelearning/",
                   ],
                 },
                 {

@@ -114,26 +114,6 @@ const featuredProducts = [
   },
 ];
 
-const organizationLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Anywhere Learning',
-  url: 'https://anywherelearning.co',
-  logo: 'https://anywherelearning.co/logo.png',
-  description: 'No-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
-  email: 'info@anywherelearning.co',
-  sameAs: [
-    'https://ca.pinterest.com/anywherelearning/',
-  ],
-};
-
-const websiteLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Anywhere Learning',
-  url: 'https://anywherelearning.co',
-};
-
 const homepageFaqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -147,8 +127,6 @@ const homepageFaqLd = {
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqLd) }} />
       <a
         href="#main-content"

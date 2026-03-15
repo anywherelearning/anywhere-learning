@@ -90,13 +90,13 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - **Detail:** No "X vs Y" articles, comparison tables, or ranked lists. These are high-value for AI advisory queries.
 - **Fix:** Create 2-3 comparison posts (e.g., "Homeschool vs Worldschool: Key Differences")
 
-### 11. Name collision with other entities
+### 11. ~~Name collision with other entities~~ ✅ PARTIALLY FIXED
 - **Detail:** "Anywhere Learning" is used by anywherelearning.in (Indian ed-tech) and Anytime Anywhere Learning Foundation. This makes branded search competitive.
-- **Fix:** Consistently use "anywherelearning.co" and tagline in all external profiles; build enough authority to own the brand name in search
+- **Status:** Added `alternateName: "anywherelearning.co"`, `slogan`, and `founder` to Organization schema for disambiguation. External profile work (directories, social) still needed post-launch.
 
 ### 12. CSP uses unsafe-inline/unsafe-eval
 - **Detail:** Content Security Policy relies on `'unsafe-inline'` and `'unsafe-eval'` for scripts
-- **Fix:** Implement nonce-based CSP (already noted as future optimization)
+- **Status:** Deferred to post-launch. Nonce-based CSP requires testing with Clerk (injects inline scripts), Stripe, and GA4 — browsers ignore `'unsafe-inline'` when a nonce is present, so adding nonces without verifying all third-party inline scripts would break auth/payments. Needs production validation.
 
 ---
 
@@ -105,8 +105,9 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 ### 13. BreadcrumbList schema missing from shop listing page
 - **Detail:** Only product detail and blog post pages have breadcrumb schema; shop listing page does not
 
-### 14. Homepage has duplicate Organization schema
-- **Detail:** Organization JSON-LD is defined in both root layout and homepage, creating redundancy
+### 14. ~~Homepage has duplicate Organization schema~~ ✅ FIXED
+- **Detail:** ~~Organization JSON-LD is defined in both root layout and homepage, creating redundancy~~
+- **Status:** Fixed — Removed duplicate Organization and WebSite schemas from homepage. Root layout is the single source of truth.
 
 ### 15. Some product descriptions are formulaic
 - **Detail:** Heavy reliance on shared template sections (SHARED_ACTIVITY_STRUCTURE, SHARED_WHY_FAMILIES_LOVE_IT) makes some product pages feel similar
