@@ -89,7 +89,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const productUrls = allProducts.map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
-      lastModified: p.updatedAt ? new Date(p.updatedAt) : siteLastUpdated,
+      lastModified: p.createdAt ? new Date(p.createdAt) : siteLastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));
