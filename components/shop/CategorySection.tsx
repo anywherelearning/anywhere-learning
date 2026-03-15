@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ProductCard from './ProductCard';
+import ProductCarousel from './ProductCarousel';
 import { CategoryIcon } from './icons';
 import type { ShopProduct } from '@/lib/types';
 
@@ -29,7 +30,6 @@ export default function CategorySection({
   products,
   totalCount,
 }: CategorySectionProps) {
-  const shown = products.slice(0, 3);
   const hasMore = totalCount > 3;
 
   return (
@@ -58,14 +58,18 @@ export default function CategorySection({
         )}
       </div>
 
-      {/* Product grid — 3 cards */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {shown.map((product) => (
-          <div key={product.slug} className="h-full">
-            <ProductCard {...product} />
-          </div>
-        ))}
-      </div>
+      {/* Products — carousel if more than 3, grid otherwise */}
+      {hasMore ? (
+        <ProductCarousel products={products} />
+      ) : (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((product) => (
+            <div key={product.slug} className="h-full">
+              <ProductCard {...product} />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Mobile "see all" link */}
       {hasMore && (

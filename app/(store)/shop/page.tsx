@@ -471,9 +471,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               </Suspense>
             </section>
 
-            {/* Category sections */}
+            {/* Category sections — always use fallback for complete catalog */}
             {categorySections.map((cat) => {
-              const catProducts = filteredProducts.filter(
+              const catProducts = fallbackProducts.filter(
                 (p) => p.category === cat.value && !p.isBundle,
               );
               if (catProducts.length === 0) return null;
