@@ -4,18 +4,11 @@ interface Review {
   comment: string;
   createdAt: Date;
   updatedAt: Date;
-  userEmail: string;
+  displayName: string;
 }
 
 interface ReviewListProps {
   reviews: Review[];
-}
-
-function getFirstName(email: string): string {
-  const local = email.split('@')[0];
-  // Turn "amelie.drouin" or "amelie_drouin" into "Amelie"
-  const name = local.split(/[._-]/)[0];
-  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 }
 
 function getRelativeTime(date: Date): string {
@@ -65,7 +58,7 @@ export default function ReviewList({ reviews }: ReviewListProps) {
                 ))}
               </div>
               <span className="text-sm font-medium text-gray-700">
-                {getFirstName(review.userEmail)}
+                {review.displayName}
               </span>
             </div>
             <span className="text-xs text-gray-400">

@@ -1,6 +1,6 @@
 import { db } from './index';
 import { products, orders, users, reviews, subscriptions } from './schema';
-import { eq, and, desc, ne, avg, count, gt, inArray } from 'drizzle-orm';
+import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -244,7 +244,8 @@ export async function getProductReviews(productId: string) {
     comment: reviews.comment,
     createdAt: reviews.createdAt,
     updatedAt: reviews.updatedAt,
-    userEmail: users.email,
+    // Only extract the first name from the email — never expose full email
+    displayName: sql<string>`initcap(split_part(split_part(${users.email}, '@', 1), '.', 1))`,
   })
     .from(reviews)
     .innerJoin(users, eq(reviews.userId, users.id))
