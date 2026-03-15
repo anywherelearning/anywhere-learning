@@ -247,7 +247,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
 
         <div className="inline-flex items-center gap-2.5 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-5">
           <span className="text-[13px] text-gray-400 line-through">$9.99</span>
-          <span className="text-[13px] font-bold text-forest">FREE</span>
+          <span className="text-[13px] font-bold text-forest">FREE with any bundle</span>
         </div>
 
         <Link
