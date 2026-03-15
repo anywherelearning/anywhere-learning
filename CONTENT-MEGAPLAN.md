@@ -1,6 +1,6 @@
 # Anywhere Learning — Content Megaplan
 
-> 53 blog posts mapped to ICP pain points, SEO keywords, and product funnels.
+> 57 blog posts mapped to ICP pain points, SEO keywords, and product funnels.
 > Built from Reddit (r/homeschool, r/unschooling, r/worldschooling) and Facebook homeschool community research.
 > Last updated: March 2026
 
@@ -61,7 +61,8 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 
 - **5 Pillar pages** — Comprehensive guides (2,000–3,000 words). Target head keywords.
 - **48 Cluster/standalone posts** — Focused articles (800–1,500 words). Target long-tail keywords. Link back to pillar.
-- **Total: 53 posts** (5 pillar + 48 cluster/standalone)
+- **4 Comparison/ranking posts** — "X vs Y" and ranked list content. High-value for AI search citation.
+- **Total: 57 posts** (5 pillar + 48 cluster/standalone + 4 comparison)
 
 **Categories:** `real-world-skills` · `nature-learning` · `travel-worldschool` · `homeschool-life` · `getting-started`
 
@@ -281,6 +282,7 @@ These are underserved areas where Anywhere Learning has no significant competiti
 | **Travel-ready print-and-go packs** | 70,000+ in worldschooling Facebook groups need portable, offline-friendly resources. | #21-#28 (entire Pillar 3) |
 | **No-prep positioning** | Parents' #1 product request. "Open and go" with zero teacher manual. | #6, #52, brand-wide |
 | **Deschooling activity content** | High-volume keyword (10k/mo) with low competition. Transition families are desperate. | #45, #46, #51 |
+| **Comparison/decision-making content** | AI search engines heavily cite "X vs Y" content. No homeschool sites own this format well. | #54, #55, #56, #57 |
 
 ---
 
@@ -324,11 +326,22 @@ These are underserved areas where Anywhere Learning has no significant competiti
 - [ ] Related posts (3, cross-pillar where relevant)
 - [ ] At least one CTA block (mid-article or end)
 
+### Comparison & Ranking Posts (4 posts)
+
+High-value for AI advisory queries ("what's the difference between..."). AI search engines heavily cite comparison content because it directly answers decision-making questions.
+
+| # | Title | Slug | Keyword | Vol | Comp | Pain Point | CTA | Status |
+|---|-------|------|---------|-----|------|-----------|-----|--------|
+| 54 | Homeschool vs Worldschool: What's the Difference? | `homeschool-vs-worldschool` | homeschool vs worldschool | ~500 | Low | Decision-making, travel | All packs | Not started |
+| 55 | Unschooling vs Homeschooling: Which Approach Is Right for Your Family? | `unschooling-vs-homeschooling` | unschooling vs homeschooling | ~1,200 | Low | #3 curriculum, #9 deschooling | Free guide | Not started |
+| 56 | Charlotte Mason vs Unschooling vs Real-World Learning: A Practical Comparison | `homeschool-methods-compared` | homeschool methods comparison | ~800 | Low | #3 curriculum paralysis | Starter Bundle | Not started |
+| 57 | 7 Best Homeschool Approaches for Non-Teacher Parents (Ranked) | `best-homeschool-approaches-ranked` | best homeschool method | ~1,500 | Med | #2 guilt, imposter syndrome | Free guide | Not started |
+
 ---
 
 ## Keyword Volume Summary
 
-Total addressable search volume across all 53 posts:
+Total addressable search volume across all 57 posts:
 
 | Pillar | Posts | Combined Monthly Volume |
 |--------|-------|------------------------|
@@ -339,7 +352,8 @@ Total addressable search volume across all 53 posts:
 | P5: AI & Digital Literacy | 6 | ~8,900/mo |
 | Cross-Pillar: Mindset | 7 | ~26,000/mo |
 | Standalone/Funnel | 4 | ~5,100/mo |
-| **Total** | **53** | **~75,000/mo** |
+| Comparison & Ranking | 4 | ~4,000/mo |
+| **Total** | **57** | **~79,000/mo** |
 
 **Note:** Cross-pillar mindset posts have the highest combined volume because "deschooling" (10k), "homeschool schedule" adjacent terms, and "socialization" (4k) are massive keywords. Nature/outdoor (17k) is second due to "outdoor STEM" (4.5k), "backyard science" (4k), and "seasonal activities" (2.2k).
 
@@ -350,8 +364,8 @@ Total addressable search volume across all 53 posts:
 | Status | Count |
 |--------|-------|
 | ✅ Published | 11 |
-| Not started | 42 |
-| **Total** | **53** |
+| Not started | 46 |
+| **Total** | **57** |
 
 **Published posts:**
 1. #2 — Teach Kids About Money

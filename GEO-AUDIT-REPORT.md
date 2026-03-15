@@ -86,9 +86,9 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - **Fix:** Add a clear definition/summary box at the top of key articles
 - **Expected impact:** Higher citation rate for definitional queries
 
-### 10. No comparison or ranking content
+### 10. ~~No comparison or ranking content~~ ✅ PLANNED
 - **Detail:** No "X vs Y" articles, comparison tables, or ranked lists. These are high-value for AI advisory queries.
-- **Fix:** Create 2-3 comparison posts (e.g., "Homeschool vs Worldschool: Key Differences")
+- **Status:** Added 4 comparison/ranking posts (#54–#57) to CONTENT-MEGAPLAN.md: Homeschool vs Worldschool, Unschooling vs Homeschooling, Methods Compared, and Best Approaches Ranked. ~4,000/mo combined keyword volume.
 
 ### 11. ~~Name collision with other entities~~ ✅ PARTIALLY FIXED
 - **Detail:** "Anywhere Learning" is used by anywherelearning.in (Indian ed-tech) and Anytime Anywhere Learning Foundation. This makes branded search competitive.
