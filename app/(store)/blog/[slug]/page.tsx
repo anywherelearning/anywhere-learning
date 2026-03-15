@@ -9,9 +9,11 @@ import {
   getRelatedPosts,
   getArticleBodyText,
   blogCategories,
+  blogProductDefaults,
   formatDate,
   formatReadTime,
   type BlogContentBlock,
+  type BlogCategory,
 } from '@/lib/blog';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import PullQuote from '@/components/blog/PullQuote';
@@ -21,6 +23,8 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
+import BlogProductCallout from '@/components/blog/BlogProductCallout';
+import BlogBundleCallout from '@/components/blog/BlogBundleCallout';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 
@@ -295,7 +299,65 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
           </div>
         </div>
       );
+    case 'product-callout':
+      return <BlogProductCallout key={index} slug={block.slug} context={block.context} />;
+    case 'bundle-callout':
+      return <BlogBundleCallout key={index} slug={block.slug} context={block.context} />;
   }
+}
+
+/* ─── Auto-inject product/bundle callouts ─── */
+
+function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
+  // Skip if the post already has manual product/bundle callouts
+  const hasProduct = post.content.some((b) => b.type === 'product-callout');
+  const hasBundle = post.content.some((b) => b.type === 'bundle-callout');
+  if (hasProduct && hasBundle) return post.content;
+
+  const defaults = blogProductDefaults[post.category];
+  if (!defaults) return post.content;
+
+  const productSlug = post.recommendedProduct || defaults.product;
+  const bundleSlug = post.recommendedBundle || defaults.bundle;
+
+  // Find h2 heading indices for optimal placement
+  const h2Indices = post.content
+    .map((b, i) => (b.type === 'heading' && b.level === 2 ? i : -1))
+    .filter((i) => i >= 0);
+
+  if (h2Indices.length < 2) return post.content;
+
+  const total = post.content.length;
+  const target35 = Math.floor(total * 0.35);
+  const target65 = Math.floor(total * 0.65);
+
+  // Find h2 nearest to 35% and 65% of content
+  const productIdx = !hasProduct
+    ? h2Indices.reduce((best, idx) => (Math.abs(idx - target35) < Math.abs(best - target35) ? idx : best), h2Indices[0])
+    : -1;
+  const bundleIdx = !hasBundle
+    ? h2Indices.reduce((best, idx) => {
+        // Ensure bundle placement is after product placement
+        if (productIdx >= 0 && idx <= productIdx) return best;
+        return Math.abs(idx - target65) < Math.abs(best - target65) ? idx : best;
+      }, h2Indices[h2Indices.length - 1])
+    : -1;
+
+  // Build new content array with injections
+  const result: BlogContentBlock[] = [];
+  for (let i = 0; i < post.content.length; i++) {
+    // Insert product callout right before the target h2
+    if (i === productIdx && !hasProduct) {
+      result.push({ type: 'product-callout', slug: productSlug });
+    }
+    // Insert bundle callout right before the target h2
+    if (i === bundleIdx && !hasBundle && i !== productIdx) {
+      result.push({ type: 'bundle-callout', slug: bundleSlug });
+    }
+    result.push(post.content[i]);
+  }
+
+  return result;
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -305,7 +367,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const cat = blogCategories[post.category];
   const related = getRelatedPosts(post);
-  const toc = getTableOfContents(post.content);
+  // Auto-inject product callouts if not manually placed
+  const contentWithCallouts = injectCallouts(post);
+  const toc = getTableOfContents(contentWithCallouts);
 
   const articleBody = getArticleBodyText(post);
   const jsonLd = {
@@ -500,7 +564,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Article content */}
             {(() => {
               let firstParagraphRendered = false;
-              return post.content.map((block, i) => {
+              return contentWithCallouts.map((block, i) => {
                 const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
                 if (isFirst) firstParagraphRendered = true;
                 return renderBlock(block, i, isFirst);
