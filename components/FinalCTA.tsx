@@ -13,10 +13,6 @@ export default function FinalCTA() {
         </p>
 
         <EmailForm variant="dark" />
-
-        <p className="text-cream/50 text-sm mt-4">
-          No spam. No fluff. Unsubscribe any time.
-        </p>
       </div>
     </section>
   );
