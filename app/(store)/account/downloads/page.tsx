@@ -151,7 +151,7 @@ export default async function DownloadsPage() {
       <p className="mt-2 text-gray-500">
         {packCount > 0
           ? `${packCount} activity pack${packCount === 1 ? "" : "s"} ready to open.`
-          : "Ready to open, pick one, and start learning."}
+          : "Your activity packs will appear here after purchase."}
       </p>
 
       {/* ── Seasonal suggestion ── */}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import { stripe } from '@/lib/stripe';
 import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
@@ -133,10 +134,15 @@ async function getSessionProducts(sessionId: string) {
 export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const { session_id } = await searchParams;
 
-  const data = session_id ? await getSessionProducts(session_id) : null;
-  const purchasedProducts = data?.products || [];
-  const bundleUpgrades = data?.bundleUpgrades || [];
-  const hasBundles = data?.hasBundles || false;
+  // Redirect to shop if no valid session (prevents celebration UI without a purchase)
+  if (!session_id) redirect('/shop');
+
+  const data = await getSessionProducts(session_id);
+  if (!data) redirect('/shop');
+
+  const purchasedProducts = data.products;
+  const bundleUpgrades = data.bundleUpgrades;
+  const hasBundles = data.hasBundles;
 
   return (
     <>
