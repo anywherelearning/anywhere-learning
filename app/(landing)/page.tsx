@@ -9,8 +9,6 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import BundleCarousel from '@/components/shop/BundleCarousel';
 import EmailForm from '@/components/EmailForm';
-import { getAllPosts } from '@/lib/blog';
-import BlogCard from '@/components/blog/BlogCard';
 import { coreFaqItems } from '@/lib/faq-data';
 
 export const metadata: Metadata = {
@@ -218,28 +216,39 @@ export default function HomePage() {
           <div className="absolute top-6 right-[10%] w-48 h-48 rounded-full border border-white/[0.04]" aria-hidden="true" />
           <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
             <ScrollReveal>
-              <div className="grid sm:grid-cols-3 gap-8 md:gap-12 text-center sm:text-left">
+              <p className="text-sm sm:text-base font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center mb-8">
+                Every homeschool parent&apos;s week
+              </p>
+            </ScrollReveal>
+            <div className="grid sm:grid-cols-3 gap-8 md:gap-12 text-center sm:text-left">
+              <ScrollReveal delay={0}>
                 <div>
-                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
+                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
                     200 Pinterest boards saved.
                   </h3>
-                  <p className="text-cream/60 text-sm">Still no plan for Monday.</p>
+                  <p className="text-cream/80 text-base">Still no plan for Monday.</p>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
                 <div>
-                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
-                    The worksheets get done.
+                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
+                    You found the perfect activity.
                   </h3>
-                  <p className="text-cream/60 text-sm">But nobody&apos;s excited.</p>
+                  <p className="text-cream/80 text-base">Prepping it took longer than doing it.</p>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
                 <div>
-                  <h3 className="font-display text-xl sm:text-2xl text-cream/90 leading-snug mb-1">
-                    Sunday night lesson prep
+                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
+                    You planned the whole week.
                   </h3>
-                  <p className="text-cream/60 text-sm">became a second job.</p>
+                  <p className="text-cream/80 text-base">They lost interest by Tuesday.</p>
                 </div>
-              </div>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal delay={400}>
               <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
-                What if the learning was already happening &mdash; and you just needed a way to see it?
+                That&apos;s exactly why we made these.
               </p>
             </ScrollReveal>
           </div>
@@ -259,7 +268,7 @@ export default function HomePage() {
                   Activity Packs for Every Family
                 </h2>
                 <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Bundles save 30&ndash;50%. Pick the one that fits your family &mdash; or grab them all.
+                  Bundles save up to 40%. Pick the one that fits your family &mdash; or grab them all.
                 </p>
               </div>
             </ScrollReveal>
@@ -309,7 +318,7 @@ export default function HomePage() {
                   <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 1</span>
                   <h3 className="text-xl font-semibold text-forest mb-2">Choose</h3>
                   <p className="text-sm leading-relaxed text-gray-500">
-                    Filter by age, season, or subject. Not sure where to start? Bundles cover everything.
+                    Browse by category &mdash; nature, creativity, math, and more. Not sure where to start? Bundles cover everything.
                   </p>
                 </div>
               </ScrollReveal>
@@ -576,20 +585,12 @@ export default function HomePage() {
                 Pick a pack, open it on your phone or tablet, and do the first activity together.
                 No planning, no prep &mdash; just 15 minutes and your kids.
               </p>
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Link
-                  href="/shop"
-                  className="bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl animate-pulse-glow"
-                >
-                  Get the Activity Packs
-                </Link>
-                <Link
-                  href="/free-guide"
-                  className="border-2 border-cream/20 hover:border-cream/50 hover:bg-cream/[0.08] text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 text-lg"
-                >
-                  Or Grab the Free Guide
-                </Link>
-              </div>
+              <Link
+                href="/shop"
+                className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl animate-pulse-glow"
+              >
+                Get the Activity Packs
+              </Link>
               <p className="mt-8 text-cream/60 text-sm">
                 48-hour money-back guarantee &middot; Instant download &middot; Use year after year
               </p>
@@ -597,54 +598,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            FROM THE BLOG — SEO link equity to blog
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <ScrollReveal>
-              <div className="text-center mb-14">
-                <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                  From the Blog
-                </p>
-                <h2 className="font-display text-3xl md:text-5xl text-forest mb-4 text-balance">
-                  Ideas for Your Next Adventure
-                </h2>
-                <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Practical tips, real stories, and fresh inspiration for families learning outside the box.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {getAllPosts().slice(0, 3).map((post, i) => (
-                <ScrollReveal key={post.slug} delay={i * 100}>
-                  <BlogCard
-                    slug={post.slug}
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    category={post.category}
-                    publishedAt={post.publishedAt}
-                    readTimeMinutes={post.readTimeMinutes}
-                    author={post.author}
-                  />
-                </ScrollReveal>
-              ))}
-            </div>
-
-            <ScrollReveal delay={350}>
-              <div className="mt-12 text-center">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center gap-2 text-forest font-semibold text-lg group hover:text-forest-dark transition-colors"
-                >
-                  Read more on the blog
-                  <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
       </main>
       <SiteFooter />
     </>
