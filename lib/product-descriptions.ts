@@ -116,7 +116,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '4 complete seasonal packs (Spring, Summer, Fall, Winter)',
       '80 outdoor activities total — 20 per season',
       'Language Arts, Maths, Science, and Physical Education in every pack',
-      'Age adaptation notes for ages 4–14',
+      'Age adaptation notes for ages 6–14',
       '3 levels per activity: Explore / Develop / Extend',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],

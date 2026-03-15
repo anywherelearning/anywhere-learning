@@ -15,7 +15,7 @@ const activityCards = [
   {
     title: 'Cloud Detective Walk',
     category: 'Nature',
-    age: 'Ages 4–10',
+    age: 'Ages 6–10',
     color: 'bg-forest',
     borderColor: 'border-forest',
     description: 'Head outside and identify cloud types. Sketch what you see, predict the weather, and learn why clouds form.',
@@ -24,7 +24,7 @@ const activityCards = [
   {
     title: 'Story Dice Adventure',
     category: 'Creativity',
-    age: 'Ages 5–14',
+    age: 'Ages 6–14',
     color: 'bg-[#c47a8f]',
     borderColor: 'border-[#c47a8f]',
     description: 'Roll the story dice and build a wild story together. Each roll adds a character, setting, or plot twist.',
@@ -33,7 +33,7 @@ const activityCards = [
   {
     title: 'Bug Hotel Builder',
     category: 'Seasonal — Spring',
-    age: 'Ages 4–12',
+    age: 'Ages 6–12',
     color: 'bg-gold',
     borderColor: 'border-gold',
     description: 'Build a bug hotel from sticks, leaves, and pine cones. Watch who moves in and learn about habitats.',

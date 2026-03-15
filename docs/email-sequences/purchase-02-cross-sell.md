@@ -35,7 +35,7 @@ I wanted to share something that pairs well with what you've got.
 
 Since your family enjoyed the seasonal activities, you'd probably love the **Nature Bundle** — outdoor exploration, wildlife observation, and nature journaling that works in any season. It's a different angle on the same kind of hands-on learning, and the activities layer really nicely together.
 
-**60 activities · Ages 4–14 · $24.99**
+**60 activities · Ages 6–14 · $24.99**
 
 **[Take a Look →](https://anywherelearning.co/shop/nature-bundle)**
 
@@ -56,7 +56,7 @@ I wanted to share something that pairs well with what you've got.
 
 Since your family enjoyed the nature activities, the **Seasonal Bundle** keeps that momentum going year-round — spring, summer, fall, and winter, with activities designed for each season's weather and rhythms. It's like having a whole year of outdoor learning ready to go.
 
-**80 activities · Ages 4–14 · $49.99**
+**80 activities · Ages 6–14 · $49.99**
 
 **[Take a Look →](https://anywherelearning.co/shop/seasonal-bundle)**
 
@@ -119,7 +119,7 @@ I wanted to share something you might not have seen.
 
 Since you grabbed a single pack, you might want to check out the **Master Bundle** — it's everything in the shop in one download. 220+ activities across seasonal adventures, creativity projects, nature exploration, real-world skills, life skills, and AI literacy. It's the best value by far, and it means you'll never run out of ideas on those blank-brain mornings.
 
-**220+ activities · Ages 4–14 · $89.99** (saves $30+ vs. buying individually)
+**220+ activities · Ages 6–14 · $89.99** (saves $30+ vs. buying individually)
 
 **[Get the Master Bundle →](https://anywherelearning.co/shop/master-bundle)**
 

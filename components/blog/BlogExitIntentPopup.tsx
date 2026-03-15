@@ -161,7 +161,7 @@ export default function BlogExitIntentPopup() {
     >
       <div
         ref={focusTrapRef}
-        className={`relative w-full max-w-md bg-cream rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`relative w-full max-w-md max-h-[92vh] overflow-y-auto bg-cream rounded-3xl shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           animating
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-6'
@@ -179,33 +179,32 @@ export default function BlogExitIntentPopup() {
           </svg>
         </button>
 
-        {/* Guide image */}
-        <div className="relative w-full h-44 sm:h-52 bg-[#f7f5f0] overflow-hidden">
-          <Image
-            src="/products/future-ready-skills-map.jpg"
-            alt="The Future-Ready Skills Map — free guide"
-            fill
-            sizes="448px"
-            className="object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-cream/60 via-transparent to-transparent" />
-          <div className="absolute bottom-3 left-4 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm">
-            Free guide
+        {/* Content with inline cover */}
+        <div className="px-5 sm:px-8 pt-4 sm:pt-5 pb-5 sm:pb-7">
+          <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+            {/* Guide cover — compact */}
+            <div className="relative w-16 sm:w-28 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
+              <Image
+                src="/images/free-guide-cover.jpg"
+                alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
+                fill
+                sizes="(max-width: 640px) 64px, 112px"
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="min-w-0 pt-0.5 sm:pt-1">
+              <h2
+                id="blog-exit-popup-title"
+                className="font-display text-lg sm:text-[1.5rem] text-forest leading-tight mb-1 sm:mb-1.5"
+              >
+                Before you go &mdash; grab this free guide
+              </h2>
+              <p className="text-[12px] sm:text-sm text-gray-500 leading-relaxed">
+                10 Real-World Activities You Can Start Today &mdash; no prep, no planning, just meaningful learning.
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Content */}
-        <div className="px-6 sm:px-8 pt-5 pb-7">
-          <h2
-            id="blog-exit-popup-title"
-            className="font-display text-[1.4rem] sm:text-[1.6rem] text-forest leading-tight mb-2"
-          >
-            Before you go &mdash; grab this free guide
-          </h2>
-          <p className="text-sm text-gray-500 leading-relaxed mb-5">
-            10 Real-World Activities You Can Start Today &mdash; no prep, no planning, just meaningful learning with your kids.
-          </p>
 
           {/* Email form */}
           <EmailForm variant="light" />
@@ -213,7 +212,7 @@ export default function BlogExitIntentPopup() {
           {/* Dismiss link */}
           <button
             onClick={dismiss}
-            className="mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+            className="mt-2 sm:mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
           >
             No thanks, I&rsquo;ll keep reading
           </button>

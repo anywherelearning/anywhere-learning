@@ -26,7 +26,7 @@ Here's what they actually look like:
 - **A family cooking project** that starts with a budget, a trip to the store, and a meal your kids plan and make from scratch. (My two do this most nights now. They argue about spices. It's great.)
 - **A nature observation journal prompt** that sends kids outside with a magnifying glass and a question — not to fill in blanks, but to notice things they've never noticed before.
 
-Every activity is designed to work anywhere — your kitchen, your backyard, a park, a new city. Ages 4 to 14, with built-in flexibility so siblings at different stages can do them together.
+Every activity is designed to work anywhere — your kitchen, your backyard, a park, a new city. Ages 6 to 14, with built-in flexibility so siblings at different stages can do them together.
 
 They're the kind of thing I wish I'd had on those blank-brain mornings. Something I could hand my kids that would spark real engagement without me having to be the idea machine every single day.
 

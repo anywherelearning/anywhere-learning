@@ -45,7 +45,7 @@ const featuredProducts = [
     category: 'bundle',
     isBundle: true,
     activityCount: 80,
-    ageRange: 'Ages 4–14',
+    ageRange: 'Ages 6–14',
   },
   {
     name: 'Creativity Mega Bundle',
@@ -97,7 +97,7 @@ const featuredProducts = [
     category: 'bundle',
     isBundle: true,
     activityCount: null,
-    ageRange: 'Ages 4–14',
+    ageRange: 'Ages 6–14',
   },
   {
     name: 'Outdoor Toolkit Bundle',
@@ -110,7 +110,7 @@ const featuredProducts = [
     category: 'bundle',
     isBundle: true,
     activityCount: null,
-    ageRange: 'Ages 4–14',
+    ageRange: 'Ages 6–14',
   },
 ];
 
@@ -207,7 +207,7 @@ export default function HomePage() {
                 </div>
                 {/* Trust signals */}
                 <p className="mt-6 text-sm text-gray-500">
-                  Instant download &middot; Ages 4&ndash;14 &middot; 48-hour money-back guarantee
+                  Instant download &middot; Ages 6&ndash;14 &middot; 48-hour money-back guarantee
                 </p>
               </div>
             </div>
@@ -430,7 +430,7 @@ export default function HomePage() {
                       <path d="M16 3.12598C17.7252 3.57004 19 5.13616 19 7C19 8.86384 17.7252 10.43 16 10.874" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Works for Ages 4&ndash;14</h3>
+                  <h3 className="text-xl font-semibold text-forest mb-2">Works for Ages 6&ndash;14</h3>
                   <p className="text-gray-500 text-lg leading-relaxed">
                     Every activity includes adaptation notes so siblings at different levels
                     can do the same thing together.

@@ -3,7 +3,7 @@ const items = [
   '220+ real-world activities',
   'Works with any homeschool style',
   'No curriculum needed',
-  'Ages 4–14',
+  'Ages 6–14',
   'Download and use in minutes',
   '48-hour money-back guarantee',
   'Created by a worldschool mom',

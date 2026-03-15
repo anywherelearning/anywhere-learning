@@ -1,12 +1,12 @@
-import { LogoIcon } from "./Logo";
+import Image from "next/image";
 import EmailForm from "./EmailForm";
 
 function PDFMockup() {
   return (
     <div className="animate-gentle-float mx-auto w-56 sm:w-64">
-      <div className="relative rounded-2xl border-2 border-forest bg-cream p-6 shadow-xl">
+      <div className="relative rounded-2xl overflow-hidden shadow-xl">
         {/* Gold badge */}
-        <div className="absolute -top-3 -right-3 flex h-14 w-14 items-center justify-center rounded-full bg-gold shadow-md">
+        <div className="absolute -top-1 -right-1 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-gold shadow-md">
           <span className="text-center text-[10px] font-bold leading-tight text-white">
             FREE
             <br />
@@ -16,25 +16,15 @@ function PDFMockup() {
           </span>
         </div>
 
-        {/* Mini logo */}
-        <div className="mb-4 flex items-center gap-1.5">
-          <LogoIcon size={18} />
-          <span className="font-display text-xs text-forest">
-            Anywhere Learning
-          </span>
-        </div>
-
-        {/* Title */}
-        <h2 className="font-body text-sm font-bold leading-snug text-forest">
-          10 Life Skills Your Kids Can Learn This Week
-        </h2>
-
-        {/* Decorative lines */}
-        <div className="mt-4 space-y-2">
-          <div className="h-1.5 w-full rounded bg-gold/20" />
-          <div className="h-1.5 w-4/5 rounded bg-gold/20" />
-          <div className="h-1.5 w-3/5 rounded bg-gold/20" />
-        </div>
+        {/* Cover image */}
+        <Image
+          src="/images/free-guide-cover.jpg"
+          alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
+          width={256}
+          height={362}
+          className="w-full h-auto"
+          priority
+        />
       </div>
     </div>
   );

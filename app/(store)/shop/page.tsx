@@ -40,12 +40,12 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
   "outdoor-learning": {
     title: "Outdoor Learning Activity Packs",
     description:
-      "Turn your backyard, park, or trail into a hands-on learning space. Ages 4\u201314.",
+      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6\u201314.",
   },
   "real-world-math": {
     title: "Real-World Math Packs",
     description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 4\u201314.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6\u201314.",
   },
   "entrepreneurship": {
     title: "Entrepreneurship Activity Packs",
@@ -371,7 +371,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 {[
                   "No Prep Required",
                   "Download & Use Instantly",
-                  "Ages 4\u201314",
+                  "Ages 6\u201314",
                   "48-hour refund guarantee",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-2">
