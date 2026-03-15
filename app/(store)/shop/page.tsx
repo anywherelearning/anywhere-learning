@@ -194,20 +194,25 @@ interface ShopPageProps {
 export default async function ShopPage({ searchParams }: ShopPageProps) {
   const { category, q, sort } = await searchParams;
 
-  // Fetch ALL products from DB for counts + catalog, fallback if unavailable
-  let dbProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
+  // Fetch products from DB, fallback if unavailable
+  let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
   try {
-    dbProducts = await getActiveProducts();
+    allProducts = category
+      ? await getProductsByCategory(category)
+      : await getActiveProducts();
   } catch {
     // DB not available — use fallback products
   }
 
-  const fullCatalog = dbProducts.length > 0 ? dbProducts : fallbackProducts;
+  const products = allProducts.length > 0 ? allProducts : fallbackProducts;
 
-  // Filter to current category view
-  let filteredProducts = category
-    ? fullCatalog.filter((p) => p.category === category || (category === 'bundle' && p.isBundle))
-    : fullCatalog;
+  // Filter by category (only needed for fallback path)
+  let filteredProducts =
+    allProducts.length > 0
+      ? products
+      : category
+        ? products.filter((p) => p.category === category)
+        : products;
 
   // Apply search filter
   if (q) {
@@ -237,11 +242,11 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     });
   }
 
-  // Product counts for category pills (always from full catalog)
-  const individualProducts = fullCatalog.filter((p) => !p.isBundle);
-  const productCounts: Record<string, number> = getProductCounts(individualProducts);
-  // Add bundle count separately (bundles use category "bundle")
-  const bundleCount = fullCatalog.filter((p) => p.isBundle).length;
+  // Product counts for category pills (always from full fallback catalog for consistency)
+  const allIndividual = fallbackProducts.filter((p) => !p.isBundle);
+  const productCounts: Record<string, number> = getProductCounts(allIndividual);
+  // Add bundle count separately
+  const bundleCount = fallbackProducts.filter((p) => p.isBundle).length;
   if (bundleCount > 0) productCounts['bundle'] = bundleCount;
 
   // View mode
@@ -258,7 +263,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   // Category view: relevant bundle + cross-sell products
   const categoryBundle =
     isCategoryView && category && category !== "bundle"
-      ? fullCatalog.find(
+      ? (allProducts.length > 0 ? products : fallbackProducts).find(
           (p) => p.slug === categoryBundleMap[category] && p.isBundle,
         )
       : null;
@@ -266,7 +271,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const crossSellCategory =
     isCategoryView && category ? crossSellMap[category] : null;
   const crossSellProducts = crossSellCategory
-    ? fullCatalog
+    ? (allProducts.length > 0 ? products : fallbackProducts)
         .filter((p) => p.category === crossSellCategory && !p.isBundle)
         .slice(0, 3)
     : [];
