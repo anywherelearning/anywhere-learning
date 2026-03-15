@@ -25,7 +25,8 @@ export type BlogContentBlock =
   | { type: 'tip'; title: string; text: string }
   | { type: 'faq'; items: { question: string; answer: string }[] }
   | { type: 'product-callout'; slug: string; context?: string }
-  | { type: 'bundle-callout'; slug: string; context?: string };
+  | { type: 'bundle-callout'; slug: string; context?: string }
+  | { type: 'summary'; text: string; heading?: string };
 
 export interface BlogPost {
   slug: string;
@@ -312,6 +313,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child reading a book under a tree in golden afternoon light',
     content: [
+      { type: 'summary', text: 'Homeschooling without curriculum means building your child\u2019s education around real-world experiences, natural curiosity, and family life rather than packaged lesson plans. You don\u2019t need teaching qualifications, a dedicated classroom, or a rigid schedule \u2014 just the willingness to follow your child\u2019s interests and trust that meaningful learning happens everywhere.' },
       { type: 'paragraph', text: 'First: breathe. You made a brave choice. Whether you pulled your kids out of school because it wasn\u2019t working, because you want to travel, or because you just know there\u2019s a better way \u2014 you\u2019re in the right place. And you don\u2019t need to have it all figured out today.' },
       { type: 'paragraph', text: 'I remember the feeling. The excitement mixed with terror. The 47 open browser tabs. The curriculum comparison spreadsheet that somehow made everything less clear. If that\u2019s you right now, close the tabs. You don\u2019t need them yet.' },
       { type: 'heading', level: 2, text: 'The first week: do nothing (seriously)' },
@@ -467,6 +469,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child confidently cooking at a stove with a parent nearby',
     content: [
+      { type: 'summary', text: 'Life skills education teaches children practical abilities \u2014 cooking, budgeting, time management, basic repairs, navigation, and decision-making \u2014 through real-world practice rather than worksheets or classroom instruction. These ten foundational skills prepare kids for independence and are best learned between ages 6 and 12, when children are eager to contribute and capable of handling real responsibility.' },
       { type: 'paragraph', text: 'When I think about what I want my kids to know by the time they\u2019re 12, it\u2019s not algebra or essay structure. It\u2019s whether they can cook a meal, manage their time, have a hard conversation, and solve a problem without someone handing them the answer.' },
       { type: 'paragraph', text: 'Schools teach academic content. Life teaches everything else. And if your kids are learning at home, you\u2019re in the unique position to weave these skills into every single day — no extra planning required.' },
       { type: 'paragraph', text: 'Here are 10 life skills I believe every kid should have a solid foundation in before they hit their teens. Not because they need to master them, but because confidence comes from competence — and competence comes from practice.' },
@@ -526,6 +529,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child counting coins at a market stall with a parent',
     content: [
+      { type: 'summary', text: 'Financial literacy for kids means teaching children to understand earning, saving, spending, and the value of money through real-world practice rather than allowance charts or classroom exercises. This guide covers age-appropriate money conversations, hands-on budgeting activities, and practical strategies that build lasting financial habits from ages 6 to 14.' },
       { type: 'paragraph', text: 'Most kids have no idea where money actually comes from. They see a card get tapped, or a phone held up to a reader, and the thing they want appears. The connection between work, money, and spending is completely invisible to them \u2014 unless we make it visible.' },
       { type: 'paragraph', text: 'Most kids\u2019 financial education comes from one of two extremes: either they get a rigid allowance chart with jars labelled \u201csave, spend, give,\u201d or they get nothing at all. Both approaches miss the point. Money isn\u2019t a worksheet topic. It\u2019s a daily reality that kids can learn through real participation.' },
       { type: 'paragraph', text: 'Here\u2019s what actually works, based on our family\u2019s experience and a lot of trial and error.' },
@@ -660,6 +664,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child and parent looking at a tablet screen together, discussing',
     content: [
+      { type: 'summary', text: 'Teaching kids about AI means helping children understand how artificial intelligence works, recognise where it appears in daily life, and develop the critical thinking skills to use it responsibly. This guide covers age-appropriate conversations, hands-on activities, and practical frameworks for homeschool families navigating AI literacy in 2026.' },
       { type: 'paragraph', text: 'Kids are already using AI. They\u2019re talking to chatbots, asking voice assistants questions, and watching content that\u2019s been recommended by algorithms. Most of them have no idea how any of it works \u2014 and they\u2019re forming opinions about it based on whatever they happen to encounter.' },
       { type: 'paragraph', text: 'That\u2019s why we can\u2019t wait to have these conversations. Without guidance, kids\u2019 understanding of AI gets shaped by marketing, science fiction, and playground rumours.' },
       { type: 'paragraph', text: 'Whether you\u2019re enthusiastic or cautious about AI, one thing is clear: your kids need to understand what it is, what it isn\u2019t, and how to think critically about it. And you don\u2019t need a computer science degree to teach them.' },
@@ -737,6 +742,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Kids building a stick bridge over a small stream',
     content: [
+      { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials \u2014 sticks, mud, water, rocks, and plants \u2014 instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require no prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d \u2014 it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
       { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science — all using materials you can find in your garden, a park, or a hiking trail.' },
@@ -809,6 +815,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'A family reading together on a couch during their deschooling period',
     content: [
+      { type: 'summary', text: 'Deschooling is the transition period after leaving traditional school where children (and parents) unlearn institutional habits and rediscover self-directed curiosity. The five stages \u2014 relief, resistance, the messy middle, self-direction, and flow \u2014 typically take one month per year of formal schooling, and understanding them helps families navigate the process without panic.' },
       { type: 'paragraph', text: 'You pulled your kids out of school. Maybe it was bullying. Maybe it was burnout. Maybe you just knew in your gut there had to be a better way. And now, two weeks in, your child is lying on the couch in pyjamas at 11am watching YouTube, and you\u2019re wondering if you\u2019ve made a terrible mistake.' },
       { type: 'paragraph', text: 'You haven\u2019t. What you\u2019re experiencing has a name: deschooling. And it\u2019s not a failure \u2014 it\u2019s a necessary process. Think of it like recovery. Your child spent years in a system that told them when to sit, when to eat, when to think, and when to stop thinking. Unwinding all of that takes time.' },
       { type: 'paragraph', text: 'The general guideline is one month of deschooling for every year your child spent in school. A child who attended from kindergarten through third grade might need four months. But every family is different, and the stages don\u2019t follow a neat calendar.' },
@@ -1166,6 +1173,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Children exploring outdoors with magnifying glasses and journals',
     content: [
+      { type: 'summary', text: 'Real-world learning is an educational approach where children develop skills through everyday experiences \u2014 cooking, budgeting, building, exploring nature \u2014 instead of textbooks and worksheets. It works for homeschool and worldschool families with kids ages 6 to 14, requires no curriculum or prep, and builds the practical, critical-thinking, and problem-solving skills that traditional schooling often overlooks.' },
       { type: 'paragraph', text: 'Here\u2019s a question that changed everything for me: what if the most important things your kids need to learn can\u2019t be taught from a textbook?' },
       { type: 'paragraph', text: 'I spent 15 years in the classroom watching kids ace tests and then struggle with basic real-world tasks. Teenagers who could solve algebraic equations but couldn\u2019t budget a week\u2019s groceries. Straight-A students who froze when asked to make a decision without clear instructions. Kids who\u2019d been taught to follow directions perfectly \u2014 and had no idea what to do when there weren\u2019t any.' },
       { type: 'paragraph', text: 'Real-world learning flips that script. Instead of learning concepts in theory and hoping kids apply them someday, you start with real life and let the concepts emerge naturally. It\u2019s the difference between studying fractions on a worksheet and halving a recipe to make cookies. Same maths. Completely different experience. And the one that sticks? It\u2019s never the worksheet.' },
@@ -1260,6 +1268,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Child building something inventive out of household objects on a kitchen table',
     content: [
+      { type: 'summary', text: 'Raising creative children means nurturing divergent thinking, problem-solving, and imagination through everyday experiences \u2014 not craft kits or structured art projects. Creativity is a skill that develops when kids have unstructured time, open-ended materials, real problems to solve, and the freedom to fail and try again.' },
       { type: 'paragraph', text: 'I used to think creative kids were the ones who drew well. The ones who made things that looked good on a fridge door. Then I became a parent and realised I had it completely backwards.' },
       { type: 'paragraph', text: 'My daughter spends hours on the beach in El Salvador building sand animals and castles. Nobody tells her what to make. She just shows up with her hands and her imagination and gets to work. Half the time it gets washed away by a wave, and she starts over. That\u2019s creativity. The real kind.' },
 
@@ -1797,6 +1806,7 @@ const posts: BlogPost[] = [
     author: amelie,
     heroImageAlt: 'Two kids exploring a forest trail with sunlight filtering through the canopy',
     content: [
+      { type: 'summary', text: 'Nature-based learning is an approach to education where children learn science, maths, language, and life skills through direct outdoor experiences \u2014 forest walks, garden projects, weather observation, and wildlife study \u2014 rather than textbooks. It works year-round for homeschool and worldschool families, requires no curriculum, and builds observation, critical thinking, and environmental literacy naturally.' },
       { type: 'paragraph', text: 'In Corcovado National Park in Costa Rica, we saw whales jumping right beside our boat. Nobody planned that. Nobody put \u201cmarine biology field trip\u201d on a schedule. We were just there, on a boat, and suddenly the ocean decided to teach my kids something no textbook ever could.' },
       { type: 'paragraph', text: 'A few weeks later in El Salvador, my son noticed the cliffs along the beach were crumbling. \u201cWhy is that happening?\u201d he asked. We talked about erosion, waves, wind, time. Then he looked it up that evening because he wanted to know more. No assignment. No grade. Just genuine curiosity sparked by being outside with his eyes open.' },
       { type: 'paragraph', text: 'This is what nature-based learning actually looks like. Not a Pinterest-perfect nature table. Not a colour-coded lesson plan about ecosystems. It\u2019s messy, unplanned, and driven entirely by what your kids notice when they\u2019re outdoors long enough to start paying attention.' },
@@ -2251,6 +2261,7 @@ export function getArticleBodyText(post: BlogPost): string {
       if (b.type === 'pull-quote') return b.text;
       if (b.type === 'list') return b.items.join(' ');
       if (b.type === 'tip') return b.text;
+      if (b.type === 'summary') return b.text;
       return '';
     })
     .filter(Boolean)

@@ -26,6 +26,7 @@ import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import BlogProductCallout from '@/components/blog/BlogProductCallout';
 import BlogBundleCallout from '@/components/blog/BlogBundleCallout';
+import SummaryBox from '@/components/blog/SummaryBox';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 
@@ -306,6 +307,8 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
       return <BlogProductCallout key={index} slug={block.slug} context={block.context} />;
     case 'bundle-callout':
       return <BlogBundleCallout key={index} slug={block.slug} context={block.context} />;
+    case 'summary':
+      return <SummaryBox key={index} text={block.text} heading={block.heading} />;
   }
 }
 

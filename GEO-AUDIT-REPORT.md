@@ -81,9 +81,9 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - **Detail:** ~~`/about` has no structured data; should have Person or ProfilePage schema~~
 - **Status:** Fixed — Added Person schema (credentials, knowsAbout, worksFor, sameAs) and ProfilePage schema.
 
-### 9. Content is narrative-first, not claims-first
+### 9. ✅ FIXED — Content is narrative-first, not claims-first
 - **Detail:** Blog posts use conversational tone ("Let me tell you about...") rather than assertive claims ("Deschooling is the process of..."). AI systems prefer extractable definitions.
-- **Fix:** Add a clear definition/summary box at the top of key articles
+- **Fix:** Added "In short" summary boxes with assertive, claims-first definitions at the top of 9 pillar blog posts. New `SummaryBox` component with forest-tinted design. Summary text is included in `articleBody` for JSON-LD.
 - **Expected impact:** Higher citation rate for definitional queries
 
 ### 10. ~~No comparison or ranking content~~ ✅ PLANNED
