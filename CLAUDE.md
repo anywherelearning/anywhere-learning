@@ -169,11 +169,11 @@ Feature ideas surfaced during the pre-launch audit (March 2026). Prioritize base
 - **Sticky mobile buy bar** — show bundle savings info, not just price
 - **Free guide post-submit CTA** — after email capture, show a "Browse the shop" button
 
-### SEO
+### SEO / GEO
 - **Product title tags with category keywords** — e.g. "Spring Outdoor Pack | Homeschool Nature Activities"
-- **BreadcrumbList schema on shop listing page**
 - **Category descriptions targeting SEO keywords** — write keyword-rich intros for each category section
 - **Stronger internal linking** to FAQ, About, Contact from header/footer
+- **Resource pillar pages** (`/resources/[slug]`) — research-backed, citation-heavy reference content for AI citability. Keep blog personal/story-driven; pillars handle stats, definitions, and claims. Start with 2-3: homeschool outcomes research, experiential learning science, deschooling explained. Add "Resources" to nav.
 
 ### Infrastructure
 - **Upgrade to Redis-based rate limiting** (Upstash) when traffic grows
