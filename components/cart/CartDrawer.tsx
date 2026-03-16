@@ -9,9 +9,12 @@ import { formatPrice } from '@/lib/utils';
 import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useCapacitor } from '@/components/mobile/CapacitorProvider';
+import { openExternalBrowser } from '@/lib/capacitor';
 
 export default function CartDrawer() {
   const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem, byobTier, byobDiscountCents, byobTotalCents, nextByobTier } = useCart();
+  const { isNative } = useCapacitor();
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
@@ -94,7 +97,13 @@ export default function CartDrawer() {
       });
       const data = await res.json();
       if (data.url) {
-        window.location.href = data.url;
+        // In Capacitor: open Stripe checkout in external browser (reader model — no in-app purchase)
+        // On web: redirect normally
+        await openExternalBrowser(data.url);
+        if (isNative) {
+          setCheckingOut(false);
+          closeCart();
+        }
       } else {
         console.error('Checkout error:', data.error);
         setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');

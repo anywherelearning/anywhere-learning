@@ -68,6 +68,18 @@ export const reviews = pgTable('reviews', {
   index('idx_reviews_user_product').on(table.userId, table.productId),
 ]);
 
+export const deviceTokens = pgTable('device_tokens', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: text('user_id'),
+  token: text('token').notNull().unique(),
+  platform: text('platform').notNull(), // 'ios' | 'android'
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_device_tokens_user').on(table.userId),
+  index('idx_device_tokens_platform').on(table.platform),
+]);
+
 export const subscriptions = pgTable('subscriptions', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id).notNull(),

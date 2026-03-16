@@ -5,6 +5,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
+import CapacitorProvider from "@/components/mobile/CapacitorProvider";
+import MobileTabBar from "@/components/mobile/MobileTabBar";
 import "./globals.css";
 
 const displayFont = Dancing_Script({
@@ -137,8 +139,11 @@ export default function RootLayout({
       >
         <ClerkWrapper>
           <CartProvider>
-            {children}
-            <CartDrawer />
+            <CapacitorProvider>
+              {children}
+              <CartDrawer />
+              <MobileTabBar />
+            </CapacitorProvider>
           </CartProvider>
         </ClerkWrapper>
         <SpeedInsights />
