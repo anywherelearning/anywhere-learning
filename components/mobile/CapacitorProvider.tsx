@@ -18,7 +18,27 @@ export default function CapacitorProvider({ children }: { children: ReactNode })
 
   useEffect(() => {
     const cap = (window as unknown as { Capacitor?: { isNativePlatform?: boolean } }).Capacitor;
-    const native = !!cap?.isNativePlatform;
+    const realNative = !!cap?.isNativePlatform;
+
+    // Dev-only: simulate native mode with ?native=true in URL
+    const debugNative =
+      process.env.NODE_ENV === 'development' &&
+      new URLSearchParams(window.location.search).get('native') === 'true';
+
+    if (debugNative) {
+      // Persist so navigating between pages keeps native mode
+      localStorage.setItem('debug-native', '1');
+    }
+    const persistedDebug =
+      process.env.NODE_ENV === 'development' &&
+      localStorage.getItem('debug-native') === '1';
+
+    // Clear debug mode with ?native=false
+    if (new URLSearchParams(window.location.search).get('native') === 'false') {
+      localStorage.removeItem('debug-native');
+    }
+
+    const native = realNative || debugNative || persistedDebug;
     setIsNative(native);
 
     if (!native) return;
