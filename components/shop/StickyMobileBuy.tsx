@@ -74,10 +74,11 @@ export default function StickyMobileBuy({
       <div className="bg-forest border-t border-forest-dark shadow-2xl px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] flex items-center gap-3">
         <div className="flex-1 min-w-0">
           <p className="text-cream text-sm font-medium truncate">{productName}</p>
-          <p className="text-cream/70 text-xs">{formatPrice(priceCents)}</p>
+          <p className="text-cream text-sm font-semibold">{formatPrice(priceCents)}</p>
         </div>
         <button
           onClick={handleClick}
+          aria-label={`${alreadyInCart ? 'View cart' : `Add ${productName} to cart`}`}
           className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
         >
           {justAdded ? '✓ Added!' : alreadyInCart ? 'View Cart' : 'Get This'}

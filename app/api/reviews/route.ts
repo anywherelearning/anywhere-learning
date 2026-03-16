@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
       return NextResponse.json({ error: 'Rating must be 1–5' }, { status: 400 });
     }
-    const trimmedComment = comment.trim();
+    const trimmedComment = comment.replace(/<[^>]*>/g, '').trim();
     if (trimmedComment.length === 0) {
       return NextResponse.json({ error: 'Comment is required' }, { status: 400 });
     }

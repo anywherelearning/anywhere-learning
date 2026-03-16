@@ -36,8 +36,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Database unavailable' }, { status: 503 });
     }
 
-    // Get all registered tokens
-    const tokens = await db.select().from(deviceTokens);
+    // Get all registered tokens (only fetch needed columns)
+    const tokens = await db.select({ token: deviceTokens.token, platform: deviceTokens.platform }).from(deviceTokens);
 
     if (tokens.length === 0) {
       return NextResponse.json({ sent: 0, message: 'No registered devices' });

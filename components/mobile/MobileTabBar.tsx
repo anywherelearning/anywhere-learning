@@ -110,7 +110,7 @@ export default function MobileTabBar() {
 
   return (
     <nav
-      role="tablist"
+      role="navigation"
       aria-label="Main navigation"
       style={{
         position: 'fixed',
@@ -139,8 +139,7 @@ export default function MobileTabBar() {
           <Link
             key={tab.label}
             href={tab.href}
-            role="tab"
-            aria-selected={active}
+            aria-current={active ? 'page' : undefined}
             aria-label={tab.label}
             style={{
               display: 'flex',

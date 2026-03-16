@@ -172,7 +172,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/shop"
-                    className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl text-lg animate-pulse-glow"
+                    className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl text-lg"
                   >
                     Get the Activity Packs
                   </Link>
@@ -572,17 +572,17 @@ export default function HomePage() {
               <h2 className="font-display text-4xl md:text-6xl text-cream mb-5">
                 Start This Week.
               </h2>
-              <p className="text-lg text-cream/60 mb-10 leading-relaxed max-w-lg mx-auto">
+              <p className="text-lg text-cream/80 mb-10 leading-relaxed max-w-lg mx-auto">
                 Pick a pack, open it on your phone or tablet, and do the first activity together.
                 No planning, no prep &mdash; just 15 minutes and your kids.
               </p>
               <Link
                 href="/shop"
-                className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl animate-pulse-glow"
+                className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl"
               >
                 Get the Activity Packs
               </Link>
-              <p className="mt-8 text-cream/60 text-sm">
+              <p className="mt-8 text-cream/80 text-sm">
                 48-hour money-back guarantee &middot; Instant download &middot; Use year after year
               </p>
             </ScrollReveal>

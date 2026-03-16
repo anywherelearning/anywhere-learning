@@ -270,9 +270,11 @@ export default function CartDrawer() {
             <div className="mt-4">
               <div className="flex items-start gap-4 bg-gold/5 border border-gold/20 rounded-xl p-4">
                 <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/products/future-ready-skills-map.jpg"
                     alt=""
+                    width={56}
+                    height={56}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -446,17 +448,18 @@ export default function CartDrawer() {
                     handleCheckout();
                   }
                 }}
+                aria-describedby={emailError ? 'cart-email-error' : undefined}
                 className={`w-full rounded-xl border bg-white px-4 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none transition-shadow focus:ring-2 focus:ring-forest/30 ${
                   emailError ? 'border-red-300' : 'border-gray-200'
                 }`}
                 autoComplete="email"
               />
               {emailError && (
-                <p className="mt-1 text-xs text-red-500">{emailError}</p>
+                <p id="cart-email-error" role="alert" className="mt-1 text-xs text-red-500">{emailError}</p>
               )}
             </div>
             {checkoutError && (
-              <div className="mb-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700 animate-shake">
+              <div role="alert" className="mb-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700 animate-shake">
                 <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
                 </svg>
@@ -498,7 +501,7 @@ export default function CartDrawer() {
                   Preparing checkout...
                 </span>
               ) : (
-                'Get Started'
+                `Checkout — ${formatPrice(byobTier ? byobTotalCents : totalCents)}`
               )}
             </button>
             <button

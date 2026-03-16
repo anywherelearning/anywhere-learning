@@ -68,11 +68,11 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
             isLight ? "text-forest" : "text-cream"
           }`}
         >
-          🎉 Check your inbox! Your guide is on its way.
+          Check your inbox! Your guide is on its way.
         </p>
         <p
           className={`mt-2 text-sm ${
-            isLight ? "text-gray-500" : "text-cream/60"
+            isLight ? "text-gray-500" : "text-cream/80"
           }`}
         >
           While you wait, explore our ready-to-use activity packs.
@@ -107,6 +107,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
               setEmail(e.target.value);
               if (errorMessage) setErrorMessage("");
             }}
+            aria-describedby={errorMessage ? `email-error-${variant}` : undefined}
             className={`w-full rounded-lg px-4 py-3.5 text-base outline-none transition-shadow focus:ring-2 ${
               isLight
                 ? "border border-gray-200 bg-white text-gray-800 placeholder-gray-400 focus:ring-forest/30"
@@ -129,7 +130,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
       </div>
 
       {errorMessage && (
-        <p className={`mt-2 text-sm ${isLight ? "text-red-600" : "text-red-300"}`}>
+        <p id={`email-error-${variant}`} role="alert" className={`mt-2 text-sm ${isLight ? "text-red-600" : "text-red-300"}`}>
           {errorMessage}
         </p>
       )}
@@ -139,7 +140,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
           isLight ? "text-gray-400" : "text-cream/50"
         }`}
       >
-        🔒 No spam. No fluff. Unsubscribe any time.
+        No spam. No fluff. Unsubscribe any time.
       </p>
     </form>
   );

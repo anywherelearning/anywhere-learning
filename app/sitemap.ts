@@ -3,6 +3,7 @@ import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAllPosts } from '@/lib/blog';
+import { getFallbackProducts } from '@/lib/fallback-products';
 
 // When adding a new public page, add it to staticRoutes below.
 // Excluded (not indexable): /sign-in, /sign-up, /account/*, /checkout/success
@@ -96,6 +97,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...baseRoutes, ...productUrls];
   } catch {
-    return baseRoutes;
+    // DB unavailable — use fallback products so sitemap still includes product URLs
+    const fallback = getFallbackProducts();
+    const fallbackUrls = fallback.map((p) => ({
+      url: `https://anywherelearning.co/shop/${p.slug}`,
+      lastModified: siteLastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }));
+    return [...baseRoutes, ...fallbackUrls];
   }
 }

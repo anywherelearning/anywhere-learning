@@ -77,18 +77,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WF83M4HF46');
-          `}
-        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -146,6 +134,18 @@ export default function RootLayout({
             </CapacitorProvider>
           </CartProvider>
         </ClerkWrapper>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WF83M4HF46');
+          `}
+        </Script>
         <SpeedInsights />
       </body>
     </html>

@@ -122,21 +122,23 @@ export default function SiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-gray-200/60 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-xs text-gray-400 hover:text-forest transition-colors">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-xs text-gray-400 hover:text-forest transition-colors">
-              Terms
-            </Link>
-          </div>
-          <p className="font-display text-sm text-forest/60">
+        <div className="mt-12 pt-8 border-t border-gray-200/60">
+          <p className="font-display text-sm text-forest/60 text-center mb-4">
             Meaningful Learning, Wherever You Are
           </p>
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+            <p className="text-xs text-gray-400">
+              &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link href="/privacy" className="text-xs text-gray-400 hover:text-forest transition-colors">
+                Privacy
+              </Link>
+              <Link href="/terms" className="text-xs text-gray-400 hover:text-forest transition-colors">
+                Terms
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

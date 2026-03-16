@@ -8,7 +8,7 @@ import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Homeschool Ideas & Real-World Learning Tips',
   description:
     'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt — just what works.',
   alternates: {

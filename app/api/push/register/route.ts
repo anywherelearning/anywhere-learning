@@ -14,8 +14,8 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { token, platform } = body;
 
-    if (!token || typeof token !== 'string') {
-      return NextResponse.json({ error: 'Missing token' }, { status: 400 });
+    if (!token || typeof token !== 'string' || token.length > 512) {
+      return NextResponse.json({ error: 'Invalid token' }, { status: 400 });
     }
 
     if (!platform || !['ios', 'android'].includes(platform)) {

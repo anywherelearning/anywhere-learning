@@ -18,7 +18,8 @@ export default function ExitIntentPopup() {
   const pathname = usePathname();
   const { items, itemCount, totalCents, openCart, nextByobTier } = useCart();
 
-  const isShopPage = pathname.startsWith('/shop');
+  const isProductPage = pathname.startsWith('/shop/');
+  const isShopPage = pathname.startsWith('/shop') && !isProductPage;
 
   const upsell = useMemo(() => getBundleUpsell(items), [items]);
 
@@ -137,7 +138,7 @@ export default function ExitIntentPopup() {
         {/* Close button */}
         <button
           onClick={dismiss}
-          className={`absolute top-2.5 right-2.5 z-20 w-7 h-7 flex items-center justify-center rounded-full transition-all duration-200 ${
+          className={`absolute top-2.5 right-2.5 z-20 w-9 h-9 flex items-center justify-center rounded-full transition-all duration-200 ${
             variant === 'bundle-promo'
               ? 'bg-black/20 hover:bg-black/40 text-white/90 hover:text-white'
               : 'bg-gray-200/60 hover:bg-gray-200 text-gray-500 hover:text-gray-700'

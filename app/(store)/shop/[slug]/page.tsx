@@ -46,9 +46,21 @@ export async function generateMetadata({
     product = getFallbackProductBySlug(slug);
   }
   if (!product) return {};
+  const categoryKeywords: Record<string, string> = {
+    'outdoor-learning': 'Outdoor Learning Activities',
+    'creativity-anywhere': 'Creative Activities for Kids',
+    'ai-literacy': 'AI & Digital Literacy for Kids',
+    'real-world-math': 'Real-World Math Activities',
+    'communication-writing': 'Writing & Communication Activities',
+    'entrepreneurship': 'Entrepreneurship Activities for Kids',
+    'planning-problem-solving': 'Problem-Solving Activities',
+    'start-here': 'Homeschool Activities',
+    bundle: 'Homeschool Activity Bundle',
+  };
+  const suffix = categoryKeywords[product.category] || 'Homeschool Activities';
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: `${product.name} | ${suffix}`,
+    description: `${product.shortDescription} No-prep digital guide for ages ${product.ageRange || '6-14'}. Instant download — use on any device.`,
     alternates: {
       canonical: `https://anywherelearning.co/shop/${product.slug}`,
     },
@@ -137,12 +149,22 @@ export default async function ProductPage({
       "@type": "Brand",
       name: "Anywhere Learning",
     },
+    category: categoryLabels[product.category] || product.category,
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "parent",
+      audienceType: "Homeschool families",
+    },
     offers: {
       "@type": "Offer",
       price: (product.priceCents / 100).toFixed(2),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `https://anywherelearning.co/shop/${product.slug}`,
+      seller: {
+        "@type": "Organization",
+        name: "Anywhere Learning",
+      },
     },
     ...(reviewStats.reviewCount > 0 && {
       aggregateRating: {
@@ -223,7 +245,7 @@ export default async function ProductPage({
 
                   {/* Bundle badge */}
                   {product.isBundle && (
-                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow z-10">
+                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md z-10">
                       BEST VALUE
                     </div>
                   )}
@@ -286,7 +308,7 @@ export default async function ProductPage({
 
                   {/* Bundle badge */}
                   {product.isBundle && (
-                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md animate-pulse-glow">
+                    <div className="absolute top-5 left-5 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-md">
                       BEST VALUE
                     </div>
                   )}
@@ -325,7 +347,7 @@ export default async function ProductPage({
                     imageUrl={product.imageUrl}
                   />
                   <p className="text-xs text-gray-400 text-center mt-2">
-                    Instant download &middot; Use on any device
+                    Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
                   </p>
                 </div>
               </div>
@@ -348,36 +370,6 @@ export default async function ProductPage({
               <p className="mt-2 text-lg text-gray-600 leading-relaxed">
                 {product.shortDescription}
               </p>
-
-              {/* Buy CTA — top of right column (desktop only) */}
-              <div className="hidden lg:block mt-6">
-                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                  {product.isBundle && (
-                    <div className="flex items-center justify-between mb-3">
-                      <PriceDisplay
-                        priceCents={product.priceCents}
-                        compareAtPriceCents={product.compareAtPriceCents}
-                        size="sm"
-                      />
-                      <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
-                        BEST VALUE
-                      </span>
-                    </div>
-                  )}
-                  <AddToCartButton
-                    stripePriceId={product.stripePriceId}
-                    slug={product.slug}
-                    productName={product.name}
-                    priceCents={product.priceCents}
-                    category={product.category}
-                    isBundle={product.isBundle ?? false}
-                    imageUrl={product.imageUrl}
-                  />
-                  <p className="text-xs text-gray-400 text-center mt-2">
-                    Instant download &middot; Use on any device
-                  </p>
-                </div>
-              </div>
 
               <hr className="my-6 border-gray-200" />
 
@@ -491,7 +483,7 @@ export default async function ProductPage({
                   imageUrl={product.imageUrl}
                 />
                 <p className="text-xs text-gray-400 mt-2">
-                  Instant download &middot; Use on any device
+                  Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
                 </p>
               </div>
             </div>
