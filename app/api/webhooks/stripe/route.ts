@@ -497,12 +497,18 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     // Post-transaction: send email with all product names (non-critical)
     const skillsMapBonus = hasBundles ? ' + The Future-Ready Skills Map (FREE bonus!)' : '';
     const productNames = purchasedProducts.map((p) => p.name).join(', ') + skillsMapBonus;
+    // Use the first product's image for the email hero
+    const firstProduct = purchasedProducts[0];
+    const productImageUrl = firstProduct?.imageUrl
+      || `${process.env.NEXT_PUBLIC_URL}/products/${firstProduct?.slug}.jpg`;
+
     try {
       await sendPurchaseEmail({
         to: customerEmail,
         productName: productNames,
         downloadUrl: `${process.env.NEXT_PUBLIC_URL}/account/downloads`,
         referralCode,
+        productImageUrl,
       });
     } catch (error) {
       console.error('Failed to send purchase email:', error);
