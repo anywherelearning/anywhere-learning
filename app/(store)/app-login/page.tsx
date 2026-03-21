@@ -1,8 +1,14 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { openExternalBrowser } from '@/lib/capacitor';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+// Lazy-load to prevent Clerk hooks from running during static prerendering
+const ClerkSignInBlock = dynamic(() => Promise.resolve(ClerkSignInBlockInner), {
+  ssr: false,
+});
 
 export default function AppLoginPage() {
   return (
@@ -110,7 +116,7 @@ export default function AppLoginPage() {
   );
 }
 
-function ClerkSignInBlock() {
+function ClerkSignInBlockInner() {
   const { SignIn } = require('@clerk/nextjs');
   const { clerkAuthAppearance } = require('@/lib/clerk-theme');
   return (
