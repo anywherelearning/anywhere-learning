@@ -315,52 +315,55 @@ function renderBlock(block: BlogContentBlock, index: number, isFirstParagraph: b
 /* ─── Auto-inject product/bundle callouts ─── */
 
 function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
-  // Skip if the post already has manual product/bundle callouts
-  const hasProduct = post.content.some((b) => b.type === 'product-callout');
-  const hasBundle = post.content.some((b) => b.type === 'bundle-callout');
-  if (hasProduct && hasBundle) return post.content;
-
   const defaults = blogProductDefaults[post.category];
-  if (!defaults) return post.content;
 
-  const productSlug = post.recommendedProduct || defaults.product;
-  const bundleSlug = post.recommendedBundle || defaults.bundle;
+  // Step 1: Strip out any existing callouts so we can reposition them
+  const productBlock = post.content.find((b) => b.type === 'product-callout');
+  const bundleBlock = post.content.find((b) => b.type === 'bundle-callout');
+  const stripped = post.content.filter((b) => b.type !== 'product-callout' && b.type !== 'bundle-callout');
 
-  // Find h2 heading indices for optimal placement
-  const h2Indices = post.content
+  // Determine which callouts to place
+  const product = productBlock
+    || (defaults ? { type: 'product-callout' as const, slug: post.recommendedProduct || defaults.product } : null);
+  const bundle = bundleBlock
+    || (defaults ? { type: 'bundle-callout' as const, slug: post.recommendedBundle || defaults.bundle } : null);
+
+  if (!product && !bundle) return post.content;
+
+  // Find h2 heading indices for placement
+  const h2Indices = stripped
     .map((b, i) => (b.type === 'heading' && b.level === 2 ? i : -1))
     .filter((i) => i >= 0);
 
   if (h2Indices.length < 2) return post.content;
 
-  const total = post.content.length;
-  const target35 = Math.floor(total * 0.35);
-  const target65 = Math.floor(total * 0.65);
+  const total = stripped.length;
+  const targetMiddle = Math.floor(total * 0.5);
+  const targetEnd = Math.floor(total * 0.85);
 
-  // Find h2 nearest to 35% and 65% of content
-  const productIdx = !hasProduct
-    ? h2Indices.reduce((best, idx) => (Math.abs(idx - target35) < Math.abs(best - target35) ? idx : best), h2Indices[0])
+  // Product goes near the middle (50%)
+  const productIdx = product
+    ? h2Indices.reduce((best, idx) => (Math.abs(idx - targetMiddle) < Math.abs(best - targetMiddle) ? idx : best), h2Indices[0])
     : -1;
-  const bundleIdx = !hasBundle
+
+  // Bundle goes near the end (85%), must be after product
+  const bundleIdx = bundle
     ? h2Indices.reduce((best, idx) => {
-        // Ensure bundle placement is after product placement
         if (productIdx >= 0 && idx <= productIdx) return best;
-        return Math.abs(idx - target65) < Math.abs(best - target65) ? idx : best;
+        return Math.abs(idx - targetEnd) < Math.abs(best - targetEnd) ? idx : best;
       }, h2Indices[h2Indices.length - 1])
     : -1;
 
-  // Build new content array with injections
+  // Build new content array with callouts at optimal positions
   const result: BlogContentBlock[] = [];
-  for (let i = 0; i < post.content.length; i++) {
-    // Insert product callout right before the target h2
-    if (i === productIdx && !hasProduct) {
-      result.push({ type: 'product-callout', slug: productSlug });
+  for (let i = 0; i < stripped.length; i++) {
+    if (i === productIdx && product) {
+      result.push(product);
     }
-    // Insert bundle callout right before the target h2
-    if (i === bundleIdx && !hasBundle && i !== productIdx) {
-      result.push({ type: 'bundle-callout', slug: bundleSlug });
+    if (i === bundleIdx && bundle && i !== productIdx) {
+      result.push(bundle);
     }
-    result.push(post.content[i]);
+    result.push(stripped[i]);
   }
 
   return result;

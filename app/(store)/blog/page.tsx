@@ -5,7 +5,10 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogCategoryFilter from '@/components/blog/BlogCategoryFilter';
 import BlogCard from '@/components/blog/BlogCard';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogPagination from '@/components/blog/BlogPagination';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+
+const POSTS_PER_PAGE = 9;
 
 export const metadata: Metadata = {
   title: 'Homeschool Ideas & Real-World Learning Tips',
@@ -32,12 +35,13 @@ export const metadata: Metadata = {
 };
 
 interface BlogPageProps {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; page?: string }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const { category } = await searchParams;
+  const { category, page } = await searchParams;
   const featured = getFeaturedPost();
+  const currentPage = Math.max(1, parseInt(page || '1', 10) || 1);
 
   const validCategories: BlogCategory[] = [
     'homeschool-life',
@@ -56,9 +60,15 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     : getAllPosts();
 
   // Exclude featured post from grid when showing all posts
-  const gridPosts = activeCategory
+  const allGridPosts = activeCategory
     ? posts
     : posts.filter((p) => p.slug !== featured.slug);
+
+  // Pagination
+  const totalPages = Math.ceil(allGridPosts.length / POSTS_PER_PAGE);
+  const safePage = Math.min(currentPage, Math.max(1, totalPages));
+  const startIndex = (safePage - 1) * POSTS_PER_PAGE;
+  const gridPosts = allGridPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
 
   const allPosts = getAllPosts();
 
@@ -121,7 +131,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       )}
 
       {/* Category filter + grid */}
-      <section className="pb-16 md:pb-24">
+      <section id="posts" className="pb-16 md:pb-24 scroll-mt-4">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-10">
             <Suspense>
@@ -130,21 +140,29 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </div>
 
           {gridPosts.length > 0 ? (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {gridPosts.map((post, i) => (
-                <ScrollReveal key={post.slug} delay={i * 80}>
-                  <BlogCard
-                    slug={post.slug}
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    category={post.category}
-                    publishedAt={post.publishedAt}
-                    readTimeMinutes={post.readTimeMinutes}
-                    author={post.author}
-                  />
-                </ScrollReveal>
-              ))}
-            </div>
+            <>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {gridPosts.map((post, i) => (
+                  <ScrollReveal key={post.slug} delay={i * 80}>
+                    <BlogCard
+                      slug={post.slug}
+                      title={post.title}
+                      excerpt={post.excerpt}
+                      category={post.category}
+                      publishedAt={post.publishedAt}
+                      readTimeMinutes={post.readTimeMinutes}
+                      author={post.author}
+                    />
+                  </ScrollReveal>
+                ))}
+              </div>
+              <Suspense>
+                <BlogPagination
+                  currentPage={safePage}
+                  totalPages={totalPages}
+                />
+              </Suspense>
+            </>
           ) : (
             <div className="text-center py-16">
               <p className="text-gray-400 text-lg">
