@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: 'public',
   server: {
     // In production, this loads from the live site.
-    // During development, override with CAPACITOR_SERVER_URL=http://localhost:3000
+    // During development, run `npm run dev:mobile` (port 3001)
     url: process.env.CAPACITOR_SERVER_URL || 'https://anywherelearning.co',
     cleartext: false,
   },

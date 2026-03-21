@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
+import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { formatPrice } from '@/lib/utils';
 
 interface StickyMobileBuyProps {
@@ -23,8 +24,12 @@ export default function StickyMobileBuy({
   isBundle,
   imageUrl,
 }: StickyMobileBuyProps) {
+  const { isNative } = useCapacitor();
   const [visible, setVisible] = useState(false);
   const { addItem, isInCart, openCart } = useCart();
+
+  // Hide in native app (Apple compliance)
+  if (isNative) return null;
 
   useEffect(() => {
     const buyButton = document.getElementById('buy-button');

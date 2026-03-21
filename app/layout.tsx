@@ -7,6 +7,8 @@ import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
+import NativeHide from "@/components/mobile/NativeHide";
+import NativeRedirectGuard from "@/components/mobile/NativeRedirectGuard";
 import "./globals.css";
 
 const displayFont = Dancing_Script({
@@ -128,8 +130,9 @@ export default function RootLayout({
         <ClerkWrapper>
           <CartProvider>
             <CapacitorProvider>
+              <NativeRedirectGuard />
               {children}
-              <CartDrawer />
+              <NativeHide><CartDrawer /></NativeHide>
               <MobileTabBar />
             </CapacitorProvider>
           </CartProvider>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
+import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { formatPrice } from '@/lib/utils';
 
 interface AddToCartButtonProps {
@@ -23,8 +24,12 @@ export default function AddToCartButton({
   isBundle,
   imageUrl,
 }: AddToCartButtonProps) {
+  const { isNative } = useCapacitor();
   const { addItem, isInCart, openCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
+
+  // Hide purchase buttons in native app (Apple compliance)
+  if (isNative) return null;
 
   const alreadyInCart = isInCart(slug);
 

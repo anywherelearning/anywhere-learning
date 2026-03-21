@@ -21,6 +21,9 @@ import {
   DeviceIcon,
   ShieldCheckIcon,
 } from "@/components/shop/icons";
+import NativeOnly from "@/components/mobile/NativeOnly";
+import NativeHide from "@/components/mobile/NativeHide";
+import NativeProductDetail from "@/components/mobile/NativeProductDetail";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -187,8 +190,33 @@ export default async function ProductPage({
     ],
   };
 
+  // Prepare data for native view
+  const nativeProduct = {
+    slug: product.slug,
+    name: product.name,
+    shortDescription: product.shortDescription,
+    description: product.description,
+    priceCents: product.priceCents,
+    imageUrl: product.imageUrl,
+    category: product.category,
+    isBundle: product.isBundle ?? false,
+    ageRange: product.ageRange,
+    activityCount: product.activityCount,
+  };
+  const nativeRelated = relatedProducts.map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    priceCents: p.priceCents,
+    imageUrl: p.imageUrl,
+    category: p.category,
+  }));
+
   return (
     <>
+      <NativeOnly>
+        <NativeProductDetail product={nativeProduct} relatedProducts={nativeRelated} />
+      </NativeOnly>
+      <NativeHide>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -513,6 +541,7 @@ export default async function ProductPage({
         isBundle={product.isBundle ?? false}
         imageUrl={product.imageUrl}
       />
+      </NativeHide>
     </>
   );
 }

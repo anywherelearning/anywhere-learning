@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
+import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 
 interface QuickAddButtonProps {
   stripePriceId: string;
@@ -22,9 +23,13 @@ export default function QuickAddButton({
   isBundle,
   imageUrl,
 }: QuickAddButtonProps) {
+  const { isNative } = useCapacitor();
   const { addItem, removeItem, isInCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
   const [justRemoved, setJustRemoved] = useState(false);
+
+  // Hide in native app (Apple compliance)
+  if (isNative) return null;
 
   const alreadyInCart = isInCart(slug);
 

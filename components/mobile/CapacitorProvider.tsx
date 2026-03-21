@@ -20,10 +20,11 @@ export default function CapacitorProvider({ children }: { children: ReactNode })
     const cap = (window as unknown as { Capacitor?: { isNativePlatform?: boolean } }).Capacitor;
     const realNative = !!cap?.isNativePlatform;
 
-    // Dev-only: simulate native mode with ?native=true in URL
+    // Dev-only: NEXT_PUBLIC_NATIVE_MODE=true (set by dev:mobile script) or ?native=true
+    const envNative = process.env.NEXT_PUBLIC_NATIVE_MODE === 'true';
     const debugNative =
       process.env.NODE_ENV === 'development' &&
-      new URLSearchParams(window.location.search).get('native') === 'true';
+      (envNative || new URLSearchParams(window.location.search).get('native') === 'true');
 
     if (debugNative) {
       // Persist so navigating between pages keeps native mode
