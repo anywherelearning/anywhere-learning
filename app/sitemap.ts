@@ -3,6 +3,7 @@ import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAllPosts } from '@/lib/blog';
+import { getAllResources } from '@/lib/resources';
 import { getFallbackProducts } from '@/lib/fallback-products';
 
 // When adding a new public page, add it to staticRoutes below.
@@ -10,6 +11,7 @@ import { getFallbackProducts } from '@/lib/fallback-products';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getAllPosts();
+  const resourcePages = getAllResources();
 
   // Use a fixed date for static pages so crawlers see real change signals
   const siteLastUpdated = new Date('2026-03-14');
@@ -29,6 +31,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: 'https://anywherelearning.co/blog',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://anywherelearning.co/resources',
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -78,7 +86,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const baseRoutes = [...staticRoutes, ...blogUrls];
+  const resourceUrls: MetadataRoute.Sitemap = resourcePages.map((r) => ({
+    url: `https://anywherelearning.co/resources/${r.slug}`,
+    lastModified: new Date(r.dateModified || r.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  const baseRoutes = [...staticRoutes, ...blogUrls, ...resourceUrls];
 
   if (!process.env.DATABASE_URL) return baseRoutes;
 

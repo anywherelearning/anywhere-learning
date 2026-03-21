@@ -2,159 +2,144 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import {
-  getAllPosts,
-  getPostBySlug,
-  getRelatedPosts,
-  getArticleBodyText,
-  blogCategories,
-  blogProductDefaults,
-  formatDate,
-  formatReadTime,
-  type BlogContentBlock,
-  type BlogCategory,
-} from '@/lib/blog';
-import { renderBlock, getTableOfContents } from '@/lib/content-blocks';
+  getAllResources,
+  getResourceBySlug,
+  resourceTopics,
+  resourceProductDefaults,
+  type ResourceTopic,
+} from '@/lib/resources';
+import { formatDate, formatReadTime, type BlogContentBlock } from '@/lib/blog';
+import { renderBlock, getTableOfContents, getArticleBodyText } from '@/lib/content-blocks';
+import type { ContentBlock } from '@/lib/content-blocks';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import AuthorBio from '@/components/blog/AuthorBio';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
-import RelatedPosts from '@/components/blog/RelatedPosts';
+import RelatedBlogPosts from '@/components/resources/RelatedBlogPosts';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
-import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
-interface BlogPostPageProps {
+interface ResourcePageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
+  return getAllResources().map((r) => ({ slug: r.slug }));
 }
 
 export async function generateMetadata({
   params,
-}: BlogPostPageProps): Promise<Metadata> {
+}: ResourcePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) return {};
+  const resource = getResourceBySlug(slug);
+  if (!resource) return {};
 
   return {
-    title: post.title,
-    description: post.excerpt,
-    keywords: post.keywords,
+    title: resource.title,
+    description: resource.excerpt,
+    keywords: resource.keywords,
     alternates: {
-      canonical: `https://anywherelearning.co/blog/${post.slug}`,
+      canonical: `https://anywherelearning.co/resources/${resource.slug}`,
     },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: resource.title,
+      description: resource.excerpt,
       type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.dateModified || post.publishedAt,
-      authors: [post.author.name],
-      url: `https://anywherelearning.co/blog/${post.slug}`,
+      publishedTime: resource.publishedAt,
+      modifiedTime: resource.dateModified || resource.publishedAt,
+      authors: [resource.author.name],
+      url: `https://anywherelearning.co/resources/${resource.slug}`,
       images: [
         {
-          url: post.heroImage
-            ? `https://anywherelearning.co${post.heroImage}`
+          url: resource.heroImage
+            ? `https://anywherelearning.co${resource.heroImage}`
             : 'https://anywherelearning.co/og-default.png',
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: resource.title,
         },
       ],
     },
   };
 }
 
-/* slugify, getTableOfContents, parseInlineLinks, and renderBlock
-   are now imported from @/lib/content-blocks */
-
 /* ─── Auto-inject product/bundle callouts ─── */
 
-function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
-  // Skip if the post already has manual product/bundle callouts
-  const hasProduct = post.content.some((b) => b.type === 'product-callout');
-  const hasBundle = post.content.some((b) => b.type === 'bundle-callout');
-  if (hasProduct && hasBundle) return post.content;
+function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopic; recommendedProduct?: string; recommendedBundle?: string }): ContentBlock[] {
+  const hasProduct = resource.content.some((b) => b.type === 'product-callout');
+  const hasBundle = resource.content.some((b) => b.type === 'bundle-callout');
+  if (hasProduct && hasBundle) return resource.content;
 
-  const defaults = blogProductDefaults[post.category];
-  if (!defaults) return post.content;
+  const defaults = resourceProductDefaults[resource.topic];
+  if (!defaults) return resource.content;
 
-  const productSlug = post.recommendedProduct || defaults.product;
-  const bundleSlug = post.recommendedBundle || defaults.bundle;
+  const productSlug = resource.recommendedProduct || defaults.product;
+  const bundleSlug = resource.recommendedBundle || defaults.bundle;
 
-  // Find h2 heading indices for optimal placement
-  const h2Indices = post.content
+  const h2Indices = resource.content
     .map((b, i) => (b.type === 'heading' && b.level === 2 ? i : -1))
     .filter((i) => i >= 0);
 
-  if (h2Indices.length < 2) return post.content;
+  if (h2Indices.length < 2) return resource.content;
 
-  const total = post.content.length;
+  const total = resource.content.length;
   const target35 = Math.floor(total * 0.35);
   const target65 = Math.floor(total * 0.65);
 
-  // Find h2 nearest to 35% and 65% of content
   const productIdx = !hasProduct
     ? h2Indices.reduce((best, idx) => (Math.abs(idx - target35) < Math.abs(best - target35) ? idx : best), h2Indices[0])
     : -1;
   const bundleIdx = !hasBundle
     ? h2Indices.reduce((best, idx) => {
-        // Ensure bundle placement is after product placement
         if (productIdx >= 0 && idx <= productIdx) return best;
         return Math.abs(idx - target65) < Math.abs(best - target65) ? idx : best;
       }, h2Indices[h2Indices.length - 1])
     : -1;
 
-  // Build new content array with injections
-  const result: BlogContentBlock[] = [];
-  for (let i = 0; i < post.content.length; i++) {
-    // Insert product callout right before the target h2
+  const result: ContentBlock[] = [];
+  for (let i = 0; i < resource.content.length; i++) {
     if (i === productIdx && !hasProduct) {
       result.push({ type: 'product-callout', slug: productSlug });
     }
-    // Insert bundle callout right before the target h2
     if (i === bundleIdx && !hasBundle && i !== productIdx) {
       result.push({ type: 'bundle-callout', slug: bundleSlug });
     }
-    result.push(post.content[i]);
+    result.push(resource.content[i]);
   }
 
   return result;
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function ResourceDetailPage({ params }: ResourcePageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) notFound();
+  const resource = getResourceBySlug(slug);
+  if (!resource) notFound();
 
-  const cat = blogCategories[post.category];
-  const related = getRelatedPosts(post);
-  // Auto-inject product callouts if not manually placed
-  const contentWithCallouts = injectCallouts(post);
+  const topicMeta = resourceTopics[resource.topic];
+  const contentWithCallouts = injectCallouts(resource);
   const toc = getTableOfContents(contentWithCallouts);
 
-  const articleBody = getArticleBodyText(post);
+  const articleBody = getArticleBodyText(resource.content);
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.publishedAt,
-    dateModified: post.dateModified || post.publishedAt,
-    image: post.heroImage
-      ? `https://anywherelearning.co${post.heroImage}`
+    '@type': 'Article',
+    headline: resource.title,
+    description: resource.excerpt,
+    datePublished: resource.publishedAt,
+    dateModified: resource.dateModified || resource.publishedAt,
+    image: resource.heroImage
+      ? `https://anywherelearning.co${resource.heroImage}`
       : 'https://anywherelearning.co/og-default.png',
-    keywords: post.keywords?.join(', '),
+    keywords: resource.keywords?.join(', '),
     articleBody,
     wordCount: articleBody.split(/\s+/).length,
+    articleSection: topicMeta.label,
     author: {
       '@type': 'Person',
-      name: post.author.name,
+      name: resource.author.name,
     },
     publisher: {
       '@type': 'Organization',
@@ -167,7 +152,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://anywherelearning.co/blog/${post.slug}`,
+      '@id': `https://anywherelearning.co/resources/${resource.slug}`,
     },
   };
 
@@ -176,13 +161,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://anywherelearning.co' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://anywherelearning.co/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://anywherelearning.co/blog/${post.slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://anywherelearning.co/resources' },
+      { '@type': 'ListItem', position: 3, name: resource.title, item: `https://anywherelearning.co/resources/${resource.slug}` },
     ],
   };
 
-  // Collect FAQ items from all faq content blocks
-  const faqItems = post.content
+  const faqItems = resource.content
     .filter((b): b is { type: 'faq'; items: { question: string; answer: string }[] } => b.type === 'faq')
     .flatMap((b) => b.items);
 
@@ -216,103 +200,80 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* ─── Hero ─── */}
       <header className="relative overflow-hidden">
-        {/* Subtle background wash */}
         <div
           className="absolute inset-0 opacity-[0.035]"
           style={{
-            background: `radial-gradient(ellipse at 30% 20%, ${cat.color}, transparent 70%), radial-gradient(ellipse at 70% 80%, ${cat.color}, transparent 60%)`,
+            background: `radial-gradient(ellipse at 30% 20%, ${topicMeta.color}, transparent 70%), radial-gradient(ellipse at 70% 80%, ${topicMeta.color}, transparent 60%)`,
           }}
         />
 
         <div className="relative mx-auto max-w-4xl px-5 sm:px-8 pt-8 md:pt-12 pb-10 md:pb-14">
-          {/* Breadcrumb */}
           <div className="mb-8">
             <Breadcrumb
               items={[
-                { label: 'Blog', href: '/blog' },
-                { label: post.title },
+                { label: 'Resources', href: '/resources' },
+                { label: resource.title },
               ]}
             />
           </div>
 
           <ScrollReveal>
-            {/* Category + read time row */}
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.12em] text-white px-3 py-1 rounded-full"
-                style={{ backgroundColor: cat.color }}
+                style={{ backgroundColor: topicMeta.color }}
               >
-                {cat.label}
+                {topicMeta.label}
               </span>
               <span className="text-[13px] text-gray-400">
-                {formatReadTime(post.readTimeMinutes)}
+                {formatReadTime(resource.readTimeMinutes)}
               </span>
             </div>
 
-            {/* Title */}
             <h1 className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.4rem] text-forest leading-[1.06] mb-7 max-w-3xl text-balance tracking-[-0.02em]">
-              {post.title}
+              {resource.title}
             </h1>
 
-            {/* Excerpt */}
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mb-8">
-              {post.excerpt}
+              {resource.excerpt}
             </p>
 
-            {/* Author + date */}
             <div className="flex items-center gap-4">
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
-                style={{ backgroundColor: post.author.avatarColor }}
+                style={{ backgroundColor: resource.author.avatarColor }}
               >
-                {post.author.name.charAt(0)}
+                {resource.author.name.charAt(0)}
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">{post.author.name}</span>
-                <span className="text-[13px] text-gray-400">{formatDate(post.publishedAt)}</span>
+                <span className="text-sm font-medium text-gray-700">{resource.author.name}</span>
+                <span className="text-[13px] text-gray-400">{formatDate(resource.publishedAt)}</span>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </header>
 
-      {/* ─── Hero image ─── */}
+      {/* ─── Hero image placeholder ─── */}
       <div className="mx-auto max-w-5xl px-5 sm:px-8 mb-12 md:mb-16">
         <ScrollReveal delay={100}>
           <div
-            className="group relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
+            className="relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             style={{
-              background: post.heroImage ? undefined : `linear-gradient(160deg, ${cat.color}12, ${cat.color}30, ${cat.color}08)`,
+              background: resource.heroImage ? undefined : `linear-gradient(160deg, ${topicMeta.color}12, ${topicMeta.color}30, ${topicMeta.color}08)`,
             }}
           >
-            <PinterestSaveButton
-              url={`https://anywherelearning.co/blog/${post.slug}`}
-              description={`${post.title} — ${post.excerpt}`}
-            />
-            {post.heroImage ? (
-              <Image
-                src={post.heroImage}
-                alt={post.heroImageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, 1024px"
-                className="object-cover"
-              />
-            ) : (
+            {!resource.heroImage && (
               <>
-                {/* Organic shapes */}
                 <div
                   className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"
-                  style={{ backgroundColor: cat.color }}
+                  style={{ backgroundColor: topicMeta.color }}
                 />
                 <div
                   className="absolute bottom-[15%] left-[8%] w-52 h-52 rounded-full opacity-10 blur-[80px]"
-                  style={{ backgroundColor: cat.color }}
+                  style={{ backgroundColor: topicMeta.color }}
                 />
-                <div
-                  className="absolute top-[40%] left-[45%] w-24 h-24 rounded-full opacity-8 blur-2xl"
-                  style={{ backgroundColor: cat.color }}
-                />
-                <span className="text-gray-400/40 text-sm relative z-10 font-medium">{post.heroImageAlt}</span>
+                <span className="text-gray-400/40 text-sm relative z-10 font-medium">{resource.heroImageAlt}</span>
               </>
             )}
           </div>
@@ -322,13 +283,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* ─── Article + Sidebar Grid ─── */}
       <div className="mx-auto max-w-6xl px-5 sm:px-8" data-article>
         <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-16 xl:grid-cols-[1fr_240px] xl:gap-20">
-
-          {/* Main article column */}
           <article className="min-w-0 pb-16 md:pb-20 mx-auto max-w-[680px] lg:max-w-none">
-            {/* Mobile TOC */}
             <MobileTOC items={toc} />
 
-            {/* Article content */}
             {(() => {
               let firstParagraphRendered = false;
               return contentWithCallouts.map((block, i) => {
@@ -339,7 +296,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             })()}
           </article>
 
-          {/* Desktop sidebar TOC */}
           {toc.length >= 3 && (
             <aside className="hidden lg:block relative">
               <div className="sticky top-24 pb-8">
@@ -352,7 +308,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* ─── Post-article sections ─── */}
       <div className="mx-auto max-w-[680px] px-5 sm:px-8">
-        {/* Decorative divider */}
         <div className="py-12 md:py-16">
           <div className="flex items-center justify-center gap-4">
             <span className="h-px flex-1 max-w-16 bg-gradient-to-r from-transparent to-gold/30" />
@@ -363,15 +318,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
 
-        {/* Author bio */}
         <section className="pb-14 md:pb-18">
           <ScrollReveal>
-            <AuthorBio author={post.author} />
+            <AuthorBio author={resource.author} />
           </ScrollReveal>
         </section>
       </div>
 
-      {/* Newsletter CTA — wider */}
+      {/* Newsletter CTA */}
       <section className="pb-14 md:pb-18">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <ScrollReveal>
@@ -380,14 +334,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      {/* Related posts — full width */}
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <RelatedPosts posts={related} />
-        </div>
-      </section>
+      {/* Related blog posts */}
+      <RelatedBlogPosts slugs={resource.relatedBlogSlugs} />
 
-      {/* Exit-intent lead magnet popup */}
+      {/* Exit-intent popup */}
       <BlogExitIntentPopup />
     </div>
   );

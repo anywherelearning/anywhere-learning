@@ -93,6 +93,9 @@ export default function SiteFooter() {
               <Link href="/blog" className={linkClass}>
                 Blog
               </Link>
+              <Link href="/resources" className={linkClass}>
+                Resources
+              </Link>
               <Link href="/about" className={linkClass}>
                 About
               </Link>
