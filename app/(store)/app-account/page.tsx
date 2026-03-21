@@ -1,9 +1,15 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { openExternalBrowser } from '@/lib/capacitor';
 import NativeAuthGuard from '@/components/mobile/NativeAuthGuard';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+// Lazy-load Clerk content to prevent useUser from running during static prerendering
+const ClerkAccountContent = dynamic(() => Promise.resolve(ClerkAccountContentInner), {
+  ssr: false,
+});
 
 export default function AppAccountPage() {
   if (!hasClerk) {
@@ -13,8 +19,7 @@ export default function AppAccountPage() {
   return <ClerkAccountContent />;
 }
 
-function ClerkAccountContent() {
-  // These hooks are safe to call because we checked for Clerk above
+function ClerkAccountContentInner() {
   const { useUser, useClerk } = require('@clerk/nextjs');
   const { user, isLoaded, isSignedIn } = useUser();
   const { signOut } = useClerk();
