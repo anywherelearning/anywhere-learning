@@ -15,18 +15,20 @@ export async function sendPurchaseEmail({
   productName,
   downloadUrl,
   referralCode,
+  productImageUrl,
 }: {
   to: string;
   productName: string;
   downloadUrl: string;
   referralCode?: string;
+  productImageUrl?: string;
 }) {
   const resend = getResend();
   await resend.emails.send({
     from: 'Anywhere Learning <orders@anywherelearning.co>',
     to,
     subject: `Your ${productName} is ready ✓`,
-    react: PurchaseConfirmation({ productName, downloadUrl, referralCode }),
+    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl }),
   });
 }
 
