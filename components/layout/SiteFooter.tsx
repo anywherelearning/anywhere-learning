@@ -71,7 +71,7 @@ export default function SiteFooter() {
             <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
               Shop
             </h3>
-            <nav className="space-y-2.5">
+            <nav aria-label="Shop links" className="space-y-2.5">
               <Link href="/shop" className={linkClass}>
                 Activity Packs
               </Link>
@@ -89,7 +89,7 @@ export default function SiteFooter() {
             <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
               Learn
             </h3>
-            <nav className="space-y-2.5">
+            <nav aria-label="Learn links" className="space-y-2.5">
               <Link href="/blog" className={linkClass}>
                 Blog
               </Link>
@@ -107,7 +107,7 @@ export default function SiteFooter() {
             <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
               Contact
             </h3>
-            <nav className="space-y-2.5">
+            <nav aria-label="Contact links" className="space-y-2.5">
               <a
                 href="mailto:info@anywherelearning.co"
                 className={linkClass}

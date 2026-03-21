@@ -11,24 +11,12 @@ interface ReviewListProps {
   reviews: Review[];
 }
 
-function getRelativeTime(date: Date): string {
-  const now = new Date();
-  const diffMs = now.getTime() - new Date(date).getTime();
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 0) return 'Today';
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7) return `${diffDays} days ago`;
-  if (diffDays < 30) {
-    const weeks = Math.floor(diffDays / 7);
-    return `${weeks} ${weeks === 1 ? 'week' : 'weeks'} ago`;
-  }
-  if (diffDays < 365) {
-    const months = Math.floor(diffDays / 30);
-    return `${months} ${months === 1 ? 'month' : 'months'} ago`;
-  }
-  const years = Math.floor(diffDays / 365);
-  return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+function formatReviewDate(date: Date): string {
+  return new Date(date).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
 }
 
 export default function ReviewList({ reviews }: ReviewListProps) {
@@ -62,7 +50,7 @@ export default function ReviewList({ reviews }: ReviewListProps) {
               </span>
             </div>
             <span className="text-xs text-gray-400">
-              {getRelativeTime(review.createdAt)}
+              {formatReviewDate(review.createdAt)}
             </span>
           </div>
 

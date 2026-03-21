@@ -45,16 +45,20 @@ const coverClasses: Record<string, string> = {
 };
 
 interface PageProps {
-  searchParams: Promise<{ session_id?: string }>;
+  searchParams: Promise<{ session_id?: string; token?: string }>;
 }
 
-async function getSessionProducts(sessionId: string) {
+async function getSessionProducts(sessionId: string, token?: string) {
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId, {
       expand: ['line_items.data.price'],
     });
 
     if (session.payment_status !== 'paid') return null;
+
+    // ── SECURITY: Verify the success token matches (prevents session ID guessing) ──
+    const storedToken = session.metadata?.success_token;
+    if (storedToken && storedToken !== token) return null;
 
     // ── SECURITY: Only show details for sessions created within the last hour ──
     const ONE_HOUR = 60 * 60;
@@ -70,7 +74,7 @@ async function getSessionProducts(sessionId: string) {
         }
       }
     } catch {
-      // Clerk auth may not be configured — continue with time-window guard only
+      // Clerk auth may not be configured — continue with token + time-window guard
     }
 
     // Try price-ID lookup first (standard purchases)
@@ -132,12 +136,12 @@ async function getSessionProducts(sessionId: string) {
 }
 
 export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
-  const { session_id } = await searchParams;
+  const { session_id, token } = await searchParams;
 
   // Redirect to shop if no valid session (prevents celebration UI without a purchase)
   if (!session_id) redirect('/shop');
 
-  const data = await getSessionProducts(session_id);
+  const data = await getSessionProducts(session_id, token);
   if (!data) redirect('/shop');
 
   const purchasedProducts = data.products;

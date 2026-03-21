@@ -27,6 +27,7 @@ export default function StickyMobileBuy({
   const { isNative } = useCapacitor();
   const [visible, setVisible] = useState(false);
   const { addItem, isInCart, openCart } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
 
   // Hide in native app (Apple compliance)
   if (isNative) return null;
@@ -48,7 +49,8 @@ export default function StickyMobileBuy({
 
   const alreadyInCart = isInCart(slug);
 
-  const [justAdded, setJustAdded] = useState(false);
+  // Hide in native app (Apple compliance)
+  if (isNative) return null;
 
   function handleClick() {
     if (alreadyInCart) {

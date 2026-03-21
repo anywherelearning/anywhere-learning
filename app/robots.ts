@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/account/', '/api/'],
+      disallow: ['/account/', '/api/', '/sign-in', '/sign-up', '/checkout/', '/app-login', '/app-account', '/library'],
     },
     sitemap: 'https://anywherelearning.co/sitemap.xml',
   };
