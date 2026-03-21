@@ -14,11 +14,19 @@ import {
 interface PurchaseConfirmationProps {
   productName: string;
   downloadUrl: string;
+  referralCode?: string;
 }
 
+PurchaseConfirmation.PreviewProps = {
+  productName: 'Spring Outdoor Pack, Summer Outdoor Pack',
+  downloadUrl: 'https://anywherelearning.co/account/downloads',
+  referralCode: 'REF-AMELIE-7X',
+} satisfies PurchaseConfirmationProps;
+
 export default function PurchaseConfirmation({
-  productName,
-  downloadUrl,
+  productName = 'Spring Outdoor Pack',
+  downloadUrl = 'https://anywherelearning.co/account/downloads',
+  referralCode = 'REF-AMELIE-7X',
 }: PurchaseConfirmationProps) {
   return (
     <Html>
@@ -43,6 +51,28 @@ export default function PurchaseConfirmation({
           <Text style={text}>
             Open it up. Pick an activity. Start today.
           </Text>
+
+          {referralCode && (
+            <>
+              <Hr style={hr} />
+
+              <Heading as="h2" style={subheading}>
+                Know a family who&apos;d love this?
+              </Heading>
+
+              <Text style={text}>
+                Share your personal code and you&apos;ll both get 15% off:
+              </Text>
+
+              <Section style={codeBox}>
+                <Text style={codeText}>{referralCode}</Text>
+              </Section>
+
+              <Text style={textSmall}>
+                Your friend enters this code at checkout. When they do, they save 15% — and you&apos;ll get a 15% off code for your next purchase, emailed straight to you.
+              </Text>
+            </>
+          )}
 
           <Text style={text}>
             If you have any questions, just hit reply — I&apos;m a real person.
@@ -103,6 +133,36 @@ const button = {
   fontWeight: '600' as const,
   padding: '14px 32px',
   textDecoration: 'none',
+};
+
+const subheading = {
+  fontSize: '18px',
+  fontWeight: '600' as const,
+  color: '#588157',
+  marginBottom: '8px',
+};
+
+const codeBox = {
+  backgroundColor: '#f0f7f0',
+  borderRadius: '8px',
+  padding: '16px',
+  textAlign: 'center' as const,
+  margin: '16px 0',
+  border: '2px dashed #588157',
+};
+
+const codeText = {
+  fontSize: '22px',
+  fontWeight: '700' as const,
+  color: '#588157',
+  letterSpacing: '2px',
+  margin: '0',
+};
+
+const textSmall = {
+  fontSize: '14px',
+  lineHeight: '22px',
+  color: '#666666',
 };
 
 const hr = {

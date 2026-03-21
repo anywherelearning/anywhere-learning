@@ -11,50 +11,49 @@ import {
   Text,
 } from '@react-email/components';
 
-interface MembershipWelcomeProps {
-  plan: string;
-  libraryUrl: string;
+interface ReferralRewardProps {
+  rewardCode: string;
 }
 
-MembershipWelcome.PreviewProps = {
-  plan: 'annual',
-  libraryUrl: 'https://anywherelearning.co/account/library',
-} satisfies MembershipWelcomeProps;
+ReferralReward.PreviewProps = {
+  rewardCode: 'REWARD-AMELIE-7X',
+} satisfies ReferralRewardProps;
 
-export default function MembershipWelcome({
-  plan = 'annual',
-  libraryUrl = 'https://anywherelearning.co/account/library',
-}: MembershipWelcomeProps) {
+export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: ReferralRewardProps) {
   return (
     <Html>
       <Head />
-      <Preview>Your membership is active — every pack is now yours to explore</Preview>
+      <Preview>Your friend just saved 15% — here&apos;s yours!</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={heading}>Welcome to your membership!</Heading>
+          <Heading style={heading}>Your friend used your code!</Heading>
 
           <Text style={text}>Hey there!</Text>
 
           <Text style={text}>
-            Your <strong>{plan}</strong> membership is now active. You have
-            instant access to every activity pack in the library — and anything
-            new we add along the way.
+            Someone you shared your referral code with just made a purchase — and saved 15%. Nice one!
+          </Text>
+
+          <Text style={text}>
+            As a thank you, here&apos;s <strong>15% off</strong> your next order:
+          </Text>
+
+          <Section style={codeBox}>
+            <Text style={codeText}>{rewardCode}</Text>
+          </Section>
+
+          <Text style={textSmall}>
+            This is a one-time code — use it on any activity pack or bundle in the shop.
           </Text>
 
           <Section style={buttonContainer}>
-            <Link href={libraryUrl} style={button}>
-              Open My Library
+            <Link href="https://anywherelearning.co/shop" style={button}>
+              Browse the Shop
             </Link>
           </Section>
 
           <Text style={text}>
-            Pick a pack. Open it up. Start exploring with your kids today.
-          </Text>
-
-          <Text style={text}>
-            You can manage your subscription anytime from your account page. If
-            you ever have questions, just reply to this email — I&apos;m a real
-            person and I&apos;d love to hear from you.
+            Keep sharing your referral code — every time a friend uses it, you&apos;ll both save.
           </Text>
 
           <Text style={text}>
@@ -96,6 +95,30 @@ const text = {
   fontSize: '16px',
   lineHeight: '26px',
   color: '#1a1a1a',
+};
+
+const textSmall = {
+  fontSize: '14px',
+  lineHeight: '22px',
+  color: '#666666',
+  textAlign: 'center' as const,
+};
+
+const codeBox = {
+  backgroundColor: '#f0f7f0',
+  borderRadius: '8px',
+  padding: '16px',
+  textAlign: 'center' as const,
+  margin: '24px 0',
+  border: '2px dashed #588157',
+};
+
+const codeText = {
+  fontSize: '22px',
+  fontWeight: '700' as const,
+  color: '#588157',
+  letterSpacing: '2px',
+  margin: '0',
 };
 
 const buttonContainer = {

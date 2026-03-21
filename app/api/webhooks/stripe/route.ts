@@ -7,6 +7,7 @@ import { sendPurchaseEmail, sendMembershipWelcomeEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
 import { getSubscriptionByStripeId } from '@/lib/db/queries';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
+import { getOrCreateReferral, extractReferralFromSession, processReferralConversion } from '@/lib/referral';
 import type Stripe from 'stripe';
 
 export async function POST(req: NextRequest) {
@@ -484,6 +485,15 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       }
     }
 
+    // ── Generate referral code for this buyer (non-critical) ──────────
+    let referralCode: string | undefined;
+    try {
+      const referral = await getOrCreateReferral(user[0].id, customerEmail);
+      referralCode = referral.code;
+    } catch (error) {
+      console.error('Failed to generate referral code:', error);
+    }
+
     // Post-transaction: send email with all product names (non-critical)
     const skillsMapBonus = hasBundles ? ' + The Future-Ready Skills Map (FREE bonus!)' : '';
     const productNames = purchasedProducts.map((p) => p.name).join(', ') + skillsMapBonus;
@@ -492,6 +502,7 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
         to: customerEmail,
         productName: productNames,
         downloadUrl: `${process.env.NEXT_PUBLIC_URL}/account/downloads`,
+        referralCode,
       });
     } catch (error) {
       console.error('Failed to send purchase email:', error);
@@ -507,6 +518,16 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       );
     } catch (error) {
       console.error('Failed to tag buyer in ConvertKit:', error);
+    }
+
+    // ── Process referral conversion if a referral promo code was used ──
+    try {
+      const usedReferralCode = await extractReferralFromSession(stripeSessionId);
+      if (usedReferralCode) {
+        await processReferralConversion(usedReferralCode, customerEmail, stripeSessionId);
+      }
+    } catch (error) {
+      console.error('Failed to process referral conversion:', error);
     }
   }
 }
