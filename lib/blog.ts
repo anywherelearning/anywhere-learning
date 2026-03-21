@@ -2,6 +2,10 @@
 // Hardcoded blog posts (same pattern as homepage products).
 // Swap these functions for CMS/DB queries when ready.
 
+// Content block type is shared with resource pillar pages
+export type { ContentBlock as BlogContentBlock } from './content-blocks';
+import type { ContentBlock } from './content-blocks';
+
 export type BlogCategory =
   | 'homeschool-life'
   | 'nature-learning'
@@ -15,19 +19,6 @@ export interface BlogAuthor {
   avatarColor: string;
 }
 
-export type BlogContentBlock =
-  | { type: 'paragraph'; text: string }
-  | { type: 'heading'; level: 2 | 3; text: string }
-  | { type: 'pull-quote'; text: string; attribution?: string }
-  | { type: 'list'; ordered: boolean; items: string[] }
-  | { type: 'image'; alt: string; caption?: string; src?: string }
-  | { type: 'cta'; text: string; href: string; label: string }
-  | { type: 'tip'; title: string; text: string }
-  | { type: 'faq'; items: { question: string; answer: string }[] }
-  | { type: 'product-callout'; slug: string; context?: string }
-  | { type: 'bundle-callout'; slug: string; context?: string }
-  | { type: 'summary'; text: string; heading?: string };
-
 export interface BlogPost {
   slug: string;
   title: string;
@@ -40,12 +31,14 @@ export interface BlogPost {
   author: BlogAuthor;
   heroImage?: string;
   heroImageAlt: string;
-  content: BlogContentBlock[];
+  content: ContentBlock[];
   relatedSlugs: string[];
   /** Product slug for auto-injected product callout (overrides category default) */
   recommendedProduct?: string;
   /** Bundle slug for auto-injected bundle callout (overrides category default) */
   recommendedBundle?: string;
+  /** Resource pillar this post belongs to (for cross-linking) */
+  pillarSlug?: string;
 }
 
 export const blogCategories: Record<BlogCategory, { label: string; color: string }> = {
@@ -2253,17 +2246,8 @@ export function formatReadTime(minutes: number): string {
   return `${minutes} min read`;
 }
 
+import { getArticleBodyText as _getBodyText } from './content-blocks';
 export function getArticleBodyText(post: BlogPost): string {
-  return post.content
-    .map((b) => {
-      if (b.type === 'paragraph') return b.text;
-      if (b.type === 'heading') return b.text;
-      if (b.type === 'pull-quote') return b.text;
-      if (b.type === 'list') return b.items.join(' ');
-      if (b.type === 'tip') return b.text;
-      if (b.type === 'summary') return b.text;
-      return '';
-    })
-    .filter(Boolean)
-    .join(' ');
+  return _getBodyText(post.content);
 }
+

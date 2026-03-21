@@ -83,6 +83,12 @@ export default function SiteHeader() {
               Blog
             </Link>
             <Link
+              href="/resources"
+              className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
+            >
+              Resources
+            </Link>
+            <Link
               href="/about"
               className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
             >
@@ -197,6 +203,12 @@ export default function SiteHeader() {
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
               Blog
+            </Link>
+            <Link
+              href="/resources"
+              className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
+            >
+              Resources
             </Link>
             <Link
               href="/about"
