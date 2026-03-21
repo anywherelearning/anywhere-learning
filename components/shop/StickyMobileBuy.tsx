@@ -29,9 +29,6 @@ export default function StickyMobileBuy({
   const { addItem, isInCart, openCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
 
-  // Hide in native app (Apple compliance)
-  if (isNative) return null;
-
   useEffect(() => {
     const buyButton = document.getElementById('buy-button');
     if (!buyButton) return;
