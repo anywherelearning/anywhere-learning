@@ -165,7 +165,10 @@ export default function PurchaseConfirmation({
                 <Column style={tipColumn}>
                   <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
                     <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#9742;</span>
+                      {/* Phone/tablet icon - simple rectangle with notch */}
+                      <div style={{ width: '12px', height: '16px', border: '2px solid #faf9f6', borderRadius: '3px', margin: '0 auto', position: 'relative' as const }}>
+                        <div style={{ width: '6px', height: '2px', backgroundColor: '#faf9f6', borderRadius: '1px', margin: '0 auto', position: 'absolute' as const, bottom: '1px', left: '1px' }} />
+                      </div>
                     </td></tr>
                   </table>
                   <Text style={tipLabel}>Open on any device</Text>
@@ -173,7 +176,8 @@ export default function PurchaseConfirmation({
                 <Column style={tipColumn}>
                   <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
                     <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#10024;</span>
+                      {/* Checkmark / ready icon */}
+                      <div style={{ fontSize: '16px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&#10003;</div>
                     </td></tr>
                   </table>
                   <Text style={tipLabel}>Zero prep needed</Text>
@@ -181,7 +185,8 @@ export default function PurchaseConfirmation({
                 <Column style={tipColumn}>
                   <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
                     <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#8634;</span>
+                      {/* Infinity / reuse icon */}
+                      <div style={{ fontSize: '18px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&infin;</div>
                     </td></tr>
                   </table>
                   <Text style={tipLabel}>Reuse year after year</Text>
