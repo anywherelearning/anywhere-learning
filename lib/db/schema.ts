@@ -96,3 +96,27 @@ export const subscriptions = pgTable('subscriptions', {
   uniqueIndex('idx_subscriptions_stripe_sub').on(table.stripeSubscriptionId),
   index('idx_subscriptions_stripe_customer').on(table.stripeCustomerId),
 ]);
+
+export const referrals = pgTable('referrals', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  referrerUserId: uuid('referrer_user_id').references(() => users.id).notNull(),
+  referrerEmail: text('referrer_email').notNull(),
+  code: text('code').notNull().unique(),
+  stripePromoId: text('stripe_promo_id').notNull(),
+  referralCount: integer('referral_count').default(0).notNull(),
+  rewardStripePromoCode: text('reward_stripe_promo_code'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_referrals_user').on(table.referrerUserId),
+  index('idx_referrals_email').on(table.referrerEmail),
+]);
+
+export const referralConversions = pgTable('referral_conversions', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  referralId: uuid('referral_id').references(() => referrals.id).notNull(),
+  referredEmail: text('referred_email').notNull(),
+  stripeSessionId: text('stripe_session_id').notNull(),
+  convertedAt: timestamp('converted_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_referral_conversions_referral').on(table.referralId),
+]);

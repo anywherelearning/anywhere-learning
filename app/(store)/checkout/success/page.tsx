@@ -8,6 +8,7 @@ import { db } from '@/lib/db';
 import { products } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { getUserByClerkId } from '@/lib/db/queries';
+import { getReferralByEmail } from '@/lib/referral';
 import { formatPrice } from '@/lib/utils';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 import Confetti from '@/components/checkout/Confetti';
@@ -125,10 +126,23 @@ async function getSessionProducts(sessionId: string, token?: string) {
     // Check if a bundle was purchased (triggers free Skills Map bonus)
     const hasBundles = purchasedProducts.some((p) => p.isBundle);
 
+    // Look up buyer's referral code (may not exist yet if webhook hasn't fired)
+    let referralCode: string | undefined;
+    const buyerEmail = session.customer_details?.email;
+    if (buyerEmail) {
+      try {
+        const referral = await getReferralByEmail(buyerEmail);
+        if (referral) referralCode = referral.code;
+      } catch {
+        // Referral lookup is non-critical
+      }
+    }
+
     return {
       products: purchasedProducts,
       bundleUpgrades: bundleUpgrades.slice(0, 2),
       hasBundles,
+      referralCode,
     };
   } catch {
     return null;
@@ -147,6 +161,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const purchasedProducts = data.products;
   const bundleUpgrades = data.bundleUpgrades;
   const hasBundles = data.hasBundles;
+  const referralCode = data.referralCode;
 
   return (
     <>
@@ -453,7 +468,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
             <p className="text-sm text-gray-500 mb-5">
               Share the love — they&apos;ll thank you later.
             </p>
-            <PostPurchaseShare />
+            <PostPurchaseShare referralCode={referralCode} />
           </div>
         </section>
 
