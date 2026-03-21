@@ -73,7 +73,7 @@ export default function QuickAddButton({
       onClick={handleClick}
       aria-label={label}
       title={label}
-      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 ${
+      className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 ${
         justAdded
           ? 'bg-forest text-cream scale-110'
           : justRemoved

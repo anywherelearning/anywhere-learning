@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useReducer, useEffect, useState, useCallback, useMemo } from 'react';
 import type { CartItem, ByobTier } from '@/lib/cart';
-import { loadCart, saveCart, cartTotalCents, cartTotalWithByob, getNextByobTier } from '@/lib/cart';
+import { loadCart, saveCart, saveCartEmail, cartTotalCents, cartTotalWithByob, getNextByobTier } from '@/lib/cart';
 
 // ─── State & Actions ───
 
@@ -15,6 +15,7 @@ type CartAction =
   | { type: 'SET_ITEMS'; items: CartItem[] }
   | { type: 'ADD_ITEM'; item: CartItem }
   | { type: 'REMOVE_ITEM'; slug: string }
+  | { type: 'SWAP_BUNDLE'; removeSlugs: string[]; bundle: CartItem }
   | { type: 'CLEAR' }
   | { type: 'OPEN' }
   | { type: 'CLOSE' };
@@ -28,6 +29,11 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return { ...state, items: [...state.items, action.item] };
     case 'REMOVE_ITEM':
       return { ...state, items: state.items.filter((i) => i.slug !== action.slug) };
+    case 'SWAP_BUNDLE': {
+      const filtered = state.items.filter((i) => !action.removeSlugs.includes(i.slug));
+      if (filtered.some((i) => i.slug === action.bundle.slug)) return { ...state, items: filtered };
+      return { ...state, items: [...filtered, action.bundle] };
+    }
     case 'CLEAR':
       return { ...state, items: [] };
     case 'OPEN':
@@ -49,6 +55,7 @@ interface CartContextValue {
   isMounted: boolean;
   addItem: (item: CartItem) => boolean;
   removeItem: (slug: string) => void;
+  swapBundle: (removeSlugs: string[], bundle: CartItem) => void;
   clearCart: () => void;
   isInCart: (slug: string) => boolean;
   openCart: () => void;
@@ -99,6 +106,7 @@ export default function CartProvider({ children }: { children: React.ReactNode }
     const params = new URLSearchParams(window.location.search);
     if (params.has('session_id') && window.location.pathname.includes('/checkout/success')) {
       dispatch({ type: 'CLEAR' });
+      saveCartEmail('');
     }
   }, []);
 
@@ -125,6 +133,10 @@ export default function CartProvider({ children }: { children: React.ReactNode }
     dispatch({ type: 'REMOVE_ITEM', slug });
   }, []);
 
+  const swapBundle = useCallback((removeSlugs: string[], bundle: CartItem) => {
+    dispatch({ type: 'SWAP_BUNDLE', removeSlugs, bundle });
+  }, []);
+
   const clearCart = useCallback(() => {
     dispatch({ type: 'CLEAR' });
   }, []);
@@ -136,26 +148,28 @@ export default function CartProvider({ children }: { children: React.ReactNode }
   const openCart = useCallback(() => dispatch({ type: 'OPEN' }), []);
   const closeCart = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
-  const byob = cartTotalWithByob(state.items);
-  const nextTier = getNextByobTier(state.items);
-
-  const value = useMemo<CartContextValue>(() => ({
-    items: state.items,
-    itemCount: state.items.length,
-    totalCents: cartTotalCents(state.items),
-    isCartOpen: state.isOpen,
-    isMounted,
-    addItem,
-    removeItem,
-    clearCart,
-    isInCart,
-    openCart,
-    closeCart,
-    byobTier: byob.tier,
-    byobDiscountCents: byob.discountCents,
-    byobTotalCents: byob.totalCents,
-    nextByobTier: nextTier,
-  }), [state.items, state.isOpen, isMounted, addItem, removeItem, clearCart, isInCart, openCart, closeCart, byob.tier, byob.discountCents, byob.totalCents, nextTier]);
+  const value = useMemo<CartContextValue>(() => {
+    const byob = cartTotalWithByob(state.items);
+    const nextTier = getNextByobTier(state.items);
+    return {
+      items: state.items,
+      itemCount: state.items.length,
+      totalCents: cartTotalCents(state.items),
+      isCartOpen: state.isOpen,
+      isMounted,
+      addItem,
+      removeItem,
+      swapBundle,
+      clearCart,
+      isInCart,
+      openCart,
+      closeCart,
+      byobTier: byob.tier,
+      byobDiscountCents: byob.discountCents,
+      byobTotalCents: byob.totalCents,
+      nextByobTier: nextTier,
+    };
+  }, [state.items, state.isOpen, isMounted, addItem, removeItem, swapBundle, clearCart, isInCart, openCart, closeCart]);
 
   return (
     <CartContext.Provider value={value}>

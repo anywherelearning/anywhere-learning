@@ -297,7 +297,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     description:
       "Real-world activity packs for homeschool and worldschool families.",
     numberOfItems: filteredProducts.length,
-    itemListElement: filteredProducts.slice(0, 10).map((p, i) => ({
+    itemListElement: filteredProducts.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
       url: `https://anywherelearning.co/shop/${p.slug}`,
