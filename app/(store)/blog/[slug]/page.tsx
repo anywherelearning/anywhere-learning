@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import {
