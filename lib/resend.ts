@@ -16,19 +16,25 @@ export async function sendPurchaseEmail({
   downloadUrl,
   referralCode,
   productImageUrl,
+  products,
 }: {
   to: string;
   productName: string;
   downloadUrl: string;
   referralCode?: string;
   productImageUrl?: string;
+  products?: { name: string; imageUrl: string }[];
 }) {
   const resend = getResend();
+  const count = products?.length || 1;
+  const subject = count === 1
+    ? `Your ${products?.[0]?.name || productName} is ready ✓`
+    : `Your ${count} activity packs are ready ✓`;
   await resend.emails.send({
     from: 'Anywhere Learning <orders@anywherelearning.co>',
     to,
-    subject: `Your ${productName} is ready ✓`,
-    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl }),
+    subject,
+    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl, products }),
   });
 }
 

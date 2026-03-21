@@ -14,11 +14,17 @@ import {
   Text,
 } from '@react-email/components';
 
+interface ProductItem {
+  name: string;
+  imageUrl: string;
+}
+
 interface PurchaseConfirmationProps {
   productName: string;
   downloadUrl: string;
   referralCode?: string;
   productImageUrl?: string;
+  products?: ProductItem[];
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -27,7 +33,10 @@ PurchaseConfirmation.PreviewProps = {
   productName: 'Spring Outdoor Pack, Summer Outdoor Pack',
   downloadUrl: `${baseUrl}/account/downloads`,
   referralCode: 'REF-AMELIE-7X',
-  productImageUrl: '/static/spring-outdoor-pack.jpg',
+  products: [
+    { name: 'Spring Outdoor Pack', imageUrl: '/static/spring-outdoor-pack.jpg' },
+    { name: 'Summer Outdoor Pack', imageUrl: '/static/spring-outdoor-pack.jpg' },
+  ],
 } satisfies PurchaseConfirmationProps;
 
 export default function PurchaseConfirmation({
@@ -35,10 +44,25 @@ export default function PurchaseConfirmation({
   downloadUrl = `${baseUrl}/account/downloads`,
   referralCode = 'REF-AMELIE-7X',
   productImageUrl = '/static/spring-outdoor-pack.jpg',
+  products,
 }: PurchaseConfirmationProps) {
-  const logoUrl = productImageUrl?.startsWith('/static/')
+  // Build product list: use products array if provided, else fall back to single image
+  const productList: ProductItem[] = products && products.length > 0
+    ? products
+    : productImageUrl
+      ? [{ name: productName, imageUrl: productImageUrl }]
+      : [];
+  const isSingle = productList.length === 1;
+  const isMultiple = productList.length > 1;
+
+  const logoUrl = (productList[0]?.imageUrl || '').startsWith('/static/')
     ? '/static/logo-icon.png'
     : `${baseUrl}/logo-icon.png`;
+
+  // Smart heading: show product name for single, count for multiple
+  const headingText = isSingle
+    ? `Your ${productList[0].name} is ready!`
+    : `Your ${productList.length} activity packs are ready!`;
 
   return (
     <Html>
@@ -47,7 +71,7 @@ export default function PurchaseConfirmation({
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
         `}</style>
       </Head>
-      <Preview>Your {productName} is ready to download</Preview>
+      <Preview>{headingText}</Preview>
       <Body style={main}>
         <Container style={container}>
 
@@ -76,13 +100,42 @@ export default function PurchaseConfirmation({
                 </td>
               </tr>
             </table>
-            <Heading style={bannerHeading}>Your {productName} is ready!</Heading>
+            <Heading style={bannerHeading}>{headingText}</Heading>
           </Section>
 
-          {/* ── Product Image ── */}
-          {productImageUrl && (
+          {/* ── Product Images ── */}
+          {productList.length > 0 && (
             <Section style={imageSection}>
-              <Img src={productImageUrl} width="560" alt={productName} style={productImage} />
+              {isSingle ? (
+                <Img src={productList[0].imageUrl} width="560" alt={productList[0].name} style={productImage} />
+              ) : (
+                <table cellPadding="0" cellSpacing="0" width="100%" style={{ backgroundColor: '#f7f5f0' }}>
+                  <tr>
+                    {productList.slice(0, 4).map((product, i) => (
+                      <td key={i} style={{ padding: '16px 8px', textAlign: 'center' as const, verticalAlign: 'top', width: `${100 / Math.min(productList.length, 4)}%` }}>
+                        <Img
+                          src={product.imageUrl}
+                          width={productList.length <= 2 ? '200' : '120'}
+                          alt={product.name}
+                          style={{ display: 'block', margin: '0 auto', borderRadius: '8px' }}
+                        />
+                        <Text style={{ fontSize: '11px', color: '#555555', margin: '8px 0 0', lineHeight: '1.3' }}>
+                          {product.name}
+                        </Text>
+                      </td>
+                    ))}
+                  </tr>
+                  {productList.length > 4 && (
+                    <tr>
+                      <td colSpan={4} style={{ textAlign: 'center' as const, paddingBottom: '12px' }}>
+                        <Text style={{ fontSize: '12px', color: '#888888', margin: '0' }}>
+                          + {productList.length - 4} more
+                        </Text>
+                      </td>
+                    </tr>
+                  )}
+                </table>
+              )}
             </Section>
           )}
 
@@ -91,7 +144,7 @@ export default function PurchaseConfirmation({
             <Text style={text}>Hey there!</Text>
 
             <Text style={text}>
-              Your <strong>{productName}</strong> is ready to download. Open it on any device — phone, tablet, or laptop — and pick any activity to start.
+              Your <strong>{isMultiple ? `${productList.length} activity packs` : productList[0]?.name || productName}</strong> {isSingle ? 'is' : 'are'} ready to download. Open on any device — phone, tablet, or laptop — and pick any activity to start.
             </Text>
 
             <Section style={buttonContainer}>
