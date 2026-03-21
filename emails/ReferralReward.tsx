@@ -15,7 +15,11 @@ interface ReferralRewardProps {
   rewardCode: string;
 }
 
-export default function ReferralReward({ rewardCode }: ReferralRewardProps) {
+ReferralReward.PreviewProps = {
+  rewardCode: 'REWARD-AMELIE-7X',
+} satisfies ReferralRewardProps;
+
+export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: ReferralRewardProps) {
   return (
     <Html>
       <Head />

@@ -17,10 +17,16 @@ interface PurchaseConfirmationProps {
   referralCode?: string;
 }
 
+PurchaseConfirmation.PreviewProps = {
+  productName: 'Spring Outdoor Pack, Summer Outdoor Pack',
+  downloadUrl: 'https://anywherelearning.co/account/downloads',
+  referralCode: 'REF-AMELIE-7X',
+} satisfies PurchaseConfirmationProps;
+
 export default function PurchaseConfirmation({
-  productName,
-  downloadUrl,
-  referralCode,
+  productName = 'Spring Outdoor Pack',
+  downloadUrl = 'https://anywherelearning.co/account/downloads',
+  referralCode = 'REF-AMELIE-7X',
 }: PurchaseConfirmationProps) {
   return (
     <Html>

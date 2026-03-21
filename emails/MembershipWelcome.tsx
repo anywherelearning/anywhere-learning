@@ -16,9 +16,14 @@ interface MembershipWelcomeProps {
   libraryUrl: string;
 }
 
+MembershipWelcome.PreviewProps = {
+  plan: 'annual',
+  libraryUrl: 'https://anywherelearning.co/account/library',
+} satisfies MembershipWelcomeProps;
+
 export default function MembershipWelcome({
-  plan,
-  libraryUrl,
+  plan = 'annual',
+  libraryUrl = 'https://anywherelearning.co/account/library',
 }: MembershipWelcomeProps) {
   return (
     <Html>
