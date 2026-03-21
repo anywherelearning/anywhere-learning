@@ -109,32 +109,38 @@ export default function PurchaseConfirmation({
               {isSingle ? (
                 <Img src={productList[0].imageUrl} width="560" alt={productList[0].name} style={productImage} />
               ) : (
-                <table cellPadding="0" cellSpacing="0" width="100%" style={{ backgroundColor: '#f7f5f0' }}>
-                  <tr>
-                    {productList.slice(0, 4).map((product, i) => (
-                      <td key={i} style={{ padding: '16px 8px', textAlign: 'center' as const, verticalAlign: 'top', width: `${100 / Math.min(productList.length, 4)}%` }}>
+                <Section style={multiProductGrid}>
+                  <Row>
+                    {productList.slice(0, 2).map((product, i) => (
+                      <Column key={i} style={productThumbCol}>
                         <Img
                           src={product.imageUrl}
-                          width={productList.length <= 2 ? '200' : '120'}
                           alt={product.name}
-                          style={{ display: 'block', margin: '0 auto', borderRadius: '8px' }}
+                          style={productThumb}
                         />
-                        <Text style={{ fontSize: '11px', color: '#555555', margin: '8px 0 0', lineHeight: '1.3' }}>
-                          {product.name}
-                        </Text>
-                      </td>
+                        <Text style={productThumbName}>{product.name}</Text>
+                      </Column>
                     ))}
-                  </tr>
-                  {productList.length > 4 && (
-                    <tr>
-                      <td colSpan={4} style={{ textAlign: 'center' as const, paddingBottom: '12px' }}>
-                        <Text style={{ fontSize: '12px', color: '#888888', margin: '0' }}>
-                          + {productList.length - 4} more
-                        </Text>
-                      </td>
-                    </tr>
+                  </Row>
+                  {productList.length > 2 && (
+                    <Row>
+                      {productList.slice(2, 4).map((product, i) => (
+                        <Column key={i} style={productThumbCol}>
+                          <Img
+                            src={product.imageUrl}
+                            alt={product.name}
+                            style={productThumb}
+                          />
+                          <Text style={productThumbName}>{product.name}</Text>
+                        </Column>
+                      ))}
+                      {productList.length === 3 && <Column style={productThumbCol} />}
+                    </Row>
                   )}
-                </table>
+                  {productList.length > 4 && (
+                    <Text style={moreLabel}>+ {productList.length - 4} more in your downloads</Text>
+                  )}
+                </Section>
               )}
             </Section>
           )}
@@ -253,6 +259,11 @@ const checkMark = { color: '#faf9f6', fontSize: '20px', fontWeight: '700' as con
 const bannerHeading = { fontSize: '22px', fontWeight: '600' as const, color: '#faf9f6', margin: '0', lineHeight: '1.3' };
 const imageSection = { padding: '0', lineHeight: '0' };
 const productImage = { width: '100%', maxWidth: '560px', display: 'block' as const };
+const multiProductGrid = { backgroundColor: '#f7f5f0', padding: '16px 16px 8px' };
+const productThumbCol = { textAlign: 'center' as const, verticalAlign: 'top' as const, padding: '0 6px 12px', width: '50%' };
+const productThumb = { width: '100%', maxWidth: '240px', borderRadius: '8px', display: 'block' as const, margin: '0 auto' };
+const productThumbName = { fontSize: '12px', color: '#555555', margin: '6px 0 0', lineHeight: '1.3', textAlign: 'center' as const };
+const moreLabel = { fontSize: '12px', color: '#888888', margin: '0 0 8px', textAlign: 'center' as const };
 const contentSection = { padding: '28px 32px 8px' };
 const text = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '0 0 16px' };
 const buttonContainer = { textAlign: 'center' as const, margin: '28px 0' };
