@@ -71,6 +71,7 @@ const values = [
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://anywherelearning.co/about#amelie",
   name: "Amelie",
   jobTitle: "Former Teacher & Founder of Anywhere Learning",
   description:

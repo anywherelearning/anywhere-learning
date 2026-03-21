@@ -16,6 +16,9 @@ import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import SavingsExplainer from "@/components/shop/SavingsExplainer";
 import SkillsMapBanner from "@/components/shop/SkillsMapBanner";
+import NativeOnly from "@/components/mobile/NativeOnly";
+import NativeHide from "@/components/mobile/NativeHide";
+import NativeShopView from "@/components/mobile/NativeShopView";
 
 export const revalidate = 3600; // ISR: revalidate hourly
 
@@ -294,7 +297,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     description:
       "Real-world activity packs for homeschool and worldschool families.",
     numberOfItems: filteredProducts.length,
-    itemListElement: filteredProducts.slice(0, 10).map((p, i) => ({
+    itemListElement: filteredProducts.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
       url: `https://anywherelearning.co/shop/${p.slug}`,
@@ -302,7 +305,25 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     })),
   };
 
+  // Prepare products for native shop view
+  const nativeProducts = products.map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    shortDescription: p.shortDescription,
+    priceCents: p.priceCents,
+    imageUrl: p.imageUrl,
+    category: p.category,
+    isBundle: p.isBundle,
+    activityCount: p.activityCount,
+    sortOrder: p.sortOrder,
+  }));
+
   return (
+    <>
+      <NativeOnly>
+        <NativeShopView products={nativeProducts} />
+      </NativeOnly>
+      <NativeHide>
     <div className="bg-cream">
       <script
         type="application/ld+json"
@@ -608,5 +629,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         </ScrollReveal>
       </div>
     </div>
+      </NativeHide>
+    </>
   );
 }

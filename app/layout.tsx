@@ -7,6 +7,8 @@ import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
+import NativeHide from "@/components/mobile/NativeHide";
+import NativeRedirectGuard from "@/components/mobile/NativeRedirectGuard";
 import "./globals.css";
 
 const displayFont = Dancing_Script({
@@ -38,6 +40,14 @@ export const metadata: Metadata = {
     title: "Anywhere Learning — Meaningful Learning, Wherever You Are",
     description:
       "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families — ages 6 to 14.",
+    images: [
+      {
+        url: "https://anywherelearning.co/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Anywhere Learning — Meaningful Learning, Wherever You Are",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -128,8 +138,9 @@ export default function RootLayout({
         <ClerkWrapper>
           <CartProvider>
             <CapacitorProvider>
+              <NativeRedirectGuard />
               {children}
-              <CartDrawer />
+              <NativeHide><CartDrawer /></NativeHide>
               <MobileTabBar />
             </CapacitorProvider>
           </CartProvider>

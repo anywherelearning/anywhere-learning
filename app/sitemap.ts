@@ -79,6 +79,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  // Shop category pages (have their own canonical URLs)
+  const categoryRoutes: MetadataRoute.Sitemap = [
+    'outdoor-learning',
+    'creativity-anywhere',
+    'real-world-math',
+    'ai-literacy',
+    'communication-writing',
+    'entrepreneurship',
+    'planning-problem-solving',
+    'start-here',
+    'bundle',
+  ].map((cat) => ({
+    url: `https://anywherelearning.co/shop?category=${cat}`,
+    lastModified: siteLastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
   const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `https://anywherelearning.co/blog/${post.slug}`,
     lastModified: new Date(post.publishedAt),
@@ -93,7 +111,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  const baseRoutes = [...staticRoutes, ...blogUrls, ...resourceUrls];
+  const baseRoutes = [...staticRoutes, ...categoryRoutes, ...blogUrls, ...resourceUrls];
 
   if (!process.env.DATABASE_URL) return baseRoutes;
 

@@ -3,6 +3,7 @@ import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { products, orders, users } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
+import { randomBytes } from 'crypto';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { BYOB_TIERS } from '@/lib/cart';
 
@@ -192,16 +193,20 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Generate a one-time token to prevent session ID guessing on the success page
+    const successToken = randomBytes(16).toString('hex');
+
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
       line_items: lineItems,
       ...(email && { customer_email: email }),
       customer_creation: 'always',
-      success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}&token=${successToken}`,
       cancel_url: `${siteUrl}/shop?cart=open`,
       metadata: {
         product_slugs: verifiedSlugs.join(','),
+        success_token: successToken,
         ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),
       },
       // Disable promo codes when BYOB discount is active to prevent stacking

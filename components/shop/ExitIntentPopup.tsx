@@ -27,6 +27,7 @@ export default function ExitIntentPopup() {
   const variant = upsell ? 'bundle-upgrade' : itemCount > 0 ? 'cart-recovery' : 'bundle-promo';
 
   const dismiss = useCallback(() => {
+    document.body.style.overflow = '';
     setAnimating(false);
     setTimeout(() => setShow(false), 300);
     try {
@@ -44,6 +45,7 @@ export default function ExitIntentPopup() {
       const expiry = localStorage.getItem(DISMISS_KEY);
       if (expiry && Date.now() < Number(expiry)) return;
     } catch {}
+    document.body.style.overflow = 'hidden';
     setShow(true);
     requestAnimationFrame(() => setAnimating(true));
   }, [show]);

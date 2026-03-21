@@ -13,7 +13,7 @@ import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { openExternalBrowser } from '@/lib/capacitor';
 
 export default function CartDrawer() {
-  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem, byobTier, byobDiscountCents, byobTotalCents, nextByobTier } = useCart();
+  const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem, swapBundle, byobTier, byobDiscountCents, byobTotalCents, nextByobTier } = useCart();
   const { isNative } = useCapacitor();
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
@@ -146,12 +146,8 @@ export default function CartDrawer() {
         return;
       }
 
-      // Remove the individual packs that the bundle replaces
-      for (const slug of suggestion.matchingSlugs) {
-        removeItem(slug);
-      }
-      // Add the bundle with real DB data (including valid stripePriceId)
-      addItem({
+      // Atomically remove individual packs and add the bundle (single dispatch)
+      swapBundle(suggestion.matchingSlugs, {
         slug: product.slug,
         name: product.name,
         priceCents: product.priceCents,

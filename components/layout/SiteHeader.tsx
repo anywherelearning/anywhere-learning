@@ -63,7 +63,7 @@ export default function SiteHeader() {
           </Link>
 
           {/* Center: Nav links (desktop only) */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
             <Link
               href="/"
               className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
@@ -107,7 +107,7 @@ export default function SiteHeader() {
             <CartIcon />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-forest/5"
+              className="flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:bg-forest/5"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
@@ -164,7 +164,7 @@ export default function SiteHeader() {
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-forest/5"
+              className="flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:bg-forest/5"
               aria-label="Close menu"
             >
               <svg
