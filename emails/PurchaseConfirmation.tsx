@@ -35,7 +35,7 @@ PurchaseConfirmation.PreviewProps = {
   referralCode: 'REF-AMELIE-7X',
   products: [
     { name: 'Spring Outdoor Pack', imageUrl: '/static/spring-outdoor-pack.jpg' },
-    { name: 'Summer Outdoor Pack', imageUrl: '/static/spring-outdoor-pack.jpg' },
+    { name: 'Summer Outdoor Pack', imageUrl: '/static/summer-outdoor-pack.jpg' },
   ],
 } satisfies PurchaseConfirmationProps;
 
