@@ -85,17 +85,15 @@ const tabs: Tab[] = [
   },
   {
     label: 'Library',
-    href: '/account/downloads',
+    href: '/library',
     icon: LibraryIcon,
-    isActive: (p) =>
-      p.startsWith('/account/downloads') || p.startsWith('/account/library'),
+    isActive: (p) => p.startsWith('/library'),
   },
   {
     label: 'Account',
-    href: '/account',
+    href: '/app-account',
     icon: AccountIcon,
-    isActive: (p) =>
-      p === '/account' || p.startsWith('/account/settings'),
+    isActive: (p) => p.startsWith('/app-account') || p.startsWith('/app-login'),
   },
 ];
 

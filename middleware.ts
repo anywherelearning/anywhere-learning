@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const isProtectedRoute = createRouteMatcher(['/account(.*)']);
+const isPublicAppRoute = createRouteMatcher(['/library', '/app-login', '/app-account']);
 
 // Only run Clerk middleware when keys are configured
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -17,7 +18,7 @@ function fallbackMiddleware(req: NextRequest) {
 
 export default hasClerk
   ? clerkMiddleware(async (auth, req) => {
-      if (isProtectedRoute(req)) {
+      if (isProtectedRoute(req) && !isPublicAppRoute(req)) {
         await auth.protect();
       }
     })
