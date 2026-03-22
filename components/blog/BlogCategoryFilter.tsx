@@ -29,7 +29,7 @@ export default function BlogCategoryFilter() {
   }
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide" role="tablist">
+    <div className="flex flex-wrap gap-2 pb-4" role="tablist">
       {categories.map((cat) => (
         <button
           key={cat.value}
