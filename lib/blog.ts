@@ -11,7 +11,9 @@ export type BlogCategory =
   | 'nature-learning'
   | 'real-world-skills'
   | 'travel-worldschool'
-  | 'getting-started';
+  | 'getting-started'
+  | 'creativity-maker'
+  | 'ai-digital-literacy';
 
 export interface BlogAuthor {
   name: string;
@@ -42,20 +44,24 @@ export interface BlogPost {
 }
 
 export const blogCategories: Record<BlogCategory, { label: string; color: string }> = {
-  'homeschool-life':     { label: 'Homeschool Life',      color: '#588157' },
-  'nature-learning':     { label: 'Nature Learning',      color: '#6b8e6b' },
-  'real-world-skills':   { label: 'Real-World Skills',    color: '#8b7355' },
-  'travel-worldschool':  { label: 'Travel & Worldschool', color: '#c4836a' },
-  'getting-started':     { label: 'Getting Started',      color: '#d4a373' },
+  'homeschool-life':     { label: 'Homeschool Life',        color: '#588157' },
+  'nature-learning':     { label: 'Nature Learning',        color: '#6b8e6b' },
+  'real-world-skills':   { label: 'Real-World Skills',      color: '#8b7355' },
+  'travel-worldschool':  { label: 'Travel & Worldschool',   color: '#c4836a' },
+  'getting-started':     { label: 'Getting Started',        color: '#d4a373' },
+  'creativity-maker':    { label: 'Creativity & Maker',     color: '#c47a8f' },
+  'ai-digital-literacy': { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
 };
 
 /** Default product + bundle recommendation for each blog category (used by auto-injection) */
 export const blogProductDefaults: Record<BlogCategory, { product: string; bundle: string }> = {
-  'real-world-skills':   { product: 'budget-challenge',       bundle: 'real-world-mega-bundle' },
-  'nature-learning':     { product: 'nature-journal-walks',   bundle: 'seasonal-bundle' },
+  'real-world-skills':   { product: 'budget-challenge',        bundle: 'real-world-mega-bundle' },
+  'nature-learning':     { product: 'nature-journal-walks',    bundle: 'seasonal-bundle' },
   'homeschool-life':     { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
-  'travel-worldschool':  { product: 'travel-day',             bundle: 'real-world-mega-bundle' },
+  'travel-worldschool':  { product: 'travel-day',              bundle: 'real-world-mega-bundle' },
   'getting-started':     { product: 'future-ready-skills-map', bundle: 'seasonal-bundle' },
+  'creativity-maker':    { product: 'board-game-studio',       bundle: 'creativity-mega-bundle' },
+  'ai-digital-literacy': { product: 'ai-basics',               bundle: 'ai-digital-bundle' },
 };
 
 const amelie: BlogAuthor = {
@@ -649,7 +655,7 @@ const posts: BlogPost[] = [
     slug: 'ai-for-kids-2026',
     title: 'How to Teach Kids About AI in 2026 (Without Fear or Hype)',
     excerpt: 'AI isn\u2019t going away. Here\u2019s how to help your kids understand it, use it wisely, and think critically about the technology shaping their world.',
-    category: 'real-world-skills',
+    category: 'ai-digital-literacy',
     publishedAt: '2025-12-19',
     dateModified: '2025-12-19',
     keywords: ['AI for kids', 'AI basics for children', 'teach kids about AI', 'digital literacy kids', 'AI education homeschool', 'artificial intelligence for families'],
@@ -1253,7 +1259,7 @@ const posts: BlogPost[] = [
     slug: 'raise-creative-kids',
     title: 'How to Raise Creative Kids (Without Buying More Craft Supplies)',
     excerpt: 'Creativity isn\'t about glitter and pipe cleaners. It\'s about how your kids think. Here\'s how to nurture it through everyday life — no Pinterest projects required.',
-    category: 'real-world-skills',
+    category: 'creativity-maker',
     publishedAt: '2026-01-24',
     dateModified: '2026-01-24',
     keywords: ['creative kids', 'creativity homeschool', 'raise creative children', 'creative thinking kids', 'homeschool creativity', 'divergent thinking children'],
@@ -2196,7 +2202,7 @@ const posts: BlogPost[] = [
     slug: 'ai-myths-facts-kids',
     title: 'AI Myths vs. Facts: What Kids (and Parents) Get Wrong',
     excerpt: 'From "AI is basically a brain" to "robots are coming for every job" — the misconceptions are everywhere. Here\u2019s what\u2019s actually true, and why understanding reality matters more than fear or hype.',
-    category: 'real-world-skills',
+    category: 'ai-digital-literacy',
     publishedAt: '2026-02-18',
     keywords: ['AI myths for kids', 'artificial intelligence facts children', 'teach kids about AI', 'AI misconceptions', 'AI education families', 'is AI dangerous for kids'],
     readTimeMinutes: 10,
@@ -2253,7 +2259,7 @@ const posts: BlogPost[] = [
     slug: 'teach-kids-prompt-ai',
     title: 'How to Teach Kids to Prompt AI (So It Actually Helps Them Learn)',
     excerpt: 'Asking AI good questions is a real skill \u2014 and teaching kids to do it makes them better thinkers, not lazier ones. Here\u2019s how to start, with examples for every age.',
-    category: 'real-world-skills',
+    category: 'ai-digital-literacy',
     publishedAt: '2026-03-01',
     keywords: ['teach kids AI prompts', 'prompt engineering for kids', 'AI tools for learning', 'how to use ChatGPT kids', 'AI homework help', 'critical thinking AI'],
     readTimeMinutes: 11,
@@ -2310,7 +2316,7 @@ const posts: BlogPost[] = [
     slug: 'media-literacy-kids',
     title: 'Media Literacy for Kids: How to Raise Critical Thinkers in a Digital World',
     excerpt: 'Your kids are swimming in content \u2014 ads, videos, AI-generated images, influencer posts, and \u201cnews\u201d that isn\u2019t. Here\u2019s how to teach them to evaluate what they see and think critically about all of it.',
-    category: 'real-world-skills',
+    category: 'ai-digital-literacy',
     publishedAt: '2026-03-10',
     keywords: ['media literacy kids', 'critical thinking digital', 'fake news children', 'teach kids evaluate sources', 'digital literacy homeschool', 'online safety critical thinking'],
     readTimeMinutes: 11,
@@ -2384,7 +2390,7 @@ const posts: BlogPost[] = [
     slug: 'board-game-design-kids',
     title: 'How to Design a Board Game With Your Kids (and Why It\u2019s Brilliant Learning)',
     excerpt: 'Designing a board game teaches maths, writing, logic, and playtesting \u2014 all without feeling like school. Here\u2019s how to do it at your kitchen table.',
-    category: 'real-world-skills',
+    category: 'creativity-maker',
     publishedAt: '2025-11-07',
     keywords: ['board game design kids', 'homeschool game design', 'create board game learning', 'game design education', 'STEAM activities kids', 'design thinking kids'],
     readTimeMinutes: 10,
@@ -2469,7 +2475,7 @@ const posts: BlogPost[] = [
     slug: 'invent-a-sport-kids',
     title: 'Let Your Kids Invent a Sport (Here\u2019s What They\u2019ll Actually Learn)',
     excerpt: 'Inventing rules, negotiating fairness, and playtesting their own game teaches more than any PE class \u2014 and it\u2019s the kind of learning kids never forget.',
-    category: 'real-world-skills',
+    category: 'creativity-maker',
     publishedAt: '2025-12-09',
     keywords: ['invent a sport kids', 'kids create games', 'homeschool physical education', 'game design PE', 'creative play learning', 'outdoor games kids create'],
     readTimeMinutes: 9,
@@ -2555,7 +2561,7 @@ const posts: BlogPost[] = [
     slug: 'rube-goldberg-kids',
     title: 'Rube Goldberg Machines: The Best STEM Activity You\u2019re Not Doing',
     excerpt: 'Building chain-reaction machines teaches physics, engineering, persistence, and creative problem-solving \u2014 all from stuff you already have in your house.',
-    category: 'real-world-skills',
+    category: 'creativity-maker',
     publishedAt: '2026-01-05',
     keywords: ['rube goldberg machine kids', 'chain reaction activities', 'STEM activities homeschool', 'engineering for kids', 'physics hands on', 'maker activities kids'],
     readTimeMinutes: 11,
@@ -2646,7 +2652,7 @@ const posts: BlogPost[] = [
     slug: 'kinetic-sculpture-land-art',
     title: 'Kinetic Sculpture and Land Art: When Nature Meets Creativity',
     excerpt: 'Building art from natural materials combines science, art, and outdoor learning \u2014 and it\u2019s one of the most calming, beautiful activities your family will ever try.',
-    category: 'nature-learning',
+    category: 'creativity-maker',
     publishedAt: '2026-01-14',
     keywords: ['land art kids', 'kinetic sculpture children', 'nature art activities', 'outdoor art homeschool', 'Andy Goldsworthy kids', 'nature creativity'],
     readTimeMinutes: 10,
@@ -2751,7 +2757,7 @@ const posts: BlogPost[] = [
     slug: 'imaginary-worlds-kids',
     title: 'Why Building Imaginary Worlds Is Serious Learning',
     excerpt: 'Worldbuilding develops writing, logic, geography, history, and systems thinking \u2014 and your kids might already be doing it without you realising.',
-    category: 'real-world-skills',
+    category: 'creativity-maker',
     publishedAt: '2026-02-09',
     keywords: ['worldbuilding kids', 'imaginary worlds learning', 'creative writing homeschool', 'systems thinking children', 'imaginative play education', 'worldbuilding activities'],
     readTimeMinutes: 11,
