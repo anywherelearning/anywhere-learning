@@ -44,13 +44,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Math.max(1, parseInt(page || '1', 10) || 1);
 
   const validCategories: BlogCategory[] = [
-    'homeschool-life',
+    'ai-digital-literacy',
+    'creativity-maker',
+    'homeschool-journey',
     'nature-learning',
     'real-world-skills',
     'travel-worldschool',
-    'getting-started',
-    'creativity-maker',
-    'ai-digital-literacy',
   ];
 
   const activeCategory = validCategories.includes(category as BlogCategory)

@@ -4,13 +4,12 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 const categories = [
   { value: '', label: 'All Posts' },
-  { value: 'homeschool-life', label: 'Homeschool Life' },
+  { value: 'ai-digital-literacy', label: 'AI & Digital Literacy' },
+  { value: 'creativity-maker', label: 'Creativity & Maker' },
+  { value: 'homeschool-journey', label: 'Homeschool Journey' },
   { value: 'nature-learning', label: 'Nature Learning' },
   { value: 'real-world-skills', label: 'Real-World Skills' },
   { value: 'travel-worldschool', label: 'Travel & Worldschool' },
-  { value: 'getting-started', label: 'Getting Started' },
-  { value: 'creativity-maker', label: 'Creativity & Maker' },
-  { value: 'ai-digital-literacy', label: 'AI & Digital Literacy' },
 ];
 
 export default function BlogCategoryFilter() {
