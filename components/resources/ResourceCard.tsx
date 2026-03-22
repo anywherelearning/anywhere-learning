@@ -54,7 +54,7 @@ export default function ResourceCard({
 
   return (
     <Link
-      href={`/resources/${slug}`}
+      href={`/guides/${slug}`}
       className="group block rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
     >
       {/* Header with topic color */}

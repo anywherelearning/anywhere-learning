@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: 'https://anywherelearning.co/resources',
+      url: 'https://anywherelearning.co/guides',
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -105,7 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const resourceUrls: MetadataRoute.Sitemap = resourcePages.map((r) => ({
-    url: `https://anywherelearning.co/resources/${r.slug}`,
+    url: `https://anywherelearning.co/guides/${r.slug}`,
     lastModified: new Date(r.dateModified || r.publishedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.85,

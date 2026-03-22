@@ -35,13 +35,14 @@ export const metadata: Metadata = {
 };
 
 interface BlogPageProps {
-  searchParams: Promise<{ category?: string; page?: string }>;
+  searchParams: Promise<{ category?: string; page?: string; q?: string }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const { category, page } = await searchParams;
+  const { category, page, q } = await searchParams;
   const featured = getFeaturedPost();
   const currentPage = Math.max(1, parseInt(page || '1', 10) || 1);
+  const searchQuery = (q || '').toLowerCase().trim();
 
   const validCategories: BlogCategory[] = [
     'ai-digital-literacy',
@@ -56,12 +57,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     ? (category as BlogCategory)
     : undefined;
 
-  const posts = activeCategory
+  let posts = activeCategory
     ? getPostsByCategory(activeCategory)
     : getAllPosts();
 
-  // Exclude featured post from grid when showing all posts
-  const allGridPosts = activeCategory
+  // Apply search filter
+  if (searchQuery) {
+    posts = posts.filter((p) =>
+      p.title.toLowerCase().includes(searchQuery) ||
+      p.excerpt.toLowerCase().includes(searchQuery) ||
+      (p.keywords && p.keywords.some((k) => k.toLowerCase().includes(searchQuery)))
+    );
+  }
+
+  // Exclude featured post from grid when showing all posts (not when searching)
+  const allGridPosts = activeCategory || searchQuery
     ? posts
     : posts.filter((p) => p.slug !== featured.slug);
 

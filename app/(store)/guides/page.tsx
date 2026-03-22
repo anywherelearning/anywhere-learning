@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
   alternates: {
-    canonical: 'https://anywherelearning.co/resources',
+    canonical: 'https://anywherelearning.co/guides',
   },
   openGraph: {
     title: 'Resource Guides — Anywhere Learning',
     description:
       'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
-    url: 'https://anywherelearning.co/resources',
+    url: 'https://anywherelearning.co/guides',
     type: 'website',
     images: [
       {
@@ -36,7 +36,7 @@ export default function ResourcesPage() {
     '@type': 'CollectionPage',
     name: 'Anywhere Learning Resource Guides',
     description: 'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
-    url: 'https://anywherelearning.co/resources',
+    url: 'https://anywherelearning.co/guides',
     publisher: {
       '@type': 'Organization',
       name: 'Anywhere Learning',
@@ -47,7 +47,7 @@ export default function ResourcesPage() {
       itemListElement: resources.map((r, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://anywherelearning.co/resources/${r.slug}`,
+        url: `https://anywherelearning.co/guides/${r.slug}`,
         name: r.title,
       })),
     },

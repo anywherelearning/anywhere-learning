@@ -327,14 +327,6 @@ const resources: ResourcePage[] = [
       'project-based-learning-homeschool',
       'real-world-learning-guide',
       'kids-making-videos-learning',
-      'what-no-prep-means',
-      'curriculum-guilt-permission-slip',
-      'homeschool-burnout',
-      'socialization-answer',
-      'partner-doesnt-support',
-      'unschooling-vs-homeschooling',
-      'homeschool-methods-compared',
-      'best-homeschool-approaches-ranked',
     ],
     recommendedProduct: 'budget-challenge',
     recommendedBundle: 'real-world-mega-bundle',
@@ -669,7 +661,6 @@ const resources: ResourcePage[] = [
       'nature-walks-science',
       'seasonal-scavenger-hunts',
       'outdoor-stem-challenges',
-      'just-let-them-play',
     ],
     recommendedProduct: 'nature-journal-walks',
     recommendedBundle: 'seasonal-bundle',
@@ -963,18 +954,13 @@ const resources: ResourcePage[] = [
     ],
     relatedBlogSlugs: [
       'homeschool-while-traveling',
-      'five-stages-deschooling',
       'slow-travel-over-bucket-list',
       'worldschool-day-structure',
       'worldschool-two-kids',
       'worldschooling-el-salvador',
       'what-we-packed-worldschooling',
       'grandparents-join-worldschool-trip',
-      'start-homeschooling-mid-year',
-      'teach-kids-second-language',
-      'new-to-homeschooling',
       'homeschool-road-trip',
-      'homeschool-vs-worldschool',
     ],
     recommendedProduct: 'travel-day',
     recommendedBundle: 'real-world-mega-bundle',
@@ -1262,9 +1248,6 @@ const resources: ResourcePage[] = [
     ],
     relatedBlogSlugs: [
       'raise-creative-kids',
-      'kids-making-videos-learning',
-      'project-based-learning-homeschool',
-      'just-let-them-play',
       'board-game-design-kids',
       'invent-a-sport-kids',
       'rube-goldberg-kids',
@@ -1653,7 +1636,7 @@ const resources: ResourcePage[] = [
 
 export function getAllResources(): ResourcePage[] {
   return [...resources].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    (a, b) => a.title.localeCompare(b.title)
   );
 }
 
