@@ -40,6 +40,11 @@ const topicIcons: Record<ResourceTopic, ReactNode> = {
       <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 9h6M9 12h6M9 15h4" />
     </svg>
   ),
+  'homeschool-journey': (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round">
+      <circle cx="12" cy="12" r="10" /><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z" />
+    </svg>
+  ),
 };
 
 export default function ResourceCard({

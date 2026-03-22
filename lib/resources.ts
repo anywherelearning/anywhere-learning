@@ -9,7 +9,8 @@ export type ResourceTopic =
   | 'nature-stem'
   | 'worldschooling'
   | 'creativity-maker'
-  | 'ai-digital-literacy';
+  | 'ai-digital-literacy'
+  | 'homeschool-journey';
 
 export interface ResourceAuthor {
   name: string;
@@ -41,7 +42,8 @@ export const resourceTopics: Record<ResourceTopic, { label: string; color: strin
   'nature-stem':          { label: 'Nature & Outdoor STEM',  color: '#6b8e6b' },
   'worldschooling':       { label: 'Worldschooling',         color: '#c4836a' },
   'creativity-maker':     { label: 'Creativity & Makers',    color: '#c47a8f' },
-  'ai-digital-literacy':  { label: 'AI & Digital Literacy',  color: '#588157' },
+  'ai-digital-literacy':  { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
+  'homeschool-journey':   { label: 'Homeschool Journey',     color: '#d4a373' },
 };
 
 /** Default product + bundle recommendation for each resource topic */
@@ -51,6 +53,7 @@ export const resourceProductDefaults: Record<ResourceTopic, { product: string; b
   'worldschooling':       { product: 'travel-day',             bundle: 'real-world-mega-bundle' },
   'creativity-maker':     { product: 'rube-goldberg-challenge', bundle: 'creativity-mega-bundle' },
   'ai-digital-literacy':  { product: 'ai-explorer-pack',      bundle: 'real-world-mega-bundle' },
+  'homeschool-journey':   { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
 };
 
 const amelie: ResourceAuthor = {
@@ -1568,12 +1571,80 @@ const resources: ResourcePage[] = [
     ],
     relatedBlogSlugs: [
       'ai-for-kids-2026',
-      'kids-making-videos-learning',
       'ai-myths-facts-kids',
       'teach-kids-prompt-ai',
       'media-literacy-kids',
     ],
     recommendedProduct: 'ai-explorer-pack',
+    recommendedBundle: 'real-world-mega-bundle',
+  },
+  {
+    slug: 'homeschool-journey',
+    title: 'Your Homeschool Journey: From First Doubts to Finding Your Rhythm',
+    excerpt: 'Everything you need to navigate the emotional and practical side of homeschooling — from the scary first step to the moment it finally clicks.',
+    topic: 'homeschool-journey',
+    publishedAt: '2025-10-01',
+    dateModified: '2026-03-22',
+    keywords: ['how to start homeschooling', 'homeschool burnout', 'deschooling', 'homeschool socialization', 'homeschool methods', 'new to homeschooling', 'homeschool guilt'],
+    readTimeMinutes: 18,
+    author: amelie,
+    heroImageAlt: 'Parent and child walking together on a path through trees with sunlight filtering through',
+    content: [
+      { type: 'summary', text: 'The homeschool journey has predictable phases: the leap of faith, the deschooling transition, finding your method, navigating doubt and criticism, and eventually settling into a rhythm that works for your family. Understanding these phases — and knowing they are normal — is the single most reassuring thing a new homeschool parent can hear.' },
+      { type: 'paragraph', text: 'Every homeschool family has a story that starts the same way: something wasn\'t working. Maybe your child was miserable. Maybe the system was failing them. Maybe you just knew, deep down, that there had to be a better way. Whatever brought you here — you\'re not alone, and the path ahead is more well-trodden than you think.' },
+      { type: 'paragraph', text: 'This guide maps the entire homeschool journey — the emotional arc, the practical milestones, and the hard parts nobody warns you about. Whether you\'re considering pulling your kids out, you\'re three months in and panicking, or you\'ve been at this for years and need a reset — there\'s a section here for you.' },
+      { type: 'heading', level: 2, text: 'Phase 1: The Decision' },
+      { type: 'paragraph', text: 'This is the scariest part. You\'re questioning everything society told you about education. Your partner might not be on board. Your parents definitely aren\'t. And a little voice in your head keeps asking: "Who am I to teach my own kids?"' },
+      { type: 'paragraph', text: 'Here\'s what I want you to know: [you don\'t need to be a teacher](/blog/new-to-homeschooling). You need to be a parent who cares — and the fact that you\'re researching this at all proves you are. The decision to homeschool isn\'t about having all the answers. It\'s about being willing to find them alongside your child.' },
+      { type: 'paragraph', text: 'If your partner is hesitant, that\'s normal too. [Most homeschool families start with one parent convinced and one terrified](/blog/partner-doesnt-support). The key is a trial period — "let\'s try one semester" — that gives everyone an off-ramp.' },
+      { type: 'heading', level: 2, text: 'Phase 2: Deschooling' },
+      { type: 'paragraph', text: 'You pulled them out. Now what? The answer, counterintuitively, is: nothing. At least for a while.' },
+      { type: 'paragraph', text: '[Deschooling is the transition period](/blog/five-stages-deschooling) where your family unlearns the habits, expectations, and anxieties that school installed. Your child needs to remember what it feels like to be curious without a grade attached. You need to let go of the idea that learning looks like sitting at a desk.' },
+      { type: 'paragraph', text: 'The general guideline is one month of deschooling for every year of formal schooling. A child who attended school for five years might need five months before they\'re ready to engage with learning on their own terms. During this time, they might watch a lot of YouTube, sleep in, build forts, and seem to do "nothing." This is not nothing. This is healing.' },
+      { type: 'tip', title: 'Deschooling Tip', text: 'Deschooling isn\'t just for kids — parents need it too. You need to unlearn the idea that education requires a curriculum, a schedule, and measurable outputs. The hardest part of deschooling is trusting the process when it looks like your child is doing nothing. They\'re not. They\'re remembering how to be curious.' },
+      { type: 'heading', level: 2, text: 'Phase 3: Finding Your Method' },
+      { type: 'paragraph', text: 'Once deschooling has done its work, you\'ll start to see what your child actually needs. And that\'s when the method question becomes relevant — not before.' },
+      { type: 'paragraph', text: 'There are [many approaches to choose from](/blog/best-homeschool-approaches-ranked): real-world learning, Charlotte Mason, unschooling, classical, unit studies, and endless variations. The good news? You don\'t have to pick one forever. Most families end up with an eclectic blend that changes over time.' },
+      { type: 'paragraph', text: 'The comparison posts in this section can help you understand the differences: [unschooling vs structured homeschooling](/blog/unschooling-vs-homeschooling), [Charlotte Mason vs unschooling vs real-world learning](/blog/homeschool-methods-compared), and [homeschooling vs worldschooling](/blog/homeschool-vs-worldschool). Read them, try things, and trust that the right approach is the one your family actually enjoys doing.' },
+      { type: 'heading', level: 2, text: 'Phase 4: The Guilt and the Doubt' },
+      { type: 'paragraph', text: 'At some point — maybe month three, maybe month nine — you will have a crisis. "Am I doing enough? Are they falling behind? Was this a terrible mistake?" This is so universal that we wrote two entire posts about it: [curriculum guilt](/blog/curriculum-guilt-permission-slip) and the [burnout that follows](/blog/homeschool-burnout).' },
+      { type: 'paragraph', text: 'The guilt comes from comparing your messy, real, human homeschool to an imagined ideal — either the "perfect homeschool" you see on Instagram, or the "normal school experience" you feel you\'re denying your children. Both comparisons are unfair. Instagram is curated. And the "normal" school experience includes plenty of its own damage.' },
+      { type: 'paragraph', text: 'Watch your kids. Are they curious? Growing? Happy most of the time? Then you\'re doing enough. You\'re doing more than enough.' },
+      { type: 'heading', level: 2, text: 'Phase 5: Handling the Critics' },
+      { type: 'paragraph', text: 'The [socialization question](/blog/socialization-answer) will follow you forever. So will the concerned grandparents, the skeptical neighbours, and the well-meaning friends who "just want the best for your kids." Here\'s the liberating truth: you don\'t owe anyone an explanation. A warm, confident "we\'re really happy with how it\'s going" is a complete sentence.' },
+      { type: 'paragraph', text: 'The research is on your side. Homeschooled children consistently demonstrate strong social skills, civic engagement, and academic outcomes. You don\'t need to memorise studies — but knowing they exist helps when the doubt creeps in.' },
+      { type: 'heading', level: 2, text: 'Phase 6: Finding Your Rhythm' },
+      { type: 'paragraph', text: 'And then, somewhere around year two, something shifts. You stop comparing yourself to school. You stop justifying your choices to relatives. You stop buying curriculum you\'ll never use. You start trusting yourself. Your child starts trusting themselves. And the whole thing just... works.' },
+      { type: 'paragraph', text: 'This doesn\'t mean every day is easy. You\'ll still have hard weeks, cabin fever in February, and moments where you fantasise about dropping everyone at school and going to a coffee shop alone. But underneath the daily chaos, there\'s a deep confidence that this is right for your family. That confidence is earned — through every hard phase you survived to get here.' },
+      { type: 'paragraph', text: 'The homeschool journey isn\'t a straight line. It\'s a winding path with switchbacks, rest stops, scenic overlooks, and the occasional wrong turn. But it leads somewhere beautiful — a family that learns together, grows together, and genuinely likes being together.' },
+      { type: 'pull-quote', text: 'The homeschool journey isn\'t a straight line. It\'s a winding path — and every family walks it differently.' },
+      { type: 'heading', level: 2, text: 'Where to go from here' },
+      { type: 'paragraph', text: 'Wherever you are on this journey, the blog posts linked throughout this page go deeper on each phase. Start with whatever matches your current stage, and know that every homeschool parent before you has stood exactly where you\'re standing now. You\'re not behind. You\'re not failing. You\'re just getting started — and that\'s exactly where you\'re supposed to be.' },
+      { type: 'cta', text: 'New to all of this? Our free guide gives you 10 practical starting points — no curriculum, no pressure, no judgment.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'faq', items: [
+        { question: 'How do I know if homeschooling is right for my family?', answer: 'If your child is unhappy, unstimulated, or struggling in their current environment — and you\'re willing to try something different — homeschooling is worth exploring. Start with a trial semester. You can always go back.' },
+        { question: 'What is deschooling and how long does it take?', answer: 'Deschooling is the transition period after leaving school where your family unlearns institutional habits and expectations. The general guideline is one month per year of formal schooling. During this time, prioritise rest, play, and rebuilding your child\'s natural curiosity.' },
+        { question: 'Which homeschool method should I start with?', answer: 'Start with real-world learning or unit studies — both are intuitive and require no teaching background. Try different approaches and keep what works. Most families end up with an eclectic blend that evolves over time.' },
+        { question: 'How do I handle burnout as a homeschool parent?', answer: 'Burnout usually comes from trying to replicate school at home. Simplify: drop the subjects that cause the most stress, go outside more, and remember that less structure often produces better learning. Build in regular breaks for yourself.' },
+        { question: 'Is it too late to start homeschooling?', answer: 'No. Families start homeschooling at every age and stage — from kindergarten through high school. Older children may need a longer deschooling period, but they also bring self-awareness and maturity to the transition.' },
+      ]},
+    ],
+    relatedBlogSlugs: [
+      'new-to-homeschooling',
+      'five-stages-deschooling',
+      'start-homeschooling-mid-year',
+      'homeschool-burnout',
+      'curriculum-guilt-permission-slip',
+      'socialization-answer',
+      'partner-doesnt-support',
+      'best-homeschool-approaches-ranked',
+      'homeschool-methods-compared',
+      'unschooling-vs-homeschooling',
+      'homeschool-vs-worldschool',
+      'just-let-them-play',
+      'what-no-prep-means',
+    ],
+    recommendedProduct: 'future-ready-skills-map',
     recommendedBundle: 'real-world-mega-bundle',
   },
 ];

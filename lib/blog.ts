@@ -7,13 +7,12 @@ export type { ContentBlock as BlogContentBlock } from './content-blocks';
 import type { ContentBlock } from './content-blocks';
 
 export type BlogCategory =
-  | 'homeschool-life'
+  | 'ai-digital-literacy'
+  | 'creativity-maker'
+  | 'homeschool-journey'
   | 'nature-learning'
   | 'real-world-skills'
-  | 'travel-worldschool'
-  | 'getting-started'
-  | 'creativity-maker'
-  | 'ai-digital-literacy';
+  | 'travel-worldschool';
 
 export interface BlogAuthor {
   name: string;
@@ -44,24 +43,22 @@ export interface BlogPost {
 }
 
 export const blogCategories: Record<BlogCategory, { label: string; color: string }> = {
-  'homeschool-life':     { label: 'Homeschool Life',        color: '#588157' },
+  'ai-digital-literacy': { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
+  'creativity-maker':    { label: 'Creativity & Maker',     color: '#c47a8f' },
+  'homeschool-journey':  { label: 'Homeschool Journey',     color: '#d4a373' },
   'nature-learning':     { label: 'Nature Learning',        color: '#6b8e6b' },
   'real-world-skills':   { label: 'Real-World Skills',      color: '#8b7355' },
   'travel-worldschool':  { label: 'Travel & Worldschool',   color: '#c4836a' },
-  'getting-started':     { label: 'Getting Started',        color: '#d4a373' },
-  'creativity-maker':    { label: 'Creativity & Maker',     color: '#c47a8f' },
-  'ai-digital-literacy': { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
 };
 
 /** Default product + bundle recommendation for each blog category (used by auto-injection) */
 export const blogProductDefaults: Record<BlogCategory, { product: string; bundle: string }> = {
-  'real-world-skills':   { product: 'budget-challenge',        bundle: 'real-world-mega-bundle' },
-  'nature-learning':     { product: 'nature-journal-walks',    bundle: 'seasonal-bundle' },
-  'homeschool-life':     { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
-  'travel-worldschool':  { product: 'travel-day',              bundle: 'real-world-mega-bundle' },
-  'getting-started':     { product: 'future-ready-skills-map', bundle: 'seasonal-bundle' },
-  'creativity-maker':    { product: 'board-game-studio',       bundle: 'creativity-mega-bundle' },
   'ai-digital-literacy': { product: 'ai-basics',               bundle: 'ai-digital-bundle' },
+  'creativity-maker':    { product: 'board-game-studio',       bundle: 'creativity-mega-bundle' },
+  'homeschool-journey':  { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
+  'nature-learning':     { product: 'nature-journal-walks',    bundle: 'seasonal-bundle' },
+  'real-world-skills':   { product: 'budget-challenge',        bundle: 'real-world-mega-bundle' },
+  'travel-worldschool':  { product: 'travel-day',              bundle: 'real-world-mega-bundle' },
 };
 
 const amelie: BlogAuthor = {
@@ -190,7 +187,7 @@ const posts: BlogPost[] = [
     slug: 'curriculum-guilt-permission-slip',
     title: 'Letting Go of Curriculum Guilt: A Permission Slip',
     excerpt: 'You chose homeschooling for freedom. So why does it feel like you\u2019re failing if you\u2019re not following a curriculum? Here\u2019s your permission to let go.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-12',
     dateModified: '2025-11-12',
     keywords: ['curriculum guilt', 'homeschool without curriculum', 'permission to homeschool differently', 'relaxed homeschooling'],
@@ -304,7 +301,7 @@ const posts: BlogPost[] = [
     slug: 'new-to-homeschooling',
     title: 'New to Homeschooling? Start Here (No Curriculum Required)',
     excerpt: 'Just pulled your kids out of school? Overwhelmed by options? Take a breath. Here\u2019s everything you need to know to start \u2014 and none of what you don\u2019t.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-10-06',
     dateModified: '2025-10-06',
     keywords: ['new to homeschooling', 'how to start homeschooling', 'homeschool beginner guide', 'deschooling'],
@@ -587,7 +584,7 @@ const posts: BlogPost[] = [
     slug: 'homeschool-burnout',
     title: 'Homeschool Burnout Is Real — Here\u2019s What Actually Helps',
     excerpt: 'You\u2019re exhausted, touched out, and questioning everything. You\u2019re not failing. You\u2019re carrying too much. Here\u2019s how to come back from the brink.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-28',
     dateModified: '2025-11-28',
     keywords: ['homeschool burnout', 'homeschool mom burnout', 'homeschool exhaustion', 'tired of homeschooling', 'homeschool motivation', 'avoiding homeschool burnout'],
@@ -806,7 +803,7 @@ const posts: BlogPost[] = [
     slug: 'five-stages-deschooling',
     title: 'The 5 Stages of Deschooling (and Why Stage 3 Is the Hardest)',
     excerpt: 'Pulled your kids out of school? The first few months feel like chaos. That\u2019s normal. Here\u2019s what to expect at each stage \u2014 and why the messy middle is where the real transformation happens.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2026-02-04',
     dateModified: '2026-02-04',
     keywords: ['deschooling', 'deschooling stages', 'transition from school to homeschool', 'deschooling activities', 'how long does deschooling take', 'pulled kids out of school'],
@@ -885,7 +882,7 @@ const posts: BlogPost[] = [
     slug: 'what-no-prep-means',
     title: 'What "No Prep" Actually Means (and Why It Changed Our Homeschool)',
     excerpt: 'Every homeschool resource claims to be "no prep." Most of them still need you to read a manual, gather supplies, and block out an hour. Here\u2019s what no prep should really mean \u2014 and why it matters more than you think.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-03',
     dateModified: '2025-11-03',
     keywords: ['no prep homeschool', 'no prep homeschool activities', 'low prep homeschool', 'easy homeschool activities', 'homeschool without planning', 'open and go homeschool'],
@@ -943,7 +940,7 @@ const posts: BlogPost[] = [
     slug: 'just-let-them-play',
     title: 'Why "Just Let Them Play" Is the Best Curriculum You\u2019ll Never Buy',
     excerpt: 'Play isn\u2019t the break between learning. It IS the learning. Here\u2019s the case for unstructured play as the most powerful educational tool your child has \u2014 backed by research and real family experience.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-10-13',
     dateModified: '2025-10-13',
     keywords: ['unstructured play learning', 'play based learning homeschool', 'importance of play', 'let kids play', 'play as education', 'child led learning'],
@@ -1573,7 +1570,7 @@ const posts: BlogPost[] = [
     slug: 'start-homeschooling-mid-year',
     title: 'How to Start Homeschooling Mid-Year (It\u2019s Not Too Late)',
     excerpt: 'Thinking about pulling your kids out of school mid-year? You\u2019re not behind. You\u2019re not crazy. Here\u2019s how to start homeschooling whenever you\u2019re ready \u2014 no perfect timing required.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-12-29',
     dateModified: '2025-12-29',
     keywords: ['start homeschooling mid-year', 'homeschool mid-year', 'pull kids from school', 'start homeschool anytime', 'homeschooling mid-year withdrawal', 'can I start homeschooling mid-year'],
@@ -2854,7 +2851,7 @@ const posts: BlogPost[] = [
     slug: 'socialization-answer',
     title: 'How to Answer "What About Socialization?" Without Losing Your Mind',
     excerpt: 'Every homeschool parent has heard it. At the family barbecue, the grocery store, the dentist\'s office. Here\'s how to respond — with grace, evidence, and zero guilt.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-06',
     dateModified: '2025-11-06',
     keywords: ['homeschool socialization', 'socialization myth', 'homeschool criticism', 'homeschool social skills', 'are homeschooled kids socialized'],
@@ -3013,7 +3010,7 @@ const posts: BlogPost[] = [
     slug: 'partner-doesnt-support',
     title: 'When Your Partner Doesn\'t Support Homeschooling',
     excerpt: 'You\'re convinced homeschooling is right for your family. Your partner isn\'t. Here\'s how to navigate the disagreement without it becoming a battle.',
-    category: 'homeschool-life',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-17',
     dateModified: '2025-11-17',
     keywords: ['homeschool spouse disagreement', 'partner doesn\'t support homeschooling', 'homeschool marriage', 'convince husband homeschool', 'homeschool conflict'],
@@ -3079,7 +3076,7 @@ const posts: BlogPost[] = [
     slug: 'homeschool-vs-worldschool',
     title: 'Homeschool vs Worldschool: What\'s the Difference?',
     excerpt: 'Homeschooling and worldschooling overlap more than you think — but the philosophy behind each shapes how your family learns. Here\'s a practical comparison.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-10-13',
     dateModified: '2025-10-13',
     keywords: ['homeschool vs worldschool', 'worldschooling explained', 'difference between homeschool and worldschool', 'worldschool families', 'types of homeschooling'],
@@ -3167,7 +3164,7 @@ const posts: BlogPost[] = [
     slug: 'unschooling-vs-homeschooling',
     title: 'Unschooling vs Homeschooling: Which Approach Is Right for Your Family?',
     excerpt: 'One gives structure. The other gives freedom. Both work — but they work differently. Here\'s an honest comparison to help you find your fit.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-10-06',
     dateModified: '2025-10-06',
     keywords: ['unschooling vs homeschooling', 'what is unschooling', 'unschooling approach', 'child-led learning', 'homeschool methods comparison'],
@@ -3251,7 +3248,7 @@ const posts: BlogPost[] = [
     slug: 'homeschool-methods-compared',
     title: 'Charlotte Mason vs Unschooling vs Real-World Learning: A Practical Comparison',
     excerpt: 'Three popular homeschool approaches, compared honestly — what each one looks like in practice, who it\'s best for, and how to blend them.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-10-20',
     dateModified: '2025-10-20',
     keywords: ['homeschool methods comparison', 'Charlotte Mason vs unschooling', 'best homeschool approach', 'homeschool philosophy comparison', 'real world learning vs curriculum'],
@@ -3328,7 +3325,7 @@ const posts: BlogPost[] = [
     slug: 'best-homeschool-approaches-ranked',
     title: '7 Best Homeschool Approaches for Non-Teacher Parents (Ranked)',
     excerpt: 'You don\'t have a teaching degree. Neither do 95% of homeschool parents. Here are the 7 approaches that work best when you\'re learning alongside your kids.',
-    category: 'getting-started',
+    category: 'homeschool-journey',
     publishedAt: '2025-11-28',
     dateModified: '2025-11-28',
     keywords: ['best homeschool method', 'homeschool approaches ranked', 'how to homeschool without teaching degree', 'easiest homeschool method', 'homeschool methods for beginners'],
