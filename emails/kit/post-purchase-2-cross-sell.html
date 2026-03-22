@@ -1,0 +1,154 @@
+<!--
+  POST-PURCHASE SEQUENCE — Email 2: Cross-sell / Explore More
+  Trigger: 7 days after buyer tag
+  Subject: More where that came from
+  Preview: Other packs families love pairing together
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #f5f3ee; margin: 0; padding: 0; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f3ee;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+        <table cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; background-color: #faf9f6;">
+
+          <!-- Brand Header -->
+          <tr>
+            <td align="center" style="padding: 28px 24px 20px;">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="vertical-align: middle; padding-right: 10px;">
+                    <img src="https://anywherelearning.co/logo-icon.png" width="36" height="26" alt="" style="display: block;">
+                  </td>
+                  <td style="vertical-align: middle;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 22px; font-weight: 700; color: #588157; line-height: 1;">Anywhere Learning</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Main Content -->
+          <tr>
+            <td style="padding: 8px 32px 8px;">
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Hey {{ subscriber.first_name | default: "there" }},</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
+                Hope you've been enjoying your activity packs! I wanted to share what other families often pair together — in case you're looking for your next one.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Product Grid -->
+          <tr>
+            <td style="padding: 0 32px 8px;">
+              <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f5f0; border-radius: 12px;">
+                <tr>
+                  <td style="padding: 24px 20px 8px;">
+                    <p style="font-size: 14px; font-weight: 600; color: #588157; margin: 0 0 16px; text-align: center; text-transform: uppercase; letter-spacing: 1px;">Families also love</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0 20px;">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="50%" style="text-align: center; vertical-align: top; padding: 0 6px 16px;">
+                          <a href="https://anywherelearning.co/shop/creativity-bundle" style="text-decoration: none;">
+                            <img src="https://anywherelearning.co/products/mega-bundle-creativity.jpg" width="220" alt="Creativity Bundle" style="width: 100%; max-width: 220px; border-radius: 8px; display: block; margin: 0 auto;">
+                            <p style="font-size: 13px; color: #2d2d2d; margin: 8px 0 2px; font-weight: 600;">Creativity Bundle</p>
+                            <p style="font-size: 12px; color: #588157; margin: 0; font-weight: 600;">Save 25%+</p>
+                          </a>
+                        </td>
+                        <td width="50%" style="text-align: center; vertical-align: top; padding: 0 6px 16px;">
+                          <a href="https://anywherelearning.co/shop/ai-digital-literacy-bundle" style="text-decoration: none;">
+                            <img src="https://anywherelearning.co/products/mega-bundle-ai-digital.jpg" width="220" alt="AI & Digital Literacy Bundle" style="width: 100%; max-width: 220px; border-radius: 8px; display: block; margin: 0 auto;">
+                            <p style="font-size: 13px; color: #2d2d2d; margin: 8px 0 2px; font-weight: 600;">AI & Digital Literacy</p>
+                            <p style="font-size: 12px; color: #588157; margin: 0; font-weight: 600;">Save 25%+</p>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Continue Content -->
+          <tr>
+            <td style="padding: 16px 32px 8px;">
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
+                And don't forget — if you pick up 5 or more individual packs, discounts kick in automatically at checkout. No codes needed.
+              </p>
+
+              <!-- Referral Reminder -->
+              <table cellpadding="0" cellspacing="0" width="100%" style="margin: 16px 0 24px;">
+                <tr>
+                  <td style="background-color: #f0f7f0; border-radius: 12px; padding: 20px; text-align: center;">
+                    <p style="font-size: 15px; line-height: 24px; color: #2d2d2d; margin: 0 0 8px;">
+                      <strong>Know a family who'd love this?</strong>
+                    </p>
+                    <p style="font-size: 14px; line-height: 22px; color: #555555; margin: 0;">
+                      Check your purchase confirmation email for your referral code. Share it and you both get 15% off!
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 4px 0 28px;">
+                    <a href="https://anywherelearning.co/shop" style="background-color: #588157; border-radius: 12px; color: #faf9f6; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 36px; text-decoration: none;">Browse All Packs</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 24px 0 0;">
+                Happy learning,<br>
+                <span style="font-family: 'Dancing Script', cursive; font-size: 22px; color: #588157;">Amelie</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="border-top: 1px solid #e5e5e5;">
+              <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 24px 32px;">
+                    <table cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="vertical-align: middle; padding-right: 6px;">
+                          <img src="https://anywherelearning.co/logo-icon.png" width="20" height="14" alt="" style="display: block; opacity: 0.4;">
+                        </td>
+                        <td style="vertical-align: middle;">
+                          <span style="font-size: 13px; color: #999999;">Anywhere Learning</span>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="font-size: 13px; color: #999999; margin: 4px 0 8px; line-height: 1.5;">Meaningful Learning, Wherever You Are</p>
+                    <p style="font-size: 13px; margin: 0;">
+                      <a href="https://anywherelearning.co/shop" style="color: #588157; text-decoration: none;">Shop</a>
+                      &middot;
+                      <a href="https://anywherelearning.co/blog" style="color: #588157; text-decoration: none;">Blog</a>
+                      &middot;
+                      <a href="https://anywherelearning.co/resources" style="color: #588157; text-decoration: none;">Resources</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
