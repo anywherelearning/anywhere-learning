@@ -49,6 +49,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     'real-world-skills',
     'travel-worldschool',
     'getting-started',
+    'creativity-maker',
+    'ai-digital-literacy',
   ];
 
   const activeCategory = validCategories.includes(category as BlogCategory)

@@ -9,6 +9,8 @@ const categories = [
   { value: 'real-world-skills', label: 'Real-World Skills' },
   { value: 'travel-worldschool', label: 'Travel & Worldschool' },
   { value: 'getting-started', label: 'Getting Started' },
+  { value: 'creativity-maker', label: 'Creativity & Maker' },
+  { value: 'ai-digital-literacy', label: 'AI & Digital Literacy' },
 ];
 
 export default function BlogCategoryFilter() {
