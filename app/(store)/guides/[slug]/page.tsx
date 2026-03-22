@@ -42,7 +42,7 @@ export async function generateMetadata({
     description: resource.excerpt,
     keywords: resource.keywords,
     alternates: {
-      canonical: `https://anywherelearning.co/resources/${resource.slug}`,
+      canonical: `https://anywherelearning.co/guides/${resource.slug}`,
     },
     openGraph: {
       title: resource.title,
@@ -51,7 +51,7 @@ export async function generateMetadata({
       publishedTime: resource.publishedAt,
       modifiedTime: resource.dateModified || resource.publishedAt,
       authors: [resource.author.name],
-      url: `https://anywherelearning.co/resources/${resource.slug}`,
+      url: `https://anywherelearning.co/guides/${resource.slug}`,
       images: [
         {
           url: resource.heroImage
@@ -152,7 +152,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://anywherelearning.co/resources/${resource.slug}`,
+      '@id': `https://anywherelearning.co/guides/${resource.slug}`,
     },
   };
 
@@ -161,8 +161,8 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://anywherelearning.co' },
-      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://anywherelearning.co/resources' },
-      { '@type': 'ListItem', position: 3, name: resource.title, item: `https://anywherelearning.co/resources/${resource.slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://anywherelearning.co/guides' },
+      { '@type': 'ListItem', position: 3, name: resource.title, item: `https://anywherelearning.co/guides/${resource.slug}` },
     ],
   };
 
@@ -211,7 +211,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
           <div className="mb-8">
             <Breadcrumb
               items={[
-                { label: 'Resources', href: '/resources' },
+                { label: 'Guides', href: '/guides' },
                 { label: resource.title },
               ]}
             />

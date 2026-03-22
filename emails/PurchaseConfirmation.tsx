@@ -244,7 +244,7 @@ export default function PurchaseConfirmation({
               {' · '}
               <Link href={`${baseUrl}/blog`} style={footerLink}>Blog</Link>
               {' · '}
-              <Link href={`${baseUrl}/resources`} style={footerLink}>Resources</Link>
+              <Link href={`${baseUrl}/guides`} style={footerLink}>Guides</Link>
             </Text>
           </Section>
 
