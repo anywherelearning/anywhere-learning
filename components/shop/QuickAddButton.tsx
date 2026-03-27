@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
+import { isCoveredByCart } from '@/lib/cart';
 
 interface QuickAddButtonProps {
   stripePriceId: string;
@@ -24,7 +25,7 @@ export default function QuickAddButton({
   imageUrl,
 }: QuickAddButtonProps) {
   const { isNative } = useCapacitor();
-  const { addItem, removeItem, isInCart } = useCart();
+  const { items, addItem, removeItem, isInCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
   const [justRemoved, setJustRemoved] = useState(false);
 
@@ -32,6 +33,22 @@ export default function QuickAddButton({
   if (isNative) return null;
 
   const alreadyInCart = isInCart(slug);
+  const coveredBy = isCoveredByCart(items, slug);
+
+  // Product is included in a bundle already in the cart — show non-interactive indicator
+  if (coveredBy) {
+    return (
+      <span
+        aria-label={`Included in ${coveredBy}`}
+        title={`Included in ${coveredBy}`}
+        className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-forest/10 text-forest"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      </span>
+    );
+  }
 
   function handleClick(e: React.MouseEvent) {
     e.preventDefault();

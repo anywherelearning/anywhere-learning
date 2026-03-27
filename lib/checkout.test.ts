@@ -74,15 +74,15 @@ function calcDiscountedAmount(priceCents: number, discountPercent: number): numb
 
 describe('BYOB discounted amount calculation', () => {
   it('applies 10% discount correctly', () => {
-    expect(calcDiscountedAmount(499, 10)).toBe(449); // 499 * 0.9 = 449.1 → 449
+    expect(calcDiscountedAmount(599, 10)).toBe(539); // 599 * 0.9 = 539.1 → 539
   });
 
   it('applies 15% discount correctly', () => {
-    expect(calcDiscountedAmount(499, 15)).toBe(424); // 499 * 0.85 = 424.15 → 424
+    expect(calcDiscountedAmount(599, 15)).toBe(509); // 599 * 0.85 = 509.15 → 509
   });
 
   it('applies 20% discount correctly', () => {
-    expect(calcDiscountedAmount(499, 20)).toBe(399); // 499 * 0.8 = 399.2 → 399
+    expect(calcDiscountedAmount(599, 20)).toBe(479); // 599 * 0.8 = 479.2 → 479
   });
 
   it('rounds to nearest cent', () => {
@@ -94,7 +94,7 @@ describe('BYOB discounted amount calculation', () => {
   });
 
   it('returns full price at 0% discount', () => {
-    expect(calcDiscountedAmount(499, 0)).toBe(499);
+    expect(calcDiscountedAmount(599, 0)).toBe(599);
   });
 });
 
@@ -156,7 +156,7 @@ describe('checkout line item construction', () => {
       isBundle: false,
       stripePriceId: 'price_ind_123',
       name: 'Spring Pack',
-      priceCents: 499,
+      priceCents: 599,
       imageUrl: '/products/spring.jpg',
     };
     const items = buildLineItems([individual], 10, siteUrl);
@@ -168,7 +168,7 @@ describe('checkout line item construction', () => {
           images: ['https://anywherelearning.co/products/spring.jpg'],
           metadata: { stripePriceId: 'price_ind_123' },
         },
-        unit_amount: 449,
+        unit_amount: 539,
       },
       quantity: 1,
     });
@@ -179,7 +179,7 @@ describe('checkout line item construction', () => {
       isBundle: false,
       stripePriceId: 'price_ind_123',
       name: 'Spring Pack',
-      priceCents: 499,
+      priceCents: 599,
       imageUrl: null,
     };
     const items = buildLineItems([individual], 0, siteUrl);
@@ -205,7 +205,7 @@ describe('checkout line item construction', () => {
   it('handles mixed cart (bundle + BYOB individuals)', () => {
     const products: MockProduct[] = [
       { isBundle: true, stripePriceId: 'price_bundle', name: 'Bundle', priceCents: 3999, imageUrl: null },
-      { isBundle: false, stripePriceId: 'price_a', name: 'Pack A', priceCents: 499, imageUrl: null },
+      { isBundle: false, stripePriceId: 'price_a', name: 'Pack A', priceCents: 599, imageUrl: null },
       { isBundle: false, stripePriceId: 'price_b', name: 'Pack B', priceCents: 699, imageUrl: null },
     ];
     const items = buildLineItems(products, 10, siteUrl);

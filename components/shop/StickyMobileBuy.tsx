@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
+import { isCoveredByCart } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
 
 interface StickyMobileBuyProps {
@@ -26,7 +27,7 @@ export default function StickyMobileBuy({
 }: StickyMobileBuyProps) {
   const { isNative } = useCapacitor();
   const [visible, setVisible] = useState(false);
-  const { addItem, isInCart, openCart } = useCart();
+  const { items, addItem, isInCart, openCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
 
   useEffect(() => {
@@ -45,9 +46,10 @@ export default function StickyMobileBuy({
   }, []);
 
   const alreadyInCart = isInCart(slug);
+  const coveredBy = isCoveredByCart(items, slug);
 
-  // Hide in native app (Apple compliance)
-  if (isNative) return null;
+  // Hide in native app (Apple compliance) or when product is covered by a bundle
+  if (isNative || coveredBy) return null;
 
   function handleClick() {
     if (alreadyInCart) {

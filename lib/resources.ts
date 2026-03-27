@@ -52,7 +52,7 @@ export const resourceProductDefaults: Record<ResourceTopic, { product: string; b
   'nature-stem':          { product: 'nature-journal-walks',   bundle: 'seasonal-bundle' },
   'worldschooling':       { product: 'travel-day',             bundle: 'real-world-mega-bundle' },
   'creativity-maker':     { product: 'rube-goldberg-challenge', bundle: 'creativity-mega-bundle' },
-  'ai-digital-literacy':  { product: 'ai-explorer-pack',      bundle: 'real-world-mega-bundle' },
+  'ai-digital-literacy':  { product: 'ai-basics',              bundle: 'ai-digital-bundle' },
   'homeschool-journey':   { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
 };
 
@@ -1558,8 +1558,8 @@ const resources: ResourcePage[] = [
       'teach-kids-prompt-ai',
       'media-literacy-kids',
     ],
-    recommendedProduct: 'ai-explorer-pack',
-    recommendedBundle: 'real-world-mega-bundle',
+    recommendedProduct: 'ai-basics',
+    recommendedBundle: 'ai-digital-bundle',
   },
   {
     slug: 'homeschool-journey',

@@ -18,7 +18,7 @@ function makeItem(overrides: Partial<CartItem> = {}): CartItem {
   return {
     slug: 'test-pack',
     name: 'Test Pack',
-    priceCents: 499,
+    priceCents: 599,
     stripePriceId: 'price_test',
     category: 'nature',
     isBundle: false,
@@ -143,22 +143,22 @@ describe('cartTotalCents', () => {
 
   it('sums all item prices', () => {
     const items = [
-      makeItem({ priceCents: 499 }),
+      makeItem({ priceCents: 599 }),
       makeItem({ priceCents: 699 }),
       makeItem({ priceCents: 3999 }),
     ];
-    expect(cartTotalCents(items)).toBe(5197);
+    expect(cartTotalCents(items)).toBe(5297);
   });
 });
 
 describe('cartTotalWithByob', () => {
   it('returns full price with no discount below 5 items', () => {
-    const items = makeItems(4, { priceCents: 499 });
+    const items = makeItems(4, { priceCents: 599 });
     const result = cartTotalWithByob(items);
     expect(result).toEqual({
-      subtotalCents: 1996,
+      subtotalCents: 2396,
       discountCents: 0,
-      totalCents: 1996,
+      totalCents: 2396,
       tier: null,
     });
   });
@@ -201,10 +201,10 @@ describe('cartTotalWithByob', () => {
   });
 
   it('rounds discount to nearest cent', () => {
-    const items = makeItems(5, { priceCents: 499 }); // 2495, 10% = 249.5 → 250
+    const items = makeItems(5, { priceCents: 599 }); // 2995, 10% = 299.5 → 300
     const result = cartTotalWithByob(items);
-    expect(result.discountCents).toBe(250);
-    expect(result.totalCents).toBe(2245);
+    expect(result.discountCents).toBe(300);
+    expect(result.totalCents).toBe(2695);
   });
 });
 
@@ -246,35 +246,35 @@ describe('getBundleUpsell', () => {
   it('factors BYOB discount into upsell comparison when active', () => {
     // 4 seasonal items + 1 extra = 5 items → BYOB 10% kicks in
     const items = BUNDLE_CONTENTS['seasonal-bundle'].map((slug) =>
-      makeItem({ slug, priceCents: 1299 }),
+      makeItem({ slug, priceCents: 1499 }),
     );
-    items.push(makeItem({ slug: 'extra-pack', priceCents: 499 }));
+    items.push(makeItem({ slug: 'extra-pack', priceCents: 599 }));
 
     const upsell = getBundleUpsell(items);
     expect(upsell).not.toBeNull();
     expect(upsell!.bundle.slug).toBe('seasonal-bundle');
 
-    // individualTotal should reflect BYOB-discounted price: 4 × 1299 × 0.9 = 4676
-    const rawTotal = 4 * 1299; // 5196
-    const byobTotal = Math.round(rawTotal * 0.9); // 4676
+    // individualTotal should reflect BYOB-discounted price: 4 × 1499 × 0.9 = 5396
+    const rawTotal = 4 * 1499; // 5996
+    const byobTotal = Math.round(rawTotal * 0.9); // 5396
     expect(upsell!.individualTotal).toBe(byobTotal);
-    // Bundle ($39.99) vs BYOB-discounted ($46.76) → saves $6.77
-    expect(upsell!.savingsCents).toBe(byobTotal - 3999);
+    // Bundle ($44.99) vs BYOB-discounted ($53.96) → saves $8.97
+    expect(upsell!.savingsCents).toBe(byobTotal - 4499);
   });
 
   it('returns null when bundle already in cart', () => {
     const items = [
       makeBundle({ slug: 'seasonal-bundle' }),
-      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1299 }),
-      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1299 }),
+      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1499 }),
+      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1499 }),
     ];
     expect(getBundleUpsell(items)).toBeNull();
   });
 
   it('returns upsell when 2+ items match a bundle', () => {
     const items = [
-      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1299 }),
-      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1299 }),
+      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1499 }),
+      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1499 }),
     ];
     const upsell = getBundleUpsell(items);
     expect(upsell).not.toBeNull();
@@ -285,19 +285,19 @@ describe('getBundleUpsell', () => {
   });
 
   it('calculates savings correctly when bundle is cheaper', () => {
-    // 3 seasonal packs at $12.99 each = $38.97; bundle = $39.99
+    // 3 seasonal packs at $14.99 each = $44.97; bundle = $44.99
     const items = [
-      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1299 }),
-      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1299 }),
-      makeItem({ slug: 'fall-outdoor-pack', priceCents: 1299 }),
+      makeItem({ slug: 'spring-outdoor-pack', priceCents: 1499 }),
+      makeItem({ slug: 'summer-outdoor-pack', priceCents: 1499 }),
+      makeItem({ slug: 'fall-outdoor-pack', priceCents: 1499 }),
     ];
     const upsell = getBundleUpsell(items);
     expect(upsell).not.toBeNull();
-    expect(upsell!.individualTotal).toBe(3897);
-    expect(upsell!.bundle.priceCents).toBe(3999);
-    // Bundle costs more than 3 items, so savingsCents is negative
-    expect(upsell!.savingsCents).toBe(3897 - 3999);
-    expect(upsell!.additionalCostCents).toBe(3999 - 3897);
+    expect(upsell!.individualTotal).toBe(4497);
+    expect(upsell!.bundle.priceCents).toBe(4499);
+    // Bundle costs $0.02 more than 3 items, so savingsCents is negative
+    expect(upsell!.savingsCents).toBe(4497 - 4499);
+    expect(upsell!.additionalCostCents).toBe(4499 - 4497);
   });
 });
 

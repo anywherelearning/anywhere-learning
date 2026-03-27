@@ -170,7 +170,7 @@ const categorySections = [
 const categoryBundleMap: Record<string, string> = {
   "ai-literacy": "ai-digital-bundle",
   "creativity-anywhere": "creativity-mega-bundle",
-  "outdoor-learning": "outdoor-toolkit-bundle",
+  "outdoor-learning": "outdoor-mega-bundle",
   "real-world-math": "real-world-math-bundle",
 };
 
