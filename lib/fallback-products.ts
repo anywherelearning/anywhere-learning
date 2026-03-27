@@ -40,8 +40,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All four seasonal packs in one download — spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to use whenever the season changes.",
     shortDescription:
       "All 4 seasonal packs — 80 outdoor activities for every time of year.",
-    priceCents: 3999,
-    compareAtPriceCents: 5196,
+    priceCents: 4499,
+    compareAtPriceCents: 5996,
     stripePriceId: "price_1T9JRgAMzOBftCntfI1aLvEE",
     blobUrl: "",
     imageUrl: "/products/four-seasons-bundle.jpg",
@@ -63,8 +63,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films — each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence. 10 complete projects, zero prep required.",
     shortDescription:
       "All 10 Creativity Anywhere projects — design, build, and create without limits.",
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: "price_1T9JRiAMzOBftCnt0lx9Os6i",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-creativity.jpg",
@@ -86,8 +86,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Real-World Relevance challenges in one download. Budgeting, meal planning, micro-businesses, media literacy, travel planning, smart shopping, and more. Each challenge puts kids in real-life scenarios where they practise the skills that actually matter — critical thinking, financial literacy, communication, and problem-solving.",
     shortDescription:
       "All 10 Real-World Relevance challenges — life skills, financial literacy, and project-based learning.",
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: "price_1T9JRjAMzOBftCntFm9zj9GQ",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-real-world.jpg",
@@ -109,8 +109,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 AI & Digital Literacy activities in one download. From understanding what AI actually is, to spotting deepfakes, checking for bias, building ethical AI projects, and managing digital boundaries. Each activity is designed for ages 9–14 and helps kids become critical, confident, and responsible digital citizens.",
     shortDescription:
       "All 10 AI & Digital Literacy activities — responsible tech, critical thinking, and digital citizenship.",
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: "price_1T9JRkAMzOBftCntbfyHJ8iT",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-ai-digital.jpg",
@@ -132,8 +132,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Real-World Math guides in one download — backyard campouts, garage sales, garden plots, road trips, sports stats, and more. Every activity puts kids in real-life scenarios where they use maths to plan, budget, measure, and make smart decisions. The kind of maths that actually sticks because it actually matters.",
     shortDescription:
       "All 10 Real-World Math guides — budgeting, planning, and problem-solving with real numbers.",
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: "price_1TAxH6AMzOBftCntxE8GfZzG",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-real-world-math.jpg",
@@ -155,8 +155,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "Three of our most popular nature packs together — Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching wildlife, and creating nature mandalas. Everything your family needs to turn the outdoors into an art studio.",
     shortDescription:
       "Land Art + Nature Crafts + Nature Journal — turn the outdoors into an art studio.",
-    priceCents: 1499,
-    compareAtPriceCents: 2097,
+    priceCents: 1799,
+    compareAtPriceCents: 2397,
     stripePriceId: "price_1T9JRlAMzOBftCntK5wQT4BB",
     blobUrl: "",
     imageUrl: "/products/nature-art-bundle.jpg",
@@ -178,8 +178,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "Four essential outdoor learning packs in one download — Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Zero prep, maximum outdoor time.",
     shortDescription:
       "Nature Walk Cards + Missions + STEM Challenges + Choice Boards — your complete outdoor toolkit.",
-    priceCents: 1999,
-    compareAtPriceCents: 2796,
+    priceCents: 2399,
+    compareAtPriceCents: 3196,
     stripePriceId: "price_1T9JRmAMzOBftCnt1KfveOg0",
     blobUrl: "",
     imageUrl: "/products/outdoor-toolkit-bundle.jpg",
@@ -190,6 +190,30 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 6,
+    active: true,
+    createdAt: new Date("2025-01-01"),
+  },
+
+  {
+    id: "fb-outdoor-mega-bundle",
+    name: "Outdoor & Nature Mega Bundle",
+    slug: "outdoor-mega-bundle",
+    description:
+      "All 7 outdoor and nature activity packs in one download — Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and Nature Journal Walks. The complete outdoor toolkit for families who learn outside.",
+    shortDescription:
+      "All 7 outdoor & nature packs in one download.",
+    priceCents: 4199,
+    compareAtPriceCents: 5593,
+    stripePriceId: "",
+    blobUrl: "",
+    imageUrl: "/products/mega-bundle-outdoor.jpg",
+    previewFile: null,
+    category: "bundle",
+    isBundle: true,
+    bundleProductIds: null,
+    activityCount: null,
+    ageRange: "Ages 6–14",
+    sortOrder: 7,
     active: true,
     createdAt: new Date("2025-01-01"),
   },
@@ -205,7 +229,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "20 outdoor activities that use spring's energy to build real-world skills. Plant a seed and track its growth. Build a bug hotel. Create a rain gauge from a jar. Map the birds in your garden. Every activity connects to science, maths, or literacy — but feels like adventure, not homework.",
     shortDescription:
       "20 outdoor activities that use spring's energy to build real-world skills.",
-    priceCents: 1299,
+    priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRnAMzOBftCnter2iXs5U",
     blobUrl: "",
@@ -228,7 +252,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "20 summer activities for families who learn on the move. Water experiments, shadow tracking, outdoor cooking, beach science, and more. Designed for long sunny days when kids have energy to burn and curiosity to spare.",
     shortDescription:
       "20 summer activities — water experiments, outdoor cooking, and sun-powered learning.",
-    priceCents: 1299,
+    priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRpAMzOBftCntCjZuZtsr",
     blobUrl: "",
@@ -251,7 +275,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "20 autumn activities that use the changing season to build observation and creative skills. Leaf collecting, weather tracking, nature journaling, harvest maths, and more. Perfect for families who want to make the most of shorter days and golden light.",
     shortDescription:
       "20 autumn activities — leaf science, harvest maths, and seasonal observation.",
-    priceCents: 1299,
+    priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRqAMzOBftCntZUufoT7D",
     blobUrl: "",
@@ -274,7 +298,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "20 winter activities for cosy indoor days and cold outdoor adventures. Ice experiments, star-gazing, shadow play, winter bird feeding, and fireside storytelling. Designed for families who want to keep learning alive even when the weather says stay inside.",
     shortDescription:
       "20 winter activities — ice experiments, star-gazing, and cosy indoor learning.",
-    priceCents: 1299,
+    priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRrAMzOBftCntnfkRGyig",
     blobUrl: "",
@@ -301,7 +325,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience. Each card gives your child a specific focus — tracking shadows, sketching bark patterns, listening for bird calls, mapping a puddle ecosystem. No nature expertise required from you. Just open a card, step outside, and let curiosity lead.",
     shortDescription:
       "25 nature walk prompts and journaling activities for rich outdoor observation.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRtAMzOBftCnteaV4N09t",
     blobUrl: "",
@@ -324,7 +348,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission — find three textures, listen for five sounds, sketch the smallest thing you can find. Works in any outdoor space, any season, any weather.",
     shortDescription:
       "Task cards that turn any walk into a focused nature exploration.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRuAMzOBftCntADRoP9ax",
     blobUrl: "",
@@ -347,7 +371,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from — observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what to do outside. Works in backyards, parks, forests, and beaches.",
     shortDescription:
       "Choose-your-own-adventure nature activities — 9 options per board, self-directed outdoor learning.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRvAMzOBftCntN1sSLFfz",
     blobUrl: "",
@@ -370,7 +394,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Mission-style outdoor challenges that get kids moving, observing, and problem-solving in nature. Each mission has a clear objective, steps to follow, and a reflection prompt. From building shelters to mapping wildlife trails — real adventures that feel important.",
     shortDescription:
       "Mission-style outdoor challenges — build, explore, observe, and problem-solve in nature.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRwAMzOBftCntBg65DIYs",
     blobUrl: "",
@@ -393,7 +417,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "20 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a waterproof shelter. Measure tree heights using shadows. Engineer a boat that floats. Each challenge has constraints that force creative problem-solving — no instructions, just goals.",
     shortDescription:
       "20 outdoor STEM challenges — build, test, and engineer using what nature provides.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRyAMzOBftCntlu1FMGoj",
     blobUrl: "",
@@ -416,7 +440,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, and design — all while being creative outdoors with zero mess to clean up.",
     shortDescription:
       "15 land art challenges — create beautiful, temporary art using natural materials.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JRzAMzOBftCnt1Km8Xa4Y",
     blobUrl: "",
@@ -439,7 +463,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation — kids collect materials, then create something beautiful with what they find.",
     shortDescription:
       "Hands-on nature craft projects using materials found outdoors.",
-    priceCents: 699,
+    priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS0AMzOBftCntCud5dNSB",
     blobUrl: "",
@@ -466,7 +490,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design, build, and playtest an original board game from scratch. Kids brainstorm themes, create rules, design the board, craft game pieces, and iterate based on playtesting. A complete creative project that builds design thinking, strategic reasoning, and communication skills.",
     shortDescription:
       "Design, build, and playtest an original board game from scratch.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS1AMzOBftCntnWFqBERm",
     blobUrl: "",
@@ -489,7 +513,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials — dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect thinking, and creative problem-solving. Failure is part of the fun.",
     shortDescription:
       "Build an absurdly complicated machine to do something simple — engineering meets creativity.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS2AMzOBftCntlaGbkfMO",
     blobUrl: "",
@@ -512,7 +536,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design and build a survival base for an imaginary expedition. Kids choose a biome, research challenges, plan their base layout, create models, and present their design. Combines geography, engineering, creative writing, and problem-solving in one immersive project.",
     shortDescription:
       "Design a survival base for an imaginary expedition — geography meets engineering.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS3AMzOBftCntNsz5uJHA",
     blobUrl: "",
@@ -535,7 +559,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Create an entire imaginary world from scratch — its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that can last days or weeks.",
     shortDescription:
       "Create an entire imaginary world — geography, creatures, rules, and stories.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS4AMzOBftCntNyxRNRL5",
     blobUrl: "",
@@ -558,7 +582,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Invent a brand-new creature and build its entire habitat. Kids design anatomy, diet, behaviour, and environment. Then they construct a physical model of the habitat. Combines biology, art, engineering, and creative writing in one unforgettable project.",
     shortDescription:
       "Invent a creature and build its habitat — biology meets art and engineering.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS5AMzOBftCntxDUbzSlO",
     blobUrl: "",
@@ -581,7 +605,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design a theme park or adventure course from concept to completion. Kids plan rides, map layouts, calculate budgets, design marketing materials, and build scale models. A project that combines maths, art, engineering, and business thinking.",
     shortDescription:
       "Design a theme park — plan rides, map layouts, and build scale models.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS6AMzOBftCntlSD4pH6M",
     blobUrl: "",
@@ -604,7 +628,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Create a mini movie, stop-motion animation, or radio drama from scratch. Kids write scripts, design sets, create characters, record audio, and edit their production. A full creative process from concept to premiere — no fancy equipment needed, just a phone and imagination.",
     shortDescription:
       "Create a mini movie, stop-motion, or radio drama — script to premiere.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS7AMzOBftCntDZWszNAZ",
     blobUrl: "",
@@ -627,7 +651,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Create an entirely new sport with original rules, equipment, and scoring. Kids design the game, build equipment from everyday materials, write a rulebook, playtest with family, and iterate. A masterclass in creative thinking, negotiation, and physical activity.",
     shortDescription:
       "Create an entirely new sport — design rules, build equipment, and playtest.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JS9AMzOBftCntYLhYtCOo",
     blobUrl: "",
@@ -650,7 +674,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Combines physics, engineering, and artistic expression in a hands-on project that produces something genuinely impressive.",
     shortDescription:
       "Build a kinetic sculpture — art that moves using physics and engineering.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSAAMzOBftCntCZjp86ZU",
     blobUrl: "",
@@ -673,7 +697,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Create a museum or interactive exhibit on any topic your child loves. Research, curate, design displays, write labels, build interactive elements, and host a grand opening. A project that teaches research, writing, presentation, and design — all driven by your child's own interests.",
     shortDescription:
       "Create a museum exhibit — research, curate, design, and host a grand opening.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSBAMzOBftCntYOFiDvxx",
     blobUrl: "",
@@ -700,7 +724,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, no prep needed.",
     shortDescription:
       "Real-money challenges that teach kids budgeting, saving, and smart spending.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSCAMzOBftCntB2DLyCq9",
     blobUrl: "",
@@ -723,7 +747,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Guide your child through planning and executing a real community impact project. From identifying local needs to designing solutions, creating action plans, and reflecting on results. Builds empathy, planning skills, and a sense of civic responsibility.",
     shortDescription:
       "Plan and execute a real community impact project — empathy in action.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSDAMzOBftCntLgwWzewC",
     blobUrl: "",
@@ -746,7 +770,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Go beyond recipes — plan meals for a week, calculate grocery costs, compare unit prices, adjust portions, and manage a food budget. Real-world maths that happens in the kitchen, at the shop, and around the dinner table.",
     shortDescription:
       "Plan meals, calculate costs, and manage a food budget — real-world kitchen maths.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSEAMzOBftCntBWdJuwyv",
     blobUrl: "",
@@ -769,7 +793,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Critical thinking activities that teach kids to evaluate information, spot bias, check sources, and think critically about what they see online. In a world of misinformation, these are essential skills — and they're best learned through practice, not lectures.",
     shortDescription:
       "Critical thinking activities — evaluate sources, spot bias, and check facts.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSFAMzOBftCnt6L4vlSby",
     blobUrl: "",
@@ -792,7 +816,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Guided activities to help your child plan, launch, and run a simple real business. From choosing a product to setting prices, marketing, tracking income, and reflecting on what they learned. Entrepreneurship skills through hands-on experience.",
     shortDescription:
       "Plan, launch, and run a real micro-business — entrepreneurship for kids.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSGAMzOBftCnt4xTYcDgd",
     blobUrl: "",
@@ -815,7 +839,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design thinking challenges that teach kids to identify problems, brainstorm solutions, prototype, test, and iterate. Real-world problem-solving skills applied to everyday life — from improving a family routine to designing a better lunchbox.",
     shortDescription:
       "Design thinking challenges — identify problems, brainstorm, prototype, and iterate.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSIAMzOBftCntVhLx6rwW",
     blobUrl: "",
@@ -838,7 +862,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Activities that teach kids to be critical, informed consumers. Compare prices, read labels, spot marketing tricks, calculate value, and make smart purchasing decisions. Financial literacy meets critical thinking — skills they'll use for life.",
     shortDescription:
       "Learn to compare prices, read labels, and make smart purchasing decisions.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSJAMzOBftCntc1pvCvMe",
     blobUrl: "",
@@ -861,7 +885,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Help your child learn to manage their time and energy effectively. Activities include building weekly schedules, tracking energy levels, prioritising tasks, setting goals, and reflecting on what works. Self-management skills that schools rarely teach.",
     shortDescription:
       "Build schedules, track energy, and learn self-management — essential life skills.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSKAMzOBftCntfoNqvdED",
     blobUrl: "",
@@ -884,7 +908,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Challenge your child to plan a real travel day from start to finish. Research destinations, compare transport options, calculate budgets, build itineraries, and navigate logistics. Geography, maths, and decision-making wrapped in an exciting real-world project.",
     shortDescription:
       "Plan a real travel day — research, budget, and build a complete itinerary.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSLAMzOBftCntYEHNo6po",
     blobUrl: "",
@@ -907,7 +931,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Real-world writing challenges that go beyond essays. Kids write emails, create social media posts, draft persuasive letters, design infographics with captions, and communicate for real audiences. Writing skills that matter in the real world, practised in context.",
     shortDescription:
       "Real-world writing challenges — emails, letters, persuasive writing, and communication.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSMAMzOBftCntGuJMocwc",
     blobUrl: "",
@@ -934,7 +958,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Help kids understand what AI actually is, what it isn't, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy and useful AI interactions, and setting smart rules for AI use at home. The foundation for everything else in the AI series.",
     shortDescription:
       "What AI actually is, common myths vs facts, and smart rules for responsible use.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSNAMzOBftCnt26iKEB5F",
     blobUrl: "",
@@ -957,7 +981,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Teach kids how algorithms shape what they see online — and what they don't. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical digital literacy for the attention economy.",
     shortDescription:
       "Understand how algorithms shape what you see online — and take back control.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSPAMzOBftCntKMMxnypH",
     blobUrl: "",
@@ -980,7 +1004,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Explore how AI can be unfair — and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and critical thinking through hands-on investigation.",
     shortDescription:
       "Investigate AI bias — who gets left out, why, and how to design for fairness.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSQAMzOBftCntLKPon1Vc",
     blobUrl: "",
@@ -1003,7 +1027,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design and plan your own AI helper — what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to safety considerations. No coding required — this is about thinking, not programming.",
     shortDescription:
       "Design an AI helper from concept to ethics — creative tech thinking, no coding needed.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSRAMzOBftCnt85dfs48U",
     blobUrl: "",
@@ -1026,7 +1050,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Explore creative AI tools responsibly. Kids learn to use AI for writing, art, and brainstorming while understanding copyright, attribution, and the difference between using AI as a tool vs letting it do the thinking. Creativity enhanced by technology, guided by ethics.",
     shortDescription:
       "Use AI for creative projects responsibly — copyright, attribution, and ethical creation.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSSAMzOBftCntFtxc482j",
     blobUrl: "",
@@ -1049,7 +1073,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Teach kids to spot manipulated images, videos, and content. Activities cover deepfake detection, image verification, \"pause before sharing\" skills, and how to evaluate whether what they're seeing is real. Essential media literacy for the AI age.",
     shortDescription:
       "Spot deepfakes and manipulated content — essential media literacy for the AI age.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSTAMzOBftCntoqOuS1gv",
     blobUrl: "",
@@ -1072,7 +1096,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. Trust, verify, and improve.",
     shortDescription:
       "Spot when AI gets things wrong — verify, fact-check, and build critical trust.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSUAMzOBftCntJu8j245c",
     blobUrl: "",
@@ -1095,7 +1119,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Help your child create a personal technology and AI boundaries plan. Activities cover screen time awareness, digital wellbeing, setting healthy limits, managing notifications, and building a balanced relationship with technology. Self-regulation skills for the digital age.",
     shortDescription:
       "Create a personal tech boundaries plan — digital wellbeing and self-regulation.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSVAMzOBftCntN6dTNMNu",
     blobUrl: "",
@@ -1118,7 +1142,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Map your digital footprint and understand online privacy. Kids discover what personal data they share, how data trails work, smart sharing practices, and how to protect their personal information. Practical privacy education, not paranoia.",
     shortDescription:
       "Map your digital footprint — understand data, privacy, and smart sharing.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSWAMzOBftCnt0Kr6K6QN",
     blobUrl: "",
@@ -1141,7 +1165,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Teach kids to get better results from AI by writing better prompts. Activities cover prompt structure, asking better questions, healthy AI use (not copying), and learning to guide AI rather than just accepting its first answer. The skill that makes all other AI skills more powerful.",
     shortDescription:
       "Write better AI prompts — ask better questions and guide AI like a coach.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSYAMzOBftCnt4jxEltIh",
     blobUrl: "",
@@ -1168,7 +1192,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Plan a backyard campout from start to finish — gear lists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.",
     shortDescription:
       "Plan a backyard campout with real maths — gear, meals, stargazing, and budgets.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHNAMzOBftCntZDrzftAh",
     blobUrl: "",
@@ -1191,7 +1215,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Organise a clothing swap or plan a thrift store haul using real budgeting and value skills. Kids calculate cost-per-wear, compare prices, assess quality, and make smart spending decisions. Financial literacy meets sustainability — maths with purpose.",
     shortDescription:
       "Thrift shopping and clothing swap maths — budgets, value, and smart spending.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHOAMzOBftCntqJHbNHBu",
     blobUrl: "",
@@ -1214,7 +1238,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Audit your household electricity use, read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.",
     shortDescription:
       "Audit electricity use, calculate costs, and find real ways to save.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHPAMzOBftCntF6zZvzfs",
     blobUrl: "",
@@ -1237,7 +1261,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Navigate a farmers market with a real budget — compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.",
     shortDescription:
       "Budget and shop at a farmers market — prices, change, and smart choices.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHQAMzOBftCntGr7Iv95D",
     blobUrl: "",
@@ -1260,7 +1284,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Plan, price, and run a garage sale using real-world maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling — all in one hands-on project.",
     shortDescription:
       "Price, sell, and count change at a real garage sale.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHRAMzOBftCntBhGe0ECx",
     blobUrl: "",
@@ -1283,7 +1307,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. Geometry, budgeting, and science growing together in the dirt.",
     shortDescription:
       "Design a garden with real measurements, spacing, and budgets.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHSAMzOBftCnt0V8AwtI6",
     blobUrl: "",
@@ -1306,7 +1330,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Plan a party from guest list to budget — calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real event. Maths that ends with a party.",
     shortDescription:
       "Plan a party with real budgets, quantities, and timing.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHTAMzOBftCntwFqsXpkT",
     blobUrl: "",
@@ -1329,7 +1353,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Plan a road trip using real distances, fuel costs, driving times, and travel budgets. Kids calculate mileage, compare routes, estimate fuel expenses, plan stops, and build a complete trip budget. Geography meets maths on the open road.",
     shortDescription:
       "Calculate distances, fuel costs, and budgets for a real road trip.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHUAMzOBftCntpRlzvjec",
     blobUrl: "",
@@ -1352,7 +1376,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Set a real savings goal and track progress with actual money maths. Kids choose a goal, calculate how long it will take, track deposits, visualise progress, and learn about interest and opportunity cost. Financial literacy that builds real habits.",
     shortDescription:
       "Set and track a real savings goal — deposits, progress, and money maths.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHVAMzOBftCnt4wSLPh1g",
     blobUrl: "",
@@ -1375,7 +1399,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player stats. Data literacy and statistics brought to life through the sports they love.",
     shortDescription:
       "Analyse real sports stats — averages, percentages, and data visualisation.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TAxHWAMzOBftCntZADdCwoC",
     blobUrl: "",
@@ -1425,7 +1449,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "A complete project guide for kids to plan and run their own small business. From brainstorming ideas and researching markets to creating products, setting prices, designing marketing, and tracking profits. Entrepreneurship, financial literacy, and creativity all in one hands-on project.",
     shortDescription:
       "Plan and run a real small business — entrepreneurship, marketing, and financial literacy.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSaAMzOBftCnt7K7w8xvT",
     blobUrl: "",
@@ -1448,7 +1472,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "A creative time capsule project that captures who your child is right now. Guided prompts for writing letters to their future self, collecting meaningful items, recording favourites, and reflecting on growth. A beautiful keepsake project that doubles as a writing and self-awareness activity.",
     shortDescription:
       "Capture who your child is right now — guided prompts for a meaningful time capsule.",
-    priceCents: 499,
+    priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1T9JSbAMzOBftCntkCNr8dKm",
     blobUrl: "",

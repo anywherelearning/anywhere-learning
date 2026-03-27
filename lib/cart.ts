@@ -44,6 +44,10 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
   'outdoor-toolkit-bundle': [
     'nature-walk-task-cards', 'outdoor-learning-missions', 'outdoor-stem-challenges', 'nature-choice-boards',
   ],
+  'outdoor-mega-bundle': [
+    'land-art-challenges', 'nature-crafts', 'nature-journal-walks',
+    'nature-walk-task-cards', 'outdoor-learning-missions', 'outdoor-stem-challenges', 'nature-choice-boards',
+  ],
 };
 
 export function loadCart(): CartItem[] {
@@ -89,6 +93,34 @@ export function cartTotalCents(items: CartItem[]): number {
   return items.reduce((sum, item) => sum + item.priceCents, 0);
 }
 
+/** The Skills Map slug — given free as a bonus with any bundle purchase. */
+export const FREE_BONUS_SLUG = 'future-ready-skills-map';
+
+/**
+ * Check if a product is already covered by the cart — either:
+ * 1. The slug is explicitly in the cart, OR
+ * 2. A bundle in the cart contains this individual product, OR
+ * 3. Any bundle is in the cart and the slug is the free bonus (Skills Map)
+ */
+export function isCoveredByCart(cartItems: CartItem[], slug: string): string | false {
+  // Already directly in cart
+  if (cartItems.some((i) => i.slug === slug)) return false; // let isInCart handle this
+
+  // Covered by a bundle
+  for (const item of cartItems) {
+    if (!item.isBundle) continue;
+    const children = BUNDLE_CONTENTS[item.slug];
+    if (children?.includes(slug)) return item.name;
+  }
+
+  // Free bonus with any bundle
+  if (slug === FREE_BONUS_SLUG && cartItems.some((i) => i.isBundle)) {
+    return 'bundle bonus';
+  }
+
+  return false;
+}
+
 /** Check if any items in the cart overlap with a bundle's contents. */
 export function getBundleOverlaps(cartItems: CartItem[], bundleSlug: string): string[] {
   const contained = BUNDLE_CONTENTS[bundleSlug];
@@ -114,8 +146,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'seasonal-bundle': {
     slug: 'seasonal-bundle',
     name: 'Full Seasonal Bundle (All 4 Seasons)',
-    priceCents: 3999,
-    compareAtPriceCents: 5196,
+    priceCents: 4499,
+    compareAtPriceCents: 5996,
     stripePriceId: '', // populated by stripe:sync
     category: 'bundle',
     imageUrl: '/products/four-seasons-bundle.jpg',
@@ -124,8 +156,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'creativity-mega-bundle': {
     slug: 'creativity-mega-bundle',
     name: 'Creativity Mega Bundle',
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-creativity.jpg',
@@ -134,8 +166,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'real-world-mega-bundle': {
     slug: 'real-world-mega-bundle',
     name: 'Real-World Skills Mega Bundle',
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-real-world.jpg',
@@ -144,8 +176,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'ai-digital-bundle': {
     slug: 'ai-digital-bundle',
     name: 'AI & Digital Literacy Bundle',
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
@@ -154,8 +186,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'real-world-math-bundle': {
     slug: 'real-world-math-bundle',
     name: 'Real-World Math Mega Bundle',
-    priceCents: 2999,
-    compareAtPriceCents: 4990,
+    priceCents: 4499,
+    compareAtPriceCents: 5990,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-real-world-math.jpg',
@@ -164,8 +196,8 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'nature-art-bundle': {
     slug: 'nature-art-bundle',
     name: 'Nature Art Bundle',
-    priceCents: 1499,
-    compareAtPriceCents: 2097,
+    priceCents: 1799,
+    compareAtPriceCents: 2397,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/nature-art-bundle.jpg',
@@ -174,11 +206,21 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
   'outdoor-toolkit-bundle': {
     slug: 'outdoor-toolkit-bundle',
     name: 'Outdoor Toolkit Bundle',
-    priceCents: 1999,
-    compareAtPriceCents: 2796,
+    priceCents: 2399,
+    compareAtPriceCents: 3196,
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/outdoor-toolkit-bundle.jpg',
+    activityCount: null,
+  },
+  'outdoor-mega-bundle': {
+    slug: 'outdoor-mega-bundle',
+    name: 'Outdoor & Nature Mega Bundle',
+    priceCents: 4199,
+    compareAtPriceCents: 5593,
+    stripePriceId: '',
+    category: 'bundle',
+    imageUrl: '/products/mega-bundle-outdoor.jpg',
     activityCount: null,
   },
 };
