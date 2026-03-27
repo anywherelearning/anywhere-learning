@@ -213,7 +213,7 @@ export const fallbackProducts: FallbackProduct[] = [
     bundleProductIds: null,
     activityCount: null,
     ageRange: "Ages 6–14",
-    sortOrder: 7,
+    sortOrder: 8,
     active: true,
     createdAt: new Date("2025-01-01"),
   },

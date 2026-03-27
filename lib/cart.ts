@@ -100,17 +100,30 @@ export const FREE_BONUS_SLUG = 'future-ready-skills-map';
  * Check if a product is already covered by the cart — either:
  * 1. The slug is explicitly in the cart, OR
  * 2. A bundle in the cart contains this individual product, OR
- * 3. Any bundle is in the cart and the slug is the free bonus (Skills Map)
+ * 3. Any bundle is in the cart and the slug is the free bonus (Skills Map), OR
+ * 4. A larger bundle in the cart fully covers this smaller bundle's contents
  */
 export function isCoveredByCart(cartItems: CartItem[], slug: string): string | false {
   // Already directly in cart
   if (cartItems.some((i) => i.slug === slug)) return false; // let isInCart handle this
 
-  // Covered by a bundle
+  // Individual product covered by a bundle in cart
   for (const item of cartItems) {
     if (!item.isBundle) continue;
     const children = BUNDLE_CONTENTS[item.slug];
     if (children?.includes(slug)) return item.name;
+  }
+
+  // Smaller bundle fully covered by a larger bundle in cart
+  const myChildren = BUNDLE_CONTENTS[slug];
+  if (myChildren) {
+    for (const item of cartItems) {
+      if (!item.isBundle) continue;
+      const parentChildren = BUNDLE_CONTENTS[item.slug];
+      if (parentChildren && myChildren.every((child) => parentChildren.includes(child))) {
+        return item.name;
+      }
+    }
   }
 
   // Free bonus with any bundle
@@ -148,7 +161,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Full Seasonal Bundle (All 4 Seasons)',
     priceCents: 4499,
     compareAtPriceCents: 5996,
-    stripePriceId: '', // populated by stripe:sync
+    stripePriceId: 'price_1TFcTNAMzOBftCntknn9ugHW',
     category: 'bundle',
     imageUrl: '/products/four-seasons-bundle.jpg',
     activityCount: 80,
@@ -158,7 +171,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Creativity Mega Bundle',
     priceCents: 4499,
     compareAtPriceCents: 5990,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTNAMzOBftCntDc8CoKsa',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-creativity.jpg',
     activityCount: null,
@@ -168,7 +181,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Real-World Skills Mega Bundle',
     priceCents: 4499,
     compareAtPriceCents: 5990,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTNAMzOBftCntZTSpWFfb',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-real-world.jpg',
     activityCount: null,
@@ -178,7 +191,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'AI & Digital Literacy Bundle',
     priceCents: 4499,
     compareAtPriceCents: 5990,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTOAMzOBftCntHzTASW76',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
     activityCount: null,
@@ -188,7 +201,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Real-World Math Mega Bundle',
     priceCents: 4499,
     compareAtPriceCents: 5990,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTOAMzOBftCntWV4GZeM4',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-real-world-math.jpg',
     activityCount: 10,
@@ -198,7 +211,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Nature Art Bundle',
     priceCents: 1799,
     compareAtPriceCents: 2397,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTPAMzOBftCntIs6rjc1V',
     category: 'bundle',
     imageUrl: '/products/nature-art-bundle.jpg',
     activityCount: null,
@@ -208,7 +221,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Outdoor Toolkit Bundle',
     priceCents: 2399,
     compareAtPriceCents: 3196,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTPAMzOBftCntA7iWyJ5t',
     category: 'bundle',
     imageUrl: '/products/outdoor-toolkit-bundle.jpg',
     activityCount: null,
@@ -218,7 +231,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Outdoor & Nature Mega Bundle',
     priceCents: 4199,
     compareAtPriceCents: 5593,
-    stripePriceId: '',
+    stripePriceId: 'price_1TFcTQAMzOBftCntWFHd28Bt',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-outdoor.jpg',
     activityCount: null,

@@ -188,6 +188,23 @@ export const productDescriptions: Record<string, ProductDescription> = {
     format: 'Bundle',
   },
 
+  'outdoor-mega-bundle': {
+    opening:
+      'All 7 outdoor and nature activity packs in one download — Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and the Nature Journal. Whether you\'re building sculptures from sticks, solving STEM challenges at the park, or journaling beside a stream, this bundle has you covered for every kind of outdoor learning.',
+    whatsIncluded: [
+      '7 complete outdoor & nature packs',
+      'Nature Walk Task Cards — read-aloud exploration prompts',
+      'Outdoor Learning Missions — structured outdoor challenges',
+      'STEM Challenge Cards — 20 nature-based engineering challenges',
+      'Nature Choice Boards — 5 self-directed activity menus',
+      'Land Art Challenge Cards — 15 outdoor art challenges',
+      'Nature Crafts for Kids — hands-on projects with found materials',
+      'Nature Journal & Walk Cards — 25 observation and journaling prompts',
+    ],
+    skillTags: ['STEM', 'Nature', 'Art', 'Observation', 'Engineering', 'Creativity', 'Journaling'],
+    format: 'Bundle',
+  },
+
   // ═══════════════════════════════════════════════════════════════════
   // SEASONAL / NATURE PACKS
   // ═══════════════════════════════════════════════════════════════════
