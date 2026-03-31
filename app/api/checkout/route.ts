@@ -98,6 +98,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Build line items — apply BYOB discount to individual items via price_data
+    const hasBundle = verifiedProducts.some((p) => p.isBundle);
     const lineItems: Array<{
       price?: string;
       price_data?: {
@@ -112,6 +113,24 @@ export async function POST(req: NextRequest) {
       };
       quantity: number;
     }> = verifiedProducts.map((product) => {
+      // Skills Map is free when any bundle is in the cart
+      if (hasBundle && product.slug === 'future-ready-skills-map') {
+        return {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: `${product.name} (FREE Bundle Bonus)`,
+              description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+              images: product.imageUrl
+                ? [`${siteUrl}${product.imageUrl}`]
+                : undefined,
+              metadata: { stripePriceId: product.stripePriceId },
+            },
+            unit_amount: 0,
+          },
+          quantity: 1,
+        };
+      }
       if (!product.isBundle && byobDiscount > 0) {
         // BYOB-discounted individual item — use price_data with adjusted amount
         const discountedAmount = Math.round(product.priceCents * (1 - byobDiscount / 100));
@@ -135,8 +154,7 @@ export async function POST(req: NextRequest) {
     });
 
     // Add free Skills Map bonus when any bundle is in the cart,
-    // but skip if the customer already owns it from a previous purchase.
-    const hasBundle = verifiedProducts.some((p) => p.isBundle);
+    // but skip if the customer already owns it or already added it themselves.
     const skillsMapAlreadyInCart = verifiedProducts.some((p) => p.slug === 'future-ready-skills-map');
     let alreadyOwnsSkillsMap = false;
 

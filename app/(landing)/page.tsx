@@ -167,7 +167,7 @@ export default function HomePage() {
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
                   No-prep activity guides you open on any device and follow
-                  along with your kids. Real-world learning in 15 minutes &mdash; from $4.99.
+                  along with your kids. Real-world learning in 15 minutes &mdash; from $5.99.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
@@ -259,7 +259,7 @@ export default function HomePage() {
                   Activity Packs for Every Family
                 </h2>
                 <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Bundles save up to 40%. Pick the one that fits your family &mdash; or grab them all.
+                  Bundles save up to 25%. Pick the one that fits your family &mdash; or grab them all.
                 </p>
               </div>
             </ScrollReveal>
