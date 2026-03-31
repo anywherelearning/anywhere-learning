@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useCart } from './CartProvider';
 import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
-import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail } from '@/lib/cart';
+import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail, FREE_BONUS_SLUG } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
@@ -242,7 +242,17 @@ export default function CartDrawer() {
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-800 leading-snug">{item.name}</p>
-                    <p className="text-sm text-forest font-semibold mt-1">{formatPrice(item.priceCents)}</p>
+                    {item.slug === FREE_BONUS_SLUG && items.some((i) => i.isBundle) ? (
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-sm font-semibold text-forest">FREE</span>
+                        <span className="text-xs text-gray-400 line-through">{formatPrice(item.priceCents)}</span>
+                        <span className="text-xs font-medium text-gold-dark bg-gold/15 px-1.5 py-0.5 rounded-full">
+                          Bundle bonus
+                        </span>
+                      </div>
+                    ) : (
+                      <p className="text-sm text-forest font-semibold mt-1">{formatPrice(item.priceCents)}</p>
+                    )}
                   </div>
 
                   {/* Remove */}
@@ -384,8 +394,24 @@ export default function CartDrawer() {
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-gray-200/60 px-6 py-5 bg-white/50">
-            {/* BYOB next-tier nudge */}
-            {nextByobTier && !items.some((i) => i.isBundle) && (
+            {/* Bundle nudge when only the Skills Map is in the cart */}
+            {items.length === 1 && items[0].slug === FREE_BONUS_SLUG && (
+              <Link
+                href="/shop"
+                onClick={closeCart}
+                className="mb-3 flex items-center gap-2 bg-gold/10 border border-gold/25 rounded-xl px-4 py-2.5 text-sm text-gold-dark hover:bg-gold/15 transition-colors"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                </svg>
+                <span>
+                  Get any bundle and <span className="font-semibold">this is free</span>
+                </span>
+              </Link>
+            )}
+
+            {/* BYOB next-tier nudge (hide when only the Skills Map is in the cart) */}
+            {nextByobTier && !items.some((i) => i.isBundle) && !(items.length === 1 && items[0].slug === FREE_BONUS_SLUG) && (
               <div className="mb-3 flex items-center gap-2 bg-forest/5 border border-forest/15 rounded-xl px-4 py-2.5 text-sm text-forest">
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />

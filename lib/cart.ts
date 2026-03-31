@@ -90,7 +90,12 @@ export function saveCartEmail(email: string): void {
 }
 
 export function cartTotalCents(items: CartItem[]): number {
-  return items.reduce((sum, item) => sum + item.priceCents, 0);
+  const hasBundle = items.some((i) => i.isBundle);
+  return items.reduce((sum, item) => {
+    // Skills Map is free when any bundle is in the cart
+    if (hasBundle && item.slug === FREE_BONUS_SLUG) return sum;
+    return sum + item.priceCents;
+  }, 0);
 }
 
 /** The Skills Map slug — given free as a bonus with any bundle purchase. */
@@ -299,7 +304,9 @@ export function cartTotalWithByob(items: CartItem[]): {
   if (!tier) return { subtotalCents, discountCents: 0, totalCents: subtotalCents, tier: null };
 
   // Round per-item (same as server/Stripe) to avoid 1-2 cent drift
-  const individualItems = items.filter((i) => !i.isBundle);
+  // Exclude the free bonus (Skills Map) when a bundle is present — it's already $0
+  const hasBundle = items.some((i) => i.isBundle);
+  const individualItems = items.filter((i) => !i.isBundle && !(hasBundle && i.slug === FREE_BONUS_SLUG));
   const multiplier = 1 - tier.discountPercent / 100;
   const discountedTotal = individualItems.reduce(
     (sum, i) => sum + Math.round(i.priceCents * multiplier),
