@@ -194,7 +194,6 @@
   .animate-fade-in,
   .animate-slide-in-right,
   .animate-cart-badge,
-  .shimmer-effect::after,
   .hero-stagger > *,
   .popup-stagger > * {
     animation: none !important;
@@ -311,24 +310,6 @@
 }
 .card-bg-bundle {
   background: linear-gradient(145deg, #f5f0e8 0%, #efe8da 50%, #f4efe6 100%);
-}
-
-/* ─── Shimmer sweep animation for CTAs and badges ─── */
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-.shimmer-effect {
-  position: relative;
-  overflow: hidden;
-}
-.shimmer-effect::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%);
-  animation: shimmer 3s ease-in-out infinite;
-  pointer-events: none;
 }
 
 /* ─── Soft float for decorative elements ─── */

@@ -486,7 +486,7 @@ export default function CartDrawer() {
             <button
               onClick={handleCheckout}
               disabled={checkingOut}
-              className="shimmer-effect w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {checkingOut ? (
                 <span className="flex items-center justify-center gap-2">

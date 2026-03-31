@@ -18,8 +18,8 @@ export type ContentBlock =
   | { type: 'cta'; text: string; href: string; label: string }
   | { type: 'tip'; title: string; text: string }
   | { type: 'faq'; items: { question: string; answer: string }[] }
-  | { type: 'product-callout'; slug: string; context?: string }
-  | { type: 'bundle-callout'; slug: string; context?: string }
+  | { type: 'product-callout'; slug: string; context?: string; pinned?: boolean }
+  | { type: 'bundle-callout'; slug: string; context?: string; pinned?: boolean }
   | { type: 'summary'; text: string; heading?: string };
 
 /** Backward-compatible alias */
@@ -158,7 +158,7 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
                 <span className="flex-shrink-0 w-6 h-6 rounded-full bg-forest/8 text-forest text-xs font-semibold flex items-center justify-center mt-[5px] ring-1 ring-forest/[0.08]">
                   {i + 1}
                 </span>
-                <span>{item}</span>
+                <span>{parseInlineLinks(item)}</span>
               </li>
             ))}
           </ol>
@@ -169,7 +169,7 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
           {block.items.map((item, i) => (
             <li key={i} className="flex items-start gap-3.5 text-[1.075rem] leading-[1.85] text-gray-600">
               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-forest/40 mt-[11px]" />
-              <span>{item}</span>
+              <span>{parseInlineLinks(item)}</span>
             </li>
           ))}
         </ul>
@@ -178,13 +178,15 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
       return (
         <figure key={index} className="my-12 md:my-16">
           {block.src ? (
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden">
               <Image
                 src={block.src}
                 alt={block.alt}
-                fill
+                width={680}
+                height={0}
                 sizes="(max-width: 768px) 100vw, 680px"
-                className="object-cover"
+                className="w-full h-auto"
+                style={{ height: 'auto' }}
               />
             </div>
           ) : (

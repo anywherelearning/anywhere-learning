@@ -79,16 +79,22 @@ export async function generateMetadata({
 function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
   const defaults = blogProductDefaults[post.category];
 
-  // Step 1: Strip out any existing callouts so we can reposition them
+  // Step 1: Strip out non-pinned callouts so we can reposition them (pinned callouts stay in place)
   const productBlock = post.content.find((b) => b.type === 'product-callout');
   const bundleBlock = post.content.find((b) => b.type === 'bundle-callout');
-  const stripped = post.content.filter((b) => b.type !== 'product-callout' && b.type !== 'bundle-callout');
+  const stripped = post.content.filter((b) =>
+    !((b.type === 'product-callout' && !('pinned' in b && b.pinned))
+    || (b.type === 'bundle-callout' && !('pinned' in b && b.pinned)))
+  );
 
-  // Determine which callouts to place
-  const product = productBlock
-    || (defaults ? { type: 'product-callout' as const, slug: post.recommendedProduct || defaults.product } : null);
-  const bundle = bundleBlock
-    || (defaults ? { type: 'bundle-callout' as const, slug: post.recommendedBundle || defaults.bundle } : null);
+  // Determine which callouts to place (skip pinned ones — they're already in the content)
+  const productPinned = productBlock && 'pinned' in productBlock && productBlock.pinned;
+  const bundlePinned = bundleBlock && 'pinned' in bundleBlock && bundleBlock.pinned;
+
+  const product = productPinned ? null : (productBlock
+    || (defaults ? { type: 'product-callout' as const, slug: post.recommendedProduct || defaults.product } : null));
+  const bundle = bundlePinned ? null : (bundleBlock
+    || (defaults ? { type: 'bundle-callout' as const, slug: post.recommendedBundle || defaults.bundle } : null));
 
   if (!product && !bundle) return post.content;
 
@@ -300,6 +306,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 fill
                 sizes="(max-width: 768px) 100vw, 1024px"
                 className="object-cover"
+                style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
               />
             ) : (
               <>

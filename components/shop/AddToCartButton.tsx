@@ -74,7 +74,7 @@ export default function AddToCartButton({
   return (
     <button
       onClick={handleClick}
-      className="shimmer-effect block w-full bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center text-lg cursor-pointer"
+      className="block w-full bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg text-center text-lg cursor-pointer"
     >
       <span aria-live="polite">
         {justAdded ? (

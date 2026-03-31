@@ -256,7 +256,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
         <Link
           href="/shop?category=bundle"
           onClick={dismiss}
-          className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+          className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
         >
           Browse Bundles &rarr;
         </Link>
@@ -362,7 +362,7 @@ function CartRecoveryContent({
           // Small delay so popup closes before drawer opens
           setTimeout(() => openCart(), 350);
         }}
-        className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+        className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
       >
         View Cart &rarr;
       </button>
@@ -455,7 +455,7 @@ function BundleUpgradeContent({
         <Link
           href={`/shop/${upsell.bundle.slug}`}
           onClick={dismiss}
-          className="shimmer-effect block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+          className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
         >
           View Bundle &rarr;
         </Link>

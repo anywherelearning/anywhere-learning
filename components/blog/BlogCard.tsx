@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogCategories, formatDate, formatReadTime, type BlogCategory } from '@/lib/blog';
 
 interface BlogCardProps {
@@ -10,6 +11,8 @@ interface BlogCardProps {
   publishedAt: string;
   readTimeMinutes: number;
   author: { name: string };
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
 const categoryIcons: Record<BlogCategory, ReactNode> = {
@@ -46,7 +49,7 @@ const categoryIcons: Record<BlogCategory, ReactNode> = {
 };
 
 export default function BlogCard({
-  slug, title, excerpt, category, publishedAt, readTimeMinutes, author,
+  slug, title, excerpt, category, publishedAt, readTimeMinutes, author, heroImage, heroImageAlt,
 }: BlogCardProps) {
   const cat = blogCategories[category];
 
@@ -55,14 +58,24 @@ export default function BlogCard({
       href={`/blog/${slug}`}
       className="group block rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
     >
-      {/* Image placeholder with category color */}
+      {/* Image or placeholder with category color */}
       <div
         className="relative aspect-[16/9] flex items-center justify-center overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${cat.color}20, ${cat.color}40)` }}
+        style={{ background: heroImage ? undefined : `linear-gradient(135deg, ${cat.color}20, ${cat.color}40)` }}
       >
-        <div className="text-gray-300 opacity-50" style={{ color: cat.color }}>
-          {categoryIcons[category]}
-        </div>
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            alt={heroImageAlt || title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="text-gray-300 opacity-50" style={{ color: cat.color }}>
+            {categoryIcons[category]}
+          </div>
+        )}
         {/* Category pill */}
         <span
           className="absolute top-3 left-3 text-xs font-semibold text-white px-3 py-1 rounded-full"
