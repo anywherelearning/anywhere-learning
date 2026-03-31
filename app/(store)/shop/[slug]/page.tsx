@@ -489,31 +489,6 @@ export default async function ProductPage({
                 productName={product.name}
               />
 
-              {/* Buy CTA — bottom of right column (all screen sizes) */}
-              <div className="bg-forest/5 border border-forest/15 rounded-2xl p-6 mt-8 text-center">
-                <p className="font-display text-xl text-forest mb-4">
-                  Ready to get started?
-                </p>
-                <div className="flex justify-center mb-4">
-                  <PriceDisplay
-                    priceCents={product.priceCents}
-                    compareAtPriceCents={product.compareAtPriceCents}
-                    size="sm"
-                  />
-                </div>
-                <AddToCartButton
-                  stripePriceId={product.stripePriceId}
-                  slug={product.slug}
-                  productName={product.name}
-                  priceCents={product.priceCents}
-                  category={product.category}
-                  isBundle={product.isBundle ?? false}
-                  imageUrl={product.imageUrl}
-                />
-                <p className="text-xs text-gray-400 mt-2">
-                  Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
-                </p>
-              </div>
             </div>
           </div>
         </section>

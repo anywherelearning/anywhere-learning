@@ -53,6 +53,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     'travel-worldschool',
   ];
 
+  // Compute post counts per category for filter badges
+  const postCounts: Record<string, number> = {};
+  for (const cat of validCategories) {
+    postCounts[cat] = getPostsByCategory(cat).length;
+  }
+
   const activeCategory = validCategories.includes(category as BlogCategory)
     ? (category as BlogCategory)
     : undefined;
@@ -146,7 +152,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-10">
             <Suspense>
-              <BlogCategoryFilter />
+              <BlogCategoryFilter postCounts={postCounts} />
             </Suspense>
           </div>
 
@@ -163,6 +169,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       publishedAt={post.publishedAt}
                       readTimeMinutes={post.readTimeMinutes}
                       author={post.author}
+                      heroImage={post.heroImage}
+                      heroImageAlt={post.heroImageAlt}
                     />
                   </ScrollReveal>
                 ))}

@@ -2,18 +2,67 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useRef } from 'react';
+import {
+  SparklesIcon,
+  LeafIcon,
+  PaletteIcon,
+  CpuIcon,
+  BookOpenIcon,
+} from '@/components/shop/icons';
+
+/* ─── Blog-specific icons ─── */
+
+function HomeIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  );
+}
+
+function GlobeIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+    </svg>
+  );
+}
+
+function WrenchIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+    </svg>
+  );
+}
 
 const categories = [
-  { value: '', label: 'All Posts' },
-  { value: 'ai-digital-literacy', label: 'AI & Digital Literacy' },
-  { value: 'creativity-maker', label: 'Creativity & Maker' },
-  { value: 'homeschool-journey', label: 'Homeschool Journey' },
-  { value: 'nature-learning', label: 'Nature Learning' },
-  { value: 'real-world-skills', label: 'Real-World Skills' },
-  { value: 'travel-worldschool', label: 'Travel & Worldschool' },
+  { value: '', label: 'All Posts', Icon: SparklesIcon },
+  { value: 'ai-digital-literacy', label: 'AI & Digital', Icon: CpuIcon },
+  { value: 'creativity-maker', label: 'Creativity & Maker', Icon: PaletteIcon },
+  { value: 'homeschool-journey', label: 'Homeschool Journey', Icon: HomeIcon },
+  { value: 'nature-learning', label: 'Nature Learning', Icon: LeafIcon },
+  { value: 'real-world-skills', label: 'Real-World Skills', Icon: WrenchIcon },
+  { value: 'travel-worldschool', label: 'Travel & Worldschool', Icon: GlobeIcon },
 ];
 
-export default function BlogCategoryFilter() {
+const categoryActiveColors: Record<string, string> = {
+  '': 'bg-forest text-cream shadow-sm',
+  'ai-digital-literacy': 'bg-[#7b88a8] text-white shadow-sm',
+  'creativity-maker': 'bg-[#c47a8f] text-white shadow-sm',
+  'homeschool-journey': 'bg-[#8b7355] text-white shadow-sm',
+  'nature-learning': 'bg-forest text-cream shadow-sm',
+  'real-world-skills': 'bg-[#c4836a] text-white shadow-sm',
+  'travel-worldschool': 'bg-[#5b8fa8] text-white shadow-sm',
+};
+
+interface BlogCategoryFilterProps {
+  postCounts?: Record<string, number>;
+}
+
+export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const active = searchParams.get('category') || '';
@@ -48,21 +97,30 @@ export default function BlogCategoryFilter() {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2" role="tablist">
-        {categories.map((cat) => (
-          <button
-            key={cat.value}
-            role="tab"
-            aria-selected={active === cat.value}
-            onClick={() => handleFilter(cat.value)}
-            className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-              active === cat.value
-                ? 'bg-forest text-cream shadow-sm'
-                : 'bg-white text-gray-600 hover:bg-forest/5 hover:text-forest border border-gray-200'
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
+        {categories.map((cat) => {
+          const count = cat.value && postCounts ? postCounts[cat.value] : null;
+          return (
+            <button
+              key={cat.value}
+              role="tab"
+              aria-selected={active === cat.value}
+              onClick={() => handleFilter(cat.value)}
+              className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                active === cat.value
+                  ? categoryActiveColors[cat.value]
+                  : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+              }`}
+            >
+              <cat.Icon className="w-4 h-4" />
+              {cat.label}
+              {count != null && count > 0 && (
+                <span className={`text-xs ${active === cat.value ? 'opacity-75' : 'text-gray-400'}`}>
+                  ({count})
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
       <div className="relative">
         <svg

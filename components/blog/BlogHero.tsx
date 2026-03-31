@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogCategories, formatDate, formatReadTime, type BlogPost } from '@/lib/blog';
 
 interface BlogHeroProps {
@@ -14,17 +15,30 @@ export default function BlogHero({ post }: BlogHeroProps) {
       <Link href={`/blog/${post.slug}`} className="group">
         <div
           className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow"
-          style={{ background: `linear-gradient(145deg, ${cat.color}25, ${cat.color}50)` }}
+          style={{ background: post.heroImage ? undefined : `linear-gradient(145deg, ${cat.color}25, ${cat.color}50)` }}
         >
-          {/* Decorative abstract shapes */}
-          <div
-            className="absolute top-[20%] right-[15%] w-24 h-24 rounded-full opacity-20 blur-xl"
-            style={{ backgroundColor: cat.color }}
-          />
-          <div
-            className="absolute bottom-[25%] left-[10%] w-32 h-32 rounded-full opacity-15 blur-2xl"
-            style={{ backgroundColor: cat.color }}
-          />
+          {post.heroImage ? (
+            <Image
+              src={post.heroImage}
+              alt={post.heroImageAlt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
+            />
+          ) : (
+            <>
+              {/* Decorative abstract shapes */}
+              <div
+                className="absolute top-[20%] right-[15%] w-24 h-24 rounded-full opacity-20 blur-xl"
+                style={{ backgroundColor: cat.color }}
+              />
+              <div
+                className="absolute bottom-[25%] left-[10%] w-32 h-32 rounded-full opacity-15 blur-2xl"
+                style={{ backgroundColor: cat.color }}
+              />
+            </>
+          )}
           {/* Category pill */}
           <span
             className="absolute top-4 left-4 text-xs font-semibold text-white px-3 py-1.5 rounded-full"

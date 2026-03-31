@@ -85,7 +85,7 @@ export default function StickyMobileBuy({
         <button
           onClick={handleClick}
           aria-label={`${alreadyInCart ? 'View cart' : `Add ${productName} to cart`}`}
-          className="shimmer-effect bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
+          className="bg-gold hover:bg-gold-light text-gray-900 font-semibold py-2.5 px-6 rounded-xl text-sm transition-all flex-shrink-0"
         >
           {justAdded ? '✓ Added!' : alreadyInCart ? 'View Cart' : 'Get This'}
         </button>

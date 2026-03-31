@@ -100,7 +100,7 @@ export default function BundleHighlight({
 
           <Link
             href={`/shop/${slug}`}
-            className="shimmer-effect inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-xl text-lg"
+            className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-xl text-lg"
           >
             Get the {name} &rarr;
           </Link>

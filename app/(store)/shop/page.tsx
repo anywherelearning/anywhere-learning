@@ -620,7 +620,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               </p>
               <Link
                 href="/free-guide"
-                className="shimmer-effect inline-block bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-lg"
+                className="inline-block bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-lg"
               >
                 Get the Free Guide
               </Link>
