@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anywhere Learning — Email Flow Diagram</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #f5f3ee; color: #2d2d2d; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 28px; color: #588157; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; }
+  .flows { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+
+  /* Flow section */
+  .flow { background: #faf9f6; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .flow-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .flow-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .flow-title { font-size: 20px; font-weight: 700; }
+  .flow-desc { font-size: 13px; color: #888; margin-top: 2px; }
+
+  /* Colors per flow */
+  .flow--purchase .flow-icon { background: #588157; color: #fff; }
+  .flow--purchase .flow-title { color: #588157; }
+  .flow--cart .flow-icon { background: #d4a373; color: #fff; }
+  .flow--cart .flow-title { color: #d4a373; }
+  .flow--lead .flow-icon { background: #6b8e6b; color: #fff; }
+  .flow--lead .flow-title { color: #6b8e6b; }
+  .flow--referral .flow-icon { background: #c4836a; color: #fff; }
+  .flow--referral .flow-title { color: #c4836a; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before { content: ''; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 2px; background: #e5e5e5; }
+  .step { position: relative; margin-bottom: 20px; }
+  .step:last-child { margin-bottom: 0; }
+  .step-dot { position: absolute; left: -32px; top: 4px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #ccc; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 10px; z-index: 1; }
+  .step-dot.resend { border-color: #588157; background: #588157; color: #fff; }
+  .step-dot.kit { border-color: #d4a373; background: #d4a373; color: #fff; }
+  .step-dot.stripe { border-color: #635bff; background: #635bff; color: #fff; }
+  .step-dot.logic { border-color: #888; background: #f7f5f0; color: #888; }
+  .step-content { background: #f7f5f0; border-radius: 10px; padding: 14px 18px; }
+  .step-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .step-label.resend { color: #588157; }
+  .step-label.kit { color: #d4a373; }
+  .step-label.stripe { color: #635bff; }
+  .step-label.logic { color: #888; }
+  .step-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .step-detail { font-size: 13px; color: #666; line-height: 1.5; }
+  .step-timing { display: inline-block; background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; padding: 2px 8px; font-size: 11px; color: #888; margin-top: 6px; font-weight: 500; }
+
+  /* Branch */
+  .branch { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .branch-box { background: #f7f5f0; border-radius: 10px; padding: 16px; border-left: 3px solid #ccc; }
+  .branch-box.yes { border-left-color: #588157; }
+  .branch-box.no { border-left-color: #c47a8f; }
+  .branch-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .branch-label.yes { color: #588157; }
+  .branch-label.no { color: #c47a8f; }
+  .branch-item { font-size: 13px; color: #555; margin-bottom: 4px; padding-left: 14px; position: relative; line-height: 1.5; }
+  .branch-item::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; }
+  .branch-box.yes .branch-item::before { background: #588157; }
+  .branch-box.no .branch-item::before { background: #c47a8f; }
+
+  /* Legend */
+  .legend { max-width: 1100px; margin: 40px auto 0; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+
+  @media (max-width: 700px) {
+    .branch { grid-template-columns: 1fr; }
+    .flows { gap: 32px; }
+    .flow { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Anywhere Learning Email Flows</h1>
+<p class="subtitle">Resend (React Email) for transactional &middot; ConvertKit for sequences &amp; nurture</p>
+
+<div class="flows">
+
+  <!-- ═══ PURCHASE FLOW ═══ -->
+  <div class="flow flow--purchase">
+    <div class="flow-header">
+      <div class="flow-icon">$</div>
+      <div>
+        <div class="flow-title">Purchase Flow</div>
+        <div class="flow-desc">Triggered by Stripe checkout.session.completed webhook</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-dot stripe">S</div>
+        <div class="step-content">
+          <div class="step-label stripe">Stripe Webhook</div>
+          <div class="step-title">checkout.session.completed</div>
+          <div class="step-detail">Create order records, auto-grant Skills Map if bundle, generate referral code</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot resend">R</div>
+        <div class="step-content">
+          <div class="step-label resend">Resend (React Email)</div>
+          <div class="step-title">Purchase Confirmation Email</div>
+          <div class="step-detail">Product images, download link, referral code with "share &amp; both get 15% off"</div>
+          <div class="step-timing">Immediate</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit</div>
+          <div class="step-title">Tag: buyer + product slugs + category tags</div>
+          <div class="step-detail">Tags: <code>buyer</code>, <code>first-purchase</code>, <code>has-bundle</code>, product slugs, cross-sell categories</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit Automation</div>
+          <div class="step-title">Post-Purchase Nurture Sequence</div>
+          <div class="step-detail">
+            <strong>Day 2:</strong> "Getting started" tips — how to use the packs, device suggestions<br>
+            <strong>Day 3-5:</strong> Cross-sell email — "Families who got [X] also love [Y]" based on category<br>
+            <strong>Day 7:</strong> Review request — "How's it going? We'd love to hear from you"<br>
+            <strong>Day 14:</strong> Referral reminder — "Share your code, you both save 15%"
+          </div>
+          <div class="step-timing">Kit automation &middot; triggered by <code>buyer</code> tag</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit</div>
+          <div class="step-title">Newsletter + New Product Announcements</div>
+          <div class="step-detail">Ongoing: seasonal packs, new bundles, blog posts, tips. Buyer segment gets early access.</div>
+          <div class="step-timing">Ongoing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CART ABANDONMENT FLOW ═══ -->
+  <div class="flow flow--cart">
+    <div class="flow-header">
+      <div class="flow-icon">&#128722;</div>
+      <div>
+        <div class="flow-title">Cart Abandonment Flow</div>
+        <div class="flow-desc">Triggered by Stripe checkout.session.expired webhook</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-dot stripe">S</div>
+        <div class="step-content">
+          <div class="step-label stripe">Stripe Webhook</div>
+          <div class="step-title">checkout.session.expired</div>
+          <div class="step-detail">Read product_slugs from session metadata, look up products from DB, compute smart upsell</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot resend">R</div>
+        <div class="step-content">
+          <div class="step-label resend">Resend (React Email)</div>
+          <div class="step-title">Cart Abandonment Email</div>
+          <div class="step-detail">
+            Shows items left in cart with images + prices. Smart upsell:<br>
+            &bull; <strong>Bundle in cart:</strong> "Don't forget your free Skills Map bonus!"<br>
+            &bull; <strong>Same-category items:</strong> "Save more with the bundle" + savings<br>
+            &bull; <strong>Mixed items:</strong> "You're X packs away from Y% off" (BYOB)
+          </div>
+          <div class="step-timing">Immediate</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit</div>
+          <div class="step-title">Tag: cart-abandoner</div>
+          <div class="step-detail">Triggers Kit automation for follow-up drip</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot logic">?</div>
+        <div class="step-content">
+          <div class="step-label logic">Gate Check</div>
+          <div class="step-title">Did they purchase?</div>
+          <div class="step-detail">Every Kit email checks: subscriber does NOT have <code>buyer</code> tag before sending</div>
+          <div class="step-timing">Checked before each send</div>
+        </div>
+      </div>
+    </div>
+    <div class="branch">
+      <div class="branch-box yes">
+        <div class="branch-label yes">Purchased (has <code>buyer</code> tag)</div>
+        <div class="branch-item">Exit abandonment sequence</div>
+        <div class="branch-item">Enter purchase flow (above)</div>
+        <div class="branch-item">Nurture, cross-sell, review, newsletter</div>
+      </div>
+      <div class="branch-box no">
+        <div class="branch-label no">Still hasn't purchased</div>
+        <div class="branch-item"><strong>Day 1:</strong> Different angle — social proof, testimonials</div>
+        <div class="branch-item"><strong>Day 3:</strong> Value nudge — "Here's what families are doing with [pack]"</div>
+        <div class="branch-item"><strong>Day 5:</strong> Limited discount — "Still thinking? Here's 10% off"</div>
+        <div class="branch-item"><strong>Day 7+:</strong> Move to email course + newsletter</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ LEAD MAGNET FLOW ═══ -->
+  <div class="flow flow--lead">
+    <div class="flow-header">
+      <div class="flow-icon">&#9993;</div>
+      <div>
+        <div class="flow-title">Lead Magnet Flow</div>
+        <div class="flow-desc">Triggered by free guide form submission at /free-guide</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit</div>
+          <div class="step-title">Tag: lead</div>
+          <div class="step-detail">Subscriber added to Kit with <code>lead</code> tag via /api/subscribe endpoint</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit Automation</div>
+          <div class="step-title">Free Guide Delivery</div>
+          <div class="step-detail">Email with free guide PDF attached or linked</div>
+          <div class="step-timing">Immediate</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit Automation</div>
+          <div class="step-title">Welcome Email Course (3-5 emails)</div>
+          <div class="step-detail">
+            <strong>Day 2:</strong> Getting started tips — "Here's how to use the guide"<br>
+            <strong>Day 4:</strong> Philosophy / value — why real-world learning works<br>
+            <strong>Day 6:</strong> Quick win activity — free sample or blog post<br>
+            <strong>Day 8:</strong> Soft sell — "Ready for more? Browse the shop"<br>
+            <strong>Day 10:</strong> Social proof — parent testimonial + shop link
+          </div>
+          <div class="step-timing">Drip over 10 days</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot kit">K</div>
+        <div class="step-content">
+          <div class="step-label kit">ConvertKit</div>
+          <div class="step-title">Newsletter + New Product Announcements</div>
+          <div class="step-detail">Seasonal content, new packs, blog posts, tips. Lead segment gets intro pricing.</div>
+          <div class="step-timing">Ongoing after course ends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ REFERRAL FLOW ═══ -->
+  <div class="flow flow--referral">
+    <div class="flow-header">
+      <div class="flow-icon">&#127873;</div>
+      <div>
+        <div class="flow-title">Referral Reward Flow</div>
+        <div class="flow-desc">Triggered when a referred friend completes a purchase</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-dot stripe">S</div>
+        <div class="step-content">
+          <div class="step-label stripe">Stripe Webhook</div>
+          <div class="step-title">checkout.session.completed (with REF- promo code)</div>
+          <div class="step-detail">Detect referral promo code in session discounts, record conversion, increment count</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot resend">R</div>
+        <div class="step-content">
+          <div class="step-label resend">Resend (React Email)</div>
+          <div class="step-title">Referral Reward Email (to referrer)</div>
+          <div class="step-detail">"Your friend just saved 15% — here's your 15% off code!" One-time reward promo code.</div>
+          <div class="step-timing">Immediate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#635bff"></div> Stripe webhook trigger</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#588157"></div> Resend (React Email)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#d4a373"></div> ConvertKit sequence</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#888"></div> Logic gate / condition</div>
+</div>
+
+</body>
+</html>
