@@ -757,7 +757,6 @@ const posts: BlogPost[] = [
     keywords: ['outdoor STEM activities', 'nature STEM for kids', 'outdoor science experiments', 'backyard STEM challenges', 'homeschool STEM ideas', 'nature-based learning'],
     readTimeMinutes: 13,
     author: amelie,
-    heroImageAlt: 'Kids building a stick bridge over a small stream',
     content: [
       { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials \u2014 sticks, mud, water, rocks, and plants \u2014 instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require no prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d \u2014 it just is.' },
