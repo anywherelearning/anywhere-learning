@@ -684,7 +684,8 @@ const posts: BlogPost[] = [
     keywords: ['AI for kids', 'AI basics for children', 'teach kids about AI', 'digital literacy kids', 'AI education homeschool', 'artificial intelligence for families'],
     readTimeMinutes: 12,
     author: amelie,
-    heroImageAlt: 'Child and parent looking at a tablet screen together, discussing',
+    heroImage: '/images/packing-ereader.jpeg',
+    heroImageAlt: 'Julia reading on her e-reader in a hammock surrounded by palm trees',
     content: [
       { type: 'summary', text: 'Teaching kids about AI means helping children understand how artificial intelligence works, recognise where it appears in daily life, and develop the critical thinking skills to use it responsibly. This guide covers age-appropriate conversations, hands-on activities, and practical frameworks for homeschool families navigating AI literacy in 2026.' },
       { type: 'paragraph', text: 'Kids are already using AI. They\u2019re talking to chatbots, asking voice assistants questions, and watching content that\u2019s been recommended by algorithms. Most of them have no idea how any of it works \u2014 and they\u2019re forming opinions about it based on whatever they happen to encounter.' },
@@ -2215,7 +2216,8 @@ const posts: BlogPost[] = [
     keywords: ['AI myths for kids', 'artificial intelligence facts children', 'teach kids about AI', 'AI misconceptions', 'AI education families', 'is AI dangerous for kids'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImageAlt: 'Parent and child sitting together looking at a laptop with curious expressions',
+    heroImage: '/images/videos-learning-hero.jpeg',
+    heroImageAlt: 'Zach working on his laptop at a desk overlooking the ocean through floor-to-ceiling windows',
     pillarSlug: 'ai-digital-literacy',
     content: [
       { type: 'summary', text: 'AI myths and misconceptions shape how children and parents relate to artificial intelligence \u2014 often creating unnecessary fear or unrealistic expectations. Common myths include that AI thinks like a human brain, that it\u2019s always accurate, and that it will replace all jobs. Understanding what AI actually is (a pattern-matching tool, not a thinking entity) helps families engage with the technology thoughtfully rather than reactively.' },
@@ -2273,7 +2275,8 @@ const posts: BlogPost[] = [
     keywords: ['teach kids AI prompts', 'prompt engineering for kids', 'AI tools for learning', 'how to use ChatGPT kids', 'AI homework help', 'critical thinking AI'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImageAlt: 'Child typing on a laptop with a thoughtful expression, parent watching nearby',
+    heroImage: '/images/videos-learning-tablet.jpeg',
+    heroImageAlt: 'Julia using a tablet by the pool, focused on what she\u2019s reading on screen',
     pillarSlug: 'ai-digital-literacy',
     content: [
       { type: 'summary', text: 'Prompt engineering for kids is the skill of asking AI tools clear, specific questions that produce useful results. Teaching children to write good prompts develops critical thinking, communication skills, and metacognition \u2014 they have to think about what they actually want to know before they can ask for it. Far from making kids lazier, learning to prompt well makes them more precise thinkers and more active learners.' },
@@ -2331,7 +2334,8 @@ const posts: BlogPost[] = [
     keywords: ['media literacy kids', 'critical thinking digital', 'fake news children', 'teach kids evaluate sources', 'digital literacy homeschool', 'online safety critical thinking'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImageAlt: 'Child looking thoughtfully at a tablet screen with a parent beside them',
+    heroImage: '/images/creative-stop-motion.jpeg',
+    heroImageAlt: 'Julia arranging small figures on a table for a stop-motion film \u2014 planning each frame by hand',
     pillarSlug: 'ai-digital-literacy',
     content: [
       { type: 'summary', text: 'Media literacy is the ability to critically evaluate information encountered through digital and traditional media \u2014 including recognising bias, identifying misinformation, understanding persuasion techniques, and distinguishing reliable sources from unreliable ones. In an era of AI-generated content, algorithmic curation, and influencer marketing, these skills are essential for children of all ages and can be taught through practical, everyday activities.' },
