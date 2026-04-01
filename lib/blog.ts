@@ -280,7 +280,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'In Panama, the kids did a chocolate-making workshop where they learned about cacao farming, fermentation, and tempering \u2014 that\u2019s agriculture, chemistry, and food science in one sticky afternoon. In El Salvador, they took a pupusa-making class with a local family and learned more about culture, food systems, and Spanish in two hours than any textbook could teach. In Costa Rica, a coffee farm tour turned into a deep conversation about global trade, fair pricing, and why their morning hot chocolate costs what it costs.' },
       { type: 'image', alt: 'Zach and Julia tempering chocolate at a workshop in Bocas del Toro, Panama', caption: 'The chocolate workshop in Panama. Agriculture, chemistry, and food science in one sticky afternoon.', src: '/images/worldschool-two-kids-chocolate.jpeg' },
       { type: 'paragraph', text: 'Look for museums and nature centres \u2014 even small-town ones are often brilliant and rarely crowded. Find local parks and nature reserves where the landscape itself is the lesson. Ask around for workshops and classes: cooking, weaving, pottery, surfing, language. Many communities offer these to visitors, and they\u2019re almost always the highlight of a trip. And don\u2019t forget kids\u2019 activities \u2014 Zach and Julia joined a local basketball group in Uvita, Costa Rica, and within a week they had friends, a routine, and a whole lot of Spanish they didn\u2019t learn from a textbook.' },
-      { type: 'image', alt: 'Family exploring an interactive museum exhibit together while travelling', caption: 'Museums, nature centres, workshops \u2014 every place has something to offer.', src: '/images/worldschool-two-kids-museum.jpeg' },
       { type: 'paragraph', text: 'The best part? Your kids remember these experiences. Years later, they won\u2019t recall a single worksheet. But they\u2019ll remember tempering chocolate in a workshop in Bocas del Toro, or releasing baby sea turtles on a beach in Costa Rica. That\u2019s the kind of learning that becomes part of who they are.' },
       { type: 'heading', level: 2, text: 'Resources that travel well' },
       { type: 'list', ordered: false, items: [
@@ -295,6 +294,7 @@ const posts: BlogPost[] = [
       { type: 'product-callout', slug: 'road-trip-calculator' },
       { type: 'heading', level: 2, text: 'Answering the hard questions' },
       { type: 'paragraph', text: 'People will ask about socialisation, about \u201cgaps,\u201d about university. Here\u2019s what I\u2019ve learned: worldschooled kids are some of the most socially capable humans I\u2019ve met. They\u2019ve navigated foreign cultures, made friends across language barriers, and learned to adapt to new environments constantly. That\u2019s not a socialisation problem. That\u2019s a superpower.' },
+      { type: 'image', alt: 'Family exploring an interactive museum exhibit together while travelling', caption: 'Museums, nature centres, workshops \u2014 every place has something to offer.', src: '/images/worldschool-two-kids-museum.jpeg' },
       { type: 'heading', level: 2, text: 'You don\u2019t have to travel full-time' },
       { type: 'paragraph', text: 'Worldschooling isn\u2019t just for nomad families. A weekend trip to a nearby town, a visit to a cultural festival, or even [cooking a meal from another country](/blog/kitchen-learning-lab) \u2014 it all counts. The mindset is \u201cthe world is the classroom.\u201d The location is optional.' },
       { type: 'paragraph', text: 'Start where you are. Explore your own neighbourhood with fresh eyes. Visit the part of your city you never go to. Try a restaurant from a cuisine you\u2019ve never had. Worldschooling is a way of seeing, not a passport stamp.' },
@@ -545,7 +545,8 @@ const posts: BlogPost[] = [
     keywords: ['teach kids about money', 'budgeting activities for teens', 'financial literacy kids', 'homeschool money lessons', 'kids and money management', 'allowance alternatives'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImageAlt: 'Child counting coins at a market stall with a parent',
+    heroImage: '/images/money-hero.jpeg',
+    heroImageAlt: 'Julia scanning groceries at a self-checkout while Zach watches — handling the full transaction independently',
     content: [
       { type: 'summary', text: 'Financial literacy for kids means teaching children to understand earning, saving, spending, and the value of money through real-world practice rather than allowance charts or classroom exercises. This guide covers age-appropriate money conversations, hands-on budgeting activities, and practical strategies that build lasting financial habits from ages 6 to 14.' },
       { type: 'paragraph', text: 'Most kids have no idea where money actually comes from. They see a card get tapped, or a phone held up to a reader, and the thing they want appears. The connection between work, money, and spending is completely invisible to them \u2014 unless we make it visible.' },
@@ -565,6 +566,7 @@ const posts: BlogPost[] = [
         'Talk through the math together at the checkout',
         'Gradually increase responsibility to weekly meal planning',
       ] },
+      { type: 'image', src: '/images/money-grocery-shopping.jpeg', alt: 'Zach crouching at the grocery store freezer, picking items and comparing options on his own', caption: 'Picking his own items, checking prices, making choices. This is what real budgeting looks like.' },
       { type: 'heading', level: 2, text: 'Saving with a real goal' },
       { type: 'paragraph', text: 'Generic saving (\u201cput 20% in the jar\u201d) doesn\u2019t motivate anyone, let alone a kid. Saving works when there\u2019s something specific they want. A skateboard. A particular book series. A trip to the science museum.' },
       { type: 'paragraph', text: 'Help them calculate how long it will take. Make a simple tracker they can colour in. Watch their behaviour change when the goal is real. Kids treat things differently when they\u2019ve saved for them \u2014 because they know exactly what it cost in time and effort.' },
@@ -705,6 +707,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 5\u20137: Sorting and patterns' },
       { type: 'paragraph', text: 'Play a game where you show your child pictures and ask them to sort them into groups: animals vs. vehicles, happy faces vs. sad faces. Then explain: \u201cThat\u2019s what an AI does — it sorts and groups things based on patterns it\u2019s seen before.\u201d' },
       { type: 'paragraph', text: 'You can also try \u201cbot or not\u201d: read two short stories, one written by you and one generated by AI. Can they tell the difference? This builds critical awareness early.' },
+      { type: 'image', src: '/images/packing-ereader.jpeg', alt: 'Julia reading on her e-reader in a hammock surrounded by palm trees', caption: 'Screen time that looks like this? That\u2019s a kid choosing to learn something on her own terms.' },
       { type: 'heading', level: 3, text: 'Ages 8\u201310: Prompt engineering basics' },
       { type: 'paragraph', text: 'Let them use a chatbot (with supervision) and see how the quality of the answer depends on how they ask the question. A vague prompt gives a vague answer. A specific, detailed prompt gives something useful.' },
       { type: 'paragraph', text: 'This is prompt engineering — and it\u2019s genuinely one of the most valuable [digital skills](/blog/what-kids-should-know-before-18) of the next decade. Learning to ask good questions of an AI is learning to think clearly about what you actually want.' },
@@ -1059,7 +1062,6 @@ const posts: BlogPost[] = [
       ]},
       { type: 'image', src: '/images/el-salvador-volcano.jpeg', alt: 'Family hiking down a volcano trail with a second volcano rising in the distance', caption: 'Thursday\u2019s volcano hike. The crater water question kept us researching all evening.' },
       { type: 'paragraph', text: 'No worksheets. No lesson plans. No tests. And yet \u2014 look at that list. Language, science, geography, history, maths, physical education, cultural studies, and social skills. All in one week. All because we showed up and paid attention.' },
-      { type: 'image', src: '/images/el-salvador-library.jpeg', alt: 'Zach standing in the stunning multi-level San Salvador national library', caption: 'Friday at the San Salvador library \u2014 which led to a conversation about presidents vs. prime ministers.' },
       { type: 'heading', level: 2, text: 'The learning you can\u2019t plan' },
       { type: 'paragraph', text: 'The best moments are always the ones I didn\u2019t see coming.' },
       { type: 'paragraph', text: 'The Spanish lessons happen every weekday after lunch, one hour. But the real practice happens outside. At the tienda, at restaurants, chatting with other kids at the beach. The classroom gives them the grammar. The street gives them the confidence. You need both.' },
@@ -1076,6 +1078,7 @@ const posts: BlogPost[] = [
         'Real communication \u2014 ordering food in Spanish, making friends without a shared language.',
         'Perspective \u2014 understanding that their normal isn\u2019t everyone\u2019s normal. That there are many ways to live a good life.',
       ]},
+      { type: 'image', src: '/images/el-salvador-library.jpeg', alt: 'Zach standing in the stunning multi-level San Salvador national library', caption: 'Friday at the San Salvador library \u2014 which led to a conversation about presidents vs. prime ministers.' },
       { type: 'heading', level: 2, text: 'You don\u2019t have to travel the world to worldschool' },
       { type: 'paragraph', text: 'I want to be clear about something: worldschooling isn\u2019t about the passport stamps. It\u2019s a mindset. It\u2019s the belief that the world \u2014 your town, your neighbourhood, your kitchen \u2014 is a pretty great place to learn.' },
       { type: 'paragraph', text: 'You can worldschool from your backyard. Visit a local factory. Talk to the baker about yeast. Walk through a cemetery and do history. The point isn\u2019t where you are. It\u2019s how you see.' },
@@ -1253,9 +1256,9 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Give them a budget and a shopping list. Let them compare prices, calculate totals, and make spending decisions. Older kids can research unit pricing, compare brands, and track spending over time. This is more financial education than most adults received in 12 years of school.' },
       { type: 'heading', level: 3, text: 'In your neighbourhood' },
       { type: 'paragraph', text: 'Walk your neighbourhood with fresh eyes. In Panama City, we visited the BioMuseo and my son spent two hours learning about how the land bridge formed between North and South America. In El Salvador, we walked through town and the kids practised ordering in Spanish at the tienda. Every place you go has something to notice and learn from \u2014 you just have to pay attention.' },
+      { type: 'image', src: '/images/real-world-bus-stop.jpeg', alt: 'Zach and Julia sitting together at a city bus stop, waiting for the bus on their own', caption: 'Waiting for the city bus. Reading schedules, figuring out routes, and getting yourself somewhere — all real-world skills hiding in a boring errand.' },
       { type: 'heading', level: 3, text: 'With technology' },
       { type: 'paragraph', text: 'Instead of limiting screen time, redirect it. Let your kid learn to code a simple website. Have them research a question and evaluate which sources are trustworthy. Teach them to use AI tools thoughtfully. Digital literacy isn\u2019t about avoiding technology \u2014 it\u2019s about understanding how it works and using it well.' },
-      { type: 'image', src: '/images/real-world-bitcoin.jpeg', alt: 'Zach and Julia browsing books inside a giant Bitcoin-shaped bookshelf at the El Salvador national library', caption: 'A Bitcoin bookshelf at the library in San Salvador. Crypto, economics, and design \u2014 one spontaneous conversation.' },
       { type: 'heading', level: 2, text: 'How to know your kids are actually learning' },
       { type: 'paragraph', text: 'This is the anxiety that keeps most parents up at night. Without tests and grades, how do you know it\u2019s working?' },
       { type: 'paragraph', text: 'Here\u2019s what to look for:' },
@@ -1266,6 +1269,7 @@ const posts: BlogPost[] = [
         'They choose to go deeper. My son visited the Panama Canal and then spent a week researching its history, drawing maps, and making a video about the lock system \u2014 nobody assigned that. That\u2019s intrinsic motivation, and it\u2019s the most powerful predictor of lifelong learning.',
         'They can handle real situations. Can they order food, manage money, solve a problem, navigate a disagreement? These functional skills tell you more than any standardised test.',
       ]},
+      { type: 'image', src: '/images/real-world-bitcoin.jpeg', alt: 'Zach and Julia browsing books inside a giant Bitcoin-shaped bookshelf at the El Salvador national library', caption: 'A Bitcoin bookshelf at the library in San Salvador. Crypto, economics, and design \u2014 one spontaneous conversation.' },
       { type: 'heading', level: 2, text: 'Common concerns (and honest answers)' },
       { type: 'heading', level: 3, text: '\u201cWhat about gaps?\u201d' },
       { type: 'paragraph', text: 'Every education has gaps \u2014 including traditional school. The difference is that real-world learners develop the skill of filling their own gaps. They know how to learn, how to research, how to ask for help. A kid who can teach themselves something new is better equipped than one who\u2019s been spoon-fed a complete but shallow curriculum.' },
@@ -1306,7 +1310,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Raising creative children means nurturing divergent thinking, problem-solving, and imagination through everyday experiences \u2014 not craft kits or structured art projects. Creativity is a skill that develops when kids have unstructured time, open-ended materials, real problems to solve, and the freedom to fail and try again.' },
       { type: 'paragraph', text: 'I used to think creative kids were the ones who drew well. The ones who made things that looked good on a fridge door. Then I became a parent and realised I had it completely backwards.' },
-      { type: 'paragraph', text: 'My daughter spends hours on the beach in El Salvador building sand animals and castles. Nobody tells her what to make. She just shows up with her hands and her imagination and gets to work. Half the time it gets washed away by a wave, and she starts over. That\u2019s creativity. The real kind.' },
+      { type: 'paragraph', text: 'My daughter built a secret room under the basement stairs with her friend. Nobody told them to. They just found the space, saw the possibility, and spent hours turning it into something entirely their own. That\u2019s creativity. The real kind.' },
 
       { type: 'heading', level: 2, text: 'What creativity actually is (and isn\u2019t)' },
       { type: 'paragraph', text: 'Creativity isn\u2019t art class. It\u2019s not being "good at drawing" or "artistic." Those things are fine, but they\u2019re a tiny slice of what creative thinking really means.' },
@@ -1321,7 +1325,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: '7 ways to grow creative thinkers (no supplies needed)' },
       { type: 'heading', level: 3, text: '1. Let them be bored' },
-      { type: 'paragraph', text: 'This is the hardest one, and the most important. Boredom is where creativity is born. When there\u2019s nothing to do and no screen to grab, kids start inventing. My daughter builds entire sand worlds at the beach. My son wrote an entire song about El Salvador and recorded it in iMovie \u2014 nobody asked him to do that.' },
+      { type: 'paragraph', text: 'This is the hardest one, and the most important. Boredom is where creativity is born. When there\u2019s nothing to do and no screen to grab, kids start inventing. My daughter builds forts everywhere \u2014 in the living room, under the kitchen table, under the trampoline. My son creates entire stories and acts them out. Nobody asks them to do any of it.' },
       { type: 'paragraph', text: 'I know it\u2019s uncomfortable to sit through the whining phase. But if you rescue them from boredom every time, they never learn to rescue themselves. And that self-rescue? That\u2019s creative thinking in its purest form.' },
 
       { type: 'heading', level: 3, text: '2. Ask "what if" questions' },
@@ -1334,13 +1338,14 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'When a kid is building something and it\u2019s clearly not going to work, it\u2019s so tempting to step in. "Maybe try it this way." But every time we shortcut their process, we rob them of the chance to figure it out — or to fail and try again. Let the tower fall. Let the design flop. Let them feel the frustration and work through it.' },
 
       { type: 'heading', level: 3, text: '5. Expose them to things outside their bubble' },
-      { type: 'paragraph', text: 'Creativity thrives on new inputs. We\u2019ve been travelling for seven months, and I\u2019ve seen my kids\u2019 creativity shift with every new place. In Panama, my son went from barely knowing what a canal was to making a full research presentation about it. In Costa Rica, they went to a jungle school with no walls and came home full of new ideas. You don\u2019t need to travel the world — you just need to regularly break the routine.' },
+      { type: 'paragraph', text: 'Creativity thrives on new inputs. Travel sparked something in my kids — suddenly they were writing stories, making movies where they\u2019re the actors, creating songs. You don\u2019t need to travel the world — you just need to regularly break the routine. A new park, a different neighbourhood, a museum, a conversation with someone who does something they\u2019ve never heard of. Fresh inputs lead to fresh ideas.' },
 
       { type: 'heading', level: 3, text: '6. Model creative thinking yourself' },
       { type: 'paragraph', text: 'Talk through your own problem-solving out loud. "I\u2019m trying to figure out how to fit all this into the car. What if we...?" When you make a mistake, narrate your recovery. "Well, that didn\u2019t work. Let me think about this differently." Kids learn creative thinking by watching you do it, not by being told to be creative.' },
 
       { type: 'heading', level: 3, text: '7. Celebrate the process, not the product' },
       { type: 'paragraph', text: 'Instead of "that\u2019s beautiful!" try "tell me about this." Instead of praising the end result, ask about the decisions they made along the way. "Why did you choose that colour?" "What was the hardest part?" "What would you do differently next time?" This teaches kids that creative thinking is valuable — not just creative output.' },
+      { type: 'image', src: '/images/creative-stop-motion.jpeg', alt: 'Julia arranging small figures on a table for a stop-motion film — planning each frame by hand', caption: 'Stop-motion in progress. No instructions, no kit — just an idea, some figures, and a lot of patience.' },
 
       { type: 'heading', level: 2, text: 'The creativity killers (we\u2019re all guilty of some)' },
       { type: 'list', ordered: false, items: [
@@ -1352,7 +1357,7 @@ const posts: BlogPost[] = [
       ]},
 
       { type: 'heading', level: 2, text: 'What this looks like in real life' },
-      { type: 'paragraph', text: 'My kids make videos for their travel blog. They research the facts, write scripts, film, and edit the whole thing themselves in iMovie. Nobody assigned it. The videos aren\u2019t polished productions. They\u2019re better, because they\u2019re entirely theirs.' },
+      { type: 'paragraph', text: 'My kids create all kinds of things for their travel blog \u2014 books using Book Creator, movies and songs and interviews and even ads, all edited in iMovie, plus Christmas cards designed in Canva. Nobody assigned any of it. The results aren\u2019t polished productions. They\u2019re better, because they\u2019re entirely theirs.' },
       { type: 'paragraph', text: 'That\u2019s the kind of creative thinking that transfers to everything. Not "follow these steps to make a nice thing" but "here\u2019s a constraint, figure it out."' },
 
       { type: 'tip', title: 'The one-material challenge', text: 'Pick a single material — cardboard, string, newspaper, aluminium foil — and challenge your kids to make something useful out of it. No instructions, no examples, no help unless they ask. This one exercise builds more creative muscle than a whole shelf of craft kits.' },
@@ -1437,6 +1442,7 @@ const posts: BlogPost[] = [
         'Read basic social situations. Know when someone is uncomfortable, when a joke has landed badly, when it\u2019s time to stop talking and listen.',
         'Write a clear email. Subject line, greeting, point, closing. It\u2019s simple, but an alarming number of adults can\u2019t do it.',
       ]},
+      { type: 'image', src: '/images/before-18-ice-cream.jpeg', alt: 'Zach and Julia ordering ice cream at a shop on their own — reading the menu, choosing, and paying', caption: 'Ordering on their own at the ice cream shop. Small moment, big skill.' },
 
       { type: 'heading', level: 2, text: 'Navigation and logistics' },
       { type: 'paragraph', text: 'Being able to get yourself from point A to point B without someone else handling the details.' },
@@ -1446,7 +1452,7 @@ const posts: BlogPost[] = [
         'Plan a trip. Even a day trip. Research where to go, how to get there, what it costs, what to bring.',
         'Know how to get home if their phone dies. This sounds dramatic but it\u2019s a real scenario, and kids who\u2019ve never navigated without GPS genuinely struggle with it.',
       ]},
-      { type: 'image', src: '/images/before-18-ice-cream.jpeg', alt: 'Zach and Julia ordering ice cream at a shop on their own \u2014 reading the menu, choosing, and paying', caption: 'Ordering on their own at the ice cream shop. Small moment, big skill.' },
+      { type: 'image', src: '/images/before-18-bus-stop.jpeg', alt: 'Zach and Julia waiting at a BC Transit bus stop as the city bus pulls up', caption: 'Waiting for the city bus on their own. Reading schedules, planning routes, getting yourself there — that\u2019s real independence.' },
 
       { type: 'heading', level: 2, text: 'Critical thinking' },
       { type: 'paragraph', text: 'In a world full of misinformation, ads disguised as content, and algorithms designed to keep you scrolling, this might be the most important category of all.' },
@@ -1743,7 +1749,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'After we visited the Miraflores Locks in Panama City, Zach got fascinated by the Panama Canal. Not in a \u201cthat was cool, what\u2019s next\u201d kind of way. He spent a full week researching it \u2014 how it was built, why the locks work the way they do, the history behind it. He made notes, drew diagrams, watched documentaries. That kind of deep dive needs time. It doesn\u2019t happen when you\u2019re in a new city every two days.' },
       { type: 'image', src: '/images/slow-travel-panama.jpeg', alt: 'Zach studying a global trade route map at the Panama Canal museum', caption: 'The Panama Canal obsession started here \u2014 and lasted a full week.' },
       { type: 'paragraph', text: 'Julia did the same thing in Florida with panthers and hurricanes. She\u2019d come back to a topic for days, pulling at threads, asking better questions each time. In Costa Rica, they both made a poster about the country \u2014 researching wildlife, geography, and culture, then putting it all together visually. These projects need breathing room \u2014 the kind you only get when your schedule isn\u2019t packed with transfers and check-ins.' },
-      { type: 'image', src: '/images/slow-travel-poster.jpeg', alt: 'Julia proudly holding up her hand-drawn Costa Rica poster with lush green hills behind her', caption: 'Julia\u2019s Costa Rica poster \u2014 wildlife, geography, culture, all in one project.' },
       { type: 'pull-quote', text: 'Kids don\u2019t need more sights. They need time to get curious and follow that curiosity somewhere.' },
       { type: 'heading', level: 2, text: 'The Corcovado vs. Manuel Antonio test' },
       { type: 'paragraph', text: 'This contrast says everything about slow travel versus the bucket-list approach.' },
@@ -1765,6 +1770,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'I\u2019m not going to pretend there aren\u2019t trade-offs. In seven months, we\u2019ve seen four countries. A family doing a classic Central America backpacking trip could cover twice that. We skipped Guatemala, Honduras, Nicaragua, and Belize entirely. There are ruins we haven\u2019t seen, beaches we\u2019ll have to save for another trip.' },
       { type: 'paragraph', text: 'But here\u2019s what we got instead: Zach can explain how the Panama Canal locks work from memory. Julia can identify three species of Costa Rican monkeys by their calls. Both kids can order food in Spanish, navigate a local market, and feel at home in a country that isn\u2019t theirs. They still talk about Ray, the stray dog who joined us on a hike through a volcanic crater town in Panama.' },
       { type: 'paragraph', text: 'They didn\u2019t just see these places. They lived in them. And I think that\u2019s worth more than a longer list of countries.' },
+      { type: 'image', src: '/images/slow-travel-poster.jpeg', alt: 'Julia proudly holding up her hand-drawn Costa Rica poster with lush green hills behind her', caption: 'Julia\u2019s Costa Rica poster \u2014 wildlife, geography, culture, all in one project.' },
       { type: 'heading', level: 2, text: 'Is slow travel right for your family?' },
       { type: 'paragraph', text: 'Maybe. It depends on what you\u2019re after. If you have two weeks of vacation and want to see as much as possible, a packed itinerary makes sense. No judgment there \u2014 we\u2019ve done those trips too, and they\u2019re fun.' },
       { type: 'paragraph', text: 'But if you have the flexibility \u2014 whether you\u2019re homeschooling, worldschooling, working remotely, or taking a sabbatical \u2014 consider going fewer places and staying longer. The learning that happens when kids have time to settle in, get curious, and follow their own questions is something no guided tour can replicate.' },
@@ -2225,6 +2231,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Myth 3: AI will replace all jobs' },
       { type: 'paragraph', text: 'This one creates real anxiety in kids, especially older ones who are starting to think about their future. They hear \u201cAI will take your job\u201d and feel helpless. The reality is more nuanced: AI will change many jobs, eliminate some, and create others that don\u2019t exist yet. The skills that protect you aren\u2019t the ones AI can replicate \u2014 they\u2019re the deeply human ones like creativity, empathy, complex problem-solving, and the ability to connect with other people.' },
       { type: 'paragraph', text: 'I asked my son: \u201cCould an AI have figured out that you were upset at lunch today just from your body language?\u201d He thought about it and said no. \u201cCould an AI have decided to sit with you and make you feel better?\u201d Also no. Those human skills aren\u2019t going anywhere \u2014 and they\u2019re exactly the ones we nurture through [real-world learning](/guides/ai-digital-literacy).' },
+      { type: 'image', src: '/images/videos-learning-hero.jpeg', alt: 'Zach working on his laptop at a desk overlooking the ocean through floor-to-ceiling windows', caption: 'Using technology with intention. The view helps, but the real skill is knowing how to direct your own learning.' },
       { type: 'heading', level: 2, text: 'Myth 4: AI is magic (or too advanced for kids to understand)' },
       { type: 'paragraph', text: 'Some parents avoid the topic entirely because they feel like they\u2019d need a computer science degree to explain it. You don\u2019t. The core concepts are surprisingly simple, and kids grasp them faster than most adults because they don\u2019t have years of sci-fi assumptions to unlearn.' },
       { type: 'paragraph', text: 'AI looks at patterns. AI makes predictions. AI gets things wrong. AI reflects the data it was trained on. That\u2019s it. A 7-year-old can understand those four ideas. And once they do, the \u201cmagic\u201d dissolves into something much more useful: a tool they can evaluate, question, and use intentionally.' },
@@ -2285,6 +2292,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Example 3: Learning something new' },
       { type: 'paragraph', text: 'Bad prompt: \u201cExplain fractions.\u201d Result: a maths textbook definition. Better prompt: \u201cExplain fractions using a pizza analogy. I understand halves but I get confused when the pieces are different sizes.\u201d Result: targeted to exactly where the child is stuck.' },
       { type: 'paragraph', text: 'The pattern is always the same: be specific, give context, and say what kind of answer you want. Once kids see this pattern, they start applying it everywhere \u2014 not just with AI, but in how they ask questions of real people too.' },
+      { type: 'image', src: '/images/videos-learning-tablet.jpeg', alt: 'Julia using a tablet by the pool, focused on what she\u2019s reading on screen', caption: 'Curious, focused, and figuring it out on her own. That\u2019s what learning to ask better questions looks like in practice.' },
       { type: 'heading', level: 2, text: 'Age-appropriate approaches' },
       { type: 'heading', level: 3, text: 'Ages 6\u20138: The \u201cask a better question\u201d game' },
       { type: 'paragraph', text: 'At this age, kids don\u2019t need to type prompts themselves. Play a verbal game: you pretend to be the AI, and they have to ask you questions. If they ask \u201ctell me about dogs,\u201d you give a boring, generic answer. If they ask \u201cwhat\u2019s the fastest dog breed and could it outrun a bicycle?\u201d you give something much more interesting. They learn that better questions get better answers \u2014 a life skill that has nothing to do with technology.' },
@@ -2352,6 +2360,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 8\u201310: Source checking and opinion vs. fact' },
       { type: 'paragraph', text: 'This is the age where kids start using the internet for research, and they need to know that not all websites are equal. Teach the basics: who wrote this? What\u2019s their expertise? Is this a news site, a blog, a company page, or something else? Does this source cite where it got its information?' },
       { type: 'paragraph', text: 'Also work on opinion vs. fact. \u201cChocolate is delicious\u201d is an opinion. \u201cChocolate contains caffeine\u201d is a fact. \u201cChocolate is the best dessert\u201d is an opinion disguised as a fact. Kids this age love catching these once they know to look for them.' },
+      { type: 'image', src: '/images/creative-stop-motion.jpeg', alt: 'Julia arranging small figures on a table for a stop-motion film — planning each frame by hand', caption: 'Making her own media from scratch. When kids create content themselves, they start to understand how all content is constructed.' },
       { type: 'heading', level: 3, text: 'Ages 11\u201313: Algorithms, manipulation, and AI content' },
       { type: 'paragraph', text: 'Older kids are ready to understand that the content they see online isn\u2019t random \u2014 it\u2019s chosen by algorithms designed to keep them watching. Talk about filter bubbles, echo chambers, and why their feed shows them more of what they\u2019ve already clicked on. This is also the age to explore AI-generated content and [how to spot the myths around it](/blog/ai-myths-facts-kids).' },
       { type: 'heading', level: 2, text: 'Practical activities you can do this week' },
@@ -2400,9 +2409,9 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Children drawing a colourful board game layout on cardboard at a kitchen table',
     content: [
       { type: 'summary', text: 'Board game design is a powerful cross-curricular learning activity that combines maths (probability, scoring systems, resource management), writing (rules, storytelling, flavour text), logic (game balance, strategy), and design thinking (prototyping, playtesting, iterating). Kids as young as 5 can design simple games, while older children can tackle complex mechanics that rival published games.' },
-      { type: 'paragraph', text: 'Last month in El Salvador, we lost power for an afternoon. No screens, no internet, nothing. My son grabbed a piece of cardboard, some markers, and a handful of dried beans. Two hours later, he had a fully functioning board game about surfing \u2014 complete with wave cards, a scoring system based on difficulty level, and a \u201cwipeout\u201d mechanic that sent you back three spaces.' },
-      { type: 'paragraph', text: 'His sister played it. Found loopholes. Argued that the scoring was unfair. He revised the rules three times before dinner.' },
-      { type: 'paragraph', text: 'That afternoon involved more maths, writing, logic, negotiation, and design thinking than a week of worksheets. And nobody called it school.' },
+      { type: 'paragraph', text: 'Picture this: a rainy afternoon, no screens, a piece of cardboard, some markers, and a handful of dried beans. Two hours later, a kid has a fully functioning board game \u2014 complete with themed cards, a scoring system, and a penalty mechanic that sends you back three spaces.' },
+      { type: 'paragraph', text: 'A sibling plays it. Finds loopholes. Argues the scoring is unfair. Rules get revised three times before dinner.' },
+      { type: 'paragraph', text: 'That afternoon involves more maths, writing, logic, negotiation, and design thinking than a week of worksheets. And nobody calls it school.' },
 
       { type: 'heading', level: 2, text: 'Why game design is secretly powerful learning' },
       { type: 'paragraph', text: 'When a child designs a board game, they\u2019re doing something remarkable: they\u2019re building a system. A game is a set of rules that interact, create choices, and produce outcomes. That\u2019s systems thinking \u2014 the same skill that engineers, programmers, economists, and scientists use every day.' },
@@ -2437,7 +2446,7 @@ const posts: BlogPost[] = [
         'Different player abilities (\u201cThe explorer moves 3 but can\u2019t use shortcuts; the pilot moves 2 but can fly over obstacles\u201d)',
         'A theme and backstory (suddenly it\u2019s not just a path \u2014 it\u2019s a quest through a haunted forest)',
       ] },
-      { type: 'paragraph', text: 'My daughter once added an entire economy to a game about running a bakery. Players earned coins for baking, spent them on ingredients, and could invest in upgrades like a bigger oven. She was 9. She was doing basic business maths without realising it, and she was completely absorbed.' },
+      { type: 'paragraph', text: 'Kids surprise you with complexity. A 9-year-old might add an entire economy to a game about running a bakery \u2014 players earn coins for baking, spend them on ingredients, and invest in upgrades like a bigger oven. That\u2019s basic business maths, and they\u2019re completely absorbed in it without realising they\u2019re learning.' },
 
       { type: 'heading', level: 2, text: 'The playtesting lesson (this is where the real learning lives)' },
       { type: 'paragraph', text: 'Playtesting is where game design becomes genuinely educational. When your child watches someone else play their game, they encounter a brutal truth: other people don\u2019t think like you do.' },
@@ -2453,11 +2462,11 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 10+: Strategy and system games' },
       { type: 'paragraph', text: 'Older kids can tackle resource management, probability, card drafting, and complex scoring. They might create games that genuinely challenge adults. If they\u2019re interested, introduce them to existing game design frameworks \u2014 there are free resources online for aspiring game designers of all ages.' },
 
-      { type: 'tip', title: 'Materials You Already Have', text: 'You don\u2019t need a game design kit. Cardboard, paper, markers, scissors, tape, dice, coins, dried beans or pasta for pieces, and index cards for game cards. That\u2019s everything. Some of the best games our kids have made used nothing but scrap paper and a pen.' },
+      { type: 'tip', title: 'Materials You Already Have', text: 'You don\u2019t need a game design kit. Cardboard, paper, markers, scissors, tape, dice, coins, dried beans or pasta for pieces, and index cards for game cards. That\u2019s everything. Some of the best kid-made games use nothing but scrap paper and a pen.' },
 
       { type: 'heading', level: 2, text: 'From game night to game design studio' },
       { type: 'paragraph', text: 'If your family already plays board games together, you\u2019re halfway there. Next time you play, pause and ask: \u201cIf you could change one rule, what would it be?\u201d or \u201cWhat would make this game better?\u201d That question \u2014 \u201chow would I improve this?\u201d \u2014 is the bridge from playing to designing.' },
-      { type: 'paragraph', text: 'You might be surprised at how quickly kids go from modifying existing games to creating their own. And once they start, good luck stopping them. My son has a stack of cardboard game prototypes that rivals our published game collection. Each one taught him something \u2014 about maths, about people, about the satisfaction of [making something that works](/guides/creativity-maker-activities).' },
+      { type: 'paragraph', text: 'You might be surprised at how quickly kids go from modifying existing games to creating their own. And once they start, good luck stopping them. Some kids end up with a stack of cardboard prototypes that rivals the family\u2019s published game collection. Each one teaches them something \u2014 about maths, about people, about the satisfaction of [making something that works](/guides/creativity-maker-activities).' },
       { type: 'paragraph', text: 'So grab some cardboard. Clear the kitchen table. And let them build a world with rules \u2014 their rules \u2014 that other people want to play in. That\u2019s not a rainy day activity. That\u2019s serious learning disguised as the best afternoon ever.' },
 
       { type: 'cta', text: 'Want a step-by-step guide to game design with your kids? Our Board Game Studio activity walks you through the whole process \u2014 from blank cardboard to playable prototype.', href: '/shop', label: 'Browse Activities' },
@@ -2485,7 +2494,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Kids playing a made-up game with cones and a ball in a grassy backyard',
     content: [
       { type: 'summary', text: 'Inventing a sport is a rich learning activity that combines physical movement with rule-making, negotiation, fairness reasoning, and iterative design. When children create their own games \u2014 defining boundaries, scoring systems, and rules of play \u2014 they practise the same design thinking and social problem-solving skills used by game designers, legislators, and engineers.' },
-      { type: 'paragraph', text: 'My kids invented a sport in Costa Rica called \u201cPool Volleyball Extreme.\u201d The rules changed approximately every four minutes. The scoring system was incomprehensible to adults. My daughter declared herself the referee while also playing on both teams simultaneously. It was chaos.' },
+      { type: 'paragraph', text: 'My son and his friends invented a trampoline game called \u201cGet Blocked\u201d \u2014 played with mini basketballs, with rules they made up on the spot. The scoring system is incomprehensible to adults. Someone inevitably declares themselves the referee while also playing on both teams simultaneously. It is chaos.' },
       { type: 'paragraph', text: 'It was also the most engaged, physically active, socially complex afternoon they\u2019d had in weeks. And nobody planned it. Nobody said \u201ctime for PE.\u201d They just started playing and the game evolved.' },
       { type: 'paragraph', text: 'That\u2019s what happens when you let kids invent their own sports. The play is the learning \u2014 and the learning is so much deeper than anything that happens in a structured PE class.' },
 
@@ -2517,18 +2526,12 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Here\u2019s what you\u2019ll hear when kids invent a sport:' },
       { type: 'paragraph', text: '\u201cThat\u2019s not fair!\u201d \u201cYes it is!\u201d \u201cBut you always win because you\u2019re bigger!\u201d \u201cFine, then you get two throws and I get one.\u201d \u201cOkay, but if I hit the bucket from far away it counts double.\u201d' },
       { type: 'paragraph', text: 'This is negotiation in its purest form. They\u2019re identifying power imbalances, proposing handicap systems, compromising, and testing whether the compromise actually works. No adult could design a lesson that teaches this as effectively as a genuine dispute over whether the ball was in or out.' },
-      { type: 'paragraph', text: 'In El Salvador, my two kids had a 15-minute argument about whether a \u201cghost point\u201d should count in their invented beach game. My instinct was to intervene. Instead, I watched them negotiate a solution: ghost points count, but only if the other player agrees before the throw. That\u2019s a consensus mechanism. My 9-year-old just independently invented a governance principle.' },
+      { type: 'paragraph', text: 'My two kids will argue for 15 minutes about a single rule in a game they invented five minutes ago. My instinct is always to intervene. But when I hold back, I watch them negotiate: they propose solutions, test them, reject them, and eventually land on something both can live with. That\u2019s a consensus mechanism. Kids independently inventing governance principles \u2014 because the game won\u2019t work without them.' },
       { type: 'pull-quote', text: 'When kids argue about rules, they\u2019re not misbehaving. They\u2019re doing the hardest, most important kind of thinking: figuring out how to be fair.' },
 
-      { type: 'heading', level: 2, text: 'Real examples from our family' },
-      { type: 'paragraph', text: 'Here are some of the sports and games my kids have invented over the past year of travel. None were assigned. All were played for hours.' },
-      { type: 'list', ordered: false, items: [
-        'Pool Volleyball Extreme (Costa Rica): net made from a pool noodle, rotating server, bonus points for trick shots, referee-player hybrid role',
-        'Rock Target Golf (El Salvador beach): digging holes in the sand as \u201ccups,\u201d throwing rocks from increasing distances, par system invented after 3 rounds',
-        'Stick Ball Relay (Panama hiking trail): teams relay-racing while balancing a stick on their palm, penalty for dropping',
-        'Pillow Fortress Dodgeball (rainy day in a rental): exactly what it sounds like, with elaborate rules about safe zones and pillow shields',
-      ] },
-      { type: 'paragraph', text: 'Every one of these involved maths (scoring, distance, counting), literacy (explaining and revising rules), science (trajectory, balance, momentum \u2014 even if they didn\u2019t use those words), and social-emotional learning (fairness, frustration management, sportsmanship).' },
+      { type: 'heading', level: 2, text: 'What this looks like in real life' },
+      { type: 'paragraph', text: 'Kids don\u2019t invent a sport and play it once. They invent a game, play it, argue about it, revise it, play it again, and repeat until they\u2019ve iterated through ten versions in a single afternoon. The pool, the backyard, a hiking trail, a rainy living room \u2014 any space becomes a playing field when kids are in charge of the rules.' },
+      { type: 'paragraph', text: 'What makes these invented games so rich is that they\u2019re never just physical. Every one involves maths (scoring, distance, counting), literacy (explaining and revising rules), science (trajectory, balance, momentum \u2014 even if they don\u2019t use those words), and social-emotional learning (fairness, frustration management, sportsmanship).' },
 
       { type: 'heading', level: 2, text: 'Adapting for ages and abilities' },
       { type: 'paragraph', text: 'One of the beautiful things about invented sports is that kids naturally build in accessibility \u2014 especially when the group has mixed ages or abilities. They\u2019ll create handicap rules, different point values, special roles for younger players, and modified equipment without being asked. They do this because they want everyone to keep playing, and a game that\u2019s unfair loses players fast.' },
@@ -2571,8 +2574,8 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Child building a chain reaction machine with dominoes, cardboard tubes, and household items',
     content: [
       { type: 'summary', text: 'A Rube Goldberg machine is a chain-reaction contraption that completes a simple task through an intentionally complex series of steps. Building one teaches kids physics (gravity, momentum, energy transfer), engineering (structural design, cause and effect), persistence (troubleshooting repeated failures), and creative problem-solving \u2014 using nothing more than household materials like dominoes, cardboard tubes, books, and marbles.' },
-      { type: 'paragraph', text: 'My son once spent an entire afternoon trying to make a marble knock over a domino that tipped a cup that rolled a ball down a ramp that rang a bell. He failed 47 times. (I didn\u2019t count. He did. He was keeping a tally because \u201cthe failures are part of the data, Mum.\u201d)' },
-      { type: 'paragraph', text: 'On attempt 48, it worked. The marble hit the domino, the domino tipped the cup, the cup rolled the ball, the ball slid down the ramp, and the bell rang. He screamed so loud the neighbours came out. It was, genuinely, one of the proudest moments I\u2019ve seen him have.' },
+      { type: 'paragraph', text: 'Picture a kid spending an entire afternoon trying to make a marble knock over a domino that tips a cup that rolls a ball down a ramp that rings a bell. They fail 20 times. 30 times. They keep a tally. They adjust the angle, move the domino closer, swap the cup for a lighter one.' },
+      { type: 'paragraph', text: 'And then it works. The marble hits the domino, the domino tips the cup, the cup rolls the ball, the ball slides down the ramp, and the bell rings. The scream of triumph is real. That moment of success after dozens of failures \u2014 that\u2019s one of the proudest feelings a kid can have.' },
       { type: 'paragraph', text: 'That\u2019s a Rube Goldberg machine. And it\u2019s the best STEM activity you\u2019re probably not doing.' },
 
       { type: 'heading', level: 2, text: 'What is a Rube Goldberg machine, exactly?' },
@@ -2580,7 +2583,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The goal isn\u2019t efficiency. The goal is the chain \u2014 the longer and more creative, the better. Every step transfers energy to the next, and the whole thing only works if every single connection succeeds. It\u2019s engineering, physics, and creative thinking wrapped into one glorious, frustrating, deeply satisfying project.' },
 
       { type: 'heading', level: 2, text: 'Why it\u2019s brilliant for learning' },
-      { type: 'paragraph', text: 'I\u2019ve watched my kids learn more physics from one afternoon of Rube Goldberg tinkering than from any textbook explanation. Not because textbooks are bad, but because when your ramp is too steep and the ball shoots off the table, you understand momentum in your bones. When the domino chain stops because one piece is too far from the next, you feel what energy transfer means.' },
+      { type: 'paragraph', text: 'Kids learn more physics from one afternoon of Rube Goldberg tinkering than from any textbook explanation. Not because textbooks are bad, but because when the ramp is too steep and the ball shoots off the table, they understand momentum in their bones. When the domino chain stops because one piece is too far from the next, they feel what energy transfer means.' },
       { type: 'list', ordered: false, items: [
         'Physics: gravity, momentum, energy transfer, friction, inclined planes, levers, pulleys',
         'Engineering: structural stability, cause and effect, sequential design, load bearing',
@@ -2633,7 +2636,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Make it a family project' },
       { type: 'paragraph', text: 'Some of the best Rube Goldberg machines are collaborative. Each family member designs and builds one section, then you connect them. This adds a new layer of challenge: your section has to work with someone else\u2019s, which means communication, planning, and compromise.' },
-      { type: 'paragraph', text: 'We spent an entire rainy weekend in Panama building a machine that stretched across the living room. My husband built a section with books and toy cars. My daughter did a marble run with cardboard tubes. My son built the grand finale (a ball knocking a stuffed animal off a shelf). Connecting the three sections took longer than building them \u2014 and taught us all something about collaboration and systems thinking.' },
+      { type: 'paragraph', text: 'Try it on a rainy weekend: each family member designs and builds one section, then you connect them into a machine that stretches across the living room. One person builds with books and toy cars. Another does a marble run with cardboard tubes. Someone else builds the grand finale. Connecting the sections is often harder than building them \u2014 and teaches everyone something about collaboration and systems thinking.' },
       { type: 'paragraph', text: 'Film the final run. You\u2019ll want to watch it again. Trust me.' },
       { type: 'paragraph', text: 'If your family loves [building and making things](/guides/creativity-maker-activities), a Rube Goldberg machine is the ultimate maker project. It\u2019s open-ended, endlessly customisable, and works with whatever you have on hand. No kit required. No instructions to follow. Just physics, creativity, and the stubborn belief that attempt 48 might be the one that works.' },
 
@@ -2662,8 +2665,8 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Child arranging leaves and stones in a spiral pattern on a forest floor',
     content: [
       { type: 'summary', text: 'Land art is the practice of creating art from and within the natural landscape using found materials like stones, leaves, sticks, and flowers. Kinetic sculpture adds the element of movement \u2014 wind-powered, water-driven, or gravity-fed creations that spin, swing, and sway. Together, they offer children a powerful cross-disciplinary experience combining art, science, engineering, and deep nature observation.' },
-      { type: 'paragraph', text: 'We were hiking in Costa Rica when my daughter stopped, crouched down, and started arranging fallen flowers into a spiral on the trail. Nobody asked her to. Nobody suggested it. She just saw the flowers, saw the dirt, and started creating.' },
-      { type: 'paragraph', text: 'Twenty minutes later, she\u2019d made a spiral mandala of pink, yellow, and white petals on the red earth. It was genuinely beautiful. A family hiking behind us stopped to photograph it. And when we left, we all knew the rain would wash it away by morning.' },
+      { type: 'paragraph', text: 'Every time we go camping or hiking, my kids end up building something. Inukshuks out of stacked rocks. Mandalas from leaves and petals. Sculptures in the sand. Patterns arranged from wildflowers on the trail. Nobody asks them to. They just see the materials, see the space, and start creating.' },
+      { type: 'paragraph', text: 'The best part? It\u2019s temporary. The tide comes in, the wind blows, the rain washes it away. And they\u2019re fine with that \u2014 because the making was the point, not the keeping.' },
       { type: 'paragraph', text: 'That\u2019s land art. Art made from nature, in nature, that returns to nature. And it\u2019s one of the most powerful creative activities I\u2019ve found for kids \u2014 combining art, science, mindfulness, and a deep connection to the outdoors that no indoor craft project can match.' },
 
       { type: 'heading', level: 2, text: 'What is land art?' },
@@ -2733,7 +2736,7 @@ const posts: BlogPost[] = [
         'Note the date, location, weather, and season \u2014 this builds a record of seasonal changes over time',
         'Let the art go. Take the photo, make the sketch, and walk away. The impermanence is the lesson',
       ] },
-      { type: 'paragraph', text: 'Over time, these journal entries become a beautiful record of your family\u2019s creative outdoor life. My daughter\u2019s nature journal from our Central America trip is full of land art sketches alongside pressed flowers and bird observations. It\u2019s one of her most treasured possessions.' },
+      { type: 'paragraph', text: 'Over time, these entries become a beautiful record of your family\u2019s creative outdoor life \u2014 land art sketches alongside pressed flowers, weather notes, and observations from the trail. It\u2019s the kind of keepsake that captures something a photo alone can\u2019t.' },
 
       { type: 'heading', level: 2, text: 'Where nature learning meets maker creativity' },
       { type: 'paragraph', text: 'Land art and kinetic sculpture live at the intersection of two things we value deeply in our family: [nature-based learning](/guides/nature-based-learning) and [creative making](/guides/creativity-maker-activities). It\u2019s not just art and it\u2019s not just science. It\u2019s what happens when you slow down enough to really see the natural world and then respond to it with your hands.' },
@@ -2767,9 +2770,9 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Child drawing a detailed map of an imaginary world with coloured pencils',
     content: [
       { type: 'summary', text: 'Worldbuilding \u2014 the creation of imaginary worlds with their own geography, rules, inhabitants, and histories \u2014 is a form of deep learning that develops writing, logical reasoning, systems thinking, geography, economics, and cultural understanding. Whether through maps, stories, games, or digital tools like Minecraft, children who build imaginary worlds practise the same cognitive skills used by novelists, urban planners, game designers, and historians.' },
-      { type: 'paragraph', text: 'My son has a notebook labelled \u201cThe Republic of Zachistan.\u201d It has a government (constitutional monarchy with an elected council), a currency (the Zach, pegged to the value of chocolate), a map with mountain ranges and river systems, three distinct climate zones, and a 200-year timeline of major historical events including two wars, a famine, and the invention of flying boats.' },
-      { type: 'paragraph', text: 'He\u2019s 12. Nobody assigned this. He\u2019s been building this world for over a year, adding to it whenever inspiration strikes \u2014 on planes, in restaurants, before bed. It started as a drawing and became the most complex intellectual project he\u2019s ever undertaken.' },
-      { type: 'paragraph', text: 'When people ask me what worldschooling \u201clooks like,\u201d I sometimes show them The Republic of Zachistan. Because this is what happens when a kid has time, freedom, and a brain that wants to understand how the world works \u2014 they build one of their own.' },
+      { type: 'paragraph', text: 'My son built an imaginary island, divided into parts based on everything he loves: Candyland, Sportland, Woodland (representing home and family). Each section has its own rules, its own landscape, its own logic. It started as a drawing and kept growing because nobody told him to stop.' },
+      { type: 'paragraph', text: 'My daughter built a magical world \u2014 inspired by Harry Potter and Avatar \u2014 with a magic school, magic creatures, and a magic tree at the centre of it all. She\u2019ll add to it for weeks, then leave it alone, then come back with a whole new layer of detail.' },
+      { type: 'paragraph', text: 'When people ask me what worldschooling \u201clooks like,\u201d I sometimes show them these worlds. Because this is what happens when a kid has time, freedom, and a brain that wants to understand how things work \u2014 they build a world of their own.' },
 
       { type: 'heading', level: 2, text: 'Why worldbuilding is deep learning' },
       { type: 'paragraph', text: 'Worldbuilding looks like play. It looks like a kid drawing maps and making up stories. And it is play \u2014 but it\u2019s also one of the most intellectually demanding creative activities a child can engage in.' },
@@ -2799,16 +2802,16 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If you see any of these, lean in. Ask questions. Be the interested audience. \u201cTell me about the government. Why did you choose a monarchy? What happens if the king makes a bad decision?\u201d These questions don\u2019t feel like school. They feel like someone caring about something your child made. And that caring is what fuels the next layer of depth.' },
 
       { type: 'heading', level: 2, text: 'From play to project' },
-      { type: 'paragraph', text: 'The Republic of Zachistan started as a doodle. It became a project because I took it seriously. When my son showed me his first map, I didn\u2019t say \u201cthat\u2019s nice.\u201d I said \u201cWhere do the rivers go? What\u2019s on the other side of that mountain?\u201d He didn\u2019t know yet. So he went and figured it out.' },
+      { type: 'paragraph', text: 'My son\u2019s island started as a doodle. It became a project because I took it seriously. When he showed me his first map, I didn\u2019t say \u201cthat\u2019s nice.\u201d I said \u201cWhat happens between Candyland and Sportland? Who lives in Woodland?\u201d He didn\u2019t know yet. So he went and figured it out.' },
       { type: 'paragraph', text: 'Here\u2019s what helped it grow from a doodle into a year-long intellectual project:' },
       { type: 'list', ordered: false, items: [
         'A dedicated notebook: giving the world its own physical space signals that it matters',
         'Genuine questions from adults: not testing questions, but curious ones',
-        'Related books and content: we read about how real countries formed, how currencies work, how rivers shape civilisations. He absorbed it all and applied it to Zachistan',
-        'No deadlines or deliverables: the project grows when he\u2019s inspired, not when someone tells him to work on it',
-        'Sharing opportunities: he\u2019s presented Zachistan to his grandparents, and he\u2019s written about it for our family blog',
+        'Related books and content: reading about real places, watching movies, playing games \u2014 all of it feeds the imaginary world with new ideas and details',
+        'No deadlines or deliverables: the project grows when they\u2019re inspired, not when someone tells them to work on it',
+        'Sharing opportunities: letting them present their world to grandparents, friends, or a family blog gives the project an audience and a purpose',
       ] },
-      { type: 'pull-quote', text: 'When a child builds an imaginary world with a government, a currency, and a 200-year history, they\u2019re not just playing. They\u2019re teaching themselves how real worlds work.' },
+      { type: 'pull-quote', text: 'When a child builds an imaginary world with themed regions, magic systems, and its own internal logic, they\u2019re not just playing. They\u2019re teaching themselves how real worlds work.' },
 
       { type: 'heading', level: 2, text: 'Different types of worldbuilding' },
       { type: 'paragraph', text: 'Worldbuilding doesn\u2019t have to look like a notebook full of maps (though it can). There are many entry points, and different kids gravitate to different ones:' },
@@ -2828,7 +2831,7 @@ const posts: BlogPost[] = [
         'Twin 10-year-olds who run competing \u201ccountries\u201d and negotiate trade deals at the dinner table',
         'A 13-year-old who built a civilisation in Minecraft complete with a parliament building where his friends vote on server rules',
         'An 8-year-old who draws the same imaginary city from different time periods \u2014 medieval, Victorian, futuristic \u2014 showing how it changes',
-        'My daughter who created a guidebook for tourists visiting her imaginary island, complete with restaurant reviews and weather warnings',
+        'My daughter who built a magical world with a school for wizards, enchanted creatures, and a sacred tree at its heart \u2014 all inspired by her favourite books and movies',
       ] },
       { type: 'paragraph', text: 'Every one of these projects involves writing, geography, history, economics, and logical thinking. None of them were assigned. All of them were driven by genuine creative passion \u2014 the kind of learning that [sticks because it matters to the child](/blog/raise-creative-kids).' },
 
