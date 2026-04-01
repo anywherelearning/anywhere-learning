@@ -3,11 +3,13 @@ import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { orders, users, products, subscriptions } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
-import { sendPurchaseEmail, sendMembershipWelcomeEmail } from '@/lib/resend';
+import { sendPurchaseEmail, sendMembershipWelcomeEmail, sendCartAbandonmentEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
 import { getSubscriptionByStripeId } from '@/lib/db/queries';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 import { getOrCreateReferral, extractReferralFromSession, processReferralConversion } from '@/lib/referral';
+import { getAbandonmentUpsell } from '@/lib/cart-abandonment';
+import type { AbandonedProduct } from '@/lib/cart-abandonment';
 import type Stripe from 'stripe';
 
 export async function POST(req: NextRequest) {
@@ -577,10 +579,55 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   const email = session.customer_email || session.customer_details?.email;
   if (!email) return;
 
+  // Tag in ConvertKit for drip follow-up sequence
   try {
     await subscribeAndTag(email, ['cart-abandoner']);
   } catch (error) {
     console.error('Failed to tag cart-abandoner in ConvertKit:', error);
+  }
+
+  // Send personalized cart abandonment email via Resend
+  const productSlugs = session.metadata?.product_slugs?.split(',').filter(Boolean);
+  if (!productSlugs || productSlugs.length === 0) return;
+
+  try {
+    // Look up the abandoned products from the DB
+    const abandonedProducts = await db
+      .select({
+        slug: products.slug,
+        name: products.name,
+        category: products.category,
+        priceCents: products.priceCents,
+        isBundle: products.isBundle,
+        imageUrl: products.imageUrl,
+      })
+      .from(products)
+      .where(inArray(products.slug, productSlugs));
+
+    if (abandonedProducts.length === 0) return;
+
+    // Build the upsell recommendation
+    const upsellInput: AbandonedProduct[] = abandonedProducts.map((p) => ({
+      slug: p.slug,
+      name: p.name,
+      category: p.category,
+      priceCents: p.priceCents,
+      isBundle: p.isBundle,
+      imageUrl: p.imageUrl,
+    }));
+    const upsell = getAbandonmentUpsell(upsellInput);
+
+    // Build email items with full image URLs
+    const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+    const emailItems = abandonedProducts.map((p) => ({
+      name: p.name,
+      imageUrl: p.imageUrl || `${siteUrl}/products/${p.slug}.jpg`,
+      priceCents: p.priceCents,
+    }));
+
+    await sendCartAbandonmentEmail({ to: email, items: emailItems, upsell });
+  } catch (error) {
+    console.error('Failed to send cart abandonment email:', error);
   }
 }
 
