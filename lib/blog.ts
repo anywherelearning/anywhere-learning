@@ -1306,7 +1306,8 @@ const posts: BlogPost[] = [
     keywords: ['creative kids', 'creativity homeschool', 'raise creative children', 'creative thinking kids', 'homeschool creativity', 'divergent thinking children'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImageAlt: 'Child building something inventive out of household objects on a kitchen table',
+    heroImage: '/images/presents-costumes-hero.jpeg',
+    heroImageAlt: 'The whole family dressed as wrapped Christmas presents — costumes made entirely from wrapping paper and cardboard',
     content: [
       { type: 'summary', text: 'Raising creative children means nurturing divergent thinking, problem-solving, and imagination through everyday experiences \u2014 not craft kits or structured art projects. Creativity is a skill that develops when kids have unstructured time, open-ended materials, real problems to solve, and the freedom to fail and try again.' },
       { type: 'paragraph', text: 'I used to think creative kids were the ones who drew well. The ones who made things that looked good on a fridge door. Then I became a parent and realised I had it completely backwards.' },
@@ -1333,6 +1334,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 3, text: '3. Give them real problems to solve' },
       { type: 'paragraph', text: 'Next time something breaks, don\u2019t fix it immediately. Ask your kid how they\u2019d fix it. Need to reorganise a closet? Let them design the system. Planning a meal with limited ingredients? That\u2019s a creative challenge. Real problems are better than invented ones because the stakes feel real, and the satisfaction of solving them is genuine.' },
+      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Young Zach wearing glasses he built entirely out of LEGO bricks', caption: 'No instructions needed. Just a pile of LEGO and an idea.' },
 
       { type: 'heading', level: 3, text: '4. Stop finishing their sentences (and their projects)' },
       { type: 'paragraph', text: 'When a kid is building something and it\u2019s clearly not going to work, it\u2019s so tempting to step in. "Maybe try it this way." But every time we shortcut their process, we rob them of the chance to figure it out — or to fail and try again. Let the tower fall. Let the design flop. Let them feel the frustration and work through it.' },
@@ -2666,7 +2668,8 @@ const posts: BlogPost[] = [
     keywords: ['land art kids', 'kinetic sculpture children', 'nature art activities', 'outdoor art homeschool', 'Andy Goldsworthy kids', 'nature creativity'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImageAlt: 'Child arranging leaves and stones in a spiral pattern on a forest floor',
+    heroImage: '/images/rock-sculptures-hero.jpeg',
+    heroImageAlt: 'Stacked rock sculptures and inukshuks built in the forest — land art made from natural materials',
     content: [
       { type: 'summary', text: 'Land art is the practice of creating art from and within the natural landscape using found materials like stones, leaves, sticks, and flowers. Kinetic sculpture adds the element of movement \u2014 wind-powered, water-driven, or gravity-fed creations that spin, swing, and sway. Together, they offer children a powerful cross-disciplinary experience combining art, science, engineering, and deep nature observation.' },
       { type: 'paragraph', text: 'Every time we go camping or hiking, my kids end up building something. Inukshuks out of stacked rocks. Mandalas from leaves and petals. Sculptures in the sand. Patterns arranged from wildflowers on the trail. Nobody asks them to. They just see the materials, see the space, and start creating.' },
@@ -2676,6 +2679,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What is land art?' },
       { type: 'paragraph', text: 'Land art (sometimes called earth art or nature art) is art made from natural materials found in the environment. Stones, leaves, sticks, flowers, sand, ice, mud, shells \u2014 anything the landscape provides. The art is created in place, often left to change and eventually disappear as weather and time do their work.' },
       { type: 'paragraph', text: 'Artists like Andy Goldsworthy have made this form famous, creating astonishing sculptures from icicles, leaves, stones, and thorns. But you don\u2019t need to be an artist to do it. Kids are natural land artists \u2014 they\u2019ve been stacking rocks and arranging sticks since they could walk. Land art just gives that instinct a name and a nudge.' },
+      { type: 'image', src: '/images/rock-arrangement.jpeg', alt: 'Zach sitting proudly next to a rock arrangement he created on the ground', caption: 'No art supplies needed. Just rocks, dirt, and time.' },
 
       { type: 'heading', level: 2, text: 'Adding movement: kinetic sculpture' },
       { type: 'paragraph', text: 'Kinetic sculpture is art that moves. In a nature context, this means creations powered by wind, water, or gravity. Think: a mobile made from sticks and leaves that spins in the breeze. A waterwheel made from bark and twigs, placed in a stream. A balanced stone tower that sways but doesn\u2019t fall.' },
@@ -2741,6 +2745,7 @@ const posts: BlogPost[] = [
         'Let the art go. Take the photo, make the sketch, and walk away. The impermanence is the lesson',
       ] },
       { type: 'paragraph', text: 'Over time, these entries become a beautiful record of your family\u2019s creative outdoor life \u2014 land art sketches alongside pressed flowers, weather notes, and observations from the trail. It\u2019s the kind of keepsake that captures something a photo alone can\u2019t.' },
+      { type: 'image', src: '/images/sand-castle-lake.jpeg', alt: 'Zach and Julia building a sand castle together at the lake', caption: 'Sand sculptures count too. Temporary, collaborative, and totally theirs.' },
 
       { type: 'heading', level: 2, text: 'Where nature learning meets maker creativity' },
       { type: 'paragraph', text: 'Land art and kinetic sculpture live at the intersection of two things we value deeply in our family: [nature-based learning](/guides/nature-based-learning) and [creative making](/guides/creativity-maker-activities). It\u2019s not just art and it\u2019s not just science. It\u2019s what happens when you slow down enough to really see the natural world and then respond to it with your hands.' },
@@ -2771,7 +2776,9 @@ const posts: BlogPost[] = [
     keywords: ['worldbuilding kids', 'imaginary worlds learning', 'creative writing homeschool', 'systems thinking children', 'imaginative play education', 'worldbuilding activities'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImageAlt: 'Child drawing a detailed map of an imaginary world with coloured pencils',
+    heroImage: '/images/lego-world-hero.jpeg',
+    heroImageAlt: 'A LEGO world build with a house, yard, trees, and figures — an imaginary world brought to life brick by brick',
+    heroImagePosition: 'center 70%',
     content: [
       { type: 'summary', text: 'Worldbuilding \u2014 the creation of imaginary worlds with their own geography, rules, inhabitants, and histories \u2014 is a form of deep learning that develops writing, logical reasoning, systems thinking, geography, economics, and cultural understanding. Whether through maps, stories, games, or digital tools like Minecraft, children who build imaginary worlds practise the same cognitive skills used by novelists, urban planners, game designers, and historians.' },
       { type: 'paragraph', text: 'My son built an imaginary island, divided into parts based on everything he loves: Candyland, Sportland, Woodland (representing home and family). Each section has its own rules, its own landscape, its own logic. It started as a drawing and kept growing because nobody told him to stop.' },
@@ -2804,6 +2811,7 @@ const posts: BlogPost[] = [
         'They spend ages explaining how their imaginary world \u201cworks\u201d to anyone who\u2019ll listen',
       ] },
       { type: 'paragraph', text: 'If you see any of these, lean in. Ask questions. Be the interested audience. \u201cTell me about the government. Why did you choose a monarchy? What happens if the king makes a bad decision?\u201d These questions don\u2019t feel like school. They feel like someone caring about something your child made. And that caring is what fuels the next layer of depth.' },
+      { type: 'image', src: '/images/treasure-map.jpeg', alt: 'Zach holding a hand-drawn treasure map outdoors, ready for an adventure', caption: 'Maps aren\u2019t just for geography class. Sometimes they lead to treasure.' },
 
       { type: 'heading', level: 2, text: 'From play to project' },
       { type: 'paragraph', text: 'My son\u2019s island started as a doodle. It became a project because I took it seriously. When he showed me his first map, I didn\u2019t say \u201cthat\u2019s nice.\u201d I said \u201cWhat happens between Candyland and Sportland? Who lives in Woodland?\u201d He didn\u2019t know yet. So he went and figured it out.' },
