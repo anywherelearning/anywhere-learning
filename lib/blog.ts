@@ -714,7 +714,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 11\u201313: Critical analysis' },
       { type: 'paragraph', text: 'Have them ask an AI chatbot factual questions and then verify the answers using actual sources. They\u2019ll discover that AI confidently states things that are wrong. That\u2019s a crucial lesson: sounding right and being right are not the same thing.' },
       { type: 'paragraph', text: 'You can also explore bias: ask the AI to draw a \u201cdoctor\u201d and a \u201cnurse\u201d — what patterns do you notice? This opens important conversations about where data comes from and whose world it reflects.' },
-      { type: 'product-callout', slug: 'ai-basics' },
+      { type: 'product-callout', slug: 'build-ai-helper' },
       { type: 'heading', level: 2, text: 'The ethics conversation' },
       { type: 'paragraph', text: 'Kids have a natural sense of fairness, and AI ethics is really about fairness. Here are questions that work well as family dinner conversations:' },
       { type: 'list', ordered: false, items: [
@@ -749,7 +749,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'what-kids-should-know-before-18'],
-    recommendedProduct: 'ai-basics',
+    recommendedProduct: 'build-ai-helper',
     recommendedBundle: 'ai-digital-bundle',
   },
 
@@ -2249,6 +2249,8 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'The best conversations we\u2019ve had about AI weren\u2019t planned. They happened when something came up naturally \u2014 a weird AI-generated ad, a homework debate at a friend\u2019s house, a news story about deepfakes. If you\u2019re paying attention, the teaching moments are everywhere.' },
       { type: 'tip', title: 'The Fact-Check Challenge', text: 'Pick a topic your child is interested in and ask an AI five questions about it. Then have your child fact-check every answer using books, trusted websites, or their own knowledge. Keep score: how many did the AI get right? Partially right? Completely wrong? This one activity builds more AI literacy than any course.' },
+      { type: 'product-callout', slug: 'ai-basics' },
+      { type: 'bundle-callout', slug: 'ai-digital-bundle' },
       { type: 'cta', text: 'Want hands-on activities that build AI literacy and critical thinking? Our free guide is a great starting point.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What are the most common AI myths kids believe?', answer: 'The biggest ones are that AI thinks like a human, that AI is always correct, that AI will take over all jobs, and that AI is too complex for kids to understand. All of these are misconceptions that can be addressed through simple conversations and hands-on experiments.' },
@@ -2259,7 +2261,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['ai-for-kids-2026', 'teach-kids-prompt-ai', 'media-literacy-kids'],
-    recommendedProduct: 'hallucination-detective',
+    recommendedProduct: 'ai-basics',
     recommendedBundle: 'ai-digital-bundle',
   },
 
@@ -2307,6 +2309,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'When kids use AI this way, they\u2019re developing taste, judgment, and editorial skills. They\u2019re learning what sounds good vs. generic. They\u2019re learning to iterate. These are creative skills that transfer to everything.' },
       { type: 'pull-quote', text: 'A child who can ask a precise question of an AI is a child who can ask a precise question of a book, a teacher, a search engine, or their own brain. The skill is the thinking, not the tool.' },
       { type: 'tip', title: 'The Prompt Upgrade Game', text: 'Take turns writing the worst, most vague prompt you can think of. Then work together to upgrade it step by step, watching how the AI\u2019s response improves each time. Kids love this because it\u2019s competitive, silly, and they get to see the direct impact of better thinking. Plus, the before-and-after comparison makes the skill immediately obvious.' },
+      { type: 'product-callout', slug: 'prompt-like-a-coach' },
+      { type: 'bundle-callout', slug: 'ai-digital-bundle' },
       { type: 'cta', text: 'Looking for hands-on activities that build critical thinking and digital skills? Start with our free guide.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Isn\u2019t teaching kids to use AI just teaching them to cheat?', answer: 'Only if they\u2019re using it to avoid thinking. Teaching kids to prompt well does the opposite \u2014 it requires them to think more clearly about what they want to know. A child who can write a specific, thoughtful prompt is demonstrating exactly the kind of critical thinking we want to develop. The tool isn\u2019t the problem; passive use is.' },
@@ -2379,6 +2383,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'A sceptic says: \u201cLet me check that before I believe it.\u201d A cynic says: \u201cNothing is true and everyone is lying.\u201d The first is empowering. The second is paralysing. Emphasise that reliable sources do exist, that good journalism is real, and that most people aren\u2019t trying to deceive them. But some are \u2014 and knowing the difference is a superpower.' },
       { type: 'paragraph', text: 'In our family, we\u2019ve framed it positively: being a good thinker means you get to decide what\u2019s worth your attention. That feels powerful to a kid, not restricting.' },
       { type: 'tip', title: 'The Three-Source Rule', text: 'Before your child believes or shares any interesting claim, have them check it against three independent sources. If three unrelated, reliable sources agree \u2014 it\u2019s probably solid. If they can only find it on one website or social media post \u2014 it\u2019s worth questioning. This simple habit prevents most misinformation from taking root.' },
+      { type: 'product-callout', slug: 'deepfake-spotter' },
+      { type: 'bundle-callout', slug: 'ai-digital-bundle' },
       { type: 'cta', text: 'Ready to build critical thinking skills as a family? Our free guide has practical activities you can start this week.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is media literacy and why does it matter for kids?', answer: 'Media literacy is the ability to critically evaluate information from any media source \u2014 digital or traditional. It matters because children are exposed to more content than any previous generation, including AI-generated material, targeted advertising, and algorithmically curated feeds. Without these skills, kids are passive consumers of whatever they encounter.' },
