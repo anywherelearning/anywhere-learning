@@ -3541,7 +3541,9 @@ export function getPostsByCategory(category: BlogCategory): BlogPost[] {
 }
 
 export function getFeaturedPost(): BlogPost {
-  return getAllPosts()[0];
+  const all = getAllPosts();
+  // Pin the best entry-point post; fall back to newest
+  return all.find((p) => p.slug === 'new-to-homeschooling') ?? all[0];
 }
 
 export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {

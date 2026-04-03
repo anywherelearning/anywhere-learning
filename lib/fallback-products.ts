@@ -41,7 +41,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 4 seasonal packs — 80 outdoor activities for every time of year.",
     priceCents: 4499,
-    compareAtPriceCents: 5996,
+    compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTNAMzOBftCntknn9ugHW",
     blobUrl: "",
     imageUrl: "/products/four-seasons-bundle.jpg",

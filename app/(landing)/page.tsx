@@ -3,11 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
-import ProductCard from '@/components/shop/ProductCard';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
-import BundleCarousel from '@/components/shop/BundleCarousel';
+import HomepageBundleCarousel from '@/components/home/HomepageBundleCarousel';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
@@ -25,7 +24,7 @@ const featuredProducts = [
     name: 'The Future-Ready Skills Map',
     slug: 'future-ready-skills-map',
     shortDescription:
-      'The 10 skills your kids actually need — mapped by age with activities, milestones, and sample weeks. Start here.',
+      'The 10 future-ready skills mapped by age, with activities, milestones, and sample weeks.',
     priceCents: 999,
     compareAtPriceCents: null,
     imageUrl: '/products/future-ready-skills-map.jpg',
@@ -33,6 +32,7 @@ const featuredProducts = [
     isBundle: false,
     activityCount: null,
     ageRange: 'Ages 0–14+',
+    isFreeWithBundle: true,
   },
   {
     name: 'Full Seasonal Bundle',
@@ -40,7 +40,7 @@ const featuredProducts = [
     shortDescription:
       'All 4 seasonal packs — 80 outdoor activities for every time of year.',
     priceCents: 4499,
-    compareAtPriceCents: 5996,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/four-seasons-bundle.jpg',
     category: 'bundle',
     isBundle: true,
@@ -264,7 +264,7 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            <BundleCarousel products={featuredProducts} />
+            <HomepageBundleCarousel products={featuredProducts} />
 
             <ScrollReveal delay={400}>
               <div className="mt-14 text-center">

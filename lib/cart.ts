@@ -186,7 +186,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     slug: 'seasonal-bundle',
     name: 'Full Seasonal Bundle (All 4 Seasons)',
     priceCents: 4499,
-    compareAtPriceCents: 5996,
+    compareAtPriceCents: 5999,
     stripePriceId: 'price_1TFcTNAMzOBftCntknn9ugHW',
     category: 'bundle',
     imageUrl: '/products/four-seasons-bundle.jpg',

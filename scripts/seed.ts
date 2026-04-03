@@ -23,7 +23,7 @@ async function seed() {
       description: 'All four seasonal outdoor learning packs in one bundle. 80 activities for every time of year.',
       shortDescription: 'All 4 seasonal packs \u2014 80 outdoor activities for every time of year.',
       priceCents: 4499,
-      compareAtPriceCents: 5996,
+      compareAtPriceCents: 5999,
       stripePriceId: 'price_1TFcTNAMzOBftCntknn9ugHW',
       blobUrl: '',
       imageUrl: '/products/four-seasons-bundle.jpg',
