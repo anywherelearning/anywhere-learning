@@ -952,6 +952,459 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Self-Reflection', 'Writing', 'Creativity', 'Memory', 'Growth Mindset'],
     format: 'Project Guide',
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // COMMUNICATION & WRITING BUNDLE
+  // ═══════════════════════════════════════════════════════════════════
+  'communication-writing-bundle': {
+    opening:
+      'All 12 Communication & Writing guides in one download. Storytelling, debate, interviews, recipe writing, magazine design, trail guides, and more. Every activity puts kids in real communication scenarios — writing for real audiences, speaking with real purpose, and presenting with real confidence.',
+    whatsIncluded: [
+      '12 complete communication and writing guides',
+      'Adventure Story Map, Community Tour Guide, Directions Challenge',
+      'Family Debate Night, Family Recipe Book, Market Stall Pitch',
+      'Mini Magazine Creator, My Review Column, Neighbourhood Interview',
+      'Trail Guide Creator, Community Impact, Write It Like a Pro',
+    ],
+    skillTags: ['Writing', 'Communication', 'Persuasion', 'Storytelling', 'Presentation'],
+    format: 'Bundle',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // ENTREPRENEURSHIP BUNDLE
+  // ═══════════════════════════════════════════════════════════════════
+  'entrepreneurship-bundle': {
+    opening:
+      'All 11 Entrepreneurship guides in one download. Brand building, customer discovery, pitching, pricing, marketing, supply chains, product design, and more. Real business skills through hands-on projects — kids learn by doing, not by reading about it.',
+    whatsIncluded: [
+      '11 complete entrepreneurship guides',
+      'Brand Builder, Business Failure Lab, Community Service Business',
+      'Customer Discovery, Investor Pitch, Marketing Campaign',
+      'Pricing Experiment, Product Design Lab, Supply Chain Detective',
+      'The Shark Tank Pitch, Micro-Business Challenge',
+    ],
+    skillTags: ['Entrepreneurship', 'Financial Literacy', 'Marketing', 'Design Thinking', 'Communication'],
+    format: 'Bundle',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // PLANNING & PROBLEM-SOLVING BUNDLE
+  // ═══════════════════════════════════════════════════════════════════
+  'planning-problem-solving-bundle': {
+    opening:
+      'All 13 Planning & Problem-Solving guides in one download. Survival planning, emergency prep, decision-making, scavenger hunts, everyday redesign, packing logistics, and more. Kids practise thinking ahead, solving real problems, and making smart decisions about real things.',
+    whatsIncluded: [
+      '13 complete planning and problem-solving guides',
+      'Emergency Ready, Everyday Redesign, Fix-It Detective',
+      'Neighbourhood Problem Spotter, Outdoor Survival Planner, Pack Like a Pro',
+      'Scavenger Hunt Designer, Swap Day Challenge, What-If Scenario Lab',
+      'Decision Lab, Problem-Solver Studio, Time & Energy Planner, Travel Day',
+    ],
+    skillTags: ['Planning', 'Problem-Solving', 'Critical Thinking', 'Decision-Making', 'Life Skills'],
+    format: 'Bundle',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // COMMUNICATION & WRITING — Individual Guides
+  // ═══════════════════════════════════════════════════════════════════
+  'adventure-story-map': {
+    opening:
+      'A visual story-mapping project that guides kids through planning and writing their own adventure narrative. They map out characters, settings, plot twists, and story arcs — then write the story. Creative writing meets spatial thinking in one hands-on project.',
+    whatsIncluded: [
+      'Visual story map template and planning guide',
+      'Character and setting development prompts',
+      'Plot structure and story arc planning',
+      'Writing prompts tied to each map section',
+      'Extension ideas for longer narratives',
+    ],
+    skillTags: ['Creative Writing', 'Storytelling', 'Planning', 'Narrative', 'Art'],
+    format: 'Project Guide',
+  },
+  'community-tour-guide': {
+    opening:
+      'Research, write, and present a guided tour of your community. Kids choose what matters most about where they live, practise descriptive language, and build presentation confidence. A project that connects writing skills with local knowledge and pride in place.',
+    whatsIncluded: [
+      'Community research and tour planning guide',
+      'Descriptive writing prompts for each tour stop',
+      'Interview tips for gathering local stories',
+      'Presentation and delivery practice',
+      'Extension ideas for digital or illustrated guides',
+    ],
+    skillTags: ['Writing', 'Presentation', 'Research', 'Communication', 'Community'],
+    format: 'Project Guide',
+  },
+  'directions-challenge': {
+    opening:
+      'Write clear, step-by-step directions and test whether someone else can follow them. Kids discover how hard precise communication really is — and get better at it through practice, testing, and feedback. The kind of writing skill they will use every day of their lives.',
+    whatsIncluded: [
+      'Direction-writing challenge guide',
+      'Clarity and precision writing frameworks',
+      'Peer testing and feedback activities',
+      'Increasingly complex direction challenges',
+      'Reflection on communication breakdowns',
+    ],
+    skillTags: ['Procedural Writing', 'Clarity', 'Communication', 'Logic', 'Testing'],
+    format: 'Project Guide',
+  },
+  'family-debate-night': {
+    opening:
+      'A structured debate framework for the whole family. Kids prepare arguments, present their case, respond to counterpoints, and learn to disagree respectfully. Builds persuasive speaking, active listening, and the confidence to express opinions clearly.',
+    whatsIncluded: [
+      'Family debate structure and rules guide',
+      'Age-appropriate debate topic cards',
+      'Argument preparation framework',
+      'Active listening and rebuttal practice',
+      'Reflection prompts on persuasion and respect',
+    ],
+    skillTags: ['Persuasion', 'Critical Thinking', 'Listening', 'Public Speaking', 'Respect'],
+    format: 'Project Guide',
+  },
+  'family-recipe-book': {
+    opening:
+      'Create a family recipe book that captures both the food and the stories behind it. Kids interview family members, write clear procedural instructions, and design pages that connect recipes with memories. Procedural writing meets family storytelling in a meaningful keepsake.',
+    whatsIncluded: [
+      'Recipe book project guide with page templates',
+      'Family interview prompts for recipe stories',
+      'Procedural writing framework for clear instructions',
+      'Page design and illustration guidance',
+      'Book binding and finishing ideas',
+    ],
+    skillTags: ['Procedural Writing', 'Interviewing', 'Design', 'Family History', 'Storytelling'],
+    format: 'Project Guide',
+  },
+  'market-stall-pitch': {
+    opening:
+      'Create and deliver a persuasive pitch for a product or service — as if running a market stall. Kids choose their words, read their audience, and present with confidence. Communication meets entrepreneurship in a project that makes persuasion tangible and fun.',
+    whatsIncluded: [
+      'Pitch planning and writing guide',
+      'Persuasive language and techniques',
+      'Audience awareness and adaptation tips',
+      'Delivery and presentation practice',
+      'Feedback and iteration framework',
+    ],
+    skillTags: ['Persuasion', 'Communication', 'Entrepreneurship', 'Public Speaking', 'Confidence'],
+    format: 'Project Guide',
+  },
+  'mini-magazine-creator': {
+    opening:
+      'Write and design a mini magazine from scratch — headlines, feature articles, illustrations, advertisements, and more. Kids work with multiple text types in one project, learning how different writing styles serve different purposes. A publishing project that builds real writing range.',
+    whatsIncluded: [
+      'Magazine creation project guide',
+      'Multiple text type templates (articles, ads, editorials)',
+      'Layout and design guidance',
+      'Illustration and visual storytelling tips',
+      'Publishing and sharing ideas',
+    ],
+    skillTags: ['Writing', 'Design', 'Multiple Text Types', 'Creativity', 'Publishing'],
+    format: 'Project Guide',
+  },
+  'my-review-column': {
+    opening:
+      'Write reviews of books, movies, products, or experiences — and learn that opinions backed by evidence are powerful. Kids develop critical analysis skills, learn to structure arguments, and discover that their perspective matters. Opinion writing that builds confidence and voice.',
+    whatsIncluded: [
+      'Review writing guide with structure templates',
+      'Critical analysis prompts and frameworks',
+      'Opinion vs evidence balance guidance',
+      'Multiple review formats (short, long, star rating)',
+      'Sharing and publishing review ideas',
+    ],
+    skillTags: ['Opinion Writing', 'Critical Analysis', 'Communication', 'Voice', 'Persuasion'],
+    format: 'Project Guide',
+  },
+  'neighbourhood-interview': {
+    opening:
+      'Interview people in your community — neighbours, shop owners, local heroes — and share their stories. Kids prepare questions, practise active listening, and present what they learn. Builds interviewing skills, empathy, and the ability to tell someone else\'s story with care.',
+    whatsIncluded: [
+      'Interview project guide with question templates',
+      'Active listening techniques and note-taking',
+      'Story writing and presentation frameworks',
+      'Ethical interviewing guidelines',
+      'Portfolio ideas for collected stories',
+    ],
+    skillTags: ['Interviewing', 'Listening', 'Empathy', 'Writing', 'Communication'],
+    format: 'Project Guide',
+  },
+  'trail-guide-creator': {
+    opening:
+      'Create a written guide to a local trail or walking path. Kids walk the route, observe carefully, take notes, and write a guide someone else could follow. Outdoor observation meets descriptive writing in a project that connects kids to nature and place.',
+    whatsIncluded: [
+      'Trail guide creation project',
+      'Observation and note-taking frameworks',
+      'Descriptive writing prompts for each trail section',
+      'Map-making and wayfinding guidance',
+      'Design ideas for a polished guide',
+    ],
+    skillTags: ['Descriptive Writing', 'Observation', 'Nature', 'Geography', 'Design'],
+    format: 'Project Guide',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // ENTREPRENEURSHIP — Individual Guides
+  // ═══════════════════════════════════════════════════════════════════
+  'brand-builder': {
+    opening:
+      'Build a complete brand identity from scratch — name, logo, personality, values, and visual style. Kids learn what makes a brand memorable and why it matters. Creativity, communication, and strategic thinking wrapped into one hands-on project.',
+    whatsIncluded: [
+      'Brand identity creation guide',
+      'Name brainstorming and testing activities',
+      'Logo design and visual identity planning',
+      'Brand personality and values definition',
+      'Brand presentation and pitch',
+    ],
+    skillTags: ['Creativity', 'Communication', 'Design', 'Marketing', 'Identity'],
+    format: 'Project Guide',
+  },
+  'business-failure-lab': {
+    opening:
+      'Analyse real business failures, figure out what went wrong, and extract lessons that apply to any venture. Kids build resilience and critical thinking by studying mistakes — and learn that failure is a normal, useful part of entrepreneurship.',
+    whatsIncluded: [
+      'Business failure case studies for analysis',
+      'Root cause analysis framework',
+      'Lesson extraction and pattern recognition',
+      'Resilience building discussion prompts',
+      '"What would you do differently?" challenges',
+    ],
+    skillTags: ['Critical Thinking', 'Resilience', 'Problem-Solving', 'Analysis', 'Entrepreneurship'],
+    format: 'Project Guide',
+  },
+  'community-service-business': {
+    opening:
+      'Design and launch a service-based business with a genuine social mission. Kids find a community need and build a business that helps — combining empathy with entrepreneurship, service with strategy. Social entrepreneurship that teaches both impact and business skills.',
+    whatsIncluded: [
+      'Social enterprise planning guide',
+      'Community needs assessment activities',
+      'Service design and delivery planning',
+      'Impact measurement and reflection',
+      'Marketing for purpose-driven businesses',
+    ],
+    skillTags: ['Social Entrepreneurship', 'Empathy', 'Planning', 'Community', 'Business'],
+    format: 'Project Guide',
+  },
+  'customer-discovery': {
+    opening:
+      'Conduct real customer interviews, gather honest feedback, and use it to make a business idea better. Kids learn the most important entrepreneurship skill: listening before building. Research, communication, and critical thinking in one hands-on challenge.',
+    whatsIncluded: [
+      'Customer interview planning guide',
+      'Question design and interviewing tips',
+      'Feedback analysis and pattern finding',
+      'Idea refinement based on real data',
+      'Pivot or persevere decision framework',
+    ],
+    skillTags: ['Research', 'Communication', 'Listening', 'Critical Thinking', 'Entrepreneurship'],
+    format: 'Project Guide',
+  },
+  'investor-pitch': {
+    opening:
+      'Create a compelling investor pitch — financial reasoning, risk assessment, and persuasive presentation skills all in one project. Kids learn to communicate the value of an idea, back it up with numbers, and present with confidence. Business thinking meets public speaking.',
+    whatsIncluded: [
+      'Investor pitch preparation guide',
+      'Financial projection basics',
+      'Risk assessment and mitigation planning',
+      'Pitch deck design and storytelling',
+      'Delivery practice and Q&A preparation',
+    ],
+    skillTags: ['Financial Reasoning', 'Persuasion', 'Public Speaking', 'Risk Assessment', 'Planning'],
+    format: 'Project Guide',
+  },
+  'marketing-campaign': {
+    opening:
+      'Design and execute a marketing campaign to reach a real audience. Kids learn about target audiences, messaging, creative assets, and campaign strategy. Persuasion, creativity, and analytical thinking applied to a real marketing project.',
+    whatsIncluded: [
+      'Marketing campaign planning guide',
+      'Target audience research and persona building',
+      'Message crafting and creative brief',
+      'Campaign asset creation (posters, social, etc.)',
+      'Results tracking and campaign reflection',
+    ],
+    skillTags: ['Marketing', 'Communication', 'Creativity', 'Persuasion', 'Analysis'],
+    format: 'Project Guide',
+  },
+  'pricing-experiment': {
+    opening:
+      'Test different pricing strategies and discover what makes people willing to pay. Kids experiment with value perception, anchoring, bundling, and other pricing techniques. Financial literacy and critical thinking through hands-on experimentation.',
+    whatsIncluded: [
+      'Pricing experiment design guide',
+      'Value perception and anchoring activities',
+      'Real pricing challenges and scenarios',
+      'Data collection and analysis framework',
+      'Strategy reflection and decision-making',
+    ],
+    skillTags: ['Financial Literacy', 'Critical Thinking', 'Experimentation', 'Maths', 'Decision-Making'],
+    format: 'Project Guide',
+  },
+  'product-design-lab': {
+    opening:
+      'Use design thinking to create a product that solves a real problem. Kids identify needs, brainstorm solutions, build prototypes, test with users, and iterate. The same process real designers and engineers use — scaled for kids and applied to problems they actually care about.',
+    whatsIncluded: [
+      'Design thinking process guide',
+      'Need-finding and empathy mapping',
+      'Brainstorming and idea selection',
+      'Prototyping with everyday materials',
+      'User testing and iteration cycles',
+    ],
+    skillTags: ['Design Thinking', 'Problem-Solving', 'Creativity', 'Engineering', 'Empathy'],
+    format: 'Project Guide',
+  },
+  'supply-chain-detective': {
+    opening:
+      'Trace a product\'s journey from raw materials to your front door — and discover the global systems that connect everything. Kids investigate supply chains, think about geography, labour, and sustainability, and develop systems thinking. Critical analysis meets global awareness.',
+    whatsIncluded: [
+      'Supply chain investigation guide',
+      'Product journey mapping activities',
+      'Geography and global trade connections',
+      'Sustainability and ethics discussion prompts',
+      'Systems thinking and interconnection mapping',
+    ],
+    skillTags: ['Systems Thinking', 'Geography', 'Critical Thinking', 'Sustainability', 'Research'],
+    format: 'Project Guide',
+  },
+  'shark-tank-pitch': {
+    opening:
+      'Develop and deliver a high-stakes business pitch — Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',
+    whatsIncluded: [
+      'Shark Tank pitch project guide',
+      'Business concept development framework',
+      'Financial projections and break-even basics',
+      'Pitch presentation design and delivery tips',
+      'Q&A preparation and confidence building',
+    ],
+    skillTags: ['Public Speaking', 'Financial Thinking', 'Persuasion', 'Entrepreneurship', 'Confidence'],
+    format: 'Project Guide',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // PLANNING & PROBLEM-SOLVING — Individual Guides
+  // ═══════════════════════════════════════════════════════════════════
+  'emergency-ready': {
+    opening:
+      'Help kids think clearly under pressure and build genuine confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real scenarios. Life skills that matter — not fear-based, just empowering.',
+    whatsIncluded: [
+      'Emergency preparedness challenge guide',
+      'Scenario-based decision-making activities',
+      'Emergency plan creation for home and travel',
+      'Calm-under-pressure thinking frameworks',
+      'Family emergency communication planning',
+    ],
+    skillTags: ['Critical Thinking', 'Life Skills', 'Planning', 'Decision-Making', 'Resilience'],
+    format: 'Project Guide',
+  },
+  'everyday-redesign': {
+    opening:
+      'Look at everyday objects and systems with fresh eyes — then redesign them to work better. Kids practise observation, systems thinking, and creative problem-solving by improving the things they already use. Design thinking applied to real, everyday life.',
+    whatsIncluded: [
+      'Everyday redesign challenge guide',
+      'Observation and analysis frameworks',
+      'Problem identification and improvement planning',
+      'Sketch and prototype activities',
+      'Testing and iteration with real users',
+    ],
+    skillTags: ['Design Thinking', 'Systems Thinking', 'Creativity', 'Observation', 'Problem-Solving'],
+    format: 'Project Guide',
+  },
+  'fix-it-detective': {
+    opening:
+      'Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot — building practical skills and the confidence to figure things out. Problem-solving that\'s genuinely useful in everyday life.',
+    whatsIncluded: [
+      'Fix-it challenge guide with real scenarios',
+      'Troubleshooting and diagnosis frameworks',
+      'Tool basics and safe handling guidance',
+      'Step-by-step repair challenges',
+      'Reflection on problem-solving strategies',
+    ],
+    skillTags: ['Problem-Solving', 'Life Skills', 'Logic', 'Resourcefulness', 'Practical Skills'],
+    format: 'Project Guide',
+  },
+  'neighbourhood-problem-spotter': {
+    opening:
+      'Walk your neighbourhood with fresh eyes — spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. Problem-solving that connects kids to the place they live and the people around them.',
+    whatsIncluded: [
+      'Neighbourhood observation walk guide',
+      'Problem identification and categorisation',
+      'Root cause analysis activities',
+      'Solution brainstorming and feasibility assessment',
+      'Community proposal or presentation project',
+    ],
+    skillTags: ['Observation', 'Critical Thinking', 'Civic Engagement', 'Problem-Solving', 'Community'],
+    format: 'Project Guide',
+  },
+  'outdoor-survival-planner': {
+    opening:
+      'Plan outdoor expeditions, think through survival scenarios, and build real outdoor planning skills. Kids research terrain, assess risks, plan supplies, and make decisions about shelter, water, and navigation. Adventure planning that builds critical thinking and practical confidence.',
+    whatsIncluded: [
+      'Outdoor survival planning guide',
+      'Terrain research and risk assessment',
+      'Supply planning and prioritisation',
+      'Shelter, water, and navigation scenarios',
+      'Expedition plan creation and review',
+    ],
+    skillTags: ['Planning', 'Risk Assessment', 'Nature', 'Critical Thinking', 'Survival Skills'],
+    format: 'Project Guide',
+  },
+  'pack-like-a-pro': {
+    opening:
+      'Master strategic packing — priorities, weight, space management, and trip logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep challenge that builds executive function skills through a real, practical task.',
+    whatsIncluded: [
+      'Strategic packing challenge guide',
+      'Priority-setting and trade-off activities',
+      'Weight and space optimisation challenges',
+      'Scenario-based packing for different trips',
+      'Reflection on planning and decision-making',
+    ],
+    skillTags: ['Planning', 'Decision-Making', 'Logic', 'Organisation', 'Life Skills'],
+    format: 'Project Guide',
+  },
+  'scavenger-hunt-designer': {
+    opening:
+      'Design, create, and test your own scavenger hunts for friends and family. Kids plan clues, set challenge levels, think about pacing and flow, and iterate based on real feedback. A creative planning project that builds logic, writing, and design thinking.',
+    whatsIncluded: [
+      'Scavenger hunt design guide',
+      'Clue writing and difficulty balancing',
+      'Route planning and flow design',
+      'Testing with real participants',
+      'Iteration and improvement based on feedback',
+    ],
+    skillTags: ['Planning', 'Creativity', 'Writing', 'Logic', 'Design Thinking'],
+    format: 'Project Guide',
+  },
+  'swap-day-challenge': {
+    opening:
+      'Plan and run a swap day where kids take on someone else\'s role or responsibilities for a full day. A unique challenge that builds empathy, planning skills, and genuine appreciation for what the people around them do every day.',
+    whatsIncluded: [
+      'Swap day planning and execution guide',
+      'Role research and preparation activities',
+      'Schedule planning and logistics',
+      'Observation and empathy reflection prompts',
+      'Post-swap discussion and appreciation activities',
+    ],
+    skillTags: ['Empathy', 'Planning', 'Life Skills', 'Responsibility', 'Reflection'],
+    format: 'Project Guide',
+  },
+  'what-if-scenario-lab': {
+    opening:
+      'Explore hypothetical "what if" scenarios, predict outcomes, and plan responses. Kids work through situations that stretch their thinking — from everyday dilemmas to wildly creative scenarios. Speculative thinking that builds planning skills, creative reasoning, and adaptability.',
+    whatsIncluded: [
+      'What-if scenario challenge cards',
+      'Outcome prediction and planning frameworks',
+      'Risk assessment and contingency thinking',
+      'Creative scenario generation',
+      'Discussion prompts and reflection activities',
+    ],
+    skillTags: ['Creative Thinking', 'Planning', 'Critical Thinking', 'Adaptability', 'Risk Assessment'],
+    format: 'Project Guide',
+  },
+  'decision-lab': {
+    opening:
+      'Work through real decision scenarios, weigh options, consider consequences, and justify choices. Kids practise the kind of thoughtful, structured decision-making that builds confidence and independence. Critical thinking applied to real-world situations they actually face.',
+    whatsIncluded: [
+      'Decision-making scenario cards',
+      'Pros and cons analysis framework',
+      'Consequence mapping activities',
+      'Values-based decision-making practice',
+      'Reflection on decision quality and outcomes',
+    ],
+    skillTags: ['Decision-Making', 'Critical Thinking', 'Ethics', 'Analysis', 'Independence'],
+    format: 'Project Guide',
+  },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────
