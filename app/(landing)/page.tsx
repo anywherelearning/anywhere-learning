@@ -53,7 +53,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 Creativity Anywhere activities — design, build, and create without limits.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-creativity.jpg',
     category: 'bundle',
     isBundle: true,
@@ -66,7 +66,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 Real-World Relevance challenges — life skills, financial literacy, and project-based learning.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-real-world.jpg',
     category: 'bundle',
     isBundle: true,
@@ -79,7 +79,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 AI & Digital Literacy activities — responsible tech, critical thinking, and digital citizenship.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
     category: 'bundle',
     isBundle: true,

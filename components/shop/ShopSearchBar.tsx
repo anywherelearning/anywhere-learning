@@ -47,7 +47,7 @@ export default function ShopSearchBar() {
   }
 
   function handleSort(sort: string) {
-    pushParams({ sort });
+    pushParams({ sort, page: '' });
   }
 
   function clearSearch() {

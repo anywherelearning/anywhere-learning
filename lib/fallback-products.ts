@@ -53,7 +53,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 1,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-creativity-mega-bundle",
@@ -64,7 +64,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 10 Creativity Anywhere projects — design, build, and create without limits.",
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTNAMzOBftCntDc8CoKsa",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-creativity.jpg",
@@ -76,7 +76,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 2,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-real-world-mega-bundle",
@@ -87,7 +87,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 10 Real-World Relevance challenges — life skills, financial literacy, and project-based learning.",
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTNAMzOBftCntZTSpWFfb",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-real-world.jpg",
@@ -99,7 +99,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 3,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-ai-digital-bundle",
@@ -110,7 +110,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 10 AI & Digital Literacy activities — responsible tech, critical thinking, and digital citizenship.",
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTOAMzOBftCntHzTASW76",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-ai-digital.jpg",
@@ -122,7 +122,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 4,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-real-world-math-bundle",
@@ -133,7 +133,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 10 Real-World Math guides — budgeting, planning, and problem-solving with real numbers.",
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTOAMzOBftCntWV4GZeM4",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-real-world-math.jpg",
@@ -145,7 +145,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 8,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-nature-art-bundle",
@@ -168,7 +168,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 5,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-outdoor-toolkit-bundle",
@@ -191,7 +191,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 6,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   {
@@ -215,7 +215,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 8,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -242,7 +242,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 10,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-summer-outdoor",
@@ -265,7 +265,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 11,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-fall-outdoor",
@@ -288,7 +288,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 12,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-winter-outdoor",
@@ -311,7 +311,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 13,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -338,7 +338,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 20,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-nature-walk-tasks",
@@ -361,7 +361,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 21,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-nature-choice-boards",
@@ -384,7 +384,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 22,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-outdoor-missions",
@@ -407,7 +407,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 23,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-outdoor-stem",
@@ -430,7 +430,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 24,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-land-art",
@@ -453,7 +453,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 25,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-nature-crafts",
@@ -476,7 +476,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 26,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -503,7 +503,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 31,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-rube-goldberg",
@@ -526,7 +526,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 32,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-survival-base",
@@ -549,7 +549,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 33,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-imaginary-world",
@@ -572,7 +572,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 34,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-creature-habitat",
@@ -595,7 +595,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 35,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-theme-park",
@@ -618,7 +618,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 36,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-mini-movie",
@@ -641,7 +641,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 37,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-invent-sport",
@@ -664,7 +664,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 38,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-kinetic-sculpture",
@@ -687,7 +687,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 39,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-build-museum",
@@ -710,7 +710,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 40,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -737,7 +737,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 51,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-community-impact",
@@ -760,7 +760,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 52,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-kitchen-math",
@@ -783,7 +783,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 53,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-media-info-check",
@@ -806,7 +806,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 54,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-micro-business",
@@ -829,7 +829,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 55,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-problem-solver",
@@ -852,7 +852,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 56,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-smart-shopper",
@@ -875,7 +875,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 57,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-time-energy-planner",
@@ -898,7 +898,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 58,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-travel-day",
@@ -921,7 +921,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 59,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-write-like-pro",
@@ -944,7 +944,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 60,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -971,7 +971,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 70,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-algorithm-awareness",
@@ -994,7 +994,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 71,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-bias-fairness",
@@ -1017,7 +1017,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 72,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-build-ai-helper",
@@ -1040,7 +1040,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 73,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-create-with-ai",
@@ -1063,7 +1063,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 74,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-deepfake-spotter",
@@ -1086,7 +1086,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 75,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-hallucination-detective",
@@ -1109,7 +1109,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 76,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-healthy-tech",
@@ -1132,7 +1132,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 77,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-privacy-footprint",
@@ -1155,7 +1155,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 78,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-prompt-coach",
@@ -1178,7 +1178,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 9–14",
     sortOrder: 79,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1205,7 +1205,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 100,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-clothing-swap-thrift-math",
@@ -1228,7 +1228,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 101,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-family-electricity-audit",
@@ -1251,7 +1251,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 102,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-farmers-market-challenge",
@@ -1274,7 +1274,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 103,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-garage-sale-math",
@@ -1297,7 +1297,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 104,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-garden-plot-planner",
@@ -1320,7 +1320,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 105,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-party-planner-math",
@@ -1343,7 +1343,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 106,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-road-trip-calculator",
@@ -1366,7 +1366,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 107,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-savings-goal-tracker",
@@ -1389,7 +1389,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 108,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
   {
     id: "fb-sports-stats-lab",
@@ -1412,7 +1412,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 109,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-03-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1439,7 +1439,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 0–14+",
     sortOrder: 90,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
   {
     id: "fb-small-business",
@@ -1462,7 +1462,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 91,
     active: false,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-time-capsule",
@@ -1485,7 +1485,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 92,
     active: false,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-02-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1500,7 +1500,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 12 Communication & Writing guides in one download.",
     priceCents: 4499,
-    compareAtPriceCents: 7188,
+    compareAtPriceCents: 5999,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-communication-writing.jpg",
@@ -1512,7 +1512,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 9,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1527,7 +1527,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 11 Entrepreneurship guides in one download.",
     priceCents: 4499,
-    compareAtPriceCents: 6589,
+    compareAtPriceCents: 5999,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-entrepreneurship.jpg",
@@ -1539,7 +1539,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 10,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1554,7 +1554,7 @@ export const fallbackProducts: FallbackProduct[] = [
     shortDescription:
       "All 13 Planning & Problem-Solving guides in one download.",
     priceCents: 4499,
-    compareAtPriceCents: 7787,
+    compareAtPriceCents: 5999,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-planning-problem-solving.jpg",
@@ -1566,7 +1566,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 11,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1593,7 +1593,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 110,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-community-tour-guide",
@@ -1616,7 +1616,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 111,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-directions-challenge",
@@ -1639,7 +1639,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 112,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-family-debate-night",
@@ -1662,7 +1662,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 113,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-family-recipe-book",
@@ -1685,7 +1685,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 114,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-market-stall-pitch",
@@ -1708,7 +1708,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 115,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-mini-magazine-creator",
@@ -1731,7 +1731,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 116,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-my-review-column",
@@ -1754,7 +1754,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 117,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-neighbourhood-interview",
@@ -1777,7 +1777,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 118,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-trail-guide-creator",
@@ -1800,7 +1800,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 119,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -1827,7 +1827,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 120,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-business-failure-lab",
@@ -1850,7 +1850,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 121,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-community-service-business",
@@ -1873,7 +1873,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 122,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-customer-discovery",
@@ -1896,7 +1896,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 123,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-investor-pitch",
@@ -1919,7 +1919,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 124,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-marketing-campaign",
@@ -1942,7 +1942,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 125,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-pricing-experiment",
@@ -1965,7 +1965,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 126,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-product-design-lab",
@@ -1988,7 +1988,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 127,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-supply-chain-detective",
@@ -2011,7 +2011,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 128,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-shark-tank-pitch",
@@ -2034,7 +2034,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 129,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -2061,7 +2061,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 130,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-everyday-redesign",
@@ -2084,7 +2084,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 131,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-fix-it-detective",
@@ -2107,7 +2107,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 132,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-neighbourhood-problem-spotter",
@@ -2130,7 +2130,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 133,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-outdoor-survival-planner",
@@ -2153,7 +2153,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 134,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-pack-like-a-pro",
@@ -2176,7 +2176,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 135,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-scavenger-hunt-designer",
@@ -2199,7 +2199,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 136,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-swap-day-challenge",
@@ -2222,7 +2222,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 137,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-what-if-scenario-lab",
@@ -2245,7 +2245,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 8–14",
     sortOrder: 138,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
   {
     id: "fb-decision-lab",
@@ -2268,7 +2268,7 @@ export const fallbackProducts: FallbackProduct[] = [
     ageRange: "Ages 6–14",
     sortOrder: 139,
     active: true,
-    createdAt: new Date("2025-01-01"),
+    createdAt: new Date("2025-04-01"),
   },
 ];
 
