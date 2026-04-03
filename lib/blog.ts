@@ -3464,8 +3464,8 @@ const posts: BlogPost[] = [
     keywords: ['best homeschool method', 'homeschool approaches ranked', 'how to homeschool without teaching degree', 'easiest homeschool method', 'homeschool methods for beginners'],
     readTimeMinutes: 12,
     author: amelie,
-    heroImage: '/images/approaches-ranked-hero.jpeg',
-    heroImageAlt: 'Julia packaging popcorn bags with custom labels — real-world learning in action',
+    heroImage: '/images/approaches-ranked-ataco-hero.jpeg',
+    heroImageAlt: 'Zach and Julia exploring a colourful mural-covered street in Ataco, El Salvador — learning happens everywhere',
     content: [
       { type: 'summary', text: 'The best homeschool approaches for non-teacher parents are those that leverage everyday life, natural curiosity, and readily available resources rather than requiring formal teaching skills. Real-world learning, unit studies, and Charlotte Mason consistently rank highest for parent satisfaction and child engagement among families without education backgrounds.' },
       { type: 'paragraph', text: 'The number one thing I hear from parents considering homeschooling is: "But I\'m not a teacher." Neither am I — anymore. I have a teaching degree collecting dust, and I can tell you: almost nothing I learned in teacher training applies to educating my own two kids at home. Different context, different relationship, different everything.' },
