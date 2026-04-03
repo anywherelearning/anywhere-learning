@@ -49,21 +49,18 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
     'nature-walk-task-cards', 'outdoor-learning-missions', 'outdoor-stem-challenges', 'nature-choice-boards',
   ],
   'communication-writing-bundle': [
-    'community-impact', 'write-like-a-pro',
     'adventure-story-map', 'community-tour-guide', 'directions-challenge',
     'family-debate-night', 'family-recipe-book', 'market-stall-pitch',
     'mini-magazine-creator', 'my-review-column', 'neighbourhood-interview',
     'trail-guide-creator',
   ],
   'entrepreneurship-bundle': [
-    'micro-business',
     'brand-builder', 'business-failure-lab', 'community-service-business',
     'customer-discovery', 'investor-pitch', 'marketing-campaign',
     'pricing-experiment', 'product-design-lab', 'supply-chain-detective',
     'shark-tank-pitch',
   ],
   'planning-problem-solving-bundle': [
-    'problem-solver', 'time-energy-planner', 'travel-day',
     'emergency-ready', 'everyday-redesign', 'fix-it-detective',
     'neighbourhood-problem-spotter', 'outdoor-survival-planner',
     'pack-like-a-pro', 'scavenger-hunt-designer', 'swap-day-challenge',
@@ -186,7 +183,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     slug: 'seasonal-bundle',
     name: 'Full Seasonal Bundle (All 4 Seasons)',
     priceCents: 4499,
-    compareAtPriceCents: 5996,
+    compareAtPriceCents: 5999,
     stripePriceId: 'price_1TFcTNAMzOBftCntknn9ugHW',
     category: 'bundle',
     imageUrl: '/products/four-seasons-bundle.jpg',
@@ -270,7 +267,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-communication-writing.jpg',
-    activityCount: null,
+    activityCount: 10,
   },
   'entrepreneurship-bundle': {
     slug: 'entrepreneurship-bundle',
@@ -280,7 +277,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
-    activityCount: null,
+    activityCount: 10,
   },
   'planning-problem-solving-bundle': {
     slug: 'planning-problem-solving-bundle',
@@ -290,7 +287,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     stripePriceId: '',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
-    activityCount: null,
+    activityCount: 10,
   },
 };
 
