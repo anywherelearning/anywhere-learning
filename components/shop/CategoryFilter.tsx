@@ -17,14 +17,14 @@ import {
 const categories = [
   { value: '', label: 'All Packs', Icon: SparklesIcon },
   { value: 'start-here', label: 'Start Here', Icon: StarIcon },
-  { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
-  { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
-  { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
-  { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
-  { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
-  { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
-  { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
+  { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
+  { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
+  { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
+  { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
+  { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
+  { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
+  { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
 ];
 
 const categoryActiveColors: Record<string, string> = {

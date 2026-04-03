@@ -3208,7 +3208,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Kids walking through a colourful fruit market in Central America — real-world learning abroad',
     content: [
       { type: 'summary', text: 'Homeschooling is education based at home instead of school, with parents directing learning using curricula, unschooling, or hybrid approaches. Worldschooling uses travel and real-world experiences as the primary curriculum, learning through places, cultures, and daily life wherever the family happens to be. Many families blend both approaches.' },
-      { type: 'paragraph', text: 'When we first started educating our kids outside of school, I called it homeschooling. Then we moved abroad and started calling it worldschooling. Then I realised we were doing the same thing — just in different locations. But the terms aren\'t interchangeable, and understanding the distinction helps you figure out what works for your family.' },
+      { type: 'paragraph', text: 'When we first started educating our kids outside of school, I called it homeschooling. Then we travelled abroad and started calling it worldschooling. Then I realised we were doing the same thing — just in different locations. But the terms aren\'t interchangeable, and understanding the distinction helps you figure out what works for your family.' },
       { type: 'heading', level: 2, text: 'The core difference' },
       { type: 'paragraph', text: 'The simplest way to think about it:' },
       { type: 'list', ordered: false, items: [
