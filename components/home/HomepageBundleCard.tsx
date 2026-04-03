@@ -51,16 +51,11 @@ const bundleThumbnails: Record<string, { src: string; alt: string }[]> = {
     { src: '/products/fix-it-detective.jpg', alt: 'Fix-It Detective' },
     { src: '/products/everyday-redesign.jpg', alt: 'Everyday Redesign' },
   ],
-  'nature-art-bundle': [
+  'outdoor-mega-bundle': [
     { src: '/products/land-art-challenges.jpg', alt: 'Land Art Challenges' },
-    { src: '/products/nature-crafts.jpg', alt: 'Nature Crafts' },
-    { src: '/products/nature-journal-walks.jpg', alt: 'Nature Journal' },
-  ],
-  'outdoor-toolkit-bundle': [
     { src: '/products/nature-walk-task-cards.jpg', alt: 'Nature Walk Cards' },
-    { src: '/products/outdoor-learning-missions.jpg', alt: 'Outdoor Missions' },
     { src: '/products/outdoor-stem-challenges.jpg', alt: 'STEM Challenges' },
-    { src: '/products/nature-choice-boards.jpg', alt: 'Choice Boards' },
+    { src: '/products/nature-crafts.jpg', alt: 'Nature Crafts' },
   ],
 };
 
@@ -74,8 +69,7 @@ const bundleProductCount: Record<string, number> = {
   'communication-writing-bundle': 10,
   'entrepreneurship-bundle': 10,
   'planning-problem-solving-bundle': 10,
-  'nature-art-bundle': 3,
-  'outdoor-toolkit-bundle': 4,
+  'outdoor-mega-bundle': 7,
 };
 
 interface HomepageBundleCardProps {
