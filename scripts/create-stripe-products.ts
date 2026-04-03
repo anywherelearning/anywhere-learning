@@ -16,6 +16,9 @@ const catalog = [
   { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 4499, description: 'All 10 real-world skills packs — budgeting, cooking, business, and more.' },
   { slug: 'ai-digital-bundle', name: 'AI & Digital Literacy Bundle', priceCents: 4499, description: 'All 10 AI & digital literacy packs.' },
   { slug: 'real-world-math-bundle', name: 'Real-World Math Mega Bundle', priceCents: 4499, description: 'All 10 Real-World Math guides — campout planning, garage sales, garden plots, road trips, and more.' },
+  { slug: 'communication-writing-bundle', name: 'Communication & Writing Mega Bundle', priceCents: 4499, description: 'All 12 Communication & Writing guides in one download.' },
+  { slug: 'entrepreneurship-bundle', name: 'Entrepreneurship Mega Bundle', priceCents: 4499, description: 'All 11 Entrepreneurship guides in one download.' },
+  { slug: 'planning-problem-solving-bundle', name: 'Planning & Problem-Solving Mega Bundle', priceCents: 4499, description: 'All 13 Planning & Problem-Solving guides in one download.' },
   { slug: 'nature-art-bundle', name: 'Nature Art Bundle', priceCents: 1799, description: 'Land Art + Nature Crafts + Nature Journal.' },
   { slug: 'outdoor-toolkit-bundle', name: 'Outdoor Toolkit Bundle', priceCents: 2399, description: 'Walk Cards + Missions + STEM + Choice Boards.' },
   { slug: 'outdoor-mega-bundle', name: 'Outdoor & Nature Mega Bundle', priceCents: 4199, description: 'All 7 outdoor & nature packs — walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.' },
@@ -80,6 +83,39 @@ const catalog = [
   { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A complete roadmap of real-world skills every kid needs.' },
   { slug: 'my-small-business-project', name: 'My Small Business Project', priceCents: 599, description: 'Full small business project from idea to launch.' },
   { slug: 'time-capsule', name: 'Time Capsule', priceCents: 599, description: 'Create a meaningful time capsule project.' },
+  // ─── Communication & Writing singles ($4.99) ───
+  { slug: 'adventure-story-map', name: 'Adventure Story Map', priceCents: 599, description: 'Create a visual story map and write your own adventure narrative.' },
+  { slug: 'community-tour-guide', name: 'Community Tour Guide', priceCents: 599, description: 'Research and create a guided tour of your community.' },
+  { slug: 'directions-challenge', name: 'Directions Challenge', priceCents: 599, description: 'Write clear step-by-step directions and test if others can follow them.' },
+  { slug: 'family-debate-night', name: 'Family Debate Night', priceCents: 599, description: 'Prepare arguments, debate topics as a family, and practise persuasive speaking.' },
+  { slug: 'family-recipe-book', name: 'Family Recipe Book', priceCents: 599, description: 'Document family recipes with clear instructions and family stories.' },
+  { slug: 'market-stall-pitch', name: 'Market Stall Pitch', priceCents: 599, description: 'Create a persuasive pitch to sell a product or service.' },
+  { slug: 'mini-magazine-creator', name: 'Mini Magazine Creator', priceCents: 599, description: 'Write and design a mini magazine with articles, headlines, and illustrations.' },
+  { slug: 'my-review-column', name: 'My Review Column', priceCents: 599, description: 'Write reviews of books, movies, products, or experiences.' },
+  { slug: 'neighbourhood-interview', name: 'Neighbourhood Interview Project', priceCents: 599, description: 'Interview community members and present their stories.' },
+  { slug: 'trail-guide-creator', name: 'Trail Guide Creator', priceCents: 599, description: 'Create a written guide to a local trail or walking path.' },
+  // ─── Entrepreneurship singles ($4.99) ───
+  { slug: 'brand-builder', name: 'Brand Builder', priceCents: 599, description: 'Build a brand identity from scratch — name, logo, personality, and values.' },
+  { slug: 'business-failure-lab', name: 'Business Failure Lab', priceCents: 599, description: 'Analyse real business failures, learn from mistakes, and build resilience.' },
+  { slug: 'community-service-business', name: 'Community Service Business', priceCents: 599, description: 'Design and launch a service-based business with a social mission.' },
+  { slug: 'customer-discovery', name: 'Customer Discovery Challenge', priceCents: 599, description: 'Conduct real customer interviews and refine a business idea.' },
+  { slug: 'investor-pitch', name: 'Investor Pitch Portfolio', priceCents: 599, description: 'Create a compelling investor pitch with financial reasoning.' },
+  { slug: 'marketing-campaign', name: 'Marketing Campaign Creator', priceCents: 599, description: 'Design and execute a marketing campaign to reach a real audience.' },
+  { slug: 'pricing-experiment', name: 'Pricing Experiment', priceCents: 599, description: 'Test different pricing strategies and make data-informed decisions.' },
+  { slug: 'product-design-lab', name: 'Product Design Lab', priceCents: 599, description: 'Use design thinking to create a product that solves a real problem.' },
+  { slug: 'supply-chain-detective', name: 'Supply Chain Detective', priceCents: 599, description: 'Trace a product journey from source to consumer.' },
+  { slug: 'shark-tank-pitch', name: 'The Shark Tank Pitch', priceCents: 599, description: 'Develop and deliver a high-stakes business pitch.' },
+  // ─── Planning & Problem-Solving singles ($4.99) ───
+  { slug: 'emergency-ready', name: 'Emergency Ready Challenge', priceCents: 599, description: 'Think clearly under pressure and build emergency preparedness.' },
+  { slug: 'everyday-redesign', name: 'Everyday Redesign Challenge', priceCents: 599, description: 'Examine everyday objects and redesign them for better function.' },
+  { slug: 'fix-it-detective', name: 'Fix-It Detective', priceCents: 599, description: 'Diagnose and fix real household problems using logic.' },
+  { slug: 'neighbourhood-problem-spotter', name: 'Neighbourhood Problem Spotter', priceCents: 599, description: 'Spot real neighbourhood problems and brainstorm solutions.' },
+  { slug: 'outdoor-survival-planner', name: 'Outdoor Survival Planner', priceCents: 599, description: 'Plan outdoor expeditions and build survival thinking skills.' },
+  { slug: 'pack-like-a-pro', name: 'Pack Like a Pro', priceCents: 599, description: 'Master strategic packing — priorities, weight, space, and logistics.' },
+  { slug: 'scavenger-hunt-designer', name: 'Scavenger Hunt Designer', priceCents: 599, description: 'Design, create, and test your own scavenger hunts.' },
+  { slug: 'swap-day-challenge', name: 'The Swap Day Challenge', priceCents: 599, description: 'Swap roles for a day — empathy, planning, and responsibility.' },
+  { slug: 'what-if-scenario-lab', name: 'The What-If Scenario Lab', priceCents: 599, description: 'Explore hypothetical scenarios, predict outcomes, and plan responses.' },
+  { slug: 'decision-lab', name: 'What Would You Do? Decision Lab', priceCents: 599, description: 'Work through real decision scenarios and justify choices.' },
 ];
 
 // Slugs where the image filename doesn't match {slug}.jpg
@@ -89,6 +125,9 @@ const imageOverrides: Record<string, string> = {
   'real-world-mega-bundle': 'mega-bundle-real-world.jpg',
   'ai-digital-bundle': 'mega-bundle-ai-digital.jpg',
   'real-world-math-bundle': 'mega-bundle-real-world-math.jpg',
+  'communication-writing-bundle': 'mega-bundle-communication-writing.jpg',
+  'entrepreneurship-bundle': 'mega-bundle-entrepreneurship.jpg',
+  'planning-problem-solving-bundle': 'mega-bundle-planning-problem-solving.jpg',
 };
 
 async function createStripeProducts() {

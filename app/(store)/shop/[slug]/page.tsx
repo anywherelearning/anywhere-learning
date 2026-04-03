@@ -46,8 +46,9 @@ export async function generateMetadata({
   try {
     product = await getProductBySlug(slug);
   } catch {
-    product = getFallbackProductBySlug(slug);
+    // DB not available
   }
+  if (!product) product = getFallbackProductBySlug(slug);
   if (!product) return {};
   const categoryKeywords: Record<string, string> = {
     'outdoor-learning': 'Outdoor Learning Activities',
@@ -115,8 +116,9 @@ export default async function ProductPage({
   try {
     product = await getProductBySlug(slug);
   } catch {
-    product = getFallbackProductBySlug(slug);
+    // DB not available
   }
+  if (!product) product = getFallbackProductBySlug(slug);
 
   if (!product) notFound();
 

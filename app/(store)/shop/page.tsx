@@ -172,6 +172,9 @@ const categoryBundleMap: Record<string, string> = {
   "creativity-anywhere": "creativity-mega-bundle",
   "outdoor-learning": "outdoor-mega-bundle",
   "real-world-math": "real-world-math-bundle",
+  "communication-writing": "communication-writing-bundle",
+  "entrepreneurship": "entrepreneurship-bundle",
+  "planning-problem-solving": "planning-problem-solving-bundle",
 };
 
 // ── Cross-sell mapping ──
