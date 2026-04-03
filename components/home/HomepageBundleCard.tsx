@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-/** Thumbnail images for each bundle's included products */
+/** Thumbnail images for each bundle's included products (show up to 4) */
 const bundleThumbnails: Record<string, { src: string; alt: string }[]> = {
   'seasonal-bundle': [
     { src: '/products/spring-outdoor-pack.jpg', alt: 'Spring Outdoor Pack' },
@@ -27,6 +27,30 @@ const bundleThumbnails: Record<string, { src: string; alt: string }[]> = {
     { src: '/products/prompt-like-a-coach.jpg', alt: 'Prompt Like a Coach' },
     { src: '/products/hallucination-detective.jpg', alt: 'Hallucination Detective' },
   ],
+  'real-world-math-bundle': [
+    { src: '/products/backyard-campout-planner.jpg', alt: 'Backyard Campout Planner' },
+    { src: '/products/garage-sale-math.jpg', alt: 'Garage Sale Math' },
+    { src: '/products/road-trip-calculator.jpg', alt: 'Road Trip Calculator' },
+    { src: '/products/farmers-market-challenge.jpg', alt: 'Farmers Market' },
+  ],
+  'communication-writing-bundle': [
+    { src: '/products/adventure-story-map.jpg', alt: 'Adventure Story Map' },
+    { src: '/products/family-debate-night.jpg', alt: 'Family Debate Night' },
+    { src: '/products/mini-magazine-creator.jpg', alt: 'Mini Magazine Creator' },
+    { src: '/products/trail-guide-creator.jpg', alt: 'Trail Guide Creator' },
+  ],
+  'entrepreneurship-bundle': [
+    { src: '/products/brand-builder.jpg', alt: 'Brand Builder' },
+    { src: '/products/shark-tank-pitch.jpg', alt: 'Shark Tank Pitch' },
+    { src: '/products/marketing-campaign.jpg', alt: 'Marketing Campaign' },
+    { src: '/products/product-design-lab.jpg', alt: 'Product Design Lab' },
+  ],
+  'planning-problem-solving-bundle': [
+    { src: '/products/emergency-ready.jpg', alt: 'Emergency Ready' },
+    { src: '/products/scavenger-hunt-designer.jpg', alt: 'Scavenger Hunt Designer' },
+    { src: '/products/fix-it-detective.jpg', alt: 'Fix-It Detective' },
+    { src: '/products/everyday-redesign.jpg', alt: 'Everyday Redesign' },
+  ],
   'nature-art-bundle': [
     { src: '/products/land-art-challenges.jpg', alt: 'Land Art Challenges' },
     { src: '/products/nature-crafts.jpg', alt: 'Nature Crafts' },
@@ -38,6 +62,20 @@ const bundleThumbnails: Record<string, { src: string; alt: string }[]> = {
     { src: '/products/outdoor-stem-challenges.jpg', alt: 'STEM Challenges' },
     { src: '/products/nature-choice-boards.jpg', alt: 'Choice Boards' },
   ],
+};
+
+/** Total number of products in each bundle (for "+X more" display) */
+const bundleProductCount: Record<string, number> = {
+  'seasonal-bundle': 4,
+  'creativity-mega-bundle': 10,
+  'real-world-mega-bundle': 10,
+  'ai-digital-bundle': 10,
+  'real-world-math-bundle': 10,
+  'communication-writing-bundle': 10,
+  'entrepreneurship-bundle': 10,
+  'planning-problem-solving-bundle': 10,
+  'nature-art-bundle': 3,
+  'outdoor-toolkit-bundle': 4,
 };
 
 interface HomepageBundleCardProps {
@@ -62,6 +100,9 @@ export default function HomepageBundleCard({
   isFreeWithBundle,
 }: HomepageBundleCardProps) {
   const thumbnails = bundleThumbnails[slug] || [];
+  const totalProducts = bundleProductCount[slug] || thumbnails.length;
+  const shownCount = Math.min(thumbnails.length, 4);
+  const moreCount = totalProducts - shownCount;
 
   return (
     <Link href={`/shop/${slug}`} className="group block h-full">
@@ -127,9 +168,9 @@ export default function HomepageBundleCard({
                     />
                   </div>
                 ))}
-                {thumbnails.length > 4 && (
+                {moreCount > 0 && (
                   <div className="flex items-center pl-3">
-                    <span className="text-xs text-gray-400 font-medium">+{thumbnails.length - 4} more</span>
+                    <span className="text-xs text-gray-400 font-medium">+{moreCount} more</span>
                   </div>
                 )}
               </div>

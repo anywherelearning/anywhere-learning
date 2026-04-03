@@ -87,6 +87,58 @@ const featuredProducts = [
     ageRange: 'Ages 9–14',
   },
   {
+    name: 'Real-World Math Mega Bundle',
+    slug: 'real-world-math-bundle',
+    shortDescription:
+      'All 10 Real-World Math guides — budgeting, planning, and problem-solving with real numbers.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-real-world-math.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Communication & Writing Bundle',
+    slug: 'communication-writing-bundle',
+    shortDescription:
+      'All 10 Communication & Writing guides — storytelling, debate, interviews, and more.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-communication-writing.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Entrepreneurship Mega Bundle',
+    slug: 'entrepreneurship-bundle',
+    shortDescription:
+      'All 10 Entrepreneurship guides — brand building, pitching, marketing, and real business skills.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Planning & Problem-Solving Bundle',
+    slug: 'planning-problem-solving-bundle',
+    shortDescription:
+      'All 10 Planning & Problem-Solving guides — survival, decision-making, and thinking ahead.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
     name: 'Nature Art Bundle',
     slug: 'nature-art-bundle',
     shortDescription:

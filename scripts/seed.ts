@@ -165,8 +165,8 @@ async function seed() {
     {
       name: 'Communication & Writing Mega Bundle',
       slug: 'communication-writing-bundle',
-      description: 'All 12 Communication & Writing guides in one download — storytelling, debate, interviews, recipes, reviews, and more.',
-      shortDescription: 'All 12 Communication & Writing guides in one download.',
+      description: 'All 10 Communication & Writing guides in one download — storytelling, debate, interviews, recipes, reviews, and more.',
+      shortDescription: 'All 10 Communication & Writing guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: '',
@@ -183,8 +183,8 @@ async function seed() {
     {
       name: 'Entrepreneurship Mega Bundle',
       slug: 'entrepreneurship-bundle',
-      description: 'All 11 Entrepreneurship guides in one download — brand building, pitching, pricing, marketing, and more.',
-      shortDescription: 'All 11 Entrepreneurship guides in one download.',
+      description: 'All 10 Entrepreneurship guides in one download — brand building, pitching, pricing, marketing, and more.',
+      shortDescription: 'All 10 Entrepreneurship guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: '',
@@ -201,8 +201,8 @@ async function seed() {
     {
       name: 'Planning & Problem-Solving Mega Bundle',
       slug: 'planning-problem-solving-bundle',
-      description: 'All 13 Planning & Problem-Solving guides in one download — survival planning, decision-making, scavenger hunts, and more.',
-      shortDescription: 'All 13 Planning & Problem-Solving guides in one download.',
+      description: 'All 10 Planning & Problem-Solving guides in one download — survival planning, decision-making, scavenger hunts, and more.',
+      shortDescription: 'All 10 Planning & Problem-Solving guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: '',
@@ -246,15 +246,15 @@ async function seed() {
 
     // === REAL-WORLD MATH, COMMUNICATION, ENTREPRENEURSHIP & PLANNING (sortOrder 50–60) ===
     { name: 'Budget Challenge', slug: 'budget-challenge', description: '12 real-money challenges that teach budgeting.', shortDescription: '12 real-money budgeting challenges.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTaAMzOBftCntcx3BoyC8', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: 12, ageRange: 'Ages 8\u201314', sortOrder: 51, active: true },
-    { name: 'Community Impact Project', slug: 'community-impact', description: 'Plan and run a project that helps your local community.', shortDescription: 'Community impact project.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTbAMzOBftCntFStp6niy', blobUrl: '', category: 'communication-writing', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 52, active: true },
+    { name: 'Community Impact Project', slug: 'community-impact', description: 'Plan and run a project that helps your local community.', shortDescription: 'Community impact project.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTbAMzOBftCntFStp6niy', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 52, active: true },
     { name: 'Kitchen Math & Meal Planning Challenge', slug: 'kitchen-math-challenge', description: 'Advanced kitchen maths and meal planning activities.', shortDescription: 'Advanced kitchen maths challenges.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTbAMzOBftCntCTnW0gph', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 53, active: true },
     { name: 'Media & Info Check', slug: 'media-info-check', description: 'Spot misinformation and think critically about media.', shortDescription: 'Media literacy and fact-checking.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTcAMzOBftCntRkLHGW3w', blobUrl: '', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 54, active: true },
-    { name: 'Micro-Business Challenge', slug: 'micro-business', description: 'Plan, launch, and run a simple real business.', shortDescription: 'Launch a micro-business.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTcAMzOBftCntZcUkdoFu', blobUrl: '', category: 'entrepreneurship', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 55, active: true },
-    { name: 'Problem-Solver Studio', slug: 'problem-solver', description: 'Structured approach to solving real-world problems.', shortDescription: 'Real-world problem solving.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTcAMzOBftCntgT52Nlxh', blobUrl: '', category: 'planning-problem-solving', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 56, active: true },
+    { name: 'Micro-Business Challenge', slug: 'micro-business', description: 'Plan, launch, and run a simple real business.', shortDescription: 'Launch a micro-business.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTcAMzOBftCntZcUkdoFu', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 55, active: true },
+    { name: 'Problem-Solver Studio', slug: 'problem-solver', description: 'Structured approach to solving real-world problems.', shortDescription: 'Real-world problem solving.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTcAMzOBftCntgT52Nlxh', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 56, active: true },
     { name: 'Smart Shopper Lab', slug: 'smart-shopper', description: 'Become a critical, informed consumer.', shortDescription: 'Critical consumer skills.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTdAMzOBftCntoJjP3hy7', blobUrl: '', category: 'real-world-math', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 57, active: true },
-    { name: 'Time & Energy Planner', slug: 'time-energy-planner', description: 'Build time management and energy awareness skills.', shortDescription: 'Time and energy management.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTdAMzOBftCntcxl1ggJF', blobUrl: '', category: 'planning-problem-solving', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 58, active: true },
-    { name: 'Travel Day Itinerary Challenge', slug: 'travel-day', description: 'Plan a full travel day \u2014 routes, budgets, timing.', shortDescription: 'Plan a travel day itinerary.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCntm89oK6q4', blobUrl: '', category: 'planning-problem-solving', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 59, active: true },
-    { name: 'Write It Like a Pro', slug: 'write-like-a-pro', description: 'Real-world writing for real audiences.', shortDescription: 'Real-world writing skills.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCnti098zzDn', blobUrl: '', category: 'communication-writing', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 60, active: true },
+    { name: 'Time & Energy Planner', slug: 'time-energy-planner', description: 'Build time management and energy awareness skills.', shortDescription: 'Time and energy management.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTdAMzOBftCntcxl1ggJF', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 58, active: true },
+    { name: 'Travel Day Itinerary Challenge', slug: 'travel-day', description: 'Plan a full travel day \u2014 routes, budgets, timing.', shortDescription: 'Plan a travel day itinerary.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCntm89oK6q4', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 59, active: true },
+    { name: 'Write It Like a Pro', slug: 'write-like-a-pro', description: 'Real-world writing for real audiences.', shortDescription: 'Real-world writing skills.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCnti098zzDn', blobUrl: '', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 60, active: true },
 
     // === AI & DIGITAL LITERACY (sortOrder 70–79) ===
     { name: 'AI Basics: Myths, Facts & Smart Rules', slug: 'ai-basics', description: 'Understand what AI is and how to use it wisely.', shortDescription: 'AI basics for kids.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTfAMzOBftCntjVdNUY97', blobUrl: '', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 70, active: true },
