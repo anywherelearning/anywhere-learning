@@ -31,7 +31,9 @@ export default function ShareSection() {
       'These activity packs are so good'
     );
     const body = encodeURIComponent(`${shareText}\n\n${shareUrl}`);
-    window.open(`mailto:?subject=${subject}&body=${body}`);
+    const a = document.createElement('a');
+    a.href = `mailto:?subject=${subject}&body=${body}`;
+    a.click();
   };
 
   const handleTextShare = () => {

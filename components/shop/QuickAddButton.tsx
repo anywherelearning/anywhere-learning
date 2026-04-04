@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart } from '@/lib/cart';
+import { usePurchased } from './PurchasedContext';
 
 interface QuickAddButtonProps {
   stripePriceId: string;
@@ -26,11 +27,15 @@ export default function QuickAddButton({
 }: QuickAddButtonProps) {
   const { isNative } = useCapacitor();
   const { items, addItem, removeItem, isInCart } = useCart();
+  const purchased = usePurchased();
   const [justAdded, setJustAdded] = useState(false);
   const [justRemoved, setJustRemoved] = useState(false);
 
   // Hide in native app (Apple compliance)
   if (isNative) return null;
+
+  // Hide for already-purchased products
+  if (purchased.has(slug)) return null;
 
   const alreadyInCart = isInCart(slug);
   const coveredBy = isCoveredByCart(items, slug);

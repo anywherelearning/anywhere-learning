@@ -24,6 +24,7 @@ import {
 import NativeOnly from "@/components/mobile/NativeOnly";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativeProductDetail from "@/components/mobile/NativeProductDetail";
+import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -354,6 +355,13 @@ export default async function ProductPage({
 
               {/* Buy section — under image, sticky on desktop */}
               <div className="mt-4" id="buy-button">
+                {product.isBundle && (
+                  <BundleUpgradePrice
+                    slug={product.slug}
+                    stripePriceId={product.stripePriceId}
+                    fullPriceCents={product.priceCents}
+                  />
+                )}
                 <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
                   {product.isBundle && (
                     <div className="flex items-center justify-between mb-3">

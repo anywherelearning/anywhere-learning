@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CategoryIcon } from './icons';
 import QuickAddButton from './QuickAddButton';
+import PurchasedBadge from './PurchasedBadge';
 import type { ShopProduct } from '@/lib/types';
 
 type ProductCardProps = ShopProduct;
@@ -92,6 +93,9 @@ export default function ProductCard({
               </div>
             </>
           )}
+
+          {/* Purchased badge */}
+          <PurchasedBadge slug={slug} />
 
           {/* Bundle badge */}
           {isBundle && (

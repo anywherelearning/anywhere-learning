@@ -74,10 +74,12 @@ export default function CartDrawer() {
     // Validate email before proceeding
     if (!validateEmail()) return;
 
-    // Guard: if any item is missing a price ID, remove them and abort
+    // Guard: if any item is missing a price ID, show an error (don't silently remove)
     const invalid = items.filter((i) => !i.stripePriceId);
     if (invalid.length > 0) {
-      invalid.forEach((i) => removeItem(i.slug));
+      setCheckoutError(
+        `${invalid.map((i) => i.name).join(', ')} ${invalid.length === 1 ? 'is' : 'are'} not available for purchase yet. Remove ${invalid.length === 1 ? 'it' : 'them'} to continue.`
+      );
       return;
     }
 

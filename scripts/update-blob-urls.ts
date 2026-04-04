@@ -73,20 +73,39 @@ const blobMap: Record<string, string> = {
   'privacy-footprint': 'AI + Digital Literacy - PRIVACY & DIGITAL FOOTPRINT MAP.pdf',
   'prompt-like-a-coach': 'AI + Digital Literacy - PROMPT LIKE A COACH.pdf',
 
+  // ── Real-World Math (dedicated category) ──
+  'backyard-campout-planner': 'Real-world math - Backyard Campout Planner.pdf',
+  'clothing-swap-thrift-math': 'Real-world math - Clothing Swap & Thrift Math.pdf',
+  'family-electricity-audit': 'Real-world math - Family Electricity Audit.pdf',
+  'farmers-market-challenge': 'Real-world math - Farmers Market Challenge.pdf',
+  'garage-sale-math': 'Real-world math - Garage sale math.pdf',
+  'garden-plot-planner': 'Real-world math - Garden Plot Planner.pdf',
+  'party-planner-math': 'Real-world math - Party Planner Math.pdf',
+  'road-trip-calculator': 'Real-world math - Road trip calculator.pdf',
+  'savings-goal-tracker': 'Real-world math - Savings Goal Tracker.pdf',
+  'sports-stats-lab': 'Real-world math - Sports Stats Lab.pdf',
+
+  // ── Communication & Writing (dedicated category) ──
+  'adventure-story-map': 'Communication & Writing - Adventure Story Map.pdf',
+  'community-tour-guide': 'Communication & Writing - Community Tour Guide.pdf',
+  'directions-challenge': 'Communication & Writing - Directions Challenge.pdf',
+  'family-debate-night': 'Communication & Writing - Family Debate Night.pdf',
+  'family-recipe-book': 'Communication & Writing - Family Recipe Book.pdf',
+  'market-stall-pitch': 'Communication & Writing - Market Stall Pitch.pdf',
+  'mini-magazine-creator': 'Communication & Writing - Mini Magazine Creator.pdf',
+  'my-review-column': 'Communication & Writing - My Review Column.pdf',
+  'neighbourhood-interview': 'Communication & Writing - Neighbourhood Interview Project.pdf',
+  'trail-guide-creator': 'Communication & Writing - Trail Guide Creator.pdf',
+
+  // ── Entrepreneurship (dedicated category) ──
+  'brand-builder': 'Entrepreneurship - Brand builder.pdf',
+  'business-failure-lab': 'Entrepreneurship - Business Failure Lab.pdf',
+
   // ── Standalone Guides ──
   'future-ready-skills-map': 'The future-ready skills map.pdf',
   'my-small-business-project': 'My small business project.pdf',
   'time-capsule': 'Time Capsule.pdf',
 };
-
-// Real-world math blob files that exist in storage but have no
-// corresponding product slug in the database:
-//   - Real-world math - Backyard Campout Planner.pdf
-//   - Real-world math - Farmers Market Challenge.pdf
-//   - Real-world math - Garage sale math.pdf
-//   - Real-world math - Party Planner Math.pdf
-//   - Real-world math - Road trip calculator.pdf
-// These are intentionally excluded.
 
 async function updateBlobUrls() {
   if (!process.env.DATABASE_URL) {

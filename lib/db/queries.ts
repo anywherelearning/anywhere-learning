@@ -62,7 +62,7 @@ export async function getUserPurchases(clerkId: string, email?: string) {
 
   if (user.length === 0) return [];
 
-  return db.select({
+  const allPurchases = await db.select({
     order: orders,
     product: products,
   })
@@ -73,20 +73,29 @@ export async function getUserPurchases(clerkId: string, email?: string) {
       eq(orders.status, 'completed'),
     ))
     .orderBy(desc(orders.purchasedAt));
+
+  // Deduplicate by product ID — keep the most recent order (first in list)
+  const seen = new Set<string>();
+  return allPurchases.filter((p) => {
+    if (seen.has(p.product.id)) return false;
+    seen.add(p.product.id);
+    return true;
+  });
 }
 
 // ─── Downloads Page: Growth Queries ──────────────────────────────────
 
-/** Cross-sell mapping: category → complementary category */
-const crossSellMap: Record<string, string> = {
-  'ai-literacy': 'creativity-anywhere',
-  'creativity-anywhere': 'ai-literacy',
-  'outdoor-learning': 'creativity-anywhere',
-  'real-world-math': 'entrepreneurship',
-  'communication-writing': 'creativity-anywhere',
-  'entrepreneurship': 'planning-problem-solving',
-  'planning-problem-solving': 'entrepreneurship',
-  'start-here': 'outdoor-learning',
+/** Cross-sell mapping: category → complementary categories (ordered by relevance) */
+const crossSellMap: Record<string, string[]> = {
+  'outdoor-learning': ['creativity-anywhere', 'real-world-math'],
+  'creativity-anywhere': ['outdoor-learning', 'communication-writing'],
+  'ai-literacy': ['planning-problem-solving', 'communication-writing'],
+  'real-world-math': ['entrepreneurship', 'outdoor-learning'],
+  'real-world-relevance': ['real-world-math', 'planning-problem-solving'],
+  'communication-writing': ['creativity-anywhere', 'entrepreneurship'],
+  'entrepreneurship': ['real-world-math', 'planning-problem-solving'],
+  'planning-problem-solving': ['entrepreneurship', 'real-world-math'],
+  'start-here': ['outdoor-learning', 'creativity-anywhere'],
 };
 
 /** Season slug mapping for seasonal prompts */
@@ -125,12 +134,18 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
   }[] = [];
 
   for (const bundle of allBundles) {
+    // Skip bundles the user already purchased directly
+    if (purchasedProductIds.includes(bundle.id)) continue;
+
     if (!bundle.bundleProductIds) continue;
     let childIds: string[];
     try {
       childIds = JSON.parse(bundle.bundleProductIds) as string[];
     } catch { continue; }
     if (childIds.length === 0) continue;
+
+    // Skip bundles without a Stripe price (can't checkout)
+    if (!bundle.stripePriceId) continue;
 
     const ownedIds = childIds.filter(id => purchasedProductIds.includes(id));
     if (ownedIds.length === 0 || ownedIds.length >= childIds.length) continue;
@@ -140,6 +155,9 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
       (sum, id) => sum + (purchasedAmountByProduct[id] || 0), 0
     );
     const upgradePrice = Math.max(0, bundle.priceCents - amountAlreadyPaid);
+
+    // Skip if user already paid more than the bundle costs
+    if (upgradePrice === 0) continue;
 
     upgrades.push({
       bundle,
@@ -181,15 +199,19 @@ export async function getCrossSellProducts(
   // Find complementary categories the user hasn't bought from yet
   const targetCategories = new Set<string>();
   for (const cat of purchasedCategories) {
-    const target = crossSellMap[cat];
-    if (target && !purchasedCategories.includes(target)) {
-      targetCategories.add(target);
+    const targets = crossSellMap[cat];
+    if (targets) {
+      for (const target of targets) {
+        if (!purchasedCategories.includes(target)) {
+          targetCategories.add(target);
+        }
+      }
     }
   }
 
   if (targetCategories.size === 0) {
     // Fallback: suggest from any category user hasn't bought from
-    const allCats = Object.keys(crossSellMap);
+    const allCats = Object.values(crossSellMap).flat();
     for (const cat of allCats) {
       if (!purchasedCategories.includes(cat)) {
         targetCategories.add(cat);

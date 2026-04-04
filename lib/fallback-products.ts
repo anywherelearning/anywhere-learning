@@ -204,7 +204,7 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 7 outdoor & nature packs in one download.",
     priceCents: 4199,
     compareAtPriceCents: 5593,
-    stripePriceId: "price_1TFcTQAMzOBftCntWFHd28Bt",
+    stripePriceId: "price_1TIVzrAMzOBftCntORiPbt2P",
     blobUrl: "",
     imageUrl: "/products/mega-bundle-outdoor.jpg",
     previewFile: null,
@@ -1501,7 +1501,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Communication & Writing guides in one download.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
-    stripePriceId: "",
+    stripePriceId: "price_1TIVzsAMzOBftCntudyoAMdZ",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-communication-writing.jpg",
     previewFile: null,
@@ -1528,7 +1529,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Entrepreneurship guides in one download.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
-    stripePriceId: "",
+    stripePriceId: "price_1TIVzsAMzOBftCntL9ZJ2pZ4",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-entrepreneurship.jpg",
     previewFile: null,
@@ -1555,7 +1557,8 @@ export const fallbackProducts: FallbackProduct[] = [
       "All 10 Planning & Problem-Solving guides in one download.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
-    stripePriceId: "",
+    stripePriceId: "price_1TIVzqAMzOBftCntHOBpwe5o",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-planning-problem-solving.jpg",
     previewFile: null,

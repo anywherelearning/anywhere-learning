@@ -14,7 +14,9 @@ import {
 } from "@/lib/db/queries";
 import { formatPrice } from "@/lib/utils";
 import DownloadList from "@/components/account/DownloadList";
-import ShareSection from "@/components/account/ShareSection";
+import PostPurchaseShare from "@/components/checkout/PostPurchaseShare";
+import BundleUpgradeButton from "@/components/account/BundleUpgradeButton";
+import { getOrCreateReferral } from "@/lib/referral";
 
 export const dynamic = "force-dynamic";
 
@@ -25,19 +27,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// ── Category labels for display ──
-
-const CATEGORY_LABELS: Record<string, string> = {
-  "ai-literacy": "AI & Digital",
-  "creativity-anywhere": "Creativity Anywhere",
-  "communication-writing": "Communication & Writing",
-  "outdoor-learning": "Outdoor Learning",
-  "real-world-math": "Real-World Math",
-  "entrepreneurship": "Entrepreneurship",
-  "planning-problem-solving": "Planning & Problem-Solving",
-  "start-here": "Start Here",
-  bundle: "Bundle",
-};
+// ── Category labels (shared) ──
+import { CATEGORY_LABELS } from "@/lib/categories";
 
 const coverClasses: Record<string, string> = {
   "ai-literacy": "cover-ai-literacy",
@@ -70,12 +61,17 @@ export default async function DownloadsPage() {
 
   const purchases = await getUserPurchases(clerkId, email);
 
-  // Check membership for banner
+  // Check membership for banner + get referral code
   let isMember = false;
+  let referralCode: string | undefined;
   try {
     const user = await getUserByClerkId(clerkId);
     if (user) {
       isMember = await hasActiveMembership(user.id);
+      if (email && purchases.length > 0) {
+        const referral = await getOrCreateReferral(user.id, email).catch(() => null);
+        if (referral) referralCode = referral.code;
+      }
     }
   } catch {
     // Ignore — banner just won't show
@@ -213,14 +209,14 @@ export default async function DownloadsPage() {
             Complete Your Collection
           </h2>
           <p className="text-sm text-gray-500 mb-5">
-            You already have some of these — save by getting the full bundle.
+            You already have some of these — upgrade to the full bundle and
+            we&apos;ll credit what you&apos;ve already paid.
           </p>
           <div className="space-y-3">
             {bundleUpgrades.slice(0, 2).map((upgrade) => (
-              <Link
+              <div
                 key={upgrade.bundle.id}
-                href={`/shop/${upgrade.bundle.slug}`}
-                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5 group hover:shadow-md hover:border-forest/15 transition-all"
+                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
               >
                 {/* Bundle thumbnail */}
                 <div
@@ -242,43 +238,33 @@ export default async function DownloadsPage() {
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-gray-900 line-clamp-1 group-hover:text-forest transition-colors">
+                  <h3 className="font-semibold text-gray-900 line-clamp-1">
                     {upgrade.bundle.name}
                   </h3>
                   <p className="text-sm text-gray-500 mt-0.5">
                     You own {upgrade.ownedCount} of {upgrade.totalCount} packs
                   </p>
-                  <div className="flex items-center gap-2 mt-1.5">
-                    {upgrade.amountAlreadyPaid > 0 && (
+                  {upgrade.amountAlreadyPaid > 0 && (
+                    <div className="flex items-center gap-2 mt-1.5">
                       <span className="text-xs text-gray-400 line-through">
                         {formatPrice(upgrade.bundle.priceCents)}
                       </span>
-                    )}
-                    <span className="text-sm font-semibold text-forest">
-                      {formatPrice(upgrade.upgradePrice)}
-                    </span>
-                    {upgrade.amountAlreadyPaid > 0 && (
                       <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
                         You save {formatPrice(upgrade.amountAlreadyPaid)}
                       </span>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
 
-                <svg
-                  className="w-5 h-5 text-gray-300 group-hover:text-forest group-hover:translate-x-0.5 transition-all flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+                <BundleUpgradeButton
+                  stripePriceId={upgrade.bundle.stripePriceId}
+                  slug={upgrade.bundle.slug}
+                  upgradePrice={upgrade.upgradePrice}
+                  amountAlreadyPaid={upgrade.amountAlreadyPaid}
+                  bundleName={upgrade.bundle.name}
+                  email={email}
+                />
+              </div>
             ))}
           </div>
         </section>
@@ -377,6 +363,9 @@ export default async function DownloadsPage() {
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
+                  <p className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
+                    {CATEGORY_LABELS[product.category] || product.category}
+                  </p>
                   <h3 className="font-semibold text-gray-900 text-sm line-clamp-1 group-hover:text-forest transition-colors">
                     {product.name}
                   </h3>
@@ -395,7 +384,17 @@ export default async function DownloadsPage() {
 
       {/* ── Share section ── */}
       {purchases.length > 0 && (
-        <ShareSection />
+        <section className="mt-12 pt-8 border-t border-gray-100">
+          <div className="text-center">
+            <h2 className="font-display text-xl text-forest mb-1">
+              Know a family who&apos;d love these?
+            </h2>
+            <p className="text-sm text-gray-500 mb-5">
+              Share the love — send them a link to browse.
+            </p>
+            <PostPurchaseShare referralCode={referralCode} />
+          </div>
+        </section>
       )}
 
       {/* ── Explore more footer ── */}
