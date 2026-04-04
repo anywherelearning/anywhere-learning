@@ -175,6 +175,7 @@ async function seed() {
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TIVzsAMzOBftCntudyoAMdZ',
+
       blobUrl: '',
       imageUrl: '/products/mega-bundle-communication-writing.jpg',
       category: 'bundle',
@@ -193,6 +194,7 @@ async function seed() {
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TIVzsAMzOBftCntL9ZJ2pZ4',
+
       blobUrl: '',
       imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
       category: 'bundle',
@@ -211,6 +213,7 @@ async function seed() {
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TIVzqAMzOBftCntHOBpwe5o',
+
       blobUrl: '',
       imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
       category: 'bundle',
@@ -260,6 +263,7 @@ async function seed() {
     { name: 'Time & Energy Planner', slug: 'time-energy-planner', description: 'Build time management and energy awareness skills.', shortDescription: 'Time and energy management.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTdAMzOBftCntcxl1ggJF', blobUrl: '', imageUrl: '/products/time-energy-planner.jpg', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 58, active: true },
     { name: 'Travel Day Itinerary Challenge', slug: 'travel-day', description: 'Plan a full travel day \u2014 routes, budgets, timing.', shortDescription: 'Plan a travel day itinerary.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCntm89oK6q4', blobUrl: '', imageUrl: '/products/travel-day.jpg', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 59, active: true },
     { name: 'Write It Like a Pro', slug: 'write-like-a-pro', description: 'Real-world writing for real audiences.', shortDescription: 'Real-world writing skills.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTeAMzOBftCnti098zzDn', blobUrl: '', imageUrl: '/products/write-like-a-pro.jpg', category: 'real-world-relevance', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8\u201314', sortOrder: 60, active: true },
+
 
     // === AI & DIGITAL LITERACY (sortOrder 70–79) ===
     { name: 'AI Basics: Myths, Facts & Smart Rules', slug: 'ai-basics', description: 'Understand what AI is and how to use it wisely.', shortDescription: 'AI basics for kids.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTfAMzOBftCntjVdNUY97', blobUrl: '', imageUrl: '/products/ai-basics.jpg', category: 'ai-literacy', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 70, active: true },

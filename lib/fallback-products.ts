@@ -1502,6 +1502,7 @@ export const fallbackProducts: FallbackProduct[] = [
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TIVzsAMzOBftCntudyoAMdZ",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-communication-writing.jpg",
     previewFile: null,
@@ -1529,6 +1530,7 @@ export const fallbackProducts: FallbackProduct[] = [
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TIVzsAMzOBftCntL9ZJ2pZ4",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-entrepreneurship.jpg",
     previewFile: null,
@@ -1556,6 +1558,7 @@ export const fallbackProducts: FallbackProduct[] = [
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TIVzqAMzOBftCntHOBpwe5o",
+
     blobUrl: "",
     imageUrl: "/products/mega-bundle-planning-problem-solving.jpg",
     previewFile: null,
