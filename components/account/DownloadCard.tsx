@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
+import { CATEGORY_LABELS } from '@/lib/categories';
 
 export interface DownloadCardProps {
   productId: string;
@@ -18,18 +19,6 @@ export interface DownloadCardProps {
   isBundle: boolean;
   showReviewPrompt: boolean;
 }
-
-const CATEGORY_LABELS: Record<string, string> = {
-  'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
-  'communication-writing': 'Communication & Writing',
-  'outdoor-learning': 'Outdoor Learning',
-  'real-world-math': 'Real-World Math',
-  'entrepreneurship': 'Entrepreneurship',
-  'planning-problem-solving': 'Planning & Problem-Solving',
-  'start-here': 'Start Here',
-  bundle: 'Bundle',
-};
 
 const coverClasses: Record<string, string> = {
   'ai-literacy': 'cover-ai-literacy',
@@ -108,33 +97,35 @@ export default function DownloadCard({
               </p>
             </div>
 
-            {/* Download button — desktop */}
-            <a
-              href={`/api/download/${productId}`}
-              onClick={handleDownload}
-              className={`hidden sm:inline-flex items-center gap-2 flex-shrink-0 font-medium py-2.5 px-5 rounded-xl transition-all text-sm ${
-                downloaded
-                  ? 'bg-forest/10 text-forest'
-                  : 'bg-forest hover:bg-forest-dark text-cream'
-              }`}
-              aria-label={`Download ${productName} as PDF`}
-            >
-              {downloaded ? (
-                <>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  Downloaded
-                </>
-              ) : (
-                <>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  Download PDF
-                </>
-              )}
-            </a>
+            {/* Download button — desktop (not for bundles) */}
+            {!isBundle && (
+              <a
+                href={`/api/download/${productId}`}
+                onClick={handleDownload}
+                className={`hidden sm:inline-flex items-center gap-2 flex-shrink-0 font-medium py-2.5 px-5 rounded-xl transition-all text-sm ${
+                  downloaded
+                    ? 'bg-forest/10 text-forest'
+                    : 'bg-forest hover:bg-forest-dark text-cream'
+                }`}
+                aria-label={`Download ${productName} as PDF`}
+              >
+                {downloaded ? (
+                  <>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    Downloaded
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    Download PDF
+                  </>
+                )}
+              </a>
+            )}
           </div>
 
           {/* Meta row */}
@@ -146,36 +137,45 @@ export default function DownloadCard({
         </div>
       </div>
 
-      {/* Mobile download button — full width */}
-      <a
-        href={`/api/download/${productId}`}
-        onClick={handleDownload}
-        className={`sm:hidden flex items-center justify-center gap-2 mt-3 font-medium py-3 rounded-xl transition-all text-sm w-full ${
-          downloaded
-            ? 'bg-forest/10 text-forest'
-            : 'bg-forest hover:bg-forest-dark text-cream'
-        }`}
-        aria-label={`Download ${productName} as PDF`}
-      >
-        {downloaded ? (
-          <>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-            </svg>
-            Downloaded
-          </>
-        ) : (
-          <>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            Download PDF
-          </>
-        )}
-      </a>
+      {/* Mobile download button — full width (not for bundles) */}
+      {!isBundle && (
+        <a
+          href={`/api/download/${productId}`}
+          onClick={handleDownload}
+          className={`sm:hidden flex items-center justify-center gap-2 mt-3 font-medium py-3 rounded-xl transition-all text-sm w-full ${
+            downloaded
+              ? 'bg-forest/10 text-forest'
+              : 'bg-forest hover:bg-forest-dark text-cream'
+          }`}
+          aria-label={`Download ${productName} as PDF`}
+        >
+          {downloaded ? (
+            <>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Downloaded
+            </>
+          ) : (
+            <>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              Download PDF
+            </>
+          )}
+        </a>
+      )}
 
-      {/* Review prompt */}
-      {showReviewPrompt && (
+      {/* Bundle note — individual packs listed separately */}
+      {isBundle && (
+        <p className="mt-3 pt-3 border-t border-gray-50 text-sm text-gray-400">
+          Each pack in this bundle is listed separately in your downloads.
+        </p>
+      )}
+
+      {/* Review prompt (not for bundles) */}
+      {showReviewPrompt && !isBundle && (
         <div className="mt-3 pt-3 border-t border-gray-50 text-sm text-gray-400">
           Enjoying this pack?{' '}
           <Link

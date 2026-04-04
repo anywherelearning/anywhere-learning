@@ -5,6 +5,7 @@ import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
+import { usePurchased } from './PurchasedContext';
 
 interface StickyMobileBuyProps {
   productName: string;
@@ -48,8 +49,10 @@ export default function StickyMobileBuy({
   const alreadyInCart = isInCart(slug);
   const coveredBy = isCoveredByCart(items, slug);
 
-  // Hide in native app (Apple compliance) or when product is covered by a bundle
-  if (isNative || coveredBy) return null;
+  const purchased = usePurchased();
+
+  // Hide in native app, when covered by bundle, or already purchased
+  if (isNative || coveredBy || purchased.has(slug)) return null;
 
   function handleClick() {
     if (alreadyInCart) {

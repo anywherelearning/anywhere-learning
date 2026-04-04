@@ -113,58 +113,8 @@ export async function generateMetadata({
   };
 }
 
-// ── Category sections for the All view ──
-
-const categorySections = [
-  {
-    value: "start-here",
-    label: "Start Here",
-    description:
-      "The foundation for your learning journey — start with the big picture.",
-  },
-  {
-    value: "ai-literacy",
-    label: "AI & Digital",
-    description:
-      "Responsible tech, critical thinking about AI, and digital citizenship.",
-  },
-  {
-    value: "communication-writing",
-    label: "Communication & Writing",
-    description:
-      "Real-world writing and communication skills for kids who have something to say.",
-  },
-  {
-    value: "creativity-anywhere",
-    label: "Creativity Anywhere",
-    description:
-      "Open-ended projects that build design thinking and creative confidence.",
-  },
-  {
-    value: "entrepreneurship",
-    label: "Entrepreneurship",
-    description:
-      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses.",
-  },
-  {
-    value: "outdoor-learning",
-    label: "Outdoor Learning",
-    description:
-      "Turn your backyard, park, or trail into a hands-on learning space.",
-  },
-  {
-    value: "planning-problem-solving",
-    label: "Planning & Problem-Solving",
-    description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter.",
-  },
-  {
-    value: "real-world-math",
-    label: "Real-World Math",
-    description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
-  },
-];
+// ── Category sections — shared source of truth ──
+import { CATEGORIES as categorySections } from "@/lib/categories";
 
 // ── Category → Bundle slug mapping ──
 
@@ -181,12 +131,13 @@ const categoryBundleMap: Record<string, string> = {
 // ── Cross-sell mapping ──
 
 const crossSellMap: Record<string, string> = {
-  "ai-literacy": "creativity-anywhere",
-  "creativity-anywhere": "ai-literacy",
   "outdoor-learning": "creativity-anywhere",
+  "creativity-anywhere": "communication-writing",
+  "ai-literacy": "planning-problem-solving",
   "real-world-math": "entrepreneurship",
+  "real-world-relevance": "real-world-math",
   "communication-writing": "creativity-anywhere",
-  "entrepreneurship": "planning-problem-solving",
+  "entrepreneurship": "real-world-math",
   "planning-problem-solving": "entrepreneurship",
   "start-here": "outdoor-learning",
 };
