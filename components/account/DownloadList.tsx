@@ -34,6 +34,7 @@ export interface Purchase {
     ageRange: string | null;
     activityCount: number | null;
     isBundle: boolean;
+    blobUrl: string;
   };
 }
 
@@ -167,6 +168,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
               ageRange={p.product.ageRange}
               activityCount={p.product.activityCount}
               isBundle={p.product.isBundle}
+              blobUrl={p.product.blobUrl}
               showReviewPrompt={daysSincePurchase > SEVEN_DAYS_MS}
             />
           );

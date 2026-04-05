@@ -96,22 +96,63 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ upgradePrice: null });
     }
 
-    // Sum max payment per product
-    const paidByProduct: Record<string, number> = {};
-    for (const o of ownedOrders) {
-      paidByProduct[o.productId] = Math.max(
-        paidByProduct[o.productId] || 0,
-        o.amountCents,
-      );
-    }
-    const ownedCount = Object.keys(paidByProduct).length;
+    // Track which children the user owns
+    const ownedChildIds = new Set(ownedOrders.map((o) => o.productId));
+    const ownedCount = ownedChildIds.size;
 
     // If user already owns all packs in the bundle, no upgrade needed
     if (ownedCount >= childSlugs.length) {
       return NextResponse.json({ upgradePrice: null, alreadyOwnsAll: true });
     }
 
-    const totalCredit = Object.values(paidByProduct).reduce((sum, v) => sum + v, 0);
+    // Calculate total credit: sum of individual purchases + sub-bundle purchases.
+    // Children from bundle purchases have amountCents = 0, so we need to find
+    // and credit the sub-bundle order directly.
+    let totalCredit = 0;
+
+    // 1. Credit individual purchases (orders with amountCents > 0)
+    const paidByProduct: Record<string, number> = {};
+    for (const o of ownedOrders) {
+      if (o.amountCents > 0) {
+        paidByProduct[o.productId] = Math.max(
+          paidByProduct[o.productId] || 0,
+          o.amountCents,
+        );
+      }
+    }
+    totalCredit += Object.values(paidByProduct).reduce((sum, v) => sum + v, 0);
+
+    // 2. Credit sub-bundle purchases whose children overlap with this bundle.
+    //    Each sub-bundle is credited once at full price (that's what the user paid).
+    for (const [subBundleSlug, subChildSlugs] of Object.entries(BUNDLE_CONTENTS)) {
+      if (subBundleSlug === slug) continue; // skip the bundle being upgraded to
+      // Does this sub-bundle overlap with our target bundle's children?
+      if (!subChildSlugs.some((s) => childSlugs.includes(s))) continue;
+
+      const subBundle = await db
+        .select({ id: products.id })
+        .from(products)
+        .where(and(eq(products.slug, subBundleSlug), eq(products.isBundle, true)))
+        .limit(1);
+      if (subBundle.length === 0) continue;
+
+      const subBundleOrder = await db
+        .select({ amountCents: orders.amountCents })
+        .from(orders)
+        .where(
+          and(
+            eq(orders.userId, user[0].id),
+            eq(orders.productId, subBundle[0].id),
+            eq(orders.status, 'completed'),
+          ),
+        )
+        .limit(1);
+
+      if (subBundleOrder.length > 0) {
+        totalCredit += subBundleOrder[0].amountCents;
+      }
+    }
+
     const upgradePrice = Math.max(0, bundle[0].priceCents - totalCredit);
 
     // User already paid more than the bundle costs — no upgrade needed
