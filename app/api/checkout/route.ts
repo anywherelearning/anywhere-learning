@@ -163,15 +163,49 @@ export async function POST(req: NextRequest) {
 
             if (ownedOrders.length === 0) continue;
 
-            // Sum what they paid (take max per product in case of duplicates)
+            // Credit individual purchases (amountCents > 0)
+            let totalCredit = 0;
             const paidByProduct: Record<string, number> = {};
             for (const o of ownedOrders) {
-              paidByProduct[o.productId] = Math.max(
-                paidByProduct[o.productId] || 0,
-                o.amountCents,
-              );
+              if (o.amountCents > 0) {
+                paidByProduct[o.productId] = Math.max(
+                  paidByProduct[o.productId] || 0,
+                  o.amountCents,
+                );
+              }
             }
-            const totalCredit = Object.values(paidByProduct).reduce((sum, v) => sum + v, 0);
+            totalCredit += Object.values(paidByProduct).reduce((sum, v) => sum + v, 0);
+
+            // Credit sub-bundle purchases whose children overlap with this bundle.
+            // Each sub-bundle is credited once at full price (that's what the user paid).
+            for (const [subBundleSlug, subChildSlugs] of Object.entries(BUNDLE_CONTENTS)) {
+              if (subBundleSlug === bundle.slug) continue;
+              if (!subChildSlugs.some((s) => childSlugs.includes(s))) continue;
+
+              const subBundle = await db
+                .select({ id: products.id })
+                .from(products)
+                .where(and(eq(products.slug, subBundleSlug), eq(products.isBundle, true)))
+                .limit(1);
+              if (subBundle.length === 0) continue;
+
+              const subBundleOrder = await db
+                .select({ amountCents: orders.amountCents })
+                .from(orders)
+                .where(
+                  and(
+                    eq(orders.userId, existingUser[0].id),
+                    eq(orders.productId, subBundle[0].id),
+                    eq(orders.status, 'completed'),
+                  ),
+                )
+                .limit(1);
+
+              if (subBundleOrder.length > 0) {
+                totalCredit += subBundleOrder[0].amountCents;
+              }
+            }
+
             if (totalCredit > 0) {
               bundleCredits[bundle.slug] = totalCredit;
             }

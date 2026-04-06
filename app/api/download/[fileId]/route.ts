@@ -60,26 +60,41 @@ export async function GET(
     return NextResponse.json({ error: 'Product not found' }, { status: 404 });
   }
 
-  // Log download
-  await db.insert(downloads).values({
+  const isView = req.nextUrl.searchParams.get('view') === '1';
+
+  // Log download (don't await — fire-and-forget so it doesn't slow the response)
+  db.insert(downloads).values({
     orderId: order[0].id,
     userId: user[0].id,
     productId: productId,
     ipAddress: req.headers.get('x-forwarded-for') || 'unknown',
-  });
+  }).catch(() => {});
 
-  // Stream the file from Vercel Blob
+  // For "view" mode: redirect straight to the Vercel Blob CDN URL.
+  // Auth is already verified above, so the user earned access.
+  // Blob URLs are long random strings (unguessable) and served from
+  // Vercel's edge CDN — much faster than proxying through our server.
+  if (isView && product[0].blobUrl) {
+    return NextResponse.redirect(product[0].blobUrl);
+  }
+
+  // For downloads: stream through our server so we can set Content-Disposition
   try {
     const blobResponse = await streamBlobToResponse(product[0].blobUrl);
-    const blob = await blobResponse.blob();
     const fileName = `${product[0].slug}.pdf`;
 
-    return new NextResponse(blob, {
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="${fileName}"`,
-      },
-    });
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `attachment; filename="${fileName}"`,
+    };
+
+    // Forward content-length so the browser shows a progress bar
+    const contentLength = blobResponse.headers.get('content-length');
+    if (contentLength) {
+      headers['Content-Length'] = contentLength;
+    }
+
+    return new NextResponse(blobResponse.body, { headers });
   } catch {
     return NextResponse.json({ error: 'File not available' }, { status: 500 });
   }
