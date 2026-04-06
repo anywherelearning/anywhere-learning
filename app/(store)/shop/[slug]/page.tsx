@@ -25,6 +25,7 @@ import NativeOnly from "@/components/mobile/NativeOnly";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativeProductDetail from "@/components/mobile/NativeProductDetail";
 import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
+import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -502,6 +503,9 @@ export default async function ProductPage({
             </div>
           </div>
         </section>
+
+        {/* Free Guide CTA */}
+        <FreeGuideCTA />
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
