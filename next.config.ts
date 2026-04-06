@@ -5,9 +5,11 @@ const analyze = withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+const isDev = process.env.NODE_ENV === "development";
+
 const securityHeaders = [
-  // Prevent clickjacking — only allow our own site to frame pages
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // Prevent clickjacking — only allow our own site to frame pages (skip in dev for preview)
+  ...(isDev ? [] : [{ key: "X-Frame-Options", value: "SAMEORIGIN" }]),
   // Block MIME-type sniffing (e.g. serving JS disguised as an image)
   { key: "X-Content-Type-Options", value: "nosniff" },
   // Control Referer header leakage
@@ -28,6 +30,7 @@ const securityHeaders = [
       "frame-src https://js.stripe.com https://*.clerk.accounts.dev https://challenges.cloudflare.com",
       "connect-src 'self' https://*.stripe.com https://*.clerk.accounts.dev https://*.clerk.com https://*.upstash.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
       "worker-src 'self' blob:",
+      ...(isDev ? ["frame-ancestors *"] : []),
     ].join("; "),
   },
 ];

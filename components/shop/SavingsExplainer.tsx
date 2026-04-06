@@ -93,7 +93,7 @@ export default function SavingsExplainer() {
                 </div>
               ))}
               <div className="flex items-center pl-5">
-                <span className="text-xs text-gray-400 font-medium">+2 more</span>
+                <span className="text-xs text-gray-400 font-medium">+ more</span>
               </div>
             </div>
 
