@@ -81,7 +81,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 22,
     author: amelie,
     heroImage: '/images/guide-real-world-hero.jpeg',
-    heroImageAlt: 'Zach learning to use a mitre saw with dad in the workshop',
+    heroImageAlt: 'Julia smiling behind bags of popcorn she made and labelled for her small business',
     content: [
       {
         type: 'summary',
@@ -987,7 +987,8 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 18,
     author: amelie,
     heroImage: '/images/guide-creativity-hero.jpeg',
-    heroImageAlt: 'Zach programming a LEGO robot with a tablet at a maker workshop',
+    heroImageAlt: 'Zach and Julia wearing giant cardboard Crocs costumes they built themselves',
+    heroImagePosition: 'center 25%',
     content: [
       {
         type: 'summary',
