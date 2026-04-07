@@ -3,6 +3,20 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import DownloadCard from './DownloadCard';
+import { CATEGORIES, CATEGORY_LABELS, CATEGORY_ACTIVE_COLORS } from '@/lib/categories';
+import {
+  SparklesIcon,
+  LeafIcon,
+  PaletteIcon,
+  CpuIcon,
+  LayersIcon,
+  CalculatorIcon,
+  BookOpenIcon,
+  RocketIcon,
+  PuzzleIcon,
+  StarIcon,
+} from '@/components/shop/icons';
+import type { ComponentType, SVGProps } from 'react';
 
 export interface Purchase {
   order: {
@@ -20,6 +34,7 @@ export interface Purchase {
     ageRange: string | null;
     activityCount: number | null;
     isBundle: boolean;
+    blobUrl: string;
   };
 }
 
@@ -27,27 +42,47 @@ interface DownloadListProps {
   purchases: Purchase[];
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
-  'communication-writing': 'Communication & Writing',
-  'outdoor-learning': 'Outdoor Learning',
-  'real-world-math': 'Real-World Math',
-  'entrepreneurship': 'Entrepreneurship',
-  'planning-problem-solving': 'Planning & Problem-Solving',
-  'start-here': 'Start Here',
-  bundle: 'Bundles',
-};
-
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+
+/** Icon per category — matches the shop page. */
+const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
+  'all': SparklesIcon,
+  'start-here': StarIcon,
+  'ai-literacy': CpuIcon,
+  'communication-writing': BookOpenIcon,
+  'creativity-anywhere': PaletteIcon,
+  'entrepreneurship': RocketIcon,
+  'outdoor-learning': LeafIcon,
+  'planning-problem-solving': PuzzleIcon,
+  'real-world-math': CalculatorIcon,
+  'bundle': LayersIcon,
+};
 
 export default function DownloadList({ purchases }: DownloadListProps) {
   const [filter, setFilter] = useState('all');
 
-  // Build category list from user's purchases
+  // Build category list: All → Start Here → Bundles → rest alphabetical by label
   const categories = useMemo(() => {
-    const cats = new Set(purchases.map((p) => p.product.category));
-    return ['all', ...Array.from(cats).sort()];
+    const ownedCats = new Set(purchases.map((p) => p.product.category));
+    const rest = CATEGORIES
+      .filter((c) => ownedCats.has(c.value) && c.value !== 'start-here')
+      .sort((a, b) => a.label.localeCompare(b.label))
+      .map((c) => c.value);
+    const result: string[] = ['all'];
+    if (ownedCats.has('start-here')) result.push('start-here');
+    if (ownedCats.has('bundle')) result.push('bundle');
+    result.push(...rest);
+    return result;
+  }, [purchases]);
+
+  // Count per category
+  const counts = useMemo(() => {
+    const map: Record<string, number> = {};
+    for (const p of purchases) {
+      const cat = p.product.category;
+      map[cat] = (map[cat] || 0) + 1;
+    }
+    return map;
   }, [purchases]);
 
   const filtered = useMemo(() => {
@@ -55,7 +90,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
     return purchases.filter((p) => p.product.category === filter);
   }, [purchases, filter]);
 
-  const showFilters = purchases.length >= 8 && categories.length > 2;
+  const showFilters = purchases.length >= 3 && categories.length > 2;
 
   if (purchases.length === 0) {
     return (
@@ -84,24 +119,35 @@ export default function DownloadList({ purchases }: DownloadListProps) {
 
   return (
     <div>
-      {/* Category filter pills */}
+      {/* Category filter pills — matches shop page style */}
       {showFilters && (
-        <div className="flex flex-wrap gap-2 mb-6">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`text-sm font-medium px-4 py-2 rounded-full transition-colors ${
-                filter === cat
-                  ? 'bg-forest text-cream'
-                  : 'bg-white text-gray-600 border border-gray-200 hover:border-forest/30 hover:text-forest'
-              }`}
-            >
-              {cat === 'all'
-                ? `All (${purchases.length})`
-                : CATEGORY_LABELS[cat] || cat}
-            </button>
-          ))}
+        <div className="flex flex-wrap gap-2 mb-6" role="tablist">
+          {categories.map((cat) => {
+            const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
+            const count = cat === 'all' ? purchases.length : (counts[cat] || 0);
+            const isActive = filter === cat;
+            const activeColor = CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'];
+
+            return (
+              <button
+                key={cat}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setFilter(cat)}
+                className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                  isActive
+                    ? activeColor
+                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                {cat === 'all' ? 'All Packs' : (CATEGORY_LABELS[cat] || cat)}
+                <span className={`text-xs ${isActive ? 'opacity-75' : 'text-gray-400'}`}>
+                  ({count})
+                </span>
+              </button>
+            );
+          })}
         </div>
       )}
 
@@ -122,6 +168,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
               ageRange={p.product.ageRange}
               activityCount={p.product.activityCount}
               isBundle={p.product.isBundle}
+              blobUrl={p.product.blobUrl}
               showReviewPrompt={daysSincePurchase > SEVEN_DAYS_MS}
             />
           );

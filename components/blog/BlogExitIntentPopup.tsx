@@ -161,7 +161,7 @@ export default function BlogExitIntentPopup() {
     >
       <div
         ref={focusTrapRef}
-        className={`relative w-full max-w-md max-h-[92vh] overflow-y-auto bg-cream rounded-3xl shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-cream rounded-3xl shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           animating
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-6'
@@ -180,27 +180,27 @@ export default function BlogExitIntentPopup() {
         </button>
 
         {/* Content with inline cover */}
-        <div className="px-5 sm:px-8 pt-4 sm:pt-5 pb-5 sm:pb-7">
-          <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-            {/* Guide cover — compact */}
-            <div className="relative w-16 sm:w-28 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
+        <div className="px-6 sm:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8">
+          <div className="flex items-start gap-4 sm:gap-5 mb-4 sm:mb-5">
+            {/* Guide cover */}
+            <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
               <Image
                 src="/images/free-guide-cover.jpg"
                 alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
                 fill
-                sizes="(max-width: 640px) 64px, 112px"
+                sizes="(max-width: 640px) 80px, 128px"
                 className="object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="min-w-0 pt-0.5 sm:pt-1">
+            <div className="min-w-0 pt-1 sm:pt-2">
               <h2
                 id="blog-exit-popup-title"
-                className="font-display text-lg sm:text-[1.5rem] text-forest leading-tight mb-1 sm:mb-1.5"
+                className="font-display text-xl sm:text-[1.65rem] text-forest leading-tight mb-1.5 sm:mb-2"
               >
                 Before you go &mdash; grab this free guide
               </h2>
-              <p className="text-[12px] sm:text-sm text-gray-500 leading-relaxed">
+              <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
                 10 Real-World Activities You Can Start Today &mdash; no prep, no planning, just meaningful learning.
               </p>
             </div>

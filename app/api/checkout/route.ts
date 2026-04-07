@@ -5,7 +5,12 @@ import { products, orders, users } from '@/lib/db/schema';
 import { inArray, eq, and } from 'drizzle-orm';
 import { randomBytes } from 'crypto';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
-import { BYOB_TIERS } from '@/lib/cart';
+import { BYOB_TIERS, BUNDLE_CONTENTS } from '@/lib/cart';
+import { auth } from '@clerk/nextjs/server';
+
+function formatCents(cents: number): string {
+  return `$${(cents / 100).toFixed(2)}`;
+}
 
 interface CheckoutItem {
   stripePriceId: string;
@@ -38,9 +43,28 @@ export async function POST(req: NextRequest) {
     // Extract and validate email (optional — Stripe collects if not provided)
     const rawEmail = typeof body.email === 'string' ? body.email.trim() : '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const email = rawEmail && emailRegex.test(rawEmail) ? rawEmail : '';
+    let email = rawEmail && emailRegex.test(rawEmail) ? rawEmail : '';
     if (rawEmail && !email) {
       return NextResponse.json({ error: 'Please enter a valid email address' }, { status: 400 });
+    }
+
+    // If no email provided, try to get it from Clerk auth (for direct upgrade flows)
+    if (!email) {
+      try {
+        const { userId: clerkId } = await auth();
+        if (clerkId) {
+          const clerkUser = await db
+            .select({ email: users.email })
+            .from(users)
+            .where(eq(users.clerkId, clerkId))
+            .limit(1);
+          if (clerkUser.length > 0) {
+            email = clerkUser[0].email;
+          }
+        }
+      } catch {
+        // Non-critical — proceed without email
+      }
     }
 
     // Validate all items have price IDs
@@ -97,6 +121,102 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
+    // ── Bundle upgrade credits: if user already owns child products, credit what they paid ──
+    const bundleCredits: Record<string, number> = {};
+    const bundleProducts = verifiedProducts.filter((p) => p.isBundle);
+    if (email && bundleProducts.length > 0) {
+      try {
+        const existingUser = await db
+          .select({ id: users.id })
+          .from(users)
+          .where(eq(users.email, email))
+          .limit(1);
+
+        if (existingUser.length > 0) {
+          for (const bundle of bundleProducts) {
+            const childSlugs = BUNDLE_CONTENTS[bundle.slug];
+            if (!childSlugs || childSlugs.length === 0) continue;
+
+            // Find child products in DB
+            const childProducts = await db
+              .select({ id: products.id, slug: products.slug })
+              .from(products)
+              .where(inArray(products.slug, childSlugs));
+
+            if (childProducts.length === 0) continue;
+            const childIds = childProducts.map((p) => p.id);
+
+            // Get completed orders for these child products
+            const ownedOrders = await db
+              .select({
+                productId: orders.productId,
+                amountCents: orders.amountCents,
+              })
+              .from(orders)
+              .where(
+                and(
+                  eq(orders.userId, existingUser[0].id),
+                  inArray(orders.productId, childIds),
+                  eq(orders.status, 'completed'),
+                ),
+              );
+
+            if (ownedOrders.length === 0) continue;
+
+            // Credit individual purchases (amountCents > 0)
+            let totalCredit = 0;
+            const paidByProduct: Record<string, number> = {};
+            for (const o of ownedOrders) {
+              if (o.amountCents > 0) {
+                paidByProduct[o.productId] = Math.max(
+                  paidByProduct[o.productId] || 0,
+                  o.amountCents,
+                );
+              }
+            }
+            totalCredit += Object.values(paidByProduct).reduce((sum, v) => sum + v, 0);
+
+            // Credit sub-bundle purchases whose children overlap with this bundle.
+            // Each sub-bundle is credited once at full price (that's what the user paid).
+            for (const [subBundleSlug, subChildSlugs] of Object.entries(BUNDLE_CONTENTS)) {
+              if (subBundleSlug === bundle.slug) continue;
+              if (!subChildSlugs.some((s) => childSlugs.includes(s))) continue;
+
+              const subBundle = await db
+                .select({ id: products.id })
+                .from(products)
+                .where(and(eq(products.slug, subBundleSlug), eq(products.isBundle, true)))
+                .limit(1);
+              if (subBundle.length === 0) continue;
+
+              const subBundleOrder = await db
+                .select({ amountCents: orders.amountCents })
+                .from(orders)
+                .where(
+                  and(
+                    eq(orders.userId, existingUser[0].id),
+                    eq(orders.productId, subBundle[0].id),
+                    eq(orders.status, 'completed'),
+                  ),
+                )
+                .limit(1);
+
+              if (subBundleOrder.length > 0) {
+                totalCredit += subBundleOrder[0].amountCents;
+              }
+            }
+
+            if (totalCredit > 0) {
+              bundleCredits[bundle.slug] = totalCredit;
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Failed to calculate bundle credits:', error);
+        // Non-critical — proceed without credits
+      }
+    }
+
     // Build line items — apply BYOB discount to individual items via price_data
     const hasBundle = verifiedProducts.some((p) => p.isBundle);
     const lineItems: Array<{
@@ -145,6 +265,25 @@ export async function POST(req: NextRequest) {
               metadata: { stripePriceId: product.stripePriceId },
             },
             unit_amount: discountedAmount,
+          },
+          quantity: 1,
+        };
+      }
+      // Bundle with upgrade credit — use price_data with adjusted amount
+      const credit = product.isBundle ? (bundleCredits[product.slug] || 0) : 0;
+      if (credit > 0) {
+        const upgradeAmount = Math.max(0, product.priceCents - credit);
+        return {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: `${product.name} (Upgrade — you save ${formatCents(credit)})`,
+              images: product.imageUrl
+                ? [`${siteUrl}${product.imageUrl}`]
+                : undefined,
+              metadata: { stripePriceId: product.stripePriceId },
+            },
+            unit_amount: upgradeAmount,
           },
           quantity: 1,
         };
@@ -226,6 +365,9 @@ export async function POST(req: NextRequest) {
         product_slugs: verifiedSlugs.join(','),
         success_token: successToken,
         ...(byobDiscount > 0 && { byob_discount_percent: String(byobDiscount) }),
+        ...(Object.keys(bundleCredits).length > 0 && {
+          bundle_upgrade_credits: JSON.stringify(bundleCredits),
+        }),
       },
       // Disable promo codes when BYOB discount is active to prevent stacking
       ...(byobDiscount === 0 && { allow_promotion_codes: true }),

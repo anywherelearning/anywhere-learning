@@ -1,6 +1,7 @@
 import { db } from './index';
 import { products, orders, users, reviews, subscriptions } from './schema';
 import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
+import { BUNDLE_CONTENTS } from '@/lib/cart';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -62,7 +63,7 @@ export async function getUserPurchases(clerkId: string, email?: string) {
 
   if (user.length === 0) return [];
 
-  return db.select({
+  const allPurchases = await db.select({
     order: orders,
     product: products,
   })
@@ -73,20 +74,32 @@ export async function getUserPurchases(clerkId: string, email?: string) {
       eq(orders.status, 'completed'),
     ))
     .orderBy(desc(orders.purchasedAt));
+
+  // Deduplicate by product ID — keep the order with the highest amountCents
+  // (so individual purchases aren't shadowed by $0 bundle-expansion orders)
+  const bestByProduct = new Map<string, typeof allPurchases[0]>();
+  for (const p of allPurchases) {
+    const existing = bestByProduct.get(p.product.id);
+    if (!existing || p.order.amountCents > existing.order.amountCents) {
+      bestByProduct.set(p.product.id, p);
+    }
+  }
+  return Array.from(bestByProduct.values());
 }
 
 // ─── Downloads Page: Growth Queries ──────────────────────────────────
 
-/** Cross-sell mapping: category → complementary category */
-const crossSellMap: Record<string, string> = {
-  'ai-literacy': 'creativity-anywhere',
-  'creativity-anywhere': 'ai-literacy',
-  'outdoor-learning': 'creativity-anywhere',
-  'real-world-math': 'entrepreneurship',
-  'communication-writing': 'creativity-anywhere',
-  'entrepreneurship': 'planning-problem-solving',
-  'planning-problem-solving': 'entrepreneurship',
-  'start-here': 'outdoor-learning',
+/** Cross-sell mapping: category → complementary categories (ordered by relevance) */
+const crossSellMap: Record<string, string[]> = {
+  'outdoor-learning': ['creativity-anywhere', 'real-world-math'],
+  'creativity-anywhere': ['outdoor-learning', 'communication-writing'],
+  'ai-literacy': ['planning-problem-solving', 'communication-writing'],
+  'real-world-math': ['entrepreneurship', 'outdoor-learning'],
+  'real-world-relevance': ['real-world-math', 'planning-problem-solving'],
+  'communication-writing': ['creativity-anywhere', 'entrepreneurship'],
+  'entrepreneurship': ['real-world-math', 'planning-problem-solving'],
+  'planning-problem-solving': ['entrepreneurship', 'real-world-math'],
+  'start-here': ['outdoor-learning', 'creativity-anywhere'],
 };
 
 /** Season slug mapping for seasonal prompts */
@@ -116,6 +129,10 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
   const allBundles = await db.select().from(products)
     .where(and(eq(products.active, true), eq(products.isBundle, true)));
 
+  // Build a map of bundle product ID → slug for sub-bundle credit lookups
+  const bundleIdToSlug: Record<string, string> = {};
+  for (const b of allBundles) bundleIdToSlug[b.id] = b.slug;
+
   const upgrades: {
     bundle: typeof allBundles[0];
     ownedCount: number;
@@ -125,6 +142,9 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
   }[] = [];
 
   for (const bundle of allBundles) {
+    // Skip bundles the user already purchased directly
+    if (purchasedProductIds.includes(bundle.id)) continue;
+
     if (!bundle.bundleProductIds) continue;
     let childIds: string[];
     try {
@@ -132,14 +152,38 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
     } catch { continue; }
     if (childIds.length === 0) continue;
 
+    // Skip bundles without a Stripe price (can't checkout)
+    if (!bundle.stripePriceId) continue;
+
     const ownedIds = childIds.filter(id => purchasedProductIds.includes(id));
     if (ownedIds.length === 0 || ownedIds.length >= childIds.length) continue;
 
-    // Sum what user already paid for owned products in this bundle
-    const amountAlreadyPaid = ownedIds.reduce(
-      (sum, id) => sum + (purchasedAmountByProduct[id] || 0), 0
+    // Credit individual purchases (non-zero amounts)
+    let amountAlreadyPaid = 0;
+    for (const id of ownedIds) {
+      const paid = purchasedAmountByProduct[id] || 0;
+      if (paid > 0) amountAlreadyPaid += paid;
+    }
+
+    // Credit sub-bundle purchases. Children from bundles have amountCents=0,
+    // so we look for purchased bundles whose children overlap with this bundle.
+    const childSlugSet = new Set(
+      BUNDLE_CONTENTS[bundle.slug] || [],
     );
+    for (const otherBundle of allBundles) {
+      if (otherBundle.id === bundle.id) continue;
+      if (!purchasedProductIds.includes(otherBundle.id)) continue;
+      const otherChildSlugs = BUNDLE_CONTENTS[otherBundle.slug] || [];
+      if (!otherChildSlugs.some((s) => childSlugSet.has(s))) continue;
+      // User owns this sub-bundle — credit what they paid for it
+      const bundlePaid = purchasedAmountByProduct[otherBundle.id] || 0;
+      if (bundlePaid > 0) amountAlreadyPaid += bundlePaid;
+    }
+
     const upgradePrice = Math.max(0, bundle.priceCents - amountAlreadyPaid);
+
+    // Skip if user already paid more than the bundle costs
+    if (upgradePrice === 0) continue;
 
     upgrades.push({
       bundle,
@@ -181,15 +225,19 @@ export async function getCrossSellProducts(
   // Find complementary categories the user hasn't bought from yet
   const targetCategories = new Set<string>();
   for (const cat of purchasedCategories) {
-    const target = crossSellMap[cat];
-    if (target && !purchasedCategories.includes(target)) {
-      targetCategories.add(target);
+    const targets = crossSellMap[cat];
+    if (targets) {
+      for (const target of targets) {
+        if (!purchasedCategories.includes(target)) {
+          targetCategories.add(target);
+        }
+      }
     }
   }
 
   if (targetCategories.size === 0) {
     // Fallback: suggest from any category user hasn't bought from
-    const allCats = Object.keys(crossSellMap);
+    const allCats = Object.values(crossSellMap).flat();
     for (const cat of allCats) {
       if (!purchasedCategories.includes(cat)) {
         targetCategories.add(cat);

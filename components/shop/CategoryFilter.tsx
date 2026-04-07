@@ -13,32 +13,20 @@ import {
   PuzzleIcon,
   StarIcon,
 } from './icons';
+import { CATEGORY_ACTIVE_COLORS as categoryActiveColors } from '@/lib/categories';
 
 const categories = [
   { value: '', label: 'All Packs', Icon: SparklesIcon },
   { value: 'start-here', label: 'Start Here', Icon: StarIcon },
-  { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
-  { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
-  { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
-  { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
-  { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
-  { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
-  { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
+  { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
+  { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
+  { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
+  { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
+  { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
+  { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
+  { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
 ];
-
-const categoryActiveColors: Record<string, string> = {
-  '': 'bg-forest text-cream shadow-sm',
-  'ai-literacy': 'bg-[#7b88a8] text-white shadow-sm',
-  'creativity-anywhere': 'bg-[#c47a8f] text-white shadow-sm',
-  'communication-writing': 'bg-[#5b8fa8] text-white shadow-sm',
-  'outdoor-learning': 'bg-forest text-cream shadow-sm',
-  'real-world-math': 'bg-[#8b7355] text-white shadow-sm',
-  'entrepreneurship': 'bg-[#c4836a] text-white shadow-sm',
-  'planning-problem-solving': 'bg-[#7a6da8] text-white shadow-sm',
-  'start-here': 'bg-[#d4a373] text-white shadow-sm',
-  bundle: 'bg-gold text-white shadow-sm',
-};
 
 interface CategoryFilterProps {
   hideBundles?: boolean;

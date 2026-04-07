@@ -14,6 +14,7 @@ import CategorySection from "@/components/shop/CategorySection";
 import CategoryHero from "@/components/shop/CategoryHero";
 import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ScrollReveal from "@/components/shared/ScrollReveal";
+import ShopPagination from "@/components/shop/ShopPagination";
 import SavingsExplainer from "@/components/shop/SavingsExplainer";
 import SkillsMapBanner from "@/components/shop/SkillsMapBanner";
 import NativeOnly from "@/components/mobile/NativeOnly";
@@ -112,58 +113,8 @@ export async function generateMetadata({
   };
 }
 
-// ── Category sections for the All view ──
-
-const categorySections = [
-  {
-    value: "start-here",
-    label: "Start Here",
-    description:
-      "The foundation for your learning journey — start with the big picture.",
-  },
-  {
-    value: "ai-literacy",
-    label: "AI & Digital",
-    description:
-      "Responsible tech, critical thinking about AI, and digital citizenship.",
-  },
-  {
-    value: "creativity-anywhere",
-    label: "Creativity Anywhere",
-    description:
-      "Open-ended projects that build design thinking and creative confidence.",
-  },
-  {
-    value: "outdoor-learning",
-    label: "Outdoor Learning",
-    description:
-      "Turn your backyard, park, or trail into a hands-on learning space.",
-  },
-  {
-    value: "real-world-math",
-    label: "Real-World Math",
-    description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
-  },
-  {
-    value: "communication-writing",
-    label: "Communication & Writing",
-    description:
-      "Real-world writing and communication skills for kids who have something to say.",
-  },
-  {
-    value: "entrepreneurship",
-    label: "Entrepreneurship",
-    description:
-      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses.",
-  },
-  {
-    value: "planning-problem-solving",
-    label: "Planning & Problem-Solving",
-    description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter.",
-  },
-];
+// ── Category sections — shared source of truth ──
+import { CATEGORIES as categorySections } from "@/lib/categories";
 
 // ── Category → Bundle slug mapping ──
 
@@ -180,12 +131,13 @@ const categoryBundleMap: Record<string, string> = {
 // ── Cross-sell mapping ──
 
 const crossSellMap: Record<string, string> = {
-  "ai-literacy": "creativity-anywhere",
-  "creativity-anywhere": "ai-literacy",
   "outdoor-learning": "creativity-anywhere",
+  "creativity-anywhere": "communication-writing",
+  "ai-literacy": "planning-problem-solving",
   "real-world-math": "entrepreneurship",
+  "real-world-relevance": "real-world-math",
   "communication-writing": "creativity-anywhere",
-  "entrepreneurship": "planning-problem-solving",
+  "entrepreneurship": "real-world-math",
   "planning-problem-solving": "entrepreneurship",
   "start-here": "outdoor-learning",
 };
@@ -195,11 +147,14 @@ const crossSellMap: Record<string, string> = {
 const fallbackProducts = getFallbackProducts();
 
 interface ShopPageProps {
-  searchParams: Promise<{ category?: string; q?: string; sort?: string }>;
+  searchParams: Promise<{ category?: string; q?: string; sort?: string; page?: string }>;
 }
 
+const ITEMS_PER_PAGE = 9;
+
 export default async function ShopPage({ searchParams }: ShopPageProps) {
-  const { category, q, sort } = await searchParams;
+  const { category, q, sort, page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, parseInt(pageParam || '1', 10) || 1);
 
   // Fetch products from DB, fallback if unavailable
   let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
@@ -540,23 +495,39 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         {/* ════════════════════════════════════════
             SORTED ALL VIEW — flat grid when sorting
         ════════════════════════════════════════ */}
-        {isSortedAllView && (
+        {isSortedAllView && (() => {
+          const totalItems = filteredProducts.length;
+          const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+          const safePage = Math.min(currentPage, totalPages || 1);
+          const startIdx = (safePage - 1) * ITEMS_PER_PAGE;
+          const pagedProducts = filteredProducts.slice(startIdx, startIdx + ITEMS_PER_PAGE);
+
+          return (
           <>
             <div className="mb-6">
               <p className="text-sm text-gray-500">
-                {filteredProducts.length} packs &middot; sorted by{' '}
+                {totalItems} packs &middot; sorted by{' '}
                 <span className="font-medium text-gray-700">
                   {sort === 'price-asc' ? 'price (low to high)' :
                    sort === 'price-desc' ? 'price (high to low)' :
                    sort === 'newest' ? 'newest first' : sort}
                 </span>
+                {totalPages > 1 && (
+                  <> &middot; page {safePage} of {totalPages}</>
+                )}
               </p>
             </div>
             <section>
-              <ProductGrid products={filteredProducts} />
+              <ProductGrid products={pagedProducts} />
             </section>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <ShopPagination currentPage={safePage} totalPages={totalPages} sort={sort || ''} />
+            )}
           </>
-        )}
+          );
+        })()}
 
         {/* ════════════════════════════════════════
             CATEGORY VIEW

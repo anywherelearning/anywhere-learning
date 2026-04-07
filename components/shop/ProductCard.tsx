@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CategoryIcon } from './icons';
 import QuickAddButton from './QuickAddButton';
+import PurchasedBadge from './PurchasedBadge';
 import type { ShopProduct } from '@/lib/types';
 
 type ProductCardProps = ShopProduct;
@@ -58,7 +59,7 @@ export default function ProductCard({
   const savings = compareAtPriceCents ? compareAtPriceCents - priceCents : 0;
 
   return (
-    <div className="group block h-full">
+    <Link href={`/shop/${slug}`} className="group block h-full">
       <div className={`h-full flex flex-col bg-white rounded-2xl shadow-sm group-hover:shadow-xl group-hover:shadow-forest/[0.08] transition-all duration-300 group-hover:-translate-y-1 border border-gray-100/50 overflow-hidden border-l-[3px] ${categoryAccentColors[category] || 'border-l-[#588157]'}`}>
         {/* Product Image Area */}
         <div className={`relative aspect-[4/3] ${categoryBgClasses[category] || 'card-bg-nature'} flex items-center justify-center overflow-hidden ${imageUrl ? '' : 'p-6'}`}>
@@ -93,6 +94,9 @@ export default function ProductCard({
             </>
           )}
 
+          {/* Purchased badge */}
+          <PurchasedBadge slug={slug} />
+
           {/* Bundle badge */}
           {isBundle && (
             <div className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm z-10">
@@ -123,10 +127,8 @@ export default function ProductCard({
 
         {/* Card Content */}
         <div className="p-5 md:p-6 flex-1 flex flex-col">
-          <h3 className="font-semibold text-gray-900 text-lg mb-1.5 leading-snug">
-            <Link href={`/shop/${slug}`} className="hover:text-forest transition-colors">
-              {name}
-            </Link>
+          <h3 className="font-semibold text-gray-900 text-lg mb-1.5 leading-snug group-hover:text-forest transition-colors">
+            {name}
           </h3>
 
           <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">
@@ -153,12 +155,9 @@ export default function ProductCard({
               )}
             </div>
             <div className="flex items-center gap-2">
-              <Link
-                href={`/shop/${slug}`}
-                className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full hover:bg-forest hover:text-cream transition-all duration-300"
-              >
+              <span className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full group-hover:bg-forest group-hover:text-cream transition-all duration-300">
                 View pack &rarr;
-              </Link>
+              </span>
               {stripePriceId && (
                 <QuickAddButton
                   stripePriceId={stripePriceId}
@@ -174,6 +173,6 @@ export default function ProductCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

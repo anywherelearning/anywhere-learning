@@ -5,6 +5,7 @@ import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
+import { usePurchased } from './PurchasedContext';
 
 interface AddToCartButtonProps {
   stripePriceId: string;
@@ -27,10 +28,25 @@ export default function AddToCartButton({
 }: AddToCartButtonProps) {
   const { isNative } = useCapacitor();
   const { items, addItem, isInCart, openCart } = useCart();
+  const purchased = usePurchased();
   const [justAdded, setJustAdded] = useState(false);
 
   // Hide purchase buttons in native app (Apple compliance)
   if (isNative) return null;
+
+  // Already purchased — show confirmation instead of buy button
+  if (purchased.has(slug)) {
+    return (
+      <div className="block w-full bg-forest/10 text-forest font-semibold py-4 px-8 rounded-xl text-center text-lg">
+        <span className="flex items-center justify-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Already Purchased
+        </span>
+      </div>
+    );
+  }
 
   const alreadyInCart = isInCart(slug);
   const coveredBy = isCoveredByCart(items, slug);

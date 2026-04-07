@@ -3,11 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
-import ProductCard from '@/components/shop/ProductCard';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
-import BundleCarousel from '@/components/shop/BundleCarousel';
+import HomepageBundleCarousel from '@/components/home/HomepageBundleCarousel';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
@@ -25,7 +24,7 @@ const featuredProducts = [
     name: 'The Future-Ready Skills Map',
     slug: 'future-ready-skills-map',
     shortDescription:
-      'The 10 skills your kids actually need — mapped by age with activities, milestones, and sample weeks. Start here.',
+      'The 10 future-ready skills mapped by age, with activities, milestones, and sample weeks.',
     priceCents: 999,
     compareAtPriceCents: null,
     imageUrl: '/products/future-ready-skills-map.jpg',
@@ -33,6 +32,7 @@ const featuredProducts = [
     isBundle: false,
     activityCount: null,
     ageRange: 'Ages 0–14+',
+    isFreeWithBundle: true,
   },
   {
     name: 'Full Seasonal Bundle',
@@ -40,7 +40,7 @@ const featuredProducts = [
     shortDescription:
       'All 4 seasonal packs — 80 outdoor activities for every time of year.',
     priceCents: 4499,
-    compareAtPriceCents: 5996,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/four-seasons-bundle.jpg',
     category: 'bundle',
     isBundle: true,
@@ -53,7 +53,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 Creativity Anywhere activities — design, build, and create without limits.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-creativity.jpg',
     category: 'bundle',
     isBundle: true,
@@ -66,7 +66,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 Real-World Relevance challenges — life skills, financial literacy, and project-based learning.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-real-world.jpg',
     category: 'bundle',
     isBundle: true,
@@ -79,7 +79,7 @@ const featuredProducts = [
     shortDescription:
       'All 10 AI & Digital Literacy activities — responsible tech, critical thinking, and digital citizenship.',
     priceCents: 4499,
-    compareAtPriceCents: 5990,
+    compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
     category: 'bundle',
     isBundle: true,
@@ -87,29 +87,68 @@ const featuredProducts = [
     ageRange: 'Ages 9–14',
   },
   {
-    name: 'Nature Art Bundle',
-    slug: 'nature-art-bundle',
+    name: 'Real-World Math Mega Bundle',
+    slug: 'real-world-math-bundle',
     shortDescription:
-      'Land Art + Nature Crafts + Nature Journal — turn the outdoors into an art studio.',
-    priceCents: 1799,
-    compareAtPriceCents: 2397,
-    imageUrl: '/products/nature-art-bundle.jpg',
+      'All 10 Real-World Math guides — budgeting, planning, and problem-solving with real numbers.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-real-world-math.jpg',
     category: 'bundle',
     isBundle: true,
-    activityCount: null,
+    activityCount: 10,
     ageRange: 'Ages 6–14',
   },
   {
-    name: 'Outdoor Toolkit Bundle',
-    slug: 'outdoor-toolkit-bundle',
+    name: 'Communication & Writing Bundle',
+    slug: 'communication-writing-bundle',
     shortDescription:
-      'Nature Walk Cards + Missions + STEM Challenges + Choice Boards — your complete outdoor toolkit.',
-    priceCents: 2399,
-    compareAtPriceCents: 3196,
-    imageUrl: '/products/outdoor-toolkit-bundle.jpg',
+      'All 10 Communication & Writing guides — storytelling, debate, interviews, and more.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-communication-writing.jpg',
     category: 'bundle',
     isBundle: true,
-    activityCount: null,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Entrepreneurship Mega Bundle',
+    slug: 'entrepreneurship-bundle',
+    shortDescription:
+      'All 10 Entrepreneurship guides — brand building, pitching, marketing, and real business skills.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Planning & Problem-Solving Bundle',
+    slug: 'planning-problem-solving-bundle',
+    shortDescription:
+      'All 10 Planning & Problem-Solving guides — survival, decision-making, and thinking ahead.',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 10,
+    ageRange: 'Ages 6–14',
+  },
+  {
+    name: 'Outdoor & Nature Mega Bundle',
+    slug: 'outdoor-mega-bundle',
+    shortDescription:
+      'All 7 outdoor & nature packs — task cards, missions, STEM challenges, land art, and more.',
+    priceCents: 4199,
+    compareAtPriceCents: 5593,
+    imageUrl: '/products/mega-bundle-outdoor.jpg',
+    category: 'bundle',
+    isBundle: true,
+    activityCount: 7,
     ageRange: 'Ages 6–14',
   },
 ];
@@ -264,7 +303,7 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            <BundleCarousel products={featuredProducts} />
+            <HomepageBundleCarousel products={featuredProducts} />
 
             <ScrollReveal delay={400}>
               <div className="mt-14 text-center">

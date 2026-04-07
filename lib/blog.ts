@@ -177,7 +177,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Go anyway. Some of our best nature walks have been in the rain. Worms come out. Puddles form. The light changes. Everything smells different. Kids don\u2019t melt in the rain \u2014 and neither do you. Dress for it and embrace it.' },
       { type: 'paragraph', text: 'The Scandinavians have a saying: \u201cThere\u2019s no bad weather, only bad clothing.\u201d They\u2019re right. And the kids who grow up exploring in all conditions develop resilience that no indoor lesson can teach.' },
       { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle' },
-      { type: 'cta', text: 'Want 25 ready-to-use prompts for nature walks in any season? Our Nature pack has you covered.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Nature walks are just the beginning. Our free guide has 10 life skills your kids can practise this week — outdoors, in the kitchen, or on the go.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I teach science on a nature walk if I\u2019m not a science person?', answer: 'You don\u2019t need to know the answers. Just ask questions alongside your child: \u201cWhy do you think that happened?\u201d and \u201cLet\u2019s find out together.\u201d Modelling curiosity is more valuable than having all the facts.' },
         { question: 'What age is best for nature walk learning?', answer: 'Any age. Toddlers can observe and collect. Primary-age children can classify and compare. Older kids can hypothesise, research, and record. The walk stays the same \u2014 the depth of engagement grows with the child.' },
@@ -371,7 +371,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: '\u201cWhat about university?\u201d Homeschooled kids get into university all the time. Many universities actively recruit them because they\u2019re self-directed, curious, and used to managing their own learning. This is a solvable problem, but it\u2019s not a problem for today.' },
       { type: 'paragraph', text: '\u201cWhat if they fall behind?\u201d Behind whom? Behind the arbitrary grade-level benchmarks designed for an industrial-era factory model? Your kids are on their own timeline. Trust it.' },
       { type: 'bundle-callout', slug: 'seasonal-bundle' },
-      { type: 'cta', text: 'Our free guide walks you through the first 30 days of homeschooling, step by step.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Not sure what to do first? Our free guide gives you 10 real-world activities to try this week — no planning, no prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I start homeschooling with no experience?', answer: 'Start by doing nothing structured for the first week or two. Let your child decompress (this is called deschooling). Get a library card, go outside, and pay attention to what your child is naturally curious about. You don\u2019t need a teaching degree \u2014 you need presence and willingness to learn alongside them.' },
         { question: 'Do I need to buy a curriculum to homeschool?', answer: 'No. Many families homeschool successfully with no formal curriculum. Library books, activity prompts, nature exploration, and real-world experiences cover a remarkable amount of learning. You can always add structure later if you want it.' },
@@ -1684,7 +1684,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'I was a teacher for 15 years. I spent all that time inside the system. And when I finally stepped out of it with my own kids, the thing that surprised me most wasn\u2019t how hard it was. It was how much lighter we all felt. How quickly the stress faded. How fast my kids went from \u201cI\u2019m bored\u201d to \u201ccan we look this up?\u201d' },
       { type: 'paragraph', text: 'You don\u2019t need to wait for September. You don\u2019t need a perfect plan. You just need to start. The rest figures itself out along the way.' },
       { type: 'bundle-callout', slug: 'seasonal-bundle' },
-      { type: 'cta', text: 'Not sure where to begin? Our free guide walks you through the first 30 days \u2014 step by step, no overwhelm.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Not sure where to begin? Our free guide gives you 10 real-world activities you can start this week — no overwhelm, no prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [{ question: 'Can I legally start homeschooling mid-year?', answer: 'Yes. In most places, you can withdraw your child from school at any point during the year. The process varies by state or province \u2014 some require a letter of intent, others just need school notification. Search for your local homeschool withdrawal requirements to find the specific steps.' }, { question: 'Will my child fall behind if we start homeschooling mid-year?', answer: 'No. The idea of \u201cfalling behind\u201d is based on standardised timelines that don\u2019t account for individual children. Most homeschooled kids cover the same material in far less time because there\u2019s no waiting, no crowd management, and no busywork. Give them time to deschool first, and the learning will follow.' }, { question: 'What do I do about the work my child will miss at school?', answer: 'You don\u2019t need to replicate what the class is doing. Homeschooling isn\u2019t school-at-home. Your child will learn what they need to learn, just through different means and at their own pace. Let go of the idea that they need to cover the exact same material at the exact same time.' }, { question: 'How do I handle judgment from family and friends?', answer: 'Be honest and brief. \u201cWe\u2019ve decided to homeschool and we\u2019re excited about it\u201d is enough. You don\u2019t owe anyone a defence of your choice. Most skeptics come around once they see your kids thriving. In the meantime, find your people \u2014 online homeschool communities are incredibly supportive.' }, { question: 'Do I need to buy a curriculum right away?', answer: 'No. In fact, it\u2019s better to wait. Spend the first few weeks observing what your child is naturally drawn to. Visit the library, explore outdoors, cook together. Once you have a sense of their interests and your family\u2019s rhythm, you\u2019ll make much better decisions about whether you want a curriculum at all.' }] },
     ],
     relatedSlugs: ['new-to-homeschooling', 'five-stages-deschooling', 'curriculum-guilt-permission-slip'],
@@ -3185,7 +3185,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If you\'re in that place, I\'d gently suggest that homeschooling might not be the core issue. Couples counselling, honest conversations about values and parenting philosophy, and finding common ground on what you both want for your children — these are bigger than any schooling decision.' },
       { type: 'paragraph', text: 'What I do know: resentfully sending your kids to school you believe is wrong for them isn\'t good for anyone. And resentfully homeschooling against your partner\'s wishes isn\'t either. The goal is alignment — and that takes time, patience, and a willingness to meet in the middle.' },
       { type: 'tip', title: 'One More Thing', text: 'Connect your partner with another homeschool dad or mum who was initially skeptical. Hearing "I felt the same way, and here\'s what changed my mind" from a peer is more powerful than hearing it from you. Find that family at your local co-op or online community and arrange a casual meet-up.' },
-      { type: 'cta', text: 'Just starting to explore homeschooling? Our free guide walks you through the basics — no pressure, no commitment.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Just starting to explore homeschooling? Our free guide gives you 10 real-world activities to try together — no pressure, no commitment.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I convince my spouse to try homeschooling?', answer: 'Don\'t try to convince — try to understand. Ask what specifically worries them, then address those concerns directly. Propose a time-limited trial (one semester) with clear checkpoints. Let the kids\' growth be the evidence, not your arguments.' },
         { question: 'What if my partner thinks I\'m not qualified to homeschool?', answer: 'In most states, you don\'t need teaching qualifications to homeschool. But the concern is valid — address it by having a plan, connecting with experienced homeschool families, and showing you\'re taking it seriously. A curriculum or structure (even a loose one) can provide reassurance.' },
@@ -3212,7 +3212,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Kids walking through a colourful fruit market in Central America — real-world learning abroad',
     content: [
       { type: 'summary', text: 'Homeschooling is education based at home instead of school, with parents directing learning using curricula, unschooling, or hybrid approaches. Worldschooling uses travel and real-world experiences as the primary curriculum, learning through places, cultures, and daily life wherever the family happens to be. Many families blend both approaches.' },
-      { type: 'paragraph', text: 'When we first started educating our kids outside of school, I called it homeschooling. Then we moved abroad and started calling it worldschooling. Then I realised we were doing the same thing — just in different locations. But the terms aren\'t interchangeable, and understanding the distinction helps you figure out what works for your family.' },
+      { type: 'paragraph', text: 'When we first started educating our kids outside of school, I called it homeschooling. Then we travelled abroad and started calling it worldschooling. Then I realised we were doing the same thing — just in different locations. But the terms aren\'t interchangeable, and understanding the distinction helps you figure out what works for your family.' },
       { type: 'heading', level: 2, text: 'The core difference' },
       { type: 'paragraph', text: 'The simplest way to think about it:' },
       { type: 'list', ordered: false, items: [
@@ -3512,7 +3512,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'tip', title: 'Quick Decision Guide', text: 'Hate planning? Start with #1 (real-world). Love books? Try #3 (Charlotte Mason). Multiple ages? Go with #2 (unit studies). Want maximum flexibility? #4 (eclectic). Trust your kid completely? #5 (unschooling). Need independence? #6 (online). Want rigour? #7 (classical).' },
       { type: 'bundle-callout', slug: 'real-world-math-bundle' },
-      { type: 'cta', text: 'Not sure where to start? Our free guide gives you a no-pressure introduction to learning without curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Not sure where to start? Our free guide gives you 10 real-world activities to try this week — no curriculum needed.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Do I need a teaching degree to homeschool?', answer: 'No. In most US states, there is no educational requirement to homeschool your children. Research consistently shows that parental education level has little impact on homeschool outcomes — engagement and consistency matter far more than credentials.' },
         { question: 'What is the easiest homeschool method for beginners?', answer: 'Real-world/experiential learning and unit studies are the most beginner-friendly because they require no formal teaching skills and use everyday life as the curriculum. Many families start with one of these and add elements of other approaches over time.' },
@@ -3545,7 +3545,9 @@ export function getPostsByCategory(category: BlogCategory): BlogPost[] {
 }
 
 export function getFeaturedPost(): BlogPost {
-  return getAllPosts()[0];
+  const all = getAllPosts();
+  // Pin the best entry-point post; fall back to newest
+  return all.find((p) => p.slug === 'new-to-homeschooling') ?? all[0];
 }
 
 export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
