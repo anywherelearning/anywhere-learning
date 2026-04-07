@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
   getAllResources,
@@ -263,7 +264,16 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
               background: resource.heroImage ? undefined : `linear-gradient(160deg, ${topicMeta.color}12, ${topicMeta.color}30, ${topicMeta.color}08)`,
             }}
           >
-            {!resource.heroImage && (
+            {resource.heroImage ? (
+              <Image
+                src={resource.heroImage}
+                alt={resource.heroImageAlt || resource.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+                priority
+              />
+            ) : (
               <>
                 <div
                   className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"
