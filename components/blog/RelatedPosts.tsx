@@ -25,6 +25,8 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
               publishedAt={post.publishedAt}
               readTimeMinutes={post.readTimeMinutes}
               author={post.author}
+              heroImage={post.heroImage}
+              heroImageAlt={post.heroImageAlt}
             />
           </ScrollReveal>
         ))}
