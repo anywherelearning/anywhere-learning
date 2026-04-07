@@ -7,11 +7,6 @@ import { eq } from 'drizzle-orm';
  * Maps product slugs to their Vercel Blob file names.
  * Bundles are excluded — they don't have their own PDFs.
  * The lead magnet PDF is also excluded (not a product).
- *
- * Five "Real-world math" blob files (backyard-campout-planner,
- * farmers-market-challenge, garage-sale-math, party-planner-math,
- * road-trip-calculator) exist in Blob storage but don't have
- * corresponding product slugs in the database — they are skipped.
  */
 
 const BLOB_BASE_URL = process.env.BLOB_BASE_URL;
@@ -42,7 +37,7 @@ const blobMap: Record<string, string> = {
   'rube-goldberg-machine': 'Creativity anywhere Build a Rube Goldberg Machine.pdf',
   'survival-base': 'Creativity anywhere Build a Survival Base for an Imaginary Expedition.pdf',
   'imaginary-world': 'Creativity anywhere Build an imaginary world.pdf',
-  // 'creature-habitat' — PDF not yet uploaded to Blob storage
+  'creature-habitat': 'Creativity Anywhere - Create a Creature + Build Its Habitat.pdf',
   'theme-park': 'Creativity anywhere Create a Theme Park or Adventure Course.pdf',
   'mini-movie': 'Creativity anywhere Create a mini movie,  stop-motion or radio drama.pdf',
   'invent-a-sport': 'Creativity anywhere Invent a new sport.pdf',
@@ -73,20 +68,59 @@ const blobMap: Record<string, string> = {
   'privacy-footprint': 'AI + Digital Literacy - PRIVACY & DIGITAL FOOTPRINT MAP.pdf',
   'prompt-like-a-coach': 'AI + Digital Literacy - PROMPT LIKE A COACH.pdf',
 
+  // ── Real-World Math (dedicated category) ──
+  'backyard-campout-planner': 'Real-world math - Backyard Campout Planner.pdf',
+  'clothing-swap-thrift-math': 'Real-world math - Clothing Swap & Thrift Math.pdf',
+  'family-electricity-audit': 'Real-world math - Family Electricity Audit.pdf',
+  'farmers-market-challenge': 'Real-world math - Farmers Market Challenge.pdf',
+  'garage-sale-math': 'Real-world math - Garage sale math.pdf',
+  'garden-plot-planner': 'Real-world math - Garden Plot Planner.pdf',
+  'party-planner-math': 'Real-world math - Party Planner Math.pdf',
+  'road-trip-calculator': 'Real-world math - Road trip calculator.pdf',
+  'savings-goal-tracker': 'Real-world math - Savings Goal Tracker.pdf',
+  'sports-stats-lab': 'Real-world math - Sports Stats Lab.pdf',
+
+  // ── Communication & Writing (dedicated category) ──
+  'adventure-story-map': 'Communication & Writing - Adventure Story Map.pdf',
+  'community-tour-guide': 'Communication & Writing - Community Tour Guide.pdf',
+  'directions-challenge': 'Communication & Writing - Directions Challenge.pdf',
+  'family-debate-night': 'Communication & Writing - Family Debate Night.pdf',
+  'family-recipe-book': 'Communication & Writing - Family Recipe Book.pdf',
+  'market-stall-pitch': 'Communication & Writing - Market Stall Pitch.pdf',
+  'mini-magazine-creator': 'Communication & Writing - Mini Magazine Creator.pdf',
+  'my-review-column': 'Communication & Writing - My Review Column.pdf',
+  'neighbourhood-interview': 'Communication & Writing - Neighbourhood Interview Project.pdf',
+  'trail-guide-creator': 'Communication & Writing - Trail Guide Creator.pdf',
+
+  // ── Entrepreneurship (dedicated category) ──
+  'brand-builder': 'Entrepreneurship - Brand builder.pdf',
+  'business-failure-lab': 'Entrepreneurship - Business Failure Lab.pdf',
+  'community-service-business': 'Entrepreneurship - Community Service Business.pdf',
+  'customer-discovery': 'Entrepreneurship - Customer Discovery Challenge.pdf',
+  'investor-pitch': 'Entrepreneurship - Investor Pitch Portfolio.pdf',
+  'marketing-campaign': 'Entrepreneurship - Marketing Campaign Creator.pdf',
+  'pricing-experiment': 'Entrepreneurship - Pricing Experiment.pdf',
+  'product-design-lab': 'Entrepreneurship - Product Design Lab.pdf',
+  'supply-chain-detective': 'Entrepreneurship - Supply Chain Detective.pdf',
+  'shark-tank-pitch': 'Entrepreneurship - The Shark Tank Pitch.pdf',
+
+  // ── Planning & Problem-Solving (dedicated category) ──
+  'emergency-ready': 'Planning & Problem-Solving Emergency Ready Challenge.pdf',
+  'everyday-redesign': 'Planning & Problem-Solving Everyday Redesign Challenge.pdf',
+  'fix-it-detective': 'Planning & Problem-Solving Fix-it detective.pdf',
+  'neighbourhood-problem-spotter': 'Planning & Problem-Solving Neighbourhood Problem Spotter.pdf',
+  'outdoor-survival-planner': 'Planning & Problem-Solving Outdoor survival planner.pdf',
+  'pack-like-a-pro': 'Planning & Problem-Solving Pack Like a Pro.pdf',
+  'scavenger-hunt-designer': 'Planning & Problem-Solving Scavenger Hunt Designer.pdf',
+  'swap-day-challenge': 'Planning & Problem-Solving The Swap Day Challenge.pdf',
+  'what-if-scenario-lab': 'Planning & Problem-Solving The What If Scenario Lab.pdf',
+  'decision-lab': 'Planning & Problem-Solving What Would You Do Decision Lab.pdf',
+
   // ── Standalone Guides ──
   'future-ready-skills-map': 'The future-ready skills map.pdf',
   'my-small-business-project': 'My small business project.pdf',
   'time-capsule': 'Time Capsule.pdf',
 };
-
-// Real-world math blob files that exist in storage but have no
-// corresponding product slug in the database:
-//   - Real-world math - Backyard Campout Planner.pdf
-//   - Real-world math - Farmers Market Challenge.pdf
-//   - Real-world math - Garage sale math.pdf
-//   - Real-world math - Party Planner Math.pdf
-//   - Real-world math - Road trip calculator.pdf
-// These are intentionally excluded.
 
 async function updateBlobUrls() {
   if (!process.env.DATABASE_URL) {

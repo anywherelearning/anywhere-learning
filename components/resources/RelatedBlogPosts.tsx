@@ -107,6 +107,8 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
                     publishedAt={post!.publishedAt}
                     readTimeMinutes={post!.readTimeMinutes}
                     author={post!.author}
+                    heroImage={post!.heroImage}
+                    heroImageAlt={post!.heroImageAlt}
                   />
                 </ScrollReveal>
               </div>
