@@ -987,7 +987,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 18,
     author: amelie,
     heroImage: '/images/guide-creativity-hero.jpeg',
-    heroImageAlt: 'Zach and Julia proudly showing off a log cabin they built at an outdoor workshop',
+    heroImageAlt: 'Zach programming a LEGO robot with a tablet at a maker workshop',
     content: [
       {
         type: 'summary',
