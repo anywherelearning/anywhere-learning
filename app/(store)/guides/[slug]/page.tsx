@@ -259,7 +259,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
       <div className="mx-auto max-w-5xl px-5 sm:px-8 mb-12 md:mb-16">
         <ScrollReveal delay={100}>
           <div
-            className="relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
+            className="relative aspect-[16/9] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             style={{
               background: resource.heroImage ? undefined : `linear-gradient(160deg, ${topicMeta.color}12, ${topicMeta.color}30, ${topicMeta.color}08)`,
             }}
@@ -270,6 +270,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
                 alt={resource.heroImageAlt || resource.title}
                 fill
                 className="object-cover"
+                style={{ objectPosition: resource.heroImagePosition || 'center' }}
                 sizes="(max-width: 768px) 100vw, 960px"
                 priority
               />
