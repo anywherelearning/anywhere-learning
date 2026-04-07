@@ -16,6 +16,7 @@ export interface ResourceAuthor {
   name: string;
   bio: string;
   avatarColor: string;
+  avatarImage?: string;
 }
 
 export interface ResourcePage {
@@ -61,6 +62,7 @@ const amelie: ResourceAuthor = {
   name: 'Amelie',
   bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now worldschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
   avatarColor: '#d4a373',
+  avatarImage: '/images/amelie-avatar.jpeg',
 };
 
 const resources: ResourcePage[] = [
