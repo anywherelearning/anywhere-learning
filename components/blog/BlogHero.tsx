@@ -65,12 +65,22 @@ export default function BlogHero({ post }: BlogHeroProps) {
         </p>
         <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
           <div className="flex items-center gap-2">
-            <div
-              className="w-7 h-7 rounded-full flex items-center justify-center text-cream text-xs font-semibold"
-              style={{ backgroundColor: post.author.avatarColor }}
-            >
-              {post.author.name.charAt(0)}
-            </div>
+            {post.author.avatarImage ? (
+              <Image
+                src={post.author.avatarImage}
+                alt={post.author.name}
+                width={28}
+                height={28}
+                className="w-7 h-7 rounded-full object-cover"
+              />
+            ) : (
+              <div
+                className="w-7 h-7 rounded-full flex items-center justify-center text-cream text-xs font-semibold"
+                style={{ backgroundColor: post.author.avatarColor }}
+              >
+                {post.author.name.charAt(0)}
+              </div>
+            )}
             <span>{post.author.name}</span>
           </div>
           <span>{formatDate(post.publishedAt)}</span>

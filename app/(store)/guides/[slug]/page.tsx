@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
   getAllResources,
@@ -239,12 +240,22 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
             </p>
 
             <div className="flex items-center gap-4">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
-                style={{ backgroundColor: resource.author.avatarColor }}
-              >
-                {resource.author.name.charAt(0)}
-              </div>
+              {resource.author.avatarImage ? (
+                <Image
+                  src={resource.author.avatarImage}
+                  alt={resource.author.name}
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-white"
+                />
+              ) : (
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
+                  style={{ backgroundColor: resource.author.avatarColor }}
+                >
+                  {resource.author.name.charAt(0)}
+                </div>
+              )}
               <div className="flex flex-col">
                 <span className="text-sm font-medium text-gray-700">{resource.author.name}</span>
                 <span className="text-[13px] text-gray-400">{formatDate(resource.publishedAt)}</span>
@@ -258,12 +269,22 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
       <div className="mx-auto max-w-5xl px-5 sm:px-8 mb-12 md:mb-16">
         <ScrollReveal delay={100}>
           <div
-            className="relative aspect-[2.2/1] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
+            className="relative aspect-[16/9] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             style={{
               background: resource.heroImage ? undefined : `linear-gradient(160deg, ${topicMeta.color}12, ${topicMeta.color}30, ${topicMeta.color}08)`,
             }}
           >
-            {!resource.heroImage && (
+            {resource.heroImage ? (
+              <Image
+                src={resource.heroImage}
+                alt={resource.heroImageAlt || resource.title}
+                fill
+                className="object-cover"
+                style={{ objectPosition: resource.heroImagePosition || 'center' }}
+                sizes="(max-width: 768px) 100vw, 960px"
+                priority
+              />
+            ) : (
               <>
                 <div
                   className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"

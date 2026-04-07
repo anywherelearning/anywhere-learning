@@ -18,6 +18,7 @@ export interface BlogAuthor {
   name: string;
   bio: string;
   avatarColor: string;
+  avatarImage?: string;
 }
 
 export interface BlogPost {
@@ -64,8 +65,9 @@ export const blogProductDefaults: Record<BlogCategory, { product: string; bundle
 
 const amelie: BlogAuthor = {
   name: 'Amelie',
-  bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now worldschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
+  bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now homeschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
   avatarColor: '#d4a373',
+  avatarImage: '/images/amelie-avatar.jpeg',
 };
 
 const posts: BlogPost[] = [
@@ -2429,7 +2431,8 @@ const posts: BlogPost[] = [
     keywords: ['board game design kids', 'homeschool game design', 'create board game learning', 'game design education', 'STEAM activities kids', 'design thinking kids'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImageAlt: 'Children drawing a colourful board game layout on cardboard at a kitchen table',
+    heroImage: '/images/board-game-design-hero.jpeg',
+    heroImageAlt: 'Julia and Zach playing a board game together',
     content: [
       { type: 'summary', text: 'Board game design is a powerful cross-curricular learning activity that combines maths (probability, scoring systems, resource management), writing (rules, storytelling, flavour text), logic (game balance, strategy), and design thinking (prototyping, playtesting, iterating). Kids as young as 5 can design simple games, while older children can tackle complex mechanics that rival published games.' },
       { type: 'paragraph', text: 'Picture this: a rainy afternoon, no screens, a piece of cardboard, some markers, and a handful of dried beans. Two hours later, a kid has a fully functioning board game \u2014 complete with themed cards, a scoring system, and a penalty mechanic that sends you back three spaces.' },
@@ -2514,7 +2517,8 @@ const posts: BlogPost[] = [
     keywords: ['invent a sport kids', 'kids create games', 'homeschool physical education', 'game design PE', 'creative play learning', 'outdoor games kids create'],
     readTimeMinutes: 9,
     author: amelie,
-    heroImageAlt: 'Kids playing a made-up game with cones and a ball in a grassy backyard',
+    heroImage: '/images/invent-a-sport-hero.jpeg',
+    heroImageAlt: 'Julia, Zach, and a friend playing Get Blocked on the trampoline',
     content: [
       { type: 'summary', text: 'Inventing a sport is a rich learning activity that combines physical movement with rule-making, negotiation, fairness reasoning, and iterative design. When children create their own games \u2014 defining boundaries, scoring systems, and rules of play \u2014 they practise the same design thinking and social problem-solving skills used by game designers, legislators, and engineers.' },
       { type: 'paragraph', text: 'My son and his friends invented a trampoline game called \u201cGet Blocked\u201d \u2014 played with mini basketballs, with rules they made up on the spot. The scoring system is incomprehensible to adults. Someone inevitably declares themselves the referee while also playing on both teams simultaneously. It is chaos.' },

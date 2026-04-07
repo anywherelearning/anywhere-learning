@@ -16,6 +16,7 @@ export interface ResourceAuthor {
   name: string;
   bio: string;
   avatarColor: string;
+  avatarImage?: string;
 }
 
 export interface ResourcePage {
@@ -30,6 +31,7 @@ export interface ResourcePage {
   author: ResourceAuthor;
   heroImage?: string;
   heroImageAlt: string;
+  heroImagePosition?: string;
   content: ContentBlock[];
   /** Blog post slugs this pillar links to (editorial, cross-category) */
   relatedBlogSlugs: string[];
@@ -58,8 +60,9 @@ export const resourceProductDefaults: Record<ResourceTopic, { product: string; b
 
 const amelie: ResourceAuthor = {
   name: 'Amelie',
-  bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now worldschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
+  bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now homeschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
   avatarColor: '#d4a373',
+  avatarImage: '/images/amelie-avatar.jpeg',
 };
 
 const resources: ResourcePage[] = [
@@ -77,7 +80,8 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 22,
     author: amelie,
-    heroImageAlt: 'Kids learning real-world skills through hands-on activities',
+    heroImage: '/images/guide-real-world-hero.jpeg',
+    heroImageAlt: 'Zach learning to use a mitre saw with dad in the workshop',
     content: [
       {
         type: 'summary',
@@ -345,7 +349,8 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 20,
     author: amelie,
-    heroImageAlt: 'Children exploring nature and learning outdoors',
+    heroImage: '/images/guide-nature-hero.jpeg',
+    heroImageAlt: 'Family hiking a mountain ridge with panoramic views on a sunny day',
     content: [
       {
         type: 'summary',
@@ -679,7 +684,9 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 25,
     author: amelie,
-    heroImageAlt: 'Family learning while traveling the world together',
+    heroImage: '/images/guide-worldschooling-hero.jpeg',
+    heroImageAlt: 'Julia standing in front of a traditional stilted hut in an indigenous village in Panama',
+    heroImagePosition: 'center 70%',
     content: [
       {
         type: 'summary',
@@ -979,7 +986,8 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 18,
     author: amelie,
-    heroImageAlt: 'Kids building creative projects with hands-on materials',
+    heroImage: '/images/guide-creativity-hero.jpeg',
+    heroImageAlt: 'Zach programming a LEGO robot with a tablet at a maker workshop',
     content: [
       {
         type: 'summary',
@@ -1271,7 +1279,8 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 20,
     author: amelie,
-    heroImageAlt: 'Child learning about AI and digital literacy',
+    heroImage: '/images/guide-ai-digital-hero.jpeg',
+    heroImageAlt: 'Zach and Julia working on laptops at a beachside terrace in El Salvador',
     content: [
       {
         type: 'summary',
@@ -1571,7 +1580,9 @@ const resources: ResourcePage[] = [
     keywords: ['how to start homeschooling', 'homeschool burnout', 'deschooling', 'homeschool socialization', 'homeschool methods', 'new to homeschooling', 'homeschool guilt'],
     readTimeMinutes: 18,
     author: amelie,
-    heroImageAlt: 'Parent and child walking together on a path through trees with sunlight filtering through',
+    heroImage: '/images/guide-homeschool-journey-hero.jpeg',
+    heroImageAlt: 'Parent and child walking hand in hand down a snowy forest path',
+    heroImagePosition: 'center 75%',
     content: [
       { type: 'summary', text: 'The homeschool journey has predictable phases: the leap of faith, the deschooling transition, finding your method, navigating doubt and criticism, and eventually settling into a rhythm that works for your family. Understanding these phases — and knowing they are normal — is the single most reassuring thing a new homeschool parent can hear.' },
       { type: 'paragraph', text: 'Every homeschool family has a story that starts the same way: something wasn\'t working. Maybe your child was miserable. Maybe the system was failing them. Maybe you just knew, deep down, that there had to be a better way. Whatever brought you here — you\'re not alone, and the path ahead is more well-trodden than you think.' },
