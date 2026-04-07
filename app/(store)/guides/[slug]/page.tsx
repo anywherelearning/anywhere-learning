@@ -240,12 +240,22 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
             </p>
 
             <div className="flex items-center gap-4">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
-                style={{ backgroundColor: resource.author.avatarColor }}
-              >
-                {resource.author.name.charAt(0)}
-              </div>
+              {resource.author.avatarImage ? (
+                <Image
+                  src={resource.author.avatarImage}
+                  alt={resource.author.name}
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-white"
+                />
+              ) : (
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
+                  style={{ backgroundColor: resource.author.avatarColor }}
+                >
+                  {resource.author.name.charAt(0)}
+                </div>
+              )}
               <div className="flex flex-col">
                 <span className="text-sm font-medium text-gray-700">{resource.author.name}</span>
                 <span className="text-[13px] text-gray-400">{formatDate(resource.publishedAt)}</span>
