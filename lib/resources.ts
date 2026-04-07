@@ -30,6 +30,7 @@ export interface ResourcePage {
   author: ResourceAuthor;
   heroImage?: string;
   heroImageAlt: string;
+  heroImagePosition?: string;
   content: ContentBlock[];
   /** Blog post slugs this pillar links to (editorial, cross-category) */
   relatedBlogSlugs: string[];
@@ -78,7 +79,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 22,
     author: amelie,
     heroImage: '/images/guide-real-world-hero.jpeg',
-    heroImageAlt: 'Zach and dad cooking burgers together at the kitchen counter',
+    heroImageAlt: 'Julia smiling behind bags of popcorn she made and labelled for her small business',
     content: [
       {
         type: 'summary',
@@ -682,7 +683,8 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 25,
     author: amelie,
     heroImage: '/images/guide-worldschooling-hero.jpeg',
-    heroImageAlt: 'Kids walking through a colourful fruit market in Central America',
+    heroImageAlt: 'Julia standing in front of a traditional stilted hut in an indigenous village in Panama',
+    heroImagePosition: 'center 70%',
     content: [
       {
         type: 'summary',
@@ -984,6 +986,7 @@ const resources: ResourcePage[] = [
     author: amelie,
     heroImage: '/images/guide-creativity-hero.jpeg',
     heroImageAlt: 'Zach and Julia wearing giant cardboard Crocs costumes they built themselves',
+    heroImagePosition: 'center 25%',
     content: [
       {
         type: 'summary',
@@ -1276,7 +1279,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 20,
     author: amelie,
     heroImage: '/images/guide-ai-digital-hero.jpeg',
-    heroImageAlt: 'Zach and Julia at the Biomuseo science museum in Panama City',
+    heroImageAlt: 'Zach and Julia working on laptops at a beachside terrace in El Salvador',
     content: [
       {
         type: 'summary',
@@ -1578,6 +1581,7 @@ const resources: ResourcePage[] = [
     author: amelie,
     heroImage: '/images/guide-homeschool-journey-hero.jpeg',
     heroImageAlt: 'Parent and child walking hand in hand down a snowy forest path',
+    heroImagePosition: 'center 75%',
     content: [
       { type: 'summary', text: 'The homeschool journey has predictable phases: the leap of faith, the deschooling transition, finding your method, navigating doubt and criticism, and eventually settling into a rhythm that works for your family. Understanding these phases — and knowing they are normal — is the single most reassuring thing a new homeschool parent can hear.' },
       { type: 'paragraph', text: 'Every homeschool family has a story that starts the same way: something wasn\'t working. Maybe your child was miserable. Maybe the system was failing them. Maybe you just knew, deep down, that there had to be a better way. Whatever brought you here — you\'re not alone, and the path ahead is more well-trodden than you think.' },
