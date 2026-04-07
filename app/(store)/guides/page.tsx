@@ -91,6 +91,9 @@ export default function ResourcesPage() {
                   topic={resource.topic}
                   readTimeMinutes={resource.readTimeMinutes}
                   relatedCount={resource.relatedBlogSlugs.length}
+                  heroImage={resource.heroImage}
+                  heroImageAlt={resource.heroImageAlt}
+                  heroImagePosition={resource.heroImagePosition}
                 />
               </ScrollReveal>
             ))}
