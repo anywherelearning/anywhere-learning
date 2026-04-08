@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
-import { isCoveredByCart } from '@/lib/cart';
+import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
 import { usePurchased } from './PurchasedContext';
 
@@ -28,7 +28,7 @@ export default function StickyMobileBuy({
 }: StickyMobileBuyProps) {
   const { isNative } = useCapacitor();
   const [visible, setVisible] = useState(false);
-  const { items, addItem, isInCart, openCart } = useCart();
+  const { items, addItem, isInCart, openCart, swapBundle } = useCart();
   const [justAdded, setJustAdded] = useState(false);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function StickyMobileBuy({
       return;
     }
 
-    const added = addItem({
+    const bundleItem = {
       slug,
       name: productName,
       priceCents,
@@ -68,7 +68,23 @@ export default function StickyMobileBuy({
       category,
       isBundle,
       imageUrl: imageUrl ?? null,
-    });
+    };
+
+    // When adding a bundle, auto-remove individual items it covers
+    if (isBundle) {
+      const childSlugs = BUNDLE_CONTENTS[slug] || [];
+      const overlapping = items
+        .filter((i) => childSlugs.includes(i.slug))
+        .map((i) => i.slug);
+      if (overlapping.length > 0) {
+        swapBundle(overlapping, bundleItem);
+        setJustAdded(true);
+        setTimeout(() => setJustAdded(false), 1500);
+        return;
+      }
+    }
+
+    const added = addItem(bundleItem);
 
     if (added) {
       setJustAdded(true);

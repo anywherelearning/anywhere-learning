@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { useAuth, UserButton } from '@clerk/nextjs';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -18,9 +18,15 @@ export default function AuthNav({ onLinkClick }: { onLinkClick?: () => void }) {
     );
   }
 
-  return (
-    <>
-      <SignedIn>
+  return <AuthNavInner onLinkClick={onLinkClick} />;
+}
+
+function AuthNavInner({ onLinkClick }: { onLinkClick?: () => void }) {
+  const { isSignedIn } = useAuth();
+
+  if (isSignedIn) {
+    return (
+      <>
         <Link
           href="/account"
           onClick={onLinkClick}
@@ -28,17 +34,18 @@ export default function AuthNav({ onLinkClick }: { onLinkClick?: () => void }) {
         >
           My Account
         </Link>
-        <UserButton afterSignOutUrl="/" />
-      </SignedIn>
-      <SignedOut>
-        <Link
-          href="/sign-in"
-          onClick={onLinkClick}
-          className="text-sm font-medium text-gray-700 transition-colors hover:text-forest"
-        >
-          Sign In
-        </Link>
-      </SignedOut>
-    </>
+        <UserButton />
+      </>
+    );
+  }
+
+  return (
+    <Link
+      href="/sign-in"
+      onClick={onLinkClick}
+      className="text-sm font-medium text-gray-700 transition-colors hover:text-forest"
+    >
+      Sign In
+    </Link>
   );
 }

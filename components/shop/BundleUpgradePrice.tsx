@@ -14,10 +14,12 @@ interface Props {
   slug: string;
   stripePriceId: string;
   fullPriceCents: number;
+  children?: React.ReactNode;
 }
 
-export default function BundleUpgradePrice({ slug, stripePriceId, fullPriceCents }: Props) {
+export default function BundleUpgradePrice({ slug, stripePriceId, fullPriceCents, children }: Props) {
   const [data, setData] = useState<UpgradeData | null>(null);
+  const [checked, setChecked] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,11 +30,18 @@ export default function BundleUpgradePrice({ slug, stripePriceId, fullPriceCents
         if (d.upgradePrice !== null && d.upgradePrice !== undefined) {
           setData(d);
         }
+        setChecked(true);
       })
-      .catch(() => {});
+      .catch(() => {
+        setChecked(true);
+      });
   }, [slug]);
 
-  if (!data || data.upgradePrice === null) return null;
+  // Still loading - show regular buy section
+  if (!checked) return <>{children}</>;
+
+  // No upgrade available - show regular buy section
+  if (!data || data.upgradePrice === null) return <>{children}</>;
 
   async function handleUpgrade() {
     setLoading(true);
@@ -54,7 +63,7 @@ export default function BundleUpgradePrice({ slug, stripePriceId, fullPriceCents
         setLoading(false);
       }
     } catch {
-      setError('Couldn\u2019t connect. Check your internet and try again.');
+      setError('Could not connect. Check your internet and try again.');
       setLoading(false);
     }
   }

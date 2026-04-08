@@ -29,47 +29,47 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
   "ai-literacy": {
     title: "AI & Digital Literacy Packs",
     description:
-      "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9\u201314.",
+      "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9-14.",
   },
   "creativity-anywhere": {
     title: "Creativity Anywhere Activity Packs",
     description:
-      "Open-ended projects that build design thinking and creative confidence. Ages 6\u201314.",
+      "Open-ended projects that build design thinking and creative confidence. Ages 6-14.",
   },
   "communication-writing": {
     title: "Communication & Writing Packs",
     description:
-      "Real-world writing and communication skills for kids who have something to say. Ages 9\u201314.",
+      "Real-world writing and communication skills for kids who have something to say. Ages 9-14.",
   },
   "outdoor-learning": {
     title: "Outdoor Learning Activity Packs",
     description:
-      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6\u201314.",
+      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6-14.",
   },
   "real-world-math": {
     title: "Real-World Math Packs",
     description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6\u201314.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6-14.",
   },
   "entrepreneurship": {
     title: "Entrepreneurship Activity Packs",
     description:
-      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses. Ages 9\u201314.",
+      "Plan, launch, and run real projects - from lemonade stands to micro-businesses. Ages 9-14.",
   },
   "planning-problem-solving": {
     title: "Planning & Problem-Solving Packs",
     description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9\u201314.",
+      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9-14.",
   },
   "start-here": {
     title: "Start Here Packs",
     description:
-      "The foundation for your learning journey \u2014 start with the big picture.",
+      "The foundation for your learning journey - start with the big picture.",
   },
   bundle: {
     title: "Activity Pack Bundles",
     description:
-      "Save more with curated bundles \u2014 the best value for families who want it all.",
+      "Save more with curated bundles - the best value for families who want it all.",
   },
 };
 
@@ -94,8 +94,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: meta
-        ? `${meta.title} \u2014 Anywhere Learning`
-        : "Shop Activity Packs \u2014 Anywhere Learning",
+        ? `${meta.title} | Anywhere Learning`
+        : "Shop Activity Packs | Anywhere Learning",
       description:
         meta?.description ||
         "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
@@ -223,9 +223,11 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     : [];
 
   // Category view: relevant bundle + cross-sell products
+  // Always search fallbackProducts for the bundle since category-filtered DB
+  // queries only return products in that category, not bundles (category "bundle").
   const categoryBundle =
     isCategoryView && category && category !== "bundle"
-      ? (allProducts.length > 0 ? products : fallbackProducts).find(
+      ? fallbackProducts.find(
           (p) => p.slug === categoryBundleMap[category] && p.isBundle,
         )
       : null;
@@ -233,7 +235,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const crossSellCategory =
     isCategoryView && category ? crossSellMap[category] : null;
   const crossSellProducts = crossSellCategory
-    ? (allProducts.length > 0 ? products : fallbackProducts)
+    ? fallbackProducts
         .filter((p) => p.category === crossSellCategory && !p.isBundle)
         .slice(0, 3)
     : [];
@@ -363,7 +365,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 {[
                   "No Prep Required",
                   "Download & Use Instantly",
-                  "Ages 6\u201314",
+                  "Ages 6-14",
                   "48-hour refund guarantee",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-2">

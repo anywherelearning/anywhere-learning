@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { SignedIn, SignedOut } from '@clerk/nextjs';
+import { useAuth } from '@clerk/nextjs';
 import Link from 'next/link';
 import StarRating from './StarRating';
 
@@ -248,14 +248,15 @@ export default function ReviewFormWrapper(props: ReviewFormWrapperProps) {
     return <SignInPrompt />;
   }
 
-  return (
-    <>
-      <SignedOut>
-        <SignInPrompt />
-      </SignedOut>
-      <SignedIn>
-        <AuthenticatedReviewSection {...props} />
-      </SignedIn>
-    </>
-  );
+  return <ReviewFormInner {...props} />;
+}
+
+function ReviewFormInner(props: ReviewFormWrapperProps) {
+  const { isSignedIn } = useAuth();
+
+  if (!isSignedIn) {
+    return <SignInPrompt />;
+  }
+
+  return <AuthenticatedReviewSection {...props} />;
 }

@@ -31,7 +31,36 @@ export default function CartDrawer() {
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
   const [hasExistingAccount, setHasExistingAccount] = useState(false);
   const [checkedEmail, setCheckedEmail] = useState('');
+  const [upgradeCredits, setUpgradeCredits] = useState<Record<string, { upgradePrice: number; totalCredit: number; ownedCount: number; totalCount: number }>>({});
   const focusTrapRef = useFocusTrap(isCartOpen);
+
+  // Fetch upgrade prices for any bundles in the cart
+  useEffect(() => {
+    if (!isCartOpen) return;
+    const bundleItems = items.filter((i) => i.isBundle);
+    if (bundleItems.length === 0) {
+      setUpgradeCredits({});
+      return;
+    }
+    let cancelled = false;
+    async function fetchUpgrades() {
+      const results: typeof upgradeCredits = {};
+      await Promise.all(
+        bundleItems.map(async (bundle) => {
+          try {
+            const res = await fetch(`/api/products/upgrade-price?slug=${encodeURIComponent(bundle.slug)}`);
+            const data = await res.json();
+            if (!cancelled && data.upgradePrice !== null && data.upgradePrice !== undefined) {
+              results[bundle.slug] = data;
+            }
+          } catch { /* ignore */ }
+        }),
+      );
+      if (!cancelled) setUpgradeCredits(results);
+    }
+    fetchUpgrades();
+    return () => { cancelled = true; };
+  }, [isCartOpen, items]);
 
   // Check if email belongs to an existing account (on blur)
   async function checkEmailAccount(email: string) {
@@ -152,12 +181,12 @@ export default function CartDrawer() {
         }
       } else {
         console.error('Checkout error:', data.error);
-        setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');
+        setCheckoutError('Hmm, something did not work. Give it another try!');
         setCheckingOut(false);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
-      setCheckoutError('Couldn\u2019t connect \u2014 check your internet and try again.');
+      setCheckoutError('Could not connect. Check your internet and try again.');
       setCheckingOut(false);
     }
   }
@@ -210,12 +239,12 @@ export default function CartDrawer() {
         }
       } else {
         console.error('Checkout error:', data.error);
-        setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');
+        setCheckoutError('Hmm, something did not work. Give it another try!');
         setCheckingOut(false);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
-      setCheckoutError('Couldn\u2019t connect \u2014 check your internet and try again.');
+      setCheckoutError('Could not connect. Check your internet and try again.');
       setCheckingOut(false);
     }
   }
@@ -354,6 +383,14 @@ export default function CartDrawer() {
                           Bundle bonus
                         </span>
                       </div>
+                    ) : upgradeCredits[item.slug] ? (
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-sm font-semibold text-forest">{formatPrice(upgradeCredits[item.slug].upgradePrice)}</span>
+                        <span className="text-xs text-gray-400 line-through">{formatPrice(item.priceCents)}</span>
+                        <span className="text-xs font-medium text-forest bg-forest/10 px-1.5 py-0.5 rounded-full">
+                          Upgrade price
+                        </span>
+                      </div>
                     ) : (
                       <p className="text-sm text-forest font-semibold mt-1">{formatPrice(item.priceCents)}</p>
                     )}
@@ -486,33 +523,68 @@ export default function CartDrawer() {
               </div>
             )}
 
-            {/* Subtotal with BYOB discount */}
-            {byobTier ? (
-              <div className="mb-4 space-y-1.5">
-                <div className="flex items-center justify-between">
+            {/* Subtotal with discounts */}
+            {(() => {
+              const totalUpgradeCredit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
+              const baseTotal = byobTier ? byobTotalCents : totalCents;
+              const adjustedTotal = baseTotal - totalUpgradeCredit;
+
+              if (byobTier) {
+                return (
+                  <div className="mb-4 space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">Subtotal</span>
+                      <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-forest font-medium flex items-center gap-1.5">
+                        <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
+                          {byobTier.discountPercent}% off
+                        </span>
+                        Multi-pack discount
+                      </span>
+                      <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
+                    </div>
+                    {totalUpgradeCredit > 0 && (
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-forest font-medium">Upgrade credit</span>
+                        <span className="text-sm text-forest font-medium">-{formatPrice(totalUpgradeCredit)}</span>
+                      </div>
+                    )}
+                    <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
+                      <span className="text-sm font-medium text-gray-700">Total</span>
+                      <span className="text-lg font-semibold text-forest">{formatPrice(adjustedTotal)}</span>
+                    </div>
+                  </div>
+                );
+              }
+
+              if (totalUpgradeCredit > 0) {
+                return (
+                  <div className="mb-4 space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">Subtotal</span>
+                      <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-forest font-medium">Upgrade credit</span>
+                      <span className="text-sm text-forest font-medium">-{formatPrice(totalUpgradeCredit)}</span>
+                    </div>
+                    <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
+                      <span className="text-sm font-medium text-gray-700">Total</span>
+                      <span className="text-lg font-semibold text-forest">{formatPrice(adjustedTotal)}</span>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-gray-500">Subtotal</span>
-                  <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
+                  <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-forest font-medium flex items-center gap-1.5">
-                    <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
-                      {byobTier.discountPercent}% off
-                    </span>
-                    Multi-pack discount
-                  </span>
-                  <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
-                </div>
-                <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
-                  <span className="text-sm font-medium text-gray-700">Total</span>
-                  <span className="text-lg font-semibold text-forest">{formatPrice(byobTotalCents)}</span>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-gray-500">Subtotal</span>
-                <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
-              </div>
-            )}
+              );
+            })()}
             {/* Signed-in user indicator OR email field for guests */}
             {isSignedIn ? (
               <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">

@@ -356,39 +356,53 @@ export default async function ProductPage({
 
               {/* Buy section - under image, sticky on desktop */}
               <div className="mt-4" id="buy-button">
-                {product.isBundle && (
+                {product.isBundle ? (
                   <BundleUpgradePrice
                     slug={product.slug}
                     stripePriceId={product.stripePriceId}
                     fullPriceCents={product.priceCents}
-                  />
-                )}
-                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                  {product.isBundle && (
-                    <div className="flex items-center justify-between mb-3">
-                      <PriceDisplay
+                  >
+                    <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                      <div className="flex items-center justify-between mb-3">
+                        <PriceDisplay
+                          priceCents={product.priceCents}
+                          compareAtPriceCents={product.compareAtPriceCents}
+                          size="sm"
+                        />
+                        <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
+                          BEST VALUE
+                        </span>
+                      </div>
+                      <AddToCartButton
+                        stripePriceId={product.stripePriceId}
+                        slug={product.slug}
+                        productName={product.name}
                         priceCents={product.priceCents}
-                        compareAtPriceCents={product.compareAtPriceCents}
-                        size="sm"
+                        category={product.category}
+                        isBundle={product.isBundle ?? false}
+                        imageUrl={product.imageUrl}
                       />
-                      <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
-                        BEST VALUE
-                      </span>
+                      <p className="text-xs text-gray-400 text-center mt-2">
+                        Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                      </p>
                     </div>
-                  )}
-                  <AddToCartButton
-                    stripePriceId={product.stripePriceId}
-                    slug={product.slug}
-                    productName={product.name}
-                    priceCents={product.priceCents}
-                    category={product.category}
-                    isBundle={product.isBundle ?? false}
-                    imageUrl={product.imageUrl}
-                  />
-                  <p className="text-xs text-gray-400 text-center mt-2">
-                    Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
-                  </p>
-                </div>
+                  </BundleUpgradePrice>
+                ) : (
+                  <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                    <AddToCartButton
+                      stripePriceId={product.stripePriceId}
+                      slug={product.slug}
+                      productName={product.name}
+                      priceCents={product.priceCents}
+                      category={product.category}
+                      isBundle={product.isBundle ?? false}
+                      imageUrl={product.imageUrl}
+                    />
+                    <p className="text-xs text-gray-400 text-center mt-2">
+                      Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 

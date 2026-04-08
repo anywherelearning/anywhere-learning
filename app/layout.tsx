@@ -71,12 +71,18 @@ const clerkAppearance = {
 };
 
 function ClerkWrapper({ children }: { children: React.ReactNode }) {
-  // ClerkProvider requires a publishableKey. When building without env vars
-  // (e.g. CI or first build), skip the provider so static pages can render.
-  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  if (!publishableKey) {
     return <>{children}</>;
   }
-  return <ClerkProvider appearance={{ ...clerkAppearance, cssLayerName: 'clerk' }}>{children}</ClerkProvider>;
+  return (
+    <ClerkProvider
+      publishableKey={publishableKey}
+      appearance={{ ...clerkAppearance, cssLayerName: 'clerk' }}
+    >
+      {children}
+    </ClerkProvider>
+  );
 }
 
 export default function RootLayout({
