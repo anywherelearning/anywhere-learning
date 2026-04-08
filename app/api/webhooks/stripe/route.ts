@@ -620,21 +620,17 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
       `All orders for session ${session.id} marked as refunded (charge: ${charge.id})`,
     );
   } else {
-    // Partial refund: only mark the session-level status, keep individual
-    // order access intact. Individual orders stay 'completed' so the buyer
-    // retains download access to non-refunded products.
+    // Partial refund: mark all orders as partially_refunded for audit trail.
+    // Download access is preserved (download endpoint allows both 'completed'
+    // and 'partially_refunded' status). Handle full access revocation manually
+    // in the dashboard if needed for specific products.
     await db
       .update(orders)
       .set({ status: 'partially_refunded' })
-      .where(
-        and(
-          eq(orders.stripeSessionId, session.id),
-          eq(orders.amountCents, 0), // Only mark $0 child orders (bundle children)
-        ),
-      );
+      .where(eq(orders.stripeSessionId, session.id));
 
     console.log(
-      `Partial refund for session ${session.id} - paid orders kept as completed (charge: ${charge.id})`,
+      `Partial refund for session ${session.id} - orders marked partially_refunded, access preserved (charge: ${charge.id})`,
     );
   }
 }

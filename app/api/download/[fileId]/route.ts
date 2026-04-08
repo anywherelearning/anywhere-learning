@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { orders, products, downloads, users } from '@/lib/db/schema';
-import { eq, and } from 'drizzle-orm';
+import { eq, and, inArray } from 'drizzle-orm';
 import { streamBlobToResponse } from '@/lib/blob';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
@@ -32,7 +32,7 @@ export async function GET(
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  // Check user owns this product
+  // Check user owns this product (allow completed + partially_refunded access)
   const order = await db
     .select()
     .from(orders)
@@ -40,7 +40,7 @@ export async function GET(
       and(
         eq(orders.userId, user[0].id),
         eq(orders.productId, productId),
-        eq(orders.status, 'completed'),
+        inArray(orders.status, ['completed', 'partially_refunded']),
       ),
     )
     .limit(1);
