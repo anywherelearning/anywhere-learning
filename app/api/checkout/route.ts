@@ -369,9 +369,9 @@ export async function POST(req: NextRequest) {
           bundle_upgrade_credits: JSON.stringify(bundleCredits),
         }),
       },
-      // Disable promo codes when BYOB tiered discount is active to prevent stacking
-      // Bundle upgrade credits are fine with promos - credits just refund what the customer already paid
-      ...(byobDiscount === 0 && { allow_promotion_codes: true }),
+      // Always allow promo codes - BYOB discounts and upgrade credits serve different purposes
+      // than referral codes or seasonal sales, so stacking is fine
+      allow_promotion_codes: true,
     });
 
     return NextResponse.json({ url: session.url });
