@@ -373,15 +373,19 @@ export function cartTotalWithByob(items: CartItem[]): {
 
 /**
  * Find the best bundle upsell for the current cart.
- * Returns the bundle where the user has 2+ matching individual packs.
+ * Considers both individual packs AND smaller bundles whose children
+ * are covered by a larger bundle (e.g. nature-art-bundle + outdoor-toolkit-bundle
+ * triggers an outdoor-mega-bundle upsell).
  * Prioritises bundles that save money, then lowest additional cost.
  * When BYOB discount is active, factors it into the comparison so
- * the customer sees honest numbers (e.g. "even with your 10% off,
- * the bundle gets you 5 more activities for just $7.53 more").
+ * the customer sees honest numbers.
  */
 export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
   const individualItems = cartItems.filter((item) => !item.isBundle);
-  if (individualItems.length < 2) return null;
+  const bundleItems = cartItems.filter((item) => item.isBundle);
+
+  // Need at least 2 items (individual or bundle) to suggest an upsell
+  if (cartItems.length < 2) return null;
 
   // Factor BYOB discount into comparison so numbers are honest
   const byobTier = getByobTier(cartItems);
@@ -396,26 +400,53 @@ export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
     const bundleInfo = BUNDLE_DATA[bundleSlug];
     if (!bundleInfo) continue;
 
-    const matchingItems = individualItems.filter((item) =>
+    // Find matching individual packs
+    const matchingIndividuals = individualItems.filter((item) =>
       childSlugs.includes(item.slug)
     );
 
-    if (matchingItems.length < 2) continue;
+    // Find matching smaller bundles whose children are fully covered by this bundle
+    const matchingBundles = bundleItems.filter((item) => {
+      const smallerChildren = BUNDLE_CONTENTS[item.slug] || [];
+      return smallerChildren.length > 0 && smallerChildren.every((c) => childSlugs.includes(c));
+    });
 
-    const rawTotal = matchingItems.reduce(
-      (sum, item) => sum + item.priceCents,
-      0
+    // Collect all matching slugs (individual slugs + smaller bundle slugs)
+    const matchingSlugs = [
+      ...matchingIndividuals.map((i) => i.slug),
+      ...matchingBundles.map((i) => i.slug),
+    ];
+
+    // Count total covered children (avoid double-counting)
+    const coveredChildren = new Set<string>();
+    for (const item of matchingIndividuals) coveredChildren.add(item.slug);
+    for (const item of matchingBundles) {
+      const children = BUNDLE_CONTENTS[item.slug] || [];
+      for (const c of children) coveredChildren.add(c);
+    }
+
+    // Need at least 2 matching items OR children from bundles covering 2+ of the target's children
+    if (matchingSlugs.length < 2 && coveredChildren.size < 2) continue;
+    // Need at least something matching
+    if (matchingSlugs.length === 0) continue;
+
+    // Calculate what the customer is currently paying for overlapping items
+    const rawIndividualTotal = matchingIndividuals.reduce(
+      (sum, item) => sum + item.priceCents, 0
+    );
+    const bundleTotal = matchingBundles.reduce(
+      (sum, item) => sum + item.priceCents, 0
     );
 
-    // What the customer is actually paying for these items (with BYOB applied)
-    const individualTotal = Math.round(rawTotal * byobMultiplier);
+    // BYOB only applies to individual items, not bundles
+    const individualTotal = Math.round(rawIndividualTotal * byobMultiplier) + bundleTotal;
 
     const savingsCents = individualTotal - bundleInfo.priceCents;
     const additionalCostCents = Math.max(0, bundleInfo.priceCents - individualTotal);
 
     const candidate: BundleUpsell = {
       bundle: bundleInfo,
-      matchingSlugs: matchingItems.map((item) => item.slug),
+      matchingSlugs,
       individualTotal,
       savingsCents,
       additionalCostCents,
