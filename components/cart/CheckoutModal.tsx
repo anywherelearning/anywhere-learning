@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { SignIn, useUser } from '@clerk/nextjs';
+import { SignIn, SignUp, useUser } from '@clerk/nextjs';
 import { clerkAuthAppearance } from '@/lib/clerk-theme';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -13,7 +13,7 @@ interface CheckoutModalProps {
 }
 
 export default function CheckoutModal({ open, onClose, onCheckout }: CheckoutModalProps) {
-  const [mode, setMode] = useState<'choose' | 'signin' | 'guest'>('choose');
+  const [mode, setMode] = useState<'choose' | 'signin' | 'signup' | 'guest'>('choose');
   const [guestEmail, setGuestEmail] = useState('');
   const [emailError, setEmailError] = useState<string | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -147,13 +147,46 @@ export default function CheckoutModal({ open, onClose, onCheckout }: CheckoutMod
               </svg>
               Back
             </button>
-            <div className="flex justify-center [&_.cl-rootBox]:w-full [&_.cl-card]:shadow-none [&_.cl-card]:bg-transparent [&_.cl-footer]:hidden">
+            <div className="flex justify-center [&_.cl-rootBox]:w-full [&_.cl-card]:shadow-none [&_.cl-card]:bg-transparent [&_.cl-footer]:!hidden">
               <SignIn
                 appearance={clerkAuthAppearance}
                 routing="virtual"
                 forceRedirectUrl=""
               />
             </div>
+            <p className="text-sm text-center text-gray-500 mt-2">
+              Don&apos;t have an account?{' '}
+              <button onClick={() => setMode('signup')} className="text-forest font-semibold hover:text-forest-dark transition-colors">
+                Sign up
+              </button>
+            </p>
+          </div>
+        )}
+
+        {mode === 'signup' && (
+          <div className="p-4 pt-8">
+            <button
+              onClick={() => setMode('choose')}
+              className="flex items-center gap-1 text-sm text-gray-400 hover:text-forest transition-colors mb-3"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Back
+            </button>
+            <div className="flex justify-center [&_.cl-rootBox]:w-full [&_.cl-card]:shadow-none [&_.cl-card]:bg-transparent [&_.cl-footer]:!hidden">
+              <SignUp
+                appearance={clerkAuthAppearance}
+                routing="virtual"
+                forceRedirectUrl=""
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mt-2">
+              Already have an account?{' '}
+              <button onClick={() => setMode('signin')} className="text-forest font-semibold hover:text-forest-dark transition-colors">
+                Sign in
+              </button>
+            </p>
           </div>
         )}
 
