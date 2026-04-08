@@ -97,7 +97,7 @@ export default function PreviewModal({
         </button>
       </div>
 
-      {/* Scrollable PDF Viewer — all pages */}
+      {/* Scrollable PDF Viewer - all pages */}
       <div ref={containerRef} className="flex-1 overflow-auto px-2 sm:px-4 py-4 sm:py-6">
         {error ? (
           <div className="text-center py-20">

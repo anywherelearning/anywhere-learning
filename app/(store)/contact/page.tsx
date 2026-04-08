@@ -22,7 +22,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-lg text-gray-500 max-w-xl mx-auto">
               Whether you have a question about our activity packs, need help with an order,
-              or just want to say hi &mdash; we&apos;re here for you.
+              or just want to say hi, we&apos;re here for you.
             </p>
           </div>
 

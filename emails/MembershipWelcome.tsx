@@ -41,7 +41,7 @@ export default function MembershipWelcome({
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
         `}</style>
       </Head>
-      <Preview>Your membership is active — every pack is now yours to explore</Preview>
+      <Preview>Your membership is active. Every pack is now yours to explore</Preview>
       <Body style={main}>
         <Container style={container}>
 
@@ -80,7 +80,7 @@ export default function MembershipWelcome({
 
             <Text style={text}>
               Your <strong>{plan}</strong> membership is now active. You have
-              instant access to every activity pack in the library — and anything
+              instant access to every activity pack in the library, and anything
               new we add along the way.
             </Text>
 
@@ -122,7 +122,7 @@ export default function MembershipWelcome({
 
             <Text style={text}>
               You can manage your subscription anytime from your account page. If
-              you ever have questions, just reply to this email — I&apos;m a real
+              you ever have questions, just reply to this email. I&apos;m a real
               person and I&apos;d love to hear from you.
             </Text>
 

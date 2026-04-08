@@ -37,7 +37,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
         `}</style>
       </Head>
-      <Preview>Your friend just saved 15% — here&apos;s yours!</Preview>
+      <Preview>Your friend just saved 15%, and here&apos;s yours!</Preview>
       <Body style={main}>
         <Container style={container}>
 
@@ -68,7 +68,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
             </table>
             <Heading style={bannerHeading}>Your friend used your code!</Heading>
             <Text style={bannerSubtext}>
-              They just saved 15% — and now it&apos;s your turn.
+              They just saved 15% - and now it&apos;s your turn.
             </Text>
           </Section>
 
@@ -77,7 +77,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
             <Text style={text}>Hey there!</Text>
 
             <Text style={text}>
-              Someone you shared your referral code with just made a purchase. That&apos;s real-world learning spreading to another family — pretty awesome.
+              Someone you shared your referral code with just made a purchase. That&apos;s real-world learning spreading to another family - pretty awesome.
             </Text>
 
             <Text style={text}>
@@ -92,7 +92,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
               <Text style={codeText}>{rewardCode}</Text>
             </Section>
             <Text style={rewardSmall}>
-              One-time use — works on any activity pack or bundle.
+              One-time use - works on any activity pack or bundle.
             </Text>
           </Section>
 
@@ -105,7 +105,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
             </Section>
 
             <Text style={textMuted}>
-              Keep sharing your referral code — every time a friend uses it, you&apos;ll both save.
+              Keep sharing your referral code - every time a friend uses it, you&apos;ll both save.
             </Text>
           </Section>
 

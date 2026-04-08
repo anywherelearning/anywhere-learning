@@ -58,7 +58,7 @@ export default function CategorySection({
         )}
       </div>
 
-      {/* Products — carousel if more than 3, grid otherwise */}
+      {/* Products - carousel if more than 3, grid otherwise */}
       {hasMore ? (
         <ProductCarousel products={products} />
       ) : (

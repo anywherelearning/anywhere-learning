@@ -13,7 +13,7 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ slug: string }> },
 ) {
-  // Rate limit: 30 req / 60s — public endpoint with file I/O
+  // Rate limit: 30 req / 60s - public endpoint with file I/O
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 
@@ -24,10 +24,10 @@ export async function GET(
     return NextResponse.json({ error: 'Preview not found' }, { status: 404 });
   }
 
-  // ── SECURITY: Require explicit env var — never leak a dev home path ──
+  // ── SECURITY: Require explicit env var - never leak a dev home path ──
   const previewDir = process.env.PREVIEW_PDF_DIR;
   if (!previewDir) {
-    console.error('PREVIEW_PDF_DIR is not set — cannot serve local previews');
+    console.error('PREVIEW_PDF_DIR is not set - cannot serve local previews');
     return NextResponse.json({ error: 'Preview not available' }, { status: 404 });
   }
 

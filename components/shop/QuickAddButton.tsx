@@ -40,7 +40,7 @@ export default function QuickAddButton({
   const alreadyInCart = isInCart(slug);
   const coveredBy = isCoveredByCart(items, slug);
 
-  // Product is included in a bundle already in the cart — show non-interactive indicator
+  // Product is included in a bundle already in the cart - show non-interactive indicator
   if (coveredBy) {
     return (
       <span
@@ -116,12 +116,12 @@ export default function QuickAddButton({
           <line x1="5" y1="12" x2="19" y2="12" />
         </svg>
       ) : alreadyInCart ? (
-        /* Checkmark — in cart */
+        /* Checkmark - in cart */
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <polyline points="20 6 9 17 4 12" />
         </svg>
       ) : (
-        /* Shopping bag — matches header cart icon */
+        /* Shopping bag - matches header cart icon */
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
           <line x1="3" y1="6" x2="21" y2="6" />

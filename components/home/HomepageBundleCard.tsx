@@ -143,7 +143,7 @@ export default function HomepageBundleCard({
           {/* Spacer pushes thumbnails + CTA to card bottom */}
           <div className="flex-1" />
 
-          {/* Included product thumbnails — fixed height row for alignment */}
+          {/* Included product thumbnails - fixed height row for alignment */}
           <div className="h-14 flex items-center mb-3">
             {thumbnails.length > 0 ? (
               <div className="flex items-center -space-x-2.5" aria-hidden="true">

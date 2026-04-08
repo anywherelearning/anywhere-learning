@@ -5,7 +5,7 @@ import Image from 'next/image';
  * Promotional banner for "The Future-Ready Skills Map" product.
  * Positioned between the hero/trust strip and the savings explainer
  * on the shop page's "All Packs" view. Designed to feel like a
- * helpful store guide rather than an ad — warm, integrated, and
+ * helpful store guide rather than an ad - warm, integrated, and
  * nature-inspired to match the brand aesthetic.
  */
 export default function SkillsMapBanner() {
@@ -26,7 +26,7 @@ export default function SkillsMapBanner() {
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border border-gray-100 group-hover:shadow-lg transition-shadow duration-300 bg-[#f7f5f0]">
             <Image
               src="/products/future-ready-skills-map.jpg"
-              alt="The Future-Ready Skills Map — a 42-page parent guide"
+              alt="The Future-Ready Skills Map, a 42-page parent guide"
               fill
               className="object-contain"
               sizes="(max-width: 640px) 80px, 96px"
@@ -52,7 +52,7 @@ export default function SkillsMapBanner() {
             </h2>
 
             <p className="text-sm text-gray-500 leading-relaxed max-w-xl">
-              10 essential skills your kids actually need — mapped by age with activities,
+              10 essential skills your kids actually need, mapped by age with activities,
               milestones, and sample weeks. The roadmap that turns every activity pack into
               purposeful learning.
             </p>
@@ -99,7 +99,7 @@ export default function SkillsMapBanner() {
           </span>
         </div>
 
-        {/* Accent border at top — gold like the start-here category */}
+        {/* Accent border at top - gold like the start-here category */}
         <div
           className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold via-gold-light to-gold"
           aria-hidden="true"

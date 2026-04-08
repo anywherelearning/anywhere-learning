@@ -73,7 +73,7 @@ export default function WhyItWorks() {
           The goal isn&apos;t to teach kids about life
         </h2>
         <p className="text-lg text-gray-600">
-          It&apos;s to let them live it &mdash; with your guidance.
+          It&apos;s to let them live it, with your guidance.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-3">

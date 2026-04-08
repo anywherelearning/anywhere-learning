@@ -186,7 +186,7 @@ export default function BlogExitIntentPopup() {
             <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
               <Image
                 src="/images/free-guide-cover.jpg"
-                alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
+                alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
                 fill
                 sizes="(max-width: 640px) 80px, 128px"
                 className="object-cover"
@@ -198,10 +198,10 @@ export default function BlogExitIntentPopup() {
                 id="blog-exit-popup-title"
                 className="font-display text-xl sm:text-[1.65rem] text-forest leading-tight mb-1.5 sm:mb-2"
               >
-                Before you go &mdash; grab this free guide
+                Before you go, grab this free guide
               </h2>
               <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-                10 Real-World Activities You Can Start Today &mdash; no prep, no planning, just meaningful learning.
+                10 Real-World Activities You Can Start Today. No prep, no planning, just meaningful learning.
               </p>
             </div>
           </div>

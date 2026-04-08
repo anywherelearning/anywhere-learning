@@ -89,7 +89,7 @@ export default function CartDrawer() {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function validateEmail(): boolean {
-    // Email is optional — only validate format if they entered something
+    // Email is optional - only validate format if they entered something
     if (cartEmail.trim() && !EMAIL_REGEX.test(cartEmail.trim())) {
       setEmailError('Please enter a valid email address.');
       return false;
@@ -143,7 +143,7 @@ export default function CartDrawer() {
       });
       const data = await res.json();
       if (data.url) {
-        // In Capacitor: open Stripe checkout in external browser (reader model — no in-app purchase)
+        // In Capacitor: open Stripe checkout in external browser (reader model - no in-app purchase)
         // On web: redirect normally
         await openExternalBrowser(data.url);
         if (isNative) {
@@ -163,9 +163,9 @@ export default function CartDrawer() {
   }
 
   function handleGuestCheckout() {
-    // Continue as guest — proceed directly to Stripe
+    // Continue as guest - proceed directly to Stripe
     setShowLoginPrompt(false);
-    // Call handleCheckout again — this time showLoginPrompt is false but we've
+    // Call handleCheckout again - this time showLoginPrompt is false but we've
     // already shown it, so we need to bypass. Set a flag and proceed.
     proceedToCheckout();
   }
@@ -417,7 +417,7 @@ export default function CartDrawer() {
             </div>
           )}
 
-          {/* Bundle upsell — compact one-liner */}
+          {/* Bundle upsell - compact one-liner */}
           {showUpsell && upsell && (
             <div className="mt-4 flex items-center gap-3 bg-forest/5 border border-forest/15 rounded-xl px-4 py-3 animate-fade-in-up">
               <div className="flex-1 min-w-0 text-sm text-forest">
@@ -571,7 +571,7 @@ export default function CartDrawer() {
               </div>
             )}
 
-            {/* Login prompt — shown when guest clicks Checkout */}
+            {/* Login prompt - shown when guest clicks Checkout */}
             {showLoginPrompt && !isSignedIn && (
               <div className="mb-4 bg-forest/5 border border-forest/15 rounded-2xl p-4 animate-fade-in">
                 <div className="flex items-center gap-2 mb-2">
@@ -581,7 +581,7 @@ export default function CartDrawer() {
                   <span className="text-sm font-semibold text-forest">Sign in for instant access</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-3">
-                  Your downloads will be ready immediately after purchase — no extra steps.
+                  Your downloads will be ready immediately after purchase. No extra steps.
                 </p>
                 <Link
                   href="/sign-in?redirect_url=/shop?cart=open"
@@ -641,7 +641,7 @@ export default function CartDrawer() {
                   Preparing checkout...
                 </span>
               ) : (
-                `Checkout — ${formatPrice(byobTier ? byobTotalCents : totalCents)}`
+                `Checkout - ${formatPrice(byobTier ? byobTotalCents : totalCents)}`
               )}
             </button>
             <button

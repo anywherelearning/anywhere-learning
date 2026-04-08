@@ -130,7 +130,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...baseRoutes, ...productUrls];
   } catch {
-    // DB unavailable — use fallback products so sitemap still includes product URLs
+    // DB unavailable - use fallback products so sitemap still includes product URLs
     const fallback = getFallbackProducts();
     const fallbackUrls = fallback.map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,

@@ -5,7 +5,7 @@ import { getUserByClerkId } from '@/lib/db/queries';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(req: NextRequest) {
-  // Rate limit: 10 req / 60s — external Stripe API call
+  // Rate limit: 10 req / 60s - external Stripe API call
   const limited = await checkRateLimit(req, standardLimiter());
   if (limited) return limited;
 
@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.redirect(new URL('/membership', req.url));
     }
 
-    // SECURITY: Never trust the Origin header — it can be spoofed to redirect
+    // SECURITY: Never trust the Origin header - it can be spoofed to redirect
     // users to phishing sites after checkout. Only use our own configured URL.
     const origin = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
 

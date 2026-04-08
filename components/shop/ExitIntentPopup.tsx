@@ -173,7 +173,7 @@ export default function ExitIntentPopup() {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   Variant B: Bundle Promo (empty cart — original popup)
+   Variant B: Bundle Promo (empty cart - original popup)
    ═══════════════════════════════════════════════════════════════════ */
 
 function BundlePromoContent({ dismiss }: { dismiss: () => void }) {

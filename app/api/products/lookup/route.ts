@@ -7,11 +7,11 @@ import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
  *
  * Returns the CartItem-compatible fields for a product by slug.
  * Used by the cart drawer to fetch real product data (with verified
- * stripePriceId) when performing a bundle swap — the hardcoded
+ * stripePriceId) when performing a bundle swap - the hardcoded
  * BUNDLE_DATA map doesn't contain Stripe price IDs.
  */
 export async function GET(req: NextRequest) {
-  // Rate limit: 30 req / 60s — public DB query
+  // Rate limit: 30 req / 60s - public DB query
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 

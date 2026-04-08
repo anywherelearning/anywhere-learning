@@ -1,4 +1,4 @@
-/** Shared SVG icons for shop pages — consistent, brand-friendly, no emoji. */
+/** Shared SVG icons for shop pages - consistent, brand-friendly, no emoji. */
 
 interface IconProps {
   className?: string;

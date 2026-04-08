@@ -13,12 +13,12 @@ const POSTS_PER_PAGE = 9;
 export const metadata: Metadata = {
   title: 'Homeschool Ideas & Real-World Learning Tips',
   description:
-    'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt — just what works.',
+    'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt. Just what works.',
   alternates: {
     canonical: 'https://anywherelearning.co/blog',
   },
   openGraph: {
-    title: 'Blog — Anywhere Learning',
+    title: 'Blog | Anywhere Learning',
     description:
       'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families.',
     url: 'https://anywherelearning.co/blog',
@@ -130,7 +130,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
               Practical inspiration, honest encouragement, and real-world
-              learning ideas — from one homeschool family to another.
+              learning ideas, from one homeschool family to another.
             </p>
           </ScrollReveal>
         </div>

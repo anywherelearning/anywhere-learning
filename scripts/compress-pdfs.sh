@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Compress all activity PDFs for faster viewing/downloading.
-# Uses Ghostscript /ebook preset (150dpi) — great for screens, ~90% smaller.
+# Uses Ghostscript /ebook preset (150dpi) - great for screens, ~90% smaller.
 #
 # Usage:
 #   ./scripts/compress-pdfs.sh                    # dry run (show what would happen)
@@ -54,9 +54,9 @@ while IFS= read -r -d '' pdf; do
   size_before=$(stat -f%z "$pdf")
   size_before_mb=$(echo "scale=1; $size_before / 1048576" | bc)
 
-  # Skip tiny files (under 5MB) — already small enough
+  # Skip tiny files (under 5MB) - already small enough
   if [[ $size_before -lt 5242880 ]]; then
-    echo "SKIP  ${filename} (${size_before_mb}MB — already small)"
+    echo "SKIP  ${filename} (${size_before_mb}MB - already small)"
     continue
   fi
 

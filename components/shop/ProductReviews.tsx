@@ -23,7 +23,7 @@ export default async function ProductReviews({
       getProductReviewStats(productId),
     ]);
   } catch {
-    // DB unavailable — show empty state gracefully
+    // DB unavailable - show empty state gracefully
   }
 
   const hasReviews = stats.reviewCount > 0;

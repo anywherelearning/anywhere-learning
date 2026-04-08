@@ -6,7 +6,7 @@ import { useCapacitor } from './CapacitorProvider';
 
 /**
  * Redirects web-only routes to /shop when running in the native app.
- * The app only has Shop, Library, and Account — no homepage, blog, or free-guide.
+ * The app only has Shop, Library, and Account - no homepage, blog, or free-guide.
  */
 export default function NativeRedirectGuard() {
   const { isNative } = useCapacitor();

@@ -22,13 +22,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid platform' }, { status: 400 });
     }
 
-    // Get user ID if authenticated (optional — tokens can be registered before login)
+    // Get user ID if authenticated (optional - tokens can be registered before login)
     let userId: string | null = null;
     try {
       const { userId: clerkId } = await auth();
       userId = clerkId;
     } catch {
-      // Auth not available — register token without user
+      // Auth not available - register token without user
     }
 
     if (!db) {

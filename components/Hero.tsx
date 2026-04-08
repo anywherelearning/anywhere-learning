@@ -19,7 +19,7 @@ function PDFMockup() {
         {/* Cover image */}
         <Image
           src="/images/free-guide-cover.jpg"
-          alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
+          alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
           width={256}
           height={362}
           className="w-full h-auto"

@@ -1,5 +1,5 @@
 /**
- * Anywhere Learning — Service Worker
+ * Anywhere Learning - Service Worker
  * Provides basic offline caching for the mobile app.
  * - Caches store pages on first visit
  * - Serves cached pages when offline

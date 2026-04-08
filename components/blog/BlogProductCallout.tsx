@@ -12,7 +12,7 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
   if (!product) return null;
 
   const price = (product.priceCents / 100).toFixed(2);
-  // Short CTA label — split on punctuation, then truncate to keep button compact
+  // Short CTA label - split on punctuation, then truncate to keep button compact
   const parts = product.name.split(/[:\u2014\u2013\u2013\u2014–&]/);
   const shortName = parts[0].trim().length <= 25 ? parts[0].trim() : 'This Pack';
 

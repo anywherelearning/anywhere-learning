@@ -155,7 +155,7 @@ export async function GET(req: NextRequest) {
 
     const upgradePrice = Math.max(0, bundle[0].priceCents - totalCredit);
 
-    // User already paid more than the bundle costs — no upgrade needed
+    // User already paid more than the bundle costs - no upgrade needed
     if (upgradePrice === 0) {
       return NextResponse.json({ upgradePrice: null });
     }

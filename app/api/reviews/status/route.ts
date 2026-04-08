@@ -4,7 +4,7 @@ import { getUserByClerkId, hasUserPurchasedProduct, getUserReviewForProduct } fr
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(req: NextRequest) {
-  // Rate limit: 30 req / 60s — lightweight read endpoint
+  // Rate limit: 30 req / 60s - lightweight read endpoint
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 

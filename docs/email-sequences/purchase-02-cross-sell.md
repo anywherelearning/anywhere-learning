@@ -1,10 +1,10 @@
-# Post-Purchase Email 2 — Cross-Sell
+# Post-Purchase Email 2 - Cross-Sell
 
 **Sequence:** Post-Purchase
 **Number:** 2 of 3
 **Send delay:** Day 7
 **Subject line:** Something your family might love next
-**Preview text:** Based on what you got — one suggestion
+**Preview text:** Based on what you got - one suggestion
 
 ---
 
@@ -21,7 +21,7 @@
 | Life skills pack | `cross-sell:real-world-bundle` | Real-World Skills Bundle ($34.99) |
 | AI literacy pack | `cross-sell:real-world-bundle` | Real-World Skills Bundle ($34.99) |
 | Any individual (fallback) | `cross-sell:master-bundle` | Master Bundle ($89.99) |
-| Master Bundle buyer | *(no tag — skip cross-sell)* | — |
+| Master Bundle buyer | *(no tag - skip cross-sell)* | - |
 
 ---
 
@@ -29,11 +29,11 @@
 
 Hey!
 
-How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page — also normal).
+How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page - also normal).
 
 I wanted to share something that pairs well with what you've got.
 
-Since your family enjoyed the seasonal activities, you'd probably love the **Nature Bundle** — outdoor exploration, wildlife observation, and nature journaling that works in any season. It's a different angle on the same kind of hands-on learning, and the activities layer really nicely together.
+Since your family enjoyed the seasonal activities, you'd probably love the **Nature Bundle** - outdoor exploration, wildlife observation, and nature journaling that works in any season. It's a different angle on the same kind of hands-on learning, and the activities layer really nicely together.
 
 **60 activities · Ages 6–14 · $24.99**
 
@@ -50,11 +50,11 @@ Amelie
 
 Hey!
 
-How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page — also normal).
+How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page - also normal).
 
 I wanted to share something that pairs well with what you've got.
 
-Since your family enjoyed the nature activities, the **Seasonal Bundle** keeps that momentum going year-round — spring, summer, fall, and winter, with activities designed for each season's weather and rhythms. It's like having a whole year of outdoor learning ready to go.
+Since your family enjoyed the nature activities, the **Seasonal Bundle** keeps that momentum going year-round - spring, summer, fall, and winter, with activities designed for each season's weather and rhythms. It's like having a whole year of outdoor learning ready to go.
 
 **80 activities · Ages 6–14 · $49.99**
 
@@ -71,11 +71,11 @@ Amelie
 
 Hey!
 
-How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page — also normal).
+How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page - also normal).
 
 I wanted to share something that pairs well with what you've got.
 
-If your kids loved the hands-on energy of what's in your pack, the **Real-World Skills Bundle** takes that same approach and channels it into cooking, budgeting, navigation, and problem-solving — things they'll use forever. Same no-prep format, totally different skills.
+If your kids loved the hands-on energy of what's in your pack, the **Real-World Skills Bundle** takes that same approach and channels it into cooking, budgeting, navigation, and problem-solving - things they'll use forever. Same no-prep format, totally different skills.
 
 **49 activities · Ages 6–14 · $34.99**
 
@@ -92,11 +92,11 @@ Amelie
 
 Hey!
 
-How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page — also normal).
+How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page - also normal).
 
 I wanted to share something that pairs well with what you've got.
 
-Since your family enjoyed the practical skills activities, the **Creativity Bundle** is a great complement — it's all about open-ended making, inventing, and building. Board game design, Rube Goldberg machines, inventing a sport. Same hands-on, no-prep format, but it unlocks a totally different kind of thinking.
+Since your family enjoyed the practical skills activities, the **Creativity Bundle** is a great complement - it's all about open-ended making, inventing, and building. Board game design, Rube Goldberg machines, inventing a sport. Same hands-on, no-prep format, but it unlocks a totally different kind of thinking.
 
 **45 activities · Ages 6–14 · $32.99**
 
@@ -113,11 +113,11 @@ Amelie
 
 Hey!
 
-How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page — also normal).
+How's the pack going? If your kids are anything like mine, they've probably already picked their favourites (and completely ignored at least one page - also normal).
 
 I wanted to share something you might not have seen.
 
-Since you grabbed a single pack, you might want to check out the **Master Bundle** — it's everything in the shop in one download. 220+ activities across seasonal adventures, creativity projects, nature exploration, real-world skills, life skills, and AI literacy. It's the best value by far, and it means you'll never run out of ideas on those blank-brain mornings.
+Since you grabbed a single pack, you might want to check out the **Master Bundle** - it's everything in the shop in one download. 220+ activities across seasonal adventures, creativity projects, nature exploration, real-world skills, life skills, and AI literacy. It's the best value by far, and it means you'll never run out of ideas on those blank-brain mornings.
 
 **220+ activities · Ages 6–14 · $89.99** (saves $30+ vs. buying individually)
 

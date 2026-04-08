@@ -50,7 +50,7 @@ export default function CapacitorProvider({ children }: { children: ReactNode })
         const { SplashScreen } = await import('@capacitor/splash-screen');
         await SplashScreen.hide();
       } catch {
-        // Plugin not available — ignore
+        // Plugin not available - ignore
       }
     })();
 
@@ -92,7 +92,7 @@ export default function CapacitorProvider({ children }: { children: ReactNode })
               }),
             });
           } catch {
-            // Silent fail — token registration is best-effort
+            // Silent fail - token registration is best-effort
           }
         });
 
@@ -104,7 +104,7 @@ export default function CapacitorProvider({ children }: { children: ReactNode })
           }
         });
       } catch {
-        // Push not available — ignore (e.g. running in web)
+        // Push not available - ignore (e.g. running in web)
       }
     })();
   }, []);

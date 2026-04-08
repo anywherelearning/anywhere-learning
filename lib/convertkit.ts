@@ -20,7 +20,7 @@ export function getCrossSellTag(
   categories: string[],
   boughtBundles: boolean,
 ): string | null {
-  // If they bought the master bundle, they have everything — no cross-sell
+  // If they bought the master bundle, they have everything - no cross-sell
   if (categories.includes('bundle') && boughtBundles) return null;
 
   // Find the first non-bundle category and map it
@@ -38,7 +38,7 @@ export function getCrossSellTag(
 
 /**
  * Subscribe an email to the ConvertKit form and optionally apply tags.
- * Tags are passed as string names — Kit creates them automatically if they don't exist.
+ * Tags are passed as string names - Kit creates them automatically if they don't exist.
  */
 export async function subscribeAndTag(email: string, tags: string[] = []) {
   const formId = process.env.CONVERTKIT_FORM_ID;
@@ -62,7 +62,7 @@ export async function subscribeAndTag(email: string, tags: string[] = []) {
 
 // ─── Backwards-compatible exports ───
 
-/** Subscribe a free guide lead — applies the 'lead' tag to trigger welcome sequence */
+/** Subscribe a free guide lead - applies the 'lead' tag to trigger welcome sequence */
 export async function subscribeToConvertKit(email: string) {
   await subscribeAndTag(email, ['lead']);
 }
@@ -84,17 +84,17 @@ export async function tagBuyerInConvertKit(
     tags.push(`product:${slug}`);
   }
 
-  // First-time buyer tag — triggers post-purchase sequence in Kit
+  // First-time buyer tag - triggers post-purchase sequence in Kit
   if (options.isFirstPurchase) {
     tags.push('first-buyer');
   }
 
-  // Bundle buyer tag — useful for segmentation
+  // Bundle buyer tag - useful for segmentation
   if (options.hasBundles) {
     tags.push('bundle-buyer');
   }
 
-  // Cross-sell tag — tells Kit which product to recommend in follow-up email
+  // Cross-sell tag - tells Kit which product to recommend in follow-up email
   if (options.categories) {
     const crossSellTag = getCrossSellTag(options.categories, !!options.hasBundles);
     if (crossSellTag) {

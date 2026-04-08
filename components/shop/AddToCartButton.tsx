@@ -34,7 +34,7 @@ export default function AddToCartButton({
   // Hide purchase buttons in native app (Apple compliance)
   if (isNative) return null;
 
-  // Already purchased — show confirmation instead of buy button
+  // Already purchased - show confirmation instead of buy button
   if (purchased.has(slug)) {
     return (
       <div className="block w-full bg-forest/10 text-forest font-semibold py-4 px-8 rounded-xl text-center text-lg">
@@ -110,7 +110,7 @@ export default function AddToCartButton({
             In Your Cart
           </span>
         ) : (
-          `Get This — ${formatPrice(priceCents)}`
+          `Get This - ${formatPrice(priceCents)}`
         )}
       </span>
     </button>

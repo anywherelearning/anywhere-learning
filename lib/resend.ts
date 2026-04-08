@@ -51,7 +51,7 @@ export async function sendReferralRewardEmail({
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
     to,
-    subject: "Your friend just saved 15% — here's yours!",
+    subject: "Your friend just saved 15%, and here's yours!",
     react: ReferralReward({ rewardCode }),
   });
 }

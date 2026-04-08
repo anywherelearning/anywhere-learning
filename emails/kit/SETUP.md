@@ -20,7 +20,7 @@ Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF.
 
 **Trigger:** Subscriber receives tag `cart-abandoner`
 **Condition on each email:** Subscriber does NOT have tag `buyer`
-(Both tags are auto-created by the app — no manual setup needed)
+(Both tags are auto-created by the app - no manual setup needed)
 
 | # | File | Delay | Subject Line |
 |---|------|-------|-------------|
@@ -48,7 +48,7 @@ Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF.
 ## Template variables
 
 All emails use `{{ subscriber.first_name | default: "there" }}` for personalization.
-This is Kit's Liquid syntax — no changes needed.
+This is Kit's Liquid syntax - no changes needed.
 
 ## Product images
 

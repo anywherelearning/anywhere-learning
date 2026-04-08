@@ -27,7 +27,7 @@ export default function TermsPage() {
             <div>
               <p>
                 Welcome to Anywhere Learning. By using our website and purchasing our products, you agree
-                to these terms. Please read them carefully &mdash; they&apos;re straightforward, we promise.
+                to these terms. Please read them carefully; they&apos;re straightforward, we promise.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function TermsPage() {
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Our Products</h2>
               <p>
                 Anywhere Learning sells digital activity guides in PDF format. These are downloadable
-                products &mdash; not physical goods. After purchase, you receive instant access to download
+                products, not physical goods. After purchase, you receive instant access to download
                 your files. Our guides are designed for parents and guardians to use with their children
                 (ages 4&ndash;14) for real-world, hands-on learning.
               </p>
@@ -68,7 +68,7 @@ export default function TermsPage() {
               </p>
             </div>
 
-            {/* Refund Policy — highlighted */}
+            {/* Refund Policy - highlighted */}
             <div className="bg-forest/5 rounded-2xl p-6 border border-forest/10">
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Refund Policy</h2>
               <p className="mb-3">
@@ -78,7 +78,7 @@ export default function TermsPage() {
               <ul className="list-disc list-inside space-y-1.5 ml-2 mb-3">
                 <li>To request a refund, email <a href="mailto:info@anywherelearning.co" className="text-forest font-medium hover:text-forest-dark transition-colors">info@anywherelearning.co</a> within 48 hours of your purchase</li>
                 <li>Include your order email and the product name</li>
-                <li>No questions asked &mdash; we want you to be happy</li>
+                <li>No questions asked. We want you to be happy</li>
                 <li>Refunds are processed to your original payment method within 5&ndash;10 business days</li>
               </ul>
               <p>
@@ -101,7 +101,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Intellectual Property</h2>
               <p>
-                All content on this site &mdash; including activity guides, text, images, icons, and design &mdash;
+                All content on this site, including activity guides, text, images, icons, and design,
                 is the property of Anywhere Learning and is protected by copyright. You may not reproduce,
                 distribute, or create derivative works without our written permission.
               </p>

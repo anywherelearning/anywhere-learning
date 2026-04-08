@@ -169,7 +169,7 @@ export default function SkillsGrid() {
             What&apos;s inside the guide
           </h2>
           <p className="mt-3 text-lg text-gray-600">
-            10 real-world activities your kids can try this week &mdash; wherever you
+            10 real-world activities your kids can try this week, wherever you
             are.
           </p>
         </div>

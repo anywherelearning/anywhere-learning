@@ -32,7 +32,7 @@ const activityCards = [
   },
   {
     title: 'Bug Hotel Builder',
-    category: 'Seasonal — Spring',
+    category: 'Seasonal: Spring',
     age: 'Ages 6–12',
     color: 'bg-gold',
     borderColor: 'border-gold',
@@ -64,7 +64,7 @@ export default function PeekInsidePack() {
         ))}
       </div>
 
-      {/* Active card — big, visual, exciting */}
+      {/* Active card - big, visual, exciting */}
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Left: Visual mockup of the activity card */}
         <div className="relative">

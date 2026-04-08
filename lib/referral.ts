@@ -5,7 +5,7 @@ import { stripe } from '@/lib/stripe';
 import { sendReferralRewardEmail } from '@/lib/resend';
 
 const REFERRAL_DISCOUNT_PERCENT = 15;
-const REFERRAL_COUPON_NAME = 'Referral Discount — 15% Off';
+const REFERRAL_COUPON_NAME = 'Referral Discount - 15% Off';
 
 // ─── Code Generation ────────────────────────────────────────────────
 
@@ -57,14 +57,14 @@ async function ensureReferralCoupon(): Promise<string> {
   });
 
   _couponId = coupon.id;
-  console.log(`Created referral coupon: ${coupon.id} — set STRIPE_REFERRAL_COUPON_ID in env to skip creation next time`);
+  console.log(`Created referral coupon: ${coupon.id} - set STRIPE_REFERRAL_COUPON_ID in env to skip creation next time`);
   return _couponId;
 }
 
 // ─── Core Referral Logic ────────────────────────────────────────────
 
 /**
- * Get or create a referral code for a user. Idempotent — returns existing
+ * Get or create a referral code for a user. Idempotent - returns existing
  * referral if one already exists for this user.
  */
 export async function getOrCreateReferral(userId: string, email: string) {
@@ -93,7 +93,7 @@ export async function getOrCreateReferral(userId: string, email: string) {
       stripePromoId = promo.id;
       break;
     } catch (error: unknown) {
-      // Code already exists in Stripe — retry with new suffix
+      // Code already exists in Stripe - retry with new suffix
       const stripeError = error as { code?: string };
       if (stripeError.code === 'resource_already_exists' && attempt < 2) continue;
       throw error;

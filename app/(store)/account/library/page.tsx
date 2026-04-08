@@ -37,7 +37,7 @@ export default async function LibraryPage({
   const purchasedIds = new Set(purchases.map((p) => p.product.id));
 
   // Filter to non-bundle individual products for the library grid
-  // (bundles are access containers — their individual products are what members view)
+  // (bundles are access containers - their individual products are what members view)
   const libraryProducts = allProducts.map((p) => ({
     id: p.id,
     name: p.name,
@@ -76,7 +76,7 @@ export default async function LibraryPage({
             Your Library
           </h1>
           <p className="mt-2 text-gray-500">
-            {libraryProducts.length} activity packs — all included in your membership.
+            {libraryProducts.length} activity packs, all included in your membership.
           </p>
         </div>
         <div className="flex items-center gap-3">

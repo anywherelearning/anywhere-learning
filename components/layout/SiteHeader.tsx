@@ -140,7 +140,7 @@ export default function SiteHeader() {
         </div>
       </header>
 
-      {/* Mobile menu overlay — covers full screen with its own header row */}
+      {/* Mobile menu overlay - covers full screen with its own header row */}
       {mobileOpen && (
         <div
           ref={focusTrapRef}
@@ -150,7 +150,7 @@ export default function SiteHeader() {
           className="fixed inset-0 z-[999] bg-cream md:hidden animate-in fade-in duration-200"
           style={{ backgroundColor: '#faf9f6' }}
         >
-          {/* Overlay header row — matches main header height & layout */}
+          {/* Overlay header row - matches main header height & layout */}
           <div className="flex h-16 items-center justify-between px-5 sm:px-8">
             <Link
               href="/"

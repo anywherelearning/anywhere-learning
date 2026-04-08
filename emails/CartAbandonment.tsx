@@ -154,7 +154,7 @@ export default function CartAbandonment({
                 Don&apos;t forget your free bonus!
               </Heading>
               <Text style={upsellText}>
-                Your <strong>{upsell.bundleName}</strong> comes with a <strong>free copy of The Future-Ready Skills Map</strong> — a 42-page parent guide to the 10 skills that matter most. It&apos;s included at no extra cost when you check out.
+                Your <strong>{upsell.bundleName}</strong> comes with a <strong>free copy of The Future-Ready Skills Map</strong> - a 42-page parent guide to the 10 skills that matter most. It&apos;s included at no extra cost when you check out.
               </Text>
             </Section>
           )}
@@ -165,7 +165,7 @@ export default function CartAbandonment({
                 Save more with the bundle
               </Heading>
               <Text style={upsellText}>
-                Get all {upsell.bundleActivityCount} activities in the <strong>{upsell.bundleName}</strong> for just {formatPrice(upsell.bundlePriceCents!)} — that&apos;s <strong>{formatPrice(upsell.savingsCents!)} off</strong> compared to buying individually. Plus, you&apos;ll get The Future-Ready Skills Map free.
+                Get all {upsell.bundleActivityCount} activities in the <strong>{upsell.bundleName}</strong> for just {formatPrice(upsell.bundlePriceCents!)} - that&apos;s <strong>{formatPrice(upsell.savingsCents!)} off</strong> compared to buying individually. Plus, you&apos;ll get The Future-Ready Skills Map free.
               </Text>
               <Section style={{ textAlign: 'center' as const, marginTop: '16px' }}>
                 <Link href={`${baseUrl}/shop/${upsell.bundleSlug}`} style={upsellButton}>
@@ -181,7 +181,7 @@ export default function CartAbandonment({
                 You&apos;re {upsell.itemsNeeded === 1 ? '1 pack' : `${upsell.itemsNeeded} packs`} away from {upsell.discountPercent}% off
               </Heading>
               <Text style={upsellText}>
-                Add {upsell.itemsNeeded === 1 ? 'just 1 more activity pack' : `${upsell.itemsNeeded} more activity packs`} to your cart and our mix-and-match discount kicks in — <strong>{upsell.discountPercent}% off every individual pack</strong> in your order.
+                Add {upsell.itemsNeeded === 1 ? 'just 1 more activity pack' : `${upsell.itemsNeeded} more activity packs`} to your cart and our mix-and-match discount kicks in - <strong>{upsell.discountPercent}% off every individual pack</strong> in your order.
               </Text>
               <Section style={{ textAlign: 'center' as const, marginTop: '16px' }}>
                 <Link href={`${baseUrl}/shop`} style={upsellButton}>
@@ -228,7 +228,7 @@ export default function CartAbandonment({
           {/* ── Sign-off ── */}
           <Section style={contentSection}>
             <Text style={text}>
-              No pressure — just didn&apos;t want you to lose your picks. If you have any questions, just hit reply.
+              No pressure - just didn&apos;t want you to lose your picks. If you have any questions, just hit reply.
             </Text>
             <Text style={signoff}>
               Happy learning,
@@ -273,7 +273,7 @@ const container = { margin: '0 auto', maxWidth: '560px', backgroundColor: '#faf9
 const header = { padding: '28px 24px 20px', textAlign: 'center' as const };
 const brandName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', fontWeight: '700' as const, color: '#588157', margin: '0', lineHeight: '1' };
 
-// Hero — warm gold/cream instead of green success banner
+// Hero - warm gold/cream instead of green success banner
 const heroBanner = { backgroundColor: '#d4a373', padding: '28px 24px 24px', textAlign: 'center' as const };
 const heroHeading = { fontSize: '22px', fontWeight: '600' as const, color: '#faf9f6', margin: '0 0 8px', lineHeight: '1.3' };
 const heroSubtext = { fontSize: '15px', color: '#faf9f6', margin: '0', lineHeight: '1.5', opacity: '0.9' };
@@ -301,7 +301,7 @@ const upsellHeading = { fontSize: '18px', fontWeight: '600' as const, color: '#5
 const upsellText = { fontSize: '15px', lineHeight: '24px', color: '#2d2d2d', margin: '0', textAlign: 'center' as const };
 const upsellButton = { backgroundColor: '#d4a373', borderRadius: '10px', color: '#faf9f6', display: 'inline-block', fontSize: '14px', fontWeight: '600' as const, padding: '12px 28px', textDecoration: 'none' };
 
-// Tips, sign-off, footer — reuse from PurchaseConfirmation
+// Tips, sign-off, footer - reuse from PurchaseConfirmation
 const contentSection = { padding: '28px 32px 8px' };
 const text = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '0 0 16px' };
 const tipsContainer = { backgroundColor: '#f7f5f0', borderRadius: '12px', padding: '20px 8px', margin: '0 0 24px' };

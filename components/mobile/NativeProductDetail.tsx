@@ -273,7 +273,7 @@ export default function NativeProductDetail({
           ))}
         </div>
 
-        {/* Available on website link — Apple-compliant */}
+        {/* Available on website link - Apple-compliant */}
         <div
           style={{
             padding: '16px',

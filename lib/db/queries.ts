@@ -75,7 +75,7 @@ export async function getUserPurchases(clerkId: string, email?: string) {
     ))
     .orderBy(desc(orders.purchasedAt));
 
-  // Deduplicate by product ID — keep the order with the highest amountCents
+  // Deduplicate by product ID - keep the order with the highest amountCents
   // (so individual purchases aren't shadowed by $0 bundle-expansion orders)
   const bestByProduct = new Map<string, typeof allPurchases[0]>();
   for (const p of allPurchases) {
@@ -175,7 +175,7 @@ export async function getBundleUpgrades(purchasedProductIds: string[], purchased
       if (!purchasedProductIds.includes(otherBundle.id)) continue;
       const otherChildSlugs = BUNDLE_CONTENTS[otherBundle.slug] || [];
       if (!otherChildSlugs.some((s) => childSlugSet.has(s))) continue;
-      // User owns this sub-bundle — credit what they paid for it
+      // User owns this sub-bundle - credit what they paid for it
       const bundlePaid = purchasedAmountByProduct[otherBundle.id] || 0;
       if (bundlePaid > 0) amountAlreadyPaid += bundlePaid;
     }
@@ -292,7 +292,7 @@ export async function getProductReviews(productId: string) {
     comment: reviews.comment,
     createdAt: reviews.createdAt,
     updatedAt: reviews.updatedAt,
-    // Only extract the first name from the email — never expose full email
+    // Only extract the first name from the email - never expose full email
     displayName: sql<string>`initcap(split_part(split_part(${users.email}, '@', 1), '.', 1))`,
   })
     .from(reviews)

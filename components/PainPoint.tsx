@@ -9,7 +9,7 @@ export default function PainPoint() {
         <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
           <p className="text-lg leading-relaxed text-gray-700">
             You want your kids to be capable, confident, and ready for real
-            life &mdash; but between everything on your plate, structured lessons
+            life, but between everything on your plate, structured lessons
             feel impossible.
           </p>
           <p className="mt-4 text-lg font-medium leading-relaxed text-forest">

@@ -29,7 +29,7 @@ export default function FreeGuideCTA() {
           <div className="relative w-24 sm:w-32 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
             <Image
               src="/images/free-guide-cover.jpg"
-              alt="10 Life Skills Your Kids Can Learn This Week — free guide cover"
+              alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
               fill
               sizes="(max-width: 640px) 96px, 128px"
               className="object-cover"
@@ -43,7 +43,7 @@ export default function FreeGuideCTA() {
               Not ready to buy? Start here.
             </h3>
             <p className="text-cream/60 text-sm mb-4">
-              Grab our free guide — 10 real-world activities you can try this week. No prep, no planning.
+              Grab our free guide - 10 real-world activities you can try this week. No prep, no planning.
             </p>
             <EmailForm variant="dark" />
           </div>

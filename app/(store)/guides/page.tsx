@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://anywherelearning.co/guides',
   },
   openGraph: {
-    title: 'Resource Guides — Anywhere Learning',
+    title: 'Resource Guides | Anywhere Learning',
     description:
       'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
     url: 'https://anywherelearning.co/guides',
@@ -72,7 +72,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
               In-depth guides on the topics that matter most to homeschool and
-              worldschool families — backed by experience and research.
+              worldschool families, backed by experience and research.
             </p>
           </ScrollReveal>
         </div>

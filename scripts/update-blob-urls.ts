@@ -5,13 +5,13 @@ import { eq } from 'drizzle-orm';
 
 /**
  * Maps product slugs to their Vercel Blob file names.
- * Bundles are excluded — they don't have their own PDFs.
+ * Bundles are excluded - they don't have their own PDFs.
  * The lead magnet PDF is also excluded (not a product).
  *
  * Five "Real-world math" blob files (backyard-campout-planner,
  * farmers-market-challenge, garage-sale-math, party-planner-math,
  * road-trip-calculator) exist in Blob storage but don't have
- * corresponding product slugs in the database — they are skipped.
+ * corresponding product slugs in the database - they are skipped.
  */
 
 const BLOB_BASE_URL = process.env.BLOB_BASE_URL;
@@ -42,7 +42,7 @@ const blobMap: Record<string, string> = {
   'rube-goldberg-machine': 'Creativity anywhere Build a Rube Goldberg Machine.pdf',
   'survival-base': 'Creativity anywhere Build a Survival Base for an Imaginary Expedition.pdf',
   'imaginary-world': 'Creativity anywhere Build an imaginary world.pdf',
-  // 'creature-habitat' — PDF not yet uploaded to Blob storage
+  // 'creature-habitat' - PDF not yet uploaded to Blob storage
   'theme-park': 'Creativity anywhere Create a Theme Park or Adventure Course.pdf',
   'mini-movie': 'Creativity anywhere Create a mini movie,  stop-motion or radio drama.pdf',
   'invent-a-sport': 'Creativity anywhere Invent a new sport.pdf',

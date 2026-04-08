@@ -121,13 +121,13 @@ async function main() {
   for (const product of allProducts) {
     const filename = SLUG_TO_FILE[product.slug];
     if (!filename) {
-      // Bundle or product without a direct PDF file — skip silently
+      // Bundle or product without a direct PDF file - skip silently
       continue;
     }
 
     const filepath = `${ACTIVITIES_DIR}/${filename}`;
     if (!existsSync(filepath)) {
-      console.log(`MISS  ${product.slug} — file not found: ${filename}`);
+      console.log(`MISS  ${product.slug} - file not found: ${filename}`);
       errors++;
       continue;
     }
@@ -136,7 +136,7 @@ async function main() {
     const sizeMB = (stat.size / 1048576).toFixed(1);
 
     if (dryRun) {
-      console.log(`WOULD ${product.slug} (${sizeMB}MB) — ${filename}`);
+      console.log(`WOULD ${product.slug} (${sizeMB}MB) - ${filename}`);
       totalBytes += stat.size;
       uploaded++;
       continue;
@@ -166,7 +166,7 @@ async function main() {
         try {
           await del(product.blobUrl);
         } catch {
-          // Old blob may already be gone — non-critical
+          // Old blob may already be gone - non-critical
         }
       }
 

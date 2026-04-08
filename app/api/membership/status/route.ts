@@ -8,7 +8,7 @@ import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
  * Used by nav components to conditionally show "Library" vs "Membership" links.
  */
 export async function GET(req: NextRequest) {
-  // Rate limit: 30 req / 60s — lightweight read endpoint
+  // Rate limit: 30 req / 60s - lightweight read endpoint
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 

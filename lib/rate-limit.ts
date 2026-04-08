@@ -84,7 +84,7 @@ function getRedis(): Redis | null {
   const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
   if (!url || !token) {
-    console.warn('Upstash Redis env vars not set — using in-memory rate limiting (per-instance only)');
+    console.warn('Upstash Redis env vars not set - using in-memory rate limiting (per-instance only)');
     _redis = null;
     return null;
   }
@@ -103,7 +103,7 @@ type RateLimiterLike = Ratelimit | InMemoryRateLimiter;
 
 // ── Pre-built limiters for different sensitivity levels ──────────
 
-/** Strict: 5 requests per 60 seconds — for subscribe, contact forms */
+/** Strict: 5 requests per 60 seconds - for subscribe, contact forms */
 export function strictLimiter(): RateLimiterLike {
   const redis = getRedis();
   if (!redis) return _inMemoryStrict;
@@ -114,7 +114,7 @@ export function strictLimiter(): RateLimiterLike {
   });
 }
 
-/** Standard: 10 requests per 60 seconds — for checkout, billing */
+/** Standard: 10 requests per 60 seconds - for checkout, billing */
 export function standardLimiter(): RateLimiterLike {
   const redis = getRedis();
   if (!redis) return _inMemoryStandard;
@@ -125,7 +125,7 @@ export function standardLimiter(): RateLimiterLike {
   });
 }
 
-/** Relaxed: 30 requests per 60 seconds — for reads like downloads, reviews */
+/** Relaxed: 30 requests per 60 seconds - for reads like downloads, reviews */
 export function relaxedLimiter(): RateLimiterLike {
   const redis = getRedis();
   if (!redis) return _inMemoryRelaxed;

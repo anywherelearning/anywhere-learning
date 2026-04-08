@@ -28,7 +28,7 @@ export default function CartIcon() {
         <path d="M16 10a4 4 0 01-8 0" />
       </svg>
 
-      {/* Badge — only renders after hydration to avoid SSR mismatch */}
+      {/* Badge - only renders after hydration to avoid SSR mismatch */}
       {isMounted && itemCount > 0 && (
         <span className="absolute -top-0.5 -right-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-[11px] font-semibold text-white shadow-sm animate-cart-badge">
           {itemCount > 9 ? '9+' : itemCount}

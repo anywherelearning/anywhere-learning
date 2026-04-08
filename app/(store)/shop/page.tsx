@@ -113,7 +113,7 @@ export async function generateMetadata({
   };
 }
 
-// ── Category sections — shared source of truth ──
+// ── Category sections - shared source of truth ──
 import { CATEGORIES as categorySections } from "@/lib/categories";
 
 // ── Category → Bundle slug mapping ──
@@ -163,7 +163,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       ? await getProductsByCategory(category)
       : await getActiveProducts();
   } catch {
-    // DB not available — use fallback products
+    // DB not available - use fallback products
   }
 
   const products = allProducts.length > 0 ? allProducts : fallbackProducts;
@@ -438,7 +438,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         )}
 
         {/* ════════════════════════════════════════
-            ALL PACKS VIEW — curated sections
+            ALL PACKS VIEW - curated sections
         ════════════════════════════════════════ */}
         {isAllView && (
           <>
@@ -469,7 +469,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               </Suspense>
             </section>
 
-            {/* Category sections — always use fallback for complete catalog */}
+            {/* Category sections - always use fallback for complete catalog */}
             {categorySections.map((cat) => {
               const catProducts = fallbackProducts.filter(
                 (p) => p.category === cat.value && !p.isBundle,
@@ -493,7 +493,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         )}
 
         {/* ════════════════════════════════════════
-            SORTED ALL VIEW — flat grid when sorting
+            SORTED ALL VIEW - flat grid when sorting
         ════════════════════════════════════════ */}
         {isSortedAllView && (() => {
           const totalItems = filteredProducts.length;

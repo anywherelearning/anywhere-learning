@@ -1,4 +1,4 @@
-# ConvertKit (Kit) Setup Guide — Email Sequences
+# ConvertKit (Kit) Setup Guide - Email Sequences
 
 Step-by-step guide for setting up the Welcome and Post-Purchase email sequences in Kit for Anywhere Learning.
 
@@ -28,11 +28,11 @@ Go to **Grow > Subscribers > Tags** and create the following tags.
 | `cross-sell:real-world-bundle` | Buyer purchased creativity, life-skills, or AI pack | Recommend Real-World Skills Bundle ($34.99) |
 | `cross-sell:creativity-bundle` | Buyer purchased a real-world skills pack | Recommend Creativity Bundle ($32.99) |
 | `cross-sell:master-bundle` | Buyer purchased any individual pack (fallback) | Recommend Master Bundle ($89.99) |
-| *(no cross-sell tag)* | Buyer purchased the Master Bundle | Skip cross-sell — they have everything |
+| *(no cross-sell tag)* | Buyer purchased the Master Bundle | Skip cross-sell - they have everything |
 
 ### Product tags
 
-Tags like `product:master-bundle`, `product:spring-outdoor-pack`, etc. are created automatically per product purchased. You don't need to create these manually — Kit will create them on first use.
+Tags like `product:master-bundle`, `product:spring-outdoor-pack`, etc. are created automatically per product purchased. You don't need to create these manually - Kit will create them on first use.
 
 ---
 
@@ -54,10 +54,10 @@ Go to **Send > Sequences** and create a new sequence called **"Welcome Sequence"
 **To set up:**
 
 1. Click **+ New Sequence**, name it "Welcome Sequence"
-2. Use the **Text** template (plain text, not designed — these should feel personal)
+2. Use the **Text** template (plain text, not designed - these should feel personal)
 3. Paste the copy from each source file (everything below the `---` line)
 4. Set the delay between emails using the values above
-5. For Email 1, the delay is 0 — it sends immediately when the sequence starts
+5. For Email 1, the delay is 0 - it sends immediately when the sequence starts
 6. Replace `{{link}}` in Email 1 with the actual download link for the free guide
 7. Replace `{{blog_link}}` in Email 3 with `https://anywherelearning.co/blog`
 
@@ -78,14 +78,14 @@ Create another sequence called **"Post-Purchase Sequence"**.
 3. Paste the copy from each source file
 4. Set delays: Email 1 waits 2 days, Email 2 waits 5 more days (day 7 total), Email 3 waits 7 more days (day 14 total)
 
-**For Email 2 (cross-sell) — setting up tailored versions:**
+**For Email 2 (cross-sell) - setting up tailored versions:**
 
 The website automatically tags buyers with a `cross-sell:product-slug` tag. To send the right recommendation:
 
 **Option A (recommended): Use Kit's Visual Automation with conditional steps**
 1. In the Post-Purchase automation (see Section 3), after Email 1 finishes, add a **Condition** step that checks for the cross-sell tag
 2. Branch to a different email for each tag (see the table in `purchase-02-cross-sell.md`)
-3. Each email version is ready to paste — just use the one matching the tag
+3. Each email version is ready to paste - just use the one matching the tag
 
 **Option B (simpler): Use one generic email**
 Just paste the "Master Bundle (fallback)" version from `purchase-02-cross-sell.md`. It works for everyone and pitches the highest-value product.
@@ -176,7 +176,7 @@ Go to **Automate > Visual Automations** and create two automations.
 
 ### Before going live
 
-- [ ] **Set automations to new subscribers only.** When activating, Kit asks if you want to run for existing subscribers. Choose **"Only future subscribers"** — do not run retroactively.
+- [ ] **Set automations to new subscribers only.** When activating, Kit asks if you want to run for existing subscribers. Choose **"Only future subscribers"** - do not run retroactively.
 - [ ] **Test with a personal email.** Add yourself as a subscriber, apply the `lead` tag manually, and confirm Email 1 arrives immediately. Then apply `first-buyer` + `cross-sell:nature-bundle` and confirm you're removed from the Welcome Sequence and receive the correct cross-sell email.
 - [ ] **Check the sender identity.** Go to **Settings > Email** and verify:
   - **From name:** Amelie from Anywhere Learning
@@ -210,5 +210,5 @@ Removed from Welcome Sequence → Post-Purchase automation starts
         |
         v (if they buy again later)
 Repeat purchase → tagged "buyer" + "product:[slug]" + new cross-sell tag
-  (no new sequence — they've already been through Post-Purchase)
+  (no new sequence - they've already been through Post-Purchase)
 ```

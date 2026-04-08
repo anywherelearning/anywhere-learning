@@ -10,7 +10,7 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ fileId: string }> },
 ) {
-  // Rate limit: 30 req / 60s — blob streaming is resource-intensive
+  // Rate limit: 30 req / 60s - blob streaming is resource-intensive
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 
@@ -62,7 +62,7 @@ export async function GET(
 
   const isView = req.nextUrl.searchParams.get('view') === '1';
 
-  // Log download (don't await — fire-and-forget so it doesn't slow the response)
+  // Log download (don't await - fire-and-forget so it doesn't slow the response)
   db.insert(downloads).values({
     orderId: order[0].id,
     userId: user[0].id,
@@ -73,7 +73,7 @@ export async function GET(
   // For "view" mode: redirect straight to the Vercel Blob CDN URL.
   // Auth is already verified above, so the user earned access.
   // Blob URLs are long random strings (unguessable) and served from
-  // Vercel's edge CDN — much faster than proxying through our server.
+  // Vercel's edge CDN - much faster than proxying through our server.
   if (isView && product[0].blobUrl) {
     return NextResponse.redirect(product[0].blobUrl);
   }

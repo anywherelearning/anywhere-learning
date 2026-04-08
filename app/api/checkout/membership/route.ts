@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // SECURITY: Never trust the Origin header — it can be spoofed to redirect
+    // SECURITY: Never trust the Origin header - it can be spoofed to redirect
     // users to phishing sites after checkout. Only use our own configured URL.
     const origin = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
 

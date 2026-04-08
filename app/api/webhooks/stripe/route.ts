@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   if (!webhookSecret) {
-    console.error('STRIPE_WEBHOOK_SECRET is not set — cannot verify webhook signatures');
+    console.error('STRIPE_WEBHOOK_SECRET is not set - cannot verify webhook signatures');
     return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
   }
 

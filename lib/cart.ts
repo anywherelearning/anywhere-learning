@@ -85,7 +85,7 @@ export function saveCart(items: CartItem[]): void {
   try {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
   } catch {
-    // localStorage full or unavailable — cart works as session-only
+    // localStorage full or unavailable - cart works as session-only
   }
 }
 
@@ -116,11 +116,11 @@ export function cartTotalCents(items: CartItem[]): number {
   }, 0);
 }
 
-/** The Skills Map slug — given free as a bonus with any bundle purchase. */
+/** The Skills Map slug - given free as a bonus with any bundle purchase. */
 export const FREE_BONUS_SLUG = 'future-ready-skills-map';
 
 /**
- * Check if a product is already covered by the cart — either:
+ * Check if a product is already covered by the cart - either:
  * 1. The slug is explicitly in the cart, OR
  * 2. A bundle in the cart contains this individual product, OR
  * 3. Any bundle is in the cart and the slug is the free bonus (Skills Map), OR
@@ -305,7 +305,7 @@ export interface BundleUpsell {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// Build Your Own Bundle (BYOB) — tiered discounts on individual items
+// Build Your Own Bundle (BYOB) - tiered discounts on individual items
 // ═══════════════════════════════════════════════════════════════════
 
 export interface ByobTier {
@@ -352,7 +352,7 @@ export function cartTotalWithByob(items: CartItem[]): {
   if (!tier) return { subtotalCents, discountCents: 0, totalCents: subtotalCents, tier: null };
 
   // Round per-item (same as server/Stripe) to avoid 1-2 cent drift
-  // Exclude the free bonus (Skills Map) when a bundle is present — it's already $0
+  // Exclude the free bonus (Skills Map) when a bundle is present - it's already $0
   const hasBundle = items.some((i) => i.isBundle);
   const individualItems = items.filter((i) => !i.isBundle && !(hasBundle && i.slug === FREE_BONUS_SLUG));
   const multiplier = 1 - tier.discountPercent / 100;

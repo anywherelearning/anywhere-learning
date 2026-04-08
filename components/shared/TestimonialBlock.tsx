@@ -21,7 +21,7 @@ export default function TestimonialBlock({ testimonials }: TestimonialBlockProps
             &ldquo;{t.quote}&rdquo;
           </p>
           <footer className="mt-3 text-sm text-gray-500">
-            &mdash; {t.name}, {t.location}
+            - {t.name}, {t.location}
           </footer>
         </blockquote>
       ))}

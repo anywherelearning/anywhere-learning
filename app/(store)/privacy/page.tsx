@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             <div>
               <p>
                 At Anywhere Learning, your privacy matters to us. This policy explains what information we collect,
-                how we use it, and the choices you have. We keep things simple and transparent &mdash; no fine print tricks.
+                how we use it, and the choices you have. We keep things simple and transparent, no fine print tricks.
               </p>
             </div>
 
@@ -36,9 +36,9 @@ export default function PrivacyPage() {
               <h2 className="text-lg font-semibold text-gray-900 mb-3">What We Collect</h2>
               <p className="mb-3">When you use our site, we may collect:</p>
               <ul className="list-disc list-inside space-y-1.5 ml-2">
-                <li><span className="font-medium text-gray-700">Account information</span> &mdash; your name and email address when you create an account or make a purchase</li>
-                <li><span className="font-medium text-gray-700">Order information</span> &mdash; what you purchased, when, and your download history</li>
-                <li><span className="font-medium text-gray-700">Usage data</span> &mdash; pages you visit and how you interact with our site (collected anonymously via analytics)</li>
+                <li><span className="font-medium text-gray-700">Account information</span>: your name and email address when you create an account or make a purchase</li>
+                <li><span className="font-medium text-gray-700">Order information</span>: what you purchased, when, and your download history</li>
+                <li><span className="font-medium text-gray-700">Usage data</span>: pages you visit and how you interact with our site (collected anonymously via analytics)</li>
               </ul>
             </div>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Analytics</h2>
               <p>
-                We use Google Analytics to understand how visitors use our site &mdash; things like which
+                We use Google Analytics to understand how visitors use our site, things like which
                 pages are most popular and how people find us. This data is aggregated and anonymous.
                 We don&apos;t use it to identify individual visitors.
               </p>
@@ -94,11 +94,11 @@ export default function PrivacyPage() {
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Third-Party Services</h2>
               <p className="mb-3">We work with these trusted services to run our site:</p>
               <ul className="list-disc list-inside space-y-1.5 ml-2">
-                <li><span className="font-medium text-gray-700">Stripe</span> &mdash; payment processing</li>
-                <li><span className="font-medium text-gray-700">Clerk</span> &mdash; account authentication</li>
-                <li><span className="font-medium text-gray-700">ConvertKit (Kit)</span> &mdash; email marketing</li>
-                <li><span className="font-medium text-gray-700">Vercel</span> &mdash; website hosting</li>
-                <li><span className="font-medium text-gray-700">Google Analytics</span> &mdash; anonymous site usage data</li>
+                <li><span className="font-medium text-gray-700">Stripe</span>: payment processing</li>
+                <li><span className="font-medium text-gray-700">Clerk</span>: account authentication</li>
+                <li><span className="font-medium text-gray-700">ConvertKit (Kit)</span>: email marketing</li>
+                <li><span className="font-medium text-gray-700">Vercel</span>: website hosting</li>
+                <li><span className="font-medium text-gray-700">Google Analytics</span>: anonymous site usage data</li>
               </ul>
               <p className="mt-3">
                 Each service has its own privacy policy governing how they handle your data.

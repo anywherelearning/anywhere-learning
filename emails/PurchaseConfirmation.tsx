@@ -150,7 +150,7 @@ export default function PurchaseConfirmation({
             <Text style={text}>Hey there!</Text>
 
             <Text style={text}>
-              Your <strong>{isMultiple ? `${productList.length} activity packs` : productList[0]?.name || productName}</strong> {isSingle ? 'is' : 'are'} ready to download. Open on any device — phone, tablet, or laptop — and pick any activity to start.
+              Your <strong>{isMultiple ? `${productList.length} activity packs` : productList[0]?.name || productName}</strong> {isSingle ? 'is' : 'are'} ready to download. Open on any device - phone, tablet, or laptop - and pick any activity to start.
             </Text>
 
             <Section style={buttonContainer}>
@@ -208,7 +208,7 @@ export default function PurchaseConfirmation({
                 <Text style={codeText}>{referralCode}</Text>
               </Section>
               <Text style={referralSmall}>
-                Your friend enters this code at checkout. When they do, they save 15% — and you&apos;ll get a 15% off code for your next purchase, emailed straight to you.
+                Your friend enters this code at checkout. When they do, they save 15% - and you&apos;ll get a 15% off code for your next purchase, emailed straight to you.
               </Text>
             </Section>
           )}
@@ -216,7 +216,7 @@ export default function PurchaseConfirmation({
           {/* ── Sign-off ── */}
           <Section style={contentSection}>
             <Text style={text}>
-              If you have any questions, just hit reply — I&apos;m a real person.
+              If you have any questions, just hit reply - I&apos;m a real person.
             </Text>
             <Text style={signoff}>
               Happy learning,

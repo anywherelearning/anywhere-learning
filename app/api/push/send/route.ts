@@ -4,7 +4,7 @@ import { deviceTokens } from '@/lib/db/schema';
 
 /**
  * Send push notification to all registered devices.
- * Protected by PUSH_API_KEY — for admin/script use only.
+ * Protected by PUSH_API_KEY - for admin/script use only.
  *
  * Usage:
  *   curl -X POST https://anywherelearning.co/api/push/send \

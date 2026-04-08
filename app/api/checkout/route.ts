@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Cart is empty' }, { status: 400 });
     }
 
-    // Extract and validate email (optional — Stripe collects if not provided)
+    // Extract and validate email (optional - Stripe collects if not provided)
     const rawEmail = typeof body.email === 'string' ? body.email.trim() : '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let email = rawEmail && emailRegex.test(rawEmail) ? rawEmail : '';
@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
           }
         }
       } catch {
-        // Non-critical — proceed without email
+        // Non-critical - proceed without email
       }
     }
 
@@ -97,7 +97,7 @@ export async function POST(req: NextRequest) {
     // Reject if ANY price ID doesn't match a real, active product
     const invalidPriceIds = clientPriceIds.filter((id) => !verifiedPriceIds.has(id));
     if (invalidPriceIds.length > 0) {
-      console.error('Checkout rejected — unrecognised price IDs:', invalidPriceIds);
+      console.error('Checkout rejected - unrecognised price IDs:', invalidPriceIds);
       return NextResponse.json(
         { error: 'One or more products could not be found' },
         { status: 400 },
@@ -117,7 +117,7 @@ export async function POST(req: NextRequest) {
 
     const siteUrl = process.env.NEXT_PUBLIC_URL;
     if (!siteUrl) {
-      console.error('NEXT_PUBLIC_URL is not set — checkout cannot create valid redirect URLs');
+      console.error('NEXT_PUBLIC_URL is not set - checkout cannot create valid redirect URLs');
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
@@ -213,11 +213,11 @@ export async function POST(req: NextRequest) {
         }
       } catch (error) {
         console.error('Failed to calculate bundle credits:', error);
-        // Non-critical — proceed without credits
+        // Non-critical - proceed without credits
       }
     }
 
-    // Build line items — apply BYOB discount to individual items via price_data
+    // Build line items - apply BYOB discount to individual items via price_data
     const hasBundle = verifiedProducts.some((p) => p.isBundle);
     const lineItems: Array<{
       price?: string;
@@ -240,7 +240,7 @@ export async function POST(req: NextRequest) {
             currency: 'usd',
             product_data: {
               name: `${product.name} (FREE Bundle Bonus)`,
-              description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+              description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
               images: product.imageUrl
                 ? [`${siteUrl}${product.imageUrl}`]
                 : undefined,
@@ -252,7 +252,7 @@ export async function POST(req: NextRequest) {
         };
       }
       if (!product.isBundle && byobDiscount > 0) {
-        // BYOB-discounted individual item — use price_data with adjusted amount
+        // BYOB-discounted individual item - use price_data with adjusted amount
         const discountedAmount = Math.round(product.priceCents * (1 - byobDiscount / 100));
         return {
           price_data: {
@@ -269,7 +269,7 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         };
       }
-      // Bundle with upgrade credit — use price_data with adjusted amount
+      // Bundle with upgrade credit - use price_data with adjusted amount
       const credit = product.isBundle ? (bundleCredits[product.slug] || 0) : 0;
       if (credit > 0) {
         const upgradeAmount = Math.max(0, product.priceCents - credit);
@@ -277,7 +277,7 @@ export async function POST(req: NextRequest) {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: `${product.name} (Upgrade — you save ${formatCents(credit)})`,
+              name: `${product.name} (Upgrade, you save ${formatCents(credit)})`,
               images: product.imageUrl
                 ? [`${siteUrl}${product.imageUrl}`]
                 : undefined,
@@ -330,7 +330,7 @@ export async function POST(req: NextRequest) {
           }
         }
       } catch (error) {
-        // Non-critical — if the check fails, still offer the bonus
+        // Non-critical - if the check fails, still offer the bonus
         console.error('Failed to check past Skills Map ownership:', error);
       }
 
@@ -340,7 +340,7 @@ export async function POST(req: NextRequest) {
             currency: 'usd',
             product_data: {
               name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
-              description: 'A 42-page parent guide to the 10 skills that matter most — included free with your bundle.',
+              description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
               images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
             },
             unit_amount: 0,

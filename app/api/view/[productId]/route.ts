@@ -17,7 +17,7 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ productId: string }> },
 ) {
-  // Rate limit: 30 req / 60s — blob streaming is resource-intensive
+  // Rate limit: 30 req / 60s - blob streaming is resource-intensive
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 

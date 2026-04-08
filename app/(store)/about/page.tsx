@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "I'm Amelie — a teacher with 15 years in the classroom, a B.Ed, and a Master's in Education. I left to give my own kids what the school system couldn't. Anywhere Learning is what I built along the way.",
+    "I'm Amelie, a teacher with 15 years in the classroom, a B.Ed, and a Master's in Education. I left to give my own kids what the school system couldn't. Anywhere Learning is what I built along the way.",
   alternates: {
     canonical: "https://anywherelearning.co/about",
   },
@@ -30,7 +30,7 @@ const values = [
     ),
     title: "The world is the classroom",
     description:
-      "Kitchens, parks, airports, backyards — learning happens everywhere when you know what to look for.",
+      "Kitchens, parks, airports, backyards: learning happens everywhere when you know what to look for.",
   },
   {
     icon: (
@@ -43,7 +43,7 @@ const values = [
     ),
     title: "Together time, not screen time",
     description:
-      "Our activities are designed to be done together. No tablets, no apps — just you and your kids, hands-on.",
+      "Our activities are designed to be done together. No tablets, no apps, just you and your kids, hands-on.",
   },
   {
     icon: (
@@ -64,7 +64,7 @@ const values = [
     ),
     title: "Flexible by design",
     description:
-      "No schedules, no sequences. Use the packs however you want — at home, travelling, or in between.",
+      "No schedules, no sequences. Use the packs however you want, at home, travelling, or in between.",
   },
 ];
 
@@ -99,7 +99,7 @@ const profilePageLd = {
   mainEntity: {
     "@id": "https://anywherelearning.co/about#amelie",
   },
-  name: "About Amelie — Anywhere Learning",
+  name: "About Amelie | Anywhere Learning",
   url: "https://anywherelearning.co/about",
 };
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageLd) }}
       />
-      {/* Hero — personal, warm, sets the tone */}
+      {/* Hero - personal, warm, sets the tone */}
       <section className="relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
         <Image
           src="/about-hero-bg.jpg"
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The real story — inside the system (forest bg for color) */}
+      {/* The real story - inside the system (forest bg for color) */}
       <section className="bg-forest-section py-12 md:py-16 relative overflow-hidden">
         <div className="absolute top-10 right-[8%] w-64 h-64 rounded-full border border-white/[0.04]" aria-hidden="true" />
         <div className="absolute bottom-10 left-[5%] w-40 h-40 rounded-full border border-white/[0.03]" aria-hidden="true" />
@@ -176,7 +176,7 @@ export default function AboutPage() {
               that for my own kids.
             </p>
             <p>
-              What bothered me most wasn&apos;t the reading or the maths — schools
+              What bothered me most wasn&apos;t the reading or the maths. Schools
               can teach those. It was everything they couldn&apos;t teach. How to
               think critically. How to solve a real problem, not a textbook one.
               How to budget, cook a meal, navigate a city, have a conversation
@@ -187,7 +187,7 @@ export default function AboutPage() {
               The world is changing fast. AI is reshaping entire industries.
               The jobs our kids will do might not exist yet. And the school
               system is still running on a model designed for a world that
-              doesn&apos;t exist anymore — teaching compliance when what kids
+              doesn&apos;t exist anymore, teaching compliance when what kids
               actually need is curiosity, adaptability, and the confidence to
               figure things out on their own.
             </p>
@@ -195,33 +195,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The travel discovery — warm gold accent section */}
+      {/* The travel discovery - warm gold accent section */}
       <section className="bg-gold/10 py-10 md:py-14 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.08] to-transparent" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
               I needed a break. A real one. So I took a year-long leave of
-              absence, and our family hit the road — seven months of
+              absence, and our family hit the road. Seven months of
               travelling together. My kids were 12 and 9, and for the first
               time I was homeschooling them. No classroom. No system. Just us.
             </p>
             <p className="font-medium text-xl md:text-2xl font-display text-forest leading-snug">
               That trip changed everything. I saw what my kids had been
-              missing inside the system — and how endless their possibilities
+              missing inside the system, and how endless their possibilities
               were outside of it.
             </p>
             <p>
               It helped me make the decision I&apos;d been circling for years:
               leave the classroom for good and build something new. Something
               that would let me combine my endless creativity with what I
-              cared about most — my own children&apos;s education.
+              cared about most, my own children&apos;s education.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The pivot — becoming a homeschool parent */}
+      {/* The pivot - becoming a homeschool parent */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg mb-8">
@@ -237,11 +237,11 @@ export default function AboutPage() {
             The Leap
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-forest mb-6">
-            So I left the classroom — and brought learning home.
+            So I left the classroom and brought learning home.
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
-              I did what most former teachers do at first — I started with
+              I did what most former teachers do at first: I started with
               lesson plans and worksheets. Old habits. But bit by bit,
               creativity started taking more space. We swapped the worksheets
               for hands-on projects, real-life experiments, things that got
@@ -254,19 +254,19 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-800 font-medium text-xl md:text-2xl font-display text-forest leading-snug">
               The learning was already happening. It just didn&apos;t look
-              like school — and that was the whole point.
+              like school, and that was the whole point.
             </p>
             <p>
               I started creating simple activities that turned everyday
-              moments — a walk in the park, a trip to the grocery store, a
-              rainy afternoon — into meaningful learning experiences. No lesson
+              moments, a walk in the park, a trip to the grocery store, a
+              rainy afternoon, into meaningful learning experiences. No lesson
               plans. No grading. No prep. And my kids didn&apos;t just tolerate
               them. They asked for more.
             </p>
             <p>
               That&apos;s what became Anywhere Learning. Not a curriculum. Not a
               replacement for school. Just a collection of tools that help your
-              kids build real-world skills through real life — wherever you are.
+              kids build real-world skills through real life, wherever you are.
             </p>
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function AboutPage() {
               What I Believe
             </p>
             <h2 className="font-display text-3xl md:text-4xl text-forest">
-              Learning should fit your life — not the other way around.
+              Learning should fit your life, not the other way around.
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -315,7 +315,7 @@ export default function AboutPage() {
             Whatever your style, these fit right in.
           </h2>
           <p className="text-cream/70 text-lg mb-8 max-w-xl mx-auto">
-            I designed every pack to complement your philosophy — not replace it.
+            I designed every pack to complement your philosophy, not replace it.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {approaches.map((style) => (
@@ -342,7 +342,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA — warm sign-off */}
+      {/* CTA - warm sign-off */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
           <div className="relative w-full aspect-[4/3] max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg mb-8">

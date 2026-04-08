@@ -1,4 +1,4 @@
-/** Single source of truth for product categories — used by shop page, downloads, and filters. */
+/** Single source of truth for product categories - used by shop page, downloads, and filters. */
 
 export interface CategoryDef {
   value: string;
@@ -15,7 +15,7 @@ export const CATEGORIES: CategoryDef[] = [
     value: 'start-here',
     label: 'Start Here',
     description:
-      'The foundation for your learning journey — start with the big picture.',
+      'The foundation for your learning journey. Start with the big picture.',
   },
   {
     value: 'ai-literacy',
@@ -39,7 +39,7 @@ export const CATEGORIES: CategoryDef[] = [
     value: 'entrepreneurship',
     label: 'Entrepreneurship',
     description:
-      'Plan, launch, and run real projects — from lemonade stands to micro-businesses.',
+      'Plan, launch, and run real projects, from lemonade stands to micro-businesses.',
   },
   {
     value: 'outdoor-learning',
@@ -68,7 +68,7 @@ export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries([
   ['bundle', 'Bundle'],
 ]);
 
-/** Active pill color per category — used by both shop and downloads filters. */
+/** Active pill color per category - used by both shop and downloads filters. */
 export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   '': 'bg-forest text-cream shadow-sm',
   'all': 'bg-forest text-cream shadow-sm',

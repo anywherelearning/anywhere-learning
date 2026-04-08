@@ -13,7 +13,7 @@ export const metadata = {
 
 export default async function LibraryPage() {
   // On web, redirect to the existing downloads page
-  // (NativeRedirectGuard handles the reverse — web users won't normally reach this)
+  // (NativeRedirectGuard handles the reverse - web users won't normally reach this)
 
   let clerkId: string | null = null;
   try {
@@ -40,7 +40,7 @@ export default async function LibraryPage() {
   try {
     purchases = await getUserPurchases(clerkId, email);
   } catch {
-    // DB unavailable — show empty state
+    // DB unavailable - show empty state
   }
 
   const products = purchases.map((p) => ({

@@ -9,7 +9,7 @@ const approaches = [
 export default function TrustBadges() {
   return (
     <div className="max-w-xl mx-auto">
-      {/* Approach pills — subtle, inline */}
+      {/* Approach pills - subtle, inline */}
       <div className="flex flex-wrap justify-center gap-2">
         {approaches.map((a, i) => (
           <span key={a} className="flex items-center gap-1.5">
@@ -21,7 +21,7 @@ export default function TrustBadges() {
         ))}
       </div>
 
-      {/* Benefits — minimal, spaced */}
+      {/* Benefits - minimal, spaced */}
       <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-2">
         <span className="flex items-center gap-2 text-sm text-gray-400">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-forest/40" aria-hidden="true">

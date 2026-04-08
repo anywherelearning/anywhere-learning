@@ -8,7 +8,7 @@ const analyze = withBundleAnalyzer({
 const isDev = process.env.NODE_ENV === "development";
 
 const securityHeaders = [
-  // Prevent clickjacking — only allow our own site to frame pages (skip in dev for preview)
+  // Prevent clickjacking - only allow our own site to frame pages (skip in dev for preview)
   ...(isDev ? [] : [{ key: "X-Frame-Options", value: "SAMEORIGIN" }]),
   // Block MIME-type sniffing (e.g. serving JS disguised as an image)
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -18,7 +18,7 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
   // Restrict browser features the site doesn't need
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  // Content Security Policy — allow our own content + trusted third parties
+  // Content Security Policy - allow our own content + trusted third parties
   {
     key: "Content-Security-Policy",
     value: [

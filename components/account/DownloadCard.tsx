@@ -99,7 +99,7 @@ export default function DownloadCard({
               </p>
             </div>
 
-            {/* View + Download buttons — desktop (not for bundles) */}
+            {/* View + Download buttons - desktop (not for bundles) */}
             {!isBundle && (
               <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
                 <a
@@ -199,7 +199,7 @@ export default function DownloadCard({
         </div>
       )}
 
-      {/* Bundle note — individual packs listed separately */}
+      {/* Bundle note - individual packs listed separately */}
       {isBundle && (
         <p className="mt-3 pt-3 border-t border-gray-50 text-sm text-gray-400">
           Each pack in this bundle is listed separately in your downloads.

@@ -28,7 +28,7 @@ export default function SummaryBox({ text, heading = 'In short' }: SummaryBoxPro
             className="text-forest"
             aria-hidden="true"
           >
-            {/* Leaf / sprout icon — nature-aligned summary symbol */}
+            {/* Leaf / sprout icon - nature-aligned summary symbol */}
             <path d="M12 22V12" />
             <path d="M17 8c0 4-3.5 6-5 7.5" />
             <path d="M7 8c0 4 3.5 6 5 7.5" />
