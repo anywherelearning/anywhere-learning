@@ -425,6 +425,9 @@ export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
       for (const c of children) coveredChildren.add(c);
     }
 
+    // Skip if the cart already fully covers this bundle's children - no point upgrading
+    if (coveredChildren.size === childSlugs.length) continue;
+
     // Need at least 2 matching items OR children from bundles covering 2+ of the target's children
     if (matchingSlugs.length < 2 && coveredChildren.size < 2) continue;
     // Need at least something matching
