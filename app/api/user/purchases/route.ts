@@ -2,12 +2,13 @@ import { NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { users, orders, products } from '@/lib/db/schema';
-import { eq, and } from 'drizzle-orm';
+import { eq, and, inArray } from 'drizzle-orm';
 
 /**
  * GET /api/user/purchases
  * Returns the slugs of all products the signed-in user has purchased.
  * Used by the shop page to show "Purchased" badges.
+ * Includes partially_refunded orders (user still has access).
  */
 export async function GET() {
   const { userId: clerkId } = await auth();
@@ -30,7 +31,10 @@ export async function GET() {
       .select({ slug: products.slug })
       .from(orders)
       .innerJoin(products, eq(orders.productId, products.id))
-      .where(and(eq(orders.userId, user[0].id), eq(orders.status, 'completed')));
+      .where(and(
+        eq(orders.userId, user[0].id),
+        inArray(orders.status, ['completed', 'partially_refunded']),
+      ));
 
     const slugs = purchased.map((p) => p.slug);
     return NextResponse.json({ slugs });
