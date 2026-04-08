@@ -608,16 +608,35 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
   }
 
   const isFullRefund = charge.amount_captured === charge.amount_refunded;
-  const newStatus = isFullRefund ? 'refunded' : 'partially_refunded';
 
-  await db
-    .update(orders)
-    .set({ status: newStatus })
-    .where(eq(orders.stripeSessionId, session.id));
+  if (isFullRefund) {
+    // Full refund: mark ALL orders for this session as refunded
+    await db
+      .update(orders)
+      .set({ status: 'refunded' })
+      .where(eq(orders.stripeSessionId, session.id));
 
-  console.log(
-    `Orders for session ${session.id} marked as ${newStatus} (charge: ${charge.id})`,
-  );
+    console.log(
+      `All orders for session ${session.id} marked as refunded (charge: ${charge.id})`,
+    );
+  } else {
+    // Partial refund: only mark the session-level status, keep individual
+    // order access intact. Individual orders stay 'completed' so the buyer
+    // retains download access to non-refunded products.
+    await db
+      .update(orders)
+      .set({ status: 'partially_refunded' })
+      .where(
+        and(
+          eq(orders.stripeSessionId, session.id),
+          eq(orders.amountCents, 0), // Only mark $0 child orders (bundle children)
+        ),
+      );
+
+    console.log(
+      `Partial refund for session ${session.id} - paid orders kept as completed (charge: ${charge.id})`,
+    );
+  }
 }
 
 async function handleCheckoutExpired(session: Stripe.Checkout.Session) {

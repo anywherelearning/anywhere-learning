@@ -59,7 +59,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
 
     // ── SECURITY: Verify the success token matches (prevents session ID guessing) ──
     const storedToken = session.metadata?.success_token;
-    if (storedToken && storedToken !== token) return null;
+    if (!storedToken || storedToken !== token) return null;
 
     // ── SECURITY: Only show details for sessions created within the last hour ──
     const ONE_HOUR = 60 * 60;

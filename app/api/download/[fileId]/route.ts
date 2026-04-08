@@ -70,23 +70,23 @@ export async function GET(
     ipAddress: req.headers.get('x-forwarded-for') || 'unknown',
   }).catch(() => {});
 
-  // For "view" mode: redirect straight to the Vercel Blob CDN URL.
-  // Auth is already verified above, so the user earned access.
-  // Blob URLs are long random strings (unguessable) and served from
-  // Vercel's edge CDN - much faster than proxying through our server.
-  if (isView && product[0].blobUrl) {
-    return NextResponse.redirect(product[0].blobUrl);
-  }
-
-  // For downloads: stream through our server so we can set Content-Disposition
+  // Always stream through our server to keep Blob URLs hidden.
+  // Never redirect to the raw Blob URL - once exposed, it can be shared
+  // publicly and bypasses all auth permanently.
   try {
     const blobResponse = await streamBlobToResponse(product[0].blobUrl);
     const fileName = `${product[0].slug}.pdf`;
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/pdf',
-      'Content-Disposition': `attachment; filename="${fileName}"`,
     };
+
+    // View mode: display inline; download mode: trigger save dialog
+    if (isView) {
+      headers['Content-Disposition'] = `inline; filename="${fileName}"`;
+    } else {
+      headers['Content-Disposition'] = `attachment; filename="${fileName}"`;
+    }
 
     // Forward content-length so the browser shows a progress bar
     const contentLength = blobResponse.headers.get('content-length');
