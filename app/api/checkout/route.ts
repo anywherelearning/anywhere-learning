@@ -369,8 +369,8 @@ export async function POST(req: NextRequest) {
           bundle_upgrade_credits: JSON.stringify(bundleCredits),
         }),
       },
-      // Disable promo codes when BYOB discount is active to prevent stacking
-      ...(byobDiscount === 0 && { allow_promotion_codes: true }),
+      // Disable promo codes when BYOB discount or bundle upgrade credits are active to prevent stacking
+      ...(byobDiscount === 0 && Object.keys(bundleCredits).length === 0 && { allow_promotion_codes: true }),
     });
 
     return NextResponse.json({ url: session.url });

@@ -81,11 +81,19 @@ export default function AddToCartButton({
       imageUrl: imageUrl ?? null,
     };
 
-    // When adding a bundle, auto-remove individual items it covers
+    // When adding a bundle, auto-remove individual items AND smaller bundles it fully covers
     if (isBundle) {
       const childSlugs = BUNDLE_CONTENTS[slug] || [];
       const overlapping = items
-        .filter((i) => childSlugs.includes(i.slug))
+        .filter((i) => {
+          if (childSlugs.includes(i.slug)) return true;
+          // Also remove smaller bundles whose children are all covered by this bundle
+          if (i.isBundle && i.slug !== slug) {
+            const smallerChildren = BUNDLE_CONTENTS[i.slug] || [];
+            return smallerChildren.length > 0 && smallerChildren.every((c) => childSlugs.includes(c));
+          }
+          return false;
+        })
         .map((i) => i.slug);
       if (overlapping.length > 0) {
         swapBundle(overlapping, bundleItem);

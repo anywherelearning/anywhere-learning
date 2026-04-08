@@ -542,7 +542,13 @@ export default function CartDrawer() {
                   Preparing checkout...
                 </span>
               ) : (
-                `Checkout - ${formatPrice(byobTier ? byobTotalCents : totalCents)}`
+                `Checkout - ${formatPrice(
+                  (() => {
+                    const base = byobTier ? byobTotalCents : totalCents;
+                    const credit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
+                    return base - credit;
+                  })()
+                )}`
               )}
             </button>
             <button
