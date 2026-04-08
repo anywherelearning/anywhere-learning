@@ -368,9 +368,14 @@ export default function CartDrawer() {
                     Get the <span className="font-semibold">{upsell.bundle.name}</span> and save{' '}
                     <span className="font-semibold">{formatPrice(upsell.savingsCents)}</span>
                   </span>
+                ) : upsell.additionalCostCents <= 100 ? (
+                  <span>
+                    Upgrade to the <span className="font-semibold">{upsell.bundle.name}</span> for the same price
+                  </span>
                 ) : (
                   <span>
-                    Get all {upsell.totalChildCount} packs for{' '}
+                    Get all {upsell.totalChildCount} packs with the{' '}
+                    <span className="font-semibold">{upsell.bundle.name}</span> for{' '}
                     <span className="font-semibold">{formatPrice(upsell.additionalCostCents)} more</span>
                   </span>
                 )}
@@ -380,7 +385,7 @@ export default function CartDrawer() {
                 disabled={swappingBundle}
                 className="flex-shrink-0 bg-forest hover:bg-forest-dark text-cream text-xs font-semibold py-2 px-3.5 rounded-lg transition-colors disabled:opacity-60"
               >
-                {swappingBundle ? '...' : 'Switch'}
+                {swappingBundle ? '...' : 'Upgrade'}
               </button>
               <button
                 onClick={() => setDismissedUpsell(upsell.bundle.slug)}
