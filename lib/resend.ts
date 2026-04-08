@@ -19,6 +19,7 @@ export async function sendPurchaseEmail({
   referralCode,
   productImageUrl,
   products,
+  signInUrl,
 }: {
   to: string;
   productName: string;
@@ -26,6 +27,7 @@ export async function sendPurchaseEmail({
   referralCode?: string;
   productImageUrl?: string;
   products?: { name: string; imageUrl: string }[];
+  signInUrl?: string;
 }) {
   const resend = getResend();
   const count = products?.length || 1;
@@ -36,7 +38,7 @@ export async function sendPurchaseEmail({
     from: 'Anywhere Learning <orders@anywherelearning.co>',
     to,
     subject,
-    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl, products }),
+    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl, products, signInUrl }),
   });
 }
 

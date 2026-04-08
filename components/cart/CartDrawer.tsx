@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from './CartProvider';
+import CheckoutModal from './CheckoutModal';
 import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
-import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail, FREE_BONUS_SLUG } from '@/lib/cart';
+import { getBundleOverlaps, getBundleUpsell, saveCartEmail, FREE_BONUS_SLUG } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
@@ -25,12 +26,7 @@ export default function CartDrawer() {
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
-  const [cartEmail, setCartEmail] = useState('');
-  const [emailError, setEmailError] = useState<string | null>(null);
-  const [emailLoaded, setEmailLoaded] = useState(false);
-  const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [hasExistingAccount, setHasExistingAccount] = useState(false);
-  const [checkedEmail, setCheckedEmail] = useState('');
+  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [upgradeCredits, setUpgradeCredits] = useState<Record<string, { upgradePrice: number; totalCredit: number; ownedCount: number; totalCount: number }>>({});
   const focusTrapRef = useFocusTrap(isCartOpen);
 
@@ -62,26 +58,6 @@ export default function CartDrawer() {
     return () => { cancelled = true; };
   }, [isCartOpen, items]);
 
-  // Check if email belongs to an existing account (on blur)
-  async function checkEmailAccount(email: string) {
-    const trimmed = email.trim();
-    if (!trimmed || trimmed === checkedEmail || !EMAIL_REGEX.test(trimmed)) {
-      return;
-    }
-    setCheckedEmail(trimmed);
-    try {
-      const res = await fetch('/api/auth/check-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed }),
-      });
-      const data = await res.json();
-      setHasExistingAccount(!!data.hasAccount);
-    } catch {
-      setHasExistingAccount(false);
-    }
-  }
-
   // Lock body scroll when open
   useEffect(() => {
     if (isCartOpen) {
@@ -101,47 +77,10 @@ export default function CartDrawer() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [isCartOpen, closeCart]);
 
-  // Load persisted email on mount
-  useEffect(() => {
-    const saved = loadCartEmail();
-    if (saved) setCartEmail(saved);
-    setEmailLoaded(true);
-  }, []);
-
-  // Persist email to localStorage on change
-  useEffect(() => {
-    if (emailLoaded && cartEmail) {
-      saveCartEmail(cartEmail);
-    }
-  }, [cartEmail, emailLoaded]);
-
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function validateEmail(): boolean {
-    // Email is optional - only validate format if they entered something
-    if (cartEmail.trim() && !EMAIL_REGEX.test(cartEmail.trim())) {
-      setEmailError('Please enter a valid email address.');
-      return false;
-    }
-    setEmailError(null);
-    return true;
-  }
-
-  async function handleCheckout() {
+  function handleCheckout() {
     if (items.length === 0) return;
 
-    // If not signed in and haven't seen the login prompt yet, show it
-    if (!isSignedIn && !showLoginPrompt) {
-      // Validate email before showing prompt (if they entered one)
-      if (!validateEmail()) return;
-      setShowLoginPrompt(true);
-      return;
-    }
-
-    // Validate email before proceeding (guest checkout)
-    if (!isSignedIn && !validateEmail()) return;
-
-    // Guard: if any item is missing a price ID, show an error (don't silently remove)
+    // Guard: if any item is missing a price ID, show an error
     const invalid = items.filter((i) => !i.stripePriceId);
     if (invalid.length > 0) {
       setCheckoutError(
@@ -150,13 +89,28 @@ export default function CartDrawer() {
       return;
     }
 
+    // Signed-in users go straight to Stripe
+    if (isSignedIn) {
+      const email = clerkUser?.primaryEmailAddress?.emailAddress || '';
+      proceedToStripe(email);
+      return;
+    }
+
+    // Guests see the checkout modal
+    setShowCheckoutModal(true);
+  }
+
+  async function handleModalCheckout(email: string) {
+    setShowCheckoutModal(false);
+    await proceedToStripe(email);
+  }
+
+  async function proceedToStripe(email: string) {
     setCheckingOut(true);
     setCheckoutError(null);
 
-    // Use Clerk email if signed in, otherwise cart email
-    const checkoutEmail = isSignedIn
-      ? clerkUser?.primaryEmailAddress?.emailAddress || ''
-      : cartEmail.trim();
+    // Save email for cart abandonment tracking
+    if (email) saveCartEmail(email);
 
     try {
       const res = await fetch('/api/checkout', {
@@ -167,67 +121,7 @@ export default function CartDrawer() {
             stripePriceId: item.stripePriceId,
             slug: item.slug,
           })),
-          email: checkoutEmail,
-        }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        // In Capacitor: open Stripe checkout in external browser (reader model - no in-app purchase)
-        // On web: redirect normally
-        await openExternalBrowser(data.url);
-        if (isNative) {
-          setCheckingOut(false);
-          closeCart();
-        }
-      } else {
-        console.error('Checkout error:', data.error);
-        setCheckoutError('Hmm, something did not work. Give it another try!');
-        setCheckingOut(false);
-      }
-    } catch (error) {
-      console.error('Checkout failed:', error);
-      setCheckoutError('Could not connect. Check your internet and try again.');
-      setCheckingOut(false);
-    }
-  }
-
-  function handleGuestCheckout() {
-    // Continue as guest - proceed directly to Stripe
-    setShowLoginPrompt(false);
-    // Call handleCheckout again - this time showLoginPrompt is false but we've
-    // already shown it, so we need to bypass. Set a flag and proceed.
-    proceedToCheckout();
-  }
-
-  async function proceedToCheckout() {
-    if (items.length === 0) return;
-    if (!isSignedIn && !validateEmail()) return;
-
-    const invalid = items.filter((i) => !i.stripePriceId);
-    if (invalid.length > 0) {
-      setCheckoutError(
-        `${invalid.map((i) => i.name).join(', ')} ${invalid.length === 1 ? 'is' : 'are'} not available for purchase yet. Remove ${invalid.length === 1 ? 'it' : 'them'} to continue.`
-      );
-      return;
-    }
-
-    setCheckingOut(true);
-    setCheckoutError(null);
-
-    const checkoutEmail = isSignedIn
-      ? clerkUser?.primaryEmailAddress?.emailAddress || ''
-      : cartEmail.trim();
-
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: items.map((item) => ({
-            stripePriceId: item.stripePriceId,
-            slug: item.slug,
-          })),
-          email: checkoutEmail,
+          email,
         }),
       });
       const data = await res.json();
@@ -296,7 +190,18 @@ export default function CartDrawer() {
     }
   }
 
-  if (!isCartOpen) return null;
+  if (!isCartOpen && !showCheckoutModal) return null;
+
+  // If only the modal is open (cart was closed after modal opened), just render modal
+  if (!isCartOpen && showCheckoutModal) {
+    return (
+      <CheckoutModal
+        open={showCheckoutModal}
+        onClose={() => setShowCheckoutModal(false)}
+        onCheckout={handleModalCheckout}
+      />
+    );
+  }
 
   return (
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Shopping cart">
@@ -585,89 +490,13 @@ export default function CartDrawer() {
                 </div>
               );
             })()}
-            {/* Signed-in user indicator OR email field for guests */}
-            {isSignedIn ? (
+            {/* Signed-in user indicator */}
+            {isSignedIn && (
               <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">
                 <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Signed in as <span className="font-medium text-gray-700">{clerkUser?.primaryEmailAddress?.emailAddress}</span></span>
-              </div>
-            ) : (
-              <div className="mb-4">
-                <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">
-                  Email <span className="text-gray-400">(for your downloads)</span>
-                </label>
-                <input
-                  id="cart-email"
-                  type="email"
-                  placeholder="you@example.com"
-                  value={cartEmail}
-                  onChange={(e) => {
-                    setCartEmail(e.target.value);
-                    if (emailError) setEmailError(null);
-                    // Reset account detection if email changes
-                    if (hasExistingAccount) setHasExistingAccount(false);
-                  }}
-                  onBlur={() => checkEmailAccount(cartEmail)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      e.preventDefault();
-                      handleCheckout();
-                    }
-                  }}
-                  aria-describedby={emailError ? 'cart-email-error' : undefined}
-                  className={`w-full rounded-xl border bg-white px-4 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none transition-shadow focus:ring-2 focus:ring-forest/30 ${
-                    emailError ? 'border-red-300' : 'border-gray-200'
-                  }`}
-                  autoComplete="email"
-                />
-                {emailError && (
-                  <p id="cart-email-error" role="alert" className="mt-1 text-xs text-red-500">{emailError}</p>
-                )}
-                {/* Welcome back nudge for existing accounts */}
-                {hasExistingAccount && !emailError && (
-                  <div className="mt-2 flex items-center justify-between bg-forest/5 border border-forest/15 rounded-xl px-3.5 py-2.5 animate-fade-in">
-                    <span className="text-sm text-forest">
-                      Welcome back! Sign in for instant downloads.
-                    </span>
-                    <Link
-                      href="/sign-in?redirect_url=/shop?cart=open"
-                      onClick={closeCart}
-                      className="text-sm font-semibold text-forest hover:text-forest-dark transition-colors whitespace-nowrap ml-3"
-                    >
-                      Sign in
-                    </Link>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Login prompt - shown when guest clicks Checkout */}
-            {showLoginPrompt && !isSignedIn && (
-              <div className="mb-4 bg-forest/5 border border-forest/15 rounded-2xl p-4 animate-fade-in">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                  <span className="text-sm font-semibold text-forest">Sign in for instant access</span>
-                </div>
-                <p className="text-sm text-gray-600 mb-3">
-                  Your downloads will be ready immediately after purchase. No extra steps.
-                </p>
-                <Link
-                  href="/sign-in?redirect_url=/shop?cart=open"
-                  onClick={closeCart}
-                  className="block w-full bg-forest hover:bg-forest-dark text-cream text-sm font-semibold py-2.5 rounded-xl transition-colors text-center mb-2"
-                >
-                  Sign in or create account
-                </Link>
-                <button
-                  onClick={handleGuestCheckout}
-                  className="w-full text-sm text-gray-400 hover:text-forest transition-colors py-1.5"
-                >
-                  Continue as guest
-                </button>
               </div>
             )}
             {checkoutError && (
@@ -725,6 +554,13 @@ export default function CartDrawer() {
           </div>
         )}
       </div>
+
+      {/* Checkout modal for guests (sign-in or email) */}
+      <CheckoutModal
+        open={showCheckoutModal}
+        onClose={() => setShowCheckoutModal(false)}
+        onCheckout={handleModalCheckout}
+      />
     </div>
   );
 }

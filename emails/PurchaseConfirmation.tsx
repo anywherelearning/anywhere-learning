@@ -25,6 +25,7 @@ interface PurchaseConfirmationProps {
   referralCode?: string;
   productImageUrl?: string;
   products?: ProductItem[];
+  signInUrl?: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -33,6 +34,7 @@ PurchaseConfirmation.PreviewProps = {
   productName: 'Spring Outdoor Pack, Summer Outdoor Pack',
   downloadUrl: `${baseUrl}/account/downloads`,
   referralCode: 'REF-AMELIE-7X',
+  signInUrl: `${baseUrl}/account/downloads#__clerk_ticket=example_token`,
   products: [
     { name: 'Spring Outdoor Pack', imageUrl: '/static/spring-outdoor-pack.jpg' },
     { name: 'Summer Outdoor Pack', imageUrl: '/static/summer-outdoor-pack.jpg' },
@@ -45,6 +47,7 @@ export default function PurchaseConfirmation({
   referralCode = 'REF-AMELIE-7X',
   productImageUrl = '/static/spring-outdoor-pack.jpg',
   products,
+  signInUrl,
 }: PurchaseConfirmationProps) {
   // Build product list: use products array if provided, else fall back to single image
   const productList: ProductItem[] = products && products.length > 0
@@ -195,6 +198,26 @@ export default function PurchaseConfirmation({
             </Section>
           </Section>
 
+          {/* ── Account Section (guest buyers only) ── */}
+          {signInUrl && (
+            <Section style={accountSection}>
+              <Heading as="h2" style={accountHeading}>
+                Your account is ready
+              </Heading>
+              <Text style={accountText}>
+                We created an account for you so you can access your downloads anytime. No password needed - just click below to sign in.
+              </Text>
+              <Section style={buttonContainer}>
+                <Link href={signInUrl} style={accountButton}>
+                  Sign in to your account
+                </Link>
+              </Section>
+              <Text style={accountSmall}>
+                This link expires in 7 days. After that, use &quot;Forgot password&quot; on the sign-in page to set one up.
+              </Text>
+            </Section>
+          )}
+
           {/* ── Referral Section ── */}
           {referralCode && (
             <Section style={referralSection}>
@@ -277,6 +300,11 @@ const tipsContainer = { backgroundColor: '#f7f5f0', borderRadius: '12px', paddin
 const tipColumn = { textAlign: 'center' as const, width: '33.33%' };
 const tipIcon = { width: '32px', height: '32px', borderRadius: '8px', backgroundColor: '#588157', textAlign: 'center' as const, lineHeight: '32px' };
 const tipLabel = { fontSize: '12px', color: '#555555', margin: '0', lineHeight: '1.4', fontWeight: '500' as const };
+const accountSection = { backgroundColor: '#f7f5f0', padding: '28px 32px', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5' };
+const accountHeading = { fontSize: '18px', fontWeight: '600' as const, color: '#588157', margin: '0 0 8px', textAlign: 'center' as const };
+const accountText = { fontSize: '15px', lineHeight: '24px', color: '#2d2d2d', margin: '0 0 16px', textAlign: 'center' as const };
+const accountButton = { backgroundColor: '#ffffff', border: '2px solid #588157', borderRadius: '12px', color: '#588157', display: 'inline-block', fontSize: '15px', fontWeight: '600' as const, padding: '14px 32px', textDecoration: 'none' };
+const accountSmall = { fontSize: '13px', lineHeight: '20px', color: '#666666', textAlign: 'center' as const, margin: '16px 0 0' };
 const referralSection = { backgroundColor: '#f0f7f0', padding: '28px 32px', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5' };
 const referralHeading = { fontSize: '18px', fontWeight: '600' as const, color: '#588157', margin: '0 0 8px', textAlign: 'center' as const };
 const referralText = { fontSize: '15px', lineHeight: '24px', color: '#2d2d2d', margin: '0 0 16px', textAlign: 'center' as const };

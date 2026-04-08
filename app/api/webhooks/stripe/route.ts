@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { clerkClient } from '@clerk/nextjs/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { orders, users, products, subscriptions } from '@/lib/db/schema';
@@ -496,6 +497,49 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
       console.error('Failed to generate referral code:', error);
     }
 
+    // ── Auto-create Clerk account for guest buyers ───────────────────
+    let signInUrl: string | undefined;
+    const isGuestUser = user[0].clerkId.startsWith('pending_');
+    if (isGuestUser) {
+      try {
+        const clerk = await clerkClient();
+        // Check if a Clerk user with this email already exists
+        const existingClerkUsers = await clerk.users.getUserList({
+          emailAddress: [customerEmail],
+          limit: 1,
+        });
+        if (existingClerkUsers.data.length > 0) {
+          // Link existing Clerk user to our DB user
+          const clerkUser = existingClerkUsers.data[0];
+          await db
+            .update(users)
+            .set({ clerkId: clerkUser.id })
+            .where(eq(users.id, user[0].id));
+        } else {
+          // Create new Clerk user
+          const newClerkUser = await clerk.users.createUser({
+            emailAddress: [customerEmail],
+            skipPasswordRequirement: true,
+          });
+          await db
+            .update(users)
+            .set({ clerkId: newClerkUser.id })
+            .where(eq(users.id, user[0].id));
+
+          // Generate a one-time sign-in token for the magic link
+          const token = await clerk.signInTokens.createSignInToken({
+            userId: newClerkUser.id,
+            expiresInSeconds: 60 * 60 * 24 * 7, // 7 days
+          });
+          const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+          signInUrl = `${baseUrl}/account/downloads#__clerk_ticket=${token.token}`;
+        }
+      } catch (error) {
+        console.error('Failed to auto-create Clerk account:', error);
+        // Non-critical: purchase still works, user just needs to create account manually
+      }
+    }
+
     // Post-transaction: send email with all product names (non-critical)
     const skillsMapBonus = hasBundles ? ' + The Future-Ready Skills Map (FREE bonus!)' : '';
     const productNames = purchasedProducts.map((p) => p.name).join(', ') + skillsMapBonus;
@@ -512,6 +556,7 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
         downloadUrl: `${process.env.NEXT_PUBLIC_URL}/account/downloads`,
         referralCode,
         products: emailProducts,
+        signInUrl: isGuestUser ? signInUrl : undefined,
       });
     } catch (error) {
       console.error('Failed to send purchase email:', error);
