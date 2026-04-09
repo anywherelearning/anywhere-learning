@@ -150,7 +150,7 @@ export default function CheckoutModal({ open, onClose, onCheckout }: CheckoutMod
             <div className="flex justify-center [&_.cl-rootBox]:w-full [&_.cl-card]:shadow-none [&_.cl-card]:bg-transparent [&_.cl-footer]:!hidden">
               <SignIn
                 appearance={clerkAuthAppearance}
-                fallbackRedirectUrl=""
+                forceRedirectUrl="/shop?cart=open&checkout=1"
               />
             </div>
             <p className="text-sm text-center text-gray-500 mt-2">
@@ -176,7 +176,7 @@ export default function CheckoutModal({ open, onClose, onCheckout }: CheckoutMod
             <div className="flex justify-center [&_.cl-rootBox]:w-full [&_.cl-card]:shadow-none [&_.cl-card]:bg-transparent [&_.cl-footer]:!hidden">
               <SignUp
                 appearance={clerkAuthAppearance}
-                fallbackRedirectUrl=""
+                forceRedirectUrl="/shop?cart=open&checkout=1"
               />
             </div>
             <p className="text-sm text-center text-gray-500 mt-2">

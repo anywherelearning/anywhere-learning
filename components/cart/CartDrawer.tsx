@@ -77,6 +77,22 @@ export default function CartDrawer() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [isCartOpen, closeCart]);
 
+  // Auto-checkout after OAuth sign-in redirect (?checkout=1)
+  useEffect(() => {
+    if (!isCartOpen || !isSignedIn || items.length === 0) return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('checkout') === '1') {
+      // Clean up the URL param
+      const url = new URL(window.location.href);
+      url.searchParams.delete('checkout');
+      url.searchParams.delete('cart');
+      window.history.replaceState({}, '', url.pathname + url.search);
+      // Proceed to Stripe
+      const email = clerkUser?.primaryEmailAddress?.emailAddress || '';
+      proceedToStripe(email);
+    }
+  }, [isCartOpen, isSignedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+
   function handleCheckout() {
     if (items.length === 0) return;
 

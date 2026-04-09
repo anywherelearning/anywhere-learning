@@ -119,6 +119,7 @@ export default function CartProvider({ children }: { children: React.ReactNode }
       // Clean up the URL param without a reload
       const url = new URL(window.location.href);
       url.searchParams.delete('cart');
+      url.searchParams.delete('checkout');
       window.history.replaceState({}, '', url.pathname + url.search);
     }
   }, [isMounted]); // eslint-disable-line react-hooks/exhaustive-deps
