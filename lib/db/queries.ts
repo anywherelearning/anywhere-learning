@@ -71,7 +71,7 @@ export async function getUserPurchases(clerkId: string, email?: string) {
     .innerJoin(products, eq(orders.productId, products.id))
     .where(and(
       eq(orders.userId, user[0].id),
-      eq(orders.status, 'completed'),
+      inArray(orders.status, ['completed', 'partially_refunded']),
     ))
     .orderBy(desc(orders.purchasedAt));
 

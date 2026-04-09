@@ -453,7 +453,7 @@ export default function CartDrawer() {
             {(() => {
               const totalUpgradeCredit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
               const baseTotal = byobTier ? byobTotalCents : totalCents;
-              const adjustedTotal = baseTotal - totalUpgradeCredit;
+              const adjustedTotal = Math.max(0, baseTotal - totalUpgradeCredit);
 
               if (byobTier) {
                 return (
@@ -567,7 +567,7 @@ export default function CartDrawer() {
                   (() => {
                     const base = byobTier ? byobTotalCents : totalCents;
                     const credit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
-                    return base - credit;
+                    return Math.max(0, base - credit);
                   })()
                 )}`
               )}
