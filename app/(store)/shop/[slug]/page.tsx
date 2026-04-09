@@ -66,7 +66,7 @@ export async function generateMetadata({
   const suffix = categoryKeywords[product.category] || 'Homeschool Activities';
   return {
     title: `${product.name} | ${suffix}`,
-    description: `${product.shortDescription} No-prep digital guide for ages ${product.ageRange || '6-14'}. Instant download, use on any device.`,
+    description: `${product.shortDescription} No-prep digital guide for ages ${product.ageRange || '6-14'}. Instant download. Use on any device.`,
     alternates: {
       canonical: `https://anywherelearning.co/shop/${product.slug}`,
     },
@@ -258,7 +258,7 @@ export default async function ProductPage({
           </nav>
         </div>
 
-        {/* Product Detail — Two Columns */}
+        {/* Product Detail - Two Columns */}
         <section className="mx-auto max-w-6xl px-5 sm:px-8 py-8 sm:py-12">
           <div className="grid gap-8 lg:grid-cols-[55fr_45fr] lg:gap-12">
             {/* Left: Product Visual (sticky on desktop) */}
@@ -354,41 +354,55 @@ export default async function ProductPage({
                 </div>
               )}
 
-              {/* Buy section — under image, sticky on desktop */}
+              {/* Buy section - under image, sticky on desktop */}
               <div className="mt-4" id="buy-button">
-                {product.isBundle && (
+                {product.isBundle ? (
                   <BundleUpgradePrice
                     slug={product.slug}
                     stripePriceId={product.stripePriceId}
                     fullPriceCents={product.priceCents}
-                  />
-                )}
-                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                  {product.isBundle && (
-                    <div className="flex items-center justify-between mb-3">
-                      <PriceDisplay
+                  >
+                    <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                      <div className="flex items-center justify-between mb-3">
+                        <PriceDisplay
+                          priceCents={product.priceCents}
+                          compareAtPriceCents={product.compareAtPriceCents}
+                          size="sm"
+                        />
+                        <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
+                          BEST VALUE
+                        </span>
+                      </div>
+                      <AddToCartButton
+                        stripePriceId={product.stripePriceId}
+                        slug={product.slug}
+                        productName={product.name}
                         priceCents={product.priceCents}
-                        compareAtPriceCents={product.compareAtPriceCents}
-                        size="sm"
+                        category={product.category}
+                        isBundle={product.isBundle ?? false}
+                        imageUrl={product.imageUrl}
                       />
-                      <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
-                        BEST VALUE
-                      </span>
+                      <p className="text-xs text-gray-400 text-center mt-2">
+                        Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                      </p>
                     </div>
-                  )}
-                  <AddToCartButton
-                    stripePriceId={product.stripePriceId}
-                    slug={product.slug}
-                    productName={product.name}
-                    priceCents={product.priceCents}
-                    category={product.category}
-                    isBundle={product.isBundle ?? false}
-                    imageUrl={product.imageUrl}
-                  />
-                  <p className="text-xs text-gray-400 text-center mt-2">
-                    Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
-                  </p>
-                </div>
+                  </BundleUpgradePrice>
+                ) : (
+                  <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                    <AddToCartButton
+                      stripePriceId={product.stripePriceId}
+                      slug={product.slug}
+                      productName={product.name}
+                      priceCents={product.priceCents}
+                      category={product.category}
+                      isBundle={product.isBundle ?? false}
+                      imageUrl={product.imageUrl}
+                    />
+                    <p className="text-xs text-gray-400 text-center mt-2">
+                      Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 

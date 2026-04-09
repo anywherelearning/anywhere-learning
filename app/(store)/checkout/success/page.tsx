@@ -59,7 +59,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
 
     // ── SECURITY: Verify the success token matches (prevents session ID guessing) ──
     const storedToken = session.metadata?.success_token;
-    if (storedToken && storedToken !== token) return null;
+    if (!storedToken || storedToken !== token) return null;
 
     // ── SECURITY: Only show details for sessions created within the last hour ──
     const ONE_HOUR = 60 * 60;
@@ -75,7 +75,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
         }
       }
     } catch {
-      // Clerk auth may not be configured — continue with token + time-window guard
+      // Clerk auth may not be configured - continue with token + time-window guard
     }
 
     // Try price-ID lookup first (standard purchases)
@@ -205,7 +205,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               {purchasedProducts.length === 1
                 ? purchasedProducts[0].name
                 : `${purchasedProducts.length} activity guides`}{' '}
-              {purchasedProducts.length === 1 ? 'is' : 'are'} ready, open on
+              {purchasedProducts.length === 1 ? 'is' : 'are'} ready. Open on
               any device and try an activity today.
             </p>
           ) : (
@@ -329,7 +329,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   Bonus: The Future-Ready Skills Map
                 </h3>
                 <p className="text-xs text-gray-500 mt-0.5">
-                  A $9.99 parent guide, included free with your bundle. Find it in your downloads.
+                  A $9.99 parent guide - included free with your bundle. Find it in your downloads.
                 </p>
               </div>
             </div>
@@ -359,7 +359,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                 Open on any device
               </h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Phone, tablet, or laptop, no printing needed.
+                Phone, tablet, or laptop - no printing needed.
               </p>
             </div>
 
@@ -383,7 +383,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                 Pick any activity
               </h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                No order required, start wherever sounds fun.
+                No order required - start wherever sounds fun.
               </p>
             </div>
 
@@ -502,7 +502,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               Know a family who&apos;d love this?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
-              Share the love, they&apos;ll thank you later.
+              Share the love - they&apos;ll thank you later.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>

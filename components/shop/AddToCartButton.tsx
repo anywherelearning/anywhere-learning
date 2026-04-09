@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
-import { isCoveredByCart } from '@/lib/cart';
+import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
 import { usePurchased } from './PurchasedContext';
 
@@ -27,14 +27,14 @@ export default function AddToCartButton({
   imageUrl,
 }: AddToCartButtonProps) {
   const { isNative } = useCapacitor();
-  const { items, addItem, isInCart, openCart } = useCart();
+  const { items, addItem, isInCart, openCart, swapBundle } = useCart();
   const purchased = usePurchased();
   const [justAdded, setJustAdded] = useState(false);
 
   // Hide purchase buttons in native app (Apple compliance)
   if (isNative) return null;
 
-  // Already purchased — show confirmation instead of buy button
+  // Already purchased - show confirmation instead of buy button
   if (purchased.has(slug)) {
     return (
       <div className="block w-full bg-forest/10 text-forest font-semibold py-4 px-8 rounded-xl text-center text-lg">
@@ -71,7 +71,7 @@ export default function AddToCartButton({
       return;
     }
 
-    const added = addItem({
+    const bundleItem = {
       slug,
       name: productName,
       priceCents,
@@ -79,7 +79,31 @@ export default function AddToCartButton({
       category,
       isBundle,
       imageUrl: imageUrl ?? null,
-    });
+    };
+
+    // When adding a bundle, auto-remove individual items AND smaller bundles it fully covers
+    if (isBundle) {
+      const childSlugs = BUNDLE_CONTENTS[slug] || [];
+      const overlapping = items
+        .filter((i) => {
+          if (childSlugs.includes(i.slug)) return true;
+          // Also remove smaller bundles whose children are all covered by this bundle
+          if (i.isBundle && i.slug !== slug) {
+            const smallerChildren = BUNDLE_CONTENTS[i.slug] || [];
+            return smallerChildren.length > 0 && smallerChildren.every((c) => childSlugs.includes(c));
+          }
+          return false;
+        })
+        .map((i) => i.slug);
+      if (overlapping.length > 0) {
+        swapBundle(overlapping, bundleItem);
+        setJustAdded(true);
+        setTimeout(() => setJustAdded(false), 1500);
+        return;
+      }
+    }
+
+    const added = addItem(bundleItem);
 
     if (added) {
       setJustAdded(true);
@@ -110,7 +134,7 @@ export default function AddToCartButton({
             In Your Cart
           </span>
         ) : (
-          `Get This, ${formatPrice(priceCents)}`
+          `Get This - ${formatPrice(priceCents)}`
         )}
       </span>
     </button>
