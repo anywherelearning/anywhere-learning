@@ -11,7 +11,6 @@ export interface BundleChild {
   name: string;
   slug: string;
   imageUrl: string | null;
-  blobUrl: string;
   category: string;
 }
 
@@ -26,7 +25,6 @@ export interface DownloadCardProps {
   ageRange: string | null;
   activityCount: number | null;
   isBundle: boolean;
-  blobUrl: string;
   showReviewPrompt: boolean;
   bundleChildren?: BundleChild[];
 }
@@ -54,7 +52,6 @@ export default function DownloadCard({
   ageRange,
   activityCount,
   isBundle,
-  blobUrl,
   showReviewPrompt,
   bundleChildren,
 }: DownloadCardProps) {
@@ -115,7 +112,7 @@ export default function DownloadCard({
             {!isBundle && (
               <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
                 <a
-                  href={`https://docs.google.com/gview?url=${encodeURIComponent(blobUrl)}&embedded=true`}
+                  href={`/api/download/${productId}?view=1`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 font-medium py-2.5 px-4 rounded-xl transition-all text-sm border border-forest/20 text-forest hover:bg-forest/5"
@@ -170,7 +167,7 @@ export default function DownloadCard({
       {!isBundle && (
         <div className="sm:hidden flex gap-2 mt-3">
           <a
-            href={`https://docs.google.com/gview?url=${encodeURIComponent(blobUrl)}&embedded=true`}
+            href={`/api/download/${productId}?view=1`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 font-medium py-3 rounded-xl transition-all text-sm border border-forest/20 text-forest hover:bg-forest/5"
@@ -262,7 +259,7 @@ export default function DownloadCard({
                   {/* View + Download */}
                   <div className="flex items-center gap-1.5 flex-shrink-0">
                     <a
-                      href={`https://docs.google.com/gview?url=${encodeURIComponent(child.blobUrl)}&embedded=true`}
+                      href={`/api/download/${child.productId}?view=1`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-forest/20 text-forest hover:bg-forest/5 transition-colors"

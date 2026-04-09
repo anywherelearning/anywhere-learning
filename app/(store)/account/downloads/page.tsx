@@ -203,7 +203,20 @@ export default async function DownloadsPage() {
 
       {/* ── Downloads list ── */}
       <div className="mt-8">
-        <DownloadList purchases={purchases} />
+        <DownloadList purchases={purchases.map(({ order, product }) => ({
+          order,
+          product: {
+            id: product.id,
+            name: product.name,
+            slug: product.slug,
+            shortDescription: product.shortDescription,
+            imageUrl: product.imageUrl,
+            category: product.category,
+            ageRange: product.ageRange,
+            activityCount: product.activityCount,
+            isBundle: product.isBundle,
+          },
+        }))} />
       </div>
 
       {/* ── Bundle upgrade suggestions ── */}
