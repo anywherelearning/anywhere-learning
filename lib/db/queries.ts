@@ -95,7 +95,6 @@ const crossSellMap: Record<string, string[]> = {
   'creativity-anywhere': ['outdoor-learning', 'communication-writing'],
   'ai-literacy': ['planning-problem-solving', 'communication-writing'],
   'real-world-math': ['entrepreneurship', 'outdoor-learning'],
-  'real-world-relevance': ['real-world-math', 'planning-problem-solving'],
   'communication-writing': ['creativity-anywhere', 'entrepreneurship'],
   'entrepreneurship': ['real-world-math', 'planning-problem-solving'],
   'planning-problem-solving': ['entrepreneurship', 'real-world-math'],

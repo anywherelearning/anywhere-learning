@@ -61,10 +61,9 @@ export const CATEGORIES: CategoryDef[] = [
   },
 ];
 
-/** Quick lookup: category value → label. Includes 'bundle' and 'real-world-relevance'. */
+/** Quick lookup: category value → label. Includes 'bundle'. */
 export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries([
   ...CATEGORIES.map((c) => [c.value, c.label]),
-  ['real-world-relevance', 'Real-World Skills'],
   ['bundle', 'Bundle'],
 ]);
 
