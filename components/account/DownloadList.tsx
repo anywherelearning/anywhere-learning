@@ -58,8 +58,11 @@ const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   'bundle': LayersIcon,
 };
 
+const PER_PAGE = 10;
+
 export default function DownloadList({ purchases }: DownloadListProps) {
   const [filter, setFilter] = useState('all');
+  const [page, setPage] = useState(1);
 
   // Build category list: All → Start Here → Bundles → rest alphabetical by label
   const categories = useMemo(() => {
@@ -89,6 +92,9 @@ export default function DownloadList({ purchases }: DownloadListProps) {
     if (filter === 'all') return purchases;
     return purchases.filter((p) => p.product.category === filter);
   }, [purchases, filter]);
+
+  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const showFilters = purchases.length >= 3 && categories.length > 2;
 
@@ -133,7 +139,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                 key={cat}
                 role="tab"
                 aria-selected={isActive}
-                onClick={() => setFilter(cat)}
+                onClick={() => { setFilter(cat); setPage(1); }}
                 className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
                   isActive
                     ? activeColor
@@ -141,7 +147,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                 }`}
               >
                 <Icon className="w-4 h-4" />
-                {cat === 'all' ? 'All Packs' : (CATEGORY_LABELS[cat] || cat)}
+                {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
                 <span className={`text-xs ${isActive ? 'opacity-75' : 'text-gray-400'}`}>
                   ({count})
                 </span>
@@ -153,7 +159,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
 
       {/* Download cards */}
       <div className="space-y-3">
-        {filtered.map((p) => {
+        {paginated.map((p) => {
           const daysSincePurchase = Date.now() - new Date(p.order.purchasedAt).getTime();
           return (
             <DownloadCard
@@ -175,9 +181,38 @@ export default function DownloadList({ purchases }: DownloadListProps) {
         })}
       </div>
 
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-3 mt-8">
+          <button
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page === 1}
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            Previous
+          </button>
+          <span className="text-sm text-gray-500">
+            {page} of {totalPages}
+          </span>
+          <button
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
+          >
+            Next
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+      )}
+
       {filtered.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-400">No packs in this category.</p>
+          <p className="text-gray-400">No guides in this category.</p>
         </div>
       )}
     </div>
