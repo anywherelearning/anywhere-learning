@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import DownloadCard from './DownloadCard';
 import { CATEGORIES, CATEGORY_LABELS, CATEGORY_ACTIVE_COLORS } from '@/lib/categories';
+import { BUNDLE_CONTENTS } from '@/lib/cart';
 import {
   SparklesIcon,
   LeafIcon,
@@ -96,6 +97,15 @@ export default function DownloadList({ purchases }: DownloadListProps) {
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
+  // Build slug → purchase lookup for bundle children
+  const purchaseBySlug = useMemo(() => {
+    const map: Record<string, Purchase> = {};
+    for (const p of purchases) {
+      map[p.product.slug] = p;
+    }
+    return map;
+  }, [purchases]);
+
   const showFilters = purchases.length >= 3 && categories.length > 2;
 
   if (purchases.length === 0) {
@@ -161,6 +171,20 @@ export default function DownloadList({ purchases }: DownloadListProps) {
       <div className="space-y-3">
         {paginated.map((p) => {
           const daysSincePurchase = Date.now() - new Date(p.order.purchasedAt).getTime();
+          // For bundles, resolve child products from purchases
+          const bundleChildren = p.product.isBundle
+            ? (BUNDLE_CONTENTS[p.product.slug] || [])
+                .map((slug) => purchaseBySlug[slug])
+                .filter(Boolean)
+                .map((child) => ({
+                  productId: child.product.id,
+                  name: child.product.name,
+                  slug: child.product.slug,
+                  imageUrl: child.product.imageUrl,
+                  blobUrl: child.product.blobUrl,
+                  category: child.product.category,
+                }))
+            : undefined;
           return (
             <DownloadCard
               key={`${p.order.id}-${p.product.id}`}
@@ -176,6 +200,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
               isBundle={p.product.isBundle}
               blobUrl={p.product.blobUrl}
               showReviewPrompt={daysSincePurchase > SEVEN_DAYS_MS}
+              bundleChildren={bundleChildren}
             />
           );
         })}
