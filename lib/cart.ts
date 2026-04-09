@@ -254,7 +254,7 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     name: 'Outdoor & Nature Mega Bundle',
     priceCents: 4199,
     compareAtPriceCents: 5593,
-    stripePriceId: 'price_1TFcTQAMzOBftCntWFHd28Bt',
+    stripePriceId: 'price_1TIVzrAMzOBftCntORiPbt2P',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-outdoor.jpg',
     activityCount: null,
