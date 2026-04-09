@@ -110,7 +110,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'The kitchen is already a classroom' },
       { type: 'paragraph', text: 'You don\u2019t need to add \u201ckitchen learning\u201d to your schedule. You just need to notice what\u2019s already there. Every time your kid measures flour, reads a recipe, or asks why onions make you cry, that\u2019s learning. Real, meaningful, lasting learning.' },
       { type: 'paragraph', text: 'So tonight, when you\u2019re making dinner, invite them in. Not as students. As partners. And watch what happens.' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
+      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
       { type: 'cta', text: 'Not sure where to start? Our free guide gives you 10 life skills your kids can learn this week: no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What subjects can kids learn in the kitchen?', answer: 'Maths (measuring, fractions, doubling recipes), science (why bread rises, how heat changes food), literacy (reading recipes, following instructions), geography (where ingredients come from), and economics (budgeting a shop). It\u2019s all already there.' },
@@ -122,7 +122,7 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'teach-kids-about-money'],
     recommendedProduct: 'kitchen-math-challenge',
-    recommendedBundle: 'real-world-math-bundle',
+    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'nature-walks-science',
@@ -152,6 +152,7 @@ const posts: BlogPost[] = [
         'Signs of life: tracks, nests, nibbled leaves, spider webs',
       ]},
       { type: 'pull-quote', text: 'You don\u2019t need a microscope to do science. You need a curious kid and an open door.' },
+      { type: 'product-callout', slug: 'nature-journal-walks', pinned: true },
       { type: 'heading', level: 2, text: 'What to bring (almost nothing)' },
       { type: 'list', ordered: false, items: [
         'A small notebook or nature journal',
@@ -161,11 +162,11 @@ const posts: BlogPost[] = [
         'That\u2019s it. Really.',
       ]},
       { type: 'paragraph', text: 'The less you bring, the more they notice. When kids don\u2019t have devices to distract them, they start paying attention to the world around them. That shift, from consuming to observing, is where the magic happens.' },
-      { type: 'product-callout', slug: 'nature-journal-walks' },
       { type: 'heading', level: 2, text: 'Questions beat answers' },
       { type: 'paragraph', text: 'When your child asks \u201cwhy are leaves green?\u201d, resist the urge to explain chlorophyll immediately. Instead, ask back: \u201cWhat do you think? Are all leaves green? What about in autumn?\u201d Let them sit with the question. That discomfort, that itch to know, is where real learning lives.' },
       { type: 'paragraph', text: 'You don\u2019t have to be a science teacher. You just have to be willing to say \u201cI don\u2019t know, let\u2019s find out together.\u201d That sentence is more powerful than any textbook explanation, because it models curiosity. It shows your kids that not knowing is the start of [real-world learning](/blog/real-world-learning-guide), not the end of it.' },
       { type: 'tip', title: 'Try This', text: 'Keep a \u201cwonder journal.\u201d Every time your kid asks a question on a walk that you can\u2019t answer, write it down. Then look it up together later. You\u2019ll be amazed how many genuine research projects grow from a simple walk.' },
+      { type: 'product-callout', slug: 'nature-walk-task-cards', pinned: true },
       { type: 'heading', level: 2, text: 'Seasonal ideas to keep it fresh' },
       { type: 'list', ordered: false, items: [
         'Spring: follow a flower from bud to bloom over several weeks',
@@ -176,8 +177,8 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What about bad weather?' },
       { type: 'paragraph', text: 'Go anyway. Some of our best nature walks have been in the rain. Worms come out. Puddles form. The light changes. Everything smells different. Kids don\u2019t melt in the rain, and neither do you. Dress for it and embrace it.' },
       { type: 'paragraph', text: 'The Scandinavians have a saying: \u201cThere\u2019s no bad weather, only bad clothing.\u201d They\u2019re right. And the kids who grow up exploring in all conditions develop resilience that no indoor lesson can teach.' },
-      { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle' },
-      { type: 'cta', text: 'Nature walks are just the beginning. Our free guide has 10 life skills your kids can practise this week: outdoors, in the kitchen, or on the go.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle', pinned: true },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I teach science on a nature walk if I\u2019m not a science person?', answer: 'You don\u2019t need to know the answers. Just ask questions alongside your child: \u201cWhy do you think that happened?\u201d and \u201cLet\u2019s find out together.\u201d Modelling curiosity is more valuable than having all the facts.' },
         { question: 'What age is best for nature walk learning?', answer: 'Any age. Toddlers can observe and collect. Primary-age children can classify and compare. Older kids can hypothesise, research, and record. The walk stays the same, the depth of engagement grows with the child.' },
@@ -455,7 +456,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The best scavenger hunts end in questions, not answers. \u201cWe found this weird insect, what is it?\u201d becomes the evening\u2019s research project. \u201cWhy do these two trees lose their leaves at different times?\u201d becomes a genuine scientific enquiry.' },
       { type: 'paragraph', text: 'That\u2019s the difference between a scavenger hunt that fills 20 minutes and one that sparks a week of curiosity. The checklist is just the starting point.' },
       { type: 'bundle-callout', slug: 'seasonal-bundle' },
-      { type: 'cta', text: 'Want a simple list of skills like these that your kids can practise this week? Our free guide has ten: no scavenger hunt required.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What age are scavenger hunts suitable for?', answer: 'Ages 3 to 13+. For younger children, keep items simple and visual (\u201cfind something soft\u201d). For older kids, add scientific thinking (\u201cfind three different seed dispersal methods\u201d). The same hunt can work for mixed ages with tiered expectations.' },
         { question: 'How do I make a scavenger hunt educational?', answer: 'Ask children to do more than just find items. Have them compare, sort, sketch, measure, or explain what they see. A hunt that asks \u201cwhy is this here?\u201d or \u201chow is this different from that?\u201d turns observation into genuine scientific thinking.' },
@@ -493,6 +494,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: '2. Managing money' },
       { type: 'paragraph', text: 'Understanding that money is earned, limited, and involves trade-offs. This doesn\u2019t require an allowance system; it just requires conversations. \u201cWe have $50 for groceries. What should we prioritise?\u201d' },
       { type: 'paragraph', text: 'By 12, they should understand saving, spending, the concept of budgeting, and why things cost what they cost. Even better: give them a real budget for something: a birthday party, a camping trip\u2019s snack supply, and let them manage it.' },
+      { type: 'product-callout', slug: 'budget-challenge', pinned: true },
       { type: 'heading', level: 2, text: '3. Doing laundry (start to finish)' },
       { type: 'paragraph', text: 'Sorting, loading, choosing the right settings, hanging or folding, and putting it away. It\u2019s boring. It\u2019s repetitive. It\u2019s exactly the kind of responsibility that builds self-sufficiency. Most kids can handle the full cycle by age 8 or 9.' },
       { type: 'tip', title: 'Start with their own clothes', text: 'Don\u2019t ask them to do the family\u2019s laundry; ask them to be responsible for their own. Ownership changes everything. When it\u2019s their favourite shirt that comes out wrinkled, they learn to fold faster than any lesson could teach.' },
@@ -503,7 +505,6 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: '5. Having a conversation with an adult' },
       { type: 'paragraph', text: 'Making eye contact, asking questions, responding to questions with more than one word. This isn\u2019t about being polite (though that helps). It\u2019s about being able to advocate for yourself, ask for help, and connect with humans across age gaps.' },
       { type: 'paragraph', text: 'Homeschooled kids often get this naturally because they\u2019re around adults more. Lean into it. Let them order their own food, ask the librarian for help, chat with the neighbour about their garden.' },
-      { type: 'product-callout', slug: 'garage-sale-math' },
       { type: 'heading', level: 2, text: '6. Basic first aid' },
       { type: 'paragraph', text: 'Cleaning a wound, applying a bandage, knowing when to get help. What to do if someone is choking, bleeding, or unconscious. This is genuine life-or-death knowledge, and it\u2019s shockingly absent from most kids\u2019 education.' },
       { type: 'paragraph', text: 'Start with the basics: how to clean a cut and put on a bandage (age 5+). Move to recognising when something needs more than a bandage (age 7+). By 10\u201312, they should know recovery position, how to call emergency services and give clear information, and what not to do (don\u2019t move someone who might have a spinal injury, don\u2019t remove an object stuck in a wound). Practice matters, roleplay these scenarios so they\u2019re not learning for the first time in a real emergency.' },
@@ -524,7 +525,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The trick is simple: let them do things. Stop doing everything for them. The parent who always cooks dinner, always navigates, always orders at the restaurant. That parent is stealing practice from their kid. Not on purpose, but the effect is the same.' },
       { type: 'paragraph', text: 'Pick one skill this week. Step back. Let them struggle with it. Help when they ask, but not before. That struggle is the lesson.' },
       { type: 'tip', title: 'One skill per month', text: 'Don\u2019t try to tackle all 10 at once. Pick one skill per month and weave it into daily life. By the end of the year, your child will be noticeably more capable and confident, and you\u2019ll have 10 fewer things on your plate.' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
+      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
       { type: 'cta', text: 'These ten skills don\u2019t stop at twelve. Grab our free guide for practical ways to start building them, at any age.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'At what age should kids start learning life skills?', answer: 'From the moment they can participate. A 3-year-old can help stir batter. A 5-year-old can set the table. A 7-year-old can use a tape measure. Life skills aren\u2019t age-gated; just adjust the complexity.' },
@@ -533,8 +534,8 @@ const posts: BlogPost[] = [
       ] },
     ],
     relatedSlugs: ['real-world-learning-guide', 'kitchen-learning-lab', 'what-kids-should-know-before-18'],
-    recommendedProduct: 'garage-sale-math',
-    recommendedBundle: 'real-world-math-bundle',
+    recommendedProduct: 'budget-challenge',
+    recommendedBundle: 'real-world-mega-bundle',
   },
 
   {
@@ -593,7 +594,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Budgeting a real amount over time, earning money through small ventures, understanding interest (even basic), comparing value across products, and beginning to understand that adults make financial trade-offs every day.' },
       { type: 'tip', title: 'Talk about your own money', text: 'Kids learn the most from seeing how you handle finances. You don\u2019t need to share your salary, but let them see you compare prices, say no to something you want, or choose to save for something bigger. Your behaviour teaches more than any lesson.' },
       { type: 'paragraph', text: 'Financial literacy isn\u2019t a subject. It\u2019s a skill built through hundreds of small, [real-world moments](/blog/real-world-learning-guide). Stop waiting for the right time to teach it. Start this week: at the shops, at the dinner table, at the market.' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
+      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
       { type: 'cta', text: 'Money is just one piece. Our free guide covers ten real-world skills your kids can start building this week: no allowance chart needed.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'At what age should I start teaching kids about money?', answer: 'As early as 4\u20135, with coin recognition and the concept that things cost money. By 7\u20138, they can compare prices and save for a goal. By 10\u201312, they\u2019re ready for real budgeting, earning, and understanding value vs. price.' },
@@ -605,7 +606,7 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['real-world-learning-guide', 'life-skills-before-12', 'kitchen-learning-lab'],
     recommendedProduct: 'smart-shopper',
-    recommendedBundle: 'real-world-math-bundle',
+    recommendedBundle: 'real-world-mega-bundle',
   },
 
   {
@@ -744,7 +745,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Use AI tools as part of your learning when they\u2019re helpful. Question them when they\u2019re not. Let your kids see you being a thoughtful, critical user, not a passive consumer.' },
       { type: 'tip', title: 'Make it a habit', text: 'Every time your family uses an AI tool, ask three questions: What did it get right? What did it get wrong? Could we have done this better ourselves? This simple habit builds critical thinking muscles that will serve your kids for decades.' },
       { type: 'bundle-callout', slug: 'ai-digital-bundle' },
-      { type: 'cta', text: 'AI is just one skill your kids need for the future. Our free guide covers ten more: practical, no-screen activities you can try this week.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'At what age should kids start learning about AI?', answer: 'From around age 5, children can begin with simple pattern-sorting games and the concept that computers follow instructions. By 8\u201310, they can explore chatbots with supervision. By 11+, they\u2019re ready for critical analysis and ethics conversations.' },
         { question: 'Is it safe for kids to use AI chatbots?', answer: 'With supervision and clear boundaries, yes. Set family rules about what information to share (never personal details), always verify AI answers against real sources, and treat it as a tool to question rather than a source to trust blindly.' },
@@ -778,7 +778,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Engineering challenges' },
       { type: 'heading', level: 3, text: '1. Build a bridge that holds weight' },
       { type: 'paragraph', text: 'Find a small gap (between two rocks, two logs, or the edges of a path) and build a bridge using only natural materials: sticks, stones, bark, vine. Test it by placing progressively heavier objects on top. This teaches load distribution, structural design, and iterative testing.' },
-      { type: 'image', src: '/images/outdoor-stem-engineering.jpeg', alt: 'Two kids digging and building in the sand surrounded by tropical plants' },
+      { type: 'image', src: '/images/outdoor-stem-engineering.jpeg', alt: 'Two kids digging and building in the sand surrounded by tropical plants', caption: 'No instructions, no kit. Just sand, sticks, and a problem to solve.' },
       { type: 'heading', level: 3, text: '2. Create a water channel system' },
       { type: 'paragraph', text: 'In sand, dirt, or mud, dig channels to move water from one point to another. Add dams, reservoirs, and junctions. This is fluid dynamics and civil engineering in miniature. Kids will naturally discover slope, pressure, and the path of least resistance.' },
       { type: 'heading', level: 3, text: '3. Design a shelter for a toy' },
@@ -791,7 +791,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Physics and earth science' },
       { type: 'heading', level: 3, text: '6. Map the shadows' },
       { type: 'paragraph', text: 'Place a stick in the ground and trace its shadow every hour. By the end of the day, you\u2019ve demonstrated Earth\u2019s rotation, the concept of sundials, and directional orientation. Ask: \u201cWhy does the shadow move? Where will it be in an hour?\u201d This is astronomy with a stick.' },
-      { type: 'image', src: '/images/outdoor-stem-physics.jpeg', alt: 'Girl pointing at a mountain stream with rocks and flowing water' },
+      { type: 'image', src: '/images/outdoor-stem-physics.jpeg', alt: 'Girl pointing at a mountain stream with rocks and flowing water', caption: 'Flowing water, rocks, and gravity. Physics class is in session.' },
       { type: 'heading', level: 3, text: '7. Erosion experiment' },
       { type: 'paragraph', text: 'Build two small hills, one bare dirt, one covered with leaves/grass. Pour water over both. Which one washes away faster? This is a visual, tactile demonstration of erosion and why plant roots matter. Connect it to real-world deforestation and landslides.' },
       { type: 'heading', level: 3, text: '8. Sound mapping' },
@@ -804,7 +804,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Biology and ecology' },
       { type: 'heading', level: 3, text: '11. Mini ecosystem in a jar' },
       { type: 'paragraph', text: 'Collect soil, small plants, and a bit of water in a clear jar. Seal it and observe for weeks. You\u2019ve created a closed ecosystem: water cycles, photosynthesis, and decomposition happening in miniature. Ask: \u201cWhere does the water go? Why don\u2019t the plants run out of air?\u201d' },
-      { type: 'image', src: '/images/outdoor-stem-biology.jpeg', alt: 'Girl discovering a purple starfish under a rock on a coastal shore' },
+      { type: 'image', src: '/images/outdoor-stem-biology.jpeg', alt: 'Girl discovering a purple starfish under a rock on a coastal shore', caption: 'She found this under a rock. That\'s field biology — no lab required.' },
       { type: 'heading', level: 3, text: '12. Invertebrate census' },
       { type: 'paragraph', text: 'Mark out a one-metre square of ground. Count and identify every living creature you can find: insects, worms, spiders, snails. This is real field biology. Record your findings and compare different habitats (grass vs. under a log vs. near water).' },
       { type: 'heading', level: 3, text: '13. Seed dispersal investigation' },
@@ -820,7 +820,7 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'Keep a field notebook', text: 'Give each child a small notebook dedicated to outdoor experiments. Sketches, measurements, observations, questions. Over time, this becomes a portfolio of genuine scientific thinking, and it\u2019s far more impressive than any worksheet.' },
       { type: 'paragraph', text: 'You don\u2019t need a lab or a curriculum to teach STEM. You need [a garden, a creek, a park, or a trail](/blog/nature-walks-science), or [a kitchen counter](/blog/kitchen-learning-lab). The materials are free. The learning is real. And the best part? Your kids will ask to do it again tomorrow.' },
       { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle' },
-      { type: 'cta', text: 'STEM doesn\u2019t have to mean worksheets. Our free guide has ten hands-on skills your kids can build outside, in the kitchen, or on the road.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is outdoor STEM learning?', answer: 'It\u2019s using nature and outdoor environments to explore science, technology, engineering, and maths concepts through hands-on challenges. Think building bridges from sticks, tracking shadows, or investigating ecosystems, real problem-solving with real materials.' },
         { question: 'Do I need special equipment for outdoor STEM activities?', answer: 'No. Most outdoor STEM challenges use materials you find in nature: sticks, rocks, mud, water, leaves, and soil. A magnifying glass and a notebook are helpful extras, but they\u2019re not required. The outdoors is the equipment.' },
@@ -1235,7 +1235,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'This isn\u2019t about bashing teachers, I was one, and most teachers are doing incredible work within a broken system. It\u2019s about recognising that the system itself was built for a world that no longer exists. One-size-fits-all instruction can\u2019t develop the individualised, complex skills our kids actually need.' },
       { type: 'pull-quote', text: 'The world doesn\u2019t give you a multiple-choice test. It gives you a messy, open-ended problem and asks you to figure it out.' },
       { type: 'heading', level: 2, text: 'The 5 pillars of real-world learning' },
-      { type: 'paragraph', text: 'After years of doing this with my own kids, and creating activity guides to help other families do the same, I\u2019ve found that real-world learning falls into five natural categories. Most everyday activities touch several of them at once.' },
+      { type: 'paragraph', text: 'Since starting this journey with my own kids, and creating activity guides to help other families do the same, I\u2019ve found that real-world learning falls into five natural categories. Most everyday activities touch several of them at once.' },
       { type: 'heading', level: 3, text: '1. Life skills and practical knowledge' },
       { type: 'paragraph', text: 'Cooking, cleaning, basic repairs, laundry, gardening, first aid. These aren\u2019t chores to be endured; they\u2019re foundational life competencies that most schools never touch. A child who can plan a meal, follow a recipe, and clean up afterwards has practised reading, maths, chemistry, planning, and responsibility in a single afternoon.' },
       { type: 'tip', title: 'Try This', text: 'Give your child full ownership of one family meal per week. Not just cooking, planning, budgeting, shopping, cooking, and serving. By age 10, most kids can handle this with minimal supervision. By 12, they can do it independently.' },
@@ -1251,12 +1251,12 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '5. Critical thinking and problem-solving' },
       { type: 'paragraph', text: 'This is the big one. The ability to encounter an unfamiliar problem and work through it without someone handing you the steps. Real life is full of these moments: the recipe that goes wrong, the travel plan that falls apart, the project that doesn\u2019t work the first time.' },
       { type: 'paragraph', text: 'The key is to resist solving problems for your kids. When something goes wrong, ask: \u201cWhat do you think we should do?\u201d Then wait. The discomfort of not knowing is where critical thinking develops. If you always rescue them, they never build that muscle.' },
-      { type: 'product-callout', slug: 'clothing-swap-thrift-math' },
       { type: 'heading', level: 2, text: 'How to start real-world learning at home' },
       { type: 'paragraph', text: 'You don\u2019t need to overhaul your entire homeschool. Start with one shift: instead of looking for activities that teach a subject, look for moments in your day that already contain learning.' },
       { type: 'heading', level: 3, text: 'In the kitchen' },
       { type: 'paragraph', text: 'Cooking is a [maths and science lesson in disguise](/blog/kitchen-learning-lab). Measuring, fractions, temperature, chemical reactions (why does bread rise?), nutrition, and budgeting all live here. Let your kids cook with you, not as a special activity, but as a regular part of life.' },
       { type: 'image', src: '/images/real-world-kitchen.jpeg', alt: 'Julia carefully spooning muffin batter into a tin, measuring, pouring, and following a recipe on her own', caption: 'Muffin batter into the tin. That\u2019s fractions, motor skills, and following a procedure, no worksheet required.' },
+      { type: 'product-callout', slug: 'kitchen-math-challenge', pinned: true },
       { type: 'heading', level: 3, text: 'At the shops' },
       { type: 'paragraph', text: 'Give them a budget and a shopping list. Let them compare prices, calculate totals, and make spending decisions. Older kids can research unit pricing, compare brands, and track spending over time. This is more financial education than most adults received in 12 years of school.' },
       { type: 'heading', level: 3, text: 'In your neighbourhood' },
@@ -1286,8 +1286,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'You don\u2019t need a plan. You don\u2019t need a curriculum. You don\u2019t even need to change your schedule. Just start noticing the learning that\u2019s already happening in your daily life, and naming it.' },
       { type: 'paragraph', text: 'My kids do the dishes, help cook dinner, navigate us through unfamiliar towns, order food in a second language, and research things they\u2019re curious about. None of that shows up on a report card. All of it is learning. You don\u2019t need to label it, just notice it happening.' },
       { type: 'paragraph', text: 'Once you start seeing it, you can\u2019t unsee it. Learning is everywhere. It always was.' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Creativity doesn\u2019t need a craft kit. Our free guide is full of open-ended activities that let kids lead: no instructions, no cleanup stress.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'bundle-callout', slug: 'real-world-mega-bundle', pinned: true },
+      { type: 'cta', text: 'Want to try real-world learning this week? Our free guide gives you 10 life skills activities your kids can start today — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is real-world learning in homeschooling?', answer: 'Real-world learning is an approach to home education that uses everyday experiences as the primary teaching tool. Instead of following a textbook curriculum, families learn through cooking, shopping, building, traveling, and exploring, drawing out natural connections to maths, science, literacy, and life skills from activities that already happen in daily life.' },
         { question: 'What subjects can you teach through real-world learning?', answer: 'Virtually all of them. Cooking covers maths, science, and literacy. Shopping teaches economics and financial literacy. Nature walks teach biology, ecology, and scientific observation. Travel covers geography, history, and cultural studies. Building and making cover engineering, physics, and design thinking. The key difference is that subjects aren\u2019t taught in isolation, they emerge naturally from meaningful activities.' },
@@ -1298,7 +1298,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['kitchen-learning-lab', 'life-skills-before-12'],
-    recommendedProduct: 'clothing-swap-thrift-math',
+    recommendedProduct: 'kitchen-math-challenge',
     recommendedBundle: 'real-world-mega-bundle',
   },
   {
@@ -1792,8 +1792,8 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Two kids laughing and playing in a pile of golden autumn leaves',
     content: [
       { type: 'summary', text: 'Nature-based learning is an approach to education where children learn science, maths, language, and life skills through direct outdoor experiences, forest walks, garden projects, weather observation, and wildlife study, rather than textbooks. It works year-round for homeschool and worldschool families, requires no curriculum, and builds observation, critical thinking, and environmental literacy naturally.' },
-      { type: 'paragraph', text: 'Last autumn, my daughter crouched on a trail near our house and spent ten minutes staring at a bright orange mushroom growing out of a rotting log. \u201cWhy is it growing there and not over here?\u201d she asked. We talked about decomposition, spores, moisture, shade. She looked it up that evening because she wanted to know more. No assignment. No grade. Just genuine curiosity sparked by being outside with her eyes open.' },
-      { type: 'paragraph', text: 'A few months later in Costa Rica, we saw humpback whales jumping beside our boat. That was spectacular, but the mushroom on the trail behind our house? That taught her just as much. Nature-based learning doesn\u2019t need a plane ticket. It needs a kid who\u2019s allowed to stop and look.' },
+      { type: 'paragraph', text: 'Last autumn in Florida, my daughter crouched on a trail and spent ten minutes watching a turtle sunning itself on a log by the water. \u201cWhy is it just sitting there? Isn\u2019t it scared of us?\u201d she asked. We talked about cold-blooded animals, why turtles bask, how their shells work, what they eat. She looked it up that evening because she wanted to know more. No assignment. No grade. Just genuine curiosity sparked by being outside with her eyes open.' },
+      { type: 'paragraph', text: 'A few months later in Costa Rica, we saw humpback whales jumping beside our boat. That was spectacular, but the turtle on the trail in Florida? That taught her just as much. Nature-based learning doesn\u2019t need a dramatic moment. It needs a kid who\u2019s allowed to stop and look.' },
       { type: 'paragraph', text: 'This is what nature-based learning actually looks like. Not a Pinterest-perfect nature table. Not a colour-coded lesson plan about ecosystems. It\u2019s messy, unplanned, and driven entirely by what your kids notice when they\u2019re outdoors long enough to start paying attention.' },
       { type: 'paragraph', text: 'This guide covers everything I\u2019ve learned, from our backyard in Canada to seven months of travel across Central America. Whether you\u2019re exploring your neighbourhood park or a national park in another country, the approach is the same.' },
 
@@ -2097,7 +2097,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'So if your kid wants to make a video about Minecraft builds or a poster about their favourite animal or a podcast reviewing snacks, let them. The topic is less important than the process. And the process of creating something from scratch teaches more than any textbook chapter ever will.' },
 
       { type: 'bundle-callout', slug: 'creativity-mega-bundle' },
-      { type: 'cta', text: 'Want practical ideas for getting kids creating, not just consuming? Grab our free guide for no-prep activities that spark real-world learning.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What age can kids start making their own videos or content?', answer: 'By 6 or 7, most kids can narrate over drawings or create simple presentations. By 9 or 10, they can research, script, and present with more independence. Our kids started their research videos around 9 and 12. But even a 4-year-old \u201cexplaining\u201d their drawing to a phone camera is practising communication skills.' },
         { question: 'Should I let my kid have a YouTube channel?', answer: 'That\u2019s a family decision about privacy and online safety. Our kids\u2019 videos are on a family channel with limited visibility. The learning benefits come from the making, not the platform. A video saved to a family Google Drive teaches the same skills as one posted publicly.' },
@@ -2238,7 +2237,6 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'The Fact-Check Challenge', text: 'Pick a topic your child is interested in and ask an AI five questions about it. Then have your child fact-check every answer using books, trusted websites, or their own knowledge. Keep score: how many did the AI get right? Partially right? Completely wrong? This one activity builds more AI literacy than any course.' },
       { type: 'product-callout', slug: 'ai-basics' },
       { type: 'bundle-callout', slug: 'ai-digital-bundle' },
-      { type: 'cta', text: 'Want hands-on activities that build AI literacy and critical thinking? Our free guide is a great starting point.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What are the most common AI myths kids believe?', answer: 'The biggest ones are that AI thinks like a human, that AI is always correct, that AI will take over all jobs, and that AI is too complex for kids to understand. All of these are misconceptions that can be addressed through simple conversations and hands-on experiments.' },
         { question: 'Is AI actually dangerous for children?', answer: 'AI itself isn\u2019t inherently dangerous, but using it without critical thinking skills can be. The risk isn\u2019t the technology; it\u2019s passive, uncritical consumption. Kids who learn to question AI outputs, verify information, and understand limitations are well-equipped to use it safely.' },
@@ -2298,7 +2296,6 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'The Prompt Upgrade Game', text: 'Take turns writing the worst, most vague prompt you can think of. Then work together to upgrade it step by step, watching how the AI\u2019s response improves each time. Kids love this because it\u2019s competitive, silly, and they get to see the direct impact of better thinking. Plus, the before-and-after comparison makes the skill immediately obvious.' },
       { type: 'product-callout', slug: 'prompt-like-a-coach' },
       { type: 'bundle-callout', slug: 'ai-digital-bundle' },
-      { type: 'cta', text: 'Looking for hands-on activities that build critical thinking and digital skills? Start with our free guide.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Isn\u2019t teaching kids to use AI just teaching them to cheat?', answer: 'Only if they\u2019re using it to avoid thinking. Teaching kids to prompt well does the opposite, it requires them to think more clearly about what they want to know. A child who can write a specific, thoughtful prompt is demonstrating exactly the kind of critical thinking we want to develop. The tool isn\u2019t the problem; passive use is.' },
         { question: 'What age is appropriate for kids to start using AI tools?', answer: 'From around age 6, kids can play verbal prompting games without any technology. By 9\u201310, they can use AI tools with a parent present. By 12+, most kids are ready for more independent use with the habit of verifying outputs. Every child is different, readiness matters more than age.' },
@@ -2371,7 +2368,6 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'The Three-Source Rule', text: 'Before your child believes or shares any interesting claim, have them check it against three independent sources. If three unrelated, reliable sources agree, it\u2019s probably solid. If they can only find it on one website or social media post, it\u2019s worth questioning. This simple habit prevents most misinformation from taking root.' },
       { type: 'product-callout', slug: 'deepfake-spotter' },
       { type: 'bundle-callout', slug: 'ai-digital-bundle' },
-      { type: 'cta', text: 'Ready to build critical thinking skills as a family? Our free guide has practical activities you can start this week.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is media literacy and why does it matter for kids?', answer: 'Media literacy is the ability to critically evaluate information from any media source, digital or traditional. It matters because children are exposed to more content than any previous generation, including AI-generated material, targeted advertising, and algorithmically curated feeds. Without these skills, kids are passive consumers of whatever they encounter.' },
         { question: 'At what age should I start teaching media literacy?', answer: 'From age 5, children can learn to spot the difference between ads and entertainment. By 8\u201310, they can evaluate sources and distinguish fact from opinion. By 11+, they\u2019re ready to understand algorithms, AI-generated content, and more sophisticated manipulation techniques. Start with whatever is age-appropriate and build from there.' },
@@ -3257,7 +3253,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Homeschooling is parent-directed education at home, ranging from structured curricula to flexible approaches. Unschooling is child-led learning with no formal curriculum, and children learn through play, exploration, and following their natural interests. Most families fall somewhere on the spectrum between the two.' },
       { type: 'paragraph', text: 'When I tell people we homeschool, about half of them ask: "So... is that like unschooling?" And the other half have never heard the word. Both groups are confused. Fair enough; the line between homeschooling and unschooling is genuinely blurry, and most families end up somewhere in the middle.' },
-      { type: 'paragraph', text: 'Here\'s the clearest comparison I can offer, based on four years of doing both, sometimes in the same week.' },
+      { type: 'paragraph', text: 'Here\'s the clearest comparison I can offer, based on our experience doing both, sometimes in the same week.' },
       { type: 'heading', level: 2, text: 'What each approach actually means' },
       { type: 'heading', level: 3, text: 'Homeschooling (structured end)' },
       { type: 'paragraph', text: 'The parent selects materials, sets goals, and directs the learning. This can look like a full curriculum (textbooks, workbooks, scheduled lessons), a Charlotte Mason approach (living books, nature study, narration), or a hybrid where you pick and choose. The parent decides what to teach and roughly when.' },
@@ -3426,7 +3422,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'The best homeschool approaches for non-teacher parents are those that leverage everyday life, natural curiosity, and readily available resources rather than requiring formal teaching skills. Real-world learning, unit studies, and Charlotte Mason consistently rank highest for parent satisfaction and child engagement among families without education backgrounds.' },
       { type: 'paragraph', text: 'The number one thing I hear from parents considering homeschooling is: "But I\'m not a teacher." Neither am I, not anymore. I have a teaching degree collecting dust, and I can tell you: almost nothing I learned in teacher training applies to educating my own two kids at home. Different context, different relationship, different everything.' },
-      { type: 'paragraph', text: 'So here are seven approaches ranked by how well they work for parents who don\'t have (or don\'t want to use) a teaching background. This ranking is based on four years of personal experience, hundreds of conversations with homeschool parents, and one ruthless criterion: does it work on a random Wednesday when you\'re tired and haven\'t planned anything?' },
+      { type: 'paragraph', text: 'So here are seven approaches ranked by how well they work for parents who don\'t have (or don\'t want to use) a teaching background. This ranking is based on personal experience, conversations with homeschool parents, and one ruthless criterion: does it work on a random Wednesday when you\'re tired and haven\'t planned anything?' },
       { type: 'heading', level: 2, text: '1. Real-World / Experiential Learning' },
       { type: 'paragraph', text: 'Best for: Parents who hate lesson planning. Kids who learn by doing.' },
       { type: 'paragraph', text: 'This is the approach where life is the curriculum. Cooking teaches maths. Travel teaches geography. [Building a budget](/blog/teach-kids-about-money) teaches economics. The parent doesn\'t need to "teach" because the activity itself does the teaching; you\'re a facilitator, not an instructor.' },
