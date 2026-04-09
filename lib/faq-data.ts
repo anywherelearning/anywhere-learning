@@ -103,7 +103,7 @@ export const purchasingFaqItems: FAQItem[] = [
   {
     question: 'Do you offer bundle discounts?',
     answer:
-      'Yes! Our bundles save you 30\u201350% compared to buying individual packs. They\u2019re the best value if you want a full collection for a category or season.',
+      'Yes! Our bundles save you 25% compared to buying individual guides. They\u2019re the best value if you want a full collection for a category or season.',
   },
 ];
 
