@@ -1,7 +1,7 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useRef } from 'react';
 import {
   SparklesIcon,
   LeafIcon,
@@ -68,6 +68,9 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
   const active = searchParams.get('category') || '';
   const search = searchParams.get('q') || '';
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const activeCat = categories.find((c) => c.value === active) || categories[0];
 
   function handleFilter(category: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -78,6 +81,7 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
     }
     params.delete('page');
     router.push(`/blog?${params.toString()}`, { scroll: false });
+    setMobileOpen(false);
   }
 
   function handleSearch(value: string) {
@@ -94,9 +98,17 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
     }, 300);
   }
 
+  const pillClasses = (isActive: boolean, value: string) =>
+    `whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+      isActive
+        ? categoryActiveColors[value]
+        : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+    }`;
+
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2" role="tablist">
+      {/* Desktop: wrap pills */}
+      <div className="hidden sm:flex flex-wrap gap-2" role="tablist">
         {categories.map((cat) => {
           const count = cat.value && postCounts ? postCounts[cat.value] : null;
           return (
@@ -105,11 +117,7 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
               role="tab"
               aria-selected={active === cat.value}
               onClick={() => handleFilter(cat.value)}
-              className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
-                active === cat.value
-                  ? categoryActiveColors[cat.value]
-                  : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
-              }`}
+              className={pillClasses(active === cat.value, cat.value)}
             >
               <cat.Icon className="w-4 h-4" />
               {cat.label}
@@ -122,6 +130,50 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
           );
         })}
       </div>
+
+      {/* Mobile: collapsible */}
+      <div className="sm:hidden">
+        <button
+          onClick={() => setMobileOpen((o) => !o)}
+          className={`w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium ${categoryActiveColors[active] || categoryActiveColors['']}`}
+        >
+          <span className="flex items-center gap-2">
+            <activeCat.Icon className="w-4 h-4" />
+            {activeCat.label}
+          </span>
+          <svg
+            className={`w-4 h-4 transition-transform duration-200 ${mobileOpen ? 'rotate-180' : ''}`}
+            fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+        {mobileOpen && (
+          <div className="mt-2 grid grid-cols-2 gap-2" role="tablist">
+            {categories.map((cat) => {
+              const count = cat.value && postCounts ? postCounts[cat.value] : null;
+              return (
+                <button
+                  key={cat.value}
+                  role="tab"
+                  aria-selected={active === cat.value}
+                  onClick={() => handleFilter(cat.value)}
+                  className={`${pillClasses(active === cat.value, cat.value)} justify-center text-center text-xs px-3 py-2`}
+                >
+                  <cat.Icon className="w-3.5 h-3.5" />
+                  {cat.label}
+                  {count != null && count > 0 && (
+                    <span className={`text-[10px] ${active === cat.value ? 'opacity-75' : 'text-gray-400'}`}>
+                      ({count})
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
       <div className="relative">
         <svg
           className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"

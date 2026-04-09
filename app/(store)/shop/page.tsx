@@ -472,9 +472,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
             {/* Category sections - always use fallback for complete catalog */}
             {categorySections.map((cat) => {
-              const catProducts = fallbackProducts.filter(
-                (p) => p.category === cat.value && !p.isBundle,
-              );
+              const catProducts = fallbackProducts
+                .filter((p) => p.category === cat.value && !p.isBundle)
+                .sort((a, b) => a.sortOrder - b.sortOrder);
               if (catProducts.length === 0) return null;
               return (
                 <ScrollReveal key={cat.value}>

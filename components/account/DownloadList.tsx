@@ -63,6 +63,7 @@ const PER_PAGE = 10;
 export default function DownloadList({ purchases }: DownloadListProps) {
   const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   // Build category list: All → Start Here → Bundles → rest alphabetical by label
   const categories = useMemo(() => {
@@ -89,7 +90,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
   }, [purchases]);
 
   const filtered = useMemo(() => {
-    if (filter === 'all') return purchases;
+    if (filter === 'all') return purchases.filter((p) => !p.product.isBundle);
     return purchases.filter((p) => p.product.category === filter);
   }, [purchases, filter]);
 
@@ -134,37 +135,88 @@ export default function DownloadList({ purchases }: DownloadListProps) {
 
   return (
     <div>
-      {/* Category filter pills — matches shop page style */}
-      {showFilters && (
-        <div className="flex flex-wrap gap-2 mb-6" role="tablist">
-          {categories.map((cat) => {
-            const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
-            const count = cat === 'all' ? purchases.length : (counts[cat] || 0);
-            const isActive = filter === cat;
-            const activeColor = CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'];
+      {/* Category filter pills */}
+      {showFilters && (() => {
+        const ActiveIcon = CATEGORY_ICONS[filter] || SparklesIcon;
+        const activeLabel = filter === 'all' ? 'All Guides' : (CATEGORY_LABELS[filter] || filter);
+        const activeColor = CATEGORY_ACTIVE_COLORS[filter] || CATEGORY_ACTIVE_COLORS['all'];
 
-            return (
+        const pillClasses = (isActive: boolean, cat: string) =>
+          `whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+            isActive
+              ? (CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'])
+              : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+          }`;
+
+        return (
+          <>
+            {/* Desktop */}
+            <div className="hidden sm:flex flex-wrap gap-2 mb-6" role="tablist">
+              {categories.map((cat) => {
+                const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
+                const count = cat === 'all' ? purchases.filter((p) => !p.product.isBundle).length : (counts[cat] || 0);
+                return (
+                  <button
+                    key={cat}
+                    role="tab"
+                    aria-selected={filter === cat}
+                    onClick={() => { setFilter(cat); setPage(1); }}
+                    className={pillClasses(filter === cat, cat)}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
+                    <span className={`text-xs ${filter === cat ? 'opacity-75' : 'text-gray-400'}`}>
+                      ({count})
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Mobile: collapsible */}
+            <div className="sm:hidden mb-6">
               <button
-                key={cat}
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => { setFilter(cat); setPage(1); }}
-                className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
-                  isActive
-                    ? activeColor
-                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
-                }`}
+                onClick={() => setMobileOpen((o) => !o)}
+                className={`w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium ${activeColor}`}
               >
-                <Icon className="w-4 h-4" />
-                {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
-                <span className={`text-xs ${isActive ? 'opacity-75' : 'text-gray-400'}`}>
-                  ({count})
+                <span className="flex items-center gap-2">
+                  <ActiveIcon className="w-4 h-4" />
+                  {activeLabel}
                 </span>
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${mobileOpen ? 'rotate-180' : ''}`}
+                  fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
               </button>
-            );
-          })}
-        </div>
-      )}
+              {mobileOpen && (
+                <div className="mt-2 grid grid-cols-2 gap-2" role="tablist">
+                  {categories.map((cat) => {
+                    const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
+                    const count = cat === 'all' ? purchases.filter((p) => !p.product.isBundle).length : (counts[cat] || 0);
+                    return (
+                      <button
+                        key={cat}
+                        role="tab"
+                        aria-selected={filter === cat}
+                        onClick={() => { setFilter(cat); setPage(1); setMobileOpen(false); }}
+                        className={`${pillClasses(filter === cat, cat)} justify-center text-center text-xs px-3 py-2`}
+                      >
+                        <Icon className="w-3.5 h-3.5" />
+                        {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
+                        <span className={`text-[10px] ${filter === cat ? 'opacity-75' : 'text-gray-400'}`}>
+                          ({count})
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </>
+        );
+      })()}
 
       {/* Download cards */}
       <div className="space-y-3">

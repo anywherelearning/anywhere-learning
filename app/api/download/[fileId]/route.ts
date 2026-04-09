@@ -79,6 +79,7 @@ export async function GET(
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/pdf',
+      'Cache-Control': 'private, no-store',
     };
 
     // View mode: display inline; download mode: trigger save dialog

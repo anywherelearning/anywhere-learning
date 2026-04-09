@@ -321,7 +321,7 @@ export const BYOB_TIERS: ByobTier[] = [
 
 /** Get the highest qualifying BYOB tier based on non-bundle item count, or null. */
 export function getByobTier(items: CartItem[]): ByobTier | null {
-  const individualCount = items.filter((i) => !i.isBundle).length;
+  const individualCount = items.filter((i) => !i.isBundle && i.slug !== FREE_BONUS_SLUG).length;
   let activeTier: ByobTier | null = null;
   for (const tier of BYOB_TIERS) {
     if (individualCount >= tier.minItems) activeTier = tier;
@@ -331,7 +331,7 @@ export function getByobTier(items: CartItem[]): ByobTier | null {
 
 /** Get the next BYOB tier the user is approaching, or null if at max. */
 export function getNextByobTier(items: CartItem[]): { tier: ByobTier; itemsNeeded: number } | null {
-  const individualCount = items.filter((i) => !i.isBundle).length;
+  const individualCount = items.filter((i) => !i.isBundle && i.slug !== FREE_BONUS_SLUG).length;
   for (const tier of BYOB_TIERS) {
     if (individualCount < tier.minItems) {
       return { tier, itemsNeeded: tier.minItems - individualCount };
