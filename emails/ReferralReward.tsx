@@ -15,20 +15,26 @@ import {
 } from '@react-email/components';
 
 interface ReferralRewardProps {
+  customerName?: string;
   rewardCode: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
-const logoUrl = '/static/logo-icon.png';
-const prodLogoUrl = `${baseUrl}/logo-icon.png`;
+const logoUrl = '/static/logo-full.png';
+const prodLogoUrl = `${baseUrl}/logo-full.png`;
+const footerIconUrl = '/static/logo-icon-circle.png';
+const prodFooterIconUrl = `${baseUrl}/logo-icon-circle.png`;
 
 ReferralReward.PreviewProps = {
+  customerName: 'Sarah',
   rewardCode: 'REWARD-AMELIE-7X',
 } satisfies ReferralRewardProps;
 
-export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: ReferralRewardProps) {
+export default function ReferralReward({ customerName, rewardCode = 'REWARD-AMELIE-7X' }: ReferralRewardProps) {
   // In production emails, logo comes from the live site
   const logo = typeof window === 'undefined' && process.env.NEXT_PUBLIC_URL ? prodLogoUrl : logoUrl;
+  const footerIcon = typeof window === 'undefined' && process.env.NEXT_PUBLIC_URL ? prodFooterIconUrl : footerIconUrl;
+  const greeting = customerName ? `Hey ${customerName}!` : 'Hey there!';
 
   return (
     <Html>
@@ -37,22 +43,13 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
         `}</style>
       </Head>
-      <Preview>Your friend just saved 15%, and here&apos;s yours!</Preview>
+      <Preview>Your friend just saved 15%, here&apos;s yours!</Preview>
       <Body style={main}>
         <Container style={container}>
 
           {/* ── Brand Header ── */}
           <Section style={header}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '10px' }}>
-                  <Img src={logo} width="36" height="26" alt="" style={{ display: 'block' }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <Text style={brandName}>Anywhere Learning</Text>
-                </td>
-              </tr>
-            </table>
+            <Img src={logo} width="220" alt="Anywhere Learning" style={{ display: 'block', margin: '0 auto', maxWidth: '220px' }} />
           </Section>
 
           {/* ── Celebration Banner ── */}
@@ -68,16 +65,16 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
             </table>
             <Heading style={bannerHeading}>Your friend used your code!</Heading>
             <Text style={bannerSubtext}>
-              They just saved 15% - and now it&apos;s your turn.
+              They just saved 15%, and now it&apos;s your turn.
             </Text>
           </Section>
 
           {/* ── Main Content ── */}
           <Section style={contentSection}>
-            <Text style={text}>Hey there!</Text>
+            <Text style={text}>{greeting}</Text>
 
             <Text style={text}>
-              Someone you shared your referral code with just made a purchase. That&apos;s real-world learning spreading to another family - pretty awesome.
+              Someone you shared your referral code with just made a purchase. That&apos;s real-world learning spreading to another family, pretty awesome.
             </Text>
 
             <Text style={text}>
@@ -92,7 +89,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
               <Text style={codeText}>{rewardCode}</Text>
             </Section>
             <Text style={rewardSmall}>
-              One-time use - works on any activity pack or bundle.
+              One-time use, works on any guide or bundle.
             </Text>
           </Section>
 
@@ -105,7 +102,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
             </Section>
 
             <Text style={textMuted}>
-              Keep sharing your referral code - every time a friend uses it, you&apos;ll both save.
+              Keep sharing your referral code, every time a friend uses it, you&apos;ll both save.
             </Text>
           </Section>
 
@@ -121,16 +118,8 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
           {/* ── Footer ── */}
           <Hr style={hr} />
           <Section style={footerSection}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 8px' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '6px' }}>
-                  <Img src={logo} width="20" height="14" alt="" style={{ display: 'block', opacity: 0.4 }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <span style={{ fontSize: '13px', color: '#999999' }}>Anywhere Learning</span>
-                </td>
-              </tr>
-            </table>
+            <Img src={footerIcon} width="32" alt="" style={{ display: 'block', margin: '0 auto 8px', opacity: 0.4 }} />
+            <Text style={footerBrand}>Anywhere Learning</Text>
             <Text style={footer}>Meaningful Learning, Wherever You Are</Text>
             <Text style={footerLinks}>
               <Link href={`${baseUrl}/shop`} style={footerLink}>Shop</Link>
@@ -150,7 +139,7 @@ export default function ReferralReward({ rewardCode = 'REWARD-AMELIE-7X' }: Refe
 const main = { backgroundColor: '#f5f3ee', fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" };
 const container = { margin: '0 auto', maxWidth: '560px', backgroundColor: '#faf9f6' };
 const header = { padding: '28px 24px 20px', textAlign: 'center' as const };
-const brandName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', fontWeight: '700' as const, color: '#588157', margin: '0', lineHeight: '1' };
+const footerBrand = { fontSize: '13px', color: '#999999', margin: '0 0 4px' };
 const celebrationBanner = { backgroundColor: '#d4a373', padding: '28px 24px 24px', textAlign: 'center' as const };
 const giftCircle = { width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'inline-block' as const, lineHeight: '40px', textAlign: 'center' as const, marginBottom: '12px' };
 const giftIcon = { fontSize: '20px' };
@@ -167,7 +156,7 @@ const rewardSmall = { fontSize: '13px', color: '#888888', margin: '0' };
 const buttonContainer = { textAlign: 'center' as const, margin: '20px 0 24px' };
 const button = { backgroundColor: '#588157', borderRadius: '12px', color: '#faf9f6', display: 'inline-block', fontSize: '16px', fontWeight: '600' as const, padding: '16px 36px', textDecoration: 'none' };
 const signoff = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '8px 0 0' };
-const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#588157' };
+const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#d4a373' };
 const hr = { borderColor: '#e5e5e5', margin: '0' };
 const footerSection = { padding: '24px 32px', textAlign: 'center' as const };
 const footer = { fontSize: '13px', color: '#999999', margin: '0 0 8px', lineHeight: '1.5' };

@@ -552,6 +552,7 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     try {
       await sendPurchaseEmail({
         to: customerEmail,
+        customerName: session.customer_details?.name?.split(' ')[0] || undefined,
         productName: productNames,
         downloadUrl: `${process.env.NEXT_PUBLIC_URL}/account/downloads`,
         referralCode,

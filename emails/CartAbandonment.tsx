@@ -56,13 +56,16 @@ export default function CartAbandonment({
   shopUrl = `${baseUrl}/shop?cart=open`,
 }: CartAbandonmentProps) {
   const logoUrl = (items[0]?.imageUrl || '').startsWith('/static/')
-    ? '/static/logo-icon.png'
-    : `${baseUrl}/logo-icon.png`;
+    ? '/static/logo-full.png'
+    : `${baseUrl}/logo-full.png`;
+  const footerIconUrl = (items[0]?.imageUrl || '').startsWith('/static/')
+    ? '/static/logo-icon-circle.png'
+    : `${baseUrl}/logo-icon-circle.png`;
 
   const itemCount = items.length;
   const previewText = itemCount === 1
     ? `Your ${items[0].name} is still waiting for you`
-    : `Your ${itemCount} activity packs are still waiting`;
+    : `Your ${itemCount} guides are still waiting`;
 
   return (
     <Html>
@@ -77,16 +80,7 @@ export default function CartAbandonment({
 
           {/* ── Brand Header ── */}
           <Section style={header}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '10px' }}>
-                  <Img src={logoUrl} width="36" height="26" alt="" style={{ display: 'block' }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <Text style={brandName}>Anywhere Learning</Text>
-                </td>
-              </tr>
-            </table>
+            <Img src={logoUrl} width="220" alt="Anywhere Learning" style={{ display: 'block', margin: '0 auto', maxWidth: '220px' }} />
           </Section>
 
           {/* ── Hero Banner ── */}
@@ -95,7 +89,7 @@ export default function CartAbandonment({
             <Text style={heroSubtext}>
               {itemCount === 1
                 ? `Your ${items[0].name} is still in your cart.`
-                : `Your ${itemCount} activity packs are still in your cart.`}
+                : `Your ${itemCount} guides are still in your cart.`}
             </Text>
           </Section>
 
@@ -154,7 +148,7 @@ export default function CartAbandonment({
                 Don&apos;t forget your free bonus!
               </Heading>
               <Text style={upsellText}>
-                Your <strong>{upsell.bundleName}</strong> comes with a <strong>free copy of The Future-Ready Skills Map</strong> - a 42-page parent guide to the 10 skills that matter most. It&apos;s included at no extra cost when you check out.
+                Your <strong>{upsell.bundleName}</strong> comes with a <strong>free copy of The Future-Ready Skills Map</strong>, a 42-page parent guide to the 10 skills that matter most. It&apos;s included at no extra cost when you check out.
               </Text>
             </Section>
           )}
@@ -165,7 +159,7 @@ export default function CartAbandonment({
                 Save more with the bundle
               </Heading>
               <Text style={upsellText}>
-                Get all {upsell.bundleActivityCount} activities in the <strong>{upsell.bundleName}</strong> for just {formatPrice(upsell.bundlePriceCents!)} - that&apos;s <strong>{formatPrice(upsell.savingsCents!)} off</strong> compared to buying individually. Plus, you&apos;ll get The Future-Ready Skills Map free.
+                Get all {upsell.bundleActivityCount} activities in the <strong>{upsell.bundleName}</strong> for just {formatPrice(upsell.bundlePriceCents!)}, that&apos;s <strong>{formatPrice(upsell.savingsCents!)} off</strong> compared to buying individually. Plus, you&apos;ll get The Future-Ready Skills Map free.
               </Text>
               <Section style={{ textAlign: 'center' as const, marginTop: '16px' }}>
                 <Link href={`${baseUrl}/shop/${upsell.bundleSlug}`} style={upsellButton}>
@@ -181,7 +175,7 @@ export default function CartAbandonment({
                 You&apos;re {upsell.itemsNeeded === 1 ? '1 pack' : `${upsell.itemsNeeded} packs`} away from {upsell.discountPercent}% off
               </Heading>
               <Text style={upsellText}>
-                Add {upsell.itemsNeeded === 1 ? 'just 1 more activity pack' : `${upsell.itemsNeeded} more activity packs`} to your cart and our mix-and-match discount kicks in - <strong>{upsell.discountPercent}% off every individual pack</strong> in your order.
+                Add {upsell.itemsNeeded === 1 ? 'just 1 more guide' : `${upsell.itemsNeeded} more guides`} to your cart and our mix-and-match discount kicks in, <strong>{upsell.discountPercent}% off every individual guide</strong> in your order.
               </Text>
               <Section style={{ textAlign: 'center' as const, marginTop: '16px' }}>
                 <Link href={`${baseUrl}/shop`} style={upsellButton}>
@@ -191,44 +185,10 @@ export default function CartAbandonment({
             </Section>
           )}
 
-          {/* ── Quick Tips ── */}
-          <Section style={contentSection}>
-            <Section style={tipsContainer}>
-              <Row>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <div style={{ width: '12px', height: '16px', border: '2px solid #faf9f6', borderRadius: '3px', margin: '0 auto', position: 'relative' as const }}>
-                        <div style={{ width: '6px', height: '2px', backgroundColor: '#faf9f6', borderRadius: '1px', margin: '0 auto', position: 'absolute' as const, bottom: '1px', left: '1px' }} />
-                      </div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Open on any device</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <div style={{ fontSize: '16px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&#10003;</div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Zero prep needed</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <div style={{ fontSize: '18px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&infin;</div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Reuse year after year</Text>
-                </Column>
-              </Row>
-            </Section>
-          </Section>
-
           {/* ── Sign-off ── */}
           <Section style={contentSection}>
             <Text style={text}>
-              No pressure - just didn&apos;t want you to lose your picks. If you have any questions, just hit reply.
+              No pressure, just didn&apos;t want you to lose your picks. If you have any questions, just hit reply.
             </Text>
             <Text style={signoff}>
               Happy learning,
@@ -240,16 +200,8 @@ export default function CartAbandonment({
           {/* ── Footer ── */}
           <Hr style={hr} />
           <Section style={footerSection}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 8px' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '6px' }}>
-                  <Img src={logoUrl} width="20" height="14" alt="" style={{ display: 'block', opacity: 0.4 }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <span style={{ fontSize: '13px', color: '#999999' }}>Anywhere Learning</span>
-                </td>
-              </tr>
-            </table>
+            <Img src={footerIconUrl} width="32" alt="" style={{ display: 'block', margin: '0 auto 8px', opacity: 0.4 }} />
+            <Text style={footerBrand}>Anywhere Learning</Text>
             <Text style={footer}>Meaningful Learning, Wherever You Are</Text>
             <Text style={footerLinks}>
               <Link href={`${baseUrl}/shop`} style={footerLink}>Shop</Link>
@@ -271,7 +223,7 @@ export default function CartAbandonment({
 const main = { backgroundColor: '#f5f3ee', fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" };
 const container = { margin: '0 auto', maxWidth: '560px', backgroundColor: '#faf9f6' };
 const header = { padding: '28px 24px 20px', textAlign: 'center' as const };
-const brandName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', fontWeight: '700' as const, color: '#588157', margin: '0', lineHeight: '1' };
+const footerBrand = { fontSize: '13px', color: '#999999', margin: '0 0 4px' };
 
 // Hero - warm gold/cream instead of green success banner
 const heroBanner = { backgroundColor: '#d4a373', padding: '28px 24px 24px', textAlign: 'center' as const };
@@ -304,12 +256,8 @@ const upsellButton = { backgroundColor: '#d4a373', borderRadius: '10px', color: 
 // Tips, sign-off, footer - reuse from PurchaseConfirmation
 const contentSection = { padding: '28px 32px 8px' };
 const text = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '0 0 16px' };
-const tipsContainer = { backgroundColor: '#f7f5f0', borderRadius: '12px', padding: '20px 8px', margin: '0 0 24px' };
-const tipColumn = { textAlign: 'center' as const, width: '33.33%' };
-const tipIcon = { width: '32px', height: '32px', borderRadius: '8px', backgroundColor: '#588157', textAlign: 'center' as const, lineHeight: '32px' };
-const tipLabel = { fontSize: '12px', color: '#555555', margin: '0', lineHeight: '1.4', fontWeight: '500' as const };
 const signoff = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '24px 0 0' };
-const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#588157' };
+const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#d4a373' };
 const hr = { borderColor: '#e5e5e5', margin: '0' };
 const footerSection = { padding: '24px 32px', textAlign: 'center' as const };
 const footer = { fontSize: '13px', color: '#999999', margin: '0 0 8px', lineHeight: '1.5' };

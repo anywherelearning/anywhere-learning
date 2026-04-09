@@ -20,6 +20,7 @@ interface ProductItem {
 }
 
 interface PurchaseConfirmationProps {
+  customerName?: string;
   productName: string;
   downloadUrl: string;
   referralCode?: string;
@@ -31,6 +32,7 @@ interface PurchaseConfirmationProps {
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
 PurchaseConfirmation.PreviewProps = {
+  customerName: 'Sarah',
   productName: 'Spring Outdoor Pack, Summer Outdoor Pack',
   downloadUrl: `${baseUrl}/account/downloads`,
   referralCode: 'REF-AMELIE-7X',
@@ -42,6 +44,7 @@ PurchaseConfirmation.PreviewProps = {
 } satisfies PurchaseConfirmationProps;
 
 export default function PurchaseConfirmation({
+  customerName,
   productName = 'Spring Outdoor Pack',
   downloadUrl = `${baseUrl}/account/downloads`,
   referralCode = 'REF-AMELIE-7X',
@@ -49,6 +52,7 @@ export default function PurchaseConfirmation({
   products,
   signInUrl,
 }: PurchaseConfirmationProps) {
+  const greeting = customerName ? `Hey ${customerName}!` : 'Hey there!';
   // Build product list: use products array if provided, else fall back to single image
   const productList: ProductItem[] = products && products.length > 0
     ? products
@@ -59,13 +63,16 @@ export default function PurchaseConfirmation({
   const isMultiple = productList.length > 1;
 
   const logoUrl = (productList[0]?.imageUrl || '').startsWith('/static/')
-    ? '/static/logo-icon.png'
-    : `${baseUrl}/logo-icon.png`;
+    ? '/static/logo-full.png'
+    : `${baseUrl}/logo-full.png`;
+  const footerIconUrl = (productList[0]?.imageUrl || '').startsWith('/static/')
+    ? '/static/logo-icon-circle.png'
+    : `${baseUrl}/logo-icon-circle.png`;
 
   // Smart heading: show product name for single, count for multiple
   const headingText = isSingle
     ? `Your ${productList[0].name} is ready!`
-    : `Your ${productList.length} activity packs are ready!`;
+    : `Your ${productList.length} guides are ready!`;
 
   return (
     <Html>
@@ -80,16 +87,7 @@ export default function PurchaseConfirmation({
 
           {/* ── Brand Header ── */}
           <Section style={header}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '10px' }}>
-                  <Img src={logoUrl} width="36" height="26" alt="" style={{ display: 'block' }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <Text style={brandName}>Anywhere Learning</Text>
-                </td>
-              </tr>
-            </table>
+            <Img src={logoUrl} width="220" alt="Anywhere Learning" style={{ display: 'block', margin: '0 auto', maxWidth: '220px' }} />
           </Section>
 
           {/* ── Success Banner ── */}
@@ -150,10 +148,10 @@ export default function PurchaseConfirmation({
 
           {/* ── Main Content ── */}
           <Section style={contentSection}>
-            <Text style={text}>Hey there!</Text>
+            <Text style={text}>{greeting}</Text>
 
             <Text style={text}>
-              Your <strong>{isMultiple ? `${productList.length} activity packs` : productList[0]?.name || productName}</strong> {isSingle ? 'is' : 'are'} ready to download. Open on any device - phone, tablet, or laptop - and pick any activity to start.
+              Your <strong>{isMultiple ? `${productList.length} guides` : productList[0]?.name || productName}</strong> {isSingle ? 'is' : 'are'} ready to download. Open on any device, phone, tablet, or laptop, and jump right in.
             </Text>
 
             <Section style={buttonContainer}>
@@ -162,40 +160,6 @@ export default function PurchaseConfirmation({
               </Link>
             </Section>
 
-            {/* ── Quick Tips ── */}
-            <Section style={tipsContainer}>
-              <Row>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      {/* Phone/tablet icon - simple rectangle with notch */}
-                      <div style={{ width: '12px', height: '16px', border: '2px solid #faf9f6', borderRadius: '3px', margin: '0 auto', position: 'relative' as const }}>
-                        <div style={{ width: '6px', height: '2px', backgroundColor: '#faf9f6', borderRadius: '1px', margin: '0 auto', position: 'absolute' as const, bottom: '1px', left: '1px' }} />
-                      </div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Open on any device</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      {/* Checkmark / ready icon */}
-                      <div style={{ fontSize: '16px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&#10003;</div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Zero prep needed</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      {/* Infinity / reuse icon */}
-                      <div style={{ fontSize: '18px', color: '#faf9f6', fontWeight: '700' as const, lineHeight: '1' }}>&infin;</div>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Reuse year after year</Text>
-                </Column>
-              </Row>
-            </Section>
           </Section>
 
           {/* ── Account Section (guest buyers only) ── */}
@@ -231,7 +195,7 @@ export default function PurchaseConfirmation({
                 <Text style={codeText}>{referralCode}</Text>
               </Section>
               <Text style={referralSmall}>
-                Your friend enters this code at checkout. When they do, they save 15% - and you&apos;ll get a 15% off code for your next purchase, emailed straight to you.
+                Your friend enters this code at checkout. When they do, they save 15%, and you&apos;ll get a 15% off code for your next purchase, emailed straight to you.
               </Text>
             </Section>
           )}
@@ -239,7 +203,7 @@ export default function PurchaseConfirmation({
           {/* ── Sign-off ── */}
           <Section style={contentSection}>
             <Text style={text}>
-              If you have any questions, just hit reply - I&apos;m a real person.
+              If you have any questions, just hit reply, I&apos;d love to hear from you.
             </Text>
             <Text style={signoff}>
               Happy learning,
@@ -251,16 +215,8 @@ export default function PurchaseConfirmation({
           {/* ── Footer ── */}
           <Hr style={hr} />
           <Section style={footerSection}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 8px' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '6px' }}>
-                  <Img src={logoUrl} width="20" height="14" alt="" style={{ display: 'block', opacity: 0.4 }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <span style={{ fontSize: '13px', color: '#999999' }}>Anywhere Learning</span>
-                </td>
-              </tr>
-            </table>
+            <Img src={footerIconUrl} width="32" alt="" style={{ display: 'block', margin: '0 auto 8px', opacity: 0.4 }} />
+            <Text style={footerBrand}>Anywhere Learning</Text>
             <Text style={footer}>Meaningful Learning, Wherever You Are</Text>
             <Text style={footerLinks}>
               <Link href={`${baseUrl}/shop`} style={footerLink}>Shop</Link>
@@ -280,7 +236,7 @@ export default function PurchaseConfirmation({
 const main = { backgroundColor: '#f5f3ee', fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" };
 const container = { margin: '0 auto', maxWidth: '560px', backgroundColor: '#faf9f6' };
 const header = { padding: '28px 24px 20px', textAlign: 'center' as const };
-const brandName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', fontWeight: '700' as const, color: '#588157', margin: '0', lineHeight: '1' };
+const footerBrand = { fontSize: '13px', color: '#999999', margin: '0 0 4px' };
 const successBanner = { backgroundColor: '#588157', padding: '28px 24px 24px', textAlign: 'center' as const };
 const checkCircle = { width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'inline-block' as const, lineHeight: '40px', textAlign: 'center' as const, marginBottom: '12px' };
 const checkMark = { color: '#faf9f6', fontSize: '20px', fontWeight: '700' as const };
@@ -296,10 +252,6 @@ const contentSection = { padding: '28px 32px 8px' };
 const text = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '0 0 16px' };
 const buttonContainer = { textAlign: 'center' as const, margin: '28px 0' };
 const button = { backgroundColor: '#588157', borderRadius: '12px', color: '#faf9f6', display: 'inline-block', fontSize: '16px', fontWeight: '600' as const, padding: '16px 36px', textDecoration: 'none' };
-const tipsContainer = { backgroundColor: '#f7f5f0', borderRadius: '12px', padding: '20px 8px', margin: '8px 0 24px' };
-const tipColumn = { textAlign: 'center' as const, width: '33.33%' };
-const tipIcon = { width: '32px', height: '32px', borderRadius: '8px', backgroundColor: '#588157', textAlign: 'center' as const, lineHeight: '32px' };
-const tipLabel = { fontSize: '12px', color: '#555555', margin: '0', lineHeight: '1.4', fontWeight: '500' as const };
 const accountSection = { backgroundColor: '#f7f5f0', padding: '28px 32px', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5' };
 const accountHeading = { fontSize: '18px', fontWeight: '600' as const, color: '#588157', margin: '0 0 8px', textAlign: 'center' as const };
 const accountText = { fontSize: '15px', lineHeight: '24px', color: '#2d2d2d', margin: '0 0 16px', textAlign: 'center' as const };
@@ -312,7 +264,7 @@ const codeBox = { backgroundColor: '#ffffff', borderRadius: '12px', padding: '18
 const codeText = { fontSize: '24px', fontWeight: '700' as const, color: '#588157', letterSpacing: '3px', margin: '0' };
 const referralSmall = { fontSize: '13px', lineHeight: '20px', color: '#666666', textAlign: 'center' as const, margin: '0' };
 const signoff = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '24px 0 0' };
-const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#588157' };
+const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#d4a373' };
 const hr = { borderColor: '#e5e5e5', margin: '0' };
 const footerSection = { padding: '24px 32px', textAlign: 'center' as const };
 const footer = { fontSize: '13px', color: '#999999', margin: '0 0 8px', lineHeight: '1.5' };
