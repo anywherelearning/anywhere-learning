@@ -51,7 +51,7 @@ export const resourceTopics: Record<ResourceTopic, { label: string; color: strin
 /** Default product + bundle recommendation for each resource topic */
 export const resourceProductDefaults: Record<ResourceTopic, { product: string; bundle: string }> = {
   'real-world-learning':  { product: 'budget-challenge',       bundle: 'real-world-mega-bundle' },
-  'nature-stem':          { product: 'nature-journal-walks',   bundle: 'seasonal-bundle' },
+  'nature-stem':          { product: 'outdoor-stem-challenges', bundle: 'outdoor-toolkit-bundle' },
   'worldschooling':       { product: 'travel-day',             bundle: 'real-world-mega-bundle' },
   'creativity-maker':     { product: 'rube-goldberg-challenge', bundle: 'creativity-mega-bundle' },
   'ai-digital-literacy':  { product: 'ai-basics',              bundle: 'ai-digital-bundle' },
@@ -134,6 +134,10 @@ const resources: ResourcePage[] = [
         text: 'Start simple. Let your child choose a recipe, create a shopping list, and calculate the cost. Older kids can meal plan for the week, compare unit prices at the store, or scale a recipe up for guests. Every one of these tasks hits multiple academic subjects without a single worksheet.',
       },
       {
+        type: 'product-callout',
+        slug: 'kitchen-math-challenge',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Money and financial literacy',
@@ -166,6 +170,10 @@ const resources: ResourcePage[] = [
         ],
       },
       {
+        type: 'product-callout',
+        slug: 'budget-challenge',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Entrepreneurship for kids',
@@ -186,6 +194,10 @@ const resources: ResourcePage[] = [
         type: 'tip',
         title: 'Start small',
         text: 'The best first business for a kid is one that solves a problem they already see. "Nobody in our neighborhood rakes leaves" or "My friends always want the bracelets I make." Help them notice the opportunity, then step back and let them figure out the rest.',
+      },
+      {
+        type: 'product-callout',
+        slug: 'micro-business',
       },
       {
         type: 'heading',
@@ -271,7 +283,6 @@ const resources: ResourcePage[] = [
       {
         type: 'pull-quote',
         text: 'The best education doesn\'t happen at a desk. It happens in kitchens, on trails, at markets, and in conversations with people who care.',
-        attribution: 'Amelie, Anywhere Learning',
       },
       {
         type: 'heading',
@@ -296,6 +307,10 @@ const resources: ResourcePage[] = [
       {
         type: 'paragraph',
         text: 'For more structure, our [complete guide to real-world learning](/blog/real-world-learning-guide) walks through specific activities, age adaptations, and tips for documenting learning for your state\'s requirements.',
+      },
+      {
+        type: 'bundle-callout',
+        slug: 'real-world-mega-bundle',
       },
       {
         type: 'faq',
@@ -446,6 +461,10 @@ const resources: ResourcePage[] = [
         ],
       },
       {
+        type: 'product-callout',
+        slug: 'nature-walk-task-cards',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Seasonal learning: a year-round framework',
@@ -507,6 +526,10 @@ const resources: ResourcePage[] = [
         text: 'If you live somewhere with snow, the science opportunities multiply. Crystal structure, insulation, freezing and melting points, and the incredible engineering of an igloo. If you don\'t get snow, winter still offers shorter days (shadow experiments!), frost patterns, and the chance to observe a sparser ecosystem where every living thing is easier to spot.',
       },
       {
+        type: 'bundle-callout',
+        slug: 'seasonal-bundle',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Outdoor STEM challenges that don\'t feel like school',
@@ -537,6 +560,10 @@ const resources: ResourcePage[] = [
           'Ages 9-11: Mapping a micro-ecosystem (1 square meter). Building working catapults from sticks. Calculating the speed of a stream. Designing bird feeders and testing which designs attract birds.',
           'Ages 12+: Water quality testing. Building load-bearing bridges from natural materials. Orienteering with map and compass. Designing and running controlled outdoor experiments.',
         ],
+      },
+      {
+        type: 'product-callout',
+        slug: 'outdoor-stem-challenges',
       },
       {
         type: 'heading',
@@ -584,7 +611,10 @@ const resources: ResourcePage[] = [
       {
         type: 'pull-quote',
         text: 'A child who journals in nature for a year develops observational skills that no amount of classroom instruction can replicate. They learn to see what others walk past.',
-        attribution: 'Amelie, Anywhere Learning',
+      },
+      {
+        type: 'product-callout',
+        slug: 'nature-journal-walks',
       },
       {
         type: 'heading',
@@ -632,6 +662,10 @@ const resources: ResourcePage[] = [
         text: 'For more structure and specific activity ideas, our [complete guide to nature-based learning](/blog/nature-based-learning-guide) walks through everything from seasonal projects to nature journaling techniques to connecting outdoor learning to academic standards (if your state requires it).',
       },
       {
+        type: 'bundle-callout',
+        slug: 'outdoor-toolkit-bundle',
+      },
+      {
         type: 'faq',
         items: [
           {
@@ -667,8 +701,8 @@ const resources: ResourcePage[] = [
       'seasonal-scavenger-hunts',
       'outdoor-stem-challenges',
     ],
-    recommendedProduct: 'nature-journal-walks',
-    recommendedBundle: 'seasonal-bundle',
+    recommendedProduct: 'outdoor-stem-challenges',
+    recommendedBundle: 'outdoor-toolkit-bundle',
   },
   {
     slug: 'worldschooling-guide',
@@ -694,7 +728,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'When we pulled our kids out of school and booked a one-way ticket, everyone asked: "But what about their education?" Two years later, I can tell you: their education didn\'t stop. It expanded in ways a classroom never could.',
+        text: 'When we pulled our kids out of school and started planning our first trip, everyone asked: "But what about their education?" Since we started last September, I can tell you: their education didn\'t stop. It expanded in ways a classroom never could.',
       },
       {
         type: 'paragraph',
@@ -745,7 +779,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Harder, because different kids have different needs for focused skill work, different energy levels for walking, and different thresholds for "one more museum." We wrote about [worldschooling with two kids](/blog/worldschool-two-kids) and the specific strategies that keep our family from imploding on day three of a new destination. The short version: give each child ownership of one part of the day, build in solo time, and accept that some days only one kid is having a good time.',
+        text: 'Harder, because different kids have different needs for focused skill work, different energy levels for walking, and different thresholds for "one more museum." We wrote about [worldschooling with two kids](/blog/worldschool-two-kids) and what it honestly looks like with a 9-year-old and a 12-year-old. The short version: keep expectations low and curiosity high. Some days are rich and magical. Some days are Netflix in a hotel room because everyone\'s had enough. The learning happens across weeks and months, not in individual days.',
       },
       {
         type: 'heading',
@@ -798,7 +832,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'The biggest mistake new worldschool families make is trying to see everything. I know because we made it. Our first month, we visited four countries. The kids were exhausted, cranky, and not learning much; they were just surviving the logistics of constant movement.',
+        text: 'The biggest mistake new worldschool families make is trying to see everything. We knew from the start that we wanted to slow travel, and it made all the difference. Families who try to cram in four countries in a month end up with exhausted, cranky kids who aren\'t learning much; they\'re just surviving the logistics of constant movement.',
       },
       {
         type: 'paragraph',
@@ -806,12 +840,11 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Our take on [why slow travel beats bucket-list travel](/blog/slow-travel-over-bucket-list) explains this in more detail, including how we learned it the hard way. The sweet spot for our family turned out to be 3-6 weeks per destination. Long enough to feel settled, short enough to stay curious.',
+        text: 'Our take on [why slow travel beats bucket-list travel](/blog/slow-travel-over-bucket-list) explains this in more detail, including why we chose this approach from day one. The sweet spot for our family turned out to be 4-6 weeks per destination. Long enough to feel settled, short enough to stay curious.',
       },
       {
         type: 'pull-quote',
         text: 'You don\'t need to see the whole world to worldschool. You need to see one place deeply enough that it changes how you see everything else.',
-        attribution: 'Amelie, Anywhere Learning',
       },
       {
         type: 'heading',
@@ -820,11 +853,11 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'I share this because the best way to understand worldschooling is through specific stories, not abstract concepts. When we spent six weeks in El Salvador, our kids learned about volcanic geology by hiking Cerro Verde, about economics by watching how a surf town\'s economy runs on tourism, and about history through conversations with people who lived through the civil war.',
+        text: 'I share this because the best way to understand worldschooling is through specific stories, not abstract concepts. When we spent four weeks in El Salvador, our kids learned about volcanic geology by hiking Santa Ana volcano, about economics by watching how a surf town\'s economy runs on tourism, and about history through conversations with people who lived through the civil war.',
       },
       {
         type: 'paragraph',
-        text: 'None of that was planned. We didn\'t have a "unit study on El Salvador." We just showed up, stayed long enough to get curious, and followed the threads. Our [full account of worldschooling in El Salvador](/blog/worldschooling-el-salvador) includes what the kids actually learned (a lot), what we struggled with (also a lot), and what surprised us.',
+        text: 'None of that was planned. We didn\'t have a "unit study on El Salvador." We just showed up, stayed long enough to get curious, and followed the threads. Our [full account of worldschooling in El Salvador](/blog/worldschooling-el-salvador) includes what the kids actually learned, what we struggled with, and what surprised us.',
       },
       {
         type: 'heading',
@@ -850,11 +883,11 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Less than you think. Our family travels with one tablet per kid loaded with books and educational apps, a handful of physical books (rotated constantly), art supplies (a sketchbook, colored pencils, a watercolor set), a nature journal per kid, and math workbooks for focused practice. That\'s it.',
+        text: 'Less than you think. Our family travels with a laptop for Zach, an iPad for Julia, e-readers for both kids, two pencil cases, extra white sheets, and a laminated world map. We started with binders full of workbooks, but barely touched them after the first few months. The real world was teaching everything those pages were trying to cover.',
       },
       {
         type: 'paragraph',
-        text: 'We\'ve refined our system over two years and many packing mistakes. Our full [worldschooling packing list](/blog/what-we-packed-worldschooling) covers everything, including the things we brought and never used, the things we wish we\'d brought sooner, and the one item that saved us more times than I can count.',
+        text: 'Our full [worldschooling packing list](/blog/what-we-packed-worldschooling) covers everything we actually brought, what earned its place, what we ditched along the way, and what we wish we\'d packed from day one.',
       },
       {
         type: 'tip',
@@ -872,7 +905,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Our experience with [grandparents joining our worldschool trip](/blog/grandparents-join-worldschool-trip) wasn\'t without challenges, including different expectations about screen time, different comfort levels with unstructured days, and the logistical puzzle of adding people to an already flexible plan. But the intergenerational learning that happened was irreplaceable. Grandpa teaching the kids to fish in a Costa Rican river. Grandma sharing stories about her own childhood while the kids sketched in their journals.',
+        text: 'Our experience with [grandparents joining our worldschool trip](/blog/grandparents-join-worldschool-trip) took some adjustment, but the intergenerational learning was irreplaceable. Mamie had the kids identifying toucans and macaws within days. Papi walked them to the local panadería every afternoon. Card games after dinner turned into nightly strategy sessions. And everything naturally switched between French and English, which was language immersion no class could replicate.',
       },
       {
         type: 'heading',
@@ -889,7 +922,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Our guide on [teaching kids a second language while traveling](/blog/teach-kids-second-language) covers practical strategies that work for different ages and temperaments, including the approach that finally worked for our reluctant language learner. Spoiler: it involved a stray cat and a local kid who wanted to play.',
+        text: 'The best language learning we\'ve seen happened naturally: ordering food at a local tienda, chatting with kids at the park, asking for directions. When your child has a genuine reason to communicate, the motivation takes care of itself.',
       },
       {
         type: 'heading',
@@ -969,8 +1002,6 @@ const resources: ResourcePage[] = [
       'grandparents-join-worldschool-trip',
       'homeschool-road-trip',
     ],
-    recommendedProduct: 'travel-day',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'creativity-maker-activities',
@@ -1057,6 +1088,10 @@ const resources: ResourcePage[] = [
         text: 'The [project-based learning approach](/blog/project-based-learning-homeschool) is a natural fit here. Instead of isolated craft projects, give kids multi-day challenges that require planning and revision. The depth of learning in a week-long project far exceeds what happens in ten separate crafts.',
       },
       {
+        type: 'product-callout',
+        slug: 'board-game-studio',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Creative projects by age',
@@ -1132,6 +1167,10 @@ const resources: ResourcePage[] = [
         text: 'Time limits are magic for reluctant makers. "You have 10 minutes to build the tallest structure you can" removes the pressure of perfection. It can\'t be perfect; there\'s not enough time. So kids just build, and that\'s exactly what you want.',
       },
       {
+        type: 'product-callout',
+        slug: 'rube-goldberg-machine',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Video and digital creation',
@@ -1147,6 +1186,10 @@ const resources: ResourcePage[] = [
       {
         type: 'paragraph',
         text: 'Digital creation also includes coding, digital art, music production, podcast creation, and web design. These aren\'t separate from "real" making; they\'re the modern expression of the same builder instinct. A kid designing a video game level is doing the same kind of creative problem-solving as a kid building a fort. The medium is different; the thinking is the same.',
+      },
+      {
+        type: 'product-callout',
+        slug: 'mini-movie',
       },
       {
         type: 'heading',
@@ -1168,7 +1211,6 @@ const resources: ResourcePage[] = [
       {
         type: 'pull-quote',
         text: 'Boredom is not the enemy of creativity; it\'s the prerequisite. Every great idea starts in the gap between stimulation, where a child has to fill the silence with their own imagination.',
-        attribution: 'Amelie, Anywhere Learning',
       },
       {
         type: 'heading',
@@ -1227,6 +1269,10 @@ const resources: ResourcePage[] = [
           'When they\'re done (or time is up), ask three questions: What worked? What didn\'t? What would you do differently?',
           'Display the creation somewhere visible, regardless of how it turned out. Making visible means making valued',
         ],
+      },
+      {
+        type: 'bundle-callout',
+        slug: 'creativity-mega-bundle',
       },
       {
         type: 'faq',
@@ -1382,6 +1428,10 @@ const resources: ResourcePage[] = [
         text: 'Older teens can engage with the ethical dimensions: AI in hiring, AI in justice systems, AI and privacy, AI-generated misinformation. They can also become sophisticated users, learning prompt engineering, understanding model limitations, and using AI as a genuine tool for research, creation, and problem-solving. The goal at this age is to develop a nuanced perspective: AI is powerful AND limited, useful AND potentially harmful, a tool that amplifies both good and bad intentions.',
       },
       {
+        type: 'product-callout',
+        slug: 'ai-basics',
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'Hands-on AI activities families can do together',
@@ -1431,6 +1481,10 @@ const resources: ResourcePage[] = [
       {
         type: 'paragraph',
         text: 'This is a moving target. AI-generated content is getting better fast. But there are still tells: AI images often have odd details in hands, text, or backgrounds. AI text tends to be fluent but generic, with a particular style of hedging and qualification. AI videos may have unnatural movements or inconsistent lighting. Teaching your child to look for these artifacts is valuable today, even though the tells will change over time. What won\'t change is the habit of looking critically at content instead of accepting it at face value.',
+      },
+      {
+        type: 'product-callout',
+        slug: 'deepfake-spotter',
       },
       {
         type: 'heading',
@@ -1509,7 +1563,6 @@ const resources: ResourcePage[] = [
       {
         type: 'pull-quote',
         text: 'The families who raise digitally literate kids aren\'t the ones who restrict technology the most. They\'re the ones who engage with it the most, alongside their children, with curiosity and conversation.',
-        attribution: 'Amelie, Anywhere Learning',
       },
       {
         type: 'heading',
@@ -1530,6 +1583,10 @@ const resources: ResourcePage[] = [
           'Let your child use a digital tool to create something: a video, a drawing, a song, a story. Focus on creation over consumption',
           'Talk about one thing that surprised you both. AI literacy is a journey you take together, not a destination you arrive at alone',
         ],
+      },
+      {
+        type: 'bundle-callout',
+        slug: 'ai-digital-bundle',
       },
       {
         type: 'faq',
@@ -1614,7 +1671,7 @@ const resources: ResourcePage[] = [
       { type: 'pull-quote', text: 'The homeschool journey isn\'t a straight line. It\'s a winding path, and every family walks it differently.' },
       { type: 'heading', level: 2, text: 'Where to go from here' },
       { type: 'paragraph', text: 'Wherever you are on this journey, the blog posts linked throughout this page go deeper on each phase. Start with whatever matches your current stage, and know that every homeschool parent before you has stood exactly where you\'re standing now. You\'re not behind. You\'re not failing. You\'re just getting started, and that\'s exactly where you\'re supposed to be.' },
-      { type: 'cta', text: 'New to all of this? Our free guide gives you 10 practical starting points, with no curriculum, no pressure, and no judgment.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'New to all of this? Our free guide gives you 10 simple activities to try this week — no curriculum, no pressure, and no judgment.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I know if homeschooling is right for my family?', answer: 'If your child is unhappy, unstimulated, or struggling in their current environment, and you\'re willing to try something different, homeschooling is worth exploring. Start with a trial semester. You can always go back.' },
         { question: 'What is deschooling and how long does it take?', answer: 'Deschooling is the transition period after leaving school where your family unlearns institutional habits and expectations. The general guideline is one month per year of formal schooling. During this time, prioritise rest, play, and rebuilding your child\'s natural curiosity.' },
@@ -1638,8 +1695,6 @@ const resources: ResourcePage[] = [
       'just-let-them-play',
       'what-no-prep-means',
     ],
-    recommendedProduct: 'future-ready-skills-map',
-    recommendedBundle: 'real-world-mega-bundle',
   },
 ];
 

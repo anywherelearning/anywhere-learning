@@ -199,7 +199,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Outdoor & Nature Mega Bundle",
     slug: "outdoor-mega-bundle",
     description:
-      "All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and Nature Journal Walks. The complete outdoor toolkit for families who learn outside.",
+      "All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and My Nature Journal. The complete outdoor toolkit for families who learn outside.",
     shortDescription:
       "All 7 outdoor & nature packs in one download.",
     priceCents: 4199,
@@ -319,12 +319,12 @@ export const fallbackProducts: FallbackProduct[] = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "fb-nature-journal",
-    name: "Nature Journal & Walk Cards",
+    name: "My Nature Journal",
     slug: "nature-journal-walks",
     description:
-      "25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation and science experience. Each card gives your child a specific focus: tracking shadows, sketching bark patterns, listening for bird calls, mapping a puddle ecosystem. No nature expertise required from you. Just open a card, step outside, and let curiosity lead.",
+      "A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape — backyard, park, trail, or beach. No nature expertise required from you. Just open it up, step outside, and let curiosity lead.",
     shortDescription:
-      "25 nature walk prompts and journaling activities for rich outdoor observation.",
+      "A guided nature journal with prompts for sketching, writing, and outdoor observation.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TFcTSAMzOBftCntNAM1nnp4",
@@ -334,7 +334,7 @@ export const fallbackProducts: FallbackProduct[] = [
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,
-    activityCount: 25,
+    activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 20,
     active: true,

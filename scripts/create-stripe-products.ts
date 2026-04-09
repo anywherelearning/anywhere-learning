@@ -28,7 +28,7 @@ const catalog = [
   { slug: 'fall-outdoor-pack', name: 'Fall Outdoor Learning Pack', priceCents: 1499, description: '20 autumn activities for observation, science, and creative skills.' },
   { slug: 'winter-outdoor-pack', name: 'Winter Outdoor Learning Pack', priceCents: 1499, description: '20 winter activities for cosy indoor days and cold outdoor adventures.' },
   // ─── Nature cards ($6.99) ───
-  { slug: 'nature-journal-walks', name: 'Nature Journal & Walk Cards', priceCents: 799, description: '25 nature walk prompts and journaling activities.' },
+  { slug: 'nature-journal-walks', name: 'My Nature Journal', priceCents: 799, description: 'A guided nature journal with prompts for sketching, writing, and outdoor observation.' },
   { slug: 'nature-walk-task-cards', name: 'Nature Walk Task Cards', priceCents: 799, description: 'Structured observation prompts for any outdoor walk.' },
   { slug: 'nature-choice-boards', name: 'Nature Choice Boards', priceCents: 799, description: 'Pick-your-own-adventure style nature activity boards.' },
   { slug: 'outdoor-learning-missions', name: 'Outdoor Learning Missions', priceCents: 799, description: 'Mission-based outdoor challenges for curious explorers.' },

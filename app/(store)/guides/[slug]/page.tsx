@@ -77,6 +77,9 @@ function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopi
   const defaults = resourceProductDefaults[resource.topic];
   if (!defaults) return resource.content;
 
+  // If neither recommendedProduct nor recommendedBundle is set, skip auto-injection
+  if (!resource.recommendedProduct && !resource.recommendedBundle) return resource.content;
+
   const productSlug = resource.recommendedProduct || defaults.product;
   const bundleSlug = resource.recommendedBundle || defaults.bundle;
 

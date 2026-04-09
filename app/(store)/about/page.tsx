@@ -64,7 +64,7 @@ const values = [
     ),
     title: "Flexible by design",
     description:
-      "No schedules, no sequences. Use the packs however you want, at home, travelling, or in between.",
+      "No schedules, no sequences. Use the guides however you want, at home, travelling, or in between.",
   },
 ];
 
@@ -366,7 +366,7 @@ export default function AboutPage() {
               href="/shop"
               className="rounded-2xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-all hover:bg-forest-dark hover:shadow-md"
             >
-              Browse Packs
+              Browse Guides
             </Link>
             <Link
               href="/free-guide"

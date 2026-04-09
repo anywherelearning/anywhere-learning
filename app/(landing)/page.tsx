@@ -278,7 +278,7 @@ export default function HomePage() {
             </div>
             <ScrollReveal delay={400}>
               <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
-                That&apos;s exactly why I made these.
+                That&apos;s exactly why we made these.
               </p>
             </ScrollReveal>
           </div>

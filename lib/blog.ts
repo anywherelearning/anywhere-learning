@@ -294,15 +294,12 @@ const posts: BlogPost[] = [
         'Conversation: the most underrated learning tool',
       ]},
       { type: 'paragraph', text: 'The less stuff you carry, the better. We learned this the hard way after lugging a suitcase full of workbooks through three airports. Now we travel with digital activity guides on a tablet, books, and whatever the kids need for their travel blog. Everything else, we find along the way.' },
-      { type: 'product-callout', slug: 'road-trip-calculator' },
       { type: 'heading', level: 2, text: 'Answering the hard questions' },
       { type: 'paragraph', text: 'People will ask about socialisation, about \u201cgaps,\u201d about university. Here\u2019s what I\u2019ve learned: worldschooled kids are some of the most socially capable humans I\u2019ve met. They\u2019ve navigated foreign cultures, made friends across language barriers, and learned to adapt to new environments constantly. That\u2019s not a socialisation problem. That\u2019s a superpower.' },
       { type: 'image', alt: 'Family exploring an interactive museum exhibit together while travelling', caption: 'Museums, nature centres, workshops, every place has something to offer.', src: '/images/worldschool-two-kids-museum.jpeg' },
       { type: 'heading', level: 2, text: 'You don\u2019t have to travel full-time' },
       { type: 'paragraph', text: 'Worldschooling isn\u2019t just for nomad families. A weekend trip to a nearby town, a visit to a cultural festival, or even [cooking a meal from another country](/blog/kitchen-learning-lab), it all counts. The mindset is \u201cthe world is the classroom.\u201d The location is optional.' },
       { type: 'paragraph', text: 'Start where you are. Explore your own neighbourhood with fresh eyes. Visit the part of your city you never go to. Try a restaurant from a cuisine you\u2019ve never had. Worldschooling is a way of seeing, not a passport stamp.' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
-      { type: 'cta', text: 'Curious about worldschooling but not sure where to start? Our free guide helps families find their own path.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is worldschooling?', answer: 'Worldschooling is using travel and real-world experiences as the foundation of your child\u2019s education. It can mean full-time travel, part-time trips, or simply exploring your own community with fresh eyes. The mindset is \u201cthe world is the classroom.\u201d' },
         { question: 'Do you need to travel full-time to worldschool?', answer: 'Not at all. Worldschooling is a mindset, not a passport stamp. A weekend trip, a cultural festival, or cooking a meal from another country all count. You can worldschool from your own neighbourhood.' },
@@ -312,8 +309,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling', 'worldschool-day-structure'],
-    recommendedProduct: 'road-trip-calculator',
-    recommendedBundle: 'real-world-math-bundle',
   },
   {
     slug: 'new-to-homeschooling',
@@ -1103,7 +1098,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'You can worldschool from your backyard. Visit a local factory. Talk to the baker about yeast. Walk through a cemetery and do history. The point isn\u2019t where you are. It\u2019s how you see.' },
       { type: 'image', src: '/images/el-salvador-pupuseria.jpeg', alt: 'Zach and Julia sitting in front of a local pupusería in El Salvador', caption: 'Their favourite pupusería. They order in Spanish, pay, and tip, all on their own.' },
       { type: 'paragraph', text: 'El Salvador just happens to be where we are right now. Next month it might be somewhere else. But the approach stays the same: slow down, pay attention, follow the curiosity.' },
-      { type: 'product-callout', slug: 'savings-goal-tracker' },
       { type: 'heading', level: 2, text: 'How to start (even if you\u2019re not traveling)' },
       { type: 'list', ordered: true, items: [
         'Pick one day this week and leave the curriculum at home. Just go somewhere, a market, a park, a workshop, and let your kids lead.',
@@ -1112,8 +1106,6 @@ const posts: BlogPost[] = [
         'Keep a family journal. Write down the questions your kids ask, the things they discover, the conversations you didn\u2019t expect. You\u2019ll be amazed what adds up.',
       ]},
       { type: 'paragraph', text: 'My daughter just came back from the tienda. She ordered in Spanish, paid in Bitcoin, and is now sharing mango with her brother on the beach. Nobody assigned that. Nobody graded it. But it\u2019s real, and it\u2019s hers, and I\u2019ll take it.' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
-      { type: 'cta', text: 'Wondering what learning looks like outside a classroom? Our free guide gives you ten real-world starting points, wherever in the world you are.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is worldschooling?', answer: 'Worldschooling is a form of home education that uses travel and real-world experiences as the primary learning environment. Instead of following a fixed curriculum, worldschooling families learn through cultural immersion, exploration, and everyday life, wherever they happen to be.' },
         { question: 'Do worldschooled kids fall behind academically?', answer: 'Research on homeschooled and worldschooled children consistently shows they perform at or above grade level in core subjects. More importantly, they tend to develop stronger critical thinking, adaptability, and self-directed learning skills than traditionally schooled peers.' },
@@ -1123,8 +1115,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['slow-travel-over-bucket-list', 'worldschool-day-structure'],
-    recommendedProduct: 'savings-goal-tracker',
-    recommendedBundle: 'real-world-math-bundle',
   },
   {
     slug: 'homeschool-while-traveling',
@@ -1201,8 +1191,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If you\u2019re reading this and still feeling guilty that your kids aren\u2019t doing enough \u201creal school\u201d while traveling, here\u2019s your permission slip: travel is one of the most powerful educational experiences a child can have. Full stop.' },
       { type: 'paragraph', text: 'Your kids are learning geography by living in it. History by walking through it. Language by hearing it. Economics by spending in it. Science by seeing it. And social skills by navigating a world that doesn\u2019t revolve around them.' },
       { type: 'paragraph', text: 'That\u2019s not \u201cenough.\u201d That\u2019s extraordinary.' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'You don\u2019t need a curriculum to give your kids a great education. Our free guide shows you how to start, with ten skills they\u2019ll use forever.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I keep records of learning while traveling?', answer: 'Kids\u2019 journals are your best portfolio. Photos, ticket stubs, sketches, and written reflections are all evidence of learning. Some families also keep a simple log of topics covered each week. If your state requires documentation, travel experiences map easily to subject areas: museum visits (history/art), nature hikes (science), budgeting (maths), journaling (language arts).' },
         { question: 'What if my kids resist journaling?', answer: 'Keep it short and flexible. Some kids prefer drawing to writing; that\u2019s fine. Some prefer voice recordings. Others like collecting things (tickets, postcards, pressed flowers) and taping them in. The format doesn\u2019t matter. What matters is the habit of reflection.' },
@@ -1212,8 +1200,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['what-we-packed-worldschooling', 'slow-travel-over-bucket-list', 'worldschooling-el-salvador'],
-    recommendedProduct: 'travel-day',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'real-world-learning-guide',
@@ -1622,10 +1608,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'People want to know our schedule because they want permission to do it differently. So here it is: you have permission. There is no right way to structure a worldschool day. There\u2019s your way, and it\u2019ll look different from mine, and that\u2019s the whole point.' },
       { type: 'paragraph', text: 'The best education I can give my kids isn\u2019t a perfect plan. It\u2019s the confidence to figure things out without one.' },
 
-      { type: 'product-callout', slug: 'travel-day' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'No schedule? No problem. Our free guide gives you ten activities that work on any day, in any order, perfect for families who\u2019ve ditched the timetable.', href: '/free-guide', label: 'Get the Free Guide' },
-
       { type: 'faq', items: [
         { question: 'Do worldschool families follow a schedule?', answer: 'Most worldschool families use a loose daily rhythm rather than a strict schedule. This might include a quiet morning for reading and projects, an active middle of the day for exploring and experiences, and downtime in the afternoon for processing and play. The specifics flex based on location, weather, and what the kids are interested in.' },
         { question: 'How many hours a day do worldschoolers study?', answer: 'Worldschooling doesn\u2019t separate "study time" from "life time" the way traditional school does. Kids might do 30 minutes of focused maths practice but also spend three hours at a market practising a language, learning about local agriculture, and handling money. The formal study time is usually minimal; the experiential learning time is constant.' },
@@ -1634,8 +1616,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling'],
-    recommendedProduct: 'travel-day',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'start-homeschooling-mid-year',
@@ -1728,7 +1708,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'We did bring our own masks and snorkels, but honestly, we wouldn\u2019t next time. They take up space and you can rent them anywhere you\u2019d actually need them. The only activity-specific things we actually carry are:' },
       { type: 'list', ordered: false, items: ['Good water shoes (for rocky waterfalls and river hikes; we\u2019ve done a lot of these)', 'A compact daypack for each person (the kids carry their own water and snacks on hikes now, which is a life skill in itself)', 'Rash guards for sun protection in the water', 'Zach\u2019s basketball, yes, we travel with a basketball. He finds courts everywhere. Panama City, small towns in Costa Rica, the park in El Zonte. It\u2019s heavy and awkward to pack, and it\u2019s worth it.'] },
       { type: 'paragraph', text: 'Julia\u2019s thing is building at the beach, sand animals, castles, elaborate villages with moats. Her gear is whatever beach she\u2019s standing on. Zero packing required.' },
-      { type: 'product-callout', slug: 'backyard-campout-planner' },
       { type: 'heading', level: 2, text: 'What we ditched along the way' },
       { type: 'paragraph', text: 'This is the part I wish someone had told me before we left. Here\u2019s what got donated, left behind, or mailed home within the first two months:' },
       { type: 'list', ordered: false, items: ['Workbooks: I packed two binders with math, grammar, and writing booklets. The kids used them at first, but less and less as the months went on. The real world was teaching everything those pages were trying to cover, and more naturally. Next time: no workbooks at all.', 'Extra shoes: I packed dress shoes for myself \u201cjust in case.\u201d I wore crocs and hiking shoes for seven months straight. The dress shoes never left the bag.', 'A bulky first aid kit, we pared it down to basics and bought anything else locally when needed.', 'Fancy rain gear: we packed proper rain pants. Nobody wore them. When it rains in the tropics, it\u2019s too hot for rain gear anyway. You just get wet and dry off.', 'Masks and snorkels: we brought our own, but they just take up space. You can rent them anywhere you\u2019d actually use them. Not worth the bag real estate.'] },
@@ -1740,12 +1719,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The learning and the travel aren\u2019t separate. Zach practiced fractions figuring out tip percentages at restaurants in Costa Rica. Julia learned about marine ecosystems by actually [seeing tide pools](/blog/nature-walks-science), not reading about them. Both kids are picking up Spanish here in El Salvador by ordering their own food and chatting with the neighbors, no flashcards required.' },
       { type: 'paragraph', text: 'The point is: you don\u2019t need to pack a classroom. You need a device for creating, some paper and pens for the analog moments, and the willingness to let the world be the curriculum. Everything else, you figure out as you go. Wherever you are, there\u2019s always a shop nearby where you can buy what you need, markers, notebooks, sunscreen, whatever. Don\u2019t overpack out of fear. You\u2019re not heading into the wilderness. You\u2019re heading into a place where people live.' },
       { type: 'faq', items: [{ question: 'What\u2019s the one thing you\u2019d tell someone to definitely pack for worldschooling?', answer: 'A device the kids can create on, whether that\u2019s a laptop, tablet, or Chromebook. Our kids use theirs for blogging, video editing, and research.' }, { question: 'Do you carry any curriculum or textbooks?', answer: 'Not anymore. We started with binders of math and grammar workbooks, and the kids used them for a while. But as the months went on, we reached for them less and less. The real world was covering everything those pages were trying to teach. Next time, we\u2019d leave them behind entirely.' }, { question: 'How do you handle laundry with minimal clothing?', answer: 'We do laundry every three to four days, either hand washing or using a local laundry service. In most of Central America, a lavanderia will wash and fold a load for a few dollars.' }, { question: 'Is it worth packing activity-specific gear like snorkel equipment or surfboards?', answer: 'For us, no. We rent surfboards and snorkel gear wherever we go. The one exception is Zach\u2019s basketball, that travels with us because he uses it almost daily.' }, { question: 'What about packing for different climates on one trip?', answer: 'Layers are the answer. A light hoodie and a rain jacket covered every cold or wet situation we encountered. Don\u2019t overpack for \u201cwhat if\u201d weather, you can always buy a cheap sweater locally if you need one.' }] },
-      { type: 'bundle-callout', slug: 'outdoor-mega-bundle' },
-      { type: 'cta', text: 'Not sure where to start with learning on the road? Grab our free guide with simple, no-prep ideas you can use anywhere.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
     relatedSlugs: ['homeschool-while-traveling', 'worldschooling-el-salvador', 'worldschool-two-kids'],
-    recommendedProduct: 'backyard-campout-planner',
-    recommendedBundle: 'outdoor-mega-bundle',
   },
   {
     slug: 'slow-travel-over-bucket-list',
@@ -1779,7 +1754,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Compare that to Corcovado. Getting there took a one-and-a-half-hour boat ride from Uvita. On the way, we watched whales jumping right in front of us. The park itself was wild and real, actual wildlife, almost no other tourists, the kind of place that feels like a discovery rather than a destination.' },
       { type: 'image', src: '/images/slow-travel-turtle.jpeg', alt: 'A baby sea turtle making its way across the sand toward the ocean on a Costa Rica beach', caption: 'Some experiences only happen when you stay long enough to be in the right place at the right time.' },
       { type: 'paragraph', text: 'Because we had a full month based in Uvita, we visited three national parks. Corcovado, Marino Ballena, and Manuel Antonio, and had time to actually compare them, talk about what made each one different, and go back to the places we loved. We went to Los Mozas waterfall twice because the first time was so good, cliff jumping, swimming in the current. You can\u2019t do that on a tight schedule.' },
-      { type: 'product-callout', slug: 'time-capsule' },
       { type: 'heading', level: 2, text: 'Routines form, and that\u2019s a good thing' },
       { type: 'paragraph', text: 'One of the unexpected gifts of slow travel is that routines form naturally. People think of routine as the opposite of adventure, but for kids, having familiar rhythms in an unfamiliar place is grounding.' },
       { type: 'paragraph', text: 'In Uvita, we had a favorite bakery where the kids would get these caramel-filled rolls. Zach found a basketball court he\u2019d go back to. When my parents visited, we had real quality time with Papi et Mamie because we weren\u2019t scrambling between attractions, we were just living our life and sharing it with them.' },
@@ -1798,13 +1772,9 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Maybe. It depends on what you\u2019re after. If you have two weeks of vacation and want to see as much as possible, a packed itinerary makes sense. No judgment there; we\u2019ve done those trips too, and they\u2019re fun.' },
       { type: 'paragraph', text: 'But if you have the flexibility, whether you\u2019re homeschooling, worldschooling, working remotely, or taking a sabbatical, consider going fewer places and staying longer. The learning that happens when kids have time to settle in, get curious, and follow their own questions is something no guided tour can replicate.' },
       { type: 'paragraph', text: 'Four countries in seven months. Honestly, it could have been three and I wouldn\u2019t have felt like we missed anything.' },
-      { type: 'faq', items: [{ question: 'How long should you stay in one place for slow travel with kids?', answer: 'We found three weeks to be the minimum for really settling in. The first week you\u2019re adjusting, the second week you find your rhythm, and the third week is when the magic happens, the deep curiosity, the local connections, the comfort. A month is even better if your budget allows it.' }, { question: 'Don\u2019t kids get bored staying in one place too long?', answer: 'Ours haven\u2019t. Boredom usually comes from a lack of autonomy, not a lack of novelty. When kids have the freedom to explore, revisit places they love, and pursue their own interests, they stay engaged. Zach spent a full week on Panama Canal research by choice, no one assigned it.' }, { question: 'Is slow travel actually cheaper than regular travel?', answer: 'In our experience, yes, significantly. Monthly rentals, cooking at home, and fewer transportation costs make a huge difference.' }, { question: 'How do you handle schooling during slow travel?', answer: 'We don\u2019t follow a set curriculum. The travel itself becomes the learning. Spanish practice at the local shop, geography from actually being there, science from national park visits. The slow pace gives us time for deeper projects that a packed schedule wouldn\u2019t allow.' }, { question: 'What if we only have two or three weeks for a trip?', answer: 'You can still apply slow travel principles on a shorter timeline. Pick one or two places instead of five. Skip the \u201cmust-see\u201d attractions that don\u2019t genuinely interest your family. Leave unscheduled time for wandering. Even a small dose of slow travel changes the feel of a trip completely.' }] },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Thinking about worldschooling or slow travel with your family? Grab our free guide for practical tips on making real-world learning part of your everyday, wherever you are.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'faq', items: [{ question: 'How long should you stay in one place for slow travel with kids?', answer: 'We found four weeks to be the sweet spot. The first week you\u2019re adjusting, the second week you find your rhythm, and by weeks three and four the magic happens \u2014 the deep curiosity, the local connections, the comfort.' }, { question: 'Don\u2019t kids get bored staying in one place too long?', answer: 'Ours haven\u2019t. Boredom usually comes from a lack of autonomy, not a lack of novelty. When kids have the freedom to explore, revisit places they love, and pursue their own interests, they stay engaged. Zach spent a full week on Panama Canal research by choice, no one assigned it.' }, { question: 'Is slow travel actually cheaper than regular travel?', answer: 'In our experience, yes, significantly. Monthly rentals, cooking at home, and fewer transportation costs make a huge difference.' }, { question: 'How do you handle schooling during slow travel?', answer: 'We don\u2019t follow a set curriculum. The travel itself becomes the learning. Spanish practice at the local shop, geography from actually being there, science from national park visits. The slow pace gives us time for deeper projects that a packed schedule wouldn\u2019t allow.' }, { question: 'What if we only have two or three weeks for a trip?', answer: 'You can still apply slow travel principles on a shorter timeline. Pick one or two places instead of five. Skip the \u201cmust-see\u201d attractions that don\u2019t genuinely interest your family. Leave unscheduled time for wandering. Even a small dose of slow travel changes the feel of a trip completely.' }] },
     ],
     relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling', 'worldschool-day-structure'],
-    recommendedProduct: 'time-capsule',
-    recommendedBundle: 'real-world-mega-bundle',
   },
 
   // ─── Post 25: Nature-Based Learning Pillar Page ───
@@ -2211,9 +2181,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'My parents flew home after a month. The kids were gutted. Like, genuinely sad in a way that surprised even me. Something had shifted during that month, they understood Papi et Mamie differently. Not as the grandparents who visit at Christmas, but as people with opinions, hobbies, humour, and a completely different way of moving through the world. And my parents understood our life differently. They\u2019d seen it. They\u2019d lived in it. The cautious \u201cwe believe in you\u201d turned into genuine \u201cwe get it now.\u201d' },
       { type: 'paragraph', text: 'If you have the chance to include grandparents, or aunts, uncles, family friends, anyone from a different generation, in your homeschool or worldschool journey, take it. The learning that comes from spending real time with people who see the world a bit differently is irreplaceable. No app, no curriculum, no field trip can match what a grandparent brings to the table.' },
       { type: 'paragraph', text: 'Literally to the table, in our case. Those caramel-filled rolls from the panadería will always taste like Uvita and Papi et Mamie to us.' },
-      { type: 'product-callout', slug: 'party-planner-math' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Planning a family trip and wondering how to make it educational without making it miserable? Our free guide has practical tips for real-world learning wherever you are.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What\u2019s the ideal length for a multigenerational trip?', answer: 'Two to four weeks is the sweet spot. It\u2019s long enough to settle into a rhythm but short enough that everyone still enjoys the experience. We did a month, which worked well because we had separate spaces and plenty of flexibility.' },
         { question: 'How do I explain our homeschool approach to grandparents who are sceptical?', answer: 'Show, don\u2019t tell. Invite them to be part of your days instead of explaining your philosophy. When they see their grandkids researching volcanoes by choice, cooking dinner independently, and carrying on conversations in a second language, the \u201cbut what about school?\u201d questions tend to answer themselves.' },
@@ -2222,8 +2189,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['homeschool-while-traveling', 'worldschool-two-kids', 'slow-travel-over-bucket-list'],
-    recommendedProduct: 'party-planner-math',
-    recommendedBundle: 'real-world-mega-bundle',
   },
 
   // ─── AI & Digital Literacy Cluster Posts ───
@@ -3029,10 +2994,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'I know not every family can take a seven-month trip. But the principle isn\u2019t about the length; it\u2019s about removing the alternatives. When kids don\u2019t have other friends available, other screens to retreat to, other activities pulling them apart, they find each other. A two-week trip with one sibling and no WiFi can do more for their relationship than a year of scheduled playdates.' },
       { type: 'paragraph', text: 'The gift of travel isn\u2019t just what your kids learn about the world. It\u2019s what they learn about each other. And that\u2019s the part I didn\u2019t expect and will never forget.' },
 
-      { type: 'product-callout', slug: 'sports-stats-lab' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Looking for activities your kids can do together, no screens, no prep? Our free guide has 10 ideas to get started.', href: '/free-guide', label: 'Get the Free Guide' },
-
       { type: 'faq', items: [
         { question: 'Do siblings get along better while traveling?', answer: 'Many families find that travel strengthens sibling bonds because kids rely on each other more. Without their usual friend groups and routines, siblings become each other\u2019s primary companion. Shared adventures, especially challenging ones, create a unique bond that\u2019s hard to replicate at home.' },
         { question: 'How do you handle sibling fights while worldschooling?', answer: 'You can\u2019t avoid them. The difference on the road is that kids can\u2019t retreat to separate rooms and forget about it. They have to work through conflict because they still need each other. Give them space to cool down, but let them resolve it. The forced proximity is frustrating but ultimately teaches real conflict resolution skills.' },
@@ -3041,8 +3002,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['worldschool-day-structure', 'worldschooling-el-salvador', 'slow-travel-over-bucket-list'],
-    recommendedProduct: 'sports-stats-lab',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'choosing-worldschool-destinations',
@@ -3112,10 +3071,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'I spent so long researching the "right" destinations that I almost paralysed myself out of going at all. The truth is, every place taught us something. The places that weren\u2019t perfect taught us what we actually needed. And the place we almost didn\u2019t visit. Costa Rica, because of the cost, ended up being our favourite.' },
       { type: 'paragraph', text: 'Pick somewhere that excites you, book a flight, and figure the rest out when you get there. Your kids don\u2019t need the perfect destination. They just need you to say yes.' },
 
-      { type: 'product-callout', slug: 'travel-day' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Planning a worldschool trip and not sure where to start with the learning part? Our free guide has you covered, 10 real-world skills, zero prep.', href: '/free-guide', label: 'Get the Free Guide' },
-
       { type: 'faq', items: [
         { question: 'What are the best countries for worldschooling?', answer: 'There\u2019s no universal answer, it depends on your family\u2019s priorities. Central America (Costa Rica, Panama, El Salvador) is popular for affordable living, warm weather, and Spanish immersion. Southeast Asia is another common choice for budget-friendly family travel. Consider cost of living, language goals, safety, visa rules, internet access, and whether there\u2019s a community of other traveling families.' },
         { question: 'How long should you stay in each place while worldschooling?', answer: 'Longer than you think. A week feels like tourism. Two weeks starts to feel comfortable. A month or more is where the real learning and connection happens. Staying longer also saves money, monthly rental rates are dramatically cheaper than nightly ones, and you cook at home more.' },
@@ -3125,8 +3080,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['slow-travel-over-bucket-list', 'what-we-packed-worldschooling', 'worldschooling-el-salvador'],
-    recommendedProduct: 'travel-day',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'partner-doesnt-support',
