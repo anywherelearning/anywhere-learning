@@ -76,7 +76,7 @@ export async function sendCartAbandonmentEmail({
   const count = items.length;
   const subject = count === 1
     ? `Your ${items[0].name} is still waiting for you`
-    : `Your ${count} activity packs are still in your cart`;
+    : `Your ${count} activity guides are still in your cart`;
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
     to,

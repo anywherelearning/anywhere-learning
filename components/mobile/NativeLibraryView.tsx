@@ -115,7 +115,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
             marginBottom: '20px',
           }}
         >
-          Your activity packs will appear here after purchase. Browse the shop to find your family&apos;s next adventure.
+          Your activity guides will appear here after purchase. Browse the shop to find your family&apos;s next adventure.
         </p>
         <Link
           href="/shop"
@@ -157,7 +157,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
           Your Library
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '13px' }}>
-          {products.length} activity pack{products.length === 1 ? '' : 's'}
+          {products.length} activity guide{products.length === 1 ? '' : 's'}
         </p>
       </div>
 

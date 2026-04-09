@@ -11,8 +11,8 @@ export default function PostPurchaseShare({ referralCode }: PostPurchaseSharePro
   const [codeCopied, setCodeCopied] = useState(false);
   const shareUrl = 'https://anywherelearning.co/shop';
   const shareText = referralCode
-    ? `I just got the best real-world activity packs for my kids, no prep, just open and go! Use my code ${referralCode} for 15% off:`
-    : 'Just got the most amazing real-world activity packs for my kids, no prep, just open and go! Check them out:';
+    ? `I just got the best real-world activity guides for my kids, no prep, just open and go! Use my code ${referralCode} for 15% off:`
+    : 'Just got the most amazing real-world activity guides for my kids, no prep, just open and go! Check them out:';
 
   const handleCopy = async () => {
     try {
@@ -51,7 +51,7 @@ export default function PostPurchaseShare({ referralCode }: PostPurchaseSharePro
 
   const handleEmailShare = () => {
     const subject = encodeURIComponent(
-      'You need to see these activity packs'
+      'You need to see these activity guides'
     );
     const body = encodeURIComponent(`${shareText}\n\n${shareUrl}`);
     const a = document.createElement('a');
@@ -78,7 +78,7 @@ export default function PostPurchaseShare({ referralCode }: PostPurchaseSharePro
       {referralCode && (
         <div className="bg-forest/5 border-2 border-dashed border-forest/30 rounded-2xl p-5 mb-2">
           <p className="text-sm text-gray-600 mb-3">
-            Share your code - they get 15% off, and you will too.
+            Share your code, they get 15% off, and you will too.
           </p>
           <button
             onClick={handleCopyCode}

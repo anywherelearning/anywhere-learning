@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LogoIcon } from '@/components/Logo';
+import Image from 'next/image';
 import AuthNav from './AuthNav';
 import CartIcon from '@/components/cart/CartIcon';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
@@ -55,11 +55,24 @@ export default function SiteHeader() {
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
           {/* Left: Logo */}
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Anywhere Learning home">
-            <LogoIcon size={28} />
-            <span className="font-display text-xl text-forest">
-              Anywhere Learning
-            </span>
+          <Link href="/" className="flex items-center gap-2" aria-label="Anywhere Learning home">
+            <Image
+              src="/logo-icon-transparent.png"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-auto"
+              priority
+              aria-hidden="true"
+            />
+            <Image
+              src="/logo-text-v2.png"
+              alt="Anywhere Learning"
+              width={160}
+              height={40}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Center: Nav links (desktop only) */}
@@ -152,15 +165,22 @@ export default function SiteHeader() {
         >
           {/* Overlay header row - matches main header height & layout */}
           <div className="flex h-16 items-center justify-between px-5 sm:px-8">
-            <Link
-              href="/"
-              className="flex items-center gap-2.5"
-              aria-label="Anywhere Learning home"
-            >
-              <LogoIcon size={28} />
-              <span className="font-display text-xl text-forest">
-                Anywhere Learning
-              </span>
+            <Link href="/" className="flex items-center gap-2" aria-label="Anywhere Learning home">
+              <Image
+                src="/logo-icon-transparent.png"
+                alt=""
+                width={36}
+                height={36}
+                className="h-9 w-auto"
+                aria-hidden="true"
+              />
+              <Image
+                src="/logo-text-v2.png"
+                alt="Anywhere Learning"
+                width={160}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
             <button
               onClick={() => setMobileOpen(false)}

@@ -34,7 +34,7 @@ export default function NotFound() {
           className="text-sm font-semibold py-3 px-6 rounded-xl transition-all text-white"
           style={{ backgroundColor: '#588157' }}
         >
-          Browse Activity Packs
+          Browse Activity Guides
         </Link>
         <Link
           href="/"

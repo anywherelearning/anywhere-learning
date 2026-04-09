@@ -30,7 +30,7 @@ const values = [
     ),
     title: "The world is the classroom",
     description:
-      "Kitchens, parks, airports, backyards: learning happens everywhere when you know what to look for.",
+      "Kitchens, parks, airports, backyards, learning happens everywhere when you know what to look for.",
   },
   {
     icon: (
@@ -99,7 +99,7 @@ const profilePageLd = {
   mainEntity: {
     "@id": "https://anywherelearning.co/about#amelie",
   },
-  name: "About Amelie | Anywhere Learning",
+  name: "About Amelie, Anywhere Learning",
   url: "https://anywherelearning.co/about",
 };
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageLd) }}
       />
-      {/* Hero - personal, warm, sets the tone */}
+      {/* Hero — personal, warm, sets the tone */}
       <section className="relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
         <Image
           src="/about-hero-bg.jpg"
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The real story - inside the system (forest bg for color) */}
+      {/* The real story — inside the system (forest bg for color) */}
       <section className="bg-forest-section py-12 md:py-16 relative overflow-hidden">
         <div className="absolute top-10 right-[8%] w-64 h-64 rounded-full border border-white/[0.04]" aria-hidden="true" />
         <div className="absolute bottom-10 left-[5%] w-40 h-40 rounded-full border border-white/[0.03]" aria-hidden="true" />
@@ -176,7 +176,7 @@ export default function AboutPage() {
               that for my own kids.
             </p>
             <p>
-              What bothered me most wasn&apos;t the reading or the maths. Schools
+              What bothered me most wasn&apos;t the reading or the maths, schools
               can teach those. It was everything they couldn&apos;t teach. How to
               think critically. How to solve a real problem, not a textbook one.
               How to budget, cook a meal, navigate a city, have a conversation
@@ -195,14 +195,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The travel discovery - warm gold accent section */}
+      {/* The travel discovery — warm gold accent section */}
       <section className="bg-gold/10 py-10 md:py-14 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.08] to-transparent" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
               I needed a break. A real one. So I took a year-long leave of
-              absence, and our family hit the road. Seven months of
+              absence, and our family hit the road, seven months of
               travelling together. My kids were 12 and 9, and for the first
               time I was homeschooling them. No classroom. No system. Just us.
             </p>
@@ -221,7 +221,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The pivot - becoming a homeschool parent */}
+      {/* The pivot — becoming a homeschool parent */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg mb-8">
@@ -237,11 +237,11 @@ export default function AboutPage() {
             The Leap
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-forest mb-6">
-            So I left the classroom and brought learning home.
+            So I left the classroom, and brought learning home.
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
-              I did what most former teachers do at first: I started with
+              I did what most former teachers do at first, I started with
               lesson plans and worksheets. Old habits. But bit by bit,
               creativity started taking more space. We swapped the worksheets
               for hands-on projects, real-life experiments, things that got
@@ -342,7 +342,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA - warm sign-off */}
+      {/* CTA — warm sign-off */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
           <div className="relative w-full aspect-[4/3] max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg mb-8">
@@ -358,7 +358,7 @@ export default function AboutPage() {
             Ready to try a different kind of learning?
           </h2>
           <p className="text-gray-500 text-lg mb-6 max-w-lg mx-auto">
-            Start with a free guide or browse the activity packs and see what
+            Start with a free guide or browse the activity guides and see what
             fits your family.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

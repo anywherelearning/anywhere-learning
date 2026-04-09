@@ -75,7 +75,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
             isLight ? "text-gray-500" : "text-cream/80"
           }`}
         >
-          While you wait, explore our ready-to-use activity packs.
+          While you wait, explore our ready-to-use activity guides.
         </p>
         <Link
           href="/shop"
@@ -85,7 +85,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
               : "bg-gold text-forest-dark hover:bg-gold-light"
           }`}
         >
-          Browse Activity Packs &rarr;
+          Browse Activity Guides &rarr;
         </Link>
       </div>
     );

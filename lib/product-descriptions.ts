@@ -7,23 +7,23 @@
 // ─── Per-product description data ────────────────────────────────────
 
 export interface ProductDescription {
-  /** Opening paragraph: what this is and who it's for */
+  /** Opening paragraph — what this is and who it's for */
   opening: string;
   /** Checkmark bullet items specific to this product */
   whatsIncluded: string[];
   /** Subject/skill tags displayed as pills */
   skillTags: string[];
   /** Product format label */
-  format: 'Activity Pack' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
+  format: 'Activity Guide' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
 }
 
 // ─── Shared template sections ────────────────────────────────────────
 
-/** What every activity/project guide includes (shared across all products) */
+/** What every activity/project guide includes — shared across all products */
 export const SHARED_ACTIVITY_STRUCTURE = [
-  'What this activity builds: clear learning focus',
+  'What this activity builds , clear learning focus',
   'Materials needed (minimal or none)',
-  'Before you start: parent-friendly guidance',
+  'Before you start , parent-friendly guidance',
   'Step-by-step instructions to follow along',
   '3 flexible levels: Explore / Develop / Extend',
   'Support tips and conversation starters',
@@ -31,11 +31,11 @@ export const SHARED_ACTIVITY_STRUCTURE = [
 
 /** Selling points shared across all products */
 export const SHARED_WHY_FAMILIES_LOVE_IT = [
-  'No prep. Open and follow along on any device',
-  'Reusable year after year, with a different experience every time',
-  'Works for one child or five, multi-age friendly',
+  'No prep , open and follow along on any device',
+  'Reusable year after year , a different experience every time',
+  'Works for one child or five , multi-age friendly',
   'Curiosity-driven, not curriculum-driven',
-  'Flexible: use one activity a day or one a week',
+  'Flexible , use one activity a day or one a week',
   'Real-world skills through real-world experiences',
 ];
 
@@ -111,10 +111,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'seasonal-bundle': {
     opening:
-      'All four seasonal packs in one download: spring, summer, fall, and winter. 80 outdoor activities designed to match each season\'s unique energy and opportunities. Your family gets a full year of outdoor learning, ready whenever the season changes.',
+      'All four seasonal packs in one download , spring, summer, fall, and winter. 80 outdoor activities designed to match each season\'s unique energy and opportunities. Your family gets a full year of outdoor learning, ready whenever the season changes.',
     whatsIncluded: [
       '4 complete seasonal packs (Spring, Summer, Fall, Winter)',
-      '80 outdoor activities total, 20 per season',
+      '80 outdoor activities total , 20 per season',
       'Language Arts, Maths, Science, and Physical Education in every pack',
       'Age adaptation notes for ages 6–14',
       '3 levels per activity: Explore / Develop / Extend',
@@ -124,7 +124,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'creativity-mega-bundle': {
     opening:
-      'All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films, each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence.',
+      'All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films , each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence.',
     whatsIncluded: [
       '10 complete project guides',
       'Board Game Studio, Rube Goldberg Machine, Survival Base, Imaginary World',
@@ -137,7 +137,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'real-world-mega-bundle': {
     opening:
-      'All 10 Real-World Relevance activities in one download. Budgeting, meal planning, micro-businesses, media literacy, travel planning, smart shopping, and more. Each activity puts kids in real-life scenarios where they practise skills that actually matter, using real money, real decisions, and real thinking.',
+      'All 10 Real-World Relevance activities in one download. Budgeting, meal planning, micro-businesses, media literacy, travel planning, smart shopping, and more. Each activity puts kids in real-life scenarios where they practise skills that actually matter , using real money, real decisions, and real thinking.',
     whatsIncluded: [
       '10 complete activity guides',
       'Budget Challenge, Kitchen Maths, Smart Shopper, Micro-Business',
@@ -150,7 +150,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'ai-digital-bundle': {
     opening:
-      'All 10 AI & Digital Literacy activities in one download. From understanding what AI actually is, to spotting deepfakes, checking for bias, building ethical AI projects, and managing digital boundaries. Everything your child needs to be a thoughtful, confident digital citizen.',
+      'All 10 AI & Digital Literacy activities in one download. From understanding what AI actually is, to spotting deepfakes, checking for bias, building ethical AI projects, and managing digital boundaries , everything your child needs to be a thoughtful, confident digital citizen.',
     whatsIncluded: [
       '10 complete activity guides covering AI and digital literacy',
       'AI Basics, Prompt Like a Coach, Hallucination Detective',
@@ -163,26 +163,26 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-art-bundle': {
     opening:
-      'Three of our most popular nature packs together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching birds, and creating art from found materials. Nature meets creativity in every activity.',
+      'Three of our most popular nature packs together , Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching birds, and creating art from found materials. Nature meets creativity in every activity.',
     whatsIncluded: [
       '3 complete nature + art packs',
-      'Land Art Challenge Cards: 15 outdoor art challenges',
-      'Nature Crafts for Kids: hands-on projects with found materials',
-      'Nature Journal & Walk Cards: 25 observation and journaling prompts',
-      'All activities use materials found in nature, no supplies needed',
+      'Land Art Challenge Cards , 15 outdoor art challenges',
+      'Nature Crafts for Kids , hands-on projects with found materials',
+      'Nature Journal & Walk Cards , 25 observation and journaling prompts',
+      'All activities use materials found in nature , no supplies needed',
     ],
     skillTags: ['Art', 'Nature', 'Observation', 'Creativity', 'Journaling'],
     format: 'Bundle',
   },
   'outdoor-toolkit-bundle': {
     opening:
-      'Four essential outdoor learning packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you\'re in the backyard, at the park, or on a trail, you\'ll have a rich activity ready to go.',
+      'Four essential outdoor learning packs in one download , Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you\'re in the backyard, at the park, or on a trail, you\'ll have a rich activity ready to go.',
     whatsIncluded: [
       '4 complete outdoor learning packs',
-      'Nature Walk Task Cards: read-aloud exploration prompts',
-      'Outdoor Learning Missions: structured outdoor challenges',
-      'STEM Challenge Cards: 20 nature-based engineering challenges',
-      'Nature Choice Boards: 5 self-directed activity menus',
+      'Nature Walk Task Cards , read-aloud exploration prompts',
+      'Outdoor Learning Missions , structured outdoor challenges',
+      'STEM Challenge Cards , 20 nature-based engineering challenges',
+      'Nature Choice Boards , 5 self-directed activity menus',
     ],
     skillTags: ['STEM', 'Nature', 'Observation', 'Engineering', 'Self-Direction'],
     format: 'Bundle',
@@ -190,16 +190,16 @@ export const productDescriptions: Record<string, ProductDescription> = {
 
   'outdoor-mega-bundle': {
     opening:
-      'All 7 outdoor and nature activity packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and the Nature Journal. Whether you\'re building sculptures from sticks, solving STEM challenges at the park, or journaling beside a stream, this bundle has you covered for every kind of outdoor learning.',
+      'All 7 outdoor and nature activity guides in one download , Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and the Nature Journal. Whether you\'re building sculptures from sticks, solving STEM challenges at the park, or journaling beside a stream, this bundle has you covered for every kind of outdoor learning.',
     whatsIncluded: [
       '7 complete outdoor & nature packs',
-      'Nature Walk Task Cards: read-aloud exploration prompts',
-      'Outdoor Learning Missions: structured outdoor challenges',
-      'STEM Challenge Cards: 20 nature-based engineering challenges',
-      'Nature Choice Boards: 5 self-directed activity menus',
-      'Land Art Challenge Cards: 15 outdoor art challenges',
-      'Nature Crafts for Kids: hands-on projects with found materials',
-      'Nature Journal & Walk Cards: 25 observation and journaling prompts',
+      'Nature Walk Task Cards , read-aloud exploration prompts',
+      'Outdoor Learning Missions , structured outdoor challenges',
+      'STEM Challenge Cards , 20 nature-based engineering challenges',
+      'Nature Choice Boards , 5 self-directed activity menus',
+      'Land Art Challenge Cards , 15 outdoor art challenges',
+      'Nature Crafts for Kids , hands-on projects with found materials',
+      'Nature Journal & Walk Cards , 25 observation and journaling prompts',
     ],
     skillTags: ['STEM', 'Nature', 'Art', 'Observation', 'Engineering', 'Creativity', 'Journaling'],
     format: 'Bundle',
@@ -210,7 +210,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'spring-outdoor-pack': {
     opening:
-      'Bring learning outside this spring, without prep, printables, or special supplies. 20 nature-based outdoor activities for families who want meaningful seasonal learning that feels calm, flexible, and doable. Spring offers endless learning moments: buds opening, puddles changing, birds returning, insects appearing.',
+      'Bring learning outside this spring \u2014 without prep, printables, or special supplies. 20 nature-based outdoor activities for families who want meaningful seasonal learning that feels calm, flexible, and doable. Spring offers endless learning moments: buds opening, puddles changing, birds returning, insects appearing.',
     whatsIncluded: [
       '20 spring-themed outdoor activities across 4 subjects',
       'Language Arts (5): descriptive writing, discussion prompts, how-to writing',
@@ -219,11 +219,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): no-equipment outdoor movement games',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'summer-outdoor-pack': {
     opening:
-      '20 summer activities for families who learn on the move. Water experiments, shadow tracking, outdoor cooking, beach science, and more. Designed for long sunny days when kids have energy to burn and curiosity to feed, whether you\'re at home, at the beach, or travelling.',
+      '20 summer activities for families who learn on the move. Water experiments, shadow tracking, outdoor cooking, beach science, and more. Designed for long sunny days when kids have energy to burn and curiosity to feed , whether you\'re at home, at the beach, or travelling.',
     whatsIncluded: [
       '20 summer-themed outdoor activities across 4 subjects',
       'Language Arts (5): storytelling, nature poetry, observation writing',
@@ -232,7 +232,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): summer movement games and water challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Water Science', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'fall-outdoor-pack': {
     opening:
@@ -245,7 +245,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): fall movement games and nature challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'winter-outdoor-pack': {
     opening:
@@ -258,50 +258,50 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): winter movement games and challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Astronomy', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'nature-journal-walks': {
     opening:
-      '25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation experience. Each card gives your child a specific focus, like tracking shadows, sketching bark patterns, listening for layers of sound. Works in any season, any landscape, any weather.',
+      '25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation experience. Each card gives your child a specific focus , tracking shadows, sketching bark patterns, listening for layers of sound. Works in any season, any landscape, any weather.',
     whatsIncluded: [
       '25 nature walk and journaling prompt cards',
       'Specific observation focuses: shadows, textures, sounds, patterns, colour',
       'Sketching, mapping, and descriptive writing prompts',
-      'Seasonal variations, works year-round',
-      'Self-directed format: kids can choose their own adventure',
+      'Seasonal variations , works year-round',
+      'Self-directed format , kids can choose their own adventure',
     ],
     skillTags: ['Observation', 'Journaling', 'Science', 'Art', 'Writing'],
     format: 'Card Pack',
   },
   'nature-walk-task-cards': {
     opening:
-      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, no-prep way to make walks more engaging.',
+      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission , find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, no-prep way to make walks more engaging.',
     whatsIncluded: [
       'Read-aloud outdoor learning prompt cards',
       'Each card focuses on a specific sense or skill',
       'Works in parks, backyards, trails, beaches, or neighbourhoods',
       'Designed for parent-led or independent use',
-      'Reusable across seasons, with different results every time',
+      'Reusable across seasons , different results every time',
     ],
     skillTags: ['Observation', 'Nature', 'Sensory Learning', 'Science'],
     format: 'Card Pack',
   },
   'nature-choice-boards': {
     opening:
-      'Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from: observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what they do and how deep they go.',
+      'Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from , observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what they do and how deep they go.',
     whatsIncluded: [
       '5 nature choice board activity menus',
-      '9 options per board, a mix of observation, art, science, and movement',
+      '9 options per board , mix of observation, art, science, and movement',
       'Self-directed format builds independence and decision-making',
       'Works outdoors in any environment',
-      'Flexible: complete one activity or the whole board',
+      'Flexible , complete one activity or the whole board',
     ],
     skillTags: ['Self-Direction', 'Nature', 'Science', 'Art', 'Decision-Making'],
     format: 'Card Pack',
   },
   'outdoor-learning-missions': {
     opening:
-      'Mission-style outdoor challenges that get kids moving, observing, and problem-solving in nature. Each mission has a clear objective, steps to follow, and a reflection prompt. From building shelters to mapping ecosystems, these turn any outdoor space into an adventure zone.',
+      'Mission-style outdoor challenges that get kids moving, observing, and problem-solving in nature. Each mission has a clear objective, steps to follow, and a reflection prompt. From building shelters to mapping ecosystems , these turn any outdoor space into an adventure zone.',
     whatsIncluded: [
       'Structured outdoor mission challenge cards',
       'Each mission: clear objective, steps, and reflection prompt',
@@ -327,29 +327,29 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'land-art-challenges': {
     opening:
-      '15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
+      '15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, colour, and composition , all while spending time outside.',
     whatsIncluded: [
       '15 land art challenge cards',
       'Mandalas, spirals, mosaics, patterns, and sculptures',
       'Uses only natural materials: stones, leaves, sticks, petals, bark',
       'Teaches pattern, symmetry, colour theory, and composition',
-      'Temporary art: photograph and leave no trace',
+      'Temporary art , photograph and leave no trace',
     ],
     skillTags: ['Art', 'Nature', 'Patterns', 'Creativity', 'Observation'],
     format: 'Card Pack',
   },
   'nature-crafts': {
     opening:
-      'Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation. Kids collect materials mindfully and create something meaningful from them.',
+      'Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation , kids collect materials mindfully and create something meaningful from them.',
     whatsIncluded: [
       'Nature craft project guides using found materials',
       'Leaf pressing, flower pounding, bark rubbings, stick weaving',
       'Each project combines collection, observation, and creation',
-      'Minimal additional supplies, mostly found materials',
+      'Minimal additional supplies , mostly found materials',
       'Suitable for all seasons with seasonal variations',
     ],
     skillTags: ['Art', 'Nature', 'Crafts', 'Observation', 'Fine Motor Skills'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -363,14 +363,14 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Theme brainstorming and game mechanic design',
       'Board layout, game piece creation, and rule writing',
       'Playtesting framework with feedback prompts',
-      'Iteration cycle: improve based on real play',
+      'Iteration cycle , improve based on real play',
     ],
     skillTags: ['Design Thinking', 'Maths', 'Writing', 'Strategy', 'Art'],
     format: 'Project Guide',
   },
   'rube-goldberg-machine': {
     opening:
-      'Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials like dominoes, ramps, balls, and levers. Each step teaches engineering principles, cause-and-effect, and creative problem-solving through the joy of building something gloriously over-engineered.',
+      'Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials , dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect, and creative problem-solving through the joy of building something gloriously over-engineered.',
     whatsIncluded: [
       'Complete project guide with engineering principles',
       'Chain reaction design and planning steps',
@@ -396,13 +396,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'imaginary-world': {
     opening:
-      'Create an entire imaginary world from scratch, including its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that spans writing, art, science, and worldbuilding.',
+      'Create an entire imaginary world from scratch , its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that spans writing, art, science, and worldbuilding.',
     whatsIncluded: [
       'Complete worldbuilding project guide',
       'Geography, climate, and ecosystem design',
       'Creature invention and civilisation building',
       'Map-making, language creation, and lore writing',
-      'Flexible timeline: expand as deep as your child wants',
+      'Flexible timeline , expand as deep as your child wants',
     ],
     skillTags: ['Writing', 'Art', 'Geography', 'Worldbuilding', 'Imagination'],
     format: 'Project Guide',
@@ -435,13 +435,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-movie': {
     opening:
-      'Create a mini movie, stop-motion animation, or radio drama from scratch. Kids write scripts, design sets, create characters, record audio, and edit their production. A full creative process from concept to premiere, combining storytelling, technology, and artistic expression all in one.',
+      'Create a mini movie, stop-motion animation, or radio drama from scratch. Kids write scripts, design sets, create characters, record audio, and edit their production. A full creative process from concept to premiere , storytelling, technology, and artistic expression all in one.',
     whatsIncluded: [
       'Complete production guide (movie, animation, or radio drama)',
       'Scriptwriting, storyboarding, and character design',
       'Set design, costume, and prop creation',
       'Recording, editing, and production tips',
-      'Premiere planning: share with family and friends',
+      'Premiere planning , share with family and friends',
     ],
     skillTags: ['Storytelling', 'Writing', 'Technology', 'Art', 'Collaboration'],
     format: 'Project Guide',
@@ -466,7 +466,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Complete kinetic art project guide',
       'Movement principles: balance, wind, gravity, rotation',
       'Material exploration and construction techniques',
-      'Design iteration: test, adjust, refine',
+      'Design iteration , test, adjust, refine',
       'Exhibition planning and artist statement writing',
     ],
     skillTags: ['Physics', 'Art', 'Engineering', 'Design', 'Expression'],
@@ -504,7 +504,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kitchen-math-challenge': {
     opening:
-      'Go beyond recipes. Plan meals for a week, calculate grocery costs, compare unit prices, adjust portions, and manage a food budget. Real-world maths that happens in the kitchen, at the shop, and around the dinner table. The kind of maths your child will actually use for the rest of their life.',
+      'Go beyond recipes , plan meals for a week, calculate grocery costs, compare unit prices, adjust portions, and manage a food budget. Real-world maths that happens in the kitchen, at the shop, and around the dinner table. The kind of maths your child will actually use for the rest of their life.',
     whatsIncluded: [
       'Meal planning and grocery budgeting challenges',
       'Unit price comparison and value calculations',
@@ -517,7 +517,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'smart-shopper': {
     opening:
-      'Activities that teach kids to be critical, informed consumers. Compare prices, read labels, spot marketing tricks, calculate value, and make smart purchasing decisions. Financial literacy meets critical thinking, building skills every kid needs and no textbook teaches.',
+      'Activities that teach kids to be critical, informed consumers. Compare prices, read labels, spot marketing tricks, calculate value, and make smart purchasing decisions. Financial literacy meets critical thinking , skills every kid needs and no textbook teaches.',
     whatsIncluded: [
       'Consumer literacy challenges and activities',
       'Price comparison and unit price calculations',
@@ -544,7 +544,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'backyard-campout-planner': {
     opening:
-      'Plan a backyard campout from start to finish: gear checklists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.',
+      'Plan a backyard campout from start to finish , gear checklists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.',
     whatsIncluded: [
       'Complete campout planning guide with step-by-step phases',
       'Gear checklist with quantity and cost calculations',
@@ -570,7 +570,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'family-electricity-audit': {
     opening:
-      'Audit your household electricity use: read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.',
+      'Audit your household electricity use , read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.',
     whatsIncluded: [
       'Household electricity audit guide',
       'Meter reading and usage tracking',
@@ -583,7 +583,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'farmers-market-challenge': {
     opening:
-      'Navigate a farmers market with a real budget. Compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.',
+      'Navigate a farmers market with a real budget , compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.',
     whatsIncluded: [
       'Farmers market shopping challenge guide',
       'Budget planning and tracking sheet',
@@ -596,7 +596,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'garage-sale-math': {
     opening:
-      'Plan, price, and run a real garage sale using maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling, all in one hands-on project.',
+      'Plan, price, and run a real garage sale using maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling , all in one hands-on project.',
     whatsIncluded: [
       'Complete garage sale planning and running guide',
       'Pricing strategy and research activities',
@@ -622,7 +622,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'party-planner-math': {
     opening:
-      'Plan a party from guest list to budget. Calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real celebration. Maths that ends with a party.',
+      'Plan a party from guest list to budget , calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real celebration. Maths that ends with a party.',
     whatsIncluded: [
       'Complete party planning guide with maths challenges',
       'Guest list and food quantity calculations',
@@ -691,7 +691,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'micro-business': {
     opening:
-      'Guided activities to help your child plan, launch, and run a simple real business. From choosing a product to setting prices, marketing, tracking income, and reflecting on what they learned. Entrepreneurship skills applied to real life, not a simulation.',
+      'Guided activities to help your child plan, launch, and run a simple real business. From choosing a product to setting prices, marketing, tracking income, and reflecting on what they learned. Entrepreneurship skills applied to real life , not a simulation.',
     whatsIncluded: [
       'Complete micro-business launch guide',
       'Product/service brainstorming and market research',
@@ -704,7 +704,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'problem-solver': {
     opening:
-      'Design thinking challenges that teach kids to identify problems, brainstorm solutions, prototype, test, and iterate. Real-world problem-solving skills applied to everyday life, from improving a family routine to designing a better backpack. The way real engineers and designers think.',
+      'Design thinking challenges that teach kids to identify problems, brainstorm solutions, prototype, test, and iterate. Real-world problem-solving skills applied to everyday life , from improving a family routine to designing a better backpack. The way real engineers and designers think.',
     whatsIncluded: [
       'Design thinking challenge guides',
       'Problem identification and empathy mapping',
@@ -764,7 +764,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'write-like-a-pro': {
     opening:
-      'Real-world writing challenges that go beyond essays. Kids write emails, create social media posts, draft persuasive letters, design infographics with captions, and communicate for real audiences. Writing that matters, not writing for a grade.',
+      'Real-world writing challenges that go beyond essays. Kids write emails, create social media posts, draft persuasive letters, design infographics with captions, and communicate for real audiences. Writing that matters , not writing for a grade.',
     whatsIncluded: [
       'Real-world writing challenge guides',
       'Email, letter, and professional communication',
@@ -783,7 +783,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Help kids understand what AI actually is, what it isn\'t, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy AI interactions, and setting smart rules for AI use. The foundation every kid needs before using any AI tool.',
     whatsIncluded: [
-      'What AI actually is, and what it isn\'t',
+      'What AI actually is , and what it isn\'t',
       'Common AI myths vs reality exploration',
       'Healthy and useful AI interaction practice',
       'Smart rules and boundaries for AI use',
@@ -794,7 +794,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'algorithm-awareness': {
     opening:
-      'Teach kids how algorithms shape what they see online, and what they don\'t. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical thinking for the attention economy.',
+      'Teach kids how algorithms shape what they see online , and what they don\'t. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical thinking for the attention economy.',
     whatsIncluded: [
       'How recommendation algorithms work',
       'Filter bubble exploration and awareness',
@@ -807,7 +807,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'bias-fairness-lab': {
     opening:
-      'Explore how AI can be unfair, and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and empathy applied to technology.',
+      'Explore how AI can be unfair , and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and empathy applied to technology.',
     whatsIncluded: [
       'Real examples of AI bias investigation',
       'Fairness testing in AI prompts and outputs',
@@ -820,7 +820,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'build-ai-helper': {
     opening:
-      'Design and plan your own AI helper: what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to ethics framework. No coding required, just creative, structured thinking.',
+      'Design and plan your own AI helper , what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to ethics framework. No coding required , just creative, structured thinking.',
     whatsIncluded: [
       'AI helper concept design and purpose planning',
       'Data requirements and privacy considerations',
@@ -838,7 +838,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Creative AI tool exploration and practice',
       'AI for writing, art, and brainstorming',
       'Copyright, attribution, and ownership understanding',
-      'Tool vs replacement: knowing the difference',
+      'Tool vs replacement , knowing the difference',
       'Ethical creation guidelines and reflection',
     ],
     skillTags: ['AI Literacy', 'Creativity', 'Ethics', 'Digital Citizenship', 'Art'],
@@ -862,7 +862,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. Healthy scepticism for the AI age.',
     whatsIncluded: [
       'What AI hallucinations are and why they happen',
-      'Fact-checking AI outputs: practical techniques',
+      'Fact-checking AI outputs , practical techniques',
       'Why AI sounds confident even when wrong',
       'Verification habit building',
       'Real examples of AI mistakes to investigate',
@@ -872,7 +872,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'healthy-tech-boundaries': {
     opening:
-      'Help your child create a personal technology and AI boundaries plan. Activities cover screen time awareness, digital wellbeing, setting healthy limits, managing notifications, and building a balanced relationship with technology. Not anti-tech, just pro-balance.',
+      'Help your child create a personal technology and AI boundaries plan. Activities cover screen time awareness, digital wellbeing, setting healthy limits, managing notifications, and building a balanced relationship with technology. Not anti-tech , pro-balance.',
     whatsIncluded: [
       'Screen time awareness and tracking activities',
       'Digital wellbeing self-assessment',
@@ -885,11 +885,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'privacy-footprint': {
     opening:
-      'Map your digital footprint and understand online privacy. Kids discover what personal data they share, how data trails work, smart sharing practices, and how to protect their personal information. Practical privacy skills every kid needs, not fear-based, just empowering.',
+      'Map your digital footprint and understand online privacy. Kids discover what personal data they share, how data trails work, smart sharing practices, and how to protect their personal information. Practical privacy skills every kid needs , not fear-based, just empowering.',
     whatsIncluded: [
       'Digital footprint mapping activities',
       'Personal data sharing audit',
-      'How data trails work: tracking and cookies',
+      'How data trails work , tracking and cookies',
       'Smart sharing practices and privacy settings',
       'Personal privacy plan creation',
     ],
@@ -903,7 +903,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Prompt structure and quality frameworks',
       'Better question writing techniques',
       'Iterating and refining AI conversations',
-      'Healthy AI use: guide, don\'t copy',
+      'Healthy AI use , guide, don\'t copy',
       'Real practice scenarios with reflection',
     ],
     skillTags: ['AI Literacy', 'Communication', 'Critical Thinking', 'Writing'],
@@ -915,7 +915,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'future-ready-skills-map': {
     opening:
-      'A comprehensive parent guide to the 10 skills that matter most for your child\'s future, from emotional intelligence and critical thinking to AI literacy and life skills. This is not another activity pack; it\'s your roadmap for raising a capable, confident, future-ready human.',
+      'A comprehensive parent guide to the 10 skills that matter most for your child\'s future , from emotional intelligence and critical thinking to AI literacy and life skills. Not another activity guide , this is your roadmap for raising a capable, confident, future-ready human.',
     whatsIncluded: [
       '42-page comprehensive parent guide',
       '10 essential future-ready skills explained',
@@ -958,7 +958,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'communication-writing-bundle': {
     opening:
-      'All 12 Communication & Writing guides in one download. Storytelling, debate, interviews, recipe writing, magazine design, trail guides, and more. Every activity puts kids in real communication scenarios: writing for real audiences, speaking with real purpose, and presenting with real confidence.',
+      'All 12 Communication & Writing guides in one download. Storytelling, debate, interviews, recipe writing, magazine design, trail guides, and more. Every activity puts kids in real communication scenarios , writing for real audiences, speaking with real purpose, and presenting with real confidence.',
     whatsIncluded: [
       '12 complete communication and writing guides',
       'Adventure Story Map, Community Tour Guide, Directions Challenge',
@@ -975,7 +975,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'entrepreneurship-bundle': {
     opening:
-      'All 11 Entrepreneurship guides in one download. Brand building, customer discovery, pitching, pricing, marketing, supply chains, product design, and more. Real business skills through hands-on projects. Kids learn by doing, not by reading about it.',
+      'All 11 Entrepreneurship guides in one download. Brand building, customer discovery, pitching, pricing, marketing, supply chains, product design, and more. Real business skills through hands-on projects , kids learn by doing, not by reading about it.',
     whatsIncluded: [
       '11 complete entrepreneurship guides',
       'Brand Builder, Business Failure Lab, Community Service Business',
@@ -1005,11 +1005,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // COMMUNICATION & WRITING - Individual Guides
+  // COMMUNICATION & WRITING — Individual Guides
   // ═══════════════════════════════════════════════════════════════════
   'adventure-story-map': {
     opening:
-      'A visual story-mapping project that guides kids through planning and writing their own adventure narrative. They map out characters, settings, plot twists, and story arcs, then write the story. Creative writing meets spatial thinking in one hands-on project.',
+      'A visual story-mapping project that guides kids through planning and writing their own adventure narrative. They map out characters, settings, plot twists, and story arcs , then write the story. Creative writing meets spatial thinking in one hands-on project.',
     whatsIncluded: [
       'Visual story map template and planning guide',
       'Character and setting development prompts',
@@ -1035,7 +1035,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'directions-challenge': {
     opening:
-      'Write clear, step-by-step directions and test whether someone else can follow them. Kids discover how hard precise communication really is, and get better at it through practice, testing, and feedback. The kind of writing skill they will use every day of their lives.',
+      'Write clear, step-by-step directions and test whether someone else can follow them. Kids discover how hard precise communication really is , and get better at it through practice, testing, and feedback. The kind of writing skill they will use every day of their lives.',
     whatsIncluded: [
       'Direction-writing challenge guide',
       'Clarity and precision writing frameworks',
@@ -1074,7 +1074,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'market-stall-pitch': {
     opening:
-      'Create and deliver a persuasive pitch for a product or service, as if running a market stall. Kids choose their words, read their audience, and present with confidence. Communication meets entrepreneurship in a project that makes persuasion tangible and fun.',
+      'Create and deliver a persuasive pitch for a product or service , as if running a market stall. Kids choose their words, read their audience, and present with confidence. Communication meets entrepreneurship in a project that makes persuasion tangible and fun.',
     whatsIncluded: [
       'Pitch planning and writing guide',
       'Persuasive language and techniques',
@@ -1087,7 +1087,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-magazine-creator': {
     opening:
-      'Write and design a mini magazine from scratch: headlines, feature articles, illustrations, advertisements, and more. Kids work with multiple text types in one project, learning how different writing styles serve different purposes. A publishing project that builds real writing range.',
+      'Write and design a mini magazine from scratch , headlines, feature articles, illustrations, advertisements, and more. Kids work with multiple text types in one project, learning how different writing styles serve different purposes. A publishing project that builds real writing range.',
     whatsIncluded: [
       'Magazine creation project guide',
       'Multiple text type templates (articles, ads, editorials)',
@@ -1100,7 +1100,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'my-review-column': {
     opening:
-      'Write reviews of books, movies, products, or experiences, and learn that opinions backed by evidence are powerful. Kids develop critical analysis skills, learn to structure arguments, and discover that their perspective matters. Opinion writing that builds confidence and voice.',
+      'Write reviews of books, movies, products, or experiences , and learn that opinions backed by evidence are powerful. Kids develop critical analysis skills, learn to structure arguments, and discover that their perspective matters. Opinion writing that builds confidence and voice.',
     whatsIncluded: [
       'Review writing guide with structure templates',
       'Critical analysis prompts and frameworks',
@@ -1113,7 +1113,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'neighbourhood-interview': {
     opening:
-      'Interview people in your community, from neighbours and shop owners to local heroes, and share their stories. Kids prepare questions, practise active listening, and present what they learn. Builds interviewing skills, empathy, and the ability to tell someone else\'s story with care.',
+      'Interview people in your community , neighbours, shop owners, local heroes , and share their stories. Kids prepare questions, practise active listening, and present what they learn. Builds interviewing skills, empathy, and the ability to tell someone else\'s story with care.',
     whatsIncluded: [
       'Interview project guide with question templates',
       'Active listening techniques and note-taking',
@@ -1139,11 +1139,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // ENTREPRENEURSHIP - Individual Guides
+  // ENTREPRENEURSHIP — Individual Guides
   // ═══════════════════════════════════════════════════════════════════
   'brand-builder': {
     opening:
-      'Build a complete brand identity from scratch: name, logo, personality, values, and visual style. Kids learn what makes a brand memorable and why it matters. Creativity, communication, and strategic thinking wrapped into one hands-on project.',
+      'Build a complete brand identity from scratch , name, logo, personality, values, and visual style. Kids learn what makes a brand memorable and why it matters. Creativity, communication, and strategic thinking wrapped into one hands-on project.',
     whatsIncluded: [
       'Brand identity creation guide',
       'Name brainstorming and testing activities',
@@ -1156,7 +1156,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'business-failure-lab': {
     opening:
-      'Analyse real business failures, figure out what went wrong, and extract lessons that apply to any venture. Kids build resilience and critical thinking by studying mistakes, and learn that failure is a normal, useful part of entrepreneurship.',
+      'Analyse real business failures, figure out what went wrong, and extract lessons that apply to any venture. Kids build resilience and critical thinking by studying mistakes , and learn that failure is a normal, useful part of entrepreneurship.',
     whatsIncluded: [
       'Business failure case studies for analysis',
       'Root cause analysis framework',
@@ -1169,7 +1169,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'community-service-business': {
     opening:
-      'Design and launch a service-based business with a genuine social mission. Kids find a community need and build a business that helps, combining empathy with entrepreneurship, service with strategy. Social entrepreneurship that teaches both impact and business skills.',
+      'Design and launch a service-based business with a genuine social mission. Kids find a community need and build a business that helps , combining empathy with entrepreneurship, service with strategy. Social entrepreneurship that teaches both impact and business skills.',
     whatsIncluded: [
       'Social enterprise planning guide',
       'Community needs assessment activities',
@@ -1195,7 +1195,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'investor-pitch': {
     opening:
-      'Create a compelling investor pitch with financial reasoning, risk assessment, and persuasive presentation skills all in one project. Kids learn to communicate the value of an idea, back it up with numbers, and present with confidence. Business thinking meets public speaking.',
+      'Create a compelling investor pitch , financial reasoning, risk assessment, and persuasive presentation skills all in one project. Kids learn to communicate the value of an idea, back it up with numbers, and present with confidence. Business thinking meets public speaking.',
     whatsIncluded: [
       'Investor pitch preparation guide',
       'Financial projection basics',
@@ -1234,7 +1234,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'product-design-lab': {
     opening:
-      'Use design thinking to create a product that solves a real problem. Kids identify needs, brainstorm solutions, build prototypes, test with users, and iterate. The same process real designers and engineers use, scaled for kids and applied to problems they actually care about.',
+      'Use design thinking to create a product that solves a real problem. Kids identify needs, brainstorm solutions, build prototypes, test with users, and iterate. The same process real designers and engineers use , scaled for kids and applied to problems they actually care about.',
     whatsIncluded: [
       'Design thinking process guide',
       'Need-finding and empathy mapping',
@@ -1247,7 +1247,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'supply-chain-detective': {
     opening:
-      'Trace a product\'s journey from raw materials to your front door, and discover the global systems that connect everything. Kids investigate supply chains, think about geography, labour, and sustainability, and develop systems thinking. Critical analysis meets global awareness.',
+      'Trace a product\'s journey from raw materials to your front door , and discover the global systems that connect everything. Kids investigate supply chains, think about geography, labour, and sustainability, and develop systems thinking. Critical analysis meets global awareness.',
     whatsIncluded: [
       'Supply chain investigation guide',
       'Product journey mapping activities',
@@ -1260,7 +1260,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'shark-tank-pitch': {
     opening:
-      'Develop and deliver a high-stakes business pitch, Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',
+      'Develop and deliver a high-stakes business pitch , Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',
     whatsIncluded: [
       'Shark Tank pitch project guide',
       'Business concept development framework',
@@ -1273,11 +1273,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // PLANNING & PROBLEM-SOLVING - Individual Guides
+  // PLANNING & PROBLEM-SOLVING — Individual Guides
   // ═══════════════════════════════════════════════════════════════════
   'emergency-ready': {
     opening:
-      'Help kids think clearly under pressure and build genuine confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real scenarios. Life skills that matter, not fear-based, just empowering.',
+      'Help kids think clearly under pressure and build genuine confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real scenarios. Life skills that matter , not fear-based, just empowering.',
     whatsIncluded: [
       'Emergency preparedness challenge guide',
       'Scenario-based decision-making activities',
@@ -1290,7 +1290,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'everyday-redesign': {
     opening:
-      'Look at everyday objects and systems with fresh eyes, then redesign them to work better. Kids practise observation, systems thinking, and creative problem-solving by improving the things they already use. Design thinking applied to real, everyday life.',
+      'Look at everyday objects and systems with fresh eyes , then redesign them to work better. Kids practise observation, systems thinking, and creative problem-solving by improving the things they already use. Design thinking applied to real, everyday life.',
     whatsIncluded: [
       'Everyday redesign challenge guide',
       'Observation and analysis frameworks',
@@ -1303,7 +1303,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'fix-it-detective': {
     opening:
-      'Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot, building practical skills and the confidence to figure things out. Problem-solving that\'s genuinely useful in everyday life.',
+      'Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot , building practical skills and the confidence to figure things out. Problem-solving that\'s genuinely useful in everyday life.',
     whatsIncluded: [
       'Fix-it challenge guide with real scenarios',
       'Troubleshooting and diagnosis frameworks',
@@ -1316,7 +1316,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'neighbourhood-problem-spotter': {
     opening:
-      'Walk your neighbourhood with fresh eyes. Spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. Problem-solving that connects kids to the place they live and the people around them.',
+      'Walk your neighbourhood with fresh eyes , spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. Problem-solving that connects kids to the place they live and the people around them.',
     whatsIncluded: [
       'Neighbourhood observation walk guide',
       'Problem identification and categorisation',
@@ -1342,7 +1342,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'pack-like-a-pro': {
     opening:
-      'Master strategic packing: priorities, weight, space management, and trip logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep challenge that builds executive function skills through a real, practical task.',
+      'Master strategic packing , priorities, weight, space management, and trip logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep challenge that builds executive function skills through a real, practical task.',
     whatsIncluded: [
       'Strategic packing challenge guide',
       'Priority-setting and trade-off activities',
@@ -1381,7 +1381,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'what-if-scenario-lab': {
     opening:
-      'Explore hypothetical "what if" scenarios, predict outcomes, and plan responses. Kids work through situations that stretch their thinking, from everyday dilemmas to wildly creative scenarios. Speculative thinking that builds planning skills, creative reasoning, and adaptability.',
+      'Explore hypothetical "what if" scenarios, predict outcomes, and plan responses. Kids work through situations that stretch their thinking , from everyday dilemmas to wildly creative scenarios. Speculative thinking that builds planning skills, creative reasoning, and adaptability.',
     whatsIncluded: [
       'What-if scenario challenge cards',
       'Outcome prediction and planning frameworks',
@@ -1424,7 +1424,7 @@ export function getProductDescription(
     activityCount ? `${activityCount} guided activities` : 'Guided activities with step-by-step instructions',
     'Age adaptation notes included',
     'Minimal or no materials needed',
-    'PDF guide: open on any device',
+    'PDF guide , open on any device',
   ];
 
   return {

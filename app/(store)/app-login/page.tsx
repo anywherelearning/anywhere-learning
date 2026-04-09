@@ -58,7 +58,7 @@ export default function AppLoginPage() {
           marginBottom: '24px',
         }}
       >
-        Sign in to access your activity packs
+        Sign in to access your activity guides
       </p>
 
       {/* Clerk Sign In */}

@@ -23,7 +23,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "My Downloads",
   description:
-    "Access and download your purchased activity packs. Start learning anywhere.",
+    "Access and download your purchased activity guides. Start learning anywhere.",
   robots: { index: false, follow: false },
 };
 
@@ -74,7 +74,7 @@ export default async function DownloadsPage() {
       }
     }
   } catch {
-    // Ignore - banner just won't show
+    // Ignore — banner just won't show
   }
 
   // Derive data for growth sections
@@ -121,7 +121,7 @@ export default async function DownloadsPage() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 bg-forest rounded-full animate-pulse" />
             <span className="text-sm font-medium text-forest">
-              Active Member - Open your full library
+              Active Member, Open your full library
             </span>
           </div>
           <svg
@@ -142,12 +142,12 @@ export default async function DownloadsPage() {
 
       {/* ── Page header ── */}
       <h1 className="font-display text-3xl text-forest sm:text-4xl">
-        Your Activity Packs
+        Your Activity Guides
       </h1>
       <p className="mt-2 text-gray-500">
         {packCount > 0
-          ? `${packCount} activity pack${packCount === 1 ? "" : "s"} ready to open.`
-          : "Your activity packs will appear here after purchase."}
+          ? `${packCount} activity guide${packCount === 1 ? "" : "s"} ready to open.`
+          : "Your activity guides will appear here after purchase."}
       </p>
 
       {/* ── Seasonal suggestion ── */}
@@ -173,7 +173,7 @@ export default async function DownloadsPage() {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-gray-800">
-              {SEASON_LABELS[seasonalSuggestion.season]} is here. Ready for
+              {SEASON_LABELS[seasonalSuggestion.season]} is here, ready for
               new outdoor activities?
             </p>
             <p className="text-xs text-gray-500 mt-0.5">
@@ -209,7 +209,7 @@ export default async function DownloadsPage() {
             Complete Your Collection
           </h2>
           <p className="text-sm text-gray-500 mb-5">
-            You already have some of these - upgrade to the full bundle and
+            You already have some of these, upgrade to the full bundle and
             we&apos;ll credit what you&apos;ve already paid.
           </p>
           <div className="space-y-3">
@@ -390,7 +390,7 @@ export default async function DownloadsPage() {
               Know a family who&apos;d love these?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
-              Share the love - send them a link to browse.
+              Share the love, send them a link to browse.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>
@@ -407,7 +407,7 @@ export default async function DownloadsPage() {
             href="/shop"
             className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
           >
-            Browse all activity packs
+            Browse all activity guides
             <svg
               className="w-4 h-4"
               fill="none"

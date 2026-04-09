@@ -93,7 +93,7 @@ export default function NativeShopView({ products }: NativeShopViewProps) {
           Anywhere Learning
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '12px' }}>
-          Activity packs for curious families
+          Activity guides for curious families
         </p>
       </div>
 
@@ -121,7 +121,7 @@ export default function NativeShopView({ products }: NativeShopViewProps) {
         </svg>
         <input
           type="search"
-          placeholder="Search activity packs..."
+          placeholder="Search activity guides..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           style={{

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Anywhere Learning. Questions about activity packs, orders, or homeschooling? We\u2019d love to hear from you.',
+  description: 'Get in touch with Anywhere Learning. Questions about activity guides, orders, or homeschooling? We\u2019d love to hear from you.',
   alternates: { canonical: 'https://anywherelearning.co/contact' },
 };
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
               We&apos;d Love to Hear From You
             </h1>
             <p className="text-lg text-gray-500 max-w-xl mx-auto">
-              Whether you have a question about our activity packs, need help with an order,
+              Whether you have a question about our activity guides, need help with an order,
               or just want to say hi, we&apos;re here for you.
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
               Looking for Quick Answers?
             </h2>
             <p className="text-sm text-gray-500 mb-4">
-              Check out our FAQ page for common questions about activity packs,
+              Check out our FAQ page for common questions about activity guides,
               ages, refunds, and homeschooling approaches.
             </p>
             <Link

@@ -70,7 +70,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc list-inside space-y-1.5 ml-2">
                 <li>Order confirmations and download links</li>
-                <li>Helpful tips for using your activity packs</li>
+                <li>Helpful tips for using your activity guides</li>
                 <li>New products and occasional promotions</li>
               </ul>
               <p className="mt-3">

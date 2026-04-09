@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Common questions about Anywhere Learning activity packs \u2014 ages, refunds, homeschool approaches, and how our real-world learning guides work.',
+  description: 'Common questions about Anywhere Learning activity guides \u2014 ages, refunds, homeschool approaches, and how our real-world learning guides work.',
   alternates: { canonical: 'https://anywherelearning.co/faq' },
 };
 
@@ -48,7 +48,7 @@ export default function FAQPage() {
                 Everything You Need to Know
               </h1>
               <p className="text-lg text-gray-500 max-w-xl mx-auto">
-                Quick answers to the most common questions about our activity packs,
+                Quick answers to the most common questions about our activity guides,
                 how they work, and what to expect.
               </p>
             </div>
