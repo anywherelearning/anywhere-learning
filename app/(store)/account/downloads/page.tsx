@@ -154,35 +154,39 @@ export default async function DownloadsPage() {
       {seasonalSuggestion && purchases.length > 0 && (
         <Link
           href={`/shop/${seasonalSuggestion.product.slug}`}
-          className="flex items-center gap-4 bg-gold/8 border border-gold/20 rounded-2xl p-4 mt-6 group hover:bg-gold/12 transition-colors"
+          className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 mt-6 group hover:shadow-md hover:border-forest/15 transition-all"
         >
-          <div className="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center flex-shrink-0">
-            <svg
-              className="w-5 h-5 text-gold-dark"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          <div
+            className={`w-16 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[seasonalSuggestion.product.category] || 'cover-outdoor-learning'}`}
+          >
+            {seasonalSuggestion.product.imageUrl ? (
+              <Image
+                src={seasonalSuggestion.product.imageUrl}
+                alt=""
+                width={64}
+                height={80}
+                className="object-cover w-full h-full"
               />
-            </svg>
+            ) : (
+              <span className="flex items-center justify-center h-full text-cream/80 text-xs font-bold">
+                {seasonalSuggestion.product.name.split(' ')[0]}
+              </span>
+            )}
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-gray-800">
-              {SEASON_LABELS[seasonalSuggestion.season]} is here, ready for
-              new outdoor activities?
+            <p className="text-xs font-medium text-forest uppercase tracking-wider mb-0.5">
+              {SEASON_LABELS[seasonalSuggestion.season]} Pick
             </p>
-            <p className="text-xs text-gray-500 mt-0.5">
-              {seasonalSuggestion.product.name} &middot;{" "}
+            <p className="text-sm font-semibold text-gray-800 group-hover:text-forest transition-colors">
+              {seasonalSuggestion.product.name}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              Ready for new outdoor activities? &middot;{" "}
               {formatPrice(seasonalSuggestion.product.priceCents)}
             </p>
           </div>
           <svg
-            className="w-4 h-4 text-gray-400 group-hover:translate-x-0.5 transition-transform flex-shrink-0"
+            className="w-5 h-5 text-gray-300 group-hover:text-forest group-hover:translate-x-0.5 transition-all flex-shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
