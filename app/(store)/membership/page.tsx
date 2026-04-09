@@ -8,7 +8,7 @@ import PricingToggle from '@/components/membership/PricingToggle';
 export const metadata: Metadata = {
   title: 'Membership',
   description:
-    'Get instant access to every Anywhere Learning activity guide with one simple membership. Browse, open, and use, all in your browser.',
+    'Get instant access to every Anywhere Learning activity pack with one simple membership. Browse, open, and use, all in your browser.',
   alternates: {
     canonical: 'https://anywherelearning.co/membership',
   },
@@ -23,7 +23,7 @@ const benefits = [
       </svg>
     ),
     title: 'Every pack, instantly',
-    description: 'Open any activity guide in your browser the moment you join. No waiting, no extra purchases.',
+    description: 'Open any activity pack in your browser the moment you join. No waiting, no extra purchases.',
   },
   {
     icon: (
@@ -32,7 +32,7 @@ const benefits = [
       </svg>
     ),
     title: 'New packs included',
-    description: 'Every new activity guide we create is automatically added to your library at no extra cost.',
+    description: 'Every new activity pack we create is automatically added to your library at no extra cost.',
   },
   {
     icon: (
@@ -60,7 +60,7 @@ const benefits = [
 const faqs = [
   {
     q: 'What do I get with a membership?',
-    a: 'Instant access to every activity guide in the library, current and future. You can browse and open them directly in your browser on any device.',
+    a: 'Instant access to every activity pack in the library, current and future. You can browse and open them directly in your browser on any device.',
   },
   {
     q: 'Can I still download the PDFs?',
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: 'What\'s the difference between buying and membership?',
-    a: 'When you buy an individual pack, you get a downloadable PDF that\'s yours to keep forever. With a membership, you get in-browser access to the entire library for as long as you\'re subscribed. Many families do both, membership for browsing, and individual purchases for their favorites.',
+    a: 'When you buy an individual pack, you get a downloadable PDF that\'s yours to keep forever. With a membership, you get in-browser access to the entire library for as long as you\'re subscribed. Many families do both: membership for browsing, and individual purchases for their favorites.',
   },
   {
     q: 'Can I cancel anytime?',
@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: 'Is the annual plan worth it?',
-    a: 'The annual plan works out to $12.49/month, that\'s 37% less than monthly. If you think you\'ll use the packs for more than a couple of months, it\'s a great deal.',
+    a: 'The annual plan works out to $12.49/month, which is 37% less than monthly. If you think you\'ll use the packs for more than a couple of months, it\'s a great deal.',
   },
 ];
 
@@ -96,7 +96,7 @@ export default async function MembershipPage({
       }
     }
   } catch (e) {
-    // Re-throw Next.js redirects — only swallow auth errors
+    // Re-throw Next.js redirects - only swallow auth errors
     if (e && typeof e === 'object' && 'digest' in e) throw e;
   }
 
@@ -130,7 +130,7 @@ export default async function MembershipPage({
             Membership
           </p>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest leading-[1.1] mb-6 text-balance">
-            Every activity guide. One simple membership.
+            Every activity pack. One simple membership.
           </h1>
           <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
             Stop buying packs one at a time. Get instant access to all {productCount}+ activities
@@ -212,7 +212,7 @@ export default async function MembershipPage({
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                       ) : (
-                        <span className="text-gray-300">&mdash;</span>
+                        <span className="text-gray-300">-</span>
                       )}
                     </td>
                     <td className="py-3 px-5 text-center">
@@ -221,7 +221,7 @@ export default async function MembershipPage({
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                       ) : (
-                        <span className="text-gray-300">&mdash;</span>
+                        <span className="text-gray-300">-</span>
                       )}
                     </td>
                   </tr>
@@ -230,7 +230,7 @@ export default async function MembershipPage({
             </table>
           </div>
           <p className="text-center text-sm text-gray-400 mt-4">
-            Many families use both, membership to browse, individual purchases to keep their favorites forever.
+            Many families use both: membership to browse, individual purchases to keep their favorites forever.
           </p>
         </div>
       </section>

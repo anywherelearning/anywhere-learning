@@ -284,7 +284,7 @@ export default function NativeProductDetail({
           }}
         >
           <p style={{ fontSize: '13px', color: '#6b7280', marginBottom: '6px' }}>
-            This activity guide is available on our website
+            This activity pack is available on our website
           </p>
           <button
             onClick={() => openExternalBrowser(`${baseUrl}/shop/${product.slug}`)}

@@ -87,7 +87,7 @@ function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCateg
     || (b.type === 'bundle-callout' && !('pinned' in b && b.pinned)))
   );
 
-  // Determine which callouts to place (skip pinned ones — they're already in the content)
+  // Determine which callouts to place (skip pinned ones - they're already in the content)
   const productPinned = productBlock && 'pinned' in productBlock && productBlock.pinned;
   const bundlePinned = bundleBlock && 'pinned' in bundleBlock && bundleBlock.pinned;
 
@@ -307,7 +307,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           >
             <PinterestSaveButton
               url={`https://anywherelearning.co/blog/${post.slug}`}
-              description={`${post.title}, ${post.excerpt}`}
+              description={`${post.title}: ${post.excerpt}`}
             />
             {post.heroImage ? (
               <Image
@@ -392,7 +392,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </section>
       </div>
 
-      {/* Newsletter CTA — wider */}
+      {/* Newsletter CTA - wider */}
       <section className="pb-14 md:pb-18">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <ScrollReveal>
@@ -401,7 +401,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      {/* Related posts — full width */}
+      {/* Related posts - full width */}
       <section className="pb-20 md:pb-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <RelatedPosts posts={related} />

@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'My Library',
-  description: 'Browse and open every activity guide included in your membership.',
+  description: 'Browse and open every activity pack included in your membership.',
   robots: { index: false, follow: false },
 };
 
@@ -37,7 +37,7 @@ export default async function LibraryPage({
   const purchasedIds = new Set(purchases.map((p) => p.product.id));
 
   // Filter to non-bundle individual products for the library grid
-  // (bundles are access containers — their individual products are what members view)
+  // (bundles are access containers - their individual products are what members view)
   const libraryProducts = allProducts.map((p) => ({
     id: p.id,
     name: p.name,
@@ -60,7 +60,7 @@ export default async function LibraryPage({
             Welcome to your membership!
           </h2>
           <p className="text-gray-500 text-sm">
-            Every activity guide is now yours to explore. Pick one and dive in.
+            Every activity pack is now yours to explore. Pick one and dive in.
           </p>
         </div>
       )}

@@ -43,7 +43,7 @@ export default function ShareSection() {
         text: shareText,
         url: shareUrl,
       }).catch(() => {
-        // User cancelled or share failed — ignore
+        // User cancelled or share failed - ignore
       });
     } else {
       // Fallback: copy the text
@@ -58,7 +58,7 @@ export default function ShareSection() {
           Know a family who&apos;d love these?
         </h2>
         <p className="text-sm text-gray-500 mb-5">
-          Share the love, send them a link to browse.
+          Share the love - send them a link to browse.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">

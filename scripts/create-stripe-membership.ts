@@ -24,7 +24,7 @@ async function createMembershipProduct() {
     const product = await stripe.products.create({
       name: 'Anywhere Learning Membership',
       description:
-        'Unlimited access to every activity guide — past, present, and future. Browse and read on any device.',
+        'Unlimited access to every activity pack, past, present, and future. Browse and read on any device.',
       metadata: { type: 'membership' },
     });
     productId = product.id;

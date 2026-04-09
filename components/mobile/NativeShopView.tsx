@@ -93,7 +93,7 @@ export default function NativeShopView({ products }: NativeShopViewProps) {
           Anywhere Learning
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '12px' }}>
-          Activity guides for curious families
+          Activity packs for curious families
         </p>
       </div>
 

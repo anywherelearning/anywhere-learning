@@ -21,7 +21,7 @@ const categoryDescriptions: Record<string, string> = {
   'entrepreneurship': 'Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses.',
   'planning-problem-solving': 'Tackle real logistics, plan adventures, and solve problems that actually matter.',
   'start-here': 'The foundation for your learning journey \u2014 start with the big picture.',
-  bundle: 'Get more value with curated activity guide bundles.',
+  bundle: 'Get more value with curated activity pack bundles.',
 };
 
 const categoryBgColors: Record<string, string> = {

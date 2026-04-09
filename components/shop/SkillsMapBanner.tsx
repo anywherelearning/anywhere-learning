@@ -5,7 +5,7 @@ import Image from 'next/image';
  * Promotional banner for "The Future-Ready Skills Map" product.
  * Positioned between the hero/trust strip and the savings explainer
  * on the shop page's "All Packs" view. Designed to feel like a
- * helpful store guide rather than an ad — warm, integrated, and
+ * helpful store guide rather than an ad - warm, integrated, and
  * nature-inspired to match the brand aesthetic.
  */
 export default function SkillsMapBanner() {
@@ -53,7 +53,7 @@ export default function SkillsMapBanner() {
 
             <p className="text-sm text-gray-500 leading-relaxed max-w-xl">
               10 essential skills your kids actually need, mapped by age with activities,
-              milestones, and sample weeks. The roadmap that turns every activity guide into
+              milestones, and sample weeks. The roadmap that turns every activity pack into
               purposeful learning.
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function SkillsMapBanner() {
           </span>
         </div>
 
-        {/* Accent border at top — gold like the start-here category */}
+        {/* Accent border at top - gold like the start-here category */}
         <div
           className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold via-gold-light to-gold"
           aria-hidden="true"

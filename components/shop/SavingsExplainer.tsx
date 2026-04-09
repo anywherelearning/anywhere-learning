@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function SavingsExplainer() {
   return (
     <section className="relative py-12 md:py-16 overflow-hidden bg-forest-section">
-      {/* Decorative leaves — match hero pattern */}
+      {/* Decorative leaves - match hero pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <svg
           className="absolute -left-2 top-6 w-16 md:w-20 opacity-[0.08] animate-soft-float hidden md:block"
@@ -67,7 +67,7 @@ export default function SavingsExplainer() {
             </p>
 
             <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1">
-              The biggest savings and the easiest choice. Pick a themed collection and you&apos;re set, no decisions, no math, just download and go.
+              The biggest savings and the easiest choice. Pick a themed collection and you&apos;re set - no decisions, no math, just download and go.
             </p>
 
             {/* Bundle cover thumbnails */}

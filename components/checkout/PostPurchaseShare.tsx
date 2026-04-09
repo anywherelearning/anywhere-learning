@@ -78,7 +78,7 @@ export default function PostPurchaseShare({ referralCode }: PostPurchaseSharePro
       {referralCode && (
         <div className="bg-forest/5 border-2 border-dashed border-forest/30 rounded-2xl p-5 mb-2">
           <p className="text-sm text-gray-600 mb-3">
-            Share your code, they get 15% off, and you will too.
+            Share your code - they get 15% off, and you will too.
           </p>
           <button
             onClick={handleCopyCode}

@@ -74,7 +74,7 @@ export default async function DownloadsPage() {
       }
     }
   } catch {
-    // Ignore — banner just won't show
+    // Ignore - banner just won't show
   }
 
   // Derive data for growth sections
@@ -121,7 +121,7 @@ export default async function DownloadsPage() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 bg-forest rounded-full animate-pulse" />
             <span className="text-sm font-medium text-forest">
-              Active Member, Open your full library
+              Active Member - Open your full library
             </span>
           </div>
           <svg
@@ -146,7 +146,7 @@ export default async function DownloadsPage() {
       </h1>
       <p className="mt-2 text-gray-500">
         {packCount > 0
-          ? `${packCount} activity guide${packCount === 1 ? "" : "s"} ready to open.`
+          ? `${packCount} activity pack${packCount === 1 ? "" : "s"} ready to open.`
           : "Your activity guides will appear here after purchase."}
       </p>
 
@@ -213,7 +213,7 @@ export default async function DownloadsPage() {
             Complete Your Collection
           </h2>
           <p className="text-sm text-gray-500 mb-5">
-            You already have some of these, upgrade to the full bundle and
+            You already have some of these - upgrade to the full bundle and
             we&apos;ll credit what you&apos;ve already paid.
           </p>
           <div className="space-y-3">
@@ -394,7 +394,7 @@ export default async function DownloadsPage() {
               Know a family who&apos;d love these?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
-              Share the love, send them a link to browse.
+              Share the love - send them a link to browse.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>

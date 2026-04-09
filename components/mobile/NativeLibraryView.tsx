@@ -157,7 +157,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
           Your Library
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '13px' }}>
-          {products.length} activity guide{products.length === 1 ? '' : 's'}
+          {products.length} activity pack{products.length === 1 ? '' : 's'}
         </p>
       </div>
 

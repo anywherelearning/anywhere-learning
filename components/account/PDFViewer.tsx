@@ -108,7 +108,7 @@ export default function PDFViewer({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
               </svg>
             </div>
-            <p className="text-gray-700 text-lg font-medium mb-1">Unable to load this activity guide</p>
+            <p className="text-gray-700 text-lg font-medium mb-1">Unable to load this activity pack</p>
             <p className="text-gray-400 text-sm">Please try again later or contact support.</p>
           </div>
         ) : (
@@ -120,7 +120,7 @@ export default function PDFViewer({
               loading={
                 <div className="flex flex-col items-center py-20 gap-3">
                   <div className="w-8 h-8 border-2 border-forest/30 border-t-forest rounded-full animate-spin" />
-                  <p className="text-gray-400 text-sm">Loading activity guide&hellip;</p>
+                  <p className="text-gray-400 text-sm">Loading activity pack&hellip;</p>
                 </div>
               }
             >
