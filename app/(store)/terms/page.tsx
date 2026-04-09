@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'Terms of service and refund policy for Anywhere Learning digital activity packs.',
+  description: 'Terms of service and refund policy for Anywhere Learning digital activity guides.',
   alternates: { canonical: 'https://anywherelearning.co/terms' },
 };
 

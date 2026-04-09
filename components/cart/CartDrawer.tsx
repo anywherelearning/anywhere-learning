@@ -1,13 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from './CartProvider';
-import CheckoutModal from './CheckoutModal';
 import { CategoryIcon } from '@/components/shop/icons';
 import { formatPrice } from '@/lib/utils';
-import { getBundleOverlaps, getBundleUpsell, saveCartEmail, FREE_BONUS_SLUG } from '@/lib/cart';
+import { getBundleOverlaps, getBundleUpsell, loadCartEmail, saveCartEmail, FREE_BONUS_SLUG } from '@/lib/cart';
 import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
@@ -26,37 +25,33 @@ export default function CartDrawer() {
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
-  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
-  const [upgradeCredits, setUpgradeCredits] = useState<Record<string, { upgradePrice: number; totalCredit: number; ownedCount: number; totalCount: number }>>({});
+  const [cartEmail, setCartEmail] = useState('');
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [emailLoaded, setEmailLoaded] = useState(false);
+  const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+  const [hasExistingAccount, setHasExistingAccount] = useState(false);
+  const [checkedEmail, setCheckedEmail] = useState('');
   const focusTrapRef = useFocusTrap(isCartOpen);
 
-  // Fetch upgrade prices for any bundles in the cart
-  useEffect(() => {
-    if (!isCartOpen) return;
-    const bundleItems = items.filter((i) => i.isBundle);
-    if (bundleItems.length === 0) {
-      setUpgradeCredits({});
+  // Check if email belongs to an existing account (on blur)
+  async function checkEmailAccount(email: string) {
+    const trimmed = email.trim();
+    if (!trimmed || trimmed === checkedEmail || !EMAIL_REGEX.test(trimmed)) {
       return;
     }
-    let cancelled = false;
-    async function fetchUpgrades() {
-      const results: typeof upgradeCredits = {};
-      await Promise.all(
-        bundleItems.map(async (bundle) => {
-          try {
-            const res = await fetch(`/api/products/upgrade-price?slug=${encodeURIComponent(bundle.slug)}`);
-            const data = await res.json();
-            if (!cancelled && data.upgradePrice !== null && data.upgradePrice !== undefined) {
-              results[bundle.slug] = data;
-            }
-          } catch { /* ignore */ }
-        }),
-      );
-      if (!cancelled) setUpgradeCredits(results);
+    setCheckedEmail(trimmed);
+    try {
+      const res = await fetch('/api/auth/check-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: trimmed }),
+      });
+      const data = await res.json();
+      setHasExistingAccount(!!data.hasAccount);
+    } catch {
+      setHasExistingAccount(false);
     }
-    fetchUpgrades();
-    return () => { cancelled = true; };
-  }, [isCartOpen, items]);
+  }
 
   // Lock body scroll when open
   useEffect(() => {
@@ -77,10 +72,47 @@ export default function CartDrawer() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [isCartOpen, closeCart]);
 
-  function handleCheckout() {
+  // Load persisted email on mount
+  useEffect(() => {
+    const saved = loadCartEmail();
+    if (saved) setCartEmail(saved);
+    setEmailLoaded(true);
+  }, []);
+
+  // Persist email to localStorage on change
+  useEffect(() => {
+    if (emailLoaded && cartEmail) {
+      saveCartEmail(cartEmail);
+    }
+  }, [cartEmail, emailLoaded]);
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail(): boolean {
+    // Email is optional — only validate format if they entered something
+    if (cartEmail.trim() && !EMAIL_REGEX.test(cartEmail.trim())) {
+      setEmailError('Please enter a valid email address.');
+      return false;
+    }
+    setEmailError(null);
+    return true;
+  }
+
+  async function handleCheckout() {
     if (items.length === 0) return;
 
-    // Guard: if any item is missing a price ID, show an error
+    // If not signed in and haven't seen the login prompt yet, show it
+    if (!isSignedIn && !showLoginPrompt) {
+      // Validate email before showing prompt (if they entered one)
+      if (!validateEmail()) return;
+      setShowLoginPrompt(true);
+      return;
+    }
+
+    // Validate email before proceeding (guest checkout)
+    if (!isSignedIn && !validateEmail()) return;
+
+    // Guard: if any item is missing a price ID, show an error (don't silently remove)
     const invalid = items.filter((i) => !i.stripePriceId);
     if (invalid.length > 0) {
       setCheckoutError(
@@ -89,28 +121,13 @@ export default function CartDrawer() {
       return;
     }
 
-    // Signed-in users go straight to Stripe
-    if (isSignedIn) {
-      const email = clerkUser?.primaryEmailAddress?.emailAddress || '';
-      proceedToStripe(email);
-      return;
-    }
-
-    // Guests see the checkout modal
-    setShowCheckoutModal(true);
-  }
-
-  async function handleModalCheckout(email: string) {
-    setShowCheckoutModal(false);
-    await proceedToStripe(email);
-  }
-
-  async function proceedToStripe(email: string) {
     setCheckingOut(true);
     setCheckoutError(null);
 
-    // Save email for cart abandonment tracking
-    if (email) saveCartEmail(email);
+    // Use Clerk email if signed in, otherwise cart email
+    const checkoutEmail = isSignedIn
+      ? clerkUser?.primaryEmailAddress?.emailAddress || ''
+      : cartEmail.trim();
 
     try {
       const res = await fetch('/api/checkout', {
@@ -121,7 +138,67 @@ export default function CartDrawer() {
             stripePriceId: item.stripePriceId,
             slug: item.slug,
           })),
-          email,
+          email: checkoutEmail,
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        // In Capacitor: open Stripe checkout in external browser (reader model — no in-app purchase)
+        // On web: redirect normally
+        await openExternalBrowser(data.url);
+        if (isNative) {
+          setCheckingOut(false);
+          closeCart();
+        }
+      } else {
+        console.error('Checkout error:', data.error);
+        setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');
+        setCheckingOut(false);
+      }
+    } catch (error) {
+      console.error('Checkout failed:', error);
+      setCheckoutError('Couldn\u2019t connect \u2014 check your internet and try again.');
+      setCheckingOut(false);
+    }
+  }
+
+  function handleGuestCheckout() {
+    // Continue as guest — proceed directly to Stripe
+    setShowLoginPrompt(false);
+    // Call handleCheckout again — this time showLoginPrompt is false but we've
+    // already shown it, so we need to bypass. Set a flag and proceed.
+    proceedToCheckout();
+  }
+
+  async function proceedToCheckout() {
+    if (items.length === 0) return;
+    if (!isSignedIn && !validateEmail()) return;
+
+    const invalid = items.filter((i) => !i.stripePriceId);
+    if (invalid.length > 0) {
+      setCheckoutError(
+        `${invalid.map((i) => i.name).join(', ')} ${invalid.length === 1 ? 'is' : 'are'} not available for purchase yet. Remove ${invalid.length === 1 ? 'it' : 'them'} to continue.`
+      );
+      return;
+    }
+
+    setCheckingOut(true);
+    setCheckoutError(null);
+
+    const checkoutEmail = isSignedIn
+      ? clerkUser?.primaryEmailAddress?.emailAddress || ''
+      : cartEmail.trim();
+
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: items.map((item) => ({
+            stripePriceId: item.stripePriceId,
+            slug: item.slug,
+          })),
+          email: checkoutEmail,
         }),
       });
       const data = await res.json();
@@ -133,12 +210,12 @@ export default function CartDrawer() {
         }
       } else {
         console.error('Checkout error:', data.error);
-        setCheckoutError('Hmm, something did not work. Give it another try!');
+        setCheckoutError('Hmm, something didn\u2019t work. Give it another try!');
         setCheckingOut(false);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
-      setCheckoutError('Could not connect. Check your internet and try again.');
+      setCheckoutError('Couldn\u2019t connect \u2014 check your internet and try again.');
       setCheckingOut(false);
     }
   }
@@ -190,18 +267,7 @@ export default function CartDrawer() {
     }
   }
 
-  if (!isCartOpen && !showCheckoutModal) return null;
-
-  // If only the modal is open (cart was closed after modal opened), just render modal
-  if (!isCartOpen && showCheckoutModal) {
-    return (
-      <CheckoutModal
-        open={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onCheckout={handleModalCheckout}
-      />
-    );
-  }
+  if (!isCartOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Shopping cart">
@@ -244,7 +310,7 @@ export default function CartDrawer() {
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
               <p className="text-gray-400 mb-1 font-medium">Nothing here yet!</p>
-              <p className="text-gray-400 text-sm mb-6">Find your family&apos;s next adventure in our activity packs.</p>
+              <p className="text-gray-400 text-sm mb-6">Find your family&apos;s next adventure in our activity guides.</p>
               <Link
                 href="/shop"
                 onClick={closeCart}
@@ -286,14 +352,6 @@ export default function CartDrawer() {
                         <span className="text-xs text-gray-400 line-through">{formatPrice(item.priceCents)}</span>
                         <span className="text-xs font-medium text-gold-dark bg-gold/15 px-1.5 py-0.5 rounded-full">
                           Bundle bonus
-                        </span>
-                      </div>
-                    ) : upgradeCredits[item.slug] ? (
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-sm font-semibold text-forest">{formatPrice(upgradeCredits[item.slug].upgradePrice)}</span>
-                        <span className="text-xs text-gray-400 line-through">{formatPrice(item.priceCents)}</span>
-                        <span className="text-xs font-medium text-forest bg-forest/10 px-1.5 py-0.5 rounded-full">
-                          Upgrade price
                         </span>
                       </div>
                     ) : (
@@ -359,7 +417,7 @@ export default function CartDrawer() {
             </div>
           )}
 
-          {/* Bundle upsell - compact one-liner */}
+          {/* Bundle upsell — compact one-liner */}
           {showUpsell && upsell && (
             <div className="mt-4 flex items-center gap-3 bg-forest/5 border border-forest/15 rounded-xl px-4 py-3 animate-fade-in-up">
               <div className="flex-1 min-w-0 text-sm text-forest">
@@ -368,14 +426,9 @@ export default function CartDrawer() {
                     Get the <span className="font-semibold">{upsell.bundle.name}</span> and save{' '}
                     <span className="font-semibold">{formatPrice(upsell.savingsCents)}</span>
                   </span>
-                ) : upsell.additionalCostCents <= 100 ? (
-                  <span>
-                    Upgrade to the <span className="font-semibold">{upsell.bundle.name}</span> for the same price
-                  </span>
                 ) : (
                   <span>
-                    Get all {upsell.totalChildCount} packs with the{' '}
-                    <span className="font-semibold">{upsell.bundle.name}</span> for{' '}
+                    Get all {upsell.totalChildCount} packs for{' '}
                     <span className="font-semibold">{formatPrice(upsell.additionalCostCents)} more</span>
                   </span>
                 )}
@@ -385,7 +438,7 @@ export default function CartDrawer() {
                 disabled={swappingBundle}
                 className="flex-shrink-0 bg-forest hover:bg-forest-dark text-cream text-xs font-semibold py-2 px-3.5 rounded-lg transition-colors disabled:opacity-60"
               >
-                {swappingBundle ? '...' : 'Upgrade'}
+                {swappingBundle ? '...' : 'Switch'}
               </button>
               <button
                 onClick={() => setDismissedUpsell(upsell.bundle.slug)}
@@ -433,75 +486,116 @@ export default function CartDrawer() {
               </div>
             )}
 
-            {/* Subtotal with discounts */}
-            {(() => {
-              const totalUpgradeCredit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
-              const baseTotal = byobTier ? byobTotalCents : totalCents;
-              const adjustedTotal = baseTotal - totalUpgradeCredit;
-
-              if (byobTier) {
-                return (
-                  <div className="mb-4 space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Subtotal</span>
-                      <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-forest font-medium flex items-center gap-1.5">
-                        <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
-                          {byobTier.discountPercent}% off
-                        </span>
-                        Multi-pack discount
-                      </span>
-                      <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
-                    </div>
-                    {totalUpgradeCredit > 0 && (
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-forest font-medium">Upgrade credit</span>
-                        <span className="text-sm text-forest font-medium">-{formatPrice(totalUpgradeCredit)}</span>
-                      </div>
-                    )}
-                    <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
-                      <span className="text-sm font-medium text-gray-700">Total</span>
-                      <span className="text-lg font-semibold text-forest">{formatPrice(adjustedTotal)}</span>
-                    </div>
-                  </div>
-                );
-              }
-
-              if (totalUpgradeCredit > 0) {
-                return (
-                  <div className="mb-4 space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Subtotal</span>
-                      <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-forest font-medium">Upgrade credit</span>
-                      <span className="text-sm text-forest font-medium">-{formatPrice(totalUpgradeCredit)}</span>
-                    </div>
-                    <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
-                      <span className="text-sm font-medium text-gray-700">Total</span>
-                      <span className="text-lg font-semibold text-forest">{formatPrice(adjustedTotal)}</span>
-                    </div>
-                  </div>
-                );
-              }
-
-              return (
-                <div className="flex items-center justify-between mb-4">
+            {/* Subtotal with BYOB discount */}
+            {byobTier ? (
+              <div className="mb-4 space-y-1.5">
+                <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">Subtotal</span>
-                  <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
+                  <span className="text-sm text-gray-400 line-through">{formatPrice(totalCents)}</span>
                 </div>
-              );
-            })()}
-            {/* Signed-in user indicator */}
-            {isSignedIn && (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-forest font-medium flex items-center gap-1.5">
+                    <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
+                      {byobTier.discountPercent}% off
+                    </span>
+                    Multi-pack discount
+                  </span>
+                  <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
+                </div>
+                <div className="flex items-center justify-between pt-1.5 border-t border-gray-200/40">
+                  <span className="text-sm font-medium text-gray-700">Total</span>
+                  <span className="text-lg font-semibold text-forest">{formatPrice(byobTotalCents)}</span>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm text-gray-500">Subtotal</span>
+                <span className="text-lg font-semibold text-forest">{formatPrice(totalCents)}</span>
+              </div>
+            )}
+            {/* Signed-in user indicator OR email field for guests */}
+            {isSignedIn ? (
               <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">
                 <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Signed in as <span className="font-medium text-gray-700">{clerkUser?.primaryEmailAddress?.emailAddress}</span></span>
+              </div>
+            ) : (
+              <div className="mb-4">
+                <label htmlFor="cart-email" className="block text-sm text-gray-500 mb-1.5">
+                  Email <span className="text-gray-400">(for your downloads)</span>
+                </label>
+                <input
+                  id="cart-email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={cartEmail}
+                  onChange={(e) => {
+                    setCartEmail(e.target.value);
+                    if (emailError) setEmailError(null);
+                    // Reset account detection if email changes
+                    if (hasExistingAccount) setHasExistingAccount(false);
+                  }}
+                  onBlur={() => checkEmailAccount(cartEmail)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      handleCheckout();
+                    }
+                  }}
+                  aria-describedby={emailError ? 'cart-email-error' : undefined}
+                  className={`w-full rounded-xl border bg-white px-4 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none transition-shadow focus:ring-2 focus:ring-forest/30 ${
+                    emailError ? 'border-red-300' : 'border-gray-200'
+                  }`}
+                  autoComplete="email"
+                />
+                {emailError && (
+                  <p id="cart-email-error" role="alert" className="mt-1 text-xs text-red-500">{emailError}</p>
+                )}
+                {/* Welcome back nudge for existing accounts */}
+                {hasExistingAccount && !emailError && (
+                  <div className="mt-2 flex items-center justify-between bg-forest/5 border border-forest/15 rounded-xl px-3.5 py-2.5 animate-fade-in">
+                    <span className="text-sm text-forest">
+                      Welcome back! Sign in for instant downloads.
+                    </span>
+                    <Link
+                      href="/sign-in?redirect_url=/shop?cart=open"
+                      onClick={closeCart}
+                      className="text-sm font-semibold text-forest hover:text-forest-dark transition-colors whitespace-nowrap ml-3"
+                    >
+                      Sign in
+                    </Link>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Login prompt — shown when guest clicks Checkout */}
+            {showLoginPrompt && !isSignedIn && (
+              <div className="mb-4 bg-forest/5 border border-forest/15 rounded-2xl p-4 animate-fade-in">
+                <div className="flex items-center gap-2 mb-2">
+                  <svg className="w-4 h-4 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                  <span className="text-sm font-semibold text-forest">Sign in for instant access</span>
+                </div>
+                <p className="text-sm text-gray-600 mb-3">
+                  Your downloads will be ready immediately after purchase, no extra steps.
+                </p>
+                <Link
+                  href="/sign-in?redirect_url=/shop?cart=open"
+                  onClick={closeCart}
+                  className="block w-full bg-forest hover:bg-forest-dark text-cream text-sm font-semibold py-2.5 rounded-xl transition-colors text-center mb-2"
+                >
+                  Sign in or create account
+                </Link>
+                <button
+                  onClick={handleGuestCheckout}
+                  className="w-full text-sm text-gray-400 hover:text-forest transition-colors py-1.5"
+                >
+                  Continue as guest
+                </button>
               </div>
             )}
             {checkoutError && (
@@ -547,13 +641,7 @@ export default function CartDrawer() {
                   Preparing checkout...
                 </span>
               ) : (
-                `Checkout - ${formatPrice(
-                  (() => {
-                    const base = byobTier ? byobTotalCents : totalCents;
-                    const credit = Object.values(upgradeCredits).reduce((sum, u) => sum + u.totalCredit, 0);
-                    return base - credit;
-                  })()
-                )}`
+                `Checkout, ${formatPrice(byobTier ? byobTotalCents : totalCents)}`
               )}
             </button>
             <button
@@ -565,13 +653,6 @@ export default function CartDrawer() {
           </div>
         )}
       </div>
-
-      {/* Checkout modal for guests (sign-in or email) */}
-      <CheckoutModal
-        open={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onCheckout={handleModalCheckout}
-      />
     </div>
   );
 }

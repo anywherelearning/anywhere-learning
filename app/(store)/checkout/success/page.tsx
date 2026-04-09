@@ -17,7 +17,7 @@ import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 export const metadata: Metadata = {
   title: "You're All Set!",
   description:
-    'Your activity packs are ready to download. Open on any device and start learning today.',
+    'Your activity guides are ready to download. Open on any device and start learning today.',
   robots: { index: false, follow: false },
 };
 
@@ -59,7 +59,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
 
     // ── SECURITY: Verify the success token matches (prevents session ID guessing) ──
     const storedToken = session.metadata?.success_token;
-    if (!storedToken || storedToken !== token) return null;
+    if (storedToken && storedToken !== token) return null;
 
     // ── SECURITY: Only show details for sessions created within the last hour ──
     const ONE_HOUR = 60 * 60;
@@ -75,7 +75,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
         }
       }
     } catch {
-      // Clerk auth may not be configured - continue with token + time-window guard
+      // Clerk auth may not be configured — continue with token + time-window guard
     }
 
     // Try price-ID lookup first (standard purchases)
@@ -204,13 +204,13 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               Your{' '}
               {purchasedProducts.length === 1
                 ? purchasedProducts[0].name
-                : `${purchasedProducts.length} activity packs`}{' '}
-              {purchasedProducts.length === 1 ? 'is' : 'are'} ready. Open on
+                : `${purchasedProducts.length} activity guides`}{' '}
+              {purchasedProducts.length === 1 ? 'is' : 'are'} ready, open on
               any device and try an activity today.
             </p>
           ) : (
             <p className="mt-3 text-gray-600 text-lg leading-relaxed max-w-lg mx-auto">
-              Your activity packs are ready to download. Open on any device and
+              Your activity guides are ready to download. Open on any device and
               start whenever you&apos;re ready.
             </p>
           )}
@@ -329,7 +329,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   Bonus: The Future-Ready Skills Map
                 </h3>
                 <p className="text-xs text-gray-500 mt-0.5">
-                  A $9.99 parent guide - included free with your bundle. Find it in your downloads.
+                  A $9.99 parent guide, included free with your bundle. Find it in your downloads.
                 </p>
               </div>
             </div>
@@ -359,7 +359,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                 Open on any device
               </h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Phone, tablet, or laptop - no printing needed.
+                Phone, tablet, or laptop, no printing needed.
               </p>
             </div>
 
@@ -383,7 +383,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                 Pick any activity
               </h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                No order required - start wherever sounds fun.
+                No order required, start wherever sounds fun.
               </p>
             </div>
 
@@ -502,7 +502,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               Know a family who&apos;d love this?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
-              Share the love - they&apos;ll thank you later.
+              Share the love, they&apos;ll thank you later.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>
@@ -517,7 +517,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
             href="/shop"
             className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
           >
-            Browse all activity packs
+            Browse all activity guides
             <svg
               className="w-4 h-4"
               fill="none"

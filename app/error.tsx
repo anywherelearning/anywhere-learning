@@ -28,7 +28,7 @@ export default function Error({
         Something went wrong
       </h1>
       <p className="text-gray-500 text-center max-w-md mb-8">
-        We hit a bump in the road. This usually fixes itself. Try again or head back to the shop.
+        We hit a bump in the road. This usually fixes itself, try again or head back to the shop.
       </p>
 
       {/* CTAs */}

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-4 text-center">
         <nav className="flex items-center justify-center gap-6 mb-4">
           <Link href="/shop" className="text-sm font-medium text-gray-500 hover:text-forest transition-colors">
-            Activity Packs
+            Activity Guides
           </Link>
           <Link href="/" className="text-sm font-medium text-gray-500 hover:text-forest transition-colors">
             Home

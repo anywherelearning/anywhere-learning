@@ -231,7 +231,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
 
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           The Future-Ready Skills Map covers the 10 skills that matter most for your
-          child&rsquo;s future. It&rsquo;s the foundation for every activity pack we make.
+          child&rsquo;s future. It&rsquo;s the foundation for every activity guide we make.
         </p>
 
         <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-4">

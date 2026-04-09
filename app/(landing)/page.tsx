@@ -11,7 +11,7 @@ import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
 export const metadata: Metadata = {
-  title: 'Anywhere Learning | Meaningful Learning, Wherever You Are',
+  title: 'Anywhere Learning, Meaningful Learning, Wherever You Are',
   description:
     'No-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   alternates: {
@@ -38,7 +38,7 @@ const featuredProducts = [
     name: 'Full Seasonal Bundle',
     slug: 'seasonal-bundle',
     shortDescription:
-      'All 4 seasonal packs: 80 outdoor activities for every time of year.',
+      'All 4 seasonal packs, 80 outdoor activities for every time of year.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/four-seasons-bundle.jpg',
@@ -51,7 +51,7 @@ const featuredProducts = [
     name: 'Creativity Mega Bundle',
     slug: 'creativity-mega-bundle',
     shortDescription:
-      'All 10 Creativity Anywhere activities: design, build, and create without limits.',
+      'All 10 Creativity Anywhere activities, design, build, and create without limits.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-creativity.jpg',
@@ -64,7 +64,7 @@ const featuredProducts = [
     name: 'Real-World Relevance Mega Bundle',
     slug: 'real-world-mega-bundle',
     shortDescription:
-      'All 10 Real-World Relevance challenges: life skills, financial literacy, and project-based learning.',
+      'All 10 Real-World Relevance challenges, life skills, financial literacy, and project-based learning.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-real-world.jpg',
@@ -77,7 +77,7 @@ const featuredProducts = [
     name: 'AI & Digital Literacy Bundle',
     slug: 'ai-digital-bundle',
     shortDescription:
-      'All 10 AI & Digital Literacy activities: responsible tech, critical thinking, and digital citizenship.',
+      'All 10 AI & Digital Literacy activities, responsible tech, critical thinking, and digital citizenship.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-ai-digital.jpg',
@@ -90,7 +90,7 @@ const featuredProducts = [
     name: 'Real-World Math Mega Bundle',
     slug: 'real-world-math-bundle',
     shortDescription:
-      'All 10 Real-World Math guides: budgeting, planning, and problem-solving with real numbers.',
+      'All 10 Real-World Math guides, budgeting, planning, and problem-solving with real numbers.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-real-world-math.jpg',
@@ -103,7 +103,7 @@ const featuredProducts = [
     name: 'Communication & Writing Bundle',
     slug: 'communication-writing-bundle',
     shortDescription:
-      'All 10 Communication & Writing guides: storytelling, debate, interviews, and more.',
+      'All 10 Communication & Writing guides, storytelling, debate, interviews, and more.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-communication-writing.jpg',
@@ -116,7 +116,7 @@ const featuredProducts = [
     name: 'Entrepreneurship Mega Bundle',
     slug: 'entrepreneurship-bundle',
     shortDescription:
-      'All 10 Entrepreneurship guides: brand building, pitching, marketing, and real business skills.',
+      'All 10 Entrepreneurship guides, brand building, pitching, marketing, and real business skills.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
@@ -129,7 +129,7 @@ const featuredProducts = [
     name: 'Planning & Problem-Solving Bundle',
     slug: 'planning-problem-solving-bundle',
     shortDescription:
-      'All 10 Planning & Problem-Solving guides: survival, decision-making, and thinking ahead.',
+      'All 10 Planning & Problem-Solving guides, survival, decision-making, and thinking ahead.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
@@ -142,7 +142,7 @@ const featuredProducts = [
     name: 'Outdoor & Nature Mega Bundle',
     slug: 'outdoor-mega-bundle',
     shortDescription:
-      'All 7 outdoor & nature packs: task cards, missions, STEM challenges, land art, and more.',
+      'All 7 outdoor & nature packs, task cards, missions, STEM challenges, land art, and more.',
     priceCents: 4199,
     compareAtPriceCents: 5593,
     imageUrl: '/products/mega-bundle-outdoor.jpg',
@@ -177,7 +177,7 @@ export default function HomePage() {
       <main id="main-content">
 
         {/* ═══════════════════════════════════════════
-            HERO - Punchy, warm, direct
+            HERO — Punchy, warm, direct
         ═══════════════════════════════════════════ */}
         <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
           {/* Full-bleed background image */}
@@ -189,7 +189,7 @@ export default function HomePage() {
             className="object-cover object-bottom"
             priority
           />
-          {/* Gradient overlay - heavier on the left for text readability */}
+          {/* Gradient overlay — heavier on the left for text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/30 lg:from-cream/95 lg:via-cream/70 lg:to-transparent" />
           {/* Bottom fade to cream */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
@@ -206,14 +206,14 @@ export default function HomePage() {
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
                   No-prep activity guides you open on any device and follow
-                  along with your kids. Real-world learning in 15 minutes, from $5.99.
+                  along with your kids. Real-world learning, no prep required, from $5.99.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/shop"
                     className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl text-lg"
                   >
-                    Get the Activity Packs
+                    Get the Activity Guides
                   </Link>
                   <Link
                     href="/free-guide"
@@ -235,12 +235,12 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            SOCIAL PROOF TICKER - Scrolling marquee
+            SOCIAL PROOF TICKER — Scrolling marquee
         ═══════════════════════════════════════════ */}
         <SocialProofTicker />
 
         {/* ═══════════════════════════════════════════
-            PAIN POINTS - Compact emotional hook
+            PAIN POINTS — Compact emotional hook
         ═══════════════════════════════════════════ */}
         <section className="bg-forest-section py-14 md:py-16 relative overflow-hidden">
           <div className="absolute top-6 right-[10%] w-48 h-48 rounded-full border border-white/[0.04]" aria-hidden="true" />
@@ -278,7 +278,7 @@ export default function HomePage() {
             </div>
             <ScrollReveal delay={400}>
               <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
-                That&apos;s exactly why we made these.
+                That&apos;s exactly why I made these.
               </p>
             </ScrollReveal>
           </div>
@@ -292,10 +292,10 @@ export default function HomePage() {
             <ScrollReveal>
               <div className="text-center mb-16">
                 <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                  Our Activity Packs
+                  Our Activity Guides
                 </p>
                 <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                  Activity Packs for Every Family
+                  Activity Guides for Every Family
                 </h2>
                 <p className="mx-auto max-w-xl text-gray-500 text-lg">
                   Bundles save up to 25%. Pick the one that fits your family, or grab them all.
@@ -311,7 +311,7 @@ export default function HomePage() {
                   href="/shop"
                   className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 text-lg group shadow-md hover:shadow-lg"
                 >
-                  View all activity packs
+                  View all activity guides
                   <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
                 </Link>
               </div>
@@ -320,16 +320,16 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            HOW IT WORKS - Dead simple
+            HOW IT WORKS — Dead simple
         ═══════════════════════════════════════════ */}
-        <section className="bg-warm-gradient py-20 md:py-28">
+        <section className="bg-forest-subtle-gradient py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <ScrollReveal>
               <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
                 Three Steps. That&apos;s It.
               </h2>
               <p className="text-center text-gray-500 text-lg mb-16 max-w-md mx-auto">
-                No onboarding. No learning curve. Just download and go.
+                No setup. No prep. Just download and go.
               </p>
             </ScrollReveal>
 
@@ -348,7 +348,7 @@ export default function HomePage() {
                   <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 1</span>
                   <h3 className="text-xl font-semibold text-forest mb-2">Choose</h3>
                   <p className="text-sm leading-relaxed text-gray-500">
-                    Browse by category: nature, creativity, math, and more. Not sure where to start? Bundles cover everything.
+                    Browse by category and pick something your kids will love.
                   </p>
                 </div>
               </ScrollReveal>
@@ -387,7 +387,7 @@ export default function HomePage() {
                   <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 3</span>
                   <h3 className="text-xl font-semibold text-forest mb-2">Go</h3>
                   <p className="text-sm leading-relaxed text-gray-500">
-                    Pick a card. Do it together. Watch your kids light up. That&apos;s the whole method.
+                    Follow along with your kids. Watch them light up. That&apos;s the whole method.
                   </p>
                 </div>
               </ScrollReveal>
@@ -396,7 +396,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            WHY FAMILIES CHOOSE THIS - Verifiable product facts
+            WHY FAMILIES CHOOSE THIS — Verifiable product facts
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
@@ -408,7 +408,7 @@ export default function HomePage() {
                 Built for How Your Family Actually Lives
               </h2>
               <p className="text-center text-gray-500 text-lg mb-16 max-w-xl mx-auto">
-                No gimmicks, no fluff. Just activity guides designed around the way your family actually learns.
+                Guides that fit your schedule, your kids, and the way you actually learn together.
               </p>
             </ScrollReveal>
 
@@ -427,8 +427,8 @@ export default function HomePage() {
                       Real Skills, Not Busywork
                     </h3>
                     <p className="text-cream/70 text-lg leading-relaxed max-w-2xl">
-                      Kids cook a meal on a budget, build a birdhouse, plan a neighbourhood clean-up,
-                      learn how AI works. Skills they&apos;ll actually use, through activities that feel like play.
+                      Kids cook a meal on a budget, design a board game, start a micro-business,
+                      learn how AI works. Skills they&apos;ll actually use, learned by doing.
                     </p>
                   </div>
                 </div>
@@ -449,7 +449,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-semibold text-forest mb-2">Works for Ages 6&ndash;14</h3>
                   <p className="text-gray-500 text-lg leading-relaxed">
-                    Every activity includes adaptation notes so siblings at different levels
+                    Every activity includes three levels (Explore, Develop, Extend) so siblings at different ages
                     can do the same thing together.
                   </p>
                 </div>
@@ -469,7 +469,7 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-forest mb-2">Use Year After Year</h3>
                   <p className="text-gray-500 text-lg leading-relaxed">
                     These aren&apos;t one-time worksheets. Come back to the same activities as your
-                    kids grow; they&apos;ll get something new every time.
+                    kids grow, they&apos;ll get something new every time.
                   </p>
                 </div>
               </ScrollReveal>
@@ -478,9 +478,9 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            MEET THE MAKER - Personal brand
+            MEET THE MAKER — Personal brand
         ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-28">
+        <section className="bg-forest-subtle-gradient py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
             <div className="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
               <ScrollReveal direction="left">
@@ -510,19 +510,19 @@ export default function HomePage() {
                       I spent 15 years as a teacher, and I loved watching kids
                       light up when something clicked. But the longer I was in
                       the classroom, the harder it became to ignore what
-                      wasn&apos;t working. Kids who walked in loving to
+                      wasn&apos;t working, kids who walked in loving to
                       learn were slowly checking out.
                     </p>
                     <p>
                       When it came time to choose for my own kids, I chose
                       differently. We took seven months to travel as a family,
-                      and I noticed something shift. They were curious
+                      and I noticed something shift, they were curious
                       again, figuring things out on their own, learning without
                       even realizing it.
                     </p>
                     <p>
                       I left the classroom for good and started creating the
-                      activities I wished the system offered: hands-on,
+                      activities I wished the system offered, hands-on,
                       real-world, zero prep. Things that feel like play but
                       build real skills.
                     </p>
@@ -562,7 +562,7 @@ export default function HomePage() {
                   href="/shop"
                   className="inline-flex items-center gap-2 text-forest font-semibold text-lg group hover:text-forest-dark transition-colors"
                 >
-                  Browse the Activity Packs
+                  Browse the Activity Guides
                   <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
                 </Link>
               </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            EMAIL CAPTURE - Soft opt-in for visitors not ready to buy
+            EMAIL CAPTURE — Soft opt-in for visitors not ready to buy
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
@@ -583,7 +583,7 @@ export default function HomePage() {
                 Not Sure Where to Start?
               </h2>
               <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                Grab the free guide: 10 real-world activities you can try this week
+                Grab the free guide, 10 real-world activities you can try this week
                 with zero prep. See if this approach works for your family.
               </p>
               <EmailForm variant="light" />
@@ -600,7 +600,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            FINAL CTA - Bold, warm
+            FINAL CTA — Bold, warm
         ═══════════════════════════════════════════ */}
         <section className="relative bg-forest-texture py-20 md:py-28 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" aria-hidden="true" />
@@ -612,14 +612,14 @@ export default function HomePage() {
                 Start This Week.
               </h2>
               <p className="text-lg text-cream/80 mb-10 leading-relaxed max-w-lg mx-auto">
-                Pick a pack, open it on your phone or tablet, and do the first activity together.
-                No planning, no prep. Just 15 minutes and your kids.
+                Pick a guide, open it on your phone or tablet, and do the activity together.
+                No planning, no prep, just you and your kids.
               </p>
               <Link
                 href="/shop"
                 className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl"
               >
-                Get the Activity Packs
+                Get the Activity Guides
               </Link>
               <p className="mt-8 text-cream/80 text-sm">
                 48-hour money-back guarantee &middot; Instant download &middot; Use year after year

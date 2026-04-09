@@ -7,7 +7,7 @@ import Link from 'next/link';
  * Used by Library and Account tabs.
  */
 export default function NativeAuthGuard({
-  message = 'Sign in to access your activity packs',
+  message = 'Sign in to access your activity guides',
 }: {
   message?: string;
 }) {

@@ -14,6 +14,7 @@ function getResend() {
 
 export async function sendPurchaseEmail({
   to,
+  customerName,
   productName,
   downloadUrl,
   referralCode,
@@ -22,6 +23,7 @@ export async function sendPurchaseEmail({
   signInUrl,
 }: {
   to: string;
+  customerName?: string;
   productName: string;
   downloadUrl: string;
   referralCode?: string;
@@ -33,28 +35,30 @@ export async function sendPurchaseEmail({
   const count = products?.length || 1;
   const subject = count === 1
     ? `Your ${products?.[0]?.name || productName} is ready ✓`
-    : `Your ${count} activity packs are ready ✓`;
+    : `Your ${count} guides are ready ✓`;
   await resend.emails.send({
     from: 'Anywhere Learning <orders@anywherelearning.co>',
     to,
     subject,
-    react: PurchaseConfirmation({ productName, downloadUrl, referralCode, productImageUrl, products, signInUrl }),
+    react: PurchaseConfirmation({ customerName, productName, downloadUrl, referralCode, productImageUrl, products, signInUrl }),
   });
 }
 
 export async function sendReferralRewardEmail({
   to,
+  customerName,
   rewardCode,
 }: {
   to: string;
+  customerName?: string;
   rewardCode: string;
 }) {
   const resend = getResend();
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
     to,
-    subject: "Your friend just saved 15%, and here's yours!",
-    react: ReferralReward({ rewardCode }),
+    subject: "Your friend just saved 15%, here's yours!",
+    react: ReferralReward({ customerName, rewardCode }),
   });
 }
 
@@ -72,7 +76,7 @@ export async function sendCartAbandonmentEmail({
   const count = items.length;
   const subject = count === 1
     ? `Your ${items[0].name} is still waiting for you`
-    : `Your ${count} activity packs are still in your cart`;
+    : `Your ${count} activity guides are still in your cart`;
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
     to,

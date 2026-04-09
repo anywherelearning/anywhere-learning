@@ -35,6 +35,15 @@
 .bg-warm-gradient {
   background: linear-gradient(168deg, #faf9f6 0%, #f5f0e8 50%, #faf9f6 100%);
 }
+.bg-gold-light-gradient {
+  background: linear-gradient(168deg, rgba(212,163,115,0.04) 0%, rgba(212,163,115,0.15) 50%, rgba(212,163,115,0.04) 100%);
+}
+.bg-forest-light-gradient {
+  background: linear-gradient(168deg, rgba(88,129,87,0.04) 0%, rgba(88,129,87,0.22) 50%, rgba(88,129,87,0.04) 100%);
+}
+.bg-forest-subtle-gradient {
+  background: linear-gradient(168deg, rgba(88,129,87,0.02) 0%, rgba(88,129,87,0.10) 50%, rgba(88,129,87,0.02) 100%);
+}
 
 .bg-gold-gradient {
   background: linear-gradient(168deg, rgba(232, 201, 154, 0.18) 0%, rgba(212, 163, 115, 0.10) 50%, rgba(250, 249, 246, 0.95) 100%);

@@ -44,7 +44,7 @@ interface DownloadListProps {
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
-/** Icon per category - matches the shop page. */
+/** Icon per category — matches the shop page. */
 const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   'all': SparklesIcon,
   'start-here': StarIcon,
@@ -102,13 +102,13 @@ export default function DownloadList({ purchases }: DownloadListProps) {
         </div>
         <h2 className="font-display text-2xl text-forest mb-2">Your first adventure starts here</h2>
         <p className="text-gray-500 max-w-md mx-auto mb-8">
-          Once you pick an activity pack, it will be waiting here - ready to open on any device, anytime.
+          Once you pick an activity guide, it will be waiting here, ready to open on any device, anytime.
         </p>
         <Link
           href="/shop"
           className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold py-3 px-8 rounded-xl transition-colors"
         >
-          Browse Activity Packs
+          Browse Activity Guides
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
@@ -119,7 +119,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
 
   return (
     <div>
-      {/* Category filter pills - matches shop page style */}
+      {/* Category filter pills — matches shop page style */}
       {showFilters && (
         <div className="flex flex-wrap gap-2 mb-6" role="tablist">
           {categories.map((cat) => {

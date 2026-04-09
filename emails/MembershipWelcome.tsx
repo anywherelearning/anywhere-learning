@@ -1,6 +1,5 @@
 import {
   Body,
-  Column,
   Container,
   Head,
   Heading,
@@ -9,7 +8,6 @@ import {
   Img,
   Link,
   Preview,
-  Row,
   Section,
   Text,
 } from '@react-email/components';
@@ -20,8 +18,10 @@ interface MembershipWelcomeProps {
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
-const logoUrl = '/static/logo-icon.png';
-const prodLogoUrl = `${baseUrl}/logo-icon.png`;
+const logoUrl = '/static/logo-full.png';
+const prodLogoUrl = `${baseUrl}/logo-full.png`;
+const footerIconUrl = '/static/logo-icon-circle.png';
+const prodFooterIconUrl = `${baseUrl}/logo-icon-circle.png`;
 
 MembershipWelcome.PreviewProps = {
   plan: 'annual',
@@ -33,6 +33,7 @@ export default function MembershipWelcome({
   libraryUrl = `${baseUrl}/account/library`,
 }: MembershipWelcomeProps) {
   const logo = typeof window === 'undefined' && process.env.NEXT_PUBLIC_URL ? prodLogoUrl : logoUrl;
+  const footerIcon = typeof window === 'undefined' && process.env.NEXT_PUBLIC_URL ? prodFooterIconUrl : footerIconUrl;
 
   return (
     <Html>
@@ -41,22 +42,13 @@ export default function MembershipWelcome({
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
         `}</style>
       </Head>
-      <Preview>Your membership is active. Every pack is now yours to explore</Preview>
+      <Preview>Your membership is active, every guide is now yours to explore</Preview>
       <Body style={main}>
         <Container style={container}>
 
           {/* ── Brand Header ── */}
           <Section style={header}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '10px' }}>
-                  <Img src={logo} width="36" height="26" alt="" style={{ display: 'block' }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <Text style={brandName}>Anywhere Learning</Text>
-                </td>
-              </tr>
-            </table>
+            <Img src={logo} width="220" alt="Anywhere Learning" style={{ display: 'block', margin: '0 auto', maxWidth: '220px' }} />
           </Section>
 
           {/* ── Welcome Banner ── */}
@@ -71,7 +63,7 @@ export default function MembershipWelcome({
               </tr>
             </table>
             <Heading style={bannerHeading}>Welcome to your membership!</Heading>
-            <Text style={bannerSubtext}>Every activity pack is now yours to explore.</Text>
+            <Text style={bannerSubtext}>Every guide is now yours to explore.</Text>
           </Section>
 
           {/* ── Main Content ── */}
@@ -80,7 +72,7 @@ export default function MembershipWelcome({
 
             <Text style={text}>
               Your <strong>{plan}</strong> membership is now active. You have
-              instant access to every activity pack in the library, and anything
+              instant access to every guide in the library, and anything
               new we add along the way.
             </Text>
 
@@ -90,40 +82,9 @@ export default function MembershipWelcome({
               </Link>
             </Section>
 
-            {/* ── Quick Start Tips ── */}
-            <Section style={tipsContainer}>
-              <Row>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#128218;</span>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Pick any pack</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#9742;</span>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Open on any device</Text>
-                </Column>
-                <Column style={tipColumn}>
-                  <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 6px' }}>
-                    <tr><td style={tipIcon}>
-                      <span style={{ color: '#faf9f6', fontSize: '14px' }}>&#127793;</span>
-                    </td></tr>
-                  </table>
-                  <Text style={tipLabel}>Start exploring today</Text>
-                </Column>
-              </Row>
-            </Section>
-
             <Text style={text}>
               You can manage your subscription anytime from your account page. If
-              you ever have questions, just reply to this email. I&apos;m a real
-              person and I&apos;d love to hear from you.
+              you ever have questions, just reply to this email, I&apos;d love to hear from you.
             </Text>
 
             <Text style={signoff}>
@@ -136,16 +97,8 @@ export default function MembershipWelcome({
           {/* ── Footer ── */}
           <Hr style={hr} />
           <Section style={footerSection}>
-            <table cellPadding="0" cellSpacing="0" style={{ margin: '0 auto 8px' }}>
-              <tr>
-                <td style={{ verticalAlign: 'middle', paddingRight: '6px' }}>
-                  <Img src={logo} width="20" height="14" alt="" style={{ display: 'block', opacity: 0.4 }} />
-                </td>
-                <td style={{ verticalAlign: 'middle' }}>
-                  <span style={{ fontSize: '13px', color: '#999999' }}>Anywhere Learning</span>
-                </td>
-              </tr>
-            </table>
+            <Img src={footerIcon} width="32" alt="" style={{ display: 'block', margin: '0 auto 8px', opacity: 0.4 }} />
+            <Text style={footerBrand}>Anywhere Learning</Text>
             <Text style={footer}>Meaningful Learning, Wherever You Are</Text>
             <Text style={footerLinks}>
               <Link href={`${baseUrl}/shop`} style={footerLink}>Shop</Link>
@@ -165,7 +118,7 @@ export default function MembershipWelcome({
 const main = { backgroundColor: '#f5f3ee', fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" };
 const container = { margin: '0 auto', maxWidth: '560px', backgroundColor: '#faf9f6' };
 const header = { padding: '28px 24px 20px', textAlign: 'center' as const };
-const brandName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', fontWeight: '700' as const, color: '#588157', margin: '0', lineHeight: '1' };
+const footerBrand = { fontSize: '13px', color: '#999999', margin: '0 0 4px' };
 const welcomeBanner = { backgroundColor: '#588157', padding: '28px 24px 24px', textAlign: 'center' as const };
 const starCircle = { width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'inline-block' as const, lineHeight: '40px', textAlign: 'center' as const, marginBottom: '12px' };
 const starIcon = { color: '#faf9f6', fontSize: '20px' };
@@ -175,12 +128,8 @@ const contentSection = { padding: '28px 32px 8px' };
 const text = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '0 0 16px' };
 const buttonContainer = { textAlign: 'center' as const, margin: '28px 0' };
 const button = { backgroundColor: '#588157', borderRadius: '12px', color: '#faf9f6', display: 'inline-block', fontSize: '16px', fontWeight: '600' as const, padding: '16px 36px', textDecoration: 'none' };
-const tipsContainer = { backgroundColor: '#f7f5f0', borderRadius: '12px', padding: '20px 8px', margin: '8px 0 24px' };
-const tipColumn = { textAlign: 'center' as const, width: '33.33%' };
-const tipIcon = { width: '32px', height: '32px', borderRadius: '8px', backgroundColor: '#588157', textAlign: 'center' as const, lineHeight: '32px' };
-const tipLabel = { fontSize: '12px', color: '#555555', margin: '0', lineHeight: '1.4', fontWeight: '500' as const };
 const signoff = { fontSize: '16px', lineHeight: '26px', color: '#2d2d2d', margin: '24px 0 0' };
-const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#588157' };
+const signoffName = { fontFamily: "'Dancing Script', cursive", fontSize: '22px', color: '#d4a373' };
 const hr = { borderColor: '#e5e5e5', margin: '0' };
 const footerSection = { padding: '24px 32px', textAlign: 'center' as const };
 const footer = { fontSize: '13px', color: '#999999', margin: '0 0 8px', lineHeight: '1.5' };

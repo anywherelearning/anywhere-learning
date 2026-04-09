@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LogoIcon } from '@/components/Logo';
+import Image from 'next/image';
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -36,13 +36,24 @@ export default function SiteFooter() {
           {/* Column 1: Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2.5 mb-4" aria-label="Anywhere Learning home">
-              <LogoIcon size={28} />
-              <span className="font-display text-xl text-forest">
-                Anywhere Learning
-              </span>
+              <Image
+                src="/logo-icon-transparent.png"
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+                aria-hidden="true"
+              />
+              <Image
+                src="/logo-text-v2.png"
+                alt="Anywhere Learning"
+                width={200}
+                height={50}
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-5">
-              Real-world activity packs for homeschool and worldschool families. No prep, no worksheets - just meaningful time together.
+              Real-world activity guides for homeschool and worldschool families. No prep, no worksheets, just meaningful time together.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -73,7 +84,7 @@ export default function SiteFooter() {
             </h3>
             <nav aria-label="Shop links" className="space-y-2.5">
               <Link href="/shop" className={linkClass}>
-                Activity Packs
+                Activity Guides
               </Link>
               <Link href="/shop?category=bundle" className={linkClass}>
                 Bundles

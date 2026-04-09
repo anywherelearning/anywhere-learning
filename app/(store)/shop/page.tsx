@@ -29,47 +29,47 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
   "ai-literacy": {
     title: "AI & Digital Literacy Packs",
     description:
-      "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9-14.",
+      "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9\u201314.",
   },
   "creativity-anywhere": {
-    title: "Creativity Anywhere Activity Packs",
+    title: "Creativity Anywhere Activity Guides",
     description:
-      "Open-ended projects that build design thinking and creative confidence. Ages 6-14.",
+      "Open-ended projects that build design thinking and creative confidence. Ages 6\u201314.",
   },
   "communication-writing": {
     title: "Communication & Writing Packs",
     description:
-      "Real-world writing and communication skills for kids who have something to say. Ages 9-14.",
+      "Real-world writing and communication skills for kids who have something to say. Ages 9\u201314.",
   },
   "outdoor-learning": {
-    title: "Outdoor Learning Activity Packs",
+    title: "Outdoor Learning Activity Guides",
     description:
-      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6-14.",
+      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6\u201314.",
   },
   "real-world-math": {
     title: "Real-World Math Packs",
     description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6-14.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6\u201314.",
   },
   "entrepreneurship": {
-    title: "Entrepreneurship Activity Packs",
+    title: "Entrepreneurship Activity Guides",
     description:
-      "Plan, launch, and run real projects - from lemonade stands to micro-businesses. Ages 9-14.",
+      "Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses. Ages 9\u201314.",
   },
   "planning-problem-solving": {
     title: "Planning & Problem-Solving Packs",
     description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9-14.",
+      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9\u201314.",
   },
   "start-here": {
     title: "Start Here Packs",
     description:
-      "The foundation for your learning journey - start with the big picture.",
+      "The foundation for your learning journey \u2014 start with the big picture.",
   },
   bundle: {
-    title: "Activity Pack Bundles",
+    title: "Activity Guide Bundles",
     description:
-      "Save more with curated bundles - the best value for families who want it all.",
+      "Save more with curated bundles \u2014 the best value for families who want it all.",
   },
 };
 
@@ -85,20 +85,20 @@ export async function generateMetadata({
     : "https://anywherelearning.co/shop";
 
   return {
-    title: meta?.title || "Shop Activity Packs",
+    title: meta?.title || "Shop Activity Guides",
     description:
       meta?.description ||
-      "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+      "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
       title: meta
-        ? `${meta.title} | Anywhere Learning`
-        : "Shop Activity Packs | Anywhere Learning",
+        ? `${meta.title} \u2014 Anywhere Learning`
+        : "Shop Activity Guides \u2014 Anywhere Learning",
       description:
         meta?.description ||
-        "Real-world activity packs for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+        "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
       url: canonicalUrl,
       type: "website",
       images: [
@@ -106,14 +106,14 @@ export async function generateMetadata({
           url: "https://anywherelearning.co/og-default.png",
           width: 1200,
           height: 630,
-          alt: "Anywhere Learning Activity Packs",
+          alt: "Anywhere Learning Activity Guides",
         },
       ],
     },
   };
 }
 
-// ── Category sections - shared source of truth ──
+// ── Category sections — shared source of truth ──
 import { CATEGORIES as categorySections } from "@/lib/categories";
 
 // ── Category → Bundle slug mapping ──
@@ -163,7 +163,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       ? await getProductsByCategory(category)
       : await getActiveProducts();
   } catch {
-    // DB not available - use fallback products
+    // DB not available — use fallback products
   }
 
   const products = allProducts.length > 0 ? allProducts : fallbackProducts;
@@ -223,11 +223,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     : [];
 
   // Category view: relevant bundle + cross-sell products
-  // Always search fallbackProducts for the bundle since category-filtered DB
-  // queries only return products in that category, not bundles (category "bundle").
   const categoryBundle =
     isCategoryView && category && category !== "bundle"
-      ? fallbackProducts.find(
+      ? (allProducts.length > 0 ? products : fallbackProducts).find(
           (p) => p.slug === categoryBundleMap[category] && p.isBundle,
         )
       : null;
@@ -235,7 +233,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const crossSellCategory =
     isCategoryView && category ? crossSellMap[category] : null;
   const crossSellProducts = crossSellCategory
-    ? fallbackProducts
+    ? (allProducts.length > 0 ? products : fallbackProducts)
         .filter((p) => p.category === crossSellCategory && !p.isBundle)
         .slice(0, 3)
     : [];
@@ -253,9 +251,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Anywhere Learning Activity Packs",
+    name: "Anywhere Learning Activity Guides",
     description:
-      "Real-world activity packs for homeschool and worldschool families.",
+      "Real-world activity guides for homeschool and worldschool families.",
     numberOfItems: filteredProducts.length,
     itemListElement: filteredProducts.map((p, i) => ({
       "@type": "ListItem",
@@ -348,7 +346,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 Ready-to-Use Activity Guides
               </p>
               <h1 className="font-display text-4xl text-forest sm:text-5xl lg:text-6xl text-balance mb-4">
-                Homeschool Activity Packs
+                Homeschool Activity Guides
                 <br className="hidden sm:block" /> for Real-World Learning
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-lg text-gray-500">
@@ -365,7 +363,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 {[
                   "No Prep Required",
                   "Download & Use Instantly",
-                  "Ages 6-14",
+                  "Ages 6\u201314",
                   "48-hour refund guarantee",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-2">
@@ -440,7 +438,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         )}
 
         {/* ════════════════════════════════════════
-            ALL PACKS VIEW - curated sections
+            ALL PACKS VIEW — curated sections
         ════════════════════════════════════════ */}
         {isAllView && (
           <>
@@ -471,7 +469,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               </Suspense>
             </section>
 
-            {/* Category sections - always use fallback for complete catalog */}
+            {/* Category sections — always use fallback for complete catalog */}
             {categorySections.map((cat) => {
               const catProducts = fallbackProducts.filter(
                 (p) => p.category === cat.value && !p.isBundle,
@@ -495,7 +493,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         )}
 
         {/* ════════════════════════════════════════
-            SORTED ALL VIEW - flat grid when sorting
+            SORTED ALL VIEW — flat grid when sorting
         ════════════════════════════════════════ */}
         {isSortedAllView && (() => {
           const totalItems = filteredProducts.length;

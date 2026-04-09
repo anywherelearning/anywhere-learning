@@ -27,25 +27,25 @@ const bodyFont = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+    default: "Anywhere Learning, Meaningful Learning, Wherever You Are",
     template: "%s | Anywhere Learning",
   },
   description:
-    "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+    "No-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://anywherelearning.co",
     siteName: "Anywhere Learning",
-    title: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+    title: "Anywhere Learning, Meaningful Learning, Wherever You Are",
     description:
-      "No-prep homeschool activity packs for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+      "No-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
     images: [
       {
         url: "https://anywherelearning.co/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+        alt: "Anywhere Learning, Meaningful Learning, Wherever You Are",
       },
     ],
   },
@@ -71,18 +71,12 @@ const clerkAppearance = {
 };
 
 function ClerkWrapper({ children }: { children: React.ReactNode }) {
-  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  if (!publishableKey) {
+  // ClerkProvider requires a publishableKey. When building without env vars
+  // (e.g. CI or first build), skip the provider so static pages can render.
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
     return <>{children}</>;
   }
-  return (
-    <ClerkProvider
-      publishableKey={publishableKey}
-      appearance={{ ...clerkAppearance, cssLayerName: 'clerk' }}
-    >
-      {children}
-    </ClerkProvider>
-  );
+  return <ClerkProvider appearance={{ ...clerkAppearance, cssLayerName: 'clerk' }}>{children}</ClerkProvider>;
 }
 
 export default function RootLayout({
@@ -110,7 +104,7 @@ export default function RootLayout({
                     "url": "https://anywherelearning.co/logo.png",
                   },
                   "description":
-                    "No-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6-14. Download, open on any device, and follow along with your kids.",
+                    "No-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6–14, download, open on any device, and follow along with your kids.",
                   "slogan": "Meaningful Learning, Wherever You Are",
                   "email": "info@anywherelearning.co",
                   "founder": {

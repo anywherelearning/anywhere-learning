@@ -1,6 +1,6 @@
 const items = [
   'Created for families learning differently',
-  '220+ real-world activities',
+  '150+ real-world activities',
   'Works with any homeschool style',
   'No curriculum needed',
   'Ages 6–14',
