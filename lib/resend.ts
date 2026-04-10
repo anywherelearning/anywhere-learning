@@ -1,6 +1,5 @@
 import { Resend } from 'resend';
 import PurchaseConfirmation from '@/emails/PurchaseConfirmation';
-import MembershipWelcome from '@/emails/MembershipWelcome';
 import ReferralReward from '@/emails/ReferralReward';
 import CartAbandonment from '@/emails/CartAbandonment';
 import type { AbandonedCartUpsell } from '@/lib/cart-abandonment';
@@ -85,19 +84,3 @@ export async function sendCartAbandonmentEmail({
   });
 }
 
-export async function sendMembershipWelcomeEmail({
-  to,
-  plan,
-}: {
-  to: string;
-  plan: string;
-}) {
-  const resend = getResend();
-  const libraryUrl = `${process.env.NEXT_PUBLIC_URL}/account/library`;
-  await resend.emails.send({
-    from: 'Anywhere Learning <hello@anywherelearning.co>',
-    to,
-    subject: 'Welcome to your Anywhere Learning membership!',
-    react: MembershipWelcome({ plan, libraryUrl }),
-  });
-}

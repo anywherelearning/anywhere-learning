@@ -1,5 +1,5 @@
 import { db } from './index';
-import { products, orders, users, reviews, subscriptions } from './schema';
+import { products, orders, users, reviews } from './schema';
 import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 
@@ -320,6 +320,31 @@ export async function getProductReviewStats(productId: string) {
   };
 }
 
+/**
+ * Fetch review stats for every product in a single query, keyed by slug.
+ * Used by the shop grid / homepage carousel so ProductCard can render
+ * stars + count without an N+1 query fanout.
+ */
+export async function getAllReviewStatsBySlug(): Promise<Record<string, { averageRating: number; reviewCount: number }>> {
+  const rows = await db.select({
+    slug: products.slug,
+    avgRating: avg(reviews.rating),
+    reviewCount: count(reviews.id),
+  })
+    .from(reviews)
+    .innerJoin(products, eq(reviews.productId, products.id))
+    .groupBy(products.slug);
+
+  const statsBySlug: Record<string, { averageRating: number; reviewCount: number }> = {};
+  for (const row of rows) {
+    statsBySlug[row.slug] = {
+      averageRating: row.avgRating ? parseFloat(row.avgRating) : 0,
+      reviewCount: Number(row.reviewCount ?? 0),
+    };
+  }
+  return statsBySlug;
+}
+
 export async function hasUserPurchasedProduct(userId: string, productId: string) {
   const result = await db.select().from(orders)
     .where(and(
@@ -331,27 +356,3 @@ export async function hasUserPurchasedProduct(userId: string, productId: string)
   return result.length > 0;
 }
 
-// ─── Subscriptions / Membership ─────────────────────────────────────
-
-export async function getActiveSubscription(userId: string) {
-  const result = await db.select().from(subscriptions)
-    .where(and(
-      eq(subscriptions.userId, userId),
-      eq(subscriptions.status, 'active'),
-      gt(subscriptions.currentPeriodEnd, new Date()),
-    ))
-    .limit(1);
-  return result[0] || null;
-}
-
-export async function hasActiveMembership(userId: string): Promise<boolean> {
-  const sub = await getActiveSubscription(userId);
-  return sub !== null;
-}
-
-export async function getSubscriptionByStripeId(stripeSubscriptionId: string) {
-  const result = await db.select().from(subscriptions)
-    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId))
-    .limit(1);
-  return result[0] || null;
-}

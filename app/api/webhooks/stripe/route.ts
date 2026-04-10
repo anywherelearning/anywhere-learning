@@ -2,11 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { clerkClient } from '@clerk/nextjs/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { orders, users, products, subscriptions } from '@/lib/db/schema';
+import { orders, users, products } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
-import { sendPurchaseEmail, sendMembershipWelcomeEmail, sendCartAbandonmentEmail } from '@/lib/resend';
+import { sendPurchaseEmail, sendCartAbandonmentEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
-import { getSubscriptionByStripeId } from '@/lib/db/queries';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 import { getOrCreateReferral, extractReferralFromSession, processReferralConversion } from '@/lib/referral';
 import { getAbandonmentUpsell } from '@/lib/cart-abandonment';
@@ -48,38 +47,13 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ received: true });
       }
 
-      // ── Subscription checkout ──────────────────────────────────────
+      // Subscription mode isn't supported; the membership product was scrapped.
       if (session.mode === 'subscription') {
-        await handleSubscriptionCheckout(session);
+        console.warn('Received unexpected subscription checkout session:', session.id);
         return NextResponse.json({ received: true });
       }
 
-      // ── One-time payment checkout (existing logic) ─────────────────
       await handlePaymentCheckout(session);
-    }
-
-    // ─── customer.subscription.updated ───────────────────────────────
-    if (event.type === 'customer.subscription.updated') {
-      const sub = event.data.object as Stripe.Subscription;
-      await handleSubscriptionUpdated(sub);
-    }
-
-    // ─── customer.subscription.deleted ───────────────────────────────
-    if (event.type === 'customer.subscription.deleted') {
-      const sub = event.data.object as Stripe.Subscription;
-      await handleSubscriptionDeleted(sub);
-    }
-
-    // ─── invoice.payment_failed ──────────────────────────────────────
-    if (event.type === 'invoice.payment_failed') {
-      const invoice = event.data.object as Stripe.Invoice;
-      await handleInvoicePaymentFailed(invoice);
-    }
-
-    // ─── invoice.payment_succeeded ───────────────────────────────────
-    if (event.type === 'invoice.payment_succeeded') {
-      const invoice = event.data.object as Stripe.Invoice;
-      await handleInvoicePaymentSucceeded(invoice);
     }
 
     // ─── charge.refunded ──────────────────────────────────────────────
@@ -112,186 +86,7 @@ export async function POST(req: NextRequest) {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// Subscription handlers
-// ═══════════════════════════════════════════════════════════════════
-
-async function handleSubscriptionCheckout(session: Stripe.Checkout.Session) {
-  const customerEmail = session.customer_details?.email;
-  const clerkId = session.metadata?.clerkId;
-  const plan = session.metadata?.plan || 'monthly';
-  const stripeCustomerId = session.customer as string;
-  const stripeSubscriptionId = session.subscription as string;
-
-  // ── Idempotency: skip if subscription already exists ──────────────
-  const existingSub = await getSubscriptionByStripeId(stripeSubscriptionId);
-  if (existingSub) {
-    console.log('Duplicate webhook for subscription (skipping):', stripeSubscriptionId);
-    return;
-  }
-
-  if (!customerEmail || !clerkId) {
-    console.error('Missing email or clerkId in subscription checkout:', session.id);
-    return;
-  }
-
-  // Get the full subscription to read price/period info
-  const stripeSub = await stripe.subscriptions.retrieve(stripeSubscriptionId);
-
-  // Find user by clerkId
-  const user = await db
-    .select()
-    .from(users)
-    .where(eq(users.clerkId, clerkId))
-    .limit(1);
-
-  if (user.length === 0) {
-    console.error('User not found for clerkId:', clerkId);
-    return;
-  }
-
-  // Store Stripe Customer ID on user (for future use / portal)
-  if (!user[0].stripeCustomerId) {
-    await db
-      .update(users)
-      .set({ stripeCustomerId })
-      .where(eq(users.id, user[0].id));
-  }
-
-  // Create subscription record
-  await db.insert(subscriptions).values({
-    userId: user[0].id,
-    stripeCustomerId,
-    stripeSubscriptionId,
-    stripePriceId: stripeSub.items.data[0]?.price.id || '',
-    status: 'active',
-    currentPeriodEnd: new Date(stripeSub.current_period_end * 1000),
-    cancelAtPeriodEnd: stripeSub.cancel_at_period_end,
-  });
-
-  // Send welcome email (non-critical)
-  try {
-    await sendMembershipWelcomeEmail({
-      to: customerEmail,
-      plan: plan === 'annual' ? 'annual' : 'monthly',
-    });
-  } catch (error) {
-    console.error('Failed to send membership welcome email:', error);
-  }
-
-  // Tag in ConvertKit (non-critical)
-  try {
-    const tags = ['member', `member-${plan}`];
-    await subscribeAndTag(customerEmail, tags);
-  } catch (error) {
-    console.error('Failed to tag member in ConvertKit:', error);
-  }
-}
-
-async function handleSubscriptionUpdated(sub: Stripe.Subscription) {
-  const existing = await getSubscriptionByStripeId(sub.id);
-  if (!existing) {
-    console.error('Subscription not found for update:', sub.id);
-    return;
-  }
-
-  await db
-    .update(subscriptions)
-    .set({
-      status: sub.status === 'active' ? 'active'
-        : sub.status === 'past_due' ? 'past_due'
-        : sub.status === 'canceled' ? 'canceled'
-        : sub.status,
-      currentPeriodEnd: new Date(sub.current_period_end * 1000),
-      cancelAtPeriodEnd: sub.cancel_at_period_end,
-      updatedAt: new Date(),
-    })
-    .where(eq(subscriptions.stripeSubscriptionId, sub.id));
-
-  // If canceled, tag in ConvertKit for win-back flow
-  if (sub.cancel_at_period_end) {
-    try {
-      const user = await db
-        .select()
-        .from(users)
-        .where(eq(users.id, existing.userId))
-        .limit(1);
-      if (user[0]?.email) {
-        await subscribeAndTag(user[0].email, ['member-canceling']);
-      }
-    } catch (error) {
-      console.error('Failed to tag canceling member in ConvertKit:', error);
-    }
-  }
-}
-
-async function handleSubscriptionDeleted(sub: Stripe.Subscription) {
-  const existing = await getSubscriptionByStripeId(sub.id);
-  if (!existing) {
-    console.error('Subscription not found for deletion:', sub.id);
-    return;
-  }
-
-  await db
-    .update(subscriptions)
-    .set({
-      status: 'canceled',
-      updatedAt: new Date(),
-    })
-    .where(eq(subscriptions.stripeSubscriptionId, sub.id));
-
-  // Tag in ConvertKit for win-back flow
-  try {
-    const user = await db
-      .select()
-      .from(users)
-      .where(eq(users.id, existing.userId))
-      .limit(1);
-    if (user[0]?.email) {
-      await subscribeAndTag(user[0].email, ['member-canceled']);
-    }
-  } catch (error) {
-    console.error('Failed to tag canceled member in ConvertKit:', error);
-  }
-}
-
-async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
-  const stripeSubId = invoice.subscription as string | null;
-  if (!stripeSubId) return;
-
-  const existing = await getSubscriptionByStripeId(stripeSubId);
-  if (!existing) return;
-
-  await db
-    .update(subscriptions)
-    .set({
-      status: 'past_due',
-      updatedAt: new Date(),
-    })
-    .where(eq(subscriptions.stripeSubscriptionId, stripeSubId));
-}
-
-async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
-  const stripeSubId = invoice.subscription as string | null;
-  if (!stripeSubId) return;
-
-  const existing = await getSubscriptionByStripeId(stripeSubId);
-  if (!existing) return;
-
-  // Retrieve latest subscription data from Stripe
-  const stripeSub = await stripe.subscriptions.retrieve(stripeSubId);
-
-  await db
-    .update(subscriptions)
-    .set({
-      status: 'active',
-      currentPeriodEnd: new Date(stripeSub.current_period_end * 1000),
-      updatedAt: new Date(),
-    })
-    .where(eq(subscriptions.stripeSubscriptionId, stripeSubId));
-}
-
-// ═══════════════════════════════════════════════════════════════════
-// One-time payment handler (existing logic)
+// One-time payment handler
 // ═══════════════════════════════════════════════════════════════════
 
 async function handlePaymentCheckout(session: Stripe.Checkout.Session) {

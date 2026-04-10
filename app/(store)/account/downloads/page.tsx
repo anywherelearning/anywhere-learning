@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   getUserPurchases,
   getUserByClerkId,
-  hasActiveMembership,
   getBundleUpgrades,
   getSeasonalSuggestion,
   getCrossSellProducts,
@@ -61,20 +60,16 @@ export default async function DownloadsPage() {
 
   const purchases = await getUserPurchases(clerkId, email);
 
-  // Check membership for banner + get referral code
-  let isMember = false;
+  // Get referral code for the share block
   let referralCode: string | undefined;
   try {
     const user = await getUserByClerkId(clerkId);
-    if (user) {
-      isMember = await hasActiveMembership(user.id);
-      if (email && purchases.length > 0) {
-        const referral = await getOrCreateReferral(user.id, email).catch(() => null);
-        if (referral) referralCode = referral.code;
-      }
+    if (user && email && purchases.length > 0) {
+      const referral = await getOrCreateReferral(user.id, email).catch(() => null);
+      if (referral) referralCode = referral.code;
     }
   } catch {
-    // Ignore - banner just won't show
+    // Ignore - share block just won't show the code
   }
 
   // Derive data for growth sections
@@ -112,34 +107,6 @@ export default async function DownloadsPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
-      {/* ── Member banner ── */}
-      {isMember && (
-        <Link
-          href="/account/library"
-          className="flex items-center justify-between bg-forest/5 border border-forest/15 rounded-2xl p-4 mb-8 group hover:bg-forest/10 transition-colors"
-        >
-          <div className="flex items-center gap-3">
-            <span className="w-2 h-2 bg-forest rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-forest">
-              Active Member - Open your full library
-            </span>
-          </div>
-          <svg
-            className="w-4 h-4 text-forest/50 group-hover:translate-x-0.5 transition-transform"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </Link>
-      )}
-
       {/* ── Page header ── */}
       <h1 className="font-display text-3xl text-forest sm:text-4xl">
         Your Activity Guides
