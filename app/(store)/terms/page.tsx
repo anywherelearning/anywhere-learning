@@ -38,7 +38,7 @@ export default function TermsPage() {
                 Anywhere Learning sells digital activity guides in PDF format. These are downloadable
                 products, not physical goods. After purchase, you receive instant access to download
                 your files. Our guides are designed for parents and guardians to use with their children
-                (ages 4&ndash;14) for real-world, hands-on learning.
+                (ages 6&ndash;14) for real-world, hands-on learning.
               </p>
             </div>
 

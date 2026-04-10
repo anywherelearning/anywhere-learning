@@ -11,8 +11,8 @@ export default function PostPurchaseShare({ referralCode }: PostPurchaseSharePro
   const [codeCopied, setCodeCopied] = useState(false);
   const shareUrl = 'https://anywherelearning.co/shop';
   const shareText = referralCode
-    ? `I just got the best real-world activity guides for my kids, no prep, just open and go! Use my code ${referralCode} for 15% off:`
-    : 'Just got the most amazing real-world activity guides for my kids, no prep, just open and go! Check them out:';
+    ? `I just got the best real-world activity guides for my kids, low prep, just open and go! Use my code ${referralCode} for 15% off:`
+    : 'Just got the most amazing real-world activity guides for my kids, low prep, just open and go! Check them out:';
 
   const handleCopy = async () => {
     try {

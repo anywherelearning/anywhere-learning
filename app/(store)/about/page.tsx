@@ -51,7 +51,7 @@ const values = [
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    title: "No prep, no stress",
+    title: "Low prep, no stress",
     description:
       "Open it, pick an activity, and go. I do the thinking so you can focus on being present with your family.",
   },
@@ -64,7 +64,7 @@ const values = [
     ),
     title: "Flexible by design",
     description:
-      "No schedules, no sequences. Use the packs however you want, at home, travelling, or in between.",
+      "No schedules, no sequences. Use the guides however you want, at home, travelling, or in between.",
   },
 ];
 
@@ -260,7 +260,7 @@ export default function AboutPage() {
               I started creating simple activities that turned everyday
               moments, a walk in the park, a trip to the grocery store, a
               rainy afternoon, into meaningful learning experiences. No lesson
-              plans. No grading. No prep. And my kids didn&apos;t just tolerate
+              plans. No grading. Low prep. And my kids didn&apos;t just tolerate
               them. They asked for more.
             </p>
             <p>
@@ -366,7 +366,7 @@ export default function AboutPage() {
               href="/shop"
               className="rounded-2xl bg-forest px-8 py-3.5 text-lg font-semibold text-cream transition-all hover:bg-forest-dark hover:shadow-md"
             >
-              Browse Packs
+              Browse Guides
             </Link>
             <Link
               href="/free-guide"

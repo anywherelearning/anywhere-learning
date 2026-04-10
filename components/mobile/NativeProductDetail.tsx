@@ -256,7 +256,7 @@ export default function NativeProductDetail({
           {[
             { label: 'Instant Download', icon: '↓' },
             { label: 'Any Device', icon: '◻' },
-            { label: 'No Prep Needed', icon: '✓' },
+            { label: 'Low Prep', icon: '✓' },
           ].map(({ label, icon }) => (
             <div
               key={label}

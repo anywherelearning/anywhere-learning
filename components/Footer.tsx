@@ -12,10 +12,10 @@ export default function Footer() {
             Home
           </Link>
         </nav>
-        <p className="font-[family-name:var(--font-display)] text-sm text-forest/60">
+        <p className="font-[family-name:var(--font-display)] text-base text-forest/60">
           Meaningful Learning, Wherever You Are
         </p>
-        <p className="mt-2 text-xs text-gray-400">
+        <p className="mt-2 text-sm text-gray-400">
           © {new Date().getFullYear()} Anywhere Learning · info@anywherelearning.co
         </p>
       </div>

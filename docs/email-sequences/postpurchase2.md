@@ -75,7 +75,7 @@ How's the pack going? If your kids are anything like mine, they've probably alre
 
 I wanted to share something that pairs well with what you've got.
 
-If your kids loved the hands-on energy of what's in your pack, the **Real-World Skills Bundle** takes that same approach and channels it into cooking, budgeting, navigation, and problem-solving - things they'll use forever. Same no-prep format, totally different skills.
+If your kids loved the hands-on energy of what's in your pack, the **Real-World Skills Bundle** takes that same approach and channels it into cooking, budgeting, navigation, and problem-solving - things they'll use forever. Same low-prep format, totally different skills.
 
 **49 activities · Ages 6–14 · $34.99**
 
@@ -96,7 +96,7 @@ How's the pack going? If your kids are anything like mine, they've probably alre
 
 I wanted to share something that pairs well with what you've got.
 
-Since your family enjoyed the practical skills activities, the **Creativity Bundle** is a great complement - it's all about open-ended making, inventing, and building. Board game design, Rube Goldberg machines, inventing a sport. Same hands-on, no-prep format, but it unlocks a totally different kind of thinking.
+Since your family enjoyed the practical skills activities, the **Creativity Bundle** is a great complement - it's all about open-ended making, inventing, and building. Board game design, Rube Goldberg machines, inventing a sport. Same hands-on, low-prep format, but it unlocks a totally different kind of thinking.
 
 **45 activities · Ages 6–14 · $32.99**
 

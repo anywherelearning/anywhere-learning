@@ -11,14 +11,14 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: '10 Life Skills Your Kids Can Learn This Week \u2014 Free Guide',
   description:
-    'A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
+    'A free, low-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
   alternates: {
     canonical: 'https://anywherelearning.co/free-guide',
   },
   openGraph: {
     title: '10 Life Skills Your Kids Can Learn This Week | Free Guide',
     description:
-      'A free, no-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
+      'A free, low-prep activity guide for homeschool and worldschool families. Download 10 real-world life skills activities your kids can try this week.',
     url: 'https://anywherelearning.co/free-guide',
     type: 'website',
     images: [
@@ -37,7 +37,7 @@ const freeGuideLd = {
   '@type': 'Product',
   name: '10 Life Skills Your Kids Can Learn This Week',
   description:
-    'A free, no-prep activity guide with 10 real-world life skills activities for homeschool and worldschool families. Ages 6–14.',
+    'A free, low-prep activity guide with 10 real-world life skills activities for homeschool and worldschool families. Ages 6–14.',
   image: 'https://anywherelearning.co/images/free-guide-cover.jpg',
   url: 'https://anywherelearning.co/free-guide',
   brand: {

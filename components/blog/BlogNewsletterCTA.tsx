@@ -5,11 +5,11 @@ export default function BlogNewsletterCTA() {
     <div className="bg-forest-section rounded-3xl p-8 md:p-12 shadow-xl">
       <div className="max-w-lg mx-auto text-center">
         <h3 className="font-display text-2xl md:text-3xl text-cream mb-3">
-          Get Weekly Inspiration
+          Get Inspiration Delivered
         </h3>
         <p className="text-cream/50 mb-6 text-sm md:text-base">
-          Practical ideas, encouragement, and real-world learning tips delivered
-          to your inbox every week. No spam. Unsubscribe anytime.
+          Practical ideas, encouragement, and real-world learning tips — only
+          when we have something worth sharing. No spam. Unsubscribe anytime.
         </p>
         <EmailForm variant="dark" />
       </div>

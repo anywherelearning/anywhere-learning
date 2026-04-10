@@ -79,6 +79,10 @@ export async function generateMetadata({
 function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
   const defaults = blogProductDefaults[post.category];
 
+  // If neither recommendedProduct nor recommendedBundle is set and no inline callouts exist, skip auto-injection
+  const hasAnyCallout = post.content.some((b) => b.type === 'product-callout' || b.type === 'bundle-callout');
+  if (!post.recommendedProduct && !post.recommendedBundle && !hasAnyCallout) return post.content;
+
   // Step 1: Strip out non-pinned callouts so we can reposition them (pinned callouts stay in place)
   const productBlock = post.content.find((b) => b.type === 'product-callout');
   const bundleBlock = post.content.find((b) => b.type === 'bundle-callout');

@@ -88,7 +88,7 @@ export async function generateMetadata({
     title: meta?.title || "Shop Activity Guides",
     description:
       meta?.description ||
-      "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+      "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, low prep.",
     alternates: {
       canonical: canonicalUrl,
     },
@@ -98,7 +98,7 @@ export async function generateMetadata({
         : "Shop Activity Guides | Anywhere Learning",
       description:
         meta?.description ||
-        "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, no prep.",
+        "Real-world activity guides for homeschool and worldschool families. No curriculum, no worksheets, low prep.",
       url: canonicalUrl,
       type: "website",
       images: [
@@ -351,7 +351,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 <br className="hidden sm:block" /> for Real-World Learning
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-lg text-gray-500">
-                No-prep activities for homeschool and worldschool families.
+                Low-prep activities for homeschool and worldschool families.
                 Open on any device, use year after year.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
             <div className="mx-auto max-w-4xl px-5 sm:px-8 py-4">
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-gray-500">
                 {[
-                  "No Prep Required",
+                  "Low Prep",
                   "Download & Use Instantly",
                   "Ages 6-14",
                   "48-hour refund guarantee",

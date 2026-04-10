@@ -25,7 +25,7 @@ It's everything. Every activity pack I've made, in one download. 220+ activities
 - Life skills (planning, responsibility, household contributions)
 - AI and digital literacy (yes, really - for kids)
 
-All printable. All no-prep. All designed for ages 6-14, with enough flexibility that siblings at different stages can work on them together.
+All printable. All low-prep. All designed for ages 6-14, with enough flexibility that siblings at different stages can work on them together.
 
 **The Master Bundle is $89.99** - which saves you over $30 compared to buying each pack individually.
 

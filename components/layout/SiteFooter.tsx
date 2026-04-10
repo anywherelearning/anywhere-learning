@@ -47,13 +47,13 @@ export default function SiteFooter() {
               <Image
                 src="/logo-text-v2.png"
                 alt="Anywhere Learning"
-                width={200}
-                height={50}
-                className="h-16 w-auto"
+                width={240}
+                height={60}
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-5">
-              Real-world activity guides for homeschool and worldschool families. No prep, no worksheets, just meaningful time together.
+              Real-world activity guides for homeschool and worldschool families. Low prep, no worksheets, just meaningful time together.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -98,14 +98,14 @@ export default function SiteFooter() {
           {/* Column 3: Learn */}
           <div>
             <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
-              Learn
+              Resources
             </h3>
             <nav aria-label="Learn links" className="space-y-2.5">
               <Link href="/blog" className={linkClass}>
                 Blog
               </Link>
               <Link href="/guides" className={linkClass}>
-                Guides
+                Learn
               </Link>
               <Link href="/about" className={linkClass}>
                 About
@@ -137,7 +137,7 @@ export default function SiteFooter() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-gray-200/60">
-          <p className="font-display text-sm text-forest/60 text-center mb-4">
+          <p className="font-display text-base text-forest/60 text-center mb-4">
             Meaningful Learning, Wherever You Are
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">

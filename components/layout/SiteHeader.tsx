@@ -68,9 +68,9 @@ export default function SiteHeader() {
             <Image
               src="/logo-text-v2.png"
               alt="Anywhere Learning"
-              width={160}
-              height={40}
-              className="h-14 w-auto"
+              width={200}
+              height={50}
+              className="h-16 w-auto"
               priority
             />
           </Link>
@@ -99,7 +99,7 @@ export default function SiteHeader() {
               href="/guides"
               className="nav-link text-sm font-medium text-gray-500 transition-colors hover:text-forest"
             >
-              Guides
+              Learn
             </Link>
             <Link
               href="/about"
@@ -177,9 +177,9 @@ export default function SiteHeader() {
               <Image
                 src="/logo-text-v2.png"
                 alt="Anywhere Learning"
-                width={160}
-                height={40}
-                className="h-10 w-auto"
+                width={200}
+                height={50}
+                className="h-12 w-auto"
               />
             </Link>
             <button
@@ -228,7 +228,7 @@ export default function SiteHeader() {
               href="/guides"
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
-              Guides
+              Learn
             </Link>
             <Link
               href="/about"

@@ -51,7 +51,7 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto max-w-lg text-lg md:text-xl text-gray-600 lg:mx-0 leading-relaxed">
-              A free, no-prep guide for homeschool and worldschool families.
+              A free, low-prep guide for homeschool and worldschool families.
               Real activities. Real life. No curriculum required.
             </p>
 

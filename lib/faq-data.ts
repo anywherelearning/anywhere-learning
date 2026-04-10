@@ -13,7 +13,7 @@ export const coreFaqItems: FAQItem[] = [
   {
     question: 'What ages are these for?',
     answer:
-      'My guides are designed for ages 6\u201314, but they\u2019re flexible. Every activity includes three levels, Explore, Develop, and Extend, so you can adjust to your child\u2019s ability. The idea is that you do them together, with you as the coach. Siblings at different ages can do the same activity side by side.',
+      'Our guides are designed for ages 6\u201314, but they\u2019re flexible. Every activity includes three levels, Explore, Develop, and Extend, so you can adjust to your child\u2019s ability. The idea is that you do them together, with you as the coach. Siblings at different ages can do the same activity side by side.',
   },
   {
     question: 'Do I need to follow a specific schedule or curriculum?',
@@ -41,7 +41,7 @@ export const coreFaqItems: FAQItem[] = [
 
 export const aboutFaqItems: FAQItem[] = [
   {
-    question: 'How do I use the activity packs?',
+    question: 'How do I use the activity guides?',
     answer:
       'Download the PDF, open it on any device \u2014 phone, tablet, or laptop \u2014 and follow the step-by-step instructions. Each activity includes everything you need to know: the learning focus, materials (minimal or none), parent guidance, and three flexible levels so you can adjust to your child. Printing is optional, never required.',
   },

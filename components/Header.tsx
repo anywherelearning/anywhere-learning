@@ -32,8 +32,8 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <LogoIcon size={28} />
-          <span className="font-display text-xl text-forest">
+          <LogoIcon size={32} />
+          <span className="font-display text-2xl text-forest">
             Anywhere Learning
           </span>
         </Link>

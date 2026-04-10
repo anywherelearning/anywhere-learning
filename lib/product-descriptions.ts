@@ -31,7 +31,7 @@ export const SHARED_ACTIVITY_STRUCTURE = [
 
 /** Selling points shared across all products */
 export const SHARED_WHY_FAMILIES_LOVE_IT = [
-  'No prep. Open and follow along on any device',
+  'Low prep. Open and follow along on any device',
   'Reusable year after year, with a different experience every time',
   'Works for one child or five, multi-age friendly',
   'Curiosity-driven, not curriculum-driven',
@@ -44,7 +44,7 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
   default: [
     'Homeschool families',
     'Worldschool families',
-    'Families who want meaningful, no-prep activities',
+    'Families who want meaningful, low-prep activities',
     'Parents who value real-world learning',
   ],
   'outdoor-learning': [
@@ -168,7 +168,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '3 complete nature + art packs',
       'Land Art Challenge Cards: 15 outdoor art challenges',
       'Nature Crafts for Kids: hands-on projects with found materials',
-      'Nature Journal & Walk Cards: 25 observation and journaling prompts',
+      'My Nature Journal: guided journaling prompts for outdoor observation',
       'All activities use materials found in nature, no supplies needed',
     ],
     skillTags: ['Art', 'Nature', 'Observation', 'Creativity', 'Journaling'],
@@ -199,7 +199,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Nature Choice Boards: 5 self-directed activity menus',
       'Land Art Challenge Cards: 15 outdoor art challenges',
       'Nature Crafts for Kids: hands-on projects with found materials',
-      'Nature Journal & Walk Cards: 25 observation and journaling prompts',
+      'My Nature Journal: guided journaling prompts for outdoor observation',
     ],
     skillTags: ['STEM', 'Nature', 'Art', 'Observation', 'Engineering', 'Creativity', 'Journaling'],
     format: 'Bundle',
@@ -262,20 +262,20 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-journal-walks': {
     opening:
-      '25 nature walk prompts and journaling activities that turn any outdoor walk into a rich observation experience. Each card gives your child a specific focus, like tracking shadows, sketching bark patterns, listening for layers of sound. Works in any season, any landscape, any weather.',
+      'A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape, any weather.',
     whatsIncluded: [
-      '25 nature walk and journaling prompt cards',
-      'Specific observation focuses: shadows, textures, sounds, patterns, colour',
-      'Sketching, mapping, and descriptive writing prompts',
-      'Seasonal variations, works year-round',
-      'Self-directed format: kids can choose their own adventure',
+      'Guided journaling prompts for outdoor observation',
+      'Sketching, drawing, and descriptive writing activities',
+      'Observation focuses: shadows, textures, sounds, patterns, colour',
+      'Seasonal variations — works year-round',
+      'Reusable format: use again and again across seasons',
     ],
     skillTags: ['Observation', 'Journaling', 'Science', 'Art', 'Writing'],
-    format: 'Card Pack',
+    format: 'Activity Guide',
   },
   'nature-walk-task-cards': {
     opening:
-      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, no-prep way to make walks more engaging.',
+      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, low-prep way to make walks more engaging.',
     whatsIncluded: [
       'Read-aloud outdoor learning prompt cards',
       'Each card focuses on a specific sense or skill',

@@ -6,7 +6,7 @@ export default function ShareSection() {
   const [copied, setCopied] = useState(false);
   const shareUrl = 'https://anywherelearning.co/shop';
   const shareText =
-    'I found these amazing real-world activity guides for kids, no prep, just open and go. Check them out:';
+    'I found these amazing real-world activity guides for kids, low prep, just open and go. Check them out:';
 
   const handleCopy = async () => {
     try {
