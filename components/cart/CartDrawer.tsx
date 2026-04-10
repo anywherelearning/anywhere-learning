@@ -21,15 +21,22 @@ export default function CartDrawer() {
   const { items, itemCount, totalCents, isCartOpen, closeCart, removeItem, addItem, swapBundle, byobTier, byobDiscountCents, byobTotalCents, nextByobTier } = useCart();
   const { isNative } = useCapacitor();
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const clerkState = hasClerk ? useUser() : { isSignedIn: false, user: null };
+  const clerkState = hasClerk
+    ? useUser()
+    : { isSignedIn: false, user: null, isLoaded: true as boolean };
   const isSignedIn = !!clerkState.isSignedIn;
+  const isClerkLoaded = clerkState.isLoaded !== false;
   const clerkUser = clerkState.user;
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [upgradeCredits, setUpgradeCredits] = useState<Record<string, { upgradePrice: number; totalCredit: number; ownedCount: number; totalCount: number }>>({});
-  const [ownsFreeBonus, setOwnsFreeBonus] = useState(false);
+  // Tri-state: undefined = not yet determined (Clerk loading or fetch in flight),
+  // true = confirmed owned, false = confirmed not owned. We only render the
+  // free-bonus banner when this is explicitly `false`, so the banner never
+  // flashes in then disappears for users who already own the Skills Map.
+  const [ownsFreeBonus, setOwnsFreeBonus] = useState<boolean | undefined>(undefined);
   const focusTrapRef = useFocusTrap(isCartOpen);
 
   // Fetch upgrade prices for any bundles in the cart
@@ -61,13 +68,21 @@ export default function CartDrawer() {
   }, [isCartOpen, items]);
 
   // Check whether the signed-in user already owns the free bundle bonus
-  // (the Future-Ready Skills Map). If they do, we hide the bonus banner
-  // so we don't promise them something they already have.
+  // (the Future-Ready Skills Map). We fire this as soon as we know the
+  // sign-in state — NOT on cart open — so the answer is usually already
+  // resolved by the time the user clicks the cart button. This prevents
+  // the bonus banner from flashing in then disappearing for users who
+  // already own it.
   useEffect(() => {
-    if (!isCartOpen || !isSignedIn) {
+    // Wait for Clerk to finish loading before we decide anything.
+    if (!isClerkLoaded) return;
+    if (!isSignedIn) {
+      // Signed-out users can't own anything — banner is safe to show.
       setOwnsFreeBonus(false);
       return;
     }
+    // Reset to "unknown" while we re-check (e.g. after a sign-in flip).
+    setOwnsFreeBonus(undefined);
     let cancelled = false;
     (async () => {
       try {
@@ -79,11 +94,13 @@ export default function CartDrawer() {
           setOwnsFreeBonus(Array.isArray(data.owned) && data.owned.includes(FREE_BONUS_SLUG));
         }
       } catch {
+        // On failure, fall back to "not owned" so the banner still shows
+        // rather than silently hiding a valid bonus.
         if (!cancelled) setOwnsFreeBonus(false);
       }
     })();
     return () => { cancelled = true; };
-  }, [isCartOpen, isSignedIn]);
+  }, [isSignedIn, isClerkLoaded]);
 
   // Lock body scroll when open
   useEffect(() => {
@@ -384,11 +401,13 @@ export default function CartDrawer() {
           )}
 
           {/* Free Skills Map bonus with any bundle.
-              Hidden if the user already owns it (checked on cart open)
-              or already has it in the current cart. */}
+              Hidden if the user already owns it (checked as soon as Clerk
+              is loaded) or already has it in the current cart. Rendered
+              only when ownership is explicitly confirmed `false` so the
+              banner never flashes in then disappears. */}
           {items.some((i) => i.isBundle) &&
             !items.some((i) => i.slug === FREE_BONUS_SLUG) &&
-            !ownsFreeBonus && (
+            ownsFreeBonus === false && (
             <div className="mt-4">
               <div className="flex items-start gap-4 bg-gold/5 border border-gold/20 rounded-xl p-4">
                 <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden">
