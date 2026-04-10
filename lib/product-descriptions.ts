@@ -31,7 +31,7 @@ export const SHARED_ACTIVITY_STRUCTURE = [
 
 /** Selling points shared across all products */
 export const SHARED_WHY_FAMILIES_LOVE_IT = [
-  'No prep. Open and follow along on any device',
+  'Low prep. Open and follow along on any device',
   'Reusable year after year, with a different experience every time',
   'Works for one child or five, multi-age friendly',
   'Curiosity-driven, not curriculum-driven',
@@ -44,7 +44,7 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
   default: [
     'Homeschool families',
     'Worldschool families',
-    'Families who want meaningful, no-prep activities',
+    'Families who want meaningful, low-prep activities',
     'Parents who value real-world learning',
   ],
   'outdoor-learning': [
@@ -275,7 +275,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-walk-task-cards': {
     opening:
-      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, no-prep way to make walks more engaging.',
+      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, low-prep way to make walks more engaging.',
     whatsIncluded: [
       'Read-aloud outdoor learning prompt cards',
       'Each card focuses on a specific sense or skill',

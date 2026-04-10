@@ -43,7 +43,7 @@ export default function FreeGuideCTA() {
               Not ready to buy? Start here.
             </h3>
             <p className="text-cream/60 text-sm mb-4">
-              Grab our free guide - 10 real-world activities you can try this week. No prep, no planning.
+              Grab our free guide - 10 real-world activities you can try this week. Low prep, no planning.
             </p>
             <EmailForm variant="dark" />
           </div>

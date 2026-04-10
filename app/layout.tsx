@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Anywhere Learning",
   },
   description:
-    "No-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+    "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Anywhere Learning",
     title: "Anywhere Learning | Meaningful Learning, Wherever You Are",
     description:
-      "No-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+      "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
     images: [
       {
         url: "https://anywherelearning.co/og-default.png",
@@ -110,7 +110,7 @@ export default function RootLayout({
                     "url": "https://anywherelearning.co/logo.png",
                   },
                   "description":
-                    "No-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6-14. Download, open on any device, and follow along with your kids.",
+                    "Low-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6-14. Download, open on any device, and follow along with your kids.",
                   "slogan": "Meaningful Learning, Wherever You Are",
                   "email": "info@anywherelearning.co",
                   "founder": {

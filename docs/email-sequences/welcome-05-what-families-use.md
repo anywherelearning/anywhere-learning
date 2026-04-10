@@ -18,7 +18,7 @@ I've been there. More often than I'd like to admit.
 
 That's actually why I started creating activity packs. Not a curriculum - more like a box of sparks. Open-ended prompts that kick off real-world adventures and then get out of the way. You print them, hand them over, and let your kids run with it.
 
-No prep. No lesson plans. No "correct answers."
+Low prep. No lesson plans. No "correct answers."
 
 Here's what they actually look like:
 

@@ -201,7 +201,7 @@ export default function BlogExitIntentPopup() {
                 Before you go, grab this free guide
               </h2>
               <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-                10 Real-World Activities You Can Start Today. No prep, no planning, just meaningful learning.
+                10 Real-World Activities You Can Start Today. Low prep, no planning, just meaningful learning.
               </p>
             </div>
           </div>

@@ -53,7 +53,7 @@ export default function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-5">
-              Real-world activity guides for homeschool and worldschool families. No prep, no worksheets, just meaningful time together.
+              Real-world activity guides for homeschool and worldschool families. Low prep, no worksheets, just meaningful time together.
             </p>
             <div className="flex items-center gap-4">
               <a

@@ -253,7 +253,7 @@ const resources: ResourcePage[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'What "no prep" really means',
+        text: 'What "low prep" really means',
       },
       {
         type: 'paragraph',
@@ -261,7 +261,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'We wrote about [what "no prep" actually means](/blog/what-no-prep-means) because the term gets misused constantly. True no-prep learning means you don\'t need to read a manual, gather supplies, or block out an hour. You just need to be present, curious, and willing to let learning happen on its own terms.',
+        text: 'We wrote about [what "no prep" actually means](/blog/what-no-prep-means) because the term gets misused constantly. True low-prep learning means you don\'t need to read a manual, gather supplies, or block out an hour. You just need to be present, curious, and willing to let learning happen on its own terms.',
       },
       {
         type: 'paragraph',
@@ -1030,7 +1030,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'This guide covers the maker mindset, design thinking for kids, creative projects organized by age, and how to build a creative practice in your home with minimal supplies and zero prep. Whether your child gravitates toward building, drawing, coding, or making videos, there\'s a maker path that fits them.',
+        text: 'This guide covers the maker mindset, design thinking for kids, creative projects organized by age, and how to build a creative practice in your home with minimal supplies and low prep. Whether your child gravitates toward building, drawing, coding, or making videos, there\'s a maker path that fits them.',
       },
       {
         type: 'heading',
@@ -1215,7 +1215,7 @@ const resources: ResourcePage[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'Materials and setup: the no-prep approach',
+        text: 'Materials and setup: the low-prep approach',
       },
       {
         type: 'paragraph',

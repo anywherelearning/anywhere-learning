@@ -9,7 +9,7 @@ export default function FinalCTA() {
         </h2>
         <p className="text-lg text-cream/80 leading-relaxed mb-8">
           Download the free guide and try your first activity this week. No
-          curriculum. No worksheets. No prep.
+          curriculum. No worksheets. Low prep.
         </p>
 
         <EmailForm variant="dark" />

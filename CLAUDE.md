@@ -5,7 +5,7 @@
 - **Name:** Anywhere Learning
 - **Owner:** Amelie (info@anywherelearning.co)
 - **Tagline:** Meaningful Learning, Wherever You Are
-- **Mission:** Help homeschool and worldschool families raise future-ready kids through real-world learning — no curriculum, no worksheets, no prep.
+- **Mission:** Help homeschool and worldschool families raise future-ready kids through real-world learning — no curriculum, no worksheets, low prep.
 - **Domain:** anywherelearning.co
 
 ## Brand Design
@@ -30,7 +30,7 @@
 
 ## Copy Rules
 
-- **Use:** meaningful, natural curiosity, real-world, no prep, permission, already happening, flexible, download and use, open and follow along, use year after year, together time
+- **Use:** meaningful, natural curiosity, real-world, low prep, permission, already happening, flexible, download and use, open and follow along, use year after year, together time
 - **Product framing:** Activities are digital guides for parents — not printables. Parents download, open on any device, and follow step-by-step. Printing is optional, never the primary experience. Every activity is reusable year after year and adjustable to different kids' abilities.
 - **Avoid:** curriculum-aligned, worksheets, academic performance, accelerate learning, teacher resources, busywork
 - **CTAs:** "Get [Product]" not "Buy" — "Get" implies gaining

@@ -60,7 +60,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Creativity & Imagination Mega Bundle",
     slug: "creativity-mega-bundle",
     description:
-      "All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films. Each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence. 10 complete projects, zero prep required.",
+      "All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films. Each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence. 10 complete projects, low prep required.",
     shortDescription:
       "All 10 Creativity Anywhere projects: design, build, and create without limits.",
     priceCents: 4499,
@@ -175,7 +175,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Outdoor Learning Toolkit Bundle",
     slug: "outdoor-toolkit-bundle",
     description:
-      "Four essential outdoor learning packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Zero prep, maximum outdoor time.",
+      "Four essential outdoor learning packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Low prep, maximum outdoor time.",
     shortDescription:
       "Nature Walk Cards + Missions + STEM Challenges + Choice Boards, your complete outdoor toolkit.",
     priceCents: 2399,
@@ -721,7 +721,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Real-Life Budget Challenge",
     slug: "budget-challenge",
     description:
-      "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, no prep needed.",
+      "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, low prep needed.",
     shortDescription:
       "Real-money challenges that teach kids budgeting, saving, and smart spending.",
     priceCents: 599,

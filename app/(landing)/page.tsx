@@ -13,7 +13,7 @@ import { coreFaqItems } from '@/lib/faq-data';
 export const metadata: Metadata = {
   title: 'Anywhere Learning, Meaningful Learning, Wherever You Are',
   description:
-    'No-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+    'Low-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -205,8 +205,8 @@ export default function HomePage() {
                   <br /><span className="text-gold">Happens Everywhere</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                  No-prep activity guides you open on any device and follow
-                  along with your kids. Real-world learning, no prep required, from $5.99.
+                  Low-prep activity guides you open on any device and follow
+                  along with your kids. Real-world learning, low prep required, from $5.99.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
@@ -329,7 +329,7 @@ export default function HomePage() {
                 Three Steps. That&apos;s It.
               </h2>
               <p className="text-center text-gray-500 text-lg mb-16 max-w-md mx-auto">
-                No setup. No prep. Just download and go.
+                No setup. Low prep. Just download and go.
               </p>
             </ScrollReveal>
 
@@ -523,7 +523,7 @@ export default function HomePage() {
                     <p>
                       I left the classroom for good and started creating the
                       activities I wished the system offered, hands-on,
-                      real-world, zero prep. Things that feel like play but
+                      real-world, low prep. Things that feel like play but
                       build real skills.
                     </p>
                     <p className="text-forest font-semibold">
@@ -584,7 +584,7 @@ export default function HomePage() {
               </h2>
               <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
                 Grab the free guide, 10 real-world activities you can try this week
-                with zero prep. See if this approach works for your family.
+                with low prep. See if this approach works for your family.
               </p>
               <EmailForm variant="light" />
               <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
@@ -613,7 +613,7 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-cream/80 mb-10 leading-relaxed max-w-lg mx-auto">
                 Pick a guide, open it on your phone or tablet, and do the activity together.
-                No planning, no prep, just you and your kids.
+                No planning, low prep, just you and your kids.
               </p>
               <Link
                 href="/shop"

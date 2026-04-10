@@ -239,7 +239,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
             { icon: 'compass', label: '10 key skills', color: 'text-forest' },
             { icon: 'calendar', label: 'Sample weeks', color: 'text-gold' },
             { icon: 'users', label: 'Ages 0\u201314+', color: 'text-forest' },
-            { icon: 'check', label: 'No-prep activities', color: 'text-gold' },
+            { icon: 'check', label: 'Low-prep activities', color: 'text-gold' },
           ].map((chip) => (
             <div key={chip.label} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
               <FeatureIcon type={chip.icon} className={`w-4 h-4 ${chip.color} flex-shrink-0`} />
