@@ -14,7 +14,7 @@ export interface ProductDescription {
   /** Subject/skill tags displayed as pills */
   skillTags: string[];
   /** Product format label */
-  format: 'Activity Pack' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
+  format: 'Activity Pack' | 'Activity Guide' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
 }
 
 // ─── Shared template sections ────────────────────────────────────────

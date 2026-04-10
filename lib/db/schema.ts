@@ -80,6 +80,15 @@ export const deviceTokens = pgTable('device_tokens', {
   index('idx_device_tokens_platform').on(table.platform),
 ]);
 
+// ─────────────────────────────────────────────────────────────────────────────
+// PARKED: subscriptions table
+// The membership/subscription product was scrapped pre-launch (Apr 2026). No
+// application code reads or writes this table. It is intentionally preserved
+// so existing production data (if any ever gets written) is not lost, and so
+// a future membership relaunch does not require a fresh migration. Drop this
+// table in a dedicated migration if/when we decide membership is permanently
+// off the roadmap.
+// ─────────────────────────────────────────────────────────────────────────────
 export const subscriptions = pgTable('subscriptions', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id).notNull(),
