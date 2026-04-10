@@ -85,7 +85,7 @@ const resources: ResourcePage[] = [
     content: [
       {
         type: 'summary',
-        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research consistently shows that experiential learning leads to deeper understanding and better long-term retention than traditional instruction.',
+        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research on experiential learning — most famously David Kolb\'s work and [more recent systematic reviews](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279) — consistently links hands-on, reflective experience with deeper conceptual understanding and stronger long-term retention than passive instruction alone.',
       },
       {
         type: 'paragraph',
@@ -227,7 +227,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'These aren\'t chores. They\'re executive function training disguised as real life. Every time a child plans, executes, and adjusts, they\'re building the cognitive skills that predict success far better than test scores. Executive function, the ability to plan, prioritize, manage time, and regulate emotions, is the single best predictor of academic and life success.',
+        text: 'These aren\'t chores. They\'re executive function training disguised as real life. Every time a child plans, executes, and adjusts, they\'re building the cognitive skills that matter for the long haul. The landmark [Dunedin Study, published in PNAS in 2011](https://www.pnas.org/doi/10.1073/pnas.1010076108), followed 1,000 children from birth to age 32 and found that childhood self-control and executive function predicted adult health, wealth, and overall life outcomes — even after controlling for IQ and family background. These are the skills you can\'t teach from a worksheet. You build them one real decision at a time.',
       },
       {
         type: 'paragraph',
@@ -369,7 +369,7 @@ const resources: ResourcePage[] = [
     content: [
       {
         type: 'summary',
-        text: 'Nature-based learning uses the outdoors as a classroom, combining exploration, observation, and hands-on activities to build science, math, and critical thinking skills. Studies show that regular outdoor learning improves attention, reduces stress, and deepens understanding of STEM concepts compared to indoor instruction alone. Families can start with nothing more than a weekly walk on the same trail, with no lesson plans, field guides, or special equipment required.',
+        text: 'Nature-based learning uses the outdoors as a classroom, combining exploration, observation, and hands-on activities to build science, math, and critical thinking skills. A [2022 systematic review in Educational Psychology Review](https://link.springer.com/article/10.1007/s10648-022-09658-5) examining greenspace and children\'s cognitive functioning documented consistent benefits for attention, executive function, and lower physiological stress compared to indoor environments. Families can start with nothing more than a weekly walk on the same trail — no lesson plans, field guides, or special equipment required.',
       },
       {
         type: 'paragraph',
@@ -390,11 +390,11 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Research backs this up. Children who learn science concepts outdoors retain information longer and demonstrate deeper conceptual understanding than those who learn the same material indoors. The reason is multisensory engagement: when your child smells wet earth after rain, feels the texture of bark, hears birdsong, and sees light filtering through leaves, their brain creates richer memory networks than any textbook diagram can produce.',
+        text: 'Research backs this up. A [2022 systematic review in Educational Psychology Review](https://link.springer.com/article/10.1007/s10648-022-09658-5) examining greenspace and children\'s cognitive functioning found consistent benefits for attention, memory, and executive function compared to indoor environments. The reason is multisensory engagement: when your child smells wet earth after rain, feels the texture of bark, hears birdsong, and sees light filtering through leaves, their brain creates richer memory networks than any textbook diagram can produce.',
       },
       {
         type: 'paragraph',
-        text: 'There\'s also the attention factor. Studies on children with attention difficulties consistently show that time in green spaces improves focus and reduces symptoms. Nature doesn\'t demand sustained attention in the way a classroom does; it invites it. A child who can\'t sit still for a math lesson will happily spend forty minutes tracking a beetle across a log.',
+        text: 'There\'s also the attention factor. A [landmark 2009 study by Faber Taylor and Kuo in the Journal of Attention Disorders](https://journals.sagepub.com/doi/10.1177/1087054708323000) found that just a 20-minute walk in a park improved concentration in children with ADHD as much as a typical dose of medication. Nature doesn\'t demand sustained attention in the way a classroom does; it invites it. A child who can\'t sit still for a math lesson will happily spend forty minutes tracking a beetle across a log.',
       },
       {
         type: 'paragraph',
@@ -631,7 +631,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'The research on unstructured outdoor play is striking. Children who have regular free play in natural settings show higher levels of creativity, better ability to self-regulate emotions, and stronger executive function compared to children whose outdoor time is always adult-directed. They also take more appropriate risks, which paradoxically leads to fewer injuries over time, because they develop accurate judgment about their own capabilities.',
+        text: 'The research on unstructured outdoor play is striking. The [American Academy of Pediatrics 2018 clinical report "The Power of Play"](https://publications.aap.org/pediatrics/article/142/3/e20182058/38649/The-Power-of-Play-A-Pediatric-Role-in-Enhancing) documents how free play supports executive function, self-regulation, and stress reduction. And [Sandseter and Kennair\'s 2011 review](https://journals.sagepub.com/doi/10.1177/147470491100900212) on risky play explains the injury paradox: children who are allowed to climb, jump, and explore physical limits develop more accurate risk assessment, which often leads to fewer serious injuries over time, not more.',
       },
       {
         type: 'paragraph',
@@ -690,7 +690,7 @@ const resources: ResourcePage[] = [
           },
           {
             question: 'How much outdoor time do kids really need?',
-            answer: 'Research suggests a minimum of one hour per day of outdoor time for health and cognitive benefits, but more is better. For nature-based learning specifically, even one focused 30-minute nature walk per week, if done consistently, can build meaningful scientific observation skills over a year. Don\'t let perfection be the enemy of good. Any outdoor time is better than none.',
+            answer: 'There\'s no single magic number, but pediatric and child development organizations broadly recommend daily outdoor time for health, mood, and cognitive benefits, and more is better. For nature-based learning specifically, even one focused 30-minute nature walk per week, done consistently, can build meaningful scientific observation skills over a year. Don\'t let perfection be the enemy of good. Any outdoor time is better than none.',
           },
         ],
       },
@@ -1202,7 +1202,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'We wrote about [why just letting kids play counts as education](/blog/just-let-them-play) because it\'s the part of creative learning that makes parents most anxious. It doesn\'t look productive. There\'s no worksheet to show for it. But the research is clear: children who have regular unstructured play time are more creative, more resilient, and better at self-directed learning than children whose time is fully scheduled.',
+        text: 'We wrote about [why just letting kids play counts as education](/blog/just-let-them-play) because it\'s the part of creative learning that makes parents most anxious. It doesn\'t look productive. There\'s no worksheet to show for it. But the research is clear: the [American Academy of Pediatrics 2018 clinical report "The Power of Play"](https://publications.aap.org/pediatrics/article/142/3/e20182058/38649/The-Power-of-Play-A-Pediatric-Role-in-Enhancing) documents how unstructured play builds executive function, problem-solving, creativity, and emotional self-regulation, the exact skills children need for self-directed learning.',
       },
       {
         type: 'paragraph',
@@ -1295,7 +1295,7 @@ const resources: ResourcePage[] = [
           },
           {
             question: 'Does creativity really matter for my child\'s future?',
-            answer: 'Creative problem-solving, adaptability, and the ability to build new things consistently rank among the top skills employers say they want. In a world where AI can handle routine tasks, human creativity becomes more valuable, not less. Beyond career readiness, creative practice builds resilience, emotional expression, and the confidence that comes from making something that didn\'t exist before.',
+            answer: 'Yes. The [World Economic Forum\'s Future of Jobs Report 2025](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) ranks analytical thinking, creative thinking, and resilience and flexibility among the top skills employers say will matter most this decade. In a world where AI can handle routine tasks, human creativity becomes more valuable, not less. Beyond career readiness, creative practice builds resilience, emotional expression, and the confidence that comes from making something that didn\'t exist before.',
           },
         ],
       },
@@ -1663,7 +1663,7 @@ const resources: ResourcePage[] = [
       { type: 'paragraph', text: 'Watch your kids. Are they curious? Growing? Happy most of the time? Then you\'re doing enough. You\'re doing more than enough.' },
       { type: 'heading', level: 2, text: 'Phase 5: Handling the Critics' },
       { type: 'paragraph', text: 'The [socialization question](/blog/socialization-answer) will follow you forever. So will the concerned grandparents, the skeptical neighbours, and the well-meaning friends who "just want the best for your kids." Here\'s the liberating truth: you don\'t owe anyone an explanation. A warm, confident "we\'re really happy with how it\'s going" is a complete sentence.' },
-      { type: 'paragraph', text: 'The research is on your side. Homeschooled children consistently demonstrate strong social skills, civic engagement, and academic outcomes. You don\'t need to memorise studies, but knowing they exist helps when the doubt creeps in.' },
+      { type: 'paragraph', text: 'The research is on your side. Reviews from the [National Home Education Research Institute (NHERI)](https://www.nheri.org/research-facts-on-homeschooling/) and Richard Medlin\'s [2013 literature review on homeschooler socialization](https://www.stetson.edu/artsci/psychology/media/medlin-socialization-2013.pdf) consistently find that homeschooled children demonstrate strong social skills, civic engagement, and academic outcomes. You don\'t need to memorise studies, but knowing they exist helps when the doubt creeps in.' },
       { type: 'heading', level: 2, text: 'Phase 6: Finding Your Rhythm' },
       { type: 'paragraph', text: 'And then, somewhere around year two, something shifts. You stop comparing yourself to school. You stop justifying your choices to relatives. You stop buying curriculum you\'ll never use. You start trusting yourself. Your child starts trusting themselves. And the whole thing just... works.' },
       { type: 'paragraph', text: 'This doesn\'t mean every day is easy. You\'ll still have hard weeks, cabin fever in February, and moments where you fantasise about dropping everyone at school and going to a coffee shop alone. But underneath the daily chaos, there\'s a deep confidence that this is right for your family. That confidence is earned, through every hard phase you survived to get here.' },
