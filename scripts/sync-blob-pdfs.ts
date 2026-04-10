@@ -10,11 +10,13 @@
  *   npx tsx scripts/sync-blob-pdfs.ts --run      # perform uploads + DB writes
  *   npx tsx scripts/sync-blob-pdfs.ts --run --only=activities
  *   npx tsx scripts/sync-blob-pdfs.ts --run --only=previews
+ *   npx tsx scripts/sync-blob-pdfs.ts --prune    # also report orphan PDFs
+ *   npx tsx scripts/sync-blob-pdfs.ts --run --prune  # and delete them
  *
  * Requires BLOB_READ_WRITE_TOKEN and DATABASE_URL in .env.local
  */
 
-import { put, list } from '@vercel/blob';
+import { put, list, del } from '@vercel/blob';
 import { db } from '../lib/db/index.js';
 import { products } from '../lib/db/schema.js';
 import { eq } from 'drizzle-orm';
@@ -145,6 +147,7 @@ for (const p of fallbackProducts) {
 // ─────────────────────────────────────────────────────────────
 const args = new Set(process.argv.slice(2));
 const dryRun = !args.has('--run');
+const doPrune = args.has('--prune');
 const only = Array.from(args).find((a) => a.startsWith('--only='))?.split('=')[1] ?? 'all';
 const doActivities = only === 'all' || only === 'activities';
 const doPreviews   = only === 'all' || only === 'previews';
@@ -310,6 +313,33 @@ async function main() {
   console.log(`  SKIP:           ${counts.SKIP}`);
   console.log(`  MISS:           ${counts.MISS}`);
 
+  // 5. Orphan detection (if --prune was passed)
+  // An orphan is any PDF on Blob that no product row references. Non-PDF files
+  // (images, lead magnet, etc) are not considered by this pass — it only
+  // targets PDFs produced by this sync pipeline.
+  const orphans: Array<{ pathname: string; url: string; size: number }> = [];
+  if (doPrune) {
+    const referenced = new Set<string>();
+    for (const r of dbRows) {
+      if (r.blobUrl?.startsWith('https://')) referenced.add(r.blobUrl);
+      if (r.previewBlobUrl?.startsWith('https://')) referenced.add(r.previewBlobUrl);
+    }
+    for (const [pathname, info] of blobIndex.entries()) {
+      if (!pathname.toLowerCase().endsWith('.pdf')) continue;
+      if (!referenced.has(info.url)) {
+        orphans.push({ pathname, url: info.url, size: info.size });
+      }
+    }
+    orphans.sort((a, b) => b.size - a.size);
+
+    const orphanBytes = orphans.reduce((s, o) => s + o.size, 0);
+    console.log(`\n── ORPHANS (PDFs on Blob not referenced by any product) ──`);
+    console.log(`  count: ${orphans.length}   size: ${fmtMB(orphanBytes)}`);
+    for (const o of orphans) {
+      console.log(`  ${fmtMB(o.size).padStart(8)}  ${o.pathname}`);
+    }
+  }
+
   if (dryRun) {
     console.log(`\nDry run — nothing changed. Re-run with --run to apply.`);
     process.exit(0);
@@ -358,10 +388,32 @@ async function main() {
     }
   }
 
+  // 6. Prune orphans (if --prune was passed)
+  let pruned = 0;
+  let pruneFailed = 0;
+  if (doPrune && orphans.length > 0) {
+    console.log(`\n=== Pruning ${orphans.length} orphan PDFs ===`);
+    for (const o of orphans) {
+      try {
+        process.stdout.write(`  DEL  ${fmtMB(o.size).padStart(8)}  ${o.pathname}... `);
+        await del(o.url);
+        console.log(`✓`);
+        pruned++;
+      } catch (err) {
+        console.log(`✗ ${err instanceof Error ? err.message : err}`);
+        pruneFailed++;
+      }
+    }
+  }
+
   console.log(`\n=== Done ===`);
   console.log(`  Applied: ${done}`);
   console.log(`  Failed:  ${failed}`);
-  process.exit(failed > 0 ? 1 : 0);
+  if (doPrune) {
+    console.log(`  Pruned:  ${pruned}`);
+    console.log(`  Prune failed: ${pruneFailed}`);
+  }
+  process.exit(failed + pruneFailed > 0 ? 1 : 0);
 }
 
 main().catch((e) => {
