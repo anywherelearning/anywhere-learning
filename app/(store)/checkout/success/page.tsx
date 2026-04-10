@@ -5,15 +5,19 @@ import { redirect } from 'next/navigation';
 import { stripe } from '@/lib/stripe';
 import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
-import { products } from '@/lib/db/schema';
-import { inArray, eq, and } from 'drizzle-orm';
+import { products, orders, users } from '@/lib/db/schema';
+import { inArray, eq, and, ne, sql } from 'drizzle-orm';
 import { getUserByClerkId } from '@/lib/db/queries';
 import { getReferralByEmail } from '@/lib/referral';
 import { formatPrice } from '@/lib/utils';
-import { BUNDLE_CONTENTS } from '@/lib/cart';
+import { BUNDLE_CONTENTS, FREE_BONUS_SLUG } from '@/lib/cart';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
+
+// Force dynamic rendering — the Skills Map bonus check reads the buyer's
+// order history, which must never be cached across users or visits.
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: "You're All Set!",
@@ -139,6 +143,55 @@ async function getSessionProducts(sessionId: string, token?: string) {
       }
     }
 
+    // If the buyer already owned the Skills Map BEFORE this session
+    // (from a prior bundle or an individual purchase), suppress the
+    // "bonus" banner so we don't re-announce something they already have.
+    //
+    // We JOIN orders → users and match the email case-insensitively to
+    // catch two real edge cases:
+    //   1. Duplicate user rows: a guest checkout creates a `pending_…`
+    //      users row, then a later Clerk signup may create a second row
+    //      with the same email. A prior Skills Map order might be on
+    //      either row, so we can't pre-select a single user id.
+    //   2. Email case drift: Stripe lowercases `customer_details.email`
+    //      but the users table can contain mixed case from Clerk.
+    //
+    // We exclude the current stripeSessionId so a fresh webhook-granted
+    // bonus from THIS purchase still counts as "new".
+    let alreadyOwnsBonus = false;
+    if (hasBundles && buyerEmail) {
+      try {
+        const bonusProduct = await db
+          .select({ id: products.id })
+          .from(products)
+          .where(eq(products.slug, FREE_BONUS_SLUG))
+          .limit(1);
+
+        if (bonusProduct.length > 0) {
+          const priorOrders = await db
+            .select({ id: orders.id })
+            .from(orders)
+            .innerJoin(users, eq(orders.userId, users.id))
+            .where(
+              and(
+                sql`lower(${users.email}) = lower(${buyerEmail})`,
+                eq(orders.productId, bonusProduct[0].id),
+                ne(orders.stripeSessionId, sessionId),
+                inArray(orders.status, ['completed', 'partially_refunded']),
+              ),
+            )
+            .limit(1);
+          alreadyOwnsBonus = priorOrders.length > 0;
+        }
+      } catch (err) {
+        // Non-critical — log and fall back to showing the banner on error.
+        console.error('Skills Map prior-ownership check failed:', err);
+      }
+    }
+
+    // Only mention the bonus on the confirmation if it's actually new to them.
+    const showBonusBanner = hasBundles && !alreadyOwnsBonus;
+
     // Amount the customer actually paid (includes discounts, taxes, BYOB pricing).
     const amountTotalCents = session.amount_total ?? 0;
     const currency = (session.currency ?? 'usd').toUpperCase();
@@ -147,7 +200,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
     return {
       products: purchasedProducts,
       bundleUpgrades: bundleUpgrades.slice(0, 2),
-      hasBundles,
+      showBonusBanner,
       referralCode,
       orderId: sessionId,
       amountTotalCents,
@@ -170,7 +223,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
 
   const purchasedProducts = data.products;
   const bundleUpgrades = data.bundleUpgrades;
-  const hasBundles = data.hasBundles;
+  const showBonusBanner = data.showBonusBanner;
   const referralCode = data.referralCode;
 
   // Pinterest Tag conversion event payload
@@ -342,7 +395,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         )}
 
         {/* ── Skills Map Bonus ── */}
-        {hasBundles && (
+        {showBonusBanner && (
           <section className="mt-10">
             <div className="bg-gold/10 border border-gold/20 rounded-2xl p-5 sm:p-6 flex items-center gap-4 animate-fade-in-up">
               <div className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
