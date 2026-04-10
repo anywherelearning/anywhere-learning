@@ -214,7 +214,7 @@ export default function ProductCard({
             </div>
             <div className="flex items-center gap-2">
               <span className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full group-hover:bg-forest group-hover:text-cream transition-all duration-300">
-                View pack &rarr;
+                View guide &rarr;
               </span>
               {stripePriceId && (
                 <QuickAddButton

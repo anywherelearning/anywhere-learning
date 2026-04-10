@@ -104,7 +104,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
             marginBottom: '8px',
           }}
         >
-          No packs yet
+          No guides yet
         </h2>
         <p
           style={{
@@ -157,7 +157,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
           Your Library
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '13px' }}>
-          {products.length} activity pack{products.length === 1 ? '' : 's'}
+          {products.length} activity guide{products.length === 1 ? '' : 's'}
         </p>
       </div>
 
@@ -305,7 +305,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
 
       {filtered.length === 0 && (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>
-          <p style={{ color: '#9ca3af', fontSize: '14px' }}>No packs in this category.</p>
+          <p style={{ color: '#9ca3af', fontSize: '14px' }}>No guides in this category.</p>
         </div>
       )}
     </div>

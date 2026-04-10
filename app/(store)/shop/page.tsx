@@ -27,7 +27,7 @@ export const revalidate = 3600; // ISR: revalidate hourly
 
 const categoryMeta: Record<string, { title: string; description: string }> = {
   "ai-literacy": {
-    title: "AI & Digital Literacy Packs",
+    title: "AI & Digital Literacy Guides",
     description:
       "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9-14.",
   },
@@ -37,7 +37,7 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
       "Open-ended projects that build design thinking and creative confidence. Ages 6-14.",
   },
   "communication-writing": {
-    title: "Communication & Writing Packs",
+    title: "Communication & Writing Guides",
     description:
       "Real-world writing and communication skills for kids who have something to say. Ages 9-14.",
   },
@@ -47,22 +47,22 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
       "Turn your backyard, park, or trail into a hands-on learning space. Ages 6-14.",
   },
   "real-world-math": {
-    title: "Real-World Math Packs",
+    title: "Real-World Math Guides",
     description:
       "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6-14.",
   },
   "entrepreneurship": {
     title: "Entrepreneurship Activity Guides",
     description:
-      "Plan, launch, and run real projects - from lemonade stands to micro-businesses. Ages 9-14.",
+      "Plan, launch, and pitch real businesses - from brand building to Shark Tank pitches. Ages 9-14.",
   },
   "planning-problem-solving": {
-    title: "Planning & Problem-Solving Packs",
+    title: "Planning & Problem-Solving Guides",
     description:
       "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9-14.",
   },
   "start-here": {
-    title: "Start Here Packs",
+    title: "Start Here Guides",
     description:
       "The foundation for your learning journey - start with the big picture.",
   },
@@ -399,7 +399,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       )}
 
       {/* ════════════════════════════════════════
-          SKILLS MAP BANNER (All Packs view only)
+          SKILLS MAP BANNER (All Guides view only)
       ════════════════════════════════════════ */}
       {!isCategoryView && <SkillsMapBanner />}
 
@@ -446,7 +446,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         )}
 
         {/* ════════════════════════════════════════
-            ALL PACKS VIEW - curated sections
+            ALL GUIDES VIEW - curated sections
         ════════════════════════════════════════ */}
         {isAllView && (
           <>
@@ -514,7 +514,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
           <>
             <div className="mb-6">
               <p className="text-sm text-gray-500">
-                {totalItems} packs &middot; sorted by{' '}
+                {totalItems} guides &middot; sorted by{' '}
                 <span className="font-medium text-gray-700">
                   {sort === 'price-asc' ? 'price (low to high)' :
                    sort === 'price-desc' ? 'price (high to low)' :

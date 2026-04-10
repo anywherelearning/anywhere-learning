@@ -315,7 +315,7 @@ export default function AboutPage() {
             Whatever your style, these fit right in.
           </h2>
           <p className="text-cream/70 text-lg mb-8 max-w-xl mx-auto">
-            I designed every pack to complement your philosophy, not replace it.
+            I designed every guide to complement your philosophy, not replace it.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {approaches.map((style) => (

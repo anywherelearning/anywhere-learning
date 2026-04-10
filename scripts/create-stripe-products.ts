@@ -11,17 +11,17 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Tiers: Singles $5.99 · Nature/outdoor cards $7.99 · Seasonal $14.99 · Guide $9.99
 const catalog = [
   // ─── Bundles ───
-  { slug: 'seasonal-bundle', name: 'Full Seasonal Bundle (All 4 Seasons)', priceCents: 4499, description: 'All 4 seasonal packs:80 outdoor activities for every time of year.' },
-  { slug: 'creativity-mega-bundle', name: 'Creativity Mega Bundle', priceCents: 4499, description: 'All 10 creativity packs:game design, filmmaking, invention, and more.' },
-  { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 4499, description: 'All 10 real-world skills packs:budgeting, cooking, business, and more.' },
-  { slug: 'ai-digital-bundle', name: 'AI & Digital Literacy Bundle', priceCents: 4499, description: 'All 10 AI & digital literacy packs.' },
+  { slug: 'seasonal-bundle', name: 'Full Seasonal Bundle (All 4 Seasons)', priceCents: 4499, description: 'All 4 seasonal guides:80 outdoor activities for every time of year.' },
+  { slug: 'creativity-mega-bundle', name: 'Creativity Mega Bundle', priceCents: 4499, description: 'All 10 creativity guides:game design, filmmaking, invention, and more.' },
+  { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 4499, description: 'All 10 real-world skills guides:budgeting, cooking, business, and more.' },
+  { slug: 'ai-digital-bundle', name: 'AI & Digital Literacy Bundle', priceCents: 4499, description: 'All 10 AI & digital literacy guides.' },
   { slug: 'real-world-math-bundle', name: 'Real-World Math Mega Bundle', priceCents: 4499, description: 'All 10 Real-World Math guides:campout planning, garage sales, garden plots, road trips, and more.' },
   { slug: 'communication-writing-bundle', name: 'Communication & Writing Mega Bundle', priceCents: 4499, description: 'All 12 Communication & Writing guides in one download.' },
   { slug: 'entrepreneurship-bundle', name: 'Entrepreneurship Mega Bundle', priceCents: 4499, description: 'All 11 Entrepreneurship guides in one download.' },
   { slug: 'planning-problem-solving-bundle', name: 'Planning & Problem-Solving Mega Bundle', priceCents: 4499, description: 'All 13 Planning & Problem-Solving guides in one download.' },
   { slug: 'nature-art-bundle', name: 'Nature Art Bundle', priceCents: 1799, description: 'Land Art + Nature Crafts + Nature Journal.' },
   { slug: 'outdoor-toolkit-bundle', name: 'Outdoor Toolkit Bundle', priceCents: 2399, description: 'Walk Cards + Missions + STEM + Choice Boards.' },
-  { slug: 'outdoor-mega-bundle', name: 'Outdoor & Nature Mega Bundle', priceCents: 4199, description: 'All 7 outdoor & nature packs:walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.' },
+  { slug: 'outdoor-mega-bundle', name: 'Outdoor & Nature Mega Bundle', priceCents: 4199, description: 'All 7 outdoor & nature guides:walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.' },
   // ─── Seasonal ($12.99) ───
   { slug: 'spring-outdoor-pack', name: 'Spring Outdoor Learning Pack', priceCents: 1499, description: '20 outdoor activities that use spring\'s energy to build real-world skills.' },
   { slug: 'summer-outdoor-pack', name: 'Summer Outdoor Learning Pack', priceCents: 1499, description: '20 summer activities for families who learn on the move.' },
@@ -81,8 +81,6 @@ const catalog = [
   { slug: 'sports-stats-lab', name: 'Sports Stats Lab', priceCents: 599, description: 'Analyse real sports stats: averages, percentages, and data visualisation.' },
   // ─── Life Skills ───
   { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A complete roadmap of real-world skills every kid needs.' },
-  { slug: 'my-small-business-project', name: 'My Small Business Project', priceCents: 599, description: 'Full small business project from idea to launch.' },
-  { slug: 'time-capsule', name: 'Time Capsule', priceCents: 599, description: 'Create a meaningful time capsule project.' },
   // ─── Communication & Writing singles ($4.99) ───
   { slug: 'adventure-story-map', name: 'Adventure Story Map', priceCents: 599, description: 'Create a visual story map and write your own adventure narrative.' },
   { slug: 'community-tour-guide', name: 'Community Tour Guide', priceCents: 599, description: 'Research and create a guided tour of your community.' },

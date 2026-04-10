@@ -39,7 +39,7 @@ export const CATEGORIES: CategoryDef[] = [
     value: 'entrepreneurship',
     label: 'Entrepreneurship',
     description:
-      'Plan, launch, and run real projects, from lemonade stands to micro-businesses.',
+      'Plan, launch, and pitch real businesses, from brand building to Shark Tank pitches.',
   },
   {
     value: 'outdoor-learning',

@@ -190,7 +190,7 @@ export default function CartDrawer() {
         return;
       }
 
-      // Atomically remove individual packs and add the bundle (single dispatch)
+      // Atomically remove individual guides and add the bundle (single dispatch)
       swapBundle(suggestion.matchingSlugs, {
         slug: product.slug,
         name: product.name,
@@ -290,7 +290,7 @@ export default function CartDrawer() {
                 onClick={closeCart}
                 className="text-forest font-semibold text-sm hover:underline"
               >
-                Browse Packs
+                Browse Guides
               </Link>
             </div>
           ) : (
@@ -414,7 +414,7 @@ export default function CartDrawer() {
                   </span>
                 ) : (
                   <span>
-                    Get all {upsell.totalChildCount} packs with the{' '}
+                    Get all {upsell.totalChildCount} guides with the{' '}
                     <span className="font-semibold">{upsell.bundle.name}</span> for{' '}
                     <span className="font-semibold">{formatPrice(upsell.additionalCostCents)} more</span>
                   </span>
@@ -467,7 +467,7 @@ export default function CartDrawer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
                 </svg>
                 <span>
-                  Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+                  Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'guide' : 'guides'} for{' '}
                   <span className="font-semibold">{nextByobTier.tier.discountPercent}% off</span>
                 </span>
               </div>
@@ -491,7 +491,7 @@ export default function CartDrawer() {
                         <span className="bg-forest/10 text-forest text-xs font-semibold px-2 py-0.5 rounded-full">
                           {byobTier.discountPercent}% off
                         </span>
-                        Multi-pack discount
+                        Multi-guide discount
                       </span>
                       <span className="text-sm text-forest font-medium">-{formatPrice(byobDiscountCents)}</span>
                     </div>

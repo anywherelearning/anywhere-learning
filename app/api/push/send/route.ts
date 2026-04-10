@@ -10,7 +10,7 @@ import { deviceTokens } from '@/lib/db/schema';
  *   curl -X POST https://anywherelearning.co/api/push/send \
  *     -H "Authorization: Bearer YOUR_PUSH_API_KEY" \
  *     -H "Content-Type: application/json" \
- *     -d '{"title": "New Activity Pack!", "body": "Check out our latest...", "url": "/shop"}'
+ *     -d '{"title": "New Activity Guide!", "body": "Check out our latest...", "url": "/shop"}'
  *
  * For v1, this is a placeholder that returns the list of tokens.
  * Actual push delivery will be added when Firebase/APNS is configured.

@@ -93,7 +93,7 @@ export default function NativeShopView({ products }: NativeShopViewProps) {
           Anywhere Learning
         </h1>
         <p style={{ color: '#9ca3af', fontSize: '12px' }}>
-          Activity packs for curious families
+          Activity guides for curious families
         </p>
       </div>
 
@@ -203,7 +203,7 @@ export default function NativeShopView({ products }: NativeShopViewProps) {
       {filtered.length === 0 && (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>
           <p style={{ color: '#9ca3af', fontSize: '14px', marginBottom: '8px' }}>
-            {search ? 'No packs match your search.' : 'No packs in this category.'}
+            {search ? 'No guides match your search.' : 'No guides in this category.'}
           </p>
           {search && (
             <button

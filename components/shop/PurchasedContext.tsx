@@ -8,7 +8,7 @@ const PurchasedContext = createContext<Set<string>>(new Set());
 /**
  * Expand purchased slugs to include bundles whose children are all owned.
  * e.g. if you bought nature-art-bundle + outdoor-toolkit-bundle, you effectively
- * own outdoor-mega-bundle since all 7 packs are covered.
+ * own outdoor-mega-bundle since all 7 guides are covered.
  */
 function expandPurchasedBundles(owned: Set<string>): Set<string> {
   // Collect all individual product slugs the user owns (direct + via bundles)

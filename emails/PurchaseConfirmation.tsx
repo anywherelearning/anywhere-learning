@@ -156,7 +156,7 @@ export default function PurchaseConfirmation({
 
             <Section style={buttonContainer}>
               <Link href={downloadUrl} style={button}>
-                Download Your Pack
+                Download Your Guide
               </Link>
             </Section>
 

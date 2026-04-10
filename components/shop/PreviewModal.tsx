@@ -143,7 +143,7 @@ export default function PreviewModal({
             onClick={onGetPack}
             className="bg-forest text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-forest-dark transition-colors shadow-sm ml-auto"
           >
-            Get This Pack
+            Get This Guide
           </button>
         </div>
       )}

@@ -17,7 +17,7 @@ import {
 import { CATEGORY_ACTIVE_COLORS as categoryActiveColors } from '@/lib/categories';
 
 const categories = [
-  { value: '', label: 'All Packs', Icon: SparklesIcon },
+  { value: '', label: 'All Guides', Icon: SparklesIcon },
   { value: 'start-here', label: 'Start Here', Icon: StarIcon },
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
   { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },

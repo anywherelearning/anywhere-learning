@@ -14,7 +14,7 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
   const price = (product.priceCents / 100).toFixed(2);
   // Short CTA label - split on punctuation, then truncate to keep button compact
   const parts = product.name.split(/[:\u2014\u2013\u2013\u2014–&]/);
-  const shortName = parts[0].trim().length <= 25 ? parts[0].trim() : 'This Pack';
+  const shortName = parts[0].trim().length <= 25 ? parts[0].trim() : 'This Guide';
 
   return (
     <div className="my-12 md:my-16 rounded-2xl bg-white border border-gray-100/80 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)] overflow-hidden">

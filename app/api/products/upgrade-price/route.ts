@@ -100,7 +100,7 @@ export async function GET(req: NextRequest) {
     const ownedChildIds = new Set(ownedOrders.map((o) => o.productId));
     const ownedCount = ownedChildIds.size;
 
-    // If user already owns all packs in the bundle, no upgrade needed
+    // If user already owns all guides in the bundle, no upgrade needed
     if (ownedCount >= childSlugs.length) {
       return NextResponse.json({ upgradePrice: null, alreadyOwnsAll: true });
     }

@@ -25,8 +25,8 @@ async function seed() {
     {
       name: 'Full Seasonal Bundle (All 4 Seasons)',
       slug: 'seasonal-bundle',
-      description: 'All four seasonal outdoor learning packs in one bundle. 80 activities for every time of year.',
-      shortDescription: 'All 4 seasonal packs \u2014 80 outdoor activities for every time of year.',
+      description: 'All four seasonal outdoor learning guides in one bundle. 80 activities for every time of year.',
+      shortDescription: 'All 4 seasonal guides \u2014 80 outdoor activities for every time of year.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TFcTNAMzOBftCntknn9ugHW',
@@ -43,8 +43,8 @@ async function seed() {
     {
       name: 'Creativity Mega Bundle',
       slug: 'creativity-mega-bundle',
-      description: 'All 10 creativity packs \u2014 game design, filmmaking, invention, sculpture, and more.',
-      shortDescription: 'All 10 creativity packs in one download.',
+      description: 'All 10 creativity guides \u2014 game design, filmmaking, invention, sculpture, and more.',
+      shortDescription: 'All 10 creativity guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TFcTNAMzOBftCntDc8CoKsa',
@@ -61,8 +61,8 @@ async function seed() {
     {
       name: 'Real-World Skills Mega Bundle',
       slug: 'real-world-mega-bundle',
-      description: 'All 10 real-world skills packs \u2014 budgeting, cooking, business, media literacy, and more.',
-      shortDescription: 'All 10 real-world skills packs in one download.',
+      description: 'All 10 real-world skills guides \u2014 budgeting, cooking, business, media literacy, and more.',
+      shortDescription: 'All 10 real-world skills guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TFcTNAMzOBftCntZTSpWFfb',
@@ -79,8 +79,8 @@ async function seed() {
     {
       name: 'AI & Digital Literacy Bundle',
       slug: 'ai-digital-bundle',
-      description: 'All 10 AI & digital literacy packs \u2014 algorithms, deepfakes, privacy, prompt skills, and more.',
-      shortDescription: 'All 10 AI & digital literacy packs in one download.',
+      description: 'All 10 AI & digital literacy guides \u2014 algorithms, deepfakes, privacy, prompt skills, and more.',
+      shortDescription: 'All 10 AI & digital literacy guides in one download.',
       priceCents: 4499,
       compareAtPriceCents: 5999,
       stripePriceId: 'price_1TFcTOAMzOBftCntHzTASW76',
@@ -115,7 +115,7 @@ async function seed() {
     {
       name: 'Nature Art Bundle',
       slug: 'nature-art-bundle',
-      description: 'Land Art + Nature Crafts + Nature Journal \u2014 three packs for families who love creating with nature.',
+      description: 'Land Art + Nature Crafts + Nature Journal \u2014 three guides for families who love creating with nature.',
       shortDescription: 'Land Art + Nature Crafts + Nature Journal in one download.',
       priceCents: 1799,
       compareAtPriceCents: 2397,
@@ -152,8 +152,8 @@ async function seed() {
     {
       name: 'Outdoor & Nature Mega Bundle',
       slug: 'outdoor-mega-bundle',
-      description: 'All 7 outdoor & nature packs: walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.',
-      shortDescription: 'All 7 outdoor & nature packs in one download.',
+      description: 'All 7 outdoor & nature guides: walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.',
+      shortDescription: 'All 7 outdoor & nature guides in one download.',
       priceCents: 4199,
       compareAtPriceCents: 5593,
       stripePriceId: 'price_1TIVzrAMzOBftCntORiPbt2P',
@@ -325,10 +325,8 @@ async function seed() {
     { name: 'The What-If Scenario Lab', slug: 'what-if-scenario-lab', description: 'Explore hypothetical scenarios, predict outcomes, and plan responses.', shortDescription: 'Explore what-if scenarios.', priceCents: 599, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', imageUrl: '/products/what-if-scenario-lab.jpg', category: 'planning-problem-solving', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 8–14', sortOrder: 138, active: true },
     { name: 'What Would You Do? Decision Lab', slug: 'decision-lab', description: 'Work through real decision scenarios, weigh options, and justify choices.', shortDescription: 'Practise real-world decision-making.', priceCents: 599, compareAtPriceCents: null, stripePriceId: '', blobUrl: '', imageUrl: '/products/decision-lab.jpg', category: 'planning-problem-solving', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 139, active: true },
 
-    // === START HERE & DEACTIVATED (sortOrder 90-92) ===
+    // === START HERE (sortOrder 90) ===
     { name: 'The Future-Ready Skills Map', slug: 'future-ready-skills-map', description: 'A complete roadmap of real-world skills every kid needs.', shortDescription: 'Future-ready skills roadmap.', priceCents: 999, compareAtPriceCents: null, stripePriceId: 'price_1T9JSZAMzOBftCntfh73EgWC', blobUrl: '', imageUrl: '/products/future-ready-skills-map.jpg', category: 'start-here', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 90, active: true },
-    { name: 'My Small Business Project', slug: 'my-small-business-project', description: 'Full small business project from idea to launch.', shortDescription: 'Small business project.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTpAMzOBftCntQyH6fU3Q', blobUrl: '', imageUrl: '/products/my-small-business-project.jpg', category: 'entrepreneurship', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 9\u201314', sortOrder: 91, active: false },
-    { name: 'Time Capsule', slug: 'time-capsule', description: 'Create a meaningful time capsule project.', shortDescription: 'Time capsule project.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TFcTpAMzOBftCntpY0VMvLm', blobUrl: '', imageUrl: '/products/time-capsule.jpg', category: 'creativity-anywhere', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 92, active: false },
   ];
 
   // Upsert all products (update existing, insert new)

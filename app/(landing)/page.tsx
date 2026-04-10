@@ -38,7 +38,7 @@ const featuredProducts = [
     name: 'Full Seasonal Bundle',
     slug: 'seasonal-bundle',
     shortDescription:
-      'All 4 seasonal packs, 80 outdoor activities for every time of year.',
+      'All 4 seasonal guides, 80 outdoor activities for every time of year.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/four-seasons-bundle.jpg',
@@ -142,7 +142,7 @@ const featuredProducts = [
     name: 'Outdoor & Nature Mega Bundle',
     slug: 'outdoor-mega-bundle',
     shortDescription:
-      'All 7 outdoor & nature packs, task cards, missions, STEM challenges, land art, and more.',
+      'All 7 outdoor & nature guides, task cards, missions, STEM challenges, land art, and more.',
     priceCents: 4199,
     compareAtPriceCents: 5593,
     imageUrl: '/products/mega-bundle-outdoor.jpg',

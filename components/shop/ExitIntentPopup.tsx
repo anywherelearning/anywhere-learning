@@ -231,7 +231,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
 
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           The Future-Ready Skills Map covers the 10 skills that matter most for your
-          child&rsquo;s future. It&rsquo;s the foundation for every activity pack we make.
+          child&rsquo;s future. It&rsquo;s the foundation for every activity guide we make.
         </p>
 
         <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-4">
@@ -349,7 +349,7 @@ function CartRecoveryContent({
       {nextByobTier && nextByobTier.itemsNeeded <= 3 && (
         <div className="bg-gold/10 border border-gold/20 rounded-xl px-4 py-2.5 mb-5 text-center">
           <p className="text-[13px] text-forest-dark font-medium">
-            Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'pack' : 'packs'} for{' '}
+            Add {nextByobTier.itemsNeeded} more {nextByobTier.itemsNeeded === 1 ? 'guide' : 'guides'} for{' '}
             <span className="font-bold">{nextByobTier.tier.discountPercent}% off</span>
           </p>
         </div>
@@ -424,13 +424,13 @@ function BundleUpgradeContent({
 
         {/* Headline */}
         <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-2">
-          You&rsquo;re {upsell.matchingSlugs.length} of {upsell.totalChildCount} packs in
+          You&rsquo;re {upsell.matchingSlugs.length} of {upsell.totalChildCount} guides in
         </h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-5">
           Get the <span className="font-semibold text-forest-dark">{upsell.bundle.name}</span>{' '}
           {saves
             ? `and save ${formatPrice(upsell.savingsCents)} vs buying individually.`
-            : `\u2014 all ${upsell.totalChildCount} packs for just ${formatPrice(upsell.bundle.priceCents)}.`}
+            : `\u2014 all ${upsell.totalChildCount} guides for just ${formatPrice(upsell.bundle.priceCents)}.`}
           {' '}Plus a free Future-Ready Skills Map.
         </p>
 

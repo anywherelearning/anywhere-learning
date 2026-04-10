@@ -25,7 +25,7 @@ export interface FallbackProduct {
   createdAt: Date;
 }
 
-// ─── Price tiers: Tier 1 $4.99 (singles) · Tier 2 $6.99 (nature card packs) · Tier 3 $12.99 (seasonal packs) · Tier 4 $9.99 (comprehensive guides) ───
+// ─── Price tiers: Tier 1 $4.99 (singles) · Tier 2 $6.99 (nature card guides) · Tier 3 $12.99 (seasonal guides) · Tier 4 $9.99 (comprehensive guides) ───
 // Bundle compareAt = sum of individual prices at current tiers
 
 export const fallbackProducts: FallbackProduct[] = [
@@ -37,15 +37,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Full Seasonal Bundle",
     slug: "seasonal-bundle",
     description:
-      "All four seasonal packs in one download: spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to use whenever the season changes.",
+      "All four seasonal guides in one download: spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to use whenever the season changes.",
     shortDescription:
-      "All 4 seasonal packs, 80 outdoor activities for every time of year.",
+      "All 4 seasonal guides, 80 outdoor activities for every time of year.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TFcTNAMzOBftCntknn9ugHW",
     blobUrl: "",
     imageUrl: "/products/four-seasons-bundle.jpg",
-    previewFile: "Preview 4 seasons bundle.pdf",
+    previewFile: null,
     category: "bundle",
     isBundle: true,
     bundleProductIds: null,
@@ -152,7 +152,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Art Bundle",
     slug: "nature-art-bundle",
     description:
-      "Three of our most popular nature packs together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching wildlife, and creating nature mandalas. Everything your family needs to turn the outdoors into an art studio.",
+      "Three of our most popular nature guides together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching wildlife, and creating nature mandalas. Everything your family needs to turn the outdoors into an art studio.",
     shortDescription:
       "Land Art + Nature Crafts + Nature Journal. Turn the outdoors into an art studio.",
     priceCents: 1799,
@@ -175,7 +175,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Outdoor Learning Toolkit Bundle",
     slug: "outdoor-toolkit-bundle",
     description:
-      "Four essential outdoor learning packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Low prep, maximum outdoor time.",
+      "Four essential outdoor learning guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Low prep, maximum outdoor time.",
     shortDescription:
       "Nature Walk Cards + Missions + STEM Challenges + Choice Boards, your complete outdoor toolkit.",
     priceCents: 2399,
@@ -183,7 +183,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TFcTPAMzOBftCntA7iWyJ5t",
     blobUrl: "",
     imageUrl: "/products/outdoor-toolkit-bundle.jpg",
-    previewFile: "Preview Toolkit bundle.pdf",
+    previewFile: null,
     category: "bundle",
     isBundle: true,
     bundleProductIds: null,
@@ -201,7 +201,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and My Nature Journal. The complete outdoor toolkit for families who learn outside.",
     shortDescription:
-      "All 7 outdoor & nature packs in one download.",
+      "All 7 outdoor & nature guides in one download.",
     priceCents: 4199,
     compareAtPriceCents: 5593,
     stripePriceId: "price_1TIVzrAMzOBftCntORiPbt2P",
@@ -219,7 +219,7 @@ export const fallbackProducts: FallbackProduct[] = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // NATURE - Seasonal packs (merged into Nature)
+  // NATURE - Seasonal guides (merged into Nature)
   // ─────────────────────────────────────────────────────────────
   {
     id: "fb-spring-outdoor",
@@ -1441,53 +1441,6 @@ export const fallbackProducts: FallbackProduct[] = [
     active: true,
     createdAt: new Date("2025-02-01"),
   },
-  {
-    id: "fb-small-business",
-    name: "My Small Business Project",
-    slug: "my-small-business-project",
-    description:
-      "A complete project guide for kids to plan and run their own small business. From brainstorming ideas and researching markets to creating products, setting prices, designing marketing, and tracking profits. Entrepreneurship, financial literacy, and creativity all in one hands-on project.",
-    shortDescription:
-      "Plan and run a real small business. Entrepreneurship, marketing, and financial literacy.",
-    priceCents: 599,
-    compareAtPriceCents: null,
-    stripePriceId: "price_1TFcTpAMzOBftCntQyH6fU3Q",
-    blobUrl: "",
-    imageUrl: "/products/my-small-business-project.jpg",
-    previewFile: "Preview My small business project.pdf",
-    category: "entrepreneurship",
-    isBundle: false,
-    bundleProductIds: null,
-    activityCount: null,
-    ageRange: "Ages 8–14",
-    sortOrder: 91,
-    active: false,
-    createdAt: new Date("2025-04-01"),
-  },
-  {
-    id: "fb-time-capsule",
-    name: "Time Capsule",
-    slug: "time-capsule",
-    description:
-      "A creative time capsule project that captures who your child is right now. Guided prompts for writing letters to their future self, collecting meaningful items, recording favourites, and reflecting on growth. A beautiful keepsake project that doubles as a writing and self-awareness activity.",
-    shortDescription:
-      "Capture who your child is right now with guided prompts for a meaningful time capsule.",
-    priceCents: 599,
-    compareAtPriceCents: null,
-    stripePriceId: "price_1TFcTpAMzOBftCntpY0VMvLm",
-    blobUrl: "",
-    imageUrl: "/products/time-capsule.jpg",
-    previewFile: "Preview Time Capsule.pdf",
-    category: "creativity-anywhere",
-    isBundle: false,
-    bundleProductIds: null,
-    activityCount: null,
-    ageRange: "Ages 6–14",
-    sortOrder: 92,
-    active: false,
-    createdAt: new Date("2025-02-01"),
-  },
-
   // ─────────────────────────────────────────────────────────────
   // COMMUNICATION & WRITING MEGA BUNDLE
   // ─────────────────────────────────────────────────────────────

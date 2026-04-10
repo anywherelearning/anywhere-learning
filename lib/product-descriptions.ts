@@ -14,7 +14,7 @@ export interface ProductDescription {
   /** Subject/skill tags displayed as pills */
   skillTags: string[];
   /** Product format label */
-  format: 'Activity Pack' | 'Activity Guide' | 'Project Guide' | 'Card Pack' | 'Parent Guide' | 'Bundle';
+  format: 'Activity Guide' | 'Project Guide' | 'Card Guide' | 'Parent Guide' | 'Bundle';
 }
 
 // ─── Shared template sections ────────────────────────────────────────
@@ -111,11 +111,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'seasonal-bundle': {
     opening:
-      'All four seasonal packs in one download: spring, summer, fall, and winter. 80 outdoor activities designed to match each season\'s unique energy and opportunities. Your family gets a full year of outdoor learning, ready whenever the season changes.',
+      'All four seasonal guides in one download: spring, summer, fall, and winter. 80 outdoor activities designed to match each season\'s unique energy and opportunities. Your family gets a full year of outdoor learning, ready whenever the season changes.',
     whatsIncluded: [
-      '4 complete seasonal packs (Spring, Summer, Fall, Winter)',
+      '4 complete seasonal guides (Spring, Summer, Fall, Winter)',
       '80 outdoor activities total, 20 per season',
-      'Language Arts, Maths, Science, and Physical Education in every pack',
+      'Language Arts, Maths, Science, and Physical Education in every guide',
       'Age adaptation notes for ages 6–14',
       '3 levels per activity: Explore / Develop / Extend',
     ],
@@ -163,9 +163,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-art-bundle': {
     opening:
-      'Three of our most popular nature packs together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching birds, and creating art from found materials. Nature meets creativity in every activity.',
+      'Three of our most popular nature guides together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching birds, and creating art from found materials. Nature meets creativity in every activity.',
     whatsIncluded: [
-      '3 complete nature + art packs',
+      '3 complete nature + art guides',
       'Land Art Challenge Cards: 15 outdoor art challenges',
       'Nature Crafts for Kids: hands-on projects with found materials',
       'My Nature Journal: guided journaling prompts for outdoor observation',
@@ -176,9 +176,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-toolkit-bundle': {
     opening:
-      'Four essential outdoor learning packs in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you\'re in the backyard, at the park, or on a trail, you\'ll have a rich activity ready to go.',
+      'Four essential outdoor learning guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you\'re in the backyard, at the park, or on a trail, you\'ll have a rich activity ready to go.',
     whatsIncluded: [
-      '4 complete outdoor learning packs',
+      '4 complete outdoor learning guides',
       'Nature Walk Task Cards: read-aloud exploration prompts',
       'Outdoor Learning Missions: structured outdoor challenges',
       'STEM Challenge Cards: 20 nature-based engineering challenges',
@@ -192,7 +192,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and the Nature Journal. Whether you\'re building sculptures from sticks, solving STEM challenges at the park, or journaling beside a stream, this bundle has you covered for every kind of outdoor learning.',
     whatsIncluded: [
-      '7 complete outdoor & nature packs',
+      '7 complete outdoor & nature guides',
       'Nature Walk Task Cards: read-aloud exploration prompts',
       'Outdoor Learning Missions: structured outdoor challenges',
       'STEM Challenge Cards: 20 nature-based engineering challenges',
@@ -219,7 +219,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): no-equipment outdoor movement games',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'summer-outdoor-pack': {
     opening:
@@ -232,7 +232,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): summer movement games and water challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Water Science', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'fall-outdoor-pack': {
     opening:
@@ -245,7 +245,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): fall movement games and nature challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'winter-outdoor-pack': {
     opening:
@@ -258,7 +258,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Physical Education (5): winter movement games and challenges',
     ],
     skillTags: ['Science', 'Maths', 'Writing', 'Astronomy', 'Nature', 'PE'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
   'nature-journal-walks': {
     opening:
@@ -284,7 +284,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Reusable across seasons, with different results every time',
     ],
     skillTags: ['Observation', 'Nature', 'Sensory Learning', 'Science'],
-    format: 'Card Pack',
+    format: 'Card Guide',
   },
   'nature-choice-boards': {
     opening:
@@ -297,7 +297,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Flexible: complete one activity or the whole board',
     ],
     skillTags: ['Self-Direction', 'Nature', 'Science', 'Art', 'Decision-Making'],
-    format: 'Card Pack',
+    format: 'Card Guide',
   },
   'outdoor-learning-missions': {
     opening:
@@ -310,7 +310,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Designed for solo or group missions',
     ],
     skillTags: ['Problem-Solving', 'Nature', 'Engineering', 'Observation', 'Science'],
-    format: 'Card Pack',
+    format: 'Card Guide',
   },
   'outdoor-stem-challenges': {
     opening:
@@ -323,7 +323,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Includes testing criteria and reflection prompts',
     ],
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
-    format: 'Card Pack',
+    format: 'Card Guide',
   },
   'land-art-challenges': {
     opening:
@@ -336,7 +336,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Temporary art: photograph and leave no trace',
     ],
     skillTags: ['Art', 'Nature', 'Patterns', 'Creativity', 'Observation'],
-    format: 'Card Pack',
+    format: 'Card Guide',
   },
   'nature-crafts': {
     opening:
@@ -349,7 +349,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Suitable for all seasons with seasonal variations',
     ],
     skillTags: ['Art', 'Nature', 'Crafts', 'Observation', 'Fine Motor Skills'],
-    format: 'Activity Pack',
+    format: 'Activity Guide',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -915,7 +915,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'future-ready-skills-map': {
     opening:
-      'A comprehensive parent guide to the 10 skills that matter most for your child\'s future, from emotional intelligence and critical thinking to AI literacy and life skills. This is not another activity pack; it\'s your roadmap for raising a capable, confident, future-ready human.',
+      'A comprehensive parent guide to the 10 skills that matter most for your child\'s future, from emotional intelligence and critical thinking to AI literacy and life skills. This is not another activity guide; it\'s your roadmap for raising a capable, confident, future-ready human.',
     whatsIncluded: [
       '42-page comprehensive parent guide',
       '10 essential future-ready skills explained',
@@ -926,33 +926,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Parenting', 'Life Skills', 'Critical Thinking', 'Emotional Intelligence'],
     format: 'Parent Guide',
   },
-  'my-small-business-project': {
-    opening:
-      'A complete project guide for kids to plan and run their own small business. From brainstorming ideas and researching markets to creating products, setting prices, designing marketing, and tracking profits. Real entrepreneurship, not a pretend exercise.',
-    whatsIncluded: [
-      'Complete small business project guide',
-      'Idea brainstorming and market research',
-      'Product/service development and pricing',
-      'Marketing strategy and materials design',
-      'Profit tracking and business reflection',
-    ],
-    skillTags: ['Entrepreneurship', 'Maths', 'Marketing', 'Planning', 'Creativity'],
-    format: 'Project Guide',
-  },
-  'time-capsule': {
-    opening:
-      'A creative time capsule project that captures who your child is right now. Guided prompts for writing letters to their future self, collecting meaningful items, recording favourites, and reflecting on growth. A beautiful keepsake and a meaningful exercise in self-awareness.',
-    whatsIncluded: [
-      'Complete time capsule project guide',
-      'Letter-to-future-self writing prompts',
-      'Favourite things recording and reflection',
-      'Meaningful item collection guidance',
-      'Sealing ceremony and future opening date planning',
-    ],
-    skillTags: ['Self-Reflection', 'Writing', 'Creativity', 'Memory', 'Growth Mindset'],
-    format: 'Project Guide',
-  },
-
   // ═══════════════════════════════════════════════════════════════════
   // COMMUNICATION & WRITING BUNDLE
   // ═══════════════════════════════════════════════════════════════════

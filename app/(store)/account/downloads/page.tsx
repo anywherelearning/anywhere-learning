@@ -103,7 +103,7 @@ export default async function DownloadsPage() {
       getNewProducts(purchasedProductIds).catch(() => []),
     ]);
 
-  const packCount = purchases.length;
+  const guideCount = purchases.length;
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
@@ -112,8 +112,8 @@ export default async function DownloadsPage() {
         Your Activity Guides
       </h1>
       <p className="mt-2 text-gray-500">
-        {packCount > 0
-          ? `${packCount} activity pack${packCount === 1 ? "" : "s"} ready to open.`
+        {guideCount > 0
+          ? `${guideCount} activity guide${guideCount === 1 ? "" : "s"} ready to open.`
           : "Your activity guides will appear here after purchase."}
       </p>
 
@@ -226,7 +226,7 @@ export default async function DownloadsPage() {
                     {upgrade.bundle.name}
                   </h3>
                   <p className="text-sm text-gray-500 mt-0.5">
-                    You own {upgrade.ownedCount} of {upgrade.totalCount} packs
+                    You own {upgrade.ownedCount} of {upgrade.totalCount} guides
                   </p>
                   {upgrade.amountAlreadyPaid > 0 && (
                     <div className="flex items-center gap-2 mt-1.5">
@@ -263,7 +263,7 @@ export default async function DownloadsPage() {
           <p className="text-sm text-gray-500 mb-5">
             Families who got{" "}
             {CATEGORY_LABELS[purchasedCategories[0]] || purchasedCategories[0]}{" "}
-            packs also loved these.
+            guides also loved these.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {crossSellProducts.map((product) => (
@@ -320,7 +320,7 @@ export default async function DownloadsPage() {
             New This Month
           </h2>
           <p className="text-sm text-gray-500 mb-5">
-            Fresh packs just added to the shop.
+            Fresh guides just added to the shop.
           </p>
           <div className="space-y-3">
             {newProducts.map((product) => (
