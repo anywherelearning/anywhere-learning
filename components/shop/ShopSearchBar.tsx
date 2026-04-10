@@ -75,7 +75,7 @@ export default function ShopSearchBar() {
           type="text"
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
-          placeholder="Search packs..."
+          placeholder="Search guides..."
           className="w-full pl-10 pr-9 py-2.5 bg-white border border-gray-200 rounded-xl text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition-all"
         />
         {query && (

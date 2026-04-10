@@ -300,7 +300,7 @@ export interface BundleUpsell {
   savingsCents: number;
   /** How many more cents the bundle costs vs what's already in cart (0 if bundle is cheaper). */
   additionalCostCents: number;
-  /** Total number of individual packs in this bundle. */
+  /** Total number of individual guides in this bundle. */
   totalChildCount: number;
 }
 
@@ -373,7 +373,7 @@ export function cartTotalWithByob(items: CartItem[]): {
 
 /**
  * Find the best bundle upsell for the current cart.
- * Considers both individual packs AND smaller bundles whose children
+ * Considers both individual guides AND smaller bundles whose children
  * are covered by a larger bundle (e.g. nature-art-bundle + outdoor-toolkit-bundle
  * triggers an outdoor-mega-bundle upsell).
  * Prioritises bundles that save money, then lowest additional cost.
@@ -400,7 +400,7 @@ export function getBundleUpsell(cartItems: CartItem[]): BundleUpsell | null {
     const bundleInfo = BUNDLE_DATA[bundleSlug];
     if (!bundleInfo) continue;
 
-    // Find matching individual packs
+    // Find matching individual guides
     const matchingIndividuals = individualItems.filter((item) =>
       childSlugs.includes(item.slug)
     );

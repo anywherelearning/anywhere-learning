@@ -51,7 +51,7 @@ export default function ProductDescriptionSection({
         </div>
       )}
 
-      {/* Bundle: What's Included - list packs */}
+      {/* Bundle: What's Included - list guides */}
       {isBundle && desc.whatsIncluded.length > 0 && (
         <div>
           <h3 className="text-base font-semibold text-gray-900 mb-3">

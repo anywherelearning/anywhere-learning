@@ -105,7 +105,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
 
     if (purchasedProducts.length === 0) return null;
 
-    // Find bundles that could be upgrades (user bought individual packs)
+    // Find bundles that could be upgrades (user bought individual guides)
     const isIndividualPurchase = purchasedProducts.some((p) => !p.isBundle);
     let bundleUpgrades: typeof purchasedProducts = [];
 
@@ -316,7 +316,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                       />
                     ) : (
                       <span className="flex items-center justify-center h-full text-cream/80 text-xs font-bold">
-                        {product.isBundle ? 'BUNDLE' : 'PACK'}
+                        {product.isBundle ? 'BUNDLE' : 'GUIDE'}
                       </span>
                     )}
                   </div>
@@ -481,7 +481,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                     <p className="text-sm text-gray-500 mt-0.5">
                       {bundle.activityCount
                         ? `${bundle.activityCount} activities included`
-                        : 'Every pack in one bundle'}
+                        : 'Every guide in one bundle'}
                     </p>
                     <div className="flex items-center gap-2 mt-1.5">
                       {bundle.compareAtPriceCents && (

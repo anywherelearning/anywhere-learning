@@ -61,7 +61,15 @@ const SLUG_TO_FILE: Record<string, string> = {
   // Entrepreneurship
   'brand-builder': 'Entrepreneurship - Brand builder.pdf',
   'business-failure-lab': 'Entrepreneurship - Business Failure Lab.pdf',
+  'community-service-business': 'Entrepreneurship - Community Service Business.pdf',
+  'customer-discovery': 'Entrepreneurship - Customer Discovery Challenge.pdf',
+  'investor-pitch': 'Entrepreneurship - Investor Pitch Portfolio.pdf',
+  'marketing-campaign': 'Entrepreneurship - Marketing Campaign Creator.pdf',
   'micro-business': 'Entrepreneurship - Micro-business challenge.pdf',
+  'pricing-experiment': 'Entrepreneurship - Pricing Experiment.pdf',
+  'product-design-lab': 'Entrepreneurship - Product Design Lab.pdf',
+  'supply-chain-detective': 'Entrepreneurship - Supply Chain Detective.pdf',
+  'shark-tank-pitch': 'Entrepreneurship - The Shark Tank Pitch.pdf',
 
   // Outdoor Learning
   'fall-outdoor-pack': 'Outdoor Learning - Anywhere Learning Fall.pdf',
@@ -80,6 +88,16 @@ const SLUG_TO_FILE: Record<string, string> = {
   'problem-solver': 'Planning & Problem-Solving - Problem-solver studio.pdf',
   'time-energy-planner': 'Planning & Problem-solving - Time & energy planner.pdf',
   'travel-day': 'Planning & Problem-solving - Travel Day itinerary challenge.pdf',
+  'emergency-ready': 'Planning & Problem-Solving Emergency Ready Challenge.pdf',
+  'everyday-redesign': 'Planning & Problem-Solving Everyday Redesign Challenge.pdf',
+  'fix-it-detective': 'Planning & Problem-Solving Fix-it detective.pdf',
+  'neighbourhood-problem-spotter': 'Planning & Problem-Solving Neighbourhood Problem Spotter.pdf',
+  'outdoor-survival-planner': 'Planning & Problem-Solving Outdoor survival planner.pdf',
+  'pack-like-a-pro': 'Planning & Problem-Solving Pack Like a Pro.pdf',
+  'scavenger-hunt-designer': 'Planning & Problem-Solving Scavenger Hunt Designer.pdf',
+  'swap-day-challenge': 'Planning & Problem-Solving The Swap Day Challenge.pdf',
+  'what-if-scenario-lab': 'Planning & Problem-Solving The What If Scenario Lab.pdf',
+  'decision-lab': 'Planning & Problem-Solving What Would You Do Decision Lab.pdf',
 
   // Real-world Math
   'backyard-campout-planner': 'Real-world math - Backyard Campout Planner.pdf',

@@ -52,7 +52,7 @@ export default function CategorySection({
             href={`/shop?category=${category}`}
             className="hidden sm:inline-flex shrink-0 items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
           >
-            See all {totalCount} packs
+            See all {totalCount} guides
             <span aria-hidden="true">&rarr;</span>
           </Link>
         )}
@@ -78,7 +78,7 @@ export default function CategorySection({
             href={`/shop?category=${category}`}
             className="inline-flex items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
           >
-            See all {totalCount} packs &rarr;
+            See all {totalCount} guides &rarr;
           </Link>
         </div>
       )}

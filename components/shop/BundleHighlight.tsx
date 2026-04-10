@@ -78,7 +78,7 @@ export default function BundleHighlight({
           </h2>
           <p className="text-gray-500 mb-6 text-lg leading-relaxed">
             {shortDescription ||
-              `Every single activity pack we make. ${activityCount ? `${activityCount}+` : '220+'} activities across all categories.`}
+              `Every single activity guide we make. ${activityCount ? `${activityCount}+` : '220+'} activities across all categories.`}
           </p>
 
           {/* Price block */}

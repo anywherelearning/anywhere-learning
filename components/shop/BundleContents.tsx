@@ -67,7 +67,7 @@ export default function BundleContents({ bundleSlug, bundlePriceCents }: BundleC
           What&apos;s Included
         </h2>
         <span className="text-sm text-gray-400">
-          {products.length} activity {products.length === 1 ? 'pack' : 'packs'}
+          {products.length} activity {products.length === 1 ? 'guide' : 'guides'}
         </span>
       </div>
 

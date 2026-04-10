@@ -1,3 +1,5 @@
+import { parseInlineLinks } from '@/lib/content-blocks';
+
 interface SummaryBoxProps {
   text: string;
   heading?: string;
@@ -47,7 +49,7 @@ export default function SummaryBox({ text, heading = 'In short' }: SummaryBoxPro
 
           {/* Summary text */}
           <p className="text-[1.05rem] md:text-[1.1rem] leading-[1.75] text-gray-700 font-[450]">
-            {text}
+            {parseInlineLinks(text)}
           </p>
         </div>
       </div>

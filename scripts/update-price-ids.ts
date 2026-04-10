@@ -52,8 +52,6 @@ const priceMap: Record<string, string> = {
   "privacy-footprint": "price_1T9JSWAMzOBftCnt0Kr6K6QN",
   "prompt-like-a-coach": "price_1T9JSYAMzOBftCnt4jxEltIh",
   "future-ready-skills-map": "price_1T9JSZAMzOBftCntfh73EgWC",
-  "my-small-business-project": "price_1T9JSaAMzOBftCnt7K7w8xvT",
-  "time-capsule": "price_1T9JSbAMzOBftCntkCNr8dKm",
 };
 
 async function updatePriceIds() {

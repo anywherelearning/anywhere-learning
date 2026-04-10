@@ -172,7 +172,7 @@ export default function CartAbandonment({
           {upsell && upsell.type === 'byob' && (
             <Section style={upsellSection}>
               <Heading as="h2" style={upsellHeading}>
-                You&apos;re {upsell.itemsNeeded === 1 ? '1 pack' : `${upsell.itemsNeeded} packs`} away from {upsell.discountPercent}% off
+                You&apos;re {upsell.itemsNeeded === 1 ? '1 guide' : `${upsell.itemsNeeded} guides`} away from {upsell.discountPercent}% off
               </Heading>
               <Text style={upsellText}>
                 Add {upsell.itemsNeeded === 1 ? 'just 1 more guide' : `${upsell.itemsNeeded} more guides`} to your cart and our mix-and-match discount kicks in, <strong>{upsell.discountPercent}% off every individual guide</strong> in your order.

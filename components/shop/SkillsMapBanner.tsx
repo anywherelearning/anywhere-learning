@@ -4,7 +4,7 @@ import Image from 'next/image';
 /**
  * Promotional banner for "The Future-Ready Skills Map" product.
  * Positioned between the hero/trust strip and the savings explainer
- * on the shop page's "All Packs" view. Designed to feel like a
+ * on the shop page's "All Guides" view. Designed to feel like a
  * helpful store guide rather than an ad - warm, integrated, and
  * nature-inspired to match the brand aesthetic.
  */
@@ -53,7 +53,7 @@ export default function SkillsMapBanner() {
 
             <p className="text-sm text-gray-500 leading-relaxed max-w-xl">
               10 essential skills your kids actually need, mapped by age with activities,
-              milestones, and sample weeks. The roadmap that turns every activity pack into
+              milestones, and sample weeks. The roadmap that turns every activity guide into
               purposeful learning.
             </p>
           </div>

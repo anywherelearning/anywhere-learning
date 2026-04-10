@@ -139,15 +139,15 @@ export default function SavingsExplainer() {
             {/* Tier rows */}
             <div className="space-y-2 mb-5">
               <div className="flex items-center justify-between bg-cream rounded-xl px-4 py-2.5 border border-gray-100">
-                <span className="text-sm font-medium text-gray-700">5 packs</span>
+                <span className="text-sm font-medium text-gray-700">5 guides</span>
                 <span className="text-sm font-bold text-gold-dark bg-gold/10 px-3 py-0.5 rounded-full">10% off</span>
               </div>
               <div className="flex items-center justify-between bg-cream rounded-xl px-4 py-2.5 border border-gray-100">
-                <span className="text-sm font-medium text-gray-700">7 packs</span>
+                <span className="text-sm font-medium text-gray-700">7 guides</span>
                 <span className="text-sm font-bold text-gold-dark bg-gold/10 px-3 py-0.5 rounded-full">15% off</span>
               </div>
               <div className="flex items-center justify-between bg-gold/[0.08] rounded-xl px-4 py-2.5 border border-gold/20">
-                <span className="text-sm font-medium text-gray-700">10+ packs</span>
+                <span className="text-sm font-medium text-gray-700">10+ guides</span>
                 <span className="text-sm font-bold text-white bg-gold px-3 py-0.5 rounded-full">20% off</span>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function SavingsExplainer() {
 
         {/* Footer note */}
         <p className="text-center mt-6 md:mt-8 text-sm text-cream/60">
-          Already have a bundle in your cart? Individual packs still get their own discount on top.
+          Already have a bundle in your cart? Individual guides still get their own discount on top.
         </p>
       </div>
     </section>

@@ -135,27 +135,26 @@ These must be done before going live:
 2. **Register the production Stripe webhook** — in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
 3. **Set `STRIPE_WEBHOOK_SECRET` in Vercel** — use the signing secret from step 2 (starts with `whsec_`)
 4. **Switch to live Stripe keys** — replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
-5. **Upgrade Vercel Blob storage** — current free-tier Blob storage is full; upgrade plan or increase Blob quota before uploading remaining PDFs
-6. **Upload PDFs to Vercel Blob** — product files for the download endpoint (requires step 5)
-7. **Set up Clerk project** — configure Clerk for production (custom domain, social logins)
-8. **Connect custom domain** in Vercel project settings
-9. **Google Search Console + GA4** — verify site, submit sitemap
-10. **Clean up test orders** in Neon database before launch
-11. **Re-run `npm run stripe:sync`** — after switching to live Stripe keys and setting `NEXT_PUBLIC_URL` to `https://anywherelearning.co`, re-run the sync so all Stripe product images point to the production domain
-12. **ConvertKit lead magnet automation** — in Kit UI:
+5. **Upload PDFs to Vercel Blob** — product files for the download endpoint
+6. **Set up Clerk project** — configure Clerk for production (custom domain, social logins)
+7. **Connect custom domain** in Vercel project settings
+8. **Google Search Console + GA4** — verify site, submit sitemap
+9. **Clean up test orders** in Neon database before launch
+10. **Re-run `npm run stripe:sync`** — after switching to live Stripe keys and setting `NEXT_PUBLIC_URL` to `https://anywherelearning.co`, re-run the sync so all Stripe product images point to the production domain
+11. **ConvertKit lead magnet automation** — in Kit UI:
     - Create automation: trigger = subscriber receives tag `lead`
     - Send email with free guide PDF attached or linked (subject: "Here's your free guide!")
     - Optional: add 2-3 follow-up emails (Day 2: getting started tips, Day 5: shop intro)
     - The `lead` tag is auto-applied by the app when someone submits the free guide form
-13. **ConvertKit cart-abandonment automation** — in Kit UI:
+12. **ConvertKit cart-abandonment automation** — in Kit UI:
     - Create automation: trigger = subscriber receives tag `cart-abandoner`
     - Add wait step: 1 hour
     - Add condition: subscriber does NOT have tag `buyer`
     - Send recovery email (warm, on-brand: "Still thinking it over? Your cart is waiting...")
     - Optional: second email at 24 hours with different angle
     - Tags `cart-abandoner` and `buyer` are auto-created by the app — no manual tag setup needed
-14. **Pinterest Rich Pins** — validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
-15. **Directory submissions** — submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
+13. **Pinterest Rich Pins** — validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
+14. **Directory submissions** — submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
 
 ## Post-Launch Growth Ideas
 

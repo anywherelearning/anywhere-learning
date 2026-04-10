@@ -103,8 +103,6 @@ const blobMap: Record<string, string> = {
 
   // ── Standalone Guides ──
   'future-ready-skills-map': 'The future-ready skills map.pdf',
-  'my-small-business-project': 'My small business project.pdf',
-  'time-capsule': 'Time Capsule.pdf',
 };
 
 async function updateBlobUrls() {

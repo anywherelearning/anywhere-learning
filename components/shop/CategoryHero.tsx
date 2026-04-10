@@ -18,10 +18,10 @@ const categoryDescriptions: Record<string, string> = {
   'communication-writing': 'Real-world writing and communication skills for kids who have something to say.',
   'outdoor-learning': 'Turn your backyard, park, or trail into a hands-on learning space.',
   'real-world-math': 'Budgeting, shopping math, fractions in the kitchen, and financial thinking.',
-  'entrepreneurship': 'Plan, launch, and run real projects \u2014 from lemonade stands to micro-businesses.',
+  'entrepreneurship': 'Plan, launch, and pitch real businesses \u2014 from brand building to Shark Tank pitches.',
   'planning-problem-solving': 'Tackle real logistics, plan adventures, and solve problems that actually matter.',
   'start-here': 'The foundation for your learning journey \u2014 start with the big picture.',
-  bundle: 'Get more value with curated activity pack bundles.',
+  bundle: 'Get more value with curated activity guide bundles.',
 };
 
 const categoryBgColors: Record<string, string> = {
@@ -70,7 +70,7 @@ export default function CategoryHero({ category, productCount }: CategoryHeroPro
           {label}
         </h1>
         <p className="text-gray-500 text-lg mb-1">{description}</p>
-        <p className="text-sm text-gray-400">{productCount} activity {productCount === 1 ? 'pack' : 'packs'}</p>
+        <p className="text-sm text-gray-400">{productCount} activity {productCount === 1 ? 'guide' : 'guides'}</p>
       </div>
     </section>
   );

@@ -281,11 +281,11 @@ describe('getBundleUpsell', () => {
     expect(upsell!.bundle.slug).toBe('seasonal-bundle');
     expect(upsell!.matchingSlugs).toContain('spring-outdoor-pack');
     expect(upsell!.matchingSlugs).toContain('summer-outdoor-pack');
-    expect(upsell!.totalChildCount).toBe(4); // seasonal bundle has 4 packs
+    expect(upsell!.totalChildCount).toBe(4); // seasonal bundle has 4 guides
   });
 
   it('calculates savings correctly when bundle is cheaper', () => {
-    // 3 seasonal packs at $14.99 each = $44.97; bundle = $44.99
+    // 3 seasonal guides at $14.99 each = $44.97; bundle = $44.99
     const items = [
       makeItem({ slug: 'spring-outdoor-pack', priceCents: 1499 }),
       makeItem({ slug: 'summer-outdoor-pack', priceCents: 1499 }),
@@ -317,7 +317,7 @@ describe('BUNDLE_CONTENTS', () => {
     }
   });
 
-  it('seasonal bundle contains 4 packs', () => {
+  it('seasonal bundle contains 4 guides', () => {
     expect(BUNDLE_CONTENTS['seasonal-bundle']).toHaveLength(4);
   });
 });
