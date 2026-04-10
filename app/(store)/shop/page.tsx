@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getActiveProducts, getAllReviewStatsBySlug, getProductsByCategory } from "@/lib/db/queries";
 import {
   getFallbackProducts,
@@ -311,8 +312,24 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       ) : (
         <>
           <section className="relative py-14 sm:py-20 md:py-24 overflow-hidden">
+            {/* Faded nature landscape background — mirrors the about hero
+                pattern: full-cover photo with a cream gradient overlay so
+                the headline stays readable, plus a bottom fade-to-cream so
+                the hero blends into the trust strip below. */}
+            <Image
+              src="/shop-hero-bg.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              priority
+            />
             <div
-              className="absolute inset-0 bg-gradient-to-b from-cream via-gold/[0.04] to-cream"
+              className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/90 to-cream/80 lg:from-cream/95 lg:via-cream/85 lg:to-cream/75"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent"
               aria-hidden="true"
             />
             <div
