@@ -234,11 +234,9 @@ const posts: BlogPost[] = [
       ]},
       { type: 'heading', level: 2, text: 'When to use resources (and when to let go)' },
       { type: 'paragraph', text: 'This doesn\u2019t mean you never use a resource. It means the resource serves you, not the other way around. Activity cards, prompts, and ideas are tools. Pick them up when they\u2019re helpful. Put them down when they\u2019re not. A curriculum that makes you feel guilty when you skip a day is a cage. A [stack of activity cards](/shop) you can grab when inspiration runs dry? That\u2019s freedom.' },
-      { type: 'product-callout', slug: 'nature-choice-boards' },
       { type: 'heading', level: 2, text: 'Give yourself grace' },
       { type: 'paragraph', text: 'You chose homeschooling because you believed there was a better way. That belief is still true, even on the hard days. Even on the days when you feel like you\u2019re failing. Especially on those days.' },
       { type: 'paragraph', text: 'Your kids don\u2019t need a perfect homeschool. They need a present parent who believes in them. And if you\u2019re reading this, that\u2019s already you.' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
       { type: 'cta', text: 'Not sure where to start? Grab our free guide, it\u2019s designed for families exactly like yours.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Can you homeschool without a curriculum?', answer: 'Yes. Many thriving homeschool families use no formal curriculum at all. They follow their children\u2019s interests, use activity prompts, read together, and learn through real-world experiences. A curriculum is a tool, not a requirement.' },
@@ -249,8 +247,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['new-to-homeschooling', 'five-stages-deschooling', 'start-homeschooling-mid-year'],
-    recommendedProduct: 'nature-choice-boards',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'worldschool-two-kids',
@@ -658,14 +654,12 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Online groups help, but nothing replaces one or two parents who actually get it. Find a co-op, a homeschool park day, or even one other family you can be brutally honest with. \u201cI\u2019m not okay\u201d is a sentence that needs to be said out loud sometimes.' },
       { type: 'heading', level: 3, text: '5. Outsource something, anything' },
       { type: 'paragraph', text: 'A co-op class. A tutor for the subject you hate teaching. An online course. A grandparent who takes the kids for two hours. Activity packs that require [zero prep](/blog/what-no-prep-means). You don\u2019t have to do everything yourself. That was never the deal.' },
-      { type: 'product-callout', slug: 'time-energy-planner' },
       { type: 'heading', level: 2, text: 'When it\u2019s more than burnout' },
       { type: 'paragraph', text: 'Burnout and depression can look similar. If you\u2019ve been in this state for more than a few weeks, if you\u2019re unable to enjoy anything, or if you\u2019re having dark thoughts, please talk to someone. A doctor, a counsellor, a trusted friend. Homeschooling is not worth your mental health, and getting help isn\u2019t giving up.' },
       { type: 'heading', level: 2, text: 'The permission you\u2019re looking for' },
       { type: 'paragraph', text: 'You\u2019re allowed to have a bad week. You\u2019re allowed to take a break. You\u2019re allowed to do less. You\u2019re allowed to use workbooks and documentaries and activity guides and whatever gets you through.' },
       { type: 'paragraph', text: 'You started homeschooling because you wanted a better life for your family. If the way you\u2019re doing it is destroying you, [change the way you\u2019re doing it](/blog/new-to-homeschooling). Change whether you\u2019re doing it. The method is flexible. You are irreplaceable.' },
       { type: 'image', src: '/images/burnout-sunset.jpeg', alt: 'Mom and Julia in a sunset selfie on the beach, a moment of connection after a hard season', caption: 'The good moments are still there. Sometimes you just need to step outside to find them.' },
-      { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
       { type: 'cta', text: 'Running on empty? Our free guide is designed for days like this: ten low-energy activities that don\u2019t need planning, prep, or enthusiasm.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I know if I have homeschool burnout?', answer: 'Common signs include dreading mornings, snapping at your kids over small things, losing motivation to plan, constant exhaustion, and questioning whether you should keep homeschooling. If this has lasted more than a few days, it\u2019s likely burnout.' },
@@ -676,8 +670,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['what-no-prep-means', 'curriculum-guilt-permission-slip', 'five-stages-deschooling'],
-    recommendedProduct: 'time-energy-planner',
-    recommendedBundle: 'real-world-mega-bundle',
   },
 
   {
@@ -896,7 +888,6 @@ const posts: BlogPost[] = [
         'Travel, even a day trip to somewhere new',
         'Journaling, sketching, or just free time outside',
       ] },
-      { type: 'product-callout', slug: 'time-capsule' },
       { type: 'heading', level: 2, text: 'Don\u2019t forget to deschool yourself' },
       { type: 'paragraph', text: 'Here\u2019s what nobody tells you: you need to deschool too. You grew up in the same system. You have the same deeply wired beliefs: learning requires a desk, progress requires tests, falling behind is dangerous. These beliefs will sabotage your homeschool if you don\u2019t examine them.' },
       { type: 'paragraph', text: 'Your deschooling looks like this: stop comparing your child to grade-level standards. Stop measuring learning by output. Start trusting that your child is wired to be curious, they just need time to remember it.' },
@@ -913,7 +904,6 @@ const posts: BlogPost[] = [
       ] },
     ],
     relatedSlugs: ['start-homeschooling-mid-year', 'new-to-homeschooling', 'curriculum-guilt-permission-slip'],
-    recommendedProduct: 'time-capsule',
     recommendedBundle: 'creativity-mega-bundle',
   },
 
@@ -965,6 +955,7 @@ const posts: BlogPost[] = [
       { type: 'product-callout', slug: 'nature-walk-task-cards' },
       { type: 'paragraph', text: 'The homeschool world is full of beautiful, complex resources created by talented educators. Many of them are wonderful. But if the prep alone is burning you out, it\u2019s okay to choose something simpler. Your presence matters more than your planning. Your kids need you relaxed and engaged, not exhausted and resentful. That\u2019s what no prep is really about.' },
       { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Is no-prep learning rigorous enough?', answer: 'A child who can cook a meal, budget money, identify 30 plants, write a real letter, and ask thoughtful questions is more rigorously educated than one who can fill in worksheets. Rigour isn\u2019t about the complexity of the material; it\u2019s about the depth of engagement.' },
         { question: 'What about subjects like maths and reading?', answer: 'Maths is everywhere: cooking, shopping, building, measuring, budgeting. Reading happens naturally when a child has access to books and a reason to read. No-prep doesn\u2019t mean avoiding these subjects, it means finding them in real life instead of in a textbook.' },
@@ -1032,6 +1023,7 @@ const posts: BlogPost[] = [
       { type: 'pull-quote', text: 'Your child doesn\u2019t need more lessons. They need more time. Time to build, imagine, fail, try again, argue, compromise, create, and discover. That\u2019s not wasted time. That\u2019s childhood doing exactly what it\u2019s supposed to do.' },
       { type: 'product-callout', slug: 'invent-a-sport' },
       { type: 'bundle-callout', slug: 'creativity-mega-bundle' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'At what age does play stop being educational?', answer: 'It doesn\u2019t. Play remains a powerful learning tool through adolescence and adulthood. The type of play evolves, from imaginative play to strategic games to creative projects to collaborative problem-solving, but the cognitive and social benefits persist throughout life.' },
         { question: 'How much unstructured play time do kids need?', answer: 'Research suggests at least one to two hours daily, though more is better. Many developmental experts recommend that for children under 7, play should be the primary mode of learning, with structured academics kept to brief, focused sessions.' },
@@ -1376,6 +1368,7 @@ const posts: BlogPost[] = [
 
       { type: 'product-callout', slug: 'creature-habitat' },
       { type: 'bundle-callout', slug: 'creativity-mega-bundle' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
 
       { type: 'faq', items: [
         { question: 'How do I raise a creative child?', answer: 'Give them unstructured time, open-ended materials, and real problems to solve. Ask "what if" questions, let them be bored, and resist the urge to step in when their approach seems wrong. Creativity grows when kids have the freedom to experiment, fail, and try again without someone handing them the answer.' },
@@ -1650,7 +1643,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'When we left, I had a small panic about what my kids were \u201cmissing.\u201d But within weeks, I started noticing something: they were more curious, more engaged, and more creative than they\u2019d been in a long time. They weren\u2019t behind. They were finally learning on their own terms.' },
       { type: 'paragraph', text: 'Your kids don\u2019t need to cover the same material their former classmates are covering this month. They need to rediscover curiosity. Everything else follows from that.' },
       { type: 'pull-quote', text: 'There\u2019s no such thing as the perfect time to start homeschooling. There\u2019s just the moment you decide your family is worth the leap.' },
-      { type: 'product-callout', slug: 'problem-solver' },
       { type: 'heading', level: 2, text: 'What the first month actually looks like' },
       { type: 'paragraph', text: 'If you\u2019re expecting a tidy schedule and structured lessons from day one, let me save you some stress: it won\u2019t look like that. And that\u2019s a good thing.' },
       { type: 'paragraph', text: 'Our first month looked like: sleeping in, reading piles of library books, cooking together, long walks, lots of boredom (which turned into creativity), and a few arguments about screen time. It didn\u2019t look like school. It looked like life. And slowly, naturally, learning started weaving itself back in, on the kids\u2019 terms this time.' },
@@ -1663,13 +1655,10 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The hardest part of starting homeschool mid-year isn\u2019t the paperwork or the planning. It\u2019s giving yourself permission to do something different. To trust that your child will be okay, more than okay, even if you\u2019re not following the same path as everyone else.' },
       { type: 'paragraph', text: 'I was a teacher for 15 years. I spent all that time inside the system. And when I finally stepped out of it with my own kids, the thing that surprised me most wasn\u2019t how hard it was. It was how much lighter we all felt. How quickly the stress faded. How fast my kids went from \u201cI\u2019m bored\u201d to \u201ccan we look this up?\u201d' },
       { type: 'paragraph', text: 'You don\u2019t need to wait for September. You don\u2019t need a perfect plan. You just need to start. The rest figures itself out along the way.' },
-      { type: 'bundle-callout', slug: 'seasonal-bundle' },
       { type: 'cta', text: 'Not sure where to begin? Our free guide gives you 10 real-world activities you can start this week: no overwhelm, no prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [{ question: 'Can I legally start homeschooling mid-year?', answer: 'Yes. In most places, you can withdraw your child from school at any point during the year. The process varies by state or province, some require a letter of intent, others just need school notification. Search for your local homeschool withdrawal requirements to find the specific steps.' }, { question: 'Will my child fall behind if we start homeschooling mid-year?', answer: 'No. The idea of \u201cfalling behind\u201d is based on standardised timelines that don\u2019t account for individual children. Most homeschooled kids cover the same material in far less time because there\u2019s no waiting, no crowd management, and no busywork. Give them time to deschool first, and the learning will follow.' }, { question: 'What do I do about the work my child will miss at school?', answer: 'You don\u2019t need to replicate what the class is doing. Homeschooling isn\u2019t school-at-home. Your child will learn what they need to learn, just through different means and at their own pace. Let go of the idea that they need to cover the exact same material at the exact same time.' }, { question: 'How do I handle judgment from family and friends?', answer: 'Be honest and brief. \u201cWe\u2019ve decided to homeschool and we\u2019re excited about it\u201d is enough. You don\u2019t owe anyone a defence of your choice. Most skeptics come around once they see your kids thriving. In the meantime, find your people, online homeschool communities are incredibly supportive.' }, { question: 'Do I need to buy a curriculum right away?', answer: 'No. In fact, it\u2019s better to wait. Spend the first few weeks observing what your child is naturally drawn to. Visit the library, explore outdoors, cook together. Once you have a sense of their interests and your family\u2019s rhythm, you\u2019ll make much better decisions about whether you want a curriculum at all.' }] },
     ],
     relatedSlugs: ['new-to-homeschooling', 'five-stages-deschooling', 'curriculum-guilt-permission-slip'],
-    recommendedProduct: 'problem-solver',
-    recommendedBundle: 'seasonal-bundle',
   },
   {
     slug: 'what-we-packed-worldschooling',
@@ -2456,7 +2445,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'You might be surprised at how quickly kids go from modifying existing games to creating their own. And once they start, good luck stopping them. Some kids end up with a stack of cardboard prototypes that rivals the family\u2019s published game collection. Each one teaches them something, about maths, about people, about the satisfaction of [making something that works](/guides/creativity-maker-activities).' },
       { type: 'paragraph', text: 'So grab some cardboard. Clear the kitchen table. And let them build a world with rules, their rules, that other people want to play in. That\u2019s not a rainy day activity. That\u2019s serious learning disguised as the best afternoon ever.' },
 
-      { type: 'cta', text: 'Want a step-by-step guide to game design with your kids? Our Board Game Studio activity walks you through the whole process, from blank cardboard to playable prototype.', href: '/shop', label: 'Browse Activities' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What age can kids start designing board games?', answer: 'As young as 4 or 5 with simple path games and matching games. By 7\u20139, most kids can write rules, design themed boards, and playtest meaningfully. By 10+, they can tackle complex mechanics like resource management, probability, and strategy. Start simple and let them add complexity at their own pace.' },
         { question: 'What materials do I need for kids to design a board game?', answer: 'Almost nothing special. Cardboard or large paper, markers, scissors, tape, dice or a spinner, coins or beans for game pieces, and index cards for game cards. You likely have everything already. Fancy supplies are unnecessary, the creativity is the point, not the production quality.' },
@@ -2537,7 +2526,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Your kids don\u2019t need you to organise their play. They need you to give them space, a few random objects, and the freedom to create something that\u2019s entirely theirs. The sport they invent might look silly. The rules might be absurd. The scoring system might make no sense to you.' },
       { type: 'paragraph', text: 'But underneath the silliness is some of the most complex, [creative thinking](/guides/creativity-maker-activities) your child will do all week. And they\u2019ll do it voluntarily, joyfully, and with more physical activity than any structured PE session. That\u2019s what learning looks like when kids are in charge.' },
 
-      { type: 'cta', text: 'Want a ready-made framework for inventing sports and games? Our Invent-a-Sport activity guide walks kids through the whole process, from first idea to tournament day.', href: '/shop', label: 'Browse Activities' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What if my kids just argue and never actually play?', answer: 'The arguing IS the learning. Give them time to work it out. If it escalates beyond productive disagreement, step in briefly to model negotiation: \u201cIt sounds like you both have different ideas. Can you try each version for 5 minutes and see which is more fun?\u201d Then step back again.' },
         { question: 'Does inventing a sport count as PE for homeschooling?', answer: 'Absolutely. Invented sports involve running, throwing, jumping, balancing, and sustained physical activity. Plus they add design thinking, rule-making, and social problem-solving that traditional PE often misses. Many homeschool families document invented games as both PE and creative thinking.' },
@@ -2559,6 +2548,7 @@ const posts: BlogPost[] = [
     keywords: ['rube goldberg machine kids', 'chain reaction activities', 'STEM activities homeschool', 'engineering for kids', 'physics hands on', 'maker activities kids'],
     readTimeMinutes: 11,
     author: amelie,
+    heroImage: '/images/rube-goldberg-hero.png',
     heroImageAlt: 'Child building a chain reaction machine with dominoes, cardboard tubes, and household items',
     content: [
       { type: 'summary', text: 'A Rube Goldberg machine is a chain-reaction contraption that completes a simple task through an intentionally complex series of steps. Building one teaches kids physics (gravity, momentum, energy transfer), engineering (structural design, cause and effect), persistence (troubleshooting repeated failures), and creative problem-solving, using nothing more than household materials like dominoes, cardboard tubes, books, and marbles.' },
@@ -2628,7 +2618,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Film the final run. You\u2019ll want to watch it again. Trust me.' },
       { type: 'paragraph', text: 'If your family loves [building and making things](/guides/creativity-maker-activities), a Rube Goldberg machine is the ultimate maker project. It\u2019s open-ended, endlessly customisable, and works with whatever you have on hand. No kit required. No instructions to follow. Just physics, creativity, and the stubborn belief that attempt 48 might be the one that works.' },
 
-      { type: 'cta', text: 'Want a structured starting point for chain-reaction building? Our Rube Goldberg Machine guide gives kids 10 challenge levels, from beginner to \u201chow did they DO that?\u201d', href: '/shop', label: 'Browse Activities' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What age can kids start building Rube Goldberg machines?', answer: 'As young as 4 with simple domino chains. By 7\u20139, kids can build multi-step machines with ramps, levers, and rolling objects. By 10+, they can tackle complex engineering challenges with 15+ steps, pulleys, water, and precise timing. Start with two steps and build from there.' },
         { question: 'What materials do I need for a Rube Goldberg machine?', answer: 'Nothing special. Dominoes or blocks, cardboard tubes, marbles or balls, books as ramps, string, tape, cups, and any household objects that roll, tip, slide, or swing. The whole point is using everyday items creatively. You don\u2019t need a kit.' },
@@ -2736,7 +2726,7 @@ const posts: BlogPost[] = [
 
       { type: 'tip', title: 'Leave No Trace', text: 'Teach kids to create land art using only fallen or loose materials, never pick living plants or disturb animal habitats. The art should enhance the landscape, not damage it. When you leave, the only trace should be the rearrangement of things that were already on the ground.' },
 
-      { type: 'cta', text: 'Looking for nature-based creative activities you can use any season? Our seasonal activity guides combine outdoor exploration with hands-on making.', href: '/shop', label: 'Browse Activities' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What age is land art suitable for?', answer: 'All ages, genuinely. Toddlers arrange stones and sticks instinctively. School-age children can create intentional compositions and kinetic sculptures. Teens and adults can explore complex concepts like impermanence, environmental art, and engineering. The materials are free and the entry point is whatever\u2019s on the ground around you.' },
         { question: 'Do I need any art experience to guide land art activities?', answer: 'None at all. Land art isn\u2019t about skill; it\u2019s about observation and creativity. You don\u2019t need to know art techniques. Just encourage your child to look closely at what\u2019s available, arrange it in a way that pleases them, and notice what happens. The nature provides everything, including the inspiration.' },
@@ -2837,7 +2827,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'So the next time your child spends an hour drawing maps of places that don\u2019t exist, or explaining the complex social hierarchy of their [imaginary world](/guides/creativity-maker-activities), don\u2019t worry that they\u2019re \u201cwasting time.\u201d They\u2019re doing some of the most sophisticated intellectual work of their lives.' },
       { type: 'paragraph', text: 'And they\u2019re having a brilliant time doing it.' },
 
-      { type: 'cta', text: 'Looking for creative activities that spark this kind of deep, self-directed learning? Browse our maker and creativity guides for more ideas.', href: '/shop', label: 'Browse Activities' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'At what age do kids start worldbuilding?', answer: 'Many children begin around age 5\u20137 with simple imaginary places, maps, and stories. The complexity grows naturally with age. By 10\u201312, some children create remarkably detailed worlds with governments, economies, and multi-century histories. Even young children who play \u201cpretend house\u201d or create LEGO towns are doing basic worldbuilding.' },
         { question: 'My child builds elaborate Minecraft worlds. Does that count as learning?', answer: 'Absolutely. Minecraft worldbuilding involves spatial reasoning, resource management, engineering, logic (redstone circuits), urban planning, and creative design. A child who builds a functioning village with farms, trading posts, and transportation is practising systems thinking. The digital medium doesn\u2019t diminish the cognitive work.' },
@@ -2911,7 +2901,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If you\'re worried about it, you\'re already solving it. The parents who worry about socialization are the same ones signing their kids up for clubs, scheduling playdates, and dragging everyone to the park even when they\'d rather stay home. [The guilt is a sign you care](/blog/curriculum-guilt-permission-slip), not a sign you\'re failing.' },
       { type: 'paragraph', text: 'Watch your kids. Are they happy? Do they have friends? Can they talk to adults? Do they resolve conflicts? If yes, they\'re fine. Better than fine. They\'re thriving.' },
       { type: 'pull-quote', text: 'Your homeschooled kids are socialised. They\u2019re just socialised differently. And different isn\u2019t deficient.' },
-      { type: 'cta', text: 'Need support navigating the homeschool journey? Our free guide gives you practical starting points: no curriculum, no pressure.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'Want proof that learning happens without a classroom? Our free guide gives you 10 real-world activities your kids can try this week — perfect ammo for the next "but what about socialization?" conversation.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Are homeschooled kids really well-socialized?', answer: 'Research consistently shows that homeschooled children develop strong social skills. They interact with people of all ages, participate in community activities, and often score higher on measures of social maturity than conventionally schooled peers.' },
         { question: 'How do homeschooled kids make friends?', answer: 'Through sports, co-ops, clubs, neighbourhood play, church groups, community activities, and shared interest groups. Many homeschool communities organise regular park days, field trips, and social events specifically for this.' },
@@ -3143,8 +3133,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['homeschool-burnout', 'curriculum-guilt-permission-slip', 'new-to-homeschooling'],
-    recommendedProduct: 'my-small-business-project',
-    recommendedBundle: 'real-world-mega-bundle',
     pillarSlug: 'real-world-learning',
   },
   {
@@ -3225,7 +3213,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Homeschooling and worldschooling aren\'t opposing philosophies; they\'re different points on the same spectrum of parent-directed, child-centred education. The best approach is the one that fits your family\'s life, values, and circumstances right now. And it can change as your family changes.' },
       { type: 'paragraph', text: 'The fact that you\'re reading this means you\'re already thinking deeply about your children\'s education. That\'s the real differentiator, not which label you use, but that you care enough to be intentional about it.' },
       { type: 'bundle-callout', slug: 'real-world-mega-bundle' },
-      { type: 'cta', text: 'Whether you homeschool, worldschool, or both, our activity guides work anywhere. No WiFi, no prep, any location.', href: '/shop', label: 'Browse Activity Guides' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is the difference between homeschooling and worldschooling?', answer: 'Homeschooling is education outside of institutional school, typically based at home. Worldschooling uses travel and real-world experiences as the primary curriculum. All worldschoolers are homeschoolers, but not all homeschoolers are worldschoolers. Many families blend both approaches.' },
         { question: 'Is worldschooling legal?', answer: 'Yes. Worldschooling falls under homeschool laws, which vary by state and country. Many worldschool families register in states with flexible requirements (like Alaska or Texas) or use umbrella schools that accept travel-based education portfolios.' },
@@ -3235,7 +3223,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['worldschool-two-kids', 'homeschool-while-traveling', 'new-to-homeschooling'],
-    recommendedProduct: 'road-trip-calculator',
     pillarSlug: 'worldschooling-travel',
   },
   {
@@ -3311,8 +3298,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'With unschooling, the fear is: "Am I being too lax? Will they have gaps? What if they never learn long division?"' },
       { type: 'paragraph', text: 'Both fears are normal. Both are worth sitting with. And both have the same answer: watch your child. Not compared to a grade-level chart. Not compared to the neighbour\'s kid. Watch your child. Are they curious? Growing? Engaged with the world? Then whatever you\'re doing is working.' },
       { type: 'tip', title: 'Try This', text: 'Spend one week keeping a quiet log of everything your child learns without you directing it. Don\'t tell them you\'re doing it. Just observe and write it down. At the end of the week, you\'ll be amazed at how much organic learning happens when you stop looking for the worksheet and start noticing the world.' },
-      { type: 'bundle-callout', slug: 'nature-art-bundle' },
-      { type: 'cta', text: 'Wherever you fall on the spectrum, our activity guides work with any approach, structured enough to give you a starting point, flexible enough to follow your child\'s lead.', href: '/shop', label: 'Browse Activity Guides' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is the difference between unschooling and homeschooling?', answer: 'Homeschooling is parent-directed education at home using curricula or structured materials. Unschooling is child-led learning with no formal curriculum, and children learn through interest, play, and real-world experience. Most families fall somewhere between the two extremes.' },
         { question: 'Is unschooling legal?', answer: 'Yes. Unschooling falls under homeschool laws in every US state, though documentation requirements vary. Some states are very flexible (Texas, Alaska); others require portfolios or assessments. Check your state\'s homeschool laws for specific requirements.' },
@@ -3322,8 +3308,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['curriculum-guilt-permission-slip', 'just-let-them-play', 'new-to-homeschooling'],
-    recommendedProduct: 'garden-plot-planner',
-    recommendedBundle: 'nature-art-bundle',
     pillarSlug: 'real-world-learning',
   },
   {
@@ -3394,7 +3378,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The danger of committing to one approach is that you start ignoring what your actual child needs in favour of what your chosen philosophy says they should need. Methods serve children, not the other way around.' },
       { type: 'image', src: '/images/methods-canopy.jpeg', alt: 'Julia on a canopy bridge high above the rainforest, every method leads somewhere different', caption: 'Every approach leads somewhere different. The point is to find the path your family actually enjoys walking.' },
       { type: 'tip', title: 'Try This', text: 'Spend one week trying each approach (or elements of each). Monday-Tuesday: Charlotte Mason (read a living book, narrate, do a nature walk). Wednesday-Thursday: unschool (let your child lead entirely). Friday: real-world learning (cook a meal, build something, go on an errand and make it educational). At the end of the week, notice which days your child was most engaged. That\'s your answer.' },
-      { type: 'cta', text: 'Our activity guides work with any homeschool approach, structured enough for Charlotte Mason, flexible enough for unschooling, and built around real-world experiences.', href: '/shop', label: 'Browse Activity Guides' },
+      { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you 10 real-world activities your kids can try this week — no prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'What is the Charlotte Mason method of homeschooling?', answer: 'Charlotte Mason homeschooling uses living books (real literature, not textbooks), short focused lessons, narration (child retells what they learned), nature study, copywork, and habit training. It emphasises treating children as whole persons and exposing them to rich ideas through quality literature and direct experience.' },
         { question: 'What\'s the difference between unschooling and being lazy?', answer: 'Unschooling requires more parental awareness, not less. You\'re constantly observing what your child is interested in, providing resources, facilitating experiences, and trusting a process that goes against everything conventional education taught you. It\'s intentional non-direction, very different from neglect.' },
@@ -3403,8 +3387,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['unschooling-vs-homeschooling', 'curriculum-guilt-permission-slip', 'new-to-homeschooling'],
-    recommendedProduct: 'nature-crafts',
-    recommendedBundle: 'outdoor-mega-bundle',
     pillarSlug: 'real-world-learning',
   },
   {
@@ -3460,7 +3442,6 @@ const posts: BlogPost[] = [
         'Stop researching and start doing. Analysis paralysis is the #1 killer of homeschool motivation. Pick one approach and start Monday.',
       ]},
       { type: 'tip', title: 'Quick Decision Guide', text: 'Hate planning? Start with #1 (real-world). Love books? Try #3 (Charlotte Mason). Multiple ages? Go with #2 (unit studies). Want maximum flexibility? #4 (eclectic). Trust your kid completely? #5 (unschooling). Need independence? #6 (online). Want rigour? #7 (classical).' },
-      { type: 'bundle-callout', slug: 'real-world-math-bundle' },
       { type: 'cta', text: 'Not sure where to start? Our free guide gives you 10 real-world activities to try this week: no curriculum needed.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'Do I need a teaching degree to homeschool?', answer: 'No. In most US states, there is no educational requirement to homeschool your children. Research consistently shows that parental education level has little impact on homeschool outcomes; engagement and consistency matter far more than credentials.' },
@@ -3471,8 +3452,6 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['homeschool-methods-compared', 'unschooling-vs-homeschooling', 'new-to-homeschooling'],
-    recommendedProduct: 'farmers-market-challenge',
-    recommendedBundle: 'real-world-math-bundle',
     pillarSlug: 'real-world-learning',
   },
 ];
