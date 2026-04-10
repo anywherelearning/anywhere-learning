@@ -311,7 +311,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         />
       ) : (
         <>
-          <section className="relative py-14 sm:py-20 md:py-24 overflow-hidden">
+          <section className="relative py-20 sm:py-28 md:py-32 overflow-hidden">
             {/* Faded nature landscape background — mirrors the about hero
                 pattern: full-cover photo with a cream gradient overlay so
                 the headline stays readable, plus a bottom fade-to-cream so
@@ -325,7 +325,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               priority
             />
             <div
-              className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/90 to-cream/80 lg:from-cream/95 lg:via-cream/85 lg:to-cream/75"
+              className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/75 to-cream/60 lg:from-cream/80 lg:via-cream/65 lg:to-cream/50"
               aria-hidden="true"
             />
             <div
