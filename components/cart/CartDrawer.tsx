@@ -12,6 +12,7 @@ import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { openExternalBrowser } from '@/lib/capacitor';
+import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
 import { useUser } from '@clerk/nextjs';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -198,6 +199,29 @@ export default function CartDrawer() {
         category: product.category,
         isBundle: product.isBundle,
         imageUrl: product.imageUrl,
+      });
+
+      const price = product.priceCents / 100;
+      pinterestTrack('AddToCart', {
+        value: price,
+        order_quantity: 1,
+        currency: 'USD',
+        line_items: [
+          {
+            product_id: product.slug,
+            product_name: product.name,
+            product_category: product.category,
+            product_price: price,
+            product_quantity: 1,
+          },
+        ],
+      });
+      ga4AddToCart({
+        item_id: product.slug,
+        item_name: product.name,
+        item_category: product.category,
+        price,
+        quantity: 1,
       });
     } catch (error) {
       console.error('Bundle swap error:', error);

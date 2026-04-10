@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
+import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
 import { usePurchased } from './PurchasedContext';
 
 interface QuickAddButtonProps {
@@ -91,6 +92,7 @@ export default function QuickAddButton({
         .map((i) => i.slug);
       if (overlapping.length > 0) {
         swapBundle(overlapping, bundleItem);
+        trackAddToCart();
         setJustAdded(true);
         setTimeout(() => setJustAdded(false), 1500);
         return;
@@ -100,9 +102,35 @@ export default function QuickAddButton({
     const added = addItem(bundleItem);
 
     if (added) {
+      trackAddToCart();
       setJustAdded(true);
       setTimeout(() => setJustAdded(false), 1500);
     }
+  }
+
+  function trackAddToCart() {
+    const price = priceCents / 100;
+    pinterestTrack('AddToCart', {
+      value: price,
+      order_quantity: 1,
+      currency: 'USD',
+      line_items: [
+        {
+          product_id: slug,
+          product_name: name,
+          product_category: category,
+          product_price: price,
+          product_quantity: 1,
+        },
+      ],
+    });
+    ga4AddToCart({
+      item_id: slug,
+      item_name: name,
+      item_category: category,
+      price,
+      quantity: 1,
+    });
   }
 
   const label = justAdded

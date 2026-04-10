@@ -14,7 +14,7 @@ import {
   type BlogContentBlock,
   type BlogCategory,
 } from '@/lib/blog';
-import { renderBlock, getTableOfContents } from '@/lib/content-blocks';
+import { renderBlock, getTableOfContents, getHowToSteps } from '@/lib/content-blocks';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import AuthorBio from '@/components/blog/AuthorBio';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
@@ -210,6 +210,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     })),
   } : null;
 
+  // HowTo schema: only emit for posts whose title begins with "How to"
+  // and where the H2-structure yields at least 3 extractable steps.
+  const isHowToPost = /^how to\b/i.test(post.title);
+  const howToSteps = isHowToPost ? getHowToSteps(contentWithCallouts) : [];
+  const pageUrl = `https://anywherelearning.co/blog/${post.slug}`;
+  const howToLd = howToSteps.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: post.title,
+    description: post.excerpt,
+    totalTime: `PT${post.readTimeMinutes}M`,
+    image: post.heroImage
+      ? `https://anywherelearning.co${post.heroImage}`
+      : 'https://anywherelearning.co/og-default.png',
+    step: howToSteps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: `${pageUrl}#${s.anchor}`,
+    })),
+  } : null;
+
   return (
     <div className="bg-cream min-h-screen">
       <script
@@ -224,6 +247,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
+      {howToLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }}
         />
       )}
       <ReadingProgress />
@@ -292,7 +321,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               )}
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">{post.author.name}</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {post.author.name}
+                  {post.author.credentials && (
+                    <span className="text-gray-400 font-normal"> · {post.author.credentials}</span>
+                  )}
+                </span>
                 <span className="text-[13px] text-gray-400">{formatDate(post.publishedAt)}</span>
               </div>
             </div>

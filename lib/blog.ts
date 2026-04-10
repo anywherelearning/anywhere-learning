@@ -19,6 +19,8 @@ export interface BlogAuthor {
   bio: string;
   avatarColor: string;
   avatarImage?: string;
+  /** Short credential line surfaced in the top byline for E-E-A-T signal. */
+  credentials?: string;
 }
 
 export interface BlogPost {
@@ -66,6 +68,7 @@ export const blogProductDefaults: Record<BlogCategory, { product: string; bundle
 const amelie: BlogAuthor = {
   name: 'Amelie',
   bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now homeschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
+  credentials: 'B.Ed, M.Ed · 15 years teaching',
   avatarColor: '#d4a373',
   avatarImage: '/images/amelie-avatar.jpeg',
 };

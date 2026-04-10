@@ -10,4 +10,6 @@ export interface ShopProduct {
   isBundle: boolean;
   activityCount?: number | null;
   ageRange?: string | null;
+  averageRating?: number | null;
+  reviewCount?: number | null;
 }

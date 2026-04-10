@@ -46,6 +46,52 @@ export function getTableOfContents(content: ContentBlock[]) {
   return items;
 }
 
+/**
+ * Extract HowTo-style steps from content blocks.
+ * Each H2 heading becomes a step name; the first paragraph immediately
+ * following that heading becomes the step text. Leading numeric prefixes
+ * like "1. " or "3) " are stripped from the step name so the schema reads
+ * cleanly to search engines.
+ *
+ * Returns an empty array if fewer than 3 qualifying steps are found — the
+ * caller is expected to skip HowTo JSON-LD in that case.
+ */
+export function getHowToSteps(
+  content: ContentBlock[],
+): { name: string; text: string; anchor: string }[] {
+  const steps: { name: string; text: string; anchor: string }[] = [];
+
+  for (let i = 0; i < content.length; i++) {
+    const block = content[i];
+    if (block.type !== 'heading' || block.level !== 2) continue;
+
+    // Find the next paragraph within a short window (skip images, callouts, etc.)
+    let stepText: string | null = null;
+    for (let j = i + 1; j < content.length && j < i + 6; j++) {
+      const next = content[j];
+      if (next.type === 'heading') break;
+      if (next.type === 'paragraph') {
+        stepText = next.text;
+        break;
+      }
+    }
+
+    if (!stepText) continue;
+
+    const cleanName = block.text.replace(/^\s*\d+\s*[.):-]\s*/, '').trim();
+    // Strip markdown links from step text so JSON-LD is plain prose.
+    const cleanText = stepText.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+
+    steps.push({
+      name: cleanName,
+      text: cleanText,
+      anchor: slugify(block.text),
+    });
+  }
+
+  return steps.length >= 3 ? steps : [];
+}
+
 export function getArticleBodyText(content: ContentBlock[]): string {
   return content
     .map((b) => {

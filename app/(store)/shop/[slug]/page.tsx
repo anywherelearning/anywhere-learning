@@ -14,7 +14,7 @@ import BundleContents from "@/components/shop/BundleContents";
 import ProductHighlights from "@/components/shop/ProductHighlights";
 import ProductDescriptionSection from "@/components/shop/ProductDescriptionSection";
 import ProductReviews from "@/components/shop/ProductReviews";
-import { getProductReviewStats } from "@/lib/db/queries";
+import { getAllReviewStatsBySlug, getProductReviewStats } from "@/lib/db/queries";
 import {
   CategoryIcon,
   ZapIcon,
@@ -126,8 +126,13 @@ export default async function ProductPage({
 
   // Get related products (same category, excluding this one)
   let relatedProducts: (typeof product)[] = [];
+  let relatedStatsBySlug: Awaited<ReturnType<typeof getAllReviewStatsBySlug>> = {};
   try {
-    const allProducts = await getActiveProducts();
+    const [allProducts, stats] = await Promise.all([
+      getActiveProducts(),
+      getAllReviewStatsBySlug(),
+    ]);
+    relatedStatsBySlug = stats;
     relatedProducts = allProducts
       .filter((p) => p.category === product.category && p.id !== product.id)
       .slice(0, 3);
@@ -136,6 +141,12 @@ export default async function ProductPage({
       .filter((p) => p.category === product.category && p.id !== product.id)
       .slice(0, 3);
   }
+
+  // Enrich related products with review stats so grid cards can render stars.
+  relatedProducts = relatedProducts.map((p) => ({
+    ...p,
+    ...(relatedStatsBySlug[p.slug] ?? {}),
+  }));
 
   // Get review stats for JSON-LD
   let reviewStats = { averageRating: 0, reviewCount: 0 };

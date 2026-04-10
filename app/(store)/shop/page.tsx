@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getActiveProducts, getProductsByCategory } from "@/lib/db/queries";
+import { getActiveProducts, getAllReviewStatsBySlug, getProductsByCategory } from "@/lib/db/queries";
 import {
   getFallbackProducts,
   getProductCounts,
@@ -157,15 +157,22 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
   // Fetch products from DB, fallback if unavailable
   let allProducts: Awaited<ReturnType<typeof getActiveProducts>> = [];
+  let reviewStatsBySlug: Awaited<ReturnType<typeof getAllReviewStatsBySlug>> = {};
   try {
-    allProducts = category
-      ? await getProductsByCategory(category)
-      : await getActiveProducts();
+    [allProducts, reviewStatsBySlug] = await Promise.all([
+      category ? getProductsByCategory(category) : getActiveProducts(),
+      getAllReviewStatsBySlug(),
+    ]);
   } catch {
     // DB not available - use fallback products
   }
 
-  const products = allProducts.length > 0 ? allProducts : fallbackProducts;
+  const baseProducts = allProducts.length > 0 ? allProducts : fallbackProducts;
+  // Merge review stats onto every product so ProductCard can render stars + count.
+  const products = baseProducts.map((p) => ({
+    ...p,
+    ...(reviewStatsBySlug[p.slug] ?? {}),
+  }));
 
   // Filter by category (only needed for fallback path)
   let filteredProducts =

@@ -43,6 +43,42 @@ const categoryAccentColors: Record<string, string> = {
   bundle: 'border-l-[#d4a373]',
 };
 
+const MIN_REVIEWS_TO_SHOW = 1;
+
+function StarRating({ rating }: { rating: number }) {
+  // Render 5 stars, filling proportionally to the rating value (e.g. 4.3 → 4 full + 0.3 partial).
+  return (
+    <div className="flex items-center" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((i) => {
+        const fillPct = Math.max(0, Math.min(1, rating - i)) * 100;
+        return (
+          <span key={i} className="relative inline-block w-3.5 h-3.5">
+            <svg
+              className="absolute inset-0 w-3.5 h-3.5 text-gray-300"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+            </svg>
+            <span
+              className="absolute inset-0 overflow-hidden"
+              style={{ width: `${fillPct}%` }}
+            >
+              <svg
+                className="w-3.5 h-3.5 text-gold"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+              </svg>
+            </span>
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function ProductCard({
   name,
   slug,
@@ -55,8 +91,15 @@ export default function ProductCard({
   isBundle,
   activityCount,
   ageRange,
+  averageRating,
+  reviewCount,
 }: ProductCardProps) {
   const savings = compareAtPriceCents ? compareAtPriceCents - priceCents : 0;
+  const showRating =
+    typeof reviewCount === 'number' &&
+    reviewCount >= MIN_REVIEWS_TO_SHOW &&
+    typeof averageRating === 'number' &&
+    averageRating > 0;
 
   return (
     <Link href={`/shop/${slug}`} className="group block h-full">
@@ -130,6 +173,21 @@ export default function ProductCard({
           <h3 className="font-semibold text-gray-900 text-lg mb-1.5 leading-snug group-hover:text-forest transition-colors">
             {name}
           </h3>
+
+          {showRating && (
+            <div
+              className="flex items-center gap-1.5 mb-2"
+              aria-label={`Rated ${averageRating.toFixed(1)} out of 5 from ${reviewCount} ${reviewCount === 1 ? 'review' : 'reviews'}`}
+            >
+              <StarRating rating={averageRating} />
+              <span className="text-xs text-gray-500">
+                {averageRating.toFixed(1)}{' '}
+                <span className="text-gray-400">
+                  ({reviewCount})
+                </span>
+              </span>
+            </div>
+          )}
 
           <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">
             {shortDescription}

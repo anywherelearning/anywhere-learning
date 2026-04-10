@@ -5,6 +5,7 @@ import { useCart } from '@/components/cart/CartProvider';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
+import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
 import { usePurchased } from './PurchasedContext';
 
 interface AddToCartButtonProps {
@@ -97,6 +98,7 @@ export default function AddToCartButton({
         .map((i) => i.slug);
       if (overlapping.length > 0) {
         swapBundle(overlapping, bundleItem);
+        trackAddToCart();
         setJustAdded(true);
         setTimeout(() => setJustAdded(false), 1500);
         return;
@@ -106,9 +108,35 @@ export default function AddToCartButton({
     const added = addItem(bundleItem);
 
     if (added) {
+      trackAddToCart();
       setJustAdded(true);
       setTimeout(() => setJustAdded(false), 1500);
     }
+  }
+
+  function trackAddToCart() {
+    const price = priceCents / 100;
+    pinterestTrack('AddToCart', {
+      value: price,
+      order_quantity: 1,
+      currency: 'USD',
+      line_items: [
+        {
+          product_id: slug,
+          product_name: productName,
+          product_category: category,
+          product_price: price,
+          product_quantity: 1,
+        },
+      ],
+    });
+    ga4AddToCart({
+      item_id: slug,
+      item_name: productName,
+      item_category: category,
+      price,
+      quantity: 1,
+    });
   }
 
   return (

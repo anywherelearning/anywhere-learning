@@ -13,6 +13,7 @@ import { formatPrice } from '@/lib/utils';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
+import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
 
 export const metadata: Metadata = {
   title: "You're All Set!",
@@ -138,11 +139,20 @@ async function getSessionProducts(sessionId: string, token?: string) {
       }
     }
 
+    // Amount the customer actually paid (includes discounts, taxes, BYOB pricing).
+    const amountTotalCents = session.amount_total ?? 0;
+    const currency = (session.currency ?? 'usd').toUpperCase();
+    const buyerEmailForPinterest = session.customer_details?.email ?? null;
+
     return {
       products: purchasedProducts,
       bundleUpgrades: bundleUpgrades.slice(0, 2),
       hasBundles,
       referralCode,
+      orderId: sessionId,
+      amountTotalCents,
+      currency,
+      buyerEmail: buyerEmailForPinterest,
     };
   } catch {
     return null;
@@ -163,6 +173,15 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const hasBundles = data.hasBundles;
   const referralCode = data.referralCode;
 
+  // Pinterest Tag conversion event payload
+  const pinterestLineItems = purchasedProducts.map((p) => ({
+    product_id: p.slug,
+    product_name: p.name,
+    product_category: p.category,
+    product_price: p.priceCents / 100,
+    product_quantity: 1,
+  }));
+
   // Check if user is signed in (for account creation nudge)
   let isSignedIn = false;
   try {
@@ -175,6 +194,13 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   return (
     <>
       <Confetti />
+      <PinterestCheckoutEvent
+        orderId={data.orderId}
+        value={data.amountTotalCents / 100}
+        currency={data.currency}
+        lineItems={pinterestLineItems}
+        buyerEmail={data.buyerEmail}
+      />
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12 sm:py-20">
         {/* ── Celebration Header ── */}
