@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { LogoIcon } from "@/components/Logo";
+import Image from "next/image";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,12 +30,25 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <LogoIcon size={32} />
-          <span className="font-display text-2xl text-forest">
-            Anywhere Learning
-          </span>
+        {/* Logo — must match SiteHeader exactly */}
+        <Link href="/" className="flex items-center gap-2" aria-label="Anywhere Learning home">
+          <Image
+            src="/logo-icon-transparent.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-auto"
+            priority
+            aria-hidden="true"
+          />
+          <Image
+            src="/logo-text-v2.png"
+            alt="Anywhere Learning"
+            width={200}
+            height={50}
+            className="h-16 w-auto"
+            priority
+          />
         </Link>
 
         {/* Nav */}

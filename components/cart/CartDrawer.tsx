@@ -29,6 +29,7 @@ export default function CartDrawer() {
   const [dismissedUpsell, setDismissedUpsell] = useState<string | null>(null);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [upgradeCredits, setUpgradeCredits] = useState<Record<string, { upgradePrice: number; totalCredit: number; ownedCount: number; totalCount: number }>>({});
+  const [ownsFreeBonus, setOwnsFreeBonus] = useState(false);
   const focusTrapRef = useFocusTrap(isCartOpen);
 
   // Fetch upgrade prices for any bundles in the cart
@@ -58,6 +59,31 @@ export default function CartDrawer() {
     fetchUpgrades();
     return () => { cancelled = true; };
   }, [isCartOpen, items]);
+
+  // Check whether the signed-in user already owns the free bundle bonus
+  // (the Future-Ready Skills Map). If they do, we hide the bonus banner
+  // so we don't promise them something they already have.
+  useEffect(() => {
+    if (!isCartOpen || !isSignedIn) {
+      setOwnsFreeBonus(false);
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(
+          `/api/products/ownership?slug=${encodeURIComponent(FREE_BONUS_SLUG)}`,
+        );
+        const data = await res.json();
+        if (!cancelled) {
+          setOwnsFreeBonus(Array.isArray(data.owned) && data.owned.includes(FREE_BONUS_SLUG));
+        }
+      } catch {
+        if (!cancelled) setOwnsFreeBonus(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [isCartOpen, isSignedIn]);
 
   // Lock body scroll when open
   useEffect(() => {
@@ -357,8 +383,12 @@ export default function CartDrawer() {
             </ul>
           )}
 
-          {/* Free Skills Map bonus with any bundle */}
-          {items.some((i) => i.isBundle) && !items.some((i) => i.slug === 'future-ready-skills-map') && (
+          {/* Free Skills Map bonus with any bundle.
+              Hidden if the user already owns it (checked on cart open)
+              or already has it in the current cart. */}
+          {items.some((i) => i.isBundle) &&
+            !items.some((i) => i.slug === FREE_BONUS_SLUG) &&
+            !ownsFreeBonus && (
             <div className="mt-4">
               <div className="flex items-start gap-4 bg-gold/5 border border-gold/20 rounded-xl p-4">
                 <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden">
