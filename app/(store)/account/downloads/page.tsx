@@ -115,7 +115,7 @@ export default async function DownloadsPage() {
           ("Your first adventure starts here") with a shop CTA — we don't
           want two competing empty messages stacked. */}
       {guideCount > 0 && (
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 text-gray-600">
           {guideCount} activity guide{guideCount === 1 ? "" : "s"} ready to open. Use them year after year.
         </p>
       )}
@@ -149,7 +149,7 @@ export default async function DownloadsPage() {
           <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
             Save on what you already have
           </h2>
-          <p className="text-sm text-gray-500 mb-5">
+          <p className="text-sm text-gray-600 mb-5">
             You own some of these guides already. Upgrade to the full bundle
             and we&apos;ll credit what you&apos;ve paid.
           </p>
@@ -182,12 +182,12 @@ export default async function DownloadsPage() {
                   <h3 className="font-semibold text-gray-900 line-clamp-1">
                     {upgrade.bundle.name}
                   </h3>
-                  <p className="text-sm text-gray-500 mt-0.5">
+                  <p className="text-sm text-gray-600 mt-0.5">
                     You own {upgrade.ownedCount} of {upgrade.totalCount} guides
                   </p>
                   {upgrade.amountAlreadyPaid > 0 && (
                     <div className="flex items-center gap-2 mt-1.5">
-                      <span className="text-xs text-gray-400 line-through">
+                      <span className="text-xs text-gray-500 line-through">
                         {formatPrice(upgrade.bundle.priceCents)}
                       </span>
                       <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
@@ -218,7 +218,7 @@ export default async function DownloadsPage() {
             <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
               Know a family who&apos;d love these?
             </h2>
-            <p className="text-sm text-gray-500 mb-5">
+            <p className="text-sm text-gray-600 mb-5">
               Share the love - send them a link to browse.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
@@ -229,7 +229,7 @@ export default async function DownloadsPage() {
       {/* ── Explore more footer ── */}
       {purchases.length > 0 && (
         <div className="mt-12 text-center pt-8 pb-4">
-          <p className="text-gray-400 text-sm mb-2">
+          <p className="text-gray-600 text-sm mb-2">
             Looking for something new?
           </p>
           <Link
@@ -243,6 +243,7 @@ export default async function DownloadsPage() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
