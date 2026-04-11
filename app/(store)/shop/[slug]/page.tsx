@@ -66,7 +66,7 @@ export async function generateMetadata({
   const suffix = categoryKeywords[product.category] || 'Homeschool Activities';
   return {
     title: `${product.name} | ${suffix}`,
-    description: `${product.shortDescription} Low-prep digital guide for ages ${product.ageRange || '6-14'}. Instant download. Use on any device.`,
+    description: `${product.shortDescription} Low-prep digital guide for ${product.ageRange || 'ages 6-14'}. Instant download. Use on any device.`,
     alternates: {
       canonical: `https://anywherelearning.co/shop/${product.slug}`,
     },

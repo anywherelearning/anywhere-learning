@@ -156,7 +156,7 @@ export default function DownloadCard({
 
           {/* Meta row */}
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-gray-400">
-            {ageRange && <span>Ages {ageRange}</span>}
+            {ageRange && <span>{ageRange}</span>}
             {activityCount && <span>{activityCount} activities</span>}
             <span>Purchased {formatDate(purchasedAt)}</span>
           </div>

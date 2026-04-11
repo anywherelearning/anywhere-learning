@@ -189,7 +189,7 @@ export default function NativeProductDetail({
           }}
         >
           {product.ageRange && (
-            <span>Ages {product.ageRange}</span>
+            <span>{product.ageRange}</span>
           )}
           {product.activityCount && product.activityCount > 1 && (
             <span>{product.activityCount} activities</span>
