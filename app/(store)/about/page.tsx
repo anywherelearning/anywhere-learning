@@ -115,40 +115,31 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageLd) }}
       />
       {/* Hero - personal, warm, sets the tone */}
-      <section className="relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
+      <section className="relative py-20 sm:py-28 md:py-32 overflow-hidden">
         <Image
-          src="/about-hero-bg.jpg"
+          src="/about-hero-family.jpg"
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[center_55%]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/90 to-cream/80 lg:from-cream/95 lg:via-cream/85 lg:to-cream/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/80 to-cream/40 lg:from-cream/85 lg:via-cream/70 lg:to-cream/25" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent" />
-        <div className="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
-          <div className="relative mx-auto w-36 h-36 md:w-44 md:h-44 mb-8">
-            <Image
-              src="/about-hero.jpg"
-              alt="Amelie smiling outdoors"
-              fill
-              sizes="(max-width: 768px) 144px, 176px"
-              className="object-cover rounded-full shadow-lg"
-              priority
-            />
-            <div className="absolute -bottom-1 -right-1 w-full h-full rounded-full border-2 border-gold/20 -z-10" />
+        <div className="relative px-5 sm:px-10 lg:px-20">
+          <div className="max-w-xl lg:max-w-2xl">
+            <p className="text-sm font-semibold text-gold-dark uppercase tracking-[0.2em] mb-4">
+              Meet Amelie
+            </p>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest leading-[1.1] mb-6 text-balance">
+              I spent 15 years in the classroom. Then I took my kids out of it.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              Anywhere Learning didn&apos;t start as a business. It started as a
+              question I couldn&apos;t stop asking: why does the system I spent 15 years
+              working in fail so many of the kids sitting right in front of me?
+            </p>
           </div>
-          <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-            Meet Amelie
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest leading-[1.1] mb-6 text-balance">
-            I spent 15 years in the classroom. Then I took my kids out of it.
-          </h1>
-          <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
-            Anywhere Learning didn&apos;t start as a business. It started as a
-            question I couldn&apos;t stop asking: why does the system I spent 15 years
-            working in fail so many of the kids sitting right in front of me?
-          </p>
         </div>
       </section>
 

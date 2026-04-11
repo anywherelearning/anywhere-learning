@@ -1,16 +1,15 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { blogCategories, formatDate, formatReadTime, type BlogCategory } from '@/lib/blog';
+import { blogCategories, type BlogCategory } from '@/lib/blog';
 
 interface BlogCardProps {
   slug: string;
   title: string;
   excerpt: string;
+  /** Curated one-line teaser. Falls back to excerpt when not set. */
+  hook?: string;
   category: BlogCategory;
-  publishedAt: string;
-  readTimeMinutes: number;
-  author: { name: string };
   heroImage?: string;
   heroImageAlt?: string;
 }
@@ -49,18 +48,19 @@ const categoryIcons: Record<BlogCategory, ReactNode> = {
 };
 
 export default function BlogCard({
-  slug, title, excerpt, category, publishedAt, readTimeMinutes, author, heroImage, heroImageAlt,
+  slug, title, excerpt, hook, category, heroImage, heroImageAlt,
 }: BlogCardProps) {
   const cat = blogCategories[category];
+  const teaser = hook || excerpt;
 
   return (
     <Link
       href={`/blog/${slug}`}
-      className="group block rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+      className="group h-full flex flex-col rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
     >
       {/* Image or placeholder with category color */}
       <div
-        className="relative aspect-[16/9] flex items-center justify-center overflow-hidden"
+        className="relative aspect-[16/9] flex items-center justify-center overflow-hidden flex-shrink-0"
         style={{ background: heroImage ? undefined : `linear-gradient(135deg, ${cat.color}20, ${cat.color}40)` }}
       >
         {heroImage ? (
@@ -86,20 +86,13 @@ export default function BlogCard({
       </div>
 
       {/* Card body */}
-      <div className="p-5 md:p-6">
-        <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors line-clamp-2">
+      <div className="p-5 md:p-6 flex-1 flex flex-col">
+        <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-4">
-          {excerpt}
+        <p className="text-sm text-gray-500 leading-relaxed">
+          {teaser}
         </p>
-        <div className="flex items-center justify-between text-xs text-gray-400">
-          <span>{formatDate(publishedAt)}</span>
-          <span className="flex items-center gap-3">
-            <span>{formatReadTime(readTimeMinutes)}</span>
-            <span className="hidden sm:inline">{author.name}</span>
-          </span>
-        </div>
       </div>
     </Link>
   );

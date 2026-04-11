@@ -312,79 +312,58 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       ) : (
         <>
           <section className="relative py-20 sm:py-28 md:py-32 overflow-hidden">
-            {/* Faded nature landscape background. Mirrors the about hero
-                pattern: full-cover photo with a cream gradient overlay so
-                the headline stays readable, plus a bottom fade-to-cream so
-                the hero blends into the trust strip below. */}
+            {/* Nature landscape background with a cream gradient overlay
+                so the headline stays readable over the photo. */}
             <Image
               src="/shop-hero-bg.jpg"
               alt=""
               fill
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover object-[30%_bottom]"
               priority
             />
+            {/* Gradient is heavy on the right so the text block stays
+                readable while the kids photo shows through on the left. */}
             <div
-              className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/75 to-cream/60 lg:from-cream/80 lg:via-cream/65 lg:to-cream/50"
+              className="absolute inset-0 bg-gradient-to-l from-cream/90 via-cream/85 to-cream/55 lg:from-cream/85 lg:via-cream/75 lg:to-cream/35"
               aria-hidden="true"
             />
-            <div
-              className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute inset-0 pointer-events-none overflow-hidden"
-              aria-hidden="true"
-            >
-              <svg
-                className="absolute -left-4 top-8 w-24 md:w-32 opacity-[0.06] animate-soft-float"
-                viewBox="0 0 100 100"
-                fill="#588157"
-              >
-                <path d="M50 5 Q65 25 80 40 Q65 45 50 70 Q35 45 20 40 Q35 25 50 5Z" />
-                <path
-                  d="M50 20 L50 70"
-                  stroke="#588157"
-                  strokeWidth="1"
-                  fill="none"
-                />
-              </svg>
-              <svg
-                className="absolute right-8 top-4 w-20 md:w-28 opacity-[0.05] animate-soft-float"
-                style={{ animationDelay: "2s" }}
-                viewBox="0 0 100 100"
-                fill="#d4a373"
-              >
-                <path d="M50 5 Q65 25 80 40 Q65 45 50 70 Q35 45 20 40 Q35 25 50 5Z" />
-              </svg>
-              <div
-                className="absolute left-[15%] bottom-12 w-3 h-3 rounded-full bg-gold/20 animate-soft-float"
-                style={{ animationDelay: "1s" }}
-              />
-              <div
-                className="absolute right-[20%] bottom-20 w-2 h-2 rounded-full bg-forest/15 animate-soft-float"
-                style={{ animationDelay: "3s" }}
-              />
-            </div>
             <div className="relative mx-auto max-w-6xl px-5 sm:px-8 text-center hero-stagger">
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+              <p className="text-sm font-semibold text-forest-dark uppercase tracking-[0.2em] mb-4">
                 Ready-to-Use Activity Guides
               </p>
               <h1 className="font-display text-4xl text-forest sm:text-5xl lg:text-6xl text-balance mb-4">
                 Homeschool Activity Guides
                 <br className="hidden sm:block" /> for Real-World Learning
               </h1>
-              <p className="mx-auto mt-4 max-w-xl text-lg text-gray-500">
+              <p className="mx-auto mt-4 max-w-xl text-lg text-[#8b7355]">
                 Low-prep activities for homeschool and worldschool families.
                 Open on any device, use year after year.
               </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center">
+                <Link
+                  href="/shop?category=bundle"
+                  className="inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 px-7 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-base"
+                >
+                  Shop Bundles
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/free-guide"
+                  className="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white border border-forest/30 hover:border-forest text-forest-dark font-semibold py-3.5 px-7 rounded-2xl transition-all duration-300 text-base"
+                >
+                  Get the Free Guide
+                </Link>
+              </div>
             </div>
           </section>
 
           {/* Trust Strip */}
-          <div className="border-y border-gray-200/60 bg-white/50">
+          <div className="bg-forest">
             <div className="mx-auto max-w-4xl px-5 sm:px-8 py-4">
-              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-gray-500">
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-cream">
                 {[
                   "Low Prep",
                   "Download & Use Instantly",
@@ -393,7 +372,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-2">
                     <svg
-                      className="w-4 h-4 text-forest"
+                      className="w-4 h-4 text-gold"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -407,7 +386,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                   </span>
                 ))}
               </div>
-              <p className="text-center text-sm text-gray-400 mt-3">
+              <p className="text-center text-sm text-cream/70 mt-3">
                 Designed by a teacher with 15 years of classroom experience who left to homeschool her own kids.
               </p>
             </div>

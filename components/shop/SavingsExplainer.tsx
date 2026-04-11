@@ -4,34 +4,6 @@ import Link from 'next/link';
 export default function SavingsExplainer() {
   return (
     <section className="relative py-12 md:py-16 overflow-hidden bg-forest-section">
-      {/* Decorative leaves - match hero pattern */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg
-          className="absolute -left-2 top-6 w-16 md:w-20 opacity-[0.08] animate-soft-float hidden md:block"
-          viewBox="0 0 100 100"
-          fill="#faf9f6"
-        >
-          <path d="M50 5 Q65 25 80 40 Q65 45 50 70 Q35 45 20 40 Q35 25 50 5Z" />
-          <path d="M50 20 L50 70" stroke="#faf9f6" strokeWidth="1" fill="none" />
-        </svg>
-        <svg
-          className="absolute right-4 top-2 w-14 md:w-20 opacity-[0.06] animate-soft-float hidden md:block"
-          style={{ animationDelay: '2.5s' }}
-          viewBox="0 0 100 100"
-          fill="#d4a373"
-        >
-          <path d="M50 5 Q65 25 80 40 Q65 45 50 70 Q35 45 20 40 Q35 25 50 5Z" />
-        </svg>
-        <div
-          className="absolute left-[12%] bottom-8 w-2.5 h-2.5 rounded-full bg-gold/20 animate-soft-float hidden md:block"
-          style={{ animationDelay: '1.5s' }}
-        />
-        <div
-          className="absolute right-[18%] top-10 w-2 h-2 rounded-full bg-cream/10 animate-soft-float hidden md:block"
-          style={{ animationDelay: '3.5s' }}
-        />
-      </div>
-
       <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-10">
