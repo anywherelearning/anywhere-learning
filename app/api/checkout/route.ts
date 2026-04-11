@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { products, orders, users } from '@/lib/db/schema';
-import { inArray, eq, and } from 'drizzle-orm';
+import { inArray, eq, and, sql } from 'drizzle-orm';
 import { randomBytes } from 'crypto';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
-import { BYOB_TIERS, BUNDLE_CONTENTS } from '@/lib/cart';
+import { BYOB_TIERS, BUNDLE_CONTENTS, FREE_BONUS_SLUG } from '@/lib/cart';
 import { auth } from '@clerk/nextjs/server';
 
 function formatCents(cents: number): string {
@@ -231,7 +231,49 @@ export async function POST(req: NextRequest) {
 
     // Build line items - apply BYOB discount to individual items via price_data
     const hasBundle = verifiedProducts.some((p) => p.isBundle);
-    const lineItems: Array<{
+
+    // ── Check Skills Map ownership up front ──────────────────────────
+    // The bundle gives the Skills Map as a free bonus, but we must not
+    // re-gift it. The check is shared by two code paths below:
+    //   1. Skills Map already in cart + bundle → drop it from line items
+    //      entirely (Stripe's line-item details dropdown used to show it
+    //      as a $0 bonus even when the user already owned it).
+    //   2. Skills Map NOT in cart + bundle → skip the auto-add below.
+    // Robust matching: case-insensitive email join + partially_refunded
+    // status. This catches pending-user rows created by guest checkouts
+    // before Clerk sign-in and email case drift between Clerk and Stripe.
+    let alreadyOwnsSkillsMap = false;
+    if (hasBundle && email) {
+      try {
+        const skillsMapProduct = await db
+          .select({ id: products.id })
+          .from(products)
+          .where(eq(products.slug, FREE_BONUS_SLUG))
+          .limit(1);
+
+        if (skillsMapProduct.length > 0) {
+          const ownedRow = await db
+            .select({ id: orders.id })
+            .from(orders)
+            .innerJoin(users, eq(orders.userId, users.id))
+            .where(
+              and(
+                sql`lower(${users.email}) = lower(${email})`,
+                eq(orders.productId, skillsMapProduct[0].id),
+                inArray(orders.status, ['completed', 'partially_refunded']),
+              ),
+            )
+            .limit(1);
+          alreadyOwnsSkillsMap = ownedRow.length > 0;
+        }
+      } catch (error) {
+        // Non-critical - if the check fails, fall back to the old behavior
+        // (include the bonus) so a DB hiccup never costs us a sale.
+        console.error('Failed to check past Skills Map ownership:', error);
+      }
+    }
+
+    type LineItem = {
       price?: string;
       price_data?: {
         currency: string;
@@ -244,10 +286,14 @@ export async function POST(req: NextRequest) {
         unit_amount: number;
       };
       quantity: number;
-    }> = verifiedProducts.map((product) => {
-      // Skills Map is free when any bundle is in the cart
-      if (hasBundle && product.slug === 'future-ready-skills-map') {
-        return {
+    };
+    const lineItems: LineItem[] = verifiedProducts.flatMap((product): LineItem[] => {
+      // Skills Map is free when any bundle is in the cart — unless the
+      // buyer already owns it, in which case drop it from the session
+      // entirely so it doesn't show up in Stripe's line-item dropdown.
+      if (hasBundle && product.slug === FREE_BONUS_SLUG) {
+        if (alreadyOwnsSkillsMap) return [];
+        return [{
           price_data: {
             currency: 'usd',
             product_data: {
@@ -261,12 +307,12 @@ export async function POST(req: NextRequest) {
             unit_amount: 0,
           },
           quantity: 1,
-        };
+        }];
       }
       if (!product.isBundle && byobDiscount > 0) {
         // BYOB-discounted individual item - use price_data with adjusted amount
         const discountedAmount = Math.round(product.priceCents * (1 - byobDiscount / 100));
-        return {
+        return [{
           price_data: {
             currency: 'usd',
             product_data: {
@@ -279,13 +325,13 @@ export async function POST(req: NextRequest) {
             unit_amount: discountedAmount,
           },
           quantity: 1,
-        };
+        }];
       }
       // Bundle with upgrade credit - use price_data with adjusted amount
       const credit = product.isBundle ? (bundleCredits[product.slug] || 0) : 0;
       if (credit > 0) {
         const upgradeAmount = Math.max(0, product.priceCents - credit);
-        return {
+        return [{
           price_data: {
             currency: 'usd',
             product_data: {
@@ -298,68 +344,29 @@ export async function POST(req: NextRequest) {
             unit_amount: upgradeAmount,
           },
           quantity: 1,
-        };
+        }];
       }
       // Bundles and non-discounted items use their existing Stripe price
-      return { price: product.stripePriceId, quantity: 1 };
+      return [{ price: product.stripePriceId, quantity: 1 }];
     });
 
-    // Add free Skills Map bonus when any bundle is in the cart,
-    // but skip if the customer already owns it or already added it themselves.
-    const skillsMapAlreadyInCart = verifiedProducts.some((p) => p.slug === 'future-ready-skills-map');
-    let alreadyOwnsSkillsMap = false;
-
-    if (hasBundle && !skillsMapAlreadyInCart) {
-      // Check if this email has a past completed order for the Skills Map (skip if no email)
-      if (email) try {
-        const existingUser = await db
-          .select({ id: users.id })
-          .from(users)
-          .where(eq(users.email, email))
-          .limit(1);
-
-        if (existingUser.length > 0) {
-          const skillsMapProduct = await db
-            .select({ id: products.id })
-            .from(products)
-            .where(eq(products.slug, 'future-ready-skills-map'))
-            .limit(1);
-
-          if (skillsMapProduct.length > 0) {
-            const pastOrder = await db
-              .select({ id: orders.id })
-              .from(orders)
-              .where(
-                and(
-                  eq(orders.userId, existingUser[0].id),
-                  eq(orders.productId, skillsMapProduct[0].id),
-                  eq(orders.status, 'completed'),
-                ),
-              )
-              .limit(1);
-
-            alreadyOwnsSkillsMap = pastOrder.length > 0;
-          }
-        }
-      } catch (error) {
-        // Non-critical - if the check fails, still offer the bonus
-        console.error('Failed to check past Skills Map ownership:', error);
-      }
-
-      if (!alreadyOwnsSkillsMap) {
-        lineItems.push({
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
-              description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
-              images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
-            },
-            unit_amount: 0,
+    // Auto-add the free Skills Map bonus when any bundle is in the cart,
+    // unless the buyer already owns it (checked above) or already has
+    // it in the cart (handled by the line-items builder above).
+    const skillsMapAlreadyInCart = verifiedProducts.some((p) => p.slug === FREE_BONUS_SLUG);
+    if (hasBundle && !skillsMapAlreadyInCart && !alreadyOwnsSkillsMap) {
+      lineItems.push({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
+            description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
+            images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
           },
-          quantity: 1,
-        });
-      }
+          unit_amount: 0,
+        },
+        quantity: 1,
+      });
     }
 
     // Generate a one-time token to prevent session ID guessing on the success page
