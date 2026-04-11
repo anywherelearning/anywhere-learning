@@ -20,7 +20,7 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ slug: string }> },
 ) {
-  // Rate limit: 30 req / 60s — public endpoint with file I/O
+  // Rate limit: 30 req / 60s. Public endpoint with file I/O
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 
@@ -36,7 +36,7 @@ export async function GET(
       .limit(1);
     previewBlobUrl = row[0]?.previewBlobUrl ?? null;
   } catch {
-    // DB unavailable — fall through to local fallback
+    // DB unavailable. Fall through to local fallback
   }
 
   if (previewBlobUrl && previewBlobUrl.startsWith('https://')) {

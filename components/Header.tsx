@@ -30,7 +30,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        {/* Logo — must match SiteHeader exactly */}
+        {/* Logo. Must match SiteHeader exactly */}
         <Link href="/" className="flex items-center gap-2" aria-label="Anywhere Learning home">
           <Image
             src="/logo-icon-transparent.png"

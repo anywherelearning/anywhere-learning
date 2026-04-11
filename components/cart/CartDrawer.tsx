@@ -69,7 +69,7 @@ export default function CartDrawer() {
 
   // Check whether the signed-in user already owns the free bundle bonus
   // (the Future-Ready Skills Map). We fire this as soon as we know the
-  // sign-in state — NOT on cart open — so the answer is usually already
+  // sign-in state, NOT on cart open, so the answer is usually already
   // resolved by the time the user clicks the cart button. This prevents
   // the bonus banner from flashing in then disappearing for users who
   // already own it.
@@ -77,7 +77,7 @@ export default function CartDrawer() {
     // Wait for Clerk to finish loading before we decide anything.
     if (!isClerkLoaded) return;
     if (!isSignedIn) {
-      // Signed-out users can't own anything — banner is safe to show.
+      // Signed-out users can't own anything, so the banner is safe to show.
       setOwnsFreeBonus(false);
       return;
     }

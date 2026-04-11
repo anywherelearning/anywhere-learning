@@ -12,7 +12,7 @@ const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
  * and audience quality. Pinterest hashes the email in-browser before sending.
  *
  * Rendered inside the nested provider tree (next to CartDrawer) so Clerk's
- * `useUser` hook resolves cleanly — same pattern CartDrawer uses.
+ * `useUser` hook resolves cleanly. Same pattern CartDrawer uses.
  */
 export default function PinterestEnhancedMatch() {
   // eslint-disable-next-line react-hooks/rules-of-hooks

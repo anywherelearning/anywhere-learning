@@ -322,7 +322,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "My Nature Journal",
     slug: "nature-journal-walks",
     description:
-      "A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape — backyard, park, trail, or beach. No nature expertise required from you. Just open it up, step outside, and let curiosity lead.",
+      "A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape: backyard, park, trail, or beach. No nature expertise required from you. Just open it up, step outside, and let curiosity lead.",
     shortDescription:
       "A guided nature journal with prompts for sketching, writing, and outdoor observation.",
     priceCents: 799,

@@ -23,7 +23,7 @@ interface Props {
  * Fires Pinterest `Checkout` conversion event once on mount.
  *
  * Also passes the buyer's email (from the Stripe session) into pintrk's
- * automatic enhanced match, dramatically improving attribution quality —
+ * automatic enhanced match, dramatically improving attribution quality.
  * Pinterest hashes the email in-browser before sending it.
  *
  * Uses a ref guard + sessionStorage to avoid double-firing if the user

@@ -177,7 +177,7 @@ export default function HomePage() {
       <main id="main-content">
 
         {/* ═══════════════════════════════════════════
-            HERO — Punchy, warm, direct
+            HERO - Punchy, warm, direct
         ═══════════════════════════════════════════ */}
         <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
           {/* Full-bleed background image */}
@@ -189,7 +189,7 @@ export default function HomePage() {
             className="object-cover object-bottom"
             priority
           />
-          {/* Gradient overlay — heavier on the left for text readability */}
+          {/* Gradient overlay. Heavier on the left for text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/30 lg:from-cream/95 lg:via-cream/70 lg:to-transparent" />
           {/* Bottom fade to cream */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
@@ -235,12 +235,12 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            SOCIAL PROOF TICKER — Scrolling marquee
+            SOCIAL PROOF TICKER - Scrolling marquee
         ═══════════════════════════════════════════ */}
         <SocialProofTicker />
 
         {/* ═══════════════════════════════════════════
-            PAIN POINTS — Compact emotional hook
+            PAIN POINTS - Compact emotional hook
         ═══════════════════════════════════════════ */}
         <section className="bg-forest-section py-14 md:py-16 relative overflow-hidden">
           <div className="absolute top-6 right-[10%] w-48 h-48 rounded-full border border-white/[0.04]" aria-hidden="true" />
@@ -320,7 +320,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            HOW IT WORKS — Dead simple
+            HOW IT WORKS - Dead simple
         ═══════════════════════════════════════════ */}
         <section className="bg-forest-subtle-gradient py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
@@ -396,7 +396,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            WHY FAMILIES CHOOSE THIS — Verifiable product facts
+            WHY FAMILIES CHOOSE THIS - Verifiable product facts
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
@@ -478,7 +478,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            MEET THE MAKER — Personal brand
+            MEET THE MAKER - Personal brand
         ═══════════════════════════════════════════ */}
         <section className="bg-forest-subtle-gradient py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
@@ -571,7 +571,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            EMAIL CAPTURE — Soft opt-in for visitors not ready to buy
+            EMAIL CAPTURE - Soft opt-in for visitors not ready to buy
         ═══════════════════════════════════════════ */}
         <section className="bg-cream py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
@@ -600,7 +600,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            FINAL CTA — Bold, warm
+            FINAL CTA - Bold, warm
         ═══════════════════════════════════════════ */}
         <section className="relative bg-forest-texture py-20 md:py-28 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" aria-hidden="true" />

@@ -8,7 +8,7 @@ export default function BlogNewsletterCTA() {
           Get Inspiration Delivered
         </h3>
         <p className="text-cream/50 mb-6 text-sm md:text-base">
-          Practical ideas, encouragement, and real-world learning tips — only
+          Practical ideas, encouragement, and real-world learning tips, only
           when we have something worth sharing. No spam. Unsubscribe anytime.
         </p>
         <EmailForm variant="dark" />

@@ -18,7 +18,7 @@ export const products = pgTable('products', {
   compareAtPriceCents: integer('compare_at_price_cents'),
   stripePriceId: text('stripe_price_id').notNull(),
   // Bundles have blobUrl = '' (empty string) because the Stripe webhook
-  // expands a bundle purchase into child product orders — the download
+  // expands a bundle purchase into child product orders. The download
   // endpoint only ever reads blobUrl from individual products. NOT NULL is
   // enforced at the column level; the value is simply unused for bundles.
   blobUrl: text('blob_url').notNull(),

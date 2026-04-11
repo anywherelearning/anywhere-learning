@@ -203,7 +203,7 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     const hasBundles = purchasedProducts.some((p) => p.isBundle);
 
     // ─────────────────────────────────────────────────────────────────────
-    // PRICING INVARIANT — orders.amountCents is the REAL paid amount
+    // PRICING INVARIANT: orders.amountCents is the REAL paid amount
     //
     // We distribute Stripe's amountTotal (which is already net of BYOB
     // mix-and-match discounts AND promo codes) across products proportionally

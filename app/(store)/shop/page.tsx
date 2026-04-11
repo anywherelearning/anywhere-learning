@@ -312,7 +312,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       ) : (
         <>
           <section className="relative py-20 sm:py-28 md:py-32 overflow-hidden">
-            {/* Faded nature landscape background — mirrors the about hero
+            {/* Faded nature landscape background. Mirrors the about hero
                 pattern: full-cover photo with a cream gradient overlay so
                 the headline stays readable, plus a bottom fade-to-cream so
                 the hero blends into the trust strip below. */}

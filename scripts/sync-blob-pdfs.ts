@@ -172,7 +172,7 @@ async function listAllBlobs() {
   do {
     const result = await list({ cursor, limit: 1000 });
     for (const b of result.blobs) {
-      // Use the decoded pathname as key — pathname is the "filename" we put()
+      // Use the decoded pathname as key. Pathname is the "filename" we put()
       index.set(b.pathname, { url: b.url, size: b.size });
     }
     cursor = result.cursor;
@@ -239,7 +239,7 @@ async function main() {
       return;
     }
 
-    // Sizes match — Blob copy is current. Just make sure DB points at it.
+    // Sizes match. Blob copy is current. Just make sure DB points at it.
     if (!currentBlobUrl || currentBlobUrl !== existing.url) {
       plan.push({
         kind, slug, filename, localSize, plan: 'DB-UPDATE-ONLY',
@@ -315,7 +315,7 @@ async function main() {
 
   // 5. Orphan detection (if --prune was passed)
   // An orphan is any PDF on Blob that no product row references. Non-PDF files
-  // (images, lead magnet, etc) are not considered by this pass — it only
+  // (images, lead magnet, etc) are not considered by this pass. It only
   // targets PDFs produced by this sync pipeline.
   const orphans: Array<{ pathname: string; url: string; size: number }> = [];
   if (doPrune) {
@@ -341,7 +341,7 @@ async function main() {
   }
 
   if (dryRun) {
-    console.log(`\nDry run — nothing changed. Re-run with --run to apply.`);
+    console.log(`\nDry run. Nothing changed. Re-run with --run to apply.`);
     process.exit(0);
   }
 

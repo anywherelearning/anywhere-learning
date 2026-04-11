@@ -122,7 +122,7 @@ export async function POST(req: NextRequest) {
     }
 
     // ─────────────────────────────────────────────────────────────────────
-    // Bundle upgrade credits — authoritative charge path
+    // Bundle upgrade credits: authoritative charge path
     //
     // If the user already owns child products of a bundle in the cart, credit
     // what they ACTUALLY paid (orders.amountCents), not SRP. This field is
@@ -288,7 +288,7 @@ export async function POST(req: NextRequest) {
       quantity: number;
     };
     const lineItems: LineItem[] = verifiedProducts.flatMap((product): LineItem[] => {
-      // Skills Map is free when any bundle is in the cart — unless the
+      // Skills Map is free when any bundle is in the cart, unless the
       // buyer already owns it, in which case drop it from the session
       // entirely so it doesn't show up in Stripe's line-item dropdown.
       if (hasBundle && product.slug === FREE_BONUS_SLUG) {

@@ -53,7 +53,7 @@ export function getTableOfContents(content: ContentBlock[]) {
  * like "1. " or "3) " are stripped from the step name so the schema reads
  * cleanly to search engines.
  *
- * Returns an empty array if fewer than 3 qualifying steps are found — the
+ * Returns an empty array if fewer than 3 qualifying steps are found. The
  * caller is expected to skip HowTo JSON-LD in that case.
  */
 export function getHowToSteps(

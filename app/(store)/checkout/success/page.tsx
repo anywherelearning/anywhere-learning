@@ -18,7 +18,7 @@ import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
 import BundleUpgradeButton from '@/components/account/BundleUpgradeButton';
 
-// Force dynamic rendering — the Skills Map bonus check reads the buyer's
+// Force dynamic rendering. The Skills Map bonus check reads the buyer's
 // order history, which must never be cached across users or visits.
 export const dynamic = 'force-dynamic';
 
@@ -99,7 +99,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
     // Build the same purchasedAmountByProduct map the downloads page uses,
     // seeded from (a) this session's proportional per-product amounts and
     // (b) any prior orders the buyer already has. The downloads page reads
-    // orders.amountCents directly — here we must mirror the webhook's
+    // orders.amountCents directly. Here we must mirror the webhook's
     // proportional distribution because the webhook may not have run yet.
     // See the pricing invariant in app/api/webhooks/stripe/route.ts; all
     // three sites (webhook, checkout, and this page) must stay in sync.
@@ -232,7 +232,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
           alreadyOwnsBonus = priorOrders.length > 0;
         }
       } catch (err) {
-        // Non-critical — log and fall back to showing the banner on error.
+        // Non-critical. Log and fall back to showing the banner on error.
         console.error('Skills Map prior-ownership check failed:', err);
       }
     }

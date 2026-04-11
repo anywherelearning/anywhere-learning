@@ -1,7 +1,7 @@
 /**
  * Analytics tracking helpers.
  * Covers Pinterest Tag and Google Analytics 4 (gtag) events. Safe to call from
- * client code — every function no-ops if its underlying global isn't loaded
+ * client code. Every function no-ops if its underlying global isn't loaded
  * yet or if we're server-side.
  */
 
@@ -45,7 +45,7 @@ declare global {
   }
 }
 
-/** GA4 ecommerce item shape — matches the standard gtag.js schema. */
+/** GA4 ecommerce item shape. Matches the standard gtag.js schema. */
 export type Ga4Item = {
   item_id: string;
   item_name: string;
@@ -105,7 +105,7 @@ export function pinterestPageVisit(): void {
 }
 
 /**
- * Update Pinterest's enhanced-match email. Safe to call multiple times — Pinterest's
+ * Update Pinterest's enhanced-match email. Safe to call multiple times. Pinterest's
  * core.js accepts an updated load call and will hash/process the new email for
  * improved attribution and audience matching.
  */

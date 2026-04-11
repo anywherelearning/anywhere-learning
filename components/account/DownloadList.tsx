@@ -48,7 +48,7 @@ interface DownloadListProps {
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
-/** Icon per category — matches the shop page. */
+/** Icon per category. Matches the shop page. */
 const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   'all': SparklesIcon,
   'start-here': StarIcon,

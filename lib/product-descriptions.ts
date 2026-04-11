@@ -267,7 +267,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Guided journaling prompts for outdoor observation',
       'Sketching, drawing, and descriptive writing activities',
       'Observation focuses: shadows, textures, sounds, patterns, colour',
-      'Seasonal variations — works year-round',
+      'Seasonal variations that work year-round',
       'Reusable format: use again and again across seasons',
     ],
     skillTags: ['Observation', 'Journaling', 'Science', 'Art', 'Writing'],

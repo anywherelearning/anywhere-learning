@@ -110,7 +110,7 @@ export default async function DownloadsPage() {
       </h1>
       {/* Only render the subtitle when there's something to describe.
           For empty states, DownloadList renders its own richer empty state
-          ("Your first adventure starts here") with a shop CTA — we don't
+          ("Your first adventure starts here") with a shop CTA, so we don't
           want two competing empty messages stacked. */}
       {guideCount > 0 && (
         <p className="mt-2 text-gray-600">

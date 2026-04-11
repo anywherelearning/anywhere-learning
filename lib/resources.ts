@@ -85,7 +85,7 @@ const resources: ResourcePage[] = [
     content: [
       {
         type: 'summary',
-        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research on experiential learning — most famously David Kolb\'s work and [more recent systematic reviews](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279) — consistently links hands-on, reflective experience with deeper conceptual understanding and stronger long-term retention than passive instruction alone.',
+        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research on experiential learning (most famously David Kolb\'s work and [more recent systematic reviews](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279)) consistently links hands-on, reflective experience with deeper conceptual understanding and stronger long-term retention than passive instruction alone.',
       },
       {
         type: 'paragraph',
@@ -227,7 +227,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'These aren\'t chores. They\'re executive function training disguised as real life. Every time a child plans, executes, and adjusts, they\'re building the cognitive skills that matter for the long haul. The landmark [Dunedin Study, published in PNAS in 2011](https://www.pnas.org/doi/10.1073/pnas.1010076108), followed 1,000 children from birth to age 32 and found that childhood self-control and executive function predicted adult health, wealth, and overall life outcomes — even after controlling for IQ and family background. These are the skills you can\'t teach from a worksheet. You build them one real decision at a time.',
+        text: 'These aren\'t chores. They\'re executive function training disguised as real life. Every time a child plans, executes, and adjusts, they\'re building the cognitive skills that matter for the long haul. The landmark [Dunedin Study, published in PNAS in 2011](https://www.pnas.org/doi/10.1073/pnas.1010076108), followed 1,000 children from birth to age 32 and found that childhood self-control and executive function predicted adult health, wealth, and overall life outcomes, even after controlling for IQ and family background. These are the skills you can\'t teach from a worksheet. You build them one real decision at a time.',
       },
       {
         type: 'paragraph',
@@ -369,7 +369,7 @@ const resources: ResourcePage[] = [
     content: [
       {
         type: 'summary',
-        text: 'Nature-based learning uses the outdoors as a classroom, combining exploration, observation, and hands-on activities to build science, math, and critical thinking skills. A [2022 systematic review in Educational Psychology Review](https://link.springer.com/article/10.1007/s10648-022-09658-5) examining greenspace and children\'s cognitive functioning documented consistent benefits for attention, executive function, and lower physiological stress compared to indoor environments. Families can start with nothing more than a weekly walk on the same trail — no lesson plans, field guides, or special equipment required.',
+        text: 'Nature-based learning uses the outdoors as a classroom, combining exploration, observation, and hands-on activities to build science, math, and critical thinking skills. A [2022 systematic review in Educational Psychology Review](https://link.springer.com/article/10.1007/s10648-022-09658-5) examining greenspace and children\'s cognitive functioning documented consistent benefits for attention, executive function, and lower physiological stress compared to indoor environments. Families can start with nothing more than a weekly walk on the same trail. No lesson plans, field guides, or special equipment required.',
       },
       {
         type: 'paragraph',
@@ -1671,7 +1671,7 @@ const resources: ResourcePage[] = [
       { type: 'pull-quote', text: 'The homeschool journey isn\'t a straight line. It\'s a winding path, and every family walks it differently.' },
       { type: 'heading', level: 2, text: 'Where to go from here' },
       { type: 'paragraph', text: 'Wherever you are on this journey, the blog posts linked throughout this page go deeper on each phase. Start with whatever matches your current stage, and know that every homeschool parent before you has stood exactly where you\'re standing now. You\'re not behind. You\'re not failing. You\'re just getting started, and that\'s exactly where you\'re supposed to be.' },
-      { type: 'cta', text: 'New to all of this? Our free guide gives you 10 simple activities to try this week — no curriculum, no pressure, and no judgment.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'cta', text: 'New to all of this? Our free guide gives you 10 simple activities to try this week. No curriculum, no pressure, and no judgment.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do I know if homeschooling is right for my family?', answer: 'If your child is unhappy, unstimulated, or struggling in their current environment, and you\'re willing to try something different, homeschooling is worth exploring. Start with a trial semester. You can always go back.' },
         { question: 'What is deschooling and how long does it take?', answer: 'Deschooling is the transition period after leaving school where your family unlearns institutional habits and expectations. The general guideline is one month per year of formal schooling. During this time, prioritise rest, play, and rebuilding your child\'s natural curiosity.' },
