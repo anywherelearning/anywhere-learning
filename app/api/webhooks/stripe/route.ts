@@ -202,7 +202,19 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     const isFirstPurchase = existingOrders.length === 0;
     const hasBundles = purchasedProducts.some((p) => p.isBundle);
 
-    // Distribute total across products proportionally
+    // ─────────────────────────────────────────────────────────────────────
+    // PRICING INVARIANT — orders.amountCents is the REAL paid amount
+    //
+    // We distribute Stripe's amountTotal (which is already net of BYOB
+    // mix-and-match discounts AND promo codes) across products proportionally
+    // by SRP. This means each order row stores the actual per-product amount
+    // paid, not the catalog price.
+    //
+    // Bundle upgrade credit calculation reads from this field and MUST keep
+    // reading the real paid amount, never SRP. See also:
+    //   - lib/db/queries.ts :: getBundleUpgrades (display credit)
+    //   - app/api/checkout/route.ts :: bundleCredits (checkout-time credit)
+    // ─────────────────────────────────────────────────────────────────────
     const totalProductCents = purchasedProducts.reduce((sum, p) => sum + p.priceCents, 0);
 
     // Create order(s) for each purchased product

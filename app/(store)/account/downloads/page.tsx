@@ -7,12 +7,10 @@ import {
   getUserPurchases,
   getUserByClerkId,
   getBundleUpgrades,
-  getSeasonalSuggestion,
-  getCrossSellProducts,
-  getNewProducts,
 } from "@/lib/db/queries";
 import { formatPrice } from "@/lib/utils";
 import DownloadList from "@/components/account/DownloadList";
+import ExploreMoreDivider from "@/components/account/ExploreMoreDivider";
 import PostPurchaseShare from "@/components/checkout/PostPurchaseShare";
 import BundleUpgradeButton from "@/components/account/BundleUpgradeButton";
 import { getOrCreateReferral } from "@/lib/referral";
@@ -26,9 +24,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// ── Category labels (shared) ──
-import { CATEGORY_LABELS } from "@/lib/categories";
-
 const coverClasses: Record<string, string> = {
   "ai-literacy": "cover-ai-literacy",
   "creativity-anywhere": "cover-creativity-anywhere",
@@ -41,12 +36,7 @@ const coverClasses: Record<string, string> = {
   bundle: "cover-bundle",
 };
 
-const SEASON_LABELS: Record<string, string> = {
-  spring: "Spring",
-  summer: "Summer",
-  fall: "Fall",
-  winter: "Winter",
-};
+const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
 
 // ── Page ──
 
@@ -72,16 +62,12 @@ export default async function DownloadsPage() {
     // Ignore - share block just won't show the code
   }
 
-  // Derive data for growth sections
+  // Build amount-paid map for bundle upgrade credit.
+  // Values come from orders.amountCents which is the REAL paid amount
+  // (post-BYOB discount, post-promo code). Do not substitute SRP here.
   const purchasedProductIds = purchases.map((p) => p.product.id);
-  const purchasedCategories = [
-    ...new Set(purchases.map((p) => p.product.category)),
-  ];
-
-  // Build a map of productId → amount paid (for bundle upgrade pricing)
   const purchasedAmountByProduct: Record<string, number> = {};
   for (const p of purchases) {
-    // Use the higher of what they paid or $0 (free bundle expansions)
     if (
       !purchasedAmountByProduct[p.product.id] ||
       p.order.amountCents > purchasedAmountByProduct[p.product.id]
@@ -90,20 +76,33 @@ export default async function DownloadsPage() {
     }
   }
 
-  // Fetch growth data in parallel
-  const [bundleUpgrades, seasonalSuggestion, crossSellProducts, newProducts] =
-    await Promise.all([
-      getBundleUpgrades(purchasedProductIds, purchasedAmountByProduct).catch(
-        () => [],
-      ),
-      getSeasonalSuggestion(purchasedProductIds).catch(() => null),
-      getCrossSellProducts(purchasedProductIds, purchasedCategories).catch(
-        () => [],
-      ),
-      getNewProducts(purchasedProductIds).catch(() => []),
-    ]);
+  // Bundle upgrade is the ONE retained upsell because it has ownership-based
+  // signal (you already paid for part of this). Threshold 2+ owned children
+  // filters out noisy 1-child matches.
+  const bundleUpgrades = await getBundleUpgrades(
+    purchasedProductIds,
+    purchasedAmountByProduct,
+  ).catch(() => []);
+  const qualifyingUpgrades = bundleUpgrades.filter((u) => u.ownedCount >= 2);
 
+  // Count non-bundle guides for the header + share gating.
   const guideCount = purchases.filter((p) => !p.product.isBundle).length;
+
+  // Referral share is high-leverage but easy to feel premature. Show it unless
+  // this is a brand-new single-purchase user who hasn't had time to use the
+  // guide yet. Research: users share from pride/competence, not gratitude, so
+  // we want to catch repeat visits, not first-touch.
+  const earliestPurchaseAt = purchases.length > 0
+    ? Math.min(...purchases.map((p) => new Date(p.order.purchasedAt).getTime()))
+    : null;
+  const daysSinceFirstPurchase = earliestPurchaseAt
+    ? (Date.now() - earliestPurchaseAt) / (24 * 60 * 60 * 1000)
+    : 0;
+  const showReferralShare =
+    purchases.length > 0 &&
+    (purchases.length >= 2 || Date.now() - (earliestPurchaseAt ?? 0) >= THREE_DAYS_MS);
+  // daysSinceFirstPurchase is retained for potential future messaging tweaks.
+  void daysSinceFirstPurchase;
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
@@ -113,62 +112,11 @@ export default async function DownloadsPage() {
       </h1>
       <p className="mt-2 text-gray-500">
         {guideCount > 0
-          ? `${guideCount} activity guide${guideCount === 1 ? "" : "s"} ready to open.`
+          ? `${guideCount} activity guide${guideCount === 1 ? "" : "s"} ready to open. Use them year after year.`
           : "Your activity guides will appear here after purchase."}
       </p>
 
-      {/* ── Seasonal suggestion ── */}
-      {seasonalSuggestion && purchases.length > 0 && (
-        <Link
-          href={`/shop/${seasonalSuggestion.product.slug}`}
-          className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 mt-6 group hover:shadow-md hover:border-forest/15 transition-all"
-        >
-          <div
-            className={`w-16 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[seasonalSuggestion.product.category] || 'cover-outdoor-learning'}`}
-          >
-            {seasonalSuggestion.product.imageUrl ? (
-              <Image
-                src={seasonalSuggestion.product.imageUrl}
-                alt=""
-                width={64}
-                height={80}
-                className="object-cover w-full h-full"
-              />
-            ) : (
-              <span className="flex items-center justify-center h-full text-cream/80 text-xs font-bold">
-                {seasonalSuggestion.product.name.split(' ')[0]}
-              </span>
-            )}
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-xs font-medium text-forest uppercase tracking-wider mb-0.5">
-              {SEASON_LABELS[seasonalSuggestion.season]} Pick
-            </p>
-            <p className="text-sm font-semibold text-gray-800 group-hover:text-forest transition-colors">
-              {seasonalSuggestion.product.name}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">
-              Ready for new outdoor activities? &middot;{" "}
-              {formatPrice(seasonalSuggestion.product.priceCents)}
-            </p>
-          </div>
-          <svg
-            className="w-5 h-5 text-gray-300 group-hover:text-forest group-hover:translate-x-0.5 transition-all flex-shrink-0"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </Link>
-      )}
-
-      {/* ── Downloads list ── */}
+      {/* ── Downloads list (the main event) ── */}
       <div className="mt-8">
         <DownloadList purchases={purchases.map(({ order, product }) => ({
           order,
@@ -186,18 +134,23 @@ export default async function DownloadsPage() {
         }))} />
       </div>
 
-      {/* ── Bundle upgrade suggestions ── */}
-      {bundleUpgrades.length > 0 && (
-        <section className="mt-12 pt-8 border-t border-gray-100">
+      {/* ── Everything below here is optional / explore-more ── */}
+      {(qualifyingUpgrades.length > 0 || showReferralShare || purchases.length > 0) && (
+        <ExploreMoreDivider />
+      )}
+
+      {/* ── Bundle upgrade suggestions (the ONE upsell) ── */}
+      {qualifyingUpgrades.length > 0 && (
+        <section>
           <h2 className="font-display text-xl text-forest mb-1">
-            Complete Your Collection
+            Save on what you already have
           </h2>
           <p className="text-sm text-gray-500 mb-5">
-            You already have some of these - upgrade to the full bundle and
-            we&apos;ll credit what you&apos;ve already paid.
+            You own some of these guides already. Upgrade to the full bundle
+            and we&apos;ll credit what you&apos;ve paid.
           </p>
           <div className="space-y-3">
-            {bundleUpgrades.slice(0, 2).map((upgrade) => (
+            {qualifyingUpgrades.slice(0, 2).map((upgrade) => (
               <div
                 key={upgrade.bundle.id}
                 className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
@@ -254,121 +207,9 @@ export default async function DownloadsPage() {
         </section>
       )}
 
-      {/* ── Cross-sell: You might also like ── */}
-      {crossSellProducts.length > 0 && purchases.length > 0 && (
-        <section className="mt-12 pt-8 border-t border-gray-100">
-          <h2 className="font-display text-xl text-forest mb-1">
-            You Might Also Like
-          </h2>
-          <p className="text-sm text-gray-500 mb-5">
-            Families who got{" "}
-            {CATEGORY_LABELS[purchasedCategories[0]] || purchasedCategories[0]}{" "}
-            guides also loved these.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {crossSellProducts.map((product) => (
-              <Link
-                key={product.id}
-                href={`/shop/${product.slug}`}
-                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:border-forest/15 transition-all"
-              >
-                <div
-                  className={`aspect-[4/3] overflow-hidden ${coverClasses[product.category] || "cover-outdoor-learning"}`}
-                >
-                  {product.imageUrl ? (
-                    <Image
-                      src={product.imageUrl}
-                      alt={product.name}
-                      width={400}
-                      height={300}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full">
-                      <span className="text-cream/60 text-sm font-bold tracking-wider">
-                        {CATEGORY_LABELS[product.category] || product.category}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                    {CATEGORY_LABELS[product.category] || product.category}
-                  </p>
-                  <h3 className="font-semibold text-gray-900 text-sm line-clamp-1 group-hover:text-forest transition-colors">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center justify-between mt-2">
-                    <span className="text-sm font-semibold text-forest">
-                      {formatPrice(product.priceCents)}
-                    </span>
-                    <span className="text-xs text-forest font-medium group-hover:translate-x-0.5 transition-transform">
-                      View &rarr;
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ── New this month ── */}
-      {newProducts.length > 0 && purchases.length > 0 && (
-        <section className="mt-12 pt-8 border-t border-gray-100">
-          <h2 className="font-display text-xl text-forest mb-1">
-            New This Month
-          </h2>
-          <p className="text-sm text-gray-500 mb-5">
-            Fresh guides just added to the shop.
-          </p>
-          <div className="space-y-3">
-            {newProducts.map((product) => (
-              <Link
-                key={product.id}
-                href={`/shop/${product.slug}`}
-                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 group hover:shadow-md hover:border-forest/15 transition-all"
-              >
-                <div
-                  className={`w-12 h-14 rounded-lg flex-shrink-0 overflow-hidden ${coverClasses[product.category] || "cover-outdoor-learning"}`}
-                >
-                  {product.imageUrl ? (
-                    <Image
-                      src={product.imageUrl}
-                      alt=""
-                      width={48}
-                      height={60}
-                      className="object-cover w-full h-full"
-                    />
-                  ) : (
-                    <span className="flex items-center justify-center h-full text-cream/70 text-[10px] font-bold">
-                      NEW
-                    </span>
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
-                    {CATEGORY_LABELS[product.category] || product.category}
-                  </p>
-                  <h3 className="font-semibold text-gray-900 text-sm line-clamp-1 group-hover:text-forest transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 line-clamp-1 mt-0.5">
-                    {product.shortDescription}
-                  </p>
-                </div>
-                <span className="text-sm font-semibold text-forest flex-shrink-0">
-                  {formatPrice(product.priceCents)}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ── Share section ── */}
-      {purchases.length > 0 && (
-        <section className="mt-12 pt-8 border-t border-gray-100">
+      {/* ── Referral share (promoted to post-pride-moment) ── */}
+      {showReferralShare && (
+        <section className={qualifyingUpgrades.length > 0 ? "mt-12" : ""}>
           <div className="text-center">
             <h2 className="font-display text-xl text-forest mb-1">
               Know a family who&apos;d love these?
@@ -383,7 +224,7 @@ export default async function DownloadsPage() {
 
       {/* ── Explore more footer ── */}
       {purchases.length > 0 && (
-        <div className="mt-12 text-center border-t border-gray-100 pt-8 pb-4">
+        <div className="mt-12 text-center pt-8 pb-4">
           <p className="text-gray-400 text-sm mb-2">
             Looking for something new?
           </p>

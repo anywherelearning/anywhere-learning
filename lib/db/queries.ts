@@ -121,6 +121,13 @@ function getCurrentSeason(): string {
  * Get bundle upgrade suggestions.
  * For each bundle where the user owns >= 1 child product but not all,
  * return the bundle info, how many they own, and how much they already paid.
+ *
+ * PRICING: purchasedAmountByProduct values come from orders.amountCents, which
+ * is the REAL paid amount (post-BYOB mix-and-match discount, post-promo code).
+ * Never substitute SRP here or users who bought at a discount will be
+ * over-credited on upgrades. See also:
+ *   - app/api/webhooks/stripe/route.ts (where amountCents is computed)
+ *   - app/api/checkout/route.ts :: bundleCredits (the authoritative charge)
  */
 export async function getBundleUpgrades(purchasedProductIds: string[], purchasedAmountByProduct: Record<string, number>) {
   if (purchasedProductIds.length === 0) return [];

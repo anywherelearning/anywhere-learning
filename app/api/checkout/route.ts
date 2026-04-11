@@ -121,7 +121,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
-    // ── Bundle upgrade credits: if user already owns child products, credit what they paid ──
+    // ─────────────────────────────────────────────────────────────────────
+    // Bundle upgrade credits — authoritative charge path
+    //
+    // If the user already owns child products of a bundle in the cart, credit
+    // what they ACTUALLY paid (orders.amountCents), not SRP. This field is
+    // already net of BYOB mix-and-match discounts and promo codes thanks to
+    // the webhook's proportional distribution. See also:
+    //   - app/api/webhooks/stripe/route.ts (pricing invariant comment block)
+    //   - lib/db/queries.ts :: getBundleUpgrades (display credit)
+    //
+    // If any of these sites are changed, all three must stay in sync or
+    // customers who bought at a discount will be over-credited on upgrades.
+    // ─────────────────────────────────────────────────────────────────────
     const bundleCredits: Record<string, number> = {};
     const bundleProducts = verifiedProducts.filter((p) => p.isBundle);
     if (email && bundleProducts.length > 0) {
