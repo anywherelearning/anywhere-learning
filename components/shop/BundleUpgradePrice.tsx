@@ -77,7 +77,7 @@ export default function BundleUpgradePrice({ slug, stripePriceId, fullPriceCents
         <span className="text-sm font-semibold text-forest">Your upgrade price</span>
       </div>
       <p className="text-sm text-gray-600 mb-3">
-        You own {data.ownedCount} of {data.totalCount} guides. We&apos;ll credit the{' '}
+        You already have {data.ownedCount} of {data.totalCount}. Grab the rest with the bundle and we&apos;ll credit the{' '}
         <span className="font-medium">{formatPrice(data.totalCredit)}</span> you already paid.
       </p>
       <div className="flex items-center gap-3 mb-3">

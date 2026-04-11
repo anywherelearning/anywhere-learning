@@ -181,7 +181,7 @@ export default async function DownloadsPage() {
                     {upgrade.bundle.name}
                   </h3>
                   <p className="text-sm text-gray-600 mt-0.5">
-                    You own {upgrade.ownedCount} of {upgrade.totalCount} guides
+                    You already have {upgrade.ownedCount} of {upgrade.totalCount}. Grab the rest with the bundle.
                   </p>
                   {upgrade.amountAlreadyPaid > 0 && (
                     <div className="flex items-center gap-2 mt-1.5">
@@ -217,7 +217,7 @@ export default async function DownloadsPage() {
               Know a family who&apos;d love these?
             </h2>
             <p className="text-sm text-gray-600 mb-5">
-              Share the love - send them a link to browse.
+              Share the love. Send them a link to browse.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>

@@ -550,8 +550,8 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                     <h3 className="font-semibold text-gray-900 line-clamp-1">
                       {upgrade.bundle.name}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-0.5">
-                      You own {upgrade.ownedCount} of {upgrade.totalCount} guides
+                    <p className="text-sm text-gray-600 mt-0.5">
+                      You already have {upgrade.ownedCount} of {upgrade.totalCount}. Grab the rest with the bundle.
                     </p>
                     {upgrade.amountAlreadyPaid > 0 && (
                       <div className="flex items-center gap-2 mt-1.5">
@@ -585,7 +585,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               Know a family who&apos;d love this?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
-              Share the love - they&apos;ll thank you later.
+              Share the love. They&apos;ll thank you later.
             </p>
             <PostPurchaseShare referralCode={referralCode} />
           </div>

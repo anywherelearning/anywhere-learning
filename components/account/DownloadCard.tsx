@@ -102,38 +102,34 @@ export default function DownloadCard({
               </p>
             </div>
 
-            {/* View + Download buttons - desktop (not for bundles) */}
+            {/* Open Guide primary + Save to device secondary - desktop (not for bundles) */}
             {!isBundle && (
-              <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+              <div className="hidden sm:flex flex-col items-end gap-1.5 flex-shrink-0">
                 <a
                   href={`/api/download/${productId}?view=1`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium py-2.5 px-4 rounded-xl transition-all text-sm border border-forest/20 text-forest hover:bg-forest/5"
-                  aria-label={`View ${productName} in browser`}
+                  className="inline-flex items-center gap-1.5 font-semibold py-2.5 px-5 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream"
+                  aria-label={`Open ${productName} in a new tab`}
                 >
                   <EyeIcon />
-                  View
+                  Open Guide
                 </a>
                 <a
                   href={`/api/download/${productId}`}
                   onClick={handleDownload}
-                  className={`inline-flex items-center gap-1.5 font-medium py-2.5 px-4 rounded-xl transition-all text-sm ${
-                    downloaded
-                      ? 'bg-forest/10 text-forest'
-                      : 'bg-forest hover:bg-forest-dark text-cream'
-                  }`}
-                  aria-label={`Download ${productName} as PDF`}
+                  className="inline-flex items-center gap-1 text-xs font-medium text-gray-600 hover:text-forest transition-colors"
+                  aria-label={`Save ${productName} to your device`}
                 >
                   {downloaded ? (
                     <>
-                      <CheckIcon />
-                      Done
+                      <CheckIcon className="w-3 h-3" />
+                      Saved
                     </>
                   ) : (
                     <>
-                      <DownloadIcon />
-                      Download
+                      <DownloadIcon className="w-3 h-3" />
+                      Save to device
                     </>
                   )}
                 </a>
@@ -150,38 +146,34 @@ export default function DownloadCard({
         </div>
       </div>
 
-      {/* Mobile View + Download buttons (not for bundles) */}
+      {/* Mobile Open Guide primary + Save to device secondary (not for bundles) */}
       {!isBundle && (
-        <div className="sm:hidden flex gap-2 mt-3">
+        <div className="sm:hidden mt-3 space-y-2">
           <a
             href={`/api/download/${productId}?view=1`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 font-medium py-3 rounded-xl transition-all text-sm border border-forest/20 text-forest hover:bg-forest/5"
-            aria-label={`View ${productName} in browser`}
+            className="flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream w-full"
+            aria-label={`Open ${productName} in a new tab`}
           >
             <EyeIcon />
-            View
+            Open Guide
           </a>
           <a
             href={`/api/download/${productId}`}
             onClick={handleDownload}
-            className={`flex-1 flex items-center justify-center gap-2 font-medium py-3 rounded-xl transition-all text-sm ${
-              downloaded
-                ? 'bg-forest/10 text-forest'
-                : 'bg-forest hover:bg-forest-dark text-cream'
-            }`}
-            aria-label={`Download ${productName} as PDF`}
+            className="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 hover:text-forest transition-colors py-1"
+            aria-label={`Save ${productName} to your device`}
           >
             {downloaded ? (
               <>
-                <CheckIcon />
-                Done
+                <CheckIcon className="w-3.5 h-3.5" />
+                Saved to device
               </>
             ) : (
               <>
-                <DownloadIcon />
-                Download
+                <DownloadIcon className="w-3.5 h-3.5" />
+                Save to device
               </>
             )}
           </a>
