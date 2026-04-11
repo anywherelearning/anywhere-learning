@@ -103,8 +103,19 @@ export default async function DownloadsPage() {
   // daysSinceFirstPurchase is retained for potential future messaging tweaks.
   void daysSinceFirstPurchase;
 
+  // Preconnect to the Vercel Blob origin. This kicks off DNS + TCP + TLS
+  // handshakes up front so the first Open Guide click skips ~100-300ms of
+  // connection setup. DownloadCard also prefetches the PDF body on hover,
+  // and together these make opens feel near-instant.
+  const blobOrigin = purchases.find((p) => p.product.blobUrl)?.product.blobUrl
+    ? new URL(purchases.find((p) => p.product.blobUrl)!.product.blobUrl).origin
+    : null;
+
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
+      {blobOrigin && (
+        <link rel="preconnect" href={blobOrigin} crossOrigin="" />
+      )}
       {/* ── Page header ── */}
       <h1 className="font-display text-3xl text-forest sm:text-4xl">
         Your Activity Guides

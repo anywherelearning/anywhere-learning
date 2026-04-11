@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
@@ -58,6 +58,21 @@ export default function DownloadCard({
 }: DownloadCardProps) {
   const [bundleOpen, setBundleOpen] = useState(false);
 
+  // Prefetch the PDF bytes into the browser HTTP cache as soon as the user
+  // hovers, focuses, or taps the Open Guide button. The ~100-300ms between
+  // intent and click is usually enough to fully download a guide, so by the
+  // time the new tab opens, the PDF viewer already has its bytes and renders
+  // immediately instead of showing a loading spinner.
+  //
+  // useRef (not useState) so the prefetch flag doesn't trigger re-renders.
+  // mode: 'no-cors' lets us warm the cache without needing CORS headers.
+  const prefetchedRef = useRef(false);
+  const prefetchPdf = useCallback(() => {
+    if (prefetchedRef.current || !viewUrl) return;
+    prefetchedRef.current = true;
+    fetch(viewUrl, { mode: 'no-cors', credentials: 'omit' }).catch(() => {});
+  }, [viewUrl]);
+
   const coverClass = coverClassFor(productCategory);
   const categoryLabel = CATEGORY_LABELS[productCategory] || productCategory;
 
@@ -104,12 +119,16 @@ export default function DownloadCard({
             </div>
 
             {/* Open Guide - desktop (not for bundles).
-                Direct link to the Blob CDN for instant opens. */}
+                Direct link to the Blob CDN. Prefetches on hover/focus so
+                the PDF is already cached by the time the user clicks. */}
             {!isBundle && (
               <a
                 href={viewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={prefetchPdf}
+                onFocus={prefetchPdf}
+                onTouchStart={prefetchPdf}
                 className="hidden sm:inline-flex items-center gap-1.5 font-semibold py-2.5 px-5 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream flex-shrink-0"
                 aria-label={`Open ${productName} in a new tab`}
               >
@@ -128,12 +147,17 @@ export default function DownloadCard({
         </div>
       </div>
 
-      {/* Mobile Open Guide primary (not for bundles) */}
+      {/* Mobile Open Guide primary (not for bundles).
+          Prefetches on touchstart so the PDF is warming while the tap
+          animation plays. */}
       {!isBundle && (
         <a
           href={viewUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onMouseEnter={prefetchPdf}
+          onFocus={prefetchPdf}
+          onTouchStart={prefetchPdf}
           className="sm:hidden mt-3 flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream w-full"
           aria-label={`Open ${productName} in a new tab`}
         >
