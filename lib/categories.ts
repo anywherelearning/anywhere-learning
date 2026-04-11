@@ -67,6 +67,29 @@ export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries([
   ['bundle', 'Bundle'],
 ]);
 
+/**
+ * CSS class for the cover gradient of a product card, by category.
+ * Class definitions live in app/globals.css (cover-<category>).
+ * Used on shop pages, downloads, and checkout/success.
+ */
+export const COVER_CLASSES: Record<string, string> = {
+  'ai-literacy': 'cover-ai-literacy',
+  'creativity-anywhere': 'cover-creativity-anywhere',
+  'communication-writing': 'cover-communication-writing',
+  'outdoor-learning': 'cover-outdoor-learning',
+  'real-world-math': 'cover-real-world-math',
+  entrepreneurship: 'cover-entrepreneurship',
+  'planning-problem-solving': 'cover-planning-problem-solving',
+  'start-here': 'cover-start-here',
+  bundle: 'cover-bundle',
+};
+
+/** Resolve a cover class for a category, falling back to outdoor-learning. */
+export function coverClassFor(category: string | null | undefined): string {
+  if (!category) return 'cover-outdoor-learning';
+  return COVER_CLASSES[category] || 'cover-outdoor-learning';
+}
+
 /** Active pill color per category - used by both shop and downloads filters. */
 export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   '': 'bg-forest text-cream shadow-sm',

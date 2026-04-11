@@ -11,6 +11,8 @@ import { getUserByClerkId, getBundleUpgrades } from '@/lib/db/queries';
 import { getReferralByEmail } from '@/lib/referral';
 import { formatPrice } from '@/lib/utils';
 import { BUNDLE_CONTENTS, FREE_BONUS_SLUG } from '@/lib/cart';
+import { CATEGORY_LABELS, coverClassFor } from '@/lib/categories';
+import { CheckIcon, DownloadIcon, ArrowRightIcon } from '@/components/shop/icons';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
@@ -25,30 +27,6 @@ export const metadata: Metadata = {
   description:
     'Your activity guides are ready to download. Open on any device and start learning today.',
   robots: { index: false, follow: false },
-};
-
-const CATEGORY_LABELS: Record<string, string> = {
-  'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
-  'communication-writing': 'Communication & Writing',
-  'outdoor-learning': 'Outdoor Learning',
-  'real-world-math': 'Real-World Math',
-  'entrepreneurship': 'Entrepreneurship',
-  'planning-problem-solving': 'Planning & Problem-Solving',
-  'start-here': 'Start Here',
-  bundle: 'Bundle',
-};
-
-const coverClasses: Record<string, string> = {
-  'ai-literacy': 'cover-ai-literacy',
-  'creativity-anywhere': 'cover-creativity-anywhere',
-  'communication-writing': 'cover-communication-writing',
-  'outdoor-learning': 'cover-outdoor-learning',
-  'real-world-math': 'cover-real-world-math',
-  'entrepreneurship': 'cover-entrepreneurship',
-  'planning-problem-solving': 'cover-planning-problem-solving',
-  'start-here': 'cover-start-here',
-  bundle: 'cover-bundle',
 };
 
 interface PageProps {
@@ -324,19 +302,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         {/* ── Celebration Header ── */}
         <div className="text-center hero-stagger">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-forest/10 mb-6">
-            <svg
-              className="w-8 h-8 text-forest"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-              />
-            </svg>
+            <CheckIcon className="w-8 h-8 text-forest" />
           </div>
 
           <h1 className="font-display text-3xl sm:text-4xl text-forest">
@@ -364,19 +330,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               href="/account/downloads"
               className="inline-flex items-center gap-2 mt-6 bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-                />
-              </svg>
+              <DownloadIcon className="w-5 h-5" />
               Go to My Downloads
             </Link>
           ) : (
@@ -422,7 +376,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 animate-fade-in-up"
                 >
                   <div
-                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[product.category] || 'cover-outdoor-learning'}`}
+                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClassFor(product.category)}`}
                   >
                     {product.imageUrl ? (
                       <Image
@@ -576,7 +530,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
                 >
                   <div
-                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || 'cover-bundle'}`}
+                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClassFor(upgrade.bundle.category) || 'cover-bundle'}`}
                   >
                     {upgrade.bundle.imageUrl ? (
                       <Image
@@ -647,19 +601,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
             className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
           >
             Browse all activity guides
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
-            </svg>
+            <ArrowRightIcon />
           </Link>
         </div>
       </div>

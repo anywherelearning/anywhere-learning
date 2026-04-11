@@ -26,6 +26,7 @@ import NativeHide from "@/components/mobile/NativeHide";
 import NativeProductDetail from "@/components/mobile/NativeProductDetail";
 import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
 import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
+import { CATEGORY_LABELS, coverClassFor } from "@/lib/categories";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -80,31 +81,6 @@ export async function generateMetadata({
     },
   };
 }
-
-
-const categoryLabels: Record<string, string> = {
-  "ai-literacy": "AI & Digital",
-  "creativity-anywhere": "Creativity Anywhere",
-  "communication-writing": "Communication & Writing",
-  "outdoor-learning": "Outdoor Learning",
-  "real-world-math": "Real-World Math",
-  "entrepreneurship": "Entrepreneurship",
-  "planning-problem-solving": "Planning & Problem-Solving",
-  "start-here": "Start Here",
-  bundle: "Bundle",
-};
-
-const coverClasses: Record<string, string> = {
-  "ai-literacy": "cover-ai-literacy",
-  "creativity-anywhere": "cover-creativity-anywhere",
-  "communication-writing": "cover-communication-writing",
-  "outdoor-learning": "cover-outdoor-learning",
-  "real-world-math": "cover-real-world-math",
-  "entrepreneurship": "cover-entrepreneurship",
-  "planning-problem-solving": "cover-planning-problem-solving",
-  "start-here": "cover-start-here",
-  bundle: "cover-bundle",
-};
 
 
 export default async function ProductPage({
@@ -167,7 +143,7 @@ export default async function ProductPage({
       "@type": "Brand",
       name: "Anywhere Learning",
     },
-    category: categoryLabels[product.category] || product.category,
+    category: CATEGORY_LABELS[product.category] || product.category,
     audience: {
       "@type": "EducationalAudience",
       educationalRole: "parent",
@@ -260,7 +236,7 @@ export default async function ProductPage({
                   href={`/shop?category=${product.category}`}
                   className="hover:text-forest transition-colors"
                 >
-                  {categoryLabels[product.category] || product.category}
+                  {CATEGORY_LABELS[product.category] || product.category}
                 </Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
@@ -296,7 +272,7 @@ export default async function ProductPage({
                   {/* Category pill */}
                   <div className="absolute bottom-5 left-5 bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2 z-10">
                     <CategoryIcon category={product.category} className="w-4 h-4" />
-                    {categoryLabels[product.category] || product.category}
+                    {CATEGORY_LABELS[product.category] || product.category}
                   </div>
 
                   {/* Preview button on image */}
@@ -310,7 +286,7 @@ export default async function ProductPage({
                 /* Category gradient cover */
                 <div
                   className={`relative aspect-[5/4] md:aspect-[4/3] ${
-                    coverClasses[product.category] || "cover-outdoor-learning"
+                    coverClassFor(product.category)
                   } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
                 >
                   {/* Decorative dot pattern overlay */}
@@ -346,7 +322,7 @@ export default async function ProductPage({
                   {/* Category pill */}
                   <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2">
                     <CategoryIcon category={product.category} className="w-4 h-4 text-white" />
-                    {categoryLabels[product.category] || product.category}
+                    {CATEGORY_LABELS[product.category] || product.category}
                   </div>
 
                   {/* Bundle badge */}
@@ -422,7 +398,7 @@ export default async function ProductPage({
               {/* Category label */}
               <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3 flex items-center gap-2">
                 <CategoryIcon category={product.category} className="w-4 h-4 text-gold" />
-                {categoryLabels[product.category] || product.category}
+                {CATEGORY_LABELS[product.category] || product.category}
               </p>
 
               {/* Title */}

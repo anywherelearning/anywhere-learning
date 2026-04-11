@@ -14,6 +14,8 @@ import ExploreMoreDivider from "@/components/account/ExploreMoreDivider";
 import PostPurchaseShare from "@/components/checkout/PostPurchaseShare";
 import BundleUpgradeButton from "@/components/account/BundleUpgradeButton";
 import { getOrCreateReferral } from "@/lib/referral";
+import { coverClassFor } from "@/lib/categories";
+import { ArrowRightIcon } from "@/components/shop/icons";
 
 export const dynamic = "force-dynamic";
 
@@ -22,18 +24,6 @@ export const metadata: Metadata = {
   description:
     "Access and download your purchased activity guides. Start learning anywhere.",
   robots: { index: false, follow: false },
-};
-
-const coverClasses: Record<string, string> = {
-  "ai-literacy": "cover-ai-literacy",
-  "creativity-anywhere": "cover-creativity-anywhere",
-  "communication-writing": "cover-communication-writing",
-  "outdoor-learning": "cover-outdoor-learning",
-  "real-world-math": "cover-real-world-math",
-  "entrepreneurship": "cover-entrepreneurship",
-  "planning-problem-solving": "cover-planning-problem-solving",
-  "start-here": "cover-start-here",
-  bundle: "cover-bundle",
 };
 
 const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
@@ -65,6 +55,14 @@ export default async function DownloadsPage() {
   // Build amount-paid map for bundle upgrade credit.
   // Values come from orders.amountCents which is the REAL paid amount
   // (post-BYOB discount, post-promo code). Do not substitute SRP here.
+  //
+  // Edge case: when a bundle was purchased, each child guide is expanded into
+  // its own Purchase row with the same parent order.amountCents (the whole
+  // bundle price). Taking `max` per productId gives us the highest real
+  // dollar credit a user has paid against any row tied to that product,
+  // which is the safest "you've already paid $X toward this" signal for
+  // the upgrade credit on bundle upgrades. Free-bonus rows (Skills Map with
+  // amountCents=0) naturally lose the max comparison and contribute nothing.
   const purchasedProductIds = purchases.map((p) => p.product.id);
   const purchasedAmountByProduct: Record<string, number> = {};
   for (const p of purchases) {
@@ -161,7 +159,7 @@ export default async function DownloadsPage() {
               >
                 {/* Bundle thumbnail */}
                 <div
-                  className={`w-16 h-20 sm:w-20 sm:h-24 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || "cover-bundle"}`}
+                  className={`w-16 h-20 sm:w-20 sm:h-24 rounded-xl flex-shrink-0 overflow-hidden ${coverClassFor(upgrade.bundle.category) || "cover-bundle"}`}
                 >
                   {upgrade.bundle.imageUrl ? (
                     <Image
@@ -237,20 +235,7 @@ export default async function DownloadsPage() {
             className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
           >
             Browse all activity guides
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
-            </svg>
+            <ArrowRightIcon />
           </Link>
         </div>
       )}
