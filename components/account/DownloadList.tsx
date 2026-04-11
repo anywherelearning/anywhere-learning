@@ -39,6 +39,10 @@ export interface Purchase {
     ageRange: string | null;
     activityCount: number | null;
     isBundle: boolean;
+    /** Direct Vercel Blob URL for inline viewing. Empty string for bundles. */
+    viewUrl: string;
+    /** Direct Vercel Blob URL with ?download=1 to trigger save dialog. Empty string for bundles. */
+    downloadUrl: string;
   };
 }
 
@@ -270,6 +274,8 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                   slug: child.product.slug,
                   imageUrl: child.product.imageUrl,
                   category: child.product.category,
+                  viewUrl: child.product.viewUrl,
+                  downloadUrl: child.product.downloadUrl,
                 }))
             : undefined;
           return (
@@ -285,6 +291,8 @@ export default function DownloadList({ purchases }: DownloadListProps) {
               ageRange={p.product.ageRange}
               activityCount={p.product.activityCount}
               isBundle={p.product.isBundle}
+              viewUrl={p.product.viewUrl}
+              downloadUrl={p.product.downloadUrl}
               showReviewPrompt={daysSincePurchase > SEVEN_DAYS_MS}
               bundleChildren={bundleChildren}
             />

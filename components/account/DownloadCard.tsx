@@ -17,6 +17,8 @@ export interface BundleChild {
   slug: string;
   imageUrl: string | null;
   category: string;
+  viewUrl: string;
+  downloadUrl: string;
 }
 
 export interface DownloadCardProps {
@@ -30,6 +32,10 @@ export interface DownloadCardProps {
   ageRange: string | null;
   activityCount: number | null;
   isBundle: boolean;
+  /** Direct Vercel Blob URL for inline viewing. Bypasses the API for instant opens. */
+  viewUrl: string;
+  /** Direct Vercel Blob URL with ?download=1 appended for save-to-device. */
+  downloadUrl: string;
   showReviewPrompt: boolean;
   bundleChildren?: BundleChild[];
 }
@@ -45,6 +51,8 @@ export default function DownloadCard({
   ageRange,
   activityCount,
   isBundle,
+  viewUrl,
+  downloadUrl,
   showReviewPrompt,
   bundleChildren,
 }: DownloadCardProps) {
@@ -96,11 +104,10 @@ export default function DownloadCard({
             </div>
 
             {/* Open Guide - desktop (not for bundles).
-                Single primary action: open in a new tab, browser's
-                built-in PDF viewer has its own save button. */}
+                Direct link to the Blob CDN for instant opens. */}
             {!isBundle && (
               <a
-                href={`/api/download/${productId}?view=1`}
+                href={viewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-1.5 font-semibold py-2.5 px-5 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream flex-shrink-0"
@@ -121,10 +128,10 @@ export default function DownloadCard({
         </div>
       </div>
 
-      {/* Mobile Open Guide - single primary action (not for bundles) */}
+      {/* Mobile Open Guide primary (not for bundles) */}
       {!isBundle && (
         <a
-          href={`/api/download/${productId}?view=1`}
+          href={viewUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="sm:hidden mt-3 flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream w-full"
@@ -133,6 +140,22 @@ export default function DownloadCard({
           <EyeIcon />
           Open Guide
         </a>
+      )}
+
+      {/* Save to device - secondary text link, centered with breathing
+          room below the primary action. Same pattern on desktop and
+          mobile so it never feels cramped. */}
+      {!isBundle && (
+        <div className="mt-3 flex justify-center sm:justify-end">
+          <a
+            href={downloadUrl}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-forest transition-colors py-1"
+            aria-label={`Save ${productName} to your device`}
+          >
+            <DownloadIcon className="w-3.5 h-3.5" />
+            Save to device
+          </a>
+        </div>
       )}
 
       {/* Bundle children dropdown */}
@@ -183,7 +206,7 @@ export default function DownloadCard({
                   {/* View + Download */}
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <a
-                      href={`/api/download/${child.productId}?view=1`}
+                      href={child.viewUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center w-11 h-11 rounded-lg border border-forest/20 text-forest hover:bg-forest/5 transition-colors"
@@ -193,7 +216,7 @@ export default function DownloadCard({
                       <EyeIcon />
                     </a>
                     <a
-                      href={`/api/download/${child.productId}`}
+                      href={child.downloadUrl}
                       className="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-forest text-cream hover:bg-forest-dark transition-colors"
                       aria-label={`Download ${child.name}`}
                       title="Download"

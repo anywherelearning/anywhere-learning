@@ -3,6 +3,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { getDownloadUrl } from "@vercel/blob";
 import {
   getUserPurchases,
   getUserByClerkId,
@@ -132,6 +133,14 @@ export default async function DownloadsPage() {
             ageRange: product.ageRange,
             activityCount: product.activityCount,
             isBundle: product.isBundle,
+            // Resolve direct Blob URLs server-side so clicks go straight to the
+            // CDN edge, no serverless round-trip. Bundles have empty blobUrl.
+            // Ownership is already enforced by this page requiring Clerk auth
+            // and getUserPurchases filtering by userId, so only the owner ever
+            // sees these URLs. They do go into the client HTML — accepted
+            // tradeoff for instant Open Guide.
+            viewUrl: product.blobUrl || "",
+            downloadUrl: product.blobUrl ? getDownloadUrl(product.blobUrl) : "",
           },
         }))} />
       </div>
