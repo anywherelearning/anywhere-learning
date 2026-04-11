@@ -1,4 +1,4 @@
-# Anywhere Learning — Content Megaplan
+# Anywhere Learning: Content Megaplan
 
 > 57 blog posts mapped to ICP pain points, SEO keywords, and product funnels.
 > Built from Reddit (r/homeschool, r/unschooling, r/worldschooling) and Facebook homeschool community research.
@@ -30,7 +30,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 | # | Pain Point | What Parents Say | Content Response |
 |---|-----------|-----------------|------------------|
 | 1 | **Burnout & overwhelm** | "I just can't do this anymore," "I have nothing left to give," "I want to send them all to school" | Validation first, then practical no-prep alternatives. Feb is peak burnout month. |
-| 2 | **"Am I doing enough?" guilt** | "My kid would be in 3rd grade — are we behind?", "What if I'm ruining my kids?", "Everyone else seems to have it together" | Reframe invisible learning, provide simple milestone guides, permission-giving content |
+| 2 | **"Am I doing enough?" guilt** | "My kid would be in 3rd grade, are we behind?", "What if I'm ruining my kids?", "Everyone else seems to have it together" | Reframe invisible learning, provide simple milestone guides, permission-giving content |
 | 3 | **Curriculum paralysis & decision fatigue** | "I've bought three different curricula and none work," "I'm drowning in options," "$400 on curriculum my kid hates" | Position our packs as the escape from curriculum shopping. Simple, open-and-go. |
 
 ### High Intensity (weekly discussions, strong emotional charge)
@@ -49,7 +49,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 | # | Pain Point | What Parents Say | Content Response |
 |---|-----------|-----------------|------------------|
 | 10 | **Screen time guilt** | "My kid watched 4 hours of YouTube and I feel terrible" | Screen-free alternatives, permission-giving research |
-| 11 | **Working while homeschooling** | "I work full-time — am I crazy?", "I need things kids can do independently" | Independent activity packs, realistic schedules |
+| 11 | **Working while homeschooling** | "I work full-time, am I crazy?", "I need things kids can do independently" | Independent activity packs, realistic schedules |
 | 12 | **Unsupportive extended family** | "My parents think I'm ruining my kids," "I dread family gatherings" | Scripts, boundary-setting, holiday survival guides |
 | 13 | **Student motivation/behavior** | "My kid whines about everything," "They won't take homeschool seriously" | Interest-led learning, activity variety, outdoor alternatives |
 
@@ -59,9 +59,9 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 
 **Model:** Pillar + Cluster (hub-and-spoke)
 
-- **5 Pillar pages** — Comprehensive guides (2,000–3,000 words). Target head keywords.
-- **48 Cluster/standalone posts** — Focused articles (800–1,500 words). Target long-tail keywords. Link back to pillar.
-- **4 Comparison/ranking posts** — "X vs Y" and ranked list content. High-value for AI search citation.
+- **5 Pillar pages**: Comprehensive guides (2,000–3,000 words). Target head keywords.
+- **48 Cluster/standalone posts**: Focused articles (800–1,500 words). Target long-tail keywords. Link back to pillar.
+- **4 Comparison/ranking posts**: "X vs Y" and ranked list content. High-value for AI search citation.
 - **Total: 57 posts** (5 pillar + 48 cluster/standalone + 4 comparison)
 
 **Categories:** `real-world-skills` · `nature-learning` · `travel-worldschool` · `homeschool-life` · `getting-started`
@@ -70,7 +70,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 
 ## Pillar Pages
 
-### P1 — Real-World Learning for Homeschool Families
+### P1: Real-World Learning for Homeschool Families
 - **URL:** `/blog/real-world-learning-homeschool-families`
 - **Target keyword:** real-world skills homeschool (~290/mo)
 - **Word count:** 2,500+
@@ -78,7 +78,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 - **Pain points addressed:** #3 curriculum paralysis, #4 planning exhaustion
 - **Status:** Not started
 
-### P2 — Nature-Based Learning & Outdoor STEM
+### P2: Nature-Based Learning & Outdoor STEM
 - **URL:** `/blog/nature-based-learning-outdoor-stem`
 - **Target keyword:** outdoor STEM activities (~4,500/mo)
 - **Word count:** 2,500+
@@ -86,7 +86,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 - **Pain points addressed:** #1 burnout (outdoor = less planning), #10 screen time
 - **Status:** Not started
 
-### P3 — Worldschooling & Learning While Traveling
+### P3: Worldschooling & Learning While Traveling
 - **URL:** `/blog/worldschooling-learning-while-traveling`
 - **Target keyword:** worldschool learning activities (~280/mo)
 - **Word count:** 2,500+
@@ -94,7 +94,7 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 - **Pain points addressed:** #4 planning exhaustion, travel-specific logistics
 - **Status:** Not started
 
-### P4 — Creativity & Maker Activities for Kids
+### P4: Creativity & Maker Activities for Kids
 - **URL:** `/blog/creativity-maker-activities-kids`
 - **Target keyword:** creative activities for homeschool kids
 - **Word count:** 2,500+
@@ -102,11 +102,11 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 - **Pain points addressed:** #13 student motivation, #10 screen time
 - **Status:** Not started
 
-### P5 — AI & Digital Literacy for Kids
+### P5: AI & Digital Literacy for Kids
 - **URL:** `/blog/ai-digital-literacy-kids`
 - **Target keyword:** AI for kids (~3,000–8,000/mo)
 - **Word count:** 2,500+
-- **Product tie-in:** AI Literacy Pack (first-mover — no competitor covers this)
+- **Product tie-in:** AI Literacy Pack (first-mover, no competitor covers this)
 - **Pain points addressed:** #10 screen time (productive tech use), future-readiness anxiety
 - **Status:** Not started
 
@@ -368,27 +368,27 @@ Total addressable search volume across all 57 posts:
 | **Total** | **57** |
 
 **Published posts:**
-1. #2 — Teach Kids About Money
-2. #3 — Kitchen Learning Lab
-3. #11 — 15 Outdoor STEM Challenges
-4. #12 — Nature Walks Science
-5. #13 — Seasonal Scavenger Hunts
-6. #21 — Worldschool Three Kids
-7. #23 — Worldschooling Packing List
-8. #37 — AI for Kids 2026
-9. #43 — Homeschool Burnout
-10. #44 — Curriculum Guilt Permission Slip
-11. #46 — New to Homeschooling
+1. #2: Teach Kids About Money
+2. #3: Kitchen Learning Lab
+3. #11: 15 Outdoor STEM Challenges
+4. #12: Nature Walks Science
+5. #13: Seasonal Scavenger Hunts
+6. #21: Worldschool Three Kids
+7. #23: Worldschooling Packing List
+8. #37: AI for Kids 2026
+9. #43: Homeschool Burnout
+10. #44: Curriculum Guilt Permission Slip
+11. #46: New to Homeschooling
 
 ---
 
 ## Research Sources
 
 **Reddit communities analyzed:**
-- r/homeschool (214k+ members) — daily pain point threads, curriculum discussions
-- r/Homeschooling — curriculum reviews, "help me" posts
-- r/unschooling — "am I doing enough?" anxiety, deschooling
-- r/worldschooling — travel logistics, isolation
+- r/homeschool (214k+ members): daily pain point threads, curriculum discussions
+- r/Homeschooling: curriculum reviews, "help me" posts
+- r/unschooling: "am I doing enough?" anxiety, deschooling
+- r/worldschooling: travel logistics, isolation
 
 **Facebook groups referenced:**
 - Secular Homeschooling (100k+ members)

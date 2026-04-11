@@ -34,7 +34,7 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - **Impact:** The site cannot be discovered, cited, or recommended by any AI system
 - **Detail:** `site:anywherelearning.co` returns zero results on Google, Bing, and all AI platforms
 - **Fix:** Deploy to Vercel, connect custom domain, submit sitemap to Google Search Console
-- **Priority:** Blocking — nothing else matters until this is resolved
+- **Priority:** Blocking. Nothing else matters until this is resolved
 
 ### 2. No llms.txt file
 - **Impact:** AI crawlers have no structured way to understand site content and permissions
@@ -60,14 +60,14 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### 5. No research citations or data backing educational claims
 - **Impact:** Content makes pedagogical claims without evidence, reducing AI citation confidence
-- **Detail:** Searched all 29 blog posts — zero academic citations, zero statistics, zero expert quotes. Claims like "teenagers who ace tests but can't budget" are presented as fact without sources.
+- **Detail:** Searched all 29 blog posts. Zero academic citations, zero statistics, zero expert quotes. Claims like "teenagers who ace tests but can't budget" are presented as fact without sources.
 - **Fix:** Add 2-3 research citations to pillar posts; include statistics on homeschool outcomes
 - **Expected impact:** +15-20 points on citability score for research-adjacent queries
 
 ### 6. ~~Author credentials not displayed~~ ✅ FIXED
 - **Impact:** E-E-A-T "Expertise" signal is weak
 - **Detail:** ~~Blog bio says "Worldschooling mom, activity pack creator" but no teaching credentials, years of experience, or formal qualifications. About page mentions "years in the classroom" but doesn't specify.~~
-- **Status:** Fixed — Author bio now reads "Former teacher (B.Ed, M.Ed) with 15 years in the classroom" across blog, about page, homepage, shop pages, email sequences, and llms.txt.
+- **Status:** Fixed. Author bio now reads "Former teacher (B.Ed, M.Ed) with 15 years in the classroom" across blog, about page, homepage, shop pages, email sequences, and llms.txt.
 
 ---
 
@@ -75,20 +75,20 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### 7. ~~Free guide landing page missing JSON-LD schema~~ ✅ FIXED
 - **Detail:** ~~`/free-guide` has no structured data; should have Product or DigitalDocument schema~~
-- **Status:** Fixed — Added Product schema with offer price $0, brand, author, and image.
+- **Status:** Fixed. Added Product schema with offer price $0, brand, author, and image.
 
 ### 8. ~~About page missing JSON-LD schema~~ ✅ FIXED
 - **Detail:** ~~`/about` has no structured data; should have Person or ProfilePage schema~~
-- **Status:** Fixed — Added Person schema (credentials, knowsAbout, worksFor, sameAs) and ProfilePage schema.
+- **Status:** Fixed. Added Person schema (credentials, knowsAbout, worksFor, sameAs) and ProfilePage schema.
 
-### 9. ✅ FIXED — Content is narrative-first, not claims-first
+### 9. ✅ FIXED: Content is narrative-first, not claims-first
 - **Detail:** Blog posts use conversational tone ("Let me tell you about...") rather than assertive claims ("Deschooling is the process of..."). AI systems prefer extractable definitions.
 - **Fix:** Added "In short" summary boxes with assertive, claims-first definitions at the top of 9 pillar blog posts. New `SummaryBox` component with forest-tinted design. Summary text is included in `articleBody` for JSON-LD.
 - **Expected impact:** Higher citation rate for definitional queries
 
 ### 10. ~~No comparison or ranking content~~ ✅ PLANNED
 - **Detail:** No "X vs Y" articles, comparison tables, or ranked lists. These are high-value for AI advisory queries.
-- **Status:** Added 4 comparison/ranking posts (#54–#57) to CONTENT-MEGAPLAN.md: Homeschool vs Worldschool, Unschooling vs Homeschooling, Methods Compared, and Best Approaches Ranked. ~4,000/mo combined keyword volume.
+- **Status:** Added 4 comparison/ranking posts (#54 to #57) to CONTENT-MEGAPLAN.md: Homeschool vs Worldschool, Unschooling vs Homeschooling, Methods Compared, and Best Approaches Ranked. ~4,000/mo combined keyword volume.
 
 ### 11. ~~Name collision with other entities~~ ✅ PARTIALLY FIXED
 - **Detail:** "Anywhere Learning" is used by anywherelearning.in (Indian ed-tech) and Anytime Anywhere Learning Foundation. This makes branded search competitive.
@@ -96,7 +96,7 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### 12. CSP uses unsafe-inline/unsafe-eval
 - **Detail:** Content Security Policy relies on `'unsafe-inline'` and `'unsafe-eval'` for scripts
-- **Status:** Deferred to post-launch. Nonce-based CSP requires testing with Clerk (injects inline scripts), Stripe, and GA4 — browsers ignore `'unsafe-inline'` when a nonce is present, so adding nonces without verifying all third-party inline scripts would break auth/payments. Needs production validation.
+- **Status:** Deferred to post-launch. Nonce-based CSP requires testing with Clerk (injects inline scripts), Stripe, and GA4. Browsers ignore `'unsafe-inline'` when a nonce is present, so adding nonces without verifying all third-party inline scripts would break auth/payments. Needs production validation.
 
 ---
 
@@ -104,11 +104,11 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### 13. ~~BreadcrumbList schema missing from shop listing page~~ ✅ FIXED
 - **Detail:** ~~Only product detail and blog post pages have breadcrumb schema; shop listing page does not~~
-- **Status:** Fixed — Added BreadcrumbList schema (Home → Shop) to shop listing page.
+- **Status:** Fixed. Added BreadcrumbList schema (Home → Shop) to shop listing page.
 
 ### 14. ~~Homepage has duplicate Organization schema~~ ✅ FIXED
 - **Detail:** ~~Organization JSON-LD is defined in both root layout and homepage, creating redundancy~~
-- **Status:** Fixed — Removed duplicate Organization and WebSite schemas from homepage. Root layout is the single source of truth.
+- **Status:** Fixed. Removed duplicate Organization and WebSite schemas from homepage. Root layout is the single source of truth.
 
 ### 15. Some product descriptions are formulaic
 - **Detail:** Heavy reliance on shared template sections (SHARED_ACTIVITY_STRUCTURE, SHARED_WHY_FAMILIES_LOVE_IT) makes some product pages feel similar
@@ -116,7 +116,7 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### 16. ~~Blog posts lack dateModified on older posts~~ ✅ FIXED
 - **Detail:** ~~Most recent posts have dateModified but some older posts only have publishedAt~~
-- **Status:** Fixed — All 28 blog posts now have explicit dateModified values.
+- **Status:** Fixed. All 28 blog posts now have explicit dateModified values.
 
 ---
 
@@ -138,7 +138,7 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 - Pull quotes are strong but few standalone definitional statements
 
 **Best citability examples:**
-- FAQ answers (e.g., "How do I use the activity packs?" — clear, self-contained)
+- FAQ answers (e.g., "How do I use the activity packs?" clear, self-contained)
 - Product specifications (e.g., "20 spring-themed outdoor activities across 4 subjects")
 - Structured how-to guides with numbered steps
 
@@ -146,7 +146,7 @@ Anywhere Learning has a solid technical foundation with comprehensive JSON-LD sc
 
 ### Brand Authority (5/100)
 
-**Status: Pre-launch — essentially zero online presence**
+**Status: Pre-launch, essentially zero online presence**
 
 | Platform | Status |
 |----------|--------|
@@ -235,15 +235,15 @@ The site has zero presence on platforms that AI models rely on for training and 
 
 ## Quick Wins (Implement This Week)
 
-1. **Create llms.txt** — Add `public/llms.txt` describing the site, its products, and content structure. Immediate AI crawler comprehension boost.
+1. **Create llms.txt**: Add `public/llms.txt` describing the site, its products, and content structure. Immediate AI crawler comprehension boost.
 
-2. **Add Person schema to About page** — 10 minutes of code; establishes founder entity for AI systems.
+2. **Add Person schema to About page**: 10 minutes of code; establishes founder entity for AI systems.
 
-3. **Add JSON-LD to Free Guide page** — Add DigitalDocument or Product schema with price $0 to the lead magnet page.
+3. **Add JSON-LD to Free Guide page**: Add DigitalDocument or Product schema with price $0 to the lead magnet page.
 
-4. **Fix duplicate Organization schema** — Remove from homepage since it's already in root layout.
+4. **Fix duplicate Organization schema**: Remove from homepage since it's already in root layout.
 
-5. **Add specific credentials to author bio** — Update the 1-sentence bio to include teaching background and years of experience.
+5. **Add specific credentials to author bio**: Update the 1-sentence bio to include teaching background and years of experience.
 
 ---
 
@@ -294,11 +294,11 @@ GEO Score = (Citability × 0.25) + (Brand × 0.20) + (EEAT × 0.20) + (Technical
 ```
 Projected = (75 × 0.25) + (35 × 0.20) + (75 × 0.20) + (85 × 0.15) + (90 × 0.10) + (25 × 0.10)
           = 18.75 + 7.0 + 15.0 + 12.75 + 9.0 + 2.5
-          = 65/100 (Fair → approaching Good)
+          = 65/100 (Fair, approaching Good)
 ```
 
 ### Key Insight
-The biggest lever for improvement is **deploying the site and building brand presence**. Technical foundation and content quality are strong — the site just needs to exist on the public web. Going from 5/100 to 35/100 on Brand Authority alone would add 6 points to the overall score. Adding testimonials and citations would push E-E-A-T from 65 to 75+.
+The biggest lever for improvement is **deploying the site and building brand presence**. Technical foundation and content quality are strong; the site just needs to exist on the public web. Going from 5/100 to 35/100 on Brand Authority alone would add 6 points to the overall score. Adding testimonials and citations would push E-E-A-T from 65 to 75+.
 
 ---
 
@@ -306,7 +306,7 @@ The biggest lever for improvement is **deploying the site and building brand pre
 
 | URL | Title | Key GEO Issues |
 |---|---|---|
-| `/` | Anywhere Learning — Meaningful Learning, Wherever You Are | Duplicate Organization schema; no testimonials |
+| `/` | Anywhere Learning: Meaningful Learning, Wherever You Are | Duplicate Organization schema; no testimonials |
 | `/shop` | Shop Activity Packs | Missing BreadcrumbList schema |
 | `/shop/[slug]` (×30) | Product pages | Formulaic descriptions; no reviews |
 | `/blog` | Blog | Good CollectionPage schema |
@@ -320,4 +320,4 @@ The biggest lever for improvement is **deploying the site and building brand pre
 
 ---
 
-*Report generated by GEO Audit Skill — March 15, 2026*
+*Report generated by GEO Audit Skill, March 15, 2026*
