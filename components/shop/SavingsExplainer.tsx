@@ -15,7 +15,7 @@ export default function SavingsExplainer() {
           <path d="M50 20 L50 70" stroke="#faf9f6" strokeWidth="1" fill="none" />
         </svg>
         <svg
-          className="absolute right-4 top-2 w-14 md:w-18 opacity-[0.06] animate-soft-float hidden md:block"
+          className="absolute right-4 top-2 w-14 md:w-20 opacity-[0.06] animate-soft-float hidden md:block"
           style={{ animationDelay: '2.5s' }}
           viewBox="0 0 100 100"
           fill="#d4a373"

@@ -204,7 +204,7 @@ export default async function DownloadsPage() {
               >
                 {/* Bundle thumbnail */}
                 <div
-                  className={`w-14 h-18 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || "cover-bundle"}`}
+                  className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || "cover-bundle"}`}
                 >
                   {upgrade.bundle.imageUrl ? (
                     <Image
@@ -330,7 +330,7 @@ export default async function DownloadsPage() {
                 className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 group hover:shadow-md hover:border-forest/15 transition-all"
               >
                 <div
-                  className={`w-12 h-15 rounded-lg flex-shrink-0 overflow-hidden ${coverClasses[product.category] || "cover-outdoor-learning"}`}
+                  className={`w-12 h-14 rounded-lg flex-shrink-0 overflow-hidden ${coverClasses[product.category] || "cover-outdoor-learning"}`}
                 >
                   {product.imageUrl ? (
                     <Image

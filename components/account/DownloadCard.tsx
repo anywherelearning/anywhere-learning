@@ -70,7 +70,7 @@ export default function DownloadCard({
     <div className="bg-white rounded-2xl border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:border-forest/15 transition-all">
       <div className="flex items-start gap-4 sm:gap-5">
         {/* Thumbnail */}
-        <div className={`w-16 h-20 sm:w-18 sm:h-22 rounded-xl flex-shrink-0 overflow-hidden ${coverClass}`}>
+        <div className={`w-16 h-20 sm:w-20 sm:h-24 rounded-xl flex-shrink-0 overflow-hidden ${coverClass}`}>
           {imageUrl ? (
             <Image
               src={imageUrl}

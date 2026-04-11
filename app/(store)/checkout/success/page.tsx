@@ -357,7 +357,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 animate-fade-in-up"
                 >
                   <div
-                    className={`w-14 h-18 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[product.category] || 'cover-outdoor-learning'}`}
+                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[product.category] || 'cover-outdoor-learning'}`}
                   >
                     {product.imageUrl ? (
                       <Image
@@ -511,7 +511,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5 group hover:shadow-md hover:border-forest/15 transition-all"
                 >
                   <div
-                    className={`w-14 h-18 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[bundle.category] || 'cover-bundle'}`}
+                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[bundle.category] || 'cover-bundle'}`}
                   >
                     {bundle.imageUrl ? (
                       <Image
