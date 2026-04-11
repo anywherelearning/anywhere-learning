@@ -110,11 +110,15 @@ export default async function DownloadsPage() {
       <h1 className="font-display text-3xl text-forest sm:text-4xl">
         Your Activity Guides
       </h1>
-      <p className="mt-2 text-gray-500">
-        {guideCount > 0
-          ? `${guideCount} activity guide${guideCount === 1 ? "" : "s"} ready to open. Use them year after year.`
-          : "Your activity guides will appear here after purchase."}
-      </p>
+      {/* Only render the subtitle when there's something to describe.
+          For empty states, DownloadList renders its own richer empty state
+          ("Your first adventure starts here") with a shop CTA — we don't
+          want two competing empty messages stacked. */}
+      {guideCount > 0 && (
+        <p className="mt-2 text-gray-500">
+          {guideCount} activity guide{guideCount === 1 ? "" : "s"} ready to open. Use them year after year.
+        </p>
+      )}
 
       {/* ── Downloads list (the main event) ── */}
       <div className="mt-8">
