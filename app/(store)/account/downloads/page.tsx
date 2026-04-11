@@ -20,7 +20,7 @@ import { getOrCreateReferral } from "@/lib/referral";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "My Downloads",
+  title: "Your Activity Guides",
   description:
     "Access and download your purchased activity guides. Start learning anywhere.",
   robots: { index: false, follow: false },
