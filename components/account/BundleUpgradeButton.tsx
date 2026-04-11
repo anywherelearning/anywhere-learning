@@ -10,6 +10,8 @@ interface BundleUpgradeButtonProps {
   amountAlreadyPaid: number;
   bundleName: string;
   email?: string;
+  /** Extra classes merged onto the button (e.g. `w-full sm:w-auto` for mobile-stacked cards). */
+  className?: string;
 }
 
 export default function BundleUpgradeButton({
@@ -19,6 +21,7 @@ export default function BundleUpgradeButton({
   amountAlreadyPaid,
   bundleName,
   email,
+  className = '',
 }: BundleUpgradeButtonProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -53,7 +56,7 @@ export default function BundleUpgradeButton({
       <button
         onClick={handleUpgrade}
         disabled={loading}
-        className="whitespace-nowrap bg-forest hover:bg-forest-dark text-cream font-semibold text-sm py-2.5 px-5 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex-shrink-0"
+        className={`whitespace-nowrap bg-forest hover:bg-forest-dark text-cream font-semibold text-sm py-2.5 px-5 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex-shrink-0 ${className}`}
       >
         {loading ? 'Preparing...' : `Upgrade for ${formatPrice(upgradePrice)}`}
       </button>

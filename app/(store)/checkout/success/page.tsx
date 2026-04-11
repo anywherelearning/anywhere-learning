@@ -527,51 +527,58 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               {bundleUpgrades.map((upgrade) => (
                 <div
                   key={upgrade.bundle.id}
-                  className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
+                  className="bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
                 >
-                  <div
-                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClassFor(upgrade.bundle.category) || 'cover-bundle'}`}
-                  >
-                    {upgrade.bundle.imageUrl ? (
-                      <Image
-                        src={upgrade.bundle.imageUrl}
-                        alt=""
-                        width={56}
-                        height={72}
-                        className="object-cover w-full h-full"
-                      />
-                    ) : (
-                      <span className="flex items-center justify-center h-full text-cream/80 text-xs font-bold">
-                        BUNDLE
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 line-clamp-1">
-                      {upgrade.bundle.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-0.5">
-                      You already have {upgrade.ownedCount} of {upgrade.totalCount}. Grab the rest with the bundle.
-                    </p>
-                    {upgrade.amountAlreadyPaid > 0 && (
-                      <div className="flex items-center gap-2 mt-1.5">
-                        <span className="text-xs text-gray-400 line-through">
-                          {formatPrice(upgrade.bundle.priceCents)}
-                        </span>
-                        <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
-                          You save {formatPrice(upgrade.amountAlreadyPaid)}
-                        </span>
+                  {/* Mobile stacks the Upgrade button below the text; desktop
+                      keeps it inline on the right. */}
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div className="flex items-center gap-4 min-w-0 flex-1">
+                      <div
+                        className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClassFor(upgrade.bundle.category) || 'cover-bundle'}`}
+                      >
+                        {upgrade.bundle.imageUrl ? (
+                          <Image
+                            src={upgrade.bundle.imageUrl}
+                            alt=""
+                            width={56}
+                            height={72}
+                            className="object-cover w-full h-full"
+                          />
+                        ) : (
+                          <span className="flex items-center justify-center h-full text-cream/80 text-xs font-bold">
+                            BUNDLE
+                          </span>
+                        )}
                       </div>
-                    )}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-gray-900 line-clamp-1">
+                          {upgrade.bundle.name}
+                        </h3>
+                        <p className="text-sm text-gray-600 mt-0.5">
+                          You already have {upgrade.ownedCount} of {upgrade.totalCount}. Grab the rest with the bundle.
+                        </p>
+                        {upgrade.amountAlreadyPaid > 0 && (
+                          <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+                            <span className="text-xs text-gray-500 line-through">
+                              {formatPrice(upgrade.bundle.priceCents)}
+                            </span>
+                            <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
+                              You save {formatPrice(upgrade.amountAlreadyPaid)}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <BundleUpgradeButton
+                      stripePriceId={upgrade.bundle.stripePriceId!}
+                      slug={upgrade.bundle.slug}
+                      upgradePrice={upgrade.upgradePrice}
+                      amountAlreadyPaid={upgrade.amountAlreadyPaid}
+                      bundleName={upgrade.bundle.name}
+                      email={data.buyerEmail ?? undefined}
+                      className="w-full sm:w-auto"
+                    />
                   </div>
-                  <BundleUpgradeButton
-                    stripePriceId={upgrade.bundle.stripePriceId!}
-                    slug={upgrade.bundle.slug}
-                    upgradePrice={upgrade.upgradePrice}
-                    amountAlreadyPaid={upgrade.amountAlreadyPaid}
-                    bundleName={upgrade.bundle.name}
-                    email={data.buyerEmail ?? undefined}
-                  />
                 </div>
               ))}
             </div>

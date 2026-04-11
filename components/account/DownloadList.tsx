@@ -174,9 +174,14 @@ export default function DownloadList({ purchases }: DownloadListProps) {
             {/* Desktop - plain filter buttons, not a tablist. aria-pressed
                 signals the active filter to screen readers without the
                 full ARIA tablist contract (which would also require
-                tabpanel/aria-controls + arrow-key navigation). */}
+                tabpanel/aria-controls + arrow-key navigation).
+
+                Horizontal scroll (not wrap) matches the shop page pattern
+                and keeps the filter to a single row no matter how many
+                categories the user owns. scrollbar-hide is fine because
+                the pills are also large touch targets. */}
             <div
-              className="hidden sm:flex flex-wrap gap-2 mb-6"
+              className="hidden sm:flex flex-nowrap gap-2 mb-6 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0"
               role="group"
               aria-label="Filter guides by category"
             >
@@ -189,7 +194,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                     type="button"
                     aria-pressed={filter === cat}
                     onClick={() => { setFilter(cat); setPage(1); }}
-                    className={pillClasses(filter === cat, cat)}
+                    className={`${pillClasses(filter === cat, cat)} flex-shrink-0`}
                   >
                     <Icon className="w-4 h-4" aria-hidden="true" />
                     {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
@@ -290,28 +295,31 @@ export default function DownloadList({ purchases }: DownloadListProps) {
         })}
       </div>
 
-      {/* Pagination */}
+      {/* Pagination - labels collapse to chevrons below sm so 320px screens
+          never overflow. Buttons stay 44×44 minimum for touch targets. */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-3 mt-8">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8">
           <button
             type="button"
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"
+            aria-label="Previous page"
+            className="flex items-center gap-1.5 min-h-[44px] px-3 sm:px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"
           >
             <ChevronLeftIcon />
-            Previous
+            <span className="hidden sm:inline">Previous</span>
           </button>
-          <span className="text-sm text-gray-600" aria-live="polite">
+          <span className="text-sm text-gray-600 whitespace-nowrap" aria-live="polite">
             {page} of {totalPages}
           </span>
           <button
             type="button"
             onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
             disabled={page === totalPages}
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"
+            aria-label="Next page"
+            className="flex items-center gap-1.5 min-h-[44px] px-3 sm:px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"
           >
-            Next
+            <span className="hidden sm:inline">Next</span>
             <ChevronRightIcon />
           </button>
         </div>
