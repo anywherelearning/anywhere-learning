@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
+import { getDownloadUrl } from '@vercel/blob';
 import { db } from '@/lib/db';
 import { orders, products, downloads, users } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
-import { streamBlobToResponse } from '@/lib/blob';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ fileId: string }> },
 ) {
-  // Rate limit: 30 req / 60s - blob streaming is resource-intensive
+  // Rate limit: 30 req / 60s
   const limited = await checkRateLimit(req, relaxedLimiter());
   if (limited) return limited;
 
@@ -70,33 +70,29 @@ export async function GET(
     ipAddress: req.headers.get('x-forwarded-for') || 'unknown',
   }).catch(() => {});
 
-  // Always stream through our server to keep Blob URLs hidden.
-  // Never redirect to the raw Blob URL - once exposed, it can be shared
-  // publicly and bypasses all auth permanently.
-  try {
-    const blobResponse = await streamBlobToResponse(product[0].blobUrl);
-    const fileName = `${product[0].slug}.pdf`;
+  // Redirect to the Vercel Blob CDN after auth checks pass.
+  //
+  // Why redirect instead of streaming through this serverless function:
+  // streaming adds a cold-start + double network hop to every PDF open,
+  // which made "Open Guide" feel like a download. Redirecting lets the
+  // browser fetch the PDF directly from the Blob CDN edge, so inline
+  // viewing is near-instant.
+  //
+  // Security tradeoff: Vercel Blob URLs contain a long random suffix and
+  // are unguessable. They are not truly signed, so once a user has the
+  // URL they could in theory share it. We accept this for low-priced
+  // PDF guides in exchange for a much better UX. Rotating the store
+  // path (re-uploading the blob) invalidates any leaked URL.
+  //
+  // - `?view=1` → raw blob URL. Vercel Blob serves PDFs with
+  //   `Content-Disposition: inline` by default, so the browser opens
+  //   them in its built-in PDF viewer.
+  // - default   → `getDownloadUrl()` appends `?download=1`, which tells
+  //   the Blob CDN to serve `Content-Disposition: attachment` and
+  //   trigger the browser's save dialog.
+  const targetUrl = isView
+    ? product[0].blobUrl
+    : getDownloadUrl(product[0].blobUrl);
 
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/pdf',
-      'Cache-Control': 'private, no-store',
-    };
-
-    // View mode: display inline; download mode: trigger save dialog
-    if (isView) {
-      headers['Content-Disposition'] = `inline; filename="${fileName}"`;
-    } else {
-      headers['Content-Disposition'] = `attachment; filename="${fileName}"`;
-    }
-
-    // Forward content-length so the browser shows a progress bar
-    const contentLength = blobResponse.headers.get('content-length');
-    if (contentLength) {
-      headers['Content-Length'] = contentLength;
-    }
-
-    return new NextResponse(blobResponse.body, { headers });
-  } catch {
-    return NextResponse.json({ error: 'File not available' }, { status: 500 });
-  }
+  return NextResponse.redirect(targetUrl, 302);
 }

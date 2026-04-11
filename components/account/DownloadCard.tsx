@@ -8,7 +8,6 @@ import { CATEGORY_LABELS, coverClassFor } from '@/lib/categories';
 import {
   DownloadIcon,
   EyeIcon,
-  CheckIcon,
   ChevronRightIcon,
 } from '@/components/shop/icons';
 
@@ -49,13 +48,7 @@ export default function DownloadCard({
   showReviewPrompt,
   bundleChildren,
 }: DownloadCardProps) {
-  const [downloaded, setDownloaded] = useState(false);
   const [bundleOpen, setBundleOpen] = useState(false);
-
-  const handleDownload = () => {
-    setDownloaded(true);
-    setTimeout(() => setDownloaded(false), 3000);
-  };
 
   const coverClass = coverClassFor(productCategory);
   const categoryLabel = CATEGORY_LABELS[productCategory] || productCategory;
@@ -102,38 +95,20 @@ export default function DownloadCard({
               </p>
             </div>
 
-            {/* Open Guide primary + Save to device secondary - desktop (not for bundles) */}
+            {/* Open Guide - desktop (not for bundles).
+                Single primary action: open in a new tab, browser's
+                built-in PDF viewer has its own save button. */}
             {!isBundle && (
-              <div className="hidden sm:flex flex-col items-end gap-1.5 flex-shrink-0">
-                <a
-                  href={`/api/download/${productId}?view=1`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-semibold py-2.5 px-5 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream"
-                  aria-label={`Open ${productName} in a new tab`}
-                >
-                  <EyeIcon />
-                  Open Guide
-                </a>
-                <a
-                  href={`/api/download/${productId}`}
-                  onClick={handleDownload}
-                  className="inline-flex items-center gap-1 text-xs font-medium text-gray-600 hover:text-forest transition-colors"
-                  aria-label={`Save ${productName} to your device`}
-                >
-                  {downloaded ? (
-                    <>
-                      <CheckIcon className="w-3 h-3" />
-                      Saved
-                    </>
-                  ) : (
-                    <>
-                      <DownloadIcon className="w-3 h-3" />
-                      Save to device
-                    </>
-                  )}
-                </a>
-              </div>
+              <a
+                href={`/api/download/${productId}?view=1`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 font-semibold py-2.5 px-5 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream flex-shrink-0"
+                aria-label={`Open ${productName} in a new tab`}
+              >
+                <EyeIcon />
+                Open Guide
+              </a>
             )}
           </div>
 
@@ -146,38 +121,18 @@ export default function DownloadCard({
         </div>
       </div>
 
-      {/* Mobile Open Guide primary + Save to device secondary (not for bundles) */}
+      {/* Mobile Open Guide - single primary action (not for bundles) */}
       {!isBundle && (
-        <div className="sm:hidden mt-3 space-y-2">
-          <a
-            href={`/api/download/${productId}?view=1`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream w-full"
-            aria-label={`Open ${productName} in a new tab`}
-          >
-            <EyeIcon />
-            Open Guide
-          </a>
-          <a
-            href={`/api/download/${productId}`}
-            onClick={handleDownload}
-            className="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 hover:text-forest transition-colors py-1"
-            aria-label={`Save ${productName} to your device`}
-          >
-            {downloaded ? (
-              <>
-                <CheckIcon className="w-3.5 h-3.5" />
-                Saved to device
-              </>
-            ) : (
-              <>
-                <DownloadIcon className="w-3.5 h-3.5" />
-                Save to device
-              </>
-            )}
-          </a>
-        </div>
+        <a
+          href={`/api/download/${productId}?view=1`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sm:hidden mt-3 flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm bg-forest hover:bg-forest-dark text-cream w-full"
+          aria-label={`Open ${productName} in a new tab`}
+        >
+          <EyeIcon />
+          Open Guide
+        </a>
       )}
 
       {/* Bundle children dropdown */}

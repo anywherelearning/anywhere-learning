@@ -175,13 +175,10 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                 signals the active filter to screen readers without the
                 full ARIA tablist contract (which would also require
                 tabpanel/aria-controls + arrow-key navigation).
-
-                Horizontal scroll (not wrap) matches the shop page pattern
-                and keeps the filter to a single row no matter how many
-                categories the user owns. scrollbar-hide is fine because
-                the pills are also large touch targets. */}
+                flex-wrap is intentional: we want every category visible
+                without scrolling, even if that means two rows. */}
             <div
-              className="hidden sm:flex flex-nowrap gap-2 mb-6 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0"
+              className="hidden sm:flex flex-wrap gap-2 mb-6"
               role="group"
               aria-label="Filter guides by category"
             >
@@ -194,7 +191,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                     type="button"
                     aria-pressed={filter === cat}
                     onClick={() => { setFilter(cat); setPage(1); }}
-                    className={`${pillClasses(filter === cat, cat)} flex-shrink-0`}
+                    className={pillClasses(filter === cat, cat)}
                   >
                     <Icon className="w-4 h-4" aria-hidden="true" />
                     {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
