@@ -45,3 +45,6 @@ next-env.d.ts
 # capacitor native projects (generated, not committed)
 /ios/
 /android/
+
+# generated pinterest catalog snapshot (pre-launch only, regenerate as needed)
+/pinterest-feed.tsv
