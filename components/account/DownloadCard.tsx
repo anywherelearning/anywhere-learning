@@ -232,7 +232,7 @@ export default function DownloadCard({
               {bundleChildren.map((child) => (
                 <div
                   key={child.productId}
-                  className="flex items-center gap-3 bg-gray-50/80 rounded-xl p-3"
+                  className="flex items-center gap-3 bg-forest/5 rounded-xl p-3"
                 >
                   {/* Child thumbnail */}
                   <div className={`w-10 h-12 rounded-lg flex-shrink-0 overflow-hidden ${coverClasses[child.category] || 'cover-outdoor-learning'}`}>
@@ -298,11 +298,11 @@ export default function DownloadCard({
 
       {/* Review prompt (not for bundles) */}
       {showReviewPrompt && !isBundle && (
-        <div className="mt-3 pt-3 border-t border-gray-50 text-sm text-gray-400">
+        <div className="mt-3 pt-3 border-t border-gray-50 text-sm text-gray-600">
           Enjoying this guide?{' '}
           <Link
             href={`/shop/${slug}#reviews`}
-            className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
+            className="font-medium text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
           >
             Share your experience
           </Link>

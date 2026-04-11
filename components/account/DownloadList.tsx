@@ -139,7 +139,6 @@ export default function DownloadList({ purchases }: DownloadListProps) {
       {showFilters && (() => {
         const ActiveIcon = CATEGORY_ICONS[filter] || SparklesIcon;
         const activeLabel = filter === 'all' ? 'All Guides' : (CATEGORY_LABELS[filter] || filter);
-        const activeColor = CATEGORY_ACTIVE_COLORS[filter] || CATEGORY_ACTIVE_COLORS['all'];
 
         const pillClasses = (isActive: boolean, cat: string) =>
           `whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
@@ -177,7 +176,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
             <div className="sm:hidden mb-6">
               <button
                 onClick={() => setMobileOpen((o) => !o)}
-                className={`w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium ${activeColor}`}
+                className="w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium bg-white border border-gray-200 text-gray-700"
               >
                 <span className="flex items-center gap-2">
                   <ActiveIcon className="w-4 h-4" />

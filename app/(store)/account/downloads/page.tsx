@@ -146,7 +146,7 @@ export default async function DownloadsPage() {
       {/* ── Bundle upgrade suggestions (the ONE upsell) ── */}
       {qualifyingUpgrades.length > 0 && (
         <section>
-          <h2 className="font-display text-xl text-forest mb-1">
+          <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
             Save on what you already have
           </h2>
           <p className="text-sm text-gray-500 mb-5">
@@ -161,14 +161,14 @@ export default async function DownloadsPage() {
               >
                 {/* Bundle thumbnail */}
                 <div
-                  className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || "cover-bundle"}`}
+                  className={`w-16 h-20 sm:w-20 sm:h-24 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || "cover-bundle"}`}
                 >
                   {upgrade.bundle.imageUrl ? (
                     <Image
                       src={upgrade.bundle.imageUrl}
                       alt=""
-                      width={56}
-                      height={72}
+                      width={80}
+                      height={96}
                       className="object-cover w-full h-full"
                     />
                   ) : (
@@ -215,7 +215,7 @@ export default async function DownloadsPage() {
       {showReferralShare && (
         <section className={qualifyingUpgrades.length > 0 ? "mt-12" : ""}>
           <div className="text-center">
-            <h2 className="font-display text-xl text-forest mb-1">
+            <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
               Know a family who&apos;d love these?
             </h2>
             <p className="text-sm text-gray-500 mb-5">
