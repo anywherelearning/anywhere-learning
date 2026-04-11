@@ -7,13 +7,14 @@ import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { products, orders, users } from '@/lib/db/schema';
 import { inArray, eq, and, ne, sql } from 'drizzle-orm';
-import { getUserByClerkId } from '@/lib/db/queries';
+import { getUserByClerkId, getBundleUpgrades } from '@/lib/db/queries';
 import { getReferralByEmail } from '@/lib/referral';
 import { formatPrice } from '@/lib/utils';
 import { BUNDLE_CONTENTS, FREE_BONUS_SLUG } from '@/lib/cart';
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
+import BundleUpgradeButton from '@/components/account/BundleUpgradeButton';
 
 // Force dynamic rendering — the Skills Map bonus check reads the buyer's
 // order history, which must never be cached across users or visits.
@@ -109,31 +110,100 @@ async function getSessionProducts(sessionId: string, token?: string) {
 
     if (purchasedProducts.length === 0) return null;
 
-    // Find bundles that could be upgrades (user bought individual guides)
-    const isIndividualPurchase = purchasedProducts.some((p) => !p.isBundle);
-    let bundleUpgrades: typeof purchasedProducts = [];
-
-    if (isIndividualPurchase) {
-      const purchasedSlugs = new Set(purchasedProducts.map((p) => p.slug));
-      const allBundles = await db
-        .select()
-        .from(products)
-        .where(and(eq(products.active, true), eq(products.isBundle, true)));
-
-      bundleUpgrades = allBundles.filter((bundle) => {
-        const childSlugs = BUNDLE_CONTENTS[bundle.slug] || [];
-        if (childSlugs.length === 0) return false;
-        const overlap = childSlugs.filter((s) => purchasedSlugs.has(s));
-        return overlap.length > 0 && overlap.length < childSlugs.length;
-      });
-    }
+    const amountTotalCents = session.amount_total ?? 0;
+    const currency = (session.currency ?? 'usd').toUpperCase();
+    const buyerEmail = session.customer_details?.email ?? null;
 
     // Check if a bundle was purchased (triggers free Skills Map bonus)
     const hasBundles = purchasedProducts.some((p) => p.isBundle);
 
+    // ── Bundle upgrade credits ───────────────────────────────────────
+    // Build the same purchasedAmountByProduct map the downloads page uses,
+    // seeded from (a) this session's proportional per-product amounts and
+    // (b) any prior orders the buyer already has. The downloads page reads
+    // orders.amountCents directly — here we must mirror the webhook's
+    // proportional distribution because the webhook may not have run yet.
+    // See the pricing invariant in app/api/webhooks/stripe/route.ts; all
+    // three sites (webhook, checkout, and this page) must stay in sync.
+    const purchasedAmountByProduct: Record<string, number> = {};
+    const purchasedProductIdSet = new Set<string>();
+
+    const totalSRPCents = purchasedProducts.reduce((sum, p) => sum + p.priceCents, 0);
+    purchasedProducts.forEach((p, i) => {
+      purchasedProductIdSet.add(p.id);
+      if (totalSRPCents === 0 || amountTotalCents === 0) return;
+      const isLast = i === purchasedProducts.length - 1;
+      const priorSum = purchasedProducts.slice(0, i).reduce(
+        (sum, prod) => sum + Math.round((prod.priceCents / totalSRPCents) * amountTotalCents),
+        0,
+      );
+      const proportionalAmount = isLast
+        ? amountTotalCents - priorSum
+        : Math.round((p.priceCents / totalSRPCents) * amountTotalCents);
+      const existing = purchasedAmountByProduct[p.id] || 0;
+      if (proportionalAmount > existing) {
+        purchasedAmountByProduct[p.id] = proportionalAmount;
+      }
+    });
+
+    // Expand any bundles in this session to their child product IDs so the
+    // upgrade suggestion counts sub-bundle children as owned even before the
+    // webhook writes $0 child orders. The bundle itself also stays in the
+    // set so getBundleUpgrades credits its paid amount via sub-bundle overlap.
+    for (const bundle of purchasedProducts.filter((p) => p.isBundle)) {
+      const childSlugs = BUNDLE_CONTENTS[bundle.slug] || [];
+      if (childSlugs.length === 0) continue;
+      const childProducts = await db
+        .select({ id: products.id })
+        .from(products)
+        .where(inArray(products.slug, childSlugs));
+      for (const cp of childProducts) {
+        purchasedProductIdSet.add(cp.id);
+      }
+    }
+
+    // Merge in prior orders by email (past individual purchases, already-
+    // expanded prior bundles, prior BYOB discounts). Case-insensitive match
+    // since Stripe lowercases customer emails but Clerk can write mixed case.
+    if (buyerEmail) {
+      try {
+        const priorOrders = await db
+          .select({
+            productId: orders.productId,
+            amountCents: orders.amountCents,
+          })
+          .from(orders)
+          .innerJoin(users, eq(orders.userId, users.id))
+          .where(
+            and(
+              sql`lower(${users.email}) = lower(${buyerEmail})`,
+              inArray(orders.status, ['completed', 'partially_refunded']),
+            ),
+          );
+        for (const o of priorOrders) {
+          purchasedProductIdSet.add(o.productId);
+          const existing = purchasedAmountByProduct[o.productId] || 0;
+          if (o.amountCents > existing) {
+            purchasedAmountByProduct[o.productId] = o.amountCents;
+          }
+        }
+      } catch (err) {
+        console.error('Prior orders lookup for bundle upgrades failed:', err);
+      }
+    }
+
+    const bundleUpgradeCandidates = await getBundleUpgrades(
+      Array.from(purchasedProductIdSet),
+      purchasedAmountByProduct,
+    ).catch(() => []);
+    // Match the downloads page: 2+ owned children filters out noisy 1-child
+    // matches and keeps the pitch ("Save on what you already have") honest.
+    const bundleUpgrades = bundleUpgradeCandidates
+      .filter((u) => u.ownedCount >= 2)
+      .slice(0, 2);
+
     // Look up buyer's referral code (may not exist yet if webhook hasn't fired)
     let referralCode: string | undefined;
-    const buyerEmail = session.customer_details?.email;
     if (buyerEmail) {
       try {
         const referral = await getReferralByEmail(buyerEmail);
@@ -192,20 +262,15 @@ async function getSessionProducts(sessionId: string, token?: string) {
     // Only mention the bonus on the confirmation if it's actually new to them.
     const showBonusBanner = hasBundles && !alreadyOwnsBonus;
 
-    // Amount the customer actually paid (includes discounts, taxes, BYOB pricing).
-    const amountTotalCents = session.amount_total ?? 0;
-    const currency = (session.currency ?? 'usd').toUpperCase();
-    const buyerEmailForPinterest = session.customer_details?.email ?? null;
-
     return {
       products: purchasedProducts,
-      bundleUpgrades: bundleUpgrades.slice(0, 2),
+      bundleUpgrades,
       showBonusBanner,
       referralCode,
       orderId: sessionId,
       amountTotalCents,
       currency,
-      buyerEmail: buyerEmailForPinterest,
+      buyerEmail,
     };
   } catch {
     return null;
@@ -497,25 +562,25 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           <section className="mt-14 pt-8 border-t border-gray-100">
             <div className="text-center mb-5">
               <h2 className="font-display text-xl text-forest mb-1">
-                Complete Your Collection
+                Save on what you already have
               </h2>
               <p className="text-sm text-gray-500">
-                Get every activity in the bundle and save.
+                Upgrade to the full bundle and we&apos;ll credit what you&apos;ve
+                paid.
               </p>
             </div>
             <div className="space-y-3">
-              {bundleUpgrades.map((bundle) => (
-                <Link
-                  key={bundle.id}
-                  href={`/shop/${bundle.slug}`}
-                  className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5 group hover:shadow-md hover:border-forest/15 transition-all"
+              {bundleUpgrades.map((upgrade) => (
+                <div
+                  key={upgrade.bundle.id}
+                  className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 sm:p-5"
                 >
                   <div
-                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[bundle.category] || 'cover-bundle'}`}
+                    className={`w-14 h-20 rounded-xl flex-shrink-0 overflow-hidden ${coverClasses[upgrade.bundle.category] || 'cover-bundle'}`}
                   >
-                    {bundle.imageUrl ? (
+                    {upgrade.bundle.imageUrl ? (
                       <Image
-                        src={bundle.imageUrl}
+                        src={upgrade.bundle.imageUrl}
                         alt=""
                         width={56}
                         height={72}
@@ -528,47 +593,32 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 line-clamp-1 group-hover:text-forest transition-colors">
-                      {bundle.name}
+                    <h3 className="font-semibold text-gray-900 line-clamp-1">
+                      {upgrade.bundle.name}
                     </h3>
                     <p className="text-sm text-gray-500 mt-0.5">
-                      {bundle.activityCount
-                        ? `${bundle.activityCount} activities included`
-                        : 'Every guide in one bundle'}
+                      You own {upgrade.ownedCount} of {upgrade.totalCount} guides
                     </p>
-                    <div className="flex items-center gap-2 mt-1.5">
-                      {bundle.compareAtPriceCents && (
+                    {upgrade.amountAlreadyPaid > 0 && (
+                      <div className="flex items-center gap-2 mt-1.5">
                         <span className="text-xs text-gray-400 line-through">
-                          {formatPrice(bundle.compareAtPriceCents)}
+                          {formatPrice(upgrade.bundle.priceCents)}
                         </span>
-                      )}
-                      <span className="text-sm font-semibold text-forest">
-                        {formatPrice(bundle.priceCents)}
-                      </span>
-                      {bundle.compareAtPriceCents && (
                         <span className="text-xs bg-gold/15 text-gold-dark px-2 py-0.5 rounded-full font-medium">
-                          Save{' '}
-                          {formatPrice(
-                            bundle.compareAtPriceCents - bundle.priceCents
-                          )}
+                          You save {formatPrice(upgrade.amountAlreadyPaid)}
                         </span>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
-                  <svg
-                    className="w-5 h-5 text-gray-300 group-hover:text-forest group-hover:translate-x-0.5 transition-all flex-shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
+                  <BundleUpgradeButton
+                    stripePriceId={upgrade.bundle.stripePriceId!}
+                    slug={upgrade.bundle.slug}
+                    upgradePrice={upgrade.upgradePrice}
+                    amountAlreadyPaid={upgrade.amountAlreadyPaid}
+                    bundleName={upgrade.bundle.name}
+                    email={data.buyerEmail ?? undefined}
+                  />
+                </div>
               ))}
             </div>
           </section>
