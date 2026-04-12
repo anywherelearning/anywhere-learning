@@ -82,6 +82,12 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
     params.delete('page');
     router.push(`/blog?${params.toString()}`, { scroll: false });
     setMobileOpen(false);
+
+    // Scroll to the posts section so switching tabs doesn't jump to page top
+    // Use setTimeout to wait for the DOM to update (e.g. featured post reappearing)
+    setTimeout(() => {
+      document.getElementById('posts')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   }
 
   function handleSearch(value: string) {
@@ -105,10 +111,46 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
         : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
     }`;
 
+  const verticalPillClasses = (isActive: boolean, value: string) =>
+    `w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2.5 ${
+      isActive
+        ? categoryActiveColors[value]
+        : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+    }`;
+
   return (
     <div className="space-y-4">
-      {/* Desktop: wrap pills */}
-      <div className="hidden sm:flex flex-wrap gap-2" role="tablist">
+      {/* Desktop (lg+): vertical stacked sidebar */}
+      <div className="hidden lg:block">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark mb-4">
+          Browse by Topic
+        </p>
+        <div className="space-y-2" role="tablist">
+          {categories.map((cat) => {
+            const count = cat.value && postCounts ? postCounts[cat.value] : null;
+            return (
+              <button
+                key={cat.value}
+                role="tab"
+                aria-selected={active === cat.value}
+                onClick={() => handleFilter(cat.value)}
+                className={verticalPillClasses(active === cat.value, cat.value)}
+              >
+                <cat.Icon className="w-4 h-4 flex-shrink-0" />
+                <span className="flex-1 text-left">{cat.label}</span>
+                {count != null && count > 0 && (
+                  <span className={`text-xs ${active === cat.value ? 'opacity-75' : 'text-gray-400'}`}>
+                    ({count})
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Tablet (sm-md): horizontal flex-wrap pills */}
+      <div className="hidden sm:flex lg:hidden flex-wrap gap-2" role="tablist">
         {categories.map((cat) => {
           const count = cat.value && postCounts ? postCounts[cat.value] : null;
           return (

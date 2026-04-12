@@ -90,7 +90,6 @@ export default function ProductCard({
   category,
   isBundle,
   activityCount,
-  ageRange,
   averageRating,
   reviewCount,
 }: ProductCardProps) {
@@ -189,16 +188,9 @@ export default function ProductCard({
             </div>
           )}
 
-          <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">
+          <p className="text-sm text-gray-500 mb-5 line-clamp-2 leading-relaxed">
             {shortDescription}
           </p>
-
-          {/* Meta info row */}
-          {ageRange && (
-            <p className="text-xs text-gray-400 mb-4">
-              {ageRange} &middot; Digital guide
-            </p>
-          )}
 
           {/* Price + CTA row */}
           <div className="flex items-center justify-between mt-auto">
@@ -212,22 +204,17 @@ export default function ProductCard({
                 </span>
               )}
             </div>
-            <div className="flex items-center gap-2">
-              <span className="bg-forest/5 text-forest font-medium text-sm px-4 py-2 rounded-full group-hover:bg-forest group-hover:text-cream transition-all duration-300">
-                View guide &rarr;
-              </span>
-              {stripePriceId && (
-                <QuickAddButton
-                  stripePriceId={stripePriceId}
-                  slug={slug}
-                  name={name}
-                  priceCents={priceCents}
-                  category={category}
-                  isBundle={isBundle}
-                  imageUrl={imageUrl ?? null}
-                />
-              )}
-            </div>
+            {stripePriceId && (
+              <QuickAddButton
+                stripePriceId={stripePriceId}
+                slug={slug}
+                name={name}
+                priceCents={priceCents}
+                category={category}
+                isBundle={isBundle}
+                imageUrl={imageUrl ?? null}
+              />
+            )}
           </div>
         </div>
       </div>

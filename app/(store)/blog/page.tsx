@@ -8,7 +8,7 @@ import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import BlogPagination from '@/components/blog/BlogPagination';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 
-const POSTS_PER_PAGE = 9;
+const POSTS_PER_PAGE = 6;
 
 export const metadata: Metadata = {
   title: 'Homeschool Ideas & Real-World Learning Tips',
@@ -118,17 +118,24 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
 
-      {/* Hero intro */}
-      <section className="pt-12 pb-8 md:pt-20 md:pb-12">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      {/* Hero masthead - editorial, text-led */}
+      <section className="relative pt-10 pb-10 sm:pt-12 sm:pb-12 md:pt-16 md:pb-14 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,163,115,0.1),transparent_65%)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <ScrollReveal>
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
-              The Blog
-            </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest mb-4">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-px w-12 bg-gold" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark">
+                The Blog
+              </p>
+            </div>
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-forest leading-[0.95] mb-6 text-balance max-w-4xl">
               Ideas for the Everyday Explorer
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl">
+            <p className="text-lg md:text-xl text-[#8b7355] max-w-2xl leading-relaxed">
               Practical inspiration, honest encouragement, and real-world
               learning ideas, from one homeschool family to another.
             </p>
@@ -138,9 +145,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
       {/* Featured post */}
       {!activeCategory && (
-        <section className="pb-12 md:pb-16">
+        <section className="pb-14 md:pb-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <ScrollReveal delay={100}>
+              {/* Minimal editorial accent */}
+              <div className="mb-6 flex items-center gap-4">
+                <div className="h-px w-12 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark">
+                  Featured Story
+                </p>
+              </div>
               <BlogHero post={featured} />
             </ScrollReveal>
           </div>
@@ -148,52 +162,56 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       )}
 
       {/* Category filter + grid */}
-      <section id="posts" className="pb-16 md:pb-24 scroll-mt-4">
+      <section id="posts" className="bg-forest-light-gradient pt-14 md:pt-20 pb-16 md:pb-24 scroll-mt-4">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="mb-10">
-            <Suspense>
-              <BlogCategoryFilter postCounts={postCounts} />
-            </Suspense>
-          </div>
-
-          {gridPosts.length > 0 ? (
-            <>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {gridPosts.map((post, i) => (
-                  <ScrollReveal key={post.slug} delay={i * 80}>
-                    <BlogCard
-                      slug={post.slug}
-                      title={post.title}
-                      excerpt={post.excerpt}
-                      category={post.category}
-                      publishedAt={post.publishedAt}
-                      readTimeMinutes={post.readTimeMinutes}
-                      author={post.author}
-                      heroImage={post.heroImage}
-                      heroImageAlt={post.heroImageAlt}
-                    />
-                  </ScrollReveal>
-                ))}
-              </div>
+          <div className="lg:grid lg:grid-cols-[260px_1fr] lg:gap-10 xl:gap-12">
+            {/* Sidebar: category filter */}
+            <aside className="mb-10 lg:mb-0 lg:sticky lg:top-24 lg:self-start">
               <Suspense>
-                <BlogPagination
-                  currentPage={safePage}
-                  totalPages={totalPages}
-                />
+                <BlogCategoryFilter postCounts={postCounts} />
               </Suspense>
-            </>
-          ) : (
-            <div className="text-center py-16">
-              <p className="text-gray-400 text-lg">
-                No posts in this category yet. Check back soon!
-              </p>
+            </aside>
+
+            {/* Main: posts grid */}
+            <div>
+              {gridPosts.length > 0 ? (
+                <>
+                  <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                    {gridPosts.map((post, i) => (
+                      <ScrollReveal key={post.slug} delay={i * 80}>
+                        <BlogCard
+                          slug={post.slug}
+                          title={post.title}
+                          excerpt={post.excerpt}
+                          hook={post.hook}
+                          category={post.category}
+                          heroImage={post.heroImage}
+                          heroImageAlt={post.heroImageAlt}
+                        />
+                      </ScrollReveal>
+                    ))}
+                  </div>
+                  <Suspense>
+                    <BlogPagination
+                      currentPage={safePage}
+                      totalPages={totalPages}
+                    />
+                  </Suspense>
+                </>
+              ) : (
+                <div className="text-center py-16">
+                  <p className="text-gray-400 text-lg">
+                    No posts in this category yet. Check back soon!
+                  </p>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </section>
 
       {/* Newsletter CTA */}
-      <section className="pb-20 md:pb-28">
+      <section className="pt-14 md:pt-20 pb-8 md:pb-10">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <ScrollReveal>
             <BlogNewsletterCTA />

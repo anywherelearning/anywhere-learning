@@ -60,17 +60,24 @@ export default function ResourcesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
 
-      {/* Hero intro */}
-      <section className="pt-12 pb-8 md:pt-20 md:pb-12">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      {/* Hero masthead - editorial, text-led */}
+      <section className="relative py-20 sm:py-28 md:py-36 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,163,115,0.1),transparent_65%)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <ScrollReveal>
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
-              Resource Guides
-            </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest mb-4">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-px w-12 bg-gold" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark">
+                Resource Guides
+              </p>
+            </div>
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-forest leading-[0.95] mb-6 text-balance max-w-4xl">
               Everything You Need to Know
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl">
+            <p className="text-lg md:text-xl text-[#8b7355] max-w-2xl leading-relaxed">
               In-depth guides on the topics that matter most to homeschool and
               worldschool families, backed by experience and research.
             </p>
