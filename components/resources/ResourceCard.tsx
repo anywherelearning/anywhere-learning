@@ -2,15 +2,12 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { resourceTopics, type ResourceTopic } from '@/lib/resources';
-import { formatReadTime } from '@/lib/blog';
 
 interface ResourceCardProps {
   slug: string;
   title: string;
-  excerpt: string;
+  hook: string;
   topic: ResourceTopic;
-  readTimeMinutes: number;
-  relatedCount: number;
   heroImage?: string;
   heroImageAlt?: string;
   heroImagePosition?: string;
@@ -52,14 +49,14 @@ const topicIcons: Record<ResourceTopic, ReactNode> = {
 };
 
 export default function ResourceCard({
-  slug, title, excerpt, topic, readTimeMinutes, relatedCount, heroImage, heroImageAlt, heroImagePosition,
+  slug, title, hook, topic, heroImage, heroImageAlt, heroImagePosition,
 }: ResourceCardProps) {
   const topicMeta = resourceTopics[topic];
 
   return (
     <Link
       href={`/guides/${slug}`}
-      className="group block rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+      className="group flex flex-col h-full rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
     >
       {/* Hero image or gradient header */}
       {heroImage ? (
@@ -98,7 +95,7 @@ export default function ResourceCard({
             >
               {topicMeta.label}
             </span>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug group-hover:text-forest transition-colors line-clamp-2">
+            <h3 className="font-semibold text-gray-900 text-lg leading-snug group-hover:text-forest transition-colors">
               {title}
             </h3>
           </div>
@@ -108,28 +105,17 @@ export default function ResourceCard({
       {/* Title (when hero image is shown, title moves below) */}
       {heroImage && (
         <div className="px-6 pt-4 pb-1">
-          <h3 className="font-semibold text-gray-900 text-lg leading-snug group-hover:text-forest transition-colors line-clamp-2">
+          <h3 className="font-semibold text-gray-900 text-lg leading-snug group-hover:text-forest transition-colors">
             {title}
           </h3>
         </div>
       )}
 
-      {/* Body */}
+      {/* Hook */}
       <div className="px-6 pb-6 pt-3">
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-3 mb-5">
-          {excerpt}
+        <p className="text-sm text-gray-500 leading-relaxed">
+          {hook}
         </p>
-        <div className="flex items-center justify-between text-xs text-gray-400">
-          <span>{formatReadTime(readTimeMinutes)}</span>
-          {relatedCount > 0 && (
-            <span className="flex items-center gap-1.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-gray-300">
-                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
-              </svg>
-              {relatedCount} related articles
-            </span>
-          )}
-        </div>
       </div>
     </Link>
   );

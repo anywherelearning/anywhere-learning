@@ -61,7 +61,7 @@ export default function ResourcesPage() {
       />
 
       {/* Hero masthead - editorial, text-led */}
-      <section className="relative py-20 sm:py-28 md:py-36 overflow-hidden">
+      <section className="relative pt-10 pb-10 sm:pt-12 sm:pb-12 md:pt-16 md:pb-14 overflow-hidden">
         <div
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,163,115,0.1),transparent_65%)]"
           aria-hidden="true"
@@ -86,7 +86,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Resource cards grid */}
-      <section className="pb-16 md:pb-24">
+      <section className="bg-forest-light-gradient pb-16 md:pb-24 pt-10 md:pt-14">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {resources.map((resource, i) => (
@@ -94,10 +94,8 @@ export default function ResourcesPage() {
                 <ResourceCard
                   slug={resource.slug}
                   title={resource.title}
-                  excerpt={resource.excerpt}
+                  hook={resource.hook}
                   topic={resource.topic}
-                  readTimeMinutes={resource.readTimeMinutes}
-                  relatedCount={resource.relatedBlogSlugs.length}
                   heroImage={resource.heroImage}
                   heroImageAlt={resource.heroImageAlt}
                   heroImagePosition={resource.heroImagePosition}
@@ -109,8 +107,8 @@ export default function ResourcesPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-2xl px-5 sm:px-8">
           <ScrollReveal>
             <BlogNewsletterCTA />
           </ScrollReveal>

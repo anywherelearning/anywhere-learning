@@ -109,10 +109,16 @@ export default function SiteHeader() {
             </Link>
           </nav>
 
-          {/* Right: Account + Cart (desktop) */}
-          <div className="hidden items-center gap-2 md:flex">
+          {/* Right: Account + Cart + Free Guide CTA (desktop) */}
+          <div className="hidden items-center gap-3 md:flex">
             <AuthNav />
             <CartIcon />
+            <Link
+              href="/free-guide"
+              className="rounded-full bg-forest px-4 py-2 text-sm font-semibold text-cream transition-all hover:bg-forest-dark active:scale-[0.97]"
+            >
+              Free Guide
+            </Link>
           </div>
 
           {/* Mobile: Cart + hamburger */}
@@ -235,6 +241,12 @@ export default function SiteHeader() {
               className="text-2xl font-medium text-forest transition-colors hover:text-forest-dark"
             >
               About
+            </Link>
+            <Link
+              href="/free-guide"
+              className="mt-4 rounded-full bg-forest px-6 py-3 text-lg font-semibold text-cream transition-all hover:bg-forest-dark"
+            >
+              Free Guide
             </Link>
             <div className="mt-2 pt-4 border-t border-forest/10">
               <AuthNav />
