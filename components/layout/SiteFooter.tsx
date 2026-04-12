@@ -23,39 +23,89 @@ export default function SiteFooter() {
   const linkClass = 'block text-sm text-gray-500 transition-colors hover:text-forest';
 
   return (
-    <footer className="relative bg-[#faf9f6] pt-0 pb-[max(4rem,calc(1rem+env(safe-area-inset-bottom)))]">
+    <footer className="relative bg-[#faf9f6] pt-0 pb-[max(2.5rem,calc(1rem+env(safe-area-inset-bottom)))]">
       {/* Decorative organic top edge */}
-      <div className="relative h-12 -mt-1 overflow-hidden" aria-hidden="true">
-        <svg viewBox="0 0 1200 48" fill="none" preserveAspectRatio="none" className="absolute top-0 w-full h-12">
+      <div className="relative h-8 -mt-1 overflow-hidden" aria-hidden="true">
+        <svg viewBox="0 0 1200 48" fill="none" preserveAspectRatio="none" className="absolute top-0 w-full h-8">
           <path d="M0 0 Q200 40 400 24 T800 32 T1200 16 V48 H0 Z" fill="#faf9f6" />
         </svg>
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-8">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-          {/* Column 1: Brand */}
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-2">
+        {/* Logo + tagline */}
+        <div className="flex flex-col items-center gap-2 mb-6">
+          <Link href="/" aria-label="Anywhere Learning home">
+            <Image
+              src="/logo-icon-transparent.png"
+              alt="Anywhere Learning"
+              width={40}
+              height={40}
+              className="h-9 w-auto"
+            />
+          </Link>
+          <p className="font-display text-base text-forest/60">
+            Meaningful Learning, Wherever You Are
+          </p>
+        </div>
+
+        {/* 3-column grid */}
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 max-w-2xl mx-auto text-center">
+          {/* Column 1: Shop */}
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-4" aria-label="Anywhere Learning home">
-              <Image
-                src="/logo-icon-transparent.png"
-                alt=""
-                width={40}
-                height={40}
-                className="h-10 w-auto"
-                aria-hidden="true"
-              />
-              <Image
-                src="/logo-text-v2.png"
-                alt="Anywhere Learning"
-                width={240}
-                height={60}
-                className="h-20 w-auto"
-              />
-            </Link>
-            <p className="text-sm text-gray-500 leading-relaxed mb-5">
-              Real-world activity guides for homeschool and worldschool families. Low prep, no worksheets, just meaningful time together.
-            </p>
-            <div className="flex items-center gap-4">
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              Shop
+            </h3>
+            <nav aria-label="Shop links" className="space-y-2">
+              <Link href="/shop" className={linkClass}>
+                Activity Guides
+              </Link>
+              <Link href="/shop?category=bundle" className={linkClass}>
+                Bundles
+              </Link>
+              <Link href="/free-guide" className={linkClass}>
+                Free Guide
+              </Link>
+            </nav>
+          </div>
+
+          {/* Column 2: Resources */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              Resources
+            </h3>
+            <nav aria-label="Learn links" className="space-y-2">
+              <Link href="/blog" className={linkClass}>
+                Blog
+              </Link>
+              <Link href="/guides" className={linkClass}>
+                Learn
+              </Link>
+              <Link href="/about" className={linkClass}>
+                About
+              </Link>
+              <Link href="/faq" className={linkClass}>
+                FAQ
+              </Link>
+            </nav>
+          </div>
+
+          {/* Column 3: Contact */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              Contact
+            </h3>
+            <nav aria-label="Contact links" className="space-y-2">
+              <a
+                href="mailto:info@anywherelearning.co"
+                className={linkClass}
+              >
+                info@anywherelearning.co
+              </a>
+              <Link href="/contact" className={linkClass}>
+                Get in Touch
+              </Link>
+            </nav>
+            <div className="flex items-center justify-center gap-4 mt-4">
               <a
                 href="https://instagram.com/anywherelearning"
                 target="_blank"
@@ -76,70 +126,10 @@ export default function SiteFooter() {
               </a>
             </div>
           </div>
-
-          {/* Column 2: Shop */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
-              Shop
-            </h3>
-            <nav aria-label="Shop links" className="space-y-2.5">
-              <Link href="/shop" className={linkClass}>
-                Activity Guides
-              </Link>
-              <Link href="/shop?category=bundle" className={linkClass}>
-                Bundles
-              </Link>
-              <Link href="/free-guide" className={linkClass}>
-                Free Guide
-              </Link>
-            </nav>
-          </div>
-
-          {/* Column 3: Learn */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
-              Resources
-            </h3>
-            <nav aria-label="Learn links" className="space-y-2.5">
-              <Link href="/blog" className={linkClass}>
-                Blog
-              </Link>
-              <Link href="/guides" className={linkClass}>
-                Learn
-              </Link>
-              <Link href="/about" className={linkClass}>
-                About
-              </Link>
-              <Link href="/faq" className={linkClass}>
-                FAQ
-              </Link>
-            </nav>
-          </div>
-
-          {/* Column 4: Contact */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <nav aria-label="Contact links" className="space-y-2.5">
-              <a
-                href="mailto:info@anywherelearning.co"
-                className={linkClass}
-              >
-                info@anywherelearning.co
-              </a>
-              <Link href="/contact" className={linkClass}>
-                Get in Touch
-              </Link>
-            </nav>
-          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-gray-200/60">
-          <p className="font-display text-base text-forest/60 text-center mb-4">
-            Meaningful Learning, Wherever You Are
-          </p>
+        <div className="mt-8 pt-6 border-t border-gray-200/60">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
             <p className="text-xs text-gray-400">
               &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.

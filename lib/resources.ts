@@ -33,6 +33,8 @@ export interface ResourcePage {
   heroImageAlt: string;
   heroImagePosition?: string;
   content: ContentBlock[];
+  /** Short, punchy hook displayed on the card (observation voice, no fake anecdotes) */
+  hook: string;
   /** Blog post slugs this pillar links to (editorial, cross-category) */
   relatedBlogSlugs: string[];
   recommendedProduct?: string;
@@ -338,6 +340,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
+    hook: 'Your kid can name every dinosaur but can\'t make a sandwich. Real-world learning fixes that.',
     relatedBlogSlugs: [
       'kitchen-learning-lab',
       'teach-kids-about-money',
@@ -695,6 +698,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
+    hook: 'The backyard is the most underrated classroom on the planet. Here\'s how to use it.',
     relatedBlogSlugs: [
       'nature-based-learning-guide',
       'nature-walks-science',
@@ -992,6 +996,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
+    hook: 'A foreign grocery store teaches more geography than a year of worksheets ever could.',
     relatedBlogSlugs: [
       'homeschool-while-traveling',
       'slow-travel-over-bucket-list',
@@ -1300,6 +1305,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
+    hook: 'Creativity isn\'t finger painting. It\'s the skill behind every invention, business, and solution.',
     relatedBlogSlugs: [
       'raise-creative-kids',
       'board-game-design-kids',
@@ -1618,6 +1624,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
+    hook: 'Your kids will use AI every day of their adult lives. The question is whether anyone taught them how.',
     relatedBlogSlugs: [
       'ai-for-kids-2026',
       'ai-myths-facts-kids',
@@ -1680,6 +1687,7 @@ const resources: ResourcePage[] = [
         { question: 'Is it too late to start homeschooling?', answer: 'No. Families start homeschooling at every age and stage, from kindergarten through high school. Older children may need a longer deschooling period, but they also bring self-awareness and maturity to the transition.' },
       ]},
     ],
+    hook: 'Nobody hands you a map when you pull your kid out of school. This is the closest thing to one.',
     relatedBlogSlugs: [
       'new-to-homeschooling',
       'five-stages-deschooling',
