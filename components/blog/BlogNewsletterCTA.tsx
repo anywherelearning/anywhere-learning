@@ -11,7 +11,7 @@ export default function BlogNewsletterCTA() {
           Practical ideas, encouragement, and real-world learning tips, only
           when we have something worth sharing. No spam. Unsubscribe anytime.
         </p>
-        <EmailForm variant="dark" />
+        <EmailForm variant="dark" buttonText="Subscribe" successHeading="You're in! Welcome to the list." successBody="You'll hear from us when we have something worth sharing." />
       </div>
     </div>
   );

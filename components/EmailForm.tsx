@@ -5,9 +5,12 @@ import Link from "next/link";
 
 interface EmailFormProps {
   variant?: "light" | "dark";
+  buttonText?: string;
+  successHeading?: string;
+  successBody?: string;
 }
 
-export default function EmailForm({ variant = "light" }: EmailFormProps) {
+export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides." }: EmailFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -68,14 +71,14 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
             isLight ? "text-forest" : "text-cream"
           }`}
         >
-          Check your inbox! Your guide is on its way.
+          {successHeading}
         </p>
         <p
           className={`mt-2 text-sm ${
             isLight ? "text-gray-500" : "text-cream/80"
           }`}
         >
-          While you wait, explore our ready-to-use activity guides.
+          {successBody}
         </p>
         <Link
           href="/shop"
@@ -125,7 +128,7 @@ export default function EmailForm({ variant = "light" }: EmailFormProps) {
               : "bg-gold text-forest-dark hover:bg-gold-light"
           }`}
         >
-          {status === "loading" ? "Sending…" : "Send me the free guide"}
+          {status === "loading" ? "Sending…" : buttonText}
         </button>
       </div>
 

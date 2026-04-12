@@ -82,6 +82,12 @@ export default function BlogCategoryFilter({ postCounts }: BlogCategoryFilterPro
     params.delete('page');
     router.push(`/blog?${params.toString()}`, { scroll: false });
     setMobileOpen(false);
+
+    // Scroll to the posts section so switching tabs doesn't jump to page top
+    // Use setTimeout to wait for the DOM to update (e.g. featured post reappearing)
+    setTimeout(() => {
+      document.getElementById('posts')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   }
 
   function handleSearch(value: string) {
