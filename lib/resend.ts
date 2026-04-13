@@ -37,6 +37,7 @@ export async function sendPurchaseEmail({
     : `Your ${count} guides are ready ✓`;
   await resend.emails.send({
     from: 'Anywhere Learning <orders@anywherelearning.co>',
+    replyTo: 'info@anywherelearning.co',
     to,
     subject,
     react: PurchaseConfirmation({ customerName, productName, downloadUrl, referralCode, productImageUrl, products, signInUrl }),
@@ -55,6 +56,7 @@ export async function sendReferralRewardEmail({
   const resend = getResend();
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
+    replyTo: 'info@anywherelearning.co',
     to,
     subject: "Your friend just saved 15%, here's yours!",
     react: ReferralReward({ customerName, rewardCode }),
@@ -78,6 +80,7 @@ export async function sendCartAbandonmentEmail({
     : `Your ${count} activity guides are still in your cart`;
   await resend.emails.send({
     from: 'Anywhere Learning <hello@anywherelearning.co>',
+    replyTo: 'info@anywherelearning.co',
     to,
     subject,
     react: CartAbandonment({ items, upsell, shopUrl }),

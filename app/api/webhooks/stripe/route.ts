@@ -350,11 +350,12 @@ async function handlePaymentCheckout(session: Stripe.Checkout.Session) {
     // Post-transaction: send email with all product names (non-critical)
     const skillsMapBonus = hasBundles ? ' + The Future-Ready Skills Map (FREE bonus!)' : '';
     const productNames = purchasedProducts.map((p) => p.name).join(', ') + skillsMapBonus;
-    // Build product list with images for the email
-    const emailProducts = purchasedProducts.map((p) => ({
-      name: p.name,
-      imageUrl: p.imageUrl || `${process.env.NEXT_PUBLIC_URL}/products/${p.slug}.jpg`,
-    }));
+    // Build product list with images for the email (must be absolute URLs)
+    const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+    const emailProducts = purchasedProducts.map((p) => {
+      const img = p.imageUrl || `/products/${p.slug}.jpg`;
+      return { name: p.name, imageUrl: img.startsWith('http') ? img : `${siteUrl}${img}` };
+    });
 
     try {
       await sendPurchaseEmail({
@@ -485,13 +486,16 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
     }));
     const upsell = getAbandonmentUpsell(upsellInput);
 
-    // Build email items with full image URLs
-    const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
-    const emailItems = abandonedProducts.map((p) => ({
-      name: p.name,
-      imageUrl: p.imageUrl || `${siteUrl}/products/${p.slug}.jpg`,
-      priceCents: p.priceCents,
-    }));
+    // Build email items with full image URLs (must be absolute for email clients)
+    const abandonSiteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+    const emailItems = abandonedProducts.map((p) => {
+      const img = p.imageUrl || `/products/${p.slug}.jpg`;
+      return {
+        name: p.name,
+        imageUrl: img.startsWith('http') ? img : `${abandonSiteUrl}${img}`,
+        priceCents: p.priceCents,
+      };
+    });
 
     await sendCartAbandonmentEmail({ to: email, items: emailItems, upsell });
   } catch (error) {

@@ -53,12 +53,16 @@ export default function PurchaseConfirmation({
   signInUrl,
 }: PurchaseConfirmationProps) {
   const greeting = customerName ? `Hey ${customerName}!` : 'Hey there!';
-  // Build product list: use products array if provided, else fall back to single image
-  const productList: ProductItem[] = products && products.length > 0
+  // Build product list: use products array if provided, else fall back to single image.
+  // Ensure all image URLs are absolute so email clients can fetch them.
+  const ensureAbsolute = (url: string) =>
+    url.startsWith('http') ? url : `${baseUrl}${url.startsWith('/') ? '' : '/'}${url}`;
+  const productList: ProductItem[] = (products && products.length > 0
     ? products
     : productImageUrl
       ? [{ name: productName, imageUrl: productImageUrl }]
-      : [];
+      : []
+  ).map((p) => ({ ...p, imageUrl: ensureAbsolute(p.imageUrl) }));
   const isSingle = productList.length === 1;
   const isMultiple = productList.length > 1;
 
