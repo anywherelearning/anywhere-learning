@@ -1,7 +1,11 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import ProductCard from './ProductCard';
 import ProductCarousel from './ProductCarousel';
 import { CategoryIcon } from './icons';
+import { usePurchased } from './PurchasedContext';
 import type { ShopProduct } from '@/lib/types';
 
 const categoryAccentColors: Record<string, string> = {
@@ -30,6 +34,24 @@ export default function CategorySection({
   products,
   totalCount,
 }: CategorySectionProps) {
+  const purchased = usePurchased();
+  const [hidePurchased, setHidePurchased] = useState(false);
+
+  useEffect(() => {
+    function onToggle(e: Event) {
+      const { hide } = (e as CustomEvent).detail;
+      setHidePurchased(hide);
+    }
+    window.addEventListener('shop:hide-purchased', onToggle);
+    return () => window.removeEventListener('shop:hide-purchased', onToggle);
+  }, []);
+
+  const filtered = hidePurchased
+    ? products.filter((p) => !purchased.has(p.slug))
+    : products;
+
+  if (filtered.length === 0) return null;
+
   const hasMore = totalCount > 3;
 
   return (
@@ -60,10 +82,10 @@ export default function CategorySection({
 
       {/* Products - carousel if more than 3, grid otherwise */}
       {hasMore ? (
-        <ProductCarousel products={products} />
+        <ProductCarousel products={filtered} />
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
+          {filtered.map((product) => (
             <div key={product.slug} className="h-full">
               <ProductCard {...product} />
             </div>
