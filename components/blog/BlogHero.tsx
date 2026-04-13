@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { blogCategories, formatDate, formatReadTime, type BlogPost } from '@/lib/blog';
+import { blogCategories, formatDate, type BlogPost } from '@/lib/blog';
 
 interface BlogHeroProps {
   post: BlogPost;
@@ -84,7 +84,6 @@ export default function BlogHero({ post }: BlogHeroProps) {
             <span>{post.author.name}</span>
           </div>
           <span>{formatDate(post.publishedAt)}</span>
-          <span>{formatReadTime(post.readTimeMinutes)}</span>
         </div>
         <Link
           href={`/blog/${post.slug}`}

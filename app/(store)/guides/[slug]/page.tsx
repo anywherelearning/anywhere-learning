@@ -9,7 +9,7 @@ import {
   resourceProductDefaults,
   type ResourceTopic,
 } from '@/lib/resources';
-import { formatDate, formatReadTime, type BlogContentBlock } from '@/lib/blog';
+import { formatDate, type BlogContentBlock } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getArticleBodyText } from '@/lib/content-blocks';
 import type { ContentBlock } from '@/lib/content-blocks';
 import Breadcrumb from '@/components/blog/Breadcrumb';
@@ -222,15 +222,12 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
           </div>
 
           <ScrollReveal>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="mb-6">
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.12em] text-white px-3 py-1 rounded-full"
                 style={{ backgroundColor: topicMeta.color }}
               >
                 {topicMeta.label}
-              </span>
-              <span className="text-[13px] text-gray-400">
-                {formatReadTime(resource.readTimeMinutes)}
               </span>
             </div>
 
