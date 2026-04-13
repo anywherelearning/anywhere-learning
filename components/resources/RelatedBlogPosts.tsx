@@ -37,6 +37,20 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
     };
   }, [checkScroll]);
 
+  // Equalize card heights after render
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cards = el.querySelectorAll<HTMLElement>('[data-blog-card]');
+    // Reset first so we measure natural heights
+    cards.forEach((c) => (c.style.minHeight = ''));
+    requestAnimationFrame(() => {
+      let max = 0;
+      cards.forEach((c) => { if (c.scrollHeight > max) max = c.scrollHeight; });
+      if (max > 0) cards.forEach((c) => (c.style.minHeight = `${max}px`));
+    });
+  }, [posts.length]);
+
   const scroll = (direction: 'left' | 'right') => {
     const el = scrollRef.current;
     if (!el) return;
