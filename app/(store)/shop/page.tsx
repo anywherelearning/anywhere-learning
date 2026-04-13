@@ -309,7 +309,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       {isCategoryView ? (
         <CategoryHero
           category={category!}
-          productCount={filteredProducts.filter((p) => !p.isBundle).length}
+          productCount={category === 'bundle' ? filteredProducts.filter((p) => p.isBundle).length : filteredProducts.filter((p) => !p.isBundle).length}
         />
       ) : (
         <>
