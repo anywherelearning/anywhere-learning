@@ -13,7 +13,6 @@ import BundleHighlight from "@/components/shop/BundleHighlight";
 import BundleCarousel from "@/components/shop/BundleCarousel";
 import CategorySection from "@/components/shop/CategorySection";
 import CategoryHero from "@/components/shop/CategoryHero";
-import ShopSearchBar from "@/components/shop/ShopSearchBar";
 import ShopSidebar from "@/components/shop/ShopSidebar";
 import ShopProductFilter from "@/components/shop/ShopProductFilter";
 import ScrollReveal from "@/components/shared/ScrollReveal";
@@ -428,13 +427,6 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
             {/* ── Main content ── */}
             <div className="min-w-0">
-              {/* Sort dropdown (desktop - above grid) */}
-              <div className="hidden lg:flex justify-end mb-6">
-                <Suspense fallback={null}>
-                  <ShopSearchBar hideSearch />
-                </Suspense>
-              </div>
-
               {/* ── SEARCH RESULTS VIEW ── */}
               {isSearchActive && (
                 <>
