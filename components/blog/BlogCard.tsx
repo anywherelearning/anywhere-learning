@@ -92,7 +92,7 @@ export default function BlogCard({
         <h3 className={`font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors ${compact ? 'line-clamp-2' : ''}`}>
           {title}
         </h3>
-        <p className={`text-sm text-gray-500 leading-relaxed ${compact ? 'line-clamp-2' : ''}`}>
+        <p className={`text-sm text-gray-500 leading-relaxed ${compact ? 'line-clamp-3' : ''}`}>
           {teaser}
         </p>
       </div>
