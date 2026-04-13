@@ -10,7 +10,6 @@ import {
   blogCategories,
   blogProductDefaults,
   formatDate,
-  formatReadTime,
   type BlogContentBlock,
   type BlogCategory,
 } from '@/lib/blog';
@@ -279,16 +278,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           <ScrollReveal>
-            {/* Category + read time row */}
-            <div className="flex items-center gap-3 mb-6">
+            {/* Category label */}
+            <div className="mb-6">
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.12em] text-white px-3 py-1 rounded-full"
                 style={{ backgroundColor: cat.color }}
               >
                 {cat.label}
-              </span>
-              <span className="text-[13px] text-gray-400">
-                {formatReadTime(post.readTimeMinutes)}
               </span>
             </div>
 
