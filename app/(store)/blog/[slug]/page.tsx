@@ -436,7 +436,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       {/* Related posts - full width */}
-      <section className="pb-10 md:pb-14">
+      <section className="pb-6 md:pb-10">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <RelatedPosts posts={related} />
         </div>

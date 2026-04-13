@@ -48,7 +48,7 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="pb-10 md:pb-14">
+    <section className="pb-6 md:pb-10">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ScrollReveal>
           <h2 className="font-display text-2xl sm:text-3xl text-forest mb-2">
@@ -89,16 +89,16 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
           {/* Scrollable track */}
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mb-4 scrollbar-hide"
+            className="flex items-stretch gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mb-4 scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {posts.map((post, i) => (
               <div
                 key={post!.slug}
                 data-blog-card
-                className="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                className="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] h-full"
               >
-                <ScrollReveal delay={i * 80}>
+                <ScrollReveal delay={i * 80} className="h-full">
                   <BlogCard
                     slug={post!.slug}
                     title={post!.title}
