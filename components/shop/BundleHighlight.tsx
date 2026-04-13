@@ -98,6 +98,11 @@ export default function BundleHighlight({
             )}
           </div>
 
+          <p className="text-sm text-gold font-medium mb-4 flex items-center gap-1.5 justify-center md:justify-start">
+            <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5 5a3 3 0 015-3 3 3 0 015 3 3 3 0 01-2.83 3H13a1 1 0 011 1v1a1 1 0 01-1 1h-1v7a1 1 0 01-1 1H9a1 1 0 01-1-1v-7H7a1 1 0 01-1-1V9a1 1 0 011-1h.83A3 3 0 015 5zm4-1a1 1 0 10-2 0 1 1 0 002 0zm4 0a1 1 0 10-2 0 1 1 0 002 0z"/></svg>
+            Includes the Future-Ready Skills Map free
+          </p>
+
           <Link
             href={`/shop/${slug}`}
             className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-xl text-lg"

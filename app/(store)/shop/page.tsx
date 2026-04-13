@@ -14,6 +14,8 @@ import BundleCarousel from "@/components/shop/BundleCarousel";
 import CategorySection from "@/components/shop/CategorySection";
 import CategoryHero from "@/components/shop/CategoryHero";
 import ShopSearchBar from "@/components/shop/ShopSearchBar";
+import ShopSidebar from "@/components/shop/ShopSidebar";
+import ShopProductFilter from "@/components/shop/ShopProductFilter";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import ShopPagination from "@/components/shop/ShopPagination";
 import SavingsExplainer from "@/components/shop/SavingsExplainer";
@@ -30,37 +32,37 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
   "ai-literacy": {
     title: "AI & Digital Literacy Guides",
     description:
-      "Responsible tech, critical thinking about AI, and digital citizenship. Ages 9-14.",
+      "Responsible tech, critical thinking about AI, and digital citizenship.",
   },
   "creativity-anywhere": {
     title: "Creativity Anywhere Activity Guides",
     description:
-      "Open-ended projects that build design thinking and creative confidence. Ages 6-14.",
+      "Open-ended projects that build design thinking and creative confidence.",
   },
   "communication-writing": {
     title: "Communication & Writing Guides",
     description:
-      "Real-world writing and communication skills for kids who have something to say. Ages 9-14.",
+      "Real-world writing and communication skills for kids who have something to say.",
   },
   "outdoor-learning": {
     title: "Outdoor Learning Activity Guides",
     description:
-      "Turn your backyard, park, or trail into a hands-on learning space. Ages 6-14.",
+      "Turn your backyard, park, or trail into a hands-on learning space.",
   },
   "real-world-math": {
     title: "Real-World Math Guides",
     description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking. Ages 6-14.",
+      "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
   },
   "entrepreneurship": {
     title: "Entrepreneurship Activity Guides",
     description:
-      "Plan, launch, and pitch real businesses - from brand building to Shark Tank pitches. Ages 9-14.",
+      "Plan, launch, and pitch real businesses - from brand building to Shark Tank pitches.",
   },
   "planning-problem-solving": {
     title: "Planning & Problem-Solving Guides",
     description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter. Ages 9-14.",
+      "Tackle real logistics, plan adventures, and solve problems that actually matter.",
   },
   "start-here": {
     title: "Start Here Guides",
@@ -115,7 +117,8 @@ export async function generateMetadata({
 }
 
 // ── Category sections - shared source of truth ──
-import { CATEGORIES as categorySections } from "@/lib/categories";
+import { CATEGORIES as categorySections, CATEGORY_LABELS } from "@/lib/categories";
+import { BUNDLE_CONTENTS } from "@/lib/bundles";
 
 // ── Category → Bundle slug mapping ──
 
@@ -406,206 +409,241 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
         <SavingsExplainer />
       </ScrollReveal>
 
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        {/* ════════════════════════════════════════
-            SEARCH BAR + SORT
-        ════════════════════════════════════════ */}
-        <section className="my-8">
-          <Suspense fallback={null}>
-            <ShopSearchBar />
-          </Suspense>
-        </section>
-
-        {/* ════════════════════════════════════════
-            SEARCH RESULTS VIEW
-        ════════════════════════════════════════ */}
-        {isSearchActive && (
-          <>
-            <div className="mb-6">
-              <p className="text-sm text-gray-500">
-                {filteredProducts.length} result
-                {filteredProducts.length !== 1 ? "s" : ""}
-                {q && (
-                  <>
-                    {" "}
-                    for &ldquo;
-                    <span className="font-medium text-gray-700">{q}</span>
-                    &rdquo;
-                  </>
-                )}
-              </p>
-            </div>
-            <section>
-              <ProductGrid products={filteredProducts} />
-            </section>
-          </>
-        )}
-
-        {/* ════════════════════════════════════════
-            ALL GUIDES VIEW - curated sections
-        ════════════════════════════════════════ */}
-        {isAllView && (
-          <>
-            {/* Bundles */}
-            {allBundles.length > 0 && (
-              <section className="mb-14">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="font-semibold text-gray-900 text-xl">
-                    Save More with Bundles
-                  </h2>
-                  <Link
-                    href="/shop?category=bundle"
-                    className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
-                  >
-                    View all bundles &rarr;
-                  </Link>
-                </div>
-                <BundleCarousel products={allBundles} />
-              </section>
-            )}
-
-            {/* Category filter */}
-            <section id="pick-packs" className="mb-10 scroll-mt-24">
+      <section id="products" className="bg-forest-light-gradient pt-14 md:pt-20 pb-16 md:pb-24 scroll-mt-4">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="lg:grid lg:grid-cols-[260px_1fr] lg:gap-10 xl:gap-12">
+            {/* ── Sidebar ── */}
+            <aside className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
               <Suspense fallback={null}>
-                <CategoryFilter
-                  productCounts={productCounts}
-                />
+                <ShopSidebar productCounts={productCounts} />
               </Suspense>
-            </section>
+            </aside>
 
-            {/* Category sections - always use fallback for complete catalog */}
-            {categorySections.map((cat) => {
-              const catProducts = fallbackProducts
-                .filter((p) => p.category === cat.value && !p.isBundle)
-                .sort((a, b) => a.sortOrder - b.sortOrder);
-              if (catProducts.length === 0) return null;
-              return (
-                <ScrollReveal key={cat.value}>
-                  <section className="mb-14">
-                    <CategorySection
-                      category={cat.value}
-                      label={cat.label}
-                      description={cat.description}
-                      products={catProducts}
-                      totalCount={catProducts.length}
+            {/* ── Mobile/tablet: inline filter + search ── */}
+            <div className="lg:hidden mb-8 space-y-4">
+              <Suspense fallback={null}>
+                <ShopSidebar productCounts={productCounts} />
+              </Suspense>
+            </div>
+
+            {/* ── Main content ── */}
+            <div className="min-w-0">
+              {/* Sort dropdown (desktop - above grid) */}
+              <div className="hidden lg:flex justify-end mb-6">
+                <Suspense fallback={null}>
+                  <ShopSearchBar hideSearch />
+                </Suspense>
+              </div>
+
+              {/* ── SEARCH RESULTS VIEW ── */}
+              {isSearchActive && (
+                <>
+                  <div className="mb-6">
+                    <p className="text-sm text-gray-500">
+                      {filteredProducts.length} result
+                      {filteredProducts.length !== 1 ? "s" : ""}
+                      {q && (
+                        <>
+                          {" "}
+                          for &ldquo;
+                          <span className="font-medium text-gray-700">{q}</span>
+                          &rdquo;
+                        </>
+                      )}
+                    </p>
+                  </div>
+                  <section>
+                    <ShopProductFilter products={filteredProducts} />
+                  </section>
+                </>
+              )}
+
+              {/* ── ALL GUIDES VIEW - curated sections ── */}
+              {isAllView && (
+                <>
+                  {/* Start Here section first */}
+                  {(() => {
+                    const startHereCat = categorySections.find((c) => c.value === 'start-here');
+                    const startHereProducts = fallbackProducts
+                      .filter((p) => p.category === 'start-here' && !p.isBundle)
+                      .sort((a, b) => a.sortOrder - b.sortOrder);
+                    if (!startHereCat || startHereProducts.length === 0) return null;
+                    return (
+                      <ScrollReveal>
+                        <section className="mb-14">
+                          <CategorySection
+                            category={startHereCat.value}
+                            label={startHereCat.label}
+                            description={startHereCat.description}
+                            products={startHereProducts}
+                            totalCount={startHereProducts.length}
+                          />
+                        </section>
+                      </ScrollReveal>
+                    );
+                  })()}
+
+                  {/* Bundles */}
+                  {allBundles.length > 0 && (
+                    <section className="mb-14">
+                      <div className="flex items-center justify-between mb-6">
+                        <h2 className="font-semibold text-gray-900 text-xl">
+                          Save More with Bundles
+                        </h2>
+                        <Link
+                          href="/shop?category=bundle"
+                          className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
+                        >
+                          View all bundles &rarr;
+                        </Link>
+                      </div>
+                      <BundleCarousel products={allBundles} />
+                    </section>
+                  )}
+
+                  {/* Remaining category sections (skip start-here, already shown) */}
+                  {categorySections
+                    .filter((cat) => cat.value !== 'start-here')
+                    .map((cat) => {
+                    const catProducts = fallbackProducts
+                      .filter((p) => p.category === cat.value && !p.isBundle)
+                      .sort((a, b) => a.sortOrder - b.sortOrder);
+                    if (catProducts.length === 0) return null;
+                    return (
+                      <ScrollReveal key={cat.value}>
+                        <section className="mb-14">
+                          <CategorySection
+                            category={cat.value}
+                            label={cat.label}
+                            description={cat.description}
+                            products={catProducts}
+                            totalCount={catProducts.length}
+                          />
+                        </section>
+                      </ScrollReveal>
+                    );
+                  })}
+                </>
+              )}
+
+              {/* ── SORTED ALL VIEW - flat grid ── */}
+              {isSortedAllView && (() => {
+                const totalItems = filteredProducts.length;
+                const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+                const safePage = Math.min(currentPage, totalPages || 1);
+                const startIdx = (safePage - 1) * ITEMS_PER_PAGE;
+                const pagedProducts = filteredProducts.slice(startIdx, startIdx + ITEMS_PER_PAGE);
+
+                return (
+                <>
+                  <div className="mb-6">
+                    <p className="text-sm text-gray-500">
+                      {totalItems} guides &middot; sorted by{' '}
+                      <span className="font-medium text-gray-700">
+                        {sort === 'price-asc' ? 'price (low to high)' :
+                         sort === 'price-desc' ? 'price (high to low)' :
+                         sort === 'newest' ? 'newest first' : sort}
+                      </span>
+                      {totalPages > 1 && (
+                        <> &middot; page {safePage} of {totalPages}</>
+                      )}
+                    </p>
+                  </div>
+                  <section>
+                    <ShopProductFilter products={pagedProducts} />
+                  </section>
+
+                  {totalPages > 1 && (
+                    <ShopPagination currentPage={safePage} totalPages={totalPages} sort={sort || ''} />
+                  )}
+                </>
+                );
+              })()}
+
+              {/* ── CATEGORY VIEW ── */}
+              {isCategoryView && (
+                <>
+                  {/* Category heading */}
+                  <div className="mb-6">
+                    <h2 className="font-semibold text-gray-900 text-xl">
+                      {CATEGORY_LABELS[category!] || category}
+                    </h2>
+                    {categoryMeta[category!]?.description && (
+                      <p className="text-sm text-gray-500 mt-1">
+                        {categoryMeta[category!].description}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Category bundle */}
+                  {categoryBundle && (
+                    <section className="mb-10">
+                      <BundleHighlight
+                        name={categoryBundle.name}
+                        slug={categoryBundle.slug}
+                        priceCents={categoryBundle.priceCents}
+                        compareAtPriceCents={categoryBundle.compareAtPriceCents}
+                        activityCount={categoryBundle.activityCount}
+                        imageUrl={categoryBundle.imageUrl}
+                        shortDescription={categoryBundle.shortDescription}
+                      />
+                    </section>
+                  )}
+
+                  {/* Full grid - category bundle products first */}
+                  <section>
+                    <ShopProductFilter
+                      products={(() => {
+                        if (category === "bundle") return filteredProducts.filter((p) => p.isBundle);
+                        const individual = filteredProducts.filter((p) => !p.isBundle);
+                        const bundleSlug = categoryBundleMap[category!];
+                        const bundleChildren = bundleSlug ? new Set(BUNDLE_CONTENTS[bundleSlug] || []) : null;
+                        if (!bundleChildren) return individual;
+                        return [...individual].sort((a, b) => {
+                          const aInBundle = bundleChildren.has(a.slug) ? 0 : 1;
+                          const bInBundle = bundleChildren.has(b.slug) ? 0 : 1;
+                          return aInBundle - bInBundle || a.sortOrder - b.sortOrder;
+                        });
+                      })()}
                     />
                   </section>
-                </ScrollReveal>
-              );
-            })}
-          </>
-        )}
 
-        {/* ════════════════════════════════════════
-            SORTED ALL VIEW - flat grid when sorting
-        ════════════════════════════════════════ */}
-        {isSortedAllView && (() => {
-          const totalItems = filteredProducts.length;
-          const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-          const safePage = Math.min(currentPage, totalPages || 1);
-          const startIdx = (safePage - 1) * ITEMS_PER_PAGE;
-          const pagedProducts = filteredProducts.slice(startIdx, startIdx + ITEMS_PER_PAGE);
-
-          return (
-          <>
-            <div className="mb-6">
-              <p className="text-sm text-gray-500">
-                {totalItems} guides &middot; sorted by{' '}
-                <span className="font-medium text-gray-700">
-                  {sort === 'price-asc' ? 'price (low to high)' :
-                   sort === 'price-desc' ? 'price (high to low)' :
-                   sort === 'newest' ? 'newest first' : sort}
-                </span>
-                {totalPages > 1 && (
-                  <> &middot; page {safePage} of {totalPages}</>
-                )}
-              </p>
+                  {/* Cross-sell */}
+                  {crossSellProducts.length > 0 && (
+                    <section className="mt-16 pt-12 border-t border-gray-200">
+                      <h2 className="font-display text-2xl text-forest mb-6 text-center">
+                        You might also like
+                      </h2>
+                      <ProductGrid products={crossSellProducts} />
+                    </section>
+                  )}
+                </>
+              )}
             </div>
-            <section>
-              <ProductGrid products={pagedProducts} />
+          </div>
+
+          {/* ── BOTTOM CTA ── */}
+          <ScrollReveal>
+            <section className="mt-20 text-center">
+              <div className="bg-forest-section rounded-3xl p-10 md:p-14 shadow-xl">
+                <h3 className="font-display text-2xl md:text-4xl text-cream mb-3">
+                  Not sure where to start?
+                </h3>
+                <p className="text-cream/60 mb-8 max-w-md mx-auto text-lg">
+                  Grab our free guide and discover the 10 life skills your kids
+                  can build through everyday moments.
+                </p>
+                <Link
+                  href="/free-guide"
+                  className="inline-block bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-lg"
+                >
+                  Get the Free Guide
+                </Link>
+              </div>
             </section>
-
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <ShopPagination currentPage={safePage} totalPages={totalPages} sort={sort || ''} />
-            )}
-          </>
-          );
-        })()}
-
-        {/* ════════════════════════════════════════
-            CATEGORY VIEW
-        ════════════════════════════════════════ */}
-        {isCategoryView && (
-          <>
-            {/* Category bundle */}
-            {categoryBundle && (
-              <section className="mb-10">
-                <BundleHighlight
-                  name={categoryBundle.name}
-                  slug={categoryBundle.slug}
-                  priceCents={categoryBundle.priceCents}
-                  compareAtPriceCents={categoryBundle.compareAtPriceCents}
-                  activityCount={categoryBundle.activityCount}
-                  imageUrl={categoryBundle.imageUrl}
-                  shortDescription={categoryBundle.shortDescription}
-                />
-              </section>
-            )}
-
-            {/* Category filter */}
-            <section className="mb-10">
-              <Suspense fallback={null}>
-                <CategoryFilter productCounts={productCounts} />
-              </Suspense>
-            </section>
-
-            {/* Full grid */}
-            <section>
-              <ProductGrid
-                products={
-                  category === "bundle"
-                    ? filteredProducts.filter((p) => p.isBundle)
-                    : filteredProducts.filter((p) => !p.isBundle)
-                }
-              />
-            </section>
-
-            {/* Cross-sell */}
-            {crossSellProducts.length > 0 && (
-              <section className="mt-16 pt-12 border-t border-gray-200">
-                <h2 className="font-display text-2xl text-forest mb-6 text-center">
-                  You might also like
-                </h2>
-                <ProductGrid products={crossSellProducts} />
-              </section>
-            )}
-          </>
-        )}
-
-        {/* ════════════════════════════════════════
-            BOTTOM CTA
-        ════════════════════════════════════════ */}
-        <ScrollReveal>
-          <section className="mt-20 text-center">
-            <div className="bg-forest-section rounded-3xl p-10 md:p-14 shadow-xl">
-              <h3 className="font-display text-2xl md:text-4xl text-cream mb-3">
-                Not sure where to start?
-              </h3>
-              <p className="text-cream/60 mb-8 max-w-md mx-auto text-lg">
-                Grab our free guide and discover the 10 life skills your kids
-                can build through everyday moments.
-              </p>
-              <Link
-                href="/free-guide"
-                className="inline-block bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-lg"
-              >
-                Get the Free Guide
-              </Link>
-            </div>
-          </section>
-        </ScrollReveal>
-      </div>
+          </ScrollReveal>
+        </div>
+      </section>
     </div>
       </NativeHide>
     </>

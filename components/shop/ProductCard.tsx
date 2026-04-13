@@ -4,6 +4,7 @@ import { CategoryIcon } from './icons';
 import QuickAddButton from './QuickAddButton';
 import PurchasedBadge from './PurchasedBadge';
 import type { ShopProduct } from '@/lib/types';
+import { FREE_BONUS_SLUG } from '@/lib/bundles';
 
 type ProductCardProps = ShopProduct;
 
@@ -94,6 +95,7 @@ export default function ProductCard({
   reviewCount,
 }: ProductCardProps) {
   const savings = compareAtPriceCents ? compareAtPriceCents - priceCents : 0;
+  const isFreeBonus = slug === FREE_BONUS_SLUG;
   const showRating =
     typeof reviewCount === 'number' &&
     reviewCount >= MIN_REVIEWS_TO_SHOW &&
@@ -147,7 +149,7 @@ export default function ProductCard({
           )}
 
           {/* Savings badge */}
-          {!isBundle && savings > 0 && (
+          {!isBundle && !isFreeBonus && savings > 0 && (
             <div className="absolute top-3 right-3 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-10">
               Save ${(savings / 100).toFixed(0)}
             </div>
@@ -192,6 +194,7 @@ export default function ProductCard({
             {shortDescription}
           </p>
 
+
           {/* Price + CTA row */}
           <div className="flex items-center justify-between mt-auto">
             <div>
@@ -202,6 +205,9 @@ export default function ProductCard({
                 <span className="text-sm text-gray-400 line-through ml-2">
                   ${(compareAtPriceCents / 100).toFixed(2)}
                 </span>
+              )}
+              {isFreeBonus && (
+                <p className="text-xs text-gold font-medium mt-0.5">or free with any bundle</p>
               )}
             </div>
             {stripePriceId && (
