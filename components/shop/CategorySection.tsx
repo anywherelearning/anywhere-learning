@@ -49,7 +49,7 @@ export default function CategorySection({
         </div>
         {hasMore && (
           <Link
-            href={`/shop?category=${category}`}
+            href={`/shop?category=${category}#products`}
             className="hidden sm:inline-flex shrink-0 items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
           >
             See all {totalCount} guides
@@ -75,7 +75,7 @@ export default function CategorySection({
       {hasMore && (
         <div className="mt-4 sm:hidden text-center">
           <Link
-            href={`/shop?category=${category}`}
+            href={`/shop?category=${category}#products`}
             className="inline-flex items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
           >
             See all {totalCount} guides &rarr;
