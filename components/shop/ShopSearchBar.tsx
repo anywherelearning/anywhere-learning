@@ -10,7 +10,7 @@ const sortOptions = [
   { value: 'newest', label: 'Newest' },
 ];
 
-export default function ShopSearchBar() {
+export default function ShopSearchBar({ hideSearch }: { hideSearch?: boolean } = {}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeSort = searchParams.get('sort') || '';
@@ -58,6 +58,7 @@ export default function ShopSearchBar() {
   return (
     <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
       {/* Search input */}
+      {!hideSearch && (
       <div className="relative flex-1">
         <svg
           className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-gray-400 pointer-events-none"
@@ -91,6 +92,7 @@ export default function ShopSearchBar() {
           </button>
         )}
       </div>
+      )}
 
       {/* Sort dropdown */}
       <div className="relative flex-shrink-0">

@@ -27,6 +27,7 @@ import NativeProductDetail from "@/components/mobile/NativeProductDetail";
 import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
 import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
 import { CATEGORY_LABELS, coverClassFor } from "@/lib/categories";
+import { FREE_BONUS_SLUG } from "@/lib/bundles";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -410,6 +411,22 @@ export default async function ProductPage({
               <p className="mt-2 text-lg text-gray-600 leading-relaxed">
                 {product.shortDescription}
               </p>
+
+              {/* Free-with-bundle callout (Skills Map only) */}
+              {product.slug === FREE_BONUS_SLUG && (
+                <div className="mt-4 bg-gold/10 border border-gold/20 rounded-xl p-4 flex items-start gap-3">
+                  <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path d="M5 5a3 3 0 015-3 3 3 0 015 3 3 3 0 01-2.83 3H13a1 1 0 011 1v1a1 1 0 01-1 1h-1v7a1 1 0 01-1 1H9a1 1 0 01-1-1v-7H7a1 1 0 01-1-1V9a1 1 0 011-1h.83A3 3 0 015 5zm4-1a1 1 0 10-2 0 1 1 0 002 0zm4 0a1 1 0 10-2 0 1 1 0 002 0z"/></svg>
+                  <div>
+                    <p className="text-sm font-semibold text-forest">Free with any bundle purchase</p>
+                    <p className="text-sm text-gray-600 mt-0.5">
+                      Get this guide at no extra cost when you grab any bundle.{' '}
+                      <Link href="/shop?category=bundle" className="text-forest font-medium underline underline-offset-2 hover:text-forest-dark transition-colors">
+                        Browse bundles &rarr;
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              )}
 
               <hr className="my-6 border-gray-200" />
 
