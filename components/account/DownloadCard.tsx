@@ -104,7 +104,7 @@ export default function DownloadCard({
                 <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
                   {categoryLabel}
                 </span>
-                {isBundle && (
+                {isBundle && productCategory !== 'bundle' && (
                   <span className="text-[10px] font-bold bg-gold/15 text-gold-dark px-1.5 py-0.5 rounded-full uppercase tracking-wide">
                     Bundle
                   </span>
