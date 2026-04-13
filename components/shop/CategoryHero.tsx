@@ -21,7 +21,7 @@ const categoryDescriptions: Record<string, string> = {
   'entrepreneurship': 'Plan, launch, and pitch real businesses \u2014 from brand building to Shark Tank pitches.',
   'planning-problem-solving': 'Tackle real logistics, plan adventures, and solve problems that actually matter.',
   'start-here': 'The foundation for your learning journey \u2014 start with the big picture.',
-  bundle: 'Get more value with curated activity guide bundles.',
+  bundle: 'Save more when you grab a bundle — the best value for families who want it all.',
 };
 
 const categoryBgColors: Record<string, string> = {
@@ -70,7 +70,9 @@ export default function CategoryHero({ category, productCount }: CategoryHeroPro
           {label}
         </h1>
         <p className="text-gray-500 text-lg mb-1">{description}</p>
-        <p className="text-sm text-gray-400">{productCount} activity {productCount === 1 ? 'guide' : 'guides'}</p>
+        <p className="text-sm text-gray-400">
+          {productCount} {category === 'bundle' ? (productCount === 1 ? 'bundle' : 'bundles') : (productCount === 1 ? 'activity guide' : 'activity guides')}
+        </p>
       </div>
     </section>
   );
