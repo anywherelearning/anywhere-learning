@@ -24,7 +24,6 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
               category={post.category}
               heroImage={post.heroImage}
               heroImageAlt={post.heroImageAlt}
-              compact
             />
           </ScrollReveal>
         ))}
