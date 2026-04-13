@@ -122,7 +122,7 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
               <div
                 key={post!.slug}
                 data-blog-card
-                className="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] h-full"
+                className="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
               >
                 <ScrollReveal delay={i * 80} className="h-full">
                   <BlogCard
