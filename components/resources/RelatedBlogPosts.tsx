@@ -37,18 +37,30 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
     };
   }, [checkScroll]);
 
-  // Equalize card heights after render
+  // Equalize card heights — re-runs whenever any card resizes
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     const cards = el.querySelectorAll<HTMLElement>('[data-blog-card]');
-    // Reset first so we measure natural heights
-    cards.forEach((c) => (c.style.minHeight = ''));
-    requestAnimationFrame(() => {
+    if (cards.length === 0) return;
+
+    const equalize = () => {
+      cards.forEach((c) => (c.style.minHeight = ''));
       let max = 0;
       cards.forEach((c) => { if (c.scrollHeight > max) max = c.scrollHeight; });
       if (max > 0) cards.forEach((c) => (c.style.minHeight = `${max}px`));
-    });
+    };
+
+    // Run immediately, after paint, and after a delay (for ScrollReveal animations)
+    equalize();
+    requestAnimationFrame(equalize);
+    const t = setTimeout(equalize, 600);
+
+    // Also watch for resize changes
+    const ro = new ResizeObserver(equalize);
+    cards.forEach((c) => ro.observe(c));
+
+    return () => { clearTimeout(t); ro.disconnect(); };
   }, [posts.length]);
 
   const scroll = (direction: 'left' | 'right') => {
