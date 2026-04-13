@@ -2289,6 +2289,7 @@ const posts: BlogPost[] = [
     keywords: ['teach kids AI prompts', 'prompt engineering for kids', 'AI tools for learning', 'how to use ChatGPT kids', 'AI homework help', 'critical thinking AI'],
     readTimeMinutes: 11,
     author: amelie,
+    heroImage: '/images/teach-kids-prompt-ai-hero.jpeg',
     heroImageAlt: 'Child typing on a laptop with a thoughtful expression, parent watching nearby',
     pillarSlug: 'ai-digital-literacy',
     content: [
@@ -2348,6 +2349,7 @@ const posts: BlogPost[] = [
     keywords: ['media literacy kids', 'critical thinking digital', 'fake news children', 'teach kids evaluate sources', 'digital literacy homeschool', 'online safety critical thinking'],
     readTimeMinutes: 11,
     author: amelie,
+    heroImage: '/images/media-literacy-kids-hero.jpeg',
     heroImageAlt: 'Julia arranging small figures on a table for a stop-motion film, planning each frame by hand',
     pillarSlug: 'ai-digital-literacy',
     content: [
