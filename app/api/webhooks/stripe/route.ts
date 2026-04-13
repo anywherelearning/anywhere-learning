@@ -25,6 +25,7 @@ export async function POST(req: NextRequest) {
     console.error('STRIPE_WEBHOOK_SECRET is not set - cannot verify webhook signatures');
     return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
   }
+  console.log('[webhook] secret starts with:', webhookSecret.slice(0, 10), 'length:', webhookSecret.length);
 
   let event: Stripe.Event;
   try {
