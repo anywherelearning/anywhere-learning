@@ -11,6 +11,13 @@
   --font-family-body: var(--font-body);
 }
 
+/* ─── Image protection ─── */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 /* ─── Utility ─── */
 .text-balance { text-wrap: balance; }
 

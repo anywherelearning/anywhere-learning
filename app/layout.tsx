@@ -11,6 +11,7 @@ import NativeHide from "@/components/mobile/NativeHide";
 import NativeRedirectGuard from "@/components/mobile/NativeRedirectGuard";
 import PinterestTracker from "@/components/analytics/PinterestTracker";
 import PinterestEnhancedMatch from "@/components/analytics/PinterestEnhancedMatch";
+import ImageProtection from "@/components/shared/ImageProtection";
 import "./globals.css";
 
 const displayFont = Dancing_Script({
@@ -147,6 +148,7 @@ export default function RootLayout({
           <CartProvider>
             <CapacitorProvider>
               <NativeRedirectGuard />
+              <ImageProtection />
               {children}
               <NativeHide><CartDrawer /></NativeHide>
               <PinterestEnhancedMatch />
