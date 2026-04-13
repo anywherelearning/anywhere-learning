@@ -159,30 +159,104 @@ export default function DownloadList({ purchases }: DownloadListProps) {
     );
   }
 
+  const ActiveIcon = CATEGORY_ICONS[filter] || SparklesIcon;
+  const activeLabel = filter === 'all' ? 'All Guides' : (CATEGORY_LABELS[filter] || filter);
+
+  const verticalPillClasses = (isActive: boolean, cat: string) =>
+    `w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2.5 ${
+      isActive
+        ? (CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'])
+        : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+    }`;
+
+  const pillClasses = (isActive: boolean, cat: string) =>
+    `whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+      isActive
+        ? (CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'])
+        : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
+    }`;
+
   return (
-    <div>
-      {/* Category filter pills */}
-      {showFilters && (() => {
-        const ActiveIcon = CATEGORY_ICONS[filter] || SparklesIcon;
-        const activeLabel = filter === 'all' ? 'All Guides' : (CATEGORY_LABELS[filter] || filter);
+    <div className={showFilters ? 'lg:grid lg:grid-cols-[240px_1fr] lg:gap-10' : ''}>
+      {/* ── Sidebar (desktop) ── */}
+      {showFilters && (
+        <aside className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark mb-4">
+            Browse by Category
+          </p>
+          <div className="space-y-2" role="group" aria-label="Filter guides by category">
+            {categories.map((cat) => {
+              const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
+              const count = cat === 'all' ? purchases.filter((p) => !p.product.isBundle).length : (counts[cat] || 0);
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  aria-pressed={filter === cat}
+                  onClick={() => { setFilter(cat); setPage(1); }}
+                  className={verticalPillClasses(filter === cat, cat)}
+                >
+                  <Icon className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  <span className="flex-1 text-left">{cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}</span>
+                  <span className={`text-xs ${filter === cat ? 'opacity-75' : 'text-gray-400'}`}>
+                    ({count})
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </aside>
+      )}
 
-        const pillClasses = (isActive: boolean, cat: string) =>
-          `whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
-            isActive
-              ? (CATEGORY_ACTIVE_COLORS[cat] || CATEGORY_ACTIVE_COLORS['all'])
-              : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
-          }`;
+      {/* ── Tablet: horizontal pills ── */}
+      {showFilters && (
+        <div className="hidden sm:flex lg:hidden flex-wrap gap-2 mb-6 col-span-full" role="group" aria-label="Filter guides by category">
+          {categories.map((cat) => {
+            const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
+            const count = cat === 'all' ? purchases.filter((p) => !p.product.isBundle).length : (counts[cat] || 0);
+            return (
+              <button
+                key={cat}
+                type="button"
+                aria-pressed={filter === cat}
+                onClick={() => { setFilter(cat); setPage(1); }}
+                className={pillClasses(filter === cat, cat)}
+              >
+                <Icon className="w-4 h-4" aria-hidden="true" />
+                {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
+                <span className={`text-xs ${filter === cat ? 'opacity-90' : 'text-gray-600'}`}>
+                  ({count})
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
-        return (
-          <>
-            {/* Desktop - plain filter buttons, not a tablist. aria-pressed
-                signals the active filter to screen readers without the
-                full ARIA tablist contract (which would also require
-                tabpanel/aria-controls + arrow-key navigation).
-                flex-wrap is intentional: we want every category visible
-                without scrolling, even if that means two rows. */}
+      {/* ── Mobile: collapsible ── */}
+      {showFilters && (
+        <div className="sm:hidden mb-6 col-span-full">
+          <button
+            ref={mobileTriggerRef}
+            type="button"
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-category-filter-panel"
+            className={`w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium ${CATEGORY_ACTIVE_COLORS[filter] || CATEGORY_ACTIVE_COLORS['all']}`}
+          >
+            <span className="flex items-center gap-2">
+              <ActiveIcon className="w-4 h-4" aria-hidden="true" />
+              {activeLabel}
+            </span>
+            <ChevronDownIcon
+              className={`w-4 h-4 transition-transform duration-200 ${mobileOpen ? 'rotate-180' : ''}`}
+            />
+          </button>
+          {mobileOpen && (
             <div
-              className="hidden sm:flex flex-wrap gap-2 mb-6"
+              id="mobile-category-filter-panel"
+              ref={mobilePanelRef}
+              className="mt-2 grid grid-cols-2 gap-2"
               role="group"
               aria-label="Filter guides by category"
             >
@@ -194,71 +268,24 @@ export default function DownloadList({ purchases }: DownloadListProps) {
                     key={cat}
                     type="button"
                     aria-pressed={filter === cat}
-                    onClick={() => { setFilter(cat); setPage(1); }}
-                    className={pillClasses(filter === cat, cat)}
+                    onClick={() => { setFilter(cat); setPage(1); setMobileOpen(false); }}
+                    className={`${pillClasses(filter === cat, cat)} justify-center text-center text-xs px-3 py-2`}
                   >
-                    <Icon className="w-4 h-4" aria-hidden="true" />
+                    <Icon className="w-3.5 h-3.5" aria-hidden="true" />
                     {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
-                    <span className={`text-xs ${filter === cat ? 'opacity-90' : 'text-gray-600'}`}>
+                    <span className={`text-[10px] ${filter === cat ? 'opacity-90' : 'text-gray-600'}`}>
                       ({count})
                     </span>
                   </button>
                 );
               })}
             </div>
+          )}
+        </div>
+      )}
 
-            {/* Mobile: collapsible disclosure */}
-            <div className="sm:hidden mb-6">
-              <button
-                ref={mobileTriggerRef}
-                type="button"
-                onClick={() => setMobileOpen((o) => !o)}
-                aria-expanded={mobileOpen}
-                aria-controls="mobile-category-filter-panel"
-                className="w-full flex items-center justify-between px-5 py-3 rounded-2xl text-sm font-medium bg-white border border-gray-200 text-gray-700"
-              >
-                <span className="flex items-center gap-2">
-                  <ActiveIcon className="w-4 h-4" aria-hidden="true" />
-                  {activeLabel}
-                </span>
-                <ChevronDownIcon
-                  className={`w-4 h-4 transition-transform duration-200 ${mobileOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {mobileOpen && (
-                <div
-                  id="mobile-category-filter-panel"
-                  ref={mobilePanelRef}
-                  className="mt-2 grid grid-cols-2 gap-2"
-                  role="group"
-                  aria-label="Filter guides by category"
-                >
-                  {categories.map((cat) => {
-                    const Icon = CATEGORY_ICONS[cat] || SparklesIcon;
-                    const count = cat === 'all' ? purchases.filter((p) => !p.product.isBundle).length : (counts[cat] || 0);
-                    return (
-                      <button
-                        key={cat}
-                        type="button"
-                        aria-pressed={filter === cat}
-                        onClick={() => { setFilter(cat); setPage(1); setMobileOpen(false); }}
-                        className={`${pillClasses(filter === cat, cat)} justify-center text-center text-xs px-3 py-2`}
-                      >
-                        <Icon className="w-3.5 h-3.5" aria-hidden="true" />
-                        {cat === 'all' ? 'All Guides' : (CATEGORY_LABELS[cat] || cat)}
-                        <span className={`text-[10px] ${filter === cat ? 'opacity-90' : 'text-gray-600'}`}>
-                          ({count})
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </>
-        );
-      })()}
-
+      {/* ── Main content ── */}
+      <div className="min-w-0">
       {/* Download cards */}
       <div className="space-y-3">
         {paginated.map((p) => {
@@ -335,6 +362,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
           <p className="text-gray-600">No guides in this category.</p>
         </div>
       )}
+      </div>
     </div>
   );
 }
