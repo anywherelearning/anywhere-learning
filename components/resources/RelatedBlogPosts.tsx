@@ -48,7 +48,7 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="pb-20 md:pb-28">
+    <section className="pb-10 md:pb-14">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ScrollReveal>
           <h2 className="font-display text-2xl sm:text-3xl text-forest mb-2">
