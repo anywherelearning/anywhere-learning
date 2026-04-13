@@ -483,7 +483,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                           Save More with Bundles
                         </h2>
                         <Link
-                          href="/shop?category=bundle"
+                          href="/shop?category=bundle#products"
                           className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-forest hover:text-forest-dark transition-colors"
                         >
                           View all bundles &rarr;
