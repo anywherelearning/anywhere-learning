@@ -37,7 +37,7 @@ export default function Header() {
             alt=""
             width={36}
             height={36}
-            className="h-9 w-auto"
+            className="h-9 w-auto sm:h-9"
             priority
             aria-hidden="true"
           />
@@ -46,13 +46,13 @@ export default function Header() {
             alt="Anywhere Learning"
             width={200}
             height={50}
-            className="h-16 w-auto"
+            className="hidden sm:block h-16 w-auto"
             priority
           />
         </Link>
 
         {/* Nav */}
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <Link
             href="/shop"
             className="text-sm font-medium text-gray-600 hover:text-forest transition-colors"
@@ -62,7 +62,7 @@ export default function Header() {
           <a
             href="#hero-form"
             onClick={scrollToForm}
-            className="rounded-xl bg-forest px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+            className="rounded-xl bg-forest px-3 py-2 sm:px-4 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark whitespace-nowrap"
           >
             Get the free guide &rarr;
           </a>
