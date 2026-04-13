@@ -104,6 +104,7 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
                     slug={post!.slug}
                     title={post!.title}
                     excerpt={post!.excerpt}
+                    hook={post!.hook}
                     category={post!.category}
                     heroImage={post!.heroImage}
                     heroImageAlt={post!.heroImageAlt}
