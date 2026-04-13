@@ -13,7 +13,7 @@ function formatCents(cents: number): string {
 }
 
 interface CheckoutItem {
-  stripePriceId: string;
+  stripePriceId?: string;
   slug: string;
 }
 
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
     if (Array.isArray(body.items)) {
       items = body.items;
-    } else if (body.stripePriceId) {
+    } else if (body.slug || body.stripePriceId) {
       items = [{ stripePriceId: body.stripePriceId, slug: body.slug }];
     } else {
       return NextResponse.json({ error: 'Missing items or price ID' }, { status: 400 });
@@ -67,15 +67,16 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Validate all items have price IDs
-    if (items.some((item) => !item.stripePriceId)) {
-      return NextResponse.json({ error: 'Missing price ID for one or more items' }, { status: 400 });
+    // Validate all items have slugs
+    const clientSlugs = items.map((item) => item.slug).filter(Boolean);
+    if (clientSlugs.length === 0) {
+      return NextResponse.json({ error: 'Missing product slug' }, { status: 400 });
     }
 
-    // ── SECURITY: Validate every stripePriceId against the database ──
-    // Never trust client-supplied price IDs or slugs. Look up the real
-    // product for each price ID and use the DB-verified slugs in metadata.
-    const clientPriceIds = items.map((item) => item.stripePriceId);
+    // ── SECURITY: Look up products by SLUG from the database ──────────
+    // Slugs are stable identifiers that never change between Stripe modes.
+    // The server always uses the DB's current stripePriceId, so cached
+    // client pages with stale price IDs never cause checkout failures.
     const verifiedProducts = await db
       .select({
         stripePriceId: products.stripePriceId,
@@ -87,24 +88,22 @@ export async function POST(req: NextRequest) {
       })
       .from(products)
       .where(and(
-        inArray(products.stripePriceId, clientPriceIds),
+        inArray(products.slug, clientSlugs),
         eq(products.active, true),
       ));
 
-    // Build a set of verified price IDs for quick lookup
-    const verifiedPriceIds = new Set(verifiedProducts.map((p) => p.stripePriceId));
-
-    // Reject if ANY price ID doesn't match a real, active product
-    const invalidPriceIds = clientPriceIds.filter((id) => !verifiedPriceIds.has(id));
-    if (invalidPriceIds.length > 0) {
-      console.error('Checkout rejected - unrecognised price IDs:', invalidPriceIds);
+    // Reject if ANY slug doesn't match a real, active product
+    const verifiedSlugsSet = new Set(verifiedProducts.map((p) => p.slug));
+    const invalidSlugs = clientSlugs.filter((s) => !verifiedSlugsSet.has(s));
+    if (invalidSlugs.length > 0) {
+      console.error('Checkout rejected - unrecognised slugs:', invalidSlugs);
       return NextResponse.json(
         { error: 'One or more products could not be found' },
         { status: 400 },
       );
     }
 
-    // Use DB-verified slugs (not client-supplied) for metadata
+    // Use DB-verified slugs for metadata
     const verifiedSlugs = verifiedProducts.map((p) => p.slug);
 
     // ── BYOB tier calculation (server-side, never trust client) ─────
