@@ -106,6 +106,7 @@ export default function RelatedBlogPosts({ slugs }: RelatedBlogPostsProps) {
                     category={post!.category}
                     heroImage={post!.heroImage}
                     heroImageAlt={post!.heroImageAlt}
+                    compact
                   />
                 </ScrollReveal>
               </div>

@@ -12,6 +12,8 @@ interface BlogCardProps {
   category: BlogCategory;
   heroImage?: string;
   heroImageAlt?: string;
+  /** Clamp title/excerpt for equal-height carousels */
+  compact?: boolean;
 }
 
 const categoryIcons: Record<BlogCategory, ReactNode> = {
@@ -48,7 +50,7 @@ const categoryIcons: Record<BlogCategory, ReactNode> = {
 };
 
 export default function BlogCard({
-  slug, title, excerpt, hook, category, heroImage, heroImageAlt,
+  slug, title, excerpt, hook, category, heroImage, heroImageAlt, compact,
 }: BlogCardProps) {
   const cat = blogCategories[category];
   const teaser = hook || excerpt;
@@ -87,10 +89,10 @@ export default function BlogCard({
 
       {/* Card body */}
       <div className="p-5 md:p-6 flex-1 flex flex-col">
-        <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors line-clamp-2">
+        <h3 className={`font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors ${compact ? 'line-clamp-2' : ''}`}>
           {title}
         </h3>
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
+        <p className={`text-sm text-gray-500 leading-relaxed ${compact ? 'line-clamp-2' : ''}`}>
           {teaser}
         </p>
       </div>
