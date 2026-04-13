@@ -131,30 +131,20 @@ When adding new products, follow this order:
 
 These must be done before going live:
 
-1. **Set `NEXT_PUBLIC_URL` in Vercel**: without this, checkout success/cancel redirects go to `localhost:3000`
-2. **Register the production Stripe webhook**: in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
-3. **Set `STRIPE_WEBHOOK_SECRET` in Vercel**: use the signing secret from step 2 (starts with `whsec_`)
-4. **Switch to live Stripe keys**: replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
-5. **Upload PDFs to Vercel Blob**: product files for the download endpoint
-6. **Set up Clerk project**: configure Clerk for production (custom domain, social logins)
-7. **Connect custom domain** in Vercel project settings
-8. **Google Search Console + GA4**: verify site, submit sitemap
-9. **Clean up test orders** in Neon database before launch
-10. **Re-run `npm run stripe:sync`**: after switching to live Stripe keys and setting `NEXT_PUBLIC_URL` to `https://anywherelearning.co`, re-run the sync so all Stripe product images point to the production domain
-11. **ConvertKit lead magnet automation** in Kit UI:
-    - Create automation: trigger = subscriber receives tag `lead`
-    - Send email with free guide PDF attached or linked (subject: "Here's your free guide!")
-    - Optional: add 2-3 follow-up emails (Day 2: getting started tips, Day 5: shop intro)
-    - The `lead` tag is auto-applied by the app when someone submits the free guide form
-12. **ConvertKit cart-abandonment automation** in Kit UI:
-    - Create automation: trigger = subscriber receives tag `cart-abandoner`
-    - Add wait step: 1 hour
-    - Add condition: subscriber does NOT have tag `buyer`
-    - Send recovery email (warm, on-brand: "Still thinking it over? Your cart is waiting...")
-    - Optional: second email at 24 hours with different angle
-    - Tags `cart-abandoner` and `buyer` are auto-created by the app, no manual tag setup needed
-13. **Pinterest Rich Pins**: validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
-14. **Directory submissions**: submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
+1. [x] ~~**Upload PDFs to Vercel Blob**~~: done
+2. [x] ~~**Google Search Console + GA4**~~: done
+3. [x] ~~**ConvertKit automations**~~: done (lead magnet + cart abandonment)
+4. [ ] **Deploy to Vercel**: connect the repo, set all environment variables from `.env.local`
+5. [ ] **Set `NEXT_PUBLIC_URL` in Vercel**: set to `https://anywherelearning.co` — without this, checkout redirects go to `localhost:3000`
+6. [ ] **Set up Clerk project**: configure Clerk for production (custom domain, social logins)
+7. [ ] **Switch to live Stripe keys**: replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
+8. [ ] **Register the production Stripe webhook**: in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
+9. [ ] **Set `STRIPE_WEBHOOK_SECRET` in Vercel**: use the signing secret from step 8 (starts with `whsec_`)
+10. [ ] **Re-run `npm run stripe:sync`**: after switching to live Stripe keys and setting `NEXT_PUBLIC_URL`, re-run so all Stripe product images point to the production domain
+11. [ ] **Clean up test orders** in Neon database before launch
+12. [ ] **Pinterest Rich Pins**: validate domain in Pinterest Business settings to enable Rich Pins (pulls from existing OG/structured data)
+13. [ ] **Directory submissions**: submit site to 3-5 homeschool directories (Homeschool.com, TheHomeSchoolMom, Secular Homeschool, etc.)
+14. [ ] **Connect custom domain** (`anywherelearning.co`) in Vercel project settings — do this last so the site is fully configured before going live
 
 ## Post-Launch Growth Ideas
 
