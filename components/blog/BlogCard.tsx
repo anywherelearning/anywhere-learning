@@ -87,10 +87,10 @@ export default function BlogCard({
 
       {/* Card body */}
       <div className="p-5 md:p-6 flex-1 flex flex-col">
-        <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors">
+        <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-2 group-hover:text-forest transition-colors line-clamp-2">
           {title}
         </h3>
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
+        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
           {teaser}
         </p>
       </div>
