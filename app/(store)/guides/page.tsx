@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { getAllResources } from '@/lib/resources';
 import ResourceCard from '@/components/resources/ResourceCard';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+
+const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
   title: 'Homeschool Resource Guides',
@@ -114,6 +117,8 @@ export default function ResourcesPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      <BlogExitIntentPopup />
     </main>
   );
 }

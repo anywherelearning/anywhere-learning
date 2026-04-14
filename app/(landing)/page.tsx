@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
@@ -9,6 +10,8 @@ import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import HomepageBundleCarousel from '@/components/home/HomepageBundleCarousel';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
+
+const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
   title: 'Anywhere Learning, Meaningful Learning, Wherever You Are',
@@ -630,6 +633,7 @@ export default function HomePage() {
 
       </main>
       <SiteFooter />
+      <BlogExitIntentPopup />
     </>
   );
 }

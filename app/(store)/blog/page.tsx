@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { getAllPosts, getFeaturedPost, getPostsByCategory, type BlogCategory } from '@/lib/blog';
 import BlogHero from '@/components/blog/BlogHero';
@@ -7,6 +8,8 @@ import BlogCard from '@/components/blog/BlogCard';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import BlogPagination from '@/components/blog/BlogPagination';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+
+const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 const POSTS_PER_PAGE = 6;
 
@@ -218,6 +221,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </ScrollReveal>
         </div>
       </section>
+
+      <BlogExitIntentPopup />
     </main>
   );
 }

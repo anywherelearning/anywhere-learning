@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
+
+const BlogExitIntentPopup = dynamic(() => import("@/components/blog/BlogExitIntentPopup"));
 
 export const metadata: Metadata = {
   title: "About",
@@ -371,6 +374,8 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      <BlogExitIntentPopup />
     </div>
   );
 }
