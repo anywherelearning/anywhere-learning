@@ -83,7 +83,6 @@ function StarRating({ rating }: { rating: number }) {
 export default function ProductCard({
   name,
   slug,
-  shortDescription,
   priceCents,
   compareAtPriceCents,
   stripePriceId,
@@ -106,7 +105,7 @@ export default function ProductCard({
     <Link href={`/shop/${slug}`} className="group block h-full">
       <div className={`h-full flex flex-col bg-white rounded-2xl shadow-sm group-hover:shadow-xl group-hover:shadow-forest/[0.08] transition-all duration-300 group-hover:-translate-y-1 border border-gray-100/50 overflow-hidden border-l-[3px] ${categoryAccentColors[category] || 'border-l-[#588157]'}`}>
         {/* Product Image Area */}
-        <div className={`relative aspect-[4/3] ${categoryBgClasses[category] || 'card-bg-nature'} flex items-center justify-center overflow-hidden ${imageUrl ? '' : 'p-6'}`}>
+        <div className={`relative aspect-[3/4] ${categoryBgClasses[category] || 'card-bg-nature'} flex items-center justify-center overflow-hidden ${imageUrl ? '' : 'p-6'}`}>
           {imageUrl ? (
             /* Real cover image */
             <Image
@@ -189,11 +188,6 @@ export default function ProductCard({
               </span>
             </div>
           )}
-
-          <p className="text-sm text-gray-500 mb-5 leading-relaxed">
-            {shortDescription}
-          </p>
-
 
           {/* Price + CTA row */}
           <div className="flex items-center justify-between mt-auto">

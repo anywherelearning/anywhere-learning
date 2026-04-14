@@ -258,7 +258,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
           onClick={dismiss}
           className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
         >
-          Browse Bundles &rarr;
+          Browse Bundles
         </Link>
 
         <button
@@ -364,7 +364,7 @@ function CartRecoveryContent({
         }}
         className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
       >
-        View Cart &rarr;
+        View Cart
       </button>
 
       <button
@@ -457,7 +457,7 @@ function BundleUpgradeContent({
           onClick={dismiss}
           className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
         >
-          View Bundle &rarr;
+          View Bundle
         </Link>
 
         {/* Secondary CTA */}

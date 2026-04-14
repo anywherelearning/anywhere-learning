@@ -11,6 +11,13 @@ interface ProductDescriptionSectionProps {
   category: string;
   activityCount: number | null;
   isBundle: boolean;
+  /** Optional slot rendered between Best For and the closing tagline.
+      Used on bundle detail pages to move "Works beautifully with" into the
+      left column so the two columns end around the same height. */
+  beforeTagline?: React.ReactNode;
+  /** When false, the Best For block is omitted. Used on single-activity pages
+      so Best For can render separately on the right column. Defaults to true. */
+  includeBestFor?: boolean;
 }
 
 export default function ProductDescriptionSection({
@@ -19,6 +26,8 @@ export default function ProductDescriptionSection({
   category,
   activityCount,
   isBundle,
+  beforeTagline,
+  includeBestFor = true,
 }: ProductDescriptionSectionProps) {
   const desc = getProductDescription(slug, description, category, activityCount, isBundle);
   const bestFor = getBestFor(category);
@@ -103,28 +112,25 @@ export default function ProductDescriptionSection({
       </div>
 
       {/* Best For */}
-      <div>
-        <h3 className="text-base font-semibold text-gray-900 mb-3">
-          Best For
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {bestFor.map((audience) => (
-            <span
-              key={audience}
-              className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
-            >
-              {audience}
-            </span>
-          ))}
+      {includeBestFor && (
+        <div>
+          <h3 className="text-base font-semibold text-gray-900 mb-3">
+            Best For
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {bestFor.map((audience) => (
+              <span
+                key={audience}
+                className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
+              >
+                {audience}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Closing tagline */}
-      <div className="text-center pt-2">
-        <p className="font-display text-xl text-gold">
-          Low prep. Flexible. Meaningful learning, wherever you are.
-        </p>
-      </div>
+      {beforeTagline}
     </div>
   );
 }

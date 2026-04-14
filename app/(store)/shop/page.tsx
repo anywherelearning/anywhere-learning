@@ -345,12 +345,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
               <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center">
                 <Link
                   href="/shop?category=bundle"
-                  className="inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 px-7 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-base"
+                  className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 px-7 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg text-base"
                 >
                   Shop Bundles
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
                 </Link>
                 <Link
                   href="/free-guide"

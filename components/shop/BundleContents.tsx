@@ -2,9 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BUNDLE_CONTENTS } from '@/lib/cart';
 import { getFallbackProductBySlug, type FallbackProduct } from '@/lib/fallback-products';
-import { hasPreview } from '@/lib/preview-map';
 import { CategoryIcon } from './icons';
-import PreviewButton from './PreviewButton';
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
@@ -15,17 +13,6 @@ const categoryLabels: Record<string, string> = {
   'entrepreneurship': 'Entrepreneurship',
   'planning-problem-solving': 'Planning & Problem-Solving',
   'start-here': 'Start Here',
-};
-
-const categoryAccentColors: Record<string, string> = {
-  'ai-literacy': 'border-t-[#7b88a8]',
-  'creativity-anywhere': 'border-t-[#c47a8f]',
-  'communication-writing': 'border-t-[#5b8fa8]',
-  'outdoor-learning': 'border-t-[#588157]',
-  'real-world-math': 'border-t-[#8b7355]',
-  'entrepreneurship': 'border-t-[#c4836a]',
-  'planning-problem-solving': 'border-t-[#7a6da8]',
-  'start-here': 'border-t-[#d4a373]',
 };
 
 const categoryBgClasses: Record<string, string> = {
@@ -44,40 +31,53 @@ interface BundleContentsProps {
   bundlePriceCents: number;
 }
 
+/**
+ * TpT-style compact list of products inside a bundle.
+ * Each row: thumbnail (left) + title/short description/category (middle) + PDF badge (right).
+ */
 export default function BundleContents({ bundleSlug, bundlePriceCents }: BundleContentsProps) {
   const slugs = BUNDLE_CONTENTS[bundleSlug];
   if (!slugs || slugs.length === 0) return null;
 
-  // Resolve each slug to its product data
   const products = slugs
     .map((slug) => getFallbackProductBySlug(slug))
     .filter((p): p is FallbackProduct => p !== null);
 
   if (products.length === 0) return null;
 
-  // Calculate savings
   const individualTotal = products.reduce((sum, p) => sum + p.priceCents, 0);
   const savings = individualTotal - bundlePriceCents;
 
   return (
-    <div className="mb-8">
-      {/* Section header */}
-      <div className="flex items-center justify-between mb-2">
-        <h2 className="text-lg font-semibold text-gray-900">
-          What&apos;s Included
+    <section aria-labelledby="bundle-contents-heading">
+      <div className="flex items-baseline justify-between mb-3">
+        <h2
+          id="bundle-contents-heading"
+          className="text-base font-semibold text-gray-900"
+        >
+          Products in this Bundle
         </h2>
-        <span className="text-sm text-gray-400">
-          {products.length} activity {products.length === 1 ? 'guide' : 'guides'}
+        <span className="text-xs text-gray-400">
+          {products.length} {products.length === 1 ? 'guide' : 'guides'}
         </span>
       </div>
 
       {/* Savings callout */}
       {savings > 0 && (
-        <div className="flex items-center gap-2 mb-5 bg-forest/5 rounded-xl px-4 py-3 border border-forest/10">
-          <svg className="w-5 h-5 text-forest flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        <div className="flex items-center gap-2 mb-4 bg-forest/5 rounded-lg px-3 py-2 border border-forest/10">
+          <svg
+            className="w-4 h-4 text-forest flex-shrink-0"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
           </svg>
-          <p className="text-sm text-forest font-medium">
+          <p className="text-xs sm:text-sm text-forest font-medium">
             Save ${(savings / 100).toFixed(2)} vs buying individually
             <span className="text-forest/60 font-normal ml-1">
               (${(individualTotal / 100).toFixed(2)} value)
@@ -86,57 +86,65 @@ export default function BundleContents({ bundleSlug, bundlePriceCents }: BundleC
         </div>
       )}
 
-      {/* Product grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {/* Product list */}
+      <ul className="divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white overflow-hidden">
         {products.map((product) => (
-          <Link
-            key={product.slug}
-            href={`/shop/${product.slug}`}
-            className="group block"
-          >
-            <div className={`bg-white rounded-xl border border-gray-100 overflow-hidden border-t-[3px] ${categoryAccentColors[product.category] || 'border-t-[#588157]'} hover:shadow-md transition-shadow`}>
+          <li key={product.slug}>
+            <Link
+              href={`/shop/${product.slug}`}
+              className="flex items-start gap-3 p-3 hover:bg-gray-50/70 transition-colors group"
+            >
               {/* Thumbnail */}
-              <div className={`relative aspect-[4/3] ${product.imageUrl ? '' : `${categoryBgClasses[product.category] || 'card-bg-nature'} flex items-center justify-center p-3`}`}>
+              <div
+                className={`relative w-14 sm:w-16 aspect-[3/4] rounded-lg overflow-hidden flex-shrink-0 ${
+                  product.imageUrl
+                    ? ''
+                    : `${categoryBgClasses[product.category] || 'card-bg-nature'} flex items-center justify-center`
+                }`}
+              >
                 {product.imageUrl ? (
                   <Image
                     src={product.imageUrl}
                     alt={product.name}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="64px"
                     className="object-cover"
                   />
                 ) : (
-                  <CategoryIcon category={product.category} className="w-10 h-10 opacity-20" />
+                  <CategoryIcon
+                    category={product.category}
+                    className="w-6 h-6 opacity-30"
+                  />
                 )}
               </div>
 
               {/* Info */}
-              <div className="p-3">
-                <p className="text-sm font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-forest transition-colors">
+              <div className="min-w-0 flex-1 py-0.5">
+                <p className="text-sm font-semibold text-forest group-hover:text-forest-dark transition-colors leading-snug line-clamp-2">
                   {product.name}
                 </p>
-                <div className="flex items-center mt-2">
-                  <span className="flex items-center gap-1 text-xs text-gray-400">
-                    <CategoryIcon category={product.category} className="w-3 h-3" />
+                <p className="mt-1 text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                  {product.shortDescription}
+                </p>
+                <div className="mt-1.5 flex items-center gap-2 text-[11px] text-gray-400">
+                  <span className="inline-flex items-center gap-1">
+                    <CategoryIcon
+                      category={product.category}
+                      className="w-3 h-3"
+                    />
                     {categoryLabels[product.category] || product.category}
                   </span>
                 </div>
-
-                {/* Preview link */}
-                {hasPreview(product.slug) && (
-                  <div className="mt-2 pt-2 border-t border-gray-50">
-                    <PreviewButton
-                      slug={product.slug}
-                      productName={product.name}
-                      compact
-                    />
-                  </div>
-                )}
               </div>
-            </div>
-          </Link>
+
+              {/* PDF badge */}
+              <span className="flex-shrink-0 inline-flex items-center gap-1 text-[10px] font-semibold tracking-wide text-gray-500 bg-gray-100 rounded px-1.5 py-0.5 mt-1">
+                PDF
+              </span>
+            </Link>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }

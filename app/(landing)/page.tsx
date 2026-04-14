@@ -222,7 +222,7 @@ export default function HomePage() {
                     href="/free-guide"
                     className="inline-flex items-center justify-center border-2 border-forest/30 hover:border-forest/50 text-forest font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:bg-forest/[0.06] text-lg backdrop-blur-sm"
                   >
-                    Free Guide &rarr;
+                    Free Guide
                   </Link>
                 </div>
                 {/* Trust signals */}
@@ -312,10 +312,9 @@ export default function HomePage() {
               <div className="mt-14 text-center">
                 <Link
                   href="/shop"
-                  className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 text-lg group shadow-md hover:shadow-lg"
+                  className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 text-lg shadow-md hover:shadow-lg"
                 >
                   View all activity guides
-                  <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
                 </Link>
               </div>
             </ScrollReveal>

@@ -13,6 +13,7 @@ import StickyMobileBuy from "@/components/shop/StickyMobileBuy";
 import BundleContents from "@/components/shop/BundleContents";
 import ProductHighlights from "@/components/shop/ProductHighlights";
 import ProductDescriptionSection from "@/components/shop/ProductDescriptionSection";
+import BestForSection from "@/components/shop/BestForSection";
 import ProductReviews from "@/components/shop/ProductReviews";
 import { getAllReviewStatsBySlug, getProductReviewStats } from "@/lib/db/queries";
 import {
@@ -25,9 +26,11 @@ import NativeOnly from "@/components/mobile/NativeOnly";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativeProductDetail from "@/components/mobile/NativeProductDetail";
 import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
+import BundlePreviewButton from "@/components/shop/BundlePreviewButton";
+import type { BundlePreviewItem } from "@/components/shop/BundlePreviewModal";
 import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
 import { CATEGORY_LABELS, coverClassFor } from "@/lib/categories";
-import { FREE_BONUS_SLUG } from "@/lib/bundles";
+import { FREE_BONUS_SLUG, BUNDLE_CONTENTS } from "@/lib/bundles";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -83,6 +86,39 @@ export async function generateMetadata({
   };
 }
 
+
+/** "Works beautifully with" badges block. Shared between the right column
+ *  (non-bundles + mobile bundles) and the left column (desktop bundles). */
+function PhilosophyBadges() {
+  return (
+    <div className="bg-gold-light/10 rounded-2xl p-6 my-8">
+      <p className="text-sm text-gray-500 mb-3">Works beautifully with:</p>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {[
+          "Charlotte Mason",
+          "Montessori",
+          "Unschool",
+          "Worldschool",
+          "Eclectic",
+        ].map((style) => (
+          <span
+            key={style}
+            className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
+          >
+            {style}
+          </span>
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+        <span>No curriculum needed</span>
+        <span>&middot;</span>
+        <span>Works anywhere</span>
+        <span>&middot;</span>
+        <span>Adapts to your child</span>
+      </div>
+    </div>
+  );
+}
 
 export default async function ProductPage({
   params,
@@ -182,6 +218,24 @@ export default async function ProductPage({
     ],
   };
 
+  // For bundle products, build the list of included items for the preview modal.
+  let bundlePreviewItems: BundlePreviewItem[] = [];
+  if (product.isBundle) {
+    const childSlugs = BUNDLE_CONTENTS[product.slug] || [];
+    bundlePreviewItems = childSlugs
+      .map((childSlug) => {
+        const child = getFallbackProductBySlug(childSlug);
+        if (!child) return null;
+        return {
+          slug: child.slug,
+          name: child.name,
+          imageUrl: child.imageUrl,
+          hasPreview: hasPreview(child.slug),
+        } satisfies BundlePreviewItem;
+      })
+      .filter((i): i is BundlePreviewItem => i !== null);
+  }
+
   // Prepare data for native view
   const nativeProduct = {
     slug: product.slug,
@@ -246,14 +300,19 @@ export default async function ProductPage({
           </nav>
         </div>
 
-        {/* Product Detail - Two Columns */}
+        {/* Product Detail - Two Columns.
+            Non-bundle: left (sticky image + buy box) / right (title, desc, reviews).
+            Bundle: TpT-style — left holds image + preview button + description;
+            right holds title, price, highlights, products-in-bundle, reviews.
+            For bundles, each column flows independently, so tall right-column
+            content never leaves dead space next to the description. */}
         <section className="mx-auto max-w-6xl px-5 sm:px-8 py-8 sm:py-12">
-          <div className="grid gap-8 lg:grid-cols-[55fr_45fr] lg:gap-12">
-            {/* Left: Product Visual (sticky on desktop) */}
-            <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="grid gap-8 lg:grid-cols-[55fr_45fr] lg:gap-12 lg:items-start">
+            {/* Left: Product Visual + description (matches bundle layout). */}
+            <div>
               {product.imageUrl ? (
                 /* Real cover image */
-                <div className="relative aspect-[5/4] md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-3xl overflow-hidden shadow-lg">
                   <Image
                     src={product.imageUrl}
                     alt={product.name}
@@ -276,17 +335,11 @@ export default async function ProductPage({
                     {CATEGORY_LABELS[product.category] || product.category}
                   </div>
 
-                  {/* Preview button on image */}
-                  {!product.isBundle && hasPreview(product.slug) && (
-                    <div className="absolute bottom-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                      <PreviewButton slug={product.slug} productName={product.name} />
-                    </div>
-                  )}
                 </div>
               ) : (
                 /* Category gradient cover */
                 <div
-                  className={`relative aspect-[5/4] md:aspect-[4/3] ${
+                  className={`relative aspect-[3/4] max-w-sm mx-auto ${
                     coverClassFor(product.category)
                   } rounded-3xl flex flex-col items-center justify-center p-8 text-white overflow-hidden shadow-lg`}
                 >
@@ -333,68 +386,85 @@ export default async function ProductPage({
                     </div>
                   )}
 
-                  {/* Preview button on image */}
-                  {!product.isBundle && hasPreview(product.slug) && (
-                    <div className="absolute bottom-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                      <PreviewButton slug={product.slug} productName={product.name} />
-                    </div>
-                  )}
                 </div>
               )}
 
-              {/* Buy section - under image, sticky on desktop */}
-              <div className="mt-4" id="buy-button">
-                {product.isBundle ? (
-                  <BundleUpgradePrice
-                    slug={product.slug}
-                    stripePriceId={product.stripePriceId}
-                    fullPriceCents={product.priceCents}
-                  >
-                    <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                      <div className="flex items-center justify-between mb-3">
-                        <PriceDisplay
-                          priceCents={product.priceCents}
-                          compareAtPriceCents={product.compareAtPriceCents}
-                          size="sm"
-                        />
-                        <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
-                          BEST VALUE
-                        </span>
-                      </div>
-                      <AddToCartButton
-                        stripePriceId={product.stripePriceId}
-                        slug={product.slug}
-                        productName={product.name}
-                        priceCents={product.priceCents}
-                        category={product.category}
-                        isBundle={product.isBundle ?? false}
-                        imageUrl={product.imageUrl}
-                      />
-                      <p className="text-xs text-gray-400 text-center mt-2">
-                        Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
-                      </p>
-                    </div>
-                  </BundleUpgradePrice>
-                ) : (
-                  <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                    <AddToCartButton
-                      stripePriceId={product.stripePriceId}
-                      slug={product.slug}
-                      productName={product.name}
-                      priceCents={product.priceCents}
-                      category={product.category}
-                      isBundle={product.isBundle ?? false}
-                      imageUrl={product.imageUrl}
+              {/* View Preview button below the image for non-bundles */}
+              {!product.isBundle && hasPreview(product.slug) && (
+                <div className="mt-4 max-w-sm mx-auto">
+                  <PreviewButton slug={product.slug} productName={product.name} variant="block" />
+                </div>
+              )}
+
+              {/* Under-image block.
+                  Bundle: prominent "View Preview" button (buy box moves to right column).
+                  Non-bundle: buy box stays here, sticky with the image. */}
+              {product.isBundle ? (
+                <>
+                  {/* View Preview button below the image */}
+                  <div className="mt-4 max-w-sm mx-auto">
+                    <BundlePreviewButton
+                      bundle={{
+                        slug: product.slug,
+                        name: product.name,
+                        imageUrl: product.imageUrl,
+                        description: product.description,
+                      }}
+                      items={bundlePreviewItems}
+                      variant="block"
                     />
-                    <p className="text-xs text-gray-400 text-center mt-2">
-                      Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
-                    </p>
                   </div>
-                )}
-              </div>
+                  {/* Description - on the left column for bundles (desktop only).
+                      On mobile the description renders inside the right column
+                      so the natural read order is image → title → price → highlights → description.
+                      "Works beautifully with" is slotted in before the tagline so the
+                      left column height better matches the right (Products in Bundle list). */}
+                  <div className="hidden lg:block mt-8 lg:mt-10">
+                    <h2 className="font-display text-2xl md:text-3xl text-forest mb-4">
+                      Description
+                    </h2>
+                    <ProductDescriptionSection
+                      slug={product.slug}
+                      description={product.description}
+                      category={product.category}
+                      activityCount={product.activityCount}
+                      isBundle={product.isBundle ?? false}
+                      beforeTagline={<PhilosophyBadges />}
+                    />
+                  </div>
+                  {/* Reviews on the left column (desktop bundles only) to
+                      balance column heights against "Products in this Bundle". */}
+                  <div className="hidden lg:block mt-8">
+                    <ProductReviews
+                      productId={product.id}
+                      productSlug={product.slug}
+                      productName={product.name}
+                    />
+                  </div>
+                </>
+              ) : (
+                /* Non-bundle: description moves into the left column on desktop
+                   (bundle-style layout). Best For / Works beautifully / Reviews
+                   stay on the right. Buy box also moves to the right (near title). */
+                <div className="hidden lg:block mt-8 lg:mt-10">
+                  <h2 className="font-display text-2xl md:text-3xl text-forest mb-4">
+                    Description
+                  </h2>
+                  <ProductDescriptionSection
+                    slug={product.slug}
+                    description={product.description}
+                    category={product.category}
+                    activityCount={product.activityCount}
+                    isBundle={product.isBundle ?? false}
+                    includeBestFor={false}
+                  />
+                </div>
+              )}
             </div>
 
-            {/* Right: Copy + Purchase */}
+            {/* Right: Copy + Purchase.
+                For bundles this column also shows the buy box (price + Get Bundle)
+                near the top and the "Products in this Bundle" list below highlights. */}
             <div className="py-4">
               {/* Category label */}
               <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3 flex items-center gap-2">
@@ -425,6 +495,71 @@ export default async function ProductPage({
                       </Link>
                     </p>
                   </div>
+                </div>
+              )}
+
+              {/* Non-bundle buy box — mirrors the bundle TpT-style layout with
+                  price + Get This CTA sitting right under the title. */}
+              {!product.isBundle && (
+                <div className="mt-6" id="buy-button">
+                  <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                    <div className="mb-3">
+                      <PriceDisplay
+                        priceCents={product.priceCents}
+                        compareAtPriceCents={product.compareAtPriceCents}
+                        size="sm"
+                      />
+                    </div>
+                    <AddToCartButton
+                      stripePriceId={product.stripePriceId}
+                      slug={product.slug}
+                      productName={product.name}
+                      priceCents={product.priceCents}
+                      category={product.category}
+                      isBundle={product.isBundle ?? false}
+                      imageUrl={product.imageUrl}
+                    />
+                    <p className="text-xs text-gray-400 text-center mt-2">
+                      Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Bundle buy box - moved up here so price + Get Bundle CTA
+                  sit under the title like TpT. */}
+              {product.isBundle && (
+                <div className="mt-6" id="buy-button">
+                  <BundleUpgradePrice
+                    slug={product.slug}
+                    stripePriceId={product.stripePriceId}
+                    fullPriceCents={product.priceCents}
+                  >
+                    <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                      <div className="flex items-center justify-between mb-3">
+                        <PriceDisplay
+                          priceCents={product.priceCents}
+                          compareAtPriceCents={product.compareAtPriceCents}
+                          size="sm"
+                        />
+                        <span className="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">
+                          BEST VALUE
+                        </span>
+                      </div>
+                      <AddToCartButton
+                        stripePriceId={product.stripePriceId}
+                        slug={product.slug}
+                        productName={product.name}
+                        priceCents={product.priceCents}
+                        category={product.category}
+                        isBundle={product.isBundle ?? false}
+                        imageUrl={product.imageUrl}
+                      />
+                      <p className="text-xs text-gray-400 text-center mt-2">
+                        Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
+                      </p>
+                    </div>
+                  </BundleUpgradePrice>
                 </div>
               )}
 
@@ -462,18 +597,54 @@ export default async function ProductPage({
 
               <hr className="my-8 border-gray-200" />
 
-              {/* Rich Description */}
-              <ProductDescriptionSection
-                slug={product.slug}
-                description={product.description}
-                category={product.category}
-                activityCount={product.activityCount}
-                isBundle={product.isBundle ?? false}
-              />
+              {/* Non-bundle description — mobile only on the right column.
+                  Desktop version lives in the left column (matches bundle layout).
+                  Best For is omitted here because it renders as a separate block
+                  on the right so it stays visible on desktop too. */}
+              {!product.isBundle && (
+                <div className="lg:hidden mb-8">
+                  <h2 className="font-display text-2xl md:text-3xl text-forest mb-4">
+                    Description
+                  </h2>
+                  <ProductDescriptionSection
+                    slug={product.slug}
+                    description={product.description}
+                    category={product.category}
+                    activityCount={product.activityCount}
+                    isBundle={product.isBundle ?? false}
+                    includeBestFor={false}
+                  />
+                </div>
+              )}
+
+              {/* Best For — right column standalone for non-bundles
+                  (visible on all breakpoints). */}
+              {!product.isBundle && (
+                <BestForSection category={product.category} />
+              )}
+
+              {/* Bundle description — mobile only (desktop version lives in
+                  the left column below the image/preview button). This keeps
+                  the natural mobile read order: image → preview → title →
+                  price → highlights → trust → description → products list. */}
+              {product.isBundle && (
+                <div className="lg:hidden mb-8">
+                  <h2 className="font-display text-2xl md:text-3xl text-forest mb-4">
+                    Description
+                  </h2>
+                  <ProductDescriptionSection
+                    slug={product.slug}
+                    description={product.description}
+                    category={product.category}
+                    activityCount={product.activityCount}
+                    isBundle={product.isBundle ?? false}
+                  />
+                </div>
+              )}
 
               {/* Bundle: Included Products */}
               {product.isBundle && (
-                <div className="mt-8">
+                <div>
                   <BundleContents
                     bundleSlug={product.slug}
                     bundlePriceCents={product.priceCents}
@@ -481,44 +652,35 @@ export default async function ProductPage({
                 </div>
               )}
 
-              {/* Philosophy Badges */}
-              <div className="bg-gold-light/10 rounded-2xl p-6 my-8">
-                <p className="text-sm text-gray-500 mb-3">
-                  Works beautifully with:
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {[
-                    "Charlotte Mason",
-                    "Montessori",
-                    "Unschool",
-                    "Worldschool",
-                    "Eclectic",
-                  ].map((style) => (
-                    <span
-                      key={style}
-                      className="bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200"
-                    >
-                      {style}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                  <span>No curriculum needed</span>
-                  <span>&middot;</span>
-                  <span>Works anywhere</span>
-                  <span>&middot;</span>
-                  <span>Adapts to your child</span>
-                </div>
+              {/* Philosophy Badges.
+                  Non-bundles: render here always.
+                  Bundles: render on mobile only — on desktop this block moves
+                  to the left column (inside ProductDescriptionSection) to balance
+                  column heights. */}
+              <div className={product.isBundle ? "lg:hidden" : ""}>
+                <PhilosophyBadges />
               </div>
 
-              {/* Reviews */}
-              <ProductReviews
-                productId={product.id}
-                productSlug={product.slug}
-                productName={product.name}
-              />
+              {/* Reviews.
+                  Non-bundles: render here always.
+                  Bundles: render on mobile only — on desktop this block moves
+                  to the left column (below the description) to balance column heights. */}
+              <div className={product.isBundle ? "lg:hidden" : ""}>
+                <ProductReviews
+                  productId={product.id}
+                  productSlug={product.slug}
+                  productName={product.name}
+                />
+              </div>
 
             </div>
+          </div>
+
+          {/* Closing tagline — full-width, centered below both columns. */}
+          <div className="mt-12 text-center">
+            <p className="font-display text-xl md:text-2xl text-gold">
+              Low prep. Flexible. Meaningful learning, wherever you are.
+            </p>
           </div>
         </section>
 
@@ -528,7 +690,7 @@ export default async function ProductPage({
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section className="mt-20 pt-16 border-t border-gray-200">
-            <div className="mx-auto max-w-6xl px-5 sm:px-8 pb-16">
+            <div className="mx-auto max-w-4xl px-5 sm:px-8 pb-16">
               <h2 className="font-display text-3xl text-forest mb-8 text-center">
                 You might also like
               </h2>
