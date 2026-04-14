@@ -88,7 +88,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
               : "bg-gold text-forest-dark hover:bg-gold-light"
           }`}
         >
-          Browse Activity Guides &rarr;
+          Browse Activity Guides
         </Link>
       </div>
     );

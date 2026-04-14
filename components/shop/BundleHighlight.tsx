@@ -30,7 +30,7 @@ export default function BundleHighlight({
 
       <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
         {/* Left: Bundle image or fallback mockup */}
-        <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+        <div className="relative w-48 md:w-64 aspect-[3/4] flex-shrink-0">
           {imageUrl ? (
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
               <Image
@@ -107,7 +107,7 @@ export default function BundleHighlight({
             href={`/shop/${slug}`}
             className="inline-block bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.03] shadow-md hover:shadow-xl text-lg"
           >
-            Get the {name} &rarr;
+            Get the {name}
           </Link>
         </div>
       </div>

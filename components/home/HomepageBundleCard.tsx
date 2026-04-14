@@ -102,7 +102,7 @@ export default function HomepageBundleCard({
     <Link href={`/shop/${slug}`} className="group block h-full">
       <div className="h-full flex flex-col bg-white rounded-2xl shadow-sm group-hover:shadow-xl group-hover:shadow-forest/[0.08] transition-all duration-300 group-hover:-translate-y-1 border border-gray-100/50 overflow-hidden">
         {/* Product Image */}
-        <div className="relative aspect-[4/3] bg-cream overflow-hidden">
+        <div className="relative aspect-[3/4] bg-cream overflow-hidden">
           {imageUrl && (
             <Image
               src={imageUrl}

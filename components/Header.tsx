@@ -15,14 +15,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  function scrollToForm(e: React.MouseEvent<HTMLAnchorElement>) {
-    e.preventDefault();
-    const el = document.getElementById("hero-form");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
   return (
     <header
       className={`sticky top-0 right-0 left-0 z-50 bg-cream/95 backdrop-blur-sm border-b transition-all ${
@@ -59,13 +51,6 @@ export default function Header() {
           >
             Shop
           </Link>
-          <a
-            href="#hero-form"
-            onClick={scrollToForm}
-            className="rounded-xl bg-forest px-3 py-2 sm:px-4 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark whitespace-nowrap"
-          >
-            Get the free guide &rarr;
-          </a>
         </div>
       </div>
     </header>
