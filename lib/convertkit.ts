@@ -34,29 +34,123 @@ export function getCrossSellTag(
   return 'cross-sell:seasonal-bundle';
 }
 
-// ─── Core ConvertKit API ───
+// ─── Core Kit v4 API ───
+//
+// Kit (formerly ConvertKit) v4 uses Bearer-style auth and requires tag IDs
+// (not names) when applying tags. We keep a module-level cache of tag
+// name → ID and lazily create tags on first use.
+
+const KIT_API_BASE = 'https://api.kit.com/v4';
+
+type TagCache = Map<string, number>;
+let tagCachePromise: Promise<TagCache> | null = null;
+
+function authHeaders(apiKey: string): HeadersInit {
+  return {
+    'X-Kit-Api-Key': apiKey,
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  };
+}
+
+async function fetchAllTags(apiKey: string): Promise<TagCache> {
+  const cache: TagCache = new Map();
+  let cursor: string | null = null;
+  do {
+    const url = new URL(`${KIT_API_BASE}/tags`);
+    if (cursor) url.searchParams.set('after', cursor);
+    const res = await fetch(url, { headers: authHeaders(apiKey) });
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`Kit tags list failed: ${res.status} ${body}`);
+    }
+    const data = (await res.json()) as {
+      tags: { id: number; name: string }[];
+      pagination: { has_next_page: boolean; end_cursor: string | null };
+    };
+    for (const t of data.tags) cache.set(t.name, t.id);
+    cursor = data.pagination.has_next_page ? data.pagination.end_cursor : null;
+  } while (cursor);
+  return cache;
+}
+
+function loadTagCache(apiKey: string): Promise<TagCache> {
+  if (!tagCachePromise) {
+    tagCachePromise = fetchAllTags(apiKey).catch((err) => {
+      tagCachePromise = null; // allow retry on next request
+      throw err;
+    });
+  }
+  return tagCachePromise;
+}
+
+async function getOrCreateTag(apiKey: string, name: string): Promise<number> {
+  const cache = await loadTagCache(apiKey);
+  const existing = cache.get(name);
+  if (existing) return existing;
+
+  const res = await fetch(`${KIT_API_BASE}/tags`, {
+    method: 'POST',
+    headers: authHeaders(apiKey),
+    body: JSON.stringify({ name }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Kit tag create failed for "${name}": ${res.status} ${body}`);
+  }
+  const data = (await res.json()) as { tag: { id: number; name: string } };
+  cache.set(data.tag.name, data.tag.id);
+  return data.tag.id;
+}
+
+async function upsertSubscriber(apiKey: string, email: string): Promise<number> {
+  // Idempotent: returns 201 with a new subscriber, or 200 with an existing one.
+  const res = await fetch(`${KIT_API_BASE}/subscribers`, {
+    method: 'POST',
+    headers: authHeaders(apiKey),
+    body: JSON.stringify({ email_address: email }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Kit subscriber upsert failed: ${res.status} ${body}`);
+  }
+  const data = (await res.json()) as { subscriber: { id: number } };
+  return data.subscriber.id;
+}
+
+async function applyTagToSubscriber(
+  apiKey: string,
+  tagId: number,
+  subscriberId: number,
+): Promise<void> {
+  const res = await fetch(`${KIT_API_BASE}/tags/${tagId}/subscribers/${subscriberId}`, {
+    method: 'POST',
+    headers: authHeaders(apiKey),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Kit tag apply failed (tag ${tagId}): ${res.status} ${body}`);
+  }
+}
 
 /**
- * Subscribe an email to the ConvertKit form and optionally apply tags.
- * Tags are passed as string names - Kit creates them automatically if they don't exist.
+ * Subscribe an email to Kit and apply one or more tags. Tags are passed as
+ * string names; unknown tags are created on the fly. The flow is:
+ *   1. Upsert the subscriber (idempotent).
+ *   2. Apply each tag by ID. Kit automations triggered by "tag added" fire
+ *      on each application.
+ *
+ * Throws on any API failure so the caller can surface / log the error.
  */
 export async function subscribeAndTag(email: string, tags: string[] = []) {
-  const formId = process.env.CONVERTKIT_FORM_ID;
   const apiKey = process.env.CONVERTKIT_API_KEY;
-  if (!formId || !apiKey) return;
+  if (!apiKey) return;
+  if (tags.length === 0) return;
 
-  try {
-    await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        api_key: apiKey,
-        email,
-        ...(tags.length > 0 && { tags }),
-      }),
-    });
-  } catch (error) {
-    console.error('ConvertKit subscribe/tag error:', error);
+  const subscriberId = await upsertSubscriber(apiKey, email);
+  for (const name of tags) {
+    const tagId = await getOrCreateTag(apiKey, name);
+    await applyTagToSubscriber(apiKey, tagId, subscriberId);
   }
 }
 
