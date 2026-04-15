@@ -10,10 +10,10 @@ const DISMISS_KEY = 'blog-exit-popup-dismissed';
 const DISMISS_DAYS = 14;
 
 // Trigger gates
-const DESKTOP_TIME_GATE_MS = 30_000;
-const DESKTOP_SCROLL_GATE = 0.25;
-const MOBILE_TIME_GATE_MS = 45_000;
-const MOBILE_SCROLL_GATE = 0.5;
+const DESKTOP_TIME_GATE_MS = 15_000;
+const DESKTOP_SCROLL_GATE = 0.2;
+const MOBILE_TIME_GATE_MS = 25_000;
+const MOBILE_SCROLL_GATE = 0.35;
 const MOBILE_SCROLL_UP_PX = 200;
 
 export default function BlogExitIntentPopup() {

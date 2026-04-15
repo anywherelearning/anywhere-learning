@@ -1,30 +1,89 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from '@/components/cart/CartProvider';
 import { getBundleUpsell } from '@/lib/cart';
+import { BUNDLE_CONTENTS, BUNDLE_DATA } from '@/lib/bundles';
 import { formatPrice } from '@/lib/utils';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import EmailForm from '@/components/EmailForm';
 
 const DISMISS_KEY = 'exit-popup-dismissed';
 const DISMISS_DAYS = 7;
+
+const GUIDE_SUBMITTED_KEY = 'free-guide-submitted';
+
+// Trigger gates - shop listing page
+const SHOP_DESKTOP_TIME_MS = 10_000;
+const SHOP_DESKTOP_SCROLL = 0.15;
+const SHOP_MOBILE_TIME_MS = 20_000;
+const SHOP_MOBILE_SCROLL = 0.3;
+
+// Trigger gates - product detail pages (longer, visitor needs time to read)
+const PDP_DESKTOP_TIME_MS = 15_000;
+const PDP_DESKTOP_SCROLL = 0.25;
+const PDP_MOBILE_TIME_MS = 25_000;
+const PDP_MOBILE_SCROLL = 0.35;
+
+const MOBILE_SCROLL_UP_PX = 300;
+
+/** Find the best (largest) bundle containing a given product slug. */
+function findBundleForProduct(slug: string) {
+  let best: { bundleSlug: string; childCount: number } | null = null;
+  for (const [bundleSlug, children] of Object.entries(BUNDLE_CONTENTS)) {
+    if (children.includes(slug) && (!best || children.length > best.childCount)) {
+      best = { bundleSlug, childCount: children.length };
+    }
+  }
+  if (!best) return null;
+  return BUNDLE_DATA[best.bundleSlug] || null;
+}
 
 export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const pathname = usePathname();
   const { items, itemCount, totalCents, openCart, nextByobTier } = useCart();
+  const mountTimeRef = useRef(Date.now());
+  const maxScrollRef = useRef(0);
+  const firedRef = useRef(false);
 
   const isProductPage = pathname.startsWith('/shop/');
   const isShopPage = pathname.startsWith('/shop') && !isProductPage;
+  const isActive = isShopPage || isProductPage;
+
+  // Extract product slug from /shop/[slug]
+  const currentProductSlug = isProductPage ? pathname.split('/').pop() || '' : '';
 
   const upsell = useMemo(() => getBundleUpsell(items), [items]);
 
-  // Variant: 'bundle-upgrade' | 'cart-recovery' | 'bundle-promo'
-  const variant = upsell ? 'bundle-upgrade' : itemCount > 0 ? 'cart-recovery' : 'bundle-promo';
+  // Bundle that contains the product being viewed (for product page upsell)
+  const pdpBundle = useMemo(
+    () => (isProductPage ? findBundleForProduct(currentProductSlug) : null),
+    [isProductPage, currentProductSlug],
+  );
+
+  // Variant logic:
+  // Shop page: bundle-upgrade > cart-recovery > bundle-promo
+  // Product page: bundle-upgrade > cart-recovery > pdp-bundle-upsell > free-guide
+  const variant = upsell
+    ? 'bundle-upgrade'
+    : itemCount > 0
+      ? 'cart-recovery'
+      : isProductPage && pdpBundle
+        ? 'pdp-bundle-upsell'
+        : isProductPage
+          ? 'free-guide'
+          : 'bundle-promo';
+
+  // Gate values depend on page type
+  const desktopTimeGate = isProductPage ? PDP_DESKTOP_TIME_MS : SHOP_DESKTOP_TIME_MS;
+  const desktopScrollGate = isProductPage ? PDP_DESKTOP_SCROLL : SHOP_DESKTOP_SCROLL;
+  const mobileTimeGate = isProductPage ? PDP_MOBILE_TIME_MS : SHOP_MOBILE_TIME_MS;
+  const mobileScrollGate = isProductPage ? PDP_MOBILE_SCROLL : SHOP_MOBILE_SCROLL;
 
   const dismiss = useCallback(() => {
     document.body.style.overflow = '';
@@ -39,25 +98,42 @@ export default function ExitIntentPopup() {
   }, []);
 
   const trigger = useCallback(() => {
-    // Don't show if already visible or dismissed recently
-    if (show) return;
+    // Don't show if already visible, already fired, or dismissed recently
+    if (show || firedRef.current) return;
     try {
       const expiry = localStorage.getItem(DISMISS_KEY);
       if (expiry && Date.now() < Number(expiry)) return;
     } catch {}
+    firedRef.current = true;
     document.body.style.overflow = 'hidden';
     setShow(true);
     requestAnimationFrame(() => setAnimating(true));
   }, [show]);
 
+  /* ─── Track max scroll depth ─── */
   useEffect(() => {
-    if (!isShopPage) return;
+    if (!isActive) return;
+    function trackScroll() {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        const depth = window.scrollY / scrollHeight;
+        if (depth > maxScrollRef.current) maxScrollRef.current = depth;
+      }
+    }
+    window.addEventListener('scroll', trackScroll, { passive: true });
+    return () => window.removeEventListener('scroll', trackScroll);
+  }, [isActive]);
+
+  useEffect(() => {
+    if (!isActive) return;
 
     // Desktop: mouse leaves viewport toward top
     function handleMouseLeave(e: MouseEvent) {
-      if (e.clientY <= 0) {
-        trigger();
-      }
+      if (e.clientY > 0) return;
+      const timeOnPage = Date.now() - mountTimeRef.current;
+      if (timeOnPage < desktopTimeGate) return;
+      if (maxScrollRef.current < desktopScrollGate) return;
+      trigger();
     }
 
     // Mobile: detect back-button intent via scroll to top + pause
@@ -74,8 +150,14 @@ export default function ExitIntentPopup() {
       }
       lastScrollY = currentY;
 
-      // If user scrolled up 300px+ rapidly, they might be leaving
-      if (scrollUpDistance > 300 && currentY < 100) {
+      const viewportHeight = window.innerHeight;
+      const inTopZone = currentY < viewportHeight * 0.4;
+
+      if (scrollUpDistance >= MOBILE_SCROLL_UP_PX && inTopZone) {
+        const timeOnPage = Date.now() - mountTimeRef.current;
+        if (timeOnPage < mobileTimeGate) return;
+        if (maxScrollRef.current < mobileScrollGate) return;
+
         if (scrollTimer) clearTimeout(scrollTimer);
         scrollTimer = setTimeout(() => {
           trigger();
@@ -92,7 +174,7 @@ export default function ExitIntentPopup() {
       window.removeEventListener('scroll', handleScroll);
       if (scrollTimer) clearTimeout(scrollTimer);
     };
-  }, [isShopPage, trigger]);
+  }, [isActive, trigger, desktopTimeGate, desktopScrollGate, mobileTimeGate, mobileScrollGate]);
 
   // Close on Escape
   useEffect(() => {
@@ -106,14 +188,25 @@ export default function ExitIntentPopup() {
 
   const focusTrapRef = useFocusTrap(show && animating);
 
-  if (!show || !isShopPage) return null;
+  // Don't show free-guide variant if already submitted
+  if (variant === 'free-guide') {
+    try {
+      if (localStorage.getItem(GUIDE_SUBMITTED_KEY)) return null;
+    } catch {}
+  }
+
+  if (!show || !isActive) return null;
 
   const ariaLabel =
     variant === 'bundle-upgrade'
       ? 'Bundle upgrade suggestion'
       : variant === 'cart-recovery'
         ? 'Cart reminder'
-        : 'Free guide offer with bundle purchase';
+        : variant === 'pdp-bundle-upsell'
+          ? 'Bundle suggestion'
+          : variant === 'free-guide'
+            ? 'Free guide offer'
+            : 'Free guide offer with bundle purchase';
 
   return (
     <div
@@ -167,6 +260,10 @@ export default function ExitIntentPopup() {
         {variant === 'bundle-upgrade' && upsell && (
           <BundleUpgradeContent upsell={upsell} openCart={openCart} dismiss={dismiss} />
         )}
+        {variant === 'pdp-bundle-upsell' && pdpBundle && (
+          <PdpBundleUpsellContent bundle={pdpBundle} dismiss={dismiss} />
+        )}
+        {variant === 'free-guide' && <FreeGuideContent dismiss={dismiss} />}
       </div>
     </div>
   );
@@ -478,6 +575,121 @@ function BundleUpgradeContent({
           No thanks, I&rsquo;ll keep browsing
         </button>
       </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Variant D: PDP Bundle Upsell (product page, empty cart, bundle available)
+   ═══════════════════════════════════════════════════════════════════ */
+
+function PdpBundleUpsellContent({
+  bundle,
+  dismiss,
+}: {
+  bundle: { slug: string; name: string; priceCents: number; compareAtPriceCents: number; imageUrl: string | null; activityCount: number | null };
+  dismiss: () => void;
+}) {
+  const childCount = BUNDLE_CONTENTS[bundle.slug]?.length || 0;
+  const savingsCents = bundle.compareAtPriceCents - bundle.priceCents;
+
+  return (
+    <div className="popup-stagger overflow-y-auto">
+      {/* Bundle image banner */}
+      {bundle.imageUrl && (
+        <div className="relative w-full h-36 sm:h-44 overflow-hidden">
+          <Image
+            src={bundle.imageUrl}
+            alt={bundle.name}
+            fill
+            sizes="500px"
+            className="object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          {savingsCents > 0 && (
+            <div className="absolute bottom-3 left-3 bg-gold text-forest-dark text-[11px] font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+              Save {formatPrice(savingsCents)}
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className="px-6 py-5 sm:py-6">
+        <div className="inline-flex items-center gap-1.5 bg-forest/10 text-forest-dark text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+          <svg className="w-3.5 h-3.5 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+          </svg>
+          Better value
+        </div>
+
+        <h2 className="font-display text-[22px] sm:text-2xl leading-tight text-forest mb-2">
+          This guide is part of a bundle
+        </h2>
+
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          Get the <span className="font-semibold text-forest-dark">{bundle.name}</span>{' '}
+          with all {childCount} guides for just {formatPrice(bundle.priceCents)}.
+          {savingsCents > 0 && ` That\u2019s ${formatPrice(savingsCents)} less than buying them separately.`}
+          {' '}Plus a free Future-Ready Skills Map.
+        </p>
+
+        <Link
+          href={`/shop/${bundle.slug}`}
+          onClick={dismiss}
+          className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:scale-[1.01] hover:shadow-lg shadow-md"
+        >
+          View Bundle
+        </Link>
+
+        <button
+          onClick={dismiss}
+          className="mt-2.5 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+        >
+          No thanks, I&rsquo;ll keep browsing
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Variant E: Free Guide (product page, empty cart, no bundle match)
+   ═══════════════════════════════════════════════════════════════════ */
+
+function FreeGuideContent({ dismiss }: { dismiss: () => void }) {
+  return (
+    <div className="px-6 sm:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8">
+      <div className="flex items-start gap-4 sm:gap-5 mb-4 sm:mb-5">
+        <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
+          <Image
+            src="/images/free-guide-cover.jpg"
+            alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
+            fill
+            sizes="(max-width: 640px) 80px, 128px"
+            className="object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="min-w-0 pt-1 sm:pt-2">
+          <h2 className="font-display text-xl sm:text-[1.65rem] text-forest leading-tight mb-1.5 sm:mb-2">
+            Before you go, grab this free guide
+          </h2>
+          <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
+            10 Real-World Activities You Can Start Today. Low prep, no planning, just meaningful learning.
+          </p>
+        </div>
+      </div>
+
+      <EmailForm variant="light" />
+
+      <button
+        onClick={dismiss}
+        className="mt-2 sm:mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+      >
+        No thanks, I&rsquo;ll keep browsing
+      </button>
     </div>
   );
 }
