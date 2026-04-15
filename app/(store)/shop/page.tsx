@@ -619,8 +619,8 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                   Not sure where to start?
                 </h3>
                 <p className="text-cream/60 mb-8 max-w-md mx-auto text-lg">
-                  Grab our free guide and discover the 10 life skills your kids
-                  can build through everyday moments.
+                  Grab our free guide &mdash; 7 real-world activities your kids
+                  can try this week. One a day, zero worksheets.
                 </p>
                 <Link
                   href="/free-guide"

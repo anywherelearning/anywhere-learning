@@ -50,24 +50,25 @@ function PillarIcon({ index }: { index: number }) {
 
 const pillars = [
   {
-    title: "No curriculum",
-    description: "Pick one activity. Try it this week. That\u2019s enough.",
+    title: "A guide for parents",
+    description:
+      "Not a worksheet for kids. You set the stage, then step back.",
   },
   {
     title: "Works anywhere",
     description:
-      "At home, travelling, on a grocery run, in the backyard.",
+      "At home, travelling, on a grocery run, in the backyard. No printing, no prep.",
   },
   {
-    title: "Adapts to your child",
+    title: "Reusable forever",
     description:
-      "Every activity includes a note on how to scale it for different ages.",
+      "Every activity scales from 6 to 14. Come back to it season after season.",
   },
 ];
 
 export default function WhyItWorks() {
   return (
-    <section className="bg-gold-light/10 py-20 md:py-28">
+    <section className="bg-gold-light/10 py-14 md:py-20">
       <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
         <h2 className="font-display text-3xl md:text-5xl text-forest mb-3">
           The goal isn&apos;t to teach kids about life
@@ -76,7 +77,7 @@ export default function WhyItWorks() {
           It&apos;s to let them live it, with your guidance.
         </p>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:grid-cols-3">
           {pillars.map((pillar, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-forest/10">

@@ -662,10 +662,10 @@ function FreeGuideContent({ dismiss }: { dismiss: () => void }) {
   return (
     <div className="px-6 sm:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8">
       <div className="flex items-start gap-4 sm:gap-5 mb-4 sm:mb-5">
-        <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[707/1000] rounded-lg overflow-hidden shadow-md">
+        <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[773/1000] rounded-lg overflow-hidden shadow-md">
           <Image
             src="/images/free-guide-cover.jpg"
-            alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
+            alt="7 Days of Real-World Learning, free guide cover"
             fill
             sizes="(max-width: 640px) 80px, 128px"
             className="object-cover"
@@ -677,7 +677,7 @@ function FreeGuideContent({ dismiss }: { dismiss: () => void }) {
             Before you go, grab this free guide
           </h2>
           <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-            10 Real-World Activities You Can Start Today. Low prep, no planning, just meaningful learning.
+            7 Days of Real-World Learning. One activity a day, zero worksheets, just meaningful learning.
           </p>
         </div>
       </div>

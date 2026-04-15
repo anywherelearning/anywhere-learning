@@ -3,9 +3,11 @@
 All emails use the same branded HTML template matching the Resend transactional emails.
 Copy the HTML from each file into Kit's HTML editor (not the visual editor).
 
-Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF.
+Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF (Vercel Blob URL for `Free guide - 7 Days of Real-World Learning.pdf`).
 
 ## Sequence 1: Lead Magnet (3 emails)
+
+**Current guide:** `7 Days of Real-World Learning` (one activity a day across outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning)
 
 **Trigger:** Subscriber receives tag `lead`
 (Tag is auto-applied by the app when someone submits the free guide form)
