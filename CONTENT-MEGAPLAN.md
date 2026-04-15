@@ -118,11 +118,11 @@ Ranked by intensity from Reddit and Facebook homeschool community research. Ever
 
 | # | Title | Slug | Keyword | Vol | Comp | Pain Point | CTA | Status |
 |---|-------|------|---------|-----|------|-----------|-----|--------|
-| 1 | 10 Life Skills Every Kid Should Know Before They Turn 12 | `life-skills-before-12` | life skills activities for kids | ~880 | Low | #2 guilt, #3 curriculum | Life Skills Guide | Not started |
-| 2 | How to Teach Kids About Money (Without a Textbook) | `teach-kids-money` | teach kids financial literacy | ~620 | Med | #3 curriculum, #4 planning | Life Skills Guide | ✅ Published |
+| 1 | 10 Life Skills Every Kid Should Know Before They Turn 12 | `life-skills-before-12` | life skills activities for kids | ~880 | Low | #2 guilt, #3 curriculum | 7 Days Guide | Not started |
+| 2 | How to Teach Kids About Money (Without a Textbook) | `teach-kids-money` | teach kids financial literacy | ~620 | Med | #3 curriculum, #4 planning | 7 Days Guide | ✅ Published |
 | 3 | 5 Ways to Turn Your Kitchen Into a Learning Lab | `kitchen-learning-lab` | kitchen math homeschool | ~300 | Low | #4 planning | Real-World Skills Pack | ✅ Published |
 | 4 | Why Your Kids Should Write Real Letters (Not Worksheets) | `real-letters-not-worksheets` | writing activities homeschool | ~700 | Med | #3 curriculum | Real-World Skills Pack | Not started |
-| 5 | Teaching Negotiation Skills Through Everyday Life | `negotiation-skills-kids` | life skills activities for kids | ~880 | Low | #2 guilt | Life Skills Guide | Not started |
+| 5 | Teaching Negotiation Skills Through Everyday Life | `negotiation-skills-kids` | life skills activities for kids | ~880 | Low | #2 guilt | 7 Days Guide | Not started |
 | 6 | What "No Prep" Actually Means (and Why It Changed Our Homeschool) | `what-no-prep-means` | no prep homeschool activities | ~390 | Low | #1 burnout, #4 planning | All packs | Not started |
 | 7 | What Should Kids Know Before They Turn 18? | `skills-before-18` | what should kids know before 18 | ~800 | Low | #2 guilt | Master Bundle | Not started |
 | 8 | Chores Aren't Punishment: How Everyday Tasks Teach Real Skills | `chores-teach-real-skills` | chores as learning | ~200 | Low | #2 guilt, #8 multi-age | Real-World Skills Pack | Not started |
@@ -258,7 +258,7 @@ Rules for which CTA to use on each post type:
 | **AI posts** | AI Literacy Pack | Master Bundle |
 | **Worldschool/travel posts** | All packs ("works anywhere") | Master Bundle |
 | **Nature/outdoor posts** | Nature Journal Pack | Seasonal Packs |
-| **Real-world skills posts** | Real-World Skills Pack | Life Skills Guide |
+| **Real-world skills posts** | Real-World Skills Pack | 7 Days Guide |
 | **Creativity/maker posts** | Creativity Series | Master Bundle |
 
 **CTA placement in posts:**

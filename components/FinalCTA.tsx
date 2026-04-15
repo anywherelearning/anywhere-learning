@@ -2,12 +2,12 @@ import EmailForm from "./EmailForm";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-forest py-20 md:py-28">
+    <section className="bg-forest py-14 md:py-20">
       <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
-        <h2 className="font-display text-3xl md:text-5xl text-cream mb-4">
+        <h2 className="font-display text-3xl md:text-5xl text-cream mb-3">
           Ready to start?
         </h2>
-        <p className="text-lg text-cream/80 leading-relaxed mb-8">
+        <p className="text-lg text-cream/80 leading-relaxed mb-6">
           Download the free guide and try your first activity this week. No
           curriculum. No worksheets. Low prep.
         </p>

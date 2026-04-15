@@ -19,9 +19,9 @@ function PDFMockup() {
         {/* Cover image */}
         <Image
           src="/images/free-guide-cover.jpg"
-          alt="10 Life Skills Your Kids Can Learn This Week, free guide cover"
+          alt="7 Days of Real-World Learning, free guide cover"
           width={256}
-          height={362}
+          height={331}
           className="w-full h-auto"
           priority
         />
@@ -32,9 +32,9 @@ function PDFMockup() {
 
 export default function Hero() {
   return (
-    <section className="relative bg-cream py-20 md:py-28">
+    <section className="relative bg-cream py-12 md:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-16">
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:gap-14">
           {/* Mobile: PDF mockup on top */}
           <div className="lg:hidden">
             <PDFMockup />
@@ -42,20 +42,19 @@ export default function Hero() {
 
           {/* Text + Form */}
           <div className="flex-1 text-center lg:text-left">
-            <p className="text-sm font-medium text-gold uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-gold uppercase tracking-widest mb-3">
               Free Download
             </p>
-            <h1 className="font-display text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl mb-5">
-              <span className="heading-accent">10 life skills</span> your kids
-              can learn this week
+            <h1 className="font-display text-5xl leading-tight text-forest sm:text-6xl lg:text-7xl mb-4">
+              <span className="heading-accent">7 days of real-world learning</span>
             </h1>
 
             <p className="mx-auto max-w-lg text-lg md:text-xl text-gray-600 lg:mx-0 leading-relaxed">
-              A free, low-prep guide for homeschool and worldschool families.
-              Real activities. Real life. No curriculum required.
+              One activity a day. A few hours each. Zero worksheets. A free
+              guide for homeschool and worldschool families.
             </p>
 
-            <div id="hero-form" className="mt-8 scroll-mt-20">
+            <div id="hero-form" className="mt-6 scroll-mt-20">
               <EmailForm variant="light" />
             </div>
           </div>

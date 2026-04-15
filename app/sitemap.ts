@@ -14,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const resourcePages = getAllResources();
 
   // Use a fixed date for static pages so crawlers see real change signals
-  const siteLastUpdated = new Date('2026-03-14');
+  const siteLastUpdated = new Date('2026-04-15');
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {

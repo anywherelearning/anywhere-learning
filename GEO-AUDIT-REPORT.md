@@ -311,7 +311,7 @@ The biggest lever for improvement is **deploying the site and building brand pre
 | `/shop/[slug]` (×30) | Product pages | Formulaic descriptions; no reviews |
 | `/blog` | Blog | Good CollectionPage schema |
 | `/blog/[slug]` (×29) | Blog posts | No research citations; narrative-first |
-| `/free-guide` | 10 Life Skills Free Guide | Missing JSON-LD schema |
+| `/free-guide` | 7 Days of Real-World Learning Free Guide | JSON-LD Product schema added |
 | `/about` | About | Missing Person schema; credentials light |
 | `/faq` | FAQ | Excellent FAQPage schema |
 | `/contact` | Contact | Adequate |
