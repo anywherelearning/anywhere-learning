@@ -7,6 +7,8 @@ import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
 import { formatPrice } from '@/lib/utils';
 import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
 import { usePurchased } from './PurchasedContext';
+import { usePassMember } from '@/hooks/usePassMember';
+import Link from 'next/link';
 
 interface AddToCartButtonProps {
   stripePriceId: string;
@@ -30,10 +32,31 @@ export default function AddToCartButton({
   const { isNative } = useCapacitor();
   const { items, addItem, isInCart, openCart, swapBundle } = useCart();
   const purchased = usePurchased();
+  const { active: isMember } = usePassMember();
   const [justAdded, setJustAdded] = useState(false);
 
   // Hide purchase buttons in native app (Apple compliance)
   if (isNative) return null;
+
+  // Annual Pass member - show "Included" with link to library
+  if (isMember && !isBundle) {
+    return (
+      <Link
+        href="/account/downloads"
+        className="block w-full bg-forest/10 text-forest font-semibold py-4 px-8 rounded-xl text-center text-lg hover:bg-forest/15 transition-colors"
+      >
+        <span className="flex items-center justify-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Included in Your Annual Pass
+        </span>
+        <span className="block text-sm font-normal text-forest/60 mt-1">
+          Open in My Library
+        </span>
+      </Link>
+    );
+  }
 
   // Already purchased - show confirmation instead of buy button
   if (purchased.has(slug)) {

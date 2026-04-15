@@ -7,12 +7,14 @@ import Image from 'next/image';
 import AuthNav from './AuthNav';
 import CartIcon from '@/components/cart/CartIcon';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { usePassMember } from '@/hooks/usePassMember';
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const focusTrapRef = useFocusTrap(mobileOpen);
   const pathname = usePathname();
+  const { active: isMember } = usePassMember();
 
   // Close mobile menu on route change (avoids flash of current page)
   useEffect(() => {
@@ -114,10 +116,10 @@ export default function SiteHeader() {
             <AuthNav />
             <CartIcon />
             <Link
-              href="/free-guide"
-              className="rounded-full bg-forest px-4 py-2 text-sm font-semibold text-cream transition-all hover:bg-forest-dark active:scale-[0.97]"
+              href={isMember ? '/account/downloads' : '/annual-pass'}
+              className="rounded-full bg-gold px-4 py-2 text-sm font-semibold text-forest transition-all hover:bg-gold-light active:scale-[0.97]"
             >
-              Free Guide
+              {isMember ? 'My Library' : 'Annual Pass'}
             </Link>
           </div>
 
@@ -243,10 +245,10 @@ export default function SiteHeader() {
               About
             </Link>
             <Link
-              href="/free-guide"
-              className="mt-4 rounded-full bg-forest px-6 py-3 text-lg font-semibold text-cream transition-all hover:bg-forest-dark"
+              href={isMember ? '/account/downloads' : '/annual-pass'}
+              className="mt-4 rounded-full bg-gold px-6 py-3 text-lg font-semibold text-forest transition-all hover:bg-gold-light"
             >
-              Free Guide
+              {isMember ? 'My Library' : 'Annual Pass'}
             </Link>
             <div className="mt-2 pt-4 border-t border-forest/10">
               <AuthNav />

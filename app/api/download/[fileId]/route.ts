@@ -5,6 +5,7 @@ import { db } from '@/lib/db';
 import { orders, products, downloads, users } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
+import { hasActivePass } from '@/lib/subscription';
 
 export async function GET(
   req: NextRequest,
@@ -32,21 +33,26 @@ export async function GET(
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  // Check user owns this product (allow completed + partially_refunded access)
-  const order = await db
-    .select()
-    .from(orders)
-    .where(
-      and(
-        eq(orders.userId, user[0].id),
-        eq(orders.productId, productId),
-        inArray(orders.status, ['completed', 'partially_refunded']),
-      ),
-    )
-    .limit(1);
+  // Check access: user owns this product OR has an active Annual Pass
+  const isMember = await hasActivePass(clerkId);
 
-  if (order.length === 0) {
-    return NextResponse.json({ error: 'Not purchased' }, { status: 403 });
+  let order: { id: string }[] = [];
+  if (!isMember) {
+    order = await db
+      .select({ id: orders.id })
+      .from(orders)
+      .where(
+        and(
+          eq(orders.userId, user[0].id),
+          eq(orders.productId, productId),
+          inArray(orders.status, ['completed', 'partially_refunded']),
+        ),
+      )
+      .limit(1);
+
+    if (order.length === 0) {
+      return NextResponse.json({ error: 'Not purchased' }, { status: 403 });
+    }
   }
 
   // Get product blob URL
@@ -63,12 +69,14 @@ export async function GET(
   const isView = req.nextUrl.searchParams.get('view') === '1';
 
   // Log download (don't await - fire-and-forget so it doesn't slow the response)
-  db.insert(downloads).values({
-    orderId: order[0].id,
-    userId: user[0].id,
-    productId: productId,
-    ipAddress: req.headers.get('x-forwarded-for') || 'unknown',
-  }).catch(() => {});
+  if (order.length > 0) {
+    db.insert(downloads).values({
+      orderId: order[0].id,
+      userId: user[0].id,
+      productId: productId,
+      ipAddress: req.headers.get('x-forwarded-for') || 'unknown',
+    }).catch(() => {});
+  }
 
   // Redirect to the Vercel Blob CDN after auth checks pass.
   //

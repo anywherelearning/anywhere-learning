@@ -6,6 +6,7 @@ import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { isCoveredByCart, BUNDLE_CONTENTS } from '@/lib/cart';
 import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
 import { usePurchased } from './PurchasedContext';
+import { usePassMember } from '@/hooks/usePassMember';
 
 interface QuickAddButtonProps {
   stripePriceId: string;
@@ -29,11 +30,27 @@ export default function QuickAddButton({
   const { isNative } = useCapacitor();
   const { items, addItem, removeItem, isInCart, swapBundle } = useCart();
   const purchased = usePurchased();
+  const { active: isMember } = usePassMember();
   const [justAdded, setJustAdded] = useState(false);
   const [justRemoved, setJustRemoved] = useState(false);
 
   // Hide in native app (Apple compliance)
   if (isNative) return null;
+
+  // Members have access to everything - show checkmark
+  if (isMember && !isBundle) {
+    return (
+      <span
+        aria-label="Included in Annual Pass"
+        title="Included in Annual Pass"
+        className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-forest/10 text-forest"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      </span>
+    );
+  }
 
   // Hide for already-purchased products
   if (purchased.has(slug)) return null;

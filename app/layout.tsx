@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
+import PassMemberProvider from "@/components/PassMemberProvider";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
 import NativeHide from "@/components/mobile/NativeHide";
@@ -146,14 +147,16 @@ export default function RootLayout({
       >
         <ClerkWrapper>
           <CartProvider>
-            <CapacitorProvider>
-              <NativeRedirectGuard />
-              <ImageProtection />
-              {children}
-              <NativeHide><CartDrawer /></NativeHide>
-              <PinterestEnhancedMatch />
-              <MobileTabBar />
-            </CapacitorProvider>
+            <PassMemberProvider>
+              <CapacitorProvider>
+                <NativeRedirectGuard />
+                <ImageProtection />
+                {children}
+                <NativeHide><CartDrawer /></NativeHide>
+                <PinterestEnhancedMatch />
+                <MobileTabBar />
+              </CapacitorProvider>
+            </PassMemberProvider>
           </CartProvider>
         </ClerkWrapper>
         <Script

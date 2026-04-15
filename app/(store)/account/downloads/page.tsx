@@ -17,6 +17,9 @@ import BundleUpgradeButton from "@/components/account/BundleUpgradeButton";
 import { getOrCreateReferral } from "@/lib/referral";
 import { coverClassFor } from "@/lib/categories";
 import { ArrowRightIcon } from "@/components/shop/icons";
+import { getActiveSubscription } from "@/lib/subscription";
+import { getActiveProducts } from "@/lib/db/queries";
+import ManageSubscriptionButton from "@/components/account/ManageSubscriptionButton";
 
 export const dynamic = "force-dynamic";
 
@@ -40,6 +43,36 @@ export default async function DownloadsPage() {
   const email = clerkUser?.emailAddresses?.[0]?.emailAddress;
 
   const purchases = await getUserPurchases(clerkId, email);
+  const subscription = await getActiveSubscription(clerkId);
+  const isMember = !!subscription;
+
+  // For members: fetch all products and create virtual "purchases" for ones they don't own
+  let allPurchases = purchases;
+  if (isMember) {
+    try {
+      const allProducts = await getActiveProducts();
+      const purchasedSlugs = new Set(purchases.map((p) => p.product.slug));
+
+      const memberPurchases = allProducts
+        .filter((p) => !purchasedSlugs.has(p.slug) && !p.isBundle)
+        .map((p) => ({
+          order: {
+            id: `pass-${p.id}`,
+            userId: purchases[0]?.order?.userId || '',
+            productId: p.id,
+            stripeSessionId: 'annual-pass',
+            amountCents: 0,
+            purchasedAt: subscription.currentPeriodEnd,
+            status: 'completed',
+          },
+          product: p,
+        }));
+
+      allPurchases = [...purchases, ...memberPurchases];
+    } catch (error) {
+      console.error('Failed to fetch all products for member:', error);
+    }
+  }
 
   // Get referral code for the share block
   let referralCode: string | undefined;
@@ -120,19 +153,39 @@ export default async function DownloadsPage() {
       <h1 className="font-display text-3xl text-forest sm:text-4xl">
         Your Activity Guides
       </h1>
-      {/* Only render the subtitle when there's something to describe.
-          For empty states, DownloadList renders its own richer empty state
-          ("Your first adventure starts here") with a shop CTA, so we don't
-          want two competing empty messages stacked. */}
-      {guideCount > 0 && (
+      {isMember && subscription && (
+        <div className="mt-4 bg-gold/10 border border-gold/20 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold text-forest flex items-center gap-2">
+              <svg className="w-4 h-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+              </svg>
+              Annual Pass Member
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {subscription.cancelAtPeriodEnd
+                ? `Access until ${new Date(subscription.currentPeriodEnd).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`
+                : `Renews ${new Date(subscription.currentPeriodEnd).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`}
+            </p>
+          </div>
+          <ManageSubscriptionButton />
+        </div>
+      )}
+      {/* Only render the subtitle when there's something to describe. */}
+      {!isMember && guideCount > 0 && (
         <p className="mt-2 text-gray-600">
           {guideCount} activity guide{guideCount === 1 ? "" : "s"} ready to open. Use them year after year.
+        </p>
+      )}
+      {isMember && (
+        <p className="mt-2 text-gray-600">
+          All guides included with your Annual Pass. Open on any device.
         </p>
       )}
 
       {/* ── Downloads list (the main event) ── */}
       <div className="mt-8">
-        <DownloadList purchases={purchases.map(({ order, product }) => ({
+        <DownloadList isMember={isMember} purchases={allPurchases.map(({ order, product }) => ({
           order,
           product: {
             id: product.id,
@@ -161,8 +214,8 @@ export default async function DownloadsPage() {
         <ExploreMoreDivider />
       )}
 
-      {/* ── Bundle upgrade suggestions (the ONE upsell) ── */}
-      {qualifyingUpgrades.length > 0 && (
+      {/* ── Bundle upgrade suggestions (the ONE upsell) -- hide for members ── */}
+      {!isMember && qualifyingUpgrades.length > 0 && (
         <section>
           <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
             Save on what you already have

@@ -29,6 +29,7 @@ import BundleUpgradePrice from "@/components/shop/BundleUpgradePrice";
 import BundlePreviewButton from "@/components/shop/BundlePreviewButton";
 import type { BundlePreviewItem } from "@/components/shop/BundlePreviewModal";
 import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
+import AnnualPassNudge from "@/components/annual-pass/AnnualPassNudge";
 import { CATEGORY_LABELS, coverClassFor } from "@/lib/categories";
 import { FREE_BONUS_SLUG, BUNDLE_CONTENTS } from "@/lib/bundles";
 
@@ -523,6 +524,7 @@ export default async function ProductPage({
                       Instant download &middot; Use on any device &middot; 48-hr money-back guarantee
                     </p>
                   </div>
+                  <AnnualPassNudge />
                 </div>
               )}
 

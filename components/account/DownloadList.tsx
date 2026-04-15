@@ -48,6 +48,7 @@ export interface Purchase {
 
 interface DownloadListProps {
   purchases: Purchase[];
+  isMember?: boolean;
 }
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
@@ -68,7 +69,7 @@ const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
 
 const PER_PAGE = 10;
 
-export default function DownloadList({ purchases }: DownloadListProps) {
+export default function DownloadList({ purchases, isMember }: DownloadListProps) {
   const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -78,6 +79,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
   // pills. On close: return focus to the trigger so keyboard users don't
   // lose their place.
   const mobileTriggerRef = useRef<HTMLButtonElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
   const mobilePanelRef = useRef<HTMLDivElement>(null);
   const wasMobileOpen = useRef(false);
   useEffect(() => {
@@ -99,7 +101,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
       .map((c) => c.value);
     const result: string[] = ['all'];
     if (ownedCats.has('start-here')) result.push('start-here');
-    if (ownedCats.has('bundle')) result.push('bundle');
+    if (ownedCats.has('bundle') && !isMember) result.push('bundle');
     result.push(...rest);
     return result;
   }, [purchases]);
@@ -177,7 +179,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
     }`;
 
   return (
-    <div className={showFilters ? 'lg:grid lg:grid-cols-[240px_1fr] lg:gap-10' : ''}>
+    <div ref={listRef} className={showFilters ? 'lg:grid lg:grid-cols-[240px_1fr] lg:gap-10' : ''}>
       {/* ── Sidebar (desktop) ── */}
       {showFilters && (
         <aside className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
@@ -333,7 +335,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
         <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8">
           <button
             type="button"
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            onClick={() => { setPage((p) => Math.max(1, p - 1)); listRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
             disabled={page === 1}
             aria-label="Previous page"
             className="flex items-center gap-1.5 min-h-[44px] px-3 sm:px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"
@@ -346,7 +348,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
           </span>
           <button
             type="button"
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            onClick={() => { setPage((p) => Math.min(totalPages, p + 1)); listRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
             disabled={page === totalPages}
             aria-label="Next page"
             className="flex items-center gap-1.5 min-h-[44px] px-3 sm:px-4 py-2 text-sm font-medium rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300"

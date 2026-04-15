@@ -322,6 +322,43 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            GET EVERYTHING - Annual Pass
+        ═══════════════════════════════════════════ */}
+        <section className="bg-forest-section py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+            <ScrollReveal>
+              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+                Annual Pass
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl text-cream mb-4 text-balance">
+                Or Get Everything
+              </h2>
+              <p className="mx-auto max-w-xl text-cream/70 text-lg mb-8">
+                Every guide in the store. Every new guide we add. One simple price,
+                less than the cost of three bundles.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <div className="inline-flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-3xl px-10 py-8 border border-white/10 mb-6">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-4xl font-bold text-cream">$99</span>
+                  <span className="text-cream/60 text-lg">/year</span>
+                </div>
+                <p className="text-gold text-sm font-medium mb-1">Founding Member Rate</p>
+                <p className="text-cream/50 text-xs mb-6">90+ guides, new ones added monthly</p>
+                <Link
+                  href="/annual-pass"
+                  className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-forest font-semibold px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.02] text-lg"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
             HOW IT WORKS - Dead simple
         ═══════════════════════════════════════════ */}
         <section className="bg-forest-subtle-gradient py-20 md:py-28">

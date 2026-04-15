@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 interface PageProps {
-  searchParams: Promise<{ session_id?: string; token?: string }>;
+  searchParams: Promise<{ session_id?: string; token?: string; type?: string }>;
 }
 
 async function getSessionProducts(sessionId: string, token?: string) {
@@ -256,10 +256,126 @@ async function getSessionProducts(sessionId: string, token?: string) {
 }
 
 export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
-  const { session_id, token } = await searchParams;
+  const { session_id, token, type } = await searchParams;
 
   // Redirect to shop if no valid session (prevents celebration UI without a purchase)
   if (!session_id) redirect('/shop');
+
+  // ── Subscription success: simpler confirmation, no product list needed ──
+  if (type === 'subscription') {
+    // Verify the session exists and is a subscription checkout
+    let buyerEmail: string | null = null;
+    let isSignedIn = false;
+    try {
+      const session = await stripe.checkout.sessions.retrieve(session_id);
+      if (session.mode !== 'subscription') redirect('/shop');
+      buyerEmail = session.customer_details?.email ?? null;
+    } catch {
+      redirect('/shop');
+    }
+    try {
+      const { userId } = await auth();
+      isSignedIn = !!userId;
+    } catch {}
+
+    return (
+      <>
+        <Confetti />
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12 sm:py-20">
+          <div className="text-center hero-stagger">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/15 mb-6">
+              <CheckIcon className="w-8 h-8 text-gold-dark" />
+            </div>
+
+            <h1 className="font-display text-3xl sm:text-4xl text-forest">
+              Welcome to the Annual Pass!
+            </h1>
+
+            <p className="mt-3 text-gray-600 text-lg leading-relaxed max-w-lg mx-auto">
+              You now have access to every activity guide in the store, plus every new guide we add. Open your library to get started.
+            </p>
+
+            {isSignedIn ? (
+              <Link
+                href="/account/downloads"
+                className="inline-flex items-center gap-2 mt-6 bg-gold hover:bg-gold-light text-forest font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
+              >
+                <DownloadIcon className="w-5 h-5" />
+                Open My Library
+              </Link>
+            ) : (
+              <div className="mt-6 space-y-3">
+                <Link
+                  href="/sign-up"
+                  className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-forest font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
+                >
+                  Create your account to access your library
+                </Link>
+                <p className="text-sm text-gray-400">
+                  Use {buyerEmail ? buyerEmail : 'the same email you checked out with'} and your pass will be linked automatically.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* ── What You Get ── */}
+          <section className="mt-14">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="text-center p-5 rounded-2xl bg-gold/8">
+                <div className="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg">&#x1f4da;</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                  90+ guides included
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Every guide in the store is in your library now.
+                </p>
+              </div>
+
+              <div className="text-center p-5 rounded-2xl bg-forest/4">
+                <div className="w-10 h-10 rounded-xl bg-forest/10 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg">&#x2728;</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                  New guides monthly
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  New guides show up in your library automatically.
+                </p>
+              </div>
+
+              <div className="text-center p-5 rounded-2xl bg-gold/8">
+                <div className="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-lg">&#x1f331;</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                  Founding member rate
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Your $99/year rate is locked in for as long as you stay subscribed.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ── Browse ── */}
+          <div className="mt-14 text-center pt-8 border-t border-gray-100 pb-4">
+            <p className="text-gray-400 text-sm mb-2">
+              Want to see what is in your library?
+            </p>
+            <Link
+              href="/shop"
+              className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
+            >
+              Browse all activity guides
+              <ArrowRightIcon />
+            </Link>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   const data = await getSessionProducts(session_id, token);
   if (!data) redirect('/shop');

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { clerkClient } from '@clerk/nextjs/server';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { orders, users, products } from '@/lib/db/schema';
+import { orders, users, products, subscriptions } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
 import { sendPurchaseEmail, sendCartAbandonmentEmail } from '@/lib/resend';
 import { tagBuyerInConvertKit, subscribeAndTag } from '@/lib/convertkit';
@@ -48,13 +48,28 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ received: true });
       }
 
-      // Subscription mode isn't supported; the membership product was scrapped.
       if (session.mode === 'subscription') {
-        console.warn('Received unexpected subscription checkout session:', session.id);
+        await handleSubscriptionCheckout(session);
         return NextResponse.json({ received: true });
       }
 
       await handlePaymentCheckout(session);
+    }
+
+    // ─── Subscription lifecycle events ───────────────────────────────
+    if (event.type === 'customer.subscription.updated') {
+      const sub = event.data.object as Stripe.Subscription;
+      await handleSubscriptionUpdated(sub);
+    }
+
+    if (event.type === 'customer.subscription.deleted') {
+      const sub = event.data.object as Stripe.Subscription;
+      await handleSubscriptionDeleted(sub);
+    }
+
+    if (event.type === 'invoice.payment_failed') {
+      const invoice = event.data.object as Stripe.Invoice;
+      await handleInvoicePaymentFailed(invoice);
     }
 
     // ─── charge.refunded ──────────────────────────────────────────────
@@ -531,4 +546,183 @@ async function handleDisputeCreated(dispute: Stripe.Dispute) {
   console.error(
     `DISPUTE OPENED: session ${session.id}, charge ${charge}, reason: ${dispute.reason}`,
   );
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// Subscription handlers (Annual Pass)
+// ═══════════════════════════════════════════════════════════════════
+
+async function findOrCreateUserByCustomer(
+  stripeCustomerId: string,
+  email: string,
+): Promise<{ id: string; clerkId: string }> {
+  // Try to find by Stripe customer ID first
+  let user = await db
+    .select()
+    .from(users)
+    .where(eq(users.stripeCustomerId, stripeCustomerId))
+    .limit(1);
+
+  if (user.length > 0) return user[0];
+
+  // Fall back to email
+  user = await db
+    .select()
+    .from(users)
+    .where(eq(users.email, email))
+    .limit(1);
+
+  if (user.length > 0) {
+    // Attach Stripe customer ID if missing
+    if (!user[0].stripeCustomerId) {
+      await db
+        .update(users)
+        .set({ stripeCustomerId })
+        .where(eq(users.id, user[0].id));
+    }
+    return user[0];
+  }
+
+  // Create new user
+  const [newUser] = await db
+    .insert(users)
+    .values({
+      clerkId: `pending_${email}`,
+      email,
+      stripeCustomerId,
+    })
+    .returning();
+
+  return newUser;
+}
+
+async function handleSubscriptionCheckout(session: Stripe.Checkout.Session) {
+  const customerId = session.customer as string;
+  const subscriptionId = session.subscription as string;
+  const customerEmail = session.customer_details?.email;
+
+  if (!customerId || !subscriptionId || !customerEmail) {
+    console.error('Missing subscription data in checkout session:', session.id);
+    return;
+  }
+
+  // Retrieve the full subscription from Stripe
+  const sub = await stripe.subscriptions.retrieve(subscriptionId);
+
+  const user = await findOrCreateUserByCustomer(customerId, customerEmail);
+
+  // Idempotency: skip if we already have this subscription
+  const existing = await db
+    .select({ id: subscriptions.id })
+    .from(subscriptions)
+    .where(eq(subscriptions.stripeSubscriptionId, subscriptionId))
+    .limit(1);
+
+  if (existing.length > 0) {
+    console.log('Duplicate subscription webhook (skipping):', subscriptionId);
+    return;
+  }
+
+  await db.insert(subscriptions).values({
+    userId: user.id,
+    stripeCustomerId: customerId,
+    stripeSubscriptionId: subscriptionId,
+    stripePriceId: sub.items.data[0]?.price.id || '',
+    status: sub.status,
+    currentPeriodEnd: new Date(sub.current_period_end * 1000),
+    cancelAtPeriodEnd: sub.cancel_at_period_end,
+  });
+
+  console.log(`Annual Pass subscription created for ${customerEmail} (${subscriptionId})`);
+
+  // Auto-create Clerk account for guest subscribers (same pattern as one-time purchases)
+  const isGuestUser = user.clerkId.startsWith('pending_');
+  if (isGuestUser) {
+    try {
+      const clerk = await clerkClient();
+      const existingClerkUsers = await clerk.users.getUserList({
+        emailAddress: [customerEmail],
+        limit: 1,
+      });
+      if (existingClerkUsers.data.length > 0) {
+        await db
+          .update(users)
+          .set({ clerkId: existingClerkUsers.data[0].id })
+          .where(eq(users.id, user.id));
+      } else {
+        const newClerkUser = await clerk.users.createUser({
+          emailAddress: [customerEmail],
+          skipPasswordRequirement: true,
+        });
+        await db
+          .update(users)
+          .set({ clerkId: newClerkUser.id })
+          .where(eq(users.id, user.id));
+      }
+    } catch (error) {
+      console.error('Failed to auto-create Clerk account for subscriber:', error);
+    }
+  }
+
+  // Tag in ConvertKit
+  try {
+    await subscribeAndTag(customerEmail, ['buyer', 'annual-pass-member', 'annual-pass-founding']);
+  } catch (error) {
+    console.error('Failed to tag annual pass member in ConvertKit:', error);
+  }
+}
+
+async function handleSubscriptionUpdated(sub: Stripe.Subscription) {
+  const existing = await db
+    .select({ id: subscriptions.id })
+    .from(subscriptions)
+    .where(eq(subscriptions.stripeSubscriptionId, sub.id))
+    .limit(1);
+
+  if (existing.length === 0) {
+    console.warn('Subscription update for unknown subscription:', sub.id);
+    return;
+  }
+
+  await db
+    .update(subscriptions)
+    .set({
+      status: sub.status,
+      currentPeriodEnd: sub.current_period_end
+        ? new Date(sub.current_period_end * 1000)
+        : new Date(),
+      cancelAtPeriodEnd: sub.cancel_at_period_end ?? false,
+      stripePriceId: sub.items.data[0]?.price.id || '',
+      updatedAt: new Date(),
+    })
+    .where(eq(subscriptions.stripeSubscriptionId, sub.id));
+
+  console.log(`Subscription ${sub.id} updated: status=${sub.status}, cancel_at_period_end=${sub.cancel_at_period_end}`);
+}
+
+async function handleSubscriptionDeleted(sub: Stripe.Subscription) {
+  await db
+    .update(subscriptions)
+    .set({
+      status: 'canceled',
+      updatedAt: new Date(),
+    })
+    .where(eq(subscriptions.stripeSubscriptionId, sub.id));
+
+  console.log(`Subscription ${sub.id} canceled`);
+}
+
+async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
+  const subscriptionId = invoice.subscription as string | null;
+  if (!subscriptionId) return;
+
+  await db
+    .update(subscriptions)
+    .set({
+      status: 'past_due',
+      updatedAt: new Date(),
+    })
+    .where(eq(subscriptions.stripeSubscriptionId, subscriptionId));
+
+  console.log(`Invoice payment failed for subscription ${subscriptionId}`);
 }
