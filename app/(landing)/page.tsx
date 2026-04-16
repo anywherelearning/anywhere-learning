@@ -622,8 +622,8 @@ export default function HomePage() {
                 Not Sure Where to Start?
               </h2>
               <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                Grab the free guide, 10 real-world activities you can try this week
-                with low prep. See if this approach works for your family.
+                Grab the free guide &mdash; 7 real-world activities, one for each day
+                of the week, with low prep. See if this approach works for your family.
               </p>
               <EmailForm variant="light" />
               <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
