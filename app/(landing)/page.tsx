@@ -322,37 +322,76 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            GET EVERYTHING - Annual Pass
+            THE MATH - Annual Pass tease
         ═══════════════════════════════════════════ */}
-        <section className="bg-forest-section py-20 md:py-28">
-          <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+        <section className="bg-forest-section py-20 md:py-28 relative overflow-hidden">
+          {/* Subtle texture: offset circles for depth */}
+          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" aria-hidden="true" />
+          <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-forest-dark/40 blur-3xl pointer-events-none" aria-hidden="true" />
+
+          <div className="mx-auto max-w-4xl px-5 sm:px-8 relative">
             <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
+              <p className="text-center text-sm font-semibold text-gold-light uppercase tracking-[0.2em] mb-3">
                 Annual Pass
               </p>
-              <h2 className="font-display text-3xl md:text-5xl text-cream mb-4 text-balance">
-                Or Get Everything
+              <h2 className="text-center font-display text-3xl md:text-5xl text-cream mb-4 text-balance">
+                Want it all? Get it all.
               </h2>
-              <p className="mx-auto max-w-xl text-cream/70 text-lg mb-8">
-                Every guide in the store. Every new guide we add. One simple price,
-                less than the cost of three bundles.
+              <p className="mx-auto max-w-xl text-cream/70 text-lg text-center mb-14">
+                If you&apos;re planning to grab three or more bundles, the Annual Pass pays for itself and gives you every new guide we add.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={150}>
-              <div className="inline-flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-3xl px-10 py-8 border border-white/10 mb-6">
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-4xl font-bold text-cream">$99</span>
-                  <span className="text-cream/60 text-lg">/year</span>
+            {/* Single Pass card */}
+            <ScrollReveal delay={100}>
+              <div className="bg-cream rounded-3xl p-8 sm:p-10 border-2 border-gold relative shadow-xl max-w-xl mx-auto">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-forest-dark text-gold text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap">
+                  Best Value
                 </div>
-                <p className="text-gold text-sm font-medium mb-1">Founding Member Rate</p>
-                <p className="text-cream/50 text-xs mb-6">90+ guides, new ones added monthly</p>
-                <Link
-                  href="/annual-pass"
-                  className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-forest font-semibold px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.02] text-lg"
-                >
-                  Learn More
-                </Link>
+
+                <div className="text-center mb-6">
+                  <p className="text-gold-dark text-[11px] uppercase tracking-widest font-semibold mb-3">
+                    Annual Pass
+                  </p>
+                  <div className="flex items-baseline gap-2 justify-center">
+                    <span className="text-6xl sm:text-7xl font-bold text-forest tracking-tight">$99</span>
+                    <span className="text-gray-500 text-base">/year</span>
+                  </div>
+                  <p className="text-gray-500 text-sm mt-2">Founding member rate</p>
+                </div>
+
+                <ul className="space-y-3 text-forest text-sm sm:text-base font-medium mb-8 max-w-sm mx-auto">
+                  <li className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-forest flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    Every guide in the store
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-forest flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    New guides added monthly
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-forest flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    Cancel anytime
+                  </li>
+                </ul>
+
+                <div className="text-center">
+                  <Link
+                    href="/annual-pass"
+                    className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.02] text-base shadow-md"
+                  >
+                    See what&apos;s included
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </ScrollReveal>
           </div>

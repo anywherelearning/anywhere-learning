@@ -6,10 +6,15 @@ import Link from 'next/link';
 
 interface AnnualPassCTAProps {
   size?: 'small' | 'large';
+  /**
+   * 'cream' = cream button on dark backgrounds (default)
+   * 'forest' = forest button for placement on cream/light backgrounds
+   */
+  variant?: 'cream' | 'forest';
   className?: string;
 }
 
-export default function AnnualPassCTA({ size = 'large', className = '' }: AnnualPassCTAProps) {
+export default function AnnualPassCTA({ size = 'large', variant = 'cream', className = '' }: AnnualPassCTAProps) {
   const { active, loading } = usePassMember();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -50,11 +55,16 @@ export default function AnnualPassCTA({ size = 'large', className = '' }: Annual
     }
   }
 
+  const variantClasses =
+    variant === 'forest'
+      ? 'text-cream bg-forest hover:bg-forest-dark shadow-md'
+      : 'text-forest-dark bg-cream hover:bg-white shadow-lg';
+
   return (
     <button
       onClick={handleClick}
       disabled={isLoading}
-      className={`inline-flex items-center justify-center font-semibold text-forest bg-gold hover:bg-gold-light rounded-2xl transition-all duration-200 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed ${
+      className={`inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-200 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed ${variantClasses} ${
         size === 'large' ? 'py-4 px-10 text-lg' : 'py-2.5 px-6 text-sm'
       } ${className}`}
     >
