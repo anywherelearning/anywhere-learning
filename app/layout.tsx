@@ -30,7 +30,7 @@ const bodyFont = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+    default: "Anywhere Learning | Homeschool Activity Guides by Amelie",
     template: "%s | Anywhere Learning",
   },
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://anywherelearning.co",
     siteName: "Anywhere Learning",
-    title: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+    title: "Anywhere Learning | Homeschool Activity Guides by Amelie",
     description:
       "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "https://anywherelearning.co/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Anywhere Learning | Meaningful Learning, Wherever You Are",
+        alt: "Anywhere Learning | Homeschool Activity Guides by Amelie",
       },
     ],
   },

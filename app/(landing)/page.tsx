@@ -14,7 +14,11 @@ import { coreFaqItems } from '@/lib/faq-data';
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
-  title: 'Anywhere Learning, Meaningful Learning, Wherever You Are',
+  // absolute: bypasses the root layout's "%s | Anywhere Learning" template
+  // so the homepage title doesn't double-suffix the brand name.
+  title: {
+    absolute: 'Anywhere Learning | Homeschool Activity Guides by Amelie',
+  },
   description:
     'Low-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
   alternates: {
@@ -166,10 +170,40 @@ const homepageFaqLd = {
   })),
 };
 
+// ItemList of flagship products so AI engines can answer
+// "what does anywherelearning.co sell" without crawling /shop.
+const homepageItemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Featured Anywhere Learning Activity Guides',
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: featuredProducts.length,
+  itemListElement: featuredProducts.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://anywherelearning.co/shop/${p.slug}`,
+    item: {
+      '@type': 'Product',
+      '@id': `https://anywherelearning.co/shop/${p.slug}`,
+      name: p.name,
+      description: p.shortDescription,
+      image: p.imageUrl ? `https://anywherelearning.co${p.imageUrl}` : undefined,
+      url: `https://anywherelearning.co/shop/${p.slug}`,
+      offers: {
+        '@type': 'Offer',
+        price: (p.priceCents / 100).toFixed(2),
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+      },
+    },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageItemListLd) }} />
       <a
         href="#main-content"
         className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-2 focus-visible:left-2 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-forest focus-visible:px-4 focus-visible:py-2 focus-visible:text-cream"

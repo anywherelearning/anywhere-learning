@@ -167,7 +167,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     wordCount: articleBody.split(/\s+/).length,
     author: {
       '@type': 'Person',
+      '@id': 'https://anywherelearning.co/about#amelie',
       name: post.author.name,
+      url: 'https://anywherelearning.co/about',
     },
     publisher: {
       '@type': 'Organization',

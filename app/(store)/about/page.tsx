@@ -86,6 +86,18 @@ const personLd = {
     name: "Anywhere Learning",
     url: "https://anywherelearning.co",
   },
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      name: "Bachelor of Education (B.Ed)",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      name: "Master of Education (M.Ed)",
+    },
+  ],
   knowsAbout: [
     "Homeschooling",
     "Worldschooling",

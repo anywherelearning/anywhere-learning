@@ -143,7 +143,9 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
     articleSection: topicMeta.label,
     author: {
       '@type': 'Person',
+      '@id': 'https://anywherelearning.co/about#amelie',
       name: resource.author.name,
+      url: 'https://anywherelearning.co/about',
     },
     publisher: {
       '@type': 'Organization',

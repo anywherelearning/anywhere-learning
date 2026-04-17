@@ -167,24 +167,55 @@ export default async function ProductPage({
     reviewStats = await getProductReviewStats(product.id);
   } catch { /* DB unavailable */ }
 
+  // Parse product.ageRange ("Ages 6-14", "Ages 0–14+", etc.) into numeric
+  // min/max for PeopleAudience. Google Merchant requires PeopleAudience with
+  // suggestedMinAge/suggestedMaxAge for Product.audience; EducationalAudience
+  // was rejected in GSC. Fall back to 6-14 (the site's stated default range).
+  const ageRangeMatch = product.ageRange?.match(/(\d+)\s*[\u2013\u2014-]\s*(\d+)/);
+  const suggestedMinAge = ageRangeMatch ? Number(ageRangeMatch[1]) : 6;
+  const suggestedMaxAge = ageRangeMatch ? Number(ageRangeMatch[2]) : 14;
+
+  // Bundles are re-typed as ProductGroup with hasVariant referencing member
+  // products by URL so AI engines can answer "what's in this bundle".
+  const bundleChildSlugs = product.isBundle ? (BUNDLE_CONTENTS[product.slug] || []) : [];
+  const hasVariant = bundleChildSlugs
+    .map((childSlug) => getFallbackProductBySlug(childSlug))
+    .filter((child): child is NonNullable<typeof child> => child !== null)
+    .map((child) => ({
+      "@type": "Product" as const,
+      "@id": `https://anywherelearning.co/shop/${child.slug}`,
+      name: child.name,
+      url: `https://anywherelearning.co/shop/${child.slug}`,
+      ...(child.imageUrl && {
+        image: child.imageUrl.startsWith('http')
+          ? child.imageUrl
+          : `https://anywherelearning.co${child.imageUrl}`,
+      }),
+    }));
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": product.isBundle ? "ProductGroup" : "Product",
     name: product.name,
     description: product.description,
     image: product.imageUrl
       ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}`)
       : "https://anywherelearning.co/og-default.png",
     sku: product.slug,
+    ...(product.isBundle && {
+      productGroupID: product.slug,
+      variesBy: ["https://schema.org/category"],
+      hasVariant,
+    }),
     brand: {
       "@type": "Brand",
       name: "Anywhere Learning",
     },
     category: CATEGORY_LABELS[product.category] || product.category,
     audience: {
-      "@type": "EducationalAudience",
-      educationalRole: "parent",
-      audienceType: "Homeschool families",
+      "@type": "PeopleAudience",
+      suggestedMinAge,
+      suggestedMaxAge,
     },
     offers: {
       "@type": "Offer",
@@ -195,6 +226,43 @@ export default async function ProductPage({
       seller: {
         "@type": "Organization",
         name: "Anywhere Learning",
+      },
+      // Digital download: zero shipping cost, worldwide, instant delivery.
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "USD",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          geoTargetName: "Worldwide",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 0,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 0,
+            unitCode: "DAY",
+          },
+        },
+      },
+      // 48-hour money-back guarantee documented site-wide.
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "US",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 2,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
       },
     },
     ...(reviewStats.reviewCount > 0 && {
