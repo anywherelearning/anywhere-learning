@@ -29,49 +29,49 @@ export const revalidate = 3600; // ISR: revalidate hourly
 
 const categoryMeta: Record<string, { title: string; description: string }> = {
   "ai-literacy": {
-    title: "AI & Digital Literacy Guides",
+    title: "AI & Digital Literacy Activities for Kids",
     description:
-      "Responsible tech, critical thinking about AI, and digital citizenship.",
+      "Low-prep AI literacy activities for homeschool kids ages 9-14: responsible tech, critical thinking about AI, and digital citizenship.",
   },
   "creativity-anywhere": {
-    title: "Creativity Anywhere Activity Guides",
+    title: "Creativity Activities for Homeschool Kids",
     description:
-      "Open-ended projects that build design thinking and creative confidence.",
+      "Low-prep creativity activities for homeschool kids: open-ended projects that build design thinking, problem-solving, and creative confidence.",
   },
   "communication-writing": {
-    title: "Communication & Writing Guides",
+    title: "Homeschool Writing & Communication Activities",
     description:
-      "Real-world writing and communication skills for kids who have something to say.",
+      "Low-prep writing and communication activities for homeschool kids — real-world writing projects that build voice, clarity, and confidence.",
   },
   "outdoor-learning": {
-    title: "Outdoor Learning Activity Guides",
+    title: "Homeschool Outdoor Learning Activities",
     description:
-      "Turn your backyard, park, or trail into a hands-on learning space.",
+      "Low-prep outdoor learning activities for homeschool kids: turn your backyard, park, or trail into hands-on nature-based learning, any season.",
   },
   "real-world-math": {
-    title: "Real-World Math Guides",
+    title: "Real-World Math Activities for Homeschool Kids",
     description:
-      "Budgeting, shopping math, fractions in the kitchen, and financial thinking.",
+      "Real-world math activities for homeschool kids: budgeting, shopping math, fractions in the kitchen, and financial literacy through hands-on projects.",
   },
   "entrepreneurship": {
-    title: "Entrepreneurship Activity Guides",
+    title: "Entrepreneurship Activities for Kids",
     description:
-      "Plan, launch, and pitch real businesses - from brand building to Shark Tank pitches.",
+      "Entrepreneurship activities for homeschool kids: plan, launch, and pitch real businesses — from brand building to Shark Tank-style pitches.",
   },
   "planning-problem-solving": {
-    title: "Planning & Problem-Solving Guides",
+    title: "Problem-Solving Activities for Homeschool Kids",
     description:
-      "Tackle real logistics, plan adventures, and solve problems that actually matter.",
+      "Low-prep problem-solving activities for homeschool kids: real logistics, adventure planning, and critical-thinking projects that actually matter.",
   },
   "start-here": {
-    title: "Start Here Guides",
+    title: "Homeschool Activities: Start Here",
     description:
-      "The foundation for your learning journey - start with the big picture.",
+      "Start-here homeschool activities for families new to real-world learning — the foundation for your homeschool or worldschool journey.",
   },
   bundle: {
-    title: "Activity Guide Bundles",
+    title: "Homeschool Activity Bundles: Best Value",
     description:
-      "Save more with curated bundles - the best value for families who want it all.",
+      "Homeschool activity bundles — the best value for families who want it all. Low-prep, reusable, and built for homeschool and worldschool learning.",
   },
 };
 
