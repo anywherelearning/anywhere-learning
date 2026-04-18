@@ -15,6 +15,7 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "npx tsx scripts/seed.ts",
     "stripe:sync": "node --env-file=.env.local node_modules/.bin/tsx scripts/create-stripe-products.ts",
+    "indexnow": "npx tsx scripts/indexnow.ts",
     "email:preview": "email dev",
     "test": "vitest run",
     "test:watch": "vitest"
