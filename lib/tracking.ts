@@ -29,10 +29,21 @@ type PinterestEventData = {
   lead_type?: string;
 };
 
+/** Pinterest user_data block: matching parameters that lift Event Quality Score. */
+type PinterestUserData = {
+  /** SHA-256 hashed email. Auto-hashed by pintrk when passed via load(). */
+  em?: string;
+  /** SHA-256 hash of a stable browser-persistent visitor UUID. */
+  external_id?: string;
+  /** Pinterest click ID (epik), captured from ?epik= URL param on landing. */
+  click_id?: string;
+};
+
 type PintrkFunction = {
   (command: 'track', event: string, data?: PinterestEventData): void;
-  (command: 'load', tagId: string, data?: { em?: string }): void;
+  (command: 'load', tagId: string, data?: PinterestUserData): void;
   (command: 'page'): void;
+  (command: 'set', data: PinterestUserData): void;
 };
 
 type GtagFunction = (...args: unknown[]) => void;
@@ -117,6 +128,29 @@ export function pinterestSetEnhancedMatch(email: string | null | undefined): voi
   if (!trimmed) return;
   try {
     window.pintrk('load', PINTEREST_TAG_ID, { em: trimmed });
+  } catch {
+    // Analytics should never break the app.
+  }
+}
+
+/**
+ * Update Pinterest's user_data block with external_id (hashed visitor UUID)
+ * and/or click_id (epik). Lifts Event Quality Score by giving Pinterest the
+ * matching parameters it needs to attribute conversions to specific users
+ * and ad clicks. Safe to call multiple times — pintrk merges user_data
+ * across load calls.
+ */
+export function pinterestSetUserData(data: PinterestUserData): void {
+  if (typeof window === 'undefined') return;
+  if (typeof window.pintrk !== 'function') return;
+  // Drop any empty/null values so we don't overwrite existing good data.
+  const clean: PinterestUserData = {};
+  if (data.em) clean.em = data.em;
+  if (data.external_id) clean.external_id = data.external_id;
+  if (data.click_id) clean.click_id = data.click_id;
+  if (Object.keys(clean).length === 0) return;
+  try {
+    window.pintrk('load', PINTEREST_TAG_ID, clean);
   } catch {
     // Analytics should never break the app.
   }
