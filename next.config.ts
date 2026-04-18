@@ -23,7 +23,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://*.clerk.accounts.dev https://clerk.anywherelearning.co https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://s.pinimg.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://*.clerk.accounts.dev https://clerk.anywherelearning.co https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://s.pinimg.com https://ct.pinterest.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://img.clerk.com https://*.anywherelearning.co https://*.public.blob.vercel-storage.com https://*.stripe.com https://www.google-analytics.com https://www.googletagmanager.com https://ct.pinterest.com https://*.pinimg.com",
