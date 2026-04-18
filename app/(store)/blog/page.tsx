@@ -14,16 +14,16 @@ const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitInte
 const POSTS_PER_PAGE = 6;
 
 export const metadata: Metadata = {
-  title: 'Homeschool Ideas & Real-World Learning Tips',
+  title: 'Homeschool & Worldschool Blog: Real-World Learning Ideas',
   description:
-    'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families. No fluff, no guilt. Just what works.',
+    'Homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids. Real-world learning, no fluff.',
   alternates: {
     canonical: 'https://anywherelearning.co/blog',
   },
   openGraph: {
-    title: 'Blog | Anywhere Learning',
+    title: 'Homeschool & Worldschool Blog: Real-World Learning Ideas | Anywhere Learning',
     description:
-      'Practical ideas, real-world inspiration, and honest encouragement for homeschool and worldschool families.',
+      'Practical homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids.',
     url: 'https://anywherelearning.co/blog',
     type: 'website',
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: 'https://anywherelearning.co/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Anywhere Learning Blog',
+        alt: 'Anywhere Learning Homeschool & Worldschool Blog',
       },
     ],
   },
