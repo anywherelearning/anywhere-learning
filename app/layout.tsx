@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, DM_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
@@ -186,6 +187,7 @@ export default function RootLayout({
         </noscript>
         <PinterestTracker />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
