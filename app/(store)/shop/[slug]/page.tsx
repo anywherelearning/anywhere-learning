@@ -167,13 +167,11 @@ export default async function ProductPage({
     reviewStats = await getProductReviewStats(product.id);
   } catch { /* DB unavailable */ }
 
-  // Parse product.ageRange ("Ages 6-14", "Ages 0–14+", etc.) into numeric
-  // min/max for PeopleAudience. Google Merchant requires PeopleAudience with
-  // suggestedMinAge/suggestedMaxAge for Product.audience; EducationalAudience
-  // was rejected in GSC. Fall back to 6-14 (the site's stated default range).
-  const ageRangeMatch = product.ageRange?.match(/(\d+)\s*[\u2013\u2014-]\s*(\d+)/);
-  const suggestedMinAge = ageRangeMatch ? Number(ageRangeMatch[1]) : 6;
-  const suggestedMaxAge = ageRangeMatch ? Number(ageRangeMatch[2]) : 14;
+  // Use typicalAgeRange (Text) on Product instead of PeopleAudience.
+  // PeopleAudience.suggestedMinAge was flagged "out of range" by GSC
+  // Merchant listings when a product used "Ages 0–14+" (min=0). Text is
+  // immune to range validation and works across all age ranges we ship.
+  const typicalAgeRange = product.ageRange?.replace(/^Ages\s*/i, "").replace(/[\u2013\u2014]/g, "-") || "6-14";
 
   // priceValidUntil: Google wants an explicit expiry for merchant listings.
   // Set to end of next year; ISR revalidates daily so it never goes stale.
@@ -189,10 +187,17 @@ export default async function ProductPage({
       value: "0",
       currency: "USD",
     },
-    shippingDestination: {
-      "@type": "DefinedRegion",
-      geoTargetName: "Worldwide",
-    },
+    // Google Merchant listings requires addressCountry (ISO 3166-1
+    // alpha-2). geoTargetName: "Worldwide" was rejected. Listing primary
+    // English-speaking markets covers the bulk of traffic; digital
+    // delivery works globally regardless of the country list.
+    shippingDestination: [
+      { "@type": "DefinedRegion", addressCountry: "US" },
+      { "@type": "DefinedRegion", addressCountry: "CA" },
+      { "@type": "DefinedRegion", addressCountry: "GB" },
+      { "@type": "DefinedRegion", addressCountry: "AU" },
+      { "@type": "DefinedRegion", addressCountry: "NZ" },
+    ],
     deliveryTime: {
       "@type": "ShippingDeliveryTime",
       handlingTime: {
@@ -262,16 +267,15 @@ export default async function ProductPage({
       variesBy: ["https://schema.org/category"],
       hasVariant,
     }),
+    // Organization is accepted for brand by Google and avoids the
+    // "Invalid object type" warning GSC emitted for Brand.
     brand: {
-      "@type": "Brand",
+      "@type": "Organization",
       name: "Anywhere Learning",
+      url: "https://anywherelearning.co",
     },
     category: CATEGORY_LABELS[product.category] || product.category,
-    audience: {
-      "@type": "PeopleAudience",
-      suggestedMinAge,
-      suggestedMaxAge,
-    },
+    typicalAgeRange,
     offers: {
       "@type": "Offer",
       price: (product.priceCents / 100).toFixed(2),
