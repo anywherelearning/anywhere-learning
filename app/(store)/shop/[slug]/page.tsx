@@ -186,11 +186,19 @@ export default async function ProductPage({
       "@id": `https://anywherelearning.co/shop/${child.slug}`,
       name: child.name,
       url: `https://anywherelearning.co/shop/${child.slug}`,
+      sku: child.slug,
       ...(child.imageUrl && {
         image: child.imageUrl.startsWith('http')
           ? child.imageUrl
           : `https://anywherelearning.co${child.imageUrl}`,
       }),
+      offers: {
+        "@type": "Offer",
+        price: (child.priceCents / 100).toFixed(2),
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        url: `https://anywherelearning.co/shop/${child.slug}`,
+      },
     }));
 
   const jsonLd = {
