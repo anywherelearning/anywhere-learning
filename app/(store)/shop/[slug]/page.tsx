@@ -175,6 +175,50 @@ export default async function ProductPage({
   const suggestedMinAge = ageRangeMatch ? Number(ageRangeMatch[1]) : 6;
   const suggestedMaxAge = ageRangeMatch ? Number(ageRangeMatch[2]) : 14;
 
+  // priceValidUntil: Google wants an explicit expiry for merchant listings.
+  // Set to end of next year; ISR revalidates daily so it never goes stale.
+  const priceValidUntil = `${new Date().getUTCFullYear() + 1}-12-31`;
+
+  // Shared offer fields — digital download with zero-cost worldwide shipping
+  // and a 48-hour money-back guarantee. Reused on both top-level and variant
+  // offers so Google Merchant listings validate on every Offer.
+  const shippingDetails = {
+    "@type": "OfferShippingDetails",
+    shippingRate: {
+      "@type": "MonetaryAmount",
+      value: "0",
+      currency: "USD",
+    },
+    shippingDestination: {
+      "@type": "DefinedRegion",
+      geoTargetName: "Worldwide",
+    },
+    deliveryTime: {
+      "@type": "ShippingDeliveryTime",
+      handlingTime: {
+        "@type": "QuantitativeValue",
+        minValue: 0,
+        maxValue: 0,
+        unitCode: "DAY",
+      },
+      transitTime: {
+        "@type": "QuantitativeValue",
+        minValue: 0,
+        maxValue: 0,
+        unitCode: "DAY",
+      },
+    },
+  } as const;
+
+  const merchantReturnPolicy = {
+    "@type": "MerchantReturnPolicy",
+    applicableCountry: "US",
+    returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+    merchantReturnDays: 2,
+    returnMethod: "https://schema.org/ReturnByMail",
+    returnFees: "https://schema.org/FreeReturn",
+  } as const;
+
   // Bundles are re-typed as ProductGroup with hasVariant referencing member
   // products by URL so AI engines can answer "what's in this bundle".
   const bundleChildSlugs = product.isBundle ? (BUNDLE_CONTENTS[product.slug] || []) : [];
@@ -196,8 +240,11 @@ export default async function ProductPage({
         "@type": "Offer",
         price: (child.priceCents / 100).toFixed(2),
         priceCurrency: "USD",
+        priceValidUntil,
         availability: "https://schema.org/InStock",
         url: `https://anywherelearning.co/shop/${child.slug}`,
+        shippingDetails,
+        hasMerchantReturnPolicy: merchantReturnPolicy,
       },
     }));
 
@@ -229,49 +276,15 @@ export default async function ProductPage({
       "@type": "Offer",
       price: (product.priceCents / 100).toFixed(2),
       priceCurrency: "USD",
+      priceValidUntil,
       availability: "https://schema.org/InStock",
       url: `https://anywherelearning.co/shop/${product.slug}`,
       seller: {
         "@type": "Organization",
         name: "Anywhere Learning",
       },
-      // Digital download: zero shipping cost, worldwide, instant delivery.
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingRate: {
-          "@type": "MonetaryAmount",
-          value: "0",
-          currency: "USD",
-        },
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          geoTargetName: "Worldwide",
-        },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: {
-            "@type": "QuantitativeValue",
-            minValue: 0,
-            maxValue: 0,
-            unitCode: "DAY",
-          },
-          transitTime: {
-            "@type": "QuantitativeValue",
-            minValue: 0,
-            maxValue: 0,
-            unitCode: "DAY",
-          },
-        },
-      },
-      // 48-hour money-back guarantee documented site-wide.
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "US",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 2,
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/FreeReturn",
-      },
+      shippingDetails,
+      hasMerchantReturnPolicy: merchantReturnPolicy,
     },
     ...(reviewStats.reviewCount > 0 && {
       aggregateRating: {
