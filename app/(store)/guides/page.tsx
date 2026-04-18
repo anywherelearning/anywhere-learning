@@ -8,16 +8,16 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
-  title: 'Homeschool Resource Guides',
+  title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning',
   description:
-    'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
+    'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for homeschool and worldschool families.',
   alternates: {
     canonical: 'https://anywherelearning.co/guides',
   },
   openGraph: {
-    title: 'Resource Guides | Anywhere Learning',
+    title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning | Anywhere Learning',
     description:
-      'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
+      'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for homeschool and worldschool families.',
     url: 'https://anywherelearning.co/guides',
     type: 'website',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: 'https://anywherelearning.co/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Anywhere Learning Resource Guides',
+        alt: 'Anywhere Learning Homeschool Guides',
       },
     ],
   },

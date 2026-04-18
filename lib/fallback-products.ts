@@ -39,7 +39,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All four seasonal guides in one download: spring, summer, autumn, and winter. 80 outdoor activities designed to match each season's unique energy and opportunities. From spring planting and bird-watching to winter star-gazing and ice experiments. Your family gets a full year of outdoor learning, ready to use whenever the season changes.",
     shortDescription:
-      "All 4 seasonal guides, 80 outdoor activities for every time of year.",
+      "All 4 seasonal outdoor homeschool guides: 80 low-prep activities for kids ages 6-14. A full year of nature-based learning, any backyard.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLrpvAkIBECpwGmfll39qgU",
@@ -62,7 +62,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films. Each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence. 10 complete projects, low prep required.",
     shortDescription:
-      "All 10 Creativity Anywhere projects: design, build, and create without limits.",
+      "10 creativity projects for homeschool kids ages 6-14: design, build, and create without limits. Low-prep, open-ended, reusable.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLrpXAkIBECpwGmiH5gmGNa",
@@ -85,7 +85,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Real-World Relevance challenges in one download. Budgeting, meal planning, micro-businesses, media literacy, travel planning, smart shopping, and more. Each challenge puts kids in real-life scenarios where they practise the skills that actually matter: critical thinking, financial literacy, communication, and problem-solving.",
     shortDescription:
-      "All 10 Real-World Relevance challenges: life skills, financial literacy, and project-based learning.",
+      "10 real-world challenges for homeschool kids ages 9-14: life skills, financial literacy, and project-based learning that actually sticks.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLrpYAkIBECpwGmOJN33UUA",
@@ -108,7 +108,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 AI & Digital Literacy activities in one download. From understanding what AI actually is, to spotting deepfakes, checking for bias, building ethical AI projects, and managing digital boundaries. Each activity is designed for ages 9–14 and helps kids become critical, confident, and responsible digital citizens.",
     shortDescription:
-      "All 10 AI & Digital Literacy activities: responsible tech, critical thinking, and digital citizenship.",
+      "10 AI & digital literacy activities for homeschool kids ages 9-14: responsible tech, critical thinking, and digital citizenship.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLrpYAkIBECpwGmwTymDpXV",
@@ -131,7 +131,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Real-World Math guides in one download: backyard campouts, garage sales, garden plots, road trips, sports stats, and more. Every activity puts kids in real-life scenarios where they use maths to plan, budget, measure, and make smart decisions. The kind of maths that actually sticks because it actually matters.",
     shortDescription:
-      "All 10 Real-World Math guides: budgeting, planning, and problem-solving with real numbers.",
+      "10 real-world math activities for homeschool kids ages 6-14: budgeting, planning, and problem-solving with real numbers.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLrpZAkIBECpwGmldyiIrpx",
@@ -154,7 +154,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Three of our most popular nature guides together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching wildlife, and creating nature mandalas. Everything your family needs to turn the outdoors into an art studio.",
     shortDescription:
-      "Land Art + Nature Crafts + Nature Journal. Turn the outdoors into an art studio.",
+      "Nature-based art bundle for homeschool kids ages 6-14: land art, nature crafts, and a journal. Turn the outdoors into an art studio.",
     priceCents: 1799,
     compareAtPriceCents: 2397,
     stripePriceId: "price_1TLrpaAkIBECpwGmguWVbtmQ",
@@ -177,7 +177,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Four essential outdoor learning guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you're in the backyard, at the park, or on a trail, these cards give your kids a reason to explore, observe, test, and discover. Low prep, maximum outdoor time.",
     shortDescription:
-      "Nature Walk Cards + Missions + STEM Challenges + Choice Boards, your complete outdoor toolkit.",
+      "Complete outdoor learning toolkit for homeschool kids ages 6-14: task cards, missions, STEM challenges, and choice boards.",
     priceCents: 2399,
     compareAtPriceCents: 3196,
     stripePriceId: "price_1TLrpbAkIBECpwGmUEAAVflw",
@@ -201,7 +201,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and My Nature Journal. The complete outdoor toolkit for families who learn outside.",
     shortDescription:
-      "All 7 outdoor & nature guides in one download.",
+      "All 7 outdoor & nature learning guides for homeschool kids ages 6-14. Low-prep activities for every season, any backyard or trail.",
     priceCents: 4199,
     compareAtPriceCents: 5593,
     stripePriceId: "price_1TLo8mAkIBECpwGm1ksHAleE",
@@ -228,7 +228,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "20 outdoor activities that use spring's energy to build real-world skills. Plant a seed and track its growth. Build a bug hotel. Create a rain gauge from a jar. Map the birds in your garden. Every activity connects to science, maths, or literacy, but feels like adventure, not homework.",
     shortDescription:
-      "20 outdoor activities that use spring's energy to build real-world skills.",
+      "20 low-prep outdoor homeschool activities for kids ages 6-14: spring planting, bird mapping, and hands-on nature-based learning.",
     priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpcAkIBECpwGmta3kZME4",
@@ -251,7 +251,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "20 summer activities for families who learn on the move. Water experiments, shadow tracking, outdoor cooking, beach science, and more. Designed for long sunny days when kids have energy to burn and curiosity to spare.",
     shortDescription:
-      "20 summer activities: water experiments, outdoor cooking, and sun-powered learning.",
+      "20 low-prep summer outdoor activities for homeschool kids ages 6-14: water experiments, outdoor cooking, and sun-powered learning.",
     priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpyAkIBECpwGmJKaGyU3J",
@@ -274,7 +274,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "20 autumn activities that use the changing season to build observation and creative skills. Leaf collecting, weather tracking, nature journaling, harvest maths, and more. Perfect for families who want to make the most of shorter days and golden light.",
     shortDescription:
-      "20 autumn activities: leaf science, harvest maths, and seasonal observation.",
+      "20 low-prep autumn outdoor activities for homeschool kids ages 6-14: leaf science, harvest math, and seasonal observation.",
     priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpzAkIBECpwGm3pNLdhqG",
@@ -297,7 +297,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "20 winter activities for cosy indoor days and cold outdoor adventures. Ice experiments, star-gazing, shadow play, winter bird feeding, and fireside storytelling. Designed for families who want to keep learning alive even when the weather says stay inside.",
     shortDescription:
-      "20 winter activities: ice experiments, star-gazing, and cosy indoor learning.",
+      "20 low-prep winter outdoor activities for homeschool kids ages 6-14: ice experiments, star-gazing, and cosy indoor learning.",
     priceCents: 1499,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpeAkIBECpwGmVCg2NqGm",
@@ -324,7 +324,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape: backyard, park, trail, or beach. No nature expertise required from you. Just open it up, step outside, and let curiosity lead.",
     shortDescription:
-      "A guided nature journal with prompts for sketching, writing, and outdoor observation.",
+      "Homeschool nature journal for kids ages 6-14: guided prompts for sketching, writing, and outdoor observation. Any season, any trail.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpeAkIBECpwGm6cacYS90",
@@ -347,7 +347,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Works in any outdoor space, any season, any weather.",
     shortDescription:
-      "Task cards that turn any walk into a focused nature exploration.",
+      "Homeschool nature walk task cards for kids ages 6-14: turn any walk into focused outdoor learning. Low-prep, any trail, any season.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpfAkIBECpwGmYYJRzrKV",
@@ -370,7 +370,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from: observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what to do outside. Works in backyards, parks, forests, and beaches.",
     shortDescription:
-      "Choose-your-own-adventure nature activities with 9 options per board for self-directed outdoor learning.",
+      "Homeschool outdoor choice boards for kids ages 6-14: 9 options per board for self-directed nature-based learning. Low-prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpgAkIBECpwGml7Y7qQVt",
@@ -393,7 +393,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Mission-style outdoor challenges that get kids moving, observing, and problem-solving in nature. Each mission has a clear objective, steps to follow, and a reflection prompt. From building shelters to mapping wildlife trails, these are real adventures that feel important.",
     shortDescription:
-      "Mission-style outdoor challenges: build, explore, observe, and problem-solve in nature.",
+      "Homeschool outdoor missions for kids ages 6-14: build, explore, observe, and problem-solve in nature. Low-prep adventure cards.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpgAkIBECpwGmf2frETKl",
@@ -416,7 +416,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "20 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a waterproof shelter. Measure tree heights using shadows. Engineer a boat that floats. Each challenge has constraints that force creative problem-solving with no instructions, just goals.",
     shortDescription:
-      "20 outdoor STEM challenges: build, test, and engineer using what nature provides.",
+      "20 outdoor STEM challenges for homeschool kids ages 6-14: build, test, and engineer using what nature provides. Low-prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpgAkIBECpwGmDo8WjG4Z",
@@ -439,7 +439,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, and design, all while being creative outdoors with zero mess to clean up.",
     shortDescription:
-      "15 land art challenges: create beautiful, temporary art using natural materials.",
+      "15 land art challenges for homeschool kids ages 6-14: create beautiful, temporary art using natural materials. Any outdoor space.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrphAkIBECpwGmqj1htffA",
@@ -462,7 +462,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation. Kids collect materials, then create something beautiful with what they find.",
     shortDescription:
-      "Hands-on nature craft projects using materials found outdoors.",
+      "Homeschool nature crafts for kids ages 6-14: hands-on outdoor craft projects using materials found in your backyard or on a trail.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrphAkIBECpwGmHzBJOSW0",
@@ -489,7 +489,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design, build, and playtest an original board game from scratch. Kids brainstorm themes, create rules, design the board, craft game pieces, and iterate based on playtesting. A complete creative project that builds design thinking, strategic reasoning, and communication skills.",
     shortDescription:
-      "Design, build, and playtest an original board game from scratch.",
+      "Homeschool creativity project for kids ages 6-14: design, build, and playtest an original board game from scratch. Low-prep, open-ended.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpiAkIBECpwGmNCltdHtY",
@@ -512,7 +512,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials: dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect thinking, and creative problem-solving. Failure is part of the fun.",
     shortDescription:
-      "Build an absurdly complicated machine to do something simple. Engineering meets creativity.",
+      "Homeschool engineering project for kids ages 6-14: build an absurdly complicated machine to do something simple. Creativity meets engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpiAkIBECpwGms3N113ga",
@@ -535,7 +535,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design and build a survival base for an imaginary expedition. Kids choose a biome, research challenges, plan their base layout, create models, and present their design. Combines geography, engineering, creative writing, and problem-solving in one immersive project.",
     shortDescription:
-      "Design a survival base for an imaginary expedition. Geography meets engineering.",
+      "Homeschool design project for kids ages 6-14: design a survival base for an imaginary expedition. Geography meets engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpjAkIBECpwGmCLDpj9tF",
@@ -558,7 +558,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create an entire imaginary world from scratch, including its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that can last days or weeks.",
     shortDescription:
-      "Create an entire imaginary world: geography, creatures, rules, and stories.",
+      "Homeschool creativity project for kids ages 6-14: create an entire imaginary world with geography, creatures, rules, and stories.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpjAkIBECpwGmY5nHhpP3",
@@ -581,7 +581,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Invent a brand-new creature and build its entire habitat. Kids design anatomy, diet, behaviour, and environment. Then they construct a physical model of the habitat. Combines biology, art, engineering, and creative writing in one unforgettable project.",
     shortDescription:
-      "Invent a creature and build its habitat. Biology meets art and engineering.",
+      "Homeschool science + art project for kids ages 6-14: invent a creature and build its habitat. Biology meets art and engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpkAkIBECpwGm1v6HUls3",
@@ -604,7 +604,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design a theme park or adventure course from concept to completion. Kids plan rides, map layouts, calculate budgets, design marketing materials, and build scale models. A project that combines maths, art, engineering, and business thinking.",
     shortDescription:
-      "Design a theme park: plan rides, map layouts, and build scale models.",
+      "Homeschool design project for kids ages 6-14: design a theme park. Plan rides, map layouts, and build scale models.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpkAkIBECpwGmWo13CnUU",
@@ -627,7 +627,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create a mini movie, stop-motion animation, or radio drama from scratch. Kids write scripts, design sets, create characters, record audio, and edit their production. A full creative process from concept to premiere. No fancy equipment needed, just a phone and imagination.",
     shortDescription:
-      "Create a mini movie, stop-motion, or radio drama, from script to premiere.",
+      "Homeschool creativity project for kids ages 6-14: create a mini movie, stop-motion, or radio drama, from script to premiere.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGm8e5ZKzXB",
@@ -650,7 +650,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create an entirely new sport with original rules, equipment, and scoring. Kids design the game, build equipment from everyday materials, write a rulebook, playtest with family, and iterate. A masterclass in creative thinking, negotiation, and physical activity.",
     shortDescription:
-      "Create an entirely new sport: design rules, build equipment, and playtest.",
+      "Homeschool creativity project for kids ages 6-14: invent a new sport. Design rules, build equipment, and playtest with family.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGmD8WCPsXt",
@@ -673,7 +673,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Combines physics, engineering, and artistic expression in a hands-on project that produces something genuinely impressive.",
     shortDescription:
-      "Build a kinetic sculpture: art that moves using physics and engineering.",
+      "Homeschool art + engineering project for kids ages 6-14: build a kinetic sculpture. Art that moves using physics and engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGmq63l93oU",
@@ -696,7 +696,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create a museum or interactive exhibit on any topic your child loves. Research, curate, design displays, write labels, build interactive elements, and host a grand opening. A project that teaches research, writing, presentation, and design, all driven by your child's own interests.",
     shortDescription:
-      "Create a museum exhibit: research, curate, design, and host a grand opening.",
+      "Homeschool creativity project for kids ages 6-14: create a museum exhibit. Research, curate, design, and host a grand opening.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpmAkIBECpwGm849TJdAW",
@@ -723,7 +723,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy through real-world practice, low prep needed.",
     shortDescription:
-      "Real-money challenges that teach kids budgeting, saving, and smart spending.",
+      "Real-world math for homeschool kids ages 9-14: real-money challenges that teach budgeting, saving, and smart spending.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpmAkIBECpwGmgi9i7P74",
@@ -746,7 +746,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Guide your child through planning and executing a real community impact project. From identifying local needs to designing solutions, creating action plans, and reflecting on results. Builds empathy, planning skills, and a sense of civic responsibility.",
     shortDescription:
-      "Plan and execute a real community impact project. Empathy in action.",
+      "Homeschool project for kids ages 9-14: plan and execute a real community impact project. Empathy and problem-solving in action.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpnAkIBECpwGmK43FgWjR",
@@ -769,7 +769,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Go beyond recipes. Plan meals for a week, calculate grocery costs, compare unit prices, adjust portions, and manage a food budget. Real-world maths that happens in the kitchen, at the shop, and around the dinner table.",
     shortDescription:
-      "Plan meals, calculate costs, and manage a food budget. Real-world kitchen maths.",
+      "Real-world math for homeschool kids ages 9-14: plan meals, calculate costs, and manage a food budget. Kitchen math in action.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpnAkIBECpwGmH6nVrxMI",
@@ -792,7 +792,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Critical thinking activities that teach kids to evaluate information, spot bias, check sources, and think critically about what they see online. In a world of misinformation, these are essential skills, and they're best learned through practice, not lectures.",
     shortDescription:
-      "Critical thinking activities: evaluate sources, spot bias, and check facts.",
+      "AI & media literacy for homeschool kids ages 9-14: evaluate sources, spot bias, and check facts. Critical thinking for the AI age.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpnAkIBECpwGm2HJnA87z",
@@ -815,7 +815,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Guided activities to help your child plan, launch, and run a simple real business. From choosing a product to setting prices, marketing, tracking income, and reflecting on what they learned. Entrepreneurship skills through hands-on experience.",
     shortDescription:
-      "Plan, launch, and run a real micro-business. Entrepreneurship for kids.",
+      "Entrepreneurship for homeschool kids ages 9-14: plan, launch, and run a real micro-business. Real-world skills, real profit.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpoAkIBECpwGmjnbnqcVj",
@@ -838,7 +838,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design thinking challenges that teach kids to identify problems, brainstorm solutions, prototype, test, and iterate. Real-world problem-solving skills applied to everyday life, from improving a family routine to designing a better lunchbox.",
     shortDescription:
-      "Design thinking challenges: identify problems, brainstorm, prototype, and iterate.",
+      "Homeschool design thinking for kids ages 9-14: identify problems, brainstorm, prototype, and iterate. Real-world problem-solving.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpoAkIBECpwGmQAxyKwev",
@@ -861,7 +861,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Activities that teach kids to be critical, informed consumers. Compare prices, read labels, spot marketing tricks, calculate value, and make smart purchasing decisions. Financial literacy meets critical thinking. Skills they'll use for life.",
     shortDescription:
-      "Learn to compare prices, read labels, and make smart purchasing decisions.",
+      "Real-world math for homeschool kids ages 9-14: compare prices, read labels, and make smart purchasing decisions. Financial literacy.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrppAkIBECpwGmFDhNrYWB",
@@ -884,7 +884,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Help your child learn to manage their time and energy effectively. Activities include building weekly schedules, tracking energy levels, prioritising tasks, setting goals, and reflecting on what works. Self-management skills that schools rarely teach.",
     shortDescription:
-      "Build schedules, track energy, and learn self-management. Essential life skills.",
+      "Life skills for homeschool kids ages 9-14: build schedules, track energy, and learn self-management. Essential self-regulation skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrppAkIBECpwGmNrQ7gqOz",
@@ -907,7 +907,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Challenge your child to plan a real travel day from start to finish. Research destinations, compare transport options, calculate budgets, build itineraries, and navigate logistics. Geography, maths, and decision-making wrapped in an exciting real-world project.",
     shortDescription:
-      "Plan a real travel day: research, budget, and build a complete itinerary.",
+      "Homeschool travel activity for kids ages 9-14: plan a real travel day. Research, budget, and build a complete itinerary.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrppAkIBECpwGmSIyPtK3g",
@@ -930,7 +930,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Real-world writing challenges that go beyond essays. Kids write emails, create social media posts, draft persuasive letters, design infographics with captions, and communicate for real audiences. Writing skills that matter in the real world, practised in context.",
     shortDescription:
-      "Real-world writing challenges: emails, letters, persuasive writing, and communication.",
+      "Homeschool writing activities for kids ages 9-14: real-world emails, letters, persuasive writing, and communication projects.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpqAkIBECpwGm8YmLcIp8",
@@ -957,7 +957,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Help kids understand what AI actually is, what it isn't, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy and useful AI interactions, and setting smart rules for AI use at home. The foundation for everything else in the AI series.",
     shortDescription:
-      "What AI actually is, common myths vs facts, and smart rules for responsible use.",
+      "AI literacy for homeschool kids ages 9-14: what AI really is, common myths vs facts, and smart rules for responsible use at home.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq6AkIBECpwGmWfe238bd",
@@ -980,7 +980,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Teach kids how algorithms shape what they see online, and what they don't. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical digital literacy for the attention economy.",
     shortDescription:
-      "Understand how algorithms shape what you see online, and take back control.",
+      "AI literacy for homeschool kids ages 9-14: understand how algorithms shape what you see online and how to take back control.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq7AkIBECpwGmLznrtraX",
@@ -1003,7 +1003,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Explore how AI can be unfair, and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and critical thinking through hands-on investigation.",
     shortDescription:
-      "Investigate AI bias: who gets left out, why, and how to design for fairness.",
+      "AI bias activity for homeschool kids ages 9-14: who AI leaves out, why, and how to design for fairness. Critical thinking, no coding.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq7AkIBECpwGmQJ9tuxrr",
@@ -1026,7 +1026,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design and plan your own AI helper: what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to safety considerations. No coding required; this is about thinking, not programming.",
     shortDescription:
-      "Design an AI helper from concept to ethics. Creative tech thinking, no coding needed.",
+      "AI literacy for homeschool kids ages 9-14: design an AI helper from concept to ethics. Creative tech thinking, no coding needed.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq8AkIBECpwGmJGcSG2lY",
@@ -1049,7 +1049,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Explore creative AI tools responsibly. Kids learn to use AI for writing, art, and brainstorming while understanding copyright, attribution, and the difference between using AI as a tool vs letting it do the thinking. Creativity enhanced by technology, guided by ethics.",
     shortDescription:
-      "Use AI for creative projects responsibly: copyright, attribution, and ethical creation.",
+      "AI literacy for homeschool kids ages 9-14: use AI for creative projects responsibly. Copyright, attribution, and ethical creation.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq8AkIBECpwGmWnjiv4W3",
@@ -1072,7 +1072,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Teach kids to spot manipulated images, videos, and content. Activities cover deepfake detection, image verification, \"pause before sharing\" skills, and how to evaluate whether what they're seeing is real. Essential media literacy for the AI age.",
     shortDescription:
-      "Spot deepfakes and manipulated content. Essential media literacy for the AI age.",
+      "Media literacy for homeschool kids ages 9-14: spot deepfakes and manipulated content. Essential digital literacy for the AI age.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq9AkIBECpwGmFtLGmoqB",
@@ -1095,7 +1095,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. Trust, verify, and improve.",
     shortDescription:
-      "Spot when AI gets things wrong. Verify, fact-check, and build critical trust.",
+      "AI literacy for homeschool kids ages 9-14: spot when AI gets things wrong, verify facts, and build critical trust in tech.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq9AkIBECpwGm1T5rkWKf",
@@ -1118,7 +1118,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Help your child create a personal technology and AI boundaries plan. Activities cover screen time awareness, digital wellbeing, setting healthy limits, managing notifications, and building a balanced relationship with technology. Self-regulation skills for the digital age.",
     shortDescription:
-      "Create a personal tech boundaries plan for digital wellbeing and self-regulation.",
+      "Digital wellbeing for homeschool kids ages 9-14: create a personal tech boundaries plan for self-regulation and healthy screen time.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqAAkIBECpwGmF02VABa4",
@@ -1141,7 +1141,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Map your digital footprint and understand online privacy. Kids discover what personal data they share, how data trails work, smart sharing practices, and how to protect their personal information. Practical privacy education, not paranoia.",
     shortDescription:
-      "Map your digital footprint: understand data, privacy, and smart sharing.",
+      "Digital literacy for homeschool kids ages 9-14: map your digital footprint, understand data privacy, and share smart online.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqAAkIBECpwGmWbsd0ZbP",
@@ -1164,7 +1164,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Teach kids to get better results from AI by writing better prompts. Activities cover prompt structure, asking better questions, healthy AI use (not copying), and learning to guide AI rather than just accepting its first answer. The skill that makes all other AI skills more powerful.",
     shortDescription:
-      "Write better AI prompts: ask better questions and guide AI like a coach.",
+      "AI literacy for homeschool kids ages 9-14: write better AI prompts. Ask better questions and guide AI like a coach.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqBAkIBECpwGmiN5eALl8",
@@ -1191,7 +1191,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan a backyard campout from start to finish: gear lists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.",
     shortDescription:
-      "Plan a backyard campout with real maths: gear, meals, stargazing, and budgets.",
+      "Real-world math for homeschool kids ages 6-14: plan a backyard campout with gear, meals, stargazing, and budgets.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqBAkIBECpwGmhykBV8al",
@@ -1214,7 +1214,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Organise a clothing swap or plan a thrift store haul using real budgeting and value skills. Kids calculate cost-per-wear, compare prices, assess quality, and make smart spending decisions. Financial literacy meets sustainability. Maths with purpose.",
     shortDescription:
-      "Thrift shopping and clothing swap maths: budgets, value, and smart spending.",
+      "Real-world math for homeschool kids ages 8-14: thrift shopping and swap math. Budgets, value, and smart spending.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqCAkIBECpwGm23iixQgo",
@@ -1237,7 +1237,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Audit your household electricity use, read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.",
     shortDescription:
-      "Audit electricity use, calculate costs, and find real ways to save.",
+      "Real-world math for homeschool kids ages 8-14: audit electricity use, calculate costs, and find real ways to save.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqDAkIBECpwGmfW75ZUM3",
@@ -1260,7 +1260,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Navigate a farmers market with a real budget. Compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.",
     shortDescription:
-      "Budget and shop at a farmers market: prices, change, and smart choices.",
+      "Real-world math for homeschool kids ages 6-14: budget and shop at a farmers market. Prices, change, and smart choices.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqDAkIBECpwGmYmZ9kCi1",
@@ -1283,7 +1283,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan, price, and run a garage sale using real-world maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling, all in one hands-on project.",
     shortDescription:
-      "Price, sell, and count change at a real garage sale.",
+      "Real-world math for homeschool kids ages 6-14: price, sell, and count change at a real garage sale. Hands-on money skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqEAkIBECpwGm1TSe6jkj",
@@ -1306,7 +1306,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. Geometry, budgeting, and science growing together in the dirt.",
     shortDescription:
-      "Design a garden with real measurements, spacing, and budgets.",
+      "Real-world math for homeschool kids ages 6-14: design a garden with real measurements, spacing, and budgets.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqEAkIBECpwGmjGJs2vEP",
@@ -1329,7 +1329,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan a party from guest list to budget. Calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real event. Maths that ends with a party.",
     shortDescription:
-      "Plan a party with real budgets, quantities, and timing.",
+      "Real-world math for homeschool kids ages 6-14: plan a party with real budgets, quantities, and timing. Life-skill math.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqFAkIBECpwGmmj18jxPy",
@@ -1352,7 +1352,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan a road trip using real distances, fuel costs, driving times, and travel budgets. Kids calculate mileage, compare routes, estimate fuel expenses, plan stops, and build a complete trip budget. Geography meets maths on the open road.",
     shortDescription:
-      "Calculate distances, fuel costs, and budgets for a real road trip.",
+      "Real-world math for homeschool kids ages 8-14: calculate distances, fuel costs, and budgets for a real road trip.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqFAkIBECpwGmlCHUbfKk",
@@ -1375,7 +1375,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Set a real savings goal and track progress with actual money maths. Kids choose a goal, calculate how long it will take, track deposits, visualise progress, and learn about interest and opportunity cost. Financial literacy that builds real habits.",
     shortDescription:
-      "Set and track a real savings goal: deposits, progress, and money maths.",
+      "Real-world math for homeschool kids ages 6-14: set and track a real savings goal. Deposits, progress, and money math.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqGAkIBECpwGmxshVtOia",
@@ -1398,7 +1398,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player stats. Data literacy and statistics brought to life through the sports they love.",
     shortDescription:
-      "Analyse real sports stats: averages, percentages, and data visualisation.",
+      "Real-world math for homeschool kids ages 8-14: analyse real sports stats. Averages, percentages, and data visualisation.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqHAkIBECpwGm34eVhwIE",
@@ -1425,7 +1425,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "A comprehensive 42-page parent guide to the 10 skills that matter most for your child's future, from emotional intelligence and critical thinking to AI literacy and life skills. Organised into three age bands (0–6, 6–11, 11–14+), each section includes what to develop, what mastery looks like, hands-on activities, a sample week, and a one-page skills-at-a-glance overview.",
     shortDescription:
-      "A 42-page parent guide to the 10 skills that matter most, with activities, milestones, and sample weeks for ages 0-14+.",
+      "42-page homeschool parent guide to the 10 future-ready skills for kids ages 0-14+: activities, milestones, and sample weeks.",
     priceCents: 999,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8tAkIBECpwGmREB9Zrrv",
@@ -1451,7 +1451,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Communication & Writing guides in one download: adventure storytelling, debate, interviews, recipe writing, magazine creation, trail guides, and more. Every activity puts kids in real communication scenarios where they write, speak, and present for real audiences.",
     shortDescription:
-      "All 10 Communication & Writing guides in one download.",
+      "10 homeschool writing & communication activities for kids ages 6-14: real-world projects that build voice, clarity, and confidence.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLo8lAkIBECpwGmNGXYXZif",
@@ -1479,7 +1479,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Entrepreneurship guides in one download: brand building, customer discovery, pitching, pricing, marketing, supply chains, and more. Real business skills through hands-on projects, not textbook exercises.",
     shortDescription:
-      "All 10 Entrepreneurship guides in one download.",
+      "10 entrepreneurship activities for homeschool kids ages 6-14: plan, launch, and pitch real businesses from start to finish.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLo8lAkIBECpwGmV5BcGnyY",
@@ -1507,7 +1507,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "All 10 Planning & Problem-Solving guides in one download: survival planning, emergency prep, decision-making, scavenger hunts, everyday redesign, and more. Kids practise thinking ahead, solving real problems, and making smart decisions.",
     shortDescription:
-      "All 10 Planning & Problem-Solving guides in one download.",
+      "10 problem-solving activities for homeschool kids ages 6-14: real logistics, adventure planning, and critical-thinking projects.",
     priceCents: 4499,
     compareAtPriceCents: 5999,
     stripePriceId: "price_1TLo8lAkIBECpwGmZ54mEf19",
@@ -1535,7 +1535,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "A visual story-mapping project that guides kids through planning and writing their own adventure narrative. They map out characters, settings, plot twists, and story arcs, then write the story. Creative writing through spatial thinking and real storytelling craft.",
     shortDescription:
-      "Plan and write an adventure story using visual story mapping.",
+      "Homeschool creative writing for kids ages 6-14: plan and write an adventure story using visual story mapping. Low-prep, open-ended.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8kAkIBECpwGmic3LxtTU",
@@ -1558,7 +1558,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Research, write, and present a guided tour of your community. Kids choose what matters most about where they live, practise descriptive language, and build presentation skills. Real-world communication through local storytelling.",
     shortDescription:
-      "Create a guided tour of your community.",
+      "Homeschool writing activity for kids ages 6-14: create a guided tour of your community. Builds voice and local storytelling skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8iAkIBECpwGmITWjmOaq",
@@ -1581,7 +1581,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Write clear, step-by-step directions and test whether someone else can follow them. Kids discover how hard it is to communicate clearly, and get better at it through practice and feedback. Precision writing that builds real communication skills.",
     shortDescription:
-      "Write and test clear step-by-step directions.",
+      "Homeschool writing activity for kids ages 6-14: write and test clear step-by-step directions. Low-prep clarity practice.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8iAkIBECpwGm7SXopF3E",
@@ -1604,7 +1604,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "A structured family debate framework that teaches persuasive speaking, active listening, and respectful disagreement. Kids prepare arguments, present their case, and learn to respond thoughtfully. Communication skills the whole family practises together.",
     shortDescription:
-      "Family debate and persuasion skills.",
+      "Homeschool communication activity for kids ages 6-14: family debate night builds persuasion, listening, and respectful disagreement.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8iAkIBECpwGmayHk4VnP",
@@ -1627,7 +1627,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Document family recipes with clear procedural writing and personal stories. Kids interview family members, write step-by-step instructions, and create a keepsake recipe book. Combines procedural writing, narrative storytelling, and family connection.",
     shortDescription:
-      "Create a family recipe book with stories and instructions.",
+      "Homeschool writing project for kids ages 6-14: create a family recipe book with stories and instructions. Voice-building at home.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8hAkIBECpwGmsygtytDp",
@@ -1650,7 +1650,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create a persuasive pitch to sell a product or service at a market stall. Kids practise the art of persuasion: choosing words that connect, reading their audience, and presenting with confidence. Communication meets entrepreneurship in one hands-on activity.",
     shortDescription:
-      "Practise persuasive selling and pitching.",
+      "Homeschool communication activity for kids ages 6-14: practise persuasive selling and pitching. Real-world voice training.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8jAkIBECpwGmy0SJKZ5e",
@@ -1673,7 +1673,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Write and design a mini magazine from scratch: headlines, articles, illustrations, and advertisements. Kids work with multiple text types in one project, learning layout, design, and how different writing styles serve different purposes. A publishing project that builds real writing range.",
     shortDescription:
-      "Write and design a mini magazine.",
+      "Homeschool writing project for kids ages 6-14: write and design a mini magazine. Voice, layout, and creative confidence in one.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8hAkIBECpwGmJs00pcpK",
@@ -1696,7 +1696,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Write reviews of books, movies, products, or experiences. Kids develop critical analysis skills and learn to express opinions clearly with supporting evidence. Opinion writing that builds confidence and teaches kids their perspective matters.",
     shortDescription:
-      "Write reviews and develop opinion writing skills.",
+      "Homeschool writing activity for kids ages 6-14: write reviews and develop opinion writing skills. Voice-first, opinion-first.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8hAkIBECpwGm1sZFuzpq",
@@ -1719,7 +1719,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Interview people in your community: neighbours, shop owners, local heroes. Kids prepare questions, practise active listening, and present the stories they gather. Builds interviewing skills, empathy, and the ability to communicate someone else's story with care.",
     shortDescription:
-      "Interview community members and share their stories.",
+      "Homeschool communication project for kids ages 6-14: interview community members and share their stories. Builds curiosity and confidence.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8hAkIBECpwGmOYHC4JyU",
@@ -1742,7 +1742,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create a written guide to a local trail or walking path using descriptive language and observation skills. Kids walk the trail, take notes, and write a guide that others could follow. Outdoor observation meets descriptive writing in one meaningful project.",
     shortDescription:
-      "Write a guide to a local trail or walking path.",
+      "Homeschool outdoor writing for kids ages 6-14: write a guide to a local trail or walking path. Nature and writing in one project.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8gAkIBECpwGm6tH9yLpC",
@@ -1769,7 +1769,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Build a brand identity from scratch: name, logo, personality, values, and visual style. Kids learn what makes a brand memorable and create their own from the ground up. Creativity meets communication in a project that teaches marketing thinking.",
     shortDescription:
-      "Build a complete brand identity from scratch.",
+      "Entrepreneurship for homeschool kids ages 8-14: build a complete brand identity from scratch. Name, logo, story, and voice.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8jAkIBECpwGmPjNrOxxJ",
@@ -1792,7 +1792,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Analyse real business failures, figure out what went wrong, and learn from other people's mistakes. Kids build resilience, critical thinking, and the understanding that failure is part of the process. Entrepreneurship education that starts with what not to do.",
     shortDescription:
-      "Learn from real business failures.",
+      "Entrepreneurship for homeschool kids ages 8-14: learn from real business failures. Critical thinking and resilience skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8eAkIBECpwGmmPvYNP9t",
@@ -1815,7 +1815,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design and launch a service-based business with a social mission. Kids combine entrepreneurship with empathy, finding a community need and building a business that helps. Social entrepreneurship that teaches planning, service, and impact.",
     shortDescription:
-      "Build a business that helps your community.",
+      "Entrepreneurship for homeschool kids ages 8-14: build a business that helps your community. Real purpose meets real skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8eAkIBECpwGm63W2XKKk",
@@ -1838,7 +1838,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Conduct real customer interviews, gather feedback, and use it to refine a business idea. Kids learn to listen before they build, the most important entrepreneurship skill there is. Research, communication, and critical thinking in one hands-on challenge.",
     shortDescription:
-      "Interview real customers and refine a business idea.",
+      "Entrepreneurship for homeschool kids ages 8-14: interview real customers and refine a business idea. Low-prep, high-impact.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8dAkIBECpwGmCYd8ASMS",
@@ -1861,7 +1861,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Create a compelling investor pitch with financial reasoning, risk assessment, and persuasive presentation. Kids learn to communicate the value of an idea, back it up with numbers, and present with confidence. Business thinking meets public speaking.",
     shortDescription:
-      "Build and deliver an investor pitch.",
+      "Entrepreneurship for homeschool kids ages 8-14: build and deliver an investor pitch. Voice, numbers, and persuasion in one project.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8dAkIBECpwGmXYRRNpcs",
@@ -1884,7 +1884,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design and execute a marketing campaign to reach a real audience. Kids learn about target audiences, messaging, creative assets, and campaign planning. Persuasion, creativity, and communication skills applied to a real marketing project.",
     shortDescription:
-      "Create a marketing campaign from scratch.",
+      "Entrepreneurship for homeschool kids ages 8-14: create a full marketing campaign from scratch. Real-world branding and copywriting.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8cAkIBECpwGmtdAAK9XQ",
@@ -1907,7 +1907,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Test different pricing strategies and discover what makes people willing to pay. Kids experiment with value, perception, and financial decision-making. Critical thinking and financial literacy through hands-on experimentation.",
     shortDescription:
-      "Experiment with pricing strategies.",
+      "Entrepreneurship + math for homeschool kids ages 8-14: experiment with pricing strategies and see what works. Low-prep lab.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8dAkIBECpwGmMliJ75t1",
@@ -1930,7 +1930,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Use design thinking to create a product that solves a real problem. Kids identify needs, brainstorm solutions, build prototypes, test with users, and iterate. The same process real designers and engineers use, scaled for kids.",
     shortDescription:
-      "Design a product that solves a real problem.",
+      "Entrepreneurship for homeschool kids ages 8-14: design a product that solves a real problem. Empathy meets engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8cAkIBECpwGmMmFBb346",
@@ -1953,7 +1953,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Trace a product's journey from raw materials to your front door. Kids investigate supply chains, understand global systems, and think critically about where things come from. Systems thinking, geography, and critical analysis in one investigation project.",
     shortDescription:
-      "Investigate real supply chains from source to consumer.",
+      "Entrepreneurship for homeschool kids ages 8-14: investigate real supply chains from source to consumer. Systems thinking in action.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8dAkIBECpwGmh2DEDTfk",
@@ -1976,7 +1976,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Develop and deliver a high-stakes business pitch, Shark Tank style. Kids create a business concept, build financial projections, design a presentation, and pitch to their family. Public speaking, financial thinking, and entrepreneurship all in one thrilling project.",
     shortDescription:
-      "Pitch a business idea Shark Tank style.",
+      "Entrepreneurship pitch activity for homeschool kids ages 8-14: pitch a business idea Shark Tank style. Voice, numbers, and storytelling.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8dAkIBECpwGmnFj7FlKX",
@@ -2003,7 +2003,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Help kids think clearly under pressure and build confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real-world scenarios. Life skills that build genuine confidence.",
     shortDescription:
-      "Emergency preparedness and clear thinking under pressure.",
+      "Life skills for homeschool kids ages 8-14: emergency preparedness and clear thinking under pressure. Real-world readiness.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmPgLRtzrj",
@@ -2026,7 +2026,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Look at everyday objects and systems with fresh eyes, then redesign them to work better. Kids practise systems thinking, observation, and creative problem-solving by improving the things they use every day. Design thinking applied to real life.",
     shortDescription:
-      "Redesign everyday objects and systems.",
+      "Homeschool design thinking for kids ages 6-14: redesign everyday objects and systems. Low-prep creativity lab.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmMHOmPEht",
@@ -2049,7 +2049,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot, from a leaky tap to a stuck drawer, building practical skills and the confidence to figure things out. Problem-solving that's genuinely useful.",
     shortDescription:
-      "Fix real household problems with logic and resourcefulness.",
+      "Homeschool problem-solving for kids ages 6-14: fix real household problems with logic and resourcefulness. Hands-on life skills.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmoBhiAkgI",
@@ -2072,7 +2072,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Walk your neighbourhood with fresh eyes. Spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. The kind of problem-solving that connects kids to their community.",
     shortDescription:
-      "Spot and solve real neighbourhood problems.",
+      "Homeschool problem-solving for kids ages 6-14: spot and solve real neighbourhood problems. Observation meets action.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmeHYEEPmY",
@@ -2095,7 +2095,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan outdoor expeditions, think through survival scenarios, and build real outdoor planning skills. Kids research terrain, assess risks, plan supplies, and make decisions about shelter, water, and navigation. Adventure planning that builds critical thinking.",
     shortDescription:
-      "Plan outdoor survival adventures and expeditions.",
+      "Homeschool outdoor planning for kids ages 8-14: plan survival adventures and expeditions. Real-world logistics and resilience.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGm3sHKP1zS",
@@ -2118,7 +2118,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Master the art of strategic packing: priorities, weight, space management, and logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep planning challenge that builds executive function skills.",
     shortDescription:
-      "Master strategic packing and planning.",
+      "Homeschool life skill for kids ages 6-14: master strategic packing and planning. Low-prep, travel-ready thinking.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmvgkmKSbD",
@@ -2141,7 +2141,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Design, create, and test your own scavenger hunts for friends and family. Kids plan clues, set challenge levels, think about pacing, and iterate based on feedback. A creative planning project that builds logic, writing, and design thinking.",
     shortDescription:
-      "Design your own scavenger hunts.",
+      "Homeschool activity for kids ages 6-14: design your own scavenger hunts. Planning, creativity, and outdoor play in one project.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmZmbCzTvu",
@@ -2164,7 +2164,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Plan and execute a swap day where kids take on someone else's role or responsibilities. Builds empathy, planning skills, and appreciation for what others do. A unique challenge that changes how kids see the people around them.",
     shortDescription:
-      "Swap roles for a day. Empathy through experience.",
+      "Homeschool empathy activity for kids ages 6-14: swap roles for a day. Empathy through experience, low-prep and memorable.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmkzNQZEYe",
@@ -2187,7 +2187,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Explore hypothetical scenarios, predict outcomes, and plan responses. Kids work through 'what if' situations that stretch their thinking, from everyday dilemmas to wild scenarios. Speculative thinking that builds planning skills and creative problem-solving.",
     shortDescription:
-      "Explore what-if scenarios and plan responses.",
+      "Homeschool critical thinking for kids ages 8-14: explore what-if scenarios and plan responses. Decision-making practice.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmSfnJ5nSM",
@@ -2210,7 +2210,7 @@ export const fallbackProducts: FallbackProduct[] = [
     description:
       "Work through real decision scenarios, weigh options, consider consequences, and justify choices. Kids practise the kind of thoughtful decision-making that builds confidence and independence. Critical thinking applied to everyday life.",
     shortDescription:
-      "Practise real-world decision-making.",
+      "Homeschool life skill for kids ages 6-14: practise real-world decision-making. Build confidence in everyday choices.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8aAkIBECpwGmi9IQ5bOz",
