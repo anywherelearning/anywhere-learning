@@ -57,7 +57,7 @@ function productToRow(product: FallbackProduct): string {
   const link = `${SITE_URL}/shop/${product.slug}`;
   const imageLink = product.imageUrl
     ? `${SITE_URL}${product.imageUrl.startsWith('/') ? product.imageUrl : `/${product.imageUrl}`}`
-    : `${SITE_URL}/og-default.png`;
+    : `${SITE_URL}/og-default.jpg`;
 
   const currentPrice = formatPrice(product.priceCents);
   const salePrice = product.compareAtPriceCents ? currentPrice : '';

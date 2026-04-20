@@ -105,7 +105,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "https://anywherelearning.co/og-default.png",
+          url: "https://anywherelearning.co/og-default.jpg",
           width: 1200,
           height: 630,
           alt: "Anywhere Learning Activity Guides",

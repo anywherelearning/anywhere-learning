@@ -57,7 +57,7 @@ export async function generateMetadata({
         {
           url: resource.heroImage
             ? `https://anywherelearning.co${resource.heroImage}`
-            : 'https://anywherelearning.co/og-default.png',
+            : 'https://anywherelearning.co/og-default.jpg',
           width: 1200,
           height: 630,
           alt: resource.title,
@@ -136,7 +136,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
     dateModified: resource.dateModified || resource.publishedAt,
     image: resource.heroImage
       ? `https://anywherelearning.co${resource.heroImage}`
-      : 'https://anywherelearning.co/og-default.png',
+      : 'https://anywherelearning.co/og-default.jpg',
     keywords: resource.keywords?.join(', '),
     articleBody,
     wordCount: articleBody.split(/\s+/).length,
