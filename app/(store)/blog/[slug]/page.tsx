@@ -60,7 +60,7 @@ export async function generateMetadata({
         {
           url: post.heroImage
             ? `https://anywherelearning.co${post.heroImage}`
-            : 'https://anywherelearning.co/og-default.png',
+            : 'https://anywherelearning.co/og-default.jpg',
           width: 1200,
           height: 630,
           alt: post.title,
@@ -161,7 +161,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.dateModified || post.publishedAt,
     image: post.heroImage
       ? `https://anywherelearning.co${post.heroImage}`
-      : 'https://anywherelearning.co/og-default.png',
+      : 'https://anywherelearning.co/og-default.jpg',
     keywords: post.keywords?.join(', '),
     articleBody,
     wordCount: articleBody.split(/\s+/).length,
@@ -224,7 +224,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     totalTime: `PT${post.readTimeMinutes}M`,
     image: post.heroImage
       ? `https://anywherelearning.co${post.heroImage}`
-      : 'https://anywherelearning.co/og-default.png',
+      : 'https://anywherelearning.co/og-default.jpg',
     step: howToSteps.map((s, i) => ({
       '@type': 'HowToStep',
       position: i + 1,

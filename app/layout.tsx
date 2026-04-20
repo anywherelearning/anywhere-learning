@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
     images: [
       {
-        url: "https://anywherelearning.co/og-default.png",
+        url: "https://anywherelearning.co/og-default.jpg",
         width: 1200,
         height: 630,
         alt: "Anywhere Learning | Homeschool Activity Guides by Amelie",

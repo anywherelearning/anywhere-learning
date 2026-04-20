@@ -81,7 +81,7 @@ export async function generateMetadata({
       url: `https://anywherelearning.co/shop/${product.slug}`,
       images: product.imageUrl
         ? [{ url: product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}` }]
-        : [{ url: 'https://anywherelearning.co/og-default.png', width: 1200, height: 630 }],
+        : [{ url: 'https://anywherelearning.co/og-default.jpg', width: 1200, height: 630 }],
     },
   };
 }
@@ -260,7 +260,7 @@ export default async function ProductPage({
     description: product.description,
     image: product.imageUrl
       ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}`)
-      : "https://anywherelearning.co/og-default.png",
+      : "https://anywherelearning.co/og-default.jpg",
     sku: product.slug,
     ...(product.isBundle && {
       productGroupID: product.slug,
