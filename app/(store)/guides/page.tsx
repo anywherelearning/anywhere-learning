@@ -10,14 +10,14 @@ const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitInte
 export const metadata: Metadata = {
   title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning',
   description:
-    'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for homeschool and worldschool families.',
+    'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for families who want real-world learning to fit their life.',
   alternates: {
     canonical: 'https://anywherelearning.co/guides',
   },
   openGraph: {
     title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning | Anywhere Learning',
     description:
-      'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for homeschool and worldschool families.',
+      'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for families who want real-world learning to fit their life.',
     url: 'https://anywherelearning.co/guides',
     type: 'website',
     images: [
@@ -81,8 +81,9 @@ export default function ResourcesPage() {
               Everything You Need to Know
             </h1>
             <p className="text-lg md:text-xl text-[#8b7355] max-w-2xl leading-relaxed">
-              In-depth guides on the topics that matter most to homeschool and
-              worldschool families, backed by experience and research.
+              In-depth guides on the topics that matter most to families who
+              learn through real life &mdash; at home, on the road, or after
+              the school day ends.
             </p>
           </ScrollReveal>
         </div>
