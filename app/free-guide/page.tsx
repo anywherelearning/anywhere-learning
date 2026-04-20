@@ -11,14 +11,14 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: '7 Days of Real-World Learning \u2014 Free Guide',
   description:
-    'A free, low-prep activity guide for homeschool and worldschool families. One activity a day. A few hours each. Zero worksheets.',
+    'A free, low-prep activity guide for families who love hands-on, real-world learning. One activity a day. A few hours each. Zero worksheets.',
   alternates: {
     canonical: 'https://anywherelearning.co/free-guide',
   },
   openGraph: {
     title: '7 Days of Real-World Learning | Free Guide',
     description:
-      'A free, low-prep activity guide for homeschool and worldschool families. One activity a day. A few hours each. Zero worksheets.',
+      'A free, low-prep activity guide for families who love hands-on, real-world learning. One activity a day. A few hours each. Zero worksheets.',
     url: 'https://anywherelearning.co/free-guide',
     type: 'website',
     images: [
@@ -37,7 +37,7 @@ const freeGuideLd = {
   '@type': 'Product',
   name: '7 Days of Real-World Learning',
   description:
-    'A free, low-prep activity guide with 7 real-world learning activities for homeschool and worldschool families \u2014 outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning. Ages 6\u201314.',
+    'A free, low-prep activity guide with 7 hands-on activities for families \u2014 outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning. Ages 6\u201314.',
   image: 'https://anywherelearning.co/images/free-guide-og.jpg',
   url: 'https://anywherelearning.co/free-guide',
   brand: {
