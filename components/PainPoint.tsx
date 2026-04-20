@@ -4,7 +4,7 @@ const thoughts = [
     follow: "Planning the day eats more energy than living it.",
   },
   {
-    thought: "The curriculum's been open twice.",
+    thought: "There's a box of craft stuff we never opened.",
     follow: "You bought it. You meant to. Life kept moving.",
   },
   {
@@ -22,7 +22,7 @@ export default function PainPoint() {
             Does this sound familiar?
           </h2>
           <p className="text-lg text-gray-600 mb-10">
-            You&apos;re not alone. Most homeschool parents we talk to say the same things.
+            You&apos;re not alone. Most parents we talk to say the same things.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function PainPoint() {
         </div>
 
         <p className="mx-auto mt-10 max-w-xl text-center text-lg md:text-xl font-medium text-forest">
-          You don&apos;t need a curriculum. You just need one activity a day for a week.
+          You don&apos;t need more stuff. You just need one real activity a day for a week.
         </p>
       </div>
     </section>
