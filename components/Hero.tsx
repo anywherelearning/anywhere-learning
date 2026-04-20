@@ -51,7 +51,7 @@ export default function Hero() {
 
             <p className="mx-auto max-w-lg text-lg md:text-xl text-gray-600 lg:mx-0 leading-relaxed">
               One activity a day. A few hours each. Zero worksheets. A free
-              guide for homeschool and worldschool families.
+              guide for families who love hands-on, real-world learning.
             </p>
 
             <div id="hero-form" className="mt-6 scroll-mt-20">
