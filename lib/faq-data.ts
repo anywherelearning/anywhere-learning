@@ -85,6 +85,11 @@ export const homeschoolFaqItems: FAQItem[] = [
     answer:
       'Beautifully. These activities are child-led, curiosity-driven, and rooted in real-world experiences \u2014 which fits naturally alongside Charlotte Mason, Montessori, unschooling, eclectic, and worldschool philosophies. No curriculum alignment needed.',
   },
+  {
+    question: 'My kids are in regular school. Can I still use these?',
+    answer:
+      'Absolutely \u2014 many families do. These work beautifully for after-school, weekends, summer break, winter break, snow days, and long travel days. There\u2019s no curriculum to follow and no catching up to worry about. Just open a guide when you have an afternoon together and go. Reusable year after year, so one purchase carries you across summers.',
+  },
 ];
 
 // ─── Purchasing & Account ────────────────────────────────────────────

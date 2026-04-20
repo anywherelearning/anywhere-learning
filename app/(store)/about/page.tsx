@@ -8,7 +8,7 @@ const BlogExitIntentPopup = dynamic(() => import("@/components/blog/BlogExitInte
 export const metadata: Metadata = {
   title: "About",
   description:
-    "I'm Amelie, a teacher with 15 years in the classroom, a B.Ed, and a Master's in Education. I left to give my own kids what the school system couldn't. Anywhere Learning is what I built along the way.",
+    "I'm Amelie \u2014 former teacher (B.Ed, M.Ed, 15 years) and mom of two. Anywhere Learning is the real-world activity guides I built for families who homeschool, worldschool, or just want meaningful time together.",
   alternates: {
     canonical: "https://anywherelearning.co/about",
   },
@@ -151,8 +151,9 @@ export default function AboutPage() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
               Anywhere Learning didn&apos;t start as a business. It started as a
-              question I couldn&apos;t stop asking: why does the system I spent 15 years
-              working in fail so many of the kids sitting right in front of me?
+              question I couldn&apos;t stop asking: what would it look like if
+              learning fit into the way families actually live &mdash; at home,
+              on the road, on a Saturday morning, on a summer afternoon?
             </p>
           </div>
         </div>
@@ -166,36 +167,31 @@ export default function AboutPage() {
           <div className="space-y-5 text-lg leading-relaxed text-cream/80">
             <p>
               I loved teaching. I loved watching kids light up when something
-              clicked. But the longer I spent in the classroom, the harder it
-              became to ignore what wasn&apos;t working.
-            </p>
-            <p>
-              The system is built on a single assumption: that every child in a
-              room should learn the same thing, in the same way, at the same
-              pace. But that&apos;s not how kids work. The curious ones get bored
-              waiting. The ones who need more time get left behind. And
-              somewhere along the way, kids who walked in loving to learn start
-              saying they hate school.
+              clicked. After 15 years in the classroom, I learned something
+              teachers know but don&apos;t always say out loud: no single
+              setting can teach a child everything they need. A classroom does
+              what it&apos;s designed to do. Home does what only home can do.
+              The world does the rest.
             </p>
             <p className="font-medium text-xl md:text-2xl font-display text-gold leading-snug">
-              I watched it happen. Year after year. And I knew I didn&apos;t want
-              that for my own kids.
+              The thing I kept coming back to was the gap &mdash; the skills
+              kids need most that don&apos;t fit neatly into any lesson plan.
             </p>
             <p>
-              What bothered me most wasn&apos;t the reading or the maths. Schools
-              can teach those. It was everything they couldn&apos;t teach. How to
-              think critically. How to solve a real problem, not a textbook one.
-              How to budget, cook a meal, navigate a city, have a conversation
-              with a stranger, or figure something out when nobody hands you the
-              answer.
+              How to think critically. How to solve a real problem, not a
+              textbook one. How to budget, cook a meal, navigate a city, have a
+              conversation with a stranger, or figure something out when nobody
+              hands you the answer. These are the things kids learn by doing
+              &mdash; by being let loose on real life, with a parent alongside
+              them.
             </p>
             <p>
               The world is changing fast. AI is reshaping entire industries.
-              The jobs our kids will do might not exist yet. And the school
-              system is still running on a model designed for a world that
-              doesn&apos;t exist anymore, teaching compliance when what kids
-              actually need is curiosity, adaptability, and the confidence to
-              figure things out on their own.
+              The jobs our kids will do might not exist yet. Whatever school
+              looks like for your family &mdash; full-time homeschool, part-time
+              classroom, or something in between &mdash; the real-world stuff
+              has to happen somewhere. That&apos;s the part I wanted to make
+              easier.
             </p>
           </div>
         </div>
@@ -213,9 +209,10 @@ export default function AboutPage() {
               time I was homeschooling them. No classroom. No system. Just us.
             </p>
             <p className="font-medium text-xl md:text-2xl font-display text-forest leading-snug">
-              That trip changed everything. I saw what my kids had been
-              missing inside the system, and how endless their possibilities
-              were outside of it.
+              That trip changed everything. I saw how much learning lives
+              outside any classroom &mdash; in markets, train stations,
+              forests, conversations with strangers &mdash; and how ready my
+              kids were to soak it up.
             </p>
             <p>
               It helped me make the decision I&apos;d been circling for years:

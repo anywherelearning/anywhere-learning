@@ -235,7 +235,7 @@ export default function HomePage() {
             <div className="max-w-xl lg:max-w-2xl">
               <div className="hero-stagger">
                 <p className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-5">
-                  For Homeschool &amp; Worldschool Families
+                  For Homeschool, Worldschool &amp; After-School Families
                 </p>
                 <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.05] mb-6">
                   <span className="text-forest heading-underline">Meaningful Learning</span>
@@ -284,7 +284,7 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
             <ScrollReveal>
               <p className="text-sm sm:text-base font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center mb-8">
-                Every homeschool parent&apos;s week
+                Every parent who wants more than screens
               </p>
             </ScrollReveal>
             <div className="grid sm:grid-cols-3 gap-8 md:gap-12 text-center sm:text-left">
@@ -545,9 +545,10 @@ export default function HomePage() {
                     <p>
                       I spent 15 years as a teacher, and I loved watching kids
                       light up when something clicked. But the longer I was in
-                      the classroom, the harder it became to ignore what
-                      wasn&apos;t working, kids who walked in loving to
-                      learn were slowly checking out.
+                      the classroom, the harder it became to see how much of
+                      real-world learning happens <em>outside</em> a classroom
+                      &mdash; and how hard it is for families to make room
+                      for it.
                     </p>
                     <p>
                       When it came time to choose for my own kids, I chose
@@ -558,7 +559,7 @@ export default function HomePage() {
                     </p>
                     <p>
                       I left the classroom for good and started creating the
-                      activities I wished the system offered, hands-on,
+                      activities I wished more parents had, hands-on,
                       real-world, low prep. Things that feel like play but
                       build real skills.
                     </p>

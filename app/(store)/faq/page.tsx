@@ -72,7 +72,7 @@ export default function FAQPage() {
             {/* Homeschooling & Worldschooling */}
             <div className="mb-12">
               <h2 className="text-sm font-semibold text-gold uppercase tracking-widest mb-4">
-                Homeschooling &amp; Worldschooling
+                Homeschool, Worldschool &amp; After-School
               </h2>
               <FAQSection items={homeschoolFaqItems} />
             </div>
