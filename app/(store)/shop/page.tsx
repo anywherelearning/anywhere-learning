@@ -339,8 +339,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
                 <br className="hidden sm:block" /> for Real-World Learning
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-lg text-[#8b7355]">
-                Low-prep activities for homeschool and worldschool families.
-                Open on any device, use year after year.
+                Low-prep activities built for real life &mdash; at home, on the
+                road, after school, or over the summer. Open on any device, use
+                year after year.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center">
                 <Link

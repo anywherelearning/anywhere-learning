@@ -140,7 +140,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </h1>
             <p className="text-lg md:text-xl text-[#8b7355] max-w-2xl leading-relaxed">
               Practical inspiration, honest encouragement, and real-world
-              learning ideas, from one homeschool family to another.
+              learning ideas &mdash; from one family to another, whether you
+              homeschool or just want meaningful time together.
             </p>
           </ScrollReveal>
         </div>
