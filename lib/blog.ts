@@ -49,6 +49,8 @@ export interface BlogPost {
   recommendedBundle?: string;
   /** Resource pillar this post belongs to (for cross-linking) */
   pillarSlug?: string;
+  /** Hide from listings, sitemap, and related posts. Still accessible by direct URL for preview. */
+  draft?: boolean;
 }
 
 export const blogCategories: Record<BlogCategory, { label: string; color: string }> = {
@@ -3623,14 +3625,222 @@ const posts: BlogPost[] = [
     recommendedProduct: 'healthy-tech-boundaries',
     recommendedBundle: 'ai-digital-bundle',
   },
+
+  // ─── Screen Time Cluster #2: Listicle ───
+  {
+    slug: 'screen-free-activities-kids',
+    title: '30 Screen-Free Activities That Actually Work (Ages 6\u201314)',
+    excerpt: 'A menu of 30 low-prep, screen-free activities for kids ages 6\u201314 \u2014 creative, outdoor, and quiet options kids can pick from without you having to run the day.',
+    hook: 'The best screen-free activities aren\u2019t rescues from boredom. They\u2019re the default your kid turns to before the boredom kicks in.',
+    category: 'ai-digital-literacy',
+    publishedAt: '2026-04-21',
+    dateModified: '2026-04-21',
+    draft: true,
+    keywords: [
+      'screen free activities for kids',
+      'things to do besides screens',
+      'screen free boredom busters',
+      'screen free activities for tweens',
+      'low prep activities for kids',
+      'kids activities no screens',
+      'bored kids activities ages 6 to 14',
+      'screen free summer activities',
+    ],
+    readTimeMinutes: 11,
+    author: amelie,
+    heroImage: '/images/screen-free-hero.jpeg',
+    heroImageAlt: 'Julia at a dining table deep in a lego build, surrounded by piles of pieces, completely absorbed in the project \u2014 no screen in sight',
+    heroImagePosition: 'center 15%',
+    content: [
+      { type: 'summary', text: 'Screen-free activities for kids ages 6\u201314 work best when they tap real curiosity and require little adult setup. The 30 ideas below are organized into creative/maker, outdoor/physical, and quiet/thinking categories \u2014 all low-prep, most solo-friendly, and designed to become repeatable habits, not one-off rescues from boredom.' },
+      { type: 'paragraph', text: 'The problem with most screen-free activity lists is that they read like a chore. "Help with laundry." "Organize your drawers." Kids see right through it. Screen-free doesn\u2019t have to feel like a punishment or a consolation prize \u2014 it should be a genuinely appealing alternative.' },
+      { type: 'paragraph', text: 'The trick isn\u2019t to have one good idea ready for a meltdown moment. It\u2019s to have a deep enough bench of options that your kid starts picking screen-free things on their own, because they\u2019re actually fun, not because you told them to put the iPad down.' },
+      { type: 'paragraph', text: 'Below are 30 activities that actually work for kids ages 6\u201314. None of them need a Pinterest-perfect setup. Most of them need nothing at all. Treat this as a menu your kids can pick from, not a checklist you have to run.' },
+      { type: 'paragraph', text: 'This list pairs with our [honest guide on screen time and phones](/blog/how-much-screen-time-kids) \u2014 the real goal isn\u2019t fewer screens, it\u2019s kids who can set down a screen because they have something better to do.' },
+      { type: 'heading', level: 2, text: 'Creative and maker activities' },
+      { type: 'paragraph', text: 'These activities turn your kid into the author of something \u2014 not just the audience. Messy is fine. Imperfect is better.' },
+      { type: 'heading', level: 3, text: '1. Build a cardboard machine' },
+      { type: 'paragraph', text: 'Give them a pile of cardboard, tape, and scissors and ask them to build a contraption \u2014 a pinball machine, a maze for marbles, a claw arcade, a working robot arm. The best ones take a full afternoon and end up on the kitchen counter for a week.' },
+      { type: 'heading', level: 3, text: '2. Write and illustrate their own comic' },
+      { type: 'paragraph', text: 'Blank paper, pencil, done. Bonus if they staple the finished comic together and "publish" it for the family. For tweens, suggest they build a continuing series with recurring characters.' },
+      { type: 'heading', level: 3, text: '3. Cook a full meal from a recipe they choose' },
+      { type: 'paragraph', text: 'Not helping \u2014 running the whole thing. Reading the recipe, measuring, cooking, plating. This is also real [kitchen math and budgeting practice](/blog/kitchen-learning-lab) disguised as dinner.' },
+      { type: 'heading', level: 3, text: '4. Sew or stitch something tiny' },
+      { type: 'paragraph', text: 'A pouch, a patch for a backpack, a felt keychain, a small stuffed animal. A needle, thread, and a YouTube-free demonstration from you is enough to get them started. The first one will look terrible. The third one won\u2019t.' },
+      { type: 'heading', level: 3, text: '5. Build a marble run from household stuff' },
+      { type: 'paragraph', text: 'Paper towel rolls, cardboard, tape, marbles. They\u2019ll iterate through ten bad versions before landing on one that works. That\u2019s the whole point \u2014 failure, redesign, win.' },
+      { type: 'heading', level: 3, text: '6. Start a pretend (or real) business' },
+      { type: 'paragraph', text: 'A lemonade stand, a garage sale, a dog-walking service, a custom bracelet shop at the kitchen table \u2014 or walk them through a full [micro-business project](/shop/micro-business) if they want the whole playbook. Making and selling a thing, even for $4, builds more real skills than most worksheets ever will.' },
+      { type: 'heading', level: 3, text: '7. Paper plane design championship' },
+      { type: 'paragraph', text: 'Design three different planes. Measure how far each one flies. Modify the design, test again, log results. Quiet engineering with one piece of paper.' },
+      { type: 'heading', level: 3, text: '8. Origami or paper crafts' },
+      { type: 'paragraph', text: 'A book from the library or a printed guide is enough. Cranes, jumping frogs, boats, dragons. Hands-busy, mind-quiet, no cleanup.' },
+      { type: 'heading', level: 3, text: '9. Draw, paint, or sketch something real' },
+      { type: 'paragraph', text: 'Not from a template, not from a screen. A pet, a plant, a scene out the window, a still life of what\u2019s on the kitchen counter. Real observation beats another app-based "drawing tutorial."' },
+      { type: 'heading', level: 3, text: '10. Build a bird feeder, bug hotel, or creature habitat' },
+      { type: 'paragraph', text: 'A plastic bottle, some twine, a handful of seed or a stack of sticks \u2014 or a full [creature habitat design project](/shop/creature-habitat) for kids who want to build a home for a specific animal. Hang it outside. Check it every day. This is nature science, engineering, and patience all at once.' },
+      { type: 'product-callout', slug: 'rube-goldberg-machine', pinned: true },
+      { type: 'heading', level: 2, text: 'Outdoor and physical activities' },
+      { type: 'paragraph', text: 'The fastest reset for almost any screen-stuck kid is outside air. These work in a backyard, a park, or a sidewalk in front of your house.' },
+      { type: 'heading', level: 3, text: '11. Build a shelter or fort' },
+      { type: 'paragraph', text: 'Inside with blankets, outside with sticks and tarps. A fort is half the fun of being a kid. Let it stay up for days.' },
+      { type: 'heading', level: 3, text: '12. Nature scavenger hunt or outdoor mission' },
+      { type: 'paragraph', text: 'A printed list, or a list they write themselves \u2014 or grab a set of pre-built [outdoor missions](/shop/outdoor-learning-missions) with clear objectives and reflection prompts. Find five leaves of different shapes. Something rough, something smooth, something yellow, something alive. Works in any backyard, park, or trail.' },
+      { type: 'heading', level: 3, text: '13. DIY obstacle course' },
+      { type: 'paragraph', text: 'Chairs, pillows, chalk lines, hula hoops, a timer. Let them design it, test it, and time themselves against their own best run. Physical problem-solving that also exhausts them.' },
+      { type: 'heading', level: 3, text: '14. Take a "themed" walk' },
+      { type: 'paragraph', text: 'Find ten things that are yellow. Ten things older than you. Ten shapes that look like letters \u2014 or use a set of structured [nature walk task cards](/shop/nature-walk-task-cards) to rotate a new theme every time out. A normal walk becomes a hunt, and suddenly your 10-year-old notices the world again.' },
+      { type: 'heading', level: 3, text: '15. Climb a (safe) tree' },
+      { type: 'paragraph', text: 'With permission and a spotter. Climbing builds balance, confidence, and risk assessment in ways no app can simulate. The view from the branch is half the reward.' },
+      { type: 'heading', level: 3, text: '16. Bike or scoot with a mission' },
+      { type: 'paragraph', text: 'Not just "go ride your bike," but "ride to the corner store and buy a single apple." A destination and a small task transforms transit into an adventure.' },
+      { type: 'heading', level: 3, text: '17. Invent a sport' },
+      { type: 'paragraph', text: 'Rules, scoring system, equipment made from whatever\u2019s around. Kids are wildly better at this than adults give them credit for \u2014 and if they want a structured push, the [Invent a Sport project](/shop/invent-a-sport) gives them the whole framework. Let them make the rules.' },
+      { type: 'heading', level: 3, text: '18. Chalk the driveway' },
+      { type: 'paragraph', text: 'Not a hopscotch grid \u2014 a full mural, a giant map, a time capsule message, a rocket ship they can stand inside. Washes away in the next rain, which is part of the charm.' },
+      { type: 'heading', level: 3, text: '19. Dig for earthworms or find bugs' },
+      { type: 'paragraph', text: 'A shovel, a magnifying glass, a curious eye. Identify what you find. Put it back. This is real [field science for kids](/blog/nature-walks-science) that costs nothing.' },
+      { type: 'heading', level: 3, text: '20. Practice a physical skill' },
+      { type: 'paragraph', text: 'Swimming, skating, skateboarding, handstands, cartwheels, jumping rope, shooting hoops. Twenty minutes a day for a week and they\u2019ll be visibly better \u2014 which is a feeling no scroll-feed can replicate.' },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges', pinned: true },
+      { type: 'heading', level: 2, text: 'Quiet, slow, and thinking activities' },
+      { type: 'paragraph', text: 'Not every screen-free moment needs to be high-energy. Some of the most important ones are slow on purpose.' },
+      { type: 'heading', level: 3, text: '21. Read a chapter book or graphic novel' },
+      { type: 'paragraph', text: 'The oldest screen-free activity and still the best. A library card solves a surprising amount of your parenting challenges. Let them pick what they want, even if it\u2019s not "edifying."' },
+      { type: 'heading', level: 3, text: '22. Keep a journal or sketchbook' },
+      { type: 'paragraph', text: 'Drawings, lists, story fragments, questions they want answered, rants, observations. No adult should ever read it without permission. It\u2019s theirs.' },
+      { type: 'heading', level: 3, text: '23. Solve a slow puzzle over several days' },
+      { type: 'paragraph', text: 'A 500- or 1,000-piece puzzle on a side table, worked on a bit at a time. Something to come back to. A reason to sit next to another human for a few minutes at a time.' },
+      { type: 'heading', level: 3, text: '24. Learn a card game, magic trick, or juggling' },
+      { type: 'paragraph', text: 'Spite and Malice, solitaire, a coin trick, three-ball juggling. A skill they can pull out at the next family dinner is worth more than a hundred passive scrolls.' },
+      { type: 'heading', level: 3, text: '25. Write a letter to a grandparent or pen pal' },
+      { type: 'paragraph', text: 'By hand, on paper, in an envelope, with a stamp. The response that comes back in the mail is a bigger thrill than any notification. Builds a real human tie no algorithm can compete with.' },
+      { type: 'heading', level: 3, text: '26. Family game night (or design their own)' },
+      { type: 'paragraph', text: 'Not a screen with the family around it. An actual game on a table. Strategy games (Catan, Ticket to Ride), word games, or even a deck of cards. Repeat weekly until it\u2019s a ritual. For kids who want to design their own game from scratch, try the [Board Game Studio project](/shop/board-game-studio).' },
+      { type: 'heading', level: 3, text: '27. Build a reading fort and disappear' },
+      { type: 'paragraph', text: 'Pillows, blankets, a flashlight, a book. The solo retreat of a reading fort is one of the only places in a modern kid\u2019s life that\u2019s fully offline. Protect it.' },
+      { type: 'heading', level: 3, text: '28. Audiobook plus drawing' },
+      { type: 'paragraph', text: 'An audiobook while they doodle, color, or draw is one of the few things that keeps kids content for two hours. It\u2019s also secretly a literacy activity dressed up as downtime.' },
+      { type: 'heading', level: 3, text: '29. Start a garden or tend a windowsill seed' },
+      { type: 'paragraph', text: 'A pot of soil, a seed, a sunny windowsill. Or a full garden bed outside. The slowness is the point \u2014 watching something grow over weeks teaches patience in a way nothing else can.' },
+      { type: 'heading', level: 3, text: '30. Daydream on purpose' },
+      { type: 'paragraph', text: 'Lie on the floor. Stare at the ceiling. Watch clouds. Sit on the porch. The [boredom-is-actually-good research](/blog/just-let-them-play) is real \u2014 unstructured nothing is where original ideas come from. Protect it fiercely.' },
+      { type: 'pull-quote', text: 'The best screen-free activities aren\u2019t rescues from boredom. They\u2019re the default your kid turns to before the boredom kicks in.' },
+      { type: 'heading', level: 2, text: 'When nothing on the list works' },
+      { type: 'paragraph', text: 'You will have days when you suggest ten things in a row and your kid hates all of them. That\u2019s not a failure of the list. That\u2019s a kid who needs to be bored.' },
+      { type: 'paragraph', text: 'Boredom is not a crisis. It\u2019s the doorway to self-directed play, the space where kids invent their own ideas instead of consuming someone else\u2019s. You don\u2019t have to rescue them from it. Hand them this list, tell them to pick or not pick, and walk away.' },
+      { type: 'paragraph', text: 'The long game isn\u2019t "entertain my kid without a screen." It\u2019s "raise a kid who knows what to do with themselves when nothing is scheduled." That skill pays compounding dividends for the rest of their life.' },
+      { type: 'tip', title: 'Print the list', text: 'Print this list and tape it to the fridge, or paste it inside a kitchen cabinet. Next time you hear "I\u2019m bored," point at the fridge instead of answering. Nine times out of ten, the problem solves itself.' },
+      { type: 'bundle-callout', slug: 'creativity-mega-bundle', pinned: true },
+      { type: 'cta', text: 'Want more real-world activities that build curiosity and independence \u2014 no curriculum, no worksheets? Our free guide gives you a starter pack your kids can try this week.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'faq', items: [
+        { question: 'What are the best screen-free activities for 10-year-olds?', answer: 'Ten-year-olds hit a sweet spot for screen-free activities that involve real skills \u2014 building cardboard machines, cooking full meals, writing and illustrating their own comics, sewing small projects, or starting mini businesses. They\u2019re old enough to work independently for an hour at a stretch and young enough to still love making messy, imperfect things.' },
+        { question: 'How do I keep my kids off screens during the summer?', answer: 'A published daily or weekly schedule helps more than willpower. Protect a no-screen window every day (mornings, before dinner, or all outdoor time), keep a visible list of screen-free activities on the fridge, and join in yourself for the first week to build momentum. Once the rhythm is established, kids pick screen-free options more often on their own.' },
+        { question: 'What can kids do besides screens when they say they\u2019re bored?', answer: 'Hand them a list of options and walk away. Scavenger hunts, cardboard-box builds, drawing from real life, reading in a fort, baking from a recipe, and inventing their own games all work. The key is that boredom itself isn\u2019t a problem to solve \u2014 it\u2019s the space where kids generate their own ideas.' },
+        { question: 'How do I make screen-free time feel fun, not like punishment?', answer: 'Frame screen-free time as a chance to do something, not the absence of screens. Offer a menu of options instead of one suggestion. Join in for the first few activities. And avoid tying screen-free to consequences \u2014 that turns any alternative into a second-class experience.' },
+        { question: 'What\u2019s a good screen-free daily routine for kids ages 6\u201314?', answer: 'A workable structure: screen-free mornings (before 10am), screens used only for a specific purpose until afternoon, outdoor time every day regardless of weather, and no screens in bedrooms at night. The specific schedule matters less than having defined windows \u2014 kids thrive on predictability and adjust quickly once the structure is in place.' },
+      ]},
+    ],
+    relatedSlugs: ['how-much-screen-time-kids', 'just-let-them-play', 'outdoor-stem-challenges', 'nature-walks-science'],
+    recommendedProduct: 'rube-goldberg-machine',
+    recommendedBundle: 'creativity-mega-bundle',
+  },
+
+  // ─── Screen Time Cluster #3: Pain-Point / Permission ───
+  {
+    slug: 'wrecked-mom-permission-slip',
+    title: 'What to Do When You Need Your Kid Occupied and You\u2019re Wrecked',
+    excerpt: 'A permission slip for the days you have nothing left \u2014 what to actually feed them, what to let them do, and the one word that protects your tank.',
+    hook: 'On wrecked days, the honest answer isn\u2019t a Pinterest-perfect craft project. It\u2019s toast for dinner and the bath door locked.',
+    category: 'ai-digital-literacy',
+    publishedAt: '2026-04-21',
+    dateModified: '2026-04-21',
+    draft: true,
+    keywords: [
+      'exhausted mom',
+      'homeschool mom burnout',
+      'what to do when you\u2019re tired as a mom',
+      'overwhelmed parent',
+      'mom survival day',
+      'low energy parenting',
+      'what to feed kids when too tired to cook',
+      'permission to rest mom',
+    ],
+    readTimeMinutes: 7,
+    author: amelie,
+    heroImageAlt: 'A mug of tea, an open book, and bare feet up on a couch \u2014 the picture of a mom finally closing the tab',
+    content: [
+      { type: 'summary', text: 'When you\u2019re exhausted and your kid still needs something to do, the honest answer isn\u2019t a Pinterest-perfect craft project \u2014 it\u2019s toast-for-dinner, screens-without-guilt, and the bath door locked. Giving yourself permission to coast on wrecked days is what keeps you in the game for the long ones. This is the permission slip for the day you have nothing left.' },
+      { type: 'paragraph', text: 'You know the moment.' },
+      { type: 'paragraph', text: 'It\u2019s 4pm. You\u2019ve been "on" since 6am. Something needs to make dinner happen. Your kid is asking what\u2019s next. And the tank is empty. Not low \u2014 empty. You know you should be doing something meaningful and enriching and hands-on, and every molecule in your body is objecting.' },
+      { type: 'paragraph', text: 'This is the post for that day. Not the good-energy day when you\u2019re baking sourdough and going outside and reading aloud. The day when you have nothing left.' },
+      { type: 'paragraph', text: 'I\u2019m going to tell you what we actually do. None of it is impressive. All of it works.' },
+      { type: 'heading', level: 2, text: 'The first permission: take care of you' },
+      { type: 'paragraph', text: 'Before we get to what your kid should be doing, we have to deal with what YOU are doing. Because on a wrecked day, the problem isn\u2019t usually that your kid is under-engaged. It\u2019s that you\u2019ve been over-giving.' },
+      { type: 'paragraph', text: 'So here\u2019s the rule I give myself: on a wrecked day, I get to do what I want at the time. A bath. A puzzle at the table. A walk by myself. A hike if I can swing it. Forty minutes with my book and the door closed.' },
+      { type: 'paragraph', text: 'None of that is selfish. It\u2019s maintenance. You cannot pour from an empty cup and nobody is better served by a parent running on fumes.' },
+      { type: 'heading', level: 2, text: 'Toast for dinner is fine' },
+      { type: 'paragraph', text: 'The other permission I need reminding of: on wrecked days, dinner is whatever gets eaten. Toast. Cereal. Crackers and cheese and apple slices. A smoothie. A bowl of leftover anything.' },
+      { type: 'paragraph', text: 'Your kid has nutritional needs. They do not have a need for a sit-down, cooked-from-scratch meal every single night. A parent who sits at the table with them while they eat cereal matters infinitely more than whether there\u2019s a vegetable on the plate.' },
+      { type: 'paragraph', text: 'Tomorrow you can cook. Tonight you can eat toast.' },
+      { type: 'heading', level: 2, text: 'The word that protects your tank: no' },
+      { type: 'paragraph', text: 'The biggest thing that\u2019s changed for me on wrecked days is getting better at saying no \u2014 without apology, without explanation, without taking on one more bit of mental load.' },
+      { type: 'paragraph', text: 'Somebody texts to host something. No.' },
+      { type: 'paragraph', text: 'A half-baked plan lands in your inbox that needs you to figure out the logistics. Not today.' },
+      { type: 'paragraph', text: 'A neighbor wants your kid over, but it means a pickup you\u2019ll have to do at 8pm when you\u2019re already done. Not today.' },
+      { type: 'paragraph', text: 'Saying yes to anything extra on a day you\u2019re already running on empty is how you end up another week down. You don\u2019t owe anyone a long explanation. "Can\u2019t tonight, another time" is a full sentence.' },
+      { type: 'heading', level: 2, text: 'Screens aren\u2019t the villain on these days' },
+      { type: 'paragraph', text: 'Now \u2014 about your kid.' },
+      { type: 'paragraph', text: 'On a wrecked day, the single most important thing I can tell you is: don\u2019t feel guilty about screens.' },
+      { type: 'paragraph', text: 'We\u2019ve got a whole [honest take on screen time](/blog/how-much-screen-time-kids) and a family approach that\u2019s not about banning. On most days, we lean toward creating over consuming. On wrecked days? The kids watch a movie. They play a game. And I don\u2019t apologize for it.' },
+      { type: 'paragraph', text: 'The long-game screen time philosophy works because it bends on hard days. The parent who holds the line perfectly every single day isn\u2019t being rigorous \u2014 they\u2019re heading for a bigger crash later. Flex when you need to flex.' },
+      { type: 'heading', level: 2, text: 'Things your kid can do that require zero energy from you' },
+      { type: 'paragraph', text: 'If you\u2019d rather the screen be a backup than the main event, here\u2019s the very short list I reach for when I\u2019ve got nothing left to give. No supplies shopping, no setup, no parent participation required.' },
+      { type: 'list', ordered: false, items: [
+        'A pile of legos dumped on the table',
+        'A blank sheet of paper and whatever art supplies are in the drawer',
+        'A stack of library books and a soft chair',
+        'A puzzle they\u2019ve done before (kids love redoing puzzles, it\u2019s weirdly soothing)',
+        'The backyard, plus "don\u2019t come back inside until dinner"',
+        'Cardboard boxes and tape \u2014 they\u2019ll invent the project themselves',
+        'A deck of cards \u2014 even playing their own made-up games',
+        'An audiobook plus a bin of legos (genuinely unbeatable)',
+        'Their sibling, if they have one. Let them figure it out together.',
+      ]},
+      { type: 'paragraph', text: 'Most of these also live in our longer [30 screen-free activities guide](/blog/screen-free-activities-kids) if you want a deeper bench on a day with more capacity.' },
+      { type: 'pull-quote', text: 'Homeschooling is not built on your best days. It\u2019s built on whether you can keep going through the hard ones.' },
+      { type: 'heading', level: 2, text: 'What the wrecked day is actually teaching' },
+      { type: 'paragraph', text: 'Here\u2019s the part that took me the longest to accept.' },
+      { type: 'paragraph', text: 'Your kid watching you take care of yourself is not a wasted day. It\u2019s one of the most important things they\u2019ll ever witness.' },
+      { type: 'paragraph', text: 'When you say "I\u2019m exhausted and I\u2019m going to take a bath \u2014 you figure out what to do for the next hour" \u2014 they learn that grown-ups have limits. They learn it\u2019s okay to rest. They learn that a home runs on energy, not willpower. They learn that the answer to "what\u2019s for dinner" can be "cereal."' },
+      { type: 'paragraph', text: 'Those aren\u2019t small lessons. They\u2019re the ones your kids will need when they\u2019re the parents. Modeling rest is teaching.' },
+      { type: 'tip', title: 'Say it out loud', text: 'Don\u2019t just silently collapse \u2014 narrate it. "I\u2019m tired and I need an hour to myself. Dinner is cereal tonight. We\u2019ll do more tomorrow." Kids don\u2019t need you to be a hero. They need to see that adults take care of themselves.' },
+      { type: 'heading', level: 2, text: 'Tomorrow is a different day' },
+      { type: 'paragraph', text: 'Homeschooling (or parenting, or life) is not built on your best days. It\u2019s built on whether you can keep going through the hard ones. And you can only keep going if you give yourself room to coast when you need to.' },
+      { type: 'paragraph', text: 'You don\u2019t need to be a hero every day. You don\u2019t need to be productive every day. You don\u2019t need to enrich every day.' },
+      { type: 'paragraph', text: 'Sometimes you just need to survive the day. That\u2019s enough.' },
+      { type: 'paragraph', text: 'If wrecked days are piling up more often than not, that\u2019s a different conversation \u2014 and our [homeschool burnout guide](/blog/homeschool-burnout) is probably the better read for you tonight.' },
+      { type: 'cta', text: 'Want a menu of real, low-prep activities your kids can do without you hovering? Our free guide gives you a starter pack designed for parents who don\u2019t have capacity for a craft kit.', href: '/free-guide', label: 'Get the Free Guide' },
+      { type: 'faq', items: [
+        { question: 'What do I feed my kids when I\u2019m too tired to cook?', answer: 'Toast, cereal, crackers with cheese and fruit, a smoothie, scrambled eggs, or leftovers. A simple cold or one-pan meal is completely fine on low-energy nights. Your kids need nutrition over the course of a week, not a fully cooked sit-down dinner every single night. Sitting with them while they eat cereal matters more than what\u2019s on the plate.' },
+        { question: 'Is it okay to let kids have extra screen time on hard days?', answer: 'Yes. A flexible screen time approach that bends on exhausting days is more sustainable than rigid daily limits that guarantee a bigger crash later. An extra movie on the day you\u2019re wrecked isn\u2019t undoing any long-term work \u2014 as long as the usual baseline is reasonable, the occasional stretch is part of how real families function.' },
+        { question: 'How do homeschool moms deal with burnout?', answer: 'The first line of defense is saying no to anything new \u2014 social plans, volunteer asks, extra logistics \u2014 on days you\u2019re already empty. The second is feeding yourself and your kids simple, prepared-in-minutes meals. The third is protecting actual rest time (bath, walk, reading) even when it feels selfish. Burnout is cumulative; small preservation habits compound.' },
+        { question: 'What should I do when I have zero energy to parent?', answer: 'Lower the bar for the day. Toast for dinner is fine. Screens without guilt are fine. A locked bathroom door for 30 minutes is fine. Narrate it out loud so your kids understand: "I\u2019m tired and I\u2019m taking care of myself." Tomorrow is a different day. Coasting on hard days is what keeps you consistent on good ones.' },
+        { question: 'Is it selfish to take time for myself when my kid needs me?', answer: 'No. Kids watching a parent take care of themselves learn that adults have limits and that rest is legitimate. That\u2019s one of the most important things they can see modeled. Taking a bath, a walk, or a solo hour with a book is not selfish \u2014 it\u2019s how you stay capable of showing up the rest of the week.' },
+      ]},
+    ],
+    relatedSlugs: ['homeschool-burnout', 'how-much-screen-time-kids', 'screen-free-activities-kids', 'what-no-prep-means'],
+    recommendedProduct: 'nature-choice-boards',
+    recommendedBundle: 'seasonal-bundle',
+  },
 ];
 
 // ─── Helper Functions ───
 
 export function getAllPosts(): BlogPost[] {
-  return [...posts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  );
+  return posts
+    .filter((p) => !p.draft)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
@@ -3648,16 +3858,16 @@ export function getFeaturedPost(): BlogPost {
 }
 
 export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
-  // First try same-category posts, then fill with recent posts
+  // First try same-category posts, then fill with recent posts. Drafts excluded.
   const sameCat = posts
-    .filter((p) => p.slug !== post.slug && p.category === post.category)
+    .filter((p) => !p.draft && p.slug !== post.slug && p.category === post.category)
     .slice(0, limit);
 
   if (sameCat.length >= limit) return sameCat;
 
   const fromSlugs = post.relatedSlugs
     .map((s) => posts.find((p) => p.slug === s))
-    .filter((p): p is BlogPost => p !== undefined && p.slug !== post.slug && !sameCat.some((sc) => sc.slug === p.slug));
+    .filter((p): p is BlogPost => p !== undefined && !p.draft && p.slug !== post.slug && !sameCat.some((sc) => sc.slug === p.slug));
 
   const combined = [...sameCat, ...fromSlugs].slice(0, limit);
 
