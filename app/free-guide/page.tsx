@@ -55,6 +55,11 @@ const freeGuideLd = {
     price: '0',
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: 'US',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+    },
   },
 };
 
