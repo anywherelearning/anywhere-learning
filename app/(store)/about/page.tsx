@@ -142,83 +142,81 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/80 to-cream/40 lg:from-cream/85 lg:via-cream/70 lg:to-cream/25" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent" />
         <div className="relative px-5 sm:px-10 lg:px-20">
-          <div className="max-w-xl lg:max-w-2xl">
+          <div className="max-w-2xl lg:max-w-4xl">
             <p className="text-sm font-semibold text-gold-dark uppercase tracking-[0.2em] mb-4">
-              Meet Amelie
+              I&apos;m Amelie
             </p>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-forest leading-[1.1] mb-6 text-balance">
-              I spent 15 years in the classroom. Then I took my kids out of it.
+              I spent 15 years teaching other people&apos;s kids. Now I teach my own, and help you teach yours.
             </h1>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Anywhere Learning didn&apos;t start as a business. It started as a
-              question I couldn&apos;t stop asking: what would it look like if
-              learning fit into the way families actually live &mdash; at home,
-              on the road, on a Saturday morning, on a summer afternoon?
+              These are the guides I built first for my own two kids. Now
+              they&apos;re here for any family who wants more real-world
+              learning in the days they already have, whether at home, on the
+              road, after school, or over the summer.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The real story - inside the system (forest bg for color) */}
+      {/* Personal unease + the break (forest bg for color) */}
       <section className="bg-forest-section py-12 md:py-16 relative overflow-hidden">
         <div className="absolute top-10 right-[8%] w-64 h-64 rounded-full border border-white/[0.04]" aria-hidden="true" />
         <div className="absolute bottom-10 left-[5%] w-40 h-40 rounded-full border border-white/[0.03]" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
           <div className="space-y-5 text-lg leading-relaxed text-cream/80">
             <p>
-              I loved teaching. I loved watching kids light up when something
-              clicked. After 15 years in the classroom, I learned something
-              teachers know but don&apos;t always say out loud: no single
-              setting can teach a child everything they need. A classroom does
-              what it&apos;s designed to do. Home does what only home can do.
-              The world does the rest.
+              I loved teaching. I really did. Watching kids light up when
+              something clicked. The small daily wins. The days when they
+              were genuinely happy to be there, leaning in and learning.
             </p>
             <p className="font-medium text-xl md:text-2xl font-display text-gold leading-snug">
-              The thing I kept coming back to was the gap &mdash; the skills
-              kids need most that don&apos;t fit neatly into any lesson plan.
+              But somewhere along the way, the classroom stopped feeling
+              like the right place for me.
             </p>
             <p>
-              How to think critically. How to solve a real problem, not a
-              textbook one. How to budget, cook a meal, navigate a city, have a
-              conversation with a stranger, or figure something out when nobody
-              hands you the answer. These are the things kids learn by doing
-              &mdash; by being let loose on real life, with a parent alongside
-              them.
+              I couldn&apos;t name exactly why at first. Just a quiet,
+              persistent sense that something had to change.
             </p>
             <p>
-              The world is changing fast. AI is reshaping entire industries.
-              The jobs our kids will do might not exist yet. Whatever school
-              looks like for your family &mdash; full-time homeschool, part-time
-              classroom, or something in between &mdash; the real-world stuff
-              has to happen somewhere. That&apos;s the part I wanted to make
-              easier.
+              After 15 years, I needed a real break. So I took a year-long
+              leave of absence, and our family hit the road.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The travel discovery - warm gold accent section */}
+      {/* The trip + three realizations - warm gold accent section */}
       <section className="bg-gold/10 py-10 md:py-14 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.08] to-transparent" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
-              I needed a break. A real one. So I took a year-long leave of
-              absence, and our family hit the road. Seven months of
-              travelling together. My kids were 12 and 9, and for the first
-              time I was homeschooling them. No classroom. No system. Just us.
-            </p>
-            <p className="font-medium text-xl md:text-2xl font-display text-forest leading-snug">
-              That trip changed everything. I saw how much learning lives
-              outside any classroom &mdash; in markets, train stations,
-              forests, conversations with strangers &mdash; and how ready my
-              kids were to soak it up.
+              Seven months of travelling together. My kids were 12 and 9,
+              and for the first time I was homeschooling them full-time.
+              No classroom, no system, just us.
             </p>
             <p>
-              It helped me make the decision I&apos;d been circling for years:
-              leave the classroom for good and build something new. Something
-              that would let me combine my endless creativity with what I
-              cared about most, my own children&apos;s education.
+              That trip answered the question I&apos;d been circling for
+              months: what did I want the next chapter to look like? Three
+              things clicked into place.
+            </p>
+            <p className="font-medium text-xl md:text-2xl font-display text-forest leading-snug">
+              I still loved teaching. Teaching my own kids brought that
+              back to life.
+            </p>
+            <p>
+              I realized I still had plenty to give to the learning world.
+              Fifteen years of experience, a head full of creative ideas,
+              a real feel for how kids actually learn. All of it could
+              travel with me.
+            </p>
+            <p>
+              And I wanted to give my own kids more than we&apos;d been
+              fitting around the school day. More life skills. More
+              hands-on, meaningful projects. More time to chase what
+              actually interested them. The world they&apos;re growing
+              into is changing fast, and I wanted them ready for it.
             </p>
           </div>
         </div>
@@ -240,36 +238,39 @@ export default function AboutPage() {
             The Leap
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-forest mb-6">
-            So I left the classroom and brought learning home.
+            So I came home to teach my own kids, and built something alongside them.
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-gray-600">
             <p>
-              I did what most former teachers do at first: I started with
-              lesson plans and worksheets. Old habits. But bit by bit,
-              creativity started taking more space. We swapped the worksheets
-              for hands-on projects, real-life experiments, things that got
-              us all out of the house and into the world.
+              When we got home, the decision I&apos;d been circling for years
+              finally made sense. Leave the classroom and homeschool my own
+              kids. For our family, right now, this is what fits. The road
+              might look different a few years down the line, and that&apos;s
+              okay.
             </p>
             <p>
+              Our days filled up with hands-on projects, real-life experiments,
+              things that got us all out of the house and into the world.
               Nobody was miserable. I wasn&apos;t exhausted. We were just&hellip;
               learning. Together. And my kids were more engaged than I&apos;d
               ever seen them.
             </p>
+            <p>
+              I started making simple guides for our own days. Low prep,
+              flexible, something we could grab on a rainy afternoon, at the
+              grocery store, or halfway up a hiking trail. Things my kids
+              would actually want to do.
+            </p>
+            <p>
+              Not a curriculum. Not a replacement for school. Just a
+              collection of tools that helps any family bring real-world
+              learning into the rhythm you already have, whether you
+              homeschool, worldschool, or just want to do a little more at
+              home after school, on weekends, or over the summer.
+            </p>
             <p className="text-gray-800 font-medium text-xl md:text-2xl font-display text-forest leading-snug">
-              The learning was already happening. It just didn&apos;t look
-              like school, and that was the whole point.
-            </p>
-            <p>
-              I started creating simple activities that turned everyday
-              moments, a walk in the park, a trip to the grocery store, a
-              rainy afternoon, into meaningful learning experiences. No lesson
-              plans. No grading. Low prep. And my kids didn&apos;t just tolerate
-              them. They asked for more.
-            </p>
-            <p>
-              That&apos;s what became Anywhere Learning. Not a curriculum. Not a
-              replacement for school. Just a collection of tools that help your
-              kids build real-world skills through real life, wherever you are.
+              Anywhere Learning lets me do the two things I love most,
+              teaching and creating, with my own kids beside me.
             </p>
           </div>
         </div>
