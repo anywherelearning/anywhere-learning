@@ -139,7 +139,7 @@ export function relaxedLimiter(): RateLimiterLike {
 // ── Helper to extract a stable identifier ────────────────────────
 
 function getIdentifier(req: NextRequest): string {
-  // Use Clerk userId if available in header (set by middleware)
+  // Use Clerk userId if available in header (set by proxy)
   // Otherwise fall back to IP address
   const forwarded = req.headers.get('x-forwarded-for');
   const ip = forwarded?.split(',')[0]?.trim() || 'unknown';
