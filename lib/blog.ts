@@ -3635,7 +3635,6 @@ const posts: BlogPost[] = [
     category: 'ai-digital-literacy',
     publishedAt: '2026-04-21',
     dateModified: '2026-04-21',
-    draft: true,
     keywords: [
       'screen free activities for kids',
       'things to do besides screens',
