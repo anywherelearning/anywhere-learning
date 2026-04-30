@@ -19,6 +19,7 @@ const catalog = [
   { slug: 'communication-writing-bundle', name: 'Communication & Writing Mega Bundle', priceCents: 4499, description: 'All 12 Communication & Writing guides in one download.' },
   { slug: 'entrepreneurship-bundle', name: 'Entrepreneurship Mega Bundle', priceCents: 4499, description: 'All 11 Entrepreneurship guides in one download.' },
   { slug: 'planning-problem-solving-bundle', name: 'Planning & Problem-Solving Mega Bundle', priceCents: 4499, description: 'All 13 Planning & Problem-Solving guides in one download.' },
+  { slug: 'worldschooling-mega-bundle', name: 'Worldschooling Mega Bundle', priceCents: 4499, description: 'All 10 Worldschooling guides in one download: cultural celebrations, currency math, language missions, food detective, and more.' },
   { slug: 'nature-art-bundle', name: 'Nature Art Bundle', priceCents: 1799, description: 'Land Art + Nature Crafts + Nature Journal.' },
   { slug: 'outdoor-toolkit-bundle', name: 'Outdoor Toolkit Bundle', priceCents: 2399, description: 'Walk Cards + Missions + STEM + Choice Boards.' },
   { slug: 'outdoor-mega-bundle', name: 'Outdoor & Nature Mega Bundle', priceCents: 4199, description: 'All 7 outdoor & nature guides:walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.' },
@@ -114,6 +115,17 @@ const catalog = [
   { slug: 'swap-day-challenge', name: 'The Swap Day Challenge', priceCents: 599, description: 'Swap roles for a day: empathy, planning, and responsibility.' },
   { slug: 'what-if-scenario-lab', name: 'The What-If Scenario Lab', priceCents: 599, description: 'Explore hypothetical scenarios, predict outcomes, and plan responses.' },
   { slug: 'decision-lab', name: 'What Would You Do? Decision Lab', priceCents: 599, description: 'Work through real decision scenarios and justify choices.' },
+  // ─── Worldschooling singles ($5.99) ───
+  { slug: 'cultural-celebration-journal', name: 'Cultural Celebration Journal', priceCents: 599, description: 'Document festivals, holidays, and cultural celebrations through guided observation.' },
+  { slug: 'currency-market-math', name: 'Currency & Market Math', priceCents: 599, description: 'Convert currencies, compare prices, and practise mental maths in real markets.' },
+  { slug: 'everyday-life-comparison', name: 'Everyday Life Comparison', priceCents: 599, description: 'Compare daily life across cultures: transport, food, school, and play.' },
+  { slug: 'local-language-mission', name: 'Local Language Mission', priceCents: 599, description: 'Build confidence in a new language through real-world missions.' },
+  { slug: 'nature-geography-field-study', name: 'Nature & Geography Field Study', priceCents: 599, description: 'Observe local plants, wildlife, climate, and geography while travelling.' },
+  { slug: 'people-stories-interview', name: 'People & Stories Interview Project', priceCents: 599, description: 'Interview locals and travellers, listen carefully, and record their stories.' },
+  { slug: 'street-explorer-map-maker', name: 'Street Explorer Map Maker', priceCents: 599, description: 'Walk new neighbourhoods and create hand-drawn maps with landmarks.' },
+  { slug: 'transport-navigation-challenge', name: 'Transport & Navigation Challenge', priceCents: 599, description: 'Read maps, decode local transport, and plan real routes in unfamiliar places.' },
+  { slug: 'travel-reflection-postcards', name: 'Travel Reflection & Postcards', priceCents: 599, description: 'Capture travel memories through hand-made postcards and reflective writing.' },
+  { slug: 'world-food-detective', name: 'World Food Detective', priceCents: 599, description: 'Investigate local cuisine: identify ingredients, trace origins, and document tastes.' },
 ];
 
 // Slugs where the image filename doesn't match {slug}.jpg
@@ -126,6 +138,7 @@ const imageOverrides: Record<string, string> = {
   'communication-writing-bundle': 'mega-bundle-communication-writing.jpg',
   'entrepreneurship-bundle': 'mega-bundle-entrepreneurship.jpg',
   'planning-problem-solving-bundle': 'mega-bundle-planning-problem-solving.jpg',
+  'worldschooling-mega-bundle': 'mega-bundle-worldschooling.jpg',
 };
 
 async function createStripeProducts() {

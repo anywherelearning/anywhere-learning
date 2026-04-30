@@ -1379,6 +1379,157 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Decision-Making', 'Critical Thinking', 'Ethics', 'Analysis', 'Independence'],
     format: 'Project Guide',
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // WORLDSCHOOLING BUNDLE
+  // ═══════════════════════════════════════════════════════════════════
+  'worldschooling-mega-bundle': {
+    opening:
+      'All 10 Worldschooling guides in one download. Cultural celebrations, currency math, language missions, food detective challenges, transport navigation, and more. Every activity turns travel and everyday life into meaningful learning. Works abroad, on a road trip, or in your own backyard.',
+    whatsIncluded: [
+      '10 complete worldschooling activity guides',
+      'Cultural Celebration Journal, Currency & Market Math, Everyday Life Comparison',
+      'Local Language Mission, Nature & Geography Field Study, People & Stories Interview',
+      'Street Explorer Map Maker, Transport & Navigation Challenge',
+      'Travel Reflection & Postcards, World Food Detective',
+    ],
+    skillTags: ['Cultural Awareness', 'Geography', 'Communication', 'Observation', 'Reflection', 'Languages'],
+    format: 'Bundle',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // WORLDSCHOOLING - Individual Guides
+  // ═══════════════════════════════════════════════════════════════════
+  'cultural-celebration-journal': {
+    opening:
+      'A guided journal for documenting festivals, holidays, and cultural celebrations wherever you go. Kids observe traditions, ask thoughtful questions, sketch what they see, and reflect on what makes each celebration meaningful. Cultural curiosity meets meaningful journaling.',
+    whatsIncluded: [
+      'Guided journal prompts for documenting celebrations',
+      'Observation questions for traditions and customs',
+      'Sketching and visual storytelling pages',
+      'Reflection prompts on meaning and connection',
+      'Reusable format: works for any festival, anywhere',
+    ],
+    skillTags: ['Cultural Awareness', 'Journaling', 'Observation', 'Reflection', 'Writing'],
+    format: 'Activity Guide',
+  },
+  'currency-market-math': {
+    opening:
+      'Turn every market visit into a maths lesson. Kids convert currencies, compare prices, calculate change in a new monetary system, and practise mental maths in real markets. Financial literacy and global awareness through real-world transactions.',
+    whatsIncluded: [
+      'Currency conversion challenges and exchange rate practice',
+      'Price comparison activities for real markets',
+      'Mental maths and change-calculation exercises',
+      'Budget tracking for travel days',
+      'Reflection on cost of living differences',
+    ],
+    skillTags: ['Maths', 'Financial Literacy', 'Mental Maths', 'Currency', 'Real-World'],
+    format: 'Activity Guide',
+  },
+  'everyday-life-comparison': {
+    opening:
+      'Compare daily life in a new place to home: how people get around, what they eat, how schools work, what kids do for fun. Kids observe carefully, ask good questions, and reflect on what is the same, what is different, and why. Cultural awareness through everyday curiosity.',
+    whatsIncluded: [
+      'Comparison frameworks for everyday systems',
+      'Observation prompts for transport, food, school, and play',
+      'Side-by-side comparison templates',
+      'Reflection on similarities and differences',
+      'Discussion starters for the whole family',
+    ],
+    skillTags: ['Cultural Awareness', 'Observation', 'Reflection', 'Critical Thinking'],
+    format: 'Activity Guide',
+  },
+  'local-language-mission': {
+    opening:
+      'Build confidence speaking a new language through real-world missions. Kids learn key phrases, practise greetings, order food, ask for directions, and complete language challenges with locals. Communication built on courage and curiosity, not perfection.',
+    whatsIncluded: [
+      'Language mission cards with progressive challenges',
+      'Key phrase and pronunciation practice prompts',
+      'Real-world communication missions (greetings, ordering, asking)',
+      'Reflection prompts on confidence and progress',
+      'Works for any language, anywhere',
+    ],
+    skillTags: ['Languages', 'Communication', 'Confidence', 'Cultural Awareness'],
+    format: 'Activity Guide',
+  },
+  'nature-geography-field-study': {
+    opening:
+      'Turn any landscape into a field study. Kids observe local plants, wildlife, climate, and geography. They sketch ecosystems, track weather, identify landforms, and connect what they see to bigger geographical patterns. Earth science through direct experience.',
+    whatsIncluded: [
+      'Field study observation framework',
+      'Plant, wildlife, and ecosystem sketching prompts',
+      'Weather and climate tracking activities',
+      'Landform identification and geography connections',
+      'Reflection on patterns across regions',
+    ],
+    skillTags: ['Geography', 'Science', 'Observation', 'Nature', 'Sketching'],
+    format: 'Activity Guide',
+  },
+  'people-stories-interview': {
+    opening:
+      'Interview the people you meet on your travels: shopkeepers, hosts, fellow travellers, kids in the park. Kids prepare thoughtful questions, listen carefully, and record stories that turn strangers into characters. Communication, empathy, and global perspective built through real conversations.',
+    whatsIncluded: [
+      'Interview project guide with question templates',
+      'Active listening and note-taking techniques',
+      'Story collection and recording prompts',
+      'Ethical interviewing guidance for kids',
+      'Reflection on what stories teach us',
+    ],
+    skillTags: ['Communication', 'Listening', 'Empathy', 'Writing', 'Interviewing'],
+    format: 'Activity Guide',
+  },
+  'street-explorer-map-maker': {
+    opening:
+      'Walk a new neighbourhood and turn it into a hand-drawn map. Kids note landmarks, sketch streets, label points of interest, and create their own guide to the area. Spatial thinking, observation, and geography all in one walking project.',
+    whatsIncluded: [
+      'Map-making project guide for any neighbourhood',
+      'Landmark identification and sketching prompts',
+      'Street layout and orientation activities',
+      'Points-of-interest labelling and storytelling',
+      'Personal walking-guide creation',
+    ],
+    skillTags: ['Geography', 'Spatial Thinking', 'Observation', 'Art', 'Mapping'],
+    format: 'Activity Guide',
+  },
+  'transport-navigation-challenge': {
+    opening:
+      'Navigate a new place using local transport. Kids read maps, decode public transport systems, plan routes, and practise getting from A to B in unfamiliar territory. Independence, problem-solving, and real-world geography skills built through real journeys.',
+    whatsIncluded: [
+      'Public transport decoding activities',
+      'Map reading and route planning challenges',
+      'Real navigation missions with progressive difficulty',
+      'Time and cost calculations for journeys',
+      'Reflection on independence and problem-solving',
+    ],
+    skillTags: ['Navigation', 'Geography', 'Problem-Solving', 'Independence', 'Maths'],
+    format: 'Activity Guide',
+  },
+  'travel-reflection-postcards': {
+    opening:
+      'Capture travel memories through hand-made postcards and reflective writing. Kids choose moments that mattered, sketch scenes, write personal notes, and turn experiences into keepsakes. Reflective writing and visual storytelling that makes every trip more meaningful.',
+    whatsIncluded: [
+      'Postcard-making templates and prompts',
+      'Reflective writing exercises for travel memories',
+      'Sketching prompts for meaningful moments',
+      'Personal note writing for friends and family',
+      'Keepsake building for trips of any length',
+    ],
+    skillTags: ['Reflection', 'Writing', 'Art', 'Storytelling', 'Memory'],
+    format: 'Activity Guide',
+  },
+  'world-food-detective': {
+    opening:
+      'Investigate the food of every place you visit. Kids identify ingredients, trace dishes to their origins, learn cooking traditions, and document what they taste. Food becomes a window into culture, history, and geography in this hands-on (and delicious) investigation.',
+    whatsIncluded: [
+      'Food detective investigation guide',
+      'Ingredient identification and origin tracing',
+      'Cooking tradition research prompts',
+      'Tasting notes and personal review templates',
+      'Cultural connections between food and place',
+    ],
+    skillTags: ['Cultural Awareness', 'Geography', 'Research', 'Observation', 'Writing'],
+    format: 'Activity Guide',
+  },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────

@@ -59,6 +59,12 @@ export const CATEGORIES: CategoryDef[] = [
     description:
       'Budgeting, shopping math, fractions in the kitchen, and financial thinking.',
   },
+  {
+    value: 'worldschooling',
+    label: 'Worldschooling',
+    description:
+      'Travel-ready learning for families exploring the world. Cultural curiosity, geography, and real-world skills, anywhere you go.',
+  },
 ];
 
 /** Quick lookup: category value → label. Includes 'bundle'. */
@@ -81,6 +87,7 @@ export const COVER_CLASSES: Record<string, string> = {
   entrepreneurship: 'cover-entrepreneurship',
   'planning-problem-solving': 'cover-planning-problem-solving',
   'start-here': 'cover-start-here',
+  worldschooling: 'cover-worldschooling',
   bundle: 'cover-bundle',
 };
 
@@ -102,5 +109,6 @@ export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   'entrepreneurship': 'bg-[#c4836a] text-white shadow-sm',
   'planning-problem-solving': 'bg-[#7a6da8] text-white shadow-sm',
   'start-here': 'bg-[#d4a373] text-white shadow-sm',
+  'worldschooling': 'bg-[#5a9b9c] text-white shadow-sm',
   bundle: 'bg-gold text-white shadow-sm',
 };

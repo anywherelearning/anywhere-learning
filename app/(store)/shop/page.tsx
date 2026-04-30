@@ -68,6 +68,11 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
     description:
       "Start-here homeschool activities for families new to real-world learning — the foundation for your homeschool or worldschool journey.",
   },
+  "worldschooling": {
+    title: "Worldschooling Activities for Travelling Families",
+    description:
+      "Worldschooling activities for kids ages 6-14: cultural curiosity, currency math, language missions, food detective challenges, and travel reflection. Meaningful learning, wherever you are.",
+  },
   bundle: {
     title: "Homeschool Activity Bundles: Best Value",
     description:
@@ -129,6 +134,7 @@ const categoryBundleMap: Record<string, string> = {
   "communication-writing": "communication-writing-bundle",
   "entrepreneurship": "entrepreneurship-bundle",
   "planning-problem-solving": "planning-problem-solving-bundle",
+  "worldschooling": "worldschooling-mega-bundle",
 };
 
 // ── Cross-sell mapping ──
@@ -142,6 +148,7 @@ const crossSellMap: Record<string, string> = {
   "entrepreneurship": "real-world-math",
   "planning-problem-solving": "entrepreneurship",
   "start-here": "outdoor-learning",
+  "worldschooling": "outdoor-learning",
 };
 
 // ── Page ──

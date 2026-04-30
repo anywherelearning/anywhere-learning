@@ -129,6 +129,18 @@ const SLUG_TO_FILE: Record<string, string> = {
 
   // Start Here
   'future-ready-skills-map': 'The future-ready skills map.pdf',
+
+  // Worldschooling
+  'cultural-celebration-journal': 'Worldschooling - Cultural Celebration Journal.pdf',
+  'currency-market-math': 'Worldschooling - Currency & Market Math.pdf',
+  'everyday-life-comparison': 'Worldschooling - Everyday Life Comparison.pdf',
+  'local-language-mission': 'Worldschooling - Local Language Mission.pdf',
+  'nature-geography-field-study': 'Worldschooling - Nature and Geography Field Study.pdf',
+  'people-stories-interview': 'Worldschooling - People & Stories Interview Project.pdf',
+  'street-explorer-map-maker': 'Worldschooling - Street Explorer Map Maker.pdf',
+  'transport-navigation-challenge': 'Worldschooling - Transport & Navigation Challenge.pdf',
+  'travel-reflection-postcards': 'Worldschooling - Travel Reflection & Postcards.pdf',
+  'world-food-detective': 'Worldschooling - World Food Detective.pdf',
 };
 
 // ─────────────────────────────────────────────────────────────

@@ -295,6 +295,9 @@ img {
 .cover-start-here {
   background: linear-gradient(135deg, #d4a373 0%, #e8c99a 50%, #b8864f 100%);
 }
+.cover-worldschooling {
+  background: linear-gradient(135deg, #5a9b9c 0%, #7fb6b8 40%, #3f7879 100%);
+}
 .cover-bundle {
   background: linear-gradient(135deg, #3d5c3b 0%, #588157 30%, #d4a373 100%);
 }
@@ -323,6 +326,9 @@ img {
 }
 .card-bg-start-here {
   background: linear-gradient(135deg, #f9f3eb 0%, #f3ebdf 100%);
+}
+.card-bg-worldschooling {
+  background: linear-gradient(145deg, #ecf4f4 0%, #e0eced 50%, #ebf3f4 100%);
 }
 .card-bg-bundle {
   background: linear-gradient(145deg, #f5f0e8 0%, #efe8da 50%, #f4efe6 100%);

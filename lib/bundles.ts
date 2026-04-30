@@ -64,6 +64,13 @@ export const BUNDLE_CONTENTS: Record<string, string[]> = {
     'pack-like-a-pro', 'scavenger-hunt-designer', 'swap-day-challenge',
     'what-if-scenario-lab', 'decision-lab',
   ],
+  'worldschooling-mega-bundle': [
+    'cultural-celebration-journal', 'currency-market-math',
+    'everyday-life-comparison', 'local-language-mission',
+    'nature-geography-field-study', 'people-stories-interview',
+    'street-explorer-map-maker', 'transport-navigation-challenge',
+    'travel-reflection-postcards', 'world-food-detective',
+  ],
 };
 
 /** Bundle metadata for client-side upsell suggestions. */
@@ -187,6 +194,16 @@ export const BUNDLE_DATA: Record<string, BundleInfo> = {
     stripePriceId: 'price_1TLo8lAkIBECpwGmZ54mEf19',
     category: 'bundle',
     imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
+    activityCount: 10,
+  },
+  'worldschooling-mega-bundle': {
+    slug: 'worldschooling-mega-bundle',
+    name: 'Worldschooling Mega Bundle',
+    priceCents: 4499,
+    compareAtPriceCents: 5999,
+    stripePriceId: 'price_1TS086AkIBECpwGmusZz7RY4',
+    category: 'bundle',
+    imageUrl: '/products/mega-bundle-worldschooling.jpg',
     activityCount: 10,
   },
 };
