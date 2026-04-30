@@ -356,7 +356,7 @@ async function seed() {
     { name: 'World Food Detective', slug: 'world-food-detective', description: 'Investigate local cuisine: identify ingredients, trace origins, and document tastes.', shortDescription: 'Investigate world cuisine.', priceCents: 599, compareAtPriceCents: null, stripePriceId: 'price_1TS08kAkIBECpwGmQeQ2dPds', blobUrl: '', imageUrl: '/products/world-food-detective.jpg', category: 'worldschooling', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6–14', sortOrder: 209, active: true },
 
     // === START HERE (sortOrder 90) ===
-    { name: 'The Future-Ready Skills Map', slug: 'future-ready-skills-map', description: 'A complete roadmap of real-world skills every kid needs.', shortDescription: 'Future-ready skills roadmap.', priceCents: 999, compareAtPriceCents: null, stripePriceId: 'price_1T9JSZAMzOBftCntfh73EgWC', blobUrl: '', imageUrl: '/products/future-ready-skills-map.jpg', category: 'start-here', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 6\u201314', sortOrder: 90, active: true },
+    { name: 'The Future-Ready Skills Map', slug: 'future-ready-skills-map', description: 'A 42-page parent guide to the 10 skill areas that matter most for kids ages 0-14+, organised into three age phases (Play, Build, Apply).', shortDescription: '42-page parent guide: 10 future-ready skill areas, ages 0-14+.', priceCents: 999, compareAtPriceCents: null, stripePriceId: 'price_1T9JSZAMzOBftCntfh73EgWC', blobUrl: '', imageUrl: '/products/future-ready-skills-map.jpg', category: 'start-here', isBundle: false, bundleProductIds: null, activityCount: null, ageRange: 'Ages 0\u201314+', sortOrder: 90, active: true },
   ];
 
   // Upsert all products (update existing, insert new)
