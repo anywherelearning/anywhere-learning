@@ -9,6 +9,7 @@ const CATEGORY_BUNDLE_MAP: Record<string, string> = {
   'communication-writing': 'communication-writing-bundle',
   'entrepreneurship': 'entrepreneurship-bundle',
   'planning-problem-solving': 'planning-problem-solving-bundle',
+  'worldschooling': 'worldschooling-mega-bundle',
 };
 
 export interface AbandonedProduct {
