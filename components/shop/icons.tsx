@@ -266,6 +266,7 @@ const categoryIconMap: Record<string, React.FC<IconProps>> = {
   'entrepreneurship': RocketIcon,
   'planning-problem-solving': PuzzleIcon,
   'start-here': StarIcon,
+  worldschooling: CompassIcon,
   bundle: LayersIcon,
 };
 

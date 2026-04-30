@@ -13,6 +13,7 @@ import {
   RocketIcon,
   PuzzleIcon,
   StarIcon,
+  CompassIcon,
 } from './icons';
 import { CATEGORY_ACTIVE_COLORS as categoryActiveColors } from '@/lib/categories';
 
@@ -27,6 +28,7 @@ const categories = [
   { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
   { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },
   { value: 'real-world-math', label: 'Real-World Math', Icon: CalculatorIcon },
+  { value: 'worldschooling', label: 'Worldschooling', Icon: CompassIcon },
 ];
 
 interface CategoryFilterProps {
