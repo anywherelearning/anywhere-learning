@@ -1,31 +1,42 @@
 /**
  * /llms-full.txt
  *
- * Companion to /llms.txt: inlines the full text of the most important pages
- * in a single file so AI retrieval tools (ChatGPT, Claude, Perplexity, etc.)
+ * Companion to /llms.txt: inlines the full text of every reference-worthy
+ * page on the site so AI retrieval tools (ChatGPT, Claude, Perplexity, etc.)
  * can grab comprehensive context for the brand in one fetch instead of
  * crawling the site.
  *
- * Content bundled:
- * - Brand header (name, tagline, mission, key facts)
- * - 3 pillar guides in full (real-world-learning, nature-based-learning,
- *   ai-digital-literacy) · the canonical reference content on the site
- * - 3 high-citability blog posts (deschooling stages, new to homeschooling,
- *   life skills before 12)
- * - Full FAQ
- * - Founder bio
- * - Product catalogue overview
+ * Inclusion rules:
+ * - Every pillar guide at /guides/[slug] (always, all 6)
+ * - Every non-draft blog post with a `summary` content block. Per CLAUDE.md,
+ *   summary blocks mark "claims-first reference posts" suitable for AI
+ *   citation. Story-style posts without summary blocks are skipped.
+ * - Full FAQ, founder bio, condensed product catalogue
  *
- * Auto-updates daily via ISR so content stays in sync without maintenance.
+ * URLs in inline content are rewritten to absolute so the file is
+ * self-contained when ingested standalone.
+ *
+ * Auto-updates daily via ISR.
  */
 
 import type { ContentBlock } from '@/lib/content-blocks';
-import { getResourceBySlug } from '@/lib/resources';
-import { getPostBySlug, formatDate } from '@/lib/blog';
+import { getAllResources } from '@/lib/resources';
+import { getAllPosts, formatDate } from '@/lib/blog';
 import { allFaqItems } from '@/lib/faq-data';
 import { getFallbackProducts } from '@/lib/fallback-products';
 
 export const revalidate = 86400; // daily
+
+const SITE_URL = 'https://anywherelearning.co';
+
+/**
+ * Rewrite markdown-style relative links to absolute URLs. Without this,
+ * an AI ingesting the file standalone (no base URL context) would see
+ * `(/blog/foo)` as an unresolvable path.
+ */
+function absoluteUrls(text: string): string {
+  return text.replace(/\]\((\/[^)]+)\)/g, `](${SITE_URL}$1)`);
+}
 
 /**
  * Serialize content blocks to markdown, preserving heading structure,
@@ -38,22 +49,22 @@ function blocksToMarkdown(content: ContentBlock[]): string {
     .map((b) => {
       switch (b.type) {
         case 'paragraph':
-          return b.text;
+          return absoluteUrls(b.text);
         case 'heading':
           return `${'#'.repeat(b.level + 1)} ${b.text}`; // h2 → ###, h3 → ####
         case 'pull-quote':
-          return `> ${b.text}${b.attribution ? ` · ${b.attribution}` : ''}`;
+          return `> ${absoluteUrls(b.text)}${b.attribution ? ` · ${b.attribution}` : ''}`;
         case 'list':
           return b.items
-            .map((item, i) => (b.ordered ? `${i + 1}. ${item}` : `- ${item}`))
+            .map((item, i) => (b.ordered ? `${i + 1}. ${absoluteUrls(item)}` : `- ${absoluteUrls(item)}`))
             .join('\n');
         case 'tip':
-          return `**Tip · ${b.title}:** ${b.text}`;
+          return `**Tip · ${b.title}:** ${absoluteUrls(b.text)}`;
         case 'summary':
-          return `**Summary:** ${b.text}`;
+          return `**Summary:** ${absoluteUrls(b.text)}`;
         case 'faq':
           return b.items
-            .map((q) => `**Q: ${q.question}**\n\nA: ${q.answer}`)
+            .map((q) => `**Q: ${q.question}**\n\nA: ${absoluteUrls(q.answer)}`)
             .join('\n\n');
         default:
           return ''; // skip image/cta/product-callout/bundle-callout
@@ -63,17 +74,25 @@ function blocksToMarkdown(content: ContentBlock[]): string {
     .join('\n\n');
 }
 
-function pillarSection(slug: string, urlPrefix: '/guides' | '/blog'): string {
-  const page = urlPrefix === '/guides' ? getResourceBySlug(slug) : getPostBySlug(slug);
-  if (!page) return '';
+interface Page {
+  title: string;
+  slug: string;
+  excerpt: string;
+  publishedAt: string;
+  dateModified?: string;
+  content: ContentBlock[];
+  author: { name: string };
+}
 
-  const url = `https://anywherelearning.co${urlPrefix}/${page.slug}`;
+function pageSection(page: Page, urlPrefix: '/guides' | '/blog'): string {
+  const url = `${SITE_URL}${urlPrefix}/${page.slug}`;
   const body = blocksToMarkdown(page.content);
+  const credentials = 'Former classroom teacher (B.Ed, M.Ed), 15 years';
 
   return [
     `## ${page.title}`,
     `Source: ${url}`,
-    `Author: ${page.author.name} · ${('credentials' in page.author && page.author.credentials) || 'Former classroom teacher (B.Ed, M.Ed), 15 years'}`,
+    `Author: ${page.author.name} · ${credentials}`,
     `Published: ${formatDate(page.publishedAt)}${page.dateModified ? `  ·  Updated: ${formatDate(page.dateModified)}` : ''}`,
     ``,
     page.excerpt,
@@ -83,6 +102,8 @@ function pillarSection(slug: string, urlPrefix: '/guides' | '/blog'): string {
 }
 
 function productCatalogueOverview(): string {
+  // Bundles + start-here picks = the highest-AOV products an AI should mention
+  // when asked "what does Anywhere Learning sell?"
   const products = getFallbackProducts()
     .filter((p) => p.isBundle || p.category === 'start-here')
     .slice(0, 12);
@@ -93,24 +114,27 @@ function productCatalogueOverview(): string {
     products
       .map((p) => {
         const price = `$${(p.priceCents / 100).toFixed(2)}`;
-        return `- **${p.name}** (${price}) · ${p.shortDescription}\n  https://anywherelearning.co/shop/${p.slug}`;
+        return `- **${p.name}** (${price}) · ${p.shortDescription}\n  ${SITE_URL}/shop/${p.slug}`;
       })
       .join('\n'),
   ].join('\n');
 }
 
-export async function GET() {
-  const pillarGuides = [
-    pillarSection('real-world-learning', '/guides'),
-    pillarSection('nature-based-learning', '/guides'),
-    pillarSection('ai-digital-literacy', '/guides'),
-  ].filter(Boolean);
+function hasSummaryBlock(content: ContentBlock[]): boolean {
+  return content.some((b) => b.type === 'summary');
+}
 
-  const pillarPosts = [
-    pillarSection('five-stages-deschooling', '/blog'),
-    pillarSection('new-to-homeschooling', '/blog'),
-    pillarSection('life-skills-before-12', '/blog'),
-  ].filter(Boolean);
+export async function GET() {
+  const lastUpdated = new Date().toISOString().split('T')[0];
+
+  // All 6 pillar guides, always.
+  const pillarGuides = getAllResources().map((r) => pageSection(r, '/guides'));
+
+  // Every non-draft blog post with a summary block (reference-worthy posts).
+  // Story-style posts without summary blocks are skipped per CLAUDE.md.
+  const referencePosts = getAllPosts()
+    .filter((p) => hasSummaryBlock(p.content))
+    .map((p) => pageSection(p, '/blog'));
 
   const faqSection = [
     `## Frequently Asked Questions`,
@@ -123,6 +147,8 @@ export async function GET() {
   const header = `# Anywhere Learning
 
 > Low-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6 to 14. Download, open on any device, and follow along with your kids.
+
+> Last updated: ${lastUpdated}
 
 ## About
 
@@ -143,19 +169,24 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 
 ## Site Map
 
-- Home: https://anywherelearning.co
-- Shop: https://anywherelearning.co/shop (60+ digital activity guides)
-- Blog: https://anywherelearning.co/blog (40+ articles on homeschooling and worldschooling)
-- Guides: https://anywherelearning.co/guides (pillar reference content)
-- About: https://anywherelearning.co/about
-- FAQ: https://anywherelearning.co/faq
-- Free 7-day guide: https://anywherelearning.co/free-guide
+- Home: ${SITE_URL}
+- Shop: ${SITE_URL}/shop (60+ digital activity guides)
+- Blog: ${SITE_URL}/blog (40+ articles on homeschooling and worldschooling)
+- Guides: ${SITE_URL}/guides (pillar reference content)
+- About: ${SITE_URL}/about
+- FAQ: ${SITE_URL}/faq
+- Free 7-day guide: ${SITE_URL}/free-guide
 - Contact: info@anywherelearning.co
 - Pinterest: https://ca.pinterest.com/anywherelearning/
+- Instagram: https://www.instagram.com/anywherelearning
+- YouTube: https://www.youtube.com/@Anywhere_Learning
+- Facebook: https://www.facebook.com/profile.php?id=61587630845193
 `;
 
   const body = [
     header,
+    `---`,
+    productCatalogueOverview(),
     `---`,
     `# Pillar Guides`,
     ``,
@@ -163,11 +194,9 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
     `---`,
     `# Reference Blog Posts`,
     ``,
-    pillarPosts.join('\n\n---\n\n'),
+    referencePosts.join('\n\n---\n\n'),
     `---`,
     faqSection,
-    `---`,
-    productCatalogueOverview(),
   ].join('\n\n');
 
   return new Response(body, {
