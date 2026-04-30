@@ -153,7 +153,9 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
       url: 'https://anywherelearning.co',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://anywherelearning.co/logo.png',
+        url: 'https://anywherelearning.co/logo-icon-transparent.png',
+        width: 1200,
+        height: 867,
       },
     },
     mainEntityOfPage: {

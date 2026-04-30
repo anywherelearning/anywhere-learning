@@ -111,7 +111,9 @@ export default function RootLayout({
                   "url": "https://anywherelearning.co",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://anywherelearning.co/logo.png",
+                    "url": "https://anywherelearning.co/logo-icon-transparent.png",
+                    "width": 1200,
+                    "height": 867,
                   },
                   "description":
                     "Low-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6-14. Download, open on any device, and follow along with your kids.",
