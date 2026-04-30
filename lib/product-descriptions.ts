@@ -39,16 +39,6 @@ export const SHARED_WHY_FAMILIES_LOVE_IT = [
   'Real-world skills through real-world experiences',
 ];
 
-/** What's inside the Skills Map (parent guide format only) */
-export const SHARED_PARENT_GUIDE_STRUCTURE = [
-  '10 skill areas explained, from emotional + social to AI + digital literacy',
-  'Three age phases: Play (0–6), Build (6–11), Apply (11–14+)',
-  '"What to develop" and "Looks like mastery" checkpoints for every skill area',
-  'Hands-on play-based and real-world activities you can start today',
-  'A "Focus over Formality" rule for each age, so you never feel behind',
-  'A one-page skills-at-a-glance overview to plan with at a glance',
-];
-
 /** Why parents love the Skills Map (parent guide format only) */
 export const SHARED_WHY_PARENTS_LOVE_IT = [
   'A clear roadmap so you stop second-guessing your homeschool plan',

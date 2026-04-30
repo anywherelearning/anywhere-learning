@@ -3,7 +3,6 @@ import {
   getBestFor,
   SHARED_ACTIVITY_STRUCTURE,
   SHARED_WHY_FAMILIES_LOVE_IT,
-  SHARED_PARENT_GUIDE_STRUCTURE,
   SHARED_WHY_PARENTS_LOVE_IT,
 } from '@/lib/product-descriptions';
 
@@ -81,22 +80,22 @@ export default function ProductDescriptionSection({
         </div>
       )}
 
-      {/* Structure (varies by format) */}
-      <div>
-        <h3 className="text-base font-semibold text-gray-900 mb-3">
-          {desc.format === 'Parent Guide'
-            ? "What's Inside the Skills Map"
-            : `Every ${desc.format === 'Project Guide' ? 'Project Guide' : 'Activity'} Includes`}
-        </h3>
-        <ul className="space-y-2">
-          {(desc.format === 'Parent Guide' ? SHARED_PARENT_GUIDE_STRUCTURE : SHARED_ACTIVITY_STRUCTURE).map((item, i) => (
-            <li key={i} className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 flex-shrink-0" />
-              <span className="text-sm text-gray-600 leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Structure (skipped for Parent Guide since What's Included already covers it) */}
+      {desc.format !== 'Parent Guide' && (
+        <div>
+          <h3 className="text-base font-semibold text-gray-900 mb-3">
+            Every {desc.format === 'Project Guide' ? 'Project Guide' : 'Activity'} Includes
+          </h3>
+          <ul className="space-y-2">
+            {SHARED_ACTIVITY_STRUCTURE.map((item, i) => (
+              <li key={i} className="flex items-start gap-2.5">
+                <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 flex-shrink-0" />
+                <span className="text-sm text-gray-600 leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Why Families/Parents Love It */}
       <div>
