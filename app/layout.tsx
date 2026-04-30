@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Dancing_Script, DM_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -63,6 +63,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#588157",
+};
+
 const clerkAppearance = {
   variables: {
     colorPrimary: "#588157",
@@ -97,6 +101,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/feed.xml"
+          title="Anywhere Learning Blog"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

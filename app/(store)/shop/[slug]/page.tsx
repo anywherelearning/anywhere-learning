@@ -80,8 +80,13 @@ export async function generateMetadata({
       description: product.shortDescription,
       url: `https://anywherelearning.co/shop/${product.slug}`,
       images: product.imageUrl
-        ? [{ url: product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}` }]
-        : [{ url: 'https://anywherelearning.co/og-default.jpg', width: 1200, height: 630 }],
+        ? [{
+            url: product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}`,
+            width: 1200,
+            height: 1500,
+            alt: product.name,
+          }]
+        : [{ url: 'https://anywherelearning.co/og-default.jpg', width: 1200, height: 630, alt: product.name }],
     },
   };
 }
