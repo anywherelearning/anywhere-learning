@@ -3,6 +3,8 @@ import {
   getBestFor,
   SHARED_ACTIVITY_STRUCTURE,
   SHARED_WHY_FAMILIES_LOVE_IT,
+  SHARED_PARENT_GUIDE_STRUCTURE,
+  SHARED_WHY_PARENTS_LOVE_IT,
 } from '@/lib/product-descriptions';
 
 interface ProductDescriptionSectionProps {
@@ -79,13 +81,15 @@ export default function ProductDescriptionSection({
         </div>
       )}
 
-      {/* Every Activity Includes */}
+      {/* Structure (varies by format) */}
       <div>
         <h3 className="text-base font-semibold text-gray-900 mb-3">
-          Every {desc.format === 'Project Guide' ? 'Project Guide' : 'Activity'} Includes
+          {desc.format === 'Parent Guide'
+            ? "What's Inside the Skills Map"
+            : `Every ${desc.format === 'Project Guide' ? 'Project Guide' : 'Activity'} Includes`}
         </h3>
         <ul className="space-y-2">
-          {SHARED_ACTIVITY_STRUCTURE.map((item, i) => (
+          {(desc.format === 'Parent Guide' ? SHARED_PARENT_GUIDE_STRUCTURE : SHARED_ACTIVITY_STRUCTURE).map((item, i) => (
             <li key={i} className="flex items-start gap-2.5">
               <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 flex-shrink-0" />
               <span className="text-sm text-gray-600 leading-relaxed">{item}</span>
@@ -94,13 +98,13 @@ export default function ProductDescriptionSection({
         </ul>
       </div>
 
-      {/* Why Families Love It */}
+      {/* Why Families/Parents Love It */}
       <div>
         <h3 className="text-base font-semibold text-gray-900 mb-3">
-          Why Families Love It
+          {desc.format === 'Parent Guide' ? 'Why Parents Love It' : 'Why Families Love It'}
         </h3>
         <ul className="space-y-2">
-          {SHARED_WHY_FAMILIES_LOVE_IT.map((item, i) => (
+          {(desc.format === 'Parent Guide' ? SHARED_WHY_PARENTS_LOVE_IT : SHARED_WHY_FAMILIES_LOVE_IT).map((item, i) => (
             <li key={i} className="flex items-start gap-2.5">
               <svg className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
