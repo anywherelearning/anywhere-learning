@@ -13,8 +13,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getAllPosts();
   const resourcePages = getAllResources();
 
-  // Use a fixed date for static pages so crawlers see real change signals
-  const siteLastUpdated = new Date('2026-04-15');
+  // Stamp static pages with the build/revalidation timestamp so each deploy
+  // signals freshness to crawlers. Pages with their own per-content dates
+  // (blog posts, guides, products) override this below.
+  const siteLastUpdated = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -99,7 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `https://anywherelearning.co/blog/${post.slug}`,
-    lastModified: new Date(post.publishedAt),
+    lastModified: new Date(post.dateModified || post.publishedAt),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
