@@ -136,6 +136,9 @@ export default function RootLayout({
                   },
                   "sameAs": [
                     "https://ca.pinterest.com/anywherelearning/",
+                    "https://www.instagram.com/anywherelearning",
+                    "https://www.facebook.com/profile.php?id=61587630845193",
+                    "https://www.youtube.com/@Anywhere_Learning",
                   ],
                 },
                 {
