@@ -80,7 +80,9 @@ const personLd = {
   description:
     "Former classroom teacher (B.Ed, M.Ed) with 15 years of experience who left to homeschool and worldschool her own kids. Creator of Anywhere Learning activity guides.",
   url: "https://anywherelearning.co/about",
-  sameAs: ["https://ca.pinterest.com/anywherelearning/"],
+  sameAs: [
+    "https://www.wikidata.org/wiki/Q139595767",
+  ],
   worksFor: {
     "@type": "Organization",
     name: "Anywhere Learning",
