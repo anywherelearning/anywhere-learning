@@ -27,6 +27,12 @@ type PinterestEventData = {
   line_items?: PinterestLineItem[];
   search_query?: string;
   lead_type?: string;
+  /** SHA-256 hashed email (or raw email — pintrk auto-hashes). */
+  em?: string;
+  /** SHA-256 hash of a stable browser-persistent visitor UUID. */
+  external_id?: string;
+  /** Pinterest click ID (epik), captured from ?epik= URL param on landing. */
+  click_id?: string;
 };
 
 /** Pinterest user_data block: matching parameters that lift Event Quality Score. */
@@ -38,6 +44,15 @@ type PinterestUserData = {
   /** Pinterest click ID (epik), captured from ?epik= URL param on landing. */
   click_id?: string;
 };
+
+/**
+ * Module-level cache of the latest Pinterest user_data values so that every
+ * track() event can include them inline. Pinterest's EQS dashboard counts
+ * coverage at the EVENT level, not the session level — passing user_data via
+ * load() alone leaves the dashboard reporting "0% covered" even when the data
+ * is technically known to the tag. Inline-on-event fixes this.
+ */
+const cachedUserData: PinterestUserData = {};
 
 type PintrkFunction = {
   (command: 'track', event: string, data?: PinterestEventData): void;
@@ -92,6 +107,12 @@ export function pinterestTrack(event: string, data?: PinterestEventData): void {
   try {
     const enriched: PinterestEventData = {
       event_id: data?.event_id ?? generateEventId(),
+      // Auto-inject any cached user_data (em / external_id / click_id) so Pinterest
+      // EQS reports per-event coverage instead of just session-level. Inline values
+      // on `data` win if explicitly passed.
+      ...(cachedUserData.em ? { em: cachedUserData.em } : {}),
+      ...(cachedUserData.external_id ? { external_id: cachedUserData.external_id } : {}),
+      ...(cachedUserData.click_id ? { click_id: cachedUserData.click_id } : {}),
       ...data,
       line_items: data?.line_items?.map((item) => ({
         product_brand: BRAND_NAME,
@@ -126,6 +147,7 @@ export function pinterestSetEnhancedMatch(email: string | null | undefined): voi
   if (!email) return;
   const trimmed = email.trim().toLowerCase();
   if (!trimmed) return;
+  cachedUserData.em = trimmed;
   try {
     window.pintrk('load', PINTEREST_TAG_ID, { em: trimmed });
   } catch {
@@ -149,6 +171,11 @@ export function pinterestSetUserData(data: PinterestUserData): void {
   if (data.external_id) clean.external_id = data.external_id;
   if (data.click_id) clean.click_id = data.click_id;
   if (Object.keys(clean).length === 0) return;
+  // Mirror into the module-level cache so subsequent track() events can
+  // inline these values. EQS counts per-event, not per-session.
+  if (clean.em) cachedUserData.em = clean.em;
+  if (clean.external_id) cachedUserData.external_id = clean.external_id;
+  if (clean.click_id) cachedUserData.click_id = clean.click_id;
   try {
     window.pintrk('load', PINTEREST_TAG_ID, clean);
   } catch {

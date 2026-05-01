@@ -51,6 +51,13 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
 
       setStatus("success");
       try { localStorage.setItem('free-guide-submitted', 'true'); } catch {}
+      // Push email into Pinterest enhanced match so any subsequent events
+      // on this session (and future sessions if the cookie persists) carry
+      // em coverage for Event Quality Score.
+      try {
+        const { pinterestSetEnhancedMatch } = await import('@/lib/tracking');
+        pinterestSetEnhancedMatch(email);
+      } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");
       setStatus("error");

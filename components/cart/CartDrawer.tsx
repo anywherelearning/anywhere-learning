@@ -12,7 +12,7 @@ import type { BundleUpsell } from '@/lib/cart';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useCapacitor } from '@/components/mobile/CapacitorProvider';
 import { openExternalBrowser } from '@/lib/capacitor';
-import { ga4AddToCart, pinterestTrack } from '@/lib/tracking';
+import { ga4AddToCart, pinterestTrack, pinterestSetEnhancedMatch } from '@/lib/tracking';
 import { useUser } from '@clerk/nextjs';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -171,6 +171,10 @@ export default function CartDrawer() {
 
     // Save email for cart abandonment tracking
     if (email) saveCartEmail(email);
+
+    // Push email into Pinterest enhanced match so the AddToCart / checkout
+    // events that fire on this and subsequent visits include em coverage.
+    if (email) pinterestSetEnhancedMatch(email);
 
     try {
       const res = await fetch('/api/checkout', {
