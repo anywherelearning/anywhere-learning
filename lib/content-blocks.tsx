@@ -48,22 +48,37 @@ export function getTableOfContents(content: ContentBlock[]) {
 
 /**
  * Extract HowTo-style steps from content blocks.
- * Each H2 heading becomes a step name; the first paragraph immediately
- * following that heading becomes the step text. Leading numeric prefixes
- * like "1. " or "3) " are stripped from the step name so the schema reads
- * cleanly to search engines.
  *
- * Returns an empty array if fewer than 3 qualifying steps are found. The
- * caller is expected to skip HowTo JSON-LD in that case.
+ * Strategy: prefer numbered H3 headings (typical of listicles like "15
+ * Outdoor STEM Challenges" where H2 is a section title and each H3 is
+ * an actual step). Fall back to H2 headings for "How to" guides where
+ * each H2 is a top-level step.
+ *
+ * Each chosen heading becomes a step name; the first paragraph
+ * immediately following that heading becomes the step text. Leading
+ * numeric prefixes like "1. " or "3) " are stripped from the step name
+ * so the schema reads cleanly to search engines.
+ *
+ * Returns an empty array if fewer than 3 qualifying steps are found.
+ * The caller is expected to skip HowTo JSON-LD in that case.
  */
 export function getHowToSteps(
   content: ContentBlock[],
 ): { name: string; text: string; anchor: string }[] {
+  const numberedRe = /^\s*\d+\s*[.):-]\s+/;
+
+  // Prefer numbered H3s when ≥3 exist (listicle structure). Otherwise
+  // fall back to H2 (traditional how-to with sectioned steps).
+  const numberedH3Count = content.filter(
+    (b) => b.type === 'heading' && b.level === 3 && numberedRe.test(b.text),
+  ).length;
+  const targetLevel: 2 | 3 = numberedH3Count >= 3 ? 3 : 2;
+
   const steps: { name: string; text: string; anchor: string }[] = [];
 
   for (let i = 0; i < content.length; i++) {
     const block = content[i];
-    if (block.type !== 'heading' || block.level !== 2) continue;
+    if (block.type !== 'heading' || block.level !== targetLevel) continue;
 
     // Find the next paragraph within a short window (skip images, callouts, etc.)
     let stepText: string | null = null;

@@ -3202,7 +3202,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['worldschool-two-kids', 'homeschool-while-traveling', 'new-to-homeschooling'],
-    pillarSlug: 'worldschooling-travel',
+    pillarSlug: 'worldschooling-guide',
   },
   {
     slug: 'unschooling-vs-homeschooling',

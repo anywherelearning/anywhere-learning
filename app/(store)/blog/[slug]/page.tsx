@@ -14,6 +14,8 @@ import {
   type BlogCategory,
 } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getHowToSteps } from '@/lib/content-blocks';
+import { getResourceBySlug } from '@/lib/resources';
+import Link from 'next/link';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import AuthorBio from '@/components/blog/AuthorBio';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
@@ -146,6 +148,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound();
 
   const cat = blogCategories[post.category];
+  const pillar = post.pillarSlug ? getResourceBySlug(post.pillarSlug) : undefined;
   const related = getRelatedPosts(post);
   // Auto-inject product callouts if not manually placed
   const contentWithCallouts = injectCallouts(post);
@@ -186,6 +189,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       '@type': 'WebPage',
       '@id': `https://anywherelearning.co/blog/${post.slug}`,
     },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['article [data-summary]', 'article h1', 'article p:first-of-type'],
+    },
   };
 
   const breadcrumbLd = {
@@ -213,9 +220,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     })),
   } : null;
 
-  // HowTo schema: only emit for posts whose title begins with "How to"
-  // and where the H2-structure yields at least 3 extractable steps.
-  const isHowToPost = /^how to\b/i.test(post.title);
+  // HowTo schema: emit for posts whose title begins with "How to" or any
+  // number-prefixed listicle (e.g. "15 Outdoor STEM Challenges",
+  // "30 Screen-Free Activities", "10 Life Skills..."). The ≥3-step gate
+  // in getHowToSteps is the real semantic check; the regex just decides
+  // which titles are listicle-like enough to attempt the extraction.
+  const isHowToPost = /^(?:how to\b|\d+\s)/i.test(post.title);
   const howToSteps = isHowToPost ? getHowToSteps(contentWithCallouts) : [];
   const pageUrl = `https://anywherelearning.co/blog/${post.slug}`;
   const howToLd = howToSteps.length > 0 ? {
@@ -301,6 +311,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mb-8">
               {post.excerpt}
             </p>
+
+            {/* Pillar link: surfaces the pillar guide this post belongs to */}
+            {pillar && (
+              <div className="mb-8">
+                <Link
+                  href={`/guides/${pillar.slug}`}
+                  className="inline-flex items-center gap-2 text-sm text-forest hover:text-forest-dark transition-colors group"
+                >
+                  <span className="font-medium">Part of</span>
+                  <span className="underline underline-offset-4 decoration-forest/30 group-hover:decoration-forest">{pillar.title}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            )}
 
             {/* Author + date */}
             <div className="flex items-center gap-4">

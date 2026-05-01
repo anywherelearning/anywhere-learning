@@ -162,6 +162,10 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
       '@type': 'WebPage',
       '@id': `https://anywherelearning.co/guides/${resource.slug}`,
     },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['article [data-summary]', 'article h1', 'article p:first-of-type'],
+    },
   };
 
   const breadcrumbLd = {
@@ -261,8 +265,18 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
                 </div>
               )}
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">{resource.author.name}</span>
-                <span className="text-[13px] text-gray-400">{formatDate(resource.publishedAt)}</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {resource.author.name}
+                  {resource.author.credentials && (
+                    <span className="text-gray-400 font-normal"> · {resource.author.credentials}</span>
+                  )}
+                </span>
+                <span className="text-[13px] text-gray-400">
+                  {formatDate(resource.publishedAt)}
+                  {resource.dateModified && resource.dateModified !== resource.publishedAt && (
+                    <> · Updated {formatDate(resource.dateModified)}</>
+                  )}
+                </span>
               </div>
             </div>
           </ScrollReveal>

@@ -8,6 +8,7 @@ interface SummaryBoxProps {
 export default function SummaryBox({ text, heading = 'In short' }: SummaryBoxProps) {
   return (
     <aside
+      data-summary="true"
       className="my-10 md:my-14 relative rounded-2xl border border-forest/[0.10] bg-gradient-to-br from-[#f0f5ef] via-[#f4f7f3] to-[#faf9f6] p-6 md:p-8 shadow-[0_2px_20px_-4px_rgba(88,129,87,0.08)]"
       role="note"
       aria-label="Article summary"
