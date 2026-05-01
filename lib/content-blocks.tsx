@@ -288,7 +288,7 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
                 <path d="M9 18h6M12 2a7 7 0 00-2 13.7V17a1 1 0 001 1h2a1 1 0 001-1v-1.3A7 7 0 0012 2z" />
               </svg>
             </span>
-            <p className="text-gray-600 leading-[1.7] text-[1.05rem] flex-1">{block.text}</p>
+            <p className="text-gray-600 leading-[1.7] text-[1.05rem] flex-1">{parseInlineLinks(block.text)}</p>
           </div>
         </div>
       );
