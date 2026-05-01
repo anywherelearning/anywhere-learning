@@ -3813,7 +3813,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'A homeschool first-year checklist isn’t about ticking off curriculum or fitting your kids into school’s calendar. It’s about the small, mostly-invisible things that compound over a year: deschooling properly, finding a rhythm (not a schedule), building one or two real friendships, learning to spot your own burnout early, and knowing what records actually matter. Here is a month-by-month list of the moves that pay off, and the popular advice you can safely skip.' },
       { type: 'paragraph', text: 'The first year of homeschooling is mostly about figuring out what your family actually needs, not about delivering a curriculum. Most "homeschool first year checklists" out there are written by curriculum companies, and somehow they always end with you needing to buy curriculum. Suspicious.' },
-      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, written by someone who is actually doing it (and has been homeschooled, taught in classrooms, and watched a lot of new homeschool families either soar or crash in their first 12 months).' },
+      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, with no curriculum-store affiliate links waiting at the end. Less "what to buy" and more "what actually matters."' },
       { type: 'paragraph', text: 'Save this. Screenshot it. Print it if you really want to. Then forget about it for a few weeks at a time and come back when you need a nudge.' },
       { type: 'heading', level: 2, text: 'Before you start' },
       { type: 'list', ordered: false, items: [
