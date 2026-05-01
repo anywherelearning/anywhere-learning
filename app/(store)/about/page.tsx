@@ -75,19 +75,31 @@ const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://anywherelearning.co/about#amelie",
-  name: "Amelie",
+  name: "Amelie Drouin",
+  givenName: "Amelie",
+  familyName: "Drouin",
   jobTitle: "Former Teacher & Founder of Anywhere Learning",
   description:
     "Former classroom teacher (B.Ed, M.Ed) with 15 years of experience who left to homeschool and worldschool her own kids. Creator of Anywhere Learning activity guides.",
   url: "https://anywherelearning.co/about",
+  image: "https://anywherelearning.co/amelie.jpg",
+  nationality: {
+    "@type": "Country",
+    name: "Canada",
+  },
   sameAs: [
     "https://www.wikidata.org/wiki/Q139595767",
   ],
   worksFor: {
-    "@type": "Organization",
-    name: "Anywhere Learning",
-    url: "https://anywherelearning.co",
+    "@id": "https://anywherelearning.co/#organization",
   },
+  alumniOf: [
+    {
+      "@type": "EducationalOrganization",
+      name: "Université de Sherbrooke",
+      sameAs: "https://www.wikidata.org/wiki/Q2579532",
+    },
+  ],
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
