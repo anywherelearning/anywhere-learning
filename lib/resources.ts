@@ -307,10 +307,6 @@ const resources: ResourcePage[] = [
         ],
       },
       {
-        type: 'paragraph',
-        text: 'For more structure, our [complete guide to real-world learning](/blog/real-world-learning-guide) walks through specific activities, age adaptations, and tips for documenting learning for your state\'s requirements.',
-      },
-      {
         type: 'bundle-callout',
         slug: 'real-world-mega-bundle',
       },
@@ -347,7 +343,6 @@ const resources: ResourcePage[] = [
       'life-skills-before-12',
       'what-kids-should-know-before-18',
       'project-based-learning-homeschool',
-      'real-world-learning-guide',
       'kids-making-videos-learning',
     ],
     recommendedProduct: 'budget-challenge',

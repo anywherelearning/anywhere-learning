@@ -51,6 +51,16 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        // Consolidated into the /guides pillar page (was a duplicate of the same content)
+        source: "/blog/real-world-learning-guide",
+        destination: "/guides/real-world-learning",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default analyze(nextConfig);
