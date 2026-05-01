@@ -4016,9 +4016,9 @@ const posts: BlogPost[] = [
     keywords: ['deschooling activities', 'what to do during deschooling', 'deschooling first month', 'deschooling ideas', 'deschooling for parents', 'low prep deschooling', 'deschooling games'],
     readTimeMinutes: 9,
     author: amelie,
-    heroImage: '/images/deschooling-activities-hero.jpeg',
+    heroImage: '/images/deschooling-activities-hero-v2.jpeg',
     heroImageAlt: 'Zach lying on a picnic blanket under tall trees, reading at his own pace in dappled afternoon light, the slow shape of deschooling',
-    heroImagePosition: 'center 70%',
+    heroImagePosition: 'center 60%',
     content: [
       { type: 'summary', text: 'Deschooling activities are intentional, low-prep things you do during the transition out of traditional school that look nothing like school. They include outdoor exploration, kitchen projects, library days with no agenda, hands-on building, family interviews, simple board games, and lots of read-alouds. The point isn\'t to teach anything specific; it\'s to help your kids (and you) remember that learning belongs to them and can happen anywhere. Deschooling typically takes about one month for every year your child spent in formal schooling.' },
       { type: 'paragraph', text: 'You\'ve read [the 5 stages of deschooling](/blog/five-stages-deschooling), you\'ve breathed through the panic, and now you\'re sitting on the couch at 10am wondering: "Okay but what do we actually do today?"' },
