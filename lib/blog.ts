@@ -95,6 +95,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/kitchen-learning-lab-hero.jpeg',
     heroImageAlt: 'Two kids chopping fruit together at the kitchen counter',
     content: [
+      { type: 'summary', text: 'Kitchen learning is one of the highest-leverage activities in a homeschool day. Cooking covers measurement and fractions (math), reading recipes (literacy), heat and chemistry (science), and where food comes from (geography and economics). Five concrete ways to lean into the learning that\'s already happening at dinner, without turning it into a lesson.' },
       { type: 'paragraph', text: 'If you\u2019ve ever had a kid ask \u201cwhy does bread rise?\u201d while you\u2019re kneading dough, congratulations, you\u2019re already running a science class. The kitchen is the most underrated classroom in your home, and the best part? It requires low prep.' },
       { type: 'paragraph', text: 'Every meal already involves reading, maths, science, planning, and problem-solving. Once you start noticing it, you realise the kitchen isn\u2019t a break from learning, it is [the learning](/guides/real-world-learning).' },
       { type: 'paragraph', text: 'Here are five ways to lean into what\u2019s already happening in your kitchen, without turning it into a lesson that sucks the joy out of cooking together.' },
@@ -149,6 +150,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/nature-walks-hero.jpeg',
     heroImageAlt: 'Kids hiking a mountain trail toward snowy peaks through alpine meadows',
     content: [
+      { type: 'summary', text: 'Nature walks teach science through real-time observation: gravity, erosion, ecosystems, weather, and the scientific method, all available on a 30-minute walk with no lesson plan required. The skill the walk builds, asking better questions about the natural world, transfers to every other subject.' },
       { type: 'paragraph', text: 'In Costa Rica, my kids spotted a crocodile on a trail in Corcovado. In El Salvador, we walked the beach and noticed the cliffs were crumbling, erosion, right there in front of us. In Panama, my son spent an entire boat ride identifying different species of monkeys. None of this was planned. None of it came from a lesson. You just need to be outside.' },
       { type: 'paragraph', text: 'This is what real science looks like. Not a fill-in-the-blank worksheet about ecosystems, but a real, living creature that sparks genuine wonder. And it costs nothing. It requires nothing. It\u2019s just... outside.' },
       { type: 'heading', level: 2, text: 'Observation is the foundation of science' },
@@ -218,6 +220,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Kid reading a book in a hammock strung between trees in the forest',
     heroImagePosition: 'center 60%',
     content: [
+      { type: 'summary', text: 'Curriculum guilt is the internalized voice of the school system telling you that learning only counts when it looks structured. It is not a sign you are doing it wrong. It is a sign you are unlearning what school taught you about learning. The cure is noticing the learning that is already happening and trusting that connection matters more than completion.' },
       { type: 'paragraph', text: 'You don\u2019t need a curriculum. Not a structured one. Not a \u201crelaxed\u201d one. Not even an \u201cunschooling curriculum\u201d (which is an oxymoron, by the way). You need connection, curiosity, and the courage to trust that your kids are learning, even when it doesn\u2019t look like school.' },
       { type: 'paragraph', text: 'I know this might sound radical. I know the voice in your head is already pushing back. So let me tell you where that voice comes from, and why you don\u2019t have to listen to it.' },
       { type: 'heading', level: 2, text: 'Where the guilt comes from' },
@@ -1162,6 +1165,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/homeschool-travel-hero.jpeg',
     heroImageAlt: 'View through an airplane window at sunset, the start of another family adventure',
     content: [
+      { type: 'summary', text: 'Homeschooling while traveling does not require a curriculum in your suitcase. Travel is the curriculum: airports teach navigation and time zones, restaurants teach reading and currency, museums teach history and storytelling, getting lost teaches problem-solving. The work is shifting from fitting school into travel to noticing what travel already teaches.' },
       { type: 'paragraph', text: 'When we first started traveling, I packed a couple of workbooks thinking we\u2019d keep some structure going on the road. And we did use them, for a little while. But the more we traveled, the less we reached for them. The learning was already happening around us, and the workbooks just couldn\u2019t compete with what the real world was offering.' },
       { type: 'paragraph', text: 'It took me a while to realise: traveling IS the education. You don\u2019t need to force school into the gaps between sightseeing. The sightseeing is the school. The airport is the school. The restaurant menu in a language you don\u2019t speak is the school.' },
       { type: 'paragraph', text: 'But I also know the anxiety. The voice that says: \u201care they learning enough?\u201d Here\u2019s everything I\u2019ve figured out after months of educating on the move, what works, what doesn\u2019t, and what to let go of completely.' },
@@ -1487,6 +1491,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Julia exploring a colourful street with hanging hats and murals in Panama',
     heroImagePosition: 'center 70%',
     content: [
+      { type: 'summary', text: 'Most worldschool families operate without a fixed daily schedule because the location, weather, energy levels, and surprise opportunities of slow travel make schedules counterproductive. The structure that does work is loose: a morning rhythm, an afternoon based on what\'s around, and trust that learning compounds across days, not within them.' },
       { type: 'paragraph', text: 'The question I get asked more than any other is: "What does your day actually look like?"' },
       { type: 'paragraph', text: 'People want a schedule. A timetable. Something they can pin to a fridge and follow. I get it. I wanted that too when we started. I\u2019m a former teacher. I love a good plan.' },
       { type: 'paragraph', text: 'But the honest answer is: we don\u2019t have a schedule. We don\u2019t have a set curriculum. We don\u2019t have "school hours." And it took me a while to [stop feeling guilty about that](/blog/five-stages-deschooling).' },
@@ -1570,6 +1575,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/start-mid-year-hero.jpeg',
     heroImageAlt: 'Zach and Julia with backpacks at the airport, sunset glowing through the windows, the start of a new chapter',
     content: [
+      { type: 'summary', text: 'You can start homeschooling in October, in February, the day after spring break, or the morning after a hard parent-teacher conference. There is no required start date because there is no curriculum to fall behind on. The first month is decompression, not academics. The next is finding rhythm. Real learning starts when curiosity returns.' },
       { type: 'paragraph', text: 'I get this question all the time: \u201cIs it too late to start homeschooling this year?\u201d The short answer: no. The longer answer: there is no wrong time to do the right thing for your family.' },
       { type: 'paragraph', text: 'We pulled our kids out in September 2025. Technically it was the start of a new school year, but the decision didn\u2019t happen on a clean calendar page. It happened mid-life, mid-chaos, mid-everything. We\u2019d been talking about it for months, worrying about it for longer, and one day we just decided: we\u2019re doing this. We booked flights to Florida, packed bags, and started a seven-month worldschooling trip through Central America.' },
       { type: 'paragraph', text: 'If you\u2019re reading this in October or February or the week before spring break, wondering if you\u2019ve missed the window, you haven\u2019t. The window is whenever you open it.' },
@@ -1868,6 +1874,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Zach and another kid making chocolate at a workshop, hands-on, project-based learning',
     heroImagePosition: 'center 40%',
     content: [
+      { type: 'summary', text: 'Project-based learning at home means kids choose a real question they want to answer, then spend days or weeks building toward an actual outcome (a museum exhibit, a video, a business pitch, a meal). The point is not the project; it is the integration: research, writing, math, design, and presentation all happen in service of something the kid actually cares about.' },
       { type: 'paragraph', text: 'My son spent a full week researching the Panama Canal. Not because anyone told him to. Because we visited the Miraflores locks, watched a boat pass through, saw a documentary at the visitor centre, and he had questions. A lot of questions.' },
       { type: 'paragraph', text: 'How long is the canal? Why did the French fail? How many people died building it? How do the locks actually work? Why did they build a lake in the middle of a country?' },
       { type: 'paragraph', text: 'He looked all of it up. He wrote a research piece in French for our family travel blog. He drew diagrams of the three lock systems. Miraflores, Pedro Miguel, Gatun. He calculated that over 14,000 boats pass through per year. He found out that roughly 20,000 workers died during the French attempt, mostly from malaria and yellow fever.' },
@@ -1982,6 +1989,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/kids-making-videos-hero.jpeg',
     heroImageAlt: 'Zach and Julia working on their laptops at a dining table with ocean views, creating videos and digital projects together',
     content: [
+      { type: 'summary', text: 'Making videos teaches more skills than book reports because creating requires a deeper understanding than consuming. A single short video involves research, writing, visual communication, public speaking, editing, and project management, often across multiple languages. The platform is optional. The learning is in the making.' },
       { type: 'paragraph', text: 'My son\u2019s latest project is an interview film. He sat down with Julia, my husband, and me, one by one, and asked us about our entire seven-month trip. \u201cWhat was your proudest moment?\u201d \u201cDid this trip change you?\u201d \u201cWhat would you do differently?\u201d He planned the questions, set up the camera, conducted every interview, and edited the whole thing together in iMovie. He\u2019s twelve.' },
       { type: 'paragraph', text: 'Before that, he wrote and recorded \u201cTous les jours au Salvador\u201d, an original song about our time in El Salvador. In French. My daughter made \u201cConnaissez vous le Salvador?\u201d, Do you know El Salvador? She covers what she finds surprising, funny, and interesting about the country, edited it all together in iMovie on her iPad. It\u2019s personal, opinionated, and very her.' },
       { type: 'paragraph', text: 'Neither of these was assigned. Neither was graded. Neither followed a template or a rubric. They made them because they wanted to share what they\u2019ve been experiencing, and video is the format that feels most natural to them.' },
@@ -2970,6 +2978,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/destinations-hero.jpeg',
     heroImageAlt: 'Family posing at a Panama mountain viewpoint overlooking a valley town',
     content: [
+      { type: 'summary', text: 'Choosing worldschool destinations comes down to four practical factors: cost of living (does the budget stretch), language exposure (is it a language the family wants to learn), kid-friendly logistics (parks, beaches, walkable, safe), and climate (avoid the rainy season). The best destinations balance learning richness with daily ease, because a worldschool family that\'s exhausted is not a learning family.' },
       { type: 'paragraph', text: 'When we decided to worldschool for seven months, the first question after "are we really doing this?" was "where do we go?" I spent weeks on blogs, forums, and Facebook groups trying to figure out the perfect destinations. Spoiler: there\u2019s no such thing. But there are smart ways to narrow it down, and some things that matter way more than I expected.' },
       { type: 'paragraph', text: 'Our route ended up being Florida, Panama, Costa Rica, and El Salvador. Some of those choices were researched. Some were word-of-mouth. Some were money-wise. Here\u2019s what actually went into the decisions, and what I\u2019d tell someone making the same choices today.' },
 
