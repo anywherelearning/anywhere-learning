@@ -706,14 +706,15 @@ const resources: ResourcePage[] = [
   {
     slug: 'worldschooling-guide',
     title: 'Worldschooling & Learning While Traveling: Everything You Need to Know',
-    excerpt: 'How to combine travel and education, what deschooling looks like, and how to build a flexible learning practice on the road.',
+    excerpt: 'What is worldschooling? It\'s an educational approach that uses travel and real-world cultural immersion as the primary learning environment. Here\'s how to combine travel and education, what deschooling looks like on the road, and how to build a flexible learning rhythm that works for your whole family.',
     topic: 'worldschooling',
     publishedAt: '2026-03-21',
+    dateModified: '2026-04-30',
     keywords: [
-      'worldschooling', 'learning while traveling', 'travel homeschool',
-      'deschooling', 'worldschool family', 'portable homeschool',
+      'what is worldschooling', 'worldschooling', 'learning while traveling', 'travel homeschool',
+      'worldschool vs homeschool', 'worldschool family', 'portable homeschool',
       'slow travel with kids', 'roadschooling', 'worldschool multiple kids',
-      'second language travel kids', 'homeschool mid year',
+      'worldschooling cost', 'worldschooling destinations', 'homeschool mid year',
     ],
     readTimeMinutes: 25,
     author: amelie,
@@ -960,6 +961,10 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          {
+            question: 'What is worldschooling?',
+            answer: 'Worldschooling is an educational approach that uses travel and real-world cultural immersion as the primary learning environment. Families who worldschool combine exploration of new places with intentional skill-building, often without a fixed curriculum. It can be full-time travel for years, a single trip for a semester, or a mindset of treating any place (including your own city) as a classroom. The core idea is that the world itself is the teacher.',
+          },
           {
             question: 'How much does worldschooling cost?',
             answer: 'It varies enormously. Some families spend less than they did at home by choosing affordable destinations (Southeast Asia, Central America, parts of Eastern Europe) and slow travel. Others spend significantly more. The key variables are destination cost of living, travel style, and how often you move. Frequent moves are expensive: flights, new accommodation deposits, travel days where nothing else gets done. Slow travel is almost always cheaper.',
