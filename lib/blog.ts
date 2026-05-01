@@ -3817,7 +3817,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Save this. Screenshot it. Print it if you really want to. Then forget about it for a few weeks at a time and come back when you need a nudge.' },
       { type: 'heading', level: 2, text: 'Before you start' },
       { type: 'list', ordered: false, items: [
-        'Find out what your state or country requires (letter of intent, annual assessment, portfolio, or nothing at all). Most US states require very little; some require more. Search "[your state] homeschool laws" and trust state homeschool associations over random Facebook advice.',
+        'Find out what your state, province, or country requires (letter of intent, annual assessment, portfolio, or nothing at all). In the US, most states require very little, though some require more. In Canada, requirements are set provincially: BC, Alberta, and Ontario each have their own process, and they are generally homeschool-friendly. Search "[your state or province] homeschool laws" and trust official provincial or state homeschool associations over random Facebook advice.',
         'Tell the school you’re withdrawing, in writing, if you\'re leaving a public or private school. Keep a copy of the letter and any reply.',
         'Decide your "why" in one sentence. Not for anyone else. For the days when someone tilts their head and asks if you\'re sure about this. (Hint: [the socialisation conversation](/blog/socialization-answer) is coming.)',
         'Lower your expectations once. Then lower them again. The first year is about the family, not about output.',
