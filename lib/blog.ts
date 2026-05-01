@@ -3809,7 +3809,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 10,
     author: amelie,
     heroImage: '/images/first-year-checklist-hero.jpeg',
-    heroImageAlt: 'A homeschool family at the kitchen table with a notebook, pen, and morning light, the calm before a real first year of homeschooling',
+    heroImageAlt: 'Mom and Julia laughing together while apple-picking in an orchard, the warm beginning of a year of learning side by side',
+    heroImagePosition: 'center 30%',
     content: [
       { type: 'summary', text: 'A homeschool first-year checklist isn’t about ticking off curriculum or fitting your kids into school’s calendar. It’s about the small, mostly-invisible things that compound over a year: deschooling properly, finding a rhythm (not a schedule), building one or two real friendships, learning to spot your own burnout early, and knowing what records actually matter. Here is a month-by-month list of the moves that pay off, and the popular advice you can safely skip.' },
       { type: 'paragraph', text: 'The first year of homeschooling is mostly about figuring out what your family actually needs, not about delivering a curriculum. Most "homeschool first year checklists" out there are written by curriculum companies, and somehow they always end with you needing to buy curriculum. Suspicious.' },
@@ -3859,6 +3860,7 @@ const posts: BlogPost[] = [
         'If something isn\'t working, change it. The freedom to change without shame is the whole point of homeschooling.',
         'Read [how to recognise homeschool burnout](/blog/homeschool-burnout) before you need it, not after.',
       ]},
+      { type: 'image', src: '/images/first-year-checklist-puzzle.jpeg', alt: 'Family working on a jigsaw puzzle together at a wooden cabin table, the kind of slow shared time that holds a homeschool year together', caption: 'Months 4-6 in real life: a long puzzle, no agenda, three people slowing down at the same table.' },
       { type: 'heading', level: 2, text: 'Months 7-9: Stretch and adjust' },
       { type: 'list', ordered: false, items: [
         'Try one project that scares you a little. A multi-week build. A trip. A real-world challenge. Stretch the family.',
@@ -3922,7 +3924,7 @@ const posts: BlogPost[] = [
     readTimeMinutes: 11,
     author: amelie,
     heroImage: '/images/homeschool-friends-hero.jpeg',
-    heroImageAlt: 'Two homeschool kids sitting on a low stone wall in a sunlit park, laughing together, the kind of unstructured friendship that builds itself',
+    heroImageAlt: 'Four kids sitting together on a rock looking out across a wide mountain valley, the quiet kind of shared moment real friendships are made of',
     content: [
       { type: 'summary', text: 'Homeschoolers make friends through co-ops, sports teams, neighbourhood play, library and museum programmes, sibling and cousin relationships, faith communities, online interest groups, and at their parent\'s elbow in real-world settings. Most homeschool kids end up with fewer but deeper friendships than school produces, plus a wider age range of social contacts. The myth that homeschoolers are isolated comes from imagining a kid alone at a desk all day; the reality is closer to a kid who has a community spread across the week instead of stacked into one classroom.' },
       { type: 'paragraph', text: 'Of all the questions homeschool parents get asked, the friends question is the one with the most worry baked in. Curriculum questions are practical. Legal questions are answerable. But the friend question? That one carries grief and longing and the parent\'s own school memories all tangled up together.' },
@@ -3949,6 +3951,7 @@ const posts: BlogPost[] = [
         'Online communities (with care). Pen-pal exchanges, structured kid forums, Minecraft servers run by homeschool families, online book clubs. Not a replacement for in-person, but a real complement, especially for niche interests or rural families.',
         'At your elbow. The shopkeeper your kid chats with weekly, the librarian who saves them books, the elderly neighbour they bring soup to. Cross-generational friendships are one of homeschooling\'s biggest gifts and also count.',
       ]},
+      { type: 'image', src: '/images/homeschool-friends-bracelets.jpeg', alt: 'Four kids sitting on a striped blanket making bracelets together with no adult in sight, a quiet kid-led friendship moment', caption: 'This is what homeschool socialisation usually looks like in practice: a shared blanket, a shared project, no grown-ups directing.' },
       { type: 'heading', level: 2, text: 'The mistake most homeschool parents make' },
       { type: 'paragraph', text: 'They sign their kid up for a generic "homeschool group" and assume that\'s socialisation. It can be. But generic groups full of strangers can also feel awkward for shy kids and don\'t always produce friendships, just attendance.' },
       { type: 'paragraph', text: 'A better approach: pick activities organised around something your kid genuinely cares about. The kid who loves animals will make friends at the animal shelter faster than at a generic homeschool park day. The kid who loves building will make friends at robotics club faster than in a co-op art class. Match the activity to the kid.' },
@@ -4014,7 +4017,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 9,
     author: amelie,
     heroImage: '/images/deschooling-activities-hero.jpeg',
-    heroImageAlt: 'A kid lying on the grass looking up at clouds with a sketchbook beside them, the slow shape of deschooling',
+    heroImageAlt: 'Zach lying on a picnic blanket under tall trees, reading at his own pace in dappled afternoon light, the slow shape of deschooling',
+    heroImagePosition: 'center 70%',
     content: [
       { type: 'summary', text: 'Deschooling activities are intentional, low-prep things you do during the transition out of traditional school that look nothing like school. They include outdoor exploration, kitchen projects, library days with no agenda, hands-on building, family interviews, simple board games, and lots of read-alouds. The point isn\'t to teach anything specific; it\'s to help your kids (and you) remember that learning belongs to them and can happen anywhere. Deschooling typically takes about one month for every year your child spent in formal schooling.' },
       { type: 'paragraph', text: 'You\'ve read [the 5 stages of deschooling](/blog/five-stages-deschooling), you\'ve breathed through the panic, and now you\'re sitting on the couch at 10am wondering: "Okay but what do we actually do today?"' },
@@ -4053,6 +4057,7 @@ const posts: BlogPost[] = [
         'A nothing afternoon. This is the radical one. No outings, no projects, no screens. Just home. Watch what your child gravitates toward when there\'s genuinely nothing to do. That\'s the most important data of the whole month.',
       ]},
       { type: 'pull-quote', text: 'Deschooling isn\'t the absence of learning. It\'s the absence of the parts that were getting in the way of learning.' },
+      { type: 'image', src: '/images/deschooling-activities-cozy.jpeg', alt: 'Both kids relaxing on a couch by a wood stove with bowls of snacks, the kind of unstructured cozy afternoon that does the most quiet deschooling work', caption: 'A "nothing afternoon" in action: snacks, a fire, no plan, no screens, no agenda. This is the deschooling work that doesn\'t look like work.' },
       { type: 'heading', level: 2, text: 'A sample deschooling week' },
       { type: 'paragraph', text: 'If you want a starting structure (and most parents do), here\'s a low-pressure template:' },
       { type: 'list', ordered: false, items: [
