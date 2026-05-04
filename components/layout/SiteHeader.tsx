@@ -68,8 +68,8 @@ export default function SiteHeader() {
             <Image
               src="/logo-text-v2.png"
               alt="Anywhere Learning"
-              width={200}
-              height={50}
+              width={107}
+              height={64}
               className="h-16 w-auto"
               priority
             />
@@ -183,8 +183,8 @@ export default function SiteHeader() {
               <Image
                 src="/logo-text-v2.png"
                 alt="Anywhere Learning"
-                width={200}
-                height={50}
+                width={80}
+                height={48}
                 className="h-12 w-auto"
               />
             </Link>

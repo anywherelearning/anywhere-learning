@@ -36,8 +36,8 @@ export default function Header() {
           <Image
             src="/logo-text-v2.png"
             alt="Anywhere Learning"
-            width={200}
-            height={50}
+            width={107}
+            height={64}
             className="hidden sm:block h-16 w-auto"
             priority
           />

@@ -223,6 +223,7 @@ export default function HomePage() {
             alt="Children exploring and learning together outdoors"
             fill
             sizes="100vw"
+            quality={60}
             className="object-cover object-bottom"
             priority
           />
