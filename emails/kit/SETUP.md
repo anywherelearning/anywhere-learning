@@ -46,7 +46,7 @@ Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF (
 
 | # | File | Send time | Subject Line |
 |---|------|-----------|-------------|
-| 1 | `sale-home-educators-1-launch.html` | Mon May 4, 9am PT | You don't get a coffee mug. You get 25% off. |
+| 1 | `sale-home-educators-1-launch.html` | Mon May 4, 9am PT | A small thank you, from me to you. |
 | 2 | `sale-home-educators-2-reminder.html` | Sat May 9, 9am PT | Last 36 hours of the appreciation sale |
 | 3 | `sale-home-educators-3-final.html` | Sun May 10, 6pm PT | Ends tonight at midnight |
 
