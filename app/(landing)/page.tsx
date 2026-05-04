@@ -233,9 +233,8 @@ export default function HomePage() {
           {/* Bottom fade to cream */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
 
-          <HeroSaleBadge />
-
           <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-12 md:py-16 lg:py-20">
+            <HeroSaleBadge />
             <div className="max-w-xl lg:max-w-2xl">
               <div className="hero-stagger">
                 <p className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-5">

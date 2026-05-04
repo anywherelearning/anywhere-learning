@@ -65,7 +65,7 @@ export default function HeroSaleBadge() {
 
       {/* === DESKTOP: big bold card on the right with tilt === */}
       <div
-        className="pointer-events-none absolute right-24 top-16 z-20 hidden lg:block xl:right-40 xl:top-20"
+        className="pointer-events-none absolute right-4 top-4 z-20 hidden lg:block xl:right-0 xl:top-8"
         role="region"
         aria-label="Home Educators' Appreciation Week sale"
       >
@@ -74,7 +74,7 @@ export default function HeroSaleBadge() {
           <div className="absolute -inset-3 rounded-[2rem] bg-gold/40 blur-2xl" aria-hidden="true" />
 
           {/* Main card */}
-          <div className="relative max-w-2xl rounded-[2rem] border-[3px] border-gold bg-forest px-12 py-9 shadow-2xl">
+          <div className="relative w-[26rem] xl:w-[28rem] rounded-[2rem] border-[3px] border-gold bg-forest px-9 py-8 shadow-2xl">
             <div className="flex items-center gap-3 mb-3">
               {/* Decorative star */}
               <svg
