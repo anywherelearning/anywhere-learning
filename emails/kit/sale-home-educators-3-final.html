@@ -4,95 +4,78 @@
   Audience: All subscribers EXCLUDING anyone tagged "buyer" or "home-educators-2026-buyer"
   Subject: Ends tonight at midnight
   Preview: Last chance + Happy Mother's Day to the moms doing the work
+
+  HOW TO USE:
+  1. Kit > Broadcasts > New > paste this HTML in HTML mode
+  2. Save as a custom template
+  3. Use Kit's visual editor for the body content (see suggested copy below)
+
+  SUGGESTED BODY (paste into Kit's visual editor where {{ message_content }} renders):
+  ─────────────────────────────────────────────────────────────────────
+  Hi {{ subscriber.first_name | default: "friend" }},
+
+  Last chance on the 25% off if you've been thinking about it. The
+  discount auto-applies at checkout and ends 11:59pm PT tonight.
+
+  [BUTTON: Shop before midnight → links to https://anywherelearning.co/shop]
+
+  And before I sign off, happy Mother's Day to the moms doing the work.
+  The teaching, the planning, the unseen labor that makes a homeschool
+  day actually work. None of it goes unnoticed here.
+
+  Amelie
+  ─────────────────────────────────────────────────────────────────────
 -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #f5f3ee; margin: 0; padding: 0; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+<body style="background-color: #f5f3ee; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f3ee;">
     <tr>
       <td align="center" style="padding: 24px 16px;">
         <table cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; background-color: #faf9f6;">
 
-          <!-- Brand Header -->
+          <!-- Brand Header (fixed) -->
           <tr>
-            <td align="center" style="padding: 24px 24px 16px;">
-              <table cellpadding="0" cellspacing="0">
-                <tr>
-                  <td style="vertical-align: middle; padding-right: 8px;">
-                    <img src="https://anywherelearning.co/logo-icon-transparent.png" width="36" height="36" alt="" style="display: block;">
-                  </td>
-                  <td style="vertical-align: middle;">
-                    <img src="https://anywherelearning.co/logo-text-v2.png" width="140" height="84" alt="Anywhere Learning" style="display: block; height: 56px; width: auto;">
-                  </td>
-                </tr>
-              </table>
+            <td align="center" style="padding: 28px 24px 20px;">
+              <img src="https://embed.filekitcdn.com/e/avjxbM6xFYPPGavBKAYGYN/iTLpa9QxviNBhA3tFBiSbM/email?ar=16%3A9&amp;fit=crop" width="220" alt="Anywhere Learning" style="display: block; max-width: 220px;">
             </td>
           </tr>
 
-          <!-- Banner: final urgency -->
+          <!-- Sale Banner (fixed - final urgency, darker forest) -->
           <tr>
             <td style="background-color: #3d5c3b; padding: 26px 24px 22px; text-align: center; border-top: 4px solid #d4a373; border-bottom: 4px solid #d4a373;">
               <p style="font-size: 12px; font-weight: 700; color: #d4a373; margin: 0 0 6px; letter-spacing: 2px; text-transform: uppercase;">Last chance</p>
-              <h1 style="font-family: 'Dancing Script', cursive; font-size: 38px; font-weight: 700; color: #faf9f6; margin: 0; line-height: 1;">Ends tonight at midnight</h1>
+              <h1 style="font-family: 'Dancing Script', Georgia, serif; font-size: 38px; font-weight: 700; color: #faf9f6; margin: 0; line-height: 1;">Ends tonight at midnight</h1>
             </td>
           </tr>
 
-          <!-- Main Content -->
+          <!-- Editable message area -->
           <tr>
-            <td style="padding: 32px 32px 8px;">
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Hi {{ subscriber.first_name | default: "friend" }},</p>
-
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                Last chance on the 25% off if you've been thinking about it. The discount auto-applies at checkout and ends 11:59pm PT tonight.
-              </p>
-
-              <!-- CTA Button -->
-              <table cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td align="center" style="padding: 12px 0 28px;">
-                    <a href="https://anywherelearning.co/shop" style="background-color: #588157; border-radius: 12px; color: #faf9f6; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 40px; text-decoration: none;">Shop before midnight &rarr;</a>
-                  </td>
-                </tr>
-              </table>
-
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                And before I sign off, happy Mother's Day to the moms doing the work. The teaching, the planning, the unseen labor that makes a homeschool day actually work. None of it goes unnoticed here.
-              </p>
-
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 24px 0 8px;">
-                <span style="font-family: 'Dancing Script', cursive; font-size: 26px; color: #588157;">Amelie</span>
-              </p>
+            <td style="padding: 32px 32px 32px; font-size: 16px; line-height: 26px; color: #2d2d2d;">
+              {{ message_content }}
             </td>
           </tr>
 
-          <!-- Footer -->
+          <!-- Footer (fixed) -->
           <tr>
             <td style="border-top: 1px solid #e5e5e5;">
               <table cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td align="center" style="padding: 24px 32px;">
-                    <table cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td style="vertical-align: middle; padding-right: 6px;">
-                          <img src="https://anywherelearning.co/logo-icon.png" width="20" height="14" alt="" style="display: block; opacity: 0.4;">
-                        </td>
-                        <td style="vertical-align: middle;">
-                          <span style="font-size: 13px; color: #999999;">Anywhere Learning</span>
-                        </td>
-                      </tr>
-                    </table>
-                    <p style="font-size: 13px; color: #999999; margin: 4px 0 8px; line-height: 1.5;">Meaningful Learning, Wherever You Are</p>
+                    <img src="https://embed.filekitcdn.com/e/avjxbM6xFYPPGavBKAYGYN/s8snrPNP6E3mTvmfRKajj9/email?ar=16%3A9&amp;fit=crop" width="32" alt="" style="display: block; margin: 0 auto 8px; opacity: 0.4;">
+                    <p style="font-size: 13px; color: #999999; margin: 0 0 4px;">Anywhere Learning</p>
+                    <p style="font-size: 13px; color: #999999; margin: 0 0 8px; line-height: 1.5;">Meaningful Learning, Wherever You Are</p>
                     <p style="font-size: 13px; margin: 0;">
-                      <a href="https://anywherelearning.co/shop" style="color: #588157; text-decoration: none;">Shop</a>
-                      &middot;
-                      <a href="https://anywherelearning.co/blog" style="color: #588157; text-decoration: none;">Blog</a>
-                      &middot;
-                      <a href="https://anywherelearning.co/resources" style="color: #588157; text-decoration: none;">Resources</a>
+                      <a href="https://anywherelearning.co/shop" style="color: #588157; text-decoration: none;">Shop</a> &#183;
+                      <a href="https://anywherelearning.co/blog" style="color: #588157; text-decoration: none;">Blog</a> &#183;
+                      <a href="https://anywherelearning.co/guides" style="color: #588157; text-decoration: none;">Guides</a>
+                    </p>
+                    <p style="font-size: 12px; color: #bbbbbb; margin: 12px 0 0;">
+                      <a href="{{ unsubscribe_url }}" style="color: #bbbbbb; text-decoration: underline;">Unsubscribe</a>
                     </p>
                   </td>
                 </tr>
