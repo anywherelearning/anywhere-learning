@@ -65,7 +65,7 @@ export default function HeroSaleBadge() {
 
       {/* === DESKTOP: big bold card on the right with tilt === */}
       <div
-        className="pointer-events-none absolute right-6 top-12 z-20 hidden lg:block xl:right-12 xl:top-16"
+        className="pointer-events-none absolute right-24 top-16 z-20 hidden lg:block xl:right-40 xl:top-20"
         role="region"
         aria-label="Home Educators' Appreciation Week sale"
       >
