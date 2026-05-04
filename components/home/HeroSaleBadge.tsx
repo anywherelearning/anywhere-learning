@@ -32,31 +32,44 @@ export default function HeroSaleBadge() {
 
   return (
     <>
-      {/* === MOBILE: soft card above hero text === */}
+      {/* === MOBILE: forest card above hero text (matches desktop palette) === */}
       <div
         className="relative z-20 mx-auto mb-6 max-w-md lg:hidden animate-gentle-float"
         role="region"
         aria-label="Home Educators' Appreciation Week sale"
       >
-        <div className="rounded-3xl border-2 border-gold bg-cream/95 p-6 shadow-2xl backdrop-blur-sm">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-gold">
-            {SALE_CONFIG.name}
+        <div className="rounded-3xl border-[3px] border-gold bg-forest p-6 shadow-2xl">
+          <div className="mb-3 flex items-center gap-2">
+            <svg
+              className="h-4 w-4 flex-shrink-0 text-gold"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6L12 2z" />
+            </svg>
+            <p className="text-xs font-extrabold uppercase tracking-widest text-gold">
+              {SALE_CONFIG.name}
+            </p>
+          </div>
+          <p className="mb-2 font-display text-4xl leading-none text-cream">
+            25% off
           </p>
-          <p className="mb-3 font-display text-3xl leading-tight text-forest">
-            25% off everything
+          <p className="mb-3 text-base font-semibold text-cream">
+            Everything. All week.
           </p>
-          <p className="mb-5 text-sm leading-relaxed text-gray-700">
+          <p className="mb-5 text-sm leading-relaxed text-cream/85">
             To recognize the hard work you do every day. Thank you for showing
             up for your kids. This week is for you.
           </p>
           <div className="flex items-center justify-between gap-3">
             <Link
               href="/shop"
-              className="inline-flex items-center rounded-xl bg-forest px-4 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-forest-dark"
+              className="inline-flex items-center rounded-xl bg-gold px-5 py-2.5 text-sm font-bold text-forest-dark shadow-lg transition-colors hover:bg-gold-light"
             >
               Shop the sale
             </Link>
-            <span className="text-xs font-medium italic text-forest-dark/70">
+            <span className="text-xs font-medium italic text-cream/75">
               {daysCopy}
             </span>
           </div>
