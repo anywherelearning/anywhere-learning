@@ -7,6 +7,7 @@ import { randomBytes } from 'crypto';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { BYOB_TIERS, BUNDLE_CONTENTS, FREE_BONUS_SLUG } from '@/lib/cart';
 import { auth } from '@clerk/nextjs/server';
+import { SALE_CONFIG, isSaleActive } from '@/lib/sale';
 
 function formatCents(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
@@ -371,6 +372,10 @@ export async function POST(req: NextRequest) {
     // Generate a one-time token to prevent session ID guessing on the success page
     const successToken = randomBytes(16).toString('hex');
 
+    // Auto-apply the Home Educators' Appreciation Week coupon during the sale window.
+    // Stripe rejects `discounts` and `allow_promotion_codes` together, so when the sale
+    // is active we hard-apply the coupon and disable manual codes for the week.
+    const saleActive = isSaleActive();
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
@@ -386,10 +391,11 @@ export async function POST(req: NextRequest) {
         ...(Object.keys(bundleCredits).length > 0 && {
           bundle_upgrade_credits: JSON.stringify(bundleCredits),
         }),
+        ...(saleActive && { sale_applied: SALE_CONFIG.promoCode }),
       },
-      // Always allow promo codes - BYOB discounts and upgrade credits serve different purposes
-      // than referral codes or seasonal sales, so stacking is fine
-      allow_promotion_codes: true,
+      ...(saleActive
+        ? { discounts: [{ coupon: SALE_CONFIG.couponId }] }
+        : { allow_promotion_codes: true }),
     });
 
     return NextResponse.json({ url: session.url });
