@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
+import SaleBanner from "@/components/shared/SaleBanner";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
 import NativeHide from "@/components/mobile/NativeHide";
@@ -167,6 +168,7 @@ export default function RootLayout({
             <CapacitorProvider>
               <NativeRedirectGuard />
               <ImageProtection />
+              <NativeHide><SaleBanner /></NativeHide>
               {children}
               <NativeHide><CartDrawer /></NativeHide>
               <PinterestEnhancedMatch />
