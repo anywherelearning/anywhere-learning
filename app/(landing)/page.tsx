@@ -8,6 +8,7 @@ import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import SocialProofTicker from '@/components/shared/SocialProofTicker';
 import HomepageBundleCarousel from '@/components/home/HomepageBundleCarousel';
+import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
@@ -231,6 +232,8 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/30 lg:from-cream/95 lg:via-cream/70 lg:to-transparent" />
           {/* Bottom fade to cream */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
+
+          <HeroSaleBadge />
 
           <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-12 md:py-16 lg:py-20">
             <div className="max-w-xl lg:max-w-2xl">
