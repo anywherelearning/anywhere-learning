@@ -39,6 +39,24 @@ Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF (
 | 1 | `post-purchase-1-getting-started.html` | 2 days | Your first activity (pick one, just one) |
 | 2 | `post-purchase-2-cross-sell.html` | 7 days | More where that came from |
 
+## Sequence 4: Home Educators' Appreciation Week sale (3 emails, manual broadcasts)
+
+**Trigger:** Manual broadcasts (not an automation). Send each at the time noted.
+**Audience:** All subscribers for email 1; emails 2 and 3 should EXCLUDE anyone tagged `buyer` or `home-educators-2026-buyer` so converted buyers don't get reminded.
+
+| # | File | Send time | Subject Line |
+|---|------|-----------|-------------|
+| 1 | `sale-home-educators-1-launch.html` | Mon May 4, 9am PT | You don't get a coffee mug. You get 25% off. |
+| 2 | `sale-home-educators-2-reminder.html` | Sat May 9, 9am PT | Last 36 hours of the appreciation sale |
+| 3 | `sale-home-educators-3-final.html` | Sun May 10, 6pm PT | Ends tonight at midnight |
+
+**To send each one:**
+1. Kit > **Broadcasts** > **New Broadcast**
+2. Paste the HTML in **HTML mode** (not the visual editor)
+3. Set the subject and preview text from the comment block at the top of the file
+4. For emails 2 and 3, add an audience filter: exclude `buyer` and `home-educators-2026-buyer` tags
+5. Schedule send
+
 ## How to add to Kit
 
 1. Go to **Automations** → **New Automation**
