@@ -6,40 +6,11 @@
   Preview: Home Educators' Appreciation Week starts today. 25% off everything.
 
   HOW TO USE:
-  1. Kit > Broadcasts > New > paste this HTML in HTML mode (Styles tab > Custom HTML)
-  2. Save as a custom template
-  3. Use Kit's visual editor to write the body content (see suggested copy below)
-
-  SUGGESTED BODY (paste into Kit's visual editor where {{ message_content }} renders):
-  ─────────────────────────────────────────────────────────────────────
-  Hi {{ subscriber.first_name | default: "friend" }},
-
-  Teaching your own kids is one of the hardest, most invisible jobs there
-  is. The hours you put in planning, teaching, comforting, fact-checking,
-  and refereeing don't show up on any pay stub or in any annual review.
-
-  I wanted to do something to mark that. To say it out loud: I see the
-  work you do, and I haven't forgotten you.
-
-  Home Educators' Appreciation Week. 25% off everything on the site, all
-  week. Through Sunday May 10. No code to type, the discount is already
-  applied at checkout. Bundles included.
-
-  [BUTTON: Shop the sale → links to https://anywherelearning.co/shop]
-
-  If you've been eyeing one of the bundles, this is the week. The
-  Real-World Mega Bundle, the Outdoor Mega Bundle, the Creativity Mega
-  Bundle, all 25% off and they already include the free Skills Map
-  bonus.
-
-  Thank you for doing the work. I see you.
-
-  Amelie
-
-  P.S. If a paid pack isn't where you are right now, the free 7-day
-  guide (https://anywherelearning.co/free-guide) is also still here. No
-  purchase needed.
-  ─────────────────────────────────────────────────────────────────────
+  1. Kit > Broadcasts > New > Styles tab > paste this HTML as Custom Template
+  2. In the Email tab, write only the salutation in the visual editor (e.g.
+     "Hi {{ subscriber.first_name | default: 'friend' }}," or "Hey friend,").
+  3. Everything else (banner, body, CTA, trust badges, signature, P.S.,
+     footer) is locked into the template.
 -->
 <!DOCTYPE html>
 <html>
@@ -53,14 +24,14 @@
       <td align="center" style="padding: 24px 16px;">
         <table cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; background-color: #faf9f6;">
 
-          <!-- Brand Header (fixed - real brand logo) -->
+          <!-- Brand Header (logo from Kit CDN) -->
           <tr>
             <td align="center" style="padding: 28px 24px 20px;">
               <img src="https://embed.filekitcdn.com/e/avjxbM6xFYPPGavBKAYGYN/iTLpa9QxviNBhA3tFBiSbM/email?ar=16%3A9&amp;fit=crop" width="220" alt="Anywhere Learning" style="display: block; max-width: 220px;">
             </td>
           </tr>
 
-          <!-- Sale Banner (fixed) -->
+          <!-- Sale Banner -->
           <tr>
             <td style="background-color: #588157; padding: 32px 24px 28px; text-align: center; border-top: 4px solid #d4a373; border-bottom: 4px solid #d4a373;">
               <p style="font-size: 28px; color: #d4a373; margin: 0 0 8px; line-height: 1;">&#9733;</p>
@@ -70,19 +41,35 @@
             </td>
           </tr>
 
-          <!-- Editable message area -->
+          <!-- Salutation (editable from Kit) -->
           <tr>
-            <td style="padding: 32px 32px 16px; font-size: 16px; line-height: 26px; color: #2d2d2d;">
+            <td style="padding: 28px 32px 0; font-size: 16px; line-height: 26px; color: #2d2d2d;">
               {{ message_content }}
             </td>
           </tr>
 
-          <!-- Trust badges (fixed) -->
+          <!-- Body (fixed) -->
           <tr>
-            <td style="padding: 0 32px 32px;">
-              <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f5f0; border-radius: 12px;">
+            <td style="padding: 0 32px 8px;">
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Teaching your own kids is one of the hardest, most invisible jobs there is. The hours you put in planning, teaching, comforting, fact-checking, and refereeing don't show up on any pay stub or in any annual review.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">I wanted to do something to mark that. To say it out loud: I see the work you do, and I haven't forgotten you.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;"><strong style="color: #3d5c3b;">Home Educators' Appreciation Week.</strong> 25% off everything on the site, all week. Through Sunday May 10. No code to type, the discount is already applied at checkout. Bundles included.</p>
+
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td style="padding: 18px 16px; text-align: center;">
+                  <td align="center" style="padding: 20px 0 24px;">
+                    <a href="https://anywherelearning.co/shop" style="background-color: #588157; border-radius: 12px; color: #faf9f6; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 36px; text-decoration: none;">Shop the sale &rarr;</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Trust Badges -->
+              <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f5f0; border-radius: 12px; margin-bottom: 24px;">
+                <tr>
+                  <td style="padding: 20px 16px; text-align: center;">
                     <table cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td width="33%" style="text-align: center; vertical-align: top; padding: 0 4px;">
@@ -102,10 +89,33 @@
                   </td>
                 </tr>
               </table>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">If you've been eyeing one of the bundles, this is the week. The Real-World Mega Bundle, the Outdoor Mega Bundle, the Creativity Mega Bundle &mdash; all 25% off and they already include the free Skills Map bonus.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Thank you for doing the work. I see you.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 24px 0 0;">
+                <span style="font-family: 'Dancing Script', cursive; font-size: 22px; color: #d4a373;">Amelie</span>
+              </p>
             </td>
           </tr>
 
-          <!-- Footer (fixed) -->
+          <!-- P.S. -->
+          <tr>
+            <td style="padding: 16px 32px 32px;">
+              <table cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #e5e5e5;">
+                <tr>
+                  <td style="padding: 20px 0 0;">
+                    <p style="font-size: 14px; line-height: 22px; color: #555555; margin: 0;">
+                      <strong style="color: #3d5c3b;">P.S.</strong> If a paid pack isn't where you are right now, the <a href="https://anywherelearning.co/free-guide" style="color: #588157; font-weight: 600;">free 7-day guide</a> is also still here. No purchase needed. It's the best starting point for trying real-world learning with your kids.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
           <tr>
             <td style="border-top: 1px solid #e5e5e5;">
               <table cellpadding="0" cellspacing="0" width="100%">

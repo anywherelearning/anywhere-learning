@@ -6,30 +6,10 @@
   Preview: 25% off everything ends Sunday night
 
   HOW TO USE:
-  1. Kit > Broadcasts > New > paste this HTML in HTML mode
-  2. Save as a custom template
-  3. Use Kit's visual editor for the body content (see suggested copy below)
-
-  SUGGESTED BODY (paste into Kit's visual editor where {{ message_content }} renders):
-  ─────────────────────────────────────────────────────────────────────
-  Hi {{ subscriber.first_name | default: "friend" }},
-
-  Quick note. Home Educators' Appreciation Week wraps Sunday night. 25%
-  off everything is still active. No code needed, the discount is
-  already applied at checkout.
-
-  If you've been holding off on a bundle, this weekend is the moment.
-  The Real-World Mega Bundle, the Outdoor Mega Bundle, and the
-  Creativity Mega Bundle are all 25% off and they include the free
-  Skills Map bonus.
-
-  [BUTTON: Shop the sale → links to https://anywherelearning.co/shop]
-
-  And whether you grab anything or not, thank you again for the work you
-  do. This week is for you.
-
-  Amelie
-  ─────────────────────────────────────────────────────────────────────
+  1. Kit > Broadcasts > New > Styles tab > paste this HTML as Custom Template
+  2. In the Email tab, write only the salutation in the visual editor (e.g.
+     "Hi {{ subscriber.first_name | default: 'friend' }},").
+  3. Everything else is locked into the template.
 -->
 <!DOCTYPE html>
 <html>
@@ -43,14 +23,14 @@
       <td align="center" style="padding: 24px 16px;">
         <table cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; background-color: #faf9f6;">
 
-          <!-- Brand Header (fixed) -->
+          <!-- Brand Header -->
           <tr>
             <td align="center" style="padding: 28px 24px 20px;">
               <img src="https://embed.filekitcdn.com/e/avjxbM6xFYPPGavBKAYGYN/iTLpa9QxviNBhA3tFBiSbM/email?ar=16%3A9&amp;fit=crop" width="220" alt="Anywhere Learning" style="display: block; max-width: 220px;">
             </td>
           </tr>
 
-          <!-- Sale Banner (fixed - 36 hours urgency) -->
+          <!-- Sale Banner (urgency) -->
           <tr>
             <td style="background-color: #588157; padding: 26px 24px 22px; text-align: center; border-top: 4px solid #d4a373; border-bottom: 4px solid #d4a373;">
               <p style="font-size: 12px; font-weight: 700; color: #d4a373; margin: 0 0 6px; letter-spacing: 2px; text-transform: uppercase;">Last 36 hours</p>
@@ -58,14 +38,40 @@
             </td>
           </tr>
 
-          <!-- Editable message area -->
+          <!-- Salutation (editable from Kit) -->
           <tr>
-            <td style="padding: 32px 32px 32px; font-size: 16px; line-height: 26px; color: #2d2d2d;">
+            <td style="padding: 28px 32px 0; font-size: 16px; line-height: 26px; color: #2d2d2d;">
               {{ message_content }}
             </td>
           </tr>
 
-          <!-- Footer (fixed) -->
+          <!-- Body (fixed) -->
+          <tr>
+            <td style="padding: 0 32px 8px;">
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Quick note. Home Educators' Appreciation Week wraps Sunday night. 25% off everything is still active. No code needed, the discount is already applied at checkout.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">If you've been holding off on a bundle, this weekend is the moment. The Real-World Mega Bundle, the Outdoor Mega Bundle, and the Creativity Mega Bundle are all 25% off and they include the free Skills Map bonus.</p>
+
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 20px 0 24px;">
+                    <a href="https://anywherelearning.co/shop" style="background-color: #588157; border-radius: 12px; color: #faf9f6; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 36px; text-decoration: none;">Shop the sale &rarr;</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">And whether you grab anything or not, thank you again for the work you do. This week is for you.</p>
+
+              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 24px 0 0;">
+                <span style="font-family: 'Dancing Script', cursive; font-size: 22px; color: #d4a373;">Amelie</span>
+              </p>
+            </td>
+          </tr>
+
+          <tr><td style="padding: 24px 32px 0;"></td></tr>
+
+          <!-- Footer -->
           <tr>
             <td style="border-top: 1px solid #e5e5e5;">
               <table cellpadding="0" cellspacing="0" width="100%">
