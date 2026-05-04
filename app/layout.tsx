@@ -101,7 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://clerk.anywherelearning.co" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://clerk.anywherelearning.co" />
         <link
           rel="alternate"
           type="application/rss+xml"

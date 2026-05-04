@@ -109,6 +109,7 @@ export default function HomepageBundleCard({
               alt={name}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              quality={60}
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
           )}
