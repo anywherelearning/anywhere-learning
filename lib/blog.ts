@@ -3821,7 +3821,9 @@ const posts: BlogPost[] = [
     ],
     readTimeMinutes: 7,
     author: amelie,
-    heroImageAlt: 'A mug of tea, an open book, and bare feet up on a couch \u2014 the picture of a mom finally closing the tab',
+    heroImage: '/images/wrecked-mom-hero.jpeg',
+    heroImageAlt: 'Feet up on the rocks at the edge of the ocean at sunset, the picture of a mom finally taking five minutes for herself',
+    heroImagePosition: 'center 70%',
     content: [
       { type: 'summary', text: 'When you\u2019re exhausted and your kid still needs something to do, the honest answer isn\u2019t a Pinterest-perfect craft project \u2014 it\u2019s toast-for-dinner, screens-without-guilt, and the bath door locked. Giving yourself permission to coast on wrecked days is what keeps you in the game for the long ones. This is the permission slip for the day you have nothing left.' },
       { type: 'paragraph', text: 'You know the moment.' },
