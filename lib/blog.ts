@@ -3806,7 +3806,7 @@ const posts: BlogPost[] = [
     title: 'Homeschool Mom Burnout: A Permission Slip + Recovery Plan',
     excerpt: 'Homeschool mom burnout recovery plan for the days you have nothing left. A permission slip for what to actually feed them, what to let them do, and the one word that protects your tank.',
     hook: 'On wrecked days, the honest answer isn\u2019t a Pinterest-perfect craft project. It\u2019s toast for dinner and the bath door locked.',
-    category: 'ai-digital-literacy',
+    category: 'homeschool-journey',
     publishedAt: '2026-05-05',
     dateModified: '2026-05-05',
     keywords: [
