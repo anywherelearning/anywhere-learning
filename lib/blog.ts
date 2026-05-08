@@ -4204,7 +4204,6 @@ const posts: BlogPost[] = [
     heroImage: '/images/kindergarten-without-curriculum-hero.jpeg',
     heroImageAlt: 'Young girl grinning at the camera with hands outstretched at a playground, pure kindergarten joy',
     heroImagePosition: 'center 45%',
-    draft: true,
     content: [
       { type: 'summary', text: 'Homeschooling kindergarten without a curriculum means following your child\'s natural curiosity through play, read-alouds, outdoor exploration, and real-world activities. Five-year-olds learn best through hands-on experience, not worksheets or structured lessons. A simple daily rhythm of reading together, playing outside, and doing one small intentional activity is more than enough. Most families who try curriculum at this age end up dropping it within a few months anyway.' },
       { type: 'paragraph', text: 'If your kid just turned 5 and you are staring at a screen full of "complete kindergarten curriculum" options wondering which one to buy, let me save you some money and a lot of stress: you probably don\'t need one.' },
