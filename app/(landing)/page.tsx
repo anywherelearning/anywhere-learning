@@ -190,6 +190,10 @@ const homepageItemListLd = {
       description: p.shortDescription,
       image: p.imageUrl ? `https://anywherelearning.co${p.imageUrl}` : undefined,
       url: `https://anywherelearning.co/shop/${p.slug}`,
+      brand: {
+        '@type': 'Brand',
+        name: 'Anywhere Learning',
+      },
       offers: {
         '@type': 'Offer',
         price: (p.priceCents / 100).toFixed(2),
