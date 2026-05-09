@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email } = body as { email: string };
+    const { email, source } = body as { email: string; source?: string };
 
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,8 +20,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Sanitize source: lowercase, alphanumeric + dash only, max 30 chars.
+    // Becomes a Kit tag (from-{source}), so we need to keep it tag-safe and
+    // prevent random URL params from creating junk tags.
+    const cleanSource = source
+      ? source.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30) || undefined
+      : undefined;
+
     // Subscribe + apply 'lead' tag (triggers welcome sequence in Kit)
-    await subscribeToConvertKit(email);
+    // plus a 'from-{source}' tag for attribution.
+    await subscribeToConvertKit(email, cleanSource);
 
     return NextResponse.json({ success: true });
   } catch (err) {

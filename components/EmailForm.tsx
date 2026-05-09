@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import Link from "next/link";
+
+const SOURCE_STORAGE_KEY = "subscribe-source";
 
 interface EmailFormProps {
   variant?: "light" | "dark";
@@ -15,8 +17,29 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [shaking, setShaking] = useState(false);
+  const [source, setSource] = useState("");
 
   const isLight = variant === "light";
+
+  // Capture attribution source on mount: prefer ?source= over ?utm_source=,
+  // persist in sessionStorage so it survives blog navigation before signup.
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const urlSource = params.get("source") || params.get("utm_source") || "";
+
+      if (urlSource) {
+        setSource(urlSource);
+        sessionStorage.setItem(SOURCE_STORAGE_KEY, urlSource);
+        return;
+      }
+
+      const stored = sessionStorage.getItem(SOURCE_STORAGE_KEY) || "";
+      if (stored) setSource(stored);
+    } catch {
+      // sessionStorage unavailable (private mode, etc.) - fail silently
+    }
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,7 +59,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source: source || undefined }),
       });
 
       const data = await res.json();

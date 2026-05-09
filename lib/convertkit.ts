@@ -156,9 +156,13 @@ export async function subscribeAndTag(email: string, tags: string[] = []) {
 
 // ─── Backwards-compatible exports ───
 
-/** Subscribe a free guide lead - applies the 'lead' tag to trigger welcome sequence */
-export async function subscribeToConvertKit(email: string) {
-  await subscribeAndTag(email, ['lead']);
+/** Subscribe a free guide lead - applies the 'lead' tag to trigger welcome sequence
+ * plus a `from-{source}` tag for attribution. Defaults source to 'organic' when
+ * no tagged URL was used so every subscriber has a source on their profile.
+ */
+export async function subscribeToConvertKit(email: string, source?: string) {
+  const tags = ['lead', `from-${source || 'organic'}`];
+  await subscribeAndTag(email, tags);
 }
 
 /** Tag a buyer with product-specific, purchase-type, and cross-sell tags */
