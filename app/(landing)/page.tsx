@@ -199,6 +199,26 @@ const homepageItemListLd = {
         price: (p.priceCents / 100).toFixed(2),
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: '0',
+            currency: 'USD',
+          },
+          shippingDestination: [
+            { '@type': 'DefinedRegion', addressCountry: 'US' },
+            { '@type': 'DefinedRegion', addressCountry: 'CA' },
+            { '@type': 'DefinedRegion', addressCountry: 'GB' },
+            { '@type': 'DefinedRegion', addressCountry: 'AU' },
+            { '@type': 'DefinedRegion', addressCountry: 'NZ' },
+          ],
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+          },
+        },
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',
