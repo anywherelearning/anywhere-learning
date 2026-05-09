@@ -41,7 +41,7 @@ const freeGuideLd = {
   image: 'https://anywherelearning.co/images/free-guide-og.jpg',
   url: 'https://anywherelearning.co/free-guide',
   brand: {
-    '@type': 'Organization',
+    '@type': 'Brand',
     name: 'Anywhere Learning',
   },
   author: {

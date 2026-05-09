@@ -248,9 +248,8 @@ export default async function ProductPage({
           : `https://anywherelearning.co${child.imageUrl}`,
       }),
       brand: {
-        "@type": "Organization",
+        "@type": "Brand",
         name: "Anywhere Learning",
-        url: "https://anywherelearning.co",
       },
       offers: {
         "@type": "Offer",
@@ -278,12 +277,9 @@ export default async function ProductPage({
       variesBy: ["https://schema.org/category"],
       hasVariant,
     }),
-    // Organization is accepted for brand by Google and avoids the
-    // "Invalid object type" warning GSC emitted for Brand.
     brand: {
-      "@type": "Organization",
+      "@type": "Brand",
       name: "Anywhere Learning",
-      url: "https://anywherelearning.co",
     },
     category: CATEGORY_LABELS[product.category] || product.category,
     typicalAgeRange,
