@@ -239,6 +239,7 @@ export default async function ProductPage({
       "@type": "Product" as const,
       "@id": `https://anywherelearning.co/shop/${child.slug}`,
       name: child.name,
+      description: child.description || child.shortDescription || child.name,
       url: `https://anywherelearning.co/shop/${child.slug}`,
       sku: child.slug,
       ...(child.imageUrl && {
@@ -246,6 +247,11 @@ export default async function ProductPage({
           ? child.imageUrl
           : `https://anywherelearning.co${child.imageUrl}`,
       }),
+      brand: {
+        "@type": "Organization",
+        name: "Anywhere Learning",
+        url: "https://anywherelearning.co",
+      },
       offers: {
         "@type": "Offer",
         price: (child.priceCents / 100).toFixed(2),
