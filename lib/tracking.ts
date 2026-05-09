@@ -24,6 +24,7 @@ type PinterestEventData = {
   order_id?: string;
   order_quantity?: number;
   currency?: string;
+  product_id?: string;
   line_items?: PinterestLineItem[];
   search_query?: string;
   lead_type?: string;

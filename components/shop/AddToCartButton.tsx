@@ -120,6 +120,7 @@ export default function AddToCartButton({
       value: price,
       order_quantity: 1,
       currency: 'USD',
+      product_id: slug,
       line_items: [
         {
           product_id: slug,

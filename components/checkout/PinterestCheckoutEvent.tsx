@@ -62,6 +62,7 @@ export default function PinterestCheckoutEvent({
       order_id: orderId,
       order_quantity: lineItems.reduce((sum, i) => sum + (i.product_quantity ?? 1), 0),
       currency,
+      product_id: lineItems[0]?.product_id,
       line_items: lineItems,
     });
 
