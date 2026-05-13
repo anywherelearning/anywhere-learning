@@ -32,14 +32,14 @@ const featuredProducts = [
     name: 'The Future-Ready Skills Map',
     slug: 'future-ready-skills-map',
     shortDescription:
-      'The 10 future-ready skills mapped by age, with activities, milestones, and sample weeks.',
+      'The 12 future-ready skills mapped by age, with activities, milestones, and sample weeks.',
     priceCents: 999,
     compareAtPriceCents: null,
     imageUrl: '/products/future-ready-skills-map.jpg',
     category: 'start-here',
     isBundle: false,
     activityCount: null,
-    ageRange: 'Ages 0–14+',
+    ageRange: 'Ages 0–16+',
     isFreeWithBundle: true,
   },
   {
