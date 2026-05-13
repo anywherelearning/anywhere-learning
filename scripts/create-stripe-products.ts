@@ -81,7 +81,7 @@ const catalog = [
   { slug: 'savings-goal-tracker', name: 'Savings Goal Tracker', priceCents: 599, description: 'Set and track a real savings goal: deposits, progress, and money maths.' },
   { slug: 'sports-stats-lab', name: 'Sports Stats Lab', priceCents: 599, description: 'Analyse real sports stats: averages, percentages, and data visualisation.' },
   // ─── Life Skills ───
-  { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A 42-page parent guide to the 10 skill areas that matter most for kids ages 0-14+, organised into three age phases (Play, Build, Apply).' },
+  { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A 44-page parent guide to the 12 skill areas that matter most for kids ages 0-16+, organised into three age phases (Play, Build, Apply).' },
   // ─── Communication & Writing singles ($4.99) ───
   { slug: 'adventure-story-map', name: 'Adventure Story Map', priceCents: 599, description: 'Create a visual story map and write your own adventure narrative.' },
   { slug: 'community-tour-guide', name: 'Community Tour Guide', priceCents: 599, description: 'Research and create a guided tour of your community.' },

@@ -298,7 +298,7 @@ export async function POST(req: NextRequest) {
             currency: 'usd',
             product_data: {
               name: `${product.name} (FREE Bundle Bonus)`,
-              description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
+              description: 'A 44-page parent guide to the 12 skills that matter most, included free with your bundle.',
               images: product.imageUrl
                 ? [`${siteUrl}${product.imageUrl}`]
                 : undefined,
@@ -360,7 +360,7 @@ export async function POST(req: NextRequest) {
           currency: 'usd',
           product_data: {
             name: 'The Future-Ready Skills Map (FREE Bundle Bonus)',
-            description: 'A 42-page parent guide to the 10 skills that matter most, included free with your bundle.',
+            description: 'A 44-page parent guide to the 12 skills that matter most, included free with your bundle.',
             images: [`${siteUrl}/products/future-ready-skills-map.jpg`],
           },
           unit_amount: 0,

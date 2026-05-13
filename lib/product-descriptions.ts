@@ -926,13 +926,14 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'future-ready-skills-map': {
     opening:
-      'A 42-page parent guide to the 10 skill areas that matter most for raising a future-ready child, from ages 0 to 14+. This is not a curriculum and it\'s not another activity pack. It\'s your roadmap, your "what matters now" guide, organised by age phase so you always know what to focus on next.',
+      'A 44-page parent guide to the 12 skill areas that matter most for raising a future-ready child, from ages 0 to 16+. This is not a curriculum and it\'s not another activity pack. It\'s your roadmap, your "what matters now" guide, organised by age phase so you always know what to focus on next.',
     whatsIncluded: [
-      '42-page parent guide for kids ages 0–14+',
-      '10 skill areas: Emotional + Social, Literacy + Language, Numeracy + Logic, Critical Thinking, Creativity + Making, Communication, Self-Management, AI + Digital Literacy, Citizenship + Character, Life Skills',
-      'Organised into three age phases: 0–6 Play, 6–11 Build, 11–14+ Apply',
-      'Each section: what to develop, what mastery looks like, and hands-on play-based or real-world activities',
+      '44-page parent guide for kids ages 0–16+',
+      '12 skill areas: Emotional Intelligence, Physical Health + Movement, Literacy + Language, Numeracy + Logic, Critical Thinking, Creativity + Making, Communication, Self-Management, AI + Digital Literacy, Citizenship + Character, Life Skills',
+      'Organised into three age phases: 0–6 Play, 6–11 Build, 11–16+ Apply',
+      'Each section: what to develop, what it looks like at each stage, and hands-on play-based or real-world activities',
       'A "Focus over Formality" rule for each age band so you never feel behind',
+      'Sample weeks for each age phase showing how real-world skills fill a week',
       'A one-page skills-at-a-glance overview to plan at a glance',
     ],
     skillTags: ['Parenting', 'Life Skills', 'Critical Thinking', 'Emotional Intelligence', 'Future-Ready'],
