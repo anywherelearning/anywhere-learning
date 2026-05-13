@@ -294,7 +294,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
           loading="lazy"
         />
         <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
-          42 pages
+          44 pages
         </div>
       </div>
 
@@ -309,7 +309,7 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
           loading="lazy"
         />
         <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-forest text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
-          42 pages
+          44 pages
         </div>
       </div>
 
@@ -327,15 +327,15 @@ function BundlePromoContent({ dismiss }: { dismiss: () => void }) {
         </h2>
 
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          The Future-Ready Skills Map covers the 10 skills that matter most for your
+          The Future-Ready Skills Map covers the 12 skills that matter most for your
           child&rsquo;s future. It&rsquo;s the foundation for every activity guide we make.
         </p>
 
         <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-4">
           {[
-            { icon: 'compass', label: '10 key skills', color: 'text-forest' },
+            { icon: 'compass', label: '12 key skills', color: 'text-forest' },
             { icon: 'calendar', label: 'Sample weeks', color: 'text-gold' },
-            { icon: 'users', label: 'Ages 0\u201314+', color: 'text-forest' },
+            { icon: 'users', label: 'Ages 0\u201316+', color: 'text-forest' },
             { icon: 'check', label: 'Low-prep activities', color: 'text-gold' },
           ].map((chip) => (
             <div key={chip.label} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
