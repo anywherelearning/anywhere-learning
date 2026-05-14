@@ -128,23 +128,8 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        {/* Payment methods */}
-        <div className="mt-8 pt-6 border-t border-gray-200/60 text-center">
-          <p className="text-xs text-gray-500 mb-3">Secure checkout. We accept:</p>
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-gray-500">
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Visa</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Mastercard</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Amex</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Discover</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Apple Pay</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Google Pay</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Link</span>
-            <span className="px-2.5 py-1 rounded border border-gray-200 bg-white">Affirm</span>
-          </div>
-        </div>
-
         {/* Bottom bar */}
-        <div className="mt-6 pt-6 border-t border-gray-200/60">
+        <div className="mt-8 pt-6 border-t border-gray-200/60">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
             <p className="text-xs text-gray-400">
               &copy; {new Date().getFullYear()} Anywhere Learning. All rights reserved.
