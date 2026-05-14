@@ -951,8 +951,8 @@ const posts: BlogPost[] = [
   // ─── Post #45: 5 Stages of Deschooling ───
   {
     slug: 'five-stages-deschooling',
-    title: 'What Is Deschooling? The 5 Stages Every Family Goes Through',
-    excerpt: 'What is deschooling? It\u2019s the transition period after leaving traditional school where kids (and parents) unlearn institutional habits and rediscover self-directed learning. Here\u2019s what to expect at each of the 5 stages, and why the messy middle is where the real transformation happens.',
+    title: 'The 5 Stages of Deschooling (and Why Stage 3 Almost Breaks Everyone)',
+    excerpt: 'Deschooling is the messy unlearning period after leaving traditional school. Most families quit during stage 3, the middle. Here\u2019s what each stage actually looks like, how long it lasts, and what to do when it feels broken.',
     hook: 'Two weeks in, your kid is in pyjamas at 11am and you think you\u2019ve ruined everything.',
     category: 'homeschool-journey',
     publishedAt: '2026-02-04',

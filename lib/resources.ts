@@ -708,8 +708,8 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'worldschooling-guide',
-    title: 'Worldschooling & Learning While Traveling: Everything You Need to Know',
-    excerpt: 'What is worldschooling? It\'s an educational approach that uses travel and real-world cultural immersion as the primary learning environment. Here\'s how to combine travel and education, what deschooling looks like on the road, and how to build a flexible learning rhythm that works for your whole family.',
+    title: 'How to Start Worldschooling With Kids (Without Quitting Everything)',
+    excerpt: 'You don\'t need to sell the house to worldschool. Here\'s how families combine travel and learning long-term, what a real week actually looks like, and the 6 mistakes most new worldschoolers make in year one.',
     topic: 'worldschooling',
     publishedAt: '2026-03-21',
     dateModified: '2026-04-30',
