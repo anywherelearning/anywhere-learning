@@ -8,16 +8,16 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
-  title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning',
+  title: 'Learning Guides for Families: Life Skills, Nature, Creativity & More',
   description:
-    'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for families who want real-world learning to fit their life.',
+    'In-depth guides on real-world learning, life skills, nature education, creativity, AI literacy, and worldschooling. Written by a former teacher for families who want learning to fit their life.',
   alternates: {
     canonical: 'https://anywherelearning.co/guides',
   },
   openGraph: {
-    title: 'Homeschool Guides: Deschooling, Worldschool, Nature Learning | Anywhere Learning',
+    title: 'Learning Guides for Families: Life Skills, Nature, Creativity & More | Anywhere Learning',
     description:
-      'In-depth homeschool guides on deschooling, worldschooling, and nature-based learning — written by a former teacher for families who want real-world learning to fit their life.',
+      'In-depth guides on real-world learning, life skills, nature education, creativity, AI literacy, and worldschooling. Written by a former teacher for families who want learning to fit their life.',
     url: 'https://anywherelearning.co/guides',
     type: 'website',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: 'https://anywherelearning.co/og-default.jpg',
         width: 1200,
         height: 630,
-        alt: 'Anywhere Learning Homeschool Guides',
+        alt: 'Anywhere Learning Resource Guides',
       },
     ],
   },
@@ -38,7 +38,7 @@ export default function ResourcesPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Anywhere Learning Resource Guides',
-    description: 'In-depth guides on real-world learning, nature-based education, worldschooling, creativity, and digital literacy for homeschool families.',
+    description: 'In-depth guides on real-world learning, life skills, nature education, creativity, AI literacy, and worldschooling for families who learn through real life.',
     url: 'https://anywherelearning.co/guides',
     publisher: {
       '@type': 'Organization',

@@ -46,6 +46,11 @@ const topicIcons: Record<ResourceTopic, ReactNode> = {
       <circle cx="12" cy="12" r="10" /><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z" />
     </svg>
   ),
+  'future-ready-skills': (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round">
+      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><path d="M22 4L12 14.01l-3-3" />
+    </svg>
+  ),
 };
 
 export default function ResourceCard({
