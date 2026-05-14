@@ -60,12 +60,12 @@ const SLUG_TO_FILE: Record<string, string> = {
   'write-like-a-pro': 'Communication & Writing - Write it like a pro.pdf',
 
   // Creativity Anywhere
-  'board-game-studio': 'Creativity Anywhere - Board game studio.pdf',
-  'rube-goldberg-machine': 'Creativity Anywhere - Build a Rube Goldberg Machine.pdf',
-  'survival-base': 'Creativity Anywhere - Build a Survival Base for an Imaginary Expedition.pdf',
-  'build-a-museum': 'Creativity Anywhere - Build a museum or interactive exhibit.pdf',
+  'board-game-studio': 'Creativity anywhere Board Game Studio.pdf',
+  'rube-goldberg-machine': 'Creativity anywhere Build a Rube Goldberg Machine.pdf',
+  'survival-base': 'Creativity anywhere Build a Survival Base for an Imaginary Expedition.pdf',
+  'build-a-museum': 'Creativity anywhere Build a Museum or Interactive Exhibit.pdf',
   'imaginary-world': 'Creativity Anywhere - Build an imaginary world.pdf',
-  'creature-habitat': 'Creativity Anywhere - Create a Creature + Build Its Habitat.pdf',
+  'creature-habitat': 'Creativity anywhere Create a Creature and Build Its Habitat.pdf',
   'theme-park': 'Creativity Anywhere - Create a Theme Park or Adventure Course.pdf',
   'mini-movie': 'Creativity Anywhere - Create a mini movie,  stop-motion or radio drama.pdf',
   'invent-a-sport': 'Creativity Anywhere - Invent a new sport.pdf',
