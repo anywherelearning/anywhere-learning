@@ -16,6 +16,7 @@ import { CheckIcon, DownloadIcon, ArrowRightIcon } from '@/components/shop/icons
 import Confetti from '@/components/checkout/Confetti';
 import PostPurchaseShare from '@/components/checkout/PostPurchaseShare';
 import PinterestCheckoutEvent from '@/components/checkout/PinterestCheckoutEvent';
+import GoogleCustomerReviewsOptIn from '@/components/checkout/GoogleCustomerReviewsOptIn';
 import BundleUpgradeButton from '@/components/account/BundleUpgradeButton';
 
 // Force dynamic rendering. The Skills Map bonus check reads the buyer's
@@ -91,6 +92,9 @@ async function getSessionProducts(sessionId: string, token?: string) {
     const amountTotalCents = session.amount_total ?? 0;
     const currency = (session.currency ?? 'usd').toUpperCase();
     const buyerEmail = session.customer_details?.email ?? null;
+    // Google Customer Reviews wants ISO 3166-1 alpha-2. Stripe returns the
+    // billing country there. Default to US if Stripe didn't capture one.
+    const buyerCountry = session.customer_details?.address?.country ?? 'US';
 
     // Check if a bundle was purchased (triggers free Skills Map bonus)
     const hasBundles = purchasedProducts.some((p) => p.isBundle);
@@ -249,6 +253,7 @@ async function getSessionProducts(sessionId: string, token?: string) {
       amountTotalCents,
       currency,
       buyerEmail,
+      buyerCountry,
     };
   } catch {
     return null;
@@ -296,6 +301,11 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         currency={data.currency}
         lineItems={pinterestLineItems}
         buyerEmail={data.buyerEmail}
+      />
+      <GoogleCustomerReviewsOptIn
+        orderId={data.orderId}
+        email={data.buyerEmail}
+        country={data.buyerCountry}
       />
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12 sm:py-20">
