@@ -31,6 +31,7 @@ import type { BundlePreviewItem } from "@/components/shop/BundlePreviewModal";
 import FreeGuideCTA from "@/components/shop/FreeGuideCTA";
 import { CATEGORY_LABELS, coverClassFor } from "@/lib/categories";
 import { FREE_BONUS_SLUG, BUNDLE_CONTENTS } from "@/lib/bundles";
+import { getProductDescription } from "@/lib/product-descriptions";
 
 export const revalidate = 86400; // ISR: revalidate daily
 
@@ -178,6 +179,16 @@ export default async function ProductPage({
   // immune to range validation and works across all age ranges we ship.
   const typicalAgeRange = product.ageRange?.replace(/^Ages\s*/i, "").replace(/[\u2013\u2014]/g, "-") || "6-14";
 
+  // Pull skillTags so we can teach AI engines (Gemini, AI Overviews, Perplexity)
+  // exactly what each guide develops. Used in the LearningResource schema below.
+  const productDescription = getProductDescription(
+    product.slug,
+    product.description,
+    product.category,
+    product.activityCount ?? null,
+    product.isBundle ?? false,
+  );
+
   // priceValidUntil: Google wants an explicit expiry for merchant listings.
   // Set to end of next year; ISR revalidates daily so it never goes stale.
   const priceValidUntil = `${new Date().getUTCFullYear() + 1}-12-31`;
@@ -266,6 +277,21 @@ export default async function ProductPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    // Doubles each product as a schema.org LearningResource so AI engines
+    // surfacing educational content (Gemini, AI Overviews, Perplexity) treat
+    // these as activity guides, not just retail SKUs. Properties below cover
+    // who it's for, what it teaches, and how it's used.
+    additionalType: "https://schema.org/LearningResource",
+    learningResourceType: product.isBundle ? "Activity Pack" : "Activity Guide",
+    educationalUse: ["Homeschool", "Self-directed learning", "Worldschooling"],
+    educationalLevel: `Ages ${typicalAgeRange}`,
+    ...(productDescription.skillTags.length > 0 && {
+      teaches: productDescription.skillTags,
+    }),
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "Parent",
+    },
     name: product.name,
     description: product.description,
     image: product.imageUrl
