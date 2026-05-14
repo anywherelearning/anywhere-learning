@@ -38,20 +38,30 @@ function WrenchIcon({ className = 'w-4 h-4' }: { className?: string }) {
   );
 }
 
+function CheckCircleIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><path d="M22 4L12 14.01l-3-3" />
+    </svg>
+  );
+}
+
 const categories = [
   { value: '', label: 'All Posts', Icon: SparklesIcon },
-  { value: 'ai-digital-literacy', label: 'AI & Digital', Icon: CpuIcon },
-  { value: 'creativity-maker', label: 'Creativity & Maker', Icon: PaletteIcon },
+  { value: 'ai-digital-literacy', label: 'AI & Digital Literacy', Icon: CpuIcon },
+  { value: 'creativity-maker', label: 'Creativity & Making', Icon: PaletteIcon },
+  { value: 'future-ready-skills', label: 'Future-Ready Skills', Icon: CheckCircleIcon },
   { value: 'homeschool-journey', label: 'Homeschool Journey', Icon: HomeIcon },
-  { value: 'nature-learning', label: 'Nature Learning', Icon: LeafIcon },
-  { value: 'real-world-skills', label: 'Real-World Skills', Icon: WrenchIcon },
-  { value: 'travel-worldschool', label: 'Travel & Worldschool', Icon: GlobeIcon },
+  { value: 'nature-learning', label: 'Nature & Outdoor STEM', Icon: LeafIcon },
+  { value: 'real-world-skills', label: 'Real-World Learning', Icon: WrenchIcon },
+  { value: 'travel-worldschool', label: 'Travel & Worldschooling', Icon: GlobeIcon },
 ];
 
 const categoryActiveColors: Record<string, string> = {
   '': 'bg-forest text-cream shadow-sm',
   'ai-digital-literacy': 'bg-[#7b88a8] text-white shadow-sm',
   'creativity-maker': 'bg-[#c47a8f] text-white shadow-sm',
+  'future-ready-skills': 'bg-[#6b7b6b] text-white shadow-sm',
   'homeschool-journey': 'bg-[#8b7355] text-white shadow-sm',
   'nature-learning': 'bg-forest text-cream shadow-sm',
   'real-world-skills': 'bg-[#c4836a] text-white shadow-sm',

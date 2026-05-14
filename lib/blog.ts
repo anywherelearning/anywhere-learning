@@ -9,6 +9,7 @@ import type { ContentBlock } from './content-blocks';
 export type BlogCategory =
   | 'ai-digital-literacy'
   | 'creativity-maker'
+  | 'future-ready-skills'
   | 'homeschool-journey'
   | 'nature-learning'
   | 'real-world-skills'
@@ -54,18 +55,20 @@ export interface BlogPost {
 }
 
 export const blogCategories: Record<BlogCategory, { label: string; color: string }> = {
-  'ai-digital-literacy': { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
-  'creativity-maker':    { label: 'Creativity & Maker',     color: '#c47a8f' },
-  'homeschool-journey':  { label: 'Homeschool Journey',     color: '#d4a373' },
-  'nature-learning':     { label: 'Nature Learning',        color: '#6b8e6b' },
-  'real-world-skills':   { label: 'Real-World Skills',      color: '#8b7355' },
-  'travel-worldschool':  { label: 'Travel & Worldschool',   color: '#c4836a' },
+  'ai-digital-literacy': { label: 'AI & Digital Literacy',    color: '#7b8fa1' },
+  'creativity-maker':    { label: 'Creativity & Making',      color: '#c47a8f' },
+  'future-ready-skills': { label: 'Future-Ready Skills',      color: '#6b7b6b' },
+  'homeschool-journey':  { label: 'Homeschool Journey',       color: '#d4a373' },
+  'nature-learning':     { label: 'Nature & Outdoor STEM',    color: '#6b8e6b' },
+  'real-world-skills':   { label: 'Real-World Learning',      color: '#8b7355' },
+  'travel-worldschool':  { label: 'Travel & Worldschooling',  color: '#c4836a' },
 };
 
 /** Default product + bundle recommendation for each blog category (used by auto-injection) */
 export const blogProductDefaults: Record<BlogCategory, { product: string; bundle: string }> = {
   'ai-digital-literacy': { product: 'ai-basics',               bundle: 'ai-digital-bundle' },
   'creativity-maker':    { product: 'board-game-studio',       bundle: 'creativity-mega-bundle' },
+  'future-ready-skills': { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
   'homeschool-journey':  { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
   'nature-learning':     { product: 'nature-journal-walks',    bundle: 'seasonal-bundle' },
   'real-world-skills':   { product: 'budget-challenge',        bundle: 'real-world-mega-bundle' },
@@ -581,7 +584,7 @@ const posts: BlogPost[] = [
     title: '10 Life Skills Every Kid Should Learn Before They\u2019re 12',
     excerpt: 'Forget worksheets. These are the skills that actually matter, and your kids can learn them through everyday life, starting today.',
     hook: 'Cook a meal. Read a map. Have a hard conversation. None of these show up on a report card.',
-    category: 'real-world-skills',
+    category: 'future-ready-skills',
     publishedAt: '2025-10-27',
     dateModified: '2025-10-27',
     keywords: ['life skills for kids', 'practical skills children', 'homeschool life skills', 'teach kids independence', 'real world skills for children', 'self-sufficient kids'],
@@ -1419,7 +1422,7 @@ const posts: BlogPost[] = [
     title: 'What Should Teens Know Before They Leave Home?',
     excerpt: 'Forget the academic checklist. Here are the real-world skills, habits, and knowledge teens need before they leave home, and most schools never teach.',
     hook: 'Straight A\u2019s don\u2019t teach you how to book a doctor\u2019s appointment, do laundry, or have a hard conversation.',
-    category: 'real-world-skills',
+    category: 'future-ready-skills',
     publishedAt: '2026-01-30',
     dateModified: '2026-04-30',
     keywords: ['life skills for teens', 'what teens should know before leaving home', 'prepare teens for adulthood', 'real world skills teenagers', 'homeschool life skills teens', 'skills before 18', 'teen independence'],

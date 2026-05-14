@@ -50,6 +50,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const validCategories: BlogCategory[] = [
     'ai-digital-literacy',
     'creativity-maker',
+    'future-ready-skills',
     'homeschool-journey',
     'nature-learning',
     'real-world-skills',
