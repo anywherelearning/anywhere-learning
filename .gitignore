@@ -32,6 +32,10 @@ yarn-error.log*
 .env
 .env*.local
 
+# google oauth credentials & tokens
+google-oauth-credentials.json
+google-oauth-token.json
+
 # vercel
 .vercel
 

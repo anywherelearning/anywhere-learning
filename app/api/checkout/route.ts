@@ -378,7 +378,9 @@ export async function POST(req: NextRequest) {
     const saleActive = isSaleActive();
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      payment_method_types: ['card'],
+      // Omitting payment_method_types lets Stripe surface every method enabled
+      // in the Dashboard (card, Link, Apple Pay, Google Pay, PayPal, etc.)
+      // based on the buyer's device and region.
       line_items: lineItems,
       ...(email && { customer_email: email }),
       customer_creation: 'always',

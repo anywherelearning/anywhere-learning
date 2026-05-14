@@ -222,11 +222,11 @@ export default async function ProductPage({
 
   const merchantReturnPolicy = {
     "@type": "MerchantReturnPolicy",
-    applicableCountry: "US",
+    applicableCountry: ["US", "CA", "GB", "AU", "NZ"],
     returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
     merchantReturnDays: 2,
-    returnMethod: "https://schema.org/ReturnByMail",
     returnFees: "https://schema.org/FreeReturn",
+    returnPolicyUrl: "https://anywherelearning.co/terms#refund-policy",
   } as const;
 
   // Bundles are re-typed as ProductGroup with hasVariant referencing member
@@ -265,17 +265,15 @@ export default async function ProductPage({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": product.isBundle ? "ProductGroup" : "Product",
+    "@type": "Product",
     name: product.name,
     description: product.description,
     image: product.imageUrl
       ? (product.imageUrl.startsWith('http') ? product.imageUrl : `https://anywherelearning.co${product.imageUrl}`)
       : "https://anywherelearning.co/og-default.jpg",
     sku: product.slug,
-    ...(product.isBundle && {
-      productGroupID: product.slug,
-      variesBy: ["https://schema.org/category"],
-      hasVariant,
+    ...(product.isBundle && hasVariant.length > 0 && {
+      isRelatedTo: hasVariant,
     }),
     brand: {
       "@type": "Brand",
@@ -294,6 +292,11 @@ export default async function ProductPage({
         "@type": "Organization",
         name: "Anywhere Learning",
       },
+      acceptedPaymentMethod: [
+        "https://schema.org/CreditCard",
+        "http://purl.org/goodrelations/v1#ApplePay",
+        "http://purl.org/goodrelations/v1#GooglePay",
+      ],
       shippingDetails,
       hasMerchantReturnPolicy: merchantReturnPolicy,
     },

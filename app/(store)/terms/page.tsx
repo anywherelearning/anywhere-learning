@@ -69,7 +69,7 @@ export default function TermsPage() {
             </div>
 
             {/* Refund Policy - highlighted */}
-            <div className="bg-forest/5 rounded-2xl p-6 border border-forest/10">
+            <div id="refund-policy" className="bg-forest/5 rounded-2xl p-6 border border-forest/10">
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Refund Policy</h2>
               <p className="mb-3">
                 Because our products are digital downloads delivered instantly, we offer a{' '}

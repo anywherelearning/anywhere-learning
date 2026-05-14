@@ -221,11 +221,11 @@ const homepageItemListLd = {
         },
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
-          applicableCountry: 'US',
+          applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
           returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
           merchantReturnDays: 2,
-          returnMethod: 'https://schema.org/ReturnByMail',
           returnFees: 'https://schema.org/FreeReturn',
+          returnPolicyUrl: 'https://anywherelearning.co/terms#refund-policy',
         },
       },
     },

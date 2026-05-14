@@ -57,8 +57,9 @@ const freeGuideLd = {
     availability: 'https://schema.org/InStock',
     hasMerchantReturnPolicy: {
       '@type': 'MerchantReturnPolicy',
-      applicableCountry: 'US',
+      applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
       returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+      returnPolicyUrl: 'https://anywherelearning.co/terms#refund-policy',
     },
   },
 };
