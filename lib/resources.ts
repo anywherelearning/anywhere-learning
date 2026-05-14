@@ -65,7 +65,7 @@ export const resourceProductDefaults: Record<ResourceTopic, { product: string; b
 const amelie: ResourceAuthor = {
   name: 'Amelie',
   bio: 'Former teacher (B.Ed, M.Ed) with 15 years in the classroom, now homeschooling mom and founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
-  credentials: 'B.Ed, M.Ed · 15 years teaching',
+  credentials: 'B.Ed, M.Ed',
   avatarColor: '#d4a373',
   avatarImage: '/images/amelie-avatar.jpeg',
 };

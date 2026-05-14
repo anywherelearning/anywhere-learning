@@ -74,8 +74,8 @@ export const blogProductDefaults: Record<BlogCategory, { product: string; bundle
 
 const amelie: BlogAuthor = {
   name: 'Amelie',
-  bio: 'Mom of two who homeschools half the year and worldschools the other half. Former teacher, founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
-  credentials: '',
+  bio: 'Mom of two who homeschools half the year and worldschools the other half. Former teacher with 15 years of classroom experience, founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
+  credentials: 'B.Ed, M.Ed',
   avatarColor: '#d4a373',
   avatarImage: '/images/amelie-avatar.jpeg',
 };
