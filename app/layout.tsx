@@ -205,6 +205,28 @@ export default function RootLayout({
           />
         </noscript>
         <PinterestTracker />
+        <Script
+          id="merchantWidgetScript"
+          src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+          strategy="afterInteractive"
+        />
+        <Script id="google-customer-reviews-badge" strategy="afterInteractive">
+          {`
+            (function() {
+              function startWidget() {
+                if (window.merchantwidget) {
+                  window.merchantwidget.start({
+                    merchant_id: 5778587597,
+                    position: 'BOTTOM_LEFT',
+                    region: 'US'
+                  });
+                }
+              }
+              var s = document.getElementById('merchantWidgetScript');
+              if (s) { s.addEventListener('load', startWidget); }
+            })();
+          `}
+        </Script>
         <SpeedInsights />
         <Analytics />
       </body>
