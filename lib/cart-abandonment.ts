@@ -3,7 +3,7 @@ import { BUNDLE_CONTENTS, BUNDLE_DATA, BYOB_TIERS } from '@/lib/cart';
 /** Category → mega bundle mapping (same as shop page) */
 const CATEGORY_BUNDLE_MAP: Record<string, string> = {
   'ai-literacy': 'ai-digital-bundle',
-  'creativity-anywhere': 'creativity-mega-bundle',
+  'creativity-maker': 'creativity-mega-bundle',
   'outdoor-learning': 'outdoor-mega-bundle',
   'real-world-math': 'real-world-math-bundle',
   'communication-writing': 'communication-writing-bundle',

@@ -93,14 +93,14 @@ export async function getUserPurchases(clerkId: string, email?: string) {
 
 /** Cross-sell mapping: category → complementary categories (ordered by relevance) */
 const crossSellMap: Record<string, string[]> = {
-  'outdoor-learning': ['creativity-anywhere', 'real-world-math'],
-  'creativity-anywhere': ['outdoor-learning', 'communication-writing'],
+  'outdoor-learning': ['creativity-maker', 'real-world-math'],
+  'creativity-maker': ['outdoor-learning', 'communication-writing'],
   'ai-literacy': ['planning-problem-solving', 'communication-writing'],
   'real-world-math': ['entrepreneurship', 'outdoor-learning'],
-  'communication-writing': ['creativity-anywhere', 'entrepreneurship'],
+  'communication-writing': ['creativity-maker', 'entrepreneurship'],
   'entrepreneurship': ['real-world-math', 'planning-problem-solving'],
   'planning-problem-solving': ['entrepreneurship', 'real-world-math'],
-  'start-here': ['outdoor-learning', 'creativity-anywhere'],
+  'start-here': ['outdoor-learning', 'creativity-maker'],
 };
 
 /** Season slug mapping for seasonal prompts */

@@ -259,7 +259,7 @@ export function ArrowRightIcon({ className = 'w-4 h-4' }: IconProps) {
 
 const categoryIconMap: Record<string, React.FC<IconProps>> = {
   'ai-literacy': CpuIcon,
-  'creativity-anywhere': PaletteIcon,
+  'creativity-maker': PaletteIcon,
   'communication-writing': BookOpenIcon,
   'outdoor-learning': LeafIcon,
   'real-world-math': CalculatorIcon,

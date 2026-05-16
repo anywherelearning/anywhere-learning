@@ -10,7 +10,7 @@ import type { ShopProduct } from '@/lib/types';
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'text-[#7b88a8]',
-  'creativity-anywhere': 'text-[#c47a8f]',
+  'creativity-maker': 'text-[#c47a8f]',
   'communication-writing': 'text-[#5b8fa8]',
   'outdoor-learning': 'text-[#588157]',
   'real-world-math': 'text-[#8b7355]',

@@ -30,7 +30,7 @@ interface NativeProductDetailProps {
 
 const CATEGORY_LABELS: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
+  'creativity-maker': 'Creativity & Maker',
   'communication-writing': 'Communication & Writing',
   'outdoor-learning': 'Outdoor Learning',
   'real-world-math': 'Real-World Math',
@@ -42,7 +42,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 const CATEGORY_COLORS: Record<string, string> = {
   'ai-literacy': '#6b8e6b',
-  'creativity-anywhere': '#c4836a',
+  'creativity-maker': '#c4836a',
   'communication-writing': '#c47a8f',
   'outdoor-learning': '#588157',
   'real-world-math': '#8b7355',

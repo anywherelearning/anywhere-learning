@@ -2,7 +2,7 @@
 // When a buyer purchases from a category, suggest a complementary bundle.
 const CROSS_SELL_MAP: Record<string, string> = {
   'ai-literacy': 'creativity-mega-bundle',              // AI & Digital → Creativity Mega ($29.99)
-  'creativity-anywhere': 'real-world-mega-bundle',      // Creativity Anywhere → Real-World Mega ($29.99)
+  'creativity-maker': 'real-world-mega-bundle',      // Creativity & Maker → Real-World Mega ($29.99)
   'outdoor-learning': 'creativity-mega-bundle',         // Outdoor Learning → Creativity Mega ($29.99)
   'real-world-math': 'creativity-mega-bundle',          // Real-World Math → Creativity Mega ($29.99)
   'communication-writing': 'creativity-mega-bundle',    // Communication & Writing → Creativity Mega ($29.99)

@@ -59,7 +59,7 @@ const featuredProducts = [
     name: 'Creativity Mega Bundle',
     slug: 'creativity-mega-bundle',
     shortDescription:
-      'All 10 Creativity Anywhere activities, design, build, and create without limits.',
+      'All 10 Creativity & Maker activities, design, build, and create without limits.',
     priceCents: 4499,
     compareAtPriceCents: 5999,
     imageUrl: '/products/mega-bundle-creativity.jpg',

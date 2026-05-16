@@ -10,7 +10,7 @@ type ProductCardProps = ShopProduct;
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
+  'creativity-maker': 'Creativity & Maker',
   'communication-writing': 'Communication & Writing',
   'outdoor-learning': 'Outdoor Learning',
   'real-world-math': 'Real-World Math',
@@ -22,7 +22,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryBgClasses: Record<string, string> = {
   'ai-literacy': 'card-bg-ai-literacy',
-  'creativity-anywhere': 'card-bg-creativity-anywhere',
+  'creativity-maker': 'card-bg-creativity-maker',
   'communication-writing': 'card-bg-communication-writing',
   'outdoor-learning': 'card-bg-outdoor-learning',
   'real-world-math': 'card-bg-real-world-math',
@@ -34,7 +34,7 @@ const categoryBgClasses: Record<string, string> = {
 
 const categoryAccentColors: Record<string, string> = {
   'ai-literacy': 'border-l-[#7b88a8]',
-  'creativity-anywhere': 'border-l-[#c47a8f]',
+  'creativity-maker': 'border-l-[#c47a8f]',
   'communication-writing': 'border-l-[#5b8fa8]',
   'outdoor-learning': 'border-l-[#588157]',
   'real-world-math': 'border-l-[#8b7355]',

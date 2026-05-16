@@ -24,7 +24,7 @@ const CATEGORIES = [
   { value: 'bundle', label: 'Bundles' },
   { value: 'start-here', label: 'Start Here' },
   { value: 'outdoor-learning', label: 'Outdoor' },
-  { value: 'creativity-anywhere', label: 'Creativity' },
+  { value: 'creativity-maker', label: 'Creativity' },
   { value: 'real-world-math', label: 'Math' },
   { value: 'ai-literacy', label: 'AI & Digital' },
   { value: 'communication-writing', label: 'Writing' },

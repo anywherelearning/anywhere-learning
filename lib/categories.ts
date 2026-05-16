@@ -30,8 +30,8 @@ export const CATEGORIES: CategoryDef[] = [
       'Real-world writing and communication skills for kids who have something to say.',
   },
   {
-    value: 'creativity-anywhere',
-    label: 'Creativity Anywhere',
+    value: 'creativity-maker',
+    label: 'Creativity & Maker',
     description:
       'Open-ended projects that build design thinking and creative confidence.',
   },
@@ -80,7 +80,7 @@ export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries([
  */
 export const COVER_CLASSES: Record<string, string> = {
   'ai-literacy': 'cover-ai-literacy',
-  'creativity-anywhere': 'cover-creativity-anywhere',
+  'creativity-maker': 'cover-creativity-maker',
   'communication-writing': 'cover-communication-writing',
   'outdoor-learning': 'cover-outdoor-learning',
   'real-world-math': 'cover-real-world-math',
@@ -102,7 +102,7 @@ export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   '': 'bg-forest text-cream shadow-sm',
   'all': 'bg-forest text-cream shadow-sm',
   'ai-literacy': 'bg-[#7b88a8] text-white shadow-sm',
-  'creativity-anywhere': 'bg-[#c47a8f] text-white shadow-sm',
+  'creativity-maker': 'bg-[#c47a8f] text-white shadow-sm',
   'communication-writing': 'bg-[#5b8fa8] text-white shadow-sm',
   'outdoor-learning': 'bg-forest text-cream shadow-sm',
   'real-world-math': 'bg-[#8b7355] text-white shadow-sm',

@@ -15,7 +15,7 @@ interface NativeProductCardProps {
 
 const CATEGORY_LABELS: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity',
+  'creativity-maker': 'Creativity',
   'communication-writing': 'Writing',
   'outdoor-learning': 'Outdoor',
   'real-world-math': 'Math',
@@ -27,7 +27,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 const CATEGORY_COLORS: Record<string, string> = {
   'ai-literacy': '#6b8e6b',
-  'creativity-anywhere': '#c4836a',
+  'creativity-maker': '#c4836a',
   'communication-writing': '#c47a8f',
   'outdoor-learning': '#588157',
   'real-world-math': '#8b7355',

@@ -6,7 +6,7 @@ import { CategoryIcon } from './icons';
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital',
-  'creativity-anywhere': 'Creativity Anywhere',
+  'creativity-maker': 'Creativity & Maker',
   'communication-writing': 'Communication & Writing',
   'outdoor-learning': 'Outdoor Learning',
   'real-world-math': 'Real-World Math',
@@ -17,7 +17,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryBgClasses: Record<string, string> = {
   'ai-literacy': 'card-bg-ai-literacy',
-  'creativity-anywhere': 'card-bg-creativity-anywhere',
+  'creativity-maker': 'card-bg-creativity-maker',
   'communication-writing': 'card-bg-communication-writing',
   'outdoor-learning': 'card-bg-outdoor-learning',
   'real-world-math': 'card-bg-real-world-math',

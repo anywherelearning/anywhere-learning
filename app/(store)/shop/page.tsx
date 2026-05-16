@@ -33,7 +33,7 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
     description:
       "Low-prep AI literacy activities for homeschool kids ages 9-14: responsible tech, critical thinking about AI, and digital citizenship.",
   },
-  "creativity-anywhere": {
+  "creativity-maker": {
     title: "Creativity Activities for Homeschool Kids",
     description:
       "Low-prep creativity activities for homeschool kids: open-ended projects that build design thinking, problem-solving, and creative confidence.",
@@ -128,7 +128,7 @@ import { BUNDLE_CONTENTS } from "@/lib/bundles";
 
 const categoryBundleMap: Record<string, string> = {
   "ai-literacy": "ai-digital-bundle",
-  "creativity-anywhere": "creativity-mega-bundle",
+  "creativity-maker": "creativity-mega-bundle",
   "outdoor-learning": "outdoor-mega-bundle",
   "real-world-math": "real-world-math-bundle",
   "communication-writing": "communication-writing-bundle",
@@ -140,11 +140,11 @@ const categoryBundleMap: Record<string, string> = {
 // ── Cross-sell mapping ──
 
 const crossSellMap: Record<string, string> = {
-  "outdoor-learning": "creativity-anywhere",
-  "creativity-anywhere": "communication-writing",
+  "outdoor-learning": "creativity-maker",
+  "creativity-maker": "communication-writing",
   "ai-literacy": "planning-problem-solving",
   "real-world-math": "entrepreneurship",
-  "communication-writing": "creativity-anywhere",
+  "communication-writing": "creativity-maker",
   "entrepreneurship": "real-world-math",
   "planning-problem-solving": "entrepreneurship",
   "start-here": "outdoor-learning",

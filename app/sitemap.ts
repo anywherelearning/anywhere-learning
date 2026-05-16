@@ -84,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Shop category pages (have their own canonical URLs)
   const categoryRoutes: MetadataRoute.Sitemap = [
     'outdoor-learning',
-    'creativity-anywhere',
+    'creativity-maker',
     'real-world-math',
     'ai-literacy',
     'communication-writing',

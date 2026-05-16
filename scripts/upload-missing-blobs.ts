@@ -47,17 +47,17 @@ function getFileMappings(): FileMapping[] {
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Outdoor Learning - Land Art Challenge Cards.pdf`, blobName: 'Land Art Challenge Cards.pdf' });
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Outdoor Learning - Nature crafts for kids.pdf`, blobName: 'Nature crafts for kids.pdf' });
 
-  // Creativity
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Board game studio.pdf`, blobName: 'Creativity anywhere Board game studio.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Build a Rube Goldberg Machine.pdf`, blobName: 'Creativity anywhere Build a Rube Goldberg Machine.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Build a Survival Base for an Imaginary Expedition.pdf`, blobName: 'Creativity anywhere Build a Survival Base for an Imaginary Expedition.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Build an imaginary world.pdf`, blobName: 'Creativity anywhere Build an imaginary world.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Create a Creature + Build Its Habitat.pdf`, blobName: 'Creativity anywhere Create a Creature + Build Its Habitat.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Create a Theme Park or Adventure Course.pdf`, blobName: 'Creativity anywhere Create a Theme Park or Adventure Course.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Create a mini movie,  stop-motion or radio drama.pdf`, blobName: 'Creativity anywhere Create a mini movie,  stop-motion or radio drama.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Invent a new sport.pdf`, blobName: 'Creativity anywhere Invent a new sport.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Kinetic Sculpture or Art Installation.pdf`, blobName: 'Creativity anywhere Kinetic Sculpture or Art Installation.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity Anywhere - Build a museum or interactive exhibit.pdf`, blobName: 'Creativity anywhere build a museum or interactive exhibit.pdf' });
+  // Creativity & Maker
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Board Game Studio.pdf`, blobName: 'Creativity & Maker Board Game Studio.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Build a Rube Goldberg Machine.pdf`, blobName: 'Creativity & Maker Build a Rube Goldberg Machine.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Build a Survival Base for an Imaginary Expedition.pdf`, blobName: 'Creativity & Maker Build a Survival Base for an Imaginary Expedition.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Build an Imaginary World.pdf`, blobName: 'Creativity & Maker Build an Imaginary World.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Create a Creature and Build Its Habitat.pdf`, blobName: 'Creativity & Maker Create a Creature and Build Its Habitat.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Create a Theme Park or Adventure Course.pdf`, blobName: 'Creativity & Maker Create a Theme Park or Adventure Course.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama.pdf`, blobName: 'Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Invent a New Sport.pdf`, blobName: 'Creativity & Maker Invent a New Sport.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Kinetic Sculpture or Art Installation.pdf`, blobName: 'Creativity & Maker Kinetic Sculpture or Art Installation.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker build a museum or interactive exhibit.pdf`, blobName: 'Creativity & Maker build a museum or interactive exhibit.pdf' });
 
   // Real-World Relevance (original 10 — already uploaded with "Real-world relevance" prefix)
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Budget challenge.pdf`, blobName: 'Real-world relevance Budget challenge.pdf' });

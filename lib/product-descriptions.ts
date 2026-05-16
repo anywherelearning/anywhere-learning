@@ -63,7 +63,7 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
     'After-school, weekends & summer break',
     'Outdoor classrooms & nature programs',
   ],
-  'creativity-anywhere': [
+  'creativity-maker': [
     'Homeschool families',
     'Worldschool families',
     'After-school, weekends & summer break',
@@ -135,7 +135,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'creativity-mega-bundle': {
     opening:
-      'All 10 Creativity Anywhere projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films, each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence.',
+      'All 10 Creativity & Maker projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films, each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence.',
     whatsIncluded: [
       '10 complete project guides',
       'Board Game Studio, Rube Goldberg Machine, Survival Base, Imaginary World',

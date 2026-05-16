@@ -58,7 +58,7 @@ const CATEGORY_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   'start-here': StarIcon,
   'ai-literacy': CpuIcon,
   'communication-writing': BookOpenIcon,
-  'creativity-anywhere': PaletteIcon,
+  'creativity-maker': PaletteIcon,
   'entrepreneurship': RocketIcon,
   'outdoor-learning': LeafIcon,
   'planning-problem-solving': PuzzleIcon,

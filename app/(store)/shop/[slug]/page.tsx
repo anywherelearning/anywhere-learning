@@ -60,7 +60,7 @@ export async function generateMetadata({
   if (!product) return {};
   const categoryKeywords: Record<string, string> = {
     'outdoor-learning': 'Outdoor Learning Activities',
-    'creativity-anywhere': 'Creative Activities for Kids',
+    'creativity-maker': 'Creative Activities for Kids',
     'ai-literacy': 'AI & Digital Literacy for Kids',
     'real-world-math': 'Real-World Math Activities',
     'communication-writing': 'Writing & Communication Activities',

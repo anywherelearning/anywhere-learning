@@ -23,7 +23,7 @@ const categories = [
   { value: 'bundle', label: 'Bundles', Icon: LayersIcon },
   { value: 'ai-literacy', label: 'AI & Digital', Icon: CpuIcon },
   { value: 'communication-writing', label: 'Communication & Writing', Icon: BookOpenIcon },
-  { value: 'creativity-anywhere', label: 'Creativity Anywhere', Icon: PaletteIcon },
+  { value: 'creativity-maker', label: 'Creativity & Maker', Icon: PaletteIcon },
   { value: 'entrepreneurship', label: 'Entrepreneurship', Icon: RocketIcon },
   { value: 'outdoor-learning', label: 'Outdoor Learning', Icon: LeafIcon },
   { value: 'planning-problem-solving', label: 'Planning & Problem-Solving', Icon: PuzzleIcon },

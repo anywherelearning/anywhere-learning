@@ -2,7 +2,7 @@ import { CategoryIcon } from './icons';
 
 const categoryLabels: Record<string, string> = {
   'ai-literacy': 'AI & Digital Literacy',
-  'creativity-anywhere': 'Creativity Anywhere',
+  'creativity-maker': 'Creativity & Maker',
   'communication-writing': 'Communication & Writing',
   'outdoor-learning': 'Outdoor Learning',
   'real-world-math': 'Real-World Math',
@@ -14,7 +14,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryDescriptions: Record<string, string> = {
   'ai-literacy': 'Responsible tech, critical thinking about AI, and digital citizenship.',
-  'creativity-anywhere': 'Open-ended projects that build design thinking and creative confidence.',
+  'creativity-maker': 'Open-ended projects that build design thinking and creative confidence.',
   'communication-writing': 'Real-world writing and communication skills for kids who have something to say.',
   'outdoor-learning': 'Turn your backyard, park, or trail into a hands-on learning space.',
   'real-world-math': 'Budgeting, shopping math, fractions in the kitchen, and financial thinking.',
@@ -26,7 +26,7 @@ const categoryDescriptions: Record<string, string> = {
 
 const categoryBgColors: Record<string, string> = {
   'ai-literacy': 'from-[#7b88a8]/[0.08]',
-  'creativity-anywhere': 'from-[#c47a8f]/20 to-[#d4a0b0]/10',
+  'creativity-maker': 'from-[#c47a8f]/20 to-[#d4a0b0]/10',
   'communication-writing': 'from-[#5b8fa8]/20 to-[#7dafc2]/10',
   'outdoor-learning': 'from-[#588157]/20 to-[#6b9e6b]/10',
   'real-world-math': 'from-[#8b7355]/[0.08]',
@@ -38,7 +38,7 @@ const categoryBgColors: Record<string, string> = {
 
 const categoryIconColors: Record<string, string> = {
   'ai-literacy': 'text-[#7b88a8]',
-  'creativity-anywhere': 'text-[#c47a8f]',
+  'creativity-maker': 'text-[#c47a8f]',
   'communication-writing': 'text-[#5b8fa8]',
   'outdoor-learning': 'text-[#588157]',
   'real-world-math': 'text-[#8b7355]',

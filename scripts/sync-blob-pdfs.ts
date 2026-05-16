@@ -59,17 +59,17 @@ const SLUG_TO_FILE: Record<string, string> = {
   'trail-guide-creator': 'Communication & Writing - Trail Guide Creator.pdf',
   'write-like-a-pro': 'Communication & Writing - Write it like a pro.pdf',
 
-  // Creativity Anywhere
-  'board-game-studio': 'Creativity anywhere Board Game Studio.pdf',
-  'rube-goldberg-machine': 'Creativity anywhere Build a Rube Goldberg Machine.pdf',
-  'survival-base': 'Creativity anywhere Build a Survival Base for an Imaginary Expedition.pdf',
-  'build-a-museum': 'Creativity anywhere Build a Museum or Interactive Exhibit.pdf',
-  'imaginary-world': 'Creativity Anywhere - Build an imaginary world.pdf',
-  'creature-habitat': 'Creativity anywhere Create a Creature and Build Its Habitat.pdf',
-  'theme-park': 'Creativity Anywhere - Create a Theme Park or Adventure Course.pdf',
-  'mini-movie': 'Creativity Anywhere - Create a mini movie,  stop-motion or radio drama.pdf',
-  'invent-a-sport': 'Creativity Anywhere - Invent a new sport.pdf',
-  'kinetic-sculpture': 'Creativity Anywhere - Kinetic Sculpture or Art Installation.pdf',
+  // Creativity & Maker
+  'board-game-studio': 'Creativity & Maker Board Game Studio.pdf',
+  'rube-goldberg-machine': 'Creativity & Maker Build a Rube Goldberg Machine.pdf',
+  'survival-base': 'Creativity & Maker Build a Survival Base for an Imaginary Expedition.pdf',
+  'build-a-museum': 'Creativity & Maker build a museum or interactive exhibit.pdf',
+  'imaginary-world': 'Creativity & Maker Build an Imaginary World.pdf',
+  'creature-habitat': 'Creativity & Maker Create a Creature and Build Its Habitat.pdf',
+  'theme-park': 'Creativity & Maker Create a Theme Park or Adventure Course.pdf',
+  'mini-movie': 'Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama.pdf',
+  'invent-a-sport': 'Creativity & Maker Invent a New Sport.pdf',
+  'kinetic-sculpture': 'Creativity & Maker Kinetic Sculpture or Art Installation.pdf',
 
   // Entrepreneurship
   'brand-builder': 'Entrepreneurship - Brand builder.pdf',
