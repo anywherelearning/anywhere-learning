@@ -128,7 +128,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   'sports-stats-lab': 'Real-world math - Sports Stats Lab.pdf',
 
   // Start Here
-  'future-ready-skills-map': 'The future-ready skills map.pdf',
+  'future-ready-skills-map': 'Color - The future-ready skills map.pdf',
 
   // Worldschooling
   'cultural-celebration-journal': 'Worldschooling - Cultural Celebration Journal.pdf',

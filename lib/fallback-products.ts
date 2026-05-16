@@ -1431,7 +1431,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLo8tAkIBECpwGmREB9Zrrv",
     blobUrl: "",
     imageUrl: "/products/future-ready-skills-map.jpg",
-    previewFile: "Preview The future-ready skills map.pdf",
+    previewFile: "Preview Full - The future-ready skills map.pdf",
     category: "start-here",
     isBundle: false,
     bundleProductIds: null,
