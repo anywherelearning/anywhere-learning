@@ -48,7 +48,7 @@ export const resourceTopics: Record<ResourceTopic, { label: string; color: strin
   'real-world-learning':  { label: 'Real-World Learning',    color: '#8b7355' },
   'nature-stem':          { label: 'Nature & Outdoor STEM',  color: '#6b8e6b' },
   'worldschooling':       { label: 'Worldschooling',         color: '#c4836a' },
-  'creativity-maker':     { label: 'Creativity & Makers',    color: '#c47a8f' },
+  'creativity-maker':     { label: 'Creativity & Maker',     color: '#c47a8f' },
   'ai-digital-literacy':  { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
   'homeschool-journey':   { label: 'Homeschool Journey',     color: '#d4a373' },
   'future-ready-skills':  { label: 'Future-Ready Skills',    color: '#588157' },
