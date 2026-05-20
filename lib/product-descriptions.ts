@@ -148,13 +148,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'real-world-mega-bundle': {
     opening:
-      'All 10 Real-World Relevance activities in one download. Budgeting, meal planning, micro-businesses, media literacy, travel planning, smart shopping, and more. Each activity puts kids in real-life scenarios where they practise skills that actually matter, using real money, real decisions, and real thinking.',
+      'All 10 Real-World Relevance guides in one download. Your child plans real budgets, compares real products, starts a real business, checks real information, solves real problems, and writes for real audiences. Every guide is hands-on, low-prep, and built around decisions that actually matter.',
     whatsIncluded: [
-      '10 complete activity guides',
-      'Budget Challenge, Kitchen Maths, Smart Shopper, Micro-Business',
-      'Media & Info Check, Problem-Solver Studio, Travel Day Itinerary',
-      'Community Impact, Write It Like a Pro, Time & Energy Planner',
-      'Each activity uses real-world scenarios and practical decision-making',
+      '10 complete project guides',
+      'Budget Challenge, Kitchen Math, Smart Shopper Lab, Micro-Business Challenge',
+      'Media & Info Check, Problem-Solver Studio, Travel Day Itinerary Challenge',
+      'Community Impact Project, Write It Like a Pro, Time & Energy Planner',
+      'Three difficulty levels per step so it works for different ages and abilities',
     ],
     skillTags: ['Financial Literacy', 'Critical Thinking', 'Writing', 'Planning', 'Problem-Solving'],
     format: 'Bundle',
@@ -502,41 +502,41 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'budget-challenge': {
     opening:
-      'Real-money challenges that teach kids budgeting and smart spending. Kids plan a meal on a budget, track family spending for a week, compare prices at different shops, and design their own savings plan. Financial literacy that happens in real life, not on a screen.',
+      'Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan to you. Real budgeting with real trade-offs, not a worksheet with pretend numbers.',
     whatsIncluded: [
-      'Multiple real-world budgeting challenges',
-      'Meal planning on a budget with real prices',
-      'Weekly spending tracker and analysis',
-      'Price comparison and value assessment',
-      'Personal savings plan design',
+      'Pick-your-own scenario with real budget constraints',
+      'Price research using included Price Menu or real sources',
+      'Surprise cost step that forces real trade-off decisions',
+      'Schedule building and plan pitching',
+      'Version 2 revision after testing the plan',
     ],
-    skillTags: ['Financial Literacy', 'Maths', 'Planning', 'Decision-Making'],
+    skillTags: ['Real-World Math', 'Budgeting', 'Problem-Solving'],
     format: 'Project Guide',
   },
   'kitchen-math-challenge': {
     opening:
-      'Go beyond recipes. Plan meals for a week, calculate grocery costs, compare unit prices, adjust portions, and manage a food budget. Real-world maths that happens in the kitchen, at the shop, and around the dinner table. The kind of maths your child will actually use for the rest of their life.',
+      'Your child plans a real meal for the family, figures out what it costs, scales a recipe up or down, and stays within a grocery budget. They do unit price comparisons, handle a kitchen curveball, and learn the kind of math adults actually use every time they cook or shop.',
     whatsIncluded: [
-      'Meal planning and grocery budgeting challenges',
-      'Unit price comparison and value calculations',
-      'Portion adjustment and recipe scaling',
-      'Weekly food budget management',
-      'Real-world measurement and estimation',
+      'Real meal planning with grocery budget constraints',
+      'Recipe scaling and portion math',
+      'Unit price comparison and smart shopping',
+      'Kitchen curveball that forces quick problem-solving',
+      'Version 2 revision to improve the plan',
     ],
-    skillTags: ['Maths', 'Financial Literacy', 'Measurement', 'Planning'],
+    skillTags: ['Real-World Math', 'Planning', 'Life Skills'],
     format: 'Project Guide',
   },
   'smart-shopper': {
     opening:
-      'Activities that teach kids to be critical, informed consumers. Compare prices, read labels, spot marketing tricks, calculate value, and make smart purchasing decisions. Financial literacy meets critical thinking, building skills every kid needs and no textbook teaches.',
+      'Your child picks two real products to compare and builds their own rubric to figure out which one is actually worth buying. They do cost-per-use math, spot marketing tricks, handle a real-world curveball, and write a recommendation they can defend. The habit of stopping and thinking before spending money.',
     whatsIncluded: [
-      'Consumer literacy challenges and activities',
-      'Price comparison and unit price calculations',
-      'Marketing trick identification and analysis',
-      'Label reading and ingredient investigation',
-      'Smart decision-making framework for purchases',
+      'Real product comparison with a DIY rubric',
+      'Needs vs. wants analysis',
+      'Cost-per-use and hidden cost calculations',
+      'Marketing tactics identification',
+      'Written recommendation with evidence-based reasoning',
     ],
-    skillTags: ['Financial Literacy', 'Critical Thinking', 'Maths', 'Consumer Skills'],
+    skillTags: ['Real-World Math', 'Critical Thinking', 'Decision-Making'],
     format: 'Project Guide',
   },
 
@@ -689,54 +689,54 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'media-info-check': {
     opening:
-      'Critical thinking activities that teach kids to evaluate information, spot bias, check sources, and think critically about what they see online. In a world of misinformation, these are essential skills that schools barely touch and every family needs.',
+      'Your child picks a piece of online content and figures out whether it is trustworthy. They check five reliability signals, look for real evidence, cross-check with a second source, and make a call: reliable, misleading, or unsure. The habit of pausing before believing or sharing.',
     whatsIncluded: [
-      'Source evaluation and fact-checking activities',
-      'Bias identification and perspective analysis',
-      'Online information verification techniques',
-      'News literacy and media awareness challenges',
-      'Critical thinking frameworks for everyday use',
+      'Five-signal quick check for any content',
+      'Evidence evaluation (strong vs. weak proof)',
+      'Cross-checking with second sources',
+      'Share-or-wait decision framework',
+      'Six ready-to-use scenario cards for offline practice',
     ],
-    skillTags: ['Critical Thinking', 'Media Literacy', 'Research', 'Analysis'],
+    skillTags: ['Critical Thinking', 'Media Literacy', 'Digital Literacy'],
     format: 'Project Guide',
   },
   'micro-business': {
     opening:
-      'Guided activities to help your child plan, launch, and run a simple real business. From choosing a product to setting prices, marketing, tracking income, and reflecting on what they learned. Entrepreneurship skills applied to real life, not a simulation.',
+      'Your child designs a real business from scratch. They pick an idea, figure out who would actually pay for it, set prices that make money, build a brand, create a marketing plan, and pitch the whole thing out loud. Whether they actually launch or just walk through every step, the thinking is identical to what real entrepreneurs do.',
     whatsIncluded: [
-      'Complete micro-business launch guide',
-      'Product/service brainstorming and market research',
-      'Pricing strategy and cost calculation',
-      'Marketing plan and customer outreach',
-      'Income tracking, reflection, and iteration',
+      'Business idea selection with 12 starter cards',
+      'Customer research and problem-solving',
+      'Pricing strategy with real profit math',
+      'Brand building and marketing plan',
+      'Pitch practice and Version 2 revision',
     ],
-    skillTags: ['Entrepreneurship', 'Maths', 'Marketing', 'Planning', 'Communication'],
+    skillTags: ['Entrepreneurship', 'Problem-Solving', 'Communication'],
     format: 'Project Guide',
   },
   'problem-solver': {
     opening:
-      'Design thinking challenges that teach kids to identify problems, brainstorm solutions, prototype, test, and iterate. Real-world problem-solving skills applied to everyday life, from improving a family routine to designing a better backpack. The way real engineers and designers think.',
+      'Your child picks a real problem, figures out who it affects, brainstorms solutions, builds a prototype from whatever is around the house, tests it, gets feedback, and makes it better. Design thinking the way real engineers and inventors actually work, applied to everyday life.',
     whatsIncluded: [
-      'Design thinking challenge guides',
-      'Problem identification and empathy mapping',
-      'Brainstorming and solution generation frameworks',
-      'Prototyping with everyday materials',
-      'Testing, feedback, and iteration cycles',
+      'Real problem identification with 8 starter cards',
+      'Who-does-this-affect research step',
+      'Brainstorming with constraints',
+      'Prototype building with household materials',
+      'Testing, feedback, and Version 2 revision',
     ],
-    skillTags: ['Design Thinking', 'Problem-Solving', 'Engineering', 'Creativity'],
+    skillTags: ['Critical Thinking', 'Problem-Solving', 'Creativity'],
     format: 'Project Guide',
   },
   'travel-day': {
     opening:
-      'Challenge your child to plan a real travel day from start to finish. Research destinations, compare transport options, calculate budgets, build itineraries, and navigate logistics. Geography, maths, and critical thinking all wrapped in one exciting planning challenge.',
+      'Your child plans a real day trip from scratch: picks the destination, sets priorities, builds a time-and-money budget, creates a full itinerary, handles a curveball, and makes a backup plan. Planning, budgeting, and problem-solving all in one project that feels like an adventure.',
     whatsIncluded: [
-      'Complete travel day planning challenge',
-      'Destination research and comparison',
-      'Transport options and cost calculations',
-      'Itinerary building with time management',
-      'Budget planning and contingency thinking',
+      'Destination research with priority setting',
+      'Time-and-money budget planning',
+      'Full itinerary building with realistic timing',
+      'Curveball step that forces real-time problem-solving',
+      'Backup plan and Version 2 revision',
     ],
-    skillTags: ['Geography', 'Maths', 'Planning', 'Research', 'Decision-Making'],
+    skillTags: ['Planning', 'Budgeting', 'Problem-Solving'],
     format: 'Project Guide',
   },
 
@@ -745,15 +745,15 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'time-energy-planner': {
     opening:
-      'Help your child learn to manage their time and energy effectively. Activities include building weekly schedules, tracking energy levels, prioritising tasks, setting goals, and reflecting on what works. Executive function skills that build real independence.',
+      'Your child maps their own energy patterns, figures out when their brain actually works best, and builds a daily plan that matches hard tasks to high-energy windows. Then they test it in real life and fix what does not work. Self-awareness and planning skills that most adults never learn.',
     whatsIncluded: [
-      'Time management and energy tracking activities',
-      'Weekly schedule building and prioritisation',
-      'Goal setting and progress reflection',
-      'Energy level awareness and management',
-      'Personal routine design and optimisation',
+      'Brain dump and task sorting by priority',
+      'Personal energy mapping throughout the day',
+      'Task-to-energy matching system',
+      'Time-blocked daily plan with buffers',
+      'Real-life testing and Version 2 revision',
     ],
-    skillTags: ['Time Management', 'Self-Regulation', 'Planning', 'Goal Setting'],
+    skillTags: ['Planning', 'Self-Awareness', 'Life Skills'],
     format: 'Project Guide',
   },
 
@@ -762,28 +762,28 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'community-impact': {
     opening:
-      'Guide your child through planning and executing a real community impact project. From identifying local needs to designing solutions, creating action plans, and reflecting on results. Builds empathy, leadership, project management, and the confidence to make a real difference.',
+      'Your child picks a real problem in their neighbourhood, figures out who it affects, designs a solution, builds a plan, and does something about it. Leadership, empathy, and project management through a project that actually matters to real people.',
     whatsIncluded: [
-      'Complete community project planning guide',
-      'Local needs assessment and opportunity mapping',
-      'Solution design and action plan creation',
-      'Project execution support and milestones',
-      'Reflection and impact assessment',
+      'Neighbourhood needs spotting with 6 project idea cards',
+      'Who-does-this-affect research step',
+      'Solution design and action planning',
+      'Project execution with real-world logistics',
+      'Reflection and Version 2 thinking',
     ],
-    skillTags: ['Leadership', 'Empathy', 'Project Management', 'Communication', 'Writing'],
+    skillTags: ['Leadership', 'Problem-Solving', 'Community'],
     format: 'Project Guide',
   },
   'write-like-a-pro': {
     opening:
-      'Real-world writing challenges that go beyond essays. Kids write emails, create social media posts, draft persuasive letters, design infographics with captions, and communicate for real audiences. Writing that matters, not writing for a grade.',
+      'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, or news report), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, not a five-paragraph essay for nobody.',
     whatsIncluded: [
-      'Real-world writing challenge guides',
-      'Email, letter, and professional communication',
-      'Social media copywriting and caption design',
-      'Persuasive writing for real audiences',
-      'Infographic and visual communication design',
+      'Six writing style cards with real-world examples',
+      'Topic selection and audience targeting',
+      'Drafting with structure and voice',
+      'Self-editing and revision process',
+      'Final draft and Version 2 polish',
     ],
-    skillTags: ['Writing', 'Communication', 'Persuasion', 'Design', 'Digital Literacy'],
+    skillTags: ['Writing', 'Communication', 'Creative Thinking'],
     format: 'Project Guide',
   },
 

@@ -59,17 +59,17 @@ function getFileMappings(): FileMapping[] {
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker Kinetic Sculpture or Art Installation.pdf`, blobName: 'Creativity & Maker Kinetic Sculpture or Art Installation.pdf' });
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Creativity & Maker build a museum or interactive exhibit.pdf`, blobName: 'Creativity & Maker build a museum or interactive exhibit.pdf' });
 
-  // Real-World Relevance (original 10 — already uploaded with "Real-world relevance" prefix)
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Budget challenge.pdf`, blobName: 'Real-world relevance Budget challenge.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Communication & Writing - Community impact project.pdf`, blobName: 'Real-world relevance Community impact project.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Kitchen math & meal planning challenge.pdf`, blobName: 'Real-world relevance Kitchen math & meal planning challenge.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/AI & Digital literacy -  Media & info check.pdf`, blobName: 'Real-world relevance Media & info check.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Entrepreneurship - Micro-business challenge.pdf`, blobName: 'Real-world relevance Micro-business challenge.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-Solving - Problem-solver studio.pdf`, blobName: 'Real-world relevance Problem-solver studio.pdf' });
+  // Real-World Relevance (original 10 — redesigned May 2026, re-uploading with same blob names)
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Real-Life Budget Challenge.pdf`, blobName: 'Real-world relevance Budget challenge.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-Solving Community Impact Project.pdf`, blobName: 'Real-world relevance Community impact project.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Kitchen Math & Meal Planning Challenge.pdf`, blobName: 'Real-world relevance Kitchen math & meal planning challenge.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/AI + Digital Literacy - MEDIA & INFO CHECK.pdf`, blobName: 'Real-world relevance Media & info check.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Entrepreneurship - Micro-Business Challenge.pdf`, blobName: 'Real-world relevance Micro-business challenge.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-Solving Problem-Solver Studio.pdf`, blobName: 'Real-world relevance Problem-solver studio.pdf' });
   mappings.push({ localPath: `${ACTIVITIES_DIR}/Real-world math - Smart shopper lab.pdf`, blobName: 'Real-world relevance Smart shopper lab.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-solving - Time & energy planner.pdf`, blobName: 'Real-world relevance Time & energy planner.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-solving - Travel Day itinerary challenge.pdf`, blobName: 'Real-world relevance Travel Day itinerary challenge.pdf' });
-  mappings.push({ localPath: `${ACTIVITIES_DIR}/Communication & Writing - Write it like a pro.pdf`, blobName: 'Real-world relevance Write it like a pro.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-Solving Time & Energy Planner.pdf`, blobName: 'Real-world relevance Time & energy planner.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Planning & Problem-Solving Travel Day Itinerary Challenge.pdf`, blobName: 'Real-world relevance Travel Day itinerary challenge.pdf' });
+  mappings.push({ localPath: `${ACTIVITIES_DIR}/Communication & Writing - Write It Like a Pro.pdf`, blobName: 'Real-world relevance Write it like a pro.pdf' });
 
   // AI + Digital Literacy
   mappings.push({ localPath: `${ACTIVITIES_DIR}/AI & Digital Literacy - AI BASICS MYTHS, FACTS & SMART RULES.pdf`, blobName: 'AI + Digital Literacy - AI BASICS MYTHS, FACTS & SMART RULES.pdf' });
@@ -143,17 +143,17 @@ function getFileMappings(): FileMapping[] {
   mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Creativity anywhere Kinetic Sculpture or Art Installation.pdf`, blobName: 'Preview Creativity anywhere Kinetic Sculpture or Art Installation.pdf' });
   mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Creativity anywhere build a museum or interactive exhibit.pdf`, blobName: 'Preview Creativity anywhere build a museum or interactive exhibit.pdf' });
 
-  // Real-world relevance previews
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Budget challenge.pdf`, blobName: 'Preview Real-world relevance Budget challenge.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Community impact project.pdf`, blobName: 'Preview Real-world relevance Community impact project.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Kitchen math & meal planning challenge.pdf`, blobName: 'Preview Real-world relevance Kitchen math & meal planning challenge.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Media & info check.pdf`, blobName: 'Preview Real-world relevance Media & info check.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Micro-business challenge.pdf`, blobName: 'Preview Real-world relevance Micro-business challenge.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Problem-solver studio.pdf`, blobName: 'Preview Real-world relevance Problem-solver studio.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Smart shopper lab.pdf`, blobName: 'Preview Real-world relevance Smart shopper lab.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Time & energy planner.pdf`, blobName: 'Preview Real-world relevance Time & energy planner.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Travel Day itinerary challenge.pdf`, blobName: 'Preview Real-world relevance Travel Day itinerary challenge.pdf' });
-  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world relevance Write it like a pro.pdf`, blobName: 'Preview Real-world relevance Write it like a pro.pdf' });
+  // Real-world relevance previews (redesigned May 2026, re-uploading with same blob names)
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world math - Real-Life Budget Challenge.pdf`, blobName: 'Preview Real-world relevance Budget challenge.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Planning & Problem-Solving Community Impact Project.pdf`, blobName: 'Preview Real-world relevance Community impact project.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world math - Kitchen Math & Meal Planning Challenge.pdf`, blobName: 'Preview Real-world relevance Kitchen math & meal planning challenge.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview AI + Digital Literacy - MEDIA & INFO CHECK.pdf`, blobName: 'Preview Real-world relevance Media & info check.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Entrepreneurship - Micro-Business Challenge.pdf`, blobName: 'Preview Real-world relevance Micro-business challenge.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Planning & Problem-Solving Problem-Solver Studio.pdf`, blobName: 'Preview Real-world relevance Problem-solver studio.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Real-world math - Smart shopper lab.pdf`, blobName: 'Preview Real-world relevance Smart shopper lab.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Planning & Problem-Solving Time & Energy Planner.pdf`, blobName: 'Preview Real-world relevance Time & energy planner.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Planning & Problem-Solving Travel Day Itinerary Challenge.pdf`, blobName: 'Preview Real-world relevance Travel Day itinerary challenge.pdf' });
+  mappings.push({ localPath: `${PREVIEWS_DIR}/Preview Communication & Writing - Write It Like a Pro.pdf`, blobName: 'Preview Real-world relevance Write it like a pro.pdf' });
 
   // AI previews
   mappings.push({ localPath: `${PREVIEWS_DIR}/Preview AI + Digital Literacy - AI BASICS MYTHS, FACTS & SMART RULES.pdf`, blobName: 'Preview AI + Digital Literacy - AI BASICS MYTHS, FACTS & SMART RULES.pdf' });
