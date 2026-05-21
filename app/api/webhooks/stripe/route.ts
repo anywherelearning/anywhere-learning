@@ -396,6 +396,15 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
         });
         console.log(`[webhook] cancelled subscription ${subId} after refund (status=${sub.status})`);
         await upsertSubscriptionFromStripe(sub);
+        // Stripe's `cancel` leaves `current_period_end` at the original
+        // future date — fine for "cancel at period end" semantics, but for
+        // a REFUND we want access to drop immediately. Override the DB
+        // row to set periodEnd = now so the access tier check fails right
+        // away (it grants access when canceled AND periodEnd > now).
+        await db
+          .update(subscriptions)
+          .set({ currentPeriodEnd: new Date(), updatedAt: new Date() })
+          .where(eq(subscriptions.stripeSubscriptionId, subId));
       }
     } catch (err) {
       console.error('[webhook] failed to cancel subscription after refund:', err);
