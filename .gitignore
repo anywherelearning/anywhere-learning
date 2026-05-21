@@ -52,3 +52,4 @@ next-env.d.ts
 
 # generated pinterest catalog snapshot (pre-launch only, regenerate as needed)
 /pinterest-feed.tsv
+.env.production

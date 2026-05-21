@@ -1,85 +1,127 @@
+/**
+ * POST /api/reviews — write or update a review for an activity.
+ *
+ * Auth & access:
+ *   - User must be signed in (Clerk)
+ *   - User must have access to the activity (member, OR starter buyer +
+ *     activity in their Starter Pack)
+ *
+ * Each user can leave one review per activity (upserts on re-submit).
+ * Snapshots the author's Clerk name + image URL onto the review row so the
+ * product page can render reviews without per-row Clerk lookups.
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
-import { auth } from '@clerk/nextjs/server';
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { revalidatePath } from 'next/cache';
 import { db } from '@/lib/db';
-import { reviews, orders, users } from '@/lib/db/schema';
+import { reviews, users } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
+import { getAccessTierForClerkId } from '@/lib/access';
+import { STARTER_PACK_SLUGS } from '@/lib/membership';
+
+const SKILLS_MAP_SLUGS = new Set(['skills-map-color', 'skills-map-bw']);
 
 export async function POST(req: NextRequest) {
   try {
-    // Rate limit: 10 requests per 60 seconds
     const limited = await checkRateLimit(req, standardLimiter());
     if (limited) return limited;
 
     const { userId: clerkId } = await auth();
-    if (!clerkId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!clerkId) return NextResponse.json({ error: 'Sign in required.' }, { status: 401 });
+
+    const body = await req.json().catch(() => ({}));
+    const { slug, rating, comment } = body as { slug?: string; rating?: number; comment?: string };
+
+    if (!slug || typeof slug !== 'string') {
+      return NextResponse.json({ error: 'Missing activity.' }, { status: 400 });
+    }
+    if (!Number.isInteger(rating) || (rating as number) < 1 || (rating as number) > 5) {
+      return NextResponse.json({ error: 'Rating must be 1–5.' }, { status: 400 });
+    }
+    const cleaned = (typeof comment === 'string' ? comment : '').replace(/<[^>]*>/g, '').trim();
+    if (cleaned.length < 10) {
+      return NextResponse.json({ error: 'Tell us a little more — a sentence or two.' }, { status: 400 });
+    }
+    if (cleaned.length > 1000) {
+      return NextResponse.json({ error: 'A bit too long. Trim to under 1000 characters.' }, { status: 400 });
     }
 
-    const body = await req.json();
-    const { productId, productSlug, rating, comment } = body;
-
-    // Validate input
-    if (!productId || !rating || typeof comment !== 'string') {
-      return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
-    }
-    if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
-      return NextResponse.json({ error: 'Rating must be 1–5' }, { status: 400 });
-    }
-    const trimmedComment = comment.replace(/<[^>]*>/g, '').trim();
-    if (trimmedComment.length === 0) {
-      return NextResponse.json({ error: 'Comment is required' }, { status: 400 });
-    }
-    if (trimmedComment.length > 1000) {
-      return NextResponse.json({ error: 'Comment too long (max 1000 characters)' }, { status: 400 });
+    // Tier check
+    const tier = await getAccessTierForClerkId(clerkId);
+    const allowed =
+      tier === 'member' ||
+      (tier === 'starter' && (STARTER_PACK_SLUGS.has(slug) || SKILLS_MAP_SLUGS.has(slug)));
+    if (!allowed) {
+      return NextResponse.json(
+        { error: 'Only members who have access to this activity can review it.' },
+        { status: 403 },
+      );
     }
 
-    // Find user in DB
-    const user = await db.select().from(users)
-      .where(eq(users.clerkId, clerkId)).limit(1);
-    if (user.length === 0) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 });
+    // Find user row
+    const userRows = await db
+      .select()
+      .from(users)
+      .where(eq(users.clerkId, clerkId))
+      .limit(1);
+    const user = userRows[0];
+    if (!user) {
+      return NextResponse.json({ error: 'Account not found.' }, { status: 404 });
     }
 
-    // Verify purchase
-    const order = await db.select().from(orders).where(and(
-      eq(orders.userId, user[0].id),
-      eq(orders.productId, productId),
-      eq(orders.status, 'completed'),
-    )).limit(1);
-    if (order.length === 0) {
-      return NextResponse.json({ error: 'Purchase required to leave a review' }, { status: 403 });
+    // Snapshot author info from Clerk (so we don't refetch on every render)
+    let authorName = user.email; // sensible fallback
+    let authorImageUrl: string | null = null;
+    try {
+      const u = await currentUser();
+      if (u) {
+        authorName =
+          u.fullName?.trim() ||
+          [u.firstName, u.lastName].filter(Boolean).join(' ').trim() ||
+          u.username ||
+          user.email;
+        authorImageUrl =
+          u.hasImage && !u.imageUrl?.includes('clerk.com/identicon') ? u.imageUrl : null;
+      }
+    } catch {
+      /* Clerk lookup failed — fine, name fallback is the email */
     }
 
-    // Check for existing review (upsert)
-    const existing = await db.select().from(reviews)
-      .where(and(eq(reviews.userId, user[0].id), eq(reviews.productId, productId)))
+    // Upsert
+    const existing = await db
+      .select()
+      .from(reviews)
+      .where(and(eq(reviews.userId, user.id), eq(reviews.productSlug, slug)))
       .limit(1);
 
-    if (existing.length > 0) {
-      // Update existing review
-      await db.update(reviews)
-        .set({ rating, comment: trimmedComment, updatedAt: new Date() })
+    if (existing[0]) {
+      await db
+        .update(reviews)
+        .set({
+          rating: rating as number,
+          comment: cleaned,
+          authorName,
+          authorImageUrl,
+          updatedAt: new Date(),
+        })
         .where(eq(reviews.id, existing[0].id));
     } else {
-      // Create new review
       await db.insert(reviews).values({
-        userId: user[0].id,
-        productId,
-        rating,
-        comment: trimmedComment,
+        userId: user.id,
+        productSlug: slug,
+        rating: rating as number,
+        comment: cleaned,
+        authorName,
+        authorImageUrl,
       });
     }
 
-    // Trigger ISR revalidation for the product page
-    if (productSlug) {
-      revalidatePath(`/shop/${productSlug}`);
-    }
-
+    revalidatePath(`/shop/${slug}`);
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Error submitting review:', error);
-    return NextResponse.json({ error: 'Failed to submit review' }, { status: 500 });
+  } catch (err) {
+    console.error('[reviews] POST failed:', err);
+    return NextResponse.json({ error: 'Could not save your review.' }, { status: 500 });
   }
 }

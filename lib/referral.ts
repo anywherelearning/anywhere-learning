@@ -2,7 +2,6 @@ import { db } from '@/lib/db';
 import { referrals, referralConversions, users } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { stripe } from '@/lib/stripe';
-import { sendReferralRewardEmail } from '@/lib/resend';
 
 const REFERRAL_DISCOUNT_PERCENT = 15;
 const REFERRAL_COUPON_NAME = 'Referral Discount - 15% Off';
@@ -172,15 +171,9 @@ export async function processReferralConversion(
         .set({ rewardStripePromoCode: rewardPromo.code })
         .where(eq(referrals.id, referral.id));
 
-      // Send reward email to the referrer
-      try {
-        await sendReferralRewardEmail({
-          to: referral.referrerEmail,
-          rewardCode: rewardPromo.code!,
-        });
-      } catch (emailError) {
-        console.error('Failed to send referral reward email:', emailError);
-      }
+      // Reward-email send removed when the referral nurture flow was retired.
+      // The Stripe promo code is still generated above and stored on the
+      // `referrals` row — surface it in the UI if/when referrals come back.
     } catch (error) {
       console.error('Failed to create referral reward promo code:', error);
     }

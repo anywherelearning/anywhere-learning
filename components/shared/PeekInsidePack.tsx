@@ -107,7 +107,7 @@ export default function PeekInsidePack() {
                   <div className="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#d4a373" strokeWidth="3" strokeLinecap="round"><path d="M20 6L9 17l-5-5"/></svg>
                   </div>
-                  <span className="text-sm text-gray-400">Age adaptation notes for younger + older kids</span>
+                  <span className="text-sm text-gray-400">Three skill-level variations (Explore / Develop / Extend)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">

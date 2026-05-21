@@ -78,7 +78,7 @@ interface Tab {
 
 const tabs: Tab[] = [
   {
-    label: 'Shop',
+    label: 'Browse',
     href: '/shop',
     icon: ShopIcon,
     isActive: (p) => p.startsWith('/shop'),

@@ -1,81 +1,60 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getFallbackProductBySlug } from '@/lib/fallback-products';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 interface BlogBundleCalloutProps {
-  slug: string;
+  /** Original bundle slug — no longer used since bundles aren't sold standalone.
+   *  Kept in the prop signature so existing content blocks don't need editing. */
+  slug?: string;
   context?: string;
 }
 
-export default function BlogBundleCallout({ slug, context }: BlogBundleCalloutProps) {
-  const bundle = getFallbackProductBySlug(slug);
-  if (!bundle) return null;
-
-  const price = (bundle.priceCents / 100).toFixed(2);
-  const savings =
-    bundle.compareAtPriceCents && bundle.compareAtPriceCents > bundle.priceCents
-      ? Math.round(((bundle.compareAtPriceCents - bundle.priceCents) / bundle.compareAtPriceCents) * 100)
-      : 0;
-
+/**
+ * The old per-category "bundle" products have been folded into the Membership.
+ * This callout used to render a buy-the-bundle card; it now redirects to the
+ * membership pitch with a soft "the full library is in the membership" framing.
+ */
+export default function BlogBundleCallout({ context }: BlogBundleCalloutProps) {
   return (
-    <div className="my-12 md:my-16 rounded-2xl border border-gold/20 bg-gradient-to-br from-[#fefbf6] via-[#fdf6ec] to-[#faf9f6] shadow-[0_2px_24px_-4px_rgba(212,163,115,0.12)] overflow-hidden">
-      <div className="flex flex-col sm:flex-row">
-        {/* Bundle image */}
-        <div className="relative sm:w-40 md:w-48 shrink-0 aspect-[4/3] sm:aspect-auto bg-[#fdf6ec]">
-          {bundle.imageUrl ? (
-            <Image
-              src={bundle.imageUrl}
-              alt={bundle.name}
-              fill
-              sizes="(max-width: 640px) 100vw, 192px"
-              className="object-cover"
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gray-300 text-sm">{bundle.name}</span>
-            </div>
-          )}
-          {/* Savings badge */}
-          {savings > 0 && (
-            <div className="absolute top-3 left-3 bg-gold text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
-              Save {savings}%
-            </div>
-          )}
+    <div className="my-10 md:my-14 rounded-2xl border border-forest/20 bg-gradient-to-br from-[#E6EBDF]/60 via-[#E6EBDF]/30 to-cream shadow-[0_2px_24px_-4px_rgba(58,90,64,0.15)] overflow-hidden">
+      <div className="flex flex-col sm:flex-row items-stretch">
+        {/* Visual side — homepage hero collage */}
+        <div className="relative sm:w-40 md:w-48 shrink-0 aspect-[4/3] sm:aspect-auto bg-[#E6EBDF]">
+          <Image
+            src="/membership-hero.png"
+            alt="The full Anywhere Learning library"
+            fill
+            sizes="(max-width: 640px) 100vw, 192px"
+            className="object-cover"
+          />
         </div>
 
         {/* Content */}
         <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center">
-          <div className="flex items-center gap-2 mb-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="text-gold">
-              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-              <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-            <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-gold">
-              Bundle &amp; Save
-            </p>
-          </div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-forest-dark mb-2">
+            The full library
+          </p>
           <h4 className="font-semibold text-gray-900 text-lg leading-snug mb-1.5">
-            {bundle.name}
+            {context
+              ? 'Want the whole library, not just this one?'
+              : '100+ activities in one membership.'}
           </h4>
           <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-2">
-            {context || bundle.shortDescription}
+            {context ||
+              `Real-world activities across eight categories. New ones added every quarter${
+                IS_FOUNDER_PHASE ? ', and the founder rate locks in for life' : ''
+              }.`}
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap">
             <Link
-              href={`/shop/${bundle.slug}`}
-              className="inline-flex items-center rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#c4956a] hover:shadow-md hover:-translate-y-0.5"
+              href="/join"
+              className="inline-flex items-center rounded-full bg-forest px-6 py-2.5 text-sm font-semibold text-cream transition-all hover:bg-forest-dark hover:shadow-md hover:-translate-y-0.5"
             >
-              Get the Bundle
+              Unlock with membership
             </Link>
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-gray-900">${price}</span>
-              {bundle.compareAtPriceCents && (
-                <span className="text-xs text-gray-400 line-through">
-                  ${(bundle.compareAtPriceCents / 100).toFixed(2)}
-                </span>
-              )}
-            </div>
+            <span className="text-sm font-medium text-gray-400">
+              {MEMBERSHIP_PRICE_YEAR}
+            </span>
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ export default function HeroSaleBadge() {
               href="/shop"
               className="inline-flex items-center rounded-xl bg-gold px-5 py-2.5 text-sm font-bold text-forest-dark shadow-lg transition-colors hover:bg-gold-light"
             >
-              Shop the sale
+              See the sale
             </Link>
             <span className="text-xs font-medium italic text-cream/75">
               {daysCopy}
@@ -119,7 +119,7 @@ export default function HeroSaleBadge() {
                 href="/shop"
                 className="inline-flex items-center rounded-xl bg-gold px-7 py-3.5 text-base font-bold text-forest-dark shadow-lg transition-all hover:scale-[1.03] hover:bg-gold-light hover:shadow-xl"
               >
-                Shop the sale
+                See the sale
               </Link>
               <span className="text-sm font-medium italic text-cream/75">
                 {daysCopy}

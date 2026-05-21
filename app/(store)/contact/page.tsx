@@ -1,112 +1,300 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import ScrollReveal from '@/components/shared/ScrollReveal';
+import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Anywhere Learning. Questions about activity guides, orders, or homeschooling? We\u2019d love to hear from you.',
+  description:
+    "Get in touch with Anywhere Learning. Questions about activity guides, the membership, or homeschooling? Amelie reads every email and replies within 48 hours.",
   alternates: { canonical: 'https://anywherelearning.co/contact' },
 };
 
+const contactLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Anywhere Learning',
+  url: 'https://anywherelearning.co/contact',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Anywhere Learning',
+    email: 'info@anywherelearning.co',
+    url: 'https://anywherelearning.co',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'info@anywherelearning.co',
+      availableLanguage: ['English'],
+    },
+  },
+};
+
+const quickCards = [
+  {
+    title: 'Common questions',
+    body: "Refunds, ages, how the membership works, what's included. Most things are answered here.",
+    href: '/faq',
+    cta: 'Visit the FAQ',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M9 9a3 3 0 1 1 4.5 2.6c-.9.5-1.5 1.2-1.5 2.4" />
+        <line x1="12" y1="17" x2="12" y2="17.01" />
+        <circle cx="12" cy="12" r="9" />
+      </svg>
+    ),
+  },
+  {
+    title: "Not sure if it's for you?",
+    body: 'Try the free starter guide. Seven real-world activities across seven categories. No commitment.',
+    href: '/free-guide',
+    cta: 'Get the free guide',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="8" width="18" height="13" rx="1.5" />
+        <path d="M3 12h18" />
+        <path d="M12 8v13" />
+        <path d="M7.5 8C7.5 6 9 4.5 11 5.5c1 .5 1 2.5 1 2.5" />
+        <path d="M16.5 8C16.5 6 15 4.5 13 5.5c-1 .5-1 2.5-1 2.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Curious about the membership?',
+    body: 'See exactly what is included, what founding members get, and how cancellation works.',
+    href: '/join',
+    cta: 'Explore the membership',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z" />
+        <path d="M4 17a3 3 0 0 1 3-3h12" />
+        <line x1="8" y1="8" x2="14" y2="8" />
+      </svg>
+    ),
+  },
+];
+
 export default function ContactPage() {
   return (
-    <div className="bg-cream">
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-5 sm:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">
-              Get in Touch
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl text-forest leading-tight mb-4">
-              We&apos;d Love to Hear From You
-            </h1>
-            <p className="text-lg text-gray-500 max-w-xl mx-auto">
-              Whether you have a question about our activity guides, need help with an order,
-              or just want to say hi, we&apos;re here for you.
-            </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactLd) }}
+      />
+      <main className="bg-cream">
+        {/* 01 PAGE HEADER */}
+        <header className="bg-cream pt-16 md:pt-24 pb-10 md:pb-14 text-center">
+          <div className="mx-auto max-w-[760px] px-6">
+            <ScrollReveal>
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                <span className="w-[22px] h-px bg-forest inline-block" />
+                Get in touch
+              </p>
+              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] leading-[1.02] tracking-tight mt-4 text-balance">
+                Say <span className="italic text-forest">hello.</span>
+              </h1>
+              <p className="mt-5 text-[17px] md:text-[18.5px] leading-[1.55] text-gray-600 max-w-[620px] mx-auto">
+                Questions, ideas, a story about your kid making dinner. I&apos;d love to hear
+                from you.{' '}
+                <span className="font-display italic text-forest-dark">Real human emails only.</span>{' '}
+                No bots, no auto-responders.
+              </p>
+            </ScrollReveal>
           </div>
+        </header>
 
-          {/* Email Card */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm mb-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-forest/5 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-forest" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-1">Email Us</h2>
-                <a
-                  href="mailto:info@anywherelearning.co"
-                  className="text-forest font-medium text-lg hover:text-forest-dark transition-colors"
-                >
-                  info@anywherelearning.co
-                </a>
-                <p className="text-sm text-gray-400 mt-2">
-                  We usually respond within 24 hours.
-                </p>
-              </div>
+        {/* 02 MAIN TWO-COLUMN: form + info */}
+        <section className="bg-cream pb-16 md:pb-20">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-start">
+              {/* LEFT: form */}
+              <ScrollReveal>
+                <ContactForm />
+              </ScrollReveal>
+
+              {/* RIGHT: info card */}
+              <ScrollReveal delay={80}>
+                <aside className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-7 md:p-8 space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-[56px] h-[56px] rounded-full overflow-hidden border border-[#D8D4C5] shrink-0">
+                      <Image
+                        src="/amelie.jpg"
+                        alt="Amelie"
+                        fill
+                        sizes="56px"
+                        quality={80}
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col leading-[1.3]">
+                      <span className="font-display text-[20px] text-ink">Amelie</span>
+                      <span className="text-[13px] text-gray-500">
+                        Founder &middot; Teacher &middot; Mom of two
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-[15px] leading-[1.65] text-gray-600 m-0">
+                    I read every email myself. If you&apos;ve got a question about the
+                    membership, an activity, or homeschooling, or you just want to say hi,
+                    I&apos;d love to hear from you.{' '}
+                    <span className="font-display italic text-ink">
+                      Real replies come from this exact inbox,
+                    </span>{' '}
+                    usually within 48 hours.
+                  </p>
+
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 mb-1.5">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:info@anywherelearning.co"
+                      className="font-display italic text-[20px] text-forest-dark hover:text-forest underline decoration-forest/25 underline-offset-[4px] hover:decoration-forest transition-colors"
+                    >
+                      info@anywherelearning.co
+                    </a>
+                    <p className="mt-1.5 text-[13px] text-gray-500 leading-[1.5] m-0">
+                      <span className="font-display italic text-forest-dark">
+                        For account or download help,
+                      </span>{' '}
+                      please include the email you used to purchase.
+                    </p>
+                  </div>
+
+                  <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-4 flex items-start gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="w-8 h-8 shrink-0 rounded-full bg-cream border border-[#C9D3BE] grid place-items-center text-forest-dark"
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <polyline points="12 7 12 12 15.5 14.5" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-[14px] font-semibold text-ink m-0 leading-[1.4]">
+                        Typical response time: within 48 hours, Mon to Fri.
+                      </p>
+                      <p className="mt-1 text-[13px] text-gray-600 leading-[1.5] m-0">
+                        Weekend emails get answered{' '}
+                        <span className="font-display italic text-forest-dark">
+                          Monday morning. Always.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 mb-2.5">
+                      Elsewhere
+                    </p>
+                    <ul className="space-y-2 list-none p-0 m-0">
+                      <li>
+                        <a
+                          href="https://instagram.com/anywherelearning"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2.5 text-[14.5px] font-medium text-gray-600 hover:text-forest-dark transition-colors py-1"
+                        >
+                          <span className="w-[26px] h-[26px] rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-gray-600">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <rect x="3" y="3" width="18" height="18" rx="5" />
+                              <circle cx="12" cy="12" r="4" />
+                              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                            </svg>
+                          </span>
+                          @anywherelearning on Instagram
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://ca.pinterest.com/anywherelearning/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2.5 text-[14.5px] font-medium text-gray-600 hover:text-forest-dark transition-colors py-1"
+                        >
+                          <span className="w-[26px] h-[26px] rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-gray-600">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <circle cx="12" cy="12" r="9" />
+                              <path d="M9 22l2-7" />
+                              <path d="M8 11.5a4 4 0 1 1 7.5 2c-.5 1.5-2 2-3 2" />
+                            </svg>
+                          </span>
+                          @anywherelearning on Pinterest
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.facebook.com/profile.php?id=61587630845193"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2.5 text-[14.5px] font-medium text-gray-600 hover:text-forest-dark transition-colors py-1"
+                        >
+                          <span className="w-[26px] h-[26px] rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-gray-600">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.14 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.77l-.44 2.91h-2.33V22c4.78-.8 8.44-4.94 8.44-9.94z" />
+                            </svg>
+                          </span>
+                          Anywhere Learning on Facebook
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </aside>
+              </ScrollReveal>
             </div>
           </div>
+        </section>
 
-          {/* Social Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-            <a
-              href="https://instagram.com/anywherelearning"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:border-forest/20 hover:shadow-md transition-all flex items-center gap-4"
-            >
-              <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
+        {/* 03 BEFORE YOU EMAIL */}
+        <section className="bg-cream pb-20 md:pb-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[1020px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-10 md:p-14">
+                <div className="max-w-[600px] mx-auto text-center mb-10">
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                    <span className="w-[22px] h-px bg-forest inline-block" />
+                    Before you email
+                  </p>
+                  <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
+                    Your question might already be{' '}
+                    <span className="italic text-forest">answered.</span>
+                  </h2>
+                  <p className="mt-4 font-display italic text-[17px] text-gray-600 leading-[1.45]">
+                    Most questions we get fall into a few buckets. If yours is here, you&apos;ll
+                    get an answer faster by checking these first.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px] max-w-[920px] mx-auto">
+                  {quickCards.map((q, i) => (
+                    <ScrollReveal key={q.title} delay={i * 70} className="h-full">
+                      <div className="h-full bg-cream border border-[#D8D4C5] rounded-[12px] p-7 text-center flex flex-col transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.22)] hover:border-[#C9C5B7]">
+                        <div className="w-[46px] h-[46px] rounded-[12px] bg-[#F2DECF] border border-[rgba(201,123,92,0.3)] text-[#C97B5C] grid place-items-center mx-auto mb-4">
+                          {q.icon}
+                        </div>
+                        <h3 className="font-display text-[22px] leading-[1.18] tracking-tight text-ink mb-2.5">
+                          {q.title}
+                        </h3>
+                        <p className="text-[15px] leading-[1.55] text-gray-600 m-0 mb-5">
+                          {q.body}
+                        </p>
+                        <Link
+                          href={q.href}
+                          className="mt-auto self-center inline-flex items-center gap-2 text-forest-dark font-semibold text-[14.5px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                        >
+                          {q.cta}
+                          <span className="font-display italic text-lg leading-none">&rarr;</span>
+                        </Link>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-medium text-gray-700">Instagram</p>
-                <p className="text-xs text-gray-400">@anywherelearning</p>
-              </div>
-            </a>
-
-            <a
-              href="https://ca.pinterest.com/anywherelearning/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:border-forest/20 hover:shadow-md transition-all flex items-center gap-4"
-            >
-              <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-sm font-medium text-gray-700">Pinterest</p>
-                <p className="text-xs text-gray-400">@anywherelearning</p>
-              </div>
-            </a>
+            </ScrollReveal>
           </div>
-
-          {/* FAQ Callout */}
-          <div className="bg-gold-light/10 rounded-2xl p-8 border border-gold/10 text-center">
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">
-              Looking for Quick Answers?
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
-              Check out our FAQ page for common questions about activity guides,
-              ages, refunds, and homeschooling approaches.
-            </p>
-            <Link
-              href="/faq"
-              className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-3 px-6 rounded-xl transition-all text-sm"
-            >
-              View FAQ
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </main>
+    </>
   );
 }

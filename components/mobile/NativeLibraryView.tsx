@@ -115,7 +115,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
             marginBottom: '20px',
           }}
         >
-          Your guides will live here as soon as you pick your first one. Browse the shop to find your family&apos;s next adventure.
+          Your guides will live here as soon as you pick your first one. Browse the library to find your family&apos;s next adventure.
         </p>
         <Link
           href="/shop"
@@ -126,7 +126,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
             textDecoration: 'none',
           }}
         >
-          Browse the Shop &rarr;
+          Browse the Library &rarr;
         </Link>
       </div>
     );

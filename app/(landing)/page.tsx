@@ -6,8 +6,8 @@ import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
-import SocialProofTicker from '@/components/shared/SocialProofTicker';
-import HomepageBundleCarousel from '@/components/home/HomepageBundleCarousel';
+import { POST_FOUNDER_PRICE_USD } from '@/lib/membership';
+import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
@@ -15,151 +15,15 @@ import { coreFaqItems } from '@/lib/faq-data';
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
-  // absolute: bypasses the root layout's "%s | Anywhere Learning" template
-  // so the homepage title doesn't double-suffix the brand name.
   title: {
-    absolute: 'Anywhere Learning | Homeschool Activity Guides by Amelie',
+    absolute: 'Anywhere Learning | Life Skills Activities for Kids',
   },
   description:
-    'Low-prep activity guides for homeschool and worldschool families. Real-world learning that meets your kids where they are.',
+    'A library of 100+ guided real-world activities by a teacher. Cooking, budgeting, building, planning, for parents who want kids capable, not just credentialed. Ages 6-14.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
 };
-
-const featuredProducts = [
-  {
-    name: 'The Future-Ready Skills Map',
-    slug: 'future-ready-skills-map',
-    shortDescription:
-      'The 12 future-ready skills mapped by age, with activities, milestones, and sample weeks.',
-    priceCents: 999,
-    compareAtPriceCents: null,
-    imageUrl: '/products/future-ready-skills-map.jpg',
-    category: 'start-here',
-    isBundle: false,
-    activityCount: null,
-    ageRange: 'Ages 0–16+',
-    isFreeWithBundle: true,
-  },
-  {
-    name: 'Full Seasonal Bundle',
-    slug: 'seasonal-bundle',
-    shortDescription:
-      'All 4 seasonal guides, 80 outdoor activities for every time of year.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/four-seasons-bundle.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 80,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Creativity Mega Bundle',
-    slug: 'creativity-mega-bundle',
-    shortDescription:
-      'All 10 Creativity & Maker activities, design, build, and create without limits.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-creativity.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Real-World Relevance Mega Bundle',
-    slug: 'real-world-mega-bundle',
-    shortDescription:
-      'All 10 Real-World Relevance challenges, life skills, financial literacy, and project-based learning.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-real-world.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 9–14',
-  },
-  {
-    name: 'AI & Digital Literacy Bundle',
-    slug: 'ai-digital-bundle',
-    shortDescription:
-      'All 10 AI & Digital Literacy activities, responsible tech, critical thinking, and digital citizenship.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-ai-digital.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 9–14',
-  },
-  {
-    name: 'Real-World Math Mega Bundle',
-    slug: 'real-world-math-bundle',
-    shortDescription:
-      'All 10 Real-World Math guides, budgeting, planning, and problem-solving with real numbers.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-real-world-math.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Communication & Writing Bundle',
-    slug: 'communication-writing-bundle',
-    shortDescription:
-      'All 10 Communication & Writing guides, storytelling, debate, interviews, and more.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-communication-writing.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Entrepreneurship Mega Bundle',
-    slug: 'entrepreneurship-bundle',
-    shortDescription:
-      'All 10 Entrepreneurship guides, brand building, pitching, marketing, and real business skills.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-entrepreneurship.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Planning & Problem-Solving Bundle',
-    slug: 'planning-problem-solving-bundle',
-    shortDescription:
-      'All 10 Planning & Problem-Solving guides, survival, decision-making, and thinking ahead.',
-    priceCents: 4499,
-    compareAtPriceCents: 5999,
-    imageUrl: '/products/mega-bundle-planning-problem-solving.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 10,
-    ageRange: 'Ages 6–14',
-  },
-  {
-    name: 'Outdoor & Nature Mega Bundle',
-    slug: 'outdoor-mega-bundle',
-    shortDescription:
-      'All 7 outdoor & nature guides, task cards, missions, STEM challenges, land art, and more.',
-    priceCents: 4199,
-    compareAtPriceCents: 5593,
-    imageUrl: '/products/mega-bundle-outdoor.jpg',
-    category: 'bundle',
-    isBundle: true,
-    activityCount: 7,
-    ageRange: 'Ages 6–14',
-  },
-];
 
 const homepageFaqLd = {
   '@context': 'https://schema.org',
@@ -171,72 +35,59 @@ const homepageFaqLd = {
   })),
 };
 
-// ItemList of flagship products so AI engines can answer
-// "what does anywherelearning.co sell" without crawling /shop.
-const homepageItemListLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'Featured Anywhere Learning Activity Guides',
-  itemListOrder: 'https://schema.org/ItemListOrderAscending',
-  numberOfItems: featuredProducts.length,
-  itemListElement: featuredProducts.map((p, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    url: `https://anywherelearning.co/shop/${p.slug}`,
-    item: {
-      '@type': 'Product',
-      '@id': `https://anywherelearning.co/shop/${p.slug}`,
-      name: p.name,
-      description: p.shortDescription,
-      image: p.imageUrl ? `https://anywherelearning.co${p.imageUrl}` : undefined,
-      url: `https://anywherelearning.co/shop/${p.slug}`,
-      brand: {
-        '@type': 'Brand',
-        name: 'Anywhere Learning',
-      },
-      offers: {
-        '@type': 'Offer',
-        price: (p.priceCents / 100).toFixed(2),
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-        shippingDetails: {
-          '@type': 'OfferShippingDetails',
-          shippingRate: {
-            '@type': 'MonetaryAmount',
-            value: '0',
-            currency: 'USD',
-          },
-          shippingDestination: [
-            { '@type': 'DefinedRegion', addressCountry: 'US' },
-            { '@type': 'DefinedRegion', addressCountry: 'CA' },
-            { '@type': 'DefinedRegion', addressCountry: 'GB' },
-            { '@type': 'DefinedRegion', addressCountry: 'AU' },
-            { '@type': 'DefinedRegion', addressCountry: 'NZ' },
-          ],
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
-          },
-        },
-        hasMerchantReturnPolicy: {
-          '@type': 'MerchantReturnPolicy',
-          applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
-          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-          merchantReturnDays: 2,
-          returnFees: 'https://schema.org/FreeReturn',
-          returnPolicyUrl: 'https://anywherelearning.co/terms#refund-policy',
-        },
-      },
-    },
-  })),
-};
+// One activity from each of the 8 categories. None of these appear in the
+// Starter Pack page hero, so the visual stories don't overlap.
+// Order matches CARD_POSITIONS: index 3 = right side (Entrepreneurship), index 7 = left side (Planning).
+const HERO_CARDS = [
+  { slug: 'kitchen-math-challenge', alt: 'Kitchen Math & Meal Planning cover' },     // 10:30 top-left
+  { slug: 'deepfake-spotter', alt: 'Deepfake & Manipulation Spotter cover' },        // 12 top peek
+  { slug: 'family-debate-night', alt: 'Family Debate Night cover' },                  // 1:30 top-right
+  { slug: 'shark-tank-pitch', alt: 'The Shark Tank Pitch cover' },                    // 3 right side
+  { slug: 'rube-goldberg-machine', alt: 'Build a Rube Goldberg Machine cover' },     // 4:30 bottom-right
+  { slug: 'currency-market-math', alt: 'Currency & Market Math cover' },              // 6 bottom peek
+  { slug: 'nature-walk-task-cards', alt: 'Nature Walk Task Cards cover' },            // 7:30 bottom-left
+  { slug: 'travel-day', alt: 'Travel Day Itinerary Challenge cover' },                // 9 left side
+];
 
-export default function HomePage() {
+// 8 covers orbit the centered Skills Map at 45° intervals.
+// Tuned to hug the Skills Map closely so the composition feels tight.
+const CARD_POSITIONS = [
+  // 10:30 — top-left corner
+  { style: { top: '10%', left: '8%' }, rotate: -9, z: 2 },
+  // 12 — top, peeking just behind top of SM
+  { style: { top: '3%', left: '50%', transform: 'translateX(-50%)' }, rotate: -2, z: 1 },
+  // 1:30 — top-right corner
+  { style: { top: '10%', right: '8%' }, rotate: 9, z: 2 },
+  // 3 — right side
+  { style: { top: '50%', right: '-2%', transform: 'translateY(-50%)' }, rotate: 7, z: 3 },
+  // 4:30 — bottom-right corner
+  { style: { bottom: '10%', right: '8%' }, rotate: 5, z: 4 },
+  // 6 — bottom, peeking just behind bottom of SM
+  { style: { bottom: '3%', left: '50%', transform: 'translateX(-50%)' }, rotate: 2, z: 1 },
+  // 7:30 — bottom-left corner
+  { style: { bottom: '10%', left: '8%' }, rotate: -5, z: 4 },
+  // 9 — left side
+  { style: { top: '50%', left: '-2%', transform: 'translateY(-50%)' }, rotate: -7, z: 3 },
+];
+
+const CATEGORIES = [
+  { name: 'Real-World Math', slug: 'real-world-math', icon: '$', gradient: 'from-forest to-forest-dark', photo: '/images/money-grocery-shopping.jpeg' },
+  { name: 'Creativity & Maker', slug: 'creativity-maker', icon: '✂', gradient: 'from-[#D8A77E] to-[#B07A4F]', photo: '/images/lego-glasses.jpeg' },
+  { name: 'AI & Digital', slug: 'ai-literacy', icon: '⌘', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/teach-kids-prompt-ai-hero.jpeg' },
+  { name: 'Entrepreneurship', slug: 'entrepreneurship', icon: '¢', gradient: 'from-gold to-[#C49F3F]', photo: '/images/money-popcorn-business.jpeg' },
+  { name: 'Communication & Writing', slug: 'communication-writing', icon: '✎', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/life-skills-map-drawing.jpeg' },
+  { name: 'Planning & Problem-Solving', slug: 'planning-problem-solving', icon: '⊞', gradient: 'from-[#C97B5C] to-[#A85A38]', photo: '/images/treasure-map.jpeg', objectPosition: 'center 25%' },
+  { name: 'Outdoor Learning', slug: 'outdoor-learning', icon: '☘', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/forest-school-leaf-play.jpeg' },
+  { name: 'Worldschooling', slug: 'worldschooling', icon: '✈', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/worldschool-day-market.jpeg' },
+];
+
+export default async function HomePage() {
+  // Live founder state (DB-counted). Replaces the static membership flags
+  // for this page so the founder framing closes automatically at 100.
+  const m = await getMembership();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageItemListLd) }} />
       <a
         href="#main-content"
         className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-2 focus-visible:left-2 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-forest focus-visible:px-4 focus-visible:py-2 focus-visible:text-cream"
@@ -246,457 +97,600 @@ export default function HomePage() {
       <SiteHeader />
       <main id="main-content">
 
-        {/* ═══════════════════════════════════════════
-            HERO - Punchy, warm, direct
-        ═══════════════════════════════════════════ */}
-        <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
-          {/* Full-bleed background image */}
-          <Image
-            src="/hero.jpg"
-            alt="Children exploring and learning together outdoors"
-            fill
-            sizes="100vw"
-            quality={60}
-            className="object-cover object-bottom"
-            priority
-          />
-          {/* Gradient overlay. Heavier on the left for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/30 lg:from-cream/95 lg:via-cream/70 lg:to-transparent" />
-          {/* Bottom fade to cream */}
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
-
-          <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-12 md:py-16 lg:py-20">
+        {/* ════════════════════════════════════════
+            01 HERO — Dual CTA: free guide (primary) + membership (secondary)
+        ════════════════════════════════════════ */}
+        <section className="relative py-10 md:py-12 lg:py-14 overflow-hidden">
+          <div className="mx-auto max-w-[1180px] px-6">
             <HeroSaleBadge />
-            <div className="max-w-xl lg:max-w-2xl">
-              <div className="hero-stagger">
-                <p className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-5">
-                  For Homeschool, Worldschool &amp; After-School Families
+            <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 lg:gap-12 items-center">
+              {/* MOBILE-ONLY title — shows above the hero on small screens */}
+              <div className="lg:hidden text-center">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Real-world activities &middot; Ages 6-14
                 </p>
-                <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.05] mb-6">
-                  <span className="text-forest heading-underline">Meaningful Learning</span>
-                  <br /><span className="text-gold">Happens Everywhere</span>
+                <h1 className="font-display text-[clamp(2.25rem,6.2vw,4.8rem)] leading-[1.04] tracking-tight">
+                  Raise kids who can{' '}
+                  <span className="text-forest italic">actually do</span>{' '}
+                  <span className="relative whitespace-nowrap">
+                    things.
+                    <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                  </span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                  Low-prep activity guides you open on any device and follow
-                  along with your kids. Real-world learning, low prep required, from $5.99.
+              </div>
+
+              {/* Copy — lg:col-1; on mobile sits AFTER the hero (hero comes next in DOM) */}
+              <div className="lg:col-start-1 lg:row-start-1 order-3 lg:order-none text-center lg:text-left flex flex-col items-center lg:items-start">
+                {/* DESKTOP-ONLY title (mobile uses the dedicated block above) */}
+                <div className="hidden lg:block">
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center gap-2.5 mb-5">
+                    <span className="w-[22px] h-px bg-forest inline-block" />
+                    Real-world activities &middot; Ages 6-14
+                  </p>
+                  <h1 className="font-display text-[clamp(2.6rem,6.2vw,4.8rem)] leading-[1.02] tracking-tight mb-6">
+                    Raise kids who can{' '}
+                    <span className="text-forest italic">actually do</span>{' '}
+                    <span className="relative whitespace-nowrap">
+                      things.
+                      <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                    </span>
+                  </h1>
+                </div>
+                <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
+                  A library of 100+ guided activities. Cooking, budgeting, building, planning,
+                  problem-solving, designed by a teacher to fill the gap between what schools
+                  test and what life requires.
                 </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Link
-                    href="/shop"
-                    className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl text-lg"
-                  >
-                    Get the Activity Guides
-                  </Link>
+                <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
                   <Link
                     href="/free-guide"
-                    className="inline-flex items-center justify-center border-2 border-forest/30 hover:border-forest/50 text-forest font-semibold py-4 px-10 rounded-2xl transition-all duration-300 hover:bg-forest/[0.06] text-lg backdrop-blur-sm"
+                    className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                   >
-                    Free Guide
+                    Get the free starter guide
+                    <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
+                  </Link>
+                  <Link
+                    href="/join"
+                    className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                  >
+                    Or explore the full membership
+                    <span className="font-display italic text-lg leading-none">&rarr;</span>
                   </Link>
                 </div>
-                {/* Trust signals */}
-                <p className="mt-6 text-sm text-gray-500">
-                  Instant download &middot; Ages 6&ndash;14 &middot; 48-hour money-back guarantee
-                </p>
+                <div className="mt-4 text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-1">
+                  <span className="inline-flex items-center gap-1.5">Built by a teacher</span>
+                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                  <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
+                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                  <span className="inline-flex items-center gap-1.5">Free guide, no credit card</span>
+                </div>
+              </div>
+
+              {/* Hero visual — real activity covers fanning around the Future-Ready Skills Map */}
+              <div data-hero-collage className="relative w-full aspect-square max-lg:max-w-[440px] max-lg:mx-auto order-2 lg:order-none lg:col-start-2 lg:row-start-1" aria-hidden="true">
+              {/* data-hero-collage is used by scripts/screenshot-hero.mjs to re-export this collage as /public/membership-hero.png whenever the hero changes */}
+                {/* Skills Map — centerpiece, all viewports */}
+                <div
+                  className="absolute z-[5] w-[130px] sm:w-[220px] lg:w-[250px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)]"
+                  style={{
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%) rotate(-2deg)',
+                  }}
+                >
+                  <Image
+                    src="/skills-map-cover.jpg"
+                    alt=""
+                    width={800}
+                    height={1067}
+                    quality={95}
+                    priority
+                    unoptimized
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                {/* 8 activity covers — fanned around Skills Map at all viewports */}
+                {HERO_CARDS.map((card, i) => {
+                  const pos = CARD_POSITIONS[i];
+                  const baseTransform = pos.style.transform || '';
+                  const rotation = `rotate(${pos.rotate}deg)`;
+                  const finalTransform = baseTransform ? `${baseTransform} ${rotation}` : rotation;
+                  return (
+                    <div
+                      key={card.slug}
+                      className="absolute w-[112px] sm:w-[140px] lg:w-[170px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
+                      style={{
+                        ...pos.style,
+                        transform: finalTransform,
+                        zIndex: pos.z,
+                      }}
+                    >
+                      <Image
+                        src={`/products/${card.slug}.jpg`}
+                        alt=""
+                        width={400}
+                        height={500}
+                        quality={95}
+                        unoptimized
+                        className="absolute inset-0 w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  );
+                })}
+
+                {/* 100+ sticker */}
+                <div className="absolute right-[-40px] bottom-[-30px] sm:right-[-40px] sm:bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
+                  <span>
+                    <span className="block text-[28px] max-sm:text-2xl mb-1">100+</span>
+                    activities
+                    <span className="block text-[10px] not-italic uppercase tracking-[0.15em] opacity-95 mt-1 font-semibold font-body">One membership</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Bottom transition */}
-          <div className="h-px bg-gradient-to-r from-transparent via-forest/10 to-transparent" />
         </section>
 
-        {/* ═══════════════════════════════════════════
-            SOCIAL PROOF TICKER - Scrolling marquee
-        ═══════════════════════════════════════════ */}
-        <SocialProofTicker />
-
-        {/* ═══════════════════════════════════════════
-            PAIN POINTS - Compact emotional hook
-        ═══════════════════════════════════════════ */}
-        <section className="bg-forest-section py-14 md:py-16 relative overflow-hidden">
-          <div className="absolute top-6 right-[10%] w-48 h-48 rounded-full border border-white/[0.04]" aria-hidden="true" />
-          <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
+        {/* ════════════════════════════════════════
+            02 PROBLEM — What if (forward-looking, distinct from /join's "quiet worry")
+        ════════════════════════════════════════ */}
+        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <p className="text-sm sm:text-base font-semibold text-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center mb-8">
-                Every parent who wants more than screens
-              </p>
-            </ScrollReveal>
-            <div className="grid sm:grid-cols-3 gap-8 md:gap-12 text-center sm:text-left">
-              <ScrollReveal delay={0}>
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
-                    200 Pinterest boards saved.
-                  </h3>
-                  <p className="text-cream/80 text-base">Still no plan for Monday.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
-                    You found the perfect activity.
-                  </h3>
-                  <p className="text-cream/80 text-base">Prepping it took longer than doing it.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-cream/90 leading-snug mb-2">
-                    You planned the whole week.
-                  </h3>
-                  <p className="text-cream/80 text-base">They lost interest by Tuesday.</p>
-                </div>
-              </ScrollReveal>
-            </div>
-            <ScrollReveal delay={400}>
-              <p className="mt-10 font-display text-xl md:text-2xl text-gold text-center leading-snug">
-                That&apos;s exactly why we made these.
-              </p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            PRODUCT SHOWCASE
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <ScrollReveal>
-              <div className="text-center mb-16">
-                <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                  Our Activity Guides
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  What if
                 </p>
-                <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                  Activity Guides for Every Family
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  What if your kid could <span className="italic text-forest">actually handle it?</span>
                 </h2>
-                <p className="mx-auto max-w-xl text-gray-500 text-lg">
-                  Bundles save up to 25%. Pick the one that fits your family, or grab them all.
+                <p className="mt-4 text-lg text-gray-500">Not someday. This week.</p>
+              </div>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1020px] mx-auto">
+              {[
+                "Plan dinner for the family, shopping list, budget, and all.",
+                "Speak up for themselves without falling apart.",
+                "Start a small business from the kitchen table.",
+              ].map((text, i) => (
+                <ScrollReveal key={i} delay={i * 100}>
+                  <p className={`py-5 md:py-2 px-8 text-center font-display italic text-[clamp(1.25rem,1.9vw,1.5rem)] leading-[1.32] text-balance ${i > 0 ? 'md:border-l border-t md:border-t-0 border-[#D8D4C5]' : ''}`}>
+                    {text}
+                  </p>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            03 HOW IT FEELS — Product experience, not cultural problem (/join does that)
+        ════════════════════════════════════════ */}
+        <section className="py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  How it feels
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  Not a curriculum. <span className="italic text-forest">A toolkit.</span>
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="max-w-[620px] mx-auto text-center space-y-5">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  You open a guide on your phone. Read a quick intro. Grab whatever you already have at home.
+                  Then you and your kid <span className="font-display italic text-forest">do something real together</span>. Cook a meal, build a budget,
+                  plan a road trip, start a business.
+                </p>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Every activity has <span className="font-display italic text-forest">three built-in skill levels</span> so siblings
+                  can work side by side without anyone feeling overwhelmed or under-challenged.
+                </p>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  No lesson plans. No grading. No prep that takes longer than the activity itself.
+                  Just <span className="font-display italic text-forest">quality time that quietly builds real skills.</span>
                 </p>
               </div>
             </ScrollReveal>
+          </div>
+        </section>
 
-            <HomepageBundleCarousel products={featuredProducts} />
+        {/* ════════════════════════════════════════
+            04 CATEGORIES — Chip grid
+        ════════════════════════════════════════ */}
+        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  What&apos;s inside
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  Eight categories. <span className="italic text-forest">One library.</span>
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">100+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
+              </div>
+            </ScrollReveal>
 
-            <ScrollReveal delay={400}>
-              <div className="mt-14 text-center">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-[960px] mx-auto">
+              {CATEGORIES.map((cat, i) => (
+                <ScrollReveal key={cat.name} delay={i * 50}>
+                  <Link
+                    href={`/shop#track-${cat.slug}`}
+                    className="group block rounded-[14px] overflow-hidden border border-[#D8D4C5] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.3)]"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={cat.photo}
+                        alt={cat.name}
+                        fill
+                        sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 220px"
+                        quality={90}
+                        unoptimized
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        style={cat.objectPosition ? { objectPosition: cat.objectPosition } : undefined}
+                      />
+                    </div>
+                    <div className={`flex items-center gap-2.5 px-4 h-[52px] bg-gradient-to-br ${cat.gradient}`}>
+                      <span className="w-[28px] h-[28px] rounded-md bg-white/[0.22] grid place-items-center text-white text-sm shrink-0">{cat.icon}</span>
+                      <h3 className="font-display text-[14px] leading-tight tracking-tight text-white">{cat.name}</h3>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={200}>
+              <p className="mt-9 text-center font-display italic text-lg leading-relaxed text-gray-500 text-balance max-w-[600px] mx-auto">
+                Each guide includes <span className="not-italic text-forest-dark font-normal">three built-in difficulty levels</span>,
+                so a first-grader and a middle-schooler can work on the same activity at the same table.
+              </p>
+              <div className="flex justify-center mt-5">
                 <Link
                   href="/shop"
-                  className="inline-flex items-center justify-center bg-forest hover:bg-forest-dark text-cream font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 text-lg shadow-md hover:shadow-lg"
+                  className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
                 >
-                  View all activity guides
+                  Browse all activities in the library
+                  <span className="font-display italic text-lg leading-none">&rarr;</span>
                 </Link>
               </div>
             </ScrollReveal>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            HOW IT WORKS - Dead simple
-        ═══════════════════════════════════════════ */}
-        <section className="bg-forest-subtle-gradient py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        {/* ════════════════════════════════════════
+            05 HOW IT WORKS — Three steps
+        ════════════════════════════════════════ */}
+        <section className="py-20 md:py-24" id="how-it-works">
+          <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-4 text-balance">
-                Three Steps. That&apos;s It.
-              </h2>
-              <p className="text-center text-gray-500 text-lg mb-16 max-w-md mx-auto">
-                No setup. Low prep. Just download and go.
-              </p>
-            </ScrollReveal>
-
-            <div className="grid sm:grid-cols-3 gap-8 md:gap-12">
-              <ScrollReveal delay={0}>
-                <div className="text-center group">
-                  <div className="relative mx-auto w-20 h-20 mb-6">
-                    <div className="absolute inset-0 bg-forest/8 rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <div className="relative w-full h-full bg-white rounded-3xl shadow-md flex items-center justify-center border border-forest/10 group-hover:shadow-lg transition-shadow">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-forest">
-                        <path d="M4 6H20M4 12H20M4 18H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                        <path d="M17 15L19 17L22 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 1</span>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Choose</h3>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    Browse by category and pick something your kids will love.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <div className="text-center group">
-                  <div className="relative mx-auto w-20 h-20 mb-6">
-                    <div className="absolute inset-0 bg-gold/12 rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <div className="relative w-full h-full bg-white rounded-3xl shadow-md flex items-center justify-center border border-gold/15 group-hover:shadow-lg transition-shadow">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-gold">
-                        <rect x="5" y="2" width="14" height="20" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-                        <path d="M10 18H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                        <path d="M9 7H15M9 10H15M9 13H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 2</span>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Open</h3>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    Download. Open on any device. Done. No printing required, just follow along.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <div className="text-center group">
-                  <div className="relative mx-auto w-20 h-20 mb-6">
-                    <div className="absolute inset-0 bg-[#c4836a]/10 rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <div className="relative w-full h-full bg-white rounded-3xl shadow-md flex items-center justify-center border border-[#c4836a]/15 group-hover:shadow-lg transition-shadow">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#c4836a]">
-                        <path d="M12 22C12 22 20 16 20 10C20 6 16.5 3 12 3C7.5 3 4 6 4 10C4 16 12 22 12 22Z" stroke="currentColor" strokeWidth="1.5"/>
-                        <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <span className="inline-block text-xs font-bold text-gold uppercase tracking-widest mb-2">Step 3</span>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Go</h3>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    Follow along with your kids. Watch them light up. That&apos;s the whole method.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            WHY FAMILIES CHOOSE THIS - Verifiable product facts
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-5 sm:px-8">
-            <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] text-center mb-4">
-                Built for real life
-              </p>
-              <h2 className="text-center font-display text-3xl md:text-5xl lg:text-6xl text-forest mb-6 text-balance">
-                Built for How Your Family Actually Lives
-              </h2>
-              <p className="text-center text-gray-500 text-lg mb-16 max-w-xl mx-auto">
-                Guides that fit your schedule, your kids, and the way you actually learn together.
-              </p>
-            </ScrollReveal>
-
-            {/* Featured card */}
-            <ScrollReveal>
-              <div className="relative bg-forest-section rounded-3xl p-10 md:p-14 mb-8 shadow-2xl">
-                <div className="flex items-start gap-5">
-                  <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-gold/20 items-center justify-center flex-shrink-0">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold">
-                      <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-cream leading-snug mb-4">
-                      Real Skills, Not Busywork
-                    </h3>
-                    <p className="text-cream/70 text-lg leading-relaxed max-w-2xl">
-                      Kids cook a meal on a budget, design a board game, start a micro-business,
-                      learn how AI works. Skills they&apos;ll actually use, learned by doing.
-                    </p>
-                  </div>
-                </div>
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  How it works
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  Three steps. <span className="italic text-forest">That&apos;s it.</span>
+                </h2>
               </div>
             </ScrollReveal>
 
-            {/* Two supporting cards */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <ScrollReveal delay={0}>
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-forest/8 flex items-center justify-center mb-5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-forest">
-                      <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5"/>
-                      <path d="M23 21V19C23 17.1362 21.7252 15.5701 20 15.126" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M16 3.12598C17.7252 3.57004 19 5.13616 19 7C19 8.86384 17.7252 10.43 16 10.874" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { num: '1', title: 'Pick one', body: 'Filter by category and pick whatever sounds fun today. There are 100+ to choose from.' },
+                { num: '2', title: 'Open on any device', body: 'Pull it up on your phone, tablet, or laptop. Skim the parent prep and grab what you need.' },
+                { num: '3', title: 'Do it side by side', body: 'Follow the guide with your kid. Built-in prompts tell you what to say, what to ask, and what comes next.' },
+              ].map((step, i) => (
+                <ScrollReveal key={step.num} delay={i * 100}>
+                  <div className="border border-[#D8D4C5] rounded-[14px] bg-cream p-8 pt-8">
+                    <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center font-display italic text-2xl mb-5">
+                      {step.num}
+                    </div>
+                    <h3 className="font-display text-[26px] leading-tight tracking-tight mb-2">{step.title}</h3>
+                    <p className="text-gray-500 text-[15.5px] leading-relaxed">{step.body}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Works for Ages 6&ndash;14</h3>
-                  <p className="text-gray-500 text-lg leading-relaxed">
-                    Every activity includes three levels (Explore, Develop, Extend) so siblings at different ages
-                    can do the same thing together.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center mb-5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gold">
-                      <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M3.05078 11.0002C3.27441 7.10088 5.72266 3.55127 9.5 2.14648" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M14.5 2.14648C18.2773 3.55127 20.7256 7.10088 20.9492 11.0002" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M20.9492 13C20.5977 17.3389 17.1309 20.8057 12.792 21.1572" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M11.208 21.1572C6.86914 20.8057 3.40234 17.3389 3.05078 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-forest mb-2">Use Year After Year</h3>
-                  <p className="text-gray-500 text-lg leading-relaxed">
-                    These aren&apos;t one-time worksheets. Come back to the same activities as your
-                    kids grow, they&apos;ll get something new every time.
-                  </p>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            MEET THE MAKER - Personal brand
-        ═══════════════════════════════════════════ */}
-        <section className="bg-forest-subtle-gradient py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-5 sm:px-8">
-            <div className="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
+        {/* ════════════════════════════════════════
+            06 MEET AMELIE — Founder bio (trust before the ask)
+        ════════════════════════════════════════ */}
+        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
               <ScrollReveal direction="left">
-                <div className="relative mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                <div className="relative aspect-[4/5] max-lg:max-w-[360px] max-lg:mx-auto -rotate-[1.4deg] rounded-[14px] border border-[#D8D4C5] overflow-hidden shadow-[0_24px_40px_-28px_rgba(45,58,46,0.4)]">
                   <Image
                     src="/amelie.jpg"
                     alt="Amelie and her kids on a mountain hike"
                     fill
-                    sizes="(max-width: 768px) 192px, 256px"
-                    className="object-cover rounded-3xl shadow-xl"
+                    sizes="(max-width: 1024px) 90vw, 42vw"
+                    quality={90}
+                    priority
+                    className="object-cover"
                   />
-                  <div className="absolute -bottom-2 -right-2 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
                 </div>
               </ScrollReveal>
 
-              {/* Text */}
-              <ScrollReveal direction="right" delay={150}>
+              <ScrollReveal direction="right" delay={100}>
                 <div>
-                  <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-3">
-                    Meet the Maker
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center gap-2.5 mb-4">
+                    <span className="w-[22px] h-px bg-forest inline-block" />
+                    Made by a teacher, for parents
                   </p>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-forest mb-5">
-                    Hi, I&apos;m Amelie.
+                  <h2 className="font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] tracking-tight mt-3.5 mb-4">
+                    Hi, I&apos;m Amelie. I built this because I wanted{' '}
+                    <span className="italic text-forest">more time with my own kids.</span>
                   </h2>
-                  <div className="space-y-4 text-gray-500 text-lg leading-relaxed">
+                  <div className="space-y-3.5 text-gray-500 text-[17px] leading-relaxed">
                     <p>
-                      I spent 15 years as a teacher, and I loved watching kids
-                      light up when something clicked. But the longer I was in
-                      the classroom, the harder it became to see how much of
-                      real-world learning happens <em>outside</em> a classroom
-                      &mdash; and how hard it is for families to make room
-                      for it.
+                      Fifteen years in classrooms. Two degrees in education. A boy and a girl of my
+                      own. Last year I made the hardest call of my career: I left teaching to
+                      homeschool them. Partly because I missed them, mostly because I wanted to
+                      be the one helping them get ready for the life they&apos;re actually going to live.
                     </p>
                     <p>
-                      When it came time to choose for my own kids, I chose
-                      differently. We took seven months to travel as a family,
-                      and I noticed something shift, they were curious
-                      again, figuring things out on their own, learning without
-                      even realizing it.
-                    </p>
-                    <p>
-                      I left the classroom for good and started creating the
-                      activities I wished more parents had, hands-on,
-                      real-world, low prep. Things that feel like play but
-                      build real skills.
-                    </p>
-                    <p className="text-forest font-semibold">
-                      That&apos;s what became Anywhere Learning. Now your family can have them too.
+                      Anywhere Learning is what I wish I&apos;d had: small, doable, real-world activities
+                      a parent and a kid can do together. The stuff that builds the underlying
+                      muscle: self-regulation, focus, finishing things, the way childhood used
+                      to, before we scheduled it all out.
                     </p>
                   </div>
-                  <Link
-                    href="/about"
-                    className="inline-flex items-center gap-1.5 text-forest font-medium text-base mt-4 group"
-                  >
-                    Read my full story
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
-                  </Link>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {['B.Ed', 'M.Ed', '15 yrs classroom teaching', 'Now homeschooling her own'].map((cred) => (
+                      <span key={cred} className="bg-cream border border-[#D8D4C5] px-3.5 py-1.5 rounded-full text-[13px] text-gray-500">{cred}</span>
+                    ))}
+                  </div>
+                  <div className="mt-6">
+                    <Link
+                      href="/about"
+                      className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                    >
+                      Read more about Amelie
+                      <span className="font-display italic text-lg leading-none">&rarr;</span>
+                    </Link>
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            FAQ
-        ═══════════════════════════════════════════ */}
-        <section className="bg-warm-gradient py-20 md:py-28">
-          <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        {/* ════════════════════════════════════════
+            07 FREE GUIDE — Primary soft conversion (email capture).
+            Placed AFTER Meet Amelie so visitors meet the person behind the
+            guide before being asked for their email — the ask lands as
+            "Amelie made this, let me try it" instead of a cold capture.
+        ════════════════════════════════════════ */}
+        <section className="py-20 md:py-24" id="free-guide">
+          <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <h2 className="text-center font-display text-3xl md:text-5xl text-forest mb-12 text-balance">
-                Questions? We&apos;ve Got Answers.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <FAQSection items={coreFaqItems} />
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="mt-10 text-center">
-                <Link
-                  href="/shop"
-                  className="inline-flex items-center gap-2 text-forest font-semibold text-lg group hover:text-forest-dark transition-colors"
-                >
-                  Browse the Activity Guides
-                  <span className="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
-                </Link>
+              <div className="bg-[#F2DECF] border border-[#C97B5C]/35 rounded-[22px] p-10 md:p-14 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center shadow-[0_30px_56px_-36px_rgba(201,123,92,0.4)] relative overflow-hidden">
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] flex items-center gap-2.5 mb-4">
+                    <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
+                    Free starter guide
+                  </p>
+                  <h2 className="font-display text-[clamp(1.9rem,3.8vw,2.75rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
+                    7 Days of Real-World Learning, <span className="italic text-[#7A3D24]">free in your inbox.</span>
+                  </h2>
+                  <p className="mt-4 text-gray-600 text-[17px] leading-relaxed max-w-[480px]">
+                    One activity a day. A few hours each. Zero worksheets. Seven categories,
+                    from outdoor science to budgeting to entrepreneurship. Each one builds
+                    different life skills. Pick the one that fits today, and let your kid go.
+                  </p>
+                  <div className="mt-6 max-w-[480px]">
+                    <EmailForm variant="light" buttonText="Send me the guide" />
+                  </div>
+                  <p className="mt-3.5 text-[13px] text-gray-400 leading-normal">
+                    No spam. Unsubscribe in one click. We hate inbox clutter as much as you do.
+                  </p>
+                </div>
+
+                {/* Guide visual — real cover photo */}
+                <div className="relative min-h-[420px] flex items-center justify-center max-lg:hidden" aria-hidden="true">
+                  <div className="relative w-[300px] h-[400px]">
+                    {/* Soft back card for depth */}
+                    <div className="absolute inset-0 bg-cream border border-[#D8D4C5] rounded-xl shadow-[0_12px_22px_-16px_rgba(45,58,46,0.3)] -rotate-[4deg] -translate-x-[22px] translate-y-[6px]" />
+                    {/* Real PDF cover */}
+                    <div className="absolute inset-0 rounded-xl overflow-hidden border border-[#D8D4C5] shadow-[0_24px_44px_-22px_rgba(45,58,46,0.45)] -rotate-[1.5deg] z-[3]">
+                      <Image
+                        src="/free-guide-cover.jpg"
+                        alt="Cover of the 7 Days of Real-World Learning free guide"
+                        fill
+                        sizes="300px"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    {/* "Free" sticker */}
+                    <span className="absolute -top-3 -right-3 bg-forest text-cream font-display italic text-base px-3.5 py-1.5 rounded-full rotate-[8deg] shadow-[0_8px_16px_-8px_rgba(88,129,87,0.6)] z-[5]">
+                      Free
+                    </span>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            EMAIL CAPTURE - Soft opt-in for visitors not ready to buy
-        ═══════════════════════════════════════════ */}
-        <section className="bg-cream py-16 md:py-20">
-          <div className="mx-auto max-w-2xl px-5 sm:px-8 text-center">
+        {/* ════════════════════════════════════════
+            08 MEMBERSHIP OFFER — Light, invitational (heavy sell on /join)
+        ════════════════════════════════════════ */}
+        <section className="py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <p className="text-sm font-semibold text-gold uppercase tracking-[0.2em] mb-4">
-                Free Resource
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl text-forest mb-4 text-balance">
-                Not Sure Where to Start?
-              </h2>
-              <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-                Grab the free guide &mdash; 7 real-world activities, one for each day
-                of the week, with low prep. See if this approach works for your family.
-              </p>
-              <EmailForm variant="light" />
-              <p className="mt-5 text-sm text-gray-400 flex items-center justify-center gap-2">
-                <span className="flex -space-x-1.5">
-                  {['#8faa8b', '#d4a373', '#c4836a'].map((c, i) => (
-                    <span key={i} className="w-5 h-5 rounded-full border-2 border-cream inline-block" style={{ backgroundColor: c }} />
-                  ))}
-                </span>
-                Join families learning differently
-              </p>
+              <div className="max-w-[860px] mx-auto bg-cream border border-[#D8D4C5] rounded-[20px] p-10 md:p-14 text-center shadow-[0_30px_60px_-40px_rgba(45,58,46,0.4)] relative overflow-hidden">
+                <span className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C97B5C] via-[#E9C76B] to-forest" />
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Going further
+                </p>
+                <h2 className="font-display text-[clamp(1.9rem,3.8vw,2.9rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
+                  When you&apos;re ready: <span className="italic text-forest">unlimited access.</span>
+                </h2>
+                <div className="mt-5 mx-auto max-w-[580px] text-gray-500 text-[17px] leading-relaxed space-y-3">
+                  <p>
+                    The membership unlocks the full library: all 100+ activities, all nine
+                    categories, new ones added every quarter. One annual price, no upsells,
+                    no tracking your kids.
+                  </p>
+                  <p>
+                    {m.isFounderPhase ? (
+                      <>
+                        Founding members (first {m.founderCap}) pay{' '}
+                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceYear}, locked in for life.</span>{' '}
+                      </>
+                    ) : (
+                      <>
+                        Membership is{' '}
+                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceYear}.</span>{' '}
+                      </>
+                    )}
+                    {m.isFounderPhase && <>After that, ${POST_FOUNDER_PRICE_USD}.</>}
+                  </p>
+                </div>
+                <div className="flex justify-center mt-8">
+                  <Link
+                    href="/join"
+                    className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
+                  >
+                    See what&apos;s in the membership
+                    <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
+                  </Link>
+                </div>
+                <div className="mt-3.5 text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                  <span>14-day money-back guarantee</span>
+                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                  <span>Cancel anytime</span>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════════
-            FINAL CTA - Bold, warm
-        ═══════════════════════════════════════════ */}
-        <section className="relative bg-forest-texture py-20 md:py-28 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" aria-hidden="true" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.03]" aria-hidden="true" />
-
-          <div className="relative mx-auto max-w-2xl px-5 sm:px-8 text-center">
+        {/* ════════════════════════════════════════
+            09 FAQ — 4 homepage-relevant questions
+        ════════════════════════════════════════ */}
+        <section className="py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <h2 className="font-display text-4xl md:text-6xl text-cream mb-5">
-                Start This Week.
-              </h2>
-              <p className="text-lg text-cream/80 mb-10 leading-relaxed max-w-lg mx-auto">
-                Pick a guide, open it on your phone or tablet, and do the activity together.
-                No planning, low prep, just you and your kids.
-              </p>
-              <Link
-                href="/shop"
-                className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-gray-900 font-semibold py-4 px-12 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg shadow-lg hover:shadow-xl"
-              >
-                Get the Activity Guides
-              </Link>
-              <p className="mt-8 text-cream/80 text-sm">
-                48-hour money-back guarantee &middot; Instant download &middot; Use year after year
-              </p>
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Common questions
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  You might be <span className="italic text-forest">wondering...</span>
+                </h2>
+              </div>
             </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="max-w-[760px] mx-auto">
+                <FAQSection items={coreFaqItems} />
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            10 FINAL CTA — Two paths: free guide vs membership
+        ════════════════════════════════════════ */}
+        <section className="bg-gradient-to-b from-cream to-[#F2EFE4] border-t border-[#D8D4C5] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6 text-center">
+            <ScrollReveal>
+              <div className="max-w-[760px] mx-auto mb-12">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Where to start
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.6vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  Three paths. <span className="italic text-forest">Pick yours.</span>
+                </h2>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1020px] mx-auto">
+              <ScrollReveal delay={0}>
+                <div className="bg-cream border border-[#D8D4C5] rounded-[18px] p-8 text-left flex flex-col h-full hover:-translate-y-[3px] hover:shadow-[0_20px_36px_-24px_rgba(45,58,46,0.3)] transition-all duration-200">
+                  <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-forest-dark px-3 py-1 rounded-full bg-[#E6EBDF] mb-4">
+                    Free
+                  </span>
+                  <h3 className="font-display text-[26px] leading-tight tracking-tight mb-3">
+                    Get the <span className="italic text-forest">free guide.</span>
+                  </h3>
+                  <p className="text-gray-500 text-[15px] leading-relaxed mb-6">
+                    Seven real-world activities, one a day for a week. Sent to your inbox, no commitment.
+                  </p>
+                  <div className="mt-auto">
+                    <Link
+                      href="/free-guide"
+                      className="inline-flex items-center gap-2.5 font-semibold text-[15px] text-forest-dark bg-[#E6EBDF] px-5 py-3 rounded-xl hover:bg-[#D4DCC5] transition-colors"
+                    >
+                      Send me the guide
+                      <span className="font-display italic text-lg">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={75}>
+                <div className="bg-[#F5EDE4] border border-[#E0D3C3] rounded-[18px] p-8 text-left flex flex-col h-full hover:-translate-y-[3px] hover:shadow-[0_20px_36px_-24px_rgba(45,58,46,0.3)] transition-all duration-200">
+                  <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-[#C97B5C] px-3 py-1 rounded-full bg-white/60 mb-4">
+                    One-time
+                  </span>
+                  <h3 className="font-display text-[26px] leading-tight tracking-tight mb-3">
+                    Start with the <span className="italic text-[#C97B5C]">Starter Pack.</span>
+                  </h3>
+                  <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
+                    10 of our favorite activities for $44.99 once. Yours forever, no subscription.
+                  </p>
+                  <div className="mt-auto">
+                    <Link
+                      href="/shop/starter-pack"
+                      className="inline-flex items-center gap-2.5 font-semibold text-[15px] text-white bg-[#C97B5C] px-5 py-3 rounded-xl hover:bg-[#B56A4B] transition-colors"
+                    >
+                      See the Starter Pack
+                      <span className="font-display italic text-lg">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={150}>
+                <div className="bg-forest-dark text-cream border border-forest-dark rounded-[18px] p-8 text-left flex flex-col h-full shadow-[0_28px_50px_-30px_rgba(58,90,64,0.5)] hover:-translate-y-[3px] hover:shadow-[0_32px_56px_-30px_rgba(58,90,64,0.6)] transition-all duration-200">
+                  <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-[#E6EBDF] px-3 py-1 rounded-full bg-white/[0.14] mb-4">
+                    Full access
+                  </span>
+                  <h3 className="font-display text-[26px] leading-tight tracking-tight mb-3">
+                    Join the <span className="italic text-[#E9C76B]">membership.</span>
+                  </h3>
+                  <p className="text-cream/85 text-[15px] leading-relaxed mb-6">
+                    Full library, all categories, new activities every quarter.{' '}
+                    {m.isFounderPhase ? `Founder rate for the first ${m.founderCap} families.` : `${m.priceYear}.`}
+                  </p>
+                  <div className="mt-auto">
+                    <Link
+                      href="/join"
+                      className="inline-flex items-center gap-2.5 font-semibold text-[15px] text-forest-dark bg-cream px-5 py-3 rounded-xl hover:bg-white transition-colors"
+                    >
+                      See the membership
+                      <span className="font-display italic text-lg">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 

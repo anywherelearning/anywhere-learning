@@ -1,6 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { SignIn } from '@clerk/nextjs';
+import { clerkAuthAppearance } from '@/lib/clerk-theme';
 import { openExternalBrowser } from '@/lib/capacitor';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -117,8 +119,6 @@ export default function AppLoginPage() {
 }
 
 function ClerkSignInBlockInner() {
-  const { SignIn } = require('@clerk/nextjs');
-  const { clerkAuthAppearance } = require('@/lib/clerk-theme');
   return (
     <SignIn
       appearance={clerkAuthAppearance}

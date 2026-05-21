@@ -5,6 +5,8 @@ export const users = pgTable('users', {
   clerkId: text('clerk_id').notNull().unique(),
   email: text('email').notNull(),
   stripeCustomerId: text('stripe_customer_id'),
+  /** Set when the user buys the Starter Pack ($44.99 one-time). NULL = never bought. */
+  starterPackPurchasedAt: timestamp('starter_pack_purchased_at'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
@@ -62,14 +64,24 @@ export const downloads = pgTable('downloads', {
 export const reviews = pgTable('reviews', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id).notNull(),
-  productId: uuid('product_id').references(() => products.id).notNull(),
+  /** Legacy: kept nullable for the migration. New reviews use productSlug. */
+  productId: uuid('product_id').references(() => products.id),
+  /** New canonical key — activity slug from lib/fallback-products.ts. */
+  productSlug: text('product_slug'),
   rating: integer('rating').notNull(),
   comment: text('comment').notNull(),
+  /** Snapshot of the author's display name at write time. Avoids re-fetching
+   *  Clerk on every review render. */
+  authorName: text('author_name'),
+  /** Snapshot of the author's Clerk profile image URL at write time. */
+  authorImageUrl: text('author_image_url'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
   index('idx_reviews_product').on(table.productId),
+  index('idx_reviews_product_slug').on(table.productSlug),
   index('idx_reviews_user_product').on(table.userId, table.productId),
+  index('idx_reviews_user_slug').on(table.userId, table.productSlug),
 ]);
 
 export const deviceTokens = pgTable('device_tokens', {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   getAllResources,
@@ -9,19 +10,27 @@ import {
   resourceProductDefaults,
   type ResourceTopic,
 } from '@/lib/resources';
-import { formatDate, type BlogContentBlock } from '@/lib/blog';
+import { formatDate } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getArticleBodyText } from '@/lib/content-blocks';
 import type { ContentBlock } from '@/lib/content-blocks';
-import Breadcrumb from '@/components/blog/Breadcrumb';
-import AuthorBio from '@/components/blog/AuthorBio';
-import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import RelatedBlogPosts from '@/components/resources/RelatedBlogPosts';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import EmailForm from '@/components/EmailForm';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
+
+const imgBgByTopic: Record<ResourceTopic, string> = {
+  'real-world-learning': '#DDE5D2',
+  'nature-stem': '#CFDCC4',
+  'worldschooling': '#E8C8AE',
+  'creativity-maker': '#F2DECF',
+  'ai-digital-literacy': '#F5E7BC',
+  'homeschool-journey': '#DAD7CD',
+  'future-ready-skills': '#DDE5D2',
+};
 
 interface ResourcePageProps {
   params: Promise<{ slug: string }>;
@@ -67,8 +76,6 @@ export async function generateMetadata({
   };
 }
 
-/* ─── Auto-inject product/bundle callouts ─── */
-
 function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopic; recommendedProduct?: string; recommendedBundle?: string }): ContentBlock[] {
   const hasProduct = resource.content.some((b) => b.type === 'product-callout');
   const hasBundle = resource.content.some((b) => b.type === 'bundle-callout');
@@ -77,7 +84,6 @@ function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopi
   const defaults = resourceProductDefaults[resource.topic];
   if (!defaults) return resource.content;
 
-  // If neither recommendedProduct nor recommendedBundle is set, skip auto-injection
   if (!resource.recommendedProduct && !resource.recommendedBundle) return resource.content;
 
   const productSlug = resource.recommendedProduct || defaults.product;
@@ -105,15 +111,10 @@ function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopi
 
   const result: ContentBlock[] = [];
   for (let i = 0; i < resource.content.length; i++) {
-    if (i === productIdx && !hasProduct) {
-      result.push({ type: 'product-callout', slug: productSlug });
-    }
-    if (i === bundleIdx && !hasBundle && i !== productIdx) {
-      result.push({ type: 'bundle-callout', slug: bundleSlug });
-    }
+    if (i === productIdx && !hasProduct) result.push({ type: 'product-callout', slug: productSlug });
+    if (i === bundleIdx && !hasBundle && i !== productIdx) result.push({ type: 'bundle-callout', slug: bundleSlug });
     result.push(resource.content[i]);
   }
-
   return result;
 }
 
@@ -193,191 +194,249 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
   } : null;
 
   return (
-    <div className="bg-cream min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      {faqLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-        />
-      )}
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
+
       <ReadingProgress />
 
-      {/* ─── Hero ─── */}
-      <header className="relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.035]"
-          style={{
-            background: `radial-gradient(ellipse at 30% 20%, ${topicMeta.color}, transparent 70%), radial-gradient(ellipse at 70% 80%, ${topicMeta.color}, transparent 60%)`,
-          }}
-        />
-
-        <div className="relative mx-auto max-w-4xl px-5 sm:px-8 pt-8 md:pt-12 pb-10 md:pb-14">
-          <div className="mb-8">
-            <Breadcrumb
-              items={[
-                { label: 'Guides', href: '/guides' },
-                { label: resource.title },
-              ]}
-            />
+      <main className="bg-cream">
+        {/* 01 BREADCRUMB */}
+        <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <nav
+              aria-label="Breadcrumb"
+              className="py-3.5 flex flex-wrap items-center gap-2.5 text-[13px] text-gray-500"
+            >
+              <Link href="/guides" className="text-gray-600 hover:text-forest-dark transition-colors no-underline">
+                Guides
+              </Link>
+              <span aria-hidden="true" className="text-[#C9C5B7]">&rsaquo;</span>
+              <span className="text-gray-500 truncate max-w-[280px] sm:max-w-none">{resource.title}</span>
+            </nav>
           </div>
+        </div>
 
-          <ScrollReveal>
-            <div className="mb-6">
+        {/* 02 ARTICLE HEADER */}
+        <header className="text-center pt-16 md:pt-20 pb-8 md:pb-10">
+          <div className="mx-auto max-w-[880px] px-6">
+            <ScrollReveal>
               <span
-                className="inline-block text-[11px] font-bold uppercase tracking-[0.12em] text-white px-3 py-1 rounded-full"
-                style={{ backgroundColor: topicMeta.color }}
+                className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em]"
+                style={{ color: topicMeta.color }}
               >
+                <span
+                  className="w-2 h-2 rounded-full shrink-0"
+                  style={{ background: topicMeta.color }}
+                  aria-hidden="true"
+                />
                 {topicMeta.label}
               </span>
-            </div>
+              <h1 className="font-display text-[clamp(2.25rem,5vw,4.25rem)] leading-[1.04] tracking-tight mt-4 max-w-[880px] mx-auto text-balance">
+                {resource.title}
+              </h1>
+              <p className="mt-5 max-w-[680px] mx-auto font-display italic text-[clamp(1.25rem,2.1vw,1.5rem)] leading-[1.45] text-gray-600">
+                {resource.excerpt}
+              </p>
+              <div className="mt-8 inline-flex items-center gap-3.5 text-left">
+                {resource.author.avatarImage ? (
+                  <Image
+                    src={resource.author.avatarImage}
+                    alt={resource.author.name}
+                    width={42}
+                    height={42}
+                    className="w-[42px] h-[42px] rounded-full object-cover border border-[#D8D4C5]"
+                  />
+                ) : (
+                  <div
+                    className="w-[42px] h-[42px] rounded-full border border-[#D8D4C5] grid place-items-center font-display italic text-[18px] leading-none pb-0.5 text-forest-dark"
+                    style={{ background: 'linear-gradient(135deg, #DAD7CD, #C9C5B7)' }}
+                  >
+                    {resource.author.name.charAt(0)}
+                  </div>
+                )}
+                <div className="flex flex-col leading-[1.3]">
+                  <span className="font-semibold text-[15px] text-ink">
+                    {resource.author.name}
+                    {resource.author.credentials && (
+                      <span className="font-normal text-gray-500"> &middot; {resource.author.credentials}</span>
+                    )}
+                  </span>
+                  <span className="text-[12.5px] text-gray-500 tracking-wide">
+                    {formatDate(resource.publishedAt)}
+                    {resource.dateModified && resource.dateModified !== resource.publishedAt && (
+                      <> &middot; Updated {formatDate(resource.dateModified)}</>
+                    )}
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </header>
 
-            <h1 className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.4rem] text-forest leading-[1.06] mb-7 max-w-3xl text-balance tracking-[-0.02em]">
-              {resource.title}
-            </h1>
-
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mb-8">
-              {resource.excerpt}
-            </p>
-
-            <div className="flex items-center gap-4">
-              {resource.author.avatarImage ? (
+        {/* 03 HERO IMAGE */}
+        <div className="px-6 pb-12 md:pb-16">
+          <ScrollReveal delay={80}>
+            <div
+              className="relative aspect-[16/9] max-w-[1100px] mx-auto rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]"
+              style={{ background: imgBgByTopic[resource.topic] || '#E6EBDF' }}
+            >
+              {resource.heroImage ? (
                 <Image
-                  src={resource.author.avatarImage}
-                  alt={resource.author.name}
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-white"
+                  src={resource.heroImage}
+                  alt={resource.heroImageAlt || resource.title}
+                  fill
+                  sizes="(max-width: 1100px) 100vw, 1100px"
+                  className="object-cover"
+                  style={resource.heroImagePosition ? { objectPosition: resource.heroImagePosition } : undefined}
+                  priority
                 />
               ) : (
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm font-semibold shadow-sm ring-2 ring-white"
-                  style={{ backgroundColor: resource.author.avatarColor }}
-                >
-                  {resource.author.name.charAt(0)}
-                </div>
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: `repeating-linear-gradient(45deg, rgba(120,90,40,0.06) 0 2px, transparent 2px 12px)`,
+                  }}
+                />
               )}
-              <div className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">
-                  {resource.author.name}
-                  {resource.author.credentials && (
-                    <span className="text-gray-400 font-normal"> · {resource.author.credentials}</span>
-                  )}
-                </span>
-                <span className="text-[13px] text-gray-400">
-                  {formatDate(resource.publishedAt)}
-                  {resource.dateModified && resource.dateModified !== resource.publishedAt && (
-                    <> · Updated {formatDate(resource.dateModified)}</>
-                  )}
-                </span>
-              </div>
             </div>
           </ScrollReveal>
         </div>
-      </header>
 
-      {/* ─── Hero image placeholder ─── */}
-      <div className="mx-auto max-w-5xl px-5 sm:px-8 mb-12 md:mb-16">
-        <ScrollReveal delay={100}>
-          <div
-            className="relative aspect-[16/9] rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
-            style={{
-              background: resource.heroImage ? undefined : `linear-gradient(160deg, ${topicMeta.color}12, ${topicMeta.color}30, ${topicMeta.color}08)`,
-            }}
-          >
-            {resource.heroImage ? (
-              <Image
-                src={resource.heroImage}
-                alt={resource.heroImageAlt || resource.title}
-                fill
-                className="object-cover"
-                style={{ objectPosition: resource.heroImagePosition || 'center' }}
-                sizes="(max-width: 768px) 100vw, 960px"
-                priority
-              />
-            ) : (
-              <>
-                <div
-                  className="absolute top-[10%] right-[15%] w-40 h-40 rounded-full opacity-15 blur-3xl"
-                  style={{ backgroundColor: topicMeta.color }}
-                />
-                <div
-                  className="absolute bottom-[15%] left-[8%] w-52 h-52 rounded-full opacity-10 blur-[80px]"
-                  style={{ backgroundColor: topicMeta.color }}
-                />
-                <span className="text-gray-400/40 text-sm relative z-10 font-medium">{resource.heroImageAlt}</span>
-              </>
+        {/* 04 ARTICLE BODY */}
+        <div className="mx-auto max-w-[1180px] px-6" data-article>
+          <div className={toc.length >= 3 ? 'lg:grid lg:grid-cols-[260px_1fr] lg:gap-16' : ''}>
+            {toc.length >= 3 && (
+              <aside className="hidden lg:block">
+                <div className="sticky top-24 pb-8 pt-2">
+                  <StickyTOC items={toc} />
+                </div>
+              </aside>
             )}
+
+            <article className="min-w-0 pb-12 md:pb-16 mx-auto max-w-[760px] lg:max-w-none">
+              <MobileTOC items={toc} />
+              {(() => {
+                let firstParagraphRendered = false;
+                return contentWithCallouts.map((block, i) => {
+                  const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
+                  if (isFirst) firstParagraphRendered = true;
+                  return renderBlock(block, i, isFirst);
+                });
+              })()}
+
+              {/* Tag row */}
+              {resource.keywords && resource.keywords.length > 0 && (
+                <div className="mt-10 pt-6 border-t border-[#D8D4C5] flex flex-wrap gap-2 items-center">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 mr-1.5">
+                    Tagged
+                  </span>
+                  {resource.keywords.slice(0, 5).map((kw) => (
+                    <span
+                      key={kw}
+                      className="inline-block bg-[#F2EFE4] text-gray-600 text-[13px] font-medium px-3 py-1.5 rounded-full"
+                    >
+                      {kw}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Author bio */}
+              <aside className="mt-12 bg-[#F2EFE4] border border-[#D8D4C5] rounded-[14px] p-7 md:p-8 grid grid-cols-1 sm:grid-cols-[72px_1fr] gap-5 items-start">
+                {resource.author.avatarImage ? (
+                  <Image
+                    src={resource.author.avatarImage}
+                    alt={resource.author.name}
+                    width={72}
+                    height={72}
+                    className="w-[72px] h-[72px] rounded-full object-cover border border-[#D8D4C5]"
+                  />
+                ) : (
+                  <div
+                    className="w-[72px] h-[72px] rounded-full border border-[#D8D4C5] grid place-items-center font-display italic text-[32px] leading-none pb-1 text-forest-dark"
+                    style={{ background: 'linear-gradient(135deg, #DAD7CD, #C9C5B7)' }}
+                  >
+                    {resource.author.name.charAt(0)}
+                  </div>
+                )}
+                <div>
+                  <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-gray-500 mb-1">
+                    Written by
+                  </div>
+                  <h4 className="font-display text-[26px] leading-[1.1] tracking-tight text-ink mb-2">
+                    {resource.author.name}
+                  </h4>
+                  <p className="m-0 text-[15.5px] leading-[1.6] text-gray-600">
+                    {resource.author.bio}
+                  </p>
+                </div>
+              </aside>
+            </article>
           </div>
-        </ScrollReveal>
-      </div>
+        </div>
 
-      {/* ─── Article + Sidebar Grid ─── */}
-      <div className="mx-auto max-w-6xl px-5 sm:px-8" data-article>
-        <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-16 xl:grid-cols-[1fr_240px] xl:gap-20">
-          <article className="min-w-0 pb-16 md:pb-20 mx-auto max-w-[680px] lg:max-w-none">
-            <MobileTOC items={toc} />
-
-            {(() => {
-              let firstParagraphRendered = false;
-              return contentWithCallouts.map((block, i) => {
-                const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
-                if (isFirst) firstParagraphRendered = true;
-                return renderBlock(block, i, isFirst);
-              });
-            })()}
-          </article>
-
-          {toc.length >= 3 && (
-            <aside className="hidden lg:block relative">
-              <div className="sticky top-24 pb-8">
-                <StickyTOC items={toc} />
+        {/* 05 EMAIL CAPTURE */}
+        <section className="pt-2 pb-12">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[720px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Get inspiration delivered
+                </p>
+                <h2 className="font-display text-[clamp(1.75rem,3.4vw,2.4rem)] leading-[1.14] tracking-tight mt-3.5 text-balance">
+                  New guides, fresh ideas, delivered when we have{' '}
+                  <span className="italic text-forest-dark">something worth sharing.</span>
+                </h2>
+                <p className="mt-4 text-gray-600 text-[16px] leading-[1.6] max-w-[480px] mx-auto">
+                  Practical ideas, encouragement, and real-world learning tips. No spam. No fluff.
+                </p>
+                <div className="mt-6 max-w-[480px] mx-auto">
+                  <EmailForm variant="light" buttonText="Subscribe" />
+                </div>
+                <p className="mt-3.5 text-[13px] text-gray-500">
+                  Unsubscribe in one click. We hate inbox clutter as much as you do.
+                </p>
               </div>
-            </aside>
-          )}
-        </div>
-      </div>
-
-      {/* ─── Post-article sections ─── */}
-      <div className="mx-auto max-w-[680px] px-5 sm:px-8">
-        <div className="py-12 md:py-16">
-          <div className="flex items-center justify-center gap-4">
-            <span className="h-px flex-1 max-w-16 bg-gradient-to-r from-transparent to-gold/30" />
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-gold/40">
-              <path d="M12 22V8M5 12c0-5 7-10 7-10s7 5 7 10c0 3-2 5-7 5s-7-2-7-5z" strokeLinecap="round" />
-            </svg>
-            <span className="h-px flex-1 max-w-16 bg-gradient-to-l from-transparent to-gold/30" />
+            </ScrollReveal>
           </div>
-        </div>
-
-        <section className="pb-14 md:pb-18">
-          <ScrollReveal>
-            <AuthorBio author={resource.author} />
-          </ScrollReveal>
         </section>
-      </div>
 
-      {/* Newsletter CTA */}
-      <section className="pb-14 md:pb-18">
-        <div className="mx-auto max-w-3xl px-5 sm:px-8">
-          <ScrollReveal>
-            <BlogNewsletterCTA />
-          </ScrollReveal>
-        </div>
-      </section>
+        {/* 06 MEMBERSHIP POINTER */}
+        <section className="pb-14">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[680px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-7 md:p-8 flex flex-wrap items-center gap-y-5 gap-x-8">
+                <div className="flex-1 min-w-[240px]">
+                  <span className="block font-display italic text-[18px] text-[#C97B5C] mb-1.5">
+                    Want more than reading?
+                  </span>
+                  <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
+                    The Anywhere Learning{' '}
+                    <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
+                    unlocks 100+ guided activities you can actually do with your kids. Cooking,
+                    budgeting, building, planning. Founding members pay $99/year, locked in for life.
+                  </p>
+                </div>
+                <Link
+                  href="/join"
+                  className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                >
+                  See what&apos;s in the membership
+                  <span className="font-display italic text-lg leading-none">&rarr;</span>
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
 
-      {/* Related blog posts */}
-      <RelatedBlogPosts slugs={resource.relatedBlogSlugs} />
+        {/* 07 RELATED BLOG POSTS */}
+        <RelatedBlogPosts slugs={resource.relatedBlogSlugs} />
+      </main>
 
-      {/* Exit-intent popup */}
       <BlogExitIntentPopup />
-    </div>
+    </>
   );
 }
