@@ -356,7 +356,7 @@ export default function CustomSignInForm() {
         )}
 
         <p className="mt-8 max-w-[360px] max-lg:mx-auto pt-4 border-t border-dashed border-[#C9C5B7] font-display italic text-[15.5px] text-gray-500">
-          &ldquo;Real-world skills, raised one activity at a time.&rdquo; &mdash; Amelie
+          Hands-on activities for raising capable kids, ready for real life.
         </p>
       </div>
 
