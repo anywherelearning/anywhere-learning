@@ -541,7 +541,7 @@ export default async function HomePage() {
                 </h2>
                 <div className="mt-5 mx-auto max-w-[580px] text-gray-500 text-[17px] leading-relaxed space-y-3">
                   <p>
-                    The membership unlocks the full library: all 100+ activities, all nine
+                    The membership unlocks the full library: all 100+ activities, all eight
                     categories, new ones added every quarter. One annual price, no upsells,
                     no tracking your kids.
                   </p>

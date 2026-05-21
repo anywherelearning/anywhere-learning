@@ -162,7 +162,7 @@ export default function AbandonedCheckoutMembership({
                       <Stat
                         num="100+"
                         name="Activities"
-                        desc="Across nine real-life categories."
+                        desc="Across eight real-life categories."
                       />
                     </td>
                     <td style={levelsCell}>
