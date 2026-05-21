@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
 import { STARTER_PACK_SLUGS } from '@/lib/membership';
@@ -59,10 +59,11 @@ const SKILLS_MAP_ENTRIES: DashboardActivity[] = [
 // the Starter Pack experience.
 async function detectTier(
   searchParams: { tier?: string },
-): Promise<'member' | 'starter'> {
+): Promise<'member' | 'starter' | 'guest'> {
   // Dev/preview override
   if (searchParams.tier === 'starter') return 'starter';
   if (searchParams.tier === 'member') return 'member';
+  if (searchParams.tier === 'guest') return 'guest';
 
   // Real lookup: Clerk → DB
   try {
@@ -70,22 +71,13 @@ async function detectTier(
     const { getAccessTierForClerkId } = await import('@/lib/access');
     const { userId } = await auth();
     if (userId) {
-      const tier = await getAccessTierForClerkId(userId);
-      // The account dashboard only serves member or starter — guests shouldn't
-      // be here (the page is robots: noindex). Treat 'guest' as 'starter' so
-      // they see the upgrade-to-membership UI rather than nothing.
-      return tier === 'member' ? 'member' : 'starter';
+      return await getAccessTierForClerkId(userId);
     }
   } catch {
     /* Clerk or DB not configured */
   }
 
-  // Old `al_tier_preview` cookie fallback removed — it persisted access for
-  // 7 days client-side and let refunded users keep seeing their library.
-  // Default to 'starter' as the safest "you reached /account without a sub"
-  // landing — the dashboard upsells to membership; access is still gated
-  // server-side per request.
-  return 'starter';
+  return 'guest';
 }
 
 export default async function AccountPage({
@@ -95,6 +87,13 @@ export default async function AccountPage({
 }) {
   const sp = await searchParams;
   const tier = await detectTier(sp);
+
+  // Guest = no active membership AND no Starter Pack purchase. The library
+  // dashboard has nothing useful to show them. Bounce to /join with a
+  // contextual banner so they know why they landed there.
+  if (tier === 'guest') {
+    redirect('/join?from=account&reason=no-access');
+  }
 
   // Pull the signed-in user's first name from Clerk. Fall back to the ?name
   // query param (used by the sandbox tier preview) or 'Member' if neither.

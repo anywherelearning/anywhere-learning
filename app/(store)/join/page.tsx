@@ -192,17 +192,20 @@ export default async function JoinPage({
   // closes automatically the moment the 100th member is provisioned.
   const m = await import('@/lib/membership-runtime').then((x) => x.getMembership());
 
-  // Soft banner for visitors who hit /join from a gated download attempt.
-  // The download endpoint redirects guests + starter-pack buyers (trying
-  // to access member-only activities) here with ?from=download&reason=...
+  // Soft banner for visitors who landed on /join from a gated entry point —
+  // a PDF link they couldn't open, or /account when they have no access.
+  // The download endpoint + account page redirect here with ?from=…&reason=…
   const sp = (await searchParams) || {};
-  const fromDownload = sp.from === 'download';
-  const isStarterUpgrade = fromDownload && sp.reason === 'starter-upgrade';
-  const bannerMessage = !fromDownload
-    ? null
-    : isStarterUpgrade
-      ? "That activity is in the full membership. Upgrade once and unlock everything."
-      : "Sign up below to open that activity, plus the rest of the library.";
+  const isStarterUpgrade = sp.reason === 'starter-upgrade';
+  const isNoAccess = sp.reason === 'no-access';
+  const isMembershipRequired = sp.reason === 'membership-required';
+  const bannerMessage = isStarterUpgrade
+    ? "That activity is in the full membership. Upgrade once and unlock everything."
+    : isNoAccess
+      ? "Your library access has ended. Become a member to open it again."
+      : isMembershipRequired
+        ? "Become a member to open that activity, plus the rest of the library."
+        : null;
   const productLd = {
     '@context': 'https://schema.org',
     '@type': ['Product', 'Service'],
