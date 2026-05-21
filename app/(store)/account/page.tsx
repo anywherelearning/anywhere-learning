@@ -80,16 +80,12 @@ async function detectTier(
     /* Clerk or DB not configured */
   }
 
-  // Dev fallback: cookie set by the sandbox checkout success page
-  try {
-    const c = await cookies();
-    const stored = c.get('al_tier_preview')?.value;
-    if (stored === 'starter' || stored === 'member') return stored;
-  } catch {
-    /* cookies unavailable */
-  }
-
-  return 'member';
+  // Old `al_tier_preview` cookie fallback removed — it persisted access for
+  // 7 days client-side and let refunded users keep seeing their library.
+  // Default to 'starter' as the safest "you reached /account without a sub"
+  // landing — the dashboard upsells to membership; access is still gated
+  // server-side per request.
+  return 'starter';
 }
 
 export default async function AccountPage({

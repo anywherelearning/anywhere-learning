@@ -13,7 +13,6 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 import { auth } from '@clerk/nextjs/server';
 import { getDownloadUrl } from '@vercel/blob';
 import { getAccessTierForClerkId, type AccessTier } from '@/lib/access';
@@ -44,19 +43,11 @@ export async function GET(
     return NextResponse.json({ error: 'Sign in to download activities.' }, { status: 401 });
   }
 
-  // Resolve tier — DB is source of truth. Cookie is a fallback for the
-  // brief window between a successful Stripe Checkout and the webhook
-  // updating the DB (the SandboxTierCookie component sets it).
-  let tier: AccessTier = await getAccessTierForClerkId(clerkId);
-  if (tier === 'guest') {
-    try {
-      const c = await cookies();
-      const stored = c.get('al_tier_preview')?.value;
-      if (stored === 'member' || stored === 'starter') tier = stored;
-    } catch {
-      /* cookies unavailable */
-    }
-  }
+  // Resolve tier from the DB — this is the only source of truth in
+  // production. (The old `al_tier_preview` cookie fallback was a
+  // sandbox-era hack that persisted access for 7 days in the browser,
+  // which made refunded customers keep PDF access. Removed.)
+  const tier: AccessTier = await getAccessTierForClerkId(clerkId);
   if (tier === 'guest') {
     return NextResponse.json({ error: 'Membership required.' }, { status: 403 });
   }

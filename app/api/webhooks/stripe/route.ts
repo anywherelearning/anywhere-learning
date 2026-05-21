@@ -434,10 +434,26 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
         .update(users)
         .set({ starterPackPurchasedAt: null })
         .where(eq(users.email, email))
-        .returning({ id: users.id });
+        .returning({ id: users.id, clerkId: users.clerkId });
       console.log(
         `[webhook] cleared starter access for ${email} after refund (${result.length} row${result.length === 1 ? '' : 's'} updated)`,
       );
+
+      // Also update Clerk publicMetadata → 'guest' so the SiteHeader badge
+      // updates without requiring a sign-out / sign-in.
+      const clerkId = result[0]?.clerkId;
+      if (clerkId) {
+        try {
+          const clerk = getClerk();
+          if (clerk) {
+            await clerk.users.updateUserMetadata(clerkId, {
+              publicMetadata: { tier: 'guest', founder: false },
+            });
+          }
+        } catch (err) {
+          console.warn('[webhook] could not write canceled metadata:', err);
+        }
+      }
     } catch (err) {
       console.error('[webhook] failed to revoke starter access after refund:', err);
     }
@@ -492,6 +508,23 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
     });
   }
   console.log(`[webhook] subscription ${sub.id} → ${sub.status} for ${user.email}`);
+
+  // Keep Clerk publicMetadata in sync with the DB so the SiteHeader badge
+  // updates immediately when a subscription ends. Without this, a canceled
+  // user keeps showing "Member" in the nav until they sign out + back in.
+  if (sub.status === 'canceled' || sub.status === 'incomplete_expired') {
+    try {
+      const clerk = getClerk();
+      if (clerk && user.clerkId) {
+        await clerk.users.updateUserMetadata(user.clerkId, {
+          publicMetadata: { tier: 'guest', founder: false },
+        });
+        console.log(`[webhook] Clerk metadata → guest for ${user.email}`);
+      }
+    } catch (err) {
+      console.warn('[webhook] could not write canceled metadata:', err);
+    }
+  }
 }
 
 export async function POST(req: NextRequest) {

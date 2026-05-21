@@ -195,18 +195,9 @@ async function detectAccessTier(searchParams: { tier?: string }): Promise<Access
     /* Clerk or DB not configured */
   }
 
-  // Fallback: cookie set by the sandbox checkout success page. Kicks in for the
-  // window between a successful Stripe Checkout and the webhook updating the DB
-  // — or any time the DB lookup says 'guest' but the user has a fresh purchase.
-  if (tier === 'guest') {
-    try {
-      const c = await cookies();
-      const stored = c.get('al_tier_preview')?.value;
-      if (stored === 'member' || stored === 'starter') return stored;
-    } catch {
-      /* cookies unavailable */
-    }
-  }
+  // The old sandbox `al_tier_preview` cookie fallback was removed — it
+  // persisted access for 7 days in the browser, letting refunded users
+  // continue to see member content. DB is now the only source of truth.
 
   return tier;
 }
