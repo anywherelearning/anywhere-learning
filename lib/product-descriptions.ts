@@ -46,7 +46,7 @@ export const SHARED_WHY_PARENTS_LOVE_IT = [
   'Designed to grow with your child, from babies through teens',
   'Honest, plain-language guidance, no academic jargon',
   'Built around real life: kitchens, parks, conversations, not desks',
-  'The lens behind every guide and activity in the shop',
+  'The lens behind every guide and activity in the library',
 ];
 
 /** Category-specific "Best For" audiences */

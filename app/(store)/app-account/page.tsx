@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useUser, useClerk } from '@clerk/nextjs';
 import { openExternalBrowser } from '@/lib/capacitor';
 import NativeAuthGuard from '@/components/mobile/NativeAuthGuard';
 
@@ -20,7 +21,6 @@ export default function AppAccountPage() {
 }
 
 function ClerkAccountContentInner() {
-  const { useUser, useClerk } = require('@clerk/nextjs');
   const { user, isLoaded, isSignedIn } = useUser();
   const { signOut } = useClerk();
 

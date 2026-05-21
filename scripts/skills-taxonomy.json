@@ -1,0 +1,1143 @@
+{
+  "familyCounts": {
+    "Critical Thinking & Reasoning": 63,
+    "Communication & Writing": 55,
+    "Planning & Self-Management": 38,
+    "Empathy & People": 25,
+    "Math & Money": 20,
+    "Creativity & Making": 19,
+    "Nature & Science": 19,
+    "Entrepreneurship & Money": 16,
+    "Tech & Digital": 11,
+    "World & Geography": 8
+  },
+  "canonicalCounts": {
+    "Communication": 40,
+    "Critical Thinking": 35,
+    "Problem-Solving": 23,
+    "Planning": 18,
+    "Decision-Making": 14,
+    "Observation": 13,
+    "Research": 12,
+    "Creative Thinking": 11,
+    "Math": 9,
+    "Number Sense": 9,
+    "Empathy": 8,
+    "Writing": 8,
+    "Financial Literacy": 8,
+    "Audience Awareness": 6,
+    "Digital Citizenship": 5,
+    "Reflection": 5,
+    "Engineering": 5,
+    "Confidence": 5,
+    "Organisation": 5,
+    "Persuasion": 5,
+    "Design Thinking": 5,
+    "Resilience": 5,
+    "Life Skills": 5,
+    "Self-Direction": 4,
+    "Spatial Thinking": 4,
+    "Public Speaking": 4,
+    "Storytelling": 4,
+    "Science": 4,
+    "Systems Thinking": 4,
+    "Geography": 4,
+    "Percentages": 4,
+    "Budgeting": 4,
+    "Cultural Awareness": 4,
+    "AI Literacy": 3,
+    "Emotional Regulation": 3,
+    "Listening": 3,
+    "Entrepreneurship": 3,
+    "Art": 3,
+    "Adaptability": 3,
+    "Executive Functioning": 3,
+    "Digital Literacy": 2,
+    "Online Safety & Privacy": 2,
+    "Pricing & Sales": 2,
+    "Ethics": 1,
+    "Nature Connection": 1,
+    "Data & Graphs": 1,
+    "Media Literacy": 1
+  },
+  "perSlug": {
+    "ai-basics": {
+      "canonical": [
+        "AI Literacy",
+        "Communication",
+        "Critical Thinking",
+        "Decision-Making",
+        "Digital Citizenship"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Tech & Digital"
+      ]
+    },
+    "algorithm-awareness": {
+      "canonical": [
+        "Critical Thinking",
+        "Decision-Making",
+        "Digital Literacy",
+        "Reflection",
+        "Self-Direction"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management",
+        "Tech & Digital"
+      ]
+    },
+    "bias-fairness-lab": {
+      "canonical": [
+        "AI Literacy",
+        "Communication",
+        "Critical Thinking",
+        "Decision-Making",
+        "Empathy"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Tech & Digital"
+      ]
+    },
+    "build-ai-helper": {
+      "canonical": [
+        "AI Literacy",
+        "Communication",
+        "Online Safety & Privacy",
+        "Problem-Solving",
+        "Reflection"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Tech & Digital"
+      ]
+    },
+    "create-with-ai": {
+      "canonical": [
+        "Communication",
+        "Creative Thinking",
+        "Decision-Making",
+        "Digital Citizenship"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Tech & Digital"
+      ]
+    },
+    "deepfake-spotter": {
+      "canonical": [
+        "Decision-Making",
+        "Digital Citizenship",
+        "Emotional Regulation",
+        "Observation"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "Planning & Self-Management",
+        "Tech & Digital"
+      ]
+    },
+    "hallucination-detective": {
+      "canonical": [
+        "Critical Thinking",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "healthy-tech-boundaries": {
+      "canonical": [
+        "Decision-Making",
+        "Digital Citizenship",
+        "Engineering",
+        "Reflection",
+        "Self-Direction"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management",
+        "Tech & Digital"
+      ]
+    },
+    "privacy-footprint": {
+      "canonical": [
+        "Critical Thinking",
+        "Decision-Making",
+        "Digital Citizenship",
+        "Online Safety & Privacy"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Tech & Digital"
+      ]
+    },
+    "prompt-like-a-coach": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "media-info-check": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Digital Literacy",
+        "Emotional Regulation"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Tech & Digital"
+      ]
+    },
+    "adventure-story-map": {
+      "canonical": [
+        "Creative Thinking",
+        "Observation",
+        "Spatial Thinking",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    },
+    "community-tour-guide": {
+      "canonical": [
+        "Audience Awareness",
+        "Confidence",
+        "Organisation",
+        "Public Speaking",
+        "Research",
+        "Storytelling"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "directions-challenge": {
+      "canonical": [
+        "Empathy",
+        "Observation",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science"
+      ]
+    },
+    "family-debate-night": {
+      "canonical": [
+        "Critical Thinking",
+        "Listening",
+        "Persuasion",
+        "Public Speaking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People"
+      ]
+    },
+    "family-recipe-book": {
+      "canonical": [
+        "Organisation",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Planning & Self-Management"
+      ]
+    },
+    "market-stall-pitch": {
+      "canonical": [
+        "Audience Awareness",
+        "Confidence",
+        "Creative Thinking",
+        "Entrepreneurship",
+        "Persuasion"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Empathy & People",
+        "Entrepreneurship & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "mini-magazine-creator": {
+      "canonical": [
+        "Audience Awareness",
+        "Research",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People"
+      ]
+    },
+    "my-review-column": {
+      "canonical": [
+        "Audience Awareness",
+        "Critical Thinking",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People"
+      ]
+    },
+    "neighbourhood-interview": {
+      "canonical": [
+        "Communication",
+        "Empathy",
+        "Listening"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Empathy & People"
+      ]
+    },
+    "trail-guide-creator": {
+      "canonical": [
+        "Audience Awareness",
+        "Observation",
+        "Organisation",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "write-like-a-pro": {
+      "canonical": [
+        "Audience Awareness",
+        "Confidence",
+        "Persuasion"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "board-game-studio": {
+      "canonical": [
+        "Creative Thinking",
+        "Design Thinking",
+        "Math"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Math & Money"
+      ]
+    },
+    "rube-goldberg-machine": {
+      "canonical": [
+        "Communication",
+        "Engineering",
+        "Problem-Solving",
+        "Science"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    },
+    "survival-base": {
+      "canonical": [
+        "Communication",
+        "Creative Thinking",
+        "Planning",
+        "Science"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "imaginary-world": {
+      "canonical": [
+        "Creative Thinking",
+        "Storytelling",
+        "Systems Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "creature-habitat": {
+      "canonical": [
+        "Communication",
+        "Engineering",
+        "Problem-Solving",
+        "Science"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    },
+    "mini-movie": {
+      "canonical": [
+        "Planning",
+        "Problem-Solving",
+        "Public Speaking",
+        "Storytelling"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "theme-park": {
+      "canonical": [
+        "Communication",
+        "Engineering",
+        "Entrepreneurship",
+        "Spatial Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Nature & Science"
+      ]
+    },
+    "invent-a-sport": {
+      "canonical": [
+        "Communication",
+        "Design Thinking",
+        "Ethics",
+        "Math"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Empathy & People",
+        "Math & Money",
+        "Tech & Digital"
+      ]
+    },
+    "kinetic-sculpture": {
+      "canonical": [
+        "Art",
+        "Communication",
+        "Engineering",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "brand-builder": {
+      "canonical": [
+        "Art",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Storytelling"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "business-failure-lab": {
+      "canonical": [
+        "Adaptability",
+        "Communication",
+        "Critical Thinking",
+        "Problem-Solving",
+        "Resilience",
+        "Systems Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "community-service-business": {
+      "canonical": [
+        "Communication",
+        "Observation",
+        "Planning",
+        "Problem-Solving",
+        "Resilience"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "customer-discovery": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Empathy",
+        "Entrepreneurship",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Entrepreneurship & Money"
+      ]
+    },
+    "investor-pitch": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Decision-Making"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "marketing-campaign": {
+      "canonical": [
+        "Adaptability",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Design Thinking",
+        "Persuasion"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "micro-business": {
+      "canonical": [
+        "Communication",
+        "Financial Literacy",
+        "Problem-Solving",
+        "Research",
+        "Resilience"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "pricing-experiment": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Financial Literacy",
+        "Problem-Solving",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "product-design-lab": {
+      "canonical": [
+        "Communication",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Design Thinking",
+        "Executive Functioning"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "supply-chain-detective": {
+      "canonical": [
+        "Communication",
+        "Geography",
+        "Problem-Solving",
+        "Research",
+        "Systems Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "World & Geography"
+      ]
+    },
+    "shark-tank-pitch": {
+      "canonical": [
+        "Financial Literacy",
+        "Persuasion",
+        "Public Speaking",
+        "Resilience"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Empathy & People",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "community-impact": {
+      "canonical": [
+        "Communication",
+        "Planning",
+        "Reflection"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "emergency-ready": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Executive Functioning",
+        "Life Skills",
+        "Planning"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "everyday-redesign": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Design Thinking",
+        "Life Skills",
+        "Systems Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "fix-it-detective": {
+      "canonical": [
+        "Critical Thinking",
+        "Life Skills",
+        "Planning",
+        "Problem-Solving",
+        "Research"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "neighbourhood-problem-spotter": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Problem-Solving",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "outdoor-survival-planner": {
+      "canonical": [
+        "Critical Thinking",
+        "Nature Connection",
+        "Planning",
+        "Problem-Solving",
+        "Resilience"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "pack-like-a-pro": {
+      "canonical": [
+        "Adaptability",
+        "Critical Thinking",
+        "Decision-Making",
+        "Life Skills",
+        "Planning"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "problem-solver": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Planning",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "scavenger-hunt-designer": {
+      "canonical": [
+        "Communication",
+        "Creative Thinking",
+        "Planning",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "swap-day-challenge": {
+      "canonical": [
+        "Life Skills",
+        "Planning"
+      ],
+      "families": [
+        "Planning & Self-Management"
+      ]
+    },
+    "what-if-scenario-lab": {
+      "canonical": [
+        "Communication",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Planning",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "time-energy-planner": {
+      "canonical": [
+        "Emotional Regulation",
+        "Executive Functioning",
+        "Planning",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "travel-day": {
+      "canonical": [
+        "Communication",
+        "Decision-Making",
+        "Planning",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Planning & Self-Management"
+      ]
+    },
+    "decision-lab": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Decision-Making",
+        "Empathy"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People"
+      ]
+    },
+    "backyard-campout-planner": {
+      "canonical": [
+        "Math",
+        "Number Sense"
+      ],
+      "families": [
+        "Math & Money"
+      ]
+    },
+    "clothing-swap-thrift-math": {
+      "canonical": [
+        "Critical Thinking",
+        "Financial Literacy",
+        "Number Sense",
+        "Percentages"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "family-electricity-audit": {
+      "canonical": [
+        "Number Sense",
+        "Organisation",
+        "Percentages",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "farmers-market-challenge": {
+      "canonical": [
+        "Communication",
+        "Financial Literacy",
+        "Math",
+        "Number Sense",
+        "Planning",
+        "Pricing & Sales"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "garage-sale-math": {
+      "canonical": [
+        "Number Sense",
+        "Pricing & Sales"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "garden-plot-planner": {
+      "canonical": [
+        "Math",
+        "Number Sense",
+        "Observation",
+        "Research",
+        "Spatial Thinking"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Math & Money",
+        "Nature & Science"
+      ]
+    },
+    "kitchen-math-challenge": {
+      "canonical": [
+        "Budgeting",
+        "Math",
+        "Planning",
+        "Problem-Solving",
+        "Self-Direction"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "party-planner-math": {
+      "canonical": [
+        "Financial Literacy",
+        "Number Sense"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "budget-challenge": {
+      "canonical": [
+        "Budgeting",
+        "Communication",
+        "Decision-Making",
+        "Number Sense",
+        "Planning",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "road-trip-calculator": {
+      "canonical": [
+        "Budgeting",
+        "Math",
+        "Planning"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "savings-goal-tracker": {
+      "canonical": [
+        "Budgeting",
+        "Data & Graphs",
+        "Decision-Making",
+        "Number Sense",
+        "Percentages"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "smart-shopper": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Decision-Making",
+        "Financial Literacy",
+        "Media Literacy"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money",
+        "Tech & Digital"
+      ]
+    },
+    "sports-stats-lab": {
+      "canonical": [
+        "Organisation",
+        "Percentages"
+      ],
+      "families": [
+        "Math & Money",
+        "Planning & Self-Management"
+      ]
+    },
+    "cultural-celebration-journal": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Cultural Awareness",
+        "Empathy",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "World & Geography"
+      ]
+    },
+    "currency-market-math": {
+      "canonical": [
+        "Critical Thinking",
+        "Financial Literacy",
+        "Math",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Entrepreneurship & Money",
+        "Math & Money"
+      ]
+    },
+    "everyday-life-comparison": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Cultural Awareness",
+        "Empathy",
+        "Observation"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "World & Geography"
+      ]
+    },
+    "local-language-mission": {
+      "canonical": [
+        "Communication",
+        "Confidence",
+        "Critical Thinking",
+        "Cultural Awareness",
+        "Observation"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Empathy & People",
+        "Nature & Science",
+        "Planning & Self-Management",
+        "World & Geography"
+      ]
+    },
+    "nature-geography-field-study": {
+      "canonical": [
+        "Art",
+        "Critical Thinking",
+        "Geography",
+        "Observation",
+        "Science"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "World & Geography"
+      ]
+    },
+    "people-stories-interview": {
+      "canonical": [
+        "Communication",
+        "Confidence",
+        "Cultural Awareness",
+        "Empathy",
+        "Listening"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Empathy & People",
+        "Planning & Self-Management",
+        "World & Geography"
+      ]
+    },
+    "street-explorer-map-maker": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Geography",
+        "Observation",
+        "Spatial Thinking"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "World & Geography"
+      ]
+    },
+    "transport-navigation-challenge": {
+      "canonical": [
+        "Critical Thinking",
+        "Geography",
+        "Math",
+        "Observation",
+        "Problem-Solving",
+        "Self-Direction"
+      ],
+      "families": [
+        "Critical Thinking & Reasoning",
+        "Math & Money",
+        "Nature & Science",
+        "Planning & Self-Management",
+        "World & Geography"
+      ]
+    },
+    "travel-reflection-postcards": {
+      "canonical": [
+        "Communication",
+        "Observation",
+        "Reflection",
+        "Writing"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    },
+    "world-food-detective": {
+      "canonical": [
+        "Communication",
+        "Critical Thinking",
+        "Observation",
+        "Research"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    }
+  }
+}

@@ -1,5 +1,10 @@
 /**
  * Shared FAQ data used by both the homepage and the standalone /faq page.
+ * Organized into the four sections shown on /faq:
+ *   1. Family fit
+ *   2. Membership
+ *   3. Using the activities
+ *   4. Buying & refunds
  */
 
 export interface FAQItem {
@@ -7,116 +12,197 @@ export interface FAQItem {
   answer: string;
 }
 
-// ─── Core FAQs (shown on homepage + FAQ page) ───────────────────────
+// ─── 1. Is this for my family? ──────────────────────────────────────
 
-export const coreFaqItems: FAQItem[] = [
+export const familyFaqItems: FAQItem[] = [
   {
-    question: 'What ages are these for?',
+    question: 'Is this only for homeschoolers?',
     answer:
-      'Our guides are designed for ages 6\u201314, but they\u2019re flexible. Every activity includes three levels, Explore, Develop, and Extend, so you can adjust to your child\u2019s ability. The idea is that you do them together, with you as the coach. Siblings at different ages can do the same activity side by side.',
+      "No, and that's the most common question I get. Anywhere Learning is built for any parent who wants more real-world learning in their family's days. School families, homeschoolers, worldschoolers, after-schoolers. Most of our members actually have kids in school. The activities work in the rhythm you already have, whether that's a Saturday morning or a stretch after dinner.",
   },
   {
-    question: 'Do I need to follow a specific schedule or curriculum?',
+    question: 'My kids are in school. Will they actually do these?',
     answer:
-      'Nope. These are standalone activities. Pick one whenever you\u2019re ready and go at your own pace. There\u2019s no sequence, no lesson plan, no curriculum to follow.',
+      "Kids who have homework, screens, and a busy week often need more real-world doing, not less. The activities don't feel like school. They're not worksheets, not lessons, not 'more work.' They're things kids actually want to do because they involve real tasks: cooking a meal, planning a trip, building something, running a small business. Most school families fit them into weekends, after-dinner stretches, or summer afternoons.",
   },
   {
-    question: 'What if my kids don\u2019t like it?',
+    question: 'What ages does this work for?',
     answer:
-      'We\u2019re confident they will, but if not, email us at info@anywherelearning.co within 48 hours of purchase for a full refund. No questions asked.',
+      'Designed for ages 6 to 14. Every activity includes three skill levels: Explore for getting started, Develop for building confidence, Extend for going deeper. The levels are about where your kid is with that specific skill, not their age. Siblings can do the same activity side by side at different levels without anyone feeling overwhelmed or under-challenged.',
   },
   {
-    question: 'How is this different from free printables I can find online?',
+    question: "We're already doing a lot. Do we really need more activities?",
     answer:
-      'These aren\u2019t worksheets. They\u2019re real-world activity guides that get kids doing things, cooking, budgeting, building, exploring outside. No fill-in-the-blanks, no busywork. You download them, open on any device, and follow along step by step.',
+      "Maybe not. If your kids are already cooking dinners, managing their own time, building things, and planning their own weekends, you're doing great. Anywhere Learning is for the families where life skills haven't quite fit in yet. Where the days fill up with school, screens, and 'what now?' and there's a quiet feeling that something's missing.",
   },
   {
-    question: 'Can I use these with multiple kids at different ages?',
+    question: "What if I'm not crafty, outdoorsy, or patient?",
     answer:
-      'Absolutely. Every activity includes three levels (Explore, Develop, Extend) so siblings can do the same activity at their own level. Families with kids ages 6\u201314 use these together.',
-  },
-];
-
-// ─── About the Activities ────────────────────────────────────────────
-
-export const aboutFaqItems: FAQItem[] = [
-  {
-    question: 'How do I use the activity guides?',
-    answer:
-      'Download the PDF, open it on any device \u2014 phone, tablet, or laptop \u2014 and follow the step-by-step instructions. Each activity includes everything you need to know: the learning focus, materials (minimal or none), parent guidance, and three flexible levels so you can adjust to your child. Printing is optional, never required.',
-  },
-  {
-    question: 'Do I need special materials or supplies?',
-    answer:
-      'Most activities use everyday household items or no materials at all. Each activity lists exactly what you need upfront so there are no surprises. You won\u2019t need to make a special trip to the store.',
-  },
-  {
-    question: 'Can I reuse these activities?',
-    answer:
-      'Yes! Every activity is designed to be a completely different experience each time. As your kids grow, they\u2019ll engage at a deeper level. One purchase gives you years of meaningful learning.',
-  },
-  {
-    question: 'How long does each activity take?',
-    answer:
-      'That\u2019s entirely up to your family. Some activities take an afternoon, others can stretch over days or weeks. There\u2019s no timer and no pressure, go at whatever pace feels right for your kids.',
-  },
-];
-
-// ─── Homeschooling & Worldschooling ──────────────────────────────────
-
-export const homeschoolFaqItems: FAQItem[] = [
-  {
-    question: 'I\u2019m new to homeschooling. Is this a good place to start?',
-    answer:
-      'It\u2019s a great place to start. You don\u2019t need curriculum knowledge or teaching experience. Just open an activity and follow along with your kids. The guides walk you through everything, and the three flexible levels mean you can meet your child exactly where they are.',
-  },
-  {
-    question: 'Will these work if we\u2019re travelling or worldschooling?',
-    answer:
-      'They\u2019re designed for exactly that. Many activities use whatever environment you\u2019re in \u2014 a kitchen, a park, a hotel room, a new city. Open on any device, no printing needed, no bulky materials. Learning happens wherever you are.',
-  },
-  {
-    question: 'Do these count as \u201Creal\u201D learning?',
-    answer:
-      'Every activity weaves in real skills \u2014 math, literacy, critical thinking, science, creativity \u2014 through hands-on experiences. Kids learn by doing, not by filling in blanks. The skills are real, the learning sticks, and your kids won\u2019t even realize they\u2019re \u201Cstudying.\u201D',
+      "Good. These are written for the parent who's tired, who doesn't own a glue gun, who isn't setting up a sensory bin at 7am. Activities work in kitchens, living rooms, and on errands. If you can boil water and sit at the kitchen table for fifteen minutes, you're qualified.",
   },
   {
     question: 'Do these work with Charlotte Mason, Montessori, or unschooling approaches?',
     answer:
-      'Beautifully. These activities are child-led, curiosity-driven, and rooted in real-world experiences \u2014 which fits naturally alongside Charlotte Mason, Montessori, unschooling, eclectic, and worldschool philosophies. No curriculum alignment needed.',
+      "They slot in naturally. The activities are child-led, curiosity-driven, and rooted in real-world experience, which fits Charlotte Mason, Montessori, unschooling, eclectic, and worldschool philosophies. They're not a curriculum, so they don't compete with the one you've chosen.",
   },
   {
-    question: 'My kids are in regular school. Can I still use these?',
+    question: "Will these work if we're travelling or worldschooling?",
     answer:
-      'Absolutely \u2014 many families do. These work beautifully for after-school, weekends, summer break, winter break, snow days, and long travel days. There\u2019s no curriculum to follow and no catching up to worry about. Just open a guide when you have an afternoon together and go. Reusable year after year, so one purchase carries you across summers.',
+      "They're designed for exactly that. Many activities use whatever environment you're in: a kitchen, a park, a hotel room, a new city. Open on any device, no printing needed for most, no bulky materials.",
   },
 ];
 
-// ─── Purchasing & Account ────────────────────────────────────────────
+// ─── 2. About the membership ────────────────────────────────────────
 
-export const purchasingFaqItems: FAQItem[] = [
+export const membershipFaqItems: FAQItem[] = [
   {
-    question: 'What happens after I purchase?',
+    question: "What's the difference between buying activities individually and joining the membership?",
     answer:
-      'You\u2019ll get an instant download link right after checkout, plus a confirmation email with access to your files. Your purchases are always available in your account under My Downloads \u2014 download them anytime, on any device.',
+      "Individual activities are $5.99 each. Bundles run around $44.99 (about 25% off). The membership is $99 a year for unlimited access to the entire library: 100+ activities, all eight categories, plus new ones added every quarter. If you'd buy more than two bundles in a year, the membership is the obvious choice.",
   },
   {
-    question: 'What\u2019s your refund policy?',
+    question: "What's 'founding member' pricing?",
     answer:
-      'Since our products are digital downloads delivered instantly, we offer a 48-hour refund window from the time of purchase. If you\u2019re not happy, email info@anywherelearning.co within 48 hours for a full refund \u2014 no questions asked.',
+      "The first 100 members pay $99/year, locked in for life. After the 100th founder joins, the price goes up to $149/year for new members. Your $99 rate stays the same forever, as long as you stay subscribed. Early members shape what this becomes, and I'd rather have 100 families actually using and shaping it than charge full price to a smaller group.",
   },
   {
-    question: 'Do you offer bundle discounts?',
+    question: 'Does my founder rate really lock in for life?',
     answer:
-      'Yes! Our bundles save you 25% compared to buying individual guides. They\u2019re the best value if you want a full collection for a category or season.',
+      "Yes. As long as you stay subscribed, your annual renewal stays at $99, even when new members are paying $149 or more. If you cancel and rejoin later, you rejoin at the current public price, so it's worth holding onto.",
+  },
+  {
+    question: 'How do I access the activities?',
+    answer:
+      "After joining, you get an email with login details. The full library lives in your member dashboard. View on any device: phone, tablet, or laptop. No printing required for most activities. Most parents open them on their phone right when they're about to do them with the kids.",
+  },
+  {
+    question: 'How often are new activities added?',
+    answer:
+      'Quarterly. New activities across all eight categories, added to the library every quarter. Members get them automatically. No extra cost, no announcements you have to act on.',
+  },
+  {
+    question: 'Can I cancel anytime?',
+    answer:
+      "Yes. One click in your account, or one email to me. No phone tree, no retention specialist trying to talk you out of it. You keep access through the end of your paid year, and you won't be re-billed. If you're within 14 days of joining, you get a full refund, no questions asked.",
+  },
+  {
+    question: 'What happens after I cancel?',
+    answer:
+      "You keep access until the end of your paid year, then your membership ends. You won't be billed again. If you rejoin later, you pay whatever the public price is at that point (currently $149 for non-founders).",
+  },
+  {
+    question: 'Do you offer a free trial?',
+    answer:
+      "Not formally, but the 14-day money-back guarantee acts like one. Join, try everything, and if it's not for you, email within 14 days for a full refund. No questions, no friction. The free starter guide is also available with no payment if you'd like to try a few activities before deciding.",
   },
 ];
 
-// ─── Combined exports ────────────────────────────────────────────────
+// ─── 3. Using the activities ────────────────────────────────────────
+
+export const usingFaqItems: FAQItem[] = [
+  {
+    question: 'How much time does each activity take?',
+    answer:
+      "It depends on the activity and how into it your kid gets. Some are quick afternoon things, others can fill a whole rainy Saturday. Parent prep is intentionally minimal: read through the guide, grab whatever's already in the kitchen drawer, and you're ready.",
+  },
+  {
+    question: 'Do I need special materials or supplies?',
+    answer:
+      "Mostly no. Each activity lists exactly what's needed at the top, usually household items or things you already have. I don't write activities that require a trip to a craft store. If something needs a specific item, it's named clearly so you can decide before starting.",
+  },
+  {
+    question: 'How is this different from free printables I can find online?',
+    answer:
+      'Pinterest and free printables give you ideas. Anywhere Learning gives you step-by-step guides: low-prep, teacher-designed, with three skill levels per activity. No fill-in-the-blanks, no busywork, no glittery craft that lives on the fridge for a month then goes in the bin. Just real things to do, with real outcomes.',
+  },
+  {
+    question: 'Can I reuse activities?',
+    answer:
+      "Yes. Every activity is designed to work differently each time. As your kids build the skill, they engage at a deeper level. The three levels (Explore, Develop, Extend) mean the same activity looks different the second or third time around. One activity often becomes a family ritual.",
+  },
+  {
+    question: "Do these count as 'real' learning?",
+    answer:
+      "Every activity quietly weaves in real skills: math, literacy, critical thinking, science, communication, through hands-on experience. Kids learn by doing, not by filling in blanks. The skills are real, the learning sticks, and most of the time your kids don't even realize they're learning.",
+  },
+  {
+    question: 'How do I get my kids to actually do them?',
+    answer:
+      "Honestly, the activities sell themselves once a kid is in one. The hard part is the first ten minutes, getting them off whatever screen they're on. Most parents find that picking activities that match what a kid already cares about (food, money, building, animals, technology) gets the first try. After that, it tends to compound.",
+  },
+  {
+    question: 'Are screens involved?',
+    answer:
+      "Most activities are screen-free or screen-optional. The AI & Digital category uses screens on purpose, because learning to use technology thoughtfully is one of the most important skills kids today need. In other categories, a screen is sometimes part of doing the project itself (designing a poster, recording a pitch, mapping a trip) but never required if you'd rather do it offline. Either way, the activity is designed for parent and kid to do together, side by side.",
+  },
+];
+
+// ─── 4. Buying & refunds ────────────────────────────────────────────
+
+export const buyingFaqItems: FAQItem[] = [
+  {
+    question: "What's your refund policy?",
+    answer:
+      "For the membership: 14-day money-back guarantee. Email within 14 days of joining for a full refund, no questions asked. For individual activity purchases: since they're instant digital downloads, we offer a 48-hour refund window from time of purchase if something doesn't work as expected.",
+  },
+  {
+    question: 'How do I pay?',
+    answer:
+      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, Google Pay, and PayPal where supported. Annual membership is one charge of $99 (or $149 after founder pricing ends). Individual activities are one-time purchases.",
+  },
+  {
+    question: 'Do you offer monthly billing?',
+    answer:
+      "Not currently. The membership is annual only, to keep things simple. $99 once, then you're a member for a year, and renewal happens once a year unless you cancel.",
+  },
+  {
+    question: 'Will my membership auto-renew?',
+    answer:
+      "Yes, it auto-renews annually at the rate you signed up at (founders renew at $99, after-founders at $149). I send a reminder email 14 days before renewal, so there are no surprises. You can cancel anytime from your account.",
+  },
+  {
+    question: 'Will my price go up at renewal?',
+    answer:
+      "If you joined as a founding member (first 100), your $99/year is locked in for life. If you joined after that at $149, your price stays at $149 for renewal. I'd give you 60 days' notice if I ever changed pricing for existing members, and I have no plans to.",
+  },
+  {
+    question: 'Do you offer bundle discounts for individual purchases?',
+    answer:
+      "Yes. Bundles save you about 25% compared to buying individual guides. That said: if you'd buy three or more bundles in a year, the membership is the better deal. It's $99 versus about $135 for three bundles.",
+  },
+  {
+    question: 'Is there a multi-family or co-op rate?',
+    answer:
+      "Not formally yet. If you're a co-op, micro-school, or shared-cost group, email me at info@anywherelearning.co and we'll figure something out.",
+  },
+  {
+    question: 'How do I access my individual purchases?',
+    answer:
+      'After checkout, your guides are available instantly in your account under Downloads. You can re-download them anytime, on any device. Nothing expires.',
+  },
+];
+
+// ─── Curated subset for the homepage (highest-impact, broadest concerns) ─
+
+export const coreFaqItems: FAQItem[] = [
+  familyFaqItems[0], // Is this only for homeschoolers?
+  familyFaqItems[2], // What ages does this work for?
+  usingFaqItems[0], // How much time does each activity take?
+  usingFaqItems[2], // How is this different from free printables?
+  buyingFaqItems[0], // What's your refund policy?
+];
+
+// ─── Legacy aliases (kept so existing imports don't break) ──────────
+
+export const homeschoolFaqItems: FAQItem[] = familyFaqItems;
+export const aboutFaqItems: FAQItem[] = usingFaqItems;
+export const purchasingFaqItems: FAQItem[] = buyingFaqItems;
+
+// ─── Combined export (used for FAQPage JSON-LD + llms-full.txt) ─────
 
 export const allFaqItems: FAQItem[] = [
-  ...coreFaqItems,
-  ...aboutFaqItems,
-  ...homeschoolFaqItems,
-  ...purchasingFaqItems,
+  ...familyFaqItems,
+  ...membershipFaqItems,
+  ...usingFaqItems,
+  ...buyingFaqItems,
 ];

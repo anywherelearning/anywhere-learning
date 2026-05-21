@@ -1,0 +1,904 @@
+{
+  "ai-basics": {
+    "filename": "AI & Digital Literacy - AI BASICS MYTHS, FACTS & SMART RULES",
+    "skills": [
+      "AI Literacy (accurate Understanding, No Hype)",
+      "Critical Thinking (questioning, Checking)",
+      "Digital Citizenship (safe and Respectful Use)",
+      "Responsible Decision-making",
+      "Communication (explaining Ideas Clearly)"
+    ]
+  },
+  "algorithm-awareness": {
+    "filename": "AI & Digital Literacy - ALGORITHM AWARENESS WHY AM I SEEING THIS",
+    "skills": [
+      "Digital Literacy and Algorithm Awareness",
+      "Critical Thinking About Attention and Influence",
+      "Self-management and Intentional Tech Use",
+      "Reflection on Mood, Time, and Habits",
+      "Responsible Decision-making Online"
+    ]
+  },
+  "bias-fairness-lab": {
+    "filename": "AI & Digital Literacy - BIAS & FAIRNESS LAB",
+    "skills": [
+      "Critical Thinking (spotting Assumptions)",
+      "AI Literacy (understanding Limits of Outputs)",
+      "Fairness and Empathy (thinking About Others’",
+      "Communication (explaining Why Something Feels Unfair)",
+      "Responsible Digital Decision-making"
+    ]
+  },
+  "build-ai-helper": {
+    "filename": "AI & Digital Literacy - BUILD YOUR OWN AI HELPER",
+    "skills": [
+      "AI Literacy and Systems Thinking",
+      "Problem-solving and Design Thinking",
+      "Safety and Ethics Awareness",
+      "Clear Communication and Prompt Design",
+      "Reflection and Improvement Mindset"
+    ]
+  },
+  "create-with-ai": {
+    "filename": "AI & Digital Literacy - CREATE WITH AI, ETHICALLY",
+    "skills": [
+      "Honesty and Academic Integrity",
+      "Digital Citizenship and Consent Awareness",
+      "Creative Thinking and Originality",
+      "Reflection and Responsible Decision-making",
+      "Clear Communication About Process and Sources"
+    ]
+  },
+  "deepfake-spotter": {
+    "filename": "AI & Digital Literacy - DEEPFAKE & MANIPULATION SPOTTER",
+    "skills": [
+      "Media Literacy and Digital Citizenship",
+      "Observation and Evidence-based Thinking",
+      "Emotional Self-control Online",
+      "Responsible Sharing Habits",
+      "Clear Communication and Decision-making"
+    ]
+  },
+  "hallucination-detective": {
+    "filename": "AI & Digital Literacy - HALLUCINATION DETECTIVE",
+    "skills": [
+      "Critical Thinking and Skepticism (in a",
+      "Verification Habits (cross-checking Sources)",
+      "Clear Reasoning (evidence-based Decisions)",
+      "Better Questions and Follow-ups",
+      "Writing and Revising (version 2 Mindset)"
+    ]
+  },
+  "healthy-tech-boundaries": {
+    "filename": "AI & Digital Literacy - HEALTHY TECH & AI BOUNDARIES PLAN",
+    "skills": [
+      "Self-awareness and Reflection",
+      "Healthy Habit Building",
+      "Self-management and Boundaries",
+      "Decision-making and Planning",
+      "Responsible Digital Citizenship"
+    ]
+  },
+  "privacy-footprint": {
+    "filename": "AI & Digital Literacy - PRIVACY & DIGITAL FOOTPRINT MAP",
+    "skills": [
+      "You Don't Need Teaching Experience. Your",
+      "Digital Citizenship and Online Safety Habits",
+      "Privacy Awareness (personal Info vs Public Info)",
+      "Critical Thinking About Sharing and Attention",
+      "Healthy Boundaries and Self-advocacy",
+      "Responsible Decision-making"
+    ]
+  },
+  "prompt-like-a-coach": {
+    "filename": "AI & Digital Literacy - PROMPT LIKE A COACH",
+    "skills": [
+      "Clear Communication (specific Instructions)",
+      "Critical Thinking (checking and Revising Outputs)",
+      "Learning Strategies (examples, Explanations, Practice)",
+      "Responsible AI Use (not Copying)",
+      "Writing and Organization Skills"
+    ]
+  },
+  "media-info-check": {
+    "filename": "AI + Digital Literacy - MEDIA & INFO CHECK",
+    "skills": [
+      "© Critical Thinking",
+      "Source Looks Legit",
+      "Digital Literacy",
+      "Communication",
+      "Emotional Regulation",
+      "Fast Emotions",
+      "Responsible Sharing"
+    ]
+  },
+  "adventure-story-map": {
+    "filename": "Communication & Writing - Adventure Story Map",
+    "skills": [
+      "Narrative Writing",
+      "Descriptive Writing",
+      "Observation",
+      "Map-making: Translating a Real 3d Space",
+      "Plot Structure",
+      "Creative Thinking",
+      "Location"
+    ]
+  },
+  "community-tour-guide": {
+    "filename": "Communication & Writing - Community Tour Guide",
+    "skills": [
+      "Public Speaking",
+      "Research",
+      "Storytelling",
+      "Organisation",
+      "Audience Awareness",
+      "Confidence"
+    ]
+  },
+  "directions-challenge": {
+    "filename": "Communication & Writing - Directions Challenge",
+    "skills": [
+      "Sequencing",
+      "Perspective-taking: Realising That What’s Obvious to",
+      "Adapting",
+      "Observation",
+      "Problem-solving: Fixing Communication Breakdowns in Real",
+      "Challenge"
+    ]
+  },
+  "family-debate-night": {
+    "filename": "Communication & Writing - Family Debate Night",
+    "skills": [
+      "Persuasion",
+      "Critical Thinking",
+      "Respectful Disagreement",
+      "Public Speaking",
+      "Listening",
+      "Reasoning",
+      "Topic"
+    ]
+  },
+  "family-recipe-book": {
+    "filename": "Communication & Writing - Family Recipe Book",
+    "skills": [
+      "Procedural Writing",
+      "Interviewing",
+      "Editing for Clarity",
+      "Organisation",
+      "Descriptive Writing",
+      "Cultural Literacy",
+      "Recipes"
+    ]
+  },
+  "market-stall-pitch": {
+    "filename": "Communication & Writing - Market Stall Pitch",
+    "skills": [
+      "Persuasive Speaking",
+      "Audience Awareness",
+      "Confidence",
+      "Thinking on Your Feet",
+      "Entrepreneurial Thinking",
+      "Creativity",
+      "Product"
+    ]
+  },
+  "mini-magazine-creator": {
+    "filename": "Communication & Writing - Mini Magazine Creator",
+    "skills": [
+      "Multiple Writing Styles",
+      "Project",
+      "Research",
+      "Audience Awareness",
+      "Design and Layout",
+      "Editing",
+      "Publishing",
+      "Topic"
+    ]
+  },
+  "my-review-column": {
+    "filename": "Communication & Writing - My Review Column",
+    "skills": [
+      "Opinion Writing",
+      "Supporting Arguments",
+      "Descriptive Writing",
+      "Audience Awareness",
+      "Critical Thinking",
+      "Consistency",
+      "To Review"
+    ]
+  },
+  "neighbourhood-interview": {
+    "filename": "Communication & Writing - Neighbourhood Interview Project",
+    "skills": [
+      "Asking Open-ended Questions: Learning to Ask",
+      "Active Listening",
+      "Summarising",
+      "Communication Confidence",
+      "Empathy",
+      "Person"
+    ]
+  },
+  "trail-guide-creator": {
+    "filename": "Communication & Writing - Trail Guide Creator",
+    "skills": [
+      "Descriptive Writing",
+      "Informational Writing",
+      "Observation",
+      "Organisation",
+      "Audience Awareness",
+      "Design",
+      "Trail Location"
+    ]
+  },
+  "write-like-a-pro": {
+    "filename": "Communication & Writing - Write It Like a Pro",
+    "skills": [
+      "Voice and Style",
+      "Audience Awareness",
+      "Tone, and Level of Detail",
+      "Revision",
+      "Meant and What You Actually Wrote",
+      "Persuasion and Clarity",
+      "Confidence",
+      "As Communicators"
+    ]
+  },
+  "board-game-studio": {
+    "filename": "Creativity & Maker Board Game Studio",
+    "skills": [
+      "Creative Thinking",
+      "Language Arts",
+      "Math Thinking",
+      "Design Thinking",
+      "Race Game",
+      "Collecting Game",
+      "Mystery Game",
+      "Co-op Game",
+      "Battle Game",
+      "Cards-only Game"
+    ]
+  },
+  "rube-goldberg-machine": {
+    "filename": "Creativity & Maker Build a Rube Goldberg Machine",
+    "skills": [
+      "Problem-solving and Creative Thinking",
+      "Engineering and Design",
+      "Science Thinking",
+      "Communication",
+      "Endings That Work Well"
+    ]
+  },
+  "survival-base": {
+    "filename": "Creativity & Maker Build a Survival Base for an Imaginary Expedition",
+    "skills": [
+      "Creative Thinking and Imagination",
+      "Planning and Design",
+      "Science and Survival Thinking",
+      "Communication",
+      "Real-ish Locations",
+      "Imaginary Locations"
+    ]
+  },
+  "imaginary-world": {
+    "filename": "Creativity & Maker Build an Imaginary World",
+    "skills": [
+      "Creative Thinking",
+      "Geography and Systems Thinking",
+      "Storytelling and Language",
+      "Real Talk"
+    ]
+  },
+  "creature-habitat": {
+    "filename": "Creativity & Maker Create a Creature and Build Its Habitat",
+    "skills": [
+      "Creative Problem-solving",
+      "Biology and Ecology Concepts",
+      "Communication and Documentation",
+      "Spatial Reasoning and Construction",
+      "Real Talk"
+    ]
+  },
+  "mini-movie": {
+    "filename": "Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama",
+    "skills": [
+      "Storytelling and Creative Expression",
+      "Planning and Sequencing",
+      "Communication and Presentation",
+      "Creative Problem-solving",
+      "Real Talk"
+    ]
+  },
+  "theme-park": {
+    "filename": "Creativity & Maker Create a Theme Park or Adventure Course",
+    "skills": [
+      "Spatial Reasoning",
+      "Business Thinking",
+      "Design and Engineering",
+      "Communication",
+      "Real Talk"
+    ]
+  },
+  "invent-a-sport": {
+    "filename": "Creativity & Maker Invent a New Sport",
+    "skills": [
+      "Design Thinking",
+      "Math and Measurement",
+      "Fairness and Ethics",
+      "Communication",
+      "Real Talk"
+    ]
+  },
+  "kinetic-sculpture": {
+    "filename": "Creativity & Maker Kinetic Sculpture or Art Installation",
+    "skills": [
+      "Engineering and Physics",
+      "Artistic Expression",
+      "Problem-solving and Iteration",
+      "Communication",
+      "Real Talk"
+    ]
+  },
+  "brand-builder": {
+    "filename": "Entrepreneurship - Brand builder",
+    "skills": [
+      "Brand Strategy",
+      "Visual Design",
+      "Communication & Storytelling",
+      "Critical Thinking & Adaptation",
+      "Creativity & Originality"
+    ]
+  },
+  "business-failure-lab": {
+    "filename": "Entrepreneurship - Business Failure Lab",
+    "skills": [
+      "1 « Critical Thinking",
+      "« Problem-solving — Creating Multi-factor Solutions",
+      "Resilience",
+      "« Systems Thinking",
+      "Adaptability",
+      "« Communication",
+      "Wee Ee Ee Eee",
+      "J Siades",
+      "Ee Ewe",
+      "Socccee"
+    ]
+  },
+  "community-service-business": {
+    "filename": "Entrepreneurship - Community Service Business",
+    "skills": [
+      "| © Empathy and Observation",
+      "A ¢« Problem-solving — Designing a Solution. Eee",
+      "5 E« Customer Understanding",
+      "' « Planning Oo",
+      "~~ 1 « Communication",
+      "1. © Resilience",
+      "Rested Se Je",
+      "I+ Step 1"
+    ]
+  },
+  "customer-discovery": {
+    "filename": "Entrepreneurship - Customer Discovery Challenge",
+    "skills": [
+      "Communication",
+      "Critical Thinking",
+      "« Research Skills",
+      "Empathy",
+      "Entrepreneurial Thinking",
+      "Wee Ee Ee Eee",
+      "Ieee a",
+      "Dee Wane"
+    ]
+  },
+  "investor-pitch": {
+    "filename": "Entrepreneurship - Investor Pitch Portfolio",
+    "skills": [
+      "Financial Reasoning",
+      "Critical Analysis",
+      "Risk Assessment",
+      "Decision-making — Allocating Resources Strategically",
+      "Communication",
+      "Wee Eee Eee",
+      "Reall Het",
+      "Bee Eee Eee Eee Eee"
+    ]
+  },
+  "marketing-campaign": {
+    "filename": "Entrepreneurship - Marketing Campaign Creator",
+    "skills": [
+      "_1 « Audience Analysis",
+      "1 © Persuasive Communication",
+      "R 1 « Design Thinking",
+      "_! E Adaptability",
+      "Creativity",
+      "Pattie a",
+      "R+ Step 1"
+    ]
+  },
+  "micro-business": {
+    "filename": "Entrepreneurship - Micro-Business Challenge",
+    "skills": [
+      "Problem-solving",
+      "Financial Thinking",
+      "Communication",
+      "Research Skills",
+      "Resilience",
+      "Hoose Your Business Idea"
+    ]
+  },
+  "pricing-experiment": {
+    "filename": "Entrepreneurship - Pricing Experiment",
+    "skills": [
+      "Financial Literacy",
+      "Critical Thinking",
+      "Research & Data Gathering",
+      "Problem-solving — Adapting and Balancing Trade-offs",
+      "Communication",
+      "E Step 1",
+      "B a 7 | Choose Your Product"
+    ]
+  },
+  "product-design-lab": {
+    "filename": "Entrepreneurship - Product Design Lab",
+    "skills": [
+      "Design Thinking",
+      "Creativity",
+      "Communication",
+      "Critical Thinking",
+      "Executive Functioning",
+      "“lets Startl",
+      "| Great Products Solve Real Problems",
+      "~} Routines—what's Frustrating? I"
+    ]
+  },
+  "supply-chain-detective": {
+    "filename": "Entrepreneurship - Supply Chain Detective",
+    "skills": [
+      "Systems Thinking",
+      "Research",
+      "Geography",
+      "Mathematical Reasoning",
+      "Problem-solving — Imagining Disruptions and Solutions",
+      "Communication",
+      "| Your Job",
+      "~.4 © Easy Picks",
+      "1 E More Complex"
+    ]
+  },
+  "shark-tank-pitch": {
+    "filename": "Entrepreneurship - The Shark Tank Pitch",
+    "skills": [
+      "Public Speaking & Confidence",
+      "Persuasion & Communication",
+      "Financial Thinking",
+      "Quick Thinking & Resilience",
+      "Improvement & Revision",
+      "Hope Ment"
+    ]
+  },
+  "community-impact": {
+    "filename": "Planning & Problem-Solving Community Impact Project",
+    "skills": [
+      "Citizenship",
+      "Planning",
+      "Communication",
+      "Follow-through",
+      "Reflection"
+    ]
+  },
+  "emergency-ready": {
+    "filename": "Planning & Problem-Solving Emergency Ready Challenge",
+    "skills": [
+      "Critical Thinking",
+      "Planning",
+      "Communication",
+      "Life Skills",
+      "Executive Functioning"
+    ]
+  },
+  "everyday-redesign": {
+    "filename": "Planning & Problem-Solving Everyday Redesign Challenge",
+    "skills": [
+      "Systems Thinking",
+      "Design Thinking",
+      "Communication",
+      "Life Skills",
+      "Critical Thinking"
+    ]
+  },
+  "fix-it-detective": {
+    "filename": "Planning & Problem-Solving Fix-it detective",
+    "skills": [
+      "Problem-solving: Identifying, Diagnosing, Fixing",
+      "Research Skills",
+      "Practical Life Skills",
+      "Critical Thinking",
+      "Planning"
+    ]
+  },
+  "neighbourhood-problem-spotter": {
+    "filename": "Planning & Problem-Solving Neighbourhood Problem Spotter",
+    "skills": [
+      "Critical Thinking",
+      "Problem-solving: Identifying Issues, Proposing Solutions",
+      "Communication",
+      "Community Awareness",
+      "Research Skills"
+    ]
+  },
+  "outdoor-survival-planner": {
+    "filename": "Planning & Problem-Solving Outdoor survival planner",
+    "skills": [
+      "Critical Thinking",
+      "Problem-solving: Resourcefulness, Adapting, Improvising",
+      "Nature Knowledge",
+      "Planning",
+      "Resilience"
+    ]
+  },
+  "pack-like-a-pro": {
+    "filename": "Planning & Problem-Solving Pack Like a Pro",
+    "skills": [
+      "Planning",
+      "Critical Thinking",
+      "Life Skills",
+      "Adaptability",
+      "Decision-making: Choosing Under Constraints"
+    ]
+  },
+  "problem-solver": {
+    "filename": "Planning & Problem-Solving Problem-Solver Studio",
+    "skills": [
+      "Problem-solving",
+      "Critical Thinking",
+      "Planning",
+      "Testing and Revising",
+      "Communication"
+    ]
+  },
+  "scavenger-hunt-designer": {
+    "filename": "Planning & Problem-Solving Scavenger Hunt Designer",
+    "skills": [
+      "Planning",
+      "Creative Thinking",
+      "Spatial Awareness",
+      "Communication",
+      "Problem-solving: Testing, Adjusting, Troubleshooting"
+    ]
+  },
+  "swap-day-challenge": {
+    "filename": "Planning & Problem-Solving The Swap Day Challenge",
+    "skills": [
+      "Planning",
+      "Life Skills"
+    ]
+  },
+  "what-if-scenario-lab": {
+    "filename": "Planning & Problem-Solving The What If Scenario Lab",
+    "skills": [
+      "Creative Thinking",
+      "Critical Thinking",
+      "Research Skills",
+      "Planning",
+      "Communication"
+    ]
+  },
+  "time-energy-planner": {
+    "filename": "Planning & Problem-Solving Time & Energy Planner",
+    "skills": [
+      "Self-awareness",
+      "Planning and Prioritization",
+      "Problem-solving",
+      "Self-regulation",
+      "Executive Function",
+      "Priority",
+      "Category",
+      "Other Heads Up"
+    ]
+  },
+  "travel-day": {
+    "filename": "Planning & Problem-Solving Travel Day Itinerary Challenge",
+    "skills": [
+      "Planning and Organization",
+      "Time Awareness",
+      "Budgeting and Decision-making",
+      "Flexibility and Problem-solving",
+      "Communication",
+      "Day Goal in One Word or Short Phrase"
+    ]
+  },
+  "decision-lab": {
+    "filename": "Planning & Problem-Solving What Would You Do Decision Lab",
+    "skills": [
+      "Critical Thinking",
+      "Decision-making: Weighing Options, Predicting Outcomes",
+      "Communication",
+      "Empathy",
+      "Self-awareness: Knowing Your Values and Priorities"
+    ]
+  },
+  "backyard-campout-planner": {
+    "filename": "Real-world math - Backyard Campout Planner",
+    "skills": [
+      "Real-world Measurement: Using a Tape Measure",
+      "Reasoning",
+      "Budgeting & Cost Estimation",
+      "Multiplication & Quantity Math"
+    ]
+  },
+  "clothing-swap-thrift-math": {
+    "filename": "Real-world math - Clothing Swap & Thrift Math",
+    "skills": [
+      "Division",
+      "Percentages",
+      "Budgeting & Money Management",
+      "Comparison Shopping",
+      "Ptions",
+      "Sorting & Categorising",
+      "Swap, Donate, Sell)",
+      "Critical Thinking"
+    ]
+  },
+  "family-electricity-audit": {
+    "filename": "Real-world math - Family Electricity Audit",
+    "skills": [
+      "Multiplication",
+      "Division",
+      "Data Collection & Organisation",
+      "Categorising",
+      "Comparison & Ranking",
+      "Percentages",
+      "Problem-solving: Finding Practical Ways to Reduce",
+      "| Epa ="
+    ]
+  },
+  "farmers-market-challenge": {
+    "filename": "Real-world math - Farmers Market Challenge",
+    "skills": [
+      "Unit Pricing",
+      "Budgeting & Money Management",
+      "Addition, Subtraction & Multiplication",
+      "Quantities",
+      "Comparison Shopping",
+      "Meal Planning",
+      "Communication"
+    ]
+  },
+  "garage-sale-math": {
+    "filename": "Real-world math - Garage sale math",
+    "skills": [
+      "Real-world Pricing: Understanding Value, Condition, and",
+      "Addition & Subtraction",
+      "Profit & Loss",
+      "Business Skills",
+      "X \\ \\an Till",
+      "| Uae «",
+      "Ape ="
+    ]
+  },
+  "garden-plot-planner": {
+    "filename": "Real-world math - Garden Plot Planner",
+    "skills": [
+      "Measurement & Area",
+      "With Dimensions",
+      "Division & Multiplication",
+      "Quantities",
+      "Budgeting & Cost Estimation",
+      "Research & Planning",
+      "Requirements",
+      "Spatial Reasoning",
+      "Science & Observation"
+    ]
+  },
+  "kitchen-math-challenge": {
+    "filename": "Real-world math - Kitchen Math & Meal Planning Challenge",
+    "skills": [
+      "Real-world Math",
+      "Planning and Organization",
+      "Budgeting",
+      "Problem-solving with Constraints",
+      "Independence",
+      "Then Choose the Blocks They Want"
+    ]
+  },
+  "party-planner-math": {
+    "filename": "Real-world math - Party Planner Math",
+    "skills": [
+      "Multiplication & Division",
+      "Costs",
+      "Budgeting & Money Management",
+      "Prices, Making Trade-offs"
+    ]
+  },
+  "budget-challenge": {
+    "filename": "Real-world math - Real-Life Budget Challenge",
+    "skills": [
+      "Number Sense",
+      "Decision-making",
+      "Problem-solving",
+      "Communication",
+      "Planning",
+      "Scenario Ideas",
+      "Suggested Budgets",
+      "Write It Down"
+    ]
+  },
+  "road-trip-calculator": {
+    "filename": "Real-world math - Road trip calculator",
+    "skills": [
+      "Distance & Map Reading",
+      "Following Routes",
+      "Multi-step Math: Multiplying (distance X Fuel",
+      "Calculating Time",
+      "Real-world Budgeting: Estimating Costs, Comparing Options",
+      "Limits",
+      "Planning & Logistics",
+      "Ape ="
+    ]
+  },
+  "savings-goal-tracker": {
+    "filename": "Real-world math - Savings Goal Tracker",
+    "skills": [
+      "Addition & Subtraction",
+      "Percentages",
+      "Remaining",
+      "Division & Multiplication",
+      "Rates",
+      "Budgeting & Planning",
+      "Data Tracking & Graphing",
+      "Decision-making: Weighing Wants Vs. Goals, Understanding"
+    ]
+  },
+  "smart-shopper": {
+    "filename": "Real-world math - Smart shopper lab",
+    "skills": [
+      "Critical Thinking",
+      "Financial Literacy",
+      "Decision-making",
+      "Communication",
+      "Media Literacy",
+      "Have Them Write"
+    ]
+  },
+  "sports-stats-lab": {
+    "filename": "Real-world math - Sports Stats Lab",
+    "skills": [
+      "Averages (mean)",
+      "Percentages",
+      "Data Collection & Organisation",
+      "Comparison & Ranking",
+      "Graphing & Visualisation",
+      "Prediction & Reasoning",
+      "Performance"
+    ]
+  },
+  "cultural-celebration-journal": {
+    "filename": "Worldschooling - Cultural Celebration Journal",
+    "skills": [
+      "Cultural Awareness",
+      "People's Values and Beliefs",
+      "Research",
+      "Multiple Sources",
+      "Communication",
+      "Literacy",
+      "Sketching",
+      "Empathy",
+      "About Identity",
+      "Critical Thinking"
+    ]
+  },
+  "currency-market-math": {
+    "filename": "Worldschooling - Currency & Market Math",
+    "skills": [
+      "Numeracy",
+      "Financial Literacy",
+      "Currency Awareness",
+      "Problem-solving: Working Backwards, Comparing Options",
+      "Critical Thinking",
+      "Observe Local Currency & Prices"
+    ]
+  },
+  "everyday-life-comparison": {
+    "filename": "Worldschooling - Everyday Life Comparison",
+    "skills": [
+      "Observation",
+      "Cultural Awareness",
+      "Empathy",
+      "Critical Thinking",
+      "Communication",
+      "Literacy",
+      "Plan What to Focus on"
+    ]
+  },
+  "local-language-mission": {
+    "filename": "Worldschooling - Local Language Mission",
+    "skills": [
+      "Communication",
+      "Without Perfection",
+      "Literacy",
+      "Connections",
+      "Cultural Awareness",
+      "Speakers",
+      "Observation",
+      "Moments",
+      "Confidence",
+      "Critical Thinking"
+    ]
+  },
+  "nature-geography-field-study": {
+    "filename": "Worldschooling - Nature and Geography Field Study",
+    "skills": [
+      "Observation",
+      "To Conclusions",
+      "Science Thinking",
+      "Drawing Conclusions",
+      "Geography",
+      "People Connect to Place",
+      "Critical Thinking",
+      "This Affect People?\"",
+      "Literacy",
+      "Information"
+    ]
+  },
+  "people-stories-interview": {
+    "filename": "Worldschooling - People & Stories Interview Project",
+    "skills": [
+      "Communication",
+      "Empathy",
+      "Listening",
+      "Literacy",
+      "Cultural Awareness",
+      "Living",
+      "Confidence"
+    ]
+  },
+  "street-explorer-map-maker": {
+    "filename": "Worldschooling - Street Explorer Map Maker",
+    "skills": [
+      "Observation",
+      "Spatial Thinking",
+      "Geography",
+      "Map-making: Translating 3d Space to 2d",
+      "Critical Thinking",
+      "Communication"
+    ]
+  },
+  "transport-navigation-challenge": {
+    "filename": "Worldschooling - Transport & Navigation Challenge",
+    "skills": [
+      "Problem-solving: Figuring Out Routes When Unfamiliar",
+      "Numeracy",
+      "Schedules",
+      "Geography",
+      "Ptions",
+      "Critical Thinking",
+      "Independence",
+      "For Help",
+      "Observation",
+      "Opserve How People Move"
+    ]
+  },
+  "travel-reflection-postcards": {
+    "filename": "Worldschooling - Travel Reflection & Postcards",
+    "skills": [
+      "Literacy",
+      "Communicate Experience",
+      "Creative Writing",
+      "Reflection",
+      "Communication",
+      "Observation",
+      "Lf-expression: Finding Their Own Voice, Communicating",
+      "Review Everything You've",
+      "Experienced in This Place"
+    ]
+  },
+  "world-food-detective": {
+    "filename": "Worldschooling - World Food Detective",
+    "skills": [
+      "Cultural Thinking",
+      "Research",
+      "Observation",
+      "Critical Thinking",
+      "Communication"
+    ]
+  }
+}

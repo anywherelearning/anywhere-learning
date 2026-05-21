@@ -26,9 +26,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      url: 'https://anywherelearning.co/join',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
       url: 'https://anywherelearning.co/shop',
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://anywherelearning.co/shop/starter-pack',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
@@ -81,23 +93,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Shop category pages (have their own canonical URLs)
-  const categoryRoutes: MetadataRoute.Sitemap = [
-    'outdoor-learning',
-    'creativity-maker',
-    'real-world-math',
-    'ai-literacy',
-    'communication-writing',
-    'entrepreneurship',
-    'planning-problem-solving',
-    'start-here',
-    'bundle',
-  ].map((cat) => ({
-    url: `https://anywherelearning.co/shop?category=${cat}`,
-    lastModified: siteLastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
+  // NOTE: We don't sitemap /shop?category=X URLs anymore. These are query-string
+  // filters on a single canonical /shop page — Google treats them as duplicate
+  // content and they dilute crawl budget. Internal links (header nav + the
+  // category sections on /shop itself) handle discovery instead.
+  const categoryRoutes: MetadataRoute.Sitemap = [];
 
   const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `https://anywherelearning.co/blog/${post.slug}`,

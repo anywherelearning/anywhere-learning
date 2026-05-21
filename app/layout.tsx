@@ -33,25 +33,25 @@ const bodyFont = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anywhere Learning | Homeschool Activity Guides by Amelie",
+    default: "Anywhere Learning | Life Skills Activities for Kids",
     template: "%s | Anywhere Learning",
   },
   description:
-    "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+    "Hands-on life skills activities that help parents raise capable, independent kids. Cooking, budgeting, problem-solving, and more. Low prep, research-backed, ages 6 to 14.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://anywherelearning.co",
     siteName: "Anywhere Learning",
-    title: "Anywhere Learning | Homeschool Activity Guides by Amelie",
+    title: "Anywhere Learning | Life Skills Activities for Kids",
     description:
-      "Low-prep homeschool activity guides for outdoor learning, nature activities, real-world math, and more. Digital guides for worldschool and homeschool families, ages 6 to 14.",
+      "Hands-on life skills activities that help parents raise capable, independent kids. Cooking, budgeting, problem-solving, and more. Low prep, research-backed, ages 6 to 14.",
     images: [
       {
         url: "https://anywherelearning.co/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Anywhere Learning | Homeschool Activity Guides by Amelie",
+        alt: "Anywhere Learning | Life Skills Activities for Kids",
       },
     ],
   },

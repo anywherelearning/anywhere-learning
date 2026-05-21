@@ -1,0 +1,97 @@
+{
+  "slugsWithExtractedSkills": 79,
+  "totalProductSlugs": 104,
+  "unmatchedPdfs": [
+    {
+      "filename": "B&W - The future-ready skills map",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Color - The future-ready skills map",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Creativity & Maker Build a Museum or Interactive Exhibit",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Free guide - 7 Days of Real-World Learning - compressed",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Free guide - 7 Days of Real-World Learning",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Anywhere Learning Fall",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Anywhere Learning Spring",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Anywhere Learning Summer",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Anywhere Learning Winter",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Land Art Challenge Cards",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - My nature journal",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Nature Choice Boards",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Nature Walk Task Cards",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Nature crafts for kids",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Outdoor STEM Challenge Cards",
+      "reason": "no skills extracted"
+    },
+    {
+      "filename": "Outdoor Learning - Outdoor learning missions",
+      "reason": "no skills extracted"
+    }
+  ],
+  "slugsWithoutPdf": [
+    "seasonal-bundle",
+    "creativity-mega-bundle",
+    "real-world-mega-bundle",
+    "ai-digital-bundle",
+    "real-world-math-bundle",
+    "nature-art-bundle",
+    "outdoor-toolkit-bundle",
+    "outdoor-mega-bundle",
+    "spring-outdoor-pack",
+    "summer-outdoor-pack",
+    "fall-outdoor-pack",
+    "winter-outdoor-pack",
+    "nature-journal-walks",
+    "nature-walk-task-cards",
+    "nature-choice-boards",
+    "outdoor-learning-missions",
+    "outdoor-stem-challenges",
+    "land-art-challenges",
+    "nature-crafts",
+    "build-a-museum",
+    "future-ready-skills-map",
+    "communication-writing-bundle",
+    "entrepreneurship-bundle",
+    "planning-problem-solving-bundle",
+    "worldschooling-mega-bundle"
+  ]
+}

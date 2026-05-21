@@ -1,8 +1,20 @@
+/**
+ * Resend dispatcher — one function per outbound transactional email.
+ *
+ * Active emails:
+ *   - sendMembershipWelcomeEmail              → after successful membership signup
+ *   - sendStarterPackWelcomeEmail             → after successful Starter Pack purchase
+ *   - sendAbandonedCheckoutMembershipEmail    → membership checkout expired w/o payment
+ *   - sendAbandonedCheckoutStarterPackEmail   → starter pack checkout expired w/o payment
+ *   - sendMembershipRenewalEmail              → 14 days before subscription renewal
+ */
+
 import { Resend } from 'resend';
-import PurchaseConfirmation from '@/emails/PurchaseConfirmation';
-import ReferralReward from '@/emails/ReferralReward';
-import CartAbandonment from '@/emails/CartAbandonment';
-import type { AbandonedCartUpsell } from '@/lib/cart-abandonment';
+import MembershipWelcome from '@/emails/MembershipWelcome';
+import StarterPackWelcome from '@/emails/StarterPackWelcome';
+import AbandonedCheckoutMembership from '@/emails/AbandonedCheckoutMembership';
+import AbandonedCheckoutStarterPack from '@/emails/AbandonedCheckoutStarterPack';
+import MembershipRenewal from '@/emails/MembershipRenewal';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -11,79 +23,131 @@ function getResend() {
   return new Resend(process.env.RESEND_API_KEY);
 }
 
-export async function sendPurchaseEmail({
+const FROM = 'Anywhere Learning <hello@anywherelearning.co>';
+const REPLY_TO = 'info@anywherelearning.co';
+
+/** Welcome email for new members (paid subscription). */
+export async function sendMembershipWelcomeEmail({
   to,
-  customerName,
-  productName,
-  downloadUrl,
-  referralCode,
-  productImageUrl,
-  products,
+  firstName,
+  signInUrl,
+  isFounderPhase,
+}: {
+  to: string;
+  firstName?: string;
+  signInUrl: string;
+  isFounderPhase: boolean;
+}) {
+  const subject = `You're in${firstName ? `, ${firstName}` : ''} — let's open your library`;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject,
+    react: MembershipWelcome({ firstName, signInUrl, isFounderPhase }),
+  });
+}
+
+/** Welcome email for Starter Pack buyers (one-time $44.99). */
+export async function sendStarterPackWelcomeEmail({
+  to,
+  firstName,
   signInUrl,
 }: {
   to: string;
-  customerName?: string;
-  productName: string;
-  downloadUrl: string;
-  referralCode?: string;
-  productImageUrl?: string;
-  products?: { name: string; imageUrl: string }[];
-  signInUrl?: string;
+  firstName?: string;
+  signInUrl: string;
 }) {
-  const resend = getResend();
-  const count = products?.length || 1;
-  const subject = count === 1
-    ? `Your ${products?.[0]?.name || productName} is ready ✓`
-    : `Your ${count} guides are ready ✓`;
-  await resend.emails.send({
-    from: 'Anywhere Learning <orders@anywherelearning.co>',
-    replyTo: 'info@anywherelearning.co',
+  const subject = `Your Starter Pack is ready${firstName ? `, ${firstName}` : ''}`;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
     to,
     subject,
-    react: PurchaseConfirmation({ customerName, productName, downloadUrl, referralCode, productImageUrl, products, signInUrl }),
+    react: StarterPackWelcome({ firstName, signInUrl }),
   });
 }
 
-export async function sendReferralRewardEmail({
+/** Membership-flow checkout expired without payment. */
+export async function sendAbandonedCheckoutMembershipEmail({
   to,
-  customerName,
-  rewardCode,
+  firstName,
+  isFounderPhase,
+  resumeUrl,
+  spotsLeft,
 }: {
   to: string;
-  customerName?: string;
-  rewardCode: string;
+  firstName?: string;
+  isFounderPhase: boolean;
+  resumeUrl: string;
+  /** Live count of founder spots remaining (100 - active members). Optional. */
+  spotsLeft?: number;
 }) {
-  const resend = getResend();
-  await resend.emails.send({
-    from: 'Anywhere Learning <hello@anywherelearning.co>',
-    replyTo: 'info@anywherelearning.co',
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
     to,
-    subject: "Your friend just saved 15%, here's yours!",
-    react: ReferralReward({ customerName, rewardCode }),
+    subject: 'I held your spot — your Anywhere Learning checkout',
+    react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft }),
   });
 }
 
-export async function sendCartAbandonmentEmail({
+/** Starter Pack checkout expired without payment. */
+export async function sendAbandonedCheckoutStarterPackEmail({
   to,
-  items,
-  upsell,
+  firstName,
+  resumeUrl,
 }: {
   to: string;
-  items: { name: string; imageUrl: string; priceCents: number }[];
-  upsell: AbandonedCartUpsell | null;
+  firstName?: string;
+  resumeUrl: string;
 }) {
-  const resend = getResend();
-  const shopUrl = `${process.env.NEXT_PUBLIC_URL}/shop?cart=open`;
-  const count = items.length;
-  const subject = count === 1
-    ? `Your ${items[0].name} is still waiting for you`
-    : `Your ${count} activity guides are still in your cart`;
-  await resend.emails.send({
-    from: 'Anywhere Learning <hello@anywherelearning.co>',
-    replyTo: 'info@anywherelearning.co',
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
     to,
-    subject,
-    react: CartAbandonment({ items, upsell, shopUrl }),
+    subject: 'I held your spot — your Anywhere Learning Starter Pack',
+    react: AbandonedCheckoutStarterPack({ firstName, resumeUrl }),
   });
 }
 
+/** Renewal heads-up — sent 14 days before the subscription's currentPeriodEnd. */
+export async function sendMembershipRenewalEmail({
+  to,
+  firstName,
+  isFounderPhase,
+  renewalDate,
+  manageUrl,
+  cardBrand,
+  cardLast4,
+  cardExp,
+}: {
+  to: string;
+  firstName?: string;
+  isFounderPhase: boolean;
+  /** ISO date string (YYYY-MM-DD or full ISO timestamp). */
+  renewalDate: string;
+  manageUrl: string;
+  /** Card brand on file (Visa / Mastercard / etc). Optional. */
+  cardBrand?: string;
+  /** Last 4 digits of the card on file. Optional. */
+  cardLast4?: string;
+  /** Card expiry "MM/YY". Optional. */
+  cardExp?: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Your Anywhere Learning membership renews in 14 days',
+    react: MembershipRenewal({
+      firstName,
+      isFounderPhase,
+      renewalDate,
+      manageUrl,
+      cardBrand,
+      cardLast4,
+      cardExp,
+    }),
+  });
+}

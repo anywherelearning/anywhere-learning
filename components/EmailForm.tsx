@@ -10,9 +10,11 @@ interface EmailFormProps {
   buttonText?: string;
   successHeading?: string;
   successBody?: string;
+  /** Stack input above button instead of placing them side-by-side. Use in narrow sidebars. */
+  stacked?: boolean;
 }
 
-export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides." }: EmailFormProps) {
+export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides.", stacked = false }: EmailFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -126,7 +128,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
 
   return (
     <form onSubmit={handleSubmit} className={`w-full ${shaking ? "animate-shake" : ""}`}>
-      <div className="flex flex-col gap-3 sm:flex-row">
+      <div className={`flex flex-col ${stacked ? 'gap-2' : 'gap-3 sm:flex-row'}`}>
         <div className="flex-1">
           <label htmlFor={`email-${variant}`} className="sr-only">
             Email address
@@ -141,7 +143,9 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
               if (errorMessage) setErrorMessage("");
             }}
             aria-describedby={errorMessage ? `email-error-${variant}` : undefined}
-            className={`w-full rounded-lg px-4 py-3.5 text-base outline-none transition-shadow focus:ring-2 ${
+            className={`w-full rounded-lg outline-none transition-shadow focus:ring-2 ${
+              stacked ? "px-3 py-2.5 text-[14px]" : "px-4 py-3.5 text-base"
+            } ${
               isLight
                 ? "border border-gray-200 bg-white text-gray-800 placeholder-gray-400 focus:ring-forest/30"
                 : "border border-cream/20 bg-white/10 text-cream placeholder-cream/60 focus:ring-gold/40"
@@ -152,7 +156,9 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`rounded-lg px-6 py-3.5 text-base font-semibold transition-all active:scale-[0.98] disabled:opacity-70 ${
+          className={`rounded-lg font-semibold transition-all active:scale-[0.98] disabled:opacity-70 ${
+            stacked ? "px-4 py-2.5 text-[14px]" : "px-6 py-3.5 text-base"
+          } ${
             isLight
               ? "bg-forest text-cream hover:bg-forest-dark"
               : "bg-gold text-forest-dark hover:bg-gold-light"

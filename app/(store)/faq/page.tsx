@@ -1,19 +1,51 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import FAQSection from '@/components/shared/FAQSection';
+import ScrollReveal from '@/components/shared/ScrollReveal';
 import {
-  coreFaqItems,
-  aboutFaqItems,
-  homeschoolFaqItems,
-  purchasingFaqItems,
+  familyFaqItems,
+  membershipFaqItems,
+  usingFaqItems,
+  buyingFaqItems,
   allFaqItems,
 } from '@/lib/faq-data';
+import FaqInteractive from './FaqInteractive';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Common questions about Anywhere Learning activity guides \u2014 ages, refunds, homeschool approaches, and how our real-world learning guides work.',
+  description:
+    'Common questions about Anywhere Learning activity guides: ages, refunds, homeschool approaches, and how our real-world learning guides work.',
   alternates: { canonical: 'https://anywherelearning.co/faq' },
 };
+
+const groups = [
+  {
+    id: 'section-family',
+    eyebrow: 'Is this for my family?',
+    title: 'Is this for',
+    titleAccent: 'my family?',
+    items: familyFaqItems,
+  },
+  {
+    id: 'section-membership',
+    eyebrow: 'The membership',
+    title: 'About the',
+    titleAccent: 'membership.',
+    items: membershipFaqItems,
+  },
+  {
+    id: 'section-using',
+    eyebrow: 'Using the activities',
+    title: 'Using the',
+    titleAccent: 'activities.',
+    items: usingFaqItems,
+  },
+  {
+    id: 'section-buying',
+    eyebrow: 'Buying & refunds',
+    title: 'Buying &',
+    titleAccent: 'refunds.',
+    items: buyingFaqItems,
+  },
+];
 
 export default function FAQPage() {
   const faqPageLd = {
@@ -35,77 +67,30 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageLd) }}
       />
-
-      <div className="bg-cream">
-        <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-3xl px-5 sm:px-8">
-            {/* Header */}
-            <div className="text-center mb-12">
-              <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">
-                FAQ
+      <main>
+        {/* PAGE HEADER */}
+        <header className="bg-cream pt-16 md:pt-24 pb-12 md:pb-14 text-center">
+          <div className="mx-auto max-w-[760px] px-6">
+            <ScrollReveal>
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                <span className="w-[22px] h-px bg-forest inline-block" />
+                Frequently asked
               </p>
-              <h1 className="font-display text-4xl md:text-5xl text-forest leading-tight mb-4">
-                Everything You Need to Know
+              <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+                Questions you might be{' '}
+                <span className="italic text-forest">asking.</span>
               </h1>
-              <p className="text-lg text-gray-500 max-w-xl mx-auto">
-                Quick answers to the most common questions about our activity guides,
-                how they work, and what to expect.
+              <p className="mt-5 text-[17px] md:text-[18.5px] leading-[1.55] text-gray-600 max-w-[600px] mx-auto">
+                The things parents ask before they sign up, and a few they ask after. If yours
+                isn&apos;t here, we&apos;d{' '}
+                <span className="font-display italic text-forest-dark">love to hear it.</span>
               </p>
-            </div>
-
-            {/* Core Questions */}
-            <div className="mb-12">
-              <h2 className="text-sm font-semibold text-gold uppercase tracking-widest mb-4">
-                The Basics
-              </h2>
-              <FAQSection items={coreFaqItems} />
-            </div>
-
-            {/* About the Activities */}
-            <div className="mb-12">
-              <h2 className="text-sm font-semibold text-gold uppercase tracking-widest mb-4">
-                About the Activities
-              </h2>
-              <FAQSection items={aboutFaqItems} />
-            </div>
-
-            {/* Homeschooling & Worldschooling */}
-            <div className="mb-12">
-              <h2 className="text-sm font-semibold text-gold uppercase tracking-widest mb-4">
-                Homeschool, Worldschool &amp; After-School
-              </h2>
-              <FAQSection items={homeschoolFaqItems} />
-            </div>
-
-            {/* Purchasing & Account */}
-            <div className="mb-12">
-              <h2 className="text-sm font-semibold text-gold uppercase tracking-widest mb-4">
-                Purchasing &amp; Your Account
-              </h2>
-              <FAQSection items={purchasingFaqItems} />
-            </div>
-
-            {/* Contact CTA */}
-            <div className="bg-gold-light/10 rounded-2xl p-8 border border-gold/10 text-center">
-              <h2 className="text-lg font-semibold text-gray-900 mb-2">
-                Still Have Questions?
-              </h2>
-              <p className="text-sm text-gray-500 mb-4">
-                We&apos;re always happy to help. Reach out and we&apos;ll get back to you within 24 hours.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark active:scale-[0.98] text-cream font-semibold py-3 px-6 rounded-xl transition-all text-sm"
-              >
-                Contact Us
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
+            </ScrollReveal>
           </div>
-        </section>
-      </div>
+        </header>
+
+        <FaqInteractive groups={groups} />
+      </main>
     </>
   );
 }

@@ -1,12 +1,12 @@
 const items = [
-  'Created for families learning differently',
-  '150+ real-world activities',
-  'Works with any homeschool style',
+  'Life skills kids actually need',
+  '100+ hands-on activity guides',
+  'Created by a teacher (B.Ed, M.Ed)',
   'No curriculum needed',
   'Ages 6–14',
-  'Download and use in minutes',
-  '48-hour money-back guarantee',
-  'Created by a worldschool mom',
+  'Works after school, weekends, and summers',
+  '14-day refund guarantee',
+  'New guides added regularly',
 ];
 
 export default function SocialProofTicker() {

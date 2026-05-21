@@ -3,9 +3,6 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativePadding from "@/components/mobile/NativePadding";
 import { PurchasedProvider } from "@/components/shop/PurchasedContext";
-import dynamic from "next/dynamic";
-
-const ExitIntentPopup = dynamic(() => import("@/components/shop/ExitIntentPopup"));
 
 export default function StoreLayout({
   children,
@@ -20,7 +17,6 @@ export default function StoreLayout({
       <NativePadding>{children}</NativePadding>
       <NativeHide>
         <SiteFooter />
-        <ExitIntentPopup />
       </NativeHide>
     </PurchasedProvider>
   );
