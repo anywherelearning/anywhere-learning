@@ -355,6 +355,86 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   }
 }
 
+/**
+ * Handle a refunded Stripe charge. Revokes access for the buyer so a refund
+ * actually means they lose what they bought (Stripe doesn't do this on its own
+ * — refund and cancel are separate operations there by design).
+ *
+ *   - Subscription invoice refund → cancel the subscription immediately
+ *     in Stripe (which fires `customer.subscription.deleted` → our DB row
+ *     gets marked canceled → the access tier lookup drops the user to guest)
+ *   - One-time Starter Pack refund → clear `users.starterPackPurchasedAt`
+ *     directly so the download endpoint stops serving PDFs to this user
+ *
+ * Skips partial refunds (`charge.refunded === false`, only `amount_refunded`
+ * partial) — those are usually goodwill gestures, not "give it all back."
+ */
+async function handleChargeRefunded(charge: Stripe.Charge) {
+  // Only act on FULLY refunded charges.
+  if (!charge.refunded || charge.amount_refunded < charge.amount) {
+    console.log(
+      `[webhook] partial refund on ${charge.id} (${charge.amount_refunded}/${charge.amount}) — skipping access revocation`,
+    );
+    return;
+  }
+
+  // Case 1: charge is tied to an invoice → it's a subscription payment.
+  // Cancel the subscription now. The cancellation triggers
+  // customer.subscription.deleted, which our other handler picks up to
+  // update our DB row.
+  if (charge.invoice) {
+    try {
+      const invoiceId = typeof charge.invoice === 'string' ? charge.invoice : charge.invoice.id;
+      const invoice = await stripe.invoices.retrieve(invoiceId);
+      const subscriptionId = (invoice as Stripe.Invoice & { subscription?: string | Stripe.Subscription })
+        .subscription;
+      if (subscriptionId) {
+        const subId = typeof subscriptionId === 'string' ? subscriptionId : subscriptionId.id;
+        const sub = await stripe.subscriptions.cancel(subId, {
+          invoice_now: false,
+          prorate: false,
+        });
+        console.log(`[webhook] cancelled subscription ${subId} after refund (status=${sub.status})`);
+        await upsertSubscriptionFromStripe(sub);
+      }
+    } catch (err) {
+      console.error('[webhook] failed to cancel subscription after refund:', err);
+    }
+    return;
+  }
+
+  // Case 2: charge has a payment_intent without an invoice → one-time payment.
+  // Look up the PI's metadata to confirm it was a starter-pack purchase,
+  // then clear `starterPackPurchasedAt` for the buyer's user row.
+  if (charge.payment_intent) {
+    try {
+      const piId =
+        typeof charge.payment_intent === 'string' ? charge.payment_intent : charge.payment_intent.id;
+      const pi = await stripe.paymentIntents.retrieve(piId);
+      const isStarterPack = pi.metadata?.kind === 'starter_pack' || pi.metadata?.tier === 'starter';
+      if (!isStarterPack) {
+        console.log(`[webhook] refund on non-starter PI ${piId} — nothing to revoke`);
+        return;
+      }
+      const email = (charge.billing_details?.email || pi.receipt_email || '').toLowerCase();
+      if (!email) {
+        console.warn('[webhook] starter pack refund without email — cannot revoke access:', charge.id);
+        return;
+      }
+      const result = await db
+        .update(users)
+        .set({ starterPackPurchasedAt: null })
+        .where(eq(users.email, email))
+        .returning({ id: users.id });
+      console.log(
+        `[webhook] cleared starter access for ${email} after refund (${result.length} row${result.length === 1 ? '' : 's'} updated)`,
+      );
+    } catch (err) {
+      console.error('[webhook] failed to revoke starter access after refund:', err);
+    }
+  }
+}
+
 /** Upsert a subscriptions row from a Stripe Subscription object. */
 async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   const customerId = typeof sub.customer === 'string' ? sub.customer : sub.customer.id;
@@ -454,6 +534,9 @@ export async function POST(req: NextRequest) {
         // TODO: trigger "please update your card" email
         break;
       }
+      case 'charge.refunded':
+        await handleChargeRefunded(event.data.object as Stripe.Charge);
+        break;
       default:
         // Silently acknowledge unhandled events so Stripe stops retrying.
         break;
