@@ -133,6 +133,22 @@ async function applyTagToSubscriber(
   }
 }
 
+async function removeTagFromSubscriber(
+  apiKey: string,
+  tagId: number,
+  subscriberId: number,
+): Promise<void> {
+  const res = await fetch(`${KIT_API_BASE}/tags/${tagId}/subscribers/${subscriberId}`, {
+    method: 'DELETE',
+    headers: authHeaders(apiKey),
+  });
+  // 404 = tag wasn't on the subscriber, treat as success (idempotent)
+  if (!res.ok && res.status !== 404) {
+    const body = await res.text();
+    throw new Error(`Kit tag remove failed (tag ${tagId}): ${res.status} ${body}`);
+  }
+}
+
 /**
  * Subscribe an email to Kit and apply one or more tags. Tags are passed as
  * string names; unknown tags are created on the fly. The flow is:
@@ -151,6 +167,41 @@ export async function subscribeAndTag(email: string, tags: string[] = []) {
   for (const name of tags) {
     const tagId = await getOrCreateTag(apiKey, name);
     await applyTagToSubscriber(apiKey, tagId, subscriberId);
+  }
+}
+
+/**
+ * Apply one set of tags AND remove another, in a single subscriber lookup.
+ * Used for lifecycle transitions (e.g. on refund: add 'refunded', remove
+ * 'member' + 'founder'). Both lists are optional.
+ *
+ * Idempotent: removing a tag that's not applied is a no-op (Kit returns 404,
+ * we treat that as success).
+ *
+ * Throws on any API failure so the caller can surface / log the error.
+ */
+export async function applyAndRemoveTags(
+  email: string,
+  opts: { add?: string[]; remove?: string[] },
+) {
+  const apiKey = process.env.CONVERTKIT_API_KEY;
+  if (!apiKey) return;
+  const add = opts.add ?? [];
+  const remove = opts.remove ?? [];
+  if (add.length === 0 && remove.length === 0) return;
+
+  const subscriberId = await upsertSubscriber(apiKey, email);
+  for (const name of add) {
+    const tagId = await getOrCreateTag(apiKey, name);
+    await applyTagToSubscriber(apiKey, tagId, subscriberId);
+  }
+  for (const name of remove) {
+    try {
+      const tagId = await getOrCreateTag(apiKey, name);
+      await removeTagFromSubscriber(apiKey, tagId, subscriberId);
+    } catch (err) {
+      console.warn(`[kit] could not remove tag ${name}:`, err);
+    }
   }
 }
 

@@ -30,6 +30,7 @@ import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import {
   sendMembershipWelcomeEmail,
   sendStarterPackWelcomeEmail,
@@ -249,6 +250,29 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     }
   }
 
+  // 4. Kit tags — segment buyers so we can run member-only broadcasts,
+  //    upgrade campaigns for starter buyers, founder-only perks, etc.
+  //    Applied for every successful purchase (not gated on clerkUser.created
+  //    because the tag should land even when an existing Clerk user buys).
+  try {
+    if (tier === 'member') {
+      const tags = ['member', ...(isFounder ? ['founder'] : [])];
+      // Removing any prior 'lapsed-member' or 'refunded' tag handles the
+      // "former member who returns" case cleanly.
+      await applyAndRemoveTags(email, {
+        add: tags,
+        remove: ['lapsed-member', 'refunded', 'member-canceled'],
+      });
+    } else {
+      await applyAndRemoveTags(email, {
+        add: ['starter-pack-buyer'],
+        remove: ['refunded'],
+      });
+    }
+  } catch (err) {
+    console.error('[webhook] kit tag failed:', err);
+  }
+
   console.log(`[webhook] provisioned ${tier} for ${email} (clerk: ${clerkUser.id})`);
 }
 
@@ -405,6 +429,20 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
           .update(subscriptions)
           .set({ currentPeriodEnd: new Date(), updatedAt: new Date() })
           .where(eq(subscriptions.stripeSubscriptionId, subId));
+
+        // Kit: mark this buyer as refunded, drop their member/founder tags
+        // so they fall out of any active-member broadcasts.
+        const refundEmail = (charge.billing_details?.email || '').toLowerCase();
+        if (refundEmail) {
+          try {
+            await applyAndRemoveTags(refundEmail, {
+              add: ['refunded'],
+              remove: ['member', 'founder', 'member-canceled'],
+            });
+          } catch (err) {
+            console.warn('[webhook] kit refund tagging failed:', err);
+          }
+        }
       }
     } catch (err) {
       console.error('[webhook] failed to cancel subscription after refund:', err);
@@ -453,6 +491,16 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
         } catch (err) {
           console.warn('[webhook] could not write canceled metadata:', err);
         }
+      }
+
+      // Kit: mark refunded, drop the starter-pack-buyer tag.
+      try {
+        await applyAndRemoveTags(email, {
+          add: ['refunded'],
+          remove: ['starter-pack-buyer'],
+        });
+      } catch (err) {
+        console.warn('[webhook] kit refund tagging failed:', err);
       }
     } catch (err) {
       console.error('[webhook] failed to revoke starter access after refund:', err);
@@ -523,6 +571,25 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       }
     } catch (err) {
       console.warn('[webhook] could not write canceled metadata:', err);
+    }
+
+    // Kit lifecycle: if the period has ALREADY ended (natural expiry) →
+    // lapsed-member. If the period is still in the future (user clicked
+    // Cancel but hasn't reached their renewal date) → member-canceled.
+    // The refund path handles its own Kit tagging above; this only runs
+    // for non-refund cancellations.
+    try {
+      const expired = periodEnd <= new Date();
+      if (expired) {
+        await applyAndRemoveTags(user.email, {
+          add: ['lapsed-member'],
+          remove: ['member', 'founder', 'member-canceled'],
+        });
+      } else {
+        await subscribeAndTag(user.email, ['member-canceled']);
+      }
+    } catch (err) {
+      console.warn('[webhook] kit cancel tagging failed:', err);
     }
   }
 }
