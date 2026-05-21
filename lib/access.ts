@@ -31,17 +31,21 @@ export async function getAccessTierForClerkId(clerkId: string): Promise<AccessTi
     const u = rows[0];
     if (!u) return 'guest';
 
-    // 1) active subscription wins
+    // 1) Active subscription wins, BUT only if currentPeriodEnd is still in
+    // the future. This belt-and-suspenders matters in two cases:
+    //   - Refund path: we set periodEnd = now after canceling, so even
+    //     before customer.subscription.deleted arrives, access drops.
+    //   - Missed-event recovery: if Vercel was down when Stripe fired a
+    //     cancellation event and our DB still says 'active' with the old
+    //     periodEnd in the past, the date guard rejects them anyway.
     const subRows = await db
       .select({ status: subscriptions.status, periodEnd: subscriptions.currentPeriodEnd })
       .from(subscriptions)
       .where(
         and(
           eq(subscriptions.userId, u.userId),
-          or(
-            eq(subscriptions.status, 'active'),
-            and(eq(subscriptions.status, 'canceled'), gt(subscriptions.currentPeriodEnd, new Date())),
-          ),
+          or(eq(subscriptions.status, 'active'), eq(subscriptions.status, 'canceled')),
+          gt(subscriptions.currentPeriodEnd, new Date()),
         ),
       )
       .limit(1);
