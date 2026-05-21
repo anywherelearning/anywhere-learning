@@ -180,13 +180,29 @@ const categories = [
   },
 ];
 
-export default async function JoinPage() {
+export default async function JoinPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ from?: string; reason?: string; slug?: string }>;
+}) {
   // Pull live founder state. The static IS_FOUNDER_PHASE constant is still
   // used above for SEO metadata (crawlers can lag a few hours) and for the
   // module-level structured-data block — both are non-critical to flip
   // instantly. Page-visible copy below uses `m` so the founder framing
   // closes automatically the moment the 100th member is provisioned.
   const m = await import('@/lib/membership-runtime').then((x) => x.getMembership());
+
+  // Soft banner for visitors who hit /join from a gated download attempt.
+  // The download endpoint redirects guests + starter-pack buyers (trying
+  // to access member-only activities) here with ?from=download&reason=...
+  const sp = (await searchParams) || {};
+  const fromDownload = sp.from === 'download';
+  const isStarterUpgrade = fromDownload && sp.reason === 'starter-upgrade';
+  const bannerMessage = !fromDownload
+    ? null
+    : isStarterUpgrade
+      ? "That activity is in the full membership. Upgrade once and unlock everything."
+      : "Sign up below to open that activity, plus the rest of the library.";
   const productLd = {
     '@context': 'https://schema.org',
     '@type': ['Product', 'Service'],
@@ -297,6 +313,18 @@ export default async function JoinPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <main className="pb-24 lg:pb-0">
+        {/* ═══ Contextual banner — shown only when arriving from a gated
+            download attempt (the API route redirects here with
+            ?from=download&reason=...) ═══ */}
+        {bannerMessage && (
+          <div className="border-b border-[#c4836a]/35 bg-[#f5e1d2]/70 px-6 py-3">
+            <div className="mx-auto flex max-w-[1120px] items-center justify-center gap-2 text-center text-[14px] text-[#7A3D24]">
+              <span aria-hidden="true">→</span>
+              <span>{bannerMessage}</span>
+            </div>
+          </div>
+        )}
+
         {/* ═══ 1. HERO ═══ */}
         <section className="relative px-6 pt-10 pb-14 md:pt-10 md:pb-16">
           <div className="mx-auto grid max-w-[1120px] items-center gap-10 md:grid-cols-[1.05fr_.95fr] md:gap-16">

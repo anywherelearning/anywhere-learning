@@ -5,11 +5,12 @@
  * Authorization rules:
  *   - member  → any activity
  *   - starter → only activities in STARTER_PACK_SLUGS, plus Skills Map
- *   - guest   → 401
+ *   - guest   → redirect to /join with a soft-explain banner
+ *   - signed-out → redirect to /sign-in
  *
  * Two view modes via ?view=1:
- *   - default        → forces download (Content-Disposition: attachment)
- *   - ?view=1        → inline view (PDF opens in browser)
+ *   - default  → forces download (Content-Disposition: attachment)
+ *   - ?view=1  → inline view (PDF opens in browser)
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -39,27 +40,37 @@ export async function GET(
   } catch {
     /* Clerk not configured */
   }
+  // Helper: send the user to a friendly page instead of a raw 403/JSON
+  // response. The download endpoint is hit by direct clicks (not XHR), so
+  // a 302 redirect is the right UX — they land somewhere they can act.
+  const origin = req.nextUrl.origin;
+  const friendlyRedirect = (path: string, reason: string) =>
+    NextResponse.redirect(
+      `${origin}${path}?from=download&slug=${encodeURIComponent(slug)}&reason=${encodeURIComponent(reason)}`,
+      303,
+    );
+
   if (!clerkId) {
-    return NextResponse.json({ error: 'Sign in to download activities.' }, { status: 401 });
+    // Not signed in → send to sign-in with a return path back to the activity
+    return NextResponse.redirect(
+      `${origin}/sign-in?next=${encodeURIComponent(`/api/download/activity/${slug}?view=1`)}`,
+      303,
+    );
   }
 
-  // Resolve tier from the DB — this is the only source of truth in
-  // production. (The old `al_tier_preview` cookie fallback was a
-  // sandbox-era hack that persisted access for 7 days in the browser,
-  // which made refunded customers keep PDF access. Removed.)
+  // Resolve tier from the DB — only source of truth in production.
   const tier: AccessTier = await getAccessTierForClerkId(clerkId);
   if (tier === 'guest') {
-    return NextResponse.json({ error: 'Membership required.' }, { status: 403 });
+    // No active subscription or starter pack → soft redirect to /join
+    return friendlyRedirect('/join', 'membership-required');
   }
 
   // Tier-gated access check
   if (tier === 'starter') {
     const allowed = STARTER_PACK_SLUGS.has(slug) || SKILLS_MAP_SLUGS.has(slug);
     if (!allowed) {
-      return NextResponse.json(
-        { error: 'This activity is in the Membership only. Upgrade to unlock.' },
-        { status: 403 },
-      );
+      // Starter buyer trying to access a member-only activity → upgrade prompt
+      return friendlyRedirect('/join', 'starter-upgrade');
     }
   }
   // 'member' → no further checks
@@ -67,10 +78,7 @@ export async function GET(
   // Resolve the Blob URL
   const blobUrl = getActivityBlobUrl(slug);
   if (!blobUrl) {
-    return NextResponse.json(
-      { error: 'Activity PDF not found.' },
-      { status: 404 },
-    );
+    return friendlyRedirect('/account', 'activity-missing');
   }
 
   // Inline (browser viewer) vs forced download
