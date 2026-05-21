@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { SignUp } from '@clerk/nextjs';
 import { clerkAuthAppearance } from '@/lib/clerk-theme';
 
@@ -8,9 +9,20 @@ export const metadata: Metadata = {
   description: 'Create your Anywhere Learning account to access your library.',
 };
 
-export default function SignUpPage() {
+export default async function SignUpPage() {
   const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   if (!hasClerk) return null;
+
+  // Already signed in? Skip the sign-up flow and go straight to the library.
+  let signedInUserId: string | null = null;
+  try {
+    const { auth } = await import('@clerk/nextjs/server');
+    const { userId } = await auth();
+    signedInUserId = userId;
+  } catch {
+    /* Clerk not configured */
+  }
+  if (signedInUserId) redirect('/account');
 
   return (
     <main className="min-h-[calc(100vh-200px)] bg-cream py-12 md:py-16">

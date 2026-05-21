@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import CustomSignInForm from '../CustomSignInForm';
 
 export const metadata: Metadata = {
@@ -8,9 +9,24 @@ export const metadata: Metadata = {
   description: 'Sign in to your Anywhere Learning account to access your library.',
 };
 
-export default function SignInPage() {
+export default async function SignInPage() {
   const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   if (!hasClerk) return <FallbackSignIn />;
+
+  // Already signed in? Skip the sign-in flow and go straight to the library.
+  // Handles the case where a magic-link email is reopened from an inbox
+  // after the session has already been established. `redirect()` throws an
+  // internal Next.js signal — must be OUTSIDE the try/catch so the framework
+  // can catch it.
+  let signedInUserId: string | null = null;
+  try {
+    const { auth } = await import('@clerk/nextjs/server');
+    const { userId } = await auth();
+    signedInUserId = userId;
+  } catch {
+    /* Clerk not configured in this env — fall through to the form */
+  }
+  if (signedInUserId) redirect('/account');
 
   return (
     <main className="relative min-h-screen bg-cream overflow-hidden">
