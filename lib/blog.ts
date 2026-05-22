@@ -4770,7 +4770,7 @@ const posts: BlogPost[] = [
         'Help with grocery shopping: compare prices, find items, stay on budget',
         'Care for younger siblings for short stretches',
       ]},
-      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-independence). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
+      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-for-kids). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
 
       { type: 'heading', level: 2, text: 'Ages 12 to 14: the apprentice phase' },
       { type: 'paragraph', text: 'Tweens and young teens are ready for tasks that require judgment, planning, and multi-step problem-solving. This is where chores stop looking like chores and start looking like real-world competence.' },
@@ -4841,7 +4841,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'kitchen-learning-lab'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -4981,7 +4981,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'how-much-screen-time-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5134,7 +5134,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'emotional-regulation-kids', 'raise-creative-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5264,7 +5264,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['emotional-regulation-kids', 'life-skills-before-12', 'age-appropriate-chores-life-skills'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5430,7 +5430,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'teaching-kids-to-fail', 'executive-function-kids', 'what-kids-should-know-before-18'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 ];
 
