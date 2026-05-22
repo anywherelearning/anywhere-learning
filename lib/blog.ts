@@ -2457,8 +2457,8 @@ const posts: BlogPost[] = [
 
   {
     slug: 'board-game-design-kids',
-    title: 'How to Design a Board Game With Your Kids (and Why It\u2019s Brilliant Learning)',
-    excerpt: 'Designing a board game teaches maths, writing, logic, and playtesting, all without feeling like school. Here\u2019s how to do it at your kitchen table.',
+    title: 'Design a Board Game With Your Kids: Step-by-Step for Ages 5-12',
+    excerpt: 'A step-by-step guide to designing a board game at your kitchen table. Covers rules, scoring, playtesting, and why kids learn maths, writing, and logic without realising it.',
     hook: 'A piece of cardboard, some dried beans, and a sibling who found every loophole. The rules got rewritten three times before dinner.',
     category: 'creativity-maker',
     pillarSlug: 'creativity-maker-activities',
