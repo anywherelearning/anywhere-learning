@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { deviceTokens } from '@/lib/db/schema';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 /**
  * Send push notification to all registered devices.
@@ -17,7 +18,9 @@ import { deviceTokens } from '@/lib/db/schema';
  */
 export async function POST(req: NextRequest) {
   try {
-    // Authenticate with API key
+    const limited = await checkRateLimit(req, standardLimiter());
+    if (limited) return limited;
+
     const authHeader = req.headers.get('authorization');
     const apiKey = process.env.PUSH_API_KEY;
 

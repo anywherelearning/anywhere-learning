@@ -3,6 +3,7 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { products, orders, users } from '@/lib/db/schema';
 import { eq, and, inArray } from 'drizzle-orm';
+import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 /**
  * GET /api/products/ownership?slug=future-ready-skills-map
@@ -16,6 +17,9 @@ import { eq, and, inArray } from 'drizzle-orm';
  *   - Signed-out users always receive an empty array (no leak).
  */
 export async function GET(req: NextRequest) {
+  const limited = await checkRateLimit(req, standardLimiter());
+  if (limited) return limited;
+
   const single = req.nextUrl.searchParams.get('slug');
   const multi = req.nextUrl.searchParams.get('slugs');
   const slugList = (single ? [single] : (multi ?? '').split(','))

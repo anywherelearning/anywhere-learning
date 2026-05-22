@@ -1,5 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { strictLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 const MAX_LEN = {
   name: 100,
@@ -21,8 +22,11 @@ function isValidEmail(s: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
+    const limited = await checkRateLimit(req, strictLimiter());
+    if (limited) return limited;
+
     const body = await req.json();
     const name = String(body?.name || '').trim().slice(0, MAX_LEN.name);
     const email = String(body?.email || '').trim().slice(0, MAX_LEN.email);
