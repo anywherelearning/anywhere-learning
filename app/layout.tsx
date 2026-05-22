@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Hands-on life skills activities that help parents raise capable, independent kids. Cooking, budgeting, problem-solving, and more. Low prep, research-backed, ages 6 to 14.",
     images: [
       {
-        url: "https://anywherelearning.co/og-default.jpg",
+        url: "https://anywherelearning.co/og-default.jpg?v=2",
         width: 1200,
         height: 630,
         alt: "Anywhere Learning | Life Skills Activities for Kids",
