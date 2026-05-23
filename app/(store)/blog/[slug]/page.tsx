@@ -111,32 +111,45 @@ function isCardLike(b: BlogContentBlock | undefined): boolean {
 }
 
 /**
- * Picks a safe injection slot — the position AFTER the block at `afterIdx`
- * — and shifts forward/backward if that lands the callout adjacent to
- * another card. Returns the final insertion index (i.e. callout will be
- * pushed at position `returnedIdx`, between blocks[returnedIdx-1] and
- * blocks[returnedIdx]).
+ * Picks a safe injection slot — preferring the END OF A SECTION
+ * (the slot immediately before the next H2). Returns the final insertion
+ * index (callout will be pushed at position `returnedIdx`, between
+ * blocks[returnedIdx-1] and blocks[returnedIdx]).
  *
  * Algorithm:
- *   1. Start with the slot right after `afterIdx`.
- *   2. While the surrounding blocks are card-like, step forward looking
- *      for a paragraph→paragraph boundary instead.
- *   3. If we walk off the end, fall back to the original slot — better
- *      than dropping the callout entirely.
+ *   1. From `afterIdx`, walk FORWARD looking for the next H2.
+ *   2. The slot right before that H2 is end-of-section. Use it.
+ *   3. If no H2 is found before end-of-doc, place at the very end.
+ *   4. Fall back to a safe paragraph→paragraph boundary if either of
+ *      those is taken or unsafe (rare).
  */
 function findSafeInjectionSlot(
   blocks: BlogContentBlock[],
   afterIdx: number,
   takenSlots: Set<number>,
 ): number {
+  // Walk forward from afterIdx looking for the next H2 → slot is right before it.
+  for (let i = afterIdx + 1; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.type === 'heading' && b.level === 2) {
+      if (!takenSlots.has(i)) return i;
+      // Slot is taken; keep walking to the H2 after that
+    }
+  }
+
+  // No more H2s ahead — try end of document if the trailing block is non-card.
+  const endSlot = blocks.length;
+  if (!takenSlots.has(endSlot)) {
+    const tail = blocks[endSlot - 1];
+    if (!isCardLike(tail) || tail.type === 'heading') return endSlot;
+  }
+
+  // Fallback: original "safe paragraph→paragraph boundary" walk
   const initial = afterIdx + 1;
   for (let probe = initial; probe < blocks.length; probe++) {
     if (takenSlots.has(probe)) continue;
     const before = blocks[probe - 1];
     const after = blocks[probe];
-    // Safe if BOTH neighbours are non-card (paragraphs/headings/lists),
-    // OR the neighbour we'd touch is a heading (heading→callout reads
-    // fine — heading is a label, not a visual card).
     const beforeOk = !isCardLike(before) || before.type === 'heading';
     const afterOk = !isCardLike(after) || after.type === 'heading';
     if (beforeOk && afterOk) return probe;
@@ -235,7 +248,7 @@ function RelatedCard({ post }: { post: BlogPost }) {
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
             quality={75}
-            className="object-cover"
+            className={post.heroImageFit === 'contain' ? 'object-contain' : 'object-cover'}
             style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
           />
         )}
@@ -475,8 +488,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="px-6 pb-12 md:pb-16">
           <ScrollReveal delay={80}>
             <div
-              className="relative aspect-[16/10] max-w-[980px] mx-auto rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]"
-              style={{ background: imgBgByCategory[post.category] || '#E6EBDF' }}
+              className="relative max-w-[980px] mx-auto rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]"
+              style={{ background: imgBgByCategory[post.category] || '#E6EBDF', aspectRatio: post.heroImageAspect || '16 / 10' }}
             >
               <PinterestSaveButton
                 url={`https://anywherelearning.co/blog/${post.slug}`}
@@ -488,7 +501,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   alt={post.heroImageAlt}
                   fill
                   sizes="(max-width: 980px) 100vw, 980px"
-                  className="object-cover"
+                  className={post.heroImageFit === 'contain' ? 'object-contain' : 'object-cover'}
                   style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
                   priority
                 />

@@ -42,6 +42,10 @@ export interface BlogPost {
   heroImage?: string;
   heroImageAlt: string;
   heroImagePosition?: string;
+  /** Use 'contain' for portrait sources so the whole photo shows. Default 'cover'. */
+  heroImageFit?: 'cover' | 'contain';
+  /** Override the hero container aspect ratio (default '16/10'). E.g. '4/3', '5/4', '3/4'. */
+  heroImageAspect?: string;
   content: ContentBlock[];
   relatedSlugs: string[];
   /** Product slug for auto-injected product callout (overrides category default) */
@@ -4770,7 +4774,7 @@ const posts: BlogPost[] = [
         'Help with grocery shopping: compare prices, find items, stay on budget',
         'Care for younger siblings for short stretches',
       ]},
-      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-independence). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
+      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-for-kids). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
 
       { type: 'heading', level: 2, text: 'Ages 12 to 14: the apprentice phase' },
       { type: 'paragraph', text: 'Tweens and young teens are ready for tasks that require judgment, planning, and multi-step problem-solving. This is where chores stop looking like chores and start looking like real-world competence.' },
@@ -4841,7 +4845,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'kitchen-learning-lab'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -4981,7 +4985,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'how-much-screen-time-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5134,7 +5138,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'emotional-regulation-kids', 'raise-creative-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5264,7 +5268,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['emotional-regulation-kids', 'life-skills-before-12', 'age-appropriate-chores-life-skills'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5430,7 +5434,133 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'teaching-kids-to-fail', 'executive-function-kids', 'what-kids-should-know-before-18'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
+  },
+
+  {
+    slug: 'how-to-build-resilience-in-kids',
+    title: 'How to Build Resilience in Kids: 12 Activities That Actually Work',
+    excerpt: 'Resilience is built, not taught. Twelve real-world activities that grow grit, recovery, and the ability to keep going when things get hard, at every age from 6 to 14.',
+    hook: 'Resilient kids are not born. They are the kids who have been allowed to struggle, and to figure out the other side of it.',
+    category: 'future-ready-skills',
+    publishedAt: '2026-05-25',
+    dateModified: '2026-05-25',
+    keywords: ['how to build resilience in kids', 'building resilience in children', 'resilience activities for kids', 'how to raise resilient kids', 'teaching kids resilience', 'grit for kids', 'growth mindset activities', 'raising mentally tough kids', 'helping kids cope with failure', 'resilience skills for children'],
+    readTimeMinutes: 13,
+    author: amelie,
+    recommendedProduct: 'future-ready-skills-map',
+    recommendedBundle: 'real-world-mega-bundle',
+    heroImage: '/images/resilience-hero-v4.jpeg',
+    heroImageAlt: 'Kid in a pink helmet and knee pads riding a mountain bike over a rocky technical section on a forest trail',
+    heroImageAspect: '4/3',
+    content: [
+      { type: 'summary', text: 'Resilience is the ability to keep going through difficulty, recover from setbacks, and adapt when things do not go as planned. It is not a personality trait; it is a skill built through repeated experiences of productive struggle, where a child encounters something hard, works through it, and comes out the other side. This guide explains what resilience actually is, why so many kids today are missing it, how it develops, and twelve real-world activities that build it at every age from 6 to 14.' },
+      { type: 'paragraph', text: 'There is a moment that happens in almost every household. A kid hits a wall. The Lego build collapses. The friend will not text back. The bike does not go where they want it to. And what they do next is the whole ball game.' },
+      { type: 'paragraph', text: 'For a lot of kids right now, what they do next is fall apart. Not because they are weak, and not because their parents did anything wrong, but because they have not had enough chances to practice the other option, which is to wobble, breathe, try something, and keep moving. That practice is what resilience is. And it is a skill, not a trait.' },
+      { type: 'paragraph', text: 'If you have been worried that your kid melts down too fast, gives up too easily, or seems crushed by the smallest setback, you are not imagining it. A whole generation of children is showing up to adolescence with less emotional callus than the generations before, and the reasons are knowable. So is the fix. Resilience is one of the most teachable skills in childhood, and it does not require a single workbook, app, or program. It is built through everyday life, on purpose. This piece is part of our larger pillar on [life skills for kids](/guides/life-skills-for-kids), which is the umbrella every future-ready skill sits under.' },
+
+      { type: 'heading', level: 2, text: 'What resilience actually is (and what it is not)' },
+      { type: 'paragraph', text: 'Resilience gets thrown around so loosely that it has started to mean nothing. So let us be specific. Resilience is the ability to:' },
+      { type: 'list', ordered: false, items: [
+        'Feel a hard feeling without being destroyed by it',
+        'Stay in a difficult task long enough to make progress',
+        'Recover from a setback within a reasonable window of time',
+        'Adapt your approach when the first one does not work',
+        'Hold onto a sense of self when things outside you are not going well',
+      ]},
+      { type: 'paragraph', text: 'Notice what resilience is not. It is not toughness, in the sense of pretending nothing hurts. It is not the absence of big feelings; that is something different, and it overlaps with [emotional regulation](/blog/emotional-regulation-kids). It is not grit alone, which is more about long-term passion and perseverance toward a goal. Grit is one slice of resilience. Resilience is the whole pie: the ability to take a hit, feel it, and keep going.' },
+      { type: 'paragraph', text: 'Resilience also rests on top of [executive function](/blog/executive-function-kids). A kid who cannot plan a next step, hold information in their mind, or control an impulse will struggle to recover from a setback, because the basic mental machinery is still booting up. If your child is wildly dysregulated, work on the substrate skills first. Resilience is built on top of them, not in place of them.' },
+
+      { type: 'heading', level: 2, text: 'Why kids today are missing it' },
+      { type: 'paragraph', text: 'Childhood has changed faster in the last twenty years than in the previous two hundred. The shape of the day, the texture of free time, the level of supervision, the speed of comfort, all of it is different. And the side effect, whether anyone intended it or not, is that kids have far fewer chances to practice the struggle-recover-adapt loop that builds resilience.' },
+      { type: 'paragraph', text: 'A few of the patterns showing up across the research and across our own observations as parents and as a former classroom teacher:' },
+      { type: 'list', ordered: false, items: [
+        'Over-supervision: kids are watched more closely, more often, than at any point in modern history. When an adult is always within earshot, a child rarely has to solve a problem on their own, which means they rarely get the small wins that build the belief "I can handle this."',
+        'Rescued from struggle: well-meaning adults step in the moment a child gets frustrated. The puzzle piece gets handed over. The conflict gets mediated. The hard feeling gets distracted away. Each rescue is a missed rep.',
+        'Screens replacing boredom: boredom is where kids used to invent their own challenges. Now the second a kid is uncomfortable, a screen is available. The discomfort gets soothed instead of metabolized.',
+        'Sanitized environments: scraped knees, lost games, awkward conversations, getting lost on a trail. These small frictions used to be the daily curriculum of growing up. Now they are often engineered out of the day.',
+        'Performance pressure: the focus on grades, test scores, sports rankings, and visible achievement teaches kids that the goal is to avoid mistakes, not to recover from them. A kid who is terrified of failure does not get to practice recovery, because they never let themselves fail in the first place.',
+      ]},
+      { type: 'paragraph', text: 'None of this is any one parent\'s fault. It is the water we are all swimming in. And the kids feel it. Anxiety, perfectionism, school refusal, and shutdown behaviours are all up in the same window of time that resilience-building experiences have gone down. The two are not unrelated.' },
+
+      { type: 'heading', level: 2, text: 'How resilience actually develops' },
+      { type: 'paragraph', text: 'Resilience grows through a specific loop. A child encounters a difficulty that is hard but not impossible. They feel something uncomfortable. They try something. It does not work. They try again. Eventually they either succeed, or they do not, and they discover that the not-succeeding was survivable. The next time difficulty shows up, their nervous system has a reference point: "I have been here before. It was not great. I lived."' },
+      { type: 'paragraph', text: 'That loop has four ingredients, and all of them are things parents can put in place at home.' },
+      { type: 'heading', level: 3, text: 'Productive struggle' },
+      { type: 'paragraph', text: 'The sweet spot is a challenge that is just hard enough to require effort, but not so hard that it crushes the kid. Too easy and there is no growth. Too hard and there is no recovery. The art of parenting resilience is learning to read where that line is for your specific kid on a specific day. We go deep on this in the post on [teaching kids to fail](/blog/teaching-kids-to-fail), which is essentially the engine room of resilience.' },
+      { type: 'heading', level: 3, text: 'Autonomy' },
+      { type: 'paragraph', text: 'A kid who never gets to choose, decide, or own a project rarely builds resilience, because the things that go wrong are never quite their own. Autonomy is what makes the struggle personal. When a kid picks the project, the trip, the meal, the route, and it does not work out, that is their problem to solve. That is where resilience comes from. There is a longer treatment of this in [decision-making skills for kids](/blog/decision-making-skills-kids).' },
+      { type: 'heading', level: 3, text: 'Recovery rituals' },
+      { type: 'paragraph', text: 'Resilience is not just about pushing through. It is about coming back. Kids need to learn what to do in their own bodies and minds after something hard. That might be a walk, a snack, a cry, a draw-it-out, a talk-to-someone, a lie-on-the-floor-for-ten-minutes. The specific ritual matters less than the fact that there is one. Help your kid notice what helps them reset.' },
+      { type: 'heading', level: 3, text: 'Modeling' },
+      { type: 'paragraph', text: 'Kids watch us. When something goes sideways for you, they are watching how you handle it. Not the version where you keep it together for them, but the messy real version. Narrating it out loud is a gift. "I am really frustrated this did not work. I am going to take five minutes and then try the other approach." That sentence, said in front of a kid often enough, becomes their inner voice ten years from now.' },
+
+      { type: 'image', src: '/images/resilience-hike-v3.jpeg', alt: 'A kid with a backpack scrambling up a scree slope toward a massive cliff, another hiker visible on the trail ahead', caption: 'Hard hikes are resilience labs. The legs hurt, the trail keeps going, and at the top there is evidence: "I can do hard things."' },
+
+      { type: 'heading', level: 2, text: '12 activities that build resilience' },
+      { type: 'paragraph', text: 'These are not crafts. They are real-life experiences that put a kid into the struggle-recover-adapt loop on purpose. Pick the ones that fit your kid\'s age and stage. Do them with your kid, not for your kid. The parent\'s job is to set the conditions and stay close, not to take over.' },
+
+      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
+      { type: 'list', ordered: true, items: [
+        'Cook a meal from scratch when something goes wrong on purpose. Burn the toast, run out of an ingredient, drop the eggs. Stay calm and ask, "What can we do now?" Let them solve it. The whole point is that the dinner is not perfect and the world keeps spinning.',
+        'Finish a long project. Pick something that takes more than one sitting: a fort, a painting, a Lego build with a real plan. Do not let them quit on day one because it got hard. Sit with them through the slump in the middle. That slump is the muscle.',
+        'Lose a game without a parent intervening. Play a real game with real stakes. When they lose, do not soften it, do not let them win on purpose, do not redirect the feeling. Acknowledge it ("Losing is hard") and let it pass through them. Then play again.',
+        'Learn a hard physical skill. Riding a bike, swimming a length, climbing a tree, doing a cartwheel. Anything that requires falling down repeatedly to get good. The body remembers what the brain forgets: hard things become possible with reps.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
+      { type: 'list', ordered: true, items: [
+        'Go to a shop on their own. Hand them a short list and some cash. Watch from a distance or wait outside if you need to. The small panic of approaching a counter alone is the workout. So is the swell of pride after.',
+        'Navigate with a paper map. Hand them the map at a hike, a city trip, or even a complicated grocery store. Let them get a little lost. Resist the urge to point. "Where do you think we are?" is one of the most resilience-building sentences a parent can say.',
+        'Fix something that broke. A bike chain, a wobbly chair, a broken zipper, a glitchy laptop. Watch a video together, gather tools, attempt the repair. It does not matter if it ends up working. The repeated experience of "we try, it does not work, we try again" is the whole curriculum.',
+        'Take a hard conversation. Have them call to make their own appointment, talk to the librarian about a missing book, apologize directly to a friend, ask the coach a question. Adults do not get to outsource hard conversations. Neither should kids past a certain age.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
+      { type: 'list', ordered: true, items: [
+        'Take a bus, walk, or bike to somewhere on their own. Start with a route they know. Gradually expand. Independent transit is one of the most powerful resilience builders in the modern world precisely because so few kids get to do it anymore.',
+        'Start something they can fail at publicly. A small business, a club, a published blog, a YouTube channel, a market stall. Something where strangers might say no, ignore them, or critique them. Surviving that is a level-up. Our older one started a small business at twelve, and watching him learn to handle a "no" from a customer was worth more than a year of school.',
+        'Sit with boredom for an afternoon. No screens, no plan, no parent-provided activity. Just an empty afternoon. The first hour is awful. The second hour is where the magic shows up. Tolerance for boredom is a foundational resilience skill, and modern life is actively dismantling it.',
+        'Plan and lead a family outing. Budget, route, timing, food, the whole thing. When the plan hits friction (it will), they steer. You are the passenger. The next day, talk about what worked and what they would change. That reflection is where the lesson lands.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'What NOT to do' },
+      { type: 'paragraph', text: 'Just as important as what to do is what to stop doing. Most parents who feel like resilience is not building in their kids are doing one or more of these without realizing it.' },
+      { type: 'list', ordered: false, items: [
+        'Do not rescue at the first sign of frustration. The frustration is the lesson. If you intervene before they have tried, you have taken the rep away.',
+        'Do not deliver premature comfort. "It is OK, it is OK, it is OK" said too soon does not soothe a kid. It tells them the feeling is too much for you to be near. Sit in the hard feeling with them, do not paper it over.',
+        'Do not fix it for them and call it "helping." Tying the shoe, finding the lost item, smoothing the friend conflict, emailing the teacher. Every fix is a missed rep.',
+        'Do not catastrophize on their behalf. If your child sees that you are more upset about their setback than they are, they learn that setbacks are catastrophic. Stay calm, stay matter-of-fact, stay curious.',
+        'Do not over-praise the outcome. "You won! You got it right! You are so smart!" trains kids to love the result, not the process. Praise the trying, the recovering, the second attempt. That is what you actually want more of.',
+      ]},
+
+      { type: 'pull-quote', text: 'You cannot raise a resilient kid by removing every hard thing. You raise a resilient kid by staying close while the hard thing happens.' },
+
+      { type: 'heading', level: 2, text: 'A note on different kids' },
+      { type: 'paragraph', text: 'Resilience is not one-size-fits-all. A child with sensory sensitivities, anxiety, ADHD, autism, or trauma history will need a different on-ramp than a more typically developing peer. That does not mean these kids cannot build resilience. Many of them, actually, are wildly resilient in ways their neurotypical peers will never need to be. But the load needs to match the system.' },
+      { type: 'paragraph', text: 'For a more sensitive or anxious kid, the productive-struggle window is narrower. Push too hard and the system floods, which is the opposite of resilience-building. The fix is not to stop. The fix is to scale down. Smaller challenges, more support, longer recovery time, and lots of low-stakes reps before any high-stakes ones. A sensitive kid can absolutely be resilient. They might just need a more gradient ramp to get there.' },
+      { type: 'paragraph', text: 'Also: a kid who has been through something genuinely hard (a loss, an illness, a family change, a school trauma) is doing real resilience work already, even if it does not look like it from the outside. Honour that. Do not pile on engineered challenges when life has already provided them.' },
+
+      { type: 'heading', level: 2, text: 'The long game' },
+      { type: 'paragraph', text: 'Resilience is not a project you finish. It is a slow accumulation of small experiences, year over year, that change how a kid relates to difficulty. A kid who has, by age 14, made hundreds of small mistakes and recovered from them, walks into adolescence with a fundamentally different relationship to hardship than a kid who has been protected from every wobble.' },
+      { type: 'paragraph', text: 'Think of it like compounding interest. Every small struggle that gets metabolized at age 8 makes the bigger one at age 12 easier. Every recovery at age 12 makes the real-world stuff at age 16 doable. By the time they are leaving home, you want them to have a long history of "I did not think I could and then I did." That history is built one ordinary Tuesday at a time.' },
+
+      { type: 'cta', text: 'If you want a practical framework for building resilience and other life skills through everyday life, our free guide is full of ideas you can use this week.', href: '/free-guide', label: 'Get the Free Guide' },
+
+      { type: 'faq', items: [
+        { question: 'What is resilience in kids?', answer: 'Resilience in kids is the ability to face a difficulty, feel the hard feeling that comes with it, work through it, and recover. It is not the absence of struggle. It is the capacity to move through struggle without being destroyed by it. Resilient kids still cry, still get frustrated, and still hit walls. They have just had enough practice that they know the wall is not the end.' },
+        { question: 'At what age does resilience develop?', answer: 'Resilience starts developing in infancy, every time a baby experiences a small distress and is comforted and returns to baseline. It builds steadily through early childhood and then accelerates between ages 6 and 14, when kids start having the cognitive ability to reflect on their own experience. Resilience continues developing well into the twenties. There is no "too late." There is also no shortcut.' },
+        { question: 'Are resilience and grit the same thing?', answer: 'No, although they overlap. Grit, as researcher Angela Duckworth defined it, is sustained passion and perseverance toward a long-term goal. Resilience is broader. It includes the ability to recover from setbacks, adapt to changing circumstances, and bounce back from emotional difficulty, not just stick with a single goal. A gritty kid is usually resilient, but a resilient kid is not necessarily fixated on any one long-term pursuit.' },
+        { question: 'Can a sensitive kid still be resilient?', answer: 'Absolutely. Sensitivity and resilience are not opposites. In fact, some of the most resilient adults are highly sensitive people who have built strong recovery skills because they have needed them. A sensitive kid may need smaller challenges, longer recovery time, and more support during the struggle, but the same loop applies. The goal is not to make them less sensitive. It is to help them feel deeply and still keep going.' },
+        { question: 'How long does it take to build resilience?', answer: 'There is no specific timeline because resilience is not a single skill that gets completed. It is a capacity that grows with practice across years. You will likely see small shifts within a few weeks of changing the dynamics at home (less rescuing, more productive struggle, better recovery rituals). Bigger shifts show up over months and years. The kids who look resilient at 16 have parents who have been quietly running this playbook since they were 5.' },
+        { question: 'Is resilience the same as emotional regulation?', answer: 'They are closely related but not identical. Emotional regulation is the ability to manage the size and expression of a feeling in the moment. Resilience is the broader ability to recover and keep going after a setback, which usually requires emotional regulation as one component. A kid can be good at regulating in the moment but still struggle with bouncing back from a bigger blow, or vice versa. Most kids benefit from work on both. There is more on the regulation piece specifically in our post on [emotional regulation](/blog/emotional-regulation-kids).' },
+      ]},
+
+      { type: 'paragraph', text: 'Resilience is the through-line of every other future-ready skill. Without it, decision-making collapses at the first wrong choice. Without it, creativity stalls at the first bad draft. Without it, every other capability is fragile. If you are looking at the bigger picture of what kids need to thrive in a fast-changing world, start with the [life skills for kids](/guides/life-skills-for-kids) pillar; resilience is the spine that holds all of it up.' },
+      { type: 'paragraph', text: 'If you want the ideas in this post structured into ready-to-use activities, conversation prompts, and weekly rhythms, that is what we build inside the Anywhere Learning membership. No curriculum, no worksheets, just real-world ways to practice the skills that matter, alongside your kid. But honestly, you can start tonight, with nothing. Pick one thing on the list above. Set the conditions. Stay close. Let them wobble. That is the whole job.' },
+    ],
+    relatedSlugs: ['teaching-kids-to-fail', 'executive-function-kids', 'decision-making-skills-kids', 'emotional-regulation-kids'],
+    pillarSlug: 'life-skills-for-kids',
   },
 ];
 
