@@ -126,101 +126,13 @@ export default function MembershipCreditBanner({
     );
   }
 
-  // ─── State 2: guest nudge ───────────────────────────────────────────────
-  // Soft prompt so existing Starter Pack buyers don't accidentally pay
-  // full price. Renders for all unauthenticated visitors since we can't
-  // know until they sign in whether they qualify.
-  if (data.reason === 'no-user') {
-    if (variant === 'inline') {
-      return (
-        <span
-          role="status"
-          className="inline-flex flex-wrap items-center gap-2 rounded-full"
-          style={{
-            background: '#FFFDF7',
-            color: '#4F5A50',
-            padding: '4px 10px 4px 12px',
-            fontSize: 12.5,
-            fontFamily: '"DM Sans", sans-serif',
-            border: '1px solid #E5E0D2',
-          }}
-        >
-          Bought the Starter Pack?
-          <a
-            href={signInHref}
-            style={{
-              color: '#3A5A40',
-              fontWeight: 600,
-              textDecoration: 'none',
-              borderBottom: '1px solid rgba(58,90,64,.3)',
-            }}
-          >
-            Sign in to apply your {data.creditLabel} credit →
-          </a>
-        </span>
-      );
-    }
-    return (
-      <div
-        role="status"
-        className="rounded-2xl"
-        style={{
-          background: '#FFFDF7',
-          border: '1px solid #E5E0D2',
-          padding: '14px 18px',
-          fontFamily: '"DM Sans", sans-serif',
-          display: 'grid',
-          gridTemplateColumns: '1fr auto',
-          gap: 14,
-          alignItems: 'center',
-        }}
-      >
-        <div>
-          <div
-            style={{
-              fontSize: 11,
-              letterSpacing: '.18em',
-              textTransform: 'uppercase',
-              color: '#7B8378',
-              fontWeight: 600,
-              marginBottom: 4,
-            }}
-          >
-            Already a Starter Pack buyer?
-          </div>
-          <div style={{ fontSize: 14, color: '#2D3A2E', lineHeight: 1.45 }}>
-            Sign in first and we&apos;ll apply your{' '}
-            <strong>{data.creditLabel} credit</strong> at checkout. First year
-            is <strong>${data.standardPriceUsd - data.creditUsd > 0
-              ? Math.round(data.standardPriceUsd - data.creditUsd)
-              : 0}</strong> instead of ${data.standardPriceUsd}.
-          </div>
-        </div>
-        <a
-          href={signInHref}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            background: '#588157',
-            color: '#FAF9F6',
-            fontFamily: 'inherit',
-            fontWeight: 600,
-            fontSize: 13,
-            padding: '9px 14px',
-            borderRadius: 10,
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            boxShadow:
-              '0 1px 0 rgba(255,255,255,.18) inset, 0 -1px 0 rgba(0,0,0,.10) inset, 0 10px 24px -14px rgba(58,90,64,.55)',
-          }}
-        >
-          Sign in →
-        </a>
-      </div>
-    );
-  }
-
-  // States 3-4: signed in but no Starter Pack, or already applied. Stay silent.
+  // Guests + signed-in-but-no-Starter-Pack + already-redeemed: stay silent.
+  //
+  // For unauthenticated visitors we can't know if they bought the Starter
+  // Pack, so a generic "sign in to apply your credit" nudge would mislead
+  // the vast majority who never bought one. If a real Starter Pack buyer
+  // visits while signed out, the membership checkout's 401 + auto-resume
+  // flow still applies their credit at Stripe Checkout after sign-in, so
+  // they aren't penalized for not seeing the banner here.
   return null;
 }
