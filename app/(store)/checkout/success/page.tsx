@@ -261,14 +261,13 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
                   Upgrade later, keep your $45
                 </p>
                 <h3 className="font-display text-[26px] md:text-[28px] leading-[1.15] tracking-[-0.012em] text-ink m-0">
-                  When you&apos;re ready for the full library, your{' '}
-                  <em className="not-italic italic text-forest">$45 Starter Pack credits</em>{' '}
-                  toward your first year.
+                  When you&apos;re ready for the full library, we&apos;ll take{' '}
+                  <em className="not-italic italic text-forest">$45 off your first year</em>.
                 </h3>
                 <p className="mt-3 text-[14.5px] leading-[1.6] text-gray-600">
-                  Sign in with this same account and the credit applies automatically at
-                  Stripe checkout. {MEMBERSHIP_PRICE_FORMATTED}/year minus your $45 = first
-                  year is $54.
+                  Same $45 you paid for the Starter Pack. Sign in with this same account
+                  and the discount applies automatically at Stripe checkout.{' '}
+                  {MEMBERSHIP_PRICE_FORMATTED}/year minus your $45 = first year is $54.
                 </p>
                 <div className="mt-5">
                   <Link

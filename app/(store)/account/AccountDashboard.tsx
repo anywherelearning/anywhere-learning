@@ -708,11 +708,11 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                   </em>
                 </h2>
                 <p className="mt-3.5 mb-5 text-[15.5px] leading-[1.55] text-gray-600 max-w-[520px]">
-                  Your{' '}
+                  We&apos;ll take{' '}
                   <strong className="text-forest-dark">
-                    {STARTER_PACK_CREDIT_LABEL} Starter Pack credits
-                  </strong>{' '}
-                  toward your first year of membership.{' '}
+                    {STARTER_PACK_CREDIT_LABEL} off your first year
+                  </strong>
+                  . Same {STARTER_PACK_CREDIT_LABEL} you paid for the Starter Pack.{' '}
                   {IS_FOUNDER_PHASE
                     ? `${MEMBERSHIP_PRICE_YEAR} after that, locked in for life as a founding member.`
                     : `${MEMBERSHIP_PRICE_YEAR} on renewal.`}

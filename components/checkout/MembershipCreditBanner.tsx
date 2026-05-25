@@ -117,8 +117,8 @@ export default function MembershipCreditBanner({
             lineHeight: 1.45,
           }}
         >
-          Your <strong>{data.creditLabel} Starter Pack</strong>{' '}
-          is credited toward your first year. You&apos;ll pay{' '}
+          We&apos;ll take <strong>{data.creditLabel} off your first year</strong>.
+          Same {data.creditLabel} you paid for the Starter Pack. You&apos;ll pay{' '}
           <strong>${data.firstYearPriceUsd}</strong>{' '}
           today, then ${data.standardPriceUsd}/year on renewal.
         </div>
@@ -190,7 +190,7 @@ export default function MembershipCreditBanner({
           </div>
           <div style={{ fontSize: 14, color: '#2D3A2E', lineHeight: 1.45 }}>
             Sign in first and we&apos;ll apply your{' '}
-            <strong>{data.creditLabel} credit</strong> at checkout — first year
+            <strong>{data.creditLabel} credit</strong> at checkout. First year
             is <strong>${data.standardPriceUsd - data.creditUsd > 0
               ? Math.round(data.standardPriceUsd - data.creditUsd)
               : 0}</strong> instead of ${data.standardPriceUsd}.

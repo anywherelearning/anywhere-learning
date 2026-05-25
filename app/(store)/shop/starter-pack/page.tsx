@@ -485,9 +485,10 @@ export default function StarterPackPage() {
                   >
                     <span aria-hidden="true" className="mt-px font-semibold">✓</span>
                     <span>
-                      Want the full library later? Your{' '}
-                      <strong>$45 Starter Pack credits</strong> toward your first year of
-                      membership. Sign in with the same account at checkout to apply it.
+                      Want the full library later? We&apos;ll take{' '}
+                      <strong>$45 off your first year of membership</strong>. Same $45 you
+                      paid for the Starter Pack. Sign in with the same account at checkout
+                      to apply it.
                     </span>
                   </p>
                 </div>
