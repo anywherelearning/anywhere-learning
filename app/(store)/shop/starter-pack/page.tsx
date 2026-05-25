@@ -471,6 +471,25 @@ export default function StarterPackPage() {
                     <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
                     <span>Members get this included</span>
                   </p>
+
+                  {/* Credit reassurance: lowers commitment anxiety for buyers
+                      who are deciding between Starter Pack and full membership.
+                      Frames the Starter Pack as risk-free first step. */}
+                  <p
+                    className="mt-3 inline-flex items-start gap-2 rounded-lg border px-3 py-2 text-[13px] leading-snug text-forest-dark"
+                    style={{
+                      background: '#E6EBDF',
+                      borderColor: '#C9D3BE',
+                      maxWidth: 460,
+                    }}
+                  >
+                    <span aria-hidden="true" className="mt-px font-semibold">✓</span>
+                    <span>
+                      Want the full library later? Your{' '}
+                      <strong>$45 Starter Pack credits</strong> toward your first year of
+                      membership. Sign in with the same account at checkout to apply it.
+                    </span>
+                  </p>
                 </div>
               </ScrollReveal>
             </div>

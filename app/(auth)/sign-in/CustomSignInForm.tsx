@@ -121,6 +121,27 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * Resolves the post-sign-in destination.
+ *
+ * Reads `?redirect_url=…` from the current URL and returns it if it's a safe
+ * same-origin path. Falls back to `/account` otherwise. Same-origin guard
+ * blocks open-redirect attacks via crafted URLs.
+ */
+function getPostSignInDestination(): string {
+  if (typeof window === 'undefined') return '/account';
+  try {
+    const raw = new URL(window.location.href).searchParams.get('redirect_url');
+    if (!raw) return '/account';
+    // Only allow same-origin relative paths. Reject anything starting with a
+    // scheme or "//" (protocol-relative) to prevent open-redirect abuse.
+    if (raw.startsWith('/') && !raw.startsWith('//')) return raw;
+    return '/account';
+  } catch {
+    return '/account';
+  }
+}
+
 export default function CustomSignInForm() {
   const { signIn, isLoaded, setActive } = useSignIn();
   const [pending, startTransition] = useTransition();
@@ -146,7 +167,7 @@ export default function CustomSignInForm() {
         await signIn.authenticateWithRedirect({
           strategy: 'oauth_google',
           redirectUrl: '/sso-callback',
-          redirectUrlComplete: '/account',
+          redirectUrlComplete: getPostSignInDestination(),
         });
       } catch (e) {
         setErr(prettyErr(e, 'Could not start Google sign-in.'));
@@ -167,7 +188,7 @@ export default function CustomSignInForm() {
         });
         if (result.status === 'complete') {
           await setActive({ session: result.createdSessionId });
-          window.location.href = '/account';
+          window.location.href = getPostSignInDestination();
         } else {
           setErr('Additional verification needed. Try the email code option instead.');
         }
@@ -219,7 +240,7 @@ export default function CustomSignInForm() {
         });
         if (result.status === 'complete') {
           await setActive({ session: result.createdSessionId });
-          window.location.href = '/account';
+          window.location.href = getPostSignInDestination();
         } else {
           setErr('Code accepted, but more verification needed.');
         }
@@ -273,7 +294,7 @@ export default function CustomSignInForm() {
         });
         if (result.status === 'complete') {
           await setActive({ session: result.createdSessionId });
-          window.location.href = '/account';
+          window.location.href = getPostSignInDestination();
         } else {
           setErr('Reset accepted, but additional verification needed.');
         }

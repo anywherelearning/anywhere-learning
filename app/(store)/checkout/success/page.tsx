@@ -244,6 +244,45 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           </div>
         </section>
 
+        {/* STARTER → MEMBERSHIP UPGRADE OFFER (only for Starter Pack buyers) */}
+        {!isMember && (
+          <section className="pt-4 pb-6">
+            <div className="mx-auto max-w-[720px] px-6">
+              <div
+                className="rounded-[16px] border p-7 md:p-8"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #E6EBDF 0%, #F5E7D6 100%)',
+                  borderColor: '#C9D3BE',
+                }}
+              >
+                <p className="font-body font-semibold text-[11.5px] uppercase tracking-[0.18em] text-forest-dark m-0 mb-2 inline-flex items-center gap-2">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Upgrade later, keep your $45
+                </p>
+                <h3 className="font-display text-[26px] md:text-[28px] leading-[1.15] tracking-[-0.012em] text-ink m-0">
+                  When you&apos;re ready for the full library, your{' '}
+                  <em className="not-italic italic text-forest">$45 Starter Pack credits</em>{' '}
+                  toward your first year.
+                </h3>
+                <p className="mt-3 text-[14.5px] leading-[1.6] text-gray-600">
+                  Sign in with this same account and the credit applies automatically at
+                  Stripe checkout. {MEMBERSHIP_PRICE_FORMATTED}/year minus your $45 = first
+                  year is $54.
+                </p>
+                <div className="mt-5">
+                  <Link
+                    href="/join"
+                    className="inline-flex items-center gap-2 bg-forest text-cream font-body font-semibold py-3 px-5 rounded-xl text-[14.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark transition-colors"
+                  >
+                    See the membership →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* HELP ROW */}
         <div className="mx-auto max-w-[720px] px-6 pt-6 flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-[13.5px]">
           {content.helpLinks.map((link, i) => (

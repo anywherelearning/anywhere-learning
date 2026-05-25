@@ -5,6 +5,7 @@ import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
+import MembershipCreditBanner from '@/components/checkout/MembershipCreditBanner';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -195,17 +196,50 @@ export default async function JoinPage({
   // Soft banner for visitors who landed on /join from a gated entry point —
   // a PDF link they couldn't open, or /account when they have no access.
   // The download endpoint + account page redirect here with ?from=…&reason=…
+  //
+  // We resolve the viewer's tier so the copy fits their actual situation.
+  // Without this, a Starter Pack buyer would see "Your library access has
+  // ended" — which falsely implies they were once a member.
   const sp = (await searchParams) || {};
   const isStarterUpgrade = sp.reason === 'starter-upgrade';
   const isNoAccess = sp.reason === 'no-access';
   const isMembershipRequired = sp.reason === 'membership-required';
-  const bannerMessage = isStarterUpgrade
-    ? "That activity is in the full membership. Upgrade once and unlock everything."
-    : isNoAccess
-      ? "Your library access has ended. Become a member to open it again."
-      : isMembershipRequired
-        ? "Become a member to open that activity, plus the rest of the library."
-        : null;
+
+  let viewerTier: 'guest' | 'starter' | 'member' = 'guest';
+  try {
+    const { auth: clerkAuth } = await import('@clerk/nextjs/server');
+    const { getAccessTierForClerkId } = await import('@/lib/access');
+    const a = await clerkAuth();
+    if (a.userId) {
+      viewerTier = await getAccessTierForClerkId(a.userId);
+    }
+  } catch {
+    /* Clerk not configured — guest is the safe default. */
+  }
+
+  const bannerMessage = (() => {
+    // "isStarterUpgrade" / "isMembershipRequired" come from clicking through
+    // a specific gated activity, so the singular "that activity" copy fits.
+    if (isStarterUpgrade) {
+      return 'That activity is in the full membership. Upgrade once and unlock everything.';
+    }
+    if (isMembershipRequired) {
+      return 'Become a member to open that activity, plus the rest of the library.';
+    }
+    // "isNoAccess" comes from /account when the visitor has no tier-granting
+    // record. The message is generic (no specific activity in scope), and
+    // should match the viewer's actual tier so it reads naturally.
+    if (isNoAccess) {
+      if (viewerTier === 'starter') {
+        return "Ready for the full library? Your Starter Pack credit applies when you upgrade.";
+      }
+      if (viewerTier === 'member') {
+        return "Your membership is active. If something looks off, please contact us.";
+      }
+      return 'Become a member to unlock the full library.';
+    }
+    return null;
+  })();
   const productLd = {
     '@context': 'https://schema.org',
     '@type': ['Product', 'Service'],
@@ -375,7 +409,12 @@ export default async function JoinPage({
                 life. {m.price} for the year.
               </p>
 
-              <div className="mt-8">
+              {/* Renders nothing when the viewer isn't an eligible Starter Pack buyer. */}
+              <div className="mt-6">
+                <MembershipCreditBanner />
+              </div>
+
+              <div className="mt-6">
                 <CtaBlock m={m} />
               </div>
             </div>

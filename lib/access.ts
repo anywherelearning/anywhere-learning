@@ -70,3 +70,74 @@ export async function findUserByEmail(email: string) {
     .limit(1);
   return rows[0] || null;
 }
+
+import type { StarterPackCreditEligibility } from './starter-pack-credit';
+
+/**
+ * Resolves whether a signed-in user qualifies for the one-time Starter Pack
+ * credit on their first membership purchase.
+ *
+ * Eligible iff: user exists in DB AND has bought the Starter Pack AND has
+ * not previously redeemed the credit.
+ */
+export async function getStarterPackCreditEligibility(
+  clerkId: string | null,
+): Promise<StarterPackCreditEligibility> {
+  if (!clerkId) {
+    return {
+      eligible: false,
+      reason: 'no-user',
+      starterPackPurchasedAt: null,
+      appliedAt: null,
+    };
+  }
+  try {
+    const rows = await db
+      .select({
+        starterPackPurchasedAt: users.starterPackPurchasedAt,
+        starterPackCreditAppliedAt: users.starterPackCreditAppliedAt,
+      })
+      .from(users)
+      .where(eq(users.clerkId, clerkId))
+      .limit(1);
+    const u = rows[0];
+    if (!u) {
+      return {
+        eligible: false,
+        reason: 'no-user',
+        starterPackPurchasedAt: null,
+        appliedAt: null,
+      };
+    }
+    if (!u.starterPackPurchasedAt) {
+      return {
+        eligible: false,
+        reason: 'no-starter-pack',
+        starterPackPurchasedAt: null,
+        appliedAt: u.starterPackCreditAppliedAt,
+      };
+    }
+    if (u.starterPackCreditAppliedAt) {
+      return {
+        eligible: false,
+        reason: 'already-applied',
+        starterPackPurchasedAt: u.starterPackPurchasedAt,
+        appliedAt: u.starterPackCreditAppliedAt,
+      };
+    }
+    return {
+      eligible: true,
+      reason: 'eligible',
+      starterPackPurchasedAt: u.starterPackPurchasedAt,
+      appliedAt: null,
+    };
+  } catch (err) {
+    console.error('[access] getStarterPackCreditEligibility failed:', err);
+    return {
+      eligible: false,
+      reason: 'no-user',
+      starterPackPurchasedAt: null,
+      appliedAt: null,
+    };
+  }
+}

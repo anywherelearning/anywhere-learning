@@ -12,6 +12,11 @@
  * IMPORTANT: when you switch to live keys at launch, you'll need to re-run the
  * script with the LIVE key and replace these IDs. Test-mode IDs only work with
  * test-mode keys.
+ *
+ * For local development with test-mode keys, the corresponding TEST IDs are:
+ *   MEMBERSHIP_FOUNDER:    'price_1TZMETAMzOBftCnthrU2MJLz'
+ *   MEMBERSHIP_STANDARD:   'price_1TZMEUAMzOBftCntMuS7OcZg'
+ *   STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe'
  */
 
 export const STRIPE_PRICES = {

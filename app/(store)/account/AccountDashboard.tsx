@@ -4,7 +4,8 @@ import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
 import ReviewModal from '@/components/shop/ReviewModal';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MEMBERSHIP_PRICE_USD } from '@/lib/membership';
+import { STARTER_PACK_CREDIT_LABEL, firstYearPriceAfterCredit } from '@/lib/starter-pack-credit';
 
 export interface DashboardActivity {
   slug: string;
@@ -688,7 +689,9 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
         </div>
       </section>
 
-      {/* STARTER PACK UPGRADE */}
+      {/* STARTER PACK UPGRADE — emphasizes the $45 credit so users know
+          upgrading effectively costs $54 first year, not the full $99.
+          Headline + sidebar both show the credit math. */}
       {tier === 'starter' && (
         <section className="pt-2 pb-14">
           <div className="mx-auto max-w-[980px] px-6">
@@ -696,34 +699,46 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
               <div>
                 <p className="font-body font-semibold text-[11.5px] uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                   <span className="w-[22px] h-px bg-forest inline-block" />
-                  Ready for more?
+                  Your {STARTER_PACK_CREDIT_LABEL} credit is waiting
                 </p>
                 <h2 className="mt-3.5 font-display text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.08] tracking-[-0.012em] text-balance">
                   Unlock the other 90+ activities for{' '}
-                  <em className="not-italic italic text-forest-dark">{MEMBERSHIP_PRICE_YEAR}.</em>
+                  <em className="not-italic italic text-forest-dark">
+                    ${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)} the first year.
+                  </em>
                 </h2>
                 <p className="mt-3.5 mb-5 text-[15.5px] leading-[1.55] text-gray-600 max-w-[520px]">
+                  Your{' '}
+                  <strong className="text-forest-dark">
+                    {STARTER_PACK_CREDIT_LABEL} Starter Pack credits
+                  </strong>{' '}
+                  toward your first year of membership.{' '}
                   {IS_FOUNDER_PHASE
-                    ? `The membership unlocks the full library and locks in ${MEMBERSHIP_PRICE_YEAR} as a founding member, for life.`
-                    : `The membership unlocks the full library for ${MEMBERSHIP_PRICE_YEAR}.`}
+                    ? `${MEMBERSHIP_PRICE_YEAR} after that, locked in for life as a founding member.`
+                    : `${MEMBERSHIP_PRICE_YEAR} on renewal.`}
                 </p>
                 <CheckoutButton
                   kind="membership"
                   className="inline-flex items-center gap-2.5 bg-forest text-cream font-body font-semibold py-3.5 px-5 rounded-xl text-[15px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <span className="inline-flex items-center gap-2.5">
-                    Upgrade to membership &rarr;
+                    Upgrade for ${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)} &rarr;
                   </span>
                 </CheckoutButton>
               </div>
               <div className="font-display italic text-[clamp(1.375rem,2.8vw,1.875rem)] leading-[1.2] text-forest-dark text-center text-balance">
                 90+ more activities.
                 <br />
-                {MEMBERSHIP_PRICE_YEAR}.
+                <span className="not-italic">
+                  <s className="opacity-50 mr-1.5">{MEMBERSHIP_PRICE_YEAR}</s>
+                  <em>${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)}/yr 1</em>
+                </span>
                 {IS_FOUNDER_PHASE && (
                   <>
                     <br />
-                    <em>Locked in for life.</em>
+                    <em className="text-[16px] font-normal not-italic block mt-1 text-forest-dark/70">
+                      Then locked in for life.
+                    </em>
                   </>
                 )}
               </div>

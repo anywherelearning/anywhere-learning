@@ -116,6 +116,9 @@ async function upsertUser(opts: {
   email: string;
   stripeCustomerId?: string;
   starterPackPurchasedAt?: Date;
+  /** Set when a membership checkout completes with the Starter Pack credit applied.
+   *  Only set once per user; subsequent passes leave the existing value alone. */
+  starterPackCreditAppliedAt?: Date;
 }) {
   const existing = await db
     .select()
@@ -124,12 +127,17 @@ async function upsertUser(opts: {
     .limit(1);
 
   if (existing[0]) {
+    // Only write starterPackCreditAppliedAt if not already set — guards against
+    // a replayed webhook accidentally moving the timestamp forward.
+    const shouldSetCredit =
+      opts.starterPackCreditAppliedAt && !existing[0].starterPackCreditAppliedAt;
     await db
       .update(users)
       .set({
         email: opts.email.toLowerCase(),
         ...(opts.stripeCustomerId && { stripeCustomerId: opts.stripeCustomerId }),
         ...(opts.starterPackPurchasedAt && { starterPackPurchasedAt: opts.starterPackPurchasedAt }),
+        ...(shouldSetCredit && { starterPackCreditAppliedAt: opts.starterPackCreditAppliedAt }),
       })
       .where(eq(users.id, existing[0].id));
     return existing[0].id;
@@ -142,6 +150,7 @@ async function upsertUser(opts: {
       email: opts.email.toLowerCase(),
       stripeCustomerId: opts.stripeCustomerId,
       starterPackPurchasedAt: opts.starterPackPurchasedAt,
+      starterPackCreditAppliedAt: opts.starterPackCreditAppliedAt,
     })
     .returning({ id: users.id });
   return inserted[0].id;
@@ -178,12 +187,20 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
+  // The Starter Pack credit was attached at checkout when the buyer was eligible.
+  // We trust the metadata flag here rather than re-deriving — the eligibility
+  // check at checkout-time is the authoritative gate. Recording it on success
+  // prevents the same user from redeeming it again on a future re-subscribe.
+  const starterPackCreditApplied =
+    tier === 'member' && session.metadata?.starter_pack_credit_applied === 'true';
+
   // 2. Upsert into our DB
   await upsertUser({
     clerkId: clerkUser.id,
     email,
     stripeCustomerId,
     ...(tier === 'starter' && { starterPackPurchasedAt: new Date() }),
+    ...(starterPackCreditApplied && { starterPackCreditAppliedAt: new Date() }),
   });
 
   // 2b. If this was a subscription checkout, pull the subscription that Stripe
