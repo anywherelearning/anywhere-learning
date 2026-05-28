@@ -1,0 +1,82 @@
+/* Dashboard-specific responsive rules.
+   Imported once via the discover layout. Targets the .dashboard-root scope so
+   it can't leak into the rest of the site. */
+
+.dashboard-root {
+  /* Default desktop padding handled by the inner page wrapper */
+}
+
+/* Mobile pass (under 768px) */
+@media (max-width: 767px) {
+  /* Tab bar: smaller padding, smaller chips */
+  .dashboard-root .dashboard-tabs button {
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* Calendar grid: collapse to a more vertical layout */
+  .dashboard-root .calendar-grid {
+    /* Keep grid columns at 7 but shrink min-height so cells stack info nicely */
+  }
+  .dashboard-root .calendar-grid button {
+    min-height: 60px !important;
+    padding: 4px 5px !important;
+  }
+  .dashboard-root .calendar-grid .calendar-event-pill {
+    font-size: 9px !important;
+    padding: 1px 4px !important;
+  }
+
+  /* Greeting headline: smaller on mobile */
+  .dashboard-root .dashboard-greeting {
+    font-size: 40px !important;
+  }
+  .dashboard-root .dashboard-section-title {
+    font-size: 28px !important;
+  }
+
+  /* Inline grids with auto-fit: tighter on mobile */
+  .dashboard-root .grid-stats > * {
+    padding: 12px 14px !important;
+  }
+
+  /* Filter row: stack on mobile */
+  .dashboard-root .filter-row {
+    gap: 8px !important;
+  }
+  .dashboard-root .filter-row > * {
+    flex: 1 1 calc(50% - 4px) !important;
+    min-width: 0 !important;
+  }
+  .dashboard-root .filter-row > [data-full-row] {
+    flex-basis: 100% !important;
+  }
+
+  /* Smart picks / suggestion strips: less aggressive grids */
+  .dashboard-root .picks-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Recommendation hero card: stack image below content */
+  .dashboard-root .recommendation-card {
+    grid-template-columns: 1fr !important;
+    padding: 4px 4px 4px 14px !important;
+  }
+  .dashboard-root .recommendation-card .recommendation-image {
+    aspect-ratio: 4/3 !important;
+    margin: 0 0 8px 0 !important;
+  }
+}
+
+/* Tiny screens: simpler stat row */
+@media (max-width: 480px) {
+  .dashboard-root .grid-stats {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .dashboard-root .picks-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .dashboard-root .dashboard-greeting {
+    font-size: 36px !important;
+  }
+}

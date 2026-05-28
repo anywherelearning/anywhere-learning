@@ -12,20 +12,23 @@
  * IMPORTANT: when you switch to live keys at launch, you'll need to re-run the
  * script with the LIVE key and replace these IDs. Test-mode IDs only work with
  * test-mode keys.
- *
- * For local development with test-mode keys, the corresponding TEST IDs are:
- *   MEMBERSHIP_FOUNDER:    'price_1TZMETAMzOBftCnthrU2MJLz'
- *   MEMBERSHIP_STANDARD:   'price_1TZMEUAMzOBftCntMuS7OcZg'
- *   STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe'
  */
 
+// ⚠️ Before launch: re-run scripts/create-stripe-membership.ts with the LIVE
+//    Stripe key (ALLOW_LIVE_STRIPE=1) and replace these test IDs with the
+//    live ones returned by the script.
+//
+// LIVE IDs (use at launch — currently inactive):
+//   MEMBERSHIP_FOUNDER:    'price_1TZd7YAkIBECpwGmljfvhird'
+//   MEMBERSHIP_STANDARD:   'price_1TZd7ZAkIBECpwGmLH4ogWnu'
+//   STARTER_PACK_ONE_TIME: 'price_1TZd7ZAkIBECpwGmQU3zzPjY'
 export const STRIPE_PRICES = {
-  /** Subscription, $99/year — locked in for the first 100 members. (LIVE) */
-  MEMBERSHIP_FOUNDER: 'price_1TZd7YAkIBECpwGmljfvhird',
-  /** Subscription, $149/year — applies to member 101+. (LIVE) */
-  MEMBERSHIP_STANDARD: 'price_1TZd7ZAkIBECpwGmLH4ogWnu',
-  /** One-time, $44.99 — Starter Pack. (LIVE) */
-  STARTER_PACK_ONE_TIME: 'price_1TZd7ZAkIBECpwGmQU3zzPjY',
+  /** Subscription, $99/year — locked in for the first 100 members. (TEST) */
+  MEMBERSHIP_FOUNDER: 'price_1TZMETAMzOBftCnthrU2MJLz',
+  /** Subscription, $149/year — applies to member 101+. (TEST) */
+  MEMBERSHIP_STANDARD: 'price_1TZMEUAMzOBftCntMuS7OcZg',
+  /** One-time, $44.99 — Starter Pack. (TEST) */
+  STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe',
 } as const;
 
 /** Returns the Stripe Price ID for the currently-active membership rate. */
