@@ -321,7 +321,7 @@ export default async function HomePage() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-[960px] mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3.5 max-w-[960px] mx-auto">
               {CATEGORIES.map((cat, i) => (
                 <ScrollReveal key={cat.name} delay={i * 50}>
                   <Link
