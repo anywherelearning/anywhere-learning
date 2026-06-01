@@ -28,11 +28,16 @@ import { STANDARD_SUBJECTS } from '@/lib/taxonomy';
 import { PROGRAMS, programActivityCount, type Program } from '@/lib/programs';
 import { ENRICHED_BY_SLUG } from '@/lib/activity-metadata';
 import {
-  ChildAvatar,
+  ALIcons,
+  ALTokens,
   CategoryTag,
+  ChildAvatar,
+  Dot,
   Eyebrow,
   GhostButton,
   PrimaryButton,
+  Stepper,
+  accentForSubject,
   resolveSubject,
   tintForCategory,
 } from './dashboard-shared';
@@ -336,14 +341,31 @@ export default function DashboardPlan({
   if (children.length === 0) {
     return (
       <div className="mx-auto max-w-2xl py-16 text-center">
-        <Eyebrow>Plan the week</Eyebrow>
+        <div style={{ display: 'inline-flex' }}>
+          <Eyebrow>Plan the week</Eyebrow>
+        </div>
         <h1
-          className="mt-4 text-2xl text-forest"
-          style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}
+          className="mt-4"
+          style={{
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 30,
+            letterSpacing: '-0.02em',
+            color: ALTokens.color.ink,
+            margin: '14px 0 8px',
+          }}
         >
           Add a kid first
         </h1>
-        <p className="mt-2 text-forest/70" style={{ fontFamily: '"DM Sans"' }}>
+        <p
+          className="mt-2"
+          style={{
+            fontFamily: ALTokens.font,
+            color: ALTokens.color.muted,
+            fontSize: 15,
+            lineHeight: 1.55,
+          }}
+        >
           The planner builds the week around each kid&apos;s goals. Add one or more kids in
           Family Setup, then come back here.
         </p>
@@ -354,63 +376,135 @@ export default function DashboardPlan({
     );
   }
 
+  // Sub-tab icon mapping for the segmented control.
+  const SUB_TABS = [
+    { key: 'ai' as const,      label: 'AI Assist',        Icon: ALIcons.Chat },
+    { key: 'program' as const, label: 'Guided Program',   Icon: ALIcons.Path },
+    { key: 'manual' as const,  label: 'Build it yourself',Icon: ALIcons.Sliders },
+    { key: 'library' as const, label: 'Library',          Icon: ALIcons.Grid },
+  ];
+
+  const isThisWeek = weekStart === isoMonday(todayIso());
+
   return (
     <div className="mx-auto max-w-6xl space-y-8">
-      {/* ─── Header: week navigator ─────────────────────────────────────── */}
+      {/* ─── Editorial week header: eyebrow + DM Sans h1 + nav ──────────── */}
       <header className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <Eyebrow>Plan the week</Eyebrow>
+        <div style={{ maxWidth: '40em' }}>
+          <div style={{ display: 'inline-flex' }}>
+            <Eyebrow>Plan the week</Eyebrow>
+          </div>
           <h1
-            className="mt-2 text-3xl text-forest"
-            style={{ fontFamily: '"DM Sans"', fontWeight: 600, lineHeight: 1.1 }}
+            className="mt-3"
+            style={{
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 36,
+              letterSpacing: '-0.02em',
+              color: ALTokens.color.ink,
+              margin: '12px 0 8px',
+              lineHeight: 1.08,
+              fontVariantNumeric: 'tabular-nums',
+            }}
           >
             {formatRange(weekStart)}
           </h1>
           <p
-            className="mt-1 text-sm text-forest/70"
-            style={{ fontFamily: '"DM Sans"' }}
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 15,
+              color: ALTokens.color.muted,
+              lineHeight: 1.55,
+              margin: 0,
+            }}
           >
-            Set goals. The planner places activities. Skip what gets blown up and
-            it reshuffles.
+            Set the goals. The planner places activities. Skip what gets blown up and it
+            reshuffles.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <GhostButton onClick={() => setWeekStart(addDays(weekStart, -7))}>
-            ← Last week
+          <GhostButton
+            small
+            onClick={() => setWeekStart(addDays(weekStart, -7))}
+            style={{ padding: '9px 14px' }}
+          >
+            <ALIcons.Arrow
+              size={14}
+              color={ALTokens.color.forest}
+              style={{ transform: 'rotate(180deg)' }}
+            />
+            Last week
           </GhostButton>
-          <GhostButton onClick={() => setWeekStart(isoMonday(todayIso()))}>
+          <GhostButton
+            small
+            active={isThisWeek}
+            onClick={() => setWeekStart(isoMonday(todayIso()))}
+            style={{ padding: '9px 14px' }}
+          >
             This week
           </GhostButton>
-          <GhostButton onClick={() => setWeekStart(addDays(weekStart, 7))}>
-            Next week →
+          <GhostButton
+            small
+            onClick={() => setWeekStart(addDays(weekStart, 7))}
+            style={{ padding: '9px 14px' }}
+          >
+            Next week
+            <ALIcons.Arrow size={14} color={ALTokens.color.forest} />
           </GhostButton>
         </div>
       </header>
 
-      {/* ─── How do you want to plan? Four ways to fill the week. ──────── */}
-      <div className="flex flex-wrap gap-1.5 rounded-full border border-forest/10 bg-white p-1.5">
-        {([
-          ['ai', 'AI Assist'],
-          ['program', 'Guided Program'],
-          ['manual', 'Build it yourself'],
-          ['library', 'Library'],
-        ] as const).map(([key, label]) => (
-          <button
-            key={key}
-            type="button"
-            onClick={() => setSubTab(key)}
-            className="rounded-full px-4 py-2 transition-colors cursor-pointer"
-            style={{
-              fontFamily: '"DM Sans"',
-              fontSize: 13,
-              fontWeight: 600,
-              background: subTab === key ? '#588157' : 'transparent',
-              color: subTab === key ? '#FAF9F6' : '#4F5A50',
-            }}
-          >
-            {label}
-          </button>
-        ))}
+      {/* ─── Sub-tab segmented control: icon + label, forest fill when active ─── */}
+      <div
+        className="al-subtabs"
+        style={{
+          display: 'flex',
+          gap: 4,
+          padding: 5,
+          background: ALTokens.color.sand,
+          borderRadius: ALTokens.radius.lg,
+          border: `1px solid ${ALTokens.color.line}`,
+          overflowX: 'auto',
+          scrollbarWidth: 'none',
+        }}
+      >
+        {SUB_TABS.map((s) => {
+          const on = subTab === s.key;
+          return (
+            <button
+              key={s.key}
+              type="button"
+              onClick={() => setSubTab(s.key)}
+              aria-current={on ? 'page' : undefined}
+              className="al-subtab-btn"
+              style={{
+                flex: '1 1 0%',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 8,
+                padding: '11px 14px',
+                borderRadius: ALTokens.radius.md,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                fontFamily: ALTokens.font,
+                fontSize: 14,
+                fontWeight: on ? 700 : 500,
+                color: on ? ALTokens.color.cream : ALTokens.color.muted,
+                background: on ? ALTokens.color.forest : 'transparent',
+                border: `1px solid ${on ? ALTokens.color.forest : 'transparent'}`,
+                boxShadow: on ? ALTokens.shadow.xs : 'none',
+                transition: `all 160ms ${ALTokens.ease}`,
+              }}
+            >
+              <s.Icon
+                size={17}
+                color={on ? ALTokens.color.cream : ALTokens.color.muted}
+              />
+              <span className="al-subtab-label">{s.label}</span>
+            </button>
+          );
+        })}
       </div>
 
       {/* ─── AI assistant: the "just tell me" door ─────────────────────── */}
@@ -443,94 +537,104 @@ export default function DashboardPlan({
         <PlanLibrary kids={children} weekStart={weekStart} onAdded={reload} />
       )}
 
-      {/* ─── Build it yourself: manual goal-based planner ──────────────── */}
+      {/* ─── Build it yourself: editorial planner sheet ─────────────────── */}
       {subTab === 'manual' && (
-      <section
-        className="rounded-2xl border border-forest/10 bg-white p-5"
-        style={{ boxShadow: '0 1px 0 rgba(0,0,0,0.02)' }}
-      >
-        <div className="mb-1">
-          <Eyebrow>Build it yourself</Eyebrow>
-        </div>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h2
-              className="text-base text-forest"
-              style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}
-            >
-              This week&apos;s goals
-            </h2>
-            <p className="mt-0.5 text-xs text-forest/60" style={{ fontFamily: '"DM Sans"' }}>
-              Set how many of each subject per kid. The planner fills these with Anywhere Learning activities.
-            </p>
-          </div>
-          <PrimaryButton onClick={runPlanner} disabled={generating || loading}>
-            {generating ? 'Generating...' : 'Generate week plan'}
-          </PrimaryButton>
-        </div>
-        <div className="mt-4 space-y-4">
-          {kidsToShow.map((kid) => (
-            <KidGoalRow
-              key={kid.id}
-              kid={kid}
-              kidGoals={goals[kid.id] ?? {}}
-              onSetGoal={(subjectId, count) => setGoal(kid.id, subjectId, count)}
-            />
-          ))}
-        </div>
-        {/* Your own stuff: a clear, separate control from the AL goals above. */}
-        <div className="mt-5 border-t border-forest/10 pt-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setMaterialsOpen(true)}
-              className="inline-flex items-center gap-1.5 rounded-full border border-forest/25 px-3 py-1.5 text-forest hover:bg-forest/5 cursor-pointer"
-              style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 12.5 }}
-            >
-              <span style={{ fontSize: 14, lineHeight: 1 }} aria-hidden>+</span>
-              Custom Add
-            </button>
-            <span className="text-xs text-forest/60" style={{ fontFamily: '"DM Sans"' }}>
-              {materials.length > 0
-                ? `${materials.length} of your own material${materials.length === 1 ? '' : 's'} in the mix (Singapore Math, piano, co-op...)`
-                : 'Add your own curriculum, lessons, or co-op so the planner schedules them too'}
-            </span>
-          </div>
-          <p className="mt-2 text-xs text-forest/55" style={{ fontFamily: '"DM Sans"' }}>
-            {windows.length > 0 ? (
-              <>
-                <span className="font-medium text-forest">{windows.length}</span> unavailable
-                window{windows.length === 1 ? '' : 's'} this week.{' '}
-              </>
-            ) : (
-              <>No travel days or unavailable times set. </>
-            )}
-            <button
-              type="button"
-              onClick={() => setWindowEditorOpen(true)}
-              className="text-forest underline-offset-4 hover:underline cursor-pointer"
-              style={{ fontFamily: '"DM Sans"', fontWeight: 500 }}
-            >
-              Edit
-            </button>
-          </p>
-        </div>
-      </section>
+        <BuildItYourselfPanel
+          kidsToShow={kidsToShow}
+          goals={goals}
+          materials={materials}
+          windows={windows}
+          generating={generating}
+          loading={loading}
+          onOpenMaterials={() => setMaterialsOpen(true)}
+          onOpenWindows={() => setWindowEditorOpen(true)}
+          onGenerate={runPlanner}
+          onSetGoal={setGoal}
+        />
       )}
 
-      {/* ─── Generated week view: day-grouped list (shared across sub-tabs) ─── */}
+      {/* ─── Shared week view: hairline divider + day cards ─────────────── */}
+      <div
+        aria-hidden
+        style={{
+          height: 1,
+          background: ALTokens.color.line,
+          marginTop: 8,
+          marginBottom: 4,
+        }}
+      />
       <section className="space-y-4">
-        {/* Single week-level empty hint, shown only when nothing is planned all week. */}
+        {/* "Your week" eyebrow + count band */}
+        <div className="flex flex-wrap items-end justify-between gap-3" style={{ marginBottom: 4 }}>
+          <div>
+            <div style={{ display: 'inline-flex' }}>
+              <Eyebrow>Your week</Eyebrow>
+            </div>
+            <h2
+              style={{
+                fontFamily: ALTokens.font,
+                fontWeight: 700,
+                fontSize: 24,
+                letterSpacing: '-0.01em',
+                color: ALTokens.color.ink,
+                margin: '10px 0 0',
+                fontVariantNumeric: 'tabular-nums',
+              }}
+            >
+              {events.length === 0
+                ? 'Nothing planned yet'
+                : `${events.length} ${events.length === 1 ? 'activity' : 'activities'} placed`}
+            </h2>
+          </div>
+        </div>
+
+        {/* Empty-week message: reframes a blank week as a good thing. */}
         {!loading && events.length === 0 && (
           <div
-            className="rounded-2xl border border-dashed border-forest/20 bg-cream/40 px-5 py-6 text-center"
-            style={{ fontFamily: '"DM Sans"' }}
+            style={{
+              textAlign: 'center',
+              padding: '40px 24px',
+              background: ALTokens.color.sand,
+              borderRadius: ALTokens.radius.lg,
+              border: `1px dashed ${ALTokens.color.line}`,
+              fontFamily: ALTokens.font,
+            }}
           >
-            <p className="text-forest" style={{ fontWeight: 600, fontSize: 15 }}>
-              Your week is empty.
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                margin: '0 auto 14px',
+                borderRadius: '50%',
+                background: 'rgba(88,129,87,0.10)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <ALIcons.Leaf size={24} color={ALTokens.color.forest} />
+            </div>
+            <p
+              style={{
+                fontSize: 16,
+                fontWeight: 600,
+                color: ALTokens.color.forestInk,
+                margin: '0 0 6px',
+              }}
+            >
+              A blank week is a good thing.
             </p>
-            <p className="mt-1 text-forest/65" style={{ fontSize: 13 }}>
-              Fill it any of four ways above: ask the assistant, start a program, build it by subject, or add from the library.
+            <p
+              style={{
+                fontSize: 14,
+                color: ALTokens.color.muted,
+                margin: '0 auto',
+                maxWidth: 380,
+                lineHeight: 1.55,
+              }}
+            >
+              Fill it any of the four ways above, or leave room to follow what the day brings.
+              Both count.
             </p>
           </div>
         )}
@@ -558,7 +662,7 @@ export default function DashboardPlan({
           }
 
           const monthLabel = new Date(`${date}T00:00:00Z`).toLocaleDateString(undefined, {
-            month: 'long',
+            month: 'short',
             timeZone: 'UTC',
           });
           const dayNum = new Date(`${date}T00:00:00Z`).getUTCDate();
@@ -566,36 +670,60 @@ export default function DashboardPlan({
           return (
             <article
               key={label}
-              className={`rounded-2xl border bg-white ${
-                isToday ? 'border-forest/40 ring-1 ring-forest/10' : 'border-forest/10'
-              } ${allOff ? 'opacity-60' : ''}`}
+              style={{
+                background: ALTokens.color.paper,
+                borderRadius: ALTokens.radius.lg,
+                border: `1px solid ${isToday ? 'rgba(88,129,87,0.32)' : ALTokens.color.line}`,
+                boxShadow: isToday ? ALTokens.shadow.xs : 'none',
+                opacity: allOff ? 0.65 : 1,
+                overflow: 'hidden',
+                transition: `all 180ms ${ALTokens.ease}`,
+              }}
             >
               {/* Day header */}
-              <header className="flex flex-wrap items-baseline justify-between gap-3 border-b border-forest/10 px-5 py-3.5">
+              <header
+                className="flex flex-wrap items-baseline justify-between gap-3"
+                style={{
+                  borderBottom: `1px solid ${ALTokens.color.lineSoft}`,
+                  padding: '14px 20px',
+                }}
+              >
                 <div className="flex items-baseline gap-2">
-                  <p
-                    className="text-forest"
-                    style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 18 }}
+                  <span
+                    style={{
+                      fontFamily: ALTokens.font,
+                      fontSize: 12,
+                      fontWeight: 700,
+                      letterSpacing: '.10em',
+                      textTransform: 'uppercase',
+                      color: isToday ? ALTokens.color.forest : ALTokens.color.forestInk,
+                    }}
                   >
                     {label}
-                  </p>
-                  <p
-                    className="text-forest/60"
-                    style={{ fontFamily: '"DM Sans"', fontSize: 13 }}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: ALTokens.font,
+                      fontSize: 13,
+                      color: ALTokens.color.muted,
+                      fontVariantNumeric: 'tabular-nums',
+                    }}
                   >
-                    {monthLabel} {dayNum}
-                  </p>
+                    · {monthLabel} {dayNum}
+                  </span>
                   {isToday && (
                     <span
-                      className="ml-1 rounded-full px-2 py-0.5"
+                      className="ml-1"
                       style={{
-                        background: '#E6EBDF',
-                        color: '#3A5A40',
-                        fontFamily: '"DM Sans"',
+                        background: 'rgba(212,163,115,0.18)',
+                        color: ALTokens.color.goldDark,
+                        fontFamily: ALTokens.font,
                         fontSize: 10.5,
-                        fontWeight: 600,
-                        letterSpacing: '.06em',
+                        fontWeight: 700,
+                        letterSpacing: '.10em',
                         textTransform: 'uppercase',
+                        padding: '2px 8px',
+                        borderRadius: ALTokens.radius.pill,
                       }}
                     >
                       Today
@@ -605,13 +733,14 @@ export default function DashboardPlan({
                 <div className="flex items-center gap-2">
                   {allOff && (
                     <span
-                      className="rounded-full px-2.5 py-1"
                       style={{
-                        background: '#F2EFE4',
-                        color: '#5A5240',
-                        fontFamily: '"DM Sans"',
+                        background: ALTokens.color.sand,
+                        color: ALTokens.color.body,
+                        fontFamily: ALTokens.font,
                         fontSize: 11,
                         fontWeight: 600,
+                        padding: '4px 10px',
+                        borderRadius: ALTokens.radius.pill,
                       }}
                     >
                       Day off
@@ -619,22 +748,26 @@ export default function DashboardPlan({
                   )}
                   {!allOff && momOutMin > 0 && (
                     <span
-                      className="rounded-full px-2.5 py-1"
-                      title="Parent unavailable - solo work scheduled"
+                      title="Parent unavailable. Solo work scheduled."
                       style={{
-                        background: '#F5E7D6',
-                        color: '#7A5E1F',
-                        fontFamily: '"DM Sans"',
+                        background: 'rgba(212,163,115,0.18)',
+                        color: ALTokens.color.goldDark,
+                        fontFamily: ALTokens.font,
                         fontSize: 11,
                         fontWeight: 600,
+                        padding: '4px 10px',
+                        borderRadius: ALTokens.radius.pill,
                       }}
                     >
-                      You&apos;re out · {Math.round(momOutMin / 60 * 10) / 10}h
+                      You&apos;re out · {Math.round((momOutMin / 60) * 10) / 10}h
                     </span>
                   )}
                   <span
-                    className="text-forest/50"
-                    style={{ fontFamily: '"DM Sans"', fontSize: 12 }}
+                    style={{
+                      fontFamily: ALTokens.font,
+                      fontSize: 12,
+                      color: ALTokens.color.faint,
+                    }}
                   >
                     {events.length === 0 ? 'Nothing planned' : `${events.length} planned`}
                   </span>
@@ -645,18 +778,20 @@ export default function DashboardPlan({
               {events.length === 0 ? (
                 allOff ? null : (
                   <p
-                    className="px-5 py-3 text-center"
                     style={{
-                      fontFamily: '"DM Sans"',
+                      fontFamily: ALTokens.font,
                       fontSize: 12.5,
-                      color: '#B8BBB2',
+                      color: ALTokens.color.faint,
+                      padding: '14px 20px',
+                      textAlign: 'center',
+                      margin: 0,
                     }}
                   >
                     Open
                   </p>
                 )
               ) : (
-                <div className="divide-y divide-forest/5">
+                <div style={{ borderTop: `1px solid ${ALTokens.color.lineSoft}` }}>
                   {/* Per-kid sections */}
                   {children
                     .filter((kid) => perKid.has(kid.id))
@@ -688,18 +823,35 @@ export default function DashboardPlan({
       {/* ─── Last run summary ──────────────────────────────────────────── */}
       {lastResult && lastResult.notes.length > 0 && (
         <section
-          className="rounded-xl border border-gold/30 bg-gold/5 p-4"
-          style={{ fontFamily: '"DM Sans"' }}
+          style={{
+            borderRadius: ALTokens.radius.md,
+            border: `1px solid rgba(212,163,115,0.32)`,
+            background: 'rgba(212,163,115,0.07)',
+            padding: '14px 18px',
+            fontFamily: ALTokens.font,
+          }}
         >
-          <p
-            className="text-xs uppercase text-forest/60"
-            style={{ fontWeight: 600, letterSpacing: '.12em' }}
+          <div style={{ display: 'inline-flex' }}>
+            <Eyebrow>Planner notes</Eyebrow>
+          </div>
+          <ul
+            style={{
+              margin: '10px 0 0',
+              padding: 0,
+              listStyle: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 6,
+              fontSize: 14,
+              color: ALTokens.color.body,
+              lineHeight: 1.5,
+            }}
           >
-            Planner notes
-          </p>
-          <ul className="mt-2 space-y-1 text-sm text-forest/80">
             {lastResult.notes.map((note, i) => (
-              <li key={i}>· {note}</li>
+              <li key={i} style={{ display: 'flex', gap: 8 }}>
+                <span style={{ color: ALTokens.color.gold }} aria-hidden>·</span>
+                <span>{note}</span>
+              </li>
             ))}
           </ul>
         </section>
@@ -730,7 +882,282 @@ export default function DashboardPlan({
   );
 }
 
-// ─── Per-kid goal row ────────────────────────────────────────────────────────
+// ─── Build-it-yourself panel ────────────────────────────────────────────────
+//
+// Editorial hero panel: linear-gradient on cream-to-sand, 4px river spine,
+// eyebrow + Sliders icon header, the live "sessions planned" counter top
+// right, per-kid avatar tile, per-subject stepper rows that tint in the
+// subject's accent color as you add, "Custom Add" pill, unavailable
+// windows line, and a prominent Generate primary CTA.
+
+function BuildItYourselfPanel({
+  kidsToShow,
+  goals,
+  materials,
+  windows,
+  generating,
+  loading,
+  onOpenMaterials,
+  onOpenWindows,
+  onGenerate,
+  onSetGoal,
+}: {
+  kidsToShow: Child[];
+  goals: WeeklyGoals;
+  materials: CustomResource[];
+  windows: UnavailableWindow[];
+  generating: boolean;
+  loading: boolean;
+  onOpenMaterials: () => void;
+  onOpenWindows: () => void;
+  onGenerate: () => void;
+  onSetGoal: (childId: string, subjectId: string, count: number) => void;
+}) {
+  // Live counter: sum of all goals across the kids in view.
+  const totalSessions = useMemo(() => {
+    let n = 0;
+    for (const kid of kidsToShow) {
+      const kg = goals[kid.id] ?? {};
+      for (const v of Object.values(kg)) n += v;
+    }
+    return n;
+  }, [goals, kidsToShow]);
+
+  const accent = ALTokens.color.river;
+  const canGenerate = totalSessions > 0 && !generating && !loading;
+
+  return (
+    <section
+      style={{
+        position: 'relative',
+        background: 'linear-gradient(166deg, #fffdf9 0%, #f6f1e7 100%)',
+        borderRadius: ALTokens.radius.xl,
+        border: `1px solid ${ALTokens.color.line}`,
+        padding: 'clamp(20px, 4vw, 32px)',
+        boxShadow: ALTokens.shadow.sm,
+        overflow: 'hidden',
+      }}
+    >
+      {/* 4px accent rule along the top edge */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 4,
+          background: accent,
+          opacity: 0.85,
+        }}
+      />
+
+      {/* Header: eyebrow + Sliders icon, live counter aligned right */}
+      <div
+        className="flex flex-wrap items-start justify-between"
+        style={{ gap: 16 }}
+      >
+        <div style={{ maxWidth: '32em' }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+              marginBottom: 14,
+            }}
+          >
+            <span
+              aria-hidden
+              style={{
+                width: 32,
+                height: 32,
+                borderRadius: ALTokens.radius.sm,
+                background: `${accent}22`,
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <ALIcons.Sliders size={18} color={accent} />
+            </span>
+            <Eyebrow color={accent}>Build it yourself</Eyebrow>
+          </div>
+          <h3
+            style={{
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 26,
+              letterSpacing: '-0.015em',
+              color: ALTokens.color.ink,
+              lineHeight: 1.15,
+              margin: 0,
+            }}
+          >
+            Set the rhythm. We place the activities.
+          </h3>
+          <p
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 15,
+              color: ALTokens.color.body,
+              lineHeight: 1.55,
+              margin: '10px 0 0',
+              maxWidth: '34em',
+            }}
+          >
+            How many of each subject this week, per kid? The planner fills these with real
+            Anywhere Learning activities.
+          </p>
+        </div>
+        <div
+          style={{ textAlign: 'right', flexShrink: 0, minWidth: 130 }}
+        >
+          <div
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 36,
+              fontWeight: 700,
+              lineHeight: 1,
+              color: ALTokens.color.forest,
+              fontVariantNumeric: 'tabular-nums',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {totalSessions}
+          </div>
+          <div
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 12,
+              color: ALTokens.color.muted,
+              marginTop: 4,
+              letterSpacing: '.04em',
+            }}
+          >
+            sessions planned
+          </div>
+        </div>
+      </div>
+
+      {/* Per-kid goal blocks */}
+      <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 22 }}>
+        {kidsToShow.map((kid) => (
+          <KidGoalRow
+            key={kid.id}
+            kid={kid}
+            kidGoals={goals[kid.id] ?? {}}
+            onSetGoal={(subjectId, count) => onSetGoal(kid.id, subjectId, count)}
+          />
+        ))}
+      </div>
+
+      {/* Action footer: Custom Add pill + unavailable line + Generate CTA */}
+      <div
+        style={{
+          marginTop: 24,
+          paddingTop: 18,
+          borderTop: `1px solid ${ALTokens.color.lineSoft}`,
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 12,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
+          <button
+            type="button"
+            onClick={onOpenMaterials}
+            className="cursor-pointer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 7,
+              padding: '8px 16px',
+              borderRadius: ALTokens.radius.pill,
+              background: ALTokens.color.paper,
+              border: `1px solid ${ALTokens.color.line}`,
+              color: ALTokens.color.forest,
+              fontFamily: ALTokens.font,
+              fontWeight: 600,
+              fontSize: 13,
+              cursor: 'pointer',
+              transition: `all 160ms ${ALTokens.ease}`,
+            }}
+          >
+            <ALIcons.Plus size={14} color={ALTokens.color.forest} />
+            Custom Add
+          </button>
+          <p
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 13,
+              color: ALTokens.color.muted,
+              margin: 0,
+              maxWidth: 360,
+              lineHeight: 1.5,
+            }}
+          >
+            {materials.length > 0
+              ? `${materials.length} of your own material${materials.length === 1 ? '' : 's'} in the mix. Singapore Math, piano, co-op.`
+              : 'Add your own curriculum, lessons, or co-op so the planner schedules them too.'}
+          </p>
+        </div>
+        <PrimaryButton onClick={onGenerate} disabled={!canGenerate}>
+          {generating ? 'Generating...' : 'Generate week plan'}
+          {!generating && <ALIcons.Arrow size={15} color={ALTokens.color.cream} />}
+        </PrimaryButton>
+      </div>
+
+      {/* Unavailable windows line, secondary */}
+      <p
+        style={{
+          marginTop: 14,
+          fontFamily: ALTokens.font,
+          fontSize: 12.5,
+          color: ALTokens.color.muted,
+          lineHeight: 1.5,
+        }}
+      >
+        {windows.length > 0 ? (
+          <>
+            <span style={{ fontWeight: 600, color: ALTokens.color.forestInk }}>
+              {windows.length}
+            </span>{' '}
+            unavailable window{windows.length === 1 ? '' : 's'} this week.{' '}
+          </>
+        ) : (
+          <>No travel days or unavailable times set. </>
+        )}
+        <button
+          type="button"
+          onClick={onOpenWindows}
+          className="cursor-pointer"
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            color: ALTokens.color.forest,
+            fontFamily: ALTokens.font,
+            fontWeight: 600,
+            fontSize: 12.5,
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            textUnderlineOffset: 3,
+          }}
+        >
+          Edit
+        </button>
+      </p>
+    </section>
+  );
+}
+
+// ─── Per-kid goal row (Almanac restyle) ─────────────────────────────────────
+//
+// One block per kid: avatar tile + name + total, then per-subject rows that
+// tint their border in the subject accent when the count is > 0. The
+// shared Stepper primitive handles the -/+ control.
 
 function KidGoalRow({
   kid,
@@ -744,30 +1171,48 @@ function KidGoalRow({
   const totalGoals = Object.values(kidGoals).reduce((sum, n) => sum + n, 0);
 
   return (
-    <div className="rounded-xl border border-forest/10 bg-cream/40 p-3">
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <ChildAvatar child={kid} size={28} />
-          <p
-            className="text-sm text-forest"
-            style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}
-          >
-            {kid.name}
-          </p>
-        </div>
-        <p
-          className="text-xs text-forest/60"
-          style={{ fontFamily: '"DM Sans"' }}
+    <div>
+      <div
+        className="flex items-center"
+        style={{ gap: 10, marginBottom: 12 }}
+      >
+        <ChildAvatar child={kid} size={32} />
+        <span
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 15,
+            fontWeight: 700,
+            color: ALTokens.color.ink,
+          }}
         >
-          {totalGoals === 0 ? 'No goals set' : `${totalGoals} activities target`}
-        </p>
+          {kid.name}
+        </span>
+        <span
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 12.5,
+            color: ALTokens.color.muted,
+          }}
+        >
+          ·{' '}
+          {totalGoals === 0
+            ? 'no goals set'
+            : `${totalGoals} session${totalGoals === 1 ? '' : 's'}`}
+        </span>
       </div>
-      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+      <div
+        className="al-goal-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: 8,
+        }}
+      >
         {STANDARD_SUBJECTS.map((subj) => (
-          <GoalStepper
+          <GoalStepperRow
             key={subj.id}
             label={subj.label}
-            color={subj.color}
+            accent={accentForSubject(subj.id)}
             value={kidGoals[subj.id] ?? 0}
             onChange={(n) => onSetGoal(subj.id, n)}
           />
@@ -777,108 +1222,60 @@ function KidGoalRow({
   );
 }
 
-function GoalStepper({
+/**
+ * Single stepper row inside the goal grid. Border tints to the subject
+ * accent (with 33% opacity) when value > 0. Uses the shared `Stepper`
+ * primitive.
+ */
+function GoalStepperRow({
   label,
-  color,
+  accent,
   value,
   onChange,
 }: {
   label: string;
-  color: string;
+  accent: string;
   value: number;
   onChange: (next: number) => void;
 }) {
+  const active = value > 0;
   return (
     <div
-      className="flex items-center justify-between rounded-lg border bg-white px-2.5 py-1.5"
       style={{
-        borderColor: value > 0 ? color : 'rgba(88,129,87,.12)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: 12,
+        padding: '11px 14px',
+        background: ALTokens.color.paper,
+        border: `1px solid ${active ? `${accent}55` : ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.md,
+        transition: `border-color 180ms ${ALTokens.ease}`,
       }}
     >
-      <div className="flex min-w-0 items-center gap-1.5">
-        <span
-          aria-hidden
-          style={{
-            width: 8,
-            height: 8,
-            background: color,
-            borderRadius: 999,
-            display: 'inline-block',
-            flexShrink: 0,
-          }}
-        />
-        <span
-          className="truncate"
-          style={{
-            fontFamily: '"DM Sans"',
-            fontSize: 12,
-            color: '#3D5C3B',
-            fontWeight: 500,
-          }}
-        >
-          {label}
-        </span>
-      </div>
-      <div className="flex items-center gap-0.5">
-        <StepperButton
-          onClick={() => onChange(Math.max(0, value - 1))}
-          disabled={value === 0}
-          ariaLabel={`Decrease ${label}`}
-        >
-          −
-        </StepperButton>
-        <span
-          className="w-4 text-center"
-          style={{
-            fontFamily: '"DM Sans"',
-            fontSize: 13,
-            fontWeight: 600,
-            color: value > 0 ? color : '#9B9F94',
-          }}
-        >
-          {value}
-        </span>
-        <StepperButton onClick={() => onChange(value + 1)} ariaLabel={`Increase ${label}`}>
-          +
-        </StepperButton>
-      </div>
+      <span
+        className="truncate"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          fontFamily: ALTokens.font,
+          fontSize: 14.5,
+          fontWeight: 500,
+          color: ALTokens.color.ink,
+          minWidth: 0,
+        }}
+      >
+        <Dot color={accent} />
+        <span className="truncate">{label}</span>
+      </span>
+      <Stepper
+        value={value}
+        onChange={onChange}
+        accent={accent}
+        ariaLabel={`${label} sessions`}
+      />
     </div>
-  );
-}
-
-function StepperButton({
-  children,
-  onClick,
-  disabled,
-  ariaLabel,
-}: {
-  children: React.ReactNode;
-  onClick: () => void;
-  disabled?: boolean;
-  ariaLabel: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      style={{
-        width: 28,
-        height: 28,
-        borderRadius: 7,
-        border: '1px solid rgba(88,129,87,.18)',
-        background: disabled ? 'transparent' : '#FAF9F6',
-        color: disabled ? '#C5C8C0' : '#3D5C3B',
-        fontFamily: '"DM Sans"',
-        fontWeight: 600,
-        fontSize: 15,
-        lineHeight: 1,
-        cursor: disabled ? 'default' : 'pointer',
-      }}
-    >
-      {children}
-    </button>
   );
 }
 
@@ -896,23 +1293,47 @@ function KidDaySection({
   onSkip: (e: CalendarEvent) => void;
 }) {
   return (
-    <div className="px-5 py-4">
-      <div className="mb-3 flex items-center gap-2">
-        <ChildAvatar child={kid} size={26} />
-        <p
-          className="text-forest"
-          style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 14 }}
+    <div style={{ padding: '14px 20px 16px' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          marginBottom: 10,
+        }}
+      >
+        <ChildAvatar child={kid} size={24} />
+        <span
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 13,
+            fontWeight: 700,
+            color: ALTokens.color.forestInk,
+            letterSpacing: '.02em',
+          }}
         >
           {kid.name}
-        </p>
+        </span>
         <span
-          className="text-forest/50"
-          style={{ fontFamily: '"DM Sans"', fontSize: 12 }}
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 12,
+            color: ALTokens.color.muted,
+          }}
         >
           · {events.length} activit{events.length === 1 ? 'y' : 'ies'}
         </span>
       </div>
-      <ul className="space-y-2">
+      <ul
+        style={{
+          margin: 0,
+          padding: 0,
+          listStyle: 'none',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+        }}
+      >
         {events.map((ev) => (
           <PlannedEventRow
             key={ev.id}
@@ -939,37 +1360,70 @@ function TogetherDaySection({
   onSkip: (e: CalendarEvent) => void;
 }) {
   return (
-    <div className="bg-cream/40 px-5 py-4">
-      <div className="mb-3 flex items-center gap-2">
-        <span className="flex -space-x-1.5">
-          {kids.slice(0, 4).map((k) => (
+    <div
+      style={{
+        background: ALTokens.color.sand,
+        padding: '14px 20px 16px',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          marginBottom: 10,
+        }}
+      >
+        <span style={{ display: 'inline-flex' }}>
+          {kids.slice(0, 4).map((k, i) => (
             <span
               key={k.id}
-              style={{ border: '2px solid #FBFAF6', borderRadius: 999, display: 'inline-flex' }}
+              style={{
+                marginLeft: i === 0 ? 0 : -6,
+                border: `2px solid ${ALTokens.color.sand}`,
+                borderRadius: 999,
+                display: 'inline-flex',
+              }}
             >
               <ChildAvatar child={k} size={22} />
             </span>
           ))}
         </span>
-        <p
-          className="text-forest"
-          style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 14 }}
+        <span
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 13,
+            fontWeight: 700,
+            color: ALTokens.color.forestInk,
+          }}
         >
           Together
-        </p>
+        </span>
         <span
-          className="text-forest/55"
-          style={{ fontFamily: '"DM Sans"', fontSize: 12 }}
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 12,
+            color: ALTokens.color.muted,
+          }}
         >
           · {kids.length > 0 ? kids.map((k) => k.name).join(', ') : 'whole family'}
         </span>
       </div>
-      <ul className="space-y-2">
+      <ul
+        style={{
+          margin: 0,
+          padding: 0,
+          listStyle: 'none',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+        }}
+      >
         {events.map((ev) => (
           <PlannedEventRow
             key={ev.id}
             event={ev}
-            accentColor="#588157"
+            accentColor={ALTokens.color.forest}
             onComplete={onComplete}
             onSkip={onSkip}
           />
@@ -996,68 +1450,93 @@ function PlannedEventRow({
     either: 'Either',
   };
   const modeColor: Record<typeof event.mode, string> = {
-    independent: '#7A5E1F',
-    together: '#3A5A40',
-    either: '#5A5240',
+    independent: ALTokens.color.goldDark,
+    together: ALTokens.color.forestInk,
+    either: ALTokens.color.body,
   };
   const modeBg: Record<typeof event.mode, string> = {
-    independent: '#F5E7D6',
-    together: '#E6EBDF',
-    either: '#F2EFE4',
+    independent: 'rgba(212,163,115,0.18)',
+    together: 'rgba(88,129,87,0.10)',
+    either: ALTokens.color.sand,
   };
   const duration = event.durationMinutes
     ? event.durationMinutes >= 60
-      ? `~${Math.round(event.durationMinutes / 15) * 15 / 60}h`
+      ? `~${(Math.round(event.durationMinutes / 15) * 15) / 60}h`
       : `~${event.durationMinutes} min`
     : null;
 
   if (event.completed) {
     return (
       <li
-        className="flex items-center gap-2 rounded-lg bg-forest/5 px-3 py-2"
-        style={{ fontFamily: '"DM Sans"' }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          padding: '8px 12px',
+          background: 'rgba(88,129,87,0.06)',
+          borderRadius: ALTokens.radius.sm,
+          fontFamily: ALTokens.font,
+        }}
       >
-        <span style={{ color: '#3A5A40', fontSize: 14 }} aria-hidden>
-          ✓
-        </span>
-        <p
-          className="line-through text-forest/55"
-          style={{ fontSize: 13 }}
+        <ALIcons.Check size={14} color={ALTokens.color.forest} />
+        <span
           title={event.title}
+          style={{
+            fontSize: 13,
+            color: ALTokens.color.muted,
+            textDecoration: 'line-through',
+          }}
         >
           {event.title}
-        </p>
+        </span>
       </li>
     );
   }
 
   return (
     <li
-      className="rounded-xl border border-forest/10 bg-white"
-      style={{ borderLeft: `3px solid ${accentColor}` }}
+      style={{
+        background: ALTokens.color.cream,
+        border: `1px solid ${ALTokens.color.lineSoft}`,
+        borderLeft: `3px solid ${accentColor}`,
+        borderRadius: ALTokens.radius.md,
+      }}
     >
-      <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-start sm:justify-between">
+      <div
+        className="flex flex-col sm:flex-row sm:items-start sm:justify-between"
+        style={{ gap: 12, padding: 14 }}
+      >
         {/* Left: title + meta */}
         <div className="min-w-0 flex-1">
           <p
-            className="text-forest"
-            style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 15, lineHeight: 1.3 }}
             title={event.title}
+            style={{
+              fontFamily: ALTokens.font,
+              fontWeight: 600,
+              fontSize: 15,
+              lineHeight: 1.3,
+              color: ALTokens.color.ink,
+              margin: 0,
+            }}
           >
             {event.title}
           </p>
-          <div className="mt-2 flex flex-wrap items-center gap-2">
+          <div
+            className="flex flex-wrap items-center"
+            style={{ marginTop: 8, gap: 7 }}
+          >
             {event.customResourceId || event.type === 'custom' ? (
               <span
-                className="rounded-full px-2.5 py-1"
+                title="Your own curriculum"
                 style={{
-                  background: '#EDE7DA',
-                  color: '#5A5240',
-                  fontFamily: '"DM Sans"',
+                  background: ALTokens.color.sand,
+                  color: ALTokens.color.body,
+                  fontFamily: ALTokens.font,
                   fontSize: 11,
                   fontWeight: 600,
+                  padding: '4px 10px',
+                  borderRadius: ALTokens.radius.pill,
                 }}
-                title="Your own curriculum"
               >
                 Your material
               </span>
@@ -1065,21 +1544,27 @@ function PlannedEventRow({
               event.category && <CategoryTag category={event.category} />
             )}
             <span
-              className="rounded-full px-2.5 py-1"
               style={{
                 background: modeBg[event.mode],
                 color: modeColor[event.mode],
-                fontFamily: '"DM Sans"',
+                fontFamily: ALTokens.font,
                 fontSize: 11,
                 fontWeight: 600,
+                padding: '4px 10px',
+                borderRadius: ALTokens.radius.pill,
               }}
             >
               {modeLabel[event.mode]}
             </span>
             {duration && (
               <span
-                className="text-forest/55"
-                style={{ fontFamily: '"DM Sans"', fontSize: 11.5, fontWeight: 500 }}
+                style={{
+                  fontFamily: ALTokens.font,
+                  fontSize: 11.5,
+                  fontWeight: 500,
+                  color: ALTokens.color.muted,
+                  fontVariantNumeric: 'tabular-nums',
+                }}
               >
                 {duration}
               </span>
@@ -1087,8 +1572,13 @@ function PlannedEventRow({
           </div>
           {event.notes && !event.notes.startsWith('Moved ') && (
             <p
-              className="mt-1.5 text-forest/55"
-              style={{ fontFamily: '"DM Sans"', fontSize: 12 }}
+              style={{
+                marginTop: 8,
+                fontFamily: ALTokens.font,
+                fontSize: 12,
+                color: ALTokens.color.muted,
+                lineHeight: 1.5,
+              }}
             >
               {event.notes.length > 120 ? `${event.notes.slice(0, 120)}...` : event.notes}
             </p>
@@ -1096,39 +1586,72 @@ function PlannedEventRow({
         </div>
 
         {/* Right: actions */}
-        <div className="flex shrink-0 items-center gap-1.5">
+        <div className="flex shrink-0 items-center" style={{ gap: 6 }}>
           {event.productSlug && (
             <a
               href={`/api/download/activity/${event.productSlug}?view=1`}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md px-3 py-1.5 hover:opacity-90"
-              style={{
-                background: '#588157',
-                color: '#FAF9F6',
-                fontFamily: '"DM Sans"',
-                fontSize: 12,
-                fontWeight: 600,
-              }}
               title="Open the activity in a new tab"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 5,
+                background: ALTokens.color.forest,
+                color: ALTokens.color.cream,
+                fontFamily: ALTokens.font,
+                fontSize: 12.5,
+                fontWeight: 600,
+                padding: '7px 12px',
+                borderRadius: ALTokens.radius.sm,
+                textDecoration: 'none',
+                transition: `all 160ms ${ALTokens.ease}`,
+              }}
             >
-              Open ↗
+              Open
+              <ALIcons.Arrow size={12} color={ALTokens.color.cream} />
             </a>
           )}
           <button
             type="button"
             onClick={() => onComplete(event)}
-            className="rounded-md border border-forest/25 px-3 py-1.5 text-forest/85 hover:bg-forest/5 cursor-pointer"
-            style={{ fontFamily: '"DM Sans"', fontSize: 12, fontWeight: 500 }}
+            className="cursor-pointer"
+            style={{
+              background: 'transparent',
+              border: `1px solid ${ALTokens.color.line}`,
+              color: ALTokens.color.forest,
+              fontFamily: ALTokens.font,
+              fontSize: 12.5,
+              fontWeight: 600,
+              padding: '7px 12px',
+              borderRadius: ALTokens.radius.sm,
+              cursor: 'pointer',
+              transition: `all 160ms ${ALTokens.ease}`,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+            }}
           >
+            <ALIcons.Check size={12} color={ALTokens.color.forest} />
             Done
           </button>
           <button
             type="button"
             onClick={() => onSkip(event)}
-            className="rounded-md border border-forest/15 px-3 py-1.5 text-forest/60 hover:bg-cream cursor-pointer"
-            style={{ fontFamily: '"DM Sans"', fontSize: 12, fontWeight: 500 }}
             title="Skip and reshuffle to another day this week"
+            className="cursor-pointer"
+            style={{
+              background: 'transparent',
+              border: `1px solid ${ALTokens.color.lineSoft}`,
+              color: ALTokens.color.muted,
+              fontFamily: ALTokens.font,
+              fontSize: 12.5,
+              fontWeight: 500,
+              padding: '7px 12px',
+              borderRadius: ALTokens.radius.sm,
+              cursor: 'pointer',
+              transition: `all 160ms ${ALTokens.ease}`,
+            }}
           >
             Skip
           </button>

@@ -1,11 +1,14 @@
 'use client';
 
 /**
- * Shared visual primitives used across all three dashboard tabs.
- * Kept in one file so the design system stays internally consistent.
+ * Shared visual primitives used across all dashboard tabs.
+ *
+ * Houses the "Almanac" design language (ALTokens) plus all existing
+ * primitives. Existing exports keep their signatures so callers don't
+ * break; the implementations now lean on ALTokens for visual coherence.
  */
 
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode, useState } from 'react';
 import { STANDARD_SUBJECTS, getSubjectById } from '@/lib/taxonomy';
 import { CATEGORY_LABELS } from '@/lib/categories';
 import type { CustomSubject, Child } from './dashboard-types';
@@ -13,6 +16,76 @@ import { KID_AVATAR_IDS, KidAvatarSvg } from './kid-avatars';
 
 export const SERIF = '"DM Serif Display", Georgia, serif';
 export const SCRIPT = '"Dancing Script", cursive';
+
+// ─── Almanac design tokens ───────────────────────────────────────────────────
+//
+// The shared visual language for the redesigned /discover dashboard. Mirrors
+// `DTokens` from the design-system prototype. Use these constants directly
+// in inline `style` props so colors and shapes stay coherent across files.
+//
+// Rule of thumb:
+//   - surfaces / structure  -> ALTokens.color.cream / paper / sand / forest*
+//   - one accent per view   -> ALTokens.color.gold (or gold-dark for text)
+//   - category accents      -> only on tokens / dots / spines / chips,
+//                              never on body or heading text
+export const ALTokens = {
+  color: {
+    cream:     '#faf9f6',
+    paper:     '#fffdf9',
+    sand:      '#f3ede1',
+    sandDeep:  '#ece4d4',
+    forest:    '#588157',
+    forestDark:'#3d5c3b',
+    forestInk: '#2f4a2e',
+    gold:      '#d4a373',
+    goldLight: '#e8c99a',
+    goldDark:  '#a9762f',
+    // category accents (subjects only, never body/heading)
+    nature:    '#6b8e6b',
+    earthy:    '#8b7355',
+    terracotta:'#c4836a',
+    dustyRose: '#c47a8f',
+    slate:     '#7b88a8',
+    lavender:  '#7a6da8',
+    river:     '#5b8fa8',
+    warmGray:  '#f7f5f0',
+    // text ramp
+    ink:       '#2b2a26',
+    body:      '#54524b',
+    muted:     '#8a877e',
+    faint:     '#b6b2a6',
+    // forest-tinted hairlines (lean on these, not drop shadows)
+    line:      'rgba(61,92,59,0.13)',
+    lineSoft:  'rgba(61,92,59,0.07)',
+  },
+  radius: { sm: 10, md: 14, lg: 18, xl: 24, pill: 9999 },
+  shadow: {
+    xs: '0 1px 2px rgba(70,55,30,0.05)',
+    sm: '0 2px 8px -3px rgba(70,55,30,0.10)',
+    md: '0 8px 22px -10px rgba(70,55,30,0.16)',
+    lg: '0 18px 40px -16px rgba(70,55,30,0.20)',
+    focus: '0 0 0 4px rgba(88,129,87,0.16)',
+  },
+  ease: 'cubic-bezier(0.22, 1, 0.36, 1)',
+  font: '"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+} as const;
+
+// Standard-subject id -> accent color. Use only for tokens / dots / spines
+// on subject chips and goal-stepper rows. Falls back to forest.
+export const AL_SUBJECT_ACCENT: Record<string, string> = {
+  math:    ALTokens.color.earthy,
+  science: ALTokens.color.nature,
+  ela:     ALTokens.color.river,
+  history: ALTokens.color.earthy,
+  art:     ALTokens.color.dustyRose,
+  pe:      ALTokens.color.terracotta,
+  life:    ALTokens.color.gold,
+};
+
+export function accentForSubject(subjectId: string | null | undefined): string {
+  if (!subjectId) return ALTokens.color.forest;
+  return AL_SUBJECT_ACCENT[subjectId] || ALTokens.color.forest;
+}
 
 // ─── Category / Subject color resolution ─────────────────────────────────────
 
@@ -36,27 +109,48 @@ export function tintForCategory(cat: string | null | undefined) {
 
 // ─── Reusable atoms ──────────────────────────────────────────────────────────
 
+/**
+ * Almanac eyebrow: 11px DM Sans, uppercase 0.18em, gold-dark on cream
+ * (AA-safe). The leading hairline (18px wide, 0.5 opacity) is the visual
+ * tell. Pass an explicit `color` only when an accent context demands it
+ * (e.g. an accented hero panel).
+ */
 export function Eyebrow({
   children,
-  color = '#3A5A40',
+  color = ALTokens.color.goldDark,
+  style,
 }: {
   children: ReactNode;
   color?: string;
+  style?: CSSProperties;
 }) {
   return (
     <p
-      className="flex items-center gap-2.5"
       style={{
         margin: 0,
-        fontFamily: '"DM Sans"',
-        fontWeight: 500,
-        fontSize: 11.5,
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 10,
+        fontFamily: ALTokens.font,
+        fontWeight: 700,
+        fontSize: 11,
         letterSpacing: '.18em',
         textTransform: 'uppercase',
         color,
+        ...style,
       }}
     >
-      <span style={{ width: 22, height: 1, background: color, display: 'inline-block' }} />
+      <span
+        aria-hidden
+        style={{
+          width: 18,
+          height: 1.5,
+          background: 'currentColor',
+          opacity: 0.5,
+          borderRadius: 2,
+          display: 'inline-block',
+        }}
+      />
       {children}
     </p>
   );
@@ -153,6 +247,11 @@ export function SubjectChip({
 }
 
 // ─── Buttons ─────────────────────────────────────────────────────────────────
+//
+// PrimaryButton: forest fill, cream text, lifts -1px on hover into a warmer
+// shadow. GhostButton: forest text on a hairline border, fills with a
+// translucent forest wash on hover or when `active` is set. Both keep their
+// pre-redesign signatures so every consumer keeps working.
 
 export function PrimaryButton({
   children,
@@ -160,35 +259,47 @@ export function PrimaryButton({
   type = 'button',
   disabled,
   small,
+  full,
+  style,
 }: {
   children: ReactNode;
   onClick?: () => void;
   type?: 'button' | 'submit';
   disabled?: boolean;
   small?: boolean;
+  full?: boolean;
+  style?: CSSProperties;
 }) {
+  const [hover, setHover] = useState(false);
+  const lifted = hover && !disabled;
   return (
     <button
       type={type}
       onClick={onClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       disabled={disabled}
       style={{
         appearance: 'none',
         border: 0,
         cursor: disabled ? 'not-allowed' : 'pointer',
-        background: '#588157',
-        color: '#FAF9F6',
-        fontFamily: '"DM Sans"',
+        background: lifted ? ALTokens.color.forestDark : ALTokens.color.forest,
+        color: ALTokens.color.cream,
+        fontFamily: ALTokens.font,
         fontWeight: 600,
-        fontSize: small ? 13 : 14.5,
-        padding: small ? '8px 14px' : '12px 20px',
-        borderRadius: 11,
+        fontSize: small ? 13.5 : 15,
+        padding: small ? '9px 16px' : '12px 22px',
+        borderRadius: ALTokens.radius.md,
         display: 'inline-flex',
         alignItems: 'center',
-        gap: 10,
+        justifyContent: 'center',
+        gap: 8,
         opacity: disabled ? 0.5 : 1,
-        boxShadow:
-          '0 1px 0 rgba(255,255,255,.18) inset, 0 -1px 0 rgba(0,0,0,.10) inset, 0 12px 26px -14px rgba(58,90,64,.55)',
+        width: full ? '100%' : 'auto',
+        boxShadow: lifted ? ALTokens.shadow.md : ALTokens.shadow.sm,
+        transform: lifted ? 'translateY(-1px)' : 'none',
+        transition: `all 180ms ${ALTokens.ease}`,
+        ...style,
       }}
     >
       {children}
@@ -201,36 +312,245 @@ export function GhostButton({
   onClick,
   type = 'button',
   small,
+  active,
+  full,
+  style,
 }: {
   children: ReactNode;
   onClick?: () => void;
   type?: 'button' | 'submit';
   small?: boolean;
+  active?: boolean;
+  full?: boolean;
+  style?: CSSProperties;
 }) {
+  const [hover, setHover] = useState(false);
+  const on = active || hover;
   return (
     <button
       type={type}
       onClick={onClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       style={{
         appearance: 'none',
         cursor: 'pointer',
-        background: 'transparent',
-        color: '#3A5A40',
-        border: '1px solid #C9D3BE',
-        fontFamily: '"DM Sans"',
+        background: on ? 'rgba(88,129,87,0.08)' : 'transparent',
+        color: ALTokens.color.forest,
+        border: `1px solid ${active ? ALTokens.color.forest : ALTokens.color.line}`,
+        fontFamily: ALTokens.font,
         fontWeight: 600,
-        fontSize: small ? 12.5 : 13.5,
-        padding: small ? '7px 12px' : '9px 14px',
-        borderRadius: 10,
+        fontSize: small ? 13 : 14,
+        padding: small ? '7px 14px' : '10px 18px',
+        borderRadius: ALTokens.radius.md,
         display: 'inline-flex',
         alignItems: 'center',
-        gap: 8,
+        justifyContent: 'center',
+        gap: 7,
+        width: full ? '100%' : 'auto',
+        transition: `all 180ms ${ALTokens.ease}`,
+        ...style,
       }}
     >
       {children}
     </button>
   );
 }
+
+// ─── Stepper + Dot primitives ────────────────────────────────────────────────
+//
+// Stepper is a -/+ control around a tabular-nums count, used in the
+// Build-it-yourself goal rows. Dot is a small filled circle used everywhere
+// a category accent needs to "mean" something at a glance.
+
+export function Stepper({
+  value,
+  onChange,
+  accent,
+  min = 0,
+  max = 12,
+  ariaLabel = 'count',
+}: {
+  value: number;
+  onChange: (next: number) => void;
+  accent?: string;
+  min?: number;
+  max?: number;
+  ariaLabel?: string;
+}) {
+  const Btn = ({
+    dir,
+    label,
+    disabled,
+  }: {
+    dir: -1 | 1;
+    label: string;
+    disabled?: boolean;
+  }) => {
+    const [hover, setHover] = useState(false);
+    const on = hover && !disabled;
+    return (
+      <button
+        type="button"
+        aria-label={label}
+        onClick={() => onChange(Math.max(min, Math.min(max, value + dir)))}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        disabled={disabled}
+        style={{
+          width: 32,
+          height: 32,
+          borderRadius: ALTokens.radius.sm,
+          border: `1px solid ${on ? ALTokens.color.forest : ALTokens.color.line}`,
+          background: on
+            ? 'rgba(88,129,87,0.06)'
+            : disabled
+              ? 'transparent'
+              : ALTokens.color.paper,
+          color: disabled ? ALTokens.color.faint : ALTokens.color.forest,
+          fontSize: 17,
+          lineHeight: 1,
+          cursor: disabled ? 'default' : 'pointer',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontFamily: ALTokens.font,
+          transition: `all 150ms ${ALTokens.ease}`,
+          flexShrink: 0,
+        }}
+      >
+        {dir < 0 ? '–' : '+'}
+      </button>
+    );
+  };
+  return (
+    <div
+      role="group"
+      aria-label={ariaLabel}
+      style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}
+    >
+      <Btn dir={-1} label={`decrease ${ariaLabel}`} disabled={value <= min} />
+      <span
+        style={{
+          minWidth: 18,
+          textAlign: 'center',
+          fontSize: 15,
+          fontWeight: 700,
+          fontVariantNumeric: 'tabular-nums',
+          color:
+            value > 0
+              ? accent || ALTokens.color.ink
+              : ALTokens.color.faint,
+          fontFamily: ALTokens.font,
+        }}
+      >
+        {value}
+      </span>
+      <Btn dir={1} label={`increase ${ariaLabel}`} disabled={value >= max} />
+    </div>
+  );
+}
+
+export function Dot({
+  color,
+  size = 9,
+  style,
+}: {
+  color: string;
+  size?: number;
+  style?: CSSProperties;
+}) {
+  return (
+    <span
+      aria-hidden
+      style={{
+        width: size,
+        height: size,
+        borderRadius: '50%',
+        background: color,
+        flexShrink: 0,
+        display: 'inline-block',
+        ...style,
+      }}
+    />
+  );
+}
+
+// ─── Line icons (1.6 stroke, rounded) ────────────────────────────────────────
+//
+// Light SVG icons for the Almanac top bar and sub-tab pills. Each accepts
+// `size` and `color`; default color is `currentColor` so they inherit text
+// color when set via a parent.
+
+type IconProps = { size?: number; color?: string; style?: CSSProperties };
+
+function makeIcon(paths: ReactNode, sw = 1.6) {
+  const Icon = ({ size = 20, color = 'currentColor', style }: IconProps) => (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth={sw}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={style}
+      aria-hidden="true"
+    >
+      {paths}
+    </svg>
+  );
+  return Icon;
+}
+
+export const ALIcons = {
+  Sun: makeIcon(
+    <>
+      <circle cx="12" cy="12" r="4.5" />
+      <path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" />
+    </>,
+  ),
+  Path: makeIcon(
+    <>
+      <path d="M6 4v9a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v1" />
+      <circle cx="6" cy="4" r="2" />
+      <circle cx="18" cy="20" r="2" />
+    </>,
+  ),
+  Book: makeIcon(<path d="M4 4h7a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-7a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h7z" />),
+  Cal: makeIcon(
+    <>
+      <rect x="3" y="4.5" width="18" height="16" rx="2.5" />
+      <path d="M3 9h18M8 2.5v4M16 2.5v4" />
+    </>,
+  ),
+  Chat: makeIcon(<path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />),
+  Sliders: makeIcon(
+    <>
+      <path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h7M15 18h5" />
+      <circle cx="16" cy="6" r="2" fill="none" />
+      <circle cx="8" cy="12" r="2" />
+      <circle cx="13" cy="18" r="2" />
+    </>,
+  ),
+  Grid: makeIcon(
+    <>
+      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+      <rect x="14" y="14" width="7" height="7" rx="1.5" />
+    </>,
+  ),
+  Plus: makeIcon(<path d="M12 5v14M5 12h14" />, 2),
+  Arrow: makeIcon(<path d="M5 12h14M13 6l6 6-6 6" />),
+  Chevron: makeIcon(<path d="M6 9l6 6 6-6" />),
+  Check: makeIcon(<path d="M4 12l5 5L20 6" />, 2.2),
+  X: makeIcon(<path d="M6 6l12 12M18 6L6 18" />, 2),
+  Leaf: makeIcon(
+    <path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 16-9 0 9-5 13-9 13zM4 20c2-5 5-8 9-9" />,
+  ),
+};
 
 // ─── Modal shell ─────────────────────────────────────────────────────────────
 

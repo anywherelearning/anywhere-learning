@@ -4,6 +4,62 @@
 
 .dashboard-root {
   /* Default desktop padding handled by the inner page wrapper */
+  background: #faf9f6;
+}
+
+/* ─── Almanac motion keyframes ─────────────────────────────────────────── */
+
+@keyframes al-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes al-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.15); }
+}
+
+/* ─── Almanac top bar: desktop vs phone swap ───────────────────────────── */
+
+@media (max-width: 767px) {
+  /* Phone: collapse the desktop nav into a single icon+label, surface bottom nav */
+  .dashboard-root .al-top-tabs { display: none !important; }
+  .dashboard-root .al-mobile-title { display: inline-flex !important; }
+  .dashboard-root .al-bottom-nav { display: flex !important; }
+  .dashboard-root .al-topbar-inner { padding: 0 14px !important; }
+}
+
+@media (min-width: 768px) {
+  .dashboard-root .al-topbar-inner { padding: 0 28px !important; }
+}
+
+/* ─── Build-it-yourself goal grid: 2 / 3 / 4 columns by viewport ──────── */
+
+@media (min-width: 640px) {
+  .dashboard-root .al-goal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-root .al-goal-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ─── Sub-tab pills: hide label, keep icon, on the smallest screens ──── */
+
+@media (max-width: 520px) {
+  .dashboard-root .al-subtab-btn[aria-current="page"] .al-subtab-label {
+    display: inline;
+  }
+  .dashboard-root .al-subtab-btn:not([aria-current="page"]) .al-subtab-label {
+    display: none;
+  }
+  .dashboard-root .al-subtab-btn {
+    flex: 0 0 auto !important;
+    padding: 11px 12px !important;
+  }
 }
 
 /* Mobile pass (under 768px) */
