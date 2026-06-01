@@ -79,6 +79,7 @@ const CATEGORIES = [
   { name: 'Planning & Problem-Solving', slug: 'planning-problem-solving', icon: '⊞', gradient: 'from-[#C97B5C] to-[#A85A38]', photo: '/images/treasure-map.jpeg', objectPosition: 'center 25%' },
   { name: 'Outdoor Learning', slug: 'outdoor-learning', icon: '☘', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/forest-school-leaf-play.jpeg' },
   { name: 'Worldschooling', slug: 'worldschooling', icon: '✈', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/worldschool-day-market.jpeg' },
+  { name: 'Emotional & Social Skills', slug: 'emotional-social-skills', icon: '♡', gradient: 'from-[#B6748A] to-[#7A4858]', photo: '/images/join-hero.jpeg' },
 ];
 
 export default async function HomePage() {
@@ -314,7 +315,7 @@ export default async function HomePage() {
                   What&apos;s inside
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Eight categories. <span className="italic text-forest">One library.</span>
+                  Nine categories. <span className="italic text-forest">One library.</span>
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">100+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
               </div>

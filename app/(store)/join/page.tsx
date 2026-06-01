@@ -179,6 +179,12 @@ const categories = [
     count: 10,
     ages: '6–14',
   },
+  {
+    name: 'Emotional & Social Skills',
+    desc: 'Building a calm-down toolkit, naming big feelings, sitting with boredom, repairing after a fight, taking on a solo mission. The inner skills that run everything else.',
+    count: 12,
+    ages: '6–14',
+  },
 ];
 
 export default async function JoinPage({
@@ -687,8 +693,8 @@ export default async function JoinPage({
             {/* Stats row */}
             <div className="mb-8 flex flex-wrap justify-center gap-x-11 gap-y-5">
               {[
-                { n: '8', label: 'Categories' },
-                { n: '100+', label: 'Activities' },
+                { n: '9', label: 'Categories' },
+                { n: '110+', label: 'Activities' },
                 { n: '6–14', label: 'Ages' },
                 { n: '3', label: 'Levels each' },
                 { n: 'Quarterly', label: 'New additions' },
