@@ -58,7 +58,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: "What's the difference between buying activities individually and joining the membership?",
     answer:
-      "Individual activities are $5.99 each. Bundles run around $44.99 (about 25% off). The membership is $99 a year for unlimited access to the entire library: 100+ activities, all eight categories, plus new ones added every quarter. If you'd buy more than two bundles in a year, the membership is the obvious choice.",
+      "Individual activities are $5.99 each. Bundles run around $44.99 (about 25% off). The membership is $99 a year for unlimited access to the entire library: 100+ activities, all nine categories, plus new ones added every quarter. If you'd buy more than two bundles in a year, the membership is the obvious choice.",
   },
   {
     question: "What's 'founding member' pricing?",
@@ -78,7 +78,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'How often are new activities added?',
     answer:
-      'Quarterly. New activities across all eight categories, added to the library every quarter. Members get them automatically. No extra cost, no announcements you have to act on.',
+      'Quarterly. New activities across all nine categories, added to the library every quarter. Members get them automatically. No extra cost, no announcements you have to act on.',
   },
   {
     question: 'Can I cancel anytime?',

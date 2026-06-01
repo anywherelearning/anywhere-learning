@@ -41,7 +41,7 @@ export default function BlogBundleCallout({ context }: BlogBundleCalloutProps) {
           </h4>
           <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-2">
             {context ||
-              `Real-world activities across eight categories. New ones added every quarter${
+              `Real-world activities across nine categories. New ones added every quarter${
                 IS_FOUNDER_PHASE ? ', and the founder rate locks in for life' : ''
               }.`}
           </p>

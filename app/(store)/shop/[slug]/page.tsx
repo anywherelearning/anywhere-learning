@@ -937,8 +937,8 @@ export default async function ProductPage({
                 <em className="not-italic italic text-forest-dark">100+ in the membership.</em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
-                The full library covers eight categories — math, AI, communication, planning,
-                creativity, outdoor, entrepreneurship, worldschooling — with new activities every
+                The full library covers nine categories — math, AI, communication, planning,
+                creativity, outdoor, entrepreneurship, worldschooling, emotional & social skills — with new activities every
                 quarter. {MEMBERSHIP_PRICE_YEAR}
                 {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}
               </p>

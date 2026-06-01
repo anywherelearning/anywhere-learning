@@ -694,7 +694,7 @@ export default async function JoinPage({
             <div className="mb-8 flex flex-wrap justify-center gap-x-11 gap-y-5">
               {[
                 { n: '9', label: 'Categories' },
-                { n: '110+', label: 'Activities' },
+                { n: '100+', label: 'Activities' },
                 { n: '6–14', label: 'Ages' },
                 { n: '3', label: 'Levels each' },
                 { n: 'Quarterly', label: 'New additions' },

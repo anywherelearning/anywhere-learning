@@ -33,7 +33,7 @@ const WARM_COPY: Record<
     ),
     sub: "Sign in to keep building life skills with your kids, one hands-on activity at a time.",
     list: [
-      '100+ activities across 8 categories',
+      '100+ activities across 9 categories',
       'Three difficulty levels, siblings together',
       'Quarterly drops included with membership',
     ],

@@ -35,7 +35,7 @@ const homepageFaqLd = {
   })),
 };
 
-// One activity from each of the 8 categories. None of these appear in the
+// One activity from each of the 9 categories. None of these appear in the
 // Starter Pack page hero, so the visual stories don't overlap.
 // Order matches CARD_POSITIONS: index 3 = right side (Entrepreneurship), index 7 = left side (Planning).
 const HERO_CARDS = [
