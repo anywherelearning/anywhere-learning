@@ -105,6 +105,12 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
     'After-school, weekends & summer break',
     'Families new to real-world learning',
   ],
+  'emotional-social-skills': [
+    'Homeschool families',
+    'Worldschool families',
+    'After-school, weekends & summer break',
+    'Families raising emotionally aware, resilient kids',
+  ],
   bundle: [
     'Homeschool families',
     'Worldschool families',
@@ -1541,6 +1547,166 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Cultural Awareness', 'Geography', 'Research', 'Observation', 'Writing'],
     format: 'Activity Guide',
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // EMOTIONAL & SOCIAL SKILLS
+  // ═══════════════════════════════════════════════════════════════════
+  'calm-down-toolkit': {
+    opening:
+      'Your child builds their own physical reset kit and a "when I\'m flooded" plan using stuff already around the house. They test different tools to find what actually settles their body, then turn it into a 3-line plan they can run on their own. Real self-regulation, not a poster on the wall.',
+    whatsIncluded: [
+      'Body-signal check-in: spot the flooded state early',
+      'Household tool hunt with 6 starter reset options',
+      'Test-and-rate framework to find what actually works',
+      '3-line personal plan kids can run on their own',
+      'Version 2 revision after a real hard moment',
+    ],
+    skillTags: ['Self-Regulation', 'Emotional Awareness', 'Coping Skills'],
+    format: 'Project Guide',
+  },
+  'big-feelings-lab': {
+    opening:
+      'Your child learns to name a feeling, find where it sits in the body, rate its size, and watch it pass without trying to fix it. They build a personal feelings map and track a week of real moments. Emotional intelligence the way real adults wish they\'d learned it.',
+    whatsIncluded: [
+      'Feelings vocabulary beyond happy, sad, mad',
+      'Body-map activity: where the feeling lives',
+      'Size-rating scale to name how big it is',
+      'Week-long real-moments tracker',
+      'Version 2 reflection on patterns and triggers',
+    ],
+    skillTags: ['Emotional Intelligence', 'Self-Awareness', 'Mindfulness'],
+    format: 'Project Guide',
+  },
+  'boredom-toolkit': {
+    opening:
+      'Your child builds their own way out of boredom that does not involve a screen. They learn to sit with the empty feeling for a beat, build a toolkit of materials and prompts, and take a real no-screens stretch to figure out what their own brain reaches for. Boredom is not a problem. It is the first step toward creativity.',
+    whatsIncluded: [
+      'Notice-what-boredom-feels-like opening exercise',
+      'Personal interest map of what calls to them when nothing is required',
+      'Build your own toolkit of materials and prompts from household stuff',
+      'A real no-screens, no-plans stretch to run the toolkit',
+      'Small log of what they made or did, the long-term proof',
+    ],
+    skillTags: ['Self-Direction', 'Creativity', 'Independence'],
+    format: 'Project Guide',
+  },
+  'disappointment-lab': {
+    opening:
+      'Your child sits through a small planned letdown, names the feeling, and tracks how long it takes to bounce back. They repeat it over weeks and watch their recovery time shrink. Resilience built on real reps, not pep talks.',
+    whatsIncluded: [
+      'Planned small-letdown scenarios to practise with',
+      'Feeling-naming step (no fixing, no fleeing)',
+      'Recovery-time tracker across multiple weeks',
+      'Pattern spotting: what makes it shorter',
+      'Version 2 reflection on what changed',
+    ],
+    skillTags: ['Resilience', 'Emotional Regulation', 'Growth Mindset'],
+    format: 'Project Guide',
+  },
+  'comeback-journal': {
+    opening:
+      'Your child takes a real flop, breaks down what actually happened without spiraling, pulls out the lesson, and picks the next move. They build a comeback journal habit they can return to for years. Growth mindset on the page, not the poster.',
+    whatsIncluded: [
+      'Flop debrief framework (what happened, no blame)',
+      'Lesson-pulling prompt: the real takeaway',
+      'Next-move decision step',
+      'Reusable journal template for ongoing use',
+      'Version 2 review of past comebacks',
+    ],
+    skillTags: ['Resilience', 'Reflection', 'Growth Mindset'],
+    format: 'Project Guide',
+  },
+  'hard-thing-challenge': {
+    opening:
+      'Your child picks one genuinely hard thing, commits to it for a set stretch, keeps a record of the messy middle where most people quit, and crosses the finish. Real perseverance practice with a real outcome they can point to.',
+    whatsIncluded: [
+      'Hard-thing selection with 8 starter ideas',
+      'Commitment contract with a real timeline',
+      'Messy-middle log for when it gets hard',
+      'Quit-vs-push-through decision framework',
+      'Finish-line reflection and Version 2 plan',
+    ],
+    skillTags: ['Perseverance', 'Goal-Setting', 'Resilience'],
+    format: 'Project Guide',
+  },
+  'repair-conversation': {
+    opening:
+      'Your child practises what to actually do after they hurt someone: own it, skip the excuses, ask what would help, and follow through. They rehearse a real recent moment and run the conversation for real. The social skill nobody teaches but everyone needs.',
+    whatsIncluded: [
+      '4-step repair script (own it, no excuses, ask, follow through)',
+      'Real recent moment selection',
+      'Rehearsal step with parent role-play',
+      'Run-it-for-real conversation step',
+      'Version 2 reflection on what shifted',
+    ],
+    skillTags: ['Social Skills', 'Empathy', 'Communication'],
+    format: 'Project Guide',
+  },
+  'kindness-missions': {
+    opening:
+      'Your child builds and works through a deck of real-world kindness challenges that take actual effort and noticing, not the easy "be nice" kind. They track which missions changed something and pick the ones to keep. Empathy with receipts.',
+    whatsIncluded: [
+      '12 real-world kindness mission cards (effort-required, not easy)',
+      'Build-your-own mission slot for ideas of their own',
+      'Mission log: what happened, what shifted',
+      'Pick-your-keepers reflection step',
+      'Version 2 deck refresh after a month',
+    ],
+    skillTags: ['Empathy', 'Social Awareness', 'Kindness'],
+    format: 'Project Guide',
+  },
+  'reading-the-room': {
+    opening:
+      'Your child practises noticing what other people feel before words show up. In cafes, family dinners, and playgrounds, they learn to scan a room, read body language, and infer the backstory. The social awareness most adults still don\'t have.',
+    whatsIncluded: [
+      'Room-scan framework for real settings',
+      'Body-language signals: what to actually watch for',
+      'Backstory-inference step (guess and check)',
+      'Real-world observation log across 5 settings',
+      'Version 2 reflection on what got easier',
+    ],
+    skillTags: ['Social Awareness', 'Empathy', 'Observation'],
+    format: 'Project Guide',
+  },
+  'conflict-fix': {
+    opening:
+      'Your child learns a real script for working through a fight with a sibling or friend: cool down, say it without attacking, hear the other side, find the fix. They run it on a real recent conflict and watch what shifts. Not a worksheet about feelings.',
+    whatsIncluded: [
+      '4-step conflict script (cool down, speak, hear, fix)',
+      'Cool-down tools that actually work in the moment',
+      'Say-it-without-attacking sentence frames',
+      'Real recent conflict practice run',
+      'Version 2 revision after using it for real',
+    ],
+    skillTags: ['Conflict Resolution', 'Communication', 'Social Skills'],
+    format: 'Project Guide',
+  },
+  'solo-mission': {
+    opening:
+      'Your child takes on age-right "do it without me" challenges: order at a counter, call a place, run an errand. They start small and build up, tracking what felt hard and what stopped feeling hard. Real independence built one mission at a time.',
+    whatsIncluded: [
+      'Mission menu: 12 age-right "do it without me" options',
+      'Start-small-build-up sequencing framework',
+      'Mission prep step: what to say, what to expect',
+      'After-action log: what felt hard, what got easier',
+      'Version 2 mission with one bigger step',
+    ],
+    skillTags: ['Independence', 'Confidence', 'Communication'],
+    format: 'Project Guide',
+  },
+  'worry-sorter': {
+    opening:
+      'Your child takes what\'s spinning in their head, sorts it into can-control vs cannot-control, makes a plan for the controllable, and practises letting go of the rest. A real anxiety tool, not a calming poster.',
+    whatsIncluded: [
+      'Brain-dump step: get the spin out on paper',
+      'Can-control vs cannot-control sorting framework',
+      'Action plan for the controllable list',
+      'Let-it-go practice for the rest',
+      'Version 2 review after a week of using it',
+    ],
+    skillTags: ['Emotional Regulation', 'Anxiety Tools', 'Problem-Solving'],
+    format: 'Project Guide',
   },
 };
 

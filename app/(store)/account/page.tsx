@@ -22,6 +22,7 @@ const TRACK_COLORS: Record<string, { color: string; deep: string }> = {
   'creativity-maker': { color: '#C97B5C', deep: '#7A3D24' },
   'outdoor-learning': { color: '#3A5A40', deep: '#26331F' },
   worldschooling: { color: '#8A8470', deep: '#5A5240' },
+  'emotional-social-skills': { color: '#B6748A', deep: '#7A4858' },
 };
 
 // Two "virtual" Skills Map entries — pinned to the top of the dashboard for
