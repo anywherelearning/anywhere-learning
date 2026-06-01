@@ -9,6 +9,13 @@
       "autoPort": true
     },
     {
+      "name": "next-dev-webpack",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["-c", "export PATH=/usr/local/bin:$PATH && npx next dev --webpack"],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
       "name": "next-mobile",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev:mobile"],

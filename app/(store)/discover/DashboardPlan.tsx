@@ -1872,67 +1872,79 @@ function ProgramsShelf({
   const [active, setActive] = useState<Program | null>(null);
 
   return (
-    <section>
-      <div className="mb-3">
-        <Eyebrow>Done for you</Eyebrow>
-        <h2
-          className="mt-2 text-lg text-forest"
-          style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}
-        >
-          Start a guided program
-        </h2>
-        <p className="mt-0.5 text-sm text-forest/65" style={{ fontFamily: '"DM Sans"' }}>
-          Pick a path, pick your kid, pick a start date. The whole multi-week arc lands on your calendar. No setup.
-        </p>
-      </div>
+    <section
+      style={{
+        position: 'relative',
+        background: 'linear-gradient(166deg, #fffdf9 0%, #f6f1e7 100%)',
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.xl,
+        padding: 'clamp(22px, 4vw, 34px)',
+        boxShadow: ALTokens.shadow.sm,
+        overflow: 'hidden',
+      }}
+    >
+      {/* gold accent rule */}
       <div
-        className="grid gap-3"
-        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}
+        aria-hidden
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 4,
+          background: ALTokens.color.gold,
+          opacity: 0.85,
+        }}
+      />
+
+      <div className="flex items-center gap-3 mb-3">
+        <span
+          className="inline-flex items-center justify-center"
+          style={{
+            width: 34,
+            height: 34,
+            borderRadius: ALTokens.radius.sm,
+            background: 'rgba(212,163,115,0.22)',
+          }}
+        >
+          <ALIcons.Path size={18} color={ALTokens.color.goldDark} />
+        </span>
+        <Eyebrow>Guided programs</Eyebrow>
+      </div>
+
+      <h2
+        style={{
+          margin: 0,
+          fontFamily: ALTokens.font,
+          fontWeight: 700,
+          fontSize: 26,
+          lineHeight: 1.12,
+          letterSpacing: '-0.02em',
+          color: ALTokens.color.ink,
+          maxWidth: '18em',
+        }}
       >
-        {PROGRAMS.map((p) => {
-          const tint = tintForCategory(p.category);
-          return (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => setActive(p)}
-              className="text-left rounded-2xl border bg-white p-4 transition-shadow hover:shadow-md"
-              style={{ borderColor: 'rgba(88,129,87,.14)', cursor: 'pointer' }}
-            >
-              <span
-                className="inline-block rounded-full px-2.5 py-1"
-                style={{
-                  background: tint.bg,
-                  color: tint.fg,
-                  fontFamily: '"DM Sans"',
-                  fontSize: 10.5,
-                  fontWeight: 600,
-                  letterSpacing: '.04em',
-                }}
-              >
-                {p.weeks.length} weeks · {programActivityCount(p)} activities
-              </span>
-              <p
-                className="mt-2 text-forest"
-                style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 16, lineHeight: 1.2 }}
-              >
-                {p.title}
-              </p>
-              <p
-                className="mt-1 text-forest/65"
-                style={{ fontFamily: '"DM Sans"', fontSize: 12.5, lineHeight: 1.4 }}
-              >
-                {p.tagline}
-              </p>
-              <span
-                className="mt-3 inline-flex items-center gap-1 text-forest"
-                style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 12.5 }}
-              >
-                Preview & start →
-              </span>
-            </button>
-          );
-        })}
+        Pick a path. We will walk it with you.
+      </h2>
+      <p
+        style={{
+          margin: '12px 0 24px',
+          fontSize: 15.5,
+          color: ALTokens.color.body,
+          lineHeight: 1.6,
+          maxWidth: '36em',
+        }}
+      >
+        Done-for-you skill journeys, sequenced over a few weeks. Pick one and the planner places the first week for you. Pause or switch any time.
+      </p>
+
+      <div
+        className="grid gap-4"
+        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}
+      >
+        {PROGRAMS.map((p) => (
+          <ProgramCard key={p.id} program={p} onClick={() => setActive(p)} />
+        ))}
       </div>
 
       {active && (
@@ -1952,6 +1964,125 @@ function ProgramsShelf({
         />
       )}
     </section>
+  );
+}
+
+/**
+ * Field-guide booklet card: 46px colored spine on the left with vertical
+ * tagline, paper body with eyebrow + title + blurb on the right. The whole
+ * card is a button.
+ */
+function ProgramCard({ program, onClick }: { program: Program; onClick: () => void }) {
+  const tint = tintForCategory(program.category);
+  const [hover, setHover] = useState(false);
+  // Verb tagline: short uppercase phrase shown vertically on the spine.
+  // Falls back to the program category if we can't infer one.
+  const spineLabel = (program.tagline || '')
+    .split(/[.,]/)[0]
+    .trim()
+    .toUpperCase()
+    .slice(0, 22);
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        display: 'flex',
+        background: ALTokens.color.paper,
+        borderRadius: ALTokens.radius.lg,
+        border: `1px solid ${hover ? 'transparent' : ALTokens.color.line}`,
+        overflow: 'hidden',
+        boxShadow: hover ? ALTokens.shadow.md : ALTokens.shadow.xs,
+        transform: hover ? 'translateY(-2px)' : 'none',
+        transition: `all 220ms ${ALTokens.ease}`,
+        cursor: 'pointer',
+        textAlign: 'left',
+        padding: 0,
+      }}
+    >
+      {/* colored spine, like a field-guide booklet */}
+      <div
+        style={{
+          width: 46,
+          flexShrink: 0,
+          background: tint.dot,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <span
+          style={{
+            writingMode: 'vertical-rl',
+            transform: 'rotate(180deg)',
+            fontSize: 10,
+            fontWeight: 700,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.92)',
+            fontFamily: ALTokens.font,
+            padding: '12px 0',
+          }}
+        >
+          {spineLabel || program.category}
+        </span>
+      </div>
+      <div style={{ padding: '18px 18px 16px', flex: 1, minWidth: 0 }}>
+        <div className="flex items-center gap-2 mb-1.5">
+          <Dot color={tint.dot} size={7} />
+          <span
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 11,
+              fontWeight: 700,
+              color: ALTokens.color.muted,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+            }}
+          >
+            {program.weeks.length} weeks · {programActivityCount(program)} activities
+          </span>
+        </div>
+        <h4
+          style={{
+            margin: '0 0 6px',
+            fontFamily: ALTokens.font,
+            fontSize: 17,
+            fontWeight: 700,
+            color: ALTokens.color.ink,
+            letterSpacing: '-0.015em',
+            lineHeight: 1.2,
+          }}
+        >
+          {program.title}
+        </h4>
+        <p
+          style={{
+            margin: '0 0 14px',
+            fontFamily: ALTokens.font,
+            fontSize: 13.5,
+            color: ALTokens.color.body,
+            lineHeight: 1.5,
+          }}
+        >
+          {program.tagline}
+        </p>
+        <span
+          className="inline-flex items-center gap-1.5"
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 13,
+            fontWeight: 600,
+            color: ALTokens.color.forest,
+          }}
+        >
+          Begin this path
+          <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
+        </span>
+      </div>
+    </button>
   );
 }
 
@@ -2005,87 +2136,153 @@ function ProgramStartDialog({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      style={{ background: 'rgba(45,58,46,0.55)', backdropFilter: 'blur(2px)' }}
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg rounded-2xl bg-cream p-6 shadow-2xl"
-        style={{ maxHeight: '90vh', overflowY: 'auto' }}
+        className="w-full max-w-lg"
+        style={{
+          background: ALTokens.color.cream,
+          border: `1px solid ${ALTokens.color.line}`,
+          borderRadius: ALTokens.radius.xl,
+          padding: 28,
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          boxShadow: ALTokens.shadow.lg,
+        }}
         onClick={(e) => e.stopPropagation()}
       >
-        <span
-          className="inline-block rounded-full px-2.5 py-1"
-          style={{
-            background: tint.bg,
-            color: tint.fg,
-            fontFamily: '"DM Sans"',
-            fontSize: 10.5,
-            fontWeight: 600,
-          }}
-        >
-          {program.weeks.length}-week program · ages {program.ageRange}
-        </span>
+        <div className="flex items-center gap-2 mb-2">
+          <Dot color={tint.dot} size={8} />
+          <span
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 11,
+              fontWeight: 700,
+              color: ALTokens.color.muted,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+            }}
+          >
+            {program.weeks.length}-week program · ages {program.ageRange}
+          </span>
+        </div>
         <h2
-          className="mt-2 text-2xl text-forest"
-          style={{ fontFamily: '"DM Sans"', fontWeight: 600, lineHeight: 1.1 }}
+          style={{
+            margin: '0 0 6px',
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 24,
+            letterSpacing: '-0.018em',
+            lineHeight: 1.15,
+            color: ALTokens.color.ink,
+          }}
         >
           {program.title}
         </h2>
-        <p className="mt-1 text-sm text-forest/75" style={{ fontFamily: '"DM Sans"' }}>
+        <p
+          style={{
+            margin: 0,
+            fontFamily: ALTokens.font,
+            fontSize: 14.5,
+            color: ALTokens.color.body,
+            lineHeight: 1.55,
+          }}
+        >
           {program.outcome}
         </p>
 
-        {/* Week-by-week preview */}
-        <ol className="mt-4 space-y-1.5">
-          {program.weeks.map((w) => {
-            const names = w.activitySlugs
-              .map((s) => ENRICHED_BY_SLUG[s]?.product.name ?? s)
-              .join(' + ');
-            return (
-              <li
-                key={w.week}
-                className="flex gap-3 rounded-lg border border-forest/10 bg-white px-3 py-2"
-              >
-                <span
-                  className="grid place-items-center shrink-0"
+        {/* Week-by-week preview — sand well with hairline dividers */}
+        <div
+          style={{
+            marginTop: 20,
+            background: ALTokens.color.sand,
+            border: `1px solid ${ALTokens.color.lineSoft}`,
+            borderRadius: ALTokens.radius.md,
+            padding: '6px 4px',
+          }}
+        >
+          <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+            {program.weeks.map((w, i) => {
+              const names = w.activitySlugs
+                .map((s) => ENRICHED_BY_SLUG[s]?.product.name ?? s)
+                .join(' + ');
+              return (
+                <li
+                  key={w.week}
+                  className="flex gap-3 items-start"
                   style={{
-                    width: 24,
-                    height: 24,
-                    borderRadius: '50%',
-                    background: tint.bg,
-                    color: tint.fg,
-                    fontFamily: '"DM Sans"',
-                    fontWeight: 700,
-                    fontSize: 12,
+                    padding: '10px 14px',
+                    borderTop:
+                      i === 0 ? 'none' : `1px solid ${ALTokens.color.lineSoft}`,
                   }}
                 >
-                  {w.week}
-                </span>
-                <div className="min-w-0">
-                  <p
-                    className="text-forest"
-                    style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 13 }}
+                  <span
+                    className="grid place-items-center shrink-0"
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderRadius: '50%',
+                      background: tint.dot,
+                      color: '#fff',
+                      fontFamily: ALTokens.font,
+                      fontWeight: 700,
+                      fontSize: 12,
+                      fontVariantNumeric: 'tabular-nums',
+                      marginTop: 2,
+                    }}
                   >
-                    {w.theme}
-                  </p>
-                  <p
-                    className="text-forest/55 truncate"
-                    style={{ fontFamily: '"DM Sans"', fontSize: 11.5 }}
-                  >
-                    {names}
-                  </p>
-                </div>
-              </li>
-            );
-          })}
-        </ol>
+                    {w.week}
+                  </span>
+                  <div className="min-w-0">
+                    <p
+                      style={{
+                        margin: 0,
+                        fontFamily: ALTokens.font,
+                        fontWeight: 700,
+                        fontSize: 13.5,
+                        color: ALTokens.color.ink,
+                      }}
+                    >
+                      {w.theme}
+                    </p>
+                    <p
+                      className="truncate"
+                      style={{
+                        margin: 0,
+                        fontFamily: ALTokens.font,
+                        fontSize: 12,
+                        color: ALTokens.color.muted,
+                      }}
+                    >
+                      {names}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
 
         {/* Who + when */}
-        <div className="mt-5" style={{ fontFamily: '"DM Sans"' }}>
+        <div className="mt-5" style={{ fontFamily: ALTokens.font }}>
           {kids.length > 0 ? (
             <>
-              <p className="text-sm text-forest/70">Who&apos;s doing it?</p>
-              <div className="mt-1.5 flex flex-wrap gap-1.5">
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: '.18em',
+                  textTransform: 'uppercase',
+                  color: ALTokens.color.goldDark,
+                  marginBottom: 10,
+                }}
+              >
+                Who is doing it?
+              </p>
+              <div className="flex flex-wrap gap-2">
                 {kids.map((k) => {
                   const on = selectedKids.includes(k.id);
                   return (
@@ -2093,17 +2290,21 @@ function ProgramStartDialog({
                       key={k.id}
                       type="button"
                       onClick={() => toggleKid(k.id)}
-                      className="flex items-center gap-1.5 rounded-full px-2.5 py-1"
+                      className="flex items-center gap-2"
                       style={{
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: 600,
                         cursor: 'pointer',
-                        background: on ? `${k.color}1A` : '#FFFFFF',
-                        border: `1px solid ${on ? k.color : '#E5E0D2'}`,
-                        color: on ? k.color : '#4F5A50',
+                        background: on ? `${k.color}1A` : ALTokens.color.paper,
+                        border: `1px solid ${on ? k.color : ALTokens.color.line}`,
+                        color: on ? k.color : ALTokens.color.body,
+                        padding: '5px 14px 5px 5px',
+                        borderRadius: ALTokens.radius.pill,
+                        fontFamily: ALTokens.font,
+                        transition: `all 150ms ${ALTokens.ease}`,
                       }}
                     >
-                      <ChildAvatar child={k} size={18} />
+                      <ChildAvatar child={k} size={22} />
                       {k.name}
                     </button>
                   );
@@ -2111,26 +2312,58 @@ function ProgramStartDialog({
               </div>
             </>
           ) : (
-            <p className="text-xs text-forest/55">
+            <p style={{ margin: 0, fontSize: 12.5, color: ALTokens.color.muted }}>
               Tip: add kids in Family setup to tag the program to a specific child.
             </p>
           )}
 
-          <label className="mt-3 block text-sm">
-            <span className="text-forest/70">Start the week of</span>
+          <label
+            className="mt-4 block"
+            style={{ fontFamily: ALTokens.font, fontSize: 14 }}
+          >
+            <span
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '.18em',
+                textTransform: 'uppercase',
+                color: ALTokens.color.goldDark,
+                display: 'block',
+                marginBottom: 8,
+              }}
+            >
+              Start the week of
+            </span>
             <input
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="mt-1 w-full rounded-md border border-forest/15 px-2 py-1.5"
+              style={{
+                width: '100%',
+                background: ALTokens.color.paper,
+                border: `1px solid ${ALTokens.color.line}`,
+                borderRadius: ALTokens.radius.sm,
+                padding: '9px 12px',
+                fontFamily: ALTokens.font,
+                fontSize: 14,
+                color: ALTokens.color.ink,
+                outline: 'none',
+              }}
             />
           </label>
         </div>
 
-        <div className="mt-5 flex justify-end gap-2">
+        <div
+          className="mt-6 flex justify-end gap-2 items-center"
+          style={{
+            paddingTop: 16,
+            borderTop: `1px solid ${ALTokens.color.line}`,
+          }}
+        >
           <GhostButton onClick={onClose}>Cancel</GhostButton>
           <PrimaryButton onClick={start} disabled={starting}>
             {starting ? 'Adding...' : 'Add to my calendar'}
+            {!starting && <ALIcons.Arrow size={14} color={ALTokens.color.cream} />}
           </PrimaryButton>
         </div>
       </div>

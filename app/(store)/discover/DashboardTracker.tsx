@@ -5,6 +5,10 @@ import { STANDARD_SUBJECTS, LOG_ENTRY_TYPES, getLogEntryTypeById } from '@/lib/t
 import { CATEGORIES, CATEGORY_LABELS } from '@/lib/categories';
 import {
   SERIF,
+  ALIcons,
+  ALTokens,
+  accentForSubject,
+  Dot,
   Eyebrow,
   CategoryTag,
   SubjectChip,
@@ -14,6 +18,7 @@ import {
   GhostButton,
   HelpHint,
   resolveSubject,
+  tintForCategory,
 } from './dashboard-shared';
 import LogEntryEditor from './LogEntryEditor';
 import EntryDetailModal from './EntryDetailModal';
@@ -186,36 +191,50 @@ function StatCard({
   return (
     <div
       style={{
-        background: '#FFFDF7',
-        border: '1px solid #E5E0D2',
-        borderRadius: 14,
-        padding: '14px 16px',
+        background: ALTokens.color.paper,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.md,
+        padding: '16px 18px',
       }}
     >
       <div
         style={{
-          fontFamily: '"DM Sans"',
-          fontWeight: 500,
-          fontSize: 10.5,
-          letterSpacing: '.14em',
+          fontFamily: ALTokens.font,
+          fontWeight: 700,
+          fontSize: 11,
+          letterSpacing: '.18em',
           textTransform: 'uppercase',
-          color: '#7B8378',
-          marginBottom: 8,
+          color: ALTokens.color.goldDark,
+          marginBottom: 10,
         }}
       >
         {label}
       </div>
       <div
         style={{
-          fontFamily: SERIF,
+          fontFamily: ALTokens.font,
           fontSize: 28,
-          color: accent || '#2D3A2E',
+          fontWeight: 700,
+          color: accent || ALTokens.color.ink,
           lineHeight: 1,
+          letterSpacing: '-0.02em',
+          fontVariantNumeric: 'tabular-nums',
         }}
       >
         {value}
       </div>
-      {hint && <div style={{ fontSize: 11.5, color: '#7B8378', marginTop: 6 }}>{hint}</div>}
+      {hint && (
+        <div
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 12,
+            color: ALTokens.color.muted,
+            marginTop: 8,
+          }}
+        >
+          {hint}
+        </div>
+      )}
     </div>
   );
 }
@@ -239,6 +258,13 @@ function EntryRow({
 }) {
   const typeInfo = getLogEntryTypeById(entry.type);
   const hasPhotos = entry.photos.length > 0;
+  // Subject-accent spine: prefer first subject, fall back to category tint, then forest.
+  const spineColor =
+    entry.subjects.length > 0
+      ? accentForSubject(entry.subjects[0])
+      : entry.category
+      ? tintForCategory(entry.category).dot
+      : ALTokens.color.forest;
   return (
     <div
       onClick={(e) => {
@@ -255,58 +281,62 @@ function EntryRow({
         }
       }}
       style={{
-        background: '#FAF9F6',
-        border: '1px solid #E5E0D2',
-        borderRadius: 14,
-        padding: '14px 16px',
+        background: ALTokens.color.paper,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderLeft: `4px solid ${spineColor}`,
+        borderRadius: ALTokens.radius.md,
+        padding: '16px 18px',
         display: 'grid',
-        gridTemplateColumns: hasPhotos ? '60px auto 1fr auto' : '60px 1fr auto',
-        gap: 14,
+        gridTemplateColumns: hasPhotos ? '64px auto 1fr auto' : '64px 1fr auto',
+        gap: 16,
         alignItems: 'start',
         cursor: 'pointer',
-        transition: 'border-color .12s, background .12s',
+        transition: `box-shadow 150ms ${ALTokens.ease}, transform 150ms ${ALTokens.ease}`,
+        boxShadow: ALTokens.shadow.xs,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#C9D3BE';
+        e.currentTarget.style.boxShadow = ALTokens.shadow.sm;
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = '#E5E0D2';
+        e.currentTarget.style.boxShadow = ALTokens.shadow.xs;
       }}
     >
-      <div style={{ textAlign: 'center' }}>
+      {/* Date column — eyebrow-month + tabular day, with a small subject dot */}
+      <div style={{ textAlign: 'center', paddingTop: 2 }}>
         <div
           style={{
-            fontFamily: '"DM Sans"',
-            fontWeight: 500,
-            fontSize: 10,
-            letterSpacing: '.14em',
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 10.5,
+            letterSpacing: '.18em',
             textTransform: 'uppercase',
-            color: '#7B8378',
+            color: ALTokens.color.goldDark,
           }}
         >
           {MONTHS[Number(entry.date.split('-')[1]) - 1].slice(0, 3)}
         </div>
         <div
           style={{
-            fontFamily: SERIF,
-            fontSize: 24,
-            color: '#3A5A40',
+            fontFamily: ALTokens.font,
+            fontSize: 26,
+            fontWeight: 700,
+            color: ALTokens.color.ink,
             lineHeight: 1,
-            marginTop: 2,
+            marginTop: 3,
+            letterSpacing: '-0.02em',
+            fontVariantNumeric: 'tabular-nums',
           }}
         >
           {Number(entry.date.split('-')[2])}
         </div>
         <div
           style={{
-            marginTop: 6,
-            fontFamily: SERIF,
-            color: '#3A5A40',
-            fontSize: 14,
-            fontStyle: 'italic',
+            marginTop: 8,
+            display: 'flex',
+            justifyContent: 'center',
           }}
         >
-          {typeInfo?.icon || '·'}
+          <Dot color={spineColor} size={8} />
         </div>
       </div>
 
@@ -316,10 +346,10 @@ function EntryRow({
           style={{
             width: 72,
             height: 72,
-            borderRadius: 10,
+            borderRadius: ALTokens.radius.sm,
             overflow: 'hidden',
-            border: '1px solid #E5E0D2',
-            background: '#FFFDF7',
+            border: `1px solid ${ALTokens.color.lineSoft}`,
+            background: ALTokens.color.sand,
             flexShrink: 0,
           }}
         >
@@ -337,12 +367,12 @@ function EntryRow({
                 bottom: 4,
                 right: 4,
                 background: 'rgba(45,58,46,.85)',
-                color: '#FAF9F6',
-                fontFamily: '"DM Sans"',
-                fontWeight: 600,
+                color: ALTokens.color.cream,
+                fontFamily: ALTokens.font,
+                fontWeight: 700,
                 fontSize: 10,
                 padding: '1px 6px',
-                borderRadius: 999,
+                borderRadius: ALTokens.radius.pill,
               }}
             >
               +{entry.photos.length - 1}
@@ -355,11 +385,12 @@ function EntryRow({
         <h3
           style={{
             margin: 0,
-            fontFamily: SERIF,
-            fontWeight: 400,
-            fontSize: 18,
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 17,
             lineHeight: 1.3,
-            color: '#2D3A2E',
+            letterSpacing: '-0.015em',
+            color: ALTokens.color.ink,
           }}
         >
           {entry.title}
@@ -373,18 +404,19 @@ function EntryRow({
         {entry.notes && (
           <p
             style={{
-              margin: '8px 0 0',
-              fontSize: 13,
-              color: '#4F5A50',
-              lineHeight: 1.5,
+              margin: '10px 0 0',
+              fontSize: 13.5,
+              color: ALTokens.color.body,
+              lineHeight: 1.55,
               maxWidth: 640,
+              fontFamily: ALTokens.font,
             }}
           >
-            {entry.notes.length > 240 ? entry.notes.slice(0, 240) + '…' : entry.notes}
+            {entry.notes.length > 240 ? entry.notes.slice(0, 240) + '...' : entry.notes}
           </p>
         )}
         {(entry.childIds.length > 0 || entry.childNames.length > 0) && (
-          <div className="flex flex-wrap gap-1.5 mt-2">
+          <div className="flex flex-wrap gap-1.5 mt-2.5">
             {entry.childIds.map((id) => {
               const child = childrenList.find((c) => c.id === id);
               if (child) return <ChildChip key={id} child={child} small />;
@@ -410,7 +442,10 @@ function EntryRow({
               ))}
           </div>
         )}
-        <div className="flex flex-wrap items-center gap-3 mt-2" style={{ fontSize: 12, color: '#7B8378' }}>
+        <div
+          className="flex flex-wrap items-center gap-3 mt-3"
+          style={{ fontSize: 12, color: ALTokens.color.muted, fontFamily: ALTokens.font }}
+        >
           {entry.durationMinutes != null && <span>{entry.durationMinutes} min</span>}
           {entry.type && <span>{typeInfo?.label || entry.type}</span>}
           {entry.productSlug && (
@@ -420,10 +455,23 @@ function EntryRow({
               rel="noopener noreferrer"
               data-row-action
               onClick={(e) => e.stopPropagation()}
-              className="rounded-md px-2.5 py-1 hover:opacity-90"
-              style={{ background: '#588157', color: '#FAF9F6', fontFamily: '"DM Sans"', fontSize: 11.5, fontWeight: 600 }}
+              style={{
+                background: 'rgba(88,129,87,0.10)',
+                color: ALTokens.color.forest,
+                border: `1px solid ${ALTokens.color.line}`,
+                fontFamily: ALTokens.font,
+                fontSize: 11.5,
+                fontWeight: 600,
+                padding: '4px 10px',
+                borderRadius: ALTokens.radius.sm,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
+                textDecoration: 'none',
+              }}
             >
-              Open ↗
+              Open
+              <ALIcons.Arrow size={11} color={ALTokens.color.forest} />
             </a>
           )}
         </div>
@@ -437,11 +485,14 @@ function EntryRow({
             background: 'transparent',
             border: 0,
             cursor: 'pointer',
-            color: '#3A5A40',
-            fontFamily: '"DM Sans"',
+            color: ALTokens.color.forest,
+            fontFamily: ALTokens.font,
             fontWeight: 600,
-            fontSize: 12,
+            fontSize: 12.5,
             padding: '4px 8px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 4,
           }}
         >
           Edit
@@ -453,10 +504,10 @@ function EntryRow({
             background: 'transparent',
             border: 0,
             cursor: 'pointer',
-            color: '#A65456',
-            fontFamily: '"DM Sans"',
+            color: ALTokens.color.terracotta,
+            fontFamily: ALTokens.font,
             fontWeight: 600,
-            fontSize: 12,
+            fontSize: 12.5,
             padding: '4px 8px',
           }}
         >
@@ -763,55 +814,72 @@ export default function DashboardTracker({
   }, [kids, entries, customSubjects]);
 
   const filterFieldStyle = {
-    background: '#FFFDF7',
-    border: '1px solid #E5E0D2',
-    borderRadius: 8,
-    padding: '7px 10px',
+    background: ALTokens.color.paper,
+    border: `1px solid ${ALTokens.color.line}`,
+    borderRadius: ALTokens.radius.sm,
+    padding: '9px 12px',
     fontSize: 13,
-    color: '#2D3A2E',
+    color: ALTokens.color.ink,
+    fontFamily: ALTokens.font,
+    outline: 'none',
   };
 
   const filterLabelStyle = {
     display: 'block' as const,
-    fontFamily: '"DM Sans"',
-    fontWeight: 500,
+    fontFamily: ALTokens.font,
+    fontWeight: 700,
     fontSize: 10.5,
-    letterSpacing: '.14em',
+    letterSpacing: '.18em',
     textTransform: 'uppercase' as const,
-    color: '#7B8378',
-    marginBottom: 4,
+    color: ALTokens.color.goldDark,
+    marginBottom: 6,
   };
 
   return (
     <div className="w-full">
-      <section className="mb-8">
-        <div className="flex justify-between items-end flex-wrap gap-4 mb-2">
+      {/* Editorial header — eyebrow + h1 + supporting copy, hairline divider */}
+      <section className="pb-7 mb-8" style={{ borderBottom: `1px solid ${ALTokens.color.line}` }}>
+        <div className="flex justify-between items-end flex-wrap gap-4">
           <div>
-            <Eyebrow>Activity Log · portfolio</Eyebrow>
+            <Eyebrow>Field notes</Eyebrow>
             <h1
+              className="dashboard-greeting"
               style={{
-                margin: '10px 0 0',
-                fontFamily: '"DM Sans"',
-                fontWeight: 600,
-                fontSize: 48,
-                lineHeight: 1,
-                color: '#3A5A40',
+                margin: '14px 0 0',
+                fontFamily: ALTokens.font,
+                fontWeight: 700,
+                fontSize: 40,
+                lineHeight: 1.05,
+                color: ALTokens.color.ink,
+                letterSpacing: '-0.02em',
               }}
             >
-              The story so far
+              The story so far.
             </h1>
-            <p style={{ margin: '10px 0 0', fontSize: 14, color: '#7B8378' }}>
-              Everything your kids have done, classified for reporting.
+            <p
+              style={{
+                margin: '12px 0 0',
+                fontSize: 15.5,
+                color: ALTokens.color.body,
+                maxWidth: 560,
+                lineHeight: 1.6,
+              }}
+            >
+              Everything your kids have done, classified for reporting. Books, lessons, field trips, anything counts.
             </p>
           </div>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-wrap items-center">
             <GhostButton onClick={exportCsv}>Export CSV</GhostButton>
             <GhostButton onClick={() => openPrintable()}>
               {filterChildId
-                ? `Print ${kids.find((c) => c.id === filterChildId)?.name}'s portfolio →`
-                : 'Print portfolio →'}
+                ? `Print ${kids.find((c) => c.id === filterChildId)?.name}'s portfolio`
+                : 'Print portfolio'}
+              <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
             </GhostButton>
-            <PrimaryButton onClick={openNew}>+ Log activity</PrimaryButton>
+            <PrimaryButton onClick={openNew}>
+              <ALIcons.Plus size={14} color={ALTokens.color.cream} />
+              Log activity
+            </PrimaryButton>
           </div>
         </div>
       </section>
@@ -823,10 +891,10 @@ export default function DashboardTracker({
         </section>
       )}
 
-      <section className="mb-6">
+      <section className="mb-7">
         <div
           className="grid gap-3 grid-stats"
-          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))' }}
         >
           <StatCard label="Total entries" value={stats.total} hint="All time" />
           <StatCard label="This week" value={stats.thisWeek} />
@@ -863,37 +931,51 @@ export default function DashboardTracker({
             background: 'transparent',
             border: 0,
             cursor: 'pointer',
-            color: '#3A5A40',
-            fontFamily: '"DM Sans"',
+            color: ALTokens.color.forest,
+            fontFamily: ALTokens.font,
             fontWeight: 600,
             fontSize: 12.5,
-            textDecoration: 'underline',
-            marginTop: 10,
+            marginTop: 12,
             padding: 0,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 5,
           }}
         >
           {moreStatsOpen ? 'Fewer stats' : 'More stats'}
+          <ALIcons.Chevron
+            size={12}
+            color={ALTokens.color.forest}
+            style={{
+              transform: moreStatsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: `transform 180ms ${ALTokens.ease}`,
+            }}
+          />
         </button>
       </section>
 
       {/* Per-kid breakdown */}
       {kids.length > 0 && (
         <section className="mb-8">
-          <div className="flex items-baseline justify-between mb-3">
-            <h2
-              style={{
-                margin: 0,
-                fontFamily: SERIF,
-                fontWeight: 400,
-                fontSize: 18,
-                color: '#2D3A2E',
-              }}
-            >
-              By kid
-              <HelpHint title="By kid">
-                Click any kid&apos;s card to filter the log to just their entries.
-              </HelpHint>
-            </h2>
+          <div className="flex items-baseline justify-between mb-4">
+            <div>
+              <Eyebrow>By kid</Eyebrow>
+              <h2
+                style={{
+                  margin: '8px 0 0',
+                  fontFamily: ALTokens.font,
+                  fontWeight: 700,
+                  fontSize: 20,
+                  letterSpacing: '-0.015em',
+                  color: ALTokens.color.ink,
+                }}
+              >
+                Tap a kid to filter
+                <HelpHint title="By kid">
+                  Click any kid&apos;s card to filter the log to just their entries.
+                </HelpHint>
+              </h2>
+            </div>
             <button
               type="button"
               onClick={onOpenFamilySetup}
@@ -901,19 +983,22 @@ export default function DashboardTracker({
                 background: 'transparent',
                 border: 0,
                 cursor: 'pointer',
-                color: '#3A5A40',
-                fontFamily: '"DM Sans"',
+                color: ALTokens.color.forest,
+                fontFamily: ALTokens.font,
                 fontWeight: 600,
                 fontSize: 12.5,
-                textDecoration: 'underline',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
               }}
             >
-              Family setup →
+              Family setup
+              <ALIcons.Arrow size={12} color={ALTokens.color.forest} />
             </button>
           </div>
           <div
             className="grid gap-3"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))' }}
           >
             {perKidStats.map(({ child, count, topSubject }) => {
               const isActive = filterChildId === child.id;
@@ -926,32 +1011,37 @@ export default function DashboardTracker({
                     appearance: 'none',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    background: isActive ? `${child.color}1A` : '#FFFDF7',
-                    border: `1px solid ${isActive ? child.color : '#E5E0D2'}`,
-                    borderRadius: 14,
+                    background: isActive ? `${child.color}14` : ALTokens.color.paper,
+                    border: `1px solid ${isActive ? child.color : ALTokens.color.line}`,
+                    borderRadius: ALTokens.radius.md,
                     padding: '14px 16px',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: 12,
+                    gap: 14,
+                    boxShadow: ALTokens.shadow.xs,
+                    transition: `all 150ms ${ALTokens.ease}`,
                   }}
                 >
-                  <ChildAvatar child={child} size={42} />
+                  <ChildAvatar child={child} size={44} />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div
                       style={{
-                        fontFamily: SERIF,
-                        fontSize: 17,
-                        color: '#2D3A2E',
+                        fontFamily: ALTokens.font,
+                        fontSize: 16,
+                        fontWeight: 700,
+                        color: ALTokens.color.ink,
                         lineHeight: 1.2,
+                        letterSpacing: '-0.015em',
                       }}
                     >
                       {child.name}
                     </div>
                     <div
                       style={{
-                        fontSize: 12,
-                        color: '#7B8378',
-                        marginTop: 2,
+                        fontFamily: ALTokens.font,
+                        fontSize: 12.5,
+                        color: ALTokens.color.muted,
+                        marginTop: 3,
                       }}
                     >
                       {count > 0
@@ -963,14 +1053,18 @@ export default function DashboardTracker({
                   </div>
                   {isActive && (
                     <span
+                      className="inline-flex items-center gap-1"
                       style={{
                         color: child.color,
-                        fontFamily: '"DM Sans"',
-                        fontWeight: 600,
-                        fontSize: 11.5,
+                        fontFamily: ALTokens.font,
+                        fontWeight: 700,
+                        fontSize: 11,
+                        letterSpacing: '.08em',
+                        textTransform: 'uppercase',
                       }}
                     >
-                      Filtering ✓
+                      <ALIcons.Check size={13} color={child.color} />
+                      Filtering
                     </span>
                   )}
                 </button>
@@ -980,13 +1074,14 @@ export default function DashboardTracker({
         </section>
       )}
 
+      {/* Filter row — sand well per the prototype */}
       <section
         className="mb-8"
         style={{
-          background: '#FAF9F6',
-          border: '1px solid #E5E0D2',
-          borderRadius: 14,
-          padding: 16,
+          background: ALTokens.color.sand,
+          border: `1px solid ${ALTokens.color.lineSoft}`,
+          borderRadius: ALTokens.radius.lg,
+          padding: 18,
         }}
       >
         <div className="flex flex-wrap items-end gap-3 filter-row">
@@ -997,21 +1092,34 @@ export default function DashboardTracker({
                 type="search"
                 value={searchQ}
                 onChange={(e) => setSearchQ(e.target.value)}
-                placeholder="Title or notes…"
-                style={{ ...filterFieldStyle, width: '100%', paddingLeft: 28 }}
+                placeholder="Title or notes..."
+                style={{ ...filterFieldStyle, width: '100%', paddingLeft: 36 }}
               />
               <span
                 aria-hidden
                 style={{
                   position: 'absolute',
-                  left: 10,
+                  left: 12,
                   top: '50%',
                   transform: 'translateY(-50%)',
-                  color: '#7B8378',
-                  fontSize: 13,
+                  color: ALTokens.color.muted,
+                  display: 'inline-flex',
                 }}
               >
-                ⌕
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3" />
+                </svg>
               </span>
             </div>
           </div>
@@ -1020,25 +1128,58 @@ export default function DashboardTracker({
             onClick={() => setFiltersOpen((v) => !v)}
             aria-expanded={filtersOpen}
             style={{
-              background: filtersOpen || advancedFilterCount > 0 ? '#588157' : '#FFFDF7',
-              border: `1px solid ${filtersOpen || advancedFilterCount > 0 ? '#588157' : '#E5E0D2'}`,
-              borderRadius: 8,
+              background:
+                filtersOpen || advancedFilterCount > 0
+                  ? ALTokens.color.forest
+                  : ALTokens.color.paper,
+              border: `1px solid ${
+                filtersOpen || advancedFilterCount > 0
+                  ? ALTokens.color.forest
+                  : ALTokens.color.line
+              }`,
+              borderRadius: ALTokens.radius.sm,
               cursor: 'pointer',
-              color: filtersOpen || advancedFilterCount > 0 ? '#FAF9F6' : '#3A5A40',
-              fontFamily: '"DM Sans"',
+              color:
+                filtersOpen || advancedFilterCount > 0
+                  ? ALTokens.color.cream
+                  : ALTokens.color.forest,
+              fontFamily: ALTokens.font,
               fontWeight: 600,
               fontSize: 13,
-              padding: '7px 12px',
+              padding: '9px 14px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 7,
             }}
           >
-            {advancedFilterCount > 0 ? `Filters (${advancedFilterCount})` : 'Filters'} {filtersOpen ? '▾' : '▸'}
+            <ALIcons.Sliders
+              size={14}
+              color={
+                filtersOpen || advancedFilterCount > 0
+                  ? ALTokens.color.cream
+                  : ALTokens.color.forest
+              }
+            />
+            {advancedFilterCount > 0 ? `Filters (${advancedFilterCount})` : 'Filters'}
+            <ALIcons.Chevron
+              size={12}
+              color={
+                filtersOpen || advancedFilterCount > 0
+                  ? ALTokens.color.cream
+                  : ALTokens.color.forest
+              }
+              style={{
+                transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                transition: `transform 180ms ${ALTokens.ease}`,
+              }}
+            />
           </button>
         </div>
 
         {filtersOpen && (
           <div
             className="flex flex-wrap items-end gap-3 filter-row"
-            style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid #E5E0D2' }}
+            style={{ marginTop: 16, paddingTop: 16, borderTop: `1px solid ${ALTokens.color.line}` }}
           >
             <div>
               <label style={filterLabelStyle}>From</label>
@@ -1123,11 +1264,10 @@ export default function DashboardTracker({
                 background: 'transparent',
                 border: 0,
                 cursor: 'pointer',
-                color: '#3A5A40',
-                fontFamily: '"DM Sans"',
+                color: ALTokens.color.muted,
+                fontFamily: ALTokens.font,
                 fontWeight: 600,
                 fontSize: 12.5,
-                textDecoration: 'underline',
                 padding: '8px 0',
               }}
             >
@@ -1145,10 +1285,10 @@ export default function DashboardTracker({
               key={i}
               className="animate-pulse"
               style={{
-                height: 64,
-                background: '#EFEDE4',
-                border: '1px solid #E5E0D2',
-                borderRadius: 14,
+                height: 72,
+                background: ALTokens.color.sand,
+                border: `1px solid ${ALTokens.color.lineSoft}`,
+                borderRadius: ALTokens.radius.md,
               }}
             />
           ))}
@@ -1156,20 +1296,26 @@ export default function DashboardTracker({
       ) : entries.length === 0 ? (
         <div
           style={{
-            background: '#FFFDF7',
-            border: '1px dashed #E5E0D2',
-            borderRadius: 14,
-            padding: hasActiveFilters ? '60px 32px' : '36px 32px 32px',
+            background: ALTokens.color.paper,
+            border: `1px dashed ${ALTokens.color.line}`,
+            borderRadius: ALTokens.radius.lg,
+            padding: hasActiveFilters ? '60px 32px' : '40px 32px 32px',
             textAlign: 'center',
           }}
         >
+          <Eyebrow>
+            <span style={{ display: 'inline-flex' }}>
+              {hasActiveFilters ? 'Empty page' : 'Begin'}
+            </span>
+          </Eyebrow>
           <h2
             style={{
-              margin: 0,
-              fontFamily: '"DM Sans"',
-              fontWeight: 600,
-              fontSize: 30,
-              color: '#3A5A40',
+              margin: '14px 0 0',
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 28,
+              letterSpacing: '-0.02em',
+              color: ALTokens.color.ink,
               lineHeight: 1.1,
             }}
           >
@@ -1177,11 +1323,12 @@ export default function DashboardTracker({
           </h2>
           <p
             style={{
-              margin: '12px auto 18px',
-              fontSize: 14,
-              color: '#4F5A50',
+              margin: '14px auto 22px',
+              fontSize: 14.5,
+              color: ALTokens.color.body,
               maxWidth: 520,
-              lineHeight: 1.55,
+              lineHeight: 1.6,
+              fontFamily: ALTokens.font,
             }}
           >
             {hasActiveFilters
@@ -1191,37 +1338,53 @@ export default function DashboardTracker({
 
           {!hasActiveFilters && (
             <div
-              className="grid gap-2 mt-2 mb-5 mx-auto"
+              className="grid gap-2 mt-2 mb-6 mx-auto"
               style={{
-                gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
                 maxWidth: 640,
                 textAlign: 'left',
               }}
             >
               {[
-                { icon: '◧', label: 'A book you read together', hint: 'Tag ELA + history' },
-                { icon: '⌗', label: 'A museum or zoo trip', hint: 'Tag science + art' },
-                { icon: '◆', label: 'A piano or sport lesson', hint: 'Add a custom subject' },
-                { icon: '◐', label: 'A documentary you watched', hint: 'Quick win' },
+                { dot: ALTokens.color.river, label: 'A book you read together', hint: 'Tag ELA + history' },
+                { dot: ALTokens.color.nature, label: 'A museum or zoo trip', hint: 'Tag science + art' },
+                { dot: ALTokens.color.dustyRose, label: 'A piano or sport lesson', hint: 'Add a custom subject' },
+                { dot: ALTokens.color.gold, label: 'A documentary you watched', hint: 'Quick win' },
               ].map((idea) => (
                 <div
                   key={idea.label}
                   style={{
-                    background: '#FAF9F6',
-                    border: '1px solid #E5E0D2',
-                    borderRadius: 12,
-                    padding: '10px 12px',
+                    background: ALTokens.color.sand,
+                    border: `1px solid ${ALTokens.color.lineSoft}`,
+                    borderRadius: ALTokens.radius.md,
+                    padding: '12px 14px',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: 10,
+                    gap: 12,
                   }}
                 >
-                  <span style={{ fontFamily: SERIF, color: '#3A5A40', fontSize: 18 }}>{idea.icon}</span>
+                  <Dot color={idea.dot} size={8} />
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ fontSize: 13, color: '#2D3A2E', fontWeight: 600 }}>
+                    <div
+                      style={{
+                        fontSize: 13,
+                        color: ALTokens.color.ink,
+                        fontFamily: ALTokens.font,
+                        fontWeight: 700,
+                      }}
+                    >
                       {idea.label}
                     </div>
-                    <div style={{ fontSize: 11.5, color: '#7B8378' }}>{idea.hint}</div>
+                    <div
+                      style={{
+                        fontSize: 11.5,
+                        color: ALTokens.color.muted,
+                        fontFamily: ALTokens.font,
+                        marginTop: 2,
+                      }}
+                    >
+                      {idea.hint}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -1234,15 +1397,32 @@ export default function DashboardTracker({
             ) : (
               <>
                 <GhostButton onClick={() => onJumpToTab('today')}>
-                  Browse activities →
+                  Browse activities
+                  <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
                 </GhostButton>
-                <PrimaryButton onClick={openNew}>+ Log something</PrimaryButton>
+                <PrimaryButton onClick={openNew}>
+                  <ALIcons.Plus size={14} color={ALTokens.color.cream} />
+                  Log something
+                </PrimaryButton>
               </>
             )}
           </div>
           {!hasActiveFilters && (
-            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px dashed #E5E0D2' }}>
-              <p style={{ margin: '0 0 10px', fontSize: 12.5, color: '#7B8378' }}>
+            <div
+              style={{
+                marginTop: 26,
+                paddingTop: 20,
+                borderTop: `1px dashed ${ALTokens.color.line}`,
+              }}
+            >
+              <p
+                style={{
+                  margin: '0 0 12px',
+                  fontSize: 12.5,
+                  color: ALTokens.color.muted,
+                  fontFamily: ALTokens.font,
+                }}
+              >
                 Want to see what the dashboard looks like full?
               </p>
               <button
@@ -1252,17 +1432,27 @@ export default function DashboardTracker({
                 style={{
                   appearance: 'none',
                   cursor: seedingDemo ? 'wait' : 'pointer',
-                  background: 'transparent',
-                  border: '1px dashed #C9D3BE',
-                  color: '#3A5A40',
-                  fontFamily: '"DM Sans"',
+                  background: ALTokens.color.paper,
+                  border: `1px dashed ${ALTokens.color.line}`,
+                  color: ALTokens.color.forest,
+                  fontFamily: ALTokens.font,
                   fontWeight: 600,
                   fontSize: 13,
-                  padding: '8px 14px',
-                  borderRadius: 8,
+                  padding: '9px 16px',
+                  borderRadius: ALTokens.radius.sm,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
                 }}
               >
-                {seedingDemo ? 'Adding sample entries…' : '✨ Try with sample data (10 entries)'}
+                {seedingDemo ? (
+                  'Adding sample entries...'
+                ) : (
+                  <>
+                    <ALIcons.Sun size={14} color={ALTokens.color.gold} />
+                    Try with sample data (10 entries)
+                  </>
+                )}
               </button>
             </div>
           )}
@@ -1271,21 +1461,38 @@ export default function DashboardTracker({
         <div className="grid gap-8">
           {grouped.map((group) => (
             <section key={group.key}>
-              <h2
+              <div
+                className="flex items-baseline gap-3 mb-4"
                 style={{
-                  margin: '0 0 14px',
-                  fontFamily: SERIF,
-                  fontWeight: 400,
-                  fontSize: 22,
-                  color: '#2D3A2E',
-                  letterSpacing: '-.008em',
+                  paddingBottom: 10,
+                  borderBottom: `1px solid ${ALTokens.color.line}`,
                 }}
               >
-                {group.label}
-                <span style={{ marginLeft: 10, fontSize: 13, color: '#7B8378' }}>
+                <Eyebrow>Month</Eyebrow>
+                <h2
+                  style={{
+                    margin: 0,
+                    fontFamily: ALTokens.font,
+                    fontWeight: 700,
+                    fontSize: 22,
+                    color: ALTokens.color.ink,
+                    letterSpacing: '-0.018em',
+                  }}
+                >
+                  {group.label}
+                </h2>
+                <span
+                  style={{
+                    fontSize: 12,
+                    color: ALTokens.color.muted,
+                    fontFamily: ALTokens.font,
+                    fontWeight: 600,
+                    fontVariantNumeric: 'tabular-nums',
+                  }}
+                >
                   {group.items.length} {group.items.length === 1 ? 'entry' : 'entries'}
                 </span>
-              </h2>
+              </div>
               <div className="grid gap-2">
                 {group.items.map((entry) => (
                   <EntryRow

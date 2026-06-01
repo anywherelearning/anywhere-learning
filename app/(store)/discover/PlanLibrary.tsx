@@ -12,7 +12,16 @@
 import { useMemo, useState } from 'react';
 import { ENRICHED_ACTIVITIES, SETTING_LABEL, INDEPENDENCE_LABEL } from '@/lib/activity-metadata';
 import { CATEGORIES, CATEGORY_LABELS } from '@/lib/categories';
-import { CategoryTag, ChildAvatar, Eyebrow, GhostButton, PrimaryButton } from './dashboard-shared';
+import {
+  ALIcons,
+  ALTokens,
+  ChildAvatar,
+  Dot,
+  Eyebrow,
+  GhostButton,
+  PrimaryButton,
+  tintForCategory,
+} from './dashboard-shared';
 import { createCalendarEvent } from './dashboard-api';
 import { useToast } from './Toast';
 import type { Child } from './dashboard-types';
@@ -62,33 +71,107 @@ export default function PlanLibrary({
   const activeAdding = adding ? ENRICHED_ACTIVITIES.find((a) => a.product.slug === adding) : null;
 
   return (
-    <section>
-      <div className="mb-3">
+    <section
+      style={{
+        position: 'relative',
+        background: 'linear-gradient(166deg, #fffdf9 0%, #f6f1e7 100%)',
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.xl,
+        padding: 'clamp(22px, 4vw, 34px)',
+        boxShadow: ALTokens.shadow.sm,
+        overflow: 'hidden',
+      }}
+    >
+      {/* earthy accent rule */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 4,
+          background: ALTokens.color.earthy,
+          opacity: 0.85,
+        }}
+      />
+
+      <div className="flex items-center gap-3 mb-3">
+        <span
+          className="inline-flex items-center justify-center"
+          style={{
+            width: 34,
+            height: 34,
+            borderRadius: ALTokens.radius.sm,
+            background: 'rgba(139,115,85,0.18)',
+          }}
+        >
+          <ALIcons.Grid size={18} color={ALTokens.color.earthy} />
+        </span>
         <Eyebrow>The library</Eyebrow>
-        <h2 className="mt-2 text-lg text-forest" style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}>
-          Browse activities and add them
-        </h2>
-        <p className="mt-0.5 text-sm text-forest/65" style={{ fontFamily: '"DM Sans"' }}>
-          Every Anywhere Learning activity. Filter, peek inside, and drop any one onto your week.
-        </p>
       </div>
 
-      {/* Filters */}
-      <div className="mb-4 flex flex-col gap-3">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search activities..."
-          className="w-full rounded-full border border-forest/15 bg-white px-4 py-2"
-          style={{ fontFamily: '"DM Sans"', fontSize: 14, color: '#2D3A2E', outline: 'none' }}
-        />
-        <div className="flex flex-wrap gap-1.5">
+      <h2
+        style={{
+          margin: 0,
+          fontFamily: ALTokens.font,
+          fontWeight: 700,
+          fontSize: 26,
+          lineHeight: 1.12,
+          letterSpacing: '-0.02em',
+          color: ALTokens.color.ink,
+          maxWidth: '18em',
+        }}
+      >
+        Browse the shelf. Add what calls to you.
+      </h2>
+      <p
+        style={{
+          margin: '12px 0 24px',
+          fontSize: 15.5,
+          color: ALTokens.color.body,
+          lineHeight: 1.6,
+          maxWidth: '36em',
+        }}
+      >
+        Every Anywhere Learning activity, filterable. Peek inside any one or drop it straight onto your week.
+      </p>
+
+      {/* Filters: search + category chips */}
+      <div className="flex flex-col gap-3 mb-5">
+        <div
+          className="flex items-center gap-2"
+          style={{
+            background: ALTokens.color.paper,
+            border: `1px solid ${ALTokens.color.line}`,
+            borderRadius: ALTokens.radius.pill,
+            padding: '2px 8px 2px 14px',
+          }}
+        >
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search activities..."
+            style={{
+              flex: 1,
+              border: 'none',
+              outline: 'none',
+              background: 'transparent',
+              fontFamily: ALTokens.font,
+              fontSize: 14,
+              color: ALTokens.color.ink,
+              padding: '8px 0',
+            }}
+          />
+        </div>
+        <div className="flex flex-wrap gap-2">
           <FilterChip label="All" active={category === 'all'} onClick={() => setCategory('all')} />
           {categoriesWithCounts.map((c) => (
             <FilterChip
               key={c.value}
-              label={`${c.label}`}
+              label={c.label}
+              color={tintForCategory(c.value).dot}
               active={category === c.value}
               onClick={() => setCategory(c.value)}
             />
@@ -96,62 +179,140 @@ export default function PlanLibrary({
         </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid: paper cards with 3px category-accent left spine */}
       <div
         className="grid gap-3"
-        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
+        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}
       >
-        {results.map((a) => (
-          <div
-            key={a.product.slug}
-            className="flex flex-col overflow-hidden rounded-2xl border border-forest/10 bg-white"
-          >
-            {a.product.imageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={a.product.imageUrl}
-                alt={a.product.name}
-                loading="lazy"
-                style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover' }}
-              />
-            )}
-            <div className="flex grow flex-col gap-2 p-3">
-              <CategoryTag category={a.product.category} />
-              <p
-                className="text-forest"
-                style={{ fontFamily: '"DM Sans"', fontWeight: 600, fontSize: 14, lineHeight: 1.25 }}
-              >
-                {a.product.name}
-              </p>
-              <p className="text-forest/55" style={{ fontFamily: '"DM Sans"', fontSize: 11.5 }}>
-                {a.product.ageRange ?? 'All ages'} · {SETTING_LABEL[a.setting]} · {INDEPENDENCE_LABEL[a.independence]}
-              </p>
-              <div className="mt-auto flex items-center gap-1.5 pt-1">
-                <button
-                  type="button"
-                  onClick={() => setAdding(a.product.slug)}
-                  className="flex-1 rounded-md px-2 py-1.5 hover:opacity-90 cursor-pointer"
-                  style={{ background: '#588157', color: '#FAF9F6', fontFamily: '"DM Sans"', fontSize: 12, fontWeight: 600 }}
+        {results.map((a) => {
+          const tint = tintForCategory(a.product.category);
+          return (
+            <div
+              key={a.product.slug}
+              className="flex flex-col overflow-hidden"
+              style={{
+                background: ALTokens.color.paper,
+                border: `1px solid ${ALTokens.color.line}`,
+                borderLeft: `3px solid ${tint.dot}`,
+                borderRadius: ALTokens.radius.md,
+                boxShadow: ALTokens.shadow.xs,
+              }}
+            >
+              {a.product.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={a.product.imageUrl}
+                  alt={a.product.name}
+                  loading="lazy"
+                  style={{
+                    width: '100%',
+                    aspectRatio: '4/3',
+                    objectFit: 'cover',
+                    borderBottom: `1px solid ${ALTokens.color.lineSoft}`,
+                  }}
+                />
+              )}
+              <div className="flex grow flex-col gap-2 p-4">
+                <span
+                  className="inline-flex items-center gap-1.5"
+                  style={{
+                    fontFamily: ALTokens.font,
+                    fontSize: 10.5,
+                    fontWeight: 700,
+                    color: tint.dot,
+                    textTransform: 'uppercase',
+                    letterSpacing: '.08em',
+                  }}
                 >
-                  Add to plan
-                </button>
-                <a
-                  href={`/api/download/activity/${a.product.slug}?view=1`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-md border border-forest/20 px-2 py-1.5 text-forest/80 hover:bg-forest/5"
-                  style={{ fontFamily: '"DM Sans"', fontSize: 12, fontWeight: 600 }}
+                  <Dot color={tint.dot} size={6} />
+                  {CATEGORY_LABELS[a.product.category] || 'Activity'}
+                </span>
+                <h4
+                  style={{
+                    margin: 0,
+                    fontFamily: ALTokens.font,
+                    fontWeight: 700,
+                    fontSize: 15.5,
+                    lineHeight: 1.25,
+                    letterSpacing: '-0.012em',
+                    color: ALTokens.color.ink,
+                  }}
                 >
-                  Open
-                </a>
+                  {a.product.name}
+                </h4>
+                <p
+                  style={{
+                    margin: 0,
+                    fontFamily: ALTokens.font,
+                    fontSize: 12,
+                    color: ALTokens.color.muted,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {a.product.ageRange ?? 'All ages'} · {SETTING_LABEL[a.setting]} · {INDEPENDENCE_LABEL[a.independence]}
+                </p>
+                <div className="mt-auto flex items-center gap-2 pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setAdding(a.product.slug)}
+                    style={{
+                      flex: 1,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: 6,
+                      background: 'rgba(88,129,87,0.10)',
+                      color: ALTokens.color.forest,
+                      border: `1px solid ${ALTokens.color.line}`,
+                      borderRadius: ALTokens.radius.sm,
+                      padding: '8px 10px',
+                      fontFamily: ALTokens.font,
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      transition: `all 150ms ${ALTokens.ease}`,
+                    }}
+                  >
+                    <ALIcons.Plus size={13} color={ALTokens.color.forest} />
+                    Add to week
+                  </button>
+                  <a
+                    href={`/api/download/activity/${a.product.slug}?view=1`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 4,
+                      background: ALTokens.color.paper,
+                      color: ALTokens.color.body,
+                      border: `1px solid ${ALTokens.color.line}`,
+                      borderRadius: ALTokens.radius.sm,
+                      padding: '8px 12px',
+                      fontFamily: ALTokens.font,
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Open
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {results.length === 0 && (
-        <p className="py-10 text-center text-forest/55" style={{ fontFamily: '"DM Sans"', fontSize: 14 }}>
+        <p
+          className="py-10 text-center"
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 14,
+            color: ALTokens.color.muted,
+          }}
+        >
           No activities match. Try another category or search.
         </p>
       )}
@@ -176,22 +337,38 @@ export default function PlanLibrary({
   );
 }
 
-function FilterChip({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function FilterChip({
+  label,
+  active,
+  onClick,
+  color,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+  color?: string;
+}) {
+  const accent = color || ALTokens.color.forest;
   return (
     <button
       type="button"
       onClick={onClick}
-      className="rounded-full px-3 py-1.5"
+      className="inline-flex items-center gap-1.5"
       style={{
-        fontFamily: '"DM Sans"',
-        fontSize: 12.5,
+        fontFamily: ALTokens.font,
+        fontSize: 13,
         fontWeight: 600,
         cursor: 'pointer',
-        background: active ? '#588157' : '#FFFFFF',
-        border: `1px solid ${active ? '#588157' : '#E5E0D2'}`,
-        color: active ? '#FAF9F6' : '#4F5A50',
+        background: active ? accent : ALTokens.color.paper,
+        border: `1px solid ${active ? accent : ALTokens.color.line}`,
+        color: active ? '#fff' : ALTokens.color.body,
+        padding: '7px 14px',
+        borderRadius: ALTokens.radius.pill,
+        whiteSpace: 'nowrap',
+        transition: `all 150ms ${ALTokens.ease}`,
       }}
     >
+      {color && <Dot color={active ? '#fff' : accent} size={7} />}
       {label}
     </button>
   );
@@ -252,30 +429,85 @@ function AddToPlanDialog({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4" onClick={onClose}>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      style={{ background: 'rgba(45,58,46,0.55)', backdropFilter: 'blur(2px)' }}
+      onClick={onClose}
+    >
       <div
-        className="w-full max-w-md rounded-2xl bg-cream p-6 shadow-2xl"
+        className="w-full max-w-md"
+        style={{
+          background: ALTokens.color.cream,
+          border: `1px solid ${ALTokens.color.line}`,
+          borderRadius: ALTokens.radius.xl,
+          padding: 26,
+          boxShadow: ALTokens.shadow.lg,
+        }}
         onClick={(e) => e.stopPropagation()}
       >
         <Eyebrow>Add to plan</Eyebrow>
-        <h3 className="mt-2 text-lg text-forest" style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}>
+        <h3
+          style={{
+            margin: '10px 0 0',
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 20,
+            letterSpacing: '-0.018em',
+            color: ALTokens.color.ink,
+            lineHeight: 1.2,
+          }}
+        >
           {activityName}
         </h3>
 
-        <label className="mt-4 block text-sm" style={{ fontFamily: '"DM Sans"' }}>
-          <span className="text-forest/70">Which day?</span>
+        <label className="mt-5 block" style={{ fontFamily: ALTokens.font }}>
+          <span
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: '.18em',
+              textTransform: 'uppercase',
+              color: ALTokens.color.goldDark,
+              display: 'block',
+              marginBottom: 8,
+            }}
+          >
+            Which day?
+          </span>
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="mt-1 w-full rounded-md border border-forest/15 px-2 py-1.5"
+            style={{
+              width: '100%',
+              background: ALTokens.color.paper,
+              border: `1px solid ${ALTokens.color.line}`,
+              borderRadius: ALTokens.radius.sm,
+              padding: '9px 12px',
+              fontFamily: ALTokens.font,
+              fontSize: 14,
+              color: ALTokens.color.ink,
+              outline: 'none',
+            }}
           />
         </label>
 
         {kids.length > 0 && (
-          <div className="mt-3 text-sm" style={{ fontFamily: '"DM Sans"' }}>
-            <span className="text-forest/70">For who? (optional)</span>
-            <div className="mt-1.5 flex flex-wrap gap-1.5">
+          <div className="mt-4" style={{ fontFamily: ALTokens.font }}>
+            <span
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '.18em',
+                textTransform: 'uppercase',
+                color: ALTokens.color.goldDark,
+                display: 'block',
+                marginBottom: 10,
+              }}
+            >
+              For who? (optional)
+            </span>
+            <div className="flex flex-wrap gap-2">
               {kids.map((k) => {
                 const on = selectedKids.includes(k.id);
                 return (
@@ -283,17 +515,21 @@ function AddToPlanDialog({
                     key={k.id}
                     type="button"
                     onClick={() => toggleKid(k.id)}
-                    className="flex items-center gap-1.5 rounded-full px-2.5 py-1"
+                    className="flex items-center gap-2"
                     style={{
-                      fontSize: 12,
+                      fontSize: 13,
                       fontWeight: 600,
                       cursor: 'pointer',
-                      background: on ? `${k.color}1A` : '#FFFFFF',
-                      border: `1px solid ${on ? k.color : '#E5E0D2'}`,
-                      color: on ? k.color : '#4F5A50',
+                      background: on ? `${k.color}1A` : ALTokens.color.paper,
+                      border: `1px solid ${on ? k.color : ALTokens.color.line}`,
+                      color: on ? k.color : ALTokens.color.body,
+                      padding: '5px 14px 5px 5px',
+                      borderRadius: ALTokens.radius.pill,
+                      fontFamily: ALTokens.font,
+                      transition: `all 150ms ${ALTokens.ease}`,
                     }}
                   >
-                    <ChildAvatar child={k} size={18} />
+                    <ChildAvatar child={k} size={22} />
                     {k.name}
                   </button>
                 );
@@ -302,7 +538,13 @@ function AddToPlanDialog({
           </div>
         )}
 
-        <div className="mt-5 flex justify-end gap-2">
+        <div
+          className="mt-6 flex justify-end gap-2 items-center"
+          style={{
+            paddingTop: 16,
+            borderTop: `1px solid ${ALTokens.color.line}`,
+          }}
+        >
           <GhostButton onClick={onClose}>Cancel</GhostButton>
           <PrimaryButton onClick={add} disabled={saving}>
             {saving ? 'Adding...' : 'Add to plan'}

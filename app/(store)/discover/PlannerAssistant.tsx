@@ -13,7 +13,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Eyebrow, PrimaryButton } from './dashboard-shared';
+import { ALIcons, ALTokens, Eyebrow, PrimaryButton } from './dashboard-shared';
 import { askAgent } from './dashboard-api';
 import { useToast } from './Toast';
 
@@ -23,11 +23,18 @@ interface Msg {
 }
 
 const EXAMPLES = [
-  'Plan a light outdoor week for everyone',
+  'Plan a gentle week, lots of outdoors',
   'We use Singapore Math 4x a week, add it',
-  "We're traveling Friday, keep it clear",
+  'We travel Friday, keep it clear',
   'Start the Young Entrepreneur program',
 ];
+
+function timeOfDay(): string {
+  const h = new Date().getHours();
+  if (h < 12) return 'Good morning';
+  if (h < 18) return 'Good afternoon';
+  return 'Good evening';
+}
 
 // Minimal shape of the Web Speech API we use (not in the standard TS lib).
 interface SpeechRecognitionLike {
@@ -135,103 +142,238 @@ export default function PlannerAssistant({
     [messages, sending, weekStart, onChanged, onNeedsUpgrade, toast],
   );
 
+  const started = messages.length > 0;
+
   return (
     <section
-      className="rounded-2xl border border-forest/15 p-5"
-      style={{ background: 'linear-gradient(180deg, #F1F4EC 0%, #FBFAF6 100%)' }}
+      style={{
+        position: 'relative',
+        background: 'linear-gradient(166deg, #fffdf9 0%, #f6f1e7 100%)',
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.xl,
+        padding: 'clamp(22px, 4vw, 34px)',
+        boxShadow: ALTokens.shadow.sm,
+        overflow: 'hidden',
+      }}
     >
-      <Eyebrow>Plan by chat</Eyebrow>
-      <h2
-        className="mt-2 text-lg text-forest"
-        style={{ fontFamily: '"DM Sans"', fontWeight: 600 }}
-      >
-        Just tell me what you want
-      </h2>
-      <p className="mt-0.5 text-sm text-forest/65" style={{ fontFamily: '"DM Sans"' }}>
-        Talk or type. I will set up the week, add your curriculum, block travel days, or start a program.
-      </p>
+      {/* 4px accent rule at top */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 4,
+          background: ALTokens.color.forest,
+          opacity: 0.85,
+        }}
+      />
 
-      {/* Conversation log */}
-      {messages.length > 0 && (
+      {/* Header with chat-bubble glyph + eyebrow */}
+      <div
+        className="flex items-center gap-3"
+        style={{ marginBottom: 16 }}
+      >
+        <span
+          className="inline-flex items-center justify-center"
+          style={{
+            width: 34,
+            height: 34,
+            borderRadius: ALTokens.radius.sm,
+            background: 'rgba(88,129,87,0.13)',
+          }}
+        >
+          <ALIcons.Chat size={18} color={ALTokens.color.forest} />
+        </span>
+        <Eyebrow>{started ? 'Planning together' : 'Plan by chat'}</Eyebrow>
+      </div>
+
+      {/* Editorial greeting (only before first message) */}
+      {!started && (
+        <>
+          <h2
+            style={{
+              margin: 0,
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 28,
+              lineHeight: 1.12,
+              letterSpacing: '-0.02em',
+              color: ALTokens.color.ink,
+              maxWidth: '18em',
+            }}
+          >
+            {timeOfDay()}. What are you hoping for this week?
+          </h2>
+          <p
+            style={{
+              margin: '12px 0 22px',
+              fontSize: 15.5,
+              color: ALTokens.color.body,
+              lineHeight: 1.6,
+              maxWidth: '34em',
+            }}
+          >
+            Talk or type, the way you would to a friend who plans for a living. I will shape the week, fold in your own curriculum, keep travel days clear, or start a program.
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-5">
+            {EXAMPLES.map((ex) => (
+              <button
+                key={ex}
+                type="button"
+                onClick={() => send(ex)}
+                disabled={sending}
+                style={{
+                  background: ALTokens.color.paper,
+                  border: `1px solid ${ALTokens.color.line}`,
+                  borderRadius: ALTokens.radius.pill,
+                  padding: '9px 15px',
+                  fontFamily: ALTokens.font,
+                  fontSize: 13.5,
+                  fontWeight: 500,
+                  color: ALTokens.color.forestInk,
+                  cursor: sending ? 'not-allowed' : 'pointer',
+                  opacity: sending ? 0.6 : 1,
+                  transition: `all 160ms ${ALTokens.ease}`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = ALTokens.color.forest;
+                  e.currentTarget.style.background = 'rgba(88,129,87,0.06)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = ALTokens.color.line;
+                  e.currentTarget.style.background = ALTokens.color.paper;
+                }}
+              >
+                {ex}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Active conversation: bubble thread */}
+      {started && (
         <div
           ref={logRef}
-          className="mt-4 space-y-2 overflow-y-auto rounded-xl border border-forest/10 bg-white/70 p-3"
-          style={{ maxHeight: 220 }}
+          className="overflow-y-auto"
+          style={{
+            margin: '4px -2px 16px',
+            padding: '4px 2px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 14,
+            maxHeight: 420,
+          }}
         >
           {messages.map((m, i) => (
             <div
               key={i}
-              className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}
+              style={{
+                alignSelf: m.role === 'user' ? 'flex-end' : 'flex-start',
+                maxWidth: '88%',
+                animation: `al-fade .3s ${ALTokens.ease}`,
+              }}
             >
-              <span
-                className="inline-block rounded-2xl px-3 py-1.5"
+              <div
                 style={{
-                  maxWidth: '85%',
-                  fontFamily: '"DM Sans"',
-                  fontSize: 13,
-                  lineHeight: 1.4,
-                  background: m.role === 'user' ? '#588157' : '#EDEEE9',
-                  color: m.role === 'user' ? '#FAF9F6' : '#2D3A2E',
+                  background: m.role === 'user' ? ALTokens.color.forest : ALTokens.color.paper,
+                  color: m.role === 'user' ? ALTokens.color.cream : ALTokens.color.ink,
+                  border: m.role === 'user' ? 'none' : `1px solid ${ALTokens.color.line}`,
+                  padding: m.role === 'user' ? '11px 16px' : '13px 16px',
+                  borderRadius:
+                    m.role === 'user'
+                      ? '16px 16px 4px 16px'
+                      : '16px 16px 16px 4px',
+                  fontSize: 14.5,
+                  lineHeight: 1.55,
+                  fontFamily: ALTokens.font,
+                  fontWeight: m.role === 'user' ? 500 : 400,
                 }}
               >
                 {m.content}
-              </span>
+              </div>
             </div>
           ))}
           {sending && (
-            <div className="flex justify-start">
-              <span
-                className="inline-block rounded-2xl px-3 py-1.5"
-                style={{ background: '#EDEEE9', color: '#7B8378', fontFamily: '"DM Sans"', fontSize: 13 }}
+            <div
+              style={{
+                alignSelf: 'flex-start',
+                maxWidth: '88%',
+                animation: `al-fade .3s ${ALTokens.ease}`,
+              }}
+            >
+              <div
+                className="inline-flex items-center gap-2"
+                style={{
+                  background: ALTokens.color.paper,
+                  border: `1px solid ${ALTokens.color.line}`,
+                  padding: '12px 16px',
+                  borderRadius: '16px 16px 16px 4px',
+                  fontSize: 14,
+                  color: ALTokens.color.muted,
+                  fontFamily: ALTokens.font,
+                  fontWeight: 500,
+                }}
               >
-                Thinking...
-              </span>
+                <span
+                  className="al-pulse"
+                  style={{
+                    display: 'inline-block',
+                    width: 8,
+                    height: 8,
+                    borderRadius: '50%',
+                    background: ALTokens.color.gold,
+                  }}
+                />
+                Shaping the week
+              </div>
             </div>
           )}
         </div>
       )}
 
-      {/* Examples (only before first message) */}
-      {messages.length === 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {EXAMPLES.map((ex) => (
-            <button
-              key={ex}
-              type="button"
-              onClick={() => send(ex)}
-              disabled={sending}
-              className="rounded-full border border-forest/15 bg-white px-3 py-1.5 text-forest/75 hover:border-forest/30 hover:text-forest cursor-pointer"
-              style={{ fontFamily: '"DM Sans"', fontSize: 12 }}
-            >
-              {ex}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Composer */}
-      <div className="mt-4 flex items-center gap-2">
+      {/* Composer — paper row, voice button left, send icon right */}
+      <div
+        className="flex items-center gap-2"
+        style={{
+          background: ALTokens.color.paper,
+          border: `1px solid ${ALTokens.color.line}`,
+          borderRadius: ALTokens.radius.lg,
+          padding: '8px 8px 8px 12px',
+          boxShadow: ALTokens.shadow.xs,
+        }}
+      >
         {voiceSupported && (
           <button
             type="button"
             onClick={toggleMic}
             aria-label={listening ? 'Stop listening' : 'Speak'}
             aria-pressed={listening}
-            className="grid place-items-center rounded-full"
+            className="grid place-items-center"
             style={{
-              width: 40,
-              height: 40,
+              width: 38,
+              height: 38,
+              borderRadius: '50%',
               flexShrink: 0,
               cursor: 'pointer',
-              background: listening ? '#588157' : '#FFFFFF',
-              border: `1px solid ${listening ? '#588157' : '#E5E0D2'}`,
-              color: listening ? '#FAF9F6' : '#3A5A40',
+              background: listening ? ALTokens.color.forest : 'rgba(88,129,87,0.08)',
+              border: 'none',
+              color: listening ? ALTokens.color.cream : ALTokens.color.forest,
+              transition: `all 150ms ${ALTokens.ease}`,
             }}
-            title={listening ? 'Listening... tap to stop' : 'Tap to talk'}
+            title={listening ? 'Listening, tap to stop' : 'Tap to talk'}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
               <rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor" />
-              <path d="M5 11a7 7 0 0 0 14 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path
+                d="M5 11a7 7 0 0 0 14 0"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
               <path d="M12 18v3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
@@ -243,13 +385,33 @@ export default function PlannerAssistant({
           onKeyDown={(e) => {
             if (e.key === 'Enter') send(input);
           }}
-          placeholder={listening ? 'Listening...' : 'e.g. plan a calm week, lots of reading'}
+          placeholder={
+            sending
+              ? 'Shaping the week...'
+              : listening
+              ? 'Listening...'
+              : 'Message your planner'
+          }
           disabled={sending}
-          className="flex-1 rounded-full border border-forest/15 bg-white px-4 py-2.5"
-          style={{ fontFamily: '"DM Sans"', fontSize: 14, color: '#2D3A2E', outline: 'none' }}
+          className="flex-1"
+          style={{
+            border: 'none',
+            outline: 'none',
+            background: 'transparent',
+            fontFamily: ALTokens.font,
+            fontSize: 15,
+            color: ALTokens.color.ink,
+            minWidth: 0,
+            padding: '4px 4px',
+          }}
         />
-        <PrimaryButton onClick={() => send(input)} disabled={sending || !input.trim()}>
-          Send
+        <PrimaryButton
+          onClick={() => send(input)}
+          disabled={sending || !input.trim()}
+          small
+          style={{ borderRadius: ALTokens.radius.md }}
+        >
+          <ALIcons.Arrow size={15} color={ALTokens.color.cream} />
         </PrimaryButton>
       </div>
     </section>

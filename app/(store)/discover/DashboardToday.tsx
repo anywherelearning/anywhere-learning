@@ -24,6 +24,11 @@ import {
 } from '@/lib/recommender';
 import {
   SERIF,
+  ALIcons,
+  ALTokens,
+  AL_SUBJECT_ACCENT,
+  accentForSubject,
+  Dot,
   Eyebrow,
   CategoryTag,
   PrimaryButton,
@@ -90,7 +95,7 @@ function FilterPill({
   children: React.ReactNode;
   color?: string;
 }) {
-  const accent = color || '#588157';
+  const accent = color || ALTokens.color.forest;
   return (
     <button
       type="button"
@@ -98,21 +103,22 @@ function FilterPill({
       style={{
         appearance: 'none',
         cursor: 'pointer',
-        background: active ? `${accent}1A` : '#FFFDF7',
-        border: `1px solid ${active ? accent : '#E5E0D2'}`,
-        color: active ? accent : '#4F5A50',
-        fontFamily: '"DM Sans"',
+        background: active ? accent : ALTokens.color.paper,
+        border: `1px solid ${active ? accent : ALTokens.color.line}`,
+        color: active ? '#fff' : ALTokens.color.body,
+        fontFamily: ALTokens.font,
         fontWeight: active ? 600 : 500,
         fontSize: 12.5,
         padding: '7px 12px',
-        borderRadius: 999,
+        borderRadius: ALTokens.radius.pill,
         whiteSpace: 'nowrap',
         display: 'inline-flex',
         alignItems: 'center',
-        gap: 6,
+        gap: 7,
+        transition: `all 150ms ${ALTokens.ease}`,
       }}
     >
-      {active && <span style={{ fontSize: 10 }}>✓</span>}
+      {color && <Dot color={active ? '#fff' : accent} size={7} />}
       {children}
     </button>
   );
@@ -122,7 +128,7 @@ function FilterPill({
 
 function CoverageStripe({
   coverage,
-  customSubjects,
+  customSubjects: _customSubjects,
 }: {
   coverage: Record<string, number>;
   customSubjects: CustomSubject[];
@@ -132,56 +138,68 @@ function CoverageStripe({
   return (
     <div
       style={{
-        background: '#FAF9F6',
-        border: '1px solid #E5E0D2',
-        borderRadius: 14,
-        padding: '14px 16px',
+        background: ALTokens.color.sand,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.lg,
+        padding: '18px 20px',
       }}
     >
-      <div className="flex items-baseline justify-between mb-3">
+      <Eyebrow>Field notes</Eyebrow>
+      <div className="flex items-baseline justify-between mt-2 mb-4">
         <h3
           style={{
             margin: 0,
-            fontFamily: SERIF,
-            fontWeight: 400,
-            fontSize: 16,
-            color: '#2D3A2E',
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 18,
+            letterSpacing: '-0.015em',
+            color: ALTokens.color.ink,
           }}
         >
           Coverage this month
           <HelpHint title="Coverage at a glance">
             Counts of logged entries per standard subject this month. Used to surface
-            &ldquo;gap-fill&rdquo; suggestions below.
+            gap-fill suggestions below.
           </HelpHint>
         </h3>
-        <span style={{ fontSize: 12, color: '#7B8378' }}>
+        <span
+          style={{
+            fontSize: 12,
+            color: ALTokens.color.muted,
+            fontWeight: 600,
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
           {total} {total === 1 ? 'entry' : 'entries'}
         </span>
       </div>
-      <div className="grid gap-1.5">
+      <div className="grid gap-2">
         {STANDARD_SUBJECTS.map((s) => {
           const count = coverage[s.id] ?? 0;
           const width = Math.max(2, (count / max) * 100);
+          const accent = AL_SUBJECT_ACCENT[s.id] || s.color;
           return (
             <div key={s.id} className="flex items-center gap-3">
               <span
+                className="inline-flex items-center gap-2"
                 style={{
-                  width: 96,
-                  fontSize: 11.5,
-                  color: count === 0 ? '#B5B1A3' : s.color,
+                  width: 110,
+                  fontSize: 12,
+                  color: count === 0 ? ALTokens.color.faint : ALTokens.color.body,
                   fontWeight: 600,
-                  fontFamily: '"DM Sans"',
-                  textAlign: 'right',
+                  fontFamily: ALTokens.font,
+                  justifyContent: 'flex-end',
                 }}
               >
                 {s.label}
+                <Dot color={count === 0 ? ALTokens.color.faint : accent} size={7} />
               </span>
               <div
                 style={{
                   flex: 1,
-                  height: 8,
-                  background: '#F0EDE2',
-                  borderRadius: 999,
+                  height: 6,
+                  background: ALTokens.color.sandDeep,
+                  borderRadius: ALTokens.radius.pill,
                   overflow: 'hidden',
                 }}
               >
@@ -189,18 +207,21 @@ function CoverageStripe({
                   style={{
                     width: count === 0 ? 0 : `${width}%`,
                     height: '100%',
-                    background: s.color,
-                    opacity: count === 0 ? 0 : 0.85,
-                    transition: 'width .3s ease',
+                    background: accent,
+                    opacity: count === 0 ? 0 : 0.9,
+                    transition: `width 300ms ${ALTokens.ease}`,
+                    borderRadius: ALTokens.radius.pill,
                   }}
                 />
               </div>
               <span
                 style={{
-                  width: 24,
-                  fontSize: 12,
-                  fontFamily: SERIF,
-                  color: count === 0 ? '#B5B1A3' : '#2D3A2E',
+                  width: 22,
+                  fontSize: 13,
+                  fontFamily: ALTokens.font,
+                  fontWeight: 700,
+                  fontVariantNumeric: 'tabular-nums',
+                  color: count === 0 ? ALTokens.color.faint : ALTokens.color.ink,
                   textAlign: 'right',
                 }}
               >
@@ -232,14 +253,15 @@ function MiniActivityCard({
   return (
     <div
       style={{
-        background: '#FAF9F6',
-        border: '1px solid #E5E0D2',
-        borderRadius: 16,
-        boxShadow:
-          '0 1px 0 rgba(255,255,255,.5) inset, 0 14px 28px -22px rgba(45,58,46,.18)',
+        background: ALTokens.color.paper,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderLeft: `3px solid ${tint.dot}`,
+        borderRadius: ALTokens.radius.lg,
+        boxShadow: ALTokens.shadow.xs,
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
+        transition: `box-shadow 180ms ${ALTokens.ease}`,
       }}
     >
       <div
@@ -247,7 +269,7 @@ function MiniActivityCard({
         style={{
           aspectRatio: '4/3',
           background: tint.bg,
-          borderBottom: '1px solid #E5E0D2',
+          borderBottom: `1px solid ${ALTokens.color.lineSoft}`,
           overflow: 'hidden',
         }}
       >
@@ -265,16 +287,29 @@ function MiniActivityCard({
         className="flex flex-col gap-2 grow"
         style={{ padding: '14px 16px 14px' }}
       >
-        <CategoryTag category={activity.product.category} />
+        <span
+          className="inline-flex items-center gap-1.5"
+          style={{
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 10.5,
+            letterSpacing: '.08em',
+            textTransform: 'uppercase',
+            color: tint.dot,
+          }}
+        >
+          <Dot color={tint.dot} size={6} />
+          {(activity.product.category && CATEGORIES.find((c) => c.value === activity.product.category)?.label) || 'Activity'}
+        </span>
         <h3
           style={{
             margin: 0,
-            fontFamily: SERIF,
-            fontWeight: 400,
-            fontSize: 16,
-            lineHeight: 1.2,
-            letterSpacing: '-.008em',
-            color: '#2D3A2E',
+            fontFamily: ALTokens.font,
+            fontWeight: 700,
+            fontSize: 15.5,
+            lineHeight: 1.25,
+            letterSpacing: '-0.012em',
+            color: ALTokens.color.ink,
           }}
         >
           {activity.product.name}
@@ -283,10 +318,9 @@ function MiniActivityCard({
           <p
             style={{
               margin: 0,
-              fontSize: 11.5,
-              color: '#3A5A40',
-              fontStyle: 'italic',
-              lineHeight: 1.4,
+              fontSize: 12,
+              color: ALTokens.color.body,
+              lineHeight: 1.45,
             }}
           >
             {reasons[0]}
@@ -294,16 +328,23 @@ function MiniActivityCard({
         )}
         <div
           className="flex items-center justify-between mt-auto pt-1"
-          style={{ fontFamily: '"DM Sans"', fontSize: 11.5, color: '#7B8378' }}
+          style={{ fontFamily: ALTokens.font, fontSize: 11.5, color: ALTokens.color.muted }}
         >
           <span>{activity.product.ageRange ?? 'All ages'}</span>
           <a
             href={`/api/download/activity/${activity.product.slug}?view=1`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#3A5A40', fontWeight: 600, textDecoration: 'none' }}
+            style={{
+              color: ALTokens.color.forest,
+              fontWeight: 600,
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+            }}
           >
-            Open →
+            Open <ALIcons.Arrow size={12} color={ALTokens.color.forest} />
           </a>
         </div>
         <div className="flex gap-1.5 pt-1">
@@ -314,17 +355,23 @@ function MiniActivityCard({
               flex: 1,
               appearance: 'none',
               cursor: 'pointer',
-              background: '#E6EBDF',
-              color: '#3A5A40',
-              border: '1px solid #C9D3BE',
-              fontFamily: '"DM Sans"',
+              background: 'rgba(88,129,87,0.08)',
+              color: ALTokens.color.forestInk,
+              border: `1px solid ${ALTokens.color.line}`,
+              fontFamily: ALTokens.font,
               fontWeight: 600,
-              fontSize: 11.5,
-              padding: '6px 8px',
-              borderRadius: 8,
+              fontSize: 12,
+              padding: '7px 8px',
+              borderRadius: ALTokens.radius.sm,
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 5,
+              transition: `background 150ms ${ALTokens.ease}`,
             }}
           >
-            ✓ Mark done
+            <ALIcons.Check size={13} color={ALTokens.color.forest} />
+            Mark done
           </button>
           <button
             type="button"
@@ -333,17 +380,23 @@ function MiniActivityCard({
               flex: 1,
               appearance: 'none',
               cursor: 'pointer',
-              background: '#FFFDF7',
-              color: '#4F5A50',
-              border: '1px solid #E5E0D2',
-              fontFamily: '"DM Sans"',
+              background: ALTokens.color.paper,
+              color: ALTokens.color.body,
+              border: `1px solid ${ALTokens.color.line}`,
+              fontFamily: ALTokens.font,
               fontWeight: 600,
-              fontSize: 11.5,
-              padding: '6px 8px',
-              borderRadius: 8,
+              fontSize: 12,
+              padding: '7px 8px',
+              borderRadius: ALTokens.radius.sm,
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 5,
+              transition: `background 150ms ${ALTokens.ease}`,
             }}
           >
-            + Plan
+            <ALIcons.Cal size={13} color={ALTokens.color.body} />
+            Plan
           </button>
         </div>
       </div>
@@ -616,7 +669,7 @@ export default function DashboardToday({
       setLogs((prev) => [created, ...prev]);
       setCompletedThisYear((c) => c + 1);
       toast.undoable({
-        title: 'Logged ✓',
+        title: 'Logged',
         description: product.product.name,
         onUndo: async () => {
           try {
@@ -731,12 +784,13 @@ export default function DashboardToday({
         <section
           className="mb-8"
           style={{
-            background:
-              'linear-gradient(135deg, #E6EBDF 0%, #F5E7D6 100%)',
-            border: '1px solid #C9D3BE',
-            borderRadius: 18,
-            padding: 26,
+            background: ALTokens.color.paper,
+            border: `1px solid ${ALTokens.color.line}`,
+            borderTop: `4px solid ${ALTokens.color.gold}`,
+            borderRadius: ALTokens.radius.lg,
+            padding: '24px 26px',
             position: 'relative',
+            boxShadow: ALTokens.shadow.xs,
           }}
         >
           <button
@@ -745,162 +799,129 @@ export default function DashboardToday({
             aria-label="Dismiss welcome"
             style={{
               position: 'absolute',
-              top: 12,
-              right: 14,
+              top: 10,
+              right: 12,
               background: 'transparent',
               border: 0,
               cursor: 'pointer',
-              color: '#7B8378',
-              fontSize: 20,
-              lineHeight: 1,
-              padding: 4,
+              color: ALTokens.color.muted,
+              padding: 6,
+              borderRadius: ALTokens.radius.sm,
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
-            ×
+            <ALIcons.X size={16} color={ALTokens.color.muted} />
           </button>
-          <Eyebrow>Welcome to your dashboard</Eyebrow>
+          <Eyebrow>Welcome to your almanac</Eyebrow>
           <h2
             style={{
-              margin: '10px 0 8px',
-              fontFamily: '"DM Sans"',
-              fontWeight: 600,
-              fontSize: 34,
-              lineHeight: 1.05,
-              color: '#3A5A40',
+              margin: '12px 0 8px',
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 28,
+              lineHeight: 1.1,
+              letterSpacing: '-0.02em',
+              color: ALTokens.color.ink,
             }}
           >
-            Here&apos;s how to use this.
+            Here is how to use this.
           </h2>
           <p
             style={{
               margin: 0,
-              fontSize: 14.5,
-              color: '#4F5A50',
-              lineHeight: 1.55,
+              fontSize: 15.5,
+              color: ALTokens.color.body,
+              lineHeight: 1.6,
               maxWidth: 640,
             }}
           >
-            Three tabs, one job each. <strong>Today</strong> helps you decide what to do.{' '}
-            <strong>Activity Log</strong> records what you&apos;ve already done, including books,
-            field trips, lessons, and anything outside Anywhere Learning. <strong>Calendar</strong>{' '}
-            lets you plan ahead.
+            Four pages, one job each. <strong style={{ color: ALTokens.color.ink, fontWeight: 700 }}>Today</strong> helps you decide what to do.{' '}
+            <strong style={{ color: ALTokens.color.ink, fontWeight: 700 }}>Plan</strong> shapes the week ahead.{' '}
+            <strong style={{ color: ALTokens.color.ink, fontWeight: 700 }}>Activity Log</strong> records what you have already done.{' '}
+            <strong style={{ color: ALTokens.color.ink, fontWeight: 700 }}>Calendar</strong> is the long view.
           </p>
           <div
             className="grid gap-3 mt-5"
             style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
           >
-            <div
-              style={{
-                background: 'rgba(255,253,247,.7)',
-                border: '1px solid #C9D3BE',
-                borderRadius: 12,
-                padding: '14px 16px',
-              }}
-            >
+            {[
+              { n: '1', title: 'Set up your kids', body: 'Add each kid once. Then you can tag who did what with a single click.', action: 'Add your kids', onClick: onOpenFamilySetup },
+              { n: '2', title: 'Pick an activity', body: 'Filter by age, subject, or category. The picker shows why it chose each one.' },
+              { n: '3', title: 'Log everything', body: 'Books, lessons, field trips, anything counts. Tag subjects for your annual review. Export anytime.' },
+            ].map((step) => (
               <div
+                key={step.n}
                 style={{
-                  fontFamily: '"DM Sans"',
-                  fontWeight: 600,
-                  fontSize: 12,
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  color: '#3A5A40',
-                  marginBottom: 4,
+                  background: ALTokens.color.sand,
+                  border: `1px solid ${ALTokens.color.lineSoft}`,
+                  borderRadius: ALTokens.radius.md,
+                  padding: '14px 16px',
                 }}
               >
-                1 · Set up your kids
+                <div
+                  style={{
+                    fontFamily: ALTokens.font,
+                    fontWeight: 700,
+                    fontSize: 11,
+                    letterSpacing: '.18em',
+                    textTransform: 'uppercase',
+                    color: ALTokens.color.goldDark,
+                    marginBottom: 6,
+                  }}
+                >
+                  {step.n} · {step.title}
+                </div>
+                <p style={{ margin: 0, fontSize: 13.5, color: ALTokens.color.body, lineHeight: 1.55 }}>
+                  {step.body}
+                </p>
+                {step.action && (
+                  <button
+                    type="button"
+                    onClick={step.onClick}
+                    style={{
+                      background: 'transparent',
+                      border: 0,
+                      cursor: 'pointer',
+                      color: ALTokens.color.forest,
+                      fontFamily: ALTokens.font,
+                      fontWeight: 600,
+                      fontSize: 13,
+                      padding: '8px 0 0',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 5,
+                    }}
+                  >
+                    {step.action}
+                    <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
+                  </button>
+                )}
               </div>
-              <p style={{ margin: 0, fontSize: 13, color: '#4F5A50', lineHeight: 1.5 }}>
-                Add each kid once. Then you can tag who did what with a single click.
-              </p>
-              <button
-                type="button"
-                onClick={onOpenFamilySetup}
-                style={{
-                  background: 'transparent',
-                  border: 0,
-                  cursor: 'pointer',
-                  color: '#3A5A40',
-                  fontFamily: '"DM Sans"',
-                  fontWeight: 600,
-                  fontSize: 13,
-                  padding: '6px 0 0',
-                  textDecoration: 'underline',
-                }}
-              >
-                Add your kids →
-              </button>
-            </div>
-            <div
-              style={{
-                background: 'rgba(255,253,247,.7)',
-                border: '1px solid #C9D3BE',
-                borderRadius: 12,
-                padding: '14px 16px',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: '"DM Sans"',
-                  fontWeight: 600,
-                  fontSize: 12,
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  color: '#3A5A40',
-                  marginBottom: 4,
-                }}
-              >
-                2 · Pick an activity
-              </div>
-              <p style={{ margin: 0, fontSize: 13, color: '#4F5A50', lineHeight: 1.5 }}>
-                Filter by age, subject, or category. The picker shows why it chose each one.
-              </p>
-            </div>
-            <div
-              style={{
-                background: 'rgba(255,253,247,.7)',
-                border: '1px solid #C9D3BE',
-                borderRadius: 12,
-                padding: '14px 16px',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: '"DM Sans"',
-                  fontWeight: 600,
-                  fontSize: 12,
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  color: '#3A5A40',
-                  marginBottom: 4,
-                }}
-              >
-                3 · Log everything
-              </div>
-              <p style={{ margin: 0, fontSize: 13, color: '#4F5A50', lineHeight: 1.5 }}>
-                Books, lessons, field trips, anything counts. Tag subjects for your annual review.
-                Export anytime.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
       )}
 
-      {/* Greeting */}
-      <section className="pb-7 mb-8" style={{ borderBottom: '1px solid #E5E0D2' }}>
+      {/* Editorial header — paper page on cream field. Eyebrow with date, h1
+          greeting, supporting line, then the family-log link as a hairline
+          chip. Hairline forest divider at the bottom separates this from the
+          smart-picker hero. */}
+      <section className="pb-8 mb-8" style={{ borderBottom: `1px solid ${ALTokens.color.line}` }}>
         <div className="flex items-center justify-between gap-8 flex-wrap">
           <div className="flex-1 min-w-0">
-            <Eyebrow>{formatLongDate(now)}</Eyebrow>
+            <Eyebrow>Today · {formatLongDate(now)}</Eyebrow>
             <h1
               className="dashboard-greeting"
               style={{
-                margin: '12px 0 0',
-                fontFamily: '"DM Sans"',
-                fontWeight: 600,
-                fontSize: 56,
-                lineHeight: 1,
-                color: '#3A5A40',
-                letterSpacing: '-.005em',
+                margin: '14px 0 0',
+                fontFamily: ALTokens.font,
+                fontWeight: 700,
+                fontSize: 44,
+                lineHeight: 1.05,
+                color: ALTokens.color.ink,
+                letterSpacing: '-0.02em',
               }}
             >
               {focusedKid
@@ -912,20 +933,20 @@ export default function DashboardToday({
             <p
               style={{
                 margin: '14px 0 0',
-                fontSize: 16,
-                color: '#4F5A50',
-                maxWidth: 580,
-                lineHeight: 1.55,
+                fontSize: 15.5,
+                color: ALTokens.color.body,
+                maxWidth: 620,
+                lineHeight: 1.6,
               }}
             >
               {focusedKid
                 ? autoAgeRange
-                  ? `Showing activities tuned to ${focusedKid.name} (age ${autoAgeRange.min === autoAgeRange.max ? autoAgeRange.min : `${autoAgeRange.min}-${autoAgeRange.max}`}). Recommender uses only ${focusedKid.name}'s history.`
+                  ? `Showing activities tuned to ${focusedKid.name}, age ${autoAgeRange.min === autoAgeRange.max ? autoAgeRange.min : `${autoAgeRange.min}-${autoAgeRange.max}`}. The picker draws on ${focusedKid.name}'s history alone.`
                   : `Showing activities and coverage just for ${focusedKid.name}.`
                 : familyMode
                 ? 'Finding one activity everyone can do together. Tap a kid above to focus on just them instead.'
                 : autoAgeRange
-                ? `Showing activities tuned to ages ${autoAgeRange.min}-${autoAgeRange.max}. Filter below to narrow further.`
+                ? `Showing activities tuned to ages ${autoAgeRange.min} to ${autoAgeRange.max}. Refine below to narrow further.`
                 : 'Pick something to do today, plan ahead, or log what you have already done.'}
             </p>
             <button
@@ -933,44 +954,38 @@ export default function DashboardToday({
               onClick={() => onJumpToTab('log')}
               className="inline-flex items-center gap-3 mt-5"
               style={{
-                background: '#FFFDF7',
-                border: '1px solid #E5E0D2',
-                borderRadius: 999,
-                padding: '10px 16px 10px 12px',
+                background: ALTokens.color.paper,
+                border: `1px solid ${ALTokens.color.line}`,
+                borderRadius: ALTokens.radius.pill,
+                padding: '8px 16px 8px 8px',
                 cursor: 'pointer',
+                transition: `border-color 150ms ${ALTokens.ease}`,
               }}
             >
               <span
                 className="grid place-items-center"
                 style={{
-                  width: 30,
-                  height: 30,
+                  width: 28,
+                  height: 28,
                   borderRadius: '50%',
-                  background: '#E6EBDF',
-                  color: '#3A5A40',
-                  fontFamily: SERIF,
-                  fontStyle: 'italic',
-                  fontSize: 14,
+                  background: 'rgba(212,163,115,0.18)',
+                  color: ALTokens.color.goldDark,
+                  fontFamily: ALTokens.font,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  fontVariantNumeric: 'tabular-nums',
                 }}
               >
                 {completedThisYear}
               </span>
-              <span style={{ fontSize: 13.5, color: '#4F5A50' }}>
+              <span style={{ fontSize: 13.5, color: ALTokens.color.body, fontFamily: ALTokens.font }}>
                 Your family has logged{' '}
-                <strong style={{ color: '#2D3A2E', fontWeight: 600 }}>
+                <strong style={{ color: ALTokens.color.ink, fontWeight: 700 }}>
                   {completedThisYear} {completedThisYear === 1 ? 'activity' : 'activities'}
                 </strong>{' '}
-                this year ·{' '}
-                <span
-                  style={{
-                    color: '#3A5A40',
-                    fontWeight: 600,
-                    borderBottom: '1px solid rgba(58,90,64,.25)',
-                  }}
-                >
-                  see the log →
-                </span>
+                this year
               </span>
+              <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
             </button>
           </div>
         </div>
@@ -983,247 +998,273 @@ export default function DashboardToday({
         <div
           className="mb-6 flex items-start gap-3"
           style={{
-            background: '#FFFDF7',
-            border: '1px solid #E5E0D2',
-            borderLeft: '4px solid #588157',
-            borderRadius: 12,
-            padding: '12px 16px',
+            background: ALTokens.color.paper,
+            border: `1px solid ${ALTokens.color.line}`,
+            borderLeft: `4px solid ${ALTokens.color.forest}`,
+            borderRadius: ALTokens.radius.md,
+            padding: '14px 18px',
           }}
         >
-          <span aria-hidden style={{ fontSize: 20, lineHeight: '24px', flexShrink: 0 }}>
-            👋
-          </span>
+          <ALIcons.Leaf size={20} color={ALTokens.color.forest} style={{ flexShrink: 0, marginTop: 2 }} />
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontSize: 14, color: '#2D3A2E', lineHeight: 1.45 }}>
-              <strong>Add your kids first.</strong> Recommendations get tuned to
-              their actual ages, and you can tag who did what with one click.
+            <div style={{ fontSize: 14, color: ALTokens.color.ink, lineHeight: 1.5 }}>
+              <strong style={{ fontWeight: 700 }}>Add your kids first.</strong> Recommendations get tuned to their actual ages, and you can tag who did what with one click.
             </div>
             <button
               type="button"
               onClick={onOpenFamilySetup}
               style={{
-                marginTop: 6,
+                marginTop: 8,
                 background: 'transparent',
                 border: 0,
                 cursor: 'pointer',
-                color: '#3A5A40',
-                fontFamily: '"DM Sans"',
+                color: ALTokens.color.forest,
+                fontFamily: ALTokens.font,
                 fontWeight: 600,
                 fontSize: 13,
                 padding: 0,
-                textDecoration: 'underline',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 5,
               }}
             >
-              Set up your family →
+              Set up your family
+              <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
             </button>
           </div>
         </div>
       )}
 
-      {/* Smart picker card */}
+      {/* Smart picker hero — paper page, no card-on-gray. Eyebrow + h1 sit at
+          the top; the recommendation sits below with a subject-accent left
+          spine. */}
       <div
         className="mb-8"
         style={{
-          background: '#FAF9F6',
-          border: '1px solid #E5E0D2',
-          borderRadius: 18,
-          boxShadow:
-            '0 1px 0 rgba(255,255,255,.5) inset, 0 18px 36px -24px rgba(45,58,46,.18)',
-          padding: 24,
+          background: ALTokens.color.paper,
+          border: `1px solid ${ALTokens.color.line}`,
+          borderRadius: ALTokens.radius.xl,
+          boxShadow: ALTokens.shadow.sm,
+          padding: 'clamp(20px, 3.5vw, 32px)',
         }}
       >
-        <div className="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-          <h2
+        <div className="flex justify-between items-start mb-5 flex-wrap gap-2">
+          <div>
+            <Eyebrow>The picker</Eyebrow>
+            <h2
+              style={{
+                margin: '8px 0 0',
+                fontFamily: ALTokens.font,
+                fontWeight: 700,
+                fontSize: 26,
+                letterSpacing: '-0.02em',
+                color: ALTokens.color.ink,
+                lineHeight: 1.1,
+              }}
+            >
+              What should we do?
+              <HelpHint title="How this picks">
+                Considers your kids&apos; ages, what you have already logged this month, which
+                subjects are under-covered, and any filters you set. Each pick explains why.
+              </HelpHint>
+            </h2>
+          </div>
+          <span
             style={{
-              margin: 0,
-              fontFamily: '"DM Sans"',
+              fontSize: 12,
+              color: ALTokens.color.muted,
+              fontFamily: ALTokens.font,
               fontWeight: 600,
-              fontSize: 32,
-              color: '#2D3A2E',
-              lineHeight: 1,
+              fontVariantNumeric: 'tabular-nums',
+              marginTop: 8,
             }}
           >
-            What should we do?
-            <HelpHint title="How this picks">
-              Considers your kids&apos; ages, what you have already logged this month, which
-              subjects are under-covered, and any filters you set. Each pick explains why.
-            </HelpHint>
-          </h2>
-          <div className="flex items-center gap-3">
-            <span style={{ fontSize: 12.5, color: '#7B8378' }}>
-              {matchCount} of {totalActivities} match
-            </span>
-          </div>
+            {matchCount} of {totalActivities} match
+          </span>
         </div>
 
         {/* Primary recommendation. In Family Activity mode it's one thing the
             whole family can do together (age-spanning + together-friendly).
             When a kid is focused, it's tuned to that kid. */}
         {recommendation ? (
-          <div
-            className="recommendation-card today-pick-grid"
-            style={{
-              background: '#E6EBDF',
-              border: '1px solid #C9D3BE',
-              borderRadius: 14,
-              padding: '4px 4px 4px 22px',
-              display: 'grid',
-              // Single column by default (mobile-first); the scoped style block
-              // below promotes it to "1fr 220px" only at the sm+ breakpoint (640px)
-              // so it never squeezes on small phones.
-              gridTemplateColumns: '1fr',
-              gap: 18,
-              alignItems: 'center',
-            }}
-          >
-            <div style={{ paddingTop: 18, paddingBottom: 18 }}>
-              <Eyebrow>{familyMode ? 'Family activity for today' : 'Top pick for today'}</Eyebrow>
-              <h3
-                style={{
-                  margin: '8px 0 0',
-                  fontFamily: SERIF,
-                  fontWeight: 400,
-                  fontSize: 26,
-                  lineHeight: 1.12,
-                  letterSpacing: '-.012em',
-                  color: '#2D3A2E',
-                  textWrap: 'balance',
-                }}
-              >
-                {recommendation.activity.product.name}
-              </h3>
-              {recommendation.reasons.length > 0 && (
-                <p
-                  style={{
-                    margin: '6px 0 10px',
-                    fontSize: 13,
-                    color: '#3A5A40',
-                    lineHeight: 1.5,
-                    fontStyle: 'italic',
-                  }}
-                >
-                  Why this: {recommendation.reasons.join(' · ')}
-                </p>
-              )}
-              <p
-                style={{
-                  margin: '4px 0 12px',
-                  fontSize: 13.5,
-                  color: '#4F5A50',
-                  lineHeight: 1.5,
-                  maxWidth: 520,
-                }}
-              >
-                {recommendation.activity.product.shortDescription}
-              </p>
-              <div className="flex gap-2 items-center mb-3.5 flex-wrap">
-                <CategoryTag category={recommendation.activity.product.category} />
-                <span style={{ fontSize: 12.5, color: '#7B8378' }}>
-                  {recommendation.activity.product.ageRange} · {SETTING_LABEL[recommendation.activity.setting]} · {PREP_LABEL[recommendation.activity.prepLevel]}
-                </span>
-              </div>
-              {/* Primary actions: one clear next step (open the activity) plus
-                  one secondary (mark done). Everything else is demoted to the
-                  subordinate "more ways" row below so the hierarchy stays clear. */}
-              <div className="flex gap-2 flex-wrap items-center">
-                <a
-                  href={`/api/download/activity/${recommendation.activity.product.slug}?view=1`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <PrimaryButton>Start this activity →</PrimaryButton>
-                </a>
-                <GhostButton onClick={() => handleQuickLog(recommendation.activity.product.slug)}>
-                  ✓ Mark done
-                </GhostButton>
-              </div>
-              {/* Demoted secondary actions: smaller, lighter text links so they
-                  read as "more ways to use this" rather than competing CTAs. */}
+          (() => {
+            const spineColor =
+              recommendation.activity.subjects.length > 0
+                ? accentForSubject(recommendation.activity.subjects[0])
+                : tintForCategory(recommendation.activity.product.category).dot;
+            return (
               <div
-                className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-2.5"
-                style={{ fontFamily: '"DM Sans"' }}
+                className="recommendation-card today-pick-grid"
+                style={{
+                  background: ALTokens.color.sand,
+                  border: `1px solid ${ALTokens.color.lineSoft}`,
+                  borderLeft: `4px solid ${spineColor}`,
+                  borderRadius: ALTokens.radius.lg,
+                  padding: '4px 4px 4px 22px',
+                  display: 'grid',
+                  // Single column by default (mobile-first); the scoped style block
+                  // below promotes it to "1fr 220px" only at the sm+ breakpoint (640px)
+                  // so it never squeezes on small phones.
+                  gridTemplateColumns: '1fr',
+                  gap: 18,
+                  alignItems: 'center',
+                }}
               >
-                <button
-                  type="button"
-                  onClick={() => handleAddToCalendar(recommendation.activity.product.slug)}
-                  style={{
-                    background: 'transparent',
-                    border: 0,
-                    cursor: 'pointer',
-                    color: '#7B8378',
-                    fontWeight: 600,
-                    fontSize: 12,
-                    padding: '2px 0',
-                  }}
-                >
-                  Plan it for later
-                </button>
-                {ranked.length > 1 && (
-                  <button
-                    type="button"
-                    onClick={cycleRecommendation}
+                <div style={{ paddingTop: 20, paddingBottom: 20 }}>
+                  <Eyebrow>{familyMode ? 'Family activity for today' : 'Top pick for today'}</Eyebrow>
+                  <h3
                     style={{
-                      background: 'transparent',
-                      border: 0,
-                      cursor: 'pointer',
-                      color: '#7B8378',
-                      fontWeight: 600,
-                      fontSize: 12,
-                      padding: '2px 0',
+                      margin: '10px 0 0',
+                      fontFamily: ALTokens.font,
+                      fontWeight: 700,
+                      fontSize: 24,
+                      lineHeight: 1.15,
+                      letterSpacing: '-0.018em',
+                      color: ALTokens.color.ink,
+                      textWrap: 'balance',
                     }}
                   >
-                    Try another ({pickIndex + 1}/{ranked.length})
-                  </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => handleMarkDoneWithDetails(recommendation.activity.product.slug)}
+                    {recommendation.activity.product.name}
+                  </h3>
+                  {recommendation.reasons.length > 0 && (
+                    <p
+                      style={{
+                        margin: '8px 0 10px',
+                        fontSize: 13,
+                        color: ALTokens.color.forestInk,
+                        lineHeight: 1.55,
+                        fontWeight: 500,
+                      }}
+                    >
+                      Why this: {recommendation.reasons.join(' · ')}
+                    </p>
+                  )}
+                  <p
+                    style={{
+                      margin: '4px 0 12px',
+                      fontSize: 14,
+                      color: ALTokens.color.body,
+                      lineHeight: 1.55,
+                      maxWidth: 520,
+                    }}
+                  >
+                    {recommendation.activity.product.shortDescription}
+                  </p>
+                  <div className="flex gap-2 items-center mb-4 flex-wrap">
+                    <CategoryTag category={recommendation.activity.product.category} />
+                    <span style={{ fontSize: 12.5, color: ALTokens.color.muted }}>
+                      {recommendation.activity.product.ageRange} · {SETTING_LABEL[recommendation.activity.setting]} · {PREP_LABEL[recommendation.activity.prepLevel]}
+                    </span>
+                  </div>
+                  {/* Primary actions: one clear next step (open the activity) plus
+                      one secondary (mark done). Everything else is demoted to the
+                      subordinate "more ways" row below so the hierarchy stays clear. */}
+                  <div className="flex gap-2 flex-wrap items-center">
+                    <a
+                      href={`/api/download/activity/${recommendation.activity.product.slug}?view=1`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <PrimaryButton>
+                        Open this activity
+                        <ALIcons.Arrow size={15} color={ALTokens.color.cream} />
+                      </PrimaryButton>
+                    </a>
+                    <GhostButton onClick={() => handleQuickLog(recommendation.activity.product.slug)}>
+                      <ALIcons.Check size={14} color={ALTokens.color.forest} />
+                      Mark done
+                    </GhostButton>
+                  </div>
+                  {/* Demoted secondary actions: smaller, lighter text links so they
+                      read as "more ways to use this" rather than competing CTAs. */}
+                  <div
+                    className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3"
+                    style={{ fontFamily: ALTokens.font }}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => handleAddToCalendar(recommendation.activity.product.slug)}
+                      style={{
+                        background: 'transparent',
+                        border: 0,
+                        cursor: 'pointer',
+                        color: ALTokens.color.muted,
+                        fontWeight: 600,
+                        fontSize: 12,
+                        padding: '2px 0',
+                      }}
+                    >
+                      Plan it for later
+                    </button>
+                    {ranked.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={cycleRecommendation}
+                        style={{
+                          background: 'transparent',
+                          border: 0,
+                          cursor: 'pointer',
+                          color: ALTokens.color.muted,
+                          fontWeight: 600,
+                          fontSize: 12,
+                          padding: '2px 0',
+                        }}
+                      >
+                        Try another ({pickIndex + 1}/{ranked.length})
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => handleMarkDoneWithDetails(recommendation.activity.product.slug)}
+                      style={{
+                        background: 'transparent',
+                        border: 0,
+                        cursor: 'pointer',
+                        color: ALTokens.color.muted,
+                        fontWeight: 600,
+                        fontSize: 12,
+                        padding: '2px 0',
+                      }}
+                    >
+                      Log with details
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className="relative overflow-hidden recommendation-image"
                   style={{
-                    background: 'transparent',
-                    border: 0,
-                    cursor: 'pointer',
-                    color: '#7B8378',
-                    fontWeight: 600,
-                    fontSize: 12,
-                    padding: '2px 0',
+                    background: tintForCategory(recommendation.activity.product.category).bg,
+                    border: `1px solid ${ALTokens.color.lineSoft}`,
+                    // aspect-ratio is set by the scoped style block above so it can
+                    // switch between mobile (4/3) and sm+ (4/5) at the right breakpoint.
+                    borderRadius: ALTokens.radius.md,
                   }}
                 >
-                  Log with details
-                </button>
+                  {recommendation.activity.product.imageUrl && (
+                    <Image
+                      src={recommendation.activity.product.imageUrl}
+                      alt={recommendation.activity.product.name}
+                      fill
+                      sizes="220px"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  )}
+                </div>
               </div>
-            </div>
-            <div
-              className="relative overflow-hidden recommendation-image"
-              style={{
-                background: tintForCategory(recommendation.activity.product.category).bg,
-                border: '1px solid #C9D3BE',
-                // aspect-ratio is set by the scoped style block above so it can
-                // switch between mobile (4/3) and sm+ (4/5) at the right breakpoint.
-                borderRadius: 12,
-              }}
-            >
-              {recommendation.activity.product.imageUrl && (
-                <Image
-                  src={recommendation.activity.product.imageUrl}
-                  alt={recommendation.activity.product.name}
-                  fill
-                  sizes="220px"
-                  style={{ objectFit: 'cover' }}
-                />
-              )}
-            </div>
-          </div>
+            );
+          })()
         ) : (
           <div
             style={{
-              background: '#FFFDF7',
-              border: '1px dashed #E5E0D2',
-              borderRadius: 14,
+              background: ALTokens.color.sand,
+              border: `1px dashed ${ALTokens.color.line}`,
+              borderRadius: ALTokens.radius.md,
               padding: '24px 20px',
               textAlign: 'center',
-              color: '#7B8378',
+              color: ALTokens.color.muted,
               fontSize: 14,
+              fontFamily: ALTokens.font,
             }}
           >
             No activities match these filters yet.{' '}
@@ -1235,11 +1276,10 @@ export default function DashboardToday({
                   background: 'transparent',
                   border: 0,
                   cursor: 'pointer',
-                  color: '#3A5A40',
-                  fontFamily: '"DM Sans"',
+                  color: ALTokens.color.forest,
+                  fontFamily: ALTokens.font,
                   fontWeight: 600,
                   fontSize: 14,
-                  textDecoration: 'underline',
                 }}
               >
                 Clear them
@@ -1251,7 +1291,7 @@ export default function DashboardToday({
         {/* Refine picks. Collapsed by default and placed BELOW the top pick so
             the recommendation reads first. The chrome only appears when a user
             chooses to tune their picks. */}
-        <div style={{ marginTop: 18, borderTop: '1px solid #E5E0D2', paddingTop: 16 }}>
+        <div style={{ marginTop: 20, borderTop: `1px solid ${ALTokens.color.line}`, paddingTop: 18 }}>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <button
               type="button"
@@ -1261,32 +1301,41 @@ export default function DashboardToday({
                 background: 'transparent',
                 border: 0,
                 cursor: 'pointer',
-                color: '#3A5A40',
-                fontFamily: '"DM Sans"',
+                color: ALTokens.color.forest,
+                fontFamily: ALTokens.font,
                 fontWeight: 600,
                 fontSize: 13,
                 padding: 0,
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 7,
+                gap: 8,
               }}
             >
-              <span style={{ fontSize: 11 }}>{filtersOpen ? '▾' : '▸'}</span>
+              <ALIcons.Sliders size={15} color={ALTokens.color.forest} />
               Refine picks
+              <ALIcons.Chevron
+                size={13}
+                color={ALTokens.color.forest}
+                style={{
+                  transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                  transition: `transform 180ms ${ALTokens.ease}`,
+                }}
+              />
               {activeFilterCount > 0 && (
                 <span
                   style={{
-                    background: '#588157',
-                    color: '#FFFDF7',
+                    background: ALTokens.color.forest,
+                    color: ALTokens.color.cream,
                     fontSize: 11,
-                    fontWeight: 600,
+                    fontWeight: 700,
                     minWidth: 18,
                     height: 18,
-                    padding: '0 5px',
-                    borderRadius: 999,
+                    padding: '0 6px',
+                    borderRadius: ALTokens.radius.pill,
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    fontVariantNumeric: 'tabular-nums',
                   }}
                 >
                   {activeFilterCount}
@@ -1301,11 +1350,10 @@ export default function DashboardToday({
                   background: 'transparent',
                   border: 0,
                   cursor: 'pointer',
-                  color: '#7B8378',
-                  fontFamily: '"DM Sans"',
+                  color: ALTokens.color.muted,
+                  fontFamily: ALTokens.font,
                   fontWeight: 600,
                   fontSize: 12.5,
-                  textDecoration: 'underline',
                   padding: 0,
                 }}
               >
@@ -1315,18 +1363,18 @@ export default function DashboardToday({
           </div>
 
           {filtersOpen && (
-            <div style={{ marginTop: 16 }}>
+            <div style={{ marginTop: 18 }}>
               {/* Subjects */}
-              <div className="mb-3">
+              <div className="mb-4">
                 <div
                   style={{
-                    fontFamily: '"DM Sans"',
-                    fontWeight: 500,
+                    fontFamily: ALTokens.font,
+                    fontWeight: 700,
                     fontSize: 10.5,
-                    letterSpacing: '.14em',
+                    letterSpacing: '.18em',
                     textTransform: 'uppercase',
-                    color: '#7B8378',
-                    marginBottom: 8,
+                    color: ALTokens.color.goldDark,
+                    marginBottom: 10,
                     display: 'flex',
                     alignItems: 'center',
                   }}
@@ -1337,7 +1385,7 @@ export default function DashboardToday({
                   {STANDARD_SUBJECTS.map((s) => (
                     <FilterPill
                       key={s.id}
-                      color={s.color}
+                      color={AL_SUBJECT_ACCENT[s.id] || s.color}
                       active={selectedSubjects.has(s.id)}
                       onClick={() => toggleSubject(s.id)}
                     >
@@ -1348,16 +1396,16 @@ export default function DashboardToday({
               </div>
 
               {/* Category */}
-              <div className="mb-3">
+              <div className="mb-4">
                 <div
                   style={{
-                    fontFamily: '"DM Sans"',
-                    fontWeight: 500,
+                    fontFamily: ALTokens.font,
+                    fontWeight: 700,
                     fontSize: 10.5,
-                    letterSpacing: '.14em',
+                    letterSpacing: '.18em',
                     textTransform: 'uppercase',
-                    color: '#7B8378',
-                    marginBottom: 8,
+                    color: ALTokens.color.goldDark,
+                    marginBottom: 10,
                   }}
                 >
                   Category {selectedCategories.size > 0 && `(${selectedCategories.size})`}
@@ -1376,7 +1424,7 @@ export default function DashboardToday({
               </div>
 
               {/* Advanced toggle row */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              <div className="flex flex-wrap items-center gap-4 mb-4">
                 <button
                   type="button"
                   onClick={() => setShowAllFilters((v) => !v)}
@@ -1384,24 +1432,32 @@ export default function DashboardToday({
                     background: 'transparent',
                     border: 0,
                     cursor: 'pointer',
-                    color: '#3A5A40',
-                    fontFamily: '"DM Sans"',
+                    color: ALTokens.color.forest,
+                    fontFamily: ALTokens.font,
                     fontWeight: 600,
                     fontSize: 12.5,
                     padding: 0,
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: 4,
+                    gap: 5,
                   }}
                 >
-                  {showAllFilters ? '− Hide' : '+ More'} options
+                  {showAllFilters ? 'Hide' : 'More'} options
+                  <ALIcons.Chevron
+                    size={12}
+                    color={ALTokens.color.forest}
+                    style={{
+                      transform: showAllFilters ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: `transform 180ms ${ALTokens.ease}`,
+                    }}
+                  />
                 </button>
                 <label
                   className="inline-flex items-center gap-2"
                   style={{
-                    fontFamily: '"DM Sans"',
+                    fontFamily: ALTokens.font,
                     fontSize: 12.5,
-                    color: hideRecent ? '#3A5A40' : '#7B8378',
+                    color: hideRecent ? ALTokens.color.forest : ALTokens.color.muted,
                     cursor: 'pointer',
                   }}
                 >
@@ -1409,24 +1465,24 @@ export default function DashboardToday({
                     type="checkbox"
                     checked={hideRecent}
                     onChange={(e) => setHideRecent(e.target.checked)}
-                    style={{ accentColor: '#588157', cursor: 'pointer' }}
+                    style={{ accentColor: ALTokens.color.forest, cursor: 'pointer' }}
                   />
                   Hide ones we did this week
                 </label>
               </div>
 
               {showAllFilters && (
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <div
                       style={{
-                        fontFamily: '"DM Sans"',
-                        fontWeight: 500,
+                        fontFamily: ALTokens.font,
+                        fontWeight: 700,
                         fontSize: 10.5,
-                        letterSpacing: '.14em',
+                        letterSpacing: '.18em',
                         textTransform: 'uppercase',
-                        color: '#7B8378',
-                        marginBottom: 6,
+                        color: ALTokens.color.goldDark,
+                        marginBottom: 8,
                       }}
                     >
                       Setting
@@ -1446,13 +1502,13 @@ export default function DashboardToday({
                   <div>
                     <div
                       style={{
-                        fontFamily: '"DM Sans"',
-                        fontWeight: 500,
+                        fontFamily: ALTokens.font,
+                        fontWeight: 700,
                         fontSize: 10.5,
-                        letterSpacing: '.14em',
+                        letterSpacing: '.18em',
                         textTransform: 'uppercase',
-                        color: '#7B8378',
-                        marginBottom: 6,
+                        color: ALTokens.color.goldDark,
+                        marginBottom: 8,
                       }}
                     >
                       Prep level
@@ -1476,22 +1532,22 @@ export default function DashboardToday({
         </div>
       </div>
 
-      {/* Coverage + alternates side by side */}
+      {/* Coverage + alternates side by side. On mobile they stack via the
+          scoped class below; on sm+ they sit as a 360 / 1fr grid. */}
       {logSummaries.length > 0 && (
-        <section className="mb-8">
-          <div
-            className="grid gap-5"
-            style={{ gridTemplateColumns: 'minmax(280px, 360px) 1fr' }}
-          >
-            <CoverageStripe coverage={coverage} customSubjects={customSubjects} />
-            <div>
+        <section className="mb-8 al-today-grid">
+          <CoverageStripe coverage={coverage} customSubjects={customSubjects} />
+          <div>
+            <div className="mb-4">
+              <Eyebrow>More to consider</Eyebrow>
               <h2
                 style={{
-                  margin: '0 0 14px',
-                  fontFamily: SERIF,
-                  fontWeight: 400,
-                  fontSize: 20,
-                  color: '#2D3A2E',
+                  margin: '8px 0 0',
+                  fontFamily: ALTokens.font,
+                  fontWeight: 700,
+                  fontSize: 22,
+                  letterSpacing: '-0.018em',
+                  color: ALTokens.color.ink,
                 }}
               >
                 Smart picks for you
@@ -1500,26 +1556,26 @@ export default function DashboardToday({
                   always have variety to choose from.
                 </HelpHint>
               </h2>
-              {alternates.length > 0 ? (
-                <div
-                  className="grid gap-3"
-                  style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
-                >
-                  {alternates.map((alt) => (
-                    <MiniActivityCard
-                      key={alt.activity.product.slug}
-                      scored={alt}
-                      onMarkDone={handleMarkDone}
-                      onAddToCalendar={handleAddToCalendar}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <p style={{ fontSize: 13, color: '#7B8378', margin: 0 }}>
-                  Adjust filters to see more.
-                </p>
-              )}
             </div>
+            {alternates.length > 0 ? (
+              <div
+                className="grid gap-3"
+                style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
+              >
+                {alternates.map((alt) => (
+                  <MiniActivityCard
+                    key={alt.activity.product.slug}
+                    scored={alt}
+                    onMarkDone={handleMarkDone}
+                    onAddToCalendar={handleAddToCalendar}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p style={{ fontSize: 13, color: ALTokens.color.muted, margin: 0, fontFamily: ALTokens.font }}>
+                Adjust filters to see more.
+              </p>
+            )}
           </div>
         </section>
       )}
@@ -1530,16 +1586,22 @@ export default function DashboardToday({
         <Link
           href="/shop"
           style={{
-            fontFamily: '"DM Sans"',
+            fontFamily: ALTokens.font,
             fontWeight: 600,
             fontSize: 13.5,
-            color: '#3A5A40',
+            color: ALTokens.color.forest,
             textDecoration: 'none',
-            borderBottom: '1px solid rgba(58,90,64,.25)',
-            paddingBottom: 1,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '8px 16px',
+            borderRadius: ALTokens.radius.pill,
+            border: `1px solid ${ALTokens.color.line}`,
+            background: ALTokens.color.paper,
           }}
         >
-          Or browse the full library of {totalActivities} activities →
+          Browse the full library of {totalActivities} activities
+          <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
         </Link>
       </div>
 
