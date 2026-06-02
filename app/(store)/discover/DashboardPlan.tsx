@@ -831,6 +831,25 @@ export default function DashboardPlan({
                 : `${events.length} ${events.length === 1 ? 'activity' : 'activities'} placed`}
             </h2>
           </div>
+          {/* Adjust with AI: a contextual action on the week itself, not a
+              separate door. Sends the parent to the assistant to tweak the
+              week by chat ("make Tuesday lighter", "we're traveling Friday").
+              The assistant degrades gracefully if AI is not switched on yet. */}
+          {events.length > 0 && (
+            <GhostButton
+              small
+              onClick={() => {
+                setSubTab('ai');
+                if (typeof window !== 'undefined') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+              style={{ padding: '8px 14px' }}
+            >
+              <ALIcons.Chat size={14} color={ALTokens.color.forest} />
+              Adjust with AI
+            </GhostButton>
+          )}
         </div>
 
         {/* Empty-week message: reframes a blank week as a good thing. */}
