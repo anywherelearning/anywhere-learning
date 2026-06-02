@@ -93,7 +93,7 @@ const resources: ResourcePage[] = [
     content: [
       {
         type: 'summary',
-        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research on experiential learning (most famously David Kolb\'s work and [more recent systematic reviews](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279)) consistently links hands-on, reflective experience with deeper conceptual understanding and stronger long-term retention than passive instruction alone.',
+        text: 'Real-world learning is the practice of teaching children through everyday experiences rather than textbooks or worksheets. It covers life skills like cooking and budgeting, entrepreneurship, writing for real audiences, and problem-solving through actual challenges. Research on experiential learning (most famously David Kolb\'s work and [more recent systematic reviews](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279)) consistently links hands-on, reflective experience with deeper conceptual understanding and stronger long-term retention than passive instruction alone. It works for any family setup (homeschool, after school, weekends), starts at any age, requires no curriculum, and uses materials you already have. Most parents are already doing some of it; the shift is becoming intentional about it.',
       },
       {
         type: 'paragraph',
@@ -124,6 +124,43 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'If you\'re [new to homeschooling](/blog/new-to-homeschooling) or just looking for more meaningful ways to spend time with your kids, real-world learning is one of the most accessible ways to start, because you\'re already doing most of it. You just need to become more intentional about noticing the learning that\'s happening.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Why real-world learning works (the research)',
+      },
+      {
+        type: 'paragraph',
+        text: 'The case for learning through real experience is not new and it is not controversial. David Kolb\'s experiential learning theory, first published in 1984, describes a cycle that virtually every successful learning environment uses: concrete experience, reflective observation, abstract conceptualization, then active experimentation. School often skips straight to abstract conceptualization and asks kids to memorise rules without ever doing the thing. Real-world learning starts with the doing.',
+      },
+      {
+        type: 'paragraph',
+        text: 'More recent research backs this up across multiple subjects. A 2019 [systematic review of experiential learning interventions](https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1570279) found stronger conceptual understanding and longer retention than traditional instruction. The landmark [Dunedin Study (PNAS 2011)](https://www.pnas.org/doi/10.1073/pnas.1010076108) followed 1,000 children for 32 years and showed that early-life self-control and executive function predicted adult outcomes (health, income, life satisfaction) better than IQ or family background. Those are exactly the skills real-world learning builds, because every real-world task requires planning, decision-making, and follow-through.',
+      },
+      {
+        type: 'paragraph',
+        text: 'In plain language: kids learn most deeply when the stakes are real, when they make decisions that have consequences, and when they reflect on what worked and what did not. Worksheets bypass every part of that loop. Real life nails it.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Real-world learning vs traditional school',
+      },
+      {
+        type: 'paragraph',
+        text: 'It is worth being precise about what is different. Traditional school is built around managing 25 to 30 kids in one room. That requires standardisation, scheduling, transitions, and abstract instruction (because you cannot run 30 real-world experiments at once). Real-world learning inverts every one of those constraints: one or two kids at a time, no fixed schedule, no transitions, and direct engagement with materials, money, people, and outcomes.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Neither approach is "right" universally. Traditional school is good at certain things (delivering shared content to many kids at once, providing structure for families who need it, exposing kids to teachers with deep subject expertise). Real-world learning is good at different things (depth, autonomy, life skills, transferable executive function). The most thoughtful families combine both, using real-world learning to fill the gaps school leaves.',
+      },
+      {
+        type: 'paragraph',
+        text: 'You do not need to homeschool to do real-world learning. Plenty of families use it on weekends, after school, and during summer. The activities are the same. The intentionality is the same. The only difference is the time available.',
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -224,6 +261,33 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'Communication also includes speaking, listening, and presenting. Let your child order for themselves at restaurants. Have them call to make appointments. Let them explain their project to a relative. These small acts of real-world communication build confidence that transfers to every area of life.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Real-world learning by traditional subject',
+      },
+      {
+        type: 'paragraph',
+        text: 'If you want a mental map for how real-world learning covers the same ground as a traditional curriculum, here is how the subjects break down:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Math: cooking (fractions, ratios), shopping (estimation, unit prices, percentages), budgeting (decimals, addition, subtraction), building projects (measurement, geometry), travel (distance, time, currency conversion).',
+          'Science: cooking (chemistry, heat, states of matter), gardening (biology, weather, soil), nature walks (botany, ecology, ornithology), fixing things (mechanics, electricity), the night sky (astronomy).',
+          'Reading and writing: real books with discussion, letters to grandparents, recipes followed and adapted, journals, blog posts, video scripts, business pitches, persuasive letters to parents about pets.',
+          'History and geography: travel, museum visits, family stories, conversations with elderly neighbours, documentaries paired with discussion, cooking food from other cultures, learning about local history through walking tours.',
+          'Social skills: ordering at restaurants, calling to make appointments, talking to strangers in safe contexts (librarians, market vendors), conflict resolution with siblings, presenting a project to a relative.',
+          'Health and PE: real movement (hikes, bikes, swimming, climbing, dance), real food preparation, basic first aid, sleep hygiene, mental health conversations.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'You do not have to "cover" each subject every day. Real-world activities are naturally interdisciplinary; one cooking session can cover math, science, reading, and life skills all at once.',
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -275,6 +339,50 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'This matters because [parent burnout is real](/blog/homeschool-burnout). If your approach to learning at home requires more prep than a full-time job, it\'s not sustainable. Real-world learning flips this: the world does the heavy lifting, and you facilitate.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'How to spot real-world learning opportunities',
+      },
+      {
+        type: 'paragraph',
+        text: 'Once you start looking, real-world learning is everywhere. A few prompts that help train your eye:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Anything that involves money. Grocery shopping, paying bills, splitting a restaurant bill, comparing prices, deciding whether something is worth it.',
+          'Anything that involves planning. A weekend trip, a birthday party, a meal, a project, a Saturday with friends.',
+          'Anything that involves measurement. Cooking, building, gardening, sewing, redecorating a room.',
+          'Anything that involves communication. Writing thank-you cards, calling a relative, ordering food, asking a librarian for a book.',
+          'Anything that involves a small risk. Crossing the street alone, going into a shop alone, riding a bike to a friend\'s house, cooking on the stove.',
+          'Anything that involves repair. Fixing a wobbly chair, patching a tear, troubleshooting a printer, reviving a wilting plant.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Pick one each week. Hand the task to your kid. Resist the urge to optimize. Reflect afterwards. That is the entire methodology.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Common mistakes new families make',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Doing the task for them "to save time." If you grab the spoon every time they hesitate, they never learn. The whole point is the struggle.',
+          'Calling it a lesson. The moment you announce "this is school," half the magic dies. Just live the moment and notice afterwards what got learned.',
+          'Tracking too much. A short evening note (5 minutes) is enough. Detailed logs become a chore that kills the practice.',
+          'Expecting fast results. Real-world learning compounds. A kid who has been doing this for two years looks dramatically different from one who started last week, but week-to-week it does not look like much.',
+          'Comparing to school benchmarks. The skill set is different. You will not match a school\'s pace on times tables in October, but your kid may run circles around their peers in cooking, conflict resolution, money, and project management by spring.',
+        ],
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -339,6 +447,22 @@ const resources: ResourcePage[] = [
             question: 'My partner / family thinks this isn\'t "real" school. How do I explain it?',
             answer: 'Focus on outcomes, not methods. Show them what your child can do: cook a meal, manage money, navigate a city, hold a conversation with adults. These are the skills employers consistently say they want. Then ask: would a worksheet have taught that?',
           },
+          {
+            question: 'How is real-world learning different from project-based learning or unschooling?',
+            answer: 'They overlap significantly. Project-based learning is a structured approach where kids tackle a defined long-term project. Unschooling is a philosophy where the child entirely directs their learning. Real-world learning is broader: it uses everyday life (which includes projects, but also includes errands, conversations, cooking, money, and chores) as the learning material. Many families combine all three.',
+          },
+          {
+            question: 'Does real-world learning work for kids with learning differences?',
+            answer: 'Often better than traditional approaches. Kids with ADHD, dyslexia, autism, or anxiety frequently thrive in real-world learning environments because the work is concrete, the pace is theirs, and the social demands are smaller. Many parents notice their neurodivergent kids come alive in real-world settings in ways they never did in a classroom.',
+          },
+          {
+            question: 'How do I start if I am still working full-time?',
+            answer: 'Start with weekends and evenings. Cooking dinner together once a week. Grocery shopping with a real budget. A Saturday morning project. A short walk where they navigate. You do not need to homeschool to do real-world learning; you just need consistent intentional moments.',
+          },
+          {
+            question: 'What about kids who resist this kind of learning?',
+            answer: 'Resistance usually comes from one of two places: the parent is making it feel like school (with announcements, expectations, and verbal reflection prompts) or the task is genuinely too hard or unappealing. Drop the school framing. Try shorter, more engaging tasks. Let the child choose the next one. Resistance fades when ownership rises.',
+          },
         ],
       },
     ],
@@ -383,6 +507,25 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'When our family started learning outdoors, I thought I needed a field guide, a magnifying glass, and a plan. Turns out all I needed was a willingness to say, "I don\'t know, let\'s find out." That shift changed everything. This guide covers why nature beats the classroom for science, how to build a nature-based learning practice that works year-round, and specific activities you can start this week.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What nature-based learning actually is',
+      },
+      {
+        type: 'paragraph',
+        text: 'Nature-based learning is the practice of using outdoor environments (forests, parks, gardens, beaches, even sidewalks with weeds) as the primary setting for a child\'s learning. It is not the same as outdoor recreation, though it can include it. The distinction is intent: in nature-based learning, the outdoor environment is treated as the curriculum, not just the recess between curriculum.',
+      },
+      {
+        type: 'paragraph',
+        text: 'It draws on traditions from Scandinavia (where forest schools have been mainstream for decades), Japan (where shinrin-yoku, or forest bathing, is a recognised public health practice), and Indigenous education systems around the world. In modern practice, it spans everything from formal Forest School certification (kids spend full days outside in all weather) to a family habit of walking the same trail each week. You can adopt as much or as little of the framework as fits your life.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The defining feature is not the activity. It is the relationship with a specific outdoor place, returned to often enough that observation deepens. A child who walks the same trail 52 times in a year learns more about ecosystems than one who visits 52 different national parks.',
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -404,6 +547,33 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'Our [complete guide to nature-based learning](/blog/nature-based-learning-guide) goes deeper into the research and practical approaches, but the short version is this: nature provides what classrooms can\'t: open-ended, multisensory, self-paced learning experiences that are different every single time.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The benefits beyond science',
+      },
+      {
+        type: 'paragraph',
+        text: 'Most parents start nature-based learning for the academics and stay for everything else. The non-academic benefits are arguably bigger:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Mental health: time outdoors lowers cortisol and is associated with reduced anxiety and depression in children. The [2018 American Academy of Pediatrics clinical report on play](https://publications.aap.org/pediatrics/article/142/3/e20182058/38649/The-Power-of-Play-A-Pediatric-Role-in-Enhancing) documents these effects in detail.',
+          'Attention: Faber Taylor and Kuo found a 20-minute park walk improved focus in children with ADHD as much as a typical medication dose. Outdoor environments restore depleted attention in a way indoor environments cannot.',
+          'Physical literacy: climbing, running, balancing, lifting, and navigating uneven terrain build a base of coordination, strength, and proprioception that no gym class can replicate.',
+          'Risk assessment: kids who get physical free play outdoors develop more accurate judgement about danger, which often results in fewer (not more) serious injuries long-term.',
+          'Sleep: outdoor light exposure during the day improves sleep quality at night, especially for kids whose screens delay melatonin release.',
+          'Social skills: mixed-age outdoor play teaches conflict resolution, negotiation, and leadership in ways adult-supervised activities cannot.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'These are not soft benefits. They are the foundation of the kind of adult most parents say they hope their kids become: regulated, attentive, capable, brave, and good at being with other people. Nature is one of the few environments that builds all of these at once.',
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -641,6 +811,45 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'So here\'s your permission slip: some days, the best nature-based learning plan is no plan at all. Go outside, put away your phone, and let your kids lead. They\'ll find something worth exploring. They always do.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The case for letting them climb that tree',
+      },
+      {
+        type: 'paragraph',
+        text: 'One of the hardest shifts for modern parents is the tolerance for risk that nature-based learning asks of you. Kids will climb trees, balance on logs, scramble on rocks, splash through cold creeks, and pick up bugs you would rather they did not touch. The instinct to say "be careful" or "get down from there" is strong. Resist it most of the time.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The research consistently shows that risky play (within reason) is not a danger; it is a developmental need. Kids who are allowed to test their physical limits develop better risk assessment, more accurate body awareness, and more confidence. Kids who are constantly stopped tend to be more anxious, less coordinated, and ironically more accident-prone when they finally do encounter real risk.',
+      },
+      {
+        type: 'paragraph',
+        text: 'A useful frame: when you feel the urge to intervene, ask yourself whether the risk is "low likelihood of serious harm" or "high likelihood of serious harm." Climbing a tree branch is the former. Balancing on a railing above a busy road is the latter. Save your interventions for the second category. Let them figure out the first.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Nature learning by age',
+      },
+      {
+        type: 'paragraph',
+        text: 'The approach changes as kids grow:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Toddlers (ages 2 to 4): pure sensory exploration. Mud, water, sand, sticks, leaves. No agenda. Just close supervision and time to touch everything.',
+          'Early childhood (ages 5 to 7): the "what is that?" stage. Lots of pointing, asking, picking up. Nature journals start here, mostly as drawings. Trail walks should be short and frequent.',
+          'Middle childhood (ages 8 to 11): the "why?" and "how?" stage. Hypothesis-forming, experiments, deeper journaling, longer hikes, beginning of independent project work in the backyard.',
+          'Tweens and teens (ages 12 to 14): autonomy and depth. They can lead a hike, run a multi-week ecology project, work toward a specific skill (orienteering, fire-starting, plant identification), and start thinking about how natural systems connect to global issues.',
+        ],
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -695,6 +904,18 @@ const resources: ResourcePage[] = [
           {
             question: 'How much outdoor time do kids really need?',
             answer: 'There\'s no single magic number, but pediatric and child development organizations broadly recommend daily outdoor time for health, mood, and cognitive benefits, and more is better. For nature-based learning specifically, even one focused 30-minute nature walk per week, done consistently, can build meaningful scientific observation skills over a year. Don\'t let perfection be the enemy of good. Any outdoor time is better than none.',
+          },
+          {
+            question: 'Is nature-based learning safe? What about ticks, snakes, falls?',
+            answer: 'Real risks exist but are generally manageable with sensible precautions: appropriate clothing, tick checks after time in tall grass, knowing what regional wildlife is actually dangerous (it is almost always less than parents fear). The greater risk for most kids is the lack of outdoor time, which is linked to higher rates of anxiety, attention problems, obesity, and sleep issues. The risk-benefit math comes out solidly in favour of more outdoor time, not less.',
+          },
+          {
+            question: 'How is nature-based learning different from Forest School?',
+            answer: 'Forest School is a formal pedagogy with certified practitioners, typically full-day or half-day programs where children spend extended time outdoors regardless of weather. Nature-based learning is the broader family practice; it can include Forest School principles but does not require certification, a forest, or specific hours. Many families adopt the philosophy without ever joining a formal program.',
+          },
+          {
+            question: 'Can nature-based learning replace formal science curriculum?',
+            answer: 'For elementary ages, yes, often more effectively. Nature provides concrete experiences with biology, ecology, weather, geology, physics, and chemistry that classroom science struggles to match. For middle school and up, families typically combine nature-based learning with some structured science content (textbook chapters, video lessons, online courses) for topics like cell biology, periodic table, or physics formulas that need explicit instruction. The two complement each other.',
           },
         ],
       },
