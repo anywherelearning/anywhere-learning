@@ -6182,7 +6182,7 @@ const posts: BlogPost[] = [
     readTimeMinutes: 11,
     author: amelie,
     heroImage: '/images/real-world-history-hero.jpeg',
-    heroImageAlt: 'Kid stirring a wash basin with a paddle at a living-history pioneer village, period buildings and mountains behind, hands-on history in action',
+    heroImageAlt: 'Kids sitting in the grass outside a pioneer-era log cabin while people in period costume sit on the porch, a living-history scene in action',
     content: [
       { type: 'summary', text: 'Real-world history for kids is the practice of learning the past through the people, places, food, objects, and events already around them. It works because the brain remembers stories and context, not isolated dates. Family interviews, local landmarks, food origins, vintage objects, and current events with historical roots all teach history more effectively than a textbook for ages 6 to 14. The approach scales by age, from noticing patterns at 6 to examining bias and causality at 13.' },
       { type: 'paragraph', text: 'Most adults will tell you they hated history in school. Ask them why, and the answer is almost always the same. Dates. Lists of kings. Wars they could not place on a map. A textbook chapter on the Industrial Revolution that read like the phone book.' },
