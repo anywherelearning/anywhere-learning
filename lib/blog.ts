@@ -5875,7 +5875,7 @@ const posts: BlogPost[] = [
         'I wonder: a question. What is this? Why is it here? What is it doing? Where did it come from?',
         'It reminds me of: a connection. Has the child seen something like this before? Does it look like something else? Does it relate to a story or memory?',
       ] },
-      { type: 'paragraph', text: 'That is it. Every page has at least one of each. Three prompts cover sensory observation, scientific curiosity, and connection-making, which are the building blocks of how scientists, naturalists, and good thinkers process the world.' },
+      { type: 'paragraph', text: 'That is it. Every page has at least one of each. Three prompts cover sensory observation, scientific curiosity, and connection-making, which are the building blocks of how scientists, naturalists, and good thinkers process the world. It pairs naturally with our post on [turning nature walks into science lessons](/blog/nature-walks-science), where the same kinds of questions drive what you do with your feet instead of your pencil.' },
 
       { type: 'tip', title: 'The "I wonder" trap', text: 'Resist the urge to answer your kid\'s "I wonder" questions, even when you know the answer. The wondering itself is the skill. If you supply the answer too fast, the prompt stops being generative. Better response: "Hmm, good question. How could we find out?"' },
 
@@ -5899,7 +5899,7 @@ const posts: BlogPost[] = [
         'One "I wonder" question scrawled somewhere ("Why is it growing in the crack?")',
         'A messy connection ("It reminds me of the umbrellas at grandpa\'s")',
       ] },
-      { type: 'paragraph', text: 'That is a complete entry. It probably took 10 minutes. If your kid spent 20 minutes on it, even better. If they only spent 4 minutes, also fine. Consistency beats depth in the early weeks.' },
+      { type: 'paragraph', text: 'That is a complete entry. It probably took 10 minutes. If your kid spent 20 minutes on it, even better. If they only spent 4 minutes, also fine. Consistency beats depth in the early weeks. If your kid needs a more structured entry point, try pairing the journal with one of our [free seasonal nature scavenger hunts](/blog/seasonal-scavenger-hunts), which give them specific things to find before they sketch.' },
 
       { type: 'heading', level: 2, text: 'How to make it stick beyond week one' },
       { type: 'paragraph', text: 'Most nature journals die in week two. Here is how to keep the habit going:' },
@@ -6109,12 +6109,12 @@ const posts: BlogPost[] = [
         'Paid jobs (optional, above baseline): a posted list of jobs that go beyond normal contribution. Wash the car, weed a flower bed, scrub the deck, clean out the fridge, organize the basement shelves. Each has a set price. The kid chooses if and when to take one on.',
       ] },
       { type: 'paragraph', text: 'You can add a small base allowance on top if you want kids to have something to practice budgeting with even in slow weeks. A common version: a small weekly base (maybe $1 per year of age divided in half) plus the paid-jobs board. The base teaches budgeting. The paid jobs teach earning. The unpaid baseline protects the relationship.' },
-      { type: 'paragraph', text: 'The key feature of this model is that it separates three different lessons that the pure models confuse: belonging is not earned, money comes from work, and you get to decide how much you want to earn.' },
+      { type: 'paragraph', text: 'The key feature of this model is that it separates three different lessons that the pure models confuse: belonging is not earned, money comes from work, and you get to decide how much you want to earn. For more on building money skills through everyday life rather than a chart on the fridge, see our deep dive on [teaching kids about money without an allowance chart](/blog/teach-kids-about-money).' },
 
       { type: 'heading', level: 2, text: 'Letting kids spend their own money on dumb things' },
       { type: 'paragraph', text: 'The single most underrated parenting move in this whole topic is letting your kid spend their own money on something you think is a waste. The cheap Lego knockoff that will break in two weeks. The candy that costs three times what it should at the airport. The plastic toy from a vending machine.' },
       { type: 'paragraph', text: 'Bite your tongue. Let them buy it. The lesson lands in about 72 hours when the thing breaks, gets boring, or disappears under the couch. A kid who spends $8 of their own money on garbage learns more about value in one weekend than a year of lectures will teach. A kid who is never allowed to spend on the wrong thing never builds the internal calibration that tells them what is worth it.' },
-      { type: 'paragraph', text: 'The only line worth holding is on things that violate your family values (some media, some food, anything that is not theirs to buy at their age). Outside of that, the wasted money is the tuition.' },
+      { type: 'paragraph', text: 'The only line worth holding is on things that violate your family values (some media, some food, anything that is not theirs to buy at their age). Outside of that, the wasted money is the tuition. Money management is on our short list of [life skills every kid should learn before 12](/blog/life-skills-before-12), and learning to spend badly is part of how it gets there.' },
 
       { type: 'heading', level: 2, text: 'How much money? Rules of thumb by age' },
       { type: 'paragraph', text: 'There is no magic number, and your local cost of living matters more than any chart. But for ballpark sanity:' },
@@ -6124,7 +6124,7 @@ const posts: BlogPost[] = [
         'Ages 11 to 13: $10 to $20 per week base, paid jobs $5 to $20. This is where bigger jobs make sense. Detail the car for $20. Paint a fence for $40.',
         'Ages 14 and up: a small base if any, real outside work becomes the main source. Babysitting, lawn care, dog walking, small online side projects. Your job shifts to teaching them about taxes, banking, and decision-making on bigger sums.',
       ] },
-      { type: 'paragraph', text: 'A rough heuristic that holds up: a base allowance of about $0.50 to $1 per year of age, per week, plus a paid-jobs board for anything above that. Adjust to your budget. Less is fine. More is fine. Consistency matters more than the amount.' },
+      { type: 'paragraph', text: 'A rough heuristic that holds up: a base allowance of about $0.50 to $1 per year of age, per week, plus a paid-jobs board for anything above that. Adjust to your budget. Less is fine. More is fine. Consistency matters more than the amount. Once the money starts flowing, real-world practice with it matters more than the dollar amount, which is why we pair this with hands-on activities from our [real-world math activities post](/blog/real-world-math-activities) (unit pricing, budgeting at the store, percentage discounts).' },
 
       { type: 'heading', level: 2, text: 'Save, spend, give: the three-jar approach' },
       { type: 'paragraph', text: 'Once money is coming in, the next move is teaching what to do with it. The simplest framework, which scales from age 5 to age 25, is the three-jar split. Every dollar that comes in gets divided into three categories the kid chooses about.' },
