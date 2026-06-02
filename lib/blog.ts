@@ -5705,8 +5705,8 @@ const posts: BlogPost[] = [
     author: amelie,
     recommendedProduct: 'time-energy-planner',
     recommendedBundle: 'planning-problem-solving-bundle',
-    heroImage: '/images/new-to-homeschooling-hero.jpeg',
-    heroImageAlt: 'Two kids hands-on with Lincoln Logs at home, the kind of focused independent play that fits inside a real homeschool day',
+    heroImage: '/images/real-world-learning-hero.jpeg',
+    heroImageAlt: 'Two kids baking together at the kitchen counter, the kind of real-life rhythm that anchors a homeschool day',
     heroImageFit: 'cover',
     content: [
       { type: 'summary', text: 'A homeschool schedule is the daily rhythm a family uses to organize learning at home, ranging from fully flexible (child-led with no fixed times) to highly structured (timed subject blocks like a school day). Most families land somewhere in the middle, with a loose morning rhythm, a few anchored times for meals or outings, and afternoons left open. Kids typically need 1 to 3 hours of focused learning per day depending on age, not the 6 to 7 hours a traditional school requires, because home learning has none of the transitions, crowd control, or repetition that school days are built around. This guide walks through three real sample schedules, how many hours kids actually need by age, and how to find the schedule that fits your own family.' },
@@ -5750,6 +5750,8 @@ const posts: BlogPost[] = [
         '3:00 onward — Free. Friends, activities, screen time if you allow it, dinner prep, family.',
       ] },
       { type: 'paragraph', text: 'On this schedule, kids typically do 2 to 3 hours of focused academic-style work in the morning, then an open afternoon for projects, friends, and rest. It is structured enough to feel productive, loose enough to bend when life happens.' },
+
+      { type: 'product-callout', slug: 'time-energy-planner', pinned: true },
 
       { type: 'heading', level: 2, text: 'Schedule 3: The structured day (block schedule, classical-style)' },
       { type: 'paragraph', text: 'This is for families who want predictable subject blocks, clear transitions, and a more school-like rhythm. Common with classical homeschoolers, families with multiple older kids preparing for high school, or families where the parent works alongside the schedule and needs the predictability. ([Homeschool methods compared](/blog/homeschool-methods-compared) covers the classical approach in more depth.)' },
@@ -5795,8 +5797,6 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 12 to 14' },
       { type: 'paragraph', text: 'This is where ownership of the schedule itself starts to shift toward the kid. A 13-year-old should be planning a meaningful piece of their own week, not having every minute scheduled for them. Give them a list of what needs to happen across the week and let them decide when. This is also the age where time management becomes a real, teachable skill. ([Time management for kids](/blog/time-management-for-kids) covers how.)' },
 
-      { type: 'product-callout', slug: 'time-energy-planner', pinned: true },
-
       { type: 'heading', level: 2, text: 'Common mistakes new homeschoolers make with schedules' },
       { type: 'list', ordered: false, items: [
         'Recreating school at home. The desk, the bell, the timed subject blocks. By Wednesday, everyone is miserable. You did not leave school to build another one.',
@@ -5816,6 +5816,9 @@ const posts: BlogPost[] = [
         'A kid has aged into a new stage. The schedule that fit your 9-year-old will start to chafe your 11-year-old. Update it.',
       ] },
 
+      { type: 'heading', level: 2, text: 'The bottom line' },
+      { type: 'paragraph', text: 'A homeschool schedule is not a school schedule with less travel. It is a fundamentally different shape, built around the way kids actually learn at home: fewer hours, deeper work, more real life, more rest, and more ownership over time as they grow. Pick the schedule from the spectrum that fits your family, give it two weeks, adjust one thing at a time, and trust that the right rhythm will emerge. There is no Pinterest-perfect homeschool day. There is only the one that works for the people inside it.' },
+
       { type: 'heading', level: 2, text: 'Frequently asked questions about homeschool schedules' },
       { type: 'faq', items: [
         { question: 'How many hours a day should we homeschool?', answer: 'Far fewer than school. Ages 5 to 7 need 30 to 60 minutes of focused work daily. Ages 8 to 10 need 1 to 2 hours. Ages 11 to 13 need 2 to 3 hours. Ages 14 and up need 3 to 4 hours, especially if working toward specific goals. The rest of the day is for projects, real life, and rest.' },
@@ -5825,9 +5828,6 @@ const posts: BlogPost[] = [
         { question: 'Can homeschoolers take days off whenever they want?', answer: 'Yes, with one caveat: most jurisdictions require a minimum number of instructional days or hours per year, but they leave the scheduling entirely to you. So a homeschool family can absolutely take a sunny Tuesday off and homeschool on a Saturday instead. Check your state, province, or country’s specific reporting requirements.' },
         { question: 'What if my schedule does not look like anyone else’s?', answer: 'That is the goal. The best homeschool schedule is the one that fits your specific kids, your work, your values, and your season of life. If yours does not look like the families on Instagram, that probably means yours is working. Schedules that look good in photos are not always the ones doing the real work.' },
       ] },
-
-      { type: 'heading', level: 2, text: 'The bottom line' },
-      { type: 'paragraph', text: 'A homeschool schedule is not a school schedule with less travel. It is a fundamentally different shape, built around the way kids actually learn at home: fewer hours, deeper work, more real life, more rest, and more ownership over time as they grow. Pick the schedule from the spectrum that fits your family, give it two weeks, adjust one thing at a time, and trust that the right rhythm will emerge. There is no Pinterest-perfect homeschool day. There is only the one that works for the people inside it.' },
     ],
     relatedSlugs: ['new-to-homeschooling', 'homeschool-methods-compared', 'homeschool-first-year-checklist', 'time-management-for-kids'],
   },
