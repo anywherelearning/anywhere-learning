@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { STANDARD_SUBJECTS, LOG_ENTRY_TYPES, getLogEntryTypeById } from '@/lib/taxonomy';
 import { CATEGORIES, CATEGORY_LABELS } from '@/lib/categories';
 import {
@@ -518,6 +518,320 @@ function EntryRow({
   );
 }
 
+// ─── Quick-log card ──────────────────────────────────────────────────────────
+//
+// A faster path than the full editor for unplanned, in-the-moment activities
+// (library visit, baking, a museum). One line, kid toggles, duration + subject
+// chips, then "Log it". Recents repeat a past entry in one tap. The full editor
+// stays reachable via "More options".
+
+const QUICK_DURATIONS = [15, 30, 45, 60];
+
+function QuickLog({
+  kids,
+  focusedKidId,
+  recents,
+  onCreate,
+  onMoreOptions,
+}: {
+  kids: Child[];
+  focusedKidId: string | null;
+  recents: { title: string; subjects: string[] }[];
+  onCreate: (
+    data: Omit<LogEntry, 'id' | 'userId' | 'createdAt' | 'updatedAt'>,
+  ) => Promise<void>;
+  onMoreOptions: (defaults: Partial<LogEntry>) => void;
+}) {
+  const toast = useToast();
+  const [title, setTitle] = useState('');
+  // Seed the kid selection from the page-level focus so a filtered view logs to
+  // that kid by default. Empty = whole family.
+  const [childIds, setChildIds] = useState<string[]>(focusedKidId ? [focusedKidId] : []);
+  const [duration, setDuration] = useState(30);
+  const [subjects, setSubjects] = useState<string[]>([]);
+  const [saving, setSaving] = useState(false);
+
+  // Keep the default kid selection in step with the page-level focus while the
+  // parent has not made their own pick yet (untouched = matches prior focus).
+  const lastFocus = useRef<string | null>(focusedKidId);
+  useEffect(() => {
+    setChildIds((prev) => {
+      const wasUntouched =
+        (lastFocus.current ? [lastFocus.current] : []).join(',') === prev.join(',');
+      lastFocus.current = focusedKidId;
+      return wasUntouched ? (focusedKidId ? [focusedKidId] : []) : prev;
+    });
+  }, [focusedKidId]);
+
+  const toggleKid = (id: string) =>
+    setChildIds((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
+  const toggleSubject = (id: string) =>
+    setSubjects((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
+
+  const reset = () => {
+    setTitle('');
+    setSubjects([]);
+    setDuration(30);
+    setChildIds(focusedKidId ? [focusedKidId] : []);
+  };
+
+  const submit = async () => {
+    if (saving) return;
+    if (!title.trim()) {
+      toast.error('What did you do? Add a few words first.');
+      return;
+    }
+    setSaving(true);
+    try {
+      const childNames = childIds
+        .map((id) => kids.find((c) => c.id === id)?.name)
+        .filter((n): n is string => !!n);
+      await onCreate({
+        date: new Date().toISOString().slice(0, 10),
+        title: title.trim(),
+        type: 'custom',
+        category: null,
+        productSlug: null,
+        subjects,
+        childIds,
+        childNames,
+        photos: [],
+        notes: null,
+        durationMinutes: duration,
+      });
+      toast.success('Logged it.');
+      reset();
+    } catch (err) {
+      console.error(err);
+      toast.error('Could not log that. Try again.');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const applyRecent = (recent: { title: string; subjects: string[] }) => {
+    setTitle(recent.title);
+    if (recent.subjects.length > 0) setSubjects(recent.subjects);
+  };
+
+  const chipBase = {
+    appearance: 'none' as const,
+    cursor: 'pointer',
+    fontFamily: ALTokens.font,
+    fontWeight: 600,
+    borderRadius: ALTokens.radius.pill,
+  };
+
+  return (
+    <section
+      className="mb-8"
+      style={{
+        background: ALTokens.color.paper,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.lg,
+        padding: 20,
+        boxShadow: ALTokens.shadow.xs,
+      }}
+    >
+      <div className="flex items-center justify-between flex-wrap gap-2" style={{ marginBottom: 14 }}>
+        <Eyebrow>Quick log</Eyebrow>
+        <button
+          type="button"
+          onClick={() => onMoreOptions({ title: title.trim(), subjects, childIds })}
+          style={{
+            background: 'transparent',
+            border: 0,
+            cursor: 'pointer',
+            color: ALTokens.color.forest,
+            fontFamily: ALTokens.font,
+            fontWeight: 600,
+            fontSize: 12.5,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 4,
+            padding: 0,
+          }}
+        >
+          More options
+          <ALIcons.Arrow size={12} color={ALTokens.color.forest} />
+        </button>
+      </div>
+
+      {/* Recents: one tap to repeat */}
+      {recents.length > 0 && (
+        <div style={{ marginBottom: 14 }}>
+          <div
+            style={{
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 10.5,
+              letterSpacing: '.18em',
+              textTransform: 'uppercase',
+              color: ALTokens.color.goldDark,
+              marginBottom: 8,
+            }}
+          >
+            Do again
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {recents.map((r) => (
+              <button
+                key={r.title}
+                type="button"
+                onClick={() => applyRecent(r)}
+                style={{
+                  ...chipBase,
+                  fontSize: 12.5,
+                  padding: '6px 12px',
+                  background: ALTokens.color.sand,
+                  border: `1px solid ${ALTokens.color.lineSoft}`,
+                  color: ALTokens.color.ink,
+                  maxWidth: 240,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+                title={r.title}
+              >
+                {r.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* What did you do? */}
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            void submit();
+          }
+        }}
+        placeholder="What did you do? e.g. Library visit, baking, museum"
+        maxLength={200}
+        style={{
+          width: '100%',
+          background: '#FFFDF7',
+          border: `1px solid ${ALTokens.color.line}`,
+          borderRadius: ALTokens.radius.md,
+          padding: '12px 14px',
+          fontFamily: ALTokens.font,
+          fontSize: 15,
+          color: ALTokens.color.ink,
+          outline: 'none',
+        }}
+      />
+
+      {/* Kid toggles */}
+      {kids.length > 0 && (
+        <div className="flex flex-wrap gap-2" style={{ marginTop: 14 }}>
+          {kids.map((child) => {
+            const on = childIds.includes(child.id);
+            return (
+              <button
+                key={child.id}
+                type="button"
+                onClick={() => toggleKid(child.id)}
+                style={{
+                  ...chipBase,
+                  fontSize: 13,
+                  padding: '5px 12px 5px 5px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  background: on ? `${child.color}1A` : '#FFFDF7',
+                  border: `1px solid ${on ? child.color : ALTokens.color.line}`,
+                  color: on ? child.color : ALTokens.color.body,
+                }}
+              >
+                <ChildAvatar child={child} size={22} />
+                {child.name}
+                {on && <ALIcons.Check size={13} color={child.color} />}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Duration chips */}
+      <div className="flex flex-wrap items-center gap-2" style={{ marginTop: 14 }}>
+        <span
+          style={{
+            fontFamily: ALTokens.font,
+            fontSize: 12.5,
+            color: ALTokens.color.muted,
+            marginRight: 2,
+          }}
+        >
+          How long?
+        </span>
+        {QUICK_DURATIONS.map((d) => {
+          const on = duration === d;
+          return (
+            <button
+              key={d}
+              type="button"
+              onClick={() => setDuration(d)}
+              style={{
+                ...chipBase,
+                fontSize: 12.5,
+                padding: '6px 13px',
+                fontVariantNumeric: 'tabular-nums',
+                background: on ? 'rgba(88,129,87,0.10)' : '#FFFDF7',
+                border: `1px solid ${on ? ALTokens.color.forest : ALTokens.color.line}`,
+                color: on ? ALTokens.color.forest : ALTokens.color.body,
+              }}
+            >
+              {d} min
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Subject chips */}
+      <div className="flex flex-wrap gap-1.5" style={{ marginTop: 14 }}>
+        {STANDARD_SUBJECTS.map((s) => {
+          const on = subjects.includes(s.id);
+          const accent = accentForSubject(s.id);
+          return (
+            <button
+              key={s.id}
+              type="button"
+              onClick={() => toggleSubject(s.id)}
+              style={{
+                ...chipBase,
+                fontSize: 12,
+                padding: '5px 11px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                background: on ? `${accent}1A` : '#FFFDF7',
+                border: `1px solid ${on ? accent : ALTokens.color.line}`,
+                color: on ? accent : ALTokens.color.body,
+              }}
+            >
+              {on && <Dot color={accent} size={6} />}
+              {s.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Log it */}
+      <div className="flex justify-end" style={{ marginTop: 16 }}>
+        <PrimaryButton onClick={submit} disabled={saving}>
+          <ALIcons.Check size={14} color={ALTokens.color.cream} />
+          {saving ? 'Logging…' : 'Log it'}
+        </PrimaryButton>
+      </div>
+    </section>
+  );
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 export default function DashboardTracker({
@@ -548,6 +862,9 @@ export default function DashboardTracker({
   const [searchQ, setSearchQ] = useState('');
   const [editorOpen, setEditorOpen] = useState(false);
   const [editing, setEditing] = useState<LogEntry | null>(null);
+  // Defaults handed to the full editor when opened from the quick-log card's
+  // "More options" link (e.g. carry the typed title across). Null = a blank new entry.
+  const [editorDefaults, setEditorDefaults] = useState<Partial<LogEntry> | null>(null);
   const [detailEntry, setDetailEntry] = useState<LogEntry | null>(null);
   const [seedingDemo, setSeedingDemo] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -654,13 +971,33 @@ export default function DashboardTracker({
 
   const openNew = () => {
     setEditing(null);
+    setEditorDefaults(null);
+    setEditorOpen(true);
+  };
+
+  // Open the full editor as a new entry, seeded with some defaults (used by the
+  // quick-log "More options" link to carry the typed title and any picks over).
+  const openNewWithDefaults = (defaults: Partial<LogEntry>) => {
+    setEditing(null);
+    setEditorDefaults(defaults);
     setEditorOpen(true);
   };
 
   const openEdit = (entry: LogEntry) => {
     setEditing(entry);
+    setEditorDefaults(null);
     setEditorOpen(true);
   };
+
+  // Quick-log create path. Reuses the same createLogEntry API + optimistic
+  // prepend as handleSave's new-entry branch, then surfaces the new row.
+  const handleQuickCreate = useCallback(
+    async (data: Omit<LogEntry, 'id' | 'userId' | 'createdAt' | 'updatedAt'>) => {
+      const created = await createLogEntry(data);
+      setEntries((prev) => [created, ...prev]);
+    },
+    [],
+  );
 
   const exportCsv = () => {
     const csv = entriesToCsv(entries, customSubjects, kids);
@@ -813,6 +1150,22 @@ export default function DashboardTracker({
     });
   }, [kids, entries, customSubjects]);
 
+  // Last few distinct entry titles for one-tap repeat in the quick-log card.
+  // `entries` already arrives newest-first; we keep the first occurrence of each
+  // title and carry its subjects so repeating "Library visit" pre-tags too.
+  const recentTitles = useMemo(() => {
+    const seen = new Set<string>();
+    const out: { title: string; subjects: string[] }[] = [];
+    for (const e of entries) {
+      const key = e.title.trim().toLowerCase();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      out.push({ title: e.title, subjects: e.subjects });
+      if (out.length >= 5) break;
+    }
+    return out;
+  }, [entries]);
+
   const filterFieldStyle = {
     background: ALTokens.color.paper,
     border: `1px solid ${ALTokens.color.line}`,
@@ -883,6 +1236,15 @@ export default function DashboardTracker({
           </div>
         </div>
       </section>
+
+      {/* Quick log: fastest path for an unplanned activity, plus repeat recents */}
+      <QuickLog
+        kids={kids}
+        focusedKidId={focusedKidId}
+        recents={recentTitles}
+        onCreate={handleQuickCreate}
+        onMoreOptions={openNewWithDefaults}
+      />
 
       {/* Year-at-a-glance heatmap - hidden when no entries */}
       {entries.length > 0 && !hasActiveFilters && (
@@ -1515,6 +1877,7 @@ export default function DashboardTracker({
         open={editorOpen}
         onClose={() => setEditorOpen(false)}
         entry={editing}
+        defaults={editorDefaults ?? undefined}
         customSubjects={customSubjects}
         onCustomSubjectsChange={setCustomSubjects}
         childrenList={kids}

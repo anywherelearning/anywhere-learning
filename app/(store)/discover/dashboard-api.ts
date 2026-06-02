@@ -356,6 +356,39 @@ export async function askAgent(input: {
   return res.json();
 }
 
+// ─── Log description assist ──────────────────────────────────────────────────
+
+export type LogAssistResult =
+  | { ok: true; description: string; durationMinutes: number; subjects: string[] }
+  | { ok: false; reason: string };
+
+/**
+ * Draft a portfolio description (plus a duration + subject guess) from a few
+ * words about what the kid did. The route always replies 200 with an `ok`
+ * flag, so we never throw on the graceful-degrade path (no API key): the caller
+ * just toasts `reason`.
+ */
+export async function logAssist(input: {
+  title: string;
+  type?: string;
+  note?: string;
+}): Promise<LogAssistResult> {
+  try {
+    const res = await fetch('/api/dashboard/log-assist', {
+      method: 'POST',
+      headers: JSON_HEADERS,
+      body: JSON.stringify(input),
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data) {
+      return { ok: false, reason: 'The draft helper is unavailable right now.' };
+    }
+    return data as LogAssistResult;
+  } catch {
+    return { ok: false, reason: 'The draft helper is unavailable right now.' };
+  }
+}
+
 // ─── Custom subjects ─────────────────────────────────────────────────────────
 
 export async function fetchCustomSubjects(): Promise<CustomSubject[]> {

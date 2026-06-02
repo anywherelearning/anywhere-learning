@@ -18,7 +18,7 @@ import {
   resolveSubject,
   SERIF,
 } from './dashboard-shared';
-import { createCustomSubject } from './dashboard-api';
+import { createCustomSubject, logAssist } from './dashboard-api';
 import { useToast } from './Toast';
 import type { LogEntry, CustomSubject, Child } from './dashboard-types';
 
@@ -80,6 +80,7 @@ export default function LogEntryEditor({
   // entry never silently drops them, but there is no uploader UI.
   const photos: string[] = entry?.photos ?? defaults?.photos ?? [];
   const [saving, setSaving] = useState(false);
+  const [drafting, setDrafting] = useState(false);
   const toast = useToast();
 
   useEffect(() => {
@@ -150,6 +151,42 @@ export default function LogEntryEditor({
     } catch (err) {
       console.error(err);
       toast.error(err instanceof Error ? err.message : 'Could not create subject');
+    }
+  };
+
+  const handleDraftWithAI = async () => {
+    if (drafting) return;
+    if (!title.trim()) {
+      toast.error('Name it first so I have something to go on.');
+      return;
+    }
+    setDrafting(true);
+    try {
+      const result = await logAssist({
+        title: title.trim(),
+        type,
+        note: notes.trim() || undefined,
+      });
+      if (!result.ok) {
+        toast.error(result.reason);
+        return;
+      }
+      // Fill the description, set the duration only when it is still empty (so
+      // we never overwrite a number the parent already typed), and merge the
+      // suggested subjects in without dropping any they already picked.
+      setNotes(result.description);
+      if (!duration && result.durationMinutes) {
+        setDuration(String(result.durationMinutes));
+      }
+      if (result.subjects.length > 0) {
+        setSubjects((prev) => Array.from(new Set([...prev, ...result.subjects])));
+      }
+      toast.success('Draft ready. Edit anything before you save.');
+    } catch (err) {
+      console.error(err);
+      toast.error('Could not draft that one. Try again in a moment.');
+    } finally {
+      setDrafting(false);
     }
   };
 
@@ -494,7 +531,16 @@ export default function LogEntryEditor({
 
         {/* Notes */}
         <div>
-          <label style={labelStyle}>Notes</label>
+          <div className="flex items-center justify-between" style={{ marginBottom: 6 }}>
+            <label style={{ ...labelStyle, marginBottom: 0 }}>Notes</label>
+            <GhostButton
+              small
+              onClick={handleDraftWithAI}
+              style={drafting ? { opacity: 0.6, cursor: 'wait' } : undefined}
+            >
+              {drafting ? 'Drafting…' : 'Draft with AI'}
+            </GhostButton>
+          </div>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
@@ -503,6 +549,17 @@ export default function LogEntryEditor({
             style={{ ...inputStyle, resize: 'vertical', minHeight: 72 }}
             maxLength={2000}
           />
+          <p
+            style={{
+              margin: '6px 0 0',
+              fontSize: 12,
+              color: '#7B8378',
+              fontFamily: '"DM Sans"',
+              lineHeight: 1.4,
+            }}
+          >
+            Name the activity above, then let AI write the description and suggest a time and subjects.
+          </p>
         </div>
 
         {/* Actions */}

@@ -2814,6 +2814,23 @@ function ProgramStartDialog({
 
 const DAY_PICKER = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
+// One-tap presets for the anchors almost every family already runs. Tapping a
+// chip pre-fills the add form below (title + subjects + a sensible 30 min) so
+// the parent does not have to type. They can tweak days / kids / minutes, then
+// hit Add. Subjects map onto the 7 standard ids so each anchor counts toward
+// weekly goals out of the box.
+const MATERIAL_PRESETS: { label: string; subjects: string[]; minutes: number }[] = [
+  { label: 'Math curriculum', subjects: ['math'], minutes: 30 },
+  { label: 'Reading', subjects: ['ela'], minutes: 30 },
+  { label: 'Writing', subjects: ['ela'], minutes: 30 },
+  { label: 'Piano', subjects: ['art'], minutes: 30 },
+  { label: 'Co-op', subjects: ['life'], minutes: 60 },
+  { label: 'Sports', subjects: ['pe'], minutes: 60 },
+  { label: 'Music lesson', subjects: ['art'], minutes: 30 },
+  { label: 'Chores', subjects: ['life'], minutes: 30 },
+  { label: 'Science', subjects: ['science'], minutes: 30 },
+];
+
 function MaterialsEditor({
   materials,
   kids,
@@ -2848,6 +2865,17 @@ function MaterialsEditor({
     setMode('either');
     setChildIds([]);
     setMinutes('');
+  };
+
+  // Pre-fill the add form from a one-tap preset. We set title, subjects and a
+  // sensible default duration, then leave the parent to tweak (days, kids) and
+  // press Add. Keeps the existing createCustomResource path; nothing saves yet.
+  const applyPreset = (preset: { label: string; subjects: string[]; minutes: number }) => {
+    setTitle(preset.label);
+    setSubjects(preset.subjects);
+    setMinutes(String(preset.minutes));
+    setCadence('flexible');
+    setTimesPerWeek(4);
   };
 
   const add = useCallback(async () => {
@@ -2928,6 +2956,48 @@ function MaterialsEditor({
           The planner schedules these first, then fills the rest of each week&apos;s goals
           with Anywhere Learning activities.
         </p>
+
+        {/* Quick presets: one tap to fill the form below for the usual anchors */}
+        <div className="mt-4">
+          <p
+            className="text-[11px] uppercase tracking-wider text-forest/60"
+            style={{ fontFamily: '"DM Sans"', fontWeight: 700, letterSpacing: '.12em' }}
+          >
+            Our regular stuff
+          </p>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {MATERIAL_PRESETS.map((preset) => (
+              <button
+                key={preset.label}
+                type="button"
+                onClick={() => applyPreset(preset)}
+                className="rounded-full px-3 py-1.5"
+                style={{
+                  fontSize: 12.5,
+                  fontWeight: 600,
+                  fontFamily: '"DM Sans"',
+                  cursor: 'pointer',
+                  background: '#FFFFFF',
+                  border: '1px solid #E5E0D2',
+                  color: '#3A5A40',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 5,
+                }}
+              >
+                <span style={{ fontSize: 14, lineHeight: 1, color: '#588157' }}>+</span>
+                {preset.label}
+              </button>
+            ))}
+          </div>
+          <p
+            className="mt-2 text-[12px] text-forest/55"
+            style={{ fontFamily: '"DM Sans"', lineHeight: 1.5 }}
+          >
+            These show up every week. The planner builds around them. Tap one to fill the form,
+            then tweak and add.
+          </p>
+        </div>
 
         {/* Existing materials */}
         <div className="mt-5 space-y-2">
