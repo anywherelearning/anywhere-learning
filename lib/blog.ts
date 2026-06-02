@@ -6410,8 +6410,7 @@ const posts: BlogPost[] = [
     readTimeMinutes: 11,
     author: amelie,
     heroImage: '/images/risky-play-hero.jpeg',
-    heroImageAlt: 'Kid mid-climb up a pine tree with rocks below, the exact moment most parents instinctively say "be careful" and should not',
-    heroImageAspect: '3 / 4',
+    heroImageAlt: 'Kid hanging upside down from a tree branch on a cliff edge above the ocean, grinning, the joyful side of risky play',
     content: [
       { type: 'summary', text: 'Risky play is the kind of play where kids do something that feels dangerous: climbing high, moving fast, using real tools, playing near water or fire, wrestling, or being out of sight of adults. Research from Ellen Sandseter and the American Academy of Pediatrics shows that kids who get regular access to risky play develop sharper risk assessment, better physical coordination, lower rates of anxiety, and (counterintuitively) fewer serious injuries over time. The job of the parent is not to prevent risk. It is to help kids learn the difference between low-probability and high-probability harm.' },
       { type: 'paragraph', text: 'Picture your kid 12 feet up a tree. They are squinting at the next branch, calculating. Your body wants to yell "be careful." Maybe you do. Maybe you bite it down.' },
