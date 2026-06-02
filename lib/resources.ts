@@ -1264,6 +1264,25 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'This guide covers the maker mindset, design thinking for kids, creative projects organized by age, and how to build a creative practice in your home with minimal supplies and low prep. Whether your child gravitates toward building, drawing, coding, or making videos, there\'s a maker path that fits them.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What maker education actually is',
+      },
+      {
+        type: 'paragraph',
+        text: 'Maker education is hands-on, project-based learning where children build, invent, and create rather than passively consume content. It draws on traditions from constructionism (Seymour Papert\'s pioneering work at MIT showing that kids learn most deeply when they construct things), the Reggio Emilia approach, and the modern maker movement that spawned makerspaces, fab labs, and creator culture online.',
+      },
+      {
+        type: 'paragraph',
+        text: 'It is not the same as arts and crafts, though crafts can be part of it. The defining feature is that the child is solving a real problem (even a small one) through design, prototyping, and iteration. A child decorating a pre-cut paper plate is doing crafts. A child designing a paper boat that has to carry coins across a bathtub is doing maker education. Both have value; only the second builds design thinking.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Maker education also includes digital making (coding, video, music, graphic design, 3D modelling) alongside physical making. The skills transfer between the two: a child who can plan, prototype, and iterate with cardboard can do the same thing with code. The medium is interchangeable.',
+      },
+
       {
         type: 'heading',
         level: 2,
@@ -1482,6 +1501,48 @@ const resources: ResourcePage[] = [
         type: 'paragraph',
         text: 'One more thing about setup: accept the mess. Maker activities are inherently messy. If cleanliness is your top priority, creativity will suffer. Find a space where mess is okay, such as a garage, a porch, or a dedicated corner with a tarp, and let it be the chaos zone. Clean up together afterward, but during the making, let it be wild.',
       },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Common creativity-killers to watch for',
+      },
+      {
+        type: 'paragraph',
+        text: 'Parents do not kill creativity on purpose. We do it accidentally, usually with small comments that add up. Things to watch for:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          '"That is not how you do it." Usually said when a kid is doing something creative in a way you would not. The whole point is that they are doing it differently. Let them.',
+          '"Are you sure?" (asked twice). Asking once is fine. Asking twice tells them you do not actually trust their judgement. They stop trusting it too.',
+          '"Let me help you fix that." If they have not asked for help, do not fix it. The wonky tower they built teaches them something the perfectly straight one would not.',
+          '"What is it supposed to be?" This question makes art a quiz with a right answer. Try "Tell me about it" instead. Open-ended.',
+          'Premature evaluation. Praising or critiquing too early shifts the child\'s focus from creating to performing. Wait until they ask what you think, or until the project is done.',
+          'Too many materials. Counterintuitively, a giant box of supplies can overwhelm a child into inaction. A small focused set of materials with a clear challenge produces more creative output.',
+          'Schedule pressure. Creativity needs unrushed time. A creative project shoehorned into a 20-minute slot between activities will not produce much.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'The goal is not perfection in how you respond, just awareness. Most parents do most of these sometimes. Just notice when you are doing them and ease off.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Why this matters for the future',
+      },
+      {
+        type: 'paragraph',
+        text: 'Creative thinking is now consistently ranked among the most valuable workplace skills for the coming decade. The [World Economic Forum\'s Future of Jobs Report 2025](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) lists analytical thinking, creative thinking, and resilience as the top three skills employers expect to need most. As AI automates routine cognitive work, the parts of human thinking that AI cannot replicate (originality, judgement, taste, the ability to ask the right question) become more valuable, not less.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Beyond the career argument, there is a quality-of-life one. Adults who have a creative practice (any practice: writing, music, woodworking, gardening, cooking, designing) report higher life satisfaction. Building the maker habit in childhood gives kids a lifelong source of meaning that does not depend on consumption or external validation. That is worth the cardboard mess on its own.',
+      },
+
       {
         type: 'heading',
         level: 2,
