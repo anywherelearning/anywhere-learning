@@ -134,24 +134,30 @@ function ageFromBirthYear(birthYear: number | null): number {
  * a parent gets a balanced, sensible week without ever setting a per-subject
  * goal by hand. They can still tweak afterward in Build it yourself.
  */
-function defaultGoalsForChild(
-  child: Child,
-  intensity: PlanIntensity,
-): Record<string, number> {
-  const age = ageFromBirthYear(child.birthYear);
-  const total = INTENSITY_TOTAL[intensity];
-  const order =
-    age >= 10
-      ? ['math', 'ela', 'science', 'life', 'history', 'art', 'pe']
-      : age >= 7
-        ? ['math', 'ela', 'science', 'art', 'pe', 'life', 'history']
-        : ['science', 'art', 'pe', 'math', 'ela', 'life', 'history'];
+function subjectOrderForAge(age: number): string[] {
+  return age >= 10
+    ? ['math', 'ela', 'science', 'life', 'history', 'art', 'pe']
+    : age >= 7
+      ? ['math', 'ela', 'science', 'art', 'pe', 'life', 'history']
+      : ['science', 'art', 'pe', 'math', 'ela', 'life', 'history'];
+}
+
+/** Spread `total` sessions across an age-prioritized subject order. */
+function distributeGoals(child: Child, total: number): Record<string, number> {
+  const order = subjectOrderForAge(ageFromBirthYear(child.birthYear));
   const g: Record<string, number> = {};
-  for (let i = 0; i < total; i++) {
+  for (let i = 0; i < Math.max(0, total); i++) {
     const s = order[i % order.length];
     g[s] = (g[s] ?? 0) + 1;
   }
   return g;
+}
+
+function defaultGoalsForChild(
+  child: Child,
+  intensity: PlanIntensity,
+): Record<string, number> {
+  return distributeGoals(child, INTENSITY_TOTAL[intensity]);
 }
 
 export default function DashboardPlan({
@@ -287,9 +293,14 @@ export default function DashboardPlan({
       if (placed === 0 && result.notes.length > 0) {
         toast.info(result.notes[0]);
       } else if (unfulfilledCount > 0) {
-        toast.info(`Placed ${placed}. ${unfulfilledCount} goal slot(s) unfilled.`);
+        toast.info(
+          `Your week is set with ${placed}. ${unfulfilledCount} did not fit, you can add more by hand.`,
+        );
       } else {
-        toast.success(`Placed ${placed} activities for this week.`);
+        // Cross-tab confirmation: tell the parent where the week shows up.
+        toast.success(
+          `Your week is set. ${placed} ${placed === 1 ? 'activity' : 'activities'}, also on Today and Calendar.`,
+        );
       }
       await reload();
     } catch (err) {
@@ -332,7 +343,7 @@ export default function DashboardPlan({
     async (event: CalendarEvent) => {
       try {
         await completeCalendarEvent(event.id);
-        toast.success(`Marked done: ${event.title}`);
+        toast.success(`Done. It is in your portfolio now.`);
         await reload();
       } catch (err) {
         console.error(err);
@@ -419,6 +430,55 @@ export default function DashboardPlan({
     }
     return buckets;
   }, [events, weekStart, focusedKidId]);
+
+  // Proactive catch-up: activities placed on a day earlier this week that has
+  // already passed, still not marked done or skipped. Only meaningful for the
+  // current week. The parent gets a gentle one-tap "slot these into the days
+  // that are left" instead of having to Skip each one by hand.
+  const missedEvents = useMemo(() => {
+    const today = todayIso();
+    if (weekStart !== isoMonday(today)) return [];
+    return events.filter((e) => {
+      if (e.completed || e.skipped) return false;
+      if (e.date >= today || e.date < weekStart) return false;
+      if (
+        focusedKidId &&
+        !(e.childIds.length === 0 || e.childIds.includes(focusedKidId))
+      ) {
+        return false;
+      }
+      return true;
+    });
+  }, [events, weekStart, focusedKidId]);
+
+  const [catchingUp, setCatchingUp] = useState(false);
+  const [catchUpDismissed, setCatchUpDismissed] = useState(false);
+  const handleCatchUp = useCallback(async () => {
+    if (missedEvents.length === 0) return;
+    setCatchingUp(true);
+    try {
+      let moved = 0;
+      let stuck = 0;
+      for (const ev of missedEvents) {
+        const res = await skipAndReshuffle(ev.id, { reshuffle: true });
+        if (res.reshuffled) moved += 1;
+        else stuck += 1;
+      }
+      if (moved > 0 && stuck === 0) {
+        toast.success(`Moved ${moved} into the days that are left.`);
+      } else if (moved > 0) {
+        toast.info(`Moved ${moved}. ${stuck} had no room left this week.`);
+      } else {
+        toast.info('No room left this week to move them.');
+      }
+      await reload();
+    } catch (err) {
+      console.error(err);
+      toast.error('Could not catch those up. Try again?');
+    } finally {
+      setCatchingUp(false);
+    }
+  }, [missedEvents, reload, toast]);
 
   // Per-day mom-out coverage minutes (for the strip background)
   const momOutByDay = useMemo(() => {
@@ -535,8 +595,8 @@ export default function DashboardPlan({
               margin: 0,
             }}
           >
-            Set the goals. The planner places activities. Skip what gets blown up and it
-            reshuffles.
+            Tell us how full a week you want. We fill it with real activities for each
+            kid. Skip anything that does not happen and we rearrange the rest.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -851,6 +911,54 @@ export default function DashboardPlan({
             </GhostButton>
           )}
         </div>
+
+        {/* Catch-up: gentle, permission-giving prompt when earlier days this
+            week have activities that never got marked done. One tap reshuffles
+            them into the days that are left. Never naggy, dismissable. */}
+        {missedEvents.length > 0 && !catchUpDismissed && (
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 12,
+              padding: '14px 18px',
+              borderRadius: ALTokens.radius.lg,
+              background: 'rgba(196,131,106,0.08)',
+              border: `1px solid rgba(196,131,106,0.30)`,
+              borderLeft: `4px solid ${ALTokens.color.terracotta}`,
+            }}
+          >
+            <div style={{ minWidth: 0 }}>
+              <div style={{ display: 'inline-flex' }}>
+                <Eyebrow color={ALTokens.color.terracotta}>Earlier this week</Eyebrow>
+              </div>
+              <p
+                style={{
+                  margin: '8px 0 0',
+                  fontFamily: ALTokens.font,
+                  fontSize: 14.5,
+                  color: ALTokens.color.ink,
+                  lineHeight: 1.5,
+                  maxWidth: '40em',
+                }}
+              >
+                {missedEvents.length === 1
+                  ? 'One activity from earlier this week did not get done. Life happens. Want it slotted into the days that are left?'
+                  : `${missedEvents.length} activities from earlier this week did not get done. Life happens. Want them slotted into the days that are left?`}
+              </p>
+            </div>
+            <div className="flex items-center" style={{ gap: 8, flexShrink: 0 }}>
+              <PrimaryButton small onClick={handleCatchUp} disabled={catchingUp}>
+                {catchingUp ? 'Catching up...' : 'Reshuffle them'}
+              </PrimaryButton>
+              <GhostButton small onClick={() => setCatchUpDismissed(true)}>
+                Leave them
+              </GhostButton>
+            </div>
+          </div>
+        )}
 
         {/* Empty-week message: reframes a blank week as a good thing. */}
         {!loading && events.length === 0 && (
@@ -1298,7 +1406,7 @@ function BuildItYourselfPanel({
               margin: 0,
             }}
           >
-            Set the rhythm. We place the activities.
+            Set how busy a week you want. We fill it in.
           </h3>
           <p
             style={{
@@ -1310,8 +1418,8 @@ function BuildItYourselfPanel({
               maxWidth: '34em',
             }}
           >
-            How many of each subject this week, per kid? The planner fills these with real
-            Anywhere Learning activities.
+            Pick how many activities each kid does this week. We spread them across
+            subjects and ages, using real Anywhere Learning activities.
           </p>
         </div>
         <div
@@ -1339,7 +1447,7 @@ function BuildItYourselfPanel({
               letterSpacing: '.04em',
             }}
           >
-            sessions planned
+            activities this week
           </div>
         </div>
       </div>
@@ -1409,7 +1517,7 @@ function BuildItYourselfPanel({
           </p>
         </div>
         <PrimaryButton onClick={onGenerate} disabled={!canGenerate}>
-          {generating ? 'Generating...' : 'Generate week plan'}
+          {generating ? 'Filling your week...' : 'Fill my week'}
           {!generating && <ALIcons.Arrow size={15} color={ALTokens.color.cream} />}
         </PrimaryButton>
       </div>
@@ -1474,13 +1582,28 @@ function KidGoalRow({
   onSetGoal: (subjectId: string, count: number) => void;
 }) {
   const totalGoals = Object.values(kidGoals).reduce((sum, n) => sum + n, 0);
+  const [showSubjects, setShowSubjects] = useState(false);
+
+  // The one simple control: a single number of activities for the week. We
+  // spread it across subjects automatically (age-balanced). Per-subject
+  // control lives behind "Adjust by subject" for the few who want it.
+  const setTotal = (n: number) => {
+    const dist = distributeGoals(kid, n);
+    for (const subj of STANDARD_SUBJECTS) {
+      onSetGoal(subj.id, dist[subj.id] ?? 0);
+    }
+  };
 
   return (
-    <div>
-      <div
-        className="flex items-center"
-        style={{ gap: 10, marginBottom: 12 }}
-      >
+    <div
+      style={{
+        background: ALTokens.color.paper,
+        border: `1px solid ${ALTokens.color.line}`,
+        borderRadius: ALTokens.radius.lg,
+        padding: '16px 18px',
+      }}
+    >
+      <div className="flex items-center" style={{ gap: 10 }}>
         <ChildAvatar child={kid} size={32} />
         <span
           style={{
@@ -1492,37 +1615,98 @@ function KidGoalRow({
         >
           {kid.name}
         </span>
+      </div>
+
+      {/* Primary control: one number, spread automatically */}
+      <div
+        className="flex items-center justify-between"
+        style={{ gap: 12, marginTop: 14 }}
+      >
         <span
           style={{
             fontFamily: ALTokens.font,
-            fontSize: 12.5,
-            color: ALTokens.color.muted,
+            fontSize: 14.5,
+            fontWeight: 600,
+            color: ALTokens.color.ink,
           }}
         >
-          ·{' '}
-          {totalGoals === 0
-            ? 'no goals set'
-            : `${totalGoals} session${totalGoals === 1 ? '' : 's'}`}
+          Activities this week
         </span>
+        <Stepper
+          value={totalGoals}
+          onChange={setTotal}
+          min={0}
+          max={10}
+          accent={ALTokens.color.forest}
+          ariaLabel={`${kid.name} activities this week`}
+        />
       </div>
-      <div
-        className="al-goal-grid"
+      <p
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-          gap: 8,
+          margin: '8px 0 0',
+          fontFamily: ALTokens.font,
+          fontSize: 12.5,
+          color: ALTokens.color.muted,
+          lineHeight: 1.5,
         }}
       >
-        {STANDARD_SUBJECTS.map((subj) => (
-          <GoalStepperRow
-            key={subj.id}
-            label={subj.label}
-            accent={accentForSubject(subj.id)}
-            value={kidGoals[subj.id] ?? 0}
-            onChange={(n) => onSetGoal(subj.id, n)}
-          />
-        ))}
-      </div>
+        {totalGoals === 0
+          ? 'We balance them across subjects and ages for you.'
+          : `Spread across subjects automatically. ${totalGoals} for ${kid.name} this week.`}
+      </p>
+
+      {/* Advanced: per-subject control, collapsed by default */}
+      <button
+        type="button"
+        onClick={() => setShowSubjects((s) => !s)}
+        className="cursor-pointer"
+        style={{
+          marginTop: 12,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+          background: 'transparent',
+          border: 0,
+          padding: 0,
+          cursor: 'pointer',
+          fontFamily: ALTokens.font,
+          fontSize: 12.5,
+          fontWeight: 600,
+          color: ALTokens.color.forest,
+        }}
+      >
+        <ALIcons.Chevron
+          size={14}
+          color={ALTokens.color.forest}
+          style={{
+            transform: showSubjects ? 'rotate(180deg)' : 'none',
+            transition: `transform 160ms ${ALTokens.ease}`,
+          }}
+        />
+        {showSubjects ? 'Hide subjects' : 'Adjust by subject'}
+      </button>
+
+      {showSubjects && (
+        <div
+          className="al-goal-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+            gap: 8,
+            marginTop: 12,
+          }}
+        >
+          {STANDARD_SUBJECTS.map((subj) => (
+            <GoalStepperRow
+              key={subj.id}
+              label={subj.label}
+              accent={accentForSubject(subj.id)}
+              value={kidGoals[subj.id] ?? 0}
+              onChange={(n) => onSetGoal(subj.id, n)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -1578,7 +1762,7 @@ function GoalStepperRow({
         value={value}
         onChange={onChange}
         accent={accent}
-        ariaLabel={`${label} sessions`}
+        ariaLabel={`${label} activities`}
       />
     </div>
   );

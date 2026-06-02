@@ -599,7 +599,7 @@ function QuickLog({
         notes: null,
         durationMinutes: duration,
       });
-      toast.success('Logged it.');
+      toast.success('Logged it. It is in your portfolio now.');
       reset();
     } catch (err) {
       console.error(err);

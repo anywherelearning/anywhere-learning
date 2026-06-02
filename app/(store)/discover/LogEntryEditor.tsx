@@ -214,7 +214,7 @@ export default function LogEntryEditor({
         notes: notes.trim() ? notes.trim() : null,
         durationMinutes: duration ? Number(duration) : null,
       });
-      toast.success(entry ? 'Entry updated' : 'Entry saved');
+      toast.success(entry ? 'Updated.' : 'Saved to your portfolio.');
       onClose();
     } catch (err) {
       console.error(err);
