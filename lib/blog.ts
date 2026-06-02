@@ -5834,7 +5834,6 @@ const posts: BlogPost[] = [
 
   {
     slug: 'nature-journaling-for-kids',
-    draft: true,
     title: 'Nature Journaling for Kids: How to Start (and Actually Stick With It)',
     excerpt: 'Nature journaling teaches kids to observe, ask questions, and record what they notice in the natural world. Here is the simple three-prompt framework that works for ages 4 to 14, plus how to make the habit stick beyond the first week.',
     hook: 'A kid who journals in nature for a year starts noticing things adults walk straight past.',
@@ -5935,7 +5934,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'real-world-writing-for-kids',
-    draft: true,
     title: 'Real-World Writing for Kids: 25+ Activities That Don\'t Feel Like School',
     excerpt: 'Kids resist writing when it has no audience and no purpose. Here are 25+ real-world writing activities that build the skill without a single worksheet, sorted by age.',
     hook: 'Kids who hate writing usually do not hate writing. They hate writing for nobody.',
@@ -6063,7 +6061,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'allowance-vs-commission',
-    draft: true,
     title: 'Allowance vs Commission vs Paid Jobs: How to Teach Kids About Money',
     excerpt: 'Pure allowance breeds entitlement. Pure commission turns family relationships into a payroll. Here is the hybrid model that actually teaches kids how money works, with rules of thumb by age.',
     hook: 'A kid who gets paid for every dish they wash is learning the wrong lesson about being part of a family.',
@@ -6168,7 +6165,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'real-world-history-for-kids',
-    draft: true,
     title: 'Real-World History for Kids: 20 Ways to Teach History Without a Textbook',
     excerpt: 'History is not a list of dates to memorize. It is woven through your family stories, your dinner plate, the buildings on your street, and the news on the radio. Here is how to teach history to kids without a textbook, with 20 concrete starting points and age-by-age guidance.',
     hook: 'A kid who learns history through their grandmother\'s kitchen will remember more than one who spent a year on a textbook.',
@@ -6283,7 +6279,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'bird-watching-with-kids',
-    draft: true,
     title: 'Bird Watching With Kids: A Beginner\'s Guide That Doesn\'t Require Expert Knowledge',
     excerpt: 'Bird watching is the easiest way into nature observation with kids because the birds come to you. Here is exactly what you need (almost nothing), how to identify the 10 most common backyard birds, and how to make it stick when attention spans are short.',
     hook: 'You do not have to know a single bird to start bird watching with your kid. Curiosity beats knowledge every time.',
@@ -6397,7 +6392,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'risky-play-for-kids',
-    draft: true,
     title: 'Let Them Climb That Tree: The Case for Risky Play',
     excerpt: 'Risky play (climbing, balancing, real tools, real fire, wandering off) is not a hazard to manage. It is a developmental need, and the research shows kids who get it have fewer serious injuries, not more.',
     hook: 'The kid up the tree is not in danger. The kid who has never been allowed up a tree is the one in trouble.',
