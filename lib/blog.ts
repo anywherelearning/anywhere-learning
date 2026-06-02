@@ -5705,8 +5705,8 @@ const posts: BlogPost[] = [
     author: amelie,
     recommendedProduct: 'time-energy-planner',
     recommendedBundle: 'planning-problem-solving-bundle',
-    heroImage: '/images/real-world-learning-hero.jpeg',
-    heroImageAlt: 'Two kids baking together at the kitchen counter, the kind of real-life rhythm that anchors a homeschool day',
+    heroImage: '/images/homeschool-schedules-hero.jpeg',
+    heroImageAlt: 'Mom and son working through math at the kitchen table together on a regular homeschool morning, big window with trees behind them',
     heroImageFit: 'cover',
     content: [
       { type: 'summary', text: 'A homeschool schedule is the daily rhythm a family uses to organize learning at home, ranging from fully flexible (child-led with no fixed times) to highly structured (timed subject blocks like a school day). Most families land somewhere in the middle, with a loose morning rhythm, a few anchored times for meals or outings, and afternoons left open. Kids typically need 1 to 3 hours of focused learning per day depending on age, not the 6 to 7 hours a traditional school requires, because home learning has none of the transitions, crowd control, or repetition that school days are built around. This guide walks through three real sample schedules, how many hours kids actually need by age, and how to find the schedule that fits your own family.' },
@@ -5750,6 +5750,8 @@ const posts: BlogPost[] = [
         '3:00 onward — Free. Friends, activities, screen time if you allow it, dinner prep, family.',
       ] },
       { type: 'paragraph', text: 'On this schedule, kids typically do 2 to 3 hours of focused academic-style work in the morning, then an open afternoon for projects, friends, and rest. It is structured enough to feel productive, loose enough to bend when life happens.' },
+
+      { type: 'image', src: '/images/homeschool-schedules-cooking.jpeg', alt: 'Kid flipping homemade tortillas at the stove during a regular weekday afternoon', caption: 'A regular afternoon. Cooking counts. So does the math hiding inside the recipe.' },
 
       { type: 'product-callout', slug: 'time-energy-planner', pinned: true },
 
