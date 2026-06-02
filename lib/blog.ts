@@ -5820,7 +5820,6 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'The bottom line' },
       { type: 'paragraph', text: 'A homeschool schedule is not a school schedule with less travel. It is a fundamentally different shape, built around the way kids actually learn at home: fewer hours, deeper work, more real life, more rest, and more ownership over time as they grow. Pick the schedule from the spectrum that fits your family, give it two weeks, adjust one thing at a time, and trust that the right rhythm will emerge. There is no Pinterest-perfect homeschool day. There is only the one that works for the people inside it.' },
 
-      { type: 'heading', level: 2, text: 'Frequently asked questions about homeschool schedules' },
       { type: 'faq', items: [
         { question: 'How many hours a day should we homeschool?', answer: 'Far fewer than school. Ages 5 to 7 need 30 to 60 minutes of focused work daily. Ages 8 to 10 need 1 to 2 hours. Ages 11 to 13 need 2 to 3 hours. Ages 14 and up need 3 to 4 hours, especially if working toward specific goals. The rest of the day is for projects, real life, and rest.' },
         { question: 'Do we have to homeschool five days a week?', answer: 'No. Many families homeschool four days and use the fifth for co-op, field trips, or catch-up. Some do a four-week-on, one-week-off rhythm. Some lean hard into seasonal flow (more structured in winter, looser in summer). There is no legal requirement in most places to homeschool any specific number of days, as long as you meet your local reporting requirements.' },
