@@ -6114,6 +6114,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Letting kids spend their own money on dumb things' },
       { type: 'paragraph', text: 'The single most underrated parenting move in this whole topic is letting your kid spend their own money on something you think is a waste. The cheap Lego knockoff that will break in two weeks. The candy that costs three times what it should at the airport. The plastic toy from a vending machine.' },
       { type: 'paragraph', text: 'Bite your tongue. Let them buy it. The lesson lands in about 72 hours when the thing breaks, gets boring, or disappears under the couch. A kid who spends $8 of their own money on garbage learns more about value in one weekend than a year of lectures will teach. A kid who is never allowed to spend on the wrong thing never builds the internal calibration that tells them what is worth it.' },
+      { type: 'pull-quote', text: 'A kid who has spent their own money on something dumb has learned more about value than a kid who has only heard you talk about it.' },
       { type: 'paragraph', text: 'The only line worth holding is on things that violate your family values (some media, some food, anything that is not theirs to buy at their age). Outside of that, the wasted money is the tuition. Money management is on our short list of [life skills every kid should learn before 12](/blog/life-skills-before-12), and learning to spend badly is part of how it gets there.' },
 
       { type: 'heading', level: 2, text: 'How much money? Rules of thumb by age' },
@@ -6150,7 +6151,6 @@ const posts: BlogPost[] = [
         'Using money as the consequence for everything. Bad grades, attitude, fighting with a sibling. Money should not be the universal currency of discipline. It muddies what the allowance actually represents.',
       ] },
 
-      { type: 'pull-quote', text: 'A kid who has spent their own money on something dumb has learned more about value than a kid who has only heard you talk about it.' },
       { type: 'faq', items: [
         { question: 'Should kids get an allowance at all?', answer: 'Yes, in some form. Kids who never handle their own money tend to arrive at adulthood with no calibration for what things cost, no practice making spending decisions, and no real grasp of waiting. A small, consistent amount they can actually decide about is one of the cheapest and most effective financial educations you can offer. The model matters more than the amount.' },
         { question: 'What is the difference between allowance and commission?', answer: 'Allowance is money given on a schedule regardless of work, often with the goal of teaching budgeting. Commission ties every dollar to a specific task completed. Pure commission treats family contributions as paid work, which most experienced parents find erodes the sense that everyone pitches in by default. The paid-jobs hybrid keeps everyday family help unpaid and reserves money for optional above-baseline tasks.' },
