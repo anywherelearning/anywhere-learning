@@ -142,7 +142,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
       style={{ borderColor: `${cat.color}55` }}
     >
       <div
-        className="relative aspect-[16/10] md:aspect-[4/3] overflow-hidden md:border-r border-b md:border-b-0 border-[#D8D4C5]"
+        className="relative aspect-[16/10] md:aspect-auto md:min-h-full overflow-hidden md:border-r border-b md:border-b-0 border-[#D8D4C5]"
         style={{ background: bg }}
       >
         {post.heroImage && (
