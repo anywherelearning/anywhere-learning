@@ -6282,6 +6282,7 @@ const posts: BlogPost[] = [
       ] },
     ],
     relatedSlugs: ['kitchen-learning-lab', 'project-based-learning-homeschool', 'real-world-math-activities'],
+    recommendedProduct: 'neighbourhood-interview',
     recommendedBundle: 'real-world-mega-bundle',
   },
   {
