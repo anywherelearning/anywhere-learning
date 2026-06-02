@@ -5846,7 +5846,7 @@ const posts: BlogPost[] = [
     readTimeMinutes: 9,
     author: amelie,
     heroImage: '/images/nature-journaling-hero.jpeg',
-    heroImageAlt: 'Kid crouched in the forest photographing a red-and-white spotted mushroom, the kind of slow observation that nature journaling builds',
+    heroImageAlt: 'Dad and daughter leaning over a wooden bridge, peering into clear water with a stick, the slow observation that fuels a nature journal entry',
     content: [
       { type: 'summary', text: 'Nature journaling is the practice of recording observations from the outdoors through a mix of drawing, writing, and questions. It builds observational skills, scientific thinking, and a personal sense of place, all without resembling formal school. The simplest version uses three prompts on every page: I notice, I wonder, it reminds me of. The habit works for ages 4 through adult, requires only a notebook and a pencil, and tends to deepen over months in ways no single lesson can replicate.' },
       { type: 'paragraph', text: 'Nature journaling has a slightly precious reputation. Beautiful watercolour sketches of mushrooms, careful Latin names, calligraphy. That is one version of it. It is not the version most kids actually need.' },
