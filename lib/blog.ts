@@ -5751,7 +5751,7 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'On this schedule, kids typically do 2 to 3 hours of focused academic-style work in the morning, then an open afternoon for projects, friends, and rest. It is structured enough to feel productive, loose enough to bend when life happens.' },
 
-      { type: 'image', src: '/images/homeschool-schedules-cooking.jpeg', alt: 'Kid flipping homemade tortillas at the stove during a regular weekday afternoon', caption: 'A regular afternoon. Cooking counts. So does the math hiding inside the recipe.' },
+      { type: 'image', src: '/images/homeschool-schedules-project.jpeg', alt: 'Kid working through a hands-on Klutz craft project at the kitchen table on a quiet afternoon', caption: 'A regular afternoon. Following instructions, building something with her hands, no adult hovering. This is school too.' },
 
       { type: 'product-callout', slug: 'time-energy-planner', pinned: true },
 
