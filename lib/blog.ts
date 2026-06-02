@@ -5920,8 +5920,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'For our family, the clearest signal was when our kids started reaching for the journal unprompted. Not because they had to. Because they had something they wanted to record.' },
 
       { type: 'pull-quote', text: 'Nature journaling teaches kids to see what other people walk past. That skill compounds.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about nature journaling for kids' },
       { type: 'faq', items: [
         { question: 'What age can a kid start nature journaling?', answer: 'As young as 3 or 4. Pre-writers can draw and describe out loud while a parent transcribes their observations and questions. By 6 or 7, most kids can write their own short notes. Teens can run sophisticated multi-week observations. The three-prompt framework (I notice, I wonder, it reminds me of) scales across all ages with no modification.' },
         { question: 'Do I need to know the names of plants and animals?', answer: 'No, and trying to identify everything is one of the fastest ways to kill a nature journal. The point is observation, not identification. If you and your kid become curious about a specific plant or bird, look it up together afterwards. Not knowing is part of the practice.' },
@@ -6048,8 +6046,6 @@ const posts: BlogPost[] = [
         'They get specific. "It was fun" becomes "the lake had a thin layer of ice that crunched when we stepped on it." Specificity is the deepest indicator.',
       ] },
       { type: 'paragraph', text: 'You will not see all of these in the same month. But if a few of them are showing up across a year, the kid is becoming a writer, regardless of what their handwriting looks like or how many spelling words they can recite.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about teaching writing without worksheets' },
       { type: 'faq', items: [
         { question: 'How do I teach writing without a curriculum?', answer: 'Give your kid real reasons to write, then handle mechanics in small doses around the edges. The core practice is regular writing for a real audience (letters, reviews, scripts, instruction manuals, family newspapers). Add five minutes of handwriting practice a few times a week and a short personal spelling list drawn from their own writing. That covers what most elementary and middle school writing curricula are trying to do, without the resistance worksheets create.' },
         { question: 'What if my kid refuses to write anything?', answer: 'Drop the word "writing" and lower the stakes to the floor. Start with one-sentence formats: a sign, a caption, a label, a text message that has to be written out. Let them dictate while you transcribe. Let them type instead of handwrite. The resistance usually comes from associating writing with school. Strip every school cue from it and most kids reengage within a few weeks.' },
@@ -6153,8 +6149,6 @@ const posts: BlogPost[] = [
       ] },
 
       { type: 'pull-quote', text: 'A kid who has spent their own money on something dumb has learned more about value than a kid who has only heard you talk about it.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about kids and money' },
       { type: 'faq', items: [
         { question: 'Should kids get an allowance at all?', answer: 'Yes, in some form. Kids who never handle their own money tend to arrive at adulthood with no calibration for what things cost, no practice making spending decisions, and no real grasp of waiting. A small, consistent amount they can actually decide about is one of the cheapest and most effective financial educations you can offer. The model matters more than the amount.' },
         { question: 'What is the difference between allowance and commission?', answer: 'Allowance is money given on a schedule regardless of work, often with the goal of teaching budgeting. Commission ties every dollar to a specific task completed. Pure commission treats family contributions as paid work, which most experienced parents find erodes the sense that everyone pitches in by default. The paid-jobs hybrid keeps everyday family help unpaid and reserves money for optional above-baseline tasks.' },
@@ -6270,8 +6264,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If your kid wants to dive deeper on any one of these, run with it. A six-month obsession with World War II, or ancient Egypt, or the Silk Road, teaches more historical thinking than a balanced survey. Depth over breadth, every time. (Our [project-based learning post](/blog/project-based-learning-homeschool) covers how to structure those longer dives.)' },
 
       { type: 'pull-quote', text: 'Textbooks make history boring. Reality makes it gripping. You do not need to teach history. You need to point at it.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about teaching history without a textbook' },
       { type: 'faq', items: [
         { question: 'How do I teach history without a curriculum if I am not a history person myself?', answer: 'You do not need to be an expert. You need to be curious alongside your kid. Pick one question a week ("why are there so many Irish names in our town?" "where did pizza actually come from?") and look it up together. Modelling curiosity teaches more than expertise. Most parents discover they enjoy history far more as adults than they did in school.' },
         { question: 'What if my kid asks a hard history question I cannot answer?', answer: 'Say so. "I don\'t know, let\'s find out." Then actually look it up together. That moment teaches two skills at once: history and how to handle not knowing. The parents who pretend to know lose credibility fast, especially with kids over 10.' },
@@ -6384,8 +6376,6 @@ const posts: BlogPost[] = [
       ] },
 
       { type: 'pull-quote', text: 'A kid who has learned to sit still and watch a bird has learned something most adults have forgotten.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about bird watching with kids' },
       { type: 'faq', items: [
         { question: 'What is the best season to start bird watching with kids?', answer: 'Late winter into spring is the easiest entry point in most of North America. Birds are more active, more vocal, and migratory species start showing up, so the variety builds excitement. That said, winter is great for backyard feeders (fewer leaves, easier viewing) and summer is great for nests and fledglings. There is no bad season. Start whenever you are reading this.' },
         { question: 'Where can I find cheap binoculars that are actually usable?', answer: 'Amazon and outdoor retailers carry decent 8x21 or 8x25 binoculars in the $20 to $30 range. Brands like Celestron, Bushnell, and Carson all make entry-level pairs that are fine for kids. Avoid anything marketed specifically as "kids binoculars" with rubber bumpers and cartoon branding, the optics are usually bad. If you can stretch to $50 to $80, an 8x32 pair will last for years and your kid will not outgrow it.' },
@@ -6498,8 +6488,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'In our house, the rule is roughly: if it can heal in two weeks, it is yours to figure out. Scrapes, bruises, splinters, the occasional small cut, sore muscles, hurt feelings. All of that is the cost of learning to be a competent human, and it is a fair cost.' },
       { type: 'paragraph', text: 'The exceptions are head, neck, eyes, and anything involving traffic or deep water. Those get the full attention. Everything else gets a glance and a "you got this."' },
       { type: 'paragraph', text: 'If you want a structured way to start, point your family at outdoor challenges that have built-in risk: real tool use, fire-building, balancing, navigation. Our [forest school activities](/blog/forest-school-activities) and [outdoor STEM challenges](/blog/outdoor-stem-challenges) are full of these. The point is to give kids enough real experiences that risk stops feeling exotic and starts feeling like a skill they have.' },
-
-      { type: 'heading', level: 2, text: 'Frequently asked questions about risky play' },
       { type: 'faq', items: [
         { question: 'But what about injuries? Are not kids going to get hurt?', answer: 'Yes, sometimes. Bumps, scrapes, the occasional sprain. The research consistently shows that kids who get regular risky play have fewer serious injuries over time, not more, because they develop better body awareness and risk assessment. The kids who end up with the worst playground injuries are often the ones who have not had enough practice. A scraped knee at 6 is the price of avoiding a broken arm at 12.' },
         { question: 'What age should I start letting my kid do risky play?', answer: 'From toddlerhood. A 2 year old climbing on a couch is doing risky play. A 4 year old up a low tree branch is doing risky play. The activities scale with age, but the principle (let them push their own edge with you nearby and quiet) starts as soon as they can move on their own.' },
