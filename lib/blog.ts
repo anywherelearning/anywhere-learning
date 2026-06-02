@@ -6290,8 +6290,8 @@ const posts: BlogPost[] = [
     keywords: ['bird watching with kids', 'birding for kids', 'backyard birds for children', 'birding for beginners', 'Merlin Bird ID app', 'how to identify backyard birds', 'nature activities for kids', 'homeschool bird study'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImage: '/images/guide-nature-hero.jpeg',
-    heroImageAlt: 'A kid looking up through binoculars at a backyard tree, the kind of slow observational moment that defines bird watching with kids',
+    heroImage: '/images/bird-watching-hero.jpeg',
+    heroImageAlt: 'Kid on a forest path with a chickadee perched on his open hand, the kind of trust that builds when bird watching becomes a habit',
     content: [
       { type: 'summary', text: 'Bird watching with kids is the most accessible form of nature observation because birds show up wherever you are, including dense cities and small backyards. The only gear that actually matters is a cheap pair of binoculars (under $30) and the free Merlin Bird ID app, which identifies birds by photo or by recording their song. Start in your own yard or nearest park, learn the 10 most common backyard birds first, and return to the same spot weekly so your kid starts noticing patterns. The practice builds observation, patience, classification, and prediction skills with almost zero parent prep.' },
 
@@ -6352,6 +6352,8 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'The "patch" idea: one spot, every week' },
       { type: 'paragraph', text: 'Real birders have a "patch." A local spot they return to over and over, year after year, until they know its birds better than the people who own the land. The patch concept works beautifully for kids because it removes the pressure to seek novelty and replaces it with the satisfaction of becoming an expert on one small place.' },
       { type: 'paragraph', text: 'Pick a patch. Your backyard, the park down the street, the trail behind the school. Go there once a week. Keep a list of birds seen each visit. Within two months, your kid will start predicting which birds will be there, noticing when something unusual shows up, and recognizing the resident birds by sight before they even raise the binoculars. That is when the practice goes from activity to skill.' },
+
+      { type: 'image', src: '/images/bird-watching-lake.jpeg', alt: 'Kid standing under an oak tree watching ibises feeding by a small lake on a sunny day', caption: 'A patch does not have to be wild or remote. A small lake, a park bench, a back deck. The point is going back enough times that you start to know the place.' },
 
       { type: 'heading', level: 2, text: 'The science skills hiding inside this' },
       { type: 'paragraph', text: 'Bird watching looks like a hobby. Underneath, it trains the same skills a working field biologist uses every day:' },
