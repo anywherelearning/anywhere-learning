@@ -5845,8 +5845,8 @@ const posts: BlogPost[] = [
     keywords: ['nature journaling for kids', 'how to start a nature journal', 'kids nature journal', 'nature journal prompts', 'homeschool nature journal', 'nature study for kids', 'observation skills for kids', 'outdoor learning activities'],
     readTimeMinutes: 9,
     author: amelie,
-    heroImage: '/images/guide-nature-hero.jpeg',
-    heroImageAlt: 'Kids exploring outdoors with notebook in hand, the kind of slow observational learning that turns into a nature journaling practice',
+    heroImage: '/images/nature-journaling-hero.jpeg',
+    heroImageAlt: 'Kid crouched in the forest photographing a red-and-white spotted mushroom, the kind of slow observation that nature journaling builds',
     content: [
       { type: 'summary', text: 'Nature journaling is the practice of recording observations from the outdoors through a mix of drawing, writing, and questions. It builds observational skills, scientific thinking, and a personal sense of place, all without resembling formal school. The simplest version uses three prompts on every page: I notice, I wonder, it reminds me of. The habit works for ages 4 through adult, requires only a notebook and a pencil, and tends to deepen over months in ways no single lesson can replicate.' },
       { type: 'paragraph', text: 'Nature journaling has a slightly precious reputation. Beautiful watercolour sketches of mushrooms, careful Latin names, calligraphy. That is one version of it. It is not the version most kids actually need.' },
@@ -5876,6 +5876,8 @@ const posts: BlogPost[] = [
         'It reminds me of: a connection. Has the child seen something like this before? Does it look like something else? Does it relate to a story or memory?',
       ] },
       { type: 'paragraph', text: 'That is it. Every page has at least one of each. Three prompts cover sensory observation, scientific curiosity, and connection-making, which are the building blocks of how scientists, naturalists, and good thinkers process the world. It pairs naturally with our post on [turning nature walks into science lessons](/blog/nature-walks-science), where the same kinds of questions drive what you do with your feet instead of your pencil.' },
+
+      { type: 'image', src: '/images/nature-journaling-shells.jpeg', alt: 'Kid on a stony beach examining a single shell from her collection bucket, the kind of close-up observation that fuels a nature journal entry', caption: 'A nature journal entry can start anywhere. A shell on a beach. A weed in a sidewalk crack. The point is the noticing, not the location.' },
 
       { type: 'tip', title: 'The "I wonder" trap', text: 'Resist the urge to answer your kid\'s "I wonder" questions, even when you know the answer. The wondering itself is the skill. If you supply the answer too fast, the prompt stops being generative. Better response: "Hmm, good question. How could we find out?"' },
 
