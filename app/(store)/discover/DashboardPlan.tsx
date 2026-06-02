@@ -114,6 +114,46 @@ function todayIso(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
+type PlanIntensity = 'light' | 'balanced' | 'full';
+
+const INTENSITY_TOTAL: Record<PlanIntensity, number> = {
+  light: 3,
+  balanced: 5,
+  full: 7,
+};
+
+function ageFromBirthYear(birthYear: number | null): number {
+  if (!birthYear) return 9;
+  const age = new Date().getUTCFullYear() - birthYear;
+  return age >= 4 && age <= 18 ? age : 9;
+}
+
+/**
+ * Smart default goals for the one-tap "Plan my week" path. Round-robins the
+ * chosen total number of sessions across an age-prioritized subject order, so
+ * a parent gets a balanced, sensible week without ever setting a per-subject
+ * goal by hand. They can still tweak afterward in Build it yourself.
+ */
+function defaultGoalsForChild(
+  child: Child,
+  intensity: PlanIntensity,
+): Record<string, number> {
+  const age = ageFromBirthYear(child.birthYear);
+  const total = INTENSITY_TOTAL[intensity];
+  const order =
+    age >= 10
+      ? ['math', 'ela', 'science', 'life', 'history', 'art', 'pe']
+      : age >= 7
+        ? ['math', 'ela', 'science', 'art', 'pe', 'life', 'history']
+        : ['science', 'art', 'pe', 'math', 'ela', 'life', 'history'];
+  const g: Record<string, number> = {};
+  for (let i = 0; i < total; i++) {
+    const s = order[i % order.length];
+    g[s] = (g[s] ?? 0) + 1;
+  }
+  return g;
+}
+
 export default function DashboardPlan({
   children,
   focusedKidId,
@@ -259,6 +299,32 @@ export default function DashboardPlan({
       setGenerating(false);
     }
   }, [weekStart, reload, toast, showUpgrade]);
+
+  // One-tap "Plan my week for me". Builds age-balanced default goals at the
+  // chosen intensity, saves them, then runs the planner. The parent never
+  // touches a per-subject stepper to get a full week.
+  const [quickPlanning, setQuickPlanning] = useState<PlanIntensity | null>(null);
+  const handleQuickPlan = useCallback(
+    async (intensity: PlanIntensity) => {
+      if (children.length === 0) return;
+      setQuickPlanning(intensity);
+      try {
+        const next: WeeklyGoals = {};
+        for (const kid of children) {
+          next[kid.id] = defaultGoalsForChild(kid, intensity);
+        }
+        setGoals(next);
+        await saveWeeklyGoals({ weekStart, goals: next });
+        await runPlanner();
+      } catch (err) {
+        console.error(err);
+        toast.error('Could not plan the week. Try again?');
+      } finally {
+        setQuickPlanning(null);
+      }
+    },
+    [children, weekStart, runPlanner, toast],
+  );
 
   // ─── Event row actions ─────────────────────────────────────────────────────
 
@@ -505,7 +571,134 @@ export default function DashboardPlan({
         </div>
       </header>
 
-      {/* ─── Sub-tab segmented control: icon + label, forest fill when active ─── */}
+      {/* ─── Quick start: one-tap "plan my week for me" on-ramp ──────────────
+          Shown when the week is empty so a new member's very first action is
+          a single tap, not a grid of blank goal steppers. */}
+      {events.length === 0 && !loading && (
+        <section
+          style={{
+            position: 'relative',
+            background: 'linear-gradient(166deg, #fffdf9 0%, #f6efe1 100%)',
+            borderRadius: ALTokens.radius.xl,
+            border: `1px solid ${ALTokens.color.line}`,
+            padding: 'clamp(20px, 4vw, 30px)',
+            boxShadow: ALTokens.shadow.sm,
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            aria-hidden
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: 4,
+              background: ALTokens.color.gold,
+              opacity: 0.9,
+            }}
+          />
+          <div style={{ display: 'inline-flex', marginBottom: 12 }}>
+            <Eyebrow>Quick start</Eyebrow>
+          </div>
+          <h3
+            style={{
+              fontFamily: ALTokens.font,
+              fontWeight: 700,
+              fontSize: 26,
+              letterSpacing: '-0.015em',
+              color: ALTokens.color.ink,
+              lineHeight: 1.15,
+              margin: 0,
+            }}
+          >
+            Want us to plan this week for you?
+          </h3>
+          <p
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 15,
+              color: ALTokens.color.body,
+              lineHeight: 1.55,
+              margin: '10px 0 0',
+              maxWidth: '36em',
+            }}
+          >
+            Tap how full a week you want. We place real activities for each kid,
+            balanced across subjects and tuned to their age. Move, swap, or skip
+            anything after.
+          </p>
+          <div
+            style={{
+              marginTop: 18,
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 10,
+            }}
+          >
+            {([
+              ['light', 'Light week', '3 each'],
+              ['balanced', 'Balanced week', '5 each'],
+              ['full', 'Full week', '7 each'],
+            ] as const).map(([key, label, sub]) => {
+              const busy = quickPlanning === key;
+              const anyBusy = quickPlanning !== null;
+              const isBalanced = key === 'balanced';
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  disabled={anyBusy}
+                  onClick={() => handleQuickPlan(key)}
+                  className={anyBusy ? '' : 'cursor-pointer'}
+                  style={{
+                    flex: '1 1 150px',
+                    textAlign: 'left',
+                    padding: '14px 18px',
+                    borderRadius: ALTokens.radius.md,
+                    background: isBalanced ? ALTokens.color.forest : ALTokens.color.paper,
+                    color: isBalanced ? ALTokens.color.cream : ALTokens.color.ink,
+                    border: `1px solid ${isBalanced ? ALTokens.color.forest : ALTokens.color.line}`,
+                    boxShadow: isBalanced ? ALTokens.shadow.sm : 'none',
+                    cursor: anyBusy ? 'default' : 'pointer',
+                    opacity: anyBusy && !busy ? 0.55 : 1,
+                    transition: `all 160ms ${ALTokens.ease}`,
+                    fontFamily: ALTokens.font,
+                  }}
+                >
+                  <span
+                    style={{
+                      display: 'block',
+                      fontSize: 15,
+                      fontWeight: 700,
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
+                    {busy ? 'Planning...' : label}
+                  </span>
+                  <span
+                    style={{
+                      display: 'block',
+                      marginTop: 2,
+                      fontSize: 12.5,
+                      fontWeight: 500,
+                      color: isBalanced ? 'rgba(250,249,246,0.82)' : ALTokens.color.muted,
+                    }}
+                  >
+                    {sub} per kid
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* ─── Sub-tab control: secondary "or plan it your way" doors ─────────── */}
+      <div>
+        <div style={{ display: 'inline-flex', marginBottom: 10 }}>
+          <Eyebrow>Or plan it your way</Eyebrow>
+        </div>
       <div
         className="al-subtabs"
         style={{
@@ -556,6 +749,7 @@ export default function DashboardPlan({
             </button>
           );
         })}
+      </div>
       </div>
 
       {/* ─── AI assistant: the "just tell me" door ─────────────────────── */}

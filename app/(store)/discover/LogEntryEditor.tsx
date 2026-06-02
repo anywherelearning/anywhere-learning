@@ -19,7 +19,6 @@ import {
   SERIF,
 } from './dashboard-shared';
 import { createCustomSubject } from './dashboard-api';
-import PhotoUploader from './PhotoUploader';
 import { useToast } from './Toast';
 import type { LogEntry, CustomSubject, Child } from './dashboard-types';
 
@@ -76,9 +75,10 @@ export default function LogEntryEditor({
       : ''
   );
   const [newSubjectLabel, setNewSubjectLabel] = useState('');
-  const [photos, setPhotos] = useState<string[]>(
-    entry?.photos ?? defaults?.photos ?? []
-  );
+  // Photo capture is pulled until the private-storage V2 (signed URLs). We
+  // still pass through any photos already on an entry so editing an older
+  // entry never silently drops them, but there is no uploader UI.
+  const photos: string[] = entry?.photos ?? defaults?.photos ?? [];
   const [saving, setSaving] = useState(false);
   const toast = useToast();
 
@@ -91,7 +91,6 @@ export default function LogEntryEditor({
     setCategory(entry?.category ?? defaults?.category ?? null);
     setSubjects(entry?.subjects ?? defaults?.subjects ?? []);
     setChildIds(entry?.childIds ?? defaults?.childIds ?? []);
-    setPhotos(entry?.photos ?? defaults?.photos ?? []);
     setNotes(entry?.notes ?? defaults?.notes ?? '');
     setDuration(
       entry?.durationMinutes != null
@@ -491,18 +490,6 @@ export default function LogEntryEditor({
               })}
             </div>
           )}
-        </div>
-
-        {/* Photos */}
-        <div>
-          <label style={labelStyle}>
-            Photos
-            <HelpHint title="Why photos?">
-              Portfolios with photos feel real. Add a few to remember the moment and to show
-              evaluators or grandparents what your kids did. Stored privately.
-            </HelpHint>
-          </label>
-          <PhotoUploader photos={photos} onChange={setPhotos} />
         </div>
 
         {/* Notes */}
