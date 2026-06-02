@@ -469,7 +469,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'That\u2019s it. No curriculum. No workbooks. Just attention, presence, and trust. You can add more structure later if you want it. But start simple.' },
       { type: 'heading', level: 2, text: 'Finding your style' },
       { type: 'paragraph', text: 'Charlotte Mason, Montessori, Unschooling, Eclectic, Classical, the labels can wait. For now, just pay attention. What does your child gravitate towards? What makes their eyes light up? Follow that thread. The philosophy will reveal itself.' },
-      { type: 'paragraph', text: 'Most families end up \u201ceclectic\u201d, a mix of approaches that evolves over time. That\u2019s not a failure to commit. It\u2019s wisdom. Your kids are unique. Your family is unique. Your approach should be too.' },
+      { type: 'paragraph', text: 'Most families end up \u201ceclectic\u201d, a mix of approaches that evolves over time. That\u2019s not a failure to commit. It\u2019s wisdom. Your kids are unique. Your family is unique. Your approach should be too. (For the bigger picture of how a homeschool year actually unfolds, see our [homeschool journey guide](/guides/homeschool-journey).)' },
       { type: 'paragraph', text: 'When you\u2019re ready to explore styles more deeply, our [comparison of homeschool methods](/blog/homeschool-methods-compared) walks through Charlotte Mason, Montessori, Unschooling, and more, side by side. And if you\u2019re curious about the most relaxed end of the spectrum, [unschooling vs homeschooling](/blog/unschooling-vs-homeschooling) explains the difference plainly.' },
       { type: 'product-callout', slug: 'future-ready-skills-map' },
       { type: 'heading', level: 2, text: 'The socialisation question' },
@@ -527,7 +527,7 @@ const posts: BlogPost[] = [
         'Seasonal awareness: understanding cycles and change over time',
         'Physical activity: moving, bending, climbing, reaching',
       ] },
-      { type: 'paragraph', text: 'Best of all, there\u2019s no wrong answer. A child who finds a \u201cweird fungus thing\u201d has made a genuine discovery, even if they can\u2019t name it yet. The hunt gives permission to explore.' },
+      { type: 'paragraph', text: 'Best of all, there\u2019s no wrong answer. A child who finds a \u201cweird fungus thing\u201d has made a genuine discovery, even if they can\u2019t name it yet. The hunt gives permission to explore. (For the bigger picture of why outdoor learning compounds like this, see our [nature-based learning guide](/guides/nature-based-learning).)' },
       { type: 'heading', level: 2, text: 'Spring: growth and change' },
       { type: 'paragraph', text: 'Spring is the easiest season for nature study because everything is visibly happening. Buds are opening, birds are nesting, insects are emerging. Your scavenger hunt should lean into this energy of change.' },
       { type: 'list', ordered: false, items: [
@@ -906,7 +906,7 @@ const posts: BlogPost[] = [
       { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials, sticks, mud, water, rocks, and plants, instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require low prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d, it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
-      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail.' },
+      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.)' },
       { type: 'heading', level: 2, text: 'Engineering challenges' },
       { type: 'heading', level: 3, text: '1. Build a bridge that holds weight' },
       { type: 'paragraph', text: 'Find a small gap (between two rocks, two logs, or the edges of a path) and build a bridge using only natural materials: sticks, stones, bark, vine. Test it by placing progressively heavier objects on top. This teaches load distribution, structural design, and iterative testing.' },
@@ -3954,7 +3954,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'A homeschool first-year checklist isn’t about ticking off curriculum or fitting your kids into school’s calendar. It’s about the small, mostly-invisible things that compound over a year: deschooling properly, finding a rhythm (not a schedule), building one or two real friendships, learning to spot your own burnout early, and knowing what records actually matter. Here is a month-by-month list of the moves that pay off, and the popular advice you can safely skip.' },
       { type: 'paragraph', text: 'The first year of homeschooling is mostly about figuring out what your family actually needs, not about delivering a curriculum. Most "homeschool first year checklists" out there are written by curriculum companies, and somehow they always end with you needing to buy curriculum. Suspicious.' },
-      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, with no curriculum-store affiliate links waiting at the end. Less "what to buy" and more "what actually matters."' },
+      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, with no curriculum-store affiliate links waiting at the end. Less "what to buy" and more "what actually matters." (Pairs well with our broader [homeschool journey guide](/guides/homeschool-journey) if you want the wider picture, not just the checklist.)' },
       { type: 'paragraph', text: 'Save this. Screenshot it. Print it if you really want to. Then forget about it for a few weeks at a time and come back when you need a nudge.' },
       { type: 'heading', level: 2, text: 'Before you start' },
       { type: 'list', ordered: false, items: [
@@ -4370,7 +4370,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Forest school is a child-led, outdoor learning approach that uses nature as the classroom. You do not need formal training to start. The 15 activities below, from shelter building and nature art to fire circles and free play, give you everything you need to run forest school sessions in your own backyard or nearest patch of woods.' },
       { type: 'paragraph', text: 'Forest school started in Scandinavia, where kids spend entire school days outside in all weather. The philosophy is simple: children learn best through hands-on, self-directed play in natural settings. Risk is managed, not eliminated. And the adult is a facilitator, not an instructor.' },
-      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to nature-based learning, our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start.' },
+      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to [nature-based learning](/guides/nature-based-learning), our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start.' },
       { type: 'paragraph', text: 'Here are 15 forest school activities grouped into five categories. Pick one or two per outing and let your kids lead the rest.' },
 
       { type: 'heading', level: 2, text: 'Shelter and construction' },
@@ -4565,7 +4565,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Here is the thing about math worksheets: they teach kids to solve math problems. Real life teaches kids to think mathematically. Those are not the same thing.' },
       { type: 'paragraph', text: 'A kid who can complete a page of long division but cannot figure out whether two pizzas are enough for eight people has not learned math. They have learned to follow steps. The thinking part, the part that actually matters, comes from using math when the stakes are real and the context is messy.' },
       { type: 'paragraph', text: 'My kids do math on paper sometimes. We follow a curriculum for the basics. But the math that actually stuck, the stuff they use without thinking? They learned that by doing it for real. Splitting a restaurant bill, estimating driving time from a map, comparing unit prices at the grocery store. None of that came from a workbook.' },
-      { type: 'paragraph', text: 'Here are the activities that made it happen, organized by where the math lives.' },
+      { type: 'paragraph', text: 'Here are the activities that made it happen, organized by where the math lives. (For the bigger picture of why this approach works across every subject, not just math, see our [real-world learning guide](/guides/real-world-learning).)' },
 
       { type: 'heading', level: 2, text: 'Grocery store math (ages 5 to 12)' },
       { type: 'paragraph', text: 'The grocery store is a math classroom with fluorescent lighting and free samples. Every aisle has a lesson hiding in plain sight.' },
