@@ -53,10 +53,16 @@ export async function POST(req: NextRequest) {
   const path = `dashboard/${safeUser}/${stamp}-${rand}.${ext}`;
 
   try {
+    // addRandomSuffix MUST stay true. These are photos of children's work.
+    // A random suffix makes the URL cryptographically unguessable so it
+    // cannot be enumerated from the user id + timestamp. (A full private +
+    // signed-URL rebuild is the planned V2 hardening; until then, an
+    // unguessable public URL plus the "photograph the work, not faces"
+    // guidance in PhotoUploader is the launch posture.)
     const blob = await put(path, file, {
       access: 'public',
       contentType: type,
-      addRandomSuffix: false,
+      addRandomSuffix: true,
     });
     return NextResponse.json({ url: blob.url, size: file.size, type });
   } catch (err) {

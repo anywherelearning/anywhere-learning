@@ -180,8 +180,9 @@ export default function PhotoUploader({ photos, onChange, max = 8 }: PhotoUpload
             transition: 'background .15s, border-color .15s',
           }}
         >
-          <span style={{ marginRight: 'auto' }}>
-            Drop photos here, paste, or pick from your device
+          <span style={{ marginRight: 'auto', maxWidth: 300, lineHeight: 1.45 }}>
+            Snap the work, not faces. The finished build, a journal page, the
+            meal they cooked. Private to your account, never shared.
           </span>
           <button
             type="button"
@@ -215,7 +216,7 @@ export default function PhotoUploader({ photos, onChange, max = 8 }: PhotoUpload
               cursor: 'pointer',
             }}
           >
-            📷 Camera
+            Camera
           </button>
           <input
             ref={fileInputRef}

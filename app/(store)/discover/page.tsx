@@ -4,7 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import DashboardToday from './DashboardToday';
 import DashboardTracker from './DashboardTracker';
 import DashboardCalendar from './DashboardCalendar';
-import DashboardPlan from './DashboardPlan';
+import DashboardPlan, { type PlanSubTab } from './DashboardPlan';
 import FamilyManager from './FamilyManager';
 import { ToastProvider } from './Toast';
 import { fetchChildren } from './dashboard-api';
@@ -43,6 +43,9 @@ export default function DiscoverPage() {
   const [familyOpen, setFamilyOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [focusedKidId, setFocusedKidId] = useState<FocusedKidId>(null);
+  // Plan tab's sub-tab lives here so sibling tabs (Today's "Browse the full
+  // library" CTA, etc.) can deep-link into a specific sub-view via jumpToTab.
+  const [planSubTab, setPlanSubTab] = useState<PlanSubTab>('ai');
 
   useEffect(() => {
     fetchChildren()
@@ -56,7 +59,12 @@ export default function DiscoverPage() {
       });
   }, []);
 
-  const jumpToTab = useCallback((tab: TabKey) => setActiveTab(tab), []);
+  // Accepts an optional `subTab` so callers can land directly on a Plan
+  // sub-view in one click (e.g. Today's "Browse the full library" → library).
+  const jumpToTab = useCallback((tab: TabKey, subTab?: PlanSubTab) => {
+    setActiveTab(tab);
+    if (tab === 'plan' && subTab) setPlanSubTab(subTab);
+  }, []);
 
   // If the currently-focused kid is removed via FamilyManager, drop back to All.
   useEffect(() => {
@@ -289,6 +297,8 @@ export default function DiscoverPage() {
               focusedKidId={focusedKidId}
               onChildrenChange={setChildren}
               onOpenFamilySetup={() => setFamilyOpen(true)}
+              subTab={planSubTab}
+              onSubTabChange={setPlanSubTab}
             />
           )}
           {activeTab === 'log' && (

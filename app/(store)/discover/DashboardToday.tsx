@@ -51,7 +51,15 @@ import {
 import type { LogEntry, CustomSubject, Child } from './dashboard-types';
 
 interface DashboardTodayProps {
-  onJumpToTab: (tab: 'log' | 'calendar') => void;
+  /**
+   * Jump to a sibling tab. The optional `subTab` lets Today deep-link into the
+   * Plan tab's library / AI assist / program / manual sub-view in one click.
+   * Only consumed when `tab === 'plan'`.
+   */
+  onJumpToTab: (
+    tab: 'log' | 'calendar' | 'plan',
+    subTab?: 'ai' | 'program' | 'manual' | 'library',
+  ) => void;
   children: Child[];
   /**
    * Currently-focused kid id, or null for the "All kids" / family-wide view.
@@ -1157,8 +1165,9 @@ export default function DashboardToday({
                     </span>
                   </div>
                   {/* Primary actions: one clear next step (open the activity) plus
-                      one secondary (mark done). Everything else is demoted to the
-                      subordinate "more ways" row below so the hierarchy stays clear. */}
+                      one secondary (plan it for this week). "Mark done" lives in
+                      the demoted secondary row because logging happens AFTER the
+                      activity, not as a peer to opening it. */}
                   <div className="flex gap-2 flex-wrap items-center">
                     <a
                       href={`/api/download/activity/${recommendation.activity.product.slug}?view=1`}
@@ -1171,9 +1180,9 @@ export default function DashboardToday({
                         <ALIcons.Arrow size={15} color={ALTokens.color.cream} />
                       </PrimaryButton>
                     </a>
-                    <GhostButton onClick={() => handleQuickLog(recommendation.activity.product.slug)}>
-                      <ALIcons.Check size={14} color={ALTokens.color.forest} />
-                      Mark done
+                    <GhostButton onClick={() => handleAddToCalendar(recommendation.activity.product.slug)}>
+                      <ALIcons.Cal size={14} color={ALTokens.color.forest} />
+                      Plan it
                     </GhostButton>
                   </div>
                   {/* Demoted secondary actions: smaller, lighter text links so they
@@ -1184,7 +1193,7 @@ export default function DashboardToday({
                   >
                     <button
                       type="button"
-                      onClick={() => handleAddToCalendar(recommendation.activity.product.slug)}
+                      onClick={() => handleQuickLog(recommendation.activity.product.slug)}
                       style={{
                         background: 'transparent',
                         border: 0,
@@ -1195,7 +1204,7 @@ export default function DashboardToday({
                         padding: '2px 0',
                       }}
                     >
-                      Plan it for later
+                      Mark done
                     </button>
                     {ranked.length > 1 && (
                       <button
@@ -1581,16 +1590,19 @@ export default function DashboardToday({
       )}
 
 
-      {/* Browse-everything fallback */}
+      {/* Browse-everything fallback. Jumps into the Plan tab's Library
+          sub-view rather than the marketing /shop page, because membership
+          access lives behind the dashboard, not behind a checkout flow. */}
       <div className="text-center mb-6">
-        <Link
-          href="/shop"
+        <button
+          type="button"
+          onClick={() => onJumpToTab('plan', 'library')}
           style={{
             fontFamily: ALTokens.font,
             fontWeight: 600,
             fontSize: 13.5,
             color: ALTokens.color.forest,
-            textDecoration: 'none',
+            cursor: 'pointer',
             display: 'inline-flex',
             alignItems: 'center',
             gap: 6,
@@ -1602,7 +1614,7 @@ export default function DashboardToday({
         >
           Browse the full library of {totalActivities} activities
           <ALIcons.Arrow size={13} color={ALTokens.color.forest} />
-        </Link>
+        </button>
       </div>
 
       {/* Modals */}

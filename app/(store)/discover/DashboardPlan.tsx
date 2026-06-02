@@ -55,6 +55,7 @@ import {
   saveWeeklyGoals,
   skipAndReshuffle,
   startProgram,
+  updateCalendarEvent,
 } from './dashboard-api';
 import { useToast } from './Toast';
 import PlannerAssistant from './PlannerAssistant';
@@ -68,11 +69,20 @@ import type {
   WeeklyGoals,
 } from './dashboard-types';
 
+export type PlanSubTab = 'ai' | 'program' | 'manual' | 'library';
+
 interface DashboardPlanProps {
   children: Child[];
   focusedKidId: string | null;
   onChildrenChange: (children: Child[]) => void;
   onOpenFamilySetup: () => void;
+  /**
+   * Active sub-tab, lifted to the parent so sibling tabs (e.g. Today's
+   * "Browse the full library" CTA) can deep-link into a specific Plan
+   * sub-view in one click. The parent is the source of truth.
+   */
+  subTab: PlanSubTab;
+  onSubTabChange: (subTab: PlanSubTab) => void;
 }
 
 const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -108,6 +118,8 @@ export default function DashboardPlan({
   children,
   focusedKidId,
   onOpenFamilySetup,
+  subTab,
+  onSubTabChange,
 }: DashboardPlanProps) {
   const toast = useToast();
   const [weekStart, setWeekStart] = useState<string>(() => isoMonday(todayIso()));
@@ -120,7 +132,10 @@ export default function DashboardPlan({
   const [windowEditorOpen, setWindowEditorOpen] = useState(false);
   const [materials, setMaterials] = useState<CustomResource[]>([]);
   const [materialsOpen, setMaterialsOpen] = useState(false);
-  const [subTab, setSubTab] = useState<'ai' | 'program' | 'manual' | 'library'>('ai');
+  // Sub-tab is controlled by the parent (page.tsx) so cross-tab CTAs like
+  // Today's "Browse the full library" can land directly on `library` instead
+  // of always opening on `ai`. Local state alias kept for readability.
+  const setSubTab = onSubTabChange;
   // Skill-building upgrade prompt, shown when a non-member tries a member-only action.
   const [upgrade, setUpgrade] = useState<{ open: boolean; reason: string }>({ open: false, reason: '' });
   const showUpgrade = useCallback(
@@ -281,6 +296,42 @@ export default function DashboardPlan({
       }
     },
     [reload, toast],
+  );
+
+  // Move an activity to a specific day the parent picks (via the day-picker
+  // popover on the row, or by dropping the card onto another day card). This
+  // is the deliberate "reschedule because life happened" path, distinct from
+  // Skip, which lets the planner auto-pick the best remaining day.
+  const handleMove = useCallback(
+    async (event: CalendarEvent, newDate: string) => {
+      if (newDate === event.date) return;
+      try {
+        await updateCalendarEvent(event.id, { date: newDate });
+        const label = new Date(`${newDate}T00:00:00Z`).toLocaleDateString(undefined, {
+          weekday: 'long',
+          timeZone: 'UTC',
+        });
+        toast.success(`Moved to ${label}.`);
+        await reload();
+      } catch (err) {
+        console.error(err);
+        toast.error('Could not move it. Try again?');
+      }
+    },
+    [reload, toast],
+  );
+
+  // Drag-and-drop state: which event is being dragged (for opacity) and which
+  // day card is currently a hovered drop target (for the highlight ring).
+  const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [dragOverIdx, setDragOverIdx] = useState<number | null>(null);
+
+  // Flat id -> event lookup. The day-card map below shadows `events` with the
+  // per-day bucket, so drop handlers resolve the dragged event id through this
+  // instead of the shadowed name.
+  const eventsById = useMemo(
+    () => new Map(events.map((e) => [e.id, e] as const)),
+    [events],
   );
 
   // ─── Derived: per-day, per-kid breakdown ───────────────────────────────────
@@ -670,11 +721,42 @@ export default function DashboardPlan({
           return (
             <article
               key={label}
+              onDragOver={(e) => {
+                if (!draggingId) return;
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+                if (dragOverIdx !== idx) setDragOverIdx(idx);
+              }}
+              onDragLeave={() =>
+                setDragOverIdx((cur) => (cur === idx ? null : cur))
+              }
+              onDrop={(e) => {
+                e.preventDefault();
+                const id = e.dataTransfer.getData('text/plain');
+                setDragOverIdx(null);
+                setDraggingId(null);
+                const ev = eventsById.get(id);
+                if (ev) void handleMove(ev, date);
+              }}
               style={{
-                background: ALTokens.color.paper,
+                background:
+                  dragOverIdx === idx && draggingId
+                    ? 'rgba(88,129,87,0.07)'
+                    : ALTokens.color.paper,
                 borderRadius: ALTokens.radius.lg,
-                border: `1px solid ${isToday ? 'rgba(88,129,87,0.32)' : ALTokens.color.line}`,
-                boxShadow: isToday ? ALTokens.shadow.xs : 'none',
+                border: `1px solid ${
+                  dragOverIdx === idx && draggingId
+                    ? ALTokens.color.forest
+                    : isToday
+                      ? 'rgba(88,129,87,0.32)'
+                      : ALTokens.color.line
+                }`,
+                boxShadow:
+                  dragOverIdx === idx && draggingId
+                    ? ALTokens.shadow.md
+                    : isToday
+                      ? ALTokens.shadow.xs
+                      : 'none',
                 opacity: allOff ? 0.65 : 1,
                 overflow: 'hidden',
                 transition: `all 180ms ${ALTokens.ease}`,
@@ -800,8 +882,13 @@ export default function DashboardPlan({
                         key={kid.id}
                         kid={kid}
                         events={perKid.get(kid.id) ?? []}
+                        weekStart={weekStart}
+                        draggingId={draggingId}
                         onComplete={handleComplete}
                         onSkip={handleSkip}
+                        onMove={handleMove}
+                        onDragStart={setDraggingId}
+                        onDragEnd={() => setDraggingId(null)}
                       />
                     ))}
                   {/* Together / family-wide events */}
@@ -809,8 +896,13 @@ export default function DashboardPlan({
                     <TogetherDaySection
                       kids={children}
                       events={together}
+                      weekStart={weekStart}
+                      draggingId={draggingId}
                       onComplete={handleComplete}
                       onSkip={handleSkip}
+                      onMove={handleMove}
+                      onDragStart={setDraggingId}
+                      onDragEnd={() => setDraggingId(null)}
                     />
                   )}
                 </div>
@@ -1284,13 +1376,23 @@ function GoalStepperRow({
 function KidDaySection({
   kid,
   events,
+  weekStart,
+  draggingId,
   onComplete,
   onSkip,
+  onMove,
+  onDragStart,
+  onDragEnd,
 }: {
   kid: Child;
   events: CalendarEvent[];
+  weekStart: string;
+  draggingId: string | null;
   onComplete: (e: CalendarEvent) => void;
   onSkip: (e: CalendarEvent) => void;
+  onMove: (e: CalendarEvent, newDate: string) => void;
+  onDragStart: (id: string) => void;
+  onDragEnd: () => void;
 }) {
   return (
     <div style={{ padding: '14px 20px 16px' }}>
@@ -1339,8 +1441,13 @@ function KidDaySection({
             key={ev.id}
             event={ev}
             accentColor={kid.color}
+            weekStart={weekStart}
+            isDragging={draggingId === ev.id}
             onComplete={onComplete}
             onSkip={onSkip}
+            onMove={onMove}
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
           />
         ))}
       </ul>
@@ -1351,13 +1458,23 @@ function KidDaySection({
 function TogetherDaySection({
   kids,
   events,
+  weekStart,
+  draggingId,
   onComplete,
   onSkip,
+  onMove,
+  onDragStart,
+  onDragEnd,
 }: {
   kids: Child[];
   events: CalendarEvent[];
+  weekStart: string;
+  draggingId: string | null;
   onComplete: (e: CalendarEvent) => void;
   onSkip: (e: CalendarEvent) => void;
+  onMove: (e: CalendarEvent, newDate: string) => void;
+  onDragStart: (id: string) => void;
+  onDragEnd: () => void;
 }) {
   return (
     <div
@@ -1424,8 +1541,13 @@ function TogetherDaySection({
             key={ev.id}
             event={ev}
             accentColor={ALTokens.color.forest}
+            weekStart={weekStart}
+            isDragging={draggingId === ev.id}
             onComplete={onComplete}
             onSkip={onSkip}
+            onMove={onMove}
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
           />
         ))}
       </ul>
@@ -1436,14 +1558,25 @@ function TogetherDaySection({
 function PlannedEventRow({
   event,
   accentColor,
+  weekStart,
+  isDragging,
   onComplete,
   onSkip,
+  onMove,
+  onDragStart,
+  onDragEnd,
 }: {
   event: CalendarEvent;
   accentColor: string;
+  weekStart: string;
+  isDragging: boolean;
   onComplete: (e: CalendarEvent) => void;
   onSkip: (e: CalendarEvent) => void;
+  onMove: (e: CalendarEvent, newDate: string) => void;
+  onDragStart: (id: string) => void;
+  onDragEnd: () => void;
 }) {
+  const [moveOpen, setMoveOpen] = useState(false);
   const modeLabel: Record<typeof event.mode, string> = {
     independent: 'Independent',
     together: 'With you',
@@ -1495,11 +1628,22 @@ function PlannedEventRow({
 
   return (
     <li
+      draggable
+      onDragStart={(e) => {
+        e.dataTransfer.setData('text/plain', event.id);
+        e.dataTransfer.effectAllowed = 'move';
+        onDragStart(event.id);
+      }}
+      onDragEnd={onDragEnd}
       style={{
+        position: 'relative',
         background: ALTokens.color.cream,
         border: `1px solid ${ALTokens.color.lineSoft}`,
         borderLeft: `3px solid ${accentColor}`,
         borderRadius: ALTokens.radius.md,
+        cursor: 'grab',
+        opacity: isDragging ? 0.45 : 1,
+        transition: `opacity 160ms ${ALTokens.ease}`,
       }}
     >
       <div
@@ -1635,10 +1779,35 @@ function PlannedEventRow({
             <ALIcons.Check size={12} color={ALTokens.color.forest} />
             Done
           </button>
+          {/* Move toggles an inline day-picker rendered below the row (normal
+              flow, so it never clips against the day card's overflow). On
+              touch, where native drag is unreliable, this is the reschedule
+              path. */}
+          <button
+            type="button"
+            onClick={() => setMoveOpen((v) => !v)}
+            title="Move to another day"
+            aria-expanded={moveOpen}
+            className="cursor-pointer"
+            style={{
+              background: moveOpen ? 'rgba(88,129,87,0.10)' : 'transparent',
+              border: `1px solid ${ALTokens.color.line}`,
+              color: ALTokens.color.forest,
+              fontFamily: ALTokens.font,
+              fontSize: 12.5,
+              fontWeight: 600,
+              padding: '7px 12px',
+              borderRadius: ALTokens.radius.sm,
+              cursor: 'pointer',
+              transition: `all 160ms ${ALTokens.ease}`,
+            }}
+          >
+            Move
+          </button>
           <button
             type="button"
             onClick={() => onSkip(event)}
-            title="Skip and reshuffle to another day this week"
+            title="Skip and let the planner reshuffle to the best remaining day"
             className="cursor-pointer"
             style={{
               background: 'transparent',
@@ -1657,6 +1826,63 @@ function PlannedEventRow({
           </button>
         </div>
       </div>
+
+      {/* Inline day picker: full-width strip below the row when Move is open. */}
+      {moveOpen && (
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 6,
+            padding: '0 14px 14px',
+            alignItems: 'center',
+          }}
+        >
+          <span
+            style={{
+              fontFamily: ALTokens.font,
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: '.08em',
+              textTransform: 'uppercase',
+              color: ALTokens.color.muted,
+              marginRight: 2,
+            }}
+          >
+            Move to
+          </span>
+          {DAY_LABELS.map((label, i) => {
+            const dayDate = addDays(weekStart, i);
+            const here = dayDate === event.date;
+            return (
+              <button
+                key={label}
+                type="button"
+                disabled={here}
+                onClick={() => {
+                  setMoveOpen(false);
+                  if (!here) onMove(event, dayDate);
+                }}
+                className={here ? '' : 'cursor-pointer'}
+                style={{
+                  background: here ? ALTokens.color.sand : ALTokens.color.paper,
+                  border: `1px solid ${ALTokens.color.line}`,
+                  borderRadius: ALTokens.radius.pill,
+                  padding: '5px 11px',
+                  fontFamily: ALTokens.font,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: here ? ALTokens.color.faint : ALTokens.color.forest,
+                  cursor: here ? 'default' : 'pointer',
+                  transition: `all 140ms ${ALTokens.ease}`,
+                }}
+              >
+                {here ? `${label} (here)` : label}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </li>
   );
 }
