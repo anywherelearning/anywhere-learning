@@ -5946,8 +5946,8 @@ const posts: BlogPost[] = [
     keywords: ['writing activities for kids', 'how to teach writing without worksheets', 'real world writing for kids', 'homeschool writing activities', 'creative writing ideas for kids', 'fun writing activities', 'writing prompts for kids', 'teach kids to write', 'writing for reluctant writers', 'writing projects for homeschool'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImage: '/images/guide-real-world-hero.jpeg',
-    heroImageAlt: 'A kid writing at a kitchen table with a notebook and pencil, the kind of unforced everyday writing that builds the skill better than worksheets',
+    heroImage: '/images/real-world-writing-hero.jpeg',
+    heroImageAlt: 'Kid presenting a hand-drawn map of Costa Rica he researched and labeled in French, the kind of real-audience writing that builds the skill better than any worksheet',
     content: [
       { type: 'summary', text: 'Real-world writing for kids means writing with a clear audience and purpose, things like letters, reviews, scripts, menus, instruction manuals, and family newspapers. Kids who resist writing in school usually engage with writing when it serves something they care about. The most effective way to teach writing without worksheets is to give kids real reasons to write, then handle mechanics (spelling, grammar, handwriting) in small doses on the side rather than as the main event.' },
       { type: 'paragraph', text: 'Most kids do not hate writing. They hate the version of writing that lives only at school: a prompt nobody chose, an audience of one (the teacher), and a red pen waiting at the end. That is not writing. That is performance under surveillance.' },
