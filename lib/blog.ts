@@ -6181,8 +6181,8 @@ const posts: BlogPost[] = [
     keywords: ['how to teach history to kids', 'real world history activities', 'homeschool history without curriculum', 'teaching history without a textbook', 'history activities for kids', 'homeschool history ideas', 'living history for kids', 'history for 6 to 14 year olds'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImage: '/images/guide-real-world-hero.jpeg',
-    heroImageAlt: 'A child examining an old family photograph at the kitchen table, the kind of slow personal history that no textbook can replicate',
+    heroImage: '/images/real-world-history-hero.jpeg',
+    heroImageAlt: 'Kid stirring a wash basin with a paddle at a living-history pioneer village, period buildings and mountains behind, hands-on history in action',
     content: [
       { type: 'summary', text: 'Real-world history for kids is the practice of learning the past through the people, places, food, objects, and events already around them. It works because the brain remembers stories and context, not isolated dates. Family interviews, local landmarks, food origins, vintage objects, and current events with historical roots all teach history more effectively than a textbook for ages 6 to 14. The approach scales by age, from noticing patterns at 6 to examining bias and causality at 13.' },
       { type: 'paragraph', text: 'Most adults will tell you they hated history in school. Ask them why, and the answer is almost always the same. Dates. Lists of kings. Wars they could not place on a map. A textbook chapter on the Industrial Revolution that read like the phone book.' },
@@ -6241,6 +6241,8 @@ const posts: BlogPost[] = [
         'Do a regional road trip with a historical theme: follow an old trade route, a wagon trail, a river route. Make the route the story.',
         'Even when you travel for vacation, give it one historical anchor. One battlefield, one ruin, one old quarter. That becomes the trip your kid remembers.',
       ] },
+
+      { type: 'image', src: '/images/real-world-history-cannons.jpeg', alt: 'Two kids posing with old cannons at a Panama colonial history museum, mock-shouting next to the exhibit, the kind of museum visit kids actually remember', caption: 'A museum is not a quiet hour you survive. It is a place to ham it up next to a 400-year-old cannon and ask why anyone built it. The fun is the on-ramp.' },
 
       { type: 'heading', level: 2, text: 'History through movies and books (chosen carefully)' },
       { type: 'paragraph', text: 'Historical fiction and well-made documentaries can do enormous work, but only if you skip the bad ones. Mediocre historical movies plant inaccurate images that are hard to undo. A few that consistently land with kids 8 to 14 include Ken Burns documentaries (in short doses), well-reviewed biopics, and historical fiction from authors who actually researched (Avi, Karen Cushman, Gary Paulsen, Laurie Halse Anderson).' },
