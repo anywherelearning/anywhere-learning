@@ -65,6 +65,12 @@ export const CATEGORIES: CategoryDef[] = [
     description:
       'Travel-ready learning for families exploring the world. Cultural curiosity, geography, and real-world skills, anywhere you go.',
   },
+  {
+    value: 'emotional-social-skills',
+    label: 'Emotional & Social Skills',
+    description:
+      'Tools for big feelings, hard moments, and real connection. Self-regulation, empathy, and the social skills modern childhood doesn\'t make space for.',
+  },
 ];
 
 /** Quick lookup: category value → label. Includes 'bundle'. */
@@ -88,6 +94,7 @@ export const COVER_CLASSES: Record<string, string> = {
   'planning-problem-solving': 'cover-planning-problem-solving',
   'start-here': 'cover-start-here',
   worldschooling: 'cover-worldschooling',
+  'emotional-social-skills': 'cover-emotional-social-skills',
   bundle: 'cover-bundle',
 };
 
@@ -110,5 +117,6 @@ export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   'planning-problem-solving': 'bg-[#7a6da8] text-white shadow-sm',
   'start-here': 'bg-[#d4a373] text-white shadow-sm',
   'worldschooling': 'bg-[#5a9b9c] text-white shadow-sm',
+  'emotional-social-skills': 'bg-[#b6748a] text-white shadow-sm',
   bundle: 'bg-gold text-white shadow-sm',
 };

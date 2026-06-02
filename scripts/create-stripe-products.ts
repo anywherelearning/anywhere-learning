@@ -126,6 +126,19 @@ const catalog = [
   { slug: 'transport-navigation-challenge', name: 'Transport & Navigation Challenge', priceCents: 599, description: 'Read maps, decode local transport, and plan real routes in unfamiliar places.' },
   { slug: 'travel-reflection-postcards', name: 'Travel Reflection & Postcards', priceCents: 599, description: 'Capture travel memories through hand-made postcards and reflective writing.' },
   { slug: 'world-food-detective', name: 'World Food Detective', priceCents: 599, description: 'Investigate local cuisine: identify ingredients, trace origins, and document tastes.' },
+  // ─── Emotional & Social Skills singles ($5.99) ───
+  { slug: 'calm-down-toolkit', name: 'The Calm-Down Toolkit', priceCents: 599, description: 'Build a real reset kit and a when-I\'m-flooded plan from household stuff.' },
+  { slug: 'big-feelings-lab', name: 'The Big Feelings Lab', priceCents: 599, description: 'Name a feeling, map it in the body, rate its size, watch it pass.' },
+  { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', priceCents: 599, description: 'Build the skill of handling boredom without a screen. Self-direction, creativity, independence.' },
+  { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
+  { slug: 'comeback-journal', name: 'The Comeback Journal', priceCents: 599, description: 'Take a real flop, pull out the lesson, pick the next move.' },
+  { slug: 'hard-thing-challenge', name: 'The Hard Thing Challenge', priceCents: 599, description: 'Pick one hard thing, commit, push through the messy middle, finish.' },
+  { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
+  { slug: 'kindness-missions', name: 'The Kindness Missions', priceCents: 599, description: 'A deck of real-world kindness challenges that take effort and noticing.' },
+  { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Scan a room, read body language, infer the backstory.' },
+  { slug: 'conflict-fix', name: 'The Conflict Fix', priceCents: 599, description: 'A real script for working through fights with siblings or friends.' },
+  { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },
+  { slug: 'worry-sorter', name: 'The Worry Sorter', priceCents: 599, description: 'Sort worries into can-control vs cannot-control, plan the rest.' },
 ];
 
 // Slugs where the image filename doesn't match {slug}.jpg

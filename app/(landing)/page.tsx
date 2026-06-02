@@ -35,7 +35,7 @@ const homepageFaqLd = {
   })),
 };
 
-// One activity from each of the 8 categories. None of these appear in the
+// One activity from each of the 9 categories. None of these appear in the
 // Starter Pack page hero, so the visual stories don't overlap.
 // Order matches CARD_POSITIONS: index 3 = right side (Entrepreneurship), index 7 = left side (Planning).
 const HERO_CARDS = [
@@ -79,6 +79,7 @@ const CATEGORIES = [
   { name: 'Planning & Problem-Solving', slug: 'planning-problem-solving', icon: '⊞', gradient: 'from-[#C97B5C] to-[#A85A38]', photo: '/images/treasure-map.jpeg', objectPosition: 'center 25%' },
   { name: 'Outdoor Learning', slug: 'outdoor-learning', icon: '☘', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/forest-school-leaf-play.jpeg' },
   { name: 'Worldschooling', slug: 'worldschooling', icon: '✈', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/worldschool-day-market.jpeg' },
+  { name: 'Emotional & Social Skills', slug: 'emotional-social-skills', icon: '♡', gradient: 'from-[#B6748A] to-[#7A4858]', photo: '/images/join-hero.jpeg' },
 ];
 
 export default async function HomePage() {
@@ -314,13 +315,13 @@ export default async function HomePage() {
                   What&apos;s inside
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Eight categories. <span className="italic text-forest">One library.</span>
+                  Nine categories. <span className="italic text-forest">One library.</span>
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">100+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-[960px] mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3.5 max-w-[960px] mx-auto">
               {CATEGORIES.map((cat, i) => (
                 <ScrollReveal key={cat.name} delay={i * 50}>
                   <Link
@@ -541,7 +542,7 @@ export default async function HomePage() {
                 </h2>
                 <div className="mt-5 mx-auto max-w-[580px] text-gray-500 text-[17px] leading-relaxed space-y-3">
                   <p>
-                    The membership unlocks the full library: all 100+ activities, all nine
+                    The membership unlocks the full library: all 100+ activities, all eight
                     categories, new ones added every quarter. One annual price, no upsells,
                     no tracking your kids.
                   </p>

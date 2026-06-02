@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
 import { STARTER_PACK_SLUGS } from '@/lib/membership';
@@ -22,6 +22,7 @@ const TRACK_COLORS: Record<string, { color: string; deep: string }> = {
   'creativity-maker': { color: '#C97B5C', deep: '#7A3D24' },
   'outdoor-learning': { color: '#3A5A40', deep: '#26331F' },
   worldschooling: { color: '#8A8470', deep: '#5A5240' },
+  'emotional-social-skills': { color: '#B6748A', deep: '#7A4858' },
 };
 
 // Two "virtual" Skills Map entries — pinned to the top of the dashboard for
@@ -59,10 +60,11 @@ const SKILLS_MAP_ENTRIES: DashboardActivity[] = [
 // the Starter Pack experience.
 async function detectTier(
   searchParams: { tier?: string },
-): Promise<'member' | 'starter'> {
+): Promise<'member' | 'starter' | 'guest'> {
   // Dev/preview override
   if (searchParams.tier === 'starter') return 'starter';
   if (searchParams.tier === 'member') return 'member';
+  if (searchParams.tier === 'guest') return 'guest';
 
   // Real lookup: Clerk → DB
   try {
@@ -70,26 +72,13 @@ async function detectTier(
     const { getAccessTierForClerkId } = await import('@/lib/access');
     const { userId } = await auth();
     if (userId) {
-      const tier = await getAccessTierForClerkId(userId);
-      // The account dashboard only serves member or starter — guests shouldn't
-      // be here (the page is robots: noindex). Treat 'guest' as 'starter' so
-      // they see the upgrade-to-membership UI rather than nothing.
-      return tier === 'member' ? 'member' : 'starter';
+      return await getAccessTierForClerkId(userId);
     }
   } catch {
     /* Clerk or DB not configured */
   }
 
-  // Dev fallback: cookie set by the sandbox checkout success page
-  try {
-    const c = await cookies();
-    const stored = c.get('al_tier_preview')?.value;
-    if (stored === 'starter' || stored === 'member') return stored;
-  } catch {
-    /* cookies unavailable */
-  }
-
-  return 'member';
+  return 'guest';
 }
 
 export default async function AccountPage({
@@ -99,6 +88,13 @@ export default async function AccountPage({
 }) {
   const sp = await searchParams;
   const tier = await detectTier(sp);
+
+  // Guest = no active membership AND no Starter Pack purchase. The library
+  // dashboard has nothing useful to show them. Bounce to /join with a
+  // contextual banner so they know why they landed there.
+  if (tier === 'guest') {
+    redirect('/join?from=account&reason=no-access');
+  }
 
   // Pull the signed-in user's first name from Clerk. Fall back to the ?name
   // query param (used by the sandbox tier preview) or 'Member' if neither.

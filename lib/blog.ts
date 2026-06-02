@@ -42,6 +42,10 @@ export interface BlogPost {
   heroImage?: string;
   heroImageAlt: string;
   heroImagePosition?: string;
+  /** Use 'contain' for portrait sources so the whole photo shows. Default 'cover'. */
+  heroImageFit?: 'cover' | 'contain';
+  /** Override the hero container aspect ratio (default '16/10'). E.g. '4/3', '5/4', '3/4'. */
+  heroImageAspect?: string;
   content: ContentBlock[];
   relatedSlugs: string[];
   /** Product slug for auto-injected product callout (overrides category default) */
@@ -465,7 +469,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'That\u2019s it. No curriculum. No workbooks. Just attention, presence, and trust. You can add more structure later if you want it. But start simple.' },
       { type: 'heading', level: 2, text: 'Finding your style' },
       { type: 'paragraph', text: 'Charlotte Mason, Montessori, Unschooling, Eclectic, Classical, the labels can wait. For now, just pay attention. What does your child gravitate towards? What makes their eyes light up? Follow that thread. The philosophy will reveal itself.' },
-      { type: 'paragraph', text: 'Most families end up \u201ceclectic\u201d, a mix of approaches that evolves over time. That\u2019s not a failure to commit. It\u2019s wisdom. Your kids are unique. Your family is unique. Your approach should be too.' },
+      { type: 'paragraph', text: 'Most families end up \u201ceclectic\u201d, a mix of approaches that evolves over time. That\u2019s not a failure to commit. It\u2019s wisdom. Your kids are unique. Your family is unique. Your approach should be too. (For the bigger picture of how a homeschool year actually unfolds, see our [homeschool journey guide](/guides/homeschool-journey).)' },
       { type: 'paragraph', text: 'When you\u2019re ready to explore styles more deeply, our [comparison of homeschool methods](/blog/homeschool-methods-compared) walks through Charlotte Mason, Montessori, Unschooling, and more, side by side. And if you\u2019re curious about the most relaxed end of the spectrum, [unschooling vs homeschooling](/blog/unschooling-vs-homeschooling) explains the difference plainly.' },
       { type: 'product-callout', slug: 'future-ready-skills-map' },
       { type: 'heading', level: 2, text: 'The socialisation question' },
@@ -523,7 +527,7 @@ const posts: BlogPost[] = [
         'Seasonal awareness: understanding cycles and change over time',
         'Physical activity: moving, bending, climbing, reaching',
       ] },
-      { type: 'paragraph', text: 'Best of all, there\u2019s no wrong answer. A child who finds a \u201cweird fungus thing\u201d has made a genuine discovery, even if they can\u2019t name it yet. The hunt gives permission to explore.' },
+      { type: 'paragraph', text: 'Best of all, there\u2019s no wrong answer. A child who finds a \u201cweird fungus thing\u201d has made a genuine discovery, even if they can\u2019t name it yet. The hunt gives permission to explore. (For the bigger picture of why outdoor learning compounds like this, see our [nature-based learning guide](/guides/nature-based-learning).)' },
       { type: 'heading', level: 2, text: 'Spring: growth and change' },
       { type: 'paragraph', text: 'Spring is the easiest season for nature study because everything is visibly happening. Buds are opening, birds are nesting, insects are emerging. Your scavenger hunt should lean into this energy of change.' },
       { type: 'list', ordered: false, items: [
@@ -902,7 +906,7 @@ const posts: BlogPost[] = [
       { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials, sticks, mud, water, rocks, and plants, instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require low prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d, it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
-      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail.' },
+      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.)' },
       { type: 'heading', level: 2, text: 'Engineering challenges' },
       { type: 'heading', level: 3, text: '1. Build a bridge that holds weight' },
       { type: 'paragraph', text: 'Find a small gap (between two rocks, two logs, or the edges of a path) and build a bridge using only natural materials: sticks, stones, bark, vine. Test it by placing progressively heavier objects on top. This teaches load distribution, structural design, and iterative testing.' },
@@ -2457,8 +2461,8 @@ const posts: BlogPost[] = [
 
   {
     slug: 'board-game-design-kids',
-    title: 'How to Design a Board Game With Your Kids (and Why It\u2019s Brilliant Learning)',
-    excerpt: 'Designing a board game teaches maths, writing, logic, and playtesting, all without feeling like school. Here\u2019s how to do it at your kitchen table.',
+    title: 'Design a Board Game With Your Kids: Step-by-Step for Ages 5-12',
+    excerpt: 'A step-by-step guide to designing a board game at your kitchen table. Covers rules, scoring, playtesting, and why kids learn maths, writing, and logic without realising it.',
     hook: 'A piece of cardboard, some dried beans, and a sibling who found every loophole. The rules got rewritten three times before dinner.',
     category: 'creativity-maker',
     pillarSlug: 'creativity-maker-activities',
@@ -3950,7 +3954,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'A homeschool first-year checklist isn’t about ticking off curriculum or fitting your kids into school’s calendar. It’s about the small, mostly-invisible things that compound over a year: deschooling properly, finding a rhythm (not a schedule), building one or two real friendships, learning to spot your own burnout early, and knowing what records actually matter. Here is a month-by-month list of the moves that pay off, and the popular advice you can safely skip.' },
       { type: 'paragraph', text: 'The first year of homeschooling is mostly about figuring out what your family actually needs, not about delivering a curriculum. Most "homeschool first year checklists" out there are written by curriculum companies, and somehow they always end with you needing to buy curriculum. Suspicious.' },
-      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, with no curriculum-store affiliate links waiting at the end. Less "what to buy" and more "what actually matters."' },
+      { type: 'paragraph', text: 'This is a different kind of checklist. It’s the things future-you will be glad you did, organised by month, with no curriculum-store affiliate links waiting at the end. Less "what to buy" and more "what actually matters." (Pairs well with our broader [homeschool journey guide](/guides/homeschool-journey) if you want the wider picture, not just the checklist.)' },
       { type: 'paragraph', text: 'Save this. Screenshot it. Print it if you really want to. Then forget about it for a few weeks at a time and come back when you need a nudge.' },
       { type: 'heading', level: 2, text: 'Before you start' },
       { type: 'list', ordered: false, items: [
@@ -4366,7 +4370,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Forest school is a child-led, outdoor learning approach that uses nature as the classroom. You do not need formal training to start. The 15 activities below, from shelter building and nature art to fire circles and free play, give you everything you need to run forest school sessions in your own backyard or nearest patch of woods.' },
       { type: 'paragraph', text: 'Forest school started in Scandinavia, where kids spend entire school days outside in all weather. The philosophy is simple: children learn best through hands-on, self-directed play in natural settings. Risk is managed, not eliminated. And the adult is a facilitator, not an instructor.' },
-      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to nature-based learning, our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start.' },
+      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to [nature-based learning](/guides/nature-based-learning), our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start.' },
       { type: 'paragraph', text: 'Here are 15 forest school activities grouped into five categories. Pick one or two per outing and let your kids lead the rest.' },
 
       { type: 'heading', level: 2, text: 'Shelter and construction' },
@@ -4561,7 +4565,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Here is the thing about math worksheets: they teach kids to solve math problems. Real life teaches kids to think mathematically. Those are not the same thing.' },
       { type: 'paragraph', text: 'A kid who can complete a page of long division but cannot figure out whether two pizzas are enough for eight people has not learned math. They have learned to follow steps. The thinking part, the part that actually matters, comes from using math when the stakes are real and the context is messy.' },
       { type: 'paragraph', text: 'My kids do math on paper sometimes. We follow a curriculum for the basics. But the math that actually stuck, the stuff they use without thinking? They learned that by doing it for real. Splitting a restaurant bill, estimating driving time from a map, comparing unit prices at the grocery store. None of that came from a workbook.' },
-      { type: 'paragraph', text: 'Here are the activities that made it happen, organized by where the math lives.' },
+      { type: 'paragraph', text: 'Here are the activities that made it happen, organized by where the math lives. (For the bigger picture of why this approach works across every subject, not just math, see our [real-world learning guide](/guides/real-world-learning).)' },
 
       { type: 'heading', level: 2, text: 'Grocery store math (ages 5 to 12)' },
       { type: 'paragraph', text: 'The grocery store is a math classroom with fluorescent lighting and free samples. Every aisle has a lesson hiding in plain sight.' },
@@ -4770,7 +4774,7 @@ const posts: BlogPost[] = [
         'Help with grocery shopping: compare prices, find items, stay on budget',
         'Care for younger siblings for short stretches',
       ]},
-      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-independence). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
+      { type: 'paragraph', text: 'This is the age when kids start connecting daily tasks to [bigger life skills](/guides/life-skills-for-kids). A kid who can cook, clean, and manage their own belongings at 10 is a kid who will not be helpless at 18.' },
 
       { type: 'heading', level: 2, text: 'Ages 12 to 14: the apprentice phase' },
       { type: 'paragraph', text: 'Tweens and young teens are ready for tasks that require judgment, planning, and multi-step problem-solving. This is where chores stop looking like chores and start looking like real-world competence.' },
@@ -4841,7 +4845,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'kitchen-learning-lab'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -4981,7 +4985,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'how-much-screen-time-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5134,7 +5138,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'emotional-regulation-kids', 'raise-creative-kids'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5264,7 +5268,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['emotional-regulation-kids', 'life-skills-before-12', 'age-appropriate-chores-life-skills'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
   },
 
   {
@@ -5430,7 +5434,261 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['life-skills-before-12', 'teaching-kids-to-fail', 'executive-function-kids', 'what-kids-should-know-before-18'],
-    pillarSlug: 'life-skills-independence',
+    pillarSlug: 'life-skills-for-kids',
+  },
+
+  {
+    slug: 'how-to-build-resilience-in-kids',
+    title: 'How to Build Resilience in Kids: 12 Activities That Actually Work',
+    excerpt: 'Resilience is built, not taught. Twelve real-world activities that grow grit, recovery, and the ability to keep going when things get hard, at every age from 6 to 14.',
+    hook: 'Resilient kids are not born. They are the kids who have been allowed to struggle, and to figure out the other side of it.',
+    category: 'future-ready-skills',
+    publishedAt: '2026-05-25',
+    dateModified: '2026-05-25',
+    keywords: ['how to build resilience in kids', 'building resilience in children', 'resilience activities for kids', 'how to raise resilient kids', 'teaching kids resilience', 'grit for kids', 'growth mindset activities', 'raising mentally tough kids', 'helping kids cope with failure', 'resilience skills for children'],
+    readTimeMinutes: 13,
+    author: amelie,
+    recommendedProduct: 'future-ready-skills-map',
+    recommendedBundle: 'real-world-mega-bundle',
+    heroImage: '/images/resilience-hero-v4.jpeg',
+    heroImageAlt: 'Kid in a pink helmet and knee pads riding a mountain bike over a rocky technical section on a forest trail',
+    heroImageAspect: '4/3',
+    content: [
+      { type: 'summary', text: 'Resilience is the ability to keep going through difficulty, recover from setbacks, and adapt when things do not go as planned. It is not a personality trait; it is a skill built through repeated experiences of productive struggle, where a child encounters something hard, works through it, and comes out the other side. This guide explains what resilience actually is, why so many kids today are missing it, how it develops, and twelve real-world activities that build it at every age from 6 to 14.' },
+      { type: 'paragraph', text: 'There is a moment that happens in almost every household. A kid hits a wall. The Lego build collapses. The friend will not text back. The bike does not go where they want it to. And what they do next is the whole ball game.' },
+      { type: 'paragraph', text: 'For a lot of kids right now, what they do next is fall apart. Not because they are weak, and not because their parents did anything wrong, but because they have not had enough chances to practice the other option, which is to wobble, breathe, try something, and keep moving. That practice is what resilience is. And it is a skill, not a trait.' },
+      { type: 'paragraph', text: 'If you have been worried that your kid melts down too fast, gives up too easily, or seems crushed by the smallest setback, you are not imagining it. A whole generation of children is showing up to adolescence with less emotional callus than the generations before, and the reasons are knowable. So is the fix. Resilience is one of the most teachable skills in childhood, and it does not require a single workbook, app, or program. It is built through everyday life, on purpose. This piece is part of our larger pillar on [life skills for kids](/guides/life-skills-for-kids), which is the umbrella every future-ready skill sits under.' },
+
+      { type: 'heading', level: 2, text: 'What resilience actually is (and what it is not)' },
+      { type: 'paragraph', text: 'Resilience gets thrown around so loosely that it has started to mean nothing. So let us be specific. Resilience is the ability to:' },
+      { type: 'list', ordered: false, items: [
+        'Feel a hard feeling without being destroyed by it',
+        'Stay in a difficult task long enough to make progress',
+        'Recover from a setback within a reasonable window of time',
+        'Adapt your approach when the first one does not work',
+        'Hold onto a sense of self when things outside you are not going well',
+      ]},
+      { type: 'paragraph', text: 'Notice what resilience is not. It is not toughness, in the sense of pretending nothing hurts. It is not the absence of big feelings; that is something different, and it overlaps with [emotional regulation](/blog/emotional-regulation-kids). It is not grit alone, which is more about long-term passion and perseverance toward a goal. Grit is one slice of resilience. Resilience is the whole pie: the ability to take a hit, feel it, and keep going.' },
+      { type: 'paragraph', text: 'Resilience also rests on top of [executive function](/blog/executive-function-kids). A kid who cannot plan a next step, hold information in their mind, or control an impulse will struggle to recover from a setback, because the basic mental machinery is still booting up. If your child is wildly dysregulated, work on the substrate skills first. Resilience is built on top of them, not in place of them.' },
+
+      { type: 'heading', level: 2, text: 'Why kids today are missing it' },
+      { type: 'paragraph', text: 'Childhood has changed faster in the last twenty years than in the previous two hundred. The shape of the day, the texture of free time, the level of supervision, the speed of comfort, all of it is different. And the side effect, whether anyone intended it or not, is that kids have far fewer chances to practice the struggle-recover-adapt loop that builds resilience.' },
+      { type: 'paragraph', text: 'A few of the patterns showing up across the research and across our own observations as parents and as a former classroom teacher:' },
+      { type: 'list', ordered: false, items: [
+        'Over-supervision: kids are watched more closely, more often, than at any point in modern history. When an adult is always within earshot, a child rarely has to solve a problem on their own, which means they rarely get the small wins that build the belief "I can handle this."',
+        'Rescued from struggle: well-meaning adults step in the moment a child gets frustrated. The puzzle piece gets handed over. The conflict gets mediated. The hard feeling gets distracted away. Each rescue is a missed rep.',
+        'Screens replacing boredom: boredom is where kids used to invent their own challenges. Now the second a kid is uncomfortable, a screen is available. The discomfort gets soothed instead of metabolized.',
+        'Sanitized environments: scraped knees, lost games, awkward conversations, getting lost on a trail. These small frictions used to be the daily curriculum of growing up. Now they are often engineered out of the day.',
+        'Performance pressure: the focus on grades, test scores, sports rankings, and visible achievement teaches kids that the goal is to avoid mistakes, not to recover from them. A kid who is terrified of failure does not get to practice recovery, because they never let themselves fail in the first place.',
+      ]},
+      { type: 'paragraph', text: 'None of this is any one parent\'s fault. It is the water we are all swimming in. And the kids feel it. Anxiety, perfectionism, school refusal, and shutdown behaviours are all up in the same window of time that resilience-building experiences have gone down. The two are not unrelated.' },
+
+      { type: 'heading', level: 2, text: 'How resilience actually develops' },
+      { type: 'paragraph', text: 'Resilience grows through a specific loop. A child encounters a difficulty that is hard but not impossible. They feel something uncomfortable. They try something. It does not work. They try again. Eventually they either succeed, or they do not, and they discover that the not-succeeding was survivable. The next time difficulty shows up, their nervous system has a reference point: "I have been here before. It was not great. I lived."' },
+      { type: 'paragraph', text: 'That loop has four ingredients, and all of them are things parents can put in place at home.' },
+      { type: 'heading', level: 3, text: 'Productive struggle' },
+      { type: 'paragraph', text: 'The sweet spot is a challenge that is just hard enough to require effort, but not so hard that it crushes the kid. Too easy and there is no growth. Too hard and there is no recovery. The art of parenting resilience is learning to read where that line is for your specific kid on a specific day. We go deep on this in the post on [teaching kids to fail](/blog/teaching-kids-to-fail), which is essentially the engine room of resilience.' },
+      { type: 'heading', level: 3, text: 'Autonomy' },
+      { type: 'paragraph', text: 'A kid who never gets to choose, decide, or own a project rarely builds resilience, because the things that go wrong are never quite their own. Autonomy is what makes the struggle personal. When a kid picks the project, the trip, the meal, the route, and it does not work out, that is their problem to solve. That is where resilience comes from. There is a longer treatment of this in [decision-making skills for kids](/blog/decision-making-skills-kids).' },
+      { type: 'heading', level: 3, text: 'Recovery rituals' },
+      { type: 'paragraph', text: 'Resilience is not just about pushing through. It is about coming back. Kids need to learn what to do in their own bodies and minds after something hard. That might be a walk, a snack, a cry, a draw-it-out, a talk-to-someone, a lie-on-the-floor-for-ten-minutes. The specific ritual matters less than the fact that there is one. Help your kid notice what helps them reset.' },
+      { type: 'heading', level: 3, text: 'Modeling' },
+      { type: 'paragraph', text: 'Kids watch us. When something goes sideways for you, they are watching how you handle it. Not the version where you keep it together for them, but the messy real version. Narrating it out loud is a gift. "I am really frustrated this did not work. I am going to take five minutes and then try the other approach." That sentence, said in front of a kid often enough, becomes their inner voice ten years from now.' },
+
+      { type: 'image', src: '/images/resilience-hike-v3.jpeg', alt: 'A kid with a backpack scrambling up a scree slope toward a massive cliff, another hiker visible on the trail ahead', caption: 'Hard hikes are resilience labs. The legs hurt, the trail keeps going, and at the top there is evidence: "I can do hard things."' },
+
+      { type: 'heading', level: 2, text: '12 activities that build resilience' },
+      { type: 'paragraph', text: 'These are not crafts. They are real-life experiences that put a kid into the struggle-recover-adapt loop on purpose. Pick the ones that fit your kid\'s age and stage. Do them with your kid, not for your kid. The parent\'s job is to set the conditions and stay close, not to take over.' },
+
+      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
+      { type: 'list', ordered: true, items: [
+        'Cook a meal from scratch when something goes wrong on purpose. Burn the toast, run out of an ingredient, drop the eggs. Stay calm and ask, "What can we do now?" Let them solve it. The whole point is that the dinner is not perfect and the world keeps spinning.',
+        'Finish a long project. Pick something that takes more than one sitting: a fort, a painting, a Lego build with a real plan. Do not let them quit on day one because it got hard. Sit with them through the slump in the middle. That slump is the muscle.',
+        'Lose a game without a parent intervening. Play a real game with real stakes. When they lose, do not soften it, do not let them win on purpose, do not redirect the feeling. Acknowledge it ("Losing is hard") and let it pass through them. Then play again.',
+        'Learn a hard physical skill. Riding a bike, swimming a length, climbing a tree, doing a cartwheel. Anything that requires falling down repeatedly to get good. The body remembers what the brain forgets: hard things become possible with reps.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
+      { type: 'list', ordered: true, items: [
+        'Go to a shop on their own. Hand them a short list and some cash. Watch from a distance or wait outside if you need to. The small panic of approaching a counter alone is the workout. So is the swell of pride after.',
+        'Navigate with a paper map. Hand them the map at a hike, a city trip, or even a complicated grocery store. Let them get a little lost. Resist the urge to point. "Where do you think we are?" is one of the most resilience-building sentences a parent can say.',
+        'Fix something that broke. A bike chain, a wobbly chair, a broken zipper, a glitchy laptop. Watch a video together, gather tools, attempt the repair. It does not matter if it ends up working. The repeated experience of "we try, it does not work, we try again" is the whole curriculum.',
+        'Take a hard conversation. Have them call to make their own appointment, talk to the librarian about a missing book, apologize directly to a friend, ask the coach a question. Adults do not get to outsource hard conversations. Neither should kids past a certain age.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
+      { type: 'list', ordered: true, items: [
+        'Take a bus, walk, or bike to somewhere on their own. Start with a route they know. Gradually expand. Independent transit is one of the most powerful resilience builders in the modern world precisely because so few kids get to do it anymore.',
+        'Start something they can fail at publicly. A small business, a club, a published blog, a YouTube channel, a market stall. Something where strangers might say no, ignore them, or critique them. Surviving that is a level-up. Our older one started a small business at twelve, and watching him learn to handle a "no" from a customer was worth more than a year of school.',
+        'Sit with boredom for an afternoon. No screens, no plan, no parent-provided activity. Just an empty afternoon. The first hour is awful. The second hour is where the magic shows up. Tolerance for boredom is a foundational resilience skill, and modern life is actively dismantling it.',
+        'Plan and lead a family outing. Budget, route, timing, food, the whole thing. When the plan hits friction (it will), they steer. You are the passenger. The next day, talk about what worked and what they would change. That reflection is where the lesson lands.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'What NOT to do' },
+      { type: 'paragraph', text: 'Just as important as what to do is what to stop doing. Most parents who feel like resilience is not building in their kids are doing one or more of these without realizing it.' },
+      { type: 'list', ordered: false, items: [
+        'Do not rescue at the first sign of frustration. The frustration is the lesson. If you intervene before they have tried, you have taken the rep away.',
+        'Do not deliver premature comfort. "It is OK, it is OK, it is OK" said too soon does not soothe a kid. It tells them the feeling is too much for you to be near. Sit in the hard feeling with them, do not paper it over.',
+        'Do not fix it for them and call it "helping." Tying the shoe, finding the lost item, smoothing the friend conflict, emailing the teacher. Every fix is a missed rep.',
+        'Do not catastrophize on their behalf. If your child sees that you are more upset about their setback than they are, they learn that setbacks are catastrophic. Stay calm, stay matter-of-fact, stay curious.',
+        'Do not over-praise the outcome. "You won! You got it right! You are so smart!" trains kids to love the result, not the process. Praise the trying, the recovering, the second attempt. That is what you actually want more of.',
+      ]},
+
+      { type: 'pull-quote', text: 'You cannot raise a resilient kid by removing every hard thing. You raise a resilient kid by staying close while the hard thing happens.' },
+
+      { type: 'heading', level: 2, text: 'A note on different kids' },
+      { type: 'paragraph', text: 'Resilience is not one-size-fits-all. A child with sensory sensitivities, anxiety, ADHD, autism, or trauma history will need a different on-ramp than a more typically developing peer. That does not mean these kids cannot build resilience. Many of them, actually, are wildly resilient in ways their neurotypical peers will never need to be. But the load needs to match the system.' },
+      { type: 'paragraph', text: 'For a more sensitive or anxious kid, the productive-struggle window is narrower. Push too hard and the system floods, which is the opposite of resilience-building. The fix is not to stop. The fix is to scale down. Smaller challenges, more support, longer recovery time, and lots of low-stakes reps before any high-stakes ones. A sensitive kid can absolutely be resilient. They might just need a more gradient ramp to get there.' },
+      { type: 'paragraph', text: 'Also: a kid who has been through something genuinely hard (a loss, an illness, a family change, a school trauma) is doing real resilience work already, even if it does not look like it from the outside. Honour that. Do not pile on engineered challenges when life has already provided them.' },
+
+      { type: 'heading', level: 2, text: 'The long game' },
+      { type: 'paragraph', text: 'Resilience is not a project you finish. It is a slow accumulation of small experiences, year over year, that change how a kid relates to difficulty. A kid who has, by age 14, made hundreds of small mistakes and recovered from them, walks into adolescence with a fundamentally different relationship to hardship than a kid who has been protected from every wobble.' },
+      { type: 'paragraph', text: 'Think of it like compounding interest. Every small struggle that gets metabolized at age 8 makes the bigger one at age 12 easier. Every recovery at age 12 makes the real-world stuff at age 16 doable. By the time they are leaving home, you want them to have a long history of "I did not think I could and then I did." That history is built one ordinary Tuesday at a time.' },
+
+      { type: 'cta', text: 'If you want a practical framework for building resilience and other life skills through everyday life, our free guide is full of ideas you can use this week.', href: '/free-guide', label: 'Get the Free Guide' },
+
+      { type: 'faq', items: [
+        { question: 'What is resilience in kids?', answer: 'Resilience in kids is the ability to face a difficulty, feel the hard feeling that comes with it, work through it, and recover. It is not the absence of struggle. It is the capacity to move through struggle without being destroyed by it. Resilient kids still cry, still get frustrated, and still hit walls. They have just had enough practice that they know the wall is not the end.' },
+        { question: 'At what age does resilience develop?', answer: 'Resilience starts developing in infancy, every time a baby experiences a small distress and is comforted and returns to baseline. It builds steadily through early childhood and then accelerates between ages 6 and 14, when kids start having the cognitive ability to reflect on their own experience. Resilience continues developing well into the twenties. There is no "too late." There is also no shortcut.' },
+        { question: 'Are resilience and grit the same thing?', answer: 'No, although they overlap. Grit, as researcher Angela Duckworth defined it, is sustained passion and perseverance toward a long-term goal. Resilience is broader. It includes the ability to recover from setbacks, adapt to changing circumstances, and bounce back from emotional difficulty, not just stick with a single goal. A gritty kid is usually resilient, but a resilient kid is not necessarily fixated on any one long-term pursuit.' },
+        { question: 'Can a sensitive kid still be resilient?', answer: 'Absolutely. Sensitivity and resilience are not opposites. In fact, some of the most resilient adults are highly sensitive people who have built strong recovery skills because they have needed them. A sensitive kid may need smaller challenges, longer recovery time, and more support during the struggle, but the same loop applies. The goal is not to make them less sensitive. It is to help them feel deeply and still keep going.' },
+        { question: 'How long does it take to build resilience?', answer: 'There is no specific timeline because resilience is not a single skill that gets completed. It is a capacity that grows with practice across years. You will likely see small shifts within a few weeks of changing the dynamics at home (less rescuing, more productive struggle, better recovery rituals). Bigger shifts show up over months and years. The kids who look resilient at 16 have parents who have been quietly running this playbook since they were 5.' },
+        { question: 'Is resilience the same as emotional regulation?', answer: 'They are closely related but not identical. Emotional regulation is the ability to manage the size and expression of a feeling in the moment. Resilience is the broader ability to recover and keep going after a setback, which usually requires emotional regulation as one component. A kid can be good at regulating in the moment but still struggle with bouncing back from a bigger blow, or vice versa. Most kids benefit from work on both. There is more on the regulation piece specifically in our post on [emotional regulation](/blog/emotional-regulation-kids).' },
+      ]},
+
+      { type: 'paragraph', text: 'Resilience is the through-line of every other future-ready skill. Without it, decision-making collapses at the first wrong choice. Without it, creativity stalls at the first bad draft. Without it, every other capability is fragile. If you are looking at the bigger picture of what kids need to thrive in a fast-changing world, start with the [life skills for kids](/guides/life-skills-for-kids) pillar; resilience is the spine that holds all of it up.' },
+      { type: 'paragraph', text: 'If you want the ideas in this post structured into ready-to-use activities, conversation prompts, and weekly rhythms, that is what we build inside the Anywhere Learning membership. No curriculum, no worksheets, just real-world ways to practice the skills that matter, alongside your kid. But honestly, you can start tonight, with nothing. Pick one thing on the list above. Set the conditions. Stay close. Let them wobble. That is the whole job.' },
+    ],
+    relatedSlugs: ['teaching-kids-to-fail', 'executive-function-kids', 'decision-making-skills-kids', 'emotional-regulation-kids'],
+    pillarSlug: 'life-skills-for-kids',
+  },
+
+  {
+    slug: 'time-management-for-kids',
+    title: 'How to Teach Kids Time Management (By Age, With Real Examples)',
+    excerpt: 'Time management for kids is a learnable skill, not a personality type. Here is what it actually is, why kids struggle with it, and how to build it by age with real-world practice.',
+    hook: 'Most kids have never managed their own time, because an adult has always managed it for them.',
+    category: 'future-ready-skills',
+    publishedAt: '2026-06-01',
+    dateModified: '2026-06-01',
+    keywords: ['time management for kids', 'teaching kids time management', 'time management skills for children', 'how to help kids manage time', 'time management activities for kids', 'kids and time blindness', 'teaching kids to plan their day', 'helping kids be on time', 'time management for teens', 'kids time management by age'],
+    readTimeMinutes: 13,
+    author: amelie,
+    recommendedProduct: 'time-energy-planner',
+    recommendedBundle: 'planning-problem-solving-bundle',
+    heroImage: '/images/time-management-hero.jpeg',
+    heroImageAlt: 'A pre-teen boy in glasses pointing at the time on his wristwatch in the kitchen, focused expression',
+    heroImageFit: 'cover',
+    content: [
+      { type: 'summary', text: 'Time management for kids is the ability to sense how long things take, estimate and plan around that, sequence tasks in a sensible order, prioritize what matters first, and recover when a plan falls apart. It is not punctuality drills or a color-coded planner. It is a developmental skill built through real-world practice, where a child owns a piece of time, makes a plan, feels the consequence of how it goes, and adjusts. This guide explains what time management actually is for a kid, why so many kids today struggle with it, how it develops, and how to build it age by age from 6 to 14.' },
+      { type: 'paragraph', text: 'There is a familiar morning scene in a lot of homes. You call up the stairs that you are leaving in ten minutes. Then five. Then two. Then you are standing at the door with your keys, narrating the countdown like an air traffic controller, while a kid wanders past in one sock looking genuinely surprised that time has continued to pass.' },
+      { type: 'paragraph', text: 'It is easy to read that as your kid not caring, or not listening, or being deliberately slow. Usually it is none of those things. It is that your kid has almost no internal sense of how long ten minutes is, no practice planning backward from a deadline, and, crucially, no real reason to track time, because you are tracking it for them. You are their clock. And a kid who has never had to be their own clock does not develop the skill of being one.' },
+      { type: 'paragraph', text: 'Time management is one of the most quietly important future-ready skills there is, and one of the most teachable. It sits squarely inside our larger pillar on [life skills for kids](/guides/life-skills-for-kids), the umbrella that every real-world skill lives under. The good news is that it does not require an app, a planner system, or a single lecture about responsibility. It is built through everyday life, on purpose, by slowly handing kids ownership of their own time.' },
+
+      { type: 'heading', level: 2, text: 'What time management actually is for a kid' },
+      { type: 'paragraph', text: 'When most adults hear "time management for kids," they picture a tidy planner, a kid who is never late, or a color-coded chart on the fridge. That is not it. Those are tools, and tools are downstream of the actual skill. A kid can have a beautiful planner and zero ability to manage time, the same way a kid can own a violin and not be able to play it.' },
+      { type: 'paragraph', text: 'For a kid, time management is really five underlying capacities working together:' },
+      { type: 'list', ordered: false, items: [
+        'Feeling time: having a rough internal sense of how long a chunk of time actually is. Knowing in your body, not just on a clock, the difference between five minutes and an hour.',
+        'Estimating time: being able to guess how long a task will take before doing it. "Getting dressed is a two-minute job, not a twenty-minute job."',
+        'Sequencing: putting steps in a sensible order so they fit together. Shoes after socks. Pack the bag before you are standing at the door.',
+        'Prioritizing: deciding what has to happen first when you cannot do everything. This one is really a decision-making skill in disguise.',
+        'Recovering: adjusting when the plan blows up, which it will, without the whole thing collapsing into a meltdown.',
+      ]},
+      { type: 'paragraph', text: 'Notice what is not on that list: being fast, being naturally organized, or having a Type A personality. Time management is not a temperament. It is a set of skills, and skills are buildable. It is also, technically, a branch of [executive function](/blog/executive-function-kids), the brain\'s management system for planning, working memory, and self-control. If your kid struggles broadly with planning and follow-through, that post is the foundational read, and this one is the time-specific application of it.' },
+
+      { type: 'heading', level: 2, text: 'Why kids today struggle with it' },
+      { type: 'paragraph', text: 'If it feels like kids are worse at managing time than you remember being, you are not entirely imagining it. A few things have genuinely shifted, and they stack on top of each other.' },
+      { type: 'paragraph', text: 'The biggest one is what gets called time blindness: a weak or missing internal sense of time passing. This is not a moral failing or laziness. Young brains are still developing the machinery for tracking time, and for some kids, especially those with ADHD, that machinery stays unreliable for years longer. A time-blind kid genuinely does not feel the gap between "in a minute" and forty-five minutes later. The clock on the wall means nothing because the felt sense underneath it is not there yet.' },
+      { type: 'paragraph', text: 'On top of that, time is almost completely externalized for the modern kid. Think about how a typical day works. A bell or a schedule tells them when to switch tasks. An adult tells them when to wake up, eat, leave, and stop. A parent runs the morning countdown. At no point in a heavily managed day does the child have to hold the time themselves. They are passengers in their own schedule. And you do not learn to drive from the passenger seat.' },
+      { type: 'paragraph', text: 'Then there are screens, which are essentially time-perception machines built to make time disappear. A well-designed app or game collapses your sense of duration on purpose. "Ten more minutes" becomes ninety with no felt difference. This is true for adults too, but a kid whose internal clock is still forming gets it warped by a device that is actively engineered to erase the feeling of time passing. The dopamine loop and the clock do not coexist well.' },
+      { type: 'paragraph', text: 'And finally, the brand thesis we keep coming back to: kids today are over-supervised and under-challenged. A kid almost never gets to mismanage their time and feel the natural consequence, because an adult is always there to catch the fall. You drive them so they cannot miss the bus. You pack the bag so nothing gets forgotten. You issue the countdown so they are never actually late. Every rescue is well meant, and every rescue quietly removes the one thing that teaches the skill: the consequence.' },
+
+      { type: 'heading', level: 2, text: 'How time-management skill actually develops' },
+      { type: 'paragraph', text: 'Time management is not taught in a sit-down lesson. It develops through a loop, the same way most real skills do. A kid takes ownership of a piece of time, makes a plan or an estimate, runs it, sees how it actually went, feels the result, and adjusts for next time. Round and round. Each loop tightens the skill a little.' },
+      { type: 'paragraph', text: 'You can break that loop into the layers that build on each other, roughly in order:' },
+      { type: 'heading', level: 3, text: 'First, feeling time' },
+      { type: 'paragraph', text: 'Before a kid can manage time, they have to be able to feel it. This is the most overlooked step and the most foundational. A kid who cannot feel the difference between five minutes and twenty is going to fail at every planning task downstream, no matter how good their planner is. The work here is making time visible and felt: timers they can see, guessing how long things take, noticing "that felt fast" or "that felt forever."' },
+      { type: 'heading', level: 3, text: 'Then, estimating' },
+      { type: 'paragraph', text: 'Once a kid can feel time, they can start to guess at it. Estimation is the engine of all planning. "How long will it take to clean your room? Guess. Now let us time it and see." Kids are wildly bad estimators at first, and that is the point. The gap between their guess and reality is the lesson. Over dozens of small estimates, the guesses get closer, and a kid who can estimate accurately can finally plan.' },
+      { type: 'heading', level: 3, text: 'Then, sequencing and prioritizing' },
+      { type: 'paragraph', text: 'With a felt sense of time and a decent estimate, a kid can start ordering things. Sequencing is "what comes first, second, third." Prioritizing is the harder cousin: "I cannot do all of this, so what matters most?" Prioritizing is genuinely a [decision-making skill](/blog/decision-making-skills-kids), because every priority is a small decision about what to let go of. A kid who can prioritize is doing real cognitive work, not just being organized.' },
+      { type: 'heading', level: 3, text: 'And finally, recovering' },
+      { type: 'paragraph', text: 'No plan survives contact with a real day. The most important and most ignored part of time management is what a kid does when the plan blows up. The bus is missed. The project ran long. They lost track and now there is not enough time. A kid who can shrug, reassess, and salvage the situation has a superpower. A kid who melts down at the first deviation does not have a time problem, they have a recovery problem, which is really a [resilience](/blog/how-to-build-resilience-in-kids) problem. The two skills are joined at the hip. You cannot manage time well if a blown plan destroys you.' },
+
+      { type: 'heading', level: 2, text: 'Time management by age' },
+      { type: 'paragraph', text: 'What is realistic at 7 is very different from what is realistic at 13. Pushing a planner system onto a first grader is as pointless as treating a thirteen-year-old like they still need the morning countdown. Here is what is developmentally fair to expect, and a few concrete real-world ways to practice at each stage. As always, do these with your kid, not to your kid.' },
+
+      { type: 'heading', level: 3, text: 'Ages 6 to 8: feeling time' },
+      { type: 'paragraph', text: 'At this age, the brain is still building the basic felt sense of duration. The goal is not planning a day. It is making time visible and starting to notice it. Do not expect a six-year-old to manage a schedule. Expect them to start feeling the difference between fast and slow.' },
+      { type: 'list', ordered: false, items: [
+        'Use a visual timer for everyday transitions. A timer that shows time shrinking as a colored wedge (or even a sand timer) turns abstract minutes into something a kid can see. "Brush your teeth before the red runs out." You are externalizing time on purpose so they can start to internalize it.',
+        'Play the guess-and-check game with daily tasks. "How long do you think it takes to put on your shoes? Guess a number. Let us time it." Then show them. Kids love this, and the surprise of the real number is the whole point.',
+        'Give them one small timed job that is genuinely theirs. Setting the table before dinner is ready, feeding the pet at the same time each day. Something with a natural deadline they can feel, not a clock they have to read.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 9 to 11: estimating and sequencing' },
+      { type: 'paragraph', text: 'Now the felt sense is coming online and a kid can start to plan short stretches. This is the age to hand over small, contained chunks of time and let them feel the consequence of how it goes. This is also the age where it is most tempting to keep rescuing, and most important to stop.' },
+      { type: 'list', ordered: false, items: [
+        'Let them be late and feel it. This is the hard one. If they dawdle and miss the start of something low-stakes, let it happen. Do not give the fifth warning. The natural, survivable consequence of being late teaches more in one morning than a month of reminders. Save your countdowns for things that genuinely matter.',
+        'Build the backward plan together. Before leaving anywhere, ask "What needs to happen before we walk out the door, and how long does each part take?" Shoes, water bottle, find the thing, use the bathroom. Let them build the list and add up the minutes. This is the seed of all real planning.',
+        'Hand them one part of the day to run. Let them be in charge of getting everyone out the door for one outing, or running the whole bedtime sequence for themselves. They hold the time. You bite your tongue.',
+      ]},
+
+      { type: 'heading', level: 3, text: 'Ages 12 to 14: prioritizing and recovering' },
+      { type: 'paragraph', text: 'Teens and pre-teens can genuinely manage real stretches of time, including time with competing demands. This is the stage for real ownership, real deadlines, and real recovery from blown plans. This is also where time management starts to matter for the rest of their lives, so the stakes can be a little higher.' },
+      { type: 'list', ordered: false, items: [
+        'Let them own a multi-step project with a real deadline. A school assignment, an event they are organizing, a thing they are building or selling. Do not manage it for them. Let them feel the difference between starting early and scrambling the night before. The scramble is a teacher.',
+        'Hand over the tools and let them choose their own system. At this age, a planner, a phone calendar, a whiteboard, or a notebook is finally useful, because there is a real skill underneath to support. Let them try one and abandon it and try another. The system is theirs to figure out.',
+        'Make them responsible for being on time to something that matters to them. A practice, a shift, a meetup with friends. When the consequence of being late is a coach or a friend, not a parent, the motivation gets real fast. Our older one runs a small business at twelve, and nothing taught him to respect a deadline faster than a customer waiting on him.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'Real-world activities that build it' },
+      { type: 'paragraph', text: 'These are not exercises on paper. They are real-life situations that put a kid into the estimate-plan-run-feel-adjust loop on purpose. Pick the ones that fit your kid\'s age. Do them alongside your kid, and resist the urge to take over the second it gets bumpy. The bumpy part is the lesson.' },
+      { type: 'list', ordered: true, items: [
+        'The time estimation game (ages 6 to 10). Pick a daily task. Have them guess how long it takes. Time it. Compare. Do this with a dozen different tasks over a few weeks and watch their guesses sharpen. This single habit builds the felt sense of time faster than anything else.',
+        'Pack your own day (ages 9 to 13). Give them a free day or a weekend morning and have them plan the whole thing in advance: what they will do, in what order, and roughly how long each part takes. Then let them run it. Afterward, talk about where the plan held and where it fell apart.',
+        'The reverse planner (ages 8 to 14). Start from a fixed end point and work backward. "We need to be at the trailhead at 9. What time do we leave the house? What time do we eat? What time do we get up?" Working backward from a deadline is the core move of all real scheduling, and most kids have never been shown it.',
+        'Cook a timed meal (ages 9 to 14). Make a meal where several things have to finish at the same time. The pasta, the sauce, the bread, the salad. This forces sequencing and parallel planning in the most concrete possible way. There is no faking it: either dinner lands together or the pasta is cold while the bread is still baking.',
+        'Catch a real bus on a real schedule (ages 11 to 14). Public transit runs on a clock that does not care about your kid. Planning to catch a specific bus, and missing it once, is one of the most powerful time lessons available in the modern world, precisely because the consequence is real and the bus is indifferent.',
+        'Design your own morning routine (ages 9 to 14). Instead of you running the morning, have them map out their own routine, in their own order, with their own time estimates. Let them test it for a week and revise it. A routine a kid designs themselves is one they will actually follow, unlike one imposed from above.',
+        'The countdown handoff (ages 8 to 12). For one outing, make your kid the official timekeeper. They get the clock, they call the warnings, they get everyone to the door. You become the passenger who shows up when called. It is amazing how differently a kid relates to time when they are the one holding it.',
+      ]},
+
+      { type: 'image', src: '/images/time-management-mid.jpeg', alt: 'A kid putting on socks and shoes for a bike ride, helmets and gear hanging on the wall behind her', caption: 'Running her own pre-ride routine. Getting ready is time management in disguise: helmet, shoes, gear, out the door.' },
+
+      { type: 'heading', level: 2, text: 'What NOT to do' },
+      { type: 'paragraph', text: 'A lot of the work here is subtraction. If time management is not building in your kid, there is a good chance one of these is quietly in the way.' },
+      { type: 'list', ordered: false, items: [
+        'Do not be their external clock forever. The morning countdown, the endless reminders, the "five more minutes" announcements. Every time you hold the clock for them, you remove their reason to hold it themselves. Wean yourself off it as they get older, on purpose.',
+        'Do not rescue every blown deadline. The forgotten homework, the missed bus, the project left to the last minute. If you swoop in and fix it every time, the consequence never lands, and the consequence is the entire teacher. Pick the deadlines that genuinely matter and let the rest play out.',
+        'Do not impose an adult planner system on a young kid. A color-coded planner means nothing to a seven-year-old who cannot yet feel what twenty minutes is. You are decorating a skill that does not exist yet. Build the felt sense first; the tools come later, and they should come from the kid.',
+        'Do not turn it into nagging. Time management taught through constant nagging just teaches a kid to wait for the nag. The goal is to transfer the clock to them, not to become a louder clock.',
+        'Do not confuse fast with good. Some kids are naturally quick and some are naturally slow, and neither is the same as managing time well. A thoughtful slow kid who plans and finishes is doing better than a fast kid who never thinks ahead. Praise the planning and the recovering, not the speed.',
+      ]},
+
+      { type: 'pull-quote', text: 'You do not teach a kid to manage time by managing it for them. You teach it by handing them the clock and staying close while they figure out how to read it.' },
+
+      { type: 'heading', level: 2, text: 'A note on different kids' },
+      { type: 'paragraph', text: 'Time management is not one-size-fits-all, and this is especially true for kids with ADHD, where time blindness is not a phase but a genuine, well-documented difference in how the brain perceives time. For these kids, the felt sense of duration can stay unreliable for years, and the gap is real, not a matter of effort or attitude. Treating an ADHD kid\'s time struggles as laziness is both wrong and counterproductive.' },
+      { type: 'paragraph', text: 'The answer for a time-blind kid is more scaffolding, not more pressure. Visible timers everywhere. External structure that does the time-tracking the brain cannot reliably do yet. Shorter chunks. More frequent check-ins. Tools that live where the kid can see them, not in a planner that gets forgotten. The goal is not to drill them into having a sense of time they do not have. It is to build supports around the gap so they can succeed anyway, and to slowly, patiently strengthen the felt sense over years.' },
+      { type: 'paragraph', text: 'And for any kid, anxious or sensitive types included, watch the pressure. Time stress floods a sensitive nervous system fast, and a flooded kid cannot plan. If timers and deadlines are triggering panic, scale the stakes way down and rebuild from low-stakes, no-consequence practice. The skill grows from calm repetition, not from high-stakes pressure.' },
+
+      { type: 'paragraph', text: 'Time management is one of those skills that looks small and turns out to be enormous. A kid who can feel time, plan around it, and recover when it goes sideways walks into adulthood with an advantage that compounds for the rest of their life. And the only way they get it is by being handed the clock, over and over, on ordinary days, while you stay close enough to help and far enough back to let it be theirs. It is one strand of the bigger picture in our [life skills for kids](/guides/life-skills-for-kids) pillar, which is worth reading if you want to see how all these future-ready skills fit together.' },
+      { type: 'paragraph', text: 'If you want the ideas in this post structured into ready-to-use activities, planning prompts, and weekly rhythms by age, that is exactly what we build inside the Anywhere Learning membership. No rigid system to follow, just real-world ways to hand your kid the clock and practice the skill alongside them. But you can absolutely start tonight, for free. Pick one thing from the list above. Hand over one piece of the day. Stay close. Let them be a little bit late. That is the whole job.' },
+
+      { type: 'heading', level: 2, text: 'Common questions about teaching kids time management' },
+      { type: 'faq', items: [
+        { question: 'What is time management for kids?', answer: 'Time management for kids is the ability to sense how long things take, estimate and plan around that, put tasks in a sensible order, decide what matters first, and recover when a plan falls apart. It is not the same as being punctual or owning a planner. Those are tools and outcomes. The actual skill is the underlying sense of time and the ability to plan and adjust around it, and it is built through real-world practice over years, not taught in a single lesson.' },
+        { question: 'At what age can kids start managing their own time?', answer: 'It develops in stages. Around ages 6 to 8, kids are mostly building a felt sense of how long things take, with help from visual timers. Around 9 to 11, they can start estimating and planning short, contained stretches of time if you let them feel the consequences. By 12 to 14, most kids can genuinely manage longer stretches with competing demands, including real deadlines and their own planning system. Expecting full self-management before about age 9 sets everyone up for frustration.' },
+        { question: 'Why does my child have no sense of time?', answer: 'Because the brain machinery for tracking time is still developing, and for many kids it develops slowly. This is called time blindness, and it is normal in young kids and especially common and longer-lasting in kids with ADHD. It is made worse by two modern factors: time is almost entirely externalized for kids (adults and schedules track it for them, so they never practice), and screens are engineered to collapse the sense of time passing. The fix is to make time visible and to hand kids ownership of it so they get to practice feeling it.' },
+        { question: 'Are kids with ADHD worse at time management?', answer: 'Kids with ADHD typically experience genuine time blindness, meaning the internal sense of time passing is weaker and stays unreliable longer than in their peers. This is a real neurological difference, not a matter of effort or motivation. They are not worse because they care less; they are working with different equipment. The answer is more external scaffolding (visible timers, shorter chunks, structure that tracks time for them) and patience, not more pressure or more lectures about responsibility.' },
+        { question: 'What is the best time management tool for kids?', answer: 'For younger kids, the single best tool is a visual timer that shows time shrinking, because it turns abstract minutes into something they can see and feel. For older kids and teens, the best tool is whatever system they will actually use and have chosen themselves, whether that is a phone calendar, a paper planner, or a whiteboard. The key insight is that no tool works until the underlying felt sense of time exists. Build the skill first; the tool supports it, it does not create it.' },
+        { question: 'How do I teach my kid to stop being late?', answer: 'Stop being their clock, and let them feel the natural consequence of being late to low-stakes things. Most chronic lateness in kids is maintained by a parent who issues the countdown and drives them so they never actually miss anything. Hand them the clock instead: teach the backward plan ("what time do we need to leave, so what time do you need to start?"), let them run a morning themselves, and let a missed start to something minor actually happen. The felt consequence teaches faster than any reminder. Save your interventions for the deadlines that genuinely matter.' },
+      ]},
+    ],
+    relatedSlugs: ['executive-function-kids', 'how-to-build-resilience-in-kids', 'decision-making-skills-kids', 'life-skills-before-12'],
+    pillarSlug: 'life-skills-for-kids',
   },
 ];
 

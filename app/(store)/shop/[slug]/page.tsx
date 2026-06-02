@@ -48,6 +48,7 @@ const CATEGORY_THEMES: Record<string, CategoryTheme> = {
   "creativity-maker": { color: "#C97B5C", deep: "#7A3D24", soft: "#F2DECF" },
   "outdoor-learning": { color: "#3A5A40", deep: "#26331F", soft: "#CFDCC4" },
   worldschooling: { color: "#8A8470", deep: "#5A5240", soft: "#DAD7CD" },
+  "emotional-social-skills": { color: "#B6748A", deep: "#7A4858", soft: "#F4E4E9" },
 };
 
 function themeFor(category: string): CategoryTheme {
@@ -72,6 +73,8 @@ const WHY_IT_MATTERS: Record<string, string> = {
     "The patch of grass behind the house is the most underrated educational space on the planet. These activities turn outside time into learning time without any kid noticing the difference.",
   worldschooling:
     "Travel can be a vacation or it can be a curriculum. The difference is whether you ask the right questions. These activities turn any trip into something they will carry into adulthood.",
+  "emotional-social-skills":
+    "Self-regulation, repair, resilience, and reading the room are the skills that quietly run every part of adult life. Schools never had time for them. Most of us parents were never taught them either. These activities teach them on purpose, while the weather is still good.",
 };
 
 function whyItMattersFor(category: string): string {
@@ -115,6 +118,7 @@ export async function generateMetadata({
     entrepreneurship: "Entrepreneurship Activities for Kids",
     "planning-problem-solving": "Problem-Solving Activities",
     worldschooling: "Worldschooling Activities",
+    "emotional-social-skills": "Emotional & Social Skills for Kids",
   };
   const suffix = categoryKeywords[product.category] || "Real-World Learning Activities";
   const ageBand = product.ageRange?.replace(/^Ages\s*/i, "") || "6-14";
@@ -195,18 +199,9 @@ async function detectAccessTier(searchParams: { tier?: string }): Promise<Access
     /* Clerk or DB not configured */
   }
 
-  // Fallback: cookie set by the sandbox checkout success page. Kicks in for the
-  // window between a successful Stripe Checkout and the webhook updating the DB
-  // — or any time the DB lookup says 'guest' but the user has a fresh purchase.
-  if (tier === 'guest') {
-    try {
-      const c = await cookies();
-      const stored = c.get('al_tier_preview')?.value;
-      if (stored === 'member' || stored === 'starter') return stored;
-    } catch {
-      /* cookies unavailable */
-    }
-  }
+  // The old sandbox `al_tier_preview` cookie fallback was removed — it
+  // persisted access for 7 days in the browser, letting refunded users
+  // continue to see member content. DB is now the only source of truth.
 
   return tier;
 }
@@ -946,8 +941,8 @@ export default async function ProductPage({
                 <em className="not-italic italic text-forest-dark">100+ in the membership.</em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
-                The full library covers eight categories — math, AI, communication, planning,
-                creativity, outdoor, entrepreneurship, worldschooling — with new activities every
+                The full library covers nine categories — math, AI, communication, planning,
+                creativity, outdoor, entrepreneurship, worldschooling, emotional & social skills — with new activities every
                 quarter. {MEMBERSHIP_PRICE_YEAR}
                 {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}
               </p>

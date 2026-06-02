@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Library | Anywhere Learning',
     description:
-      'A toolkit for real life. 100+ hands-on activities across eight categories, for kids 6 to 14.',
+      'A toolkit for real life. 100+ hands-on activities across nine categories, for kids 6 to 14.',
     url: 'https://anywherelearning.co/shop',
     type: 'website',
   },
@@ -296,6 +296,37 @@ const TRACKS: Track[] = [
       'Currency conversion',
     ],
   },
+  {
+    category: 'emotional-social-skills',
+    num: '09',
+    label: 'Emotional & Social Skills',
+    imgBg: '#F4E4E9',
+    color: '#B6748A',
+    deep: '#7A4858',
+    soft: '#F4E4E9',
+    spineColor: '#B6748A',
+    spineHeight: '93%',
+    motif: '♡',
+    headline: (
+      <>
+        Tools for big feelings and{' '}
+        <em className="not-italic italic" style={{ color: '#B6748A' }}>
+          real connection.
+        </em>
+      </>
+    ),
+    lead: "The skills modern childhood doesn't make space for. Naming a feeling, repairing after a fight, sitting with disappointment, doing hard things alone. Real self-regulation and social skills built one practice at a time.",
+    ornamentAlt: 'Heart symbol',
+    skills: [
+      'Self-regulation',
+      'Emotional awareness',
+      'Empathy',
+      'Resilience',
+      'Conflict resolution',
+      'Independence',
+      'Communication',
+    ],
+  },
 ];
 
 function bucketForAge(range: string | null | undefined): { min: number; max: number; label: string } {
@@ -361,7 +392,7 @@ export default function ShopPage() {
     '@type': 'CollectionPage',
     name: 'The Library',
     description:
-      'A toolkit for real life. 100+ hands-on activities across eight categories, for kids 6 to 14.',
+      'A toolkit for real life. 100+ hands-on activities across nine categories, for kids 6 to 14.',
     url: 'https://anywherelearning.co/shop',
     publisher: {
       '@type': 'Organization',
@@ -468,7 +499,7 @@ export default function ShopPage() {
         }}
       />
       <p className="mt-5 text-center font-display italic text-[17px] text-[#C97B5C]">
-        100+ activities. Eight categories.{' '}
+        100+ activities. Nine categories.{' '}
         <span className="italic">One toolkit.</span>
       </p>
     </div>

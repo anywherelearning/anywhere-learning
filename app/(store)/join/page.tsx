@@ -5,6 +5,7 @@ import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
+import MembershipCreditBanner from '@/components/checkout/MembershipCreditBanner';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -178,15 +179,73 @@ const categories = [
     count: 10,
     ages: '6–14',
   },
+  {
+    name: 'Emotional & Social Skills',
+    desc: 'Building a calm-down toolkit, naming big feelings, sitting with boredom, repairing after a fight, taking on a solo mission. The inner skills that run everything else.',
+    count: 12,
+    ages: '6–14',
+  },
 ];
 
-export default async function JoinPage() {
+export default async function JoinPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ from?: string; reason?: string; slug?: string }>;
+}) {
   // Pull live founder state. The static IS_FOUNDER_PHASE constant is still
   // used above for SEO metadata (crawlers can lag a few hours) and for the
   // module-level structured-data block — both are non-critical to flip
   // instantly. Page-visible copy below uses `m` so the founder framing
   // closes automatically the moment the 100th member is provisioned.
   const m = await import('@/lib/membership-runtime').then((x) => x.getMembership());
+
+  // Soft banner for visitors who landed on /join from a gated entry point —
+  // a PDF link they couldn't open, or /account when they have no access.
+  // The download endpoint + account page redirect here with ?from=…&reason=…
+  //
+  // We resolve the viewer's tier so the copy fits their actual situation.
+  // Without this, a Starter Pack buyer would see "Your library access has
+  // ended" — which falsely implies they were once a member.
+  const sp = (await searchParams) || {};
+  const isStarterUpgrade = sp.reason === 'starter-upgrade';
+  const isNoAccess = sp.reason === 'no-access';
+  const isMembershipRequired = sp.reason === 'membership-required';
+
+  let viewerTier: 'guest' | 'starter' | 'member' = 'guest';
+  try {
+    const { auth: clerkAuth } = await import('@clerk/nextjs/server');
+    const { getAccessTierForClerkId } = await import('@/lib/access');
+    const a = await clerkAuth();
+    if (a.userId) {
+      viewerTier = await getAccessTierForClerkId(a.userId);
+    }
+  } catch {
+    /* Clerk not configured — guest is the safe default. */
+  }
+
+  const bannerMessage = (() => {
+    // "isStarterUpgrade" / "isMembershipRequired" come from clicking through
+    // a specific gated activity, so the singular "that activity" copy fits.
+    if (isStarterUpgrade) {
+      return 'That activity is in the full membership. Upgrade once and unlock everything.';
+    }
+    if (isMembershipRequired) {
+      return 'Become a member to open that activity, plus the rest of the library.';
+    }
+    // "isNoAccess" comes from /account when the visitor has no tier-granting
+    // record. The message is generic (no specific activity in scope), and
+    // should match the viewer's actual tier so it reads naturally.
+    if (isNoAccess) {
+      if (viewerTier === 'starter') {
+        return "Ready for the full library? Your Starter Pack credit applies when you upgrade.";
+      }
+      if (viewerTier === 'member') {
+        return "Your membership is active. If something looks off, please contact us.";
+      }
+      return 'Become a member to unlock the full library.';
+    }
+    return null;
+  })();
   const productLd = {
     '@context': 'https://schema.org',
     '@type': ['Product', 'Service'],
@@ -297,6 +356,18 @@ export default async function JoinPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <main className="pb-24 lg:pb-0">
+        {/* ═══ Contextual banner — shown only when arriving from a gated
+            download attempt (the API route redirects here with
+            ?from=download&reason=...) ═══ */}
+        {bannerMessage && (
+          <div className="border-b border-[#c4836a]/35 bg-[#f5e1d2]/70 px-6 py-3">
+            <div className="mx-auto flex max-w-[1120px] items-center justify-center gap-2 text-center text-[14px] text-[#7A3D24]">
+              <span aria-hidden="true">→</span>
+              <span>{bannerMessage}</span>
+            </div>
+          </div>
+        )}
+
         {/* ═══ 1. HERO ═══ */}
         <section className="relative px-6 pt-10 pb-14 md:pt-10 md:pb-16">
           <div className="mx-auto grid max-w-[1120px] items-center gap-10 md:grid-cols-[1.05fr_.95fr] md:gap-16">
@@ -344,7 +415,12 @@ export default async function JoinPage() {
                 life. {m.price} for the year.
               </p>
 
-              <div className="mt-8">
+              {/* Renders nothing when the viewer isn't an eligible Starter Pack buyer. */}
+              <div className="mt-6">
+                <MembershipCreditBanner />
+              </div>
+
+              <div className="mt-6">
                 <CtaBlock m={m} />
               </div>
             </div>
@@ -617,7 +693,7 @@ export default async function JoinPage() {
             {/* Stats row */}
             <div className="mb-8 flex flex-wrap justify-center gap-x-11 gap-y-5">
               {[
-                { n: '8', label: 'Categories' },
+                { n: '9', label: 'Categories' },
                 { n: '100+', label: 'Activities' },
                 { n: '6–14', label: 'Ages' },
                 { n: '3', label: 'Levels each' },
