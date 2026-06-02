@@ -6002,6 +6002,8 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'That is 27 starting points. You do not need all of them. You need one or two that fit your kid this month, and the willingness to follow when they catch on to something.' },
 
+      { type: 'image', src: '/images/real-world-writing-ad.jpeg', alt: 'Kid holding up a striped towel poolside next to her title card reading L\'EXTRAORDINAIRE SERVIETTE, a mock commercial she scripted and filmed', caption: 'A mock commercial scripted, titled, and filmed at home. The towel was a prop. The real product was the writing.' },
+
       { type: 'heading', level: 2, text: 'Age-by-age quick ideas' },
       { type: 'paragraph', text: 'Different ages need different scaffolding. The purposes do not change. The mechanics do.' },
       { type: 'paragraph', text: 'Ages 6 to 8: keep it short, keep it concrete, accept invented spelling. The point at this age is fluency, not accuracy. A two-sentence menu, a sign for a lemonade stand, a caption on a drawing, a thank-you note with three words and a heart. Let them dictate to you sometimes. Transcription counts as writing development at this age because it teaches sentence structure faster than they could write it themselves.' },
