@@ -6409,8 +6409,8 @@ const posts: BlogPost[] = [
     keywords: ['risky play for kids', 'why kids need risky play', 'should I let my kid climb trees', 'risky play benefits', 'Sandseter risky play', 'free range parenting', 'kids and risk assessment', 'outdoor play safety', 'adventurous play', 'childhood independence'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImage: '/images/guide-nature-hero.jpeg',
-    heroImageAlt: 'A child climbing a tree barefoot in dappled sunlight, the kind of risky outdoor play that builds judgement and confidence',
+    heroImage: '/images/risky-play-hero.jpeg',
+    heroImageAlt: 'Kid mid-climb up a pine tree with rocks below, the exact moment most parents instinctively say "be careful" and should not',
     content: [
       { type: 'summary', text: 'Risky play is the kind of play where kids do something that feels dangerous: climbing high, moving fast, using real tools, playing near water or fire, wrestling, or being out of sight of adults. Research from Ellen Sandseter and the American Academy of Pediatrics shows that kids who get regular access to risky play develop sharper risk assessment, better physical coordination, lower rates of anxiety, and (counterintuitively) fewer serious injuries over time. The job of the parent is not to prevent risk. It is to help kids learn the difference between low-probability and high-probability harm.' },
       { type: 'paragraph', text: 'Picture your kid 12 feet up a tree. They are squinting at the next branch, calculating. Your body wants to yell "be careful." Maybe you do. Maybe you bite it down.' },
@@ -6451,6 +6451,8 @@ const posts: BlogPost[] = [
         'Riding in a car without a seatbelt: high probability of serious harm. Do not allow.',
       ] },
       { type: 'paragraph', text: 'Once you have the two buckets in your head, most decisions get a lot easier. The job is not to remove all risk. It is to remove the kind that can permanently damage a kid, and let the rest stand.' },
+
+      { type: 'image', src: '/images/risky-play-caution-sign.jpeg', alt: 'Kid on a mountain bike crossing a wooden trail feature next to a yellow caution sign reading USE AT OWN RISK', caption: 'The sign sums up the whole job: kids need places to use their own judgement. Your job is to pick the right "own risk" moments and let them happen.' },
 
       { type: 'heading', level: 2, text: 'How to actually let your kid climb' },
       { type: 'paragraph', text: '"Be careful" is the worst thing you can say. It is too vague to be useful, and it interrupts the very concentration that keeps them safe. A better script:' },
