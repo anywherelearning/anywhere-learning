@@ -6074,8 +6074,8 @@ const posts: BlogPost[] = [
     keywords: ['should kids get allowance', 'allowance vs commission', 'how to give kids allowance', 'kids and money', 'teaching kids about money', 'paid jobs for kids', 'kids chores and money', 'family chore system'],
     readTimeMinutes: 10,
     author: amelie,
-    heroImage: '/images/life-skills-hero.jpeg',
-    heroImageAlt: 'A kid counting coins and bills at the kitchen table, the kind of hands-on money practice that builds real financial sense over time',
+    heroImage: '/images/allowance-hero.jpeg',
+    heroImageAlt: 'Kid washing dishes at the kitchen sink, the everyday family-team baseline that should never come with a price tag',
     content: [
       { type: 'summary', text: 'The three common kid-money models are pure allowance (a flat weekly amount with no work attached), pure commission (every chore is paid), and paid jobs (a hybrid where baseline family contributions are unpaid and above-baseline work earns money). Pure allowance teaches entitlement. Pure commission teaches that family help is transactional. The paid-jobs hybrid is the most defensible model for kids 5 to 14 because it separates the lesson of belonging from the lesson of earning. A workable system pairs a small base allowance with optional paid jobs and a three-jar split for spending, saving, and giving.' },
       { type: 'paragraph', text: 'Money is one of those skills nobody really teaches kids on purpose. They pick it up from how their parents talk about bills at the kitchen table, from whether they ever see cash, from whether they have ever had to wait for something they wanted. The single most useful thing you can do is put a small amount of real money in their hands early and let them practice making decisions with it.' },
@@ -6110,6 +6110,8 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'You can add a small base allowance on top if you want kids to have something to practice budgeting with even in slow weeks. A common version: a small weekly base (maybe $1 per year of age divided in half) plus the paid-jobs board. The base teaches budgeting. The paid jobs teach earning. The unpaid baseline protects the relationship.' },
       { type: 'paragraph', text: 'The key feature of this model is that it separates three different lessons that the pure models confuse: belonging is not earned, money comes from work, and you get to decide how much you want to earn. For more on building money skills through everyday life rather than a chart on the fridge, see our deep dive on [teaching kids about money without an allowance chart](/blog/teach-kids-about-money).' },
+
+      { type: 'image', src: '/images/allowance-building.jpeg', alt: 'Two kids working together on a wooden building project in the driveway, drill and lumber in hand', caption: 'A baseline contribution looks like dishes and laundry. A bigger project the kid chooses to take on, the kind that takes a Saturday, is where the paid-jobs board comes in.' },
 
       { type: 'heading', level: 2, text: 'Letting kids spend their own money on dumb things' },
       { type: 'paragraph', text: 'The single most underrated parenting move in this whole topic is letting your kid spend their own money on something you think is a waste. The cheap Lego knockoff that will break in two weeks. The candy that costs three times what it should at the airport. The plastic toy from a vending machine.' },
