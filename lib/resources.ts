@@ -11,7 +11,8 @@ export type ResourceTopic =
   | 'creativity-maker'
   | 'ai-digital-literacy'
   | 'homeschool-journey'
-  | 'future-ready-skills';
+  | 'future-ready-skills'
+  | 'stem-for-kids';
 
 export interface ResourceAuthor {
   name: string;
@@ -52,6 +53,7 @@ export const resourceTopics: Record<ResourceTopic, { label: string; color: strin
   'ai-digital-literacy':  { label: 'AI & Digital Literacy',  color: '#7b8fa1' },
   'homeschool-journey':   { label: 'Homeschool Journey',     color: '#d4a373' },
   'future-ready-skills':  { label: 'Future-Ready Skills',    color: '#588157' },
+  'stem-for-kids':        { label: 'STEM for Kids',           color: '#3d5c3b' },
 };
 
 /** Default product + bundle recommendation for each resource topic */
@@ -63,6 +65,7 @@ export const resourceProductDefaults: Record<ResourceTopic, { product: string; b
   'ai-digital-literacy':  { product: 'ai-basics',              bundle: 'ai-digital-bundle' },
   'homeschool-journey':   { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
   'future-ready-skills':  { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
+  'stem-for-kids':        { product: 'outdoor-stem-challenges', bundle: 'outdoor-toolkit-bundle' },
 };
 
 const amelie: ResourceAuthor = {
@@ -2227,6 +2230,383 @@ const resources: ResourcePage[] = [
     ],
     recommendedProduct: 'future-ready-skills-map',
     recommendedBundle: 'real-world-mega-bundle',
+  },
+  {
+    slug: 'stem-for-kids',
+    title: 'STEM for Kids: A Real-World Guide for Parents',
+    excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no kits, no chemistry sets required.',
+    topic: 'stem-for-kids',
+    publishedAt: '2026-06-03',
+    keywords: [
+      'STEM for kids', 'STEM activities for kids', 'STEM at home',
+      'real world STEM', 'engineering for kids', 'science for kids',
+      'STEM education', 'STEAM activities', 'homeschool STEM',
+      'STEM by age', 'STEM without a kit',
+    ],
+    readTimeMinutes: 16,
+    author: amelie,
+    heroImage: '/images/outdoor-stem-hero.jpeg',
+    heroImageAlt: 'Two kids exploring a beach log together, the kind of self-directed outdoor problem-solving that is real-world STEM',
+    content: [
+      {
+        type: 'summary',
+        text: 'STEM for kids means hands-on, real-world projects that teach science, technology, engineering, and math through the world around them rather than worksheets or kits. Research from the World Economic Forum and the National Science Foundation consistently identifies analytical thinking, problem-solving, and technological literacy as the most valuable workforce skills of the coming decade. The most effective way to build these skills in kids ages 6 to 14 is not a STEM curriculum, it is the everyday environment used on purpose: backyard engineering, kitchen chemistry, money math, and supervised digital tools. This guide covers what STEM education actually is, why real-world STEM beats school STEM for most kids, and concrete activities by subject and age.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Most parents hear "STEM" and picture a robotics kit, a coding camp, or a chemistry set. Those are fine, and your kid might genuinely love them. But they are not what STEM education actually is, and they are rarely where the deepest learning happens.',
+      },
+      {
+        type: 'paragraph',
+        text: 'STEM is a way of thinking, not a box of stuff. It is the habit of asking "how does this work?" and "could I build a better one?" about the world right in front of you. Once you start seeing it that way, your kitchen, backyard, sidewalk, and weekend grocery run become a STEM curriculum with no kit required.',
+      },
+      {
+        type: 'paragraph',
+        text: 'This guide walks through what STEM education actually is, why real-world STEM tends to stick better than school STEM, the four subjects in plain language, age-by-age activities you can start this week, and the common mistakes most parents make on the way.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What STEM education actually is',
+      },
+      {
+        type: 'paragraph',
+        text: 'STEM stands for Science, Technology, Engineering, and Mathematics. The acronym was coined by the U.S. National Science Foundation in the early 2000s to highlight the cluster of subjects that drive most modern innovation and the bulk of high-paying careers. STEM education is the practice of teaching these subjects in an integrated, project-based way rather than as separate textbook chapters.',
+      },
+      {
+        type: 'paragraph',
+        text: 'In practice, that means a kid doing real STEM is rarely doing only one subject at a time. A kid building a bridge from sticks across a creek is doing engineering (load distribution), physics (forces), math (measurement), and informal science (testing hypotheses) all at once. A kid running a lemonade stand is doing math (pricing, profit), economics, basic chemistry (mixing ratios), and a touch of UX research. The point of STEM education is not to silo the subjects, it is to teach kids to use them together.',
+      },
+      {
+        type: 'paragraph',
+        text: 'STEAM is the same idea with Art added. Most modern STEM programs are functionally STEAM because design, communication, and aesthetics are inseparable from real-world projects.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Why STEM matters now',
+      },
+      {
+        type: 'paragraph',
+        text: 'The case for STEM is not new but it has gotten sharper. The [World Economic Forum\'s Future of Jobs Report 2025](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) ranks analytical thinking, creative thinking, technological literacy, and curiosity among the top skills employers expect to need this decade. The U.S. Bureau of Labor Statistics consistently shows STEM occupations growing faster than non-STEM and paying meaningfully more.',
+      },
+      {
+        type: 'paragraph',
+        text: 'But the bigger argument is not about jobs. As AI handles more routine cognitive work, the human skills that matter most are the ones AI cannot do well: framing a problem, judging which solution is worth pursuing, working across disciplines, and building something nobody asked for. Those are exactly the skills real STEM education trains.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Real-world STEM vs school STEM',
+      },
+      {
+        type: 'paragraph',
+        text: 'Most school STEM is structured around managing 25 kids in one room, which makes the lessons abstract by necessity. Real-world STEM at home flips that constraint: one or two kids at a time, no schedule pressure, and direct contact with materials, money, weather, and outcomes.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Neither approach is "right" universally. Schools do certain STEM tasks well, like exposing kids to specialised equipment and connecting them with teachers who have deep subject expertise. Real-world STEM does different things well: depth of attention, transferable problem-solving, and a working memory of what worked and what failed in the kid\'s own hands. The most thoughtful families combine both, using real-world projects to anchor whatever school is covering.',
+      },
+      {
+        type: 'paragraph',
+        text: 'You do not need to homeschool to do real-world STEM. Plenty of families use weekends, evenings, and summer breaks. The activities are the same.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The simple framework: pose a problem, step back',
+      },
+      {
+        type: 'paragraph',
+        text: 'Almost every effective STEM activity for kids follows the same shape. You pose a real problem, the kid figures out an approach, they build or test something, it usually does not work the first time, and they iterate. You stay nearby but quiet. The two hardest parts for parents:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Not giving the answer. The "I know how, let me show you" instinct kills the actual learning, which is in the figuring out.',
+          'Letting the failure stand. A bridge that collapses, a circuit that does not light, a soufflé that flops — these are the lesson. The temptation to rescue and explain almost always undermines it.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Once you trust the framework, almost any household situation becomes a STEM activity. The whole game is recognising the moments and protecting the space for them.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Science (the S)',
+      },
+      {
+        type: 'paragraph',
+        text: 'Science for kids works best when it is hands-on, observational, and tied to a specific place they can return to. The classroom version (read chapter, do worksheet, watch demo) is the weakest format research has tested. Direct experience is the strongest.',
+      },
+      {
+        type: 'paragraph',
+        text: 'High-leverage science activities for kids ages 6 to 14:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Kitchen chemistry: baking, fermenting, freezing, dissolving. Why does bread rise? What happens to the eggs? Our [Kitchen Math & Meal Planning Challenge](/shop/kitchen-math-challenge) bakes this in.',
+          'Backyard biology and ecology: the same trail walked weekly, a nature journal, seasonal observation. Forest school principles apply at any scale.',
+          'Weather, water, and sky: a window thermometer, a homemade rain gauge, mapping shadows across a season.',
+          'Backyard experiments with controls: which surface keeps an ice cube longest, which soil grows seedlings fastest. The post on [backyard science experiments](/blog/backyard-science-experiments) collects 15 no-prep ideas.',
+        ],
+      },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges' },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Technology (the T)',
+      },
+      {
+        type: 'paragraph',
+        text: 'Technology for kids in 2026 is not just coding. It is the broader literacy of understanding the systems they already use every day — recommendation algorithms, AI tools, search engines, photo and video tools — and the basic mental models for how those systems work.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Concrete starting points by age:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Ages 6 to 8: simple block-based coding (Scratch Jr, Lightbot). The goal is the logic, not the syntax.',
+          'Ages 9 to 11: Scratch projects with a real audience (a younger sibling, grandparents). Understanding what an algorithm is by writing one.',
+          'Ages 11 to 14: introducing AI tools with careful framing — how to use them, when to verify, when to refuse. Our [Build Your Own AI Helper](/shop/build-ai-helper) and [Algorithm Awareness](/shop/algorithm-awareness) activities cover this directly.',
+          'Across all ages: real-world video projects. Writing a script, filming, editing, publishing. Technology is a tool for telling stories, not just for consuming them.',
+        ],
+      },
+      { type: 'product-callout', slug: 'build-ai-helper' },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Engineering (the E)',
+      },
+      {
+        type: 'paragraph',
+        text: 'Engineering for kids is the most accessible part of STEM because it requires almost no specialist materials. Sticks, tape, cardboard, string, and a real problem to solve cover most of what a kid needs through age 14.',
+      },
+      {
+        type: 'paragraph',
+        text: 'A few of the strongest engineering activities, organized loosely by complexity:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Bridge across a creek using only what is nearby. Test by carrying weight (or a sibling) across.',
+          'Water channel and dam systems in dirt, sand, or mud. Hours of fluid dynamics, no kit required.',
+          'Stick catapults with a target. Launch distance, accuracy, energy storage all become tangible.',
+          'Cardboard furniture or fort projects that have to hold weight. Real load-bearing design.',
+          'A Rube Goldberg machine that has to perform a specific task with at least five steps. The [Build a Rube Goldberg Machine](/shop/rube-goldberg-machine) activity walks through it.',
+          'Outdoor STEM challenges that combine engineering and the natural environment, like the ones in our [Outdoor STEM Challenge Cards](/shop/outdoor-stem-challenges).',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'See our full post on [15 outdoor STEM challenges that don\'t feel like school](/blog/outdoor-stem-challenges) for the detailed version.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Math (the M)',
+      },
+      {
+        type: 'paragraph',
+        text: 'Math is the STEM subject parents worry about most and where worksheets dominate longest. It is also the one with the highest payoff for switching to real-world practice, because math without context is the source of most math anxiety.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Real-world math activities that consistently work:',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Cooking and baking (fractions, ratios, scaling). Our [Kitchen Math Challenge](/shop/kitchen-math-challenge) is built around this.',
+          'Grocery shopping with a real budget. Unit pricing, estimation, percentages. The [Real-Life Budget Challenge](/shop/budget-challenge) is one of our most popular activities for this reason.',
+          'Sports stats: batting averages, win percentages, comparing players over a season. See [Sports Stats Lab](/shop/sports-stats-lab).',
+          'Travel and road trips: estimating arrival time, calculating gas cost, currency conversion.',
+          'Personal projects with a budget: a birthday party, a small business, a home garden plot.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Our deeper guide on [real-world math activities that replace worksheets](/blog/real-world-math-activities) covers 25+ specific ideas by topic.',
+      },
+      { type: 'product-callout', slug: 'budget-challenge' },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'STEM activities by age',
+      },
+      {
+        type: 'paragraph',
+        text: 'A rough map by age. These are starting points, not limits.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Ages 5 to 7',
+      },
+      {
+        type: 'paragraph',
+        text: 'Short, sensory, building-block STEM. Sorting, counting, balancing, simple measurement. Building towers from blocks and seeing what falls and why. Mixing water and food coloring. Watching ice melt. The point is curiosity and the language of investigation, not output. Fifteen-minute sessions are plenty.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Ages 8 to 10',
+      },
+      {
+        type: 'paragraph',
+        text: 'The sweet spot for hands-on engineering and structured experiments. Multi-step projects. Real tools (under supervision). Beginning programming. Bridge challenges, garden plots, basic catapults, journaling experiments. Sessions of 30 to 60 minutes work well.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Ages 11 to 13',
+      },
+      {
+        type: 'paragraph',
+        text: 'Projects can now span days or weeks. A working weather station. A small business plan. A piece of code that does something useful. Connecting math to real budgets. AI literacy starts here. Kids this age can also start to own a "patch" of real-world STEM — a corner of the backyard, a recurring science project, a niche of personal expertise.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Ages 14 and up',
+      },
+      {
+        type: 'paragraph',
+        text: 'Deep dives. Apprentice-style learning with adults in the field. Real engineering with real consequences (a project that has to work). Open-source contributions. Dual-enrolment in STEM subjects at community college. The shift at this age is from broad exposure to focused depth in the areas the teen has genuinely chosen.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'How to start this week',
+      },
+      {
+        type: 'paragraph',
+        text: 'You do not need to overhaul anything. Pick one of these and try it before the weekend ends:',
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Pose one real problem to your kid. "Get water across the kitchen using only what is in this drawer." "Figure out how much paint we need for one wall."',
+          'Step back. Hand them a notebook. Resist the urge to optimise their approach.',
+          'Let the first attempt fail. Watch what they do with that.',
+          'After they finish (or give up), ask one question: "What would you do differently next time?" That is the whole reflection.',
+          'Repeat once a week. You are running a STEM program.',
+        ],
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Common parent mistakes with STEM',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Buying kits with one correct outcome. The instructions teach following directions, not problem-solving. Use kits sparingly.',
+          'Treating STEM as enrichment instead of the main course. Real-world STEM is not a Saturday activity layered onto school, it is a way of seeing every project the kid already does.',
+          'Pushing girls toward "pretty" STEM. The data on what girls do with STEM materials when adults stop curating is consistent: they build, code, and engineer at the same rate as boys. Curate less.',
+          'Skipping the math. Kids who think they hate math often love budgeting, scoring, and stats — give them real numbers tied to outcomes they care about.',
+          'Rescuing too fast. The frustration before the breakthrough is the most valuable part of the activity.',
+          'Buying expensive equipment instead of starting with cardboard. Most of the best engineering projects in the world started from scrap.',
+        ],
+      },
+
+      {
+        type: 'pull-quote',
+        text: 'STEM is not a box of stuff. It is the habit of asking how the world works and trying to build a better one.',
+      },
+
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Where to go from here',
+      },
+      {
+        type: 'paragraph',
+        text: 'Pick one subject (S, T, E, or M) where your family is weakest and start there this week. For most families that is engineering or technology because both feel intimidating until you start. They are also the two where the entry bar is lowest in real life.',
+      },
+      {
+        type: 'paragraph',
+        text: 'For the broader real-world learning framework that STEM sits inside, see our [real-world learning guide](/guides/real-world-learning). For the outdoor STEM angle in particular, [nature-based learning](/guides/nature-based-learning) covers the place-based science approach.',
+      },
+
+      {
+        type: 'cta',
+        text: 'New to all of this? Our free guide has simple real-world activities to start this week. No prep, no curriculum, no pressure.',
+        href: '/free-guide',
+        label: 'Get the Free Guide',
+      },
+
+      {
+        type: 'faq',
+        items: [
+          {
+            question: 'What does STEM actually stand for?',
+            answer: 'Science, Technology, Engineering, and Mathematics. STEAM adds Art (design, communication, aesthetics). The acronym originated at the U.S. National Science Foundation in the early 2000s as shorthand for the cluster of subjects that drive most modern innovation.',
+          },
+          {
+            question: 'Do I need a STEM kit or curriculum to teach STEM at home?',
+            answer: 'No. Most of the best STEM activities use cardboard, tape, water, sticks, kitchen ingredients, and a real problem to solve. Kits can be useful for specific topics like robotics or basic electronics, but they are rarely where the deepest learning happens. Save the money and start with the world you already have.',
+          },
+          {
+            question: 'What ages does STEM education work for?',
+            answer: 'All ages, with different focus. Ages 5 to 7 are about sensory exploration and language of investigation. Ages 8 to 10 are the sweet spot for hands-on engineering and structured experiments. Ages 11 to 13 can take on multi-week projects and start AI literacy. Ages 14 and up move from broad exposure to focused depth in chosen areas.',
+          },
+          {
+            question: 'Is STEM different from STEAM?',
+            answer: 'STEAM is STEM plus Art (design, communication, aesthetic judgement). In practice, most modern STEM education functions as STEAM because real-world projects almost always involve a design and communication component. The two terms are mostly interchangeable.',
+          },
+          {
+            question: 'How do I get a kid who hates math interested in STEM?',
+            answer: 'Almost always by leaving the math classroom version behind and using real numbers with real outcomes. Sports stats for a sports kid. Budgeting for a kid who wants to buy something. Cooking for a hands-on kid. Most "I hate math" kids do not hate math, they hate decontextualised worksheets. Strip the worksheet and the engagement usually returns.',
+          },
+          {
+            question: 'Should I worry about gender gaps in STEM?',
+            answer: 'You should mostly worry about your own assumptions. Research consistently shows girls engage with STEM materials at the same rate as boys when adults stop curating their choices. The most effective intervention is offering open-ended STEM challenges to all kids equally and getting out of the way.',
+          },
+          {
+            question: 'Can real-world STEM replace school STEM entirely?',
+            answer: 'For most elementary and middle school topics, yes, with confidence. For specific high school subjects (AP physics, calculus, specialised lab work), most families combine real-world STEM with some structured content. The two complement each other more than they compete.',
+          },
+          {
+            question: 'What if my kid only wants to do one part of STEM?',
+            answer: 'Lean in. A kid obsessed with bridges, weather, code, or numbers is doing exactly what real scientists and engineers did at their age. Depth of interest in one area transfers more than thin coverage of all four. Specialisation is not a problem, it is a sign.',
+          },
+        ],
+      },
+    ],
+    hook: 'STEM is not a robotics kit. It is the habit of asking how the world works and trying to build a better one.',
+    relatedBlogSlugs: [
+      'outdoor-stem-challenges',
+      'backyard-science-experiments',
+      'nature-walks-science',
+      'kitchen-learning-lab',
+      'real-world-math-activities',
+      'forest-school-activities',
+    ],
+    recommendedProduct: 'outdoor-stem-challenges',
+    recommendedBundle: 'outdoor-toolkit-bundle',
   },
 ];
 
