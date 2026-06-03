@@ -237,15 +237,15 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
       );
     case 'image':
       return (
-        <figure key={index} className="my-12 md:my-16 max-w-[640px] mx-auto">
+        <figure key={index} className="my-12 md:my-16 max-w-[520px] mx-auto">
           {block.src ? (
             <div className="relative rounded-2xl overflow-hidden">
               <Image
                 src={block.src}
                 alt={block.alt}
-                width={640}
+                width={520}
                 height={0}
-                sizes="(max-width: 768px) 100vw, 640px"
+                sizes="(max-width: 768px) 100vw, 520px"
                 className="w-full h-auto"
                 style={{ height: 'auto' }}
               />
