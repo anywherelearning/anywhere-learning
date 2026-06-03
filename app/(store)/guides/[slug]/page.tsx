@@ -30,6 +30,7 @@ const imgBgByTopic: Record<ResourceTopic, string> = {
   'ai-digital-literacy': '#F5E7BC',
   'homeschool-journey': '#DAD7CD',
   'future-ready-skills': '#DDE5D2',
+  'stem-for-kids': '#CFDCC4',
 };
 
 interface ResourcePageProps {

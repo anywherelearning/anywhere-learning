@@ -510,9 +510,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build a Rube Goldberg Machine",
     slug: "rube-goldberg-machine",
     description:
-      "Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials: dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect thinking, and creative problem-solving. Failure is part of the fun.",
+      "Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials: dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect thinking, and creative problem-solving. A classic STEM engineering project that turns physics into something kids actually want to finish. Failure is part of the fun.",
     shortDescription:
-      "Homeschool engineering project for kids ages 6-14: build an absurdly complicated machine to do something simple. Creativity meets engineering.",
+      "STEM engineering project for kids ages 6-14: build an absurdly complicated machine to do something simple. Design thinking, cause-and-effect, and creativity meet.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpiAkIBECpwGms3N113ga",
@@ -671,9 +671,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Kinetic Sculpture or Art Installation",
     slug: "kinetic-sculpture",
     description:
-      "Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Combines physics, engineering, and artistic expression in a hands-on project that produces something genuinely impressive.",
+      "Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Pure STEAM in one project: art, engineering, and physics in the same build. A hands-on project that produces something genuinely impressive.",
     shortDescription:
-      "Homeschool art + engineering project for kids ages 6-14: build a kinetic sculpture. Art that moves using physics and engineering.",
+      "STEAM project for kids ages 6-14: build a kinetic sculpture. Art that moves using physics and engineering.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGmq63l93oU",
@@ -721,9 +721,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Real-Life Budget Challenge",
     slug: "budget-challenge",
     description:
-      "Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan. Real budgeting with real trade-offs.",
+      "Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan. Real-world STEM math meets planning and decision-making in one project.",
     shortDescription:
-      "Real-world math for kids ages 9-14: plan a real day with a real budget. Price research, surprise costs, and trade-off decisions.",
+      "Real-world math (STEM) for kids ages 9-14: plan a real day with a real budget. Price research, surprise costs, and trade-off decisions.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpmAkIBECpwGmgi9i7P74",
@@ -767,9 +767,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Kitchen Math & Meal Planning Challenge",
     slug: "kitchen-math-challenge",
     description:
-      "Your child plans a real meal for the family, figures out what it costs, scales a recipe, and stays within a grocery budget. Unit price comparisons, kitchen curveballs, and the kind of math adults actually use every time they cook or shop.",
+      "Your child plans a real meal for the family, figures out what it costs, scales a recipe, and stays within a grocery budget. Unit price comparisons, kitchen curveballs, and the kind of math adults actually use every time they cook or shop. Real-world STEM math the way it shows up in adult life, not on a worksheet.",
     shortDescription:
-      "Real-world math for kids ages 9-14: plan a real meal, scale recipes, compare prices, and manage a grocery budget.",
+      "Real-world math (STEM) for kids ages 9-14: plan a real meal, scale recipes, compare prices, and manage a grocery budget.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpnAkIBECpwGmH6nVrxMI",
@@ -859,9 +859,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Smart Shopper Lab",
     slug: "smart-shopper",
     description:
-      "Your child picks two real products to compare, builds their own rubric, does cost-per-use math, spots marketing tricks, handles a curveball, and writes a recommendation they can defend. The habit of thinking before spending.",
+      "Your child picks two real products to compare, builds their own rubric, does cost-per-use math, spots marketing tricks, handles a curveball, and writes a recommendation they can defend. Real-world STEM math meets media literacy in one project. The habit of thinking before spending.",
     shortDescription:
-      "Real-world math for kids ages 9-14: compare products, build a rubric, spot marketing tricks, and make smart buying decisions.",
+      "Real-world math (STEM) for kids ages 9-14: compare products, build a rubric, spot marketing tricks, and make smart buying decisions.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrppAkIBECpwGmFDhNrYWB",
@@ -955,9 +955,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "AI Basics: Myths, Facts & Smart Rules",
     slug: "ai-basics",
     description:
-      "Help kids understand what AI actually is, what it isn't, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy and useful AI interactions, and setting smart rules for AI use at home. The foundation for everything else in the AI series.",
+      "Help kids understand what AI actually is, what it isn't, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy and useful AI interactions, and setting smart rules for AI use at home. Foundational STEM technology literacy for the AI era.",
     shortDescription:
-      "AI literacy for homeschool kids ages 9-14: what AI really is, common myths vs facts, and smart rules for responsible use at home.",
+      "STEM technology activity for kids ages 9-14: what AI really is, common myths vs facts, and smart rules for responsible use at home.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq6AkIBECpwGmWfe238bd",
@@ -978,9 +978,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Algorithm Awareness: Why Am I Seeing This?",
     slug: "algorithm-awareness",
     description:
-      "Teach kids how algorithms shape what they see online, and what they don't. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical digital literacy for the attention economy.",
+      "Teach kids how algorithms shape what they see online, and what they don't. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. STEM technology literacy applied to the systems shaping their daily online life.",
     shortDescription:
-      "AI literacy for homeschool kids ages 9-14: understand how algorithms shape what you see online and how to take back control.",
+      "STEM technology activity for kids ages 9-14: understand how algorithms shape what you see online and how to take back control.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq7AkIBECpwGmLznrtraX",
@@ -1001,9 +1001,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Bias & Fairness Lab",
     slug: "bias-fairness-lab",
     description:
-      "Explore how AI can be unfair, and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and critical thinking through hands-on investigation.",
+      "Explore how AI can be unfair, and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. STEM technology ethics through hands-on investigation. The kind of critical thinking AI engineers wish more users had.",
     shortDescription:
-      "AI bias activity for homeschool kids ages 9-14: who AI leaves out, why, and how to design for fairness. Critical thinking, no coding.",
+      "STEM technology activity for kids ages 9-14: AI bias, fairness, and ethics. Critical thinking project, no coding needed.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq7AkIBECpwGmQJ9tuxrr",
@@ -1024,9 +1024,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build Your Own AI Helper",
     slug: "build-ai-helper",
     description:
-      "Design and plan your own AI helper: what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to safety considerations. No coding required; this is about thinking, not programming.",
+      "Design and plan your own AI helper: what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to safety considerations. STEM technology literacy without coding. No programming required; this is about thinking.",
     shortDescription:
-      "AI literacy for homeschool kids ages 9-14: design an AI helper from concept to ethics. Creative tech thinking, no coding needed.",
+      "STEM technology activity for kids ages 9-14: design an AI helper from concept to ethics. AI literacy, no coding needed.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq8AkIBECpwGmJGcSG2lY",
@@ -1093,9 +1093,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Hallucination Detective",
     slug: "hallucination-detective",
     description:
-      "Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. Trust, verify, and improve.",
+      "Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. STEM technology literacy meets investigative thinking. Trust, verify, and improve.",
     shortDescription:
-      "AI literacy for homeschool kids ages 9-14: spot when AI gets things wrong, verify facts, and build critical trust in tech.",
+      "STEM technology activity for kids ages 9-14: spot when AI gets things wrong, verify facts, and build critical trust in tech.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrq9AkIBECpwGm1T5rkWKf",
@@ -1235,9 +1235,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Family Electricity Audit",
     slug: "family-electricity-audit",
     description:
-      "Audit your household electricity use, read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.",
+      "Audit your household electricity use, read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. A real-world STEM project that combines science, engineering, and math applied to your actual electricity bill.",
     shortDescription:
-      "Real-world math for homeschool kids ages 8-14: audit electricity use, calculate costs, and find real ways to save.",
+      "STEM project for kids ages 8-14: audit electricity use, calculate kilowatt-hours, and find real ways to save. Math and science combined.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqDAkIBECpwGmfW75ZUM3",
@@ -1304,9 +1304,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Garden Plot Planner",
     slug: "garden-plot-planner",
     description:
-      "Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. Geometry, budgeting, and science growing together in the dirt.",
+      "Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. A real STEM project rooted in dirt: geometry, biology, budgeting, and seasonal planning in one build.",
     shortDescription:
-      "Real-world math for homeschool kids ages 6-14: design a garden with real measurements, spacing, and budgets.",
+      "STEM math activity for kids ages 6-14: design a garden with real measurements, plant spacing, area calculations, and seasonal budgets.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqEAkIBECpwGmjGJs2vEP",
@@ -1396,9 +1396,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Sports Stats Lab",
     slug: "sports-stats-lab",
     description:
-      "Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player stats. Data literacy and statistics brought to life through the sports they love.",
+      "Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player stats. STEM math through the sports they care about. Statistics, data visualisation, and analytical thinking that stick because the data matters to them.",
     shortDescription:
-      "Real-world math for homeschool kids ages 8-14: analyse real sports stats. Averages, percentages, and data visualisation.",
+      "STEM math activity for kids ages 8-14: analyse real sports stats. Averages, percentages, and data visualisation.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqHAkIBECpwGm34eVhwIE",

@@ -183,6 +183,7 @@ export default function ResourcesPage() {
   const stack2Top = bySlug('nature-based-learning');
   const stack2Bottom = bySlug('worldschooling-guide');
   const wide = bySlug('homeschool-journey');
+  const wide2 = bySlug('stem-for-kids');
 
   const collectionJsonLd = {
     '@context': 'https://schema.org',
@@ -292,11 +293,20 @@ export default function ResourcesPage() {
               )}
             </div>
 
-            {/* Wide: Homeschool Journey */}
-            {wide && (
-              <ScrollReveal>
-                <GuideCard r={wide} variant="wide" />
-              </ScrollReveal>
+            {/* Row 3: Homeschool Journey + STEM side by side */}
+            {(wide || wide2) && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+                {wide && (
+                  <ScrollReveal className="h-full">
+                    <GuideCard r={wide} variant="featured" />
+                  </ScrollReveal>
+                )}
+                {wide2 && (
+                  <ScrollReveal className="h-full" delay={80}>
+                    <GuideCard r={wide2} variant="featured" />
+                  </ScrollReveal>
+                )}
+              </div>
             )}
           </div>
         </section>

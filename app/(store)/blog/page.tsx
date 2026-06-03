@@ -13,6 +13,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import EmailForm from '@/components/EmailForm';
 import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
+import { categoryIcons } from '@/components/blog/CategoryIcons';
 
 const POSTS_PER_PAGE = 6;
 
@@ -41,16 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-const motifByCategory: Record<BlogCategory, string> = {
-  'ai-digital-literacy': '⌘',
-  'creativity-maker': '✂',
-  'future-ready-skills': '⊞',
-  'homeschool-journey': '☘',
-  'nature-learning': '✿',
-  'real-world-skills': '$',
-  'travel-worldschool': '✈',
-};
-
 const imgBgByCategory: Record<BlogCategory, string> = {
   'ai-digital-literacy': '#F5E7BC',
   'creativity-maker': '#F2DECF',
@@ -58,6 +49,7 @@ const imgBgByCategory: Record<BlogCategory, string> = {
   'homeschool-journey': '#DAD7CD',
   'nature-learning': '#CFDCC4',
   'real-world-skills': '#DDE5D2',
+  'stem-for-kids': '#CFDCC4',
   'travel-worldschool': '#E8C8AE',
 };
 
@@ -68,7 +60,7 @@ function formatDate(date: string): string {
 
 function PostCard({ post }: { post: BlogPost }) {
   const cat = blogCategories[post.category];
-  const motif = motifByCategory[post.category] || '◆';
+  const motif = categoryIcons[post.category] || null;
   const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
     <Link
@@ -133,7 +125,7 @@ function PostCard({ post }: { post: BlogPost }) {
 
 function FeaturedPostCard({ post }: { post: BlogPost }) {
   const cat = blogCategories[post.category];
-  const motif = motifByCategory[post.category] || '◆';
+  const motif = categoryIcons[post.category] || null;
   const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
     <Link
@@ -142,7 +134,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
       style={{ borderColor: `${cat.color}55` }}
     >
       <div
-        className="relative aspect-[16/10] md:aspect-[4/3] overflow-hidden md:border-r border-b md:border-b-0 border-[#D8D4C5]"
+        className="relative aspect-[16/10] md:aspect-auto md:min-h-full overflow-hidden md:border-r border-b md:border-b-0 border-[#D8D4C5]"
         style={{ background: bg }}
       >
         {post.heroImage && (
@@ -221,6 +213,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     'homeschool-journey',
     'nature-learning',
     'real-world-skills',
+    'stem-for-kids',
     'travel-worldschool',
   ];
 

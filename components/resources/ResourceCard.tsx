@@ -51,6 +51,13 @@ const topicIcons: Record<ResourceTopic, ReactNode> = {
       <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><path d="M22 4L12 14.01l-3-3" />
     </svg>
   ),
+  'stem-for-kids': (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2v6h.01" /><path d="M18 2v6h.01" /><path d="M6 16h12" />
+      <path d="M6 2h12l-3 6a3 3 0 11-6 0L6 2z" /><path d="M6 22h12" />
+      <path d="M9 16v3a3 3 0 003 3 3 3 0 003-3v-3" />
+    </svg>
+  ),
 };
 
 export default function ResourceCard({

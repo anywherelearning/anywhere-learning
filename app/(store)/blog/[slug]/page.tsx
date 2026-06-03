@@ -70,15 +70,7 @@ export async function generateMetadata({
   };
 }
 
-const motifByCategory: Record<BlogCategory, string> = {
-  'ai-digital-literacy': '⌘',
-  'creativity-maker': '✂',
-  'future-ready-skills': '⊞',
-  'homeschool-journey': '☘',
-  'nature-learning': '✿',
-  'real-world-skills': '$',
-  'travel-worldschool': '✈',
-};
+import { categoryIcons } from '@/components/blog/CategoryIcons';
 
 const imgBgByCategory: Record<BlogCategory, string> = {
   'ai-digital-literacy': '#F5E7BC',
@@ -87,6 +79,7 @@ const imgBgByCategory: Record<BlogCategory, string> = {
   'homeschool-journey': '#DAD7CD',
   'nature-learning': '#CFDCC4',
   'real-world-skills': '#DDE5D2',
+  'stem-for-kids': '#CFDCC4',
   'travel-worldschool': '#E8C8AE',
 };
 
@@ -229,7 +222,7 @@ function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCateg
 
 function RelatedCard({ post }: { post: BlogPost }) {
   const cat = blogCategories[post.category];
-  const motif = motifByCategory[post.category] || '◆';
+  const motif = categoryIcons[post.category] || null;
   const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
     <Link

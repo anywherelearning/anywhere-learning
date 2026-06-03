@@ -43,12 +43,12 @@ const SLUG_TO_FILE: Record<string, string> = {
   'healthy-tech-boundaries': 'AI & Digital Literacy - HEALTHY TECH & AI BOUNDARIES PLAN.pdf',
   'privacy-footprint': 'AI & Digital Literacy - PRIVACY & DIGITAL FOOTPRINT MAP.pdf',
   'prompt-like-a-coach': 'AI & Digital Literacy - PROMPT LIKE A COACH.pdf',
-  'media-info-check': 'AI & Digital literacy -  Media & info check.pdf',
+  'media-info-check': 'AI + Digital Literacy - MEDIA & INFO CHECK.pdf',
 
   // Communication & Writing
   'adventure-story-map': 'Communication & Writing - Adventure Story Map.pdf',
   'community-tour-guide': 'Communication & Writing - Community Tour Guide.pdf',
-  'community-impact': 'Communication & Writing - Community impact project.pdf',
+  'community-impact': 'Planning & Problem-Solving Community Impact Project.pdf',
   'directions-challenge': 'Communication & Writing - Directions Challenge.pdf',
   'family-debate-night': 'Communication & Writing - Family Debate Night.pdf',
   'family-recipe-book': 'Communication & Writing - Family Recipe Book.pdf',
@@ -98,9 +98,9 @@ const SLUG_TO_FILE: Record<string, string> = {
   'outdoor-learning-missions': 'Outdoor Learning - Outdoor learning missions.pdf',
 
   // Planning & Problem-Solving
-  'problem-solver': 'Planning & Problem-Solving - Problem-solver studio.pdf',
-  'time-energy-planner': 'Planning & Problem-solving - Time & energy planner.pdf',
-  'travel-day': 'Planning & Problem-solving - Travel Day itinerary challenge.pdf',
+  'problem-solver': 'Planning & Problem-Solving Problem-Solver Studio.pdf',
+  'time-energy-planner': 'Planning & Problem-Solving Time & Energy Planner.pdf',
+  'travel-day': 'Planning & Problem-Solving Travel Day Itinerary Challenge.pdf',
   'emergency-ready': 'Planning & Problem-Solving Emergency Ready Challenge.pdf',
   'everyday-redesign': 'Planning & Problem-Solving Everyday Redesign Challenge.pdf',
   'fix-it-detective': 'Planning & Problem-Solving Fix-it detective.pdf',
@@ -114,7 +114,7 @@ const SLUG_TO_FILE: Record<string, string> = {
 
   // Real-world Math
   'backyard-campout-planner': 'Real-world math - Backyard Campout Planner.pdf',
-  'budget-challenge': 'Real-world math - Budget challenge.pdf',
+  'budget-challenge': 'Real-world math - Real-Life Budget Challenge.pdf',
   'clothing-swap-thrift-math': 'Real-world math - Clothing Swap & Thrift Math.pdf',
   'family-electricity-audit': 'Real-world math - Family Electricity Audit.pdf',
   'farmers-market-challenge': 'Real-world math - Farmers Market Challenge.pdf',
