@@ -6506,7 +6506,6 @@ const posts: BlogPost[] = [
 
   {
     slug: 'engineering-for-kids',
-    draft: true,
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
@@ -6628,7 +6627,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'stem-activities-by-age',
-    draft: true,
     title: 'STEM Activities by Age: A Real Parent\'s Guide from 5 to 14',
     excerpt: 'Age-appropriate STEM activities for kids 5 to 14, organized by what actually matches their attention span and ability to handle abstraction. Concrete examples, common parent mistakes, and how STEAM fits at each stage.',
     hook: 'The right STEM activity for your 7-year-old is almost never a kit. It\'s usually a stick, a measuring cup, and twenty minutes.',
@@ -6660,8 +6658,6 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'At this age, narration is half the lesson. You do not need to explain Newton\'s laws. You just say "look, when you made the ramp steeper, the car went faster" and let them notice. They are recording the pattern, even if they cannot name it.' },
 
-      { type: 'image', src: '/images/stem-by-age-tire-derable.jpeg', alt: 'Kid eating homemade tire d\'erable maple taffy off a stick, eyes wide, sticky strands of cooled syrup running down', caption: 'Maple taffy is real chemistry: temperature control, sugar supersaturation, phase change. The lesson lands faster when the experiment is delicious.' },
-
       { type: 'heading', level: 2, text: 'Ages 8 to 10: hands-on engineering and structured experiments' },
       { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click.' },
       { type: 'list', ordered: false, items: [
@@ -6673,6 +6669,9 @@ const posts: BlogPost[] = [
         'Take apart an old appliance with a screwdriver. Sort the parts. Talk about what each piece did.',
       ] },
       { type: 'paragraph', text: 'At this age, introduce the word "variable." When you change one thing and test it, that is science. A lot of these [outdoor STEM challenges](/blog/outdoor-stem-challenges) work brilliantly in this window because the kids can run the whole thing themselves.' },
+
+      { type: 'image', src: '/images/stem-by-age-tire-derable.jpeg', alt: 'Kid eating homemade tire d\'erable maple taffy off a stick, eyes wide, sticky strands of cooled syrup running down', caption: 'Maple taffy is real chemistry: temperature control, sugar supersaturation, phase change. The lesson lands faster when the experiment is delicious.' },
+
       { type: 'product-callout', slug: 'outdoor-stem-challenges' },
       { type: 'heading', level: 2, text: 'Ages 11 to 13: multi-week projects and real budgets' },
       { type: 'paragraph', text: 'Eleven to thirteen is when STEM stops being a single afternoon and starts being a project that stretches across weeks. They can hold a goal in their head, manage parts of it themselves, and come back after a break. This is also where AI literacy starts to matter as a real skill, not a gimmick.' },
@@ -6725,7 +6724,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'lego-stem-activities',
-    draft: true,
     title: 'LEGO STEM Activities: 15 Build Challenges That Teach Real Engineering',
     excerpt: 'Your kid already owns the best engineering kit ever made. Here are 15 LEGO STEM challenges, sorted by age, that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     hook: 'Following a LEGO set is sequencing. Free-building from a bin with constraints is engineering. Most kids never get to do the second one.',
@@ -6920,7 +6918,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'summer-stem-activities-for-kids',
-    draft: true,
     title: 'Summer STEM Activities for Kids: 25 Ideas (No Camp Required)',
     excerpt: 'Twenty-five summer STEM activities for kids, organized by setting: backyard, kitchen, road trips, and rainy days. No camp, no curriculum, no expensive kits required.',
     hook: 'You do not need a summer camp to keep their brain on. You need a backyard, a hose, and a couple of intentional moments a week.',
@@ -6962,8 +6959,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Yes, really. Slope, friction, speed, mass. Vary the slope. Vary the water amount. Time the runs. Graph them on the fridge that night. For ten more variations on this kind of thing, see [outdoor STEM challenges](/blog/outdoor-stem-challenges).' },
       { type: 'heading', level: 2, text: 'Kitchen STEM (6 ideas)' },
       { type: 'paragraph', text: 'The kitchen is the second-most-underrated STEM lab in your house, after the backyard. Heat, chemistry, ratios, and measurement live in every recipe. The full case for it lives in [kitchen learning lab](/blog/kitchen-learning-lab); the summer-specific picks below are the ones that double as treats.' },
-
-      { type: 'image', src: '/images/summer-stem-kitchen.jpeg', alt: 'Kid focused on pouring batter into a muffin tin in a sunny kitchen, real measurement and ratios happening', caption: 'Six summer STEM activities live in the kitchen. Ratios, reactions, timing, temperature. The "lab" is whatever counter is closest.' },
       { type: 'heading', level: 3, text: '9. Ice cream chemistry in a bag' },
       { type: 'paragraph', text: 'Cream, sugar, vanilla in a small bag. Ice and salt in a big bag. Shake for ten minutes. The salt-and-ice combo drops below freezing, the cream solidifies, and they eat their experiment. Freezing-point depression in action.' },
       { type: 'heading', level: 3, text: '10. Baking ratios' },
@@ -6976,6 +6971,9 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Butter, chocolate, ice, a wax crayon, cheese. Same plate, same sun (outside) or same low oven. Which melts first? Predict, then test. Material science the easy way.' },
       { type: 'heading', level: 3, text: '14. Cook with a budget challenge' },
       { type: 'paragraph', text: 'Twenty dollars, a meal for the family, one trip to the store. They plan, shop, cook, and present the bill. This sits at the intersection of STEM and real life, which is why it lives next to [real-world math activities](/blog/real-world-math-activities).' },
+
+      { type: 'image', src: '/images/summer-stem-kitchen.jpeg', alt: 'Kid focused on pouring batter into a muffin tin in a sunny kitchen, real measurement and ratios happening', caption: 'Six summer STEM activities live in the kitchen. Ratios, reactions, timing, temperature. The "lab" is whatever counter is closest.' },
+
       { type: 'heading', level: 2, text: 'On a trip, in the car, or waiting somewhere (5 ideas)' },
       { type: 'paragraph', text: 'Summer is when you end up in airports, on long drives, and waiting for ferries. These are STEM-friendly anywhere.' },
       { type: 'heading', level: 3, text: '15. Map and compass orienteering' },
