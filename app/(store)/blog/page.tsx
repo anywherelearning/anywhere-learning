@@ -223,6 +223,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     'homeschool-journey',
     'nature-learning',
     'real-world-skills',
+    'stem-for-kids',
     'travel-worldschool',
   ];
 
