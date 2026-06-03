@@ -6506,7 +6506,6 @@ const posts: BlogPost[] = [
 
   {
     slug: 'engineering-for-kids',
-    draft: true,
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
@@ -6626,7 +6625,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'stem-activities-by-age',
-    draft: true,
     title: 'STEM Activities by Age: A Real Parent\'s Guide from 5 to 14',
     excerpt: 'Age-appropriate STEM activities for kids 5 to 14, organized by what actually matches their attention span and ability to handle abstraction. Concrete examples, common parent mistakes, and how STEAM fits at each stage.',
     hook: 'The right STEM activity for your 7-year-old is almost never a kit. It\'s usually a stick, a measuring cup, and twenty minutes.',
@@ -6720,7 +6718,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'lego-stem-activities',
-    draft: true,
     title: 'LEGO STEM Activities: 15 Build Challenges That Teach Real Engineering',
     excerpt: 'Your kid already owns the best engineering kit ever made. Here are 15 LEGO STEM challenges, sorted by age, that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     hook: 'Following a LEGO set is sequencing. Free-building from a bin with constraints is engineering. Most kids never get to do the second one.',
@@ -6821,7 +6818,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'science-fair-project-ideas',
-    draft: true,
     title: '30+ Science Fair Project Ideas (No Kit, No Volcano)',
     excerpt: 'Thirty-plus science fair project ideas for kids ages 7 to 14, sorted into plants, physics, chemistry, behavior, and environment. Real variables, real measurements, no baking-soda volcano.',
     hook: 'If one more kid presents a baking-soda volcano this year, the fair will collapse under its own foam. Here are 30+ projects that actually test something.',
@@ -6908,7 +6904,6 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'summer-stem-activities-for-kids',
-    draft: true,
     title: 'Summer STEM Activities for Kids: 25 Ideas (No Camp Required)',
     excerpt: 'Twenty-five summer STEM activities for kids, organized by setting: backyard, kitchen, road trips, and rainy days. No camp, no curriculum, no expensive kits required.',
     hook: 'You don\'t need a $600 STEM camp to keep their brain on. You need a backyard, a hose, and one hour a day.',
