@@ -2551,6 +2551,8 @@ const resources: ResourcePage[] = [
         text: 'For the broader real-world learning framework that STEM sits inside, see our [real-world learning guide](/guides/real-world-learning). For the outdoor STEM angle in particular, [nature-based learning](/guides/nature-based-learning) covers the place-based science approach.',
       },
 
+      { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle' },
+
       {
         type: 'cta',
         text: 'New to all of this? Our free guide has simple real-world activities to start this week. No prep, no curriculum, no pressure.',
