@@ -2245,8 +2245,8 @@ const resources: ResourcePage[] = [
     ],
     readTimeMinutes: 16,
     author: amelie,
-    heroImage: '/images/outdoor-stem-hero.jpeg',
-    heroImageAlt: 'Two kids exploring a beach log together, the kind of self-directed outdoor problem-solving that is real-world STEM',
+    heroImage: '/images/stem-hero.jpeg',
+    heroImageAlt: 'Dad and two kids building a wooden garden bed together with a drill and lumber, real-world engineering happening in the backyard',
     content: [
       {
         type: 'summary',
@@ -2361,6 +2361,13 @@ const resources: ResourcePage[] = [
         ],
       },
       { type: 'product-callout', slug: 'outdoor-stem-challenges' },
+
+      {
+        type: 'image',
+        src: '/images/stem-test-tubes.jpeg',
+        alt: 'Young kid standing behind a tray of test tubes filled with blue, green, and yellow liquid, beaming about a homemade chemistry experiment',
+        caption: 'Kits are fine. The point is what the kid does next. The good question is not "did the experiment work?" but "what would you change to test something different?"',
+      },
 
       {
         type: 'heading',
