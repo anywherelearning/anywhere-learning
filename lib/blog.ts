@@ -6803,7 +6803,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'But you do not need any of them to do real engineering with LEGO, and I want to push back on the idea that you have to spend three hundred dollars on a kit to "do STEM." Every challenge in this post works with the bricks you already own. Mechanical advantage, structural design, force, motion, iteration: all of that is taught by a pile of regular bricks and a problem to solve. The robotics kits are an add-on, not a prerequisite.' },
       { type: 'pull-quote', text: 'You do not need a kit. You need a constraint. The pile in the corner is already the kit.' },
 
-      { type: 'bundle-callout', slug: 'creativity-mega-bundle' },
+      { type: 'bundle-callout', slug: 'creativity-mega-bundle', pinned: true },
 
       { type: 'heading', level: 2, text: 'Three common parent mistakes' },
       { type: 'paragraph', text: 'I see these in almost every homeschool family I talk to, including ours when we are not paying attention.' },
