@@ -6928,8 +6928,8 @@ const posts: BlogPost[] = [
     keywords: ['summer STEM activities', 'summer activities for kids STEM', 'STEM at home summer', 'summer STEM ideas', 'no camp summer activities', 'homeschool summer STEM', 'backyard STEM', 'kitchen science summer'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImage: '/images/outdoor-stem-hero.jpeg',
-    heroImageAlt: 'Kids building a water channel in the backyard with sticks, rocks, and a garden hose',
+    heroImage: '/images/summer-stem-hero.jpeg',
+    heroImageAlt: 'Two kids actively shaping sand at the edge of a mountain lake on a summer afternoon, the kind of hands-on outdoor STEM that makes summer count without a camp',
     content: [
       { type: 'summary', text: 'Summer STEM activities for kids are most effective when they are short, hands-on, and built into ordinary days at home. Two or three focused STEM sessions a week (20 to 40 minutes each), paired with lots of unstructured outdoor and creative play, beats most camps for retention and curiosity. Below are 25 specific summer STEM activities organized by setting: backyard, kitchen, road trips, and rainy days.' },
       { type: 'paragraph', text: 'Every June, the same question shows up in parent chats: "What are we doing about summer?" For some families it is travel logistics. For others it is camp signups. For most, somewhere underneath, there is the quiet worry that the kids are about to spend ten weeks losing whatever they picked up by May.' },
@@ -6959,6 +6959,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Yes, really. Slope, friction, speed, mass. Vary the slope. Vary the water amount. Time the runs. Graph them on the fridge that night. For ten more variations on this kind of thing, see [outdoor STEM challenges](/blog/outdoor-stem-challenges).' },
       { type: 'heading', level: 2, text: 'Kitchen STEM (6 ideas)' },
       { type: 'paragraph', text: 'The kitchen is the second-most-underrated STEM lab in your house, after the backyard. Heat, chemistry, ratios, and measurement live in every recipe. The full case for it lives in [kitchen learning lab](/blog/kitchen-learning-lab); the summer-specific picks below are the ones that double as treats.' },
+
+      { type: 'image', src: '/images/summer-stem-kitchen.jpeg', alt: 'Kid focused on pouring batter into a muffin tin in a sunny kitchen, real measurement and ratios happening', caption: 'Six summer STEM activities live in the kitchen. Ratios, reactions, timing, temperature. The "lab" is whatever counter is closest.' },
       { type: 'heading', level: 3, text: '9. Ice cream chemistry in a bag' },
       { type: 'paragraph', text: 'Cream, sugar, vanilla in a small bag. Ice and salt in a big bag. Shake for ten minutes. The salt-and-ice combo drops below freezing, the cream solidifies, and they eat their experiment. Freezing-point depression in action.' },
       { type: 'heading', level: 3, text: '10. Baking ratios' },
