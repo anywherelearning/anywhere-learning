@@ -6773,6 +6773,9 @@ const posts: BlogPost[] = [
         'Hopper that releases marbles. Build a chute or funnel that drops marbles, one at a time, into a cup on the floor. Gravity does the work.',
         'Modular shelter. Build a small house or shelter for a stuffed animal or minifigure that has a door that opens, a roof that stays on, and walls that do not fall in.',
       ]},
+
+      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Kid wearing wearable LEGO glasses he designed and built from regular bricks, blue lenses and a multicolored bridge across the nose', caption: 'Not a set. Not a kit. Just a kid, a bin of regular bricks, and the idea "I want to make glasses." That is the whole assignment.' },
+
       { type: 'heading', level: 2, text: '5 mid-level challenges (ages 8-10)' },
       { type: 'paragraph', text: 'Now we introduce moving parts, force, and a target. These take longer (an afternoon, sometimes two) and the failure rate is the point. Do not bail your kid out.' },
       { type: 'list', ordered: true, items: [
@@ -6799,9 +6802,6 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What about LEGO Mindstorms, Boost, or Spike?' },
       { type: 'paragraph', text: 'Short version: if you already own one of the robotics kits, fantastic. Use it. The motors and sensors open up real coding and feedback loops.' },
       { type: 'paragraph', text: 'But you do not need any of them to do real engineering with LEGO, and I want to push back on the idea that you have to spend three hundred dollars on a kit to "do STEM." Every challenge in this post works with the bricks you already own. Mechanical advantage, structural design, force, motion, iteration: all of that is taught by a pile of regular bricks and a problem to solve. The robotics kits are an add-on, not a prerequisite.' },
-
-      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Kid wearing wearable LEGO glasses he designed and built from regular bricks, blue lenses and a multicolored bridge across the nose', caption: 'Not a set. Not a kit. Just a kid, a bin of regular bricks, and the idea "I want to make glasses." That is the whole assignment.' },
-
       { type: 'pull-quote', text: 'You do not need a kit. You need a constraint. The pile in the corner is already the kit.' },
 
       { type: 'bundle-callout', slug: 'creativity-mega-bundle', pinned: true },
