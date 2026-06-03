@@ -6753,6 +6753,9 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Why LEGO is a near-perfect engineering medium' },
       { type: 'paragraph', text: 'There is a reason engineering schools have actually used LEGO in classrooms for decades. The pieces are modular, which means they snap together in predictable ways. They are reusable, so a failed bridge becomes a successful catapult an hour later. The combinations are basically infinite. And the cost per use, if you already own them, is approximately zero.' },
       { type: 'paragraph', text: 'Compare that to most other "STEM kits" you can buy. Single-use cardboard. Specialty parts you cannot replace when one breaks. Packaging more elaborate than the project itself. LEGO sidesteps all of that. The pile in your living room is a lifetime engineering supply.' },
+
+      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Kid wearing wearable LEGO glasses he designed and built from regular bricks, blue lenses and a multicolored bridge across the nose', caption: 'Not a set. Not a kit. Just a kid, a bin of regular bricks, and the idea "I want to make glasses." That is the whole assignment.' },
+
       { type: 'heading', level: 2, text: 'The framework: a challenge, a constraint, one bin' },
       { type: 'paragraph', text: 'Here is the whole system, and you can use it for every challenge in this post and a hundred more you make up yourself:' },
       { type: 'list', ordered: true, items: [
