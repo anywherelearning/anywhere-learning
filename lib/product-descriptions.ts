@@ -395,7 +395,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Testing, troubleshooting, and iteration framework',
       'Extension challenges for more complex builds',
     ],
-    skillTags: ['Engineering', 'Physics', 'Problem-Solving', 'Design', 'Cause & Effect'],
+    skillTags: ['STEM', 'Engineering', 'Physics', 'Problem-Solving', 'Design', 'Cause & Effect'],
     format: 'Project Guide',
   },
   'survival-base': {
@@ -486,7 +486,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Design iteration: test, adjust, refine',
       'Exhibition planning and artist statement writing',
     ],
-    skillTags: ['Physics', 'Art', 'Engineering', 'Design', 'Expression'],
+    skillTags: ['STEM', 'Physics', 'Art', 'Engineering', 'Design', 'Expression'],
     format: 'Project Guide',
   },
   'build-a-museum': {
@@ -516,7 +516,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Schedule building and plan pitching',
       'Version 2 revision after testing the plan',
     ],
-    skillTags: ['Real-World Math', 'Budgeting', 'Problem-Solving'],
+    skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Problem-Solving'],
     format: 'Project Guide',
   },
   'kitchen-math-challenge': {
@@ -529,7 +529,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Kitchen curveball that forces quick problem-solving',
       'Version 2 revision to improve the plan',
     ],
-    skillTags: ['Real-World Math', 'Planning', 'Life Skills'],
+    skillTags: ['STEM', 'Real-World Math', 'Planning', 'Life Skills'],
     format: 'Project Guide',
   },
   'smart-shopper': {
@@ -542,7 +542,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Marketing tactics identification',
       'Written recommendation with evidence-based reasoning',
     ],
-    skillTags: ['Real-World Math', 'Critical Thinking', 'Decision-Making'],
+    skillTags: ['STEM', 'Real-World Math', 'Critical Thinking', 'Decision-Making'],
     format: 'Project Guide',
   },
 
@@ -595,7 +595,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Energy-saving plan with estimated savings',
       'Kilowatt-hour and unit pricing activities',
     ],
-    skillTags: ['Measurement', 'Data Analysis', 'Environmental Maths', 'Budgeting'],
+    skillTags: ['STEM', 'Measurement', 'Data Analysis', 'Environmental Maths', 'Budgeting'],
     format: 'Project Guide',
   },
   'farmers-market-challenge': {
@@ -634,7 +634,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Seed budget and cost estimation',
       'Seasonal planting schedule',
     ],
-    skillTags: ['Geometry', 'Measurement', 'Budgeting', 'Science', 'Planning'],
+    skillTags: ['STEM', 'Geometry', 'Measurement', 'Budgeting', 'Science', 'Planning'],
     format: 'Project Guide',
   },
   'party-planner-math': {
@@ -686,7 +686,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Player and team comparison',
       'Data interpretation and prediction challenges',
     ],
-    skillTags: ['Statistics', 'Data Visualisation', 'Averages', 'Percentages', 'Analysis'],
+    skillTags: ['STEM', 'Statistics', 'Data Visualisation', 'Averages', 'Percentages', 'Analysis'],
     format: 'Project Guide',
   },
 
@@ -806,7 +806,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Smart rules and boundaries for AI use',
       'Reflection prompts and family discussion guides',
     ],
-    skillTags: ['AI Literacy', 'Critical Thinking', 'Digital Citizenship'],
+    skillTags: ['STEM', 'AI Literacy', 'Critical Thinking', 'Digital Citizenship'],
     format: 'Project Guide',
   },
   'algorithm-awareness': {
@@ -819,7 +819,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Feed audit and control strategies',
       'Reflection on personal online habits',
     ],
-    skillTags: ['Algorithm Literacy', 'Critical Thinking', 'Digital Citizenship', 'Self-Awareness'],
+    skillTags: ['STEM', 'Algorithm Literacy', 'Critical Thinking', 'Digital Citizenship', 'Self-Awareness'],
     format: 'Project Guide',
   },
   'bias-fairness-lab': {
@@ -832,7 +832,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Designing more equitable AI decisions',
       'Ethics discussion prompts and reflection',
     ],
-    skillTags: ['Ethics', 'Critical Thinking', 'AI Literacy', 'Empathy', 'Fairness'],
+    skillTags: ['STEM', 'Ethics', 'Critical Thinking', 'AI Literacy', 'Empathy', 'Fairness'],
     format: 'Project Guide',
   },
   'build-ai-helper': {
@@ -845,7 +845,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'User experience and interaction design',
       'Presentation of final AI helper concept',
     ],
-    skillTags: ['AI Literacy', 'Design Thinking', 'Ethics', 'Planning', 'Creativity'],
+    skillTags: ['STEM', 'AI Literacy', 'Design Thinking', 'Ethics', 'Planning', 'Creativity'],
     format: 'Project Guide',
   },
   'create-with-ai': {
@@ -884,7 +884,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Verification habit building',
       'Real examples of AI mistakes to investigate',
     ],
-    skillTags: ['Critical Thinking', 'AI Literacy', 'Research', 'Verification'],
+    skillTags: ['STEM', 'Critical Thinking', 'AI Literacy', 'Research', 'Verification'],
     format: 'Project Guide',
   },
   'healthy-tech-boundaries': {
