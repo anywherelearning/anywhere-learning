@@ -13,6 +13,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import EmailForm from '@/components/EmailForm';
 import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
+import { categoryIcons } from '@/components/blog/CategoryIcons';
 
 const POSTS_PER_PAGE = 6;
 
@@ -41,17 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-const motifByCategory: Record<BlogCategory, string> = {
-  'ai-digital-literacy': '⌘',
-  'creativity-maker': '✂',
-  'future-ready-skills': '⊞',
-  'homeschool-journey': '☘',
-  'nature-learning': '✿',
-  'real-world-skills': '$',
-  'stem-for-kids': '⚙',
-  'travel-worldschool': '✈',
-};
-
 const imgBgByCategory: Record<BlogCategory, string> = {
   'ai-digital-literacy': '#F5E7BC',
   'creativity-maker': '#F2DECF',
@@ -70,7 +60,7 @@ function formatDate(date: string): string {
 
 function PostCard({ post }: { post: BlogPost }) {
   const cat = blogCategories[post.category];
-  const motif = motifByCategory[post.category] || '◆';
+  const motif = categoryIcons[post.category] || null;
   const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
     <Link
@@ -135,7 +125,7 @@ function PostCard({ post }: { post: BlogPost }) {
 
 function FeaturedPostCard({ post }: { post: BlogPost }) {
   const cat = blogCategories[post.category];
-  const motif = motifByCategory[post.category] || '◆';
+  const motif = categoryIcons[post.category] || null;
   const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
     <Link
