@@ -13,6 +13,7 @@ export type BlogCategory =
   | 'homeschool-journey'
   | 'nature-learning'
   | 'real-world-skills'
+  | 'stem-for-kids'
   | 'travel-worldschool';
 
 export interface BlogAuthor {
@@ -65,6 +66,7 @@ export const blogCategories: Record<BlogCategory, { label: string; color: string
   'homeschool-journey':  { label: 'Homeschool Journey',       color: '#d4a373' },
   'nature-learning':     { label: 'Nature & Outdoor STEM',    color: '#6b8e6b' },
   'real-world-skills':   { label: 'Real-World Learning',      color: '#8b7355' },
+  'stem-for-kids':       { label: 'STEM for Kids',            color: '#3d5c3b' },
   'travel-worldschool':  { label: 'Travel & Worldschooling',  color: '#c4836a' },
 };
 
@@ -76,6 +78,7 @@ export const blogProductDefaults: Record<BlogCategory, { product: string; bundle
   'homeschool-journey':  { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
   'nature-learning':     { product: 'nature-journal-walks',    bundle: 'seasonal-bundle' },
   'real-world-skills':   { product: 'budget-challenge',        bundle: 'real-world-mega-bundle' },
+  'stem-for-kids':       { product: 'outdoor-stem-challenges', bundle: 'outdoor-toolkit-bundle' },
   'travel-worldschool':  { product: 'travel-day',              bundle: 'real-world-mega-bundle' },
 };
 
@@ -6507,7 +6510,7 @@ const posts: BlogPost[] = [
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
-    category: 'creativity-maker',
+    category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-06-03',
     dateModified: '2026-06-03',
@@ -6627,7 +6630,7 @@ const posts: BlogPost[] = [
     title: 'STEM Activities by Age: A Real Parent\'s Guide from 5 to 14',
     excerpt: 'Age-appropriate STEM activities for kids 5 to 14, organized by what actually matches their attention span and ability to handle abstraction. Concrete examples, common parent mistakes, and how STEAM fits at each stage.',
     hook: 'The right STEM activity for your 7-year-old is almost never a kit. It\'s usually a stick, a measuring cup, and twenty minutes.',
-    category: 'real-world-skills',
+    category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-06-03',
     dateModified: '2026-06-03',
@@ -6721,7 +6724,7 @@ const posts: BlogPost[] = [
     title: 'LEGO STEM Activities: 15 Build Challenges That Teach Real Engineering',
     excerpt: 'Your kid already owns the best engineering kit ever made. Here are 15 LEGO STEM challenges, sorted by age, that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     hook: 'Following a LEGO set is sequencing. Free-building from a bin with constraints is engineering. Most kids never get to do the second one.',
-    category: 'creativity-maker',
+    category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-06-03',
     dateModified: '2026-06-03',
@@ -6822,7 +6825,7 @@ const posts: BlogPost[] = [
     title: '30+ Science Fair Project Ideas (No Kit, No Volcano)',
     excerpt: 'Thirty-plus science fair project ideas for kids ages 7 to 14, sorted into plants, physics, chemistry, behavior, and environment. Real variables, real measurements, no baking-soda volcano.',
     hook: 'If one more kid presents a baking-soda volcano this year, the fair will collapse under its own foam. Here are 30+ projects that actually test something.',
-    category: 'nature-learning',
+    category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-06-03',
     dateModified: '2026-06-03',
@@ -6909,7 +6912,7 @@ const posts: BlogPost[] = [
     title: 'Summer STEM Activities for Kids: 25 Ideas (No Camp Required)',
     excerpt: 'Twenty-five summer STEM activities for kids, organized by setting: backyard, kitchen, road trips, and rainy days. No camp, no curriculum, no expensive kits required.',
     hook: 'You don\'t need a $600 STEM camp to keep their brain on. You need a backyard, a hose, and one hour a day.',
-    category: 'real-world-skills',
+    category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-06-03',
     dateModified: '2026-06-03',

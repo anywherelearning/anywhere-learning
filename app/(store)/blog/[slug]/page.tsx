@@ -77,6 +77,7 @@ const motifByCategory: Record<BlogCategory, string> = {
   'homeschool-journey': '☘',
   'nature-learning': '✿',
   'real-world-skills': '$',
+  'stem-for-kids': '⚙',
   'travel-worldschool': '✈',
 };
 
@@ -87,6 +88,7 @@ const imgBgByCategory: Record<BlogCategory, string> = {
   'homeschool-journey': '#DAD7CD',
   'nature-learning': '#CFDCC4',
   'real-world-skills': '#DDE5D2',
+  'stem-for-kids': '#CFDCC4',
   'travel-worldschool': '#E8C8AE',
 };
 

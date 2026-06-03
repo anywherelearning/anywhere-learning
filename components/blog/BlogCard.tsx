@@ -47,6 +47,13 @@ const categoryIcons: Record<BlogCategory, ReactNode> = {
       <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
     </svg>
   ),
+  'stem-for-kids': (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2v6h.01" /><path d="M18 2v6h.01" /><path d="M6 16h12" />
+      <path d="M6 2h12l-3 6a3 3 0 11-6 0L6 2z" /><path d="M6 22h12" />
+      <path d="M9 16v3a3 3 0 003 3 3 3 0 003-3v-3" />
+    </svg>
+  ),
   'travel-worldschool': (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round">
       <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
