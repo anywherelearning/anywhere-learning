@@ -6517,8 +6517,8 @@ const posts: BlogPost[] = [
     keywords: ['engineering for kids', 'engineering activities for kids', 'engineering projects for kids', 'STEM engineering activities', 'hands-on engineering projects', 'engineering challenges for kids', 'engineering for kids at home', 'engineering activities by age', 'no-kit engineering projects'],
     readTimeMinutes: 12,
     author: amelie,
-    heroImage: '/images/stem-hero.jpeg',
-    heroImageAlt: 'Family building a wooden garden bed together with a drill and lumber, the kind of hands-on engineering project that builds real skills',
+    heroImage: '/images/engineering-hero.jpeg',
+    heroImageAlt: 'Dad and son working a mitre saw together in the workshop, cutting lumber for a real project, the kind of hands-on engineering kids remember for life',
     content: [
       { type: 'summary', text: 'Engineering for kids is the practice of solving real problems by designing, building, and testing things with real materials. It is the most accessible part of STEM because the materials are cheap (cardboard, tape, sticks, string), the bar to start is low, and kids naturally want to build things. Research from the National Science Foundation and the National Academy of Engineering shows that hands-on engineering education builds spatial reasoning, problem-solving, persistence, and the design-thinking process used in every real-world technical field. The most effective engineering activities for kids ages 5 to 14 are not kits with one correct outcome; they are open challenges where the kid figures out their own approach, fails, iterates, and finishes.' },
       { type: 'paragraph', text: 'Walk into most "engineering for kids" sections at a bookstore and you will find kits. A box of pre-cut wood, instructions, a tiny screwdriver, and a final product that looks exactly like the one on the front. The kid follows the steps, builds the thing, and learns one important skill: following instructions. They have not done engineering.' },
@@ -6560,6 +6560,8 @@ const posts: BlogPost[] = [
         'Build an insulated cup that keeps an ice cube frozen longest. Test against a control.',
         'Build a wind-powered cart that can roll across a table.',
       ] },
+
+      { type: 'image', src: '/images/engineering-water-channel.jpeg', alt: 'Two kids shaping a sand channel and dam at the edge of a lake, water flowing through the structure they built', caption: 'A wet sand channel is a real fluid-dynamics lab. Slope, flow rate, dam strength, reservoir capacity. Kids will engineer for an hour and not call it that once.' },
 
       { type: 'heading', level: 3, text: 'Advanced projects (ages 11 to 14)' },
       { type: 'list', ordered: true, items: [
