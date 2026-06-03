@@ -2066,7 +2066,7 @@ const resources: ResourcePage[] = [
     title: 'Life Skills for Kids by Age: What to Teach and When',
     excerpt: 'The essential life skills every child needs, organized by age group. What each skill is, why it matters developmentally, and what it looks like when kids actually have it.',
     topic: 'future-ready-skills',
-    publishedAt: '2026-05-14',
+    publishedAt: '2026-03-21',
     keywords: [
       'life skills for kids by age',
       'essential life skills kids should know',
@@ -2236,7 +2236,7 @@ const resources: ResourcePage[] = [
     title: 'STEM for Kids: A Real-World Guide for Parents',
     excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no chemistry sets, no robotics camps required.',
     topic: 'stem-for-kids',
-    publishedAt: '2026-06-03',
+    publishedAt: '2026-03-21',
     keywords: [
       'STEM for kids', 'STEM activities for kids', 'STEM at home',
       'real world STEM', 'engineering for kids', 'science for kids',
