@@ -6639,8 +6639,8 @@ const posts: BlogPost[] = [
     keywords: ['STEM activities by age', 'age appropriate STEM', 'STEM for 7 year old', 'STEM activities for kids', 'STEM for 5 year old', 'STEM for 10 year old', 'STEM for 12 year old', 'homeschool STEM activities', 'STEAM activities by age', 'hands on STEM'],
     readTimeMinutes: 12,
     author: amelie,
-    heroImage: '/images/stem-hero.jpeg',
-    heroImageAlt: 'Kids working on a hands-on building project at a kitchen table with measuring tools and scrap materials',
+    heroImage: '/images/stem-by-age-hero.jpeg',
+    heroImageAlt: 'Mom and two kids of different ages sitting inside the snow fort they built together in the woods, shovel in the foreground, real winter engineering at family scale',
     content: [
       { type: 'summary', text: 'Age-appropriate STEM is not about subject difficulty, it is about attention span and how much abstraction a kid can hold. Ages 5 to 7 need sensory, hands-on building. Ages 8 to 10 can run structured multi-step experiments. Ages 11 to 13 can handle multi-week projects, real budgets, and early AI literacy. Ages 14 and up are ready for apprentice-style deep dives with real stakes.' },
       { type: 'paragraph', text: 'One of the most common parenting questions about STEM is some version of "what is the right kit or activity for my 7-year-old?" The honest answer is that the kit is rarely the answer. The bigger question is what your kid can actually focus on, build, and figure out at their stage. Our [full guide to STEM for kids](/guides/stem-for-kids) lays out the framework. This post breaks it down by age.' },
@@ -6659,6 +6659,9 @@ const posts: BlogPost[] = [
         'Count out ingredients for cookies. Six chocolate chips per cookie. Real math.',
       ] },
       { type: 'paragraph', text: 'At this age, narration is half the lesson. You do not need to explain Newton\'s laws. You just say "look, when you made the ramp steeper, the car went faster" and let them notice. They are recording the pattern, even if they cannot name it.' },
+
+      { type: 'image', src: '/images/stem-by-age-tire-derable.jpeg', alt: 'Kid eating homemade tire d\'erable maple taffy off a stick, eyes wide, sticky strands of cooled syrup running down', caption: 'Maple taffy is real chemistry: temperature control, sugar supersaturation, phase change. The lesson lands faster when the experiment is delicious.' },
+
       { type: 'heading', level: 2, text: 'Ages 8 to 10: hands-on engineering and structured experiments' },
       { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click.' },
       { type: 'list', ordered: false, items: [
