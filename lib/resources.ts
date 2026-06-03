@@ -2347,6 +2347,12 @@ const resources: ResourcePage[] = [
         text: 'Science for kids works best when it is hands-on, observational, and tied to a specific place they can return to. The classroom version (read chapter, do worksheet, watch demo) is the weakest format research has tested. Direct experience is the strongest.',
       },
       {
+        type: 'image',
+        src: '/images/stem-test-tubes.jpeg',
+        alt: 'Young kid standing behind a tray of test tubes filled with blue, green, and yellow liquid, beaming about a homemade chemistry experiment',
+        caption: 'Kits are fine. The point is what the kid does next. The good question is not "did the experiment work?" but "what would you change to test something different?"',
+      },
+      {
         type: 'paragraph',
         text: 'High-leverage science activities for kids ages 6 to 14:',
       },
@@ -2361,13 +2367,6 @@ const resources: ResourcePage[] = [
         ],
       },
       { type: 'product-callout', slug: 'outdoor-stem-challenges' },
-
-      {
-        type: 'image',
-        src: '/images/stem-test-tubes.jpeg',
-        alt: 'Young kid standing behind a tray of test tubes filled with blue, green, and yellow liquid, beaming about a homemade chemistry experiment',
-        caption: 'Kits are fine. The point is what the kid does next. The good question is not "did the experiment work?" but "what would you change to test something different?"',
-      },
 
       {
         type: 'heading',
