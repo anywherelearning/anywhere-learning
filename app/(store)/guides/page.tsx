@@ -293,18 +293,20 @@ export default function ResourcesPage() {
               )}
             </div>
 
-            {/* Wide: Homeschool Journey */}
-            {wide && (
-              <ScrollReveal>
-                <GuideCard r={wide} variant="wide" />
-              </ScrollReveal>
-            )}
-
-            {/* Wide: STEM for Kids */}
-            {wide2 && (
-              <ScrollReveal className="mt-6">
-                <GuideCard r={wide2} variant="wide" />
-              </ScrollReveal>
+            {/* Row 3: Homeschool Journey + STEM side by side */}
+            {(wide || wide2) && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+                {wide && (
+                  <ScrollReveal className="h-full">
+                    <GuideCard r={wide} variant="featured" />
+                  </ScrollReveal>
+                )}
+                {wide2 && (
+                  <ScrollReveal className="h-full" delay={80}>
+                    <GuideCard r={wide2} variant="featured" />
+                  </ScrollReveal>
+                )}
+              </div>
             )}
           </div>
         </section>
