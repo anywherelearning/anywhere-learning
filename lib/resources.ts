@@ -2234,7 +2234,7 @@ const resources: ResourcePage[] = [
   {
     slug: 'stem-for-kids',
     title: 'STEM for Kids: A Real-World Guide for Parents',
-    excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no kits, no chemistry sets required.',
+    excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no chemistry sets, no robotics camps required.',
     topic: 'stem-for-kids',
     publishedAt: '2026-06-03',
     keywords: [
