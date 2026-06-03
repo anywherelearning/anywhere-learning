@@ -6754,8 +6754,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'There is a reason engineering schools have actually used LEGO in classrooms for decades. The pieces are modular, which means they snap together in predictable ways. They are reusable, so a failed bridge becomes a successful catapult an hour later. The combinations are basically infinite. And the cost per use, if you already own them, is approximately zero.' },
       { type: 'paragraph', text: 'Compare that to most other "STEM kits" you can buy. Single-use cardboard. Specialty parts you cannot replace when one breaks. Packaging more elaborate than the project itself. LEGO sidesteps all of that. The pile in your living room is a lifetime engineering supply.' },
 
-      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Kid wearing wearable LEGO glasses he designed and built from regular bricks, blue lenses and a multicolored bridge across the nose', caption: 'Not a set. Not a kit. Just a kid, a bin of regular bricks, and the idea "I want to make glasses." That is the whole assignment.' },
-
       { type: 'heading', level: 2, text: 'The framework: a challenge, a constraint, one bin' },
       { type: 'paragraph', text: 'Here is the whole system, and you can use it for every challenge in this post and a hundred more you make up yourself:' },
       { type: 'list', ordered: true, items: [
@@ -6801,6 +6799,9 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What about LEGO Mindstorms, Boost, or Spike?' },
       { type: 'paragraph', text: 'Short version: if you already own one of the robotics kits, fantastic. Use it. The motors and sensors open up real coding and feedback loops.' },
       { type: 'paragraph', text: 'But you do not need any of them to do real engineering with LEGO, and I want to push back on the idea that you have to spend three hundred dollars on a kit to "do STEM." Every challenge in this post works with the bricks you already own. Mechanical advantage, structural design, force, motion, iteration: all of that is taught by a pile of regular bricks and a problem to solve. The robotics kits are an add-on, not a prerequisite.' },
+
+      { type: 'image', src: '/images/lego-glasses.jpeg', alt: 'Kid wearing wearable LEGO glasses he designed and built from regular bricks, blue lenses and a multicolored bridge across the nose', caption: 'Not a set. Not a kit. Just a kid, a bin of regular bricks, and the idea "I want to make glasses." That is the whole assignment.' },
+
       { type: 'pull-quote', text: 'You do not need a kit. You need a constraint. The pile in the corner is already the kit.' },
 
       { type: 'bundle-callout', slug: 'creativity-mega-bundle', pinned: true },
