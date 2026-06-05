@@ -60,6 +60,7 @@ import {
 import { useToast } from './Toast';
 import PlannerAssistant from './PlannerAssistant';
 import PlanLibrary from './PlanLibrary';
+import DashboardCalendar from './DashboardCalendar';
 import type {
   CalendarEvent,
   Child,
@@ -70,6 +71,7 @@ import type {
 } from './dashboard-types';
 
 export type PlanSubTab = 'ai' | 'program' | 'manual' | 'library';
+export type PlanView = 'week' | 'month';
 
 interface DashboardPlanProps {
   children: Child[];
@@ -83,6 +85,15 @@ interface DashboardPlanProps {
    */
   subTab: PlanSubTab;
   onSubTabChange: (subTab: PlanSubTab) => void;
+  /**
+   * Week vs Month for the shared schedule view. The Calendar is folded in
+   * here as the Month view instead of being its own top-level tab. Lifted to
+   * the parent so a "see it on the calendar" jump can land on Month.
+   */
+  planView: PlanView;
+  onPlanViewChange: (view: PlanView) => void;
+  /** Jump to a sibling tab (used by the embedded Calendar's Open links). */
+  onJumpToTab: (tab: 'today' | 'log') => void;
 }
 
 const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -163,9 +174,13 @@ function defaultGoalsForChild(
 export default function DashboardPlan({
   children,
   focusedKidId,
+  onChildrenChange,
   onOpenFamilySetup,
   subTab,
   onSubTabChange,
+  planView,
+  onPlanViewChange,
+  onJumpToTab,
 }: DashboardPlanProps) {
   const toast = useToast();
   const [weekStart, setWeekStart] = useState<string>(() => isoMonday(todayIso()));
@@ -873,45 +888,98 @@ export default function DashboardPlan({
         <div className="flex flex-wrap items-end justify-between gap-3" style={{ marginBottom: 4 }}>
           <div>
             <div style={{ display: 'inline-flex' }}>
-              <Eyebrow>Your week</Eyebrow>
+              <Eyebrow>Your schedule</Eyebrow>
             </div>
-            <h2
-              style={{
-                fontFamily: ALTokens.font,
-                fontWeight: 700,
-                fontSize: 24,
-                letterSpacing: '-0.01em',
-                color: ALTokens.color.ink,
-                margin: '10px 0 0',
-                fontVariantNumeric: 'tabular-nums',
-              }}
-            >
-              {events.length === 0
-                ? 'Nothing planned yet'
-                : `${events.length} ${events.length === 1 ? 'activity' : 'activities'} placed`}
-            </h2>
+            {planView === 'week' && (
+              <h2
+                style={{
+                  fontFamily: ALTokens.font,
+                  fontWeight: 700,
+                  fontSize: 24,
+                  letterSpacing: '-0.01em',
+                  color: ALTokens.color.ink,
+                  margin: '10px 0 0',
+                  fontVariantNumeric: 'tabular-nums',
+                }}
+              >
+                {events.length === 0
+                  ? 'Nothing planned yet'
+                  : `${events.length} ${events.length === 1 ? 'activity' : 'activities'} placed`}
+              </h2>
+            )}
           </div>
-          {/* Adjust with AI: a contextual action on the week itself, not a
-              separate door. Sends the parent to the assistant to tweak the
-              week by chat ("make Tuesday lighter", "we're traveling Friday").
-              The assistant degrades gracefully if AI is not switched on yet. */}
-          {events.length > 0 && (
-            <GhostButton
-              small
-              onClick={() => {
-                setSubTab('ai');
-                if (typeof window !== 'undefined') {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+          <div className="flex items-center" style={{ gap: 8, flexWrap: 'wrap' }}>
+            {/* Week / Month toggle. The Calendar is folded in here as the Month
+                view instead of being its own top-level tab. */}
+            <div
+              style={{
+                display: 'inline-flex',
+                gap: 3,
+                padding: 3,
+                background: ALTokens.color.sand,
+                borderRadius: ALTokens.radius.pill,
+                border: `1px solid ${ALTokens.color.line}`,
               }}
-              style={{ padding: '8px 14px' }}
             >
-              <ALIcons.Chat size={14} color={ALTokens.color.forest} />
-              Adjust with AI
-            </GhostButton>
-          )}
+              {(['week', 'month'] as const).map((v) => {
+                const on = planView === v;
+                return (
+                  <button
+                    key={v}
+                    type="button"
+                    onClick={() => onPlanViewChange(v)}
+                    aria-pressed={on}
+                    className="cursor-pointer"
+                    style={{
+                      padding: '6px 16px',
+                      borderRadius: ALTokens.radius.pill,
+                      border: 0,
+                      cursor: 'pointer',
+                      fontFamily: ALTokens.font,
+                      fontSize: 13,
+                      fontWeight: on ? 700 : 500,
+                      color: on ? ALTokens.color.cream : ALTokens.color.muted,
+                      background: on ? ALTokens.color.forest : 'transparent',
+                      transition: `all 160ms ${ALTokens.ease}`,
+                    }}
+                  >
+                    {v === 'week' ? 'Week' : 'Month'}
+                  </button>
+                );
+              })}
+            </div>
+            {/* Adjust with AI: a contextual action on the week itself. */}
+            {planView === 'week' && events.length > 0 && (
+              <GhostButton
+                small
+                onClick={() => {
+                  setSubTab('ai');
+                  if (typeof window !== 'undefined') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+                style={{ padding: '8px 14px' }}
+              >
+                <ALIcons.Chat size={14} color={ALTokens.color.forest} />
+                Adjust with AI
+              </GhostButton>
+            )}
+          </div>
         </div>
 
+        {/* Month view: the Calendar, folded in. Week view: the day cards. */}
+        {planView === 'month' && (
+          <DashboardCalendar
+            embedded
+            onJumpToTab={onJumpToTab}
+            children={children}
+            focusedKidId={focusedKidId}
+            onChildrenChange={onChildrenChange}
+            onOpenFamilySetup={onOpenFamilySetup}
+          />
+        )}
+        {planView === 'week' && (
+          <>
         {/* Catch-up: gentle, permission-giving prompt when earlier days this
             week have activities that never got marked done. One tap reshuffles
             them into the days that are left. Never naggy, dismissable. */}
@@ -1231,6 +1299,8 @@ export default function DashboardPlan({
             </article>
           );
         })}
+          </>
+        )}
       </section>
 
       {/* ─── Last run summary ──────────────────────────────────────────── */}

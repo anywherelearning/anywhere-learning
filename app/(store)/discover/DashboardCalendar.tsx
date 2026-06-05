@@ -26,6 +26,10 @@ import type { CalendarEvent, LogEntry, Child } from './dashboard-types';
 interface DashboardCalendarProps {
   onJumpToTab: (tab: 'today' | 'log') => void;
   children: Child[];
+  /** When rendered inside another tab (the Plan tab's Month view), drop the
+   *  redundant eyebrow + supporting copy and shrink the month title so there
+   *  is only one page header. */
+  embedded?: boolean;
   /** Page-level kid focus. Filters monthEntries display to that kid when set.
    *  Calendar events don't yet have a per-kid column (schema follow-up), so
    *  events stay family-wide for now while logged entries respect the focus. */
@@ -102,6 +106,7 @@ export default function DashboardCalendar({
   focusedKidId,
   onChildrenChange: _onChildrenChange,
   onOpenFamilySetup: _onOpenFamilySetup,
+  embedded = false,
 }: DashboardCalendarProps) {
   const now = new Date();
   const [viewYear, setViewYear] = useState(now.getFullYear());
@@ -462,18 +467,23 @@ export default function DashboardCalendar({
 
   return (
     <div className="w-full">
-      {/* Editorial header — eyebrow + h1 + supporting copy + month nav */}
-      <section className="pb-6 mb-6" style={{ borderBottom: `1px solid ${ALTokens.color.line}` }}>
+      {/* Editorial header. When embedded in the Plan tab's Month view we drop
+          the eyebrow + supporting copy and shrink the title so the page has a
+          single header (the Plan tab supplies the Week/Month context). */}
+      <section
+        className={embedded ? 'mb-5' : 'pb-6 mb-6'}
+        style={embedded ? undefined : { borderBottom: `1px solid ${ALTokens.color.line}` }}
+      >
         <div className="flex justify-between items-end flex-wrap gap-4">
           <div>
-            <Eyebrow>Calendar · plan ahead</Eyebrow>
+            {!embedded && <Eyebrow>Calendar · plan ahead</Eyebrow>}
             <h1
               className="dashboard-greeting"
               style={{
-                margin: '14px 0 0',
+                margin: embedded ? 0 : '14px 0 0',
                 fontFamily: ALTokens.font,
                 fontWeight: 700,
-                fontSize: 40,
+                fontSize: embedded ? 22 : 40,
                 lineHeight: 1.05,
                 color: ALTokens.color.ink,
                 letterSpacing: '-0.02em',
@@ -481,17 +491,19 @@ export default function DashboardCalendar({
             >
               {MONTHS[viewMonth]} {viewYear}
             </h1>
-            <p
-              style={{
-                margin: '12px 0 0',
-                fontSize: 15.5,
-                color: ALTokens.color.body,
-                maxWidth: 520,
-                lineHeight: 1.6,
-              }}
-            >
-              Click any day to plan something. Mark it done to log it.
-            </p>
+            {!embedded && (
+              <p
+                style={{
+                  margin: '12px 0 0',
+                  fontSize: 15.5,
+                  color: ALTokens.color.body,
+                  maxWidth: 520,
+                  lineHeight: 1.6,
+                }}
+              >
+                Click any day to plan something. Mark it done to log it.
+              </p>
+            )}
           </div>
           <div className="flex gap-2 items-center flex-wrap">
             <button

@@ -3,19 +3,19 @@
 import { useState, useCallback, useEffect } from 'react';
 import DashboardToday from './DashboardToday';
 import DashboardTracker from './DashboardTracker';
-import DashboardCalendar from './DashboardCalendar';
-import DashboardPlan, { type PlanSubTab } from './DashboardPlan';
+import DashboardPlan, { type PlanSubTab, type PlanView } from './DashboardPlan';
 import FamilyManager from './FamilyManager';
 import { ToastProvider } from './Toast';
 import { fetchChildren } from './dashboard-api';
 import { ALIcons, ALTokens, ChildAvatar } from './dashboard-shared';
 import type { Child } from './dashboard-types';
 
+// Three top tabs. The Calendar is no longer its own tab: it is folded into
+// the Plan tab as a Week / Month toggle. "Activity Log" is the portfolio.
 const TABS = [
   { key: 'today', label: 'Today' },
   { key: 'plan', label: 'Plan' },
   { key: 'log', label: 'Activity Log' },
-  { key: 'calendar', label: 'Calendar' },
 ] as const;
 
 type TabKey = (typeof TABS)[number]['key'];
@@ -23,10 +23,9 @@ type TabKey = (typeof TABS)[number]['key'];
 // Icon + bottom-nav label per tab. Editorial top bar stays text-only,
 // the phone bottom nav gets icon + label so it reads at a glance.
 const TAB_META: Record<TabKey, { Icon: typeof ALIcons.Sun; mobileLabel: string }> = {
-  today:    { Icon: ALIcons.Sun,  mobileLabel: 'Today' },
-  plan:     { Icon: ALIcons.Path, mobileLabel: 'Plan' },
-  log:      { Icon: ALIcons.Book, mobileLabel: 'Log' },
-  calendar: { Icon: ALIcons.Cal,  mobileLabel: 'Calendar' },
+  today: { Icon: ALIcons.Sun,  mobileLabel: 'Today' },
+  plan:  { Icon: ALIcons.Path, mobileLabel: 'Plan' },
+  log:   { Icon: ALIcons.Book, mobileLabel: 'Log' },
 };
 
 /**
@@ -46,6 +45,9 @@ export default function DiscoverPage() {
   // Plan tab's sub-tab lives here so sibling tabs (Today's "Browse the full
   // library" CTA, etc.) can deep-link into a specific sub-view via jumpToTab.
   const [planSubTab, setPlanSubTab] = useState<PlanSubTab>('ai');
+  // Week vs Month for the Plan tab's schedule view. Lifted here so a
+  // "see it on the calendar" jump can land directly on Month.
+  const [planView, setPlanView] = useState<PlanView>('week');
 
   useEffect(() => {
     fetchChildren()
@@ -61,10 +63,20 @@ export default function DiscoverPage() {
 
   // Accepts an optional `subTab` so callers can land directly on a Plan
   // sub-view in one click (e.g. Today's "Browse the full library" → library).
-  const jumpToTab = useCallback((tab: TabKey, subTab?: PlanSubTab) => {
-    setActiveTab(tab);
-    if (tab === 'plan' && subTab) setPlanSubTab(subTab);
-  }, []);
+  // 'calendar' is a redirect alias now that the Calendar is folded into the
+  // Plan tab: it lands on Plan and switches the schedule to the Month view.
+  const jumpToTab = useCallback(
+    (tab: TabKey | 'calendar', subTab?: PlanSubTab) => {
+      if (tab === 'calendar') {
+        setActiveTab('plan');
+        setPlanView('month');
+        return;
+      }
+      setActiveTab(tab);
+      if (tab === 'plan' && subTab) setPlanSubTab(subTab);
+    },
+    [],
+  );
 
   // If the currently-focused kid is removed via FamilyManager, drop back to All.
   useEffect(() => {
@@ -299,6 +311,9 @@ export default function DiscoverPage() {
               onOpenFamilySetup={() => setFamilyOpen(true)}
               subTab={planSubTab}
               onSubTabChange={setPlanSubTab}
+              planView={planView}
+              onPlanViewChange={setPlanView}
+              onJumpToTab={jumpToTab}
             />
           )}
           {activeTab === 'log' && (
@@ -307,15 +322,6 @@ export default function DiscoverPage() {
               children={children}
               focusedKidId={focusedKidId}
               onFocusedKidChange={setFocusedKidId}
-              onChildrenChange={setChildren}
-              onOpenFamilySetup={() => setFamilyOpen(true)}
-            />
-          )}
-          {activeTab === 'calendar' && (
-            <DashboardCalendar
-              onJumpToTab={jumpToTab}
-              children={children}
-              focusedKidId={focusedKidId}
               onChildrenChange={setChildren}
               onOpenFamilySetup={() => setFamilyOpen(true)}
             />
