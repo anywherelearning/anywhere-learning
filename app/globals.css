@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-/*
- * Tailwind v4 auto-scans the whole project for class names. The PDF.js
- * worker bundle in /public is minified ES module text with very long lines,
- * which causes the scanner to pull garbage tokens out of it and emit
- * malformed arbitrary-value utilities. Skip /public entirely.
- */
-@source not "../public/**/*";
-
 @theme {
   --color-cream: #faf9f6;
   --color-forest: #588157;

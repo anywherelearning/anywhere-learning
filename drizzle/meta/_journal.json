@@ -8,20 +8,6 @@
       "when": 1779331733742,
       "tag": "0000_salty_reavers",
       "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1779479684892,
-      "tag": "0001_big_marvel_zombies",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1779931625796,
-      "tag": "0002_whole_overlord",
-      "breakpoints": true
     }
   ]
 }
