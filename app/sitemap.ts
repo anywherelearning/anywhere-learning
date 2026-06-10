@@ -5,6 +5,7 @@ import { eq } from 'drizzle-orm';
 import { getAllPosts } from '@/lib/blog';
 import { getAllResources } from '@/lib/resources';
 import { getFallbackProducts } from '@/lib/fallback-products';
+import { IDEAS_DATA } from '@/lib/ideas';
 
 // When adding a new public page, add it to staticRoutes below.
 // Excluded (not indexable): /sign-in, /sign-up, /account/*, /checkout/success
@@ -113,7 +114,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  const baseRoutes = [...staticRoutes, ...categoryRoutes, ...blogUrls, ...resourceUrls];
+  // /ideas — free printable activity checklists. Listing page + 8 category
+  // pages + every individual list page. These are strong top-of-funnel SEO
+  // landing pages, so they get solid priority.
+  const ideasRoutes: MetadataRoute.Sitemap = [
+    {
+      url: 'https://anywherelearning.co/ideas',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...IDEAS_DATA.map((cat) => ({
+      url: `https://anywherelearning.co/ideas/${cat.slug}`,
+      lastModified: siteLastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...IDEAS_DATA.flatMap((cat) =>
+      cat.lists.map((list) => ({
+        url: `https://anywherelearning.co/ideas/${list.slug}`,
+        lastModified: siteLastUpdated,
+        changeFrequency: 'monthly' as const,
+        priority: 0.75,
+      })),
+    ),
+  ];
+
+  const baseRoutes = [...staticRoutes, ...categoryRoutes, ...blogUrls, ...resourceUrls, ...ideasRoutes];
 
   if (!process.env.DATABASE_URL) return baseRoutes;
 

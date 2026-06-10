@@ -13,6 +13,7 @@ import {
 import { formatDate } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getArticleBodyText } from '@/lib/content-blocks';
 import type { ContentBlock } from '@/lib/content-blocks';
+import { getCategoryBySlug } from '@/lib/ideas';
 import RelatedBlogPosts from '@/components/resources/RelatedBlogPosts';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
@@ -77,6 +78,85 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Maps each guide pillar to the most relevant /ideas category hub. Linking to
+ * the category (rather than a single list) lets authority flow to every list
+ * inside it. Broad guides point at the main /ideas hub.
+ */
+const GUIDE_TO_IDEAS: Record<string, { href: string; label: string; text: string }> = {
+  'ai-digital-literacy': {
+    href: '/ideas/ai-digital',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable AI and digital literacy checklists for kids.',
+  },
+  'creativity-maker-activities': {
+    href: '/ideas/creative',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable creative and maker checklists for kids.',
+  },
+  'worldschooling-guide': {
+    href: '/ideas/travel',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable travel and worldschool checklists for kids.',
+  },
+  'life-skills-for-kids': {
+    href: '/ideas/life-skills',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable life skills and chores checklists for kids.',
+  },
+  'nature-based-learning': {
+    href: '/ideas/nature',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable nature and outdoor checklists for kids.',
+  },
+  'stem-for-kids': {
+    href: '/ideas/stem',
+    label: 'Browse the checklists',
+    text: 'Want ready-to-use activities? Browse our free printable STEM and engineering checklists for kids.',
+  },
+  'real-world-learning': {
+    href: '/ideas',
+    label: 'Browse all checklists',
+    text: 'Want ready-to-use activities? Browse our free printable activity checklists across every category.',
+  },
+  'homeschool-journey': {
+    href: '/ideas',
+    label: 'Browse all checklists',
+    text: 'Want ready-to-use activities? Browse our free printable activity checklists across every category.',
+  },
+}
+
+/**
+ * Inject a CTA card linking the guide to its matching free idea-list category.
+ * Cross-links pillars to the printable checklists. Skips if already present.
+ */
+function injectIdeaListLink(guideSlug: string, content: ContentBlock[]): ContentBlock[] {
+  const target = GUIDE_TO_IDEAS[guideSlug];
+  if (!target) return content;
+
+  // Validate category exists when it's a category link (not the /ideas hub).
+  const catSlug = target.href.split('/ideas/')[1];
+  if (catSlug && !getCategoryBySlug(catSlug)) return content;
+
+  const alreadyLinks = content.some(
+    (b) => b.type === 'cta' && b.href.includes('/ideas'),
+  );
+  if (alreadyLinks) return content;
+
+  const ctaBlock: ContentBlock = {
+    type: 'cta',
+    text: target.text,
+    href: target.href,
+    label: target.label,
+  };
+
+  const lastParagraphIdx = content.map((b) => b.type).lastIndexOf('paragraph');
+  if (lastParagraphIdx === -1) return [...content, ctaBlock];
+  const result = [...content];
+  result.splice(lastParagraphIdx + 1, 0, ctaBlock);
+  return result;
+}
+
 function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopic; recommendedProduct?: string; recommendedBundle?: string }): ContentBlock[] {
   const hasProduct = resource.content.some((b) => b.type === 'product-callout');
   const hasBundle = resource.content.some((b) => b.type === 'bundle-callout');
@@ -125,7 +205,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
   if (!resource) notFound();
 
   const topicMeta = resourceTopics[resource.topic];
-  const contentWithCallouts = injectCallouts(resource);
+  const contentWithCallouts = injectIdeaListLink(slug, injectCallouts(resource));
   const toc = getTableOfContents(contentWithCallouts);
 
   const articleBody = getArticleBodyText(resource.content);

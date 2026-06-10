@@ -17,6 +17,7 @@ import {
 } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getHowToSteps } from '@/lib/content-blocks';
 import { getResourceBySlug } from '@/lib/resources';
+import { getListByBlogSlug } from '@/lib/ideas';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
@@ -148,6 +149,39 @@ function findSafeInjectionSlot(
     if (beforeOk && afterOk) return probe;
   }
   return initial;
+}
+
+/**
+ * If this blog post has a matching free idea list (its slug appears as a
+ * `blogSlug` in the ideas data), inject a CTA card linking to that printable
+ * checklist. Cross-links the two so authority flows both ways and readers can
+ * grab the free download. Skips silently if the post already links to /ideas.
+ */
+function injectIdeaListCta(blogSlug: string, content: BlogContentBlock[]): BlogContentBlock[] {
+  const match = getListByBlogSlug(blogSlug);
+  if (!match) return content;
+
+  // Don't double up if the author already added an /ideas link.
+  const alreadyLinks = content.some(
+    (b) => b.type === 'cta' && b.href.includes('/ideas/'),
+  );
+  if (alreadyLinks) return content;
+
+  const ctaBlock: BlogContentBlock = {
+    type: 'cta',
+    text: `Want this as a free printable? Grab the ${match.list.title} checklist to print and keep.`,
+    href: `/ideas/${match.list.slug}`,
+    label: 'Get the free checklist',
+  };
+
+  // Insert near the end, at the last paragraph boundary, so the link sits in
+  // the body content (better for SEO) rather than after the article wrapper.
+  const lastParagraphIdx = content.map((b) => b.type).lastIndexOf('paragraph');
+  if (lastParagraphIdx === -1) return [...content, ctaBlock];
+
+  const result = [...content];
+  result.splice(lastParagraphIdx + 1, 0, ctaBlock);
+  return result;
 }
 
 function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
@@ -290,7 +324,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const cat = blogCategories[post.category];
   const pillar = post.pillarSlug ? getResourceBySlug(post.pillarSlug) : undefined;
   const related = getRelatedPosts(post);
-  const contentWithCallouts = injectCallouts(post);
+  const contentWithCallouts = injectIdeaListCta(slug, injectCallouts(post));
   const toc = getTableOfContents(contentWithCallouts);
 
   const articleBody = getArticleBodyText(post);

@@ -54,14 +54,22 @@ function Logo() {
   );
 }
 
-const NAV_ITEMS = [
+const NAV_ITEMS_BEFORE = [
   { href: '/', label: 'Home' },
   { href: '/shop', label: 'Library' },
   { href: '/join', label: 'Membership' },
-  { href: '/guides', label: 'Learn' },
-  { href: '/blog', label: 'Blog' },
+];
+
+const NAV_ITEMS_AFTER = [
   { href: '/about', label: 'About' },
 ];
+
+const RESOURCES_ITEMS = [
+  { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
+  { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
+  { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
+];
+
 
 function isActive(pathname: string | null, href: string): boolean {
   if (!pathname) return false;
@@ -73,9 +81,11 @@ export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const pathname = usePathname();
   const focusTrapRef = useFocusTrap(mobileOpen);
   const accountRef = useRef<HTMLDivElement>(null);
+  const resourcesRef = useRef<HTMLDivElement>(null);
   const [auth, setAuth] = useState<AuthState>({
     isSignedIn: false,
     initial: '',
@@ -90,6 +100,7 @@ export default function SiteHeader() {
   useEffect(() => {
     setMobileOpen(false);
     setAccountOpen(false);
+    setResourcesOpen(false);
   }, [pathname]);
 
   // Scroll listener
@@ -106,6 +117,7 @@ export default function SiteHeader() {
       if (e.key === 'Escape') {
         setMobileOpen(false);
         setAccountOpen(false);
+        setResourcesOpen(false);
       }
     };
     document.addEventListener('keydown', onKey);
@@ -123,6 +135,18 @@ export default function SiteHeader() {
     document.addEventListener('mousedown', onClick);
     return () => document.removeEventListener('mousedown', onClick);
   }, [accountOpen]);
+
+  // Click-outside for resources dropdown
+  useEffect(() => {
+    if (!resourcesOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (resourcesRef.current && !resourcesRef.current.contains(e.target as Node)) {
+        setResourcesOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, [resourcesOpen]);
 
   // Body scroll lock when mobile menu open
   useEffect(() => {
@@ -154,7 +178,97 @@ export default function SiteHeader() {
             {/* Primary nav - desktop */}
             <nav aria-label="Primary" className="hidden lg:block">
               <ul className="flex items-center gap-8 list-none p-0 m-0">
-                {NAV_ITEMS.map((item) => {
+                {NAV_ITEMS_BEFORE.map((item) => {
+                  const active = isActive(pathname, item.href);
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={`relative inline-block font-body font-medium text-[15px] py-1.5 transition-colors no-underline ${
+                          active
+                            ? 'text-forest-dark'
+                            : 'text-gray-600 hover:text-forest-dark'
+                        }`}
+                      >
+                        {item.label}
+                        {active && (
+                          <span
+                            aria-hidden="true"
+                            className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-1 h-1 rounded-full bg-forest"
+                          />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+
+                {/* Resources dropdown */}
+                <li>
+                  <div ref={resourcesRef} className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setResourcesOpen((o) => !o)}
+                      aria-haspopup="menu"
+                      aria-expanded={resourcesOpen}
+                      className={`relative inline-flex items-center gap-1 font-body font-medium text-[15px] py-1.5 transition-colors bg-transparent border-0 cursor-pointer ${
+                        RESOURCES_ITEMS.some((r) => isActive(pathname, r.href))
+                          ? 'text-forest-dark'
+                          : 'text-gray-600 hover:text-forest-dark'
+                      }`}
+                    >
+                      Resources
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                        className={`transition-transform duration-200 ${resourcesOpen ? 'rotate-180' : ''}`}
+                      >
+                        <path d="M3 4.5L6 7.5L9 4.5" />
+                      </svg>
+                      {RESOURCES_ITEMS.some((r) => isActive(pathname, r.href)) && (
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-1 h-1 rounded-full bg-forest"
+                        />
+                      )}
+                    </button>
+                    {resourcesOpen && (
+                      <div
+                        role="menu"
+                        className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[240px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[70]"
+                      >
+                        {RESOURCES_ITEMS.map((item) => {
+                          const active = isActive(pathname, item.href);
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              role="menuitem"
+                              className={`flex flex-col gap-0.5 px-4 py-3 no-underline hover:bg-[#F2EFE4] transition-colors ${
+                                active ? 'bg-[#F2EFE4]' : ''
+                              }`}
+                            >
+                              <span className={`font-body font-semibold text-[14px] ${active ? 'text-forest-dark' : 'text-ink'}`}>
+                                {item.label}
+                              </span>
+                              <span className="font-body text-[12px] text-gray-500">
+                                {item.desc}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </li>
+
+                {NAV_ITEMS_AFTER.map((item) => {
                   const active = isActive(pathname, item.href);
                   return (
                     <li key={item.href}>
@@ -385,7 +499,18 @@ export default function SiteHeader() {
                   </Link>
                 </li>
               )}
-              {NAV_ITEMS.map((item) => (
+              {NAV_ITEMS_BEFORE.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <MobileResourcesAccordion />
+              {NAV_ITEMS_AFTER.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -457,6 +582,51 @@ function AccountMenuItem({ href, children }: { href: string; children: React.Rea
     >
       {children}
     </Link>
+  );
+}
+
+/** Collapsible Resources section for the mobile menu. */
+function MobileResourcesAccordion() {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink bg-transparent border-x-0 border-t-0 cursor-pointer text-left"
+      >
+        Resources
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          className={`transition-transform duration-200 text-gray-400 ${open ? 'rotate-180' : ''}`}
+        >
+          <path d="M3 4.5L6 7.5L9 4.5" />
+        </svg>
+      </button>
+      {open && (
+        <ul className="list-none p-0 m-0 pl-5 border-b border-[#D8D4C5]">
+          {RESOURCES_ITEMS.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="flex flex-col py-3.5 no-underline"
+              >
+                <span className="font-display text-[20px] text-forest-dark">{item.label}</span>
+                <span className="font-body text-[13px] text-gray-500 mt-0.5">{item.desc}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
   );
 }
 
