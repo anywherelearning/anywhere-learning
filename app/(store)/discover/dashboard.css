@@ -1,0 +1,166 @@
+/* Dashboard-specific responsive rules.
+   Imported once via the discover layout. Targets the .dashboard-root scope so
+   it can't leak into the rest of the site. */
+
+.dashboard-root {
+  /* Default desktop padding handled by the inner page wrapper */
+  background: #faf9f6;
+}
+
+/* ─── Almanac motion keyframes ─────────────────────────────────────────── */
+
+@keyframes al-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes al-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.15); }
+}
+
+/* ─── Almanac top bar: desktop vs phone swap ───────────────────────────── */
+
+@media (max-width: 767px) {
+  /* Phone: collapse the desktop nav into a single icon+label, surface bottom nav */
+  .dashboard-root .al-top-tabs { display: none !important; }
+  .dashboard-root .al-mobile-title { display: inline-flex !important; }
+  .dashboard-root .al-bottom-nav { display: flex !important; }
+  .dashboard-root .al-topbar-inner { padding: 0 14px !important; }
+}
+
+@media (min-width: 768px) {
+  .dashboard-root .al-topbar-inner { padding: 0 28px !important; }
+}
+
+/* ─── Build-it-yourself goal grid: 2 / 3 / 4 columns by viewport ──────── */
+
+@media (min-width: 640px) {
+  .dashboard-root .al-goal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-root .al-goal-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ─── Today: coverage + alternates grid ──────────────────────────────── */
+
+.dashboard-root .al-today-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .dashboard-root .al-today-grid {
+    grid-template-columns: minmax(280px, 360px) 1fr;
+  }
+}
+
+/* ─── Today: day rhythm strip ────────────────────────────────────────── */
+
+.dashboard-root .al-day-rhythm {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.dashboard-root .al-day-rhythm::-webkit-scrollbar {
+  height: 0;
+  display: none;
+}
+
+/* ─── Sub-tab pills: hide label, keep icon, on the smallest screens ──── */
+
+@media (max-width: 520px) {
+  .dashboard-root .al-subtab-btn[aria-current="page"] .al-subtab-label {
+    display: inline;
+  }
+  .dashboard-root .al-subtab-btn:not([aria-current="page"]) .al-subtab-label {
+    display: none;
+  }
+  .dashboard-root .al-subtab-btn {
+    flex: 0 0 auto !important;
+    padding: 11px 12px !important;
+  }
+}
+
+/* Mobile pass (under 768px) */
+@media (max-width: 767px) {
+  /* Tab bar: smaller padding, smaller chips */
+  .dashboard-root .dashboard-tabs button {
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* Calendar grid: collapse to a more vertical layout */
+  .dashboard-root .calendar-grid {
+    /* Keep grid columns at 7 but shrink min-height so cells stack info nicely */
+  }
+  .dashboard-root .calendar-grid button {
+    min-height: 60px !important;
+    padding: 4px 5px !important;
+  }
+  .dashboard-root .calendar-grid .calendar-event-pill {
+    font-size: 9px !important;
+    padding: 1px 4px !important;
+  }
+
+  /* Greeting headline: smaller on mobile */
+  .dashboard-root .dashboard-greeting {
+    font-size: 40px !important;
+  }
+  .dashboard-root .dashboard-section-title {
+    font-size: 28px !important;
+  }
+
+  /* Inline grids with auto-fit: tighter on mobile */
+  .dashboard-root .grid-stats > * {
+    padding: 12px 14px !important;
+  }
+
+  /* Filter row: stack on mobile */
+  .dashboard-root .filter-row {
+    gap: 8px !important;
+  }
+  .dashboard-root .filter-row > * {
+    flex: 1 1 calc(50% - 4px) !important;
+    min-width: 0 !important;
+  }
+  .dashboard-root .filter-row > [data-full-row] {
+    flex-basis: 100% !important;
+  }
+
+  /* Smart picks / suggestion strips: less aggressive grids */
+  .dashboard-root .picks-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Recommendation hero card: stack image below content */
+  .dashboard-root .recommendation-card {
+    grid-template-columns: 1fr !important;
+    padding: 4px 4px 4px 14px !important;
+  }
+  .dashboard-root .recommendation-card .recommendation-image {
+    aspect-ratio: 4/3 !important;
+    margin: 0 0 8px 0 !important;
+  }
+}
+
+/* Tiny screens: simpler stat row */
+@media (max-width: 480px) {
+  .dashboard-root .grid-stats {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .dashboard-root .picks-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .dashboard-root .dashboard-greeting {
+    font-size: 36px !important;
+  }
+}
