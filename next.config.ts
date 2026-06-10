@@ -61,6 +61,29 @@ const nextConfig: NextConfig = {
         destination: "/guides/real-world-learning",
         permanent: true,
       },
+
+      // ── Membership pivot: routes that no longer exist ──
+      // Old pins, posts, and emails still point at the a-la-carte store.
+      { source: "/membership", destination: "/join", permanent: true },
+      { source: "/cart", destination: "/join", permanent: true },
+      { source: "/bundles", destination: "/join", permanent: true },
+      { source: "/shop/bundles", destination: "/join", permanent: true },
+      { source: "/shop/master-bundle", destination: "/join", permanent: true },
+      // Old signed-in library URL moved when account pages were restructured
+      { source: "/account/library/:path*", destination: "/library", permanent: true },
+
+      // ── Retired products with no direct successor ──
+      { source: "/shop/time-capsule", destination: "/library", permanent: true },
+      { source: "/shop/creative-thinking-pack", destination: "/library", permanent: true },
+
+      // ── Renamed product slugs ──
+      { source: "/shop/kitchen-maths-cooking", destination: "/shop/kitchen-math-challenge", permanent: true },
+      { source: "/shop/my-small-business-project", destination: "/shop/micro-business", permanent: true },
+
+      // ── Renamed or retired blog posts ──
+      { source: "/blog/homeschool-road-trip", destination: "/blog/homeschool-while-traveling", permanent: true },
+      { source: "/blog/worldschool-three-kids", destination: "/blog/worldschool-two-kids", permanent: true },
+      { source: "/blog/teach-kids-second-language", destination: "/guides/worldschooling-guide", permanent: true },
     ];
   },
 };
