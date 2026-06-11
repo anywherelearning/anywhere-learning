@@ -131,7 +131,10 @@ export default function StickyMobileBuy({
 
   return (
     <div className="fixed bottom-0 inset-x-0 z-50 md:hidden animate-slide-up-bar">
-      <div className="bg-forest border-t border-forest-dark shadow-2xl px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] flex items-center gap-3">
+      <div
+        className="bg-forest border-t border-forest-dark shadow-2xl px-4 py-3 flex items-center gap-3"
+        style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+      >
         <div className="flex-1 min-w-0">
           <p className="text-cream text-sm font-medium truncate">{productName}</p>
           <p className="text-cream text-sm font-semibold">{formatPrice(priceCents)}</p>
