@@ -136,6 +136,7 @@ export default async function SiteFooter() {
           <FooterColumn title="Read &amp; Learn">
             <FooterLink href="/guides">Pillar guides</FooterLink>
             <FooterLink href="/blog">Blog</FooterLink>
+            <FooterLink href="/ideas">Activity ideas</FooterLink>
             <FooterLink href="/about">About Amelie</FooterLink>
             <FooterLink href="/faq">FAQ</FooterLink>
           </FooterColumn>

@@ -238,11 +238,11 @@ export default function SiteHeader() {
                         />
                       )}
                     </button>
-                    {resourcesOpen && (
-                      <div
-                        role="menu"
-                        className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[240px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[70]"
-                      >
+                    {/* Always in the DOM (crawlable links); toggled with CSS */}
+                    <div
+                      role="menu"
+                      className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[240px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[70] ${resourcesOpen ? '' : 'hidden'}`}
+                    >
                         {RESOURCES_ITEMS.map((item) => {
                           const active = isActive(pathname, item.href);
                           return (
@@ -264,7 +264,6 @@ export default function SiteHeader() {
                           );
                         })}
                       </div>
-                    )}
                   </div>
                 </li>
 
@@ -611,21 +610,20 @@ function MobileResourcesAccordion() {
           <path d="M3 4.5L6 7.5L9 4.5" />
         </svg>
       </button>
-      {open && (
-        <ul className="list-none p-0 m-0 pl-5 border-b border-[#D8D4C5]">
-          {RESOURCES_ITEMS.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="flex flex-col py-3.5 no-underline"
-              >
-                <span className="font-display text-[20px] text-forest-dark">{item.label}</span>
-                <span className="font-body text-[13px] text-gray-500 mt-0.5">{item.desc}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {/* Always in the DOM (crawlable links); toggled with CSS */}
+      <ul className={`list-none p-0 m-0 pl-5 border-b border-[#D8D4C5] ${open ? '' : 'hidden'}`}>
+        {RESOURCES_ITEMS.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className="flex flex-col py-3.5 no-underline"
+            >
+              <span className="font-display text-[20px] text-forest-dark">{item.label}</span>
+              <span className="font-body text-[13px] text-gray-500 mt-0.5">{item.desc}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </li>
   );
 }

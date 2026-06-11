@@ -116,24 +116,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // /ideas — free printable activity checklists. Listing page + 8 category
   // pages + every individual list page. These are strong top-of-funnel SEO
-  // landing pages, so they get solid priority.
+  // landing pages, so they get solid priority. lastModified comes from real
+  // per-list dates, not deploy time: Google ignores lastmod once it proves
+  // unreliable, which forfeits recrawl prioritization site-wide.
+  const ideaListDate = (list: { updated?: string; published?: string }) =>
+    new Date(list.updated ?? list.published ?? '2026-06-10');
+  const ideaCategoryDate = (cat: (typeof IDEAS_DATA)[number]) =>
+    new Date(Math.max(...cat.lists.map((l) => ideaListDate(l).getTime())));
+  const ideasHubDate = new Date(
+    Math.max(...IDEAS_DATA.map((c) => ideaCategoryDate(c).getTime())),
+  );
+
   const ideasRoutes: MetadataRoute.Sitemap = [
     {
       url: 'https://anywherelearning.co/ideas',
-      lastModified: siteLastUpdated,
+      lastModified: ideasHubDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     ...IDEAS_DATA.map((cat) => ({
       url: `https://anywherelearning.co/ideas/${cat.slug}`,
-      lastModified: siteLastUpdated,
+      lastModified: ideaCategoryDate(cat),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
     ...IDEAS_DATA.flatMap((cat) =>
       cat.lists.map((list) => ({
         url: `https://anywherelearning.co/ideas/${list.slug}`,
-        lastModified: siteLastUpdated,
+        lastModified: ideaListDate(list),
         changeFrequency: 'monthly' as const,
         priority: 0.75,
       })),

@@ -76,8 +76,9 @@ export default function IdeasChecklist({
               src={`/ideas/${list.slug}.jpg`}
               alt={list.title}
               fill
+              priority
               className="object-cover object-top"
-              sizes="180px"
+              sizes="(max-width: 640px) 100vw, 180px"
             />
           </div>
 
@@ -93,7 +94,10 @@ export default function IdeasChecklist({
               Free printable checklist
             </p>
             <p className="text-[15px] leading-[1.55] text-gray-600 mb-4">
-              Download and print this list to pin on the fridge, toss in your bag, or keep on the counter. Pick whichever version works best for your printer.
+              Download and print this list to pin on the fridge, toss in your bag, or keep on the counter. Pick whichever version works best for your printer.{' '}
+              <strong className="font-semibold text-gray-700">
+                Instant download. No email required.
+              </strong>
             </p>
             {pdfUrls ? (
               <div className="flex flex-wrap gap-2.5">

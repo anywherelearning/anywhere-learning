@@ -4,16 +4,25 @@ import { getAllCategories, getTotalIdeas, getListCount } from '@/lib/ideas';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
 
 export const metadata: Metadata = {
-  title: 'Activity Ideas',
+  // Absolute so the keyword-led tag isn't pushed past the SERP cutoff
+  title: { absolute: 'Activity Ideas for Kids: 15 Free Printable Checklists' },
   description:
-    'Free printable activity checklists for kids. Nature walks, kitchen math, life skills, STEM challenges, creative projects, travel learning, AI literacy, and mindset. No signup required.',
+    '320+ activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. No signup, no email, just print.',
   alternates: { canonical: 'https://anywherelearning.co/ideas' },
   openGraph: {
-    title: 'Activity Ideas | Anywhere Learning',
+    title: 'Activity Ideas for Kids: 15 Free Printable Checklists',
     description:
-      'Free printable activity checklists for kids. Browse by category: nature, kitchen, life skills, STEM, creative, travel, AI, and mindset. No signup required.',
+      '320+ activity ideas for kids in 15 free printable checklists. Browse by category: nature, kitchen, life skills, STEM, creative, travel, AI, and mindset.',
     url: 'https://anywherelearning.co/ideas',
     type: 'website',
+    images: [
+      {
+        url: 'https://anywherelearning.co/og-default.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Anywhere Learning activity idea checklists',
+      },
+    ],
   },
 };
 
@@ -21,21 +30,32 @@ export default function IdeasPage() {
   const categories = getAllCategories();
   const totalLists = categories.reduce((sum, c) => sum + getListCount(c), 0);
 
+  /* CollectionPage anchors the page entity and links it to the sitewide
+     Organization/WebSite graph declared in app/layout.tsx */
   const itemListLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Activity Ideas',
-    description:
-      'Free activity idea checklists for kids across eight categories.',
+    '@type': 'CollectionPage',
+    '@id': 'https://anywherelearning.co/ideas#webpage',
     url: 'https://anywherelearning.co/ideas',
-    numberOfItems: categories.length,
-    itemListElement: categories.map((cat, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: cat.name,
-      url: `https://anywherelearning.co/ideas/${cat.slug}`,
-      description: cat.blurb,
-    })),
+    name: 'Activity Ideas for Kids: 15 Free Printable Checklists',
+    description:
+      'Free activity idea checklists for kids across eight categories. No signup required.',
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    isPartOf: { '@id': 'https://anywherelearning.co/#website' },
+    publisher: { '@id': 'https://anywherelearning.co/#organization' },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: 'Activity Ideas',
+      numberOfItems: categories.length,
+      itemListElement: categories.map((cat, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: cat.name,
+        url: `https://anywherelearning.co/ideas/${cat.slug}`,
+        description: cat.blurb,
+      })),
+    },
   };
 
   return (

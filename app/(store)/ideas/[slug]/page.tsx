@@ -13,6 +13,7 @@ import {
 } from '@/lib/ideas';
 import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
 import { getIdeaListSeo } from '@/lib/idea-list-seo';
+import { getPostBySlug } from '@/lib/blog';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import IdeasChecklist from './IdeasChecklist';
@@ -59,6 +60,16 @@ export async function generateMetadata({
         description,
         url: `https://anywherelearning.co/ideas/${category.slug}`,
         type: 'website',
+        // Explicit image: page-level openGraph replaces the layout default
+        // entirely (shallow merge), so omitting this shipped no og:image.
+        images: [
+          {
+            url: 'https://anywherelearning.co/og-default.jpg',
+            width: 1200,
+            height: 630,
+            alt: `${category.name} activity idea checklists`,
+          },
+        ],
       },
     };
   }
@@ -131,6 +142,16 @@ const ICON_PATHS: Record<string, string> = {
     'M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z',
 };
 
+/** '2026-06-10' -> 'June 2026' (string split, no timezone surprises) */
+function formatMonthYear(iso: string): string {
+  const [year, month] = iso.split('-').map(Number);
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  return `${months[(month ?? 1) - 1]} ${year}`;
+}
+
 function CategoryIcon({ icon, className }: { icon: string; className?: string }) {
   const d = ICON_PATHS[icon];
   if (!d) return null;
@@ -187,9 +208,12 @@ function CategoryView({ category }: { category: IdeaCategory }) {
   const ideaCount = getTotalIdeas(category);
   const otherCategories = IDEAS_DATA.filter((c) => c.slug !== category.slug);
 
+  const categoryUrl = `https://anywherelearning.co/ideas/${category.slug}`;
+
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${categoryUrl}#breadcrumb`,
     itemListElement: [
       {
         '@type': 'ListItem',
@@ -201,24 +225,35 @@ function CategoryView({ category }: { category: IdeaCategory }) {
         '@type': 'ListItem',
         position: 2,
         name: category.name,
-        item: `https://anywherelearning.co/ideas/${category.slug}`,
+        item: categoryUrl,
       },
     ],
   };
 
+  /* CollectionPage anchors the page entity and links to the sitewide graph */
   const itemListLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
+    '@type': 'CollectionPage',
+    '@id': `${categoryUrl}#webpage`,
+    url: categoryUrl,
     name: `${category.name} Ideas for Kids`,
     description: category.blurb,
-    url: `https://anywherelearning.co/ideas/${category.slug}`,
-    numberOfItems: listCount,
-    itemListElement: category.lists.map((list, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: list.title,
-      url: `https://anywherelearning.co/ideas/${list.slug}`,
-    })),
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    isPartOf: { '@id': 'https://anywherelearning.co/#website' },
+    publisher: { '@id': 'https://anywherelearning.co/#organization' },
+    breadcrumb: { '@id': `${categoryUrl}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: `${category.name} Ideas for Kids`,
+      numberOfItems: listCount,
+      itemListElement: category.lists.map((list, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: list.title,
+        url: `https://anywherelearning.co/ideas/${list.slug}`,
+      })),
+    },
   };
 
   return (
@@ -345,7 +380,7 @@ function CategoryView({ category }: { category: IdeaCategory }) {
                           alt={list.title}
                           fill
                           className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-300"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         />
                       </div>
 
@@ -488,33 +523,87 @@ function ListDetailView({
   const seo = getIdeaListSeo(list.slug);
   const pdfUrls = getIdeaListPdfUrls(list.slug);
 
-  /* JSON-LD */
+  // The in-depth guide this checklist was distilled from. A visible,
+  // crawlable link both ways tells search engines "guide + tool cluster",
+  // not two pages competing for the same query.
+  const blogPost = list.blogSlug ? getPostBySlug(list.blogSlug) : undefined;
+
+  /* JSON-LD: CollectionPage wraps the checklist ItemList, anchors the page
+     entity, and links it to the sitewide Organization/WebSite graph. The
+     free PDFs are modeled as DigitalDocuments so the no-signup printable
+     offer is machine-visible. */
   const allItems = list.sections.flatMap((section) => section.items);
+  const pageUrl = `https://anywherelearning.co/ideas/${list.slug}`;
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
     name: seo?.seoTitle ?? list.title,
     description: seo?.metaDescription ?? list.intro,
-    url: `https://anywherelearning.co/ideas/${list.slug}`,
-    numberOfItems: totalItems,
-    itemListOrder: 'https://schema.org/ItemListUnordered',
-    isAccessibleForFree: true,
     inLanguage: 'en',
-    itemListElement: allItems.map((item, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: item,
-    })),
-    publisher: {
-      '@type': 'Organization',
-      name: 'Anywhere Learning',
-      url: 'https://anywherelearning.co',
+    isAccessibleForFree: true,
+    isPartOf: { '@id': 'https://anywherelearning.co/#website' },
+    publisher: { '@id': 'https://anywherelearning.co/#organization' },
+    breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    author: {
+      '@type': 'Person',
+      name: 'Amelie',
+      url: 'https://anywherelearning.co/about',
+      jobTitle: 'Former classroom teacher (B.Ed, M.Ed)',
     },
+    datePublished: list.published ?? '2026-06-10',
+    dateModified: list.updated ?? list.published ?? '2026-06-10',
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `https://anywherelearning.co/ideas/og/${list.slug}.png`,
+      width: 1200,
+      height: 630,
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['#list-intro', '#how-to-use'],
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      '@id': `${pageUrl}#list`,
+      name: seo?.seoTitle ?? list.title,
+      numberOfItems: totalItems,
+      itemListOrder: 'https://schema.org/ItemListUnordered',
+      itemListElement: allItems.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: item,
+      })),
+    },
+    ...(pdfUrls
+      ? {
+          hasPart: [
+            {
+              '@type': 'DigitalDocument',
+              name: `${list.title} (printable PDF, full color)`,
+              url: pdfUrls.color,
+              encodingFormat: 'application/pdf',
+              isAccessibleForFree: true,
+              potentialAction: { '@type': 'DownloadAction', target: pdfUrls.color },
+            },
+            {
+              '@type': 'DigitalDocument',
+              name: `${list.title} (printable PDF, black and white)`,
+              url: pdfUrls.bw,
+              encodingFormat: 'application/pdf',
+              isAccessibleForFree: true,
+              potentialAction: { '@type': 'DownloadAction', target: pdfUrls.bw },
+            },
+          ],
+        }
+      : {}),
   };
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${pageUrl}#breadcrumb`,
     itemListElement: [
       {
         '@type': 'ListItem',
@@ -537,7 +626,7 @@ function ListDetailView({
     ],
   };
 
-  // FAQPage schema — drives "People Also Ask" eligibility and rich results.
+  // FAQPage schema: drives "People Also Ask" eligibility and rich results.
   const faqLd =
     seo && seo.faqs.length > 0
       ? {
@@ -632,9 +721,25 @@ function ListDetailView({
               {list.title}
             </h1>
 
-            {/* Intro */}
-            <p className="mt-5 max-w-[600px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance">
+            {/* Intro (speakable target) */}
+            <p
+              id="list-intro"
+              className="mt-5 max-w-[600px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance"
+            >
               {list.intro}
+            </p>
+
+            {/* Byline + freshness */}
+            <p className="mt-4 text-[13px] text-gray-500">
+              Put together by{' '}
+              <Link
+                href="/about"
+                className="font-medium text-[#3d5c3b] hover:underline"
+              >
+                Amelie
+              </Link>
+              , B.Ed, M.Ed, former classroom teacher &middot; Updated{' '}
+              {formatMonthYear(list.updated ?? list.published ?? '2026-06-10')}
             </p>
 
             {/* Stat pills */}
@@ -672,6 +777,46 @@ function ListDetailView({
             </div>
           </div>
         </header>
+
+        {/* Age x chore table: the "chart" search intent wants a real table,
+            and tables are the most-extracted snippet format */}
+        {list.slug === 'chores-by-age-ideas' && (
+          <section className="pb-10 print:hidden">
+            <div className="mx-auto max-w-[760px] px-6 overflow-x-auto">
+              <table className="w-full border-collapse bg-white border border-[#e8e5de] rounded-xl overflow-hidden text-[15px]">
+                <caption className="text-left font-display text-[20px] tracking-tight pb-3">
+                  Chore chart by age: what kids can own at each stage
+                </caption>
+                <thead>
+                  <tr className="bg-[#F2EFE4] text-left">
+                    <th scope="col" className="px-4 py-3 font-semibold text-[#3d5c3b] border-b border-[#e8e5de] whitespace-nowrap">
+                      Age
+                    </th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-[#3d5c3b] border-b border-[#e8e5de]">
+                      Chores kids can own
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {list.sections.map((section) => (
+                    <tr key={section.name} className="align-top">
+                      <th
+                        scope="row"
+                        className="px-4 py-3 font-semibold text-left whitespace-nowrap border-b border-[#f0ede6]"
+                        style={{ color: category.accent }}
+                      >
+                        {section.name}
+                      </th>
+                      <td className="px-4 py-3 leading-[1.6] text-[#4a4843] border-b border-[#f0ede6]">
+                        {section.items.join(' · ')}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {/* Print-only branded layout -- scales to fit one page */}
         <div
@@ -808,8 +953,8 @@ function ListDetailView({
         {seo && (
           <section className="py-12 md:py-16 print:hidden border-t border-[#E8E5DC]">
             <div className="mx-auto max-w-[760px] px-6">
-              {/* How to use */}
-              <div className="mb-12">
+              {/* How to use (speakable target) */}
+              <div id="how-to-use" className="mb-12">
                 <h2 className="font-display text-[clamp(1.6rem,3vw,2.2rem)] leading-[1.12] tracking-tight text-balance">
                   How to use this list
                 </h2>
@@ -817,6 +962,36 @@ function ListDetailView({
                   {seo.howToUse}
                 </p>
               </div>
+
+              {/* Crawlable link back to the source guide */}
+              {blogPost && (
+                <div
+                  className="mb-12 rounded-xl border p-6"
+                  style={{
+                    borderColor: `${category.accent}30`,
+                    background: `${category.accent}08`,
+                  }}
+                >
+                  <p
+                    className="text-[12px] font-semibold uppercase tracking-[0.16em] mb-2"
+                    style={{ color: category.accent }}
+                  >
+                    Go deeper
+                  </p>
+                  <p className="text-[15.5px] leading-[1.65] text-[#4a4843] m-0">
+                    This checklist is the quick version. For the why behind
+                    each idea, parent tips, and the full walkthrough, read{' '}
+                    <Link
+                      href={`/blog/${list.blogSlug}`}
+                      className="font-semibold underline decoration-2 underline-offset-2"
+                      style={{ color: category.accent }}
+                    >
+                      {blogPost.title}
+                    </Link>
+                    .
+                  </p>
+                </div>
+              )}
 
               {/* FAQ */}
               {seo.faqs.length > 0 && (
