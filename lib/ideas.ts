@@ -13,6 +13,10 @@ export type IdeaList = {
   /** ISO dates surfaced in schema, the visible byline, and the sitemap */
   published?: string
   updated?: string
+  /** Short, unique teaser for sibling/cross-link cards (keep under 117
+      chars). The intro is the crawlable answer block and runs long, so
+      cards get their own hand-written line instead of a truncation. */
+  cardExcerpt?: string
   sections: IdeaSection[]
 }
 
@@ -45,6 +49,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'nature-walk-ideas',
         blogSlug: 'nature-walks-science',
         title: 'Nature Walk Checklist: 50 Ideas for Kids',
+        cardExcerpt:
+          'Fifty ways to turn an ordinary stroll into the best part of the day. No gear, no prep, ages 2 to 12.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -131,6 +137,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'backyard-science-ideas',
         blogSlug: 'backyard-science-experiments',
         title: 'Backyard Science Checklist: 15 Experiments',
+        cardExcerpt:
+          'Real experiments with water, dirt, jars, and sunlight. The mess is the lesson. Ages 5 to 11.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -172,10 +180,12 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'forest-school-ideas',
         blogSlug: 'forest-school-activities',
         title: 'Forest School Checklist: 13 Activities',
+        cardExcerpt:
+          'Dens, mud paint, sit spots, and safe little risks. Any patch of trees will do.',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-06-11',
         intro:
-          'This free printable forest school checklist gives you 13 activities in three themes: build and create, sense and observe, and risk and challenge. A park, a treeline, or a few backyard trees is plenty. Print it and let the woods do the teaching.',
+          'This free printable forest school checklist gives you 13 activities for kids roughly ages 3 to 12, in three themes: build and create, sense and observe, and risk and challenge. A park, a treeline, or a few backyard trees is plenty. Print it and let the woods do the teaching.',
         sections: [
           {
             name: 'Build & Create',
@@ -211,6 +221,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'seasonal-scavenger-ideas',
         blogSlug: 'seasonal-scavenger-hunts',
         title: 'Seasonal Scavenger Hunt Checklist: 17 Finds',
+        cardExcerpt:
+          'One nature hunt per season, from spring buds to winter tracks. Ages 3 to 10.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -259,10 +271,12 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'land-art-ideas',
         blogSlug: 'kinetic-sculpture-land-art',
         title: '14 Land Art & Nature Sculpture Ideas',
+        cardExcerpt:
+          'Stack stones, weave leaves, leave it for the birds. Outdoor art with nothing to buy.',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-06-11',
         intro:
-          'These 14 land art and nature sculpture ideas for kids come as a free printable checklist, organized into arrange and pattern, build and sculpt, and weave and hang. The only supplies are what you find outside. Nothing to buy, nothing to clean up.',
+          'These 14 land art and nature sculpture ideas come as a free printable checklist for kids of all ages, toddlers included, organized into arrange and pattern, build and sculpt, and weave and hang. The only supplies are what you find outside. Nothing to buy, nothing to clean up.',
         sections: [
           {
             name: 'Arrange & Pattern',
@@ -313,6 +327,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'kitchen-ideas',
         blogSlug: 'kitchen-learning-lab',
         title: '30 Cooking & Kitchen Activities for Kids',
+        cardExcerpt:
+          'Fractions in the pancakes, budgeting in the cart. Thirty ways to cook up real math.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -388,10 +404,12 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'life-skills-ideas',
         blogSlug: 'life-skills-before-12',
         title: 'The Life Skills Checklist: 28 Skills for Kids',
+        cardExcerpt:
+          'Money, laundry, phone calls, real decisions. The 28 skills every capable kid collects.',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-06-11',
         intro:
-          'A free printable life skills checklist with 28 skills for kids across four areas: money and budgeting, independence, home skills, and thinking skills. These are the skills no test measures but every adult needs. Start small and let your kids surprise you.',
+          'A free printable life skills checklist with 28 skills for kids from toddler to teen, across four areas: money and budgeting, independence, home skills, and thinking skills. These are the skills no test measures but every adult needs. Begin with one skill and build from there.',
         sections: [
           {
             name: 'Money & Budgeting',
@@ -447,6 +465,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'chores-by-age-ideas',
         blogSlug: 'age-appropriate-chores-life-skills',
         title: '24 Chores for Kids by Age: 2 to 12+',
+        cardExcerpt:
+          'Who does what, from age 2 to 12 and up. Post the chart once and retire the nagging.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -502,6 +522,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'history-ideas',
         blogSlug: 'real-world-history-for-kids',
         title: '11 Family History Activities for Kids',
+        cardExcerpt:
+          'Interview grandma, date the old photos, trace the family dish. History they belong to.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -553,6 +575,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'stem-ideas',
         blogSlug: 'outdoor-stem-challenges',
         title: 'STEM Checklist: 24 No-Kit Builds',
+        cardExcerpt:
+          'Cardboard, tape, and a challenge: 24 builds and experiments straight from the recycling bin.',
         published: '2026-06-10',
         updated: '2026-06-11',
         intro:
@@ -603,10 +627,12 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'engineering-ideas',
         blogSlug: 'engineering-for-kids',
         title: 'Engineering Challenge Checklist: 16 Builds',
+        cardExcerpt:
+          'Ziplines, drawbridges, water filters. Sixteen builds that fail, teach, and finally work.',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-06-11',
         intro:
-          'Sixteen engineering build challenges for kids, sorted from quick builds to real engineering projects. Hand them cardboard, tape, and a challenge, then stand back and watch them think. Every build uses household materials, and the checklist prints free.',
+          'Sixteen engineering build challenges for kids ages 6 to 12, sorted from quick builds to real engineering projects. Hand them cardboard, tape, and a challenge, then stand back and watch them think. Every build uses household materials, and the checklist prints free.',
         sections: [
           {
             name: 'Quick Builds',
@@ -659,6 +685,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'creative-ideas',
         blogSlug: 'raise-creative-kids',
         title: '26 Creative & Maker Ideas for Kids',
+        cardExcerpt:
+          'Fort building, story telling, problem inventing. Creativity that outlasts the craft supplies.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -725,6 +753,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'travel-ideas',
         blogSlug: 'homeschool-while-traveling',
         title: '22 Travel & Worldschool Activities for Kids',
+        cardExcerpt:
+          'Hand them the map, the budget, the questions. Learning that packs into any trip.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -787,6 +817,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'ai-digital-ideas',
         blogSlug: 'ai-for-kids-2026',
         title: '18 AI & Digital Literacy Ideas for Kids',
+        cardExcerpt:
+          'Spot the deepfake, fix the prompt, question the feed. Screen time with a brain switched on.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
@@ -845,6 +877,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'resilience-ideas',
         blogSlug: 'how-to-build-resilience-in-kids',
         title: 'Resilience Checklist: 12 Challenges for Kids',
+        cardExcerpt:
+          'Twelve safe ways to wobble, fail, and get back up. The bounce-back muscle, trained gently.',
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:

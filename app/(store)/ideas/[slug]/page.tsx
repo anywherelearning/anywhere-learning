@@ -1109,7 +1109,7 @@ function ListDetailView({
                             {l.title}
                           </h3>
                           <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {cardExcerpt(l.intro)}
+                            {l.cardExcerpt ?? cardExcerpt(l.intro)}
                           </p>
                           <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
                             <span className="text-gray-500">
@@ -1165,7 +1165,7 @@ function ListDetailView({
                             {l.title}
                           </h3>
                           <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {cardExcerpt(l.intro)}
+                            {l.cardExcerpt ?? cardExcerpt(l.intro)}
                           </p>
                           <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
                             <span className="text-gray-500">
