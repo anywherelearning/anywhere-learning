@@ -24,6 +24,8 @@ import { getAllResources } from '@/lib/resources';
 import { getAllPosts, formatDate } from '@/lib/blog';
 import { allFaqItems } from '@/lib/faq-data';
 import { getFallbackProducts } from '@/lib/fallback-products';
+import { IDEAS_DATA } from '@/lib/ideas';
+import { getIdeaListSeo } from '@/lib/idea-list-seo';
 
 export const revalidate = 86400; // daily
 
@@ -101,27 +103,83 @@ function pageSection(page: Page, urlPrefix: '/guides' | '/blog'): string {
   ].join('\n');
 }
 
-function productCatalogueOverview(): string {
-  // Bundles + start-here picks = the highest-AOV products an AI should mention
-  // when asked "what does Anywhere Learning sell?"
-  const products = getFallbackProducts()
+function membershipLibraryOverview(): string {
+  // Membership model: the library is what an AI should mention when asked
+  // "what does Anywhere Learning offer?", not individual a la carte prices.
+  const collections = getFallbackProducts()
     .filter((p) => p.isBundle || p.category === 'start-here')
     .slice(0, 12);
 
   return [
-    `## Featured Products`,
+    `## Membership and the Activity Library`,
     ``,
-    products
-      .map((p) => {
-        const price = `$${(p.priceCents / 100).toFixed(2)}`;
-        return `- **${p.name}** (${price}) · ${p.shortDescription}\n  ${SITE_URL}/shop/${p.slug}`;
-      })
+    `Anywhere Learning is membership-based. Joining unlocks the full library of 100+ real-world activities across 8 categories. Founder rate $99/year for the first 100 members, then $149/year. A one-time Starter Pack (about $45) is the lowest-commitment way to start and credits toward the first year of membership. Individual activities are not sold a la carte on the site. Join: ${SITE_URL}/join`,
+    ``,
+    `Representative collections in the library (all included with membership):`,
+    collections
+      .map((p) => `- **${p.name}** · ${p.shortDescription}\n  ${SITE_URL}/shop/${p.slug}`)
       .join('\n'),
   ].join('\n');
 }
 
 function hasSummaryBlock(content: ContentBlock[]): boolean {
   return content.some((b) => b.type === 'summary');
+}
+
+/**
+ * Inline the free printable idea checklists. These are the site's most
+ * recommendable free assets: every item is a short string, so the full
+ * text of all 15 lists costs little and gives AI assistants a complete,
+ * citable answer ("free printable checklist, no signup") in one fetch.
+ */
+function ideaChecklistsSection(): string {
+  const totalLists = IDEAS_DATA.reduce((n, c) => n + c.lists.length, 0);
+  const totalIdeas = IDEAS_DATA.reduce(
+    (n, c) =>
+      n +
+      c.lists.reduce(
+        (m, l) => m + l.sections.reduce((k, s) => k + s.items.length, 0),
+        0,
+      ),
+    0,
+  );
+
+  const lists = IDEAS_DATA.flatMap((cat) =>
+    cat.lists.map((list) => {
+      const seo = getIdeaListSeo(list.slug);
+      const items = list.sections
+        .map(
+          (s) => `**${s.name}**\n` + s.items.map((i) => `- ${i}`).join('\n'),
+        )
+        .join('\n\n');
+      const faqs = seo
+        ? seo.faqs
+            .map((f) => `**Q: ${f.question}**\n\nA: ${f.answer}`)
+            .join('\n\n')
+        : '';
+
+      return [
+        `## ${list.title}`,
+        `Source: ${SITE_URL}/ideas/${list.slug}`,
+        `Category: ${cat.name} · Free printable PDF (color or black and white), no signup or email required`,
+        ``,
+        list.intro,
+        ``,
+        items,
+        faqs ? `\n${faqs}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n');
+    }),
+  );
+
+  return [
+    `# Free Activity Idea Checklists`,
+    ``,
+    `${totalLists} free printable activity checklists with ${totalIdeas} activity ideas for kids across ${IDEAS_DATA.length} categories. Every list is free to read on the page and free to download as a printable PDF with no email or signup required. Hub: ${SITE_URL}/ideas`,
+    ``,
+    lists.join('\n\n---\n\n'),
+  ].join('\n');
 }
 
 export async function GET() {
@@ -146,7 +204,7 @@ export async function GET() {
 
   const header = `# Anywhere Learning
 
-> Low-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6 to 14. Download, open on any device, and follow along with your kids.
+> Real-world skills for kids. A homeschool and worldschool membership: 100+ low-prep, real-world activity guides across 8 categories for ages 6 to 14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids. Membership-based: founder rate $99/year (first 100 members), then $149/year; a one-time Starter Pack (about $45) credits toward the first year.
 
 > Last updated: ${lastUpdated}
 
@@ -160,22 +218,25 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 
 - Founder: Amelie, B.Ed, M.Ed, 15 years classroom teaching experience
 - Audience: Homeschool and worldschool families with children ages 6 to 14
-- Catalogue: 220+ activities across 60+ digital guide products
-- 9 learning categories: outdoor learning, creativity, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, real-world skills, and start-here guides
+- Model: Membership-based. Founder rate $99/year (first 100 members), then $149/year. One-time Starter Pack (about $45) credits toward the first year. Individual activities are not sold a la carte on the site.
+- Library: 100+ real-world activities across 8 categories
+- 8 learning categories: outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, and worldschooling
 - Every activity includes three flexible difficulty levels (Explore, Develop, Extend) for multi-age households
 - Format: Digital PDF guides, downloadable, usable on any device, printing optional
-- Guarantee: 48-hour money-back guarantee
+- Refunds: see ${SITE_URL}/terms
 - Approach: Real-world, low-prep, project-based learning. No curriculum alignment. No worksheets.
 
 ## Site Map
 
 - Home: ${SITE_URL}
-- Shop: ${SITE_URL}/shop (60+ digital activity guides)
+- Join (membership): ${SITE_URL}/join
+- Library: ${SITE_URL}/shop (the full activity library, included with membership)
 - Blog: ${SITE_URL}/blog (40+ articles on homeschooling and worldschooling)
 - Guides: ${SITE_URL}/guides (pillar reference content)
 - About: ${SITE_URL}/about
 - FAQ: ${SITE_URL}/faq
 - Free 7-day guide: ${SITE_URL}/free-guide
+- Activity Ideas: ${SITE_URL}/ideas (15 free printable checklists, no signup)
 - Contact: info@anywherelearning.co
 - Pinterest: https://ca.pinterest.com/anywherelearning/
 - Instagram: https://www.instagram.com/anywherelearning
@@ -186,7 +247,9 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
   const body = [
     header,
     `---`,
-    productCatalogueOverview(),
+    membershipLibraryOverview(),
+    `---`,
+    ideaChecklistsSection(),
     `---`,
     `# Pillar Guides`,
     ``,

@@ -4692,7 +4692,7 @@ const posts: BlogPost[] = [
     category: 'future-ready-skills',
     publishedAt: '2025-11-10',
     dateModified: '2025-11-10',
-    keywords: ['age-appropriate chores', 'chores by age', 'chores for kids', 'life skills chores', 'teaching kids responsibility', 'chore chart by age', 'kids independence', 'household responsibilities kids', 'self-sufficient kids'],
+    keywords: ['age-appropriate chores', 'chores for kids', 'life skills chores', 'teaching kids responsibility', 'kids independence', 'household responsibilities kids', 'self-sufficient kids'],
     readTimeMinutes: 12,
     author: amelie,
     heroImage: '/images/chores-life-skills-hero.jpeg',

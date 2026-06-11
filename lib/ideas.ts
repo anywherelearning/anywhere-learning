@@ -10,6 +10,9 @@ export type IdeaList = {
   intro: string
   /** Blog post slug this list was pulled from (for print CTA) */
   blogSlug?: string
+  /** ISO dates surfaced in schema, the visible byline, and the sitemap */
+  published?: string
+  updated?: string
   sections: IdeaSection[]
 }
 
@@ -36,14 +39,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#6b8e6b',
     icon: 'Leaf',
     blurb:
-      'Slow walks, found treasures, and backyard science. Turn any patch of outside into a lesson.',
+      'Free printable nature and outdoor checklists for kids: nature walks, backyard science, forest school, scavenger hunts, and land art. Zero gear, zero prep, any patch of outside.',
     lists: [
       {
         slug: 'nature-walk-ideas',
         blogSlug: 'nature-walks-science',
-        title: '50 Nature Walk Ideas for Kids',
+        title: 'Nature Walk Checklist: 50 Ideas for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Grab this before your next walk. No gear, no prep, no agenda. Each one turns an ordinary stroll into something your kids will remember. Pin it to the fridge, screenshot it, or print it and tuck it in your bag.',
+          'This is a free printable checklist of 50 nature walk ideas for kids ages 2 to 12, organized into five themes: observe, collect, create, listen and feel, and challenge. None of them need gear, prep, or an agenda. Pin it to the fridge, screenshot it, or print it and tuck it in your bag.',
         sections: [
           {
             name: 'Observe',
@@ -125,9 +130,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'backyard-science-ideas',
         blogSlug: 'backyard-science-experiments',
-        title: '15 Backyard Science Experiment Ideas',
+        title: 'Backyard Science Checklist: 15 Experiments',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'No lab coat needed. These experiments use what you already have: water, dirt, jars, and sunlight.',
+          'A free printable checklist of 15 backyard science experiments for kids ages 5 to 11, covering water and weather, plants and soil, and animals and bugs. Every experiment uses what you already have: water, dirt, jars, and sunlight. No lab coat, no kit.',
         sections: [
           {
             name: 'Water & Weather',
@@ -164,9 +171,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'forest-school-ideas',
         blogSlug: 'forest-school-activities',
-        title: '13 Forest School Activities (No Training Required)',
+        title: 'Forest School Checklist: 13 Activities',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'You do not need a certification to learn in the woods. These activities work in any patch of trees.',
+          'This free printable forest school checklist gives you 13 activities in three themes: build and create, sense and observe, and risk and challenge. A park, a treeline, or a few backyard trees is plenty. Print it and let the woods do the teaching.',
         sections: [
           {
             name: 'Build & Create',
@@ -201,9 +210,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'seasonal-scavenger-ideas',
         blogSlug: 'seasonal-scavenger-hunts',
-        title: '17 Seasonal Scavenger Hunt Ideas',
+        title: 'Seasonal Scavenger Hunt Checklist: 17 Finds',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'One list per season. Print it tuck it in your pocket and see what you can find.',
+          'A free printable scavenger hunt checklist with 17 nature finds for kids ages 3 to 10, split by season: spring, summer, autumn, and winter. Print the season you are in, tuck it in your pocket, and see what you can spot.',
         sections: [
           {
             name: 'Spring',
@@ -248,8 +259,10 @@ export const IDEAS_DATA: IdeaCategory[] = [
         slug: 'land-art-ideas',
         blogSlug: 'kinetic-sculpture-land-art',
         title: '14 Land Art & Nature Sculpture Ideas',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Art supplies are everywhere outside. Arrange collect stack and let nature be the gallery.',
+          'These 14 land art and nature sculpture ideas for kids come as a free printable checklist, organized into arrange and pattern, build and sculpt, and weave and hang. The only supplies are what you find outside. Nothing to buy, nothing to clean up.',
         sections: [
           {
             name: 'Arrange & Pattern',
@@ -294,14 +307,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#8b7355',
     icon: 'ChefHat',
     blurb:
-      'Real food, real math, real life. The kitchen is the best classroom you already own.',
+      'Kitchen and cooking activity checklists for kids, free to print: counting, measuring, fractions, and budgeting woven into real meals. The best classroom you already own.',
     lists: [
       {
         slug: 'kitchen-ideas',
         blogSlug: 'kitchen-learning-lab',
-        title: '30 Kitchen Ideas for Kids',
+        title: '30 Cooking & Kitchen Activities for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Every meal is a lesson hiding in plain sight. These ideas turn cooking time into counting, measuring, budgeting, and problem-solving. No worksheets required.',
+          'This is a free printable checklist of 30 cooking and kitchen activities for kids from toddler to teen, covering counting and measuring, fractions, real-world skills, and cooking a full dish. Every one fits into meals you are already making. No worksheets required.',
         sections: [
           {
             name: 'Count & Measure',
@@ -367,14 +382,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#c4836a',
     icon: 'Lightbulb',
     blurb:
-      'The everyday stuff that builds capable, confident kids. Budgeting, chores, and real decisions.',
+      'Life skills checklists for kids you can print free: money, chores by age, independence, and family history. The everyday stuff that builds capable, confident kids.',
     lists: [
       {
         slug: 'life-skills-ideas',
         blogSlug: 'life-skills-before-12',
-        title: '28 Life Skills Ideas for Kids',
+        title: 'The Life Skills Checklist: 28 Skills for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'These are the skills no test measures but every adult needs. Start small, build up, and let your kids surprise you with what they can handle.',
+          'A free printable life skills checklist with 28 skills for kids across four areas: money and budgeting, independence, home skills, and thinking skills. These are the skills no test measures but every adult needs. Start small and let your kids surprise you.',
         sections: [
           {
             name: 'Money & Budgeting',
@@ -429,9 +446,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'chores-by-age-ideas',
         blogSlug: 'age-appropriate-chores-life-skills',
-        title: '24 Age-Appropriate Chores by Age',
+        title: '24 Chores for Kids by Age: 2 to 12+',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Chores are not punishment. They are how kids learn they are capable of real contribution.',
+          'This free printable chore chart lists 24 chores for kids in four age bands: ages 2 to 5, 6 to 8, 9 to 11, and 12 and up. Each band holds chores kids can genuinely own at that stage. Post it once and stop the daily reminding.',
         sections: [
           {
             name: 'Ages 2-5',
@@ -482,9 +501,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'history-ideas',
         blogSlug: 'real-world-history-for-kids',
-        title: '11 Real-World History Ideas for Kids',
+        title: '11 Family History Activities for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'History is not a textbook. It is the story your family carries and the buildings you walk past.',
+          'A free printable checklist of 11 family history activities for kids ages 6 to 12, spanning family stories, local history, and food history. History is not a textbook. It is the story your family carries and the buildings you walk past.',
         sections: [
           {
             name: 'Family History',
@@ -526,14 +547,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#3d5c3b',
     icon: 'Cog',
     blurb:
-      'Hands-on builds, fair tests, and "what happens if..." Science without a lab.',
+      'STEM and engineering checklists for kids, free and printable: hands-on builds, fair tests, and what-happens-if experiments from household materials. Science without a lab.',
     lists: [
       {
         slug: 'stem-ideas',
         blogSlug: 'outdoor-stem-challenges',
-        title: '24 STEM & Engineering Ideas for Kids',
+        title: 'STEM Activities Checklist: 24 No-Kit Builds',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'No kits needed. These challenges use what you already have at home: cardboard, tape, kitchen supplies, and whatever is in the recycling bin.',
+          'This is a free printable STEM checklist with 24 builds and experiments for kids ages 5 to 12, split into build and engineer, science and experiment, and backyard STEM. Everything uses what you already have: cardboard, tape, kitchen supplies, and the recycling bin.',
         sections: [
           {
             name: 'Build & Engineer',
@@ -579,36 +602,38 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'engineering-ideas',
         blogSlug: 'engineering-for-kids',
-        title: '16 Engineering Build Challenges for Kids',
+        title: 'Engineering Challenge Checklist: 16 Builds',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Hand them cardboard tape and a challenge. Stand back and watch them think.',
+          'A free printable checklist of 16 engineering build challenges for kids, sorted from quick builds to real engineering projects. Hand them cardboard, tape, and a challenge, then stand back and watch them think. Every build uses household materials.',
         sections: [
           {
             name: 'Quick Builds',
             items: [
-              'Build the tallest tower from spaghetti and marshmallows',
-              'Design a paper airplane that goes the farthest (try three designs)',
-              'Build a craft-stick bridge that holds a book',
-              'Engineer a foil boat that carries the most pennies before sinking',
+              'Build a paper column that holds the heaviest book (round vs square vs triangle)',
+              'Make a balloon-powered car from a bottle straws and bottle-cap wheels',
+              'Build the longest cantilever off a table edge with craft sticks and coins',
+              'Fold a paper boat hull that holds the most marbles before tipping',
               'Build a catapult from a spoon rubber band and cup',
-              'Design a container that protects an egg from a one-story drop',
+              'Build a zipline for a toy across the room and tune the slope for a soft landing',
             ],
           },
           {
             name: 'Bigger Projects',
             items: [
-              'Build a marble run on a wall using cardboard tubes and tape',
+              'Engineer a working drawbridge with string pulleys and cardboard',
               'Build a working trebuchet from kitchen materials',
               'Build an insulated cup that keeps ice frozen longest',
-              'Build a wind-powered cart that rolls across a table',
-              'Design a kinetic sculpture that moves under wind or gravity',
+              'Design a rubber-band-powered paddle boat for the bathtub',
+              'Build an automatic pet feeder prototype from cardboard tubes and a cup',
             ],
           },
           {
             name: 'Real Engineering',
             items: [
-              'Build a working weather station with three homemade instruments',
-              'Engineer a solar oven that melts chocolate',
+              'Build a water filter from sand gravel and cotton then test it with muddy water',
+              'Design earthquake-proof towers on a wobbly gelatin base and shake-test them',
               'Design a load-bearing chair from cardboard you can sit on',
               'Design a slide for a toy car (steeper equals faster but does steeper equal better)',
               'Build a fort that holds a kid inside it',
@@ -628,14 +653,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#c47a8f',
     icon: 'Palette',
     blurb:
-      'Open-ended making with whatever is on hand. No kit required, no wrong answers.',
+      'Creative activity checklists for kids, free to print: making, storytelling, and inventing with whatever is on hand. No kit required, no wrong answers.',
     lists: [
       {
         slug: 'creative-ideas',
         blogSlug: 'raise-creative-kids',
         title: '26 Creative & Maker Ideas for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Creativity is not about art supplies. It is about solving problems, telling stories, and making something that did not exist five minutes ago.',
+          'This is a free printable checklist of 26 creative activities for kids from toddler to teen, organized into make something, tell a story, and invent and solve. Creativity is not about art supplies. It is about making something that did not exist five minutes ago.',
         sections: [
           {
             name: 'Make Something',
@@ -692,14 +719,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#d4a373',
     icon: 'Globe',
     blurb:
-      'Learning that travels with you. On a plane, a road trip, or a walk around a new town.',
+      'Travel and worldschool checklists for kids, printable and free: learning that works on a road trip, in your own city, or abroad.',
     lists: [
       {
         slug: 'travel-ideas',
         blogSlug: 'homeschool-while-traveling',
-        title: '22 Travel & Worldschool Ideas for Kids',
+        title: '22 Travel & Worldschool Activities for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'You do not need to fly across the world to worldschool. These ideas work in your own city, on a road trip, or halfway around the globe.',
+          'A free printable checklist of 22 travel and worldschool activities for kids ages 5 to 14, grouped into explore and discover, document and create, and go deep. They work in your own city, on a road trip, or halfway around the globe. No plane ticket required.',
         sections: [
           {
             name: 'Explore & Discover',
@@ -752,14 +781,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#7b8fa1',
     icon: 'Sparkle',
     blurb:
-      'Curious, careful, and creative with screens. Using today\'s tools as makers, not just users.',
+      'AI and digital literacy checklists for kids, free to print: understand how AI works, use it wisely, and question what they see online. Makers, not just users.',
     lists: [
       {
         slug: 'ai-digital-ideas',
         blogSlug: 'ai-for-kids-2026',
         title: '18 AI & Digital Literacy Ideas for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Screen time does not have to be passive time. These ideas turn devices into tools for thinking, creating, and questioning.',
+          'This free printable checklist gives you 18 AI and digital literacy activities for kids ages 8 and up, in three themes: understand AI, use AI wisely, and media literacy. Each one turns screen time from passive scrolling into thinking, creating, and questioning.',
         sections: [
           {
             name: 'Understand AI',
@@ -808,14 +839,16 @@ export const IDEAS_DATA: IdeaCategory[] = [
     accent: '#9b7bb8',
     icon: 'Heart',
     blurb:
-      'The invisible skills that change everything. How kids handle frustration, make decisions, and bounce back.',
+      'Mindset and resilience checklists for kids, free and printable: safe failure, bouncing back, and perspective practice. The invisible skills that change everything.',
     lists: [
       {
         slug: 'resilience-ideas',
         blogSlug: 'how-to-build-resilience-in-kids',
-        title: '12 Resilience-Building Activities',
+        title: 'Resilience Checklist: 12 Challenges for Kids',
+        published: '2026-06-10',
+        updated: '2026-06-10',
         intro:
-          'Resilience is not something kids are born with. It is built through practice and safe failures.',
+          'A free printable resilience checklist with 12 challenges for kids ages 4 to 12, built around safe failure, bouncing back, and perspective. Resilience is not something kids are born with. It is built through practice, and this list is the practice.',
         sections: [
           {
             name: 'Safe Failure',

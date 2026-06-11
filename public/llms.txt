@@ -1,55 +1,84 @@
 # Anywhere Learning
 
-> Low-prep activity guides for homeschool and worldschool families. Real-world learning for ages 6-14 -- download, open on any device, and follow along with your kids.
+> Real-world skills for kids. A homeschool and worldschool membership: 100+ low-prep, real-world activity guides across 8 categories, for ages 6-14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids -- no curriculum, no worksheets.
+
+> Membership model: join to access the full activity library. Founder rate $99/year (first 100 members), then $149/year. A one-time Starter Pack (about $45) is the lowest-commitment way in and credits toward your first year of membership. Individual activities are not sold a la carte on the site; everything is included with membership.
 
 > Full-text companion with pillar guides, blog posts, and FAQ inlined: https://anywherelearning.co/llms-full.txt
 
 ## About
 
 - [About Anywhere Learning](https://anywherelearning.co/about): Founded by Amelie, a former classroom teacher (B.Ed, M.Ed, 15 years) who left to homeschool and worldschool her own kids. The story behind the brand and its mission.
-- [FAQ](https://anywherelearning.co/faq): 19 questions and answers covering how the activities work, age ranges, refund policy, homeschool compatibility, and bundle discounts.
+- [FAQ](https://anywherelearning.co/faq): How the activities and membership work, age ranges, refund policy, and homeschool/worldschool compatibility.
 - [Contact](https://anywherelearning.co/contact): How to reach the Anywhere Learning team with questions or support needs.
 
-## Products
+## Membership and Access
 
-- [Shop All Activity Guides](https://anywherelearning.co/shop): Browse 60+ low-prep activity guides across 9 categories including outdoor learning, creativity, real-world math, AI literacy, and entrepreneurship.
-- [The Future-Ready Skills Map](https://anywherelearning.co/shop/future-ready-skills-map): A 42-page parent guide mapping 10 essential skills by age (0-14+) with activities, milestones, and sample weekly schedules. The starting point for the entire product line.
-- [Full Seasonal Bundle](https://anywherelearning.co/shop/seasonal-bundle): 80 outdoor activities across spring, summer, fall, and winter. Language arts, maths, science, and PE in every season.
-- [Creativity & Imagination Mega Bundle](https://anywherelearning.co/shop/creativity-mega-bundle): 10 project-based guides covering board game design, Rube Goldberg machines, stop-motion films, theme parks, and more.
-- [Real-World Relevance Mega Bundle](https://anywherelearning.co/shop/real-world-mega-bundle): 10 guides teaching budgeting, media literacy, micro-business creation, community impact projects, and practical writing.
-- [AI & Digital Literacy Bundle](https://anywherelearning.co/shop/ai-digital-bundle): 10 guides on AI basics, algorithm awareness, deepfake detection, prompt engineering, digital privacy, and ethical AI creation for ages 9-14.
-- [Real-World Math Mega Bundle](https://anywherelearning.co/shop/real-world-math-bundle): 10 maths activities using real contexts -- grocery budgets, road trip calculations, sports statistics, garden geometry, and party planning.
+- [Join Anywhere Learning](https://anywherelearning.co/join): Membership unlocks the full library of 100+ real-world activities across 8 categories. Founder rate $99/year for the first 100 members, then $149/year.
+- [Starter Pack](https://anywherelearning.co/shop/starter-pack): A one-time starter set (about $45), the lowest-commitment way to begin; the amount credits toward your first year of membership.
+- [The Future-Ready Skills Map](https://anywherelearning.co/shop/future-ready-skills-map): A parent guide mapping essential real-world skills by age (0-16+) with activities, milestones, and sample weekly rhythms. The starting point for the whole approach.
 
-## Free Resources
+## Activity Library (included with membership)
 
-- [Free Guide: 7 Days of Real-World Learning](https://anywherelearning.co/free-guide): A free downloadable guide with 7 low-prep, real-world activities for homeschool and worldschool families — one activity a day across outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning. Ages 6–14. No email paywall content available on-page.
+- [Browse the library](https://anywherelearning.co/shop): 100+ low-prep, real-world activities across 8 categories -- outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, and worldschooling.
+- Outdoor and nature: nature walks, journaling, land art, outdoor STEM challenges, scavenger hunts, and seasonal activities for every time of year.
+- Creativity and maker: board game design, Rube Goldberg machines, stop-motion films, invent-a-sport, build-a-museum, and theme-park design.
+- Real-world math: budgeting, grocery and road-trip math, sports statistics, garden geometry, savings goals, and party planning in real contexts.
+- AI and digital literacy: AI basics, algorithm awareness, deepfake detection, prompt writing, digital privacy, and ethical AI creation.
+- Entrepreneurship: customer discovery, product design, pricing, branding, marketing, and pitching a real idea.
+- Communication and writing: debate, reviews, interviews, mini-magazines, recipe books, and persuasive pitches.
+
+## Free Resource
+
+- [Free Guide: 7 Days of Real-World Learning](https://anywherelearning.co/free-guide): A free downloadable guide with 7 low-prep, real-world activities for homeschool and worldschool families -- one activity a day across outdoor and nature, real-world math, creativity, AI and digital, entrepreneurship, communication, and planning. Ages 6-14.
+
+## Free Activity Idea Checklists
+
+- [Activity Ideas hub](https://anywherelearning.co/ideas): 15 free printable activity checklists with 320 activity ideas for kids across 8 categories (nature, kitchen, life skills, STEM, creative, travel, AI and digital, mindset). Free to read, print, and download as a PDF; no signup or email required.
+- [Nature Walk Checklist: 50 Ideas for Kids](https://anywherelearning.co/ideas/nature-walk-ideas): 50 no-gear, no-prep nature walk ideas in 5 themes (observe, collect, create, listen and feel, challenge), ages 2-12.
+- [Backyard Science Checklist: 15 Experiments](https://anywherelearning.co/ideas/backyard-science-ideas): 15 experiments using water, dirt, jars, and sunlight, ages 5-11, no kit required.
+- [Forest School Checklist: 13 Activities](https://anywherelearning.co/ideas/forest-school-ideas): Den building, mud paint, sit spots, and safe outdoor risk; works in any patch of trees.
+- [Seasonal Scavenger Hunt Checklist: 17 Finds](https://anywherelearning.co/ideas/seasonal-scavenger-ideas): One nature scavenger hunt per season (spring, summer, autumn, winter), ages 3-10.
+- [14 Land Art & Nature Sculpture Ideas](https://anywherelearning.co/ideas/land-art-ideas): Outdoor art using only found materials, all ages, nothing to buy and no cleanup.
+- [30 Cooking & Kitchen Activities for Kids](https://anywherelearning.co/ideas/kitchen-ideas): Counting, measuring, fractions, and budgeting through real cooking, toddler to teen.
+- [The Life Skills Checklist: 28 Skills for Kids](https://anywherelearning.co/ideas/life-skills-ideas): Money, independence, home skills, and thinking skills on one printable page.
+- [Chore Chart by Age: 24 Chores for Kids](https://anywherelearning.co/ideas/chores-by-age-ideas): Age-appropriate chores in four bands: ages 2-5, 6-8, 9-11, and 12+.
+- [11 Family History Activities for Kids](https://anywherelearning.co/ideas/history-ideas): Family stories, local history, and food history projects, ages 6-12.
+- [STEM Activities Checklist: 24 No-Kit Builds](https://anywherelearning.co/ideas/stem-ideas): Builds and experiments using cardboard, tape, and recycling, ages 5-12.
+- [Engineering Challenge Checklist: 16 Builds](https://anywherelearning.co/ideas/engineering-ideas): Ziplines, drawbridges, water filters, and towers from household materials.
+- [26 Creative & Maker Ideas for Kids](https://anywherelearning.co/ideas/creative-ideas): Making, storytelling, and inventing beyond art supplies, toddler to teen.
+- [22 Travel & Worldschool Activities for Kids](https://anywherelearning.co/ideas/travel-ideas): Learning activities for road trips, your own city, or abroad, ages 5-14.
+- [18 AI & Digital Literacy Ideas for Kids](https://anywherelearning.co/ideas/ai-digital-ideas): Understand AI, use it wisely, and build media literacy, ages 8 and up.
+- [Resilience Checklist: 12 Challenges for Kids](https://anywherelearning.co/ideas/resilience-ideas): Safe failure, bouncing back, and perspective practice, ages 4-12.
 
 ## Blog
 
-- [Real-World Learning for Homeschool Families: The Complete Guide](https://anywherelearning.co/blog/real-world-learning-guide): Comprehensive guide to replacing curriculum-driven learning with real-world experiences across everyday life.
-- [Nature-Based Learning for Homeschool Families: The Complete Guide](https://anywherelearning.co/blog/nature-based-learning-guide): How to turn any outdoor space into a hands-on classroom with observation, STEM, and creative nature activities.
-- [The 5 Stages of Deschooling](https://anywherelearning.co/blog/five-stages-deschooling): What deschooling is, why stage 3 is the hardest, and how to support your family through the transition from school to homeschool.
-- [New to Homeschooling? Start Here](https://anywherelearning.co/blog/new-to-homeschooling): A getting-started guide for families beginning homeschooling -- no curriculum required. Covers first steps, common fears, and practical frameworks.
-- [How to Teach Kids About AI in 2026](https://anywherelearning.co/blog/ai-for-kids-2026): Practical guide to introducing AI concepts to children without fear or hype, with hands-on activities for different age ranges.
-- [10 Life Skills Every Kid Should Learn Before They're 12](https://anywherelearning.co/blog/life-skills-before-12): Ten essential real-world skills including cooking, navigation, money management, and first aid with age-appropriate milestones.
-- [How to Teach Kids About Money](https://anywherelearning.co/blog/teach-kids-about-money): Practical financial literacy for kids through real-world activities like grocery budgets, saving goals, and market day simulations.
-- [How We Worldschool With Two Kids](https://anywherelearning.co/blog/worldschool-two-kids): A firsthand account of worldschooling with children ages 9 and 12, covering daily structure, challenges, and what learning looks like on the road.
-- [15 Outdoor STEM Challenges](https://anywherelearning.co/blog/outdoor-stem-challenges): Hands-on science, engineering, and maths challenges using natural materials that work in any backyard, park, or trail.
-- [How to Raise Creative Kids](https://anywherelearning.co/blog/raise-creative-kids): Strategies for building creative confidence in children through open-ended projects, constraints, and real-world design challenges.
+- [Real-World Learning for Homeschool Families: The Complete Guide](https://anywherelearning.co/blog/real-world-learning-guide): Replacing curriculum-driven learning with real-world experiences across everyday life.
+- [Nature-Based Learning for Homeschool Families: The Complete Guide](https://anywherelearning.co/blog/nature-based-learning-guide): Turning any outdoor space into a hands-on classroom with observation, STEM, and creative nature activities.
+- [The 5 Stages of Deschooling](https://anywherelearning.co/blog/five-stages-deschooling): What deschooling is, why stage 3 is the hardest, and how to support your family through the transition.
+- [New to Homeschooling? Start Here](https://anywherelearning.co/blog/new-to-homeschooling): A getting-started guide for families beginning homeschooling, no curriculum required.
+- [How to Teach Kids About AI in 2026](https://anywherelearning.co/blog/ai-for-kids-2026): Introducing AI concepts to children without fear or hype, with hands-on activities by age.
+- [10 Life Skills Every Kid Should Learn Before They're 12](https://anywherelearning.co/blog/life-skills-before-12): Ten essential real-world skills with age-appropriate milestones.
+- [How to Teach Kids About Money](https://anywherelearning.co/blog/teach-kids-about-money): Practical financial literacy through real-world activities.
+- [How We Worldschool With Two Kids](https://anywherelearning.co/blog/worldschool-two-kids): A firsthand account of worldschooling with kids ages 9 and 12.
+- [15 Outdoor STEM Challenges](https://anywherelearning.co/blog/outdoor-stem-challenges): Hands-on science, engineering, and math challenges using natural materials.
+- [How to Raise Creative Kids](https://anywherelearning.co/blog/raise-creative-kids): Building creative confidence through open-ended projects and real-world design.
 
 ## Key Facts
 
-- Created by Amelie, a former classroom teacher (B.Ed, M.Ed) with 15 years of teaching experience, now homeschool and worldschool parent
-- Activities designed for ages 6-14 with built-in adaptation for different ability levels
-- 220+ activities across 60+ digital guide products
-- 9 learning categories: outdoor learning, creativity, real-world math, AI literacy, entrepreneurship, communication, planning, real-world skills, and start-here guides
+- Created by Amelie, a former classroom teacher (B.Ed, M.Ed) with 15 years of teaching experience, now a homeschool and worldschool parent
+- Membership model: full library access; founder rate $99/year (first 100 members), then $149/year; one-time Starter Pack (about $45) credits toward membership
+- 100+ real-world activities across 8 categories
+- Activities designed for ages 6-14 with built-in adaptation for different ability levels; the Skills Map roadmap spans ages 0-16+
 - Every activity includes 3 flexible levels (Explore, Develop, Extend) for multi-age use
 - Digital PDF format -- download and use on any device, no printing required
-- 48-hour money-back guarantee on all purchases
-- Based on real-world, low-prep learning philosophy -- no curriculum alignment, no worksheets
+- Real-world, low-prep learning philosophy -- no curriculum alignment, no worksheets
+- Refund policy: see https://anywherelearning.co/terms
 
 ## Contact
 
 - Website: https://anywherelearning.co
 - Email: info@anywherelearning.co
 - Pinterest: https://ca.pinterest.com/anywherelearning/
+- Instagram: https://www.instagram.com/anywherelearning
+- YouTube: https://www.youtube.com/@Anywhere_Learning
