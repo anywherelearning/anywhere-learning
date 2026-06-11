@@ -134,6 +134,7 @@ export default function RootLayout({
                   "email": "info@anywherelearning.co",
                   "founder": {
                     "@type": "Person",
+                    "@id": "https://anywherelearning.co/#amelie",
                     "name": "Amelie",
                     "url": "https://anywherelearning.co/about",
                     "jobTitle": "Founder",

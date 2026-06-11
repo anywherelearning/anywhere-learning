@@ -511,7 +511,7 @@ const posts: BlogPost[] = [
     pillarSlug: 'nature-based-learning',
     publishedAt: '2025-10-20',
     dateModified: '2026-05-04',
-    keywords: ['free seasonal nature scavenger hunts', 'scavenger hunt printable', 'spring nature activities for kids', 'summer nature activities for kids', 'fall nature activities for kids', 'winter nature activities for kids', 'nature scavenger hunt for kids', 'homeschool nature study'],
+    keywords: ['free seasonal nature scavenger hunts', 'spring nature activities for kids', 'summer nature activities for kids', 'fall nature activities for kids', 'winter nature activities for kids', 'nature scavenger hunt for kids', 'homeschool nature study'],
     readTimeMinutes: 10,
     author: amelie,
     heroImage: '/images/scavenger-hunts-hero.jpeg',

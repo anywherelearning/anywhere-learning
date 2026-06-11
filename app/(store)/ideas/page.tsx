@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   // Absolute so the keyword-led tag isn't pushed past the SERP cutoff
   title: { absolute: 'Activity Ideas for Kids: 15 Free Printable Checklists' },
   description:
-    '320+ activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. No signup, no email, just print.',
+    '320 activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. No signup, no email, just print.',
   alternates: { canonical: 'https://anywherelearning.co/ideas' },
   openGraph: {
     title: 'Activity Ideas for Kids: 15 Free Printable Checklists',
@@ -30,6 +30,26 @@ export default function IdeasPage() {
   const categories = getAllCategories();
   const totalLists = categories.reduce((sum, c) => sum + getListCount(c), 0);
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': 'https://anywherelearning.co/ideas#breadcrumb',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://anywherelearning.co',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Activity Ideas',
+        item: 'https://anywherelearning.co/ideas',
+      },
+    ],
+  };
+
   /* CollectionPage anchors the page entity and links it to the sitewide
      Organization/WebSite graph declared in app/layout.tsx */
   const itemListLd = {
@@ -42,8 +62,11 @@ export default function IdeasPage() {
       'Free activity idea checklists for kids across eight categories. No signup required.',
     inLanguage: 'en',
     isAccessibleForFree: true,
+    datePublished: '2026-06-10',
+    dateModified: '2026-06-10',
     isPartOf: { '@id': 'https://anywherelearning.co/#website' },
     publisher: { '@id': 'https://anywherelearning.co/#organization' },
+    breadcrumb: { '@id': 'https://anywherelearning.co/ideas#breadcrumb' },
     mainEntity: {
       '@type': 'ItemList',
       name: 'Activity Ideas',
@@ -60,6 +83,10 @@ export default function IdeasPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
@@ -79,15 +106,16 @@ export default function IdeasPage() {
                   borderRadius: '0 0 4px 4px',
                 }}
               >
-                Activity Ideas
+                Activity Ideas for Kids
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="mt-5 max-w-[600px] mx-auto text-[17.5px] md:text-[18.5px] leading-[1.55] text-[#5c5a54]">
-              Grab a list, pin it to the fridge, or save it for later.
-              Browse by what you&apos;re in the mood for. Every list is
-              free to read, print, and keep.
+            {/* Subtitle: definitional answer block, then the warm line */}
+            <p className="mt-5 max-w-[640px] mx-auto text-[17.5px] md:text-[18.5px] leading-[1.55] text-[#5c5a54]">
+              15 free printable checklists with 320 activity ideas for kids,
+              across nature, kitchen, life skills, STEM, creative, travel,
+              AI, and mindset. Grab a list, pin it to the fridge, and check
+              things off together. No signup, ever.
             </p>
 
             {/* Pills */}

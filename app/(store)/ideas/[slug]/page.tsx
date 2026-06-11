@@ -142,6 +142,16 @@ const ICON_PATHS: Record<string, string> = {
     'M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z',
 };
 
+/** Card excerpt: first sentence of the intro (the answer block), word-boundary
+    truncated only if very long. Replaces blind slice(0,117) that chopped the
+    longer definition-style intros mid-word. */
+function cardExcerpt(intro: string): string {
+  const firstSentence = intro.split('. ')[0] + '.';
+  if (firstSentence.length <= 160) return firstSentence;
+  const cut = firstSentence.lastIndexOf(' ', 157);
+  return firstSentence.slice(0, cut > 0 ? cut : 157) + '...';
+}
+
 /** '2026-06-10' -> 'June 2026' (string split, no timezone surprises) */
 function formatMonthYear(iso: string): string {
   const [year, month] = iso.split('-').map(Number);
@@ -548,6 +558,9 @@ function ListDetailView({
     breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
     author: {
       '@type': 'Person',
+      // Same @id as the founder node in the sitewide graph, so AI engines
+      // see one Amelie entity, not two disconnected Person nodes.
+      '@id': 'https://anywherelearning.co/#amelie',
       name: 'Amelie',
       url: 'https://anywherelearning.co/about',
       jobTitle: 'Former classroom teacher (B.Ed, M.Ed)',
@@ -632,6 +645,7 @@ function ListDetailView({
       ? {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
+          '@id': `${pageUrl}#faq`,
           mainEntity: seo.faqs.map((f) => ({
             '@type': 'Question',
             name: f.question,
@@ -859,14 +873,14 @@ function ListDetailView({
             </div>
           </div>
 
-          {/* Title */}
+          {/* Title (p, not h1: the hero already owns the page's single H1) */}
           <div className="text-center" style={{ marginBottom: 'var(--p-title-mb)' }}>
-            <h1
+            <p
               className="font-display text-gray-800 mb-0"
               style={{ color: category.accent, fontSize: 'var(--p-title-fs)' }}
             >
               {list.title}
-            </h1>
+            </p>
             <div
               className="mx-auto w-16 h-[2px] rounded-full mt-1"
               style={{ background: `${category.accent}60` }}
@@ -1095,9 +1109,7 @@ function ListDetailView({
                             {l.title}
                           </h3>
                           <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {l.intro.length > 120
-                              ? l.intro.slice(0, 117) + '...'
-                              : l.intro}
+                            {cardExcerpt(l.intro)}
                           </p>
                           <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
                             <span className="text-gray-500">
@@ -1153,9 +1165,7 @@ function ListDetailView({
                             {l.title}
                           </h3>
                           <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {l.intro.length > 120
-                              ? l.intro.slice(0, 117) + '...'
-                              : l.intro}
+                            {cardExcerpt(l.intro)}
                           </p>
                           <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
                             <span className="text-gray-500">

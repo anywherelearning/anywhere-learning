@@ -134,7 +134,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'A free printable checklist of 15 backyard science experiments for kids ages 5 to 11, covering water and weather, plants and soil, and animals and bugs. Every experiment uses what you already have: water, dirt, jars, and sunlight. No lab coat, no kit.',
+          'A free printable checklist of 15 science experiments kids ages 5 to 11 can run in the backyard, covering water and weather, plants and soil, and animals and bugs. Every experiment uses what you already have: water, dirt, jars, and sunlight. No lab coat, no kit.',
         sections: [
           {
             name: 'Water & Weather',
@@ -214,7 +214,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'A free printable scavenger hunt checklist with 17 nature finds for kids ages 3 to 10, split by season: spring, summer, autumn, and winter. Print the season you are in, tuck it in your pocket, and see what you can spot.',
+          'Seventeen nature scavenger hunt finds for kids ages 3 to 10, split across four seasonal hunts: spring, summer, autumn, and winter. Print the free checklist for the season you are in, tuck it in your pocket, and see what you can spot.',
         sections: [
           {
             name: 'Spring',
@@ -316,7 +316,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'This is a free printable checklist of 30 cooking and kitchen activities for kids from toddler to teen, covering counting and measuring, fractions, real-world skills, and cooking a full dish. Every one fits into meals you are already making. No worksheets required.',
+          'Thirty cooking and kitchen activities for kids from toddler to teen, covering counting and measuring, fractions, real-world skills, and cooking a full dish. Every one fits into meals you are already making, and the checklist is free to print. No worksheets required.',
         sections: [
           {
             name: 'Count & Measure',
@@ -505,7 +505,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'A free printable checklist of 11 family history activities for kids ages 6 to 12, spanning family stories, local history, and food history. History is not a textbook. It is the story your family carries and the buildings you walk past.',
+          'Eleven family history activities for kids ages 6 to 12 on one printable checklist, spanning family stories, local history, and food history. History is not a textbook. It is the story your family carries and the buildings you walk past.',
         sections: [
           {
             name: 'Family History',
@@ -552,11 +552,11 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'stem-ideas',
         blogSlug: 'outdoor-stem-challenges',
-        title: 'STEM Activities Checklist: 24 No-Kit Builds',
+        title: 'STEM Checklist: 24 No-Kit Builds',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-06-11',
         intro:
-          'This is a free printable STEM checklist with 24 builds and experiments for kids ages 5 to 12, split into build and engineer, science and experiment, and backyard STEM. Everything uses what you already have: cardboard, tape, kitchen supplies, and the recycling bin.',
+          'Twenty-four STEM builds and experiments for kids ages 5 to 12, split into build and engineer, science and experiment, and backyard STEM. Everything uses what you already have: cardboard, tape, kitchen supplies, and the recycling bin. The checklist is free to print.',
         sections: [
           {
             name: 'Build & Engineer',
@@ -574,13 +574,13 @@ export const IDEAS_DATA: IdeaCategory[] = [
           {
             name: 'Science & Experiment',
             items: [
-              'Run an evaporation race: water in sun shade and cover',
-              'Build a liquid density tower with honey dish soap water and oil',
-              'Plant the same seed in full sun partial shade and dark',
+              'Make invisible ink from lemon juice and reveal it with a warm lamp',
+              'Mix cornstarch and water and test when it acts solid vs liquid',
+              'Test which paper towel brand absorbs the most water per sheet',
               'Drop objects from the same height and see which lands first',
               "Track shadows hourly by marking a stick's shadow tip with rocks",
               'Bury five items and check weekly to track decomposition',
-              'Make a DIY rain gauge and track rainfall over a week',
+              'Grow salt or sugar crystals on a string over a week and compare',
               'Test which surfaces hold heat: sun-warmed rock vs shaded rock',
             ],
           },
@@ -590,9 +590,9 @@ export const IDEAS_DATA: IdeaCategory[] = [
               'Build a bridge across a gap using only sticks stones and bark',
               'Dig water channels in sand or dirt to move water from A to B',
               'Design a shelter for a toy using found materials',
-              'Sit with eyes closed and draw a sound map of everything you hear',
+              'Make a compass from a needle a magnet and a bowl of water',
               'Roll different objects down a slope and compare speed',
-              'Mark a one-meter square and count every living creature',
+              'Build a balloon rocket on a string across the yard and test angles',
               'Engineer a solar oven that melts chocolate',
               'Build a working weather station with three homemade instruments',
             ],
@@ -606,7 +606,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'A free printable checklist of 16 engineering build challenges for kids, sorted from quick builds to real engineering projects. Hand them cardboard, tape, and a challenge, then stand back and watch them think. Every build uses household materials.',
+          'Sixteen engineering build challenges for kids, sorted from quick builds to real engineering projects. Hand them cardboard, tape, and a challenge, then stand back and watch them think. Every build uses household materials, and the checklist prints free.',
         sections: [
           {
             name: 'Quick Builds',
@@ -662,7 +662,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
         published: '2026-06-10',
         updated: '2026-06-10',
         intro:
-          'This is a free printable checklist of 26 creative activities for kids from toddler to teen, organized into make something, tell a story, and invent and solve. Creativity is not about art supplies. It is about making something that did not exist five minutes ago.',
+          'Twenty-six creative activities for kids from toddler to teen, organized into make something, tell a story, and invent and solve. Creativity is not about art supplies. It is about making something that did not exist five minutes ago. Print the checklist free and leave it where bored kids will find it.',
         sections: [
           {
             name: 'Make Something',
