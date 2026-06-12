@@ -80,6 +80,11 @@ const nextConfig: NextConfig = {
       { source: "/shop/kitchen-maths-cooking", destination: "/shop/kitchen-math-challenge", permanent: true },
       { source: "/shop/my-small-business-project", destination: "/shop/micro-business", permanent: true },
 
+      // ── Truncated external links (GSC 404s, Jun 2026) ──
+      // A cut-off /free-guide link and a mangled "$99/yr" link circulating off-site
+      { source: "/free-", destination: "/free-guide", permanent: true },
+      { source: "/yr", destination: "/join", permanent: true },
+
       // ── Renamed or retired blog posts ──
       { source: "/blog/homeschool-road-trip", destination: "/blog/homeschool-while-traveling", permanent: true },
       { source: "/blog/worldschool-three-kids", destination: "/blog/worldschool-two-kids", permanent: true },
