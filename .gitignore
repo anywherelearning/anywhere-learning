@@ -53,3 +53,10 @@ next-env.d.ts
 # generated pinterest catalog snapshot (pre-launch only, regenerate as needed)
 /pinterest-feed.tsv
 .env.production
+
+# google drive sync temp chunks (corrupt partial files break Tailwind's source scan)
+/.tmp.driveupload/
+/.tmp.drivedownload/
+
+# local claude worktrees
+/.claude/worktrees/
