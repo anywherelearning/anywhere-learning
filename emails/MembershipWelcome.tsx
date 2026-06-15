@@ -1,16 +1,11 @@
 import {
   Body,
-  Column,
   Container,
   Head,
-  Heading,
-  Hr,
   Html,
   Img,
   Link,
   Preview,
-  Row,
-  Section,
   Text,
 } from '@react-email/components';
 
@@ -21,301 +16,492 @@ interface Props {
   signInUrl: string;
   /** Whether the buyer locked in the founder rate ($99/yr instead of $149/yr). */
   isFounderPhase: boolean;
+  /** True when this signup started a free trial (no charge yet). */
+  isTrial?: boolean;
+  /** ISO date the trial converts to a paid membership. Only set when isTrial. */
+  trialEndsAt?: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
+// Email images live on the Vercel Blob CDN, NOT the app domain. A stable
+// public URL means they render in every inbox regardless of deploy state or
+// NEXT_PUBLIC_URL (localhost in dev would otherwise yield broken images).
+const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
+const EMAIL_COLLAGE = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-library-hero.png';
+
+/** "JUN 26" pill label. */
+function pillDate(d: Date): string {
+  return d
+    .toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    .toUpperCase();
+}
+
+/** "June 26, 2026" for fine print. */
+function longDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
 /**
- * Welcome email — v2 design.
+ * Welcome email — v3, implemented from the Claude Design handoff
+ * ("Free trial" project, Welcome Email.dc.html, Jun 2026).
  *
- * Same warm/personal content as v1, with visual upgrades from the design:
- *   - Branded `a` avatar mark (rotated, italic) instead of PNG icon
- *   - CTA card gets a floating ✦ seal pill at top-center
- *   - Skills Map "3 levels" illustration card (Explore / Develop / Extend)
- *   - "What's coming" bullets restyled with circular icon dots + dashed rules
- *   - Founder banner gets a tilted "Locked in for life" pill stamp
+ * Serves both signup flows:
+ *   - free trial (isTrial)  → includes the "Your free trial, plainly"
+ *     timeline box and trial-specific fine print
+ *   - direct paid signup    → same layout without the trial box
+ *
+ * Faithful to the design with two deliberate deviations:
+ *   - The design's footer had "Email preferences · Unsubscribe" links; this is
+ *     a transactional email with no marketing list behind it, so dead links
+ *     would mislead. We ship "Manage account" only.
+ *   - The cancel reassurance line links to account settings (real) instead of
+ *     "from any email I send" (not yet true of every email).
  */
 export default function MembershipWelcome({
   firstName,
   signInUrl,
   isFounderPhase,
+  isTrial,
+  trialEndsAt,
 }: Props) {
   const name = firstName?.trim() || 'there';
+  const price = isFounderPhase ? '$99' : '$149';
+
+  const trialEnd = trialEndsAt ? new Date(trialEndsAt) : null;
+  const headsUp = trialEnd ? new Date(trialEnd.getTime() - 3 * 24 * 60 * 60 * 1000) : null;
+  const trialStart = new Date(); // rendered at send time = signup day
+
+  const manageUrl = `${baseUrl}/account/settings`;
 
   return (
     <Html>
       <Head>
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap');
         `}</style>
       </Head>
       <Preview>
-        Welcome, {name}. Real-world skills, hand-picked activities, and a person on the other end of the line.
+        {isTrial
+          ? `Welcome, ${name}. Your trial is open, every guide is yours to explore, and nothing was charged today.`
+          : `Welcome, ${name}. Real-world skills, hand-picked activities, and a person on the other end of the line.`}
       </Preview>
       <Body style={body}>
-        <Container style={envelope}>
+        <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
+            <tbody>
 
-          {/* ── Brand header ── */}
-          <div style={brandHead}>
-            <Img
-              src={`${baseUrl}/logo-icon-transparent.png`}
-              width="68"
-              height="49"
-              alt=""
-              style={brandIcon}
-            />
-            <Text style={brandName}>
-              anywhere <span style={brandItalic}>learning</span>
-            </Text>
-            <Text style={tagline}>
-              Hands-on activities for raising capable kids, ready for real life.
-            </Text>
-          </div>
+              {/* ── 1 · Brand header ── */}
+              <tr>
+                <td style={{ padding: '38px 48px 26px', textAlign: 'center' as const }}>
+                  <Img
+                    src={EMAIL_LOGO}
+                    alt="Anywhere Learning"
+                    width="46"
+                    height="46"
+                    style={{ display: 'inline-block', width: '46px', height: '46px' }}
+                  />
+                  <div style={brandName}>
+                    anywhere <span style={{ fontStyle: 'italic', color: C_FOREST }}>learning</span>
+                  </div>
+                  <div style={tagline}>
+                    Hands-on activities for raising capable kids, ready for real life.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0 48px' }}>
+                  <div style={fadeDivider} />
+                </td>
+              </tr>
 
-          {/* ── A warm hello ── */}
-          <div style={pad}>
-            <Text style={eyebrow}>
-              <span style={eyebrowRule} />A warm hello
-            </Text>
-            <Heading style={h1Greet}>
-              Hi {name}, I&apos;m so glad{' '}
-              <span style={italicAccent}>you&apos;re here.</span>
-            </Heading>
-            <Text style={p}>
-              I&apos;m Amelie. Fifteen years in classrooms, two degrees in education, a boy and
-              a girl of my own. Last year I made the hardest call of my career: I left
-              teaching to homeschool them. Partly because I missed them, mostly because I
-              wanted to be the one helping them get ready for the life they&apos;re actually
-              going to live.
-            </Text>
-            <Text style={p}>
-              Anywhere Learning is what I wish I&apos;d had when I was the teacher AND the
-              parent juggling both: small, doable, real-world activities a parent and a kid can
-              do together. The stuff that builds the underlying muscle, self-regulation, focus,
-              finishing things, the way childhood used to before we scheduled it all out.
-            </Text>
-            <Text style={pTight}>
-              Thank you for joining. Honestly, you being here is what makes the whole thing
-              possible.
-            </Text>
-          </div>
+              {/* ── 2 · Warm hello ── */}
+              <tr>
+                <td style={{ padding: '34px 48px 0' }}>
+                  <div style={eyebrow}>
+                    <span style={eyebrowRule} />
+                    A warm hello
+                  </div>
+                  <div style={h1}>
+                    Hi {name}, I&apos;m{' '}
+                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>so glad</span>{' '}
+                    you&apos;re here.
+                  </div>
+                  <Text style={p}>
+                    I taught for fifteen years before I left the classroom to homeschool my own
+                    two kids. Somewhere along the way I noticed the learning that stuck was never
+                    on a worksheet. It was the night we budgeted a grocery run, the afternoon we
+                    built a wobbly birdhouse and laughed at it.
+                  </Text>
+                  <Text style={{ ...p, margin: '14px 0 0' }}>
+                    Everything in your new library comes from that idea. Real activities, low
+                    prep, made to be done side by side. You don&apos;t need a plan for the whole
+                    year. You just need one good hour this week.
+                  </Text>
+                </td>
+              </tr>
 
-          {/* ── One-click sign-in CTA card ── */}
-          <div style={ctaCardWrap}>
-            <div style={ctaCard}>
-              <div style={ctaSeal}>✦</div>
-              <Text style={ctaLabel}>One-click sign-in</Text>
-              <Link href={signInUrl} style={btn}>
-                Open my library →
-              </Link>
-              <Text style={ctaMicro}>
-                This link signs you in and creates your account.
-                <br />
-                You can set a password from your settings whenever you want.
-              </Text>
-            </div>
-          </div>
+              {/* ── 3 · Sign-in CTA card ── */}
+              <tr>
+                <td style={{ padding: '30px 48px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
+                    <tbody>
+                      <tr>
+                        <td style={{ padding: '24px 28px', textAlign: 'center' as const }}>
+                          <Img
+                            src={EMAIL_COLLAGE}
+                            alt="A fan of Anywhere Learning activity guides with the Skills Map in front"
+                            width="280"
+                            height="216"
+                            style={{
+                              display: 'inline-block',
+                              width: '280px',
+                              height: 'auto',
+                              maxWidth: '100%',
+                            }}
+                          />
+                          <div style={{ ...ctaLabel, marginTop: '16px' }}>One-click sign-in</div>
+                          <div style={{ marginTop: '14px' }}>
+                            <Link href={signInUrl} style={btn}>
+                              Open my library &rarr;
+                            </Link>
+                          </div>
+                          <div style={ctaMicro}>
+                            This button signs you in on this device. No password to remember.
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
 
-          {/* ── How it works ── */}
-          <div style={pad}>
-            <Text style={eyebrow}>
-              <span style={eyebrowRule} />How it works
-            </Text>
-            <Heading as="h2" style={h2}>
-              Start with the{' '}
-              <span style={italicAccent}>Skills Map.</span>
-            </Heading>
-            <Text style={p}>
-              It&apos;s your parent roadmap. It maps the skills modern childhood doesn&apos;t make
-              space for (cooking, budgeting, planning, problem-solving, real-world math) to the
-              right activity, at the right age. Open it first. Pick one. Grab what you already
-              have at home. Do something real together.
-            </Text>
-            <Text style={pNoMargin}>
-              Every activity comes with three skill levels, so siblings can work side by side
-              at their own pace.
-            </Text>
-          </div>
+              {/* ── 4 · How it works ── */}
+              <tr>
+                <td style={{ padding: '38px 48px 0' }}>
+                  <div style={eyebrow}>
+                    <span style={eyebrowRule} />
+                    Getting started
+                  </div>
+                  <div style={h2}>How it works</div>
+                  <table
+                    role="presentation"
+                    cellPadding={0}
+                    cellSpacing={0}
+                    style={{ width: '100%', borderCollapse: 'collapse' as const, marginTop: '16px' }}
+                  >
+                    <tbody>
+                      <Step
+                        n="1"
+                        title="Start with your Skills Map"
+                        last={false}
+                        first
+                      >
+                        It&apos;s the parent roadmap. A calm picture of everything your kids can
+                        learn to do, from first pancakes to first customer.
+                      </Step>
+                      <Step n="2" title="Pick one activity" last={false}>
+                        Whatever fits this week. Twenty minutes or a whole afternoon, every guide
+                        tells you exactly what to grab.
+                      </Step>
+                      <Step n="3" title="Do something real together" last>
+                        Cook the meal, build the stand, plant the bed. The learning takes care of
+                        itself.
+                      </Step>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
 
-          {/* ── Skills Map illustration card (3 levels) ── */}
-          <div style={mapCardWrap}>
-            <div style={mapCard}>
-              <div style={mapPinWrap}>
-                <span style={mapPin}>3 levels · 1 activity</span>
-              </div>
-              {/* Raw HTML table with table-layout: fixed = the only reliable
-                  way to force three equal-width columns inside a narrow
-                  email envelope. React Email's <Row>/<Column> sometimes
-                  expands beyond 100% on certain clients. */}
-              <table
-                role="presentation"
-                cellPadding={0}
-                cellSpacing={0}
-                width="100%"
-                style={levelsTable}
-              >
-                <tbody>
-                  <tr>
-                    <td style={levelsCell}>
-                      <Level
-                        roman="i"
-                        name="Explore"
-                        desc="For getting started."
-                      />
-                    </td>
-                    <td style={levelsCell}>
-                      <Level
-                        roman="ii"
-                        name="Develop"
-                        desc="For building confidence."
-                      />
-                    </td>
-                    <td style={levelsCell}>
-                      <Level
-                        roman="iii"
-                        name="Extend"
-                        desc="For going deeper."
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+              {/* ── 5 · Three levels ── */}
+              <tr>
+                <td style={{ padding: '28px 48px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={levelsCard}>
+                    <tbody>
+                      <tr>
+                        <td style={{ padding: '22px 16px 20px', textAlign: 'center' as const }}>
+                          <div style={levelsHeader}>Every guide comes in three levels</div>
+                          <table
+                            role="presentation"
+                            cellPadding={0}
+                            cellSpacing={0}
+                            style={levelsRow}
+                          >
+                            <tbody>
+                              <tr>
+                                <Level filled={1} name="Explore" desc="a gentle first try" />
+                                <Level filled={2} name="Develop" desc="more hands, less help" />
+                                <Level filled={3} name="Extend" desc="they run the show" />
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div style={levelsFootnote}>
+                            Same activity, sized to your kid. Pick whichever fits today.
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
 
-          {/* ── What's coming ── */}
-          <div style={panelWrap}>
-            <div style={panel}>
-              <Text style={eyebrow}>
-                <span style={eyebrowRule} />What&apos;s coming
-              </Text>
-              <Heading as="h2" style={h2}>
-                This is{' '}
-                <span style={italicAccent}>just the start.</span>
-              </Heading>
-              <Bullet icon="+" first>
-                <strong style={bulletStrong}>New activities every quarter</strong>, pulled from
-                what families ask for, and what I see working with my own kids.
-              </Bullet>
-              <Bullet icon="✎">
-                <strong style={bulletStrong}>The blog keeps growing</strong>. Real stories from
-                our days, life-skills and parenting takes, what we&apos;re trying, what flops,
-                no fluff.
-              </Bullet>
-              <Bullet icon="?">
-                <strong style={bulletStrong}>Want a category we don&apos;t have yet?</strong>{' '}
-                Tell me. I add what members ask for first.
-              </Bullet>
-            </div>
-          </div>
+              {/* ── 6 · Your free trial, plainly (trial signups only) ── */}
+              {isTrial && trialEnd && headsUp && (
+                <tr>
+                  <td style={{ padding: '34px 48px 0' }}>
+                    <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
+                      <tbody>
+                        <tr>
+                          <td style={{ padding: '24px 26px 22px' }}>
+                            <div style={{ ...eyebrow, color: C_FOREST_DARK }}>
+                              <span style={eyebrowRule} />
+                              Your free trial, plainly
+                            </div>
 
-          {/* ── My door is open ── */}
-          <div style={pad}>
-            <Text style={eyebrow}>
-              <span style={eyebrowRule} />My door is open
-            </Text>
-            <Heading as="h2" style={h2}>
-              Talk to me{' '}
-              <span style={italicAccent}>anytime.</span>
-            </Heading>
-            <Text style={p}>
-              Reply to this email. It comes straight to me, and I read every one. Tell me how
-              it&apos;s going. What clicks. What doesn&apos;t. What you wish existed. A question
-              your kid asked that I should write about. I take requests, and I love hearing what
-              you&apos;re doing.
-            </Text>
-            <Text style={pNoMargin}>
-              And, if an activity lands really well with your kid, would you{' '}
-              <Link href={`${baseUrl}/account`} style={inlineLink}>
-                leave a quick review
-              </Link>
-              ? Other parents look at those before they pick what to do next, and your words
-              matter more than mine.
-            </Text>
-          </div>
+                            <table
+                              role="presentation"
+                              cellPadding={0}
+                              cellSpacing={0}
+                              style={{
+                                width: '100%',
+                                borderCollapse: 'collapse' as const,
+                                marginTop: '16px',
+                              }}
+                            >
+                              <tbody>
+                                <TrialRow label="TODAY" first>
+                                  <strong style={strongInk}>$0 charged.</strong> For 14 days,
+                                  read every guide in your browser, on any device, as much as you
+                                  like. Want to save guides as PDFs? Start your membership anytime.
+                                </TrialRow>
+                                <TrialDivider />
+                                <TrialRow label={pillDate(headsUp)}>
+                                  <strong style={strongInk}>One friendly heads-up.</strong>{' '}
+                                  I&apos;ll email you 3 days before anything changes. No surprise
+                                  charges, I promise.
+                                </TrialRow>
+                                <TrialDivider />
+                                <TrialRow label={pillDate(trialEnd)} last>
+                                  <strong style={strongInk}>Membership begins.</strong> Your plan
+                                  starts at {price} for the year and downloads unlock.
+                                </TrialRow>
+                              </tbody>
+                            </table>
 
-          {/* ── Founder rate banner ── */}
-          {isFounderPhase && (
-            <div style={founderWrap}>
-              <div style={founderBox}>
-                <div style={founderStamp}>Locked in for life</div>
-                <Text style={founderHeadline}>Founder rate</Text>
-                <Text style={founderBody}>
-                  Your $99/year stays put, even when new members start paying $149.
-                  That&apos;s my way of saying thank you for being early.
-                </Text>
-              </div>
-            </div>
-          )}
+                            <div style={cancelNote}>
+                              Not the right season for it?{' '}
+                              <Link href={manageUrl} style={{ color: C_FOREST, fontWeight: 600 }}>
+                                Cancel in one click
+                              </Link>{' '}
+                              and you&apos;ll pay nothing at all.
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              )}
 
-          {/* ── Signature ── */}
-          <div style={signoffBlock}>
-            <Text style={xo}>xo,</Text>
-            <Text style={nameSignoff}>Amelie</Text>
-            <Text style={signoffRole}>Founder · Anywhere Learning</Text>
-          </div>
+              {/* ── 7 · Founder rate banner ── */}
+              {isFounderPhase && (
+                <tr>
+                  <td style={{ padding: '30px 48px 0' }}>
+                    <table role="presentation" cellPadding={0} cellSpacing={0} style={founderCard}>
+                      <tbody>
+                        <tr>
+                          <td style={{ padding: '24px 26px', verticalAlign: 'middle' as const }}>
+                            <div style={founderEyebrow}>Your founder rate</div>
+                            <div style={founderHeadline}>
+                              $99 a year, for as long as you stay.
+                            </div>
+                            <div style={founderBody}>
+                              You&apos;re joining in our founding season. When new members pay
+                              $149, your price won&apos;t move an inch.
+                            </div>
+                          </td>
+                          <td
+                            style={{
+                              width: '150px',
+                              padding: '24px 26px 24px 0',
+                              verticalAlign: 'middle' as const,
+                              textAlign: 'center' as const,
+                            }}
+                          >
+                            <div style={founderStamp}>Locked in for life</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              )}
 
-          <Hr style={dashHr} />
+              {/* ── 8 · Sign-off ── */}
+              <tr>
+                <td style={{ padding: '36px 48px 0' }}>
+                  <div style={{ fontSize: '15.5px', color: C_BODY }}>xo,</div>
+                  <div style={signature}>Amelie</div>
+                  <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
+                    Founder · Anywhere Learning
+                  </div>
+                </td>
+              </tr>
 
-          {/* ── Fine print ── */}
-          <Text style={legal}>
-            Your membership renews automatically at{' '}
-            {isFounderPhase
-              ? '$99/year (founder rate, locked in)'
-              : '$149/year'}
-            . You can cancel anytime from{' '}
-            <Link href={`${baseUrl}/account/settings`} style={legalLink}>
-              your account settings
-            </Link>
-            .
-          </Text>
+              {/* ── 9 · Fine print ── */}
+              <tr>
+                <td style={{ padding: '28px 48px 32px' }}>
+                  <div style={fadeDivider} />
+                  <Text style={legal}>
+                    {isTrial && trialEnd ? (
+                      <>
+                        You&apos;re receiving this note because you started a 14-day free trial
+                        of Anywhere Learning with this email address on {longDate(trialStart)}.
+                        Your card on file was not charged today. Unless you cancel, your
+                        membership begins on {longDate(trialEnd)} and renews each year at {price}{' '}
+                        USD. You can cancel anytime from your account page, or just reply to this
+                        email and I&apos;ll take care of it myself.
+                      </>
+                    ) : (
+                      <>
+                        You&apos;re receiving this note because you joined Anywhere Learning with
+                        this email address. Your membership renews each year at {price} USD
+                        {isFounderPhase ? ', your founder rate, locked in' : ''}. You can cancel
+                        anytime from your account page, or just reply to this email and I&apos;ll
+                        take care of it myself.
+                      </>
+                    )}
+                  </Text>
+                  <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
+                    <Link href={manageUrl} style={{ color: C_MUTED }}>
+                      Manage account
+                    </Link>
+                  </div>
+                </td>
+              </tr>
 
-          {/* ── Footer ── */}
+            </tbody>
+          </table>
+
+          {/* Outside-the-envelope credit line */}
           <div style={credit}>
-            <Text style={creditText}>
-              Anywhere Learning · <em style={creditItalic}>Built by Amelie</em> · Made in Nelson, BC
-            </Text>
+            Anywhere Learning · <em style={{ fontStyle: 'italic' }}>Built by Amelie</em> · Made in
+            Nelson, BC
           </div>
-
         </Container>
       </Body>
     </Html>
   );
 }
 
-// ── Reusable: one Skills-Map level card ──
-// Plain card (div), no nested table. Used three-across inside a raw
-// <table> with tableLayout: fixed so the columns honour their 33.33%
-// widths instead of expanding to fit content.
-function Level({ roman, name, desc }: { roman: string; name: string; desc: string }) {
+/* ── Reusable pieces ───────────────────────────────────────── */
+
+/** Numbered "How it works" row. */
+function Step({
+  n,
+  title,
+  first,
+  last,
+  children,
+}: {
+  n: string;
+  title: string;
+  first?: boolean;
+  last?: boolean;
+  children: React.ReactNode;
+}) {
+  const padBottom = last ? '0' : '18px';
   return (
-    <div style={level}>
-      <Text style={levelNum}>{roman}</Text>
-      <Text style={levelName}>{name}</Text>
-      <Text style={levelDesc}>{desc}</Text>
-    </div>
+    <tr>
+      <td
+        style={{
+          width: '46px',
+          verticalAlign: 'top' as const,
+          padding: `${first ? '4px' : '0'} 0 ${padBottom}`,
+        }}
+      >
+        <div style={stepCircle}>{n}</div>
+      </td>
+      <td
+        style={{
+          verticalAlign: 'top' as const,
+          padding: `${first ? '2px' : '0'} 0 ${padBottom}`,
+        }}
+      >
+        <div style={{ fontSize: '15px', fontWeight: 600, color: C_INK }}>{title}</div>
+        <div style={{ fontSize: '14px', lineHeight: 1.6, color: C_BODY, marginTop: '3px' }}>
+          {children}
+        </div>
+      </td>
+    </tr>
   );
 }
 
-// ── Reusable: one "What's coming" bullet ──
-function Bullet({
-  icon,
+/** One of the three difficulty-level mini cards (dots + name + blurb). */
+function Level({ filled, name, desc }: { filled: number; name: string; desc: string }) {
+  return (
+    <td style={levelCell}>
+      <div>
+        {[1, 2, 3].map((i) => (
+          <span key={i} style={i <= filled ? dotFilled : dotEmpty} />
+        ))}
+      </div>
+      <div style={levelName}>{name}</div>
+      <div style={levelDesc}>{desc}</div>
+    </td>
+  );
+}
+
+/** A pill-chipped row of the trial timeline. */
+function TrialRow({
+  label,
   first,
+  last,
   children,
 }: {
-  icon: string;
+  label: string;
   first?: boolean;
+  last?: boolean;
   children: React.ReactNode;
 }) {
+  const padTop = first ? '0' : '13px';
+  const padBottom = last ? '0' : '14px';
   return (
-    <Row style={first ? bulletRowFirst : bulletRow}>
-      <Column style={bulletIconCol}>
-        <div style={bulletDot}>{icon}</div>
-      </Column>
-      <Column style={bulletBodyCol}>
-        <Text style={bulletText}>{children}</Text>
-      </Column>
-    </Row>
+    <tr>
+      <td style={{ width: '76px', verticalAlign: 'top' as const, padding: `${padTop} 0 ${padBottom}` }}>
+        <span style={trialPill}>{label}</span>
+      </td>
+      <td
+        style={{
+          verticalAlign: 'top' as const,
+          padding: `${first ? '2px' : '15px'} 0 ${padBottom}`,
+          fontSize: '14px',
+          lineHeight: 1.6,
+          color: C_BODY,
+          fontFamily: FONT_BODY,
+        }}
+      >
+        {children}
+      </td>
+    </tr>
+  );
+}
+
+function TrialDivider() {
+  return (
+    <tr>
+      <td
+        colSpan={2}
+        style={{
+          borderTop: `1px dashed ${C_SAGE_BORDER}`,
+          height: '1px',
+          lineHeight: '1px',
+          fontSize: '1px',
+        }}
+      >
+        &nbsp;
+      </td>
+    </tr>
   );
 }
 
@@ -324,15 +510,17 @@ MembershipWelcome.PreviewProps = {
   firstName: 'Sarah',
   signInUrl: 'https://anywherelearning.co/sign-in?__clerk_ticket=example_token',
   isFounderPhase: true,
+  isTrial: true,
+  trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
 } satisfies Props;
 
-// ─────────────────────────────────────────────────────────────
-// Brand tokens
-// ─────────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────────────
+   Brand tokens — from the Claude Design handoff (Free trial project)
+   ───────────────────────────────────────────────────────────── */
 
-const FONT_BODY = '"DM Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif';
-const FONT_DISPLAY = '"DM Serif Display", Georgia, "Times New Roman", serif';
-const FONT_SCRIPT = '"Dancing Script", "Brush Script MT", cursive';
+const FONT_BODY = "'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif";
+const FONT_DISPLAY = "'DM Serif Display', Georgia, 'Times New Roman', serif";
+const FONT_SCRIPT = "'Dancing Script', 'Brush Script MT', cursive";
 
 const C_CREAM = '#FAF8F3';
 const C_CREAM_2 = '#F2EFE4';
@@ -342,14 +530,11 @@ const C_INK = '#2D3A2E';
 const C_BODY = '#4F5A50';
 const C_MUTED = '#7B8378';
 const C_RULE = '#D8D4C5';
-const C_BEIGE_2 = '#C9C5B7';
 const C_FOREST = '#588157';
 const C_FOREST_DARK = '#3A5A40';
 const C_TERRA = '#C97B5C';
 const C_TERRA_DARK = '#7A3D24';
-const C_TERRA_SOFT = '#F2DECF';
 
-// ── Layout ──
 const body = {
   backgroundColor: '#E9E5DC',
   fontFamily: FONT_BODY,
@@ -359,462 +544,293 @@ const body = {
 
 const envelope = {
   width: '100%',
-  maxWidth: '600px',
-  margin: '0 auto',
+  borderCollapse: 'separate' as const,
   backgroundColor: C_CREAM,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
-  overflow: 'hidden' as const,
-};
-
-// ── Brand header ──
-const brandHead = {
-  textAlign: 'center' as const,
-  padding: '36px 24px 8px',
-};
-
-// Real brand mark (PNG icon from /public/logo-icon-transparent.png).
-// Renders consistently across email clients with no font/transform quirks.
-const brandIcon = {
-  display: 'block' as const,
-  margin: '0 auto 12px',
 };
 
 const brandName = {
   fontFamily: FONT_DISPLAY,
-  fontSize: '22px',
-  lineHeight: '1',
+  fontSize: '25px',
   color: C_INK,
-  margin: '0 0 6px',
-  letterSpacing: '-0.005em',
-};
-
-const brandItalic = {
-  fontStyle: 'italic' as const,
-  color: C_FOREST,
+  marginTop: '10px',
 };
 
 const tagline = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '14px',
+  fontSize: '13px',
   color: C_MUTED,
-  margin: '0',
-};
-
-// ── Section padding ──
-const pad = {
-  padding: '6px 36px 4px',
-};
-
-// ── Eyebrow ──
-const eyebrow = {
+  marginTop: '5px',
   fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '11.5px',
-  letterSpacing: '0.18em',
+};
+
+// Solid fallback color + fading gradient where supported.
+const fadeDivider = {
+  height: '1px',
+  backgroundColor: C_RULE,
+  backgroundImage: `linear-gradient(to right, rgba(216,212,197,0), ${C_RULE}, rgba(216,212,197,0))`,
+};
+
+const eyebrow = {
+  fontSize: '11px',
+  fontWeight: 700,
+  letterSpacing: '0.2em',
+  color: C_MUTED,
   textTransform: 'uppercase' as const,
-  color: C_FOREST_DARK,
-  margin: '24px 0 12px',
-  display: 'inline-flex' as const,
-  alignItems: 'center' as const,
+  fontFamily: FONT_BODY,
 };
 
 const eyebrowRule = {
-  display: 'inline-block' as const,
-  width: '22px',
+  display: 'inline-block',
+  width: '26px',
   height: '1px',
   backgroundColor: C_FOREST,
+  verticalAlign: '3px',
   marginRight: '10px',
-  verticalAlign: 'middle' as const,
 };
 
-// ── Headlines ──
-const h1Greet = {
+const h1 = {
   fontFamily: FONT_DISPLAY,
-  fontWeight: 400,
-  fontSize: '32px',
-  lineHeight: '1.08',
-  letterSpacing: '-0.014em',
+  fontSize: '31px',
+  lineHeight: 1.22,
   color: C_INK,
-  margin: '0 0 18px',
+  marginTop: '12px',
 };
 
 const h2 = {
   fontFamily: FONT_DISPLAY,
-  fontWeight: 400,
-  fontSize: '25px',
-  lineHeight: '1.15',
-  letterSpacing: '-0.01em',
+  fontSize: '23px',
   color: C_INK,
-  margin: '0 0 12px',
+  marginTop: '10px',
 };
 
-const italicAccent = {
-  fontStyle: 'italic' as const,
-  color: C_FOREST,
-};
-
-// ── Body ──
 const p = {
-  fontFamily: FONT_BODY,
-  color: C_BODY,
   fontSize: '15.5px',
-  lineHeight: '1.65',
-  margin: '0 0 14px',
+  lineHeight: 1.68,
+  color: C_BODY,
+  margin: '18px 0 0',
+  fontFamily: FONT_BODY,
 };
 
-const pTight = {
-  ...p,
-  marginBottom: '4px',
-};
+const strongInk = { fontWeight: 600, color: C_INK };
 
-const pNoMargin = {
-  ...p,
-  marginBottom: '0',
-};
-
-// ── CTA card ──
-const ctaCardWrap = {
-  margin: '24px 28px 4px',
-  padding: 0,
-};
-
-const ctaCard = {
+const sageCard = {
+  width: '100%',
+  borderCollapse: 'separate' as const,
   backgroundColor: C_SAGE_SOFT,
   border: `1px solid ${C_SAGE_BORDER}`,
   borderRadius: '14px',
-  padding: '24px',
-  textAlign: 'center' as const,
-  position: 'relative' as const,
-};
-
-const ctaSeal = {
-  width: '36px',
-  height: '36px',
-  borderRadius: '50%',
-  backgroundColor: C_CREAM,
-  border: `1px solid ${C_SAGE_BORDER}`,
-  color: C_FOREST_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '18px',
-  lineHeight: '36px',
-  textAlign: 'center' as const,
-  margin: '-38px auto 0', // pull above the card border
 };
 
 const ctaLabel = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '11px',
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
+  fontSize: '10.5px',
+  fontWeight: 700,
+  letterSpacing: '0.22em',
   color: C_FOREST_DARK,
-  margin: '6px 0 12px',
+  textTransform: 'uppercase' as const,
+  marginTop: '12px',
+  fontFamily: FONT_BODY,
 };
 
 const btn = {
-  display: 'inline-block' as const,
+  display: 'inline-block',
   backgroundColor: C_FOREST,
-  color: C_CREAM,
-  fontFamily: FONT_BODY,
+  color: '#F7F4EA',
+  fontSize: '15px',
   fontWeight: 600,
-  fontSize: '15.5px',
   textDecoration: 'none',
-  padding: '13px 28px',
+  padding: '13px 32px',
   borderRadius: '11px',
+  fontFamily: FONT_BODY,
 };
 
 const ctaMicro = {
-  fontFamily: FONT_BODY,
   fontSize: '12.5px',
-  lineHeight: '1.55',
   color: C_MUTED,
-  margin: '14px 0 0',
-};
-
-// ── Skills Map illustration ──
-// Match the outer margins of every other inner card (CTA, Panel, Founder)
-// so all sections share the same visual indent inside the envelope.
-const mapCardWrap = {
-  margin: '6px 28px 0',
-  padding: 0,
-};
-
-const mapCard = {
-  border: `1px solid ${C_RULE}`,
-  borderRadius: '14px',
-  backgroundColor: C_CREAM_2,
-  // Cross-hatch pattern via repeating-linear-gradient — most modern clients support this
-  backgroundImage:
-    'repeating-linear-gradient(45deg, rgba(120,90,40,0.045) 0 2px, transparent 2px 12px)',
-  padding: '14px 6px',
-};
-
-// Pin shown above the 3-level row as a centered chip instead of absolutely-
-// positioned in the corner. Absolute positioning gets clipped inside narrow
-// envelopes on email clients that don't honour `position: relative` on the
-// parent (most of Outlook). Center-chip is universally safe.
-const mapPin = {
-  display: 'inline-block' as const,
+  marginTop: '12px',
   fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '10.5px',
-  letterSpacing: '0.14em',
-  textTransform: 'uppercase' as const,
-  color: C_MUTED,
-  backgroundColor: C_CREAM,
-  border: `1px solid ${C_RULE}`,
-  padding: '4px 11px',
-  borderRadius: '999px',
-  margin: '0 0 12px',
 };
 
-const mapPinWrap = {
-  textAlign: 'center' as const,
-};
-
-// Three-across level cards. `tableLayout: 'fixed'` is the trick that makes
-// the 33.33% column widths actually behave — without it, columns expand to
-// fit the (border + padding + text) of the inner card and the row overflows
-// the envelope.
-const levelsTable = {
-  width: '100%',
-  tableLayout: 'fixed' as const,
-  borderCollapse: 'separate' as const,
-};
-
-const levelsCell = {
-  width: '33.33%',
-  verticalAlign: 'top' as const,
-  // Tiny 2px padding on the <td> creates the inter-card gutter.
-  padding: '0 2px',
-};
-
-const level = {
-  border: `1px solid ${C_RULE}`,
-  backgroundColor: C_CREAM,
-  borderRadius: '10px',
-  padding: '10px 8px 11px',
-  textAlign: 'left' as const,
-};
-
-const levelNum = {
+const stepCircle = {
+  width: '32px',
+  height: '32px',
+  border: `1.5px solid ${C_FOREST}`,
+  borderRadius: '50%',
   fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '14px',
+  fontSize: '16px',
   color: C_FOREST,
-  margin: '0 0 4px',
-  lineHeight: '1',
+  textAlign: 'center' as const,
+  lineHeight: '31px',
+};
+
+const levelsCard = {
+  width: '100%',
+  borderCollapse: 'separate' as const,
+  backgroundColor: C_CREAM_2,
+  borderRadius: '14px',
+};
+
+const levelsHeader = {
+  fontSize: '10.5px',
+  fontWeight: 700,
+  letterSpacing: '0.22em',
+  color: C_MUTED,
+  textTransform: 'uppercase' as const,
+  fontFamily: FONT_BODY,
+};
+
+const levelsRow = {
+  width: '100%',
+  borderCollapse: 'separate' as const,
+  borderSpacing: '6px 0',
+  marginTop: '12px',
+};
+
+const levelCell = {
+  width: '33.3%',
+  backgroundColor: C_CREAM,
+  border: `1px solid ${C_RULE}`,
+  borderRadius: '10px',
+  padding: '14px 8px 13px',
+  textAlign: 'center' as const,
+  verticalAlign: 'top' as const,
+};
+
+const dotFilled = {
+  display: 'inline-block',
+  width: '7px',
+  height: '7px',
+  borderRadius: '50%',
+  backgroundColor: C_FOREST,
+  margin: '0 2px',
+};
+
+const dotEmpty = {
+  display: 'inline-block',
+  width: '7px',
+  height: '7px',
+  borderRadius: '50%',
+  border: `1px solid ${C_SAGE_BORDER}`,
+  margin: '0 2px',
 };
 
 const levelName = {
   fontFamily: FONT_DISPLAY,
-  fontSize: '15px',
-  lineHeight: '1.1',
+  fontSize: '16px',
   color: C_INK,
-  margin: '0 0 4px',
+  marginTop: '8px',
 };
 
 const levelDesc = {
-  fontFamily: FONT_BODY,
-  fontSize: '11.5px',
-  color: C_BODY,
-  lineHeight: '1.4',
-  margin: '0',
-};
-
-// ── "What's coming" panel ──
-const panelWrap = {
-  margin: '20px 28px',
-  padding: 0,
-};
-
-const panel = {
-  backgroundColor: C_CREAM_2,
-  border: `1px solid ${C_RULE}`,
-  borderRadius: '14px',
-  padding: '24px 28px 22px',
-};
-
-const bulletRow = {
-  borderTop: `1px dashed ${C_BEIGE_2}`,
-  padding: '12px 0',
-};
-
-const bulletRowFirst = {
-  padding: '6px 0 12px',
-};
-
-const bulletIconCol = {
-  width: '32px',
-  verticalAlign: 'top' as const,
-  paddingTop: '2px',
-};
-
-const bulletDot = {
-  width: '20px',
-  height: '20px',
-  borderRadius: '50%',
-  backgroundColor: C_SAGE_SOFT,
-  color: C_FOREST_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
   fontSize: '12px',
-  lineHeight: '20px',
-  textAlign: 'center' as const,
-};
-
-const bulletBodyCol = {
-  verticalAlign: 'top' as const,
-};
-
-const bulletText = {
+  color: C_MUTED,
+  marginTop: '3px',
+  lineHeight: 1.45,
   fontFamily: FONT_BODY,
-  fontSize: '14.5px',
-  lineHeight: '1.55',
-  color: C_BODY,
-  margin: '0',
 };
 
-const bulletStrong = {
-  color: C_INK,
-  fontWeight: 600,
+const levelsFootnote = {
+  fontSize: '12.5px',
+  color: C_MUTED,
+  marginTop: '12px',
+  fontFamily: FONT_BODY,
 };
 
-// ── Founder banner ── (compact: smaller padding + denser type so the
-// banner reads as a sidebar moment rather than a full section block)
-// Founder banner — exact port of the design.
-//   - Same outer margins (28px) as other sections, NOT narrower
-//   - Box is `position: relative` so the absolutely-positioned stamp anchors to it
-//   - Stamp uses `position: absolute; top: -12px; left: 50%; translateX(-50%)`
-//     to sit straddling the top border (~half above, ~half overlapping into the
-//     card). Renders cleanly in Apple Mail, Gmail, Outlook web. Old Outlook
-//     desktop falls back to rendering the stamp inline at the top of the box.
-const founderWrap = {
-  margin: '20px 28px',
-  padding: 0,
-};
-
-const founderBox = {
-  backgroundColor: C_TERRA_SOFT,
-  border: `1px solid rgba(201, 123, 92, 0.35)`,
-  borderRadius: '14px',
-  padding: '18px 24px 20px',
-  textAlign: 'center' as const,
-  position: 'relative' as const,
-};
-
-const founderStamp = {
-  position: 'absolute' as const,
-  top: '-12px',
-  left: '50%',
-  transform: 'translateX(-50%) rotate(-3deg)',
+const trialPill = {
+  display: 'inline-block',
   backgroundColor: C_CREAM,
-  border: `1px solid rgba(201, 123, 92, 0.35)`,
-  color: C_TERRA_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '14px',
-  padding: '4px 12px',
+  border: `1px solid ${C_SAGE_BORDER}`,
   borderRadius: '999px',
-  boxShadow: '0 6px 12px -8px rgba(201,123,92,0.5)',
+  fontSize: '10.5px',
+  fontWeight: 700,
+  letterSpacing: '0.08em',
+  color: C_FOREST_DARK,
+  padding: '4px 10px',
   whiteSpace: 'nowrap' as const,
+  fontFamily: FONT_BODY,
+};
+
+const cancelNote = {
+  marginTop: '18px',
+  backgroundColor: C_CREAM,
+  borderRadius: '10px',
+  padding: '12px 16px',
+  fontSize: '13px',
+  lineHeight: 1.6,
+  color: C_BODY,
+  fontFamily: FONT_BODY,
+};
+
+const founderCard = {
+  width: '100%',
+  borderCollapse: 'separate' as const,
+  backgroundColor: C_TERRA,
+  borderRadius: '14px',
+};
+
+const founderEyebrow = {
+  fontSize: '10.5px',
+  fontWeight: 700,
+  letterSpacing: '0.22em',
+  color: '#F2DECF',
+  textTransform: 'uppercase' as const,
+  fontFamily: FONT_BODY,
 };
 
 const founderHeadline = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '11px',
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
-  color: C_TERRA_DARK,
-  margin: '10px 0 8px',
+  fontFamily: FONT_DISPLAY,
+  fontSize: '21px',
+  lineHeight: 1.3,
+  color: '#FFF8F0',
+  marginTop: '7px',
 };
 
 const founderBody = {
+  fontSize: '13.5px',
+  lineHeight: 1.6,
+  color: '#F6E3D3',
+  marginTop: '7px',
   fontFamily: FONT_BODY,
-  fontSize: '14px',
-  lineHeight: '1.55',
-  color: C_TERRA_DARK,
-  margin: '0',
 };
 
-// ── Signoff ──
-const signoffBlock = {
-  padding: '24px 36px 8px',
-};
-
-const xo = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '16px',
-  color: C_MUTED,
-  margin: '0',
-};
-
-const nameSignoff = {
-  fontFamily: FONT_SCRIPT,
+// The rotate degrades gracefully (sits straight) in clients that strip it.
+const founderStamp = {
+  display: 'inline-block',
+  transform: 'rotate(-7deg)',
+  backgroundColor: C_TERRA_DARK,
+  border: '1px dashed rgba(242,222,207,0.55)',
+  borderRadius: '999px',
+  padding: '9px 16px',
+  fontSize: '10.5px',
   fontWeight: 700,
-  fontSize: '42px',
-  lineHeight: '1',
-  color: C_TERRA,
-  margin: '4px 0 4px',
-};
-
-const signoffRole = {
+  letterSpacing: '0.12em',
+  color: '#F2DECF',
+  textTransform: 'uppercase' as const,
+  whiteSpace: 'nowrap' as const,
   fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '12.5px',
-  letterSpacing: '0.04em',
-  color: C_MUTED,
-  margin: '0',
 };
 
-// ── Misc ──
-const dashHr = {
-  borderColor: C_RULE,
-  borderStyle: 'dashed' as const,
-  borderWidth: '1px 0 0',
-  margin: '16px 36px 18px',
-};
-
-const inlineLink = {
-  color: C_FOREST_DARK,
-  textDecoration: 'underline',
+const signature = {
+  fontFamily: FONT_SCRIPT,
+  fontSize: '46px',
   fontWeight: 600,
+  color: C_TERRA,
+  lineHeight: 1.15,
+  marginTop: '2px',
 };
 
 const legal = {
-  fontFamily: FONT_BODY,
   fontSize: '12.5px',
-  lineHeight: '1.55',
+  lineHeight: 1.6,
   color: C_MUTED,
-  margin: '0 36px 8px',
+  margin: '18px 0 0',
+  fontFamily: FONT_BODY,
 };
 
-const legalLink = {
-  color: C_MUTED,
-  textDecoration: 'underline',
-};
-
-// ── Footer ──
 const credit = {
   textAlign: 'center' as const,
-  padding: '8px 24px 28px',
-};
-
-const creditText = {
-  fontFamily: FONT_BODY,
   fontSize: '12px',
-  color: C_BEIGE_2,
-  letterSpacing: '0.04em',
-  margin: '0',
-};
-
-const creditItalic = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
   color: C_MUTED,
+  paddingTop: '10px',
+  fontFamily: FONT_BODY,
 };

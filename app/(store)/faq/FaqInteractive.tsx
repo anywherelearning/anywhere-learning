@@ -248,7 +248,7 @@ export default function FaqInteractive({ groups }: Props) {
                   <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">&rarr;</span>
                 </Link>
                 <Link
-                  href="/join"
+                  href="/start-trial"
                   className="inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-1 hover:text-forest hover:border-forest-dark transition-colors"
                 >
                   Or join the membership for {MEMBERSHIP_PRICE_YEAR}

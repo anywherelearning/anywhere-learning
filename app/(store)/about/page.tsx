@@ -469,7 +469,7 @@ export default function AboutPage() {
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <Link
-                  href="/join"
+                  href="/start-trial"
                   className="inline-flex items-center gap-3 bg-forest text-cream font-semibold py-4 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                 >
                   {JOIN_CTA_LABEL}, {MEMBERSHIP_PRICE_YEAR}

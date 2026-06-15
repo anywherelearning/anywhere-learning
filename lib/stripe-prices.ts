@@ -9,24 +9,37 @@
  * The script is idempotent — running it multiple times reuses existing
  * products/prices by name and nickname.
  *
- * IMPORTANT: when you switch to live keys at launch, you'll need to re-run the
- * script with the LIVE key and replace these IDs. Test-mode IDs only work with
- * test-mode keys.
- *
- * For local development with test-mode keys, the corresponding TEST IDs are:
- *   MEMBERSHIP_FOUNDER:    'price_1TZMETAMzOBftCnthrU2MJLz'
- *   MEMBERSHIP_STANDARD:   'price_1TZMEUAMzOBftCntMuS7OcZg'
- *   STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe'
+ * Mode is detected from STRIPE_SECRET_KEY at runtime: sk_test_* keys resolve
+ * to the test-mode price IDs, anything else resolves to live. This lets local
+ * dev (test keys in .env.development.local) and production (live keys in
+ * Vercel) share this file with no manual ID swapping. Server-side only: no
+ * client code imports these IDs, and the secret key never reaches the client.
  */
 
-export const STRIPE_PRICES = {
+interface StripePriceIds {
+  MEMBERSHIP_FOUNDER: string;
+  MEMBERSHIP_STANDARD: string;
+  STARTER_PACK_ONE_TIME: string;
+}
+
+const LIVE_PRICES: StripePriceIds = {
   /** Subscription, $99/year — locked in for the first 100 members. (LIVE) */
   MEMBERSHIP_FOUNDER: 'price_1TZd7YAkIBECpwGmljfvhird',
   /** Subscription, $149/year — applies to member 101+. (LIVE) */
   MEMBERSHIP_STANDARD: 'price_1TZd7ZAkIBECpwGmLH4ogWnu',
   /** One-time, $44.99 — Starter Pack. (LIVE) */
   STARTER_PACK_ONE_TIME: 'price_1TZd7ZAkIBECpwGmQU3zzPjY',
-} as const;
+};
+
+const TEST_PRICES: StripePriceIds = {
+  MEMBERSHIP_FOUNDER: 'price_1TZMETAMzOBftCnthrU2MJLz',
+  MEMBERSHIP_STANDARD: 'price_1TZMEUAMzOBftCntMuS7OcZg',
+  STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe',
+};
+
+const IS_TEST_MODE = (process.env.STRIPE_SECRET_KEY || '').startsWith('sk_test_');
+
+export const STRIPE_PRICES: StripePriceIds = IS_TEST_MODE ? TEST_PRICES : LIVE_PRICES;
 
 /** Returns the Stripe Price ID for the currently-active membership rate. */
 export function activeMembershipPriceId(isFounderPhase: boolean): string {

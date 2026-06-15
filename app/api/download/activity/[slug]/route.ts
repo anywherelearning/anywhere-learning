@@ -3,20 +3,26 @@
  * redirects to the Vercel Blob URL when they're allowed in.
  *
  * Authorization rules:
- *   - member  → any activity
+ *   - member  → any activity (view + download)
+ *   - trial   → VIEW any activity (in the in-app viewer); NO downloads —
+ *               downloading is the reason to convert to a paid membership
  *   - starter → only activities in STARTER_PACK_SLUGS, plus Skills Map
  *   - guest   → redirect to /join with a soft-explain banner
  *   - signed-out → redirect to /sign-in
  *
- * Two view modes via ?view=1:
+ * Modes:
  *   - default  → forces download (Content-Disposition: attachment)
- *   - ?view=1  → inline view (PDF opens in browser)
+ *   - ?view=1  → inline view. Members/starters get the raw PDF in the
+ *                browser; TRIAL members get the in-app viewer page instead,
+ *                because the browser's built-in PDF viewer has its own
+ *                download button (a download by another name).
+ *   - ?check=1 → JSON {allowed} so the dashboard/viewer can show the
+ *                upgrade-to-download modal instead of navigating.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
-import { getDownloadUrl } from '@vercel/blob';
-import { getAccessTierForClerkId, type AccessTier } from '@/lib/access';
+import { getAccessContextForClerkId } from '@/lib/access';
 import { STARTER_PACK_SLUGS } from '@/lib/membership';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
@@ -59,7 +65,8 @@ export async function GET(
   }
 
   // Resolve tier from the DB — only source of truth in production.
-  const tier: AccessTier = await getAccessTierForClerkId(clerkId);
+  const access = await getAccessContextForClerkId(clerkId);
+  const tier = access.tier;
   if (tier === 'guest') {
     // No active subscription or starter pack → soft redirect to /join
     return friendlyRedirect('/join', 'membership-required');
@@ -75,14 +82,59 @@ export async function GET(
   }
   // 'member' → no further checks
 
+  const isView = req.nextUrl.searchParams.get('view') === '1';
+  const isCheck = req.nextUrl.searchParams.get('check') === '1';
+
+  // Pre-flight check (no side effects): lets the dashboard/viewer decide
+  // between navigating to the file and showing the upgrade-to-download modal.
+  // Trial members can't download at all; everyone else can.
+  if (isCheck) {
+    return NextResponse.json({ allowed: tier !== 'trial' });
+  }
+
+  // Trial viewing happens in the in-app viewer, not the browser's PDF viewer,
+  // because the native viewer's own download button is a download by another
+  // name. Trials are view-only.
+  if (tier === 'trial' && isView) {
+    return NextResponse.redirect(`${origin}/account/view/${encodeURIComponent(slug)}`, 303);
+  }
+
+  // Trial members cannot download. Downloading is the reason to subscribe, so
+  // bounce them back to the library where the upgrade modal opens. Enforced
+  // here (not just the UI) so pasting a download URL directly hits the wall.
+  if (tier === 'trial' && !isView) {
+    return friendlyRedirect('/account', 'trial-upgrade-to-download');
+  }
+
   // Resolve the Blob URL
   const blobUrl = getActivityBlobUrl(slug);
   if (!blobUrl) {
     return friendlyRedirect('/account', 'activity-missing');
   }
 
-  // Inline (browser viewer) vs forced download
-  const isView = req.nextUrl.searchParams.get('view') === '1';
-  const target = isView ? blobUrl : getDownloadUrl(blobUrl);
-  return NextResponse.redirect(target, 302);
+  // Stream the file THROUGH the app rather than redirecting to the public
+  // Blob URL. Vercel Blob has no private/signed-URL mode, so the only way to
+  // keep a paid PDF from being shared as a permanent public link is to never
+  // hand out that URL. The bytes are gated by the auth + tier checks above.
+  //   ?view=1 → inline (opens in the browser)
+  //   default → attachment (forces a download)
+  const upstream = await fetch(blobUrl);
+  if (!upstream.ok || !upstream.body) {
+    return friendlyRedirect('/account', 'activity-missing');
+  }
+  // Filename for the download dialog, from the Blob path, sanitized for the
+  // header (drop quotes/control chars; the names are otherwise plain ASCII).
+  const rawName = decodeURIComponent(blobUrl.split('/').pop() || `${slug}.pdf`);
+  const safeName = rawName.replace(/["\\\r\n]/g, '').trim() || `${slug}.pdf`;
+  const disposition = isView ? 'inline' : 'attachment';
+  const contentLength = upstream.headers.get('content-length');
+  return new NextResponse(upstream.body, {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `${disposition}; filename="${safeName}"`,
+      'Cache-Control': 'private, max-age=0, no-store',
+      ...(contentLength ? { 'Content-Length': contentLength } : {}),
+    },
+  });
 }

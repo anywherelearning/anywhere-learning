@@ -9,8 +9,15 @@
  *   - customer.subscription.created      → upsert subscriptions row
  *   - customer.subscription.updated      → update subscriptions row
  *   - customer.subscription.deleted      → mark subscriptions row canceled
+ *   - customer.subscription.trial_will_end → "trial ends in 3 days" email
  *   - invoice.paid                       → extend currentPeriodEnd on renewal
  *   - invoice.payment_failed             → log + future: email "update card"
+ *
+ * Free trial lifecycle (status 'trialing'):
+ *   - signup  → trial welcome email + Kit tag 'trial-member'
+ *   - convert → Stripe flips status to 'active'; we swap Kit tags to 'member'
+ *   - cancel  → periodEnd forced to now (access drops immediately) + Kit tag
+ *               'trial-canceled' (the win-back segment)
  *
  * Every other event is logged + acknowledged so Stripe stops retrying.
  *
@@ -28,14 +35,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClerkClient } from '@clerk/backend';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { users, subscriptions } from '@/lib/db/schema';
-import { eq } from 'drizzle-orm';
+import { users, subscriptions, stripeEvents } from '@/lib/db/schema';
+import { eq, and, ne } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import {
   sendMembershipWelcomeEmail,
   sendStarterPackWelcomeEmail,
   sendAbandonedCheckoutMembershipEmail,
   sendAbandonedCheckoutStarterPackEmail,
+  sendTrialEndingEmail,
 } from '@/lib/resend';
 import type Stripe from 'stripe';
 
@@ -195,7 +203,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     tier === 'member' && session.metadata?.starter_pack_credit_applied === 'true';
 
   // 2. Upsert into our DB
-  await upsertUser({
+  const userId = await upsertUser({
     clerkId: clerkUser.id,
     email,
     stripeCustomerId,
@@ -209,9 +217,28 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // no user row existed yet and would have been ignored. Now we have a user
   // row, so we can reliably attach the subscription here.
   let isFounder = false;
+  let isTrial = false;
+  let trialEndsAt: Date | null = null;
+  let isFirstMembership = false;
   if (tier === 'member' && session.subscription) {
     try {
       const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id;
+      // First membership = no OTHER subscription row exists for this user.
+      // Checked before the upsert (and excluding this sub id, in case the
+      // customer.subscription.created event raced us) so returning members
+      // don't get a second welcome email.
+      try {
+        const prior = await db
+          .select({ id: subscriptions.id })
+          .from(subscriptions)
+          .where(
+            and(eq(subscriptions.userId, userId), ne(subscriptions.stripeSubscriptionId, subId)),
+          )
+          .limit(1);
+        isFirstMembership = prior.length === 0;
+      } catch (err) {
+        console.warn('[webhook] prior-subscription check failed:', err);
+      }
       const sub = await stripe.subscriptions.retrieve(subId);
       await upsertSubscriptionFromStripe(sub);
       // Founder status is determined by the Stripe Price ID the user actually
@@ -220,6 +247,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       const priceId = sub.items.data[0]?.price.id;
       const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
       isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+      isTrial = sub.status === 'trialing';
+      if (isTrial && sub.trial_end) trialEndsAt = new Date(sub.trial_end * 1000);
     } catch (err) {
       console.error('[webhook] failed to attach subscription:', err);
     }
@@ -238,10 +267,14 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     console.warn('[webhook] could not write tier metadata:', err);
   }
 
-  // 3. Welcome email — only on first creation, so existing buyers aren't spammed.
-  //    Membership and Starter Pack buyers get different copy (renewal mention vs
-  //    one-time + upgrade pointer), handled by two separate templates.
-  if (clerkUser.created) {
+  // 3. Welcome email. For memberships: on the user's FIRST subscription —
+  //    NOT on Clerk-account creation, because the trial flow has people
+  //    create their account on /sign-up BEFORE checkout, which would skip
+  //    the email for every trial signup. For the Starter Pack: keep the
+  //    account-creation trigger (guest checkout provisions the account here).
+  //    Membership and Starter Pack buyers get different copy, handled by
+  //    two separate templates.
+  if (tier === 'member' ? isFirstMembership : clerkUser.created) {
     try {
       const signInUrl = await generateSignInUrl(clerkUser.id);
       if (tier === 'member') {
@@ -254,6 +287,10 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
           // Guarantees the email reflects the rate they actually paid,
           // even if the cap flipped between checkout and email send.
           isFounderPhase: isFounder,
+          // Trial signups get "your trial ends on X" framing instead of
+          // a payment receipt vibe, since they haven't been charged yet.
+          isTrial,
+          trialEndsAt: trialEndsAt?.toISOString(),
         });
       } else {
         await sendStarterPackWelcomeEmail({
@@ -273,12 +310,15 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   //    because the tag should land even when an existing Clerk user buys).
   try {
     if (tier === 'member') {
-      const tags = ['member', ...(isFounder ? ['founder'] : [])];
+      // Trial signups get 'trial-member'. They convert to 'member' when the
+      // first real invoice is paid (handled in upsertSubscriptionFromStripe).
+      // The founder tag lands at signup either way: the spot is locked then.
+      const tags = [isTrial ? 'trial-member' : 'member', ...(isFounder ? ['founder'] : [])];
       // Removing any prior 'lapsed-member' or 'refunded' tag handles the
       // "former member who returns" case cleanly.
       await applyAndRemoveTags(email, {
         add: tags,
-        remove: ['lapsed-member', 'refunded', 'member-canceled'],
+        remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled'],
       });
     } else {
       await applyAndRemoveTags(email, {
@@ -337,7 +377,7 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
           .from(subscriptions)
           .where(eq(subscriptions.userId, existing.id))
           .limit(1);
-        if (subs.some((s) => s.status === 'active')) {
+        if (subs.some((s) => s.status === 'active' || s.status === 'trialing')) {
           console.log(`[webhook] checkout expired for ${email} — already a member, skipping`);
           return;
         }
@@ -525,13 +565,94 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
   }
 }
 
+/**
+ * Stripe fires customer.subscription.trial_will_end 3 days before a trial
+ * converts. Send the heads-up email: honest billing (no surprise charges,
+ * same ethos as the 14-day renewal reminder) and our best conversion nudge.
+ */
+async function handleTrialWillEnd(sub: Stripe.Subscription) {
+  if (!sub.trial_end) return;
+  const customerId = typeof sub.customer === 'string' ? sub.customer : sub.customer.id;
+
+  const userRows = await db
+    .select()
+    .from(users)
+    .where(eq(users.stripeCustomerId, customerId))
+    .limit(1);
+  const user = userRows[0];
+  if (!user) {
+    console.warn('[webhook] trial_will_end for unknown customer:', customerId);
+    return;
+  }
+
+  // Skip if the user already canceled. Stripe still fires this event for
+  // trials with cancel_at_period_end set, but "your card will be charged"
+  // would be flat-out wrong for them.
+  if (sub.cancel_at_period_end) {
+    console.log(`[webhook] trial_will_end for ${user.email}, already canceled, skipping email`);
+    return;
+  }
+
+  let firstName: string | undefined;
+  try {
+    const clerk = getClerk();
+    if (clerk && user.clerkId) {
+      const u = await clerk.users.getUser(user.clerkId);
+      firstName = u.firstName || undefined;
+    }
+  } catch {
+    /* name is a nice-to-have */
+  }
+
+  const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
+  const isFounder = sub.items.data[0]?.price.id === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+  const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+
+  try {
+    await sendTrialEndingEmail({
+      to: user.email,
+      firstName,
+      isFounderPhase: isFounder,
+      trialEndDate: new Date(sub.trial_end * 1000).toISOString(),
+      manageUrl: `${base}/account/settings`,
+      libraryUrl: `${base}/account`,
+    });
+    console.log(`[webhook] sent trial-ending email to ${user.email}`);
+  } catch (err) {
+    console.error('[webhook] trial-ending email failed:', err);
+  }
+}
+
 /** Upsert a subscriptions row from a Stripe Subscription object. */
 async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   const customerId = typeof sub.customer === 'string' ? sub.customer : sub.customer.id;
   const priceId = sub.items.data[0]?.price.id || '';
-  const periodEnd = new Date((sub as Stripe.Subscription & { current_period_end?: number }).current_period_end
-    ? (sub as Stripe.Subscription & { current_period_end: number }).current_period_end * 1000
-    : Date.now() + 365 * 24 * 60 * 60 * 1000);
+
+  // current_period_end moved from the subscription to its items in newer
+  // Stripe API versions. Try both locations, then trial_end (during a trial
+  // the period ends when the trial does), then the +1yr fallback. Without
+  // the item-level read, every row written under the new API silently got
+  // the fallback — which told trial members their membership "starts" a
+  // year out and over-extended access windows for cancellations.
+  const topLevelEnd = (sub as Stripe.Subscription & { current_period_end?: number })
+    .current_period_end;
+  const itemLevelEnd = (
+    sub.items.data[0] as (typeof sub.items.data)[0] & { current_period_end?: number }
+  )?.current_period_end;
+  const periodEndUnix = topLevelEnd ?? itemLevelEnd ?? sub.trial_end ?? null;
+  let periodEnd = periodEndUnix
+    ? new Date(periodEndUnix * 1000)
+    : new Date(Date.now() + 365 * 24 * 60 * 60 * 1000);
+
+  // Canceled before the trial finished = never paid a cent. Access drops NOW,
+  // not at the trial's natural end, and definitely not at the +365d fallback
+  // above, which would hand out a free year to anyone whose cancel event
+  // arrived without a top-level current_period_end. The access tier resolver
+  // grants 'canceled' subs access while periodEnd > now, so forcing periodEnd
+  // to now is what actually revokes it.
+  const wasTrialCancel =
+    sub.status === 'canceled' && !!sub.trial_end && sub.trial_end * 1000 > Date.now();
+  if (wasTrialCancel) periodEnd = new Date();
 
   // Find user by stripeCustomerId
   const userRows = await db
@@ -550,6 +671,8 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
     .from(subscriptions)
     .where(eq(subscriptions.stripeSubscriptionId, sub.id))
     .limit(1);
+
+  const previousStatus = existing[0]?.status;
 
   if (existing[0]) {
     await db
@@ -574,6 +697,23 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   }
   console.log(`[webhook] subscription ${sub.id} → ${sub.status} for ${user.email}`);
 
+  // Trial → paid conversion: the first real invoice was paid and Stripe
+  // flipped status from 'trialing' to 'active'. Swap the Kit segment so this
+  // person starts getting member broadcasts instead of trial nudges.
+  if (previousStatus === 'trialing' && sub.status === 'active') {
+    try {
+      const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
+      const isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+      await applyAndRemoveTags(user.email, {
+        add: ['member', ...(isFounder ? ['founder'] : [])],
+        remove: ['trial-member'],
+      });
+      console.log(`[webhook] trial converted to paid for ${user.email}`);
+    } catch (err) {
+      console.warn('[webhook] kit trial-conversion tagging failed:', err);
+    }
+  }
+
   // Keep Clerk publicMetadata in sync with the DB so the SiteHeader badge
   // updates immediately when a subscription ends. Without this, a canceled
   // user keeps showing "Member" in the nav until they sign out + back in.
@@ -590,20 +730,32 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       console.warn('[webhook] could not write canceled metadata:', err);
     }
 
-    // Kit lifecycle: if the period has ALREADY ended (natural expiry) →
-    // lapsed-member. If the period is still in the future (user clicked
-    // Cancel but hasn't reached their renewal date) → member-canceled.
-    // The refund path handles its own Kit tagging above; this only runs
-    // for non-refund cancellations.
+    // Kit lifecycle: trial cancels get their own segment ('trial-canceled',
+    // the win-back list; they never paid, so 'lapsed-member' would be wrong).
+    // Otherwise: period ALREADY ended (natural expiry) → lapsed-member;
+    // period still in the future (user clicked Cancel but hasn't reached
+    // their renewal date) → member-canceled. The refund path handles its
+    // own Kit tagging above; this only runs for non-refund cancellations.
     try {
-      const expired = periodEnd <= new Date();
-      if (expired) {
+      // Two ways a trial dies without converting: canceled mid-trial
+      // (trial_end still in the future) or cancel_at_period_end reaching the
+      // trial's natural end (deletion arrives AFTER trial_end, but our DB row
+      // still says 'trialing'). Both mean they never paid.
+      if (wasTrialCancel || previousStatus === 'trialing') {
         await applyAndRemoveTags(user.email, {
-          add: ['lapsed-member'],
-          remove: ['member', 'founder', 'member-canceled'],
+          add: ['trial-canceled'],
+          remove: ['trial-member', 'member', 'founder'],
         });
       } else {
-        await subscribeAndTag(user.email, ['member-canceled']);
+        const expired = periodEnd <= new Date();
+        if (expired) {
+          await applyAndRemoveTags(user.email, {
+            add: ['lapsed-member'],
+            remove: ['member', 'founder', 'member-canceled', 'trial-member'],
+          });
+        } else {
+          await subscribeAndTag(user.email, ['member-canceled']);
+        }
       }
     } catch (err) {
       console.warn('[webhook] kit cancel tagging failed:', err);
@@ -631,6 +783,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
   }
 
+  // Idempotency: Stripe delivers events at-least-once. Claim this event id
+  // before doing any work; if the insert conflicts, we've already processed it
+  // (or are processing it concurrently) so we ack and skip. This makes the
+  // non-idempotent side effects (welcome email, Kit tags) replay-safe by
+  // construction instead of by luck. If the DB is unreachable we fall through
+  // and process anyway, so a transient DB blip never drops a real event.
+  try {
+    const claimed = await db
+      .insert(stripeEvents)
+      .values({ id: event.id, type: event.type })
+      .onConflictDoNothing()
+      .returning({ id: stripeEvents.id });
+    if (claimed.length === 0) {
+      console.log('[webhook] duplicate event, skipping:', event.id, event.type);
+      return NextResponse.json({ received: true, duplicate: true });
+    }
+  } catch (err) {
+    console.warn('[webhook] idempotency check failed, processing anyway:', err);
+  }
+
   try {
     switch (event.type) {
       case 'checkout.session.completed':
@@ -643,6 +815,9 @@ export async function POST(req: NextRequest) {
       case 'customer.subscription.updated':
       case 'customer.subscription.deleted':
         await upsertSubscriptionFromStripe(event.data.object as Stripe.Subscription);
+        break;
+      case 'customer.subscription.trial_will_end':
+        await handleTrialWillEnd(event.data.object as Stripe.Subscription);
         break;
       case 'invoice.paid': {
         const inv = event.data.object as Stripe.Invoice & { subscription?: string };
@@ -669,8 +844,22 @@ export async function POST(req: NextRequest) {
     }
     return NextResponse.json({ received: true });
   } catch (err) {
-    console.error('[webhook] handler failed:', err);
-    // Return 200 so Stripe doesn't keep retrying handler bugs forever.
-    return NextResponse.json({ received: true, error: 'handler error' });
+    // Release the idempotency claim so Stripe's retry actually REPROCESSES
+    // this event (otherwise the retry would be skipped as a duplicate and the
+    // failure would be permanent). Best-effort: if the delete fails, the event
+    // is at worst not retried, same as before this guard existed.
+    try {
+      await db.delete(stripeEvents).where(eq(stripeEvents.id, event.id));
+    } catch (delErr) {
+      console.warn('[webhook] failed to release idempotency claim:', delErr);
+    }
+    // Return 500 so Stripe RETRIES (it backs off over ~3 days). A handler
+    // throw here is almost always transient (DB/Clerk/Stripe-API blip) during
+    // provisioning. Swallowing it as 200 would mean a PAID customer who never
+    // gets a user row, access, or welcome email, with no automatic recovery.
+    // A persistent handler bug will surface loudly as failed deliveries in the
+    // Stripe dashboard, which is the right place to notice it.
+    console.error('[webhook] handler failed, returning 500 for Stripe retry:', err);
+    return NextResponse.json({ error: 'handler error' }, { status: 500 });
   }
 }

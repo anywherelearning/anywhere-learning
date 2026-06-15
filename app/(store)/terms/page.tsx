@@ -55,7 +55,10 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">When you join the Anywhere Learning annual membership, you agree to the following:</p>
         <ol className="list-decimal pl-6 space-y-2.5 marker:text-[#C97B5C] marker:font-display marker:italic">
           <li>
-            <strong className="text-ink font-semibold">Annual billing.</strong> Your membership is charged once per year on the date you joined. We do not offer monthly billing at this time.
+            <strong className="text-ink font-semibold">Free trial.</strong> New members start with a <Em>14-day free trial.</Em> A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the annual rate. We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
+          </li>
+          <li>
+            <strong className="text-ink font-semibold">Annual billing.</strong> Your membership is charged once per year starting the day your free trial ends (or the day you join, if no trial applies). We do not offer monthly billing at this time.
           </li>
           <li>
             <strong className="text-ink font-semibold">Founding member rate.</strong> The first 100 members pay <Em>$99/year.</Em> After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em> as long as their membership remains active and uninterrupted.
@@ -111,7 +114,7 @@ const sections: LegalSection[] = [
         <div className="pl-[18px] border-l border-[#D8D4C5]">
           <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the annual membership</span>
           <p>
-            <strong className="text-ink font-semibold">14-day money-back guarantee.</strong> If the membership isn&apos;t right for you, email <MailLink /> within 14 days of joining for a full refund, <Em>no questions asked.</Em> Refunds are processed within 5 to 10 business days to the original payment method.
+            <strong className="text-ink font-semibold">14-day money-back guarantee.</strong> If the membership isn&apos;t right for you, email <MailLink /> within 14 days of your first charge for a full refund, <Em>no questions asked.</Em> Refunds are processed within 5 to 10 business days to the original payment method. This guarantee applies on top of the free trial: cancel during the trial and you&apos;re never charged at all.
           </p>
         </div>
         <div className="pl-[18px] border-l border-[#D8D4C5]">

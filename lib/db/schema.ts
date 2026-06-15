@@ -102,13 +102,10 @@ export const deviceTokens = pgTable('device_tokens', {
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PARKED: subscriptions table
-// The membership/subscription product was scrapped pre-launch (Apr 2026). No
-// application code reads or writes this table. It is intentionally preserved
-// so existing production data (if any ever gets written) is not lost, and so
-// a future membership relaunch does not require a fresh migration. Drop this
-// table in a dedicated migration if/when we decide membership is permanently
-// off the roadmap.
+// Membership subscriptions ($99/yr founder, $149/yr standard). Written by the
+// Stripe webhook (customer.subscription.* + invoice.paid), read by the access
+// tier resolver in lib/access. During a free trial the Stripe status is
+// 'trialing' and currentPeriodEnd holds the trial end date.
 // ─────────────────────────────────────────────────────────────────────────────
 export const subscriptions = pgTable('subscriptions', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -116,7 +113,7 @@ export const subscriptions = pgTable('subscriptions', {
   stripeCustomerId: text('stripe_customer_id').notNull(),
   stripeSubscriptionId: text('stripe_subscription_id').notNull(),
   stripePriceId: text('stripe_price_id').notNull(),
-  status: text('status').notNull(), // 'active' | 'canceled' | 'past_due' | 'incomplete'
+  status: text('status').notNull(), // 'active' | 'trialing' | 'canceled' | 'past_due' | 'incomplete'
   currentPeriodEnd: timestamp('current_period_end').notNull(),
   cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
@@ -126,6 +123,36 @@ export const subscriptions = pgTable('subscriptions', {
   uniqueIndex('idx_subscriptions_stripe_sub').on(table.stripeSubscriptionId),
   index('idx_subscriptions_stripe_customer').on(table.stripeCustomerId),
 ]);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RETAINED (unused): trial download ledger. Built when trials allowed a capped
+// number of downloads. Trials are now view-only (downloading is a paid-member
+// benefit), so nothing reads or writes this table. Kept to avoid a migration;
+// drop in a dedicated migration if we're sure the capped-trial model is gone
+// for good.
+// ─────────────────────────────────────────────────────────────────────────────
+export const trialDownloads = pgTable('trial_downloads', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id).notNull(),
+  slug: text('slug').notNull(),
+  downloadedAt: timestamp('downloaded_at').defaultNow().notNull(),
+}, (table) => [
+  uniqueIndex('idx_trial_downloads_user_slug').on(table.userId, table.slug),
+]);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Stripe webhook idempotency ledger. Stripe delivers each event at-least-once,
+// so duplicates are expected. The webhook inserts the event id here before
+// processing; a conflict means "already handled" and the handler early-returns.
+// Makes replay-safety a guarantee instead of relying on every side effect
+// (emails, Kit tags) happening to be idempotent on its own.
+// ─────────────────────────────────────────────────────────────────────────────
+export const stripeEvents = pgTable('stripe_events', {
+  /** Stripe event id, e.g. evt_1ABC… — the natural primary key. */
+  id: text('id').primaryKey(),
+  type: text('type'),
+  receivedAt: timestamp('received_at').defaultNow().notNull(),
+});
 
 export const referrals = pgTable('referrals', {
   id: uuid('id').defaultRandom().primaryKey(),

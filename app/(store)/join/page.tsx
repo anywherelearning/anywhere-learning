@@ -13,6 +13,7 @@ import {
   MEMBERSHIP_PRICE_YEAR,
   POST_FOUNDER_PRICE_USD,
   FOUNDER_CAP,
+  TRIAL_DAYS,
 } from '@/lib/membership';
 
 const FOUNDER_FLOOR = 12;
@@ -54,11 +55,15 @@ function CtaBlock({
   center = false,
   darkMode = false,
   m,
+  trialEligible = true,
 }: {
   center?: boolean;
   darkMode?: boolean;
   /** Live membership state — passed from the JoinPage server component. */
   m: { isFounderPhase: boolean; priceYear: string };
+  /** False for a returning customer who already used their one free trial:
+   *  they'd be charged immediately, so we drop all trial framing. */
+  trialEligible?: boolean;
 }) {
   return (
     <div
@@ -69,8 +74,7 @@ function CtaBlock({
         className="inline-flex items-center gap-3.5 rounded-xl bg-forest px-7 py-[18px] text-[17px] font-semibold text-cream shadow-[inset_0_1px_0_rgba(255,255,255,.18),inset_0_-1px_0_rgba(0,0,0,.1),0_10px_24px_-12px_rgba(58,90,64,.5)] transition-all hover:-translate-y-px hover:bg-forest-dark hover:shadow-[inset_0_1px_0_rgba(255,255,255,.22),inset_0_-1px_0_rgba(0,0,0,.12),0_16px_30px_-10px_rgba(58,90,64,.55)] active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed"
       >
         <span className="inline-flex items-center gap-3.5">
-          {m.isFounderPhase ? 'Claim Founder Price · ' : 'Join the Membership · '}
-          {m.priceYear}
+          {trialEligible ? `Start your ${TRIAL_DAYS}-day free trial` : 'Get the membership'}
           <span className="grid h-6 w-6 place-items-center rounded-full bg-white/20 transition-transform">
             →
           </span>
@@ -79,6 +83,7 @@ function CtaBlock({
       <div
         className={`text-sm ${darkMode ? 'text-[#B7BFB6]' : 'text-gray-500'}`}
       >
+        {trialEligible ? '$0 today, then ' : ''}
         {m.isFounderPhase && (
           <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'} font-medium mr-1`}>
             ${POST_FOUNDER_PRICE_USD}
@@ -210,20 +215,33 @@ export default async function JoinPage({
   const isStarterUpgrade = sp.reason === 'starter-upgrade';
   const isNoAccess = sp.reason === 'no-access';
   const isMembershipRequired = sp.reason === 'membership-required';
+  const isTrialDownload = sp.reason === 'trial-upgrade-to-download';
 
-  let viewerTier: 'guest' | 'starter' | 'member' = 'guest';
+  let viewerTier: 'guest' | 'starter' | 'member' | 'trial' = 'guest';
+  // Trial framing only shows to people who can actually get a trial. Signed-out
+  // visitors default to eligible (optimistic; the server still won't grant a
+  // second trial). A signed-in returning customer who already used theirs sees
+  // "Get the membership" with no trial language, matching what checkout does.
+  let trialEligible = true;
   try {
     const { auth: clerkAuth } = await import('@clerk/nextjs/server');
-    const { getAccessTierForClerkId } = await import('@/lib/access');
+    const { getAccessTierForClerkId, isTrialEligible } = await import('@/lib/access');
     const a = await clerkAuth();
     if (a.userId) {
       viewerTier = await getAccessTierForClerkId(a.userId);
+      trialEligible = await isTrialEligible(a.userId);
     }
   } catch {
     /* Clerk not configured — guest is the safe default. */
   }
 
   const bannerMessage = (() => {
+    // Trial member tried to download (view-only during the trial). Note that
+    // the dashboard normally handles this with its own upgrade modal; this
+    // banner only shows if they hit a download URL directly.
+    if (isTrialDownload) {
+      return 'Downloads come with membership. Keep reading every guide in your browser, and subscribe anytime to save them as PDFs.';
+    }
     // "isStarterUpgrade" / "isMembershipRequired" come from clicking through
     // a specific gated activity, so the singular "that activity" copy fits.
     if (isStarterUpgrade) {
@@ -239,7 +257,7 @@ export default async function JoinPage({
       if (viewerTier === 'starter') {
         return "Ready for the full library? Your Starter Pack credit applies when you upgrade.";
       }
-      if (viewerTier === 'member') {
+      if (viewerTier === 'member' || viewerTier === 'trial') {
         return "Your membership is active. If something looks off, please contact us.";
       }
       return 'Become a member to unlock the full library.';
@@ -421,7 +439,7 @@ export default async function JoinPage({
               </div>
 
               <div className="mt-6">
-                <CtaBlock m={m} />
+                <CtaBlock m={m} trialEligible={trialEligible} />
               </div>
             </div>
 
@@ -663,7 +681,7 @@ export default async function JoinPage({
             </div>
 
             <div className="mt-8 flex justify-center">
-              <CtaBlock center m={m} />
+              <CtaBlock center m={m} trialEligible={trialEligible} />
             </div>
           </div>
         </section>
@@ -997,7 +1015,7 @@ export default async function JoinPage({
             </p>
 
             <div className="mt-9 flex justify-center">
-              <CtaBlock center m={m} />
+              <CtaBlock center m={m} trialEligible={trialEligible} />
             </div>
 
             <p className="mt-4 font-display text-sm italic text-gray-400">

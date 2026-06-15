@@ -176,17 +176,21 @@ export async function generateMetadata({
    Page
    ───────────────────────────────────────────────────────────────── */
 
-type AccessTier = 'guest' | 'starter' | 'member';
+import type { AccessTier } from '@/lib/access';
 
 // Resolve the visitor's access tier. Real lookup goes through Clerk auth →
-// the `users` table → either an active subscription (member) or a stamped
-// starterPackPurchasedAt (starter). Falls back to a cookie / query param
-// (development-only) when Clerk isn't configured.
+// the `users` table → either a subscription (member, or trial while the free
+// trial runs) or a stamped starterPackPurchasedAt (starter). Falls back to a
+// query param (development-only) when Clerk isn't configured.
 async function detectAccessTier(searchParams: { tier?: string }): Promise<AccessTier> {
-  // Dev/preview override
-  if (searchParams.tier === 'member') return 'member';
-  if (searchParams.tier === 'starter') return 'starter';
-  if (searchParams.tier === 'guest') return 'guest';
+  // Dev/preview override (NEVER in production — only affects the "in your
+  // library" badge here; content is gated by the download endpoint).
+  if (process.env.NODE_ENV !== 'production') {
+    if (searchParams.tier === 'member') return 'member';
+    if (searchParams.tier === 'trial') return 'trial';
+    if (searchParams.tier === 'starter') return 'starter';
+    if (searchParams.tier === 'guest') return 'guest';
+  }
 
   // Real lookup: Clerk → DB
   let tier: AccessTier = 'guest';
@@ -498,7 +502,8 @@ export default async function ProductPage({
               {/* Access card */}
               {(() => {
                 const inStarterPack = STARTER_PACK_SLUGS.has(product.slug);
-                const hasAccess = tier === 'member' || (tier === 'starter' && inStarterPack);
+                const hasAccess =
+                  tier === 'member' || tier === 'trial' || (tier === 'starter' && inStarterPack);
 
                 if (hasAccess) {
                   // Member or Starter-Pack buyer with access to this activity
@@ -510,11 +515,13 @@ export default async function ProductPage({
                           In your library
                         </span>
                         <span className="font-display italic text-[13px] text-forest-dark">
-                          {tier === 'member' ? 'Member' : 'Starter Pack'}
+                          {tier === 'member' ? 'Member' : tier === 'trial' ? 'Free trial' : 'Starter Pack'}
                         </span>
                       </div>
                       <Link
                         href={`/api/download/activity/${product.slug}?view=1`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
                       >
                         Open this activity
@@ -569,7 +576,7 @@ export default async function ProductPage({
                       </span>
                     </div>
                     <Link
-                      href="/join"
+                      href="/start-trial"
                       className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
                     >
                       Unlock with membership
@@ -816,7 +823,7 @@ export default async function ProductPage({
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </span>
-              {tier === 'member' || (tier === 'starter' && STARTER_PACK_SLUGS.has(product.slug)) ? (
+              {tier === 'member' || tier === 'trial' || (tier === 'starter' && STARTER_PACK_SLUGS.has(product.slug)) ? (
                 <>
                   <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
                     Tried it with your kids? Be the first to tell other members what worked.
@@ -840,12 +847,12 @@ export default async function ProductPage({
 
           {/* Write a review — inline form for members + Starter Pack buyers */}
           <div className="mt-7">
-            {tier === "member" || (tier === "starter" && STARTER_PACK_SLUGS.has(product.slug)) ? (
+            {tier === "member" || tier === "trial" || (tier === "starter" && STARTER_PACK_SLUGS.has(product.slug)) ? (
               <ReviewForm slug={product.slug} productName={product.name} />
             ) : (
               <p className="text-center text-[14px] text-gray-500">
                 Only members who&rsquo;ve used the activity can write reviews.{" "}
-                <Link href="/join" className="text-forest-dark font-medium hover:text-forest underline decoration-forest/30 underline-offset-2">
+                <Link href="/start-trial" className="text-forest-dark font-medium hover:text-forest underline decoration-forest/30 underline-offset-2">
                   Join the membership
                 </Link>
                 .
@@ -947,7 +954,7 @@ export default async function ProductPage({
                 {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}
               </p>
               <Link
-                href="/join"
+                href="/start-trial"
                 className="inline-flex items-center gap-2.5 bg-forest text-cream font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
               >
                 Unlock everything &mdash; {MEMBERSHIP_PRICE_YR}

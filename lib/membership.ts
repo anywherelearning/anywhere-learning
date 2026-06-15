@@ -37,6 +37,16 @@ export const FOUNDER_PRICE_USD = 99;
 export const POST_FOUNDER_PRICE_USD = 149;
 export const FOUNDER_CAP = 100;
 
+// ─── FREE TRIAL ─────────────────────────────────────────────
+// New members start with a free trial (card required, $0 today, auto-converts
+// via Stripe `trial_period_days`). During the trial they can VIEW every guide
+// in the in-app reader but CANNOT download anything — downloading is the
+// reason to convert to a paid membership. The view/download split is enforced
+// server-side in /api/download/activity/[slug]. One trial per customer, ever:
+// anyone with a prior subscription row checks out without a trial (see
+// isTrialEligible in lib/access).
+export const TRIAL_DAYS = 14;
+
 // Active price for the current phase (in whole dollars).
 export const MEMBERSHIP_PRICE_USD = IS_FOUNDER_PHASE
   ? FOUNDER_PRICE_USD
@@ -129,16 +139,16 @@ export const STARTER_PACK_PRICE = `$${STARTER_PACK_PRICE_USD}`;
 // /join, etc. to also switch automatically, flip IS_FOUNDER_PHASE.
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** Count of active membership subscriptions in the DB. */
+/** Count of active membership subscriptions in the DB.  *  count too: they locked their rate at signup, so they hold a founder spot. */
 export async function getActiveMemberCount(): Promise<number> {
   try {
     const { db } = await import('./db');
     const { subscriptions } = await import('./db/schema');
-    const { eq, sql } = await import('drizzle-orm');
+    const { inArray, sql } = await import('drizzle-orm');
     const rows = await db
       .select({ n: sql<number>`count(*)::int` })
       .from(subscriptions)
-      .where(eq(subscriptions.status, 'active'));
+      .where(inArray(subscriptions.status, ['active', 'trialing']));
     return rows[0]?.n ?? 0;
   } catch (err) {
     console.error('[membership] active member count failed:', err);

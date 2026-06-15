@@ -51,7 +51,7 @@ interface ProductSpec {
 const SPECS: ProductSpec[] = [
   {
     name: 'Anywhere Learning Membership',
-    description: '100+ guided life-skills activities for kids ages 6 to 14, with new activities added every quarter. Annual subscription.',
+    description: 'Read every guide in the library on any device. During your free trial, viewing is unlimited and downloads unlock when your membership starts. New activities added every quarter.',
     metadata: { kind: 'membership' },
     prices: [
       {

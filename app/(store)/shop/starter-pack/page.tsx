@@ -851,7 +851,7 @@ export default function StarterPackPage() {
               <p className="mt-6 text-[14.5px] text-gray-600">
                 Or skip ahead. The membership unlocks the entire library for {MEMBERSHIP_PRICE_YEAR}.{' '}
                 <Link
-                  href="/join"
+                  href="/start-trial"
                   className="text-forest-dark font-semibold border-b border-forest/25 pb-px hover:text-forest hover:border-forest-dark transition-colors"
                 >
                   {JOIN_CTA_LABEL} &rarr;

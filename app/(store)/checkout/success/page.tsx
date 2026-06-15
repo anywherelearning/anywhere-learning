@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Confetti from '@/components/checkout/Confetti';
 import SandboxTierCookie from '@/components/checkout/SandboxTierCookie';
-import { MEMBERSHIP_PRICE_FORMATTED } from '@/lib/membership';
+import SessionReadyLink from '@/components/checkout/SessionReadyLink';
+import { MEMBERSHIP_PRICE_FORMATTED, TRIAL_DAYS } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 
 export const dynamic = 'force-dynamic';
@@ -25,6 +26,8 @@ interface PageProps {
     email?: string;
     /** Order number to display, e.g. AW-2026-04829 */
     order?: string;
+    /** '1' when this signup started a 14-day free trial ($0 charged today). */
+    trial?: string;
   }>;
 }
 
@@ -35,17 +38,25 @@ interface PageProps {
 // design is testable without a live Stripe session.
 async function resolveContext(searchParams: Awaited<PageProps['searchParams']>) {
   const tier: 'member' | 'starter' = searchParams.tier === 'starter' ? 'starter' : 'member';
+  const isTrial = searchParams.trial === '1' && tier === 'member';
   const firstName = searchParams.name?.trim() || '';
   const email = searchParams.email?.trim() || '';
   const order =
     searchParams.order?.trim() ||
     `AW-${new Date().getUTCFullYear()}-${Math.floor(10000 + Math.random() * 89999)}`;
-  return { tier, firstName, email, order };
+  return { tier, isTrial, firstName, email, order };
 }
 
 export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const { tier, firstName, email, order } = await resolveContext(sp);
+  const { tier, isTrial, firstName, email, order } = await resolveContext(sp);
+
+  // The page renders moments after checkout completes, so "now + TRIAL_DAYS"
+  // matches the Stripe trial end to the day without a session lookup.
+  const trialEndLabel = new Date(Date.now() + TRIAL_DAYS * 24 * 60 * 60 * 1000).toLocaleDateString(
+    'en-US',
+    { month: 'long', day: 'numeric' },
+  );
 
   const isMember = tier === 'member';
   // Live founder state so the receipt copy + Amelie's note reflect the
@@ -56,12 +67,16 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const content = isMember
     ? {
         flourish: "You're in.",
-        eyebrow: `Membership confirmed · ${m.tierLabel}`,
+        eyebrow: isTrial
+          ? `Free trial started · ${m.tierLabel}`
+          : `Membership confirmed · ${m.tierLabel}`,
         h1Greeting: firstName ? `You're in, ${firstName}.` : "You're in.",
         h1Suffix: 'Welcome to the family.',
-        lead: m.isFounderPhase
-          ? `Your founding member rate (${m.priceYear}, locked in for life) is active. Full library access is yours starting now. Below is everything you need to get started.`
-          : `Your membership (${m.priceYear}) is active. Full library access is yours starting now. Below is everything you need to get started.`,
+        lead: isTrial
+          ? `Your ${TRIAL_DAYS}-day free trial is live and you weren't charged a cent today. Open and read every guide in your browser, as many as you like. Your membership starts ${trialEndLabel} at ${m.priceYear}${m.isFounderPhase ? ', your founder rate, locked in for life' : ''}, when downloads unlock, or subscribe sooner anytime to start saving guides.`
+          : m.isFounderPhase
+            ? `Your founding member rate (${m.priceYear}, locked in for life) is active. Full library access is yours starting now. Below is everything you need to get started.`
+            : `Your membership (${m.priceYear}) is active. Full library access is yours starting now. Below is everything you need to get started.`,
         ctaCard: {
           leadLine: "Don't wait for the weekend.",
           headlinePrefix: 'Start with three activities we',
@@ -70,21 +85,34 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           ctaLabel: 'Open my library',
           ctaHref: '/account',
         },
-        receipt: {
-          product: 'Anywhere Learning Annual Membership',
-          price: MEMBERSHIP_PRICE_FORMATTED,
-          note: m.isFounderPhase
-            ? 'Founding rate · Locks in for life · Annual renewal'
-            : 'Annual renewal',
-          inboxItems: [
-            email ? `Payment receipt from Stripe (sent to ${email})` : 'Payment receipt from Stripe',
-            'A welcome note from Amelie (within an hour)',
-            'Renewal reminder 14 days before your year is up',
-          ],
-        },
+        receipt: isTrial
+          ? {
+              product: 'Anywhere Learning Annual Membership',
+              price: '$0.00 today',
+              note: m.isFounderPhase
+                ? `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year, locked in for life`
+                : `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year`,
+              inboxItems: [
+                'A welcome note from Amelie (within an hour)',
+                `A heads-up email 3 days before your trial ends on ${trialEndLabel}`,
+                'No charge and no receipt today, because nothing was billed',
+              ],
+            }
+          : {
+              product: 'Anywhere Learning Annual Membership',
+              price: MEMBERSHIP_PRICE_FORMATTED,
+              note: m.isFounderPhase
+                ? 'Founding rate · Locks in for life · Annual renewal'
+                : 'Annual renewal',
+              inboxItems: [
+                email ? `Payment receipt from Stripe (sent to ${email})` : 'Payment receipt from Stripe',
+                'A welcome note from Amelie (within an hour)',
+                'Renewal reminder 14 days before your year is up',
+              ],
+            },
         amelie: m.isFounderPhase
-          ? "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. You signed up early enough that what I make next gets shaped by what you tell me. Write me at info@anywherelearning.co — I read all of it. Thanks for being here. xo Amelie"
-          : "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. Write me at info@anywherelearning.co — I read all of it. Thanks for being here. xo Amelie",
+          ? "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. You signed up early enough that what I make next gets shaped by what you tell me. Write me at info@anywherelearning.co. I read all of it. Thanks for being here. xo Amelie"
+          : "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. Write me at info@anywherelearning.co. I read all of it. Thanks for being here. xo Amelie",
         helpLinks: [
           { label: 'Trouble accessing? Email us →', href: '/contact' },
           { label: 'Got billed wrong? Let us know →', href: '/contact' },
@@ -115,7 +143,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           ],
         },
         amelie:
-          "Hi. I'm Amelie. I built this because I wanted my own two kids learning real-world skills, not just school skills. I hand-picked these 10 activities for one reason — they're the ones that turn 'meh' into 'wait, I want to do that again.' Write me at info@anywherelearning.co if something's off or you want to tell me what's working. xo Amelie",
+          "Hi. I'm Amelie. I built this because I wanted my own two kids learning real-world skills, not just school skills. I hand-picked these 10 activities for one reason: they're the ones that turn 'meh' into 'wait, I want to do that again.' Write me at info@anywherelearning.co if something's off or you want to tell me what's working. xo Amelie",
         helpLinks: [
           { label: 'Trouble accessing? Email us →', href: '/contact' },
           { label: 'Got billed wrong? Let us know →', href: '/contact' },
@@ -156,9 +184,12 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           </div>
         </section>
 
-        {/* PRIMARY CTA — simple centered button */}
+        {/* PRIMARY CTA, simple centered button. SessionReadyLink (not a
+            plain Link) because the visitor just spent minutes on Stripe and
+            their Clerk session cookie has expired; it refreshes the session
+            before navigating so /account doesn't bounce them to sign-in. */}
         <section className="pt-2 pb-10 text-center">
-          <Link
+          <SessionReadyLink
             href={content.ctaCard.ctaHref}
             className="inline-flex items-center gap-2.5 bg-forest text-cream font-body font-semibold py-4 px-7 rounded-xl text-[16px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
           >
@@ -166,7 +197,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
             <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
               &rarr;
             </span>
-          </Link>
+          </SessionReadyLink>
         </section>
 
         {/* RECEIPT */}
