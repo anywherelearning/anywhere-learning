@@ -9,6 +9,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import { POST_FOUNDER_PRICE_USD } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
+import Testimonials from '@/components/home/Testimonials';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
@@ -407,7 +408,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             06 MEET AMELIE — Founder bio (trust before the ask)
         ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+        <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] pt-20 md:pt-24 pb-14 md:pb-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
               <ScrollReveal direction="left">
@@ -467,6 +468,11 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ════════════════════════════════════════
+            06b TESTIMONIALS — Founder credibility (in their words)
+        ════════════════════════════════════════ */}
+        <Testimonials />
 
         {/* ════════════════════════════════════════
             07 FREE GUIDE — Primary soft conversion (email capture).

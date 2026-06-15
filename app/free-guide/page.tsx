@@ -238,6 +238,30 @@ export default function FreeGuidePage() {
                       <span>DOWNLOAD</span>
                     </div>
                   </div>
+                  {/* Real parent review, floating as an oval thought bubble over the cover's bottom-left */}
+                  <figure className="absolute -bottom-5 -left-4 md:-left-14 z-20 w-[250px] md:w-[270px] -rotate-[2deg]">
+                    <div className="bg-white border border-[#E4E0D2] rounded-full px-8 py-6 text-center shadow-[0_18px_32px_-16px_rgba(45,58,46,0.34)]">
+                      <blockquote className="m-0">
+                        <p className="text-[12.5px] leading-[1.5] text-gray-700 m-0">
+                          &ldquo;We tried the Square Foot Safari and my son kept saying how much fun he was having.
+                          Best afternoon outdoors we&apos;ve had together lately.&rdquo;
+                        </p>
+                        <figcaption className="mt-2.5 flex items-center justify-center gap-2">
+                          <span
+                            aria-hidden="true"
+                            className="shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center font-bold text-[11px]"
+                            style={{ background: 'rgba(58,90,64,0.12)', color: '#3A5A40' }}
+                          >
+                            V
+                          </span>
+                          <span className="text-[12px] text-forest-dark font-semibold">
+                            Vickie
+                            <span className="text-gray-500 font-normal"> &middot; mom of two</span>
+                          </span>
+                        </figcaption>
+                      </blockquote>
+                    </div>
+                  </figure>
                 </div>
               </ScrollReveal>
             </div>
