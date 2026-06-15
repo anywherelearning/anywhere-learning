@@ -8,8 +8,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 // product reviews and would undercut the "people vouching for a teacher" framing.
 // French originals (Catherine, Fleur) were translated to English.
 // Bento layout: Claudia (the coach) anchors big with the 3 short student quotes
-// stacked beside her; the other four sit in an even 2x2 below. Vickie's
-// free-guide review lives on /free-guide, not here.
+// stacked beside her; the other four sit in an even 2x2 below.
 
 type Voice = 'parents' | 'colleagues' | 'students' | 'coach';
 
@@ -59,6 +58,14 @@ const WENDY: Quote = {
   voice: 'parents',
   quote:
     "Amelie combines creativity and curriculum in ways that truly energized my children's education. She gave them real-world projects that had them thinking, building, presenting, and collaborating with enthusiasm. Learning with Amelie was so fun and rewarding that my kids always wanted to dive right in.",
+};
+
+const VICKIE: Quote = {
+  name: 'Vickie',
+  role: 'Parent',
+  voice: 'parents',
+  quote:
+    "Amelie reminds us that education at a grassroots level can have a profound impact on children, shaping not only what they learn, but who they become. Amelie taught our son for a year and was one of those teachers who made a lasting impression. She created a fun, caring classroom where kids loved learning and felt supported. Since she started homeschooling her children and creating homeschooling resources, we've really enjoyed following her journey. Her experiences, insights, and teaching materials have been both inspiring and practical.",
 };
 
 const CATHERINE: Quote = {
@@ -116,7 +123,7 @@ const SAMANTHA: Quote = {
 
 // Claudia + the adult quotes cycle through a single-card carousel (one shown at
 // a time, arrows to change). Students are NOT in the carousel; they stay put.
-const ADULTS: Quote[] = [CLAUDIA, MYRIAM, WENDY, MARIE_CHRISTINE, CATHERINE, CAROLINE, MELINA, SAMANTHA];
+const ADULTS: Quote[] = [CLAUDIA, MYRIAM, VICKIE, WENDY, MARIE_CHRISTINE, CATHERINE, CAROLINE, MELINA, SAMANTHA];
 
 type Variant = 'feature' | 'std' | 'mini';
 
