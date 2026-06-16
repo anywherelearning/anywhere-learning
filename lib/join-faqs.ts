@@ -6,6 +6,10 @@
 
 export const joinFaqs = [
   {
+    q: 'How does the free trial work?',
+    a: 'You get 14 days free with full access to read the whole library. Open and follow along with any guide in your browser, on any device, as much as you want. Downloading guides as PDFs comes with membership, so if you want to save them, you can subscribe anytime during the trial in one click. You enter a card to start but pay $0 today. If it fits your family, do nothing, your membership starts automatically on day 14 and downloads unlock. If it doesn\'t, cancel anytime during the trial in one click and you won\'t be charged a cent. We also email you 3 days before the trial ends, so there are no surprise charges.',
+  },
+  {
     q: 'What happens when I renew?',
     a: 'If you join as one of the first 100 members, your rate is locked in for life. You renew at $99 every year, forever, even when new members are paying $149 or more. The founder price is yours as long as you stay a member.',
   },
@@ -15,7 +19,7 @@ export const joinFaqs = [
   },
   {
     q: 'What if it doesn\'t fit our family?',
-    a: 'You have 14 days, no questions asked, full refund. One reply to the welcome email and you\'re done. Beyond 14 days you can cancel anytime and keep access through the end of your year.',
+    a: 'You try it free for 14 days before paying anything, so the easiest answer is: cancel during the trial and you\'re never charged. And even after your membership starts, you still have a 14-day money-back guarantee, no questions asked, full refund. One reply to the welcome email and you\'re done. Beyond that you can cancel anytime and keep access through the end of your year.',
   },
   {
     q: 'How is this different from Pinterest activities?',

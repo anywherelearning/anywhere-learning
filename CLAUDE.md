@@ -138,7 +138,7 @@ These must be done before going live:
 5. [ ] **Set `NEXT_PUBLIC_URL` in Vercel**: set to `https://anywherelearning.co` — without this, checkout redirects go to `localhost:3000`
 6. [ ] **Set up Clerk project**: configure Clerk for production (custom domain, social logins)
 7. [ ] **Switch to live Stripe keys**: replace `STRIPE_SECRET_KEY` and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` in Vercel with live-mode keys (start with `sk_live_` / `pk_live_`)
-8. [ ] **Register the production Stripe webhook**: in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, `invoice.payment_succeeded`
+8. [ ] **Register the production Stripe webhook**: in Stripe Dashboard > Developers > Webhooks, point `https://anywherelearning.co/api/webhooks/stripe` at these events: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, `customer.subscription.trial_will_end` (3-days-before trial reminder email), `invoice.paid`, `invoice.payment_failed`, `charge.refunded`
 9. [ ] **Set `STRIPE_WEBHOOK_SECRET` in Vercel**: use the signing secret from step 8 (starts with `whsec_`)
 10. [ ] **Re-run `npm run stripe:sync`**: after switching to live Stripe keys and setting `NEXT_PUBLIC_URL`, re-run so all Stripe product images point to the production domain
 11. [ ] **Clean up test orders** in Neon database before launch

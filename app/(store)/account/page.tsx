@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
-import { STARTER_PACK_SLUGS } from '@/lib/membership';
+import { STARTER_PACK_SLUGS, IS_FOUNDER_PHASE } from '@/lib/membership';
 import AccountDashboard, { type DashboardActivity } from './AccountDashboard';
 
 export const metadata: Metadata = {
@@ -57,37 +57,51 @@ const SKILLS_MAP_ENTRIES: DashboardActivity[] = [
 // ─── TIER DETECTION ──────────────────────────────────────────
 // Until Stripe + Clerk are fully wired, we read tier from a cookie / query
 // param so both views are testable. Visit /account?tier=starter to preview
-// the Starter Pack experience.
-async function detectTier(
-  searchParams: { tier?: string },
-): Promise<'member' | 'starter' | 'guest'> {
-  // Dev/preview override
-  if (searchParams.tier === 'starter') return 'starter';
-  if (searchParams.tier === 'member') return 'member';
-  if (searchParams.tier === 'guest') return 'guest';
+// the Starter Pack experience, or ?tier=trial for the free-trial view.
+interface TierState {
+  tier: 'member' | 'trial' | 'starter' | 'guest';
+  /** Trial-only: when the trial converts to a paid membership. */
+  trialEndsAt: Date | null;
+}
+
+async function detectTier(searchParams: { tier?: string }): Promise<TierState> {
+  // Dev/preview override (NEVER in production — otherwise anyone could append
+  // ?tier=member and load the library shell without a subscription). The
+  // content endpoints (/api/view, /api/download) always gate on real access,
+  // so this only ever affected the dashboard UI, but it has no business
+  // running in prod regardless.
+  if (process.env.NODE_ENV !== 'production') {
+    if (searchParams.tier === 'starter') return { tier: 'starter', trialEndsAt: null };
+    if (searchParams.tier === 'member') return { tier: 'member', trialEndsAt: null };
+    if (searchParams.tier === 'guest') return { tier: 'guest', trialEndsAt: null };
+    if (searchParams.tier === 'trial') {
+      return { tier: 'trial', trialEndsAt: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000) };
+    }
+  }
 
   // Real lookup: Clerk → DB
   try {
     const { auth } = await import('@clerk/nextjs/server');
-    const { getAccessTierForClerkId } = await import('@/lib/access');
+    const { getAccessContextForClerkId } = await import('@/lib/access');
     const { userId } = await auth();
     if (userId) {
-      return await getAccessTierForClerkId(userId);
+      const access = await getAccessContextForClerkId(userId);
+      return { tier: access.tier, trialEndsAt: access.trialEndsAt };
     }
   } catch {
     /* Clerk or DB not configured */
   }
 
-  return 'guest';
+  return { tier: 'guest', trialEndsAt: null };
 }
 
 export default async function AccountPage({
   searchParams,
 }: {
-  searchParams: Promise<{ tier?: string; name?: string }>;
+  searchParams: Promise<{ tier?: string; name?: string; reason?: string }>;
 }) {
   const sp = await searchParams;
-  const tier = await detectTier(sp);
+  const { tier, trialEndsAt } = await detectTier(sp);
 
   // Guest = no active membership AND no Starter Pack purchase. The library
   // dashboard has nothing useful to show them. Bounce to /join with a
@@ -119,7 +133,8 @@ export default async function AccountPage({
   );
 
   // Filter activity catalog by tier. Starter Pack buyers see ONLY their 10
-  // activities. Members see everything.
+  // activities. Members and trial members see everything. The trial is
+  // gated at download time (3 distinct guides), not at browsing time.
   const tierActivities =
     tier === 'starter'
       ? allProducts.filter((p) => STARTER_PACK_SLUGS.has(p.slug))
@@ -145,5 +160,19 @@ export default async function AccountPage({
     }),
   ];
 
-  return <AccountDashboard userName={userName} tier={tier} activities={activities} />;
+  return (
+    <AccountDashboard
+      userName={userName}
+      tier={tier}
+      activities={activities}
+      trial={
+        tier === 'trial'
+          ? { endsAt: (trialEndsAt ?? new Date()).toISOString(), isFounder: IS_FOUNDER_PHASE }
+          : null
+      }
+      // A direct download URL bounces a trial member here with this reason;
+      // open the upgrade-to-download modal instead of leaving them wondering.
+      initialCapModal={tier === 'trial' && sp.reason === 'trial-upgrade-to-download'}
+    />
+  );
 }

@@ -56,11 +56,6 @@ export const familyFaqItems: FAQItem[] = [
 
 export const membershipFaqItems: FAQItem[] = [
   {
-    question: "What's the difference between buying activities individually and joining the membership?",
-    answer:
-      "Individual activities are $5.99 each. Bundles run around $44.99 (about 25% off). The membership is $99 a year for unlimited access to the entire library: 100+ activities, all nine categories, plus new ones added every quarter. If you'd buy more than two bundles in a year, the membership is the obvious choice.",
-  },
-  {
     question: "What's 'founding member' pricing?",
     answer:
       "The first 100 members pay $99/year, locked in for life. After the 100th founder joins, the price goes up to $149/year for new members. Your $99 rate stays the same forever, as long as you stay subscribed. Early members shape what this becomes, and I'd rather have 100 families actually using and shaping it than charge full price to a smaller group.",
@@ -93,7 +88,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'Do you offer a free trial?',
     answer:
-      "Not formally, but the 14-day money-back guarantee acts like one. Join, try everything, and if it's not for you, email within 14 days for a full refund. No questions, no friction. The free starter guide is also available with no payment if you'd like to try a few activities before deciding.",
+      "Yes. Every membership starts with a 14-day free trial. You enter a card but pay $0 today. During the trial you can open and read every guide in the library, on any device, as much as you like. Downloading guides to keep is a membership perk, so if you want to save them as PDFs you can start your membership in one click anytime during the trial. If it's not for you, cancel before day 14 and you're never charged, and you keep reading access right through the end of the trial either way. One free trial per customer. There's also a free starter guide if you'd like to try a couple of activities before signing up at all.",
   },
 ];
 
@@ -143,12 +138,12 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: "What's your refund policy?",
     answer:
-      "For the membership: 14-day money-back guarantee. Email within 14 days of joining for a full refund, no questions asked. For individual activity purchases: since they're instant digital downloads, we offer a 48-hour refund window from time of purchase if something doesn't work as expected.",
+      "For the membership: you get a 14-day free trial first, so if you cancel during the trial you're never charged at all. After your membership starts, there's a 14-day money-back guarantee on top: email within 14 days of your first charge for a full refund, no questions asked. The Starter Pack has a 14-day refund window from the time of purchase.",
   },
   {
     question: 'How do I pay?',
     answer:
-      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, Google Pay, and PayPal where supported. Annual membership is one charge of $99 (or $149 after founder pricing ends). Individual activities are one-time purchases.",
+      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, Google Pay, and PayPal where supported. The membership is one annual charge of $99 (or $149 after founder pricing ends), and it starts with a 14-day free trial, so nothing is charged the day you sign up.",
   },
   {
     question: 'Do you offer monthly billing?',
@@ -166,19 +161,9 @@ export const buyingFaqItems: FAQItem[] = [
       "If you joined as a founding member (first 100), your $99/year is locked in for life. If you joined after that at $149, your price stays at $149 for renewal. I'd give you 60 days' notice if I ever changed pricing for existing members, and I have no plans to.",
   },
   {
-    question: 'Do you offer bundle discounts for individual purchases?',
-    answer:
-      "Yes. Bundles save you about 25% compared to buying individual guides. That said: if you'd buy three or more bundles in a year, the membership is the better deal. It's $99 versus about $135 for three bundles.",
-  },
-  {
     question: 'Is there a multi-family or co-op rate?',
     answer:
       "Not formally yet. If you're a co-op, micro-school, or shared-cost group, email me at info@anywherelearning.co and we'll figure something out.",
-  },
-  {
-    question: 'How do I access my individual purchases?',
-    answer:
-      'After checkout, your guides are available instantly in your account under Downloads. You can re-download them anytime, on any device. Nothing expires.',
   },
 ];
 

@@ -12,9 +12,10 @@
  *   4. reset_verify  — verify code + set new password
  */
 
-import { useState, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import Link from 'next/link';
-import { useSignIn } from '@clerk/nextjs';
+import { useSearchParams } from 'next/navigation';
+import { useSignIn, useUser } from '@clerk/nextjs';
 
 type Stage = 'identifier' | 'email_code' | 'reset_request' | 'reset_verify';
 
@@ -152,6 +153,60 @@ export default function CustomSignInForm() {
   const [newPassword, setNewPassword] = useState('');
   const [err, setErr] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
+
+  // Carry redirect_url (and any other params) over to sign-up so a new
+  // visitor who landed here mid-flow (e.g. trial checkout) keeps their
+  // place after creating an account.
+  const searchParams = useSearchParams();
+  const qs = searchParams.toString();
+  const signUpHref = `/sign-up${qs ? `?${qs}` : ''}`;
+
+  // Already signed in? Forward instead of showing a sign-in form. This
+  // happens when the server middleware saw a stale session cookie (e.g.
+  // right after minutes spent on Stripe Checkout) and bounced the visitor
+  // here, but clerk-js then restored the session client-side. Without this,
+  // a signed-in member stares at a "Welcome back" form that can't help them.
+  const { isLoaded: userLoaded, isSignedIn } = useUser();
+  useEffect(() => {
+    if (userLoaded && isSignedIn) {
+      window.location.replace(getPostSignInDestination());
+    }
+  }, [userLoaded, isSignedIn]);
+
+  // Magic-link tickets (?__clerk_ticket=…) from the welcome emails. Clerk's
+  // prebuilt <SignIn> widget consumes these automatically; this custom form
+  // has to do it by hand or the email's "Open my library" button dumps the
+  // member on a sign-in form. While the ticket is being exchanged we show a
+  // "signing you in" card instead of the form.
+  const ticket = searchParams.get('__clerk_ticket');
+  const [ticketState, setTicketState] = useState<'idle' | 'working' | 'failed'>(
+    ticket ? 'working' : 'idle',
+  );
+  useEffect(() => {
+    if (!ticket || !isLoaded || !signIn || !setActive) return;
+    if (isSignedIn) return; // the signed-in forward above handles it
+    let cancelled = false;
+    (async () => {
+      try {
+        const result = await signIn.create({ strategy: 'ticket', ticket });
+        if (result.status === 'complete') {
+          await setActive({ session: result.createdSessionId });
+          window.location.replace(getPostSignInDestination());
+          return;
+        }
+        if (!cancelled) setTicketState('failed');
+      } catch {
+        if (!cancelled) {
+          setTicketState('failed');
+          setInfo('That sign-in link has expired or was already used. Sign in below instead.');
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ticket, isLoaded, isSignedIn]);
 
   function clearMessages() {
     setErr(null);
@@ -328,6 +383,23 @@ export default function CustomSignInForm() {
     });
   }
 
+  // ─── Magic-link exchange in progress ──────────────────────────────
+  // Shown instead of the form while a __clerk_ticket is being consumed
+  // (and while the already-signed-in forward above is about to fire).
+  if (ticketState === 'working') {
+    return (
+      <div className="mx-auto max-w-[440px] text-center py-20">
+        <Botanical size={48} opacity={0.9} />
+        <h1 className="mt-5 font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-[1.1] tracking-tight text-ink">
+          Signing you <em className="not-italic italic text-forest">in.</em>
+        </h1>
+        <p className="mt-3 font-body text-[15.5px] text-gray-600">
+          One second, opening your library&hellip;
+        </p>
+      </div>
+    );
+  }
+
   // ─── Two-column composition ───────────────────────────────────────
   const warm = WARM_COPY[stage];
 
@@ -484,10 +556,10 @@ export default function CustomSignInForm() {
                 <p className="m-0 text-[13.5px] text-gray-500">
                   New here?{' '}
                   <Link
-                    href="/join"
+                    href={signUpHref}
                     className="text-forest-dark font-semibold border-b border-forest/25 hover:text-forest hover:border-forest transition-colors"
                   >
-                    See the membership
+                    Create your account
                   </Link>
                 </p>
               </footer>

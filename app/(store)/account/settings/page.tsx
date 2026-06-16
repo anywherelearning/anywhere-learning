@@ -137,8 +137,10 @@ export default async function AccountSettingsPage() {
   // session is fresh.
   const billingPortalAvailable = !!stripeCustomerId;
 
-  const statusLabel: 'active' | 'canceling' | 'canceled' | 'past_due' | 'unknown' =
+  const isTrialing = subStatus === 'trialing';
+  const statusLabel: 'active' | 'trialing' | 'canceling' | 'canceled' | 'past_due' | 'unknown' =
     !subStatus ? 'unknown'
+    : isTrialing ? 'trialing'
     : subStatus === 'active' && cancelAtPeriodEnd ? 'canceling'
     : subStatus === 'active' ? 'active'
     : subStatus === 'canceled' ? 'canceled'
@@ -151,9 +153,10 @@ export default async function AccountSettingsPage() {
   const hasSubscription = subStatus !== null;
   // "Founding member" only for users who actually paid the founder price.
   // Post-cap members keep paying $99 (locked-in) but new joiners after cap
-  // get the standard rate AND the "Member" label.
+  // get the standard rate AND the "Member" label. Trial members haven't paid
+  // yet, so their plan shows as "Free trial".
   const isFounderSubscriber = subPriceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
-  const tierLabel = isFounderSubscriber ? 'Founding member' : 'Member';
+  const tierLabel = isTrialing ? 'Free trial' : isFounderSubscriber ? 'Founding member' : 'Member';
 
   const member = {
     name,
@@ -167,6 +170,12 @@ export default async function AccountSettingsPage() {
     status: statusLabel,
     billingPortalAvailable,
     hasSubscription,
+    isTrialing,
+    // ISO trial end (== currentPeriodEnd while trialing) for the upgrade card.
+    trialEndsAt: isTrialing && nextRenewalAt ? nextRenewalAt.toISOString() : null,
+    isFounder: isFounderSubscriber,
+    // True when a trial is set to expire at day 14 instead of converting.
+    cancelAtPeriodEnd,
   };
 
   return <AccountSettings member={member} />;

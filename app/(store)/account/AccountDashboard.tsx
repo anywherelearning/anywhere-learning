@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
 import ReviewModal from '@/components/shop/ReviewModal';
+import TrialCapModal from '@/components/account/TrialCapModal';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MEMBERSHIP_PRICE_USD } from '@/lib/membership';
 import { STARTER_PACK_CREDIT_LABEL, firstYearPriceAfterCredit } from '@/lib/starter-pack-credit';
 
@@ -20,12 +21,23 @@ export interface DashboardActivity {
 }
 
 type Status = 'none' | 'started' | 'done';
-type Tier = 'member' | 'starter';
+type Tier = 'member' | 'starter' | 'trial';
+
+export interface TrialInfo {
+  /** ISO date the trial converts to a paid membership. */
+  endsAt: string;
+  /** Whether this trial member locked the founder rate (for upgrade copy). */
+  isFounder: boolean;
+}
 
 interface Props {
   userName: string;
   tier: Tier;
   activities: DashboardActivity[];
+  trial?: TrialInfo | null;
+  /** Open the upgrade-to-download modal on mount (e.g. server bounced a
+   *  direct download URL back here with ?reason=trial-upgrade-to-download). */
+  initialCapModal?: boolean;
 }
 
 const AGE_OPTIONS = ['All ages', '6–8', '8–10', '10–12', '12–14'];
@@ -98,9 +110,24 @@ function saveState(state: PersistedState) {
   }
 }
 
-export default function AccountDashboard({ userName, tier, activities }: Props) {
+export default function AccountDashboard({
+  userName,
+  tier,
+  activities,
+  trial,
+  initialCapModal,
+}: Props) {
   const [status, setStatus] = useState<Record<string, Status>>({});
   const [pinned, setPinned] = useState<Record<string, boolean>>({});
+  const [capModalOpen, setCapModalOpen] = useState(!!initialCapModal);
+
+  // Trial members are view-only: any download click opens the upgrade modal.
+  // Members (and starters) navigate straight to the file.
+  function handleDownloadClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (tier !== 'trial') return;
+    e.preventDefault();
+    setCapModalOpen(true);
+  }
 
   // Filters
   const [query, setQuery] = useState('');
@@ -222,11 +249,39 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
     });
   }
 
-  const isMember = tier === 'member';
+  // Trial members get the full library view; only downloading is gated.
+  const isMember = tier === 'member' || tier === 'trial';
+
+  const trialEndsLabel = trial
+    ? new Date(trial.endsAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })
+    : '';
 
   return (
     <>
     <main className="bg-cream pb-12">
+      {/* TRIAL STRIP: viewing is unlimited; downloading requires membership.
+          The strip doubles as the easy upgrade entry point. */}
+      {tier === 'trial' && trial && (
+        <div className="border-b border-[#C9D3BE] bg-[#E6EBDF]">
+          <div className="mx-auto max-w-[1180px] px-6 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-[13.5px] text-forest-dark">
+            <span className="font-body">
+              <strong className="font-semibold">Free trial</strong>
+              <Sep />
+              Read every guide in your browser
+              <Sep />
+              Membership starts {trialEndsLabel}
+            </span>
+            <button
+              type="button"
+              onClick={() => setCapModalOpen(true)}
+              className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12.5px] py-1.5 px-3.5 rounded-full border-0 cursor-pointer hover:bg-forest-dark transition-colors whitespace-nowrap"
+            >
+              Subscribe now to download
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      )}
       {/* HEADER */}
       <section className="pt-10 md:pt-12 pb-6">
         <div className="mx-auto max-w-[1180px] px-6">
@@ -285,6 +340,9 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                     <Link
                       key={a.slug}
                       href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      prefetch={false}
                       className="group relative flex-none w-[320px] bg-cream border border-[#D8D4C5] rounded-[10px] py-3 px-3.5 grid grid-cols-[4px_1fr] gap-3 no-underline text-ink hover:border-[#C9C5B7] hover:bg-[#F2EFE4] transition-all"
                     >
                       <span
@@ -498,6 +556,9 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                   {/* Cover thumbnail */}
                   <Link
                     href={activityHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    prefetch={false}
                     aria-label={`Open ${a.title}`}
                     className="block w-14 sm:w-16 aspect-[4/5] rounded-md overflow-hidden border border-[#D8D4C5] bg-cream no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] group-hover:border-[#C9C5B7] transition-colors"
                     style={{ background: a.trackColor + '14' /* low-opacity fallback */ }}
@@ -525,6 +586,9 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                   <div className="min-w-0">
                     <Link
                       href={activityHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      prefetch={false}
                       className="font-display italic text-[16.5px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
                     >
                       {a.title}
@@ -551,6 +615,9 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                     <div className="flex flex-col items-end justify-between self-stretch min-h-[64px]">
                       <Link
                         href={activityHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        prefetch={false}
                         className="hidden sm:inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12.5px] py-2 px-3.5 rounded-lg no-underline hover:bg-forest-dark transition-colors whitespace-nowrap"
                         aria-label={`Open ${a.title}`}
                       >
@@ -569,9 +636,10 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
                     </div>
                     <a
                       href={downloadHref}
+                      onClick={handleDownloadClick}
                       className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#D8D4C5] bg-cream text-gray-600 no-underline hover:border-forest hover:text-forest-dark transition-colors"
-                      aria-label={`Download ${a.title}`}
-                      title="Download PDF"
+                      aria-label={tier === 'trial' ? `Download ${a.title} (membership required)` : `Download ${a.title}`}
+                      title={tier === 'trial' ? 'Download with membership' : 'Download PDF'}
                     >
                       <svg
                         width="14"
@@ -747,6 +815,13 @@ export default function AccountDashboard({ userName, tier, activities }: Props) 
         </section>
       )}
     </main>
+    <TrialCapModal
+      open={capModalOpen}
+      onClose={() => setCapModalOpen(false)}
+      trialEndsAt={trial?.endsAt ?? null}
+      priceLabel={MEMBERSHIP_PRICE_YEAR}
+      isFounder={trial?.isFounder ?? IS_FOUNDER_PHASE}
+    />
     {activeReview && (
       <ReviewModal
         slug={activeReview.slug}

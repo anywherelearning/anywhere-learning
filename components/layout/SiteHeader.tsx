@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
-import { MEMBERSHIP_PRICE_YR } from '@/lib/membership';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -403,10 +402,10 @@ export default function SiteHeader() {
                     Sign in
                   </Link>
                   <Link
-                    href="/join"
+                    href="/start-trial"
                     className="hidden sm:inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[14.5px] px-4 py-2 rounded-full no-underline shadow-[0_8px_18px_-10px_rgba(58,90,64,0.5)] hover:bg-forest-dark hover:-translate-y-px hover:shadow-[0_12px_24px_-10px_rgba(58,90,64,0.6)] transition-all"
                   >
-                    Join &mdash; {MEMBERSHIP_PRICE_YR}
+                    Start free trial
                     <span aria-hidden="true">&rarr;</span>
                   </Link>
                 </>
@@ -553,10 +552,10 @@ export default function SiteHeader() {
                     Sign in
                   </Link>
                   <Link
-                    href="/join"
+                    href="/start-trial"
                     className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 bg-forest text-cream font-body font-semibold text-[15px] py-3.5 px-5 rounded-xl no-underline hover:bg-forest-dark transition-all"
                   >
-                    Join &mdash; {MEMBERSHIP_PRICE_YR} &rarr;
+                    Start free trial &rarr;
                   </Link>
                 </>
               )}

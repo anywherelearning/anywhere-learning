@@ -52,6 +52,7 @@ export async function POST(req: NextRequest) {
     const tier = await getAccessTierForClerkId(clerkId);
     const allowed =
       tier === 'member' ||
+      tier === 'trial' ||
       (tier === 'starter' && (STARTER_PACK_SLUGS.has(slug) || SKILLS_MAP_SLUGS.has(slug)));
     if (!allowed) {
       return NextResponse.json(

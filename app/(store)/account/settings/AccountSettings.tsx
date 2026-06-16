@@ -14,11 +14,19 @@ interface Member {
   priceLabel: string;
   paymentLast4: string;
   paymentBrand: string;
-  status: 'active' | 'canceling' | 'canceled' | 'past_due' | 'unknown';
+  status: 'active' | 'trialing' | 'canceling' | 'canceled' | 'past_due' | 'unknown';
   billingPortalAvailable: boolean;
   /** Set when the user actually has subscription history. Starter-Pack-only
    *  buyers don't (no subscription row), so we hide the tab for them. */
   hasSubscription: boolean;
+  /** True while on a free trial (not yet charged). */
+  isTrialing: boolean;
+  /** ISO date the trial converts. Only set when isTrialing. */
+  trialEndsAt: string | null;
+  /** Whether they locked the founder rate (for trial-upgrade copy). */
+  isFounder: boolean;
+  /** True when a trial is set to expire at day 14 instead of converting. */
+  cancelAtPeriodEnd: boolean;
 }
 
 type Tab = 'profile' | 'subscription';
@@ -101,26 +109,38 @@ export default function AccountSettings({ member }: { member: Member }) {
             title="Subscription"
             description="Your membership plan, renewal, and payment method."
           >
-            <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-5 mb-4">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
-                    Current plan
-                  </p>
-                  <p className="m-0 mt-1.5 font-display italic text-[22px] leading-[1.2] text-ink">
-                    {member.tier}
-                  </p>
-                  <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">
-                    {member.priceLabel}
-                    {IS_FOUNDER_PHASE && ' · Founder rate locked in for life'}
-                  </p>
+            {/* Trial members get a distinct card: clear they're not paying yet,
+                with a one-tap path to start membership and unlock downloads. */}
+            {member.isTrialing ? (
+              <TrialUpgradeCard member={member} />
+            ) : (
+              <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-5 mb-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
+                      Current plan
+                    </p>
+                    <p className="m-0 mt-1.5 font-display italic text-[22px] leading-[1.2] text-ink">
+                      {member.tier}
+                    </p>
+                    <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">
+                      {member.priceLabel}
+                      {IS_FOUNDER_PHASE && ' · Founder rate locked in for life'}
+                    </p>
+                  </div>
+                  <StatusBadge status={member.status} />
                 </div>
-                <StatusBadge status={member.status} />
               </div>
-            </div>
+            )}
 
             <StatRow
-              label={member.status === 'canceling' ? 'Access through' : 'Next renewal'}
+              label={
+                member.isTrialing
+                  ? 'Membership starts'
+                  : member.status === 'canceling'
+                    ? 'Access through'
+                    : 'Next renewal'
+              }
               value={member.nextRenewalAt}
             />
             <StatRow
@@ -151,7 +171,11 @@ export default function AccountSettings({ member }: { member: Member }) {
                   Manage billing &rarr;
                 </span>
               )}
-              {member.billingPortalAvailable ? (
+              {/* Trial members cancel via the trial card above (it sets
+                  cancel-at-trial-end with no charge). Showing a second
+                  "Cancel subscription" portal link here would be confusing,
+                  so it's hidden while trialing. */}
+              {member.isTrialing ? null : member.billingPortalAvailable ? (
                 <Link
                   href="/api/billing/portal"
                   className="font-body font-medium text-[13px] text-gray-500 no-underline hover:text-forest-dark transition-colors"
@@ -378,9 +402,138 @@ function FooterRow({ children }: { children: React.ReactNode }) {
 }
 
 
+/**
+ * Trial member's plan card: makes clear they're on a free trial (not charged),
+ * shows when it converts, and offers a one-tap "start membership now" that
+ * ends the trial early (charges the saved card) so downloads unlock right away.
+ */
+function TrialUpgradeCard({ member }: { member: Member }) {
+  const [working, setWorking] = useState<null | 'subscribe' | 'cancel' | 'resume'>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const startsLabel = member.nextRenewalAt;
+  const priceNumber = member.priceLabel.split('/')[0];
+  const ending = member.cancelAtPeriodEnd;
+
+  async function handleSubscribe() {
+    setError(null);
+    setWorking('subscribe');
+    try {
+      const res = await fetch('/api/checkout/upgrade-trial', { method: 'POST' });
+      const data = (await res.json()) as { ok?: boolean; message?: string };
+      if (res.ok && data.ok) {
+        window.location.assign('/account?upgraded=1');
+        return;
+      }
+      setError(data.message || 'Could not start your membership. Please try again.');
+      setWorking(null);
+    } catch {
+      setError('Network error. Please try again.');
+      setWorking(null);
+    }
+  }
+
+  async function handleCancelToggle(resume: boolean) {
+    setError(null);
+    setWorking(resume ? 'resume' : 'cancel');
+    try {
+      const res = await fetch('/api/checkout/cancel-trial', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ resume }),
+      });
+      const data = (await res.json()) as { ok?: boolean; message?: string };
+      if (res.ok && data.ok) {
+        window.location.reload();
+        return;
+      }
+      setError(data.message || 'Could not update your trial. Please try again.');
+      setWorking(null);
+    } catch {
+      setError('Network error. Please try again.');
+      setWorking(null);
+    }
+  }
+
+  return (
+    <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-5 mb-4">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
+            Current plan
+          </p>
+          <p className="m-0 mt-1.5 font-display italic text-[22px] leading-[1.2] text-ink">
+            Free trial
+          </p>
+          <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">
+            {ending
+              ? `Ends ${startsLabel} · You won't be charged`
+              : '$0 so far · Read every guide in your browser'}
+          </p>
+        </div>
+        <StatusBadge status="trialing" />
+      </div>
+
+      {error && (
+        <p role="alert" className="mt-4 text-[12.5px] text-[#7A3D24] bg-[#F7EBE2] border border-[#E8D4C2] rounded-[10px] px-3 py-2">
+          {error}
+        </p>
+      )}
+
+      {ending ? (
+        /* Trial set to expire on day 14: reassure + offer to keep it going. */
+        <div className="mt-4 pt-4 border-t border-[#C9D3BE]">
+          <p className="m-0 font-body text-[13.5px] leading-[1.55] text-gray-700">
+            Your trial is set to end on <strong className="text-forest-dark">{startsLabel}</strong>{' '}
+            and you won&apos;t be charged. You can keep reading every guide in your browser until
+            then. Changed your mind?
+          </p>
+          <button
+            type="button"
+            onClick={() => handleCancelToggle(true)}
+            disabled={working !== null}
+            className="mt-3.5 inline-flex items-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold text-[13.5px] py-2.5 px-4 rounded-[10px] bg-transparent cursor-pointer hover:bg-[#dfe6d4] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {working === 'resume' ? 'Restoring…' : 'Keep my membership going'}
+          </button>
+        </div>
+      ) : (
+        <div className="mt-4 pt-4 border-t border-[#C9D3BE]">
+          <p className="m-0 font-body text-[13.5px] leading-[1.55] text-gray-700">
+            Want to <strong className="text-forest-dark">download guides as PDFs?</strong> Start your
+            membership now and downloads unlock immediately. It&apos;s the same {member.priceLabel}
+            {member.isFounder ? ' founder rate' : ''} that begins on {startsLabel} anyway.
+          </p>
+          <button
+            type="button"
+            onClick={handleSubscribe}
+            disabled={working !== null}
+            className="mt-3.5 inline-flex items-center gap-2 bg-forest text-cream font-body font-semibold text-[13.5px] py-2.5 px-4 rounded-[10px] border-0 cursor-pointer hover:bg-forest-dark transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+          >
+            {working === 'subscribe' ? 'Starting your membership…' : `Subscribe now to download · ${priceNumber} today`}
+          </button>
+          <p className="m-0 mt-3 font-body text-[12.5px] text-gray-500">
+            Not for you?{' '}
+            <button
+              type="button"
+              onClick={() => handleCancelToggle(false)}
+              disabled={working !== null}
+              className="bg-transparent border-0 p-0 font-body text-[12.5px] text-gray-500 underline decoration-gray-300 underline-offset-2 cursor-pointer hover:text-forest-dark disabled:opacity-60"
+            >
+              {working === 'cancel' ? 'Canceling…' : 'Cancel your trial'}
+            </button>
+            . You&apos;ll keep access until {startsLabel} and never be charged.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function StatusBadge({ status }: { status: Member['status'] }) {
   const config: Record<Member['status'], { label: string; bg: string; color: string }> = {
     active: { label: 'Active', bg: '#F2DECF', color: '#7A3D24' },
+    trialing: { label: 'Free trial', bg: '#E6EBDF', color: '#3A5A40' },
     canceling: { label: 'Canceling at period end', bg: '#F5E7BC', color: '#7A5E1F' },
     canceled: { label: 'Canceled', bg: '#E5D9D9', color: '#7A3636' },
     past_due: { label: 'Past due', bg: '#F5DBCB', color: '#7A3D24' },
