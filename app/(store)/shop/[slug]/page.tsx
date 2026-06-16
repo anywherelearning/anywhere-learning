@@ -522,6 +522,7 @@ export default async function ProductPage({
                         href={`/api/download/activity/${product.slug}?view=1`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        prefetch={false}
                         className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
                       >
                         Open this activity

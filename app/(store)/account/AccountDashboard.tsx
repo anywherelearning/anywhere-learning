@@ -342,6 +342,7 @@ export default function AccountDashboard({
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      prefetch={false}
                       className="group relative flex-none w-[320px] bg-cream border border-[#D8D4C5] rounded-[10px] py-3 px-3.5 grid grid-cols-[4px_1fr] gap-3 no-underline text-ink hover:border-[#C9C5B7] hover:bg-[#F2EFE4] transition-all"
                     >
                       <span
@@ -557,6 +558,7 @@ export default function AccountDashboard({
                     href={activityHref}
                     target="_blank"
                     rel="noopener noreferrer"
+                    prefetch={false}
                     aria-label={`Open ${a.title}`}
                     className="block w-14 sm:w-16 aspect-[4/5] rounded-md overflow-hidden border border-[#D8D4C5] bg-cream no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] group-hover:border-[#C9C5B7] transition-colors"
                     style={{ background: a.trackColor + '14' /* low-opacity fallback */ }}
@@ -586,6 +588,7 @@ export default function AccountDashboard({
                       href={activityHref}
                       target="_blank"
                       rel="noopener noreferrer"
+                      prefetch={false}
                       className="font-display italic text-[16.5px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
                     >
                       {a.title}
@@ -614,6 +617,7 @@ export default function AccountDashboard({
                         href={activityHref}
                         target="_blank"
                         rel="noopener noreferrer"
+                        prefetch={false}
                         className="hidden sm:inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12.5px] py-2 px-3.5 rounded-lg no-underline hover:bg-forest-dark transition-colors whitespace-nowrap"
                         aria-label={`Open ${a.title}`}
                       >

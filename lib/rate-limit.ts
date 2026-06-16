@@ -96,7 +96,7 @@ function getRedis(): Redis | null {
 const SIXTY_SECONDS = 60_000;
 const _inMemoryStrict = new InMemoryRateLimiter(5, SIXTY_SECONDS);
 const _inMemoryStandard = new InMemoryRateLimiter(10, SIXTY_SECONDS);
-const _inMemoryRelaxed = new InMemoryRateLimiter(30, SIXTY_SECONDS);
+const _inMemoryRelaxed = new InMemoryRateLimiter(60, SIXTY_SECONDS);
 
 // ── Limiter return type ─────────────────────────────────────────
 type RateLimiterLike = Ratelimit | InMemoryRateLimiter;
@@ -125,13 +125,13 @@ export function standardLimiter(): RateLimiterLike {
   });
 }
 
-/** Relaxed: 30 requests per 60 seconds - for reads like downloads, reviews */
+/** Relaxed: 60 requests per 60 seconds - for reads like downloads, reviews */
 export function relaxedLimiter(): RateLimiterLike {
   const redis = getRedis();
   if (!redis) return _inMemoryRelaxed;
   return new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(30, '60 s'),
+    limiter: Ratelimit.slidingWindow(60, '60 s'),
     prefix: 'rl:relaxed',
   });
 }
