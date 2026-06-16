@@ -22,6 +22,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
+import { getDownloadUrl } from '@vercel/blob';
 import { getAccessContextForClerkId } from '@/lib/access';
 import { STARTER_PACK_SLUGS } from '@/lib/membership';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
@@ -112,29 +113,14 @@ export async function GET(
     return friendlyRedirect('/account', 'activity-missing');
   }
 
-  // Stream the file THROUGH the app rather than redirecting to the public
-  // Blob URL. Vercel Blob has no private/signed-URL mode, so the only way to
-  // keep a paid PDF from being shared as a permanent public link is to never
-  // hand out that URL. The bytes are gated by the auth + tier checks above.
+  // Redirect to the Blob CDN. (We briefly streamed the bytes through this
+  // route to avoid exposing the public URL, but that stalled on Vercel —
+  // headers arrive, body never flows — so members got 0-byte downloads.
+  // Redirecting to the CDN is the proven-in-prod behavior. The minor URL-
+  // exposure tradeoff is a pre-existing condition; a working private-delivery
+  // approach (signed URLs) is a separate follow-up.)
   //   ?view=1 → inline (opens in the browser)
-  //   default → attachment (forces a download)
-  const upstream = await fetch(blobUrl);
-  if (!upstream.ok || !upstream.body) {
-    return friendlyRedirect('/account', 'activity-missing');
-  }
-  // Filename for the download dialog, from the Blob path, sanitized for the
-  // header (drop quotes/control chars; the names are otherwise plain ASCII).
-  const rawName = decodeURIComponent(blobUrl.split('/').pop() || `${slug}.pdf`);
-  const safeName = rawName.replace(/["\\\r\n]/g, '').trim() || `${slug}.pdf`;
-  const disposition = isView ? 'inline' : 'attachment';
-  const contentLength = upstream.headers.get('content-length');
-  return new NextResponse(upstream.body, {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/pdf',
-      'Content-Disposition': `${disposition}; filename="${safeName}"`,
-      'Cache-Control': 'private, max-age=0, no-store',
-      ...(contentLength ? { 'Content-Length': contentLength } : {}),
-    },
-  });
+  //   default → forced download (Content-Disposition: attachment)
+  const target = isView ? blobUrl : getDownloadUrl(blobUrl);
+  return NextResponse.redirect(target, 302);
 }

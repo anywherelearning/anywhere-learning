@@ -55,20 +55,24 @@ export async function GET(
   }
 
   const upstream = await fetch(blobUrl);
-  if (!upstream.ok || !upstream.body) {
+  if (!upstream.ok) {
     return NextResponse.json({ error: 'Could not load the guide' }, { status: 502 });
   }
 
-  return new NextResponse(upstream.body, {
+  // Buffer the PDF fully, then return it. We previously streamed
+  // `upstream.body` (a web ReadableStream) directly, which stalled on Vercel:
+  // the headers (incl. Content-Length) arrived but the body never flowed, so
+  // pdf.js hung with a blank viewer. Buffering to an ArrayBuffer sidesteps the
+  // serverless streaming quirk. Guides are a few MB, well within limits, and
+  // this endpoint is only hit by the in-app viewer (one request per open).
+  const buf = await upstream.arrayBuffer();
+  return new NextResponse(buf, {
     status: 200,
     headers: {
       'Content-Type': 'application/pdf',
       'Content-Disposition': 'inline',
       // Private: never cache a member-gated file on shared caches.
       'Cache-Control': 'private, max-age=0, no-store',
-      ...(upstream.headers.get('content-length')
-        ? { 'Content-Length': upstream.headers.get('content-length')! }
-        : {}),
     },
   });
 }
