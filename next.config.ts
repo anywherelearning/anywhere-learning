@@ -38,7 +38,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [60, 75],
+    // Next 16 enforces this allowlist: any <Image quality={…}> NOT listed here
+    // returns HTTP 400 and the image fails to load. Must include every quality
+    // value used across the codebase (currently 60/75/80/85/90/95).
+    qualities: [60, 75, 80, 85, 90, 95],
     remotePatterns: [
       { protocol: "https", hostname: "img.clerk.com" },
       { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
