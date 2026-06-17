@@ -1,156 +1,121 @@
 <!--
-  LEAD MAGNET SEQUENCE - Email 1: Welcome + Free Guide Delivery
+  LEAD MAGNET SEQUENCE (rebuilt, trial-focused) - Email 1 of 5: Welcome + Free Guide Delivery
   Trigger: subscriber receives tag "lead"
   Send: Immediately
-  Subject: Here's your free guide!
-  Preview: 7 Days of Real-World Learning is ready to download
+  Subject: Here's your free guide
+  Preview: 7 Days of Real-World Learning, ready to open on any device.
+
+  ACTION NEEDED: replace YOUR_FREE_GUIDE_LINK_HERE with the real Vercel Blob URL for the PDF.
+  No Google Fonts link (Kit strips it); the wordmark and signature are pre-rendered PNGs.
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <style>
+    :root { color-scheme: light; supported-color-schemes: light; }
+    html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:#588157; }
+    @media (max-width: 620px) {
+      .lm-card { border-radius:0 !important; }
+      .lm-pad  { padding-left:26px !important; padding-right:26px !important; }
+    }
+  </style>
 </head>
-<body style="background-color: #f5f3ee; margin: 0; padding: 0; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-  <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f3ee;">
+<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
     <tr>
-      <td align="center" style="padding: 24px 16px;">
-        <table cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; background-color: #faf9f6;">
+      <td align="center" style="padding:36px 16px;">
 
-          <!-- Brand Header -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="lm-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+
+          <!-- HEADER -->
           <tr>
-            <td align="center" style="padding: 28px 24px 20px;">
-              <table cellpadding="0" cellspacing="0">
-                <tr>
-                  <td style="vertical-align: middle; padding-right: 10px;">
-                    <img src="https://anywherelearning.co/logo-icon.png" width="36" height="26" alt="" style="display: block;">
-                  </td>
-                  <td style="vertical-align: middle;">
-                    <span style="font-family: 'Dancing Script', cursive; font-size: 22px; font-weight: 700; color: #588157; line-height: 1;">Anywhere Learning</span>
-                  </td>
-                </tr>
-              </table>
+            <td class="lm-pad" align="center" style="padding:34px 40px 0;">
+              <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;">
+              <br>
+              <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="222" height="34" style="display:inline-block; width:222px; max-width:80%; height:auto; border:0; margin:10px 0 0;">
             </td>
           </tr>
 
-          <!-- Banner -->
+          <!-- gold divider -->
+          <tr><td class="lm-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+
+          <!-- INTRO -->
           <tr>
-            <td style="background-color: #588157; padding: 28px 24px 24px; text-align: center;">
-              <div style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.2); display: inline-block; line-height: 40px; text-align: center; margin-bottom: 12px;">
-                <span style="color: #faf9f6; font-size: 20px; font-weight: 700;">&#127793;</span>
-              </div>
-              <h1 style="font-size: 22px; font-weight: 600; color: #faf9f6; margin: 0; line-height: 1.3;">Your free guide is here!</h1>
+            <td class="lm-pad" style="padding:26px 40px 0;">
+              <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:8px;">Your free guide</div>
+              <p style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 16px;">Hey {{ subscriber.first_name | strip | default: "there" }},</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Thanks for grabbing <strong style="color:#2f3a2e;">7 Days of Real-World Learning</strong>. I made it for parents who already feel it: the best learning rarely looks like school. It looks like a kid counting out coins at the till, or planning a Saturday outing and actually being in charge of it.</p>
             </td>
           </tr>
 
-          <!-- Product Image -->
+          <!-- COVER IMAGE -->
           <tr>
-            <td style="padding: 0; line-height: 0;">
-              <img src="https://anywherelearning.co/images/free-guide-cover.jpg" width="560" alt="7 Days of Real-World Learning" style="width: 100%; max-width: 560px; display: block;">
+            <td align="center" style="padding:8px 40px 4px;">
+              <img src="https://anywherelearning.co/images/free-guide-cover.jpg" alt="7 Days of Real-World Learning" width="300" style="display:inline-block; width:300px; max-width:70%; height:auto; border:0; border-radius:12px; box-shadow:0 10px 26px rgba(60,50,30,0.18);">
             </td>
           </tr>
 
-          <!-- Main Content -->
+          <!-- BODY -->
           <tr>
-            <td style="padding: 28px 32px 8px;">
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">Hey {{ subscriber.first_name | default: "there" }}!</p>
+            <td class="lm-pad" style="padding:18px 40px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Inside are seven small, hands-on activities, one for each real-world muscle: outdoor and nature, real-world math, creativity, AI and digital, entrepreneurship, communication, and planning. Each one fits into an afternoon, with no prep beyond what's already in your kitchen drawer.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">You don't need to do all seven, or do them in order. Pick the one that fits today and let your kid run with it.</p>
 
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                Thanks for grabbing <strong>7 Days of Real-World Learning</strong>. It's a guide I built for parents who already know the best learning doesn't look like school &mdash; it looks like a kid counting coins at a checkout, or planning a trip to the park, but this time they're in charge.
-              </p>
+              <!-- CTA -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                <td align="center" style="padding:26px 0 22px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                    <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
+                      <a href="YOUR_FREE_GUIDE_LINK_HERE" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Download the guide</a>
+                    </td>
+                  </tr></table>
+                </td>
+              </tr></table>
 
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                Inside you'll find 7 small, hands-on activities &mdash; one across each real-world muscle: outdoor &amp; nature, real-world math, creativity, AI &amp; digital, entrepreneurship, communication, and planning. Each one fits into a few hours. No printing, no prep beyond what's already in your kitchen drawer.
-              </p>
+              <!-- FEATURE STRIP -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td align="center" style="padding:14px 18px; font-size:13px; font-weight:600; color:#3d5c3b; letter-spacing:0.02em;">
+                  Low prep&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Ages 6 to 14&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Use it year after year
+                </td>
+              </tr></table>
 
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                You don't need to do all seven. You don't need to do them in one week. Pick the one that fits today, and let your kid go.
-              </p>
-
-              <!-- CTA Button -->
-              <table cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td align="center" style="padding: 28px 0;">
-                    <a href="YOUR_FREE_GUIDE_LINK_HERE" style="background-color: #588157; border-radius: 12px; color: #faf9f6; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 36px; text-decoration: none;">Download Your Free Guide</a>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Tips Box -->
-              <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f5f0; border-radius: 12px; margin-bottom: 24px;">
-                <tr>
-                  <td style="padding: 20px 16px; text-align: center;">
-                    <table cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td width="33%" style="text-align: center; vertical-align: top; padding: 0 4px;">
-                          <div style="width: 32px; height: 32px; border-radius: 8px; background-color: #588157; display: inline-block; line-height: 32px; text-align: center; margin-bottom: 6px;">
-                            <span style="color: #faf9f6; font-size: 14px;">&#10003;</span>
-                          </div>
-                          <p style="font-size: 12px; color: #555555; margin: 0; line-height: 1.4; font-weight: 500;">Low prep</p>
-                        </td>
-                        <td width="33%" style="text-align: center; vertical-align: top; padding: 0 4px;">
-                          <div style="width: 32px; height: 32px; border-radius: 8px; background-color: #588157; display: inline-block; line-height: 32px; text-align: center; margin-bottom: 6px;">
-                            <span style="color: #faf9f6; font-size: 14px;">&#9733;</span>
-                          </div>
-                          <p style="font-size: 12px; color: #555555; margin: 0; line-height: 1.4; font-weight: 500;">Ages 6–14</p>
-                        </td>
-                        <td width="33%" style="text-align: center; vertical-align: top; padding: 0 4px;">
-                          <div style="width: 32px; height: 32px; border-radius: 8px; background-color: #588157; display: inline-block; line-height: 32px; text-align: center; margin-bottom: 6px;">
-                            <span style="color: #faf9f6; font-size: 18px; font-weight: 700;">&infin;</span>
-                          </div>
-                          <p style="font-size: 12px; color: #555555; margin: 0; line-height: 1.4; font-weight: 500;">Reuse forever</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 0 0 16px;">
-                I'll check in over the next few days with some ideas for getting started. In the meantime, just hit reply if you have any questions - I'm a real person.
-              </p>
-
-              <p style="font-size: 16px; line-height: 26px; color: #2d2d2d; margin: 24px 0 0;">
-                Happy learning,<br>
-                <span style="font-family: 'Dancing Script', cursive; font-size: 22px; color: #588157;">Amelie</span>
-              </p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:22px 0 16px;">Open it on your phone, your tablet, whatever's closest. I'll check in over the next few days with the easiest way to start, plus a peek at what we get up to the other 358 days of the year.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">If a question ever comes up, just hit reply. I read every message, there's a real person on this end.</p>
             </td>
           </tr>
 
-          <!-- Footer -->
+          <!-- SIGN-OFF -->
           <tr>
-            <td style="border-top: 1px solid #e5e5e5;">
-              <table cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td align="center" style="padding: 24px 32px;">
-                    <table cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td style="vertical-align: middle; padding-right: 6px;">
-                          <img src="https://anywherelearning.co/logo-icon.png" width="20" height="14" alt="" style="display: block; opacity: 0.4;">
-                        </td>
-                        <td style="vertical-align: middle;">
-                          <span style="font-size: 13px; color: #999999;">Anywhere Learning</span>
-                        </td>
-                      </tr>
-                    </table>
-                    <p style="font-size: 13px; color: #999999; margin: 4px 0 8px; line-height: 1.5;">Meaningful Learning, Wherever You Are</p>
-                    <p style="font-size: 13px; margin: 0;">
-                      <a href="https://anywherelearning.co/shop" style="color: #588157; text-decoration: none;">Shop</a>
-                      &middot;
-                      <a href="https://anywherelearning.co/blog" style="color: #588157; text-decoration: none;">Blog</a>
-                      &middot;
-                      <a href="https://anywherelearning.co/resources" style="color: #588157; text-decoration: none;">Resources</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
+            <td class="lm-pad" style="padding:22px 40px 0;">
+              <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Happy learning,</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="110" height="38" style="display:block; width:110px; height:auto; border:0;">
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td class="lm-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
+              <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 12px;">
+                <a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-1" style="color:#588157; text-decoration:none; font-weight:600;">Free idea lists</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-1" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-1" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+              </p>
+              <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you grabbed the free guide.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
             </td>
           </tr>
 
         </table>
+
       </td>
     </tr>
   </table>
+
 </body>
 </html>
