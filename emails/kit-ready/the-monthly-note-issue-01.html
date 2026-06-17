@@ -7,8 +7,8 @@
   HOW TO USE:
   1. Kit > Broadcasts > New Broadcast > Styles tab > paste this whole file as the Custom HTML template.
   2. In the Email tab, write a short greeting plus a sentence or two of intro, e.g.
-       Hi {{ subscriber.first_name | default: 'friend' }}, summer is in full swing here.
-       Here's what's worth a look this month:
+       Hi {{ subscriber.first_name | default: 'friend' }}, summer's in full swing here.
+       Here's what's new this month:
      Everything else (masthead, blog grid, trial band, note, footer) is locked in.
   3. Subject: Raising a kid who thinks for themselves
   4. Preview text: Plus 15 free idea lists and a new activity for big feelings.
@@ -48,8 +48,6 @@
       .fn-col-photo { padding-bottom:14px !important; }
       .fn-stack { display:block !important; width:100% !important; padding:0 !important; }
       .fn-stack-btn { display:block !important; width:100% !important; padding:18px 0 0 0 !important; text-align:left !important; }
-      .fn-mh-l { display:block !important; width:100% !important; text-align:left !important; padding-bottom:4px !important; }
-      .fn-mh-r { display:block !important; width:100% !important; text-align:left !important; padding-bottom:16px !important; }
     }
   </style>
 </head>
@@ -76,10 +74,9 @@
 
               <img src="https://anywherelearning.co/email-the-monthly-note.png" alt="The Monthly Note" width="383" height="64" style="display:block; width:383px; max-width:100%; height:auto; margin:12px 0 0; border:0;">
 
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:14px; border-bottom:2px solid #588157;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:16px; border-bottom:2px solid #588157;">
                 <tr>
-                  <td class="fn-mh-l" style="padding-bottom:16px; font-size:15px; font-weight:600; color:#2f3a2e;">What's new this month</td>
-                  <td class="fn-mh-r" align="right" style="padding-bottom:16px; font-size:12px; font-weight:500; color:#8a8578; letter-spacing:0.04em;">Issue 01 &middot; June 2026</td>
+                  <td style="padding-bottom:14px; font-size:12px; font-weight:600; color:#8a8578; letter-spacing:0.08em; text-transform:uppercase;">Issue 01 &middot; June 2026</td>
                 </tr>
               </table>
             </td>
