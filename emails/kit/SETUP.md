@@ -3,20 +3,29 @@
 All emails use the same branded HTML template matching the Resend transactional emails.
 Copy the HTML from each file into Kit's HTML editor (not the visual editor).
 
-Replace `YOUR_FREE_GUIDE_LINK_HERE` with the actual link to the free guide PDF (Vercel Blob URL for `Free guide - 7 Days of Real-World Learning.pdf`).
+The free-guide download button is already wired to the live Vercel Blob PDF
+(`Free guide - 7 Days of Real-World Learning - compressed.pdf`). No placeholder to replace.
 
-## Sequence 1: Lead Magnet (3 emails)
+## Sequence 1: Lead Magnet (5 emails, trial-focused)
 
 **Current guide:** `7 Days of Real-World Learning` (one activity a day across outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning)
+
+**Goal:** convert free-guide leads to the 14-day membership trial (`/start-trial`, founder rate $99/yr).
+
+**Design:** rebuilt June 2026 in the new brand email system (rendered Dancing Script wordmark + signature, color-scheme light, bulletproof buttons, no emoji/em-dash). Paste each file into Kit's HTML editor.
 
 **Trigger:** Subscriber receives tag `lead`
 (Tag is auto-applied by the app when someone submits the free guide form)
 
-| # | File | Delay | Subject Line |
-|---|------|-------|-------------|
-| 1 | `lead-magnet-1-welcome.html` | Immediately | Here's your free guide! |
-| 2 | `lead-magnet-2-getting-started.html` | 2 days | One activity. That's all it takes. |
-| 3 | `lead-magnet-3-shop-intro.html` | 5 days | What if learning didn't need a lesson plan? |
+| # | File | Delay | Subject Line | Job |
+|---|------|-------|-------------|-----|
+| 1 | `lead-magnet-1-welcome.html` | Immediately | Here's your free guide | Deliver + welcome |
+| 2 | `lead-magnet-2-story.html` | 2 days | The kids were getting worse at life | Founder story, trust |
+| 3 | `lead-magnet-3-library.html` | 4 days | 7 days was just the start | Reveal the full library |
+| 4 | `lead-magnet-4-offer.html` | 6 days | Try the whole library free for 14 days | The trial offer |
+| 5 | `lead-magnet-5-close.html` | 8 days | Before I stop emailing you about this | Urgency + objections |
+
+Retired: `lead-magnet-2-getting-started.html`, `lead-magnet-3-shop-intro.html` (old shop-focused sequence).
 
 ## Sequence 2: Cart Abandonment (2 emails)
 
