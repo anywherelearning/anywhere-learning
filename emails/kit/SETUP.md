@@ -30,26 +30,41 @@ Delays are measured from Day 0 (signup): Day 0, 2, 5, 9, 14. Whole sequence runs
 
 Retired: `lead-magnet-2-getting-started.html`, `lead-magnet-3-shop-intro.html` (old shop-focused sequence).
 
-## Sequence 2: Cart Abandonment (2 emails)
+## Sequence 2: Cart Abandonment — RETIRED (Jun 2026)
 
-**Trigger:** Subscriber receives tag `cart-abandoner`
-**Condition on each email:** Subscriber does NOT have tag `buyer`
-(Both tags are auto-created by the app - no manual setup needed)
+No cart on the site anymore. Abandoned checkouts are handled by transactional emails (Resend:
+`AbandonedCheckoutMembership.tsx`, `AbandonedCheckoutStarterPack.tsx`) fired from the Stripe
+`checkout.session.expired` webhook. Nothing applies the `cart-abandoner` tag, so the Kit
+sequence never fires. Files `cart-abandon-1-reminder.html` / `cart-abandon-2-different-angle.html`
+removed. Delete the Kit automation too.
 
-| # | File | Delay | Subject Line |
-|---|------|-------|-------------|
-| 1 | `cart-abandon-1-reminder.html` | 1 hour | Still thinking it over? |
-| 2 | `cart-abandon-2-different-angle.html` | 24 hours after email 1 | What homeschool actually looks like at our house |
+## Sequence 3: Post-Purchase (old shop buyers) — RETIRED (Jun 2026)
 
-## Sequence 3: Post-Purchase (2 emails)
+Triggered on tag `buyer`, which the code no longer applies after the membership pivot
+(purchases now apply `starter-pack-buyer`, `trial-member`, `member`, `founder`). It never fires.
+Replaced by the two sequences below. `post-purchase-1-getting-started.html` and
+`post-purchase-2-cross-sell.html` are kept for reference only; delete the Kit automation.
 
-**Trigger:** Subscriber receives tag `buyer`
-**Note:** The immediate purchase confirmation (with download link + referral code) is sent via Resend. This Kit sequence is the nurture follow-up.
+## Sequence 3a: Trial Member nurture (2 emails)
 
-| # | File | Delay | Subject Line |
-|---|------|-------|-------------|
-| 1 | `post-purchase-1-getting-started.html` | 2 days | Your first activity (pick one, just one) |
-| 2 | `post-purchase-2-cross-sell.html` | 7 days | More where that came from |
+**Trigger:** Subscriber receives tag `trial-member`
+**Note:** Resend already auto-sends a welcome on day 0 and a trial-ending reminder on day 11. These two only fill the middle, no duplicates.
+
+| # | File | Delay (after last email) | Subject Line |
+|---|------|--------------------------|-------------|
+| 1 | `trial-member-1-start.html` | 2 days | Where to start in your library |
+| 2 | `trial-member-2-together.html` | 5 days | The part parents don't expect |
+
+## Sequence 3b: Starter Pack buyer → membership (3 emails)
+
+**Trigger:** Subscriber receives tag `starter-pack-buyer`
+**Hook:** the Starter Pack (~$45) credits toward the first year of membership, so upgrading is ~$54 for year one at the founder rate.
+
+| # | File | Delay (after last email) | Subject Line |
+|---|------|--------------------------|-------------|
+| 1 | `starter-pack-1-start.html` | 1 day | Your Starter Pack, where to begin |
+| 2 | `starter-pack-2-library.html` | 4 days | Your $45 already counts toward more |
+| 3 | `starter-pack-3-credit.html` | 5 days | Your credit is still waiting |
 
 ## Sequence 4: Home Educators' Appreciation Week sale (3 emails, manual broadcasts)
 
