@@ -22,9 +22,11 @@ The free-guide download button is already wired to the live Vercel Blob PDF
 |---|------|-------|-------------|-----|
 | 1 | `lead-magnet-1-welcome.html` | Immediately | Here's your free guide | Deliver + welcome |
 | 2 | `lead-magnet-2-story.html` | 2 days | The kids were getting worse at life | Founder story, trust |
-| 3 | `lead-magnet-3-library.html` | 4 days | 7 days was just the start | Reveal the full library |
-| 4 | `lead-magnet-4-offer.html` | 6 days | Try the whole library free for 14 days | The trial offer |
-| 5 | `lead-magnet-5-close.html` | 8 days | Before I stop emailing you about this | Urgency + objections |
+| 3 | `lead-magnet-3-library.html` | 5 days | 7 days was just the start | Reveal the full library |
+| 4 | `lead-magnet-4-offer.html` | 9 days | Try the whole library free for 14 days | The trial offer |
+| 5 | `lead-magnet-5-close.html` | 14 days | Before I stop emailing you about this | Urgency + objections |
+
+Delays are measured from Day 0 (signup): Day 0, 2, 5, 9, 14. Whole sequence runs ~2 weeks.
 
 Retired: `lead-magnet-2-getting-started.html`, `lead-magnet-3-shop-intro.html` (old shop-focused sequence).
 
