@@ -1,7 +1,8 @@
 # Kit (ConvertKit) Email Sequence Setup
 
 All emails use the same branded HTML template matching the Resend transactional emails.
-Copy the HTML from each file into Kit's HTML editor (not the visual editor).
+
+**Every file includes `{{ message_content }}` and `{{ unsubscribe_url }}` (Kit throws a "Template Error" without `{{ message_content }}`).** In Kit, paste the file's HTML as the custom email template, then in the Email tab type ONLY the greeting, e.g. `Hey {{ subscriber.first_name | default: "there" }},` — everything else is hardcoded in the template.
 
 The free-guide download button is already wired to the live Vercel Blob PDF
 (`Free guide - 7 Days of Real-World Learning - compressed.pdf`). No placeholder to replace.

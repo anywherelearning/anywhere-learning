@@ -42,7 +42,7 @@
           <tr>
             <td class="lm-pad" style="padding:26px 40px 0;">
               <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:10px;">One last thing</div>
-              <p style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 16px;">Hey {{ subscriber.first_name | strip | default: "there" }},</p>
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 8px;">{{ message_content }}</div>
               <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">This is the last email I'll send about the membership, so I want to make sure it didn't slip past you.</p>
               <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">The <strong style="color:#2f3a2e;">founder rate, $99 a year locked in for life,</strong> is for the first 100 members. After that it goes to $149. If you've been on the fence, this is the part where waiting actually costs you.</p>
             </td>
