@@ -1,0 +1,207 @@
+<!--
+  FIELD NOTES, Issue 01 (June 2026), Kit custom template
+  Trigger: Manual broadcast to all subscribers
+  Subject:  Field Notes · raising a kid who thinks for themselves
+  Preview:  Plus 15 free idea lists and a new activity for big feelings.
+
+  HOW TO USE:
+  1. Kit > Broadcasts > New Broadcast > Styles tab > paste this whole file as the Custom HTML template.
+  2. In the Email tab, write ONLY the greeting in the visual editor, e.g.
+       Hi {{ subscriber.first_name | default: 'friend' }},
+     Everything else (masthead, blog grid, trial band, note, footer) is locked in.
+  3. Subject: Field Notes · raising a kid who thinks for themselves
+  4. Preview text: Plus 15 free idea lists and a new activity for big feelings.
+  5. Send a test to yourself AND to your phone, then schedule.
+
+  REUSE EACH MONTH: duplicate this template and swap the issue line, the hero photo + post,
+  the three gold blocks, and the trial copy. If the gold blocks change line count, nudge the
+  hero photo height (currently 276px) so its bottom lines up with block 03.
+
+  NOTES:
+  - No Google Fonts link (Kit strips it). The "Field Notes" masthead and "Amelie" render in
+    Dancing Script where it is available and fall back to a serif/cursive elsewhere.
+  - Images hotlink from anywherelearning.co. For best reliability you can upload them to Kit
+    and swap the URLs.
+  - The two-column blog grid stacks on phones via the <style> media query. If your phone test
+    shows it NOT stacking, tell me and I will convert it to a no-CSS stacking layout.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      background: #ebe9e2;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #588157; }
+    @media (max-width: 620px) {
+      .fn-card { border-radius: 0 !important; }
+      .fn-pad  { padding-left: 26px !important; padding-right: 26px !important; }
+      .fn-col  { display:block !important; width:100% !important; padding:0 !important; }
+      .fn-col-photo { padding-bottom:14px !important; }
+      .fn-stack { display:block !important; width:100% !important; padding:0 !important; }
+      .fn-stack-btn { padding-top:18px !important; text-align:left !important; }
+      .fn-masthead { font-size: 56px !important; }
+    }
+  </style>
+</head>
+<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
+    <tr>
+      <td align="center" style="padding: 38px 16px;">
+
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="fn-card" style="
+          width:600px; max-width:100%;
+          background:#faf9f6; border-collapse:separate;
+          border-radius:14px; overflow:hidden;
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+          color:#2f3a2e;">
+
+          <!-- MASTHEAD -->
+          <tr>
+            <td class="fn-pad" style="padding: 42px 40px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td style="padding-right:9px;"><img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="26" height="26" style="display:block; height:26px; width:auto; border:0;"></td>
+                <td style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373;">From Anywhere Learning</td>
+              </tr></table>
+
+              <img src="https://anywherelearning.co/email-field-notes-masthead.png" alt="Field Notes" width="340" height="74" style="display:block; width:340px; max-width:100%; height:auto; margin:12px 0 0; border:0;">
+
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:14px; border-bottom:2px solid #588157;">
+                <tr>
+                  <td style="padding-bottom:16px; font-size:15px; font-weight:600; color:#2f3a2e;">What's new this month</td>
+                  <td align="right" style="padding-bottom:16px; font-size:12px; font-weight:500; color:#8a8578; letter-spacing:0.04em;">Issue 01 &middot; June 2026</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- EDITABLE GREETING (write ONLY this in Kit's Email tab) -->
+          <tr>
+            <td class="fn-pad" style="padding: 22px 40px 0; font-size:15px; line-height:1.65; color:#4b5563;">
+              {{ message_content }}
+            </td>
+          </tr>
+
+          <!-- HERO ROW: photo (left) + 3 gold blocks (right) -->
+          <tr>
+            <td class="fn-pad" style="padding: 18px 40px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+
+                <!-- LEFT: blog photo with caption -->
+                <td class="fn-col fn-col-photo" width="52%" valign="top" style="padding-right:7px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#2f3a2e; border-radius:12px; overflow:hidden;">
+                    <tr><td valign="top" style="font-size:0; line-height:0;">
+                      <a href="https://anywherelearning.co/blog/critical-thinking-for-kids?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01"><img src="https://anywherelearning.co/images/critical-thinking-hero.jpeg" alt="Girl thinking over a Scrabble board outdoors" width="280" height="276" style="display:block; width:100%; height:276px; object-fit:cover; border:0;"></a>
+                    </td></tr>
+                    <tr><td valign="bottom" style="padding:16px 18px 18px; background:#2f3a2e;">
+                      <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#e8c99a;">From the blog</div>
+                      <div style="font-size:19px; font-weight:700; line-height:1.25; margin:7px 0 9px;"><a href="https://anywherelearning.co/blog/critical-thinking-for-kids?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="color:#faf9f6; text-decoration:none;">Raising a kid who thinks for themselves</a></div>
+                      <a href="https://anywherelearning.co/blog/critical-thinking-for-kids?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="font-size:13px; font-weight:600; color:#e8c99a; text-decoration:none;">Read the post &rarr;</a>
+                    </td></tr>
+                  </table>
+                </td>
+
+                <!-- RIGHT: three gold blocks -->
+                <td class="fn-col" width="48%" valign="top" style="padding-left:7px;">
+
+                  <!-- 01 -->
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#d3a06a; background:linear-gradient(155deg,#dab07c 0%,#cf9b63 100%); border-left:3px solid #2f3a2e; border-radius:10px;">
+                    <tr><td style="padding:15px 17px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                        <td style="font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:#3d5c3b;">More on the blog</td>
+                        <td align="right" style="font-family:'Dancing Script', Georgia, cursive; font-weight:700; font-size:24px; color:#7a6a45; line-height:0.7;">01</td>
+                      </tr></table>
+                      <div style="font-size:14.5px; font-weight:600; color:#2c3a2b; line-height:1.3; margin:7px 0 8px;">How to build real resilience in kids</div>
+                      <a href="https://anywherelearning.co/blog/how-to-build-resilience-in-kids?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="font-size:12.5px; font-weight:600; color:#2f3a2e; text-decoration:none;">Read &rarr;</a>
+                    </td></tr>
+                  </table>
+
+                  <div style="height:14px; line-height:14px; font-size:0;">&nbsp;</div>
+
+                  <!-- 02 -->
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#d3a06a; background:linear-gradient(155deg,#dab07c 0%,#cf9b63 100%); border-left:3px solid #2f3a2e; border-radius:10px;">
+                    <tr><td style="padding:15px 17px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                        <td style="font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:#3d5c3b;">Free idea list</td>
+                        <td align="right" style="font-family:'Dancing Script', Georgia, cursive; font-weight:700; font-size:24px; color:#7a6a45; line-height:0.7;">02</td>
+                      </tr></table>
+                      <div style="font-size:14.5px; font-weight:600; color:#2c3a2b; line-height:1.3; margin:7px 0 8px;">15 printable activity checklists, free</div>
+                      <a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="font-size:12.5px; font-weight:600; color:#2f3a2e; text-decoration:none;">Browse all 15 &rarr;</a>
+                    </td></tr>
+                  </table>
+
+                  <div style="height:14px; line-height:14px; font-size:0;">&nbsp;</div>
+
+                  <!-- 03 -->
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#d3a06a; background:linear-gradient(155deg,#dab07c 0%,#cf9b63 100%); border-left:3px solid #2f3a2e; border-radius:10px;">
+                    <tr><td style="padding:15px 17px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                        <td style="font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:#3d5c3b;">New category</td>
+                        <td align="right" style="font-family:'Dancing Script', Georgia, cursive; font-weight:700; font-size:24px; color:#7a6a45; line-height:0.7;">03</td>
+                      </tr></table>
+                      <div style="font-size:14.5px; font-weight:600; color:#2c3a2b; line-height:1.3; margin:7px 0 8px;">Emotional intelligence, for big feelings and real connection</div>
+                      <a href="https://anywherelearning.co/shop?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01#track-emotional-social-skills" style="font-size:12.5px; font-weight:600; color:#2f3a2e; text-decoration:none;">Explore the category &rarr;</a>
+                    </td></tr>
+                  </table>
+
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- TRIAL BAND -->
+          <tr>
+            <td class="fn-pad" style="padding: 22px 40px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#4f7a4d" style="background:#4f7a4d; background:linear-gradient(150deg,#588157 0%,#3d5c3b 100%); border-radius:14px;">
+                <tr>
+                  <td style="padding:26px 28px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                      <td class="fn-stack" valign="middle" style="padding-right:18px;">
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#e8c99a; margin-bottom:6px;">The whole library</div>
+                        <img src="https://anywherelearning.co/email-fn-trial-headline.png" alt="Try it all, free for 14 days" width="297" height="34" style="display:block; width:297px; max-width:100%; height:auto; border:0;">
+                        <p style="font-size:13.5px; line-height:1.55; color:#e9efe6; margin:8px 0 0;">100+ real-world activities. One yearly price, cancel anytime. Founder rate $99 a year.</p>
+                      </td>
+                      <td class="fn-stack-btn" valign="middle" align="right" width="150">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                          <td align="center" bgcolor="#faf9f6" style="background:#faf9f6; border-radius:16px;"><a href="https://anywherelearning.co/start-trial?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="display:inline-block; padding:14px 26px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:14px; font-weight:700; color:#588157; text-decoration:none; line-height:1;">Start free trial</a></td>
+                        </tr></table>
+                      </td>
+                    </tr></table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- NOTE + SIGN-OFF -->
+          <tr>
+            <td class="fn-pad" style="padding: 32px 40px 0;">
+              <p style="font-size:15px; line-height:1.7; color:#4b5563; margin:0;">I spent fifteen years teaching, long enough to watch kids get great at school and shaky at real life. That gap is the whole reason Anywhere Learning exists. Field Notes is me sending you one small way to close it each month. Glad you're here for the first one.</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="120" height="42" style="display:block; width:120px; height:auto; margin:18px 0 0; border:0;">
+              <p style="font-size:13px; line-height:1.6; color:#8a8578; margin:16px 0 0;">PS. Hit reply and tell me one skill you wish your kid had more of. I read every note.</p>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td class="fn-pad" align="center" style="padding: 30px 40px 44px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#dfe4da; margin-bottom:22px;">&nbsp;</div>
+              <p style="font-size:12px; line-height:1.85; color:#a09a8c; margin:0;">You're getting this because you joined Anywhere Learning.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#8a8578; text-decoration:underline;">Unsubscribe</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=fieldnotes-01" style="color:#8a8578; text-decoration:underline;">anywherelearning.co</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="mailto:info@anywherelearning.co" style="color:#8a8578; text-decoration:underline;">info@anywherelearning.co</a></p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
