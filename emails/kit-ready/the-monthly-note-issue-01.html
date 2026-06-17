@@ -1,15 +1,16 @@
 <!--
-  FIELD NOTES, Issue 01 (June 2026), Kit custom template
+  THE MONTHLY NOTE, Issue 01 (June 2026), Kit custom template
   Trigger: Manual broadcast to all subscribers
-  Subject:  Field Notes · raising a kid who thinks for themselves
+  Subject:  Raising a kid who thinks for themselves
   Preview:  Plus 15 free idea lists and a new activity for big feelings.
 
   HOW TO USE:
   1. Kit > Broadcasts > New Broadcast > Styles tab > paste this whole file as the Custom HTML template.
-  2. In the Email tab, write ONLY the greeting in the visual editor, e.g.
-       Hi {{ subscriber.first_name | default: 'friend' }},
+  2. In the Email tab, write a short greeting plus a sentence or two of intro, e.g.
+       Hi {{ subscriber.first_name | default: 'friend' }}, summer is in full swing here.
+       Here's what's worth a look this month:
      Everything else (masthead, blog grid, trial band, note, footer) is locked in.
-  3. Subject: Field Notes · raising a kid who thinks for themselves
+  3. Subject: Raising a kid who thinks for themselves
   4. Preview text: Plus 15 free idea lists and a new activity for big feelings.
   5. Send a test to yourself AND to your phone, then schedule.
 
@@ -18,19 +19,21 @@
   hero photo height (currently 276px) so its bottom lines up with block 03.
 
   NOTES:
-  - No Google Fonts link (Kit strips it). The "Field Notes" masthead and "Amelie" render in
-    Dancing Script where it is available and fall back to a serif/cursive elsewhere.
-  - Images hotlink from anywherelearning.co. For best reliability you can upload them to Kit
-    and swap the URLs.
-  - The two-column blog grid stacks on phones via the <style> media query. If your phone test
-    shows it NOT stacking, tell me and I will convert it to a no-CSS stacking layout.
+  - No Google Fonts link (Kit strips it). The title, trial headline, and signature are
+    pre-rendered Dancing Script PNGs so the handwriting shows in every email app.
+  - Images hotlink from anywherelearning.co (email-only assets, not shown on the website).
+  - Dark mode: color-scheme is set to light to reduce recoloring. Apple Mail and most clients
+    respect it; the Gmail app still force-inverts some colors and cannot be fully controlled.
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
   <style>
+    :root { color-scheme: light; supported-color-schemes: light; }
     html, body {
       margin: 0; padding: 0;
       background: #ebe9e2;
@@ -44,8 +47,9 @@
       .fn-col  { display:block !important; width:100% !important; padding:0 !important; }
       .fn-col-photo { padding-bottom:14px !important; }
       .fn-stack { display:block !important; width:100% !important; padding:0 !important; }
-      .fn-stack-btn { padding-top:18px !important; text-align:left !important; }
-      .fn-masthead { font-size: 56px !important; }
+      .fn-stack-btn { display:block !important; width:100% !important; padding:18px 0 0 0 !important; text-align:left !important; }
+      .fn-mh-l { display:block !important; width:100% !important; text-align:left !important; padding-bottom:4px !important; }
+      .fn-mh-r { display:block !important; width:100% !important; text-align:left !important; padding-bottom:16px !important; }
     }
   </style>
 </head>
@@ -70,12 +74,12 @@
                 <td style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373;">From Anywhere Learning</td>
               </tr></table>
 
-              <img src="https://anywherelearning.co/email-field-notes-masthead.png" alt="Field Notes" width="340" height="74" style="display:block; width:340px; max-width:100%; height:auto; margin:12px 0 0; border:0;">
+              <img src="https://anywherelearning.co/email-the-monthly-note.png" alt="The Monthly Note" width="383" height="64" style="display:block; width:383px; max-width:100%; height:auto; margin:12px 0 0; border:0;">
 
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:14px; border-bottom:2px solid #588157;">
                 <tr>
-                  <td style="padding-bottom:16px; font-size:15px; font-weight:600; color:#2f3a2e;">What's new this month</td>
-                  <td align="right" style="padding-bottom:16px; font-size:12px; font-weight:500; color:#8a8578; letter-spacing:0.04em;">Issue 01 &middot; June 2026</td>
+                  <td class="fn-mh-l" style="padding-bottom:16px; font-size:15px; font-weight:600; color:#2f3a2e;">What's new this month</td>
+                  <td class="fn-mh-r" align="right" style="padding-bottom:16px; font-size:12px; font-weight:500; color:#8a8578; letter-spacing:0.04em;">Issue 01 &middot; June 2026</td>
                 </tr>
               </table>
             </td>
