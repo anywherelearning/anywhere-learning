@@ -144,7 +144,7 @@ export default function MembershipConverted({
                             </Link>
                           </div>
                           <div style={ctaMicro}>
-                            Cancel anytime, right from your account.
+                            Changed your mind? You have 14 days for a full refund.
                           </div>
                         </td>
                       </tr>
@@ -181,8 +181,9 @@ export default function MembershipConverted({
                   <Text style={legal}>
                     You&apos;re receiving this note because your free trial of Anywhere Learning
                     converted to a paid membership today. Your membership renews each year at {price}{' '}
-                    USD{isFounderPhase ? ', your founder rate, locked in' : ''}. You can cancel
-                    anytime from your account page.
+                    USD{isFounderPhase ? ', your founder rate, locked in' : ''}. If it&apos;s not the
+                    right fit, you have 14 days from today for a full refund, no questions asked,
+                    just email info@anywherelearning.co.
                   </Text>
                   <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
                     <Link href={manageUrl} style={{ color: C_MUTED }}>
