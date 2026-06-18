@@ -284,7 +284,8 @@ export default function TrialEndingReminder({
                       fontFamily: FONT_BODY,
                     }}
                   >
-                    Or just reply to this email. It goes straight to me, and I read every one.
+                    Questions before then? Just reply, it lands straight in my inbox and I read
+                    every one.
                   </div>
                 </td>
               </tr>
@@ -307,8 +308,8 @@ export default function TrialEndingReminder({
                   <Text style={legal}>
                     Unless you cancel before {fullDate}, the card you saved at sign-up will be
                     charged {price} USD for one year of Anywhere Learning membership. You can
-                    cancel anytime before then with the link above, from your account page, or by
-                    replying to this email, and you&apos;ll pay nothing. And if you change your
+                    cancel anytime before then with the link above or from your account page, and
+                    you&apos;ll pay nothing. And if you change your
                     mind after the charge, the 14-day money-back guarantee still applies. Reply
                     within 14 days and I&apos;ll refund you in full, no questions asked.
                   </Text>

@@ -340,6 +340,12 @@ export default function MembershipWelcome({
               {/* ── 8 · Sign-off ── */}
               <tr>
                 <td style={{ padding: '36px 48px 0' }}>
+                  <Text style={{ ...p, margin: '0 0 16px' }}>
+                    One genuine ask: as you and your kids start trying things, tell me what they
+                    love and what falls flat. I build every bit of this for families like yours, so
+                    what you notice really does shape what comes next. Just hit reply, it lands
+                    straight in my inbox and I read every one.
+                  </Text>
                   <div style={{ fontSize: '15.5px', color: C_BODY }}>xo,</div>
                   <div style={signature}>Amelie</div>
                   <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
@@ -359,16 +365,14 @@ export default function MembershipWelcome({
                         of Anywhere Learning with this email address on {longDate(trialStart)}.
                         Your card on file was not charged today. Unless you cancel, your
                         membership begins on {longDate(trialEnd)} and renews each year at {price}{' '}
-                        USD. You can cancel anytime from your account page, or just reply to this
-                        email and I&apos;ll take care of it myself.
+                        USD. You can cancel anytime from your account page.
                       </>
                     ) : (
                       <>
                         You&apos;re receiving this note because you joined Anywhere Learning with
                         this email address. Your membership renews each year at {price} USD
                         {isFounderPhase ? ', your founder rate, locked in' : ''}. You can cancel
-                        anytime from your account page, or just reply to this email and I&apos;ll
-                        take care of it myself.
+                        anytime from your account page.
                       </>
                     )}
                   </Text>
