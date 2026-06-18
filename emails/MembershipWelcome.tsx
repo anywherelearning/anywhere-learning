@@ -371,8 +371,9 @@ export default function MembershipWelcome({
                       <>
                         You&apos;re receiving this note because you joined Anywhere Learning with
                         this email address. Your membership renews each year at {price} USD
-                        {isFounderPhase ? ', your founder rate, locked in' : ''}. You can cancel
-                        anytime from your account page.
+                        {isFounderPhase ? ', your founder rate, locked in' : ''}. If it&apos;s not
+                        the right fit, you have 14 days for a full refund, no questions asked, just
+                        email info@anywherelearning.co.
                       </>
                     )}
                   </Text>
