@@ -160,6 +160,12 @@ export default function MembershipConverted({
                     So glad you stayed. Now go do something real with your kids this week, they&apos;ll
                     remember it.
                   </Text>
+                  <Text style={{ ...p, margin: '14px 0 0' }}>
+                    And a genuine ask: as you and your kids dig in, tell me what they love and what
+                    falls flat. I build every bit of this for families like yours, so what you notice
+                    really does shape what comes next. Just hit reply, it lands straight in my inbox
+                    and I read every one.
+                  </Text>
                   <div style={{ fontSize: '15.5px', color: C_BODY, marginTop: '16px' }}>xo,</div>
                   <div style={signature}>Amelie</div>
                   <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
