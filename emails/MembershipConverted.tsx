@@ -26,9 +26,6 @@ const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
 const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
 const EMAIL_COLLAGE = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-library-hero.png';
-// Animated confetti banner (loops in Apple Mail / Gmail; shows a tasteful frozen
-// frame in Outlook). Cream background matches the envelope so it blends seamlessly.
-const EMAIL_CONFETTI = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-confetti.gif';
 
 /** "June 26, 2026" for fine print. */
 function longDate(d: Date): string {
@@ -69,27 +66,9 @@ export default function MembershipConverted({
           <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
             <tbody>
 
-              {/* ── 0 · Confetti banner ── */}
-              <tr>
-                <td style={{ padding: 0, lineHeight: '0', fontSize: '0' }}>
-                  <Img
-                    src={EMAIL_CONFETTI}
-                    alt=""
-                    width="600"
-                    style={{
-                      display: 'block',
-                      width: '100%',
-                      maxWidth: '600px',
-                      height: 'auto',
-                      borderRadius: '18px 18px 0 0',
-                    }}
-                  />
-                </td>
-              </tr>
-
               {/* ── 1 · Brand header ── */}
               <tr>
-                <td style={{ padding: '22px 48px 26px', textAlign: 'center' as const }}>
+                <td style={{ padding: '38px 48px 26px', textAlign: 'center' as const }}>
                   <Img
                     src={EMAIL_LOGO}
                     alt="Anywhere Learning"
