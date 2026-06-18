@@ -144,7 +144,7 @@ export default function MembershipConverted({
                             </Link>
                           </div>
                           <div style={ctaMicro}>
-                            Cancel anytime from your account, or just reply to this email.
+                            Cancel anytime, right from your account.
                           </div>
                         </td>
                       </tr>
@@ -182,8 +182,7 @@ export default function MembershipConverted({
                     You&apos;re receiving this note because your free trial of Anywhere Learning
                     converted to a paid membership today. Your membership renews each year at {price}{' '}
                     USD{isFounderPhase ? ', your founder rate, locked in' : ''}. You can cancel
-                    anytime from your account page, or just reply to this email and I&apos;ll take
-                    care of it myself.
+                    anytime from your account page.
                   </Text>
                   <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
                     <Link href={manageUrl} style={{ color: C_MUTED }}>
