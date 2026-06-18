@@ -278,14 +278,6 @@ export default function MembershipRenewal({
                 </tr>
               </tbody>
             </table>
-
-            <Text style={pSmallReply}>
-              Or just{' '}
-              <Link href="mailto:info@anywherelearning.co" style={inlineLink}>
-                reply to this email
-              </Link>
-              , it goes straight to me, and I read every one.
-            </Text>
           </div>
 
           {/* ── Founder banner (conditional) ── */}
@@ -495,7 +487,6 @@ const p = {
 };
 const pTight = { ...p, marginBottom: '4px' };
 const pSmaller = { ...p, fontSize: '15px', margin: '0 0 6px' };
-const pSmallReply = { ...p, fontSize: '14.5px', margin: '18px 0 0' };
 const strongInk = { color: C_INK, fontWeight: 600 };
 
 // ── Renewal summary card ──
@@ -784,12 +775,6 @@ const manageLink = {
   textDecoration: 'none',
   borderBottom: '1px solid rgba(58,90,64,0.25)',
   paddingBottom: '1px',
-};
-
-const inlineLink = {
-  color: C_FOREST_DARK,
-  textDecoration: 'underline',
-  fontWeight: 600,
 };
 
 // ── Founder banner ──
