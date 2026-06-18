@@ -44,6 +44,7 @@ import {
   sendAbandonedCheckoutMembershipEmail,
   sendAbandonedCheckoutStarterPackEmail,
   sendTrialEndingEmail,
+  sendMembershipConvertedEmail,
 } from '@/lib/resend';
 import type Stripe from 'stripe';
 
@@ -701,9 +702,9 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   // flipped status from 'trialing' to 'active'. Swap the Kit segment so this
   // person starts getting member broadcasts instead of trial nudges.
   if (previousStatus === 'trialing' && sub.status === 'active') {
+    const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
+    const isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
     try {
-      const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
-      const isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
       await applyAndRemoveTags(user.email, {
         add: ['member', ...(isFounder ? ['founder'] : [])],
         remove: ['trial-member'],
@@ -711,6 +712,33 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       console.log(`[webhook] trial converted to paid for ${user.email}`);
     } catch (err) {
       console.warn('[webhook] kit trial-conversion tagging failed:', err);
+    }
+
+    // Resend confirmation — acknowledge the moment they became a paying member.
+    // The day-0 welcome already went out, so this is the only nod to conversion.
+    try {
+      let firstName: string | undefined;
+      try {
+        const clerk = getClerk();
+        if (clerk && user.clerkId) {
+          const u = await clerk.users.getUser(user.clerkId);
+          firstName = u.firstName || undefined;
+        }
+      } catch {
+        /* name is a nice-to-have */
+      }
+      const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+      await sendMembershipConvertedEmail({
+        to: user.email,
+        firstName,
+        isFounderPhase: isFounder,
+        renewalDate: periodEnd.toISOString(),
+        libraryUrl: `${base}/account`,
+        manageUrl: `${base}/account/settings`,
+      });
+      console.log(`[webhook] sent membership-converted email to ${user.email}`);
+    } catch (err) {
+      console.error('[webhook] membership-converted email failed:', err);
     }
   }
 

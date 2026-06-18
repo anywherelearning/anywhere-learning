@@ -17,6 +17,7 @@ import AbandonedCheckoutMembership from '@/emails/AbandonedCheckoutMembership';
 import AbandonedCheckoutStarterPack from '@/emails/AbandonedCheckoutStarterPack';
 import MembershipRenewal from '@/emails/MembershipRenewal';
 import TrialEndingReminder from '@/emails/TrialEndingReminder';
+import MembershipConverted from '@/emails/MembershipConverted';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -144,6 +145,33 @@ export async function sendTrialEndingEmail({
     to,
     subject: 'Your free trial ends in 3 days. Here\'s exactly what happens',
     react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, libraryUrl }),
+  });
+}
+
+/** Conversion confirmation — sent when a free trial converts to a paid membership. */
+export async function sendMembershipConvertedEmail({
+  to,
+  firstName,
+  isFounderPhase,
+  renewalDate,
+  libraryUrl,
+  manageUrl,
+}: {
+  to: string;
+  firstName?: string;
+  isFounderPhase: boolean;
+  /** ISO date the membership renews (current paid period end). */
+  renewalDate: string;
+  libraryUrl: string;
+  manageUrl: string;
+}) {
+  const subject = `It's official${firstName ? `, ${firstName}` : ''}. You're a member`;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject,
+    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, libraryUrl, manageUrl }),
   });
 }
 
