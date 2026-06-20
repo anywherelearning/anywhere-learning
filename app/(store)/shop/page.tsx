@@ -930,7 +930,7 @@ export default function ShopPage() {
               {[
                 {
                   q: 'Can I buy individual activities?',
-                  a: `No. Activities are only available through the membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}) or the Starter Pack ($44.99 for 10 activities). The free starter guide is the lowest-commitment way to try us out before deciding.`,
+                  a: `No. Activities are only available through the membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}) or the Starter Pack ($44.99 for 10 activities). The free guide is the lowest-commitment way to try us out before deciding.`,
                 },
                 {
                   q: "What's the difference between the Starter Pack and the membership?",

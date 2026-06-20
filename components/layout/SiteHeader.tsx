@@ -387,13 +387,13 @@ export default function SiteHeader() {
                 <>
                   <Link
                     href="/free-guide"
-                    className="hidden xl:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
+                    className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                   >
                     Free guide
                   </Link>
                   <span
                     aria-hidden="true"
-                    className="hidden xl:inline-block w-px h-4 bg-[#C9C5B7]"
+                    className="hidden lg:inline-block w-px h-4 bg-[#C9C5B7]"
                   />
                   <Link
                     href="/sign-in"

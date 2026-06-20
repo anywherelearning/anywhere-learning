@@ -46,7 +46,7 @@ const quickCards = [
   },
   {
     title: "Not sure if it's for you?",
-    body: 'Try the free starter guide. Seven real-world activities across seven categories. No commitment.',
+    body: 'Try the free guide. Seven real-world activities across seven categories. No commitment.',
     href: '/free-guide',
     cta: 'Get the free guide',
     icon: (

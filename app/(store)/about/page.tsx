@@ -465,7 +465,7 @@ export default function AboutPage() {
                 Ready to try a <span className="italic text-forest">different kind</span> of learning?
               </h2>
               <p className="mt-5 text-[18px] leading-[1.55] text-gray-600 max-w-[560px] mx-auto">
-                Start with the free starter guide, or unlock the full library as a founding member.
+                Start with the free guide, or unlock the full library as a founding member.
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <Link
@@ -479,7 +479,7 @@ export default function AboutPage() {
                   href="/free-guide"
                   className="inline-flex items-center gap-2.5 border-[1.5px] border-forest text-forest-dark font-semibold py-[14px] px-[22px] rounded-xl text-[15px] hover:bg-[#E6EBDF] hover:-translate-y-px transition-all duration-200"
                 >
-                  Get the free starter guide
+                  Get your free guide
                   <span className="font-display italic text-base">&rarr;</span>
                 </Link>
               </div>

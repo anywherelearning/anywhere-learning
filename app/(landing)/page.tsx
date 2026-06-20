@@ -149,7 +149,7 @@ export default async function HomePage() {
                     href="/free-guide"
                     className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                   >
-                    Get the free starter guide
+                    Get your free guide
                     <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
                   </Link>
                   <Link

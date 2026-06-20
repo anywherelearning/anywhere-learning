@@ -130,7 +130,7 @@ const sections: LegalSection[] = [
             <li>Refunds are processed within 5 to 10 business days to the original payment method.</li>
           </ul>
           <p>
-            After 14 days, all starter pack purchases are final. We encourage you to try our free starter guide first to see if Anywhere Learning is a good fit for your family.
+            After 14 days, all starter pack purchases are final. We encourage you to try our free guide first to see if Anywhere Learning is a good fit for your family.
           </p>
         </div>
         <div className="pl-[18px] border-l border-[#D8D4C5]">
