@@ -2226,6 +2226,7 @@ const resources: ResourcePage[] = [
       'teaching-kids-to-fail',
       'executive-function-kids',
       'decision-making-skills-kids',
+      'what-to-do-when-kids-say-im-bored',
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
