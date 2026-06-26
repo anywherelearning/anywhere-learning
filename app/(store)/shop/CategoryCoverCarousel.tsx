@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface Props {
-  covers: { src: string; alt: string }[];
+  covers: { src: string; alt: string; href: string }[];
   bg: string;
   motif: string;
   motifColor: string;
@@ -19,8 +20,10 @@ export default function CategoryCoverCarousel({ covers, bg, motif, motifColor }:
 
   return (
     <div className="relative w-full max-w-[240px] md:max-w-[200px] mx-auto md:mx-0">
-      <div
-        className="relative aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] shadow-[0_18px_32px_-22px_rgba(45,58,46,0.4)] -rotate-[1.5deg] transition-transform duration-300"
+      <Link
+        href={covers[index].href}
+        aria-label={`View ${covers[index].alt.replace(/ cover$/, '')}`}
+        className="group block relative aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] shadow-[0_18px_32px_-22px_rgba(45,58,46,0.4)] -rotate-[1.5deg] transition-transform duration-300 hover:-rotate-[0.5deg] hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
         style={{ background: bg }}
       >
         {covers.map((c, i) => (
@@ -40,7 +43,7 @@ export default function CategoryCoverCarousel({ covers, bg, motif, motifColor }:
         >
           {motif}
         </span>
-      </div>
+      </Link>
 
       {covers.length > 1 && (
         <>

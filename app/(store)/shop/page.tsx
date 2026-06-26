@@ -684,6 +684,7 @@ export default function ShopPage() {
                 const covers = all.map((p) => ({
                   src: `/products/${p.slug}.jpg`,
                   alt: `${p.name} cover`,
+                  href: `/shop/${p.slug}`,
                 }));
                 // Aggregate canonical skills across every OCR-extracted product
                 // in this category, then take the most common 8 as the section
