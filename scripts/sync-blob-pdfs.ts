@@ -141,6 +141,15 @@ const SLUG_TO_FILE: Record<string, string> = {
   'transport-navigation-challenge': 'Worldschooling - Transport & Navigation Challenge.pdf',
   'travel-reflection-postcards': 'Worldschooling - Travel Reflection & Postcards.pdf',
   'world-food-detective': 'Worldschooling - World Food Detective.pdf',
+
+  // Free-guide full versions (membership-only)
+  'square-foot-safari': 'Outdoor & Nature - Square Foot Safari.pdf',
+  'snack-mission': 'Real-world math - The $20 Snack Mission.pdf',
+  'household-orchestra': 'Creativity & Maker Household Orchestra.pdf',
+  'three-ais-one-question': 'AI + Digital Literacy - THREE AIs, ONE QUESTION.pdf',
+  'complaint-to-product': 'Entrepreneurship - Complaint to Product.pdf',
+  'two-minute-story': 'Communication & Writing - The Two Minute Story.pdf',
+  'plan-a-mini-adventure': 'Planning & Problem-Solving Plan a Mini Adventure.pdf',
 };
 
 // ─────────────────────────────────────────────────────────────

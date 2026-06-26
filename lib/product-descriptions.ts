@@ -1708,6 +1708,101 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Emotional Regulation', 'Anxiety Tools', 'Problem-Solving'],
     format: 'Project Guide',
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // FREE-GUIDE FULL VERSIONS
+  // ═══════════════════════════════════════════════════════════════════
+  'square-foot-safari': {
+    opening:
+      'Your child marks off one small square of ground and studies it like a real field scientist. They observe closely, dig into the layers, keep field notes, and return across seasons to track what changed. Real-world STEM science, done in your own backyard. Scientists call it a quadrat study.',
+    whatsIncluded: [
+      'Mark off a real one-foot study square',
+      'Slow observation: notice what most people walk past',
+      'Hands-on investigation of every layer, top to soil',
+      'Keep real field notes and sketches',
+      'Return across seasons to compare and track change',
+    ],
+    skillTags: ['STEM', 'Science', 'Observation', 'Nature', 'Field Notes'],
+    format: 'Activity Guide',
+  },
+  'snack-mission': {
+    opening:
+      'Your child takes a real budget, a real store, and a real mission, then does the maths that decides what comes home. They plan, track a running total, make trade-offs, and count the change. Real-world STEM maths that sticks, because the numbers point at something they care about.',
+    whatsIncluded: [
+      'A real budget and a real shopping mission',
+      'Plan and estimate prices before you go',
+      'Track a running total in the store',
+      'Make real trade-offs when it does not all fit',
+      'Check out, count the change, and review',
+    ],
+    skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Decision-Making'],
+    format: 'Activity Guide',
+  },
+  'household-orchestra': {
+    opening:
+      'Your child builds a piece of music out of five random household objects. No instruments, no lessons. They explore the sounds, build a rhythm, shape a real piece, and perform it. Real creativity comes from constraints, not unlimited options.',
+    whatsIncluded: [
+      'Build five instruments from household objects',
+      'Discover the full range of sounds in each',
+      'Build a repeating rhythm and layer it',
+      'Shape a real piece with a beginning and end',
+      'Perform it for a real audience',
+    ],
+    skillTags: ['Creativity', 'Improvisation', 'Rhythm', 'Confidence', 'Music'],
+    format: 'Activity Guide',
+  },
+  'three-ais-one-question': {
+    opening:
+      'Your child asks the same question to three different AI tools, compares the answers, and figures out where the AI is bluffing. Done together at the keyboard. The single most important AI skill a kid can learn: how to use it without being fooled by it.',
+    whatsIncluded: [
+      'Pick a question with a real, checkable answer',
+      'Ask three AI tools the exact same thing',
+      'Compare where they agree and disagree',
+      'Fact-check and catch the AI bluffing',
+      'Form your own answer you can actually trust',
+    ],
+    skillTags: ['Critical Thinking', 'AI Literacy', 'Fact-Checking', 'Skepticism'],
+    format: 'Activity Guide',
+  },
+  'complaint-to-product': {
+    opening:
+      'Your child turns one everyday family annoyance into a real product idea. They collect complaints, pick one worth solving, invent a fix, design it, and pitch it to the family. Every great business started as somebody\'s complaint.',
+    whatsIncluded: [
+      'Collect real complaints worth solving',
+      'Pick one problem to tackle',
+      'Brainstorm and choose the best fix',
+      'Design the product, name and all',
+      'Pitch it and field real questions',
+    ],
+    skillTags: ['Problem-Solving', 'Innovation', 'Design Thinking', 'Confidence'],
+    format: 'Project Guide',
+  },
+  'two-minute-story': {
+    opening:
+      'Your child takes a real moment from their own life and learns to tell it as a clear, gripping story in two minutes. They find the shape, cut it to the bone, and tell it for real. One of the most useful skills a person can have.',
+    whatsIncluded: [
+      'Find a true story worth telling',
+      'Shape it: beginning, turn, and point',
+      'Cut it to a tight two minutes',
+      'Practise delivery, pace, and a strong opening',
+      'Tell it for real to an audience',
+    ],
+    skillTags: ['Storytelling', 'Public Speaking', 'Communication', 'Confidence'],
+    format: 'Activity Guide',
+  },
+  'plan-a-mini-adventure': {
+    opening:
+      'Your child plans a real two-hour family outing from start to finish, and the family actually goes. They choose it, work out the details, make the plan, lead the day, and look back on it. Real ownership of a real decision.',
+    whatsIncluded: [
+      'Choose a real outing within set limits',
+      'Work out travel, timing, cost, and weather',
+      'Build a packing list and a schedule',
+      'Lead the family through the day',
+      'Look back and improve the next one',
+    ],
+    skillTags: ['Planning', 'Organization', 'Ownership', 'Executive Function'],
+    format: 'Project Guide',
+  },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────
