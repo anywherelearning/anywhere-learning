@@ -33,16 +33,17 @@ interface Member {
 type Tab = 'profile' | 'kids' | 'subscription';
 
 export default function AccountSettings({ member }: { member: Member }) {
-  const TABS: { value: Tab; label: string }[] = member.hasSubscription
-    ? [
-        { value: 'profile', label: 'Profile' },
-        { value: 'kids', label: 'Your kids' },
-        { value: 'subscription', label: 'Subscription' },
-      ]
-    : [
-        { value: 'profile', label: 'Profile' },
-        { value: 'kids', label: 'Your kids' },
-      ];
+  const { user } = useUser();
+  // "Your kids" (the planner profile) is members-only. Non-members get just
+  // Profile (plus Subscription if they have any subscription history).
+  const tierMeta = user?.publicMetadata?.tier as string | undefined;
+  const hasAccess = tierMeta === 'member' || tierMeta === 'starter';
+
+  const TABS: { value: Tab; label: string }[] = [
+    { value: 'profile', label: 'Profile' },
+    ...(hasAccess ? [{ value: 'kids' as Tab, label: 'Your kids' }] : []),
+    ...(member.hasSubscription ? [{ value: 'subscription' as Tab, label: 'Subscription' }] : []),
+  ];
 
   const [tab, setTab] = useState<Tab>('profile');
   const { signOut } = useClerk();
@@ -109,7 +110,7 @@ export default function AccountSettings({ member }: { member: Member }) {
         {tab === 'profile' && <ProfileTab fallback={member} />}
 
         {/* YOUR KIDS */}
-        {tab === 'kids' && <KidsSettingsSection />}
+        {tab === 'kids' && hasAccess && <KidsSettingsSection />}
 
         {/* SUBSCRIPTION */}
         {tab === 'subscription' && member.hasSubscription && (
