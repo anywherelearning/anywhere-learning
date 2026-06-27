@@ -10,6 +10,7 @@ const KEYS = {
   week: 'al_week_v1',
   completions: 'al_completions_v1',
   status: 'al_account_state_v1',
+  onboarded: 'al_onboarded_v1',
 } as const;
 
 export type AccountState = Partial<Record<keyof typeof KEYS, unknown>>;
