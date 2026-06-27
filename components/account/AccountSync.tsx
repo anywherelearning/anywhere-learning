@@ -58,6 +58,10 @@ function SyncInner() {
         /* offline / no DB — keep working locally */
       } finally {
         pulled.current = true; // only allow pushes after the initial pull
+        // Signal that local state now reflects the server, so first-run logic
+        // can safely decide whether a member truly has no profile yet.
+        (window as { __alSyncReady?: boolean }).__alSyncReady = true;
+        window.dispatchEvent(new Event('al:sync-ready'));
       }
     })();
     return () => {

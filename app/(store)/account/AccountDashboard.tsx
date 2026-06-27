@@ -6,6 +6,7 @@ import CheckoutButton from '@/components/checkout/CheckoutButton';
 import ReviewModal from '@/components/shop/ReviewModal';
 import TrialCapModal from '@/components/account/TrialCapModal';
 import AddToWeekButton from '@/components/account/AddToWeekButton';
+import FirstRunRedirect from '@/components/account/FirstRunRedirect';
 import { effortFor } from '@/lib/activity-effort';
 import { notifyLocalChanged } from '@/lib/account-sync';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MEMBERSHIP_PRICE_USD } from '@/lib/membership';
@@ -262,6 +263,7 @@ export default function AccountDashboard({
 
   return (
     <>
+    <FirstRunRedirect />
     <main className="bg-cream pb-12">
       {/* TRIAL STRIP: viewing is unlimited; downloading requires membership.
           The strip doubles as the easy upgrade entry point. */}
