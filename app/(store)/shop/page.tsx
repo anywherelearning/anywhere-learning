@@ -6,6 +6,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import LibraryFilters, { type LibraryRow } from './LibraryFilters';
 import { SKILL_FAMILIES, getProductSkills } from '@/lib/skills';
 import CategoryCoverCarousel from './CategoryCoverCarousel';
+import { coverSrc } from '@/lib/cover';
 import BrowseAllLink from './BrowseAllLink';
 import {
   IS_FOUNDER_PHASE,
@@ -357,7 +358,7 @@ export default function ShopPage() {
       ageMin: age.min,
       ageMax: age.max,
       skillFamilies: skills?.families || [],
-      imageUrl: p.imageUrl ?? null,
+      imageUrl: coverSrc(p.imageUrl) ?? null,
     };
   });
 
@@ -682,7 +683,7 @@ export default function ShopPage() {
                 const all = productsByCategory[t.category] || [];
                 const count = all.length;
                 const covers = all.map((p) => ({
-                  src: `/products/${p.slug}.jpg`,
+                  src: coverSrc(`/products/${p.slug}.jpg`)!,
                   alt: `${p.name} cover`,
                   href: `/shop/${p.slug}`,
                 }));

@@ -41,7 +41,7 @@ export const SHARED_WHY_FAMILIES_LOVE_IT = [
 
 /** Why parents love the Skills Map (parent guide format only) */
 export const SHARED_WHY_PARENTS_LOVE_IT = [
-  'A clear roadmap so you stop second-guessing your homeschool plan',
+  'A clear roadmap so you stop second-guessing your learning plan',
   'Use it as a menu, not a checklist. No rush, no pressure',
   'Designed to grow with your child, from babies through teens',
   'Honest, plain-language guidance, no academic jargon',

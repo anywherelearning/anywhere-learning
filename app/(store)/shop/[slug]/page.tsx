@@ -12,6 +12,7 @@ import {
 import { CATEGORY_LABELS } from "@/lib/categories";
 import { getProductDescription } from "@/lib/product-descriptions";
 import { hasPreview } from "@/lib/preview-map";
+import { coverSrc } from "@/lib/cover";
 import PreviewButton from "@/components/shop/PreviewButton";
 import CheckoutButton from "@/components/checkout/CheckoutButton";
 import ReviewForm from "@/components/shop/ReviewForm";
@@ -457,7 +458,7 @@ export default async function ProductPage({
               >
                 {product.imageUrl && (
                   <Image
-                    src={product.imageUrl}
+                    src={coverSrc(product.imageUrl)!}
                     alt={`${product.name} — ${categoryLabel} activity guide cover`}
                     fill
                     sizes="(max-width: 1024px) 90vw, 420px"
@@ -895,7 +896,7 @@ export default async function ProductPage({
                   >
                     {p.imageUrl && (
                       <img
-                        src={p.imageUrl}
+                        src={coverSrc(p.imageUrl)}
                         alt={p.name}
                         loading="lazy"
                         className="absolute inset-0 w-full h-full object-cover object-top"

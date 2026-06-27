@@ -42,6 +42,14 @@ const nextConfig: NextConfig = {
     // returns HTTP 400 and the image fails to load. Must include every quality
     // value used across the codebase (currently 60/75/80/85/90/95).
     qualities: [60, 75, 80, 85, 90, 95],
+    // Local images become an allow-list once localPatterns is set. The first
+    // entry keeps every existing query-less local image working; the second
+    // permits the cover cache-bust (?v=N). Keep `search` in sync with
+    // COVER_VERSION in lib/cover.ts whenever a cover redesign needs a bump.
+    localPatterns: [
+      { pathname: "/**" },
+      { pathname: "/products/**", search: "?v=2" },
+    ],
     remotePatterns: [
       { protocol: "https", hostname: "img.clerk.com" },
       { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
