@@ -58,19 +58,27 @@ export default function KidsSetup({
       : [{ name: '', mon: '', year: '' }],
   );
   const [saving, setSaving] = useState(false);
+  const [justSaved, setJustSaved] = useState(false);
 
   const valid = rows.length > 0 && rows.every((r) => r.name.trim() && r.mon && r.year);
 
+  function setRowsDirty(updater: (prev: Row[]) => Row[]) {
+    setJustSaved(false);
+    setRows(updater);
+  }
+
   function update(i: number, patch: Partial<Row>) {
-    setRows((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
+    setRowsDirty((prev) => prev.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
   }
 
   function finish() {
     if (!valid) return;
     setSaving(true);
+    // Assign ids once so the saved profile and the on-screen rows stay in sync.
+    const withIds = rows.map((r) => ({ ...r, id: r.id || genChildId() }));
     const profile: MemberProfile = {
-      children: rows.map((r) => ({
-        id: r.id || genChildId(),
+      children: withIds.map((r) => ({
+        id: r.id,
         name: r.name.trim(),
         birthMonth: `${r.year}-${r.mon}`,
       })),
@@ -78,7 +86,10 @@ export default function KidsSetup({
       version: 1,
     };
     saveProfile(profile);
+    setRows(withIds);
     onDone();
+    setSaving(false);
+    setJustSaved(true);
   }
 
   const selectClass =
@@ -137,7 +148,7 @@ export default function KidsSetup({
               {rows.length > 1 && (
                 <button
                   type="button"
-                  onClick={() => setRows((prev) => prev.filter((_, idx) => idx !== i))}
+                  onClick={() => setRowsDirty((prev) => prev.filter((_, idx) => idx !== i))}
                   aria-label="Remove child"
                   className="h-11 w-9 grid place-items-center text-gray-400 hover:text-gray-600"
                 >
@@ -151,7 +162,7 @@ export default function KidsSetup({
 
       <button
         type="button"
-        onClick={() => setRows((prev) => [...prev, { name: '', mon: '', year: '' }])}
+        onClick={() => setRowsDirty((prev) => [...prev, { name: '', mon: '', year: '' }])}
         className="mt-3 text-[14px] font-medium text-forest hover:text-forest-dark"
       >
         + Add another child
@@ -166,10 +177,17 @@ export default function KidsSetup({
         <button
           type="button"
           onClick={finish}
-          disabled={!valid || saving}
-          className="bg-forest text-white text-[15px] font-medium px-7 py-2.5 rounded-full hover:bg-forest-dark transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          disabled={!valid || saving || justSaved}
+          className={`inline-flex items-center gap-2 text-white text-[15px] font-medium px-7 py-2.5 rounded-full transition-colors disabled:cursor-default ${
+            justSaved ? 'bg-forest-dark' : 'bg-forest hover:bg-forest-dark disabled:opacity-40'
+          }`}
         >
-          {saving ? 'Saving...' : submitLabel}
+          {justSaved && (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4 12l5 5L20 6" />
+            </svg>
+          )}
+          {saving ? 'Saving...' : justSaved ? 'Saved' : submitLabel}
         </button>
       </div>
     </div>

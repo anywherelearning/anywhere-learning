@@ -6,12 +6,12 @@ import KidsSetup from '@/components/account/KidsSetup';
 
 /**
  * The canonical "manage your kids" editor, embedded in Account settings.
- * Reads the profile from localStorage, edits in place, and confirms on save.
+ * Reads the profile from localStorage and edits in place. The Save button
+ * itself confirms the save (no remount), so it stays put afterwards.
  */
 export default function KidsSettingsSection() {
   const [ready, setReady] = useState(false);
   const [children, setChildren] = useState<Child[]>([]);
-  const [savedAt, setSavedAt] = useState(0);
 
   useEffect(() => {
     setChildren(loadProfile()?.children ?? []);
@@ -23,19 +23,12 @@ export default function KidsSettingsSection() {
   return (
     <div className="mt-6">
       <KidsSetup
-        key={savedAt}
         embedded
         initialChildren={children}
         title="Manage your kids"
         submitLabel="Save changes"
-        onDone={() => {
-          setChildren(loadProfile()?.children ?? []);
-          setSavedAt(Date.now());
-        }}
+        onDone={() => {}}
       />
-      {savedAt > 0 && (
-        <p className="mt-3 font-body text-[13px] text-forest-dark">Saved. Your week will use these.</p>
-      )}
     </div>
   );
 }
