@@ -11,6 +11,22 @@
   --font-family-body: var(--font-body);
 }
 
+/* ─── Weekly planner animations ─── */
+@keyframes alFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes alRise { from { opacity: 0; transform: translateY(26px) scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes alPop { 0% { transform: scale(0.96); } 60% { transform: scale(1.02); } 100% { transform: scale(1); } }
+@keyframes alVeil { from { opacity: 0; } to { opacity: 1; } }
+.al-fade { animation: alFade 0.35s cubic-bezier(0.22,1,0.36,1); }
+.al-rise { animation: alRise 0.42s cubic-bezier(0.22,1,0.36,1) both; }
+.al-pop { animation: alPop 0.4s cubic-bezier(0.22,1,0.36,1); }
+.al-veil { animation: alVeil 0.22s ease; }
+.al-card { transition: transform 200ms cubic-bezier(0.22,1,0.36,1), box-shadow 200ms ease; }
+.al-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -16px rgba(70,55,30,0.32); }
+@media (prefers-reduced-motion: reduce) {
+  .al-fade, .al-rise, .al-pop, .al-veil { animation: none !important; }
+  .al-card:hover { transform: none; }
+}
+
 /* ─── Image protection ─── */
 img {
   -webkit-user-drag: none;

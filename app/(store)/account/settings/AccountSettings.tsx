@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useClerk, useUser, useReverification } from '@clerk/nextjs';
 import { IS_FOUNDER_PHASE } from '@/lib/membership';
+import KidsSettingsSection from '@/components/account/KidsSettingsSection';
 
 interface Member {
   name: string;
@@ -29,15 +30,19 @@ interface Member {
   cancelAtPeriodEnd: boolean;
 }
 
-type Tab = 'profile' | 'subscription';
+type Tab = 'profile' | 'kids' | 'subscription';
 
 export default function AccountSettings({ member }: { member: Member }) {
   const TABS: { value: Tab; label: string }[] = member.hasSubscription
     ? [
         { value: 'profile', label: 'Profile' },
+        { value: 'kids', label: 'Your kids' },
         { value: 'subscription', label: 'Subscription' },
       ]
-    : [{ value: 'profile', label: 'Profile' }];
+    : [
+        { value: 'profile', label: 'Profile' },
+        { value: 'kids', label: 'Your kids' },
+      ];
 
   const [tab, setTab] = useState<Tab>('profile');
   const { signOut } = useClerk();
@@ -102,6 +107,9 @@ export default function AccountSettings({ member }: { member: Member }) {
             we shouldn't reinvent. The portal button opens an in-page modal so
             the user never leaves the settings page. */}
         {tab === 'profile' && <ProfileTab fallback={member} />}
+
+        {/* YOUR KIDS */}
+        {tab === 'kids' && <KidsSettingsSection />}
 
         {/* SUBSCRIPTION */}
         {tab === 'subscription' && member.hasSubscription && (
@@ -238,7 +246,7 @@ function SettingsCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-cream border border-[#D8D4C5] rounded-[14px] p-5 md:p-6">
+    <section className="bg-white border border-gold/20 rounded-2xl p-5 md:p-6">
       <h2 className="font-display text-[clamp(1.25rem,2.4vw,1.625rem)] leading-[1.15] tracking-[-0.008em] text-ink m-0">
         {title}
       </h2>

@@ -1,0 +1,218 @@
+<!--
+  MEMBERSHIP RELAUNCH - Broadcast email
+  Trigger: Manual broadcast to all subscribers
+  Audience: All subscribers (optionally exclude tag `member` and `founder` so
+            existing members don't get pitched the founder rate they already have)
+  Subject: A little update on what I've been working on
+  Preview: Same vision. Sharper focus.
+
+  HOW TO USE:
+  1. Kit > Broadcasts > New Broadcast > Styles tab > paste this HTML as Custom Template
+  2. In the Email tab, write ONLY the salutation in the visual editor, e.g.
+       "Hi {{ subscriber.first_name | default: 'friend' }},"
+     Everything else (hero, body, founder card, sign-off, footer) is locked in.
+  3. Subject: A little update on what I've been working on
+  4. Preview text: Same vision. Sharper focus.
+  5. Send test to yourself, then schedule.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ebe9e2;">
+    <tr>
+      <td align="center" style="padding:24px 16px;">
+
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="
+          width:600px; max-width:100%;
+          background:#faf9f6; border-collapse:collapse;
+          border-radius:14px;
+          overflow:hidden;
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+          color:#1a1a1a;">
+          <tr><td>
+
+            <!-- 1) HEADER: logo -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#faf9f6;">
+              <tr>
+                <td align="center" style="padding:36px 32px 24px;">
+                  <img src="https://embed.filekitcdn.com/e/avjxbM6xFYPPGavBKAYGYN/iTLpa9QxviNBhA3tFBiSbM/email?ar=16%3A9&amp;fit=crop" alt="Anywhere Learning" width="220" style="display:block; max-width:220px; border:0;">
+                </td>
+              </tr>
+            </table>
+
+            <!-- 2) HERO -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td align="center" style="padding:16px 32px 8px;">
+                  <div style="
+                    font-size:11px; font-weight:600;
+                    color:#d4a373; text-transform:uppercase; letter-spacing:0.2em;
+                    margin-bottom:14px;">
+                    Subscriber update
+                  </div>
+
+                  <h1 style="
+                    font-family:'Dancing Script', Georgia, serif;
+                    font-weight:700; font-size:52px; line-height:1.15;
+                    color:#588157; margin:0;
+                    letter-spacing:-0.01em;
+                    text-align:center;">
+                    The site looks a little different.
+                  </h1>
+
+                  <p style="
+                    font-size:17px; line-height:1.55; color:#4b5563;
+                    margin:22px auto 0; text-align:center; max-width:460px;">
+                    Same vision. Sharper focus.
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+            <!-- 3a) SALUTATION (editable from Kit) -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:36px 36px 0; font-size:16px; line-height:1.65; color:#4b5563;">
+                  {{ message_content }}
+                </td>
+              </tr>
+            </table>
+
+            <!-- 3b) PERSONAL OPENER (fixed) -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:8px 36px 0;">
+                  <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">
+                    If you've been around for a while, you've already grabbed the free guide and
+                    seen the early version of what I was building. I wanted to write because the
+                    site looks different now. Over the last few weeks I've been giving
+                    <strong style="color:#1a1a1a">Anywhere Learning</strong> a sharper focus, the one thing I want it to be
+                    known for: <strong style="color:#1a1a1a">life skills</strong>. The ones kids need to grow into capable, independent
+                    humans. Handling boredom. Sticking with something hard. Managing real money.
+                    Communicating clearly. Solving a real problem without immediate help.
+                  </p>
+                  <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">
+                    Inside the membership, you get the <strong style="color:#1a1a1a">Future-Ready Skills Map</strong> (a parent roadmap
+                    by age) plus <strong style="color:#1a1a1a">100+ guided activities</strong> across eight skill categories, with new
+                    ones added every quarter. Because you've been here from the early days, I
+                    want you in first at the founder rate.
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+            <!-- 4) FOUNDER OFFER CARD -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:28px 32px 8px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="
+                    background:#ffffff;
+                    border:1px solid #efdcc4;
+                    border-radius:24px;">
+                    <tr>
+                      <td style="padding:32px 28px; text-align:center;">
+                        <div style="
+                          font-size:11px; font-weight:600; color:#b5803e;
+                          text-transform:uppercase; letter-spacing:0.2em;
+                          margin-bottom:10px;">
+                          Founder Rate &middot; First 100 members
+                        </div>
+
+                        <div style="line-height:1; margin-bottom:6px;">
+                          <span style="font-size:22px; color:#6b7280; font-weight:600; vertical-align:18px;">$</span><span style="
+                            font-family:'Dancing Script', Georgia, serif;
+                            font-weight:700; font-size:88px;
+                            color:#588157;">99</span><span style="font-size:16px; color:#6b7280;"> &nbsp;/ year</span>
+                        </div>
+                        <div style="font-size:13px; color:#9ca3af; margin-bottom:8px;">
+                          Locked in for life. Your rate never goes up, even when the membership does.
+                        </div>
+                        <div style="font-size:14px; color:#588157; font-weight:600; margin:6px 0 22px;">
+                          Regular rate goes to $149 once we hit 100 founders.
+                        </div>
+
+                        <!-- CTA button (table for Outlook) -->
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                          <tr>
+                            <td align="center" bgcolor="#588157" style="
+                              background:#588157;
+                              border-radius:16px;">
+                              <a href="https://anywherelearning.co/join?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=relaunch&amp;plan=founder" style="
+                                display:inline-block;
+                                padding:16px 36px;
+                                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+                                font-size:16px; font-weight:600;
+                                color:#faf9f6; text-decoration:none;
+                                line-height:1;">
+                                Become a founding member &middot; $99
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <div style="font-size:12.5px; color:#9ca3af; margin-top:16px;">
+                          14-day money-back guarantee &middot; Cancel any time
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <!-- 5) SIGN-OFF -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:36px 32px 12px;">
+                  <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 20px;">
+                    Thank you for being here from the early days. Now go do something real with
+                    your kids this week, they'll remember it.
+                  </p>
+                  <p style="
+                    font-family:'Dancing Script', Georgia, serif; font-weight:700;
+                    font-size:28px; color:#588157; margin:0; line-height:1;">
+                    Amelie
+                  </p>
+                  <p style="font-size:13px; color:#9ca3af; margin:6px 0 0;">
+                    Founder, Anywhere Learning
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+            <!-- 6) FOOTER -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:24px;">
+              <tr>
+                <td style="
+                  padding:28px 32px 36px;
+                  text-align:center;
+                  border-top:1px solid #e5e7eb;">
+                  <a href="https://anywherelearning.co" style="text-decoration:none; color:#588157; font-weight:600; font-size:14px;">
+                    anywherelearning.co
+                  </a>
+                  <div style="font-size:12px; color:#9ca3af; margin-top:14px; line-height:1.6;">
+                    You're getting this because you grabbed a free guide from me.<br>
+                    <a href="{{ unsubscribe_url }}" style="color:#9ca3af; text-decoration:underline;">unsubscribe</a>
+                    if you'd rather not hear from me, no hard feelings.
+                  </div>
+                  <div style="font-size:11px; color:#cbd5e1; margin-top:16px;">
+                    Anywhere Learning &middot; Founded by Amelie &middot; info@anywherelearning.co
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+          </td></tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

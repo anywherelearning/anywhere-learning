@@ -5,6 +5,9 @@ import Link from 'next/link';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
 import ReviewModal from '@/components/shop/ReviewModal';
 import TrialCapModal from '@/components/account/TrialCapModal';
+import AddToWeekButton from '@/components/account/AddToWeekButton';
+import { effortFor } from '@/lib/activity-effort';
+import { notifyLocalChanged } from '@/lib/account-sync';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MEMBERSHIP_PRICE_USD } from '@/lib/membership';
 import { STARTER_PACK_CREDIT_LABEL, firstYearPriceAfterCredit } from '@/lib/starter-pack-credit';
 
@@ -105,6 +108,7 @@ function saveState(state: PersistedState) {
   if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    notifyLocalChanged();
   } catch {
     /* ignore quota errors */
   }
@@ -285,7 +289,11 @@ export default function AccountDashboard({
       {/* HEADER */}
       <section className="pt-10 md:pt-12 pb-6">
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="flex flex-wrap items-end justify-between gap-6">
+          <div
+            className="relative overflow-hidden rounded-3xl border border-[#cdd9c6] px-6 sm:px-8 py-7"
+            style={{ background: 'linear-gradient(135deg, rgba(88,129,87,0.18) 0%, rgba(212,163,115,0.13) 44%, #fffdf9 84%)' }}
+          >
+            <div className="relative flex flex-wrap items-end justify-between gap-6">
             <div>
               <div className="font-display italic text-[12.5px] text-gray-500 mb-1">
                 Welcome back, {userName}.
@@ -310,18 +318,16 @@ export default function AccountDashboard({
             </div>
             <div className="flex items-center gap-x-3.5 gap-y-1 flex-wrap text-[13.5px]">
               <Link
-                href="/account/settings"
-                className="text-gray-600 font-body font-medium no-underline hover:text-forest-dark transition-colors"
+                href="/account/plan"
+                className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold no-underline py-2 px-4 rounded-lg hover:bg-forest-dark transition-colors"
               >
-                Account
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M3 9h18M8 3v4M16 3v4" />
+                </svg>
+                My Plan
               </Link>
-              <Sep />
-              <Link
-                href="/contact"
-                className="text-gray-600 font-body font-medium no-underline hover:text-forest-dark transition-colors"
-              >
-                Help
-              </Link>
+            </div>
             </div>
           </div>
 
@@ -634,6 +640,7 @@ export default function AccountDashboard({
                         </button>
                       )}
                     </div>
+                    {effortFor(a.slug) && <AddToWeekButton slug={a.slug} title={a.title} />}
                     <a
                       href={downloadHref}
                       onClick={handleDownloadClick}

@@ -297,8 +297,28 @@ export default function SiteHeader() {
               {auth.isSignedIn ? (
                 <>
                   <Link
+                    href="/account/plan"
+                    className="hidden lg:inline-flex items-center gap-2 bg-forest text-cream font-body font-semibold text-[14.5px] px-3.5 py-1.5 rounded-full no-underline hover:bg-forest-dark transition-colors"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="5" width="18" height="16" rx="2" />
+                      <path d="M3 9h18M8 3v4M16 3v4" />
+                    </svg>
+                    My Plan
+                  </Link>
+                  <Link
                     href="/account"
-                    className="hidden lg:inline-flex items-center gap-2 text-forest-dark font-body font-semibold text-[14.5px] px-3.5 py-1.5 rounded-full no-underline hover:bg-[#E6EBDF] hover:text-forest transition-colors"
+                    className="hidden lg:inline-flex items-center gap-2 text-forest-dark font-body font-medium text-[14.5px] px-3.5 py-1.5 rounded-full no-underline hover:bg-[#E6EBDF] hover:text-forest transition-colors"
                   >
                     <svg
                       width="14"
@@ -316,11 +336,6 @@ export default function SiteHeader() {
                     </svg>
                     My Library
                   </Link>
-                  {auth.tier === 'member' && (
-                    <span className="hidden md:inline-flex bg-[#F2DECF] text-[#7A3D24] font-body font-semibold text-[10.5px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
-                      {auth.founder ? 'Founding member' : 'Member'}
-                    </span>
-                  )}
                   <div ref={accountRef} className="relative">
                     <button
                       type="button"
@@ -374,6 +389,23 @@ export default function SiteHeader() {
                             <path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z" />
                           </svg>
                           My Library
+                        </AccountMenuItem>
+                        <AccountMenuItem href="/account/plan">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                          >
+                            <rect x="3" y="5" width="18" height="16" rx="2" />
+                            <path d="M3 9h18M8 3v4M16 3v4" />
+                          </svg>
+                          My Plan
                         </AccountMenuItem>
                         <AccountMenuItem href="/account/settings">Account settings</AccountMenuItem>
                         <AccountMenuItem href="/contact">Help &amp; support</AccountMenuItem>

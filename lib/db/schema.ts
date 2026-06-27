@@ -1,4 +1,15 @@
-import { pgTable, uuid, text, integer, boolean, timestamp, index, uniqueIndex } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, text, integer, boolean, timestamp, jsonb, index, uniqueIndex } from 'drizzle-orm/pg-core';
+
+/**
+ * Per-member app state (kids profile, the plan, completions, library status),
+ * synced across devices. Mirrors what the client keeps in localStorage; this
+ * row is the source of truth when signed in. Keyed by Clerk id.
+ */
+export const memberState = pgTable('member_state', {
+  clerkId: text('clerk_id').primaryKey(),
+  data: jsonb('data').notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
 
 export const users = pgTable('users', {
   id: uuid('id').defaultRandom().primaryKey(),
