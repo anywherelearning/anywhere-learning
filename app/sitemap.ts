@@ -69,6 +69,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
+      url: 'https://anywherelearning.co/guides/capable-kid',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: 'https://anywherelearning.co/faq',
       lastModified: siteLastUpdated,
       changeFrequency: 'monthly',

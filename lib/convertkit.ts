@@ -210,9 +210,18 @@ export async function applyAndRemoveTags(
 /** Subscribe a free guide lead - applies the 'lead' tag to trigger welcome sequence
  * plus a `from-{source}` tag for attribution. Defaults source to 'organic' when
  * no tagged URL was used so every subscriber has a source on their profile.
+ *
+ * When `guide` is set (e.g. 'capable-kid'), also applies a `guide:{guide}` tag.
+ * Each free guide has its own Kit automation that watches for its tag and emails
+ * that specific PDF, so new lead magnets need only a new tag + a new automation.
  */
-export async function subscribeToConvertKit(email: string, source?: string) {
+export async function subscribeToConvertKit(
+  email: string,
+  source?: string,
+  guide?: string,
+) {
   const tags = ['lead', `from-${source || 'organic'}`];
+  if (guide) tags.push(`guide:${guide}`);
   await subscribeAndTag(email, tags);
 }
 

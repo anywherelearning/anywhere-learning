@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import EmailForm from '@/components/EmailForm';
+import { useUser } from '@clerk/nextjs';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import {
   MEMBERSHIP_PRICE_YEAR,
@@ -28,7 +29,29 @@ const MOBILE_SCROLL_UP_PX = 200;
 
 type Variant = 'free-guide' | 'membership';
 
+const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+/**
+ * Gate: people who already have access (members incl. trial, and starters)
+ * should never get the "unlock with membership" upsell. Everyone else (signed
+ * out, or signed-in non-members) gets the normal popup.
+ */
 export default function BlogExitIntentPopup() {
+  if (!hasClerk) return <BlogExitIntentPopupInner />;
+  return <MemberGate />;
+}
+
+function MemberGate() {
+  const { isLoaded, user } = useUser();
+  const tier = user?.publicMetadata?.tier as string | undefined;
+  const isMember = tier === 'member' || tier === 'starter';
+  // Wait for Clerk so we never flash the upsell at a member; then non-members
+  // get it as before.
+  if (!isLoaded || isMember) return null;
+  return <BlogExitIntentPopupInner />;
+}
+
+function BlogExitIntentPopupInner() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [variant, setVariant] = useState<Variant>('free-guide');

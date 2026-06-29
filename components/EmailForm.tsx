@@ -12,9 +12,12 @@ interface EmailFormProps {
   successBody?: string;
   /** Stack input above button instead of placing them side-by-side. Use in narrow sidebars. */
   stacked?: boolean;
+  /** Which free guide this form delivers, e.g. 'capable-kid'. Adds a `guide:{guide}`
+   *  Kit tag so the matching delivery automation sends that specific PDF. */
+  guide?: string;
 }
 
-export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides.", stacked = false }: EmailFormProps) {
+export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides.", stacked = false, guide }: EmailFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -61,7 +64,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: source || undefined }),
+        body: JSON.stringify({ email, source: source || undefined, guide: guide || undefined }),
       });
 
       const data = await res.json();

@@ -9,7 +9,11 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, source } = body as { email: string; source?: string };
+    const { email, source, guide } = body as {
+      email: string;
+      source?: string;
+      guide?: string;
+    };
 
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,9 +31,16 @@ export async function POST(request: NextRequest) {
       ? source.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30) || undefined
       : undefined;
 
+    // Sanitize guide the same way: becomes a `guide:{guide}` tag that triggers
+    // the matching per-guide delivery automation in Kit.
+    const cleanGuide = guide
+      ? guide.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40) || undefined
+      : undefined;
+
     // Subscribe + apply 'lead' tag (triggers welcome sequence in Kit)
-    // plus a 'from-{source}' tag for attribution.
-    await subscribeToConvertKit(email, cleanSource);
+    // plus a 'from-{source}' tag for attribution and, when set, a
+    // 'guide:{guide}' tag that delivers that specific free guide.
+    await subscribeToConvertKit(email, cleanSource, cleanGuide);
 
     return NextResponse.json({ success: true });
   } catch (err) {

@@ -131,6 +131,7 @@ export default async function SiteFooter() {
             <FooterLink href="/join">Membership</FooterLink>
             <FooterLink href="/shop/starter-pack">Starter Pack</FooterLink>
             <FooterLink href="/free-guide">Free starter guide</FooterLink>
+            <FooterLink href="/guides/capable-kid">Capable Kid Guide</FooterLink>
           </FooterColumn>
 
           <FooterColumn title="Read &amp; Learn">
