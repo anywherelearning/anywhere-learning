@@ -2,9 +2,26 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useUser } from '@clerk/nextjs';
 import { SALE_CONFIG, isSaleActive, saleDaysLeft } from '@/lib/sale';
 
+const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
 export default function SaleBanner() {
+  if (!hasClerk) return <SaleBannerInner />;
+  return <Gated />;
+}
+
+/** People who already have access shouldn't see a discount on what they own. */
+function Gated() {
+  const { isLoaded, user } = useUser();
+  const tier = user?.publicMetadata?.tier as string | undefined;
+  const hasAccess = tier === 'member' || tier === 'starter';
+  if (!isLoaded || hasAccess) return null;
+  return <SaleBannerInner />;
+}
+
+function SaleBannerInner() {
   const [active, setActive] = useState(false);
   const [daysLeft, setDaysLeft] = useState(0);
 
@@ -29,9 +46,7 @@ export default function SaleBanner() {
           {SALE_CONFIG.percentOff}% off everything
         </span>
         <span className="opacity-80 hidden sm:inline">·</span>
-        <span className="opacity-90">
-          {SALE_CONFIG.name}
-        </span>
+        <span className="opacity-90">{SALE_CONFIG.name}</span>
         <span className="opacity-80 hidden sm:inline">·</span>
         <span className="opacity-90 italic">{daysCopy}</span>
         <Link
