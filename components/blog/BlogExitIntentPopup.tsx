@@ -44,10 +44,10 @@ export default function BlogExitIntentPopup() {
 function MemberGate() {
   const { isLoaded, user } = useUser();
   const tier = user?.publicMetadata?.tier as string | undefined;
-  const isMember = tier === 'member' || tier === 'starter';
-  // Wait for Clerk so we never flash the upsell at a member; then non-members
-  // get it as before.
-  if (!isLoaded || isMember) return null;
+  // Hide only from full members (incl. trial). Starters haven't unlocked the
+  // full library, so the upgrade upsell is still relevant to them.
+  const isFullMember = tier === 'member';
+  if (!isLoaded || isFullMember) return null;
   return <BlogExitIntentPopupInner />;
 }
 

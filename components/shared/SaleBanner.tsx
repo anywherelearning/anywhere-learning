@@ -12,12 +12,13 @@ export default function SaleBanner() {
   return <Gated />;
 }
 
-/** People who already have access shouldn't see a discount on what they own. */
+/** Hide only from full members (incl. trial). Starters still see it so they can
+ *  upgrade to membership at the sale price. */
 function Gated() {
   const { isLoaded, user } = useUser();
   const tier = user?.publicMetadata?.tier as string | undefined;
-  const hasAccess = tier === 'member' || tier === 'starter';
-  if (!isLoaded || hasAccess) return null;
+  const isFullMember = tier === 'member';
+  if (!isLoaded || isFullMember) return null;
   return <SaleBannerInner />;
 }
 
