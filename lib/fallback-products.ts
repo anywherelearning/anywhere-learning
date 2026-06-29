@@ -241,7 +241,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: 20,
     ageRange: "Ages 6–14",
     sortOrder: 10,
-    active: true,
+    active: false, // retired: debundled into single activities
     createdAt: new Date("2025-02-01"),
   },
   {
@@ -264,7 +264,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: 20,
     ageRange: "Ages 6–14",
     sortOrder: 11,
-    active: true,
+    active: false, // retired: debundled into single activities
     createdAt: new Date("2025-02-01"),
   },
   {
@@ -287,7 +287,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: 20,
     ageRange: "Ages 6–14",
     sortOrder: 12,
-    active: true,
+    active: false, // retired: debundled into single activities
     createdAt: new Date("2025-02-01"),
   },
   {
@@ -310,7 +310,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: 20,
     ageRange: "Ages 6–14",
     sortOrder: 13,
-    active: true,
+    active: false, // retired: debundled into single activities
     createdAt: new Date("2025-02-01"),
   },
 
