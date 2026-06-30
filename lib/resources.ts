@@ -2227,6 +2227,7 @@ const resources: ResourcePage[] = [
       'executive-function-kids',
       'decision-making-skills-kids',
       'what-to-do-when-kids-say-im-bored',
+      'financial-literacy-for-kids-by-age',
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
