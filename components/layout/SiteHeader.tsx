@@ -65,6 +65,7 @@ const NAV_ITEMS_AFTER = [
 
 const RESOURCES_ITEMS = [
   { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
+  { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Free age-by-age skills map' },
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
 ];

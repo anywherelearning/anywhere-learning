@@ -207,21 +207,38 @@ export async function applyAndRemoveTags(
 
 // ─── Backwards-compatible exports ───
 
-/** Subscribe a free guide lead - applies the 'lead' tag to trigger welcome sequence
- * plus a `from-{source}` tag for attribution. Defaults source to 'organic' when
- * no tagged URL was used so every subscriber has a source on their profile.
+/** Guides that have their OWN dedicated Kit funnel (own tag + own email
+ * sequence). Subscribers to these must NOT also get the generic `lead` tag,
+ * otherwise they'd be dumped into the default 7-Activities sequence on top of
+ * their own. Each funnel shares a `lead-nurtured` marker so a person who later
+ * grabs the other guide only receives that guide's email 1, not a second full
+ * sequence. Guides NOT listed here fall back to the default `lead` funnel. */
+const SELF_FUNNEL_GUIDES = new Set<string>(['capable-kid']);
+
+/** Subscribe a free guide lead and apply the tags that drive the Kit funnels.
  *
- * When `guide` is set (e.g. 'capable-kid'), also applies a `guide:{guide}` tag.
- * Each free guide has its own Kit automation that watches for its tag and emails
- * that specific PDF, so new lead magnets need only a new tag + a new automation.
+ * Always applies `from-{source}` for attribution (defaults to 'organic').
+ *
+ * Tagging then splits by guide:
+ *  - A guide with its own funnel (see SELF_FUNNEL_GUIDES) gets ONLY its
+ *    `guide:{guide}` tag, which triggers that guide's dedicated sequence.
+ *  - Everything else (no guide, or a guide without its own funnel) gets the
+ *    generic `lead` tag that triggers the default 7-Activities sequence.
+ *
+ * This keeps the funnels fully separate: one signup = one guide + one sequence.
  */
 export async function subscribeToConvertKit(
   email: string,
   source?: string,
   guide?: string,
 ) {
-  const tags = ['lead', `from-${source || 'organic'}`];
-  if (guide) tags.push(`guide:${guide}`);
+  const tags = [`from-${source || 'organic'}`];
+  if (guide && SELF_FUNNEL_GUIDES.has(guide)) {
+    tags.push(`guide:${guide}`);
+  } else {
+    tags.push('lead');
+    if (guide) tags.push(`guide:${guide}`);
+  }
   await subscribeAndTag(email, tags);
 }
 
