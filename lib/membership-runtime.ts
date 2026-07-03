@@ -45,6 +45,10 @@ export interface MembershipState {
   /** "$99.00" or "$149.00" — receipts and Stripe price displays. */
   priceFormatted: string;
   priceUSD: number;
+  /** "$8.25" or "$12.42" — per-month equivalent, bare (billed yearly). */
+  priceMonthly: string;
+  /** "$8.25/month" or "$12.42/month" — per-month framing for CTAs. */
+  priceMonth: string;
 
   /** "Founder rate" during phase, empty string after. */
   rateLabel: string;
@@ -77,6 +81,8 @@ export const getMembership = cache(async (): Promise<MembershipState> => {
   const priceYear = `${price}/year`;
   const priceYr = `${price}/yr`;
   const priceFormatted = `${price}.00`;
+  const priceMonthly = `$${(priceUSD / 12).toFixed(2)}`;
+  const priceMonth = `${priceMonthly}/month`;
 
   return {
     isFounderPhase: isFounder,
@@ -88,6 +94,8 @@ export const getMembership = cache(async (): Promise<MembershipState> => {
     priceYr,
     priceFormatted,
     priceUSD,
+    priceMonthly,
+    priceMonth,
 
     rateLabel: isFounder ? 'Founder rate' : '',
     tierLabel: isFounder ? 'Founding member' : 'Member',

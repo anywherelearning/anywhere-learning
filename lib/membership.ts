@@ -65,6 +65,20 @@ export const MEMBERSHIP_PRICE_YR = `$${MEMBERSHIP_PRICE_USD}/yr`;
 /** "$99.00" or "$149.00" — for receipts and Stripe price displays. */
 export const MEMBERSHIP_PRICE_FORMATTED = `$${MEMBERSHIP_PRICE_USD}.00`;
 
+/**
+ * Per-month equivalent of the annual price, for conversion-moment framing.
+ * The membership is billed once per year — this is a psychological display
+ * only ("$8.25/mo, billed yearly"), never an actual monthly plan.
+ * $99/yr → $8.25/mo · $149/yr → $12.42/mo.
+ */
+export const MEMBERSHIP_PRICE_MONTHLY_USD = MEMBERSHIP_PRICE_USD / 12;
+
+/** "$8.25" or "$12.42" — bare per-month figure, no suffix. */
+export const MEMBERSHIP_PRICE_MONTHLY = `$${MEMBERSHIP_PRICE_MONTHLY_USD.toFixed(2)}`;
+
+/** "$8.25/month" or "$12.42/month" — per-month framing for CTAs. */
+export const MEMBERSHIP_PRICE_MONTH = `${MEMBERSHIP_PRICE_MONTHLY}/month`;
+
 // ─── COPY HELPERS ───────────────────────────────────────────
 /** "Founder rate" during phase, empty string after. */
 export const RATE_LABEL = IS_FOUNDER_PHASE ? 'Founder rate' : '';

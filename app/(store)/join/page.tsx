@@ -59,7 +59,7 @@ function CtaBlock({
   center?: boolean;
   darkMode?: boolean;
   /** Live membership state — passed from the JoinPage server component. */
-  m: { isFounderPhase: boolean; priceYear: string };
+  m: { isFounderPhase: boolean; priceYear: string; priceMonth: string };
   /** False for a returning customer who already used their one free trial:
    *  they'd be charged immediately, so we drop all trial framing. */
   trialEligible?: boolean;
@@ -80,23 +80,26 @@ function CtaBlock({
         </span>
       </CheckoutButton>
       <div
-        className={`text-sm ${darkMode ? 'text-[#B7BFB6]' : 'text-gray-500'}`}
+        className={`text-[15px] ${darkMode ? 'text-[#B7BFB6]' : 'text-gray-500'}`}
       >
         {trialEligible ? '$0 today, then ' : ''}
-        {m.isFounderPhase && (
-          <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'} font-medium mr-1`}>
-            ${POST_FOUNDER_PRICE_USD}
-          </span>
-        )}
-        <span className={`font-bold ${darkMode ? 'text-gold-light' : 'text-forest-dark'}`}>
-          {m.priceYear}
+        <span className={`font-bold text-[17px] ${darkMode ? 'text-gold-light' : 'text-forest-dark'}`}>
+          {m.priceMonth}
         </span>
+      </div>
+      <div
+        className={`-mt-1.5 text-[13px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}
+      >
+        billed once a year at{' '}
+        <span className="font-medium">{m.priceYear}</span>
         {m.isFounderPhase && (
           <>
             {' · '}
-            <span className="font-display italic text-[15px] text-[#c4836a]">
-              Locked in for life
+            <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'}`}>
+              usually ${POST_FOUNDER_PRICE_USD}
             </span>
+            {' · '}
+            <span className="font-display italic text-[#c4836a]">Locked in for life</span>
           </>
         )}
       </div>
@@ -420,7 +423,7 @@ export default async function JoinPage({
                 doesn't: cooking, budgeting, self-regulation, problem-solving,
                 real-world math, and more. Built by a teacher who left the
                 classroom to have more time to get her kids ready for
-                life. {m.price} for the year.
+                life. Just {m.priceMonth}, billed yearly.
               </p>
 
               <div className="mt-6">

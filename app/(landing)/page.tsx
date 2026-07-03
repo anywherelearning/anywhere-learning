@@ -554,16 +554,18 @@ export default async function HomePage() {
                   <p>
                     {m.isFounderPhase ? (
                       <>
-                        Founding members (first {m.founderCap}) pay{' '}
-                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceYear}, locked in for life.</span>{' '}
+                        Founding members (first {m.founderCap}) pay just{' '}
+                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
+                        billed once a year at {m.priceYear}, locked in for life.{' '}
+                        After that, ${POST_FOUNDER_PRICE_USD}.
                       </>
                     ) : (
                       <>
-                        Membership is{' '}
-                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceYear}.</span>{' '}
+                        Membership is just{' '}
+                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
+                        billed once a year at {m.priceYear}.
                       </>
                     )}
-                    {m.isFounderPhase && <>After that, ${POST_FOUNDER_PRICE_USD}.</>}
                   </p>
                 </div>
                 <div className="flex justify-center mt-8">
@@ -660,7 +662,8 @@ export default async function HomePage() {
                   </h3>
                   <p className="text-cream/85 text-[15px] leading-relaxed mb-6">
                     Full library, all categories, new activities every quarter.{' '}
-                    {m.isFounderPhase ? `Founder rate for the first ${m.founderCap} families.` : `${m.priceYear}.`}
+                    {m.priceMonth}, billed yearly.{' '}
+                    {m.isFounderPhase ? `Founder rate for the first ${m.founderCap} families.` : ''}
                   </p>
                   <div className="mt-auto">
                     <Link
