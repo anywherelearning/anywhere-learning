@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
-import { STARTER_PACK_SLUGS, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 import PdfViewer from '@/components/account/PdfViewer';
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ const SKILLS_MAP_TITLES: Record<string, string> = {
 /**
  * In-app PDF viewer. Trial members read guides here (the browser's native
  * PDF viewer has its own download button, i.e. a download, and trials are
- * view-only). Members and starters can land here too via shared links; they
- * get the same reader with a working download button.
+ * view-only). Members can land here too via shared links; they get the same
+ * reader with a working download button.
  */
 export default async function ActivityViewPage({
   params,
@@ -43,7 +43,7 @@ export default async function ActivityViewPage({
 
   // Resolve tier from the DB. A failure here means no access (guest), which
   // bounces to /join below — never an open viewer.
-  let tier: 'member' | 'trial' | 'starter' | 'guest' = 'guest';
+  let tier: 'member' | 'trial' | 'guest' = 'guest';
   let trialEndsAt: string | null = null;
   try {
     const { getAccessContextForClerkId } = await import('@/lib/access');
@@ -55,9 +55,6 @@ export default async function ActivityViewPage({
   }
 
   if (tier === 'guest') redirect('/join?from=viewer&reason=membership-required');
-  if (tier === 'starter' && !STARTER_PACK_SLUGS.has(slug) && !SKILLS_MAP_TITLES[slug]) {
-    redirect('/join?from=viewer&reason=starter-upgrade');
-  }
 
   const product = getFallbackProducts().find((p) => p.slug === slug);
   const title = product?.name || SKILLS_MAP_TITLES[slug] || 'Activity Guide';

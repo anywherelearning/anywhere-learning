@@ -64,8 +64,7 @@ export default async function AccountSettingsPage() {
       const user = userRows[0];
       if (user) {
         // "Member since" — prefer the FIRST subscription's start date.
-        // Falls back to user.createdAt for users without a subscription
-        // (e.g. Starter Pack only buyers).
+        // Falls back to user.createdAt for users without a subscription row yet.
         stripeCustomerId = user.stripeCustomerId;
         const subRows = await db
           .select()
@@ -87,9 +86,7 @@ export default async function AccountSettingsPage() {
           .where(eq(subscriptions.userId, user.id))
           .orderBy(subscriptions.createdAt)
           .limit(1);
-        joinedAt = earliestSub[0]?.createdAt
-          ?? user.starterPackPurchasedAt
-          ?? user.createdAt;
+        joinedAt = earliestSub[0]?.createdAt ?? user.createdAt;
         // Pull the payment method from the live subscription (not customer
         // default, which subscriptions often don't set).
         if (stripeSubscriptionId) {
@@ -148,8 +145,7 @@ export default async function AccountSettingsPage() {
     : 'unknown';
 
   // Show the subscription tab only when the user actually has subscription
-  // history. Starter-Pack-only buyers don't have a subscription row, so the
-  // tab would just say "Founding member" misleadingly.
+  // history (a subscription row exists).
   const hasSubscription = subStatus !== null;
   // "Founding member" only for users who actually paid the founder price.
   // Post-cap members keep paying $99 (locked-in) but new joiners after cap

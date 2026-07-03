@@ -17,8 +17,8 @@ interface Member {
   paymentBrand: string;
   status: 'active' | 'trialing' | 'canceling' | 'canceled' | 'past_due' | 'unknown';
   billingPortalAvailable: boolean;
-  /** Set when the user actually has subscription history. Starter-Pack-only
-   *  buyers don't (no subscription row), so we hide the tab for them. */
+  /** Set when the user actually has subscription history (a subscription row
+   *  exists), so we hide the tab for anyone without one. */
   hasSubscription: boolean;
   /** True while on a free trial (not yet charged). */
   isTrialing: boolean;
@@ -37,7 +37,7 @@ export default function AccountSettings({ member }: { member: Member }) {
   // "Your kids" (the planner profile) is members-only. Non-members get just
   // Profile (plus Subscription if they have any subscription history).
   const tierMeta = user?.publicMetadata?.tier as string | undefined;
-  const hasAccess = tierMeta === 'member' || tierMeta === 'starter';
+  const hasAccess = tierMeta === 'member';
 
   const TABS: { value: Tab; label: string }[] = [
     { value: 'profile', label: 'Profile' },

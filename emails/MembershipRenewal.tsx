@@ -372,7 +372,7 @@ MembershipRenewal.PreviewProps = {
 } satisfies Props;
 
 // ─────────────────────────────────────────────────────────────
-// Brand tokens — kept in sync with MembershipWelcome / StarterPackWelcome
+// Brand tokens — kept in sync with MembershipWelcome
 // ─────────────────────────────────────────────────────────────
 
 const FONT_BODY = '"DM Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif';

@@ -3,8 +3,7 @@
  *
  * Auth & access:
  *   - User must be signed in (Clerk)
- *   - User must have access to the activity (member, OR starter buyer +
- *     activity in their Starter Pack)
+ *   - User must be a member or trial member
  *
  * Each user can leave one review per activity (upserts on re-submit).
  * Snapshots the author's Clerk name + image URL onto the review row so the
@@ -19,9 +18,6 @@ import { reviews, users } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { getAccessTierForClerkId } from '@/lib/access';
-import { STARTER_PACK_SLUGS } from '@/lib/membership';
-
-const SKILLS_MAP_SLUGS = new Set(['skills-map-color', 'skills-map-bw']);
 
 export async function POST(req: NextRequest) {
   try {
@@ -48,15 +44,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'A bit too long. Trim to under 1000 characters.' }, { status: 400 });
     }
 
-    // Tier check
+    // Tier check — members and trial members can review any activity.
     const tier = await getAccessTierForClerkId(clerkId);
-    const allowed =
-      tier === 'member' ||
-      tier === 'trial' ||
-      (tier === 'starter' && (STARTER_PACK_SLUGS.has(slug) || SKILLS_MAP_SLUGS.has(slug)));
+    const allowed = tier === 'member' || tier === 'trial';
     if (!allowed) {
       return NextResponse.json(
-        { error: 'Only members who have access to this activity can review it.' },
+        { error: 'Only members can review activities.' },
         { status: 403 },
       );
     }

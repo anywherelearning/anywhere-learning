@@ -21,7 +21,7 @@ import TrialCapModal from '@/components/account/TrialCapModal';
 interface Props {
   slug: string;
   title: string;
-  tier: 'member' | 'trial' | 'starter';
+  tier: 'member' | 'trial';
   trialEndsAt?: string | null;
   priceLabel?: string;
   isFounder?: boolean;
@@ -96,7 +96,7 @@ export default function PdfViewer({
   }, [slug]);
 
   function handleDownloadClick(e: React.MouseEvent<HTMLAnchorElement>) {
-    if (tier !== 'trial') return; // members/starters: plain navigation
+    if (tier !== 'trial') return; // members: plain navigation
     e.preventDefault();
     setCapModalOpen(true);
   }

@@ -17,12 +17,12 @@ interface AuthState {
   /** Profile image URL set in /account/settings. Null when user hasn't
    *  uploaded one (we show their initial as a letter avatar instead). */
   imageUrl: string | null;
-  /** 'member' for active membership subscribers, 'starter' for one-time
-   *  Starter Pack buyers, null for users without either. Read from Clerk's
-   *  publicMetadata, which the webhook sets after each purchase. */
-  tier: 'member' | 'starter' | null;
+  /** 'member' for active membership subscribers (including trial), null for
+   *  users without a membership. Read from Clerk's publicMetadata, which the
+   *  webhook sets after each purchase. */
+  tier: 'member' | null;
   /** True only if the user paid the founder rate ($99/yr first-100). False
-   *  for post-founder members ($149/yr) and Starter Pack buyers. */
+   *  for post-founder members ($149/yr). */
   founder: boolean;
 }
 
@@ -160,9 +160,9 @@ export default function SiteHeader() {
   // Auth state is pushed up from <ClerkAuthBridge /> below, which only mounts
   // when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is set.
 
-  // Library + plan links are members-only (members incl. trial, and starters).
-  // A signed-in user who never purchased has tier null and shouldn't see them.
-  const hasAccess = auth.tier === 'member' || auth.tier === 'starter';
+  // Library + plan links are members-only (members incl. trial). A signed-in
+  // user who never purchased has tier null and shouldn't see them.
+  const hasAccess = auth.tier === 'member';
 
   return (
     <>
@@ -769,7 +769,7 @@ function ClerkAuthBridge({ onChange }: { onChange: (s: AuthState) => void }) {
         ? user.imageUrl
         : null;
     // Tier + founder are stamped onto publicMetadata by the Stripe webhook.
-    const meta = user.publicMetadata as { tier?: 'member' | 'starter'; founder?: boolean };
+    const meta = user.publicMetadata as { tier?: 'member'; founder?: boolean };
     onChange({
       isSignedIn: true,
       initial,

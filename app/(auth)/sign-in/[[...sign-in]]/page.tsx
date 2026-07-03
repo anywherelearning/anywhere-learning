@@ -102,7 +102,7 @@ function FallbackSignIn() {
           <em className="not-italic italic text-forest">coming soon.</em>
         </h1>
         <p className="mt-4 text-[16px] leading-[1.6] text-gray-600 max-w-[420px] mx-auto">
-          Member accounts open with the public launch. If you bought the Starter Pack or membership
+          Member accounts open with the public launch. If you joined the membership
           before then, your account link will arrive in your welcome email from Amelie.
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3.5">

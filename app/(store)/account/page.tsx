@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
-import { STARTER_PACK_SLUGS, IS_FOUNDER_PHASE } from '@/lib/membership';
+import { IS_FOUNDER_PHASE } from '@/lib/membership';
 import AccountDashboard, { type DashboardActivity } from './AccountDashboard';
 
 export const metadata: Metadata = {
@@ -56,10 +56,10 @@ const SKILLS_MAP_ENTRIES: DashboardActivity[] = [
 
 // ─── TIER DETECTION ──────────────────────────────────────────
 // Until Stripe + Clerk are fully wired, we read tier from a cookie / query
-// param so both views are testable. Visit /account?tier=starter to preview
-// the Starter Pack experience, or ?tier=trial for the free-trial view.
+// param so both views are testable. Visit /account?tier=trial to preview the
+// free-trial view, or ?tier=member for the full library.
 interface TierState {
-  tier: 'member' | 'trial' | 'starter' | 'guest';
+  tier: 'member' | 'trial' | 'guest';
   /** Trial-only: when the trial converts to a paid membership. */
   trialEndsAt: Date | null;
 }
@@ -71,7 +71,6 @@ async function detectTier(searchParams: { tier?: string }): Promise<TierState> {
   // so this only ever affected the dashboard UI, but it has no business
   // running in prod regardless.
   if (process.env.NODE_ENV !== 'production') {
-    if (searchParams.tier === 'starter') return { tier: 'starter', trialEndsAt: null };
     if (searchParams.tier === 'member') return { tier: 'member', trialEndsAt: null };
     if (searchParams.tier === 'guest') return { tier: 'guest', trialEndsAt: null };
     if (searchParams.tier === 'trial') {
@@ -103,9 +102,9 @@ export default async function AccountPage({
   const sp = await searchParams;
   const { tier, trialEndsAt } = await detectTier(sp);
 
-  // Guest = no active membership AND no Starter Pack purchase. The library
-  // dashboard has nothing useful to show them. Bounce to /join with a
-  // contextual banner so they know why they landed there.
+  // Guest = no active membership. The library dashboard has nothing useful to
+  // show them. Bounce to /join with a contextual banner so they know why they
+  // landed there.
   if (tier === 'guest') {
     redirect('/join?from=account&reason=no-access');
   }
@@ -132,13 +131,9 @@ export default async function AccountPage({
     (p) => p.category !== 'bundle' && p.category !== 'start-here',
   );
 
-  // Filter activity catalog by tier. Starter Pack buyers see ONLY their 10
-  // activities. Members and trial members see everything. The trial is
-  // gated at download time (3 distinct guides), not at browsing time.
-  const tierActivities =
-    tier === 'starter'
-      ? allProducts.filter((p) => STARTER_PACK_SLUGS.has(p.slug))
-      : allProducts;
+  // Members and trial members see the whole library. The trial is gated at
+  // download time (view-only), not at browsing time.
+  const tierActivities = allProducts;
 
   const activities: DashboardActivity[] = [
     // Skills Map versions pinned at the top

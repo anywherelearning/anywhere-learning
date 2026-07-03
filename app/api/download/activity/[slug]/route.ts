@@ -6,16 +6,15 @@
  *   - member  → any activity (view + download)
  *   - trial   → VIEW any activity (in the in-app viewer); NO downloads —
  *               downloading is the reason to convert to a paid membership
- *   - starter → only activities in STARTER_PACK_SLUGS, plus Skills Map
  *   - guest   → redirect to /join with a soft-explain banner
  *   - signed-out → redirect to /sign-in
  *
  * Modes:
  *   - default  → forces download (Content-Disposition: attachment)
- *   - ?view=1  → inline view. Members/starters get the raw PDF in the
- *                browser; TRIAL members get the in-app viewer page instead,
- *                because the browser's built-in PDF viewer has its own
- *                download button (a download by another name).
+ *   - ?view=1  → inline view. Members get the raw PDF in the browser;
+ *                TRIAL members get the in-app viewer page instead, because
+ *                the browser's built-in PDF viewer has its own download
+ *                button (a download by another name).
  *   - ?check=1 → JSON {allowed} so the dashboard/viewer can show the
  *                upgrade-to-download modal instead of navigating.
  */
@@ -24,11 +23,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { getDownloadUrl } from '@vercel/blob';
 import { getAccessContextForClerkId } from '@/lib/access';
-import { STARTER_PACK_SLUGS } from '@/lib/membership';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
-
-const SKILLS_MAP_SLUGS = new Set(['skills-map-color', 'skills-map-bw']);
 
 export async function GET(
   req: NextRequest,
@@ -69,19 +65,10 @@ export async function GET(
   const access = await getAccessContextForClerkId(clerkId);
   const tier = access.tier;
   if (tier === 'guest') {
-    // No active subscription or starter pack → soft redirect to /join
+    // No active subscription → soft redirect to /join
     return friendlyRedirect('/join', 'membership-required');
   }
-
-  // Tier-gated access check
-  if (tier === 'starter') {
-    const allowed = STARTER_PACK_SLUGS.has(slug) || SKILLS_MAP_SLUGS.has(slug);
-    if (!allowed) {
-      // Starter buyer trying to access a member-only activity → upgrade prompt
-      return friendlyRedirect('/join', 'starter-upgrade');
-    }
-  }
-  // 'member' → no further checks
+  // 'member' / 'trial' → no further slug-level checks
 
   const isView = req.nextUrl.searchParams.get('view') === '1';
   const isCheck = req.nextUrl.searchParams.get('check') === '1';

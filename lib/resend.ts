@@ -3,18 +3,14 @@
  *
  * Active emails:
  *   - sendMembershipWelcomeEmail              → after successful membership signup
- *   - sendStarterPackWelcomeEmail             → after successful Starter Pack purchase
  *   - sendAbandonedCheckoutMembershipEmail    → membership checkout expired w/o payment
- *   - sendAbandonedCheckoutStarterPackEmail   → starter pack checkout expired w/o payment
  *   - sendMembershipRenewalEmail              → 14 days before subscription renewal
  *   - sendTrialEndingEmail                    → 3 days before a free trial converts
  */
 
 import { Resend } from 'resend';
 import MembershipWelcome from '@/emails/MembershipWelcome';
-import StarterPackWelcome from '@/emails/StarterPackWelcome';
 import AbandonedCheckoutMembership from '@/emails/AbandonedCheckoutMembership';
-import AbandonedCheckoutStarterPack from '@/emails/AbandonedCheckoutStarterPack';
 import MembershipRenewal from '@/emails/MembershipRenewal';
 import TrialEndingReminder from '@/emails/TrialEndingReminder';
 import MembershipConverted from '@/emails/MembershipConverted';
@@ -59,26 +55,6 @@ export async function sendMembershipWelcomeEmail({
   });
 }
 
-/** Welcome email for Starter Pack buyers (one-time $44.99). */
-export async function sendStarterPackWelcomeEmail({
-  to,
-  firstName,
-  signInUrl,
-}: {
-  to: string;
-  firstName?: string;
-  signInUrl: string;
-}) {
-  const subject = `Your Starter Pack is ready${firstName ? `, ${firstName}` : ''}`;
-  return getResend().emails.send({
-    from: FROM,
-    replyTo: REPLY_TO,
-    to,
-    subject,
-    react: StarterPackWelcome({ firstName, signInUrl }),
-  });
-}
-
 /** Membership-flow checkout expired without payment. */
 export async function sendAbandonedCheckoutMembershipEmail({
   to,
@@ -100,25 +76,6 @@ export async function sendAbandonedCheckoutMembershipEmail({
     to,
     subject: 'I held your spot — your Anywhere Learning checkout',
     react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft }),
-  });
-}
-
-/** Starter Pack checkout expired without payment. */
-export async function sendAbandonedCheckoutStarterPackEmail({
-  to,
-  firstName,
-  resumeUrl,
-}: {
-  to: string;
-  firstName?: string;
-  resumeUrl: string;
-}) {
-  return getResend().emails.send({
-    from: FROM,
-    replyTo: REPLY_TO,
-    to,
-    subject: 'I held your spot — your Anywhere Learning Starter Pack',
-    react: AbandonedCheckoutStarterPack({ firstName, resumeUrl }),
   });
 }
 

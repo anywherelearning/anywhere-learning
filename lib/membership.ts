@@ -104,28 +104,6 @@ export const FOUNDER_TAGLINE = IS_FOUNDER_PHASE
   ? `Founder rate ${MEMBERSHIP_PRICE_YEAR}, locked in for life.`
   : `${MEMBERSHIP_PRICE_YEAR} membership.`;
 
-// ─── STARTER PACK CONTENTS ──────────────────────────────────
-/**
- * The 10 activity slugs included in the Starter Pack.
- * Keep in sync with /shop/starter-pack and /account dashboard filter.
- */
-export const STARTER_PACK_SLUGS = new Set<string>([
-  'write-like-a-pro',
-  'community-tour-guide',
-  'media-info-check',
-  'ai-basics',
-  'budget-challenge',
-  'smart-shopper',
-  'board-game-studio',
-  'creature-habitat',
-  'micro-business',
-  'problem-solver',
-]);
-
-/** Starter Pack one-time price (in whole dollars). */
-export const STARTER_PACK_PRICE_USD = 44.99;
-export const STARTER_PACK_PRICE = `$${STARTER_PACK_PRICE_USD}`;
-
 // ─────────────────────────────────────────────────────────────────────────────
 // Runtime founder-phase helpers
 //

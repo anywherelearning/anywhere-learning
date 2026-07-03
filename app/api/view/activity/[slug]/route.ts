@@ -4,8 +4,8 @@
  * Exists so trial members can READ any guide without ever being handed the
  * Vercel Blob URL — the in-app viewer fetches from here and renders pages to
  * canvas. Authorization mirrors the download endpoint's view rules:
- *   member/trial → any activity, starter → their pack + Skills Map,
- *   guest/signed-out → 403/401 JSON (this endpoint is XHR-only).
+ *   member/trial → any activity, guest/signed-out → 403/401 JSON (this
+ *   endpoint is XHR-only).
  *
  * A determined user can still capture bytes from the network tab; the goal
  * is removing the one-click "download" button the native PDF viewer offers,
@@ -15,11 +15,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { getAccessContextForClerkId } from '@/lib/access';
-import { STARTER_PACK_SLUGS } from '@/lib/membership';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
-
-const SKILLS_MAP_SLUGS = new Set(['skills-map-color', 'skills-map-bw']);
 
 export async function GET(
   req: NextRequest,
@@ -44,9 +41,6 @@ export async function GET(
   const access = await getAccessContextForClerkId(clerkId);
   if (access.tier === 'guest') {
     return NextResponse.json({ error: 'Membership required' }, { status: 403 });
-  }
-  if (access.tier === 'starter' && !STARTER_PACK_SLUGS.has(slug) && !SKILLS_MAP_SLUGS.has(slug)) {
-    return NextResponse.json({ error: 'Not in your pack' }, { status: 403 });
   }
 
   const blobUrl = getActivityBlobUrl(slug);

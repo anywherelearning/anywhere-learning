@@ -50,7 +50,7 @@ const sections: LegalSection[] = [
     title: 'Payment processing',
     content: (
       <p>
-        All payments are processed securely by <strong className="text-ink font-semibold">Stripe</strong>. We never see, store, or have access to your credit card number or banking details. Stripe handles all payment data under their own security standards (<Em>PCI DSS Level 1</Em>). This applies to both the one-time starter pack purchase and recurring annual membership renewals.
+        All payments are processed securely by <strong className="text-ink font-semibold">Stripe</strong>. We never see, store, or have access to your credit card number or banking details. Stripe handles all payment data under their own security standards (<Em>PCI DSS Level 1</Em>). This applies to the free trial and recurring annual membership renewals.
       </p>
     ),
   },

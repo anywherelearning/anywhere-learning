@@ -2207,7 +2207,7 @@ const resources: ResourcePage[] = [
         'Uses AI tools with judgment, not dependency',
         'Can handle 48 hours independently (safely, not perfectly)',
       ]},
-      { type: 'cta', text: 'Want the complete breakdown with hands-on activity ideas for every skill area and age band? The Future-Ready Skills Map comes with the Starter Pack and the membership.', href: '/shop/starter-pack', label: 'See the Starter Pack' },
+      { type: 'cta', text: 'Want the complete breakdown with hands-on activity ideas for every skill area and age band? The Future-Ready Skills Map comes with the membership, and you can start with a 14-day free trial.', href: '/join', label: 'Start Your Free Trial' },
 
       { type: 'faq', items: [
         { question: 'What life skills should a 10-year-old know?', answer: 'By age 10, most kids should be able to cook a simple meal, do laundry, manage a small amount of money, resolve peer conflicts without adult scripting, handle disappointment, pack for a trip independently, and ask basic critical thinking questions about the information they encounter.' },

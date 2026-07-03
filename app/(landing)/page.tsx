@@ -36,8 +36,7 @@ const homepageFaqLd = {
   })),
 };
 
-// One activity from each of the 9 categories. None of these appear in the
-// Starter Pack page hero, so the visual stories don't overlap.
+// One activity from each of the 9 categories.
 // Order matches CARD_POSITIONS: index 3 = right side (Entrepreneurship), index 7 = left side (Planning).
 const HERO_CARDS = [
   { slug: 'kitchen-math-challenge', alt: 'Kitchen Math & Meal Planning cover' },     // 10:30 top-left
@@ -487,7 +486,7 @@ export default async function HomePage() {
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] flex items-center gap-2.5 mb-4">
                     <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
-                    Free starter guide
+                    Free 7-day guide
                   </p>
                   <h2 className="font-display text-[clamp(1.9rem,3.8vw,2.75rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
                     7 Days of Real-World Learning, <span className="italic text-[#7A3D24]">free in your inbox.</span>
@@ -622,12 +621,12 @@ export default async function HomePage() {
                   Where to start
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.6vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Three paths. <span className="italic text-forest">Pick yours.</span>
+                  Two paths. <span className="italic text-forest">Pick yours.</span>
                 </h2>
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1020px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[760px] mx-auto">
               <ScrollReveal delay={0}>
                 <div className="bg-cream border border-[#D8D4C5] rounded-[18px] p-8 text-left flex flex-col h-full hover:-translate-y-[3px] hover:shadow-[0_20px_36px_-24px_rgba(45,58,46,0.3)] transition-all duration-200">
                   <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-forest-dark px-3 py-1 rounded-full bg-[#E6EBDF] mb-4">
@@ -652,29 +651,6 @@ export default async function HomePage() {
               </ScrollReveal>
 
               <ScrollReveal delay={75}>
-                <div className="bg-[#F5EDE4] border border-[#E0D3C3] rounded-[18px] p-8 text-left flex flex-col h-full hover:-translate-y-[3px] hover:shadow-[0_20px_36px_-24px_rgba(45,58,46,0.3)] transition-all duration-200">
-                  <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-[#C97B5C] px-3 py-1 rounded-full bg-white/60 mb-4">
-                    One-time
-                  </span>
-                  <h3 className="font-display text-[26px] leading-tight tracking-tight mb-3">
-                    Start with the <span className="italic text-[#C97B5C]">Starter Pack.</span>
-                  </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
-                    10 of our favorite activities for $44.99 once. Yours forever, no subscription.
-                  </p>
-                  <div className="mt-auto">
-                    <Link
-                      href="/shop/starter-pack"
-                      className="inline-flex items-center gap-2.5 font-semibold text-[15px] text-white bg-[#C97B5C] px-5 py-3 rounded-xl hover:bg-[#B56A4B] transition-colors"
-                    >
-                      See the Starter Pack
-                      <span className="font-display italic text-lg">&rarr;</span>
-                    </Link>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
                 <div className="bg-forest-dark text-cream border border-forest-dark rounded-[18px] p-8 text-left flex flex-col h-full shadow-[0_28px_50px_-30px_rgba(58,90,64,0.5)] hover:-translate-y-[3px] hover:shadow-[0_32px_56px_-30px_rgba(58,90,64,0.6)] transition-all duration-200">
                   <span className="self-start text-[11.5px] tracking-[0.16em] uppercase font-semibold text-[#E6EBDF] px-3 py-1 rounded-full bg-white/[0.14] mb-4">
                     Full access

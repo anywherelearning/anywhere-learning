@@ -1,8 +1,7 @@
 'use client';
 
 /**
- * Generic checkout button. Hits one of the new checkout API routes
- * (`/api/checkout/membership` or `/api/checkout/starter-pack`), then redirects
+ * Membership checkout button. Hits `/api/checkout/membership`, then redirects
  * the browser to the Stripe-hosted Checkout URL.
  *
  * Auto-resume after sign-in: if the API returns 401 (membership requires
@@ -15,10 +14,11 @@
 
 import { useEffect, useRef, useState, useTransition } from 'react';
 
-type Kind = 'membership' | 'starter-pack';
+type Kind = 'membership';
 
 interface Props {
-  kind: Kind;
+  /** Which checkout to start. Defaults to 'membership' (the only option). */
+  kind?: Kind;
   /** Button label. */
   children: React.ReactNode;
   /** Optional Tailwind class override. */
@@ -30,7 +30,7 @@ interface Props {
 }
 
 export default function CheckoutButton({
-  kind,
+  kind = 'membership',
   children,
   className,
   ariaLabel,

@@ -20,10 +20,8 @@ import {
 } from '@/lib/membership';
 import {
   getAccessContextForClerkId,
-  getStarterPackCreditEligibility,
   isTrialEligible,
 } from '@/lib/access';
-import { STARTER_PACK_CREDIT_COUPON_ID } from '@/lib/starter-pack-credit';
 
 export type MembershipCheckoutResult =
   | { ok: true; url: string }
@@ -58,14 +56,6 @@ export async function createMembershipCheckout(opts: {
     offerFounderRate ? 'Membership Founder' : 'Membership Standard',
   );
 
-  // Starter Pack credit: if signed in AND has bought the Starter Pack AND
-  // hasn't yet redeemed the credit, apply the one-time coupon to the first
-  // invoice. The "first year only" rule is enforced by Stripe via the
-  // coupon's duration='once'. The "once per user" rule is enforced in our
-  // DB via users.starterPackCreditAppliedAt (set by the webhook on success).
-  const creditEligibility = clerkId ? await getStarterPackCreditEligibility(clerkId) : null;
-  const applyStarterPackCredit = !!creditEligibility?.eligible;
-
   // Free trial: one per customer, ever. Anyone with a prior subscription
   // row (canceled trial, refunded membership, active membership) checks
   // out without a trial, and Stripe charges them immediately instead.
@@ -78,8 +68,6 @@ export async function createMembershipCheckout(opts: {
   if (process.env.NODE_ENV !== 'production') {
     console.log('[membership-checkout] decision:', {
       clerkId,
-      creditEligible: applyStarterPackCredit,
-      creditReason: creditEligibility?.reason ?? 'no-clerk-id',
       trial: applyTrial,
       founderRate: offerFounderRate,
     });
@@ -95,17 +83,11 @@ export async function createMembershipCheckout(opts: {
       ? `Founder rate: $${FOUNDER_PRICE_USD}/year, locked in for life.`
       : undefined;
 
-  // Stripe rejects requests that contain BOTH `allow_promotion_codes`
-  // and `discounts` (even when one is false). So when we auto-apply the
-  // credit, we must omit `allow_promotion_codes` entirely from the
-  // request payload — not just set it to false.
   const session = await stripe.checkout.sessions.create({
     ...(submitMessage && { custom_text: { submit: { message: submitMessage } } }),
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
-    ...(applyStarterPackCredit
-      ? { discounts: [{ coupon: STARTER_PACK_CREDIT_COUPON_ID }] }
-      : { allow_promotion_codes: true }),
+    allow_promotion_codes: true,
     billing_address_collection: 'auto',
     customer_email: email,
     client_reference_id: clerkId || undefined,
@@ -120,9 +102,6 @@ export async function createMembershipCheckout(opts: {
         // static flag) so the webhook + downstream emails know the true
         // founder status of THIS subscription.
         founder_phase: String(offerFounderRate),
-        // True when the Starter Pack credit was applied at checkout, so the
-        // webhook knows to flip users.starterPackCreditAppliedAt on success.
-        starter_pack_credit_applied: String(applyStarterPackCredit),
         trial_applied: String(applyTrial),
         ...(clerkId && { clerk_id: clerkId }),
       },
@@ -136,7 +115,6 @@ export async function createMembershipCheckout(opts: {
     metadata: {
       kind: 'membership',
       tier: 'member',
-      starter_pack_credit_applied: String(applyStarterPackCredit),
       ...(clerkId && { clerk_id: clerkId }),
     },
   });

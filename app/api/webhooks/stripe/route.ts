@@ -1,8 +1,7 @@
 /**
- * Stripe webhook for the post-pivot product line:
+ * Stripe webhook for the membership product line:
  *
  *   • Membership ($99/yr founder or $149/yr standard, recurring subscription)
- *   • Starter Pack ($44.99 one-time)
  *
  * Events handled:
  *   - checkout.session.completed         → provision user + send welcome email
@@ -24,8 +23,7 @@
  * On checkout.session.completed we:
  *   1. Look up or create a Clerk user by the buyer's email (via @clerk/backend)
  *   2. Upsert a `users` row linking clerkId + stripeCustomerId + email
- *   3. For Starter Pack: stamp `users.starterPackPurchasedAt`
- *      For Membership: a customer.subscription.created event will follow within
+ *   3. For Membership: a customer.subscription.created event will follow within
  *      seconds and upsert the subscriptions row
  *   4. Generate a Clerk sign-in token (magic link) and send the welcome email
  *      via Resend
@@ -40,9 +38,7 @@ import { eq, and, ne } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import {
   sendMembershipWelcomeEmail,
-  sendStarterPackWelcomeEmail,
   sendAbandonedCheckoutMembershipEmail,
-  sendAbandonedCheckoutStarterPackEmail,
   sendTrialEndingEmail,
   sendMembershipConvertedEmail,
 } from '@/lib/resend';
@@ -124,10 +120,6 @@ async function upsertUser(opts: {
   clerkId: string;
   email: string;
   stripeCustomerId?: string;
-  starterPackPurchasedAt?: Date;
-  /** Set when a membership checkout completes with the Starter Pack credit applied.
-   *  Only set once per user; subsequent passes leave the existing value alone. */
-  starterPackCreditAppliedAt?: Date;
 }) {
   const existing = await db
     .select()
@@ -136,17 +128,11 @@ async function upsertUser(opts: {
     .limit(1);
 
   if (existing[0]) {
-    // Only write starterPackCreditAppliedAt if not already set — guards against
-    // a replayed webhook accidentally moving the timestamp forward.
-    const shouldSetCredit =
-      opts.starterPackCreditAppliedAt && !existing[0].starterPackCreditAppliedAt;
     await db
       .update(users)
       .set({
         email: opts.email.toLowerCase(),
         ...(opts.stripeCustomerId && { stripeCustomerId: opts.stripeCustomerId }),
-        ...(opts.starterPackPurchasedAt && { starterPackPurchasedAt: opts.starterPackPurchasedAt }),
-        ...(shouldSetCredit && { starterPackCreditAppliedAt: opts.starterPackCreditAppliedAt }),
       })
       .where(eq(users.id, existing[0].id));
     return existing[0].id;
@@ -158,14 +144,12 @@ async function upsertUser(opts: {
       clerkId: opts.clerkId,
       email: opts.email.toLowerCase(),
       stripeCustomerId: opts.stripeCustomerId,
-      starterPackPurchasedAt: opts.starterPackPurchasedAt,
-      starterPackCreditAppliedAt: opts.starterPackCreditAppliedAt,
     })
     .returning({ id: users.id });
   return inserted[0].id;
 }
 
-/** Handle a successful Checkout session (membership or starter-pack). */
+/** Handle a successful membership Checkout session. */
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   if (session.payment_status !== 'paid' && session.mode !== 'subscription') {
     console.log('[webhook] session not paid, ignoring:', session.id);
@@ -182,8 +166,6 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const nameParts = fullName.split(/\s+/);
   const firstName = nameParts[0] || undefined;
   const lastName = nameParts.slice(1).join(' ') || undefined;
-  const kind = session.metadata?.kind || (session.mode === 'subscription' ? 'membership' : 'starter_pack');
-  const tier: 'member' | 'starter' = kind === 'membership' ? 'member' : 'starter';
   const stripeCustomerId =
     typeof session.customer === 'string' ? session.customer : session.customer?.id;
 
@@ -196,20 +178,11 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
-  // The Starter Pack credit was attached at checkout when the buyer was eligible.
-  // We trust the metadata flag here rather than re-deriving — the eligibility
-  // check at checkout-time is the authoritative gate. Recording it on success
-  // prevents the same user from redeeming it again on a future re-subscribe.
-  const starterPackCreditApplied =
-    tier === 'member' && session.metadata?.starter_pack_credit_applied === 'true';
-
   // 2. Upsert into our DB
   const userId = await upsertUser({
     clerkId: clerkUser.id,
     email,
     stripeCustomerId,
-    ...(tier === 'starter' && { starterPackPurchasedAt: new Date() }),
-    ...(starterPackCreditApplied && { starterPackCreditAppliedAt: new Date() }),
   });
 
   // 2b. If this was a subscription checkout, pull the subscription that Stripe
@@ -221,7 +194,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   let isTrial = false;
   let trialEndsAt: Date | null = null;
   let isFirstMembership = false;
-  if (tier === 'member' && session.subscription) {
+  if (session.subscription) {
     try {
       const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id;
       // First membership = no OTHER subscription row exists for this user.
@@ -261,77 +234,59 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     const clerk = getClerk();
     if (clerk) {
       await clerk.users.updateUserMetadata(clerkUser.id, {
-        publicMetadata: { tier, founder: isFounder },
+        publicMetadata: { tier: 'member', founder: isFounder },
       });
     }
   } catch (err) {
     console.warn('[webhook] could not write tier metadata:', err);
   }
 
-  // 3. Welcome email. For memberships: on the user's FIRST subscription —
-  //    NOT on Clerk-account creation, because the trial flow has people
-  //    create their account on /sign-up BEFORE checkout, which would skip
-  //    the email for every trial signup. For the Starter Pack: keep the
-  //    account-creation trigger (guest checkout provisions the account here).
-  //    Membership and Starter Pack buyers get different copy, handled by
-  //    two separate templates.
-  if (tier === 'member' ? isFirstMembership : clerkUser.created) {
+  // 3. Welcome email, sent on the user's FIRST subscription — NOT on
+  //    Clerk-account creation, because the trial flow has people create their
+  //    account on /sign-up BEFORE checkout, which would skip the email for
+  //    every trial signup.
+  if (isFirstMembership) {
     try {
       const signInUrl = await generateSignInUrl(clerkUser.id);
-      if (tier === 'member') {
-        await sendMembershipWelcomeEmail({
-          to: email,
-          firstName,
-          signInUrl,
-          // Use the per-buyer founder flag derived from their actual
-          // Stripe Price ID (line ~205), NOT the global IS_FOUNDER_PHASE.
-          // Guarantees the email reflects the rate they actually paid,
-          // even if the cap flipped between checkout and email send.
-          isFounderPhase: isFounder,
-          // Trial signups get "your trial ends on X" framing instead of
-          // a payment receipt vibe, since they haven't been charged yet.
-          isTrial,
-          trialEndsAt: trialEndsAt?.toISOString(),
-        });
-      } else {
-        await sendStarterPackWelcomeEmail({
-          to: email,
-          firstName,
-          signInUrl,
-        });
-      }
+      await sendMembershipWelcomeEmail({
+        to: email,
+        firstName,
+        signInUrl,
+        // Use the per-buyer founder flag derived from their actual
+        // Stripe Price ID (line ~205), NOT the global IS_FOUNDER_PHASE.
+        // Guarantees the email reflects the rate they actually paid,
+        // even if the cap flipped between checkout and email send.
+        isFounderPhase: isFounder,
+        // Trial signups get "your trial ends on X" framing instead of
+        // a payment receipt vibe, since they haven't been charged yet.
+        isTrial,
+        trialEndsAt: trialEndsAt?.toISOString(),
+      });
     } catch (err) {
       console.error('[webhook] welcome email failed:', err);
     }
   }
 
-  // 4. Kit tags — segment buyers so we can run member-only broadcasts,
-  //    upgrade campaigns for starter buyers, founder-only perks, etc.
-  //    Applied for every successful purchase (not gated on clerkUser.created
-  //    because the tag should land even when an existing Clerk user buys).
+  // 4. Kit tags — segment members so we can run member-only broadcasts,
+  //    founder-only perks, etc. Applied for every successful checkout (not
+  //    gated on clerkUser.created because the tag should land even when an
+  //    existing Clerk user buys).
   try {
-    if (tier === 'member') {
-      // Trial signups get 'trial-member'. They convert to 'member' when the
-      // first real invoice is paid (handled in upsertSubscriptionFromStripe).
-      // The founder tag lands at signup either way: the spot is locked then.
-      const tags = [isTrial ? 'trial-member' : 'member', ...(isFounder ? ['founder'] : [])];
-      // Removing any prior 'lapsed-member' or 'refunded' tag handles the
-      // "former member who returns" case cleanly.
-      await applyAndRemoveTags(email, {
-        add: tags,
-        remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled'],
-      });
-    } else {
-      await applyAndRemoveTags(email, {
-        add: ['starter-pack-buyer'],
-        remove: ['refunded'],
-      });
-    }
+    // Trial signups get 'trial-member'. They convert to 'member' when the
+    // first real invoice is paid (handled in upsertSubscriptionFromStripe).
+    // The founder tag lands at signup either way: the spot is locked then.
+    const tags = [isTrial ? 'trial-member' : 'member', ...(isFounder ? ['founder'] : [])];
+    // Removing any prior 'lapsed-member' or 'refunded' tag handles the
+    // "former member who returns" case cleanly.
+    await applyAndRemoveTags(email, {
+      add: tags,
+      remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled'],
+    });
   } catch (err) {
     console.error('[webhook] kit tag failed:', err);
   }
 
-  console.log(`[webhook] provisioned ${tier} for ${email} (clerk: ${clerkUser.id})`);
+  console.log(`[webhook] provisioned member for ${email} (clerk: ${clerkUser.id})`);
 }
 
 /**
@@ -340,9 +295,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
  * the visitor's email (Stripe Checkout collects it before card entry).
  *
  * Important guard: skip sending if the session belongs to someone who is
- * already a member or starter — that would be confusing ("you already
- * bought this"). Stripe sets `customer_details.email` once the form is
- * submitted, even on expiry, so we use that as the lookup key.
+ * already a member — that would be confusing ("you already bought this").
+ * Stripe sets `customer_details.email` once the form is submitted, even on
+ * expiry, so we use that as the lookup key.
  */
 async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   const email = (
@@ -355,37 +310,22 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
     return;
   }
 
-  // Determine which flow they bailed on: subscription mode → membership,
-  // payment mode → starter pack. Same logic as the success path.
-  const kind: 'membership' | 'starter_pack' =
-    session.metadata?.kind === 'starter_pack' || session.mode === 'payment'
-      ? 'starter_pack'
-      : 'membership';
-
-  // Skip if we already provisioned this email (don't bug existing buyers).
+  // Skip if we already provisioned this email (don't bug existing members).
   try {
     const rows = await db
-      .select({ id: users.id, starterAt: users.starterPackPurchasedAt })
+      .select({ id: users.id })
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
     const existing = rows[0];
     if (existing) {
-      // For membership flow: check if they have an active subscription
-      if (kind === 'membership') {
-        const subs = await db
-          .select({ status: subscriptions.status })
-          .from(subscriptions)
-          .where(eq(subscriptions.userId, existing.id))
-          .limit(1);
-        if (subs.some((s) => s.status === 'active' || s.status === 'trialing')) {
-          console.log(`[webhook] checkout expired for ${email} — already a member, skipping`);
-          return;
-        }
-      }
-      // For starter flow: skip if they already have the pack
-      if (kind === 'starter_pack' && existing.starterAt) {
-        console.log(`[webhook] checkout expired for ${email} — already a starter, skipping`);
+      const subs = await db
+        .select({ status: subscriptions.status })
+        .from(subscriptions)
+        .where(eq(subscriptions.userId, existing.id))
+        .limit(1);
+      if (subs.some((s) => s.status === 'active' || s.status === 'trialing')) {
+        console.log(`[webhook] checkout expired for ${email} — already a member, skipping`);
         return;
       }
     }
@@ -395,43 +335,35 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   }
 
   // Pull the recovery URL Stripe generates when `after_expiration.recovery`
-  // is enabled on the session. Falls back to the landing page.
+  // is enabled on the session. Falls back to the join page.
   const recoveryUrl =
     (session.after_expiration?.recovery as { url?: string } | undefined)?.url ||
-    `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/${kind === 'membership' ? 'join' : 'shop/starter-pack'}`;
+    `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/join`;
 
   const firstName = session.customer_details?.name?.trim().split(/\s+/)[0] || undefined;
 
   try {
-    if (kind === 'membership') {
-      // For abandoned checkouts we don't have a price ID yet (no completed
-      // purchase). Use the runtime helper — it tells the user whether the
-      // founder rate is STILL available when they come back to finish.
-      // Also compute the live spots-left count so the email's founder
-      // banner can show a real "X spots left" stamp instead of fake urgency.
-      const { isFounderPhaseOpen, getActiveMemberCount, FOUNDER_CAP } = await import('@/lib/membership');
-      const [founderStillOpen, activeCount] = await Promise.all([
-        isFounderPhaseOpen(),
-        getActiveMemberCount(),
-      ]);
-      const spotsLeft = founderStillOpen
-        ? Math.max(0, FOUNDER_CAP - activeCount)
-        : undefined;
-      await sendAbandonedCheckoutMembershipEmail({
-        to: email,
-        firstName,
-        isFounderPhase: founderStillOpen,
-        resumeUrl: recoveryUrl,
-        spotsLeft,
-      });
-    } else {
-      await sendAbandonedCheckoutStarterPackEmail({
-        to: email,
-        firstName,
-        resumeUrl: recoveryUrl,
-      });
-    }
-    console.log(`[webhook] sent abandoned-checkout email to ${email} (${kind})`);
+    // For abandoned checkouts we don't have a price ID yet (no completed
+    // purchase). Use the runtime helper — it tells the user whether the
+    // founder rate is STILL available when they come back to finish.
+    // Also compute the live spots-left count so the email's founder
+    // banner can show a real "X spots left" stamp instead of fake urgency.
+    const { isFounderPhaseOpen, getActiveMemberCount, FOUNDER_CAP } = await import('@/lib/membership');
+    const [founderStillOpen, activeCount] = await Promise.all([
+      isFounderPhaseOpen(),
+      getActiveMemberCount(),
+    ]);
+    const spotsLeft = founderStillOpen
+      ? Math.max(0, FOUNDER_CAP - activeCount)
+      : undefined;
+    await sendAbandonedCheckoutMembershipEmail({
+      to: email,
+      firstName,
+      isFounderPhase: founderStillOpen,
+      resumeUrl: recoveryUrl,
+      spotsLeft,
+    });
+    console.log(`[webhook] sent abandoned-checkout email to ${email}`);
   } catch (err) {
     console.error('[webhook] abandoned-checkout email failed:', err);
   }
@@ -445,8 +377,6 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
  *   - Subscription invoice refund → cancel the subscription immediately
  *     in Stripe (which fires `customer.subscription.deleted` → our DB row
  *     gets marked canceled → the access tier lookup drops the user to guest)
- *   - One-time Starter Pack refund → clear `users.starterPackPurchasedAt`
- *     directly so the download endpoint stops serving PDFs to this user
  *
  * Skips partial refunds (`charge.refunded === false`, only `amount_refunded`
  * partial) — those are usually goodwill gestures, not "give it all back."
@@ -508,62 +438,10 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
     return;
   }
 
-  // Case 2: charge has a payment_intent without an invoice → one-time payment.
-  // Look up the PI's metadata to confirm it was a starter-pack purchase,
-  // then clear `starterPackPurchasedAt` for the buyer's user row.
-  if (charge.payment_intent) {
-    try {
-      const piId =
-        typeof charge.payment_intent === 'string' ? charge.payment_intent : charge.payment_intent.id;
-      const pi = await stripe.paymentIntents.retrieve(piId);
-      const isStarterPack = pi.metadata?.kind === 'starter_pack' || pi.metadata?.tier === 'starter';
-      if (!isStarterPack) {
-        console.log(`[webhook] refund on non-starter PI ${piId} — nothing to revoke`);
-        return;
-      }
-      const email = (charge.billing_details?.email || pi.receipt_email || '').toLowerCase();
-      if (!email) {
-        console.warn('[webhook] starter pack refund without email — cannot revoke access:', charge.id);
-        return;
-      }
-      const result = await db
-        .update(users)
-        .set({ starterPackPurchasedAt: null })
-        .where(eq(users.email, email))
-        .returning({ id: users.id, clerkId: users.clerkId });
-      console.log(
-        `[webhook] cleared starter access for ${email} after refund (${result.length} row${result.length === 1 ? '' : 's'} updated)`,
-      );
-
-      // Also update Clerk publicMetadata → 'guest' so the SiteHeader badge
-      // updates without requiring a sign-out / sign-in.
-      const clerkId = result[0]?.clerkId;
-      if (clerkId) {
-        try {
-          const clerk = getClerk();
-          if (clerk) {
-            await clerk.users.updateUserMetadata(clerkId, {
-              publicMetadata: { tier: 'guest', founder: false },
-            });
-          }
-        } catch (err) {
-          console.warn('[webhook] could not write canceled metadata:', err);
-        }
-      }
-
-      // Kit: mark refunded, drop the starter-pack-buyer tag.
-      try {
-        await applyAndRemoveTags(email, {
-          add: ['refunded'],
-          remove: ['starter-pack-buyer'],
-        });
-      } catch (err) {
-        console.warn('[webhook] kit refund tagging failed:', err);
-      }
-    } catch (err) {
-      console.error('[webhook] failed to revoke starter access after refund:', err);
-    }
-  }
+  // Non-invoice charges (one-time payments) no longer exist — the membership
+  // is the only product, and it always bills through a subscription invoice
+  // (Case 1 above). Anything else is nothing of ours to revoke.
+  console.log(`[webhook] refund on non-subscription charge ${charge.id} — nothing to revoke`);
 }
 
 /**

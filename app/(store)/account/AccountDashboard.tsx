@@ -2,15 +2,13 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import CheckoutButton from '@/components/checkout/CheckoutButton';
 import ReviewModal from '@/components/shop/ReviewModal';
 import TrialCapModal from '@/components/account/TrialCapModal';
 import AddToWeekButton from '@/components/account/AddToWeekButton';
 import FirstRunRedirect from '@/components/account/FirstRunRedirect';
 import { effortFor } from '@/lib/activity-effort';
 import { notifyLocalChanged } from '@/lib/account-sync';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MEMBERSHIP_PRICE_USD } from '@/lib/membership';
-import { STARTER_PACK_CREDIT_LABEL, firstYearPriceAfterCredit } from '@/lib/starter-pack-credit';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 export interface DashboardActivity {
   slug: string;
@@ -25,7 +23,7 @@ export interface DashboardActivity {
 }
 
 type Status = 'none' | 'started' | 'done';
-type Tier = 'member' | 'starter' | 'trial';
+type Tier = 'member' | 'trial';
 
 export interface TrialInfo {
   /** ISO date the trial converts to a paid membership. */
@@ -127,7 +125,7 @@ export default function AccountDashboard({
   const [capModalOpen, setCapModalOpen] = useState(!!initialCapModal);
 
   // Trial members are view-only: any download click opens the upgrade modal.
-  // Members (and starters) navigate straight to the file.
+  // Members navigate straight to the file.
   function handleDownloadClick(e: React.MouseEvent<HTMLAnchorElement>) {
     if (tier !== 'trial') return;
     e.preventDefault();
@@ -254,9 +252,6 @@ export default function AccountDashboard({
     });
   }
 
-  // Trial members get the full library view; only downloading is gated.
-  const isMember = tier === 'member' || tier === 'trial';
-
   const trialEndsLabel = trial
     ? new Date(trial.endsAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })
     : '';
@@ -303,7 +298,7 @@ export default function AccountDashboard({
               <h1 className="font-display text-[clamp(1.625rem,3vw,2rem)] leading-[1.1] tracking-[-0.012em] text-ink">
                 Your{' '}
                 <em className="not-italic italic text-forest">
-                  {isMember ? 'library.' : 'Starter Pack.'}
+                  library.
                 </em>
               </h1>
               <p className="mt-2 font-body text-[13px] text-gray-500 tracking-wide">
@@ -766,63 +761,6 @@ export default function AccountDashboard({
         </div>
       </section>
 
-      {/* STARTER PACK UPGRADE — emphasizes the $45 credit so users know
-          upgrading effectively costs $54 first year, not the full $99.
-          Headline + sidebar both show the credit math. */}
-      {tier === 'starter' && (
-        <section className="pt-2 pb-14">
-          <div className="mx-auto max-w-[980px] px-6">
-            <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[16px] p-10 md:p-12 grid grid-cols-1 md:grid-cols-[1.3fr_0.7fr] gap-8 md:gap-10 items-center">
-              <div>
-                <p className="font-body font-semibold text-[11.5px] uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  Your {STARTER_PACK_CREDIT_LABEL} credit is waiting
-                </p>
-                <h2 className="mt-3.5 font-display text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.08] tracking-[-0.012em] text-balance">
-                  Unlock the other 90+ activities for{' '}
-                  <em className="not-italic italic text-forest-dark">
-                    ${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)} the first year.
-                  </em>
-                </h2>
-                <p className="mt-3.5 mb-5 text-[15.5px] leading-[1.55] text-gray-600 max-w-[520px]">
-                  We&apos;ll take{' '}
-                  <strong className="text-forest-dark">
-                    {STARTER_PACK_CREDIT_LABEL} off your first year
-                  </strong>
-                  . Same {STARTER_PACK_CREDIT_LABEL} you paid for the Starter Pack.{' '}
-                  {IS_FOUNDER_PHASE
-                    ? `${MEMBERSHIP_PRICE_YEAR} after that, locked in for life as a founding member.`
-                    : `${MEMBERSHIP_PRICE_YEAR} on renewal.`}
-                </p>
-                <CheckoutButton
-                  kind="membership"
-                  className="inline-flex items-center gap-2.5 bg-forest text-cream font-body font-semibold py-3.5 px-5 rounded-xl text-[15px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  <span className="inline-flex items-center gap-2.5">
-                    Upgrade for ${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)} &rarr;
-                  </span>
-                </CheckoutButton>
-              </div>
-              <div className="font-display italic text-[clamp(1.375rem,2.8vw,1.875rem)] leading-[1.2] text-forest-dark text-center text-balance">
-                90+ more activities.
-                <br />
-                <span className="not-italic">
-                  <s className="opacity-50 mr-1.5">{MEMBERSHIP_PRICE_YEAR}</s>
-                  <em>${firstYearPriceAfterCredit(MEMBERSHIP_PRICE_USD)}/yr 1</em>
-                </span>
-                {IS_FOUNDER_PHASE && (
-                  <>
-                    <br />
-                    <em className="text-[16px] font-normal not-italic block mt-1 text-forest-dark/70">
-                      Then locked in for life.
-                    </em>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </main>
     <TrialCapModal
       open={capModalOpen}

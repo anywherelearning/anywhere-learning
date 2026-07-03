@@ -16,13 +16,6 @@ export const users = pgTable('users', {
   clerkId: text('clerk_id').notNull().unique(),
   email: text('email').notNull(),
   stripeCustomerId: text('stripe_customer_id'),
-  /** Set when the user buys the Starter Pack ($44.99 one-time). NULL = never bought. */
-  starterPackPurchasedAt: timestamp('starter_pack_purchased_at'),
-  /**
-   * Set when the user redeems their Starter Pack credit by upgrading to membership.
-   * Used to enforce the "first year only" rule — once set, no further credit applies.
-   */
-  starterPackCreditAppliedAt: timestamp('starter_pack_credit_applied_at'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 

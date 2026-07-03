@@ -19,7 +19,6 @@
 interface StripePriceIds {
   MEMBERSHIP_FOUNDER: string;
   MEMBERSHIP_STANDARD: string;
-  STARTER_PACK_ONE_TIME: string;
 }
 
 const LIVE_PRICES: StripePriceIds = {
@@ -27,14 +26,11 @@ const LIVE_PRICES: StripePriceIds = {
   MEMBERSHIP_FOUNDER: 'price_1TZd7YAkIBECpwGmljfvhird',
   /** Subscription, $149/year — applies to member 101+. (LIVE) */
   MEMBERSHIP_STANDARD: 'price_1TZd7ZAkIBECpwGmLH4ogWnu',
-  /** One-time, $44.99 — Starter Pack. (LIVE) */
-  STARTER_PACK_ONE_TIME: 'price_1TZd7ZAkIBECpwGmQU3zzPjY',
 };
 
 const TEST_PRICES: StripePriceIds = {
   MEMBERSHIP_FOUNDER: 'price_1TZMETAMzOBftCnthrU2MJLz',
   MEMBERSHIP_STANDARD: 'price_1TZMEUAMzOBftCntMuS7OcZg',
-  STARTER_PACK_ONE_TIME: 'price_1TZMEUAMzOBftCntug0I7khe',
 };
 
 const IS_TEST_MODE = (process.env.STRIPE_SECRET_KEY || '').startsWith('sk_test_');

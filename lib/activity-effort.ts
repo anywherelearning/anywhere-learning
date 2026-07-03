@@ -10,7 +10,7 @@
  * (time-budget matching) and what the "effort" label on activity cards shows.
  * Keyed by product slug (matches the keys in lib/product-descriptions.ts).
  *
- * Bundles, mega bundles, the starter pack, seasonal packs, and skills maps
+ * Bundles, mega bundles, seasonal packs, and skills maps
  * are intentionally NOT listed here. They are not individual activities and
  * are never surfaced as a weekly hero pick.
  */

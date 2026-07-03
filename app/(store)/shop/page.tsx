@@ -568,10 +568,10 @@ export default function ShopPage() {
                       </span>
                     </Link>
                     <Link
-                      href="/shop/starter-pack"
+                      href="/free-guide"
                       className="inline-flex items-center gap-2.5 border-[1.5px] border-forest text-forest-dark font-semibold py-[14px] px-[22px] rounded-xl text-[15px] hover:bg-[#E6EBDF] hover:-translate-y-px transition-all duration-200"
                     >
-                      Or try the Starter Pack
+                      Or try the free guide first
                       <span className="font-display italic text-base">&rarr;</span>
                     </Link>
                   </div>
@@ -596,10 +596,10 @@ export default function ShopPage() {
           </div>
         </section>
 
-        {/* 02 THREE PATHS */}
+        {/* 02 TWO PATHS */}
         <section className="bg-cream pb-14">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          <div className="mx-auto max-w-[780px] px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <Link
                 href="/free-guide"
                 className="bg-cream border border-[#D8D4C5] rounded-[14px] p-5 flex items-center justify-between gap-4 hover:-translate-y-0.5 hover:shadow-[0_16px_28px_-22px_rgba(45,58,46,0.24)] hover:border-[#C9C5B7] transition-all duration-200 no-underline text-ink"
@@ -609,7 +609,7 @@ export default function ShopPage() {
                     Free
                   </div>
                   <div className="font-display text-[21px] leading-[1.1] text-ink mb-1">
-                    Free Starter Guide
+                    Free 7-Day Guide
                   </div>
                   <p className="text-[13.5px] text-gray-600 leading-[1.45] m-0">
                     7 activities. Sent by email. Zero commitment.
@@ -619,29 +619,6 @@ export default function ShopPage() {
                   <div className="font-display text-[24px] leading-none text-ink mb-1.5">$0</div>
                   <span className="font-semibold text-[13px] text-forest-dark border-b border-forest/25 pb-[1px]">
                     Get it &rarr;
-                  </span>
-                </div>
-              </Link>
-
-              <Link
-                href="/shop/starter-pack"
-                className="bg-[#F2EFE4] border border-[rgba(201,123,92,0.3)] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-5 flex items-center justify-between gap-4 hover:-translate-y-0.5 hover:shadow-[0_16px_28px_-22px_rgba(45,58,46,0.24)] transition-all duration-200 no-underline text-ink"
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-[#C97B5C] mb-1.5">
-                    One-time
-                  </div>
-                  <div className="font-display text-[21px] leading-[1.1] text-ink mb-1">
-                    The Starter Pack
-                  </div>
-                  <p className="text-[13.5px] text-gray-600 leading-[1.45] m-0">
-                    10 of our favorite activities. Yours forever.
-                  </p>
-                </div>
-                <div className="text-right shrink-0">
-                  <div className="font-display text-[24px] leading-none text-ink mb-1.5">$44.99</div>
-                  <span className="font-semibold text-[13px] text-forest-dark border-b border-forest/25 pb-[1px]">
-                    See it &rarr;
                   </span>
                 </div>
               </Link>
@@ -807,8 +784,8 @@ export default function ShopPage() {
           </div>
         </section>
 
-        {/* 05 UNLOCK — Membership + Starter Pack side by side */}
-        <section className="bg-cream pt-12 md:pt-16 pb-16" id="starter-pack">
+        {/* 05 UNLOCK — Membership */}
+        <section className="bg-cream pt-12 md:pt-16 pb-16" id="membership">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-10">
@@ -817,13 +794,13 @@ export default function ShopPage() {
                   Ready to unlock
                 </p>
                 <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight text-balance">
-                  Two ways in. <span className="italic text-forest">Pick yours.</span>
+                  One membership. <span className="italic text-forest">The whole library.</span>
                 </h2>
               </div>
             </ScrollReveal>
             <ScrollReveal>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7 max-w-[1000px] mx-auto items-stretch">
-                {/* Membership (primary) */}
+              <div className="max-w-[560px] mx-auto">
+                {/* Membership */}
                 <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-8 md:p-10 flex flex-col">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
@@ -841,6 +818,7 @@ export default function ShopPage() {
                   <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 100+ activities, all categories</span>
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> New content every quarter</span>
+                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Start with a 14-day free trial</span>
                     {IS_FOUNDER_PHASE && (
                       <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Founder rate locked for life</span>
                     )}
@@ -857,39 +835,6 @@ export default function ShopPage() {
                     </Link>
                     <p className="mt-3 text-[13px] text-gray-500">
                       14-day money-back guarantee &middot; Cancel anytime
-                    </p>
-                  </div>
-                </div>
-
-                {/* Starter Pack (secondary) */}
-                <div className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-8 md:p-10 flex flex-col">
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
-                    <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
-                    Not ready for the membership?
-                  </p>
-                  <h3 className="mt-3.5 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight text-balance">
-                    Start with the{' '}
-                    <span className="italic text-[#C97B5C]">Starter Pack.</span>
-                  </h3>
-                  <p className="mt-3.5 text-[15.5px] leading-[1.6] text-gray-600">
-                    10 of our favorite activities across the library. $44.99 one-time. Yours forever.
-                    A real entry point into the toolkit, no subscription required.
-                  </p>
-                  <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
-                    <span className="inline-flex items-center gap-2"><span className="text-[#C97B5C] font-bold">✓</span> 10 of our favorite activities</span>
-                    <span className="inline-flex items-center gap-2"><span className="text-[#C97B5C] font-bold">✓</span> One-time $44.99, no subscription</span>
-                    <span className="inline-flex items-center gap-2"><span className="text-[#C97B5C] font-bold">✓</span> Yours forever, reusable year after year</span>
-                  </div>
-                  <div className="mt-auto pt-6">
-                    <Link
-                      href="/shop/starter-pack"
-                      className="inline-flex items-center gap-2.5 border-[1.5px] border-forest text-forest-dark font-semibold py-[14px] px-[22px] rounded-xl text-[15px] hover:bg-[#E6EBDF] hover:-translate-y-px transition-all duration-200"
-                    >
-                      See the Starter Pack
-                      <span className="font-display italic text-base">&rarr;</span>
-                    </Link>
-                    <p className="mt-3 text-[13px] text-gray-500">
-                      Instant download &middot; Yours forever
                     </p>
                   </div>
                 </div>
@@ -932,11 +877,11 @@ export default function ShopPage() {
               {[
                 {
                   q: 'Can I buy individual activities?',
-                  a: `No. Activities are only available through the membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}) or the Starter Pack ($44.99 for 10 activities). The free guide is the lowest-commitment way to try us out before deciding.`,
+                  a: `No. The whole library comes with one membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}). The free 7-day guide is the lowest-commitment way to try us out, and every membership starts with a 14-day free trial, so you can look before you pay.`,
                 },
                 {
-                  q: "What's the difference between the Starter Pack and the membership?",
-                  a: `The Starter Pack is 10 of our favorite activities for $44.99 once, yours forever. The membership unlocks everything: 100+ activities, plus new ones every quarter, for ${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' as a founding member' : ''}. If you want to keep doing real-world learning for a year, the membership is the better deal.`,
+                  q: 'How does the free trial work?',
+                  a: `Every membership starts with a 14-day free trial. You are not charged today. During the trial you can read every guide in your browser. Downloads unlock when your membership starts, and you can cancel anytime before then and pay nothing.`,
                 },
               ].map((item, i) => (
                 <details

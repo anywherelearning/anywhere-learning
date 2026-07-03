@@ -64,9 +64,7 @@ vi.mock('@/lib/convertkit', () => ({
 
 vi.mock('@/lib/resend', () => ({
   sendMembershipWelcomeEmail: vi.fn(),
-  sendStarterPackWelcomeEmail: vi.fn(),
   sendAbandonedCheckoutMembershipEmail: vi.fn(),
-  sendAbandonedCheckoutStarterPackEmail: vi.fn(),
 }));
 
 // ── Helpers ─────────────────────────────────────────────────────────

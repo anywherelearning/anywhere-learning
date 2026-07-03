@@ -5,7 +5,6 @@ import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import CheckoutButton from '@/components/checkout/CheckoutButton';
-import MembershipCreditBanner from '@/components/checkout/MembershipCreditBanner';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -209,15 +208,12 @@ export default async function JoinPage({
   // The download endpoint + account page redirect here with ?from=…&reason=…
   //
   // We resolve the viewer's tier so the copy fits their actual situation.
-  // Without this, a Starter Pack buyer would see "Your library access has
-  // ended" — which falsely implies they were once a member.
   const sp = (await searchParams) || {};
-  const isStarterUpgrade = sp.reason === 'starter-upgrade';
   const isNoAccess = sp.reason === 'no-access';
   const isMembershipRequired = sp.reason === 'membership-required';
   const isTrialDownload = sp.reason === 'trial-upgrade-to-download';
 
-  let viewerTier: 'guest' | 'starter' | 'member' | 'trial' = 'guest';
+  let viewerTier: 'guest' | 'member' | 'trial' = 'guest';
   // Trial framing only shows to people who can actually get a trial. Signed-out
   // visitors default to eligible (optimistic; the server still won't grant a
   // second trial). A signed-in returning customer who already used theirs sees
@@ -242,11 +238,8 @@ export default async function JoinPage({
     if (isTrialDownload) {
       return 'Downloads come with membership. Keep reading every guide in your browser, and subscribe anytime to save them as PDFs.';
     }
-    // "isStarterUpgrade" / "isMembershipRequired" come from clicking through
-    // a specific gated activity, so the singular "that activity" copy fits.
-    if (isStarterUpgrade) {
-      return 'That activity is in the full membership. Upgrade once and unlock everything.';
-    }
+    // "isMembershipRequired" comes from clicking through a specific gated
+    // activity, so the singular "that activity" copy fits.
     if (isMembershipRequired) {
       return 'Become a member to open that activity, plus the rest of the library.';
     }
@@ -254,9 +247,6 @@ export default async function JoinPage({
     // record. The message is generic (no specific activity in scope), and
     // should match the viewer's actual tier so it reads naturally.
     if (isNoAccess) {
-      if (viewerTier === 'starter') {
-        return "Ready for the full library? Your Starter Pack credit applies when you upgrade.";
-      }
       if (viewerTier === 'member' || viewerTier === 'trial') {
         return "Your membership is active. If something looks off, please contact us.";
       }
@@ -432,11 +422,6 @@ export default async function JoinPage({
                 classroom to have more time to get her kids ready for
                 life. {m.price} for the year.
               </p>
-
-              {/* Renders nothing when the viewer isn't an eligible Starter Pack buyer. */}
-              <div className="mt-6">
-                <MembershipCreditBanner />
-              </div>
 
               <div className="mt-6">
                 <CtaBlock m={m} trialEligible={trialEligible} />

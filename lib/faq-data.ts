@@ -138,7 +138,7 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: "What's your refund policy?",
     answer:
-      "For the membership: you get a 14-day free trial first, so if you cancel during the trial you're never charged at all. After your membership starts, there's a 14-day money-back guarantee on top: email within 14 days of your first charge for a full refund, no questions asked. The Starter Pack has a 14-day refund window from the time of purchase.",
+      "You get a 14-day free trial first, so if you cancel during the trial you're never charged at all. After your membership starts, there's a 14-day money-back guarantee on top: email within 14 days of your first charge for a full refund, no questions asked.",
   },
   {
     question: 'How do I pay?',

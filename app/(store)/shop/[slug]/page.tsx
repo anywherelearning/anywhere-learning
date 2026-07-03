@@ -20,14 +20,13 @@ import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_YR,
   MEMBERSHIP_PRICE_YEAR,
-  STARTER_PACK_SLUGS,
 } from "@/lib/membership";
 import { getProductSkills } from "@/lib/skills";
 
 // Render per-request so the access card reflects the visitor's real tier.
 // (Was statically generated with `revalidate = 86400`, which served every
-// visitor the build-time 'guest' state and made starter-pack buyers see
-// "Unlock with membership" on activities they actually owned.)
+// visitor the build-time 'guest' state and made members see "Unlock with
+// membership" on activities they actually owned.)
 export const dynamic = 'force-dynamic';
 
 /* ─────────────────────────────────────────────────────────────────
@@ -180,16 +179,15 @@ export async function generateMetadata({
 import type { AccessTier } from '@/lib/access';
 
 // Resolve the visitor's access tier. Real lookup goes through Clerk auth →
-// the `users` table → either a subscription (member, or trial while the free
-// trial runs) or a stamped starterPackPurchasedAt (starter). Falls back to a
-// query param (development-only) when Clerk isn't configured.
+// the `users` table → a subscription (member, or trial while the free trial
+// runs). Falls back to a query param (development-only) when Clerk isn't
+// configured.
 async function detectAccessTier(searchParams: { tier?: string }): Promise<AccessTier> {
   // Dev/preview override (NEVER in production — only affects the "in your
   // library" badge here; content is gated by the download endpoint).
   if (process.env.NODE_ENV !== 'production') {
     if (searchParams.tier === 'member') return 'member';
     if (searchParams.tier === 'trial') return 'trial';
-    if (searchParams.tier === 'starter') return 'starter';
     if (searchParams.tier === 'guest') return 'guest';
   }
 
@@ -502,12 +500,10 @@ export default async function ProductPage({
 
               {/* Access card */}
               {(() => {
-                const inStarterPack = STARTER_PACK_SLUGS.has(product.slug);
-                const hasAccess =
-                  tier === 'member' || tier === 'trial' || (tier === 'starter' && inStarterPack);
+                const hasAccess = tier === 'member' || tier === 'trial';
 
                 if (hasAccess) {
-                  // Member or Starter-Pack buyer with access to this activity
+                  // Member or trial member — this activity is in their library
                   return (
                     <div className="mt-6 max-w-[400px] bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(58,90,64,0.28)]">
                       <div className="flex items-center justify-between gap-3 mb-2">
@@ -516,7 +512,7 @@ export default async function ProductPage({
                           In your library
                         </span>
                         <span className="font-display italic text-[13px] text-forest-dark">
-                          {tier === 'member' ? 'Member' : tier === 'trial' ? 'Free trial' : 'Starter Pack'}
+                          {tier === 'member' ? 'Member' : 'Free trial'}
                         </span>
                       </div>
                       <Link
@@ -531,35 +527,6 @@ export default async function ProductPage({
                       </Link>
                       <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
                         Use on any device · Year after year
-                      </p>
-                    </div>
-                  );
-                }
-
-                if (tier === 'starter' && !inStarterPack) {
-                  // Starter Pack buyer looking at an activity NOT in their pack
-                  return (
-                    <div className="mt-6 max-w-[400px] bg-cream border border-[#D8D4C5] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(45,58,46,0.28)]">
-                      <div className="flex items-center justify-between gap-3 mb-2">
-                        <span className="inline-flex items-center gap-1.5 bg-[#F2EFE4] text-gray-500 text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
-                          <span aria-hidden="true">🔒</span>
-                          Not in your pack
-                        </span>
-                        <span className="font-display italic text-[14px] text-[#C97B5C]">
-                          {MEMBERSHIP_PRICE_YEAR}
-                        </span>
-                      </div>
-                      <CheckoutButton
-                        kind="membership"
-                        className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-                      >
-                        <span className="inline-flex items-center gap-2">
-                          Upgrade to membership
-                          <span aria-hidden="true">→</span>
-                        </span>
-                      </CheckoutButton>
-                      <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
-                        Unlock this activity and the full library
                       </p>
                     </div>
                   );
@@ -584,18 +551,8 @@ export default async function ProductPage({
                       Unlock with membership
                       <span aria-hidden="true">→</span>
                     </Link>
-                    {inStarterPack && (
-                      <Link
-                        href="/shop/starter-pack"
-                        className="mt-1.5 w-full inline-flex items-center justify-center gap-1.5 text-forest-dark text-[13.5px] font-medium hover:text-forest transition-colors"
-                      >
-                        Or get the Starter Pack <span aria-hidden="true">→</span>
-                      </Link>
-                    )}
                     <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
-                      {inStarterPack
-                        ? `In the Starter Pack and the Membership · 14-day refund`
-                        : `In the Membership · 14-day refund`}
+                      In the Membership · 14-day refund
                     </p>
                   </div>
                 );
@@ -825,7 +782,7 @@ export default async function ProductPage({
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </span>
-              {tier === 'member' || tier === 'trial' || (tier === 'starter' && STARTER_PACK_SLUGS.has(product.slug)) ? (
+              {tier === 'member' || tier === 'trial' ? (
                 <>
                   <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
                     Tried it with your kids? Be the first to tell other members what worked.
@@ -847,9 +804,9 @@ export default async function ProductPage({
             </div>
           )}
 
-          {/* Write a review — inline form for members + Starter Pack buyers */}
+          {/* Write a review — inline form for members and trial members */}
           <div className="mt-7">
-            {tier === "member" || tier === "trial" || (tier === "starter" && STARTER_PACK_SLUGS.has(product.slug)) ? (
+            {tier === "member" || tier === "trial" ? (
               <ReviewForm slug={product.slug} productName={product.name} />
             ) : (
               <p className="text-center text-[14px] text-gray-500">
@@ -998,7 +955,7 @@ export default async function ProductPage({
         </div>
       </section>
 
-      {/* SECONDARY OPTIONS — Free guide + (optionally) Starter Pack */}
+      {/* SECONDARY OPTION — Free 7-day guide */}
       <section className="pt-4 pb-16">
         <div className="mx-auto max-w-[1180px] px-6">
           <div className="max-w-[1000px] mx-auto text-center mb-7">
@@ -1008,64 +965,30 @@ export default async function ProductPage({
               <span className="w-[22px] h-px bg-[#C9C5B7] inline-block" />
             </p>
           </div>
-          {(() => {
-            const inStarterPack = STARTER_PACK_SLUGS.has(product.slug);
-            const wrapClass = inStarterPack
-              ? 'max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5'
-              : 'max-w-[560px] mx-auto';
-            return (
-              <div className={wrapClass}>
-                {/* Free Guide card — butter-tinted */}
-                <div className="bg-[#F7EFD3] border border-[#E3D8A8] rounded-[16px] p-7 text-center flex flex-col h-full">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A5E1F]">
-                    Free starter guide
-                  </p>
-                  <h3 className="mt-2.5 font-display text-[22px] leading-[1.18] text-ink text-balance">
-                    Try it{' '}
-                    <em className="not-italic italic text-[#7A5E1F]">free for a week.</em>
-                  </h3>
-                  <p className="mt-2.5 text-[14.5px] leading-[1.55] text-gray-600 mb-5 flex-1">
-                    Seven real-world activities. One a day, for a week. No payment, no commitment.
-                  </p>
-                  <div>
-                    <Link
-                      href="/free-guide"
-                      className="inline-flex items-center gap-2 bg-[#B6913F] text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] hover:bg-[#7A5E1F] hover:-translate-y-px transition-all"
-                    >
-                      Send me the free guide
-                      <span aria-hidden="true">→</span>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Starter Pack card — peach-tinted, only when activity is in the pack */}
-                {inStarterPack && (
-                  <div className="bg-[#F2DECF] border border-[#E8C4AA] rounded-[16px] p-7 text-center flex flex-col h-full">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A3D24]">
-                      Starter Pack &middot; $44.99
-                    </p>
-                    <h3 className="mt-2.5 font-display text-[22px] leading-[1.18] text-ink text-balance">
-                      Own this activity{' '}
-                      <em className="not-italic italic text-[#7A3D24]">+ 9 more.</em>
-                    </h3>
-                    <p className="mt-2.5 text-[14.5px] leading-[1.55] text-gray-600 mb-5 flex-1">
-                      10 favorite activities and the Future-Ready Skills Map.
-                      One-time purchase, yours forever.
-                    </p>
-                    <div>
-                      <Link
-                        href="/shop/starter-pack"
-                        className="inline-flex items-center gap-2 bg-[#C97B5C] text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] hover:bg-[#7A3D24] hover:-translate-y-px transition-all"
-                      >
-                        See the Starter Pack
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                    </div>
-                  </div>
-                )}
+          <div className="max-w-[560px] mx-auto">
+            {/* Free Guide card — butter-tinted */}
+            <div className="bg-[#F7EFD3] border border-[#E3D8A8] rounded-[16px] p-7 text-center flex flex-col h-full">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A5E1F]">
+                Free 7-day guide
+              </p>
+              <h3 className="mt-2.5 font-display text-[22px] leading-[1.18] text-ink text-balance">
+                Try it{' '}
+                <em className="not-italic italic text-[#7A5E1F]">free for a week.</em>
+              </h3>
+              <p className="mt-2.5 text-[14.5px] leading-[1.55] text-gray-600 mb-5 flex-1">
+                Seven real-world activities. One a day, for a week. No payment, no commitment.
+              </p>
+              <div>
+                <Link
+                  href="/free-guide"
+                  className="inline-flex items-center gap-2 bg-[#B6913F] text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] hover:bg-[#7A5E1F] hover:-translate-y-px transition-all"
+                >
+                  Send me the free guide
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
-            );
-          })()}
+            </div>
+          </div>
         </div>
       </section>
     </>

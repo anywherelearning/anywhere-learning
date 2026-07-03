@@ -4,7 +4,6 @@
  *
  *   1. Anywhere Learning Membership — Founder rate ($99/year, recurring)
  *   2. Anywhere Learning Membership — Standard rate ($149/year, recurring)
- *   3. Anywhere Learning Starter Pack ($44.99 one-time)
  *
  * Re-runnable: it looks up existing products by name first and reuses them.
  *
@@ -67,19 +66,6 @@ const SPECS: ProductSpec[] = [
         currency: 'usd',
         recurring: { interval: 'year' },
         metadata: { tier: 'standard', kind: 'membership' },
-      },
-    ],
-  },
-  {
-    name: 'Anywhere Learning Starter Pack',
-    description: '10 favorite activities + the Future-Ready Skills Map. One-time purchase, yours forever.',
-    metadata: { kind: 'starter_pack' },
-    prices: [
-      {
-        nickname: 'Starter Pack — one-time',
-        unit_amount: 4499,
-        currency: 'usd',
-        metadata: { kind: 'starter_pack' },
       },
     ],
   },
@@ -155,7 +141,6 @@ async function main() {
   for (const r of results) {
     for (const [tier, id] of Object.entries(r.priceIds)) {
       const key =
-        r.name.toLowerCase().includes('starter') ? 'STARTER_PACK_ONE_TIME' :
         tier === 'founder' ? 'MEMBERSHIP_FOUNDER' :
         tier === 'standard' ? 'MEMBERSHIP_STANDARD' :
         tier.toUpperCase();

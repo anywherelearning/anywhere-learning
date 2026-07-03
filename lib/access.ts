@@ -1,13 +1,11 @@
 /**
- * Resolves a user's access tier (`member` / `trial` / `starter` / `guest`)
- * from the DB.
+ * Resolves a user's access tier (`member` / `trial` / `guest`) from the DB.
  *
  * Order of precedence:
  *   1. Subscription in `subscriptions` table → 'member' (paid) or 'trial'
  *      (status 'trialing': free trial, view everything in the in-app reader
  *      but no downloads — downloading is a paid-member benefit)
- *   2. `users.starterPackPurchasedAt` is set → 'starter'
- *   3. else → 'guest'
+ *   2. else → 'guest'
  *
  * "Active" means status === 'active' OR ('canceled' with currentPeriodEnd in
  * the future, they paid through the year, we honour it). A trial canceled
@@ -19,7 +17,7 @@ import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { eq, and, or, gt, sql } from 'drizzle-orm';
 
-export type AccessTier = 'guest' | 'starter' | 'member' | 'trial';
+export type AccessTier = 'guest' | 'member' | 'trial';
 
 export interface AccessContext {
   tier: AccessTier;
@@ -34,10 +32,7 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
   const guest: AccessContext = { tier: 'guest', userId: null, trialEndsAt: null };
   try {
     const rows = await db
-      .select({
-        userId: users.id,
-        starterPackPurchasedAt: users.starterPackPurchasedAt,
-      })
+      .select({ userId: users.id })
       .from(users)
       .where(eq(users.clerkId, clerkId))
       .limit(1);
@@ -74,9 +69,6 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
       }
       return { tier: 'member', userId: u.userId, trialEndsAt: null };
     }
-
-    // 2) Starter Pack
-    if (u.starterPackPurchasedAt) return { tier: 'starter', userId: u.userId, trialEndsAt: null };
 
     return { ...guest, userId: u.userId };
   } catch (err) {
@@ -125,75 +117,4 @@ export async function findUserByEmail(email: string) {
     .where(eq(users.email, email.toLowerCase()))
     .limit(1);
   return rows[0] || null;
-}
-
-import type { StarterPackCreditEligibility } from './starter-pack-credit';
-
-/**
- * Resolves whether a signed-in user qualifies for the one-time Starter Pack
- * credit on their first membership purchase.
- *
- * Eligible iff: user exists in DB AND has bought the Starter Pack AND has
- * not previously redeemed the credit.
- */
-export async function getStarterPackCreditEligibility(
-  clerkId: string | null,
-): Promise<StarterPackCreditEligibility> {
-  if (!clerkId) {
-    return {
-      eligible: false,
-      reason: 'no-user',
-      starterPackPurchasedAt: null,
-      appliedAt: null,
-    };
-  }
-  try {
-    const rows = await db
-      .select({
-        starterPackPurchasedAt: users.starterPackPurchasedAt,
-        starterPackCreditAppliedAt: users.starterPackCreditAppliedAt,
-      })
-      .from(users)
-      .where(eq(users.clerkId, clerkId))
-      .limit(1);
-    const u = rows[0];
-    if (!u) {
-      return {
-        eligible: false,
-        reason: 'no-user',
-        starterPackPurchasedAt: null,
-        appliedAt: null,
-      };
-    }
-    if (!u.starterPackPurchasedAt) {
-      return {
-        eligible: false,
-        reason: 'no-starter-pack',
-        starterPackPurchasedAt: null,
-        appliedAt: u.starterPackCreditAppliedAt,
-      };
-    }
-    if (u.starterPackCreditAppliedAt) {
-      return {
-        eligible: false,
-        reason: 'already-applied',
-        starterPackPurchasedAt: u.starterPackPurchasedAt,
-        appliedAt: u.starterPackCreditAppliedAt,
-      };
-    }
-    return {
-      eligible: true,
-      reason: 'eligible',
-      starterPackPurchasedAt: u.starterPackPurchasedAt,
-      appliedAt: null,
-    };
-  } catch (err) {
-    console.error('[access] getStarterPackCreditEligibility failed:', err);
-    return {
-      eligible: false,
-      reason: 'no-user',
-      starterPackPurchasedAt: null,
-      appliedAt: null,
-    };
-  }
 }

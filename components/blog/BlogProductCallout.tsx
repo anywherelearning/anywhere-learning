@@ -1,16 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFallbackProductBySlug } from '@/lib/fallback-products';
-import {
-  STARTER_PACK_SLUGS,
-  STARTER_PACK_PRICE,
-  MEMBERSHIP_PRICE_YEAR,
-} from '@/lib/membership';
+import { MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 interface BlogProductCalloutProps {
   /** The activity slug the post wants to highlight. Used to look up the product
-   *  cover + name. The buy CTA always points to either the Starter Pack
-   *  (if the activity is in it) or the Membership (otherwise). */
+   *  cover + name. The buy CTA always points to the Membership. */
   slug: string;
   context?: string;
 }
@@ -19,25 +14,14 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
   const product = getFallbackProductBySlug(slug);
   if (!product) return null;
 
-  const inStarterPack = STARTER_PACK_SLUGS.has(slug);
-
-  // Card content depends on whether this activity is bundled in the Starter Pack
-  // (cheap, one-time, easy yes) or only available in the Membership.
-  const pitch = inStarterPack
-    ? {
-        eyebrow: 'In the Starter Pack',
-        body: context || product.shortDescription,
-        ctaLabel: 'See the Starter Pack',
-        ctaHref: '/shop/starter-pack',
-        priceLine: `${STARTER_PACK_PRICE} · one-time`,
-      }
-    : {
-        eyebrow: 'In the Membership',
-        body: context || product.shortDescription,
-        ctaLabel: 'Unlock with membership',
-        ctaHref: '/join',
-        priceLine: `${MEMBERSHIP_PRICE_YEAR} · 100+ activities`,
-      };
+  // Every activity is included with the Membership.
+  const pitch = {
+    eyebrow: 'In the Membership',
+    body: context || product.shortDescription,
+    ctaLabel: 'Unlock with membership',
+    ctaHref: '/join',
+    priceLine: `${MEMBERSHIP_PRICE_YEAR} · 100+ activities`,
+  };
 
   return (
     // Standard vertical margin. The injector (lib content-blocks pipeline)

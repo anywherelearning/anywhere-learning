@@ -29,20 +29,17 @@ const sections: LegalSection[] = [
     title: 'Our products',
     content: (
       <>
-        <p className="mb-3.5">Anywhere Learning offers three things, and only three:</p>
+        <p className="mb-3.5">Anywhere Learning offers two things, and only two:</p>
         <ul className="list-disc pl-6 mb-3.5 marker:text-forest space-y-2">
           <li>
             <strong className="text-ink font-semibold">Free starter guide</strong>: a free 7-activity PDF (one across each of our seven categories), delivered to your inbox after you give us your email address.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Starter pack</strong>: a one-time $44.99 purchase of 10 hand-picked digital activity guides, delivered instantly to your account.
-          </li>
-          <li>
-            <strong className="text-ink font-semibold">Annual membership</strong>: a recurring annual subscription that provides access to our complete library of activity guides, new content added quarterly, and member-only resources.
+            <strong className="text-ink font-semibold">Annual membership</strong>: a recurring annual subscription that provides access to our complete library of activity guides, new content added quarterly, and member-only resources. It starts with a 14-day free trial.
           </li>
         </ul>
         <p>
-          All products are digital. We do not sell physical goods, individual activity guides, or any other bundles outside of the three offerings listed above. Our guides are designed for parents and guardians to use with their children (ages 6 to 14) for <Em>real-world, hands-on learning.</Em>
+          All products are digital. We do not sell physical goods, individual activity guides, or any other bundles outside of the two offerings listed above. Our guides are designed for parents and guardians to use with their children (ages 6 to 14) for <Em>real-world, hands-on learning.</Em>
         </p>
       </>
     ),
@@ -85,7 +82,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p className="mb-3.5">
-          When you purchase the starter pack or join the membership, you receive a <Em>personal license</Em> to:
+          When you join the membership, you receive a <Em>personal license</Em> to:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-forest">
           <li>Download and use the products with your own family.</li>
@@ -115,22 +112,6 @@ const sections: LegalSection[] = [
           <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the annual membership</span>
           <p>
             <strong className="text-ink font-semibold">14-day money-back guarantee.</strong> If the membership isn&apos;t right for you, email <MailLink /> within 14 days of your first charge for a full refund, <Em>no questions asked.</Em> Refunds are processed within 5 to 10 business days to the original payment method. This guarantee applies on top of the free trial: cancel during the trial and you&apos;re never charged at all.
-          </p>
-        </div>
-        <div className="pl-[18px] border-l border-[#D8D4C5]">
-          <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the starter pack</span>
-          <p className="mb-2.5">
-            Because the starter pack is delivered instantly as a one-time digital purchase, we offer a <Em>14-day refund window</Em> from the time of purchase, <Em>no questions asked.</Em>
-          </p>
-          <ul className="list-disc pl-6 space-y-1.5 marker:text-[#C97B5C] mb-2.5">
-            <li>
-              To request a refund, email <MailLink /> within 14 days of your purchase.
-            </li>
-            <li>Include the email you used to purchase.</li>
-            <li>Refunds are processed within 5 to 10 business days to the original payment method.</li>
-          </ul>
-          <p>
-            After 14 days, all starter pack purchases are final. We encourage you to try our free guide first to see if Anywhere Learning is a good fit for your family.
           </p>
         </div>
         <div className="pl-[18px] border-l border-[#D8D4C5]">

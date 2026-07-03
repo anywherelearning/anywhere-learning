@@ -32,11 +32,9 @@ export async function POST(req: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const customerEmail = emailRegex.test(emailInput) ? emailInput : undefined;
 
-    // Require sign-in for membership checkout. This serves two purposes:
-    //   1. Lets us reliably apply the Starter Pack credit to eligible buyers
-    //      (we need a Clerk userId to look up their purchase history).
-    //   2. Prevents the bad outcome where a Starter Pack buyer pays full $99
-    //      because they hadn't signed in — they'd lose their $45 credit.
+    // Require sign-in for membership checkout. We need a Clerk userId to
+    // enforce the one-trial-per-customer rule (isTrialEligible looks up prior
+    // subscription history) and to link the new subscription to their account.
     let clerkId: string | null = null;
     let clerkEmail: string | undefined;
     let clerkConfigured = false;
