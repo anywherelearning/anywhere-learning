@@ -150,6 +150,12 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'two-minute-story': 'Quick',
   'complaint-to-product': 'Project',
   'plan-a-mini-adventure': 'Project',
+
+  // Debundled seasonal-pack activities
+  'decomposition-detective': 'Project',
+  'seed-travelers': 'Half-Day',
+  'camouflage-challenge': 'Quick',
+  'nature-data-tracker': 'Project',
 };
 
 /** Returns the effort bucket for a slug, or null if it's not an individual activity. */
