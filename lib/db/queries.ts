@@ -1,7 +1,6 @@
 import { db } from './index';
 import { products, orders, users, reviews } from './schema';
 import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
-import { BUNDLE_CONTENTS } from '@/lib/cart';
 
 export async function getActiveProducts() {
   return db.select().from(products)
@@ -117,93 +116,6 @@ function getCurrentSeason(): string {
   if (month >= 5 && month <= 7) return 'summer';
   if (month >= 8 && month <= 10) return 'fall';
   return 'winter';
-}
-
-/**
- * Get bundle upgrade suggestions.
- * For each bundle where the user owns >= 1 child product but not all,
- * return the bundle info, how many they own, and how much they already paid.
- *
- * PRICING: purchasedAmountByProduct values come from orders.amountCents, which
- * is the REAL paid amount (post-BYOB mix-and-match discount, post-promo code).
- * Never substitute SRP here or users who bought at a discount will be
- * over-credited on upgrades. See also:
- *   - app/api/webhooks/stripe/route.ts (where amountCents is computed)
- *   - app/api/checkout/route.ts :: bundleCredits (the authoritative charge)
- */
-export async function getBundleUpgrades(purchasedProductIds: string[], purchasedAmountByProduct: Record<string, number>) {
-  if (purchasedProductIds.length === 0) return [];
-
-  const allBundles = await db.select().from(products)
-    .where(and(eq(products.active, true), eq(products.isBundle, true)));
-
-  // Build a map of bundle product ID → slug for sub-bundle credit lookups
-  const bundleIdToSlug: Record<string, string> = {};
-  for (const b of allBundles) bundleIdToSlug[b.id] = b.slug;
-
-  const upgrades: {
-    bundle: typeof allBundles[0];
-    ownedCount: number;
-    totalCount: number;
-    amountAlreadyPaid: number;
-    upgradePrice: number;
-  }[] = [];
-
-  for (const bundle of allBundles) {
-    // Skip bundles the user already purchased directly
-    if (purchasedProductIds.includes(bundle.id)) continue;
-
-    if (!bundle.bundleProductIds) continue;
-    let childIds: string[];
-    try {
-      childIds = JSON.parse(bundle.bundleProductIds) as string[];
-    } catch { continue; }
-    if (childIds.length === 0) continue;
-
-    // Skip bundles without a Stripe price (can't checkout)
-    if (!bundle.stripePriceId) continue;
-
-    const ownedIds = childIds.filter(id => purchasedProductIds.includes(id));
-    if (ownedIds.length === 0 || ownedIds.length >= childIds.length) continue;
-
-    // Credit individual purchases (non-zero amounts)
-    let amountAlreadyPaid = 0;
-    for (const id of ownedIds) {
-      const paid = purchasedAmountByProduct[id] || 0;
-      if (paid > 0) amountAlreadyPaid += paid;
-    }
-
-    // Credit sub-bundle purchases. Children from bundles have amountCents=0,
-    // so we look for purchased bundles whose children overlap with this bundle.
-    const childSlugSet = new Set(
-      BUNDLE_CONTENTS[bundle.slug] || [],
-    );
-    for (const otherBundle of allBundles) {
-      if (otherBundle.id === bundle.id) continue;
-      if (!purchasedProductIds.includes(otherBundle.id)) continue;
-      const otherChildSlugs = BUNDLE_CONTENTS[otherBundle.slug] || [];
-      if (!otherChildSlugs.some((s) => childSlugSet.has(s))) continue;
-      // User owns this sub-bundle - credit what they paid for it
-      const bundlePaid = purchasedAmountByProduct[otherBundle.id] || 0;
-      if (bundlePaid > 0) amountAlreadyPaid += bundlePaid;
-    }
-
-    const upgradePrice = Math.max(0, bundle.priceCents - amountAlreadyPaid);
-
-    // Skip if user already paid more than the bundle costs
-    if (upgradePrice === 0) continue;
-
-    upgrades.push({
-      bundle,
-      ownedCount: ownedIds.length,
-      totalCount: childIds.length,
-      amountAlreadyPaid,
-      upgradePrice,
-    });
-  }
-
-  // Sort by most owned (closest to completing)
-  return upgrades.sort((a, b) => (b.ownedCount / b.totalCount) - (a.ownedCount / a.totalCount));
 }
 
 /**

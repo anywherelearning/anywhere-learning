@@ -157,18 +157,16 @@ function injectIdeaListLink(guideSlug: string, content: ContentBlock[]): Content
   return result;
 }
 
-function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopic; recommendedProduct?: string; recommendedBundle?: string }): ContentBlock[] {
+function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopic; recommendedProduct?: string }): ContentBlock[] {
   const hasProduct = resource.content.some((b) => b.type === 'product-callout');
-  const hasBundle = resource.content.some((b) => b.type === 'bundle-callout');
-  if (hasProduct && hasBundle) return resource.content;
+  if (hasProduct) return resource.content;
 
   const defaults = resourceProductDefaults[resource.topic];
   if (!defaults) return resource.content;
 
-  if (!resource.recommendedProduct && !resource.recommendedBundle) return resource.content;
+  if (!resource.recommendedProduct) return resource.content;
 
   const productSlug = resource.recommendedProduct || defaults.product;
-  const bundleSlug = resource.recommendedBundle || defaults.bundle;
 
   const h2Indices = resource.content
     .map((b, i) => (b.type === 'heading' && b.level === 2 ? i : -1))
@@ -178,22 +176,15 @@ function injectCallouts(resource: { content: ContentBlock[]; topic: ResourceTopi
 
   const total = resource.content.length;
   const target35 = Math.floor(total * 0.35);
-  const target65 = Math.floor(total * 0.65);
 
-  const productIdx = !hasProduct
-    ? h2Indices.reduce((best, idx) => (Math.abs(idx - target35) < Math.abs(best - target35) ? idx : best), h2Indices[0])
-    : -1;
-  const bundleIdx = !hasBundle
-    ? h2Indices.reduce((best, idx) => {
-        if (productIdx >= 0 && idx <= productIdx) return best;
-        return Math.abs(idx - target65) < Math.abs(best - target65) ? idx : best;
-      }, h2Indices[h2Indices.length - 1])
-    : -1;
+  const productIdx = h2Indices.reduce(
+    (best, idx) => (Math.abs(idx - target35) < Math.abs(best - target35) ? idx : best),
+    h2Indices[0],
+  );
 
   const result: ContentBlock[] = [];
   for (let i = 0; i < resource.content.length; i++) {
-    if (i === productIdx && !hasProduct) result.push({ type: 'product-callout', slug: productSlug });
-    if (i === bundleIdx && !hasBundle && i !== productIdx) result.push({ type: 'bundle-callout', slug: bundleSlug });
+    if (i === productIdx) result.push({ type: 'product-callout', slug: productSlug });
     result.push(resource.content[i]);
   }
   return result;

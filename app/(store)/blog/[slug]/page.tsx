@@ -97,7 +97,6 @@ const CARD_LIKE_BLOCK_TYPES = new Set<BlogContentBlock['type']>([
   'image',
   'cta',
   'product-callout',
-  'bundle-callout',
 ]);
 
 function isCardLike(b: BlogContentBlock | undefined): boolean {
@@ -184,28 +183,23 @@ function injectIdeaListCta(blogSlug: string, content: BlogContentBlock[]): BlogC
   return result;
 }
 
-function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string; recommendedBundle?: string }): BlogContentBlock[] {
+function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCategory; recommendedProduct?: string }): BlogContentBlock[] {
   const defaults = blogProductDefaults[post.category];
 
-  const hasAnyCallout = post.content.some((b) => b.type === 'product-callout' || b.type === 'bundle-callout');
-  if (!post.recommendedProduct && !post.recommendedBundle && !hasAnyCallout) return post.content;
+  const hasAnyCallout = post.content.some((b) => b.type === 'product-callout');
+  if (!post.recommendedProduct && !hasAnyCallout) return post.content;
 
   const productBlock = post.content.find((b) => b.type === 'product-callout');
-  const bundleBlock = post.content.find((b) => b.type === 'bundle-callout');
   const stripped = post.content.filter((b) =>
-    !((b.type === 'product-callout' && !('pinned' in b && b.pinned))
-    || (b.type === 'bundle-callout' && !('pinned' in b && b.pinned)))
+    !(b.type === 'product-callout' && !('pinned' in b && b.pinned))
   );
 
   const productPinned = productBlock && 'pinned' in productBlock && productBlock.pinned;
-  const bundlePinned = bundleBlock && 'pinned' in bundleBlock && bundleBlock.pinned;
 
   const product = productPinned ? null : (productBlock
     || (defaults ? { type: 'product-callout' as const, slug: post.recommendedProduct || defaults.product } : null));
-  const bundle = bundlePinned ? null : (bundleBlock
-    || (defaults ? { type: 'bundle-callout' as const, slug: post.recommendedBundle || defaults.bundle } : null));
 
-  if (!product && !bundle) return post.content;
+  if (!product) return post.content;
 
   // Find paragraph indices we can land *after*. We aim for a paragraph
   // inside a section (i.e. after the section's H2 + first paragraph) so
@@ -217,38 +211,21 @@ function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCateg
 
   if (paragraphIndices.length < 3) return post.content;
 
-  // Target positions: ~50% through the article (product) and ~80% (bundle).
+  // Target position: ~50% through the article.
   const targetMid = Math.floor(stripped.length * 0.5);
-  const targetEnd = Math.floor(stripped.length * 0.8);
 
-  const productAfter = product
-    ? paragraphIndices.reduce((best, idx) =>
-        Math.abs(idx - targetMid) < Math.abs(best - targetMid) ? idx : best,
-        paragraphIndices[0])
-    : -1;
+  const productAfter = paragraphIndices.reduce((best, idx) =>
+    Math.abs(idx - targetMid) < Math.abs(best - targetMid) ? idx : best,
+    paragraphIndices[0]);
 
-  const bundleAfter = bundle
-    ? paragraphIndices.reduce((best, idx) => {
-        if (productAfter >= 0 && idx <= productAfter + 1) return best;
-        return Math.abs(idx - targetEnd) < Math.abs(best - targetEnd) ? idx : best;
-      }, paragraphIndices[paragraphIndices.length - 1])
-    : -1;
-
-  // Resolve real injection slots, avoiding card-like neighbours.
+  // Resolve the real injection slot, avoiding card-like neighbours.
   const taken = new Set<number>();
-  const productSlot = product
-    ? findSafeInjectionSlot(stripped, productAfter, taken)
-    : -1;
+  const productSlot = findSafeInjectionSlot(stripped, productAfter, taken);
   if (productSlot >= 0) taken.add(productSlot);
-  const bundleSlot = bundle
-    ? findSafeInjectionSlot(stripped, bundleAfter, taken)
-    : -1;
-  if (bundleSlot >= 0) taken.add(bundleSlot);
 
   const result: BlogContentBlock[] = [];
   for (let i = 0; i <= stripped.length; i++) {
     if (i === productSlot && product) result.push(product);
-    if (i === bundleSlot && bundle && i !== productSlot) result.push(bundle);
     if (i < stripped.length) result.push(stripped[i]);
   }
   return result;

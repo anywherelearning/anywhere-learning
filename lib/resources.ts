@@ -42,7 +42,6 @@ export interface ResourcePage {
   /** Blog post slugs this pillar links to (editorial, cross-category) */
   relatedBlogSlugs: string[];
   recommendedProduct?: string;
-  recommendedBundle?: string;
 }
 
 export const resourceTopics: Record<ResourceTopic, { label: string; color: string }> = {
@@ -56,16 +55,16 @@ export const resourceTopics: Record<ResourceTopic, { label: string; color: strin
   'stem-for-kids':        { label: 'STEM for Kids',           color: '#3d5c3b' },
 };
 
-/** Default product + bundle recommendation for each resource topic */
-export const resourceProductDefaults: Record<ResourceTopic, { product: string; bundle: string }> = {
-  'real-world-learning':  { product: 'budget-challenge',       bundle: 'real-world-mega-bundle' },
-  'nature-stem':          { product: 'outdoor-stem-challenges', bundle: 'outdoor-toolkit-bundle' },
-  'worldschooling':       { product: 'travel-day',             bundle: 'real-world-mega-bundle' },
-  'creativity-maker':     { product: 'rube-goldberg-machine', bundle: 'creativity-mega-bundle' },
-  'ai-digital-literacy':  { product: 'ai-basics',              bundle: 'ai-digital-bundle' },
-  'homeschool-journey':   { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
-  'future-ready-skills':  { product: 'future-ready-skills-map', bundle: 'real-world-mega-bundle' },
-  'stem-for-kids':        { product: 'outdoor-stem-challenges', bundle: 'outdoor-toolkit-bundle' },
+/** Default product recommendation for each resource topic */
+export const resourceProductDefaults: Record<ResourceTopic, { product: string }> = {
+  'real-world-learning':  { product: 'budget-challenge' },
+  'nature-stem':          { product: 'outdoor-stem-challenges' },
+  'worldschooling':       { product: 'travel-day' },
+  'creativity-maker':     { product: 'rube-goldberg-machine' },
+  'ai-digital-literacy':  { product: 'ai-basics' },
+  'homeschool-journey':   { product: 'future-ready-skills-map' },
+  'future-ready-skills':  { product: 'future-ready-skills-map' },
+  'stem-for-kids':        { product: 'outdoor-stem-challenges' },
 };
 
 const amelie: ResourceAuthor = {
@@ -424,10 +423,6 @@ const resources: ResourcePage[] = [
         ],
       },
       {
-        type: 'bundle-callout',
-        slug: 'real-world-mega-bundle',
-      },
-      {
         type: 'faq',
         items: [
           {
@@ -479,7 +474,6 @@ const resources: ResourcePage[] = [
       'kids-making-videos-learning',
     ],
     recommendedProduct: 'budget-challenge',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'nature-based-learning',
@@ -703,10 +697,6 @@ const resources: ResourcePage[] = [
         text: 'If you live somewhere with snow, the science opportunities multiply. Crystal structure, insulation, freezing and melting points, and the incredible engineering of an igloo. If you don\'t get snow, winter still offers shorter days (shadow experiments!), frost patterns, and the chance to observe a sparser ecosystem where every living thing is easier to spot.',
       },
       {
-        type: 'bundle-callout',
-        slug: 'seasonal-bundle',
-      },
-      {
         type: 'heading',
         level: 2,
         text: 'Outdoor STEM challenges that don\'t feel like school',
@@ -878,10 +868,6 @@ const resources: ResourcePage[] = [
         text: 'For more structure and specific activity ideas, our [complete guide to nature-based learning](/blog/nature-based-learning-guide) walks through everything from seasonal projects to nature journaling techniques to connecting outdoor learning to academic standards (if your state requires it).',
       },
       {
-        type: 'bundle-callout',
-        slug: 'outdoor-toolkit-bundle',
-      },
-      {
         type: 'faq',
         items: [
           {
@@ -931,7 +917,6 @@ const resources: ResourcePage[] = [
       'outdoor-stem-challenges',
     ],
     recommendedProduct: 'outdoor-stem-challenges',
-    recommendedBundle: 'outdoor-toolkit-bundle',
   },
   {
     slug: 'worldschooling-guide',
@@ -1567,10 +1552,6 @@ const resources: ResourcePage[] = [
         ],
       },
       {
-        type: 'bundle-callout',
-        slug: 'creativity-mega-bundle',
-      },
-      {
         type: 'faq',
         items: [
           {
@@ -1606,7 +1587,6 @@ const resources: ResourcePage[] = [
       'imaginary-worlds-kids',
     ],
     recommendedProduct: 'rube-goldberg-machine',
-    recommendedBundle: 'creativity-mega-bundle',
   },
   {
     slug: 'ai-digital-literacy',
@@ -1882,10 +1862,6 @@ const resources: ResourcePage[] = [
         ],
       },
       {
-        type: 'bundle-callout',
-        slug: 'ai-digital-bundle',
-      },
-      {
         type: 'faq',
         items: [
           {
@@ -1923,7 +1899,6 @@ const resources: ResourcePage[] = [
       'media-literacy-kids',
     ],
     recommendedProduct: 'ai-basics',
-    recommendedBundle: 'ai-digital-bundle',
   },
   {
     slug: 'homeschool-journey',
@@ -2231,7 +2206,6 @@ const resources: ResourcePage[] = [
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
-    recommendedBundle: 'real-world-mega-bundle',
   },
   {
     slug: 'stem-for-kids',
@@ -2559,7 +2533,6 @@ const resources: ResourcePage[] = [
         text: 'For the broader real-world learning framework that STEM sits inside, see our [real-world learning guide](/guides/real-world-learning). For the outdoor STEM angle in particular, [nature-based learning](/guides/nature-based-learning) covers the place-based science approach.',
       },
 
-      { type: 'bundle-callout', slug: 'outdoor-toolkit-bundle' },
 
       {
         type: 'cta',
@@ -2616,7 +2589,6 @@ const resources: ResourcePage[] = [
       'forest-school-activities',
     ],
     recommendedProduct: 'outdoor-stem-challenges',
-    recommendedBundle: 'outdoor-toolkit-bundle',
   },
 ];
 

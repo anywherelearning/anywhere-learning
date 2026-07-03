@@ -63,9 +63,8 @@ function productToItem(product: FallbackProduct): string {
     ? `      <g:sale_price>${formatPrice(product.priceCents)}</g:sale_price>\n`
     : '';
 
-  // Bundles group their own variants; individuals group by category so Google
-  // can show them as related items in Shopping.
-  const itemGroupId = product.isBundle ? product.slug : product.category;
+  // Group by category so Google can show related items in Shopping.
+  const itemGroupId = product.category;
 
   return `    <item>
       <g:id>${escapeXml(product.slug)}</g:id>

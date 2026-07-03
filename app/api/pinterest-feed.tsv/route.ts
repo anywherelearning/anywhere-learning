@@ -94,7 +94,7 @@ function productToRow(product: FallbackProduct): string {
     BRAND,
     GOOGLE_CATEGORY,
     product.category,
-    product.isBundle ? product.slug : product.category,
+    product.category,
   ];
 
   return row.map(escapeField).join('\t');

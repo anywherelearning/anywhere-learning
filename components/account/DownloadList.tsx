@@ -4,7 +4,6 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import DownloadCard from './DownloadCard';
 import { CATEGORIES, CATEGORY_LABELS, CATEGORY_ACTIVE_COLORS } from '@/lib/categories';
-import { BUNDLE_CONTENTS } from '@/lib/bundles';
 import {
   SparklesIcon,
   LeafIcon,
@@ -290,21 +289,6 @@ export default function DownloadList({ purchases }: DownloadListProps) {
       <div className="space-y-3">
         {paginated.map((p) => {
           const daysSincePurchase = Date.now() - new Date(p.order.purchasedAt).getTime();
-          // For bundles, resolve child products from purchases
-          const bundleChildren = p.product.isBundle
-            ? (BUNDLE_CONTENTS[p.product.slug] || [])
-                .map((slug) => purchaseBySlug[slug])
-                .filter(Boolean)
-                .map((child) => ({
-                  productId: child.product.id,
-                  name: child.product.name,
-                  slug: child.product.slug,
-                  imageUrl: child.product.imageUrl,
-                  category: child.product.category,
-                  viewUrl: child.product.viewUrl,
-                  downloadUrl: child.product.downloadUrl,
-                }))
-            : undefined;
           return (
             <DownloadCard
               key={`${p.order.id}-${p.product.id}`}
@@ -321,7 +305,6 @@ export default function DownloadList({ purchases }: DownloadListProps) {
               viewUrl={p.product.viewUrl}
               downloadUrl={p.product.downloadUrl}
               showReviewPrompt={daysSincePurchase > SEVEN_DAYS_MS}
-              bundleChildren={bundleChildren}
             />
           );
         })}

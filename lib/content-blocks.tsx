@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PullQuote from '@/components/blog/PullQuote';
 import BlogProductCallout from '@/components/blog/BlogProductCallout';
-import BlogBundleCallout from '@/components/blog/BlogBundleCallout';
 import SummaryBox from '@/components/blog/SummaryBox';
 
 export type ContentBlock =
@@ -19,7 +18,6 @@ export type ContentBlock =
   | { type: 'tip'; title: string; text: string }
   | { type: 'faq'; items: { question: string; answer: string }[] }
   | { type: 'product-callout'; slug: string; context?: string; pinned?: boolean }
-  | { type: 'bundle-callout'; slug: string; context?: string; pinned?: boolean }
   | { type: 'summary'; text: string; heading?: string };
 
 /** Backward-compatible alias */
@@ -333,8 +331,6 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
       );
     case 'product-callout':
       return <BlogProductCallout key={index} slug={block.slug} context={block.context} />;
-    case 'bundle-callout':
-      return <BlogBundleCallout key={index} slug={block.slug} context={block.context} />;
     case 'summary':
       return <SummaryBox key={index} text={block.text} heading={block.heading} />;
   }

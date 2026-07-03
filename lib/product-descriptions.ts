@@ -124,105 +124,6 @@ export const SHARED_BEST_FOR: Record<string, string[]> = {
 
 export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
-  // BUNDLES
-  // ═══════════════════════════════════════════════════════════════════
-  'seasonal-bundle': {
-    opening:
-      'All four seasonal guides in one download: spring, summer, fall, and winter. 80 outdoor activities designed to match each season\'s unique energy and opportunities. Your family gets a full year of outdoor learning, ready whenever the season changes.',
-    whatsIncluded: [
-      '4 complete seasonal guides (Spring, Summer, Fall, Winter)',
-      '80 outdoor activities total, 20 per season',
-      'Language Arts, Maths, Science, and Physical Education in every guide',
-      'Age adaptation notes for ages 6–14',
-      '3 levels per activity: Explore / Develop / Extend',
-    ],
-    skillTags: ['Science', 'Maths', 'Writing', 'Observation', 'Nature', 'PE'],
-    format: 'Bundle',
-  },
-  'creativity-mega-bundle': {
-    opening:
-      'All 10 Creativity & Maker projects in one download. From building board games and Rube Goldberg machines to creating theme parks, museums, and stop-motion films, each project is a multi-step creative adventure that builds design thinking, problem-solving, and artistic confidence.',
-    whatsIncluded: [
-      '10 complete project guides',
-      'Board Game Studio, Rube Goldberg Machine, Survival Base, Imaginary World',
-      'Creature Habitat, Theme Park, Mini Movie, Invent a Sport',
-      'Kinetic Sculpture, Build a Museum',
-      'Each project spans multiple sessions with clear phases',
-    ],
-    skillTags: ['Design Thinking', 'Engineering', 'Art', 'Writing', 'Problem-Solving'],
-    format: 'Bundle',
-  },
-  'real-world-mega-bundle': {
-    opening:
-      'All 10 Real-World Relevance guides in one download. Your child plans real budgets, compares real products, starts a real business, checks real information, solves real problems, and writes for real audiences. Every guide is hands-on, low-prep, and built around decisions that actually matter.',
-    whatsIncluded: [
-      '10 complete project guides',
-      'Budget Challenge, Kitchen Math, Smart Shopper Lab, Micro-Business Challenge',
-      'Media & Info Check, Problem-Solver Studio, Travel Day Itinerary Challenge',
-      'Community Impact Project, Write It Like a Pro, Time & Energy Planner',
-      'Three difficulty levels per step so it works for different ages and abilities',
-    ],
-    skillTags: ['Financial Literacy', 'Critical Thinking', 'Writing', 'Planning', 'Problem-Solving'],
-    format: 'Bundle',
-  },
-  'ai-digital-bundle': {
-    opening:
-      'All 10 AI & Digital Literacy activities in one download. From understanding what AI actually is, to spotting deepfakes, checking for bias, building ethical AI projects, and managing digital boundaries. Everything your child needs to be a thoughtful, confident digital citizen.',
-    whatsIncluded: [
-      '10 complete activity guides covering AI and digital literacy',
-      'AI Basics, Prompt Like a Coach, Hallucination Detective',
-      'Bias & Fairness Lab, Privacy & Digital Footprint, Deepfake Spotter',
-      'Algorithm Awareness, Healthy Tech Boundaries, Create With AI',
-      'Build Your Own AI Helper',
-    ],
-    skillTags: ['AI Literacy', 'Critical Thinking', 'Digital Citizenship', 'Ethics', 'Privacy'],
-    format: 'Bundle',
-  },
-  'nature-art-bundle': {
-    opening:
-      'Three of our most popular nature guides together: Land Art Challenge Cards, Nature Crafts for Kids, and the Nature Journal. From building sculptures with sticks and stones to pressing flowers, sketching birds, and creating art from found materials. Nature meets creativity in every activity.',
-    whatsIncluded: [
-      '3 complete nature + art guides',
-      'Land Art Challenge Cards: 15 outdoor art challenges',
-      'Nature Crafts for Kids: hands-on projects with found materials',
-      'My Nature Journal: guided journaling prompts for outdoor observation',
-      'All activities use materials found in nature, no supplies needed',
-    ],
-    skillTags: ['Art', 'Nature', 'Observation', 'Creativity', 'Journaling'],
-    format: 'Bundle',
-  },
-  'outdoor-toolkit-bundle': {
-    opening:
-      'Four essential outdoor learning guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, and Nature Choice Boards. Whether you\'re in the backyard, at the park, or on a trail, you\'ll have a rich activity ready to go.',
-    whatsIncluded: [
-      '4 complete outdoor learning guides',
-      'Nature Walk Task Cards: read-aloud exploration prompts',
-      'Outdoor Learning Missions: structured outdoor challenges',
-      'STEM Challenge Cards: 20 nature-based engineering challenges',
-      'Nature Choice Boards: 5 self-directed activity menus',
-    ],
-    skillTags: ['STEM', 'Nature', 'Observation', 'Engineering', 'Self-Direction'],
-    format: 'Bundle',
-  },
-
-  'outdoor-mega-bundle': {
-    opening:
-      'All 7 outdoor and nature activity guides in one download: Nature Walk Task Cards, Outdoor Learning Missions, STEM Challenge Cards, Nature Choice Boards, Land Art Challenges, Nature Crafts, and the Nature Journal. Whether you\'re building sculptures from sticks, solving STEM challenges at the park, or journaling beside a stream, this bundle has you covered for every kind of outdoor learning.',
-    whatsIncluded: [
-      '7 complete outdoor & nature guides',
-      'Nature Walk Task Cards: read-aloud exploration prompts',
-      'Outdoor Learning Missions: structured outdoor challenges',
-      'STEM Challenge Cards: 20 nature-based engineering challenges',
-      'Nature Choice Boards: 5 self-directed activity menus',
-      'Land Art Challenge Cards: 15 outdoor art challenges',
-      'Nature Crafts for Kids: hands-on projects with found materials',
-      'My Nature Journal: guided journaling prompts for outdoor observation',
-    ],
-    skillTags: ['STEM', 'Nature', 'Art', 'Observation', 'Engineering', 'Creativity', 'Journaling'],
-    format: 'Bundle',
-  },
-
-  // ═══════════════════════════════════════════════════════════════════
   // SEASONAL / NATURE PACKS
   // ═══════════════════════════════════════════════════════════════════
   'spring-outdoor-pack': {
@@ -546,19 +447,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     format: 'Project Guide',
   },
 
-  'real-world-math-bundle': {
-    opening:
-      'All 10 Real-World Math guides in one download. Campout planning, garage sales, garden plots, road trips, sports stats, and more. Every activity puts kids in real-life scenarios where they use maths to plan, budget, measure, and make smart decisions. The kind of maths that sticks because it actually matters.',
-    whatsIncluded: [
-      '10 complete real-world maths guides',
-      'Backyard Campout Planner, Garage Sale Math, Garden Plot Planner',
-      'Farmers Market Challenge, Party Planner Math, Road Trip Calculator',
-      'Clothing Swap & Thrift Math, Family Electricity Audit',
-      'Savings Goal Tracker, Sports Stats Lab',
-    ],
-    skillTags: ['Financial Literacy', 'Measurement', 'Budgeting', 'Data', 'Problem-Solving'],
-    format: 'Bundle',
-  },
   'backyard-campout-planner': {
     opening:
       'Plan a backyard campout from start to finish: gear checklists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.',
@@ -944,56 +832,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Parenting', 'Life Skills', 'Critical Thinking', 'Emotional Intelligence', 'Future-Ready'],
     format: 'Parent Guide',
-  },
-  // ═══════════════════════════════════════════════════════════════════
-  // COMMUNICATION & WRITING BUNDLE
-  // ═══════════════════════════════════════════════════════════════════
-  'communication-writing-bundle': {
-    opening:
-      'All 12 Communication & Writing guides in one download. Storytelling, debate, interviews, recipe writing, magazine design, trail guides, and more. Every activity puts kids in real communication scenarios: writing for real audiences, speaking with real purpose, and presenting with real confidence.',
-    whatsIncluded: [
-      '12 complete communication and writing guides',
-      'Adventure Story Map, Community Tour Guide, Directions Challenge',
-      'Family Debate Night, Family Recipe Book, Market Stall Pitch',
-      'Mini Magazine Creator, My Review Column, Neighbourhood Interview',
-      'Trail Guide Creator, Community Impact, Write It Like a Pro',
-    ],
-    skillTags: ['Writing', 'Communication', 'Persuasion', 'Storytelling', 'Presentation'],
-    format: 'Bundle',
-  },
-
-  // ═══════════════════════════════════════════════════════════════════
-  // ENTREPRENEURSHIP BUNDLE
-  // ═══════════════════════════════════════════════════════════════════
-  'entrepreneurship-bundle': {
-    opening:
-      'All 11 Entrepreneurship guides in one download. Brand building, customer discovery, pitching, pricing, marketing, supply chains, product design, and more. Real business skills through hands-on projects. Kids learn by doing, not by reading about it.',
-    whatsIncluded: [
-      '11 complete entrepreneurship guides',
-      'Brand Builder, Business Failure Lab, Community Service Business',
-      'Customer Discovery, Investor Pitch, Marketing Campaign',
-      'Pricing Experiment, Product Design Lab, Supply Chain Detective',
-      'The Shark Tank Pitch, Micro-Business Challenge',
-    ],
-    skillTags: ['Entrepreneurship', 'Financial Literacy', 'Marketing', 'Design Thinking', 'Communication'],
-    format: 'Bundle',
-  },
-
-  // ═══════════════════════════════════════════════════════════════════
-  // PLANNING & PROBLEM-SOLVING BUNDLE
-  // ═══════════════════════════════════════════════════════════════════
-  'planning-problem-solving-bundle': {
-    opening:
-      'All 13 Planning & Problem-Solving guides in one download. Survival planning, emergency prep, decision-making, scavenger hunts, everyday redesign, packing logistics, and more. Kids practise thinking ahead, solving real problems, and making smart decisions about real things.',
-    whatsIncluded: [
-      '13 complete planning and problem-solving guides',
-      'Emergency Ready, Everyday Redesign, Fix-It Detective',
-      'Neighbourhood Problem Spotter, Outdoor Survival Planner, Pack Like a Pro',
-      'Scavenger Hunt Designer, Swap Day Challenge, What-If Scenario Lab',
-      'Decision Lab, Problem-Solver Studio, Time & Energy Planner, Travel Day',
-    ],
-    skillTags: ['Planning', 'Problem-Solving', 'Critical Thinking', 'Decision-Making', 'Life Skills'],
-    format: 'Bundle',
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1396,23 +1234,6 @@ export const productDescriptions: Record<string, ProductDescription> = {
     ],
     skillTags: ['Decision-Making', 'Critical Thinking', 'Ethics', 'Analysis', 'Independence'],
     format: 'Project Guide',
-  },
-
-  // ═══════════════════════════════════════════════════════════════════
-  // WORLDSCHOOLING BUNDLE
-  // ═══════════════════════════════════════════════════════════════════
-  'worldschooling-mega-bundle': {
-    opening:
-      'All 10 Worldschooling guides in one download. Cultural celebrations, currency math, language missions, food detective challenges, transport navigation, and more. Every activity turns travel and everyday life into meaningful learning. Works abroad, on a road trip, or in your own backyard.',
-    whatsIncluded: [
-      '10 complete worldschooling activity guides',
-      'Cultural Celebration Journal, Currency & Market Math, Everyday Life Comparison',
-      'Local Language Mission, Nature & Geography Field Study, People & Stories Interview',
-      'Street Explorer Map Maker, Transport & Navigation Challenge',
-      'Travel Reflection & Postcards, World Food Detective',
-    ],
-    skillTags: ['Cultural Awareness', 'Geography', 'Communication', 'Observation', 'Reflection', 'Languages'],
-    format: 'Bundle',
   },
 
   // ═══════════════════════════════════════════════════════════════════

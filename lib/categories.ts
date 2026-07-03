@@ -73,11 +73,10 @@ export const CATEGORIES: CategoryDef[] = [
   },
 ];
 
-/** Quick lookup: category value → label. Includes 'bundle'. */
-export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries([
-  ...CATEGORIES.map((c) => [c.value, c.label]),
-  ['bundle', 'Bundle'],
-]);
+/** Quick lookup: category value → label. */
+export const CATEGORY_LABELS: Record<string, string> = Object.fromEntries(
+  CATEGORIES.map((c) => [c.value, c.label]),
+);
 
 /**
  * CSS class for the cover gradient of a product card, by category.
@@ -95,7 +94,6 @@ export const COVER_CLASSES: Record<string, string> = {
   'start-here': 'cover-start-here',
   worldschooling: 'cover-worldschooling',
   'emotional-social-skills': 'cover-emotional-social-skills',
-  bundle: 'cover-bundle',
 };
 
 /** Resolve a cover class for a category, falling back to outdoor-learning. */
@@ -118,5 +116,4 @@ export const CATEGORY_ACTIVE_COLORS: Record<string, string> = {
   'start-here': 'bg-[#d4a373] text-white shadow-sm',
   'worldschooling': 'bg-[#5a9b9c] text-white shadow-sm',
   'emotional-social-skills': 'bg-[#b6748a] text-white shadow-sm',
-  bundle: 'bg-gold text-white shadow-sm',
 };

@@ -4,8 +4,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
-import CartProvider from "@/components/cart/CartProvider";
-import CartDrawer from "@/components/cart/CartDrawer";
 import SaleBanner from "@/components/shared/SaleBanner";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
@@ -170,17 +168,14 @@ export default function RootLayout({
         className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
       >
         <ClerkWrapper>
-          <CartProvider>
-            <CapacitorProvider>
-              <NativeRedirectGuard />
-              <ImageProtection />
-              <NativeHide><SaleBanner /></NativeHide>
-              {children}
-              <NativeHide><CartDrawer /></NativeHide>
-              <PinterestEnhancedMatch />
-              <MobileTabBar />
-            </CapacitorProvider>
-          </CartProvider>
+          <CapacitorProvider>
+            <NativeRedirectGuard />
+            <ImageProtection />
+            <NativeHide><SaleBanner /></NativeHide>
+            {children}
+            <PinterestEnhancedMatch />
+            <MobileTabBar />
+          </CapacitorProvider>
         </ClerkWrapper>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WF83M4HF46"

@@ -10,19 +10,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Product catalog - MUST match pricing in seed.ts and fallback-products.ts
 // Tiers: Singles $5.99 · Nature/outdoor cards $7.99 · Seasonal $14.99 · Guide $9.99
 const catalog = [
-  // ─── Bundles ───
-  { slug: 'seasonal-bundle', name: 'Full Seasonal Bundle (All 4 Seasons)', priceCents: 4499, description: 'All 4 seasonal guides:80 outdoor activities for every time of year.' },
-  { slug: 'creativity-mega-bundle', name: 'Creativity Mega Bundle', priceCents: 4499, description: 'All 10 creativity guides:game design, filmmaking, invention, and more.' },
-  { slug: 'real-world-mega-bundle', name: 'Real-World Skills Mega Bundle', priceCents: 4499, description: 'All 10 real-world skills guides:budgeting, cooking, business, and more.' },
-  { slug: 'ai-digital-bundle', name: 'AI & Digital Literacy Bundle', priceCents: 4499, description: 'All 10 AI & digital literacy guides.' },
-  { slug: 'real-world-math-bundle', name: 'Real-World Math Mega Bundle', priceCents: 4499, description: 'All 10 Real-World Math guides:campout planning, garage sales, garden plots, road trips, and more.' },
-  { slug: 'communication-writing-bundle', name: 'Communication & Writing Mega Bundle', priceCents: 4499, description: 'All 12 Communication & Writing guides in one download.' },
-  { slug: 'entrepreneurship-bundle', name: 'Entrepreneurship Mega Bundle', priceCents: 4499, description: 'All 11 Entrepreneurship guides in one download.' },
-  { slug: 'planning-problem-solving-bundle', name: 'Planning & Problem-Solving Mega Bundle', priceCents: 4499, description: 'All 13 Planning & Problem-Solving guides in one download.' },
-  { slug: 'worldschooling-mega-bundle', name: 'Worldschooling Mega Bundle', priceCents: 4499, description: 'All 10 Worldschooling guides in one download: cultural celebrations, currency math, language missions, food detective, and more.' },
-  { slug: 'nature-art-bundle', name: 'Nature Art Bundle', priceCents: 1799, description: 'Land Art + Nature Crafts + Nature Journal.' },
-  { slug: 'outdoor-toolkit-bundle', name: 'Outdoor Toolkit Bundle', priceCents: 2399, description: 'Walk Cards + Missions + STEM + Choice Boards.' },
-  { slug: 'outdoor-mega-bundle', name: 'Outdoor & Nature Mega Bundle', priceCents: 4199, description: 'All 7 outdoor & nature guides:walk cards, missions, STEM challenges, choice boards, land art, nature crafts, and nature journal.' },
   // ─── Seasonal ($12.99) ───
   { slug: 'spring-outdoor-pack', name: 'Spring Outdoor Learning Pack', priceCents: 1499, description: '20 outdoor activities that use spring\'s energy to build real-world skills.' },
   { slug: 'summer-outdoor-pack', name: 'Summer Outdoor Learning Pack', priceCents: 1499, description: '20 summer activities for families who learn on the move.' },
@@ -142,17 +129,7 @@ const catalog = [
 ];
 
 // Slugs where the image filename doesn't match {slug}.jpg
-const imageOverrides: Record<string, string> = {
-  'seasonal-bundle': 'four-seasons-bundle.jpg',
-  'creativity-mega-bundle': 'mega-bundle-creativity.jpg',
-  'real-world-mega-bundle': 'mega-bundle-real-world.jpg',
-  'ai-digital-bundle': 'mega-bundle-ai-digital.jpg',
-  'real-world-math-bundle': 'mega-bundle-real-world-math.jpg',
-  'communication-writing-bundle': 'mega-bundle-communication-writing.jpg',
-  'entrepreneurship-bundle': 'mega-bundle-entrepreneurship.jpg',
-  'planning-problem-solving-bundle': 'mega-bundle-planning-problem-solving.jpg',
-  'worldschooling-mega-bundle': 'mega-bundle-worldschooling.jpg',
-};
+const imageOverrides: Record<string, string> = {};
 
 async function createStripeProducts() {
   const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
