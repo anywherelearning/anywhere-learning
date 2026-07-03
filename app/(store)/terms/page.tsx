@@ -32,7 +32,7 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">Anywhere Learning offers two things, and only two:</p>
         <ul className="list-disc pl-6 mb-3.5 marker:text-forest space-y-2">
           <li>
-            <strong className="text-ink font-semibold">Free starter guide</strong>: a free 7-activity PDF (one across each of our seven categories), delivered to your inbox after you give us your email address.
+            <strong className="text-ink font-semibold">Free 7-day guide</strong>: a free 7-activity PDF (one across each of our seven categories), delivered to your inbox after you give us your email address.
           </li>
           <li>
             <strong className="text-ink font-semibold">Annual membership</strong>: a recurring annual subscription that provides access to our complete library of activity guides, new content added quarterly, and member-only resources. It starts with a 14-day free trial.

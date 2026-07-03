@@ -32,8 +32,8 @@ Retired: `lead-magnet-2-getting-started.html`, `lead-magnet-3-shop-intro.html` (
 
 ## Sequence 2: Cart Abandonment — RETIRED (Jun 2026)
 
-No cart on the site anymore. Abandoned checkouts are handled by transactional emails (Resend:
-`AbandonedCheckoutMembership.tsx`, `AbandonedCheckoutStarterPack.tsx`) fired from the Stripe
+No cart on the site anymore. Abandoned checkouts are handled by a transactional email (Resend:
+`AbandonedCheckoutMembership.tsx`) fired from the Stripe
 `checkout.session.expired` webhook. Nothing applies the `cart-abandoner` tag, so the Kit
 sequence never fires. Files `cart-abandon-1-reminder.html` / `cart-abandon-2-different-angle.html`
 removed. Delete the Kit automation too.
@@ -41,7 +41,7 @@ removed. Delete the Kit automation too.
 ## Sequence 3: Post-Purchase (old shop buyers) — RETIRED (Jun 2026)
 
 Triggered on tag `buyer`, which the code no longer applies after the membership pivot
-(purchases now apply `starter-pack-buyer`, `trial-member`, `member`, `founder`). It never fires.
+(purchases now apply `trial-member`, `member`, `founder`). It never fires.
 Replaced by the two sequences below. `post-purchase-1-getting-started.html` and
 `post-purchase-2-cross-sell.html` are kept for reference only; delete the Kit automation.
 
@@ -55,16 +55,11 @@ Replaced by the two sequences below. `post-purchase-1-getting-started.html` and
 | 1 | `trial-member-1-start.html` | 2 days | Where to start in your library |
 | 2 | `trial-member-2-together.html` | 5 days | The part parents don't expect |
 
-## Sequence 3b: Starter Pack buyer → membership (3 emails)
+## Sequence 3b: Starter Pack buyer → membership — RETIRED (Jul 2026)
 
-**Trigger:** Subscriber receives tag `starter-pack-buyer`
-**Hook:** the Starter Pack (~$45) credits toward the first year of membership, so upgrading is ~$54 for year one at the founder rate.
-
-| # | File | Delay (after last email) | Subject Line |
-|---|------|--------------------------|-------------|
-| 1 | `starter-pack-1-start.html` | 1 day | Your Starter Pack, where to begin |
-| 2 | `starter-pack-2-library.html` | 4 days | Your $45 already counts toward more |
-| 3 | `starter-pack-3-credit.html` | 5 days | Your credit is still waiting |
+The Starter Pack was removed. No code applies the `starter-pack-buyer` tag anymore, so this
+sequence never fires. Templates `starter-pack-1-start.html` / `starter-pack-2-library.html` /
+`starter-pack-3-credit.html` removed. Delete the Kit automation too.
 
 ## Sequence 4: Home Educators' Appreciation Week sale (3 emails, manual broadcasts)
 

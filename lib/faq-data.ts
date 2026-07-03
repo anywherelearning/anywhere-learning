@@ -88,7 +88,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'Do you offer a free trial?',
     answer:
-      "Yes. Every membership starts with a 14-day free trial. You enter a card but pay $0 today. During the trial you can open and read every guide in the library, on any device, as much as you like. Downloading guides to keep is a membership perk, so if you want to save them as PDFs you can start your membership in one click anytime during the trial. If it's not for you, cancel before day 14 and you're never charged, and you keep reading access right through the end of the trial either way. One free trial per customer. There's also a free starter guide if you'd like to try a couple of activities before signing up at all.",
+      "Yes. Every membership starts with a 14-day free trial. You enter a card but pay $0 today. During the trial you can open and read every guide in the library, on any device, as much as you like. Downloading guides to keep is a membership perk, so if you want to save them as PDFs you can start your membership in one click anytime during the trial. If it's not for you, cancel before day 14 and you're never charged, and you keep reading access right through the end of the trial either way. One free trial per customer. There's also a free 7-day guide if you'd like to try a couple of activities before signing up at all.",
   },
 ];
 
