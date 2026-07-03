@@ -89,6 +89,23 @@ const nextConfig: NextConfig = {
       // Starter Pack removed (Jul 2026): funnel is now trial → annual membership
       { source: "/shop/starter-pack", destination: "/join", permanent: true },
 
+      // ── Bundles removed (Jul 2026): everything is in the membership library now ──
+      { source: "/shop/seasonal-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/creativity-mega-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/real-world-mega-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/ai-digital-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/real-world-math-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/communication-writing-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/entrepreneurship-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/planning-problem-solving-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/worldschooling-mega-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/nature-art-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/outdoor-toolkit-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/outdoor-mega-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/nature-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/creativity-bundle", destination: "/shop", permanent: true },
+      { source: "/shop/real-world-bundle", destination: "/shop", permanent: true },
+
       // ── Renamed product slugs ──
       { source: "/shop/kitchen-maths-cooking", destination: "/shop/kitchen-math-challenge", permanent: true },
       { source: "/shop/my-small-business-project", destination: "/shop/micro-business", permanent: true },
