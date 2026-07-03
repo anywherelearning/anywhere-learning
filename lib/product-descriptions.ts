@@ -1624,6 +1624,62 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Planning', 'Organization', 'Ownership', 'Executive Function'],
     format: 'Project Guide',
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // DEBUNDLED SEASONAL-PACK ACTIVITIES
+  // ═══════════════════════════════════════════════════════════════════
+  'decomposition-detective': {
+    opening:
+      'Your child builds a jar of leaves and soil, sets it outside, and turns detective on a slow mystery: what is quietly breaking this down, and why? They predict, observe over weeks, meet the decomposers, and run a real fair test. Hands-on STEM science and patience, learned in the backyard.',
+    whatsIncluded: [
+      'Build a decomposition time capsule from a jar, leaves, and soil',
+      'Predict what rots and what does not',
+      'Weeks of real observation, drawn and described',
+      'Meet the decomposers: the science of who breaks it down',
+      'Run a fair test comparing two conditions',
+    ],
+    skillTags: ['STEM', 'Science', 'Observation', 'Patience', 'Cause & Effect'],
+    format: 'Project Guide',
+  },
+  'seed-travelers': {
+    opening:
+      'Your child collects seeds and pods and cracks the mystery of how each one travels: some fly, some float, some hitch a ride. They sort, test, and rank the travellers, then design the ultimate seed. Hands-on STEM science that turns a handful of seeds into a lesson on how nature engineers survival.',
+    whatsIncluded: [
+      'Collect and examine different seeds and pods',
+      'Predict and sort by how each one travels',
+      'Real drop, float, and stick tests',
+      'Rank the travellers and their trade-offs',
+      'Design an original seed and explain its weakness',
+    ],
+    skillTags: ['STEM', 'Science', 'Classification', 'Prediction', 'Adaptation'],
+    format: 'Activity Guide',
+  },
+  'camouflage-challenge': {
+    opening:
+      'Your child hides natural objects in plain sight, times how hard they are to find, and works out the real rules of camouflage, the survival trick animals use every day. Part hiding game, part real experiment, ending with a rule they proved themselves and a hunt for camouflage in the wild.',
+    whatsIncluded: [
+      'Hide natural objects in plain sight',
+      'A timed finding test that turns the game into data',
+      'A fair test of the same object on two backgrounds',
+      'Build a camouflage rule from evidence',
+      'Hunt for real camouflaged creatures outside',
+    ],
+    skillTags: ['STEM', 'Science', 'Observation', 'Adaptation', 'Evidence'],
+    format: 'Activity Guide',
+  },
+  'nature-data-tracker': {
+    opening:
+      'Your child picks something in nature that changes day to day, daylight, temperature, rainfall, and tracks it for a week or two. They record real numbers, find the pattern, chart it, and predict what comes next. Real-world STEM maths and data literacy, done with a window and a notebook.',
+    whatsIncluded: [
+      'Track something in nature over a week or two',
+      'Record real numbers and compare the daily changes',
+      'Spot the trend hidden in the data',
+      'Chart it to see the pattern',
+      'Predict the next few days and check',
+    ],
+    skillTags: ['STEM', 'Real-World Math', 'Data', 'Pattern Recognition', 'Prediction'],
+    format: 'Project Guide',
+  },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────

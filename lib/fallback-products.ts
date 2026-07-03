@@ -2635,6 +2635,102 @@ export const fallbackProducts: FallbackProduct[] = [
     active: true,
     createdAt: new Date("2026-06-26"),
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // DEBUNDLED SEASONAL-PACK ACTIVITIES (membership-only)
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: "fb-decomposition-detective",
+    name: "Decomposition Detective",
+    slug: "decomposition-detective",
+    description:
+      "Your child builds a jar of leaves and soil, sets it outside, and turns detective on a slow mystery: what is quietly breaking this down, and why? They predict, observe over weeks, meet the decomposers, and run a real fair test. Hands-on STEM science and patience, learned in the backyard.",
+    shortDescription:
+      "Outdoor STEM science for kids ages 6-14: build a decomposition jar and watch nature break it down over weeks. A real experiment in patience.",
+    priceCents: 599,
+    compareAtPriceCents: null,
+    stripePriceId: "",
+    blobUrl: "",
+    imageUrl: "/products/decomposition-detective.jpg",
+    previewFile: "Preview Outdoor & Nature - Decomposition Detective.pdf",
+    category: "outdoor-learning",
+    isBundle: false,
+    bundleProductIds: null,
+    activityCount: null,
+    ageRange: "Ages 6–14",
+    sortOrder: 28,
+    active: true,
+    createdAt: new Date("2026-07-03"),
+  },
+  {
+    id: "fb-seed-travelers",
+    name: "Seed Travelers",
+    slug: "seed-travelers",
+    description:
+      "Your child collects seeds and pods and cracks the mystery of how each one travels: some fly, some float, some hitch a ride. They sort, test, and rank the travellers, then design the ultimate seed. Hands-on STEM science that turns a handful of seeds into a lesson on how nature engineers survival.",
+    shortDescription:
+      "Outdoor STEM science for kids ages 6-14: collect seeds and test how each one travels, by wind, water, animal, or gravity.",
+    priceCents: 599,
+    compareAtPriceCents: null,
+    stripePriceId: "",
+    blobUrl: "",
+    imageUrl: "/products/seed-travelers.jpg",
+    previewFile: "Preview Outdoor & Nature - Seed Travelers.pdf",
+    category: "outdoor-learning",
+    isBundle: false,
+    bundleProductIds: null,
+    activityCount: null,
+    ageRange: "Ages 6–14",
+    sortOrder: 29,
+    active: true,
+    createdAt: new Date("2026-07-03"),
+  },
+  {
+    id: "fb-camouflage-challenge",
+    name: "Camouflage Challenge",
+    slug: "camouflage-challenge",
+    description:
+      "Your child hides natural objects in plain sight, times how hard they are to find, and works out the real rules of camouflage, the survival trick animals use every day. Part hiding game, part real experiment. Hands-on STEM science that ends with a rule they proved themselves and a hunt for camouflage in the wild.",
+    shortDescription:
+      "Outdoor STEM science for kids ages 6-14: hide objects in plain sight, time the search, and crack the real rules of camouflage.",
+    priceCents: 599,
+    compareAtPriceCents: null,
+    stripePriceId: "",
+    blobUrl: "",
+    imageUrl: "/products/camouflage-challenge.jpg",
+    previewFile: "Preview Outdoor & Nature - Camouflage Challenge.pdf",
+    category: "outdoor-learning",
+    isBundle: false,
+    bundleProductIds: null,
+    activityCount: null,
+    ageRange: "Ages 6–14",
+    sortOrder: 30,
+    active: true,
+    createdAt: new Date("2026-07-03"),
+  },
+  {
+    id: "fb-nature-data-tracker",
+    name: "Nature Data Tracker",
+    slug: "nature-data-tracker",
+    description:
+      "Your child picks something in nature that changes day to day, daylight, temperature, rainfall, and tracks it for a week or two. They record real numbers, find the pattern, chart it, and predict what comes next. Real-world STEM maths and data literacy, done with a window and a notebook, exactly what scientists and forecasters do.",
+    shortDescription:
+      "Real-world STEM maths for kids ages 6-14: track daylight, temperature, or rain over weeks, find the pattern, and predict what comes next.",
+    priceCents: 599,
+    compareAtPriceCents: null,
+    stripePriceId: "",
+    blobUrl: "",
+    imageUrl: "/products/nature-data-tracker.jpg",
+    previewFile: "Preview Real-world math - Nature Data Tracker.pdf",
+    category: "real-world-math",
+    isBundle: false,
+    bundleProductIds: null,
+    activityCount: null,
+    ageRange: "Ages 6–14",
+    sortOrder: 114,
+    active: true,
+    createdAt: new Date("2026-07-03"),
+  },
 ];
 
 export function getFallbackProductBySlug(slug: string): FallbackProduct | null {

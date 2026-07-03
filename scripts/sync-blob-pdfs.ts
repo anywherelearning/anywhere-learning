@@ -150,6 +150,12 @@ const SLUG_TO_FILE: Record<string, string> = {
   'complaint-to-product': 'Entrepreneurship - Complaint to Product.pdf',
   'two-minute-story': 'Communication & Writing - The Two Minute Story.pdf',
   'plan-a-mini-adventure': 'Planning & Problem-Solving Plan a Mini Adventure.pdf',
+
+  // Debundled seasonal-pack activities
+  'decomposition-detective': 'Outdoor & Nature - Decomposition Detective.pdf',
+  'seed-travelers': 'Outdoor & Nature - Seed Travelers.pdf',
+  'camouflage-challenge': 'Outdoor & Nature - Camouflage Challenge.pdf',
+  'nature-data-tracker': 'Real-world math - Nature Data Tracker.pdf',
 };
 
 // ─────────────────────────────────────────────────────────────
