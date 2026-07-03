@@ -86,6 +86,8 @@ const nextConfig: NextConfig = {
       // ── Retired products with no direct successor ──
       { source: "/shop/time-capsule", destination: "/library", permanent: true },
       { source: "/shop/creative-thinking-pack", destination: "/library", permanent: true },
+      // Starter Pack removed (Jul 2026): funnel is now trial → annual membership
+      { source: "/shop/starter-pack", destination: "/join", permanent: true },
 
       // ── Renamed product slugs ──
       { source: "/shop/kitchen-maths-cooking", destination: "/shop/kitchen-math-challenge", permanent: true },
