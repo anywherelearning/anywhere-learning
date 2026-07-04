@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { childAge, loadProfile, type Child } from '@/lib/member-profile';
 import { loadWeek, removeItem, type WeekItem } from '@/lib/week';
 import { markDone } from '@/lib/account-status';
@@ -24,6 +25,10 @@ export default function WeekHome({ activities }: { activities: PlanActivity[] })
   const [planFor, setPlanFor] = useState<number[] | undefined>(undefined);
   const [editOpen, setEditOpen] = useState(false);
 
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const autoOpenedRef = useRef(false);
+
   const bySlug = useMemo(() => {
     const m = new Map<string, PlanActivity>();
     activities.forEach((a) => m.set(a.slug, a));
@@ -40,6 +45,20 @@ export default function WeekHome({ activities }: { activities: PlanActivity[] })
     setDoneByKid(recentDoneByChild(30)); // persisted progress, survives refresh
     setReady(true);
   }, []);
+
+  // First-run activation: a brand-new member arrives here from onboarding with
+  // ?start=1 (kids already set up). Auto-open the "Add activities" picker so
+  // their first move is choosing activities, not staring at an empty plan.
+  // Strip the param so a later refresh doesn't reopen it.
+  useEffect(() => {
+    if (autoOpenedRef.current) return;
+    if (!ready || children.length === 0) return;
+    if (searchParams.get('start') !== '1') return;
+    autoOpenedRef.current = true;
+    setPlanFor(undefined);
+    setPlanOpen(true);
+    router.replace('/account/plan');
+  }, [ready, children, searchParams, router]);
 
   function openPlanner(forKids?: number[]) {
     setPlanFor(forKids);
