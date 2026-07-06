@@ -20,10 +20,13 @@ const MEMBER_DISMISS_KEY = 'membership-exit-popup-dismissed';
 const QUIZ_DISMISS_DAYS = 14;
 const MEMBER_DISMISS_DAYS = 30;
 
-// The popup appears on a timer once a visitor has spent this long on the page,
-// on any device. Long enough to read a bit first, short enough to catch them
-// before they leave.
-const POPUP_DELAY_MS = 30_000;
+// The popup fires on whichever comes first: a hard timer, the reader passing a
+// scroll depth, or an exit gesture (mouse leaving the top of the window). A
+// short floor keeps the scroll/exit paths from firing the instant someone lands
+// and skims or reaches for their tabs.
+const POPUP_MAX_DELAY_MS = 25_000; // guaranteed backstop
+const EARLY_TRIGGER_FLOOR_MS = 8_000; // scroll/exit can't fire before this
+const SCROLL_GATE = 0.3;
 
 type Variant = 'quiz' | 'membership';
 
@@ -53,6 +56,7 @@ function BlogExitIntentPopupInner() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [variant, setVariant] = useState<Variant>('quiz');
+  const mountTimeRef = useRef(Date.now());
   const firedRef = useRef(false);
 
   /* ─── Decide variant + eligibility ─── */
@@ -102,12 +106,37 @@ function BlogExitIntentPopupInner() {
     } catch {}
   }, [variant]);
 
-  /* ─── Fire on a timer once they've had a chance to read ─── */
+  /* ─── Fire on whichever comes first: timer, scroll depth, or exit gesture ─── */
   useEffect(() => {
-    // Don't start the timer if neither variant is eligible right now.
+    // Don't arm anything if neither variant is eligible right now.
     if (!resolveVariant()) return;
-    const timer = setTimeout(trigger, POPUP_DELAY_MS);
-    return () => clearTimeout(timer);
+
+    // 1. Guaranteed backstop.
+    const timer = setTimeout(trigger, POPUP_MAX_DELAY_MS);
+
+    const pastFloor = () => Date.now() - mountTimeRef.current >= EARLY_TRIGGER_FLOOR_MS;
+
+    // 2. Fire earlier once they read past the scroll gate.
+    function handleScroll() {
+      if (!pastFloor()) return;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable > 0 && window.scrollY / scrollable >= SCROLL_GATE) trigger();
+    }
+
+    // 3. Fire earlier on exit intent (mouse leaves the top of the window).
+    function handleMouseLeave(e: MouseEvent) {
+      if (e.clientY > 0 || !pastFloor()) return;
+      trigger();
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+    };
   }, [resolveVariant, trigger]);
 
   /* ─── Escape key ─── */
