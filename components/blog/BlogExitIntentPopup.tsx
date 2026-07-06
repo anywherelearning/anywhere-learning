@@ -20,12 +20,10 @@ const MEMBER_DISMISS_KEY = 'membership-exit-popup-dismissed';
 const QUIZ_DISMISS_DAYS = 14;
 const MEMBER_DISMISS_DAYS = 30;
 
-// Trigger gates
-const DESKTOP_TIME_GATE_MS = 25_000;
-const DESKTOP_SCROLL_GATE = 0.3;
-const MOBILE_TIME_GATE_MS = 25_000;
-const MOBILE_SCROLL_GATE = 0.35;
-const MOBILE_SCROLL_UP_PX = 200;
+// The popup appears on a timer once a visitor has spent this long on the page,
+// on any device. Long enough to read a bit first, short enough to catch them
+// before they leave.
+const POPUP_DELAY_MS = 30_000;
 
 type Variant = 'quiz' | 'membership';
 
@@ -55,8 +53,6 @@ function BlogExitIntentPopupInner() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [variant, setVariant] = useState<Variant>('quiz');
-  const mountTimeRef = useRef(Date.now());
-  const maxScrollRef = useRef(0);
   const firedRef = useRef(false);
 
   /* ─── Decide variant + eligibility ─── */
@@ -106,69 +102,12 @@ function BlogExitIntentPopupInner() {
     } catch {}
   }, [variant]);
 
-  /* ─── Track max scroll depth ─── */
+  /* ─── Fire on a timer once they've had a chance to read ─── */
   useEffect(() => {
-    function trackScroll() {
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollHeight > 0) {
-        const depth = window.scrollY / scrollHeight;
-        if (depth > maxScrollRef.current) maxScrollRef.current = depth;
-      }
-    }
-    window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => window.removeEventListener('scroll', trackScroll);
-  }, []);
-
-  /* ─── Exit-intent detection ─── */
-  useEffect(() => {
-    // Don't attach listeners if neither variant is eligible right now.
+    // Don't start the timer if neither variant is eligible right now.
     if (!resolveVariant()) return;
-
-    function handleMouseLeave(e: MouseEvent) {
-      if (e.clientY > 0) return;
-      const timeOnPage = Date.now() - mountTimeRef.current;
-      if (timeOnPage < DESKTOP_TIME_GATE_MS) return;
-      if (maxScrollRef.current < DESKTOP_SCROLL_GATE) return;
-      trigger();
-    }
-
-    let lastScrollY = window.scrollY;
-    let scrollUpDistance = 0;
-    let scrollTimer: ReturnType<typeof setTimeout> | null = null;
-
-    function handleScroll() {
-      const currentY = window.scrollY;
-      if (currentY < lastScrollY) {
-        scrollUpDistance += lastScrollY - currentY;
-      } else {
-        scrollUpDistance = 0;
-      }
-      lastScrollY = currentY;
-
-      const viewportHeight = window.innerHeight;
-      const inTopZone = currentY < viewportHeight * 0.4;
-
-      if (scrollUpDistance >= MOBILE_SCROLL_UP_PX && inTopZone) {
-        const timeOnPage = Date.now() - mountTimeRef.current;
-        if (timeOnPage < MOBILE_TIME_GATE_MS) return;
-        if (maxScrollRef.current < MOBILE_SCROLL_GATE) return;
-
-        if (scrollTimer) clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          trigger();
-          scrollUpDistance = 0;
-        }, 500);
-      }
-    }
-
-    document.addEventListener('mouseleave', handleMouseLeave);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimer) clearTimeout(scrollTimer);
-    };
+    const timer = setTimeout(trigger, POPUP_DELAY_MS);
+    return () => clearTimeout(timer);
   }, [resolveVariant, trigger]);
 
   /* ─── Escape key ─── */
