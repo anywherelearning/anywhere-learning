@@ -16,14 +16,7 @@ export const metadata: Metadata = {
       "Find your kid's type and the one life skill to focus on next, plus real activities to start with. A free 2-minute quiz from Anywhere Learning.",
     url: 'https://anywherelearning.co/quiz',
     type: 'website',
-    images: [
-      {
-        url: 'https://anywherelearning.co/images/free-guide-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: "What's Your Kid's Missing Life Skill Quiz | Anywhere Learning",
-      },
-    ],
+    // og:image is supplied by the generated opengraph-image.tsx in this folder.
   },
 };
 
