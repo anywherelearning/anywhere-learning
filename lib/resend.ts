@@ -74,7 +74,7 @@ export async function sendAbandonedCheckoutMembershipEmail({
     from: FROM,
     replyTo: REPLY_TO,
     to,
-    subject: 'I held your spot — your Anywhere Learning checkout',
+    subject: 'I held your spot at Anywhere Learning',
     react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft }),
   });
 }

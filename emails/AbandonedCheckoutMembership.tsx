@@ -46,8 +46,8 @@ export default function AbandonedCheckoutMembership({
   const showFounderStamp = isFounderPhase && typeof spotsLeft === 'number' && spotsLeft > 0;
   const priceLabel = isFounderPhase ? '$99' : '$149';
   const subhead = isFounderPhase
-    ? 'Your cart, your founder rate, your activities, still waiting.'
-    : 'Your cart, your founder spot if available, your activities, still waiting.';
+    ? 'Your spot, your founder rate, and the whole library, still waiting.'
+    : 'Your spot and the whole library, still waiting.';
 
   return (
     <Html>
@@ -99,6 +99,16 @@ export default function AbandonedCheckoutMembership({
             </Text>
           </div>
 
+          {/* ── Warm photo ── */}
+          <div style={heroPhotoWrap}>
+            <Img
+              src={`${baseUrl}/email-trial-build.jpg`}
+              width="544"
+              alt="A parent and two kids building a garden bed together"
+              style={heroPhoto}
+            />
+          </div>
+
           {/* ── Resume checkout CTA ── */}
           <div style={ctaCardWrap}>
             <div style={ctaCard}>
@@ -128,7 +138,7 @@ export default function AbandonedCheckoutMembership({
           {/* ── In your cart ── */}
           <div style={pad}>
             <Text style={eyebrow}>
-              <span style={eyebrowRule} />In your cart
+              <span style={eyebrowRule} />Inside the membership
             </Text>
             <Heading as="h2" style={h2}>
               One year of{' '}
@@ -243,7 +253,7 @@ export default function AbandonedCheckoutMembership({
                 <Text style={founderHeadline}>The founder rate</Text>
                 <Text style={founderBody}>
                   $99/year, locked in for as long as you stay a member, the first 100 only. After
-                  that, it&apos;s $149 for everyone else. Your seat is in the cart already.
+                  that, it&apos;s $149 for everyone else. Your spot is still being held.
                 </Text>
               </div>
             </div>
@@ -390,6 +400,16 @@ const tagline = {
 };
 
 const pad = { padding: '6px 36px 4px' };
+
+const heroPhotoWrap = { padding: '18px 28px 4px' };
+const heroPhoto = {
+  display: 'block' as const,
+  width: '100%',
+  maxWidth: '544px',
+  height: 'auto' as const,
+  borderRadius: '12px',
+  border: `1px solid ${C_RULE}`,
+};
 
 // Eyebrow
 const eyebrow = {
