@@ -145,10 +145,10 @@ export default async function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
                   <Link
-                    href="/free-guide"
+                    href="/quiz"
                     className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                   >
-                    Get your free guide
+                    Take the 2-min quiz
                     <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
                   </Link>
                   <Link
@@ -164,7 +164,7 @@ export default async function HomePage() {
                   <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
                   <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
                   <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span className="inline-flex items-center gap-1.5">Free guide, no credit card</span>
+                  <span className="inline-flex items-center gap-1.5">Free, takes 2 minutes</span>
                 </div>
               </div>
 

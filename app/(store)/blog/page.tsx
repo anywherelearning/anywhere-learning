@@ -10,7 +10,7 @@ import {
   type BlogPost,
 } from '@/lib/blog';
 import ScrollReveal from '@/components/shared/ScrollReveal';
-import EmailForm from '@/components/EmailForm';
+import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
 import { categoryIcons } from '@/components/blog/CategoryIcons';
@@ -406,32 +406,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </div>
         </section>
 
-        {/* 04 EMAIL CAPTURE */}
-        <section className="bg-cream py-20 md:py-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[720px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  Get inspiration delivered
-                </p>
-                <h2 className="font-display text-[clamp(1.75rem,3.4vw,2.4rem)] leading-[1.14] tracking-tight mt-3.5 text-balance">
-                  New posts, fresh ideas, delivered when we have{' '}
-                  <span className="italic text-forest-dark">something worth sharing.</span>
-                </h2>
-                <p className="mt-4 text-gray-600 text-[16px] leading-[1.6] max-w-[480px] mx-auto">
-                  Practical ideas, encouragement, and real-world learning tips. No spam. No fluff.
-                </p>
-                <div className="mt-6 max-w-[480px] mx-auto">
-                  <EmailForm variant="light" buttonText="Subscribe" />
-                </div>
-                <p className="mt-3.5 text-[13px] text-gray-500">
-                  Unsubscribe in one click. We hate inbox clutter as much as you do.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
+        {/* 04 QUIZ CTA */}
+        <div className="bg-cream py-20 md:py-24">
+          <BlogQuizCTA />
+        </div>
 
         {/* 05 MEMBERSHIP POINTER */}
         <section className="bg-cream pb-20 md:pb-24">

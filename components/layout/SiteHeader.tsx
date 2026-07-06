@@ -68,6 +68,7 @@ const RESOURCES_ITEMS = [
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
   { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Free age-by-age skills map' },
+  { href: '/free-guide', label: 'Free 7-Day Guide', desc: 'Seven activities, sent to your inbox' },
 ];
 
 
@@ -427,10 +428,10 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/free-guide"
+                    href="/quiz"
                     className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                   >
-                    Free guide
+                    Take the Quiz
                   </Link>
                   <span
                     aria-hidden="true"
@@ -598,10 +599,10 @@ export default function SiteHeader() {
                   ) : (
                     <>
                       <Link
-                        href="/free-guide"
+                        href="/quiz"
                         className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold text-[15px] py-3 px-5 rounded-xl no-underline hover:bg-[#E6EBDF] transition-all"
                       >
-                        Get the free guide &rarr;
+                        Take the 2-min quiz &rarr;
                       </Link>
                       <Link
                         href="/start-trial"
@@ -622,10 +623,10 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/free-guide"
+                    href="/quiz"
                     className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold text-[15px] py-3 px-5 rounded-xl no-underline hover:bg-[#E6EBDF] transition-all"
                   >
-                    Get the free guide &rarr;
+                    Take the 2-min quiz &rarr;
                   </Link>
                   <Link
                     href="/sign-in"

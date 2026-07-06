@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import EmailForm from '@/components/EmailForm';
 import { useUser } from '@clerk/nextjs';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import {
@@ -12,12 +11,13 @@ import {
   FOUNDER_CAP,
 } from '@/lib/membership';
 
-const GUIDE_SUBMITTED_KEY = 'free-guide-submitted';
-// Two dismiss buckets so dismissing the guide popup doesn't suppress the
+// Set by the quiz when a visitor reaches their result (see LifeSkillQuiz).
+const QUIZ_TAKEN_KEY = 'quiz-taken';
+// Two dismiss buckets so dismissing the quiz popup doesn't suppress the
 // membership popup (and vice versa).
-const GUIDE_DISMISS_KEY = 'blog-exit-popup-dismissed';
+const QUIZ_DISMISS_KEY = 'quiz-exit-popup-dismissed';
 const MEMBER_DISMISS_KEY = 'membership-exit-popup-dismissed';
-const GUIDE_DISMISS_DAYS = 14;
+const QUIZ_DISMISS_DAYS = 14;
 const MEMBER_DISMISS_DAYS = 30;
 
 // Trigger gates
@@ -27,7 +27,7 @@ const MOBILE_TIME_GATE_MS = 25_000;
 const MOBILE_SCROLL_GATE = 0.35;
 const MOBILE_SCROLL_UP_PX = 200;
 
-type Variant = 'free-guide' | 'membership';
+type Variant = 'quiz' | 'membership';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -54,7 +54,7 @@ function MemberGate() {
 function BlogExitIntentPopupInner() {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
-  const [variant, setVariant] = useState<Variant>('free-guide');
+  const [variant, setVariant] = useState<Variant>('quiz');
   const mountTimeRef = useRef(Date.now());
   const maxScrollRef = useRef(0);
   const firedRef = useRef(false);
@@ -63,19 +63,19 @@ function BlogExitIntentPopupInner() {
   // Returns the variant to show, or null if neither popup should fire.
   const resolveVariant = useCallback((): Variant | null => {
     try {
-      const guideDone = !!localStorage.getItem(GUIDE_SUBMITTED_KEY);
-      if (!guideDone) {
-        // Free-guide variant — suppressed by its own dismiss bucket.
-        const expiry = localStorage.getItem(GUIDE_DISMISS_KEY);
+      const quizDone = !!localStorage.getItem(QUIZ_TAKEN_KEY);
+      if (!quizDone) {
+        // Quiz variant — suppressed by its own dismiss bucket.
+        const expiry = localStorage.getItem(QUIZ_DISMISS_KEY);
         if (expiry && Date.now() < Number(expiry)) return null;
-        return 'free-guide';
+        return 'quiz';
       }
       // Membership variant — suppressed by its own dismiss bucket.
       const expiry = localStorage.getItem(MEMBER_DISMISS_KEY);
       if (expiry && Date.now() < Number(expiry)) return null;
       return 'membership';
     } catch {
-      return 'free-guide';
+      return 'quiz';
     }
   }, []);
 
@@ -100,8 +100,8 @@ function BlogExitIntentPopupInner() {
       document.body.style.overflow = '';
     }, 300);
     try {
-      const key = dismissedVariant === 'membership' ? MEMBER_DISMISS_KEY : GUIDE_DISMISS_KEY;
-      const days = dismissedVariant === 'membership' ? MEMBER_DISMISS_DAYS : GUIDE_DISMISS_DAYS;
+      const key = dismissedVariant === 'membership' ? MEMBER_DISMISS_KEY : QUIZ_DISMISS_KEY;
+      const days = dismissedVariant === 'membership' ? MEMBER_DISMISS_DAYS : QUIZ_DISMISS_DAYS;
       localStorage.setItem(key, String(Date.now() + days * 24 * 60 * 60 * 1000));
     } catch {}
   }, [variant]);
@@ -224,8 +224,8 @@ function BlogExitIntentPopupInner() {
           </svg>
         </button>
 
-        {variant === 'free-guide' ? (
-          <FreeGuideVariant onDismiss={dismiss} />
+        {variant === 'quiz' ? (
+          <QuizVariant onDismiss={dismiss} />
         ) : (
           <MembershipVariant onDismiss={dismiss} />
         )}
@@ -234,40 +234,35 @@ function BlogExitIntentPopupInner() {
   );
 }
 
-/* ─── Variant 1: Free guide (first-time visitor) ─── */
-function FreeGuideVariant({ onDismiss }: { onDismiss: () => void }) {
+/* ─── Variant 1: Quiz (first-time visitor) ─── */
+function QuizVariant({ onDismiss }: { onDismiss: () => void }) {
   return (
-    <div className="px-6 sm:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8">
-      <div className="flex items-start gap-4 sm:gap-5 mb-4 sm:mb-5">
-        <div className="relative w-20 sm:w-32 flex-shrink-0 aspect-[773/1000] rounded-lg overflow-hidden shadow-md">
-          <Image
-            src="/images/free-guide-cover.jpg"
-            alt="7 Days of Real-World Learning, free guide cover"
-            fill
-            sizes="(max-width: 640px) 80px, 128px"
-            className="object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="min-w-0 pt-1 sm:pt-2">
-          <h2
-            id="blog-exit-popup-title"
-            className="font-display text-xl sm:text-[1.65rem] text-forest leading-tight mb-1.5 sm:mb-2"
-          >
-            Before you go, grab this free guide
-          </h2>
-          <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-            7 Days of Real-World Learning. Seven activities across seven categories, zero
-            worksheets.
-          </p>
-        </div>
-      </div>
+    <div className="px-6 sm:px-8 pt-7 sm:pt-9 pb-6 sm:pb-8 text-center">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C97B5C] mb-3">
+        2-minute quiz
+      </p>
+      <h2
+        id="blog-exit-popup-title"
+        className="font-display text-[1.6rem] sm:text-[2rem] text-forest leading-[1.08] mb-3 text-balance"
+      >
+        What&apos;s your kid&apos;s missing life skill?
+      </h2>
+      <p className="text-[14px] sm:text-[15px] text-gray-500 leading-relaxed max-w-[380px] mx-auto mb-6">
+        Eight quick questions, and you get your kid&apos;s type, the one skill to focus
+        on next, and three activities to start with.
+      </p>
 
-      <EmailForm variant="light" />
+      <Link
+        href="/quiz"
+        onClick={onDismiss}
+        className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl text-[15px] text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg shadow-md no-underline"
+      >
+        Take the quiz
+      </Link>
 
       <button
         onClick={onDismiss}
-        className="mt-2 sm:mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+        className="mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
       >
         No thanks, I&rsquo;ll keep reading
       </button>

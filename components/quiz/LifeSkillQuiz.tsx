@@ -124,6 +124,11 @@ export default function LifeSkillQuiz() {
       }
       setStatus("idle");
       setPhase("result");
+      // Mark the quiz as taken so the exit-intent popup stops pitching it and
+      // moves this visitor to the membership variant instead.
+      try {
+        localStorage.setItem("quiz-taken", "1");
+      } catch {}
       try {
         const { pinterestSetEnhancedMatch } = await import("@/lib/tracking");
         pinterestSetEnhancedMatch(email);
@@ -148,8 +153,8 @@ export default function LifeSkillQuiz() {
             <span className="italic text-forest">missing life skill?</span>
           </h1>
           <p className="mt-5 text-[17.5px] leading-[1.6] text-gray-600 max-w-[480px] mx-auto">
-            Seven quick questions. No judgment, no right answers. At the end you&apos;ll
-            get your kid&apos;s type, the one skill to focus on next, and a few real
+            Eight quick questions. No judgment, no right answers. At the end you&apos;ll
+            get your kid&apos;s type, the one skill to focus on next, and three real
             activities to start with.
           </p>
           <button
@@ -207,62 +212,51 @@ export default function LifeSkillQuiz() {
           </div>
 
           <p className="mt-8 font-display italic text-[18px] text-ink">
-            Start here:
+            Where I&apos;d start with your kid:
           </p>
           <div className="mt-4 flex flex-col gap-3">
-            <Link
-              href="/free-guide"
-              className="group flex items-center justify-between rounded-xl border border-[#D8D4C5] bg-white px-5 py-4 transition-all hover:border-forest hover:-translate-y-0.5"
-            >
-              <span>
-                <span className="block font-semibold text-ink text-[15.5px]">
-                  7 Days of Real-World Learning
+            {r.activities.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/shop/${a.slug}`}
+                className="group flex items-center justify-between rounded-xl border border-[#D8D4C5] bg-white px-5 py-4 transition-all hover:-translate-y-0.5"
+                style={{ borderLeftWidth: 3, borderLeftColor: r.accent }}
+              >
+                <span>
+                  <span className="block font-semibold text-ink text-[15.5px]">
+                    {a.name}
+                  </span>
+                  <span className="block text-[13.5px] text-gray-500">{a.note}</span>
                 </span>
-                <span className="block text-[13.5px] text-gray-500">
-                  Free guide. Seven hands-on activities to try this week.
+                <span
+                  className="font-display italic text-[18px] group-hover:translate-x-0.5 transition-transform"
+                  style={{ color: r.accent }}
+                >
+                  &rarr;
                 </span>
-              </span>
-              <span className="font-display italic text-forest text-[18px] group-hover:translate-x-0.5 transition-transform">
-                &rarr;
-              </span>
-            </Link>
-            <Link
-              href="/guides/capable-kid"
-              className="group flex items-center justify-between rounded-xl border border-[#D8D4C5] bg-white px-5 py-4 transition-all hover:border-forest hover:-translate-y-0.5"
-            >
-              <span>
-                <span className="block font-semibold text-ink text-[15.5px]">
-                  The Capable Kid Guide
-                </span>
-                <span className="block text-[13.5px] text-gray-500">
-                  Free. The life skills to build, age by age.
-                </span>
-              </span>
-              <span className="font-display italic text-forest text-[18px] group-hover:translate-x-0.5 transition-transform">
-                &rarr;
-              </span>
-            </Link>
+              </Link>
+            ))}
           </div>
 
-          <div className="mt-8 rounded-[14px] border border-[#D8D4C5] bg-[#F2EFE4] p-6 text-center">
-            <p className="font-display italic text-[17px] text-[#C97B5C]">
-              Want the whole library?
+          <div className="mt-8 rounded-[14px] border border-[#C9D3BE] bg-[#E6EBDF] p-6 text-center">
+            <p className="font-display text-[19px] text-forest-dark">
+              These three are just the start.
             </p>
             <p className="mt-2 text-[15px] leading-[1.6] text-gray-600">
-              The Anywhere Learning membership unlocks 100+ guided activities, built
-              to close exactly this kind of gap. Try it free for 14 days.
+              Your membership unlocks 100+ guided activities like these, built to close
+              exactly this gap. No planning, no prep. Try it free for 14 days.
             </p>
             <Link
               href="/join"
               className="mt-4 inline-flex items-center gap-2 rounded-xl bg-forest px-7 py-3.5 text-[15px] font-semibold text-cream transition-all hover:bg-forest-dark active:scale-[0.98]"
             >
-              Start my free trial
+              Start your free trial
               <span className="font-display italic text-[17px] leading-none">&rarr;</span>
             </Link>
           </div>
 
           <p className="mt-6 text-center text-[13px] text-gray-500">
-            Your result is on its way to your inbox too, along with a few activities
+            Your result is on its way to your inbox too, along with the activities
             picked for your kid.
           </p>
         </div>
