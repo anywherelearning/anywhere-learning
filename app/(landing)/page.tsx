@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
@@ -12,8 +11,6 @@ import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import Testimonials from '@/components/home/Testimonials';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
-
-const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
 export const metadata: Metadata = {
   title: {
@@ -682,7 +679,6 @@ export default async function HomePage() {
 
       </main>
       <SiteFooter />
-      <BlogExitIntentPopup />
     </>
   );
 }
