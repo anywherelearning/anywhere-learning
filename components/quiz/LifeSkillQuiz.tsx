@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, FormEvent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   QUESTIONS,
   RESULTS,
@@ -219,10 +220,19 @@ export default function LifeSkillQuiz() {
               <Link
                 key={a.slug}
                 href={`/shop/${a.slug}`}
-                className="group flex items-center justify-between rounded-xl border border-[#D8D4C5] bg-white px-5 py-4 transition-all hover:-translate-y-0.5"
+                className="group flex items-center gap-4 rounded-xl border border-[#D8D4C5] bg-white py-3 pl-3 pr-5 transition-all hover:-translate-y-0.5"
                 style={{ borderLeftWidth: 3, borderLeftColor: r.accent }}
               >
-                <span>
+                <span className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg border border-[#ECE7DB] bg-[#F4F1E9]">
+                  <Image
+                    src={`/products/${a.slug}.jpg`}
+                    alt=""
+                    fill
+                    sizes="64px"
+                    className="object-cover"
+                  />
+                </span>
+                <span className="min-w-0 flex-1">
                   <span className="block font-semibold text-ink text-[15.5px]">
                     {a.name}
                   </span>
