@@ -7,9 +7,9 @@
 
   HOW TO USE (Kit automation email):
   1. Paste this whole file as the email's custom HTML template.
-  2. In the visual editor, DELETE all the default placeholder text so the
-     content area is EMPTY. The full email (greeting included) is already in
-     the template. (Anything you type there appears as a P.S. at the bottom.)
+  2. In the visual editor, add ONLY your greeting (Add Personalization >
+     Personalized greeting, or type: Hi {{ subscriber.first_name | default: 'there' }},).
+     It appears at the top under the result title; everything else is locked in.
   3. Subject: Your free trial is still open
   4. Preview text: Two weeks, the whole library, no risk.
   5. Send a test to yourself, then activate.
@@ -51,7 +51,7 @@
       </td></tr>
 
       <tr><td class="q-pad" style="padding:22px 40px 0;">
-        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">Hi {{ subscriber.first_name | default: "there" }},</div>
+        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
       </td></tr>
 
       <tr><td class="q-pad" style="padding:6px 40px 0;">
@@ -74,8 +74,6 @@
         <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">You've got this,</p>
         <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
       </td></tr>
-
-      <tr><td class="q-pad" style="padding:2px 40px 0; font-size:16px; line-height:1.65; color:#4b5563;">{{ message_content }}</td></tr>
 
       <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
         <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
