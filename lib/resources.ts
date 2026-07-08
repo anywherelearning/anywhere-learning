@@ -2024,6 +2024,7 @@ const resources: ResourcePage[] = [
       'new-to-homeschooling',
       'five-stages-deschooling',
       'start-homeschooling-mid-year',
+      'back-to-homeschool-routines',
       'homeschool-burnout',
       'curriculum-guilt-permission-slip',
       'socialization-answer',
