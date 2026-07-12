@@ -83,8 +83,10 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
       // on this session (and future sessions if the cookie persists) carry
       // em coverage for Event Quality Score.
       try {
-        const { pinterestSetEnhancedMatch } = await import('@/lib/tracking');
+        const { pinterestSetEnhancedMatch, metaLead } = await import('@/lib/tracking');
         pinterestSetEnhancedMatch(email);
+        // Meta Lead conversion — this is the event a Meta Leads campaign optimizes toward.
+        metaLead(guide ? `free-guide:${guide}` : source || 'free-guide');
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");

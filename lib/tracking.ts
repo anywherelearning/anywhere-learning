@@ -7,6 +7,7 @@
 
 export const PINTEREST_TAG_ID = '2613130206618';
 export const GA4_MEASUREMENT_ID = 'G-WF83M4HF46';
+export const META_PIXEL_ID = '1048095041182252';
 export const BRAND_NAME = 'Anywhere Learning';
 
 type PinterestLineItem = {
@@ -64,11 +65,15 @@ type PintrkFunction = {
 
 type GtagFunction = (...args: unknown[]) => void;
 
+/** Meta (Facebook) Pixel global. `fbq('track', 'Lead', { value, currency })` etc. */
+type FbqFunction = (...args: unknown[]) => void;
+
 declare global {
   interface Window {
     pintrk?: PintrkFunction;
     gtag?: GtagFunction;
     dataLayer?: unknown[];
+    fbq?: FbqFunction;
   }
 }
 
@@ -233,5 +238,51 @@ export function ga4Purchase(params: {
       quantity: 1,
       ...item,
     })),
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Meta (Facebook) Pixel                           */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Fire a Meta Pixel event via fbq. Silently no-ops if fbq hasn't loaded
+ * (e.g. user blocked it, ad blocker, or SSR).
+ *
+ * `event` should be a Meta standard event name (PageView, Lead, ViewContent,
+ * AddToCart, InitiateCheckout, StartTrial, Subscribe, Purchase) so Meta Ads
+ * can optimize toward it. Custom names also work but won't map to standard
+ * optimization goals.
+ */
+export function metaTrack(event: string, params?: Record<string, unknown>): void {
+  if (typeof window === 'undefined') return;
+  if (typeof window.fbq !== 'function') return;
+  try {
+    window.fbq('track', event, params ?? {});
+  } catch {
+    // Analytics should never break the app.
+  }
+}
+
+/** Fire a Meta `PageView` on client-side route change (the base tag only fires once on load). */
+export function metaPageView(): void {
+  metaTrack('PageView');
+}
+
+/**
+ * Fire the Meta `Lead` event when a visitor submits an email (free guide, quiz).
+ * This is the event a Leads campaign optimizes toward. Pass a `source` string
+ * (e.g. 'free-guide', 'quiz') as content_name for reporting/breakdowns.
+ */
+export function metaLead(source?: string): void {
+  metaTrack('Lead', source ? { content_name: source } : undefined);
+}
+
+/** Fire the Meta `Purchase` event (checkout success). Value/currency power ROAS reporting. */
+export function metaPurchase(params: { value: number; currency?: string; orderId?: string }): void {
+  metaTrack('Purchase', {
+    value: params.value,
+    currency: params.currency ?? 'USD',
+    ...(params.orderId ? { order_id: params.orderId } : {}),
   });
 }

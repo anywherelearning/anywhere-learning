@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Confetti from '@/components/checkout/Confetti';
+import MembershipConversionEvent from '@/components/checkout/MembershipConversionEvent';
 import SandboxTierCookie from '@/components/checkout/SandboxTierCookie';
 import SessionReadyLink from '@/components/checkout/SessionReadyLink';
 import { MEMBERSHIP_PRICE_FORMATTED, TRIAL_DAYS } from '@/lib/membership';
@@ -118,6 +119,12 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   return (
     <>
       <SandboxTierCookie />
+      <MembershipConversionEvent
+        isTrial={isTrial}
+        priceUSD={m.priceUSD}
+        orderId={order}
+        email={email || null}
+      />
       <Confetti />
       <main className="bg-cream pb-16">
         {/* HERO */}

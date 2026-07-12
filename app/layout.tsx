@@ -10,6 +10,7 @@ import MobileTabBar from "@/components/mobile/MobileTabBar";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativeRedirectGuard from "@/components/mobile/NativeRedirectGuard";
 import PinterestTracker from "@/components/analytics/PinterestTracker";
+import MetaPixelTracker from "@/components/analytics/MetaPixelTracker";
 import PinterestEnhancedMatch from "@/components/analytics/PinterestEnhancedMatch";
 import GoogleCustomerReviewsBadge from "@/components/analytics/GoogleCustomerReviewsBadge";
 import ImageProtection from "@/components/shared/ImageProtection";
@@ -205,7 +206,24 @@ export default function RootLayout({
             src="https://ct.pinterest.com/v3/?event=init&tid=2613130206618&noscript=1"
           />
         </noscript>
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1048095041182252');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            alt=""
+            src="https://www.facebook.com/tr?id=1048095041182252&ev=PageView&noscript=1"
+          />
+        </noscript>
         <PinterestTracker />
+        <MetaPixelTracker />
         <GoogleCustomerReviewsBadge />
         <SpeedInsights />
         <Analytics />
