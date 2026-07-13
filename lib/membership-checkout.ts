@@ -85,6 +85,11 @@ export async function createMembershipCheckout(opts: {
 
   const session = await stripe.checkout.sessions.create({
     ...(submitMessage && { custom_text: { submit: { message: submitMessage } } }),
+    // Expire unfinished sessions after 2h instead of Stripe's 24h default, so
+    // the `checkout.session.expired` webhook (→ "I held your spot" email) fires
+    // while intent is still warm rather than a full day later. Stripe allows
+    // 30min–24h; 2h is long enough to rule out a quick distraction.
+    expires_at: Math.floor(Date.now() / 1000) + 2 * 60 * 60,
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
     allow_promotion_codes: true,

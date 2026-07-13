@@ -33,8 +33,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClerkClient } from '@clerk/backend';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { users, subscriptions, stripeEvents } from '@/lib/db/schema';
-import { eq, and, ne } from 'drizzle-orm';
+import { users, subscriptions, stripeEvents, sentEmails } from '@/lib/db/schema';
+import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import {
   sendMembershipWelcomeEmail,
@@ -342,6 +342,34 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
 
   const firstName = session.customer_details?.name?.trim().split(/\s+/)[0] || undefined;
 
+  // Per-recipient throttle: starting checkout N times yields N distinct
+  // `checkout.session.expired` events, each a legitimate (non-duplicate) event.
+  // Without this guard a hesitant prospect who retries a few times gets a stack
+  // of identical "I held your spot" emails. Only send once per address per
+  // window. Best-effort: if the DB is unreachable we send anyway (same posture
+  // as the event idempotency check — better a rare dupe than a dropped nudge).
+  const ABANDONED_THROTTLE_DAYS = 7;
+  try {
+    const since = new Date(Date.now() - ABANDONED_THROTTLE_DAYS * 24 * 60 * 60 * 1000);
+    const recent = await db
+      .select({ id: sentEmails.id })
+      .from(sentEmails)
+      .where(
+        and(
+          eq(sentEmails.email, email),
+          eq(sentEmails.kind, 'abandoned_checkout'),
+          gt(sentEmails.sentAt, since),
+        ),
+      )
+      .limit(1);
+    if (recent.length > 0) {
+      console.log(`[webhook] abandoned-checkout email already sent to ${email} within ${ABANDONED_THROTTLE_DAYS}d — skipping`);
+      return;
+    }
+  } catch (err) {
+    console.warn('[webhook] abandoned-checkout throttle check failed, sending anyway:', err);
+  }
+
   try {
     // For abandoned checkouts we don't have a price ID yet (no completed
     // purchase). Use the runtime helper — it tells the user whether the
@@ -364,6 +392,14 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
       spotsLeft,
     });
     console.log(`[webhook] sent abandoned-checkout email to ${email}`);
+    // Record the send so retries/other expired sessions for this address stay
+    // throttled. Only logged after a successful send, so a send failure above
+    // leaves the address eligible for the next attempt.
+    try {
+      await db.insert(sentEmails).values({ email, kind: 'abandoned_checkout' });
+    } catch (logErr) {
+      console.warn('[webhook] failed to record abandoned-checkout send:', logErr);
+    }
   } catch (err) {
     console.error('[webhook] abandoned-checkout email failed:', err);
   }

@@ -27,10 +27,22 @@ vi.mock('@/lib/stripe', () => ({
   },
 }));
 
+// Each `db.select()...` chain resolves to the next array shifted off this queue
+// (empty array when drained), letting a test stage what successive selects
+// return — e.g. [] for the "already a member?" lookup, then [{…}] for the
+// abandoned-email throttle lookup. Populated per-test; reset in beforeEach.
+const selectResults = vi.hoisted(() => ({ queue: [] as unknown[][] }));
+
 vi.mock('@/lib/db', () => ({
   db: {
-    select: () => ({ from: () => ({ where: () => ({ limit: () => [] }) }) }),
-    insert: () => ({ values: () => ({ returning: () => [] }) }),
+    select: () => ({
+      from: () => ({
+        where: () => ({ limit: () => selectResults.queue.shift() ?? [] }),
+      }),
+    }),
+    // `.returning()` yields a row so callers that read `inserted[0].id`
+    // (e.g. upsertUser) don't blow up on an empty result.
+    insert: () => ({ values: () => ({ returning: () => [{ id: 'user_test' }], onConflictDoNothing: () => ({ returning: () => [{ id: 'evt_test' }] }) }) }),
     update: () => ({ set: () => ({ where: () => ({ returning: () => [] }) }) }),
   },
 }));
@@ -38,10 +50,15 @@ vi.mock('@/lib/db', () => ({
 vi.mock('@/lib/db/schema', () => ({
   users: {},
   subscriptions: {},
+  stripeEvents: {},
+  sentEmails: {},
 }));
 
 vi.mock('drizzle-orm', () => ({
   eq: vi.fn(),
+  and: vi.fn(),
+  ne: vi.fn(),
+  gt: vi.fn(),
 }));
 
 vi.mock('@clerk/backend', () => ({
@@ -100,6 +117,7 @@ let POST: (req: import('next/server').NextRequest) => Promise<Response>;
 
 beforeEach(async () => {
   vi.clearAllMocks();
+  selectResults.queue = [];
   process.env.STRIPE_WEBHOOK_SECRET = 'whsec_test';
   process.env.CLERK_SECRET_KEY = 'sk_test_clerk';
   process.env.NEXT_PUBLIC_URL = 'https://anywherelearning.co';
@@ -244,18 +262,39 @@ describe('Stripe webhook event routing', () => {
 });
 
 describe('Stripe webhook checkout.session.expired', () => {
-  it('acknowledges expired sessions', async () => {
-    mockConstructEvent.mockReturnValue(
-      fakeEvent('checkout.session.expired', {
-        id: 'cs_expired',
-        mode: 'subscription',
-        customer_details: { email: 'abandoned@example.com', name: 'Test' },
-        metadata: { kind: 'membership' },
-      }),
-    );
+  function expiredEvent(email: string) {
+    return fakeEvent('checkout.session.expired', {
+      id: 'cs_expired',
+      mode: 'subscription',
+      customer_details: { email, name: 'Test' },
+      metadata: { kind: 'membership' },
+    });
+  }
 
-    const req = makeRequest('body');
-    const res = await POST(req);
+  it('sends the abandoned-checkout email when none was sent recently', async () => {
+    const { sendAbandonedCheckoutMembershipEmail } = await import('@/lib/resend');
+    // selects drain to []: no existing member, and no recent send in the log.
+    mockConstructEvent.mockReturnValue(expiredEvent('abandoned@example.com'));
+
+    const res = await POST(makeRequest('body'));
+
     expect(res.status).toBe(200);
+    expect(sendAbandonedCheckoutMembershipEmail).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(sendAbandonedCheckoutMembershipEmail).mock.calls[0][0]).toMatchObject({
+      to: 'abandoned@example.com',
+    });
+  });
+
+  it('skips the email when one was already sent within the throttle window', async () => {
+    const { sendAbandonedCheckoutMembershipEmail } = await import('@/lib/resend');
+    // 1st select (member lookup) → none; 2nd select (throttle) → a recent send.
+    selectResults.queue = [[], [{ id: 'sent_row' }]];
+    mockConstructEvent.mockReturnValue(expiredEvent('abandoned@example.com'));
+
+    const res = await POST(makeRequest('body'));
+
+    // Still ack'd (200) so Stripe stops retrying, but no email goes out.
+    expect(res.status).toBe(200);
+    expect(sendAbandonedCheckoutMembershipEmail).not.toHaveBeenCalled();
   });
 });

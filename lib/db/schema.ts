@@ -158,6 +158,25 @@ export const stripeEvents = pgTable('stripe_events', {
   receivedAt: timestamp('received_at').defaultNow().notNull(),
 });
 
+/**
+ * Per-recipient send log for throttled transactional emails. The Stripe event
+ * idempotency above stops the SAME event replaying; this stops DIFFERENT events
+ * for the same person spamming them — e.g. someone who starts membership
+ * checkout five times gets five distinct `checkout.session.expired` events, but
+ * should only get one "I held your spot" email. We record (email, kind) on send
+ * and skip if a matching row exists inside the throttle window.
+ */
+export const sentEmails = pgTable('sent_emails', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  /** Lowercased recipient address. */
+  email: text('email').notNull(),
+  /** Email category, e.g. 'abandoned_checkout'. */
+  kind: text('kind').notNull(),
+  sentAt: timestamp('sent_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_sent_emails_email_kind').on(table.email, table.kind),
+]);
+
 export const referrals = pgTable('referrals', {
   id: uuid('id').defaultRandom().primaryKey(),
   referrerUserId: uuid('referrer_user_id').references(() => users.id).notNull(),
