@@ -156,6 +156,18 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'seed-travelers': 'Half-Day',
   'camouflage-challenge': 'Quick',
   'nature-data-tracker': 'Project',
+
+  // New 10 (Jul 2026)
+  'grow-it-eat-it': 'Project',
+  'trade-it-up': 'Project',
+  'family-history-detective': 'Project',
+  'probability-lab': 'Half-Day',
+  'kitchen-science-lab': 'Half-Day',
+  'secret-code-lab': 'Half-Day',
+  'body-owners-manual': 'Half-Day',
+  'people-scientist': 'Half-Day',
+  'teach-it-to-learn-it': 'Half-Day',
+  'play-the-world': 'Half-Day',
 };
 
 /** Returns the effort bucket for a slug, or null if it's not an individual activity. */

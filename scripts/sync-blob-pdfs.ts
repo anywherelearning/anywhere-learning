@@ -156,6 +156,18 @@ const SLUG_TO_FILE: Record<string, string> = {
   'seed-travelers': 'Outdoor & Nature - Seed Travelers.pdf',
   'camouflage-challenge': 'Outdoor & Nature - Camouflage Challenge.pdf',
   'nature-data-tracker': 'Real-world math - Nature Data Tracker.pdf',
+
+  // New 10 (Jul 2026)
+  'grow-it-eat-it': 'Outdoor & Nature - GROW IT, EAT IT.pdf',
+  'kitchen-science-lab': 'Creativity & Maker Kitchen Science Lab.pdf',
+  'probability-lab': 'Real-world math - The Probability Lab.pdf',
+  'secret-code-lab': 'Planning & Problem-Solving Secret Code Lab.pdf',
+  'body-owners-manual': "Planning & Problem-Solving THE BODY OWNER'S MANUAL.pdf",
+  'family-history-detective': 'Communication & Writing - Family History Detective.pdf',
+  'teach-it-to-learn-it': 'Communication & Writing - Teach It To Learn It.pdf',
+  'trade-it-up': 'Entrepreneurship - Trade It Up.pdf',
+  'play-the-world': 'Worldschooling - Play The World.pdf',
+  'people-scientist': 'Emotional & Social Skills - Be a People Scientist.pdf',
 };
 
 // ─────────────────────────────────────────────────────────────

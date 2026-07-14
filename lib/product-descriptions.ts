@@ -1680,6 +1680,136 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['STEM', 'Real-World Math', 'Data', 'Pattern Recognition', 'Prediction'],
     format: 'Project Guide',
   },
+  'grow-it-eat-it': {
+    opening:
+      'Your child plants something they can actually eat, tends it from seed to plate, and eats the thing they grew. Along the way they pick up responsibility, plant science, and the patience of caring for a living thing every day. Hands-on STEM science that turns a pot of radishes into real food and a real sense of I grew that.',
+    whatsIncluded: [
+      'Choose and plant a fast-growing edible',
+      'Set up a growing spot and a daily care routine',
+      'Track how it grows, week by week',
+      'Spot droops and yellow leaves and fix them',
+      'Harvest and eat what they grew',
+    ],
+    skillTags: ['STEM', 'Science', 'Responsibility', 'Patience', 'Observation'],
+    format: 'Project Guide',
+  },
+  'kitchen-science-lab': {
+    opening:
+      'Your child turns the kitchen into a science lab, running real chemistry and physics experiments with everyday ingredients. They predict, test, change one thing, and figure out why it happened, then design their own experiment and put on a science show. Hands-on STEM science that proves science is a way of poking at the world, not a subject in a book.',
+    whatsIncluded: [
+      'Run real experiments with kitchen ingredients',
+      'Predict, test, and explain what happened',
+      'Change one thing to see what shifts',
+      'Design an original experiment',
+      'Put on a science show for the family',
+    ],
+    skillTags: ['STEM', 'Science', 'Scientific Method', 'Prediction', 'Chemistry'],
+    format: 'Activity Guide',
+  },
+  'probability-lab': {
+    opening:
+      'Your child builds a carnival game, works out the real odds of winning it, then sets a price and prize so the house comes out ahead. They test the maths against real games played and discover why every prize wall and scratch ticket is built to win slowly. Real-world STEM maths that turns probability into a game they can feel.',
+    whatsIncluded: [
+      'Build a simple carnival game of chance',
+      'Work out the real odds of winning',
+      'Test the odds against dozens of rounds',
+      'Set a price and prize that turn a profit',
+      'Connect it to prize walls, scratch tickets, and apps',
+    ],
+    skillTags: ['STEM', 'Real-World Math', 'Probability', 'Expected Value', 'Healthy Skepticism'],
+    format: 'Activity Guide',
+  },
+  'secret-code-lab': {
+    opening:
+      'Your child learns to write and crack secret codes, from simple ciphers to a keyword cipher they build themselves, then breaks a message with no key using letter-frequency detective work. They finish with a coded treasure hunt and discover how the same basic idea keeps passwords and messages safe. Logic and pattern-hunting disguised as a spy game.',
+    whatsIncluded: [
+      'Crack a starter code and learn how ciphers work',
+      'Build your own cipher, including a keyword code',
+      'Break a coded message with no key, using frequency',
+      'See how encryption protects real secrets',
+      'Design a coded treasure hunt',
+    ],
+    skillTags: ['STEM', 'Logic', 'Pattern Recognition', 'Cryptography', 'Problem-Solving'],
+    format: 'Activity Guide',
+  },
+  'body-owners-manual': {
+    opening:
+      'Your child becomes the scientist of their own body, running real self-experiments: resting heart rate, reaction time, senses, reflexes, and quirks. They measure, record, and compile it all into a real body manual for the one machine they will use every day. Hands-on STEM science that turns body literacy into something they discovered, not something they were told.',
+    whatsIncluded: [
+      'Take baseline body readings',
+      'Test the heart, reflexes, and reaction time',
+      'Run experiments on the senses',
+      'Find personal quirks and bests',
+      'Compile it all into a real body manual',
+    ],
+    skillTags: ['STEM', 'Science', 'Measurement', 'Body Literacy', 'Data'],
+    format: 'Activity Guide',
+  },
+  'family-history-detective': {
+    opening:
+      'Your child interviews the oldest person they can talk to and uncovers the real family stories nobody has written down. They build a timeline, sketch a family tree, and turn one memory into a story worth keeping. Real interviewing, active listening, and storytelling, plus a connection across generations that most kids never get.',
+    whatsIncluded: [
+      'Choose and interview an older relative',
+      'Prepare open questions that unlock stories',
+      'Dig past the facts to the real memories',
+      'Build a family timeline and tree',
+      'Write up one story and share it',
+    ],
+    skillTags: ['Interviewing', 'Active Listening', 'Storytelling', 'Writing', 'History'],
+    format: 'Project Guide',
+  },
+  'teach-it-to-learn-it': {
+    opening:
+      'Your child takes a skill they already know, a card trick, a recipe, a soccer move, breaks it into teachable steps, plans a real lesson, and teaches it to someone for real. Then they check if it landed and teach it better. The old truth in action: you never understand something as well as when you have to teach it.',
+    whatsIncluded: [
+      'Pick a skill they already know well',
+      'Break it into clear, teachable steps',
+      'Plan a real lesson with a hook and practice',
+      'Teach it to a live student',
+      'Check it landed, then teach it better',
+    ],
+    skillTags: ['Teaching', 'Public Speaking', 'Structuring Ideas', 'Communication', 'Metacognition'],
+    format: 'Activity Guide',
+  },
+  'trade-it-up': {
+    opening:
+      'Your child starts with one small, nearly worthless object and trades their way up through a chain of real swaps, no money, just deal after deal. Along the way they hit the question that drives all of business: what is a thing worth, and worth to whom? Real negotiation, value, and resourcefulness, inspired by the famous red-paperclip-to-a-house story.',
+    whatsIncluded: [
+      'Pick a humble starting object',
+      'Find the person who values it most',
+      'Make real trades and log every swap',
+      'Learn the moves that turn a no into a yes',
+      'Aim for win-win deals and count the climb',
+    ],
+    skillTags: ['Negotiation', 'Value', 'Resourcefulness', 'Persuasion', 'Entrepreneurship'],
+    format: 'Project Guide',
+  },
+  'play-the-world': {
+    opening:
+      'While travelling, your child finds a real game that local kids play, learns it properly, the rules, the words, the gear, and plays it right where you are. Then they figure out what the game reveals about the place. Worldschooling through the one language every child speaks: play. There is no faster way inside a culture.',
+    whatsIncluded: [
+      'Find a game local kids really play',
+      'Learn the real rules, from locals if you can',
+      'Make or gather the gear',
+      'Learn the words that go with the game',
+      'Play it for real and read the culture in it',
+    ],
+    skillTags: ['Cultural Immersion', 'Observation', 'Cross-Cultural Connection', 'Curiosity', 'Worldschooling'],
+    format: 'Activity Guide',
+  },
+  'people-scientist': {
+    opening:
+      'Your child turns the scientific method loose on other people: they form a real hypothesis (smile first and more people smile back), run a kind little experiment, tally what actually happens, and draw a conclusion. Real data about real behaviour, and because every experiment is a small kind act, they build empathy and social confidence as they go.',
+    whatsIncluded: [
+      'Watch people and find a testable question',
+      'Form a hypothesis about how people behave',
+      'Design and run a kind experiment',
+      'Tally the results honestly',
+      'Draw a conclusion and test it again',
+    ],
+    skillTags: ['Scientific Method', 'Empathy', 'Observation', 'Social Confidence', 'Hypothesis-Testing'],
+    format: 'Activity Guide',
+  },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────
