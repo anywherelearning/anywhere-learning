@@ -823,7 +823,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 44-page parent guide to the 12 skill areas that matter most for raising a future-ready child, from ages 0 to 16+. This is not a curriculum and it\'s not another activity pack. It\'s your roadmap, your "what matters now" guide, organised by age phase so you always know what to focus on next.',
     whatsIncluded: [
       '44-page parent guide for kids ages 0–16+',
-      '12 skill areas: Emotional Intelligence, Physical Health + Movement, Literacy + Language, Numeracy + Logic, Critical Thinking, Creativity + Making, Communication, Self-Management, AI + Digital Literacy, Citizenship + Character, Life Skills',
+      '12 skill areas: Emotional Intelligence, Physical Health + Movement, Reading + Media, Writing, Numeracy + Logic, Critical Thinking, Creativity + Making, Communication, Self-Management, AI + Digital Literacy, Citizenship + Character, Life Skills',
       'Organised into three age phases: 0–6 Play, 6–11 Build, 11–16+ Apply',
       'Each section: what to develop, what it looks like at each stage, and hands-on play-based or real-world activities',
       'A "Focus over Formality" rule for each age band so you never feel behind',

@@ -1234,7 +1234,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "The Future-Ready Skills Map",
     slug: "future-ready-skills-map",
     description:
-      "A 44-page parent guide to the 12 skill areas that matter most for raising a future-ready child, including emotional intelligence, physical health and movement, literacy and language, numeracy and logic, critical thinking, creativity and making, communication, self-management, AI and digital literacy, citizenship and character, and life skills. Organised into three age phases (0–6 Play, 6–11 Build, 11–16+ Apply), each section includes what to develop, what it looks like at each stage, hands-on play-based and real-world activities, a sample week, and a one-page skills-at-a-glance overview.",
+      "A 44-page parent guide to the 12 skill areas that matter most for raising a future-ready child, including emotional intelligence, physical health and movement, reading and media, writing, numeracy and logic, critical thinking, creativity and making, communication, self-management, AI and digital literacy, citizenship and character, and life skills. Organised into three age phases (0–6 Play, 6–11 Build, 11–16+ Apply), each section includes what to develop, what it looks like at each stage, hands-on play-based and real-world activities, a sample week, and a one-page skills-at-a-glance overview.",
     shortDescription:
       "44-page parent guide to 12 future-ready skill areas for kids ages 0-16+: milestones, hands-on activities, and sample weeks.",
     priceCents: 999,
