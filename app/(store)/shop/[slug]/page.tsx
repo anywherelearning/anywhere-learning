@@ -58,9 +58,9 @@ function themeFor(category: string): CategoryTheme {
 /** Per-category "Why it matters" callout (parent-facing, motivational). */
 const WHY_IT_MATTERS: Record<string, string> = {
   "real-world-math":
-    "By the time a kid budgets, shops, and cooks a real meal, they have practiced more applied math than a textbook chapter — and they did it with you. That is the moment \"I taught my kid something real\" starts to feel possible.",
+    "When maths lives in real money, real measurements, and real decisions, it stops being a worksheet and becomes a tool. A kid who uses it to get something they actually want remembers it for life, and they did it with you. That is the moment \"I taught my kid something real\" starts to feel possible.",
   entrepreneurship:
-    "Pitching, pricing, failing, and trying again — these are the skills no school subject teaches but every adult life needs. One small business taught at home beats a hundred worksheets on \"economics.\"",
+    "Pitching, pricing, failing, and trying again. These are the skills no school subject teaches but every adult life needs. One small business taught at home beats a hundred worksheets on \"economics.\"",
   "ai-literacy":
     "Your kid will spend the rest of their life around AI. Whether they treat it like magic, an oracle, or a tool they direct is up to what you teach them now. This is the literacy that defines the next twenty years.",
   "communication-writing":
@@ -159,7 +159,7 @@ export async function generateMetadata({
           url: imageUrl,
           width: 1200,
           height: product.imageUrl ? 1500 : 630,
-          alt: `${product.name} cover — ${suffix}`,
+          alt: `${product.name} cover, ${suffix}`,
         },
       ],
     },
@@ -457,7 +457,7 @@ export default async function ProductPage({
                 {product.imageUrl && (
                   <Image
                     src={coverSrc(product.imageUrl)!}
-                    alt={`${product.name} — ${categoryLabel} activity guide cover`}
+                    alt={`${product.name}, ${categoryLabel} activity guide cover`}
                     fill
                     sizes="(max-width: 1024px) 90vw, 420px"
                     priority
@@ -907,8 +907,8 @@ export default async function ProductPage({
                 <em className="not-italic italic text-forest-dark">100+ in the membership.</em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
-                The full library covers nine categories — math, AI, communication, planning,
-                creativity, outdoor, entrepreneurship, worldschooling, emotional & social skills — with new activities every
+                The full library covers nine categories (math, AI, communication, planning,
+                creativity, outdoor, entrepreneurship, worldschooling, and emotional & social skills) with new activities every
                 quarter. {MEMBERSHIP_PRICE_YEAR}
                 {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}
               </p>
