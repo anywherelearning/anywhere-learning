@@ -20,6 +20,8 @@ interface Props {
   manageUrl: string;
   /** Link to the library dashboard. */
   libraryUrl: string;
+  /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
+  plan?: 'annual' | 'monthly';
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -47,6 +49,7 @@ export default function TrialEndingReminder({
   trialEndDate,
   manageUrl,
   libraryUrl,
+  plan,
 }: Props) {
   const name = firstName?.trim() || 'there';
 
@@ -63,7 +66,10 @@ export default function TrialEndingReminder({
   );
   const daysLabel = daysFromNow === 1 ? '1 day' : `${daysFromNow} days`;
 
-  const price = isFounderPhase ? '$99' : '$149';
+  const isMonthly = plan === 'monthly';
+  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
+  /** "for the year" / "for the month" phrasing. */
+  const forThe = isMonthly ? 'for the month' : 'for the year';
 
   return (
     <Html>
@@ -118,7 +124,7 @@ export default function TrialEndingReminder({
                   <Text style={p}>
                     I promised no surprise charges, so here it is in plain words: on {shortDate},
                     your free trial ends and your membership starts. Your card will be charged{' '}
-                    {price} for the year
+                    {price} {forThe}
                     {isFounderPhase
                       ? ', at the founder rate you locked in when you signed up'
                       : ''}
@@ -161,7 +167,7 @@ export default function TrialEndingReminder({
                                 <td style={summaryKey}>Your price</td>
                                 <td style={summaryValue}>
                                   <span style={{ fontSize: '14.5px', fontWeight: 600, color: C_INK }}>
-                                    {price} for the year
+                                    {price} {forThe}
                                   </span>
                                   {isFounderPhase && (
                                     <>
@@ -307,7 +313,8 @@ export default function TrialEndingReminder({
                   <div style={fadeDivider} />
                   <Text style={legal}>
                     Unless you cancel before {fullDate}, the card you saved at sign-up will be
-                    charged {price} USD for one year of Anywhere Learning membership. You can
+                    charged {price} USD for one {isMonthly ? 'month' : 'year'} of Anywhere
+                    Learning membership{isMonthly ? ', renewing monthly' : ''}. You can
                     cancel anytime before then with the link above or from your account page, and
                     you&apos;ll pay nothing. And if you change your
                     mind after the charge, the 14-day money-back guarantee still applies. Reply

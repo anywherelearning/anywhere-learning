@@ -4,7 +4,12 @@ import Confetti from '@/components/checkout/Confetti';
 import MembershipConversionEvent from '@/components/checkout/MembershipConversionEvent';
 import SandboxTierCookie from '@/components/checkout/SandboxTierCookie';
 import SessionReadyLink from '@/components/checkout/SessionReadyLink';
-import { MEMBERSHIP_PRICE_FORMATTED, TRIAL_DAYS } from '@/lib/membership';
+import {
+  MEMBERSHIP_PRICE_FORMATTED,
+  TRIAL_DAYS,
+  MONTHLY_PRICE_USD,
+  MONTHLY_PLAN_PRICE_MONTH,
+} from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 
 export const dynamic = 'force-dynamic';
@@ -27,6 +32,8 @@ interface PageProps {
     order?: string;
     /** '1' when this signup started a 14-day free trial ($0 charged today). */
     trial?: string;
+    /** 'monthly' when the buyer picked the $15/month plan (annual otherwise). */
+    plan?: string;
   }>;
 }
 
@@ -37,17 +44,18 @@ interface PageProps {
 // design is testable without a live Stripe session.
 async function resolveContext(searchParams: Awaited<PageProps['searchParams']>) {
   const isTrial = searchParams.trial === '1';
+  const isMonthly = searchParams.plan === 'monthly';
   const firstName = searchParams.name?.trim() || '';
   const email = searchParams.email?.trim() || '';
   const order =
     searchParams.order?.trim() ||
     `AW-${new Date().getUTCFullYear()}-${Math.floor(10000 + Math.random() * 89999)}`;
-  return { isTrial, firstName, email, order };
+  return { isTrial, isMonthly, firstName, email, order };
 }
 
 export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const { isTrial, firstName, email, order } = await resolveContext(sp);
+  const { isTrial, isMonthly, firstName, email, order } = await resolveContext(sp);
 
   // The page renders moments after checkout completes, so "now + TRIAL_DAYS"
   // matches the Stripe trial end to the day without a session lookup.
@@ -61,18 +69,24 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
   // this code was deployed.
   const m = await getMembership();
 
+  // Plan-aware framing: monthly buyers are outside the founder system, so
+  // every "locked in for life" line is suppressed and the price reads
+  // "$15/month" instead of the annual rate.
+  const founder = m.isFounderPhase && !isMonthly;
+  const priceLine = isMonthly ? MONTHLY_PLAN_PRICE_MONTH : m.priceYear;
+
   const content = {
         flourish: "You're in.",
         eyebrow: isTrial
-          ? `Free trial started · ${m.tierLabel}`
-          : `Membership confirmed · ${m.tierLabel}`,
+          ? `Free trial started · ${isMonthly ? 'Member' : m.tierLabel}`
+          : `Membership confirmed · ${isMonthly ? 'Member' : m.tierLabel}`,
         h1Greeting: firstName ? `You're in, ${firstName}.` : "You're in.",
         h1Suffix: 'Welcome to the family.',
         lead: isTrial
-          ? `Your ${TRIAL_DAYS}-day free trial is live and you weren't charged a cent today. Open and read every guide in your browser, as many as you like. Your membership starts ${trialEndLabel} at ${m.priceYear}${m.isFounderPhase ? ', your founder rate, locked in for life' : ''}, when downloads unlock, or subscribe sooner anytime to start saving guides.`
-          : m.isFounderPhase
-            ? `Your founding member rate (${m.priceYear}, locked in for life) is active. Full library access is yours starting now. Below is everything you need to get started.`
-            : `Your membership (${m.priceYear}) is active. Full library access is yours starting now. Below is everything you need to get started.`,
+          ? `Your ${TRIAL_DAYS}-day free trial is live and you weren't charged a cent today. Open and read every guide in your browser, as many as you like. Your membership starts ${trialEndLabel} at ${priceLine}${founder ? ', your founder rate, locked in for life' : ''}, when downloads unlock, or subscribe sooner anytime to start saving guides.`
+          : founder
+            ? `Your founding member rate (${priceLine}, locked in for life) is active. Full library access is yours starting now. Below is everything you need to get started.`
+            : `Your membership (${priceLine}) is active. Full library access is yours starting now. Below is everything you need to get started.`,
         ctaCard: {
           leadLine: "Don't wait for the weekend.",
           headlinePrefix: 'Start with three activities we',
@@ -83,11 +97,15 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         },
         receipt: isTrial
           ? {
-              product: 'Anywhere Learning Annual Membership',
+              product: isMonthly
+                ? 'Anywhere Learning Monthly Membership'
+                : 'Anywhere Learning Annual Membership',
               price: '$0.00 today',
-              note: m.isFounderPhase
-                ? `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year, locked in for life`
-                : `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year`,
+              note: isMonthly
+                ? `Free for ${TRIAL_DAYS} days · Then $${MONTHLY_PRICE_USD}.00/month`
+                : founder
+                  ? `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year, locked in for life`
+                  : `Free for ${TRIAL_DAYS} days · Then ${MEMBERSHIP_PRICE_FORMATTED}/year`,
               inboxItems: [
                 'A welcome note from Amelie (within an hour)',
                 `A heads-up email 3 days before your trial ends on ${trialEndLabel}`,
@@ -95,18 +113,24 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
               ],
             }
           : {
-              product: 'Anywhere Learning Annual Membership',
-              price: MEMBERSHIP_PRICE_FORMATTED,
-              note: m.isFounderPhase
-                ? 'Founding rate · Locks in for life · Annual renewal'
-                : 'Annual renewal',
+              product: isMonthly
+                ? 'Anywhere Learning Monthly Membership'
+                : 'Anywhere Learning Annual Membership',
+              price: isMonthly ? `$${MONTHLY_PRICE_USD}.00` : MEMBERSHIP_PRICE_FORMATTED,
+              note: isMonthly
+                ? 'Monthly renewal · Cancel anytime'
+                : founder
+                  ? 'Founding rate · Locks in for life · Annual renewal'
+                  : 'Annual renewal',
               inboxItems: [
                 email ? `Payment receipt from Stripe (sent to ${email})` : 'Payment receipt from Stripe',
                 'A welcome note from Amelie (within an hour)',
-                'Renewal reminder 14 days before your year is up',
+                isMonthly
+                  ? 'A receipt from Stripe each month it renews'
+                  : 'Renewal reminder 14 days before your year is up',
               ],
             },
-        amelie: m.isFounderPhase
+        amelie: founder
           ? "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. You signed up early enough that what I make next gets shaped by what you tell me. Write me at info@anywherelearning.co. I read all of it. Thanks for being here. xo Amelie"
           : "Hi. I'm Amelie. I built this because I wanted my own two kids learning things school doesn't have time for. Write me at info@anywherelearning.co. I read all of it. Thanks for being here. xo Amelie",
         helpLinks: [
@@ -121,7 +145,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
       <SandboxTierCookie />
       <MembershipConversionEvent
         isTrial={isTrial}
-        priceUSD={m.priceUSD}
+        priceUSD={isMonthly ? MONTHLY_PRICE_USD : m.priceUSD}
         orderId={order}
         email={email || null}
       />

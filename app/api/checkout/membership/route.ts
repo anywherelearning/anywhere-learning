@@ -6,6 +6,7 @@
  *
  * POST body (all optional):
  *   email — pre-fills the Stripe Checkout email field
+ *   plan  — 'annual' (default) or 'monthly'
  *
  * Returns: { url: string } — redirect the browser to this URL.
  */
@@ -31,6 +32,7 @@ export async function POST(req: NextRequest) {
     const emailInput = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const customerEmail = emailRegex.test(emailInput) ? emailInput : undefined;
+    const plan = body.plan === 'monthly' ? ('monthly' as const) : ('annual' as const);
 
     // Require sign-in for membership checkout. We need a Clerk userId to
     // enforce the one-trial-per-customer rule (isTrialEligible looks up prior
@@ -59,7 +61,9 @@ export async function POST(req: NextRequest) {
         {
           error: 'sign_in_required',
           message: 'Create a free account to start your trial. Takes a few seconds, and your library remembers where you left off.',
-          signInUrl: `/sign-up?redirect_url=${encodeURIComponent('/start-trial')}`,
+          signInUrl: `/sign-up?redirect_url=${encodeURIComponent(
+            plan === 'monthly' ? '/start-trial?plan=monthly' : '/start-trial',
+          )}`,
         },
         { status: 401 },
       );
@@ -69,6 +73,7 @@ export async function POST(req: NextRequest) {
       clerkId,
       email: clerkEmail || customerEmail,
       origin: getSiteOrigin(req),
+      plan,
     });
 
     if (!result.ok && result.reason === 'already_member') {

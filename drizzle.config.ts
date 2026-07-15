@@ -32,6 +32,7 @@ export default defineConfig({
     'trial_downloads',
     'stripe_events',
     'sent_emails',
+    'exit_surveys',
     'referrals',
     'referral_conversions',
   ],

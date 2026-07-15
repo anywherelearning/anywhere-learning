@@ -59,7 +59,7 @@ export default function IdeasPage() {
     url: 'https://anywherelearning.co/ideas',
     name: 'Activity Ideas for Kids: 15 Free Printable Checklists',
     description:
-      'Free activity idea checklists for kids across eight categories. No signup required.',
+      'Free activity idea checklists for kids across nine categories. No signup required.',
     inLanguage: 'en',
     isAccessibleForFree: true,
     datePublished: '2026-06-10',
@@ -244,7 +244,7 @@ export default function IdeasPage() {
                 Want the step-by-step guides?
               </h2>
               <p className="text-[15.5px] leading-[1.6] text-white/80 mb-6">
-                The library has 100+ hands-on activities with everything
+                The library has 120+ hands-on activities with everything
                 planned out. Instructions, skill levels, and no prep
                 required.
               </p>

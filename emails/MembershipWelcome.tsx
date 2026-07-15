@@ -20,6 +20,8 @@ interface Props {
   isTrial?: boolean;
   /** ISO date the trial converts to a paid membership. Only set when isTrial. */
   trialEndsAt?: string;
+  /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
+  plan?: 'annual' | 'monthly';
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -64,9 +66,13 @@ export default function MembershipWelcome({
   isFounderPhase,
   isTrial,
   trialEndsAt,
+  plan,
 }: Props) {
   const name = firstName?.trim() || 'there';
-  const price = isFounderPhase ? '$99' : '$149';
+  const isMonthly = plan === 'monthly';
+  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
+  /** "for the year" / "for the month" phrasing. */
+  const per = isMonthly ? 'month' : 'year';
 
   const trialEnd = trialEndsAt ? new Date(trialEndsAt) : null;
   const headsUp = trialEnd ? new Date(trialEnd.getTime() - 3 * 24 * 60 * 60 * 1000) : null;
@@ -283,7 +289,7 @@ export default function MembershipWelcome({
                                 <TrialDivider />
                                 <TrialRow label={pillDate(trialEnd)} last>
                                   <strong style={strongInk}>Membership begins.</strong> Your plan
-                                  starts at {price} for the year and downloads unlock.
+                                  starts at {price} for the {per} and downloads unlock.
                                 </TrialRow>
                               </tbody>
                             </table>
@@ -364,13 +370,13 @@ export default function MembershipWelcome({
                         You&apos;re receiving this note because you started a 14-day free trial
                         of Anywhere Learning with this email address on {longDate(trialStart)}.
                         Your card on file was not charged today. Unless you cancel, your
-                        membership begins on {longDate(trialEnd)} and renews each year at {price}{' '}
+                        membership begins on {longDate(trialEnd)} and renews each {per} at {price}{' '}
                         USD. You can cancel anytime from your account page.
                       </>
                     ) : (
                       <>
                         You&apos;re receiving this note because you joined Anywhere Learning with
-                        this email address. Your membership renews each year at {price} USD
+                        this email address. Your membership renews each {per} at {price} USD
                         {isFounderPhase ? ', your founder rate, locked in' : ''}. If it&apos;s not
                         the right fit, you have 14 days for a full refund, no questions asked, just
                         email info@anywherelearning.co.

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { currentUser } from '@clerk/nextjs/server';
 import AccountSettings from './AccountSettings';
-import { MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
-import { STRIPE_PRICES } from '@/lib/stripe-prices';
+import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { STRIPE_PRICES, planForPriceId } from '@/lib/stripe-prices';
 import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { eq, desc } from 'drizzle-orm';
@@ -152,6 +152,7 @@ export default async function AccountSettingsPage() {
   // get the standard rate AND the "Member" label. Trial members haven't paid
   // yet, so their plan shows as "Free trial".
   const isFounderSubscriber = subPriceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+  const isMonthlyPlan = planForPriceId(subPriceId) === 'monthly';
   const tierLabel = isTrialing ? 'Free trial' : isFounderSubscriber ? 'Founding member' : 'Member';
 
   const member = {
@@ -160,7 +161,7 @@ export default async function AccountSettingsPage() {
     tier: tierLabel,
     joinedAt: joinedAt ? formatDate(joinedAt) : '—',
     nextRenewalAt: nextRenewalAt ? formatDate(nextRenewalAt) : '—',
-    priceLabel: MEMBERSHIP_PRICE_YEAR,
+    priceLabel: isMonthlyPlan ? MONTHLY_PLAN_PRICE_MONTH : MEMBERSHIP_PRICE_YEAR,
     paymentLast4: paymentLast4 || '—',
     paymentBrand: paymentBrand || '—',
     status: statusLabel,

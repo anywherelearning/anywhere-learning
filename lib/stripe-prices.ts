@@ -19,6 +19,7 @@
 interface StripePriceIds {
   MEMBERSHIP_FOUNDER: string;
   MEMBERSHIP_STANDARD: string;
+  MEMBERSHIP_MONTHLY: string;
 }
 
 const LIVE_PRICES: StripePriceIds = {
@@ -26,11 +27,14 @@ const LIVE_PRICES: StripePriceIds = {
   MEMBERSHIP_FOUNDER: 'price_1TZd7YAkIBECpwGmljfvhird',
   /** Subscription, $149/year — applies to member 101+. (LIVE) */
   MEMBERSHIP_STANDARD: 'price_1TZd7ZAkIBECpwGmLH4ogWnu',
+  /** Subscription, $15/month — one rate for everyone, no founder split. (LIVE) */
+  MEMBERSHIP_MONTHLY: 'price_1TtEAIAkIBECpwGmebueXC9Q',
 };
 
 const TEST_PRICES: StripePriceIds = {
   MEMBERSHIP_FOUNDER: 'price_1TZMETAMzOBftCnthrU2MJLz',
   MEMBERSHIP_STANDARD: 'price_1TZMEUAMzOBftCntMuS7OcZg',
+  MEMBERSHIP_MONTHLY: 'price_1TtEABAMzOBftCntDqcq4Of8',
 };
 
 const IS_TEST_MODE = (process.env.STRIPE_SECRET_KEY || '').startsWith('sk_test_');
@@ -42,6 +46,15 @@ export function activeMembershipPriceId(isFounderPhase: boolean): string {
   return isFounderPhase
     ? STRIPE_PRICES.MEMBERSHIP_FOUNDER
     : STRIPE_PRICES.MEMBERSHIP_STANDARD;
+}
+
+/**
+ * Which billing plan a Stripe Price ID belongs to. Anything that isn't the
+ * monthly price is treated as annual — the safe default for unknown/legacy
+ * IDs, since every price before the monthly plan existed was annual.
+ */
+export function planForPriceId(priceId: string | null | undefined): 'annual' | 'monthly' {
+  return priceId === STRIPE_PRICES.MEMBERSHIP_MONTHLY ? 'monthly' : 'annual';
 }
 
 /** Throw a helpful error if a price ID hasn't been populated yet. */

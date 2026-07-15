@@ -254,7 +254,7 @@ export default function LifeSkillQuiz() {
               These three are just the start.
             </p>
             <p className="mt-2 text-[15px] leading-[1.6] text-gray-600">
-              Your membership unlocks 100+ guided activities like these, built to close
+              Your membership unlocks 120+ guided activities like these, built to close
               exactly this gap. No planning, no prep. Try it free for 14 days.
             </p>
             <Link

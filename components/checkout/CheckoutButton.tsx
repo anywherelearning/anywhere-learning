@@ -15,10 +15,13 @@
 import { useEffect, useRef, useState, useTransition } from 'react';
 
 type Kind = 'membership';
+type Plan = 'annual' | 'monthly';
 
 interface Props {
   /** Which checkout to start. Defaults to 'membership' (the only option). */
   kind?: Kind;
+  /** Billing plan for membership checkout. Defaults to 'annual'. */
+  plan?: Plan;
   /** Button label. */
   children: React.ReactNode;
   /** Optional Tailwind class override. */
@@ -31,6 +34,7 @@ interface Props {
 
 export default function CheckoutButton({
   kind = 'membership',
+  plan = 'annual',
   children,
   className,
   ariaLabel,
@@ -39,6 +43,10 @@ export default function CheckoutButton({
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
   const autoResumedRef = useRef(false);
+  // Plan-specific resume token: with an annual AND a monthly button on the
+  // same page, only the one that started the checkout should auto-resume
+  // after sign-in.
+  const resumeToken = plan === 'monthly' ? `${kind}-monthly` : kind;
 
   function startCheckout() {
     setError(null);
@@ -47,7 +55,7 @@ export default function CheckoutButton({
         const res = await fetch(`/api/checkout/${kind}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(email ? { email } : {}),
+          body: JSON.stringify({ ...(email ? { email } : {}), plan }),
         });
         const data = (await res.json()) as {
           url?: string;
@@ -69,11 +77,11 @@ export default function CheckoutButton({
             const u = new URL(base, window.location.origin);
             const redirect = u.searchParams.get('redirect_url') || '/join';
             const redirectWithContinue =
-              redirect + (redirect.includes('?') ? '&' : '?') + `continue=${kind}`;
+              redirect + (redirect.includes('?') ? '&' : '?') + `continue=${resumeToken}`;
             u.searchParams.set('redirect_url', redirectWithContinue);
             window.location.href = u.toString();
           } catch {
-            window.location.href = base + sep + 'continue=' + encodeURIComponent(kind);
+            window.location.href = base + sep + 'continue=' + encodeURIComponent(resumeToken);
           }
           return;
         }
@@ -95,7 +103,7 @@ export default function CheckoutButton({
     if (typeof window === 'undefined') return;
     if (autoResumedRef.current) return;
     const params = new URLSearchParams(window.location.search);
-    if (params.get('continue') === kind) {
+    if (params.get('continue') === resumeToken) {
       autoResumedRef.current = true;
       params.delete('continue');
       const cleanQs = params.toString();
@@ -105,7 +113,7 @@ export default function CheckoutButton({
       startCheckout();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kind]);
+  }, [resumeToken]);
 
   return (
     <>

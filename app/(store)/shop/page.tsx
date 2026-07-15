@@ -19,6 +19,7 @@ import {
   JOIN_CTA_LABEL,
   RATE_LABEL_LOWER,
   TIER_LABEL_LOWER,
+  MONTHLY_PRICE_USD,
 } from '@/lib/membership';
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Library | Anywhere Learning',
     description:
-      'A toolkit for real life. 100+ hands-on activities across nine categories, for kids 6 to 14.',
+      'A toolkit for real life. 120+ hands-on activities across nine categories, for kids 6 to 14.',
     url: 'https://anywherelearning.co/shop',
     type: 'website',
   },
@@ -393,7 +394,7 @@ export default function ShopPage() {
     '@type': 'CollectionPage',
     name: 'The Library',
     description:
-      'A toolkit for real life. 100+ hands-on activities across nine categories, for kids 6 to 14.',
+      'A toolkit for real life. 120+ hands-on activities across nine categories, for kids 6 to 14.',
     url: 'https://anywherelearning.co/shop',
     publisher: {
       '@type': 'Organization',
@@ -500,7 +501,7 @@ export default function ShopPage() {
         }}
       />
       <p className="mt-5 text-center font-display italic text-[17px] text-[#C97B5C]">
-        100+ activities. Nine categories.{' '}
+        120+ activities. Nine categories.{' '}
         <span className="italic">One toolkit.</span>
       </p>
     </div>
@@ -635,7 +636,7 @@ export default function ShopPage() {
                     Membership
                   </div>
                   <p className="text-[13.5px] text-gray-600 leading-[1.45] m-0">
-                    All 100+ activities + quarterly drops.
+                    All 120+ activities + quarterly drops.
                   </p>
                 </div>
                 <div className="text-right shrink-0">
@@ -769,7 +770,7 @@ export default function ShopPage() {
                 </p>
                 <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight text-balance">
                   The full library:{' '}
-                  <span className="italic text-forest">100+ activities.</span>
+                  <span className="italic text-forest">120+ activities.</span>
                 </h2>
                 <p className="mt-3.5 text-[16.5px] text-gray-600">
                   Search, filter, sort. Find exactly what you&apos;re looking for.
@@ -804,7 +805,7 @@ export default function ShopPage() {
                 <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-8 md:p-10 flex flex-col">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
-                    All 100+ activities
+                    All 120+ activities
                   </p>
                   <h3 className="mt-3.5 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight text-balance">
                     Unlock everything for{' '}
@@ -812,11 +813,11 @@ export default function ShopPage() {
                   </h3>
                   <p className="mt-3.5 text-[15.5px] leading-[1.6] text-gray-600">
                     {IS_FOUNDER_PHASE
-                      ? `The full library plus quarterly new content, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year.`
-                      : 'The full library plus quarterly new content. Cancel anytime.'}
+                      ? `The full library plus quarterly new content, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year. Prefer monthly? $${MONTHLY_PRICE_USD}/month.`
+                      : `The full library plus quarterly new content, $${MONTHLY_PRICE_USD}/month if you'd rather go monthly. Cancel anytime.`}
                   </p>
                   <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
-                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 100+ activities, all categories</span>
+                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 120+ activities, all categories</span>
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> New content every quarter</span>
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Start with a 14-day free trial</span>
                     {IS_FOUNDER_PHASE && (

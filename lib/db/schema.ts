@@ -177,6 +177,26 @@ export const sentEmails = pgTable('sent_emails', {
   index('idx_sent_emails_email_kind').on(table.email, table.kind),
 ]);
 
+/**
+ * One-tap exit survey for cancellation emails. A row is created when a
+ * cancellation email goes out; its uuid doubles as the opaque token in the
+ * email's reason links (so no email address ever appears in a URL). The
+ * /api/exit-reason endpoint fills in `reason` when a link is clicked.
+ */
+export const exitSurveys = pgTable('exit_surveys', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  /** Lowercased recipient address. */
+  email: text('email').notNull(),
+  /** Which cancellation moment: 'trial-cancel' | 'member-cancel'. */
+  kind: text('kind').notNull(),
+  /** Billing plan at cancellation: 'annual' | 'monthly'. */
+  plan: text('plan').default('annual').notNull(),
+  /** One-tap reason key ('price' | 'time' | 'engagement' | 'ages' | 'other'), null until clicked. */
+  reason: text('reason'),
+  reasonAt: timestamp('reason_at'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
 export const referrals = pgTable('referrals', {
   id: uuid('id').defaultRandom().primaryKey(),
   referrerUserId: uuid('referrer_user_id').references(() => users.id).notNull(),

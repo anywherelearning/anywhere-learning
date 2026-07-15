@@ -17,6 +17,8 @@ import {
   TRIAL_DAYS,
   FOUNDER_PRICE_USD,
   POST_FOUNDER_PRICE_USD,
+  MONTHLY_PRICE_USD,
+  type MembershipPlan,
 } from '@/lib/membership';
 import {
   getAccessContextForClerkId,
@@ -33,8 +35,11 @@ export async function createMembershipCheckout(opts: {
   email?: string;
   /** Site origin for success/cancel URLs, e.g. https://anywherelearning.co */
   origin: string;
+  /** Billing plan. Annual (the featured, founder-eligible plan) by default. */
+  plan?: MembershipPlan;
 }): Promise<MembershipCheckoutResult> {
   const { clerkId, email, origin } = opts;
+  const plan: MembershipPlan = opts.plan === 'monthly' ? 'monthly' : 'annual';
 
   // Members and trial members already have a live subscription. Creating a
   // second one would double-bill them at Stripe, so send them to their
@@ -46,15 +51,22 @@ export async function createMembershipCheckout(opts: {
     }
   }
 
-  // Real-time founder check: if 100+ active members already exist, this
+  // Real-time founder check: if 120+ active members already exist, this
   // returns false and the buyer goes to the $149 standard tier — even
   // though the static IS_FOUNDER_PHASE flag is still true. Existing
   // founders keep their $99 rate; only NEW signups are affected.
-  const offerFounderRate = await isFounderPhaseOpen();
-  const priceId = requirePriceId(
-    offerFounderRate ? STRIPE_PRICES.MEMBERSHIP_FOUNDER : STRIPE_PRICES.MEMBERSHIP_STANDARD,
-    offerFounderRate ? 'Membership Founder' : 'Membership Standard',
-  );
+  //
+  // The monthly plan sits outside the founder system entirely: one $15/month
+  // rate for everyone, no lock-in framing. offerFounderRate stays false so
+  // none of the founder copy leaks into a monthly checkout.
+  const offerFounderRate = plan === 'annual' ? await isFounderPhaseOpen() : false;
+  const priceId =
+    plan === 'monthly'
+      ? requirePriceId(STRIPE_PRICES.MEMBERSHIP_MONTHLY, 'Membership Monthly')
+      : requirePriceId(
+          offerFounderRate ? STRIPE_PRICES.MEMBERSHIP_FOUNDER : STRIPE_PRICES.MEMBERSHIP_STANDARD,
+          offerFounderRate ? 'Membership Founder' : 'Membership Standard',
+        );
 
   // Free trial: one per customer, ever. Anyone with a prior subscription
   // row (canceled trial, refunded membership, active membership) checks
@@ -68,6 +80,7 @@ export async function createMembershipCheckout(opts: {
   if (process.env.NODE_ENV !== 'production') {
     console.log('[membership-checkout] decision:', {
       clerkId,
+      plan,
       trial: applyTrial,
       founderRate: offerFounderRate,
     });
@@ -76,12 +89,17 @@ export async function createMembershipCheckout(opts: {
   // Plain-words fine print shown above the pay button on the Stripe page.
   // Honest billing: spell out the trial mechanics and the founder rate
   // right where the card is entered, not just on our own pages.
-  const priceUsd = offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD;
+  const priceLine =
+    plan === 'monthly'
+      ? `$${MONTHLY_PRICE_USD}/month`
+      : `$${offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD}/year`;
   const submitMessage = applyTrial
-    ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts, $${priceUsd}/year${offerFounderRate ? ', your founder rate locked in for life' : ''}. Cancel anytime before then and pay nothing.`
+    ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts, ${priceLine}${offerFounderRate ? ', your founder rate locked in for life' : ''}. Cancel anytime before then and pay nothing.`
     : offerFounderRate
       ? `Founder rate: $${FOUNDER_PRICE_USD}/year, locked in for life.`
-      : undefined;
+      : plan === 'monthly'
+        ? `$${MONTHLY_PRICE_USD}/month, cancel anytime.`
+        : undefined;
 
   const session = await stripe.checkout.sessions.create({
     ...(submitMessage && { custom_text: { submit: { message: submitMessage } } }),
@@ -103,6 +121,7 @@ export async function createMembershipCheckout(opts: {
       ...(applyTrial && { trial_period_days: TRIAL_DAYS }),
       metadata: {
         tier: 'member',
+        plan,
         // Capture the rate offered to this specific buyer (not the global
         // static flag) so the webhook + downstream emails know the true
         // founder status of THIS subscription.
@@ -111,7 +130,7 @@ export async function createMembershipCheckout(opts: {
         ...(clerkId && { clerk_id: clerkId }),
       },
     },
-    success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}&session_id={CHECKOUT_SESSION_ID}`,
+    success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}${plan === 'monthly' ? '&plan=monthly' : ''}&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/join?cancelled=1`,
     // Note: Stripe's `after_expiration.recovery` is NOT supported in
     // `subscription` mode — only `payment` mode. Abandoned-membership
@@ -120,6 +139,10 @@ export async function createMembershipCheckout(opts: {
     metadata: {
       kind: 'membership',
       tier: 'member',
+      // Session-level copy of the plan: the expired-checkout webhook only
+      // has the session (no subscription exists), and the abandoned email
+      // needs to pitch the plan that was actually in the cart.
+      plan,
       ...(clerkId && { clerk_id: clerkId }),
     },
   });

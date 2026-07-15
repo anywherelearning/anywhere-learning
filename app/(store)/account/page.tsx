@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
-import { IS_FOUNDER_PHASE } from '@/lib/membership';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { planForPriceId } from '@/lib/stripe-prices';
 import AccountDashboard, { type DashboardActivity } from './AccountDashboard';
 
 export const metadata: Metadata = {
@@ -62,6 +63,8 @@ interface TierState {
   tier: 'member' | 'trial' | 'guest';
   /** Trial-only: when the trial converts to a paid membership. */
   trialEndsAt: Date | null;
+  /** Stripe Price ID of the granting subscription (null in previews). */
+  stripePriceId: string | null;
 }
 
 async function detectTier(searchParams: { tier?: string }): Promise<TierState> {
@@ -71,10 +74,14 @@ async function detectTier(searchParams: { tier?: string }): Promise<TierState> {
   // so this only ever affected the dashboard UI, but it has no business
   // running in prod regardless.
   if (process.env.NODE_ENV !== 'production') {
-    if (searchParams.tier === 'member') return { tier: 'member', trialEndsAt: null };
-    if (searchParams.tier === 'guest') return { tier: 'guest', trialEndsAt: null };
+    if (searchParams.tier === 'member') return { tier: 'member', trialEndsAt: null, stripePriceId: null };
+    if (searchParams.tier === 'guest') return { tier: 'guest', trialEndsAt: null, stripePriceId: null };
     if (searchParams.tier === 'trial') {
-      return { tier: 'trial', trialEndsAt: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000) };
+      return {
+        tier: 'trial',
+        trialEndsAt: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
+        stripePriceId: null,
+      };
     }
   }
 
@@ -85,13 +92,17 @@ async function detectTier(searchParams: { tier?: string }): Promise<TierState> {
     const { userId } = await auth();
     if (userId) {
       const access = await getAccessContextForClerkId(userId);
-      return { tier: access.tier, trialEndsAt: access.trialEndsAt };
+      return {
+        tier: access.tier,
+        trialEndsAt: access.trialEndsAt,
+        stripePriceId: access.stripePriceId,
+      };
     }
   } catch {
     /* Clerk or DB not configured */
   }
 
-  return { tier: 'guest', trialEndsAt: null };
+  return { tier: 'guest', trialEndsAt: null, stripePriceId: null };
 }
 
 export default async function AccountPage({
@@ -100,7 +111,7 @@ export default async function AccountPage({
   searchParams: Promise<{ tier?: string; name?: string; reason?: string }>;
 }) {
   const sp = await searchParams;
-  const { tier, trialEndsAt } = await detectTier(sp);
+  const { tier, trialEndsAt, stripePriceId } = await detectTier(sp);
 
   // Guest = no active membership. The library dashboard has nothing useful to
   // show them. Bounce to /join with a contextual banner so they know why they
@@ -162,7 +173,16 @@ export default async function AccountPage({
       activities={activities}
       trial={
         tier === 'trial'
-          ? { endsAt: (trialEndsAt ?? new Date()).toISOString(), isFounder: IS_FOUNDER_PHASE }
+          ? {
+              endsAt: (trialEndsAt ?? new Date()).toISOString(),
+              // Monthly trials never hold a founder spot, and their upgrade
+              // price is $15/month, not the annual rate.
+              isFounder: planForPriceId(stripePriceId) === 'monthly' ? false : IS_FOUNDER_PHASE,
+              priceLabel:
+                planForPriceId(stripePriceId) === 'monthly'
+                  ? MONTHLY_PLAN_PRICE_MONTH
+                  : MEMBERSHIP_PRICE_YEAR,
+            }
           : null
       }
       // A direct download URL bounces a trial member here with this reason;

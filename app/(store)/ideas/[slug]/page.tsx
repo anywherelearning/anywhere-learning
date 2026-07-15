@@ -483,7 +483,7 @@ function CategoryView({ category }: { category: IdeaCategory }) {
                   Want the step-by-step guides?
                 </h2>
                 <p className="text-[15.5px] leading-[1.6] text-gray-600 mb-6">
-                  The library has 100+ hands-on activities with everything
+                  The library has 120+ hands-on activities with everything
                   planned out , instructions, skill levels, and no prep
                   required.
                 </p>

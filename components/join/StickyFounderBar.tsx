@@ -6,6 +6,7 @@ import {
   MEMBERSHIP_PRICE_YEAR,
   MEMBERSHIP_PRICE_YR,
   POST_FOUNDER_PRICE_USD,
+  MONTHLY_PLAN_PRICE_MO,
 } from '@/lib/membership';
 
 export default function StickyFounderBar({ claimed = 47, cap = 100 }: { claimed?: number; cap?: number }) {
@@ -60,6 +61,8 @@ export default function StickyFounderBar({ claimed = 47, cap = 100 }: { claimed?
                 <s className="text-cream/50">${POST_FOUNDER_PRICE_USD}</s>
               </>
             )}
+            {' or '}
+            {MONTHLY_PLAN_PRICE_MO}
             {' · '}
             <b className="text-gold-light">{remaining} of {cap}</b> spots left
           </span>

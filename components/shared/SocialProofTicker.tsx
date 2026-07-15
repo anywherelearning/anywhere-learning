@@ -1,6 +1,6 @@
 const items = [
   'Life skills kids actually need',
-  '100+ hands-on activity guides',
+  '120+ hands-on activity guides',
   'Created by a teacher (B.Ed, M.Ed)',
   'No curriculum needed',
   'Ages 6–14',

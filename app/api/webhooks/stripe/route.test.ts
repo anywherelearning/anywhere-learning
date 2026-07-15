@@ -52,6 +52,7 @@ vi.mock('@/lib/db/schema', () => ({
   subscriptions: {},
   stripeEvents: {},
   sentEmails: {},
+  exitSurveys: {},
 }));
 
 vi.mock('drizzle-orm', () => ({
@@ -82,6 +83,10 @@ vi.mock('@/lib/convertkit', () => ({
 vi.mock('@/lib/resend', () => ({
   sendMembershipWelcomeEmail: vi.fn(),
   sendAbandonedCheckoutMembershipEmail: vi.fn(),
+  sendTrialEndingEmail: vi.fn(),
+  sendMembershipConvertedEmail: vi.fn(),
+  sendTrialCanceledEmail: vi.fn(),
+  sendMembershipCancellationScheduledEmail: vi.fn(),
 }));
 
 // ── Helpers ─────────────────────────────────────────────────────────

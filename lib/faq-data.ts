@@ -83,7 +83,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'What happens after I cancel?',
     answer:
-      "You keep access until the end of your paid year, then your membership ends. You won't be billed again. If you rejoin later, you pay whatever the public price is at that point (currently $149 for non-founders).",
+      "You keep access until the end of the period you've paid for (your year, or your month on the monthly plan), then your membership ends. You won't be billed again. If you rejoin later, you pay whatever the public price is at that point (currently $149/year or $15/month for non-founders).",
   },
   {
     question: 'Do you offer a free trial?',
@@ -143,17 +143,17 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: 'How do I pay?',
     answer:
-      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, Google Pay, and PayPal where supported. The membership is one annual charge of $99 (or $149 after founder pricing ends), and it starts with a 14-day free trial, so nothing is charged the day you sign up.",
+      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, Google Pay, and PayPal where supported. The membership is one annual charge of $99 (or $149 after founder pricing ends), or $15/month on the monthly plan, and it starts with a 14-day free trial, so nothing is charged the day you sign up.",
   },
   {
     question: 'Do you offer monthly billing?',
     answer:
-      "Not currently. The membership is annual only, to keep things simple. $99 once, then you're a member for a year, and renewal happens once a year unless you cancel.",
+      "Yes. You can join for $15/month instead of paying for the year, with the same full library, the same 14-day free trial, and cancel anytime. Yearly is the better value (the founder rate works out to about $8/month), but the monthly plan is there if you'd rather ease in. You can switch to yearly anytime from your account.",
   },
   {
     question: 'Will my membership auto-renew?',
     answer:
-      "Yes, it auto-renews annually at the rate you signed up at (founders renew at $99, after-founders at $149). I send a reminder email 14 days before renewal, so there are no surprises. You can cancel anytime from your account.",
+      "Yes, it auto-renews at the rate you signed up at (founders renew at $99/year, after-founders at $149/year, monthly members at $15/month). For yearly memberships I send a reminder email 14 days before renewal, so there are no surprises. You can cancel anytime from your account.",
   },
   {
     question: 'Will my price go up at renewal?',

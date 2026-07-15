@@ -37,6 +37,31 @@ export const FOUNDER_PRICE_USD = 99;
 export const POST_FOUNDER_PRICE_USD = 149;
 export const FOUNDER_CAP = 100;
 
+// ─── MONTHLY PLAN ───────────────────────────────────────────
+// One monthly price for everyone. The founder rate is an annual-only perk:
+// "locked in for life" is the reason to commit to a year, so monthly has no
+// founder/standard split and no cap involvement beyond the member count.
+// At $15/mo a full year costs $180 — the annual plan stays the clear better
+// deal (45% less at the founder rate, 17% less at standard).
+export const MONTHLY_PRICE_USD = 15;
+
+/** "$15" — bare monthly-plan price. */
+export const MONTHLY_PLAN_PRICE = `$${MONTHLY_PRICE_USD}`;
+
+/** "$15/month" — the most common monthly-plan rendering. */
+export const MONTHLY_PLAN_PRICE_MONTH = `$${MONTHLY_PRICE_USD}/month`;
+
+/** "$15/mo" — short form for tight UI. */
+export const MONTHLY_PLAN_PRICE_MO = `$${MONTHLY_PRICE_USD}/mo`;
+
+/** Percent saved by paying yearly instead of monthly, e.g. 45 or 17. */
+export function annualSavingsPct(annualUsd: number): number {
+  return Math.round((1 - annualUsd / (MONTHLY_PRICE_USD * 12)) * 100);
+}
+
+/** The two billing plans a member can be on. */
+export type MembershipPlan = 'annual' | 'monthly';
+
 // ─── FREE TRIAL ─────────────────────────────────────────────
 // New members start with a free trial (card required, $0 today, auto-converts
 // via Stripe `trial_period_days`). During the trial they can VIEW every guide
@@ -153,7 +178,7 @@ export async function getActiveMemberCount(): Promise<number> {
 /**
  * Is the founder rate still available for a NEW signup right now?
  *   - Returns false if the static IS_FOUNDER_PHASE flag is off
- *   - Returns false if 100+ active members already exist
+ *   - Returns false if 120+ active members already exist
  *   - Otherwise true
  *
  * Call this in the checkout endpoint to pick the Stripe Price ID, and

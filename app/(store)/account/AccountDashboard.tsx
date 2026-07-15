@@ -30,6 +30,8 @@ export interface TrialInfo {
   endsAt: string;
   /** Whether this trial member locked the founder rate (for upgrade copy). */
   isFounder: boolean;
+  /** Plan-correct upgrade price, e.g. "$99/year" or "$15/month". */
+  priceLabel?: string;
 }
 
 interface Props {
@@ -766,7 +768,7 @@ export default function AccountDashboard({
       open={capModalOpen}
       onClose={() => setCapModalOpen(false)}
       trialEndsAt={trial?.endsAt ?? null}
-      priceLabel={MEMBERSHIP_PRICE_YEAR}
+      priceLabel={trial?.priceLabel ?? MEMBERSHIP_PRICE_YEAR}
       isFounder={trial?.isFounder ?? IS_FOUNDER_PHASE}
     />
     {activeReview && (

@@ -266,7 +266,7 @@ function MembershipVariant({ onDismiss }: { onDismiss: () => void }) {
             Ready for the rest of the library?
           </h2>
           <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-            100+ guided activities across nine categories. New ones added every quarter
+            120+ guided activities across nine categories. New ones added every quarter
             {IS_FOUNDER_PHASE ? ', founder rate locked in for life' : ''}.
           </p>
         </div>
@@ -282,7 +282,7 @@ function MembershipVariant({ onDismiss }: { onDismiss: () => void }) {
 
       <p className="mt-2.5 text-center text-[13px] text-gray-500">
         {MEMBERSHIP_PRICE_YEAR}
-        {IS_FOUNDER_PHASE ? ' · founder rate' : ''} · 14-day refund
+        {IS_FOUNDER_PHASE ? ' · founder rate' : ''} · or $15/mo · 14-day refund
       </p>
 
       <button

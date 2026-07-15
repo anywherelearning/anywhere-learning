@@ -4,15 +4,15 @@ import Link from 'next/link';
 import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
-import CheckoutButton from '@/components/checkout/CheckoutButton';
+import JoinCta from '@/components/join/JoinCta';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
   MEMBERSHIP_PRICE,
-  MEMBERSHIP_PRICE_YEAR,
   POST_FOUNDER_PRICE_USD,
   FOUNDER_CAP,
-  TRIAL_DAYS,
+  MONTHLY_PRICE_USD,
+  MONTHLY_PLAN_PRICE_MONTH,
 } from '@/lib/membership';
 
 const FOUNDER_FLOOR = 12;
@@ -27,8 +27,8 @@ const META_TITLE = IS_FOUNDER_PHASE
   ? `Join the Membership | $${MEMBERSHIP_PRICE_USD}/year Founder Price`
   : `Join the Membership | $${MEMBERSHIP_PRICE_USD}/year`;
 const META_DESC = IS_FOUNDER_PHASE
-  ? `Unlimited access to 100+ guided life-skills activities for kids ages 6 to 14. Built by a teacher. $${MEMBERSHIP_PRICE_USD}/year founder rate for the first ${FOUNDER_CAP} members, locked in for life.`
-  : `Unlimited access to 100+ guided life-skills activities for kids ages 6 to 14. Built by a teacher. $${MEMBERSHIP_PRICE_USD}/year, cancel anytime.`;
+  ? `Unlimited access to 120+ guided life-skills activities for kids ages 6 to 14. Built by a teacher. $${MEMBERSHIP_PRICE_USD}/year founder rate for the first ${FOUNDER_CAP} members, locked in for life, or $${MONTHLY_PRICE_USD}/month.`
+  : `Unlimited access to 120+ guided life-skills activities for kids ages 6 to 14. Built by a teacher. $${MEMBERSHIP_PRICE_USD}/year or $${MONTHLY_PRICE_USD}/month, cancel anytime.`;
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -48,76 +48,6 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
   },
 };
-
-/* ─── Shared CTA block (used in multiple sections) ─── */
-function CtaBlock({
-  center = false,
-  darkMode = false,
-  m,
-  trialEligible = true,
-}: {
-  center?: boolean;
-  darkMode?: boolean;
-  /** Live membership state — passed from the JoinPage server component. */
-  m: { isFounderPhase: boolean; priceYear: string; priceMonth: string };
-  /** False for a returning customer who already used their one free trial:
-   *  they'd be charged immediately, so we drop all trial framing. */
-  trialEligible?: boolean;
-}) {
-  return (
-    <div
-      className={`inline-flex flex-col gap-3 ${center ? 'items-center text-center' : 'items-start'}`}
-    >
-      <CheckoutButton
-        kind="membership"
-        className="inline-flex items-center gap-3.5 rounded-xl bg-forest px-7 py-[18px] text-[17px] font-semibold text-cream shadow-[inset_0_1px_0_rgba(255,255,255,.18),inset_0_-1px_0_rgba(0,0,0,.1),0_10px_24px_-12px_rgba(58,90,64,.5)] transition-all hover:-translate-y-px hover:bg-forest-dark hover:shadow-[inset_0_1px_0_rgba(255,255,255,.22),inset_0_-1px_0_rgba(0,0,0,.12),0_16px_30px_-10px_rgba(58,90,64,.55)] active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed"
-      >
-        <span className="inline-flex items-center gap-3.5">
-          {trialEligible ? `Start your ${TRIAL_DAYS}-day free trial` : 'Get the membership'}
-          <span className="grid h-6 w-6 place-items-center rounded-full bg-white/20 transition-transform">
-            →
-          </span>
-        </span>
-      </CheckoutButton>
-      <div
-        className={`text-[15px] ${darkMode ? 'text-[#B7BFB6]' : 'text-gray-500'}`}
-      >
-        {trialEligible ? '$0 today, then ' : ''}
-        <span className={`font-bold text-[17px] ${darkMode ? 'text-gold-light' : 'text-forest-dark'}`}>
-          {m.priceMonth}
-        </span>
-      </div>
-      <div
-        className={`-mt-1.5 text-[13px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}
-      >
-        billed once a year at{' '}
-        <span className="font-medium">{m.priceYear}</span>
-        {m.isFounderPhase && (
-          <>
-            {' · '}
-            <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'}`}>
-              usually ${POST_FOUNDER_PRICE_USD}
-            </span>
-            {' · '}
-            <span className="font-display italic text-[#c4836a]">Locked in for life</span>
-          </>
-        )}
-      </div>
-      <div
-        className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[13.5px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}
-      >
-        <span className="flex items-center gap-1.5">
-          <span className={`font-bold ${darkMode ? 'text-gold-light' : 'text-forest'}`}>✓</span> 14-day
-          money-back guarantee
-        </span>
-        <span className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`} />
-        <span>Instant access</span>
-        <span className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`} />
-        <span>Cancel anytime</span>
-      </div>
-    </div>
-  );
-}
 
 /* ─── Eyebrow label ─── */
 function Eyebrow({
@@ -270,28 +200,54 @@ export default async function JoinPage({
       url: 'https://anywherelearning.co',
     },
     audience: { '@type': 'EducationalAudience', educationalRole: 'Parent' },
-    offers: {
-      '@type': 'Offer',
-      url: PAGE_URL,
-      priceCurrency: 'USD',
-      price: String(MEMBERSHIP_PRICE_USD),
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: MEMBERSHIP_PRICE_USD,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Annual membership',
+        url: PAGE_URL,
         priceCurrency: 'USD',
-        unitText: 'YEAR',
+        price: String(MEMBERSHIP_PRICE_USD),
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: MEMBERSHIP_PRICE_USD,
+          priceCurrency: 'USD',
+          unitText: 'YEAR',
+        },
+        availability: 'https://schema.org/InStock',
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'US',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+          merchantReturnDays: 14,
+          returnMethod: 'https://schema.org/ReturnByMail',
+          returnFees: 'https://schema.org/FreeReturn',
+        },
+        seller: { '@type': 'Organization', name: 'Anywhere Learning' },
       },
-      availability: 'https://schema.org/InStock',
-      hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
-        applicableCountry: 'US',
-        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-        merchantReturnDays: 14,
-        returnMethod: 'https://schema.org/ReturnByMail',
-        returnFees: 'https://schema.org/FreeReturn',
+      {
+        '@type': 'Offer',
+        name: 'Monthly membership',
+        url: PAGE_URL,
+        priceCurrency: 'USD',
+        price: String(MONTHLY_PRICE_USD),
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: MONTHLY_PRICE_USD,
+          priceCurrency: 'USD',
+          unitText: 'MONTH',
+        },
+        availability: 'https://schema.org/InStock',
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'US',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+          merchantReturnDays: 14,
+          returnMethod: 'https://schema.org/ReturnByMail',
+          returnFees: 'https://schema.org/FreeReturn',
+        },
+        seller: { '@type': 'Organization', name: 'Anywhere Learning' },
       },
-      seller: { '@type': 'Organization', name: 'Anywhere Learning' },
-    },
+    ],
   };
 
   const faqLd = {
@@ -419,7 +375,7 @@ export default async function JoinPage({
               </div>
 
               <p className="mt-5 max-w-[540px] text-[20px] leading-relaxed text-gray-500">
-                100+ guided activities that teach the life skills school
+                120+ guided activities that teach the life skills school
                 doesn't: cooking, budgeting, self-regulation, problem-solving,
                 real-world math, and more. Built by a teacher who left the
                 classroom to have more time to get her kids ready for
@@ -427,7 +383,7 @@ export default async function JoinPage({
               </p>
 
               <div className="mt-6">
-                <CtaBlock m={m} trialEligible={trialEligible} />
+                <JoinCta m={m} trialEligible={trialEligible} />
               </div>
             </div>
 
@@ -669,7 +625,7 @@ export default async function JoinPage({
             </div>
 
             <div className="mt-8 flex justify-center">
-              <CtaBlock center m={m} trialEligible={trialEligible} />
+              <JoinCta center m={m} trialEligible={trialEligible} />
             </div>
           </div>
         </section>
@@ -684,7 +640,7 @@ export default async function JoinPage({
             <div className="mx-auto mb-10 max-w-[760px] text-center">
               <Eyebrow>What's inside</Eyebrow>
               <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
-                100+ activities.{' '}
+                120+ activities.{' '}
                 <em className="font-display not-italic text-forest">One yes.</em>
               </h2>
               <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
@@ -700,7 +656,7 @@ export default async function JoinPage({
             <div className="mb-8 flex flex-wrap justify-center gap-x-11 gap-y-5">
               {[
                 { n: '9', label: 'Categories' },
-                { n: '100+', label: 'Activities' },
+                { n: '120+', label: 'Activities' },
                 { n: '6–14', label: 'Ages' },
                 { n: '3', label: 'Levels each' },
                 { n: 'Quarterly', label: 'New additions' },
@@ -802,7 +758,7 @@ export default async function JoinPage({
                 {
                   num: 'i',
                   title: 'Join',
-                  desc: `One payment, ${m.price}. Instant access to all categories and the full library. Works on any phone, tablet or laptop.`,
+                  desc: `${m.price} for the year or ${MONTHLY_PLAN_PRICE_MONTH}, your pick. Instant access to all categories and the full library. Works on any phone, tablet or laptop.`,
                 },
                 {
                   num: 'ii',
@@ -1003,7 +959,7 @@ export default async function JoinPage({
             </p>
 
             <div className="mt-9 flex justify-center">
-              <CtaBlock center m={m} trialEligible={trialEligible} />
+              <JoinCta center m={m} trialEligible={trialEligible} />
             </div>
 
             <p className="mt-4 font-display text-sm italic text-gray-400">

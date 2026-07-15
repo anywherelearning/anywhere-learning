@@ -2,7 +2,10 @@
  * GET /start-trial — the direct-link funnel behind every "Start free trial"
  * CTA on the site (nav pill, shop banners, blog footers, etc).
  *
- * One link, three outcomes, zero unnecessary pages:
+ * One link, four outcomes:
+ *   - no ?plan yet          → /choose-plan (Stripe can't switch plans
+ *     mid-session, so the yearly/monthly choice must happen before the
+ *     checkout session is created)
  *   - signed out            → /sign-up (trial-framed) → back here → Stripe
  *   - signed in, eligible   → straight to Stripe Checkout
  *   - already member/trial  → their library
@@ -31,6 +34,15 @@ export async function GET(req: NextRequest) {
 
   const origin = getSiteOrigin(req);
 
+  // No explicit plan chosen yet → show the yearly/monthly picker first.
+  // Every generic "Start free trial" CTA (nav, shop banners, FAQ) links here
+  // without a plan; the /join toggle and /choose-plan cards link with one.
+  const planParam = req.nextUrl.searchParams.get('plan');
+  if (planParam !== 'annual' && planParam !== 'monthly') {
+    return NextResponse.redirect(`${origin}/choose-plan`, 303);
+  }
+  const plan = planParam;
+
   let clerkId: string | null = null;
   let clerkEmail: string | undefined;
   let clerkConfigured = false;
@@ -49,7 +61,9 @@ export async function GET(req: NextRequest) {
   // No account yet → create one first (sign-up returns here when done).
   if (clerkConfigured && !clerkId) {
     return NextResponse.redirect(
-      `${origin}/sign-up?redirect_url=${encodeURIComponent('/start-trial')}`,
+      `${origin}/sign-up?redirect_url=${encodeURIComponent(
+        plan === 'monthly' ? '/start-trial?plan=monthly' : '/start-trial',
+      )}`,
       303,
     );
   }
@@ -59,6 +73,7 @@ export async function GET(req: NextRequest) {
       clerkId,
       email: clerkEmail,
       origin,
+      plan,
     });
     if (result.ok) return NextResponse.redirect(result.url, 303);
     if (result.reason === 'already_member') {

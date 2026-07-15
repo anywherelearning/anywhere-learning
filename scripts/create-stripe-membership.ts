@@ -67,6 +67,13 @@ const SPECS: ProductSpec[] = [
         recurring: { interval: 'year' },
         metadata: { tier: 'standard', kind: 'membership' },
       },
+      {
+        nickname: 'Monthly plan ($15/month, one rate for everyone)',
+        unit_amount: 1500,
+        currency: 'usd',
+        recurring: { interval: 'month' },
+        metadata: { tier: 'monthly', kind: 'membership' },
+      },
     ],
   },
 ];
@@ -143,6 +150,7 @@ async function main() {
       const key =
         tier === 'founder' ? 'MEMBERSHIP_FOUNDER' :
         tier === 'standard' ? 'MEMBERSHIP_STANDARD' :
+        tier === 'monthly' ? 'MEMBERSHIP_MONTHLY' :
         tier.toUpperCase();
       console.log(`  ${key}: '${id}',`);
     }

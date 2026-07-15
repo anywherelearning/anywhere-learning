@@ -32,10 +32,10 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">Anywhere Learning offers two things, and only two:</p>
         <ul className="list-disc pl-6 mb-3.5 marker:text-forest space-y-2">
           <li>
-            <strong className="text-ink font-semibold">Free 7-day guide</strong>: a free 7-activity PDF (one across each of our seven categories), delivered to your inbox after you give us your email address.
+            <strong className="text-ink font-semibold">Free 7-day guide</strong>: a free 7-activity PDF (one activity across seven different categories), delivered to your inbox after you give us your email address.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Annual membership</strong>: a recurring annual subscription that provides access to our complete library of activity guides, new content added quarterly, and member-only resources. It starts with a 14-day free trial.
+            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that provides access to our complete library of activity guides, new content added quarterly, and member-only resources. It starts with a 14-day free trial.
           </li>
         </ul>
         <p>
@@ -49,22 +49,22 @@ const sections: LegalSection[] = [
     title: 'Membership terms',
     content: (
       <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2 mb-4">
-        <p className="mb-3.5">When you join the Anywhere Learning annual membership, you agree to the following:</p>
+        <p className="mb-3.5">When you join the Anywhere Learning membership, you agree to the following:</p>
         <ol className="list-decimal pl-6 space-y-2.5 marker:text-[#C97B5C] marker:font-display marker:italic">
           <li>
-            <strong className="text-ink font-semibold">Free trial.</strong> New members start with a <Em>14-day free trial.</Em> A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the annual rate. We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
+            <strong className="text-ink font-semibold">Free trial.</strong> New members start with a <Em>14-day free trial.</Em> A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the rate for the plan you chose (yearly or monthly). We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Annual billing.</strong> Your membership is charged once per year starting the day your free trial ends (or the day you join, if no trial applies). We do not offer monthly billing at this time.
+            <strong className="text-ink font-semibold">Billing.</strong> The membership is available on two plans. The <Em>yearly plan</Em> is charged once per year, and the <Em>monthly plan</Em> is charged $15 once per month, in each case starting the day your free trial ends (or the day you join, if no trial applies).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Founding member rate.</strong> The first 100 members pay <Em>$99/year.</Em> After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em> as long as their membership remains active and uninterrupted.
+            <strong className="text-ink font-semibold">Founding member rate.</strong> The first 100 members pay <Em>$99/year.</Em> After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em> as long as their membership remains active and uninterrupted. The founding member rate applies to the yearly plan only; the monthly plan has a single rate for everyone and does not hold a founder spot rate.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Auto-renewal.</strong> Memberships automatically renew at the rate you joined at (founders renew at $99, post-founders at $149). We send a renewal reminder email 14 days before your renewal date.
+            <strong className="text-ink font-semibold">Auto-renewal.</strong> Memberships automatically renew at the rate you joined at (founders renew at $99/year, post-founders at $149/year, monthly members at $15/month). For yearly memberships we send a renewal reminder email 14 days before your renewal date; monthly renewals are confirmed by the payment receipt.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Cancellation.</strong> You can cancel anytime from your account or by emailing us. Your access continues until the end of your paid year, after which the membership ends and you won&apos;t be billed again.
+            <strong className="text-ink font-semibold">Cancellation.</strong> You can cancel anytime from your account or by emailing us. Your access continues until the end of the period you&apos;ve paid for (your year or your month), after which the membership ends and you won&apos;t be billed again.
           </li>
           <li>
             <strong className="text-ink font-semibold">Rejoining.</strong> If you cancel and rejoin later, you&apos;ll pay the membership price in effect at that time. Founder pricing does not return after cancellation.
@@ -109,7 +109,7 @@ const sections: LegalSection[] = [
     content: (
       <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2 mb-4 space-y-4">
         <div className="pl-[18px] border-l border-[#D8D4C5]">
-          <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the annual membership</span>
+          <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the membership</span>
           <p>
             <strong className="text-ink font-semibold">14-day money-back guarantee.</strong> If the membership isn&apos;t right for you, email <MailLink /> within 14 days of your first charge for a full refund, <Em>no questions asked.</Em> Refunds are processed within 5 to 10 business days to the original payment method. This guarantee applies on top of the free trial: cancel during the trial and you&apos;re never charged at all.
           </p>

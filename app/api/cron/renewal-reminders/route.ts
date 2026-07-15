@@ -23,7 +23,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { and, eq, gte, lt } from 'drizzle-orm';
+import { and, eq, gte, lt, ne } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { subscriptions, users } from '@/lib/db/schema';
 import { stripe } from '@/lib/stripe';
@@ -63,6 +63,10 @@ export async function GET(req: NextRequest) {
         eq(subscriptions.cancelAtPeriodEnd, false),
         gte(subscriptions.currentPeriodEnd, windowStart),
         lt(subscriptions.currentPeriodEnd, windowEnd),
+        // Annual members only. A $15 monthly charge doesn't warrant a
+        // heads-up email every single month (and the renewal template is
+        // written for the yearly moment). Stripe's receipt covers monthly.
+        ne(subscriptions.stripePriceId, STRIPE_PRICES.MEMBERSHIP_MONTHLY),
       ),
     );
 

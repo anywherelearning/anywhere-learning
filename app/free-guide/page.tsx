@@ -475,10 +475,10 @@ export default function FreeGuidePage() {
                 <p className="text-[15px] leading-[1.6] text-gray-600 m-0">
                   The Anywhere Learning{' '}
                   <span className="font-display italic text-ink text-[16px]">membership</span>{' '}
-                  unlocks 100+ guided activities like these.{' '}
+                  unlocks 120+ guided activities like these.{' '}
                   {IS_FOUNDER_PHASE
-                    ? `Founding members pay ${MEMBERSHIP_PRICE_YEAR}, locked in for life.`
-                    : `${MEMBERSHIP_PRICE_YEAR}, cancel anytime.`}
+                    ? `Founding members pay ${MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for $15.`
+                    : `${MEMBERSHIP_PRICE_YEAR} or $15/month, cancel anytime.`}
                 </p>
                 <div className="mt-4 flex justify-center">
                   <Link

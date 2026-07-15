@@ -5,7 +5,7 @@ import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
-import { POST_FOUNDER_PRICE_USD } from '@/lib/membership';
+import { POST_FOUNDER_PRICE_USD, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import Testimonials from '@/components/home/Testimonials';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     absolute: 'Anywhere Learning | Life Skills Activities for Kids',
   },
   description:
-    'A library of 100+ guided real-world activities by a teacher. Cooking, budgeting, building, planning, for parents who want kids capable, not just credentialed. Ages 6-14.',
+    'A library of 120+ guided real-world activities by a teacher. Cooking, budgeting, building, planning, for parents who want kids capable, not just credentialed. Ages 6-14.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -136,7 +136,7 @@ export default async function HomePage() {
                   </h1>
                 </div>
                 <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
-                  A library of 100+ guided activities. Cooking, budgeting, building, planning,
+                  A library of 120+ guided activities. Cooking, budgeting, building, planning,
                   problem-solving, designed by a teacher to fill the gap between what schools
                   test and what life requires.
                 </p>
@@ -218,10 +218,10 @@ export default async function HomePage() {
                   );
                 })}
 
-                {/* 100+ sticker */}
+                {/* 120+ sticker */}
                 <div className="absolute right-[-40px] bottom-[-30px] sm:right-[-40px] sm:bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
                   <span>
-                    <span className="block text-[28px] max-sm:text-2xl mb-1">100+</span>
+                    <span className="block text-[28px] max-sm:text-2xl mb-1">120+</span>
                     activities
                     <span className="block text-[10px] not-italic uppercase tracking-[0.15em] opacity-95 mt-1 font-semibold font-body">One membership</span>
                   </span>
@@ -314,7 +314,7 @@ export default async function HomePage() {
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
                   Nine categories. <span className="italic text-forest">One library.</span>
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">100+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
+                <p className="mt-4 text-lg text-gray-500">120+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
               </div>
             </ScrollReveal>
 
@@ -383,12 +383,12 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { num: '1', title: 'Pick one', body: 'Filter by category and pick whatever sounds fun today. There are 100+ to choose from.' },
+                { num: '1', title: 'Plan your next activities', body: 'Add a few to your plan in under a minute. Pick from 120+, by category, age, or time.' },
                 { num: '2', title: 'Open on any device', body: 'Pull it up on your phone, tablet, or laptop. Skim the parent prep and grab what you need.' },
                 { num: '3', title: 'Do it side by side', body: 'Follow the guide with your kid. Built-in prompts tell you what to say, what to ask, and what comes next.' },
               ].map((step, i) => (
-                <ScrollReveal key={step.num} delay={i * 100}>
-                  <div className="border border-[#D8D4C5] rounded-[14px] bg-cream p-8 pt-8">
+                <ScrollReveal key={step.num} delay={i * 100} className="h-full">
+                  <div className="h-full border border-[#D8D4C5] rounded-[14px] bg-cream p-8 pt-8">
                     <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center font-display italic text-2xl mb-5">
                       {step.num}
                     </div>
@@ -544,8 +544,8 @@ export default async function HomePage() {
                 </h2>
                 <div className="mt-5 mx-auto max-w-[580px] text-gray-500 text-[17px] leading-relaxed space-y-3">
                   <p>
-                    The membership unlocks the full library: all 100+ activities, all eight
-                    categories, new ones added every quarter. One annual price, no upsells,
+                    The membership unlocks the full library: all 120+ activities, all nine
+                    categories, new ones added every quarter. One simple price, no upsells,
                     no tracking your kids.
                   </p>
                   <p>
@@ -554,13 +554,15 @@ export default async function HomePage() {
                         Founding members (first {m.founderCap}) pay just{' '}
                         <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
                         billed once a year at {m.priceYear}, locked in for life.{' '}
-                        After that, ${POST_FOUNDER_PRICE_USD}.
+                        After that, ${POST_FOUNDER_PRICE_USD}. Prefer to go month to month?{' '}
+                        {MONTHLY_PLAN_PRICE_MONTH}, cancel anytime.
                       </>
                     ) : (
                       <>
                         Membership is just{' '}
                         <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
-                        billed once a year at {m.priceYear}.
+                        billed once a year at {m.priceYear}, or {MONTHLY_PLAN_PRICE_MONTH} month
+                        to month.
                       </>
                     )}
                   </p>
@@ -659,7 +661,7 @@ export default async function HomePage() {
                   </h3>
                   <p className="text-cream/85 text-[15px] leading-relaxed mb-6">
                     Full library, all categories, new activities every quarter.{' '}
-                    {m.priceMonth}, billed yearly.{' '}
+                    {m.priceMonth} billed yearly, or {MONTHLY_PLAN_PRICE_MONTH}.{' '}
                     {m.isFounderPhase ? `Founder rate for the first ${m.founderCap} families.` : ''}
                   </p>
                   <div className="mt-auto">

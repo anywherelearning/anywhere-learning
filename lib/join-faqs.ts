@@ -10,8 +10,12 @@ export const joinFaqs = [
     a: 'You get 14 days free with full access to read the whole library. Open and follow along with any guide in your browser, on any device, as much as you want. Downloading guides as PDFs comes with membership, so if you want to save them, you can subscribe anytime during the trial in one click. You enter a card to start but pay $0 today. If it fits your family, do nothing, your membership starts automatically on day 14 and downloads unlock. If it doesn\'t, cancel anytime during the trial in one click and you won\'t be charged a cent. We also email you 3 days before the trial ends, so there are no surprise charges.',
   },
   {
+    q: 'Can I pay monthly instead of yearly?',
+    a: 'Yes. The membership is $15/month if you prefer to go month to month, with the same full library, the same free trial, and cancel anytime. Yearly is the better deal though: the founder rate works out to less than half the monthly price over a year, and it locks in for life. The monthly plan is there if you want to ease in first, and you can switch to yearly anytime from your account.',
+  },
+  {
     q: 'What happens when I renew?',
-    a: 'If you join as one of the first 100 members, your rate is locked in for life. You renew at $99 every year, forever, even when new members are paying $149 or more. The founder price is yours as long as you stay a member.',
+    a: 'If you join yearly as one of the first 100 members, your rate is locked in for life. You renew at $99 every year, forever, even when new members are paying $149 or more. The founder price is yours as long as you stay a member. On the monthly plan, your card is simply charged $15 each month until you cancel.',
   },
   {
     q: 'Is this only for homeschoolers?',
@@ -19,7 +23,7 @@ export const joinFaqs = [
   },
   {
     q: 'What if it doesn\'t fit our family?',
-    a: 'You try it free for 14 days before paying anything, so the easiest answer is: cancel during the trial and you\'re never charged. And even after your membership starts, you still have a 14-day money-back guarantee, no questions asked, full refund. One reply to the welcome email and you\'re done. Beyond that you can cancel anytime and keep access through the end of your year.',
+    a: 'You try it free for 14 days before paying anything, so the easiest answer is: cancel during the trial and you\'re never charged. And even after your membership starts, you still have a 14-day money-back guarantee, no questions asked, full refund. One reply to the welcome email and you\'re done. Beyond that you can cancel anytime and keep access through the end of whatever period you\'ve paid for, the year or the month.',
   },
   {
     q: 'How is this different from Pinterest activities?',
@@ -43,7 +47,7 @@ export const joinFaqs = [
   },
   {
     q: 'Can I cancel anytime?',
-    a: 'Yes. One click in your account, or one email to me. You keep access through the end of your paid year and we won\'t re-bill you. Refunds within 14 days are automatic.',
+    a: 'Yes. One click in your account, or one email to me. You keep access through the end of the period you\'ve paid for, whether that\'s your year or your month, and we won\'t re-bill you. Refunds within 14 days are automatic.',
   },
   {
     q: 'What if I\'m not crafty or outdoorsy?',

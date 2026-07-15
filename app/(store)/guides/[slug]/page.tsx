@@ -464,8 +464,8 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
                   <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
                     The Anywhere Learning{' '}
                     <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
-                    unlocks 100+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay $99/year, locked in for life.
+                    unlocks 120+ guided activities you can actually do with your kids. Cooking,
+                    budgeting, building, planning. Founding members pay $99/year, locked in for life, or go monthly for $15.
                   </p>
                 </div>
                 <Link

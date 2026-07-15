@@ -6,6 +6,8 @@
  *   - sendAbandonedCheckoutMembershipEmail    → membership checkout expired w/o payment
  *   - sendMembershipRenewalEmail              → 14 days before subscription renewal
  *   - sendTrialEndingEmail                    → 3 days before a free trial converts
+ *   - sendTrialCanceledEmail                  → free trial canceled (never paid)
+ *   - sendMembershipCancellationScheduledEmail → paid member set cancel_at_period_end
  */
 
 import { Resend } from 'resend';
@@ -14,6 +16,8 @@ import AbandonedCheckoutMembership from '@/emails/AbandonedCheckoutMembership';
 import MembershipRenewal from '@/emails/MembershipRenewal';
 import TrialEndingReminder from '@/emails/TrialEndingReminder';
 import MembershipConverted from '@/emails/MembershipConverted';
+import TrialCanceled from '@/emails/TrialCanceled';
+import MembershipCancellationScheduled from '@/emails/MembershipCancellationScheduled';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -33,6 +37,7 @@ export async function sendMembershipWelcomeEmail({
   isFounderPhase,
   isTrial,
   trialEndsAt,
+  plan,
 }: {
   to: string;
   firstName?: string;
@@ -42,6 +47,8 @@ export async function sendMembershipWelcomeEmail({
   isTrial?: boolean;
   /** ISO date the trial converts. Only used when isTrial. */
   trialEndsAt?: string;
+  /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
+  plan?: 'annual' | 'monthly';
 }) {
   const subject = isTrial
     ? `Your free trial is open${firstName ? `, ${firstName}` : ''}. Let's pick your first activity`
@@ -51,7 +58,7 @@ export async function sendMembershipWelcomeEmail({
     replyTo: REPLY_TO,
     to,
     subject,
-    react: MembershipWelcome({ firstName, signInUrl, isFounderPhase, isTrial, trialEndsAt }),
+    react: MembershipWelcome({ firstName, signInUrl, isFounderPhase, isTrial, trialEndsAt, plan }),
   });
 }
 
@@ -62,6 +69,7 @@ export async function sendAbandonedCheckoutMembershipEmail({
   isFounderPhase,
   resumeUrl,
   spotsLeft,
+  plan,
 }: {
   to: string;
   firstName?: string;
@@ -69,13 +77,15 @@ export async function sendAbandonedCheckoutMembershipEmail({
   resumeUrl: string;
   /** Live count of founder spots remaining (100 - active members). Optional. */
   spotsLeft?: number;
+  /** Billing plan of the abandoned checkout. Defaults to 'annual'. */
+  plan?: 'annual' | 'monthly';
 }) {
   return getResend().emails.send({
     from: FROM,
     replyTo: REPLY_TO,
     to,
     subject: 'I held your spot at Anywhere Learning',
-    react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft }),
+    react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft, plan }),
   });
 }
 
@@ -87,6 +97,7 @@ export async function sendTrialEndingEmail({
   trialEndDate,
   manageUrl,
   libraryUrl,
+  plan,
 }: {
   to: string;
   firstName?: string;
@@ -95,13 +106,15 @@ export async function sendTrialEndingEmail({
   trialEndDate: string;
   manageUrl: string;
   libraryUrl: string;
+  /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
+  plan?: 'annual' | 'monthly';
 }) {
   return getResend().emails.send({
     from: FROM,
     replyTo: REPLY_TO,
     to,
     subject: 'Your free trial ends in 3 days. Here\'s exactly what happens',
-    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, libraryUrl }),
+    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, libraryUrl, plan }),
   });
 }
 
@@ -113,6 +126,7 @@ export async function sendMembershipConvertedEmail({
   renewalDate,
   libraryUrl,
   manageUrl,
+  plan,
 }: {
   to: string;
   firstName?: string;
@@ -121,6 +135,8 @@ export async function sendMembershipConvertedEmail({
   renewalDate: string;
   libraryUrl: string;
   manageUrl: string;
+  /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
+  plan?: 'annual' | 'monthly';
 }) {
   const subject = `It's official${firstName ? `, ${firstName}` : ''}. You're a member`;
   return getResend().emails.send({
@@ -128,7 +144,7 @@ export async function sendMembershipConvertedEmail({
     replyTo: REPLY_TO,
     to,
     subject,
-    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, libraryUrl, manageUrl }),
+    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, libraryUrl, manageUrl, plan }),
   });
 }
 
@@ -170,5 +186,56 @@ export async function sendMembershipRenewalEmail({
       cardLast4,
       cardExp,
     }),
+  });
+}
+
+/** Trial-canceled confirmation — the trial ended without payment, nothing charged. */
+export async function sendTrialCanceledEmail({
+  to,
+  firstName,
+  plan,
+  surveyToken,
+}: {
+  to: string;
+  firstName?: string;
+  /** Billing plan the trial was on. */
+  plan?: 'annual' | 'monthly';
+  /** exit_surveys row id for the one-tap reason links. Omit to hide the survey. */
+  surveyToken?: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Your trial is canceled, nothing will be charged',
+    react: TrialCanceled({ firstName, plan, surveyToken }),
+  });
+}
+
+/** Cancellation-scheduled confirmation — access runs to period end, then no billing. */
+export async function sendMembershipCancellationScheduledEmail({
+  to,
+  firstName,
+  accessUntil,
+  plan,
+  manageUrl,
+  surveyToken,
+}: {
+  to: string;
+  firstName?: string;
+  /** ISO date access runs until (paid period end). */
+  accessUntil: string;
+  /** Billing plan — swaps "your year" / "your month" wording. */
+  plan?: 'annual' | 'monthly';
+  manageUrl: string;
+  /** exit_surveys row id for the one-tap reason links. Omit to hide the survey. */
+  surveyToken?: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Cancellation confirmed, and thank you',
+    react: MembershipCancellationScheduled({ firstName, accessUntil, plan, manageUrl, surveyToken }),
   });
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { planForPriceId } from '@/lib/stripe-prices';
 import PdfViewer from '@/components/account/PdfViewer';
 
 export const metadata: Metadata = {
@@ -45,11 +46,13 @@ export default async function ActivityViewPage({
   // bounces to /join below — never an open viewer.
   let tier: 'member' | 'trial' | 'guest' = 'guest';
   let trialEndsAt: string | null = null;
+  let isMonthlyPlan = false;
   try {
     const { getAccessContextForClerkId } = await import('@/lib/access');
     const access = await getAccessContextForClerkId(userId);
     tier = access.tier;
     trialEndsAt = access.trialEndsAt?.toISOString() ?? null;
+    isMonthlyPlan = planForPriceId(access.stripePriceId) === 'monthly';
   } catch {
     /* fall through to the guest redirect below */
   }
@@ -65,8 +68,8 @@ export default async function ActivityViewPage({
       title={title}
       tier={tier}
       trialEndsAt={trialEndsAt}
-      priceLabel={MEMBERSHIP_PRICE_YEAR}
-      isFounder={IS_FOUNDER_PHASE}
+      priceLabel={isMonthlyPlan ? MONTHLY_PLAN_PRICE_MONTH : MEMBERSHIP_PRICE_YEAR}
+      isFounder={isMonthlyPlan ? false : IS_FOUNDER_PHASE}
     />
   );
 }

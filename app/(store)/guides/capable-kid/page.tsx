@@ -434,7 +434,7 @@ export default function CapableKidGuidePage() {
                 <p className="text-[15px] leading-[1.6] text-gray-600 m-0">
                   The Anywhere Learning{' '}
                   <span className="font-display italic text-ink text-[16px]">membership</span>{' '}
-                  turns every skill in this guide into a done-for-you activity, 100+ of them.{' '}
+                  turns every skill in this guide into a done-for-you activity, 120+ of them.{' '}
                   {IS_FOUNDER_PHASE
                     ? `Founding members pay ${MEMBERSHIP_PRICE_YEAR}, locked in for life.`
                     : `${MEMBERSHIP_PRICE_YEAR}, cancel anytime.`}

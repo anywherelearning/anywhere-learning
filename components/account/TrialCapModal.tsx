@@ -48,6 +48,9 @@ export default function TrialCapModal({
     ? new Date(trialEndsAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })
     : null;
   const priceNumber = priceLabel.split('/')[0];
+  // The label already encodes the plan ("$99/year" vs "$15/month"), so the
+  // billing-cadence fine print can key off it without extra plumbing.
+  const isMonthlyPlan = priceLabel.includes('/month');
 
   async function handleSubscribe() {
     setError(null);
@@ -169,7 +172,7 @@ export default function TrialCapModal({
           Keep reading in my browser
         </button>
         <p className="mt-3.5 mb-0 font-body text-[12px] text-gray-400">
-          Your card on file is charged today, then once a year. Cancel anytime.{' '}
+          Your card on file is charged today, then {isMonthlyPlan ? 'once a month' : 'once a year'}. Cancel anytime.{' '}
           <a
             href="/api/billing/portal"
             className="text-gray-500 underline decoration-gray-300 underline-offset-2 hover:text-forest-dark"

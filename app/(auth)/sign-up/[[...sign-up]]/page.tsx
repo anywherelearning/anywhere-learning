@@ -3,7 +3,12 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { SignUp } from '@clerk/nextjs';
 import { clerkAuthAppearance } from '@/lib/clerk-theme';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, TRIAL_DAYS } from '@/lib/membership';
+import {
+  IS_FOUNDER_PHASE,
+  MEMBERSHIP_PRICE_YEAR,
+  TRIAL_DAYS,
+  MONTHLY_PLAN_PRICE_MONTH,
+} from '@/lib/membership';
 
 export const metadata: Metadata = {
   title: 'Create Account',
@@ -32,6 +37,13 @@ export default async function SignUpPage({
   // trial funnel, so the left column explains the two steps instead of the
   // generic account pitch.
   const isTrialFlow = redirectUrl?.startsWith('/start-trial') ?? false;
+  // The monthly toggle on /join sends people here with plan=monthly in the
+  // redirect. Their step-2 price is $15/month, so the founder-rate line
+  // would be flat-out wrong for them.
+  const isMonthlyFlow = isTrialFlow && (redirectUrl?.includes('plan=monthly') ?? false);
+  const trialPriceLine = isMonthlyFlow
+    ? `${MONTHLY_PLAN_PRICE_MONTH}, cancel anytime`
+    : `${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ', your founder rate, locked in for life' : ''}`;
 
   // Already signed in? Skip the sign-up flow and go straight to the library.
   let signedInUserId: string | null = null;
@@ -69,7 +81,7 @@ export default async function SignUpPage({
             </h1>
             <p className="mt-4 max-w-[440px] max-lg:mx-auto font-body text-[16.5px] leading-[1.6] text-gray-600">
               {isTrialFlow
-                ? `Your account is where your activities live, on any device. Create it here, then confirm your ${TRIAL_DAYS}-day free trial on the next step. $0 today, then ${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ', your founder rate, locked in for life' : ''}.`
+                ? `Your account is where your activities live, on any device. Create it here, then confirm your ${TRIAL_DAYS}-day free trial on the next step. $0 today, then ${trialPriceLine}.`
                 : 'We use your account to remember which activities you’ve started and to keep your library accessible from any device.'}
             </p>
             <ul className="mt-7 max-w-[420px] max-lg:mx-auto flex flex-col gap-2.5 text-left max-lg:text-center">
@@ -77,7 +89,7 @@ export default async function SignUpPage({
                 ? [
                     'Step 1: create your account (you are here)',
                     'Step 2: confirm your free trial, $0 charged today',
-                    `Then your library opens, 100+ activities, yours for ${TRIAL_DAYS} days`,
+                    `Then your library opens, 120+ activities, yours for ${TRIAL_DAYS} days`,
                   ]
                 : [
                     'Continue right where you left off',

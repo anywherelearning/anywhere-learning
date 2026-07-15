@@ -10,7 +10,7 @@ export default function OnboardingQuiz() {
       submitLabel="Pick our first activities"
       // Chain straight into the planner's "what are you looking for" quiz
       // (age + time + focus → a first set of picks), instead of dropping a
-      // brand-new member on the full 100+ library. ?start=1 auto-opens it.
+      // brand-new member on the full 120+ library. ?start=1 auto-opens it.
       onDone={() => router.push('/account/plan?start=1')}
       onSkip={() => router.push('/account')}
     />

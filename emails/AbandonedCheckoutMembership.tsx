@@ -22,6 +22,9 @@ interface Props {
   /** Live count of founder spots remaining (100 - active members). Optional —
    *  if omitted, the founder stamp falls back to a generic "Founder rate" label. */
   spotsLeft?: number;
+  /** Billing plan of the abandoned checkout. Monthly drops all founder framing
+   *  and shows $15/month. Defaults to annual. */
+  plan?: 'annual' | 'monthly';
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -41,11 +44,16 @@ export default function AbandonedCheckoutMembership({
   isFounderPhase,
   resumeUrl,
   spotsLeft,
+  plan,
 }: Props) {
   const name = firstName?.trim() || 'there';
-  const showFounderStamp = isFounderPhase && typeof spotsLeft === 'number' && spotsLeft > 0;
-  const priceLabel = isFounderPhase ? '$99' : '$149';
-  const subhead = isFounderPhase
+  const isMonthly = plan === 'monthly';
+  // A monthly checkout never involves the founder rate, whatever the global
+  // phase is — suppress every founder line so the email matches their cart.
+  const founder = isFounderPhase && !isMonthly;
+  const showFounderStamp = founder && typeof spotsLeft === 'number' && spotsLeft > 0;
+  const priceLabel = isMonthly ? '$15' : founder ? '$99' : '$149';
+  const subhead = founder
     ? 'Your spot, your founder rate, and the whole library, still waiting.'
     : 'Your spot and the whole library, still waiting.';
 
@@ -118,7 +126,7 @@ export default function AbandonedCheckoutMembership({
                 Resume my checkout →
               </Link>
               <Text style={ctaMicro}>
-                {isFounderPhase ? (
+                {founder ? (
                   <>
                     Founder rate held · $99/year, locked in for life.
                     <br />
@@ -126,7 +134,7 @@ export default function AbandonedCheckoutMembership({
                   </>
                 ) : (
                   <>
-                    Membership · $149/year, cancel anytime.
+                    Membership · {isMonthly ? '$15/month' : '$149/year'}, cancel anytime.
                     <br />
                     14-day full refund if it&apos;s not for you.
                   </>
@@ -141,7 +149,7 @@ export default function AbandonedCheckoutMembership({
               <span style={eyebrowRule} />Inside the membership
             </Text>
             <Heading as="h2" style={h2}>
-              One year of{' '}
+              {isMonthly ? 'A whole library of' : 'One year of'}{' '}
               <span style={italicAccent}>real-world learning.</span>
             </Heading>
             <Text style={pNoMargin}>
@@ -156,7 +164,7 @@ export default function AbandonedCheckoutMembership({
             <div style={mapCard}>
               <div style={mapPinWrap}>
                 <span style={mapPin}>
-                  Annual membership{isFounderPhase ? ' · founder rate' : ''}
+                  {isMonthly ? 'Monthly membership' : `Annual membership${founder ? ' · founder rate' : ''}`}
                 </span>
               </div>
               <table
@@ -185,11 +193,13 @@ export default function AbandonedCheckoutMembership({
                     <td style={levelsCell}>
                       <Stat
                         num={priceLabel}
-                        name={isFounderPhase ? 'Locked in' : 'Per year'}
+                        name={founder ? 'Locked in' : isMonthly ? 'Per month' : 'Per year'}
                         desc={
-                          isFounderPhase
+                          founder
                             ? 'Founder rate for life. Renews at the same price.'
-                            : 'Renews annually. Cancel anytime.'
+                            : isMonthly
+                              ? 'Renews monthly. Cancel anytime.'
+                              : 'Renews annually. Cancel anytime.'
                         }
                       />
                     </td>
@@ -244,7 +254,7 @@ export default function AbandonedCheckoutMembership({
           </div>
 
           {/* ── Founder spots banner ── */}
-          {isFounderPhase && (
+          {founder && (
             <div style={founderWrap}>
               <div style={founderBox}>
                 {showFounderStamp && (
@@ -272,7 +282,7 @@ export default function AbandonedCheckoutMembership({
           <Text style={legal}>
             You&apos;re getting this because you started a checkout on anywherelearning.co and
             didn&apos;t finish. Nothing has been charged.
-            {isFounderPhase ? ' Founder spots are limited to the first 100 members.' : ''}
+            {founder ? ' Founder spots are limited to the first 100 members.' : ''}
           </Text>
 
           {/* ── Footer ── */}

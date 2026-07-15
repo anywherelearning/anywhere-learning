@@ -493,7 +493,7 @@ export default function AboutPage() {
                 </Link>
               </div>
               <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13px] text-gray-500">
-                <span>Founder rate $99/year locked in for life</span>
+                <span>Founder rate $99/year locked in for life, or $15/month</span>
                 <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
                 <span>14-day money-back guarantee</span>
                 <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />

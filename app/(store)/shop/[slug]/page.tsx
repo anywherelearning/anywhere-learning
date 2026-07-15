@@ -900,11 +900,11 @@ export default async function ProductPage({
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />
-                All 100+ activities
+                All 120+ activities
               </p>
               <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight text-balance">
                 This activity is one of{" "}
-                <em className="not-italic italic text-forest-dark">100+ in the membership.</em>
+                <em className="not-italic italic text-forest-dark">120+ in the membership.</em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
                 The full library covers nine categories (math, AI, communication, planning,
@@ -937,7 +937,7 @@ export default async function ProductPage({
               </h3>
               <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
                 {[
-                  "All 100+ activities (every category)",
+                  "All 120+ activities (every category)",
                   "3 levels per activity (ages 6 to 14)",
                   "New activities every quarter",
                   "The Future-Ready Skills Map (parent guide)",
@@ -961,7 +961,7 @@ export default async function ProductPage({
           <div className="max-w-[1000px] mx-auto text-center mb-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 inline-flex items-center gap-2.5">
               <span className="w-[22px] h-px bg-[#C9C5B7] inline-block" />
-              Not ready for a year?
+              Not ready to join?
               <span className="w-[22px] h-px bg-[#C9C5B7] inline-block" />
             </p>
           </div>

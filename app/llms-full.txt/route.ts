@@ -113,7 +113,7 @@ function membershipLibraryOverview(): string {
   return [
     `## Membership and the Activity Library`,
     ``,
-    `Anywhere Learning is membership-based. Joining unlocks the full library of 100+ real-world activities across 8 categories. Founder rate $99/year for the first 100 members, then $149/year. A 14-day free trial lets you start for free before your annual membership begins. Individual activities are not sold a la carte on the site. Join: ${SITE_URL}/join`,
+    `Anywhere Learning is membership-based. Joining unlocks the full library of 120+ real-world activities across 9 categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month on the monthly plan. A 14-day free trial lets you start for free before your annual membership begins. Individual activities are not sold a la carte on the site. Join: ${SITE_URL}/join`,
     ``,
     `Representative collections in the library (all included with membership):`,
     collections
@@ -204,7 +204,7 @@ export async function GET() {
 
   const header = `# Anywhere Learning
 
-> Real-world skills for kids. A homeschool and worldschool membership: 100+ low-prep, real-world activity guides across 8 categories for ages 6 to 14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids. Membership-based: founder rate $99/year (first 100 members), then $149/year, with a 14-day free trial.
+> Real-world skills for kids. A homeschool and worldschool membership: 120+ low-prep, real-world activity guides across 9 categories for ages 6 to 14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids. Membership-based: founder rate $99/year (first 100 members), then $149/year, or $15/month, with a 14-day free trial.
 
 > Last updated: ${lastUpdated}
 
@@ -218,8 +218,8 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 
 - Founder: Amelie, B.Ed, M.Ed, 15 years classroom teaching experience
 - Audience: Homeschool and worldschool families with children ages 6 to 14
-- Model: Membership-based. Founder rate $99/year (first 100 members), then $149/year, with a 14-day free trial. Individual activities are not sold a la carte on the site.
-- Library: 100+ real-world activities across 8 categories
+- Model: Membership-based. Founder rate $99/year (first 100 members), then $149/year, or $15/month on the monthly plan, with a 14-day free trial. Individual activities are not sold a la carte on the site.
+- Library: 120+ real-world activities across 9 categories
 - 8 learning categories: outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, and worldschooling
 - Every activity includes three flexible difficulty levels (Explore, Develop, Extend) for multi-age households
 - Format: Digital PDF guides, downloadable, usable on any device, printing optional

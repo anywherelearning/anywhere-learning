@@ -33,7 +33,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClerkClient } from '@clerk/backend';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { users, subscriptions, stripeEvents, sentEmails } from '@/lib/db/schema';
+import { users, subscriptions, stripeEvents, sentEmails, exitSurveys } from '@/lib/db/schema';
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import {
@@ -41,6 +41,8 @@ import {
   sendAbandonedCheckoutMembershipEmail,
   sendTrialEndingEmail,
   sendMembershipConvertedEmail,
+  sendTrialCanceledEmail,
+  sendMembershipCancellationScheduledEmail,
 } from '@/lib/resend';
 import type Stripe from 'stripe';
 
@@ -113,6 +115,42 @@ async function generateSignInUrl(clerkId: string): Promise<string> {
     console.error('[webhook] generateSignInUrl failed:', err);
     return fallback;
   }
+}
+
+/**
+ * Create an exit-survey row for a cancellation email. Its uuid becomes the
+ * opaque token in the email's one-tap reason links (no email address in
+ * URLs). Best-effort: on failure the email simply omits the survey block.
+ */
+async function createExitSurvey(
+  email: string,
+  kind: 'trial-cancel' | 'member-cancel',
+  plan: 'annual' | 'monthly',
+): Promise<string | undefined> {
+  try {
+    const rows = await db
+      .insert(exitSurveys)
+      .values({ email, kind, plan })
+      .returning({ id: exitSurveys.id });
+    return rows[0]?.id;
+  } catch (err) {
+    console.warn('[webhook] exit-survey row failed (email will omit survey):', err);
+    return undefined;
+  }
+}
+
+/** Best-effort Clerk firstName lookup for email personalization. */
+async function firstNameForClerkId(clerkId: string | null): Promise<string | undefined> {
+  try {
+    const clerk = getClerk();
+    if (clerk && clerkId) {
+      const u = await clerk.users.getUser(clerkId);
+      return u.firstName || undefined;
+    }
+  } catch {
+    /* name is a nice-to-have */
+  }
+  return undefined;
 }
 
 /** Upsert a `users` row keyed by Clerk ID. */
@@ -191,6 +229,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // no user row existed yet and would have been ignored. Now we have a user
   // row, so we can reliably attach the subscription here.
   let isFounder = false;
+  let plan: 'annual' | 'monthly' = 'annual';
   let isTrial = false;
   let trialEndsAt: Date | null = null;
   let isFirstMembership = false;
@@ -219,8 +258,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       // paid — not the IS_FOUNDER_PHASE flag at lookup time. This way founders
       // stay tagged as founders even after the cap flips.
       const priceId = sub.items.data[0]?.price.id;
-      const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
+      const { STRIPE_PRICES, planForPriceId } = await import('@/lib/stripe-prices');
       isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+      plan = planForPriceId(priceId);
       isTrial = sub.status === 'trialing';
       if (isTrial && sub.trial_end) trialEndsAt = new Date(sub.trial_end * 1000);
     } catch (err) {
@@ -261,6 +301,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         // a payment receipt vibe, since they haven't been charged yet.
         isTrial,
         trialEndsAt: trialEndsAt?.toISOString(),
+        // Monthly members get "$15 a month" wording instead of the annual copy.
+        plan,
       });
     } catch (err) {
       console.error('[webhook] welcome email failed:', err);
@@ -384,12 +426,17 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
     const spotsLeft = founderStillOpen
       ? Math.max(0, FOUNDER_CAP - activeCount)
       : undefined;
+    // The plan the visitor had in their cart, stamped on the session at
+    // creation. Sessions created before the monthly plan existed have no
+    // plan key and correctly fall back to annual.
+    const plan = session.metadata?.plan === 'monthly' ? ('monthly' as const) : ('annual' as const);
     await sendAbandonedCheckoutMembershipEmail({
       to: email,
       firstName,
       isFounderPhase: founderStillOpen,
       resumeUrl: recoveryUrl,
       spotsLeft,
+      plan,
     });
     console.log(`[webhook] sent abandoned-checkout email to ${email}`);
     // Record the send so retries/other expired sessions for this address stay
@@ -519,8 +566,9 @@ async function handleTrialWillEnd(sub: Stripe.Subscription) {
     /* name is a nice-to-have */
   }
 
-  const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
-  const isFounder = sub.items.data[0]?.price.id === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+  const { STRIPE_PRICES, planForPriceId } = await import('@/lib/stripe-prices');
+  const trialPriceId = sub.items.data[0]?.price.id;
+  const isFounder = trialPriceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
   const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
   try {
@@ -531,6 +579,7 @@ async function handleTrialWillEnd(sub: Stripe.Subscription) {
       trialEndDate: new Date(sub.trial_end * 1000).toISOString(),
       manageUrl: `${base}/account/settings`,
       libraryUrl: `${base}/account`,
+      plan: planForPriceId(trialPriceId),
     });
     console.log(`[webhook] sent trial-ending email to ${user.email}`);
   } catch (err) {
@@ -612,12 +661,57 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   }
   console.log(`[webhook] subscription ${sub.id} → ${sub.status} for ${user.email}`);
 
+  // Cancellation scheduled: cancel_at_period_end flipped false → true (the
+  // billing portal's "Cancel plan"). Confirm by email right away — the
+  // subscription stays active until period end, so the deletion event (and
+  // its emails/tags) won't arrive for days or months. The false → true
+  // transition check makes this fire exactly once per cancellation.
+  const capTurnedOn =
+    !!existing[0] &&
+    existing[0].cancelAtPeriodEnd === false &&
+    (sub.cancel_at_period_end ?? false) === true;
+  if (capTurnedOn && (sub.status === 'active' || sub.status === 'trialing')) {
+    const { planForPriceId } = await import('@/lib/stripe-prices');
+    const plan = planForPriceId(priceId);
+    const firstName = await firstNameForClerkId(user.clerkId);
+    const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+    try {
+      if (sub.status === 'trialing') {
+        // A trial member scheduled their trial to expire: they'll never pay,
+        // so they get the "nothing will be charged" confirmation now.
+        const surveyToken = await createExitSurvey(user.email, 'trial-cancel', plan);
+        await sendTrialCanceledEmail({ to: user.email, firstName, plan, surveyToken });
+        console.log(`[webhook] sent trial-canceled email to ${user.email} (scheduled)`);
+      } else {
+        const surveyToken = await createExitSurvey(user.email, 'member-cancel', plan);
+        await sendMembershipCancellationScheduledEmail({
+          to: user.email,
+          firstName,
+          accessUntil: periodEnd.toISOString(),
+          plan,
+          manageUrl: `${base}/account/settings`,
+          surveyToken,
+        });
+        console.log(`[webhook] sent cancellation-scheduled email to ${user.email}`);
+        // Win-back segment starts now, not months later at period end.
+        try {
+          await subscribeAndTag(user.email, ['member-canceled']);
+        } catch (err) {
+          console.warn('[webhook] kit member-canceled tagging failed:', err);
+        }
+      }
+    } catch (err) {
+      console.error('[webhook] cancellation email failed:', err);
+    }
+  }
+
   // Trial → paid conversion: the first real invoice was paid and Stripe
   // flipped status from 'trialing' to 'active'. Swap the Kit segment so this
   // person starts getting member broadcasts instead of trial nudges.
   if (previousStatus === 'trialing' && sub.status === 'active') {
-    const { STRIPE_PRICES } = await import('@/lib/stripe-prices');
+    const { STRIPE_PRICES, planForPriceId } = await import('@/lib/stripe-prices');
     const isFounder = priceId === STRIPE_PRICES.MEMBERSHIP_FOUNDER;
+    const plan = planForPriceId(priceId);
     try {
       await applyAndRemoveTags(user.email, {
         add: ['member', ...(isFounder ? ['founder'] : [])],
@@ -649,6 +743,7 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
         renewalDate: periodEnd.toISOString(),
         libraryUrl: `${base}/account`,
         manageUrl: `${base}/account/settings`,
+        plan,
       });
       console.log(`[webhook] sent membership-converted email to ${user.email}`);
     } catch (err) {
@@ -688,6 +783,21 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
           add: ['trial-canceled'],
           remove: ['trial-member', 'member', 'founder'],
         });
+        // Confirmation email — unless they scheduled the cancel earlier in
+        // the trial (cancelAtPeriodEnd already true on our row), in which
+        // case the capTurnedOn branch above emailed them at that moment.
+        if (!existing[0]?.cancelAtPeriodEnd) {
+          try {
+            const { planForPriceId } = await import('@/lib/stripe-prices');
+            const plan = planForPriceId(priceId || existing[0]?.stripePriceId);
+            const firstName = await firstNameForClerkId(user.clerkId);
+            const surveyToken = await createExitSurvey(user.email, 'trial-cancel', plan);
+            await sendTrialCanceledEmail({ to: user.email, firstName, plan, surveyToken });
+            console.log(`[webhook] sent trial-canceled email to ${user.email}`);
+          } catch (err) {
+            console.error('[webhook] trial-canceled email failed:', err);
+          }
+        }
       } else {
         const expired = periodEnd <= new Date();
         if (expired) {

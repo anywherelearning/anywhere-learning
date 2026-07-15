@@ -25,11 +25,14 @@ export interface AccessContext {
   userId: string | null;
   /** Trial end date (== subscriptions.currentPeriodEnd while trialing). */
   trialEndsAt: Date | null;
+  /** Stripe Price ID of the granting subscription — lets callers tell the
+   *  monthly plan from annual (e.g. plan-correct upgrade price labels). */
+  stripePriceId: string | null;
 }
 
 /** Resolve tier + trial context for a signed-in Clerk user. */
 export async function getAccessContextForClerkId(clerkId: string): Promise<AccessContext> {
-  const guest: AccessContext = { tier: 'guest', userId: null, trialEndsAt: null };
+  const guest: AccessContext = { tier: 'guest', userId: null, trialEndsAt: null, stripePriceId: null };
   try {
     const rows = await db
       .select({ userId: users.id })
@@ -48,7 +51,11 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
     //     cancellation event and our DB still says 'active' with the old
     //     periodEnd in the past, the date guard rejects them anyway.
     const subRows = await db
-      .select({ status: subscriptions.status, periodEnd: subscriptions.currentPeriodEnd })
+      .select({
+        status: subscriptions.status,
+        periodEnd: subscriptions.currentPeriodEnd,
+        stripePriceId: subscriptions.stripePriceId,
+      })
       .from(subscriptions)
       .where(
         and(
@@ -65,9 +72,19 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
     const sub = subRows[0];
     if (sub) {
       if (sub.status === 'trialing') {
-        return { tier: 'trial', userId: u.userId, trialEndsAt: sub.periodEnd };
+        return {
+          tier: 'trial',
+          userId: u.userId,
+          trialEndsAt: sub.periodEnd,
+          stripePriceId: sub.stripePriceId,
+        };
       }
-      return { tier: 'member', userId: u.userId, trialEndsAt: null };
+      return {
+        tier: 'member',
+        userId: u.userId,
+        trialEndsAt: null,
+        stripePriceId: sub.stripePriceId,
+      };
     }
 
     return { ...guest, userId: u.userId };

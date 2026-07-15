@@ -8,53 +8,48 @@ import {
   Preview,
   Text,
 } from '@react-email/components';
+import { EXIT_REASONS } from './TrialCanceled';
 
 interface Props {
-  /** The recipient's first name (or empty string if we don't know it). */
+  /** The recipient's first name (or undefined if we don't know it). */
   firstName?: string;
-  /** Whether they're on the locked founder rate ($99/yr instead of $149/yr). */
-  isFounderPhase: boolean;
-  /** ISO date the membership renews (the current paid period end). */
-  renewalDate: string;
-  /** Link straight into their library. */
-  libraryUrl: string;
-  /** Link to manage / cancel the subscription. */
-  manageUrl: string;
-  /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
+  /** ISO date access runs until (the paid period end). */
+  accessUntil: string;
+  /** Billing plan: swaps "your year" / "your month" wording. */
   plan?: 'annual' | 'monthly';
+  /** Link to account settings, where the membership can be resumed. */
+  manageUrl: string;
+  /** exit_surveys row id — opaque token for the one-tap reason links.
+   *  When missing, the reason row is hidden. */
+  surveyToken?: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
 const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
-const EMAIL_COLLAGE = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-library-hero.png';
 
-/** "June 26, 2026" for fine print. */
+/** "June 26, 2026" for body copy and fine print. */
 function longDate(d: Date): string {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
 /**
- * Membership-converted email — fires when a free trial converts to a paid
- * membership (Stripe subscription 'trialing' → 'active'). A short, warm
- * confirmation: the moment they became a paying member, acknowledged.
- *
- * The welcome email (MembershipWelcome) already went out on day 0, so this one
- * stays focused: thank you, what just happened, and a door back into the library.
+ * Cancellation-scheduled confirmation. Sent when a paying member cancels
+ * (Stripe flips cancel_at_period_end to true): access continues to the end
+ * of the paid period, then no further billing. Plain confirmation first,
+ * one-tap exit survey second, one quiet door back. No discounts, no guilt.
  */
-export default function MembershipConverted({
+export default function MembershipCancellationScheduled({
   firstName,
-  isFounderPhase,
-  renewalDate,
-  libraryUrl,
-  manageUrl,
+  accessUntil,
   plan,
+  manageUrl,
+  surveyToken,
 }: Props) {
   const name = firstName?.trim() || 'there';
   const isMonthly = plan === 'monthly';
-  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
   const per = isMonthly ? 'month' : 'year';
-  const renews = new Date(renewalDate);
+  const until = longDate(new Date(accessUntil));
 
   return (
     <Html>
@@ -64,7 +59,7 @@ export default function MembershipConverted({
         `}</style>
       </Head>
       <Preview>
-        It&apos;s official, {name} — your trial just became a membership. Thank you for backing this.
+        Cancellation confirmed. You keep full access until {until}, then no further billing.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -95,81 +90,70 @@ export default function MembershipConverted({
                 </td>
               </tr>
 
-              {/* ── 2 · It's official ── */}
+              {/* ── 2 · Confirmation ── */}
               <tr>
                 <td style={{ padding: '34px 48px 0' }}>
                   <div style={eyebrow}>
                     <span style={eyebrowRule} />
-                    It&apos;s official
+                    Cancellation confirmed
                   </div>
                   <div style={h1}>
-                    You&apos;re a{' '}
-                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>member</span> now, {name}.
+                    All set, <span style={{ fontStyle: 'italic', color: C_FOREST }}>{name}</span>.
                   </div>
                   <Text style={p}>
-                    Your free trial just turned into a real membership, which means it earned its
-                    place in your week. That&apos;s the whole hope behind this, so thank you,
-                    genuinely. I don&apos;t take it lightly.
+                    Your membership is canceled and you won&apos;t be billed again. You keep full
+                    access, every guide, every download, until <strong style={strongInk}>{until}</strong>,
+                    the end of the {per} you&apos;ve already paid for. After that it winds down
+                    quietly. No further charges, no hoops.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Nothing changes about how you use it. Same library, same activities, same one
-                    good hour at a time. The only difference is you can now save and print every
-                    guide whenever you like, and the whole thing is yours for the {per} ahead.
+                    Thank you for being a member. Truly. Every family that joined this early
+                    shaped what it became.
                   </Text>
                 </td>
               </tr>
 
-              {/* ── 3 · Confirmation + CTA card ── */}
-              <tr>
-                <td style={{ padding: '30px 48px 0' }}>
-                  <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
-                    <tbody>
-                      <tr>
-                        <td style={{ padding: '24px 28px', textAlign: 'center' as const }}>
-                          <Img
-                            src={EMAIL_COLLAGE}
-                            alt="A fan of Anywhere Learning activity guides with the Skills Map in front"
-                            width="280"
-                            height="216"
-                            style={{
-                              display: 'inline-block',
-                              width: '280px',
-                              height: 'auto',
-                              maxWidth: '100%',
-                            }}
-                          />
-                          <div style={{ ...ctaLabel, marginTop: '16px' }}>Membership active</div>
-                          <div style={confirmLine}>
-                            {price} a {per}{isFounderPhase ? ', your founder rate, locked in for life' : ''}.
-                            Renews {longDate(renews)}.
-                          </div>
-                          <div style={{ marginTop: '16px' }}>
-                            <Link href={libraryUrl} style={btn}>
-                              Open my library &rarr;
-                            </Link>
-                          </div>
-                          <div style={ctaMicro}>
-                            Changed your mind? You have 14 days for a full refund.
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
+              {/* ── 3 · One-tap exit survey ── */}
+              {surveyToken && (
+                <tr>
+                  <td style={{ padding: '28px 48px 0' }}>
+                    <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
+                      <tbody>
+                        <tr>
+                          <td style={{ padding: '22px 26px 24px' }}>
+                            <Text style={surveyLabel}>One question, only if you feel like it</Text>
+                            <Text style={surveyLead}>What made today the day?</Text>
+                            {EXIT_REASONS.map((r) => (
+                              <div key={r.key} style={{ marginTop: '8px' }}>
+                                <Link
+                                  href={`${baseUrl}/api/exit-reason?t=${surveyToken}&r=${r.key}`}
+                                  style={reasonPill}
+                                >
+                                  {r.label}
+                                </Link>
+                              </div>
+                            ))}
+                            <Text style={surveyMicro}>
+                              One tap, that&apos;s it. It genuinely shapes what I build next.
+                            </Text>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              )}
 
               {/* ── 4 · Sign-off ── */}
               <tr>
-                <td style={{ padding: '36px 48px 0' }}>
-                  <Text style={{ ...p, margin: '0 0 4px' }}>
-                    So glad you stayed. Now go do something real with your kids this week, they&apos;ll
-                    remember it.
-                  </Text>
-                  <Text style={{ ...p, margin: '14px 0 0' }}>
-                    And a genuine ask: as you and your kids dig in, tell me what they love and what
-                    falls flat. I build every bit of this for families like yours, so what you notice
-                    really does shape what comes next. Just hit reply, it lands straight in my inbox
-                    and I read every one.
+                <td style={{ padding: '30px 48px 0' }}>
+                  <Text style={{ ...p, margin: 0 }}>
+                    If it was something specific, hit reply and tell me. This lands straight in my
+                    inbox and I read every one. And if you change your mind before {until}, you can{' '}
+                    <Link href={manageUrl} style={{ color: C_FOREST, fontWeight: 600 }}>
+                      resume your membership
+                    </Link>{' '}
+                    from your account and nothing is interrupted.
                   </Text>
                   <div style={{ fontSize: '15.5px', color: C_BODY, marginTop: '16px' }}>xo,</div>
                   <div style={signature}>Amelie</div>
@@ -184,17 +168,10 @@ export default function MembershipConverted({
                 <td style={{ padding: '28px 48px 32px' }}>
                   <div style={fadeDivider} />
                   <Text style={legal}>
-                    You&apos;re receiving this note because your free trial of Anywhere Learning
-                    converted to a paid membership today. Your membership renews each {per} at {price}{' '}
-                    USD{isFounderPhase ? ', your founder rate, locked in' : ''}. If it&apos;s not the
-                    right fit, you have 14 days from today for a full refund, no questions asked,
-                    just email info@anywherelearning.co.
+                    You&apos;re receiving this note because your Anywhere Learning membership was
+                    set to cancel. Access continues through {until}; no charges after that. If you
+                    didn&apos;t cancel this yourself, reply to this email and we&apos;ll sort it out.
                   </Text>
-                  <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
-                    <Link href={manageUrl} style={{ color: C_MUTED }}>
-                      Manage account
-                    </Link>
-                  </div>
                 </td>
               </tr>
 
@@ -212,12 +189,11 @@ export default function MembershipConverted({
 }
 
 // Preview props for `npm run email:preview`.
-MembershipConverted.PreviewProps = {
+MembershipCancellationScheduled.PreviewProps = {
   firstName: 'Sarah',
-  isFounderPhase: true,
-  renewalDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
-  libraryUrl: 'https://anywherelearning.co/account',
+  accessUntil: new Date(Date.now() + 200 * 24 * 60 * 60 * 1000).toISOString(),
   manageUrl: 'https://anywherelearning.co/account/settings',
+  surveyToken: 'preview-token',
 } satisfies Props;
 
 /* ── Brand tokens (shared with the other transactional emails) ── */
@@ -235,7 +211,6 @@ const C_MUTED = '#7B8378';
 const C_RULE = '#D8D4C5';
 const C_FOREST = '#588157';
 const C_FOREST_DARK = '#3A5A40';
-const C_TERRA = '#C97B5C';
 
 const body = {
   backgroundColor: '#E9E5DC',
@@ -295,6 +270,8 @@ const p = {
   fontFamily: FONT_BODY,
 };
 
+const strongInk = { color: C_INK, fontWeight: 600 };
+
 const sageCard = {
   width: '100%',
   borderCollapse: 'separate' as const,
@@ -303,52 +280,55 @@ const sageCard = {
   borderRadius: '14px',
 };
 
-const ctaLabel = {
+const surveyLabel = {
   fontSize: '10.5px',
   fontWeight: 700,
   letterSpacing: '0.22em',
   color: C_FOREST_DARK,
   textTransform: 'uppercase' as const,
-  marginTop: '12px',
+  margin: 0,
   fontFamily: FONT_BODY,
 };
 
-const confirmLine = {
-  fontSize: '14px',
-  lineHeight: 1.6,
-  color: C_BODY,
-  marginTop: '8px',
-  fontFamily: FONT_BODY,
+const surveyLead = {
+  fontFamily: FONT_DISPLAY,
+  fontSize: '20px',
+  color: C_INK,
+  margin: '8px 0 12px',
 };
 
-const btn = {
+const reasonPill = {
   display: 'inline-block',
-  backgroundColor: C_FOREST,
-  color: '#F7F4EA',
-  fontSize: '15px',
+  backgroundColor: C_CREAM,
+  border: `1px solid ${C_SAGE_BORDER}`,
+  borderRadius: '999px',
+  padding: '9px 16px',
+  fontSize: '13.5px',
   fontWeight: 600,
+  color: C_FOREST_DARK,
   textDecoration: 'none',
-  padding: '13px 32px',
-  borderRadius: '11px',
   fontFamily: FONT_BODY,
 };
 
-const ctaMicro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
+const surveyMicro = {
+  fontSize: '12.5px',
+  color: C_MUTED,
+  margin: '14px 0 0',
+  fontFamily: FONT_BODY,
+};
 
 const signature = {
   fontFamily: FONT_SCRIPT,
-  fontSize: '46px',
-  fontWeight: 600,
-  color: C_TERRA,
-  lineHeight: 1.15,
-  marginTop: '2px',
+  fontSize: '30px',
+  color: C_FOREST_DARK,
+  lineHeight: 1.2,
 };
 
 const legal = {
-  fontSize: '12.5px',
+  fontSize: '12px',
   lineHeight: 1.6,
   color: C_MUTED,
-  margin: '18px 0 0',
+  margin: '16px 0 0',
   fontFamily: FONT_BODY,
 };
 
@@ -356,6 +336,6 @@ const credit = {
   textAlign: 'center' as const,
   fontSize: '12px',
   color: C_MUTED,
-  paddingTop: '10px',
+  padding: '18px 0 6px',
   fontFamily: FONT_BODY,
 };
