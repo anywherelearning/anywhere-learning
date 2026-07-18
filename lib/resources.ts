@@ -2027,6 +2027,7 @@ const resources: ResourcePage[] = [
       'back-to-homeschool-routines',
       'first-day-of-homeschool',
       'homeschool-morning-basket',
+      'homeschool-middle-school',
       'homeschool-burnout',
       'curriculum-guilt-permission-slip',
       'socialization-answer',
