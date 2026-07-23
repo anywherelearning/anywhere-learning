@@ -187,7 +187,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     activities: [
       { slug: 'kitchen-science-lab', name: 'Kitchen Science Lab', category: 'creativity-maker', note: 'Hands-on, a little messy, hard to look away from' },
       { slug: 'rube-goldberg-machine', name: 'Build a Rube Goldberg Machine', category: 'creativity-maker', note: 'The addictive, hands-on kind of fun' },
-      { slug: 'square-foot-safari', name: 'Square Foot Safari', category: 'outdoor-learning', note: 'Gets them outside and looking' },
+      { slug: 'outdoor-stem-challenges', name: 'Outdoor STEM Challenge Cards', category: 'outdoor-learning', note: 'Gets them outside with a real challenge to crack' },
     ],
   },
   rescued: {
