@@ -115,7 +115,8 @@ export default function QuizPlanEmail({
                           <div style={giftHeadline}>{guideName}</div>
                           <div style={giftBody}>
                             The complete guide, the same one I sell for {priceLabel}. Your kid plans a
-                            real meal, shops for it on a budget, then cooks it. Yours free.
+                            real family meal, prices out the ingredients, scales the recipes, and keeps
+                            it all within a grocery budget. Yours free.
                           </div>
                           <div style={{ marginTop: '18px' }}>
                             <Link href={downloadUrl} style={giftBtn}>Download my free guide &darr;</Link>
