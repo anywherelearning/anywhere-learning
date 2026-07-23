@@ -83,19 +83,14 @@ export async function POST(request: NextRequest) {
     after(async () => {
       try {
         const r = RESULTS[result];
-        const gaps = [
-          r.gapLabel,
-          ...(validSecondary ? [RESULTS[validSecondary].gapLabel] : []),
-        ];
         await sendQuizPlanEmail({
           to: email,
           archetypeTitle: r.title,
           tagline: r.tagline,
           accent: r.accent,
-          gaps,
           saturday: r.saturday,
-          activities: r.activities.map((a) => ({ name: a.name, note: a.note, slug: a.slug })),
           guideName: FLAGSHIP_GUIDE.name,
+          guideSlug: FLAGSHIP_GUIDE.slug,
           priceLabel: FLAGSHIP_GUIDE.priceLabel,
           downloadUrl: FLAGSHIP_DOWNLOAD_URL,
         });

@@ -69,10 +69,9 @@ export async function sendQuizPlanEmail({
   archetypeTitle,
   tagline,
   accent,
-  gaps,
   saturday,
-  activities,
   guideName,
+  guideSlug,
   priceLabel,
   downloadUrl,
 }: {
@@ -80,10 +79,9 @@ export async function sendQuizPlanEmail({
   archetypeTitle: string;
   tagline: string;
   accent: string;
-  gaps: string[];
   saturday: string;
-  activities: { name: string; note: string; slug: string }[];
   guideName: string;
+  guideSlug: string;
   priceLabel: string;
   downloadUrl: string;
 }) {
@@ -91,15 +89,14 @@ export async function sendQuizPlanEmail({
     from: FROM,
     replyTo: REPLY_TO,
     to,
-    subject: `Your kid's Real-World Skills Plan (and a free gift inside)`,
+    subject: `A free gift for taking the quiz (it's inside)`,
     react: QuizPlanEmail({
       archetypeTitle,
       tagline,
       accent,
-      gaps,
       saturday,
-      activities,
       guideName,
+      guideSlug,
       priceLabel,
       downloadUrl,
     }),
