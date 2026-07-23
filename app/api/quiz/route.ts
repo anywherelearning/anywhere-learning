@@ -16,11 +16,11 @@ import { sendQuizPlanEmail } from "@/lib/resend";
  *   kid-age:{band}      - the child's age band
  *   gap:{gapTag}        - the primary skill gap their result maps to
  *   gap2:{gapTag}       - the secondary gap (only when the answers show one)
- *   guide:{flagship}    - triggers free delivery of the flagship bonus guide
  *   from-{source}       - attribution (defaults to 'quiz')
  *
- * It also fires an instant Resend email (the plan + a one-click download of the
- * flagship guide) after the response, independent of Kit.
+ * Delivery of the flagship guide is handled by the instant Resend email fired
+ * after the response (NOT a Kit `guide:` tag), so Kit only runs the multi-day
+ * nurture sequence for quiz-takers.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -62,10 +62,12 @@ export async function POST(request: NextRequest) {
       `quiz-result:${result}`,
       `kid-age:${ageBand}`,
       `gap:${RESULTS[result].gapTag}`,
-      // Flagship free bonus guide (playbook Move 1). Kit delivers it off this tag.
-      `guide:${FLAGSHIP_GUIDE.guideTag}`,
       `from-${cleanSource || "quiz"}`,
     ];
+    // NOTE: quiz-takers deliberately do NOT get the `guide:` delivery tag. The
+    // instant Resend email (below) already delivers the flagship guide, so a Kit
+    // automation on that tag would double-send it. The free-guide flow still
+    // applies the tag, because there Kit is the only delivery path.
 
     // Secondary gap is optional and, like the primary, validated against the
     // enum so a tampered payload can never mint a junk tag.
