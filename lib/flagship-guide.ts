@@ -12,6 +12,8 @@
 // `guide:kitchen-math-challenge` -> send the Kitchen Math PDF." Change the
 // flagship here and both funnels follow.
 
+import { ACTIVITY_BLOB_URLS } from "@/lib/activity-blob-urls";
+
 export const FLAGSHIP_GUIDE = {
   slug: "kitchen-math-challenge",
   name: "Kitchen Math & Meal Planning",
@@ -23,3 +25,7 @@ export const FLAGSHIP_GUIDE = {
   blurb:
     "Your kid plans a real meal, shops for it on a budget, then cooks it. It normally sells for $5.99, and it's yours free.",
 } as const;
+
+// Direct download for the flagship PDF (on Vercel Blob). Used by the instant
+// Resend quiz-plan email so the actual document is one click away.
+export const FLAGSHIP_DOWNLOAD_URL = ACTIVITY_BLOB_URLS[FLAGSHIP_GUIDE.slug];

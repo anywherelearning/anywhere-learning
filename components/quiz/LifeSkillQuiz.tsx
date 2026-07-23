@@ -347,13 +347,26 @@ export default function LifeSkillQuiz() {
               </Link>
             </div>
 
-            <div className="mt-7 flex items-start gap-3 rounded-2xl border border-[#E4DFCF] bg-white/70 px-5 py-4">
-              <LeafMark className="mt-0.5 h-6 w-6 flex-shrink-0" color="#b5803e" />
-              <p className="text-[14px] leading-[1.55] text-gray-600">
-                <span className="font-semibold text-ink">A free gift is on its way too.</span>{" "}
-                Check your inbox for your full plan plus the complete{" "}
-                <span className="font-medium text-ink">Kitchen Math &amp; Meal Planning</span>{" "}
-                guide, normally $5.99, yours free.
+            <div
+              className="relative mt-7 overflow-hidden rounded-[18px] px-6 py-7 text-center"
+              style={{
+                background: "linear-gradient(140deg, #fbf3e2 0%, #f2e2c1 100%)",
+                border: "1px solid rgba(181,128,62,0.42)",
+                boxShadow: "0 20px 40px -28px rgba(120,83,40,0.7)",
+              }}
+            >
+              <span className="absolute right-4 top-4 rounded-full bg-forest px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.08em] text-cream">
+                $5.99 · free
+              </span>
+              <GiftMark className="mx-auto h-11 w-11 text-gold-dark" />
+              <p className="mt-3 font-display text-[25px] leading-[1.1] text-gold-dark">
+                A surprise gift just landed in your inbox
+              </p>
+              <p className="mx-auto mt-2.5 max-w-[42ch] text-[15.5px] leading-[1.6] text-[#5c4a2e]">
+                On top of your plan, I sent you the full{" "}
+                <span className="font-semibold text-ink">Kitchen Math &amp; Meal Planning</span>{" "}
+                guide, the one I sell for $5.99, yours free. Go open your email, it&apos;s
+                landing right now.
               </p>
             </div>
           </div>
@@ -498,6 +511,18 @@ function SparkMark({ className }: { className?: string }) {
         d="M12 2c.7 4.8 2.5 6.6 7.3 7.3-4.8.7-6.6 2.5-7.3 7.3-.7-4.8-2.5-6.6-7.3-7.3C9.5 8.6 11.3 6.8 12 2Z"
         fill="currentColor"
       />
+    </svg>
+  );
+}
+
+// A little wrapped gift, for the "free bonus in your inbox" moment.
+function GiftMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <path d="M4 11h16v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9Z" fill="currentColor" opacity="0.16" />
+      <path d="M3 8h18v3H3V8Zm1 3h16v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M12 8v13" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M12 8S10.5 3.5 8 4c-2 .4-1.6 3.2.5 3.7C10 8 12 8 12 8Zm0 0s1.5-4.5 4-4c2 .4 1.6 3.2-.5 3.7C14 8 12 8 12 8Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
   );
 }

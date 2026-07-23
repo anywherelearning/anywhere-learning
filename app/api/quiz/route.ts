@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { subscribeAndTag } from "@/lib/convertkit";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { RESULTS, isQuizResultId, isAgeBand } from "@/lib/quiz";
-import { FLAGSHIP_GUIDE } from "@/lib/flagship-guide";
+import { FLAGSHIP_GUIDE, FLAGSHIP_DOWNLOAD_URL } from "@/lib/flagship-guide";
+import { sendQuizPlanEmail } from "@/lib/resend";
 
 /**
  * Quiz lead capture. Receives the computed result + age band from the
@@ -17,6 +18,9 @@ import { FLAGSHIP_GUIDE } from "@/lib/flagship-guide";
  *   gap2:{gapTag}       - the secondary gap (only when the answers show one)
  *   guide:{flagship}    - triggers free delivery of the flagship bonus guide
  *   from-{source}       - attribution (defaults to 'quiz')
+ *
+ * It also fires an instant Resend email (the plan + a one-click download of the
+ * flagship guide) after the response, independent of Kit.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -65,11 +69,39 @@ export async function POST(request: NextRequest) {
 
     // Secondary gap is optional and, like the primary, validated against the
     // enum so a tampered payload can never mint a junk tag.
-    if (isQuizResultId(secondaryGap) && secondaryGap !== result) {
-      tags.push(`gap2:${RESULTS[secondaryGap].gapTag}`);
+    const validSecondary =
+      isQuizResultId(secondaryGap) && secondaryGap !== result ? secondaryGap : null;
+    if (validSecondary) {
+      tags.push(`gap2:${RESULTS[validSecondary].gapTag}`);
     }
 
     await subscribeAndTag(email, tags);
+
+    // Fire the instant plan + free-guide email AFTER the response, so it never
+    // delays the result reveal. Best-effort: a mail failure must not fail the
+    // quiz (and in dev without RESEND_API_KEY it simply no-ops via the catch).
+    after(async () => {
+      try {
+        const r = RESULTS[result];
+        const gaps = [
+          r.gapLabel,
+          ...(validSecondary ? [RESULTS[validSecondary].gapLabel] : []),
+        ];
+        await sendQuizPlanEmail({
+          to: email,
+          archetypeTitle: r.title,
+          tagline: r.tagline,
+          gaps,
+          saturday: r.saturday,
+          activities: r.activities.map((a) => ({ name: a.name, note: a.note })),
+          guideName: FLAGSHIP_GUIDE.name,
+          priceLabel: FLAGSHIP_GUIDE.priceLabel,
+          downloadUrl: FLAGSHIP_DOWNLOAD_URL,
+        });
+      } catch (e) {
+        console.error("Quiz plan email failed:", e);
+      }
+    });
 
     return NextResponse.json({ success: true });
   } catch (err) {

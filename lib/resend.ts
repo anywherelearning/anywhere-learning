@@ -18,6 +18,7 @@ import TrialEndingReminder from '@/emails/TrialEndingReminder';
 import MembershipConverted from '@/emails/MembershipConverted';
 import TrialCanceled from '@/emails/TrialCanceled';
 import MembershipCancellationScheduled from '@/emails/MembershipCancellationScheduled';
+import QuizPlanEmail from '@/emails/QuizPlanEmail';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -59,6 +60,46 @@ export async function sendMembershipWelcomeEmail({
     to,
     subject,
     react: MembershipWelcome({ firstName, signInUrl, isFounderPhase, isTrial, trialEndsAt, plan }),
+  });
+}
+
+/** Quiz result + free flagship guide — sent instantly when the quiz completes. */
+export async function sendQuizPlanEmail({
+  to,
+  archetypeTitle,
+  tagline,
+  gaps,
+  saturday,
+  activities,
+  guideName,
+  priceLabel,
+  downloadUrl,
+}: {
+  to: string;
+  archetypeTitle: string;
+  tagline: string;
+  gaps: string[];
+  saturday: string;
+  activities: { name: string; note: string }[];
+  guideName: string;
+  priceLabel: string;
+  downloadUrl: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: `Your kid's Real-World Skills Plan (and a free gift inside)`,
+    react: QuizPlanEmail({
+      archetypeTitle,
+      tagline,
+      gaps,
+      saturday,
+      activities,
+      guideName,
+      priceLabel,
+      downloadUrl,
+    }),
   });
 }
 
