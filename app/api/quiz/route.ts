@@ -12,7 +12,8 @@ import { RESULTS, isQuizResultId, isAgeBand } from "@/lib/quiz";
  *   quiz-taker          - funnel marker / automation trigger
  *   quiz-result:{id}    - which of the 4 result types they got
  *   kid-age:{band}      - the child's age band
- *   gap:{gapTag}        - the skill gap their result maps to
+ *   gap:{gapTag}        - the primary skill gap their result maps to
+ *   gap2:{gapTag}       - the secondary gap (only when the answers show one)
  *   from-{source}       - attribution (defaults to 'quiz')
  */
 export async function POST(request: NextRequest) {
@@ -22,10 +23,11 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, result, ageBand, source } = body as {
+    const { email, result, ageBand, secondaryGap, source } = body as {
       email: string;
       result: string;
       ageBand: string;
+      secondaryGap?: string;
       source?: string;
     };
 
@@ -56,6 +58,12 @@ export async function POST(request: NextRequest) {
       `gap:${RESULTS[result].gapTag}`,
       `from-${cleanSource || "quiz"}`,
     ];
+
+    // Secondary gap is optional and, like the primary, validated against the
+    // enum so a tampered payload can never mint a junk tag.
+    if (isQuizResultId(secondaryGap) && secondaryGap !== result) {
+      tags.push(`gap2:${RESULTS[secondaryGap].gapTag}`);
+    }
 
     await subscribeAndTag(email, tags);
 

@@ -16,7 +16,7 @@ export type QuizResultId =
   | 'over-scheduled'
   | 'ready-for-more';
 
-export type AgeBand = '4-6' | '7-9' | '10-12' | '13-plus';
+export type AgeBand = '6-8' | '9-11' | '12-14';
 
 export const QUIZ_RESULT_IDS: QuizResultId[] = [
   'screen-stuck',
@@ -26,7 +26,7 @@ export const QUIZ_RESULT_IDS: QuizResultId[] = [
   'ready-for-more',
 ];
 
-export const AGE_BANDS: AgeBand[] = ['4-6', '7-9', '10-12', '13-plus'];
+export const AGE_BANDS: AgeBand[] = ['6-8', '9-11', '12-14'];
 
 // ─── Questions ───
 // Q1 captures the kid's age (segmentation gold, becomes a kit-age tag).
@@ -53,10 +53,9 @@ export const QUESTIONS: QuizQuestion[] = [
     kind: 'age',
     prompt: 'First, how old is your kid?',
     options: [
-      { label: '4 to 6', value: '4-6' },
-      { label: '7 to 9', value: '7-9' },
-      { label: '10 to 12', value: '10-12' },
-      { label: '13 and up', value: '13-plus' },
+      { label: '6 to 8', value: '6-8' },
+      { label: '9 to 11', value: '9-11' },
+      { label: '12 to 14', value: '12-14' },
     ],
   },
   {
@@ -163,6 +162,12 @@ export interface QuizResult {
   description: string;
   /** Accent color token (hex) for the result card. */
   accent: string;
+  /**
+   * A concrete, do-it-this-weekend micro-action tied to the gap. No product,
+   * no prep: a real-life prompt that gives the parent an instant free win
+   * before any ask. This is the heart of the "Real-World Skills Plan."
+   */
+  saturday: string;
   /** Three activities to start with: the "here's your fix" that leads to the trial. */
   activities: ResultActivity[];
 }
@@ -177,6 +182,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     accent: '#C97B5C',
     description:
       "You know the moment: a free afternoon, and within about ninety seconds the tablet is out. Not because they're lazy, but because screens are built to be the easiest thing in any room, so boredom takes the path of least resistance. The good news is the pull isn't as strong as it looks. Put something real and hands-on in front of them, a bit of mess, something to build, and the screen loses most of its magic fast. The fix was never a bigger fight over devices. It's giving boredom a better place to land.",
+    saturday:
+      "This Saturday, hand them $20 and the list for one meal, and let them run the whole trip: find each thing, weigh the produce, pay at the till. A real mission beats the screen almost every time.",
     activities: [
       { slug: 'snack-mission', name: 'The $20 Snack Mission', category: 'real-world-math', note: 'Real money, real food, instant payoff' },
       { slug: 'rube-goldberg-machine', name: 'Build a Rube Goldberg Machine', category: 'creativity-maker', note: 'The addictive, hands-on kind of fun' },
@@ -192,6 +199,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     accent: '#588157',
     description:
       "It usually shows up small: they hit the first snag and you hear “can you just do it?” before they've really tried. This one comes from love. It's faster to do it ourselves, so we do, and kids quietly learn that waiting works better than trying. But your kid is more capable than the current setup lets them show. Hand them something real, sit on your hands through the wobbly part, and let them feel the win of figuring it out on their own. That feeling is what builds the next one.",
+    saturday:
+      "This Saturday, pick one thing they'd normally ask you to do (make their own lunch, fix the bike tire) and say “you've got this, I'm right here if you're stuck.” Then sit on your hands through the wobbly part. The win is theirs to feel.",
     activities: [
       { slug: 'solo-mission', name: 'The Solo Mission', category: 'emotional-social-skills', note: 'A real thing, start to finish, on their own' },
       { slug: 'smart-shopper', name: 'Smart Shopper Lab', category: 'real-world-math', note: 'They make the call, not you' },
@@ -207,6 +216,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     accent: '#B6913F',
     description:
       "Picture the shelf: the Lego set that's three-quarters built, the notebook with a brilliant first page and then nothing. The ideas are never the problem, and neither is the excitement. What's still forming is the muscle in the middle, planning it out and pushing through the boring part to actually land it. That muscle has a name, executive function, and it's built, not born. Real projects with a clear start and a real finish are how it grows, one completed thing at a time.",
+    saturday:
+      "This Saturday, pick one small thing and finish it together in a single afternoon, start to done. Bake it, build it, film it, whatever it is. Don't stop until it's actually finished. The whole lesson lives in crossing the line.",
     activities: [
       { slug: 'board-game-studio', name: 'Board Game Studio', category: 'creativity-maker', note: 'Design, build, and actually play the finished game' },
       { slug: 'mini-movie', name: 'Create a Mini Movie', category: 'creativity-maker', note: 'Write, film, edit, premiere: a real ending' },
@@ -222,6 +233,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     accent: '#6B8E6B',
     description:
       "Here's the tell: give them an unscheduled hour and they ask “so what are we doing now?” Their week is full in all the good ways, lessons, teams, practices, but the other kind of time has quietly disappeared, the make-your-own-fun, no-instructions kind. That's exactly where imagination, self-direction, and a tolerance for boredom come from. They don't need one more thing on the calendar. They need activities that hand them the wheel and let them drive.",
+    saturday:
+      "This Saturday, block one hour with nothing planned and no screens. Set out a few odd materials (tape, cardboard, string) and walk away. The “I'm bored” that follows is exactly where their own ideas start.",
     activities: [
       { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', category: 'emotional-social-skills', note: 'Relearning how to make their own fun' },
       { slug: 'invent-a-sport', name: 'Invent a New Sport', category: 'creativity-maker', note: '“You’re the boss” invention, no template' },
@@ -237,6 +250,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     accent: '#3A5A40',
     description:
       "You already know the look: they finish the thing faster than you expected, then glance up like “okay, what else?” Honestly, you're doing a lot right, your kid is curious, fairly independent, and growing. The goal now isn't to fix anything, it's to keep raising the bar so a capable kid doesn't start to coast. Kids like this stay lit up when the challenge is real and the stakes feel a little grown-up. This is the fun part: stretching an already-capable kid into an even more capable one.",
+    saturday:
+      "This Saturday, hand them one real grown-up job to own end to end: plan Sunday dinner on a $30 budget, or price out and run a small yard sale. Give them the wheel, then genuinely stay out of it. Capable kids grow on real stakes.",
     activities: [
       { slug: 'micro-business', name: 'Micro-Business Challenge', category: 'entrepreneurship', note: 'Run something real' },
       { slug: 'community-impact', name: 'Community Impact Project', category: 'planning-problem-solving', note: 'Big, real-world, matters' },
@@ -282,6 +297,53 @@ export function scoreBuckets(buckets: QuizResultId[]): QuizResultId {
     }
   }
   return best;
+}
+
+export interface TopTwo {
+  /** The winning result (the archetype + primary gap). */
+  primary: QuizResultId;
+  /**
+   * The runner-up GAP the answers point to, or null when there isn't a clear
+   * second one. 'ready-for-more' is never a secondary gap: it's the "no gap
+   * here" bucket, so surfacing it as a weakness would be dishonest.
+   */
+  secondaryGap: QuizResultId | null;
+}
+
+/**
+ * The full "top 2 skill gaps" the Real-World Skills Plan is built on. The
+ * primary is scored exactly as before (so nothing about the main result
+ * changes); the secondary is the next-highest-scoring real gap, personalized
+ * to how this kid actually answered.
+ */
+export function scoreTopTwo(buckets: QuizResultId[]): TopTwo {
+  const counts: Record<QuizResultId, number> = {
+    'screen-stuck': 0,
+    rescued: 0,
+    'non-finisher': 0,
+    'over-scheduled': 0,
+    'ready-for-more': 0,
+  };
+  for (const b of buckets) {
+    if (b in counts) counts[b] += 1;
+  }
+
+  const primary = scoreBuckets(buckets);
+
+  // Runner-up: highest-scoring bucket that isn't the primary, has at least one
+  // vote, and represents an actual gap. RESULT_PRIORITY order breaks ties
+  // toward the more common / more actionable gap, same as the primary.
+  let secondaryGap: QuizResultId | null = null;
+  let bestCount = 0;
+  for (const id of RESULT_PRIORITY) {
+    if (id === primary || id === 'ready-for-more') continue;
+    if (counts[id] > bestCount) {
+      bestCount = counts[id];
+      secondaryGap = id;
+    }
+  }
+
+  return { primary, secondaryGap };
 }
 
 export function isQuizResultId(value: unknown): value is QuizResultId {

@@ -6,7 +6,7 @@ import Image from "next/image";
 import {
   QUESTIONS,
   RESULTS,
-  scoreBuckets,
+  scoreTopTwo,
   type QuizResultId,
   type AgeBand,
 } from "@/lib/quiz";
@@ -45,8 +45,8 @@ export default function LifeSkillQuiz() {
     }
   }, []);
 
-  // Derive age band + result from the recorded answers.
-  const { ageBand, result } = useMemo(() => {
+  // Derive age band + result (top-2 gaps) from the recorded answers.
+  const { ageBand, result, secondaryGap } = useMemo(() => {
     const ageQ = QUESTIONS[0];
     const ageIdx = answers[0];
     let band: AgeBand | null = null;
@@ -62,9 +62,11 @@ export default function LifeSkillQuiz() {
       }
     });
 
+    const top = buckets.length ? scoreTopTwo(buckets) : null;
     return {
       ageBand: band,
-      result: buckets.length ? scoreBuckets(buckets) : null,
+      result: top?.primary ?? null,
+      secondaryGap: top?.secondaryGap ?? null,
     };
   }, [answers]);
 
@@ -114,6 +116,7 @@ export default function LifeSkillQuiz() {
           email,
           result,
           ageBand,
+          secondaryGap: secondaryGap || undefined,
           source: source || undefined,
         }),
       });
@@ -156,8 +159,8 @@ export default function LifeSkillQuiz() {
           </h1>
           <p className="mt-5 text-[17.5px] leading-[1.6] text-gray-600 max-w-[480px] mx-auto">
             Eight quick questions. No judgment, no right answers. At the end you&apos;ll
-            get your kid&apos;s type, the one skill to focus on next, and three real
-            activities to start with.
+            get your kid&apos;s Real-World Skills Plan: their type, the top two skills to
+            build next, one thing to try this Saturday, and three activities to start with.
           </p>
           <button
             onClick={() => setPhase("questions")}
@@ -177,100 +180,179 @@ export default function LifeSkillQuiz() {
   // ─── RESULT ───
   if (phase === "result" && result) {
     const r = RESULTS[result];
+    const ageLabel = ageBand ? ageBand.replace("-", " to ") : null;
+    const skills = [
+      r.gapLabel,
+      ...(secondaryGap ? [RESULTS[secondaryGap].gapLabel] : []),
+    ];
+
     return (
       <div className="mx-auto max-w-[680px]">
-        <div
-          className="rounded-[20px] border bg-cream p-9 md:p-12 shadow-[0_24px_48px_-34px_rgba(45,58,46,0.4)]"
-          style={{ borderColor: "rgba(45,58,46,0.16)" }}
+        <article
+          className="al-rise relative overflow-hidden rounded-[24px] bg-cream shadow-[0_40px_80px_-48px_rgba(45,58,46,0.55)]"
+          style={{ border: "1px solid rgba(45,58,46,0.14)" }}
         >
-          <p
-            className="text-xs font-semibold uppercase tracking-[0.18em] inline-flex items-center gap-2.5"
-            style={{ color: r.accent }}
-          >
-            <span className="w-[22px] h-px inline-block" style={{ background: r.accent }} />
-            Your kid is
-          </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] tracking-tight mt-3 text-balance">
-            {r.title}
-          </h2>
-          <p className="mt-2 font-display italic text-[19px]" style={{ color: r.accent }}>
-            {r.tagline}
-          </p>
+          {/* accent ribbon along the very top: the one place the kid's color leads */}
+          <span
+            className="absolute inset-x-0 top-0 h-1.5"
+            style={{ background: r.accent }}
+          />
+          {/* faint botanical watermark, bottom-right, so the plate isn't empty paper */}
+          <LeafMark
+            className="pointer-events-none absolute -bottom-8 -right-6 h-44 w-44 opacity-[0.05]"
+            color="#3d5c3b"
+          />
 
-          <p className="mt-6 text-[16.5px] leading-[1.7] text-gray-700">
-            {r.description}
-          </p>
-
-          <div
-            className="mt-7 rounded-[14px] border p-6"
-            style={{ borderColor: "rgba(45,58,46,0.14)", background: "rgba(88,129,87,0.06)" }}
-          >
-            <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-forest-dark">
-              The skill to focus on next
-            </p>
-            <p className="mt-2 font-display text-[20px] leading-[1.25] text-ink">
-              {r.gapLabel}.
-            </p>
-          </div>
-
-          <p className="mt-8 font-display italic text-[18px] text-ink">
-            Where I&apos;d start with your kid:
-          </p>
-          <div className="mt-4 flex flex-col gap-3">
-            {r.activities.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/shop/${a.slug}`}
-                className="group flex items-center gap-4 rounded-xl border border-[#D8D4C5] bg-white py-3 pl-3 pr-5 transition-all hover:-translate-y-0.5"
-                style={{ borderLeftWidth: 3, borderLeftColor: r.accent }}
+          <div className="relative px-7 pb-9 pt-10 md:px-12 md:pb-12 md:pt-12">
+            {/* ── Identity crest ── */}
+            <header className="flex flex-col items-center text-center">
+              <span
+                className="grid h-16 w-16 place-items-center rounded-full"
+                style={{
+                  background: `color-mix(in srgb, ${r.accent} 14%, #faf9f6)`,
+                  boxShadow: `inset 0 0 0 1.5px color-mix(in srgb, ${r.accent} 40%, transparent)`,
+                }}
               >
-                <span className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg border border-[#ECE7DB] bg-[#F4F1E9]">
-                  <Image
-                    src={`/products/${a.slug}.jpg`}
-                    alt=""
-                    fill
-                    sizes="64px"
-                    className="object-cover"
-                  />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold text-ink text-[15.5px]">
-                    {a.name}
+                <LeafMark className="h-8 w-8" color={r.accent} />
+              </span>
+              <p className="mt-5 font-display text-[19px] italic text-gray-500">
+                Your kid is
+              </p>
+              <h2 className="mt-0.5 font-display text-[clamp(2.15rem,6vw,3.25rem)] leading-[1.02] tracking-tight text-balance">
+                {r.title}
+              </h2>
+              <p
+                className="mt-2 text-[15px] font-medium uppercase tracking-[0.14em]"
+                style={{ color: r.accent }}
+              >
+                {r.tagline}
+              </p>
+            </header>
+
+            <p className="mx-auto mt-7 max-w-[52ch] text-center text-[16.5px] leading-[1.75] text-gray-700">
+              {r.description}
+            </p>
+
+            {/* ── The plan proper ── one titled document, not four boxes */}
+            <div className="mt-10 flex items-baseline justify-between border-b border-[#E4DFCF] pb-3">
+              <h3 className="font-display text-[26px] leading-none text-forest-dark">
+                The Plan
+              </h3>
+              {ageLabel && (
+                <p className="text-[13px] text-gray-500">
+                  for your {ageLabel} year old
+                </p>
+              )}
+            </div>
+
+            {/* Skills as an editorial numbered list: hanging display numerals, no box */}
+            <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.14em] text-gray-400">
+              {skills.length > 1 ? "Two skills to build next" : "The skill to build next"}
+            </p>
+            <ol className="mt-3 flex flex-col gap-4">
+              {skills.map((skill, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <span
+                    className="mt-0.5 font-display text-[34px] leading-[0.8] tabular-nums"
+                    style={{ color: r.accent }}
+                  >
+                    {i + 1}
                   </span>
-                  <span className="block text-[13.5px] text-gray-500">{a.note}</span>
-                </span>
-                <span
-                  className="font-display italic text-[18px] group-hover:translate-x-0.5 transition-transform"
-                  style={{ color: r.accent }}
+                  <span className="text-[18px] leading-[1.4] text-ink">
+                    {skill}.
+                  </span>
+                </li>
+              ))}
+            </ol>
+
+            {/* ── Try this Saturday ── the peak: a warm note placed on the plan */}
+            <div className="relative mt-9">
+              <div
+                className="relative overflow-hidden rounded-[16px] px-6 py-6 shadow-[0_18px_36px_-24px_rgba(120,83,40,0.6)]"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #fbf3e2 0%, #f7ecd6 100%)",
+                  border: "1px solid rgba(181,128,62,0.32)",
+                  transform: "rotate(-0.5deg)",
+                }}
+              >
+                <div className="flex items-center gap-2.5">
+                  <SparkMark className="h-4 w-4 shrink-0 text-gold-dark" />
+                  <p className="font-display text-[21px] leading-none text-gold-dark">
+                    Try this together on Saturday
+                  </p>
+                </div>
+                <p className="mt-3 text-[16px] leading-[1.65] text-[#5c4a2e]">
+                  {r.saturday}
+                </p>
+                <p className="mt-3 text-[13px] italic text-[#94825f]">
+                  Free, no prep. This is the whole idea, in one afternoon.
+                </p>
+              </div>
+            </div>
+
+            {/* ── Matched activities ── */}
+            <p className="mt-10 text-[13px] font-semibold uppercase tracking-[0.14em] text-gray-400">
+              Three activities that fit this plan
+            </p>
+            <div className="mt-3 flex flex-col gap-2.5">
+              {r.activities.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/shop/${a.slug}`}
+                  className="group flex items-center gap-4 rounded-2xl border border-[#E4DFCF] bg-white/70 p-2.5 pr-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-forest/40 hover:bg-white hover:shadow-[0_14px_28px_-22px_rgba(45,58,46,0.6)]"
                 >
-                  &rarr;
-                </span>
+                  <span className="relative h-[60px] w-[60px] flex-shrink-0 overflow-hidden rounded-xl border border-[#ECE7DB] bg-[#F4F1E9]">
+                    <Image
+                      src={`/products/${a.slug}.jpg`}
+                      alt=""
+                      fill
+                      sizes="60px"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-ink text-[15.5px] leading-tight">
+                      {a.name}
+                    </span>
+                    <span className="mt-0.5 block text-[13.5px] leading-snug text-gray-500">
+                      {a.note}
+                    </span>
+                  </span>
+                  <span
+                    className="font-display text-[20px] leading-none transition-transform duration-200 group-hover:translate-x-1"
+                    style={{ color: r.accent }}
+                  >
+                    &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            {/* ── The ask ── */}
+            <div className="mt-10 rounded-[18px] bg-forest px-7 py-8 text-center text-cream">
+              <p className="font-display text-[24px] leading-tight">
+                These three are just the start.
+              </p>
+              <p className="mx-auto mt-2.5 max-w-[42ch] text-[15px] leading-[1.6] text-cream/85">
+                Your membership opens 120+ guided activities like these, built to
+                close exactly this gap. No planning, no prep. Free for 14 days.
+              </p>
+              <Link
+                href="/join"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-cream px-7 py-3.5 text-[15px] font-semibold text-forest-dark transition-all hover:bg-white active:scale-[0.98]"
+              >
+                Start your free trial
+                <span className="font-display text-[17px] leading-none">&rarr;</span>
               </Link>
-            ))}
-          </div>
+            </div>
 
-          <div className="mt-8 rounded-[14px] border border-[#C9D3BE] bg-[#E6EBDF] p-6 text-center">
-            <p className="font-display text-[19px] text-forest-dark">
-              These three are just the start.
+            <p className="mt-6 text-center text-[13px] text-gray-500">
+              Your plan is on its way to your inbox too, with the activities picked
+              for your kid.
             </p>
-            <p className="mt-2 text-[15px] leading-[1.6] text-gray-600">
-              Your membership unlocks 120+ guided activities like these, built to close
-              exactly this gap. No planning, no prep. Try it free for 14 days.
-            </p>
-            <Link
-              href="/join"
-              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-forest px-7 py-3.5 text-[15px] font-semibold text-cream transition-all hover:bg-forest-dark active:scale-[0.98]"
-            >
-              Start your free trial
-              <span className="font-display italic text-[17px] leading-none">&rarr;</span>
-            </Link>
           </div>
-
-          <p className="mt-6 text-center text-[13px] text-gray-500">
-            Your result is on its way to your inbox too, along with the activities
-            picked for your kid.
-          </p>
-        </div>
+        </article>
       </div>
     );
   }
@@ -289,7 +371,8 @@ export default function LifeSkillQuiz() {
             <span className="italic text-forest-dark">your result?</span>
           </h2>
           <p className="mt-3 text-[15px] text-gray-600 max-w-[400px] mx-auto">
-            You&apos;ll get your kid&apos;s type plus a few activities picked for them.
+            You&apos;ll get your kid&apos;s full Real-World Skills Plan, plus the activities
+            picked for them.
           </p>
           <form onSubmit={handleSubmit} className="mt-6 max-w-[420px] mx-auto">
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -377,6 +460,40 @@ export default function LifeSkillQuiz() {
         )}
       </div>
     </div>
+  );
+}
+
+// A single leaf with a center vein: the brand's motif, reused as the plan's
+// seal (in the kid's accent) and as a faint watermark on the plate.
+function LeafMark({ className, color }: { className?: string; color: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path
+        d="M20 3C10 4 4 10 4 18c0 1 .2 2 .5 3 6 .5 15-3.5 15.5-18Z"
+        fill={color}
+        opacity="0.9"
+      />
+      <path
+        d="M6 20C9 13 13 8 19 5"
+        fill="none"
+        stroke="#faf9f6"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+        opacity="0.75"
+      />
+    </svg>
+  );
+}
+
+// A small four-point spark that marks the "Saturday" note as the thing to do.
+function SparkMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path
+        d="M12 2c.7 4.8 2.5 6.6 7.3 7.3-4.8.7-6.6 2.5-7.3 7.3-.7-4.8-2.5-6.6-7.3-7.3C9.5 8.6 11.3 6.8 12 2Z"
+        fill="currentColor"
+      />
+    </svg>
   );
 }
 
