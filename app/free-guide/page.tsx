@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import EmailForm from '@/components/EmailForm';
+import { FLAGSHIP_GUIDE } from '@/lib/flagship-guide';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
@@ -206,7 +207,7 @@ export default function FreeGuidePage() {
                     humans.
                   </p>
                   <div className="mt-8 max-w-[480px]">
-                    <EmailForm variant="light" buttonText="Send me the free guide" />
+                    <EmailForm variant="light" buttonText="Send me the free guide" guide={FLAGSHIP_GUIDE.guideTag} />
                   </div>
                 </div>
               </ScrollReveal>
@@ -387,7 +388,7 @@ export default function FreeGuidePage() {
                   <span className="italic text-forest-dark">right now?</span>
                 </h3>
                 <div className="mt-6 max-w-[480px] mx-auto">
-                  <EmailForm variant="light" buttonText="Send me the free guide" />
+                  <EmailForm variant="light" buttonText="Send me the free guide" guide={FLAGSHIP_GUIDE.guideTag} />
                 </div>
                 <p className="mt-3.5 text-[13px] text-gray-500">
                   Delivered instantly. No spam. Unsubscribe any time.
@@ -454,7 +455,7 @@ export default function FreeGuidePage() {
                 No worksheets. Low prep.
               </p>
               <div className="mt-8 max-w-[480px] mx-auto">
-                <EmailForm variant="light" buttonText="Send me the free guide" />
+                <EmailForm variant="light" buttonText="Send me the free guide" guide={FLAGSHIP_GUIDE.guideTag} />
               </div>
               <p className="mt-5 text-[14.5px] text-gray-500">
                 Want the age-by-age skills version?{' '}

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { subscribeAndTag } from "@/lib/convertkit";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { RESULTS, isQuizResultId, isAgeBand } from "@/lib/quiz";
+import { FLAGSHIP_GUIDE } from "@/lib/flagship-guide";
 
 /**
  * Quiz lead capture. Receives the computed result + age band from the
@@ -14,6 +15,7 @@ import { RESULTS, isQuizResultId, isAgeBand } from "@/lib/quiz";
  *   kid-age:{band}      - the child's age band
  *   gap:{gapTag}        - the primary skill gap their result maps to
  *   gap2:{gapTag}       - the secondary gap (only when the answers show one)
+ *   guide:{flagship}    - triggers free delivery of the flagship bonus guide
  *   from-{source}       - attribution (defaults to 'quiz')
  */
 export async function POST(request: NextRequest) {
@@ -56,6 +58,8 @@ export async function POST(request: NextRequest) {
       `quiz-result:${result}`,
       `kid-age:${ageBand}`,
       `gap:${RESULTS[result].gapTag}`,
+      // Flagship free bonus guide (playbook Move 1). Kit delivers it off this tag.
+      `guide:${FLAGSHIP_GUIDE.guideTag}`,
       `from-${cleanSource || "quiz"}`,
     ];
 

@@ -347,10 +347,15 @@ export default function LifeSkillQuiz() {
               </Link>
             </div>
 
-            <p className="mt-6 text-center text-[13px] text-gray-500">
-              Your plan is on its way to your inbox too, with the activities picked
-              for your kid.
-            </p>
+            <div className="mt-7 flex items-start gap-3 rounded-2xl border border-[#E4DFCF] bg-white/70 px-5 py-4">
+              <LeafMark className="mt-0.5 h-6 w-6 flex-shrink-0" color="#b5803e" />
+              <p className="text-[14px] leading-[1.55] text-gray-600">
+                <span className="font-semibold text-ink">A free gift is on its way too.</span>{" "}
+                Check your inbox for your full plan plus the complete{" "}
+                <span className="font-medium text-ink">Kitchen Math &amp; Meal Planning</span>{" "}
+                guide, normally $5.99, yours free.
+              </p>
+            </div>
           </div>
         </article>
       </div>
