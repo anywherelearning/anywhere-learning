@@ -185,7 +185,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     saturday:
       "This Saturday, hand them $20 and the list for one meal, and let them run the whole trip: find each thing, weigh the produce, pay at the till. A real mission beats the screen almost every time.",
     activities: [
-      { slug: 'snack-mission', name: 'The $20 Snack Mission', category: 'real-world-math', note: 'Real money, real food, instant payoff' },
+      { slug: 'kitchen-science-lab', name: 'Kitchen Science Lab', category: 'creativity-maker', note: 'Hands-on, a little messy, hard to look away from' },
       { slug: 'rube-goldberg-machine', name: 'Build a Rube Goldberg Machine', category: 'creativity-maker', note: 'The addictive, hands-on kind of fun' },
       { slug: 'square-foot-safari', name: 'Square Foot Safari', category: 'outdoor-learning', note: 'Gets them outside and looking' },
     ],
@@ -204,7 +204,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     activities: [
       { slug: 'solo-mission', name: 'The Solo Mission', category: 'emotional-social-skills', note: 'A real thing, start to finish, on their own' },
       { slug: 'smart-shopper', name: 'Smart Shopper Lab', category: 'real-world-math', note: 'They make the call, not you' },
-      { slug: 'kitchen-math-challenge', name: 'Kitchen Math & Meal Planning', category: 'real-world-math', note: 'Plan it, shop it, cook it, own it' },
+      { slug: 'emergency-ready', name: 'Emergency Ready Challenge', category: 'planning-problem-solving', note: 'A grown-up job they own, no rescue needed' },
     ],
   },
   'non-finisher': {
