@@ -68,6 +68,7 @@ export async function sendQuizPlanEmail({
   to,
   archetypeTitle,
   tagline,
+  accent,
   gaps,
   saturday,
   activities,
@@ -78,9 +79,10 @@ export async function sendQuizPlanEmail({
   to: string;
   archetypeTitle: string;
   tagline: string;
+  accent: string;
   gaps: string[];
   saturday: string;
-  activities: { name: string; note: string }[];
+  activities: { name: string; note: string; slug: string }[];
   guideName: string;
   priceLabel: string;
   downloadUrl: string;
@@ -93,6 +95,7 @@ export async function sendQuizPlanEmail({
     react: QuizPlanEmail({
       archetypeTitle,
       tagline,
+      accent,
       gaps,
       saturday,
       activities,

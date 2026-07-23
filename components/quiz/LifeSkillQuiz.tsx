@@ -329,26 +329,9 @@ export default function LifeSkillQuiz() {
               ))}
             </div>
 
-            {/* ── The ask ── */}
-            <div className="mt-10 rounded-[18px] bg-forest px-7 py-8 text-center text-cream">
-              <p className="font-display text-[24px] leading-tight">
-                These three are just the start.
-              </p>
-              <p className="mx-auto mt-2.5 max-w-[42ch] text-[15px] leading-[1.6] text-cream/85">
-                Your membership opens 120+ guided activities like these, built to
-                close exactly this gap. No planning, no prep. Free for 14 days.
-              </p>
-              <Link
-                href="/join"
-                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-cream px-7 py-3.5 text-[15px] font-semibold text-forest-dark transition-all hover:bg-white active:scale-[0.98]"
-              >
-                Start your free trial
-                <span className="font-display text-[17px] leading-none">&rarr;</span>
-              </Link>
-            </div>
-
+            {/* ── The gift ── the delight lands first, before the ask ── */}
             <div
-              className="relative mt-7 overflow-hidden rounded-[18px] px-6 py-7 text-center"
+              className="relative mt-10 overflow-hidden rounded-[18px] px-6 py-7 text-center"
               style={{
                 background: "linear-gradient(140deg, #fbf3e2 0%, #f2e2c1 100%)",
                 border: "1px solid rgba(181,128,62,0.42)",
@@ -363,11 +346,29 @@ export default function LifeSkillQuiz() {
                 A surprise gift just landed in your inbox
               </p>
               <p className="mx-auto mt-2.5 max-w-[42ch] text-[15.5px] leading-[1.6] text-[#5c4a2e]">
-                On top of your plan, I sent you the full{" "}
+                On top of your plan, I just sent you the full{" "}
                 <span className="font-semibold text-ink">Kitchen Math &amp; Meal Planning</span>{" "}
-                guide, the one I sell for $5.99, yours free. Go open your email, it&apos;s
-                landing right now.
+                guide, the one I sell for $5.99, yours free. It&apos;s waiting in your
+                inbox.
               </p>
+            </div>
+
+            {/* ── The ask ── */}
+            <div className="mt-6 rounded-[18px] bg-forest px-7 py-8 text-center text-cream">
+              <p className="font-display text-[24px] leading-tight">
+                These three are just the start.
+              </p>
+              <p className="mx-auto mt-2.5 max-w-[42ch] text-[15px] leading-[1.6] text-cream/85">
+                Your membership opens 120+ guided activities like these, built to
+                close exactly this gap. No planning, no prep. Free for 14 days.
+              </p>
+              <Link
+                href="/join"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-cream px-7 py-3.5 text-[15px] font-semibold text-forest-dark transition-all hover:bg-white active:scale-[0.98]"
+              >
+                Start your free trial
+                <span className="font-display text-[17px] leading-none">&rarr;</span>
+              </Link>
             </div>
           </div>
         </article>
