@@ -185,9 +185,9 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     saturday:
       "This Saturday, hand them $20 and the list for one meal, and let them run the whole trip: find each thing, weigh the produce, pay at the till. A real mission beats the screen almost every time.",
     activities: [
-      { slug: 'kitchen-science-lab', name: 'Kitchen Science Lab', category: 'creativity-maker', note: 'Hands-on, a little messy, hard to look away from' },
+      { slug: 'secret-code-lab', name: 'Secret Code Lab', category: 'planning-problem-solving', note: 'Codes to crack, impossible to put down' },
       { slug: 'rube-goldberg-machine', name: 'Build a Rube Goldberg Machine', category: 'creativity-maker', note: 'The addictive, hands-on kind of fun' },
-      { slug: 'outdoor-stem-challenges', name: 'Outdoor STEM Challenge Cards', category: 'outdoor-learning', note: 'Gets them outside with a real challenge to crack' },
+      { slug: 'land-art-challenges', name: 'Land Art Challenge Cards', category: 'outdoor-learning', note: 'Outside, making art from sticks and stones' },
     ],
   },
   rescued: {
@@ -203,8 +203,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
       "This Saturday, pick one thing they'd normally ask you to do (make their own lunch, fix the bike tire) and say “you've got this, I'm right here if you're stuck.” Then sit on your hands through the wobbly part. The win is theirs to feel.",
     activities: [
       { slug: 'solo-mission', name: 'The Solo Mission', category: 'emotional-social-skills', note: 'A real thing, start to finish, on their own' },
-      { slug: 'smart-shopper', name: 'Smart Shopper Lab', category: 'real-world-math', note: 'They make the call, not you' },
-      { slug: 'emergency-ready', name: 'Emergency Ready Challenge', category: 'planning-problem-solving', note: 'A grown-up job they own, no rescue needed' },
+      { slug: 'trade-it-up', name: 'Trade It Up', category: 'entrepreneurship', note: 'Every trade is theirs, you just watch' },
+      { slug: 'fix-it-detective', name: 'Fix-It Detective', category: 'planning-problem-solving', note: 'They wrestle the fix, no stepping in' },
     ],
   },
   'non-finisher': {
@@ -220,8 +220,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
       "This Saturday, pick one small thing and finish it together in a single afternoon, start to done. Bake it, build it, film it, whatever it is. Don't stop until it's actually finished. The whole lesson lives in crossing the line.",
     activities: [
       { slug: 'board-game-studio', name: 'Board Game Studio', category: 'creativity-maker', note: 'Design, build, and actually play the finished game' },
-      { slug: 'mini-movie', name: 'Create a Mini Movie', category: 'creativity-maker', note: 'Write, film, edit, premiere: a real ending' },
-      { slug: 'time-energy-planner', name: 'Time & Energy Planner', category: 'planning-problem-solving', note: 'The follow-through muscle, made visible' },
+      { slug: 'hard-thing-challenge', name: 'The Hard Thing Challenge', category: 'emotional-social-skills', note: 'Pick one hard thing and cross the finish line' },
+      { slug: 'savings-goal-tracker', name: 'Savings Goal Tracker', category: 'real-world-math', note: 'One real goal, stuck with to the end' },
     ],
   },
   'over-scheduled': {
@@ -238,7 +238,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     activities: [
       { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', category: 'emotional-social-skills', note: 'Relearning how to make their own fun' },
       { slug: 'invent-a-sport', name: 'Invent a New Sport', category: 'creativity-maker', note: '“You’re the boss” invention, no template' },
-      { slug: 'imaginary-world', name: 'Build an Imaginary World', category: 'creativity-maker', note: 'Wide-open, kid-directed play' },
+      { slug: 'scavenger-hunt-designer', name: 'Scavenger Hunt Designer', category: 'planning-problem-solving', note: 'They invent the whole hunt, their rules' },
     ],
   },
   'ready-for-more': {
@@ -255,7 +255,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     activities: [
       { slug: 'micro-business', name: 'Micro-Business Challenge', category: 'entrepreneurship', note: 'Run something real' },
       { slug: 'community-impact', name: 'Community Impact Project', category: 'planning-problem-solving', note: 'Big, real-world, matters' },
-      { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', category: 'ai-literacy', note: 'Cutting-edge, future-ready stretch' },
+      { slug: 'mini-movie', name: 'Create a Mini Movie', category: 'creativity-maker', note: 'Write, film, and edit a real movie' },
     ],
   },
 };
