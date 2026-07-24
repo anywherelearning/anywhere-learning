@@ -6,7 +6,7 @@
 // dates everywhere" can never drift.
 //
 // Cohort #1 runs the challenge Mon Sept 14 to Fri Sept 18, 2026; the founder
-// offer pitched on Day 5 closes Mon Aug 24 at 11:59pm.
+// offer pitched on Day 5 closes Mon Sept 21 at 11:59pm.
 
 export const CHALLENGE = {
   name: 'The 5-Day Real-World Skills Challenge',
