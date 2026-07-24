@@ -7,14 +7,14 @@ import { CHALLENGE, CHALLENGE_DAYS } from "@/lib/challenge";
 export const metadata: Metadata = {
   title: "The Free 5-Day Real-World Skills Challenge",
   description:
-    "A free 5-day challenge for homeschool and worldschool families. One 20-minute real-world activity a day, no prep and no worksheets, led by you and done alongside a former teacher. Starts August 17.",
+    "A free 5-day challenge for homeschool and worldschool families. One 20-minute real-world activity a day, no prep and no worksheets, led by you and done alongside a former teacher. Starts September 14.",
   alternates: {
     canonical: "https://anywherelearning.co/challenge",
   },
   openGraph: {
     title: "The Free 5-Day Real-World Skills Challenge | Anywhere Learning",
     description:
-      "Five days, five real-world activities, twenty minutes a day, no prep. A free challenge for families with kids 6 to 14. Starts August 17.",
+      "Five days, five real-world activities, twenty minutes a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
     url: "https://anywherelearning.co/challenge",
     type: "website",
   },
