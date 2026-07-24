@@ -13,14 +13,16 @@ export const CHALLENGE = {
   shortName: '5-Day Challenge',
 
   // Dates for cohort #1 (2026). Labels are pre-written so copy never has to
-  // format a Date at render time.
-  startISO: '2026-08-17',
-  endISO: '2026-08-21',
-  startLabel: 'Monday, August 17',
-  endLabel: 'Friday, August 21',
-  rangeLabel: 'August 17 to 21',
+  // format a Date at render time. Moved Aug -> Sept 14-18: the founder is
+  // traveling until Aug 19 and must be present daily to run it (the challenge's
+  // whole mechanic), and mid-September is the back-to-school sweet spot.
+  startISO: '2026-09-14',
+  endISO: '2026-09-18',
+  startLabel: 'Monday, September 14',
+  endLabel: 'Friday, September 18',
+  rangeLabel: 'September 14 to 18',
   year: '2026',
-  offerClosesLabel: 'Monday, August 24',
+  offerClosesLabel: 'Monday, September 21',
 
   // Who it's built for.
   ageRange: '6 to 14',
@@ -37,37 +39,40 @@ export const CHALLENGE = {
   fbGroupUrl: '',
 } as const;
 
-// The five days, themed (activities are chosen closer to launch). Kept vague on
-// purpose: the promise is the shape of the week, not a locked activity list.
+// The five days, themed for the landing page. Kept vague on purpose (the promise
+// is the shape of the week, not a locked activity list); the daily Kit emails
+// name the specific activities. Matches the cohort-1 lineup: Directions
+// Challenge, one Outdoor STEM card, Family Debate Night, Pack Like a Pro, and
+// The $20 Family Feast.
 export const CHALLENGE_DAYS = [
   {
     day: 'Day 1',
-    title: 'Something they will want to show off',
+    title: 'A game that ends in laughter',
     blurb:
-      'We start with the fun, shareable kind of activity, the one that makes a kid say "look what I made" before you have even finished your coffee.',
+      'We start light and silly. A twenty-minute game that has the whole family cracking up, and quietly teaches the one skill school never grades.',
   },
   {
     day: 'Day 2',
-    title: 'Real money, real math',
+    title: 'Outside, building and testing',
     blurb:
-      'A hands-on money mission. The kind of everyday math that sticks because it actually buys something or plans something real.',
+      'We head out and make something real with whatever nature hands you. Real engineering, the trial-flop-fix kind, no kit required.',
   },
   {
     day: 'Day 3',
-    title: 'Outside and paying attention',
+    title: 'A friendly family face-off',
     blurb:
-      'We head outdoors. A small, curious look at the real world that costs nothing and works anywhere you happen to be.',
+      'Everyone picks a side and makes their case, even the little ones. It is loud, it is funny, and it builds the quiet art of saying why.',
   },
   {
     day: 'Day 4',
-    title: 'Their project, their call',
+    title: 'They take the lead',
     blurb:
-      'A kid-led build. You hand over the wheel and let them plan it, run it, and own the messy middle. This is where the confidence grows.',
+      'You hand over the wheel and let your kid run a real thing start to finish. Sitting on your hands is the whole point, and where the confidence grows.',
   },
   {
     day: 'Day 5',
-    title: 'Show what you made',
+    title: 'A real money mission, and a feast',
     blurb:
-      'The big finish. Everyone shares what their kid pulled off across the week. It is the proudest day, and the one you will want a photo of.',
+      'The big finish. Your kid takes real money on a real mission and pulls off a little celebration for the whole family. The proudest day, and the one you will want a photo of.',
   },
 ] as const;
