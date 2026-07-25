@@ -36,7 +36,7 @@ export const CHALLENGE = {
   // pasted here, the signup success state simply points people to their inbox
   // (the Kit welcome email carries the group link). Leave empty to hide any
   // direct "join the group" button.
-  fbGroupUrl: '',
+  fbGroupUrl: 'https://www.facebook.com/groups/26943632858644725',
 } as const;
 
 // The five days, themed for the landing page. Kept vague on purpose (the promise
