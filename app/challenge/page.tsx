@@ -7,14 +7,14 @@ import { CHALLENGE, CHALLENGE_DAYS } from "@/lib/challenge";
 export const metadata: Metadata = {
   title: "The Free 5-Day Real-World Skills Challenge",
   description:
-    "A free 5-day challenge for homeschool and worldschool families. One 20-minute real-world activity a day, no prep and no worksheets, led by you and done alongside a former teacher. Starts September 14.",
+    "A free 5-day challenge for homeschool and worldschool families. One real-world activity a day, about an hour, no prep and no worksheets, led by you and done alongside a former teacher. Starts September 14.",
   alternates: {
     canonical: "https://anywherelearning.co/challenge",
   },
   openGraph: {
     title: "The Free 5-Day Real-World Skills Challenge | Anywhere Learning",
     description:
-      "Five days, five real-world activities, twenty minutes a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
+      "Five days, five real-world activities, about an hour a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
     url: "https://anywherelearning.co/challenge",
     type: "website",
   },
@@ -80,7 +80,7 @@ export default function ChallengePage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-[54ch] text-[18px] leading-[1.7] text-gray-700">
-              One 20-minute real-life activity a day, for five days. No prep, no
+              One real-life activity a day, for five days, about an hour each. No prep, no
               printing, no worksheets. You lead it with your kid, and I&apos;m in
               the group every single day, doing it right alongside you.
             </p>
@@ -143,7 +143,7 @@ export default function ChallengePage() {
               {[
                 {
                   h: "A daily nudge, two ways",
-                  b: "Each morning you get a short email plus a post in our pop-up group with that day's activity. Open it, do it, done in about 20 minutes.",
+                  b: "Each morning you get a short email plus a post in our pop-up group with that day's activity. Open it and do it together, about an hour, a little less on some days and more for the big finish.",
                 },
                 {
                   h: "You lead, together",

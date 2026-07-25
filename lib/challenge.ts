@@ -49,7 +49,7 @@ export const CHALLENGE_DAYS = [
     day: 'Day 1',
     title: 'A game that ends in laughter',
     blurb:
-      'We start light and silly. A twenty-minute game that has the whole family cracking up, and quietly teaches the one skill school never grades.',
+      'We start light and silly. A quick game that has the whole family cracking up, and quietly teaches the one skill school never grades.',
   },
   {
     day: 'Day 2',
