@@ -7865,7 +7865,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 12,
     author: amelie,
     recommendedProduct: 'future-ready-skills-map',
-    heroImageAlt: 'A parent working on a laptop at the kitchen table while a child does their own learning nearby, both absorbed, homeschooling and working side by side',
+    heroImage: '/images/full-time-job-hero.jpeg',
+    heroImageAlt: 'A parent working at a home-office desk with monitors while their tween sits alongside in an office chair, homeschooling and working from home side by side',
     heroImageAspect: '16/10',
     content: [
       { type: 'summary', text: 'Yes, many families homeschool with a full-time job, because homeschooling is not a recreation of a six-hour school day. The actual focused teaching takes roughly one to three hours depending on the child’s age, and much of the rest is independent learning and ordinary life. Families make it work through arrangements like working from home, opposite shifts with a partner, part-time or flexible work, co-ops and tutors, and leaning on kids’ growing independence. It is genuinely harder in some situations, especially for a single parent with an inflexible full-time job and very young children. The key shift is realizing that homeschooling is about facilitating learning, not teaching at a desk all day.' },
@@ -7874,7 +7875,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'These two questions are worth taking together, because the answer to the second one is exactly why the first one is possible. Homeschooling is not a six-hour teaching shift you clock into every day. And once you understand what it actually involves, working and homeschooling stops sounding impossible and starts sounding like a logistics problem, which is a very different, very solvable kind of problem. This is one of the biggest myths standing between parents and the [homeschool journey](/guides/homeschool-journey), so let us take it apart honestly, including the parts that really are hard.' },
 
       { type: 'heading', level: 2, text: 'The short answer' },
-      { type: 'paragraph', text: 'So can you homeschool with a full time job? For a great many families, yes. Plenty of parents homeschool and work full time, every day, all over the place: work-from-home parents, opposite-shift couples, part-time and flexible workers, business owners, and single parents. It is common enough that entire online communities exist just for working homeschool parents.' },
+      { type: 'paragraph', text: 'So can you homeschool with a full time job? Yes, for many families. Parents homeschool and work full time every day, all over the place: work-from-home parents, opposite-shift couples, part-time and flexible workers, business owners, and single parents. It is common enough that entire online communities exist just for working homeschool parents.' },
       { type: 'paragraph', text: 'But an honest yes comes with an honest asterisk: how hard it is depends enormously on your specific situation, and for some setups it is genuinely difficult. So rather than a cheerful "anyone can do it," this post gives you the real picture: why it is more doable than it sounds, the actual models that work, and the situations where it is a real uphill climb.' },
 
       { type: 'heading', level: 2, text: 'Why "is homeschooling a full-time job?" is the wrong question' },
@@ -7890,7 +7891,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'paragraph', text: 'Notice the trend: the older the kid, the less hands-on time it takes, because independence grows. And notice what fills the rest of the day: reading, projects, play, outdoor time, real life. None of that requires you to be actively teaching. A lot of it does not require you at all. For a fuller picture of what a day can look like, our [sample homeschool schedules](/blog/sample-homeschool-schedules) lays out real examples.' },
 
-      { type: 'image', src: undefined, alt: 'A parent working at a laptop while a child works independently nearby at the same table, both focused on their own tasks', caption: 'Homeschooling and working often looks like this: parallel focus, not a teacher standing over a desk for six hours.' },
+      { type: 'image', src: '/images/full-time-job-parallel.jpeg', alt: 'A parent and two kids all working at the same table, each on their own task, in a bright apartment', caption: 'Homeschooling and working often looks like this: parallel focus, not a teacher standing over a desk for six hours.' },
 
       { type: 'heading', level: 2, text: 'The models that actually make it work' },
       { type: 'paragraph', text: 'Working homeschool families are not doing the impossible. They are using arrangements that fit the real amount of time homeschooling takes into the gaps and edges of a working life. Here are the most common ones, and most families mix several.' },
@@ -7951,7 +7952,6 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['sample-homeschool-schedules', 'homeschool-burnout', 'how-to-raise-independent-kids', 'new-to-homeschooling'],
     pillarSlug: 'homeschool-journey',
-    draft: true,
   },
 
   // ── How to Homeschool 1st Grade ──

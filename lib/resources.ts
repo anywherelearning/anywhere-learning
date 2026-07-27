@@ -2028,6 +2028,7 @@ const resources: ResourcePage[] = [
       'first-day-of-homeschool',
       'homeschool-morning-basket',
       'homeschool-middle-school',
+      'can-you-homeschool-with-a-full-time-job',
       'homeschool-burnout',
       'curriculum-guilt-permission-slip',
       'socialization-answer',
