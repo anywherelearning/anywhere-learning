@@ -173,7 +173,7 @@ export default function AboutPage() {
         <header className="bg-cream pt-12 md:pt-20 pb-14 md:pb-20 overflow-hidden">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
-              <ScrollReveal direction="right">
+              <ScrollReveal direction="right" immediate>
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal direction="left" delay={120}>
+              <ScrollReveal direction="left" delay={120} immediate>
                 <div className="relative max-lg:max-w-[480px] max-lg:mx-auto lg:scale-[1.15] lg:origin-right">
                   <div className="relative aspect-[4/3] -rotate-[2deg] rounded-[14px] border border-[#D8D4C5] overflow-hidden shadow-[0_30px_50px_-30px_rgba(45,58,46,0.45)]">
                     <Image

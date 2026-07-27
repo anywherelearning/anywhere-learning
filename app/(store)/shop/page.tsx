@@ -518,7 +518,7 @@ export default function ShopPage() {
         <section className="bg-cream pt-16 md:pt-20 pb-12 md:pb-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.18fr_0.82fr] gap-12 lg:gap-16 items-center">
-              <ScrollReveal direction="right">
+              <ScrollReveal direction="right" immediate>
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
@@ -590,7 +590,7 @@ export default function ShopPage() {
 
               {/* Book-spine shelf — desktop only. On mobile the same shelf
                   renders inline between the headline and description above. */}
-              <ScrollReveal direction="left" delay={100} className="hidden lg:block">
+              <ScrollReveal direction="left" delay={100} className="hidden lg:block" immediate>
                 <BookShelf />
               </ScrollReveal>
             </div>

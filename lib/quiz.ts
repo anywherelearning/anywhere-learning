@@ -159,6 +159,11 @@ export interface QuizResult {
   gapTag: string;
   /** Human-readable version of the gap, shown on the result card. */
   gapLabel: string;
+  /**
+   * Short, benefit-named label for the trial CTA button on the result screen,
+   * so the ask speaks to this kid's gap instead of a generic "start free trial."
+   */
+  ctaLabel: string;
   description: string;
   /** Accent color token (hex) for the result card. */
   accent: string;
@@ -179,6 +184,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     tagline: 'Bright kid, magnetic screen.',
     gapTag: 'screens',
     gapLabel: 'Knowing when to put the screen down, and having something better to reach for',
+    ctaLabel: 'Break the screen habit',
     accent: '#C97B5C',
     description:
       "You know the moment: a free afternoon, and within about ninety seconds the tablet is out. Not because they're lazy, but because screens are built to be the easiest thing in any room, so boredom takes the path of least resistance. The good news is the pull isn't as strong as it looks. Put something real and hands-on in front of them, a bit of mess, something to build, and the screen loses most of its magic fast. The fix was never a bigger fight over devices. It's giving boredom a better place to land.",
@@ -196,6 +202,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     tagline: 'Capable kid, a little over-helped.',
     gapTag: 'independence',
     gapLabel: 'Doing hard things without being rescued',
+    ctaLabel: 'Build their independence',
     accent: '#588157',
     description:
       "It usually shows up small: they hit the first snag and you hear “can you just do it?” before they've really tried. This one comes from love. It's faster to do it ourselves, so we do, and kids quietly learn that waiting works better than trying. But your kid is more capable than the current setup lets them show. Hand them something real, sit on your hands through the wobbly part, and let them feel the win of figuring it out on their own. That feeling is what builds the next one.",
@@ -213,6 +220,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     tagline: 'Big starts, unfinished middles.',
     gapTag: 'follow-through',
     gapLabel: 'Planning something, sticking with it, and seeing it through',
+    ctaLabel: 'Help them follow through',
     accent: '#B6913F',
     description:
       "Picture the shelf: the Lego set that's three-quarters built, the notebook with a brilliant first page and then nothing. The ideas are never the problem, and neither is the excitement. What's still forming is the muscle in the middle, planning it out and pushing through the boring part to actually land it. That muscle has a name, executive function, and it's built, not born. Real projects with a clear start and a real finish are how it grows, one completed thing at a time.",
@@ -230,6 +238,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     tagline: 'Full calendar, quiet imagination.',
     gapTag: 'free-play',
     gapLabel: 'Open, unstructured time to invent, build, and follow their own ideas',
+    ctaLabel: 'Free up their imagination',
     accent: '#6B8E6B',
     description:
       "Here's the tell: give them an unscheduled hour and they ask “so what are we doing now?” Their week is full in all the good ways, lessons, teams, practices, but the other kind of time has quietly disappeared, the make-your-own-fun, no-instructions kind. That's exactly where imagination, self-direction, and a tolerance for boredom come from. They don't need one more thing on the calendar. They need activities that hand them the wheel and let them drive.",
@@ -247,6 +256,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     tagline: 'Doing great, hungry for bigger.',
     gapTag: 'level-up',
     gapLabel: 'Bigger, real-world challenges to grow into',
+    ctaLabel: 'Give them a bigger challenge',
     accent: '#3A5A40',
     description:
       "You already know the look: they finish the thing faster than you expected, then glance up like “okay, what else?” Honestly, you're doing a lot right, your kid is curious, fairly independent, and growing. The goal now isn't to fix anything, it's to keep raising the bar so a capable kid doesn't start to coast. Kids like this stay lit up when the challenge is real and the stakes feel a little grown-up. This is the fun part: stretching an already-capable kid into an even more capable one.",

@@ -189,7 +189,7 @@ export default function FreeGuidePage() {
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-16 items-center">
-              <ScrollReveal direction="right">
+              <ScrollReveal direction="right" immediate>
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
@@ -211,7 +211,7 @@ export default function FreeGuidePage() {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal direction="left" delay={100}>
+              <ScrollReveal direction="left" delay={100} immediate>
                 <div className="relative flex justify-center items-center min-h-[460px] md:min-h-[520px]">
                   {/* Real PDF cover */}
                   <div className="relative w-[280px] md:w-[320px] aspect-[8.5/11] -rotate-[3deg] rounded-[14px] border border-[#D8D4C5] overflow-hidden shadow-[0_30px_60px_-32px_rgba(45,58,46,0.45)]">

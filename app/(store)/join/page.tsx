@@ -790,7 +790,7 @@ export default async function JoinPage({
           </div>
         </section>
 
-        {/* ═══ 7. TESTIMONIALS (placeholder structure) ═══ */}
+        {/* ═══ 7. TESTIMONIALS (real early-member quotes; limited set for now) ═══ */}
         <section className="px-6 py-16 max-md:py-10">
           <div className="mx-auto max-w-[1120px]">
             <div className="mx-auto mb-10 max-w-[760px] text-center">

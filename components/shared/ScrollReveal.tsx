@@ -9,6 +9,12 @@ interface ScrollRevealProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   distance?: number;
   once?: boolean;
+  /**
+   * Render fully visible from first paint, skipping the scroll-in animation.
+   * Use for above-the-fold content (heroes) so the headline and CTA never
+   * flash invisible while JS hydrates — protects LCP and perceived speed.
+   */
+  immediate?: boolean;
 }
 
 export default function ScrollReveal({
@@ -18,11 +24,16 @@ export default function ScrollReveal({
   direction = 'up',
   distance = 40,
   once = true,
+  immediate = false,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // Above-the-fold content starts visible so it paints on the server render.
+  const [isVisible, setIsVisible] = useState(immediate);
 
   useEffect(() => {
+    // Already visible (above the fold) — nothing to observe.
+    if (immediate) return;
+
     // Respect reduced motion preference
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) {
@@ -42,7 +53,7 @@ export default function ScrollReveal({
 
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [once]);
+  }, [once, immediate]);
 
   const transforms: Record<string, string> = {
     up: `translate3d(0, ${distance}px, 0)`,

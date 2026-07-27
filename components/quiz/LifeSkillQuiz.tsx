@@ -363,12 +363,15 @@ export default function LifeSkillQuiz() {
                 close exactly this gap. No planning, no prep. Free for 14 days.
               </p>
               <Link
-                href="/join"
+                href="/start-trial"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-cream px-7 py-3.5 text-[15px] font-semibold text-forest-dark transition-all hover:bg-white active:scale-[0.98]"
               >
-                Start your free trial
+                {r.ctaLabel}
                 <span className="font-display text-[17px] leading-none">&rarr;</span>
               </Link>
+              <p className="mt-3 text-[12.5px] text-cream/70">
+                14 days free · $0 today · cancel anytime
+              </p>
             </div>
           </div>
         </article>

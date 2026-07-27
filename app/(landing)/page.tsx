@@ -9,6 +9,7 @@ import { POST_FOUNDER_PRICE_USD, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membersh
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import Testimonials from '@/components/home/Testimonials';
+import FamilyProof from '@/components/home/FamilyProof';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
 
@@ -118,8 +119,9 @@ export default async function HomePage() {
                 </h1>
               </div>
 
-              {/* Copy — lg:col-1; on mobile sits AFTER the hero (hero comes next in DOM) */}
-              <div className="lg:col-start-1 lg:row-start-1 order-3 lg:order-none text-center lg:text-left flex flex-col items-center lg:items-start">
+              {/* Copy — lg:col-1; on mobile sits ABOVE the collage so the CTA
+                  lands near the fold (title block → copy+CTA → collage). */}
+              <div className="lg:col-start-1 lg:row-start-1 order-2 lg:order-none text-center lg:text-left flex flex-col items-center lg:items-start">
                 {/* DESKTOP-ONLY title (mobile uses the dedicated block above) */}
                 <div className="hidden lg:block">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center gap-2.5 mb-5">
@@ -166,7 +168,7 @@ export default async function HomePage() {
               </div>
 
               {/* Hero visual — real activity covers fanning around the Future-Ready Skills Map */}
-              <div data-hero-collage className="relative w-full aspect-square max-lg:max-w-[440px] max-lg:mx-auto order-2 lg:order-none lg:col-start-2 lg:row-start-1" aria-hidden="true">
+              <div data-hero-collage className="relative w-full aspect-square max-lg:max-w-[440px] max-lg:mx-auto order-3 lg:order-none lg:col-start-2 lg:row-start-1" aria-hidden="true">
               {/* data-hero-collage is used by scripts/screenshot-hero.mjs to re-export this collage as /public/membership-hero.png whenever the hero changes */}
                 {/* Skills Map — centerpiece, all viewports */}
                 <div
@@ -223,7 +225,7 @@ export default async function HomePage() {
                   <span>
                     <span className="block text-[28px] max-sm:text-2xl mb-1">120+</span>
                     activities
-                    <span className="block text-[10px] not-italic uppercase tracking-[0.15em] opacity-95 mt-1 font-semibold font-body">One membership</span>
+                    <span className="block text-[10px] max-sm:text-[8.5px] not-italic uppercase tracking-[0.15em] max-sm:tracking-[0.04em] opacity-95 mt-1 font-semibold font-body">One membership</span>
                   </span>
                 </div>
               </div>
@@ -464,6 +466,12 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ════════════════════════════════════════
+            06a PRODUCT PROOF — Families already doing this (outcomes, star-rated;
+            distinct from the star-free founder-credibility block that follows).
+        ════════════════════════════════════════ */}
+        <FamilyProof />
 
         {/* ════════════════════════════════════════
             06b TESTIMONIALS — Founder credibility (in their words)
