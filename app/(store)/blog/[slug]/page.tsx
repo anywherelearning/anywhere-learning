@@ -426,7 +426,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* 02 ARTICLE HEADER */}
         <header className="text-center pt-16 md:pt-20 pb-8 md:pb-10">
           <div className="mx-auto max-w-[820px] px-6">
-            <ScrollReveal>
+            <ScrollReveal immediate>
               <span
                 className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em]"
                 style={{ color: cat.color }}

@@ -37,6 +37,7 @@ const motifByTopic: Record<string, string> = {
   'ai-digital-literacy': '⌘',
   'homeschool-journey': '☘',
   'future-ready-skills': '⊞',
+  'stem-for-kids': '⬡',
 };
 
 const imgBgByTopic: Record<string, string> = {
@@ -47,6 +48,7 @@ const imgBgByTopic: Record<string, string> = {
   'ai-digital-literacy': '#F5E7BC',
   'homeschool-journey': '#DAD7CD',
   'future-ready-skills': '#DDE5D2',
+  'stem-for-kids': '#CFDCC4',
 };
 
 function formatUpdated(r: ResourcePage): string {

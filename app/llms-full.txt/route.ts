@@ -220,7 +220,7 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 - Audience: Homeschool and worldschool families with children ages 6 to 14
 - Model: Membership-based. Founder rate $99/year (first 100 members), then $149/year, or $15/month on the monthly plan, with a 14-day free trial. Individual activities are not sold a la carte on the site.
 - Library: 120+ real-world activities across 9 categories
-- 8 learning categories: outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, and worldschooling
+- 9 learning categories: outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, worldschooling, and emotional and social skills
 - Every activity includes three flexible difficulty levels (Explore, Develop, Extend) for multi-age households
 - Format: Digital PDF guides, downloadable, usable on any device, printing optional
 - Refunds: see ${SITE_URL}/terms

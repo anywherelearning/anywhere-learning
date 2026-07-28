@@ -285,7 +285,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         {/* 01 PAGE HEADER */}
         <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-14 text-center">
           <div className="mx-auto max-w-[760px] px-6">
-            <ScrollReveal>
+            <ScrollReveal immediate>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />
                 The blog

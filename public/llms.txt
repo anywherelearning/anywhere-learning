@@ -1,8 +1,8 @@
 # Anywhere Learning
 
-> Real-world skills for kids. A homeschool and worldschool membership: 100+ low-prep, real-world activity guides across 8 categories, for ages 6-14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids -- no curriculum, no worksheets.
+> Real-world skills for kids. A homeschool and worldschool membership: 120+ low-prep, real-world activity guides across nine categories, for ages 6-14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids -- no curriculum, no worksheets.
 
-> Membership model: join to access the full activity library. Founder rate $99/year (first 100 members), then $149/year. A one-time Starter Pack (about $45) is the lowest-commitment way in and credits toward your first year of membership. Individual activities are not sold a la carte on the site; everything is included with membership.
+> Membership model: join to access the full activity library. Founder rate $99/year (first 100 members), then $149/year, or $15/month. New members start with a 14-day free trial. Every activity is included with membership; individual activities are not sold a la carte on the site.
 
 > Full-text companion with pillar guides, blog posts, and FAQ inlined: https://anywherelearning.co/llms-full.txt
 
@@ -14,19 +14,21 @@
 
 ## Membership and Access
 
-- [Join Anywhere Learning](https://anywherelearning.co/join): Membership unlocks the full library of 100+ real-world activities across 8 categories. Founder rate $99/year for the first 100 members, then $149/year.
-- [Starter Pack](https://anywherelearning.co/shop/starter-pack): A one-time starter set (about $45), the lowest-commitment way to begin; the amount credits toward your first year of membership.
+- [Join Anywhere Learning](https://anywherelearning.co/join): Membership unlocks the full library of 120+ real-world activities across nine categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month. Includes a 14-day free trial.
 - [The Future-Ready Skills Map](https://anywherelearning.co/shop/future-ready-skills-map): A parent guide mapping essential real-world skills by age (0-16+) with activities, milestones, and sample weekly rhythms. The starting point for the whole approach.
 
 ## Activity Library (included with membership)
 
-- [Browse the library](https://anywherelearning.co/shop): 100+ low-prep, real-world activities across 8 categories -- outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, and worldschooling.
+- [Browse the library](https://anywherelearning.co/shop): 120+ low-prep, real-world activities across nine categories -- outdoor and nature, creativity and maker, real-world math, AI and digital literacy, entrepreneurship, communication and writing, planning and problem-solving, worldschooling, and emotional and social skills.
 - Outdoor and nature: nature walks, journaling, land art, outdoor STEM challenges, scavenger hunts, and seasonal activities for every time of year.
 - Creativity and maker: board game design, Rube Goldberg machines, stop-motion films, invent-a-sport, build-a-museum, and theme-park design.
 - Real-world math: budgeting, grocery and road-trip math, sports statistics, garden geometry, savings goals, and party planning in real contexts.
 - AI and digital literacy: AI basics, algorithm awareness, deepfake detection, prompt writing, digital privacy, and ethical AI creation.
 - Entrepreneurship: customer discovery, product design, pricing, branding, marketing, and pitching a real idea.
 - Communication and writing: debate, reviews, interviews, mini-magazines, recipe books, and persuasive pitches.
+- Planning and problem-solving: road-trip planning, fixing what is broken, packing like a pro, emergency plans, and breaking fuzzy problems into clear steps.
+- Worldschooling: exploring currencies, interviewing locals, mapping streets, and comparing everyday life across cultures.
+- Emotional and social skills: calm-down toolkits, naming big feelings, sitting with boredom, repairing after conflict, and solo missions.
 
 ## Free Resource
 
@@ -67,8 +69,8 @@
 ## Key Facts
 
 - Created by Amelie, a former classroom teacher (B.Ed, M.Ed) with 15 years of teaching experience, now a homeschool and worldschool parent
-- Membership model: full library access; founder rate $99/year (first 100 members), then $149/year; one-time Starter Pack (about $45) credits toward membership
-- 100+ real-world activities across 8 categories
+- Membership model: full library access; founder rate $99/year (first 100 members), then $149/year, or $15/month; new members start with a 14-day free trial
+- 120+ real-world activities across nine categories
 - Activities designed for ages 6-14 with built-in adaptation for different ability levels; the Skills Map roadmap spans ages 0-16+
 - Every activity includes 3 flexible levels (Explore, Develop, Extend) for multi-age use
 - Digital PDF format -- download and use on any device, no printing required

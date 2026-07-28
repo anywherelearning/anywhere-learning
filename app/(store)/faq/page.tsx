@@ -12,7 +12,7 @@ import FaqInteractive from './FaqInteractive';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Common questions about Anywhere Learning activity guides: ages, refunds, homeschool approaches, and how our real-world learning guides work.',
+    'Answers about the Anywhere Learning membership: the 14-day free trial, pricing, refunds, ages, and how the real-world activities work for homeschool and worldschool families.',
   alternates: { canonical: 'https://anywherelearning.co/faq' },
 };
 
@@ -71,7 +71,7 @@ export default function FAQPage() {
         {/* PAGE HEADER */}
         <header className="bg-cream pt-16 md:pt-24 pb-12 md:pb-14 text-center">
           <div className="mx-auto max-w-[760px] px-6">
-            <ScrollReveal>
+            <ScrollReveal immediate>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />
                 Frequently asked
