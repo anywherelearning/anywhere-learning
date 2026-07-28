@@ -580,35 +580,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* 05 QUIZ CTA */}
         <BlogQuizCTA />
 
-        {/* 06 MEMBERSHIP POINTER */}
-        <section className="pb-14">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[680px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-7 md:p-8 flex flex-wrap items-center gap-y-5 gap-x-8">
-                <div className="flex-1 min-w-[240px]">
-                  <span className="block font-display italic text-[18px] text-[#C97B5C] mb-1.5">
-                    Want more than reading?
-                  </span>
-                  <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
-                    The Anywhere Learning{' '}
-                    <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
-                    unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay $99/year, locked in for life, or go monthly for $15.
-                  </p>
-                </div>
-                <Link
-                  href="/join"
-                  className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
-                >
-                  See what&apos;s in the membership
-                  <span className="font-display italic text-lg leading-none">&rarr;</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* 07 RELATED POSTS */}
+        {/* 06 RELATED POSTS
+            (A membership pointer used to sit here; removed to avoid stacking it
+            back-to-back with the quiz CTA above. Membership is still pitched by
+            the mid-article product callout and the exit-intent popup.) */}
         {related.length > 0 && (
           <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-16 md:py-20">
             <div className="mx-auto max-w-[1180px] px-6">
