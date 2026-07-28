@@ -81,14 +81,14 @@ export default async function SignUpPage({
             </h1>
             <p className="mt-4 max-w-[440px] max-lg:mx-auto font-body text-[16.5px] leading-[1.6] text-gray-600">
               {isTrialFlow
-                ? `Your account is where your activities live, on any device. Create it here, then confirm your ${TRIAL_DAYS}-day free trial on the next step. $0 today, then ${trialPriceLine}.`
+                ? `Your account is where your activities live, on any device. Create it here, then start your ${TRIAL_DAYS}-day free trial on the next step. A card is required, but you pay $0 today, then ${trialPriceLine}, and we remind you before it renews.`
                 : 'We use your account to remember which activities you’ve started and to keep your library accessible from any device.'}
             </p>
             <ul className="mt-7 max-w-[420px] max-lg:mx-auto flex flex-col gap-2.5 text-left max-lg:text-center">
               {(isTrialFlow
                 ? [
                     'Step 1: create your account (you are here)',
-                    'Step 2: confirm your free trial, $0 charged today',
+                    'Step 2: add your card to start, $0 charged today',
                     `Then your library opens, 120+ activities, yours for ${TRIAL_DAYS} days`,
                   ]
                 : [

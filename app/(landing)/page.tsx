@@ -158,6 +158,19 @@ export default async function HomePage() {
                     <span className="font-display italic text-lg leading-none">&rarr;</span>
                   </Link>
                 </div>
+                {/* Price snapshot — lets price-curious visitors see the number
+                    here instead of bouncing to hunt for it. Live founder state
+                    via `m`, so it self-updates to $149/yr once the cap is hit. */}
+                <div className="mt-5 inline-flex flex-wrap items-center justify-center self-center lg:self-start gap-x-2.5 gap-y-1 rounded-full border border-[#D8D4C5] bg-[#F2EFE4]/70 px-4 py-1.5 text-[13px] text-gray-600">
+                  <span className="font-semibold text-forest-dark">One membership</span>
+                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                  <span>
+                    <span className="font-semibold text-[#C97B5C]">{m.priceYr}</span>
+                    {m.isFounderPhase ? ' founder rate' : ''}
+                  </span>
+                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                  <span>14 days free</span>
+                </div>
                 <div className="mt-4 text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-1">
                   <span className="inline-flex items-center gap-1.5">Built by a teacher</span>
                   <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
