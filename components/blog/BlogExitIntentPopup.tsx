@@ -20,13 +20,16 @@ const MEMBER_DISMISS_KEY = 'membership-exit-popup-dismissed';
 const QUIZ_DISMISS_DAYS = 14;
 const MEMBER_DISMISS_DAYS = 30;
 
-// The popup fires on whichever comes first: a hard timer, the reader passing a
-// scroll depth, or an exit gesture (mouse leaving the top of the window). A
-// short floor keeps the scroll/exit paths from firing the instant someone lands
-// and skims or reaches for their tabs.
-const POPUP_MAX_DELAY_MS = 25_000; // guaranteed backstop
+// The popup fires on whichever comes first: an exit gesture (mouse leaving the
+// top of the window), the reader reaching the end of the post, or a generous
+// timer backstop. The scroll gate sits near the end and the timer is long on
+// purpose, so the popup reads as "finished / leaving" rather than a mid-read
+// interrupt. A short floor keeps the exit path from firing the instant someone
+// lands. (Note: mouse-leave doesn't exist on touch, so the near-end scroll gate
+// is what catches mobile readers, once they've actually finished.)
+const POPUP_MAX_DELAY_MS = 60_000; // guaranteed backstop, a true safety net
 const EARLY_TRIGGER_FLOOR_MS = 8_000; // scroll/exit can't fire before this
-const SCROLL_GATE = 0.3;
+const SCROLL_GATE = 0.85; // near the end of the post, not mid-read
 
 type Variant = 'quiz' | 'membership';
 
