@@ -5,6 +5,7 @@ import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import JoinCta from '@/components/join/JoinCta';
 import HeroTrail from '@/components/join/HeroTrail';
+import ExplorerArrival from '@/components/join/ExplorerArrival';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -919,6 +920,9 @@ export default async function JoinPage({
           }}
         >
           <div className="mx-auto max-w-[740px]">
+            <div className="mb-7 flex justify-center">
+              <ExplorerArrival />
+            </div>
             <span className="inline-flex items-center gap-2.5 rounded-full border border-[#c4836a]/45 bg-[#f5e1d2] px-4 py-2 text-[12.5px] font-semibold uppercase tracking-[.14em] text-[#7A3D24]">
               <span className="h-2 w-2 flex-shrink-0 animate-pulse rounded-full bg-[#c4836a]" />
               Only <em className="not-italic font-bold text-[#c4836a]">{founderRemaining}</em>{' '}
