@@ -148,7 +148,7 @@ export default function DownloadList({ purchases }: DownloadListProps) {
           Once you pick an activity guide, it will be waiting here, ready to open on any device, anytime.
         </p>
         <Link
-          href="/shop"
+          href="/account"
           className="inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold py-3 px-8 rounded-xl transition-colors"
         >
           Browse Activity Guides

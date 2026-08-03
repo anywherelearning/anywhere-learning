@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useAuth } from '@clerk/nextjs';
-import { applyServerState, gatherLocalState, isEmptyState } from '@/lib/account-sync';
+import { applyServerState, clearLocalState, gatherLocalState, isEmptyState } from '@/lib/account-sync';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -26,14 +26,29 @@ function push(data: unknown) {
  * then pushes a debounced copy whenever local state changes.
  */
 function SyncInner() {
-  const { isLoaded, isSignedIn } = useAuth();
+  const { isLoaded, isSignedIn, userId } = useAuth();
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pulled = useRef(false);
 
   // Pull on load (and seed the server from local if the server is empty).
   useEffect(() => {
-    if (!isLoaded || !isSignedIn) return;
+    if (!isLoaded || !isSignedIn || !userId) return;
     let cancelled = false;
+
+    // If this browser's local state belongs to a different member (someone
+    // signed out and a new person signed in, or a shared/family device), wipe
+    // it before syncing so the new member starts from their own server state,
+    // never the previous account's kids and progress left behind in
+    // localStorage. The owner tag lives outside the al_* namespace so the wipe
+    // doesn't clear it.
+    const OWNER_KEY = 'al-sync-owner';
+    const prevOwner = localStorage.getItem(OWNER_KEY);
+    if (prevOwner && prevOwner !== userId) {
+      clearLocalState();
+      sessionStorage.removeItem('al:hydrated');
+    }
+    localStorage.setItem(OWNER_KEY, userId);
+
     (async () => {
       try {
         const res = await fetch('/api/account/state');
@@ -67,7 +82,7 @@ function SyncInner() {
     return () => {
       cancelled = true;
     };
-  }, [isLoaded, isSignedIn]);
+  }, [isLoaded, isSignedIn, userId]);
 
   // Push debounced on any local change (only once the initial pull is done).
   useEffect(() => {

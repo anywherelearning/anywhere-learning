@@ -47,6 +47,26 @@ export function isEmptyState(s: AccountState | null | undefined): boolean {
   return !s || (!s.profile && !s.week && !s.completions && !s.status);
 }
 
+/**
+ * Wipe every member-owned local store. Called when a different member signs in
+ * on the same browser so nobody inherits the previous account's kids, plan, or
+ * progress. Clears the whole `al_*` namespace (synced keys plus the aux stores
+ * for plan prefs, the plan engine, custom skills, and the month challenge).
+ */
+export function clearLocalState() {
+  if (typeof window === 'undefined') return;
+  try {
+    const doomed: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('al_')) doomed.push(key);
+    }
+    for (const key of doomed) localStorage.removeItem(key);
+  } catch {
+    /* ignore */
+  }
+}
+
 /** Fire after any local store write so the sync layer can debounce a push. */
 export function notifyLocalChanged() {
   if (typeof window === 'undefined') return;
