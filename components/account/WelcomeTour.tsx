@@ -21,11 +21,33 @@ function FlagIcon() {
     </svg>
   );
 }
-function CompassIcon() {
+function MountainsIcon() {
   return (
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M15.5 8.5l-2.3 4.7-4.7 2.3 2.3-4.7z" />
+      <path d="M3 20 9 8l4 7 2.4-4L21 20Z" />
+    </svg>
+  );
+}
+function BookIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 6.5C10.4 5.5 7.8 5 4 5.6V19c3.8-.6 6.4-.1 8 .9M12 6.5C13.6 5.5 16.2 5 20 5.6V19c-3.8-.6-6.4-.1-8 .9M12 6.5V20" />
+    </svg>
+  );
+}
+function CalendarIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M3 9h18M8 3v4M16 3v4" />
+    </svg>
+  );
+}
+function ClipboardIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="5" y="4" width="14" height="17" rx="2" />
+      <path d="M9 4h6v3H9zM9 13l2 2 4-4" />
     </svg>
   );
 }
@@ -34,17 +56,32 @@ const SLIDES = [
   {
     icon: <MapIcon />,
     title: "This is your family's trail.",
-    body: 'Each child is an explorer. Every activity you finish together moves them forward and earns gear along the way.',
+    body: 'Each child is an explorer who climbs the trail as you learn together. Every activity you finish earns a piece of gear and moves them to the next stop.',
   },
   {
     icon: <FlagIcon />,
-    title: 'Start with your next stop.',
-    body: 'We pick one for you. Open the guide, do it together, then tap "We reached it" to move ahead.',
+    title: 'Your next stop, already picked.',
+    body: 'We choose the next activity for you. Open the guide, do it together, then tap "We reached it." Not feeling it? Swap for another or skip the whole area.',
   },
   {
-    icon: <CompassIcon />,
-    title: 'Everything lives up top.',
-    body: "Home is your trail. Library has every guide. This Month is our seasonal picks. Record is your family's portfolio.",
+    icon: <MountainsIcon />,
+    title: 'The trail keeps growing.',
+    body: 'Fill every stop on a leg and the trail rolls on to a new region, from forest valleys to highland peaks, with more gear to collect the whole way.',
+  },
+  {
+    icon: <BookIcon />,
+    title: 'Every guide, in your Library.',
+    body: 'The full library is sorted by the real-world skills each activity builds. Browse it anytime and add any one straight onto your trail.',
+  },
+  {
+    icon: <CalendarIcon />,
+    title: 'Fresh picks in This Month.',
+    body: 'Each month we curate a skill to focus on, a handful of activities, book recommendations, and one simple family challenge to try together.',
+  },
+  {
+    icon: <ClipboardIcon />,
+    title: 'It all saves to your Record.',
+    body: "Everything you finish gathers into a portfolio you can filter by child and print anytime, great for records or just seeing how far you've come.",
   },
 ];
 
@@ -151,7 +188,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
           display:grid;place-items:center;color:#3d5c3b;background:rgba(88,129,87,.13)}
         .wt-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
           font-size:clamp(26px,5.5vw,32px);line-height:1.08;color:#3d5c3b;margin:0 0 10px}
-        .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:320px;min-height:66px}
+        .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:342px;min-height:104px}
         .wt-dots{display:flex;gap:7px;justify-content:center;margin:18px 0 20px}
         .wt-dot{width:7px;height:7px;border-radius:50%;background:rgba(61,92,59,.22)}
         .wt-dot.on{background:#588157}
