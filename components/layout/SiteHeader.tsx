@@ -63,6 +63,16 @@ const NAV_ITEMS_AFTER = [
   { href: '/about', label: 'About' },
 ];
 
+// Members see their own world instead of the marketing nav (no Membership
+// page, no marketing home, Library once). Exact-match active state.
+const MEMBER_NAV_ITEMS = [
+  { href: '/account/home', label: 'Home' },
+  { href: '/account/this-month', label: 'This Month' },
+  { href: '/account', label: 'Library' },
+  { href: '/account/plan', label: 'My Plan' },
+  { href: '/account/record', label: 'Record' },
+];
+
 const RESOURCES_ITEMS = [
   { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
@@ -165,6 +175,10 @@ export default function SiteHeader() {
   // user who never purchased has tier null and shouldn't see them.
   const hasAccess = auth.tier === 'member';
 
+  // The member zone (/account) has its own header (MemberNav) — hide SiteHeader
+  // there so members see a single nav, not two stacked headers.
+  if (pathname?.startsWith('/account')) return null;
+
   return (
     <>
       {hasClerk && <ClerkAuthBridge onChange={setAuth} />}
@@ -183,6 +197,27 @@ export default function SiteHeader() {
             {/* Primary nav - desktop */}
             <nav aria-label="Primary" className="hidden lg:block">
               <ul className="flex items-center gap-8 list-none p-0 m-0">
+                {hasAccess ? (
+                  MEMBER_NAV_ITEMS.map((item) => {
+                    const active = pathname === item.href;
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          aria-current={active ? 'page' : undefined}
+                          className={`relative inline-block font-[family-name:var(--font-catalog)] text-[12.5px] uppercase tracking-[0.08em] py-1.5 px-3 rounded-full transition-colors no-underline ${
+                            active
+                              ? 'text-forest-dark bg-[rgba(88,129,87,0.12)]'
+                              : 'text-gray-600 hover:text-forest-dark hover:bg-[rgba(88,129,87,0.06)]'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    );
+                  })
+                ) : (
+                  <>
                 {NAV_ITEMS_BEFORE.map((item) => {
                   const active = isActive(pathname, item.href);
                   return (
@@ -295,6 +330,8 @@ export default function SiteHeader() {
                     </li>
                   );
                 })}
+                  </>
+                )}
               </ul>
             </nav>
 
@@ -563,27 +600,42 @@ export default function SiteHeader() {
                 </li>
                 </>
               )}
-              {NAV_ITEMS_BEFORE.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <MobileResourcesAccordion />
-              {NAV_ITEMS_AFTER.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {hasAccess ? (
+                MEMBER_NAV_ITEMS.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <>
+                  {NAV_ITEMS_BEFORE.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                  <MobileResourcesAccordion />
+                  {NAV_ITEMS_AFTER.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </>
+              )}
             </ul>
 
             <div className="mt-8 flex flex-col gap-3.5 items-center">

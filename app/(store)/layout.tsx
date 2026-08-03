@@ -3,6 +3,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import NativeHide from "@/components/mobile/NativeHide";
 import NativePadding from "@/components/mobile/NativePadding";
 import AccountSync from "@/components/account/AccountSync";
+import HideOnMemberZone from "@/components/account/HideOnMemberZone";
 
 export default function StoreLayout({
   children,
@@ -17,7 +18,9 @@ export default function StoreLayout({
       </NativeHide>
       <NativePadding>{children}</NativePadding>
       <NativeHide>
-        <SiteFooter />
+        <HideOnMemberZone>
+          <SiteFooter />
+        </HideOnMemberZone>
       </NativeHide>
     </>
   );

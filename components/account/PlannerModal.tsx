@@ -59,10 +59,19 @@ export default function PlannerModal({
     const ages = answerKids
       .map((i) => childAge(children[i]))
       .filter((a): a is number => a != null);
-    // Exclude what's in progress, on the plan, or done within the last 9 months.
-    // Done items past that window resurface so favourites can return year to year.
-    const exclude = new Set([...startedSlugs(), ...recentlyDoneSlugs(9), ...weekSlugs()]);
-    const res = buildPlan(activities, { ages, time, focus: focusOpt.categories }, exclude);
+    // Exclude what's in progress, on the plan, or done by THESE kid(s) in the
+    // last year. Scoping to the selected kids means one sibling's solo activity
+    // can still be suggested to another; the 12-month window lets favourites
+    // return year to year.
+    const forKidIds = answerKids.map((i) => children[i]?.id ?? childLabel(children[i], i));
+    const exclude = new Set([...startedSlugs(), ...recentlyDoneSlugs(12, forKidIds), ...weekSlugs()]);
+    let res = buildPlan(activities, { ages, time, focus: focusOpt.categories }, exclude);
+    if (!res.hero) {
+      // Everything matching has already been done — recycle: drop the done-history
+      // filter so finished activities can come back (still skip in-progress + on-plan).
+      const recycled = new Set([...startedSlugs(), ...weekSlugs()]);
+      res = buildPlan(activities, { ages, time, focus: focusOpt.categories }, recycled);
+    }
     setHero(res.hero);
     setExtras(res.extras.slice(0, 2));
     setBroadened(res.broadened);

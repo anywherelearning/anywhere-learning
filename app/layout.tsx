@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Dancing_Script, DM_Sans } from "next/font/google";
+import { Dancing_Script, DM_Sans, Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -27,6 +27,23 @@ const bodyFont = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",
+  display: "swap",
+});
+
+// Field Study world (member area redesign): a characterful grotesque for
+// plate headers and a mono for specimen catalog numbers. Used only by the
+// member Field Study surfaces via var(--font-plate)/var(--font-catalog).
+const plateFont = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-plate",
+  display: "swap",
+});
+
+const catalogFont = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-catalog",
   display: "swap",
 });
 
@@ -166,7 +183,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${bodyFont.variable} ${displayFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
+        className={`${bodyFont.variable} ${displayFont.variable} ${plateFont.variable} ${catalogFont.variable} font-[family-name:var(--font-body)] bg-cream text-gray-800 antialiased`}
       >
         <ClerkWrapper>
           <CapacitorProvider>

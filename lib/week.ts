@@ -13,9 +13,14 @@ import { notifyLocalChanged } from './account-sync';
 
 const STORAGE_KEY = 'al_week_v1';
 
+/** Sentinel "child" for an activity queued onto the shared family trail (a
+ *  manual next-stop that overrides the engine until it's completed), as opposed
+ *  to a real child id, which queues a solo activity for that kid. */
+export const FAMILY_TARGET = '__family';
+
 export interface WeekItem {
   slug: string;
-  /** Child display label (name, or "Child 1" fallback). */
+  /** Child id, or FAMILY_TARGET for the shared family trail. */
   child: string;
 }
 

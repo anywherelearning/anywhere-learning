@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: 'Anywhere Learning | Life Skills Activities for Kids',
   },
   description:
-    'A library of 120+ guided real-world activities by a teacher. Cooking, budgeting, building, planning, for parents who want kids capable, not just credentialed. Ages 6-14.',
+    'One real-world activity a week, already chosen, with nothing to plan or print. Cooking, budgeting, building, problem-solving, designed by a teacher. Ages 6-14.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -138,9 +138,9 @@ export default async function HomePage() {
                   </h1>
                 </div>
                 <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
-                  A library of 120+ guided activities. Cooking, budgeting, building, planning,
-                  problem-solving, designed by a teacher to fill the gap between what schools
-                  test and what life requires.
+                  One real-world activity a week, already chosen, with nothing to plan or print.
+                  Cooking, budgeting, building, problem-solving, designed by a teacher to fill
+                  the gap between what schools test and what life requires.
                 </p>
                 <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
                   <Link
@@ -233,12 +233,15 @@ export default async function HomePage() {
                   );
                 })}
 
-                {/* 120+ sticker */}
+                {/* Rhythm sticker. Deliberately NOT the catalog size: the VOC research
+                    found a big library number reads as "more shelf to abandon" to a parent
+                    who already feels behind. 120+ still appears further down the page,
+                    where it lands as reassurance rather than homework. */}
                 <div className="absolute right-[-40px] bottom-[-30px] sm:right-[-40px] sm:bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
                   <span>
-                    <span className="block text-[28px] max-sm:text-2xl mb-1">120+</span>
-                    activities
-                    <span className="block text-[10px] max-sm:text-[8.5px] not-italic uppercase tracking-[0.15em] max-sm:tracking-[0.04em] opacity-95 mt-1 font-semibold font-body">One membership</span>
+                    <span className="block text-[28px] max-sm:text-2xl mb-1">One</span>
+                    a week
+                    <span className="block text-[10px] max-sm:text-[8.5px] not-italic uppercase tracking-[0.15em] max-sm:tracking-[0.04em] opacity-95 mt-1 font-semibold font-body">Nothing to plan</span>
                   </span>
                 </div>
               </div>
@@ -309,6 +312,59 @@ export default async function HomePage() {
                 <p className="text-lg leading-relaxed text-gray-700">
                   No lesson plans. No grading. No prep that takes longer than the activity itself.
                   Just <span className="font-display italic text-forest">quality time that quietly builds real skills.</span>
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            03b IF THIS IS YOUR KID — Fit, not treatment.
+            ADHD/autism/neurodivergence was the single most common unprompted
+            theme in the voice-of-customer research (501 mentions) and nothing
+            on the site spoke to it. Deliberately claims FIT ("none of this
+            happens at a table"), never therapeutic outcome.
+        ════════════════════════════════════════ */}
+        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[760px] mx-auto text-center mb-12">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  If this is your kid
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  The one who <span className="italic text-forest">cannot sit still.</span>
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="max-w-[620px] mx-auto text-center space-y-5">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  I taught for fifteen years. Near the end, almost every kid in my room needed
+                  something different. One could not sit still. One froze the second anything was
+                  graded. One finished in four minutes and cared about none of it. Twenty of them,
+                  one curriculum to get through. Some had a diagnosis and some did not, and it
+                  never changed what they actually needed.
+                </p>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Everything here happens <span className="font-display italic text-forest">standing up, outside, in the kitchen, with their hands</span>.
+                  Nothing is timed and nothing is graded. The three skill levels mean you pitch it
+                  where your kid actually is, not where a grade level says they should be.
+                </p>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  I am not going to tell you this fixes anything, and I would not trust anyone who
+                  did. But if the table is where it all falls apart in your house,
+                  <span className="font-display italic text-forest"> none of this happens at a table.</span>
+                </p>
+                <p className="pt-2">
+                  <Link
+                    href="/quiz"
+                    className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                  >
+                    Not sure where your kid is? Take the 2-min quiz
+                    <span className="font-display italic text-lg leading-none">&rarr;</span>
+                  </Link>
                 </p>
               </div>
             </ScrollReveal>

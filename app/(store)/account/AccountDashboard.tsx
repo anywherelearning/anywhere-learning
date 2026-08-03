@@ -1,11 +1,14 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import ReviewModal from '@/components/shop/ReviewModal';
 import TrialCapModal from '@/components/account/TrialCapModal';
 import AddToWeekButton from '@/components/account/AddToWeekButton';
 import FirstRunRedirect from '@/components/account/FirstRunRedirect';
+import HeroScene from '@/components/account/HeroScene';
+import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
+import { completionLog } from '@/lib/completions';
+import { addToWeek, FAMILY_TARGET } from '@/lib/week';
 import { effortFor } from '@/lib/activity-effort';
 import { notifyLocalChanged } from '@/lib/account-sync';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
@@ -22,7 +25,6 @@ export interface DashboardActivity {
   imageUrl?: string | null;
 }
 
-type Status = 'none' | 'started' | 'done';
 type Tier = 'member' | 'trial';
 
 export interface TrialInfo {
@@ -46,24 +48,27 @@ interface Props {
 
 const AGE_OPTIONS = ['All ages', '6–8', '8–10', '10–12', '12–14'];
 
-// Track filter options (in order).
+// Area filter options — the 12 Future-Ready Skills Map areas (one taxonomy
+// across the member Library, Record, and Focus areas). An activity builds
+// several, so it appears under each area it develops.
+const TERR = new Map(TERRITORIES.map((t) => [t.slug, t]));
+/** The Skills-Map areas an activity builds, as territory defs (ordered). */
+function areasOf(slug: string) {
+  return territoriesForSlug(slug)
+    .map((s) => TERR.get(s))
+    .filter((t): t is (typeof TERRITORIES)[number] => !!t);
+}
 const TRACK_OPTIONS = [
-  { value: '', label: 'All categories' },
-  { value: 'real-world-math', label: 'Real-World Math' },
-  { value: 'entrepreneurship', label: 'Entrepreneurship' },
-  { value: 'ai-literacy', label: 'AI & Digital' },
-  { value: 'communication-writing', label: 'Communication' },
-  { value: 'planning-problem-solving', label: 'Planning' },
-  { value: 'creativity-maker', label: 'Creativity' },
-  { value: 'outdoor-learning', label: 'Outdoor & Nature' },
-  { value: 'worldschooling', label: 'Worldschooling' },
+  { value: '', label: 'All areas' },
+  ...TERRITORIES.map((t) => ({ value: t.slug, label: t.name })),
 ];
 
-const STATUS_OPTIONS: { value: 'all' | Status; label: string }[] = [
+type LibFilter = 'all' | 'done' | 'todo' | 'saved';
+const STATUS_OPTIONS: { value: LibFilter; label: string }[] = [
   { value: 'all', label: 'All statuses' },
-  { value: 'none', label: 'Not started' },
-  { value: 'started', label: 'Started' },
+  { value: 'todo', label: 'To do' },
   { value: 'done', label: 'Done' },
+  { value: 'saved', label: 'Saved' },
 ];
 
 const SORT_OPTIONS = [
@@ -90,18 +95,18 @@ function ageMatches(activityRange: string, filter: string): boolean {
 const STORAGE_KEY = 'al_account_state_v1';
 
 interface PersistedState {
-  status: Record<string, Status>;
   pinned: Record<string, boolean>;
 }
 
 function loadState(): PersistedState {
-  if (typeof window === 'undefined') return { status: {}, pinned: {} };
+  if (typeof window === 'undefined') return { pinned: {} };
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { status: {}, pinned: {} };
-    return JSON.parse(raw) as PersistedState;
+    if (!raw) return { pinned: {} };
+    const parsed = JSON.parse(raw) as { pinned?: Record<string, boolean> };
+    return { pinned: parsed.pinned ?? {} };
   } catch {
-    return { status: {}, pinned: {} };
+    return { pinned: {} };
   }
 }
 
@@ -122,9 +127,11 @@ export default function AccountDashboard({
   trial,
   initialCapModal,
 }: Props) {
-  const [status, setStatus] = useState<Record<string, Status>>({});
+  const [doneSet, setDoneSet] = useState<Set<string>>(new Set()); // completed on the trail
   const [pinned, setPinned] = useState<Record<string, boolean>>({});
+  const [savedAdded, setSavedAdded] = useState<string | null>(null); // "added to trail" flash
   const [capModalOpen, setCapModalOpen] = useState(!!initialCapModal);
+  const [skillsMapOpen, setSkillsMapOpen] = useState(false); // hero Skills Map menu
 
   // Trial members are view-only: any download click opens the upgrade modal.
   // Members navigate straight to the file.
@@ -138,33 +145,27 @@ export default function AccountDashboard({
   const [query, setQuery] = useState('');
   const [trackFilter, setTrackFilter] = useState('');
   const [ageFilter, setAgeFilter] = useState('All ages');
-  const [statusFilter, setStatusFilter] = useState<'all' | Status>('all');
+  const [statusFilter, setStatusFilter] = useState<LibFilter>('all');
   const [sort, setSort] = useState('recommended');
-  const [activeReview, setActiveReview] = useState<{ slug: string; title: string } | null>(null);
   const [page, setPage] = useState(1);
-  const PAGE_SIZE = 24;
+  const PAGE_SIZE = 10;
 
   // Hydrate from localStorage on mount.
   useEffect(() => {
     const s = loadState();
-    setStatus(s.status);
     setPinned(s.pinned);
+    // "Done" mirrors the trail: an activity the family completed shows as done
+    // here. Read-only — you finish activities on the trail, not in the library.
+    setDoneSet(new Set(completionLog().map((l) => l.slug)));
   }, []);
 
+  // Persist pins — but skip the initial render so we don't overwrite stored
+  // pins with the empty default before hydration runs.
+  const pinsHydrated = useRef(false);
   useEffect(() => {
-    saveState({ status, pinned });
-  }, [status, pinned]);
-
-  const cycleStatus = (slug: string) => {
-    setStatus((prev) => {
-      const cur = prev[slug] || 'none';
-      const next: Status = cur === 'none' ? 'started' : cur === 'started' ? 'done' : 'none';
-      const out = { ...prev };
-      if (next === 'none') delete out[slug];
-      else out[slug] = next;
-      return out;
-    });
-  };
+    if (!pinsHydrated.current) { pinsHydrated.current = true; return; }
+    saveState({ pinned });
+  }, [pinned]);
 
   const togglePin = (slug: string) => {
     setPinned((prev) => {
@@ -177,17 +178,13 @@ export default function AccountDashboard({
 
   // Derived stats
   const totalActivities = activities.length;
-  const doneCount = Object.values(status).filter((s) => s === 'done').length;
+  const doneCount = activities.filter((a) => doneSet.has(a.slug)).length;
   const pinnedCount = Object.keys(pinned).length;
-  const startedCount = Object.values(status).filter((s) => s === 'started').length;
 
-  // "Continue" strip — pinned + started, capped at 6.
+  // "Saved" strip — activities the parent bookmarked, capped at 6.
   const continueItems = useMemo(() => {
-    const items = activities.filter(
-      (a) => pinned[a.slug] || status[a.slug] === 'started',
-    );
-    return items.slice(0, 6);
-  }, [activities, pinned, status]);
+    return activities.filter((a) => pinned[a.slug]).slice(0, 6);
+  }, [activities, pinned]);
 
   // Filtered list
   const filtered = useMemo(() => {
@@ -196,19 +193,22 @@ export default function AccountDashboard({
       if (q && !a.title.toLowerCase().includes(q) && !a.excerpt.toLowerCase().includes(q)) {
         return false;
       }
-      if (trackFilter && a.category !== trackFilter) return false;
+      if (trackFilter && !territoriesForSlug(a.slug).includes(trackFilter)) return false;
       if (!ageMatches(a.ageRange, ageFilter)) return false;
-      const cur = status[a.slug] || 'none';
-      if (statusFilter !== 'all' && cur !== statusFilter) return false;
+      if (statusFilter === 'done' && !doneSet.has(a.slug)) return false;
+      if (statusFilter === 'todo' && doneSet.has(a.slug)) return false;
+      if (statusFilter === 'saved' && !pinned[a.slug]) return false;
       return true;
     });
     if (sort === 'az') {
       list = [...list].sort((a, b) => a.title.localeCompare(b.title));
     } else if (sort === 'recent') {
+      // "Recently added" = reverse of catalog order, which getFallbackProducts()
+      // returns oldest-first. If that source order ever changes, revisit this.
       list = [...list].reverse();
     }
     return list;
-  }, [activities, query, trackFilter, ageFilter, statusFilter, sort, status]);
+  }, [activities, query, trackFilter, ageFilter, statusFilter, sort, doneSet, pinned]);
 
   // Reset to page 1 whenever the filtered set changes (filters, sort, search).
   useEffect(() => {
@@ -261,7 +261,7 @@ export default function AccountDashboard({
   return (
     <>
     <FirstRunRedirect />
-    <main className="bg-cream pb-12">
+    <main className="pb-12" style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))' }}>
       {/* TRIAL STRIP: viewing is unlimited; downloading requires membership.
           The strip doubles as the easy upgrade entry point. */}
       {tier === 'trial' && trial && (
@@ -285,21 +285,19 @@ export default function AccountDashboard({
           </div>
         </div>
       )}
-      {/* HEADER */}
-      <section className="pt-10 md:pt-12 pb-6">
-        <div className="mx-auto max-w-[1180px] px-6">
-          <div
-            className="relative overflow-hidden rounded-3xl border border-[#cdd9c6] px-6 sm:px-8 py-7"
-            style={{ background: 'linear-gradient(135deg, rgba(88,129,87,0.18) 0%, rgba(212,163,115,0.13) 44%, #fffdf9 84%)' }}
-          >
-            <div className="relative flex flex-wrap items-end justify-between gap-6">
+      {/* HEADER — full-width band, sized to match This Month & Record */}
+      <header className="relative overflow-hidden" style={{ minHeight: 'clamp(150px,20vw,206px)', background: 'linear-gradient(180deg, var(--am-sky1), var(--am-sky2))', padding: 'clamp(18px,2.5vw,26px) clamp(16px,4vw,40px) clamp(26px,3vw,38px)' }}>
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <HeroScene tone="light" hillHeight={100} />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] flex flex-wrap items-end justify-between gap-6">
             <div>
-              <div className="font-display italic text-[12.5px] text-gray-500 mb-1">
-                Welcome back, {userName}.
+              <div className="font-[family-name:var(--font-catalog)] text-[11.5px] uppercase tracking-[0.14em] text-[var(--am-trail)] mb-2">
+                Welcome back, {userName}
               </div>
-              <h1 className="font-display text-[clamp(1.625rem,3vw,2rem)] leading-[1.1] tracking-[-0.012em] text-ink">
+              <h1 className="font-[family-name:var(--font-plate)] font-extrabold text-[clamp(32px,6vw,52px)] leading-[1.02] tracking-[-0.02em] text-ink">
                 Your{' '}
-                <em className="not-italic italic text-forest">
+                <em className="not-italic text-forest">
                   library.
                 </em>
               </h1>
@@ -310,80 +308,144 @@ export default function AccountDashboard({
                 {pinnedCount > 0 && (
                   <>
                     <Sep />
-                    {pinnedCount} pinned
+                    {pinnedCount} saved
                   </>
                 )}
               </p>
             </div>
-            <div className="flex items-center gap-x-3.5 gap-y-1 flex-wrap text-[13.5px]">
-              <Link
-                href="/account/plan"
-                className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold no-underline py-2 px-4 rounded-lg hover:bg-forest-dark transition-colors"
+            <div className="relative flex items-center gap-x-3.5 gap-y-1 flex-wrap text-[13.5px]">
+              <button
+                type="button"
+                onClick={() => setSkillsMapOpen((o) => !o)}
+                aria-haspopup="menu"
+                aria-expanded={skillsMapOpen}
+                title="Open the Future-Ready Skills Map"
+                className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold py-2 px-4 rounded-lg hover:bg-forest-dark transition-colors cursor-pointer"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="16" rx="2" />
-                  <path d="M3 9h18M8 3v4M16 3v4" />
+                  <path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4z" />
+                  <path d="M9 4v13M15 6.5v13" />
                 </svg>
-                My Plan
-              </Link>
-            </div>
-            </div>
-          </div>
-
-          {/* CONTINUE STRIP */}
-          {continueItems.length > 0 && (
-            <div className="mt-6 pt-5 pb-4 border-t border-[#D8D4C5] border-b border-b-[#D8D4C5]">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 mb-3">
-                Continue
-              </div>
-              <div className="flex gap-2.5 overflow-x-auto pb-1.5 -mx-1 px-1 scrollbar-thin">
-                {continueItems.map((a) => {
-                  const isPinned = pinned[a.slug];
-                  const isStarted = status[a.slug] === 'started';
-                  const href = `/api/download/activity/${a.slug}?view=1`;
-                  return (
+                Skills Map
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={`transition-transform ${skillsMapOpen ? 'rotate-180' : ''}`}>
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              {skillsMapOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setSkillsMapOpen(false)} aria-hidden="true" />
+                  <div role="menu" className="absolute right-0 top-full mt-2 z-50 w-56 rounded-xl border border-[rgba(58,44,23,0.14)] bg-[var(--am-paper)] p-1.5 shadow-[0_20px_44px_-16px_rgba(45,58,46,0.5)]">
+                    <div className="px-2.5 pt-1.5 pb-1 font-[family-name:var(--font-catalog)] text-[10px] uppercase tracking-[0.12em] text-gold-dark">Open the Skills Map</div>
                     <Link
-                      key={a.slug}
-                      href={href}
+                      href="/api/download/activity/skills-map-color?view=1"
                       target="_blank"
                       rel="noopener noreferrer"
                       prefetch={false}
-                      className="group relative flex-none w-[320px] bg-cream border border-[#D8D4C5] rounded-[10px] py-3 px-3.5 grid grid-cols-[4px_1fr] gap-3 no-underline text-ink hover:border-[#C9C5B7] hover:bg-[#F2EFE4] transition-all"
+                      onClick={() => setSkillsMapOpen(false)}
+                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
                     >
-                      <span
-                        aria-hidden="true"
-                        className="rounded-sm self-stretch"
-                        style={{ background: a.trackColor }}
-                      />
-                      <div>
-                        <div className="flex items-center justify-between gap-2 mb-1">
-                          <span
-                            className={`inline-flex items-center gap-1 font-body font-semibold text-[10px] uppercase tracking-[0.14em] ${
-                              isPinned
-                                ? 'text-forest-dark'
-                                : isStarted
-                                  ? 'text-[#C97B5C]'
-                                  : 'text-gray-500'
-                            }`}
+                      <span className="w-4 h-4 rounded-full" style={{ background: 'linear-gradient(135deg,#B6913F,#c4836a)' }} aria-hidden="true" />
+                      Full color
+                    </Link>
+                    <Link
+                      href="/api/download/activity/skills-map-bw?view=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      prefetch={false}
+                      onClick={() => setSkillsMapOpen(false)}
+                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
+                    >
+                      <span className="w-4 h-4 rounded-full border border-[rgba(58,44,23,0.25)]" style={{ background: 'linear-gradient(135deg,#e8e6df,#9a968c)' }} aria-hidden="true" />
+                      Black &amp; white
+                      <span className="ml-auto text-[11px] text-gray-500">print</span>
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </header>
+
+        {/* SAVED STRIP */}
+        {continueItems.length > 0 && (
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="mt-6 pt-5 pb-4 border-t border-[rgba(58,44,23,0.12)] border-b border-b-[rgba(58,44,23,0.12)]">
+              <div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-gold)] mb-3">
+                Saved for later
+              </div>
+              <div className="flex gap-2.5 overflow-x-auto pb-1.5 -mx-1 px-1 scrollbar-thin">
+                {continueItems.map((a) => {
+                  const href = `/api/download/activity/${a.slug}?view=1`;
+                  const flashed = savedAdded === a.slug;
+                  const primaryArea = areasOf(a.slug)[0];
+                  return (
+                    <div
+                      key={a.slug}
+                      className="group relative flex-none w-[320px] bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] rounded-[10px] py-3 px-3.5 grid grid-cols-[4px_1fr] gap-3 text-ink hover:border-[#C9C5B7] transition-colors"
+                      style={{ borderLeft: `4px solid ${primaryArea?.color ?? a.trackColor}` }}
+                    >
+                      <span aria-hidden="true" />
+                      <div className="min-w-0">
+                        <div className="font-body font-semibold text-[10px] uppercase tracking-[0.14em] text-[var(--am-gold)] mb-1">★ Saved</div>
+                        <Link
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          className="block no-underline text-ink"
+                        >
+                          <div className="font-[family-name:var(--font-plate)] text-[15px] leading-[1.25] mb-1 hover:text-forest-dark transition-colors">
+                            {a.title}
+                          </div>
+                          <div className="font-body text-[12px] text-gray-500 tracking-wide">
+                            {primaryArea?.name ?? a.categoryLabel} <Sep size="xs" /> {a.ageRange}
+                          </div>
+                        </Link>
+                        <div className="flex items-center gap-2 mt-2.5">
+                          {effortFor(a.slug) && (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                addToWeek(a.slug, [FAMILY_TARGET]);
+                                notifyLocalChanged();
+                                setSavedAdded(a.slug);
+                                window.setTimeout(() => setSavedAdded((s) => (s === a.slug ? null : s)), 2600);
+                              }}
+                              className={`inline-flex items-center gap-1.5 font-body font-semibold text-[12px] py-1.5 px-3 rounded-lg border transition-colors ${
+                                flashed
+                                  ? 'bg-forest border-forest text-cream'
+                                  : 'bg-cream border-[#D8D4C5] text-forest-dark hover:border-forest hover:bg-[#EDE9DC]'
+                              }`}
+                            >
+                              {flashed ? (
+                                <>
+                                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>
+                                  Added
+                                </>
+                              ) : (
+                                <>
+                                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4M12 13v4M10 15h4" /></svg>
+                                  Add to trail
+                                </>
+                              )}
+                            </button>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => togglePin(a.slug)}
+                            className="font-body text-[12px] text-gray-500 hover:text-[#C97B5C] bg-transparent border-0 cursor-pointer transition-colors"
                           >
-                            {isPinned ? '📌 Pinned' : isStarted ? '◐ Started' : ''}
-                          </span>
-                        </div>
-                        <div className="font-display italic text-[15px] leading-[1.25] text-ink mb-1">
-                          {a.title}
-                        </div>
-                        <div className="font-body text-[12px] text-gray-500 tracking-wide">
-                          {a.categoryLabel} <Sep size="xs" /> {a.ageRange}
+                            Remove
+                          </button>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        )}
 
       {/* Anchor for the paginator to scroll back to. Sits just above the
           sticky filter bar so Prev/Next lands the user at the start of the
@@ -391,34 +453,57 @@ export default function AccountDashboard({
       <div id="library-top" className="scroll-mt-[80px] md:scroll-mt-[100px]" aria-hidden="true" />
 
       {/* FILTERS BAR */}
-      <div className="sticky top-[72px] z-40 bg-[rgba(242,239,228,0.94)] backdrop-blur-[10px] border-y border-[#D8D4C5]">
+      <div className="sticky top-[54px] z-40 bg-[rgba(242,239,228,0.94)] backdrop-blur-[10px] border-y border-[rgba(58,44,23,0.12)]">
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="flex items-center gap-2 flex-wrap py-3">
-            <Dropdown
-              label={
-                TRACK_OPTIONS.find((t) => t.value === trackFilter)?.label || 'All categories'
-              }
-              active={trackFilter !== ''}
-              options={TRACK_OPTIONS}
-              value={trackFilter}
-              onChange={setTrackFilter}
-            />
-            <Dropdown
-              label={ageFilter}
-              active={ageFilter !== 'All ages'}
-              options={AGE_OPTIONS.map((a) => ({ value: a, label: a }))}
-              value={ageFilter}
-              onChange={setAgeFilter}
-            />
-            <Dropdown
-              label={STATUS_OPTIONS.find((s) => s.value === statusFilter)?.label || 'All statuses'}
-              active={statusFilter !== 'all'}
-              options={STATUS_OPTIONS}
-              value={statusFilter}
-              onChange={(v) => setStatusFilter(v as 'all' | Status)}
-            />
-            <div className="flex-1 min-w-[8px]" />
-            <label className="relative">
+          <div className="py-3 space-y-2.5">
+            {/* Row 1: the filters + sort, all together */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <Dropdown
+                label={
+                  TRACK_OPTIONS.find((t) => t.value === trackFilter)?.label || 'All areas'
+                }
+                active={trackFilter !== ''}
+                options={TRACK_OPTIONS}
+                value={trackFilter}
+                onChange={setTrackFilter}
+              />
+              <Dropdown
+                label={ageFilter}
+                active={ageFilter !== 'All ages'}
+                options={AGE_OPTIONS.map((a) => ({ value: a, label: a }))}
+                value={ageFilter}
+                onChange={setAgeFilter}
+              />
+              <Dropdown
+                label={STATUS_OPTIONS.find((s) => s.value === statusFilter)?.label || 'All statuses'}
+                active={statusFilter !== 'all'}
+                options={STATUS_OPTIONS}
+                value={statusFilter}
+                onChange={(v) => setStatusFilter(v as LibFilter)}
+              />
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value)}
+                aria-label="Sort"
+                className="bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] rounded-full py-1.5 pl-3.5 pr-8 font-body text-[13px] text-ink cursor-pointer appearance-none"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(45deg, transparent 50%, #4F5A50 50%), linear-gradient(135deg, #4F5A50 50%, transparent 50%)',
+                  backgroundPosition: 'calc(100% - 14px) 50%, calc(100% - 9px) 50%',
+                  backgroundSize: '5px 5px',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                {SORT_OPTIONS.map((o) => (
+                  <option key={o.value} value={o.value}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Row 2: search, under the filters */}
+            <label className="relative block">
               <svg
                 width="14"
                 height="14"
@@ -440,32 +525,13 @@ export default function AccountDashboard({
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search activities..."
                 aria-label="Search activities"
-                className="appearance-none border border-[#D8D4C5] bg-cream rounded-full py-2 pr-3.5 pl-9 font-body text-[13.5px] text-ink outline-none w-[180px] sm:w-[240px] focus:shadow-[0_0_0_1px_var(--color-forest),0_0_0_4px_rgba(88,129,87,0.18)] transition-shadow"
+                className="appearance-none border border-[rgba(58,44,23,0.12)] bg-[var(--am-paper)] rounded-full py-2 pr-3.5 pl-9 font-body text-[13.5px] text-ink outline-none w-full sm:w-[340px] focus:shadow-[0_0_0_1px_var(--color-forest),0_0_0_4px_rgba(88,129,87,0.18)] transition-shadow"
               />
             </label>
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value)}
-              aria-label="Sort"
-              className="bg-cream border border-[#D8D4C5] rounded-full py-2 pl-3.5 pr-8 font-body text-[13px] text-ink cursor-pointer appearance-none"
-              style={{
-                backgroundImage:
-                  'linear-gradient(45deg, transparent 50%, #4F5A50 50%), linear-gradient(135deg, #4F5A50 50%, transparent 50%)',
-                backgroundPosition: 'calc(100% - 14px) 50%, calc(100% - 9px) 50%',
-                backgroundSize: '5px 5px',
-                backgroundRepeat: 'no-repeat',
-              }}
-            >
-              {SORT_OPTIONS.map((o) => (
-                <option key={o.value} value={o.value}>
-                  {o.label}
-                </option>
-              ))}
-            </select>
           </div>
           {activeFilterPills.length > 0 && (
             <div className="flex flex-wrap items-center gap-1.5 pb-3">
-              <span className="text-[11.5px] font-body font-semibold uppercase tracking-[0.12em] text-gray-500 mr-1">
+              <span className="text-[11.5px] font-body font-bold uppercase tracking-[0.14em] text-[var(--am-gold)] mr-1">
                 Filtering:
               </span>
               {activeFilterPills.map((p, i) => (
@@ -487,6 +553,7 @@ export default function AccountDashboard({
                   setTrackFilter('');
                   setAgeFilter('All ages');
                   setStatusFilter('all');
+                  setQuery('');
                 }}
                 className="text-gray-500 font-body font-medium text-[12.5px] bg-transparent border-0 cursor-pointer underline decoration-gray-400/40 underline-offset-[3px] hover:text-forest-dark ml-1.5"
               >
@@ -500,7 +567,9 @@ export default function AccountDashboard({
       {/* CONTEXT BAR */}
       <div className="mx-auto max-w-[1180px] px-6 pt-3 pb-1">
         <p className="font-body text-[13px] text-gray-500 tracking-wide">
-          Showing {filtered.length} of {totalActivities}
+          {filtered.length === 0
+            ? 'No activities match'
+            : `Showing ${(currentPage - 1) * PAGE_SIZE + 1}–${Math.min(currentPage * PAGE_SIZE, filtered.length)} of ${filtered.length}`}
           {sort !== 'recommended' && (
             <>
               {' · '}Sorted by {SORT_OPTIONS.find((o) => o.value === sort)?.label.toLowerCase()}
@@ -514,7 +583,7 @@ export default function AccountDashboard({
         <div className="mx-auto max-w-[1180px] px-6">
           {filtered.length > 0 ? (
             pagedItems.map((a) => {
-              const s = status[a.slug] || 'none';
+              const isDone = doneSet.has(a.slug);
               const isPinned = !!pinned[a.slug];
               // Opening an activity from the dashboard goes straight to the PDF
               // (via the membership-aware download endpoint), opened inline in
@@ -523,40 +592,28 @@ export default function AccountDashboard({
               const activityHref = `/api/download/activity/${a.slug}?view=1`;
               // Download button uses the same endpoint without ?view=1 → forced download
               const downloadHref = `/api/download/activity/${a.slug}`;
-              // Skills Map entries are parent guides, not activities — no reviews.
-              const isSkillsMap = a.slug.startsWith('skills-map-');
+              // Skills-Map areas this activity builds — accent by the primary one.
+              const areas = areasOf(a.slug);
+              const accent = areas[0]?.color ?? a.trackColor;
               return (
                 <div
                   key={a.slug}
-                  className="group grid grid-cols-[4px_28px_56px_1fr_auto] sm:grid-cols-[4px_28px_64px_1fr_auto] gap-3 md:gap-4 items-start border-b border-[#D8D4C5] py-4 pr-1 hover:bg-[#F2EFE4] transition-colors"
+                  className="group grid grid-cols-[28px_56px_1fr] sm:grid-cols-[28px_64px_1fr_auto] gap-x-3 gap-y-2 md:gap-4 items-start rounded-2xl border-l-[5px] py-4 pl-4 pr-4 mb-2.5 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-20px_rgba(45,58,46,0.6)]"
+                  style={{ background: accent + '14', borderLeftColor: accent }}
                 >
-                  <span
-                    aria-hidden="true"
-                    className="self-stretch rounded-sm"
-                    style={{ background: a.trackColor }}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => cycleStatus(a.slug)}
-                    aria-label={`Status: ${s}. Click to cycle.`}
-                    className={`w-6 h-6 self-center rounded-full grid place-items-center text-[12px] mx-auto cursor-pointer transition-colors border-[1.5px] ${
-                      s === 'done'
-                        ? 'bg-forest border-forest text-cream'
-                        : s === 'started'
-                          ? 'border-[#C97B5C]'
-                          : 'bg-transparent border-[#D8D4C5] text-transparent hover:border-forest'
-                    }`}
-                    style={
-                      s === 'started'
-                        ? {
-                            background:
-                              'radial-gradient(circle at left center, #C97B5C 50%, transparent 50%)',
-                          }
-                        : undefined
-                    }
-                  >
-                    {s === 'done' && '✓'}
-                  </button>
+                  {/* Read-only done marker — a green check when completed on the
+                      trail, blank otherwise (keeps the column for alignment). */}
+                  {isDone ? (
+                    <span
+                      aria-label="Completed"
+                      title="Completed on the trail"
+                      className="w-6 h-6 self-center rounded-full grid place-items-center text-[12px] mx-auto bg-forest text-cream"
+                    >
+                      ✓
+                    </span>
+                  ) : (
+                    <span aria-hidden="true" className="self-center" />
+                  )}
 
                   {/* Cover thumbnail */}
                   <Link
@@ -565,8 +622,8 @@ export default function AccountDashboard({
                     rel="noopener noreferrer"
                     prefetch={false}
                     aria-label={`Open ${a.title}`}
-                    className="block w-14 sm:w-16 aspect-[4/5] rounded-md overflow-hidden border border-[#D8D4C5] bg-cream no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] group-hover:border-[#C9C5B7] transition-colors"
-                    style={{ background: a.trackColor + '14' /* low-opacity fallback */ }}
+                    className="block w-14 sm:w-16 aspect-[4/5] rounded-md overflow-hidden border-2 bg-[var(--am-paper)] no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] transition-colors"
+                    style={{ background: accent + '14' /* low-opacity fallback */, borderColor: accent + '4d' }}
                   >
                     {a.imageUrl ? (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -574,13 +631,13 @@ export default function AccountDashboard({
                         src={a.imageUrl}
                         alt=""
                         loading="lazy"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.06]"
                       />
                     ) : (
                       <span
                         aria-hidden="true"
-                        className="w-full h-full grid place-items-center font-display italic text-[20px]"
-                        style={{ color: a.trackDeep }}
+                        className="w-full h-full grid place-items-center font-[family-name:var(--font-plate)] text-[20px]"
+                        style={{ color: accent }}
                       >
                         {a.title.charAt(0)}
                       </span>
@@ -594,30 +651,39 @@ export default function AccountDashboard({
                       target="_blank"
                       rel="noopener noreferrer"
                       prefetch={false}
-                      className="font-display italic text-[16.5px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
+                      className="font-[family-name:var(--font-plate)] text-[16.5px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
                     >
                       {a.title}
                     </Link>
                     <p className="m-0 mt-1 text-[13.5px] leading-[1.45] text-gray-600 max-w-[640px]">
                       {a.excerpt}
                     </p>
-                    <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                      <span
-                        className="font-body font-semibold text-[10.5px] uppercase tracking-[0.14em]"
-                        style={{ color: a.trackDeep }}
-                      >
-                        {a.categoryLabel}
-                      </span>
-                      <Sep size="xs" />
+                    <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
+                      {areas.slice(0, 2).map((t) => (
+                        <span
+                          key={t.slug}
+                          className="inline-flex items-center gap-1.5 rounded-full pl-1.5 pr-2.5 py-1 font-body font-semibold text-[10.5px] uppercase tracking-[0.1em] text-forest-dark"
+                          style={{ background: t.color + '22' }}
+                        >
+                          <span className="w-2 h-2 rounded-full" style={{ background: t.color }} aria-hidden="true" />
+                          {t.name}
+                        </span>
+                      ))}
+                      {areas.length > 2 && (
+                        <span className="font-body font-semibold text-[10.5px] text-gray-500 tracking-wide">
+                          +{areas.length - 2}
+                        </span>
+                      )}
                       <span className="font-body font-medium text-[11.5px] text-gray-500 tracking-wide">
                         {a.ageRange}
                       </span>
                     </div>
                   </div>
 
-                  {/* Actions column: Open + Write a review (stacked) | Download + Pin (icons) */}
-                  <div className="flex items-start gap-1.5 pt-0.5 self-stretch">
-                    <div className="flex flex-col items-end justify-between self-stretch min-h-[64px]">
+                  {/* Actions: own column on desktop; a full-width row below the
+                      description on mobile so the description gets real width. */}
+                  <div className="col-span-3 sm:col-span-1 flex items-start justify-end sm:justify-start gap-1.5 pt-0.5 sm:self-stretch">
+                    <div className="hidden sm:flex flex-col items-end justify-between self-stretch min-h-[64px]">
                       <Link
                         href={activityHref}
                         target="_blank"
@@ -629,21 +695,12 @@ export default function AccountDashboard({
                         Open
                         <span aria-hidden="true">&rarr;</span>
                       </Link>
-                      {!isSkillsMap && (
-                        <button
-                          type="button"
-                          onClick={() => setActiveReview({ slug: a.slug, title: a.title })}
-                          className="hidden sm:inline-flex items-center font-body text-[11.5px] text-gray-500 hover:text-forest-dark transition-colors bg-transparent border-0 cursor-pointer underline decoration-gray-300 underline-offset-[3px] hover:decoration-forest-dark"
-                        >
-                          Write a review
-                        </button>
-                      )}
                     </div>
                     {effortFor(a.slug) && <AddToWeekButton slug={a.slug} title={a.title} />}
                     <a
                       href={downloadHref}
                       onClick={handleDownloadClick}
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#D8D4C5] bg-cream text-gray-600 no-underline hover:border-forest hover:text-forest-dark transition-colors"
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[rgba(58,44,23,0.12)] bg-[var(--am-paper)] text-gray-600 no-underline hover:border-forest hover:text-forest-dark transition-colors"
                       aria-label={tier === 'trial' ? `Download ${a.title} (membership required)` : `Download ${a.title}`}
                       title={tier === 'trial' ? 'Download with membership' : 'Download PDF'}
                     >
@@ -666,12 +723,12 @@ export default function AccountDashboard({
                     <button
                       type="button"
                       onClick={() => togglePin(a.slug)}
-                      aria-label={isPinned ? `Unpin ${a.title}` : `Pin ${a.title}`}
-                      title={isPinned ? 'Unpin' : 'Pin'}
+                      aria-label={isPinned ? `Remove ${a.title} from Saved` : `Save ${a.title} for later`}
+                      title={isPinned ? 'Saved — click to remove' : 'Save for later'}
                       className={`w-8 h-8 rounded-lg grid place-items-center cursor-pointer transition-colors border ${
                         isPinned
                           ? 'bg-[#E6EBDF] border-[#C9D3BE] text-forest'
-                          : 'bg-cream border-[#D8D4C5] text-gray-400 hover:border-forest hover:text-forest-dark'
+                          : 'bg-[var(--am-paper)] border-[rgba(58,44,23,0.12)] text-gray-500 hover:border-forest hover:text-forest-dark'
                       }`}
                     >
                       <svg
@@ -694,7 +751,7 @@ export default function AccountDashboard({
             })
           ) : (
             <div className="text-center py-20 px-6 max-w-[520px] mx-auto">
-              <p className="font-display italic text-[22px] text-[#C97B5C] mb-2.5">
+              <p className="font-[family-name:var(--font-plate)] text-[22px] text-[#C97B5C] mb-2.5">
                 No activities match those filters.
               </p>
               <p className="font-body text-[15px] text-gray-600 m-0">
@@ -724,21 +781,31 @@ export default function AccountDashboard({
             >
               <button
                 type="button"
+                onClick={() => goToPage(1)}
+                disabled={currentPage <= 1}
+                className="inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                aria-label="First page"
+                title="First page"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </button>
+              <button
+                type="button"
                 onClick={() => goToPage(Math.max(1, currentPage - 1))}
                 disabled={currentPage <= 1}
-                className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
                 aria-label="Previous page"
               >
                 <span aria-hidden="true">&larr;</span>
                 Prev
               </button>
-              <label className="inline-flex items-center gap-2 font-display italic text-[14px] text-gray-500 px-1">
+              <label className="inline-flex items-center gap-2 font-[family-name:var(--font-plate)] text-[14px] text-gray-500 px-1">
                 <span>Page</span>
                 <select
                   value={currentPage}
                   onChange={(e) => goToPage(parseInt(e.target.value, 10))}
                   aria-label="Jump to page"
-                  className="bg-cream border border-[#D8D4C5] rounded-[10px] px-2.5 py-2 pr-7 font-body not-italic font-semibold text-[13.5px] text-forest-dark cursor-pointer focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                  className="bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] rounded-[10px] px-2.5 py-2 pr-7 font-body not-italic font-semibold text-[13.5px] text-forest-dark cursor-pointer focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
                 >
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
                     <option key={p} value={p}>
@@ -752,11 +819,21 @@ export default function AccountDashboard({
                 type="button"
                 onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
                 disabled={currentPage >= totalPages}
-                className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
                 aria-label="Next page"
               >
                 Next
                 <span aria-hidden="true">&rarr;</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => goToPage(totalPages)}
+                disabled={currentPage >= totalPages}
+                className="inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                aria-label="Last page"
+                title="Last page"
+              >
+                <span aria-hidden="true">&raquo;</span>
               </button>
             </nav>
           )}
@@ -771,13 +848,6 @@ export default function AccountDashboard({
       priceLabel={trial?.priceLabel ?? MEMBERSHIP_PRICE_YEAR}
       isFounder={trial?.isFounder ?? IS_FOUNDER_PHASE}
     />
-    {activeReview && (
-      <ReviewModal
-        slug={activeReview.slug}
-        productName={activeReview.title}
-        onClose={() => setActiveReview(null)}
-      />
-    )}
     </>
   );
 }
@@ -803,25 +873,49 @@ interface DropdownProps {
 
 function Dropdown({ label, active, options, value, onChange }: DropdownProps) {
   const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     if (!open) return;
+    // Close on any mousedown outside THIS dropdown — including on another
+    // dropdown's button, so only one is ever open at a time.
     const onClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (!target.closest('[data-dropdown]')) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener('mousedown', onClick);
     return () => document.removeEventListener('mousedown', onClick);
   }, [open]);
 
+  // Escape closes and returns focus to the trigger; Arrow/Home/End move between
+  // options; typing on the trigger with ArrowDown opens onto the first option.
+  function onKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+    if (e.key === 'Escape' && open) {
+      e.stopPropagation();
+      setOpen(false);
+      triggerRef.current?.focus();
+      return;
+    }
+    const items = Array.from(ref.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]') ?? []);
+    if (!items.length) return;
+    const idx = items.indexOf(document.activeElement as HTMLButtonElement);
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (!open) { setOpen(true); return; } items[Math.min(idx + 1, items.length - 1)]?.focus(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); items[Math.max(idx - 1, 0)]?.focus(); }
+    else if (e.key === 'Home') { e.preventDefault(); items[0]?.focus(); }
+    else if (e.key === 'End') { e.preventDefault(); items[items.length - 1]?.focus(); }
+  }
+
   return (
-    <div className="relative" data-dropdown>
+    <div className="relative" ref={ref} onKeyDown={onKeyDown}>
       <button
         type="button"
+        ref={triggerRef}
         onClick={() => setOpen((o) => !o)}
+        aria-haspopup="menu"
+        aria-expanded={open}
         className={`inline-flex items-center gap-1.5 rounded-full border font-body text-[13px] px-3 py-1.5 cursor-pointer transition-colors ${
           active
             ? 'bg-[#E6EBDF] border-[#C9D3BE] text-forest-dark font-semibold'
-            : 'bg-cream border-[#D8D4C5] text-ink font-medium hover:border-[#C9C5B7]'
+            : 'bg-[var(--am-paper)] border-[rgba(58,44,23,0.12)] text-ink font-medium hover:border-[#C9C5B7]'
         }`}
       >
         {label}
@@ -832,14 +926,17 @@ function Dropdown({ label, active, options, value, onChange }: DropdownProps) {
         />
       </button>
       {open && (
-        <div className="absolute left-0 top-[calc(100%+6px)] min-w-[180px] bg-cream border border-[#D8D4C5] rounded-[10px] shadow-[0_18px_30px_-14px_rgba(45,58,46,0.25)] py-1.5 z-50">
+        <div role="menu" className="absolute left-0 top-[calc(100%+6px)] min-w-[180px] bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] rounded-[10px] shadow-[0_18px_30px_-14px_rgba(45,58,46,0.25)] py-1.5 z-50">
           {options.map((o) => (
             <button
               key={o.value}
               type="button"
+              role="menuitem"
+              aria-current={o.value === value || undefined}
               onClick={() => {
                 onChange(o.value);
                 setOpen(false);
+                triggerRef.current?.focus();
               }}
               className={`w-full text-left font-body text-[13.5px] px-3.5 py-2 cursor-pointer border-0 bg-transparent transition-colors ${
                 o.value === value

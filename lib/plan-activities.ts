@@ -34,6 +34,8 @@ export function getPlanActivities(): PlanActivity[] {
       slug: p.slug,
       title: p.name,
       excerpt: p.shortDescription,
+      description: p.description,
+      imageUrl: p.imageUrl ?? null,
       category: p.category,
       categoryLabel: CATEGORY_LABELS[p.category] ?? p.category,
       ageMin,

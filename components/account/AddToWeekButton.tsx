@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { childAge, loadProfile, type Child } from '@/lib/member-profile';
-import { addToWeek, weekSlugs } from '@/lib/week';
+import { addToWeek, weekSlugs, FAMILY_TARGET } from '@/lib/week';
 
 function childLabel(c: Child, i: number) {
   return c.name.trim() || `Child ${i + 1}`;
@@ -17,6 +17,7 @@ export default function AddToWeekButton({ slug, title }: { slug: string; title: 
   const [children, setChildren] = useState<Child[]>([]);
   const [added, setAdded] = useState(false);
   const [open, setOpen] = useState(false);
+  const [confirm, setConfirm] = useState<string | null>(null); // "on Zach's trail"
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,16 +34,19 @@ export default function AddToWeekButton({ slug, title }: { slug: string; title: 
     return () => document.removeEventListener('mousedown', onDoc);
   }, [open]);
 
-  const allIds = children.map((c, i) => c.id ?? childLabel(c, i));
-
-  function addFor(target: string[]) {
-    addToWeek(slug, target.length ? target : ['unassigned']);
+  // Add to the shared family trail (a manual next-stop) or one kid's solo list,
+  // then show a short confirmation so it doesn't feel like nothing happened.
+  function addFor(target: string, where: string) {
+    addToWeek(slug, [target]);
     setAdded(true);
     setOpen(false);
+    setConfirm(where);
+    window.setTimeout(() => setConfirm(null), 3200);
   }
 
   function handleClick() {
-    if (children.length <= 1) addFor(allIds);
+    // One kid: the trail is theirs, so add straight to the family trail.
+    if (children.length <= 1) addFor(FAMILY_TARGET, 'on the trail');
     else setOpen((v) => !v);
   }
 
@@ -51,8 +55,8 @@ export default function AddToWeekButton({ slug, title }: { slug: string; title: 
       <button
         type="button"
         onClick={handleClick}
-        aria-label={added ? `${title} is on your plan` : `Add ${title} to your plan`}
-        title={added ? 'On your plan' : 'Add to your plan'}
+        aria-label={added ? `${title} is on a trail` : `Add ${title} to a trail`}
+        title={added ? 'On a trail' : 'Add to a trail'}
         className={`w-8 h-8 rounded-lg grid place-items-center cursor-pointer transition-colors border ${
           added
             ? 'bg-[#E6EBDF] border-[#C9D3BE] text-forest'
@@ -73,28 +77,38 @@ export default function AddToWeekButton({ slug, title }: { slug: string; title: 
       </button>
 
       {open && (
-        <div className="absolute right-0 top-[calc(100%+6px)] z-30 w-48 bg-cream border border-[#D8D4C5] rounded-xl shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-1.5">
+        <div className="absolute right-0 top-[calc(100%+6px)] z-30 w-52 bg-cream border border-[#D8D4C5] rounded-xl shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-1.5">
           <p className="px-3 py-1 font-body text-[11px] font-semibold uppercase tracking-wide text-gray-400">
-            Add to whose plan?
+            Add to
           </p>
+          <button
+            type="button"
+            onClick={() => addFor(FAMILY_TARGET, 'to the family trail')}
+            className="w-full text-left px-3 py-2 font-body text-[13.5px] font-semibold text-forest hover:bg-[#EDE9DC] cursor-pointer"
+          >
+            Whole family
+            <span className="block font-normal text-[11.5px] text-gray-500">Next stop on the home trail</span>
+          </button>
+          <div className="my-1 border-t border-[#E4E0D2]" />
+          <p className="px-3 py-1 font-body text-[10.5px] uppercase tracking-wide text-gray-400">On their own</p>
           {children.map((c, i) => (
             <button
               key={i}
               type="button"
-              onClick={() => addFor([c.id ?? childLabel(c, i)])}
+              onClick={() => addFor(c.id ?? childLabel(c, i), `to ${childLabel(c, i)}'s trail`)}
               className="w-full text-left px-3 py-2 font-body text-[13.5px] text-gray-700 hover:bg-[#EDE9DC] cursor-pointer"
             >
               {childLabel(c, i)}
               {childAge(c) != null ? ` (${childAge(c)})` : ''}
             </button>
           ))}
-          <button
-            type="button"
-            onClick={() => addFor(allIds)}
-            className="w-full text-left px-3 py-2 font-body text-[13.5px] font-semibold text-forest hover:bg-[#EDE9DC] cursor-pointer"
-          >
-            Everyone
-          </button>
+        </div>
+      )}
+
+      {confirm && (
+        <div className="absolute right-0 top-[calc(100%+6px)] z-40 whitespace-nowrap flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12px] py-1.5 px-3 rounded-lg shadow-[0_14px_30px_-14px_rgba(45,58,46,0.6)]">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>
+          Added {confirm}
         </div>
       )}
     </div>

@@ -11,11 +11,90 @@
   --font-family-body: var(--font-body);
 }
 
+/* ─── The Pack System ───
+   Shared design tokens for the member experience (Home, This Month, Library,
+   My Plan, Record, and the member nav). One source of truth so the six surfaces
+   read as one product. Inline-style surfaces use var(--pack-*); Tailwind
+   surfaces use arbitrary values, e.g. bg-[var(--pack-card)].
+   See .impeccable/surfaces/member-experience.md for the rationale. */
+:root {
+  --pack-page: #f2efe6;          /* member page background */
+  --pack-ink: #2b2a26;           /* primary text */
+  --pack-muted: #6b675e;         /* muted / secondary text — readable (~4.9:1 on --pack-page); #8a877e failed 4.5:1 */
+  --pack-card: #fffdf9;          /* card fill (warm off-white) */
+  --pack-card-border: rgba(88, 129, 87, 0.14);   /* forest-tinted card border */
+  --pack-card-shadow: 0 2px 10px -4px rgba(70, 55, 30, 0.12); /* warm resting shadow */
+  --pack-radius-card: 16px;      /* one card radius */
+  --pack-eyebrow: #a9762f;       /* one eyebrow / caps-label color */
+  --pack-panel: #f5f1e8;         /* soft inset panel — empty states, info chips */
+  --pack-ghost-border: rgba(88, 129, 87, 0.35);  /* ghost-button border */
+  --pack-pill-border: rgba(61, 92, 59, 0.18);    /* kid-selector unselected border */
+}
+
+/* ─── The Field Study ───
+   Member-experience redesign world (see DESIGN.md). Deep herbarium-green
+   ground, aged-ledger paper panels, botanical-plate accents. Replaces the
+   cream "Pack, alive" look. Home first; roll-out pending approval. */
+:root {
+  --fs-ground: #16301f;
+  --fs-ground-2: #1e3d29;
+  --fs-ink: #14241a;
+  --fs-paper: #f0e9d6;
+  --fs-paper-line: #d9cfb4;
+  --fs-specimen: #c2492e;
+  --fs-ochre: #c98a3c;
+  --fs-sage: #8bab84;
+}
+
+/* ─── The Adventure Map ───
+   Member-experience redesign world (see DESIGN.md). Full-bleed illustrated
+   trail map; the explorer is a token traveling it. Replaces the cream "Pack,
+   alive" look (and the rejected Field Study). Home first; roll-out pending. */
+:root {
+  --am-bg1: #f4f0e7;      /* page gradient top */
+  --am-bg2: #ebe4d5;      /* page gradient bottom */
+  --am-paper: #f7f2e8;    /* card / glass base */
+  --am-sky1: #d9e7ea;     /* sky top */
+  --am-sky2: #edf1e7;     /* sky haze */
+  --am-forest: #7d9c6d;
+  --am-forest-deep: #5d7d53;
+  --am-water: #92c0cb;
+  --am-hill: #ddcaa2;
+  --am-hill-2: #cdb789;
+  --am-trail: #bf7c48;
+  --am-ink: #32302a;
+  --am-muted: #6b6152;
+  --am-flag: #d0684a;
+  --am-gold: #d6a24e;
+}
+
+/* Signature gold divider under every member-surface H1. Block bar: aligns left
+   in a left-aligned header; add mx-auto / margin:auto to center it (Home). */
+.pack-underline {
+  display: block;
+  width: 180px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #d4a373, transparent);
+}
+
+/* One eyebrow token: DM Sans 700 / 0.14em / uppercase / gold-dark. */
+.pack-eyebrow {
+  font-family: var(--font-family-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pack-eyebrow);
+}
+
 /* ─── Weekly planner animations ─── */
 @keyframes alFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes alRise { from { opacity: 0; transform: translateY(26px) scale(0.985); } to { opacity: 1; transform: none; } }
 @keyframes alPop { 0% { transform: scale(0.96); } 60% { transform: scale(1.02); } 100% { transform: scale(1); } }
 @keyframes alVeil { from { opacity: 0; } to { opacity: 1; } }
+@keyframes alDrift { 0% { transform: translate(0,0); opacity: .5; } 50% { transform: translate(10px,-14px); opacity: .95; } 100% { transform: translate(0,0); opacity: .5; } }
+@keyframes alGentleFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .al-fade { animation: alFade 0.35s cubic-bezier(0.22,1,0.36,1); }
 .al-rise { animation: alRise 0.42s cubic-bezier(0.22,1,0.36,1) both; }
 .al-pop { animation: alPop 0.4s cubic-bezier(0.22,1,0.36,1); }
@@ -23,7 +102,7 @@
 .al-card { transition: transform 200ms cubic-bezier(0.22,1,0.36,1), box-shadow 200ms ease; }
 .al-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -16px rgba(70,55,30,0.32); }
 @media (prefers-reduced-motion: reduce) {
-  .al-fade, .al-rise, .al-pop, .al-veil { animation: none !important; }
+  .al-fade, .al-rise, .al-pop, .al-veil, .al-fly, .al-float { animation: none !important; }
   .al-card:hover { transform: none; }
 }
 

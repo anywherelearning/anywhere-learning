@@ -54,14 +54,34 @@ export function recentDoneByChild(days = 30): Record<string, number> {
   return out;
 }
 
+/** The full completion log, oldest first. Powers the trail path: each unique
+ *  activity done is one planted step, in the order the family walked them. */
+export function completionLog(): { slug: string; child: string; at: string }[] {
+  return [...read()].sort((a, b) => a.at.localeCompare(b.at));
+}
+
+/** All-time completed slugs per child (deduped). Powers the roadmap's skill
+ *  growth: progress is cumulative, so no time window here. */
+export function completedSlugsByChild(): Record<string, string[]> {
+  const out: Record<string, Set<string>> = {};
+  for (const c of read()) {
+    (out[c.child] ??= new Set()).add(c.slug);
+  }
+  return Object.fromEntries(
+    Object.entries(out).map(([child, slugs]) => [child, [...slugs]]),
+  );
+}
+
 /** Slugs completed within the last `months`. The planner excludes these so a
  *  done activity resurfaces only after the window passes. */
-export function recentlyDoneSlugs(months = 9): Set<string> {
+export function recentlyDoneSlugs(months = 12, childIds?: readonly string[]): Set<string> {
   const d = new Date();
   d.setMonth(d.getMonth() - months);
   const cutoff = d.getTime();
+  const only = childIds && childIds.length ? new Set(childIds) : null;
   const out = new Set<string>();
   for (const c of read()) {
+    if (only && !only.has(c.child)) continue;
     if (Date.parse(c.at) >= cutoff) out.add(c.slug);
   }
   return out;

@@ -26,35 +26,6 @@ const TRACK_COLORS: Record<string, { color: string; deep: string }> = {
   'emotional-social-skills': { color: '#B6748A', deep: '#7A4858' },
 };
 
-// Two "virtual" Skills Map entries — pinned to the top of the dashboard for
-// both tiers. They are not real Product rows in the DB, so we synthesize them
-// here and concat onto the activity list before passing into the dashboard.
-const SKILLS_MAP_ENTRIES: DashboardActivity[] = [
-  {
-    slug: 'skills-map-color',
-    title: 'The Future-Ready Skills Map (Color)',
-    excerpt:
-      'A parent guide mapping the essential skills your kids actually need, by age, with milestones and how each activity fits.',
-    category: 'parent-guide',
-    categoryLabel: 'Parent Guide',
-    trackColor: '#B6913F',
-    trackDeep: '#7A5E1F',
-    ageRange: 'Parents',
-    imageUrl: '/skills-map-color-cover.jpg',
-  },
-  {
-    slug: 'skills-map-bw',
-    title: 'The Future-Ready Skills Map (Black & White)',
-    excerpt: 'Print-friendly black-and-white version of the Skills Map for offline reading.',
-    category: 'parent-guide',
-    categoryLabel: 'Parent Guide',
-    trackColor: '#7B8378',
-    trackDeep: '#4F5A50',
-    ageRange: 'Parents',
-    imageUrl: '/skills-map-bw-cover.jpg',
-  },
-];
-
 // ─── TIER DETECTION ──────────────────────────────────────────
 // Until Stripe + Clerk are fully wired, we read tier from a cookie / query
 // param so both views are testable. Visit /account?tier=trial to preview the
@@ -147,9 +118,7 @@ export default async function AccountPage({
   const tierActivities = allProducts;
 
   const activities: DashboardActivity[] = [
-    // Skills Map versions pinned at the top
-    ...SKILLS_MAP_ENTRIES,
-    // Then the tier-appropriate activity list
+    // Skills Map guides live in the hero button now, not the grid.
     ...tierActivities.map((p) => {
       const theme = TRACK_COLORS[p.category] || TRACK_COLORS['real-world-math'];
       return {

@@ -106,6 +106,7 @@ When adding new products, follow this order:
 - [ ] **`scripts/create-stripe-products.ts`**: Add to `catalog[]` array (slug, name, priceCents, description). If bundle: add image override to `imageOverrides`
 - [ ] **`lib/fallback-products.ts`**: Add full product object with descriptions, previewFile reference
 - [ ] **`lib/product-descriptions.ts`**: Add opening, whatsIncluded, skillTags, format
+- [ ] **`lib/roadmap.ts`**: Add the slug to `SUPPLEMENTAL_TERRITORY_TAGS` with the 2–3 Future-Ready Skills Map areas it builds. REQUIRED — an untagged activity vanishes from the member Library/Record/Focus area filters (these run on the 12 Skills Map areas, not the 9 shop categories)
 - [ ] **`lib/cart.ts`**: If bundle, add to `BUNDLE_CONTENTS` (child slugs) and `BUNDLE_DATA` (pricing/image)
 - [ ] **`app/(store)/shop/page.tsx`**: If bundle, update `categoryBundleMap`. If new category, update `categoryMeta`, `categorySections`, `crossSellMap`
 - [ ] **Product cover image**: Extract first page of PDF → `public/products/[slug].jpg` (use `pdftoppm -jpeg -f 1 -l 1 -r 300` then `sips --resampleWidth 800`)

@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useClerk, useUser, useReverification } from '@clerk/nextjs';
+import { useUser, useReverification } from '@clerk/nextjs';
 import { IS_FOUNDER_PHASE } from '@/lib/membership';
-import KidsSettingsSection from '@/components/account/KidsSettingsSection';
+import AdventureSettingsSection from '@/components/account/AdventureSettingsSection';
 
 interface Member {
   name: string;
@@ -32,25 +32,32 @@ interface Member {
 
 type Tab = 'profile' | 'kids' | 'subscription';
 
-export default function AccountSettings({ member }: { member: Member }) {
-  const { user } = useUser();
-  // "Your kids" (the planner profile) is members-only. Non-members get just
-  // Profile (plus Subscription if they have any subscription history).
+export default function AccountSettings({
+  member,
+  previewAccess = false,
+  initialTab = 'profile',
+}: {
+  member: Member;
+  /** Dev-preview only: force member access so the Our Adventure tab renders
+   *  without a signed-in Clerk session. */
+  previewAccess?: boolean;
+  initialTab?: Tab;
+}) {
+  const { user, isSignedIn } = useUser();
+  // "Our Adventure" (the family planner) is available to anyone who's signed in
+  // and inside the member zone — trials included, and regardless of whether the
+  // Stripe webhook has stamped publicMetadata.tier yet. The /account layout
+  // already gates auth. tier stays as a fallback for the no-Clerk preview case.
   const tierMeta = user?.publicMetadata?.tier as string | undefined;
-  const hasAccess = tierMeta === 'member';
+  const hasAccess = previewAccess || !!isSignedIn || tierMeta === 'member';
 
   const TABS: { value: Tab; label: string }[] = [
     { value: 'profile', label: 'Profile' },
-    ...(hasAccess ? [{ value: 'kids' as Tab, label: 'Your kids' }] : []),
+    ...(hasAccess ? [{ value: 'kids' as Tab, label: 'Our Adventure' }] : []),
     ...(member.hasSubscription ? [{ value: 'subscription' as Tab, label: 'Subscription' }] : []),
   ];
 
-  const [tab, setTab] = useState<Tab>('profile');
-  const { signOut } = useClerk();
-
-  async function handleSignOut() {
-    await signOut({ redirectUrl: '/' });
-  }
+  const [tab, setTab] = useState<Tab>(initialTab);
 
   return (
     <main className="bg-cream pb-8">
@@ -109,8 +116,8 @@ export default function AccountSettings({ member }: { member: Member }) {
             the user never leaves the settings page. */}
         {tab === 'profile' && <ProfileTab fallback={member} />}
 
-        {/* YOUR KIDS */}
-        {tab === 'kids' && hasAccess && <KidsSettingsSection />}
+        {/* OUR ADVENTURE — kids, explorers, trail format, focus areas */}
+        {tab === 'kids' && hasAccess && <AdventureSettingsSection />}
 
         {/* SUBSCRIPTION */}
         {tab === 'subscription' && member.hasSubscription && (
@@ -215,22 +222,12 @@ export default function AccountSettings({ member }: { member: Member }) {
             </Link>
             .
           </p>
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={handleSignOut}
-              className="font-body font-medium text-[13px] text-gray-500 bg-transparent border-0 cursor-pointer hover:text-forest-dark transition-colors"
-            >
-              Sign out
-            </button>
-            <span aria-hidden="true" className="w-px h-3.5 bg-[#C9C5B7]" />
-            <Link
-              href="/contact"
-              className="font-body font-medium text-[13px] text-gray-500 no-underline hover:text-forest-dark transition-colors"
-            >
-              Close your account? Email us
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="font-body font-medium text-[13px] text-gray-500 no-underline hover:text-forest-dark transition-colors"
+          >
+            Close your account? Email us
+          </Link>
         </div>
       </div>
     </main>

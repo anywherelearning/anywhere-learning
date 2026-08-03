@@ -2,6 +2,10 @@
 
 import { useState } from 'react';
 import { genChildId, saveProfile, type Child, type MemberProfile } from '@/lib/member-profile';
+import { setWalkMode } from '@/lib/kid-roadmap';
+import { TERRITORIES } from '@/lib/roadmap';
+import { savePrefs, ALL_EFFORTS, EFFORT_LABEL } from '@/lib/plan-prefs';
+import type { Effort } from '@/lib/activity-effort';
 
 const MONTHS: [string, string][] = [
   ['01', 'January'], ['02', 'February'], ['03', 'March'], ['04', 'April'],
@@ -60,6 +64,19 @@ export default function KidsSetup({
   const [saving, setSaving] = useState(false);
   const [justSaved, setJustSaved] = useState(false);
 
+  // ─── family plan preferences (skip the whole block when editing kids) ───
+  const [focusAll, setFocusAll] = useState(true);
+  const [selTerritories, setSelTerritories] = useState<Set<string>>(new Set(TERRITORIES.map((t) => t.slug)));
+  const [timeAll, setTimeAll] = useState(true);
+  const [selEfforts, setSelEfforts] = useState<Set<Effort>>(new Set(ALL_EFFORTS));
+  const [walk, setWalk] = useState<'family' | 'individual'>('family');
+
+  const toggle = <T,>(set: Set<T>, v: T): Set<T> => {
+    const n = new Set(set);
+    if (n.has(v)) n.delete(v); else n.add(v);
+    return n;
+  };
+
   const valid = rows.length > 0 && rows.every((r) => r.name.trim() && r.mon && r.year);
 
   function setRowsDirty(updater: (prev: Row[]) => Row[]) {
@@ -86,6 +103,16 @@ export default function KidsSetup({
       version: 1,
     };
     saveProfile(profile);
+    if (!embedded) {
+      // first-run only: capture the family plan preferences for the engine
+      const territories = focusAll ? TERRITORIES.map((t) => t.slug) : [...selTerritories];
+      const efforts = timeAll ? [...ALL_EFFORTS] : [...selEfforts];
+      savePrefs({
+        territories: territories.length ? territories : TERRITORIES.map((t) => t.slug),
+        efforts: efforts.length ? efforts : [...ALL_EFFORTS],
+      });
+      setWalkMode(withIds.length > 1 ? walk : 'family');
+    }
     setRows(withIds);
     onDone();
     setSaving(false);
@@ -168,6 +195,59 @@ export default function KidsSetup({
         + Add another child
       </button>
 
+      {!embedded && (
+        <div className="mt-7 pt-6 border-t border-gold/15 space-y-6">
+          <fieldset>
+            <legend className="text-[15px] font-semibold text-forest-dark mb-2.5">What should we focus on?</legend>
+            <div className="flex flex-wrap gap-2">
+              <PrefPill on={focusAll} onClick={() => setFocusAll(true)}>All skill areas <span className="opacity-60">· recommended</span></PrefPill>
+              <PrefPill on={!focusAll} onClick={() => setFocusAll(false)}>Choose areas</PrefPill>
+            </div>
+            {!focusAll && (
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {TERRITORIES.map((t) => (
+                  <ChoiceChip key={t.slug} on={selTerritories.has(t.slug)} onClick={() => setSelTerritories((s) => toggle(s, t.slug))}>
+                    {t.name}
+                  </ChoiceChip>
+                ))}
+              </div>
+            )}
+          </fieldset>
+
+          <fieldset>
+            <legend className="text-[15px] font-semibold text-forest-dark mb-2.5">How much time do you usually have?</legend>
+            <div className="flex flex-wrap gap-2">
+              <PrefPill on={timeAll} onClick={() => setTimeAll(true)}>Any length <span className="opacity-60">· recommended</span></PrefPill>
+              <PrefPill on={!timeAll} onClick={() => setTimeAll(false)}>Just some</PrefPill>
+            </div>
+            {!timeAll && (
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {ALL_EFFORTS.map((e) => (
+                  <ChoiceChip key={e} on={selEfforts.has(e)} onClick={() => setSelEfforts((s) => toggle(s, e))}>
+                    {EFFORT_LABEL[e]}
+                  </ChoiceChip>
+                ))}
+              </div>
+            )}
+          </fieldset>
+
+          {rows.length > 1 && (
+            <fieldset>
+              <legend className="text-[15px] font-semibold text-forest-dark mb-2.5">One trail for the family, or one per child?</legend>
+              <div className="flex flex-wrap gap-2">
+                <PrefPill on={walk === 'family'} onClick={() => setWalk('family')}>One family trail <span className="opacity-60">· recommended</span></PrefPill>
+                <PrefPill on={walk === 'individual'} onClick={() => setWalk('individual')}>A trail per child</PrefPill>
+              </div>
+              <p className="text-[12.5px] text-gray-500 mt-2">
+                {walk === 'family'
+                  ? 'Everyone does the same activity together — simplest, and great for siblings.'
+                  : 'Each child gets their own next activity, matched to their age.'}
+              </p>
+            </fieldset>
+          )}
+        </div>
+      )}
+
       <div className="flex items-center justify-end gap-4 mt-8">
         {onCancel && (
           <button type="button" onClick={onCancel} className="text-[14px] text-gray-500 hover:text-ink">
@@ -212,5 +292,33 @@ export default function KidsSetup({
         )}
       </div>
     </div>
+  );
+}
+
+function PrefPill({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`text-[13.5px] font-medium px-4 py-2 rounded-full border transition-colors ${
+        on ? 'bg-forest text-white border-forest' : 'bg-white text-ink border-gray-200 hover:border-forest/40'
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function ChoiceChip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`text-[12.5px] font-medium px-3 py-1.5 rounded-full border transition-colors ${
+        on ? 'bg-[#E6EBDF] text-forest-dark border-[#C9D3BE]' : 'bg-white text-gray-500 border-gray-200 hover:border-forest/30'
+      }`}
+    >
+      {children}
+    </button>
   );
 }

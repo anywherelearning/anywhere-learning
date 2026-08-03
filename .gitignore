@@ -60,3 +60,6 @@ next-env.d.ts
 
 # local claude worktrees
 /.claude/worktrees/
+
+# Impeccable design skill (local tooling, not app code)
+/.claude/skills/impeccable/

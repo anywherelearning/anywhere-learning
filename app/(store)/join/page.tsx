@@ -595,6 +595,14 @@ export default async function JoinPage({
                 group. Early members shape what this becomes.
               </p>
               <p className="mb-3.5">
+                And on the number itself: it lands about where a family museum
+                membership does. The difference is you use this one{' '}
+                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
+                  every week
+                </em>{' '}
+                instead of twice a year.
+              </p>
+              <p className="mb-3.5">
                 Why cap it at 100? Because when the 100th member joins, the
                 price goes up and stays up. No "limited time offer" that runs
                 forever.

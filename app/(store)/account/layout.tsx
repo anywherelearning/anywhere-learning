@@ -1,5 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import MemberNav from "@/components/account/MemberNav";
+import MemberFooter from "@/components/account/MemberFooter";
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -18,5 +20,13 @@ export default async function AccountLayout({
       // Clerk misconfigured — fall through to render so the page is still viewable.
     }
   }
-  return <>{children}</>;
+  // The member zone has its own header (MemberNav); SiteHeader hides itself on
+  // /account so there's a single nav. One render here covers every member page.
+  return (
+    <>
+      <MemberNav />
+      {children}
+      <MemberFooter />
+    </>
+  );
 }

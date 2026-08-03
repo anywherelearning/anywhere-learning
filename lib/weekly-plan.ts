@@ -21,6 +21,10 @@ export interface PlanActivity {
   slug: string;
   title: string;
   excerpt: string;
+  /** Full parent-facing description; used for the "what they're into" blurb. */
+  description?: string;
+  /** Cover image path (e.g. /products/[slug].jpg), when the product has one. */
+  imageUrl?: string | null;
   category: string;
   categoryLabel: string;
   ageMin: number;
