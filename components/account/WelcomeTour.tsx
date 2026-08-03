@@ -1,0 +1,170 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+const SEEN_KEY = 'al_tour_seen_v1';
+
+/** Icons (no emoji, per brand). Simple line marks that echo each card. */
+function MapIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" />
+      <path d="M9 4v14M15 6v14" />
+    </svg>
+  );
+}
+function FlagIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 21V4" />
+      <path d="M5 4h12l-2.2 4L17 12H5" />
+    </svg>
+  );
+}
+function CompassIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M15.5 8.5l-2.3 4.7-4.7 2.3 2.3-4.7z" />
+    </svg>
+  );
+}
+
+const SLIDES = [
+  {
+    icon: <MapIcon />,
+    title: "This is your family's trail.",
+    body: 'Each child is an explorer. Every activity you finish together moves them forward and earns gear along the way.',
+  },
+  {
+    icon: <FlagIcon />,
+    title: 'Start with your next stop.',
+    body: 'We pick one for you. Open the guide, do it together, then tap "We reached it" to move ahead.',
+  },
+  {
+    icon: <CompassIcon />,
+    title: 'Everything lives up top.',
+    body: "Home is your trail. Library has every guide. This Month is our seasonal picks. Record is your family's portfolio.",
+  },
+];
+
+/**
+ * A short, skimmable welcome tour (three cards) that teaches a new member how
+ * the Adventure Map works. Auto-opens once for a real member (autoOpen), and
+ * can be reopened any time from the avatar menu via the `al:open-tour` event.
+ * Cards, not video: one-line edits keep it accurate as the zone evolves.
+ */
+export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }) {
+  const [open, setOpen] = useState(false);
+  const [i, setI] = useState(0);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    try {
+      if (autoOpen && !localStorage.getItem(SEEN_KEY)) {
+        setI(0);
+        setOpen(true);
+      }
+    } catch {
+      /* ignore */
+    }
+    const onOpen = () => {
+      setI(0);
+      setOpen(true);
+    };
+    window.addEventListener('al:open-tour', onOpen);
+    return () => window.removeEventListener('al:open-tour', onOpen);
+  }, [autoOpen]);
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    nextRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight' && i < SLIDES.length - 1) setI((n) => n + 1);
+      if (e.key === 'ArrowLeft' && i > 0) setI((n) => n - 1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, i]);
+
+  function close() {
+    try {
+      localStorage.setItem(SEEN_KEY, '1');
+    } catch {
+      /* ignore */
+    }
+    setOpen(false);
+  }
+
+  if (!open) return null;
+  const last = i >= SLIDES.length - 1;
+  const s = SLIDES[i];
+
+  return (
+    <div className="wt-scrim" role="dialog" aria-modal="true" aria-labelledby="wt-title" onClick={close}>
+      <div className="wt-card" onClick={(e) => e.stopPropagation()}>
+        <button className="wt-skip" onClick={close}>
+          Skip
+        </button>
+        <div className="wt-icon">{s.icon}</div>
+        <h2 id="wt-title" className="wt-title">
+          {s.title}
+        </h2>
+        <p className="wt-body">{s.body}</p>
+        <div className="wt-dots" aria-hidden="true">
+          {SLIDES.map((_, k) => (
+            <span key={k} className={`wt-dot${k === i ? ' on' : ''}`} />
+          ))}
+        </div>
+        <div className="wt-actions">
+          {i > 0 ? (
+            <button className="wt-back" onClick={() => setI(i - 1)}>
+              Back
+            </button>
+          ) : (
+            <span />
+          )}
+          <button ref={nextRef} className="wt-next" onClick={() => (last ? close() : setI(i + 1))}>
+            {last ? 'Start exploring' : 'Next'}
+          </button>
+        </div>
+      </div>
+      <style>{`
+        .wt-scrim{position:fixed;inset:0;z-index:120;display:flex;align-items:center;
+          justify-content:center;padding:20px;background:rgba(28,32,24,.5);
+          backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
+          font-family:'DM Sans',system-ui,sans-serif}
+        .wt-card{position:relative;width:100%;max-width:404px;background:var(--am-bg1,#faf9f6);
+          border:1px solid rgba(61,92,59,.14);border-radius:20px;padding:34px 28px 24px;
+          text-align:center;box-shadow:0 30px 70px -24px rgba(28,40,24,.5)}
+        .wt-skip{position:absolute;top:14px;right:16px;background:none;border:none;
+          font-size:13px;font-weight:600;color:#9a978c;cursor:pointer;padding:4px}
+        .wt-skip:hover{color:#6f7468}
+        .wt-icon{width:56px;height:56px;margin:0 auto 16px;border-radius:16px;
+          display:grid;place-items:center;color:#3d5c3b;background:rgba(88,129,87,.13)}
+        .wt-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
+          font-size:clamp(26px,5.5vw,32px);line-height:1.08;color:#3d5c3b;margin:0 0 10px}
+        .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:320px;min-height:66px}
+        .wt-dots{display:flex;gap:7px;justify-content:center;margin:18px 0 20px}
+        .wt-dot{width:7px;height:7px;border-radius:50%;background:rgba(61,92,59,.22)}
+        .wt-dot.on{background:#588157}
+        .wt-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .wt-back{background:none;border:none;font-size:14.5px;font-weight:600;color:#6f7468;
+          cursor:pointer;padding:8px 6px}
+        .wt-back:hover{color:#3d5c3b}
+        .wt-next{margin-left:auto;background:#588157;color:#faf9f6;font-weight:600;font-size:15px;
+          border:none;padding:12px 26px;border-radius:12px;cursor:pointer;
+          box-shadow:0 8px 20px -9px rgba(61,92,59,.55);transition:background .15s ease,transform .15s ease}
+        .wt-next:hover{background:#3d5c3b;transform:translateY(-1px)}
+        .wt-next:focus-visible{outline:3px solid #d4a373;outline-offset:3px}
+      `}</style>
+    </div>
+  );
+}

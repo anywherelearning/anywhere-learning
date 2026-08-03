@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import MemberNav from "@/components/account/MemberNav";
 import MemberFooter from "@/components/account/MemberFooter";
 import MemberPaywallOverlay from "@/components/account/MemberPaywallOverlay";
+import WelcomeTour from "@/components/account/WelcomeTour";
 import { getAccessTierForClerkId } from "@/lib/access";
 import { TRIAL_DAYS, MEMBERSHIP_PRICE_USD, MONTHLY_PRICE_USD } from "@/lib/membership";
 
@@ -50,6 +51,9 @@ export default async function AccountLayout({
     <>
       <MemberNav />
       {children}
+      {/* Auto-opens once for members; guests can still reopen it from the menu,
+          but it never auto-fires over the paywall. */}
+      <WelcomeTour autoOpen={!showPaywall} />
       {showPaywall ? (
         <MemberPaywallOverlay
           trialDays={TRIAL_DAYS}
