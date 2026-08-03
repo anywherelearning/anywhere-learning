@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import JoinCta from '@/components/join/JoinCta';
-import TrailPreview from '@/components/join/TrailPreview';
+import HeroTrail from '@/components/join/HeroTrail';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -266,17 +265,11 @@ export default async function JoinPage({
   const HeroPhoto = () => (
     <div className="relative">
       <div className="relative aspect-[4/5] -rotate-[1.2deg] overflow-hidden rounded-[14px] border border-gray-200 bg-[#f5f0e8] shadow-[0_30px_50px_-28px_rgba(45,58,46,.3)]">
-        <Image
-          src="/images/join-hero.jpeg"
-          alt="Young girl standing with arms crossed in front of a giant cedar tree"
-          fill
-          className="object-cover"
-          priority
-        />
+        <HeroTrail />
       </div>
-      {/* Price sticker */}
+      {/* Founder-rate sticker, overlaid on the trail scene */}
       <div
-        className="absolute -right-3.5 top-8 grid h-[140px] w-[140px] rotate-[8deg] place-items-center rounded-full bg-[#c4836a] text-center text-cream shadow-[0_12px_24px_-10px_rgba(201,123,92,.5)] max-md:right-[6%] max-md:-top-5 max-md:h-[120px] max-md:w-[120px]"
+        className="absolute -right-3.5 top-8 z-10 grid h-[140px] w-[140px] rotate-[8deg] place-items-center rounded-full bg-[#c4836a] text-center text-cream shadow-[0_12px_24px_-10px_rgba(201,123,92,.5)] max-md:right-[6%] max-md:-top-5 max-md:h-[120px] max-md:w-[120px]"
         aria-hidden="true"
       >
         <div>
@@ -292,16 +285,6 @@ export default async function JoinPage({
             </span>
           )}
         </div>
-      </div>
-      {/* Activity card */}
-      <div
-        className="absolute -left-5 -bottom-5 w-[185px] rotate-[3deg] rounded-[10px] border border-gray-200 bg-cream p-3.5 pb-3 text-[13.5px] leading-snug text-gray-500 shadow-[0_18px_28px_-22px_rgba(45,58,46,.35)] max-md:left-[6%]"
-        aria-hidden="true"
-      >
-        <strong className="mb-0.5 block font-display text-[17px] italic text-forest-dark">
-          This week's activity
-        </strong>
-        Keep pedaling when the hill gets steep.
       </div>
     </div>
   );
@@ -793,27 +776,6 @@ export default async function JoinPage({
               brings fresh seasonal picks and one simple family challenge. It
               keeps going, so you never stare at a blank week again.
             </p>
-          </div>
-        </section>
-
-        {/* ═══ 5b. PEEK INSIDE (live member-zone visual) ═══ */}
-        <section className="border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10">
-          <div className="mx-auto max-w-[1000px]">
-            <div className="mx-auto mb-9 max-w-[720px] text-center">
-              <Eyebrow>A peek inside</Eyebrow>
-              <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
-                This is what{' '}
-                <em className="font-display not-italic text-forest">your kids open.</em>
-              </h2>
-              <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
-                Two explorers, one trail, and the next real-world stop already
-                picked for you. The map fills in with gear and progress as your
-                family goes.
-              </p>
-            </div>
-            <div className="mx-auto max-w-[820px]">
-              <TrailPreview />
-            </div>
           </div>
         </section>
 
