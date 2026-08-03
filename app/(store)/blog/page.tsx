@@ -54,7 +54,9 @@ const imgBgByCategory: Record<BlogCategory, string> = {
 };
 
 function formatDate(date: string): string {
-  const d = new Date(date);
+  // Parse as local midnight (append time) so a date-only string like
+  // "2026-08-03" renders as Aug 3 in every timezone, not the day before.
+  const d = new Date(date + 'T00:00:00');
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 

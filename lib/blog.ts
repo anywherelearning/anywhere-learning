@@ -7961,8 +7961,8 @@ const posts: BlogPost[] = [
     excerpt: 'You cannot lecture a kid into empathy, but you can absolutely build it. Here is what empathy really is, why it is caught as much as taught, 15 real-life ways to grow it, and what it looks like at every age.',
     hook: 'You can tell a kid to be kind a thousand times and change nothing. Empathy is not taught with words. It is built with experiences.',
     category: 'future-ready-skills',
-    publishedAt: '2026-07-26',
-    dateModified: '2026-07-26',
+    publishedAt: '2026-08-03',
+    dateModified: '2026-08-03',
     keywords: ['teaching empathy to kids', 'how to teach kids empathy', 'how to teach empathy to a child', 'empathy activities for kids', 'raising empathetic kids', 'how to raise an emotionally intelligent child', 'kindness activities for kids', 'empathy for kids', 'developing empathy in children', 'teaching kids empathy'],
     readTimeMinutes: 12,
     author: amelie,
@@ -8279,7 +8279,9 @@ export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
 }
 
 export function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en-US', {
+  // Append time so a date-only string ("2026-08-03") parses as local midnight
+  // and renders as that calendar day in every timezone, not the day before.
+  return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
