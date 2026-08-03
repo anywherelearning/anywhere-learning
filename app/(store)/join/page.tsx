@@ -5,6 +5,7 @@ import JoinFaqAccordion from '@/components/join/JoinFaqAccordion';
 import { joinFaqs } from '@/lib/join-faqs';
 import StickyFounderBar from '@/components/join/StickyFounderBar';
 import JoinCta from '@/components/join/JoinCta';
+import TrailPreview from '@/components/join/TrailPreview';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -792,6 +793,27 @@ export default async function JoinPage({
               brings fresh seasonal picks and one simple family challenge. It
               keeps going, so you never stare at a blank week again.
             </p>
+          </div>
+        </section>
+
+        {/* ═══ 5b. PEEK INSIDE (live member-zone visual) ═══ */}
+        <section className="border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10">
+          <div className="mx-auto max-w-[1000px]">
+            <div className="mx-auto mb-9 max-w-[720px] text-center">
+              <Eyebrow>A peek inside</Eyebrow>
+              <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
+                This is what{' '}
+                <em className="font-display not-italic text-forest">your kids open.</em>
+              </h2>
+              <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
+                Two explorers, one trail, and the next real-world stop already
+                picked for you. The map fills in with gear and progress as your
+                family goes.
+              </p>
+            </div>
+            <div className="mx-auto max-w-[820px]">
+              <TrailPreview />
+            </div>
           </div>
         </section>
 
