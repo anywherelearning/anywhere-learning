@@ -6,6 +6,7 @@ import StickyFounderBar from '@/components/join/StickyFounderBar';
 import JoinCta from '@/components/join/JoinCta';
 import HeroTrail from '@/components/join/HeroTrail';
 import ExplorerArrival from '@/components/join/ExplorerArrival';
+import { ExplorerFigure } from '@/components/account/ExplorerAvatar';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -66,6 +67,33 @@ function Eyebrow({
     >
       {children}
     </span>
+  );
+}
+
+/* ─── A faint dotted-trail divider between sections ─── */
+function TrailRule() {
+  return (
+    <div className="mx-auto flex max-w-[440px] items-center justify-center px-6 py-1" aria-hidden="true">
+      <svg width="100%" height="26" viewBox="0 0 440 26" fill="none" preserveAspectRatio="none">
+        <path d="M8 18 Q150 6 220 15 Q300 24 432 10" stroke="#c07a4a" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="1 13" opacity="0.45" />
+        <circle cx="8" cy="18" r="4.5" fill="#588157" opacity="0.85" />
+        <circle cx="220" cy="15" r="4.5" fill="#c07a4a" opacity="0.85" />
+        <circle cx="432" cy="10" r="4.5" fill="#588157" opacity="0.85" />
+      </svg>
+    </div>
+  );
+}
+
+/* ─── A small backpack accent (decorative member-zone gear) ─── */
+function Backpack({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} width="52" height="58" viewBox="0 0 52 58" fill="none" aria-hidden="true">
+      <path d="M18 14a8 8 0 0 1 16 0" stroke="#3d5c3b" strokeWidth="2.6" strokeLinecap="round" />
+      <rect x="8" y="13" width="36" height="40" rx="12" fill="#588157" />
+      <path d="M8 30h36" stroke="#3d5c3b" strokeWidth="2" opacity="0.4" />
+      <rect x="18" y="33" width="16" height="14" rx="5" fill="#e8c99a" />
+      <path d="M14 20c-3 1-5 4-5 8M38 20c3 1 5 4 5 8" stroke="#3d5c3b" strokeWidth="2.4" strokeLinecap="round" opacity="0.55" />
+    </svg>
   );
 }
 
@@ -518,6 +546,7 @@ export default async function JoinPage({
                 </span>
               ))}
             </div>
+            <TrailRule />
           </div>
         </section>
 
@@ -526,7 +555,8 @@ export default async function JoinPage({
             100th member joins, the entire section disappears so post-
             founder visitors don't see a stale "first 100" pitch. */}
         {m.isFounderPhase && (
-        <section className="px-6 py-14 max-md:py-10">
+        <section className="relative overflow-hidden px-6 py-14 max-md:py-10">
+          <Backpack className="pointer-events-none absolute left-[5%] top-20 hidden rotate-[-10deg] opacity-25 xl:block" />
           <div className="mx-auto max-w-[720px] rounded-[18px] border border-[#c4836a]/40 bg-[#f5e1d2] px-11 py-12 text-center shadow-[0_28px_50px_-32px_rgba(201,123,92,.5)] max-md:px-6 max-md:py-9">
             <Eyebrow className="text-[#7A3D24] before:bg-[#c4836a]">
               A note from Amelie
@@ -737,7 +767,9 @@ export default async function JoinPage({
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
+            <div className="relative">
+            <div aria-hidden="true" className="pointer-events-none absolute left-[16%] right-[16%] top-[53px] hidden border-t-2 border-dashed border-[#c07a4a]/40 md:block" />
+            <div className="relative grid gap-5 md:grid-cols-3">
               {[
                 {
                   num: 'i',
@@ -771,12 +803,14 @@ export default async function JoinPage({
                 </div>
               ))}
             </div>
+            </div>
 
             <p className="mx-auto mt-10 max-w-[720px] text-center text-[16.5px] leading-relaxed text-gray-500">
               Fill a stretch of trail and it opens into a new region. Every month
               brings fresh seasonal picks and one simple family challenge. It
               keeps going, so you never stare at a blank week again.
             </p>
+            <TrailRule />
           </div>
         </section>
 
@@ -848,12 +882,23 @@ export default async function JoinPage({
 
         {/* ═══ 7b. PICTURE A SATURDAY ═══ */}
         <section
-          className="border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10"
+          className="relative overflow-hidden border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10"
           style={{
             backgroundImage:
               'radial-gradient(ellipse 700px 440px at 50% 0%, rgba(255,255,255,0.6), transparent 65%), radial-gradient(ellipse 520px 360px at 80% 100%, rgba(235,205,179,0.3), transparent 70%)',
           }}
         >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 left-[4%] hidden w-[96px] xl:block"
+            style={{ filter: 'drop-shadow(0 8px 10px rgba(40,45,30,.22))' }}
+          >
+            <ExplorerFigure
+              avatar={{ base: 'girl', color: '#588157', skin: '#e5b48f', hair: '#3b2f27', hairStyle: 'ponytail' }}
+              gear={['big:backpack', 'everyday:sun-hat']}
+              fill
+            />
+          </div>
           <div className="mx-auto max-w-[720px] text-center">
             <Eyebrow>What this actually looks like</Eyebrow>
             <p className="mt-4 text-balance font-display text-[clamp(26px,3vw,34px)] leading-[1.35] text-gray-900">
