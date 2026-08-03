@@ -296,7 +296,6 @@ export default function AdventureMapHome({
   const [items, setItems] = useState<WeekItem[]>([]);
   const [avatars, setAvatars] = useState<Record<string, KidAvatar | null>>({});
   const [packByKid, setPackByKid] = useState<Record<string, EarnedGear[]>>({});
-  const [buildingFor, setBuildingFor] = useState<string | null>(null);
   const [editKids, setEditKids] = useState(false);
   const [busy, setBusy] = useState(false);
   const [detail, setDetail] = useState<GearDetail | null>(null);
@@ -541,6 +540,14 @@ export default function AdventureMapHome({
   function openMenu(_e: React.MouseEvent, kidId: string, ki: number, name: string) {
     setSel(ki);
     setMenuView('main');
+    setMenu({ kid: kidId, name });
+  }
+
+  // First-time build opens the same explorer pop-up as every later edit, jumped
+  // straight to the builder view — never the old inline card under the trail.
+  function openBuilder(kidId: string, ki: number, name: string) {
+    setSel(ki);
+    setMenuView('builder');
     setMenu({ kid: kidId, name });
   }
 
@@ -877,7 +884,7 @@ export default function AdventureMapHome({
                         <button
                           key={kid}
                           className={`am-token am-token-fam${on ? ' is-sel' : ''}`}
-                          onClick={(e) => (kav ? openMenu(e, kid, ki, childLabel(kd, ki)) : setBuildingFor(kid))}
+                          onClick={(e) => (kav ? openMenu(e, kid, ki, childLabel(kd, ki)) : openBuilder(kid, ki, childLabel(kd, ki)))}
                           aria-label={`${childLabel(kd, ki)}'s options`}
                           title={childLabel(kd, ki)}
                         >
@@ -895,7 +902,7 @@ export default function AdventureMapHome({
                     <div><ExplorerFigure avatar={av} gear={pack.map((g) => g.id)} fill /></div>
                   </button>
                 ) : (
-                  <button className="am-token" onClick={() => setBuildingFor(cid)} aria-label={`Build ${label}'s explorer`} style={{ fontSize: 11, fontWeight: 700, color: 'var(--am-flag)', padding: 8, textAlign: 'center' }}>Build {label}</button>
+                  <button className="am-token" onClick={() => openBuilder(cid, i, label)} aria-label={`Build ${label}'s explorer`} style={{ fontSize: 11, fontWeight: 700, color: 'var(--am-flag)', padding: 8, textAlign: 'center' }}>Build {label}</button>
                 )}
               </span>
 
@@ -1161,14 +1168,6 @@ export default function AdventureMapHome({
         )}
       </div>
 
-      {buildingFor && (
-        <ExplorerBuilder
-          kidName={children.map((kd, ki) => [kd.id ?? childLabel(kd, ki), childLabel(kd, ki)] as const).find(([id]) => id === buildingFor)?.[1] ?? ''}
-          initial={avatars[buildingFor] ?? null}
-          onSave={(a: KidAvatar) => { saveAvatar(buildingFor, a); setBuildingFor(null); load(); }}
-          onCancel={() => setBuildingFor(null)}
-        />
-      )}
       {editKids && <KidsSetup onDone={() => { setEditKids(false); load(); }} onSkip={() => setEditKids(false)} />}
       {planOpen && (
         <PlannerModal

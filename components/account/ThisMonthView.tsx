@@ -319,7 +319,7 @@ function EnrichRow({ extras, accent, accentDeep }: { extras?: SectionExtras; acc
     <div className="tm-cards">
       {/* 1 · Read this — a blog post, with its hero image */}
       {extras.read && (
-        <Link href={`/blog/${extras.read.slug}`} style={{ ...shade(0), textDecoration: 'none', color: 'inherit' }} className="tm-card">
+        <Link href={`/blog/${extras.read.slug}`} target="_blank" rel="noopener noreferrer" style={{ ...shade(0), textDecoration: 'none', color: 'inherit' }} className="tm-card">
           <span style={{ position: 'relative', display: 'block', aspectRatio: '16 / 9', overflow: 'hidden', background: hexToRgba(accent, 0.14) }}>
             {extras.read.heroImage ? (
               // eslint-disable-next-line @next/next/no-img-element
