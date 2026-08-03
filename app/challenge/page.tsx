@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import ChallengeSignup from "@/components/challenge/ChallengeSignup";
@@ -50,6 +51,10 @@ const eventLd = {
 };
 
 export default function ChallengePage() {
+  // Not open yet. See CHALLENGE.isLive in lib/challenge.ts for what has to
+  // exist before this page goes live.
+  if (!CHALLENGE.isLive) notFound();
+
   return (
     <>
       <script

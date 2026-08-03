@@ -16,6 +16,12 @@ import { CHALLENGE } from "@/lib/challenge";
  */
 export async function POST(request: NextRequest) {
   try {
+    // Signups are closed until the Kit sequence exists. Mirrors the 404 on
+    // /challenge so a direct POST cannot slip someone into an empty funnel.
+    if (!CHALLENGE.isLive) {
+      return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
     // Rate limit: 5 requests per 60 seconds (mirrors /api/subscribe).
     const limited = await checkRateLimit(request, strictLimiter());
     if (limited) return limited;

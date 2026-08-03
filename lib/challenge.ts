@@ -12,6 +12,18 @@ export const CHALLENGE = {
   name: 'The 5-Day Real-World Skills Challenge',
   shortName: '5-Day Challenge',
 
+  // ─── Kill switch ───
+  // While false, /challenge returns 404 and POST /api/challenge is rejected, so
+  // nobody can sign up and land in a Kit sequence that does not exist yet.
+  //
+  // Flip to true only once the Kit automation is built and connected: the
+  // welcome email (fires on signup), the "we start Monday" reminder, the five
+  // daily emails for Sept 14-18, the Day 5 founder pitch, and the two
+  // offer-close reminders for Sept 19 and 21.
+  //
+  // Do this before the Sept 1 invite posts go out, since every invite links here.
+  isLive: false,
+
   // Dates for cohort #1 (2026). Labels are pre-written so copy never has to
   // format a Date at render time. Moved Aug -> Sept 14-18: the founder is
   // traveling until Aug 19 and must be present daily to run it (the challenge's
