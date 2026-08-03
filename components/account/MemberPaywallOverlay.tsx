@@ -74,11 +74,11 @@ export default function MemberPaywallOverlay({
           clamp(48px,14vh,132px);font-family:'DM Sans',system-ui,sans-serif}
         .mpw-blur{position:absolute;inset:0;backdrop-filter:blur(7px);
           -webkit-backdrop-filter:blur(7px);
-          -webkit-mask-image:linear-gradient(to bottom,transparent 26%,#000 52%);
-          mask-image:linear-gradient(to bottom,transparent 26%,#000 52%)}
+          -webkit-mask-image:linear-gradient(to bottom,transparent 44%,#000 66%);
+          mask-image:linear-gradient(to bottom,transparent 44%,#000 66%)}
         .mpw-tint{position:absolute;inset:0;background:linear-gradient(to bottom,
-          rgba(250,249,246,0) 22%,rgba(250,249,246,.55) 44%,
-          rgba(250,249,246,.94) 62%,var(--am-bg1,#faf9f6) 78%)}
+          rgba(250,249,246,0) 40%,rgba(250,249,246,.5) 58%,
+          rgba(250,249,246,.92) 74%,var(--am-bg1,#faf9f6) 88%)}
         .mpw-card{position:relative;text-align:center;max-width:440px;width:100%;
           display:flex;flex-direction:column;align-items:center;gap:14px}
         .mpw-eyebrow{display:inline-flex;align-items:center;gap:7px;

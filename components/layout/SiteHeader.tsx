@@ -69,7 +69,6 @@ const MEMBER_NAV_ITEMS = [
   { href: '/account/home', label: 'Home' },
   { href: '/account/this-month', label: 'This Month' },
   { href: '/account', label: 'Library' },
-  { href: '/account/plan', label: 'My Plan' },
   { href: '/account/record', label: 'Record' },
 ];
 
@@ -339,30 +338,7 @@ export default function SiteHeader() {
             <div className="flex items-center gap-3 lg:gap-4">
               {auth.isSignedIn ? (
                 <>
-                  {hasAccess ? (
-                    <>
-                      <Link
-                        href="/account/plan"
-                        className="hidden lg:inline-flex items-center gap-2 bg-forest text-cream font-body font-semibold text-[14.5px] px-3.5 py-1.5 rounded-full no-underline hover:bg-forest-dark transition-colors"
-                      >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <rect x="3" y="5" width="18" height="16" rx="2" />
-                          <path d="M3 9h18M8 3v4M16 3v4" />
-                        </svg>
-                        My Plan
-                      </Link>
-                      <Link
-                        href="/account"
-                        className="hidden lg:inline-flex items-center gap-2 text-forest-dark font-body font-medium text-[14.5px] px-3.5 py-1.5 rounded-full no-underline hover:bg-[#E6EBDF] hover:text-forest transition-colors"
-                      >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z" />
-                          <path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z" />
-                        </svg>
-                        My Library
-                      </Link>
-                    </>
-                  ) : (
+                  {hasAccess ? null : (
                     <>
                       <Link
                         href="/free-guide"
@@ -417,42 +393,7 @@ export default function SiteHeader() {
                           )}
                         </div>
                         {hasAccess && (
-                          <>
-                            <AccountMenuItem href="/account">
-                              <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                aria-hidden="true"
-                              >
-                                <path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z" />
-                                <path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z" />
-                              </svg>
-                              My Library
-                            </AccountMenuItem>
-                            <AccountMenuItem href="/account/plan">
-                              <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                aria-hidden="true"
-                              >
-                                <rect x="3" y="5" width="18" height="16" rx="2" />
-                                <path d="M3 9h18M8 3v4M16 3v4" />
-                              </svg>
-                              My Plan
-                            </AccountMenuItem>
-                          </>
+                          <AccountMenuItem href="/account/home">Go to Home</AccountMenuItem>
                         )}
                         <AccountMenuItem href="/account/settings">Account settings</AccountMenuItem>
                         <AccountMenuItem href="/contact">Help &amp; support</AccountMenuItem>
@@ -552,54 +493,6 @@ export default function SiteHeader() {
             )}
 
             <ul className="list-none p-0 m-0 flex flex-col">
-              {hasAccess && (
-                <>
-                <li>
-                  <Link
-                    href="/account/plan"
-                    className="flex items-center gap-2.5 py-4 border-b border-[#D8D4C5] font-display text-[24px] text-forest-dark no-underline"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="3" y="5" width="18" height="16" rx="2" />
-                      <path d="M3 9h18M8 3v4M16 3v4" />
-                    </svg>
-                    My Plan
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/account"
-                    className="flex items-center gap-2.5 py-4 border-b border-[#D8D4C5] font-display text-[24px] text-forest-dark no-underline"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z" />
-                      <path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z" />
-                    </svg>
-                    My Library
-                  </Link>
-                </li>
-                </>
-              )}
               {hasAccess ? (
                 MEMBER_NAV_ITEMS.map((item) => (
                   <li key={item.href}>
@@ -643,10 +536,10 @@ export default function SiteHeader() {
                 <>
                   {hasAccess ? (
                     <Link
-                      href="/account/plan"
+                      href="/account/home"
                       className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 bg-forest text-cream font-body font-semibold text-[15px] py-3.5 px-5 rounded-xl no-underline hover:bg-forest-dark transition-all"
                     >
-                      My Plan &rarr;
+                      Go to Home &rarr;
                     </Link>
                   ) : (
                     <>

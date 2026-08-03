@@ -43,6 +43,14 @@ function childLabel(c: Child, i: number) {
   return c.name.trim() || `Child ${i + 1}`;
 }
 
+// Generic sample explorers for the guest teaser, so a signed-in non-member
+// sees an appealing populated trail (not a bare setup screen, and never a real
+// or stale family's names) behind the paywall. Fictional, illustrative only.
+const DEMO_KIDS: Child[] = [
+  { id: 'demo-a', name: 'Maya', age: 8 },
+  { id: 'demo-b', name: 'Theo', age: 11 },
+];
+
 // One trail shape per leg (cycled by leg index) so consecutive legs feel
 // different — rolling, zigzagging, climbing. All keep the same contract: 12
 // stops from the bottom-left to the right edge, evenly-ish spaced, with the
@@ -283,7 +291,13 @@ function MonthMedal({ entry, onOpen }: { entry: MonthChallengeEntry; onOpen: (e:
   );
 }
 
-export default function AdventureMapHome({ activities }: { activities: PlanActivity[] }) {
+export default function AdventureMapHome({
+  activities,
+  preview = false,
+}: {
+  activities: PlanActivity[];
+  preview?: boolean;
+}) {
   const [ready, setReady] = useState(false);
   const [children, setChildren] = useState<Child[]>([]);
   const [sel, setSel] = useState(0);
@@ -324,6 +338,18 @@ export default function AdventureMapHome({ activities }: { activities: PlanActiv
   }
 
   function load() {
+    // Guest teaser: ignore localStorage entirely and show a generic demo trail.
+    // Keeps the paywalled backdrop appealing and free of any real/stale family.
+    if (preview) {
+      setChildren(DEMO_KIDS);
+      setItems([]);
+      setAvatars({});
+      setPackByKid({});
+      setQuest(null);
+      setMedals([]);
+      setReady(true);
+      return;
+    }
     const p = loadProfile();
     const kids = p?.children ?? [];
     setChildren(kids);
@@ -370,7 +396,7 @@ export default function AdventureMapHome({ activities }: { activities: PlanActiv
   const prefs = loadPrefs();
   const enabledTerritories = new Set(prefs.territories);
   const enabledEfforts = new Set(prefs.efforts);
-  const family = (walkMode() ?? 'family') === 'family'; // one shared trail (default) vs per-kid
+  const family = preview ? true : (walkMode() ?? 'family') === 'family'; // one shared trail (default) vs per-kid
   const sideBySide = family && children.length > 1;
   const familyName = (() => {
     const ns = children.map((kd, ki) => childLabel(kd, ki));
