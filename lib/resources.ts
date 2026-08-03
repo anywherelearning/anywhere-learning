@@ -2209,6 +2209,7 @@ const resources: ResourcePage[] = [
       'what-to-do-when-kids-say-im-bored',
       'financial-literacy-for-kids-by-age',
       'how-to-raise-independent-kids',
+      'teaching-empathy-to-kids',
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
