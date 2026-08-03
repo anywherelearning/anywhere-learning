@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: 'Anywhere Learning | Life Skills Activities for Kids',
   },
   description:
-    'One real-world activity a week, already chosen, with nothing to plan or print. Cooking, budgeting, building, problem-solving, designed by a teacher. Ages 6-14.',
+    'Open a guide and do something real together, at whatever pace fits your week. Nothing to plan, nothing to print. Cooking, budgeting, building, problem-solving. Ages 6-14.',
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -138,9 +138,10 @@ export default async function HomePage() {
                   </h1>
                 </div>
                 <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
-                  One real-world activity a week, already chosen, with nothing to plan or print.
-                  Cooking, budgeting, building, problem-solving, designed by a teacher to fill
-                  the gap between what schools test and what life requires.
+                  Open a guide and do something real together, at whatever pace fits your week.
+                  Nothing to plan, nothing to print. Cooking, budgeting, building,
+                  problem-solving, designed by a teacher to fill the gap between what schools
+                  test and what life requires.
                 </p>
                 <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
                   <Link
@@ -233,14 +234,17 @@ export default async function HomePage() {
                   );
                 })}
 
-                {/* Rhythm sticker. Deliberately NOT the catalog size: the VOC research
+                {/* Open-and-go sticker. Deliberately NOT the catalog size: the VOC research
                     found a big library number reads as "more shelf to abandon" to a parent
                     who already feels behind. 120+ still appears further down the page,
-                    where it lands as reassurance rather than homework. */}
+                    where it lands as reassurance rather than homework.
+                    Equally deliberately NOT a cadence ("one a week"): families do more when
+                    they want and less when an activity turns into a longer project, and the
+                    flexibility is the product. Promise low friction, never a schedule. */}
                 <div className="absolute right-[-40px] bottom-[-30px] sm:right-[-40px] sm:bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
                   <span>
-                    <span className="block text-[28px] max-sm:text-2xl mb-1">One</span>
-                    a week
+                    <span className="block text-[28px] max-sm:text-2xl mb-1">Open</span>
+                    and go
                     <span className="block text-[10px] max-sm:text-[8.5px] not-italic uppercase tracking-[0.15em] max-sm:tracking-[0.04em] opacity-95 mt-1 font-semibold font-body">Nothing to plan</span>
                   </span>
                 </div>

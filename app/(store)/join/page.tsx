@@ -598,9 +598,9 @@ export default async function JoinPage({
                 And on the number itself: it lands about where a family museum
                 membership does. The difference is you use this one{' '}
                 <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  every week
-                </em>{' '}
-                instead of twice a year.
+                  all year
+                </em>
+                , not twice.
               </p>
               <p className="mb-3.5">
                 Why cap it at 100? Because when the 100th member joins, the
