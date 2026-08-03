@@ -14,6 +14,8 @@ import {
   MONTHLY_PRICE_USD,
   MONTHLY_PLAN_PRICE_MONTH,
 } from '@/lib/membership';
+import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
+import { getFallbackProducts } from '@/lib/fallback-products';
 
 const FOUNDER_FLOOR = 12;
 // TODO: replace with real subscriber count from DB when membership is live
@@ -66,63 +68,49 @@ function Eyebrow({
   );
 }
 
-/* ─── Categories data ─── */
-const categories = [
-  {
-    name: 'Real-World Math',
-    desc: 'Budgeting a grocery run, planning a meal, running a garage sale, tracking savings. Math that lives outside the workbook.',
-    count: 13,
-    ages: '6–14',
-  },
-  {
-    name: 'Planning & Problem-Solving',
-    desc: 'Planning a road trip, redesigning something broken, packing like a pro, building an emergency plan. Figuring things out before asking.',
-    count: 14,
-    ages: '6–14',
-  },
-  {
-    name: 'Entrepreneurship',
-    desc: 'Building a brand, running a pricing experiment, pitching an idea, designing a product. Real business thinking, kid-sized.',
-    count: 11,
-    ages: '6–14',
-  },
-  {
-    name: 'Communication & Writing',
-    desc: 'Writing a real review, interviewing a neighbour, running a family debate night, creating a mini magazine. Words that go somewhere.',
-    count: 11,
-    ages: '6–14',
-  },
-  {
-    name: 'AI & Digital Literacy',
-    desc: 'Spotting deepfakes, prompting AI like a coach, mapping a digital footprint, catching hallucinations. Smart kids, smarter tech habits.',
-    count: 11,
-    ages: '9–14',
-  },
-  {
-    name: 'Creativity',
-    desc: 'Building a Rube Goldberg machine, inventing a sport, designing a theme park, making a mini movie. Not crafts. Real making.',
-    count: 10,
-    ages: '6–14',
-  },
-  {
-    name: 'Outdoor & Nature',
-    desc: 'Seasonal outdoor packs, nature journals, STEM challenges, land art, learning missions. Four seasons of getting outside.',
-    count: 11,
-    ages: '6–14',
-  },
-  {
-    name: 'Worldschooling',
-    desc: 'Exploring currencies, interviewing locals, mapping streets, comparing everyday life across cultures. Learning that starts wherever you are.',
-    count: 10,
-    ages: '6–14',
-  },
-  {
-    name: 'Emotional & Social Skills',
-    desc: 'Building a calm-down toolkit, naming big feelings, sitting with boredom, repairing after a fight, taking on a solo mission. The inner skills that run everything else.',
-    count: 12,
-    ages: '6–14',
-  },
+/* ─── Skills Map areas (the member-zone taxonomy) ─── */
+// Marketing copy + display order for the 12 Future-Ready Skills Map areas.
+// Names, colors, and counts come from the member-zone source of truth
+// (TERRITORIES + territoriesForSlug) so the sales page can't drift from what a
+// member actually sees inside. Searchable topic terms (entrepreneurship,
+// worldschooling, outdoor/nature) are woven into the descriptions so we keep
+// the SEO value the old topic categories carried.
+const AREA_COPY: { slug: string; desc: string; ages: string }[] = [
+  { slug: 'math', desc: 'Budgeting a grocery run, planning a meal, running a garage sale, tracking savings. Math that lives outside the workbook.', ages: '6–14' },
+  { slug: 'life-skills', desc: 'Cooking a meal, running errands, and real kid-sized entrepreneurship: building a brand, pricing a product, pitching an idea. The stuff school skips.', ages: '6–14' },
+  { slug: 'critical-thinking', desc: 'Planning a road trip, redesigning something broken, packing like a pro, solving a mystery. Figuring things out before asking.', ages: '6–14' },
+  { slug: 'creativity', desc: 'Building a Rube Goldberg machine, inventing a sport, designing a theme park, making a mini movie. Not crafts. Real making.', ages: '6–14' },
+  { slug: 'ai-digital', desc: 'Spotting deepfakes, prompting AI like a coach, mapping a digital footprint, catching hallucinations. Smart kids, smarter tech habits.', ages: '9–14' },
+  { slug: 'communication', desc: 'Interviewing a neighbour, running a debate night, pitching an idea, ordering for the table. Speaking up and being understood.', ages: '6–14' },
+  { slug: 'physical', desc: 'Seasonal outdoor packs, nature journals, land art, backyard STEM. Four seasons of real outdoor and nature learning.', ages: '6–14' },
+  { slug: 'citizenship', desc: 'Giving back to the neighbourhood, comparing everyday life across cultures, interviewing locals. Worldschooling and good-human skills, wherever you are.', ages: '6–14' },
+  { slug: 'writing', desc: 'Writing a real review, a letter that gets sent, a family newsletter, a mini magazine. Words that go somewhere.', ages: '6–14' },
+  { slug: 'emotional', desc: 'Building a calm-down toolkit, naming big feelings, sitting with boredom, repairing after a fight. The inner skills that run everything else.', ages: '6–14' },
+  { slug: 'self-management', desc: 'Setting a goal and following through, managing time, starting the hard thing, finishing what they begin. The focus and follow-through muscles.', ages: '6–14' },
+  { slug: 'reading-media', desc: 'Reading for meaning, telling a real source from a fake one, seeing how media tries to pull them. Making sense of a noisy world.', ages: '6–14' },
 ];
+
+// Real per-area counts, computed the same way the member Library does: an
+// activity builds several areas, so it counts toward each one it develops.
+const areaActivityCounts: Record<string, number> = (() => {
+  const counts: Record<string, number> = {};
+  for (const p of getFallbackProducts()) {
+    if (p.category === 'bundle' || p.category === 'start-here') continue;
+    for (const t of territoriesForSlug(p.slug)) counts[t] = (counts[t] ?? 0) + 1;
+  }
+  return counts;
+})();
+
+const categories = AREA_COPY.map((a) => {
+  const terr = TERRITORIES.find((t) => t.slug === a.slug);
+  return {
+    name: terr?.name ?? a.slug,
+    color: terr?.color ?? '#588157',
+    desc: a.desc,
+    ages: a.ages,
+    count: areaActivityCounts[a.slug] ?? 0,
+  };
+});
 
 export default async function JoinPage({
   searchParams,
@@ -664,7 +652,7 @@ export default async function JoinPage({
             {/* Stats row */}
             <div className="mb-8 flex flex-wrap justify-center gap-x-11 gap-y-5">
               {[
-                { n: '9', label: 'Categories' },
+                { n: '12', label: 'Skill areas' },
                 { n: '120+', label: 'Activities' },
                 { n: '6–14', label: 'Ages' },
                 { n: '3', label: 'Levels each' },
@@ -688,7 +676,8 @@ export default async function JoinPage({
                   key={cat.name}
                   className="rounded-[14px] border border-gray-200 bg-cream px-5 py-6 transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(45,58,46,.25)]"
                 >
-                  <h3 className="mb-2 font-display text-2xl leading-tight tracking-tight text-gray-900">
+                  <h3 className="mb-2 flex items-center gap-2.5 font-display text-2xl leading-tight tracking-tight text-gray-900">
+                    <span className="h-2.5 w-2.5 flex-shrink-0 rounded-full" style={{ background: cat.color }} aria-hidden="true" />
                     {cat.name}
                   </h3>
                   <p className="text-[14.5px] leading-relaxed text-gray-500">
@@ -706,7 +695,7 @@ export default async function JoinPage({
 
             {/* Coming soon note */}
             <p className="mt-6 text-center text-[14px] text-gray-400">
-              More categories coming soon.
+              New activities added to these areas every quarter.
             </p>
 
             {/* Levels note */}
