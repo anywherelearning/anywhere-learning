@@ -143,7 +143,7 @@ export default function RootLayout({
                   "sameAs": [
                     "https://ca.pinterest.com/anywherelearning/",
                     "https://www.instagram.com/anywherelearning",
-                    "https://www.facebook.com/profile.php?id=61587630845193",
+                    "https://www.facebook.com/anywherelearning.co",
                     "https://www.youtube.com/@Anywhere_Learning",
                     "https://www.teacherspayteachers.com/store/anywhere-learning-studio",
                     "https://www.wikidata.org/wiki/Q139595762",

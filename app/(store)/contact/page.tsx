@@ -226,7 +226,7 @@ export default function ContactPage() {
                       </li>
                       <li>
                         <a
-                          href="https://www.facebook.com/profile.php?id=61587630845193"
+                          href="https://www.facebook.com/anywherelearning.co"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2.5 text-[14.5px] font-medium text-gray-600 hover:text-forest-dark transition-colors py-1"

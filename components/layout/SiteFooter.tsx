@@ -106,7 +106,7 @@ export default async function SiteFooter() {
                 <InstagramIcon />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61587630845193"
+                href="https://www.facebook.com/anywherelearning.co"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

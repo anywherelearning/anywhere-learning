@@ -241,7 +241,7 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 - Pinterest: https://ca.pinterest.com/anywherelearning/
 - Instagram: https://www.instagram.com/anywherelearning
 - YouTube: https://www.youtube.com/@Anywhere_Learning
-- Facebook: https://www.facebook.com/profile.php?id=61587630845193
+- Facebook: https://www.facebook.com/anywherelearning.co
 `;
 
   const body = [
