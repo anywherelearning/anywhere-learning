@@ -375,11 +375,12 @@ export default async function JoinPage({
               </div>
 
               <p className="mt-5 max-w-[540px] text-[20px] leading-relaxed text-gray-500">
-                120+ guided activities that teach the life skills school
-                doesn't: cooking, budgeting, self-regulation, problem-solving,
-                real-world math, and more. Built by a teacher who left the
-                classroom to have more time to get her kids ready for
-                life. Just {m.priceMonth}, billed yearly.
+                A guided trail of real-world activities that teach the life
+                skills school doesn't: cooking, budgeting, self-regulation,
+                problem-solving, real-world math, and more. We hand you the next
+                one; you just do it together. From a teacher who left the
+                classroom to get her own kids ready for life. Just{' '}
+                {m.priceMonth}, billed yearly.
               </p>
 
               <div className="mt-6">
@@ -646,17 +647,17 @@ export default async function JoinPage({
         >
           <div className="mx-auto max-w-[1120px]">
             <div className="mx-auto mb-10 max-w-[760px] text-center">
-              <Eyebrow>What's inside</Eyebrow>
+              <Eyebrow>Where the trail leads</Eyebrow>
               <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
-                120+ activities.{' '}
-                <em className="font-display not-italic text-forest">One yes.</em>
+                The whole map.{' '}
+                <em className="font-display not-italic text-forest">One trail.</em>
               </h2>
               <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
-                Families use these activities to budget a grocery run, plan a
-                Saturday on public transit, finish hard puzzles, and survive
-                rainy afternoons with something better than a screen. The
-                categories below are how we organize them, but the point is the
-                doing, not the taxonomy.
+                Your family's trail winds through every area below, so kids
+                budget a grocery run, plan a Saturday on transit, finish hard
+                puzzles, and trade rainy afternoons for something better than a
+                screen. You never assemble a curriculum. We plot the route; you
+                do the next thing together.
               </p>
             </div>
 
@@ -750,14 +751,15 @@ export default async function JoinPage({
             <div className="mx-auto mb-10 max-w-[760px] text-center">
               <Eyebrow>How it works</Eyebrow>
               <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
-                Three steps.{' '}
+                It's a trail,{' '}
                 <em className="font-display not-italic text-forest">
-                  That's it.
+                  not a library.
                 </em>
               </h2>
               <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
-                No printing. No prep nights. No new app to learn at 10pm. Open
-                it, pick something, do it together.
+                You don't dig through a giant list wondering what's worth your
+                time. We hand you the next real-world activity for your family,
+                you do it together, and your kids climb the trail as you go.
               </p>
             </div>
 
@@ -765,18 +767,18 @@ export default async function JoinPage({
               {[
                 {
                   num: 'i',
-                  title: 'Join',
-                  desc: `${m.price} for the year or ${MONTHLY_PLAN_PRICE_MONTH}, your pick. Instant access to all categories and the full library. Works on any phone, tablet or laptop.`,
+                  title: 'Set up your explorers',
+                  desc: "Tell us your kids' names and ages and the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail.",
                 },
                 {
                   num: 'ii',
-                  title: 'Browse',
-                  desc: "Pick by mood, by weather, by what's in the fridge, or by what your kid needs to grow into next. Browse by category and jump in.",
+                  title: 'We pick your next stop',
+                  desc: "No scrolling, no second-guessing. We choose the next activity for you, matched to your kids and the time you've got. Not feeling it? Swap it, or skip the whole area in a tap.",
                 },
                 {
                   num: 'iii',
-                  title: 'Do it together',
-                  desc: 'Each activity has a short parent prep, a clear walkthrough, and the "what to say when they get stuck" script. Then you go live it.',
+                  title: 'Do it together, mark it reached',
+                  desc: 'Open the guide, live it together, then tap "We reached it." Your explorers move forward and earn gear, and everything you finish saves into a record you can print anytime.',
                 },
               ].map((step) => (
                 <div
@@ -795,6 +797,12 @@ export default async function JoinPage({
                 </div>
               ))}
             </div>
+
+            <p className="mx-auto mt-10 max-w-[720px] text-center text-[16.5px] leading-relaxed text-gray-500">
+              Fill a stretch of trail and it opens into a new region. Every month
+              brings fresh seasonal picks and one simple family challenge. It
+              keeps going, so you never stare at a blank week again.
+            </p>
           </div>
         </section>
 
@@ -881,8 +889,9 @@ export default async function JoinPage({
               </em>
             </p>
             <p className="mt-8 text-[16.5px] leading-relaxed text-gray-500">
-              It's a regular afternoon. You pull up an activity on your phone
-              and walk her through the first step. Today it's{' '}
+              It's a regular afternoon. You open the app and it's already picked
+              today's stop, so you just walk her through the first step. Today
+              it's{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 planning dinner.
               </em>

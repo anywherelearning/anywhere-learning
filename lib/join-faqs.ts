@@ -27,7 +27,7 @@ export const joinFaqs = [
   },
   {
     q: 'How is this different from Pinterest activities?',
-    a: 'Pinterest gives you ideas. Anywhere Learning gives you step-by-step guides designed by a teacher, with three skill levels per activity (Explore / Develop / Extend) so it grows with your kids. Everything is low-prep, no printing required, and you can open it on any device.',
+    a: "Pinterest gives you ten thousand ideas and no plan. Anywhere Learning picks your family's next activity for you, hands you a teacher-designed guide with three skill levels (Explore / Develop / Extend) so it grows with your kids, and tracks the whole journey on your trail as you go. Low-prep, no printing required, on any device. You stop collecting ideas and actually do them.",
   },
   {
     q: 'What ages does this actually work for?',
