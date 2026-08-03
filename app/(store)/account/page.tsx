@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
@@ -84,12 +83,10 @@ export default async function AccountPage({
   const sp = await searchParams;
   const { tier, trialEndsAt, stripePriceId } = await detectTier(sp);
 
-  // Guest = no active membership. The library dashboard has nothing useful to
-  // show them. Bounce to /join with a contextual banner so they know why they
-  // landed there.
-  if (tier === 'guest') {
-    redirect('/join?from=account&reason=no-access');
-  }
+  // Guests (signed in, no active membership) are no longer bounced here: the
+  // account layout renders the soft-paywall teaser over every member page,
+  // including this one, so the library shows through the blur as a preview.
+  // We still resolve tier above so trial vs member rendering stays correct.
 
   // Pull the signed-in user's first name from Clerk. Fall back to the ?name
   // query param (used by the sandbox tier preview) or 'Member' if neither.

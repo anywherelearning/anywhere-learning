@@ -25,7 +25,10 @@ export interface DashboardActivity {
   imageUrl?: string | null;
 }
 
-type Tier = 'member' | 'trial';
+// 'guest' renders the full library as a preview; the account layout covers it
+// with the soft-paywall teaser. Guests are treated like members here (no trial
+// banner, no download cap) since the teaser sits on top regardless.
+type Tier = 'member' | 'trial' | 'guest';
 
 export interface TrialInfo {
   /** ISO date the trial converts to a paid membership. */
