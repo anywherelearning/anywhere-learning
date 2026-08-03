@@ -92,8 +92,8 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
           headlinePrefix: 'Start with three activities we',
           headlineEm: 'picked for you.',
           body: 'We curated a starting trio based on what tends to land best for new members. Open your library to see them.',
-          ctaLabel: 'Open my library',
-          ctaHref: '/account',
+          ctaLabel: 'Start our adventure',
+          ctaHref: '/account/welcome',
         },
         receipt: isTrial
           ? {
