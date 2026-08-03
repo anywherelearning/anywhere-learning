@@ -24,6 +24,17 @@ export interface Child {
   age?: number | null;
 }
 
+/**
+ * Generic sample explorers for the guest teaser (Home + Record). A signed-in
+ * non-member sees this fictional family behind the paywall instead of their
+ * own (possibly empty or stale) data. Illustrative only — keep the two names
+ * in sync wherever the demo trail/record renders.
+ */
+export const DEMO_KIDS: Child[] = [
+  { id: 'demo-a', name: 'Maya', age: 8 },
+  { id: 'demo-b', name: 'Theo', age: 11 },
+];
+
 export function genChildId(): string {
   return `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
 }

@@ -20,7 +20,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { loadProfile, childAge, type Child } from '@/lib/member-profile';
+import { loadProfile, childAge, DEMO_KIDS, type Child } from '@/lib/member-profile';
 import { loadWeek, removeItem, FAMILY_TARGET, type WeekItem } from '@/lib/week';
 import { markDone as markDoneStatus } from '@/lib/account-status';
 import { recordCompletion, completionLog } from '@/lib/completions';
@@ -42,14 +42,6 @@ import type { Effort } from '@/lib/activity-effort';
 function childLabel(c: Child, i: number) {
   return c.name.trim() || `Child ${i + 1}`;
 }
-
-// Generic sample explorers for the guest teaser, so a signed-in non-member
-// sees an appealing populated trail (not a bare setup screen, and never a real
-// or stale family's names) behind the paywall. Fictional, illustrative only.
-const DEMO_KIDS: Child[] = [
-  { id: 'demo-a', name: 'Maya', age: 8 },
-  { id: 'demo-b', name: 'Theo', age: 11 },
-];
 
 // One trail shape per leg (cycled by leg index) so consecutive legs feel
 // different — rolling, zigzagging, climbing. All keep the same contract: 12

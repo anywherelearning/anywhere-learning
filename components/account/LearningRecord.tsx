@@ -10,7 +10,7 @@
  */
 
 import { useMemo, useState, useRef } from 'react';
-import { childAge, loadProfile, type Child } from '@/lib/member-profile';
+import { childAge, loadProfile, DEMO_KIDS, type Child } from '@/lib/member-profile';
 import { completionLog } from '@/lib/completions';
 import { productDescriptions } from '@/lib/product-descriptions';
 import { getProductSkills } from '@/lib/skills';
@@ -156,7 +156,13 @@ function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-export default function LearningRecord({ activities }: { activities: PlanActivity[] }) {
+export default function LearningRecord({
+  activities,
+  preview = false,
+}: {
+  activities: PlanActivity[];
+  preview?: boolean;
+}) {
   const [children, setChildren] = useState<Child[]>([]);
   const [kidIdx, setKidIdx] = useState(0);
   const [range, setRange] = useState<RangeId>('all');
@@ -252,12 +258,20 @@ export default function LearningRecord({ activities }: { activities: PlanActivit
   }, [rangeOpen]);
 
   useEffect(() => {
+    // Guest teaser: show the generic demo family (matches the Home trail), not
+    // the browser's real or stale data. The record rows stay empty (blurred
+    // behind the paywall anyway); the point is the chips/header read Maya & Theo.
+    if (preview) {
+      setChildren(DEMO_KIDS);
+      setReady(true);
+      return;
+    }
     setChildren(loadProfile()?.children ?? []);
     setPhotos(loadPhotos());
     setCustomSkills(loadCustomSkills());
     setOverrides(loadOverrides());
     setReady(true);
-  }, []);
+  }, [preview]);
 
   const bySlug = useMemo(() => {
     const m = new Map<string, PlanActivity>();
