@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import { ExplorerFigure } from '@/components/account/ExplorerAvatar';
 
 /**
@@ -14,32 +15,41 @@ const KID_A = { base: 'girl', color: '#588157', skin: '#e5b48f', hair: '#3b2f27'
 const KID_B = { base: 'boy', color: '#c4836a', skin: '#c98d5f', hair: '#1c1917', hairStyle: 'short' };
 
 export default function HeroTrail() {
+  // Unique gradient ids per instance. The hero renders twice on the page (a
+  // hidden mobile copy + the visible desktop copy); shared ids made the visible
+  // SVG's fills resolve to the hidden copy's gradients, so the sky/hills/meadow
+  // didn't paint on desktop. useId() keeps each instance's defs its own.
+  const uid = useId().replace(/:/g, '');
+  const sky = `${uid}-sky`;
+  const hill = `${uid}-hill`;
+  const mead = `${uid}-mead`;
+  const sun = `${uid}-sun`;
   return (
     <div className="ht">
       <svg className="ht-bg" viewBox="0 0 440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
-          <linearGradient id="htSky" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={sky} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#d7e7e7" />
             <stop offset="1" stopColor="#e6efe4" />
           </linearGradient>
-          <linearGradient id="htHill" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={hill} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#dccb9f" />
             <stop offset="1" stopColor="#cfc191" />
           </linearGradient>
-          <linearGradient id="htMead" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={mead} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#93ac7a" />
             <stop offset="1" stopColor="#7f9c6c" />
           </linearGradient>
-          <radialGradient id="htSun" cx="50%" cy="50%" r="50%">
+          <radialGradient id={sun} cx="50%" cy="50%" r="50%">
             <stop offset="0" stopColor="#f6df9a" stopOpacity="0.95" />
             <stop offset="0.6" stopColor="#f2d27f" stopOpacity="0.45" />
             <stop offset="1" stopColor="#f2d27f" stopOpacity="0" />
           </radialGradient>
         </defs>
-        <rect width="440" height="560" fill="url(#htSky)" />
-        <circle cx="288" cy="132" r="106" fill="url(#htSun)" />
-        <path d="M0 225 Q140 185 285 220 Q380 244 440 214 L440 560 L0 560 Z" fill="url(#htHill)" />
-        <path d="M0 330 Q150 292 300 330 Q385 352 440 322 L440 560 L0 560 Z" fill="url(#htMead)" />
+        <rect width="440" height="560" fill={`url(#${sky})`} />
+        <circle cx="288" cy="132" r="106" fill={`url(#${sun})`} />
+        <path d="M0 225 Q140 185 285 220 Q380 244 440 214 L440 560 L0 560 Z" fill={`url(#${hill})`} />
+        <path d="M0 330 Q150 292 300 330 Q385 352 440 322 L440 560 L0 560 Z" fill={`url(#${mead})`} />
         {/* winding trail from the explorers up into the hills */}
         <path d="M205 540 C 262 475, 172 442, 250 392 C 322 345, 300 292, 372 250" fill="none" stroke="#c07a4a" strokeWidth="8" strokeLinecap="round" strokeDasharray="2 22" opacity="0.85" />
         {/* trees */}
