@@ -392,7 +392,7 @@ export default async function ProductPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Library", item: "https://anywherelearning.co/shop" },
+      { "@type": "ListItem", position: 1, name: "Activities", item: "https://anywherelearning.co/shop" },
       {
         "@type": "ListItem",
         position: 2,
@@ -427,7 +427,7 @@ export default async function ProductPage({
             className="py-3.5 flex items-center gap-2.5 flex-wrap text-[13px] text-gray-500"
           >
             <Link href="/shop" className="hover:text-forest-dark transition-colors">
-              Library
+              Activities
             </Link>
             <span className="text-[#C9C5B7]" aria-hidden="true">›</span>
             <Link
@@ -907,7 +907,7 @@ export default async function ProductPage({
                 <em className="not-italic italic text-forest-dark">120+ in the membership.</em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
-                The full library covers nine categories (math, AI, communication, planning,
+                The membership covers nine topics (math, AI, communication, planning,
                 creativity, outdoor, entrepreneurship, worldschooling, and emotional & social skills) with new activities every
                 quarter. {MEMBERSHIP_PRICE_YEAR}
                 {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}

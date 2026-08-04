@@ -23,14 +23,14 @@ import {
 } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: 'The Library',
+  title: 'All Activities: Life Skills for Kids Ages 6 to 14',
   description:
-    'A toolkit for real life. Hands-on activities for the skills modern childhood does not make space for. Cooking, budgeting, building, pitching, planning. Designed by a teacher, for parents who want their kids capable, ready for real life.',
+    'Every hands-on, real-world life-skills activity for kids ages 6 to 14, in one membership. Cooking, budgeting, building, pitching, planning. Designed by a teacher for homeschool and busy families who want their kids capable and ready for real life.',
   alternates: { canonical: 'https://anywherelearning.co/shop' },
   openGraph: {
-    title: 'The Library | Anywhere Learning',
+    title: 'All Activities: Life Skills for Kids Ages 6 to 14 | Anywhere Learning',
     description:
-      'A toolkit for real life. 120+ hands-on activities across nine categories, for kids 6 to 14.',
+      'Every hands-on, real-world life-skills activity for kids ages 6 to 14, across nine topics. One membership, and we pick your family\'s next activity for you.',
     url: 'https://anywherelearning.co/shop',
     type: 'website',
   },
@@ -392,9 +392,9 @@ export default function ShopPage() {
   const collectionLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'The Library',
+    name: 'All Activities: Life Skills for Kids Ages 6 to 14',
     description:
-      'A toolkit for real life. 120+ hands-on activities across nine categories, for kids 6 to 14.',
+      '120+ hands-on, real-world life-skills activities across nine topics, for kids ages 6 to 14. All included in one membership.',
     url: 'https://anywherelearning.co/shop',
     publisher: {
       '@type': 'Organization',
@@ -412,7 +412,7 @@ export default function ShopPage() {
     <div className="relative py-6">
       <div
         role="list"
-        aria-label="Library categories"
+        aria-label="Activity topics"
         className="relative flex items-end justify-center px-3 pb-4"
         style={{
           gap: '6px',
@@ -501,8 +501,8 @@ export default function ShopPage() {
         }}
       />
       <p className="mt-5 text-center font-display italic text-[17px] text-[#C97B5C]">
-        120+ activities. Nine categories.{' '}
-        <span className="italic">One toolkit.</span>
+        120+ activities. Nine topics.{' '}
+        <span className="italic">One membership.</span>
       </p>
     </div>
   );
@@ -522,11 +522,11 @@ export default function ShopPage() {
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
-                    The library
+                    All the activities
                   </p>
                   <h1 className="font-display text-[clamp(2.5rem,5.8vw,4.25rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                    A toolkit for real life.{' '}
-                    <span className="italic text-forest">Browse the full library.</span>
+                    Every life-skills activity,{' '}
+                    <span className="italic text-forest">in one membership.</span>
                   </h1>
 
                   {/* Mobile-only hero: sits between headline and description.
@@ -540,10 +540,14 @@ export default function ShopPage() {
                   <p className="mt-5 max-w-[540px] text-[17.5px] md:text-[18.5px] leading-[1.55] text-gray-600">
                     Hands-on activities for the skills modern childhood doesn&apos;t make space
                     for. Cooking, budgeting, building, pitching, planning. Designed by a teacher,
-                    for parents who want their kids{' '}
+                    for any family who wants their kids{' '}
                     <span className="font-display italic text-forest-dark">
                       capable, ready for real life.
                     </span>
+                  </p>
+                  <p className="mt-3.5 max-w-[540px] text-[15px] leading-[1.55] text-gray-500">
+                    Inside the membership we pick your family&apos;s next activity for you, so
+                    you never have to plan.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {['Ages 6 to 14', '3 skill levels', 'New each quarter'].map(
@@ -582,7 +586,7 @@ export default function ShopPage() {
                       href="#full-library"
                       className="font-semibold text-forest-dark border-b border-forest/30 hover:text-forest hover:border-forest transition-colors"
                     >
-                      Skip to the library &rarr;
+                      Skip to all activities &rarr;
                     </a>
                   </p>
                 </div>
@@ -769,11 +773,11 @@ export default function ShopPage() {
                   Browse everything
                 </p>
                 <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight text-balance">
-                  The full library:{' '}
+                  What&apos;s inside:{' '}
                   <span className="italic text-forest">120+ activities.</span>
                 </h2>
                 <p className="mt-3.5 text-[16.5px] text-gray-600">
-                  Search, filter, sort. Find exactly what you&apos;re looking for.
+                  Search, filter, sort. Preview everything the membership unlocks.
                 </p>
               </div>
             </ScrollReveal>
@@ -795,7 +799,7 @@ export default function ShopPage() {
                   Ready to unlock
                 </p>
                 <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight text-balance">
-                  One membership. <span className="italic text-forest">The whole library.</span>
+                  One membership. <span className="italic text-forest">Every activity unlocked.</span>
                 </h2>
               </div>
             </ScrollReveal>
@@ -813,8 +817,8 @@ export default function ShopPage() {
                   </h3>
                   <p className="mt-3.5 text-[15.5px] leading-[1.6] text-gray-600">
                     {IS_FOUNDER_PHASE
-                      ? `The full library plus quarterly new content, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year. Prefer monthly? $${MONTHLY_PRICE_USD}/month.`
-                      : `The full library plus quarterly new content, $${MONTHLY_PRICE_USD}/month if you'd rather go monthly. Cancel anytime.`}
+                      ? `Every activity plus quarterly new content, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year. Prefer monthly? $${MONTHLY_PRICE_USD}/month.`
+                      : `Every activity plus quarterly new content, $${MONTHLY_PRICE_USD}/month if you'd rather go monthly. Cancel anytime.`}
                   </p>
                   <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 120+ activities, all categories</span>
@@ -870,7 +874,7 @@ export default function ShopPage() {
                   Common questions
                 </p>
                 <h2 className="font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
-                  The library, <span className="italic text-forest">briefly explained.</span>
+                  The membership, <span className="italic text-forest">briefly explained.</span>
                 </h2>
               </div>
             </ScrollReveal>
@@ -878,7 +882,7 @@ export default function ShopPage() {
               {[
                 {
                   q: 'Can I buy individual activities?',
-                  a: `No. The whole library comes with one membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}). The free 7-day guide is the lowest-commitment way to try us out, and every membership starts with a 14-day free trial, so you can look before you pay.`,
+                  a: `No. Every activity comes with one membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}). The free 7-day guide is the lowest-commitment way to try us out, and every membership starts with a 14-day free trial, so you can look before you pay.`,
                 },
                 {
                   q: 'How does the free trial work?',

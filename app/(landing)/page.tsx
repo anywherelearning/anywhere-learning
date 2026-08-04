@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: 'Anywhere Learning | Life Skills Activities for Kids',
   },
   description:
-    'Open a guide and do something real together, at whatever pace fits your week. Nothing to plan, nothing to print. Cooking, budgeting, building, problem-solving. Ages 6-14.',
+    "A guided membership that hands you your family's next real-world activity, so you just do it together. Life skills school skips: cooking, budgeting, problem-solving. Nothing to plan or print. Ages 6-14.",
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -97,7 +97,8 @@ export default async function HomePage() {
       <main id="main-content">
 
         {/* ════════════════════════════════════════
-            01 HERO — Dual CTA: free guide (primary) + membership (secondary)
+            01 HERO — "Handle real life" tension. Co-primary CTAs:
+            Start free trial (membership) + Take the quiz.
         ════════════════════════════════════════ */}
         <section className="relative py-10 md:py-12 lg:py-14 overflow-hidden">
           <div className="mx-auto max-w-[1180px] px-6">
@@ -110,11 +111,13 @@ export default async function HomePage() {
                   Real-world activities &middot; Ages 6-14
                 </p>
                 <h1 className="font-display text-[clamp(2.25rem,6.2vw,4.8rem)] leading-[1.04] tracking-tight">
-                  Raise kids who can{' '}
-                  <span className="text-forest italic">actually do</span>{' '}
-                  <span className="relative whitespace-nowrap">
-                    things.
-                    <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                  Your kid is smart.{' '}
+                  <span className="block">
+                    But can they handle{' '}
+                    <span className="relative whitespace-nowrap">
+                      <span className="text-forest italic">real life?</span>
+                      <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                    </span>
                   </span>
                 </h1>
               </div>
@@ -129,33 +132,44 @@ export default async function HomePage() {
                     Real-world activities &middot; Ages 6-14
                   </p>
                   <h1 className="font-display text-[clamp(2.6rem,6.2vw,4.8rem)] leading-[1.02] tracking-tight mb-6">
-                    Raise kids who can{' '}
-                    <span className="text-forest italic">actually do</span>{' '}
-                    <span className="relative whitespace-nowrap">
-                      things.
-                      <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                    Your kid is smart.{' '}
+                    <span className="block">
+                      But can they handle{' '}
+                      <span className="relative whitespace-nowrap">
+                        <span className="text-forest italic">real life?</span>
+                        <span className="absolute left-[-1%] right-[-1%] bottom-[0.06em] h-[0.32em] bg-[#C97B5C]/[0.28] rounded-[0.3em_0.8em_0.2em_0.6em/0.6em_0.3em_0.8em_0.2em] -z-10" />
+                      </span>
                     </span>
                   </h1>
                 </div>
                 <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
-                  Open a guide and do something real together, at whatever pace fits your week.
-                  Nothing to plan, nothing to print. Cooking, budgeting, building,
-                  problem-solving, designed by a teacher to fill the gap between what schools
-                  test and what life requires.
+                  We hand you your family&apos;s next real-world activity, matched to your kids,
+                  and you just do it together. Cooking, budgeting, problem-solving, the life
+                  skills school skips. No browsing, no planning, nothing to print. A teacher
+                  picks your next stop, you make the memory.
                 </p>
-                <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
+                <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
                   <Link
-                    href="/quiz"
+                    href="/start-trial"
                     className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                   >
-                    Take the 2-min quiz
+                    Start free trial
                     <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
                   </Link>
                   <Link
-                    href="/join"
-                    className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                    href="/quiz"
+                    className="inline-flex items-center gap-3 bg-cream text-forest-dark font-semibold py-4 px-6 rounded-xl text-base border border-[#D8D4C5] shadow-[0_10px_24px_-16px_rgba(45,58,46,0.4)] hover:border-forest hover:-translate-y-px transition-all duration-200"
                   >
-                    Or explore the full membership
+                    Take the 2-min quiz
+                    <span className="font-display italic text-lg leading-none">&rarr;</span>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/join"
+                    className="inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
+                  >
+                    Or see everything inside the membership
                     <span className="font-display italic text-lg leading-none">&rarr;</span>
                   </Link>
                 </div>
@@ -177,7 +191,7 @@ export default async function HomePage() {
                   <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
                   <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
                   <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span className="inline-flex items-center gap-1.5">Free, takes 2 minutes</span>
+                  <span className="inline-flex items-center gap-1.5">$0 today, cancel anytime</span>
                 </div>
               </div>
 
@@ -387,7 +401,7 @@ export default async function HomePage() {
                   What&apos;s inside
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Nine categories. <span className="italic text-forest">One library.</span>
+                  Nine categories. <span className="italic text-forest">One membership.</span>
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">120+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
               </div>
@@ -431,7 +445,7 @@ export default async function HomePage() {
                   href="/shop"
                   className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
                 >
-                  Browse all activities in the library
+                  Browse all activities
                   <span className="font-display italic text-lg leading-none">&rarr;</span>
                 </Link>
               </div>
@@ -440,7 +454,8 @@ export default async function HomePage() {
         </section>
 
         {/* ════════════════════════════════════════
-            05 HOW IT WORKS — Three steps
+            05 HOW IT WORKS — The guided trail: set up explorers,
+            we pick the next stop, do it together and mark it reached.
         ════════════════════════════════════════ */}
         <section className="py-20 md:py-24" id="how-it-works">
           <div className="mx-auto max-w-[1180px] px-6">
@@ -451,16 +466,21 @@ export default async function HomePage() {
                   How it works
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Three steps. <span className="italic text-forest">That&apos;s it.</span>
+                  It&apos;s a trail, <span className="italic text-forest">not a to-do list.</span>
                 </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  You never dig through a giant library wondering what&apos;s worth your time.
+                  We hand you the next real-world activity for your family, you do it
+                  together, and your kids climb the trail as you go.
+                </p>
               </div>
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { num: '1', title: 'Plan your next activities', body: 'Add a few to your plan in under a minute. Pick from 120+, by category, age, or time.' },
-                { num: '2', title: 'Open on any device', body: 'Pull it up on your phone, tablet, or laptop. Skim the parent prep and grab what you need.' },
-                { num: '3', title: 'Do it side by side', body: 'Follow the guide with your kid. Built-in prompts tell you what to say, what to ask, and what comes next.' },
+                { num: 'i', title: 'Set up your explorers', body: "Tell us your kids' names, ages, and the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail." },
+                { num: 'ii', title: 'We pick your next stop', body: "No scrolling, no second-guessing. We choose the next activity for you, matched to your kids and the time you've got. Not feeling it? Swap it in a tap." },
+                { num: 'iii', title: 'Do it together, mark it reached', body: 'Open the guide, live it together, then tap "We reached it." Your explorers move forward and earn gear, and everything you finish saves into a record you can print anytime.' },
               ].map((step, i) => (
                 <ScrollReveal key={step.num} delay={i * 100} className="h-full">
                   <div className="h-full border border-[#D8D4C5] rounded-[14px] bg-cream p-8 pt-8">
@@ -473,6 +493,82 @@ export default async function HomePage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            05b THE ADVENTURE MAP — Makes the membership tangible:
+            the trail (explorers earn gear), This Month (curated pick),
+            and the printable Record.
+        ════════════════════════════════════════ */}
+        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-20 md:py-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <ScrollReveal>
+              <div className="max-w-[760px] mx-auto text-center mb-14">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
+                  Inside the membership
+                </p>
+                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
+                  Your family&apos;s <span className="italic text-forest">Adventure Map.</span>
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Not a shelf of files to manage. A living trail your kids move along, one
+                  real activity at a time.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1020px] mx-auto">
+              {[
+                {
+                  icon: (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 20 9 8l4 7 2.4-4L21 20Z" /></svg>
+                  ),
+                  title: 'A trail, not a list',
+                  body: 'Each kid is an explorer on your family’s trail. Finish an activity together and they move forward and earn gear, so progress you can actually see replaces the pile you feel behind on.',
+                },
+                {
+                  icon: (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4" /></svg>
+                  ),
+                  title: 'This Month, chosen for you',
+                  body: 'Every month brings one curated pick plus fresh seasonal ideas and a simple family challenge. You open the app and the next good thing is already waiting. No blank week to fill.',
+                },
+                {
+                  icon: (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4h6v3H9zM9 13l2 2 4-4" /></svg>
+                  ),
+                  title: 'A record you can print',
+                  body: 'Everything you finish saves into a printable Record, a real keepsake of what your family built together. Handy for portfolios and homeschool logs, lovely for everyone else.',
+                },
+              ].map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 100} className="h-full">
+                  <div className="h-full border border-[#C9D3BE] rounded-[14px] bg-cream p-8">
+                    <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center text-xl mb-5">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-display text-[26px] leading-tight tracking-tight mb-2">{item.title}</h3>
+                    <p className="text-gray-500 text-[15.5px] leading-relaxed">{item.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={200}>
+              <div className="flex justify-center mt-10">
+                <Link
+                  href="/start-trial"
+                  className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
+                >
+                  Start your trail free
+                  <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
+                </Link>
+              </div>
+              <p className="mt-3.5 text-center text-[13.5px] text-gray-400">
+                14-day free trial, $0 today. {m.priceMonth} billed yearly after, or {MONTHLY_PLAN_PRICE_MONTH}.
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
