@@ -144,6 +144,27 @@ export default async function HomePage() {
                     <span className="font-display italic text-lg leading-none">&rarr;</span>
                   </Link>
                 </div>
+                {/* Mobile-only price + trust: keeps the number beside the CTAs on
+                    phones. Desktop shows the same strip under the mosaic instead. */}
+                <div className="lg:hidden mt-6 flex flex-col items-center gap-3.5">
+                  <div className="inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full border border-[#D8D4C5] bg-[#F2EFE4]/70 px-4 py-1.5 text-[13px] text-gray-600">
+                    <span className="font-semibold text-forest-dark">One membership</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span>
+                      <span className="font-semibold text-[#C97B5C]">{m.priceYr}</span>
+                      {m.isFounderPhase ? ' founder rate' : ''}
+                    </span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span>14 days free</span>
+                  </div>
+                  <div className="text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                    <span className="inline-flex items-center gap-1.5">Built by a teacher</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span className="inline-flex items-center gap-1.5">$0 today, cancel anytime</span>
+                  </div>
+                </div>
               </div>
 
               {/* Hero visual — a scrapbook mosaic of real families doing real-world
@@ -153,8 +174,11 @@ export default async function HomePage() {
                 <PhotoMosaic />
                 {/* Price snapshot + trust, tucked under the mosaic so the number is
                     visible without hunting and the scrapbook feels grounded. Live
-                    founder state via `m` (self-updates to $149/yr past the cap). */}
-                <div className="mt-6 flex flex-col items-center gap-3.5">
+                    founder state via `m` (self-updates to $149/yr past the cap).
+                    Desktop only; mobile shows the same strip under the CTAs. The
+                    mt lines the pill top up with the "Start free trial" button top
+                    (the 1180px-capped layout is identical across desktop widths). */}
+                <div className="hidden lg:flex mt-[45px] flex-col items-center gap-3.5">
                   <div className="inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full border border-[#D8D4C5] bg-[#F2EFE4]/70 px-4 py-1.5 text-[13px] text-gray-600">
                     <span className="font-semibold text-forest-dark">One membership</span>
                     <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
