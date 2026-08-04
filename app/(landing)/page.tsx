@@ -410,14 +410,14 @@ export default async function HomePage() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3.5 max-w-[960px] mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 max-w-[800px] mx-auto">
               {CATEGORIES.map((cat, i) => (
                 <ScrollReveal key={cat.name} delay={i * 50}>
                   <Link
                     href={`/shop#track-${cat.slug}`}
                     className="group block rounded-[14px] overflow-hidden border border-[#D8D4C5] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.3)]"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
                         src={cat.photo}
                         alt={cat.name}
@@ -429,11 +429,11 @@ export default async function HomePage() {
                         style={cat.objectPosition ? { objectPosition: cat.objectPosition } : undefined}
                       />
                     </div>
-                    <div className={`flex items-center gap-2.5 px-4 h-[52px] bg-gradient-to-br ${cat.gradient}`}>
-                      <span className="w-[28px] h-[28px] rounded-md bg-white/[0.22] grid place-items-center text-white shrink-0">
+                    <div className={`flex items-center gap-2 px-3.5 h-[44px] bg-gradient-to-br ${cat.gradient}`}>
+                      <span className="w-[24px] h-[24px] rounded bg-white/[0.22] grid place-items-center text-white shrink-0">
                         <CategoryIcon slug={cat.slug} />
                       </span>
-                      <h3 className="font-display text-[14px] leading-tight tracking-tight text-white">{cat.name}</h3>
+                      <h3 className="font-display text-[13px] leading-tight tracking-tight text-white">{cat.name}</h3>
                     </div>
                   </Link>
                 </ScrollReveal>
@@ -459,54 +459,12 @@ export default async function HomePage() {
         </section>
 
         {/* ════════════════════════════════════════
-            05 HOW IT WORKS — The guided trail: set up explorers,
-            we pick the next stop, do it together and mark it reached.
+            05 INSIDE THE MEMBERSHIP — The guided trail: set up explorers,
+            we pick the next stop, do it together. Merged with the old
+            Adventure Map, whose feature cards just repackaged these steps
+            (This Month = step ii, earn-gear + printable Record = step iii).
         ════════════════════════════════════════ */}
-        <section className="py-14 md:py-16" id="how-it-works">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[760px] mx-auto text-center mb-14">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  How it works
-                </p>
-                <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  It&apos;s a trail, <span className="italic text-forest">not a to-do list.</span>
-                </h2>
-                <p className="mt-4 text-lg text-gray-500">
-                  You never dig through a giant library wondering what&apos;s worth your time.
-                  We hand you the next real-world activity for your family, you do it
-                  together, and your kids climb the trail as you go.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[
-                { num: 'i', title: 'Set up your explorers', body: "Tell us your kids' names, ages, and the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail." },
-                { num: 'ii', title: 'We pick your next stop', body: "No scrolling, no second-guessing. We choose the next activity for you, matched to your kids and the time you've got. Not feeling it? Swap it in a tap." },
-                { num: 'iii', title: 'Do it together, mark it reached', body: 'Open the guide, live it together, then tap "We reached it." Your explorers move forward and earn gear, and everything you finish saves into a record you can print anytime.' },
-              ].map((step, i) => (
-                <ScrollReveal key={step.num} delay={i * 100} className="h-full">
-                  <div className="h-full border border-[#D8D4C5] rounded-[14px] bg-cream p-8 pt-8">
-                    <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center font-display italic text-2xl mb-5">
-                      {step.num}
-                    </div>
-                    <h3 className="font-display text-[26px] leading-tight tracking-tight mb-2">{step.title}</h3>
-                    <p className="text-gray-500 text-[15.5px] leading-relaxed">{step.body}</p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            05b THE ADVENTURE MAP — Makes the membership tangible:
-            the trail (explorers earn gear), This Month (curated pick),
-            and the printable Record.
-        ════════════════════════════════════════ */}
-        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-14 md:py-16">
+        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-14 md:py-16" id="how-it-works">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -515,46 +473,28 @@ export default async function HomePage() {
                   Inside the membership
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Your family&apos;s <span className="italic text-forest">Adventure Map.</span>
+                  It&apos;s a trail, <span className="italic text-forest">not a to-do list.</span>
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Not a shelf of files to manage. A living trail your kids move along, one
-                  real activity at a time.
+                  Not a shelf of files to manage. We hand you the next real-world activity for
+                  your family, you do it together, and your kids climb the trail as you go.
                 </p>
               </div>
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1020px] mx-auto">
               {[
-                {
-                  icon: (
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 20 9 8l4 7 2.4-4L21 20Z" /></svg>
-                  ),
-                  title: 'A trail, not a list',
-                  body: 'Each kid is an explorer on your family’s trail. Finish an activity together and they move forward and earn gear, so progress you can actually see replaces the pile you feel behind on.',
-                },
-                {
-                  icon: (
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4" /></svg>
-                  ),
-                  title: 'This Month, chosen for you',
-                  body: 'Every month brings one curated pick plus fresh seasonal ideas and a simple family challenge. You open the app and the next good thing is already waiting. No blank week to fill.',
-                },
-                {
-                  icon: (
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4h6v3H9zM9 13l2 2 4-4" /></svg>
-                  ),
-                  title: 'A record you can print',
-                  body: 'Everything you finish saves into a printable Record, a real keepsake of what your family built together. Handy for portfolios and homeschool logs, lovely for everyone else.',
-                },
-              ].map((item, i) => (
-                <ScrollReveal key={item.title} delay={i * 100} className="h-full">
-                  <div className="h-full border border-[#C9D3BE] rounded-[14px] bg-cream p-8">
-                    <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center text-xl mb-5">
-                      {item.icon}
+                { num: 'i', title: 'Set up your explorers', body: "Tell us your kids' names, ages, and the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail." },
+                { num: 'ii', title: 'We pick your next stop', body: "No scrolling, no second-guessing. We choose the next activity for you, matched to your kids and the time you've got, with a fresh curated pick every month. Not feeling it? Swap it in a tap." },
+                { num: 'iii', title: 'Do it together, mark it reached', body: 'Open the guide, live it together, then tap "We reached it." Your explorers move forward and earn gear, and everything saves into a printable Record, a keepsake that doubles as a homeschool log.' },
+              ].map((step, i) => (
+                <ScrollReveal key={step.num} delay={i * 100} className="h-full">
+                  <div className="h-full border border-[#C9D3BE] rounded-[14px] bg-cream p-8 pt-8">
+                    <div className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-forest text-forest-dark grid place-items-center font-display italic text-2xl mb-5">
+                      {step.num}
                     </div>
-                    <h3 className="font-display text-[26px] leading-tight tracking-tight mb-2">{item.title}</h3>
-                    <p className="text-gray-500 text-[15.5px] leading-relaxed">{item.body}</p>
+                    <h3 className="font-display text-[26px] leading-tight tracking-tight mb-2">{step.title}</h3>
+                    <p className="text-gray-500 text-[15.5px] leading-relaxed">{step.body}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -580,7 +520,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             06 MEET AMELIE — Founder bio (trust before the ask)
         ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] pt-20 md:pt-24 pb-14 md:pb-16">
+        <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
               <ScrollReveal direction="left">

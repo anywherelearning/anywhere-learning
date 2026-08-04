@@ -6,6 +6,16 @@ import type { IdeaList } from '@/lib/ideas';
 import type { IdeaFreeActivity } from '@/lib/ideas-free-activity';
 import IdeaListOfferInline from '@/components/ideas/IdeaListOfferInline';
 
+function DownloadIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
 /* ──────────────────────────────────────────────────────────────────
    IdeasChecklist
    Interactive, localStorage-persisted checklist for a single
@@ -74,105 +84,90 @@ export default function IdeasChecklist({
 
   return (
     <div style={{ '--accent': accent } as React.CSSProperties}>
-      {/* ── Cover image + download strip ── */}
+      {/* ── Two parallel cards: take the printable, or take the guided one ──
+          Same skeleton in both (thumb, eyebrow, one line, action row pinned to
+          the bottom) so the pair reads as one row rather than two components
+          that happened to land next to each other. */}
       <div className="mx-auto max-w-[920px] px-6 -mt-2 mb-5">
-        <div className="flex flex-row items-stretch gap-4 sm:gap-5">
-          {/* Cover thumbnail. Stays a thumbnail on mobile: a full-width
-              portrait cover pushed the actual list down almost two screens. */}
-          <div className="relative w-[104px] h-[135px] sm:w-[180px] sm:h-[240px] flex-shrink-0 rounded-xl overflow-hidden border border-[#e8e5de] shadow-[0_8px_24px_-12px_rgba(45,58,46,0.2)]">
-            <Image
-              src={`/ideas/${list.slug}.jpg`}
-              alt={list.title}
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="(max-width: 640px) 104px, 180px"
-            />
-          </div>
-
-          {/* Download + info card */}
+        <div className="grid gap-4 sm:gap-5 lg:grid-cols-2 lg:items-stretch">
+          {/* Card 1 — the printable they came for */}
           <div
-            className="flex-1 min-w-0 rounded-xl border p-4 sm:p-6 flex flex-col justify-center"
-            style={{
-              borderColor: `${accent}25`,
-              background: `${accent}08`,
-            }}
+            className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
+            style={{ borderColor: `${accent}25`, background: `${accent}08` }}
           >
-            <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] mb-1.5 sm:mb-2" style={{ color: accent }}>
-              Free printable checklist
-            </p>
-            <p className="text-[14px] sm:text-[15px] leading-[1.5] text-gray-600 mb-3.5">
-              <span className="hidden sm:inline">
-                Print it for the fridge, your bag, or the counter. Pick whichever
-                version suits your printer.{' '}
-              </span>
-              <strong className="font-semibold text-gray-700">
-                Instant download. No email required.
-              </strong>
-            </p>
-            {pdfUrls ? (
-              <div className="flex flex-wrap gap-2.5">
-                <a
-                  href={pdfUrls.color}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[13px] font-semibold text-white px-3.5 sm:px-4 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
-                  style={{ background: accent }}
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Full Color PDF
-                </a>
-                <a
-                  href={pdfUrls.bw}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[13px] font-semibold px-3.5 sm:px-4 py-2.5 rounded-lg border-2 transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
-                  style={{
-                    color: accent,
-                    borderColor: accent,
-                    background: 'transparent',
-                  }}
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  B&amp;W PDF
-                </a>
-              </div>
-            ) : (
-              <button
-                onClick={() => window.print()}
-                className="inline-flex items-center gap-2 text-[13px] font-semibold text-white px-4 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md"
-                style={{ background: accent }}
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="6 9 6 2 18 2 18 9" />
-                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                  <rect x="6" y="14" width="12" height="8" />
-                </svg>
-                Print this page
-              </button>
-            )}
-          </div>
-        </div>
+            <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+              <Image
+                src={`/ideas/${list.slug}.jpg`}
+                alt={list.title}
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="92px"
+              />
+            </div>
 
-        {/* The full offer sits below the list, about five screens down on a
-            phone. Most visitors take the PDF here and leave, so the same ask
-            also runs at the point they're already accepting something. Both
-            share state, so claiming in one settles the other. */}
-        {freeActivity && (
-          <IdeaListOfferInline
-            categorySlug={categorySlug}
-            accent={accent}
-            activity={freeActivity}
-          />
-        )}
+            <div className="min-w-0 flex-1 flex flex-col">
+              <p
+                className="text-[11px] font-semibold uppercase tracking-[0.14em] mb-1.5"
+                style={{ color: accent }}
+              >
+                Free printable checklist
+              </p>
+              <p className="text-[14px] leading-[1.5] text-[#4a4843] m-0">
+                Print it for the fridge or your bag.{' '}
+                <strong className="font-semibold text-[#3f3d38]">
+                  No email needed.
+                </strong>
+              </p>
+
+              <div className="mt-auto pt-3.5">
+                {pdfUrls ? (
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href={pdfUrls.color}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white px-3 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
+                      style={{ background: accent }}
+                    >
+                      <DownloadIcon />
+                      Full colour
+                    </a>
+                    <a
+                      href={pdfUrls.bw}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[13px] font-semibold px-3 py-2.5 rounded-lg border-2 transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
+                      style={{ color: accent, borderColor: accent, background: 'transparent' }}
+                    >
+                      <DownloadIcon />
+                      Black &amp; white
+                    </a>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => window.print()}
+                    className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white px-3 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md"
+                    style={{ background: accent }}
+                  >
+                    <DownloadIcon />
+                    Print this page
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2 — the same ask that runs below the list, at the moment they
+              are already accepting something. Both share state. */}
+          {freeActivity && (
+            <IdeaListOfferInline
+              categorySlug={categorySlug}
+              accent={accent}
+              activity={freeActivity}
+            />
+          )}
+        </div>
       </div>
 
       {/* ── Sticky progress bar ── */}

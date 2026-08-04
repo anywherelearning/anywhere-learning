@@ -30,110 +30,140 @@ export default function IdeaListOfferInline({
   if (status === 'success' && claimed) {
     return (
       <div
-        className="mt-4 rounded-xl p-4 sm:p-5 flex flex-wrap items-center gap-x-4 gap-y-2"
-        style={{ background: `${accent}12` }}
+        className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
+        style={{ borderColor: `${accent}25`, background: `${accent}14` }}
       >
-        <p className="text-[14.5px] leading-[1.5] text-[#3f3d38] m-0 flex-1 min-w-[190px]">
-          {claimed.wasPrior ? (
-            <>
-              You&rsquo;ve already claimed{' '}
-              <strong className="font-semibold">{claimed.name}</strong>. The
-              rest come with the{' '}
-              <Link
-                href="/join"
-                className="font-semibold text-[#588157] underline decoration-[1.5px] underline-offset-2 hover:text-[#3d5c3b]"
-              >
-                membership
-              </Link>
-              .
-            </>
-          ) : (
-            <>
-              <strong className="font-semibold">{claimed.name}</strong> is
-              yours. Enjoy it.
-            </>
-          )}
-        </p>
-        <a
-          href={claimed.downloadUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-[#588157] px-4 py-2.5 text-[14px] font-semibold text-[#faf9f6] no-underline transition-colors hover:bg-[#3d5c3b] whitespace-nowrap"
-        >
-          Download it
-          <span aria-hidden="true">&darr;</span>
-        </a>
+        <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+          <Image
+            src={`/products/${activity.slug}.jpg`}
+            alt=""
+            fill
+            loading="lazy"
+            sizes="92px"
+            className="object-cover object-top"
+          />
+        </div>
+
+        <div className="min-w-0 flex-1 flex flex-col">
+          <p
+            className="text-[11px] font-semibold uppercase tracking-[0.14em] mb-1.5"
+            style={{ color: accent }}
+          >
+            {claimed.wasPrior ? 'Already claimed' : 'It\u2019s yours'}
+          </p>
+          <p className="text-[14px] leading-[1.5] text-[#4a4843] m-0">
+            {claimed.wasPrior ? (
+              <>
+                You already have{' '}
+                <strong className="font-semibold text-[#3f3d38]">
+                  {claimed.name}
+                </strong>
+                . The rest come with the{' '}
+                <Link
+                  href="/join"
+                  className="font-semibold text-[#588157] underline decoration-[1.5px] underline-offset-2 hover:text-[#3d5c3b]"
+                >
+                  membership
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                <strong className="font-semibold text-[#3f3d38]">
+                  {claimed.name}
+                </strong>{' '}
+                is yours. Use it year after year.
+              </>
+            )}
+          </p>
+
+          <div className="mt-auto pt-3.5">
+            <a
+              href={claimed.downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-[#588157] px-3.5 py-2.5 text-[13px] font-semibold text-[#faf9f6] no-underline transition-colors hover:bg-[#3d5c3b] whitespace-nowrap"
+            >
+              Download it
+              <span aria-hidden="true">&darr;</span>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
     <div
-      className="mt-4 rounded-xl p-4 sm:p-5"
-      style={{ background: `${accent}0f` }}
+      className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
+      style={{ borderColor: `${accent}25`, background: `${accent}0f` }}
     >
-      <div className="flex items-start gap-4">
-        {/* Cover, so the bonus reads as a real thing rather than a newsletter */}
-        <div className="relative hidden sm:block w-[62px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-md border border-black/10">
-          <Image
-            src={`/products/${activity.slug}.jpg`}
-            alt=""
-            fill
-            loading="lazy"
-            sizes="62px"
-            className="object-cover object-top"
-          />
-        </div>
+      {/* Cover, so the bonus reads as a real thing rather than a newsletter.
+          Matches the checklist thumb next to it, same size and same ratio. */}
+      <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+        <Image
+          src={`/products/${activity.slug}.jpg`}
+          alt=""
+          fill
+          loading="lazy"
+          sizes="92px"
+          className="object-cover object-top"
+        />
+      </div>
 
-        <div className="min-w-0 flex-1">
-          <p className="text-[14.5px] leading-[1.5] text-[#3f3d38] m-0">
-            <strong className="font-semibold">
-              Want one done properly, free?
-            </strong>{' '}
-            The list gives ideas. <strong>{activity.name}</strong> is a complete
-            guided activity, step by step, three skill levels. Normally{' '}
-            {activity.priceLabel}.
-          </p>
+      <div className="min-w-0 flex-1 flex flex-col">
+        <p
+          className="text-[11px] font-semibold uppercase tracking-[0.14em] mb-1.5"
+          style={{ color: accent }}
+        >
+          Free bonus activity
+        </p>
+        <p className="text-[14px] leading-[1.5] text-[#4a4843] m-0">
+          <strong className="font-semibold text-[#3f3d38]">
+            Want one already planned out?
+          </strong>{' '}
+          {activity.name} gives you the whole thing: what to say, three skill
+          levels, no prep. Normally {activity.priceLabel}.
+        </p>
 
-          <form onSubmit={submit} className="mt-3">
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <label htmlFor="ideas-inline-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="ideas-inline-email"
-                type="email"
-                required
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (errorMessage) setErrorMessage('');
-                }}
-                aria-describedby={errorMessage ? 'ideas-inline-error' : undefined}
-                className={`min-w-0 flex-1 rounded-lg border bg-white px-3.5 py-2.5 text-[14.5px] text-gray-800 placeholder-gray-500 outline-none transition-shadow focus:ring-2 focus:ring-[#588157]/30 ${
-                  errorMessage ? 'border-red-400' : 'border-[#D8D4C5]'
-                }`}
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="rounded-lg bg-[#588157] px-4 py-2.5 text-[14.5px] font-semibold text-[#faf9f6] whitespace-nowrap transition-all hover:bg-[#3d5c3b] active:scale-[0.98] disabled:opacity-70"
-              >
-                {status === 'loading' ? 'Sending…' : 'Send it to me'}
-              </button>
-            </div>
-            {errorMessage && (
-              <p
-                id="ideas-inline-error"
-                role="alert"
-                className="mt-1.5 text-[13px] text-red-600"
-              >
-                {errorMessage}
-              </p>
-            )}
-          </form>
-        </div>
+        <form onSubmit={submit} className="mt-auto pt-3.5">
+          <div className="flex flex-row gap-2">
+            <label htmlFor="ideas-inline-email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="ideas-inline-email"
+              type="email"
+              required
+              placeholder="Your email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (errorMessage) setErrorMessage('');
+              }}
+              aria-describedby={errorMessage ? 'ideas-inline-error' : undefined}
+              className={`min-w-0 flex-1 rounded-lg border bg-white px-3 py-2.5 text-[13.5px] text-gray-800 placeholder-gray-500 outline-none transition-shadow focus:ring-2 focus:ring-[#588157]/30 ${
+                errorMessage ? 'border-red-400' : 'border-[#D8D4C5]'
+              }`}
+            />
+            <button
+              type="submit"
+              disabled={status === 'loading'}
+              className="flex-shrink-0 rounded-lg bg-[#588157] px-3.5 py-2.5 text-[13px] font-semibold text-[#faf9f6] whitespace-nowrap transition-all hover:bg-[#3d5c3b] active:scale-[0.98] disabled:opacity-70"
+            >
+              {status === 'loading' ? 'Sending…' : 'Send it'}
+            </button>
+          </div>
+          {errorMessage && (
+            <p
+              id="ideas-inline-error"
+              role="alert"
+              className="mt-1.5 text-[13px] text-red-600"
+            >
+              {errorMessage}
+            </p>
+          )}
+        </form>
       </div>
     </div>
   );

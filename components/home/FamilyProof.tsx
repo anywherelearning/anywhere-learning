@@ -21,7 +21,7 @@ const CARDS = [
 
 export default function FamilyProof({ immediate = false }: { immediate?: boolean }) {
   return (
-    <section id="families" className="py-20 md:py-24 scroll-mt-24">
+    <section id="families" className="py-14 md:py-16 scroll-mt-24">
       <div className="mx-auto max-w-[1180px] px-6">
         <ScrollReveal immediate={immediate}>
           <div className="max-w-[760px] mx-auto text-center mb-12">

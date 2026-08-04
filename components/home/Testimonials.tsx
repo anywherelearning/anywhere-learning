@@ -195,7 +195,7 @@ export default function Testimonials() {
   const prev = () => setIndex((i) => (i - 1 + ADULTS.length) % ADULTS.length);
   const next = () => setIndex((i) => (i + 1) % ADULTS.length);
   return (
-    <section className="bg-[#F2EFE4] border-b border-[#D8D4C5] pt-14 md:pt-16 pb-20 md:pb-24">
+    <section className="bg-[#F2EFE4] border-b border-[#D8D4C5] pt-14 md:pt-16 pb-14 md:pb-16">
       <style>{`
         .tl-card { transition: box-shadow 200ms cubic-bezier(0.22,1,0.36,1); }
         @media (prefers-reduced-motion: reduce) { .tl-card { transition: none; } }
