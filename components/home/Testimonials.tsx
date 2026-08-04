@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import ScrollReveal from '@/components/shared/ScrollReveal';
+import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
 // Founder-credibility testimonials. Real endorsements of Amelie as an educator
 // from the people who know her work. No star ratings on purpose: stars read as
@@ -190,91 +190,142 @@ function TCard({ t, variant }: { t: Quote; variant: Variant }) {
   );
 }
 
-export default function Testimonials() {
+// Rendered as a button inside the "Made by a teacher" section that opens the
+// testimonials in a modal, so founder credibility lives with the founder bio
+// instead of taking a full homepage section.
+export default function TeacherReviews() {
+  const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const prev = () => setIndex((i) => (i - 1 + ADULTS.length) % ADULTS.length);
   const next = () => setIndex((i) => (i + 1) % ADULTS.length);
+
+  // While open: Escape closes, background scroll locks, focus lands on close.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeRef.current?.focus();
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
   return (
-    <section className="bg-[#F2EFE4] border-b border-[#D8D4C5] pt-14 md:pt-16 pb-14 md:pb-16">
-      <style>{`
-        .tl-card { transition: box-shadow 200ms cubic-bezier(0.22,1,0.36,1); }
-        @media (prefers-reduced-motion: reduce) { .tl-card { transition: none; } }
-      `}</style>
-      <div className="mx-auto max-w-[1180px] px-6">
-        {/* HEADER */}
-        <ScrollReveal>
-          <div className="max-w-[760px] mx-auto text-center mb-14">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
-              <span className="w-[22px] h-px bg-forest inline-block" />
-              In their words
-            </p>
-            <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-              The people who <span className="italic text-forest">know my work.</span>
-            </h2>
-            <p className="mt-4 text-lg text-gray-500 text-balance">
-              Teachers, parents, and students who spent years in my classroom.
-            </p>
-          </div>
-        </ScrollReveal>
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-2.5 bg-cream border border-[#D8D4C5] text-forest-dark font-semibold text-[15px] px-4 py-2.5 rounded-xl hover:border-forest hover:-translate-y-px transition-all duration-200"
+      >
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z" />
+        </svg>
+        See what colleagues, parents &amp; students say
+      </button>
 
-        {/* Left: single-card carousel (Claudia + adults). Right: fixed student tiles.
-            Card area and student stack share row 1 so their bottoms align; the
-            counter lives in row 2 under the carousel only. */}
-        <ScrollReveal delay={80}>
-          <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1fr] gap-x-6 gap-y-3 items-stretch">
-            {/* Carousel card area */}
-            <div className="relative">
-              <div className="grid h-full">
-                {ADULTS.map((t, i) => (
-                  <div
-                    key={t.name}
-                    style={{ gridArea: '1 / 1' }}
-                    aria-hidden={i !== index}
-                    className={`h-full w-full transition-opacity duration-300 ${
-                      i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}
-                  >
-                    <TCard t={t} variant="feature" />
-                  </div>
-                ))}
+      {open && createPortal(
+        <div
+          className="fixed inset-0 z-[100] flex items-start md:items-center justify-center overflow-y-auto bg-[#2d3a2e]/55 backdrop-blur-[2px] p-4 md:p-6"
+          onClick={() => setOpen(false)}
+        >
+          <style>{`
+            .tl-card { transition: box-shadow 200ms cubic-bezier(0.22,1,0.36,1); }
+            @media (prefers-reduced-motion: reduce) { .tl-card { transition: none; } }
+          `}</style>
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="teacher-reviews-title"
+            onClick={(e) => e.stopPropagation()}
+            className="relative my-4 flex max-h-[calc(100vh-2rem)] w-full max-w-[920px] flex-col overflow-hidden rounded-[18px] border border-[#D8D4C5] bg-[#F2EFE4] shadow-[0_40px_80px_-30px_rgba(45,58,46,0.5)]"
+          >
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close"
+              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-ink hover:bg-white transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="overflow-y-auto p-6 md:p-10">
+            <div className="max-w-[760px] mx-auto text-center mb-8">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
+                <span className="w-[22px] h-px bg-forest inline-block" />
+                In their words
+              </p>
+              <h2 id="teacher-reviews-title" className="font-display text-[clamp(1.8rem,3.6vw,2.75rem)] leading-[1.08] tracking-tight">
+                The people who <span className="italic text-forest">know my work.</span>
+              </h2>
+              <p className="mt-3 text-[16px] text-gray-500 text-balance">
+                Teachers, parents, and students who spent years in my classroom.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1fr] gap-x-6 gap-y-3 items-stretch">
+              {/* Carousel card area */}
+              <div className="relative">
+                <div className="grid h-full">
+                  {ADULTS.map((t, i) => (
+                    <div
+                      key={t.name}
+                      style={{ gridArea: '1 / 1' }}
+                      aria-hidden={i !== index}
+                      className={`h-full w-full transition-opacity duration-300 ${
+                        i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                      }`}
+                    >
+                      <TCard t={t} variant="feature" />
+                    </div>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={prev}
+                  aria-label="Previous testimonial"
+                  className="absolute left-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-ink shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)] hover:bg-white hover:-translate-y-[calc(50%+1px)] transition-all z-10"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={next}
+                  aria-label="Next testimonial"
+                  className="absolute right-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-ink shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)] hover:bg-white hover:-translate-y-[calc(50%+1px)] transition-all z-10"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
               </div>
-              {/* Arrows (library style) */}
-              <button
-                type="button"
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="absolute left-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-ink shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)] hover:bg-white hover:-translate-y-[calc(50%+1px)] transition-all z-10"
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                aria-label="Next testimonial"
-                className="absolute right-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-cream border border-[#D8D4C5] grid place-items-center text-ink shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)] hover:bg-white hover:-translate-y-[calc(50%+1px)] transition-all z-10"
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
-            </div>
 
-            {/* Students stay put, not part of the carousel (row 1, right column) */}
-            <div className="grid grid-rows-3 gap-4 lg:row-start-1 lg:col-start-2">
-              <TCard t={FLEUR} variant="mini" />
-              <TCard t={FELIX} variant="mini" />
-              <TCard t={JACOB} variant="mini" />
-            </div>
+              {/* Students stay put (row 1, right column) */}
+              <div className="grid grid-rows-3 gap-4 lg:row-start-1 lg:col-start-2">
+                <TCard t={FLEUR} variant="mini" />
+                <TCard t={FELIX} variant="mini" />
+                <TCard t={JACOB} variant="mini" />
+              </div>
 
-            {/* Counter, row 2 under the carousel only */}
-            <p className="text-center text-[12px] font-medium text-gray-500 lg:col-start-1 lg:row-start-2">
-              {index + 1} <span className="text-gray-400">/</span> {ADULTS.length}
-            </p>
+              <p className="text-center text-[12px] font-medium text-gray-500 lg:col-start-1 lg:row-start-2">
+                {index + 1} <span className="text-gray-400">/</span> {ADULTS.length}
+              </p>
+            </div>
+            </div>
           </div>
-        </ScrollReveal>
-      </div>
-    </section>
+        </div>,
+        document.body,
+      )}
+    </>
   );
 }

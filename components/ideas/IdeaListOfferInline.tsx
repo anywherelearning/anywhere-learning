@@ -33,14 +33,14 @@ export default function IdeaListOfferInline({
         className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
         style={{ borderColor: `${accent}25`, background: `${accent}14` }}
       >
-        <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+        <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0">
           <Image
             src={`/products/${activity.slug}.jpg`}
             alt=""
             fill
             loading="lazy"
             sizes="92px"
-            className="object-cover object-top"
+            className="object-contain drop-shadow-[0_5px_12px_rgba(45,58,46,0.3)]"
           />
         </div>
 
@@ -100,14 +100,14 @@ export default function IdeaListOfferInline({
     >
       {/* Cover, so the bonus reads as a real thing rather than a newsletter.
           Matches the checklist thumb next to it, same size and same ratio. */}
-      <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+      <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0">
         <Image
           src={`/products/${activity.slug}.jpg`}
           alt=""
           fill
           loading="lazy"
           sizes="92px"
-          className="object-cover object-top"
+          className="object-contain drop-shadow-[0_5px_12px_rgba(45,58,46,0.3)]"
         />
       </div>
 

@@ -95,13 +95,16 @@ export default function IdeasChecklist({
             className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
             style={{ borderColor: `${accent}25`, background: `${accent}08` }}
           >
-            <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-lg border border-black/10 shadow-[0_6px_16px_-10px_rgba(45,58,46,0.35)]">
+            {/* contain, not cover: the checklists are 0.773 and the product
+                covers run 0.707 to 0.750, so one fixed ratio cropped the edges
+                off a cover. Nothing here is croppable art. */}
+            <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0">
               <Image
                 src={`/ideas/${list.slug}.jpg`}
                 alt={list.title}
                 fill
                 priority
-                className="object-cover object-top"
+                className="object-contain drop-shadow-[0_5px_12px_rgba(45,58,46,0.3)]"
                 sizes="92px"
               />
             </div>

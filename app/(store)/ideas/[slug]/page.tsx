@@ -300,7 +300,7 @@ function CategoryView({ category }: { category: IdeaCategory }) {
             background: `linear-gradient(180deg, ${category.accent}11 0%, #faf9f6 100%)`,
           }}
         >
-          <div className="mx-auto max-w-[820px] px-6 text-center">
+          <div className="mx-auto max-w-[920px] px-6 text-center">
               {/* Icon */}
               <div
                 className="w-16 h-16 rounded-full grid place-items-center mx-auto mb-5"
@@ -318,7 +318,7 @@ function CategoryView({ category }: { category: IdeaCategory }) {
               </h1>
 
               {/* Blurb */}
-              <p className="mt-4 max-w-[600px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance">
+              <p className="mt-4 max-w-[720px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance">
                 {category.blurb}
               </p>
 
@@ -721,7 +721,7 @@ function ListDetailView({
             } as React.CSSProperties
           }
         >
-          <div className="mx-auto max-w-[820px] px-6 text-center">
+          <div className="mx-auto max-w-[920px] px-6 text-center">
             {/* Category badge */}
             <span
               className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] mb-5"
@@ -739,7 +739,7 @@ function ListDetailView({
             {/* Intro (speakable target) */}
             <p
               id="list-intro"
-              className="mt-5 max-w-[600px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance"
+              className="mt-5 max-w-[720px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance"
             >
               {list.intro}
             </p>
@@ -797,7 +797,7 @@ function ListDetailView({
             and tables are the most-extracted snippet format */}
         {list.slug === 'chores-by-age-ideas' && (
           <section className="pb-10 print:hidden">
-            <div className="mx-auto max-w-[760px] px-6 overflow-x-auto">
+            <div className="mx-auto max-w-[920px] px-6 overflow-x-auto">
               <table className="w-full border-collapse bg-white border border-[#e8e5de] rounded-xl overflow-hidden text-[15px]">
                 <caption className="text-left font-display text-[20px] tracking-tight pb-3">
                   Chore chart by age: what kids can own at each stage
@@ -975,18 +975,18 @@ function ListDetailView({
             follows. The FAQ stays below the offer so the ask stays high. */}
         {seo && (
           <section className="pt-4 pb-2 print:hidden">
-            <div className="mx-auto max-w-[760px] px-6">
+            <div className="mx-auto max-w-[920px] px-6">
               <div id="how-to-use">
                 <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance">
                   How to use this list
                 </h2>
-                <p className="mt-3 text-[16px] leading-[1.65] text-[#4a4843]">
+                <p className="mt-3 max-w-[68ch] text-[16px] leading-[1.65] text-[#4a4843]">
                   {seo.howToUse}
                 </p>
 
                 {/* Crawlable link back to the source guide */}
                 {blogPost && (
-                  <p className="mt-3.5 text-[15.5px] leading-[1.65] text-[#4a4843]">
+                  <p className="mt-3.5 max-w-[68ch] text-[15.5px] leading-[1.65] text-[#4a4843]">
                     This checklist is the quick version. For the why behind each
                     idea, parent tips, and the full walkthrough, read{' '}
                     <Link
@@ -1016,7 +1016,7 @@ function ListDetailView({
         {/* FAQ (crawlable SEO content + rich results) */}
         {seo && (
           <section className="py-11 md:py-12 print:hidden border-t border-[#E8E5DC]">
-            <div className="mx-auto max-w-[760px] px-6">
+            <div className="mx-auto max-w-[920px] px-6">
               {seo.faqs.length > 0 && (
                 <div>
                   <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance mb-4">
@@ -1041,7 +1041,7 @@ function ListDetailView({
                             </svg>
                           </span>
                         </summary>
-                        <div className="pb-4 -mt-0.5 pr-8 text-[15px] leading-[1.6] text-[#5c5a54]">
+                        <div className="pb-4 -mt-0.5 pr-8 max-w-[72ch] text-[15px] leading-[1.6] text-[#5c5a54]">
                           {faq.answer}
                         </div>
                       </details>
