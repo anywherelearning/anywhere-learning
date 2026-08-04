@@ -83,19 +83,6 @@ function TrailRule() {
   );
 }
 
-/* ─── A small backpack accent (decorative member-zone gear) ─── */
-function Backpack({ className = '' }: { className?: string }) {
-  return (
-    <svg className={className} width="52" height="58" viewBox="0 0 52 58" fill="none" aria-hidden="true">
-      <path d="M18 14a8 8 0 0 1 16 0" stroke="#3d5c3b" strokeWidth="2.6" strokeLinecap="round" />
-      <rect x="8" y="13" width="36" height="40" rx="12" fill="#588157" />
-      <path d="M8 30h36" stroke="#3d5c3b" strokeWidth="2" opacity="0.4" />
-      <rect x="18" y="33" width="16" height="14" rx="5" fill="#e8c99a" />
-      <path d="M14 20c-3 1-5 4-5 8M38 20c3 1 5 4 5 8" stroke="#3d5c3b" strokeWidth="2.4" strokeLinecap="round" opacity="0.55" />
-    </svg>
-  );
-}
-
 /* ─── Skills Map areas (the member-zone taxonomy) ─── */
 // Marketing copy + display order for the 12 Future-Ready Skills Map areas.
 // Names, colors, and counts come from the member-zone source of truth
@@ -554,8 +541,7 @@ export default async function JoinPage({
             100th member joins, the entire section disappears so post-
             founder visitors don't see a stale "first 100" pitch. */}
         {m.isFounderPhase && (
-        <section className="relative overflow-hidden px-6 py-14 max-md:py-10">
-          <Backpack className="pointer-events-none absolute left-[5%] top-20 hidden rotate-[-10deg] opacity-25 xl:block" />
+        <section className="px-6 py-14 max-md:py-10">
           <div className="mx-auto max-w-[720px] rounded-[18px] border border-[#c4836a]/40 bg-[#f5e1d2] px-11 py-12 text-center shadow-[0_28px_50px_-32px_rgba(201,123,92,.5)] max-md:px-6 max-md:py-9">
             <Eyebrow className="text-[#7A3D24] before:bg-[#c4836a]">
               A note from Amelie
