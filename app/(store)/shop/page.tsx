@@ -483,15 +483,6 @@ export default function ShopPage() {
                       <span className="font-display italic text-base">&rarr;</span>
                     </Link>
                   </div>
-                  <p className="mt-4 text-[13.5px] text-gray-500">
-                    Already know what you want?{' '}
-                    <a
-                      href="#full-library"
-                      className="font-semibold text-forest-dark border-b border-forest/30 hover:text-forest hover:border-forest transition-colors"
-                    >
-                      Skip to all activities &rarr;
-                    </a>
-                  </p>
                 </div>
               </ScrollReveal>
 
@@ -611,7 +602,7 @@ export default function ShopPage() {
         </section>
 
         {/* 04 FULL LIBRARY LIST */}
-        <section className="bg-cream pt-12 md:pt-16 pb-8" id="full-library">
+        <section className="bg-cream pt-8 md:pt-10 pb-8" id="full-library">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-10">
@@ -637,7 +628,7 @@ export default function ShopPage() {
         </section>
 
         {/* 05 UNLOCK — Membership */}
-        <section className="bg-cream pt-12 md:pt-16 pb-16" id="membership">
+        <section className="bg-cream pt-8 md:pt-10 pb-12" id="membership">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-10">

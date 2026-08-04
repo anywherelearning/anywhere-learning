@@ -30,12 +30,12 @@ export default function HeroCollage() {
   return (
     <div
       data-hero-collage
-      className="relative mx-auto aspect-square w-full max-w-[440px]"
+      className="relative mx-auto aspect-square w-full max-w-[480px]"
       aria-hidden="true"
     >
       {/* Skills Map — centerpiece */}
       <div
-        className="absolute z-[5] w-[130px] sm:w-[220px] lg:w-[250px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)]"
+        className="absolute z-[5] w-[130px] sm:w-[220px] lg:w-[272px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)]"
         style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%) rotate(-2deg)' }}
       >
         <Image
@@ -57,7 +57,7 @@ export default function HeroCollage() {
         return (
           <div
             key={card.slug}
-            className="absolute w-[112px] sm:w-[140px] lg:w-[170px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
+            className="absolute w-[112px] sm:w-[140px] lg:w-[186px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
             style={{ ...pos.style, transform: finalTransform, zIndex: pos.z }}
           >
             <Image

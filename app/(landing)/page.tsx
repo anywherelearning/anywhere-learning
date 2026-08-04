@@ -205,7 +205,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             02 PROBLEM — What if (forward-looking, distinct from /join's "quiet worry")
         ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -238,7 +238,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             03 HOW IT FEELS — Product experience, not cultural problem (/join does that)
         ════════════════════════════════════════ */}
-        <section className="py-20 md:py-24">
+        <section className="py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -278,7 +278,7 @@ export default async function HomePage() {
             on the site spoke to it. Deliberately claims FIT ("none of this
             happens at a table"), never therapeutic outcome.
         ════════════════════════════════════════ */}
-        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-20 md:py-24">
+        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-12">
@@ -327,7 +327,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             04 CATEGORIES — Chip grid
         ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
+        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -392,7 +392,7 @@ export default async function HomePage() {
             05 HOW IT WORKS — The guided trail: set up explorers,
             we pick the next stop, do it together and mark it reached.
         ════════════════════════════════════════ */}
-        <section className="py-20 md:py-24" id="how-it-works">
+        <section className="py-14 md:py-16" id="how-it-works">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -436,7 +436,7 @@ export default async function HomePage() {
             the trail (explorers earn gear), This Month (curated pick),
             and the printable Record.
         ════════════════════════════════════════ */}
-        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-20 md:py-24">
+        <section className="bg-[#E6EBDF] border-y border-[#C9D3BE] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -588,7 +588,7 @@ export default async function HomePage() {
             guide before being asked for their email — the ask lands as
             "Amelie made this, let me try it" instead of a cold capture.
         ════════════════════════════════════════ */}
-        <section className="py-20 md:py-24" id="free-guide">
+        <section className="py-14 md:py-16" id="free-guide">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="bg-[#F2DECF] border border-[#C97B5C]/35 rounded-[22px] p-10 md:p-14 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center shadow-[0_30px_56px_-36px_rgba(201,123,92,0.4)] relative overflow-hidden">
@@ -642,7 +642,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             08 MEMBERSHIP OFFER — Light, invitational (heavy sell on /join)
         ════════════════════════════════════════ */}
-        <section className="py-20 md:py-24">
+        <section className="py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[860px] mx-auto bg-cream border border-[#D8D4C5] rounded-[20px] p-10 md:p-14 text-center shadow-[0_30px_60px_-40px_rgba(45,58,46,0.4)] relative overflow-hidden">
@@ -701,7 +701,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             09 FAQ — 4 homepage-relevant questions
         ════════════════════════════════════════ */}
-        <section className="py-20 md:py-24">
+        <section className="py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-14">
@@ -725,7 +725,7 @@ export default async function HomePage() {
         {/* ════════════════════════════════════════
             10 FINAL CTA — Two paths: free guide vs membership
         ════════════════════════════════════════ */}
-        <section className="bg-gradient-to-b from-cream to-[#F2EFE4] border-t border-[#D8D4C5] py-20 md:py-24">
+        <section className="bg-gradient-to-b from-cream to-[#F2EFE4] border-t border-[#D8D4C5] py-14 md:py-16">
           <div className="mx-auto max-w-[1180px] px-6 text-center">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto mb-12">
