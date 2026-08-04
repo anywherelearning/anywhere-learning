@@ -345,9 +345,9 @@ export default async function JoinPage({
               <h1 className="mt-5 text-balance font-display text-[clamp(40px,6vw,72px)] leading-[1.04] tracking-tight text-gray-900">
                 Your kid is smart.
                 <br />
-                But can they{' '}
+                But can they handle{' '}
                 <span className="relative whitespace-nowrap">
-                  <span className="relative z-[1]">handle hard</span>
+                  <span className="relative z-[1]">real life</span>
                   <span className="absolute left-[-2%] right-[-2%] bottom-[.04em] -z-0 h-[.34em] rounded-[.3em_.8em_.2em_.6em/.6em_.3em_.8em_.2em] bg-gradient-to-r from-gold/55 via-gold-light/70 to-gold/55" />
                 </span>
                 <em className="font-display not-italic text-forest">?</em>
@@ -536,98 +536,6 @@ export default async function JoinPage({
           </div>
         </section>
 
-        {/* ═══ 3b. FOUNDER OFFER ═══
-            Only rendered while the founder phase is still open. Once the
-            100th member joins, the entire section disappears so post-
-            founder visitors don't see a stale "first 100" pitch. */}
-        {m.isFounderPhase && (
-        <section className="px-6 py-14 max-md:py-10">
-          <div className="mx-auto max-w-[720px] rounded-[18px] border border-[#c4836a]/40 bg-[#f5e1d2] px-11 py-12 text-center shadow-[0_28px_50px_-32px_rgba(201,123,92,.5)] max-md:px-6 max-md:py-9">
-            <Eyebrow className="text-[#7A3D24] before:bg-[#c4836a]">
-              A note from Amelie
-            </Eyebrow>
-            <h2 className="mt-3 text-balance font-display text-[clamp(28px,3.6vw,40px)] leading-[1.14] tracking-tight text-gray-900">
-              The first 100 members get a deal{' '}
-              <em className="font-display italic text-[#7A3D24]">
-                I can't keep offering.
-              </em>
-            </h2>
-
-            <div className="mx-auto mt-4 max-w-[580px] text-left text-[16.5px] leading-[1.7] text-gray-500">
-              <p className="mb-3.5">
-                I'm launching Anywhere Learning Membership the way I wish more
-                small businesses would: by giving the people who show up first
-                something{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  real,
-                </em>{' '}
-                not a coupon code.
-              </p>
-              <p className="mb-3.5">
-                The first {FOUNDER_CAP} members pay{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  ${MEMBERSHIP_PRICE_USD} a year.
-                </em>{' '}
-                After that, the price goes to ${POST_FOUNDER_PRICE_USD}.
-              </p>
-              <p className="mb-3.5">
-                If you join as one of the first {FOUNDER_CAP}, your rate is{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  locked in for life.
-                </em>{' '}
-                You&apos;ll renew at ${MEMBERSHIP_PRICE_USD} every year, forever, even when new members are
-                paying ${POST_FOUNDER_PRICE_USD} or more.
-              </p>
-              <p className="mb-3.5">
-                Why ${MEMBERSHIP_PRICE_USD}? Because I&apos;d rather have {FOUNDER_CAP} families using this and
-                telling me what's working than charge full price to a smaller
-                group. Early members shape what this becomes.
-              </p>
-              <p className="mb-3.5">
-                And on the number itself: it lands about where a family museum
-                membership does. The difference is you use this one{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  all year
-                </em>
-                , not twice.
-              </p>
-              <p className="mb-3.5">
-                Why cap it at 100? Because when the 100th member joins, the
-                price goes up and stays up. No "limited time offer" that runs
-                forever.
-              </p>
-              <p className="font-display text-xl italic text-gray-900">
-                xo,
-                <br />
-                Amelie
-              </p>
-            </div>
-
-            {/* Progress bar */}
-            <div className="mx-auto mt-8 max-w-[480px]">
-              <div className="mb-2.5 flex items-center justify-between text-[13.5px] font-medium tracking-[.04em] text-gray-500">
-                <span>
-                  <span className="font-display text-[22px] italic text-[#c4836a]">
-                    {founderClaimed}
-                  </span>{' '}
-                  / {FOUNDER_CAP} founding spots claimed
-                </span>
-                <span className="text-gray-400">{founderRemaining} spots remaining</span>
-              </div>
-              <div className="h-2.5 overflow-hidden rounded-full border border-[#c4836a]/30 bg-white/70">
-                <div className="relative h-full rounded-full bg-gradient-to-r from-[#c4836a] to-[#A85A38]" style={{ width: `${(founderClaimed / FOUNDER_CAP) * 100}%` }}>
-                  <span className="absolute -right-px top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#c4836a] shadow-[0_0_0_3px_rgba(242,222,207,.95)]" />
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 flex justify-center">
-              <JoinCta center m={m} trialEligible={trialEligible} />
-            </div>
-          </div>
-        </section>
-        )}
-
         {/* ═══ 4. INSIDE / CATEGORIES ═══ */}
         <section
           id="categories"
@@ -635,10 +543,10 @@ export default async function JoinPage({
         >
           <div className="mx-auto max-w-[1120px]">
             <div className="mx-auto mb-10 max-w-[760px] text-center">
-              <Eyebrow>Where the trail leads</Eyebrow>
+              <Eyebrow>What's inside</Eyebrow>
               <h2 className="mt-3.5 text-balance font-display text-[clamp(32px,4.2vw,52px)] leading-[1.08] tracking-tight">
-                The whole map.{' '}
-                <em className="font-display not-italic text-forest">One trail.</em>
+                Every skill{' '}
+                <em className="font-display not-italic text-forest">real life needs.</em>
               </h2>
               <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
                 Your family's trail winds through every area below, so kids
@@ -798,6 +706,99 @@ export default async function JoinPage({
             <TrailRule />
           </div>
         </section>
+
+        {/* ═══ 3b. FOUNDER OFFER ═══
+            Moved after "how it works" so a visitor understands what they're
+            buying before the pitch. Only rendered while the founder phase is
+            still open. Once the 100th member joins, the entire section
+            disappears so post-founder visitors don't see a stale pitch. */}
+        {m.isFounderPhase && (
+        <section className="px-6 py-14 max-md:py-10">
+          <div className="mx-auto max-w-[720px] rounded-[18px] border border-[#c4836a]/40 bg-[#f5e1d2] px-11 py-12 text-center shadow-[0_28px_50px_-32px_rgba(201,123,92,.5)] max-md:px-6 max-md:py-9">
+            <Eyebrow className="text-[#7A3D24] before:bg-[#c4836a]">
+              A note from Amelie
+            </Eyebrow>
+            <h2 className="mt-3 text-balance font-display text-[clamp(28px,3.6vw,40px)] leading-[1.14] tracking-tight text-gray-900">
+              The first 100 members get a deal{' '}
+              <em className="font-display italic text-[#7A3D24]">
+                I can't keep offering.
+              </em>
+            </h2>
+
+            <div className="mx-auto mt-4 max-w-[580px] text-left text-[16.5px] leading-[1.7] text-gray-500">
+              <p className="mb-3.5">
+                I'm launching Anywhere Learning Membership the way I wish more
+                small businesses would: by giving the people who show up first
+                something{' '}
+                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
+                  real,
+                </em>{' '}
+                not a coupon code.
+              </p>
+              <p className="mb-3.5">
+                The first {FOUNDER_CAP} members pay{' '}
+                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
+                  ${MEMBERSHIP_PRICE_USD} a year.
+                </em>{' '}
+                After that, the price goes to ${POST_FOUNDER_PRICE_USD}.
+              </p>
+              <p className="mb-3.5">
+                If you join as one of the first {FOUNDER_CAP}, your rate is{' '}
+                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
+                  locked in for life.
+                </em>{' '}
+                You&apos;ll renew at ${MEMBERSHIP_PRICE_USD} every year, forever, even when new members are
+                paying ${POST_FOUNDER_PRICE_USD} or more.
+              </p>
+              <p className="mb-3.5">
+                Why ${MEMBERSHIP_PRICE_USD}? Because I&apos;d rather have {FOUNDER_CAP} families using this and
+                telling me what's working than charge full price to a smaller
+                group. Early members shape what this becomes.
+              </p>
+              <p className="mb-3.5">
+                And on the number itself: it lands about where a family museum
+                membership does. The difference is you use this one{' '}
+                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
+                  all year
+                </em>
+                , not twice.
+              </p>
+              <p className="mb-3.5">
+                Why cap it at 100? Because when the 100th member joins, the
+                price goes up and stays up. No "limited time offer" that runs
+                forever.
+              </p>
+              <p className="font-display text-xl italic text-gray-900">
+                xo,
+                <br />
+                Amelie
+              </p>
+            </div>
+
+            {/* Progress bar */}
+            <div className="mx-auto mt-8 max-w-[480px]">
+              <div className="mb-2.5 flex items-center justify-between text-[13.5px] font-medium tracking-[.04em] text-gray-500">
+                <span>
+                  <span className="font-display text-[22px] italic text-[#c4836a]">
+                    {founderClaimed}
+                  </span>{' '}
+                  / {FOUNDER_CAP} founding spots claimed
+                </span>
+                <span className="text-gray-400">{founderRemaining} spots remaining</span>
+              </div>
+              <div className="h-2.5 overflow-hidden rounded-full border border-[#c4836a]/30 bg-white/70">
+                <div className="relative h-full rounded-full bg-gradient-to-r from-[#c4836a] to-[#A85A38]" style={{ width: `${(founderClaimed / FOUNDER_CAP) * 100}%` }}>
+                  <span className="absolute -right-px top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#c4836a] shadow-[0_0_0_3px_rgba(242,222,207,.95)]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <JoinCta center m={m} trialEligible={trialEligible} />
+            </div>
+          </div>
+        </section>
+        )}
 
         {/* ═══ 7. TESTIMONIALS (real early-member quotes; limited set for now) ═══ */}
         <section className="px-6 py-16 max-md:py-10">
