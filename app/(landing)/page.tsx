@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PhotoMosaic from '@/components/shared/PhotoMosaic';
-import { POST_FOUNDER_PRICE_USD, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import Testimonials from '@/components/home/Testimonials';
@@ -333,16 +333,12 @@ export default async function HomePage() {
             <ScrollReveal delay={100}>
               <div className="max-w-[620px] mx-auto text-center space-y-5">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  You open a guide on your phone. Read a quick intro. Grab whatever you already have at home.
-                  Then you and your kid <span className="font-display italic text-forest">do something real together</span>. Cook a meal, build a budget,
+                  You open a guide on your phone, grab whatever&apos;s already at home, and you and your
+                  kid <span className="font-display italic text-forest">do something real together</span>. Cook a meal, build a budget,
                   plan a road trip, start a business.
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Every activity has <span className="font-display italic text-forest">three built-in skill levels</span> so siblings
-                  can work side by side without anyone feeling overwhelmed or under-challenged.
-                </p>
-                <p className="text-lg leading-relaxed text-gray-700">
-                  No lesson plans. No grading. No prep that takes longer than the activity itself.
+                  No lesson plans. No grading. No prep that takes longer than the activity.
                   Just <span className="font-display italic text-forest">quality time that quietly builds real skills.</span>
                 </p>
               </div>
@@ -373,21 +369,14 @@ export default async function HomePage() {
             <ScrollReveal delay={100}>
               <div className="max-w-[620px] mx-auto text-center space-y-5">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  I taught for fifteen years. Near the end, almost every kid in my room needed
-                  something different. One could not sit still. One froze the second anything was
-                  graded. One finished in four minutes and cared about none of it. Twenty of them,
-                  one curriculum to get through. Some had a diagnosis and some did not, and it
-                  never changed what they actually needed.
+                  One kid can&apos;t sit still. One freezes the second anything is graded. One finishes
+                  in four minutes and cares about none of it. Diagnosis or not, it never changed what
+                  they needed: to learn <span className="font-display italic text-forest">standing up, outside, in the kitchen, with their hands.</span>
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Everything here happens <span className="font-display italic text-forest">standing up, outside, in the kitchen, with their hands</span>.
-                  Nothing is timed and nothing is graded. The three skill levels mean you pitch it
-                  where your kid actually is, not where a grade level says they should be.
-                </p>
-                <p className="text-lg leading-relaxed text-gray-700">
-                  I am not going to tell you this fixes anything, and I would not trust anyone who
-                  did. But if the table is where it all falls apart in your house,
-                  <span className="font-display italic text-forest"> none of this happens at a table.</span>
+                  Nothing here is timed or graded, and you pitch each activity where your kid actually
+                  is. I won&apos;t promise it fixes anything. But if the table is where it all falls apart
+                  in your house, <span className="font-display italic text-forest">none of this happens at a table.</span>
                 </p>
                 <p className="pt-2">
                   <Link
@@ -714,65 +703,6 @@ export default async function HomePage() {
                       Free
                     </span>
                   </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            08 MEMBERSHIP OFFER — Light, invitational (heavy sell on /join)
-        ════════════════════════════════════════ */}
-        <section className="py-14 md:py-16">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[860px] mx-auto bg-cream border border-[#D8D4C5] rounded-[20px] p-10 md:p-14 text-center shadow-[0_30px_60px_-40px_rgba(45,58,46,0.4)] relative overflow-hidden">
-                <span className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C97B5C] via-[#E9C76B] to-forest" />
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  Going further
-                </p>
-                <h2 className="font-display text-[clamp(1.9rem,3.8vw,2.9rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
-                  When you&apos;re ready: <span className="italic text-forest">unlimited access.</span>
-                </h2>
-                <div className="mt-5 mx-auto max-w-[580px] text-gray-500 text-[17px] leading-relaxed space-y-3">
-                  <p>
-                    The membership unlocks the full library: all 120+ activities, all nine
-                    categories, new ones added every quarter. One simple price, no upsells,
-                    no tracking your kids.
-                  </p>
-                  <p>
-                    {m.isFounderPhase ? (
-                      <>
-                        Founding members (first {m.founderCap}) pay just{' '}
-                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
-                        billed once a year at {m.priceYear}, locked in for life.{' '}
-                        After that, ${POST_FOUNDER_PRICE_USD}. Prefer to go month to month?{' '}
-                        {MONTHLY_PLAN_PRICE_MONTH}, cancel anytime.
-                      </>
-                    ) : (
-                      <>
-                        Membership is just{' '}
-                        <span className="font-display italic text-[#C97B5C] text-lg">{m.priceMonth}</span>,
-                        billed once a year at {m.priceYear}, or {MONTHLY_PLAN_PRICE_MONTH} month
-                        to month.
-                      </>
-                    )}
-                  </p>
-                </div>
-                <div className="flex justify-center mt-8">
-                  <Link
-                    href="/join"
-                    className="inline-flex items-center gap-3.5 bg-forest text-cream font-semibold py-4 px-7 rounded-xl text-base shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_10px_24px_-12px_rgba(58,90,64,0.5),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
-                  >
-                    See what&apos;s in the membership
-                    <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-white/[0.18]">&rarr;</span>
-                  </Link>
-                </div>
-                <div className="mt-3.5 text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-                  <span>14-day money-back guarantee</span>
-                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span>Cancel anytime</span>
                 </div>
               </div>
             </ScrollReveal>

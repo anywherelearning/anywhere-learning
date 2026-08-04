@@ -13,10 +13,10 @@
 // place. The `guide:{tag}` tag still fires for a later delivery sequence, and
 // `from-ideas-{category}` tags the signup for segmented nurture.
 
-import { useState, type FormEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { IdeaFreeActivity } from '@/lib/ideas-free-activity';
+import { useIdeaOffer } from './useIdeaOffer';
 
 interface Props {
   /** Category slug, used for the Kit attribution tag (from-ideas-{slug}). */
@@ -32,67 +32,24 @@ export default function IdeaListEmailCapture({
   accent,
   activity,
 }: Props) {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>(
-    'idle',
-  );
-  const [errorMessage, setErrorMessage] = useState('');
-  /** Set when this address already used its one free activity on another list. */
-  const [priorClaim, setPriorClaim] = useState<{
-    name: string;
-    downloadUrl: string;
-  } | null>(null);
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setErrorMessage('');
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setErrorMessage('Please enter a valid email address.');
-      return;
-    }
-
-    setStatus('loading');
-
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          source: `ideas-${categorySlug}`,
-          guide: activity.guideTag,
-          // One free activity per address, across all the idea lists.
-          oncePerEmail: true,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok || data.error) {
-        setErrorMessage(data.error || 'Something went wrong. Please try again.');
-        setStatus('error');
-        return;
-      }
-
-      if (data.alreadyClaimed) setPriorClaim(data.alreadyClaimed);
-      setStatus('success');
-
-      try {
-        const { pinterestSetEnhancedMatch, metaLead } = await import(
-          '@/lib/tracking'
-        );
-        pinterestSetEnhancedMatch(email);
-        metaLead(`ideas:${categorySlug}`);
-      } catch {
-        // tracking is best-effort, never block delivery
-      }
-    } catch {
-      setErrorMessage('Something went wrong. Please try again.');
-      setStatus('error');
-    }
-  }
+  // Shared with the compact offer beside the PDF download, so claiming in
+  // either place settles both.
+  const {
+    email,
+    setEmail,
+    status,
+    errorMessage,
+    setErrorMessage,
+    claimed,
+    submit,
+  } = useIdeaOffer(categorySlug, activity);
+  // Show the membership pitch whenever what they hold isn't this page's guide:
+  // either the server told us they'd already claimed, or they claimed a
+  // different category earlier and localStorage carried it here.
+  const priorClaim =
+    claimed && (claimed.wasPrior || claimed.name !== activity.name)
+      ? claimed
+      : null;
 
   return (
     <section className="py-11 md:py-14 print:hidden">
@@ -139,17 +96,17 @@ export default function IdeaListEmailCapture({
                 Here it is. Go and have fun.
               </h2>
               <p className="mt-3 text-[15.5px] leading-[1.6] text-[#4a4843] max-w-[460px] mx-auto">
-                <strong className="font-semibold">{activity.name}</strong>{' '}
+                <strong className="font-semibold">{claimed?.name}</strong>{' '}
                 is yours. Save it somewhere you&rsquo;ll find it again, and use
                 it year after year.
               </p>
               <a
-                href={activity.downloadUrl}
+                href={claimed?.downloadUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-7 rounded-xl text-[15.5px] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200 no-underline"
               >
-                Download {activity.name}
+                Download {claimed?.name}
                 <span aria-hidden="true">&darr;</span>
               </a>
             </div>
@@ -173,7 +130,7 @@ export default function IdeaListEmailCapture({
                   {activity.blurb}
                 </p>
 
-                <form onSubmit={handleSubmit} className="mt-6">
+                <form onSubmit={submit} className="mt-6">
                   <div className="flex flex-col gap-2.5 sm:flex-row">
                     <div className="flex-1 min-w-0">
                       <label htmlFor="ideas-capture-email" className="sr-only">

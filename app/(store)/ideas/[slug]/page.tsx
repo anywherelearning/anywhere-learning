@@ -961,7 +961,13 @@ function ListDetailView({
 
         {/* Interactive checklist */}
         <div className="print:hidden">
-          <IdeasChecklist list={list} accent={category.accent} pdfUrls={pdfUrls} />
+          <IdeasChecklist
+            list={list}
+            accent={category.accent}
+            pdfUrls={pdfUrls}
+            categorySlug={category.slug}
+            freeActivity={freeActivity}
+          />
         </div>
 
         {/* How to use this list. Sits between the list and the offer: it is

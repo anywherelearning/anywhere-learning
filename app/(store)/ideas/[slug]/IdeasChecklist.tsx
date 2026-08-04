@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import type { IdeaList } from '@/lib/ideas';
+import type { IdeaFreeActivity } from '@/lib/ideas-free-activity';
+import IdeaListOfferInline from '@/components/ideas/IdeaListOfferInline';
 
 /* ──────────────────────────────────────────────────────────────────
    IdeasChecklist
@@ -15,10 +17,15 @@ export default function IdeasChecklist({
   list,
   accent,
   pdfUrls,
+  categorySlug,
+  freeActivity,
 }: {
   list: IdeaList;
   accent: string;
   pdfUrls: { color: string; bw: string } | null;
+  categorySlug: string;
+  /** Null when the category has no activity mapped, which hides the offer. */
+  freeActivity: IdeaFreeActivity | null;
 }) {
   const storageKey = `al-ideas:${list.slug}`;
   const totalItems = list.sections.reduce((n, s) => n + s.items.length, 0);
@@ -154,6 +161,18 @@ export default function IdeasChecklist({
             )}
           </div>
         </div>
+
+        {/* The full offer sits below the list, about five screens down on a
+            phone. Most visitors take the PDF here and leave, so the same ask
+            also runs at the point they're already accepting something. Both
+            share state, so claiming in one settles the other. */}
+        {freeActivity && (
+          <IdeaListOfferInline
+            categorySlug={categorySlug}
+            accent={accent}
+            activity={freeActivity}
+          />
+        )}
       </div>
 
       {/* ── Sticky progress bar ── */}
