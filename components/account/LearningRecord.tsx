@@ -496,7 +496,7 @@ export default function LearningRecord({
             ))}
           </div>
           <p className="lr-noprint" style={{ fontSize: 12, color: 'var(--am-muted)', margin: '0 0 26px' }}>
-            Days &amp; hours are estimated from each activity&apos;s length — tap any activity&apos;s time below to adjust it.
+            Days &amp; hours are estimated from each activity&apos;s length. Tap any activity&apos;s time below to adjust it.
           </p>
 
           {/* area coverage */}

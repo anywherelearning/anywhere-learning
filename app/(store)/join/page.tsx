@@ -14,15 +14,10 @@ import {
   FOUNDER_CAP,
   MONTHLY_PRICE_USD,
   MONTHLY_PLAN_PRICE_MONTH,
+  getActiveMemberCount,
 } from '@/lib/membership';
 import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
 import { getFallbackProducts } from '@/lib/fallback-products';
-
-const FOUNDER_FLOOR = 12;
-// TODO: replace with real subscriber count from DB when membership is live
-const actualSubscribers = 0;
-const founderClaimed = Math.max(FOUNDER_FLOOR, actualSubscribers);
-const founderRemaining = FOUNDER_CAP - founderClaimed;
 
 const OG_IMAGE = 'https://anywherelearning.co/membership-hero.png';
 const PAGE_URL = 'https://anywherelearning.co/join';
@@ -138,6 +133,10 @@ export default async function JoinPage({
   // instantly. Page-visible copy below uses `m` so the founder framing
   // closes automatically the moment the 100th member is provisioned.
   const m = await import('@/lib/membership-runtime').then((x) => x.getMembership());
+  // Real founder count from the DB (active + trialing subscriptions), capped at
+  // the cap. Honest, live scarcity instead of a fabricated floor.
+  const founderClaimed = Math.min(await getActiveMemberCount(), FOUNDER_CAP);
+  const founderRemaining = FOUNDER_CAP - founderClaimed;
 
   // Soft banner for visitors who landed on /join from a gated entry point —
   // a PDF link they couldn't open, or /account when they have no access.

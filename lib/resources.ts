@@ -1978,7 +1978,7 @@ const resources: ResourcePage[] = [
       { type: 'heading', level: 2, text: 'What homeschooling actually costs' },
       { type: 'paragraph', text: 'Less than most people assume. The biggest cost is usually the opportunity cost of one parent reducing hours or stepping back from work. The direct costs are modest:' },
       { type: 'list', ordered: false, items: [
-        'Library card (free) — your biggest resource',
+        'Library card (free), your biggest resource',
         'Curriculum (optional, $0 to $500 per child per year if you buy one)',
         'Co-op fees ($0 to $300 per child per semester)',
         'Activities and classes (variable, similar to what any family pays for after-school programs)',
@@ -2312,7 +2312,7 @@ const resources: ResourcePage[] = [
         ordered: false,
         items: [
           'Not giving the answer. The "I know how, let me show you" instinct kills the actual learning, which is in the figuring out.',
-          'Letting the failure stand. A bridge that collapses, a circuit that does not light, a soufflé that flops — these are the lesson. The temptation to rescue and explain almost always undermines it.',
+          'Letting the failure stand. A bridge that collapses, a circuit that does not light, a soufflé that flops. These are the lesson. The temptation to rescue and explain almost always undermines it.',
         ],
       },
       {
@@ -2358,7 +2358,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Technology for kids in 2026 is not just coding. It is the broader literacy of understanding the systems they already use every day — recommendation algorithms, AI tools, search engines, photo and video tools — and the basic mental models for how those systems work.',
+        text: 'Technology for kids in 2026 is not just coding. It is the broader literacy of understanding the systems they already use every day, recommendation algorithms, AI tools, search engines, photo and video tools, and the basic mental models for how those systems work.',
       },
       {
         type: 'paragraph',
@@ -2370,7 +2370,7 @@ const resources: ResourcePage[] = [
         items: [
           'Ages 6 to 8: simple block-based coding (Scratch Jr, Lightbot). The goal is the logic, not the syntax.',
           'Ages 9 to 11: Scratch projects with a real audience (a younger sibling, grandparents). Understanding what an algorithm is by writing one.',
-          'Ages 11 to 14: introducing AI tools with careful framing — how to use them, when to verify, when to refuse. Our [Build Your Own AI Helper](/shop/build-ai-helper) and [Algorithm Awareness](/shop/algorithm-awareness) activities cover this directly.',
+          'Ages 11 to 14: introducing AI tools with careful framing: how to use them, when to verify, when to refuse. Our [Build Your Own AI Helper](/shop/build-ai-helper) and [Algorithm Awareness](/shop/algorithm-awareness) activities cover this directly.',
           'Across all ages: real-world video projects. Writing a script, filming, editing, publishing. Technology is a tool for telling stories, not just for consuming them.',
         ],
       },
@@ -2470,7 +2470,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Projects can now span days or weeks. A working weather station. A small business plan. A piece of code that does something useful. Connecting math to real budgets. AI literacy starts here. Kids this age can also start to own a "patch" of real-world STEM — a corner of the backyard, a recurring science project, a niche of personal expertise.',
+        text: 'Projects can now span days or weeks. A working weather station. A small business plan. A piece of code that does something useful. Connecting math to real budgets. AI literacy starts here. Kids this age can also start to own a "patch" of real-world STEM: a corner of the backyard, a recurring science project, a niche of personal expertise.',
       },
       {
         type: 'heading',
@@ -2515,7 +2515,7 @@ const resources: ResourcePage[] = [
           'Buying kits with one correct outcome. The instructions teach following directions, not problem-solving. Use kits sparingly.',
           'Treating STEM as enrichment instead of the main course. Real-world STEM is not a Saturday activity layered onto school, it is a way of seeing every project the kid already does.',
           'Pushing girls toward "pretty" STEM. The data on what girls do with STEM materials when adults stop curating is consistent: they build, code, and engineer at the same rate as boys. Curate less.',
-          'Skipping the math. Kids who think they hate math often love budgeting, scoring, and stats — give them real numbers tied to outcomes they care about.',
+          'Skipping the math. Kids who think they hate math often love budgeting, scoring, and stats. Give them real numbers tied to outcomes they care about.',
           'Rescuing too fast. The frustration before the breakthrough is the most valuable part of the activity.',
           'Buying expensive equipment instead of starting with cardboard. Most of the best engineering projects in the world started from scrap.',
         ],

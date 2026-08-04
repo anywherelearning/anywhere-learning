@@ -39,6 +39,9 @@ const sections: LegalSection[] = [
             <strong className="text-ink font-semibold">Order and subscription information:</strong> what you purchased or which membership you joined, when, and your access history.
           </li>
           <li>
+            <strong className="text-ink font-semibold">Your children&apos;s details (optional):</strong> if you set up your family in the member area, we store the first name and the age or birth month you enter for each child. You provide this, your child does not, and we use it only to suggest age-appropriate activities and build their learning roadmap. You can edit or remove it anytime in your account.
+          </li>
+          <li>
             <strong className="text-ink font-semibold">Usage data:</strong> pages you visit and how you interact with our site (collected anonymously via analytics).
           </li>
         </ul>
@@ -50,7 +53,7 @@ const sections: LegalSection[] = [
     title: 'Payment processing',
     content: (
       <p>
-        All payments are processed securely by <strong className="text-ink font-semibold">Stripe</strong>. We never see, store, or have access to your credit card number or banking details. Stripe handles all payment data under their own security standards (<Em>PCI DSS Level 1</Em>). This applies to the free trial and recurring annual membership renewals.
+        All payments are processed securely by <strong className="text-ink font-semibold">Stripe</strong>. We never see, store, or have access to your credit card number or banking details. Stripe handles all payment data under their own security standards (<Em>PCI DSS Level 1</Em>). This applies to your free trial and recurring membership renewals, whether you pay yearly or monthly.
       </p>
     ),
   },
@@ -59,7 +62,7 @@ const sections: LegalSection[] = [
     title: 'Cookies & authentication',
     content: (
       <p>
-        We use essential cookies to keep you signed in to your account (powered by Clerk). These are necessary for the site to function and cannot be disabled. <Em>We do not use advertising or third-party tracking cookies.</Em>
+        We use essential cookies to keep you signed in to your account (powered by Clerk). These are necessary for the site to function and cannot be disabled. Our analytics may set its own cookies too (see below). <Em>We do not run advertising cookies or sell your data.</Em>
       </p>
     ),
   },
@@ -88,7 +91,7 @@ const sections: LegalSection[] = [
     title: 'Analytics',
     content: (
       <p>
-        We use Google Analytics to understand how visitors use our site, which pages are most popular, how people find us, what to improve. This data is <Em>aggregated and anonymous.</Em> We don&apos;t use it to identify individual visitors or target you with ads.
+        We use Google Analytics to understand how visitors use our site, which pages are most popular, how people find us, what to improve. Google Analytics may set its own cookies, and we keep this data <Em>aggregated.</Em> We don&apos;t use it to identify individual visitors or target you with ads.
       </p>
     ),
   },
@@ -101,19 +104,25 @@ const sections: LegalSection[] = [
         <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2 mb-4">
           <ul className="list-disc pl-6 space-y-2 marker:text-[#C97B5C]">
             <li>
-              <strong className="text-ink font-semibold">Stripe</strong>: payment processing for one-time purchases and recurring memberships.
+              <strong className="text-ink font-semibold">Stripe</strong>: payment processing for your membership.
             </li>
             <li>
-              <strong className="text-ink font-semibold">Clerk</strong>: account authentication.
+              <strong className="text-ink font-semibold">Clerk</strong>: account authentication and secure sign-in.
             </li>
             <li>
-              <strong className="text-ink font-semibold">ConvertKit (Kit)</strong>: email marketing.
+              <strong className="text-ink font-semibold">Neon</strong>: our database, where your account and family details are stored.
             </li>
             <li>
-              <strong className="text-ink font-semibold">Vercel</strong>: website hosting.
+              <strong className="text-ink font-semibold">Resend</strong>: transactional email (confirmations, trial and renewal notices).
             </li>
             <li>
-              <strong className="text-ink font-semibold">Google Analytics</strong>: anonymous site usage data.
+              <strong className="text-ink font-semibold">ConvertKit (Kit)</strong>: marketing email.
+            </li>
+            <li>
+              <strong className="text-ink font-semibold">Vercel</strong>: website hosting and secure storage for the activity guides.
+            </li>
+            <li>
+              <strong className="text-ink font-semibold">Google Analytics</strong>: aggregated site-usage data.
             </li>
           </ul>
         </div>
@@ -124,12 +133,24 @@ const sections: LegalSection[] = [
     ),
   },
   {
+    id: 's6b',
+    title: 'Where your data is stored',
+    content: (
+      <p>
+        Anywhere Learning is run from British Columbia, Canada. The services above store and process data on servers in the United States, so your information, including any family details you enter, is transferred to and handled outside Canada under the laws of those countries. By using the site you consent to this transfer. We handle your personal information in line with Canada&apos;s privacy law (<Em>PIPEDA</Em>) and only share what&apos;s necessary to run the service.
+      </p>
+    ),
+  },
+  {
     id: 's7',
     title: "Children's privacy",
     content: (
       <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2">
+        <p className="mb-3.5">
+          Anywhere Learning is built for parents and guardians to use <Em>with</Em> their kids. We don&apos;t market to children or ask children to create accounts, and the activities are led by you.
+        </p>
         <p>
-          Anywhere Learning is a resource for parents and guardians. Our site and membership are <Em>not directed at children under 13,</Em> and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will remove it promptly.
+          If you set up your family in the member area, you can enter a first name and an age or birth month for each child. That information is provided by <Em>you, the parent,</Em> never collected from the child, and we use it only to tailor activity suggestions and their learning roadmap. We never ask children for personal information directly. You can view, edit, or delete your children&apos;s details anytime in your account, or email us at <MailLink /> and we&apos;ll remove them.
         </p>
       </div>
     ),
@@ -210,7 +231,7 @@ export default function PrivacyPage() {
         </>
       }
       sub="How we collect, use, and protect your personal information, explained in plain language."
-      lastUpdated="May 18, 2026"
+      lastUpdated="August 4, 2026"
       sections={sections}
       helpline={{
         lead: 'Have a question about this policy?',

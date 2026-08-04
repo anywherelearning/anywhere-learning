@@ -916,7 +916,7 @@ export default async function ProductPage({
                 href="/start-trial"
                 className="inline-flex items-center gap-2.5 bg-forest text-cream font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
               >
-                Unlock everything &mdash; {MEMBERSHIP_PRICE_YR}
+                Unlock everything, {MEMBERSHIP_PRICE_YR}
                 <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
                   &rarr;
                 </span>

@@ -253,7 +253,7 @@ function AddToTrail({ slug, title, accent, accentDeep }: { slug: string; title: 
         style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '11px 20px', borderRadius: 999, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: 14, color: '#fff', background: added ? accentDeep : accent, boxShadow: `0 12px 26px -14px ${hexToRgba(accentDeep, 0.8)}` }}
       >
         {added ? <CheckIcon /> : <PlusIcon />}
-        {added ? 'On a trail — add again?' : 'Add to a trail'}
+        {added ? 'On a trail, add again?' : 'Add to a trail'}
       </button>
 
       {choosing && (

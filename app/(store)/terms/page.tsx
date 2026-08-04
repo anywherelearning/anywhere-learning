@@ -171,7 +171,7 @@ const sections: LegalSection[] = [
     title: 'Governing law',
     content: (
       <p>
-        These terms are governed by the laws of Canada. Any disputes will be resolved under Canadian jurisdiction.
+        These terms are governed by the laws of the Province of British Columbia and the federal laws of Canada that apply there. Any disputes will be resolved in the courts of British Columbia.
       </p>
     ),
   },

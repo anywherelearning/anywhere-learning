@@ -40,7 +40,7 @@ export default function StoreError({
           </p>
           <p className="mt-8 max-w-[540px] mx-auto text-[18px] leading-[1.6] text-gray-600 text-pretty">
             Something on our end isn&apos;t working as it should. This is rare, and it&apos;s not
-            your fault. Try refreshing the page — that fixes it most of the time. If not, head
+            your fault. Try refreshing the page. That fixes it most of the time. If not, head
             home and we&apos;ll dig into what happened.
           </p>
         </div>

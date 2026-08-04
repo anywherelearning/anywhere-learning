@@ -240,7 +240,7 @@ export default function KidsSetup({
               </div>
               <p className="text-[12.5px] text-gray-500 mt-2">
                 {walk === 'family'
-                  ? 'Everyone does the same activity together — simplest, and great for siblings.'
+                  ? 'Everyone does the same activity together. Simplest, and great for siblings.'
                   : 'Each child gets their own next activity, matched to their age.'}
               </p>
             </fieldset>

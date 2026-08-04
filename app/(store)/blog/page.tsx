@@ -11,6 +11,7 @@ import {
 } from '@/lib/blog';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
+import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
 import { categoryIcons } from '@/components/blog/CategoryIcons';
@@ -426,7 +427,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     The Anywhere Learning{' '}
                     <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
                     unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay $99/year, locked in for life, or go monthly for $15.
+                    budgeting, building, planning. Founding members pay {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
                   </p>
                 </div>
                 <Link

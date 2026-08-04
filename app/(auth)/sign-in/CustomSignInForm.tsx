@@ -604,14 +604,14 @@ function CardHeader({ stage, email }: { stage: Stage; email: string }) {
   };
   const subs: Record<Stage, React.ReactNode> = {
     identifier:
-      'Your library, your activities, your saved skill maps — right where you left them.',
+      'Your library, your activities, your saved skill maps, right where you left them.',
     email_code: (
       <>
         We sent a 6-digit code{email ? <> to <strong className="text-ink font-semibold">{email}</strong></> : null}. It expires in 10 minutes.
       </>
     ),
     reset_request:
-      "Type the email you signed up with — we'll send a code so you can choose a new password.",
+      "Type the email you signed up with. We'll send a code so you can choose a new password.",
     reset_verify:
       'Almost done. Enter the 6-digit code from your inbox and choose a new password.',
   };
@@ -862,7 +862,7 @@ function ResetForm({
             ✓
           </span>
           {strong
-            ? 'Looks strong — 8+ characters with a number'
+            ? 'Looks strong, 8+ characters with a number'
             : 'Aim for 8+ characters, including a number'}
         </div>
       )}

@@ -60,7 +60,7 @@ export default function ReviewForm({
       return;
     }
     if (comment.trim().length < 10) {
-      setErr('Tell us a little more — a sentence or two.');
+      setErr('Tell us a little more, a sentence or two.');
       return;
     }
     startTransition(async () => {
@@ -75,7 +75,7 @@ export default function ReviewForm({
           setErr(data.error || 'Could not save your review. Try again.');
           return;
         }
-        setInfo('Thanks — your review is in. It will appear in a moment.');
+        setInfo('Thanks, your review is in. It will appear in a moment.');
         setTimeout(() => {
           reset();
           // Soft refresh so the new review appears
@@ -150,7 +150,7 @@ export default function ReviewForm({
         onChange={(e) => setComment(e.target.value)}
         rows={4}
         maxLength={1000}
-        placeholder="A sentence or two — what your kid did, what got them engaged, how it went."
+        placeholder="A sentence or two: what your kid did, what got them engaged, how it went."
         className="w-full appearance-none bg-cream border border-[#D8D4C5] rounded-[10px] px-3.5 py-2.5 font-body text-[14.5px] text-ink outline-none focus:border-forest focus:shadow-[0_0_0_3px_rgba(88,129,87,0.18)] transition-all resize-y"
       />
       <p className="m-0 mt-1 text-[11.5px] text-gray-500 text-right">

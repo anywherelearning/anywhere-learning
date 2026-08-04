@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/shared/ScrollReveal';
-import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 
 const ABOUT_DESC =
   "I'm Amelie, former teacher (B.Ed, M.Ed, 15 years) and mom of two. I watched kids become less independent over 15 years in the classroom. Anywhere Learning is the hands-on life skills activities I built so any parent can change that.";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: ABOUT_OG_IMAGE,
         width: 1200,
         height: 800,
-        alt: 'Amelie Drouin — former teacher and founder of Anywhere Learning',
+        alt: 'Amelie Drouin, former teacher and founder of Anywhere Learning',
       },
     ],
   },
@@ -493,7 +493,7 @@ export default function AboutPage() {
                 </Link>
               </div>
               <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13px] text-gray-500">
-                <span>Founder rate $99/year locked in for life, or $15/month</span>
+                <span>Founder rate {MEMBERSHIP_PRICE_YEAR} locked in for life, or {MONTHLY_PLAN_PRICE_MONTH}</span>
                 <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
                 <span>14-day money-back guarantee</span>
                 <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />

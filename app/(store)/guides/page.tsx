@@ -4,6 +4,7 @@ import Image from 'next/image';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import { getAllResources, resourceTopics, type ResourcePage } from '@/lib/resources';
+import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 
 export const metadata: Metadata = {
   title: 'Learning Guides for Families: Life Skills, Nature, Creativity & More',
@@ -335,7 +336,7 @@ export default function ResourcesPage() {
                     The Anywhere Learning{' '}
                     <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
                     unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay $99/year, locked in for life, or go monthly for $15.
+                    budgeting, building, planning. Founding members pay {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
                   </p>
                 </div>
                 <Link

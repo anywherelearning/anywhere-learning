@@ -727,7 +727,7 @@ export default function AccountDashboard({
                       type="button"
                       onClick={() => togglePin(a.slug)}
                       aria-label={isPinned ? `Remove ${a.title} from Saved` : `Save ${a.title} for later`}
-                      title={isPinned ? 'Saved — click to remove' : 'Save for later'}
+                      title={isPinned ? 'Saved, click to remove' : 'Save for later'}
                       className={`w-8 h-8 rounded-lg grid place-items-center cursor-pointer transition-colors border ${
                         isPinned
                           ? 'bg-[#E6EBDF] border-[#C9D3BE] text-forest'

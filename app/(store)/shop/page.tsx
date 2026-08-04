@@ -563,7 +563,7 @@ export default function ShopPage() {
                       href="/start-trial"
                       className="inline-flex items-center gap-2.5 bg-forest text-cream font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
                     >
-                      Unlock everything &mdash; {MEMBERSHIP_PRICE_YR}
+                      Unlock everything, {MEMBERSHIP_PRICE_YR}
                       <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
                         &rarr;
                       </span>
@@ -850,8 +850,8 @@ export default function ShopPage() {
             <ScrollReveal>
               <p className="font-display italic text-[18px] md:text-[20px] text-gray-700 leading-[1.4] max-w-[520px] mx-auto mb-4 text-balance">
                 Or just{' '}
-                <span className="text-forest-dark">stay in the loop</span>{' '}
-                &mdash; new activities and ideas, when we have something worth sharing.
+                <span className="text-forest-dark">stay in the loop</span>:{' '}
+                new activities and ideas, when we have something worth sharing.
               </p>
               <div className="max-w-[460px] mx-auto">
                 <EmailForm variant="light" buttonText="Subscribe" />

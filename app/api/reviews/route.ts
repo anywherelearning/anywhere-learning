@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     }
     const cleaned = (typeof comment === 'string' ? comment : '').replace(/<[^>]*>/g, '').trim();
     if (cleaned.length < 10) {
-      return NextResponse.json({ error: 'Tell us a little more — a sentence or two.' }, { status: 400 });
+      return NextResponse.json({ error: 'Tell us a little more, a sentence or two.' }, { status: 400 });
     }
     if (cleaned.length > 1000) {
       return NextResponse.json({ error: 'A bit too long. Trim to under 1000 characters.' }, { status: 400 });
