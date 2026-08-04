@@ -41,7 +41,7 @@ const homepageFaqLd = {
 
 const CATEGORIES = [
   { name: 'Real-World Math', slug: 'real-world-math', icon: '$', gradient: 'from-forest to-forest-dark', photo: '/images/money-grocery-shopping.jpeg' },
-  { name: 'Creativity & Maker', slug: 'creativity-maker', icon: '✂', gradient: 'from-[#D8A77E] to-[#B07A4F]', photo: '/images/lego-glasses.jpeg' },
+  { name: 'Creativity & Making', slug: 'creativity-maker', icon: '✂', gradient: 'from-[#D8A77E] to-[#B07A4F]', photo: '/images/lego-glasses.jpeg' },
   { name: 'AI & Digital', slug: 'ai-literacy', icon: '⌘', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/teach-kids-prompt-ai-hero.jpeg' },
   { name: 'Entrepreneurship', slug: 'entrepreneurship', icon: '¢', gradient: 'from-gold to-[#C49F3F]', photo: '/images/money-popcorn-business.jpeg' },
   { name: 'Communication & Writing', slug: 'communication-writing', icon: '✎', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/life-skills-map-drawing.jpeg' },
@@ -114,10 +114,10 @@ export default async function HomePage() {
                   </h1>
                 </div>
                 <p className="text-[16.5px] md:text-xl text-gray-500 leading-relaxed mb-7 lg:mb-9 max-w-[560px]">
-                  We hand you your family&apos;s next real-world activity, matched to your kids,
-                  and you just do it together. Cooking, budgeting, problem-solving, the life
-                  skills school skips. No browsing, no planning, nothing to print. A teacher
-                  picks your next stop, you make the memory.
+                  A membership that hands you your family&apos;s next real-world activity, matched
+                  to your kids, so you just do it together. Cooking, budgeting, problem-solving,
+                  the life skills school skips. No planning, nothing to print. A teacher picks
+                  your next stop, you make the memory.
                 </p>
                 <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
                   <Link
