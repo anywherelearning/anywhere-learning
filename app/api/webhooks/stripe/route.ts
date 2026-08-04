@@ -98,19 +98,29 @@ async function findOrCreateClerkUser(
   }
 }
 
-/** Generate a one-tap sign-in URL for a Clerk user (magic link). */
-async function generateSignInUrl(clerkId: string): Promise<string> {
+/**
+ * Generate a one-tap sign-in URL for a Clerk user (magic link).
+ *
+ * `destination` is where they land after the ticket is accepted. It rides the
+ * fallback too, so someone whose token could not be minted still ends up in the
+ * right place after signing in manually.
+ */
+async function generateSignInUrl(
+  clerkId: string,
+  destination = '/account',
+): Promise<string> {
+  const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
+  const redirect = encodeURIComponent(destination);
   const clerk = getClerk();
-  const fallback = `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/sign-in`;
+  const fallback = `${base}/sign-in?redirect_url=${redirect}`;
   if (!clerk) return fallback;
   try {
     const token = await clerk.signInTokens.createSignInToken({
       userId: clerkId,
       expiresInSeconds: 60 * 60 * 24 * 7, // 7 days
     });
-    const base = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
     // Clerk's accept URL signs the user in and redirects them.
-    return `${base}/sign-in?__clerk_ticket=${token.token}&redirect_url=${encodeURIComponent('/account')}`;
+    return `${base}/sign-in?__clerk_ticket=${token.token}&redirect_url=${redirect}`;
   } catch (err) {
     console.error('[webhook] generateSignInUrl failed:', err);
     return fallback;
@@ -287,7 +297,11 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   //    every trial signup.
   if (isFirstMembership) {
     try {
-      const signInUrl = await generateSignInUrl(clerkUser.id);
+      // New members land on the onboarding quiz, not the library: it adds their
+      // kids and builds each explorer, so the map opens populated with a first
+      // stop already picked. FirstRunRedirect would bounce them there from
+      // /account anyway; going direct skips the extra hop.
+      const signInUrl = await generateSignInUrl(clerkUser.id, '/account/welcome');
       await sendMembershipWelcomeEmail({
         to: email,
         firstName,
@@ -578,7 +592,7 @@ async function handleTrialWillEnd(sub: Stripe.Subscription) {
       isFounderPhase: isFounder,
       trialEndDate: new Date(sub.trial_end * 1000).toISOString(),
       manageUrl: `${base}/account/settings`,
-      libraryUrl: `${base}/account`,
+      homeUrl: `${base}/account/home`,
       plan: planForPriceId(trialPriceId),
     });
     console.log(`[webhook] sent trial-ending email to ${user.email}`);
@@ -741,7 +755,7 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
         firstName,
         isFounderPhase: isFounder,
         renewalDate: periodEnd.toISOString(),
-        libraryUrl: `${base}/account`,
+        homeUrl: `${base}/account/home`,
         manageUrl: `${base}/account/settings`,
         plan,
       });

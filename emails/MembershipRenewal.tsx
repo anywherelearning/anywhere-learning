@@ -188,7 +188,7 @@ export default function MembershipRenewal({
               <div style={summaryRowLast}>
                 <Text style={summaryKey}>What&apos;s renewing</Text>
                 <Text style={summaryValueSmall}>
-                  Full library access · quarterly drops · Skills Map
+                  Full library · your family&apos;s trail and record · quarterly drops · Skills Map
                 </Text>
               </div>
             </div>
@@ -199,8 +199,8 @@ export default function MembershipRenewal({
             <div style={ctaCard}>
               <div style={ctaSeal}>✦</div>
               <Text style={ctaLabel}>Keep using your membership</Text>
-              <Link href={`${baseUrl}/account`} style={btn}>
-                Open my library →
+              <Link href={`${baseUrl}/account/home`} style={btn}>
+                Continue our adventure →
               </Link>
               <Text style={ctaMicro}>Signs you straight in. No password needed.</Text>
             </div>

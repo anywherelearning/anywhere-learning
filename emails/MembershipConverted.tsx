@@ -17,7 +17,7 @@ interface Props {
   /** ISO date the membership renews (the current paid period end). */
   renewalDate: string;
   /** Link straight into their library. */
-  libraryUrl: string;
+  homeUrl: string;
   /** Link to manage / cancel the subscription. */
   manageUrl: string;
   /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
@@ -46,7 +46,7 @@ export default function MembershipConverted({
   firstName,
   isFounderPhase,
   renewalDate,
-  libraryUrl,
+  homeUrl,
   manageUrl,
   plan,
 }: Props) {
@@ -144,8 +144,8 @@ export default function MembershipConverted({
                             Renews {longDate(renews)}.
                           </div>
                           <div style={{ marginTop: '16px' }}>
-                            <Link href={libraryUrl} style={btn}>
-                              Open my library &rarr;
+                            <Link href={homeUrl} style={btn}>
+                              Continue our adventure &rarr;
                             </Link>
                           </div>
                           <div style={ctaMicro}>
@@ -216,7 +216,7 @@ MembershipConverted.PreviewProps = {
   firstName: 'Sarah',
   isFounderPhase: true,
   renewalDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
-  libraryUrl: 'https://anywherelearning.co/account',
+  homeUrl: 'https://anywherelearning.co/account/home',
   manageUrl: 'https://anywherelearning.co/account/settings',
 } satisfies Props;
 

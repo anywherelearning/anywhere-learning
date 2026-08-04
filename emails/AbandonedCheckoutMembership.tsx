@@ -154,8 +154,10 @@ export default function AbandonedCheckoutMembership({
             </Heading>
             <Text style={pNoMargin}>
               Here&apos;s what&apos;s waiting on the other side of that checkout button. The whole
-              library, three difficulty levels per activity, and the parent roadmap that ties it
-              all together.
+              library, three levels per activity so every kid does the same one together, and the
+              part that does the deciding for you: tell it your time and it picks the next thing,
+              every month arrives already set up, and what you finish becomes a printable record
+              without you lifting a finger.
             </Text>
           </div>
 
@@ -178,9 +180,9 @@ export default function AbandonedCheckoutMembership({
                   <tr>
                     <td style={levelsCell}>
                       <Stat
-                        num="100+"
+                        num="120+"
                         name="Activities"
-                        desc="Across eight real-life categories."
+                        desc="Across twelve real-life skill areas."
                       />
                     </td>
                     <td style={levelsCell}>

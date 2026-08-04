@@ -137,7 +137,7 @@ export async function sendTrialEndingEmail({
   isFounderPhase,
   trialEndDate,
   manageUrl,
-  libraryUrl,
+  homeUrl,
   plan,
 }: {
   to: string;
@@ -146,7 +146,7 @@ export async function sendTrialEndingEmail({
   /** ISO date string for the trial end / first charge. */
   trialEndDate: string;
   manageUrl: string;
-  libraryUrl: string;
+  homeUrl: string;
   /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
   plan?: 'annual' | 'monthly';
 }) {
@@ -155,7 +155,7 @@ export async function sendTrialEndingEmail({
     replyTo: REPLY_TO,
     to,
     subject: 'Your free trial ends in 3 days. Here\'s exactly what happens',
-    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, libraryUrl, plan }),
+    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, homeUrl, plan }),
   });
 }
 
@@ -165,7 +165,7 @@ export async function sendMembershipConvertedEmail({
   firstName,
   isFounderPhase,
   renewalDate,
-  libraryUrl,
+  homeUrl,
   manageUrl,
   plan,
 }: {
@@ -174,7 +174,7 @@ export async function sendMembershipConvertedEmail({
   isFounderPhase: boolean;
   /** ISO date the membership renews (current paid period end). */
   renewalDate: string;
-  libraryUrl: string;
+  homeUrl: string;
   manageUrl: string;
   /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
   plan?: 'annual' | 'monthly';
@@ -185,7 +185,7 @@ export async function sendMembershipConvertedEmail({
     replyTo: REPLY_TO,
     to,
     subject,
-    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, libraryUrl, manageUrl, plan }),
+    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, homeUrl, manageUrl, plan }),
   });
 }
 

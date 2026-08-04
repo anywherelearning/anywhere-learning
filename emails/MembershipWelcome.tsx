@@ -168,8 +168,14 @@ export default function MembershipWelcome({
                           />
                           <div style={{ ...ctaLabel, marginTop: '16px' }}>One-click sign-in</div>
                           <div style={{ marginTop: '14px' }}>
+                            {/* Lands on /account/welcome (the onboarding quiz):
+                                add kids, then build each explorer, then the map
+                                opens with the first stop chosen. The label names
+                                that, not the library, because picking from a
+                                library is exactly what a new member shouldn't do
+                                first. */}
                             <Link href={signInUrl} style={btn}>
-                              Open my library &rarr;
+                              Start our adventure &rarr;
                             </Link>
                           </div>
                           <div style={ctaMicro}>
@@ -197,22 +203,23 @@ export default function MembershipWelcome({
                     style={{ width: '100%', borderCollapse: 'collapse' as const, marginTop: '16px' }}
                   >
                     <tbody>
-                      <Step
-                        n="1"
-                        title="Start with your Skills Map"
-                        last={false}
-                        first
-                      >
-                        It&apos;s the parent roadmap. A calm picture of everything your kids can
-                        learn to do, from first pancakes to first customer.
+                      {/* Mirrors the real first run (KidsSetup): add kids, pick
+                          focus + time + trail format, then the map opens with the
+                          next stop already chosen. Deliberately does NOT say
+                          "pick an activity" — the engine picks, the parent
+                          nudges, and choice paralysis is the thing we remove. */}
+                      <Step n="1" title="Add your kids" last={false} first>
+                        Takes a minute. Their ages, what you&apos;d like to focus on, and how much
+                        time you usually have. That&apos;s all it needs.
                       </Step>
-                      <Step n="2" title="Pick one activity" last={false}>
-                        Whatever fits this week. Twenty minutes or a whole afternoon, every guide
-                        tells you exactly what to grab.
+                      <Step n="2" title="Your first stop is already picked" last={false}>
+                        No scrolling a library deciding on nothing. Open it and something is
+                        waiting, sized to your family. Want a different one? Say so and it swaps.
                       </Step>
-                      <Step n="3" title="Do something real together" last>
-                        Cook the meal, build the stand, plant the bed. The learning takes care of
-                        itself.
+                      <Step n="3" title="Do it together" last>
+                        Cook the meal, build the stand, plant the bed. Most families walk one trail
+                        together, so everyone&apos;s in on the same thing. The learning takes care
+                        of itself.
                       </Step>
                     </tbody>
                   </table>
@@ -519,7 +526,8 @@ function TrialDivider() {
 // Preview props for `npm run email:preview`.
 MembershipWelcome.PreviewProps = {
   firstName: 'Sarah',
-  signInUrl: 'https://anywherelearning.co/sign-in?__clerk_ticket=example_token',
+  signInUrl:
+    'https://anywherelearning.co/sign-in?__clerk_ticket=example_token&redirect_url=%2Faccount%2Fwelcome',
   isFounderPhase: true,
   isTrial: true,
   trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),

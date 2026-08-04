@@ -19,7 +19,7 @@ interface Props {
   /** Link to account settings so they can manage / cancel. */
   manageUrl: string;
   /** Link to the library dashboard. */
-  libraryUrl: string;
+  homeUrl: string;
   /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
   plan?: 'annual' | 'monthly';
 }
@@ -48,7 +48,7 @@ export default function TrialEndingReminder({
   isFounderPhase,
   trialEndDate,
   manageUrl,
-  libraryUrl,
+  homeUrl,
   plan,
 }: Props) {
   const name = firstName?.trim() || 'there';
@@ -221,13 +221,16 @@ export default function TrialEndingReminder({
                             Three days is one more activity
                           </div>
                           <div style={{ marginTop: '14px' }}>
-                            <Link href={libraryUrl} style={btn}>
-                              Open my library &rarr;
+                            <Link href={homeUrl} style={btn}>
+                              Continue our adventure &rarr;
                             </Link>
                           </div>
+                          {/* The button lands on the map, where the next stop is
+                              already chosen. Telling them to pick one would
+                              describe a product we deliberately don't ship. */}
                           <div style={ctaMicro}>
-                            Pick one guide, grab what you already have at home, and see how it
-                            feels to do something real together. That&apos;s the whole test.
+                            Your next stop is already waiting. Grab what you have at home and see
+                            how it feels to do something real together. That&apos;s the whole test.
                           </div>
                         </td>
                       </tr>
@@ -348,7 +351,7 @@ TrialEndingReminder.PreviewProps = {
   isFounderPhase: true,
   trialEndDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
   manageUrl: 'https://anywherelearning.co/account/settings',
-  libraryUrl: 'https://anywherelearning.co/account',
+  homeUrl: 'https://anywherelearning.co/account/home',
 } satisfies Props;
 
 /* ─────────────────────────────────────────────────────────────
