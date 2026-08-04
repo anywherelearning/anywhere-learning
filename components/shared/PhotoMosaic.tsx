@@ -20,7 +20,7 @@ const PHOTOS: { name: string; caption: string; rot: number }[] = [
   { name: 'home-cooking', caption: 'Life Skills', rot: -3 },
   { name: 'home-hiking', caption: 'Physical & Outdoor', rot: 2 },
   { name: 'home-making', caption: 'Creativity & Making', rot: -1.5 },
-  { name: 'home-business', caption: 'Communication', rot: 2.5 },
+  { name: 'home-nature', caption: 'Critical Thinking', rot: 2.5 },
   { name: 'home-money', caption: 'Real-World Math', rot: -2 },
   { name: 'home-digital', caption: 'AI & Digital', rot: 1.5 },
 ];

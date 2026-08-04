@@ -40,16 +40,95 @@ const homepageFaqLd = {
 // homepage hero is a PhotoMosaic of real families.
 
 const CATEGORIES = [
-  { name: 'Real-World Math', slug: 'real-world-math', icon: '$', gradient: 'from-forest to-forest-dark', photo: '/images/money-grocery-shopping.jpeg' },
-  { name: 'Creativity & Making', slug: 'creativity-maker', icon: '✂', gradient: 'from-[#D8A77E] to-[#B07A4F]', photo: '/images/lego-glasses.jpeg' },
-  { name: 'AI & Digital', slug: 'ai-literacy', icon: '⌘', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/teach-kids-prompt-ai-hero.jpeg' },
-  { name: 'Entrepreneurship', slug: 'entrepreneurship', icon: '¢', gradient: 'from-gold to-[#C49F3F]', photo: '/images/money-popcorn-business.jpeg' },
-  { name: 'Communication & Writing', slug: 'communication-writing', icon: '✎', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/life-skills-map-drawing.jpeg' },
-  { name: 'Planning & Problem-Solving', slug: 'planning-problem-solving', icon: '⊞', gradient: 'from-[#C97B5C] to-[#A85A38]', photo: '/images/treasure-map.jpeg', objectPosition: 'center 25%' },
-  { name: 'Outdoor Learning', slug: 'outdoor-learning', icon: '☘', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/forest-school-leaf-play.jpeg' },
-  { name: 'Worldschooling', slug: 'worldschooling', icon: '✈', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/worldschool-day-market.jpeg' },
-  { name: 'Emotional & Social Skills', slug: 'emotional-social-skills', icon: '♡', gradient: 'from-[#B6748A] to-[#7A4858]', photo: '/images/join-hero.jpeg' },
+  { name: 'Real-World Math', slug: 'real-world-math', gradient: 'from-forest to-forest-dark', photo: '/images/money-grocery-shopping.jpeg' },
+  { name: 'Creativity & Making', slug: 'creativity-maker', gradient: 'from-[#D8A77E] to-[#B07A4F]', photo: '/images/lego-glasses.jpeg' },
+  { name: 'AI & Digital', slug: 'ai-literacy', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/teach-kids-prompt-ai-hero.jpeg' },
+  { name: 'Entrepreneurship', slug: 'entrepreneurship', gradient: 'from-gold to-[#C49F3F]', photo: '/images/money-popcorn-business.jpeg' },
+  { name: 'Communication & Writing', slug: 'communication-writing', gradient: 'from-[#3F4D40] to-[#1F2A21]', photo: '/images/life-skills-map-drawing.jpeg' },
+  { name: 'Planning & Problem-Solving', slug: 'planning-problem-solving', gradient: 'from-[#C97B5C] to-[#A85A38]', photo: '/images/treasure-map.jpeg', objectPosition: 'center 25%' },
+  { name: 'Outdoor Learning', slug: 'outdoor-learning', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/forest-school-leaf-play.jpeg' },
+  { name: 'Worldschooling', slug: 'worldschooling', gradient: 'from-[#7A9978] to-[#4E6B4D]', photo: '/images/worldschool-day-market.jpeg' },
+  { name: 'Emotional & Social Skills', slug: 'emotional-social-skills', gradient: 'from-[#B6748A] to-[#7A4858]', photo: '/images/join-hero.jpeg' },
 ];
+
+// Line icons for the topic cards (white stroke on the gradient chip). One per
+// slug, drawn on a 24x24 grid so they read consistently at 16px.
+const CATEGORY_ICON_PATHS: Record<string, React.ReactNode> = {
+  'real-world-math': (
+    <>
+      <rect x="5" y="3" width="14" height="18" rx="2" />
+      <line x1="8" y1="7" x2="16" y2="7" />
+      <line x1="8.5" y1="12" x2="8.51" y2="12" />
+      <line x1="12" y1="12" x2="12.01" y2="12" />
+      <line x1="15.5" y1="12" x2="15.51" y2="12" />
+      <line x1="8.5" y1="16" x2="8.51" y2="16" />
+      <line x1="12" y1="16" x2="12.01" y2="16" />
+      <line x1="15.5" y1="16" x2="15.51" y2="16" />
+    </>
+  ),
+  'creativity-maker': (
+    <>
+      <path d="M12 3l1.9 4.4L18 9l-4.1 1.6L12 15l-1.9-4.4L6 9l4.1-1.6z" />
+      <path d="M18.2 14l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z" />
+    </>
+  ),
+  'ai-literacy': (
+    <>
+      <rect x="7" y="7" width="10" height="10" rx="1.5" />
+      <path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4" />
+    </>
+  ),
+  entrepreneurship: (
+    <>
+      <path d="M20.6 13.4l-7.1 7.1a2 2 0 0 1-2.8 0l-6.2-6.2a2 2 0 0 1-.6-1.4V5a2 2 0 0 1 2-2h7.6a2 2 0 0 1 1.4.6l6.2 6.2a2 2 0 0 1 0 2.8z" />
+      <line x1="8" y1="8" x2="8.01" y2="8" />
+    </>
+  ),
+  'communication-writing': (
+    <path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z" />
+  ),
+  'planning-problem-solving': (
+    <>
+      <rect x="6" y="4" width="12" height="17" rx="2" />
+      <path d="M9 4V3.5A1.5 1.5 0 0 1 10.5 2h3A1.5 1.5 0 0 1 15 3.5V4" />
+      <path d="M9 13l2 2 4-4" />
+    </>
+  ),
+  'outdoor-learning': (
+    <>
+      <path d="M11 20A8 8 0 0 1 4 12C4 6 9 3.5 20 3c.5 11-4 16-9 17z" />
+      <path d="M4 21c3.5-3.5 5.5-5.5 8-8" />
+    </>
+  ),
+  worldschooling: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z" />
+    </>
+  ),
+  'emotional-social-skills': (
+    <path d="M20.8 6.6a5 5 0 0 0-7.1-.1l-1.7 1.6-1.7-1.6a5 5 0 0 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7z" />
+  ),
+};
+
+function CategoryIcon({ slug }: { slug: string }) {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {CATEGORY_ICON_PATHS[slug]}
+    </svg>
+  );
+}
 
 export default async function HomePage() {
   // Live founder state (DB-counted). Replaces the static membership flags
@@ -336,9 +415,9 @@ export default async function HomePage() {
                   What&apos;s inside
                 </p>
                 <h2 className="font-display text-[clamp(2.1rem,4.4vw,3.5rem)] leading-[1.06] tracking-tight mt-3.5">
-                  Nine categories. <span className="italic text-forest">One membership.</span>
+                  Every topic. <span className="italic text-forest">One membership.</span>
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">120+ activities across the skills school can&apos;t always make room for. More categories coming soon.</p>
+                <p className="mt-4 text-lg text-gray-500">120+ real-world activities that build the life skills school skips.</p>
               </div>
             </ScrollReveal>
 
@@ -362,7 +441,9 @@ export default async function HomePage() {
                       />
                     </div>
                     <div className={`flex items-center gap-2.5 px-4 h-[52px] bg-gradient-to-br ${cat.gradient}`}>
-                      <span className="w-[28px] h-[28px] rounded-md bg-white/[0.22] grid place-items-center text-white text-sm shrink-0">{cat.icon}</span>
+                      <span className="w-[28px] h-[28px] rounded-md bg-white/[0.22] grid place-items-center text-white shrink-0">
+                        <CategoryIcon slug={cat.slug} />
+                      </span>
                       <h3 className="font-display text-[14px] leading-tight tracking-tight text-white">{cat.name}</h3>
                     </div>
                   </Link>
