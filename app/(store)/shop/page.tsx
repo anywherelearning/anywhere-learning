@@ -421,7 +421,7 @@ export default function ShopPage() {
         {/* 01 HERO */}
         <section className="bg-cream pt-8 md:pt-10 pb-12 md:pb-16">
           <div className="mx-auto max-w-[1180px] px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.18fr_0.82fr] gap-12 lg:gap-16 items-start lg:pt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
               <ScrollReveal direction="right" immediate>
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
