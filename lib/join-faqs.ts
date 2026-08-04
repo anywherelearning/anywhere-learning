@@ -53,4 +53,8 @@ export const joinFaqs = [
     q: 'What if I\'m not crafty or outdoorsy?',
     a: 'These activities are written for real life, not Pinterest. You don\'t need a glue gun or a craft closet. Most of them happen in your kitchen, living room, backyard, or on errands. If you can follow a short guide on your phone, you\'re good.',
   },
+  {
+    q: "Is my family's information safe?",
+    a: "Yes. You give us your email and, if you set up the member area, a first name and age for each of your kids, and that's it. Your children never make accounts or enter anything themselves. We store it securely, never sell it, and use it only to suggest age-appropriate activities. Payments run through Stripe, so we never see or store your card. You can view or delete your family's details anytime in your account, or email me and I'll remove them. Full details are in our privacy policy.",
+  },
 ];
