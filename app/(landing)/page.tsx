@@ -71,7 +71,7 @@ export default async function HomePage() {
             01 HERO — "Handle real life" tension. Co-primary CTAs:
             Start free trial (membership) + Take the quiz.
         ════════════════════════════════════════ */}
-        <section className="relative py-10 md:py-12 lg:py-14 overflow-hidden">
+        <section className="relative py-7 md:py-9 lg:py-10 overflow-hidden">
           <div className="mx-auto max-w-[1180px] px-6">
             <HeroSaleBadge />
             <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 lg:gap-12 items-center">

@@ -11,7 +11,6 @@ import { coverSrc } from '@/lib/cover';
 import BrowseAllLink from './BrowseAllLink';
 import {
   IS_FOUNDER_PHASE,
-  MEMBERSHIP_PRICE,
   MEMBERSHIP_PRICE_YEAR,
   MEMBERSHIP_PRICE_YR,
   MEMBERSHIP_PRICE_USD,
@@ -419,7 +418,7 @@ export default function ShopPage() {
       />
       <main className="bg-cream">
         {/* 01 HERO */}
-        <section className="bg-cream pt-8 md:pt-10 pb-12 md:pb-16">
+        <section className="bg-cream pt-6 md:pt-8 pb-8 md:pb-10">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
               <ScrollReveal direction="right" immediate>
@@ -505,63 +504,7 @@ export default function ShopPage() {
           </div>
         </section>
 
-        {/* 02 TWO PATHS */}
-        <section className="bg-cream pb-14">
-          <div className="mx-auto max-w-[780px] px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              <Link
-                href="/free-guide"
-                className="bg-cream border border-[#D8D4C5] rounded-[14px] p-5 flex items-center justify-between gap-4 hover:-translate-y-0.5 hover:shadow-[0_16px_28px_-22px_rgba(45,58,46,0.24)] hover:border-[#C9C5B7] transition-all duration-200 no-underline text-ink"
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gray-500 mb-1.5">
-                    Free
-                  </div>
-                  <div className="font-display text-[21px] leading-[1.1] text-ink mb-1">
-                    Free 7-Day Guide
-                  </div>
-                  <p className="text-[13.5px] text-gray-600 leading-[1.45] m-0">
-                    7 activities. Sent by email. Zero commitment.
-                  </p>
-                </div>
-                <div className="text-right shrink-0">
-                  <div className="font-display text-[24px] leading-none text-ink mb-1.5">$0</div>
-                  <span className="font-semibold text-[13px] text-forest-dark border-b border-forest/25 pb-[1px]">
-                    Get it &rarr;
-                  </span>
-                </div>
-              </Link>
-
-              <Link
-                href="/join"
-                className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] p-5 flex items-center justify-between gap-4 hover:-translate-y-0.5 hover:shadow-[0_16px_28px_-22px_rgba(45,58,46,0.24)] transition-all duration-200 no-underline text-ink"
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-forest-dark mb-1.5">
-                    Best value
-                  </div>
-                  <div className="font-display text-[21px] leading-[1.1] text-ink mb-1">
-                    Membership
-                  </div>
-                  <p className="text-[13.5px] text-gray-600 leading-[1.45] m-0">
-                    All 120+ activities + quarterly drops.
-                  </p>
-                </div>
-                <div className="text-right shrink-0">
-                  <div className="font-display text-[24px] leading-none text-ink mb-1.5">
-                    {MEMBERSHIP_PRICE}
-                    <small className="text-[12px] text-gray-500 font-body font-normal">/yr</small>
-                  </div>
-                  <span className="font-semibold text-[13px] text-forest-dark border-b border-forest/25 pb-[1px]">
-                    Join &rarr;
-                  </span>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* 03 TRACKS — compact horizontal cards, scales as categories grow */}
+        {/* 02 TRACKS — compact horizontal cards, scales as categories grow */}
         <section className="bg-cream pt-6 pb-2">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="border-t border-[#D8D4C5]">

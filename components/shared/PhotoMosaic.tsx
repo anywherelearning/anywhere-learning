@@ -13,21 +13,21 @@ import Image from 'next/image';
  * layers so the entrance translate never fights the hover transform. Both are
  * gated behind prefers-reduced-motion. Photos live in /public/images.
  */
+// Six photos: a count that stays a clean grid on both breakpoints (3x2 on
+// desktop, 2x3 on mobile) with no orphan tile. Each caption is an obvious
+// match for its photo, so nothing needs a mental leap.
 const PHOTOS: { name: string; caption: string; rot: number }[] = [
   { name: 'home-cooking', caption: 'Life Skills', rot: -3 },
   { name: 'home-hiking', caption: 'Physical & Outdoor', rot: 2 },
   { name: 'home-making', caption: 'Creativity & Making', rot: -1.5 },
-  { name: 'home-gardening', caption: 'Citizenship & Character', rot: 2.5 },
-  { name: 'home-business', caption: 'Communication', rot: -2 },
-  { name: 'home-building', caption: 'Real-World Math', rot: 1.5 },
-  { name: 'home-money', caption: 'Self-Management', rot: -2.5 },
-  { name: 'home-nature', caption: 'Critical Thinking', rot: 2 },
-  { name: 'home-digital', caption: 'AI & Digital', rot: -1.5 },
+  { name: 'home-business', caption: 'Communication', rot: 2.5 },
+  { name: 'home-money', caption: 'Real-World Math', rot: -2 },
+  { name: 'home-digital', caption: 'AI & Digital', rot: 1.5 },
 ];
 
-// Tape strips sit on most prints, but the middle column (indices 1, 4, 7) is
-// left bare so the board reads hand-made rather than templated.
-const NO_TAPE = new Set([1, 4, 7]);
+// Tape strips sit on most prints, but the desktop middle column (indices 1, 4)
+// is left bare so the board reads hand-made rather than templated.
+const NO_TAPE = new Set([1, 4]);
 
 export default function PhotoMosaic() {
   return (
