@@ -220,3 +220,34 @@ export const referralConversions = pgTable('referral_conversions', {
 }, (table) => [
   index('idx_referral_conversions_referral').on(table.referralId),
 ]);
+
+/**
+ * One free guided activity per email address.
+ *
+ * Each idea-list category gives away a different complete activity (normally
+ * $5.99 each). Without a ledger, one person could walk the eight category pages
+ * and collect the lot, which both devalues the guides and removes the reason to
+ * join. The first claim is honoured; any later attempt is told what they already
+ * have and pointed at the membership for the rest.
+ *
+ * Keyed on the lowercased email, not a cookie: localStorage is one devtools
+ * click away. A second email address defeats it, but that trades a PDF for
+ * another subscriber, which is a trade worth taking.
+ *
+ * Callers must treat this as best-effort. If the database is unreachable the
+ * claim check fails OPEN and the signup still succeeds: losing a subscriber is
+ * worse than losing a guide.
+ */
+export const guideClaims = pgTable('guide_claims', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  /** Lowercased, trimmed email address. */
+  email: text('email').notNull(),
+  /** Activity slug claimed, e.g. 'kitchen-science-lab'. */
+  activitySlug: text('activity_slug').notNull(),
+  /** Idea category the claim came through, for attribution. */
+  source: text('source'),
+  claimedAt: timestamp('claimed_at').defaultNow().notNull(),
+}, (table) => [
+  // One claim per address. The insert relies on this for its ON CONFLICT.
+  uniqueIndex('idx_guide_claims_email').on(table.email),
+]);

@@ -35,5 +35,6 @@ export default defineConfig({
     'exit_surveys',
     'referrals',
     'referral_conversions',
+    'guide_claims',
   ],
 });
