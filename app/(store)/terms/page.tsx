@@ -4,7 +4,7 @@ import LegalLayout, { type LegalSection } from '@/components/legal/LegalLayout';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'The agreement between you and Anywhere Learning when you use our site, buy our activities, or join our membership.',
+    'The agreement between you and Anywhere Learning when you use our site or join our membership.',
   alternates: { canonical: 'https://anywherelearning.co/terms' },
 };
 
@@ -144,7 +144,7 @@ const sections: LegalSection[] = [
     title: 'Intellectual property',
     content: (
       <p>
-        All content on this site, including activity guides, text, images, illustrations, icons, branding, and design, is the property of Anywhere Learning and is protected by copyright. You may not reproduce, distribute, or create derivative works without our written permission. Your purchase grants you a <Em>personal-use license</Em> as described above. It does not transfer any ownership rights.
+        All content on this site, including activity guides, text, images, illustrations, icons, branding, and design, is the property of Anywhere Learning and is protected by copyright. You may not reproduce, distribute, or create derivative works without our written permission. Your membership grants you a <Em>personal-use license</Em> as described above. It does not transfer any ownership rights.
       </p>
     ),
   },
@@ -153,7 +153,7 @@ const sections: LegalSection[] = [
     title: 'Your account',
     content: (
       <p>
-        You may create an account to access your purchased downloads and membership content. You&apos;re responsible for keeping your login credentials secure. If you suspect unauthorized access to your account, please contact us immediately at <MailLink />.
+        You may create an account to access your membership content. You&apos;re responsible for keeping your login credentials secure. If you suspect unauthorized access to your account, please contact us immediately at <MailLink />.
       </p>
     ),
   },
@@ -204,7 +204,7 @@ export default function TermsPage() {
           Terms of <span className="italic text-forest">service.</span>
         </>
       }
-      sub="The agreement between you and Anywhere Learning when you use our site, buy our activities, or join our membership."
+      sub="The agreement between you and Anywhere Learning when you use our site or join our membership."
       lastUpdated="May 18, 2026"
       sections={sections}
       helpline={{

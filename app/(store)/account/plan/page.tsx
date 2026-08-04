@@ -1,14 +1,10 @@
-import type { Metadata } from 'next';
-import WeekHome from '../WeekHome';
-import { getPlanActivities } from '@/lib/plan-activities';
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: 'My Plan',
-  robots: { index: false, follow: false },
-};
-
+// /account/plan was the old weekly-planner page (WeekHome), superseded by the
+// Home trail, This Month, and Record. Redirect any stray links or bookmarks to
+// the trail home rather than 404.
 export const dynamic = 'force-dynamic';
 
-export default function MyPlanPage() {
-  return <WeekHome activities={getPlanActivities()} />;
+export default function PlanRedirect() {
+  redirect('/account/home');
 }

@@ -67,8 +67,8 @@ const NAV_ITEMS_AFTER = [
 // page, no marketing home, Library once). Exact-match active state.
 const MEMBER_NAV_ITEMS = [
   { href: '/account/home', label: 'Home' },
-  { href: '/account/this-month', label: 'This Month' },
   { href: '/account', label: 'Library' },
+  { href: '/account/this-month', label: 'This Month' },
   { href: '/account/record', label: 'Record' },
 ];
 
