@@ -4,7 +4,8 @@ import { getFallbackProducts, type FallbackProduct } from '@/lib/fallback-produc
 import EmailForm from '@/components/EmailForm';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import LibraryFilters, { type LibraryRow } from './LibraryFilters';
-import { SKILL_FAMILIES, getProductSkills } from '@/lib/skills';
+import { getProductSkills } from '@/lib/skills';
+import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
 import CategoryCoverCarousel from './CategoryCoverCarousel';
 import HeroCollage from '@/components/shared/HeroCollage';
 import { coverSrc } from '@/lib/cover';
@@ -347,7 +348,6 @@ export default function ShopPage() {
   const rows: LibraryRow[] = products.map((p): LibraryRow => {
     const track = TRACKS.find((t) => t.category === p.category);
     const age = bucketForAge(p.ageRange);
-    const skills = getProductSkills(p.slug);
     return {
       slug: p.slug,
       title: p.name,
@@ -358,12 +358,27 @@ export default function ShopPage() {
       ageRange: age.label,
       ageMin: age.min,
       ageMax: age.max,
-      skillFamilies: skills?.families || [],
+      skillAreas: territoriesForSlug(p.slug),
       imageUrl: coverSrc(p.imageUrl) ?? null,
     };
   });
 
   const totalActivities = products.length;
+
+  // Skills filter = the 12 Future-Ready Skills Map areas, in canonical order,
+  // with a live count of how many library activities build each one. Areas
+  // no activity builds yet are hidden.
+  const skillAreaCounts = new Map<string, number>();
+  for (const r of rows) {
+    for (const area of r.skillAreas) {
+      skillAreaCounts.set(area, (skillAreaCounts.get(area) || 0) + 1);
+    }
+  }
+  const skillOptions = TERRITORIES.map((t) => ({
+    value: t.slug,
+    label: t.name,
+    count: skillAreaCounts.get(t.slug) || 0,
+  })).filter((s) => s.count > 0);
 
   // Pick top 4 activities per category for the inline category lists
   const productsByCategory: Record<string, FallbackProduct[]> = {};
@@ -622,7 +637,7 @@ export default function ShopPage() {
             <LibraryFilters
               rows={rows}
               tracks={TRACKS.map((t) => ({ value: t.category, label: t.label }))}
-              skills={SKILL_FAMILIES.map((f) => ({ value: f.slug, label: f.name, count: f.count }))}
+              skills={skillOptions}
             />
           </div>
         </section>

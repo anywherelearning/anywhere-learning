@@ -14,8 +14,8 @@ export interface LibraryRow {
   ageRange: string;
   ageMin: number;
   ageMax: number;
-  /** Skill-family slugs this activity belongs to (e.g. "critical-thinking-and-reasoning"). */
-  skillFamilies: string[];
+  /** Skills-Map area slugs this activity builds (e.g. "real-world-math"). */
+  skillAreas: string[];
   /** Cover thumbnail. Falls back to a letter avatar when missing. */
   imageUrl?: string | null;
 }
@@ -35,7 +35,7 @@ const AGE_OPTIONS: { value: string; label: string; min: number; max: number }[] 
   { value: '12-14', label: 'Ages 12 to 14', min: 12, max: 14 },
 ];
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 12;
 
 export default function LibraryFilters({ rows, tracks, skills = [] }: Props) {
   const searchParams = useSearchParams();
@@ -85,7 +85,7 @@ export default function LibraryFilters({ rows, tracks, skills = [] }: Props) {
       if (ageOpt) {
         if (r.ageMin > ageOpt.max || r.ageMax < ageOpt.min) return false;
       }
-      if (skill && !r.skillFamilies.includes(skill)) return false;
+      if (skill && !r.skillAreas.includes(skill)) return false;
       return true;
     });
   }, [rows, query, track, age, skill]);
