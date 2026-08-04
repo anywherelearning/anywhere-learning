@@ -1,3 +1,9 @@
+import {
+  guideDisplayName,
+  guideCoverUrl,
+  guideDownloadUrl,
+} from '@/lib/guide-names';
+
 // ─── Cross-sell mapping: category → recommended bundle slug ───
 // When a buyer purchases from a category, suggest a complementary bundle.
 const CROSS_SELL_MAP: Record<string, string> = {
@@ -103,12 +109,78 @@ async function getOrCreateTag(apiKey: string, name: string): Promise<number> {
   return data.tag.id;
 }
 
-async function upsertSubscriber(apiKey: string, email: string): Promise<number> {
+// ─── Custom fields ───
+//
+// Kit silently drops values for fields that don't exist yet, so a field has to
+// be created before it can be written. We cache the known keys the same way as
+// tags and create on first use.
+
+let fieldCachePromise: Promise<Set<string>> | null = null;
+
+async function fetchAllCustomFields(apiKey: string): Promise<Set<string>> {
+  const keys = new Set<string>();
+  let cursor: string | null = null;
+  do {
+    const url = new URL(`${KIT_API_BASE}/custom_fields`);
+    if (cursor) url.searchParams.set('after', cursor);
+    const res = await fetch(url, { headers: authHeaders(apiKey) });
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`Kit custom fields list failed: ${res.status} ${body}`);
+    }
+    const data = (await res.json()) as {
+      custom_fields: { key: string }[];
+      pagination: { has_next_page: boolean; end_cursor: string | null };
+    };
+    for (const f of data.custom_fields) keys.add(f.key);
+    cursor = data.pagination.has_next_page ? data.pagination.end_cursor : null;
+  } while (cursor);
+  return keys;
+}
+
+function loadFieldCache(apiKey: string): Promise<Set<string>> {
+  if (!fieldCachePromise) {
+    fieldCachePromise = fetchAllCustomFields(apiKey).catch((err) => {
+      fieldCachePromise = null; // allow retry on next request
+      throw err;
+    });
+  }
+  return fieldCachePromise;
+}
+
+/** Create the custom field if Kit doesn't have it yet. Kit derives the `key`
+ *  from the label, so "Last guide" becomes the `last_guide` key. */
+async function ensureCustomField(apiKey: string, key: string, label: string) {
+  const cache = await loadFieldCache(apiKey);
+  if (cache.has(key)) return;
+
+  const res = await fetch(`${KIT_API_BASE}/custom_fields`, {
+    method: 'POST',
+    headers: authHeaders(apiKey),
+    body: JSON.stringify({ label }),
+  });
+  // 422 means it already exists (a race, or a label we didn't see in the list).
+  if (!res.ok && res.status !== 422) {
+    const body = await res.text();
+    throw new Error(`Kit custom field create failed "${label}": ${res.status} ${body}`);
+  }
+  cache.add(key);
+}
+
+async function upsertSubscriber(
+  apiKey: string,
+  email: string,
+  fields?: Record<string, string>,
+): Promise<number> {
   // Idempotent: returns 201 with a new subscriber, or 200 with an existing one.
+  // Passing `fields` on an existing subscriber overwrites just those keys.
   const res = await fetch(`${KIT_API_BASE}/subscribers`, {
     method: 'POST',
     headers: authHeaders(apiKey),
-    body: JSON.stringify({ email_address: email }),
+    body: JSON.stringify({
+      email_address: email,
+      ...(fields && Object.keys(fields).length > 0 ? { fields } : {}),
+    }),
   });
   if (!res.ok) {
     const body = await res.text();
@@ -150,25 +222,47 @@ async function removeTagFromSubscriber(
 }
 
 /**
- * Subscribe an email to Kit and apply one or more tags. Tags are passed as
- * string names; unknown tags are created on the fly. The flow is:
- *   1. Upsert the subscriber (idempotent).
- *   2. Apply each tag by ID. Kit automations triggered by "tag added" fire
+ * Subscribe an email to Kit, set any custom fields, and apply one or more tags.
+ * Tags are passed as string names; unknown tags are created on the fly. The
+ * flow is:
+ *   1. Ensure any custom fields exist (Kit drops values for unknown keys).
+ *   2. Upsert the subscriber with those field values (idempotent).
+ *   3. Apply each tag by ID. Kit automations triggered by "tag added" fire
  *      on each application.
+ *
+ * Fields are written BEFORE tags on purpose: the tag is what triggers the
+ * sequence, so the field has to already hold its value when email 1 renders.
  *
  * Throws on any API failure so the caller can surface / log the error.
  */
-export async function subscribeAndTag(email: string, tags: string[] = []) {
+export async function subscribeAndTag(
+  email: string,
+  tags: string[] = [],
+  fields?: Record<string, string>,
+) {
   const apiKey = process.env.CONVERTKIT_API_KEY;
   if (!apiKey) return;
   if (tags.length === 0) return;
 
-  const subscriberId = await upsertSubscriber(apiKey, email);
+  if (fields) {
+    for (const key of Object.keys(fields)) {
+      await ensureCustomField(apiKey, key, CUSTOM_FIELD_LABELS[key] ?? key);
+    }
+  }
+
+  const subscriberId = await upsertSubscriber(apiKey, email, fields);
   for (const name of tags) {
     const tagId = await getOrCreateTag(apiKey, name);
     await applyTagToSubscriber(apiKey, tagId, subscriberId);
   }
 }
+
+/** Kit derives a field's `key` from its label, so these must stay paired. */
+const CUSTOM_FIELD_LABELS: Record<string, string> = {
+  last_guide: 'Last guide',
+  last_guide_cover: 'Last guide cover',
+  last_guide_download: 'Last guide download',
+};
 
 /**
  * Apply one set of tags AND remove another, in a single subscriber lookup.
@@ -226,6 +320,11 @@ const SELF_FUNNEL_GUIDES = new Set<string>(['capable-kid']);
  *    generic `lead` tag that triggers the default 7-Activities sequence.
  *
  * This keeps the funnels fully separate: one signup = one guide + one sequence.
+ *
+ * Also writes the guide's display name to the `last_guide` custom field, so a
+ * single welcome sequence can name whichever guide they actually took. Nine
+ * guides now share that sequence; without this, email 1 thanks all of them for
+ * the 7-day guide.
  */
 export async function subscribeToConvertKit(
   email: string,
@@ -239,7 +338,11 @@ export async function subscribeToConvertKit(
     tags.push('lead');
     if (guide) tags.push(`guide:${guide}`);
   }
-  await subscribeAndTag(email, tags);
+  await subscribeAndTag(email, tags, {
+    last_guide: guideDisplayName(guide),
+    last_guide_cover: guideCoverUrl(guide),
+    last_guide_download: guideDownloadUrl(guide),
+  });
 }
 
 /** Tag a buyer with product-specific, purchase-type, and cross-sell tags */
