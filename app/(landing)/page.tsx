@@ -74,7 +74,7 @@ export default async function HomePage() {
         <section className="relative py-7 md:py-9 lg:py-10 overflow-hidden">
           <div className="mx-auto max-w-[1180px] px-6">
             <HeroSaleBadge />
-            <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 lg:gap-12 items-start">
               {/* MOBILE-ONLY title — shows above the hero on small screens */}
               <div className="lg:hidden text-center">
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5 mb-4">
@@ -144,31 +144,35 @@ export default async function HomePage() {
                     <span className="font-display italic text-lg leading-none">&rarr;</span>
                   </Link>
                 </div>
-                {/* Price snapshot — lets price-curious visitors see the number
-                    here instead of bouncing to hunt for it. Live founder state
-                    via `m`, so it self-updates to $149/yr once the cap is hit. */}
-                <div className="mt-5 inline-flex flex-wrap items-center justify-center self-center lg:self-start gap-x-2.5 gap-y-1 rounded-full border border-[#D8D4C5] bg-[#F2EFE4]/70 px-4 py-1.5 text-[13px] text-gray-600">
-                  <span className="font-semibold text-forest-dark">One membership</span>
-                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span>
-                    <span className="font-semibold text-[#C97B5C]">{m.priceYr}</span>
-                    {m.isFounderPhase ? ' founder rate' : ''}
-                  </span>
-                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span>14 days free</span>
-                </div>
-                <div className="mt-4 text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-1">
-                  <span className="inline-flex items-center gap-1.5">Built by a teacher</span>
-                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
-                  <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
-                  <span className="inline-flex items-center gap-1.5">$0 today, cancel anytime</span>
-                </div>
               </div>
 
-              {/* Hero visual — a scrapbook mosaic of real families doing real-world activities */}
-              <div className="w-full max-lg:max-w-[460px] max-lg:mx-auto order-3 lg:order-none lg:col-start-2 lg:row-start-1">
+              {/* Hero visual — a scrapbook mosaic of real families doing real-world
+                  activities. lg:mt-9 drops the frames past the eyebrow so the first
+                  row's top lines up with the headline, not the kicker above it. */}
+              <div className="w-full max-lg:max-w-[460px] max-lg:mx-auto order-3 lg:order-none lg:col-start-2 lg:row-start-1 lg:mt-9">
                 <PhotoMosaic />
+                {/* Price snapshot + trust, tucked under the mosaic so the number is
+                    visible without hunting and the scrapbook feels grounded. Live
+                    founder state via `m` (self-updates to $149/yr past the cap). */}
+                <div className="mt-6 flex flex-col items-center gap-3.5">
+                  <div className="inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full border border-[#D8D4C5] bg-[#F2EFE4]/70 px-4 py-1.5 text-[13px] text-gray-600">
+                    <span className="font-semibold text-forest-dark">One membership</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span>
+                      <span className="font-semibold text-[#C97B5C]">{m.priceYr}</span>
+                      {m.isFounderPhase ? ' founder rate' : ''}
+                    </span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span>14 days free</span>
+                  </div>
+                  <div className="text-[13.5px] text-gray-400 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                    <span className="inline-flex items-center gap-1.5">Built by a teacher</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span className="inline-flex items-center gap-1.5">Tested on her own kids</span>
+                    <span className="w-[3px] h-[3px] rounded-full bg-gray-300 inline-block" />
+                    <span className="inline-flex items-center gap-1.5">$0 today, cancel anytime</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
