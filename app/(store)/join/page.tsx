@@ -6,7 +6,6 @@ import StickyFounderBar from '@/components/join/StickyFounderBar';
 import JoinCta from '@/components/join/JoinCta';
 import HeroTrail from '@/components/join/HeroTrail';
 import ExplorerArrival from '@/components/join/ExplorerArrival';
-import { ExplorerFigure } from '@/components/account/ExplorerAvatar';
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_USD,
@@ -882,23 +881,12 @@ export default async function JoinPage({
 
         {/* ═══ 7b. PICTURE A SATURDAY ═══ */}
         <section
-          className="relative overflow-hidden border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10"
+          className="border-y border-gray-200 bg-[#f5f0e8] px-6 py-16 max-md:py-10"
           style={{
             backgroundImage:
               'radial-gradient(ellipse 700px 440px at 50% 0%, rgba(255,255,255,0.6), transparent 65%), radial-gradient(ellipse 520px 360px at 80% 100%, rgba(235,205,179,0.3), transparent 70%)',
           }}
         >
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute bottom-0 left-[4%] hidden w-[96px] xl:block"
-            style={{ filter: 'drop-shadow(0 8px 10px rgba(40,45,30,.22))' }}
-          >
-            <ExplorerFigure
-              avatar={{ base: 'girl', color: '#588157', skin: '#e5b48f', hair: '#3b2f27', hairStyle: 'ponytail' }}
-              gear={['big:backpack', 'everyday:sun-hat']}
-              fill
-            />
-          </div>
           <div className="mx-auto max-w-[720px] text-center">
             <Eyebrow>What this actually looks like</Eyebrow>
             <p className="mt-4 text-balance font-display text-[clamp(26px,3vw,34px)] leading-[1.35] text-gray-900">
