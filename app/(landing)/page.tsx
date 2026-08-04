@@ -5,6 +5,7 @@ import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import FAQSection from '@/components/shared/FAQSection';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import PhotoMosaic from '@/components/shared/PhotoMosaic';
 import { POST_FOUNDER_PRICE_USD, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
@@ -34,39 +35,9 @@ const homepageFaqLd = {
   })),
 };
 
-// One activity from each of the 9 categories.
-// Order matches CARD_POSITIONS: index 3 = right side (Entrepreneurship), index 7 = left side (Planning).
-const HERO_CARDS = [
-  { slug: 'kitchen-math-challenge', alt: 'Kitchen Math & Meal Planning cover' },     // 10:30 top-left
-  { slug: 'deepfake-spotter', alt: 'Deepfake & Manipulation Spotter cover' },        // 12 top peek
-  { slug: 'family-debate-night', alt: 'Family Debate Night cover' },                  // 1:30 top-right
-  { slug: 'shark-tank-pitch', alt: 'The Shark Tank Pitch cover' },                    // 3 right side
-  { slug: 'rube-goldberg-machine', alt: 'Build a Rube Goldberg Machine cover' },     // 4:30 bottom-right
-  { slug: 'currency-market-math', alt: 'Currency & Market Math cover' },              // 6 bottom peek
-  { slug: 'nature-walk-task-cards', alt: 'Nature Walk Task Cards cover' },            // 7:30 bottom-left
-  { slug: 'travel-day', alt: 'Travel Day Itinerary Challenge cover' },                // 9 left side
-];
-
-// 8 covers orbit the centered Skills Map at 45° intervals.
-// Tuned to hug the Skills Map closely so the composition feels tight.
-const CARD_POSITIONS = [
-  // 10:30 — top-left corner
-  { style: { top: '10%', left: '8%' }, rotate: -9, z: 2 },
-  // 12 — top, peeking just behind top of SM
-  { style: { top: '3%', left: '50%', transform: 'translateX(-50%)' }, rotate: -2, z: 1 },
-  // 1:30 — top-right corner
-  { style: { top: '10%', right: '8%' }, rotate: 9, z: 2 },
-  // 3 — right side
-  { style: { top: '50%', right: '-2%', transform: 'translateY(-50%)' }, rotate: 7, z: 3 },
-  // 4:30 — bottom-right corner
-  { style: { bottom: '10%', right: '8%' }, rotate: 5, z: 4 },
-  // 6 — bottom, peeking just behind bottom of SM
-  { style: { bottom: '3%', left: '50%', transform: 'translateX(-50%)' }, rotate: 2, z: 1 },
-  // 7:30 — bottom-left corner
-  { style: { bottom: '10%', left: '8%' }, rotate: -5, z: 4 },
-  // 9 — left side
-  { style: { top: '50%', left: '-2%', transform: 'translateY(-50%)' }, rotate: -7, z: 3 },
-];
+// Hero collage constants (HERO_CARDS / CARD_POSITIONS) moved to
+// components/shared/HeroCollage.tsx, which now powers the /shop hero. The
+// homepage hero is a PhotoMosaic of real families.
 
 const CATEGORIES = [
   { name: 'Real-World Math', slug: 'real-world-math', icon: '$', gradient: 'from-forest to-forest-dark', photo: '/images/money-grocery-shopping.jpeg' },
@@ -195,73 +166,9 @@ export default async function HomePage() {
                 </div>
               </div>
 
-              {/* Hero visual — real activity covers fanning around the Future-Ready Skills Map */}
-              <div data-hero-collage className="relative w-full aspect-square max-lg:max-w-[440px] max-lg:mx-auto order-3 lg:order-none lg:col-start-2 lg:row-start-1" aria-hidden="true">
-              {/* data-hero-collage is used by scripts/screenshot-hero.mjs to re-export this collage as /public/membership-hero.png whenever the hero changes */}
-                {/* Skills Map — centerpiece, all viewports */}
-                <div
-                  className="absolute z-[5] w-[130px] sm:w-[220px] lg:w-[250px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)]"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    transform: 'translate(-50%, -50%) rotate(-2deg)',
-                  }}
-                >
-                  <Image
-                    src="/skills-map-cover.jpg"
-                    alt=""
-                    width={800}
-                    height={1067}
-                    quality={95}
-                    priority
-                    unoptimized
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                  />
-                </div>
-
-                {/* 8 activity covers — fanned around Skills Map at all viewports */}
-                {HERO_CARDS.map((card, i) => {
-                  const pos = CARD_POSITIONS[i];
-                  const baseTransform = pos.style.transform || '';
-                  const rotation = `rotate(${pos.rotate}deg)`;
-                  const finalTransform = baseTransform ? `${baseTransform} ${rotation}` : rotation;
-                  return (
-                    <div
-                      key={card.slug}
-                      className="absolute w-[112px] sm:w-[140px] lg:w-[170px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
-                      style={{
-                        ...pos.style,
-                        transform: finalTransform,
-                        zIndex: pos.z,
-                      }}
-                    >
-                      <Image
-                        src={`/products/${card.slug}.jpg`}
-                        alt=""
-                        width={400}
-                        height={500}
-                        quality={95}
-                        unoptimized
-                        className="absolute inset-0 w-full h-full object-cover object-top"
-                      />
-                    </div>
-                  );
-                })}
-
-                {/* Open-and-go sticker. Deliberately NOT the catalog size: the VOC research
-                    found a big library number reads as "more shelf to abandon" to a parent
-                    who already feels behind. 120+ still appears further down the page,
-                    where it lands as reassurance rather than homework.
-                    Equally deliberately NOT a cadence ("one a week"): families do more when
-                    they want and less when an activity turns into a longer project, and the
-                    flexibility is the product. Promise low friction, never a schedule. */}
-                <div className="absolute right-[-40px] bottom-[-30px] sm:right-[-40px] sm:bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
-                  <span>
-                    <span className="block text-[28px] max-sm:text-2xl mb-1">Open</span>
-                    and go
-                    <span className="block text-[10px] max-sm:text-[8.5px] not-italic uppercase tracking-[0.15em] max-sm:tracking-[0.04em] opacity-95 mt-1 font-semibold font-body">Nothing to plan</span>
-                  </span>
-                </div>
+              {/* Hero visual — a scrapbook mosaic of real families doing real-world activities */}
+              <div className="w-full max-lg:max-w-[460px] max-lg:mx-auto order-3 lg:order-none lg:col-start-2 lg:row-start-1">
+                <PhotoMosaic />
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import LibraryFilters, { type LibraryRow } from './LibraryFilters';
 import { SKILL_FAMILIES, getProductSkills } from '@/lib/skills';
 import CategoryCoverCarousel from './CategoryCoverCarousel';
-import CoverMosaic from '@/components/shop/CoverMosaic';
+import HeroCollage from '@/components/shared/HeroCollage';
 import { coverSrc } from '@/lib/cover';
 import BrowseAllLink from './BrowseAllLink';
 import {
@@ -409,7 +409,7 @@ export default function ShopPage() {
   //   - desktop: in the right column (unchanged)
   //   - mobile:  inline between the headline and the descriptive paragraph
   //              (per design: hero sits between title and description)
-  const BookShelf = () => <CoverMosaic />;
+  const BookShelf = () => <HeroCollage />;
 
   return (
     <>
