@@ -68,33 +68,37 @@ export default function IdeasChecklist({
   return (
     <div style={{ '--accent': accent } as React.CSSProperties}>
       {/* ── Cover image + download strip ── */}
-      <div className="mx-auto max-w-[920px] px-6 -mt-2 mb-6">
-        <div className="flex flex-col sm:flex-row items-stretch gap-5">
-          {/* Cover thumbnail */}
-          <div className="relative w-full sm:w-[180px] flex-shrink-0 aspect-[8.5/11] sm:aspect-auto sm:h-[240px] rounded-xl overflow-hidden border border-[#e8e5de] shadow-[0_8px_24px_-12px_rgba(45,58,46,0.2)]">
+      <div className="mx-auto max-w-[920px] px-6 -mt-2 mb-5">
+        <div className="flex flex-row items-stretch gap-4 sm:gap-5">
+          {/* Cover thumbnail. Stays a thumbnail on mobile: a full-width
+              portrait cover pushed the actual list down almost two screens. */}
+          <div className="relative w-[104px] h-[135px] sm:w-[180px] sm:h-[240px] flex-shrink-0 rounded-xl overflow-hidden border border-[#e8e5de] shadow-[0_8px_24px_-12px_rgba(45,58,46,0.2)]">
             <Image
               src={`/ideas/${list.slug}.jpg`}
               alt={list.title}
               fill
               priority
               className="object-cover object-top"
-              sizes="(max-width: 640px) 100vw, 180px"
+              sizes="(max-width: 640px) 104px, 180px"
             />
           </div>
 
           {/* Download + info card */}
           <div
-            className="flex-1 rounded-xl border p-6 flex flex-col justify-center"
+            className="flex-1 min-w-0 rounded-xl border p-4 sm:p-6 flex flex-col justify-center"
             style={{
               borderColor: `${accent}25`,
               background: `${accent}08`,
             }}
           >
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] mb-2" style={{ color: accent }}>
+            <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] mb-1.5 sm:mb-2" style={{ color: accent }}>
               Free printable checklist
             </p>
-            <p className="text-[15px] leading-[1.55] text-gray-600 mb-4">
-              Download and print this list to pin on the fridge, toss in your bag, or keep on the counter. Pick whichever version works best for your printer.{' '}
+            <p className="text-[14px] sm:text-[15px] leading-[1.5] text-gray-600 mb-3.5">
+              <span className="hidden sm:inline">
+                Print it for the fridge, your bag, or the counter. Pick whichever
+                version suits your printer.{' '}
+              </span>
               <strong className="font-semibold text-gray-700">
                 Instant download. No email required.
               </strong>
@@ -105,7 +109,7 @@ export default function IdeasChecklist({
                   href={pdfUrls.color}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[13px] font-semibold text-white px-4 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md no-underline"
+                  className="inline-flex items-center gap-2 text-[13px] font-semibold text-white px-3.5 sm:px-4 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
                   style={{ background: accent }}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -119,7 +123,7 @@ export default function IdeasChecklist({
                   href={pdfUrls.bw}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[13px] font-semibold px-4 py-2.5 rounded-lg border-2 transition-all hover:-translate-y-px hover:shadow-md no-underline"
+                  className="inline-flex items-center gap-2 text-[13px] font-semibold px-3.5 sm:px-4 py-2.5 rounded-lg border-2 transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
                   style={{
                     color: accent,
                     borderColor: accent,
@@ -189,8 +193,11 @@ export default function IdeasChecklist({
         </div>
       </div>
 
-      {/* ── Section cards ── */}
-      <div className="mx-auto max-w-[920px] px-6 py-10 flex flex-col gap-6">
+      {/* ── The list ──
+          Deliberately not cards. Each theme is a labelled rule over a dense
+          two-column run of rows, so all 50 ideas stay visible (they are this
+          page's crawlable content) without four screens of container chrome. */}
+      <div className="mx-auto max-w-[920px] px-6 pt-7 pb-10 flex flex-col gap-7">
         {list.sections.map((section, si) => {
           const sectionChecked = section.items.filter(
             (_, ii) => checked[itemKey(si, ii)],
@@ -198,65 +205,49 @@ export default function IdeasChecklist({
           const sectionDone = sectionChecked === section.items.length;
 
           return (
-            <section
-              key={section.name}
-              className="rounded-xl border overflow-hidden transition-all duration-300"
-              style={{
-                borderColor: sectionDone ? `${accent}40` : '#D8D4C5',
-                background: sectionDone ? `${accent}06` : 'white',
-                boxShadow: '0 1px 0 rgba(255,255,255,0.5) inset, 0 14px 26px -22px rgba(45,58,46,0.15)',
-              }}
-            >
-              {/* Section header */}
+            <section key={section.name}>
+              {/* Theme rule */}
               <div
-                className="flex items-center gap-4 px-6 py-4"
-                style={{
-                  borderBottom: `1px solid ${sectionDone ? `${accent}20` : '#E8E5DC'}`,
-                  background: `${accent}06`,
-                }}
+                className="flex items-baseline gap-3 pb-2 mb-1 border-b"
+                style={{ borderColor: `${accent}33` }}
               >
-                <span
-                  className="flex-shrink-0 w-9 h-9 rounded-lg grid place-items-center text-[13px] font-bold text-white shadow-sm"
-                  style={{ background: accent }}
+                <h2
+                  className="text-[13px] font-semibold uppercase tracking-[0.14em] m-0"
+                  style={{ color: accent }}
                 >
-                  {String(si + 1).padStart(2, '0')}
-                </span>
-                <h2 className="flex-1 min-w-0 text-[15px] font-semibold tracking-tight m-0" style={{ color: accent }}>
                   {section.name}
                 </h2>
                 <span
-                  className="text-[12px] font-semibold px-2.5 py-1 rounded-full whitespace-nowrap"
-                  style={{
-                    color: sectionDone ? 'white' : accent,
-                    background: sectionDone ? accent : `${accent}12`,
-                  }}
+                  className="ml-auto text-[12px] font-medium tabular-nums whitespace-nowrap transition-colors"
+                  style={{ color: sectionDone ? accent : '#6b6860' }}
                 >
-                  {sectionDone ? 'Done!' : `${sectionChecked}/${section.items.length}`}
+                  {sectionDone
+                    ? 'all done'
+                    : `${sectionChecked}/${section.items.length}`}
                 </span>
               </div>
 
-              {/* Checkbox grid */}
-              <div className="px-6 py-5 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0.5">
+              {/* Rows */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
                 {section.items.map((item, ii) => {
                   const key = itemKey(si, ii);
                   const isChecked = !!checked[key];
                   return (
                     <label
                       key={key}
-                      className="flex items-start gap-3 py-2.5 cursor-pointer group select-none rounded-lg px-2 -mx-2 hover:bg-[#f5f3ee] transition-colors"
+                      className="flex items-start gap-2.5 py-[7px] px-2 -mx-2 rounded-md cursor-pointer select-none hover:bg-[#f2efe6] transition-colors"
                     >
                       <span
-                        className="flex-shrink-0 w-[22px] h-[22px] rounded-md border-2 mt-0.5 grid place-items-center transition-all duration-200"
+                        className="flex-shrink-0 w-[18px] h-[18px] rounded border-[1.5px] mt-[2px] grid place-items-center transition-colors duration-150"
                         style={{
-                          borderColor: isChecked ? accent : '#C9C5B7',
+                          borderColor: isChecked ? accent : '#C1BCAC',
                           background: isChecked ? accent : 'transparent',
-                          transform: isChecked ? 'scale(1.05)' : 'scale(1)',
                         }}
                       >
                         {isChecked && (
                           <svg
-                            width="13"
-                            height="13"
+                            width="11"
+                            height="11"
                             viewBox="0 0 12 12"
                             fill="none"
                             aria-hidden="true"
@@ -264,7 +255,7 @@ export default function IdeasChecklist({
                             <path
                               d="M2.5 6L5 8.5L9.5 3.5"
                               stroke="white"
-                              strokeWidth="2"
+                              strokeWidth="2.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             />
@@ -279,11 +270,13 @@ export default function IdeasChecklist({
                         aria-label={item}
                       />
                       <span
-                        className="text-[15px] leading-[1.55] transition-all duration-200"
+                        className="text-[14.5px] leading-[1.45] transition-colors duration-150"
                         style={{
-                          color: isChecked ? '#9CA3AF' : '#374151',
+                          // Completed items read as done via the strike, not by
+                          // fading below the 4.5:1 contrast floor.
+                          color: isChecked ? '#706d66' : '#3f3d38',
                           textDecoration: isChecked ? 'line-through' : 'none',
-                          textDecorationColor: isChecked ? '#d1d5db' : undefined,
+                          textDecorationColor: isChecked ? '#b3ae9e' : undefined,
                         }}
                       >
                         {item}
@@ -295,6 +288,16 @@ export default function IdeasChecklist({
             </section>
           );
         })}
+
+        {/* Reset, only once something is ticked */}
+        {checkedCount > 0 && (
+          <button
+            onClick={reset}
+            className="self-start text-[13px] font-medium text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors"
+          >
+            Clear {checkedCount} ticked
+          </button>
+        )}
       </div>
     </div>
   );

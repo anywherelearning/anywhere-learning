@@ -216,15 +216,15 @@ export default function IdeasPage() {
                   We add new lists all the time. Got a request? Tell us what
                   your family wants to explore next.
                 </p>
-                <a
-                  href="mailto:info@anywherelearning.co?subject=Idea%20list%20suggestion"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center gap-1.5 font-semibold text-[13.5px] text-[#d4a373] hover:gap-2.5 transition-all duration-200"
                 >
                   Suggest a list
                   <span className="font-display italic text-base">
                     &rarr;
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

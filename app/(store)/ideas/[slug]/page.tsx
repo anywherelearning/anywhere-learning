@@ -13,9 +13,11 @@ import {
 } from '@/lib/ideas';
 import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
 import { getIdeaListSeo } from '@/lib/idea-list-seo';
+import { getFreeActivityForCategory } from '@/lib/ideas-free-activity';
 import { getPostBySlug } from '@/lib/blog';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import IdeaListEmailCapture from '@/components/ideas/IdeaListEmailCapture';
 import IdeasChecklist from './IdeasChecklist';
 
 /* ──────────────────────────────────────────────────────────────────
@@ -141,16 +143,6 @@ const ICON_PATHS: Record<string, string> = {
   Heart:
     'M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z',
 };
-
-/** Card excerpt: first sentence of the intro (the answer block), word-boundary
-    truncated only if very long. Replaces blind slice(0,117) that chopped the
-    longer definition-style intros mid-word. */
-function cardExcerpt(intro: string): string {
-  const firstSentence = intro.split('. ')[0] + '.';
-  if (firstSentence.length <= 160) return firstSentence;
-  const cut = firstSentence.lastIndexOf(' ', 157);
-  return firstSentence.slice(0, cut > 0 ? cut : 157) + '...';
-}
 
 /** '2026-06-10' -> 'June 2026' (string split, no timezone surprises) */
 function formatMonthYear(iso: string): string {
@@ -519,19 +511,25 @@ function ListDetailView({
   const totalItems = list.sections.reduce((n, s) => n + s.items.length, 0);
   const themeCount = list.sections.length;
 
-  // Other lists in the same category (excluding current)
-  const siblingLists = category.lists.filter((l) => l.slug !== list.slug);
+  const totalListCount = IDEAS_DATA.reduce((n, c) => n + c.lists.length, 0);
 
-  // Lists from other categories (grab a handful)
-  const otherCategoryLists = IDEAS_DATA.filter(
-    (c) => c.slug !== category.slug,
-  )
-    .flatMap((c) => c.lists.map((l) => ({ list: l, category: c })))
-    .slice(0, 6);
+  // Related lists: same category first (most relevant next click), then a few
+  // from elsewhere. Capped, because the full index is one link away.
+  const relatedLists = [
+    ...category.lists
+      .filter((l) => l.slug !== list.slug)
+      .map((l) => ({ list: l, category })),
+    ...IDEAS_DATA.filter((c) => c.slug !== category.slug).flatMap((c) =>
+      c.lists.map((l) => ({ list: l, category: c })),
+    ),
+  ].slice(0, 8);
 
   // SEO copy: how-to paragraph + FAQs (crawlable body + rich results)
   const seo = getIdeaListSeo(list.slug);
   const pdfUrls = getIdeaListPdfUrls(list.slug);
+
+  // The complete guided activity given away on this category's lists.
+  const freeActivity = getFreeActivityForCategory(category.slug);
 
   // The in-depth guide this checklist was distilled from. A visible,
   // crawlable link both ways tells search engines "guide + tool cluster",
@@ -963,76 +961,78 @@ function ListDetailView({
           <IdeasChecklist list={list} accent={category.accent} pdfUrls={pdfUrls} />
         </div>
 
-        {/* How to use this list + FAQ (crawlable SEO content) */}
+        {/* How to use this list. Sits between the list and the offer: it is
+            the context for what they just read, and it earns the offer that
+            follows. The FAQ stays below the offer so the ask stays high. */}
         {seo && (
-          <section className="py-12 md:py-16 print:hidden border-t border-[#E8E5DC]">
+          <section className="pt-4 pb-2 print:hidden">
             <div className="mx-auto max-w-[760px] px-6">
-              {/* How to use (speakable target) */}
-              <div id="how-to-use" className="mb-12">
-                <h2 className="font-display text-[clamp(1.6rem,3vw,2.2rem)] leading-[1.12] tracking-tight text-balance">
+              <div id="how-to-use">
+                <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance">
                   How to use this list
                 </h2>
-                <p className="mt-4 text-[16.5px] leading-[1.7] text-[#4a4843]">
+                <p className="mt-3 text-[16px] leading-[1.65] text-[#4a4843]">
                   {seo.howToUse}
                 </p>
-              </div>
 
-              {/* Crawlable link back to the source guide */}
-              {blogPost && (
-                <div
-                  className="mb-12 rounded-xl border p-6"
-                  style={{
-                    borderColor: `${category.accent}30`,
-                    background: `${category.accent}08`,
-                  }}
-                >
-                  <p
-                    className="text-[12px] font-semibold uppercase tracking-[0.16em] mb-2"
-                    style={{ color: category.accent }}
-                  >
-                    Go deeper
-                  </p>
-                  <p className="text-[15.5px] leading-[1.65] text-[#4a4843] m-0">
-                    This checklist is the quick version. For the why behind
-                    each idea, parent tips, and the full walkthrough, read{' '}
+                {/* Crawlable link back to the source guide */}
+                {blogPost && (
+                  <p className="mt-3.5 text-[15.5px] leading-[1.65] text-[#4a4843]">
+                    This checklist is the quick version. For the why behind each
+                    idea, parent tips, and the full walkthrough, read{' '}
                     <Link
                       href={`/blog/${list.blogSlug}`}
-                      className="font-semibold underline decoration-2 underline-offset-2"
+                      className="font-semibold underline decoration-[1.5px] underline-offset-2"
                       style={{ color: category.accent }}
                     >
                       {blogPost.title}
                     </Link>
                     .
                   </p>
-                </div>
-              )}
+                )}
+              </div>
+            </div>
+          </section>
+        )}
 
-              {/* FAQ */}
+        {/* Content upgrade: free guided activity for an email */}
+        {freeActivity && (
+          <IdeaListEmailCapture
+            categorySlug={category.slug}
+            accent={category.accent}
+            activity={freeActivity}
+          />
+        )}
+
+        {/* FAQ (crawlable SEO content + rich results) */}
+        {seo && (
+          <section className="py-11 md:py-12 print:hidden border-t border-[#E8E5DC]">
+            <div className="mx-auto max-w-[760px] px-6">
               {seo.faqs.length > 0 && (
                 <div>
-                  <h2 className="font-display text-[clamp(1.6rem,3vw,2.2rem)] leading-[1.12] tracking-tight text-balance mb-6">
+                  <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance mb-4">
                     Frequently asked questions
                   </h2>
-                  <div className="flex flex-col gap-3">
+                  <div className="border-t border-[#E2DED2]">
                     {seo.faqs.map((faq) => (
                       <details
                         key={faq.question}
-                        className="group bg-white border border-[#E8E5DC] rounded-xl overflow-hidden"
+                        className="group border-b border-[#E2DED2]"
                       >
-                        <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-body font-semibold text-[16px] text-ink hover:bg-[#f7f5f0] transition-colors">
+                        <summary className="flex items-center justify-between gap-4 py-3.5 cursor-pointer list-none font-body font-medium text-[15.5px] leading-[1.4] text-ink hover:text-[#588157] transition-colors">
                           {faq.question}
                           <span
-                            className="flex-shrink-0 grid place-items-center w-6 h-6 rounded-full transition-transform duration-200 group-open:rotate-45"
+                            className="flex-shrink-0 grid place-items-center w-5 h-5 rounded-full transition-transform duration-200 group-open:rotate-45"
                             style={{ background: `${category.accent}14`, color: category.accent }}
                             aria-hidden="true"
                           >
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                               <line x1="12" y1="5" x2="12" y2="19" />
                               <line x1="5" y1="12" x2="19" y2="12" />
                             </svg>
                           </span>
                         </summary>
-                        <div className="px-5 pb-4 -mt-1 text-[15.5px] leading-[1.65] text-[#5c5a54]">
+                        <div className="pb-4 -mt-0.5 pr-8 text-[15px] leading-[1.6] text-[#5c5a54]">
                           {faq.answer}
                         </div>
                       </details>
@@ -1044,146 +1044,72 @@ function ListDetailView({
           </section>
         )}
 
-        {/* Bottom CTA */}
-        <section className="py-16 md:py-20 print:hidden">
-          <div className="mx-auto max-w-[680px] px-6 text-center">
-            <h2 className="font-display text-[clamp(1.75rem,3.8vw,2.75rem)] leading-[1.08] tracking-tight text-balance">
-              Want the step-by-step guides?
-            </h2>
-            <p className="mt-4 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px] mx-auto">
-              These ideas are a great starting point. The membership gives you
-              fully guided activities with step-by-step instructions, three skill
-              levels, and parent tips for every single one.
+        {/* Membership, deliberately quiet.
+            The email capture above is this page's one real conversion action.
+            A second competing button would just split the ask, and cold search
+            traffic is not ready for a yearly plan on first visit anyway. */}
+        <section className="pb-14 print:hidden">
+          <div className="mx-auto max-w-[920px] px-6">
+            <p className="text-[15px] leading-[1.6] text-[#6e6b64] text-center m-0">
+              Already know you want the whole library?{' '}
+              <Link
+                href="/join"
+                className="font-semibold text-[#588157] underline decoration-[1.5px] underline-offset-[3px] hover:text-[#3d5c3b] transition-colors"
+              >
+                See what&rsquo;s inside the membership
+              </Link>
             </p>
-            <Link
-              href="/join"
-              className="mt-7 inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-7 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200 no-underline"
-            >
-              See inside the library
-              <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
-                &rarr;
-              </span>
-            </Link>
           </div>
         </section>
 
-        {/* More idea lists */}
-        {(siblingLists.length > 0 || otherCategoryLists.length > 0) && (
-          <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] py-16 md:py-20 print:hidden">
-            <div className="mx-auto max-w-[1180px] px-6">
-              {/* Sibling lists in the same category */}
-              {siblingLists.length > 0 && (
-                <div className="mb-14">
-                  <div className="mb-10">
-                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#3d5c3b] inline-flex items-center gap-2.5">
-                      <span className="w-[22px] h-px bg-[#588157] inline-block" />
-                      More in {category.name}
-                    </p>
-                    <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.4rem)] leading-[1.1] tracking-tight mt-3 text-balance">
-                      Keep exploring{' '}
-                      <span className="italic text-[#588157]">
-                        {category.name.toLowerCase()}.
-                      </span>
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {siblingLists.map((l) => {
-                      const count = l.sections.reduce(
-                        (n, s) => n + s.items.length,
-                        0,
-                      );
-                      return (
-                        <Link
-                          key={l.slug}
-                          href={`/ideas/${l.slug}`}
-                          className="group bg-[#faf9f6] border border-[#D8D4C5] rounded-[14px] p-6 no-underline text-inherit flex flex-col shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] hover:-translate-y-[3px] hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.3)] hover:border-[#C9C5B7] transition-all duration-200"
-                        >
-                          <span
-                            className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em]"
-                            style={{ color: category.accent }}
-                          >
-                            <CategoryIcon icon={category.icon} />
-                            {category.name}
-                          </span>
-                          <h3 className="font-display text-[20px] leading-[1.15] tracking-tight mt-2.5 mb-2">
-                            {l.title}
-                          </h3>
-                          <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {l.cardExcerpt ?? cardExcerpt(l.intro)}
-                          </p>
-                          <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
-                            <span className="text-gray-500">
-                              {count} ideas
-                            </span>
-                            <span
-                              className="font-semibold transition-colors"
-                              style={{ color: category.accent }}
-                            >
-                              View list &rarr;
-                            </span>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
+        {/* More idea lists.
+            Was two full card grids (ten cards, roughly a screen and a half).
+            Same destinations, same crawlable anchor text, as a dense index. */}
+        {relatedLists.length > 0 && (
+          <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] py-12 md:py-14 print:hidden">
+            <div className="mx-auto max-w-[920px] px-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-5">
+                <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight m-0">
+                  More free idea lists
+                </h2>
+                <Link
+                  href="/ideas"
+                  className="text-[14px] font-semibold text-[#588157] hover:text-[#3d5c3b] no-underline transition-colors"
+                >
+                  See all {totalListCount} &rarr;
+                </Link>
+              </div>
 
-              {/* Lists from other categories */}
-              {otherCategoryLists.length > 0 && (
-                <div>
-                  <div className="mb-10">
-                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#3d5c3b] inline-flex items-center gap-2.5">
-                      <span className="w-[22px] h-px bg-[#588157] inline-block" />
-                      More idea lists
-                    </p>
-                    <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.4rem)] leading-[1.1] tracking-tight mt-3 text-balance">
-                      Explore another{' '}
-                      <span className="italic text-[#588157]">category.</span>
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {otherCategoryLists.map(({ list: l, category: c }) => {
-                      const count = l.sections.reduce(
-                        (n, s) => n + s.items.length,
-                        0,
-                      );
-                      return (
-                        <Link
-                          key={l.slug}
-                          href={`/ideas/${l.slug}`}
-                          className="group bg-[#faf9f6] border border-[#D8D4C5] rounded-[14px] p-6 no-underline text-inherit flex flex-col shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] hover:-translate-y-[3px] hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.3)] hover:border-[#C9C5B7] transition-all duration-200"
-                        >
-                          <span
-                            className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em]"
-                            style={{ color: c.accent }}
-                          >
-                            <CategoryIcon icon={c.icon} />
-                            {c.name}
-                          </span>
-                          <h3 className="font-display text-[20px] leading-[1.15] tracking-tight mt-2.5 mb-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-0 list-none p-0 m-0">
+                {relatedLists.map(({ list: l, category: c }) => {
+                  const count = l.sections.reduce(
+                    (n, s) => n + s.items.length,
+                    0,
+                  );
+                  return (
+                    <li key={l.slug} className="border-b border-[#DDD8C7]">
+                      <Link
+                        href={`/ideas/${l.slug}`}
+                        className="group flex items-baseline gap-3 py-3 no-underline text-inherit"
+                      >
+                        <span
+                          className="flex-shrink-0 w-[7px] h-[7px] rounded-full translate-y-[-2px]"
+                          style={{ background: c.accent }}
+                          aria-hidden="true"
+                        />
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-[15.5px] leading-[1.35] font-medium text-[#3f3d38] group-hover:text-[#588157] transition-colors">
                             {l.title}
-                          </h3>
-                          <p className="text-[14px] leading-[1.55] text-gray-600 m-0 flex-1">
-                            {l.cardExcerpt ?? cardExcerpt(l.intro)}
-                          </p>
-                          <div className="mt-4 pt-4 border-t border-dashed border-[#C9C5B7] flex items-center justify-between text-[13px]">
-                            <span className="text-gray-500">
-                              {count} ideas
-                            </span>
-                            <span
-                              className="font-semibold transition-colors"
-                              style={{ color: c.accent }}
-                            >
-                              View list &rarr;
-                            </span>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
+                          </span>
+                          <span className="block text-[12.5px] text-[#6b6860] mt-0.5">
+                            {c.name} &middot; {count} ideas
+                          </span>
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </section>
         )}
