@@ -479,11 +479,14 @@ function CategoryView({ category }: { category: IdeaCategory }) {
                   planned out: instructions, skill levels, and no prep
                   required.
                 </p>
+                {/* Goes to /join, not /library: the library is auth-gated and
+                    noindex, so a logged-out visitor cannot see inside it. The
+                    label names what the click actually does. */}
                 <Link
                   href="/join"
                   className="inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200"
                 >
-                  See inside the library
+                  See what&rsquo;s inside
                   <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
                     &rarr;
                   </span>
