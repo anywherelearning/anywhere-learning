@@ -488,7 +488,7 @@ export default function AboutPage() {
                   href="/shop"
                   className="inline-flex items-center gap-2 text-gray-500 font-medium text-[14.5px] border-b border-gray-300 pb-1 hover:text-forest-dark hover:border-forest transition-colors"
                 >
-                  Or browse individual activities
+                  Or browse the activities
                   <span className="font-display italic text-[17px] leading-none">&rarr;</span>
                 </Link>
               </div>

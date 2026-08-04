@@ -55,7 +55,7 @@ function Logo() {
 
 const NAV_ITEMS_BEFORE = [
   { href: '/', label: 'Home' },
-  { href: '/shop', label: 'Library' },
+  { href: '/shop', label: 'Activities' },
   { href: '/join', label: 'Membership' },
 ];
 

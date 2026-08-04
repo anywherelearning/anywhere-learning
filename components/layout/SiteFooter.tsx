@@ -126,8 +126,8 @@ export default async function SiteFooter() {
             </div>
           </div>
 
-          <FooterColumn title="The Library">
-            <FooterLink href="/shop">Library</FooterLink>
+          <FooterColumn title="Explore">
+            <FooterLink href="/shop">Browse activities</FooterLink>
             <FooterLink href="/join">Membership</FooterLink>
             <FooterLink href="/quiz">Take the Quiz</FooterLink>
             <FooterLink href="/free-guide">Free 7-day guide</FooterLink>

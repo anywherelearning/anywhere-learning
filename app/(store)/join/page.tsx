@@ -137,6 +137,10 @@ export default async function JoinPage({
   // the cap. Honest, live scarcity instead of a fabricated floor.
   const founderClaimed = Math.min(await getActiveMemberCount(), FOUNDER_CAP);
   const founderRemaining = FOUNDER_CAP - founderClaimed;
+  // Only surface the live running counter once there's real traction. Below the
+  // threshold a near-zero "0/100" reads as "nobody joined", so we show the offer
+  // framing ("Founder rate, first 100") without the number until then.
+  const showFounderCount = founderClaimed >= 10;
 
   // Soft banner for visitors who landed on /join from a gated entry point —
   // a PDF link they couldn't open, or /account when they have no access.
@@ -329,9 +333,19 @@ export default async function JoinPage({
               {/* Founder pill */}
               <span className="inline-flex items-center gap-2 rounded-full border border-[#c4836a]/45 bg-[#f5e1d2] px-3.5 py-1.5 text-[11.5px] font-semibold uppercase tracking-[.12em] text-[#7A3D24]">
                 <span className="h-1.5 w-1.5 flex-shrink-0 animate-pulse rounded-full bg-[#c4836a]" />
-                <em className="not-italic font-bold text-[#c4836a]">{founderClaimed}/{FOUNDER_CAP}</em>
-                <span className="opacity-70">·</span>
-                Founder spots claimed
+                {showFounderCount ? (
+                  <>
+                    <em className="not-italic font-bold text-[#c4836a]">{founderClaimed}/{FOUNDER_CAP}</em>
+                    <span className="opacity-70">·</span>
+                    Founder spots claimed
+                  </>
+                ) : (
+                  <>
+                    Founder rate
+                    <span className="opacity-70">·</span>
+                    First {FOUNDER_CAP} members
+                  </>
+                )}
               </span>
 
               <div className="mt-2.5">
@@ -774,23 +788,25 @@ export default async function JoinPage({
               </p>
             </div>
 
-            {/* Progress bar */}
-            <div className="mx-auto mt-8 max-w-[480px]">
-              <div className="mb-2.5 flex items-center justify-between text-[13.5px] font-medium tracking-[.04em] text-gray-500">
-                <span>
-                  <span className="font-display text-[22px] italic text-[#c4836a]">
-                    {founderClaimed}
-                  </span>{' '}
-                  / {FOUNDER_CAP} founding spots claimed
-                </span>
-                <span className="text-gray-400">{founderRemaining} spots remaining</span>
-              </div>
-              <div className="h-2.5 overflow-hidden rounded-full border border-[#c4836a]/30 bg-white/70">
-                <div className="relative h-full rounded-full bg-gradient-to-r from-[#c4836a] to-[#A85A38]" style={{ width: `${(founderClaimed / FOUNDER_CAP) * 100}%` }}>
-                  <span className="absolute -right-px top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#c4836a] shadow-[0_0_0_3px_rgba(242,222,207,.95)]" />
+            {showFounderCount && (
+              /* Progress bar (only once there's real traction) */
+              <div className="mx-auto mt-8 max-w-[480px]">
+                <div className="mb-2.5 flex items-center justify-between text-[13.5px] font-medium tracking-[.04em] text-gray-500">
+                  <span>
+                    <span className="font-display text-[22px] italic text-[#c4836a]">
+                      {founderClaimed}
+                    </span>{' '}
+                    / {FOUNDER_CAP} founding spots claimed
+                  </span>
+                  <span className="text-gray-400">{founderRemaining} spots remaining</span>
+                </div>
+                <div className="h-2.5 overflow-hidden rounded-full border border-[#c4836a]/30 bg-white/70">
+                  <div className="relative h-full rounded-full bg-gradient-to-r from-[#c4836a] to-[#A85A38]" style={{ width: `${(founderClaimed / FOUNDER_CAP) * 100}%` }}>
+                    <span className="absolute -right-px top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#c4836a] shadow-[0_0_0_3px_rgba(242,222,207,.95)]" />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             <div className="mt-8 flex justify-center">
               <JoinCta center m={m} trialEligible={trialEligible} />
@@ -944,8 +960,14 @@ export default async function JoinPage({
             </div>
             <span className="inline-flex items-center gap-2.5 rounded-full border border-[#c4836a]/45 bg-[#f5e1d2] px-4 py-2 text-[12.5px] font-semibold uppercase tracking-[.14em] text-[#7A3D24]">
               <span className="h-2 w-2 flex-shrink-0 animate-pulse rounded-full bg-[#c4836a]" />
-              Only <em className="not-italic font-bold text-[#c4836a]">{founderRemaining}</em>{' '}
-              founding spots left
+              {showFounderCount ? (
+                <>
+                  Only <em className="not-italic font-bold text-[#c4836a]">{founderRemaining}</em>{' '}
+                  founding spots left
+                </>
+              ) : (
+                <>Founder rate · first {FOUNDER_CAP} members</>
+              )}
             </span>
 
             <h2 className="mt-4 text-balance font-display text-[clamp(38px,5.2vw,64px)] leading-[1.06] tracking-tight">
@@ -983,7 +1005,7 @@ export default async function JoinPage({
         </section>
       </main>
 
-      <StickyFounderBar claimed={founderClaimed} cap={FOUNDER_CAP} />
+      {showFounderCount && <StickyFounderBar claimed={founderClaimed} cap={FOUNDER_CAP} />}
     </>
   );
 }
