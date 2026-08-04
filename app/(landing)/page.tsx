@@ -9,7 +9,6 @@ import PhotoMosaic from '@/components/shared/PhotoMosaic';
 import { MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
-import TeacherReviews from '@/components/home/Testimonials';
 import FamilyProof from '@/components/home/FamilyProof';
 import EmailForm from '@/components/EmailForm';
 import { coreFaqItems } from '@/lib/faq-data';
@@ -566,8 +565,7 @@ export default async function HomePage() {
                       <span key={cred} className="bg-cream border border-[#D8D4C5] px-3.5 py-1.5 rounded-full text-[13px] text-gray-500">{cred}</span>
                     ))}
                   </div>
-                  <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3.5">
-                    <TeacherReviews />
+                  <div className="mt-6">
                     <Link
                       href="/about"
                       className="inline-flex items-center gap-2 text-forest-dark font-semibold text-base border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"

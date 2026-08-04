@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import Testimonials from '@/components/home/Testimonials';
 import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 
 const ABOUT_DESC =
@@ -450,6 +451,13 @@ export default function AboutPage() {
             </ScrollReveal>
           </div>
         </section>
+
+        {/* ════════════════════════════════════════
+            07b IN THEIR WORDS — third-party credibility (colleagues, parents,
+            students). Lives here on /about so the founder page carries real
+            endorsements, not just Amelie's own voice.
+        ════════════════════════════════════════ */}
+        <Testimonials />
 
         {/* ════════════════════════════════════════
             08 FINAL CTA
