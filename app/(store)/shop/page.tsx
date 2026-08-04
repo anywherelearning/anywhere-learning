@@ -6,6 +6,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import LibraryFilters, { type LibraryRow } from './LibraryFilters';
 import { SKILL_FAMILIES, getProductSkills } from '@/lib/skills';
 import CategoryCoverCarousel from './CategoryCoverCarousel';
+import CoverMosaic from '@/components/shop/CoverMosaic';
 import { coverSrc } from '@/lib/cover';
 import BrowseAllLink from './BrowseAllLink';
 import {
@@ -408,104 +409,7 @@ export default function ShopPage() {
   //   - desktop: in the right column (unchanged)
   //   - mobile:  inline between the headline and the descriptive paragraph
   //              (per design: hero sits between title and description)
-  const BookShelf = () => (
-    <div className="relative py-6">
-      <div
-        role="list"
-        aria-label="Activity topics"
-        className="relative flex items-end justify-center px-3 pb-4"
-        style={{
-          gap: '6px',
-          height: '380px',
-          transform: 'rotate(-1.5deg)',
-        }}
-      >
-        {TRACKS.map((t, i) => (
-          <Link
-            key={t.category}
-            href={`#track-${t.category}`}
-            aria-label={`Jump to ${t.label} section`}
-            className="relative shelf-spine transition-transform duration-200 ease-out hover:-translate-y-1.5 hover:shadow-[inset_0_4px_0_rgba(255,255,255,0.16),0_22px_32px_-18px_rgba(45,58,46,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
-            style={{
-              flex: '1 1 0',
-              minWidth: 0,
-              height: t.spineHeight,
-              minHeight: '220px',
-              background: t.spineColor,
-              borderRadius: '6px 6px 2px 2px',
-              color: '#fff',
-              boxShadow:
-                'inset 0 4px 0 rgba(255,255,255,0.12), inset 0 -6px 0 rgba(0,0,0,0.12), 0 14px 22px -14px rgba(45,58,46,0.45)',
-              overflow: 'visible',
-              textDecoration: 'none',
-            }}
-          >
-            <span
-              style={{
-                position: 'absolute',
-                top: '10px',
-                left: 0,
-                right: 0,
-                textAlign: 'center',
-                fontFamily: 'var(--font-body)',
-                fontSize: '10px',
-                letterSpacing: '0.18em',
-                textTransform: 'uppercase',
-                fontWeight: 600,
-                color: 'rgba(255,255,255,0.7)',
-              }}
-            >
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <span
-              style={{
-                position: 'absolute',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                top: '36px',
-                width: '18px',
-                height: '1px',
-                background: 'rgba(255,255,255,0.45)',
-              }}
-            />
-            <span
-              style={{
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%) rotate(-90deg)',
-                transformOrigin: 'center',
-                whiteSpace: 'nowrap',
-                fontFamily: 'var(--font-body)',
-                fontSize: '12.5px',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                color: '#FAF9F6',
-                letterSpacing: '0.18em',
-                overflow: 'visible',
-              }}
-            >
-              {t.label}
-            </span>
-          </Link>
-        ))}
-      </div>
-      <div
-        style={{
-          width: '90%',
-          margin: '0 auto',
-          height: '8px',
-          background: 'linear-gradient(180deg, #DAD7CD 0%, #C9C5B7 100%)',
-          borderRadius: '0 0 6px 6px',
-          boxShadow: '0 12px 24px -14px rgba(45,58,46,0.32)',
-        }}
-      />
-      <p className="mt-5 text-center font-display italic text-[17px] text-[#C97B5C]">
-        120+ activities. Nine topics.{' '}
-        <span className="italic">One membership.</span>
-      </p>
-    </div>
-  );
+  const BookShelf = () => <CoverMosaic />;
 
   return (
     <>

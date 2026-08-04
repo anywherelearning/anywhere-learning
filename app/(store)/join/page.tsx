@@ -358,12 +358,12 @@ export default async function JoinPage({
               <h1 className="mt-5 text-balance font-display text-[clamp(40px,6vw,72px)] leading-[1.04] tracking-tight text-gray-900">
                 Your kid is smart.
                 <br />
-                But can they handle{' '}
+                Here&apos;s how they get{' '}
                 <span className="relative whitespace-nowrap">
-                  <span className="relative z-[1]">real life</span>
+                  <span className="relative z-[1]">capable</span>
                   <span className="absolute left-[-2%] right-[-2%] bottom-[.04em] -z-0 h-[.34em] rounded-[.3em_.8em_.2em_.6em/.6em_.3em_.8em_.2em] bg-gradient-to-r from-gold/55 via-gold-light/70 to-gold/55" />
                 </span>
-                <em className="font-display not-italic text-forest">?</em>
+                <em className="font-display not-italic text-forest">.</em>
               </h1>
 
               {/* Mobile-only hero: sits between headline and description.
