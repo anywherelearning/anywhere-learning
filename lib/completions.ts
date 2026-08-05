@@ -22,7 +22,11 @@ function read(): Completion[] {
   if (typeof window === 'undefined') return [];
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Completion[]) : [];
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    // Must be an array: callers do list.push()/iterate, which throw on a
+    // non-array blob (a stale/legacy shape) and would kill the whole click.
+    return Array.isArray(parsed) ? (parsed as Completion[]) : [];
   } catch {
     return [];
   }

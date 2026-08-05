@@ -51,12 +51,16 @@ function read(): RoadmapState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return empty;
-    const s = JSON.parse(raw) as Partial<RoadmapState>;
+    const s = JSON.parse(raw) as Partial<RoadmapState> | null;
+    // Each nested map must be a real object: mutators do state.x[key] = …,
+    // which throws on a legacy/partial blob where the key is missing or wrong.
+    const obj = <T,>(v: unknown): Record<string, T> =>
+      v && typeof v === 'object' ? (v as Record<string, T>) : {};
     return {
-      mode: s.mode === 'family' || s.mode === 'individual' ? s.mode : undefined,
-      nudge: s.nudge ?? {},
-      milestones: s.milestones ?? {},
-      avatars: s.avatars ?? {},
+      mode: s?.mode === 'family' || s?.mode === 'individual' ? s.mode : undefined,
+      nudge: obj(s?.nudge),
+      milestones: obj(s?.milestones),
+      avatars: obj(s?.avatars),
     };
   } catch {
     return empty;

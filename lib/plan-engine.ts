@@ -114,7 +114,12 @@ type EngineStore = Record<string, KidEngine>;
 function read(): EngineStore {
   if (typeof window === 'undefined') return {};
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') as EngineStore;
+    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    // Must be a plain object: skipTerritory/passActivity do s[kidId] = …,
+    // which throws on a primitive or array blob.
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed)
+      ? (parsed as EngineStore)
+      : {};
   } catch {
     return {};
   }
