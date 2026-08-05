@@ -71,12 +71,26 @@ function ageOk(a: PlanActivity, ages: number[]): boolean {
   return ages.some((age) => age >= a.ageMin && age <= a.ageMax);
 }
 
+/**
+ * Categories that never enter the automatic rotation or a "Surprise us" pick.
+ * They only surface when the parent explicitly asks for them (a focus that
+ * names the category) or hand-adds one from the Library. Worldschooling
+ * activities are travel-dependent, so a stay-home family shouldn't be handed
+ * "interview a local abroad" out of the blue.
+ */
+export const OPT_IN_ONLY_CATEGORIES = new Set(['worldschooling']);
+
 export function buildPlan(
   all: PlanActivity[],
   req: PickRequest,
   exclude: Set<string>,
 ): PlanResult {
-  const fresh = all.filter((a) => !exclude.has(a.slug));
+  const fresh = all.filter(
+    (a) =>
+      !exclude.has(a.slug) &&
+      // opt-in categories only surface when the focus explicitly names them
+      (!OPT_IN_ONLY_CATEGORIES.has(a.category) || req.focus.includes(a.category)),
+  );
   const candidates = fresh.filter((a) => ageOk(a, req.ages));
 
   if (candidates.length === 0) {

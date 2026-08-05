@@ -18,7 +18,7 @@
  */
 
 import { TERRITORIES } from './roadmap';
-import type { PlanActivity } from './weekly-plan';
+import { OPT_IN_ONLY_CATEGORIES, type PlanActivity } from './weekly-plan';
 import type { Effort } from './activity-effort';
 import { notifyLocalChanged } from './account-sync';
 
@@ -67,7 +67,11 @@ export function nextForKid(opts: {
   const eligible = (slug: string) => {
     if (opts.passed.has(slug)) return false;
     const a = bySlug.get(slug);
-    return !!a && ageOK(a) && effortOK(a);
+    if (!a) return false;
+    // Opt-in-only categories (worldschooling) never enter the automatic trail
+    // rotation — the parent hand-adds those from the Library when a trip is on.
+    if (OPT_IN_ONLY_CATEGORIES.has(a.category)) return false;
+    return ageOK(a) && effortOK(a);
   };
   const oldestFirst = (slugs: string[]) =>
     [...slugs].sort((a, b) => (doneAt?.get(a) ?? 0) - (doneAt?.get(b) ?? 0));
