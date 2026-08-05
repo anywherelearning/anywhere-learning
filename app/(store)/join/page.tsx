@@ -489,34 +489,28 @@ export default async function JoinPage({
               and less life-prepared than any generation before.
             </p>
             <p className="mt-8 text-[16.5px] leading-relaxed text-gray-500">
-              It's not the fault of the kids. It's not the fault of the parents.
-              It's the shape of modern childhood: scheduled, screened, optimized
-              for tests that don't measure whether a twelve-year-old can scramble
-              an egg or talk to a stranger at a register.
+              It's not the fault of the kids or the parents. It's the shape of
+              modern childhood: scheduled, screened, optimized for tests that
+              don't measure whether a twelve-year-old can scramble an egg or talk
+              to a stranger at a register.
             </p>
             <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              A generation ago, kids learned this stuff{' '}
+              A generation ago, kids learned this{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 by accident.
               </em>{' '}
-              They walked to the corner store with a wrinkled five-dollar bill.
-              They were bored enough to invent things. They watched a parent fix
-              the sink and ended up holding the wrench.
+              They walked to the corner store with a wrinkled five-dollar bill,
+              got bored enough to invent things, and held the wrench while a
+              parent fixed the sink.
             </p>
             <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              Today, most of that has been engineered out of the day. And it
-              shows:{' '}
+              Today that's engineered out of the day, and it shows:{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 only 8% of hiring managers say Gen Z is prepared for the job.
               </em>{' '}
               The biggest gap isn't technical skill. It's communication,
-              problem-solving, and knowing how to work with other people.
-            </p>
-            <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              The research is clear: self-regulation, executive function, and
-              real-world confidence aren't built through screens or textbooks.
-              They're built through practice. Cooking a meal. Managing a budget.
-              Navigating a disagreement. Finishing something hard.
+              problem-solving, and working with other people, the stuff built
+              through practice, not screens or textbooks.
             </p>
             <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
               This isn't a school problem or a homeschool problem. It's a
