@@ -761,7 +761,7 @@ export default async function JoinPage({
             )}
 
             <div className="mt-8 flex justify-center">
-              <JoinCta center m={m} trialEligible={trialEligible} />
+              <JoinCta center compact m={m} trialEligible={trialEligible} />
             </div>
           </div>
         </section>
@@ -941,7 +941,7 @@ export default async function JoinPage({
             </p>
 
             <div className="mt-9 flex justify-center">
-              <JoinCta center m={m} trialEligible={trialEligible} />
+              <JoinCta center compact m={m} trialEligible={trialEligible} />
             </div>
 
             <p className="mt-4 font-display text-sm italic text-gray-400">

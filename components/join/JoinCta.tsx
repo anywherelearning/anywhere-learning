@@ -29,11 +29,15 @@ export interface JoinCtaMembership {
 export default function JoinCta({
   center = false,
   darkMode = false,
+  compact = false,
   m,
   trialEligible = true,
 }: {
   center?: boolean;
   darkMode?: boolean;
+  /** Repeat CTA: show a one-line trailer instead of the full fine print +
+   *  trust row, so the detail isn't restated on every button down the page. */
+  compact?: boolean;
   /** Live membership state — passed from the JoinPage server component. */
   m: JoinCtaMembership;
   /** False for a returning customer who already used their one free trial:
@@ -107,51 +111,59 @@ export default function JoinCta({
         </span>
       </div>
 
-      <div className={`-mt-1.5 text-[13px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}>
-        {isMonthly ? (
-          <>
-            billed monthly · cancel anytime{' · '}
-            <button
-              type="button"
-              onClick={() => setPlan('annual')}
-              className="cursor-pointer font-medium underline decoration-dotted underline-offset-2 hover:text-forest-dark"
-            >
-              switch to yearly and save {savings}%
-            </button>
-          </>
-        ) : (
-          <>
-            billed once a year at <span className="font-medium">{m.priceYear}</span>
-            {m.isFounderPhase && (
+      {compact ? (
+        <div className={`-mt-1.5 text-[13px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}>
+          {isMonthly ? 'Billed monthly · cancel anytime' : 'Billed yearly · cancel anytime'}
+        </div>
+      ) : (
+        <>
+          <div className={`-mt-1.5 text-[13px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}>
+            {isMonthly ? (
               <>
-                {' · '}
-                <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'}`}>
-                  usually ${POST_FOUNDER_PRICE_USD}
-                </span>
-                {' · '}
-                <span className="font-display italic text-[#c4836a]">Locked in for life</span>
+                billed monthly · cancel anytime{' · '}
+                <button
+                  type="button"
+                  onClick={() => setPlan('annual')}
+                  className="cursor-pointer font-medium underline decoration-dotted underline-offset-2 hover:text-forest-dark"
+                >
+                  switch to yearly and save {savings}%
+                </button>
+              </>
+            ) : (
+              <>
+                billed once a year at <span className="font-medium">{m.priceYear}</span>
+                {m.isFounderPhase && (
+                  <>
+                    {' · '}
+                    <span className={`line-through ${darkMode ? 'text-[#7F8B80]' : 'text-gray-400'}`}>
+                      usually ${POST_FOUNDER_PRICE_USD}
+                    </span>
+                    {' · '}
+                    <span className="font-display italic text-[#c4836a]">Locked in for life</span>
+                  </>
+                )}
               </>
             )}
-          </>
-        )}
-      </div>
+          </div>
 
-      <div
-        className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[13.5px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}
-      >
-        <span className="flex items-center gap-1.5">
-          <span className={`font-bold ${darkMode ? 'text-gold-light' : 'text-forest'}`}>✓</span>{' '}
-          14-day money-back guarantee
-        </span>
-        <span
-          className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`}
-        />
-        <span>Instant access</span>
-        <span
-          className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`}
-        />
-        <span>Cancel anytime</span>
-      </div>
+          <div
+            className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[13.5px] ${darkMode ? 'text-[#9AA59B]' : 'text-gray-400'}`}
+          >
+            <span className="flex items-center gap-1.5">
+              <span className={`font-bold ${darkMode ? 'text-gold-light' : 'text-forest'}`}>✓</span>{' '}
+              14-day money-back guarantee
+            </span>
+            <span
+              className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`}
+            />
+            <span>Instant access</span>
+            <span
+              className={`h-[3px] w-[3px] rounded-full ${darkMode ? 'bg-[#4C5A4D]' : 'bg-[#d4c4a8]'}`}
+            />
+            <span>Cancel anytime</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }
