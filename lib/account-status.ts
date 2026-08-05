@@ -18,13 +18,21 @@ interface PersistedState {
 const STORAGE_KEY = 'al_account_state_v1';
 
 function load(): PersistedState {
-  if (typeof window === 'undefined') return { status: {}, pinned: {} };
+  const empty: PersistedState = { status: {}, pinned: {} };
+  if (typeof window === 'undefined') return empty;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { status: {}, pinned: {} };
-    return JSON.parse(raw) as PersistedState;
+    if (!raw) return empty;
+    const parsed = JSON.parse(raw) as Partial<PersistedState> | null;
+    // Normalize legacy/partial shapes: callers do `state.status[slug] = …`,
+    // so both maps must always be real objects or that assignment throws
+    // ("Cannot set properties of undefined") and takes the whole click with it.
+    return {
+      status: parsed && typeof parsed.status === 'object' && parsed.status ? parsed.status : {},
+      pinned: parsed && typeof parsed.pinned === 'object' && parsed.pinned ? parsed.pinned : {},
+    };
   } catch {
-    return { status: {}, pinned: {} };
+    return empty;
   }
 }
 

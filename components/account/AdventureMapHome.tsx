@@ -462,32 +462,39 @@ export default function AdventureMapHome({
     if (!nextSlug || busy) return;
     const slug = nextSlug;
     setBusy(true);
-    removeItem(slug, cid); // no-op for an engine pick (not on the plan queue)
-    removeItem(slug, FAMILY_TARGET); // clear it if this was a manual family pick
-    markDoneStatus(slug);
-    // family trail: every explorer did it together and earns a find; individual: just this kid
-    const recipients = family
-      ? children.map((kd, ki) => ({ id: kd.id ?? childLabel(kd, ki), name: childLabel(kd, ki) }))
-      : [{ id: cid, name: label }];
-    recipients.forEach((r) => recordCompletion(slug, r.id));
-    clearPassed(engineScope); // finishing one lets earlier swap-aways resurface later
-    setPackByKid((prev) => {
-      const out = { ...prev };
-      recipients.forEach((r) => { out[r.id] = recomputePack(r.id); });
-      return out;
-    });
-    setItems(loadWeek());
-    setRev((r) => r + 1);
-    // reveal the fresh find for every explorer who just did it, not only the
-    // one selected in the trail card
-    const revealed: NewFind[] = [];
-    recipients.forEach((r) => {
-      const rp = recomputePack(r.id);
-      const g = rp[rp.length - 1];
-      if (g) revealed.push({ kidId: r.id, name: r.name, avatar: avatars[r.id] ?? null, gear: g });
-    });
-    if (revealed.length) setFinds(revealed);
-    setBusy(false);
+    try {
+      removeItem(slug, cid); // no-op for an engine pick (not on the plan queue)
+      removeItem(slug, FAMILY_TARGET); // clear it if this was a manual family pick
+      markDoneStatus(slug);
+      // family trail: every explorer did it together and earns a find; individual: just this kid
+      const recipients = family
+        ? children.map((kd, ki) => ({ id: kd.id ?? childLabel(kd, ki), name: childLabel(kd, ki) }))
+        : [{ id: cid, name: label }];
+      recipients.forEach((r) => recordCompletion(slug, r.id));
+      clearPassed(engineScope); // finishing one lets earlier swap-aways resurface later
+      setPackByKid((prev) => {
+        const out = { ...prev };
+        recipients.forEach((r) => { out[r.id] = recomputePack(r.id); });
+        return out;
+      });
+      setItems(loadWeek());
+      setRev((r) => r + 1);
+      // reveal the fresh find for every explorer who just did it, not only the
+      // one selected in the trail card
+      const revealed: NewFind[] = [];
+      recipients.forEach((r) => {
+        const rp = recomputePack(r.id);
+        const g = rp[rp.length - 1];
+        if (g) revealed.push({ kidId: r.id, name: r.name, avatar: avatars[r.id] ?? null, gear: g });
+      });
+      if (revealed.length) setFinds(revealed);
+    } catch (err) {
+      // Never let one bad helper strand the button disabled (busy) or swallow
+      // the click silently — surface it and always release busy in finally.
+      console.error('[adventure-map] "We reached it" failed:', err);
+    } finally {
+      setBusy(false);
+    }
   }
 
   // ─── plan management, folded into the explorer pop-up (no separate page) ───
