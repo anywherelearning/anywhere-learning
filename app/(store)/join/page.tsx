@@ -376,11 +376,10 @@ export default async function JoinPage({
 
               <p className="mt-5 max-w-[540px] text-[20px] leading-relaxed text-gray-500">
                 A guided trail of real-world activities that teach the life
-                skills school doesn't: cooking, budgeting, self-regulation,
-                problem-solving, real-world math, and more. We hand you the next
-                one; you just do it together. From a teacher who left the
-                classroom to get her own kids ready for life. Just{' '}
-                {m.priceMonth}, billed yearly.
+                skills school skips: cooking, budgeting, problem-solving, and
+                more. We hand you the next one; you just do it together. From a
+                teacher who left the classroom to get her own kids ready for
+                life. Just {m.priceMonth}, billed yearly.
               </p>
 
               <div className="mt-6">
@@ -489,33 +488,24 @@ export default async function JoinPage({
               and less life-prepared than any generation before.
             </p>
             <p className="mt-8 text-[16.5px] leading-relaxed text-gray-500">
-              It's not the fault of the kids or the parents. It's the shape of
-              modern childhood: scheduled, screened, optimized for tests that
-              don't measure whether a twelve-year-old can scramble an egg or talk
-              to a stranger at a register.
-            </p>
-            <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              A generation ago, kids learned this{' '}
+              It's not the kids or the parents. It's the shape of modern
+              childhood: scheduled, screened, optimized for tests that don't
+              measure whether a twelve-year-old can scramble an egg or talk to a
+              stranger at a register. A generation ago kids learned this{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 by accident.
               </em>{' '}
-              They walked to the corner store with a wrinkled five-dollar bill,
-              got bored enough to invent things, and held the wrench while a
-              parent fixed the sink.
+              Today it's engineered out of the day.
             </p>
             <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              Today that's engineered out of the day, and it shows:{' '}
+              And it shows:{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 only 8% of hiring managers say Gen Z is prepared for the job.
               </em>{' '}
-              The biggest gap isn't technical skill. It's communication,
-              problem-solving, and working with other people, the stuff built
-              through practice, not screens or textbooks.
-            </p>
-            <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              This isn't a school problem or a homeschool problem. It's a
-              childhood-in-2026 problem, and it's the one Anywhere Learning was
-              built to close.
+              The gap isn't technical skill, it's communication, problem-solving,
+              and working with people, built through practice, not screens. A
+              childhood-in-2026 problem, and the one Anywhere Learning was built
+              to close.
             </p>
             <p className="mt-5 text-[12.5px] leading-relaxed text-gray-400">
               Sources: Criteria Hiring Report, Education Endowment Foundation,
@@ -556,11 +546,8 @@ export default async function JoinPage({
                 <em className="font-display not-italic text-forest">real life needs.</em>
               </h2>
               <p className="mt-4 text-[18px] leading-relaxed text-gray-500">
-                Your family's trail winds through every area below, so kids
-                budget a grocery run, plan a Saturday on transit, finish hard
-                puzzles, and trade rainy afternoons for something better than a
-                screen. You never assemble a curriculum. We plot the route; you
-                do the next thing together.
+                Your trail winds through every area below. You never assemble a
+                curriculum. We plot the route; you do the next thing together.
               </p>
             </div>
 
@@ -619,21 +606,9 @@ export default async function JoinPage({
                 Every activity comes in{' '}
                 <b className="not-italic font-medium text-forest-dark">
                   three levels
-                </b>{' '}
-                :{' '}
-                <b className="not-italic font-medium text-forest-dark">
-                  Explore
-                </b>{' '}
-                for getting started,{' '}
-                <b className="not-italic font-medium text-forest-dark">
-                  Develop
-                </b>{' '}
-                for building confidence,{' '}
-                <b className="not-italic font-medium text-forest-dark">
-                  Extend
-                </b>{' '}
-                for going deeper. Bring siblings to the same kitchen counter
-                without anyone feeling overwhelmed or under-challenged.
+                </b>
+                , so siblings work at the same counter without anyone feeling
+                overwhelmed or under-challenged.
               </p>
               <div className="flex gap-2">
                 {['Explore', 'Develop', 'Extend'].map((level) => (
@@ -706,9 +681,9 @@ export default async function JoinPage({
             </div>
 
             <p className="mx-auto mt-10 max-w-[720px] text-center text-[16.5px] leading-relaxed text-gray-500">
-              Fill a stretch of trail and it opens into a new region. Every month
-              brings fresh seasonal picks and one simple family challenge. It
-              keeps going, so you never stare at a blank week again.
+              Fill a stretch of trail and it opens a new region, with fresh
+              seasonal picks and a family challenge each month. You never stare
+              at a blank week again.
             </p>
             <TrailRule />
           </div>
@@ -892,27 +867,22 @@ export default async function JoinPage({
               </em>
             </p>
             <p className="mt-8 text-[16.5px] leading-relaxed text-gray-500">
-              It's a regular afternoon. You open the app and it's already picked
-              today's stop, so you just walk her through the first step. Today
-              it's{' '}
+              A regular afternoon. You open the app and it's already picked
+              today's stop:{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 planning dinner.
-              </em>
+              </em>{' '}
+              She checks the fridge, writes the list, does the math at the store.
+              You're there if she gets stuck, but she's the one figuring it out.
+              Back home, she reads the recipe and cooks.
             </p>
             <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              She checks the fridge, writes the list, does the math at the
-              store. You're there if she gets stuck, but she's the one figuring
-              it out. Back home, she reads the recipe and cooks. You help when
-              she asks. Dinner is fine.{' '}
               <em className="font-display italic text-forest-dark text-[18px]">
                 The point isn't dinner.
-              </em>
-            </p>
-            <p className="mt-3.5 text-[16.5px] leading-relaxed text-gray-500">
-              The point is: she did it. You guided her the first time. Next
-              month, she'll do it on her own. That's how life skills actually
-              stick. Not from a lecture, not from a worksheet. From doing real
-              things, with someone nearby who lets them try.
+              </em>{' '}
+              It's that she did it. You guided her the first time; next month
+              she'll do it on her own. That's how life skills stick, from doing
+              real things with someone nearby who lets them try.
             </p>
             <p className="mt-7">
               <em className="font-display text-[22px] italic text-forest-dark">
