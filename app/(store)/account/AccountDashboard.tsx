@@ -61,9 +61,14 @@ function areasOf(slug: string) {
     .map((s) => TERR.get(s))
     .filter((t): t is (typeof TERRITORIES)[number] => !!t);
 }
+// Sentinel for the travel-only worldschooling filter. It's a shop category,
+// not one of the 12 Skills-Map areas, so it can't clash with a territory slug.
+const WORLDSCHOOLING_FILTER = 'worldschooling';
+
 const TRACK_OPTIONS = [
   { value: '', label: 'All areas' },
   ...TERRITORIES.map((t) => ({ value: t.slug, label: t.name })),
+  { value: WORLDSCHOOLING_FILTER, label: 'Worldschooling · travel' },
 ];
 
 type LibFilter = 'all' | 'done' | 'todo' | 'saved';
@@ -196,7 +201,11 @@ export default function AccountDashboard({
       if (q && !a.title.toLowerCase().includes(q) && !a.excerpt.toLowerCase().includes(q)) {
         return false;
       }
-      if (trackFilter && !territoriesForSlug(a.slug).includes(trackFilter)) return false;
+      if (trackFilter === WORLDSCHOOLING_FILTER) {
+        if (a.category !== WORLDSCHOOLING_FILTER) return false;
+      } else if (trackFilter && !territoriesForSlug(a.slug).includes(trackFilter)) {
+        return false;
+      }
       if (!ageMatches(a.ageRange, ageFilter)) return false;
       if (statusFilter === 'done' && !doneSet.has(a.slug)) return false;
       if (statusFilter === 'todo' && doneSet.has(a.slug)) return false;
@@ -503,6 +512,31 @@ export default function AccountDashboard({
                   </option>
                 ))}
               </select>
+
+              {/* Travel-only worldschooling: opt-in, so it's surfaced as its own
+                  visible chip (never in the automatic trail rotation). One tap
+                  pulls up the set to hand-add when a trip is on. */}
+              <button
+                type="button"
+                onClick={() =>
+                  setTrackFilter((v) => (v === WORLDSCHOOLING_FILTER ? '' : WORLDSCHOOLING_FILTER))
+                }
+                aria-pressed={trackFilter === WORLDSCHOOLING_FILTER}
+                title="Travel-based activities. Add these when you're on the road."
+                className="inline-flex items-center gap-1.5 rounded-full border py-1.5 pl-3 pr-3.5 font-body text-[13px] font-medium cursor-pointer transition-colors"
+                style={
+                  trackFilter === WORLDSCHOOLING_FILTER
+                    ? { background: '#8A8470', color: '#faf9f6', borderColor: '#8A8470' }
+                    : { background: 'var(--am-paper)', color: '#5A5240', borderColor: 'rgba(58,44,23,0.16)' }
+                }
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18" />
+                  <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z" />
+                </svg>
+                Worldschooling
+              </button>
             </div>
 
             {/* Row 2: search, under the filters */}
