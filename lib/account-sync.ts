@@ -12,6 +12,7 @@ const KEYS = {
   status: 'al_account_state_v1',
   onboarded: 'al_onboarded_v1',
   roadmap: 'al_roadmap_v1',
+  tourSeen: 'al_tour_seen_v1',
 } as const;
 
 export type AccountState = Partial<Record<keyof typeof KEYS, unknown>>;

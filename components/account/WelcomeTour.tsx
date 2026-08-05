@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { notifyLocalChanged } from '@/lib/account-sync';
 
 const SEEN_KEY = 'al_tour_seen_v1';
 
@@ -97,20 +98,43 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    try {
-      if (autoOpen && !localStorage.getItem(SEEN_KEY)) {
-        setI(0);
-        setOpen(true);
+    let opened = false;
+    const maybeOpen = () => {
+      if (opened) return;
+      opened = true;
+      try {
+        if (autoOpen && !localStorage.getItem(SEEN_KEY)) {
+          setI(0);
+          setOpen(true);
+        }
+      } catch {
+        /* ignore */
       }
-    } catch {
-      /* ignore */
+    };
+    // Only decide to auto-open AFTER the cross-device sync has applied the
+    // server state — otherwise a returning member (who saw the tour on another
+    // device or session) gets it again while their fresh localStorage is still
+    // empty. Fall back to a short timeout if the sync never signals (no Clerk).
+    const w = window as { __alSyncReady?: boolean };
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const onReady = () => maybeOpen();
+    if (w.__alSyncReady) {
+      maybeOpen();
+    } else {
+      window.addEventListener('al:sync-ready', onReady, { once: true });
+      timer = setTimeout(maybeOpen, 2500);
     }
+
     const onOpen = () => {
       setI(0);
       setOpen(true);
     };
     window.addEventListener('al:open-tour', onOpen);
-    return () => window.removeEventListener('al:open-tour', onOpen);
+    return () => {
+      window.removeEventListener('al:open-tour', onOpen);
+      window.removeEventListener('al:sync-ready', onReady);
+      if (timer) clearTimeout(timer);
+    };
   }, [autoOpen]);
 
   useEffect(() => {
@@ -134,6 +158,9 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
   function close() {
     try {
       localStorage.setItem(SEEN_KEY, '1');
+      // Push to the server so the tour stays dismissed across devices and
+      // fresh sessions, not just this browser's localStorage.
+      notifyLocalChanged();
     } catch {
       /* ignore */
     }
