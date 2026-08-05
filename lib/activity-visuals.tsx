@@ -148,6 +148,36 @@ export const FOCI: FocusOption[] = [
     reason: 'Gets everyone outside and moving, and resets the whole mood of the day.',
   },
   {
+    id: 'math',
+    label: 'Math and money',
+    categories: ['real-world-math', 'entrepreneurship'],
+    reason: 'Numbers that actually matter to them: a budget, a price, a plan, never a worksheet.',
+  },
+  {
+    id: 'problem',
+    label: 'Problem-solving',
+    categories: ['planning-problem-solving'],
+    reason: 'A puzzle to crack or a mess to sort out, the kind that builds real figure-it-out grit.',
+  },
+  {
+    id: 'feelings',
+    label: 'Feelings and friendships',
+    categories: ['emotional-social-skills'],
+    reason: 'The quiet inner skills, naming a big feeling or repairing after a fight, that run everything else.',
+  },
+  {
+    id: 'world',
+    label: 'The wider world',
+    categories: ['worldschooling'],
+    reason: 'A window into how other people live, so the world feels bigger than the backyard.',
+  },
+  {
+    id: 'tech',
+    label: 'Tech and AI',
+    categories: ['ai-literacy'],
+    reason: 'Screen time that builds real skill: spotting fakes, prompting AI, thinking like a maker.',
+  },
+  {
     id: 'surprise',
     label: 'Surprise us',
     categories: [],
