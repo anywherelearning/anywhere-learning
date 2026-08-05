@@ -86,18 +86,18 @@ function TrailRule() {
 // worldschooling, outdoor/nature) are woven into the descriptions so we keep
 // the SEO value the old topic categories carried.
 const AREA_COPY: { slug: string; desc: string; ages: string }[] = [
-  { slug: 'math', desc: 'Budgeting a grocery run, planning a meal, running a garage sale, tracking savings. Math that lives outside the workbook.', ages: '6–14' },
-  { slug: 'life-skills', desc: 'Cooking a meal, running errands, and real kid-sized entrepreneurship: building a brand, pricing a product, pitching an idea. The stuff school skips.', ages: '6–14' },
-  { slug: 'critical-thinking', desc: 'Planning a road trip, redesigning something broken, packing like a pro, solving a mystery. Figuring things out before asking.', ages: '6–14' },
-  { slug: 'creativity', desc: 'Building a Rube Goldberg machine, inventing a sport, designing a theme park, making a mini movie. Not crafts. Real making.', ages: '6–14' },
-  { slug: 'ai-digital', desc: 'Spotting deepfakes, prompting AI like a coach, mapping a digital footprint, catching hallucinations. Smart kids, smarter tech habits.', ages: '9–14' },
-  { slug: 'communication', desc: 'Interviewing a neighbour, running a debate night, pitching an idea, ordering for the table. Speaking up and being understood.', ages: '6–14' },
-  { slug: 'physical', desc: 'Seasonal outdoor packs, nature journals, land art, backyard STEM. Four seasons of real outdoor and nature learning.', ages: '6–14' },
-  { slug: 'citizenship', desc: 'Giving back to the neighbourhood, comparing everyday life across cultures, interviewing locals. Worldschooling and good-human skills, wherever you are.', ages: '6–14' },
-  { slug: 'writing', desc: 'Writing a real review, a letter that gets sent, a family newsletter, a mini magazine. Words that go somewhere.', ages: '6–14' },
-  { slug: 'emotional', desc: 'Building a calm-down toolkit, naming big feelings, sitting with boredom, repairing after a fight. The inner skills that run everything else.', ages: '6–14' },
-  { slug: 'self-management', desc: 'Setting a goal and following through, managing time, starting the hard thing, finishing what they begin. The focus and follow-through muscles.', ages: '6–14' },
-  { slug: 'reading-media', desc: 'Reading for meaning, telling a real source from a fake one, seeing how media tries to pull them. Making sense of a noisy world.', ages: '6–14' },
+  { slug: 'math', desc: 'Budgeting a grocery run, planning a meal, tracking savings. Math that lives outside the workbook.', ages: '6–14' },
+  { slug: 'life-skills', desc: 'Cooking, errands, and kid-sized entrepreneurship: building a brand, pricing a product, pitching an idea. The stuff school skips.', ages: '6–14' },
+  { slug: 'critical-thinking', desc: 'Planning a road trip, redesigning something broken, solving a mystery. Figuring things out before asking.', ages: '6–14' },
+  { slug: 'creativity', desc: 'Building a Rube Goldberg machine, inventing a sport, making a mini movie. Not crafts. Real making.', ages: '6–14' },
+  { slug: 'ai-digital', desc: 'Spotting deepfakes, prompting AI like a coach, catching hallucinations. Smart kids, smarter tech habits.', ages: '9–14' },
+  { slug: 'communication', desc: 'Interviewing a neighbour, running a debate night, ordering for the table. Speaking up and being understood.', ages: '6–14' },
+  { slug: 'physical', desc: 'Seasonal outdoor packs, nature journals, backyard STEM. Four seasons of outdoor and nature learning.', ages: '6–14' },
+  { slug: 'citizenship', desc: 'Giving back locally, comparing life across cultures, interviewing locals. Worldschooling and good-human skills.', ages: '6–14' },
+  { slug: 'writing', desc: 'A real review, a letter that gets sent, a mini magazine. Words that go somewhere.', ages: '6–14' },
+  { slug: 'emotional', desc: 'Naming big feelings, sitting with boredom, repairing after a fight. The inner skills that run everything else.', ages: '6–14' },
+  { slug: 'self-management', desc: 'Setting a goal, managing time, finishing what they start. The focus and follow-through muscles.', ages: '6–14' },
+  { slug: 'reading-media', desc: 'Reading for meaning, telling a real source from a fake one. Making sense of a noisy world.', ages: '6–14' },
 ];
 
 // Real per-area counts, computed the same way the member Library does: an
@@ -709,9 +709,8 @@ export default async function JoinPage({
 
             <div className="mx-auto mt-4 max-w-[580px] text-left text-[16.5px] leading-[1.7] text-gray-500">
               <p className="mb-3.5">
-                I'm launching Anywhere Learning Membership the way I wish more
-                small businesses would: by giving the people who show up first
-                something{' '}
+                I'm launching this the way I wish more small businesses would: by
+                giving the people who show up first something{' '}
                 <em className="font-display italic text-[17.5px] text-[#7A3D24]">
                   real,
                 </em>{' '}
@@ -720,35 +719,19 @@ export default async function JoinPage({
               <p className="mb-3.5">
                 The first {FOUNDER_CAP} members pay{' '}
                 <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  ${MEMBERSHIP_PRICE_USD} a year.
+                  ${MEMBERSHIP_PRICE_USD} a year, locked in for life.
                 </em>{' '}
-                After that, the price goes to ${POST_FOUNDER_PRICE_USD}.
+                You&apos;ll renew at ${MEMBERSHIP_PRICE_USD} forever, even when everyone else is
+                paying ${POST_FOUNDER_PRICE_USD}.
               </p>
               <p className="mb-3.5">
-                If you join as one of the first {FOUNDER_CAP}, your rate is{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  locked in for life.
-                </em>{' '}
-                You&apos;ll renew at ${MEMBERSHIP_PRICE_USD} every year, forever, even when new members are
-                paying ${POST_FOUNDER_PRICE_USD} or more.
+                Why ${MEMBERSHIP_PRICE_USD}? I&apos;d rather have {FOUNDER_CAP} families using this and
+                telling me what's working than charge full price to a few. Early
+                members shape what this becomes.
               </p>
               <p className="mb-3.5">
-                Why ${MEMBERSHIP_PRICE_USD}? Because I&apos;d rather have {FOUNDER_CAP} families using this and
-                telling me what's working than charge full price to a smaller
-                group. Early members shape what this becomes.
-              </p>
-              <p className="mb-3.5">
-                And on the number itself: it lands about where a family museum
-                membership does. The difference is you use this one{' '}
-                <em className="font-display italic text-[17.5px] text-[#7A3D24]">
-                  all year
-                </em>
-                , not twice.
-              </p>
-              <p className="mb-3.5">
-                Why cap it at 100? Because when the 100th member joins, the
-                price goes up and stays up. No "limited time offer" that runs
-                forever.
+                And why cap it at 100? When the 100th member joins, the price
+                goes up and stays up. No "limited time offer" that runs forever.
               </p>
               <p className="font-display text-xl italic text-gray-900">
                 xo,
