@@ -137,6 +137,25 @@ export default async function HomePage() {
               same geometry, palette and TREES coordinates), minus the chrome and
               the activity card. It is a copy, not a live import, so if that
               scene changes the SVG has to be regenerated to match. */}
+          {/* Mobile: a band across the bottom, behind the card, where the hero
+              copy has already ended. A fixed 340px keeps the crop close to the
+              illustration's own 8:5 ratio; stretching it full-height zoomed a
+              1600-wide scene into an unreadable slice on a 375px screen. The
+              veil never drops below 0.42 here because the caption sits on top
+              of it. */}
+          <div
+            className="absolute inset-x-0 bottom-0 z-0 h-[340px] bg-cover bg-center opacity-[0.8] lg:hidden"
+            style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 z-[1] h-[340px] lg:hidden"
+            style={{
+              background:
+                'linear-gradient(180deg, #faf9f6 0%, rgba(250,249,246,0.8) 22%, rgba(250,249,246,0.58) 48%, rgba(250,249,246,0.46) 75%, rgba(250,249,246,0.42) 100%)',
+            }}
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-y-0 right-0 z-0 hidden w-[56%] bg-[#e8eee4] bg-cover bg-[left_center] opacity-[0.85] lg:block"
             style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
@@ -339,21 +358,25 @@ export default async function HomePage() {
                 {/* Eyebrow above the row so the link can sit on the headline's
                     own line, top-aligned, rather than dropping to the baseline
                     of the paragraph. */}
-                <div className="mt-4 flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-10">
-                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] font-bold leading-[1.06] text-forest-dark">
+                {/* Grid only from md up. In DOM order the link comes last, so on
+                    a phone it follows the description instead of wedging between
+                    the headline and its own copy; on desktop the grid lifts it
+                    back up to sit beside the headline. */}
+                <div className="mt-4 md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-x-10">
+                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] font-bold leading-[1.06] text-forest-dark md:col-start-1 md:row-start-1">
                     120+ activities. Every topic.
                   </h2>
+                  <p className="mt-3 text-lg leading-[1.65] text-gray-600 md:col-start-1 md:row-start-2">
+                    Nine topics, twelve skill areas, and three levels in every guide, so a
+                    first-grader and a middle-schooler work on the same thing at the same table.
+                  </p>
                   <Link
                     href="/shop"
-                    className="whitespace-nowrap text-base font-semibold text-forest transition-colors hover:text-forest-dark md:mt-2"
+                    className="mt-4 inline-block whitespace-nowrap text-base font-semibold text-forest transition-colors hover:text-forest-dark md:col-start-2 md:row-start-1 md:mt-2"
                   >
                     Browse all activities &rarr;
                   </Link>
                 </div>
-                <p className="mt-3 text-lg leading-[1.65] text-gray-600">
-                  Nine topics, twelve skill areas, and three levels in every guide, so a
-                  first-grader and a middle-schooler work on the same thing at the same table.
-                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>

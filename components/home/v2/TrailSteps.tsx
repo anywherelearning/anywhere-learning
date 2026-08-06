@@ -5,12 +5,16 @@ import { TRAIL_STEPS } from '@/lib/home-showcase';
 
 /**
  * "It's a trail, not a to-do list" — three steps on the left, a screenshot of
- * that step on the right. Picking a step expands its body copy and swaps the
- * panel image.
+ * that step on the right.
  *
- * The panel is a CSS background rather than <Image> so a screenshot that hasn't
- * been dropped into /public/product-shots yet degrades to a soft cream panel
- * instead of breaking the build.
+ * Two layouts, because the desktop one breaks down on a phone: there the side
+ * panel ends up hundreds of pixels below the picker, so tapping a step changes
+ * an image you cannot see. On small screens the picture moves inside the open
+ * step instead, directly under its body copy.
+ *
+ * Pictures are CSS backgrounds with `contain`, so a screenshot that hasn't been
+ * dropped into /public/product-shots yet degrades to a soft cream panel rather
+ * than breaking the build.
  */
 export default function TrailSteps() {
   const [step, setStep] = useState(0);
@@ -22,46 +26,50 @@ export default function TrailSteps() {
         {TRAIL_STEPS.map((st, i) => {
           const on = step === i;
           return (
-            <button
+            <div
               key={st.n}
-              type="button"
-              onClick={() => setStep(i)}
-              aria-expanded={on}
-              className={`flex gap-4 rounded-[20px] border p-6 text-left transition-all duration-300 ${
+              className={`rounded-[20px] border transition-all duration-300 ${
                 on
                   ? 'border-forest/35 bg-white shadow-[0_12px_28px_-8px_rgba(88,129,87,0.18)]'
-                  : 'border-gray-200/70 bg-white/45 hover:bg-white/70'
+                  : 'border-gray-200/70 bg-white/45'
               }`}
             >
-              <span
-                className={`inline-flex h-[34px] w-[34px] flex-shrink-0 items-center justify-center rounded-full text-[14.5px] font-semibold transition-all duration-300 ${
-                  on ? 'bg-forest text-cream' : 'bg-forest/[0.14] text-forest'
-                }`}
+              <button
+                type="button"
+                onClick={() => setStep(i)}
+                aria-expanded={on}
+                aria-controls={`trail-step-${i}`}
+                className="flex w-full gap-4 p-6 text-left"
               >
-                {st.n}
-              </span>
-              <span className="block">
-                <span className="mb-1.5 block text-xl font-semibold text-gray-900">
-                  {st.title}
-                </span>
                 <span
-                  className={`block overflow-hidden text-[15.5px] leading-[1.6] transition-all duration-300 ${
-                    on ? 'max-h-[160px] text-gray-600' : 'max-h-0 text-gray-400'
+                  className={`inline-flex h-[34px] w-[34px] flex-shrink-0 items-center justify-center rounded-full text-[14.5px] font-semibold transition-all duration-300 ${
+                    on ? 'bg-forest text-cream' : 'bg-forest/[0.14] text-forest'
                   }`}
                 >
-                  {st.body}
+                  {st.n}
                 </span>
-              </span>
-            </button>
+                <span className="block text-xl font-semibold text-gray-900">{st.title}</span>
+              </button>
+
+              <div id={`trail-step-${i}`} hidden={!on} className="px-6 pb-6">
+                <p className="text-[15.5px] leading-[1.6] text-gray-600">{st.body}</p>
+                {/* Phones only: the picture belongs with the step it describes,
+                    since the side panel is off-screen at this width. */}
+                <div
+                  role="img"
+                  aria-label={st.alt}
+                  className="mt-4 aspect-[5/3] w-full rounded-2xl border border-gray-200/70 bg-[#f7f5f0] bg-contain bg-center bg-no-repeat lg:hidden"
+                  style={{ backgroundImage: `url('${st.img}')` }}
+                />
+              </div>
+            </div>
           );
         })}
       </div>
 
-      <div>
-        {/* `contain`, not `cover`: these are real member-zone screenshots, and
-            cover was slicing ~45px off each side, cutting into the trail title
-            and the activity card. The 5/3 box matches the captures closely
-            enough that there is almost no letterbox. */}
+      {/* Desktop side panel. `contain`, not `cover`: these are real member-zone
+          screenshots and cover was slicing ~45px off each side. */}
+      <div className="hidden lg:block">
         <div
           role="img"
           aria-label={active.alt}

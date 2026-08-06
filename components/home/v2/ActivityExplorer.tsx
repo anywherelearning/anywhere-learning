@@ -19,7 +19,9 @@ export default function ActivityExplorer() {
 
   return (
     <>
-      <div className="mb-7 flex flex-wrap gap-[9px]">
+      {/* One swipeable row on phones. Wrapped, nine chips stacked into seven
+          rows and pushed every activity below the fold. */}
+      <div className="scrollbar-hide -mx-6 mb-7 flex gap-[9px] overflow-x-auto px-6 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
         {SHOP_CATEGORIES.map((t) => {
           const on = topic === t;
           return (
@@ -28,7 +30,7 @@ export default function ActivityExplorer() {
               type="button"
               onClick={() => setTopic(t)}
               aria-pressed={on}
-              className={`rounded-full border px-[18px] py-2.5 text-[14.5px] transition-all duration-200 ${
+              className={`shrink-0 whitespace-nowrap rounded-full border px-[18px] py-2.5 text-[14.5px] transition-all duration-200 ${
                 on
                   ? 'border-forest bg-forest font-semibold text-cream'
                   : 'border-gray-200/90 bg-white font-medium text-gray-600 hover:border-forest/40'
