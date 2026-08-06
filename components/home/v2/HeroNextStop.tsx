@@ -8,10 +8,10 @@ import { SHOWCASE_ACTIVITIES } from '@/lib/home-showcase';
  * The hero's "Next stop" card: a faithful copy of the real card members see on
  * their trail map, sitting on top of the faded trail illustration behind it.
  *
- * Deliberately matches the member UI rather than inventing a marketing card, so
- * the homepage shows the actual product. That means the member world's fonts
- * (Bricolage for the title, JetBrains Mono for the caps labels), the frosted
- * panel, and the same three actions.
+ * Deliberately mirrors the member UI's layout and actions rather than inventing
+ * a marketing card, so the homepage shows the actual product. Typography stays
+ * on the marketing site's DM Sans though: the member world's Bricolage and
+ * JetBrains Mono read as a foreign page element next to every other section.
  *
  *   Open the guide  → the real activity page
  *   We reached it   → the New Finds celebration, matching the real one
@@ -68,10 +68,7 @@ export default function HeroNextStop() {
         <div className="relative overflow-hidden rounded-[22px] border border-white/50 bg-[rgba(247,245,238,0.86)] p-7 shadow-[0_28px_60px_-14px_rgba(45,58,46,0.32)] backdrop-blur-md max-md:p-6">
           {/* NEXT STOP · TOGETHER, with the live dot on the right */}
           <div className="mb-3 flex items-center justify-between">
-            <span
-              className="text-[11.5px] uppercase tracking-[0.16em] text-gold-dark"
-              style={{ fontFamily: 'var(--font-catalog)' }}
-            >
+            <span className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
               Next stop &middot; Together
             </span>
             <span className="h-2 w-2 rounded-full bg-[#c4674a]" aria-hidden="true" />
@@ -79,14 +76,12 @@ export default function HeroNextStop() {
 
           <h2
             className="mb-3 text-[30px] font-bold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
-            style={{ fontFamily: 'var(--font-plate)' }}
           >
             {a.title}
           </h2>
 
           <p
-            className="mb-2.5 text-[11.5px] uppercase tracking-[0.14em] text-gold-dark"
-            style={{ fontFamily: 'var(--font-catalog)' }}
+            className="mb-2.5 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
           >
             {a.category} &middot; {a.time}
           </p>
@@ -110,7 +105,6 @@ export default function HeroNextStop() {
 
           <div
             className="flex items-center justify-center gap-3 text-[13px] text-[#6b675e]"
-            style={{ fontFamily: 'var(--font-catalog)' }}
           >
             <button
               type="button"
@@ -136,8 +130,7 @@ export default function HeroNextStop() {
               role="status"
             >
               <span
-                className="rounded-full bg-[#c4674a] px-[18px] py-2 text-[11.5px] uppercase tracking-[0.16em] text-white"
-                style={{ fontFamily: 'var(--font-catalog)' }}
+                className="rounded-full bg-[#c4674a] px-[18px] py-2 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-white"
               >
                 &#10022; New finds!
               </span>
@@ -155,8 +148,7 @@ export default function HeroNextStop() {
                   >
                     <span>
                       <span
-                        className="block text-[10.5px] uppercase tracking-[0.14em] text-gold-dark"
-                        style={{ fontFamily: 'var(--font-catalog)' }}
+                        className="block text-[10.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
                       >
                         {g.who}
                       </span>
@@ -165,8 +157,7 @@ export default function HeroNextStop() {
                       </span>
                     </span>
                     <span
-                      className="text-[10.5px] uppercase tracking-[0.1em] text-[#c4674a]"
-                      style={{ fontFamily: 'var(--font-catalog)' }}
+                      className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-[#c4674a]"
                     >
                       Big gear
                     </span>
