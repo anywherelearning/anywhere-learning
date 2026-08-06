@@ -2,10 +2,14 @@ import { ImageResponse } from 'next/og';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-// Share image for /tools/name-tracing (og:image + twitter:image).
-export const alt = 'Free Name Tracing Worksheet Generator by Anywhere Learning.';
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
+/**
+ * Shared share-image template for the /tools generators: text panel on the
+ * left, a mini worksheet mock on the right. Each tool's opengraph-image.tsx
+ * supplies its own title, subtitle, and sample rows.
+ */
+
+export const OG_SIZE = { width: 1200, height: 630 };
+export const OG_CONTENT_TYPE = 'image/png';
 
 const CREAM = '#faf9f6';
 const FOREST = '#588157';
@@ -16,9 +20,31 @@ const TRACE = '#c8c6c0';
 const fontDir = join(process.cwd(), 'public/fonts');
 const dmSans = readFileSync(join(fontDir, 'DMSans-400.ttf'));
 const dmSansBold = readFileSync(join(fontDir, 'DMSans-700.ttf'));
-const eduFont = readFileSync(join(process.cwd(), 'public/fonts/tools/EduAUVICWANTPre.ttf'));
 
-export default function Image() {
+/** Worksheet fonts, keyed by the LetterStyle they correspond to. */
+const WORKSHEET_FONTS = {
+  print: { name: 'Andika', file: 'tools/Andika-Regular.ttf' },
+  'pre-cursive': { name: 'Edu AU VIC WA NT Pre', file: 'tools/EduAUVICWANTPre.ttf' },
+  cursive: { name: 'Learning Curve', file: 'tools/LearningCurve.ttf' },
+} as const;
+
+export function toolOgImage({
+  title,
+  subtitle,
+  sampleRows,
+  style = 'pre-cursive',
+  sampleFontSize = 64,
+}: {
+  title: string;
+  subtitle: string;
+  /** Up to 3 short lines shown in the worksheet mock. */
+  sampleRows: string[];
+  style?: keyof typeof WORKSHEET_FONTS;
+  sampleFontSize?: number;
+}) {
+  const worksheetFont = WORKSHEET_FONTS[style];
+  const fontData = readFileSync(join(fontDir, worksheetFont.file));
+
   return new ImageResponse(
     (
       <div
@@ -61,10 +87,10 @@ export default function Image() {
               color: INK,
             }}
           >
-            Name Tracing Worksheet Generator
+            {title}
           </div>
           <div style={{ marginTop: 24, fontSize: 28, color: '#5b6357', lineHeight: 1.4 }}>
-            Type any name. Print in seconds.
+            {subtitle}
           </div>
           <div style={{ marginTop: 40, fontSize: 24, fontWeight: 700, color: FOREST }}>
             anywherelearning.co/tools
@@ -91,22 +117,23 @@ export default function Image() {
               boxShadow: '0 8px 30px rgba(47,58,44,0.18)',
             }}
           >
-            {['Maple', 'Maple', 'Maple'].map((word, i) => (
+            {sampleRows.map((word, i) => (
               <div
                 key={i}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  marginBottom: i === 2 ? 0 : 30,
+                  marginBottom: i === sampleRows.length - 1 ? 0 : 30,
                   borderTop: '2px solid #9b9891',
                   borderBottom: '3px solid #9b9891',
                   padding: '4px 8px 0',
+                  minHeight: 40,
                 }}
               >
                 <div
                   style={{
-                    fontFamily: 'Edu AU VIC WA NT Pre',
-                    fontSize: 64,
+                    fontFamily: worksheetFont.name,
+                    fontSize: sampleFontSize,
                     lineHeight: 1.15,
                     color: i === 0 ? INK : TRACE,
                   }}
@@ -120,11 +147,11 @@ export default function Image() {
       </div>
     ),
     {
-      ...size,
+      ...OG_SIZE,
       fonts: [
         { name: 'DM Sans', data: dmSans, weight: 400, style: 'normal' },
         { name: 'DM Sans', data: dmSansBold, weight: 700, style: 'normal' },
-        { name: 'Edu AU VIC WA NT Pre', data: eduFont, weight: 400, style: 'normal' },
+        { name: worksheetFont.name, data: fontData, weight: 400, style: 'normal' },
       ],
     },
   );

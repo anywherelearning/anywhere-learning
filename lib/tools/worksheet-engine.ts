@@ -21,8 +21,17 @@ export const PAGE = {
 
 export type ToolId = 'name-tracing' | 'handwriting' | 'sight-words' | 'spelling';
 
-export type LetterStyle = 'print' | 'pre-cursive';
+export type LetterStyle = 'print' | 'pre-cursive' | 'cursive';
 export type LetterSize = 'large' | 'medium' | 'small';
+
+/**
+ * Row layout per line entry:
+ * - 'trace': rowsPerLine tracing rows
+ * - 'trace-and-write': tracing rows followed by one empty freehand row
+ * - 'blank-test': one numbered empty row per word (parent reads the word
+ *   aloud, child writes it, the classic Friday spelling test)
+ */
+export type WorksheetFormat = 'trace' | 'trace-and-write' | 'blank-test';
 
 export interface WorksheetConfig {
   tool: ToolId;
@@ -38,6 +47,8 @@ export interface WorksheetConfig {
   modelFirst: boolean;
   /** Optional page title, e.g. the child's name on name-tracing sheets. */
   title?: string;
+  /** Row layout per line entry. Defaults to 'trace'. */
+  format?: WorksheetFormat;
 }
 
 // ─── Layout output ────────────────────────────────────────────────────
@@ -62,6 +73,8 @@ export interface WorksheetRow {
   xStart: number;
   xEnd: number;
   words: WorksheetWord[];
+  /** Small label left of the row, e.g. "1." on blank-test rows. */
+  label?: string;
 }
 
 export interface WorksheetPage {
@@ -88,7 +101,8 @@ const SIZE_PRESETS: Record<LetterSize, { rowHeight: number; fontSize: number; ga
  */
 const AVG_CHAR_WIDTH_EM: Record<LetterStyle, number> = {
   print: 0.52, // Andika
-  'pre-cursive': 0.5, // Edu QLD Beginner
+  'pre-cursive': 0.5, // Edu AU VIC WA NT Pre (Victorian pre-cursive)
+  cursive: 0.44, // Learning Curve (joined script runs narrow)
 };
 
 /** Gap between repeated copies of a word on the same row, in pt. */
@@ -119,36 +133,58 @@ export function layoutWorksheet(config: WorksheetConfig): WorksheetPage[] {
     y = PAGE.marginTop;
   };
 
-  for (const line of lines) {
-    for (let r = 0; r < config.rowsPerLine; r++) {
-      // Page break when the next row's baseline would cross the bottom margin.
-      if (y + preset.rowHeight > PAGE.height - PAGE.marginBottom) pushPage();
+  const format = config.format ?? 'trace';
 
-      const topline = y;
-      const baseline = y + preset.rowHeight;
-      const midline = config.showMidline ? y + preset.rowHeight * 0.5 : null;
+  const nextRowGeometry = () => {
+    // Page break when the next row's baseline would cross the bottom margin.
+    if (y + preset.rowHeight > PAGE.height - PAGE.marginBottom) pushPage();
+    const topline = y;
+    const baseline = y + preset.rowHeight;
+    const midline = config.showMidline ? y + preset.rowHeight * 0.5 : null;
+    y = baseline + preset.gap;
+    return { topline, midline, baseline };
+  };
 
-      const wordWidth = estimateWordWidth(line, preset.fontSize, config.letterStyle);
-      // Always render at least one copy, even if the word overflows the row.
+  lines.forEach((line, li) => {
+    if (format === 'blank-test') {
+      // One numbered empty row per word; the word itself never prints.
+      rows.push({ ...nextRowGeometry(), xStart, xEnd, words: [], label: `${li + 1}.` });
+    } else {
+      // Shrink long words so at least one copy always fits the row.
+      const rawWidth = estimateWordWidth(line, preset.fontSize, config.letterStyle);
+      const fontSize =
+        rawWidth > usableWidth
+          ? Math.max(14, preset.fontSize * (usableWidth / rawWidth))
+          : preset.fontSize;
+      const wordWidth = Math.min(rawWidth, usableWidth);
       const copies = Math.max(1, Math.floor((usableWidth + WORD_GAP) / (wordWidth + WORD_GAP)));
 
-      const words: WorksheetWord[] = [];
-      for (let c = 0; c < copies; c++) {
-        words.push({
-          text: line,
-          x: xStart + c * (wordWidth + WORD_GAP),
-          baseline,
-          solid: config.modelFirst && c === 0,
-          fontSize: preset.fontSize,
-        });
-      }
+      for (let r = 0; r < config.rowsPerLine; r++) {
+        const geometry = nextRowGeometry();
 
-      rows.push({ topline, midline, baseline, xStart, xEnd, words });
-      y = baseline + preset.gap;
+        const words: WorksheetWord[] = [];
+        for (let c = 0; c < copies; c++) {
+          words.push({
+            text: line,
+            x: xStart + c * (wordWidth + WORD_GAP),
+            baseline: geometry.baseline,
+            // When only one copy fits per row, the solid model takes the whole
+            // first row and every later row stays pale and traceable.
+            solid: config.modelFirst && c === 0 && (copies > 1 || r === 0),
+            fontSize,
+          });
+        }
+
+        rows.push({ ...geometry, xStart, xEnd, words });
+      }
+      if (format === 'trace-and-write') {
+        // Freehand row: same guides, no words.
+        rows.push({ ...nextRowGeometry(), xStart, xEnd, words: [] });
+      }
     }
     // Extra breathing room between word groups.
     y += preset.groupGap - preset.gap;
-  }
+  });
 
   pushPage();
   return pages;
@@ -173,5 +209,6 @@ export const WORKSHEET_FOOTER_TEXT = 'Meaningful Learning, Wherever You Are · a
 /** Font family names as registered in both the preview @font-face and jsPDF. */
 export const STYLE_FONTS: Record<LetterStyle, { family: string; file: string }> = {
   print: { family: 'Andika', file: '/fonts/tools/Andika-Regular.ttf' },
-  'pre-cursive': { family: 'Edu QLD Beginner', file: '/fonts/tools/EduQLDBeginner.ttf' },
+  'pre-cursive': { family: 'Edu AU VIC WA NT Pre', file: '/fonts/tools/EduAUVICWANTPre.ttf' },
+  cursive: { family: 'Learning Curve', file: '/fonts/tools/LearningCurve.ttf' },
 };

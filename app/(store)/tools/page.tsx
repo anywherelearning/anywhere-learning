@@ -28,21 +28,21 @@ const TOOLS = [
     name: 'Handwriting Practice Maker',
     description:
       'Turn any text into handwriting practice sheets: favorite quotes, copywork, silly sentences.',
-    live: false,
+    live: true,
   },
   {
     slug: 'sight-words',
     name: 'Sight Words Generator',
     description:
       'Built-in Dolch and Fry lists by grade, or your own words, as ready-to-print practice pages.',
-    live: false,
+    live: true,
   },
   {
     slug: 'spelling',
     name: 'Spelling List Maker',
     description:
       "Enter this week's spelling words and get trace, write, and test formats in one PDF.",
-    live: false,
+    live: true,
   },
 ];
 

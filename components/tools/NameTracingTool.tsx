@@ -22,11 +22,12 @@ export default function NameTracingTool({
   const [name, setName] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [options, setOptions] = useState<WorksheetOptions>({
-    letterStyle: 'pre-cursive',
+    letterStyle: 'print',
     letterSize: 'large',
     rowsPerLine: 5,
     showMidline: true,
     modelFirst: true,
+    format: 'trace',
     ...defaultOptions,
   });
 

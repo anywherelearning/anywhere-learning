@@ -1,6 +1,6 @@
 'use client';
 
-import type { LetterSize, LetterStyle } from '@/lib/tools/worksheet-engine';
+import type { LetterSize, LetterStyle, WorksheetFormat } from '@/lib/tools/worksheet-engine';
 
 /** Shared option controls used by every worksheet tool. */
 
@@ -49,25 +49,49 @@ export interface WorksheetOptions {
   rowsPerLine: number;
   showMidline: boolean;
   modelFirst: boolean;
+  format: WorksheetFormat;
 }
+
+const FORMAT_LABELS: Record<WorksheetFormat, string> = {
+  trace: 'Trace',
+  'trace-and-write': 'Trace, then write',
+  'blank-test': 'Blank test',
+};
 
 export default function WorksheetControls({
   options,
   onChange,
   maxRows = 8,
+  /** When more than one is given, a format toggle is shown. */
+  formats,
 }: {
   options: WorksheetOptions;
   onChange: (options: WorksheetOptions) => void;
   maxRows?: number;
+  formats?: WorksheetFormat[];
 }) {
+  // A blank test has no model word to trace, so the row and model controls
+  // would do nothing.
+  const isBlankTest = options.format === 'blank-test';
+
   return (
     <div className="space-y-5">
+      {formats && formats.length > 1 && (
+        <OptionGroup<WorksheetFormat>
+          label="Sheet format"
+          value={options.format}
+          options={formats.map((f) => ({ value: f, label: FORMAT_LABELS[f] }))}
+          onChange={(format) => onChange({ ...options, format })}
+        />
+      )}
+
       <OptionGroup<LetterStyle>
         label="Letter style"
         value={options.letterStyle}
         options={[
-          { value: 'pre-cursive', label: 'Beginner (pre-cursive)' },
           { value: 'print', label: 'Print' },
+          { value: 'pre-cursive', label: 'Pre-cursive' },
+          { value: 'cursive', label: 'Cursive' },
         ]}
         onChange={(letterStyle) => onChange({ ...options, letterStyle })}
       />
@@ -83,20 +107,25 @@ export default function WorksheetControls({
         onChange={(letterSize) => onChange({ ...options, letterSize })}
       />
 
-      <div>
-        <label htmlFor="rows-per-line" className="mb-1.5 block text-sm font-semibold text-forest-dark">
-          Practice rows: {options.rowsPerLine}
-        </label>
-        <input
-          id="rows-per-line"
-          type="range"
-          min={1}
-          max={maxRows}
-          value={options.rowsPerLine}
-          onChange={(e) => onChange({ ...options, rowsPerLine: Number(e.target.value) })}
-          className="w-full accent-forest"
-        />
-      </div>
+      {!isBlankTest && (
+        <div>
+          <label
+            htmlFor="rows-per-line"
+            className="mb-1.5 block text-sm font-semibold text-forest-dark"
+          >
+            Practice rows: {options.rowsPerLine}
+          </label>
+          <input
+            id="rows-per-line"
+            type="range"
+            min={1}
+            max={maxRows}
+            value={options.rowsPerLine}
+            onChange={(e) => onChange({ ...options, rowsPerLine: Number(e.target.value) })}
+            className="w-full accent-forest"
+          />
+        </div>
+      )}
 
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-700">
@@ -108,15 +137,17 @@ export default function WorksheetControls({
           />
           Dashed midline
         </label>
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-700">
-          <input
-            type="checkbox"
-            checked={options.modelFirst}
-            onChange={(e) => onChange({ ...options, modelFirst: e.target.checked })}
-            className="size-4 accent-forest"
-          />
-          Solid example first
-        </label>
+        {!isBlankTest && (
+          <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-700">
+            <input
+              type="checkbox"
+              checked={options.modelFirst}
+              onChange={(e) => onChange({ ...options, modelFirst: e.target.checked })}
+              className="size-4 accent-forest"
+            />
+            Solid example first
+          </label>
+        )}
       </div>
     </div>
   );

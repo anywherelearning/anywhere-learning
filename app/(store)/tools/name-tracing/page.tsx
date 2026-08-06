@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import NameTracingTool from '@/components/tools/NameTracingTool';
-import EmbedSnippet from '@/components/tools/EmbedSnippet';
+import { EmbedJumpLink, ToolFaqSection, ToolEmbedSection } from '@/components/tools/ToolSections';
 import { NAME_TRACING, faqPageLd, softwareApplicationLd } from '@/lib/tools/tool-seo';
 
 export const metadata: Metadata = {
@@ -45,6 +45,7 @@ export default function NameTracingPage() {
             <div className="mt-8">
               <NameTracingTool />
             </div>
+            <EmbedJumpLink />
           </div>
         </section>
 
@@ -113,10 +114,24 @@ export default function NameTracingPage() {
               <h3 className="font-display text-2xl text-forest-dark">Keep going</h3>
               <ul className="mt-3 space-y-2 text-gray-700">
                 <li>
-                  <Link href="/tools" className="font-semibold text-forest underline-offset-2 hover:underline">
-                    See all our free tools
+                  Ready for words and sentences?{' '}
+                  <Link
+                    href="/tools/handwriting"
+                    className="font-semibold text-forest underline-offset-2 hover:underline"
+                  >
+                    The handwriting generator
                   </Link>{' '}
-                  for handwriting, sight words, and spelling practice.
+                  takes any text you type.
+                </li>
+                <li>
+                  Starting to read?{' '}
+                  <Link
+                    href="/tools/sight-words"
+                    className="font-semibold text-forest underline-offset-2 hover:underline"
+                  >
+                    Sight words worksheets
+                  </Link>{' '}
+                  cover the full Dolch and Fry lists.
                 </li>
                 <li>
                   <Link href="/quiz" className="font-semibold text-forest underline-offset-2 hover:underline">
@@ -130,39 +145,8 @@ export default function NameTracingPage() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
-        <section className="py-14">
-          <div className="mx-auto max-w-3xl px-6">
-            <h2 className="font-display text-3xl text-forest-dark">
-              Name tracing questions, answered
-            </h2>
-            <dl className="mt-6 space-y-6">
-              {NAME_TRACING.faqs.map((faq) => (
-                <div key={faq.question} className="rounded-2xl border border-forest/10 bg-white p-6">
-                  <dt className="font-semibold text-forest-dark">{faq.question}</dt>
-                  <dd className="mt-2 text-gray-700">{faq.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
-
-        {/* ── Embed ── */}
-        <section className="border-t border-forest/10 bg-white py-14">
-          <div className="mx-auto max-w-3xl px-6">
-            <h2 className="font-display text-3xl text-forest-dark">
-              Embed this tool on your site
-            </h2>
-            <p className="mt-3 text-gray-600">
-              Run a homeschool blog or a parenting site? You&apos;re welcome to embed this
-              generator for your readers, free. Paste this snippet anywhere HTML is allowed.
-              A link back to us is appreciated.
-            </p>
-            <div className="mt-5">
-              <EmbedSnippet toolSlug="name-tracing" toolName="Name Tracing Worksheet Generator" />
-            </div>
-          </div>
-        </section>
+        <ToolFaqSection tool={NAME_TRACING} heading="Name tracing questions, answered" />
+        <ToolEmbedSection tool={NAME_TRACING} />
       </main>
     </>
   );

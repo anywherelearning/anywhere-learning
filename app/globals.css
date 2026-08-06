@@ -17,8 +17,8 @@
    exact same TTF files. Browsers only fetch these when a page actually
    uses the family, so the rest of the site pays nothing. */
 @font-face {
-  font-family: 'Edu QLD Beginner';
-  src: url('/fonts/tools/EduQLDBeginner.ttf') format('truetype');
+  font-family: 'Edu AU VIC WA NT Pre';
+  src: url('/fonts/tools/EduAUVICWANTPre.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,6 +26,13 @@
 @font-face {
   font-family: 'Andika';
   src: url('/fonts/tools/Andika-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Learning Curve';
+  src: url('/fonts/tools/LearningCurve.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

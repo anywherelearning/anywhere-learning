@@ -60,6 +60,18 @@ export default function WorksheetPreview({
 
           {page.rows.map((row, ri) => (
             <g key={ri}>
+              {/* Numbered label (blank-test rows) */}
+              {row.label && (
+                <text
+                  x={row.xStart - 26}
+                  y={row.baseline}
+                  fontSize={14}
+                  fontFamily="'DM Sans', sans-serif"
+                  fill={WORKSHEET_COLORS.ink}
+                >
+                  {row.label}
+                </text>
+              )}
               {/* Topline */}
               <line
                 x1={row.xStart}

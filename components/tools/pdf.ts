@@ -78,6 +78,14 @@ export async function downloadWorksheetPdf({
     }
 
     for (const row of page.rows) {
+      // Numbered label (blank-test rows)
+      if (row.label) {
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(14);
+        doc.setTextColor(...ink);
+        doc.text(row.label, row.xStart - 26, row.baseline);
+      }
+
       // Topline
       doc.setDrawColor(...rule);
       doc.setLineWidth(1);
