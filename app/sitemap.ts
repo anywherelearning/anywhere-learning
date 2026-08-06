@@ -100,6 +100,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  // /tools — free worksheet generators. Top-of-funnel SEO landers; the
+  // variation pages each target their own long-tail query. /embed/* is
+  // intentionally excluded (noindex widget pages).
+  const toolRoutes: MetadataRoute.Sitemap = [
+    'https://anywherelearning.co/tools',
+    'https://anywherelearning.co/tools/name-tracing',
+    'https://anywherelearning.co/tools/name-tracing/preschool',
+    'https://anywherelearning.co/tools/name-tracing/kindergarten',
+    'https://anywherelearning.co/tools/handwriting',
+    'https://anywherelearning.co/tools/handwriting/cursive',
+    'https://anywherelearning.co/tools/handwriting/copywork',
+    'https://anywherelearning.co/tools/sight-words',
+    'https://anywherelearning.co/tools/sight-words/pre-k',
+    'https://anywherelearning.co/tools/sight-words/kindergarten',
+    'https://anywherelearning.co/tools/sight-words/grade-1',
+    'https://anywherelearning.co/tools/sight-words/grade-2',
+    'https://anywherelearning.co/tools/sight-words/grade-3',
+    'https://anywherelearning.co/tools/spelling',
+    'https://anywherelearning.co/tools/spelling/test',
+  ].map((url) => ({
+    url,
+    lastModified: siteLastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   // NOTE: We don't sitemap /shop?category=X URLs anymore. These are query-string
   // filters on a single canonical /shop page — Google treats them as duplicate
   // content and they dilute crawl budget. Internal links (header nav + the
@@ -156,7 +182,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ),
   ];
 
-  const baseRoutes = [...staticRoutes, ...categoryRoutes, ...blogUrls, ...resourceUrls, ...ideasRoutes];
+  const baseRoutes = [...staticRoutes, ...toolRoutes, ...categoryRoutes, ...blogUrls, ...resourceUrls, ...ideasRoutes];
 
   if (!process.env.DATABASE_URL) return baseRoutes;
 
