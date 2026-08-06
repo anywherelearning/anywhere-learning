@@ -35,6 +35,21 @@ const securityHeaders = [
   },
 ];
 
+// /embed/* only: the free-tool widgets are meant to be iframed on other
+// people's sites (the backlink play). Drop X-Frame-Options and explicitly
+// allow any frame ancestor. These pages contain nothing sensitive - no
+// checkout, no auth - and every other route keeps the strict headers.
+const embedHeaders = [
+  ...securityHeaders.filter((h) => h.key !== "X-Frame-Options"),
+].map((h) =>
+  h.key === "Content-Security-Policy"
+    ? {
+        key: h.key,
+        value: isDev ? h.value : `${h.value}; frame-ancestors *`,
+      }
+    : h,
+);
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -58,9 +73,16 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Apply security headers to all routes
-        source: "/(.*)",
+        // Apply security headers to all routes except /embed/* (which gets
+        // its own set below - Next merges matching entries, so the embed
+        // paths must be excluded here or X-Frame-Options would leak in).
+        source: "/((?!embed/).*)",
         headers: securityHeaders,
+      },
+      {
+        // Embeddable tool widgets: same headers, but frameable anywhere.
+        source: "/embed/:path*",
+        headers: embedHeaders,
       },
     ];
   },
