@@ -276,7 +276,7 @@ function MembershipVariant({ onDismiss }: { onDismiss: () => void }) {
       </div>
 
       <Link
-        href="/join"
+        href="/#membership"
         onClick={onDismiss}
         className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-xl text-[15px] text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg shadow-md"
       >

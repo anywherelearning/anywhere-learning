@@ -60,7 +60,7 @@ export default function IdeaListOfferInline({
                 </strong>
                 . The rest come with the{' '}
                 <Link
-                  href="/join"
+                  href="/#membership"
                   className="font-semibold text-[#588157] underline decoration-[1.5px] underline-offset-2 hover:text-[#3d5c3b]"
                 >
                   membership

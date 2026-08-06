@@ -27,12 +27,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: 'https://anywherelearning.co/join',
-      lastModified: siteLastUpdated,
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
       url: 'https://anywherelearning.co/shop',
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',

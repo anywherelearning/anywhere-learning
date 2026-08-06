@@ -10,7 +10,7 @@
  *   - signed in, eligible   → straight to Stripe Checkout
  *   - already member/trial  → their library
  *
- * /join stays the membership INFO page, reachable from the "Membership" nav
+ * The homepage carries the membership pitch, reachable from the "Membership" nav
  * item; action CTAs skip it entirely.
  */
 
@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
 
   // No explicit plan chosen yet → show the yearly/monthly picker first.
   // Every generic "Start free trial" CTA (nav, shop banners, FAQ) links here
-  // without a plan; the /join toggle and /choose-plan cards link with one.
+  // without a plan; the homepage toggle and /choose-plan cards link with one.
   const planParam = req.nextUrl.searchParams.get('plan');
   if (planParam !== 'annual' && planParam !== 'monthly') {
     return NextResponse.redirect(`${origin}/choose-plan`, 303);
@@ -86,5 +86,5 @@ export async function GET(req: NextRequest) {
 
   // Anything unexpected: fall back to the membership page, whose
   // CheckoutButton flow shows inline errors.
-  return NextResponse.redirect(`${origin}/join`, 303);
+  return NextResponse.redirect(`${origin}/#membership`, 303);
 }

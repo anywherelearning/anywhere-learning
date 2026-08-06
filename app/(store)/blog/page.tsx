@@ -431,7 +431,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   </p>
                 </div>
                 <Link
-                  href="/join"
+                  href="/#membership"
                   className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
                 >
                   See what&apos;s in the membership

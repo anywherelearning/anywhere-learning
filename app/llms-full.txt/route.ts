@@ -113,7 +113,7 @@ function membershipLibraryOverview(): string {
   return [
     `## Membership and the Activity Library`,
     ``,
-    `Anywhere Learning is membership-based. Joining unlocks the full library of 120+ real-world activities across 9 categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month on the monthly plan. A 14-day free trial lets you start for free before your annual membership begins. Individual activities are not sold a la carte on the site. Join: ${SITE_URL}/join`,
+    `Anywhere Learning is membership-based. Joining unlocks the full library of 120+ real-world activities across 9 categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month on the monthly plan. A 14-day free trial lets you start for free before your annual membership begins. Individual activities are not sold a la carte on the site. Join: ${SITE_URL}/#membership`,
     ``,
     `Representative collections in the library (all included with membership):`,
     collections
@@ -229,7 +229,7 @@ The brand's core philosophy: meaningful learning happens everywhere · kitchens,
 ## Site Map
 
 - Home: ${SITE_URL}
-- Join (membership): ${SITE_URL}/join
+- Membership (pricing and FAQ): ${SITE_URL}/#membership
 - Library: ${SITE_URL}/shop (the full activity library, included with membership)
 - Blog: ${SITE_URL}/blog (40+ articles on homeschooling and worldschooling)
 - Guides: ${SITE_URL}/guides (pillar reference content)

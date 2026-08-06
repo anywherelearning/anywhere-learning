@@ -394,7 +394,7 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   // is enabled on the session. Falls back to the join page.
   const recoveryUrl =
     (session.after_expiration?.recovery as { url?: string } | undefined)?.url ||
-    `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/join`;
+    `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/#membership`;
 
   const firstName = session.customer_details?.name?.trim().split(/\s+/)[0] || undefined;
 

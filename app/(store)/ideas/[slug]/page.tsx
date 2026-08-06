@@ -483,7 +483,7 @@ function CategoryView({ category }: { category: IdeaCategory }) {
                     noindex, so a logged-out visitor cannot see inside it. The
                     label names what the click actually does. */}
                 <Link
-                  href="/join"
+                  href="/#membership"
                   className="inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200"
                 >
                   See what&rsquo;s inside
@@ -1062,7 +1062,7 @@ function ListDetailView({
             <p className="text-[15px] leading-[1.6] text-[#6e6b64] text-center m-0">
               Already know you want the whole library?{' '}
               <Link
-                href="/join"
+                href="/#membership"
                 className="font-semibold text-[#588157] underline decoration-[1.5px] underline-offset-[3px] hover:text-[#3d5c3b] transition-colors"
               >
                 See what&rsquo;s inside the membership

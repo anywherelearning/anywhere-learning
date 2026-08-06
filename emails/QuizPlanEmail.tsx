@@ -166,7 +166,7 @@ export default function QuizPlanEmail({
                     <strong style={{ color: C_INK }}>PS</strong> &mdash; there are 120+ guides like this
                     one inside the membership, built to close exactly the gap your kid&apos;s plan
                     pointed to. You can{' '}
-                    <Link href={`${SITE}/join`} style={{ color: C_FOREST, fontWeight: 600 }}>try it all free for 14 days</Link>.
+                    <Link href={`${SITE}/#membership`} style={{ color: C_FOREST, fontWeight: 600 }}>try it all free for 14 days</Link>.
                   </Text>
                 </td>
               </tr>

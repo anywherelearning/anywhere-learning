@@ -107,7 +107,7 @@ function FallbackSignIn() {
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3.5">
           <Link
-            href="/join"
+            href="/#membership"
             className="inline-flex items-center gap-2.5 bg-forest text-cream font-semibold py-3.5 px-6 rounded-xl text-[15px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
           >
             See the membership

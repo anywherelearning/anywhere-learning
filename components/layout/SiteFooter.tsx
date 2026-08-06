@@ -128,7 +128,6 @@ export default async function SiteFooter() {
 
           <FooterColumn title="Explore">
             <FooterLink href="/shop">Browse activities</FooterLink>
-            <FooterLink href="/join">Membership</FooterLink>
             <FooterLink href="/quiz">Take the Quiz</FooterLink>
             <FooterLink href="/free-guide">Free 7-day guide</FooterLink>
             <FooterLink href="/guides/capable-kid">Capable Kid Guide</FooterLink>
@@ -165,7 +164,7 @@ export default async function SiteFooter() {
               </em>
             )}
             <Link
-              href="/join"
+              href="/#membership"
               className="text-[#C97B5C] font-body font-semibold text-[13px] border-b border-[#C97B5C]/40 pb-[1px] no-underline hover:text-[#7A3D24] transition-colors"
             >
               {m.joinCtaLabel} &rarr;

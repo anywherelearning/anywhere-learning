@@ -75,7 +75,7 @@ export default function CheckoutButton({
           // without breaking the encoding.
           try {
             const u = new URL(base, window.location.origin);
-            const redirect = u.searchParams.get('redirect_url') || '/join';
+            const redirect = u.searchParams.get('redirect_url') || '/#membership';
             const redirectWithContinue =
               redirect + (redirect.includes('?') ? '&' : '?') + `continue=${resumeToken}`;
             u.searchParams.set('redirect_url', redirectWithContinue);

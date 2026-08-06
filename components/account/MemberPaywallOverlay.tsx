@@ -64,7 +64,7 @@ export default function MemberPaywallOverlay({
         <p className="mpw-fine">
           $0 today. Then ${annualPriceUsd}/year or ${monthlyPriceUsd}/month. Cancel anytime.
         </p>
-        <Link href="/join" className="mpw-link">
+        <Link href="/#membership" className="mpw-link">
           See everything included
         </Link>
       </div>

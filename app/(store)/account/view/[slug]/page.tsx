@@ -57,7 +57,7 @@ export default async function ActivityViewPage({
     /* fall through to the guest redirect below */
   }
 
-  if (tier === 'guest') redirect('/join?from=viewer&reason=membership-required');
+  if (tier === 'guest') redirect('/#membership');
 
   const product = getFallbackProducts().find((p) => p.slug === slug);
   const title = product?.name || SKILLS_MAP_TITLES[slug] || 'Activity Guide';

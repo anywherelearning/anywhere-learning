@@ -56,7 +56,6 @@ function Logo() {
 const NAV_ITEMS_BEFORE = [
   { href: '/', label: 'Home' },
   { href: '/shop', label: 'Activities' },
-  { href: '/join', label: 'Membership' },
 ];
 
 const NAV_ITEMS_AFTER = [
@@ -78,6 +77,7 @@ const RESOURCES_ITEMS = [
   { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
   { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Free age-by-age skills map' },
   { href: '/free-guide', label: 'Free 7-Day Guide', desc: 'Seven activities, sent to your inbox' },
+  { href: '/quiz', label: 'Take the Quiz', desc: 'Two minutes, a plan for your kid' },
 ];
 
 
@@ -406,10 +406,10 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/quiz"
+                    href="/free-guide"
                     className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                   >
-                    Take the Quiz
+                    Free 7-day guide
                   </Link>
                   <span
                     aria-hidden="true"

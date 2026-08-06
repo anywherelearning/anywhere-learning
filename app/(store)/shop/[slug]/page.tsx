@@ -357,7 +357,7 @@ export default async function ProductPage({
     },
     offers: {
       "@type": "Offer",
-      url: "https://anywherelearning.co/join",
+      url: "https://anywherelearning.co/#membership",
       priceCurrency: "USD",
       price: String(99),
       priceSpecification: {

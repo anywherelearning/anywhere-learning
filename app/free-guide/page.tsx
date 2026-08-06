@@ -482,7 +482,7 @@ export default function FreeGuidePage() {
                 </p>
                 <div className="mt-4 flex justify-center">
                   <Link
-                    href="/join"
+                    href="/#membership"
                     className="inline-flex items-center gap-2 text-forest-dark font-semibold text-[14.5px] border-b border-forest/25 pb-0.5 hover:text-forest hover:border-forest-dark transition-colors"
                   >
                     See the membership

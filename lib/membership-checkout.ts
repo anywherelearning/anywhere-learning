@@ -131,7 +131,7 @@ export async function createMembershipCheckout(opts: {
       },
     },
     success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}${plan === 'monthly' ? '&plan=monthly' : ''}&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/join?cancelled=1`,
+    cancel_url: `${origin}/?cancelled=1#membership`,
     // Note: Stripe's `after_expiration.recovery` is NOT supported in
     // `subscription` mode — only `payment` mode. Abandoned-membership
     // emails fall back to /join (handled in the webhook's recoveryUrl

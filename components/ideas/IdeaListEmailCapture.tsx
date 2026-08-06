@@ -74,7 +74,7 @@ export default function IdeaListEmailCapture({
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
                 <Link
-                  href="/join"
+                  href="/#membership"
                   className="inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-7 rounded-xl text-[15.5px] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200 no-underline"
                 >
                   Get {activity.name} and the rest

@@ -19,7 +19,7 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
     eyebrow: 'In the Membership',
     body: context || product.shortDescription,
     ctaLabel: 'Unlock with membership',
-    ctaHref: '/join',
+    ctaHref: '/#membership',
     priceLine: `${MEMBERSHIP_PRICE_YEAR} or $15/mo · 120+ activities`,
   };
 

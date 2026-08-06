@@ -75,11 +75,16 @@ const nextConfig: NextConfig = {
 
       // ── Membership pivot: routes that no longer exist ──
       // Old pins, posts, and emails still point at the a-la-carte store.
-      { source: "/membership", destination: "/join", permanent: true },
-      { source: "/cart", destination: "/join", permanent: true },
-      { source: "/bundles", destination: "/join", permanent: true },
-      { source: "/shop/bundles", destination: "/join", permanent: true },
-      { source: "/shop/master-bundle", destination: "/join", permanent: true },
+      // /join folded into the homepage (Aug 2026). These land on #membership,
+      // not the top of the page, so anyone following an old membership link
+      // arrives at the pricing block they were expecting. The hash is
+      // client-side only, so search engines still treat this as "/".
+      { source: "/join", destination: "/#membership", permanent: true },
+      { source: "/membership", destination: "/#membership", permanent: true },
+      { source: "/cart", destination: "/#membership", permanent: true },
+      { source: "/bundles", destination: "/#membership", permanent: true },
+      { source: "/shop/bundles", destination: "/#membership", permanent: true },
+      { source: "/shop/master-bundle", destination: "/#membership", permanent: true },
       // Old signed-in library URL moved when account pages were restructured
       { source: "/account/library/:path*", destination: "/library", permanent: true },
 
@@ -87,7 +92,7 @@ const nextConfig: NextConfig = {
       { source: "/shop/time-capsule", destination: "/library", permanent: true },
       { source: "/shop/creative-thinking-pack", destination: "/library", permanent: true },
       // Starter Pack removed (Jul 2026): funnel is now trial → annual membership
-      { source: "/shop/starter-pack", destination: "/join", permanent: true },
+      { source: "/shop/starter-pack", destination: "/#membership", permanent: true },
 
       // ── Bundles removed (Jul 2026): everything is in the membership library now ──
       { source: "/shop/seasonal-bundle", destination: "/shop", permanent: true },
@@ -113,7 +118,7 @@ const nextConfig: NextConfig = {
       // ── Truncated external links (GSC 404s, Jun 2026) ──
       // A cut-off /free-guide link and a mangled "$99/yr" link circulating off-site
       { source: "/free-", destination: "/free-guide", permanent: true },
-      { source: "/yr", destination: "/join", permanent: true },
+      { source: "/yr", destination: "/#membership", permanent: true },
 
       // ── Renamed or retired blog posts ──
       { source: "/blog/homeschool-road-trip", destination: "/blog/homeschool-while-traveling", permanent: true },

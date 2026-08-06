@@ -6,7 +6,7 @@
  *   - member  → any activity (view + download)
  *   - trial   → VIEW any activity (in the in-app viewer); NO downloads —
  *               downloading is the reason to convert to a paid membership
- *   - guest   → redirect to /join with a soft-explain banner
+ *   - guest   → redirect home with a soft-explain banner
  *   - signed-out → redirect to /sign-in
  *
  * Modes:
@@ -65,8 +65,8 @@ export async function GET(
   const access = await getAccessContextForClerkId(clerkId);
   const tier = access.tier;
   if (tier === 'guest') {
-    // No active subscription → soft redirect to /join
-    return friendlyRedirect('/join', 'membership-required');
+    // No active subscription → soft redirect home
+    return friendlyRedirect('/', 'membership-required');
   }
   // 'member' / 'trial' → no further slug-level checks
 

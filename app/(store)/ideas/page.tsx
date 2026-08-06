@@ -252,7 +252,7 @@ export default function IdeasPage() {
                   noindex, so a logged-out visitor cannot see inside it. The
                   label names what the click actually does. */}
               <Link
-                href="/join"
+                href="/#membership"
                 className="inline-flex items-center gap-2.5 bg-white text-[#3d5c3b] font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_2px_8px_rgba(0,0,0,0.12)] hover:bg-[#faf9f6] hover:-translate-y-px transition-all duration-200"
               >
                 See what&rsquo;s inside

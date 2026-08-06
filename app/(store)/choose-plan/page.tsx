@@ -15,7 +15,7 @@ import {
  * to happen before the session is created. Every generic "Start free trial"
  * CTA (nav pill, shop banners, FAQ, about) lands on /start-trial WITHOUT a
  * plan, and that route redirects here. Visitors who already picked a plan
- * (the /join toggle) carry ?plan=… and skip this page entirely.
+ * (the homepage toggle) carry ?plan=… and skip this page entirely.
  *
  * Funnel: /choose-plan → /start-trial?plan=… → sign-up (if needed) → Stripe.
  */
@@ -155,7 +155,7 @@ export default async function ChoosePlanPage() {
         <p className="mt-6 text-center text-[14px] text-gray-400">
           Want the full tour first?{' '}
           <Link
-            href="/join"
+            href="/#membership"
             className="font-semibold text-forest-dark underline decoration-dotted underline-offset-2 hover:text-forest"
           >
             See everything the membership includes
