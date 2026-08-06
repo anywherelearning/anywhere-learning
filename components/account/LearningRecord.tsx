@@ -379,6 +379,48 @@ export default function LearningRecord({
           .lr-photo { width: 210px !important; height: 210px !important; border-radius: 10px !important; }
           @page { margin: 1.4cm; }
         }
+
+        /* ── Phones ──────────────────────────────────────────────────────────
+           Scoped to screen so none of it leaks into the printed portfolio,
+           which always renders at page width and keeps the desktop layout. */
+        @media screen and (max-width: 640px) {
+          /* Controls: kid chips get their own row, then range + colour toggle
+             share a row, then Print goes full width instead of overflowing. */
+          .lr-controls-row { margin-left: 0 !important; width: 100%; }
+          .lr-controls-actions { width: 100%; display: flex !important; flex-wrap: wrap; }
+          .lr-kidchips { width: 100%; }
+          .lr-range-wrap { flex: 1 1 140px; min-width: 0; }
+          .lr-range-btn { width: 100%; justify-content: center; white-space: nowrap; }
+          .lr-range-menu { right: auto !important; left: 0 !important; width: min(232px, calc(100vw - 44px)) !important; }
+          .lr-bw-toggle { flex: 0 0 auto; }
+          .lr-print-btn { flex: 1 1 100%; justify-content: center; }
+
+          /* Metrics: four numbers across a phone clipped "12 of 12" and stacked
+             the digits. Two-up gives each tile room to read in one line. */
+          .lr-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+          .lr-metric-n { font-size: 23px !important; }
+
+          /* Log rows: the fixed 132px meta column squeezed the description down
+             to ~2 words per line. Drop meta to its own full-width row underneath
+             so the description gets the whole card. */
+          .lr-log-row { flex-wrap: wrap; gap: 12px !important; }
+          .lr-log-main { flex: 1 1 0 !important; }
+          .lr-log-meta {
+            flex: 1 0 100% !important;
+            width: 100% !important;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 20px;
+            padding-top: 2px;
+            border-top: 1px dashed rgba(61,92,59,0.14);
+          }
+          .lr-log-meta > * { margin-bottom: 0 !important; }
+          /* The time cell is a plain block (its label is an inline span), so
+             side by side with the flex-column Date/Area cells its label sat a
+             line-box lower. Match them. */
+          .lr-log-meta > [data-time-cell] { display: flex; flex-direction: column; align-items: flex-start; }
+          .lr-time-pop { right: auto !important; left: 0 !important; }
+        }
       `}</style>
 
       {/* screen-only storybook banner — hidden when printing so the sheet stays a clean document */}
@@ -400,21 +442,22 @@ export default function LearningRecord({
       <div className="lr-page" style={{ padding: 'clamp(16px,4vw,40px) clamp(12px,4vw,40px)' }}>
         {/* controls */}
         <div className="lr-noprint" style={{ maxWidth: 860, margin: '0 auto 16px', display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-          <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <div className="lr-controls-row" style={{ marginLeft: 'auto', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {children.length > 1 && (
-              <div style={{ display: 'inline-flex', gap: 5 }}>
+              <div className="lr-kidchips" style={{ display: 'inline-flex', gap: 5 }}>
                 {children.map((c, i) => (
                   <button key={c.id ?? i} onClick={() => setKidIdx(i)} style={chip(i === kidIdx)}>{childLabel(c, i)}</button>
                 ))}
               </div>
             )}
-            <div style={{ display: 'inline-flex', gap: 8, alignItems: 'center' }}>
+            <div className="lr-controls-actions" style={{ display: 'inline-flex', gap: 8, alignItems: 'center' }}>
               {/* Time range — one dropdown with presets + a custom range */}
-              <div ref={rangeRef} style={{ position: 'relative' }}>
+              <div ref={rangeRef} className="lr-range-wrap" style={{ position: 'relative' }}>
                 <button
                   onClick={() => setRangeOpen((o) => !o)}
                   aria-haspopup="menu"
                   aria-expanded={rangeOpen}
+                  className="lr-range-btn"
                   style={{ ...chip(range !== 'all'), display: 'inline-flex', alignItems: 'center', gap: 7 }}
                 >
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></svg>
@@ -422,7 +465,7 @@ export default function LearningRecord({
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ transform: rangeOpen ? 'rotate(180deg)' : 'none', transition: 'transform .15s' }}><path d="M6 9l6 6 6-6" /></svg>
                 </button>
                 {rangeOpen && (
-                  <div role="menu" style={{ position: 'absolute', right: 0, top: 'calc(100% + 6px)', zIndex: 50, width: 232, background: '#fffdf9', border: '1px solid rgba(61,92,59,0.18)', borderRadius: 12, boxShadow: '0 20px 44px -18px rgba(45,58,46,0.5)', padding: 6 }}>
+                  <div role="menu" className="lr-range-menu" style={{ position: 'absolute', right: 0, top: 'calc(100% + 6px)', zIndex: 50, width: 232, background: '#fffdf9', border: '1px solid rgba(61,92,59,0.18)', borderRadius: 12, boxShadow: '0 20px 44px -18px rgba(45,58,46,0.5)', padding: 6 }}>
                     {RANGES.filter((r) => r.id !== 'custom').map((r) => (
                       <button
                         key={r.id}
@@ -446,11 +489,11 @@ export default function LearningRecord({
                 )}
               </div>
               {/* colour vs black & white for the printout */}
-              <div style={{ display: 'inline-flex', border: '1px solid rgba(61,92,59,0.2)', borderRadius: 9999, overflow: 'hidden', background: '#fffdf9' }}>
+              <div className="lr-bw-toggle" style={{ display: 'inline-flex', border: '1px solid rgba(61,92,59,0.2)', borderRadius: 9999, overflow: 'hidden', background: '#fffdf9' }}>
                 <button onClick={() => setBw(false)} title="Print in full colour" style={{ ...printToggle, background: !bw ? '#588157' : 'transparent', color: !bw ? '#faf9f6' : '#54524b' }}>Color</button>
                 <button onClick={() => setBw(true)} title="Print in black &amp; white (saves ink)" style={{ ...printToggle, background: bw ? '#54524b' : 'transparent', color: bw ? '#faf9f6' : '#54524b' }}>B&amp;W</button>
               </div>
-              <button onClick={() => window.print()} className="hover:brightness-95" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 15px', borderRadius: 10, fontSize: 13.5, fontWeight: 600, color: '#faf9f6', background: '#588157', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+              <button onClick={() => window.print()} className="hover:brightness-95 lr-print-btn" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: '8px 15px', borderRadius: 10, fontSize: 13.5, fontWeight: 600, color: '#faf9f6', background: '#588157', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z" /></svg>
                 Print / Save as PDF
               </button>
@@ -482,7 +525,7 @@ export default function LearningRecord({
           </div>
 
           {/* metrics */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 10, marginBottom: 10 }}>
+          <div className="lr-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 10, marginBottom: 10 }}>
             {[
               { n: `${record.rows.length}`, l: 'Activities completed' },
               { n: `${record.covered} of ${catUniverse.size}`, l: 'Areas covered' },
@@ -490,7 +533,7 @@ export default function LearningRecord({
               { n: `≈ ${roundHrs}`, l: 'Hours (estimated)' },
             ].map((m) => (
               <div key={m.l} style={{ background: '#faf9f6', borderRadius: 12, padding: '13px 12px', border: '1px solid rgba(88,129,87,0.12)', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 26, fontWeight: 800, color: '#3d5c3b', lineHeight: 1, whiteSpace: 'nowrap' }}>{m.n}</div>
+                <div className="lr-metric-n" style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 26, fontWeight: 800, color: '#3d5c3b', lineHeight: 1, whiteSpace: 'nowrap' }}>{m.n}</div>
                 <div style={{ fontSize: 11.5, color: 'var(--am-muted)', marginTop: 5, lineHeight: 1.25 }}>{m.l}</div>
               </div>
             ))}
@@ -556,7 +599,7 @@ export default function LearningRecord({
                           </div>
 
                           {/* title + description (gets the room) */}
-                          <div style={{ flex: 1, minWidth: 0 }}>
+                          <div className="lr-log-main" style={{ flex: 1, minWidth: 0 }}>
                             <div style={{ fontWeight: 600, color: '#2b2a26', fontSize: 14.5, lineHeight: 1.25 }}>{r.a.title}</div>
                             <div style={{ color: 'var(--am-muted)', fontSize: 12.5, marginTop: 3, lineHeight: 1.5 }}>{briefly(productDescriptions[r.a.slug]?.opening ?? r.a.excerpt)}</div>
                             <div style={{ marginTop: 6, display: 'flex', flexWrap: 'wrap', gap: 5, alignItems: 'center' }}>
@@ -599,8 +642,9 @@ export default function LearningRecord({
                             })()}
                           </div>
 
-                          {/* date / area / time — stacked in one narrow column */}
-                          <div style={{ flex: 'none', width: 132 }}>
+                          {/* date / area / time — a narrow right-hand column on
+                              desktop, a full-width strip under the row on phones */}
+                          <div className="lr-log-meta" style={{ flex: 'none', width: 132 }}>
                             <MetaLine label="Date" value={fmtDate(r.at)} />
                             <MetaLine
                               label={territoriesForSlug(r.a.slug).length > 1 ? 'Areas' : 'Area'}
@@ -626,7 +670,7 @@ export default function LearningRecord({
                                     <svg className="lr-noprint" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ opacity: 0.55 }}><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg>
                                   </button>
                                   {editing && (
-                                    <div className="lr-noprint" style={{ position: 'absolute', right: 0, top: 'calc(100% + 4px)', zIndex: 40, width: 174, background: '#fffdf9', border: '1px solid rgba(61,92,59,0.18)', borderRadius: 10, boxShadow: '0 16px 34px -16px rgba(45,58,46,0.5)', padding: 10 }}>
+                                    <div className="lr-noprint lr-time-pop" style={{ position: 'absolute', right: 0, top: 'calc(100% + 4px)', zIndex: 40, width: 174, background: '#fffdf9', border: '1px solid rgba(61,92,59,0.18)', borderRadius: 10, boxShadow: '0 16px 34px -16px rgba(45,58,46,0.5)', padding: 10 }}>
                                       <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '7px 8px', alignItems: 'center' }}>
                                         <span style={{ fontSize: 12, color: 'var(--am-muted)' }}>Hours</span>
                                         <input type="number" min={0} step={0.25} value={est.hours} onChange={(e) => setOverride(key, est, 'hours', Number(e.target.value))} style={estNum} />

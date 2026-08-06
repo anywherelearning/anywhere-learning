@@ -273,7 +273,7 @@ export default function AccountDashboard({
   return (
     <>
     <FirstRunRedirect />
-    <main className="pb-12" style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))' }}>
+    <main className="pb-4 sm:pb-12" style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))' }}>
       {/* TRIAL STRIP: viewing is unlimited; downloading requires membership.
           The strip doubles as the easy upgrade entry point. */}
       {tier === 'trial' && trial && (
@@ -616,7 +616,9 @@ export default function AccountDashboard({
       </div>
 
       {/* LIST */}
-      <section className="pt-2 pb-12">
+      {/* Bottom padding is deliberately small on phones: main + section + the
+          paginator margin used to stack into ~128px of dead cream below Next. */}
+      <section className="pt-2 pb-4 sm:pb-12">
         <div className="mx-auto max-w-[1180px] px-6">
           {filtered.length > 0 ? (
             pagedItems.map((a) => {
@@ -635,7 +637,7 @@ export default function AccountDashboard({
               return (
                 <div
                   key={a.slug}
-                  className="group grid grid-cols-[28px_56px_1fr] sm:grid-cols-[28px_64px_1fr_auto] gap-x-3 gap-y-2 md:gap-4 items-start rounded-2xl border-l-[5px] py-4 pl-4 pr-4 mb-2.5 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-20px_rgba(45,58,46,0.6)]"
+                  className="group grid grid-cols-[28px_72px_1fr] sm:grid-cols-[28px_64px_1fr_auto] gap-x-3 gap-y-2 md:gap-4 items-start rounded-2xl border-l-[5px] py-4 pl-4 pr-4 mb-2.5 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-20px_rgba(45,58,46,0.6)]"
                   style={{ background: accent + '14', borderLeftColor: accent }}
                 >
                   {/* Read-only done marker — a green check when completed on the
@@ -659,7 +661,7 @@ export default function AccountDashboard({
                     rel="noopener noreferrer"
                     prefetch={false}
                     aria-label={`Open ${a.title}`}
-                    className="block w-14 sm:w-16 aspect-[4/5] rounded-md overflow-hidden border-2 bg-[var(--am-paper)] no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] transition-colors"
+                    className="block w-[72px] sm:w-16 aspect-[4/5] self-center sm:self-start rounded-md overflow-hidden border-2 bg-[var(--am-paper)] no-underline shadow-[0_4px_10px_-6px_rgba(45,58,46,0.3)] transition-colors"
                     style={{ background: accent + '14' /* low-opacity fallback */, borderColor: accent + '4d' }}
                   >
                     {a.imageUrl ? (
@@ -814,13 +816,13 @@ export default function AccountDashboard({
           {totalPages > 1 && (
             <nav
               aria-label="Library pagination"
-              className="mt-8 flex items-center justify-center gap-1.5 flex-wrap"
+              className="mt-6 sm:mt-8 flex items-center justify-center gap-1.5 flex-wrap"
             >
               <button
                 type="button"
                 onClick={() => goToPage(1)}
                 disabled={currentPage <= 1}
-                className="inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                className="hidden sm:inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
                 aria-label="First page"
                 title="First page"
               >
@@ -837,7 +839,9 @@ export default function AccountDashboard({
                 Prev
               </button>
               <label className="inline-flex items-center gap-2 font-[family-name:var(--font-plate)] text-[14px] text-gray-500 px-1">
-                <span>Page</span>
+                {/* Hidden on phones so Prev · page · Next fit one row at 320px.
+                    The select keeps its own aria-label, so nothing is lost. */}
+                <span className="hidden sm:inline">Page</span>
                 <select
                   value={currentPage}
                   onChange={(e) => goToPage(parseInt(e.target.value, 10))}
@@ -866,7 +870,7 @@ export default function AccountDashboard({
                 type="button"
                 onClick={() => goToPage(totalPages)}
                 disabled={currentPage >= totalPages}
-                className="inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
+                className="hidden sm:inline-flex items-center bg-[var(--am-paper)] border border-[rgba(58,44,23,0.12)] text-ink font-body font-semibold text-[15px] py-2.5 px-3 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
                 aria-label="Last page"
                 title="Last page"
               >

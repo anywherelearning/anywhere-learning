@@ -32,6 +32,15 @@ export default function MemberFooter() {
         .mf-link{font-size:13px;font-weight:600;color:#6f7468;text-decoration:none;transition:color .15s ease}
         .mf-link:hover{color:#3d5c3b}
         .mf-copy{font-size:12.5px;color:#9a978c}
+        /* Mobile: the footer is housekeeping, not a destination. Tighten every
+           gap so it stops eating a third of the screen on a phone. */
+        @media screen and (max-width:640px){
+          .mf-inner{padding:18px 16px 20px;gap:9px}
+          .mf-logo{height:32px}
+          .mf-links{gap:6px 16px}
+          .mf-link{font-size:12.5px}
+          .mf-copy{font-size:11.5px}
+        }
         @media print{.mf{display:none}}
       `}</style>
     </footer>
