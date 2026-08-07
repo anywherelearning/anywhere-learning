@@ -14,12 +14,17 @@ const SEEN_KEY = 'al_onboarded_v1';
  * signal so a returning member on a new device (whose profile is on the server
  * but not yet pulled) is never wrongly treated as brand new. The welcome step
  * is skippable, so this nudges rather than traps.
+ *
+ * Never fires for guests. Setting up explorers is meaningless to someone who
+ * cannot open an activity yet, and it would bury the paywall teaser under a
+ * form. They stay on the page they asked for, faded, which answers "what do I
+ * get?" far better. /post-sign-in makes the same call server-side.
  */
-export default function FirstRunRedirect() {
+export default function FirstRunRedirect({ hasAccess = true }: { hasAccess?: boolean }) {
   const router = useRouter();
 
   useEffect(() => {
-    if (!hasClerk) return;
+    if (!hasClerk || !hasAccess) return;
     let done = false;
 
     function decide() {
@@ -41,7 +46,7 @@ export default function FirstRunRedirect() {
       window.addEventListener('al:sync-ready', decide);
       return () => window.removeEventListener('al:sync-ready', decide);
     }
-  }, [router]);
+  }, [router, hasAccess]);
 
   return null;
 }

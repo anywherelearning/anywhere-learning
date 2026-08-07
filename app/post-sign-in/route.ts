@@ -3,12 +3,14 @@ import { auth } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { memberState } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { getAccessTierForClerkId } from '@/lib/access';
 
 export const dynamic = 'force-dynamic';
 
 /**
  * Where a sign-in actually lands.
  *
+ *   no membership yet   → /account/home     (adventure map behind the paywall)
  *   first ever sign-in  → /account/welcome  (the onboarding quiz, which then
  *                                            exits to /account/home itself)
  *   every one after     → /account/home     (the adventure map)
@@ -16,21 +18,27 @@ export const dynamic = 'force-dynamic';
  * "Home" here is the member's adventure map, the first tab in the member nav,
  * not the marketing homepage at /.
  *
- * The decision needs the member's kids profile, which lives in `member_state`
- * on the server and in localStorage on the client. Doing it here, server-side,
- * means the browser goes straight to the right page instead of rendering the
- * library and then bouncing.
+ * Guests are checked first and never see onboarding: the welcome quiz asks a
+ * parent to set up explorers, which is meaningless to someone who cannot open
+ * an activity yet. They land in the member zone like everyone else and the
+ * account layout draws its teaser over the top, so the answer to "what do I
+ * get?" is the real product, faded, rather than a form they cannot use.
  *
- * The test mirrors FirstRunRedirect exactly: a member counts as onboarded once
- * they have a profile OR once they've been shown the welcome step and skipped
- * it. Keep the two in step — FirstRunRedirect still runs inside /account and
- * catches anyone who reaches the member zone by another route.
+ * The onboarding test mirrors FirstRunRedirect exactly: a member counts as
+ * onboarded once they have a profile OR once they've been shown the welcome
+ * step and skipped it. Keep the two in step — FirstRunRedirect still runs
+ * inside /account and catches anyone who arrives by another route.
  */
 export async function GET(req: NextRequest) {
   const origin = req.nextUrl.origin;
 
   const { userId } = await auth();
   if (!userId) return NextResponse.redirect(`${origin}/sign-in`, 303);
+
+  // Fails closed to 'guest' on a DB error, matching the account layout, so a
+  // blip shows the teaser rather than leaking the zone.
+  const tier = await getAccessTierForClerkId(userId);
+  if (tier === 'guest') return NextResponse.redirect(`${origin}/account/home`, 303);
 
   try {
     const rows = await db
@@ -44,10 +52,10 @@ export async function GET(req: NextRequest) {
 
     if (!seenWelcome) return NextResponse.redirect(`${origin}/account/welcome`, 303);
   } catch {
-    // DB unreachable: fall back to /account (the library), which is the one
-    // member page carrying FirstRunRedirect, so the same decision still gets
-    // made client-side once sync settles. /account/home would skip that check
-    // and a brand-new member would never see onboarding.
+    // Profile lookup failed: fall back to /account (the library), the one member
+    // page carrying FirstRunRedirect, so the same decision still gets made
+    // client-side once sync settles. /account/home would skip that check and a
+    // brand-new member would never see onboarding.
     return NextResponse.redirect(`${origin}/account`, 303);
   }
 

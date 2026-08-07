@@ -272,7 +272,7 @@ export default function AccountDashboard({
 
   return (
     <>
-    <FirstRunRedirect />
+    <FirstRunRedirect hasAccess={tier !== 'guest'} />
     <main className="pb-4 sm:pb-12" style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))' }}>
       {/* TRIAL STRIP: viewing is unlimited; downloading requires membership.
           The strip doubles as the easy upgrade entry point. */}
