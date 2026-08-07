@@ -9,8 +9,12 @@ export const dynamic = 'force-dynamic';
 /**
  * Where a sign-in actually lands.
  *
- *   first ever sign-in  → /account/welcome  (the onboarding quiz)
- *   every one after     → /                 (the homepage)
+ *   first ever sign-in  → /account/welcome  (the onboarding quiz, which then
+ *                                            exits to /account/home itself)
+ *   every one after     → /account/home     (the adventure map)
+ *
+ * "Home" here is the member's adventure map, the first tab in the member nav,
+ * not the marketing homepage at /.
  *
  * The decision needs the member's kids profile, which lives in `member_state`
  * on the server and in localStorage on the client. Doing it here, server-side,
@@ -40,11 +44,12 @@ export async function GET(req: NextRequest) {
 
     if (!seenWelcome) return NextResponse.redirect(`${origin}/account/welcome`, 303);
   } catch {
-    // DB unreachable: fall back to /account, where FirstRunRedirect makes the
-    // same call client-side once sync settles. Better a library landing than
-    // sending a brand-new member to a homepage that skips onboarding.
+    // DB unreachable: fall back to /account (the library), which is the one
+    // member page carrying FirstRunRedirect, so the same decision still gets
+    // made client-side once sync settles. /account/home would skip that check
+    // and a brand-new member would never see onboarding.
     return NextResponse.redirect(`${origin}/account`, 303);
   }
 
-  return NextResponse.redirect(`${origin}/`, 303);
+  return NextResponse.redirect(`${origin}/account/home`, 303);
 }
