@@ -13,12 +13,12 @@ export default function SSOCallbackPage() {
 
   useEffect(() => {
     handleRedirectCallback({
-      redirectUrl: '/',
-      // Signing in lands on the homepage, same as the email/password form.
-      signInForceRedirectUrl: '/',
-      // Creating an account still goes to the library: a brand-new member has
-      // nothing on the homepage they haven't just read.
-      signUpForceRedirectUrl: '/account',
+      redirectUrl: '/post-sign-in',
+      // Same decider as the email/password form: welcome quiz first time,
+      // homepage after. A fresh OAuth sign-up has no profile yet, so it lands
+      // on the quiz too.
+      signInForceRedirectUrl: '/post-sign-in',
+      signUpForceRedirectUrl: '/post-sign-in',
     });
   }, [handleRedirectCallback]);
 

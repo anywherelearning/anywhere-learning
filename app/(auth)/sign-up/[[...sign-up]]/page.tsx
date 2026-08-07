@@ -123,7 +123,7 @@ export default async function SignUpPage({
           <div className="flex justify-center lg:justify-end max-lg:order-1">
             <SignUp
               appearance={clerkAuthAppearance}
-              forceRedirectUrl={redirectUrl ?? '/account'}
+              forceRedirectUrl={redirectUrl ?? '/post-sign-in'}
             />
           </div>
         </div>

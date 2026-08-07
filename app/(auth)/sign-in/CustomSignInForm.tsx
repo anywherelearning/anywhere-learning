@@ -134,11 +134,10 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
  *
  * An explicit `redirect_url` always wins, so anyone who arrived mid-flow (trial
  * checkout, a gated download, the paywall) resumes where they were. Absent
- * that, sign-in drops you on the homepage rather than straight into the
- * library: signing in is not the same intent as "take me to my activities",
- * and members can reach the library from the nav.
+ * that, /post-sign-in decides server-side: the welcome quiz on a member's very
+ * first sign-in, the homepage on every one after.
  */
-const DEFAULT_POST_SIGN_IN = '/';
+const DEFAULT_POST_SIGN_IN = '/post-sign-in';
 
 function getPostSignInDestination(): string {
   if (typeof window === 'undefined') return DEFAULT_POST_SIGN_IN;
