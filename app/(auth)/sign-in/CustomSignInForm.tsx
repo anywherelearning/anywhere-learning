@@ -129,17 +129,28 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
  * same-origin path. Falls back to `/account` otherwise. Same-origin guard
  * blocks open-redirect attacks via crafted URLs.
  */
+/**
+ * Where to land after a successful sign-in.
+ *
+ * An explicit `redirect_url` always wins, so anyone who arrived mid-flow (trial
+ * checkout, a gated download, the paywall) resumes where they were. Absent
+ * that, sign-in drops you on the homepage rather than straight into the
+ * library: signing in is not the same intent as "take me to my activities",
+ * and members can reach the library from the nav.
+ */
+const DEFAULT_POST_SIGN_IN = '/';
+
 function getPostSignInDestination(): string {
-  if (typeof window === 'undefined') return '/account';
+  if (typeof window === 'undefined') return DEFAULT_POST_SIGN_IN;
   try {
     const raw = new URL(window.location.href).searchParams.get('redirect_url');
-    if (!raw) return '/account';
+    if (!raw) return DEFAULT_POST_SIGN_IN;
     // Only allow same-origin relative paths. Reject anything starting with a
     // scheme or "//" (protocol-relative) to prevent open-redirect abuse.
     if (raw.startsWith('/') && !raw.startsWith('//')) return raw;
-    return '/account';
+    return DEFAULT_POST_SIGN_IN;
   } catch {
-    return '/account';
+    return DEFAULT_POST_SIGN_IN;
   }
 }
 

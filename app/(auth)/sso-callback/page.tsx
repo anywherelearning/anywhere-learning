@@ -13,8 +13,11 @@ export default function SSOCallbackPage() {
 
   useEffect(() => {
     handleRedirectCallback({
-      redirectUrl: '/account',
-      signInForceRedirectUrl: '/account',
+      redirectUrl: '/',
+      // Signing in lands on the homepage, same as the email/password form.
+      signInForceRedirectUrl: '/',
+      // Creating an account still goes to the library: a brand-new member has
+      // nothing on the homepage they haven't just read.
       signUpForceRedirectUrl: '/account',
     });
   }, [handleRedirectCallback]);

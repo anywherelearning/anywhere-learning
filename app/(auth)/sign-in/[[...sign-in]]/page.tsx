@@ -26,7 +26,9 @@ export default async function SignInPage() {
   } catch {
     /* Clerk not configured in this env — fall through to the form */
   }
-  if (signedInUserId) redirect('/account');
+  // Already signed in and landed here anyway: send them home, matching where
+  // a fresh sign-in now lands.
+  if (signedInUserId) redirect('/');
 
   return (
     <main className="relative min-h-screen bg-cream overflow-hidden">
