@@ -298,7 +298,11 @@ export default function AccountDashboard({
         </div>
       )}
       {/* HEADER — full-width band, sized to match This Month & Record */}
-      <header className="relative overflow-hidden" style={{ minHeight: 'clamp(150px,20vw,206px)', background: 'linear-gradient(180deg, var(--am-sky1), var(--am-sky2))', padding: 'clamp(18px,2.5vw,26px) clamp(16px,4vw,40px) clamp(26px,3vw,38px)' }}>
+      {/* No overflow-hidden here: the Skills Map menu opens below its button,
+          near this header's bottom edge, and clipping cut it off after the
+          first item. The HeroScene below has its own overflow-hidden, which is
+          the layer that actually needs it. */}
+      <header className="relative" style={{ minHeight: 'clamp(150px,20vw,206px)', background: 'linear-gradient(180deg, var(--am-sky1), var(--am-sky2))', padding: 'clamp(18px,2.5vw,26px) clamp(16px,4vw,40px) clamp(26px,3vw,38px)' }}>
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <HeroScene tone="light" hillHeight={100} />
         </div>
