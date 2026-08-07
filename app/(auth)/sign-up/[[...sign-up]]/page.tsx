@@ -45,7 +45,9 @@ export default async function SignUpPage({
     ? `${MONTHLY_PLAN_PRICE_MONTH}, cancel anytime`
     : `${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ', your founder rate, locked in for life' : ''}`;
 
-  // Already signed in? Skip the sign-up flow and go straight to the library.
+  // Already signed in? Skip the sign-up flow. /post-sign-in picks the landing
+  // the same way every other entry point does, instead of hardcoding the
+  // library here.
   let signedInUserId: string | null = null;
   try {
     const { auth } = await import('@clerk/nextjs/server');
@@ -54,7 +56,7 @@ export default async function SignUpPage({
   } catch {
     /* Clerk not configured */
   }
-  if (signedInUserId) redirect('/account');
+  if (signedInUserId) redirect(redirectUrl ?? '/post-sign-in');
 
   return (
     <main className="min-h-[calc(100vh-200px)] bg-cream py-12 md:py-16">

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useAccessTier } from '@/hooks/useAccessTier';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -17,12 +18,10 @@ interface AuthState {
   /** Profile image URL set in /account/settings. Null when user hasn't
    *  uploaded one (we show their initial as a letter avatar instead). */
   imageUrl: string | null;
-  /** 'member' for active membership subscribers (including trial), null for
-   *  users without a membership. Read from Clerk's publicMetadata, which the
-   *  webhook sets after each purchase. */
-  tier: 'member' | null;
   /** True only if the user paid the founder rate ($99/yr first-100). False
-   *  for post-founder members ($149/yr). */
+   *  for post-founder members ($149/yr). Read from Clerk's publicMetadata,
+   *  which the webhook sets after each purchase. Cosmetic only — never gate
+   *  the member nav on it, see hasAccess below. */
   founder: boolean;
 }
 
@@ -102,9 +101,9 @@ export default function SiteHeader() {
     name: '',
     email: '',
     imageUrl: null,
-    tier: null,
     founder: false,
   });
+  const accessTier = useAccessTier(auth.isSignedIn);
 
   // Close on route change
   useEffect(() => {
@@ -170,9 +169,14 @@ export default function SiteHeader() {
   // Auth state is pushed up from <ClerkAuthBridge /> below, which only mounts
   // when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is set.
 
-  // Library + plan links are members-only (members incl. trial). A signed-in
-  // user who never purchased has tier null and shouldn't see them.
-  const hasAccess = auth.tier === 'member';
+  // The member nav is members-only (paid or trialing), and "member" has to mean
+  // the same thing here as it does inside /account. That answer lives in the
+  // database, so we ask for it rather than reading Clerk's publicMetadata
+  // mirror: the mirror only gets corrected by a Stripe webhook, so an account
+  // whose subscription vanished any other way keeps claiming membership. That
+  // mismatch is what put member links on the marketing homepage while the
+  // member zone itself showed the paywall.
+  const hasAccess = accessTier === 'member' || accessTier === 'trial';
 
   // The member zone (/account) has its own header (MemberNav) — hide SiteHeader
   // there so members see a single nav, not two stacked headers.
@@ -695,7 +699,6 @@ function ClerkAuthBridge({ onChange }: { onChange: (s: AuthState) => void }) {
         name: '',
         email: '',
         imageUrl: null,
-        tier: null,
         founder: false,
       });
       return;
@@ -714,15 +717,15 @@ function ClerkAuthBridge({ onChange }: { onChange: (s: AuthState) => void }) {
       user.hasImage && !user.imageUrl?.includes('clerk.com/identicon')
         ? user.imageUrl
         : null;
-    // Tier + founder are stamped onto publicMetadata by the Stripe webhook.
-    const meta = user.publicMetadata as { tier?: 'member'; founder?: boolean };
+    // Founder is stamped onto publicMetadata by the Stripe webhook. Access
+    // itself comes from useAccessTier, not from here.
+    const meta = user.publicMetadata as { founder?: boolean };
     onChange({
       isSignedIn: true,
       initial,
       name,
       email,
       imageUrl,
-      tier: meta.tier || null,
       founder: !!meta.founder,
     });
   }, [isSignedIn, user, onChange]);
