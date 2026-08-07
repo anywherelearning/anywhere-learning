@@ -29,13 +29,13 @@ export default function LegalLayout({
   return (
     <main className="bg-cream">
       {/* HEADER */}
-      <header className="bg-cream pt-16 md:pt-20 pb-10 md:pb-12 text-center">
+      <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-12 text-center">
         <div className="mx-auto max-w-[760px] px-6">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
             <span className="w-[22px] h-px bg-forest inline-block" />
             {eyebrow}
           </p>
-          <h1 className="font-display text-[clamp(2.375rem,5.2vw,3.5rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+          <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
             {title}
           </h1>
           <p className="mt-4 max-w-[600px] mx-auto text-[17px] md:text-[18px] leading-[1.55] text-gray-600">

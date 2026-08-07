@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import ChallengeSignup from "@/components/challenge/ChallengeSignup";
+import PageEyebrow from "@/components/shared/PageEyebrow";
 import { CHALLENGE, CHALLENGE_DAYS } from "@/lib/challenge";
 
 export const metadata: Metadata = {
@@ -72,13 +73,12 @@ export default function ChallengePage() {
                 "radial-gradient(120% 90% at 50% 0%, #ffffff 0%, #F2EFE4 55%, #EAE7D8 100%)",
             }}
           />
-          <div className="relative mx-auto max-w-[760px] px-6 pb-16 pt-14 text-center md:pt-20">
-            <p className="al-fade inline-flex items-center gap-2.5 rounded-full border border-[#DcCFA8] bg-white/70 px-4 py-1.5 text-[12.5px] font-semibold uppercase tracking-[0.13em] text-[#7A3D24]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#C97B5C]" />
+          <div className="relative mx-auto max-w-[760px] px-6 pb-16 pt-12 text-center md:pt-16">
+            <PageEyebrow center className="al-fade">
               Free 5-day challenge · Starts {CHALLENGE.startLabel}
-            </p>
+            </PageEyebrow>
 
-            <h1 className="al-rise mt-6 font-display text-[clamp(2.5rem,7vw,4.25rem)] leading-[1.02] tracking-tight text-balance">
+            <h1 className="al-rise font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
               Five days.{" "}
               <span className="italic text-forest">Five real-world skills.</span>{" "}
               One capable kid.

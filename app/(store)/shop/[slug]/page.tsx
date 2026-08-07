@@ -445,7 +445,7 @@ export default async function ProductPage({
       </div>
 
       {/* HEADER */}
-      <header className="pt-12 md:pt-14 pb-8">
+      <header className="pt-12 md:pt-16 pb-8">
         <div className="mx-auto max-w-[1180px] px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-10 lg:gap-14 items-start">
             {/* LEFT: Cover + preview */}

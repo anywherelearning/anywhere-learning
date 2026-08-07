@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function GoodbyePage() {
   return (
-    <main className="bg-cream px-6 py-24 md:py-32">
+    <main className="bg-cream px-6 pt-12 md:pt-16 pb-24 md:pb-32">
       <div className="mx-auto max-w-[560px] text-center">
         <span className="inline-grid h-14 w-14 place-items-center rounded-full border border-[#C9D3BE] bg-[#E6EBDF] text-forest-dark">
           <svg
@@ -31,7 +31,7 @@ export default function GoodbyePage() {
             <path d="M20 6 9 17l-5-5" />
           </svg>
         </span>
-        <h1 className="mt-6 font-display text-[clamp(34px,4.6vw,48px)] leading-[1.1] tracking-tight text-gray-900">
+        <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
           Thank you. <em className="font-display not-italic text-forest">That genuinely helps.</em>
         </h1>
         <p className="mt-5 text-[17px] leading-relaxed text-gray-500">

@@ -424,7 +424,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* 02 ARTICLE HEADER */}
-        <header className="text-center pt-16 md:pt-20 pb-8 md:pb-10">
+        <header className="text-center pt-12 md:pt-16 pb-8 md:pb-10">
           <div className="mx-auto max-w-[820px] px-6">
             <ScrollReveal immediate>
               <span

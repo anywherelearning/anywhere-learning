@@ -433,7 +433,7 @@ export default function ShopPage() {
       />
       <main className="bg-cream">
         {/* 01 HERO */}
-        <section className="bg-cream pt-6 md:pt-8 pb-8 md:pb-10">
+        <section className="bg-cream pt-12 md:pt-16 pb-8 md:pb-10">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
               <ScrollReveal direction="right" immediate>
@@ -442,7 +442,7 @@ export default function ShopPage() {
                     <span className="w-[22px] h-px bg-forest inline-block" />
                     All the activities
                   </p>
-                  <h1 className="font-display text-[clamp(2.5rem,5.8vw,4.25rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+                  <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
                     Every life-skills activity,{' '}
                     <span className="italic text-forest">in one membership.</span>
                   </h1>

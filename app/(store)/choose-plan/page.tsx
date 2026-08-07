@@ -33,14 +33,14 @@ export default async function ChoosePlanPage() {
   const savings = annualSavingsPct(m.priceUSD);
 
   return (
-    <main className="bg-cream px-6 py-16 md:py-20">
+    <main className="bg-cream px-6 pt-12 md:pt-16 pb-16 md:pb-20">
       <div className="mx-auto max-w-[880px]">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-[620px] text-center">
           <span className="inline-flex items-center gap-2.5 text-[12.5px] font-medium uppercase tracking-[.16em] text-forest-dark before:block before:h-px before:w-[22px] before:bg-forest">
             Start your free trial
           </span>
-          <h1 className="mt-3.5 text-balance font-display text-[clamp(34px,4.6vw,52px)] leading-[1.08] tracking-tight text-gray-900">
+          <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
             Pick how you&apos;d like{' '}
             <em className="font-display not-italic text-forest">to join.</em>
           </h1>

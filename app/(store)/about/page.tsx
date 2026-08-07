@@ -171,7 +171,7 @@ export default function AboutPage() {
         {/* ════════════════════════════════════════
             01 HERO
         ════════════════════════════════════════ */}
-        <header className="bg-cream pt-12 md:pt-20 pb-14 md:pb-20 overflow-hidden">
+        <header className="bg-cream pt-12 md:pt-16 pb-14 md:pb-20 overflow-hidden">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
               <ScrollReveal direction="right" immediate>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                     <span className="w-[22px] h-px bg-forest inline-block" />
                     I&apos;m Amelie
                   </p>
-                  <h1 className="font-display text-[clamp(2.25rem,4.8vw,4rem)] leading-[1.06] tracking-tight mt-5 text-balance">
+                  <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
                     After 15 years in the classroom, I left to give my own kids{' '}
                     <span className="italic text-forest">something different.</span>
                   </h1>

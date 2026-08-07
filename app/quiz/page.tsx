@@ -48,7 +48,7 @@ export default function QuizPage() {
       />
       <SiteHeader />
       <main className="bg-[#F2EFE4] min-h-[70vh]">
-        <section className="py-14 md:py-20">
+        <section className="pt-12 md:pt-16 pb-14 md:pb-20">
           <div className="mx-auto max-w-[1180px] px-6">
             <LifeSkillQuiz />
           </div>

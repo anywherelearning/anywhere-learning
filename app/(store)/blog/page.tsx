@@ -293,7 +293,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 <span className="w-[22px] h-px bg-forest inline-block" />
                 The blog
               </p>
-              <h1 className="font-display text-[clamp(2.25rem,5.5vw,4.5rem)] leading-[1.04] tracking-tight mt-4 text-balance md:whitespace-nowrap">
+              <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
                 Ideas for the everyday <span className="italic text-forest">explorer.</span>
               </h1>
               <p className="mt-5 text-[17px] md:text-[18.5px] leading-[1.55] text-gray-600 max-w-[620px] mx-auto">

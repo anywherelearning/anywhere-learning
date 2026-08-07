@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllCategories, getTotalIdeas, getListCount } from '@/lib/ideas';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
+import PageEyebrow from '@/components/shared/PageEyebrow';
 
 export const metadata: Metadata = {
   // Absolute so the keyword-led tag isn't pushed past the SERP cutoff
@@ -97,17 +98,9 @@ export default function IdeasPage() {
         {/* ---------------------------------------------------------------- */}
         <section className="pt-12 md:pt-16 pb-8 md:pb-10">
           <div className="mx-auto max-w-[820px] px-6 text-center">
-            {/* Title */}
-            <h1 className="font-display text-[clamp(2.5rem,5.8vw,4.25rem)] leading-[1.04] tracking-tight text-balance">
-              <span
-                className="relative inline-block pb-2"
-                style={{
-                  borderBottom: '3px solid #e8c99a',
-                  borderRadius: '0 0 4px 4px',
-                }}
-              >
-                Activity Ideas for Kids
-              </span>
+            <PageEyebrow>Free printables</PageEyebrow>
+            <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+              Activity <span className="italic text-forest">ideas for kids.</span>
             </h1>
 
             {/* Subtitle: definitional answer block, then the warm line */}

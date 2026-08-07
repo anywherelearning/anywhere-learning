@@ -83,14 +83,14 @@ export default function ContactPage() {
       />
       <main className="bg-cream">
         {/* 01 PAGE HEADER */}
-        <header className="bg-cream pt-16 md:pt-24 pb-10 md:pb-14 text-center">
+        <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-14 text-center">
           <div className="mx-auto max-w-[760px] px-6">
             <ScrollReveal immediate>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />
                 Get in touch
               </p>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] leading-[1.02] tracking-tight mt-4 text-balance">
+              <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
                 Say <span className="italic text-forest">hello.</span>
               </h1>
               <p className="mt-5 text-[17px] md:text-[18.5px] leading-[1.55] text-gray-600 max-w-[620px] mx-auto">

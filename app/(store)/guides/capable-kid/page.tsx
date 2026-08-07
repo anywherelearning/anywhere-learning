@@ -149,16 +149,16 @@ export default function CapableKidGuidePage() {
         {/* ════════════════════════════════════════
             01 HERO
         ════════════════════════════════════════ */}
-        <section className="py-16 md:py-24">
+        <section className="pt-12 md:pt-16 pb-16 md:pb-24">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-16 items-center">
               <ScrollReveal direction="right" immediate>
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
-                    <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                    <span className="w-[22px] h-px bg-forest inline-block" />
                     Free download
                   </p>
-                  <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] tracking-tight mt-4 text-balance">
+                  <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
                     Raise a kid who can{' '}
                     <span className="italic text-forest">figure things out.</span>
                   </h1>
@@ -217,8 +217,8 @@ export default function CapableKidGuidePage() {
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-12">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                  <span className="w-[22px] h-px bg-forest inline-block" />
                   Credentialed vs capable
                 </p>
                 <h2 className="font-display text-[clamp(1.9rem,4vw,2.875rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">

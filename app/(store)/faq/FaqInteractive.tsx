@@ -162,7 +162,7 @@ export default function FaqInteractive({ groups }: Props) {
                 <span className="w-[22px] h-px bg-forest inline-block" />
                 {g.eyebrow}
               </p>
-              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
+              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight mt-4 text-balance">
                 {g.title}{' '}
                 <span className="italic text-forest">{g.titleAccent}</span>
               </h2>
@@ -229,12 +229,12 @@ export default function FaqInteractive({ groups }: Props) {
               className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-forest/10 blur-3xl"
             />
             <div className="relative">
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
+                <span className="w-[22px] h-px bg-forest inline-block" />
                 Still have questions?
               </p>
               <h2 className="font-display text-[clamp(1.875rem,4vw,3rem)] leading-[1.06] tracking-tight mt-3.5 text-balance">
-                We&apos;re <span className="italic text-[#7A3D24]">always happy</span> to help.
+                We&apos;re <span className="italic text-forest">always happy</span> to help.
               </h2>
               <p className="mt-5 text-[17.5px] leading-[1.55] text-gray-700 max-w-[520px] mx-auto">
                 Reach out. We read every email and reply within 24 hours.

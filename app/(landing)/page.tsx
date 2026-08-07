@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import Eyebrow from '@/components/shared/PageEyebrow';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import HeroNextStop from '@/components/home/v2/HeroNextStop';
 import TrailSteps from '@/components/home/v2/TrailSteps';
@@ -41,27 +42,6 @@ const homepageFaqLd = {
     acceptedAnswer: { '@type': 'Answer', text: item.a },
   })),
 };
-
-/** Section eyebrow: hairline rule + small caps label. */
-function Eyebrow({
-  children,
-  tone = 'gold',
-  center = false,
-}: {
-  children: React.ReactNode;
-  tone?: 'gold' | 'cream';
-  center?: boolean;
-}) {
-  return (
-    <p
-      className={`flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] ${
-        tone === 'gold' ? 'text-gold-dark' : 'text-gold-light'
-      } ${center ? 'justify-center' : ''}`}
-    >
-      {children}
-    </p>
-  );
-}
 
 function ArrowIcon({ size = 17 }: { size?: number }) {
   return (
@@ -177,21 +157,15 @@ export default async function HomePage() {
             }}
             aria-hidden="true"
           />
-          <div className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 py-14 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:py-20">
+          <div className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-20">
             <div className="relative z-[2] max-w-[620px]">
               <HeroSaleBadge />
               <div data-reveal>
                 <Eyebrow>Real-world activities &middot; Ages 6&ndash;14</Eyebrow>
               </div>
-              <h1 className="mb-[26px] mt-6 font-display text-[clamp(2.5rem,4.9vw,4rem)] leading-[1.0] tracking-[-0.015em] text-forest-dark">
-                Your kid is smart.
-                <br />
-                But can they handle{' '}
-                <span className="relative inline-block text-[1.05em] text-[#c4674a]">
-                  real life
-                  <span className="absolute -left-[2%] -right-[2%] bottom-[0.04em] -z-10 h-[0.13em] rounded-full bg-gold opacity-80" />
-                </span>
-                ?
+              <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
+                Your kid is smart. But can they handle{' '}
+                <span className="italic text-forest">real life?</span>
               </h1>
               <p className="mb-9 max-w-[500px] text-[17px] leading-[1.62] text-gray-600 text-pretty md:text-xl">
                 We hand you the next real-world activity, matched to your kids. Do one every other
@@ -258,7 +232,7 @@ export default async function HomePage() {
         >
           <div className="mx-auto max-w-[1100px]">
             <ScrollReveal>
-              <Eyebrow tone="cream">Why this exists</Eyebrow>
+              <Eyebrow tone="dark">Why this exists</Eyebrow>
               {/* No max-w on either: the cards below run the full container
                   width, so a short measure up here leaves a ragged gap. */}
               <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04] text-cream">
@@ -328,7 +302,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-[60px] text-center">
                 <Eyebrow center>Inside the membership</Eyebrow>
-                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] text-forest-dark">
+                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] tracking-tight text-balance">
                   It&apos;s a trail, not a to-do list.
                 </h2>
                 <p className="mx-auto max-w-[560px] text-lg leading-[1.65] text-gray-600">
@@ -363,7 +337,7 @@ export default async function HomePage() {
                     the headline and its own copy; on desktop the grid lifts it
                     back up to sit beside the headline. */}
                 <div className="mt-4 md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-x-10">
-                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] leading-[1.06] text-forest-dark md:col-start-1 md:row-start-1">
+                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] leading-[1.06] tracking-tight text-balance md:col-start-1 md:row-start-1">
                     120+ activities. Every topic.
                   </h2>
                   <p className="mt-3 text-lg leading-[1.65] text-gray-600 md:col-start-1 md:row-start-2">
@@ -409,7 +383,7 @@ export default async function HomePage() {
               <div>
                 <ScrollReveal>
                   <div className="mb-7">
-                    <h2 className="mb-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
+                    <h2 className="mb-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] tracking-tight text-balance">
                       Something new waiting every month.
                     </h2>
                     <p className="text-lg leading-[1.7] text-gray-600">
@@ -517,7 +491,7 @@ export default async function HomePage() {
               <ScrollReveal>
                 <div>
                   <Eyebrow>The Record</Eyebrow>
-                  <h2 className="mb-[18px] mt-[18px] font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
+                  <h2 className="mb-[18px] mt-[18px] font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] tracking-tight text-balance">
                     Everything you did, written down for you.
                   </h2>
                   <p className="mb-7 text-lg leading-[1.7] text-gray-600 text-pretty">
@@ -577,7 +551,7 @@ export default async function HomePage() {
             <ScrollReveal direction="right">
               <div>
                 <Eyebrow>Made by a teacher, for parents</Eyebrow>
-                <h2 className="mb-[22px] mt-[18px] font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.06] text-forest-dark">
+                <h2 className="mb-[22px] mt-[18px] font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.06] tracking-tight text-balance">
                   Hi, I&apos;m Amelie.
                 </h2>
                 <p className="mb-4 text-lg leading-[1.72] text-gray-600 text-pretty">
@@ -625,7 +599,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-12 text-center">
                 <Eyebrow center>Parents talking</Eyebrow>
-                <h2 className="mb-3 mt-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
+                <h2 className="mb-3 mt-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] tracking-tight text-balance">
                   Families already doing this.
                 </h2>
                 <p className="mx-auto max-w-[520px] text-[17px] text-gray-500">
@@ -691,7 +665,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-10 text-center">
                 <Eyebrow center>The membership</Eyebrow>
-                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] text-forest-dark">
+                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] tracking-tight text-balance">
                   One price. All of it.
                 </h2>
                 <p className="mx-auto max-w-[520px] text-lg leading-[1.65] text-gray-600">
@@ -744,7 +718,7 @@ export default async function HomePage() {
 
             <div className="mx-auto max-w-[1100px]">
               <ScrollReveal>
-                <h2 className="mb-7 text-center font-display text-[clamp(1.65rem,3vw,2.4rem)] leading-[1.08] text-forest-dark">
+                <h2 className="mb-7 text-center font-display text-[clamp(1.65rem,3vw,2.4rem)] leading-[1.08] tracking-tight text-balance">
                   You might be wondering&hellip;
                 </h2>
               </ScrollReveal>
