@@ -83,16 +83,16 @@ export default async function SiteFooter() {
   // automatically once we hit 100 active members.
   const m = await getMembership();
   return (
-    <footer className="bg-[#DAD7CD] border-t border-[#C9C5B7] pt-6 pb-4">
+    <footer className="bg-[#DAD7CD] border-t border-[#C9C5B7] pt-5 pb-3 md:pt-6 md:pb-4">
       <div className="mx-auto max-w-[1280px] px-6">
         {/* Columns */}
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-6 md:gap-6 mb-4">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-x-3 gap-y-4 md:gap-6 mb-3 md:mb-4">
           <div className="col-span-3 md:col-span-1">
             <FooterLogo />
-            <p className="mt-1.5 font-display italic text-[14.5px] leading-[1.3] text-gray-600 max-w-[260px]">
+            <p className="mt-1.5 hidden font-display italic text-[14.5px] leading-[1.3] text-gray-600 max-w-[260px] md:block">
               Hands-on activities for raising capable kids, ready for real life.
             </p>
-            <p className="mt-1 text-[12px] text-gray-500">
+            <p className="mt-1 hidden text-[12px] text-gray-500 md:block">
               Built by Amelie. Made in Nelson, BC.
             </p>
             <div className="mt-2 flex gap-2 md:pl-[48px]">
@@ -127,10 +127,10 @@ export default async function SiteFooter() {
           </div>
 
           <FooterColumn title="Explore">
-            <FooterLink href="/shop">Browse activities</FooterLink>
+            <FooterLink href="/shop">Activities</FooterLink>
             <FooterLink href="/quiz">Take the Quiz</FooterLink>
-            <FooterLink href="/free-guide">Free 7-day guide</FooterLink>
-            <FooterLink href="/guides/capable-kid">Capable Kid Guide</FooterLink>
+            <FooterLink href="/free-guide">Free guide</FooterLink>
+            <FooterLink href="/guides/capable-kid">Capable Kid</FooterLink>
           </FooterColumn>
 
           <FooterColumn title="Read &amp; Learn">
@@ -151,7 +151,7 @@ export default async function SiteFooter() {
         </div>
 
         {/* Bottom strip */}
-        <div className="pt-3 border-t border-[#C9C5B7] flex items-center justify-between gap-2 flex-wrap text-[12px] text-gray-500 max-md:flex-col max-md:text-center">
+        <div className="pt-2.5 md:pt-3 border-t border-[#C9C5B7] flex items-center justify-between gap-1.5 md:gap-2 flex-wrap text-[11.5px] md:text-[12px] text-gray-500 max-md:flex-col max-md:text-center">
           <div className="inline-flex items-center gap-2 flex-wrap">
             <span>&copy; {new Date().getFullYear()} Anywhere Learning Co.</span>
             <span aria-hidden="true" className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7] inline-block" />
@@ -159,7 +159,7 @@ export default async function SiteFooter() {
           </div>
           <div className="inline-flex items-center gap-2 flex-wrap">
             {m.isFounderPhase && (
-              <em className="font-display italic text-[#C97B5C] not-italic md:italic">
+              <em className="hidden font-display italic text-[#C97B5C] not-italic md:inline md:italic">
                 Founding member rate locked in for life.
               </em>
             )}
@@ -186,7 +186,7 @@ function FooterColumn({
   return (
     <div>
       <h4
-        className="font-body font-semibold text-[12px] uppercase tracking-[0.18em] text-gray-600 m-0 mb-2"
+        className="font-body font-semibold text-[11px] uppercase tracking-[0.08em] text-gray-600 m-0 mb-1.5 md:text-[12px] md:tracking-[0.18em] md:mb-2"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       <ul className="list-none p-0 m-0 flex flex-col gap-0.5">{children}</ul>

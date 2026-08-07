@@ -9,7 +9,9 @@ import { HOME_FAQS } from '@/lib/home-showcase';
  * on the server, so the markup and the structured data can't drift.
  */
 export default function HomeFaqAccordion() {
-  const [open, setOpen] = useState(0);
+  // -1 = all closed. Opening one by default makes the list look half-broken
+  // and pushes the second question off a phone screen.
+  const [open, setOpen] = useState(-1);
 
   // Two real columns rather than one nine-item stack, which read as a wall.
   // Split into separate flex columns (not a grid) so opening an answer pushes

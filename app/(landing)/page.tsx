@@ -457,7 +457,7 @@ export default async function HomePage() {
                       <div className="mb-2 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
                         Gathered around them
                       </div>
-                      <ul className="divide-y divide-gray-300/40">
+                      <ul className="grid grid-cols-2 gap-x-4 sm:grid-cols-1 sm:divide-y sm:divide-gray-300/40">
                         {[
                           'A read for you',
                           'Books by age',
@@ -470,7 +470,7 @@ export default async function HomePage() {
                         ].map((item) => (
                           <li
                             key={item}
-                            className="flex items-center gap-2.5 py-[7px] text-[14.5px] text-gray-500"
+                            className="flex items-center gap-2 py-[5px] text-[13.5px] text-gray-500 sm:gap-2.5 sm:py-[7px] sm:text-[14.5px]"
                           >
                             <span
                               className="h-1 w-1 flex-shrink-0 rounded-full bg-gold"
