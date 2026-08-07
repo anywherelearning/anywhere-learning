@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
+import { useAccessTier } from '@/hooks/useAccessTier';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import {
   MEMBERSHIP_PRICE_YEAR,
@@ -46,12 +47,19 @@ export default function BlogExitIntentPopup() {
 }
 
 function MemberGate() {
-  const { isLoaded, user } = useUser();
-  const tier = user?.publicMetadata?.tier as string | undefined;
-  // Hide only from full members (incl. trial). Starters haven't unlocked the
-  // full library, so the upgrade upsell is still relevant to them.
-  const isFullMember = tier === 'member';
-  if (!isLoaded || isFullMember) return null;
+  const { isLoaded, isSignedIn } = useUser();
+  // Access comes from the database via useAccessTier, not Clerk's
+  // publicMetadata.tier: the mirror only gets corrected by a Stripe webhook, so
+  // an account whose subscription went away any other way keeps claiming
+  // membership and would never be offered the upsell again.
+  const tier = useAccessTier(!!isSignedIn);
+  if (!isLoaded) return null;
+  // Signed in but the tier hasn't landed yet: wait rather than risk showing a
+  // member the "unlock with membership" pitch. Signed-out readers resolve to
+  // null with no request, so nothing is delayed for them.
+  if (isSignedIn && tier === null) return null;
+  // Hide only from people who already have the library (paid or trialing).
+  if (tier === 'member' || tier === 'trial') return null;
   return <BlogExitIntentPopupInner />;
 }
 

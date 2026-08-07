@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useUser } from '@clerk/nextjs';
+import { useAccessTier } from '@/hooks/useAccessTier';
 import { SALE_CONFIG, isSaleActive, saleDaysLeft } from '@/lib/sale';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -12,13 +13,24 @@ export default function SaleBanner() {
   return <Gated />;
 }
 
-/** Hide only from full members (incl. trial). Starters still see it so they can
- *  upgrade to membership at the sale price. */
+/**
+ * Hide only from people who already have the library (paid or trialing).
+ * Everyone else sees the sale, including signed-in non-members.
+ *
+ * Access comes from the database via useAccessTier, not Clerk's
+ * publicMetadata.tier: the mirror only gets corrected by a Stripe webhook, so
+ * an account whose subscription went away any other way keeps claiming
+ * membership and would hide its own sale banner.
+ */
 function Gated() {
-  const { isLoaded, user } = useUser();
-  const tier = user?.publicMetadata?.tier as string | undefined;
-  const isFullMember = tier === 'member';
-  if (!isLoaded || isFullMember) return null;
+  const { isLoaded, isSignedIn } = useUser();
+  const tier = useAccessTier(!!isSignedIn);
+  if (!isLoaded) return null;
+  // Signed in but the tier hasn't landed yet: wait, rather than flashing the
+  // banner at a member and shifting the page when it disappears. Signed-out
+  // visitors resolve to null with no request, so they see it immediately.
+  if (isSignedIn && tier === null) return null;
+  if (tier === 'member' || tier === 'trial') return null;
   return <SaleBannerInner />;
 }
 
