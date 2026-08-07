@@ -239,9 +239,8 @@ export default async function HomePage() {
                 Kids don&apos;t hate learning. They hate learning that isn&apos;t about anything.
               </h2>
               <p className="mb-14 text-[19px] leading-[1.7] text-cream/[0.78] text-pretty">
-                Somewhere along the way, learning got separated from real life. Kids get taught all
-                day and almost never get to try, so the skills don&apos;t stick and the curiosity
-                quietly drains out. Put the learning back inside something real and both come back.
+                Learning got separated from real life. Kids get taught all day and almost never get
+                to try.
               </p>
             </ScrollReveal>
 
@@ -249,15 +248,15 @@ export default async function HomePage() {
               {[
                 {
                   t: "They're actually learning",
-                  b: "Plan a party and that's budgeting and fractions. Start a small business and that's writing, pricing, and talking to customers. Real things are full of real academics.",
+                  b: "Plan a party, that's budgeting and fractions. Run a small business, that's writing and pricing.",
                 },
                 {
                   t: 'They actually want to',
-                  b: 'Nobody has to be talked into planning a party. When the activity is about something, the reason to care is already built in.',
+                  b: 'Nobody needs convincing to plan a party. The reason to care is built in.',
                 },
                 {
                   t: 'And it sticks',
-                  b: 'A skill they used is a skill they keep. Nothing here gets memorized for a test and forgotten by June.',
+                  b: 'A skill they used is a skill they keep. Nothing memorized for a test.',
                 },
               ].map((c, i) => (
                 <ScrollReveal key={c.t} delay={i * 100} className="h-full">
