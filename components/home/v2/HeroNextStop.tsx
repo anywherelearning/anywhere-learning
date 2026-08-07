@@ -75,7 +75,7 @@ export default function HeroNextStop() {
           </div>
 
           <h2
-            className="mb-3 text-[30px] font-bold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
+            className="mb-3 text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
           >
             {a.title}
           </h2>

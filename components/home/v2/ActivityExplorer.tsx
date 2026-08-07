@@ -65,7 +65,7 @@ export default function ActivityExplorer() {
               </span>
               <span className="whitespace-nowrap text-xs text-gray-400">{a.time}</span>
             </div>
-            <div className="mb-2 font-display text-[20px] font-bold leading-[1.2] text-forest-dark">
+            <div className="mb-2 font-display text-[20px] leading-[1.2] text-forest-dark">
               {a.title}
             </div>
             <div className="text-[15px] leading-[1.55] text-gray-500">{a.blurb}</div>

@@ -7,6 +7,12 @@
   --color-forest-dark: #3d5c3b;
   --color-gold-light: #e8c99a;
   --color-gold-dark: #b5803e;
+  /* NOTE: this does NOT generate a `font-display` utility. Tailwind 4's font
+     namespace is --font-*, not --font-family-*, so the ~360 `font-display`
+     classes across the app silently fall back to the body font (DM Sans), which
+     is the intended look. Renaming this to --font-display would flip every
+     heading on the site to Dancing Script in one go. Don't, unless that's the
+     goal. */
   --font-family-display: var(--font-display);
   --font-family-body: var(--font-body);
 }

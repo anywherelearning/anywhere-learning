@@ -16,11 +16,17 @@ import GoogleCustomerReviewsBadge from "@/components/analytics/GoogleCustomerRev
 import ImageProtection from "@/components/shared/ImageProtection";
 import "./globals.css";
 
+// Dancing Script is NOT used by the marketing site. It is referenced by literal
+// family name in a handful of member/mobile surfaces (app-login, app-account,
+// NativeLibraryView, NativeAuthGuard, MemberPaywallOverlay, WelcomeTour), which
+// works because next/font registers it under its real family name. preload is
+// off so the marketing pages, which never render it, don't pay to fetch it.
 const displayFont = Dancing_Script({
   subsets: ["latin"],
   weight: ["700"],
   variable: "--font-display",
   display: "swap",
+  preload: false,
 });
 
 const bodyFont = DM_Sans({

@@ -183,7 +183,7 @@ export default async function HomePage() {
               <div data-reveal>
                 <Eyebrow>Real-world activities &middot; Ages 6&ndash;14</Eyebrow>
               </div>
-              <h1 className="mb-[26px] mt-6 font-display text-[clamp(2.5rem,4.9vw,4rem)] font-bold leading-[1.0] tracking-[-0.015em] text-forest-dark">
+              <h1 className="mb-[26px] mt-6 font-display text-[clamp(2.5rem,4.9vw,4rem)] leading-[1.0] tracking-[-0.015em] text-forest-dark">
                 Your kid is smart.
                 <br />
                 But can they handle{' '}
@@ -261,7 +261,7 @@ export default async function HomePage() {
               <Eyebrow tone="cream">Why this exists</Eyebrow>
               {/* No max-w on either: the cards below run the full container
                   width, so a short measure up here leaves a ragged gap. */}
-              <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] font-bold leading-[1.04] text-cream">
+              <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04] text-cream">
                 200 Pinterest boards saved. Still no plan for Monday.
               </h2>
               <p className="mb-14 text-[19px] leading-[1.7] text-cream/[0.78] text-pretty">
@@ -309,7 +309,7 @@ export default async function HomePage() {
                     key={s.l}
                     className={`text-center ${i < 2 ? 'border-r border-cream/[0.14]' : ''}`}
                   >
-                    <div className="font-display text-[clamp(2.2rem,4vw,3.2rem)] font-bold leading-none text-gold-light">
+                    <div className="font-display text-[clamp(2.2rem,4vw,3.2rem)] leading-none text-gold-light">
                       {s.n}
                     </div>
                     <div className="mt-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-cream/60 md:text-[13px]">
@@ -328,7 +328,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-[60px] text-center">
                 <Eyebrow center>Inside the membership</Eyebrow>
-                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] font-bold leading-[1.06] text-forest-dark">
+                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] text-forest-dark">
                   It&apos;s a trail, not a to-do list.
                 </h2>
                 <p className="mx-auto max-w-[560px] text-lg leading-[1.65] text-gray-600">
@@ -363,7 +363,7 @@ export default async function HomePage() {
                     the headline and its own copy; on desktop the grid lifts it
                     back up to sit beside the headline. */}
                 <div className="mt-4 md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-x-10">
-                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] font-bold leading-[1.06] text-forest-dark md:col-start-1 md:row-start-1">
+                  <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.7rem)] leading-[1.06] text-forest-dark md:col-start-1 md:row-start-1">
                     120+ activities. Every topic.
                   </h2>
                   <p className="mt-3 text-lg leading-[1.65] text-gray-600 md:col-start-1 md:row-start-2">
@@ -409,7 +409,7 @@ export default async function HomePage() {
               <div>
                 <ScrollReveal>
                   <div className="mb-7">
-                    <h2 className="mb-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] font-bold leading-[1.06] text-forest-dark">
+                    <h2 className="mb-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
                       Something new waiting every month.
                     </h2>
                     <p className="text-lg leading-[1.7] text-gray-600">
@@ -440,7 +440,7 @@ export default async function HomePage() {
                           key={c.k}
                           className="rounded-[16px] border border-gray-200/60 bg-white px-5 py-[15px] shadow-[0_1px_3px_0_rgba(60,50,30,0.08)] transition-all duration-300 hover:translate-x-1 hover:shadow-[0_12px_28px_-8px_rgba(88,129,87,0.14)]"
                         >
-                          <div className="mb-1 font-display text-[19px] font-bold leading-tight text-forest-dark">
+                          <div className="mb-1 font-display text-[19px] leading-tight text-forest-dark">
                             {c.k}
                           </div>
                           <div className="text-[14.5px] leading-[1.5] text-gray-500">{c.b}</div>
@@ -517,7 +517,7 @@ export default async function HomePage() {
               <ScrollReveal>
                 <div>
                   <Eyebrow>The Record</Eyebrow>
-                  <h2 className="mb-[18px] mt-[18px] font-display text-[clamp(1.75rem,3.3vw,2.6rem)] font-bold leading-[1.06] text-forest-dark">
+                  <h2 className="mb-[18px] mt-[18px] font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
                     Everything you did, written down for you.
                   </h2>
                   <p className="mb-7 text-lg leading-[1.7] text-gray-600 text-pretty">
@@ -577,7 +577,7 @@ export default async function HomePage() {
             <ScrollReveal direction="right">
               <div>
                 <Eyebrow>Made by a teacher, for parents</Eyebrow>
-                <h2 className="mb-[22px] mt-[18px] font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-bold leading-[1.06] text-forest-dark">
+                <h2 className="mb-[22px] mt-[18px] font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.06] text-forest-dark">
                   Hi, I&apos;m Amelie.
                 </h2>
                 <p className="mb-4 text-lg leading-[1.72] text-gray-600 text-pretty">
@@ -625,7 +625,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-12 text-center">
                 <Eyebrow center>Parents talking</Eyebrow>
-                <h2 className="mb-3 mt-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] font-bold leading-[1.06] text-forest-dark">
+                <h2 className="mb-3 mt-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] text-forest-dark">
                   Families already doing this.
                 </h2>
                 <p className="mx-auto max-w-[520px] text-[17px] text-gray-500">
@@ -691,7 +691,7 @@ export default async function HomePage() {
             <ScrollReveal>
               <div className="mb-10 text-center">
                 <Eyebrow center>The membership</Eyebrow>
-                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] font-bold leading-[1.06] text-forest-dark">
+                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] text-forest-dark">
                   One price. All of it.
                 </h2>
                 <p className="mx-auto max-w-[520px] text-lg leading-[1.65] text-gray-600">
@@ -744,7 +744,7 @@ export default async function HomePage() {
 
             <div className="mx-auto max-w-[1100px]">
               <ScrollReveal>
-                <h2 className="mb-7 text-center font-display text-[clamp(1.65rem,3vw,2.4rem)] font-bold leading-[1.08] text-forest-dark">
+                <h2 className="mb-7 text-center font-display text-[clamp(1.65rem,3vw,2.4rem)] leading-[1.08] text-forest-dark">
                   You might be wondering&hellip;
                 </h2>
               </ScrollReveal>
@@ -765,7 +765,7 @@ export default async function HomePage() {
           <div className="absolute inset-0 bg-forest-dark/[0.82]" aria-hidden="true" />
           <div className="relative mx-auto max-w-[1100px] text-center">
             <ScrollReveal>
-              <h2 className="mb-5 font-display text-[clamp(1.9rem,3.8vw,3rem)] font-bold leading-[1.06] text-cream">
+              <h2 className="mb-5 font-display text-[clamp(1.9rem,3.8vw,3rem)] leading-[1.06] text-cream">
                 Your kids are only this age once.
               </h2>
               <p className="mx-auto mb-9 max-w-[560px] text-lg leading-[1.7] text-cream/[0.82]">
