@@ -19,12 +19,11 @@ export default function ActivityExplorer() {
 
   return (
     <>
-      {/* One swipeable row on phones. Wrapped, nine chips stacked into seven
-          rows and pushed every activity below the fold. Scroll-snap plus a
-          right-edge fade so it reads as a row that continues, rather than a
-          row that happens to be cut off. */}
-      <div className="relative mb-7">
-        <div className="scrollbar-hide -mx-6 flex snap-x snap-mandatory gap-[9px] overflow-x-auto px-6 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
+      {/* Two even columns on phones: all nine stay visible and nothing scrolls
+          sideways. Free-wrapping pills stacked into seven ragged rows (360px);
+          a fixed 2-up grid packs the same nine into five tidy ones. From sm up
+          there is room to wrap them inline as normal. */}
+      <div className="mb-7 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[9px]">
         {SHOP_CATEGORIES.map((t) => {
           const on = topic === t;
           return (
@@ -33,7 +32,7 @@ export default function ActivityExplorer() {
               type="button"
               onClick={() => setTopic(t)}
               aria-pressed={on}
-              className={`shrink-0 snap-start whitespace-nowrap rounded-full border px-[18px] py-2.5 text-[14.5px] transition-all duration-200 ${
+              className={`rounded-full border px-3 py-2.5 text-center text-[13px] leading-tight transition-all duration-200 sm:shrink-0 sm:whitespace-nowrap sm:px-[18px] sm:text-[14.5px] ${
                 on
                   ? 'border-forest bg-forest font-semibold text-cream'
                   : 'border-gray-200/90 bg-white font-medium text-gray-600 hover:border-forest/40'
@@ -43,11 +42,6 @@ export default function ActivityExplorer() {
             </button>
           );
         })}
-        </div>
-        <div
-          className="pointer-events-none absolute inset-y-0 right-[-1.5rem] w-10 bg-gradient-to-l from-[#f6ecdd] to-transparent sm:hidden"
-          aria-hidden="true"
-        />
       </div>
 
       <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-3">
