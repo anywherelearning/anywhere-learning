@@ -236,7 +236,8 @@ export default async function HomePage() {
               {/* No max-w on either: the cards below run the full container
                   width, so a short measure up here leaves a ragged gap. */}
               <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04] text-cream">
-                Kids don&apos;t hate learning. They hate learning that isn&apos;t about anything.
+                Kids don&apos;t need better worksheets.{' '}
+                <span className="italic text-gold-light">They need a reason.</span>
               </h2>
               <p className="mb-14 text-[19px] leading-[1.7] text-cream/[0.78] text-pretty">
                 Learning got separated from real life. Kids get taught all day and almost never get
