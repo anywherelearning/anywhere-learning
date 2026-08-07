@@ -236,27 +236,28 @@ export default async function HomePage() {
               {/* No max-w on either: the cards below run the full container
                   width, so a short measure up here leaves a ragged gap. */}
               <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04] text-cream">
-                200 Pinterest boards saved. Still no plan for Monday.
+                Kids don&apos;t hate learning. They hate learning that isn&apos;t about anything.
               </h2>
               <p className="mb-14 text-[19px] leading-[1.7] text-cream/[0.78] text-pretty">
-                It&apos;s not a curriculum and it isn&apos;t a shelf of files to manage. It&apos;s
-                one thing to do together, already picked, already matched to your kids.
+                Somewhere along the way, learning got separated from real life. Kids get taught all
+                day and almost never get to try, so the skills don&apos;t stick and the curiosity
+                quietly drains out. Put the learning back inside something real and both come back.
               </p>
             </ScrollReveal>
 
             <div className="mb-16 grid grid-cols-1 gap-5 md:grid-cols-3">
               {[
                 {
-                  t: 'Nothing to plan',
-                  b: 'No lesson plans, no grading, no prep that takes longer than the activity.',
+                  t: "They're actually learning",
+                  b: "Plan a party and that's budgeting and fractions. Start a small business and that's writing, pricing, and talking to customers. Real things are full of real academics.",
                 },
                 {
-                  t: 'Nothing to print',
-                  b: "Open it on your phone, grab whatever's already in the kitchen drawer.",
+                  t: 'They actually want to',
+                  b: 'Nobody has to be talked into planning a party. When the activity is about something, the reason to care is already built in.',
                 },
                 {
-                  t: 'Nothing at a table',
-                  b: 'Nothing here is timed or graded. Kids learn standing up, outside, with their hands.',
+                  t: 'And it sticks',
+                  b: 'A skill they used is a skill they keep. Nothing here gets memorized for a test and forgotten by June.',
                 },
               ].map((c, i) => (
                 <ScrollReveal key={c.t} delay={i * 100} className="h-full">
