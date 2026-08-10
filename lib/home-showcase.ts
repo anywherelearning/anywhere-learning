@@ -317,6 +317,13 @@ export interface TrailStep {
    */
   after?: string;
   afterAlt?: string;
+  /**
+   * Alternative payoff for a beat with no second capture: push the camera into
+   * part of the frame instead. Origin is a percentage of the panel, matching
+   * `cursor`. Real pixels, just closer, which beats faking a screen that
+   * doesn't exist and beats a beat where nothing happens.
+   */
+  zoom?: { scale: number };
   /** Where the cursor rests on `img`, as a percentage of the panel. */
   cursor: { x: number; y: number };
 }
@@ -341,10 +348,14 @@ export const TRAIL_STEPS: TrailStep[] = [
     img: '/product-shots/app-nextstop.webp',
     pos: 'center',
     alt: 'The trail map with the next activity, Outdoor STEM Challenge Cards, waiting on the trail',
-    // No `after` yet: showing the activity swap needs a second real capture of
-    // the same trail with a different card. Until that exists the beat holds on
-    // the real card, which is what this step claims anyway.
-    cursor: { x: 79, y: 60 },
+    // Showing the activity actually swapping needs a second real capture of the
+    // same trail carrying a different card, which doesn't exist yet. Rather
+    // than leave the beat doing nothing, the camera pushes into the card so you
+    // can read what got handed to you. Add `after` when the capture lands and
+    // drop the zoom.
+    zoom: { scale: 1.85 },
+    // The next-stop card, and the point the zoom centres on.
+    cursor: { x: 82, y: 74 },
   },
   {
     n: '3',

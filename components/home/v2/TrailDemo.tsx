@@ -43,15 +43,29 @@ export default function TrailDemo({ step }: { step: number }) {
   }, [beat]);
 
   const showAfter = clicked && !!st.after;
+  // A beat has one payoff or the other, never both: a second frame if one was
+  // captured, otherwise the camera moving in on this one.
+  const zoomed = clicked && !st.after && !!st.zoom;
 
   return (
     <div className="relative aspect-[5/3] w-full overflow-hidden rounded-[24px] border border-gray-200/70 bg-[#f7f5f0] shadow-[0_28px_60px_-14px_rgba(88,129,87,0.24)]">
-      {/* The trail, always underneath. Every beat starts here. */}
+      {/* The trail, always underneath. Every beat starts here.
+          The push-in is background-size rather than a transform: a transform on
+          this element gets flattened back to identity (inline style applies,
+          computed stays at scale 1), while background-size and -position
+          animate reliably. It also keeps the zoom inside the panel's rounded
+          corners without leaning on the parent's overflow clip.
+          app-nextstop.webp is exactly 5:3 like the panel, so 100% is the same
+          framing as `contain` and interpolates, which `contain` would not. */}
       <div
         role="img"
         aria-label={showAfter ? (st.afterAlt ?? st.alt) : st.alt}
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${st.img}')` }}
+        className="absolute inset-0 bg-no-repeat transition-[background-size,background-position] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+        style={{
+          backgroundImage: `url('${st.img}')`,
+          backgroundSize: zoomed ? `${st.zoom!.scale * 100}%` : '100%',
+          backgroundPosition: zoomed ? `${st.cursor.x}% ${st.cursor.y}%` : 'center',
+        }}
       />
 
       {/* Every after-frame stays mounted and cross-fades over the top. Swapping
