@@ -26,8 +26,12 @@ import NextStopCard from '@/components/shared/NextStopCard';
  * rather than a re-record.
  */
 
-/** Cursor travel before the click lands. The parent holds each beat longer. */
-const AIM_MS = 1600;
+/**
+ * Cursor travel before the click lands. Short on purpose: this is dead time,
+ * the payoff is what people are waiting for, and at 1.6s the panel read as
+ * stalled. The parent holds the rest of the beat on the result.
+ */
+const AIM_MS = 850;
 
 export default function TrailDemo({ step }: { step: number }) {
   const beat = Math.max(0, Math.min(TRAIL_STEPS.length - 1, step));
@@ -73,10 +77,11 @@ export default function TrailDemo({ step }: { step: number }) {
       {/* The real signpost, live, where a still can't show the change. Keyed on
           the title so the new activity fades in rather than swapping mid-frame. */}
       {st.swap && (
-        <div className="absolute bottom-[8%] right-[6%] w-[46%]">
+        <div className="absolute right-[6%] top-1/2 w-[44%] -translate-y-1/2">
           <NextStopCard
             key={clicked ? 'to' : 'from'}
             activity={clicked ? st.swap.to : st.swap.from}
+            compact
             className="motion-safe:animate-[alFade_450ms_cubic-bezier(0.22,1,0.36,1)]"
           />
         </div>

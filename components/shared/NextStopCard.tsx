@@ -24,16 +24,23 @@ export default function NextStopCard({
   activity,
   head = 'Next stop',
   showSwap = true,
+  compact = false,
   className = '',
 }: {
   activity: NextStopActivity;
   head?: string;
   /** The engine's pick can be swapped; a family's own pick can't. */
   showSwap?: boolean;
+  /**
+   * Trims the type and padding for small panels. The member zone gives this
+   * card a 350px column; the homepage demo has about 280, and at full size a
+   * two-line title plus a three-line blurb runs off the top and bottom.
+   */
+  compact?: boolean;
   className?: string;
 }) {
   return (
-    <div className={`nsc am-glass ${className}`}>
+    <div className={`nsc am-glass ${compact ? 'nsc-compact' : ''} ${className}`}>
       <div className="am-sign-head">
         <span>{head}</span>
         <span>●</span>
@@ -74,6 +81,18 @@ export default function NextStopCard({
         .am-sub-actions{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:3px}
         .am-sub-actions button{background:none;border:none;font-family:var(--font-catalog),monospace;font-size:11.5px;color:var(--am-muted);padding:4px;text-decoration:underline;text-underline-offset:2px}
         .am-sub-actions span{color:var(--am-muted);opacity:.5}
+
+        /* Compact: same card, sized for a narrow panel. The blurb clamps to two
+           lines so a long one can't push the buttons out of frame. */
+        .nsc-compact .am-sign-head{padding:7px 13px;font-size:9.5px}
+        .nsc-compact .am-sign-body{padding:0 14px 13px}
+        .nsc-compact .nsc-title{font-size:16px}
+        .nsc-compact .nsc-meta{font-size:9px;margin-top:5px}
+        .nsc-compact .nsc-blurb{font-size:11px;margin:5px 0 10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+        .nsc-compact .nsc-actions{gap:6px}
+        .nsc-compact .am-btn{padding:9px 12px;font-size:12px;border-radius:10px}
+        .nsc-compact .am-sub-actions{gap:8px;margin-top:1px}
+        .nsc-compact .am-sub-actions button{font-size:10px;padding:2px;white-space:nowrap}
       `}</style>
     </div>
   );

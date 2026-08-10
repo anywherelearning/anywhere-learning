@@ -5,11 +5,11 @@ import { TRAIL_STEPS } from '@/lib/home-showcase';
 import TrailDemo from './TrailDemo';
 
 /**
- * How long each beat holds before the demo moves itself on. Each beat spends
- * its first 1.5s aiming the cursor (see TrailDemo), so this leaves ~3.5s on the
- * result, which is the part worth reading.
+ * How long each beat holds before the demo moves itself on. The first 0.85s
+ * goes on the cursor reaching its target (see TrailDemo), leaving ~3s on the
+ * result. Longer than that and the panel reads as stopped rather than playing.
  */
-const BEAT_MS = 5000;
+const BEAT_MS = 3900;
 
 /**
  * "It's a trail, not a to-do list" — three steps on the left, the matching beat
