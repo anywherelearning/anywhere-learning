@@ -1,15 +1,16 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { TRAIL_STEPS } from '@/lib/home-showcase';
+import { TRAIL_STEPS, TRAIL_AIM_MS, TRAIL_HOLD_MS } from '@/lib/home-showcase';
 import TrailDemo from './TrailDemo';
 
 /**
- * How long each beat holds before the demo moves itself on. The first 0.85s
- * goes on the cursor reaching its target (see TrailDemo), leaving ~3s on the
- * result. Longer than that and the panel reads as stopped rather than playing.
+ * A beat runs for however long its click takes to land, plus a fixed hold on
+ * the result. Derived rather than a flat number so a step that needs longer
+ * before the click (reading a title that's about to change) doesn't also shorten
+ * the time spent on its payoff.
  */
-const BEAT_MS = 3900;
+const beatMs = (i: number) => (TRAIL_STEPS[i].aimMs ?? TRAIL_AIM_MS) + TRAIL_HOLD_MS;
 
 /**
  * "It's a trail, not a to-do list" — three steps on the left, the matching beat
@@ -37,7 +38,7 @@ export default function TrailSteps() {
     // Motion is decoration here, so anyone who asked for less doesn't get a
     // panel cycling on its own. The step buttons still work.
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-    const t = setTimeout(() => setStep((s) => (s + 1) % TRAIL_STEPS.length), BEAT_MS);
+    const t = setTimeout(() => setStep((s) => (s + 1) % TRAIL_STEPS.length), beatMs(step));
     return () => clearTimeout(t);
   }, [step, paused]);
 

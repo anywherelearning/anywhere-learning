@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { TRAIL_STEPS } from '@/lib/home-showcase';
+import { TRAIL_STEPS, TRAIL_AIM_MS } from '@/lib/home-showcase';
 import NextStopCard from '@/components/shared/NextStopCard';
 
 /**
@@ -26,12 +26,8 @@ import NextStopCard from '@/components/shared/NextStopCard';
  * rather than a re-record.
  */
 
-/**
- * Cursor travel before the click lands. Short on purpose: this is dead time,
- * the payoff is what people are waiting for, and at 1.6s the panel read as
- * stalled. The parent holds the rest of the beat on the result.
- */
-const AIM_MS = 850;
+// Timing lives in lib/home-showcase.ts, shared with the parent that advances
+// the beat. Per-step overrides via `aimMs`.
 
 export default function TrailDemo({ step }: { step: number }) {
   const beat = Math.max(0, Math.min(TRAIL_STEPS.length - 1, step));
@@ -43,9 +39,9 @@ export default function TrailDemo({ step }: { step: number }) {
   // the end of it.
   useEffect(() => {
     setClicked(false);
-    const t = setTimeout(() => setClicked(true), AIM_MS);
+    const t = setTimeout(() => setClicked(true), st.aimMs ?? TRAIL_AIM_MS);
     return () => clearTimeout(t);
-  }, [beat]);
+  }, [beat, st.aimMs]);
 
   const showAfter = clicked && !!st.after;
   // Beats with a second capture cross-fade to it. Beats without one push the

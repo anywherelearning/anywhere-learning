@@ -333,7 +333,26 @@ export interface TrailStep {
   swap?: { from: NextStopActivity; to: NextStopActivity };
   /** Where the cursor rests, as a percentage of the panel. */
   cursor: { x: number; y: number };
+  /**
+   * How long the beat sits on its opening state before the click lands.
+   * Defaults to TRAIL_AIM_MS, which is just cursor travel. Raise it where
+   * there's something to read first: on the swap beat you have to take in the
+   * activity being replaced or the change means nothing.
+   */
+  aimMs?: number;
 }
+
+/**
+ * Demo timing, shared by TrailSteps (which advances the beat) and TrailDemo
+ * (which fires the click inside it), so the two can't drift apart.
+ *
+ * A beat is aim + hold: the cursor travels, the click lands, the result sits
+ * there. Hold is fixed so every payoff gets the same read; aim varies per step,
+ * because a cursor crossing to a button needs less time than a title you have
+ * to read before it changes.
+ */
+export const TRAIL_AIM_MS = 900;
+export const TRAIL_HOLD_MS = 2600;
 
 export const TRAIL_STEPS: TrailStep[] = [
   {
@@ -374,6 +393,10 @@ export const TRAIL_STEPS: TrailStep[] = [
     },
     // "Different one", inside the live card.
     cursor: { x: 63, y: 88 },
+    // Long enough to actually read "Party Planner Math" before it's replaced.
+    // At the default the swap happened before the eye had landed on the title,
+    // so the beat looked like a flicker rather than a choice.
+    aimMs: 2300,
   },
   {
     n: '3',
