@@ -1,24 +1,50 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TRAIL_STEPS } from '@/lib/home-showcase';
+import TrailDemo from './TrailDemo';
 
 /**
- * "It's a trail, not a to-do list" — three steps on the left, a screenshot of
- * that step on the right.
+ * How long each beat holds before the demo moves itself on. Each beat spends
+ * its first 1.5s aiming the cursor (see TrailDemo), so this leaves ~3.5s on the
+ * result, which is the part worth reading.
+ */
+const BEAT_MS = 5000;
+
+/**
+ * "It's a trail, not a to-do list" — three steps on the left, the matching beat
+ * of the product playing on the right.
+ *
+ * The panel advances itself, so a visitor who never clicks still sees all three
+ * steps. Clicking a step takes over: the timer stops for good, because an
+ * auto-advance that fights the person reading is worse than no motion at all.
+ * Hovering pauses without taking over, for anyone mid-sentence.
  *
  * Two layouts, because the desktop one breaks down on a phone: there the side
  * panel ends up hundreds of pixels below the picker, so tapping a step changes
  * an image you cannot see. On small screens the picture moves inside the open
- * step instead, directly under its body copy.
- *
- * Pictures are CSS backgrounds with `contain`, so a screenshot that hasn't been
- * dropped into /public/product-shots yet degrades to a soft cream panel rather
- * than breaking the build.
+ * step instead, directly under its body copy. Phones keep the still
+ * screenshots: three of them stacked in the open step is the wrong place for a
+ * looping animation, and it saves the work on a battery.
  */
 export default function TrailSteps() {
   const [step, setStep] = useState(0);
-  const active = TRAIL_STEPS[step];
+  const [paused, setPaused] = useState(false);
+  const takenOver = useRef(false);
+
+  useEffect(() => {
+    if (paused || takenOver.current) return;
+    // Motion is decoration here, so anyone who asked for less doesn't get a
+    // panel cycling on its own. The step buttons still work.
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    const t = setTimeout(() => setStep((s) => (s + 1) % TRAIL_STEPS.length), BEAT_MS);
+    return () => clearTimeout(t);
+  }, [step, paused]);
+
+  function pick(i: number) {
+    takenOver.current = true;
+    setStep(i);
+  }
 
   return (
     <div className="grid grid-cols-1 items-center gap-11 lg:grid-cols-[0.85fr_1.15fr]">
@@ -36,7 +62,7 @@ export default function TrailSteps() {
             >
               <button
                 type="button"
-                onClick={() => setStep(i)}
+                onClick={() => pick(i)}
                 aria-expanded={on}
                 aria-controls={`trail-step-${i}`}
                 className="flex w-full gap-4 p-6 text-left"
@@ -67,19 +93,16 @@ export default function TrailSteps() {
         })}
       </div>
 
-      {/* Desktop side panel. `contain`, not `cover`: these are real member-zone
-          screenshots and cover was slicing ~45px off each side. */}
-      <div className="hidden lg:block">
-        <div
-          role="img"
-          aria-label={active.alt}
-          className="aspect-[5/3] w-full rounded-[24px] border border-gray-200/70 bg-[#f7f5f0] bg-contain bg-no-repeat shadow-[0_28px_60px_-14px_rgba(88,129,87,0.24)] transition-all duration-300"
-          style={{
-            backgroundImage: `url('${active.img}')`,
-            backgroundPosition: active.pos,
-          }}
-        />
-        <p className="mt-3.5 text-center text-[13.5px] text-gray-500">Pick a step to see it.</p>
+      {/* Desktop side panel: the demo, playing itself. */}
+      <div
+        className="hidden lg:block"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <TrailDemo step={step} />
+        <p className="mt-3.5 text-center text-[13.5px] text-gray-500">
+          Playing. Pick a step to steer it.
+        </p>
       </div>
     </div>
   );
