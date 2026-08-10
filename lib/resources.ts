@@ -2210,6 +2210,7 @@ const resources: ResourcePage[] = [
       'financial-literacy-for-kids-by-age',
       'how-to-raise-independent-kids',
       'teaching-empathy-to-kids',
+      'communication-skills-for-kids',
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
