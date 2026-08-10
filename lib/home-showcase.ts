@@ -7,6 +7,8 @@
  * Keeping one copy means the FAQ JSON-LD can never drift from the rendered FAQ.
  */
 
+import type { NextStopActivity } from '@/components/shared/NextStopCard';
+
 export interface ShowcaseActivity {
   slug: string;
   title: string;
@@ -318,13 +320,18 @@ export interface TrailStep {
   after?: string;
   afterAlt?: string;
   /**
-   * Alternative payoff for a beat with no second capture: push the camera into
-   * part of the frame instead. Origin is a percentage of the panel, matching
-   * `cursor`. Real pixels, just closer, which beats faking a screen that
-   * doesn't exist and beats a beat where nothing happens.
+   * Push the camera into part of the frame. `x`/`y` are a background-position,
+   * so aim them at a region the baked-in signpost isn't in when a live card is
+   * going to sit on top.
    */
-  zoom?: { scale: number };
-  /** Where the cursor rests on `img`, as a percentage of the panel. */
+  zoom?: { scale: number; x: number; y: number };
+  /**
+   * Renders the real NextStopCard over the frame and swaps its activity on the
+   * click. Used where a still can't show the change: the swap is the whole
+   * point of the step, and no capture of it exists.
+   */
+  swap?: { from: NextStopActivity; to: NextStopActivity };
+  /** Where the cursor rests, as a percentage of the panel. */
   cursor: { x: number; y: number };
 }
 
@@ -347,15 +354,26 @@ export const TRAIL_STEPS: TrailStep[] = [
     body: "No scrolling, no second-guessing. Matched to your kids and the time you've got. Not feeling it? Different one, or skip the area.",
     img: '/product-shots/app-nextstop.webp',
     pos: 'center',
-    alt: 'The trail map with the next activity, Outdoor STEM Challenge Cards, waiting on the trail',
-    // Showing the activity actually swapping needs a second real capture of the
-    // same trail carrying a different card, which doesn't exist yet. Rather
-    // than leave the beat doing nothing, the camera pushes into the card so you
-    // can read what got handed to you. Add `after` when the capture lands and
-    // drop the zoom.
-    zoom: { scale: 1.85 },
-    // The next-stop card, and the point the zoom centres on.
-    cursor: { x: 82, y: 74 },
+    alt: 'The next activity on the trail, ready to swap for a different one',
+    // No capture shows an activity swapping, so this beat renders the real
+    // NextStopCard live and changes it on the click. The camera pushes into the
+    // hillside rather than the signpost: the screenshot has its own card baked
+    // into the bottom right, and two cards on screen would be nonsense.
+    zoom: { scale: 1.85, x: 12, y: 68 },
+    swap: {
+      from: {
+        title: 'Party Planner Math',
+        meta: 'Real-World Math · Multi-day',
+        blurb: 'Plan a party from guest list to budget.',
+      },
+      to: {
+        title: 'Outdoor STEM Challenge Cards',
+        meta: 'Physical & Outdoor · Half-day',
+        blurb: '20 outdoor STEM challenges that use the natural world as a laboratory.',
+      },
+    },
+    // "Different one", inside the live card.
+    cursor: { x: 63, y: 88 },
   },
   {
     n: '3',

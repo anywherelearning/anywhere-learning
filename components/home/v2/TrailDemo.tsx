@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { TRAIL_STEPS } from '@/lib/home-showcase';
+import NextStopCard from '@/components/shared/NextStopCard';
 
 /**
  * The moving picture beside "It's a trail, not a to-do list".
@@ -43,9 +44,10 @@ export default function TrailDemo({ step }: { step: number }) {
   }, [beat]);
 
   const showAfter = clicked && !!st.after;
-  // A beat has one payoff or the other, never both: a second frame if one was
-  // captured, otherwise the camera moving in on this one.
-  const zoomed = clicked && !st.after && !!st.zoom;
+  // Beats with a second capture cross-fade to it. Beats without one push the
+  // camera in and, where the change is the whole point, carry a live card that
+  // the click actually changes.
+  const zoomed = !st.after && !!st.zoom;
 
   return (
     <div className="relative aspect-[5/3] w-full overflow-hidden rounded-[24px] border border-gray-200/70 bg-[#f7f5f0] shadow-[0_28px_60px_-14px_rgba(88,129,87,0.24)]">
@@ -64,9 +66,21 @@ export default function TrailDemo({ step }: { step: number }) {
         style={{
           backgroundImage: `url('${st.img}')`,
           backgroundSize: zoomed ? `${st.zoom!.scale * 100}%` : '100%',
-          backgroundPosition: zoomed ? `${st.cursor.x}% ${st.cursor.y}%` : 'center',
+          backgroundPosition: zoomed ? `${st.zoom!.x}% ${st.zoom!.y}%` : 'center',
         }}
       />
+
+      {/* The real signpost, live, where a still can't show the change. Keyed on
+          the title so the new activity fades in rather than swapping mid-frame. */}
+      {st.swap && (
+        <div className="absolute bottom-[8%] right-[6%] w-[46%]">
+          <NextStopCard
+            key={clicked ? 'to' : 'from'}
+            activity={clicked ? st.swap.to : st.swap.from}
+            className="motion-safe:animate-[alFade_450ms_cubic-bezier(0.22,1,0.36,1)]"
+          />
+        </div>
+      )}
 
       {/* Every after-frame stays mounted and cross-fades over the top. Swapping
           a single src would flash the cream panel on each beat while the next
