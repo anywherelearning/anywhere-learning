@@ -304,9 +304,21 @@ export interface TrailStep {
   n: string;
   title: string;
   body: string;
+  /** Still shown on phones, and the "before" frame in the desktop demo. */
   img: string;
   pos: string;
   alt: string;
+  /**
+   * Desktop demo only (components/home/v2/TrailDemo.tsx). The frame the click
+   * produces: the cursor lands on `cursor`, then this cross-fades in. Both are
+   * real member-zone captures. Leave `after` undefined and the beat simply
+   * holds on `img`, which is what a missing capture should look like rather
+   * than a recreated screen.
+   */
+  after?: string;
+  afterAlt?: string;
+  /** Where the cursor rests on `img`, as a percentage of the panel. */
+  cursor: { x: number; y: number };
 }
 
 export const TRAIL_STEPS: TrailStep[] = [
@@ -314,9 +326,13 @@ export const TRAIL_STEPS: TrailStep[] = [
     n: '1',
     title: 'Set up your explorers',
     body: "Names, ages, the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail.",
-    img: '/product-shots/app-explorer.webp',
+    img: '/product-shots/app-nextstop.webp',
     pos: 'center',
-    alt: 'Setting up a child as an explorer inside the membership',
+    alt: "The family trail, with Liam and Elena partway along it",
+    after: '/product-shots/app-explorer.webp',
+    afterAlt: 'An explorer opened, showing what you can change for that child',
+    // Liam, standing on the trail.
+    cursor: { x: 38, y: 77 },
   },
   {
     n: '2',
@@ -325,14 +341,22 @@ export const TRAIL_STEPS: TrailStep[] = [
     img: '/product-shots/app-nextstop.webp',
     pos: 'center',
     alt: 'The trail map with the next activity, Outdoor STEM Challenge Cards, waiting on the trail',
+    // No `after` yet: showing the activity swap needs a second real capture of
+    // the same trail with a different card. Until that exists the beat holds on
+    // the real card, which is what this step claims anyway.
+    cursor: { x: 79, y: 60 },
   },
   {
     n: '3',
     title: 'Do it together, mark it reached',
     body: 'Tap "We reached it." Your explorers move forward and earn gear for the backpack, 72 finds to collect.',
-    img: '/product-shots/app-newfinds.webp',
+    img: '/product-shots/app-nextstop.webp',
     pos: 'center',
-    alt: 'New gear earned by an explorer after finishing an activity',
+    alt: 'The next stop on the trail, ready to be marked as reached',
+    after: '/product-shots/app-newfinds.webp',
+    afterAlt: 'Gear earned by both explorers after finishing the activity',
+    // The "We reached it" button on the next-stop card.
+    cursor: { x: 81, y: 87 },
   },
 ];
 

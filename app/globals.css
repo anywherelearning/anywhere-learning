@@ -101,6 +101,12 @@
 @keyframes alVeil { from { opacity: 0; } to { opacity: 1; } }
 @keyframes alDrift { 0% { transform: translate(0,0); opacity: .5; } 50% { transform: translate(10px,-14px); opacity: .95; } 100% { transform: translate(0,0); opacity: .5; } }
 @keyframes alGentleFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+/* Click ripple for the homepage trail demo. Keeps the -translate-x/y centering
+   the element already carries, since a bare scale() here would drop it. */
+@keyframes alPing {
+  from { opacity: .85; transform: translate(-50%,-50%) scale(0.5); }
+  to   { opacity: 0;   transform: translate(-50%,-50%) scale(2.1); }
+}
 .al-fade { animation: alFade 0.35s cubic-bezier(0.22,1,0.36,1); }
 .al-rise { animation: alRise 0.42s cubic-bezier(0.22,1,0.36,1) both; }
 .al-pop { animation: alPop 0.4s cubic-bezier(0.22,1,0.36,1); }
