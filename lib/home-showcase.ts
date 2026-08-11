@@ -352,7 +352,11 @@ export interface TrailStep {
  * to read before it changes.
  */
 export const TRAIL_AIM_MS = 900;
-export const TRAIL_HOLD_MS = 2600;
+/**
+ * 2.6s was enough to see the result but not to finish reading it: the card's
+ * description ran past the end of the beat. Every step gets a second longer.
+ */
+export const TRAIL_HOLD_MS = 3600;
 
 export const TRAIL_STEPS: TrailStep[] = [
   {
