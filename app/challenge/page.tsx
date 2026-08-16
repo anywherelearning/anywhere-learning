@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
@@ -99,6 +100,19 @@ export default function ChallengePage() {
               {CHALLENGE.rangeLabel}, {CHALLENGE.year}.
             </p>
           </div>
+        </section>
+
+        {/* ── Collage band ── the week, in real photos, before we describe it ── */}
+        <section className="bg-cream">
+          <Image
+            src="/images/challenge-hero-collage.jpg"
+            alt="Snapshots from the week: mapping out directions at the kitchen table, playing outside, a family meal, digging in the sand together, a trip to the market, and two kids making food."
+            width={2400}
+            height={620}
+            priority
+            sizes="100vw"
+            className="h-auto w-full"
+          />
         </section>
 
         {/* ── The five days ── a trail, not a grid ── */}

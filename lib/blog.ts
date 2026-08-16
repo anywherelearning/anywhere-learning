@@ -8299,6 +8299,117 @@ const posts: BlogPost[] = [
     pillarSlug: 'life-skills-for-kids',
   },
 
+  // ── Shark Tank for Kids ──
+  {
+    slug: 'shark-tank-for-kids',
+    title: 'Shark Tank for Kids: A Business-Pitch Activity (Classroom or Home)',
+    excerpt: 'A Shark Tank activity is one of the best real-world projects you can run with kids: they invent a business, build the numbers, and pitch it to the "sharks." Here is how to run it step by step, for ages 8 to 14, at home or in a classroom.',
+    hook: 'Give a kid a business to invent and a room to pitch it in, and watch them light up. Shark Tank for kids teaches more in one project than a month of worksheets.',
+    category: 'real-world-skills',
+    publishedAt: '2026-07-30',
+    dateModified: '2026-07-30',
+    keywords: ['shark tank for kids', 'shark tank classroom activity', 'business pitch for kids', 'shark tank activity for students', 'kids business pitch', 'shark tank project for kids', 'entrepreneurship activity for kids', 'business pitch activity', 'shark tank lesson plan', 'how to run a shark tank activity'],
+    readTimeMinutes: 12,
+    author: amelie,
+    recommendedProduct: 'shark-tank-pitch',
+    heroImage: '/images/shark-tank-for-kids-hero.jpeg',
+    heroImageAlt: 'A smiling girl running her own popcorn stand with a hand-painted sign showing the price and flavors, a real kid business in action',
+    heroImageAspect: '16/10',
+    content: [
+      { type: 'summary', text: 'A Shark Tank activity for kids is a hands-on entrepreneurship project where kids invent a business or product, work out the basics (a name, a price, costs, and profit), build a short pitch, and present it to a panel of "sharks" (family members, classmates, or teachers) who ask questions and decide whether to "invest." It teaches entrepreneurship, public speaking, persuasion, and real-world math in one memorable project, and it works for both a classroom and a single kid at home. This guide walks through what the activity is, why it works, a step-by-step way to run it for ages 8 to 14, the questions the sharks should ask, and how to adapt it by age and setting.' },
+
+      { type: 'paragraph', text: 'There is a reason Shark Tank has been on the air for over a decade, and it is the same reason a Shark Tank activity works so well with kids: watching someone pitch a real idea, under pressure, with money on the line, is genuinely gripping. Turn your kid into the entrepreneur, and something clicks. Suddenly math has a point, talking to people matters, and a wild idea becomes a real project they care about.' },
+      { type: 'paragraph', text: 'This is one of the best single activities you can run with a kid, because it bundles so many real-world skills into one thrilling project: entrepreneurship, public speaking, persuasion, and actual money math. It works in a classroom with thirty kids and it works at your kitchen table with one. And it is a perfect example of the kind of hands-on, real-world learning that builds [the life skills kids actually need](/guides/life-skills-for-kids). Whether you are a homeschool parent hunting for an entrepreneurship activity for kids or a teacher who wants a business pitch for kids the whole class will love, Shark Tank for kids delivers. Here is exactly how to run this kids business pitch, step by step.' },
+
+      { type: 'heading', level: 2, text: 'What is a Shark Tank activity for kids?' },
+      { type: 'paragraph', text: 'A Shark Tank activity for kids borrows the format of the TV show: someone with a business idea pitches it to a panel of investors (the "sharks"), who grill them with questions and then decide whether to invest. In the kid version, your child invents a business or product, works out the basic numbers, prepares a short pitch, and presents it to a panel, family members at home, or classmates and a teacher in a classroom. The sharks ask questions, then offer pretend "investment" or feedback.' },
+      { type: 'paragraph', text: 'It can be as simple or as elaborate as you want. A single kid can pitch a lemonade-stand idea to two parents on a Tuesday night, or a whole class can spend a week building businesses and hold a pitch day with real prizes. The bones are always the same: invent, prepare, pitch, defend.' },
+
+      { type: 'heading', level: 2, text: 'Why it works: everything it teaches at once' },
+      { type: 'paragraph', text: 'Most school activities teach one thing. A Shark Tank activity teaches a stack of them, and because it is fun and high-stakes, the learning actually sticks:' },
+      { type: 'list', ordered: false, items: [
+        'Entrepreneurship: spotting a problem, inventing a solution, and thinking about who would pay for it.',
+        'Real-world math: pricing, costs, profit, and simple projections, the kind of money math no worksheet makes feel real.',
+        'Public speaking: standing up, speaking clearly, and holding a room, one of the most valuable and most avoided skills.',
+        'Persuasion and storytelling: making people care about an idea in ninety seconds.',
+        'Handling pressure: thinking on their feet when the sharks ask a hard question.',
+        'Resilience: hearing "no" or tough feedback and staying standing, which is its own lesson.',
+      ]},
+      { type: 'paragraph', text: 'That is a semester of soft skills in one project, and kids beg to do it again. It pairs especially well with the [communication skills](/blog/communication-skills-for-kids) and [financial literacy](/blog/financial-literacy-for-kids-by-age) you are already building.' },
+
+      { type: 'heading', level: 2, text: 'How to run a Shark Tank activity, step by step' },
+      { type: 'paragraph', text: 'Here is a simple, repeatable structure. Spread it over a few days, or run a lighter version in an afternoon.' },
+
+      { type: 'heading', level: 3, text: 'Step 1: Set the scene' },
+      { type: 'paragraph', text: 'Explain the premise, and if you can, watch one short kid-appropriate Shark Tank pitch together so they see the format: the entrepreneur explains their product, makes an ask, and answers questions. Keep it light and exciting. The goal is for them to think, "I want to do that."' },
+
+      { type: 'heading', level: 3, text: 'Step 2: Invent the business' },
+      { type: 'paragraph', text: 'The best businesses solve a problem, so start there. Ask: what is something that annoys you, or something you wish existed? A better dog leash, a snack for picky eaters, an app that does their chores. It does not have to be realistic. It has to be theirs. Let the idea be a little wild; the thinking is what matters. Give younger kids a few prompts if they get stuck.' },
+
+      { type: 'heading', level: 3, text: 'Step 3: Build the basics (the numbers)' },
+      { type: 'paragraph', text: 'This is where real math sneaks in. Help them work out: a name, what the product is, what it costs to make (materials), what they would sell it for, and therefore the profit per sale. Then the fun projection: if they sold 100, how much would they make? This is pricing, subtraction, and multiplication with genuine stakes, and it is the part kids remember. Keep it age-appropriate; a nine-year-old needs simpler numbers than a fourteen-year-old.' },
+
+      { type: 'heading', level: 3, text: 'Step 4: Write the pitch' },
+      { type: 'paragraph', text: 'A great pitch has four parts, and teaching this structure is a gift on its own: the hook (grab attention), the problem (what this solves), the solution (the product and why it is great), and the ask (what they want from the sharks, usually an "investment" for a share of the business). Keep it to about a minute. Help them write it in their own words, then trim it down.' },
+
+      { type: 'heading', level: 3, text: 'Step 5: Make it visual' },
+      { type: 'paragraph', text: 'Have them create something to show: a poster, a simple slide, a drawing of the product, or even a rough prototype made from cardboard. Building the visual makes the idea concrete and gives nervous kids something to hold and point to. It also sneaks in design and planning.' },
+
+      { type: 'heading', level: 3, text: 'Step 6: Practice' },
+      { type: 'paragraph', text: 'Rehearsal is where the nerves come down. Have them practice the pitch on you, on a sibling, on the mirror. Coach gently: speak up, slow down, make eye contact. Warn them that the sharks will ask questions, and brainstorm a few they might get ("How much does it cost to make? Why would I buy this and not something cheaper?") so they are not blindsided.' },
+
+      { type: 'heading', level: 3, text: 'Step 7: Pitch day' },
+      { type: 'paragraph', text: 'Set it up like the real thing. The sharks (parents, siblings, classmates, teacher) sit as a panel. The kid pitches. Then the sharks ask real questions and, at the end, decide whether to "invest" and why. Give it a little ceremony, it makes the moment matter, and the pressure is exactly what builds the skill. For a class, run several pitches and let everyone play shark for someone else.' },
+
+      { type: 'heading', level: 3, text: 'Step 8: Debrief' },
+      { type: 'paragraph', text: 'Afterward, talk about it. What went well? What would they change? What did the sharks respond to? This reflection is where a fun activity turns into real learning, and it is where a kid who got a "no" learns that feedback is information, not failure.' },
+
+      { type: 'product-callout', slug: 'shark-tank-pitch', context: 'If you want the whole thing laid out for you, our Shark Tank Pitch guide walks a kid through inventing the business, building the numbers, and delivering the pitch, step by step. Open and go, no prep.', pinned: true },
+
+      { type: 'image', src: '/images/shark-tank-for-kids-pitch.jpeg', alt: 'A child standing behind a table presenting an invented app called SitterMatch with a hand-drawn poster, pitching a business idea', caption: 'Give it a little ceremony. The pressure of a real pitch is exactly what makes the skills stick.' },
+
+      { type: 'heading', level: 2, text: 'What the sharks should ask' },
+      { type: 'paragraph', text: 'Half the value of this activity is in the questions, because answering them on the spot is where kids really grow. If you are playing shark, ask real but fair questions:' },
+      { type: 'list', ordered: false, items: [
+        '"Who is this for? Who would actually buy it?"',
+        '"How much does it cost to make, and how much are you selling it for?"',
+        '"Why would I buy this instead of something cheaper that already exists?"',
+        '"What is the hardest part of actually making this happen?"',
+        '"If I gave you the money, what would you spend it on first?"',
+      ]},
+      { type: 'paragraph', text: 'Push a little, but keep it warm. The goal is to stretch their thinking, not to crush them. A good shark makes a kid think harder and still feel proud of what they built.' },
+
+      { type: 'heading', level: 2, text: 'Adapting it by age' },
+      { type: 'heading', level: 3, text: 'Ages 8 to 10' },
+      { type: 'paragraph', text: 'Keep it simple and playful. The business can be silly, the numbers small and round (make it for $2, sell it for $5), and the pitch short. Focus on the fun of inventing and the bravery of presenting. Do not worry about realistic economics; celebrate the idea and the courage to stand up and share it.' },
+      { type: 'heading', level: 3, text: 'Ages 11 to 14' },
+      { type: 'paragraph', text: 'Push for more real thinking. Real costs, real pricing, a genuine profit calculation, a sharper pitch, and tougher shark questions. Tweens can handle the idea of investment for a percentage of the company, market research ("did you ask anyone if they would buy it?"), and defending their numbers. This is where it starts to look like a real business, and where some kids catch the entrepreneurship bug for real.' },
+
+      { type: 'heading', level: 2, text: 'Classroom version vs home version' },
+      { type: 'paragraph', text: 'As a shark tank classroom activity, this shines as a multi-day project: teams or individuals build businesses over a week, then hold a pitch day where classmates and the teacher play sharks, maybe with a small prize for the winning pitch. It is a shark tank lesson plan that needs almost no prep, and a shark tank activity for students they remember years later. It builds collaboration, public speaking to a real audience, and a ton of engagement.' },
+      { type: 'paragraph', text: 'At home, it scales down beautifully to one kid and a couple of parent-sharks at the kitchen table. You lose the class audience but you gain focus and one-on-one coaching, and you can stretch it across a lazy week or knock out a lighter version in an afternoon. Either way, the core learning is identical.' },
+
+      { type: 'heading', level: 2, text: 'Take it further: a real micro-business' },
+      { type: 'paragraph', text: 'For the kid who catches fire, do not stop at the pretend pitch. Let them actually build the thing. A real lemonade stand, a small craft business, a service for neighbors. Turning a Shark Tank pitch into an actual [micro-business](/blog/micro-business) is where the biggest learning lives, because now the numbers are real and the customers are real. Some of the most capable teenagers you will meet started exactly here.' },
+
+      { type: 'cta', text: 'Want more real-world projects that teach the skills school skips, with almost no prep? Our free guide is full of hands-on activities you can run this week, at home or in a classroom.', href: '/free-guide', label: 'Get the Free Guide' },
+
+      { type: 'paragraph', text: 'A Shark Tank activity is proof that the best learning rarely looks like school. Give a kid a business to invent, some real numbers to wrestle, and a room to pitch it in, and they will practice entrepreneurship, math, public speaking, and resilience without once feeling like they are doing schoolwork. Run it once and you will be running it again, because kids ask for it.' },
+      { type: 'paragraph', text: 'And if you want the whole activity laid out so you can just open it and go, that is exactly what the Anywhere Learning membership is for: real-world, hands-on projects for ages 6 to 14, from business pitches to budgets to building things, ready to run with no planning the night before.' },
+
+      { type: 'faq', items: [
+        { question: 'What is a Shark Tank activity for kids?', answer: 'A Shark Tank activity for kids is a hands-on entrepreneurship project modeled on the TV show. A child invents a business or product, works out the basic numbers (a name, a price, costs, and profit), prepares a short pitch, and presents it to a panel of "sharks" (family members, classmates, or a teacher) who ask questions and decide whether to "invest." It teaches entrepreneurship, public speaking, persuasion, and real-world math in one memorable project, and it works both in a classroom and at home with a single kid.' },
+        { question: 'How do you run a Shark Tank activity?', answer: 'Run it in a few simple steps: set the scene (explain the format, maybe watch a short pitch), have the kid invent a business that solves a problem, build the basics (name, cost, price, profit), write a one-minute pitch with a hook, problem, solution, and ask, make a visual like a poster or prototype, practice, then hold pitch day where the sharks ask questions and decide whether to invest. Finish with a debrief about what went well and what they would change. Spread it over a few days or run a lighter version in an afternoon.' },
+        { question: 'What age is a Shark Tank activity good for?', answer: 'It works well from about age 8 to 14, adjusted to the child. For ages 8 to 10, keep the business playful, the numbers small and round, and the pitch short, focusing on the fun of inventing and the courage to present. For ages 11 to 14, push for real costs, real pricing, a genuine profit calculation, and tougher shark questions, so it starts to resemble an actual business. Younger kids can join a simplified version too, especially as part of a family or class.' },
+        { question: 'What business ideas can kids pitch?', answer: 'The best ideas solve a problem the kid actually notices, so start by asking what annoys them or what they wish existed. Common winners include a better version of something they use (a snack, a toy, a gadget), a service (dog walking, tidying, tutoring younger kids), a craft or product they could make, or an app or invention that solves a everyday hassle. It does not need to be realistic, especially for younger kids. The point is the thinking, so let the idea be a little wild and let it be genuinely theirs.' },
+        { question: 'Can you do a Shark Tank activity in a classroom?', answer: 'Yes, it is a fantastic classroom project. Run it over several days: students build businesses individually or in teams, then hold a pitch day where classmates and the teacher play the sharks, optionally with a small prize for the best pitch. It builds public speaking to a real audience, collaboration, real-world math, and huge engagement, and it is the kind of lesson students remember for years. The same structure scales down to a single kid at home with parent-sharks.' },
+      ]},
+    ],
+    relatedSlugs: ['micro-business', 'financial-literacy-for-kids-by-age', 'communication-skills-for-kids', 'life-skills-before-12'],
+    pillarSlug: 'life-skills-for-kids',
+    draft: true,
+  },
+
   // ── How to Homeschool 1st Grade ──
   {
     slug: 'homeschool-first-grade',

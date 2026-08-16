@@ -59,9 +59,9 @@ export const CHALLENGE = {
 export const CHALLENGE_DAYS = [
   {
     day: 'Day 1',
-    title: 'A game that ends in laughter',
+    title: 'Say it in words alone',
     blurb:
-      'We start light and silly. A quick game that has the whole family cracking up, and quietly teaches the one skill school never grades.',
+      'We start light. Your kid has to get a picture out of their head and into yours using nothing but written words, and you find out together how close it lands.',
   },
   {
     day: 'Day 2',
