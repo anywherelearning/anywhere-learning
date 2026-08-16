@@ -4433,7 +4433,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Backyard science experiments are one of the easiest ways to teach real science without a curriculum. The 15 experiments below cover water and weather, plants and soil, bugs and animals, and basic physics, all using materials you already have at home. No prep, no special equipment, and every single one works for kids ages 4 to 12.' },
       { type: 'paragraph', text: 'Science is not something that happens in a lab. It happens every time a kid asks "why?" and then tries to figure out the answer. Your backyard is full of those moments, you just need to know where to point.' },
-      { type: 'paragraph', text: 'These 15 experiments are designed to be picked up and done right now, no shopping trip, no lesson plan, no laminated cards. If you want even more ways to weave science into outdoor time, our guide to [nature walks as science lessons](/blog/nature-walks-science) covers the observation and inquiry side of things.' },
+      { type: 'paragraph', text: 'These 15 experiments are designed to be picked up and done right now, no shopping trip, no lesson plan, no laminated cards. If you want even more ways to weave science into outdoor time, our guide to [nature walks as science lessons](/blog/nature-walks-science) covers the observation and inquiry side of things, and our [nature-based learning guide](/guides/nature-based-learning) has the bigger framework and the research behind it.' },
       { type: 'paragraph', text: 'Grab a notebook (optional), head outside, and pick one to start with today.' },
 
       { type: 'heading', level: 2, text: 'Water and weather experiments' },

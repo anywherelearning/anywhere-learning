@@ -481,6 +481,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to turn nature walks, seasons, and your backyard into rich learning experiences, backed by research and tested by real families.',
     topic: 'nature-stem',
     publishedAt: '2026-03-21',
+    dateModified: '2026-08-16',
     keywords: [
       'nature based learning', 'outdoor STEM activities', 'nature learning for kids',
       'outdoor learning for kids', 'nature walks education',
@@ -703,6 +704,10 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
+        text: 'Outdoor STEM is hands-on science, technology, engineering, and math learning that happens outside, using natural materials and real-world problems instead of worksheets, screens, or purchased kits. A creek becomes an engineering site, a hillside becomes a physics lab, and a square meter of dirt becomes an ecology study.',
+      },
+      {
+        type: 'paragraph',
         text: 'The best outdoor STEM isn\'t about teaching concepts. It\'s about posing challenges and letting your child\'s natural problem-solving kick in. "Build a bridge across this creek using only what you find here." "Design a container from natural materials that can carry water without leaking." "Figure out which direction is north without a compass."',
       },
       {
@@ -870,6 +875,14 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          {
+            question: 'What is outdoor STEM?',
+            answer: 'Outdoor STEM is hands-on science, technology, engineering, and math learning that takes place outside, using natural materials and real-world problems instead of worksheets or store-bought kits. Examples include building a bridge across a creek (engineering), measuring a tree\'s height using its shadow (math), testing which natural materials float (physics), and mapping the living things in a single square meter of ground (biology). It turns the outdoors into a working lab where concepts are discovered through problem-solving rather than memorized.',
+          },
+          {
+            question: 'What are some examples of nature-based learning activities?',
+            answer: 'Common examples include walking the same trail weekly to track seasonal change, keeping a nature journal with "I notice / I wonder / it reminds me of" prompts, building shelters and bridges from sticks, running outdoor STEM challenges, seasonal scavenger hunts, backyard science experiments, and unstructured free play in a natural space. Most require no equipment beyond a notebook and a willingness to follow your child\'s curiosity.',
+          },
           {
             question: 'What if we live in a city with limited green space?',
             answer: 'Nature-based learning works everywhere. City parks, community gardens, window boxes, even sidewalk cracks with weeds growing through them are opportunities. Urban nature is still nature. Cities are full of insects, birds, weather patterns, and plant life. Some of the best nature observations happen in unexpected places.',
