@@ -8312,8 +8312,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 12,
     author: amelie,
     recommendedProduct: 'shark-tank-pitch',
-    heroImage: '/images/shark-tank-for-kids-hero.jpeg',
-    heroImageAlt: 'A smiling girl running her own popcorn stand with a hand-painted sign showing the price and flavors, a real kid business in action',
+    heroImage: '/images/shark-tank-for-kids-hero-v2.jpeg',
+    heroImageAlt: 'A tween standing behind his pitch table presenting an invented app called SitterMatch, with a hand-drawn banner, a real business pitch',
     heroImageAspect: '16/10',
     content: [
       { type: 'summary', text: 'A Shark Tank activity for kids is a hands-on entrepreneurship project where kids invent a business or product, work out the basics (a name, a price, costs, and profit), build a short pitch, and present it to a panel of "sharks" (family members, classmates, or teachers) who ask questions and decide whether to "invest." It teaches entrepreneurship, public speaking, persuasion, and real-world math in one memorable project, and it works for both a classroom and a single kid at home. This guide walks through what the activity is, why it works, a step-by-step way to run it for ages 8 to 14, the questions the sharks should ask, and how to adapt it by age and setting.' },
@@ -8366,7 +8366,7 @@ const posts: BlogPost[] = [
 
       { type: 'product-callout', slug: 'shark-tank-pitch', context: 'If you want the whole thing laid out for you, our Shark Tank Pitch guide walks a kid through inventing the business, building the numbers, and delivering the pitch, step by step. Open and go, no prep.', pinned: true },
 
-      { type: 'image', src: '/images/shark-tank-for-kids-pitch.jpeg', alt: 'A child standing behind a table presenting an invented app called SitterMatch with a hand-drawn poster, pitching a business idea', caption: 'Give it a little ceremony. The pressure of a real pitch is exactly what makes the skills stick.' },
+      { type: 'image', src: '/images/shark-tank-for-kids-stand.jpeg', alt: 'A girl running her own popcorn stand with a hand-painted sign and pricing, a kid business taken from idea to real sales', caption: 'Some kids take the pitch all the way to a real stand. That is where the biggest learning lives.' },
 
       { type: 'heading', level: 2, text: 'What the sharks should ask' },
       { type: 'paragraph', text: 'Half the value of this activity is in the questions, because answering them on the spot is where kids really grow. If you are playing shark, ask real but fair questions:' },
