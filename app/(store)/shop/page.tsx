@@ -21,6 +21,7 @@ import {
   RATE_LABEL_LOWER,
   TIER_LABEL_LOWER,
   MONTHLY_PRICE_USD,
+  TRIAL_DAYS,
 } from '@/lib/membership';
 
 export const metadata: Metadata = {
@@ -693,6 +694,12 @@ export default function ShopPage() {
                     </Link>
                     <p className="mt-3 text-[13px] text-gray-500">
                       14-day money-back guarantee &middot; Cancel anytime
+                    </p>
+                    {/* Checkout asks for a card, so this says so before the
+                        click rather than letting Stripe spring it. */}
+                    <p className="mt-1.5 text-[12.5px] text-gray-400">
+                      A card is required to start the trial. Cancel before day {TRIAL_DAYS + 1} and
+                      you pay nothing.
                     </p>
                   </div>
                 </div>

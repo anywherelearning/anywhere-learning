@@ -11,7 +11,7 @@ import TrailSteps from '@/components/home/v2/TrailSteps';
 import ActivityExplorer from '@/components/home/v2/ActivityExplorer';
 import MembershipPlans from '@/components/home/v2/MembershipPlans';
 import HomeFaqAccordion from '@/components/home/v2/HomeFaqAccordion';
-import { MONTHLY_PLAN_PRICE, MONTHLY_PRICE_USD } from '@/lib/membership';
+import { MONTHLY_PLAN_PRICE, MONTHLY_PRICE_USD, TRIAL_DAYS } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import {
   SHOP_CATEGORIES,
@@ -172,7 +172,7 @@ export default async function HomePage() {
                 day, once a week, twice a week, whenever it suits you. Cooking, budgeting,
                 problem-solving, the life skills school skips. You just do it together.
               </p>
-              <div className="mb-5 flex flex-wrap items-center gap-x-[22px] gap-y-4">
+              <div className="mb-3.5 flex flex-wrap items-center gap-x-[22px] gap-y-4">
                 <Link
                   href="/start-trial"
                   className="inline-flex items-center gap-2.5 rounded-2xl bg-forest px-9 py-[18px] text-lg font-semibold text-cream shadow-[0_12px_28px_-8px_rgba(88,129,87,0.4)] transition-all duration-200 hover:scale-[1.02] hover:bg-forest-dark active:scale-[0.97]"
@@ -180,13 +180,27 @@ export default async function HomePage() {
                   Start free trial
                   <ArrowIcon />
                 </Link>
+                {/* The per-month figure is the answer to "is $99 a lot?", and it
+                    belongs at the moment of the decision, not in the pricing
+                    section three screens down. m.priceMonth tracks the live
+                    price, so it stays right once the founder rate closes. */}
                 <span className="text-[15px] leading-[1.5] text-gray-500">
-                  14 days free &middot; $0 today
+                  {/* One expression, not `{TRIAL_DAYS} days`: JSX drops the
+                      space between an expression and the text after it, so that
+                      form renders "14days free". */}
+                  {`${TRIAL_DAYS} days free · $0 today`}
                   <br />
                   {m.priceYr}
-                  {m.isFounderPhase ? ' founder rate' : ''}
+                  {m.isFounderPhase ? ' founder rate' : ''}, about {m.priceMonth}
                 </span>
               </div>
+              {/* Checkout asks for a card. Saying so here rather than letting
+                  Stripe be the one to mention it: a surprise at the payment step
+                  costs more than the click it might have saved. */}
+              <p className="mb-5 max-w-[430px] text-[13.5px] leading-[1.55] text-gray-400">
+                A card is required to start. Cancel before day {TRIAL_DAYS + 1} and you pay
+                nothing, and we remind you first.
+              </p>
               <Link
                 href="/quiz"
                 className="inline-block border-b border-forest/30 pb-0.5 text-[15px] font-medium text-forest transition-colors hover:border-forest hover:text-forest-dark"
@@ -756,8 +770,11 @@ export default async function HomePage() {
                 <ArrowIcon />
               </Link>
               <p className="mt-[22px] text-[14.5px] text-cream/[0.62]">
-                14 days free &middot; $0 today &middot; cancel anytime
+                {`${TRIAL_DAYS} days free · $0 today · cancel anytime`}
                 {m.isFounderPhase ? ` · Founder rate for the first ${m.founderCap} families` : ''}
+              </p>
+              <p className="mt-2.5 text-[13.5px] leading-[1.55] text-cream/[0.45]">
+                Then {m.priceYr}, about {m.priceMonth}. A card is required to start.
               </p>
               <p className="mt-[30px]">
                 <Link
