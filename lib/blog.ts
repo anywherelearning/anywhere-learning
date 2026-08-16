@@ -8314,7 +8314,7 @@ const posts: BlogPost[] = [
     recommendedProduct: 'shark-tank-pitch',
     heroImage: '/images/shark-tank-for-kids-hero-v2.jpeg',
     heroImageAlt: 'A tween standing behind his pitch table presenting an invented app called SitterMatch, with a hand-drawn banner, a real business pitch',
-    heroImageAspect: '16/10',
+    heroImageAspect: '4/3',
     content: [
       { type: 'summary', text: 'A Shark Tank activity for kids is a hands-on entrepreneurship project where kids invent a business or product, work out the basics (a name, a price, costs, and profit), build a short pitch, and present it to a panel of "sharks" (family members, classmates, or teachers) who ask questions and decide whether to "invest." It teaches entrepreneurship, public speaking, persuasion, and real-world math in one memorable project, and it works for both a classroom and a single kid at home. This guide walks through what the activity is, why it works, a step-by-step way to run it for ages 8 to 14, the questions the sharks should ask, and how to adapt it by age and setting.' },
 
