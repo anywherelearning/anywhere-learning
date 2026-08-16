@@ -18,6 +18,7 @@ import {
   SKILL_AREAS,
   MEMBERSHIP_INCLUDES,
   HOME_FAQS,
+  HOME_OBJECTIONS,
 } from '@/lib/home-showcase';
 
 export const metadata: Metadata = {
@@ -684,9 +685,27 @@ export default async function HomePage() {
                   One price. All of it.
                 </h2>
                 <p className="mx-auto max-w-[520px] text-lg leading-[1.65] text-gray-600">
-                  No bundles to pick between, no upsells. Start with 14 days free, you&apos;re not
-                  charged until they&apos;re up.
+                  {`No bundles to pick between, no upsells. Start with ${TRIAL_DAYS} days free, you're not charged until they're up.`}
                 </p>
+              </div>
+            </ScrollReveal>
+
+            {/* The two objections that decide it, answered before the price
+                rather than at the bottom of the FAQ. Someone who thinks this is
+                homeschoolers-only, or that Pinterest already does it, doesn't
+                scroll far enough to find out otherwise. Copy comes from the FAQ
+                entries themselves so the two can't drift. */}
+            <ScrollReveal delay={60}>
+              <div className="mb-9 grid grid-cols-1 gap-4 md:grid-cols-2">
+                {HOME_OBJECTIONS.map((f) => (
+                  <div
+                    key={f.q}
+                    className="rounded-[18px] border border-[#e3dcc9] bg-white/70 px-6 py-5"
+                  >
+                    <p className="mb-1.5 text-[15.5px] font-semibold text-forest-dark">{f.q}</p>
+                    <p className="text-[15px] leading-[1.6] text-gray-600">{f.a}</p>
+                  </div>
+                ))}
               </div>
             </ScrollReveal>
 
@@ -701,6 +720,12 @@ export default async function HomePage() {
                 founderCap={m.founderCap}
               />
             </ScrollReveal>
+
+            {/* A price on its own doesn't tell a parent whether it's a lot.
+                Sitting the year next to something they've already bought does. */}
+            <p className="mb-10 mt-5 text-center text-[15px] leading-[1.6] text-gray-500">
+              {`${m.priceYear} is about ${m.priceMonth}. Roughly one tutoring session, for a whole year, and it covers every kid in the house.`}
+            </p>
 
             <ScrollReveal delay={150}>
               <div className="mb-10 rounded-[24px] border border-gray-200/60 bg-white px-11 py-10 shadow-[0_4px_12px_-2px_rgba(60,50,30,0.09)] max-md:px-6">

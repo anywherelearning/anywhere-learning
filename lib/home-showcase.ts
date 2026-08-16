@@ -506,3 +506,26 @@ export const HOME_FAQS: ShowcaseFaq[] = [
     a: 'Cancel in one click from your account, any time. After your first charge there is a 14-day money-back guarantee. Email us within 14 days for a full refund, no questions asked.',
   },
 ];
+
+/**
+ * The two questions that decide the sale: am I even the audience, and why pay
+ * for something Pinterest gives away. Both were only answerable at the very
+ * bottom of the page, below the price, which is after the person with the
+ * objection has already gone.
+ *
+ * Looked up out of HOME_FAQS rather than written twice, so the answer above the
+ * price and the answer in the FAQ can never disagree. Editing the FAQ entry
+ * edits both.
+ */
+const OBJECTION_QUESTIONS = [
+  'Is this only for homeschoolers?',
+  'How is this different from free printables?',
+];
+
+export const HOME_OBJECTIONS: ShowcaseFaq[] = OBJECTION_QUESTIONS.map((q) => {
+  const faq = HOME_FAQS.find((f) => f.q === q);
+  // A typo'd question here would silently drop the block, so fail loudly at
+  // build time instead.
+  if (!faq) throw new Error(`HOME_OBJECTIONS: no FAQ matches "${q}"`);
+  return faq;
+});
