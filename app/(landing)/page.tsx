@@ -722,9 +722,11 @@ export default async function HomePage() {
             </ScrollReveal>
 
             {/* A price on its own doesn't tell a parent whether it's a lot.
-                Sitting the year next to something they've already bought does. */}
+                The per-month figure and the per-kid one both do, and both are
+                ours to state. A comparison to tutoring did the same job but
+                rested on someone else's prices, so it's deliberately absent. */}
             <p className="mb-10 mt-5 text-center text-[15px] leading-[1.6] text-gray-500">
-              {`${m.priceYear} is about ${m.priceMonth}. Roughly one tutoring session, for a whole year, and it covers every kid in the house.`}
+              {`${m.priceYear} is about ${m.priceMonth}, and it covers every kid in the house.`}
             </p>
 
             <ScrollReveal delay={150}>
