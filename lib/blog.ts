@@ -8407,7 +8407,6 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['micro-business', 'financial-literacy-for-kids-by-age', 'communication-skills-for-kids', 'life-skills-before-12'],
     pillarSlug: 'life-skills-for-kids',
-    draft: true,
   },
 
   // ── How to Homeschool 1st Grade ──

@@ -2212,6 +2212,7 @@ const resources: ResourcePage[] = [
       'teaching-empathy-to-kids',
       'communication-skills-for-kids',
       'when-should-kids-get-a-phone',
+      'shark-tank-for-kids',
       'what-kids-should-know-before-18',
     ],
     recommendedProduct: 'future-ready-skills-map',
