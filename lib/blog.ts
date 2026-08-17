@@ -4416,6 +4416,112 @@ const posts: BlogPost[] = [
     recommendedProduct: 'nature-journal-walks',
   },
 
+  // ── Outdoor STEM by Age ──
+  {
+    slug: 'outdoor-stem-by-age',
+    title: 'Outdoor STEM Activities by Age: Toddlers to Teens',
+    excerpt: 'Outdoor STEM activities for every age, from toddlers to teens. What each stage is actually ready for, specific activities using only what is outside, and how to level one activity up across ages.',
+    hook: 'A three-year-old and a thirteen-year-old can do the same outdoor STEM activity. The trick is knowing how to change the question.',
+    category: 'nature-learning',
+    pillarSlug: 'nature-based-learning',
+    publishedAt: '2026-05-15',
+    keywords: ['outdoor STEM activities by age', 'outdoor STEM for preschoolers', 'outdoor STEM for elementary', 'outdoor STEM activities', 'outdoor STEM for toddlers', 'age appropriate outdoor STEM', 'outdoor science by age', 'backyard STEM by age'],
+    readTimeMinutes: 12,
+    author: amelie,
+    heroImage: '/images/outdoor-stem-by-age-hero.jpeg',
+    heroImageAlt: 'A laughing child sunk deep in soft beach mud with one muddy arm raised, testing whether the mud would hold her weight, while another child wades nearby',
+    heroImageAspect: '4/3',
+    content: [
+      { type: 'summary', text: 'Outdoor STEM means teaching science, technology, engineering, and math outside, using natural materials instead of boxed kits. What changes with age is not the setting but the question you ask: toddlers explore cause and effect (pouring, rolling, sorting), preschoolers predict and compare, elementary kids measure and run fair tests, and tweens collect and interpret real data. This guide breaks down what each age from 2 to 14 is ready for, with specific activities and a section on leveling one activity across all five stages.' },
+      { type: 'paragraph', text: 'The mistake most outdoor STEM lists make is handing every kid the same activity. A baking-soda volcano thrills a five-year-old and bores an eleven-year-old. A water-quality study is perfect for a twelve-year-old and completely over a toddler’s head. Age is not a detail here. It is the whole game.' },
+      { type: 'paragraph', text: 'The good news is that outdoor STEM scales beautifully, because nature does not come with an instruction booklet. The same puddle, stick, or patch of dirt can teach a two-year-old about splashing and a thirteen-year-old about evaporation rates. What changes is the question you ask and how far you step back. If you want the bigger picture first, our [nature-based learning guide](/guides/nature-based-learning) covers the research and the framework.' },
+      { type: 'paragraph', text: 'Here is what each stage is ready for, with specific outdoor STEM activities you can run using only what is already outside. Find your kid’s age, start there, and borrow up or down as needed. For a version organized by challenge type instead of age, see our [15 outdoor STEM challenges](/blog/outdoor-stem-challenges).' },
+
+      { type: 'heading', level: 2, text: 'Toddlers (ages 2 to 4): sense it before you explain it' },
+      { type: 'paragraph', text: 'Toddlers are pure cause and effect. They are not ready for predictions, procedures, or right answers, and pushing those just frustrates everyone. At this age, real STEM looks like pouring, dropping, sorting, and watching. Your only job is to narrate what you see (“you made it splash”) and hand them the next thing to try.' },
+      { type: 'list', ordered: false, items: [
+        'Water-transfer station: set out cups, a funnel, a turkey baster, and two buckets. Moving water from one bucket to the other teaches volume, flow, and gravity, and it will hold their attention far longer than you expect.',
+        'Nature sort trays: hand them an empty egg carton and send them to fill each cup with a different kind of thing, smooth, rough, round, pointy. Sorting is classification, the very first science skill.',
+        'Ramp and roll: lean a plank against a log and race a pinecone, a rock, and a ball down it. “Which one wins?” introduces slope and speed with zero numbers.',
+      ]},
+      { type: 'paragraph', text: 'Not yet: anything with a multi-step procedure or a single correct outcome. Let them repeat the same splash forty times if they want. Repetition is how toddlers run their experiments.' },
+
+      { type: 'heading', level: 2, text: 'Preschool and kindergarten (ages 5 to 6): guess first, then find out' },
+      { type: 'paragraph', text: 'This is the age of the prediction. Five and six year olds can now hold a guess in their head, test it, and notice whether they were right. That gap between “I think” and “what actually happened” is where scientific thinking is born. Keep asking “what do you think will happen?” before anything else.' },
+      { type: 'list', ordered: false, items: [
+        'Float-or-sink creek test: gather ten objects and have your child predict each one before it goes in the water. The surprise when a heavy-looking log floats is the whole lesson.',
+        'Shadow tracing: on a sunny morning, trace their shadow in chalk on the driveway, then again at noon and at dinner. Same kid, three shadows. Why did it move and shrink?',
+        'Bug-count line: lay a string across the grass and count how many living things touch it. Do it again in the shade. Which spot has more life, and why do they think so?',
+      ]},
+      { type: 'paragraph', text: 'Not yet: measuring with numbers or controlling variables. Comparison (“more, fewer, faster, slower”) is plenty of rigor for this stage.' },
+
+      { type: 'heading', level: 2, text: 'Early elementary (ages 6 to 8): measure it and mess with it' },
+      { type: 'paragraph', text: 'Now numbers enter the picture. Six to eight year olds can measure, count, and change one thing to see what happens. This is where you introduce the idea of a fair test: if you want to know what made the difference, only change one thing at a time.' },
+      { type: 'list', ordered: false, items: [
+        'Tree height from a shadow: measure your child’s height and the length of their shadow, then measure the tree’s shadow. The same ratio gives you the tree’s height. Real proportional math, done outdoors with a tape measure.',
+        'Dam engineering: send a trickle of hose water down a dirt slope and challenge them to stop it, then to redirect it somewhere new. They will rebuild ten times, and that rebuilding is engineering iteration.',
+        'Seed-flight test: compare how far a maple key, a dandelion puff, and a folded paper spinner travel when dropped. Why are they shaped so differently? An intro to how plants “design” for the wind.',
+      ]},
+      { type: 'paragraph', text: 'Not yet: long multi-week projects. Their attention is real but short. One-session experiments with a visible result work best.' },
+
+      { type: 'heading', level: 2, text: 'Upper elementary (ages 9 to 11): make it a real experiment' },
+      { type: 'paragraph', text: 'This is the sweet spot for outdoor STEM. Nine to eleven year olds can handle variables, controlled tests, mapping, and building that has to actually bear weight. They want their work to matter and to have real stakes, so give them problems with a genuine failure point.' },
+      { type: 'list', ordered: false, items: [
+        'One-square-meter survey: rope off a square of ground and map every living thing inside it, then map a second square somewhere different and compare. This is exactly how field ecologists work.',
+        'Bridge that holds a rock: build a stick-and-string bridge across a gap, then test how much weight it carries before it fails, then redesign the weak point. Engineering is not the build. It is the redesign after the collapse.',
+        'Bird-feeder A/B test: put out two feeder designs and log which one gets more visitors over a week. They are running a controlled experiment without being told the words.',
+      ]},
+      { type: 'paragraph', text: 'This age also handles real tools well. Our post on [forest school activities](/blog/forest-school-activities) covers whittling, fire, and other skills that pair naturally with this stage.' },
+      { type: 'image', src: '/images/outdoor-stem-by-age-shelter.jpeg', alt: 'Two children building a lean-to shelter from long sticks propped against a large tree trunk in a forest', caption: 'Building a shelter is engineering you can climb inside. One solid trunk, a pile of sticks, and a lot of testing what actually holds.' },
+
+      { type: 'heading', level: 2, text: 'Middle school and up (ages 12 to 14): give them data and a deadline' },
+      { type: 'paragraph', text: 'Tweens and young teens can run projects that stretch across weeks, collect their own data, and interpret what it means. Abstraction is finally on the table, so they can model systems they cannot see directly. Treat them like junior scientists, because at this point they nearly are.' },
+      { type: 'list', ordered: false, items: [
+        'Microclimate log: measure the temperature in four spots (open sun, shade, pavement, under a tree) at the same time each day for two weeks, then graph it. They will discover the urban heat-island effect on their own street.',
+        'Creek health check: test a local stream’s clarity and temperature and note which insects live in it, since some species only survive in clean water. Compare a spot upstream to one downstream.',
+        'Orienteering course: hand them a map and a cheap compass and let them design, then run, a course through a park. Navigation is applied geometry with real consequences for getting it wrong.',
+      ]},
+      { type: 'paragraph', text: 'Not yet needed: fancy equipment. A thermometer, a tape measure, and a notebook cover almost everything at this level. For more ideas that carry into the teen years, our [STEM activities by age guide](/blog/stem-activities-by-age) goes deeper on the indoor and abstract side.' },
+
+      { type: 'tip', title: 'Meet the kid, not the age', text: 'These bands are a starting point, not a rule. A curious six-year-old might love a real experiment, and a reluctant ten-year-old might need to start with splashing and sorting. Watch what your kid does with an activity and adjust up or down. The age on the calendar matters less than where their curiosity actually is.' },
+
+      { type: 'heading', level: 2, text: 'One activity, five ages: the puddle' },
+      { type: 'paragraph', text: 'Here is the part the big activity lists never show you: you almost never need a different activity for a different age. You need a different question. Take a single puddle after a rainstorm and watch how the same patch of water grows up with your kid.' },
+      { type: 'list', ordered: false, items: [
+        'Toddler: stomp it and watch the splash. Cause and effect, felt in the whole body.',
+        'Preschool: guess how many cups it will take to empty it, then scoop and count. Prediction plus measurement.',
+        'Early elementary: time how long it takes to dry in the sun versus the shade. A fair test with one thing changed.',
+        'Upper elementary: trace its edge with chalk each day as it shrinks and calculate how fast it disappears. Data over time.',
+        'Middle school: model where the water actually went, evaporation into the air versus soaking into the ground, and design a way to test which mattered more. Systems thinking.',
+      ]},
+      { type: 'paragraph', text: 'Same puddle. Five completely different lessons. Once you see outdoor STEM this way, you stop needing lists at all, because every stick, stream, and pile of dirt becomes a lab you can pitch at exactly your child’s level.' },
+
+      { type: 'pull-quote', text: 'You almost never need a different activity for a different age. You need a different question.' },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges' },
+
+      { type: 'heading', level: 2, text: 'How to run outdoor STEM without turning it into school' },
+      { type: 'paragraph', text: 'The fastest way to kill outdoor STEM is to turn it into a lesson. The moment a kid feels quizzed, the curiosity shuts off. A few habits keep it feeling like play:' },
+      { type: 'list', ordered: false, items: [
+        'Ask, do not tell. “What do you notice?” and “why do you think that happened?” beat any explanation you could give.',
+        'Let them be wrong. A wrong prediction that gets tested teaches more than a right answer handed over.',
+        'Follow the tangent. If the bridge experiment turns into a two-hour dam project, let it. The learning went where the interest went.',
+        'Keep it short and repeatable. Ten focused minutes on the same trail every week beats one exhausting science marathon.',
+      ]},
+      { type: 'paragraph', text: 'If your kid catches the bug, pair these with our [no-prep backyard science experiments](/blog/backyard-science-experiments) and turn ordinary [nature walks into science lessons](/blog/nature-walks-science). The cluster all reinforces the same idea: the outdoors is the most flexible classroom you will ever have.' },
+
+      { type: 'faq', items: [
+        { question: 'What age can kids start outdoor STEM?', answer: 'As early as age two. Toddlers are doing real STEM when they pour water between cups, sort rocks by texture, and roll objects down a slope, because they are exploring volume, classification, and gravity. The activities get more structured as kids grow, but the starting age is essentially “as soon as they can get outside and grab things.”' },
+        { question: 'What is outdoor STEM for preschoolers?', answer: 'For preschoolers (ages 3 to 5), outdoor STEM is prediction and comparison play: guessing whether an object will float before testing it, counting how many living things touch a string laid across the grass, or tracing a shadow and watching it move through the day. The goal is “I think, because...” thinking, not correct answers.' },
+        { question: 'What are good outdoor STEM activities for elementary kids?', answer: 'Elementary-age outdoor STEM works best when kids can measure something and change one thing at a time: finding a tree’s height from its shadow, building a dam and redirecting water, running a bird-feeder A/B test, or surveying every living thing in one square meter of ground. These introduce fair tests and real data without feeling like schoolwork.' },
+        { question: 'How is outdoor STEM different from indoor STEM kits?', answer: 'Outdoor STEM uses natural materials and open-ended problems instead of a boxed kit with one intended outcome. A creek or a hillside gives a different result every time, which builds flexible problem-solving, while a kit usually has a single correct build. Both have value, but outdoor STEM is free, endlessly repeatable, and scales to any age.' },
+        { question: 'Do you need equipment for outdoor STEM?', answer: 'Almost none. A notebook, a tape measure, and occasionally a magnifying glass, a thermometer, or a cheap compass cover nearly everything. The core materials, sticks, water, dirt, rocks, and seeds, are already outside and free.' },
+      ]},
+      { type: 'cta', text: 'Want more real-world activities your kids can do this week? Grab our free guide and start with what is already in your backyard.', href: '/free-guide', label: 'Get the Free Guide' },
+    ],
+    relatedSlugs: ['outdoor-stem-challenges', 'forest-school-activities', 'backyard-science-experiments', 'stem-activities-by-age', 'nature-walks-science'],
+    recommendedProduct: 'outdoor-stem-challenges',
+  },
+
   // ── Backyard Science Experiments ──
   {
     slug: 'backyard-science-experiments',
