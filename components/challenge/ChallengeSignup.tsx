@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import { CHALLENGE } from "@/lib/challenge";
-
-const SOURCE_STORAGE_KEY = "subscribe-source";
+import useAttributionSource from "@/components/useAttributionSource";
 
 /**
  * Email capture for the 5-Day Challenge. Posts to /api/challenge (challenge-
@@ -15,23 +14,7 @@ export default function ChallengeSignup({ id = "top" }: { id?: string }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [shaking, setShaking] = useState(false);
-  const [source, setSource] = useState("");
-
-  useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const urlSource = params.get("source") || params.get("utm_source") || "";
-      if (urlSource) {
-        setSource(urlSource);
-        sessionStorage.setItem(SOURCE_STORAGE_KEY, urlSource);
-        return;
-      }
-      const stored = sessionStorage.getItem(SOURCE_STORAGE_KEY) || "";
-      if (stored) setSource(stored);
-    } catch {
-      // sessionStorage unavailable (private mode) - fail silently
-    }
-  }, []);
+  const source = useAttributionSource();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();

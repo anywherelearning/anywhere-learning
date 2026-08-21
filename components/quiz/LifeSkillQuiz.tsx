@@ -10,8 +10,8 @@ import {
   type QuizResultId,
   type AgeBand,
 } from "@/lib/quiz";
+import useAttributionSource from "@/components/useAttributionSource";
 
-const SOURCE_STORAGE_KEY = "subscribe-source";
 
 type Phase = "intro" | "questions" | "email" | "result";
 
@@ -25,25 +25,7 @@ export default function LifeSkillQuiz() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [source, setSource] = useState("");
-
-  // Capture attribution source on mount (same pattern as EmailForm).
-  useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const urlSource =
-        params.get("source") || params.get("utm_source") || "";
-      if (urlSource) {
-        setSource(urlSource);
-        sessionStorage.setItem(SOURCE_STORAGE_KEY, urlSource);
-        return;
-      }
-      const stored = sessionStorage.getItem(SOURCE_STORAGE_KEY) || "";
-      if (stored) setSource(stored);
-    } catch {
-      // sessionStorage unavailable (private mode) - fail silently
-    }
-  }, []);
+  const source = useAttributionSource();
 
   // Derive age band + result (top-2 gaps) from the recorded answers.
   const { ageBand, result, secondaryGap } = useMemo(() => {
