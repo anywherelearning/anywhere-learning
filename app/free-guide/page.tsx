@@ -55,7 +55,7 @@ const freeGuideLd = {
       '@type': 'MerchantReturnPolicy',
       applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
       returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-      returnPolicyUrl: 'https://anywherelearning.co/terms#refund-policy',
+      returnPolicyUrl: 'https://anywherelearning.co/terms#s4',
     },
   },
 };

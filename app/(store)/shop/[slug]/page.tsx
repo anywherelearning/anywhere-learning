@@ -367,6 +367,14 @@ export default async function ProductPage({
         unitText: "YEAR",
       },
       availability: "https://schema.org/InStock",
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: ["US", "CA", "GB", "AU", "NZ"],
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 14,
+        returnFees: "https://schema.org/FreeReturn",
+        returnPolicyUrl: "https://anywherelearning.co/terms#s4",
+      },
       itemOffered: {
         "@type": "Service",
         name: "Anywhere Learning Membership",
