@@ -300,7 +300,7 @@ const posts: BlogPost[] = [
   {
     slug: 'should-i-homeschool',
     title: 'Should I Homeschool? An Honest Checklist for Deciding',
-    excerpt: 'An honest, non-salesy checklist to help you decide if homeschooling is right for your family, including the signs it might not be the right time, the four fears that stop most parents, and the options between all-in and not at all.',
+    excerpt: 'Should I homeschool? An honest, no-sales-pitch checklist to help you decide if homeschooling is right for your family, and when it might not be the right time.',
     hook: 'Most "should you homeschool" posts are written by people who already sell homeschooling. This one is from a former teacher who will also tell you when not to.',
     category: 'homeschool-journey',
     pillarSlug: 'homeschool-journey',
