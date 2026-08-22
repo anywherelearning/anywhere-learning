@@ -13,16 +13,22 @@ export const CHALLENGE = {
   shortName: '5-Day Challenge',
 
   // ─── Kill switch ───
-  // While false, /challenge returns 404 and POST /api/challenge is rejected, so
-  // nobody can sign up and land in a Kit sequence that does not exist yet.
+  // While false, /challenge returns 404, POST /api/challenge is rejected, and
+  // the page is dropped from the sitemap, so nobody can sign up and land in a
+  // Kit sequence that does not exist yet.
   //
-  // Flip to true only once the Kit automation is built and connected: the
-  // welcome email (fires on signup), the "we start Monday" reminder, the five
-  // daily emails for Sept 14-18, the Day 5 founder pitch, and the two
-  // offer-close reminders for Sept 19 and 21.
+  // Went live Aug 22 2026, once the Kit welcome automation was built and active
+  // on the `challenge-signup` tag. That is the only email that has to exist to
+  // open signups, because it fires immediately and is the one thing a new
+  // signup is promised. Emails 2-10 are date-scheduled broadcasts and can be
+  // built any time before their send dates.
   //
-  // Do this before the Sept 1 invite posts go out, since every invite links here.
-  isLive: false,
+  // STILL OWED, in Kit, before these dates:
+  //   Sept 13  email 2, the "we start tomorrow" broadcast
+  //   Sept 14-18  the five daily broadcasts
+  //   Sept 18  the pitch, Sept 20 the winners, Sept 21 the last one
+  // Source HTML for all ten is in emails/kit-ready/challenge-*.html.
+  isLive: true,
 
   // Dates for cohort #1 (2026). Labels are pre-written so copy never has to
   // format a Date at render time. Moved Aug -> Sept 14-18: the founder is

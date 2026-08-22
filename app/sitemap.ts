@@ -6,6 +6,7 @@ import { getAllPosts } from '@/lib/blog';
 import { getAllResources } from '@/lib/resources';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { IDEAS_DATA } from '@/lib/ideas';
+import { CHALLENGE } from '@/lib/challenge';
 
 // When adding a new public page, add it to staticRoutes below.
 // Excluded (not indexable): /sign-in, /sign-up, /account/*, /checkout/success
@@ -29,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/about': '2026-08-07',
     '/free-guide': '2026-08-21',
     '/quiz': '2026-08-07',
+    '/challenge': '2026-08-22',
     '/guides/capable-kid': '2026-08-21',
     '/faq': '2026-08-07',
     '/contact': '2026-08-07',
@@ -87,6 +89,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Only listed while the challenge is open. Gated on the same flag that
+    // makes the page render, so the sitemap can never advertise a 404.
+    ...(CHALLENGE.isLive
+      ? [
+          {
+            url: 'https://anywherelearning.co/challenge',
+            lastModified: staticDate('/challenge'),
+            changeFrequency: 'weekly' as const,
+            priority: 0.9,
+          },
+        ]
+      : []),
     {
       url: 'https://anywherelearning.co/guides/capable-kid',
       lastModified: staticDate('/guides/capable-kid'),
