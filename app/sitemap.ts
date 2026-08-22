@@ -14,81 +14,106 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getAllPosts();
   const resourcePages = getAllResources();
 
-  // Stamp static pages with the build/revalidation timestamp so each deploy
-  // signals freshness to crawlers. Pages with their own per-content dates
-  // (blog posts, guides, products) override this below.
-  const siteLastUpdated = new Date();
+  // Real last-edit dates per static route. Do NOT stamp these with the build
+  // timestamp: a lastmod that moves on every deploy without the content moving
+  // is a signal Google explicitly discounts, and it costs trust on the entries
+  // that are honest (blog posts, guides, products carry real per-content dates).
+  //
+  // When you meaningfully change one of these pages, bump its date here.
+  // Dates below were taken from the last real commit touching each page.
+  const STATIC_LAST_MODIFIED: Record<string, string> = {
+    '': '2026-08-16',
+    '/shop': '2026-08-16',
+    '/blog': '2026-08-07',
+    '/guides': '2026-08-07',
+    '/about': '2026-08-07',
+    '/free-guide': '2026-08-21',
+    '/quiz': '2026-08-07',
+    '/guides/capable-kid': '2026-08-21',
+    '/faq': '2026-08-07',
+    '/contact': '2026-08-07',
+    '/privacy': '2026-08-04',
+    '/terms': '2026-08-04',
+  };
+
+  const staticDate = (path: string) =>
+    new Date(STATIC_LAST_MODIFIED[path] ?? '2026-08-04');
+
+  // Baseline for entries with no real per-content date of their own. Fixed on
+  // purpose, for the same reason as above: a stable wrong-ish date is better
+  // than a date that churns every deploy.
+  const CONTENT_BASELINE = new Date('2026-08-04');
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: 'https://anywherelearning.co',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate(''),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: 'https://anywherelearning.co/shop',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/shop'),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: 'https://anywherelearning.co/blog',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/blog'),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: 'https://anywherelearning.co/guides',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/guides'),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: 'https://anywherelearning.co/about',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/about'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: 'https://anywherelearning.co/free-guide',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/free-guide'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: 'https://anywherelearning.co/quiz',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/quiz'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://anywherelearning.co/guides/capable-kid',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/guides/capable-kid'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: 'https://anywherelearning.co/faq',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/faq'),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: 'https://anywherelearning.co/contact',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/contact'),
       changeFrequency: 'yearly',
       priority: 0.4,
     },
     {
       url: 'https://anywherelearning.co/privacy',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/privacy'),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: 'https://anywherelearning.co/terms',
-      lastModified: siteLastUpdated,
+      lastModified: staticDate('/terms'),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
@@ -162,7 +187,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const productUrls = allProducts.map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
-      lastModified: p.createdAt ? new Date(p.createdAt) : siteLastUpdated,
+      lastModified: p.createdAt ? new Date(p.createdAt) : CONTENT_BASELINE,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));
@@ -173,7 +198,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const fallback = getFallbackProducts();
     const fallbackUrls = fallback.map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
-      lastModified: siteLastUpdated,
+      lastModified: CONTENT_BASELINE,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));

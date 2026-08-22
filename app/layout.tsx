@@ -156,7 +156,10 @@ export default function RootLayout({
                   "email": "info@anywherelearning.co",
                   "founder": {
                     "@type": "Person",
-                    "@id": "https://anywherelearning.co/#amelie",
+                    // Points at the full Person node on /about (credentials,
+                    // alumniOf, knowsAbout, Wikidata). Keep these in sync so
+                    // AI engines resolve one Amelie entity, not two.
+                    "@id": "https://anywherelearning.co/about#amelie",
                     "name": "Amelie",
                     "url": "https://anywherelearning.co/about",
                     "jobTitle": "Founder",

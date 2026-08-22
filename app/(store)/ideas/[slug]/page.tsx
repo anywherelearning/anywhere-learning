@@ -559,9 +559,9 @@ function ListDetailView({
     breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
     author: {
       '@type': 'Person',
-      // Same @id as the founder node in the sitewide graph, so AI engines
-      // see one Amelie entity, not two disconnected Person nodes.
-      '@id': 'https://anywherelearning.co/#amelie',
+      // Same @id as the full Person node on /about, so AI engines see one
+      // Amelie entity carrying the credentials, not a bare stub.
+      '@id': 'https://anywherelearning.co/about#amelie',
       name: 'Amelie',
       url: 'https://anywherelearning.co/about',
       jobTitle: 'Former classroom teacher (B.Ed, M.Ed)',

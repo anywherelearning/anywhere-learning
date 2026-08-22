@@ -369,23 +369,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     })),
   } : null;
 
-  const isHowToPost = /^(?:how to\b|\d+\s)/i.test(post.title);
-  const howToSteps = isHowToPost ? getHowToSteps(contentWithCallouts) : [];
+  // These posts are editorial listicles, not procedures. HowTo was removed here
+  // because Google retired HowTo rich results in Sept 2023 and the markup
+  // mislabelled the posts as instructions (with totalTime faked from read time).
+  // ItemList keeps the list structure extractable without the false claim.
+  const isListPost = /^(?:how to\b|\d+\s)/i.test(post.title);
+  const listSteps = isListPost ? getHowToSteps(contentWithCallouts) : [];
   const pageUrl = `https://anywherelearning.co/blog/${post.slug}`;
-  const howToLd = howToSteps.length > 0 ? {
+  const itemListLd = listSteps.length > 0 ? {
     '@context': 'https://schema.org',
-    '@type': 'HowTo',
+    '@type': 'ItemList',
     name: post.title,
     description: post.excerpt,
-    totalTime: `PT${post.readTimeMinutes}M`,
-    image: post.heroImage
-      ? `https://anywherelearning.co${post.heroImage}`
-      : 'https://anywherelearning.co/og-default.jpg',
-    step: howToSteps.map((s, i) => ({
-      '@type': 'HowToStep',
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: listSteps.length,
+    itemListElement: listSteps.map((s, i) => ({
+      '@type': 'ListItem',
       position: i + 1,
       name: s.name,
-      text: s.text,
       url: `${pageUrl}#${s.anchor}`,
     })),
   } : null;
@@ -395,7 +396,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
-      {howToLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />}
+      {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />}
 
       <ReadingProgress />
 

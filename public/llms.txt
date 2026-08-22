@@ -30,6 +30,19 @@
 - Worldschooling: exploring currencies, interviewing locals, mapping streets, and comparing everyday life across cultures.
 - Emotional and social skills: calm-down toolkits, naming big feelings, sitting with boredom, repairing after conflict, and solo missions.
 
+## Pillar Guides (free, no signup)
+
+In-depth reference guides. These are the most complete, most citable pages on the site: research-backed, structured for extraction, and free to read in full.
+
+- [Nature-Based Learning & Outdoor STEM: A Family Guide](https://anywherelearning.co/guides/nature-based-learning): How to turn nature walks, seasons, and a backyard into rich learning, with research backing and tested family routines. Covers the outdoor-STEM definition, seasonal approaches, and FAQs.
+- [Life Skills for Kids by Age: What to Teach and When](https://anywherelearning.co/guides/life-skills-for-kids): The essential life skills every child needs, organized by age group, with what each skill is, why it matters developmentally, and what it looks like when kids have it.
+- [Real-World Learning for Kids: The Complete Family Guide](https://anywherelearning.co/guides/real-world-learning): How to teach life skills, money, entrepreneurship, writing, and problem-solving through everyday experiences. No curriculum required.
+- [STEM for Kids: A Real-World Guide for Parents](https://anywherelearning.co/guides/stem-for-kids): How to teach science, technology, engineering, and math through real-world projects. No kits, chemistry sets, or robotics required.
+- [Your Homeschool Journey: From First Doubts to Finding Your Rhythm](https://anywherelearning.co/guides/homeschool-journey): The emotional and practical side of homeschooling, from the first scary step to the point it clicks. Covers deschooling.
+- [AI & Digital Literacy for Kids: What Every Family Needs to Know](https://anywherelearning.co/guides/ai-digital-literacy): How to teach kids to use AI tools wisely, think critically about digital information, and become confident digital citizens.
+- [Creativity & Maker Activities for Kids](https://anywherelearning.co/guides/creativity-maker-activities): How to nurture creativity, invention, and design thinking through hands-on projects. No artistic talent required.
+- [How to Start Worldschooling With Kids (Without Quitting Everything)](https://anywherelearning.co/guides/worldschooling-guide): How to learn through travel and cultural exploration without selling the house or leaving your job.
+
 ## Free Resource
 
 - [Free Guide: 7 Days of Real-World Learning](https://anywherelearning.co/free-guide): A free downloadable guide with 7 low-prep, real-world activities for homeschool and worldschool families -- one activity a day across outdoor and nature, real-world math, creativity, AI and digital, entrepreneurship, communication, and planning. Ages 6-14.

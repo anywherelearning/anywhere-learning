@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import { getFallbackProducts, type FallbackProduct } from '@/lib/fallback-products';
 import EmailForm from '@/components/EmailForm';
@@ -635,11 +636,72 @@ export default function ShopPage() {
                 </p>
               </div>
             </ScrollReveal>
-            <LibraryFilters
-              rows={rows}
-              tracks={TRACKS.map((t) => ({ value: t.category, label: t.label }))}
-              skills={skillOptions}
-            />
+            {/*
+              LibraryFilters calls useSearchParams() to keep filter state in the
+              URL. Without a Suspense boundary around it, that opts the ENTIRE
+              /shop page out of static rendering: the prerender throws, the
+              loading skeleton is served as the shell, and crawlers get a page
+              with an empty <main>. Wrapping it here contains the bailout to
+              this subtree so everything else prerenders as real HTML.
+            */}
+            <Suspense fallback={<div className="min-h-[420px]" aria-hidden="true" />}>
+              <LibraryFilters
+                rows={rows}
+                tracks={TRACKS.map((t) => ({ value: t.category, label: t.label }))}
+                skills={skillOptions}
+              />
+            </Suspense>
+
+            {/*
+              Crawlable activity index.
+
+              LibraryFilters is a Client Component, so every product link it
+              renders exists only after JS runs. Crawlers that do not execute JS
+              (including the AI crawlers) saw a library page with zero links, and
+              the /shop/* URLs had no internal link pointing at them from
+              anywhere except 4 on the homepage. They were being discovered by
+              sitemap alone, which is why they rank so much deeper than the blog.
+
+              This list is the server-rendered path to every activity. It is
+              deliberately visible rather than hidden: a real browse fallback for
+              anyone without JS, and honest markup for everyone else.
+            */}
+            <nav
+              aria-label="All activities by category"
+              className="mt-14 pt-10 border-t border-[#D8D4C5]"
+            >
+              <h3 className="font-display text-[clamp(1.25rem,2.2vw,1.6rem)] leading-tight tracking-tight text-center">
+                Every activity, <span className="italic text-forest">by category</span>
+              </h3>
+              <div className="mt-8 grid gap-x-8 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+                {TRACKS.map((track) => {
+                  const items = rows.filter((r) => r.category === track.category);
+                  if (items.length === 0) return null;
+                  return (
+                    <div key={track.category}>
+                      <h4
+                        className="font-body text-[13px] font-semibold uppercase tracking-[0.14em] pb-2 border-b"
+                        style={{ color: track.color, borderColor: `${track.color}44` }}
+                      >
+                        {track.label}
+                      </h4>
+                      <ul className="mt-3 flex flex-col gap-1.5">
+                        {items.map((r) => (
+                          <li key={r.slug}>
+                            <Link
+                              href={`/shop/${r.slug}`}
+                              className="text-[14.5px] leading-snug text-gray-700 hover:text-forest-dark hover:underline underline-offset-2"
+                            >
+                              {r.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            </nav>
           </div>
         </section>
 
