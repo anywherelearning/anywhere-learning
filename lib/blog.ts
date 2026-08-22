@@ -295,6 +295,100 @@ const posts: BlogPost[] = [
     relatedSlugs: ['seasonal-scavenger-hunts', 'outdoor-stem-challenges', 'forest-school-activities'],
     recommendedProduct: 'nature-journal-walks',
   },
+
+  // ── Should I Homeschool? (decision-stage) ──
+  {
+    slug: 'should-i-homeschool',
+    title: 'Should I Homeschool? An Honest Checklist for Deciding',
+    excerpt: 'An honest, non-salesy checklist to help you decide if homeschooling is right for your family, including the signs it might not be the right time, the four fears that stop most parents, and the options between all-in and not at all.',
+    hook: 'Most "should you homeschool" posts are written by people who already sell homeschooling. This one is from a former teacher who will also tell you when not to.',
+    category: 'homeschool-journey',
+    pillarSlug: 'homeschool-journey',
+    publishedAt: '2026-08-16',
+    keywords: ['should I homeschool', 'is homeschooling right for my child', 'should I homeschool my child', 'how to decide to homeschool', 'homeschool or public school', 'reasons to homeschool', 'disadvantages of homeschooling', 'is homeschooling right for us'],
+    readTimeMinutes: 11,
+    author: amelie,
+    heroImage: '/images/should-i-homeschool-hero.jpeg',
+    heroImageAlt: 'A mother and her son sitting across a dining table at home, both working on paper together in the morning light',
+    content: [
+      { type: 'summary', text: 'Deciding whether to homeschool comes down to three honest questions: does your child need something school is not giving them, do you have the capacity to lead the day, and are you choosing it toward something rather than only away from fear. This checklist walks through the real signs it could be a good fit, the signs it might not be the right time, the four fears that stop most parents, and the middle-ground options between homeschooling full time and not at all.' },
+      { type: 'paragraph', text: 'If you are reading this, you are probably not sure. That is the most honest and healthy place to start. Homeschooling is a big decision, and the internet is full of people who will tell you it is the best thing they ever did. Some of that is true. But a decision this size deserves better than a sales pitch.' },
+      { type: 'paragraph', text: 'I taught in classrooms for fifteen years before I ever homeschooled my own kids, so I have watched this choice from both sides of the desk. This checklist is not here to convince you. It is here to help you decide honestly, including the parts most homeschool blogs leave out, like the signs it might not be the right time for your family.' },
+
+      { type: 'heading', level: 2, text: 'There is no universally right answer' },
+      { type: 'paragraph', text: 'Homeschooling is right for some kids and some families, and genuinely wrong for others. The same family can be a yes one year and a no the next. The goal is not to find the objectively best form of education. It is to find the best fit for your child, your capacity, and this particular season of your life. Anyone who tells you homeschooling is always the answer is selling something, and so is anyone who tells you it never is.' },
+
+      { type: 'heading', level: 2, text: 'Signs homeschooling might be a good fit' },
+      { type: 'paragraph', text: 'None of these on its own is a verdict. But if several feel familiar, homeschooling is at least worth a serious look.' },
+      { type: 'list', ordered: false, items: [
+        'Your child is fine at home but shrinks at school. Morning stomachaches, rising anxiety, a spark that is quietly dimming. School may not be working for who they are right now.',
+        'Your child is bored or out of step. Whether they are ahead, behind, or just wired differently, a class of thirty cannot move at one kid’s pace. Home can.',
+        'You want more time together, not less. You actually like your kid and want the day back. That matters more than people admit.',
+        'Your family’s life does not fit a school calendar. Shift work, travel, a business, a move, a health situation. Flexibility is the whole point.',
+        'You are already doing it in spirit. If your evenings and weekends are full of the real learning your kid loves, formal school can start to feel like the thing in the way.',
+      ]},
+
+      { type: 'image', src: '/images/should-i-homeschool-painting.jpeg', alt: 'Two children painting at an easel and table at home, brushes and a paint palette in front of them', caption: 'Home learning rarely looks like a classroom. A lot of the best of it looks like this: hands busy, no worksheet in sight.' },
+
+      { type: 'heading', level: 2, text: 'Signs it might not be the right time (the part nobody writes)' },
+      { type: 'paragraph', text: 'Here is the honest bit. Homeschooling is not a rescue hatch for every hard season, and choosing not to right now does not make you a worse parent.' },
+      { type: 'list', ordered: false, items: [
+        'You are in the middle of a crisis. A new baby, a divorce, a health emergency, a financial cliff. Adding "run a school" on top rarely ends well. It is okay to wait.',
+        'You are choosing it only out of fear. Fear of the world, of a bad teacher, of one rough year. Fear can be a useful signal, but "away from" is a shaky foundation. "Toward" holds up better.',
+        'You have zero capacity and no support. You do not need to be home all day, but someone has to lead. If there is truly no adult bandwidth and no co-op, tutor, or community to lean on, name that honestly.',
+        'Your kid is a hard no and old enough to mean it. A resentful thirteen-year-old pulled from their friends makes for a long year for everyone. Their voice counts.',
+      ]},
+      { type: 'pull-quote', text: 'Choosing not to homeschool right now does not make you a worse parent. Choosing it for the wrong reasons does not make you a better one.' },
+
+      { type: 'heading', level: 2, text: 'The four fears that stop most parents' },
+      { type: 'heading', level: 3, text: 'Am I even qualified?' },
+      { type: 'paragraph', text: 'You do not need a teaching degree. I have one, and I can tell you the classroom skills that matter least at home are the credential ones. What a kid needs is an adult who cares, who is willing to say "I don’t know, let’s find out," and who can track down a good resource. You are the expert on your own child, and that is the qualification that is hardest to replace.' },
+      { type: 'heading', level: 3, text: 'What about socialization?' },
+      { type: 'paragraph', text: 'The real question underneath is "will my kid have friends and know how to be around people?" The answer is yes, if you make it happen, the same way you would for any child. Co-ops, sports, clubs, neighbours, mixed-age play. Homeschooled kids often get more real-world social practice, with all ages rather than just the twenty-nine people born the same year, not less.' },
+      { type: 'heading', level: 3, text: 'Can we actually afford it?' },
+      { type: 'paragraph', text: 'Homeschooling can cost almost nothing or quite a lot, depending on your choices. A library card, the outdoors, and everyday life cover an enormous amount for free. The bigger cost is usually income, if it means one parent works less. That is a real math problem worth doing honestly before you decide, not an automatic reason to rule it out.' },
+      { type: 'heading', level: 3, text: 'What if I ruin them?' },
+      { type: 'paragraph', text: 'This is the fear underneath all the others. Here is the reassuring truth: kids are resilient, learning is not fragile, and almost nothing in these years is un-fixable. A year of homeschooling that does not go perfectly is not a catastrophe. Neither is a year of school. You are allowed to try, adjust, and even change your mind.' },
+
+      { type: 'product-callout', slug: 'future-ready-skills-map', context: 'Not sure what to actually focus on if you do homeschool? This maps the future-ready skills that matter most by age, so you are building toward something instead of just recreating school at home.' },
+
+      { type: 'heading', level: 2, text: 'You do not have to go all in' },
+      { type: 'paragraph', text: 'The biggest myth is that this is a binary: full-time homeschool or nothing. It is a spectrum, and most families live somewhere in the middle.' },
+      { type: 'list', ordered: false, items: [
+        'Afterschooling: keep school, and add the real-world learning at home in the evenings and on weekends.',
+        'A trial term: commit to one semester, then reassess. Nothing has to be permanent.',
+        'Hybrid or part-time programs: some schools and co-ops run two or three days a week.',
+        'Worldschooling: learning through travel for a season (here is [how homeschooling and worldschooling differ](/blog/homeschool-vs-worldschool)).',
+        'A gap year: pull out for one intentional year and see what you learn about your kid.',
+      ]},
+      { type: 'paragraph', text: 'You can also start and stop. Plenty of families homeschool for a few years and return to school, or the reverse. The door swings both ways, and walking through it once does not lock it behind you.' },
+
+      { type: 'heading', level: 2, text: 'How to actually decide' },
+      { type: 'paragraph', text: 'If you are still on the fence after all that, here is a simple way through.' },
+      { type: 'list', ordered: true, items: [
+        'Write down what you are moving toward, not just what you are moving away from. If the whole list is "away," pause and sit with that.',
+        'Ask your kid honestly, and actually listen. Their buy-in matters more than any curriculum you choose.',
+        'Talk to two real homeschool families, not just the influencers. Ask them about the hard parts.',
+        'Run a low-stakes trial: a summer, a month, or a [deschooling period](/blog/five-stages-deschooling) after a school year ends.',
+        'Give yourself permission to change your mind either way. This is a decision you get to revisit.',
+      ]},
+      { type: 'paragraph', text: 'And if you land on yes, you do not have to figure it all out at once. Our guide for the [complete beginner](/blog/new-to-homeschooling) and the [first-year checklist](/blog/homeschool-first-year-checklist) walk you through the first steps, and the [homeschool journey guide](/guides/homeschool-journey) covers the bigger picture.' },
+
+      { type: 'tip', title: 'A gentle reminder', text: 'You are not signing a lifetime contract. You are choosing what your family needs for the next season. That is a decision you are absolutely qualified to make, and to remake.' },
+
+      { type: 'faq', items: [
+        { question: 'Is homeschooling right for my child?', answer: 'Homeschooling tends to fit children who are struggling socially or emotionally at school, who are bored or out of step with the classroom pace, or whose family life needs more flexibility than a school calendar allows. It is less likely to be the right move during a family crisis, when it is driven only by fear, or when an older child is strongly opposed. The best test is whether you are choosing it toward something specific, not only away from a bad situation.' },
+        { question: 'Do I need to be a teacher to homeschool?', answer: 'No. You do not need a teaching degree or any formal qualification to homeschool in most places. What matters far more is caring about your child, being willing to learn alongside them, and knowing how to find good resources. Parents are the experts on their own children, which is the hardest qualification to replace.' },
+        { question: 'What are the disadvantages of homeschooling?', answer: 'The honest disadvantages include the time and energy it takes to lead the day, the potential loss of one income, the effort required to arrange social opportunities, and the fact that you are more directly responsible for the outcome. None of these are dealbreakers for most families, but they are real and worth weighing before you decide.' },
+        { question: 'Can I homeschool if I work full time?', answer: 'Yes, many working parents homeschool, though it usually requires flexibility, a co-parent or support person, part-time or hybrid programs, or a more independent, self-directed approach for older kids. It is harder with very young children and easier as kids grow more independent. It is a real logistics question, not an automatic no.' },
+        { question: 'How do I know if my child would do well homeschooling?', answer: 'Watch how your child learns outside of school. Kids who light up during hands-on, self-directed, or one-on-one learning often thrive at home. A low-stakes trial, like a summer of learning together or a deschooling period after the school year, is the best way to find out before committing.' },
+      ]},
+      { type: 'cta', text: 'Leaning toward yes? Our free guide gives you real-world activities to try this week, no curriculum required, so you can see how home learning feels before you commit.', href: '/free-guide', label: 'Get the Free Guide' },
+    ],
+    relatedSlugs: ['new-to-homeschooling', 'homeschool-first-year-checklist', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'homeschool-vs-worldschool'],
+    recommendedProduct: 'future-ready-skills-map',
+  },
+
   {
     slug: 'curriculum-guilt-permission-slip',
     title: 'Letting Go of Curriculum Guilt: A Permission Slip',
