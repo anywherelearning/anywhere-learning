@@ -105,10 +105,10 @@ export default function ChallengePage() {
         {/* ── Collage band ── the week, in real photos, before we describe it ── */}
         <section className="bg-cream">
           <Image
-            src="/images/challenge-hero-collage.jpg"
-            alt="Snapshots from the week: mapping out directions at the kitchen table, playing outside, a family meal, digging in the sand together, a trip to the market, and two kids making food."
-            width={2400}
-            height={620}
+            src="/images/challenge-five-days-banner.jpg"
+            alt="The Free 5-Day Real-World Skills Challenge, September 14 to 18, 2026, ages 6 to 14. Day 1 communication, day 2 physical and outdoor, day 3 critical thinking, day 4 life skills, day 5 real-world math."
+            width={1640}
+            height={624}
             priority
             sizes="100vw"
             className="h-auto w-full"
