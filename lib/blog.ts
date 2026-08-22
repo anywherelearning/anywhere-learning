@@ -304,7 +304,7 @@ const posts: BlogPost[] = [
     hook: 'Most "should you homeschool" posts are written by people who already sell homeschooling. This one is from a former teacher who will also tell you when not to.',
     category: 'homeschool-journey',
     pillarSlug: 'homeschool-journey',
-    publishedAt: '2026-08-16',
+    publishedAt: '2026-08-22',
     keywords: ['should I homeschool', 'is homeschooling right for my child', 'should I homeschool my child', 'how to decide to homeschool', 'homeschool or public school', 'reasons to homeschool', 'disadvantages of homeschooling', 'is homeschooling right for us'],
     readTimeMinutes: 11,
     author: amelie,
