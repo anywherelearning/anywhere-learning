@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import SaleBanner from "@/components/shared/SaleBanner";
+import ChallengeBanner from "@/components/shared/ChallengeBanner";
 import CapacitorProvider from "@/components/mobile/CapacitorProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
 import NativeHide from "@/components/mobile/NativeHide";
@@ -198,6 +199,7 @@ export default function RootLayout({
           <CapacitorProvider>
             <NativeRedirectGuard />
             <ImageProtection />
+            <NativeHide><ChallengeBanner /></NativeHide>
             <NativeHide><SaleBanner /></NativeHide>
             {children}
             <PinterestEnhancedMatch />

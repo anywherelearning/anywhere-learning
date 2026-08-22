@@ -94,3 +94,28 @@ export const CHALLENGE_DAYS = [
       'The big finish. Your kid takes real money on a real mission and pulls off a little celebration for the whole family. The proudest day, and the one you will want a photo of.',
   },
 ] as const;
+
+// ─── Timing helpers ───
+// Real instants, in Pacific, so copy that depends on "has it started yet" can
+// never disagree with the labels above. Same pattern as lib/sale.ts.
+export const CHALLENGE_STARTS_AT = new Date('2026-09-14T07:00:00.000Z'); // Mon Sept 14, 00:00 PT
+export const CHALLENGE_ENDS_AT = new Date('2026-09-19T06:59:59.000Z'); // Fri Sept 18, 23:59 PT
+
+/**
+ * Signups stay open right through the final day. Emails 3-10 are broadcasts to
+ * the `challenge-signup` tag rather than a day-offset sequence, so someone who
+ * joins on the Wednesday simply picks up from Day 3 with everyone else.
+ */
+export function areSignupsOpen(now: Date = new Date()): boolean {
+  return CHALLENGE.isLive && now <= CHALLENGE_ENDS_AT;
+}
+
+export function hasChallengeStarted(now: Date = new Date()): boolean {
+  return now >= CHALLENGE_STARTS_AT;
+}
+
+/** Whole days until Day 1. 0 once it has started. */
+export function daysUntilChallenge(now: Date = new Date()): number {
+  const ms = CHALLENGE_STARTS_AT.getTime() - now.getTime();
+  return Math.max(0, Math.ceil(ms / (1000 * 60 * 60 * 24)));
+}
