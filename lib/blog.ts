@@ -82,7 +82,7 @@ export const blogProductDefaults: Record<BlogCategory, { product: string }> = {
 
 const amelie: BlogAuthor = {
   name: 'Amelie',
-  bio: 'Mom of two and a former teacher with 15 years of classroom experience, now founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
+  bio: 'Mom of two who homeschools at home and worldschools on the road. Former teacher with 15 years of classroom experience, now founder of Anywhere Learning. I believe the best education happens when kids are curious, connected, and free to explore.',
   credentials: 'B.Ed, M.Ed',
   avatarColor: '#d4a373',
   avatarImage: '/images/amelie-avatar.jpeg',
@@ -328,8 +328,6 @@ const posts: BlogPost[] = [
         'You are already doing it in spirit. If your evenings and weekends are full of the real learning your kid loves, formal school can start to feel like the thing in the way.',
       ]},
 
-      { type: 'image', src: '/images/should-i-homeschool-painting.jpeg', alt: 'Two children painting at an easel and table at home, brushes and a paint palette in front of them', caption: 'Home learning rarely looks like a classroom. A lot of the best of it looks like this: hands busy, no worksheet in sight.' },
-
       { type: 'heading', level: 2, text: 'Signs it might not be the right time (the part nobody writes)' },
       { type: 'paragraph', text: 'Here is the honest bit. Homeschooling is not a rescue hatch for every hard season, and choosing not to right now does not make you a worse parent.' },
       { type: 'list', ordered: false, items: [
@@ -339,6 +337,8 @@ const posts: BlogPost[] = [
         'Your kid is a hard no and old enough to mean it. A resentful thirteen-year-old pulled from their friends makes for a long year for everyone. Their voice counts.',
       ]},
       { type: 'pull-quote', text: 'Choosing not to homeschool right now does not make you a worse parent. Choosing it for the wrong reasons does not make you a better one.' },
+
+      { type: 'image', src: '/images/should-i-homeschool-painting.jpeg', alt: 'Two children painting at an easel and table at home, brushes and a paint palette in front of them', caption: 'Home learning rarely looks like a classroom. A lot of the best of it looks like this: hands busy, no worksheet in sight.' },
 
       { type: 'heading', level: 2, text: 'The four fears that stop most parents' },
       { type: 'heading', level: 3, text: 'Am I even qualified?' },
