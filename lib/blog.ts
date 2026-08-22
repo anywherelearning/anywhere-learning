@@ -311,7 +311,7 @@ const posts: BlogPost[] = [
     heroImage: '/images/should-i-homeschool-hero.jpeg',
     heroImageAlt: 'A mother and her son sitting across a dining table at home, both working on paper together in the morning light',
     content: [
-      { type: 'summary', text: 'Deciding whether to homeschool comes down to three honest questions: does your child need something school is not giving them, do you have the capacity to lead the day, and are you choosing it toward something rather than only away from fear. This checklist walks through the real signs it could be a good fit, the signs it might not be the right time, the four fears that stop most parents, and the middle-ground options between homeschooling full time and not at all.' },
+      { type: 'summary', text: 'This guide organizes the decision around three honest questions: does your child need something school is not giving them, do you have the capacity to lead the day, and are you choosing it toward something rather than only away from fear. It walks through the real signs it could be a good fit, the signs it might not be the right time, the four fears that stop most parents, and the middle-ground options between homeschooling full time and not at all.' },
       { type: 'paragraph', text: 'If you are reading this, you are probably not sure. That is the most honest and healthy place to start. Homeschooling is a big decision, and the internet is full of people who will tell you it is the best thing they ever did. Some of that is true. But a decision this size deserves better than a sales pitch.' },
       { type: 'paragraph', text: 'I taught in classrooms for fifteen years before I ever homeschooled my own kids, so I have watched this choice from both sides of the desk. This checklist is not here to convince you. It is here to help you decide honestly, including the parts most homeschool blogs leave out, like the signs it might not be the right time for your family.' },
 
@@ -323,7 +323,7 @@ const posts: BlogPost[] = [
       { type: 'list', ordered: false, items: [
         'Your child is fine at home but shrinks at school. Morning stomachaches, rising anxiety, a spark that is quietly dimming. School may not be working for who they are right now.',
         'Your child is bored or out of step. Whether they are ahead, behind, or just wired differently, a class of thirty cannot move at one kid’s pace. Home can.',
-        'You want more time together, not less. You actually like your kid and want the day back. That matters more than people admit.',
+        'You want more time together, not less. You would rather have your kid’s days than hand the best hours over to a school schedule. That pull matters more than people admit.',
         'Your family’s life does not fit a school calendar. Shift work, travel, a business, a move, a health situation. Flexibility is the whole point.',
         'You are already doing it in spirit. If your evenings and weekends are full of the real learning your kid loves, formal school can start to feel like the thing in the way.',
       ]},
