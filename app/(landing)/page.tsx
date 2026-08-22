@@ -6,6 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import Eyebrow from '@/components/shared/PageEyebrow';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
+import ChallengeHeroSticker from '@/components/home/ChallengeHeroSticker';
 import HeroNextStop from '@/components/home/v2/HeroNextStop';
 import TrailSteps from '@/components/home/v2/TrailSteps';
 import ActivityExplorer from '@/components/home/v2/ActivityExplorer';
@@ -162,6 +163,7 @@ export default async function HomePage() {
           <div className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-20">
             <div className="relative z-[2] max-w-[620px]">
               <HeroSaleBadge />
+              <ChallengeHeroSticker />
               <div data-reveal>
                 <Eyebrow>Real-world activities &middot; Ages 6&ndash;14</Eyebrow>
               </div>
@@ -237,67 +239,6 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
-
-        {/* ════════ 02b FREE CHALLENGE ════════ */}
-        {/* Time-boxed. Disappears with CHALLENGE.isLive, same flag that renders
-            /challenge and lists it in the sitemap. */}
-        {CHALLENGE.isLive && (
-          <section className="bg-cream px-6 py-16 md:px-16 md:py-20">
-            <div className="mx-auto max-w-[1100px]">
-              <ScrollReveal>
-                <div className="overflow-hidden rounded-[26px] border border-[#e6dcc4] bg-[#fbf7ee] shadow-[0_30px_70px_-50px_rgba(60,50,30,0.5)]">
-                  <Image
-                    src="/images/challenge-five-days-banner.jpg"
-                    alt="The free 5-day Real-World Skills Challenge: communication, physical and outdoor, critical thinking, life skills, and real-world math."
-                    width={1640}
-                    height={624}
-                    sizes="(max-width: 1100px) 100vw, 1100px"
-                    className="h-auto w-full"
-                  />
-
-                  <div className="px-7 py-9 text-center md:px-14 md:py-11">
-                    <Eyebrow>Free &middot; Starts {CHALLENGE.startLabel}</Eyebrow>
-
-                    <h2 className="mt-4 font-display text-[clamp(1.75rem,3.4vw,2.6rem)] leading-[1.06] text-ink text-balance">
-                      Five days.{' '}
-                      <span className="italic text-forest">Five real-world skills.</span>
-                    </h2>
-
-                    <p className="mx-auto mt-4 max-w-[54ch] text-[17px] leading-[1.7] text-gray-600 text-pretty">
-                      One real-life activity a day, about an hour each. No prep, no printing,
-                      no worksheets. You lead it with your kid, and I&apos;m in the group every
-                      single day doing it right alongside you.
-                    </p>
-
-                    <div className="mt-7 flex flex-wrap items-center justify-center gap-2">
-                      {CHALLENGE_DAYS.map((d, i) => (
-                        <span
-                          key={d.day}
-                          className="rounded-full border border-[#e6dcc4] bg-cream px-3.5 py-1.5 text-[13px] font-semibold text-forest-dark"
-                        >
-                          <span className="text-gold-dark">{i + 1}</span>&nbsp;&nbsp;{d.title}
-                        </span>
-                      ))}
-                    </div>
-
-                    <Link
-                      href="/challenge?source=homepage"
-                      className="group mt-8 inline-flex items-center gap-2 rounded-full bg-forest px-7 py-3.5 text-[16px] font-semibold text-cream transition hover:bg-forest-dark"
-                    >
-                      Save your free spot
-                      <ArrowIcon />
-                    </Link>
-
-                    <p className="mt-4 text-[13.5px] text-gray-500">
-                      For families with kids roughly {CHALLENGE.ageRange}. Runs{' '}
-                      {CHALLENGE.rangeLabel}, {CHALLENGE.year}.
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </section>
-        )}
 
         {/* ════════ 03 WHY + STATS ════════ */}
         <section
