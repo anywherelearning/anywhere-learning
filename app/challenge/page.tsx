@@ -20,6 +20,21 @@ export const metadata: Metadata = {
       "Five days, five real-world activities, about an hour a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
     url: "https://anywherelearning.co/challenge",
     type: "website",
+    images: [
+      {
+        url: "https://anywherelearning.co/images/challenge-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Free 5-Day Real-World Learning Challenge, September 14 to 18, 2026, ages 6 to 14. Five days: communication, physical and outdoor, critical thinking, life skills, real-world math.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Free 5-Day Real-World Learning Challenge",
+    description:
+      "Five days, five real-world activities, about an hour a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
+    images: ["https://anywherelearning.co/images/challenge-og.jpg"],
   },
 };
 
@@ -29,6 +44,8 @@ const eventLd = {
   name: CHALLENGE.name,
   description:
     "A free 5-day challenge for homeschool and worldschool families. One short, real-world activity a day, parent-led, with the founder in the group every day.",
+  // Google uses this for Event rich results; without it the listing is text-only.
+  image: ["https://anywherelearning.co/images/challenge-og.jpg"],
   startDate: CHALLENGE.startISO,
   endDate: CHALLENGE.endISO,
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
