@@ -26,14 +26,14 @@ import {
 } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: 'All Activities: Life Skills for Kids Ages 6 to 14',
+  title: 'All Activities: Real-World Learning for Kids Ages 6 to 14',
   description:
-    'Every hands-on, real-world life-skills activity for kids ages 6 to 14, in one membership. Cooking, budgeting, building, pitching, planning. Designed by a teacher for homeschool and busy families who want their kids capable and ready for real life.',
+    'Every hands-on, real-world activity for kids ages 6 to 14, in one membership. The academics and the life skills arrive in the same task: plan a party and that is fractions and budgeting. Designed by a teacher for families who want learning that sticks.',
   alternates: { canonical: 'https://anywherelearning.co/shop' },
   openGraph: {
-    title: 'All Activities: Life Skills for Kids Ages 6 to 14 | Anywhere Learning',
+    title: 'All Activities: Real-World Learning for Kids Ages 6 to 14 | Anywhere Learning',
     description:
-      'Every hands-on, real-world life-skills activity for kids ages 6 to 14, across nine topics. One membership, and we pick your family\'s next activity for you.',
+      'Every hands-on, real-world activity for kids ages 6 to 14, across nine topics. Real maths, writing and life skills inside real tasks. One membership, and we pick your family\'s next activity for you.',
     url: 'https://anywherelearning.co/shop',
     type: 'website',
   },
@@ -409,9 +409,9 @@ export default function ShopPage() {
   const collectionLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'All Activities: Life Skills for Kids Ages 6 to 14',
+    name: 'All Activities: Real-World Learning for Kids Ages 6 to 14',
     description:
-      '120+ hands-on, real-world life-skills activities across nine topics, for kids ages 6 to 14. All included in one membership.',
+      '120+ hands-on, real-world activities across nine topics, for kids ages 6 to 14, each carrying academics and life skills in the same task. All included in one membership.',
     url: 'https://anywherelearning.co/shop',
     publisher: {
       '@type': 'Organization',

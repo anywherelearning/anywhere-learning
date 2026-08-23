@@ -6,7 +6,7 @@ import Testimonials from '@/components/home/Testimonials';
 import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 
 const ABOUT_DESC =
-  "I'm Amelie, former teacher (B.Ed, M.Ed, 15 years) and mom of two. I watched kids become less independent over 15 years in the classroom. Anywhere Learning is the hands-on life skills activities I built so any parent can change that.";
+  "I'm Amelie, former teacher (B.Ed, M.Ed, 15 years) and mom of two. I watched kids become less independent over 15 years in the classroom. Anywhere Learning is the hands-on, real-world activities I built so any parent can change that.";
 const ABOUT_URL = 'https://anywherelearning.co/about';
 const ABOUT_OG_IMAGE = 'https://anywherelearning.co/about-hero-amelie.jpeg';
 
@@ -126,7 +126,7 @@ const personLd = {
   familyName: 'Drouin',
   jobTitle: 'Former Teacher & Founder of Anywhere Learning',
   description:
-    'Former classroom teacher (B.Ed, M.Ed) with 15 years of experience who saw kids becoming less independent and resourceful. Creator of Anywhere Learning, hands-on life skills activities for families.',
+    'Former classroom teacher (B.Ed, M.Ed) with 15 years of experience who saw kids becoming less independent and resourceful. Creator of Anywhere Learning, hands-on real-world activities that carry academics and life skills in the same task.',
   url: 'https://anywherelearning.co/about',
   image: 'https://anywherelearning.co/amelie.jpg',
   nationality: { '@type': 'Country', name: 'Canada' },
@@ -144,6 +144,7 @@ const personLd = {
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Master of Education (M.Ed)' },
   ],
   knowsAbout: [
+    'Real-world learning',
     'Life skills education',
     'Childhood independence',
     'Experiential education',

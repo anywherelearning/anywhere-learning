@@ -50,7 +50,7 @@ export default function ChallengeBanner() {
       aria-label="Free 5-day challenge announcement"
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 py-2.5 text-center">
-        <span className="font-semibold tracking-wide">Free 5-Day Real-World Skills Challenge</span>
+        <span className="font-semibold tracking-wide">Free 5-Day Real-World Learning Challenge</span>
         <span aria-hidden className="hidden text-gold-light sm:inline">&middot;</span>
         <span className="text-cream/85">{lead}</span>
         <Link

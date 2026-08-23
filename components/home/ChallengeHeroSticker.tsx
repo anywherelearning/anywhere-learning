@@ -55,7 +55,7 @@ export default function ChallengeHeroSticker() {
       <Link
         href="/challenge?source=hero-sticker"
         className="relative z-20 mb-5 inline-flex items-center gap-2.5 rounded-full border-2 border-gold-light bg-[#c4836a] px-4 py-2 text-cream shadow-lg transition hover:brightness-95 lg:hidden"
-        aria-label={`Free 5-day Real-World Skills Challenge, ${when}`}
+        aria-label={`Free 5-day Real-World Learning Challenge, ${when}`}
       >
         <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-cream/85">Free</span>
         <span className="text-[13.5px] font-semibold leading-tight">5-Day Challenge</span>
@@ -71,7 +71,7 @@ export default function ChallengeHeroSticker() {
         <Link
           href="/challenge?source=hero-sticker"
           className="pointer-events-auto group relative block -rotate-[7deg] transition-transform duration-300 hover:-rotate-[3deg] hover:scale-[1.04]"
-          aria-label={`Free 5-day Real-World Skills Challenge, ${when}. Save your spot.`}
+          aria-label={`Free 5-day Real-World Learning Challenge, ${when}. Save your spot.`}
         >
           <span
             className="absolute -inset-3 rounded-full bg-[#c4836a]/45 blur-2xl transition group-hover:bg-[#c4836a]/60"

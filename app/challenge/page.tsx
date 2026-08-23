@@ -8,14 +8,14 @@ import PageEyebrow from "@/components/shared/PageEyebrow";
 import { CHALLENGE, CHALLENGE_DAYS } from "@/lib/challenge";
 
 export const metadata: Metadata = {
-  title: "The Free 5-Day Real-World Skills Challenge",
+  title: "The Free 5-Day Real-World Learning Challenge",
   description:
     "A free 5-day challenge for homeschool and worldschool families. One real-world activity a day, about an hour, no prep and no worksheets, led by you and done alongside a former teacher. Starts September 14.",
   alternates: {
     canonical: "https://anywherelearning.co/challenge",
   },
   openGraph: {
-    title: "The Free 5-Day Real-World Skills Challenge | Anywhere Learning",
+    title: "The Free 5-Day Real-World Learning Challenge | Anywhere Learning",
     description:
       "Five days, five real-world activities, about an hour a day, no prep. A free challenge for families with kids 6 to 14. Starts September 14.",
     url: "https://anywherelearning.co/challenge",
@@ -106,7 +106,7 @@ export default function ChallengePage() {
         <section className="bg-cream">
           <Image
             src="/images/challenge-five-days-banner.jpg"
-            alt="The Free 5-Day Real-World Skills Challenge, September 14 to 18, 2026, ages 6 to 14. Day 1 communication, day 2 physical and outdoor, day 3 critical thinking, day 4 life skills, day 5 real-world math."
+            alt="The Free 5-Day Real-World Learning Challenge, September 14 to 18, 2026, ages 6 to 14. Day 1 communication, day 2 physical and outdoor, day 3 critical thinking, day 4 life skills, day 5 real-world math."
             width={1640}
             height={624}
             priority

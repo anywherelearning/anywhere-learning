@@ -32,7 +32,7 @@ const WARM_COPY: Record<
         <em className="not-italic italic text-forest">right where you left off.</em>
       </>
     ),
-    sub: "Sign in to keep building life skills with your kids, one hands-on activity at a time.",
+    sub: "Sign in to keep doing real-world activities with your kids, one at a time.",
     list: [
       '120+ activities across 9 categories',
       'Three difficulty levels, siblings together',

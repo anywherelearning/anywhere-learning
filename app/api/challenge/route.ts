@@ -4,7 +4,7 @@ import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { CHALLENGE } from "@/lib/challenge";
 
 /**
- * 5-Day Real-World Skills Challenge signup.
+ * 5-Day Real-World Learning Challenge signup.
  *
  * Tags applied (no generic `lead` tag, so signups get the challenge sequence,
  * not the default 7-Activities funnel):

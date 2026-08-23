@@ -1,4 +1,4 @@
-// ─── The 5-Day Real-World Skills Challenge ───
+// ─── The 5-Day Real-World Learning Challenge ───
 //
 // Single source of truth for the free challenge that opens the sales funnel
 // (see the Zero-to-First-Sales playbook, Move 2). The landing page, the Kit
@@ -9,7 +9,7 @@
 // offer pitched on Day 5 closes Mon Sept 21 at 11:59pm.
 
 export const CHALLENGE = {
-  name: 'The 5-Day Real-World Skills Challenge',
+  name: 'The 5-Day Real-World Learning Challenge',
   shortName: '5-Day Challenge',
 
   // ─── Kill switch ───

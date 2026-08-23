@@ -1,5 +1,5 @@
 const items = [
-  'Life skills kids actually need',
+  'Real learning kids actually remember',
   '120+ hands-on activity guides',
   'Created by a teacher (B.Ed, M.Ed)',
   'No curriculum needed',
