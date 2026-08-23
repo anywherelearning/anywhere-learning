@@ -106,9 +106,9 @@ const beliefs = [
   },
 ];
 
-const approaches: Array<{ label: string; highlight?: boolean }> = [
-  { label: 'Public school', highlight: true },
-  { label: 'Private school', highlight: true },
+const approaches: Array<{ label: string }> = [
+  { label: 'Public school' },
+  { label: 'Private school' },
   { label: 'Homeschool' },
   { label: 'Worldschool' },
   { label: 'Charlotte Mason' },
@@ -318,10 +318,11 @@ export default function AboutPage() {
             <ScrollReveal delay={80}>
               <div className="mt-8 max-w-[660px] text-[18px] leading-[1.78] text-gray-600 space-y-6">
                 <p>
-                  We do academics, of course. Math, reading, writing. But honestly, that&apos;s
-                  the easy part. The harder, more important work is everything else: the planning
-                  a meal, fixing the bike, running a small business, navigating a hard
-                  conversation. The kind of learning{' '}
+                  We do academics, of course. Math, reading, writing. Just not as a separate
+                  subject at a separate desk. Planning a meal is fractions and budgeting. Fixing
+                  the bike is measurement and problem-solving. Running a small business is
+                  pricing, writing and negotiating. The skills and the schoolwork arrive in the
+                  same task, and that is the part{' '}
                   <span className="font-display italic text-ink">a school day never quite has room for.</span>
                 </p>
                 <p>
@@ -408,24 +409,14 @@ export default function AboutPage() {
                 fits any family, any approach.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-2.5">
-                {approaches.map((a) =>
-                  a.highlight ? (
-                    <span
-                      key={a.label}
-                      className="inline-flex items-center gap-2 bg-[#E6EBDF] border border-[#C9D3BE] text-forest-dark font-semibold text-[14px] px-4 py-2 rounded-full"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-forest shrink-0" aria-hidden="true" />
-                      {a.label}
-                    </span>
-                  ) : (
-                    <span
-                      key={a.label}
-                      className="inline-flex items-center text-ink bg-[#F2EFE4] font-medium text-[14px] px-4 py-2 rounded-full transition-all hover:bg-[#DAD7CD] hover:-translate-y-0.5"
-                    >
-                      {a.label}
-                    </span>
-                  ),
-                )}
+                {approaches.map((a) => (
+                  <span
+                    key={a.label}
+                    className="inline-flex items-center text-ink bg-[#F2EFE4] font-medium text-[14px] px-4 py-2 rounded-full"
+                  >
+                    {a.label}
+                  </span>
+                ))}
               </div>
             </ScrollReveal>
           </div>

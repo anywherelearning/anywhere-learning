@@ -56,25 +56,25 @@ const catalogFont = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anywhere Learning | Life Skills Activities for Kids",
+    default: "Real-World Learning Activities for Kids | Anywhere Learning",
     template: "%s | Anywhere Learning",
   },
   description:
-    "Hands-on life skills activities that help parents raise capable, independent kids. Cooking, budgeting, problem-solving, and more. Low prep, research-backed, ages 6 to 14.",
+    "Real-world activities where the academics and life skills happen in one task. Plan a party, that's fractions and budgeting. No worksheets, low prep. Ages 6-14.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://anywherelearning.co",
     siteName: "Anywhere Learning",
-    title: "Anywhere Learning | Life Skills Activities for Kids",
+    title: "Real-World Learning Activities for Kids | Anywhere Learning",
     description:
-      "Hands-on life skills activities that help parents raise capable, independent kids. Cooking, budgeting, problem-solving, and more. Low prep, research-backed, ages 6 to 14.",
+      "Real-world activities where the academics and life skills happen in one task. Plan a party, that's fractions and budgeting. No worksheets, low prep. Ages 6-14.",
     images: [
       {
         url: "https://anywherelearning.co/og-default.jpg?v=2",
         width: 1200,
         height: 630,
-        alt: "Anywhere Learning | Life Skills Activities for Kids",
+        alt: "Real-World Learning Activities for Kids | Anywhere Learning",
       },
     ],
   },

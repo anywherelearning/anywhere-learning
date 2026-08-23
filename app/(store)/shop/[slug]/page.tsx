@@ -27,7 +27,7 @@ import { getProductSkills } from "@/lib/skills";
 // (Was statically generated with `revalidate = 86400`, which served every
 // visitor the build-time 'guest' state and made members see "Unlock with
 // membership" on activities they actually owned.)
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 /* ─────────────────────────────────────────────────────────────────
    Per-category accent + content maps
@@ -43,12 +43,24 @@ const CATEGORY_THEMES: Record<string, CategoryTheme> = {
   "real-world-math": { color: "#588157", deep: "#3A5A40", soft: "#E6EBDF" },
   entrepreneurship: { color: "#C97B5C", deep: "#7A3D24", soft: "#F2DECF" },
   "ai-literacy": { color: "#B6913F", deep: "#7A5E1F", soft: "#F5E7BC" },
-  "communication-writing": { color: "#3A5A40", deep: "#26331F", soft: "#CFDCC4" },
-  "planning-problem-solving": { color: "#588157", deep: "#3A5A40", soft: "#E6EBDF" },
+  "communication-writing": {
+    color: "#3A5A40",
+    deep: "#26331F",
+    soft: "#CFDCC4",
+  },
+  "planning-problem-solving": {
+    color: "#588157",
+    deep: "#3A5A40",
+    soft: "#E6EBDF",
+  },
   "creativity-maker": { color: "#C97B5C", deep: "#7A3D24", soft: "#F2DECF" },
   "outdoor-learning": { color: "#3A5A40", deep: "#26331F", soft: "#CFDCC4" },
   worldschooling: { color: "#8A8470", deep: "#5A5240", soft: "#DAD7CD" },
-  "emotional-social-skills": { color: "#B6748A", deep: "#7A4858", soft: "#F4E4E9" },
+  "emotional-social-skills": {
+    color: "#B6748A",
+    deep: "#7A4858",
+    soft: "#F4E4E9",
+  },
 };
 
 function themeFor(category: string): CategoryTheme {
@@ -58,9 +70,9 @@ function themeFor(category: string): CategoryTheme {
 /** Per-category "Why it matters" callout (parent-facing, motivational). */
 const WHY_IT_MATTERS: Record<string, string> = {
   "real-world-math":
-    "When maths lives in real money, real measurements, and real decisions, it stops being a worksheet and becomes a tool. A kid who uses it to get something they actually want remembers it for life, and they did it with you. That is the moment \"I taught my kid something real\" starts to feel possible.",
+    'When maths lives in real money, real measurements, and real decisions, it stops being a worksheet and becomes a tool. A kid who uses it to get something they actually want remembers it for life, and they did it with you. That is the moment "I taught my kid something real" starts to feel possible.',
   entrepreneurship:
-    "Pitching, pricing, failing, and trying again. These are the skills no school subject teaches but every adult life needs. One small business taught at home beats a hundred worksheets on \"economics.\"",
+    'Pitching, pricing, failing, and trying again. These are the skills no school subject teaches but every adult life needs. One small business taught at home beats a hundred worksheets on "economics."',
   "ai-literacy":
     "Your kid will spend the rest of their life around AI. Whether they treat it like magic, an oracle, or a tool they direct is up to what you teach them now. This is the literacy that defines the next twenty years.",
   "communication-writing":
@@ -120,13 +132,18 @@ export async function generateMetadata({
     worldschooling: "Worldschooling Activities",
     "emotional-social-skills": "Emotional & Social Skills for Kids",
   };
-  const suffix = categoryKeywords[product.category] || "Real-World Learning Activities";
+  const suffix =
+    categoryKeywords[product.category] || "Real-World Learning Activities";
   const ageBand = product.ageRange?.replace(/^Ages\s*/i, "") || "6-14";
 
   // Build a meaningful ~150-char description: keep the short product blurb,
   // add age + category + key practical points so Google has more keyword space.
   const baseDesc = product.shortDescription.trim().replace(/\.$/, "");
-  const description = `${baseDesc}. ${suffix} for ages ${ageBand}. Parent-led activity guide, no curriculum needed, use on any device.`.slice(0, 160);
+  const description =
+    `${baseDesc}. ${suffix} for ages ${ageBand}. Parent-led activity guide, no curriculum needed, use on any device.`.slice(
+      0,
+      160,
+    );
 
   const imageUrl = product.imageUrl
     ? product.imageUrl.startsWith("http")
@@ -176,26 +193,28 @@ export async function generateMetadata({
    Page
    ───────────────────────────────────────────────────────────────── */
 
-import type { AccessTier } from '@/lib/access';
+import type { AccessTier } from "@/lib/access";
 
 // Resolve the visitor's access tier. Real lookup goes through Clerk auth →
 // the `users` table → a subscription (member, or trial while the free trial
 // runs). Falls back to a query param (development-only) when Clerk isn't
 // configured.
-async function detectAccessTier(searchParams: { tier?: string }): Promise<AccessTier> {
+async function detectAccessTier(searchParams: {
+  tier?: string;
+}): Promise<AccessTier> {
   // Dev/preview override (NEVER in production — only affects the "in your
   // library" badge here; content is gated by the download endpoint).
-  if (process.env.NODE_ENV !== 'production') {
-    if (searchParams.tier === 'member') return 'member';
-    if (searchParams.tier === 'trial') return 'trial';
-    if (searchParams.tier === 'guest') return 'guest';
+  if (process.env.NODE_ENV !== "production") {
+    if (searchParams.tier === "member") return "member";
+    if (searchParams.tier === "trial") return "trial";
+    if (searchParams.tier === "guest") return "guest";
   }
 
   // Real lookup: Clerk → DB
-  let tier: AccessTier = 'guest';
+  let tier: AccessTier = "guest";
   try {
-    const { auth } = await import('@clerk/nextjs/server');
-    const { getAccessTierForClerkId } = await import('@/lib/access');
+    const { auth } = await import("@clerk/nextjs/server");
+    const { getAccessTierForClerkId } = await import("@/lib/access");
     const { userId } = await auth();
     if (userId) tier = await getAccessTierForClerkId(userId);
   } catch {
@@ -235,18 +254,26 @@ export default async function ProductPage({
   const theme = themeFor(product.category);
   const categoryLabel = CATEGORY_LABELS[product.category] || product.category;
   const ageRange = product.ageRange?.replace(/[-–]/g, "–") || "Ages 6–14";
-  const ageRangeDisplay = ageRange.startsWith("Ages") ? ageRange : `Ages ${ageRange}`;
+  const ageRangeDisplay = ageRange.startsWith("Ages")
+    ? ageRange
+    : `Ages ${ageRange}`;
 
   // Related: same category, exclude this one, cap at 3.
   let relatedProducts: FallbackProduct[] = [];
   try {
     const all = await getActiveProducts();
     relatedProducts = all
-      .filter((p) => p.category === product.category && p.id !== product.id && !p.isBundle)
+      .filter(
+        (p) =>
+          p.category === product.category && p.id !== product.id && !p.isBundle,
+      )
       .slice(0, 3) as unknown as FallbackProduct[];
   } catch {
     relatedProducts = getFallbackProducts()
-      .filter((p) => p.category === product.category && p.id !== product.id && !p.isBundle)
+      .filter(
+        (p) =>
+          p.category === product.category && p.id !== product.id && !p.isBundle,
+      )
       .slice(0, 3);
   }
 
@@ -261,6 +288,15 @@ export default async function ProductPage({
 
   const opening = desc.opening || product.shortDescription;
   const whatsIncluded = desc.whatsIncluded || [];
+  // The one substantial block that differs per product. Absent on most guides
+  // for now, so the section below renders only where it has been written.
+  const insideTheLearning = desc.insideTheLearning;
+  // The meta line used to hardcode "Project guide", which mislabelled the 37
+  // activity/card/parent guides in the catalogue.
+  const formatLabel = (desc.format || 'Activity Guide').replace(' Guide', ' guide');
+  // Explore / Develop / Extend are a property of the activity guides. A parent
+  // guide has no levels, so claiming three of them was simply wrong.
+  const hasSkillLevels = desc.format !== 'Parent Guide' && desc.format !== 'Bundle';
   // Prefer OCR-extracted canonical skills (source of truth from the actual PDF
   // content). Fall back to hand-written skillTags for products we couldn't
   // extract (card packs, bundles, parent guides).
@@ -287,9 +323,9 @@ export default async function ProductPage({
     datePublished: string;
   }[] = [];
   try {
-    const { db } = await import('@/lib/db');
-    const { reviews: reviewsTable } = await import('@/lib/db/schema');
-    const { eq, desc } = await import('drizzle-orm');
+    const { db } = await import("@/lib/db");
+    const { reviews: reviewsTable } = await import("@/lib/db/schema");
+    const { eq, desc } = await import("drizzle-orm");
     const rows = await db
       .select({
         rating: reviewsTable.rating,
@@ -303,22 +339,25 @@ export default async function ProductPage({
       .orderBy(desc(reviewsTable.createdAt))
       .limit(12);
     reviews = rows.map((r) => ({
-      author: r.authorName || 'Member',
+      author: r.authorName || "Member",
       authorImageUrl: r.authorImageUrl,
       rating: r.rating,
       text: r.comment,
       datePublished: r.createdAt.toISOString(),
     }));
   } catch (err) {
-    console.error('[shop/[slug]] could not load reviews:', err);
+    console.error("[shop/[slug]] could not load reviews:", err);
   }
-  const aggregateRating = reviews.length > 0
-    ? {
-        "@type": "AggregateRating" as const,
-        ratingValue: (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1),
-        reviewCount: reviews.length,
-      }
-    : null;
+  const aggregateRating =
+    reviews.length > 0
+      ? {
+          "@type": "AggregateRating" as const,
+          ratingValue: (
+            reviews.reduce((s, r) => s + r.rating, 0) / reviews.length
+          ).toFixed(1),
+          reviewCount: reviews.length,
+        }
+      : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -370,7 +409,8 @@ export default async function ProductPage({
       hasMerchantReturnPolicy: {
         "@type": "MerchantReturnPolicy",
         applicableCountry: ["US", "CA", "GB", "AU", "NZ"],
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        returnPolicyCategory:
+          "https://schema.org/MerchantReturnFiniteReturnWindow",
         merchantReturnDays: 14,
         returnFees: "https://schema.org/FreeReturn",
         returnPolicyUrl: "https://anywherelearning.co/terms#s4",
@@ -388,7 +428,11 @@ export default async function ProductPage({
     ...(reviews.length > 0 && {
       review: reviews.map((r) => ({
         "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: r.rating,
+          bestRating: 5,
+        },
         author: { "@type": "Person", name: r.author },
         reviewBody: r.text,
         datePublished: r.datePublished,
@@ -400,7 +444,12 @@ export default async function ProductPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Activities", item: "https://anywherelearning.co/shop" },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Activities",
+        item: "https://anywherelearning.co/shop",
+      },
       {
         "@type": "ListItem",
         position: 2,
@@ -434,18 +483,28 @@ export default async function ProductPage({
             aria-label="Breadcrumb"
             className="py-3.5 flex items-center gap-2.5 flex-wrap text-[13px] text-gray-500"
           >
-            <Link href="/shop" className="hover:text-forest-dark transition-colors">
+            <Link
+              href="/shop"
+              className="hover:text-forest-dark transition-colors"
+            >
               Activities
             </Link>
-            <span className="text-[#C9C5B7]" aria-hidden="true">›</span>
+            <span className="text-[#C9C5B7]" aria-hidden="true">
+              ›
+            </span>
             <Link
               href={`/shop?track=${product.category}#full-library`}
               className="hover:text-forest-dark transition-colors"
             >
               {categoryLabel}
             </Link>
-            <span className="text-[#C9C5B7]" aria-hidden="true">›</span>
-            <span aria-current="page" className="text-gray-500 truncate max-w-[260px]">
+            <span className="text-[#C9C5B7]" aria-hidden="true">
+              ›
+            </span>
+            <span
+              aria-current="page"
+              className="text-gray-500 truncate max-w-[260px]"
+            >
               {product.name}
             </span>
           </nav>
@@ -459,7 +518,7 @@ export default async function ProductPage({
             {/* LEFT: Cover + preview */}
             <div className="flex flex-col gap-3.5">
               <div
-                className="relative aspect-[4/5] w-full max-w-[420px] mx-auto lg:mx-0 rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.4)]"
+                className="relative aspect-[4/5] w-full max-w-[460px] mx-auto lg:mx-0 rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.4)]"
                 style={{ background: theme.soft }}
               >
                 {product.imageUrl && (
@@ -467,14 +526,14 @@ export default async function ProductPage({
                     src={coverSrc(product.imageUrl)!}
                     alt={`${product.name}, ${categoryLabel} activity guide cover`}
                     fill
-                    sizes="(max-width: 1024px) 90vw, 420px"
+                    sizes="(max-width: 1024px) 90vw, 460px"
                     priority
                     className="object-cover object-top"
                   />
                 )}
               </div>
               {hasPreview(product.slug) && (
-                <div className="w-full max-w-[420px] mx-auto lg:mx-0">
+                <div className="w-full max-w-[460px] mx-auto lg:mx-0">
                   <PreviewButton
                     slug={product.slug}
                     productName={product.name}
@@ -490,7 +549,17 @@ export default async function ProductPage({
                 className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em]"
                 style={{ color: theme.color }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                   <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                 </svg>
@@ -507,74 +576,19 @@ export default async function ProductPage({
               </p>
 
               {/* Access card */}
-              {(() => {
-                const hasAccess = tier === 'member' || tier === 'trial';
-
-                if (hasAccess) {
-                  // Member or trial member — this activity is in their library
-                  return (
-                    <div className="mt-6 max-w-[400px] bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(58,90,64,0.28)]">
-                      <div className="flex items-center justify-between gap-3 mb-2">
-                        <span className="inline-flex items-center gap-1.5 bg-forest/15 text-forest-dark text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
-                          <span aria-hidden="true">✓</span>
-                          In your library
-                        </span>
-                        <span className="font-display italic text-[13px] text-forest-dark">
-                          {tier === 'member' ? 'Member' : 'Free trial'}
-                        </span>
-                      </div>
-                      <Link
-                        href={`/api/download/activity/${product.slug}?view=1`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        prefetch={false}
-                        className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
-                      >
-                        Open this activity
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                      <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
-                        Use on any device · Year after year
-                      </p>
-                    </div>
-                  );
-                }
-
-                // Guest (default)
-                return (
-                  <div className="mt-6 max-w-[400px] bg-cream border border-[#D8D4C5] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(45,58,46,0.28)]">
-                    <div className="flex items-center justify-between gap-3 mb-2">
-                      <span className="inline-flex items-center gap-1.5 bg-[#F2EFE4] text-gray-500 text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
-                        <span aria-hidden="true">🔒</span>
-                        Members only
-                      </span>
-                      <span className="font-display italic text-[14px] text-[#C97B5C]">
-                        {MEMBERSHIP_PRICE_YEAR}
-                      </span>
-                    </div>
-                    <Link
-                      href="/start-trial"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-forest text-cream font-semibold py-2.5 px-5 rounded-xl text-[14px] shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
-                    >
-                      Unlock with membership
-                      <span aria-hidden="true">→</span>
-                    </Link>
-                    <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
-                      In the Membership · 14-day refund
-                    </p>
-                  </div>
-                );
-              })()}
-
               {/* Meta line */}
-              <p className="mt-5 text-[12.5px] text-gray-500 tracking-[0.02em]">
-                {ageRangeDisplay} · Project guide · 3 skill levels
+              <p className="mt-6 text-[12.5px] text-gray-500 tracking-[0.02em]">
+                {ageRangeDisplay} · {formatLabel}
+                {hasSkillLevels && " · 3 skill levels"}
               </p>
 
               {/* Skill tags */}
               {skillTags.length > 0 && (
                 <div className="mt-3 flex flex-wrap gap-1.5">
-                  {skillTags.slice(0, 5).map((tag) => (
+                  {/* No slice: the learning block below lists one entry per
+                      skill, so capping the pills at five left the sixth bullet
+                      with no matching pill. Six is the catalogue maximum. */}
+                  {skillTags.map((tag) => (
                     <span
                       key={tag}
                       className="bg-[#F2EFE4] text-gray-600 text-[12.5px] font-medium px-2.5 py-1 rounded-full"
@@ -585,120 +599,154 @@ export default async function ProductPage({
                 </div>
               )}
 
-              <p className="mt-5 text-[13.5px] text-gray-500 italic">
-                Designed by a teacher with 15 years of classroom experience, now homeschooling her own kids.
-              </p>
+              {/* What's inside and the access card sit side by side so the
+                  column ends near the bottom of the cover instead of running
+                  long past it. Stacks on narrow screens. */}
+              <div className="mt-7 border-t border-[#E3DFD2] pt-6 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_252px] sm:gap-7 items-start">
+                <div>
+                  {/* What's inside. Lives here beside the cover rather than in a
+                      section below, so the product's own specifics sit next to the
+                      description and fill the column instead of leaving it short. */}
+                  {whatsIncluded.length > 0 && (
+                    <div>
+                      <h2 className="font-display text-[21px] leading-[1.18] tracking-tight text-ink">
+                        What&apos;s{" "}
+                        <em className="not-italic italic" style={{ color: theme.color }}>inside.</em>
+                      </h2>
+                      <ul className="mt-3.5 list-none p-0 m-0 flex flex-col gap-2">
+                        {whatsIncluded.map((item) => (
+                          <li key={item} className="flex gap-2.5 text-[15px] leading-[1.5] text-gray-700">
+                            <span
+                              className="flex-none w-[18px] h-[18px] rounded-full grid place-items-center text-[10px] font-bold mt-[3px]"
+                              style={{ background: theme.soft, color: theme.deep }}
+                              aria-hidden="true"
+                            >
+                              ✓
+                            </span>
+                            <span className="flex-1">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  {(() => {
+                    const hasAccess = tier === "member" || tier === "trial";
+
+                    if (hasAccess) {
+                      // Member or trial member — this activity is in their library
+                      return (
+                        <div className="mt-6 max-w-[400px] bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(58,90,64,0.28)]">
+                          <div className="flex items-center justify-between gap-3 mb-2">
+                            <span className="inline-flex items-center gap-1.5 bg-forest/15 text-forest-dark text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
+                              <span aria-hidden="true">✓</span>
+                              In your library
+                            </span>
+                            <span className="font-display italic text-[13px] text-forest-dark">
+                              {tier === "member" ? "Member" : "Free trial"}
+                            </span>
+                          </div>
+                          <Link
+                            href={`/api/download/activity/${product.slug}?view=1`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            prefetch={false}
+                            className="w-full inline-flex items-center justify-center gap-1.5 bg-forest text-cream font-semibold py-2.5 px-3 rounded-xl text-[13.5px] whitespace-nowrap shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
+                          >
+                            Open this activity
+                            <span aria-hidden="true">→</span>
+                          </Link>
+                          <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
+                            Use on any device · Year after year
+                          </p>
+                        </div>
+                      );
+                    }
+
+                    // Guest (default)
+                    return (
+                      <div className="max-w-[400px] bg-cream border border-[#D8D4C5] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(45,58,46,0.28)]">
+                        <div className="flex items-center justify-between gap-3 mb-2">
+                          <span className="inline-flex items-center gap-1.5 bg-[#F2EFE4] text-gray-500 text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
+                            <span aria-hidden="true">🔒</span>
+                            Members only
+                          </span>
+                          <span className="font-display italic text-[14px] text-[#C97B5C]">
+                            {MEMBERSHIP_PRICE_YEAR}
+                          </span>
+                        </div>
+                        <Link
+                          href="/start-trial"
+                          className="w-full inline-flex items-center justify-center gap-1.5 bg-forest text-cream font-semibold py-2.5 px-3 rounded-xl text-[13.5px] whitespace-nowrap shadow-[0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-forest-dark hover:-translate-y-px transition-all"
+                        >
+                          Unlock with membership
+                          <span aria-hidden="true">→</span>
+                        </Link>
+                        <p className="mt-1.5 text-center text-[11.5px] text-gray-500">
+                          In the Membership · 14-day refund
+                        </p>
+                      </div>
+                    );
+                  })()}
+                  {/* Trust line lives under the card, filling the column the
+                      card leaves short rather than adding a row below both. */}
+                  <p className="mt-4 text-[13px] leading-[1.5] text-gray-500 italic text-center">
+                    Designed by a teacher with 15 years of classroom experience,
+                    now homeschooling her own kids.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
-      {/* DETAILS SECTION — 2-column layout */}
-      <section className="pb-8">
-        <div className="mx-auto max-w-[1180px] px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-            {/* LEFT — product structure */}
-            <div className="text-gray-600 text-[16.5px] leading-[1.7]">
-              {/* What's inside */}
-              {whatsIncluded.length > 0 && (
-                <>
-                  <h2 className="font-display text-[26px] leading-[1.18] tracking-tight text-ink">
-                    What&apos;s{" "}
-                    <em className="not-italic italic" style={{ color: theme.color }}>inside.</em>
-                  </h2>
-                  <ul className="mt-4 list-none p-0 m-0 flex flex-col gap-2.5">
-                    {whatsIncluded.map((item) => (
-                      <li key={item} className="flex gap-3 text-[15.5px] leading-[1.55] text-gray-700">
-                        <span
-                          className="flex-none w-5 h-5 rounded-full grid place-items-center text-[11px] font-bold mt-0.5"
-                          style={{ background: theme.soft, color: theme.deep }}
-                          aria-hidden="true"
-                        >
-                          ✓
-                        </span>
-                        <span className="flex-1">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              {/* Every project guide includes */}
-              <h2 className="font-display text-[26px] leading-[1.18] tracking-tight text-ink mt-10">
-                Every guide{" "}
-                <em className="not-italic italic" style={{ color: theme.color }}>includes.</em>
+      {/* WHAT THEY ARE ACTUALLY LEARNING — the per-product block. Sits above
+          the shared details grid so the unique content leads the page rather
+          than following three sections of boilerplate. */}
+      {insideTheLearning && (
+        <section className="pb-4">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="rounded-[14px] border border-[#D8D4C5] bg-[#F7F4EC] px-6 py-8 md:px-10 md:py-10">
+              <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] leading-[1.14] tracking-tight text-ink text-balance">
+                What they are{" "}
+                <em
+                  className="not-italic italic"
+                  style={{ color: theme.color }}
+                >
+                  actually learning.
+                </em>
               </h2>
-              <ul className="mt-4 list-none p-0 m-0 flex flex-col gap-2.5">
-                {[
-                  "What this activity builds: clear learning focus",
-                  "Materials needed (minimal or none)",
-                  "Before you start: parent-friendly guidance",
-                  "Step-by-step instructions to follow along",
-                  "3 skill levels: Explore / Develop / Extend",
-                  "Support tips and conversation starters",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[15.5px] leading-[1.55] text-gray-700">
+              <p className="mt-4 text-[16.5px] leading-[1.7] text-gray-600">
+                {insideTheLearning.lead}
+              </p>
+              <ul className="mt-7 grid grid-cols-1 gap-x-10 gap-y-4 p-0 m-0 list-none md:grid-cols-2">
+                {insideTheLearning.skills.map((s) => (
+                  <li key={s.skill} className="flex gap-3">
                     <span
-                      className="flex-none w-1.5 h-1.5 rounded-full mt-2.5"
+                      className="flex-none w-1.5 h-1.5 rounded-full mt-[9px]"
                       style={{ background: theme.color }}
                       aria-hidden="true"
                     />
-                    <span className="flex-1">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* RIGHT — value + audience */}
-            <div className="text-gray-600 text-[16.5px] leading-[1.7]">
-              {/* Why families love it */}
-              <h2 className="font-display text-[26px] leading-[1.18] tracking-tight text-ink">
-                Why families{" "}
-                <em className="not-italic italic" style={{ color: theme.color }}>love it.</em>
-              </h2>
-              <ul className="mt-4 list-none p-0 m-0 flex flex-col gap-2.5">
-                {[
-                  "Low prep. Open and follow along on any device",
-                  "Reusable year after year, different each time",
-                  "Works for one child or five, multi-age friendly",
-                  "Curiosity-driven, not curriculum-driven",
-                  "Use one activity a day or one a week",
-                  "Real-world skills through real-world experiences",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[15.5px] leading-[1.55] text-gray-700">
-                    <span className="flex-none mt-1 text-[14px]" style={{ color: "#C97B5C" }} aria-hidden="true">
-                      ♥
+                    <span className="flex-1 text-[15.5px] leading-[1.55]">
+                      <strong className="font-semibold text-ink">
+                        {s.skill}:
+                      </strong>
+                      <span className="text-gray-600"> {s.where}</span>
                     </span>
-                    <span className="flex-1">{item}</span>
                   </li>
                 ))}
               </ul>
-
-              {/* Best for */}
-              <h2 className="font-display text-[26px] leading-[1.18] tracking-tight text-ink mt-10">
-                Best{" "}
-                <em className="not-italic italic" style={{ color: theme.color }}>for.</em>
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  "Homeschool families",
-                  "Worldschool families",
-                  "After-school & weekends",
-                  "Families who value hands-on learning",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-cream border border-[#D8D4C5] text-gray-600 text-[13.5px] px-3 py-1.5 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
+        </section>
+      )}
 
-          {/* Why it matters callout — full-width below both columns */}
-          <div className="mt-12 bg-[#F2DECF] border border-[#E8D4C2] rounded-[12px] py-5 px-6 max-w-[640px] mx-auto text-center">
+      {/* WHY IT MATTERS */}
+      <section className="pb-8">
+        <div className="mx-auto max-w-[1180px] px-6">
+          <div className="bg-[#F2DECF] border border-[#E8D4C2] rounded-[12px] py-5 px-6 max-w-[640px] mx-auto text-center">
             <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A3D24] mb-2">
               Why it matters
             </span>
@@ -717,12 +765,17 @@ export default async function ProductPage({
               className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.18em]"
               style={{ color: theme.deep }}
             >
-              <span className="block h-px w-[22px]" style={{ background: theme.color }} />
+              <span
+                className="block h-px w-[22px]"
+                style={{ background: theme.color }}
+              />
               From the families
             </p>
             <h2 className="font-display text-[clamp(1.75rem,3.4vw,2.4rem)] leading-[1.12] tracking-tight mt-3 text-balance">
               What members are{" "}
-              <em className="not-italic italic" style={{ color: theme.color }}>saying.</em>
+              <em className="not-italic italic" style={{ color: theme.color }}>
+                saying.
+              </em>
             </h2>
             {reviews.length > 0 && aggregateRating && (
               <p className="mt-2 text-[14px] text-gray-500">
@@ -738,7 +791,7 @@ export default async function ProductPage({
           {reviews.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {reviews.map((r, i) => {
-                const initial = r.author.trim().charAt(0).toUpperCase() || 'M';
+                const initial = r.author.trim().charAt(0).toUpperCase() || "M";
                 return (
                   <article
                     key={i}
@@ -768,7 +821,9 @@ export default async function ProductPage({
                         </p>
                         <p className="m-0 mt-0.5 font-display text-[13px] tracking-wider text-[#C97B5C]">
                           {"★".repeat(r.rating)}
-                          <span className="text-gray-300">{"★".repeat(5 - r.rating)}</span>
+                          <span className="text-gray-300">
+                            {"★".repeat(5 - r.rating)}
+                          </span>
                         </p>
                       </div>
                     </header>
@@ -786,14 +841,25 @@ export default async function ProductPage({
                 className="inline-grid place-items-center w-12 h-12 rounded-full mb-3"
                 style={{ background: theme.soft, color: theme.deep }}
               >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </span>
-              {tier === 'member' || tier === 'trial' ? (
+              {tier === "member" || tier === "trial" ? (
                 <>
                   <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
-                    Tried it with your kids? Be the first to tell other members what worked.
+                    Tried it with your kids? Be the first to tell other members
+                    what worked.
                   </p>
                   <p className="m-0 mt-1.5 text-[14px] text-gray-500">
                     No reviews yet for {product.name}.
@@ -805,7 +871,8 @@ export default async function ProductPage({
                     Be the first to share your experience with {product.name}.
                   </p>
                   <p className="m-0 mt-1.5 text-[14px] text-gray-500">
-                    Reviews come from members who&rsquo;ve actually done the activity with their kids.
+                    Reviews come from members who&rsquo;ve actually done the
+                    activity with their kids.
                   </p>
                 </>
               )}
@@ -819,7 +886,10 @@ export default async function ProductPage({
             ) : (
               <p className="text-center text-[14px] text-gray-500">
                 Only members who&rsquo;ve used the activity can write reviews.{" "}
-                <Link href="/start-trial" className="text-forest-dark font-medium hover:text-forest underline decoration-forest/30 underline-offset-2">
+                <Link
+                  href="/start-trial"
+                  className="text-forest-dark font-medium hover:text-forest underline decoration-forest/30 underline-offset-2"
+                >
                   Join the membership
                 </Link>
                 .
@@ -838,12 +908,18 @@ export default async function ProductPage({
                 className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.18em]"
                 style={{ color: theme.deep }}
               >
-                <span className="w-[22px] h-px" style={{ background: theme.color }} />
+                <span
+                  className="w-[22px] h-px"
+                  style={{ background: theme.color }}
+                />
                 Related activities
               </p>
               <h2 className="mt-3 font-display text-[clamp(1.625rem,3vw,2.25rem)] leading-[1.1] tracking-tight text-balance">
                 More from{" "}
-                <em className="not-italic italic" style={{ color: theme.color }}>
+                <em
+                  className="not-italic italic"
+                  style={{ color: theme.color }}
+                >
                   {categoryLabel}.
                 </em>
               </h2>
@@ -882,10 +958,10 @@ export default async function ProductPage({
                     <h3 className="font-display italic text-[18px] leading-[1.18] text-ink mt-1.5 mb-2">
                       {p.name}
                     </h3>
-                    <p className="text-[14px] leading-[1.5] text-gray-600 m-0">{p.shortDescription}</p>
-                    <div
-                      className="mt-3.5 pt-3.5 border-t border-dashed border-[#C9C5B7] flex items-center justify-between gap-2.5"
-                    >
+                    <p className="text-[14px] leading-[1.5] text-gray-600 m-0">
+                      {p.shortDescription}
+                    </p>
+                    <div className="mt-3.5 pt-3.5 border-t border-dashed border-[#C9C5B7] flex items-center justify-between gap-2.5">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-gray-500 bg-[#F2EFE4] px-2.5 py-1 rounded-full">
                         🔒 Locked
                       </span>
@@ -912,13 +988,18 @@ export default async function ProductPage({
               </p>
               <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight text-balance">
                 This activity is one of{" "}
-                <em className="not-italic italic text-forest-dark">120+ in the membership.</em>
+                <em className="not-italic italic text-forest-dark">
+                  120+ in the membership.
+                </em>
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
-                The membership covers nine topics (math, AI, communication, planning,
-                creativity, outdoor, entrepreneurship, worldschooling, and emotional & social skills) with new activities every
+                The membership covers nine topics (math, AI, communication,
+                planning, creativity, outdoor, entrepreneurship, worldschooling,
+                and emotional & social skills) with new activities every
                 quarter. {MEMBERSHIP_PRICE_YEAR}
-                {IS_FOUNDER_PHASE ? ', locked in for life as a founding member.' : '.'}
+                {IS_FOUNDER_PHASE
+                  ? ", locked in for life as a founding member."
+                  : "."}
               </p>
               <Link
                 href="/start-trial"
@@ -931,11 +1012,18 @@ export default async function ProductPage({
               </Link>
               <p className="mt-3.5 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-[13.5px] text-gray-500">
                 <span className="text-forest-dark font-semibold">
-                  {MEMBERSHIP_PRICE_YEAR}{IS_FOUNDER_PHASE ? ' founder rate' : ''}
+                  {MEMBERSHIP_PRICE_YEAR}
+                  {IS_FOUNDER_PHASE ? " founder rate" : ""}
                 </span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
+                <span
+                  className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]"
+                  aria-hidden="true"
+                />
                 <span>14-day money-back guarantee</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
+                <span
+                  className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]"
+                  aria-hidden="true"
+                />
                 <span>Cancel anytime</span>
               </p>
             </div>
@@ -952,7 +1040,10 @@ export default async function ProductPage({
                   "Member-only resources",
                   "14-day money-back guarantee",
                 ].map((line) => (
-                  <li key={line} className="flex gap-2.5 text-[15.5px] leading-[1.5] text-ink">
+                  <li
+                    key={line}
+                    className="flex gap-2.5 text-[15.5px] leading-[1.5] text-ink"
+                  >
                     <span className="text-forest font-bold flex-none">✓</span>
                     <span>{line}</span>
                   </li>
@@ -980,11 +1071,14 @@ export default async function ProductPage({
                 Free 7-day guide
               </p>
               <h3 className="mt-2.5 font-display text-[22px] leading-[1.18] text-ink text-balance">
-                Try it{' '}
-                <em className="not-italic italic text-[#7A5E1F]">free for a week.</em>
+                Try it{" "}
+                <em className="not-italic italic text-[#7A5E1F]">
+                  free for a week.
+                </em>
               </h3>
               <p className="mt-2.5 text-[14.5px] leading-[1.55] text-gray-600 mb-5 flex-1">
-                Seven real-world activities. One a day, for a week. No payment, no commitment.
+                Seven real-world activities. One a day, for a week. No payment,
+                no commitment.
               </p>
               <div>
                 <Link
@@ -1006,4 +1100,3 @@ export default async function ProductPage({
 /* ─────────────────────────────────────────────────────────────────
    Helper: three-level card
    ───────────────────────────────────────────────────────────────── */
-

@@ -25,10 +25,10 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Anywhere Learning | Life Skills Activities for Kids',
+    absolute: 'Real-World Learning Activities for Kids | Anywhere Learning',
   },
   description:
-    "A guided membership that hands you your family's next real-world activity, so you just do it together. Life skills school skips: cooking, budgeting, problem-solving. Nothing to plan or print. Ages 6-14.",
+    "A guided membership that hands you your family's next real-world activity, so you just do it together. The academics and the life skills happen in the same task: plan a party, that's fractions and budgeting. Nothing to plan or print. Ages 6-14.",
   alternates: {
     canonical: 'https://anywherelearning.co',
   },
@@ -172,9 +172,10 @@ export default async function HomePage() {
                 <span className="italic text-forest">real life?</span>
               </h1>
               <p className="mb-9 max-w-[500px] text-[17px] leading-[1.62] text-gray-600 text-pretty md:text-xl">
-                We hand you the next real-world activity, matched to your kids. Do one every other
-                day, once a week, twice a week, whenever it suits you. Cooking, budgeting,
-                problem-solving, the life skills school skips. You just do it together.
+                We hand you the next real-world activity, matched to your kids, and you do it
+                whenever it suits you. Plan a party, that&apos;s fractions and budgeting. Run a
+                small business, that&apos;s pricing and persuasive writing. Real academics inside
+                real tasks. You just do it together.
               </p>
               <div className="mb-3.5 flex flex-wrap items-center gap-x-[22px] gap-y-4">
                 <Link
