@@ -145,6 +145,22 @@ export async function generateMetadata({
       160,
     );
 
+  // A hand-tuned title/description wins over the template where one is set.
+  // See ProductDescription.seo for when that is justified.
+  const seoOverride = getProductDescription(
+    product.slug,
+    product.description,
+    product.category,
+    product.activityCount ?? null,
+    product.isBundle ?? false,
+  ).seo;
+  // An override is the whole title: the root layout's "%s | Anywhere Learning"
+  // template would otherwise append to it and push it past the truncation point.
+  const metaTitle: Metadata["title"] = seoOverride
+    ? { absolute: seoOverride.title }
+    : `${product.name} | ${suffix}`;
+  const metaDescription = seoOverride?.description ?? description;
+
   const imageUrl = product.imageUrl
     ? product.imageUrl.startsWith("http")
       ? product.imageUrl
@@ -152,8 +168,8 @@ export async function generateMetadata({
     : "https://anywherelearning.co/og-default.jpg";
 
   return {
-    title: `${product.name} | ${suffix}`,
-    description,
+    title: metaTitle,
+    description: metaDescription,
     keywords: [
       product.name,
       suffix,
@@ -168,7 +184,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: product.name,
-      description,
+      description: metaDescription,
       url: `https://anywherelearning.co/shop/${product.slug}`,
       type: "article",
       images: [
@@ -183,7 +199,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: product.name,
-      description,
+      description: metaDescription,
       images: [imageUrl],
     },
   };

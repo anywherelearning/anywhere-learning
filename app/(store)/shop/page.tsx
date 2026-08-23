@@ -673,19 +673,41 @@ export default function ShopPage() {
               <h3 className="font-display text-[clamp(1.25rem,2.2vw,1.6rem)] leading-tight tracking-tight text-center">
                 Every activity, <span className="italic text-forest">by category</span>
               </h3>
-              <div className="mt-8 grid gap-x-8 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Each category collapses. The links stay in the server-rendered
+                  HTML either way, so the crawl path this section exists for is
+                  unaffected, but a phone gets nine rows instead of 125 links. */}
+              <div className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3 items-start">
                 {TRACKS.map((track) => {
                   const items = rows.filter((r) => r.category === track.category);
                   if (items.length === 0) return null;
                   return (
-                    <div key={track.category}>
-                      <h4
-                        className="font-body text-[13px] font-semibold uppercase tracking-[0.14em] pb-2 border-b"
+                    <details key={track.category} className="group">
+                      <summary
+                        className="flex cursor-pointer list-none items-center justify-between gap-3 border-b pb-2 font-body text-[13px] font-semibold uppercase tracking-[0.14em] marker:content-none"
                         style={{ color: track.color, borderColor: `${track.color}44` }}
                       >
-                        {track.label}
-                      </h4>
-                      <ul className="mt-3 flex flex-col gap-1.5">
+                        <span>{track.label}</span>
+                        <span className="flex items-center gap-2 text-[12px] font-medium tracking-normal opacity-70">
+                          {items.length}
+                          <svg
+                            width="11"
+                            height="7"
+                            viewBox="0 0 12 8"
+                            fill="none"
+                            aria-hidden="true"
+                            className="transition-transform duration-200 group-open:rotate-180"
+                          >
+                            <path
+                              d="M1 1.5 6 6.5l5-5"
+                              stroke="currentColor"
+                              strokeWidth="1.6"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </summary>
+                      <ul className="mt-3 mb-4 flex flex-col gap-1.5">
                         {items.map((r) => (
                           <li key={r.slug}>
                             <Link
@@ -697,7 +719,7 @@ export default function ShopPage() {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </details>
                   );
                 })}
               </div>

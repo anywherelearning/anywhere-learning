@@ -14,6 +14,13 @@ export interface ProductDescription {
   /** Subject/skill tags displayed as pills */
   skillTags: string[];
   /**
+   * Hand-tuned title and meta for products where the generated template is
+   * costing clicks. Only set this when GSC shows a real reason: the template
+   * title truncating, the description repeating the title, or the snippet
+   * speaking to the wrong searcher. Everything else keeps the template.
+   */
+  seo?: { title: string; description: string };
+  /**
    * The academics and life skills this specific activity actually carries.
    * This is the only substantial block on the page that is unique per product,
    * so it is what makes a product page worth indexing on its own rather than
@@ -1830,6 +1837,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     format: 'Project Guide',
   },
   'shark-tank-pitch': {
+    seo: {
+      title: 'Shark Tank Pitch for Kids: Business Pitch Project, Ages 8-14',
+      description:
+        'A ready-to-run Shark Tank style pitch project. Kids build a business concept, work out profit and revenue, write the pitch, and present it live. Ages 8-14, no prep.',
+    },
     opening:
       'Develop and deliver a high-stakes business pitch, Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',
     whatsIncluded: [
