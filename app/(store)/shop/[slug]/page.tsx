@@ -428,7 +428,9 @@ export default async function ProductPage({
         returnPolicyCategory:
           "https://schema.org/MerchantReturnFiniteReturnWindow",
         merchantReturnDays: 14,
+        returnMethod: "https://schema.org/ReturnByMail",
         returnFees: "https://schema.org/FreeReturn",
+        refundType: "https://schema.org/FullRefund",
         returnPolicyUrl: "https://anywherelearning.co/terms#s4",
       },
       itemOffered: {
