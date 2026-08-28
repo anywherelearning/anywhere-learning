@@ -339,21 +339,8 @@ export default async function ProductPage({
     datePublished: string;
   }[] = [];
   try {
-    const { db } = await import("@/lib/db");
-    const { reviews: reviewsTable } = await import("@/lib/db/schema");
-    const { eq, desc } = await import("drizzle-orm");
-    const rows = await db
-      .select({
-        rating: reviewsTable.rating,
-        comment: reviewsTable.comment,
-        createdAt: reviewsTable.createdAt,
-        authorName: reviewsTable.authorName,
-        authorImageUrl: reviewsTable.authorImageUrl,
-      })
-      .from(reviewsTable)
-      .where(eq(reviewsTable.productSlug, slug))
-      .orderBy(desc(reviewsTable.createdAt))
-      .limit(12);
+    const { getRecentReviewsBySlug } = await import("@/lib/db/queries");
+    const rows = await getRecentReviewsBySlug(slug);
     reviews = rows.map((r) => ({
       author: r.authorName || "Member",
       authorImageUrl: r.authorImageUrl,

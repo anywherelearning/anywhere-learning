@@ -12,7 +12,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { db } from '@/lib/db';
 import { reviews, users } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
@@ -112,6 +112,9 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // Review reads are cached under the 'reviews' tag (lib/db/queries.ts);
+    // bust it so the author sees their review on the next render.
+    revalidateTag('reviews', 'max');
     revalidatePath(`/shop/${slug}`);
     return NextResponse.json({ success: true });
   } catch (err) {

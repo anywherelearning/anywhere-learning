@@ -1,18 +1,48 @@
+import { unstable_cache } from 'next/cache';
 import { db } from './index';
 import { products, orders, users, reviews } from './schema';
 import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
 
+// ─── Cached public reads ────────────────────────────────────────────
+// /shop/[slug] is force-dynamic (the access card is per-visitor), so every
+// request — overwhelmingly crawlers — used to wake Neon. Catalog and review
+// reads carry no per-user data, so they're served from the Data Cache for an
+// hour instead. Review writes bust the 'reviews' tag so authors see their own
+// review immediately. unstable_cache round-trips through JSON, so timestamp
+// columns come back as strings — wrappers below revive them to Dates.
+
+const CACHE_OPTS_PRODUCTS = { revalidate: 3600, tags: ['products'] };
+const CACHE_OPTS_REVIEWS = { revalidate: 3600, tags: ['reviews'] };
+
+const _getActiveProducts = unstable_cache(
+  async () => {
+    return db.select().from(products)
+      .where(eq(products.active, true))
+      .orderBy(products.sortOrder);
+  },
+  ['active-products'],
+  CACHE_OPTS_PRODUCTS,
+);
+
 export async function getActiveProducts() {
-  return db.select().from(products)
-    .where(eq(products.active, true))
-    .orderBy(products.sortOrder);
+  const rows = await _getActiveProducts();
+  return rows.map((p) => ({ ...p, createdAt: new Date(p.createdAt) }));
 }
 
+const _getProductBySlug = unstable_cache(
+  async (slug: string) => {
+    const result = await db.select().from(products)
+      .where(and(eq(products.slug, slug), eq(products.active, true)))
+      .limit(1);
+    return result[0] || null;
+  },
+  ['product-by-slug'],
+  CACHE_OPTS_PRODUCTS,
+);
+
 export async function getProductBySlug(slug: string) {
-  const result = await db.select().from(products)
-    .where(and(eq(products.slug, slug), eq(products.active, true)))
-    .limit(1);
-  return result[0] || null;
+  const row = await _getProductBySlug(slug);
+  return row ? { ...row, createdAt: new Date(row.createdAt) } : null;
 }
 
 export async function getProductsByCategory(category: string) {
@@ -205,20 +235,61 @@ export async function getNewProducts(purchasedProductIds: string[], limit = 2) {
 
 // ─── Reviews ────────────────────────────────────────────────────────
 
+const _getProductReviews = unstable_cache(
+  async (productId: string) => {
+    return db.select({
+      id: reviews.id,
+      rating: reviews.rating,
+      comment: reviews.comment,
+      createdAt: reviews.createdAt,
+      updatedAt: reviews.updatedAt,
+      // Only extract the first name from the email - never expose full email
+      displayName: sql<string>`initcap(split_part(split_part(${users.email}, '@', 1), '.', 1))`,
+    })
+      .from(reviews)
+      .innerJoin(users, eq(reviews.userId, users.id))
+      .where(eq(reviews.productId, productId))
+      .orderBy(desc(reviews.createdAt));
+  },
+  ['product-reviews'],
+  CACHE_OPTS_REVIEWS,
+);
+
 export async function getProductReviews(productId: string) {
-  return db.select({
-    id: reviews.id,
-    rating: reviews.rating,
-    comment: reviews.comment,
-    createdAt: reviews.createdAt,
-    updatedAt: reviews.updatedAt,
-    // Only extract the first name from the email - never expose full email
-    displayName: sql<string>`initcap(split_part(split_part(${users.email}, '@', 1), '.', 1))`,
-  })
-    .from(reviews)
-    .innerJoin(users, eq(reviews.userId, users.id))
-    .where(eq(reviews.productId, productId))
-    .orderBy(desc(reviews.createdAt));
+  const rows = await _getProductReviews(productId);
+  return rows.map((r) => ({
+    ...r,
+    createdAt: new Date(r.createdAt),
+    updatedAt: new Date(r.updatedAt),
+  }));
+}
+
+/**
+ * Most recent reviews for an activity by slug, with the stored author-name
+ * and image snapshots. Used by the product page for the visible review strip
+ * and the JSON-LD aggregate rating.
+ */
+const _getRecentReviewsBySlug = unstable_cache(
+  async (slug: string) => {
+    return db.select({
+      rating: reviews.rating,
+      comment: reviews.comment,
+      createdAt: reviews.createdAt,
+      authorName: reviews.authorName,
+      authorImageUrl: reviews.authorImageUrl,
+    })
+      .from(reviews)
+      .where(eq(reviews.productSlug, slug))
+      .orderBy(desc(reviews.createdAt))
+      .limit(12);
+  },
+  ['recent-reviews-by-slug'],
+  CACHE_OPTS_REVIEWS,
+);
+
+export async function getRecentReviewsBySlug(slug: string) {
+  const rows = await _getRecentReviewsBySlug(slug);
+  return rows.map((r) => ({ ...r, createdAt: new Date(r.createdAt) }));
 }
 
 export async function getUserReviewForProduct(userId: string, productId: string) {
@@ -228,18 +299,22 @@ export async function getUserReviewForProduct(userId: string, productId: string)
   return result[0] || null;
 }
 
-export async function getProductReviewStats(productId: string) {
-  const result = await db.select({
-    avgRating: avg(reviews.rating),
-    reviewCount: count(reviews.id),
-  })
-    .from(reviews)
-    .where(eq(reviews.productId, productId));
-  return {
-    averageRating: result[0]?.avgRating ? parseFloat(result[0].avgRating) : 0,
-    reviewCount: Number(result[0]?.reviewCount ?? 0),
-  };
-}
+export const getProductReviewStats = unstable_cache(
+  async (productId: string) => {
+    const result = await db.select({
+      avgRating: avg(reviews.rating),
+      reviewCount: count(reviews.id),
+    })
+      .from(reviews)
+      .where(eq(reviews.productId, productId));
+    return {
+      averageRating: result[0]?.avgRating ? parseFloat(result[0].avgRating) : 0,
+      reviewCount: Number(result[0]?.reviewCount ?? 0),
+    };
+  },
+  ['product-review-stats'],
+  CACHE_OPTS_REVIEWS,
+);
 
 /**
  * Fetch review stats for every product in a single query, keyed by slug.
