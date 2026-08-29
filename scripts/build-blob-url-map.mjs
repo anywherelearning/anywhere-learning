@@ -46,6 +46,7 @@ const MANUAL_FILENAME_TO_SLUG = [
   [/nature walk task cards/i, 'nature-walk-task-cards'],
   [/nature choice boards/i, 'nature-choice-boards'],
   [/outdoor learning missions/i, 'outdoor-learning-missions'],
+  [/outdoor stem challenge.*volume.?2/i, 'outdoor-stem-challenges-volume-2'],
   [/outdoor stem challenge/i, 'outdoor-stem-challenges'],
   [/land art challenge cards/i, 'land-art-challenges'],
   [/nature crafts for kids/i, 'nature-crafts'],

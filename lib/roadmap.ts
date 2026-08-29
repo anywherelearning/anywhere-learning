@@ -394,6 +394,7 @@ export const TERRITORIES: readonly Territory[] = [
  */
 const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'nature-choice-boards': ['physical', 'self-management', 'creativity'],
+  'outdoor-stem-challenges-volume-2': ['physical', 'critical-thinking', 'creativity'],
   'problem-solver': ['critical-thinking', 'creativity'],
   'farmers-market-challenge': ['math', 'life-skills'],
   'nature-geography-field-study': ['physical', 'critical-thinking'],

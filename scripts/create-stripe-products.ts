@@ -21,6 +21,7 @@ const catalog = [
   { slug: 'nature-choice-boards', name: 'Nature Choice Boards', priceCents: 799, description: 'Pick-your-own-adventure style nature activity boards.' },
   { slug: 'outdoor-learning-missions', name: 'Outdoor Learning Missions', priceCents: 799, description: 'Mission-based outdoor challenges for curious explorers.' },
   { slug: 'outdoor-stem-challenges', name: 'Outdoor STEM Challenge Cards', priceCents: 799, description: '20 outdoor STEM challenges in the natural world.' },
+  { slug: 'outdoor-stem-challenges-volume-2', name: 'Outdoor STEM Challenge Cards Volume 2', priceCents: 799, description: '20 new outdoor STEM challenges in five themes.' },
   { slug: 'land-art-challenges', name: 'Land Art Challenge Cards', priceCents: 799, description: '15 land art challenges using natural materials.' },
   { slug: 'nature-crafts', name: 'Nature Crafts for Kids', priceCents: 799, description: 'Hands-on crafting projects using natural materials.' },
   // ─── Creativity singles ($4.99) ───

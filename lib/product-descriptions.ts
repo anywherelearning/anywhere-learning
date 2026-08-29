@@ -365,6 +365,35 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Card Guide',
   },
+  'outdoor-stem-challenges-volume-2': {
+    opening:
+      '20 brand-new outdoor STEM challenges, the sequel to Outdoor STEM Challenge Cards. Twist real rope from grass. Tune a launcher until it hits the target three times straight. Move water uphill. Weigh things on a balance scale made from a stick and string. Five themes of four challenges each, arranged easy to hard, all built from what you find outside and around the house.',
+    whatsIncluded: [
+      '20 new outdoor STEM challenge cards in 5 themes',
+      'Themes: Cordage & Knots, Launch Lab, Water Works, Wind & Air, Lever & Ramp',
+      'A Deeper extension on every card for older kids',
+      'Every challenge uses found and household materials only',
+      'Works alone or alongside the original 20 cards',
+    ],
+    skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
+    insideTheLearning: {
+      lead:
+        'Twenty new build-and-test challenges in five themes that go deeper than one-off builds: a child can pull one random card, or ride a whole theme from making rope to strength-testing the knots. Plan, build, test, improve, the same loop as the first deck, aimed at new physics.',
+      skills: [
+        { skill: 'STEM', where: 'The engineering loop across rope, launchers, water, wind, and levers' },
+        { skill: 'Engineering', where: 'Cranes, aqueducts, wind vanes, and balance scales that have to actually work' },
+        { skill: 'Science', where: 'Fair testing: change one thing at a time, measure, and explain the result' },
+        { skill: 'Problem-Solving', where: 'Finding the leak, the slipping knot, or the wobble, and fixing that exact thing' },
+        { skill: 'Nature', where: 'Built from fallen sticks, stones, and grass, then taken apart afterwards' },
+      ],
+    },
+    seo: {
+      title: 'Outdoor STEM Challenge Cards Volume 2: No-Prep STEM Activities, Ages 6-14',
+      description:
+        '20 new outdoor STEM challenges in five themes: rope-making, launchers, water, wind, and levers. No-prep STEM activities for kids ages 6-14 using found materials.',
+    },
+    format: 'Card Guide',
+  },
   'land-art-challenges': {
     opening:
       '15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
