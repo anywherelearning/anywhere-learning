@@ -369,11 +369,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       '20 brand-new outdoor STEM challenges, the sequel to Outdoor STEM Challenge Cards. Twist real rope from grass. Tune a launcher until it hits the target three times straight. Move water uphill. Weigh things on a balance scale made from a stick and string. Five themes of four challenges each, arranged easy to hard, all built from what you find outside and around the house.',
     whatsIncluded: [
-      '20 new outdoor STEM challenge cards in 5 themes',
-      'Themes: Cordage & Knots, Launch Lab, Water Works, Wind & Air, Lever & Ramp',
-      'A Deeper extension on every card for older kids',
-      'Every challenge uses found and household materials only',
-      'Works alone or alongside the original 20 cards',
+      '20 new outdoor STEM challenge cards',
+      'Five themes, from rope-making to levers',
+      'A Deeper extension on every card',
+      'Found and household materials only',
+      'Works alone or with the original deck',
     ],
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
     insideTheLearning: {
