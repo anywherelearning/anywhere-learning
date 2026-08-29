@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Real-world activities where the academics and life skills happen in one task. Plan a party, that's fractions and budgeting. No worksheets, low prep. Ages 6-14.",
     images: [
       {
-        url: "https://anywherelearning.co/og-default.jpg?v=2",
+        url: "https://anywherelearning.co/og-default.jpg?v=3",
         width: 1200,
         height: 630,
         alt: "Real-World Learning Activities for Kids | Anywhere Learning",
