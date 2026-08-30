@@ -296,6 +296,90 @@ const posts: BlogPost[] = [
     recommendedProduct: 'nature-journal-walks',
   },
 
+  // ── Is AI Cheating on Homework? ──
+  {
+    slug: 'is-ai-cheating-homework',
+    title: 'Is It Cheating if My Kid Uses AI for Homework? A Parent’s Guide',
+    excerpt: 'Is it cheating if your kid uses AI for homework? The honest answer, plus how to help them use AI to learn instead of skipping the learning.',
+    hook: 'The question isn’t whether your kid will use AI for homework. It’s whether they’re still learning when they do.',
+    category: 'ai-digital-literacy',
+    pillarSlug: 'ai-digital-literacy',
+    publishedAt: '2026-08-29',
+    keywords: ['is it cheating to use AI for homework', 'kids using AI for homework', 'is using ChatGPT cheating', 'should kids use AI for schoolwork', 'AI and homework', 'kids and ChatGPT', 'teach kids to use AI responsibly', 'AI homework help for kids'],
+    readTimeMinutes: 9,
+    author: amelie,
+    heroImage: '/images/is-ai-cheating-homework-hero.jpeg',
+    heroImageAlt: 'A teen at a two-monitor desk working on a website he is building, using the computer to create real work rather than just consume it',
+    content: [
+      { type: 'summary', text: 'Using AI for homework is not automatically cheating. It comes down to how it is used. A kid who uses AI to explain a concept, brainstorm, or check work they wrote is learning. A kid who pastes in the question and hands back the answer is not. The real goal is not to ban AI or police it, it is to teach kids the difference, so AI builds their thinking instead of replacing it. This guide covers the honest line between learning and cheating, why it matters more than the grade, and how to talk to your kid without becoming the AI police.' },
+      { type: 'paragraph', text: 'If you have found AI-written work on your kid’s screen, or you just suspect it, you are not overreacting and you are not behind. This is the new normal, and it happened fast. [Pew Research Center found](https://www.pewresearch.org/short-reads/2025/01/15/about-a-quarter-of-us-teens-have-used-chatgpt-for-schoolwork-double-the-share-in-2023/) that teen use of ChatGPT for schoolwork doubled in a single year, and by late 2025 more than half of teens said they use chatbots for schoolwork, with about one in ten leaning on them for all or most of it.' },
+      { type: 'paragraph', text: 'So banning it outright is not really on the table, and honestly, it might not even be the goal. AI is going to be part of how this generation works and learns. The real question is not whether your kid uses it. It is whether they are still learning when they do.' },
+
+      { type: 'heading', level: 2, text: 'So, is it actually cheating?' },
+      { type: 'paragraph', text: 'Here is the honest answer: it depends entirely on how it is used. The same tool can be completely fine or completely dishonest, and the difference is simply who does the thinking.' },
+      { type: 'paragraph', text: 'Most schools have landed in the same place. Using AI to explain a hard concept, brainstorm ideas, or check a finished draft is usually allowed, and often encouraged. Pasting the assignment in and turning the answer in as your own is not. It is the difference between using a calculator to check your math and having someone else sit your test for you.' },
+      { type: 'list', ordered: false, items: [
+        'Not cheating: asking AI to explain a concept a different way, quiz them, suggest topic ideas, or point out weak spots in a draft they wrote themselves.',
+        'Cheating: pasting in the question and submitting whatever comes out, or having it write the essay and copying it word for word.',
+      ]},
+      { type: 'paragraph', text: 'If your kid could not explain what they turned in, they did not do the work. That is the simplest test there is.' },
+
+      { type: 'heading', level: 2, text: 'The real question isn’t cheating. It’s whether they’re still learning.' },
+      { type: 'paragraph', text: 'Cheating is a school-rules problem. But there is a bigger thing underneath it, and it is the part I care about most as a former teacher. When a kid hands their thinking to a chatbot, they skip the exact struggle that builds the skill. That messy middle part, where you are stuck and have to work it out, is not the obstacle to learning. It is the learning.' },
+      { type: 'paragraph', text: 'A kid who uses AI to skip the hard part gets the assignment done and learns nothing. A kid who uses it to understand the hard part gets the assignment done and gets smarter. Same tool, opposite result. Our job is not to keep AI away from them. It is to make sure they are still the one doing the thinking.' },
+      { type: 'pull-quote', text: 'AI can build your kid’s thinking or replace it. The whole game is teaching them the difference.' },
+
+      { type: 'heading', level: 2, text: 'The line: is AI doing the thinking, or helping them think?' },
+      { type: 'paragraph', text: 'Here is a simple way to tell the difference in real life, and to teach it to your kid. After they use AI, ask one question: do they understand more, or did they just get to the answer faster?' },
+      { type: 'list', ordered: false, items: [
+        'Helping them think: "I don’t get how photosynthesis works, can you explain it like I’m ten?" Then they write the answer in their own words.',
+        'Doing the thinking for them: "Write me a paragraph about photosynthesis." Then they copy it.',
+        'Helping them think: "Here’s my essay, what are three things I could make stronger?" Then they revise it themselves.',
+        'Doing the thinking for them: "Write my essay on this book." Then they hand it in.',
+      ]},
+      { type: 'paragraph', text: 'Notice the pattern. In the good version, your kid is still the one writing, deciding, and understanding. AI is the tutor in the room, not the kid taking the test. If you want to teach that skill directly, our guide on [how to teach kids to prompt AI](/blog/teach-kids-prompt-ai) shows them how to use it like a coach instead of an answer machine.' },
+
+      { type: 'heading', level: 2, text: 'This is really about a bigger habit' },
+      { type: 'paragraph', text: 'You may have heard me say this about screens: the goal is less consuming, more creating. AI is the same idea. A kid who uses it to consume answers is on one path. A kid who uses it to make their own work better is on another. The tool is neutral. The habit is everything, and habits start young. It also connects to plain old [media literacy](/blog/media-literacy-kids), because a kid who leans on AI needs to know it can sound completely confident and still be wrong.' },
+
+      { type: 'heading', level: 2, text: 'How to talk to your kid about it (without becoming the AI police)' },
+      { type: 'paragraph', text: 'The instinct is to lock it down, monitor everything, and treat every use as a crime. I understand it, but experience says that backfires. Kids who feel policed just get better at hiding it. Kids who feel understood are the ones who actually learn to use it well.' },
+      { type: 'list', ordered: false, items: [
+        'Start early. Have the conversation in the elementary years, before they run into AI socially at school. Setting the habit is much easier than breaking one.',
+        'Ask, don’t accuse. "Show me how you used it" opens the door in a way "Did you cheat" never will.',
+        'Use the explain-it-back test. After a paper or project, ask them to explain it to you in their own words. If they can, they learned it. If they can’t, that is your conversation, calmly.',
+        'Name the why. Kids often reach for AI because they are overwhelmed or stuck, not lazy. Fix the overwhelm and a lot of the shortcut-taking goes with it.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'A simple family rule for AI and homework' },
+      { type: 'paragraph', text: 'You do not need a ten-page policy. One clear line does most of the work:' },
+      { type: 'tip', title: 'The one rule', text: 'Use AI to learn it, never to skip it. If you couldn’t explain it, you didn’t do it.' },
+      { type: 'paragraph', text: 'From there, a couple of house rules help. AI is allowed for understanding, brainstorming, and checking, but the final work has to be in your own words and your own thinking. And when a teacher says no AI on an assignment, that is the rule, full stop. Learning to respect that boundary is its own life skill.' },
+
+      { type: 'product-callout', slug: 'prompt-like-a-coach', context: 'A guided activity that teaches kids to use AI as a thinking partner and coach, the questions to ask and the ones to avoid, so it builds their skills instead of doing the work for them.' },
+
+      { type: 'heading', level: 2, text: 'What to do if you catch them using it to cheat' },
+      { type: 'paragraph', text: 'First, breathe. This is a teaching moment, not a character verdict. Almost every kid will test this line at some point. What matters is what happens next.' },
+      { type: 'list', ordered: false, items: [
+        'Get curious before you get angry. "Walk me through what you did" tells you far more than a lecture.',
+        'Reconnect it to the point. "The assignment was never really the paragraph, it was learning to think it through. You skipped the part that was actually for you."',
+        'Have them redo it with AI as the tutor, not the writer. Same tool, right way. That is the lesson landing.',
+      ]},
+      { type: 'paragraph', text: 'Handled with calm and curiosity, a caught shortcut becomes the exact moment your kid learns to use AI well. That is a win, even if it does not feel like one at nine o’clock on a Sunday night.' },
+
+      { type: 'faq', items: [
+        { question: 'Is it cheating for kids to use AI for homework?', answer: 'Not automatically. It depends on how it is used. Using AI to explain a concept, brainstorm ideas, or check a draft the child wrote themselves is usually fine, and often encouraged by schools. Submitting AI-generated work as your own is cheating. The simplest test is whether the child can explain what they turned in. If they cannot, they did not do the work.' },
+        { question: 'Should I let my child use ChatGPT for schoolwork?', answer: 'Yes, with guidance, and only where the school allows it. Banning it outright rarely works, because AI is now part of how this generation learns. The better approach is to teach your child to use it as a tutor that helps them understand, not an answer machine that does the work for them. When a teacher says no AI on an assignment, that rule comes first.' },
+        { question: 'How do I know if my kid is using AI to cheat?', answer: 'The most reliable check is not an AI detector, it is a conversation. Ask your child to explain their work in their own words after they finish. If they can walk you through the thinking, they learned it. If they cannot, that is a sign the tool did the thinking for them, and it is worth a calm conversation rather than a punishment.' },
+        { question: 'At what age should I talk to my kid about AI and homework?', answer: 'Start in the elementary years, before they run into AI socially at school. Young kids can understand a simple rule like "use it to learn, not to skip." Setting the habit early is far easier than breaking a bad one later.' },
+        { question: 'Can AI actually help kids learn?', answer: 'Yes, when it is used to build understanding rather than replace it. AI can explain a concept in different ways, quiz a child, brainstorm ideas, and point out weak spots in their own writing. Used that way, it works like a patient tutor. The danger is only when it does the thinking the child was supposed to do.' },
+      ]},
+      { type: 'cta', text: 'Want more real-world ways to raise a capable, tech-smart kid? Grab our free guide and start this week.', href: '/free-guide', label: 'Get the Free Guide' },
+    ],
+    relatedSlugs: ['teach-kids-prompt-ai', 'ai-for-kids-2026', 'media-literacy-kids', 'ai-myths-facts-kids', 'how-much-screen-time-kids'],
+    recommendedProduct: 'prompt-like-a-coach',
+  },
+
   // ── Should I Homeschool? (decision-stage) ──
   {
     slug: 'should-i-homeschool',
