@@ -2443,6 +2443,35 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'frustration-tolerance-cards': {
+    opening:
+      '20 short challenges that are a little frustrating on purpose, each paired with one coping move kids practice while the feeling is actually happening. Stack stones that keep falling. Untangle a string without yanking. Lose a rigged race with a script ready. Small safe doses, repeated often, done together: a gym for staying calm.',
+    whatsIncluded: [
+      '20 frustration challenge cards',
+      'Five themes, from steady hands to losing',
+      'A named coping move on every card',
+      'Golden rules for safe practice',
+      'Stones, string, spoons. Nothing to buy.',
+    ],
+    skillTags: ['Emotional Regulation', 'Resilience', 'Perseverance', 'Sportsmanship', 'SEL'],
+    insideTheLearning: {
+      lead:
+        'You cannot learn to handle frustration by hearing about it. These cards create small safe doses on purpose, with the coping move read BEFORE the wave hits so it is ready mid-feeling. The adult does every challenge too and struggles out loud, which is half the lesson.',
+      skills: [
+        { skill: 'Emotional Regulation', where: 'Naming the feeling, rating it 1 to 5, body resets, and "not yet" self-talk' },
+        { skill: 'Resilience', where: 'Rebuilding after collapse number four without exploding or quitting' },
+        { skill: 'Perseverance', where: 'Attempt counting and staying in the annoying middle of a task' },
+        { skill: 'Sportsmanship', where: 'Rigged races and loser’s-dance rounds that make losing practicable' },
+        { skill: 'SEL', where: 'A shared vocabulary the whole family uses long after the cards' },
+      ],
+    },
+    seo: {
+      title: 'Frustration Tolerance Challenge Cards for Kids Ages 6-14',
+      description:
+        '20 hands-on frustration tolerance challenges with an emotional regulation move on every card. Practice staying calm mid-feeling, at home or school. Low-prep.',
+    },
+    format: 'Card Guide',
+  },
   'disappointment-lab': {
     opening:
       'Your child sits through a small planned letdown, names the feeling, and tracks how long it takes to bounce back. They repeat it over weeks and watch their recovery time shrink. Resilience built on real reps, not pep talks.',

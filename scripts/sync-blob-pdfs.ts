@@ -169,6 +169,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   'trade-it-up': 'Entrepreneurship - Trade It Up.pdf',
   'play-the-world': 'Worldschooling - Play The World.pdf',
   'people-scientist': 'Emotional & Social Skills - Be a People Scientist.pdf',
+  'frustration-tolerance-cards': 'Emotional & Social Skills - Frustration Tolerance Challenge Cards.pdf',
 };
 
 // ─────────────────────────────────────────────────────────────

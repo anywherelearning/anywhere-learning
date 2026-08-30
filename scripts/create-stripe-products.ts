@@ -119,6 +119,7 @@ const catalog = [
   { slug: 'big-feelings-lab', name: 'The Big Feelings Lab', priceCents: 599, description: 'Name a feeling, map it in the body, rate its size, watch it pass.' },
   { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', priceCents: 599, description: 'Build the skill of handling boredom without a screen. Self-direction, creativity, independence.' },
   { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
+  { slug: 'frustration-tolerance-cards', name: 'Frustration Tolerance Challenge Cards', priceCents: 599, description: '20 frustration challenges, each with a coping move to practice mid-feeling.' },
   { slug: 'comeback-journal', name: 'The Comeback Journal', priceCents: 599, description: 'Take a real flop, pull out the lesson, pick the next move.' },
   { slug: 'hard-thing-challenge', name: 'The Hard Thing Challenge', priceCents: 599, description: 'Pick one hard thing, commit, push through the messy middle, finish.' },
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },

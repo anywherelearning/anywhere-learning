@@ -134,6 +134,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'big-feelings-lab': 'Project',
   'boredom-toolkit': 'Half-Day',
   'disappointment-lab': 'Project',
+  'frustration-tolerance-cards': 'Quick',
   'comeback-journal': 'Quick',
   'hard-thing-challenge': 'Project',
   'repair-conversation': 'Quick',

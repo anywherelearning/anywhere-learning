@@ -52,6 +52,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "family-recipe-book": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20Recipe%20Book.pdf",
   "farmers-market-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Farmers%20Market%20Challenge.pdf",
   "fix-it-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Fix-it%20detective.pdf",
+  "frustration-tolerance-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Frustration%20Tolerance%20Challenge%20Cards.pdf",
   "garage-sale-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garage%20sale%20math.pdf",
   "garden-plot-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garden%20Plot%20Planner.pdf",
   "grow-it-eat-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20GROW%20IT%2C%20EAT%20IT.pdf",
