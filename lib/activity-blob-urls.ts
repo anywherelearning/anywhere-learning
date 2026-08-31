@@ -85,6 +85,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "neighbourhood-interview": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Neighbourhood%20Interview%20Project.pdf",
   "neighbourhood-problem-spotter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Neighbourhood%20Problem%20Spotter.pdf",
   "outdoor-learning-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Outdoor%20learning%20missions.pdf",
+  "outdoor-movement-challenge-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Movement%20Challenge%20Cards.pdf",
   "outdoor-stem-challenges": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Outdoor%20STEM%20Challenge%20Cards.pdf",
   "outdoor-stem-challenges-volume-2": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20STEM%20Challenge%20Cards%20-%20Volume%202.pdf",
   "outdoor-survival-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Outdoor%20survival%20planner.pdf",

@@ -32,6 +32,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'outdoor-learning-missions': 'Half-Day',
   'outdoor-stem-challenges': 'Half-Day',
   'outdoor-stem-challenges-volume-2': 'Half-Day',
+  'outdoor-movement-challenge-cards': 'Quick',
   'land-art-challenges': 'Quick',
   'nature-crafts': 'Half-Day',
 

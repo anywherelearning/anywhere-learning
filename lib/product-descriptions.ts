@@ -394,6 +394,35 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Card Guide',
   },
+  'outdoor-movement-challenge-cards': {
+    opening:
+      '20 outdoor physical challenges built on personal records, streaks, and real effort. Kids time a tree sit and beat it by five seconds a day, race their own lap time, keep a daily outside streak alive with a rain-gear backup, sample ways of moving until they find their thing, and duel a faster sibling with a handicap they tune until races finish even.',
+    whatsIncluded: [
+      '20 outdoor movement challenge cards',
+      'Five themes, from PRs to adventures',
+      'A Level Up progression on every card',
+      'A streak system with built-in backups',
+      'No equipment. A body, a timer, outside.',
+    ],
+    skillTags: ['Physical Challenge', 'Healthy Habits', 'Perseverance', 'Outdoor Confidence', 'Movement'],
+    insideTheLearning: {
+      lead:
+        'Movement here is a game played against yesterday’s self: time it, measure it, beat it. Streak cards build the daily habit, sampler cards help kids find their thing, and the adult plays every challenge too. Two sets of personal records beat one.',
+      skills: [
+        { skill: 'Physical Challenge', where: 'Tree sits, sprint loops, long hauls, and loaded packs, measured and beaten' },
+        { skill: 'Healthy Habits', where: 'A daily outside streak with a designed backup for rough days' },
+        { skill: 'Perseverance', where: 'The PR mindset: today’s self versus yesterday’s number, not other kids' },
+        { skill: 'Outdoor Confidence', where: 'Instinct walks, imperfect weather, and far points reached on foot' },
+        { skill: 'Movement', where: 'Sampling styles, rating them, and choosing their thing' },
+      ],
+    },
+    seo: {
+      title: 'Outdoor Movement Challenge Cards for Kids Ages 6-14',
+      description:
+        '20 outdoor movement challenges built on personal records and streaks. Brain breaks for big kids ages 6-14: no equipment, works in any yard, park, or trail.',
+    },
+    format: 'Card Guide',
+  },
   'land-art-challenges': {
     opening:
       '15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',

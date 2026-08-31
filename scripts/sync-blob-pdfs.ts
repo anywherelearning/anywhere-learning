@@ -96,6 +96,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   'nature-crafts': 'Outdoor Learning - Nature crafts for kids.pdf',
   'outdoor-stem-challenges': 'Outdoor Learning - Outdoor STEM Challenge Cards.pdf',
   'outdoor-stem-challenges-volume-2': 'Outdoor STEM Challenge Cards - Volume 2.pdf',
+  'outdoor-movement-challenge-cards': 'Outdoor Movement Challenge Cards.pdf',
   'outdoor-learning-missions': 'Outdoor Learning - Outdoor learning missions.pdf',
 
   // Planning & Problem-Solving
