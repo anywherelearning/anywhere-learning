@@ -13,92 +13,90 @@ export const dynamic = 'force-dynamic';
 // ─── Edit this block once a month. Everything below builds itself from it. ───
 // `category` values must match a real activity category (lib/categories).
 const THIS_MONTH = {
-  month: 'August',
+  month: 'September',
   intro: 'A fresh focus, a seasonal set, and one family challenge. New every month.',
   skill: {
-    // Six AI & Digital picks (no overlap with any other month's set).
+    // Six Self-Management picks (no overlap with any other month's set).
     slugs: [
-      'ai-basics',                // what AI is, myths vs facts, smart rules
-      'healthy-tech-boundaries',  // a real screen & tech plan for the year
-      'privacy-footprint',        // what you share and who can see it
-      'prompt-like-a-coach',      // use AI to learn, not to cheat
-      'hallucination-detective',  // fact-check what AI tells you
-      'three-ais-one-question',   // compare tools, notice they disagree
+      'time-energy-planner',     // map energy, build a real daily plan, test it
+      'plan-a-mini-adventure',   // plan a two-hour family outing and lead it
+      'boredom-toolkit',         // handle empty time without a screen
+      'teach-it-to-learn-it',    // plan a real lesson and deliver it
+      'travel-day',              // plan a full day trip: budget, itinerary, backup
+      'nature-choice-boards',    // self-directed picks, kid chooses and owns it
     ],
-    // Cool slate-blue reads "digital", and sets the skill apart from the warm
-    // gold back-to-school seasonal below.
-    accent: '#5B8FA8',
-    accentDeep: '#3C6479',
+    // Calm teal-green reads "steady and organized", distinct from the warm
+    // harvest rust in the seasonal set below.
+    accent: '#3E8577',
+    accentDeep: '#28584F',
     eyebrow: 'Skill of the month',
-    title: 'The month of smart screens',
+    title: 'The month of owning your day',
     blurb:
-      'Before the school year kicks in, get ahead of the screens instead of fighting them. This month is about using tech and AI on purpose: setting real boundaries, understanding how AI actually works, and raising a kid who runs their devices instead of the other way around.',
+      'September hands everyone a fresh calendar, whatever school looks like at your place. This month is about handing over the controls: kids planning real days, managing their own time and energy, and finding out that a day you run yourself feels completely different from one you get dragged through.',
     extras: {
       // 1 · Read this — an internal blog post. Its hero image is pulled in
       // automatically from lib/blog.ts (keep the slug in sync).
-      read: { slug: 'how-much-screen-time-kids', title: 'How Much Screen Time Is Actually OK? An Honest Mom\'s Answer' },
+      read: { slug: 'time-management-for-kids', title: 'How to Teach Kids Time Management (By Age, With Real Examples)' },
       // 2 · Read together — a younger and an older pick. Cover images live in
       // /public/books/; `link` points at the official author/publisher page.
       books: [
-        { ages: 'Ages 8–12', title: 'The Amazing Generation', author: 'Jonathan Haidt & Catherine Price', cover: '/books/the-amazing-generation.jpg', link: 'https://bookshop.org/book/9798217111916' },
-        { ages: 'Ages 11–14', title: 'Unplugged', author: 'Gordon Korman', cover: '/books/unplugged-korman.jpg', link: 'https://bookshop.org/book/9780062798893' },
+        { ages: 'Ages 8–12', title: 'Get Organized Without Losing It', author: 'Janet S. Fox', cover: '/books/get-organized-without-losing-it.jpg', link: 'https://bookshop.org/book/9781631981739' },
+        { ages: 'Ages 11–14', title: 'What Do You Really Want?', author: 'Beverly K. Bachel', cover: '/books/what-do-you-really-want.jpg', link: 'https://bookshop.org/book/9781631980305' },
       ],
       // 3 · Extra — the flexible card. Swap it every month. Items with a `url`
       // render as links; items without render as bullets. VERIFY links first.
       extra: {
-        title: 'Use it, don\'t fear it',
-        note: 'Two free, trusted tools for setting healthier tech habits together.',
+        title: 'Hand over the controls',
         items: [
-          { label: 'Common Sense Media: free app, game, and screen-time reviews by age', url: 'https://www.commonsensemedia.org/' },
-          { label: 'Be Internet Awesome (Interland): Google\'s free game that teaches online safety', url: 'https://beinternetawesome.withgoogle.com/en_us/interland' },
+          { label: 'Put a big month calendar where everyone can reach it, and let kids add their own things to it.' },
+          { label: 'Let each kid plan one full family day this month, start to finish: timing, food, budget.' },
+          { label: 'When they forget something, let the forgetting do the teaching. Rescue less than feels comfortable.' },
         ],
       },
-      mindset: "Screens aren't the enemy, and neither is AI. The goal isn't zero. It's a kid who can put it down, question what it shows them, and use it to make something instead of just scroll.",
+      mindset: "Kids don't learn to manage their time by having it managed for them. Every plan you hand over is a rep, even the ones that flop. The goal is a kid who runs their day instead of waiting to be told what's next.",
     },
   },
   seasonal: {
-    // A hand-picked, cross-area back-to-school set (grit, planning, study skills,
-    // tech boundaries, goals, nerves). The Hard Thing Challenge leads.
-    // Grit + nerves set for the new year, all from the reserve pool so nothing
-    // overlaps another month or the Smart Screens skill set above. Kept to the
-    // five that genuinely fit "start the year strong" — no padding to six.
+    // Harvest + fall set, all from the reserve pool so nothing overlaps
+    // another month or the Own Your Day skill set above. Farmers market leads.
+    // Kept to the five that genuinely fit harvest season — no padding to six.
     slugs: [
-      'hard-thing-challenge',   // pick one genuinely hard thing and finish it
-      'comeback-journal',       // bounce back from a setback
-      'disappointment-lab',     // steady yourself when it doesn't go your way
-      'calm-down-toolkit',      // handle the first-week nerves
-      'conflict-fix',           // navigate the friendship bumps
+      'farmers-market-challenge', // shop the harvest with a real budget
+      'backyard-campout-planner', // one last campout before the cold sets in
+      'nature-data-tracker',      // track the season turning: leaves, temps, daylight
+      'nature-walk-task-cards',   // crunchy-leaf walks with a mission
+      'square-foot-safari',       // watch one small patch change as fall arrives
     ],
-    // Back-to-school gold (autumn / pencils), distinct from the business terracotta.
-    accent: '#C2913C',
-    accentDeep: '#6E531A',
+    // Harvest rust (pumpkins / turning leaves), distinct from the business terracotta.
+    accent: '#B5622F',
+    accentDeep: '#6E3413',
     eyebrow: 'Seasonal pick',
-    title: 'Start the year strong',
+    title: 'Harvest and fall kickoff',
     blurb:
-      'Back-to-school season stirs up nerves, setbacks, and big feelings, whatever school looks like for your family. This set builds the grit and bounce-back to meet the year head-on, starting with picking one genuinely hard thing and finishing it.',
+      "The season turns this month, and it's the best kind of classroom. This set follows the harvest from market stall to dinner table and gets you outside while the leaves do their thing, starting with a farmers market run on a real budget.",
     extras: {
       // Universal (not homeschool-specific) — useful for any family this time of year.
-      read: { slug: 'how-to-build-resilience-in-kids', title: 'How to Build Resilience in Kids: 12 Activities That Actually Work' },
+      read: { slug: 'seasonal-scavenger-hunts', title: 'Free Seasonal Nature Scavenger Hunts (Spring, Summer, Fall, Winter)' },
       books: [
-        { ages: 'Ages 6–10', title: 'Your Fantastic Elastic Brain', author: 'JoAnn Deak', cover: '/books/your-fantastic-elastic-brain.jpg', link: 'https://bookshop.org/book/9780982993804' },
-        { ages: 'Ages 11–14', title: 'The 7 Habits of Highly Effective Teens', author: 'Sean Covey', cover: '/books/the-7-habits-of-highly-effective-teens.jpg', link: 'https://bookshop.org/book/9781476764665' },
+        { ages: 'Ages 6–10', title: 'We Gather Together', author: 'Wendy Pfeffer', cover: '/books/we-gather-together.jpg', link: 'https://bookshop.org/book/9780147512826' },
+        { ages: 'Ages 10–14', title: 'My Side of the Mountain', author: 'Jean Craighead George', cover: '/books/my-side-of-the-mountain.jpg', link: 'https://bookshop.org/book/9780141312422' },
       ],
-      // Genuinely useful, universal back-to-school systems any family can set up.
+      // Real-world harvest outings and one make-it-together project.
       extra: {
-        title: 'Set up the year',
+        title: 'Taste the season',
         items: [
-          { label: "Build a 'launch pad' by the door: tomorrow's stuff packed the night before, so mornings stop being a battle." },
-          { label: 'Do a 10-minute Sunday preview together: what is coming, who owns what, one thing each kid is looking forward to.' },
-          { label: 'End each day with one hard thing and one good thing from everyone, so setbacks get named instead of bottled up.' },
+          { label: 'Find a u-pick farm or orchard nearby and let the kids handle the picking and the paying.' },
+          { label: 'Preserve one thing together: applesauce, dried apple rings, or a small batch of freezer jam. Label it with the date.' },
+          { label: 'Start a fall bucket list on the fridge and let everyone add to it all month.' },
         ],
       },
-      mindset: "A strong year isn't one where nothing goes wrong. It's one where your kid learns they can be nervous, or fail, or find it hard, and keep going anyway.",
+      mindset: "Kids notice the season changing when you give them a reason to look. A month of tracking what the trees are doing and where dinner comes from beats a worksheet about leaves every time.",
     },
   },
   challenge: {
-    title: 'The hour back',
+    title: 'Hand over the morning',
     text:
-      "Pick one hour a day that usually disappears into screens, and take it back as a family for the month. No phones, no shows, no scrolling in that hour. Keep a running list on the fridge of what you did instead. The point isn't less screen time for its own sake. It's noticing how much a single reclaimed hour a day adds up to, and what your family does with it.",
+      "For the month, mornings belong to the kids. Waking up, breakfast, getting dressed, packing what they need, ready on time. Your job is the hard part: don't remind them. Expect a rough first week, keep a streak chart on the fridge, and watch what happens by week three. The point isn't a perfect morning. It's a kid who finds out they can run one without you.",
   },
 };
 
