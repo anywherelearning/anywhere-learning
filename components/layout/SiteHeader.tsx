@@ -70,14 +70,43 @@ const MEMBER_NAV_ITEMS = [
   { href: '/account/record', label: 'Record' },
 ];
 
-const RESOURCES_ITEMS = [
+type ResourceLink = { href: string; label: string; desc: string };
+type ResourceGroup = { label: string; desc: string; children: ResourceLink[] };
+type ResourceEntry = ResourceLink | ResourceGroup;
+
+function isResourceGroup(entry: ResourceEntry): entry is ResourceGroup {
+  return 'children' in entry;
+}
+
+// Learn and Blog sit at the top level; everything free is collected into one
+// submenu. The four free things were competing with the two reading links for
+// the same glance, and none of them read as a set even though that is exactly
+// what they are.
+//
+// The child descriptions drop the word "Free" (they used to say "Free
+// printable checklists", "Free age-by-age skills map"): the parent row says it
+// once, so repeating it four times underneath just reads as noise.
+const RESOURCES_ITEMS: ResourceEntry[] = [
   { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
-  { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
-  { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Free age-by-age skills map' },
-  { href: '/free-guide', label: 'Free 7-Day Guide', desc: 'Seven activities, sent to your inbox' },
-  { href: '/quiz', label: 'Take the Quiz', desc: 'Two minutes, a plan for your kid' },
+  {
+    label: 'Free',
+    desc: 'Four things you can take today',
+    children: [
+      { href: '/ideas', label: 'Activity Ideas', desc: 'Printable checklists' },
+      { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Age-by-age skills map' },
+      { href: '/free-guide', label: '7-Day Guide', desc: 'Seven activities, sent to your inbox' },
+      { href: '/quiz', label: 'Take the Quiz', desc: 'Two minutes, a plan for your kid' },
+    ],
+  },
 ];
+
+/** Every link in the menu, nested ones included. The active-state checks run on
+ *  this rather than on RESOURCES_ITEMS, which would miss anything inside the
+ *  Free submenu and leave the Resources dot dark on four of the six pages. */
+const RESOURCES_LINKS: ResourceLink[] = RESOURCES_ITEMS.flatMap((entry) =>
+  isResourceGroup(entry) ? entry.children : [entry],
+);
 
 
 function isActive(pathname: string | null, href: string): boolean {
@@ -254,7 +283,7 @@ export default function SiteHeader() {
                       aria-haspopup="menu"
                       aria-expanded={resourcesOpen}
                       className={`relative inline-flex items-center gap-1 font-body font-medium text-[15px] py-1.5 transition-colors bg-transparent border-0 cursor-pointer ${
-                        RESOURCES_ITEMS.some((r) => isActive(pathname, r.href))
+                        RESOURCES_LINKS.some((r) => isActive(pathname, r.href))
                           ? 'text-forest-dark'
                           : 'text-gray-600 hover:text-forest-dark'
                       }`}
@@ -274,7 +303,7 @@ export default function SiteHeader() {
                       >
                         <path d="M3 4.5L6 7.5L9 4.5" />
                       </svg>
-                      {RESOURCES_ITEMS.some((r) => isActive(pathname, r.href)) && (
+                      {RESOURCES_LINKS.some((r) => isActive(pathname, r.href)) && (
                         <span
                           aria-hidden="true"
                           className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-1 h-1 rounded-full bg-forest"
@@ -287,6 +316,15 @@ export default function SiteHeader() {
                       className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[240px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[70] ${resourcesOpen ? '' : 'hidden'}`}
                     >
                         {RESOURCES_ITEMS.map((item) => {
+                          if (isResourceGroup(item)) {
+                            return (
+                              <ResourcesFlyout
+                                key={item.label}
+                                group={item}
+                                pathname={pathname}
+                              />
+                            );
+                          }
                           const active = isActive(pathname, item.href);
                           return (
                             <Link
@@ -615,6 +653,162 @@ function AccountMenuItem({ href, children }: { href: string; children: React.Rea
   );
 }
 
+/** The "Free" row inside the desktop Resources dropdown, opening a flyout with
+ *  the four free things.
+ *
+ *  Opens on hover for mice and on click for keyboards and touch, because hover
+ *  alone strands anyone not using a mouse on a row that looks tappable and does
+ *  nothing. Like its parent, the children stay in the DOM and are hidden with
+ *  CSS rather than unmounted, so crawlers still see all four links. */
+function ResourcesFlyout({
+  group,
+  pathname,
+}: {
+  group: ResourceGroup;
+  pathname: string | null;
+}) {
+  const [open, setOpen] = useState(false);
+  const anyActive = group.children.some((c) => isActive(pathname, c.href));
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        className={`w-full flex items-center gap-2 px-4 py-3 text-left bg-transparent border-0 cursor-pointer hover:bg-[#F2EFE4] transition-colors ${
+          anyActive || open ? 'bg-[#F2EFE4]' : ''
+        }`}
+      >
+        <span className="flex flex-col gap-0.5 flex-1 min-w-0">
+          <span
+            className={`font-body font-semibold text-[14px] ${
+              anyActive ? 'text-forest-dark' : 'text-ink'
+            }`}
+          >
+            {group.label}
+          </span>
+          <span className="font-body text-[12px] text-gray-500">
+            {group.desc}
+          </span>
+        </span>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          className="text-gray-400 flex-shrink-0"
+        >
+          <path d="M4.5 3L7.5 6L4.5 9" />
+        </svg>
+      </button>
+
+      <div
+        role="menu"
+        aria-label={group.label}
+        className={`absolute left-[calc(100%+6px)] -top-2 w-[248px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[75] ${
+          open ? '' : 'hidden'
+        }`}
+      >
+        {group.children.map((child) => {
+          const active = isActive(pathname, child.href);
+          return (
+            <Link
+              key={child.href}
+              href={child.href}
+              role="menuitem"
+              className={`flex flex-col gap-0.5 px-4 py-3 no-underline hover:bg-[#F2EFE4] transition-colors ${
+                active ? 'bg-[#F2EFE4]' : ''
+              }`}
+            >
+              <span
+                className={`font-body font-semibold text-[14px] ${
+                  active ? 'text-forest-dark' : 'text-ink'
+                }`}
+              >
+                {child.label}
+              </span>
+              <span className="font-body text-[12px] text-gray-500">
+                {child.desc}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/** The "Free" group in the mobile menu. A flyout has nowhere to go on a phone,
+ *  so it nests as a second accordion inside the Resources one. */
+function MobileFreeAccordion({ group }: { group: ResourceGroup }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="w-full flex items-center justify-between py-3.5 bg-transparent border-0 cursor-pointer text-left"
+      >
+        <span className="flex flex-col">
+          <span className="font-display text-[20px] text-forest-dark">
+            {group.label}
+          </span>
+          <span className="font-body text-[13px] text-gray-500 mt-0.5">
+            {group.desc}
+          </span>
+        </span>
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          className={`transition-transform duration-200 text-gray-400 flex-shrink-0 ${
+            open ? 'rotate-180' : ''
+          }`}
+        >
+          <path d="M3 4.5L6 7.5L9 4.5" />
+        </svg>
+      </button>
+      {/* Always in the DOM (crawlable links); toggled with CSS */}
+      <ul
+        className={`list-none p-0 m-0 pl-4 border-l border-[#D8D4C5] ${
+          open ? '' : 'hidden'
+        }`}
+      >
+        {group.children.map((child) => (
+          <li key={child.href}>
+            <Link href={child.href} className="flex flex-col py-3 no-underline">
+              <span className="font-display text-[18px] text-forest-dark">
+                {child.label}
+              </span>
+              <span className="font-body text-[12.5px] text-gray-500 mt-0.5">
+                {child.desc}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
 /** Collapsible Resources section for the mobile menu. */
 function MobileResourcesAccordion() {
   const [open, setOpen] = useState(false);
@@ -643,17 +837,21 @@ function MobileResourcesAccordion() {
       </button>
       {/* Always in the DOM (crawlable links); toggled with CSS */}
       <ul className={`list-none p-0 m-0 pl-5 border-b border-[#D8D4C5] ${open ? '' : 'hidden'}`}>
-        {RESOURCES_ITEMS.map((item) => (
-          <li key={item.href}>
-            <Link
-              href={item.href}
-              className="flex flex-col py-3.5 no-underline"
-            >
-              <span className="font-display text-[20px] text-forest-dark">{item.label}</span>
-              <span className="font-body text-[13px] text-gray-500 mt-0.5">{item.desc}</span>
-            </Link>
-          </li>
-        ))}
+        {RESOURCES_ITEMS.map((item) =>
+          isResourceGroup(item) ? (
+            <MobileFreeAccordion key={item.label} group={item} />
+          ) : (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="flex flex-col py-3.5 no-underline"
+              >
+                <span className="font-display text-[20px] text-forest-dark">{item.label}</span>
+                <span className="font-body text-[13px] text-gray-500 mt-0.5">{item.desc}</span>
+              </Link>
+            </li>
+          ),
+        )}
       </ul>
     </li>
   );
