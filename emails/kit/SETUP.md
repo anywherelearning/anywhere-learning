@@ -45,6 +45,35 @@ Triggered on tag `buyer`, which the code no longer applies after the membership 
 Replaced by the two sequences below. `post-purchase-1-getting-started.html` and
 `post-purchase-2-cross-sell.html` are kept for reference only; delete the Kit automation.
 
+## Sequence 2b: Idea-list checklist (1 email)
+
+**Trigger:** Subscriber receives tag `checklist-subscriber`
+(Applied by the app when someone unlocks a printable on any `/ideas/[slug]` page.)
+
+| # | File | Delay | Subject Line | Job |
+|---|------|-------|-------------|-----|
+| 1 | `checklist-1-welcome.html` | Immediately | Here's your checklist | Re-deliver the printable + introduce the membership |
+
+**These people do NOT get the 7-day guide.** They are deliberately kept out of the
+`lead` tag and the Lead Magnet sequence: they asked for a checklist, not a 7-day
+guide. Do not write copy that assumes they have it.
+
+**One email serves all 15 lists.** It never hardcodes a list name. It reads three
+custom fields the app sets on signup:
+
+| Field | Holds |
+|-------|-------|
+| `last_guide` | the list's title, e.g. "Nature Walk Checklist: 50 Ideas for Kids" |
+| `last_guide_cover` | that list's cover image |
+| `last_guide_download` | that list's full-colour printable PDF |
+
+Every one of the 15 lists has both a cover and a printable, so nothing renders
+blank. Add a new idea list and the app fills these in automatically; this email
+keeps working untouched.
+
+**Also applied, for measurement only:** `checklist:{list-slug}` (one per list, no
+automation hangs off it) and `from-{source}` for channel attribution.
+
 ## Sequence 3a: Trial Member nurture (2 emails)
 
 **Trigger:** Subscriber receives tag `trial-member`

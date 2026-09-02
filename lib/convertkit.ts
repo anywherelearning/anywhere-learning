@@ -345,6 +345,46 @@ export async function subscribeToConvertKit(
   });
 }
 
+/** Subscribe someone who unlocked a printable idea-list checklist.
+ *
+ * Deliberately does NOT apply `lead`. That tag runs the 7-day guide sequence,
+ * and these people asked for a nature walk checklist, not a 7-day guide.
+ * Dropping them into that funnel would answer a question nobody asked and
+ * would blur the `lead` count that measures the /free-guide page.
+ *
+ * They get three tags instead:
+ *  - `from-{source}`          attribution, same as everywhere else
+ *  - `checklist-subscriber`   the funnel trigger. ONE Kit automation hangs off
+ *                             this and serves all the idea lists, which is why
+ *                             it exists as well as the per-list tag: an
+ *                             automation per list would mean 15 of them.
+ *  - `checklist:{slug}`       counting only, so you can see which list works.
+ *
+ * The `last_guide*` fields are pointed at the checklist itself rather than the
+ * default lead magnet, so a welcome email can name the thing they actually took
+ * and re-send the right PDF. Without this they'd read "7 Days of Real-World
+ * Learning" and hand over a file the person never asked for.
+ */
+export async function subscribeChecklistLead(
+  email: string,
+  source: string | undefined,
+  list: { slug: string; title: string; downloadUrl: string },
+) {
+  await subscribeAndTag(
+    email,
+    [
+      `from-${source || 'organic'}`,
+      'checklist-subscriber',
+      `checklist:${list.slug}`,
+    ],
+    {
+      last_guide: list.title,
+      last_guide_cover: `https://anywherelearning.co/ideas/${list.slug}.jpg`,
+      last_guide_download: list.downloadUrl,
+    },
+  );
+}
+
 /** Tag a buyer with product-specific, purchase-type, and cross-sell tags */
 export async function tagBuyerInConvertKit(
   email: string,

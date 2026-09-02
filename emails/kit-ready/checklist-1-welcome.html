@@ -1,0 +1,126 @@
+<!--
+  CHECKLIST FUNNEL - Deliver the printable idea list
+  Trigger: Tag added: checklist-subscriber
+  Send: Immediately
+  Subject: Here's your checklist
+  Preview: Plus the other 14 lists, already unlocked.
+
+  ONE email serves all 15 idea lists. It never names a specific list in the
+  hardcoded copy; it reads the three custom fields the app sets on signup:
+    {{ subscriber.last_guide }}           the list's title
+    {{ subscriber.last_guide_cover }}     that list's cover image
+    {{ subscriber.last_guide_download }}  that list's full-colour printable
+  Verified against Kit: those three field keys exist on the account. Every one
+  of the 15 lists has both a cover and a printable, so none of them renders
+  blank. All three carry a `| default:` fallback anyway, so if someone ever gets
+  the checklist-subscriber tag WITHOUT those fields (e.g. tagged by hand in Kit)
+  the email still renders: generic wording, the library image, and a working
+  button to the idea index instead of a dead link. If you add a new idea list,
+  the app fills these in automatically and this email keeps working. Do not
+  hardcode a list name into it.
+
+  These people did NOT get the 7-day guide and are not in the Lead Magnet
+  sequence. Do not reference it as though they have it.
+
+  HOW TO USE (Kit automation email):
+  1. Paste this whole file as the email's custom HTML template.
+  2. In the visual editor, add ONLY your greeting (Add Personalization >
+     Personalized greeting, or type: Hi {{ subscriber.first_name | default: 'there' }},).
+     It appears under the headline; everything else is locked in.
+  3. Subject: Here's your checklist
+  4. Preview text: Plus the other 14 lists, already unlocked.
+  5. Send a test to yourself, then activate.
+  Images load from anywherelearning.co. No Google Fonts (Kit strips them); script text is pre-rendered PNGs.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <style>
+    :root { color-scheme: light; supported-color-schemes: light; }
+    html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:#588157; }
+    @media (max-width: 620px) {
+      .q-card { border-radius:0 !important; }
+      .q-pad  { padding-left:26px !important; padding-right:26px !important; }
+    }
+  </style>
+</head>
+<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
+   <tr><td align="center" style="padding:36px 16px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="q-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+
+      <!-- HEADER -->
+      <tr><td class="q-pad" align="center" style="padding:34px 40px 0;">
+        <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
+        <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="200" style="display:inline-block; width:200px; max-width:78%; height:auto; border:0; margin:10px 0 0;">
+      </td></tr>
+      <tr><td class="q-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+
+      <tr><td class="q-pad" style="padding:24px 40px 0;">
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:9px;">Your checklist</div>
+        <div style="font-size:24px; font-weight:700; line-height:1.2; color:#2f3a2e;">Here it is, ready to print</div>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:22px 40px 0;">
+        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:6px 40px 0;">
+<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Your copy of <strong style="color:#2f3a2e;">{{ subscriber.last_guide | default: 'the checklist' }}</strong> is right here. Print it for the fridge, or keep it on your phone for the days you need something to pull out of your pocket.</p>
+<p align="center" style="margin:4px 0 18px;"><img src="{{ subscriber.last_guide_cover | default: 'https://anywherelearning.co/email-library-hero.png' }}" alt="" width="220" style="display:inline-block; width:220px; max-width:60%; height:auto; border:0; border-radius:10px;"></p>
+      </td></tr>
+
+      <tr><td align="center" style="padding:6px 40px 6px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
+            <a href="{{ subscriber.last_guide_download | default: 'https://anywherelearning.co/ideas' }}" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Download your checklist &darr;</a>
+          </td>
+        </tr></table>
+        <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">Yours to keep. Use it again next year.</div>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:26px 40px 0;">
+        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6;">&nbsp;</div>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:22px 40px 0;">
+<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">One thing worth knowing: that was the only time you'll have to type your email in. Every other list on the site is unlocked for you now, all fifteen of them, covering nature, the kitchen, life skills, STEM, creative projects, travel, screens and mindset. Open one and the printable is just there.</p>
+<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 6px;"><a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checklist-welcome" style="color:#588157; font-weight:600; text-decoration:underline;">Browse all fifteen lists &rarr;</a></p>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:26px 40px 0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#eef2ec; border-radius:12px;"><tr><td style="padding:22px 26px;">
+<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 14px;">Now the honest bit. A list tells you <em>what</em> to do. It doesn't tell you how to actually run it, what to say when they lose interest eight minutes in, or how to make the same activity land for a six year old and an eleven year old sitting at the same table.</p>
+<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">That's the part I got tired of guessing at, so it's the part the membership does for you. Every activity is a full guide you open and follow along with, three skill levels built in, and you're doing it together rather than handing them a worksheet and hoping.</p>
+<p align="center" style="margin:0 0 16px;"><img src="https://anywherelearning.co/email-library-hero.png" alt="A look inside the Anywhere Learning activity library" width="440" style="display:inline-block; width:100%; max-width:440px; height:auto; border:0; border-radius:10px;"></p>
+<p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0;"><a href="https://anywherelearning.co/join?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checklist-welcome" style="color:#588157; font-weight:600; text-decoration:underline;">Have a look inside, free for 14 days &rarr;</a></p>
+</td></tr></table>
+      </td></tr>
+
+      <tr><td class="q-pad" style="padding:26px 40px 0;">
+        <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Go have fun with it,</p>
+        <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
+      </td></tr>
+
+      <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
+        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
+        <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
+        <p style="font-size:13px; margin:0 0 12px;">
+          <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checklist-welcome" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checklist-welcome" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checklist-welcome" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+        </p>
+        <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you downloaded a printable checklist at anywherelearning.co.<br>
+          <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+      </td></tr>
+
+    </table>
+   </td></tr>
+  </table>
+
+</body>
+</html>

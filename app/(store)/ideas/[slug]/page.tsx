@@ -13,7 +13,6 @@ import {
 } from '@/lib/ideas';
 import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
 import { getIdeaListSeo } from '@/lib/idea-list-seo';
-import { getFreeActivityForCategory } from '@/lib/ideas-free-activity';
 import { getPostBySlug } from '@/lib/blog';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
 import ScrollReveal from '@/components/shared/ScrollReveal';
@@ -531,9 +530,6 @@ function ListDetailView({
   const seo = getIdeaListSeo(list.slug);
   const pdfUrls = getIdeaListPdfUrls(list.slug);
 
-  // The complete guided activity given away on this category's lists.
-  const freeActivity = getFreeActivityForCategory(category.slug);
-
   // The in-depth guide this checklist was distilled from. A visible,
   // crawlable link both ways tells search engines "guide + tool cluster",
   // not two pages competing for the same query.
@@ -590,24 +586,28 @@ function ListDetailView({
         name: item,
       })),
     },
+    /* The printables now sit behind an email. They stay listed so the
+       downloads are still machine-visible, but the direct Blob URLs are gone
+       and isAccessibleForFree is false: publishing the real file URL next to
+       a form asking for an email would hand out the thing being gated. The
+       ItemList above is untouched, so the ideas themselves remain free and
+       fully crawlable, which is what actually ranks this page. */
     ...(pdfUrls
       ? {
           hasPart: [
             {
               '@type': 'DigitalDocument',
               name: `${list.title} (printable PDF, full color)`,
-              url: pdfUrls.color,
               encodingFormat: 'application/pdf',
-              isAccessibleForFree: true,
-              potentialAction: { '@type': 'DownloadAction', target: pdfUrls.color },
+              isAccessibleForFree: false,
+              potentialAction: { '@type': 'DownloadAction', target: pageUrl },
             },
             {
               '@type': 'DigitalDocument',
               name: `${list.title} (printable PDF, black and white)`,
-              url: pdfUrls.bw,
               encodingFormat: 'application/pdf',
-              isAccessibleForFree: true,
-              potentialAction: { '@type': 'DownloadAction', target: pdfUrls.bw },
+              isAccessibleForFree: false,
+              potentialAction: { '@type': 'DownloadAction', target: pageUrl },
             },
           ],
         }
@@ -966,7 +966,6 @@ function ListDetailView({
             accent={category.accent}
             pdfUrls={pdfUrls}
             categorySlug={category.slug}
-            freeActivity={freeActivity}
           />
         </div>
 
@@ -1004,12 +1003,13 @@ function ListDetailView({
           </section>
         )}
 
-        {/* Content upgrade: free guided activity for an email */}
-        {freeActivity && (
+        {/* Content upgrade: the printable version of this list, for an email. */}
+        {pdfUrls && (
           <IdeaListEmailCapture
+            listSlug={list.slug}
             categorySlug={category.slug}
             accent={category.accent}
-            activity={freeActivity}
+            pdfUrls={pdfUrls}
           />
         )}
 

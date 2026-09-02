@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import {
   SOURCE_STORAGE_KEY,
   sanitizeSource,
+  sourceFromClickId,
   sourceFromReferrer,
 } from '@/lib/attribution';
 
@@ -42,13 +43,16 @@ export default function useAttributionSource(): string {
         return;
       }
 
-      const referred = sourceFromReferrer(
-        document.referrer,
-        window.location.hostname,
-      );
-      if (referred) {
-        setSource(referred);
-        sessionStorage.setItem(SOURCE_STORAGE_KEY, referred);
+      // Click ID before referrer: Facebook and Instagram open links in an
+      // in-app browser that strips document.referrer, so for the two channels
+      // that matter most this is the only signal that survives the trip.
+      const resolved =
+        sourceFromClickId(window.location.search) ||
+        sourceFromReferrer(document.referrer, window.location.hostname);
+
+      if (resolved) {
+        setSource(resolved);
+        sessionStorage.setItem(SOURCE_STORAGE_KEY, resolved);
       }
     } catch {
       // sessionStorage unavailable (private mode, etc.) - fail silently and

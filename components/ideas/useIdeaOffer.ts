@@ -1,60 +1,66 @@
 'use client';
 
-// ─── Shared state for the two free-activity offers on an idea list page ───
+// ─── Shared state for the gated checklist download on an idea list page ───
 //
-// The offer appears twice: compact, beside the PDF download near the top (most
-// visitors take the PDF and leave, so the ask has to reach them there), and in
-// full below the list for anyone who scrolls. They are the same offer, so
-// submitting either has to settle both. Otherwise someone who signs up at the
-// top scrolls down and gets asked again for something they already have.
+// One email unlocks the printable version of the list. That is the whole offer.
 //
-// The two instances sit in different subtrees with server-rendered content
-// between them, so a context provider would mean restructuring the page around
-// them. This syncs through a browser event instead, and persists so a returning
+// It used to be two cards: a printable that was free with no email, beside a
+// complete guided activity that cost one. The free card took everything and the
+// gated one collected zero real signups in a month. The first fix bundled them,
+// which broke on the second visit: the claim ledger allows one activity per
+// address ever, so someone working through several lists was pitched a new
+// guide on every page and handed back the same one each time.
+//
+// So the activity is out of the idea lists entirely and the printable is the
+// ask. It is the thing that is actually per-list, so it is the thing that can
+// honestly be offered again on the next list.
+//
+// The 50 ideas themselves stay open on the page. They are the crawlable content
+// that earns the traffic, so only the printable sits behind the ask.
+//
+// The offer appears twice, top and below the list, because most visitors never
+// scroll. They sit in different subtrees with server-rendered content between
+// them, so a context provider would mean restructuring the page around them.
+// This syncs through a browser event instead, and persists so a returning
 // visitor is greeted rather than asked twice.
 
 import { useState, useEffect, useCallback, type FormEvent } from 'react';
-import type { IdeaFreeActivity } from '@/lib/ideas-free-activity';
+import useAttributionSource from '@/components/useAttributionSource';
 
 const STORAGE_KEY = 'al-ideas-offer-claimed';
 const SYNC_EVENT = 'al-ideas-offer-claimed';
 
 export type OfferStatus = 'idle' | 'loading' | 'success' | 'error';
 
-export interface ClaimedState {
-  /** The guide they ended up with, which may not be this page's. */
-  name: string;
-  downloadUrl: string;
-  /** True when they'd already used their one claim on another list. */
-  wasPrior: boolean;
-}
-
-function readStored(): ClaimedState | null {
+function hasUnlocked(): boolean {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as ClaimedState) : null;
+    return localStorage.getItem(STORAGE_KEY) !== null;
   } catch {
-    return null;
+    return false;
   }
 }
 
-export function useIdeaOffer(categorySlug: string, activity: IdeaFreeActivity) {
+export function useIdeaOffer(listSlug: string, categorySlug: string) {
+  // The channel, not the page. This capture used to hardcode `ideas-{category}`
+  // as its source, which is why every idea-list signup was invisible in the
+  // channel breakdown. The page is recorded separately by the `checklist:{list}`
+  // tag, so sending the channel here costs nothing and restores the attribution.
+  const attributionSource = useAttributionSource();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<OfferStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const [claimed, setClaimed] = useState<ClaimedState | null>(null);
+  const [unlocked, setUnlocked] = useState(false);
 
-  // Pick up an earlier claim, from this page load or a previous visit.
+  // Pick up an earlier unlock, from this page load or a previous visit. One
+  // email unlocks the printable on every list: they are the same ask repeated,
+  // and re-asking someone who already subscribed just costs them the download.
   useEffect(() => {
-    const stored = readStored();
-    if (stored) {
-      setClaimed(stored);
+    if (hasUnlocked()) {
+      setUnlocked(true);
       setStatus('success');
     }
-    const onSync = (e: Event) => {
-      const detail = (e as CustomEvent<ClaimedState>).detail;
-      if (!detail) return;
-      setClaimed(detail);
+    const onSync = () => {
+      setUnlocked(true);
       setStatus('success');
     };
     window.addEventListener(SYNC_EVENT, onSync);
@@ -80,9 +86,12 @@ export function useIdeaOffer(categorySlug: string, activity: IdeaFreeActivity) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             email,
-            source: `ideas-${categorySlug}`,
-            guide: activity.guideTag,
-            oncePerEmail: true,
+            source: attributionSource || 'organic',
+            // Routes the signup to the checklist funnel instead of the
+            // `lead` one, and records which list did the work. The server
+            // resolves the slug, so an unknown one is rejected rather than
+            // silently minting a junk Kit tag.
+            checklist: listSlug,
           }),
         });
 
@@ -96,27 +105,15 @@ export function useIdeaOffer(categorySlug: string, activity: IdeaFreeActivity) {
           return;
         }
 
-        const next: ClaimedState = data.alreadyClaimed
-          ? {
-              name: data.alreadyClaimed.name,
-              downloadUrl: data.alreadyClaimed.downloadUrl,
-              wasPrior: true,
-            }
-          : {
-              name: activity.name,
-              downloadUrl: activity.downloadUrl,
-              wasPrior: false,
-            };
-
-        setClaimed(next);
+        setUnlocked(true);
         setStatus('success');
 
         try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ at: Date.now() }));
         } catch {
           // private mode: the offer just asks again next visit
         }
-        window.dispatchEvent(new CustomEvent(SYNC_EVENT, { detail: next }));
+        window.dispatchEvent(new CustomEvent(SYNC_EVENT));
 
         try {
           const { pinterestSetEnhancedMatch, metaLead } = await import(
@@ -132,7 +129,7 @@ export function useIdeaOffer(categorySlug: string, activity: IdeaFreeActivity) {
         setStatus('error');
       }
     },
-    [email, categorySlug, activity],
+    [email, listSlug, categorySlug, attributionSource],
   );
 
   return {
@@ -141,7 +138,9 @@ export function useIdeaOffer(categorySlug: string, activity: IdeaFreeActivity) {
     status,
     errorMessage,
     setErrorMessage,
-    claimed,
+    /** They have given an email, here or on an earlier idea list, so this
+     *  page's printable is theirs. One email unlocks every list's printable. */
+    unlocked,
     submit,
   };
 }

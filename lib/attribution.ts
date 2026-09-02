@@ -2,7 +2,8 @@
  * Where a subscriber came from, resolved once per session.
  *
  * Precedence: an explicit `?source=` beats `?utm_source=`, which beats whatever
- * the session already captured, which beats the referring domain.
+ * the session already captured, which beats a platform click ID on the URL,
+ * which beats the referring domain.
  *
  * The referrer fallback is the part that matters. Capturing only URL params
  * assumes every link is tagged by hand, and a link pasted bare into a Facebook
@@ -51,6 +52,47 @@ const REFERRER_SOURCES: ReadonlyArray<readonly [string, string]> = [
   ['yahoo.', 'yahoo'],
   ['ecosia.', 'ecosia'],
 ];
+
+/**
+ * Click-ID parameter to source tag.
+ *
+ * The referrer fallback below covers a link opened in a normal browser, but
+ * misses the case that matters most here: Facebook and Instagram open links in
+ * their own in-app browser, which strips `document.referrer`. Someone tapping a
+ * link in a Facebook group therefore arrives looking exactly like direct
+ * traffic, which is how the largest channel kept landing in `from-organic`.
+ *
+ * These platforms all append their own click ID to the URL, and that survives
+ * the in-app browser. Checked in order, first match wins.
+ */
+const CLICK_ID_SOURCES: ReadonlyArray<readonly [string, string]> = [
+  ['fbclid', 'facebook'],
+  ['igshid', 'instagram'],
+  ['igsh', 'instagram'],
+  ['epik', 'pinterest'],
+  ['ttclid', 'tiktok'],
+  ['gclid', 'google'],
+  ['msclkid', 'bing'],
+  ['li_fat_id', 'linkedin'],
+  ['twclid', 'twitter'],
+];
+
+/**
+ * Map the current URL's query string to a source tag via its click ID.
+ * Returns '' when no known click ID is present.
+ */
+export function sourceFromClickId(search: string): string {
+  let params: URLSearchParams;
+  try {
+    params = new URLSearchParams(search);
+  } catch {
+    return '';
+  }
+  for (const [param, source] of CLICK_ID_SOURCES) {
+    if (params.has(param)) return source;
+  }
+  return '';
+}
 
 /** The same rule /api/subscribe applies, so a tag can never be a surprise. */
 export function sanitizeSource(raw: string): string {

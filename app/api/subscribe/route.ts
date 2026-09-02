@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { subscribeToConvertKit } from "@/lib/convertkit";
+import {
+  subscribeToConvertKit,
+  subscribeChecklistLead,
+} from "@/lib/convertkit";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { claimGuide } from "@/lib/guide-claims";
 import { getFreeActivityBySlug } from "@/lib/ideas-free-activity";
+import { getListBySlug } from "@/lib/ideas";
+import { getIdeaListPdfUrls } from "@/lib/idea-list-pdfs";
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,10 +16,13 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, source, guide, oncePerEmail } = body as {
+    const { email, source, guide, checklist, oncePerEmail } = body as {
       email: string;
       source?: string;
       guide?: string;
+      /** Set by the idea-list capture: which printable checklist they unlocked.
+       *  Routes the signup to its own funnel, away from the 7-day guide. */
+      checklist?: string;
       /** Set by the idea-list capture: enforce one free activity per address. */
       oncePerEmail?: boolean;
     };
@@ -40,6 +48,35 @@ export async function POST(request: NextRequest) {
     const cleanGuide = guide
       ? guide.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40) || undefined
       : undefined;
+
+    // Same rule again. Resolved against the real idea lists rather than
+    // trusted: an unknown slug would otherwise mint a junk Kit tag and set the
+    // download field to nothing.
+    const cleanChecklist = checklist
+      ? checklist.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 60) ||
+        undefined
+      : undefined;
+
+    // Idea-list checklist signup: its own funnel, and an early return so it can
+    // never pick up the `lead` tag and land in the 7-day guide sequence.
+    if (cleanChecklist) {
+      const found = getListBySlug(cleanChecklist);
+      const pdf = getIdeaListPdfUrls(cleanChecklist);
+      if (!found || !pdf) {
+        return NextResponse.json(
+          { error: "Unknown checklist" },
+          { status: 400 },
+        );
+      }
+
+      await subscribeChecklistLead(email, cleanSource, {
+        slug: cleanChecklist,
+        title: found.list.title,
+        downloadUrl: pdf.color,
+      });
+
+      return NextResponse.json({ success: true, alreadyClaimed: null });
+    }
 
     // The idea lists each give away a different complete activity, so without a
     // ledger one person could walk all eight category pages and collect the lot.

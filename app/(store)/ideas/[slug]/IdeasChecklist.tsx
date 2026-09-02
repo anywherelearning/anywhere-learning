@@ -1,26 +1,15 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import type { IdeaList } from '@/lib/ideas';
-import type { IdeaFreeActivity } from '@/lib/ideas-free-activity';
-import IdeaListOfferInline from '@/components/ideas/IdeaListOfferInline';
+import IdeaListUnlock from '@/components/ideas/IdeaListUnlock';
 
-function DownloadIcon() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
-  );
-}
 
 /* ──────────────────────────────────────────────────────────────────
    IdeasChecklist
    Interactive, localStorage-persisted checklist for a single
-   idea list.  Renders section cards with two-column checkbox
-   grids, a sticky progress bar, and print/save buttons.
+   idea list. Renders the gated download card, a sticky progress
+   bar, and the open two-column list of ideas.
    ────────────────────────────────────────────────────────────────── */
 
 export default function IdeasChecklist({
@@ -28,14 +17,11 @@ export default function IdeasChecklist({
   accent,
   pdfUrls,
   categorySlug,
-  freeActivity,
 }: {
   list: IdeaList;
   accent: string;
   pdfUrls: { color: string; bw: string } | null;
   categorySlug: string;
-  /** Null when the category has no activity mapped, which hides the offer. */
-  freeActivity: IdeaFreeActivity | null;
 }) {
   const storageKey = `al-ideas:${list.slug}`;
   const totalItems = list.sections.reduce((n, s) => n + s.items.length, 0);
@@ -84,94 +70,18 @@ export default function IdeasChecklist({
 
   return (
     <div style={{ '--accent': accent } as React.CSSProperties}>
-      {/* ── Two parallel cards: take the printable, or take the guided one ──
-          Same skeleton in both (thumb, eyebrow, one line, action row pinned to
-          the bottom) so the pair reads as one row rather than two components
-          that happened to land next to each other. */}
-      <div className="mx-auto max-w-[920px] px-6 -mt-2 mb-5">
-        <div className="grid gap-4 sm:gap-5 lg:grid-cols-2 lg:items-stretch">
-          {/* Card 1 — the printable they came for */}
-          <div
-            className="h-full rounded-xl border p-4 sm:p-5 flex gap-4"
-            style={{ borderColor: `${accent}25`, background: `${accent}08` }}
-          >
-            {/* contain, not cover: the checklists are 0.773 and the product
-                covers run 0.707 to 0.750, so one fixed ratio cropped the edges
-                off a cover. Nothing here is croppable art. */}
-            <div className="relative w-[84px] sm:w-[92px] aspect-[3/4] flex-shrink-0">
-              <Image
-                src={`/ideas/${list.slug}.jpg`}
-                alt={list.title}
-                fill
-                priority
-                className="object-contain drop-shadow-[0_5px_12px_rgba(45,58,46,0.3)]"
-                sizes="92px"
-              />
-            </div>
-
-            <div className="min-w-0 flex-1 flex flex-col">
-              <p
-                className="text-[11px] font-semibold uppercase tracking-[0.14em] mb-1.5"
-                style={{ color: accent }}
-              >
-                Free printable checklist
-              </p>
-              <p className="text-[14px] leading-[1.5] text-[#4a4843] m-0">
-                Print it for the fridge or your bag.{' '}
-                <strong className="font-semibold text-[#3f3d38]">
-                  No email needed.
-                </strong>
-              </p>
-
-              <div className="mt-auto pt-3.5">
-                {pdfUrls ? (
-                  <div className="flex flex-wrap gap-2">
-                    <a
-                      href={pdfUrls.color}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white px-3 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
-                      style={{ background: accent }}
-                    >
-                      <DownloadIcon />
-                      Full colour
-                    </a>
-                    <a
-                      href={pdfUrls.bw}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[13px] font-semibold px-3 py-2.5 rounded-lg border-2 transition-all hover:-translate-y-px hover:shadow-md no-underline whitespace-nowrap"
-                      style={{ color: accent, borderColor: accent, background: 'transparent' }}
-                    >
-                      <DownloadIcon />
-                      Black &amp; white
-                    </a>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => window.print()}
-                    className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white px-3 py-2.5 rounded-lg transition-all hover:-translate-y-px hover:shadow-md"
-                    style={{ background: accent }}
-                  >
-                    <DownloadIcon />
-                    Print this page
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2 — the same ask that runs below the list, at the moment they
-              are already accepting something. Both share state. */}
-          {freeActivity && (
-            <IdeaListOfferInline
-              categorySlug={categorySlug}
-              accent={accent}
-              activity={freeActivity}
-            />
-          )}
-        </div>
-      </div>
+      {/* ── The gated printable ──
+          This used to be two cards side by side, and the left one was free with
+          no email. It took everything, and the paid-with-an-email card beside it
+          collected nothing. One ask now, and the thing behind it is the one that
+          is genuinely per-list, so the next list can honestly offer it again. */}
+      <IdeaListUnlock
+        listSlug={list.slug}
+        listTitle={list.title}
+        categorySlug={categorySlug}
+        accent={accent}
+        pdfUrls={pdfUrls}
+      />
 
       {/* ── Sticky progress bar ── */}
       <div className="sticky top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-md border-b border-[#D8D4C5] shadow-[0_4px_16px_-8px_rgba(45,58,46,0.1)]">

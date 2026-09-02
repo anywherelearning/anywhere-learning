@@ -1,17 +1,25 @@
-// ─── The free guided activity offered on each idea list page ───
+// ─── The free guided activity that idea list pages used to give away ───
 //
-// Each idea category gives away one complete activity guide (normally $5.99)
-// in exchange for an email. The match matters: someone who came for nature walk
-// ideas gets a nature guide, not a kitchen one.
+// RETIRED from the idea lists (Sept 2026). The pages now trade the printable
+// checklist for an email and nothing else. The activity was pulled because the
+// claim ledger allows one per address ever, so a visitor working through
+// several lists got pitched a different guide on every page and handed back the
+// same one each time. A promise the page could not keep.
 //
-// The contrast is the whole pitch. A list gives you ideas. The guide shows you
-// how to actually run one, with three skill levels and what to say when they
-// get stuck. That gap is what the membership sells, so the free guide is a
-// working sample of it rather than more of what the page already gave away.
+// Kept, not deleted, for two reasons. `getFreeActivityBySlug` is still live:
+// lib/guide-names.ts uses it to name whichever guide a subscriber took, for the
+// funnels that DO still deliver activities (the quiz and the flagship
+// giveaway). And keeping CATEGORY_TO_ACTIVITY intact makes restoring the idea
+// list giveaway a small change if gating the checklists alone does not grow the
+// list.
 //
-// Delivery is instant on-page from the existing Blob URL, so none of this
-// depends on a Kit automation existing. The `guide:{slug}` tag still fires, so
-// adding the automation later layers email delivery on top.
+// `getFreeActivityForCategory` and `getAllFreeActivitySlugs` have no callers
+// while the giveaway is retired. Safe to delete once that decision is settled.
+//
+// The original reasoning, still true if it comes back: the match matters, and
+// the contrast is the pitch. A list gives you ideas; the guide shows you how to
+// actually run one, with three skill levels and what to say when they get
+// stuck. That gap is what the membership sells.
 
 import { ACTIVITY_BLOB_URLS } from '@/lib/activity-blob-urls';
 import { getFallbackProductBySlug } from '@/lib/fallback-products';
