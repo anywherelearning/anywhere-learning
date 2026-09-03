@@ -40,10 +40,19 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
     setStatus("loading");
 
     try {
+      // One id shared by the browser pixel and the server's Conversions API
+      // call, so Meta counts this lead once.
+      const { newMetaEventId } = await import('@/lib/tracking');
+      const metaEventId = newMetaEventId();
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: source || undefined, guide: guide || undefined }),
+        body: JSON.stringify({
+          email,
+          source: source || undefined,
+          guide: guide || undefined,
+          metaEventId,
+        }),
       });
 
       const data = await res.json();
@@ -65,7 +74,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
         const { pinterestSetEnhancedMatch, metaLead } = await import('@/lib/tracking');
         pinterestSetEnhancedMatch(email);
         // Meta Lead conversion — this is the event a Meta Leads campaign optimizes toward.
-        metaLead(guide ? `free-guide:${guide}` : source || 'free-guide');
+        metaLead(guide ? `free-guide:${guide}` : source || 'free-guide', metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");

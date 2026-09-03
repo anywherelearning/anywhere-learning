@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { subscribeAndTag } from "@/lib/convertkit";
+import { cleanEventId, sendMetaLead } from "@/lib/meta-capi";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { CHALLENGE } from "@/lib/challenge";
 
@@ -27,7 +28,12 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, source } = body as { email: string; source?: string };
+    const { email, source, metaEventId } = body as {
+      email: string;
+      source?: string;
+      /** Browser pixel event id, so the server-side Lead dedupes against it. */
+      metaEventId?: string;
+    };
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
@@ -44,6 +50,20 @@ export async function POST(request: NextRequest) {
       CHALLENGE.signupTag,
       `from-${cleanSource || "challenge"}`,
     ]);
+
+    // Server-side Meta Lead (Conversions API), same id as the browser pixel so
+    // Meta counts it once. After the response, best-effort.
+    const leadEventId = cleanEventId(metaEventId);
+    if (leadEventId) {
+      after(() =>
+        sendMetaLead({
+          eventId: leadEventId,
+          email,
+          source: cleanSource ? `challenge:${cleanSource}` : "challenge",
+          request,
+        }),
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {

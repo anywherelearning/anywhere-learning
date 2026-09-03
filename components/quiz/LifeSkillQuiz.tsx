@@ -91,6 +91,9 @@ export default function LifeSkillQuiz() {
 
     setStatus("loading");
     try {
+      // Shared browser/server id so Meta dedupes the pixel + Conversions API pair.
+      const { newMetaEventId } = await import("@/lib/tracking");
+      const metaEventId = newMetaEventId();
       const res = await fetch("/api/quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -100,6 +103,7 @@ export default function LifeSkillQuiz() {
           ageBand,
           secondaryGap: secondaryGap || undefined,
           source: source || undefined,
+          metaEventId,
         }),
       });
       const data = await res.json();
@@ -118,7 +122,7 @@ export default function LifeSkillQuiz() {
       try {
         const { pinterestSetEnhancedMatch, metaLead } = await import("@/lib/tracking");
         pinterestSetEnhancedMatch(email);
-        metaLead(source ? `quiz:${source}` : "quiz");
+        metaLead(source ? `quiz:${source}` : "quiz", metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");

@@ -30,10 +30,13 @@ export default function ChallengeSignup({ id = "top" }: { id?: string }) {
 
     setStatus("loading");
     try {
+      // Shared browser/server id so Meta dedupes the pixel + Conversions API pair.
+      const { newMetaEventId } = await import("@/lib/tracking");
+      const metaEventId = newMetaEventId();
       const res = await fetch("/api/challenge", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: source || undefined }),
+        body: JSON.stringify({ email, source: source || undefined, metaEventId }),
       });
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -48,7 +51,7 @@ export default function ChallengeSignup({ id = "top" }: { id?: string }) {
       try {
         const { pinterestSetEnhancedMatch, metaLead } = await import("@/lib/tracking");
         pinterestSetEnhancedMatch(email);
-        metaLead(source ? `challenge:${source}` : "challenge");
+        metaLead(source ? `challenge:${source}` : "challenge", metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");

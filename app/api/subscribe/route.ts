@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import {
   subscribeToConvertKit,
   subscribeChecklistLead,
 } from "@/lib/convertkit";
+import { cleanEventId, sendMetaLead } from "@/lib/meta-capi";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { claimGuide } from "@/lib/guide-claims";
 import { getFreeActivityBySlug } from "@/lib/ideas-free-activity";
@@ -16,7 +17,7 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, source, guide, checklist, oncePerEmail } = body as {
+    const { email, source, guide, checklist, oncePerEmail, metaEventId } = body as {
       email: string;
       source?: string;
       guide?: string;
@@ -25,6 +26,8 @@ export async function POST(request: NextRequest) {
       checklist?: string;
       /** Set by the idea-list capture: enforce one free activity per address. */
       oncePerEmail?: boolean;
+      /** Browser pixel event id, so the server-side Lead dedupes against it. */
+      metaEventId?: string;
     };
 
     // Simple email validation
@@ -57,6 +60,22 @@ export async function POST(request: NextRequest) {
         undefined
       : undefined;
 
+    // Server-side Meta Lead (Conversions API). Runs after the response so it
+    // never slows the signup, and reaches Meta even when an ad blocker ate
+    // the browser pixel. Same event id as the pixel call = counted once.
+    const leadEventId = cleanEventId(metaEventId);
+    const leadSource = cleanChecklist
+      ? `ideas:${cleanChecklist}`
+      : cleanGuide
+        ? `free-guide:${cleanGuide}`
+        : cleanSource || 'free-guide';
+    const queueMetaLead = () => {
+      if (!leadEventId) return;
+      after(() =>
+        sendMetaLead({ eventId: leadEventId, email, source: leadSource, request }),
+      );
+    };
+
     // Idea-list checklist signup: its own funnel, and an early return so it can
     // never pick up the `lead` tag and land in the 7-day guide sequence.
     if (cleanChecklist) {
@@ -75,6 +94,7 @@ export async function POST(request: NextRequest) {
         downloadUrl: pdf.color,
       });
 
+      queueMetaLead();
       return NextResponse.json({ success: true, alreadyClaimed: null });
     }
 
@@ -112,6 +132,7 @@ export async function POST(request: NextRequest) {
       priorClaim ? undefined : cleanGuide,
     );
 
+    queueMetaLead();
     return NextResponse.json({ success: true, alreadyClaimed: priorClaim });
   } catch (err) {
     console.error("Subscribe error:", err);

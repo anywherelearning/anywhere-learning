@@ -18,6 +18,12 @@ interface Props {
   orderId: string;
   /** Buyer email from the Stripe session, for Pinterest enhanced match. */
   email?: string | null;
+  /**
+   * Stripe Checkout session id. The Stripe webhook sends the same StartTrial /
+   * Purchase event to Meta's Conversions API with this id, so Meta dedupes the
+   * browser + server pair instead of counting the signup twice.
+   */
+  metaEventId?: string | null;
 }
 
 /**
@@ -32,10 +38,16 @@ interface Props {
  *
  * A ref guard + sessionStorage dedupe prevents double-firing on refresh.
  *
- * Note: the trial→paid conversion 14 days later happens off-site (Stripe
- * webhook) and is NOT captured here — that needs server-side Conversions API.
+ * Note: the trial→paid conversion 14 days later happens off-site and is sent
+ * to Meta from the Stripe webhook via the Conversions API (lib/meta-capi.ts).
  */
-export default function MembershipConversionEvent({ isTrial, priceUSD, orderId, email }: Props) {
+export default function MembershipConversionEvent({
+  isTrial,
+  priceUSD,
+  orderId,
+  email,
+  metaEventId,
+}: Props) {
   const fired = useRef(false);
 
   useEffect(() => {
@@ -68,11 +80,15 @@ export default function MembershipConversionEvent({ isTrial, priceUSD, orderId, 
     if (isTrial) {
       // Meta standard StartTrial event — value + predicted_ltv let a trial
       // campaign optimize toward likely-to-convert signups.
-      metaTrack('StartTrial', {
-        value: priceUSD,
-        currency: 'USD',
-        predicted_ltv: priceUSD,
-      });
+      metaTrack(
+        'StartTrial',
+        {
+          value: priceUSD,
+          currency: 'USD',
+          predicted_ltv: priceUSD,
+        },
+        metaEventId || undefined,
+      );
       pinterestTrack('Signup', {
         value: priceUSD,
         order_id: orderId,
@@ -83,7 +99,7 @@ export default function MembershipConversionEvent({ isTrial, priceUSD, orderId, 
     }
 
     // Paid membership: real money, fire the full purchase across all platforms.
-    metaPurchase({ value: priceUSD, currency: 'USD', orderId });
+    metaPurchase({ value: priceUSD, currency: 'USD', orderId, eventId: metaEventId || undefined });
     pinterestTrack('Checkout', {
       value: priceUSD,
       order_id: orderId,
@@ -106,7 +122,7 @@ export default function MembershipConversionEvent({ isTrial, priceUSD, orderId, 
         },
       ],
     });
-  }, [isTrial, priceUSD, orderId, email]);
+  }, [isTrial, priceUSD, orderId, email, metaEventId]);
 
   return null;
 }

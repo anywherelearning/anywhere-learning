@@ -4,6 +4,7 @@ import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { RESULTS, isQuizResultId, isAgeBand } from "@/lib/quiz";
 import { FLAGSHIP_GUIDE, FLAGSHIP_DOWNLOAD_URL } from "@/lib/flagship-guide";
 import { sendQuizPlanEmail } from "@/lib/resend";
+import { cleanEventId, sendMetaLead } from "@/lib/meta-capi";
 
 /**
  * Quiz lead capture. Receives the computed result + age band from the
@@ -29,8 +30,10 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, result, ageBand, secondaryGap, source } = body as {
+    const { email, result, ageBand, secondaryGap, source, metaEventId } = body as {
       email: string;
+      /** Browser pixel event id, so the server-side Lead dedupes against it. */
+      metaEventId?: string;
       result: string;
       ageBand: string;
       secondaryGap?: string;
@@ -78,6 +81,20 @@ export async function POST(request: NextRequest) {
     }
 
     await subscribeAndTag(email, tags);
+
+    // Server-side Meta Lead (Conversions API), same id as the browser pixel so
+    // Meta counts it once. After the response, best-effort.
+    const leadEventId = cleanEventId(metaEventId);
+    if (leadEventId) {
+      after(() =>
+        sendMetaLead({
+          eventId: leadEventId,
+          email,
+          source: cleanSource ? `quiz:${cleanSource}` : "quiz",
+          request,
+        }),
+      );
+    }
 
     // Fire the instant plan + free-guide email AFTER the response, so it never
     // delays the result reveal. Best-effort: a mail failure must not fail the

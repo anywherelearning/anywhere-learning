@@ -36,6 +36,7 @@ import { db } from '@/lib/db';
 import { users, subscriptions, stripeEvents, sentEmails, exitSurveys } from '@/lib/db/schema';
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
+import { sendMetaEvent } from '@/lib/meta-capi';
 import {
   sendMembershipWelcomeEmail,
   sendAbandonedCheckoutMembershipEmail,
@@ -243,6 +244,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   let isTrial = false;
   let trialEndsAt: Date | null = null;
   let isFirstMembership = false;
+  // Plan price in dollars, for the Meta conversion value. A trial's
+  // amount_total is $0, so read the price off the subscription instead.
+  let planValueUsd: number | null = null;
   if (session.subscription) {
     try {
       const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id;
@@ -273,6 +277,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       plan = planForPriceId(priceId);
       isTrial = sub.status === 'trialing';
       if (isTrial && sub.trial_end) trialEndsAt = new Date(sub.trial_end * 1000);
+      const unitAmount = sub.items.data[0]?.price.unit_amount;
+      if (typeof unitAmount === 'number') planValueUsd = unitAmount / 100;
     } catch (err) {
       console.error('[webhook] failed to attach subscription:', err);
     }
@@ -340,6 +346,28 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     });
   } catch (err) {
     console.error('[webhook] kit tag failed:', err);
+  }
+
+  // 5. Meta Conversions API. Mirrors the StartTrial / Purchase the success
+  //    page fires from the browser, using the session id as the shared event
+  //    id so Meta keeps one copy. The server copy lands even when the buyer's
+  //    ad blocker ate the pixel, which is what makes the ads optimizable.
+  //    No IP / user agent here on purpose: this request came from Stripe.
+  {
+    const value =
+      planValueUsd ?? (typeof session.amount_total === 'number' ? session.amount_total / 100 : 0);
+    await sendMetaEvent({
+      eventName: isTrial ? 'StartTrial' : 'Purchase',
+      eventId: session.id,
+      sourceUrl: `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/checkout/success`,
+      userData: { email, firstName, lastName, externalId: stripeCustomerId },
+      customData: {
+        value,
+        currency: (session.currency || 'usd').toUpperCase(),
+        content_name: `membership-${plan}`,
+        ...(isTrial ? { predicted_ltv: value } : {}),
+      },
+    });
   }
 
   console.log(`[webhook] provisioned member for ${email} (clerk: ${clerkUser.id})`);
@@ -734,6 +762,25 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       console.log(`[webhook] trial converted to paid for ${user.email}`);
     } catch (err) {
       console.warn('[webhook] kit trial-conversion tagging failed:', err);
+    }
+
+    // Meta Conversions API: the moment real money changes hands. Happens
+    // off-site 14 days after signup, so only the server can report it. This
+    // is the event a trial campaign should ultimately optimize toward.
+    {
+      const unitAmount = sub.items.data[0]?.price.unit_amount;
+      const value = typeof unitAmount === 'number' ? unitAmount / 100 : 0;
+      await sendMetaEvent({
+        eventName: 'Subscribe',
+        eventId: `${sub.id}_converted`,
+        userData: { email: user.email, externalId: customerId },
+        customData: {
+          value,
+          currency: (sub.currency || 'usd').toUpperCase(),
+          content_name: `membership-${plan}`,
+          predicted_ltv: value,
+        },
+      });
     }
 
     // Resend confirmation — acknowledge the moment they became a paying member.

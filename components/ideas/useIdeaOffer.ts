@@ -81,11 +81,15 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
       setStatus('loading');
 
       try {
+        // Shared browser/server id so Meta dedupes the pixel + Conversions API pair.
+        const { newMetaEventId } = await import('@/lib/tracking');
+        const metaEventId = newMetaEventId();
         const res = await fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             email,
+            metaEventId,
             source: attributionSource || 'organic',
             // Routes the signup to the checklist funnel instead of the
             // `lead` one, and records which list did the work. The server
@@ -120,7 +124,7 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
             '@/lib/tracking'
           );
           pinterestSetEnhancedMatch(email);
-          metaLead(`ideas:${categorySlug}`);
+          metaLead(`ideas:${categorySlug}`, metaEventId);
         } catch {
           // tracking is best-effort, never block delivery
         }

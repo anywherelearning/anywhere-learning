@@ -148,6 +148,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         priceUSD={isMonthly ? MONTHLY_PRICE_USD : m.priceUSD}
         orderId={order}
         email={email || null}
+        metaEventId={sp.session_id?.trim() || null}
       />
       <Confetti />
       <main className="bg-cream pb-16">

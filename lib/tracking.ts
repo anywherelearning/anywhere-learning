@@ -254,14 +254,36 @@ export function ga4Purchase(params: {
  * can optimize toward it. Custom names also work but won't map to standard
  * optimization goals.
  */
-export function metaTrack(event: string, params?: Record<string, unknown>): void {
+export function metaTrack(
+  event: string,
+  params?: Record<string, unknown>,
+  /**
+   * Shared id for browser/server dedupe. The server sends the same event via
+   * the Conversions API with this id; Meta keeps one copy. Generate with
+   * `newMetaEventId()` before the network call so both sides can use it.
+   */
+  eventId?: string,
+): void {
   if (typeof window === 'undefined') return;
   if (typeof window.fbq !== 'function') return;
   try {
-    window.fbq('track', event, params ?? {});
+    if (eventId) {
+      window.fbq('track', event, params ?? {}, { eventID: eventId });
+    } else {
+      window.fbq('track', event, params ?? {});
+    }
   } catch {
     // Analytics should never break the app.
   }
+}
+
+/**
+ * Mint an event id to share between the browser pixel and the server-side
+ * Conversions API call. Call it before the fetch, post it in the body, then
+ * pass the same value to `metaLead` / `metaTrack` on success.
+ */
+export function newMetaEventId(): string {
+  return generateEventId();
 }
 
 /** Fire a Meta `PageView` on client-side route change (the base tag only fires once on load). */
@@ -274,15 +296,24 @@ export function metaPageView(): void {
  * This is the event a Leads campaign optimizes toward. Pass a `source` string
  * (e.g. 'free-guide', 'quiz') as content_name for reporting/breakdowns.
  */
-export function metaLead(source?: string): void {
-  metaTrack('Lead', source ? { content_name: source } : undefined);
+export function metaLead(source?: string, eventId?: string): void {
+  metaTrack('Lead', source ? { content_name: source } : undefined, eventId);
 }
 
 /** Fire the Meta `Purchase` event (checkout success). Value/currency power ROAS reporting. */
-export function metaPurchase(params: { value: number; currency?: string; orderId?: string }): void {
-  metaTrack('Purchase', {
-    value: params.value,
-    currency: params.currency ?? 'USD',
-    ...(params.orderId ? { order_id: params.orderId } : {}),
-  });
+export function metaPurchase(params: {
+  value: number;
+  currency?: string;
+  orderId?: string;
+  eventId?: string;
+}): void {
+  metaTrack(
+    'Purchase',
+    {
+      value: params.value,
+      currency: params.currency ?? 'USD',
+      ...(params.orderId ? { order_id: params.orderId } : {}),
+    },
+    params.eventId,
+  );
 }
