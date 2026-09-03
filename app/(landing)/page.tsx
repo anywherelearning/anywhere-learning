@@ -8,7 +8,7 @@ import Eyebrow from '@/components/shared/PageEyebrow';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import ChallengeHeroSticker from '@/components/home/ChallengeHeroSticker';
 import HeroNextStop from '@/components/home/v2/HeroNextStop';
-import TrailSteps from '@/components/home/v2/TrailSteps';
+import InsideMembership from '@/components/home/v2/InsideMembership';
 import ActivityExplorer from '@/components/home/v2/ActivityExplorer';
 import MembershipPlans from '@/components/home/v2/MembershipPlans';
 import HomeFaqAccordion from '@/components/home/v2/HomeFaqAccordion';
@@ -318,21 +318,17 @@ export default async function HomePage() {
 
         {/* ════════ 04 HOW IT WORKS ════════ */}
         <section className="bg-cream px-6 py-20 md:px-16 md:py-24" id="how-it-works">
-          <div className="mx-auto max-w-[1100px]">
+          <div className="mx-auto max-w-[1240px]">
             <ScrollReveal>
-              <div className="mb-[60px] text-center">
-                <Eyebrow center>Inside the membership</Eyebrow>
-                <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] tracking-tight text-balance">
-                  It&apos;s a trail, not a to-do list.
+              <div className="mb-10 max-w-[700px] lg:mb-11">
+                <Eyebrow>Inside the membership</Eyebrow>
+                <h2 className="mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] tracking-tight text-balance">
+                  A map, a month, a record.
                 </h2>
-                <p className="mx-auto max-w-[560px] text-lg leading-[1.65] text-gray-600">
-                  We hand you the next stop, you do it together, and your kids climb the trail as
-                  you go.
-                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <TrailSteps />
+              <InsideMembership trialDays={TRIAL_DAYS} />
             </ScrollReveal>
           </div>
         </section>
@@ -379,180 +375,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ════════ 06 THIS MONTH ════════ */}
-        <section
-          className="px-6 py-20 md:px-16 md:py-24"
-          style={{
-            background:
-              'linear-gradient(168deg, rgba(88,129,87,0.05) 0%, rgba(88,129,87,0.16) 50%, rgba(88,129,87,0.05) 100%)',
-          }}
-        >
-          <div className="mx-auto max-w-[1100px]">
-            {/* Eyebrow sits above the grid so the grid's first row starts at the
-                headline. That is what lets the picture's top edge line up with
-                the title rather than with the small caps label. */}
-            <ScrollReveal>
-              <div className="mb-[18px]">
-                <Eyebrow>This month at Anywhere Learning</Eyebrow>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[1fr_1.02fr] lg:gap-14">
-              {/* Copy column: headline, intro, then the cards and the support
-                  list side by side. */}
-              <div>
-                <ScrollReveal>
-                  <div className="mb-7">
-                    <h2 className="mb-4 font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] tracking-tight text-balance">
-                      Something new waiting every month.
-                    </h2>
-                    <p className="text-lg leading-[1.7] text-gray-600">
-                      Three things land each month, on a new subject every time, with everything
-                      you need gathered around them.
-                    </p>
-                  </div>
-                </ScrollReveal>
-
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-[1fr_0.66fr]">
-                  <ScrollReveal delay={80}>
-                    <div className="flex flex-col gap-3">
-                      {[
-                        {
-                          k: 'Skill of the month',
-                          b: 'One theme worth a month. Screens now, money next, speaking up after that.',
-                        },
-                        {
-                          k: 'Seasonal pick',
-                          b: 'A multi-day set for where the year actually is.',
-                        },
-                        {
-                          k: 'Family challenge',
-                          b: 'One small thing the whole house does together.',
-                        },
-                      ].map((c) => (
-                        <div
-                          key={c.k}
-                          className="rounded-[16px] border border-gray-200/60 bg-white px-5 py-[15px] shadow-[0_1px_3px_0_rgba(60,50,30,0.08)] transition-all duration-300 hover:translate-x-1 hover:shadow-[0_12px_28px_-8px_rgba(88,129,87,0.14)]"
-                        >
-                          <div className="mb-1 font-display text-[19px] leading-tight text-forest-dark">
-                            {c.k}
-                          </div>
-                          <div className="text-[14.5px] leading-[1.5] text-gray-500">{c.b}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </ScrollReveal>
-
-                  {/* Beside the cards, not under them, and deliberately not a
-                      card: a plain vertical list reads as supporting material
-                      instead of competing with the three headline items. */}
-                  <ScrollReveal delay={200} className="self-start">
-                    <div>
-                      <div className="mb-2 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
-                        Gathered around them
-                      </div>
-                      <ul className="grid grid-cols-2 gap-x-4 sm:grid-cols-1 sm:divide-y sm:divide-gray-300/40">
-                        {[
-                          'A read for you',
-                          'Books by age',
-                          'Read together',
-                          'Blog deep-dive',
-                          'Videos & podcasts',
-                          'Games & apps',
-                          'More activities',
-                          'Set-up tips',
-                        ].map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-center gap-2 py-[5px] text-[13.5px] text-gray-500 sm:gap-2.5 sm:py-[7px] sm:text-[14.5px]"
-                          >
-                            <span
-                              className="h-1 w-1 flex-shrink-0 rounded-full bg-gold"
-                              aria-hidden="true"
-                            />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </ScrollReveal>
-                </div>
-              </div>
-
-              {/* Picture column. h-full so it stretches to the copy column,
-                  putting its top edge on the headline and its bottom edge on the
-                  last card. `contain` keeps the month view uncropped. */}
-              <ScrollReveal direction="right" delay={140} className="relative flex h-full flex-col">
-                <div
-                  role="img"
-                  aria-label="A month inside the membership: skill of the month, what to read together, and tools to try"
-                  className="w-full flex-1 rounded-[20px] border border-gray-200/80 bg-[#f7f5f0] bg-contain bg-center bg-no-repeat shadow-[0_24px_48px_-12px_rgba(60,50,30,0.18)]"
-                  style={{ backgroundImage: "url('/product-shots/app-month-full.webp')" }}
-                />
-                {/* Absolute so the caption doesn't eat into the stretched
-                    height, which would leave the picture short of the cards. */}
-                <p className="absolute left-0 right-0 top-full mt-3 text-center text-sm text-gray-500">
-                  One month, as an example.
-                </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ════════ 07 THE RECORD ════════ */}
-        <section
-          className="px-6 py-20 md:px-16 md:py-24"
-          style={{
-            background: 'linear-gradient(168deg, #faf9f6 0%, #f5f0e8 50%, #faf9f6 100%)',
-          }}
-        >
-          <div className="mx-auto max-w-[1100px]">
-            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
-              <ScrollReveal>
-                <div>
-                  <Eyebrow>The Record</Eyebrow>
-                  <h2 className="mb-[18px] mt-[18px] font-display text-[clamp(1.75rem,3.3vw,2.6rem)] leading-[1.06] tracking-tight text-balance">
-                    Everything you did, written down for you.
-                  </h2>
-                  <p className="mb-7 text-lg leading-[1.7] text-gray-600 text-pretty">
-                    Every activity you mark reached lands in a printable home education record.
-                    Activities completed, days and hours estimated, coverage across all twelve
-                    skill areas, and a dated log of the work. You never have to write it up.
-                  </p>
-                  <div className="flex flex-col gap-[13px]">
-                    {[
-                      'One record per child, generated the moment you need it',
-                      'Add a photo of their work to any entry',
-                      'Print it for your portfolio or keep it on the shelf',
-                    ].map((line) => (
-                      <div
-                        key={line}
-                        className="flex items-start gap-[11px] text-base leading-[1.6] text-gray-600"
-                      >
-                        <CheckIcon />
-                        <span>{line}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal direction="right" delay={100}>
-                <div className="-rotate-[1.2deg]">
-                  <div
-                    role="img"
-                    aria-label="A child's learning record, showing coverage by skill area and a dated log of activities"
-                    className="h-[420px] rounded-2xl border border-gray-200/90 bg-[#f7f5f0] bg-cover bg-[top_center] shadow-[0_28px_60px_-14px_rgba(60,50,30,0.24)] md:h-[560px]"
-                    style={{ backgroundImage: "url('/product-shots/app-record.webp')" }}
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div>
-        </section>
-
-        {/* ════════ 08 AMELIE ════════ */}
+        {/* ════════ 06 AMELIE ════════ */}
         {/* Contained rather than full-bleed: edge-to-edge the photo ran past
             the content column every other section sits in. */}
         <section className="bg-cream px-6 py-20 md:px-16 md:py-24">
@@ -607,7 +430,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ════════ 09 TESTIMONIALS ════════ */}
+        {/* ════════ 07 TESTIMONIALS ════════ */}
         <section
           className="px-6 py-20 md:px-16 md:py-24"
           style={{
@@ -672,7 +495,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ════════ 10 MEMBERSHIP + FAQ ════════ */}
+        {/* ════════ 08 MEMBERSHIP + FAQ ════════ */}
         <section
           className="px-6 py-20 md:px-16 md:py-24"
           id="membership"
@@ -775,7 +598,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ════════ 11 FINAL CTA ════════ */}
+        {/* ════════ 09 FINAL CTA ════════ */}
         <section className="relative px-6 py-24 md:px-16 md:py-[120px]">
           <div
             className="absolute inset-0 bg-cover bg-[center_45%]"

@@ -302,117 +302,82 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
   },
 ];
 
-export interface TrailStep {
+export interface InsideTab {
   n: string;
   title: string;
+  /** One or two lines. The clip does the explaining; this names what it shows. */
   body: string;
-  /** Still shown on phones, and the "before" frame in the desktop demo. */
+  /** Still: shown on phones, and on desktop when the tab has no clip. */
   img: string;
-  pos: string;
   alt: string;
+  /** How the still sits in the 3:2 panel. Portrait captures crop from the top. */
+  fit: 'contain' | 'cover';
   /**
-   * Desktop demo only (components/home/v2/TrailDemo.tsx). The frame the click
-   * produces: the cursor lands on `cursor`, then this cross-fades in. Both are
-   * real member-zone captures. Leave `after` undefined and the beat simply
-   * holds on `img`, which is what a missing capture should look like rather
+   * Desktop clip, silent and looping, hosted on Vercel Blob. Each is the
+   * screen-recorder export with its decorative border cropped off and the
+   * result cut to a centred 3:2, no audio track. The exports are only ~1000px
+   * wide and low bitrate, so each is lightly denoised, doubled with Lanczos
+   * and sharpened before the encode: a browser would scale it up anyway on a
+   * retina screen, and doing it once here with a sharpen reads crisper than
+   * the browser's bilinear. Recipe in the session that made them: hqdn3d,
+   * scale 2x lanczos, unsharp 5:5:0.6. Blob URLs cache for a year: a replacement
+   * gets a new version suffix, never an overwrite. Leave undefined and the
+   * tab holds on `img`, which is what a missing clip should look like rather
    * than a recreated screen.
    */
-  after?: string;
-  afterAlt?: string;
-  /**
-   * Push the camera into part of the frame. `x`/`y` are a background-position,
-   * so aim them at a region the baked-in signpost isn't in when a live card is
-   * going to sit on top.
-   */
-  zoom?: { scale: number; x: number; y: number };
-  /**
-   * Renders the real NextStopCard over the frame and swaps its activity on the
-   * click. Used where a still can't show the change: the swap is the whole
-   * point of the step, and no capture of it exists.
-   */
-  swap?: { from: NextStopActivity; to: NextStopActivity };
-  /** Where the cursor rests, as a percentage of the panel. */
-  cursor: { x: number; y: number };
-  /**
-   * How long the beat sits on its opening state before the click lands.
-   * Defaults to TRAIL_AIM_MS, which is just cursor travel. Raise it where
-   * there's something to read first: on the swap beat you have to take in the
-   * activity being replaced or the change means nothing.
-   */
-  aimMs?: number;
+  video?: string;
+  poster?: string;
+  /** How long the panel sits on this tab before advancing. Match the clip. */
+  holdMs: number;
 }
 
 /**
- * Demo timing, shared by TrailSteps (which advances the beat) and TrailDemo
- * (which fires the click inside it), so the two can't drift apart.
- *
- * A beat is aim + hold: the cursor travels, the click lands, the result sits
- * there. Hold is fixed so every payoff gets the same read; aim varies per step,
- * because a cursor crossing to a button needs less time than a title you have
- * to read before it changes.
+ * "A map, a month, a record": the three places a member actually lives, one
+ * tab each, with the product playing large beside them. Replaced the
+ * three-beat cursor demo plus the standalone This Month and Record sections,
+ * which said the same three things across three screens of scrolling. An
+ * all-three-rows version was tried and put back: the section ran three
+ * screens tall again.
  */
-export const TRAIL_AIM_MS = 900;
-/**
- * 2.6s was enough to see the result but not to finish reading it: the card's
- * description ran past the end of the beat. Every step gets a second longer.
- */
-export const TRAIL_HOLD_MS = 3600;
-
-export const TRAIL_STEPS: TrailStep[] = [
+export const INSIDE_TABS: InsideTab[] = [
   {
     n: '1',
-    title: 'Set up your explorers',
-    body: "Names, ages, the skills you care about. Two minutes, once. Each child becomes an explorer on your family's trail.",
+    title: 'Your adventure map',
+    body: 'Each kid is an explorer on your trail. We pick the next stop, matched to their age and the time you have. Do it together, tap We reached it, and they climb and earn gear for the backpack.',
     img: '/product-shots/app-nextstop.webp',
-    pos: 'center',
-    alt: "The family trail, with Liam and Elena partway along it",
-    after: '/product-shots/app-explorer.webp',
-    afterAlt: 'An explorer opened, showing what you can change for that child',
-    // Liam, standing on the trail.
-    cursor: { x: 38, y: 77 },
+    alt: "The family trail, with Liam and Elena partway along it and the next stop ready",
+    fit: 'contain',
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v5.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v5-poster.jpg',
+    // The clip runs 8.7s: open an explorer, peek in the backpack, reach
+    // the next stop, collect the new finds. One full pass, then move on.
+    holdMs: 9200,
   },
   {
     n: '2',
-    title: 'We pick your next stop',
-    body: "No scrolling, no second-guessing. Matched to your kids and the time you've got. Not feeling it? Different one, or skip the area.",
-    img: '/product-shots/app-nextstop.webp',
-    pos: 'center',
-    alt: 'The next activity on the trail, ready to swap for a different one',
-    // No capture shows an activity swapping, so this beat renders the real
-    // NextStopCard live and changes it on the click. The camera pushes into the
-    // hillside rather than the signpost: the screenshot has its own card baked
-    // into the bottom right, and two cards on screen would be nonsense.
-    zoom: { scale: 1.85, x: 12, y: 68 },
-    swap: {
-      from: {
-        title: 'Party Planner Math',
-        meta: 'Real-World Math · Multi-day',
-        blurb: 'Plan a party from guest list to budget.',
-      },
-      to: {
-        title: 'Outdoor STEM Challenge Cards',
-        meta: 'Physical & Outdoor · Half-day',
-        blurb: '20 outdoor STEM challenges that use the natural world as a laboratory.',
-      },
-    },
-    // "Different one", inside the live card.
-    cursor: { x: 63, y: 88 },
-    // Long enough to actually read "Party Planner Math" before it's replaced.
-    // At the default the swap happened before the eye had landed on the title,
-    // so the beat looked like a flicker rather than a choice.
-    aimMs: 2300,
+    title: 'This Month',
+    body: 'A skill of the month, a seasonal pick, and one small family challenge, with reads, books by age, and apps gathered around them. New subject every month.',
+    img: '/product-shots/app-month-full.webp',
+    alt: 'A month inside the membership: skill of the month, what to read together, and tools to try',
+    fit: 'contain',
+    // Versioned filename: the Blob URL is cached for a year, so a replacement
+    // clip gets a new name rather than an overwrite that visitors never see.
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v6.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v6-poster.jpg',
+    // The clip runs 8.0s: down the month page to the family challenge.
+    holdMs: 8500,
   },
   {
     n: '3',
-    title: 'Do it together, mark it reached',
-    body: 'Tap "We reached it." Your explorers move forward and earn gear for the backpack, 72 finds to collect.',
-    img: '/product-shots/app-nextstop.webp',
-    pos: 'center',
-    alt: 'The next stop on the trail, ready to be marked as reached',
-    after: '/product-shots/app-newfinds.webp',
-    afterAlt: 'Gear earned by both explorers after finishing the activity',
-    // The "We reached it" button on the next-stop card.
-    cursor: { x: 81, y: 87 },
+    title: 'Your record',
+    body: 'Every activity you mark reached lands in a printable record, one per child: days, hours, coverage across twelve skill areas, and a dated log. You never write it up.',
+    img: '/product-shots/app-record.webp',
+    alt: "A child's learning record, showing coverage by skill area and a dated log of activities",
+    fit: 'cover',
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v5.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v5-poster.jpg',
+    // The clip runs 9.6s: one child's record, coverage bars, then the log.
+    holdMs: 10100,
   },
 ];
 
