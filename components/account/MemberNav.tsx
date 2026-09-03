@@ -38,14 +38,31 @@ const ITEMS: { key: NavKey; label: string }[] = [
   { key: 'record', label: 'Record' },
 ];
 
+type ResourceLink = { href: string; label: string; desc: string };
+type ResourceGroup = { label: string; desc: string; children: ResourceLink[] };
+type ResourceEntry = ResourceLink | ResourceGroup;
+
+function isResourceGroup(entry: ResourceEntry): entry is ResourceGroup {
+  return 'children' in entry;
+}
+
 // The same resources the public header offers, so members can reach the free
-// content without leaving through the marketing home.
-const RESOURCES = [
+// content without leaving through the marketing home. Mirrors SiteHeader's
+// shape: Learn and Blog at the top level, everything free collected into one
+// submenu so the free things read as the set they are. The child descriptions
+// drop the word "Free" because the parent row says it once.
+const RESOURCES: ResourceEntry[] = [
   { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
-  { href: '/ideas', label: 'Activity Ideas', desc: 'Free printable checklists' },
-  { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Free age-by-age skills map' },
-  { href: '/free-guide', label: 'Free 7-Day Guide', desc: 'Seven activities, sent to your inbox' },
+  {
+    label: 'Free',
+    desc: 'Three things you can take today',
+    children: [
+      { href: '/ideas', label: 'Activity Ideas', desc: 'Printable checklists' },
+      { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Age-by-age skills map' },
+      { href: '/free-guide', label: '7-Day Guide', desc: 'Seven activities, sent to your inbox' },
+    ],
+  },
 ];
 
 function activeKey(path: string): NavKey | null {
@@ -65,6 +82,77 @@ function ExtIcon() {
   );
 }
 
+/** Small right-pointing chevron for rows that open a submenu. */
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+  );
+}
+
+/** The "Free" row inside the desktop Resources dropdown, opening a flyout with
+ *  the free things. Opens on hover for mice and on click for keyboards and
+ *  touch, same as SiteHeader. The member menu hugs the right edge of the
+ *  viewport, so the flyout opens to the LEFT rather than the right. */
+function ResourcesFlyout({ group }: { group: ResourceGroup }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className="mn-flyout-wrap"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className={`mn-menu-item mn-menu-item-rich mn-flyout-btn${open ? ' mn-flyout-on' : ''}`}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <span className="mn-menu-item-label">{group.label}<ChevronIcon className="mn-flyout-chev" /></span>
+        <span className="mn-menu-item-desc">{group.desc}</span>
+      </button>
+      {open && (
+        <div className="mn-menu mn-menu-wide mn-flyout" role="menu" aria-label={group.label}>
+          {group.children.map((c) => (
+            <Link key={c.href} href={c.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item mn-menu-item-rich" role="menuitem">
+              <span className="mn-menu-item-label">{c.label}<ExtIcon /></span>
+              <span className="mn-menu-item-desc">{c.desc}</span>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** The "Free" group inside the mobile avatar menu. A flyout has nowhere to go
+ *  on a phone, so it toggles an indented list beneath the row instead. */
+function MobileFreeGroup({ group }: { group: ResourceGroup }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        type="button"
+        className="mn-menu-item mn-mfree-btn"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        {group.label}
+        <ChevronIcon className={`mn-mfree-chev${open ? ' mn-mfree-chev-on' : ''}`} />
+      </button>
+      {open && (
+        <div className="mn-mfree-list">
+          {group.children.map((c) => (
+            <Link key={c.href} href={c.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item" role="menuitem">
+              {c.label}<ExtIcon />
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /** Resources links, shown inside the avatar menu on mobile (where the bar's
  *  Resources dropdown is hidden to make room for the four tabs). */
 function MobileResources() {
@@ -72,11 +160,15 @@ function MobileResources() {
     <div className="mn-only-mobile">
       <div className="mn-menu-sep" />
       <div className="mn-menu-label">Resources</div>
-      {RESOURCES.map((r) => (
-        <Link key={r.href} href={r.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item" role="menuitem">
-          {r.label}<ExtIcon />
-        </Link>
-      ))}
+      {RESOURCES.map((r) =>
+        isResourceGroup(r) ? (
+          <MobileFreeGroup key={r.label} group={r} />
+        ) : (
+          <Link key={r.href} href={r.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item" role="menuitem">
+            {r.label}<ExtIcon />
+          </Link>
+        ),
+      )}
     </div>
   );
 }
@@ -229,12 +321,16 @@ export default function MemberNav() {
             </button>
             {menu === 'resources' && (
               <div className="mn-menu mn-menu-wide mn-menu-left" role="menu">
-                {RESOURCES.map((r) => (
-                  <Link key={r.href} href={r.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item mn-menu-item-rich" role="menuitem">
-                    <span className="mn-menu-item-label">{r.label}<ExtIcon /></span>
-                    <span className="mn-menu-item-desc">{r.desc}</span>
-                  </Link>
-                ))}
+                {RESOURCES.map((r) =>
+                  isResourceGroup(r) ? (
+                    <ResourcesFlyout key={r.label} group={r} />
+                  ) : (
+                    <Link key={r.href} href={r.href} target="_blank" rel="noopener noreferrer" className="mn-menu-item mn-menu-item-rich" role="menuitem">
+                      <span className="mn-menu-item-label">{r.label}<ExtIcon /></span>
+                      <span className="mn-menu-item-desc">{r.desc}</span>
+                    </Link>
+                  ),
+                )}
               </div>
             )}
           </div>
@@ -281,6 +377,17 @@ export default function MemberNav() {
         .mn-menu-item-label{font-size:13.5px;font-weight:700;color:#2b2a26}
         .mn-menu-item-rich:hover .mn-menu-item-label{color:#3d5c3b}
         .mn-menu-item-desc{font-size:11.5px;font-weight:500;color:#8a877c}
+        .mn-flyout-wrap{position:relative}
+        .mn-flyout-btn{width:100%}
+        .mn-flyout-btn.mn-flyout-on{background:rgba(88,129,87,0.09)}
+        .mn-flyout-btn.mn-flyout-on .mn-menu-item-label{color:#3d5c3b}
+        .mn-flyout-chev{opacity:.5;margin-left:4px;vertical-align:-1px}
+        .mn-flyout{top:-6px;right:calc(100% + 6px);left:auto;z-index:75}
+        .mn-flyout::before{content:'';position:absolute;top:0;bottom:0;left:100%;width:8px} /* hover bridge across the gap */
+        .mn-mfree-btn{justify-content:space-between}
+        .mn-mfree-chev{transition:transform .15s ease}
+        .mn-mfree-chev-on{transform:rotate(90deg)}
+        .mn-mfree-list{margin-left:10px;padding-left:8px;border-left:1px solid rgba(61,92,59,0.14)}
         .mn-only-mobile{display:none}
         .mn-menu-sep{height:1px;background:rgba(61,92,59,0.1);margin:6px 6px}
         .mn-menu-label{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a978c;padding:4px 10px 2px}
