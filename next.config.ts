@@ -29,6 +29,7 @@ const securityHeaders = [
       "img-src 'self' data: blob: https://img.clerk.com https://*.anywherelearning.co https://*.public.blob.vercel-storage.com https://*.stripe.com https://www.google-analytics.com https://www.googletagmanager.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://connect.facebook.net https://www.gstatic.com https://*.googleusercontent.com",
       "frame-src https://js.stripe.com https://*.clerk.accounts.dev https://accounts.anywherelearning.co https://challenges.cloudflare.com https://www.google.com",
       "connect-src 'self' https://*.stripe.com https://*.clerk.accounts.dev https://*.clerk.com https://*.anywherelearning.co https://*.upstash.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://ct.pinterest.com https://s.pinimg.com https://connect.facebook.net https://www.facebook.com https://www.google.com https://apis.google.com",
+      "media-src 'self' https://*.public.blob.vercel-storage.com",
       "worker-src 'self' blob:",
       ...(isDev ? ["frame-ancestors *"] : []),
     ].join("; "),

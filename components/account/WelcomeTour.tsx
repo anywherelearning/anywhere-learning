@@ -5,6 +5,16 @@ import { notifyLocalChanged } from '@/lib/account-sync';
 
 const SEEN_KEY = 'al_tour_seen_v1';
 
+/**
+ * The "how it works" walkthrough video. Plays on a member's first sign-in;
+ * the six cards below stay as the read-instead fallback and as the
+ * "How it works" entry in the avatar menu. Hosted on Vercel Blob (compressed
+ * 1280w H.264, ~2.5MB); re-upload to the same pathname to update it without
+ * touching code. The Blob host is allowed under media-src in next.config.ts.
+ */
+const VIDEO_SRC = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour.mp4';
+const VIDEO_POSTER = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-poster.jpg';
+
 /** Icons (no emoji, per brand). Simple line marks that echo each card. */
 function MapIcon() {
   return (
@@ -87,15 +97,17 @@ const SLIDES = [
 ];
 
 /**
- * A short, skimmable welcome tour (three cards) that teaches a new member how
- * the Adventure Map works. Auto-opens once for a real member (autoOpen), and
- * can be reopened any time from the avatar menu via the `al:open-tour` event.
- * Cards, not video: one-line edits keep it accurate as the zone evolves.
+ * First-run welcome. Opens on the video for a real member (autoOpen) and can
+ * be reopened any time from the avatar menu via the `al:open-tour` event.
+ * "Prefer to read?" flips to the six cards, which stay the source of truth
+ * for the written explanation and are cheap to keep accurate.
  */
 export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }) {
   const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState<'video' | 'cards'>('video');
   const [i, setI] = useState(0);
   const nextRef = useRef<HTMLButtonElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     let opened = false;
@@ -104,6 +116,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
       opened = true;
       try {
         if (autoOpen && !localStorage.getItem(SEEN_KEY)) {
+          setMode('video');
           setI(0);
           setOpen(true);
         }
@@ -126,6 +139,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
     }
 
     const onOpen = () => {
+      setMode('video');
       setI(0);
       setOpen(true);
     };
@@ -144,6 +158,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
     nextRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
+      if (mode !== 'cards') return;
       if (e.key === 'ArrowRight' && i < SLIDES.length - 1) setI((n) => n + 1);
       if (e.key === 'ArrowLeft' && i > 0) setI((n) => n - 1);
     };
@@ -153,9 +168,22 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
       window.removeEventListener('keydown', onKey);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, i]);
+  }, [open, i, mode]);
+
+  useEffect(() => {
+    if (!open || mode !== 'video') return;
+    const v = videoRef.current;
+    if (!v) return;
+    const p = v.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  }, [open, mode]);
 
   function close() {
+    try {
+      videoRef.current?.pause();
+    } catch {
+      /* ignore */
+    }
     try {
       localStorage.setItem(SEEN_KEY, '1');
       // Push to the server so the tour stays dismissed across devices and
@@ -168,6 +196,43 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
   }
 
   if (!open) return null;
+
+  if (mode === 'video') {
+    return (
+      <div className="wt-scrim" role="dialog" aria-modal="true" aria-labelledby="wt-title" onClick={close}>
+        <div className="wt-card wt-card-video" onClick={(e) => e.stopPropagation()}>
+          <button className="wt-skip" onClick={close}>
+            Skip
+          </button>
+          <h2 id="wt-title" className="wt-title">
+            Here&apos;s how it works.
+          </h2>
+          <p className="wt-sub">A quick walk-through, then the trail is yours.</p>
+          <div className="wt-frame">
+            <video
+              ref={videoRef}
+              src={VIDEO_SRC}
+              poster={VIDEO_POSTER}
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="How the member zone works"
+            />
+          </div>
+          <div className="wt-actions">
+            <button className="wt-back" onClick={() => { setI(0); setMode('cards'); }}>
+              Prefer to read?
+            </button>
+            <button ref={nextRef} className="wt-next" onClick={close}>
+              Start exploring
+            </button>
+          </div>
+        </div>
+        <TourStyles />
+      </div>
+    );
+  }
+
   const last = i >= SLIDES.length - 1;
   const s = SLIDES[i];
 
@@ -193,14 +258,23 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
               Back
             </button>
           ) : (
-            <span />
+            <button className="wt-back" onClick={() => setMode('video')}>
+              Watch instead
+            </button>
           )}
           <button ref={nextRef} className="wt-next" onClick={() => (last ? close() : setI(i + 1))}>
             {last ? 'Start exploring' : 'Next'}
           </button>
         </div>
       </div>
-      <style>{`
+      <TourStyles />
+    </div>
+  );
+}
+
+function TourStyles() {
+  return (
+    <style>{`
         .wt-scrim{position:fixed;inset:0;z-index:120;display:flex;align-items:center;
           justify-content:center;padding:20px;background:rgba(28,32,24,.5);
           backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
@@ -208,6 +282,8 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
         .wt-card{position:relative;width:100%;max-width:404px;background:var(--am-bg1,#faf9f6);
           border:1px solid rgba(61,92,59,.14);border-radius:20px;padding:34px 28px 24px;
           text-align:center;box-shadow:0 30px 70px -24px rgba(28,40,24,.5)}
+        .wt-card-video{max-width:760px;padding:30px 24px 20px;
+          max-height:calc(100dvh - 40px);display:flex;flex-direction:column}
         .wt-skip{position:absolute;top:14px;right:16px;background:none;border:none;
           font-size:13px;font-weight:600;color:#9a978c;cursor:pointer;padding:4px}
         .wt-skip:hover{color:#6f7468}
@@ -215,11 +291,16 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
           display:grid;place-items:center;color:#3d5c3b;background:rgba(88,129,87,.13)}
         .wt-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
           font-size:clamp(26px,5.5vw,32px);line-height:1.08;color:#3d5c3b;margin:0 0 10px}
+        .wt-sub{font-size:14.5px;color:#6f7468;margin:-4px 0 16px}
+        .wt-frame{position:relative;width:100%;aspect-ratio:2142/950;min-height:160px;
+          border-radius:14px;overflow:hidden;background:#1c2018;flex:0 0 auto}
+        .wt-frame video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#1c2018}
         .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:342px;min-height:104px}
         .wt-dots{display:flex;gap:7px;justify-content:center;margin:18px 0 20px}
         .wt-dot{width:7px;height:7px;border-radius:50%;background:rgba(61,92,59,.22)}
         .wt-dot.on{background:#588157}
         .wt-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .wt-card-video .wt-actions{margin-top:18px}
         .wt-back{background:none;border:none;font-size:14.5px;font-weight:600;color:#6f7468;
           cursor:pointer;padding:8px 6px}
         .wt-back:hover{color:#3d5c3b}
@@ -228,7 +309,10 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
           box-shadow:0 8px 20px -9px rgba(61,92,59,.55);transition:background .15s ease,transform .15s ease}
         .wt-next:hover{background:#3d5c3b;transform:translateY(-1px)}
         .wt-next:focus-visible{outline:3px solid #d4a373;outline-offset:3px}
-      `}</style>
-    </div>
+        @media (max-width:520px){
+          .wt-card-video{padding:26px 16px 16px}
+          .wt-frame{border-radius:10px}
+        }
+    `}</style>
   );
 }
