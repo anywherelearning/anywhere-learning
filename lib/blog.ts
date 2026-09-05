@@ -1477,7 +1477,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '2. Let kids be the navigator' },
       { type: 'paragraph', text: 'Hand them the map. Let them figure out which bus to catch. Let them ask for directions. When kids are responsible for getting somewhere, they\u2019re learning geography, spatial reasoning, communication, and confidence, all at once.' },
       { type: 'heading', level: 3, text: '3. Give them a budget' },
-      { type: 'paragraph', text: 'Each kid gets a small daily or weekly budget in local currency. They decide what to spend it on. This one activity teaches more [real-world maths](/blog/teach-kids-about-money) than a year of worksheets: addition, subtraction, currency conversion, opportunity cost, saving vs spending, and the hard lesson of \u201cI already spent it all.\u201d' },
+      { type: 'paragraph', text: 'Each kid gets a small daily or weekly budget in local currency. They decide what to spend it on. This one activity teaches more [real-world maths](/blog/teach-kids-about-money) than a year of worksheets: addition, subtraction, currency conversion, opportunity cost, saving vs spending, and the hard lesson of \u201cI already spent it all.\u201d For the drive itself, [road trip math](/blog/road-trip-math) turns the fuel, the distance, and the budget into the lesson.' },
       { type: 'heading', level: 3, text: '4. The question jar' },
       { type: 'paragraph', text: 'Carry a small notebook (or use your phone) and write down every question your kids ask during the day. \u201cWhy is the water that colour?\u201d \u201cHow old is this building?\u201d \u201cWhy do they drive on the other side?\u201d These become evening research projects, conversation starters, or the seeds for longer investigations.' },
       { type: 'heading', level: 3, text: '5. Slow down' },
@@ -1508,7 +1508,7 @@ const posts: BlogPost[] = [
         { question: 'What about screen time while traveling?', answer: 'We use screens intentionally: language apps during transit, documentaries about where we\u2019re going, video calls with friends and family. Long travel days are a natural time for screens. The key is that screens don\u2019t replace the real-world experiences, they supplement them. On exploration days, screens stay in the bag.' },
       ]},
     ],
-    relatedSlugs: ['what-we-packed-worldschooling', 'slow-travel-over-bucket-list', 'worldschooling-el-salvador'],
+    relatedSlugs: ['road-trip-math', 'what-we-packed-worldschooling', 'slow-travel-over-bucket-list', 'worldschooling-el-salvador'],
   },
   {
     slug: 'raise-creative-kids',
@@ -4885,7 +4885,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Travel and road trip math (ages 5 to 14)' },
       { type: 'image', src: '/images/real-world-ordering.jpeg', alt: 'Zach and Julia ordering at a matcha stand in El Salvador, reading a hand-painted menu with prices in USD', caption: 'Reading prices, converting currency, deciding what they can afford. Travel math is the best kind of math.' },
-      { type: 'paragraph', text: 'Long drives and trips to new places are full of math if you know the right questions to ask. And kids who are busy calculating are kids who are not asking "are we there yet?"' },
+      { type: 'paragraph', text: 'Long drives and trips to new places are full of math if you know the right questions to ask. And kids who are busy calculating are kids who are not asking "are we there yet?" If you want to turn the whole trip into one project, [road trip math](/blog/road-trip-math) walks a kid through the distance, fuel, time, and budget before you leave.' },
       { type: 'heading', level: 3, text: '20. Estimate arrival time' },
       { type: 'paragraph', text: 'You are 180 miles away and driving 60 miles per hour. When will you get there? What if traffic slows you to 45? Have your kid navigate and calculate estimated arrival without looking at the GPS. Rate, time, and distance problems become interesting when the answer determines whether you make it to the campsite before dark.' },
       { type: 'heading', level: 3, text: '21. Calculate gas cost' },
@@ -4936,7 +4936,7 @@ const posts: BlogPost[] = [
         { question: 'Do I need to be good at math to teach it this way?', answer: 'No. You do not need to teach anything. You just need to involve your kids in the math that is already part of your day and ask questions instead of giving answers. "How much do you think this will cost?" works whether or not you can do the calculation yourself.' },
       ]},
     ],
-    relatedSlugs: ['stem-activities-by-age', 'real-world-history-for-kids', 'engineering-for-kids', 'kitchen-learning-lab', 'teach-kids-about-money', 'outdoor-stem-challenges', 'life-skills-before-12'],
+    relatedSlugs: ['road-trip-math', 'stem-activities-by-age', 'real-world-history-for-kids', 'engineering-for-kids', 'kitchen-learning-lab', 'teach-kids-about-money', 'outdoor-stem-challenges', 'life-skills-before-12'],
     recommendedProduct: 'kitchen-math-challenge',
   },
 
@@ -7662,7 +7662,7 @@ const posts: BlogPost[] = [
         { question: 'Should I let my kid make money mistakes?', answer: 'Yes, and it is one of the most valuable things you can do. A wasted five dollars at age eight or a blown fifty at thirteen is a cheap, safe rehearsal for the much bigger money decisions of adulthood. If you warn kids off every bad purchase or bail them out when they run short, you remove the consequence that makes the lesson stick. Let the small mistakes happen, then debrief without judgment: what would you do differently next time?' },
       ]},
     ],
-    relatedSlugs: ['shark-tank-for-kids', 'teach-kids-about-money', 'allowance-vs-commission', 'life-skills-before-12', 'what-kids-should-know-before-18'],
+    relatedSlugs: ['road-trip-math', 'shark-tank-for-kids', 'teach-kids-about-money', 'allowance-vs-commission', 'life-skills-before-12', 'what-kids-should-know-before-18'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -8633,6 +8633,119 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['how-much-screen-time-kids', 'what-to-do-when-kids-say-im-bored', 'how-to-raise-independent-kids', 'media-literacy-kids'],
     pillarSlug: 'life-skills-for-kids',
+  },
+
+  // ── Road Trip Math ──
+  {
+    slug: 'road-trip-math',
+    title: 'Road Trip Math: Turn Your Next Trip Into a Real Math Project',
+    excerpt: 'Road trip math is the easiest real-world math you will ever run: your kid works out the distance, the fuel, the driving time, and the budget for a trip the family is actually taking. Here is how to do it, plus 12 in-the-car math games by age.',
+    metaDescription: 'Road trip math for kids: have your child plan the real trip. Distance, fuel cost, driving time, two-route comparison, and a budget, plus 12 car math games by age.',
+    hook: 'Hand your kid the map and the gas price and let them tell you what the trip costs. That is more math than a week of worksheets, and it actually matters.',
+    category: 'real-world-skills',
+    pillarSlug: 'real-world-learning',
+    publishedAt: '2026-09-05',
+    draft: true,
+    keywords: ['road trip math', 'trip math', 'travel math', 'road trip math for kids', 'math on a road trip', 'travel math activities', 'road trip math games', 'real world math road trip', 'fuel cost math for kids', 'trip budget for kids'],
+    readTimeMinutes: 10,
+    author: amelie,
+    recommendedProduct: 'road-trip-calculator',
+    heroImage: '/images/road-trip-math-hero.jpeg',
+    heroImageAspect: '4/3',
+    heroImageAlt: 'The back of a car packed for a road trip, suitcases and bags stacked to the roof with a stuffed animal on top, ready to leave',
+    content: [
+      { type: 'summary', text: 'Road trip math is a real-world math project where a child plans a trip the family is actually taking: measuring the distance, estimating fuel cost from the car’s mileage and the gas price, working out driving time with stops, comparing two routes, and building a budget with a contingency. It covers multi-step arithmetic, decimals, unit rates, percentages, estimation, and time, for ages 8 to 14, and it works because the numbers are real and the answer decides what the family does.' },
+
+      { type: 'paragraph', text: 'Somewhere in every road trip there is a kid asking how much longer, and a parent doing arithmetic in their head to answer. Distance left, speed, the stop for gas, whether you will make it before dark. That arithmetic is the whole math lesson. The only change worth making is handing it to the kid.' },
+      { type: 'paragraph', text: 'Road trip math is my favourite kind of [real-world math](/blog/real-world-math-activities) because nothing about it has to be invented. The trip is real, the gas price is real, the motel costs what it costs, and if the numbers are wrong you find out at the pump. A kid who plans one real trip does more multi-step arithmetic with decimals, rates, and percentages than a month of practice pages, and remembers all of it, because they were in the car when the answer came true.' },
+      { type: 'paragraph', text: 'This post has two halves. The first is the big project: your child plans the trip before you leave. The second is the in-the-car half, 12 quick math games sorted by age for when the planning is done and the highway is long. If you want the planning half laid out step by step with the sheets already made, that is the [Road Trip Calculator](/shop/road-trip-calculator) in the library. Everything below works without it.' },
+
+      { type: 'heading', level: 2, text: 'Why a road trip is the best math project you will run this year' },
+      { type: 'paragraph', text: 'Most math practice has a right answer that someone else already knows. Trip math has a right answer that nobody knows yet, and the family needs it. That changes how a kid works. They check. They redo the multiplication because a wrong fuel estimate means an awkward moment at a gas station three hours from home. They argue for the shorter route and then discover it is slower. They see a percentage go up on a real odometer.' },
+      { type: 'list', ordered: false, items: [
+        'Distance and unit rates: miles or kilometres, miles per gallon or litres per 100 km, dollars per gallon or per litre.',
+        'Multi-step problems with decimals: distance divided by mileage, times the price, plus the stops.',
+        'Time: hours and minutes, average speed, departure and arrival, what a 20-minute stop does to the whole day.',
+        'Comparison and trade-offs: cheaper versus faster, and which one your family actually wants.',
+        'Budgeting and percentages: adding up categories, building in a contingency, and tracking how far along you are.',
+        'Estimation and checking: is that answer even reasonable, before we trust it?',
+      ]},
+      { type: 'paragraph', text: 'That is a term of grade 5 to 8 math in one weekend, and it leans on the same [decision-making skills](/blog/decision-making-skills-kids) and [money skills](/blog/financial-literacy-for-kids-by-age) you are probably already working on. The academics and the life skills are the same task, which is the whole idea behind everything we make.' },
+
+      { type: 'heading', level: 2, text: 'The big project: let your kid plan the trip (ages 8 to 14)' },
+      { type: 'paragraph', text: 'Do this a few days before you leave. Give your child the real inputs (where you are going, what car you are driving, roughly what gas costs right now) and let them build the plan on paper or in a simple spreadsheet. You are the client. They are the planner. Resist fixing their numbers; ask questions instead.' },
+
+      { type: 'heading', level: 3, text: 'Step 1: How far is it, really?' },
+      { type: 'paragraph', text: 'Start with a map, a paper one if you have it, and the mapping app for the check. Have them find the route and write down the total distance, then break it into legs: home to the first stop, first stop to lunch, and so on. For younger kids, measuring the map with a ruler and using the scale is a great first job. For older kids, ask them to estimate the total before they look it up, then compare. Being within 10% is a genuine skill.' },
+      { type: 'paragraph', text: 'Worked example we will carry through: a 480-mile trip (about 770 km), one long day, four people.' },
+
+      { type: 'heading', level: 3, text: 'Step 2: What will the gas cost?' },
+      { type: 'paragraph', text: 'This is the heart of it. They need three numbers: the distance, the car’s fuel economy, and the price of gas. Look up your actual car’s mileage (the manual, or the trip computer on the dash) and today’s price at your usual station. Then:' },
+      { type: 'list', ordered: true, items: [
+        'Divide the distance by the mileage to get the gallons needed: 480 miles at 30 miles per gallon is 16 gallons.',
+        'Multiply by the price: 16 gallons at $3.50 is $56.',
+        'Round up. Gas prices change and hills happen: call it $60.',
+      ]},
+      { type: 'paragraph', text: 'If you are in Canada like us, it is the same math in different units: 770 km at 8 litres per 100 km is about 62 litres, and at $1.60 a litre that is roughly $99. Doing it both ways is a nice bonus lesson in why unit rates matter. Either way the number is real, and your kid now knows what a tank of gas is worth, which most adults never had to learn at 10.' },
+
+      { type: 'heading', level: 3, text: 'Step 3: How long will it take?' },
+      { type: 'paragraph', text: 'Driving time is distance divided by average speed, and the average is always lower than the speed limit. A good rule for a mixed highway trip is about 60 miles per hour (100 km/h), so 480 miles is 8 hours of driving. Then add the stops. Three stops of 20 minutes is another hour, so the real day is 9 hours. If you want to leave at 8 in the morning, when do you arrive? Have them write the whole day as a timeline: leave 8:00, gas at 10:40, lunch at 12:30, arrive 5:00. Then, on the day, let them check the plan against the clock. This is where time math stops being a worksheet exercise and becomes a thing they can feel.' },
+
+      { type: 'heading', level: 3, text: 'Step 4: Compare two routes' },
+      { type: 'paragraph', text: 'Most trips have a choice: the highway or the scenic road, the direct route or the one past the good bakery. Have them work out both. Say route B is shorter, 430 miles, but on slower roads averaging 45 miles per hour. Fuel: 430 divided by 30 is about 14.3 gallons, so roughly $50, six dollars cheaper. Time: 430 divided by 45 is about 9.6 hours of driving, an hour and a half longer than the highway. Now the question is not a math question, it is a family question: is six dollars worth ninety minutes? Let them make the case either way. That trade-off is the most grown-up thinking in the whole project.' },
+
+      { type: 'heading', level: 3, text: 'Step 5: Build the budget (with a cushion)' },
+      { type: 'paragraph', text: 'Finally, the whole trip in one table. Categories work best: fuel, food, sleeping, doing things, and the everything-else line. For our example day: fuel $60, two meals out for four at about $12 a head is $96, snacks $20, one night in a motel $130, one activity for the family $60. That is $366. Then teach the single most useful budgeting habit there is: add a contingency. Ten percent of $366 is about $37, so the trip budget is $400. Ask them why the cushion matters, and let them find out on the trip when the motel charges for parking.' },
+      { type: 'tip', title: 'Make them the treasurer', text: 'On the trip, have your child keep the running total. Every receipt goes to them, they subtract it from the budget, and at each stop they report the number left. A kid tracking $400 down to $38 learns more about money than any allowance conversation.' },
+
+      { type: 'product-callout', slug: 'road-trip-calculator', context: 'If you want all five steps laid out with the distance, fuel, time, route comparison, and budget sheets ready to fill in, the Road Trip Calculator does exactly that for ages 8 to 14. Open it the night before and hand it over.' },
+
+      { type: 'heading', level: 2, text: '12 road trip math games for the car, by age' },
+      { type: 'paragraph', text: 'Once the planning is done, the drive itself is full of quick math if you know what to ask. None of these need anything but a window and a phone with the map open. Pick the age band, keep it light, and stop before it feels like a quiz.' },
+
+      { type: 'heading', level: 3, text: 'Ages 5 to 7' },
+      { type: 'list', ordered: true, items: [
+        'Licence plate sums. Add the digits on the plate ahead of you. First to the answer wins the next one.',
+        'Count and compare. Red cars versus white cars for five minutes. Which won, and by how many?',
+        'Sign countdown. The exit sign says 12 miles. What will it say next time? Then check.',
+        'Snack fractions. A bag of crackers, four people. How many each, and what happens to the leftover?',
+      ]},
+      { type: 'heading', level: 3, text: 'Ages 8 to 10' },
+      { type: 'list', ordered: true, items: [
+        'How far have we come? Odometer now minus odometer at home. Then: what fraction of the trip is that? 168 of 480 miles is 35%.',
+        'Time to the next stop. 90 miles at 60 miles per hour: how long? Now the map app says 1 hour 40 minutes. Why the difference?',
+        'The speed check. Time one mile between mile markers with a phone stopwatch. Sixty seconds is 60 miles per hour. Faster or slower?',
+        'The fill-up. Watch the pump: gallons and dollars. Divide one by the other. Was the estimate right?',
+      ]},
+      { type: 'heading', level: 3, text: 'Ages 11 to 14' },
+      { type: 'list', ordered: true, items: [
+        'Live fuel economy. Miles since the last fill-up divided by gallons at this one. Compare with the number the car claims.',
+        'The ETA bet. Everyone guesses the arrival time. The person doing the math (distance left, current average speed, stops) usually wins.',
+        'Cost per person per mile. The whole trip budget divided by four people, divided by the miles. It is a strangely small number and a good conversation.',
+        'Re-plan on the fly. A closed road adds 40 miles. Recalculate fuel, time, and whether dinner still happens on schedule.',
+      ]},
+      { type: 'paragraph', text: 'These are the same questions that show up in [homeschooling while traveling](/blog/homeschool-while-traveling), just pointed at the drive itself. Kids who are busy calculating are not asking how much longer, because they already know.' },
+
+      { type: 'heading', level: 2, text: 'After the trip: the reckoning' },
+      { type: 'paragraph', text: 'The project is not finished when you get home. Sit down with the plan and the receipts and compare. Fuel was $63 against an estimate of $60: why? The motel was $150, not $130: what did we miss? Did the contingency cover it? Where did we land against the $400? This is the step most adults skip and the one that teaches the most, because it turns estimating into a skill that improves. Then ask the best question of all: what would you change next time? Write the answer on the plan and keep it for the next trip. A kid who has done this twice is a better planner than most grown-ups.' },
+
+      { type: 'heading', level: 2, text: 'Adapting it by age' },
+      { type: 'paragraph', text: 'For ages 8 to 10, run steps 1 to 3 with you alongside: distance from the map, one fuel calculation with round numbers, and a simple timeline. Let them be the treasurer on the trip. For ages 11 to 14, hand over the whole thing, including the two-route comparison and the budget with a contingency, and ask them to present the plan to the family before you go. Push for reasons: why this route, why that cushion. If they get the bug, the next step is bigger trips, currency conversion, and eventually a trip they plan entirely themselves, which is one of the [life skills every kid should have before 12](/blog/life-skills-before-12) anyway.' },
+
+      { type: 'cta', text: 'Want more real-world projects like this one, where the math and the life skills happen in the same task? Our free guide has a week of them you can run at home with almost no prep.', href: '/free-guide', label: 'Get the Free Guide' },
+
+      { type: 'paragraph', text: 'A road trip is a math project that comes with its own motivation built in. The numbers are real, the answer decides something, and your kid is sitting in the result for nine hours. Hand them the map, the mileage, and the gas price, and let them tell you what the trip costs. You will get a better planner, a kid who understands what money and time are actually worth, and a much quieter back seat.' },
+      { type: 'paragraph', text: 'And if you would rather open a guide that walks them through all of it, that is what the Anywhere Learning membership is for: real-world, hands-on projects for ages 6 to 14, from trip budgets to business pitches to building things, ready to run with nothing to plan the night before.' },
+
+      { type: 'faq', items: [
+        { question: 'What is road trip math?', answer: 'Road trip math is real-world math done around an actual trip: working out the distance, estimating the fuel cost from the car’s mileage and the gas price, calculating driving time with stops, comparing routes, and building a budget. It covers multi-step arithmetic, decimals, unit rates, time, and percentages, and it works because the numbers are real and the answer matters to the family.' },
+        { question: 'How do kids calculate the fuel cost of a trip?', answer: 'Divide the trip distance by the car’s fuel economy to get the fuel needed, then multiply by the price. For example, 480 miles at 30 miles per gallon is 16 gallons, and 16 gallons at $3.50 is $56. In metric, divide the kilometres by 100, multiply by the litres per 100 km, then multiply by the price per litre. Round up, because prices change and hills use more fuel.' },
+        { question: 'What age is road trip math good for?', answer: 'The planning project suits ages 8 to 14. Younger kids (8 to 10) can measure distance on a map, do one fuel calculation with round numbers, build a simple timeline, and keep the running total on the trip. Older kids (11 to 14) can run the whole plan, including a two-route comparison and a budget with a 10% contingency. Ages 5 to 7 do best with in-the-car games like licence plate sums and counting cars.' },
+        { question: 'What math games can you play in the car?', answer: 'Good car math games include adding licence plate digits, counting and comparing car colours, predicting the next distance sign, working out how far you have come from the odometer and what fraction of the trip that is, timing a mile between markers to check your speed, calculating time to the next stop, and, for older kids, working out live fuel economy at each fill-up and betting on the arrival time.' },
+        { question: 'How do you make a road trip budget with kids?', answer: 'List the categories (fuel, food, sleeping, activities, and an everything-else line), estimate each one with real prices, add them up, then add a contingency of about 10% for surprises. On the trip, have your child keep the running total from the receipts, and afterwards compare the plan with what actually happened and decide what to change next time.' },
+      ]},
+    ],
+    relatedSlugs: ['real-world-math-activities', 'homeschool-while-traveling', 'financial-literacy-for-kids-by-age', 'decision-making-skills-kids', 'life-skills-before-12', 'shark-tank-for-kids'],
   },
 
   // ── Shark Tank for Kids ──

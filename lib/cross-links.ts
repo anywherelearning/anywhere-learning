@@ -147,7 +147,7 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'shark-tank-pitch': ['shark-tank-for-kids'],
   'board-game-studio': ['board-game-design-kids'],
   'build-a-museum': ['real-world-history-for-kids'],
-  'road-trip-calculator': ['real-world-math-activities'],
+  'road-trip-calculator': ['road-trip-math', 'real-world-math-activities'],
   'outdoor-stem-challenges': ['outdoor-stem-challenges', 'forest-school-activities'],
   'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age'],
   'nature-walk-task-cards': ['forest-school-activities'],
