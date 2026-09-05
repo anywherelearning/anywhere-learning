@@ -120,9 +120,9 @@ export default function LifeSkillQuiz() {
         localStorage.setItem("quiz-taken", "1");
       } catch {}
       try {
-        const { pinterestSetEnhancedMatch, metaLead } = await import("@/lib/tracking");
+        const { pinterestSetEnhancedMatch, trackLead } = await import("@/lib/tracking");
         pinterestSetEnhancedMatch(email);
-        metaLead(source ? `quiz:${source}` : "quiz", metaEventId);
+        trackLead(source ? `quiz:${source}` : "quiz", metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");

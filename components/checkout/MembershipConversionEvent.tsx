@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import {
   ga4Purchase,
+  ga4StartTrial,
   metaPurchase,
   metaTrack,
   pinterestSetEnhancedMatch,
@@ -95,6 +96,7 @@ export default function MembershipConversionEvent({
         currency: 'USD',
         lead_type: 'trial',
       });
+      ga4StartTrial({ value: priceUSD, currency: 'USD', orderId });
       return;
     }
 

@@ -142,11 +142,11 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
         window.dispatchEvent(new CustomEvent(SYNC_EVENT));
 
         try {
-          const { pinterestSetEnhancedMatch, metaLead } = await import(
+          const { pinterestSetEnhancedMatch, trackLead } = await import(
             '@/lib/tracking'
           );
           pinterestSetEnhancedMatch(email);
-          metaLead(`ideas:${categorySlug}`, metaEventId);
+          trackLead(`ideas:${categorySlug}`, metaEventId);
         } catch {
           // tracking is best-effort, never block delivery
         }

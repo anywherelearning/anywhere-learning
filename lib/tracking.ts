@@ -222,6 +222,19 @@ export function ga4AddToCart(item: Ga4Item): void {
   });
 }
 
+/**
+ * Fire a GA4 `start_trial` event when a membership trial begins (checkout
+ * success with a trialing subscription). No money changes hands, so this is
+ * not a `purchase`. Mark it as a key event in GA4 Admin.
+ */
+export function ga4StartTrial(params: { value: number; currency?: string; orderId: string }): void {
+  gtagEvent('start_trial', {
+    transaction_id: params.orderId,
+    value: params.value,
+    currency: params.currency ?? 'USD',
+  });
+}
+
 /** Fire the GA4 `purchase` ecommerce event on the checkout success page. */
 export function ga4Purchase(params: {
   transactionId: string;
@@ -298,6 +311,29 @@ export function metaPageView(): void {
  */
 export function metaLead(source?: string, eventId?: string): void {
   metaTrack('Lead', source ? { content_name: source } : undefined, eventId);
+}
+
+/**
+ * Fire the GA4 `generate_lead` event when a visitor submits an email.
+ * Mark it as a key event in GA4 Admin so Traffic Acquisition and the
+ * Search Console landing-page report can attribute signups per channel.
+ * `source` mirrors the Meta content_name (e.g. 'free-guide', 'quiz:trail').
+ */
+export function ga4Lead(source?: string): void {
+  gtagEvent('generate_lead', {
+    currency: 'USD',
+    value: 0,
+    ...(source ? { lead_source: source } : {}),
+  });
+}
+
+/**
+ * Fire every lead conversion at once (Meta Lead + GA4 generate_lead).
+ * Use this at email-capture success instead of calling the pixels separately.
+ */
+export function trackLead(source?: string, eventId?: string): void {
+  metaLead(source, eventId);
+  ga4Lead(source);
 }
 
 /** Fire the Meta `Purchase` event (checkout success). Value/currency power ROAS reporting. */

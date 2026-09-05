@@ -49,9 +49,9 @@ export default function ChallengeSignup({ id = "top" }: { id?: string }) {
       setStatus("success");
       try { localStorage.setItem("challenge-signup", "1"); } catch {}
       try {
-        const { pinterestSetEnhancedMatch, metaLead } = await import("@/lib/tracking");
+        const { pinterestSetEnhancedMatch, trackLead } = await import("@/lib/tracking");
         pinterestSetEnhancedMatch(email);
-        metaLead(source ? `challenge:${source}` : "challenge", metaEventId);
+        trackLead(source ? `challenge:${source}` : "challenge", metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");
