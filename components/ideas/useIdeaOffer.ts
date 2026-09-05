@@ -23,6 +23,12 @@
 // them, so a context provider would mean restructuring the page around them.
 // This syncs through a browser event instead, and persists so a returning
 // visitor is greeted rather than asked twice.
+//
+// The persisted flag only decides what the card shows. The proof that counts
+// is a signed httpOnly cookie the subscribe route sets, which the download
+// route checks before streaming the file. If the flag says unlocked but the
+// cookie is gone, the route bounces back with ?unlock=needed and the form
+// comes back.
 
 import { useState, useEffect, useCallback, type FormEvent } from 'react';
 import useAttributionSource from '@/components/useAttributionSource';
@@ -55,7 +61,23 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
   // email unlocks the printable on every list: they are the same ask repeated,
   // and re-asking someone who already subscribed just costs them the download.
   useEffect(() => {
-    if (hasUnlocked()) {
+    // The download route bounces here with ?unlock=needed when the browser
+    // showed the buttons but held no valid server cookie (cleared cookies,
+    // an expired token, or a hand-set localStorage flag). Drop the stale
+    // flag and ask again, then tidy the URL so a reload doesn't repeat it.
+    let bounced = false;
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.get('unlock') === 'needed') {
+        bounced = true;
+        localStorage.removeItem(STORAGE_KEY);
+        url.searchParams.delete('unlock');
+        window.history.replaceState(null, '', url.toString());
+      }
+    } catch {
+      // nothing to tidy
+    }
+    if (!bounced && hasUnlocked()) {
       setUnlocked(true);
       setStatus('success');
     }

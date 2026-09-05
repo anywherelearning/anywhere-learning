@@ -40,3 +40,46 @@ export function getIdeaListPdfUrls(slug: string): {
     bw: blobUrl(`${stem} - B&W.pdf`),
   }
 }
+
+export type IdeaListPdfVariant = 'color' | 'bw'
+
+/**
+ * Gated download paths for the page. These go through /api/ideas/download,
+ * which checks the signed unlock cookie before streaming the file, so the
+ * raw Blob URLs above never reach the browser. Null when no printable exists.
+ */
+export function getIdeaListDownloadPaths(slug: string): {
+  color: string
+  bw: string
+} | null {
+  if (!SLUG_TO_FILENAME[slug]) return null
+  return {
+    color: `/api/ideas/download/${slug}?v=color`,
+    bw: `/api/ideas/download/${slug}?v=bw`,
+  }
+}
+
+/**
+ * The link that goes in the Kit welcome email. Carries the same signed token
+ * the cookie holds, so opening it from any device both serves the PDF and
+ * unlocks that device for every other list.
+ */
+export function getIdeaListEmailDownloadUrl(
+  slug: string,
+  token: string,
+  variant: IdeaListPdfVariant = 'color',
+): string {
+  const base = (process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co').replace(/\/$/, '')
+  return `${base}/api/ideas/download/${slug}?v=${variant}&t=${encodeURIComponent(token)}`
+}
+
+/** The filename the browser should save the PDF as. */
+export function getIdeaListPdfFilename(
+  slug: string,
+  variant: IdeaListPdfVariant,
+): string | null {
+  const stem = SLUG_TO_FILENAME[slug]
+  if (!stem) return null
+  const name = stem.replace(/^List - /, '').replace(/\s+/g, ' ').trim()
+  return `${name} (${variant === 'bw' ? 'black and white' : 'full colour'}).pdf`
+}

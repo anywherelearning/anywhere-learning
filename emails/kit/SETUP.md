@@ -65,7 +65,7 @@ custom fields the app sets on signup:
 |-------|-------|
 | `last_guide` | the list's title, e.g. "Nature Walk Checklist: 50 Ideas for Kids" |
 | `last_guide_cover` | that list's cover image |
-| `last_guide_download` | that list's full-colour printable PDF |
+| `last_guide_download` | signed link to that list's full-colour printable (via /api/ideas/download, also unlocks the device it is opened on) |
 
 Every one of the 15 lists has both a cover and a printable, so nothing renders
 blank. Add a new idea list and the app fills these in automatically; this email

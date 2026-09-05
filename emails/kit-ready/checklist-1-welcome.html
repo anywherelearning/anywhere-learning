@@ -9,7 +9,7 @@
   hardcoded copy; it reads the three custom fields the app sets on signup:
     {{ subscriber.last_guide }}           the list's title
     {{ subscriber.last_guide_cover }}     that list's cover image
-    {{ subscriber.last_guide_download }}  that list's full-colour printable
+    {{ subscriber.last_guide_download }}  signed link to that list's full-colour printable (unlocks the device too)
   Verified against Kit: those three field keys exist on the account. Every one
   of the 15 lists has both a cover and a printable, so none of them renders
   blank. All three carry a `| default:` fallback anyway, so if someone ever gets

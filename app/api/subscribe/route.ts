@@ -8,7 +8,8 @@ import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
 import { claimGuide } from "@/lib/guide-claims";
 import { getFreeActivityBySlug } from "@/lib/ideas-free-activity";
 import { getListBySlug } from "@/lib/ideas";
-import { getIdeaListPdfUrls } from "@/lib/idea-list-pdfs";
+import { getIdeaListPdfUrls, getIdeaListEmailDownloadUrl } from "@/lib/idea-list-pdfs";
+import { signIdeaUnlockToken, ideaUnlockCookie } from "@/lib/idea-list-unlock";
 
 export async function POST(request: NextRequest) {
   try {
@@ -88,14 +89,22 @@ export async function POST(request: NextRequest) {
         );
       }
 
+      // One signed token proves the signup. It goes in an httpOnly cookie
+      // for this device, and on the link in the welcome email so opening
+      // that from another device unlocks it as well. The raw Blob URL no
+      // longer leaves the server. See lib/idea-list-unlock.
+      const unlockToken = signIdeaUnlockToken();
+
       await subscribeChecklistLead(email, cleanSource, {
         slug: cleanChecklist,
         title: found.list.title,
-        downloadUrl: pdf.color,
+        downloadUrl: getIdeaListEmailDownloadUrl(cleanChecklist, unlockToken),
       });
 
       queueMetaLead();
-      return NextResponse.json({ success: true, alreadyClaimed: null });
+      const res = NextResponse.json({ success: true, alreadyClaimed: null });
+      res.cookies.set(ideaUnlockCookie(unlockToken));
+      return res;
     }
 
     // The idea lists each give away a different complete activity, so without a

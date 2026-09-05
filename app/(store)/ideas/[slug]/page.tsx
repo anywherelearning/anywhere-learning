@@ -11,7 +11,7 @@ import {
   type IdeaCategory,
   type IdeaList,
 } from '@/lib/ideas';
-import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
+import { getIdeaListDownloadPaths } from '@/lib/idea-list-pdfs';
 import { getIdeaListSeo } from '@/lib/idea-list-seo';
 import { getPostBySlug } from '@/lib/blog';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
@@ -528,7 +528,9 @@ function ListDetailView({
 
   // SEO copy: how-to paragraph + FAQs (crawlable body + rich results)
   const seo = getIdeaListSeo(list.slug);
-  const pdfUrls = getIdeaListPdfUrls(list.slug);
+  // Gated route paths, not Blob URLs: the file is served only to a browser
+  // holding the signed unlock cookie, so nothing here leaks the real link.
+  const pdfUrls = getIdeaListDownloadPaths(list.slug);
 
   // The in-depth guide this checklist was distilled from. A visible,
   // crawlable link both ways tells search engines "guide + tool cluster",
