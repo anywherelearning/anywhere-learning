@@ -8639,8 +8639,8 @@ const posts: BlogPost[] = [
   {
     slug: 'road-trip-math',
     title: 'Road Trip Math: Turn Your Next Trip Into a Real Math Project',
-    excerpt: 'Road trip math is the easiest real-world math you will ever run: your kid works out the distance, the fuel, the driving time, and the budget for a trip the family is actually taking. Here is how to do it, plus 12 in-the-car math games by age.',
-    metaDescription: 'Road trip math for kids: have your child plan the real trip. Distance, fuel cost, driving time, two-route comparison, and a budget, plus 12 car math games by age.',
+    excerpt: 'Road trip math is the easiest real-world math you will ever run: your kid works out the distance, the fuel, the driving time, and the budget for a trip the family is actually taking. Here is how to do it, plus nine car games that are actually games.',
+    metaDescription: 'Road trip math for kids: have your child plan the real trip. Distance, fuel cost, driving time, two-route comparison, and a budget, plus nine car math games kids ask to play again.',
     hook: 'Hand your kid the map and the gas price and let them tell you what the trip costs. That is more math than a week of worksheets, and it actually matters.',
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
@@ -8658,7 +8658,7 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'Somewhere in every road trip there is a kid asking how much longer, and a parent doing arithmetic in their head to answer. Distance left, speed, the stop for gas, whether you will make it before dark. That arithmetic is the whole math lesson. The only change worth making is handing it to the kid.' },
       { type: 'paragraph', text: 'Road trip math is my favourite kind of [real-world math](/blog/real-world-math-activities) because nothing about it has to be invented. The trip is real, the gas price is real, the motel costs what it costs, and if the numbers are wrong you find out at the pump. A kid who plans one real trip does more multi-step arithmetic with decimals, rates, and percentages than a month of practice pages, and remembers all of it, because they were in the car when the answer came true.' },
-      { type: 'paragraph', text: 'This post has two halves. The first is the big project: your child plans the trip before you leave. The second is the in-the-car half, 12 quick math games sorted by age for when the planning is done and the highway is long. If you want the planning half laid out step by step with the sheets already made, that is the [Road Trip Calculator](/shop/road-trip-calculator) in the library. Everything below works without it.' },
+      { type: 'paragraph', text: 'This post has two halves. The first is the big project: your child plans the trip before you leave. The second is the in-the-car half, nine games sorted by age for when the planning is done and the highway is long, and every one of them has something to win. If you want the planning half laid out step by step with the sheets already made, that is the [Road Trip Calculator](/shop/road-trip-calculator) in the library. Everything below works without it.' },
 
       { type: 'heading', level: 2, text: 'Why a road trip is the best math project you will run this year' },
       { type: 'paragraph', text: 'Most math practice has a right answer that someone else already knows. Trip math has a right answer that nobody knows yet, and the family needs it. That changes how a kid works. They check. They redo the multiplication because a wrong fuel estimate means an awkward moment at a gas station three hours from home. They argue for the shorter route and then discover it is slower. They see a percentage go up on a real odometer.' },
@@ -8700,31 +8700,25 @@ const posts: BlogPost[] = [
 
       { type: 'product-callout', slug: 'road-trip-calculator', context: 'If you want all five steps laid out with the distance, fuel, time, route comparison, and budget sheets ready to fill in, the Road Trip Calculator does exactly that for ages 8 to 14. Open it the night before and hand it over.' },
 
-      { type: 'heading', level: 2, text: '12 road trip math games for the car, by age' },
-      { type: 'paragraph', text: 'Once the planning is done, the drive itself is full of quick math if you know what to ask. None of these need anything but a window and a phone with the map open. Pick the age band, keep it light, and stop before it feels like a quiz.' },
+      { type: 'heading', level: 2, text: 'Road trip math games that are actually games' },
+      { type: 'paragraph', text: 'Once the planning is done, the drive itself can carry the math, but only if it feels like a game and not a quiz. The difference is a guess before the reveal, something to win, or someone to beat. Every game below has one of those built in. Pick the age band, play a round or two, and quit while they are still asking for another.' },
 
       { type: 'heading', level: 3, text: 'Ages 5 to 7' },
-      { type: 'list', ordered: true, items: [
-        'Licence plate sums. Add the digits on the plate ahead of you. First to the answer wins the next one.',
-        'Count and compare. Red cars versus white cars for five minutes. Which won, and by how many?',
-        'Sign countdown. The exit sign says 12 miles. What will it say next time? Then check.',
-        'Snack fractions. A bag of crackers, four people. How many each, and what happens to the leftover?',
-      ]},
+      { type: 'paragraph', text: 'Plate Poker. Before the next car passes, everyone calls "high" or "low." Then add up the digits on its licence plate. High wins if the total is 15 or more, low wins if it is under. First to five wins the round, and the winner picks the next song. The math is addition, over and over, and nobody notices.' },
+      { type: 'paragraph', text: 'Sign Guess. Every time a distance sign is coming up (the driver calls "sign in thirty seconds"), everyone guesses the number on it. Closest guess takes a point, exact guess takes three. Kids get good at this fast because they start doing the subtraction from the last sign, which is the whole point.' },
+      { type: 'paragraph', text: 'The Fair Share Deal. Hand the youngest the snack bag and make the deal: split it so everyone gets the same, and whatever is left over is yours. A bag of 22 crackers and four people means they end up with the two extras, and they will count twice to make sure. Fractions and remainders with a real prize.' },
+
       { type: 'heading', level: 3, text: 'Ages 8 to 10' },
-      { type: 'list', ordered: true, items: [
-        'How far have we come? Odometer now minus odometer at home. Then: what fraction of the trip is that? 168 of 480 miles is 35%.',
-        'Time to the next stop. 90 miles at 60 miles per hour: how long? Now the map app says 1 hour 40 minutes. Why the difference?',
-        'The speed check. Time one mile between mile markers with a phone stopwatch. Sixty seconds is 60 miles per hour. Faster or slower?',
-        'The fill-up. Watch the pump: gallons and dollars. Divide one by the other. Was the estimate right?',
-      ]},
+      { type: 'paragraph', text: 'Are We There Yet, the Bet. The question is banned. Instead, once an hour everyone bets what percent of the trip is done, and the kid with the notebook is the judge: odometer now minus odometer at home, divided by the total. 168 of 480 miles is 35%. Closest bet wins control of the music until the next round. Kids figure out very quickly that the judge always wins, so make the judge rotate.' },
+      { type: 'paragraph', text: 'Speed Trap. The driver holds a steady speed and does not say what it is. Players time one mile between mile markers with a phone stopwatch. Sixty seconds is 60 miles per hour, 50 seconds is 72. First to call the speed, checked against the dashboard, wins the mile. Then the driver changes speed and the next mile starts. Kilometre markers work the same way: 36 seconds per kilometre is 100 km/h.' },
+      { type: 'paragraph', text: 'The Price Is Right, Gas Station Edition. Before the pump starts, everyone writes down what the total will be. The kid who planned the trip has an edge, because they know the tank is about 12 gallons and the price on the sign. Closest without going over picks the snack inside. Then the pump reveals the answer, and someone is always six dollars off and outraged.' },
+
       { type: 'heading', level: 3, text: 'Ages 11 to 14' },
-      { type: 'list', ordered: true, items: [
-        'Live fuel economy. Miles since the last fill-up divided by gallons at this one. Compare with the number the car claims.',
-        'The ETA bet. Everyone guesses the arrival time. The person doing the math (distance left, current average speed, stops) usually wins.',
-        'Cost per person per mile. The whole trip budget divided by four people, divided by the miles. It is a strangely small number and a good conversation.',
-        'Re-plan on the fly. A closed road adds 40 miles. Recalculate fuel, time, and whether dinner still happens on schedule.',
-      ]},
-      { type: 'paragraph', text: 'These are the same questions that show up in [homeschooling while traveling](/blog/homeschool-while-traveling), just pointed at the drive itself. Kids who are busy calculating are not asking how much longer, because they already know.' },
+      { type: 'paragraph', text: 'The ETA Sweepstakes. Before pulling out of each stop, everyone writes an arrival-time prediction in the notebook, and predictions are locked. The guessers guess. The kid who does the math (miles left, divided by a realistic average speed, plus the stops still to come) wins almost every leg, and the prize should be real: they choose where dinner is. Watching a tween quietly out-predict two adults is the best moment of the trip.' },
+      { type: 'paragraph', text: 'Fuel Economy Poker. At each fill-up, everyone bets what the car actually got since the last tank, in miles per gallon (or litres per 100 km). Then the pump gives the gallons, the odometer gives the miles, and one division settles it. Closest wins a dollar out of the contingency line. Mountains, air conditioning, and a roof box all change the answer, which makes the second round a genuine argument about physics.' },
+      { type: 'paragraph', text: 'Detour. At a stop, the parent announces a plot twist: "Road closed ahead. Forty extra miles and one more stop." First player to hand back a correct new arrival time and a new fuel cost wins the right to pick the next stop. Run it two or three times over a long trip, and by the last one they are re-planning the whole afternoon faster than the map app.' },
+
+      { type: 'paragraph', text: 'None of these need anything but a window, a notebook, and someone willing to lose. They are the same questions that show up in [homeschooling while traveling](/blog/homeschool-while-traveling), turned into something with a scoreboard. And a kid who is busy winning a bet about the arrival time is not asking how much longer, because they already worked it out.' },
 
       { type: 'heading', level: 2, text: 'After the trip: the reckoning' },
       { type: 'paragraph', text: 'The project is not finished when you get home. Sit down with the plan and the receipts and compare. Fuel was $63 against an estimate of $60: why? The motel was $150, not $130: what did we miss? Did the contingency cover it? Where did we land against the $400? This is the step most adults skip and the one that teaches the most, because it turns estimating into a skill that improves. Then ask the best question of all: what would you change next time? Write the answer on the plan and keep it for the next trip. A kid who has done this twice is a better planner than most grown-ups.' },
@@ -8740,8 +8734,8 @@ const posts: BlogPost[] = [
       { type: 'faq', items: [
         { question: 'What is road trip math?', answer: 'Road trip math is real-world math done around an actual trip: working out the distance, estimating the fuel cost from the car’s mileage and the gas price, calculating driving time with stops, comparing routes, and building a budget. It covers multi-step arithmetic, decimals, unit rates, time, and percentages, and it works because the numbers are real and the answer matters to the family.' },
         { question: 'How do kids calculate the fuel cost of a trip?', answer: 'Divide the trip distance by the car’s fuel economy to get the fuel needed, then multiply by the price. For example, 480 miles at 30 miles per gallon is 16 gallons, and 16 gallons at $3.50 is $56. In metric, divide the kilometres by 100, multiply by the litres per 100 km, then multiply by the price per litre. Round up, because prices change and hills use more fuel.' },
-        { question: 'What age is road trip math good for?', answer: 'The planning project suits ages 8 to 14. Younger kids (8 to 10) can measure distance on a map, do one fuel calculation with round numbers, build a simple timeline, and keep the running total on the trip. Older kids (11 to 14) can run the whole plan, including a two-route comparison and a budget with a 10% contingency. Ages 5 to 7 do best with in-the-car games like licence plate sums and counting cars.' },
-        { question: 'What math games can you play in the car?', answer: 'Good car math games include adding licence plate digits, counting and comparing car colours, predicting the next distance sign, working out how far you have come from the odometer and what fraction of the trip that is, timing a mile between markers to check your speed, calculating time to the next stop, and, for older kids, working out live fuel economy at each fill-up and betting on the arrival time.' },
+        { question: 'What age is road trip math good for?', answer: 'The planning project suits ages 8 to 14. Younger kids (8 to 10) can measure distance on a map, do one fuel calculation with round numbers, build a simple timeline, and keep the running total on the trip. Older kids (11 to 14) can run the whole plan, including a two-route comparison and a budget with a 10% contingency. Ages 5 to 7 do best with the in-the-car games, like betting high or low on the next licence plate.' },
+        { question: 'What math games can you play in the car?', answer: 'The best car math games have a guess before the reveal and something to win. Younger kids can bet high or low on the digits of the next licence plate, guess the number on the next distance sign, or split the snacks and keep the leftovers. Ages 8 to 10 can bet on what percent of the trip is done, time a mile between markers to guess the speed, or predict the total at the gas pump. Older kids can run an arrival-time sweepstakes, bet on the car’s real fuel economy at each fill-up, or re-plan the trip after a surprise detour.' },
         { question: 'How do you make a road trip budget with kids?', answer: 'List the categories (fuel, food, sleeping, activities, and an everything-else line), estimate each one with real prices, add them up, then add a contingency of about 10% for surprises. On the trip, have your child keep the running total from the receipts, and afterwards compare the plan with what actually happened and decide what to change next time.' },
       ]},
     ],
