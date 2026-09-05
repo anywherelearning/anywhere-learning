@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     absolute: 'Real-World Learning Activities for Kids | Anywhere Learning',
   },
   description:
-    "A guided membership that hands you your family's next real-world activity, so you just do it together. The academics and the life skills happen in the same task: plan a party, that's fractions and budgeting. Nothing to plan or print. Ages 6-14.",
+    "Real-world learning activities for kids 6-14. A guided membership that hands you the next activity: academics and life skills in one task, nothing to print.",
   alternates: {
     canonical: 'https://anywherelearning.co',
   },

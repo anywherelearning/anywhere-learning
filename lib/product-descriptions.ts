@@ -514,6 +514,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Extension challenges for more complex builds',
     ],
     skillTags: ['STEM', 'Engineering', 'Physics', 'Problem-Solving', 'Design', 'Cause & Effect'],
+    seo: {
+      title: "Rube Goldberg Machine for Kids: Build One at Home, Ages 6-14",
+      description:
+        'Rube Goldberg machine for kids, no kit needed. Design a chain reaction from dominoes, ramps, balls and levers, then test it, fix it, run it. Ages 6-14.',
+    },
     insideTheLearning: {
       lead:
         'Your child builds a chain reaction machine out of household junk, and it will not work. Not at first, not at the tenth try. Each failure is a physics problem with a specific cause, and finding it is the entire activity.',
@@ -719,6 +724,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Grand opening planning and visitor experience',
     ],
     skillTags: ['Research', 'Writing', 'Design', 'Curation', 'Presentation'],
+    seo: {
+      title: "Build a Museum at Home: Kids' Exhibit Project, Ages 6-14",
+      description:
+        'How to create a museum at home: your child picks a topic, researches it, curates objects, writes labels, designs the exhibit and hosts an opening. Ages 6-14.',
+    },
     insideTheLearning: {
       lead:
         'Your child builds a real exhibit on something they already love, and opens it to actual visitors. Deciding what matters most about the topic, and what gets left out, is editorial thinking. Then they write labels that make sense to someone who knows nothing about it, which is the hardest short writing there is.',
@@ -2113,6 +2123,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Iteration and improvement based on feedback',
     ],
     skillTags: ['Planning', 'Creativity', 'Writing', 'Logic', 'Design Thinking'],
+    seo: {
+      title: "Design Your Own Scavenger Hunt: Kids' Project, Ages 6-14",
+      description:
+        'Kids design their own scavenger hunt: write the clues, set the difficulty, plan the route, run it for the family and improve it. Ages 6-14, no prep.',
+    },
     insideTheLearning: {
       lead:
         'Your child designs a scavenger hunt for other people, which is much harder than doing one. Clues have to be solvable but not obvious. The route has to flow. Then real participants run it, get stuck in the wrong place, and the design gets fixed.',

@@ -474,7 +474,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Leaning toward yes? Our free guide gives you real-world activities to try this week, no curriculum required, so you can see how home learning feels before you commit.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['new-to-homeschooling', 'homeschool-first-year-checklist', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'homeschool-vs-worldschool'],
+    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'homeschool-methods-compared', 'new-to-homeschooling', 'homeschool-first-year-checklist', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'homeschool-vs-worldschool'],
     recommendedProduct: 'future-ready-skills-map',
   },
 
@@ -790,7 +790,7 @@ const posts: BlogPost[] = [
       { type: 'image', src: '/images/life-skills-baking.jpeg', alt: 'Julia stirring muffin batter in a big bowl with a muffin tin ready beside her', caption: 'She picked the recipe, measured everything, and mixed it herself. That\u2019s reading, maths, and confidence in one bowl.' },
       { type: 'heading', level: 2, text: '2. Managing money' },
       { type: 'paragraph', text: 'Understanding that money is earned, limited, and involves trade-offs. This doesn\u2019t require an allowance system; it just requires conversations. \u201cWe have $50 for groceries. What should we prioritise?\u201d' },
-      { type: 'paragraph', text: 'By 12, they should understand saving, spending, the concept of budgeting, and why things cost what they cost. Even better: give them a real budget for something: a birthday party, a camping trip\u2019s snack supply, and let them manage it. We go deeper on this in [how to teach kids about money without an allowance chart](/blog/teach-kids-about-money).' },
+      { type: 'paragraph', text: 'By 12, they should understand saving, spending, the concept of budgeting, and why things cost what they cost. Even better: give them a real budget for something: a birthday party, a camping trip\u2019s snack supply, and let them manage it. We go deeper on this in [how to teach kids about money without an allowance chart](/blog/teach-kids-about-money). Older kids can take it further with a [Shark Tank pitch night](/blog/shark-tank-for-kids), where they have to defend the numbers out loud.' },
       { type: 'product-callout', slug: 'budget-challenge', pinned: true },
       { type: 'heading', level: 2, text: '3. Doing laundry (start to finish)' },
       { type: 'paragraph', text: 'Sorting, loading, choosing the right settings, hanging or folding, and putting it away. It\u2019s boring. It\u2019s repetitive. It\u2019s exactly the kind of responsibility that builds self-sufficiency. Most kids can handle the full cycle by age 8 or 9.' },
@@ -830,7 +830,7 @@ const posts: BlogPost[] = [
         { question: 'How do these compare to what kids learn in school?', answer: 'They complement each other. School teaches academic knowledge. Life skills teach practical competence. A child without the ability to cook, budget, or communicate will struggle in adult life regardless of grades.' },
       ] },
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'what-kids-should-know-before-18', 'age-appropriate-chores-life-skills', 'executive-function-kids'],
+    relatedSlugs: ['decision-making-skills-kids', 'shark-tank-for-kids', 'real-world-writing-for-kids', 'kitchen-learning-lab', 'what-kids-should-know-before-18', 'age-appropriate-chores-life-skills', 'executive-function-kids'],
     recommendedProduct: 'budget-challenge',
   },
 
@@ -977,7 +977,7 @@ const posts: BlogPost[] = [
         { question: 'When should I consider putting my kids back in school?', answer: 'If burnout has lasted months, if your mental health is seriously suffering, or if the home environment has become consistently tense, it\u2019s worth considering all options. There\u2019s no shame in changing course. The goal is a thriving family, not homeschooling at any cost.' },
       ]},
     ],
-    relatedSlugs: ['curriculum-guilt-permission-slip', 'five-stages-deschooling', 'partner-doesnt-support', 'new-to-homeschooling', 'what-no-prep-means'],
+    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'partner-doesnt-support', 'new-to-homeschooling', 'what-no-prep-means'],
   },
 
   {
@@ -1076,7 +1076,7 @@ const posts: BlogPost[] = [
       { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials, sticks, mud, water, rocks, and plants, instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require low prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d, it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
-      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.)' },
+      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.) If you would rather start with the woods themselves, [forest school activities](/blog/forest-school-activities) is the companion list, and for the indoor version see [engineering for kids](/blog/engineering-for-kids), [LEGO STEM challenges](/blog/lego-stem-activities) and [Rube Goldberg machines](/blog/rube-goldberg-kids).' },
       { type: 'heading', level: 2, text: 'Engineering challenges' },
       { type: 'heading', level: 3, text: '1. Build a bridge that holds weight' },
       { type: 'paragraph', text: 'Find a small gap (between two rocks, two logs, or the edges of a path) and build a bridge using only natural materials: sticks, stones, bark, vine. Test it by placing progressively heavier objects on top. This teaches load distribution, structural design, and iterative testing.' },
@@ -1130,7 +1130,7 @@ const posts: BlogPost[] = [
         { question: 'Can I do outdoor STEM in a small garden or urban area?', answer: 'Absolutely. Shadow tracking, erosion experiments, weather stations, invertebrate surveys, and decomposition studies all work in a small garden or local park. You don\u2019t need wilderness, you just need a patch of ground and some curiosity.' },
       ]},
     ],
-    relatedSlugs: ['seasonal-scavenger-hunts', 'nature-walks-science'],
+    relatedSlugs: ['engineering-for-kids', 'forest-school-activities', 'rube-goldberg-kids', 'lego-stem-activities', 'stem-activities-by-age', 'seasonal-scavenger-hunts', 'nature-walks-science'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
 
@@ -2127,7 +2127,7 @@ const posts: BlogPost[] = [
         { question: 'Isn\u2019t nature-based learning just playing outside?', answer: 'Playing outside IS learning, but nature-based learning goes a step further. It involves adults being present and curious alongside kids, asking questions, following up on observations, and helping kids dig deeper into what interests them. It\u2019s play with a layer of intention and engagement.' },
       ]},
     ],
-    relatedSlugs: ['nature-walks-science', 'seasonal-scavenger-hunts', 'outdoor-stem-challenges'],
+    relatedSlugs: ['forest-school-activities', 'nature-walks-science', 'seasonal-scavenger-hunts', 'outdoor-stem-challenges'],
     recommendedProduct: 'nature-journal-walks',
   },
 
@@ -2242,7 +2242,7 @@ const posts: BlogPost[] = [
         { question: 'Can project-based learning replace a full curriculum?', answer: 'For many families, yes, especially combined with everyday learning through cooking, budgeting, travel, and conversation. A single in-depth project often covers multiple \u201csubjects\u201d naturally. That said, some families use projects as the core but add targeted practice for things like maths facts or reading fluency. Find what works for your family and don\u2019t let anyone else\u2019s definition of \u201cenough\u201d keep you up at night.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'worldschooling-el-salvador'],
+    relatedSlugs: ['real-world-history-for-kids', 'rube-goldberg-kids', 'life-skills-before-12', 'worldschooling-el-salvador'],
     recommendedProduct: 'rube-goldberg-machine',
   },
 
@@ -2325,7 +2325,7 @@ const posts: BlogPost[] = [
         { question: 'How is this different from just playing on a device?', answer: 'Creating and consuming are fundamentally different cognitive processes. Watching a video is passive. Making a video requires active decisions at every step, what to include, what to cut, how to explain, how to structure, how to present. It\u2019s the difference between reading a recipe and cooking the meal.' },
       ]},
     ],
-    relatedSlugs: ['raise-creative-kids', 'project-based-learning-homeschool', 'ai-for-kids-2026'],
+    relatedSlugs: ['real-world-writing-for-kids', 'raise-creative-kids', 'project-based-learning-homeschool', 'ai-for-kids-2026'],
     recommendedProduct: 'mini-movie',
   },
 
@@ -2688,7 +2688,7 @@ const posts: BlogPost[] = [
         { question: 'My child gets frustrated when the game doesn\u2019t work. How do I help?', answer: 'Normalise iteration. Professional game designers test and revise dozens of times before a game works well. Say things like \u201cThat\u2019s great, now you know what to fix.\u201d Frame broken mechanics as discoveries, not failures. Also, start very simple so early wins build confidence before tackling complex designs.' },
       ] },
     ],
-    relatedSlugs: ['raise-creative-kids', 'project-based-learning-homeschool', 'invent-a-sport-kids'],
+    relatedSlugs: ['shark-tank-for-kids', 'rube-goldberg-kids', 'invent-a-sport-kids', 'raise-creative-kids', 'project-based-learning-homeschool'],
     recommendedProduct: 'board-game-studio',
   },
 
@@ -2770,7 +2770,7 @@ const posts: BlogPost[] = [
         { question: 'How do I document the learning without ruining the fun?', answer: 'Don\u2019t document during play. After the game, ask your kids to tell you the rules and write them down (or have them write or draw them). Take a quick photo of the setup. Jot down what you observed in your own learning journal. The reflection after play is where the learning becomes visible.' },
       ] },
     ],
-    relatedSlugs: ['just-let-them-play', 'raise-creative-kids', 'board-game-design-kids'],
+    relatedSlugs: ['shark-tank-for-kids', 'board-game-design-kids', 'outdoor-stem-challenges', 'just-let-them-play', 'raise-creative-kids'],
     recommendedProduct: 'invent-a-sport',
   },
 
@@ -2863,7 +2863,7 @@ const posts: BlogPost[] = [
         { question: 'How long does it take to build a working Rube Goldberg machine?', answer: 'A simple 3\u20135 step machine can work within an hour. A 10+ step machine might take an afternoon or even a whole weekend. The timeline depends on complexity, age, and persistence. Don\u2019t rush it, the troubleshooting time is where the deepest learning happens.' },
       ] },
     ],
-    relatedSlugs: ['outdoor-stem-challenges', 'project-based-learning-homeschool', 'raise-creative-kids'],
+    relatedSlugs: ['engineering-for-kids', 'lego-stem-activities', 'stem-activities-by-age', 'outdoor-stem-challenges', 'project-based-learning-homeschool', 'raise-creative-kids'],
     recommendedProduct: 'rube-goldberg-machine',
   },
 
@@ -3573,7 +3573,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'Family exploring a natural history museum exhibit with towering animal sculptures, discovering together',
     content: [
       { type: 'summary', text: 'Charlotte Mason emphasises living books, nature study, and short lessons with narration. Waldorf delays formal academics until age 7+ in favour of imagination, art, rhythm, and handwork. Montessori uses self-directed work in a prepared environment with hands-on materials. Unschooling follows the child\'s interests with no set curriculum. Real-world learning uses everyday life, cooking, building, exploring, as the primary teaching material. Most families end up blending elements of two or three approaches rather than committing to one philosophy.' },
-      { type: 'paragraph', text: 'If you\'ve spent any time in homeschool Facebook groups, you know the pattern: someone asks "what method should I use?" and gets 200 comments, each passionately advocating a different approach. Charlotte Mason! Waldorf! Montessori! Unschooling! Eclectic!' },
+      { type: 'paragraph', text: 'If you\'ve spent any time in homeschool Facebook groups, you know the pattern: someone asks "what method should I use?" and gets 200 comments, each passionately advocating a different approach. Charlotte Mason! Waldorf! Montessori! Unschooling! Eclectic! Before you pick a method at all, two honest reads: [should I homeschool?](/blog/should-i-homeschool) and [can you homeschool with a full-time job?](/blog/can-you-homeschool-with-a-full-time-job)' },
       { type: 'paragraph', text: 'It\'s overwhelming. So let me cut through it by comparing the five approaches that come up most, what each looks like in practice, who thrives in each, and (honestly) how most families end up blending two or three.' },
       { type: 'heading', level: 2, text: 'The five approaches at a glance' },
       { type: 'heading', level: 3, text: 'Charlotte Mason' },
@@ -3662,7 +3662,7 @@ const posts: BlogPost[] = [
         { question: 'Which homeschool method has the best outcomes?', answer: 'No single method has been shown to produce dramatically better outcomes than the others. The [National Home Education Research Institute\'s research summary](https://nheri.org/research-facts-on-homeschooling/) suggests parental engagement and a supportive home environment matter more than the specific philosophy you follow. Any of these approaches can produce excellent outcomes when the parent is present, responsive, and consistent.' },
       ]},
     ],
-    relatedSlugs: ['unschooling-vs-homeschooling', 'new-to-homeschooling', 'curriculum-guilt-permission-slip', 'best-homeschool-approaches-ranked', 'five-stages-deschooling'],
+    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'should-i-homeschool', 'unschooling-vs-homeschooling', 'new-to-homeschooling', 'curriculum-guilt-permission-slip', 'best-homeschool-approaches-ranked', 'five-stages-deschooling'],
     pillarSlug: 'real-world-learning',
   },
   {
@@ -4515,7 +4515,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '2. Miniature village' },
       { type: 'paragraph', text: 'Collect sticks, bark, leaves, and pebbles to build a tiny village on the forest floor. This is architecture, storytelling, and fine motor skills rolled into one quiet activity. It works beautifully for kids who need a slower pace.' },
       { type: 'heading', level: 3, text: '3. Bridge challenge' },
-      { type: 'paragraph', text: 'Find a small ditch or stream and challenge your kids to build a bridge strong enough to hold a rock. They will test, fail, rebuild, and test again. That cycle is the scientific method in action, no lab coat required.' },
+      { type: 'paragraph', text: 'Find a small ditch or stream and challenge your kids to build a bridge strong enough to hold a rock. They will test, fail, rebuild, and test again. That cycle is the scientific method in action, no lab coat required. There are 14 more challenges like this in [outdoor STEM challenges](/blog/outdoor-stem-challenges).' },
 
       { type: 'heading', level: 2, text: 'Nature art and creativity' },
       { type: 'image', src: '/images/forest-school-leaf-play.jpeg', alt: 'Family laughing together while holding giant tropical leaves over their heads in a lush green forest', caption: 'Giant leaves make excellent hats. No craft store required.' },
@@ -4607,7 +4607,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want a free guide to getting started with nature-based learning? Grab our free download and start this week.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['nature-walks-science', 'seasonal-scavenger-hunts', 'outdoor-stem-challenges', 'backyard-science-experiments', 'nature-journaling-for-kids'],
+    relatedSlugs: ['outdoor-stem-challenges', 'outdoor-stem-by-age', 'nature-based-learning-guide', 'nature-walks-science', 'seasonal-scavenger-hunts', 'backyard-science-experiments', 'nature-journaling-for-kids'],
     recommendedProduct: 'nature-journal-walks',
   },
 
@@ -4713,7 +4713,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want more real-world activities your kids can do this week? Grab our free guide and start with what is already in your backyard.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['outdoor-stem-challenges', 'forest-school-activities', 'backyard-science-experiments', 'stem-activities-by-age', 'nature-walks-science'],
+    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'backyard-science-experiments', 'stem-activities-by-age', 'nature-walks-science'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
 
@@ -4805,7 +4805,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want a free guide packed with more nature-based learning ideas? Download it and get started today.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['nature-walks-science', 'outdoor-stem-challenges', 'seasonal-scavenger-hunts', 'forest-school-activities'],
+    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'nature-walks-science', 'seasonal-scavenger-hunts'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
   {
@@ -4936,7 +4936,7 @@ const posts: BlogPost[] = [
         { question: 'Do I need to be good at math to teach it this way?', answer: 'No. You do not need to teach anything. You just need to involve your kids in the math that is already part of your day and ask questions instead of giving answers. "How much do you think this will cost?" works whether or not you can do the calculation yourself.' },
       ]},
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'teach-kids-about-money', 'outdoor-stem-challenges', 'life-skills-before-12'],
+    relatedSlugs: ['stem-activities-by-age', 'real-world-history-for-kids', 'engineering-for-kids', 'kitchen-learning-lab', 'teach-kids-about-money', 'outdoor-stem-challenges', 'life-skills-before-12'],
     recommendedProduct: 'kitchen-math-challenge',
   },
 
@@ -5697,7 +5697,7 @@ const posts: BlogPost[] = [
         { question: 'Is this just another term for permissive parenting?', answer: 'No. Permissive parenting is the absence of boundaries. Autonomy-supportive parenting has clear boundaries and high expectations, but gives children genuine choice within those boundaries. A permissive parent says "Do whatever you want." An autonomy-supportive parent says "Here are the parameters. Within those parameters, it is your call." The research shows these are very different approaches with very different outcomes.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'teaching-kids-to-fail', 'executive-function-kids', 'what-kids-should-know-before-18'],
+    relatedSlugs: ['shark-tank-for-kids', 'life-skills-before-12', 'real-world-writing-for-kids', 'teaching-kids-to-fail', 'executive-function-kids', 'what-kids-should-know-before-18'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -6090,7 +6090,7 @@ const posts: BlogPost[] = [
         { question: 'What if my schedule does not look like anyone else’s?', answer: 'That is the goal. The best homeschool schedule is the one that fits your specific kids, your work, your values, and your season of life. If yours does not look like the families on Instagram, that probably means yours is working. Schedules that look good in photos are not always the ones doing the real work.' },
       ] },
     ],
-    relatedSlugs: ['new-to-homeschooling', 'homeschool-methods-compared', 'homeschool-first-year-checklist', 'time-management-for-kids'],
+    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'new-to-homeschooling', 'homeschool-methods-compared', 'homeschool-first-year-checklist', 'time-management-for-kids'],
   },
 
   {
@@ -6189,7 +6189,7 @@ const posts: BlogPost[] = [
         { question: 'Can a nature journal replace formal science curriculum?', answer: 'For elementary ages, it can replace a surprising amount, because it builds the foundational scientific skills (observation, hypothesis, comparison) that formal curriculum usually trains in artificial settings. For middle school and beyond, most families combine nature journaling with some structured science content (anatomy, periodic table, physics concepts) for topics that need explicit instruction.' },
       ] },
     ],
-    relatedSlugs: ['nature-walks-science', 'seasonal-scavenger-hunts', 'outdoor-stem-challenges', 'forest-school-activities'],
+    relatedSlugs: ['forest-school-activities', 'nature-walks-science', 'seasonal-scavenger-hunts', 'outdoor-stem-challenges'],
     recommendedProduct: 'nature-journal-walks',
   },
   {
@@ -6315,7 +6315,7 @@ const posts: BlogPost[] = [
         { question: 'Can real-world writing replace formal writing instruction?', answer: 'For most kids ages 6 to 12, yes, if you are consistent about it. Regular writing for real audiences plus light-touch mechanics work will produce stronger writers than most worksheet-based programs. For older kids approaching high school, you may want to add explicit instruction on essay structure, citation, and longer-form argument, because those formats have conventions that do not show up in everyday writing. But the foundation is built through real use.' },
       ] },
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'teach-kids-about-money', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
+    relatedSlugs: ['real-world-history-for-kids', 'shark-tank-for-kids', 'life-skills-before-12', 'kitchen-learning-lab', 'teach-kids-about-money', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
     recommendedProduct: 'write-like-a-pro',
   },
   {
@@ -6532,7 +6532,7 @@ const posts: BlogPost[] = [
         { question: 'Can real-world history replace a formal history curriculum?', answer: 'For elementary and middle school, absolutely. For high school, most families add some structured framework so kids have full chronological scaffolding for college or standardised tests if they need them. But the real-world habits built in the earlier years are what carry. A 14-year-old who has interviewed grandparents, visited historic sites, traced food origins, and tracked current events for years is doing history at a level most high schoolers never reach.' },
       ] },
     ],
-    relatedSlugs: ['kitchen-learning-lab', 'project-based-learning-homeschool', 'real-world-math-activities'],
+    relatedSlugs: ['real-world-writing-for-kids', 'shark-tank-for-kids', 'real-world-math-activities', 'kitchen-learning-lab', 'project-based-learning-homeschool'],
     recommendedProduct: 'neighbourhood-interview',
   },
   {
@@ -6864,7 +6864,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Where engineering fits in the bigger STEM picture' },
       { type: 'paragraph', text: 'Engineering is the most accessible STEM letter because the materials are cheap and the bar to start is low. It pairs naturally with the other three: building something that uses physics (science), incorporates measurement (math), and works with a digital component (technology). The four are inseparable once you start a real project.' },
-      { type: 'paragraph', text: 'For the broader framework, see our [STEM for Kids pillar guide](/guides/stem-for-kids). For the outdoor angle in particular, [15 outdoor STEM challenges](/blog/outdoor-stem-challenges) covers nature-based engineering. For the math layer that runs through engineering, [real-world math activities](/blog/real-world-math-activities) walks through measurement, ratios, and budgeting in projects.' },
+      { type: 'paragraph', text: 'For the broader framework, see our [STEM for Kids pillar guide](/guides/stem-for-kids). For the outdoor angle in particular, [15 outdoor STEM challenges](/blog/outdoor-stem-challenges) covers nature-based engineering. For the math layer that runs through engineering, [real-world math activities](/blog/real-world-math-activities) walks through measurement, ratios, and budgeting in projects. For chain reactions specifically, [Rube Goldberg machines for kids](/blog/rube-goldberg-kids) is the deep dive, and [LEGO STEM activities](/blog/lego-stem-activities) covers the brick version.' },
 
       { type: 'faq', items: [
         { question: 'What is engineering for kids?', answer: 'Engineering for kids is the practice of solving real problems by designing, building, and testing things with everyday materials. It is the E in STEM. Unlike a kit with one correct outcome, real engineering for kids involves a problem to solve, a constraint (materials, time, or budget), multiple attempts, and reflection on what worked. Cardboard, tape, sticks, and a real challenge cover most projects for ages 5 to 14.' },
@@ -6875,7 +6875,7 @@ const posts: BlogPost[] = [
         { question: 'Can engineering for kids be done without buying anything?', answer: 'Yes, almost entirely. Most projects use cardboard from the recycling, sticks from outside, tape and string, and household items like rubber bands and paper clips. Specialty items (a hot glue gun, a few specific materials) are nice to have but not required. The constraint of working with what is on hand is often where the most creative solutions come from.' },
       ] },
     ],
-    relatedSlugs: ['outdoor-stem-challenges', 'real-world-math-activities', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
+    relatedSlugs: ['rube-goldberg-kids', 'lego-stem-activities', 'stem-activities-by-age', 'outdoor-stem-challenges', 'real-world-math-activities', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
     recommendedProduct: 'rube-goldberg-machine',
   },
   {
@@ -6913,7 +6913,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'At this age, narration is half the lesson. You do not need to explain Newton\'s laws. You just say "look, when you made the ramp steeper, the car went faster" and let them notice. They are recording the pattern, even if they cannot name it.' },
 
       { type: 'heading', level: 2, text: 'Ages 8 to 10: hands-on engineering and structured experiments' },
-      { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click.' },
+      { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click. Two favourites for this age: [LEGO STEM challenges](/blog/lego-stem-activities) and building a [Rube Goldberg machine](/blog/rube-goldberg-kids).' },
       { type: 'list', ordered: false, items: [
         'Build a popsicle-stick bridge, then test how much weight it holds before it snaps.',
         'Fly a paper airplane three times, measure distance, change one variable, fly again.',
@@ -6971,7 +6971,7 @@ const posts: BlogPost[] = [
         { question: 'How do I do STEM with multiple ages at once?', answer: 'Pick a project that scales: a garden, a marble run, a meal plan. Give the older kid the planning, measurement, or budget. Give the younger kid the physical building or sorting. Same project, different roles, no extra prep.' },
       ]},
     ],
-    relatedSlugs: ['engineering-for-kids', 'outdoor-stem-challenges', 'real-world-math-activities', 'kitchen-learning-lab'],
+    relatedSlugs: ['lego-stem-activities', 'rube-goldberg-kids', 'engineering-for-kids', 'outdoor-stem-challenges', 'real-world-math-activities', 'kitchen-learning-lab'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
   {
@@ -7077,7 +7077,7 @@ const posts: BlogPost[] = [
         { question: 'What if my kid only wants to follow the instruction booklets?', answer: 'That is fine for a while, especially when a set is new. But the booklets eventually get lost or recycled, and that is when the engineering starts. You can also try the "broken bag method": mix every set into one bin and recycle the instructions. Forced free-building becomes the only option, and almost every kid leans in once they realize they can build whatever they want.' },
       ]},
     ],
-    relatedSlugs: ['engineering-for-kids', 'outdoor-stem-challenges', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
+    relatedSlugs: ['stem-activities-by-age', 'rube-goldberg-kids', 'engineering-for-kids', 'outdoor-stem-challenges', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
     recommendedProduct: 'rube-goldberg-machine',
   },
   {
@@ -7270,7 +7270,7 @@ const posts: BlogPost[] = [
         { question: 'What age range do these activities work for?', answer: 'Most of the 25 ideas scale from age 5 to 12 with minor adjustments. Younger kids do them with you, older kids do them solo or in charge of a younger sibling. The same water channel activity looks very different at 6 and at 11, which is the whole point.' },
       ]},
     ],
-    relatedSlugs: ['outdoor-stem-challenges', 'engineering-for-kids', 'kitchen-learning-lab', 'real-world-math-activities'],
+    relatedSlugs: ['lego-stem-activities', 'outdoor-stem-challenges', 'engineering-for-kids', 'kitchen-learning-lab', 'real-world-math-activities'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
 
@@ -7662,7 +7662,7 @@ const posts: BlogPost[] = [
         { question: 'Should I let my kid make money mistakes?', answer: 'Yes, and it is one of the most valuable things you can do. A wasted five dollars at age eight or a blown fifty at thirteen is a cheap, safe rehearsal for the much bigger money decisions of adulthood. If you warn kids off every bad purchase or bail them out when they run short, you remove the consequence that makes the lesson stick. Let the small mistakes happen, then debrief without judgment: what would you do differently next time?' },
       ]},
     ],
-    relatedSlugs: ['teach-kids-about-money', 'allowance-vs-commission', 'life-skills-before-12', 'what-kids-should-know-before-18'],
+    relatedSlugs: ['shark-tank-for-kids', 'teach-kids-about-money', 'allowance-vs-commission', 'life-skills-before-12', 'what-kids-should-know-before-18'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -8286,7 +8286,7 @@ const posts: BlogPost[] = [
         { question: 'Do you have to be home all day to homeschool?', answer: 'No. Only a portion of the day involves focused, parent-led teaching, and that shrinks as kids get older and more independent. The rest can happen through independent work, co-ops, classes, tutors, time with the other parent on opposite shifts, or learning out in the real world. Many working families structure the day so that direct teaching happens in concentrated windows rather than requiring a parent to be present and teaching for six hours straight.' },
       ]},
     ],
-    relatedSlugs: ['sample-homeschool-schedules', 'homeschool-burnout', 'how-to-raise-independent-kids', 'new-to-homeschooling'],
+    relatedSlugs: ['homeschool-methods-compared', 'should-i-homeschool', 'sample-homeschool-schedules', 'homeschool-burnout', 'how-to-raise-independent-kids', 'new-to-homeschooling'],
     pillarSlug: 'homeschool-journey',
   },
 
@@ -8538,7 +8538,7 @@ const posts: BlogPost[] = [
         { question: 'At what age should kids start learning communication skills?', answer: 'From the moment they can talk, but the intentional practice ramps up around age 6, when kids can start ordering simple things, greeting people, and answering for themselves. By 9 to 11 they can handle nuance like respectful disagreement and genuine apologies, and by 12 to 14 they should be managing grown-up communication like making appointments and advocating for themselves. The key is to keep handing over slightly bigger communication tasks as they grow, rather than doing the talking for them.' },
       ]},
     ],
-    relatedSlugs: ['socialization-answer', 'teaching-empathy-to-kids', 'emotional-regulation-kids', 'how-to-raise-independent-kids'],
+    relatedSlugs: ['real-world-writing-for-kids', 'shark-tank-for-kids', 'socialization-answer', 'teaching-empathy-to-kids', 'emotional-regulation-kids', 'how-to-raise-independent-kids'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -8720,7 +8720,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Adapting it by age' },
       { type: 'heading', level: 3, text: 'Ages 8 to 10' },
-      { type: 'paragraph', text: 'Keep it simple and playful. The business can be silly, the numbers small and round (make it for $2, sell it for $5), and the pitch short. Focus on the fun of inventing and the bravery of presenting. Do not worry about realistic economics; celebrate the idea and the courage to stand up and share it.' },
+      { type: 'paragraph', text: 'Keep it simple and playful. The business can be silly, the numbers small and round (make it for $2, sell it for $5), and the pitch short. Focus on the fun of inventing and the bravery of presenting. Do not worry about realistic economics; celebrate the idea and the courage to stand up and share it. If the business angle is a stretch for a younger kid, [inventing a sport](/blog/invent-a-sport-kids) or [designing a board game](/blog/board-game-design-kids) builds the same pitch-and-playtest muscles.' },
       { type: 'heading', level: 3, text: 'Ages 11 to 14' },
       { type: 'paragraph', text: 'Push for more real thinking. Real costs, real pricing, a genuine profit calculation, a sharper pitch, and tougher shark questions. Tweens can handle the idea of investment for a percentage of the company, market research ("did you ask anyone if they would buy it?"), and defending their numbers. This is where it starts to look like a real business, and where some kids catch the entrepreneurship bug for real.' },
 
@@ -8744,7 +8744,7 @@ const posts: BlogPost[] = [
         { question: 'Can you do a Shark Tank activity in a classroom?', answer: 'Yes, it is a fantastic classroom project. Run it over several days: students build businesses individually or in teams, then hold a pitch day where classmates and the teacher play the sharks, optionally with a small prize for the best pitch. It builds public speaking to a real audience, collaboration, real-world math, and huge engagement, and it is the kind of lesson students remember for years. The same structure scales down to a single kid at home with parent-sharks.' },
       ]},
     ],
-    relatedSlugs: ['micro-business', 'financial-literacy-for-kids-by-age', 'communication-skills-for-kids', 'life-skills-before-12'],
+    relatedSlugs: ['invent-a-sport-kids', 'board-game-design-kids', 'decision-making-skills-kids', 'micro-business', 'financial-literacy-for-kids-by-age', 'communication-skills-for-kids', 'life-skills-before-12'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -8942,18 +8942,21 @@ export function getFeaturedPost(): BlogPost {
 }
 
 export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
-  // First try same-category posts, then fill with recent posts. Drafts excluded.
-  const sameCat = posts
-    .filter((p) => !p.draft && p.slug !== post.slug && p.category === post.category)
-    .slice(0, limit);
-
-  if (sameCat.length >= limit) return sameCat;
-
+  // Hand-picked relatedSlugs first (they are the curated internal links the
+  // Sept 2026 audit leans on), then same-category posts, then recent posts.
+  // Drafts excluded.
   const fromSlugs = post.relatedSlugs
     .map((s) => posts.find((p) => p.slug === s))
-    .filter((p): p is BlogPost => p !== undefined && !p.draft && p.slug !== post.slug && !sameCat.some((sc) => sc.slug === p.slug));
+    .filter((p): p is BlogPost => p !== undefined && !p.draft && p.slug !== post.slug)
+    .slice(0, limit);
 
-  const combined = [...sameCat, ...fromSlugs].slice(0, limit);
+  if (fromSlugs.length >= limit) return fromSlugs;
+
+  const sameCat = posts
+    .filter((p) => !p.draft && p.slug !== post.slug && p.category === post.category && !fromSlugs.some((f) => f.slug === p.slug))
+    .slice(0, limit - fromSlugs.length);
+
+  const combined = [...fromSlugs, ...sameCat].slice(0, limit);
 
   if (combined.length >= limit) return combined;
 

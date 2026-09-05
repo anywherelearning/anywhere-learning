@@ -135,10 +135,35 @@ export function pickActivities(
 }
 
 /** Blog posts to show on an activity page, category-matched and rotated. */
+/**
+ * Activities that have a blog post written about the exact same project.
+ * That post is pinned first on the activity page so the two stop competing
+ * for one query and the post inherits a link from the page that ranks.
+ * Keyed by product slug (the `seed`).
+ */
+const PRODUCT_POST_PINS: Record<string, string[]> = {
+  'rube-goldberg-machine': ['rube-goldberg-kids'],
+  'invent-a-sport': ['invent-a-sport-kids'],
+  'shark-tank-pitch': ['shark-tank-for-kids'],
+  'board-game-studio': ['board-game-design-kids'],
+  'build-a-museum': ['real-world-history-for-kids'],
+  'road-trip-calculator': ['real-world-math-activities'],
+  'outdoor-stem-challenges': ['outdoor-stem-challenges', 'forest-school-activities'],
+  'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age'],
+  'nature-walk-task-cards': ['forest-school-activities'],
+  'nature-journal-walks': ['nature-journaling-for-kids', 'forest-school-activities'],
+  'outdoor-survival-planner': ['forest-school-activities'],
+};
+
 export function pickPostsForProduct(productCategory: string, seed: string, limit = 2): BlogPost[] {
   const cats = PRODUCT_TO_BLOG_CATEGORIES[productCategory] ?? ['future-ready-skills'];
   const posts = getAllPosts();
   const out: BlogPost[] = [];
+
+  for (const slug of PRODUCT_POST_PINS[seed] ?? []) {
+    const p = posts.find((x) => x.slug === slug);
+    if (p && out.length < limit && !out.some((o) => o.slug === p.slug)) out.push(p);
+  }
 
   for (const cat of cats) {
     const pool = rotate(posts.filter((p) => p.category === cat), seed);
