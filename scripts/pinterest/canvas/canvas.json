@@ -1,0 +1,14 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "A · Checklist", "x": 0, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Teaser.dc.html", "title": "B · Teaser", "x": 1120, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Sampler.dc.html", "title": "C · Sampler", "x": 2240, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Statement.dc.html", "title": "D · Statement (blog pins)", "x": 0, "y": 1760, "w": 1000, "h": 1500 },
+    { "file": "AgeChips.dc.html", "title": "E · Age Chips (blog pins)", "x": 1120, "y": 1760, "w": 1000, "h": 1500 }
+  ],
+  "annotations": [
+    { "id": "how-to-use", "x": 0, "y": -170, "w": 460, "text": "Bolder direction for the three pin families. Tweak anything here (colors, copy, tilt, badges), then Claude ports the final look back into the Python generator so all 45 covers regenerate in this style." },
+    { "id": "blog-families", "x": 2240, "y": 1820, "w": 420, "text": "Row 2: the two new families for the September batch blog pins (16, 18, 19, 21, 23). D carries the hook and question covers, E carries STEM-by-age and the free guide's 7 days. Same rules: few words, big type." }
+  ],
+  "launch": { "view": "canvas" }
+}

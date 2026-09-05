@@ -1,0 +1,14 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "1 · The Dare (life skills)", "x": 0, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Hidden.dc.html", "title": "2 · The Hidden One (nature walk)", "x": 1120, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Bingo.dc.html", "title": "3 · Bingo Card (scavenger hunt)", "x": 2240, "y": 0, "w": 1000, "h": 1500 },
+    { "file": "Unlock.dc.html", "title": "4 · What Unlocks (chores by age)", "x": 0, "y": 1760, "w": 1000, "h": 1500 },
+    { "file": "Versus.dc.html", "title": "5 · Versus (no-kit STEM)", "x": 1120, "y": 1760, "w": 1000, "h": 1500 },
+    { "file": "WhichKid.dc.html", "title": "6 · Which Kid (resilience)", "x": 2240, "y": 1760, "w": 1000, "h": 1500 }
+  ],
+  "annotations": [
+    { "id": "brief", "x": 0, "y": -210, "w": 620, "text": "Six curiosity mechanics for the ideas-page pins, replacing the one-template look. Each opens a question the pin does not answer, so the click is the answer and the save is the tool. Tell Claude which ones to keep and they get ported to every ideas list." }
+  ],
+  "launch": { "view": "canvas" }
+}

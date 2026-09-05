@@ -1,0 +1,1209 @@
+[
+ {
+  "id": "25A",
+  "family": "redacted",
+  "file": "pin-25a-redacted",
+  "url": "https://anywherelearning.co/shop/frustration-tolerance-cards",
+  "kicker": "frustration tolerance",
+  "title": "Frustration tolerance activities for kids",
+  "items": [
+   "20 frustration challenge cards",
+   "Five themes, from steady hands to losing",
+   "A named coping move on every card",
+   "Golden rules for safe practice",
+   "Stones, string, spoons"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "25B",
+  "family": "blackout",
+  "file": "pin-25b-blackout",
+  "url": "https://anywherelearning.co/shop/frustration-tolerance-cards",
+  "kicker": "frustration tolerance",
+  "title": "The meltdown isn't the problem. The practice is missing.",
+  "sub": "20 frustration challenges for kids",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "25C",
+  "family": "split",
+  "file": "pin-25c-split",
+  "url": "https://anywherelearning.co/shop/frustration-tolerance-cards",
+  "top_text": "A feelings chart",
+  "bottom_text": "20 frustration challenge cards",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "20 emotional regulation challenges for kids",
+  "footer": "A digital guide."
+ },
+ {
+  "id": "26A",
+  "family": "redacted",
+  "file": "pin-26a-redacted",
+  "url": "https://anywherelearning.co/shop/outdoor-stem-challenges-volume-2",
+  "kicker": "outdoor stem",
+  "title": "20 outdoor STEM challenges for kids",
+  "items": [
+   "20 new outdoor STEM challenge cards",
+   "Five themes, from rope-making to levers",
+   "A Deeper extension on every card",
+   "Found and household materials only",
+   "Works alone or with the original deck"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "26B",
+  "family": "blackout",
+  "file": "pin-26b-blackout",
+  "url": "https://anywherelearning.co/shop/outdoor-stem-challenges-volume-2",
+  "kicker": "outdoor stem",
+  "title": "The yard is the STEM kit",
+  "sub": "20 outdoor learning challenges. Nothing to buy.",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "26C",
+  "family": "split",
+  "file": "pin-26c-split",
+  "url": "https://anywherelearning.co/shop/outdoor-stem-challenges-volume-2",
+  "top_text": "A $40 STEM kit",
+  "bottom_text": "20 outdoor STEM challenges",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "20 outdoor challenges. Sticks, string, gravity.",
+  "footer": "A digital guide."
+ },
+ {
+  "id": "27A",
+  "family": "blackout",
+  "file": "pin-27a-light",
+  "url": "https://anywherelearning.co/blog/is-ai-cheating-homework",
+  "kicker": "ai and homework",
+  "title": "Is it cheating if they use AI?",
+  "sub": "",
+  "invert": true,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "27B",
+  "family": "blackout",
+  "file": "pin-27b-blackout",
+  "url": "https://anywherelearning.co/blog/is-ai-cheating-homework",
+  "kicker": "ai and homework",
+  "title": "Your kid is already using AI. Now what?",
+  "sub": "A parent's guide to the homework question",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "27C",
+  "family": "split",
+  "file": "pin-27c-split",
+  "url": "https://anywherelearning.co/blog/is-ai-cheating-homework",
+  "top_text": "Doing the thinking for them",
+  "bottom_text": "Helping them think",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "",
+  "footer": "Free to read."
+ },
+ {
+  "id": "28A",
+  "family": "redacted",
+  "file": "pin-28a-redacted",
+  "url": "https://anywherelearning.co/ideas/life-skills-ideas",
+  "kicker": "life skills by age",
+  "title": "Life skills checklist by age, 6 to 14",
+  "items": [
+   "Plan and buy a $30 meal",
+   "Do their own laundry",
+   "Call to book a haircut",
+   "Cook five real meals",
+   "Order their own food",
+   "Fix something broken"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "28B",
+  "family": "blackout",
+  "file": "pin-28b-blackout",
+  "url": "https://anywherelearning.co/ideas/life-skills-ideas",
+  "kicker": "life skills by age",
+  "title": "Can they do it without you in the room?",
+  "sub": "28 life skills, sorted by age. Free checklist.",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "28C",
+  "family": "split",
+  "file": "pin-28c-split",
+  "url": "https://anywherelearning.co/ideas/life-skills-ideas",
+  "top_text": "Hoping they pick it up",
+  "bottom_text": "28 life skills, by age",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "28 life skills activities for kids, by age. Free.",
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "29A",
+  "family": "blackout",
+  "file": "pin-29a-light",
+  "url": "https://anywherelearning.co/blog/should-i-homeschool",
+  "kicker": "should i homeschool",
+  "title": "Should I homeschool? An honest checklist",
+  "sub": "",
+  "invert": true,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "29B",
+  "family": "blackout",
+  "file": "pin-29b-blackout",
+  "url": "https://anywherelearning.co/blog/should-i-homeschool",
+  "kicker": "should i homeschool",
+  "title": "Thinking about pulling them out of school?",
+  "sub": "The honest homeschool decision checklist",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "29C",
+  "family": "split",
+  "file": "pin-29c-split",
+  "url": "https://anywherelearning.co/blog/should-i-homeschool",
+  "top_text": "Deciding in a panic",
+  "bottom_text": "An honest homeschool checklist",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "Should I homeschool? Honest questions first",
+  "footer": "Free to read."
+ },
+ {
+  "id": "30A",
+  "family": "blackout",
+  "file": "pin-30a-light",
+  "url": "https://anywherelearning.co/blog/when-should-kids-get-a-phone",
+  "kicker": "first phone",
+  "title": "When should kids get a phone?",
+  "sub": "A readiness framework, not a number",
+  "invert": true,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "30B",
+  "family": "blackout",
+  "file": "pin-30b-blackout",
+  "url": "https://anywherelearning.co/blog/when-should-kids-get-a-phone",
+  "kicker": "first phone",
+  "title": "Everyone in their grade has a phone. So what.",
+  "sub": "The three readiness signals that count",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "30C",
+  "family": "split",
+  "file": "pin-30c-split",
+  "url": "https://anywherelearning.co/blog/when-should-kids-get-a-phone",
+  "top_text": "Picking an age",
+  "bottom_text": "Three readiness signals",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "",
+  "footer": "Free to read."
+ },
+ {
+  "id": "31A",
+  "family": "redacted",
+  "file": "pin-31a-redacted",
+  "url": "https://anywherelearning.co/ideas/stem-ideas",
+  "kicker": "no-kit stem",
+  "title": "24 STEM builds from the recycling bin",
+  "items": [
+   "Spaghetti tower contest",
+   "Egg-drop container",
+   "Foil boat penny test",
+   "Invisible lemon ink",
+   "Balloon rocket on a string",
+   "Melt chocolate with the sun"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "31B",
+  "family": "blackout",
+  "file": "pin-31b-blackout",
+  "url": "https://anywherelearning.co/ideas/stem-ideas",
+  "kicker": "no-kit stem",
+  "title": "Skip the $40 STEM kit",
+  "sub": "24 builds from stuff you already have. Free list.",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "31C",
+  "family": "split",
+  "file": "pin-31c-split",
+  "url": "https://anywherelearning.co/ideas/stem-ideas",
+  "top_text": "The $40 STEM kit",
+  "bottom_text": "24 builds from the recycling bin",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "Cardboard engineering. Free printable list.",
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "32A",
+  "family": "redacted",
+  "file": "pin-32a-redacted",
+  "url": "https://anywherelearning.co/blog/communication-skills-for-kids",
+  "kicker": "communication skills",
+  "title": "6 communication skills kids actually need",
+  "items": [
+   "Express themselves clearly",
+   "Listen actively",
+   "Read the room",
+   "Hold a conversation",
+   "Handle disagreement",
+   "Speak up"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "32B",
+  "family": "blackout",
+  "file": "pin-32b-blackout",
+  "url": "https://anywherelearning.co/blog/communication-skills-for-kids",
+  "kicker": "communication skills",
+  "title": "Still ordering for your kid at restaurants?",
+  "sub": "Communication skills for kids, the real-world way",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "32C",
+  "family": "split",
+  "file": "pin-32c-split",
+  "url": "https://anywherelearning.co/blog/communication-skills-for-kids",
+  "top_text": "Ordering for them",
+  "bottom_text": "Skills kids actually use",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "15 real-world reps for kids",
+  "footer": "Free to read."
+ },
+ {
+  "id": "33A",
+  "family": "redacted",
+  "file": "pin-33a-redacted",
+  "url": "https://anywherelearning.co/blog/teaching-empathy-to-kids",
+  "kicker": "teaching empathy",
+  "title": "4 empathy mistakes parents make",
+  "items": [
+   "Dismissing the kid\u2019s own feelings",
+   "Shaming instead of coaching",
+   "Forcing hollow apologies",
+   "Over-focusing on the child"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "33B",
+  "family": "blackout",
+  "file": "pin-33b-blackout",
+  "url": "https://anywherelearning.co/blog/teaching-empathy-to-kids",
+  "kicker": "teaching empathy",
+  "title": "You can't lecture a kid into empathy",
+  "sub": "15 ways to build it instead",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "33C",
+  "family": "split",
+  "file": "pin-33c-split",
+  "url": "https://anywherelearning.co/blog/teaching-empathy-to-kids",
+  "top_text": "Lecturing about kindness",
+  "bottom_text": "15 real-life ways to teach empathy",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "15 ideas from real family life",
+  "footer": "Free to read."
+ },
+ {
+  "id": "34A",
+  "family": "redacted",
+  "file": "pin-34a-redacted",
+  "url": "https://anywherelearning.co/blog/homeschool-middle-school",
+  "kicker": "middle school",
+  "title": "What middle schoolers actually need",
+  "items": [
+   "Real independence",
+   "Real responsibility",
+   "Room to follow interests",
+   "Less busywork, not more",
+   "Connection that still matters"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "34B",
+  "family": "blackout",
+  "file": "pin-34b-blackout",
+  "url": "https://anywherelearning.co/blog/homeschool-middle-school",
+  "kicker": "middle school",
+  "title": "Middle school without the middle school",
+  "sub": "Homeschooling middle school, ages 11 to 14",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "34C",
+  "family": "split",
+  "file": "pin-34c-split",
+  "url": "https://anywherelearning.co/blog/homeschool-middle-school",
+  "top_text": "Recreating middle school",
+  "bottom_text": "Homeschooling middle school",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "Homeschool priorities, ages 11 to 14",
+  "footer": "Free to read."
+ },
+ {
+  "id": "35A",
+  "family": "redacted",
+  "file": "pin-35a-redacted",
+  "url": "https://anywherelearning.co/ideas/land-art-ideas",
+  "kicker": "land art",
+  "title": "14 land art projects for kids",
+  "items": [
+   "Make a petal mandala",
+   "Stack balancing stones",
+   "Freeze an ice sculpture",
+   "Build a stick wind chime",
+   "Weave a leaf crown",
+   "Make a mud sculpture"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "35B",
+  "family": "blackout",
+  "file": "pin-35b-blackout",
+  "url": "https://anywherelearning.co/ideas/land-art-ideas",
+  "kicker": "land art",
+  "title": "Outdoor art with nothing to buy",
+  "sub": "14 land art ideas. Free printable list.",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "35C",
+  "family": "split",
+  "file": "pin-35c-split",
+  "url": "https://anywherelearning.co/ideas/land-art-ideas",
+  "top_text": "Buying craft supplies",
+  "bottom_text": "14 land art projects",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "14 fall land art projects. Free list.",
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "36A",
+  "family": "blackout",
+  "file": "pin-36a-light",
+  "url": "https://anywherelearning.co/blog/can-you-homeschool-with-a-full-time-job",
+  "kicker": "working parents",
+  "title": "Can you homeschool with a full-time job?",
+  "sub": "Yes. Here's what it actually takes.",
+  "invert": true,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "36B",
+  "family": "blackout",
+  "file": "pin-36b-blackout",
+  "url": "https://anywherelearning.co/blog/can-you-homeschool-with-a-full-time-job",
+  "kicker": "working parents",
+  "title": "Is homeschooling a full-time job? No.",
+  "sub": "",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "36C",
+  "family": "split",
+  "file": "pin-36c-split",
+  "url": "https://anywherelearning.co/blog/can-you-homeschool-with-a-full-time-job",
+  "top_text": "Six hours a day",
+  "bottom_text": "Homeschooling with a job",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "Homeschooling with a full-time job",
+  "footer": "Free to read."
+ },
+ {
+  "id": "37A",
+  "family": "redacted",
+  "file": "pin-37a-redacted",
+  "url": "https://anywherelearning.co/blog/shark-tank-for-kids",
+  "kicker": "kid entrepreneurs",
+  "title": "What a kids' Shark Tank teaches",
+  "items": [
+   "Real-world math",
+   "Public speaking",
+   "Persuasion and storytelling",
+   "Handling pressure"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "37B",
+  "family": "blackout",
+  "file": "pin-37b-blackout",
+  "url": "https://anywherelearning.co/blog/shark-tank-for-kids",
+  "kicker": "kid entrepreneurs",
+  "title": "The project that teaches math, money, and nerve",
+  "sub": "Run a kids' Shark Tank at home",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "37C",
+  "family": "split",
+  "file": "pin-37c-split",
+  "url": "https://anywherelearning.co/blog/shark-tank-for-kids",
+  "top_text": "A lemonade stand",
+  "bottom_text": "A family Shark Tank",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "The kids' Shark Tank playbook",
+  "footer": "Free to read."
+ },
+ {
+  "id": "38A",
+  "family": "redacted",
+  "file": "pin-38a-redacted",
+  "url": "https://anywherelearning.co/ideas/history-ideas",
+  "kicker": "family history",
+  "title": "11 family history activities for kids",
+  "items": [
+   "Interview a grandparent",
+   "Date the old photos",
+   "Cook grandma's dish",
+   "Build a family timeline",
+   "Find the town's oldest thing",
+   "Trace one food's story"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "38B",
+  "family": "blackout",
+  "file": "pin-38b-blackout",
+  "url": "https://anywherelearning.co/ideas/history-ideas",
+  "kicker": "family history",
+  "title": "Grandma is a primary source",
+  "sub": "11 family history projects. Free list.",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "38C",
+  "family": "split",
+  "file": "pin-38c-split",
+  "url": "https://anywherelearning.co/ideas/history-ideas",
+  "top_text": "A history textbook",
+  "bottom_text": "11 family history projects",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "11 family history and tradition projects",
+  "footer": "Free printable checklist."
+ },
+ {
+  "id": "39A",
+  "family": "redacted",
+  "file": "pin-39a-redacted",
+  "url": "https://anywherelearning.co/blog/teaching-kids-to-fail",
+  "kicker": "learning to fail",
+  "title": "5 things not to say when they fail",
+  "items": [
+   "It is not a big deal",
+   "You should have tried harder",
+   "I told you so",
+   "Just forget about it",
+   "You are so brave!"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "39B",
+  "family": "blackout",
+  "file": "pin-39b-blackout",
+  "url": "https://anywherelearning.co/blog/teaching-kids-to-fail",
+  "kicker": "learning to fail",
+  "title": "Stop rescuing the tower",
+  "sub": "How kids learn to handle failure",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "39C",
+  "family": "split",
+  "file": "pin-39c-split",
+  "url": "https://anywherelearning.co/blog/teaching-kids-to-fail",
+  "top_text": "Rescuing the tower",
+  "bottom_text": "Teaching kids to fail well",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "What bounce-back practice looks like",
+  "footer": "Free to read."
+ },
+ {
+  "id": "40A",
+  "family": "redacted",
+  "file": "pin-40a-redacted",
+  "url": "https://anywherelearning.co/shop/theme-park",
+  "kicker": "theme park stem",
+  "title": "STEM project: design your own theme park",
+  "items": [
+   "Complete theme park design project guide",
+   "Ride and attraction design with safety considerations",
+   "Park layout mapping and visitor flow planning",
+   "Budget calculations and pricing decisions",
+   "Marketing design and scale model building"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "40B",
+  "family": "blackout",
+  "file": "pin-40b-blackout",
+  "url": "https://anywherelearning.co/shop/theme-park",
+  "kicker": "theme park stem",
+  "title": "The project kids beg to keep working on",
+  "sub": "Design a theme park. Physics included.",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "A digital guide."
+ },
+ {
+  "id": "40C",
+  "family": "split",
+  "file": "pin-40c-split",
+  "url": "https://anywherelearning.co/shop/theme-park",
+  "top_text": "A worksheet about physics",
+  "bottom_text": "Design your own theme park",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "Inside the design-a-theme-park project",
+  "footer": "A digital guide."
+ },
+ {
+  "id": "41A",
+  "family": "redacted",
+  "file": "pin-41a-redacted",
+  "url": "https://anywherelearning.co/blog/executive-function-kids",
+  "kicker": "executive function",
+  "title": "Executive function: 6 things to practice",
+  "items": [
+   "Change the routine sometimes, on purpose",
+   "Play what else could this be?",
+   "When plans change, narrate the pivot",
+   "Encourage perspective-taking",
+   "Play strategy games",
+   "Let them solve problems"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "41B",
+  "family": "blackout",
+  "file": "pin-41b-blackout",
+  "url": "https://anywherelearning.co/blog/executive-function-kids",
+  "kicker": "executive function",
+  "title": "Smart kid, can't start anything?",
+  "sub": "That's executive function. It's buildable.",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "41C",
+  "family": "split",
+  "file": "pin-41c-split",
+  "url": "https://anywherelearning.co/blog/executive-function-kids",
+  "top_text": "Calling them lazy",
+  "bottom_text": "Executive function, explained",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "Executive function, explained for parents",
+  "footer": "Free to read."
+ },
+ {
+  "id": "42A",
+  "family": "redacted",
+  "file": "pin-42a-redacted",
+  "url": "https://anywherelearning.co/blog/how-to-build-resilience-in-kids",
+  "kicker": "resilience",
+  "title": "Why kids today are less resilient",
+  "items": [
+   "Rescued from struggle",
+   "Screens replacing boredom",
+   "Sanitized environments",
+   "Performance pressure"
+  ],
+  "hidden_index": 3,
+  "accent_rgb": [
+   222,
+   48,
+   40,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "42B",
+  "family": "blackout",
+  "file": "pin-42b-blackout",
+  "url": "https://anywherelearning.co/blog/how-to-build-resilience-in-kids",
+  "kicker": "resilience",
+  "title": "Resilient kids aren't born. They're practiced.",
+  "sub": "How to build resilience in kids",
+  "accent_rgb": [
+   255,
+   176,
+   46,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "42C",
+  "family": "split",
+  "file": "pin-42c-split",
+  "url": "https://anywherelearning.co/blog/how-to-build-resilience-in-kids",
+  "top_text": "Pep talks",
+  "bottom_text": "Resilience built by practice",
+  "pivot": "instead",
+  "left_rgb": [
+   14,
+   58,
+   64,
+   255
+  ],
+  "right_rgb": [
+   240,
+   92,
+   62,
+   255
+  ],
+  "sub": "Building resilience in kids, age by age",
+  "footer": "Free to read."
+ },
+ {
+  "id": "43A",
+  "family": "blackout",
+  "file": "pin-43a-light",
+  "url": "https://anywherelearning.co/blog/real-world-math-activities",
+  "kicker": "real-world math",
+  "title": "Real-world math activities for kids",
+  "sub": "20 ways math happens without a workbook",
+  "invert": true,
+  "accent_rgb": [
+   17,
+   19,
+   17,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "43B",
+  "family": "blackout",
+  "file": "pin-43b-blackout",
+  "url": "https://anywherelearning.co/blog/real-world-math-activities",
+  "kicker": "real-world math",
+  "title": "Math is a battle at your house?",
+  "sub": "Move it off the worksheet. 20 ideas.",
+  "accent_rgb": [
+   255,
+   138,
+   76,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "43C",
+  "family": "split",
+  "file": "pin-43c-split",
+  "url": "https://anywherelearning.co/blog/real-world-math-activities",
+  "top_text": "Math worksheets",
+  "bottom_text": "20 real-world math activities",
+  "pivot": "instead",
+  "left_rgb": [
+   38,
+   50,
+   56,
+   255
+  ],
+  "right_rgb": [
+   233,
+   150,
+   62,
+   255
+  ],
+  "sub": "And 19 more real-world math ideas",
+  "footer": "Free to read."
+ },
+ {
+  "id": "44A",
+  "family": "blackout",
+  "file": "pin-44a-light",
+  "url": "https://anywherelearning.co/blog/homeschool-while-traveling",
+  "kicker": "roadschooling",
+  "title": "How to homeschool while traveling",
+  "sub": "What actually works on the road",
+  "invert": true,
+  "accent_rgb": [
+   190,
+   40,
+   60,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "44B",
+  "family": "blackout",
+  "file": "pin-44b-blackout",
+  "url": "https://anywherelearning.co/blog/homeschool-while-traveling",
+  "kicker": "roadschooling",
+  "title": "Planning a winter trip? School comes with you.",
+  "sub": "How to homeschool while traveling",
+  "accent_rgb": [
+   124,
+   214,
+   168,
+   255
+  ],
+  "footer": "Free to read."
+ },
+ {
+  "id": "44C",
+  "family": "split",
+  "file": "pin-44c-split",
+  "url": "https://anywherelearning.co/blog/homeschool-while-traveling",
+  "top_text": "Workbooks and textbooks",
+  "bottom_text": "The trip is the curriculum",
+  "pivot": "instead",
+  "left_rgb": [
+   46,
+   36,
+   72,
+   255
+  ],
+  "right_rgb": [
+   236,
+   110,
+   90,
+   255
+  ],
+  "sub": "Roadschooling, the honest version",
+  "footer": "Free to read."
+ }
+]

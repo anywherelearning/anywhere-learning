@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "kitchen-ideas", "pin": "11", "mechanic": "dare", "count": 30, "accent": "#8b7355",
+    "age": "9", "noun": "YEAR-OLD", "verb": "cook dinner?",
+    "items": ["Halve a real recipe", "Cook eggs three ways", "Cook a full family meal"],
+    "kicker": "most kids never get asked",
+    "cta": "see all 30, free", "footer1": "The free kitchen list."
+  },
+  {
+    "slug": "ai-digital-ideas", "pin": "22", "mechanic": "dare", "count": 18, "accent": "#7b8fa1",
+    "age": "11", "noun": "YEAR-OLD", "verb": "spot an AI lie?",
+    "items": ["Fact-check a chatbot", "Tell bot writing from human", "Explain the algorithm"],
+    "kicker": "most adults can't either",
+    "cta": "see all 18, free", "footer1": "The free AI literacy list."
+  },
+  {
+    "slug": "nature-walk-ideas", "pin": "13", "mechanic": "hidden", "count": 50, "accent": "#6b8e6b",
+    "title1": "50 NATURE WALK", "title2": "IDEAS. BUT",
+    "script": "nobody does #37",
+    "hidden_n": 37,
+    "rows": [[35, "Find something camouflaged"], [36, "Race two leaves down a creek"], [38, "Balance on a log for ten seconds"]],
+    "cta": "see what #37 is, free", "footer1": "Free printable. Nothing to buy."
+  },
+  {
+    "slug": "creative-ideas", "pin": "20", "mechanic": "hidden", "count": 26, "accent": "#c47a8f",
+    "title1": "26 MAKER IDEAS.", "title2": "AND HONESTLY,",
+    "script": "#19 is the best one",
+    "hidden_n": 19,
+    "rows": [[17, "Invent a sport with random objects"], [18, "Write a choose-your-own story"], [20, "Build a Rube Goldberg machine"]],
+    "cta": "see what #19 is, free", "footer1": "Free printable. Nothing to buy."
+  },
+  {
+    "slug": "seasonal-scavenger-ideas", "pin": "04", "mechanic": "bingo", "count": 17, "accent": "#6b8e6b",
+    "title1": "SCAVENGER", "title2": "HUNT BINGO",
+    "pill": "how many can they find?",
+    "cells": ["A red leaf", "Animal tracks", "A seed that flies", "Something rotting", "A bird's home", "Frost patterns", "A pollinator", "Camouflage", "Three evergreens"],
+    "marked": [1, 4, 6],
+    "tail": "17 finds, one for every season",
+    "footer1": "Print the free card."
+  },
+  {
+    "slug": "forest-school-ideas", "pin": "14", "mechanic": "bingo", "count": 13, "accent": "#588157",
+    "title1": "FOREST SCHOOL", "title2": "BINGO",
+    "pill": "how many have they done?",
+    "cells": ["Build a stick den", "Mud paint on bark", "Climb a real tree", "Sit spot, 5 min", "Weave with grass", "Cross your own bridge", "Blindfold trail", "Whittle real wood", "A tiny village"],
+    "marked": [0, 3, 7],
+    "tail": "13 activities, any patch of trees",
+    "footer1": "Print the free card."
+  },
+  {
+    "slug": "life-skills-ideas", "pin": "02", "mechanic": "unlock", "count": 28, "accent": "#c4836a",
+    "title1": "WHAT UNLOCKS", "script": "at every age",
+    "rows": [["6", "Make their own breakfast", "#e8c99a", "#3d5c3b"], ["8", "Do a load of laundry", "#d4a373", "#3d5c3b"], ["10", "Handle real money", "#588157", "#faf9f6"], ["12", "Plan a family outing", "#d4a373", "#3d5c3b"]],
+    "tail": "28 skills, sorted by age",
+    "cta": "find your kid's age, free", "footer1": "Free printable checklist."
+  },
+  {
+    "slug": "chores-by-age-ideas", "pin": "09", "mechanic": "unlock", "count": 24, "accent": "#c4836a",
+    "title1": "WHAT CHORES", "script": "unlock when",
+    "rows": [["2-5", "Sort laundry by color", "#e8c99a", "#3d5c3b"], ["6-8", "Feed pets on a schedule", "#d4a373", "#3d5c3b"], ["9-11", "Cook eggs and pasta", "#588157", "#faf9f6"], ["12+", "Meal plan on a budget", "#d4a373", "#3d5c3b"]],
+    "tail": "24 chores, sorted by age",
+    "cta": "find your kid's age, free", "footer1": "Free printable chore chart."
+  },
+  {
+    "slug": "engineering-ideas", "pin": "08", "mechanic": "versus", "count": 16, "accent": "#3d5c3b",
+    "title1": "SKIP THE", "title2": "$40 BUILD KIT",
+    "script": "the junk drawer wins",
+    "left_label": "THE KIT", "left_lines": ["One right answer.", "Steps to follow.", "Done in 20 minutes."],
+    "right_label": "THE DRAWER", "right_lines": ["A real problem.", "No instructions.", "They keep going."],
+    "tail": "16 engineering challenges",
+    "cta": "get the free list", "footer1": "Free printable. Nothing to buy."
+  },
+  {
+    "slug": "backyard-science-ideas", "pin": "17", "mechanic": "versus", "count": 15, "accent": "#6b8e6b",
+    "title1": "SKIP THE", "title2": "$60 SCIENCE KIT",
+    "script": "the yard is the lab",
+    "left_label": "THE KIT", "left_lines": ["A tidy reaction.", "One-time use.", "Nothing to wonder."],
+    "right_label": "THE YARD", "right_lines": ["A real question.", "Runs for weeks.", "They check daily."],
+    "tail": "15 backyard experiments",
+    "cta": "get the free list", "footer1": "Free printable. No lab needed."
+  },
+  {
+    "slug": "resilience-ideas", "pin": "15", "mechanic": "whichkid", "count": 12, "accent": "#9b7bb8",
+    "title1": "WHICH ONE", "script": "is your kid?",
+    "options": [["A", "Melts down when it's hard", "start with the 2-minute challenges"], ["B", "Quits the second it's boring", "start with the comeback plan"], ["C", "Won't try unless they'll win", "start with the failure lab"]],
+    "tail": "12 resilience challenges inside",
+    "cta": "find their starting point", "footer1": "Free printable. Nothing to buy."
+  },
+  {
+    "slug": "travel-ideas", "pin": "24", "mechanic": "whichkid", "count": 22, "accent": "#d4a373",
+    "title1": "WHICH ONE", "script": "is your traveler?",
+    "options": [["A", "Bored by hour two", "hand them the map"], ["B", "Won't try the food", "run the market challenge"], ["C", "Asks four hundred questions", "give them the interview"]],
+    "tail": "22 worldschool activities inside",
+    "cta": "match your kid, free", "footer1": "Free printable. Any trip counts."
+  }
+]

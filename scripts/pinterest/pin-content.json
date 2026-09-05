@@ -1,0 +1,257 @@
+{
+  "nature-walk-ideas": {
+    "kicker": ["NATURE", "WALKS"],
+    "script": "kids actually love",
+    "b_script": "Nature Walk",
+    "b_caps": "CHECKLIST",
+    "pill_b": "50 ideas, zero gear",
+    "c_caps": "NO-GEAR",
+    "c_script": "nature walks",
+    "pill_c": "boredom-proof walks",
+    "items_a": ["Find five leaf shapes", "Spot the daytime moon", "Build a fairy house", "Walk in total silence", "Race leaves down a creek", "Find something hidden"],
+    "items_b": ["Find five leaf shapes", "Spot the daytime moon", "Build a fairy house", "Walk in total silence", "Find something hidden"],
+    "sampler": [
+      {"chip": "OBSERVE", "item": "Spot the moon in daylight"},
+      {"chip": "CREATE", "item": "Build a tiny fairy house"},
+      {"chip": "CHALLENGE", "item": "Walk in total silence"}
+    ]
+  },
+  "backyard-science-ideas": {
+    "kicker": ["BACKYARD", "SCIENCE"],
+    "script": "no lab needed",
+    "b_script": "Backyard Science",
+    "b_caps": "EXPERIMENTS",
+    "pill_b": "15 tests, no kit",
+    "c_caps": "BACKYARD",
+    "c_script": "science lab",
+    "pill_c": "no lab needed",
+    "items_a": ["Run an evaporation race", "Build a bug hotel", "Make a rain gauge", "Race seeds to sprout", "Bury five things, watch", "Count life in one meter"],
+    "items_b": ["Run an evaporation race", "Build a bug hotel", "Race seeds to sprout", "Shake soil in a jar", "Draw a sound map"],
+    "sampler": [
+      {"chip": "WATER", "item": "Run an evaporation race"},
+      {"chip": "SOIL", "item": "Bury five things, watch"},
+      {"chip": "BUGS", "item": "Build a bug hotel"}
+    ]
+  },
+  "forest-school-ideas": {
+    "kicker": ["FOREST", "SCHOOL"],
+    "script": "in any woods",
+    "b_script": "Forest School",
+    "b_caps": "AT HOME",
+    "pill_b": "13 wild activities",
+    "c_caps": "FOREST",
+    "c_script": "school at home",
+    "pill_c": "any woods will do",
+    "items_a": ["Build a stick den", "Make mud paint", "Build a tiny village", "Follow a blindfold trail", "Climb a real tree", "Build a stick bridge"],
+    "items_b": ["Build a stick den", "Make mud paint", "Follow a blindfold trail", "Climb a real tree", "Build a tiny village"],
+    "sampler": [
+      {"chip": "BUILD", "item": "A den from fallen branches"},
+      {"chip": "SENSE", "item": "Mud paint on tree bark"},
+      {"chip": "RISK", "item": "Climb a real tree"}
+    ]
+  },
+  "seasonal-scavenger-ideas": {
+    "kicker": ["SEASONAL", "HUNTS"],
+    "script": "all four seasons",
+    "b_script": "Scavenger Hunt",
+    "b_caps": "CHECKLIST",
+    "pill_b": "17 finds, 4 seasons",
+    "c_caps": "FOUR-SEASON",
+    "c_script": "scavenger hunts",
+    "pill_c": "17 finds outside",
+    "items_a": ["Spot a pollinator at work", "Find an animal home", "Find three seed tricks", "Follow animal tracks", "Find frost patterns", "Spot the camouflage"],
+    "items_b": ["Spot a pollinator at work", "Find an animal home", "Follow animal tracks", "Find frost patterns", "Find something rotting"],
+    "sampler": [
+      {"chip": "SPRING", "item": "Spot a pollinator at work"},
+      {"chip": "AUTUMN", "item": "Find three seed tricks"},
+      {"chip": "WINTER", "item": "Follow animal tracks"}
+    ]
+  },
+  "land-art-ideas": {
+    "kicker": ["NATURE", "ART"],
+    "script": "nothing to buy",
+    "b_script": "Land Art",
+    "b_caps": "FOR KIDS",
+    "pill_b": "14 ideas, no supplies",
+    "c_caps": "OUTDOOR",
+    "c_script": "art studio",
+    "pill_c": "leaves, stones, mud",
+    "items_a": ["Make a petal mandala", "Stack balancing stones", "Freeze an ice sculpture", "Build a stick wind chime", "Weave a leaf crown", "Make a mud sculpture"],
+    "items_b": ["Make a petal mandala", "Stack balancing stones", "Freeze an ice sculpture", "Weave a leaf crown", "Build a stick wind chime"],
+    "sampler": [
+      {"chip": "ARRANGE", "item": "A leaf color gradient"},
+      {"chip": "SCULPT", "item": "Stones stacked into balance"},
+      {"chip": "WEAVE", "item": "A crown of autumn leaves"}
+    ]
+  },
+  "kitchen-ideas": {
+    "kicker": ["KITCHEN", "SKILLS"],
+    "script": "math you can eat",
+    "b_script": "The Kitchen",
+    "b_caps": "CLASSROOM",
+    "pill_b": "30 ideas, one kitchen",
+    "c_caps": "KITCHEN",
+    "c_script": "classroom",
+    "pill_c": "30 tasty lessons",
+    "items_a": ["Halve a real recipe", "Slice pizza into eighths", "Plan a $20 meal", "Make ice cream in a bag", "Invent a smoothie recipe", "Cook a whole family meal"],
+    "items_b": ["Halve a real recipe", "Plan a $20 meal", "Make ice cream in a bag", "Invent a smoothie recipe", "Cook a whole family meal"],
+    "sampler": [
+      {"chip": "MEASURE", "item": "Weigh produce on a scale"},
+      {"chip": "MATH", "item": "Slice pizza into eighths"},
+      {"chip": "COOK", "item": "Ice cream in a bag"}
+    ]
+  },
+  "life-skills-ideas": {
+    "kicker": ["LIFE", "SKILLS"],
+    "script": "every kid needs",
+    "b_script": "Life Skills",
+    "b_caps": "CHECKLIST",
+    "pill_b": "28 skills, by age",
+    "c_caps": "CAPABLE-KID",
+    "c_script": "checklist",
+    "pill_c": "28 skills by age",
+    "items_a": ["Plan and buy a $30 meal", "Do their own laundry", "Call to book a haircut", "Cook five real meals", "Order their own food", "Fix something broken"],
+    "items_b": ["Plan and buy a $30 meal", "Do their own laundry", "Order their own food", "Read a real bus schedule", "Fix something broken"],
+    "sampler": [
+      {"chip": "MONEY", "item": "Plan and buy a $30 meal"},
+      {"chip": "HOME", "item": "Laundry, start to finish"},
+      {"chip": "THINKING", "item": "Fix a broken thing"}
+    ]
+  },
+  "chores-by-age-ideas": {
+    "kicker": ["CHORES", "BY AGE"],
+    "script": "they can do it",
+    "b_script": "Chores by Age",
+    "b_caps": "CHECKLIST",
+    "pill_b": "ages 2 to 12",
+    "c_caps": "AGE-BY-AGE",
+    "c_script": "chore chart",
+    "pill_c": "ages 2 to 12",
+    "items_a": ["Water plants, age 2", "Sweep floors, age 6", "Cook eggs, age 9", "Do laundry, age 9", "Run errands, age 12", "Plan dinner, age 12"],
+    "items_b": ["Water plants at 2", "Sweep floors at 6", "Cook eggs at 9", "Do laundry at 9", "Plan dinner at 12"],
+    "sampler": [
+      {"chip": "AGES 2-5", "item": "Carry dishes to the sink"},
+      {"chip": "AGES 6-8", "item": "Feed pets on a schedule"},
+      {"chip": "AGES 12+", "item": "Cook a full family meal"}
+    ]
+  },
+  "history-ideas": {
+    "kicker": ["FAMILY", "HISTORY"],
+    "script": "they belong to",
+    "b_script": "Family History",
+    "b_caps": "PROJECTS",
+    "pill_b": "11 hands-on ideas",
+    "c_caps": "HANDS-ON",
+    "c_script": "family history",
+    "pill_c": "history they belong to",
+    "items_a": ["Interview a grandparent", "Date the old photos", "Cook grandma's dish", "Build a family timeline", "Find the town's oldest thing", "Trace one food's story"],
+    "items_b": ["Interview a grandparent", "Date the old photos", "Cook grandma's dish", "Build a family timeline", "Trace one food's story"],
+    "sampler": [
+      {"chip": "FAMILY", "item": "Interview a grandparent"},
+      {"chip": "LOCAL", "item": "Find the town's oldest thing"},
+      {"chip": "FOOD", "item": "Trace grandma's recipe"}
+    ]
+  },
+  "stem-ideas": {
+    "kicker": ["NO-KIT", "STEM"],
+    "script": "recycling-bin builds",
+    "b_script": "STEM Builds",
+    "b_caps": "NO KIT NEEDED",
+    "pill_b": "24 builds, zero cost",
+    "c_caps": "NO-KIT",
+    "c_script": "STEM builds",
+    "pill_c": "from the recycling bin",
+    "items_a": ["Spaghetti tower contest", "Egg-drop container", "Foil boat penny test", "Invisible lemon ink", "Balloon rocket on a string", "Melt chocolate with the sun"],
+    "items_b": ["Build a spaghetti tower", "Drop-proof an egg", "Make invisible ink", "Launch a balloon rocket", "Melt chocolate with the sun"],
+    "sampler": [
+      {"chip": "BUILD", "item": "A bridge that holds a book"},
+      {"chip": "EXPERIMENT", "item": "Invisible ink from lemon juice"},
+      {"chip": "BACKYARD", "item": "A solar oven that melts chocolate"}
+    ]
+  },
+  "engineering-ideas": {
+    "kicker": ["ENGINEERING", "CHALLENGES"],
+    "script": "no instructions",
+    "b_script": "Engineering",
+    "b_caps": "CHALLENGES",
+    "pill_b": "16 real builds",
+    "c_caps": "ENGINEERING",
+    "c_script": "challenges",
+    "pill_c": "16 real builds",
+    "items_a": ["Balloon-powered car", "Cardboard drawbridge", "Paper-boat marble test", "Kitchen trebuchet", "Build a water filter", "A chair made of cardboard"],
+    "items_b": ["Balloon-powered car", "Cardboard drawbridge", "Kitchen trebuchet", "Build a water filter", "A chair made of cardboard"],
+    "sampler": [
+      {"chip": "QUICK", "item": "A balloon-powered car"},
+      {"chip": "BIGGER", "item": "A working drawbridge"},
+      {"chip": "REAL", "item": "A cardboard chair you can sit on"}
+    ]
+  },
+  "creative-ideas": {
+    "kicker": ["CREATIVE", "PROJECTS"],
+    "script": "no kits allowed",
+    "b_script": "Maker Ideas",
+    "b_caps": "NO KITS",
+    "pill_b": "26 open-ended ideas",
+    "c_caps": "NO-KIT",
+    "c_script": "creative projects",
+    "pill_c": "26 open-ended ideas",
+    "items_a": ["Cardboard box challenge", "Invent a sport", "Design a board game", "Map an imaginary island", "Build a Rube Goldberg", "Film a short movie"],
+    "items_b": ["Cardboard box challenge", "Invent a sport", "Design a board game", "Map an imaginary island", "Build a Rube Goldberg"],
+    "sampler": [
+      {"chip": "MAKE", "item": "A fort with fairy lights"},
+      {"chip": "TELL", "item": "A choose-your-own story"},
+      {"chip": "INVENT", "item": "A sport with pool noodles"}
+    ]
+  },
+  "travel-ideas": {
+    "kicker": ["WORLD", "SCHOOL"],
+    "script": "on any trip",
+    "b_script": "Worldschool",
+    "b_caps": "ACTIVITIES",
+    "pill_b": "22 ideas, any trip",
+    "c_caps": "ANY-TRIP",
+    "c_script": "worldschooling",
+    "pill_c": "road trips count too",
+    "items_a": ["Hand them the map", "Give a daily budget", "Order in the local language", "Film a day in the life", "Draw the route from memory", "Interview a local"],
+    "items_b": ["Hand them the map", "Give a daily budget", "Order in the local language", "Film a day in the life", "Draw the route from memory"],
+    "sampler": [
+      {"chip": "EXPLORE", "item": "Let the kid navigate"},
+      {"chip": "CREATE", "item": "Film a day in the life"},
+      {"chip": "GO DEEP", "item": "Interview a local person"}
+    ]
+  },
+  "ai-digital-ideas": {
+    "kicker": ["AI", "LITERACY"],
+    "script": "screens optional",
+    "b_script": "AI Literacy",
+    "b_caps": "FOR KIDS",
+    "pill_b": "18 family activities",
+    "c_caps": "AI-SMART",
+    "c_script": "not AI-scared",
+    "pill_c": "18 family activities",
+    "items_a": ["Play bot-or-not", "The autocomplete game", "Spot the ad", "Fact-check the chatbot", "Reverse-search a photo", "Ask AI to draw a doctor"],
+    "items_b": ["Play bot-or-not", "The autocomplete game", "Fact-check the chatbot", "Reverse-search a photo", "Spot the ad"],
+    "sampler": [
+      {"chip": "UNDERSTAND", "item": "Play bot-or-not"},
+      {"chip": "USE WISELY", "item": "Fact-check the chatbot"},
+      {"chip": "MEDIA", "item": "Reverse-search a photo"}
+    ]
+  },
+  "resilience-ideas": {
+    "kicker": ["RESILIENCE"],
+    "script": "built, not born",
+    "b_script": "Resilience",
+    "b_caps": "CHALLENGES",
+    "pill_b": "12 safe struggles",
+    "c_caps": "RESILIENCE",
+    "c_script": "training",
+    "pill_c": "12 safe struggles",
+    "items_a": ["Add \"yet\" to \"I can't\"", "A broken thing, no help", "A challenge that takes tries", "The family failure trophy", "Count a hero's setbacks", "Will it matter in a year?"],
+    "items_b": ["Add \"yet\" to \"I can't\"", "A broken thing, no help", "The family failure trophy", "Count a hero's setbacks", "Will it matter in a year?"],
+    "sampler": [
+      {"chip": "SAFE FAILURE", "item": "Resist the urge to help"},
+      {"chip": "BOUNCE BACK", "item": "A family failure trophy"},
+      {"chip": "PERSPECTIVE", "item": "Will it matter in a year?"}
+    ]
+  }
+}
