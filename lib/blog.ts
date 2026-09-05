@@ -8645,7 +8645,6 @@ const posts: BlogPost[] = [
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
     publishedAt: '2026-09-05',
-    draft: true,
     keywords: ['road trip math', 'trip math', 'travel math', 'road trip math for kids', 'math on a road trip', 'travel math activities', 'road trip math games', 'real world math road trip', 'fuel cost math for kids', 'trip budget for kids'],
     readTimeMinutes: 10,
     author: amelie,
