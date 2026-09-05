@@ -5,7 +5,9 @@ import { MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 interface BlogProductCalloutProps {
   /** The activity slug the post wants to highlight. Used to look up the product
-   *  cover + name. The buy CTA always points to the Membership. */
+   *  cover + name. The buy CTA points to the Membership; the name and a
+   *  secondary link go to the activity page itself, so every post that
+   *  carries a callout also carries a crawlable link into the library. */
   slug: string;
   context?: string;
 }
@@ -63,7 +65,9 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
             {pitch.eyebrow}
           </p>
           <h4 className="font-semibold text-gray-900 text-[15.5px] sm:text-lg leading-snug mb-1 sm:mb-1.5">
-            {product.name}
+            <Link href={`/shop/${product.slug}`} className="text-gray-900 no-underline hover:text-forest-dark hover:underline decoration-forest/30 underline-offset-2">
+              {product.name}
+            </Link>
           </h4>
           <p className="text-[13px] sm:text-sm text-gray-500 leading-relaxed mb-3 sm:mb-4">
             {pitch.body}
@@ -79,6 +83,12 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
               {pitch.priceLine}
             </span>
           </div>
+          <Link
+            href={`/shop/${product.slug}`}
+            className="mt-3 text-[13px] font-semibold text-forest-dark hover:text-forest transition-colors"
+          >
+            See the activity &rarr;
+          </Link>
         </div>
       </div>
     </div>

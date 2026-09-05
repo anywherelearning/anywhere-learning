@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useAccessTier } from '@/hooks/useAccessTier';
+import { CHALLENGE } from '@/lib/challenge';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -91,8 +92,11 @@ const RESOURCES_ITEMS: ResourceEntry[] = [
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   {
     label: 'Free',
-    desc: 'Four things you can take today',
+    desc: CHALLENGE.isLive ? 'Five things you can take today' : 'Four things you can take today',
     children: [
+      ...(CHALLENGE.isLive
+        ? [{ href: '/challenge', label: '5-Day Challenge', desc: 'Free, one real-world activity a day' }]
+        : []),
       { href: '/ideas', label: 'Activity Ideas', desc: 'Printable checklists' },
       { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Age-by-age skills map' },
       { href: '/free-guide', label: '7-Day Guide', desc: 'Seven activities, sent to your inbox' },

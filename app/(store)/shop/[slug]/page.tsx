@@ -16,6 +16,7 @@ import { coverSrc } from "@/lib/cover";
 import PreviewButton from "@/components/shop/PreviewButton";
 import CheckoutButton from "@/components/checkout/CheckoutButton";
 import ReviewForm from "@/components/shop/ReviewForm";
+import ReadMoreFromBlog from "@/components/shop/ReadMoreFromBlog";
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_YR,
@@ -307,6 +308,19 @@ export default async function ProductPage({
   // The one substantial block that differs per product. Absent on most guides
   // for now, so the section below renders only where it has been written.
   const insideTheLearning = desc.insideTheLearning;
+  const faqs = desc.faqs ?? [];
+  const faqLd =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        }
+      : null;
   // The meta line used to hardcode "Project guide", which mislabelled the 37
   // activity/card/parent guides in the catalogue.
   const formatLabel = (desc.format || 'Activity Guide').replace(' Guide', ' guide');
@@ -480,6 +494,12 @@ export default async function ProductPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
 
       {/* BREADCRUMB */}
       <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
@@ -748,6 +768,37 @@ export default async function ProductPage({
         </section>
       )}
 
+      {/* FAQ: only where written (see lib/product-descriptions.ts) */}
+      {faqs.length > 0 && (
+        <section className="pb-10">
+          <div className="mx-auto max-w-[1100px] px-6">
+            <div className="max-w-[760px]">
+              <p
+                className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.18em]"
+                style={{ color: theme.deep }}
+              >
+                <span className="w-[22px] h-px" style={{ background: theme.color }} />
+                Parents ask
+              </p>
+              <h2 className="mt-3 mb-6 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight">
+                Before you start
+              </h2>
+              <div className="divide-y divide-[#D8D4C5] border-y border-[#D8D4C5]">
+                {faqs.map((f) => (
+                  <details key={f.question} className="group py-4">
+                    <summary className="cursor-pointer list-none flex items-start justify-between gap-4 font-semibold text-[16px] text-ink">
+                      <span>{f.question}</span>
+                      <span aria-hidden="true" className="shrink-0 text-forest-dark transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 text-[15px] leading-[1.65] text-gray-600 m-0">{f.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* WHY IT MATTERS */}
       <section className="pb-8">
         <div className="mx-auto max-w-[1180px] px-6">
@@ -981,6 +1032,13 @@ export default async function ProductPage({
           </div>
         </section>
       )}
+
+      {/* READ MORE: the guide and posts behind this category */}
+      <ReadMoreFromBlog
+        productCategory={product.category}
+        seed={product.slug}
+        accentColor={theme.color}
+      />
 
       {/* MEMBERSHIP OFFER */}
       <section className="py-12">

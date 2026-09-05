@@ -14,34 +14,65 @@ import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
+import AllPostsIndex from '@/components/blog/AllPostsIndex';
 import { categoryIcons } from '@/components/blog/CategoryIcons';
 
 const POSTS_PER_PAGE = 6;
 
+interface BlogPageProps {
+  searchParams: Promise<{ category?: string; page?: string }>;
+}
 
-export const metadata: Metadata = {
-  title: 'Homeschool & Worldschool Blog: Real-World Learning Ideas',
-  description:
-    'Homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids. Real-world learning, no fluff.',
-  alternates: {
-    canonical: 'https://anywherelearning.co/blog',
-  },
-  openGraph: {
-    title: 'Homeschool & Worldschool Blog: Real-World Learning Ideas | Anywhere Learning',
-    description:
-      'Practical homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids.',
-    url: 'https://anywherelearning.co/blog',
-    type: 'website',
-    images: [
-      {
-        url: 'https://anywherelearning.co/og-default.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Anywhere Learning Homeschool & Worldschool Blog',
-      },
-    ],
-  },
-};
+
+const BLOG_TITLE = 'Homeschool & Worldschool Blog: Real-World Learning Ideas';
+const BLOG_DESCRIPTION =
+  'Homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids. Real-world learning, no fluff.';
+
+/**
+ * Paginated and filtered views are real, distinct pages, so each one
+ * canonicalizes to itself with its own title. Pointing every page at /blog
+ * (the old behaviour) told Google pages 2 to 15 were duplicates of page 1,
+ * and it responded by choosing its own canonical and under-crawling the
+ * posts that only those pages linked to.
+ */
+export async function generateMetadata({ searchParams }: BlogPageProps): Promise<Metadata> {
+  const { category, page } = await searchParams;
+  const pageNum = Math.max(1, parseInt(page || '1', 10) || 1);
+  const cat = category && category in blogCategories ? (category as BlogCategory) : undefined;
+
+  const params = new URLSearchParams();
+  if (cat) params.set('category', cat);
+  if (pageNum > 1) params.set('page', String(pageNum));
+  const qs = params.toString();
+  const canonical = qs ? `https://anywherelearning.co/blog?${qs}` : 'https://anywherelearning.co/blog';
+
+  const title = cat
+    ? `${blogCategories[cat].label} Posts${pageNum > 1 ? `, Page ${pageNum}` : ''} | Blog`
+    : pageNum > 1
+      ? `Blog, Page ${pageNum}: Real-World Learning Ideas`
+      : BLOG_TITLE;
+
+  return {
+    title,
+    description: BLOG_DESCRIPTION,
+    alternates: { canonical },
+    openGraph: {
+      title: `${title} | Anywhere Learning`,
+      description:
+        'Practical homeschool ideas, worldschool inspiration, low-prep activities, and deschooling tips for families raising future-ready kids.',
+      url: canonical,
+      type: 'website',
+      images: [
+        {
+          url: 'https://anywherelearning.co/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Anywhere Learning Homeschool & Worldschool Blog',
+        },
+      ],
+    },
+  };
+}
 
 const imgBgByCategory: Record<BlogCategory, string> = {
   'ai-digital-literacy': '#F5E7BC',
@@ -198,10 +229,6 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
       </div>
     </Link>
   );
-}
-
-interface BlogPageProps {
-  searchParams: Promise<{ category?: string; page?: string }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
@@ -408,6 +435,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </div>
           </div>
         </section>
+
+        {/* 03b FULL ARCHIVE: every post as a plain link, one hop from the hub */}
+        <AllPostsIndex />
 
         {/* 04 QUIZ CTA */}
         <div className="bg-cream py-20 md:py-24">

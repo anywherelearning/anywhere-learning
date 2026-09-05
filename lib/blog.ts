@@ -30,6 +30,11 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   /**
+   * Hand-written SERP snippet, 120 to 155 characters. When absent the excerpt
+   * is trimmed to a sentence boundary by getSeoDescription().
+   */
+  metaDescription?: string;
+  /**
    * Optional curated one-line hook shown on blog cards. Hand-written teaser
    * that creates curiosity. Falls back to `excerpt` if not set.
    */
@@ -4481,11 +4486,12 @@ const posts: BlogPost[] = [
     slug: 'forest-school-activities',
     title: '15 Forest School Activities You Can Do Without Any Training',
     excerpt: 'Fifteen forest school activities any parent can lead at home, from den building to whittling. No certification needed, just trees, sticks, and curious kids ready to explore.',
+    metaDescription: 'Fifteen forest school activities any parent can lead, from den building to whittling. No training needed, just trees, sticks, and curious kids.',
     hook: 'You do not need a certification to let your kid build a den out of sticks.',
     category: 'nature-learning',
     pillarSlug: 'nature-based-learning',
     publishedAt: '2026-04-03',
-    dateModified: '2026-08-16',
+    dateModified: '2026-09-04',
     keywords: ['forest school activities', 'forest school ideas', 'outdoor learning activities', 'nature school activities', 'forest kindergarten', 'forest school at home', 'forest school benefits'],
     readTimeMinutes: 14,
     author: amelie,
@@ -4567,6 +4573,17 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What about bad weather?' },
       { type: 'paragraph', text: 'The Scandinavian saying goes: there is no bad weather, only bad clothing. Rain, wind, and even light snow make forest school more interesting, not less. Puddles become physics experiments. Rain changes the sounds. Mud becomes a building material. If you dress for it, bad weather days often turn into the most memorable ones.' },
       { type: 'paragraph', text: 'The only weather worth staying inside for is lightning or dangerously high winds. Everything else is an invitation.' },
+
+      { type: 'heading', level: 2, text: 'Forest school activities for fall' },
+      { type: 'paragraph', text: 'Fall is when most families try forest school for the first time, and it is the easiest season to start. The woods are doing something obvious every week, the bugs have thinned out, and a kid who is bored of the playground is suddenly interested in a stick that snaps differently now that it is dry. These five fall forest school activities need nothing but the season itself.' },
+      { type: 'list', ordered: false, items: [
+        'Leaf sort and tree match: collect ten different leaves, sort them by shape and edge, then walk back and find the tree each one came from. Kids learn tree identification without anyone calling it that.',
+        'Seed engineering: gather maple keys, acorns, burrs, and dandelion heads, then test how each one travels. Drop them from a height, throw them, stick them to a sleeve. Ask which design would you copy if you were building a glider.',
+        'The decomposition patch: mark a square of ground with four sticks and photograph what is in it. Come back every week through November and watch the leaves turn to soil. It is the slowest and most convincing science lesson there is.',
+        'Mushroom spotting, hands off: fall is fungus season. Count how many kinds you can find in twenty minutes, photograph them, and look them up at home. The rule is look, never touch, never taste, and kids follow it better when they are the ones enforcing it.',
+        'Cold-weather shelter test: build a den in September, then visit it in a cold October wind and find out where it leaks. The rebuild teaches more about insulation and structure than the first build did.',
+      ]},
+      { type: 'paragraph', text: 'Layer up, bring a thermos, and plan on shorter sessions as the light goes. A forty-minute fall walk that ends before anyone is cold beats a two-hour one that ends in tears, and it is the one your kids will ask to repeat.' },
 
       { type: 'heading', level: 2, text: 'Forest school through the seasons' },
       { type: 'paragraph', text: 'One of the quiet gifts of forest school is that the same patch of woods becomes a completely different classroom four times a year. Returning to one spot across the seasons teaches kids more about change, cycles, and observation than any unit study could. Here is a season-by-season starting point, beginning with fall, since that is where most families land when they first head out.' },
@@ -5513,10 +5530,11 @@ const posts: BlogPost[] = [
     slug: 'decision-making-skills-kids',
     title: 'Raising Kids Who Can Think for Themselves: Decision-Making Skills by Age',
     excerpt: 'How to build real decision-making skills at every age, from letting a 5-year-old choose dinner to letting a 14-year-old plan a trip budget, so they are not helpless at 18.',
+    metaDescription: 'How to build decision-making skills at every age, with age-appropriate examples from a 5-year-old choosing dinner to a 14-year-old planning a trip budget.',
     hook: 'Every decision you make for your kid is a decision they do not learn to make for themselves.',
     category: 'future-ready-skills',
     publishedAt: '2026-04-07',
-    dateModified: '2026-04-07',
+    dateModified: '2026-09-04',
     keywords: ['teaching kids decision making', 'how to raise independent thinkers', 'critical thinking for kids', 'problem solving skills kids', 'age-appropriate decisions', 'independent kids', 'letting kids choose', 'raising self-sufficient kids', 'decision making activities kids'],
     readTimeMinutes: 12,
     author: amelie,
@@ -5655,6 +5673,16 @@ const posts: BlogPost[] = [
       ]},
       { type: 'paragraph', text: 'These are the skills that [AI cannot replicate](/blog/ai-for-kids-2026). Machines can process information faster, but they cannot decide what matters. They cannot weigh values. They cannot navigate the ambiguity of real human situations. Raising kids who can do these things is not just good parenting. It is preparing them for a world where the most valuable human skill is judgment.' },
 
+
+      { type: 'heading', level: 2, text: 'Age-appropriate decision-making examples at a glance' },
+      { type: 'paragraph', text: 'If you want the short version to stick on the fridge, here are age-appropriate decision-making examples for each stage: what to hand over, and what the natural consequence looks like when it goes wrong.' },
+      { type: 'list', ordered: false, items: [
+        'Ages 3 to 5: which of two outfits, which of two snacks, which book at bedtime, and which park. Consequence: they wear it, eat it, or hear it, even when they change their mind.',
+        'Ages 6 to 8: how to spend a small allowance, what order to do chores in, which activity to sign up for this season, and what to pack for a day out. Consequence: the toy breaks in a week, the chores run late, the forgotten sweater stays forgotten.',
+        'Ages 9 to 11: how to spend a weekly screen budget, how to plan a friend visit, what to cook for one family dinner, and how to handle a friendship conflict before a parent steps in. Consequence: the budget runs out on Tuesday, dinner is pasta again, the friend is annoyed.',
+        'Ages 12 to 14: their own homework schedule, a monthly clothing or activity budget, a route and timing for getting somewhere alone, and whether to quit an activity. Consequence: a missed deadline, a month without new shoes, a late arrival.',
+        'Ages 15 to 17: a part-time job, a term of course choices, a travel plan with a real budget, and their own bedtime on school nights. Consequence: exactly the ones adults get.',
+      ]},
 
       { type: 'heading', level: 2, text: 'Start this week' },
       { type: 'paragraph', text: 'Pick one decision you currently make for your child and hand it over. Just one. If they are four, let them choose what to wear tomorrow (yes, even if it does not match). If they are eight, let them plan Saturday morning. If they are twelve, let them manage the grocery budget for one meal. If they are sixteen, let them handle their own doctor\'s appointment.' },
@@ -6397,6 +6425,7 @@ const posts: BlogPost[] = [
     slug: 'real-world-history-for-kids',
     title: 'Real-World History for Kids: 20 Ways to Teach History Without a Textbook',
     excerpt: 'History is not a list of dates to memorize. It is woven through your family stories, your dinner plate, the buildings on your street, and the news on the radio. Here is how to teach history to kids without a textbook, with 20 concrete starting points and age-by-age guidance.',
+    metaDescription: 'How to teach history to kids without a textbook: 20 concrete starting points, from family stories to the buildings on your street, with age-by-age guidance.',
     hook: 'A kid who learns history through their grandmother\'s kitchen will remember more than one who spent a year on a textbook.',
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
@@ -6732,6 +6761,7 @@ const posts: BlogPost[] = [
     slug: 'engineering-for-kids',
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
+    metaDescription: 'Engineering for kids: 20 hands-on projects sorted by complexity, with no kit and no special tools. Just the cardboard already in your recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
@@ -6852,6 +6882,7 @@ const posts: BlogPost[] = [
     slug: 'stem-activities-by-age',
     title: 'STEM Activities by Age: A Real Parent\'s Guide from 5 to 14',
     excerpt: 'Age-appropriate STEM activities for kids 5 to 14, organized by what actually matches their attention span and ability to handle abstraction. Concrete examples, common parent mistakes, and how STEAM fits at each stage.',
+    metaDescription: 'STEM activities by age for kids 5 to 14, matched to attention span and abstraction. Concrete examples and the common parent mistakes at each stage.',
     hook: 'The right STEM activity for your 7-year-old is almost never a kit. It\'s usually a stick, a measuring cup, and twenty minutes.',
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
@@ -6947,6 +6978,7 @@ const posts: BlogPost[] = [
     slug: 'lego-stem-activities',
     title: 'LEGO STEM Activities: 15 Build Challenges That Teach Real Engineering',
     excerpt: 'Your kid already owns the best engineering kit ever made. Here are 15 LEGO STEM challenges, sorted by age, that turn the pile in the living room into real practice in design, physics, and problem-solving.',
+    metaDescription: '15 LEGO STEM challenges sorted by age that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     hook: 'Following a LEGO set is sequencing. Free-building from a bin with constraints is engineering. Most kids never get to do the second one.',
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
@@ -8033,6 +8065,7 @@ const posts: BlogPost[] = [
     slug: 'how-to-raise-independent-kids',
     title: 'How to Raise an Independent Kid (Without It Feeling Reckless)',
     excerpt: 'Independence is not an event you schedule; it is a thousand small handovers over years. Here is how to raise a capable, self-reliant kid by age, why we have over-supervised a whole generation, and how to quiet your own fear enough to let them try.',
+    metaDescription: 'How to raise an independent kid by age, why a whole generation has been over-supervised, and how to quiet your own fear enough to let them try.',
     hook: 'We have raised the most supervised generation in history, then wondered why our kids cannot do anything on their own. It does not have to be this way.',
     category: 'future-ready-skills',
     publishedAt: '2026-07-26',
@@ -8605,12 +8638,13 @@ const posts: BlogPost[] = [
   // ── Shark Tank for Kids ──
   {
     slug: 'shark-tank-for-kids',
-    title: 'Shark Tank for Kids: A Business-Pitch Activity (Classroom or Home)',
+    title: 'Shark Tank for Kids: Ideas, Rules, and How to Run the Activity',
     excerpt: 'A Shark Tank activity is one of the best real-world projects you can run with kids: they invent a business, build the numbers, and pitch it to the "sharks." Here is how to run it step by step, for ages 8 to 14, at home or in a classroom.',
+    metaDescription: 'How to run a Shark Tank activity for kids ages 8 to 14: invent a business, build the numbers, write the pitch, and face the sharks. Steps, rules, and ideas.',
     hook: 'Give a kid a business to invent and a room to pitch it in, and watch them light up. Shark Tank for kids teaches more in one project than a month of worksheets.',
     category: 'real-world-skills',
     publishedAt: '2026-07-30',
-    dateModified: '2026-07-30',
+    dateModified: '2026-09-04',
     keywords: ['shark tank for kids', 'shark tank classroom activity', 'business pitch for kids', 'shark tank activity for students', 'kids business pitch', 'shark tank project for kids', 'entrepreneurship activity for kids', 'business pitch activity', 'shark tank lesson plan', 'how to run a shark tank activity'],
     readTimeMinutes: 12,
     author: amelie,
@@ -8623,6 +8657,8 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'There is a reason Shark Tank has been on the air for over a decade, and it is the same reason a Shark Tank activity works so well with kids: watching someone pitch a real idea, under pressure, with money on the line, is genuinely gripping. Turn your kid into the entrepreneur, and something clicks. Suddenly math has a point, talking to people matters, and a wild idea becomes a real project they care about.' },
       { type: 'paragraph', text: 'This is one of the best single activities you can run with a kid, because it bundles so many real-world skills into one thrilling project: entrepreneurship, public speaking, persuasion, and actual money math. It works in a classroom with thirty kids and it works at your kitchen table with one. And it is a perfect example of the kind of hands-on, real-world learning that builds [the life skills kids actually need](/guides/life-skills-for-kids). Whether you are a homeschool parent hunting for an entrepreneurship activity for kids or a teacher who wants a business pitch for kids the whole class will love, Shark Tank for kids delivers. Here is exactly how to run this kids business pitch, step by step.' },
+
+      { type: 'paragraph', text: 'If you would rather skip the setup, the [Shark Tank pitch project](/shop/shark-tank-pitch) in the library lays the whole thing out step by step, with the pitch sheet, the numbers worksheet, and the shark question cards. This post is the free version: the ideas, the rules, and how to run it yourself.' },
 
       { type: 'heading', level: 2, text: 'What is a Shark Tank activity for kids?' },
       { type: 'paragraph', text: 'A Shark Tank activity for kids borrows the format of the TV show: someone with a business idea pitches it to a panel of investors (the "sharks"), who grill them with questions and then decide whether to invest. In the kid version, your child invents a business or product, works out the basic numbers, prepares a short pitch, and presents it to a panel, family members at home, or classmates and a teacher in a classroom. The sharks ask questions, then offer pretend "investment" or feedback.' },
@@ -8868,6 +8904,29 @@ export function getAllPosts(): BlogPost[] {
   return posts
     .filter((p) => !p.draft)
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+}
+
+/**
+ * Meta description for a post. Excerpts on this blog run 200 to 300
+ * characters, which Google rewrites wholesale. This returns the hand-written
+ * metaDescription when there is one, otherwise the excerpt cut back to the
+ * last full sentence that fits in 155 characters (or a word boundary if the
+ * first sentence alone is longer than that).
+ */
+export function getSeoDescription(post: Pick<BlogPost, 'excerpt' | 'metaDescription'>): string {
+  if (post.metaDescription) return post.metaDescription;
+  const text = post.excerpt.trim();
+  if (text.length <= 160) return text;
+  const sentences = text.match(/[^.!?]+[.!?]+(\s|$)/g) ?? [text];
+  let out = '';
+  for (const s of sentences) {
+    if ((out + s).trim().length > 155) break;
+    out += s;
+  }
+  out = out.trim();
+  if (out.length >= 80) return out;
+  const cut = text.slice(0, 152);
+  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:]$/, '') + '\u2026';
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

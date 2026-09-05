@@ -7,6 +7,7 @@ import {
   getAllPosts,
   getPostBySlug,
   getRelatedPosts,
+  getSeoDescription,
   getArticleBodyText,
   blogCategories,
   blogProductDefaults,
@@ -24,6 +25,8 @@ import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
+import TryItThisWeek from '@/components/blog/TryItThisWeek';
+import { BLOG_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
@@ -43,8 +46,10 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    // Long titles drop the " | Anywhere Learning" suffix so the keyword-led
+    // part survives the SERP cutoff. The brand is in the URL and breadcrumb.
+    title: post.title.length > 50 ? { absolute: post.title } : post.title,
+    description: getSeoDescription(post),
     keywords: post.keywords,
     alternates: {
       canonical: `https://anywherelearning.co/blog/${post.slug}`,
@@ -577,6 +582,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             )}
           </div>
         </div>
+
+        {/* 04b TRY IT: three matching activities from the library */}
+        <TryItThisWeek
+          productCategory={BLOG_TO_PRODUCT_CATEGORY[post.category]}
+          prefer={post.recommendedProduct}
+          seed={post.slug}
+        />
 
         {/* 05 QUIZ CTA */}
         <BlogQuizCTA />

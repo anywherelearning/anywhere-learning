@@ -21,6 +21,8 @@ import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
+import TryItThisWeek from '@/components/blog/TryItThisWeek';
+import { RESOURCE_TOPIC_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
@@ -449,6 +451,13 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
             </article>
           </div>
         </div>
+
+        {/* 04b TRY IT: three matching activities from the library */}
+        <TryItThisWeek
+          productCategory={RESOURCE_TOPIC_TO_PRODUCT_CATEGORY[resource.topic]}
+          prefer={resource.recommendedProduct}
+          seed={resource.slug}
+        />
 
         {/* 05 QUIZ CTA */}
         <BlogQuizCTA />

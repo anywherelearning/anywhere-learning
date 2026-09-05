@@ -36,6 +36,14 @@ export const metadata: Metadata = {
       'Every hands-on, real-world activity for kids ages 6 to 14, across nine topics. Real maths, writing and life skills inside real tasks. One membership, and we pick your family\'s next activity for you.',
     url: 'https://anywherelearning.co/shop',
     type: 'website',
+    images: [
+      {
+        url: 'https://anywherelearning.co/og-default.jpg?v=3',
+        width: 1200,
+        height: 630,
+        alt: 'Anywhere Learning: real-world learning activities for kids ages 6 to 14',
+      },
+    ],
   },
 };
 

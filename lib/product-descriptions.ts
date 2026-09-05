@@ -21,6 +21,12 @@ export interface ProductDescription {
    */
   seo?: { title: string; description: string };
   /**
+   * Parent questions answered on the page and shipped as FAQPage schema.
+   * Only written for activities that already rank on page one and need the
+   * extra depth to earn the click (see the Sept 2026 audit).
+   */
+  faqs?: { question: string; answer: string }[];
+  /**
    * The academics and life skills this specific activity actually carries.
    * This is the only substantial block on the page that is unique per product,
    * so it is what makes a product page worth indexing on its own rather than
@@ -645,6 +651,28 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Playtesting and iteration cycle',
     ],
     skillTags: ['Design Thinking', 'Writing', 'Physical Literacy', 'Problem-Solving', 'Creativity'],
+    faqs: [
+      {
+        question: 'What do kids actually make in this project?',
+        answer:
+          'A playable sport with a name, equipment built from what is in the house, a written rulebook, and a scoring system. Families have ended up with pool-noodle hockey played on knees, a three-team tag with safe zones, and a backyard game bounded by a garden hose. The test of done is that someone else can play it from the rulebook alone.',
+      },
+      {
+        question: 'How long does inventing a sport take?',
+        answer:
+          'Plan on three to five sessions of about an hour. Design and the first build take one session, the first playtest usually breaks the rules within ten minutes, and the rewrite-and-replay loop fills the rest. Some kids keep tweaking for weeks.',
+      },
+      {
+        question: 'What age is invent a sport for?',
+        answer:
+          'Ages 8 to 14. Younger kids invent simpler games with two or three rules and need help writing them down. Older kids handle scoring systems, fairness arguments, and equipment that has to be built to a measurement.',
+      },
+      {
+        question: 'Do we need any equipment?',
+        answer:
+          'No. The equipment gets invented too. Balls, sticks, buckets, rope, tape, cardboard, and cushions cover almost every sport kids come up with. If something would need buying, the design gets changed instead.',
+      },
+    ],
     insideTheLearning: {
       lead:
         'Your child invents a sport, builds the equipment out of what is in the house, writes the rulebook, and then makes people play it. The rules have to be testable and the game has to be fair, which is a genuinely hard design problem the first time someone exploits a loophole.',
@@ -951,6 +979,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Complete trip budget with contingency',
     ],
     skillTags: ['Geography', 'Estimation', 'Budgeting', 'Distance', 'Planning'],
+    seo: {
+      title: 'Road Trip Math for Kids: Plan a Real Trip Budget, Ages 8-14',
+      description:
+        'Road trip math for kids: real distances, fuel costs, driving times, and a full trip budget, worked out by your child before you leave. Guided project, ages 8-14, no prep.',
+    },
     insideTheLearning: {
       lead:
         'Your child plans a real road trip with real distances. Multiply distance by fuel cost, add the stops, work out driving times, compare two routes and find out one is cheaper but three hours longer. Then build a budget that survives the whole trip.',

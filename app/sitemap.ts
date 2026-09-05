@@ -199,7 +199,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .from(products)
       .where(eq(products.active, true));
 
-    const productUrls = allProducts.map((p) => ({
+    // Bundles redirect to /shop (next.config), so a sitemap entry for them
+    // would advertise a 308. Keep them out.
+    const productUrls = allProducts.filter((p) => !p.isBundle).map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
       lastModified: p.createdAt ? new Date(p.createdAt) : CONTENT_BASELINE,
       changeFrequency: 'weekly' as const,
@@ -210,7 +212,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch {
     // DB unavailable - use fallback products so sitemap still includes product URLs
     const fallback = getFallbackProducts();
-    const fallbackUrls = fallback.map((p) => ({
+    const fallbackUrls = fallback.filter((p) => !p.isBundle).map((p) => ({
       url: `https://anywherelearning.co/shop/${p.slug}`,
       lastModified: CONTENT_BASELINE,
       changeFrequency: 'weekly' as const,

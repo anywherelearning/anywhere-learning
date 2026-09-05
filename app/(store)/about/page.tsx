@@ -130,7 +130,13 @@ const personLd = {
   url: 'https://anywherelearning.co/about',
   image: 'https://anywherelearning.co/amelie.jpg',
   nationality: { '@type': 'Country', name: 'Canada' },
-  sameAs: ['https://www.wikidata.org/wiki/Q139595767'],
+  sameAs: [
+    'https://www.wikidata.org/wiki/Q139595767',
+    'https://ca.pinterest.com/anywherelearning/',
+    'https://www.instagram.com/anywherelearning',
+    'https://www.facebook.com/anywherelearning.co',
+    'https://www.youtube.com/@Anywhere_Learning',
+  ],
   worksFor: { '@id': 'https://anywherelearning.co/#organization' },
   alumniOf: [
     {
