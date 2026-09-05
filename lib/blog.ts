@@ -8652,7 +8652,7 @@ const posts: BlogPost[] = [
     recommendedProduct: 'road-trip-calculator',
     heroImage: '/images/road-trip-math-hero.jpeg',
     heroImageAspect: '4/3',
-    heroImageAlt: 'The back of a car packed for a road trip, suitcases and bags stacked to the roof with a stuffed animal on top, ready to leave',
+    heroImageAlt: 'Two kids asleep against each other in the back seat on a long drive, seatbelts on, the highway stretching out through the windshield',
     content: [
       { type: 'summary', text: 'Road trip math is a real-world math project where a child plans a trip the family is actually taking: measuring the distance, estimating fuel cost from the car’s mileage and the gas price, working out driving time with stops, comparing two routes, and building a budget with a contingency. It covers multi-step arithmetic, decimals, unit rates, percentages, estimation, and time, for ages 8 to 14, and it works because the numbers are real and the answer decides what the family does.' },
 
