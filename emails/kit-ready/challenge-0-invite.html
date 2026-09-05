@@ -1,0 +1,103 @@
+<!--
+  5-DAY REAL-WORLD LEARNING CHALLENGE - Email 0: The invite to the whole list
+  Send: BROADCAST to ALL subscribers EXCEPT tag "challenge-signup" (they already have email 1)
+  Recommended: Sun Sept 6, 9am (the August note promised "first week of September")
+  Subject: The free thing I mentioned
+  Preview: Five days, one real-world activity a day, about an hour each. Starts September 14.
+
+  In Kit: Broadcasts > New Broadcast > Styles tab > paste this whole file as the Custom HTML
+  template. In the Email tab type ONLY the greeting, e.g.
+  Hi {{ subscriber.first_name | strip | default: "there" }},
+
+  Everything else is hardcoded below. Links point at /challenge, which is live.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+  :root { color-scheme: light; supported-color-schemes: light; }
+  html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#588157; }
+  @media (max-width: 620px) {
+    .lm-card { border-radius:0 !important; }
+    .lm-pad  { padding-left:24px !important; padding-right:24px !important; }
+  }
+</style>
+</head>
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
+<tr><td align="center" style="padding:30px 16px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="lm-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:16px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13); color:#2f3a2e;">
+
+  <tr><td style="height:5px; line-height:5px; font-size:0; background:#d4a373;">&nbsp;</td></tr>
+
+  <tr><td align="center" style="padding:26px 40px 0;">
+    <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="180" style="display:inline-block; width:180px; max-width:70%; height:auto; border:0;">
+  </td></tr>
+
+  <tr><td align="center" style="padding:22px 40px 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
+      <td align="center" bgcolor="#faf3e9" style="background:#faf3e9; border-radius:999px; padding:7px 18px; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#d4a373;">Free &middot; September 14 to 18</td>
+    </tr></table>
+  </td></tr>
+
+  <tr><td class="lm-pad" align="center" style="padding:18px 44px 0;">
+    <div style="font-size:31px; line-height:1.2; font-weight:700; color:#2f3a2e; letter-spacing:-0.01em;">Five real-world skills.<br>One capable kid.</div>
+    <div style="font-size:15.5px; line-height:1.6; color:#6b7268; margin-top:12px;">The 5-Day Real-World Learning Challenge, for families with kids 6 to 14.</div>
+  </td></tr>
+
+  <tr><td style="padding:22px 0 0;"><img src="https://anywherelearning.co/email/challenge-week.jpg" alt="The five days of the challenge" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;"></td></tr>
+
+  <tr><td class="lm-pad" style="padding:26px 40px 0;">
+    <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 14px;">{{ message_content }}</div>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 16px;">Last month I said I was running something free in September. Here it is.</p>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 16px;">If you&rsquo;ve been wanting more real-world learning in your days, the kind where your kid is building, deciding, writing and figuring things out because the task is real, and life skills grow right alongside the academics, this is your week to try it. And if you want learning to actually be fun again, for both of you, even better.</p>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 16px;"><strong>Five days, one real-world activity a day, about an hour each.</strong> Monday September 14 to Friday September 18. Nothing to buy, nothing to print, nothing to prep the night before.</p>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 16px;">Every morning you get an email from me with that day&rsquo;s activity. You do it with your kid, not near them, and that part matters more than anything else I could tell you. Then you pop into our Facebook group, post a photo or one line about how it went, and I reply. I&rsquo;m doing all five with my own two kids on the same days. Flops included.</p>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#faf3e9; border-radius:14px; margin:6px 0 20px;"><tr><td style="padding:20px 24px;">
+      <div style="font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:#d4a373; margin-bottom:12px;">What your kid will be working on</div>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="font-size:15.5px; line-height:1.5; color:#2f3a2e;">
+        <tr><td valign="top" style="padding:0 0 9px;"><strong style="color:#588157;">Writing and communication.</strong> Putting an idea into words clearly enough that someone else can follow it, then making a case and listening to the other side.</td></tr>
+        <tr><td valign="top" style="padding:0 0 9px;"><strong style="color:#588157;">STEM and problem-solving.</strong> Building something real outside, testing it, watching it fail, fixing it.</td></tr>
+        <tr><td valign="top" style="padding:0 0 9px;"><strong style="color:#588157;">Critical thinking.</strong> Forming an opinion, backing it up, and changing it when the other side has a point.</td></tr>
+        <tr><td valign="top" style="padding:0 0 9px;"><strong style="color:#588157;">Planning and independence.</strong> Running a real job start to finish while you sit on your hands.</td></tr>
+        <tr><td valign="top" style="padding:0;"><strong style="color:#588157;">Real-world math and money.</strong> A real budget, real trade-offs, and a decision that actually counts.</td></tr>
+      </table>
+    </td></tr></table>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 16px;">Five days, five areas of the Future-Ready Skills Map, and the learning is built right into the doing. Real things, done together, that your kid will actually remember.</p>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:22px 0;"><tr><td style="border-left:4px solid #d4a373; padding:4px 0 4px 20px;"><div style="font-size:19px; line-height:1.45; color:#2f3a2e; font-weight:600;">One heads-up: Friday needs twenty dollars in cash and a trip to a store with your kid. You&rsquo;ve got time to plan for it.</div></td></tr></table>
+
+    <p style="font-size:16.5px; line-height:1.68; color:#2f3a2e; margin:0 0 6px;">Pop your email in below and I&rsquo;ll send you the group link and everything you need. It&rsquo;s free, and it&rsquo;s a really good week to start.</p>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="center" style="padding:16px 0 6px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;"><a href="https://anywherelearning.co/challenge?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=challenge-invite" style="display:inline-block; padding:16px 40px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Save my free spot</a></td></tr></table></td></tr></table>
+    <p style="font-size:13.5px; line-height:1.5; color:#8a8578; margin:8px 0 0; text-align:center;">Free. Ages 6 to 14. Younger siblings tag along just fine.</p>
+  </td></tr>
+
+  <tr><td class="lm-pad" style="padding:26px 40px 0;">
+    <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">See you on the 14th,</p>
+    <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="110" height="38" style="display:block; width:110px; height:auto; border:0;">
+    <p style="font-size:15px; line-height:1.62; color:#4b5563; margin:18px 0 0;"><em>P.S. If you know a family who&rsquo;d be into this, forward this along. The more of us in the group, the better the week gets.</em></p>
+  </td></tr>
+
+  <tr><td class="lm-pad" align="center" style="padding:28px 40px 36px; text-align:center;">
+    <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+    <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
+    <p style="font-size:13px; margin:0 0 12px;"><a href="https://anywherelearning.co/challenge?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=challenge-invite" style="color:#588157; text-decoration:none; font-weight:600;">The challenge</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=challenge-invite" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=challenge-invite" style="color:#588157; text-decoration:none; font-weight:600;">Website</a></p>
+    <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You&rsquo;re getting this because you&rsquo;re on the Anywhere Learning list.<br><a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+  </td></tr>
+
+</table>
+</td></tr></table>
+</body>
+</html>
