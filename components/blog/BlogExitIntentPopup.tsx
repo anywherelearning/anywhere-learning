@@ -43,7 +43,22 @@ const COOLDOWN_DAYS = 3;
 // is what catches mobile readers, once they've actually finished.)
 const POPUP_MAX_DELAY_MS = 60_000; // guaranteed backstop, a true safety net
 const EARLY_TRIGGER_FLOOR_MS = 8_000; // scroll/exit can't fire before this
-const SCROLL_GATE = 0.85; // near the end of the post, not mid-read
+
+// The scroll gate is the end of the article body, not a share of the page.
+// Below the article sit the activities block, the quiz card, related posts
+// and the footer, so a page percentage (the old 85%) only fired once the
+// reader was already browsing other posts. "End of the body" is the FAQ
+// heading when the post has one (the last thing a reader scans), otherwise
+// the article's bottom edge. Once that point is on screen, they have read
+// the post.
+function findArticleEnd(): HTMLElement | null {
+  const article = document.querySelector('article');
+  if (!article) return null;
+  const faq = Array.from(article.querySelectorAll('h2')).find((h) =>
+    /frequently asked/i.test(h.textContent || ''),
+  );
+  return (faq as HTMLElement | undefined) ?? (article as HTMLElement);
+}
 
 type Variant = 'magnet' | 'quiz' | 'membership';
 
@@ -163,11 +178,17 @@ function BlogExitIntentPopupInner({ magnet }: Props) {
 
     const pastFloor = () => Date.now() - mountTimeRef.current >= EARLY_TRIGGER_FLOOR_MS;
 
-    // 2. Fire earlier once they read past the scroll gate.
+    // 2. Fire earlier once the end of the article body is on screen.
+    const articleEnd = findArticleEnd();
     function handleScroll() {
       if (!pastFloor()) return;
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollable > 0 && window.scrollY / scrollable >= SCROLL_GATE) trigger();
+      if (!articleEnd) return;
+      const rect = articleEnd.getBoundingClientRect();
+      // For the FAQ heading: fire when the heading scrolls into view. For a
+      // post without FAQ (rect is the whole article): fire when its bottom
+      // edge comes into view.
+      const y = articleEnd.tagName === 'ARTICLE' ? rect.bottom : rect.top;
+      if (y <= window.innerHeight) trigger();
     }
 
     // 3. Fire earlier on exit intent (mouse leaves the top of the window).
