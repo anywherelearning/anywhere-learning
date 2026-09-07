@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, FormEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
 import { useAccessTier } from '@/hooks/useAccessTier';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import useAttributionSource from '@/components/useAttributionSource';
+import type { LeadMagnet } from '@/lib/lead-magnets';
 import {
   MEMBERSHIP_PRICE_YEAR,
   IS_FOUNDER_PHASE,
@@ -14,12 +16,23 @@ import {
 
 // Set by the quiz when a visitor reaches their result (see LifeSkillQuiz).
 const QUIZ_TAKEN_KEY = 'quiz-taken';
-// Two dismiss buckets so dismissing the quiz popup doesn't suppress the
-// membership popup (and vice versa).
+// Set by EmailForm (free guide, Capable Kid) and by this popup on success.
+const GUIDE_SUBMITTED_KEY = 'free-guide-submitted';
+// Set by the idea-list pages once one email has unlocked the printables.
+const IDEAS_CLAIMED_KEY = 'al-ideas-offer-claimed';
+// Set here when the popup itself captured an email.
+const MAGNET_CLAIMED_KEY = 'lead-magnet-claimed';
+// Three dismiss buckets so dismissing one popup doesn't suppress the others,
+// plus one short shared cooldown so a reader never sees two different popups
+// on two consecutive posts.
+const MAGNET_DISMISS_KEY = 'magnet-exit-popup-dismissed';
 const QUIZ_DISMISS_KEY = 'quiz-exit-popup-dismissed';
 const MEMBER_DISMISS_KEY = 'membership-exit-popup-dismissed';
+const COOLDOWN_KEY = 'exit-popup-cooldown';
+const MAGNET_DISMISS_DAYS = 10;
 const QUIZ_DISMISS_DAYS = 14;
 const MEMBER_DISMISS_DAYS = 30;
+const COOLDOWN_DAYS = 3;
 
 // The popup fires on whichever comes first: an exit gesture (mouse leaving the
 // top of the window), the reader reaching the end of the post, or a generous
@@ -32,7 +45,12 @@ const POPUP_MAX_DELAY_MS = 60_000; // guaranteed backstop, a true safety net
 const EARLY_TRIGGER_FLOOR_MS = 8_000; // scroll/exit can't fire before this
 const SCROLL_GATE = 0.85; // near the end of the post, not mid-read
 
-type Variant = 'quiz' | 'membership';
+type Variant = 'magnet' | 'quiz' | 'membership';
+
+interface Props {
+  /** The one free thing this page should offer. Omit to skip straight to the quiz. */
+  magnet?: LeadMagnet;
+}
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -41,12 +59,12 @@ const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
  * should never get the "unlock with membership" upsell. Everyone else (signed
  * out, or signed-in non-members) gets the normal popup.
  */
-export default function BlogExitIntentPopup() {
-  if (!hasClerk) return <BlogExitIntentPopupInner />;
-  return <MemberGate />;
+export default function BlogExitIntentPopup({ magnet }: Props) {
+  if (!hasClerk) return <BlogExitIntentPopupInner magnet={magnet} />;
+  return <MemberGate magnet={magnet} />;
 }
 
-function MemberGate() {
+function MemberGate({ magnet }: Props) {
   const { isLoaded, isSignedIn } = useUser();
   // Access comes from the database via useAccessTier, not Clerk's
   // publicMetadata.tier: the mirror only gets corrected by a Stripe webhook, so
@@ -60,10 +78,21 @@ function MemberGate() {
   if (isSignedIn && tier === null) return null;
   // Hide only from people who already have the library (paid or trialing).
   if (tier === 'member' || tier === 'trial') return null;
-  return <BlogExitIntentPopupInner />;
+  return <BlogExitIntentPopupInner magnet={magnet} />;
 }
 
-function BlogExitIntentPopupInner() {
+function notExpired(key: string): boolean {
+  const expiry = localStorage.getItem(key);
+  return !!expiry && Date.now() < Number(expiry);
+}
+
+function magnetAlreadyClaimed(magnet: LeadMagnet): boolean {
+  if (localStorage.getItem(MAGNET_CLAIMED_KEY)) return true;
+  if (magnet.kind === 'ideas') return !!localStorage.getItem(IDEAS_CLAIMED_KEY);
+  return !!localStorage.getItem(GUIDE_SUBMITTED_KEY);
+}
+
+function BlogExitIntentPopupInner({ magnet }: Props) {
   const [show, setShow] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [variant, setVariant] = useState<Variant>('quiz');
@@ -71,24 +100,25 @@ function BlogExitIntentPopupInner() {
   const firedRef = useRef(false);
 
   /* ─── Decide variant + eligibility ─── */
-  // Returns the variant to show, or null if neither popup should fire.
+  // Returns the variant to show, or null if no popup should fire. Order:
+  // the page's free magnet (inline email), then the quiz, then membership.
   const resolveVariant = useCallback((): Variant | null => {
     try {
+      if (notExpired(COOLDOWN_KEY)) return null;
+      if (magnet && !magnetAlreadyClaimed(magnet) && !notExpired(MAGNET_DISMISS_KEY)) {
+        return 'magnet';
+      }
       const quizDone = !!localStorage.getItem(QUIZ_TAKEN_KEY);
       if (!quizDone) {
-        // Quiz variant — suppressed by its own dismiss bucket.
-        const expiry = localStorage.getItem(QUIZ_DISMISS_KEY);
-        if (expiry && Date.now() < Number(expiry)) return null;
+        if (notExpired(QUIZ_DISMISS_KEY)) return null;
         return 'quiz';
       }
-      // Membership variant — suppressed by its own dismiss bucket.
-      const expiry = localStorage.getItem(MEMBER_DISMISS_KEY);
-      if (expiry && Date.now() < Number(expiry)) return null;
+      if (notExpired(MEMBER_DISMISS_KEY)) return null;
       return 'membership';
     } catch {
-      return 'quiz';
+      return magnet ? 'magnet' : 'quiz';
     }
-  }, []);
+  }, [magnet]);
 
   /* ─── Show popup ─── */
   const trigger = useCallback(() => {
@@ -111,15 +141,21 @@ function BlogExitIntentPopupInner() {
       document.body.style.overflow = '';
     }, 300);
     try {
-      const key = dismissedVariant === 'membership' ? MEMBER_DISMISS_KEY : QUIZ_DISMISS_KEY;
-      const days = dismissedVariant === 'membership' ? MEMBER_DISMISS_DAYS : QUIZ_DISMISS_DAYS;
-      localStorage.setItem(key, String(Date.now() + days * 24 * 60 * 60 * 1000));
+      const [key, days] =
+        dismissedVariant === 'membership'
+          ? [MEMBER_DISMISS_KEY, MEMBER_DISMISS_DAYS]
+          : dismissedVariant === 'magnet'
+            ? [MAGNET_DISMISS_KEY, MAGNET_DISMISS_DAYS]
+            : [QUIZ_DISMISS_KEY, QUIZ_DISMISS_DAYS];
+      const day = 24 * 60 * 60 * 1000;
+      localStorage.setItem(key, String(Date.now() + days * day));
+      localStorage.setItem(COOLDOWN_KEY, String(Date.now() + COOLDOWN_DAYS * day));
     } catch {}
   }, [variant]);
 
   /* ─── Fire on whichever comes first: timer, scroll depth, or exit gesture ─── */
   useEffect(() => {
-    // Don't arm anything if neither variant is eligible right now.
+    // Don't arm anything if no variant is eligible right now.
     if (!resolveVariant()) return;
 
     // 1. Guaranteed backstop.
@@ -203,12 +239,193 @@ function BlogExitIntentPopupInner() {
           </svg>
         </button>
 
-        {variant === 'quiz' ? (
+        {variant === 'magnet' && magnet ? (
+          <MagnetVariant magnet={magnet} onDismiss={dismiss} />
+        ) : variant === 'quiz' ? (
           <QuizVariant onDismiss={dismiss} />
         ) : (
           <MembershipVariant onDismiss={dismiss} />
         )}
       </div>
+    </div>
+  );
+}
+
+/* ─── Variant 0: the page's free magnet, email captured right here ─── */
+function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: () => void }) {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const source = useAttributionSource();
+
+  const cover =
+    magnet.kind === 'capable-kid'
+      ? '/images/capable-kid-cover.jpg'
+      : magnet.kind === 'free-guide'
+        ? '/images/free-guide-cover.jpg'
+        : null;
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setErrorMessage('');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+    setStatus('loading');
+    try {
+      const { newMetaEventId } = await import('@/lib/tracking');
+      const metaEventId = newMetaEventId();
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source: source || 'blog-popup',
+          ...(magnet.kind === 'ideas' ? { checklist: magnet.slug } : {}),
+          ...(magnet.kind === 'capable-kid' ? { guide: 'capable-kid' } : {}),
+          metaEventId,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+        setStatus('error');
+        return;
+      }
+      setStatus('success');
+      try {
+        localStorage.setItem(MAGNET_CLAIMED_KEY, '1');
+        if (magnet.kind === 'ideas') {
+          localStorage.setItem(IDEAS_CLAIMED_KEY, JSON.stringify({ at: Date.now() }));
+        } else {
+          localStorage.setItem(GUIDE_SUBMITTED_KEY, 'true');
+        }
+      } catch {}
+      try {
+        const { pinterestSetEnhancedMatch, trackLead } = await import('@/lib/tracking');
+        pinterestSetEnhancedMatch(email);
+        const label =
+          magnet.kind === 'ideas'
+            ? `ideas:${magnet.slug}`
+            : magnet.kind === 'capable-kid'
+              ? 'free-guide:capable-kid'
+              : 'free-guide';
+        trackLead(`popup:${label}`, metaEventId);
+      } catch {}
+    } catch {
+      setErrorMessage('Something went wrong. Please try again.');
+      setStatus('error');
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div className="px-6 sm:px-8 pt-8 sm:pt-10 pb-7 sm:pb-8 text-center">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-forest-dark mb-3">
+          On its way
+        </p>
+        <h2
+          id="blog-exit-popup-title"
+          className="font-display text-[1.5rem] sm:text-[1.85rem] text-forest leading-[1.1] mb-3 text-balance"
+        >
+          Check your inbox.
+        </h2>
+        <p className="text-[14px] sm:text-[15px] text-gray-500 leading-relaxed max-w-[380px] mx-auto mb-6">
+          {magnet.title} is on its way to {email}. If it is not there in a few minutes, check the
+          promotions folder.
+        </p>
+        {magnet.kind === 'ideas' ? (
+          <Link
+            href={magnet.href}
+            onClick={onDismiss}
+            className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl text-[15px] text-center transition-all duration-200 no-underline"
+          >
+            Open the printable now
+          </Link>
+        ) : (
+          <button
+            onClick={onDismiss}
+            className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl text-[15px] text-center transition-all duration-200"
+          >
+            Back to the article
+          </button>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="px-6 sm:px-8 pt-7 sm:pt-8 pb-6 sm:pb-7">
+      <div className={`flex items-start gap-4 sm:gap-5 mb-5 ${cover ? '' : 'text-center flex-col items-center'}`}>
+        {cover && (
+          <div className="relative w-[72px] sm:w-[104px] flex-shrink-0 aspect-[800/1035] rounded-lg overflow-hidden shadow-md bg-[#E6EBDF]">
+            <Image
+              src={cover}
+              alt={`${magnet.title} cover`}
+              fill
+              sizes="(max-width: 640px) 72px, 104px"
+              className="object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+        <div className="min-w-0">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C97B5C] mb-2">
+            {magnet.eyebrow}
+          </p>
+          <h2
+            id="blog-exit-popup-title"
+            className="font-display text-[1.45rem] sm:text-[1.8rem] text-forest leading-[1.08] mb-2 text-balance"
+          >
+            {magnet.title}
+          </h2>
+          <p className="text-[13.5px] sm:text-[14.5px] text-gray-500 leading-relaxed">
+            {magnet.blurb}
+          </p>
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit} noValidate>
+        <label htmlFor="blog-exit-popup-email" className="sr-only">
+          Email address
+        </label>
+        <div className="flex flex-col sm:flex-row gap-2.5">
+          <input
+            id="blog-exit-popup-email"
+            type="email"
+            inputMode="email"
+            autoComplete="email"
+            placeholder="Your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === 'loading'}
+            className="flex-1 min-w-0 rounded-xl border border-[#C9D3BE] bg-white px-4 py-3 text-[15px] text-forest-dark placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-forest/40"
+          />
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="bg-forest hover:bg-forest-dark disabled:opacity-70 text-cream font-semibold px-5 py-3 rounded-xl text-[15px] whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg shadow-md"
+          >
+            {status === 'loading' ? 'Sending…' : magnet.cta}
+          </button>
+        </div>
+        {errorMessage && (
+          <p className="mt-2 text-[13px] text-[#B5473A]" role="alert">
+            {errorMessage}
+          </p>
+        )}
+        <p className="mt-2.5 text-center text-[12px] text-gray-400">
+          One email, no spam, unsubscribe any time.
+        </p>
+      </form>
+
+      <button
+        onClick={onDismiss}
+        className="mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+      >
+        No thanks, I&rsquo;ll keep reading
+      </button>
     </div>
   );
 }

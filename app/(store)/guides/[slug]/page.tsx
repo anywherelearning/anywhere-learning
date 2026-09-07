@@ -23,6 +23,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import TryItThisWeek from '@/components/blog/TryItThisWeek';
 import { RESOURCE_TOPIC_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
+import { getLeadMagnetForResource } from '@/lib/lead-magnets';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
@@ -494,7 +495,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
         <RelatedBlogPosts slugs={resource.relatedBlogSlugs} />
       </main>
 
-      <BlogExitIntentPopup />
+      <BlogExitIntentPopup magnet={getLeadMagnetForResource(resource.topic)} />
     </>
   );
 }
