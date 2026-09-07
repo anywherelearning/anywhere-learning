@@ -35,13 +35,12 @@ const MEMBER_DISMISS_DAYS = 30;
 const COOLDOWN_DAYS = 3;
 
 // The popup fires on whichever comes first: an exit gesture (mouse leaving the
-// top of the window), the reader reaching the end of the post, or a generous
-// timer backstop. The scroll gate sits near the end and the timer is long on
-// purpose, so the popup reads as "finished / leaving" rather than a mid-read
-// interrupt. A short floor keeps the exit path from firing the instant someone
-// lands. (Note: mouse-leave doesn't exist on touch, so the near-end scroll gate
-// is what catches mobile readers, once they've actually finished.)
-const POPUP_MAX_DELAY_MS = 60_000; // guaranteed backstop, a true safety net
+// top of the window) or the reader reaching the end of the article body.
+// There is no timer: a popup that interrupts someone mid-paragraph costs
+// more goodwill than it earns. A short floor keeps the exit path from firing
+// the instant someone lands. (Note: mouse-leave doesn't exist on touch, so
+// the end-of-article gate is what catches mobile readers, once they've
+// actually finished.)
 const EARLY_TRIGGER_FLOOR_MS = 8_000; // scroll/exit can't fire before this
 
 // The scroll gate is the end of the article body, not a share of the page.
@@ -168,17 +167,14 @@ function BlogExitIntentPopupInner({ magnet }: Props) {
     } catch {}
   }, [variant]);
 
-  /* ─── Fire on whichever comes first: timer, scroll depth, or exit gesture ─── */
+  /* ─── Fire on whichever comes first: end of article, or exit gesture ─── */
   useEffect(() => {
     // Don't arm anything if no variant is eligible right now.
     if (!resolveVariant()) return;
 
-    // 1. Guaranteed backstop.
-    const timer = setTimeout(trigger, POPUP_MAX_DELAY_MS);
-
     const pastFloor = () => Date.now() - mountTimeRef.current >= EARLY_TRIGGER_FLOOR_MS;
 
-    // 2. Fire earlier once the end of the article body is on screen.
+    // 1. Fire once the end of the article body is on screen.
     const articleEnd = findArticleEnd();
     function handleScroll() {
       if (!pastFloor()) return;
@@ -191,7 +187,7 @@ function BlogExitIntentPopupInner({ magnet }: Props) {
       if (y <= window.innerHeight) trigger();
     }
 
-    // 3. Fire earlier on exit intent (mouse leaves the top of the window).
+    // 2. Fire on exit intent (mouse leaves the top of the window).
     function handleMouseLeave(e: MouseEvent) {
       if (e.clientY > 0 || !pastFloor()) return;
       trigger();
@@ -201,7 +197,6 @@ function BlogExitIntentPopupInner({ magnet }: Props) {
     document.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
