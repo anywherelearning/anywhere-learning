@@ -63,3 +63,9 @@ next-env.d.ts
 
 # Impeccable design skill (local tooling, not app code)
 /.claude/skills/impeccable/
+
+# Local strategy docs (never committed; copies of Desktop deliverables for in-app viewing)
+notes/
+
+# google service account key for scripts/seo-pull.ts
+google-service-account.json

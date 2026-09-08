@@ -19,7 +19,8 @@
     "indexnow": "npx tsx scripts/indexnow.ts",
     "email:preview": "email dev",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "seo:pull": "node --env-file=.env.local node_modules/.bin/tsx scripts/seo-pull.ts"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,7 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.0.1",
     "drizzle-kit": "^0.31.9",
+    "googleapis": "^178.0.0",
     "postcss": "^8.5.8",
     "react-email": "^5.2.10",
     "tailwindcss": "^4.1.8",
