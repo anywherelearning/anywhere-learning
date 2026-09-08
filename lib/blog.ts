@@ -1076,7 +1076,7 @@ const posts: BlogPost[] = [
       { type: 'summary', text: 'Outdoor STEM challenges are hands-on science, technology, engineering, and maths activities that use natural materials, sticks, mud, water, rocks, and plants, instead of lab equipment or worksheets. These 15 challenges work for ages 6 to 14, require low prep or special supplies, and teach physics, biology, engineering, and data skills through exploration and play.' },
       { type: 'paragraph', text: 'Some of the best learning happens when kids have a pile of sticks, a creek, and a challenge. Build a bridge. Make it hold something heavy. They test, fail, try again, argue about the design, and eventually figure it out. Nobody needs to call it \u201cengineering\u201d, it just is.' },
       { type: 'paragraph', text: 'That\u2019s the thing about outdoor STEM: it doesn\u2019t feel like school. There\u2019s no worksheet, no right answer, no teacher at the front. There\u2019s just a problem, some materials, and a kid who wants to solve it. And that\u2019s exactly how real scientists and engineers work.' },
-      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.) If you would rather start with the woods themselves, [forest school activities](/blog/forest-school-activities) is the companion list, and for the indoor version see [engineering for kids](/blog/engineering-for-kids), [LEGO STEM challenges](/blog/lego-stem-activities) and [Rube Goldberg machines](/blog/rube-goldberg-kids).' },
+      { type: 'paragraph', text: 'Here are 15 outdoor challenges that cover engineering, physics, biology, and environmental science, all using materials you can find in your garden, a park, or a hiking trail. (If you want the broader framework, our [nature-based learning guide](/guides/nature-based-learning) covers why outdoor learning sticks the way classroom science rarely does.) If you want the bigger picture first, the [STEM for Kids guide](/guides/stem-for-kids) explains what a STEM challenge is and how to run one at home. If you would rather start with the woods themselves, [forest school activities](/blog/forest-school-activities) is the companion list, and for the indoor version see [engineering for kids](/blog/engineering-for-kids), [LEGO STEM challenges](/blog/lego-stem-activities) and [Rube Goldberg machines](/blog/rube-goldberg-kids).' },
       { type: 'heading', level: 2, text: 'Engineering challenges' },
       { type: 'heading', level: 3, text: '1. Build a bridge that holds weight' },
       { type: 'paragraph', text: 'Find a small gap (between two rocks, two logs, or the edges of a path) and build a bridge using only natural materials: sticks, stones, bark, vine. Test it by placing progressively heavier objects on top. This teaches load distribution, structural design, and iterative testing.' },
@@ -2694,13 +2694,15 @@ const posts: BlogPost[] = [
 
   {
     slug: 'invent-a-sport-kids',
-    title: 'Let Your Kids Invent a Sport (Here\u2019s What They\u2019ll Actually Learn)',
+    title: 'How to Invent a New Sport: A Kids\u2019 Project, Rules to Playtest',
+    metaDescription: 'How to invent a sport with kids, step by step: pick the goal, write the rules, build the scoring, playtest with the family and fix what breaks. Ages 6 to 14.',
     excerpt: 'Inventing rules, negotiating fairness, and playtesting their own game teaches more than any PE class, and it\u2019s the kind of learning kids never forget.',
     hook: 'Give kids a trampoline, a ball, and no rules. They\u2019ll invent a sport with a scoring system adults can\u2019t follow, and that\u2019s the point.',
     category: 'creativity-maker',
     pillarSlug: 'creativity-maker-activities',
     publishedAt: '2025-12-09',
-    keywords: ['invent a sport kids', 'kids create games', 'homeschool physical education', 'game design PE', 'creative play learning', 'outdoor games kids create'],
+    dateModified: '2026-09-07',
+    keywords: ['how to invent a sport', 'invent a new sport', 'create a new sport', 'how to make a sport', 'new sport ideas', 'invent a sport kids', 'kids create games', 'homeschool physical education', 'game design PE', 'creative play learning', 'outdoor games kids create'],
     readTimeMinutes: 9,
     author: amelie,
     heroImage: '/images/invent-a-sport-hero.jpeg',
@@ -2764,6 +2766,7 @@ const posts: BlogPost[] = [
 
       { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you real-world activities your kids can try this week. No curriculum, low prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
+        { question: 'How do you invent a new sport?', answer: 'Start with what the sport is for (a goal, a race, a target), pick the equipment you already own, write three rules and a way to score, then play it for ten minutes and change the one rule that made it boring or unfair. The playtest is the whole lesson: kids learn that rules exist to make a game work, not to be obeyed.' },
         { question: 'What if my kids just argue and never actually play?', answer: 'The arguing IS the learning. Give them time to work it out. If it escalates beyond productive disagreement, step in briefly to model negotiation: \u201cIt sounds like you both have different ideas. Can you try each version for 5 minutes and see which is more fun?\u201d Then step back again.' },
         { question: 'Does inventing a sport count as PE for homeschooling?', answer: 'Absolutely. Invented sports involve running, throwing, jumping, balancing, and sustained physical activity. Plus they add design thinking, rule-making, and social problem-solving that traditional PE often misses. Many homeschool families document invented games as both PE and creative thinking.' },
         { question: 'What if my child wants to play alone, can they still invent a sport?', answer: 'Yes! Solo sports and challenges are just as valuable. Think target games, obstacle courses, timed challenges, trick shot competitions (against their own record), or endurance challenges. The design thinking is the same; they\u2019re still creating rules, testing, and iterating.' },
@@ -3863,7 +3866,7 @@ const posts: BlogPost[] = [
     category: 'ai-digital-literacy',
     pillarSlug: 'ai-digital-literacy',
     publishedAt: '2026-04-21',
-    dateModified: '2026-05-04',
+    dateModified: '2026-09-07',
     keywords: [
       'screen free activities for kids',
       'things to do besides screens',
@@ -3968,6 +3971,7 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'Print the list', text: 'Print this list and tape it to the fridge, or paste it inside a kitchen cabinet. Next time you hear "I\u2019m bored," point at the fridge instead of answering. Nine times out of ten, the problem solves itself.' },
       { type: 'cta', text: 'Want more real-world activities that build curiosity and independence, no curriculum, no worksheets? Our free guide gives you a week of activities your kids can try right away.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
+        { question: 'What are the best screen-free activities after school?', answer: 'The ones that need a body and end with something to show: cooking one part of dinner, a ten-minute build with whatever is in the recycling, a job outside, or a board game with real stakes. The first twenty minutes after school are the hardest; pick one thing that starts without a decision.' },
         { question: 'What are the best screen-free activities for 10-year-olds?', answer: 'Ten-year-olds hit a sweet spot for screen-free activities that involve real skills: building cardboard machines, cooking full meals, writing and illustrating their own comics, sewing small projects, or starting mini businesses. They\u2019re old enough to work independently for an hour at a stretch and young enough to still love making messy, imperfect things.' },
         { question: 'How do I keep my kids off screens during the summer?', answer: 'A published daily or weekly schedule helps more than willpower. Protect a no-screen window every day (mornings, before dinner, or all outdoor time), keep a visible list of screen-free activities on the fridge, and join in yourself for the first week to build momentum. Once the rhythm is established, kids pick screen-free options more often on their own.' },
         { question: 'What can kids do besides screens when they say they\u2019re bored?', answer: 'Hand them a list of options and walk away. Scavenger hunts, cardboard-box builds, drawing from real life, reading in a fort, baking from a recipe, and inventing their own games all work. The key is that boredom itself isn\u2019t a problem to solve. It\u2019s the space where kids generate their own ideas.' },
@@ -4942,13 +4946,14 @@ const posts: BlogPost[] = [
 
 {
     slug: 'age-appropriate-chores-life-skills',
-    title: 'Age-Appropriate Chores That Build Real Life Skills (Not Just a Clean House)',
+    title: 'Chores by Age: The Chore List That Builds Real Life Skills',
+    metaDescription: 'A chore list by age from 2 to 14, including a daily chore list and what tweens can own, built to grow real life skills rather than just a clean house.',
     excerpt: 'A practical breakdown of what kids can handle at every age, from toddlers to teens, and why chores are one of the most underrated ways to build independence, confidence, and life skills.',
     hook: 'The Harvard Grant Study tracked people for 75 years. One of the strongest predictors of adult success? Chores in childhood.',
     category: 'future-ready-skills',
     publishedAt: '2025-11-10',
-    dateModified: '2025-11-10',
-    keywords: ['age-appropriate chores', 'chores for kids', 'life skills chores', 'teaching kids responsibility', 'kids independence', 'household responsibilities kids', 'self-sufficient kids'],
+    dateModified: '2026-09-07',
+    keywords: ['chores by age', 'chore list for kids', 'chore chart by age', 'chores for tweens', 'daily chore list for kids', 'age-appropriate chores', 'chores for kids', 'life skills chores', 'teaching kids responsibility', 'kids independence', 'household responsibilities kids', 'self-sufficient kids'],
     readTimeMinutes: 12,
     author: amelie,
     heroImage: '/images/chores-life-skills-hero.jpeg',
@@ -5096,6 +5101,8 @@ const posts: BlogPost[] = [
       { type: 'cta', text: 'Want a practical roadmap for building independence and life skills at every age? Our free guide is full of low-prep ideas you can start this week.', href: '/free-guide', label: 'Get the Free Guide' },
 
       { type: 'faq', items: [
+        { question: 'What chores can a tween do?', answer: 'By 11 to 14 a kid can own whole jobs, not steps: cook one dinner a week from shopping list to dishes, do their own laundry start to finish, mow or shovel, manage the recycling, and keep one shared space (the bathroom, the car) to a standard you agree on together. The shift from "help with" to "in charge of" is the point.' },
+        { question: 'How many chores a day is reasonable for a kid?', answer: 'One daily job they own, plus whatever comes from living in the house: their dishes, their laundry in the basket, their own space. A short list done every day beats a long chart that collapses by Wednesday.' },
         { question: 'Should kids get paid for chores?', answer: 'It depends on the family, but many child development experts distinguish between baseline contributions (things you do because you are part of a household) and extra jobs (things you can earn money for). Baseline tasks like cleaning up after yourself, doing laundry, and helping with meals build responsibility. Extra tasks like washing the car, organizing the garage, or yard work for neighbours can be tied to earning. Mixing the two often backfires because kids start negotiating payment for basic responsibilities.' },
         { question: 'What if my kid does a terrible job?', answer: 'They will. Especially at first. The question is whether you want a perfectly folded towel today or a capable adult in ten years. Accept imperfection, offer gentle guidance over time, and never redo their work in front of them. Competence comes from repetition, not from getting it right the first time.' },
         { question: 'My teenager refuses to do anything. What now?', answer: 'Start with one non-negotiable contribution and hold the line. Make it small, specific, and daily. "Your dishes go in the dishwasher after every meal" is better than "help around the house more." Once one thing is automatic, add another. And model the behaviour. If you want a teen who pitches in, they need to see you pitching in without complaining.' },
@@ -5833,7 +5840,7 @@ const posts: BlogPost[] = [
     hook: 'Most kids have never managed their own time, because an adult has always managed it for them.',
     category: 'future-ready-skills',
     publishedAt: '2026-06-01',
-    dateModified: '2026-06-01',
+    dateModified: '2026-09-07',
     keywords: ['time management for kids', 'teaching kids time management', 'time management skills for children', 'how to help kids manage time', 'time management activities for kids', 'kids and time blindness', 'teaching kids to plan their day', 'helping kids be on time', 'time management for teens', 'kids time management by age'],
     readTimeMinutes: 13,
     author: amelie,
@@ -5941,6 +5948,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Common questions about teaching kids time management' },
       { type: 'faq', items: [
+        { question: 'What are the types of time management skills kids need?', answer: 'Four, roughly in the order kids can learn them: estimating how long something takes, sequencing (what comes first), sticking to a plan when something more fun shows up, and adjusting when the plan breaks. Most "my kid is slow" problems are the first one, and it is the easiest to practice.' },
         { question: 'What is time management for kids?', answer: 'Time management for kids is the ability to sense how long things take, estimate and plan around that, put tasks in a sensible order, decide what matters first, and recover when a plan falls apart. It is not the same as being punctual or owning a planner. Those are tools and outcomes. The actual skill is the underlying sense of time and the ability to plan and adjust around it, and it is built through real-world practice over years, not taught in a single lesson.' },
         { question: 'At what age can kids start managing their own time?', answer: 'It develops in stages. Around ages 6 to 8, kids are mostly building a felt sense of how long things take, with help from visual timers. Around 9 to 11, they can start estimating and planning short, contained stretches of time if you let them feel the consequences. By 12 to 14, most kids can genuinely manage longer stretches with competing demands, including real deadlines and their own planning system. Expecting full self-management before about age 9 sets everyone up for frustration.' },
         { question: 'Why does my child have no sense of time?', answer: 'Because the brain machinery for tracking time is still developing, and for many kids it develops slowly. This is called time blindness, and it is normal in young kids and especially common and longer-lasting in kids with ADHD. It is made worse by two modern factors: time is almost entirely externalized for kids (adults and schedules track it for them, so they never practice), and screens are engineered to collapse the sense of time passing. The fix is to make time visible and to hand kids ownership of it so they get to practice feeling it.' },
@@ -6430,7 +6438,7 @@ const posts: BlogPost[] = [
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
     publishedAt: '2026-03-05',
-    dateModified: '2026-03-05',
+    dateModified: '2026-09-07',
     keywords: ['how to teach history to kids', 'real world history activities', 'homeschool history without curriculum', 'teaching history without a textbook', 'history activities for kids', 'homeschool history ideas', 'living history for kids', 'history for 6 to 14 year olds'],
     readTimeMinutes: 11,
     author: amelie,
@@ -6524,6 +6532,7 @@ const posts: BlogPost[] = [
 
       { type: 'pull-quote', text: 'Textbooks make history boring. Reality makes it gripping. You do not need to teach history. You need to point at it.' },
       { type: 'faq', items: [
+        { question: 'How do I start teaching history to a young kid?', answer: 'Start with their own timeline (when they were born, moved, lost a tooth), then the family\u2019s (grandparents, a photo, an object with a story), then the street they live on. History clicks when it starts with "you" and moves outward, not when it starts with a date.' },
         { question: 'How do I teach history without a curriculum if I am not a history person myself?', answer: 'You do not need to be an expert. You need to be curious alongside your kid. Pick one question a week ("why are there so many Irish names in our town?" "where did pizza actually come from?") and look it up together. Modelling curiosity teaches more than expertise. Most parents discover they enjoy history far more as adults than they did in school.' },
         { question: 'What if my kid asks a hard history question I cannot answer?', answer: 'Say so. "I don\'t know, let\'s find out." Then actually look it up together. That moment teaches two skills at once: history and how to handle not knowing. The parents who pretend to know lose credibility fast, especially with kids over 10.' },
         { question: 'Do I need to follow a chronological order?', answer: 'No, and trying to often kills interest. Real historians work backwards from a question. Follow your kid\'s curiosity. A kid who falls into Ancient Rome at 8 and then jumps to the Civil War at 9 is doing history. The chronology can be assembled later when they have enough hooks to hang it on.' },
@@ -6913,7 +6922,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'At this age, narration is half the lesson. You do not need to explain Newton\'s laws. You just say "look, when you made the ramp steeper, the car went faster" and let them notice. They are recording the pattern, even if they cannot name it.' },
 
       { type: 'heading', level: 2, text: 'Ages 8 to 10: hands-on engineering and structured experiments' },
-      { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click. Two favourites for this age: [LEGO STEM challenges](/blog/lego-stem-activities) and building a [Rube Goldberg machine](/blog/rube-goldberg-kids).' },
+      { type: 'paragraph', text: 'This is the sweet spot for hands-on STEM. Their attention span jumps to 45 minutes or more on something they care about. They can follow a multi-step plan, measure with a ruler, and write down what they observed. They want to build real things and they want them to work. This is when [engineering activities for kids](/blog/engineering-for-kids) really click. Two favourites for this age: [LEGO STEM challenges](/blog/lego-stem-activities) and building a [Rube Goldberg machine](/blog/rube-goldberg-kids). The [STEM for Kids guide](/guides/stem-for-kids) has the full framework if you want it.' },
       { type: 'list', ordered: false, items: [
         'Build a popsicle-stick bridge, then test how much weight it holds before it snaps.',
         'Fly a paper airplane three times, measure distance, change one variable, fly again.',
@@ -8298,7 +8307,7 @@ const posts: BlogPost[] = [
     hook: 'You can tell a kid to be kind a thousand times and change nothing. Empathy is not taught with words. It is built with experiences.',
     category: 'future-ready-skills',
     publishedAt: '2026-08-03',
-    dateModified: '2026-08-03',
+    dateModified: '2026-09-07',
     keywords: ['teaching empathy to kids', 'how to teach kids empathy', 'how to teach empathy to a child', 'empathy activities for kids', 'raising empathetic kids', 'how to raise an emotionally intelligent child', 'kindness activities for kids', 'empathy for kids', 'developing empathy in children', 'teaching kids empathy'],
     readTimeMinutes: 12,
     author: amelie,
@@ -8409,6 +8418,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'And if you want ready-made ways to turn empathy into practice rather than a lecture, that is exactly what the Anywhere Learning membership is built for: real-world, hands-on activities for ages 6 to 14 that grow kindness, connection, and character, done together, with almost no prep.' },
 
       { type: 'faq', items: [
+        { question: 'What does empathy look like in kids at different ages?', answer: 'At 6 it is noticing that someone is upset. At 8 it is guessing why. At 10 it is doing something about it without being told. At 12 it is holding two views at once, including one they disagree with. You teach the next step by naming the one they just did.' },
         { question: 'How do you teach empathy to a child?', answer: 'You teach empathy mostly through experience and example, not lectures. The most powerful move is modeling empathy yourself, visibly, including toward your child. Beyond that: name feelings (theirs and others’), validate their own emotions so they know what empathy feels like to receive, ask perspective-taking questions instead of telling them how others feel, read fiction and discuss characters, give them someone or something to care for, and coach genuine repair rather than forced apologies. Empathy grows slowly through many small, real moments.' },
         { question: 'Can empathy actually be taught, or are kids just born with it?', answer: 'Both. Children come wired with the beginnings of empathy, and it then grows or stays stunted depending on their environment and what they see modeled. Some kids are naturally more attuned than others, but every child can develop empathy with the right experiences: being met with empathy themselves, seeing it modeled, practicing perspective-taking, and having real chances to care for others. It is a capacity you build, not a fixed trait.' },
         { question: 'At what age do kids develop empathy?', answer: 'Empathy develops gradually. Toddlers show early signs (getting upset when another child cries), but true self-focus is normal through the early years. Around ages 6 to 8, kids start noticing and naming others’ feelings with coaching. Ages 9 to 11 bring a big leap in genuine perspective-taking, and this is often when empathy becomes visibly real. By 12 to 14, kids can extend empathy to strangers and causes. Expecting more than a child’s stage allows just frustrates everyone.' },

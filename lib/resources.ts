@@ -2060,6 +2060,7 @@ const resources: ResourcePage[] = [
     excerpt: 'The essential life skills every child needs, organized by age group. What each skill is, why it matters developmentally, and what it looks like when kids actually have it.',
     topic: 'future-ready-skills',
     publishedAt: '2026-03-21',
+    dateModified: '2026-09-07',
     keywords: [
       'life skills for kids by age',
       'essential life skills kids should know',
@@ -2203,6 +2204,7 @@ const resources: ResourcePage[] = [
       { type: 'cta', text: 'Want the complete breakdown with hands-on activity ideas for every skill area and age band? The Future-Ready Skills Map comes with the membership, and you can start with a 14-day free trial.', href: '/#membership', label: 'Start Your Free Trial' },
 
       { type: 'faq', items: [
+        { question: 'What are life skills for kids?', answer: 'Life skills are the practical abilities a child needs to run their own day and, eventually, their own life: feeding themselves, handling money, managing time, speaking up, solving a problem without an adult, and recovering when something goes wrong. They are learned by doing real tasks with real stakes, not by being told about them. This guide sorts them by the age a kid can realistically own each one.' },
         { question: 'What life skills should a 10-year-old know?', answer: 'By age 10, most kids should be able to cook a simple meal, do laundry, manage a small amount of money, resolve peer conflicts without adult scripting, handle disappointment, pack for a trip independently, and ask basic critical thinking questions about the information they encounter.' },
         { question: 'How do I teach life skills without a curriculum?', answer: 'Include your child in real life: cook together, budget together, fix things together. Give them real responsibility with real consequences. Ask questions instead of giving answers. And let them fail in safe environments where the stakes are low enough to learn from.' },
         { question: 'What are the most important life skills for kids?', answer: 'Research consistently points to emotional regulation, critical thinking, communication, self-management, and adaptability as the skills most predictive of long-term success. Practical skills like cooking and money management matter too, but the emotional and cognitive foundations come first.' },
@@ -2236,6 +2238,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no chemistry sets, no robotics camps required.',
     topic: 'stem-for-kids',
     publishedAt: '2026-03-21',
+    dateModified: '2026-09-07',
     keywords: [
       'STEM for kids', 'STEM activities for kids', 'STEM at home',
       'real world STEM', 'engineering for kids', 'science for kids',
@@ -2558,6 +2561,30 @@ const resources: ResourcePage[] = [
 
 
       {
+        type: 'heading',
+        level: 2,
+        text: 'What a STEM challenge is (and five to try this week)',
+      },
+      {
+        type: 'paragraph',
+        text: 'A STEM challenge is a problem with a constraint: build the tallest tower from twenty straws, make a boat that carries ten coins, get a marble from the table to the floor in more than ten seconds. The constraint is what turns "playing with cardboard" into engineering, because kids have to test, fail, and change one thing at a time. It needs no kit, no worksheet, and usually no more than the recycling bin.',
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'Straw tower: the tallest free-standing tower from 20 straws and 50 cm of tape. Then take five straws away and rebuild.',
+          'Coin boat: a foil boat that holds the most coins before it sinks. Predict the number first, then count.',
+          'Slow marble: a ramp or track that takes a marble as long as possible to reach the floor. Ten seconds is hard; thirty is a triumph.',
+          'Egg drop: a landing pad from newspaper and tape that saves a raw egg from a one-metre drop. Best done outside.',
+          'Bridge test: a bridge from paper and paper clips across a 30 cm gap that holds a full water bottle.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'The [STEM checklist](/ideas/stem-ideas) has 24 more no-kit builds like these, the [outdoor STEM challenges](/blog/outdoor-stem-challenges) post takes the same idea into the yard, and [STEM activities by age](/blog/stem-activities-by-age) tells you which ones suit a 6-year-old versus a 13-year-old.',
+      },
+      {
         type: 'cta',
         text: 'New to all of this? Our free guide has simple real-world activities to start this week. No prep, no curriculum, no pressure.',
         href: '/free-guide',
@@ -2567,6 +2594,14 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          {
+            question: 'What is a STEM challenge for kids?',
+            answer: 'A STEM challenge is a hands-on problem with a clear goal and a constraint, such as building the tallest tower from twenty straws or a boat that carries ten coins. Kids design, test, fail, and improve, which is the engineering process in miniature. The constraint matters more than the materials: it is what makes them think instead of just build.',
+          },
+          {
+            question: 'What are some easy STEM challenges for kids at home?',
+            answer: 'Straw towers, foil boats that hold coins, a marble run that goes as slowly as possible, an egg drop from one metre, and a paper bridge that holds a water bottle. Each one takes a few household materials and under an hour, and each one gets better on the second try, which is the point.',
+          },
           {
             question: 'What does STEM actually stand for?',
             answer: 'Science, Technology, Engineering, and Mathematics. STEAM adds Art (design, communication, aesthetics). The acronym originated at the U.S. National Science Foundation in the early 2000s as shorthand for the cluster of subjects that drive most modern innovation.',

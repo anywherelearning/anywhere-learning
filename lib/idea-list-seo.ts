@@ -234,9 +234,9 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'chores-by-age-ideas': {
-    seoTitle: 'Chores for Kids by Age: 2 to 12+ (Free Printable Chore Chart)',
+    seoTitle: 'Chore List for Kids by Age: 2 to 14 (Free Printable Chore Chart)',
     metaDescription:
-      '24 age-appropriate chores split into ages 2-5, 6-8, 9-11, and 12+. Free printable chore chart, sent by email. Post it once and stop the daily reminding.',
+      '30 chores by age (2-5, 6-8, tweens 9-11, teens 12-14) plus a daily chore list. Free printable chore chart, sent by email. Post it once and stop the reminding.',
     howToUse:
       'Chores are not punishment. They are how kids learn they are capable of real contribution to the family. Find your child age group in the chart, pick a couple of chores, and teach them properly once instead of redoing it for them. Post the chart where everyone can see who does what, and let the chart do the reminding.',
     faqs: [

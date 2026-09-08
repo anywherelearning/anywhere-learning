@@ -464,13 +464,13 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'chores-by-age-ideas',
         blogSlug: 'age-appropriate-chores-life-skills',
-        title: '24 Chores for Kids by Age: 2 to 12+',
+        title: '30 Chores for Kids by Age: 2 to 14, Plus a Daily Chore List',
         cardExcerpt:
-          'Who does what, from age 2 to 12 and up. Post the chart once and retire the nagging.',
+          'Who does what from age 2 to 14, tweens included, plus the daily list. Post it once and retire the nagging.',
         published: '2026-06-10',
-        updated: '2026-06-10',
+        updated: '2026-09-07',
         intro:
-          'This free printable chore chart lists 24 chores for kids in four age bands: ages 2 to 5, 6 to 8, 9 to 11, and 12 and up. Each band holds chores kids can genuinely own at that stage. Post it once and stop the daily reminding.',
+          'This free chore list for kids has 30 chores in four age bands (ages 2 to 5, 6 to 8, 9 to 11 for tweens, and 12 to 14) plus a daily chore list that works at any age. Each band holds chores kids can genuinely own at that stage. Post it once and stop the daily reminding.',
         sections: [
           {
             name: 'Ages 2-5',
@@ -495,7 +495,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
             ],
           },
           {
-            name: 'Ages 9-11',
+            name: 'Ages 9-11 (tweens)',
             items: [
               'Do their own laundry start to finish',
               'Cook simple meals (eggs pasta sandwiches)',
@@ -506,7 +506,7 @@ export const IDEAS_DATA: IdeaCategory[] = [
             ],
           },
           {
-            name: 'Ages 12+',
+            name: 'Ages 12-14 (teens)',
             items: [
               'Plan and cook a full family meal',
               'Do basic home repairs (tighten screws hang pictures)',
@@ -514,6 +514,17 @@ export const IDEAS_DATA: IdeaCategory[] = [
               'Meal plan for a week on a budget',
               'Schedule their own appointments',
               'Handle a minor household emergency',
+            ],
+          },
+          {
+            name: 'Daily chore list (any age)',
+            items: [
+              'Make their own bed before leaving the room',
+              'Clear their own dishes and wipe their spot at the table',
+              'Put dirty clothes in the hamper and yesterday\u2019s clean ones away',
+              'Feed the pet or water one plant, same time every day',
+              'Ten-minute tidy of their own space before dinner',
+              'One shared-space job they own for the week (recycling, floor, bathroom sink)',
             ],
           },
         ],
