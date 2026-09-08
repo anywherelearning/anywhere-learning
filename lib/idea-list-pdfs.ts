@@ -15,7 +15,7 @@ const SLUG_TO_FILENAME: Record<string, string> = {
   'land-art-ideas': 'List - 14 Land Art & Nature Sculpture Ideas',
   'kitchen-ideas': 'List - 30 Kitchen Ideas for Kids',
   'life-skills-ideas': 'List - 28 Life Skills Ideas For Kids',
-  'chores-by-age-ideas': 'List - 24 Age-Appropriate Chores by Age',
+  'chores-by-age-ideas': 'List - 30 Age-Appropriate Chores by Age',
   'history-ideas': 'List - 11 Real-World History Ideas for Kids',
   'stem-ideas': 'List - 24 STEM & Engineering Ideas for Kids',
   'engineering-ideas': 'List - 16 Engineering Build Challenges for Kids',
