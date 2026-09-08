@@ -209,6 +209,17 @@ export default function AboutPage() {
                       </span>
                     ))}
                   </div>
+                  <p className="mt-4 text-[13px] text-gray-500">
+                    As heard on the{' '}
+                    <a
+                      href="https://whereparentstalk.com/featured/how-to-teach-kids-life-skills-through-everyday-activities-real-world-learning-that-works/"
+                      target="_blank"
+                      rel="noopener"
+                      className="border-b border-gray-300 pb-px hover:text-forest-dark hover:border-forest transition-colors"
+                    >
+                      Where Parents Talk podcast
+                    </a>
+                  </p>
                 </div>
               </ScrollReveal>
 
@@ -505,6 +516,18 @@ export default function AboutPage() {
                 <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
                 <span>No credit card to try the free guide</span>
               </div>
+              <p className="mt-4 text-[13px] text-gray-500">
+                Anywhere Learning is 100% secular. Part of the{' '}
+                <a
+                  href="https://seahomeschoolers.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="border-b border-gray-300 pb-px hover:text-forest-dark hover:border-forest transition-colors"
+                >
+                  SEA Homeschoolers
+                </a>{' '}
+                community.
+              </p>
               <p className="mt-12 font-display italic text-[24px] text-[#C97B5C]">xo, Amelie</p>
             </ScrollReveal>
           </div>
