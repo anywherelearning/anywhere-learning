@@ -23,10 +23,20 @@ export const CHALLENGE = {
   // signup is promised. Emails 2-10 are date-scheduled broadcasts and can be
   // built any time before their send dates.
   //
-  // STILL OWED, in Kit, before these dates:
-  //   Sept 13  email 2, the "we start tomorrow" broadcast
-  //   Sept 14-18  the five daily broadcasts
-  //   Sept 18  the pitch, Sept 20 the winners, Sept 21 the last one
+  // Emails 2-10 exist in Kit as DRAFT broadcasts (created Sept 11, each on its
+  // pasted HTML template, filtered to the challenge-signup tag). Kit's API
+  // cannot schedule, so each one still has to be scheduled by hand:
+  //   Sept 13 4pm  email 2  (draft 25870320)  set winner count in the template first
+  //   Sept 14 7am  Day 1    (draft 25870322)
+  //   Sept 15 7am  Day 2    (draft 25870324)
+  //   Sept 16 7am  Day 3    (draft 25870328)
+  //   Sept 17 7am  Day 4    (draft 25870329)
+  //   Sept 18 7am  Day 5    (draft 25870331)
+  //   Sept 18 6pm  pitch    (draft 25870334)
+  //   Sept 20 9am  winners  (draft 25870344)  fill placeholders after the Sat draw
+  //   Sept 21 9am  last one (draft 25870339)
+  // Prize: ONE free year of the membership (66 signups on Sept 11; the playbook
+  // gives one for 10-30 families posting, two above 30).
   // Source HTML for all ten is in emails/kit-ready/challenge-*.html.
   isLive: true,
 
