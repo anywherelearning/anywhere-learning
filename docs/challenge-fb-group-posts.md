@@ -44,153 +44,112 @@ I'm really glad you're here. This is going to be a good week. Drop a wave below 
 
 ---
 
-## Monday Sept 14, 7am: Day 1, The Directions Challenge
+## Monday Sept 14, 4am: Day 1, The Directions Challenge
 
 **Photo:** `public/email/challenge-day1.jpg`
 
-DAY 1 OF 5: The Directions Challenge
-About 40 minutes. You need paper and a pen.
+Good morning, and welcome to Day 1. I've got my coffee, the kids are still in pyjamas, and we're doing this one at the kitchen table in about an hour.
 
-Good morning. Here's today.
+Today is the Directions Challenge. Your kid draws a picture and hides it, writes you instructions for drawing the same thing, and you draw exactly what they wrote. Not what they meant. What they wrote. Then you put the two side by side. The full step-by-step is in this morning's email, so go read that first and come back here for the bits that don't fit in an email.
 
-Your kid draws something on a piece of paper and keeps it hidden from you. A house, a robot, a face, a few shapes arranged just so. Nothing fancy.
+A few things I've learned running this one:
 
-Then they write you instructions for drawing the same picture. Words only. No showing it, no pointing, no "you know, like the other one."
+• The first round is usually a mess, and that's the good part. Don't fix anything mid-way. Draw the wrong thing with a straight face and let them see it.
+• The second round is where the learning is. Let them rewrite the instructions and go again. It's always dramatically better.
+• Be as literal as you can stand. If they wrote "a circle at the top," you draw a circle at the top. If they didn't say how big, pick a size they'll hate. That's the lesson landing.
 
-Then you draw exactly what the instructions say. Not what you can tell they meant. What they actually wrote.
+For the little ones (roughly 3 to 5): skip the writing completely. They draw, then they tell you out loud how to draw it, one instruction at a time, and you draw exactly what they say. Or swap it: you describe, they draw. Same skill, no pencil grip needed. Five to ten minutes is plenty.
 
-Then you put the two drawings side by side.
+For the older ones: instructions for building something out of Lego with the original hidden, or directions to a place you both know without naming a single street.
 
-If they're nothing alike, the lesson is sitting right there on the table and you'll probably laugh. If they come out close, your kid wrote genuinely clear instructions on the first go, which is hard, and worth saying out loud to them.
-
-Then let them rewrite the instructions and go again. The second attempt is always dramatically better, and that rewrite is the real work. This looks like a drawing game. It's forty minutes of procedural writing, and they only think it's about the picture.
-
-Older kids: instructions for building something out of Lego, with the original hidden. Or directions to somewhere you both know without naming a single street.
-
-When you're done, post the two drawings side by side in the comments below. Matching or not, I want to see both kinds. That's your first entry in the draw.
-
-Be as literal as you can stand.
-
+When you're done, post the two drawings side by side in the comments below. Matching or wildly off, I want to see both. That's your first entry in the draw, and I'll be here all day replying.
 ---
 
-## Tuesday Sept 15, 7am: Day 2, Outdoor STEM Challenge
+## Tuesday Sept 15, 4am: Day 2, Outdoor STEM Challenge
 
 **Photo:** `public/email/challenge-day2.jpg`
 
-DAY 2 OF 5: Outdoor STEM Challenge
-About an hour. You need anywhere outside.
+Good morning. Day 2, and today we go outside. Coat, boots, whatever the weather is doing, we're going.
 
-Good morning. Today we're going outside.
+The email this morning has the four builds to pick from: a stick bridge that holds a rock, a shelter that keeps a paper towel dry, something that floats with ten pebbles on it, or a tower taller than your kid. One rule: only what you find outside. No tape, no string, no rescuing.
 
-Pick one:
-• Build a bridge from sticks that holds a rock
-• Build a shelter that keeps a paper towel dry when you pour water on it
-• Build something that floats and carries ten pebbles
-• Build a tower taller than your kid that stands up on its own
+What I want to add here:
 
-One rule: only what you find outside. No tape, no string from the drawer, no help from you unless they ask a direct question.
+• It will fall down. Let it. Then let it fall down again. The urge to hand them a better stick is enormous, and today your only job is to sit on it. The question you're allowed to ask is "huh, what do you think went wrong?"
+• Ten minutes of nothing happening is normal. Kids stare at a pile of sticks for a while before they start. Don't fill the silence.
+• If they abandon the build and start doing something else outside, that's fine. The point was to be out there making something with their hands.
 
-It will probably fall down. Good.
+For the little ones: build the tallest rock tower that doesn't fall over. That's the whole activity. Count the rocks together when it's standing, cheer when it topples, start again. Or a bridge for a toy car or a favourite animal to cross. They will want to do it fifteen times.
 
-Engineering is trial, flop, fix, and most kids never get to the flop part because someone rescues them first. Your job today is to sit on your hands and say "huh, what do you think went wrong?" Let it fail twice before you say anything. The hard part today is you.
+For the older ones: pick the shelter, then actually pour the water. No mercy.
 
-When you're done, post the photo below, especially the collapse. I want to see the wreckage.
-
-One comment today, one entry in the draw.
-
+When you're done, post a photo below. I especially want the wreckage. The collapse is the part that teaches, and honestly it's the part that makes the best photos. One comment today, one entry in the draw.
 ---
 
-## Wednesday Sept 16, 7am: Day 3, Family Debate Night
+## Wednesday Sept 16, 4am: Day 3, Family Debate Night
 
 **Photo:** `public/email/challenge-day3.jpg`
 
-DAY 3 OF 5: Family Debate Night
-About 30 minutes. You need nothing at all.
+Good morning. Halfway there, and today is the one families tell me they keep doing long after the week is over.
 
-Good morning. Today is the one families tell me they keep doing.
+It's Family Debate Night, though it works at breakfast, in the car, or at 2pm on a Wednesday just as well. Pick something with real stakes in your house. Should we get a dog. Should bedtime move later. Everyone picks a side, five minutes to prepare, then makes their case. No interrupting, you have to say back what the other person argued before you argue against it, and little ones go first. Halfway through, everyone switches sides. The rules are in the email.
 
-Ignore the name. Breakfast table, car ride, middle of a Wednesday afternoon, it all works the same.
+Things that help:
 
-Pick something with real stakes in your house. Should we get a dog. Should bedtime move later. Should screen time be earned or given. Everyone picks a side, gets five minutes to prepare, and makes their case.
+• Pick something they actually care about. A pretend topic gets pretend effort. "Should we get a dog" gets a prepared speech.
+• When you say back their argument before answering, do it properly and generously. They'll copy how you do it.
+• If they out-argue you, let them win. Especially then. A kid who wins a fair argument with a parent learns that thinking clearly actually works.
 
-The rules: no interrupting. You have to say back what the other person argued before you argue against it. Little ones go first.
+For the little ones: keep it tiny and silly. Pancakes or waffles for Saturday breakfast. Bath before dinner or after. They only have to give one reason, and "because" plus anything counts. Or make them the judge: the big kids argue, the little one decides and has to say why. They love that job.
 
-Halfway through, make everyone switch sides and argue the opposite. It's uncomfortable and it's the most valuable ninety seconds of the week.
+For the older ones: make them argue the side they hate. Then switch. Then ask which side was easier and why.
 
-Your kid is learning that "because I want it" is not an argument, and that disagreeing with someone is not the same as fighting with them. A lot of adults never picked that one up.
-
-A warning: if you pick a topic your kid genuinely cares about, they may out-argue you. Let them win if they earn it. Especially then.
-
-When you're done, post the topic you picked and who won in the comments below. I'll be reading.
-
-Three days in. You're doing great.
-
+When you're done, post the topic you picked and who won in the comments below. I'll be reading every one of these, and I have a feeling the bedtime debates are going to be the best ones.
 ---
 
-## Thursday Sept 17, 7am: Day 4, Pack Like a Pro
+## Thursday Sept 17, 4am: Day 4, Pack Like a Pro
 
 **Photo:** `public/email/challenge-day4.jpg`
 
-DAY 4 OF 5: Pack Like a Pro
-About 45 minutes. You need a bag.
+Good morning. Day 4, and today you hand over the wheel.
 
-Good morning. Today you hand over the wheel.
+Your kid packs a bag for a trip, real or invented. The email has four scenarios to pick from, from a day hike up to a week somewhere cold, and one hard rule: one bag, and it has to close. Then they have to defend every choice. Why that, not this. What if it rains. What did you leave out.
 
-Your kid packs a bag for a trip. Real or invented, doesn't matter. You give them the scenario and one hard limit: one bag, and it has to close.
+What I'd add:
 
-Pick a scenario:
-• A day hike, home before dark. The gentlest one, good for younger kids.
-• Two nights at a friend's or a grandparent's. The classic.
-• A beach day, and the forecast can't make up its mind.
-• A week somewhere cold, one bag. The hardest.
+• Don't fix the bag. This is the hardest instruction of the week and I mean it. If they forgot socks, the socks stay forgotten. The forgetting is the memory that teaches.
+• Ask questions, not corrections. "What happens if it rains?" is a question. "You forgot your raincoat" is you doing the packing.
+• The twist in the email is worth doing: once the bag is zipped, change the plan on them. "Actually we're staying an extra night." Watching them repack with new information is the best part.
 
-Then they have to defend it. Why that and not this. What happens if it rains. What did you leave out, and why.
+For the little ones: pack a bag for teddy's sleepover at grandma's. What does teddy need for one night? Or pack a small basket for a picnic in the backyard, five things only, and then go and have the picnic. The point is the same, thinking ahead about a version of themselves that hasn't happened yet, just with a smaller bag.
 
-A twist if you want one: once the bag is packed and shut, change the situation. "Actually, we're staying an extra night." Then watch. Repacking with new information is a harder and more useful skill than packing was.
+For the older ones: the week-somewhere-cold scenario, one carry-on size bag, and they have to weigh it or count items against a limit you set.
 
-This one looks like nothing and it's the deepest activity of the week. Packing is thinking ahead, making trade-offs, and imagining a version of yourself in a situation that hasn't happened yet.
+When you're done, post what they left out in the comments below. It's always something excellent, and I want to hear it.
 
-They will forget socks. Let them forget socks. Don't fix the bag.
-
-When you're done, post what they left out in the comments below. It's always something excellent.
-
-HEADS UP FOR TOMORROW. Day 5 needs:
-• Some cash, in your kid's hand. Twenty is the default. Ten is fine, thirty is fine if groceries are brutal where you are. It just has to be fixed before you go, and a little tight.
-• A trip to a grocery store together.
-• An hour or so, plus however long the eating takes.
-
-Get the cash tonight so tomorrow is easy.
-
+And a heads up for tomorrow, because it's the big one and it needs something from you tonight: Day 5 needs cash in your kid's hand and a trip to a grocery store together. Twenty is the default. Ten works if the week is tight, thirty if groceries are brutal where you are. It just has to be real, fixed before you go, and a little bit not enough. Get the cash tonight so tomorrow is easy.
 ---
 
-## Friday Sept 18, 7am: Day 5, The $20 Family Feast
+## Friday Sept 18, 4am: Day 5, The $20 Family Feast
 
 **Photo:** `public/email/challenge-day5.jpg`
 
-DAY 5 OF 5: The $20 Family Feast
-An hour, plus the feast. You need $20 and a store.
+Good morning. This is the one. Day 5, the Family Feast, and the day I most want to see photos from.
 
-Good morning. This is the one.
+Your kid gets the cash and one job: throw a little celebration for the whole family tonight. They plan it, price it, shop for it, and come in under budget. They're buying, not cooking. Snacks, something to drink, something sweet, whatever counts as a celebration in your house. The full run of it, plan at home, shop together, they hold the money and keep the total, is in the email.
 
-Your kid gets twenty dollars in cash and one job: throw a little celebration for the whole family tonight. They plan it, they price it, they shop for it, they come in under budget.
+From experience:
 
-They're buying it, not making it. Snacks, something to drink, something sweet, whatever counts as a celebration in your house. Nothing gets cooked. Today is about the money, not the menu.
+• The list-and-guess step at home matters more than it looks. Have them write down what they think each thing costs before you leave. They'll be wildly wrong on at least one, and that moment in the aisle is worth the whole week.
+• You are a silent bodyguard in the store. You carry nothing, you say nothing, you hold no money. It's harder than it sounds.
+• Something won't fit the budget. It never does. Do not rescue them at the till. If they're two dollars over, they put something back, and that ten seconds is the entire challenge compressed.
+• Tonight, when you eat, let them tell the story. What it cost, what went back, how they pulled it off. That retelling is where the pride lives.
 
-The twenty is a starting number. If it doesn't stretch where you live, make it thirty and say the number out loud before you go. If money's tight this week, ten works and the lesson is identical. What matters is that the number is real, fixed before you leave the house, and not quite enough for everything they want. The squeeze is the lesson.
+For the little ones: give them a small amount, three or five dollars in coins, and one job. Pick the treat. They carry it, they hand the coins over at the till themselves, they get the change back in their hand. Count it together on the way out. That's real money in a real place, and at four years old that's enormous.
 
-How it runs:
-1. Plan at home first. What are we getting, what will it cost. Write the list and guess the prices. They'll be wildly wrong on at least one thing.
-2. Go to the store together. They hold the money and keep the running total. You are a silent bodyguard.
-3. Something won't fit. It never fits. They choose what goes back. Best part of the day.
-4. They pay, count the change, carry the bag.
-5. You all eat it tonight, and they get to say what it cost and how they pulled it off.
+For the older ones: make the number genuinely tight, add a rule like "something for everyone" or "at least one thing that isn't sugar," and let them handle the change with tax on top.
 
-Do not rescue them at the till. If they're two dollars over, they put something back. That moment is the whole week compressed into ten seconds.
-
-When you're done, post the photo of the feast and what they had to put back in the comments below. This is the one I most want to see, and it's your last entry in the draw.
-
-I'll be back tonight with one more note.
-
+When you're done, post a photo of the feast and what they had to put back, in the comments below. This is your last entry in the draw, and it's the post I'll be refreshing for all evening. I'll be back tonight with one more note.
 ---
 
 ## Friday Sept 18, around 8pm: Evening wrap (optional, after the pitch email has gone out)
