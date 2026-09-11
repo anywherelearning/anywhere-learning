@@ -21,7 +21,7 @@ Timing note: the emails say "7am", which is 7am in your Kit account timezone. Po
 
 ## Sunday Sept 13, evening: Welcome post (pin all week)
 
-**Photo:** `public/email/challenge-week.jpg`
+**Photo:** `public/images/challenge-five-days-banner.jpg` (the collage with the title and the five day labels)
 
 Welcome to the 5-Day Real-World Learning Challenge. We start tomorrow morning.
 
@@ -224,7 +224,7 @@ If you're finishing an activity late, you've still got today. Comment on the day
 
 ## Sunday Sept 20, 9am: Winner post (same moment as email 9)
 
-**Photo:** `public/email/challenge-week.jpg`
+**Photo:** `public/images/challenge-five-days-banner.jpg` (the collage with the title and the five day labels)
 
 The winner of a full year of the Anywhere Learning membership is [WINNER NAME].
 
