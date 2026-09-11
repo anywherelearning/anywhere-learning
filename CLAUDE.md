@@ -59,6 +59,7 @@
 - **Homepage uses hardcoded product data**: no DB dependency for the most important page
 - **Lead magnet page** uses its own Header/Footer; rest of site uses SiteHeader/SiteFooter
 - **Metadata template pattern**: layout provides `%s | Anywhere Learning` suffix
+- **Member activity log + download cap**: every reader open and PDF download by a member/trial is logged to `activity_events` (`lib/activity-events.ts`). Members may download `DOWNLOAD_CAP_PER_WINDOW` distinct guides per rolling `DOWNLOAD_CAP_WINDOW_DAYS` (`lib/membership.ts`); viewing is never capped and always goes through the in-app reader so the raw Blob URL is only handed out on a counted download. `npm run stats:downloads` prints most/least downloaded guides and per-member counts. New DB: run `npm run db:create-activity-events` once
 - **Blog summary boxes**: Pillar and guide-style posts should include a `{ type: 'summary', text: '...' }` block as the first content item. Write claims-first, definition-style text that AI search engines can extract (e.g. "Deschooling is the transition period after leaving traditional school where..."). Keep it to 2-3 sentences. Don't add summary boxes to short or personal/story posts, only substantial, reference-worthy articles.
 
 ## Strategic Blueprint

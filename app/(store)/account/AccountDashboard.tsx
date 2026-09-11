@@ -11,7 +11,7 @@ import { completionLog } from '@/lib/completions';
 import { addToWeek, FAMILY_TARGET } from '@/lib/week';
 import { effortFor } from '@/lib/activity-effort';
 import { notifyLocalChanged } from '@/lib/account-sync';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { DOWNLOAD_CAP_WINDOW_DAYS, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 export interface DashboardActivity {
   slug: string;
@@ -47,6 +47,9 @@ interface Props {
   /** Open the upgrade-to-download modal on mount (e.g. server bounced a
    *  direct download URL back here with ?reason=trial-upgrade-to-download). */
   initialCapModal?: boolean;
+  /** Set when the download endpoint bounced a member here for hitting the
+   *  rolling download cap (?reason=download-cap). Renders the banner. */
+  downloadCap?: { used: number; cap: number; resetsAt: string | null } | null;
 }
 
 const AGE_OPTIONS = ['All ages', '6–8', '8–10', '10–12', '12–14'];
@@ -134,11 +137,13 @@ export default function AccountDashboard({
   activities,
   trial,
   initialCapModal,
+  downloadCap,
 }: Props) {
   const [doneSet, setDoneSet] = useState<Set<string>>(new Set()); // completed on the trail
   const [pinned, setPinned] = useState<Record<string, boolean>>({});
   const [savedAdded, setSavedAdded] = useState<string | null>(null); // "added to trail" flash
   const [capModalOpen, setCapModalOpen] = useState(!!initialCapModal);
+  const [capBannerOpen, setCapBannerOpen] = useState(!!downloadCap);
   const [skillsMapOpen, setSkillsMapOpen] = useState(false); // hero Skills Map menu
 
   // Trial members are view-only: any download click opens the upgrade modal.
@@ -293,6 +298,32 @@ export default function AccountDashboard({
             >
               Subscribe now to download
               <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      )}
+      {/* DOWNLOAD CAP STRIP: a member tried to download past the rolling
+          cap. Reading stays unlimited; say when a slot frees up. */}
+      {tier === 'member' && downloadCap && capBannerOpen && (
+        <div className="border-b border-[#E8D4C2] bg-[#F7EBE2]" role="status">
+          <div className="mx-auto max-w-[1180px] px-6 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-[13.5px] text-[#7A3D24]">
+            <span className="font-body">
+              <strong className="font-semibold">Download limit reached</strong>
+              <Sep />
+              You&apos;ve saved {downloadCap.cap} different guides in the last {DOWNLOAD_CAP_WINDOW_DAYS} days
+              <Sep />
+              {downloadCap.resetsAt
+                ? `Next download opens ${new Date(downloadCap.resetsAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}`
+                : 'More open up as older downloads age out'}
+              <Sep />
+              Keep reading every guide in your browser, as much as you like
+            </span>
+            <button
+              type="button"
+              onClick={() => setCapBannerOpen(false)}
+              className="inline-flex items-center bg-transparent border border-[#E8D4C2] text-[#7A3D24] font-body font-semibold text-[12.5px] py-1.5 px-3.5 rounded-full cursor-pointer hover:bg-[#F2DFD0] transition-colors whitespace-nowrap"
+            >
+              Got it
             </button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import LegalLayout, { type LegalSection } from '@/components/legal/LegalLayout';
+import { DOWNLOAD_CAP_PER_WINDOW, DOWNLOAD_CAP_WINDOW_DAYS } from '@/lib/membership';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -70,7 +71,7 @@ const sections: LegalSection[] = [
             <strong className="text-ink font-semibold">Rejoining.</strong> If you cancel and rejoin later, you&apos;ll pay the membership price in effect at that time. Founder pricing does not return after cancellation.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Content access.</strong> Your membership provides access to our library while your subscription is active. Activities you&apos;ve downloaded to your devices remain yours to keep and use indefinitely, subject to the license terms below.
+            <strong className="text-ink font-semibold">Content access.</strong> Your membership provides access to our library while your subscription is active. You can open and read every guide in your browser as much as you like. To keep the library fair for everyone, PDF downloads are limited to {DOWNLOAD_CAP_PER_WINDOW} different guides in any {DOWNLOAD_CAP_WINDOW_DAYS}-day period (re-downloading a guide you already saved doesn&apos;t count). Activities you&apos;ve downloaded to your devices remain yours to keep and use indefinitely, subject to the license terms below.
           </li>
         </ol>
       </div>

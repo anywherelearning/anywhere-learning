@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
-import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { DOWNLOAD_CAP_PER_WINDOW, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { planForPriceId } from '@/lib/stripe-prices';
+import { getDownloadAllowanceForClerkId } from '@/lib/activity-events';
 import AccountDashboard, { type DashboardActivity } from './AccountDashboard';
 
 export const metadata: Metadata = {
@@ -132,11 +133,34 @@ export default async function AccountPage({
     }),
   ];
 
+  // A member who hit the download cap gets bounced here by the download
+  // endpoint; look up when their oldest download ages out so the banner can
+  // say when the next slot frees up.
+  let downloadCap: { used: number; cap: number; resetsAt: string | null } | null = null;
+  if (tier === 'member' && sp.reason === 'download-cap') {
+    try {
+      const { auth } = await import('@clerk/nextjs/server');
+      const { userId } = await auth();
+      const allowance = userId ? await getDownloadAllowanceForClerkId(userId) : null;
+      if (allowance) {
+        downloadCap = {
+          used: allowance.used,
+          cap: allowance.cap,
+          resetsAt: allowance.resetsAt?.toISOString() ?? null,
+        };
+      }
+    } catch {
+      /* banner falls back to generic copy */
+    }
+    if (!downloadCap) downloadCap = { used: DOWNLOAD_CAP_PER_WINDOW, cap: DOWNLOAD_CAP_PER_WINDOW, resetsAt: null };
+  }
+
   return (
     <AccountDashboard
       userName={userName}
       tier={tier}
       activities={activities}
+      downloadCap={downloadCap}
       trial={
         tier === 'trial'
           ? {

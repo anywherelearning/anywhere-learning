@@ -36,5 +36,6 @@ export default defineConfig({
     'referrals',
     'referral_conversions',
     'guide_claims',
+    'activity_events',
   ],
 });
