@@ -2,20 +2,20 @@
 
 Cohort 1, September 14 to 18, 2026. Group: https://www.facebook.com/groups/26943632858644725
 
-One post per morning, at the same time as the email (7am). Families reply in the
-comments of that day's post. One comment per family per day is one entry in the draw.
+One post per morning, scheduled for the same moment as the email (7am Pacific, which is 10am Eastern,
+3pm UK, and the evening before in Australia). Families reply in the comments of that day's post. One comment per family per day is one entry in the draw.
 
 ## How to run the group
 
 - **Sunday evening**: publish the Welcome post and mark it **Featured** (pin). It stays pinned all week.
-- **Each morning at 7am**: publish the day's post, mark it Featured too, and un-feature the previous day. Facebook allows several featured posts, so the Welcome post stays at the top with today's post under it.
+- **Each morning at 7am Pacific, same moment as the email**: publish the day's post (use the clock icon in the group composer to schedule it the night before), mark it Featured too, and un-feature the previous day. Facebook allows several featured posts, so the Welcome post stays at the top with today's post under it.
 - **Photo on every post**: use the matching image already in the repo, `public/email/challenge-day1.jpg` through `challenge-day5.jpg`. A post with a photo gets noticeably more comments than text alone.
 - **Keep entries in one place**: in group settings, set "Who can post" to **Admins only** for the week, so every family reply lands as a comment under the day's thread instead of a separate post. That is what makes the draw countable. Put it back to everyone on Saturday.
 - **Tally**: each evening, count families who commented that day (one entry per family per day, not per comment) in a note or spreadsheet. By Saturday you have the entries for the draw.
 - **Reply to everyone**: a like is not enough. A one-line reply from you on every comment is the whole reason people joined a small group.
 - **Post your own result first**: do the activity with your kids early and drop your photo as the first comment. An empty thread is intimidating; a thread with the host's flop in it is not.
 
-Timing note: the emails say "7am", which is 7am in your Kit account timezone. Post at the same moment so the email and the thread match.
+Timing note: Facebook can't post per timezone any more than Kit can. One clock time for both, and don't promise an hour in the copy.
 
 ---
 
@@ -29,7 +29,7 @@ I'm Amelie. I'll be doing all five activities with my own two kids, on the same 
 
 Here's how the week works:
 
-• Every morning at 7 you get an email from me with the day's activity, and a post here in the group with the same thing.
+• Every morning you get an email from me with the day's activity, and the same thing posted here in the group.
 • You do it with your kid, about an hour, no prep, nothing to print.
 • When you're done, you post in the comments of that day's thread. A photo, a win, a disaster, one line about how it went. That's it.
 
@@ -39,7 +39,7 @@ Two things before tomorrow:
 1. Day 1 needs paper and a pen. That's all.
 2. Friday needs twenty dollars in cash and a trip to a grocery store. That's the big finish and the only thing all week that needs anything from you in advance.
 
-I'm really glad you're here. This is going to be a good week. Drop a wave below if you're in, and I'll see you at 7 tomorrow morning.
+I'm really glad you're here. This is going to be a good week. Drop a wave below if you're in, and I'll see you tomorrow morning.
 
 ---
 
