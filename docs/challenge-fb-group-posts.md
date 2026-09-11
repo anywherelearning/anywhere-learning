@@ -39,9 +39,7 @@ Two things before tomorrow:
 1. Day 1 needs paper and a pen. That's all.
 2. Friday needs twenty dollars in cash and a trip to a grocery store. That's the big finish and the only thing all week that needs anything from you in advance.
 
-Say hi below and tell me how many kids you're doing this with and how old they are. It helps me know how to adjust things during the week.
-
-See you at 7.
+I'm really glad you're here. This is going to be a good week. Drop a wave below if you're in, and I'll see you at 7 tomorrow morning.
 
 ---
 
