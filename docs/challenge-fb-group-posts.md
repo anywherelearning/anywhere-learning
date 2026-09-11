@@ -44,25 +44,33 @@ I'm really glad you're here. This is going to be a good week. Drop a wave below 
 
 ---
 
-## Monday Sept 14, 4am: Day 1, The Directions Challenge
+## Monday Sept 14, 4am: Day 1 video, The Directions Challenge
 
-**Photo:** `public/email/challenge-day1.jpg`
+**Format:** talking-head video, 2 to 3 minutes, recorded Sunday with the real drawings from your own run. Post the video with the caption below.
 
-Good morning, and welcome to Day 1. I've got my coffee, the kids are still in pyjamas, and we're doing this one at the kitchen table in about an hour.
+Video script:
 
-Today is the Directions Challenge. Your kid draws a picture and hides it, writes you instructions for drawing the same thing, and you draw exactly what they wrote. Not what they meant. What they wrote. Then you put the two side by side. The full step-by-step is in this morning's email, so go read that first and come back here for the bits that don't fit in an email.
+Good morning, and welcome to Day 1 of the challenge. I'm so happy you're here.
 
-A few things I've learned running this one:
+Today is the Directions Challenge. It's simple. Your kid draws a picture and hides it from you. Then they write you instructions for drawing the same picture. Words only. No pointing, no peeking, no "you know, like the thing I drew." Then you draw exactly what they wrote. Not what they meant. What they actually wrote. And at the end you put the two drawings side by side.
 
-• The first round is usually a mess, and that's the good part. Don't fix anything mid-way. Draw the wrong thing with a straight face and let them see it.
-• The second round is where the learning is. Let them rewrite the instructions and go again. It's always dramatically better.
-• Be as literal as you can stand. If they wrote "a circle at the top," you draw a circle at the top. If they didn't say how big, pick a size they'll hate. That's the lesson landing.
+All the steps are in the email you got this morning, so I won't go through them again here. What I want to do instead is tell you the things that made the difference when we did it.
 
-For the little ones (roughly 3 to 5): skip the writing completely. They draw, then they tell you out loud how to draw it, one instruction at a time, and you draw exactly what they say. Or swap it: you describe, they draw. Same skill, no pencil grip needed. Five to ten minutes is plenty.
+[Hold up your drawings, the original and yours.] We did it yesterday. This is what my kid drew, and this is what I got from the instructions. [Say what happened in one or two lines: what got lost, what made you laugh, whether you did a second round.]
 
-For the older ones: instructions for building something out of Lego with the original hidden, or directions to a place you both know without naming a single street.
+First thing. Don't worry about spelling or grammar today. At all. If they write "sercle" with an s, that's a circle, keep going. This isn't a writing lesson. This is about details, and about explaining something clearly enough that another person can follow it. That's a skill they'll use every single day of their life, and spelling has nothing to do with it.
 
-When you're done, post the two drawings side by side in the comments below. Matching or wildly off, I want to see both. That's your first entry in the draw, and I'll be here all day replying.
+Second. Really play the game. When the instructions say "draw a house," you draw a house, and it's going to be the wrong size, in the wrong spot, with the wrong roof, because they didn't tell you. Draw it anyway. With a straight face. Your kid might get frustrated. They might say "no, not like that!" That's the moment. That's the exact moment they understand why details matter. So don't rescue it. Don't say "oh I know what you meant." Draw what they wrote, put the two side by side, and then let them fix the instructions and try again. The second round is always so much better, and that's where the learning happens.
+
+Third, for the little ones. If your kid is too young to write, do the whole thing out loud. They draw, they hide it, and they tell you how to draw it one instruction at a time. Same game, no pencil needed. And if you have a big kid and a little one, the little one can be the artist. Give them the big kid's written instructions, read them out, and let them try to draw it. Then you have three drawings to compare, and everyone's in it.
+
+When you're done, post your drawings in the comments under this video. The original and the copy, side by side. Matching, not matching, I want to see all of them. That's your first entry for the free year of the membership, and I'll be in here all day replying.
+
+Have fun with it. See you tomorrow.
+
+Caption under the video:
+
+Day 1 of 5: the Directions Challenge. Your kid draws, hides it, and writes you instructions. You draw exactly what they wrote. Steps are in this morning's email. Post your two drawings side by side in the comments below, that's your first entry in the draw.
 ---
 
 ## Tuesday Sept 15, 4am: Day 2, Outdoor STEM Challenge
