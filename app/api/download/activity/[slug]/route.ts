@@ -3,20 +3,26 @@
  * redirects to the Vercel Blob URL when they're allowed in.
  *
  * Authorization rules:
- *   - member  → any activity (view + download)
+ *   - member  → any activity (view + download), subject to the download cap
  *   - trial   → VIEW any activity (in the in-app viewer); NO downloads —
  *               downloading is the reason to convert to a paid membership
  *   - guest   → redirect home with a soft-explain banner
  *   - signed-out → redirect to /sign-in
  *
+ * Download cap (members): DOWNLOAD_CAP_PER_WINDOW distinct guides per rolling
+ * DOWNLOAD_CAP_WINDOW_DAYS (lib/membership.ts). Re-downloading a guide already
+ * taken inside the window is free. Viewing is never capped. Over the cap →
+ * bounce to /account with a banner explaining when a slot frees up.
+ *
  * Modes:
- *   - default  → forces download (Content-Disposition: attachment)
- *   - ?view=1  → inline view. Members get the raw PDF in the browser;
- *                TRIAL members get the in-app viewer page instead, because
- *                the browser's built-in PDF viewer has its own download
- *                button (a download by another name).
- *   - ?check=1 → JSON {allowed} so the dashboard/viewer can show the
- *                upgrade-to-download modal instead of navigating.
+ *   - default  → forces download (Content-Disposition: attachment); logged
+ *   - ?view=1  → the in-app viewer page for everyone. The browser's built-in
+ *                PDF viewer has its own download button (a download by
+ *                another name), which would let trials download and members
+ *                sidestep the cap. The Blob URL is only ever handed out here
+ *                on a counted download.
+ *   - ?check=1 → JSON {allowed, used, cap, resetsAt} so the dashboard/viewer
+ *                can show the right modal instead of navigating.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -24,6 +30,7 @@ import { auth } from '@clerk/nextjs/server';
 import { getDownloadUrl } from '@vercel/blob';
 import { getAccessContextForClerkId } from '@/lib/access';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
+import { getDownloadAllowance, logActivityEvent } from '@/lib/activity-events';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(
@@ -64,7 +71,7 @@ export async function GET(
   // Resolve tier from the DB — only source of truth in production.
   const access = await getAccessContextForClerkId(clerkId);
   const tier = access.tier;
-  if (tier === 'guest') {
+  if (tier === 'guest' || !access.userId) {
     // No active subscription → soft redirect home
     return friendlyRedirect('/', 'membership-required');
   }
@@ -73,25 +80,40 @@ export async function GET(
   const isView = req.nextUrl.searchParams.get('view') === '1';
   const isCheck = req.nextUrl.searchParams.get('check') === '1';
 
-  // Pre-flight check (no side effects): lets the dashboard/viewer decide
-  // between navigating to the file and showing the upgrade-to-download modal.
-  // Trial members can't download at all; everyone else can.
-  if (isCheck) {
-    return NextResponse.json({ allowed: tier !== 'trial' });
+  // Viewing happens in the in-app reader for everyone (see header comment).
+  // The reader fetches bytes from /api/view/activity, which logs the view.
+  if (isView) {
+    return NextResponse.redirect(`${origin}/account/view/${encodeURIComponent(slug)}`, 303);
   }
 
-  // Trial viewing happens in the in-app viewer, not the browser's PDF viewer,
-  // because the native viewer's own download button is a download by another
-  // name. Trials are view-only.
-  if (tier === 'trial' && isView) {
-    return NextResponse.redirect(`${origin}/account/view/${encodeURIComponent(slug)}`, 303);
+  // Pre-flight check (no side effects): lets the dashboard/viewer decide
+  // between navigating to the file and showing a modal.
+  if (isCheck) {
+    if (tier === 'trial') {
+      return NextResponse.json({ allowed: false, reason: 'trial' });
+    }
+    const allowance = await getDownloadAllowance(access.userId, slug);
+    return NextResponse.json({
+      allowed: allowance.allowed,
+      reason: allowance.allowed ? null : 'cap',
+      used: allowance.used,
+      cap: allowance.cap,
+      resetsAt: allowance.resetsAt?.toISOString() ?? null,
+    });
   }
 
   // Trial members cannot download. Downloading is the reason to subscribe, so
   // bounce them back to the library where the upgrade modal opens. Enforced
   // here (not just the UI) so pasting a download URL directly hits the wall.
-  if (tier === 'trial' && !isView) {
+  if (tier === 'trial') {
     return friendlyRedirect('/account', 'trial-upgrade-to-download');
+  }
+
+  // Download cap. Enforced here for the same reason: a pasted URL hits the
+  // wall too. Fails open if the DB is unreachable (see lib/activity-events).
+  const allowance = await getDownloadAllowance(access.userId, slug);
+  if (!allowance.allowed) {
+    return friendlyRedirect('/account', 'download-cap');
   }
 
   // Resolve the Blob URL
@@ -100,14 +122,19 @@ export async function GET(
     return friendlyRedirect('/account', 'activity-missing');
   }
 
+  logActivityEvent({
+    userId: access.userId,
+    slug,
+    kind: 'download',
+    tier,
+    ipAddress: req.headers.get('x-forwarded-for'),
+  });
+
   // Redirect to the Blob CDN. (We briefly streamed the bytes through this
   // route to avoid exposing the public URL, but that stalled on Vercel —
   // headers arrive, body never flows — so members got 0-byte downloads.
   // Redirecting to the CDN is the proven-in-prod behavior. The minor URL-
   // exposure tradeoff is a pre-existing condition; a working private-delivery
   // approach (signed URLs) is a separate follow-up.)
-  //   ?view=1 → inline (opens in the browser)
-  //   default → forced download (Content-Disposition: attachment)
-  const target = isView ? blobUrl : getDownloadUrl(blobUrl);
-  return NextResponse.redirect(target, 302);
+  return NextResponse.redirect(getDownloadUrl(blobUrl), 302);
 }

@@ -18,10 +18,10 @@ const SKILLS_MAP_TITLES: Record<string, string> = {
 };
 
 /**
- * In-app PDF viewer. Trial members read guides here (the browser's native
- * PDF viewer has its own download button, i.e. a download, and trials are
- * view-only). Members can land here too via shared links; they get the same
- * reader with a working download button.
+ * In-app PDF viewer. Everyone reads guides here: the browser's native PDF
+ * viewer has its own download button, i.e. a download, which would let trials
+ * (view-only) download and members sidestep the download cap. Members get the
+ * same reader with a working download button.
  */
 export default async function ActivityViewPage({
   params,

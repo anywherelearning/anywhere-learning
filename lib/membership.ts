@@ -62,6 +62,16 @@ export function annualSavingsPct(annualUsd: number): number {
 /** The two billing plans a member can be on. */
 export type MembershipPlan = 'annual' | 'monthly';
 
+// ─── DOWNLOAD CAP ───────────────────────────────────────────
+// Members may download this many DISTINCT guides per rolling window. Viewing
+// in the in-app reader is never capped, and re-downloading a guide already
+// taken inside the window is free. The number is deliberately generous for a
+// family (a guide a day, with room to spare) while keeping a pay-one-month-
+// and-grab-everything run to a third of the library. Enforced server-side in
+// /api/download/activity/[slug] via lib/activity-events.
+export const DOWNLOAD_CAP_PER_WINDOW = 40;
+export const DOWNLOAD_CAP_WINDOW_DAYS = 30;
+
 // ─── FREE TRIAL ─────────────────────────────────────────────
 // New members start with a free trial (card required, $0 today, auto-converts
 // via Stripe `trial_period_days`). During the trial they can VIEW every guide

@@ -251,3 +251,33 @@ export const guideClaims = pgTable('guide_claims', {
   // One claim per address. The insert relies on this for its ON CONFLICT.
   uniqueIndex('idx_guide_claims_email').on(table.email),
 ]);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Member activity log. One row every time a member or trial opens a guide in
+// the in-app viewer ('view') or saves the PDF ('download'). Written fire-and-
+// forget by /api/view/activity and /api/download/activity.
+//
+// Two jobs:
+//   1. Visibility: which guides get downloaded most, how each member uses the
+//      library (see scripts/download-stats.ts).
+//   2. The download cap: members may download DOWNLOAD_CAP_PER_WINDOW distinct
+//      guides per rolling DOWNLOAD_CAP_WINDOW_DAYS (lib/membership.ts). Viewing
+//      is never capped. See lib/activity-events.ts.
+// ─────────────────────────────────────────────────────────────────────────────
+export const activityEvents = pgTable('activity_events', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id).notNull(),
+  /** Activity slug, e.g. 'kitchen-science-lab'. */
+  slug: text('slug').notNull(),
+  /** 'view' (in-app reader) | 'download' (PDF saved to device). */
+  kind: text('kind').notNull(),
+  /** Access tier at the time: 'member' | 'trial'. */
+  tier: text('tier').notNull(),
+  ipAddress: text('ip_address'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+}, (table) => [
+  // The cap query: this user's downloads in the last N days.
+  index('idx_activity_events_user_kind_created').on(table.userId, table.kind, table.createdAt),
+  // Stats: most/least downloaded guides.
+  index('idx_activity_events_slug_kind').on(table.slug, table.kind),
+]);

@@ -16,6 +16,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { getAccessContextForClerkId } from '@/lib/access';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
+import { logActivityEvent } from '@/lib/activity-events';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(
@@ -39,7 +40,7 @@ export async function GET(
   }
 
   const access = await getAccessContextForClerkId(clerkId);
-  if (access.tier === 'guest') {
+  if (access.tier === 'guest' || !access.userId) {
     return NextResponse.json({ error: 'Membership required' }, { status: 403 });
   }
 
@@ -47,6 +48,17 @@ export async function GET(
   if (!blobUrl) {
     return NextResponse.json({ error: 'Activity not found' }, { status: 404 });
   }
+
+  // One row per reader open. Views are never capped; this is for the stats
+  // (what people actually read) and so a bulk-download run shows up next to
+  // normal use in scripts/download-stats.ts.
+  logActivityEvent({
+    userId: access.userId,
+    slug,
+    kind: 'view',
+    tier: access.tier,
+    ipAddress: req.headers.get('x-forwarded-for'),
+  });
 
   const upstream = await fetch(blobUrl);
   if (!upstream.ok) {
