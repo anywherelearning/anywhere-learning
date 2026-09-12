@@ -769,12 +769,13 @@ const posts: BlogPost[] = [
     slug: 'life-skills-before-12',
     title: '10 Life Skills Every Kid Should Learn Before They\u2019re 12',
     excerpt: 'Forget worksheets. These are the skills that actually matter, and your kids can learn them through everyday life, starting today.',
+    metaDescription: 'The 10 life skills a kid should have before 12: cooking, money, laundry, time, speaking up. What to expect at 8, 10 and 12, and how to teach each at home.',
     hook: 'Cook a meal. Read a map. Have a hard conversation. None of these show up on a report card.',
     category: 'future-ready-skills',
     pillarSlug: 'life-skills-for-kids',
     publishedAt: '2025-10-27',
-    dateModified: '2025-10-27',
-    keywords: ['life skills for kids', 'practical skills children', 'homeschool life skills', 'teach kids independence', 'real world skills for children', 'self-sufficient kids'],
+    dateModified: '2026-09-12',
+    keywords: ['life skills for kids', 'what should a 12 year old be able to do', 'what should a 10 year old be able to do', 'life skills by age', 'practical skills children', 'homeschool life skills', 'teach kids independence', 'real world skills for children', 'self-sufficient kids'],
     readTimeMinutes: 11,
     author: amelie,
     heroImage: '/images/life-skills-popcorn-hero.jpeg',
@@ -825,6 +826,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'And once your kids hit their teens, the conversation shifts. The same skills get refined, and a few new ones get added. If you\u2019re already there, here\u2019s the follow-up: [What Should Teens Know Before They Leave Home?](/blog/what-kids-should-know-before-18)' },
       { type: 'cta', text: 'These ten skills don\u2019t stop at twelve. Grab our free guide for practical ways to start building them, at any age.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
+        { question: 'What should a 12 year old be able to do on their own?', answer: 'Make a simple meal start to finish, do their own laundry, manage a small amount of money for a week, get themselves ready and out the door on time, make a phone call to a stranger (a shop, a dentist), and solve a small problem without fetching an adult first. Not all of them perfectly. The point at 12 is that they have done each one alone at least once.' },
+        { question: 'What should a 10 year old be able to do?', answer: 'Pack their own bag for a day out, make breakfast and clean up, follow a recipe with help on the sharp parts, handle a small budget at a shop, keep track of their own things, and tell you when something went wrong instead of hiding it. Ten is the age where "help me" can start turning into "watch me".' },
         { question: 'At what age should kids start learning life skills?', answer: 'From the moment they can participate. A 3-year-old can help stir batter. A 5-year-old can set the table. A 7-year-old can use a tape measure. Life skills aren\u2019t age-gated; just adjust the complexity.' },
         { question: 'My child resists doing chores. How do I make it work?', answer: 'Stop calling them chores. Call them responsibilities, contributions, or just "what our family does." Work alongside them rather than assigning from the couch.' },
         { question: 'How do these compare to what kids learn in school?', answer: 'They complement each other. School teaches academic knowledge. Life skills teach practical competence. A child without the ability to cook, budget, or communicate will struggle in adult life regardless of grades.' },
@@ -6439,15 +6442,15 @@ const posts: BlogPost[] = [
   },
   {
     slug: 'real-world-history-for-kids',
-    title: 'Real-World History for Kids: 20 Ways to Teach History Without a Textbook',
-    excerpt: 'History is not a list of dates to memorize. It is woven through your family stories, your dinner plate, the buildings on your street, and the news on the radio. Here is how to teach history to kids without a textbook, with 20 concrete starting points and age-by-age guidance.',
-    metaDescription: 'How to teach history to kids without a textbook: 20 concrete starting points, from family stories to the buildings on your street, with age-by-age guidance.',
+    title: 'How to Make History Fun for Kids: 20 Ways, No Textbook',
+    excerpt: 'History is not a list of dates to memorize. It is woven through your family stories, your dinner plate, the buildings on your street, and the news on the radio. Here is how to make history fun for kids without a textbook, with 20 concrete starting points and age-by-age guidance.',
+    metaDescription: 'How to teach kids history in a fun way: 20 real-world starting points, from family stories to your own street, with what works at each age. No textbook.',
     hook: 'A kid who learns history through their grandmother\'s kitchen will remember more than one who spent a year on a textbook.',
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
     publishedAt: '2026-03-05',
-    dateModified: '2026-09-07',
-    keywords: ['how to teach history to kids', 'real world history activities', 'homeschool history without curriculum', 'teaching history without a textbook', 'history activities for kids', 'homeschool history ideas', 'living history for kids', 'history for 6 to 14 year olds'],
+    dateModified: '2026-09-12',
+    keywords: ['how to make history fun for kids', 'how to teach kids history in a fun way', 'how to make history interesting for kids', 'how to teach history to kids', 'real world history activities', 'homeschool history without curriculum', 'teaching history without a textbook', 'history activities for kids', 'homeschool history ideas', 'living history for kids', 'history for 6 to 14 year olds'],
     readTimeMinutes: 11,
     author: amelie,
     heroImage: '/images/real-world-history-hero.jpeg',
@@ -6535,11 +6538,12 @@ const posts: BlogPost[] = [
       ] },
 
       { type: 'heading', level: 2, text: 'Putting it together as a year of history' },
-      { type: 'paragraph', text: 'A year of real-world history can look something like this. One family interview a month. One historical site visit a season. One dish a week with a story. One news story a week traced back. One vintage object a month examined. One historical movie a month paired with a factual source. That is a saturated history education, and it does not require a textbook anywhere in it.' },
+      { type: 'paragraph', text: 'A year of real-world history can look something like this. One family interview a month. One historical site visit a season. One dish a week with a story. One news story a week traced back. One vintage object a month examined. One historical movie a month paired with a factual source. That is a saturated history education, and it does not require a textbook anywhere in it. (The quick version of all 20 starting points is on the [history activities checklist](/ideas/history-ideas), which prints free.)' },
       { type: 'paragraph', text: 'If your kid wants to dive deeper on any one of these, run with it. A six-month obsession with World War II, or ancient Egypt, or the Silk Road, teaches more historical thinking than a balanced survey. Depth over breadth, every time. (Our [project-based learning post](/blog/project-based-learning-homeschool) covers how to structure those longer dives.)' },
 
       { type: 'pull-quote', text: 'Textbooks make history boring. Reality makes it gripping. You do not need to teach history. You need to point at it.' },
       { type: 'faq', items: [
+        { question: 'How do you make history interesting for kids?', answer: 'Start with something they can touch or stand in front of: a grandparent\'s story, the oldest building on your street, the reason the town is where it is. Then ask one question they cannot answer yet and go find out together. Kids find history boring when it arrives as a list of dates; they find it gripping when it is a mystery about people they can picture. The 20 starting points in this post are all of that kind, sorted by age.' },
         { question: 'How do I start teaching history to a young kid?', answer: 'Start with their own timeline (when they were born, moved, lost a tooth), then the family\u2019s (grandparents, a photo, an object with a story), then the street they live on. History clicks when it starts with "you" and moves outward, not when it starts with a date.' },
         { question: 'How do I teach history without a curriculum if I am not a history person myself?', answer: 'You do not need to be an expert. You need to be curious alongside your kid. Pick one question a week ("why are there so many Irish names in our town?" "where did pizza actually come from?") and look it up together. Modelling curiosity teaches more than expertise. Most parents discover they enjoy history far more as adults than they did in school.' },
         { question: 'What if my kid asks a hard history question I cannot answer?', answer: 'Say so. "I don\'t know, let\'s find out." Then actually look it up together. That moment teaches two skills at once: history and how to handle not knowing. The parents who pretend to know lose credibility fast, especially with kids over 10.' },
@@ -6778,12 +6782,12 @@ const posts: BlogPost[] = [
     slug: 'engineering-for-kids',
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
-    metaDescription: 'Engineering for kids: 20 hands-on projects sorted by complexity, with no kit and no special tools. Just the cardboard already in your recycling.',
+    metaDescription: 'Engineering activities for kids: 20 hands-on projects by age, plus 8 quick challenges with a number to beat. No kit, no special tools, just the recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2025-12-22',
-    dateModified: '2025-12-22',
+    dateModified: '2026-09-12',
     keywords: ['engineering for kids', 'engineering activities for kids', 'engineering projects for kids', 'STEM engineering activities', 'hands-on engineering projects', 'engineering challenges for kids', 'engineering for kids at home', 'engineering activities by age', 'no-kit engineering projects'],
     readTimeMinutes: 12,
     author: amelie,
@@ -6793,7 +6797,7 @@ const posts: BlogPost[] = [
       { type: 'summary', text: 'Engineering for kids is the practice of solving real problems by designing, building, and testing things with real materials. It is the most accessible part of STEM because the materials are cheap (cardboard, tape, sticks, string), the bar to start is low, and kids naturally want to build things. Research from the National Science Foundation and the National Academy of Engineering shows that hands-on engineering education builds spatial reasoning, problem-solving, persistence, and the design-thinking process used in every real-world technical field. The most effective engineering activities for kids ages 5 to 14 are not kits with one correct outcome; they are open challenges where the kid figures out their own approach, fails, iterates, and finishes.' },
       { type: 'paragraph', text: 'Walk into most "engineering for kids" sections at a bookstore and you will find kits. A box of pre-cut wood, instructions, a tiny screwdriver, and a final product that looks exactly like the one on the front. The kid follows the steps, builds the thing, and learns one important skill: following instructions. They have not done engineering.' },
       { type: 'paragraph', text: 'Engineering, the real kind, starts with a problem. Then the kid figures out an approach. They build something. It probably does not work the first time. They figure out why and try again. That iteration loop is the entire field, and it is what real engineers do every day. Kits skip the loop. Real engineering activities live inside it.' },
-      { type: 'paragraph', text: 'Below are 20 hands-on engineering projects for kids ages 5 to 14. None of them need a kit. Most use cardboard, tape, sticks, string, water, and a real challenge to solve. (This post sits inside our broader [STEM for Kids guide](/guides/stem-for-kids).)' },
+      { type: 'paragraph', text: 'Below are 20 hands-on engineering activities for kids ages 5 to 14, sorted by age, followed by 8 quick challenges with a number to beat. None of them need a kit. Most use cardboard, tape, sticks, string, water, and a real challenge to solve. If you just want the list to stick on the fridge, the [engineering challenge checklist](/ideas/engineering-ideas) is the printable version. (This post sits inside our broader [STEM for Kids guide](/guides/stem-for-kids).)' },
 
       { type: 'heading', level: 2, text: 'What counts as engineering (and what does not)' },
       { type: 'paragraph', text: 'A useful definition for parents: engineering is what you are doing whenever you design, build, or fix something to solve a problem under constraints. A kid building a stick bridge that has to carry a specific weight is engineering. A kid colouring in a printed worksheet of a bridge is not. The difference is constraint plus iteration.' },
@@ -6806,10 +6810,10 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'If those four pieces are there, your kid is doing engineering. The materials matter less than the process.' },
 
-      { type: 'heading', level: 2, text: '20 engineering projects, sorted by complexity' },
+      { type: 'heading', level: 2, text: '20 engineering activities for kids, sorted by age' },
       { type: 'paragraph', text: 'Roughly ordered from easiest to most ambitious. Pick one that matches your kid\'s age and current attention span. Many of these scale; a younger kid does a simpler version, an older kid takes on a bigger one.' },
 
-      { type: 'heading', level: 3, text: 'Starter projects (ages 5 to 8)' },
+      { type: 'heading', level: 3, text: 'Starter engineering activities (ages 5 to 8)' },
       { type: 'list', ordered: true, items: [
         'Build the tallest tower from spaghetti and marshmallows.',
         'Design a paper aeroplane that goes the farthest. Try at least three designs.',
@@ -6820,7 +6824,7 @@ const posts: BlogPost[] = [
         'Build a marble run on the wall using cardboard tubes and tape.',
       ] },
 
-      { type: 'heading', level: 3, text: 'Mid-level projects (ages 8 to 11)' },
+      { type: 'heading', level: 3, text: 'Mid-level engineering challenges (ages 8 to 11)' },
       { type: 'list', ordered: true, items: [
         'Build a Rube Goldberg machine with at least five steps that completes one task.',
         'Design a container that protects an egg from a one-storey drop.',
@@ -6833,7 +6837,7 @@ const posts: BlogPost[] = [
 
       { type: 'image', src: '/images/engineering-water-channel.jpeg', alt: 'Two kids shaping a sand channel and dam at the edge of a lake, water flowing through the structure they built', caption: 'A wet sand channel is a real fluid-dynamics lab. Slope, flow rate, dam strength, reservoir capacity. Kids will engineer for an hour and not call it that once.' },
 
-      { type: 'heading', level: 3, text: 'Advanced projects (ages 11 to 14)' },
+      { type: 'heading', level: 3, text: 'Advanced engineering projects (ages 11 to 14)' },
       { type: 'list', ordered: true, items: [
         'Design a kinetic sculpture that moves under wind or gravity alone.',
         'Build a working weather station with at least three instruments you made.',
@@ -6844,6 +6848,20 @@ const posts: BlogPost[] = [
       ] },
 
       { type: 'product-callout', slug: 'rube-goldberg-machine' },
+
+      { type: 'heading', level: 2, text: '8 engineering challenges for kids with a number to beat' },
+      { type: 'paragraph', text: 'A project can take an afternoon. A challenge takes 20 minutes and ends with a number. The number is what turns a craft into engineering: it gives the kid something to beat next time, and it makes "did it work?" a question with a real answer. Write the result on the fridge. Run the same challenge again next week and see if the number moves. These all work from about age 6, and an 11-year-old will happily spend an hour on any of them.' },
+      { type: 'list', ordered: true, items: [
+        'Paper column: one sheet of paper and tape, rolled or folded into a column. How many books can it hold before it crumples? Round, square and triangle columns give different numbers. Beat: books.',
+        'Newspaper tower: one sheet of newspaper and 30 cm of tape, tallest free-standing tower in 10 minutes. It has to stand for 10 seconds with nobody touching it. Beat: centimetres.',
+        'Foil boat: a 30 cm square of foil, no other materials. Most coins before it sinks. Wide and flat beats deep and narrow, but let them find that out. Beat: coins.',
+        'Cantilever: craft sticks and tape, built out from a table edge with nothing under it. Longest overhang that still holds a coin at the tip. Beat: centimetres.',
+        'Spoon catapult: a spoon, a rubber band and a cup, firing a pom-pom or paper ball at a bowl two metres away. Ten shots. Beat: hits.',
+        'Straw bridge: ten straws and tape, spanning a 20 cm gap between two books. Hang a cup from the middle and add coins until it fails. Beat: coins.',
+        'Slow parachute: a plastic bag, string and a small toy, dropped from the same spot each time. Longest fall, timed on a phone. Beat: seconds.',
+        'Slow marble: cardboard tubes and tape on a wall or stairs. The marble has to travel from top to cup without stopping, as slowly as possible. Beat: seconds.',
+      ] },
+      { type: 'paragraph', text: 'Two rules make these work. The kid keeps the number, not you. And the second attempt is the assignment; the first is just finding out where the problem is.' },
 
       { type: 'heading', level: 2, text: 'The materials list (your whole "kit")' },
       { type: 'paragraph', text: 'You do not need to buy an engineering kit. You need to start a "maker drawer" with these:' },
@@ -6885,6 +6903,7 @@ const posts: BlogPost[] = [
 
       { type: 'faq', items: [
         { question: 'What is engineering for kids?', answer: 'Engineering for kids is the practice of solving real problems by designing, building, and testing things with everyday materials. It is the E in STEM. Unlike a kit with one correct outcome, real engineering for kids involves a problem to solve, a constraint (materials, time, or budget), multiple attempts, and reflection on what worked. Cardboard, tape, sticks, and a real challenge cover most projects for ages 5 to 14.' },
+        { question: 'What are easy engineering activities for elementary kids?', answer: 'Five that work from 6 up with nothing bought: a paper bridge that has to hold a can of beans, the tallest free-standing tower from one sheet of newspaper, a marble run down the stairs from cardboard tubes, a boat from foil that carries the most coins, and a catapult from a spoon and rubber bands that has to hit a target. Each one ends with a number (how much, how tall, how far), which is what turns a craft into engineering.' },
         { question: 'What age can a kid start engineering activities?', answer: 'As young as 4 with sensory building tasks (tallest tower, simplest bridge). Most kids are ready for structured engineering challenges with constraints by ages 6 to 8. By ages 11 to 14, kids can take on multi-week projects with real users, real materials, and real outcomes. The bar is the kid\'s patience for iteration, not their technical skill.' },
         { question: 'Do I need an engineering kit?', answer: 'No, and most kits are counterproductive. They teach instruction-following, not engineering. The materials for 95 percent of kid engineering projects are already in your home: cardboard, tape, string, sticks, foil, recyclables, and a roll of masking tape. Build a "maker drawer" with these basics and you have everything you need.' },
         { question: 'What if my kid gets frustrated and quits?', answer: 'Frustration is part of the process, but if it dominates, the challenge is mismatched. Drop to an easier version. Switch from "build a bridge that holds a book" to "build a bridge that holds a pen." Add encouragement, not solutions. If a kid quits a project once, that is data. If they quit every project, you may be jumping in to "help" too fast and stealing the breakthrough moment.' },
