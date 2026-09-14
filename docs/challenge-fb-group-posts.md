@@ -46,27 +46,27 @@ I'm really glad you're here. This is going to be a good week. Drop a wave below 
 
 ## Monday Sept 14, 4am: Day 1 video, The Directions Challenge
 
-**Format:** talking-head video, 2 to 3 minutes, recorded Sunday with the real drawings from your own run. Post the video with the caption below.
+**Format:** talking-head video, about 90 seconds, with your own drawings from Sunday. Post the video with the caption below.
 
 Video script:
 
-Good morning, and welcome to Day 1 of the challenge. I'm so happy you're here.
+Good morning, and welcome to Day 1 of our 5-day challenge.
 
-Today is the Directions Challenge. It's simple. Your kid draws a picture and hides it from you. Then they write you instructions for drawing the same picture. Words only. No pointing, no peeking, no "you know, like the thing I drew." Then you draw exactly what they wrote. Not what they meant. What they actually wrote. And at the end you put the two drawings side by side.
+Today's activity works on communication. It's called the Directions Challenge.
 
-All the steps are in the email you got this morning, so I won't go through them again here. What I want to do instead is tell you the things that made the difference when we did it.
+First, your child draws a picture, or builds something with Lego, and hides it from you. Then they write you instructions for drawing or building the same thing.
 
-[Hold up your drawings, the original and yours.] We did it yesterday. This is what my kid drew, and this is what I got from the instructions. [Say what happened in one or two lines: what got lost, what made you laugh, whether you did a second round.]
+Next, you read the instructions and do exactly what's written. Really play the game here. Don't guess, and don't change anything, even if they say "No, not like that!" and start giving you new details.
 
-First thing. Don't worry about spelling or grammar today. At all. If they write "sercle" with an s, that's a circle, keep going. This isn't a writing lesson. This is about details, and about explaining something clearly enough that another person can follow it. That's a skill they'll use every single day of their life, and spelling has nothing to do with it.
+Once the first draft is done, you can stop there and compare the two drawings. But I suggest you go one step further. Ask your child to go back to their first draft, add details, and make it even clearer. Then you try again, and this time you look at their drawing and compare the two.
 
-Second. Really play the game. When the instructions say "draw a house," you draw a house, and it's going to be the wrong size, in the wrong spot, with the wrong roof, because they didn't tell you. Draw it anyway. With a straight face. Your kid might get frustrated. They might say "no, not like that!" That's the moment. That's the exact moment they understand why details matter. So don't rescue it. Don't say "oh I know what you meant." Draw what they wrote, put the two side by side, and then let them fix the instructions and try again. The second round is always so much better, and that's where the learning happens.
+When the activity is done, make sure to ask them what they learned from it, and why details matter when you write.
 
-Third, for the little ones. If your kid is too young to write, do the whole thing out loud. They draw, they hide it, and they tell you how to draw it one instruction at a time. Same game, no pencil needed. And if you have a big kid and a little one, the little one can be the artist. Give them the big kid's written instructions, read them out, and let them try to draw it. Then you have three drawings to compare, and everyone's in it.
+Two suggestions. First, don't correct grammar or spelling. That's not the purpose of this activity. Second, if your child can't write yet, do the exact same activity out loud. Communicating clearly is just as important when you speak.
 
-When you're done, post your drawings in the comments under this video. The original and the copy, side by side. Matching, not matching, I want to see all of them. That's your first entry for the free year of the membership, and I'll be in here all day replying.
+Now let me show you what my kids made, and what I made. [Show the drawings.]
 
-Have fun with it. See you tomorrow.
+I hope you enjoy it. Don't forget to post pictures of your drawings in the comments to get your first entry in the draw.
 
 Caption under the video:
 
