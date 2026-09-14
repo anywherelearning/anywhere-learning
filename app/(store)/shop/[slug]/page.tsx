@@ -17,6 +17,7 @@ import PreviewButton from "@/components/shop/PreviewButton";
 import CheckoutButton from "@/components/checkout/CheckoutButton";
 import ReviewForm from "@/components/shop/ReviewForm";
 import ReadMoreFromBlog from "@/components/shop/ReadMoreFromBlog";
+import { pinnedPostForProduct } from "@/lib/cross-links";
 import {
   IS_FOUNDER_PHASE,
   MEMBERSHIP_PRICE_YR,
@@ -304,6 +305,9 @@ export default async function ProductPage({
   );
 
   const opening = desc.opening || product.shortDescription;
+  // A post that walks through this exact project, linked right under the
+  // description (the full "read more" block sits at the bottom of the page).
+  const walkthrough = pinnedPostForProduct(product.slug);
   const whatsIncluded = desc.whatsIncluded || [];
   // The one substantial block that differs per product. Absent on most guides
   // for now, so the section below renders only where it has been written.
@@ -599,6 +603,18 @@ export default async function ProductPage({
               >
                 {opening}
               </p>
+              {walkthrough && (
+                <p className="mt-3 text-[14.5px] leading-[1.5] text-gray-600 max-w-[560px]">
+                  Want to read how it goes first?{" "}
+                  <Link
+                    href={`/blog/${walkthrough.slug}`}
+                    className="font-semibold underline underline-offset-[3px] decoration-1 hover:decoration-2 transition-all"
+                    style={{ color: theme.color }}
+                  >
+                    {walkthrough.title}
+                  </Link>
+                </p>
+              )}
 
               {/* Access card */}
               {/* Meta line */}

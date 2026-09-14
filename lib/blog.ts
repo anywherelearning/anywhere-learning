@@ -9174,7 +9174,7 @@ const posts: BlogPost[] = [
     recommendedProduct: 'theme-park',
     heroImage: '/images/design-a-theme-park-hero.jpeg',
     heroImageAspect: '4/3',
-    heroImageAlt: 'Two kids crossing a rope-net adventure course strung between wooden posts in a field, a real walk-through course of the kind they can build at home',
+    heroImageAlt: 'Two kids grinning in the seat of a Sea Dragon fair ride at night, lap bar down, neon-lit sign glowing behind them, the kind of ride they get to price and place in their own park',
     content: [
       { type: 'summary', text: 'A design-a-theme-park project is a hands-on activity where a child invents a theme park or backyard adventure course from scratch: choosing a theme and three to five star attractions, drawing a map with an entrance, zones, and paths, building a tabletop model or a life-size course from cardboard, chalk, and pool noodles, setting ticket and food prices so a family of four can afford a day there, testing it with a real visitor, and hosting a grand opening. It covers spatial reasoning, area and scale, pricing, budgeting, and simple profit, plus design, engineering, and presentation, for ages 6 to 14.' },
 

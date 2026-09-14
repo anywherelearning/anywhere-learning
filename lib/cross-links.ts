@@ -156,6 +156,20 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'outdoor-survival-planner': ['forest-school-activities'],
 };
 
+/**
+ * The one post written about this exact activity, if any. Shown as a
+ * "read the free walkthrough" line under the activity description so a
+ * parent landing cold from search can read before starting a trial.
+ */
+export function pinnedPostForProduct(productSlug: string): BlogPost | undefined {
+  const posts = getAllPosts();
+  for (const slug of PRODUCT_POST_PINS[productSlug] ?? []) {
+    const p = posts.find((x) => x.slug === slug);
+    if (p) return p;
+  }
+  return undefined;
+}
+
 export function pickPostsForProduct(productCategory: string, seed: string, limit = 2): BlogPost[] {
   const cats = PRODUCT_TO_BLOG_CATEGORIES[productCategory] ?? ['future-ready-skills'];
   const posts = getAllPosts();
