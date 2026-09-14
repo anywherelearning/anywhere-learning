@@ -46,7 +46,7 @@ I'm really glad you're here. This is going to be a good week. Drop a wave below 
 
 ## Monday Sept 14, 4am: Day 1 video, The Directions Challenge
 
-**Format:** talking-head video, about 90 seconds, with your own drawings from Sunday. Post the video with the caption below.
+**Format:** talking-head video, about 90 seconds. Post your family's drawings as the first comment. Post the video with the caption below.
 
 Video script:
 
@@ -64,7 +64,7 @@ When the activity is done, make sure to ask them what they learned from it, and 
 
 Two suggestions. First, don't correct grammar or spelling. That's not the purpose of this activity. Second, if your child can't write yet, do the exact same activity out loud. Communicating clearly is just as important when you speak.
 
-Now let me show you what my kids made, and what I made. [Show the drawings.]
+My kids did it yesterday, and I'll post their drawings, and mine, in the comments so you can see how it went for us.
 
 I hope you enjoy it. Don't forget to post pictures of your drawings in the comments to get your first entry in the draw.
 
