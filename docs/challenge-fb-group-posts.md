@@ -70,7 +70,15 @@ I hope you enjoy it. Don't forget to post pictures of your drawings in the comme
 
 Caption under the video:
 
-Day 1 of 5: the Directions Challenge. Your kid draws, hides it, and writes you instructions. You draw exactly what they wrote. Steps are in this morning's email. Post your two drawings side by side in the comments below, that's your first entry in the draw.
+DAY 1 OF 5: The Directions Challenge
+
+Your kid draws a picture (or builds something with Lego) and hides it. Then they write you instructions to make the same thing. You follow them exactly as written. No guessing, no fixing. Everything you need is in the video.
+
+Two things to remember: don't correct spelling or grammar, that's not the point today. And if your child can't write yet, do the whole thing out loud.
+
+Post your drawings side by side in the comments below, the original and the copy. Matching or not, I want to see them all. That's your first entry in the draw for a free year of the membership.
+
+I'll add ours in the comments too.
 ---
 
 ## Tuesday Sept 15, 4am: Day 2, Outdoor STEM Challenge
