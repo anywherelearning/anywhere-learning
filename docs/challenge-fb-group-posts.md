@@ -81,25 +81,39 @@ Post your drawings side by side in the comments below, the original and the copy
 I'll add ours in the comments too.
 ---
 
-## Tuesday Sept 15, 4am: Day 2, Outdoor STEM Challenge
+## Tuesday Sept 15, 4am: Day 2 video, Outdoor STEM Challenge
 
-**Photo:** `public/email/challenge-day2.jpg`
+**Format:** talking-head video, about 90 seconds. Post the video with the caption below.
 
-Good morning. Day 2, and today we go outside. Coat, boots, whatever the weather is doing, we're going.
+Video script:
 
-The email this morning has the four builds to pick from: a stick bridge that holds a rock, a shelter that keeps a paper towel dry, something that floats with ten pebbles on it, or a tower taller than your kid. One rule: only what you find outside. No tape, no string, no rescuing.
+Good morning, and welcome to Day 2. Today we're going outside.
 
-What I want to add here:
+This activity works on problem-solving, and it's an outdoor STEM challenge. Your child picks one of four builds. A bridge made of sticks that can hold a rock. A shelter that keeps a paper towel dry when you pour water on it. Something that floats and can carry ten pebbles. Or a tower taller than they are that stands up on its own.
 
-• It will fall down. Let it. Then let it fall down again. The urge to hand them a better stick is enormous, and today your only job is to sit on it. The question you're allowed to ask is "huh, what do you think went wrong?"
-• Ten minutes of nothing happening is normal. Kids stare at a pile of sticks for a while before they start. Don't fill the silence.
-• If they abandon the build and start doing something else outside, that's fine. The point was to be out there making something with their hands.
+There's only one rule: they can only use what they find outside. No tape, no string, no glue from the drawer.
 
-For the little ones: build the tallest rock tower that doesn't fall over. That's the whole activity. Count the rocks together when it's standing, cheer when it topples, start again. Or a bridge for a toy car or a favourite animal to cross. They will want to do it fifteen times.
+Here's your job today, and it's the hardest part of the week: sit on your hands. Don't help unless they ask you a direct question. It's going to fall down. Let it. Let it fall down twice before you say anything. And when it does, the only thing you say is, "Hmm, what do you think went wrong?" Then let them figure it out. That's the whole activity. Trial, flop, fix.
 
-For the older ones: pick the shelter, then actually pour the water. No mercy.
+If there's a long silence at the start, that's normal. Kids stare at a pile of sticks for a while before they start. Don't fill it.
 
-When you're done, post a photo below. I especially want the wreckage. The collapse is the part that teaches, and honestly it's the part that makes the best photos. One comment today, one entry in the draw.
+For the little ones, keep it simple: build the tallest rock tower that doesn't fall over. Count the rocks together when it's standing, cheer when it topples, and start again. They'll want to do it fifteen times.
+
+When you're done, post a photo in the comments. And I especially want to see the collapse. The wreckage is the part that teaches, and honestly, it makes the best photos.
+
+Have fun out there. See you tomorrow.
+
+Caption under the video:
+
+DAY 2 OF 5: Outdoor STEM Challenge
+
+Today we go outside. Your kid picks one build: a stick bridge that holds a rock, a shelter that keeps a paper towel dry, something that floats with ten pebbles on it, or a tower taller than they are. One rule: only what they find outside. Everything you need is in the video.
+
+Your job is to sit on your hands. It will fall down. Let it, twice, before you say a word.
+
+Little ones: tallest rock tower that doesn't fall over. That's it.
+
+Post your photo in the comments, especially the collapse. One comment today, one entry in the draw.
 ---
 
 ## Wednesday Sept 16, 4am: Day 3, Family Debate Night
