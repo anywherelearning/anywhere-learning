@@ -93,11 +93,9 @@ This activity works on problem-solving, and it's an outdoor STEM challenge. Your
 
 There's only one rule: they can only use what they find outside. No tape, no string, no glue from the drawer.
 
-Here's your job today, and it's the hardest part of the week: sit on your hands. Don't help unless they ask you a direct question. It's going to fall down. Let it. Let it fall down twice before you say anything. And when it does, the only thing you say is, "Hmm, what do you think went wrong?" Then let them figure it out. That's the whole activity. Trial, flop, fix.
+Your job today is the hardest part of the week: sit on your hands. Don't help unless they ask. It's going to fall down. Let it, twice, before you say anything. Then the only thing you say is, "Hmm, what do you think went wrong?" Trial, flop, fix. That's the whole activity.
 
-If there's a long silence at the start, that's normal. Kids stare at a pile of sticks for a while before they start. Don't fill it.
-
-For the little ones, keep it simple: build the tallest rock tower that doesn't fall over. Count the rocks together when it's standing, cheer when it topples, and start again. They'll want to do it fifteen times.
+For the little ones, build the tallest rock tower that doesn't fall over. Cheer when it topples, start again.
 
 When you're done, post a photo in the comments. And I especially want to see the collapse. The wreckage is the part that teaches, and honestly, it makes the best photos.
 
