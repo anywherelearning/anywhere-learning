@@ -275,8 +275,9 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Twelve-year-olds who&apos;d never packed their own lunch. Teenagers who
-                  panicked at the idea of making a phone call. Kids who could solve algebra but
-                  freeze at the simplest real-world problem.
+                  waited to be told what to do the moment a task came without step-by-step
+                  instructions. Kids who could solve algebra but freeze at the simplest
+                  real-world problem.
                 </p>
                 <p>
                   And I knew, even as their teacher, I couldn&apos;t close that gap from inside
