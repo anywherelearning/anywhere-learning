@@ -122,11 +122,7 @@ Video script:
 
 Good morning, and welcome to Day 3. Today is Family Debate Night, and it's the one families tell me they keep doing after the week is over.
 
-This activity works on critical thinking. Pick a topic that actually matters in your house. Should bedtime move later. Should we get a dog. Should screen time be earned or just given. Everyone picks a side, gets five minutes to prepare, and then makes their case.
-
-Three rules. No interrupting. Before you argue back, you have to repeat what the other person said. And the little ones go first.
-
-Then, halfway through, everyone switches sides and argues the opposite. It's uncomfortable, and it's the most valuable minute of the whole week.
+This activity works on critical thinking. Pick a topic that actually matters in your house. Should bedtime move later. Should we get a dog. Should screen time be earned or just given. Everyone picks a side, gets five minutes to prepare, and makes their case. Three rules: no interrupting, repeat what the other person said before you answer, and little ones go first. Then halfway through, everyone switches sides. It's uncomfortable, and it's the best minute of the week.
 
 Your kid is learning that "because I want it" is not an argument, and that disagreeing with someone isn't the same as fighting with them.
 
