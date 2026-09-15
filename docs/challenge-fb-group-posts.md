@@ -114,25 +114,39 @@ Little ones: tallest rock tower that doesn't fall over. That's it.
 Post your photo in the comments, especially the collapse. One comment today, one entry in the draw.
 ---
 
-## Wednesday Sept 16, 4am: Day 3, Family Debate Night
+## Wednesday Sept 16, 4am: Day 3 video, Family Debate Night
 
-**Photo:** `public/email/challenge-day3.jpg`
+**Format:** talking-head video, 60 to 75 seconds. Post the video with the caption below.
 
-Good morning. Halfway there, and today is the one families tell me they keep doing long after the week is over.
+Video script:
 
-It's Family Debate Night, though it works at breakfast, in the car, or at 2pm on a Wednesday just as well. Pick something with real stakes in your house. Should we get a dog. Should bedtime move later. Everyone picks a side, five minutes to prepare, then makes their case. No interrupting, you have to say back what the other person argued before you argue against it, and little ones go first. Halfway through, everyone switches sides. The rules are in the email.
+Good morning, and welcome to Day 3. Today is Family Debate Night, and it's the one families tell me they keep doing after the week is over.
 
-Things that help:
+This activity works on critical thinking. Pick a topic that actually matters in your house. Should bedtime move later. Should we get a dog. Should screen time be earned or just given. Everyone picks a side, gets five minutes to prepare, and then makes their case.
 
-• Pick something they actually care about. A pretend topic gets pretend effort. "Should we get a dog" gets a prepared speech.
-• When you say back their argument before answering, do it properly and generously. They'll copy how you do it.
-• If they out-argue you, let them win. Especially then. A kid who wins a fair argument with a parent learns that thinking clearly actually works.
+Three rules. No interrupting. Before you argue back, you have to repeat what the other person said. And the little ones go first.
 
-For the little ones: keep it tiny and silly. Pancakes or waffles for Saturday breakfast. Bath before dinner or after. They only have to give one reason, and "because" plus anything counts. Or make them the judge: the big kids argue, the little one decides and has to say why. They love that job.
+Then, halfway through, everyone switches sides and argues the opposite. It's uncomfortable, and it's the most valuable minute of the whole week.
 
-For the older ones: make them argue the side they hate. Then switch. Then ask which side was easier and why.
+Your kid is learning that "because I want it" is not an argument, and that disagreeing with someone isn't the same as fighting with them.
 
-When you're done, post the topic you picked and who won in the comments below. I'll be reading every one of these, and I have a feeling the bedtime debates are going to be the best ones.
+One warning: if you pick a topic they really care about, they might out-argue you. Let them win if they earn it. Especially then.
+
+For the little ones, keep it small and silly. Pancakes or waffles. Bath before dinner or after. They only need one reason. Or make them the judge: the big kids argue, the little one decides and has to say why.
+
+When you're done, post the topic you picked and who won in the comments. I'll be reading every one. Have fun, and see you tomorrow.
+
+Caption under the video:
+
+DAY 3 OF 5: Family Debate Night
+
+Pick a topic with real stakes in your house. Everyone picks a side, five minutes to prepare, then makes their case. No interrupting, repeat what the other person said before you argue back, little ones go first. Halfway through, everyone switches sides. Everything you need is in the video.
+
+If your kid out-argues you, let them win. Especially then.
+
+Little ones: pancakes or waffles, one reason each. Or they're the judge.
+
+Post your topic and who won in the comments. One comment today, one entry in the draw.
 ---
 
 ## Thursday Sept 17, 4am: Day 4, Pack Like a Pro
