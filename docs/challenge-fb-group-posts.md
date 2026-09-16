@@ -136,7 +136,7 @@ Caption under the video:
 
 DAY 3 OF 5: Family Debate Night
 
-Pick a topic with real stakes in your house. Everyone picks a side, five minutes to prepare, then makes their case. No interrupting, repeat what the other person said before you argue back, little ones go first. Halfway through, everyone switches sides. Everything you need is in the video.
+Pick a topic with real stakes in your house. Bedtime, screen time, a dog. Everyone picks a side, five minutes to prepare, then makes their case. No interrupting, little ones go first, and you repeat what the other person said before you answer. Halfway through, everyone switches sides. Everything you need is in the video.
 
 If your kid out-argues you, let them win. Especially then.
 
