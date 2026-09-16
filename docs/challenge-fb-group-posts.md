@@ -145,27 +145,41 @@ Little ones: pancakes or waffles, one reason each. Or they're the judge.
 Post your topic and who won in the comments. One comment today, one entry in the draw.
 ---
 
-## Thursday Sept 17, 4am: Day 4, Pack Like a Pro
+## Thursday Sept 17, 4am: Day 4 video, Pack Like a Pro
 
-**Photo:** `public/email/challenge-day4.jpg`
+**Format:** talking-head video, about 75 seconds. Post the video with the caption below.
 
-Good morning. Day 4, and today you hand over the wheel.
+Video script:
 
-Your kid packs a bag for a trip, real or invented. The email has four scenarios to pick from, from a day hike up to a week somewhere cold, and one hard rule: one bag, and it has to close. Then they have to defend every choice. Why that, not this. What if it rains. What did you leave out.
+Good morning, and welcome to Day 4. Today you hand over the wheel.
 
-What I'd add:
+This activity works on planning and life skills. Your child packs a bag for a trip. Real or invented, it doesn't matter. You give them the scenario, like two nights at grandma's, a weekend of camping, or a week somewhere cold, and one rule: one bag, and it has to close.
 
-• Don't fix the bag. This is the hardest instruction of the week and I mean it. If they forgot socks, the socks stay forgotten. The forgetting is the memory that teaches.
-• Ask questions, not corrections. "What happens if it rains?" is a question. "You forgot your raincoat" is you doing the packing.
-• The twist in the email is worth doing: once the bag is zipped, change the plan on them. "Actually we're staying an extra night." Watching them repack with new information is the best part.
+When they're done, they have to defend it. Why that and not this? What happens if it rains? What did you leave out, and why?
 
-For the little ones: pack a bag for teddy's sleepover at grandma's. What does teddy need for one night? Or pack a small basket for a picnic in the backyard, five things only, and then go and have the picnic. The point is the same, thinking ahead about a version of themselves that hasn't happened yet, just with a smaller bag.
+Then, if you want, change the situation on them. "Actually, we're staying an extra night." Watch them repack. Adjusting a plan when things change is a harder skill than making the plan, and it's the one they'll use for the rest of their life.
 
-For the older ones: the week-somewhere-cold scenario, one carry-on size bag, and they have to weigh it or count items against a limit you set.
+The most important part today: don't fix the bag. They will forget socks. Let them forget socks. The forgetting is what they'll remember next time.
 
-When you're done, post what they left out in the comments below. It's always something excellent, and I want to hear it.
+For the little ones: pack a bag for teddy's sleepover at grandma's. What does teddy need for one night? Same thinking, smaller bag.
 
-And a heads up for tomorrow, because it's the big one and it needs something from you tonight: Day 5 needs cash in your kid's hand and a trip to a grocery store together. Twenty is the default. Ten works if the week is tight, thirty if groceries are brutal where you are. It just has to be real, fixed before you go, and a little bit not enough. Get the cash tonight so tomorrow is easy.
+When you're done, post what they forgot in the comments. It's always something great.
+
+And a heads up for tomorrow, because it's the big one. Day 5 needs cash in your child's hand, twenty dollars is the default, and a trip to a grocery store together. Get the cash tonight so tomorrow is easy. See you then.
+
+Caption under the video:
+
+DAY 4 OF 5: Pack Like a Pro
+
+Your kid packs a bag for a trip, real or invented. Two nights at grandma's, a camping weekend, a week somewhere cold. One rule: one bag, and it has to close. Then they defend every choice. Everything you need is in the video.
+
+Don't fix the bag. Forgotten socks are the lesson.
+
+Little ones: pack teddy's bag for a sleepover.
+
+Post what they forgot in the comments. One comment today, one entry in the draw.
+
+Heads up for tomorrow: Day 5 needs cash in your kid's hand ($20 is the default, $10 or $30 works too) and a trip to the grocery store together. Get the cash tonight.
 ---
 
 ## Friday Sept 18, 4am: Day 5, The $20 Family Feast
