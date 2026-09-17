@@ -4831,7 +4831,7 @@ const posts: BlogPost[] = [
   {
     slug: 'real-world-math-activities',
     title: 'Real-World Math Activities That Replace Worksheets',
-    metaDescription: 'Real-world math for kids: 25+ activities from the grocery store, road trips, building projects, nature walks and sports. The math a curriculum teaches, with a reason attached.',
+    metaDescription: 'Real-world math for kids: 25+ activities from the grocery store, road trips, building and sports. The math a curriculum teaches, with a reason attached.',
     excerpt: 'Grocery stores, road trips, building projects, nature walks, and sports. Here are 25+ real-world math activities that teach more than any textbook.',
     hook: 'Your kid already does math every day. They just do not know it yet.',
     category: 'real-world-skills',
@@ -4876,7 +4876,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '10. Estimate area the old-fashioned way' },
       { type: 'paragraph', text: 'How big is the backyard? Have your kid pace it off and calculate the area in square feet. Then try the irregular shape of a garden bed. How do you estimate the area of something that is not a rectangle? Suddenly geometry is a puzzle with a real answer.' },
 
-      { type: 'product-callout', slug: 'party-planner-math' },
+      { type: 'product-callout', slug: 'party-planner-math', pinned: true },
 
       { type: 'heading', level: 2, text: 'Building and construction math (ages 7 to 14)' },
       { type: 'image', src: '/images/guide-real-world-hero.jpeg', alt: 'Zach measuring and cutting wood with dad at the miter saw in the garage', caption: 'Measure twice, cut once. That is not just a saying, it is a real math lesson.' },
@@ -4928,7 +4928,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '27. Measure for a purpose' },
       { type: 'paragraph', text: 'How tall did the sunflower grow this week? Will this couch fit through the doorway? How much ribbon do you need to wrap this present? Measurement sticks when the reason to measure is real.' },
 
-      { type: 'product-callout', slug: 'kitchen-math-challenge' },
+      { type: 'product-callout', slug: 'kitchen-math-challenge', pinned: true },
 
       { type: 'heading', level: 2, text: 'Why this works better than worksheets' },
       { type: 'paragraph', text: 'Worksheets isolate math from meaning. They strip away the context, hand kids a naked equation, and ask them to solve it. That is fine for practice, but it is terrible for understanding.' },
