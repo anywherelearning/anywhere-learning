@@ -665,7 +665,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Long days mean extended outdoor time. Summer is the season for ambitious projects: building a debris shelter, creating a backyard weather station, mapping your neighborhood ecosystem, or starting a nature collection. Water science comes alive: evaporation experiments, stream flow measurements, and the physics of sprinklers and water balloons.',
+        text: 'Long days mean extended outdoor time. Summer is the season for ambitious projects: building a debris shelter, creating a backyard weather station, mapping your neighborhood ecosystem, or starting a nature collection. Water science comes alive: evaporation experiments, stream flow measurements, and the physics of sprinklers and water balloons. (Our [backyard science experiments](/blog/backyard-science-experiments) post has 15 of these, sorted by what each one teaches.)',
       },
       {
         type: 'paragraph',
