@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +24,8 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import TryItThisWeek from '@/components/blog/TryItThisWeek';
 import { RESOURCE_TOPIC_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
-import { getLeadMagnetForResource } from '@/lib/lead-magnets';
+import { getLeadMagnetForResource, INLINE_CAPTURE_GUIDES, inlineCaptureIndex } from '@/lib/lead-magnets';
+import BlogInlineEmailCapture from '@/components/blog/BlogInlineEmailCapture';
 
 const BlogExitIntentPopup = dynamic(() => import('@/components/blog/BlogExitIntentPopup'));
 
@@ -395,9 +397,23 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
               <MobileTOC items={toc} />
               {(() => {
                 let firstParagraphRendered = false;
+                const captureAt = INLINE_CAPTURE_GUIDES.has(resource.slug)
+                  ? inlineCaptureIndex(contentWithCallouts)
+                  : -1;
                 return contentWithCallouts.map((block, i) => {
                   const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
                   if (isFirst) firstParagraphRendered = true;
+                  if (i === captureAt) {
+                    return (
+                      <Fragment key={`capture-${i}`}>
+                        <BlogInlineEmailCapture
+                          magnet={getLeadMagnetForResource(resource.topic)}
+                          pageSlug={resource.slug}
+                        />
+                        {renderBlock(block, i, isFirst)}
+                      </Fragment>
+                    );
+                  }
                   return renderBlock(block, i, isFirst);
                 });
               })()}

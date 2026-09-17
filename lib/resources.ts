@@ -1878,6 +1878,10 @@ const resources: ResourcePage[] = [
         type: 'faq',
         items: [
           {
+            question: 'What is AI literacy for kids?',
+            answer: 'AI literacy for kids is knowing what an AI tool is actually doing (predicting likely words, not thinking), where it tends to be wrong, how to check its answer against a real source, and when using it is learning versus handing the work over. It is a thinking skill, not a tech skill, and a parent who is not technical can teach it at home. This guide has activities from age 6 up.',
+          },
+          {
             question: 'At what age should I introduce AI concepts to my child?',
             answer: 'You can start basic awareness as young as 5-6 with questions like "How do you think the tablet knows what to suggest?" More structured AI literacy can begin around age 8-10 with hands-on experiments. By middle school, kids should understand how algorithms work and be able to critically evaluate AI-generated content. The key is matching the depth to the child\'s developmental stage: concepts before tools, always.',
           },

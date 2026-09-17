@@ -215,3 +215,38 @@ export function applyLeadMagnetCta(
   result.splice(lastParagraphIdx + 1, 0, block);
   return result;
 }
+
+// ─── Inline capture: the magnet offered inside the body, not only at exit ───
+//
+// Sept 2026: 235 organic sessions in 28 days produced one lead, and it came
+// from an idea list, where the ask sits inline on the page. The exit popup
+// was live on every top organic post and produced none. So the five pages
+// Google sends the most people to get the same ask inline, after the first
+// section, with the popup left as is. Read GA4 lead_source "inline:*" against
+// "popup:*" before widening the list.
+
+export const INLINE_CAPTURE_POSTS = new Set<string>([
+  'outdoor-stem-challenges',
+  'shark-tank-for-kids',
+  'lego-stem-activities',
+  'forest-school-activities',
+]);
+
+export const INLINE_CAPTURE_GUIDES = new Set<string>(['life-skills-for-kids']);
+
+/**
+ * Where the inline capture goes: right before the second H2, so the reader
+ * has finished the intro and one real section. -1 when the page has fewer
+ * than two sections (then it is not worth interrupting).
+ */
+export function inlineCaptureIndex(content: BlogContentBlock[]): number {
+  let seen = 0;
+  for (let i = 0; i < content.length; i++) {
+    const b = content[i];
+    if (b.type === 'heading' && b.level === 2) {
+      seen += 1;
+      if (seen === 2) return i;
+    }
+  }
+  return -1;
+}
