@@ -214,7 +214,7 @@ Don't rescue them at the till. If they're over, something goes back.
 
 Little ones: a few dollars in coins, they pick the treat and pay for it themselves.
 
-Post the feast and what went back in the comments. Your last entry in the draw.
+Post the feast and what went back in the comments. That's your last entry. Draw is tomorrow, winner announced Sunday morning.
 ---
 
 ## Friday Sept 18, around 8pm: Evening wrap (optional, after the pitch email has gone out)
