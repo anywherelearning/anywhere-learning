@@ -206,15 +206,9 @@ Caption under the video:
 
 DAY 5 OF 5: The $20 Family Feast
 
-Your kid gets the cash and one job: throw a little celebration for the family tonight. They plan it, price it, shop for it, and come in under budget. Buying, not cooking. Everything you need is in the video.
+Cash in your kid's hand, one job: throw a little celebration for the family tonight. Everything's in the video.
 
-Twenty is the default. Ten or thirty works too. It just has to be fixed before you go, and a little bit not enough.
-
-Don't rescue them at the till. If they're over, something goes back.
-
-Little ones: a few dollars in coins, they pick the treat and pay for it themselves.
-
-Post the feast and what went back in the comments. That's your last entry. Draw is tomorrow, winner announced Sunday morning.
+Post the feast and what went back in the comments. Last entry in the draw. Winner Sunday morning.
 ---
 
 ## Friday Sept 18, around 8pm: Evening wrap (optional, after the pitch email has gone out)
