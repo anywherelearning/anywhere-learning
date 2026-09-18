@@ -184,27 +184,23 @@ Heads up for tomorrow: Day 5 needs cash in your kid's hand ($20 is the default, 
 
 ## Friday Sept 18, 4am: Day 5 video, The $20 Family Feast
 
-**Format:** talking-head video, about 75 seconds. Post the video with the caption below.
+**Format:** talking-head video, about 60 seconds. Post the video with the caption below.
 
 Video script:
 
 Good morning, and welcome to Day 5. This is the one.
 
-Today's activity works on real-world math. Your child gets twenty dollars in cash and one job: throw a little celebration for the whole family tonight. They plan it, they price it, they shop for it, and they come in under budget.
+Today's activity works on real-world math. Your child gets twenty dollars in cash and one job: throw a little celebration for the family tonight. They plan it, they price it, they shop for it, and they come in under budget. Buying, not cooking. Snacks, a drink, something sweet.
 
-They're buying, not cooking. Snacks, something to drink, something sweet, whatever counts as a celebration in your house. And twenty is just the starting number. If it doesn't go far where you live, make it thirty. If money's tight this week, ten works and the lesson is exactly the same. The only thing that matters is that the number is real, it's fixed before you leave the house, and it's not quite enough for everything they want. The squeeze is the lesson.
+Twenty is just the default. Ten works, thirty works. It just has to be fixed before you leave, and a little bit not enough. The squeeze is the lesson.
 
-How it goes. First, plan at home. What are we getting, and what do you think it costs? Have them write the list and guess the prices before you leave. They'll be wildly wrong on at least one thing, and that moment in the aisle is worth the whole week.
+At home, they write the list and guess the prices. At the store, they hold the money and keep the total. You say nothing. And when something doesn't fit, and it won't, they put it back. Don't rescue them at the till. That moment is the whole week in ten seconds.
 
-Then go to the store together. They hold the money, they keep the running total. You are a silent bodyguard.
+Tonight, when you eat, let them tell the story.
 
-Something won't fit. It never does. Do not rescue them at the till. If they're two dollars over, they put something back. That ten seconds is the entire challenge in one moment.
+For the little ones, a few dollars in coins and one job: pick the treat and pay for it themselves.
 
-Then they pay, they count the change, and tonight when you eat, let them tell the story. What it cost, what went back, how they pulled it off.
-
-For the little ones: give them a few dollars in coins and one job. Pick the treat, carry it, and hand the money over at the till themselves.
-
-When you're done, post a photo of the feast and what they had to put back. It's your last entry in the draw, and it's the one I most want to see. I'll be back tonight with one more note. Have fun.
+Post a photo of the feast and what went back. Last entry in the draw, and the one I most want to see. See you tonight.
 
 Caption under the video:
 
