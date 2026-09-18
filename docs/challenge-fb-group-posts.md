@@ -182,26 +182,43 @@ Post what they forgot in the comments. One comment today, one entry in the draw.
 Heads up for tomorrow: Day 5 needs cash in your kid's hand ($20 is the default, $10 or $30 works too) and a trip to the grocery store together. Get the cash tonight.
 ---
 
-## Friday Sept 18, 4am: Day 5, The $20 Family Feast
+## Friday Sept 18, 4am: Day 5 video, The $20 Family Feast
 
-**Photo:** `public/email/challenge-day5.jpg`
+**Format:** talking-head video, about 75 seconds. Post the video with the caption below.
 
-Good morning. This is the one. Day 5, the Family Feast, and the day I most want to see photos from.
+Video script:
 
-Your kid gets the cash and one job: throw a little celebration for the whole family tonight. They plan it, price it, shop for it, and come in under budget. They're buying, not cooking. Snacks, something to drink, something sweet, whatever counts as a celebration in your house. The full run of it, plan at home, shop together, they hold the money and keep the total, is in the email.
+Good morning, and welcome to Day 5. This is the one.
 
-From experience:
+Today's activity works on real-world math. Your child gets twenty dollars in cash and one job: throw a little celebration for the whole family tonight. They plan it, they price it, they shop for it, and they come in under budget.
 
-• The list-and-guess step at home matters more than it looks. Have them write down what they think each thing costs before you leave. They'll be wildly wrong on at least one, and that moment in the aisle is worth the whole week.
-• You are a silent bodyguard in the store. You carry nothing, you say nothing, you hold no money. It's harder than it sounds.
-• Something won't fit the budget. It never does. Do not rescue them at the till. If they're two dollars over, they put something back, and that ten seconds is the entire challenge compressed.
-• Tonight, when you eat, let them tell the story. What it cost, what went back, how they pulled it off. That retelling is where the pride lives.
+They're buying, not cooking. Snacks, something to drink, something sweet, whatever counts as a celebration in your house. And twenty is just the starting number. If it doesn't go far where you live, make it thirty. If money's tight this week, ten works and the lesson is exactly the same. The only thing that matters is that the number is real, it's fixed before you leave the house, and it's not quite enough for everything they want. The squeeze is the lesson.
 
-For the little ones: give them a small amount, three or five dollars in coins, and one job. Pick the treat. They carry it, they hand the coins over at the till themselves, they get the change back in their hand. Count it together on the way out. That's real money in a real place, and at four years old that's enormous.
+How it goes. First, plan at home. What are we getting, and what do you think it costs? Have them write the list and guess the prices before you leave. They'll be wildly wrong on at least one thing, and that moment in the aisle is worth the whole week.
 
-For the older ones: make the number genuinely tight, add a rule like "something for everyone" or "at least one thing that isn't sugar," and let them handle the change with tax on top.
+Then go to the store together. They hold the money, they keep the running total. You are a silent bodyguard.
 
-When you're done, post a photo of the feast and what they had to put back, in the comments below. This is your last entry in the draw, and it's the post I'll be refreshing for all evening. I'll be back tonight with one more note.
+Something won't fit. It never does. Do not rescue them at the till. If they're two dollars over, they put something back. That ten seconds is the entire challenge in one moment.
+
+Then they pay, they count the change, and tonight when you eat, let them tell the story. What it cost, what went back, how they pulled it off.
+
+For the little ones: give them a few dollars in coins and one job. Pick the treat, carry it, and hand the money over at the till themselves.
+
+When you're done, post a photo of the feast and what they had to put back. It's your last entry in the draw, and it's the one I most want to see. I'll be back tonight with one more note. Have fun.
+
+Caption under the video:
+
+DAY 5 OF 5: The $20 Family Feast
+
+Your kid gets the cash and one job: throw a little celebration for the family tonight. They plan it, price it, shop for it, and come in under budget. Buying, not cooking. Everything you need is in the video.
+
+Twenty is the default. Ten or thirty works too. It just has to be fixed before you go, and a little bit not enough.
+
+Don't rescue them at the till. If they're over, something goes back.
+
+Little ones: a few dollars in coins, they pick the treat and pay for it themselves.
+
+Post the feast and what went back in the comments. Your last entry in the draw.
 ---
 
 ## Friday Sept 18, around 8pm: Evening wrap (optional, after the pitch email has gone out)
