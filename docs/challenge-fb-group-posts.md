@@ -200,7 +200,7 @@ Tonight, when you eat, let them tell the story.
 
 For the little ones, a few dollars in coins and one job: pick the treat and pay for it themselves.
 
-Post a photo of the feast and what went back. Last entry in the draw, and the one I most want to see. See you tonight.
+Post a photo of the feast and what went back. That's your last entry, because I'm doing the draw tomorrow and announcing the winner Sunday morning. See you tonight.
 
 Caption under the video:
 
