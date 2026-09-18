@@ -206,9 +206,15 @@ Caption under the video:
 
 DAY 5 OF 5: The $20 Family Feast
 
-Cash in your kid's hand, one job: throw a little celebration for the family tonight. Everything's in the video.
+The big finish. Your kid is in charge of tonight's celebration, and the money is in their hand, not yours. They decide what we're having, guess what it costs, walk the aisles with the running total in their head, and pay at the till themselves.
 
-Post the feast and what went back in the comments. Last entry in the draw. Winner Sunday morning.
+Twenty dollars is where most families start, but pick whatever number is real for your week. The only rule that matters is that it's set before you leave the house, and it shouldn't quite cover everything on their list. Watching them choose what goes back is the whole point.
+
+Your role today is small on purpose. Carry nothing, say nothing, and let them handle the awkward moment at the checkout if there is one.
+
+If you've got a little one, hand them a few coins and let them buy the dessert.
+
+Tonight, post a photo of what they pulled off, and tell me what didn't make the cut. It's the post I've been waiting for all week, and your last entry before tomorrow's draw.
 ---
 
 ## Friday Sept 18, around 8pm: Evening wrap (optional, after the pitch email has gone out)
