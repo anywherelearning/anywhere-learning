@@ -259,7 +259,7 @@ And one more, because I couldn't not. Kelsey Bouchard showed up more than anyone
 
 Thank you to everyone who posted. Reading your drawings and your bridge in the rain was the best part of my week.
 
-This group stays open, so keep posting what you're doing with your kids and I'll keep answering. If you want to keep going, the offer from Friday's email is open until tomorrow night. No pressure either way. You did the week. That was the point.
+This group stays open, so keep posting what you're doing with your kids and I'll keep answering. If you want to keep going, everything you need is in Friday's email. No pressure either way. You did the week. That was the point.
 ---
 
 ## Reply bank
