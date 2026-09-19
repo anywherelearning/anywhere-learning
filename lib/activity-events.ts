@@ -124,23 +124,29 @@ export async function getDownloadAllowanceForClerkId(
 }
 
 /**
- * Record a view or download. Fire-and-forget: callers do not await this and a
- * failure only logs. Never throws.
+ * Record a view or download. Never throws; a failure only logs.
+ *
+ * Callers run this inside Next's `after()` so it completes after the response
+ * is sent. A bare fire-and-forget promise is NOT safe on Vercel: the function
+ * can be frozen the moment the redirect goes out, and the insert never lands.
+ * `after()` keeps the function alive until the callback settles.
  */
-export function logActivityEvent(input: {
+export async function logActivityEvent(input: {
   userId: string;
   slug: string;
   kind: ActivityEventKind;
   tier: 'member' | 'trial';
   ipAddress?: string | null;
-}): void {
-  db.insert(activityEvents)
-    .values({
+}): Promise<void> {
+  try {
+    await db.insert(activityEvents).values({
       userId: input.userId,
       slug: input.slug,
       kind: input.kind,
       tier: input.tier,
       ipAddress: input.ipAddress ?? null,
-    })
-    .catch((err) => console.error('[activity-events] log failed:', err));
+    });
+  } catch (err) {
+    console.error('[activity-events] log failed:', err);
+  }
 }

@@ -25,7 +25,7 @@
  *                can show the right modal instead of navigating.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { getDownloadUrl } from '@vercel/blob';
 import { getAccessContextForClerkId } from '@/lib/access';
@@ -122,13 +122,10 @@ export async function GET(
     return friendlyRedirect('/account', 'activity-missing');
   }
 
-  logActivityEvent({
-    userId: access.userId,
-    slug,
-    kind: 'download',
-    tier,
-    ipAddress: req.headers.get('x-forwarded-for'),
-  });
+  // Runs after the redirect is sent; see logActivityEvent for why after().
+  const ipAddress = req.headers.get('x-forwarded-for');
+  const userId = access.userId;
+  after(() => logActivityEvent({ userId, slug, kind: 'download', tier, ipAddress }));
 
   // Redirect to the Blob CDN. (We briefly streamed the bytes through this
   // route to avoid exposing the public URL, but that stalled on Vercel —
