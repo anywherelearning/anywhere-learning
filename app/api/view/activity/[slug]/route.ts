@@ -12,7 +12,7 @@
  * not DRM.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { getAccessContextForClerkId } from '@/lib/access';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
@@ -52,13 +52,9 @@ export async function GET(
   // One row per reader open. Views are never capped; this is for the stats
   // (what people actually read) and so a bulk-download run shows up next to
   // normal use in scripts/download-stats.ts.
-  logActivityEvent({
-    userId: access.userId,
-    slug,
-    kind: 'view',
-    tier: access.tier,
-    ipAddress: req.headers.get('x-forwarded-for'),
-  });
+  const ipAddress = req.headers.get('x-forwarded-for');
+  const { userId, tier } = access;
+  after(() => logActivityEvent({ userId, slug, kind: 'view', tier, ipAddress }));
 
   const upstream = await fetch(blobUrl);
   if (!upstream.ok) {
