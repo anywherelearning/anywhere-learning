@@ -251,13 +251,15 @@ If you're finishing an activity late, you've still got today. Comment on the day
 
 **Photo:** `public/images/challenge-five-days-banner.jpg` (the collage with the title and the five day labels)
 
-The free year of the Anywhere Learning membership goes to Kelsey Bouchard, the family who showed up the most this week.
+Two free years of the Anywhere Learning membership are going out this morning.
 
-Kelsey, check your inbox, I've already set you up. A first-try bridge that held a rock, in the rain, and a daughter who wants to do the drawing game every week. That's the whole spirit of this thing.
+The draw went to Karen Mark. Karen, check your inbox, you're set up.
 
-To everyone who posted: I read all of it. Karen's kid going back for a second round after the first drawing missed, Vickie's pencil-only octopus because nothing was said about colours, Michelle's shapes that matched on the first try. Those genuinely made my week.
+And one more, because I couldn't not. Kelsey Bouchard showed up more than anyone this week, so Kelsey, you're set up too.
 
-This group stays open. Keep posting what you're doing with your kids, keep asking questions, and I'll keep answering. If you want the next five things to do, the membership is where all of this lives, and the door is open until tomorrow night. No pressure either way. You did the week. That was the point.
+Thank you to everyone who posted. Reading your drawings and your bridge in the rain was the best part of my week.
+
+This group stays open, so keep posting what you're doing with your kids and I'll keep answering. If you want to keep going, the offer from Friday's email is open until tomorrow night. No pressure either way. You did the week. That was the point.
 ---
 
 ## Reply bank
