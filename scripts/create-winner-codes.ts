@@ -25,8 +25,8 @@ if (!process.env.STRIPE_SECRET_KEY) {
 
 const COUPON_ID = 'challenge-2026-free-year';
 const WINNERS = [
-  { code: 'KAREN-FREEYEAR', name: 'Karen Mark' },
-  { code: 'KELSEY-FREEYEAR', name: 'Kelsey Bouchard' },
+  { code: 'KARENFREEYEAR', name: 'Karen Mark' },
+  { code: 'KELSEYFREEYEAR', name: 'Kelsey Bouchard' },
 ];
 const EXPIRES_IN_DAYS = 30;
 
