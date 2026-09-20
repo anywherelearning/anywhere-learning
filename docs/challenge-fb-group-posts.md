@@ -257,7 +257,7 @@ As promised, one free year of the Anywhere Learning membership. The draw went to
 
 And one more, for the family who posted the most this week: Kelsey Bouchard. Thank you for taking the time, Kelsey. Check your email too.
 
-This group stays open. Keep posting what you're doing with your kids, keep asking questions, and I'll keep answering. Hope to see you at the next challenge.
+I'll keep this group up for another week or so, then it'll go quiet until the next challenge. Everything else lives in your inbox from here. Hope to see you at the next one.
 ---
 
 ## Reply bank
