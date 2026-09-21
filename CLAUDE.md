@@ -170,3 +170,22 @@ Feature ideas surfaced during the pre-launch audit (March 2026). Prioritize base
 - **Upgrade to Redis-based rate limiting** (Upstash) when traffic grows
 - **Stripe Tax collection**: configure in Stripe Dashboard when hitting state tax thresholds
 - **Nonce-based CSP**: replace `unsafe-inline`/`unsafe-eval` for stricter Content Security Policy
+
+## 5-Day Challenge (cohort playbook)
+
+Cohort 1 ran Sept 14–18, 2026. Full recap with funnel numbers: `docs/challenge-cohort-1-recap.md`. Group posts, video scripts and reply bank: `docs/challenge-fb-group-posts.md`. Kit HTML for all ten emails: `emails/kit-ready/challenge-*.html`. Dates and kill switch: `lib/challenge.ts`. Winner codes: `scripts/create-winner-codes.ts`.
+
+**Cohort 1 in one line:** $113.69 of Meta ads bought 87 subscribers ($1.31 each, 6.48% CTR, 43% landing-page conversion). About 30 read the daily emails, 4 posted in the Facebook group, 0 started a trial. Two free years given (Karen Mark by draw, Kelsey Bouchard for showing up most).
+
+**Rules for cohort 2, learned the hard way:**
+- Email only. Daily activity in the email, entries are replies to the email. No Facebook group to join. Keep the group for announcements and reusing videos.
+- Same ad creative and targeting, about 3x the budget (~$350 over 14 days, target 250 signups). Broaden the audience so frequency stays under 2.
+- Fix attribution before the ad goes live: the banner and hero sticker link with `?source=site-banner` / `?source=hero-sticker`, which overwrites first-touch (fbclid → facebook). Internal links must not overwrite a stored source.
+- Add `charge.refunded` to the production Stripe webhook events. It did not fire in cohort 1, so a refund left the subscription active and Kit tags in place.
+- Create winner promo codes before Day 1, hyphen-free (email clients mangle hyphens). Use the script.
+- No placeholders inside Kit templates. The Kit API cannot edit templates; every placeholder means a hand edit on send day.
+- Kit API quirk: updating a broadcast's subject alone wipes its preview text. Always send subject + preview_text together, then re-read the draft.
+- Send a personal two-line reply to everyone who replies on Day 1. That is what brings people back on Day 2.
+- Mention the membership on Day 3, pitch on Day 5 morning, last call Monday morning. Never Friday evening.
+- One prize rule, stated once: drawn from everyone who replies at least three of five days.
+- Emails send at 7am in each subscriber's timezone (Kit timezone sending). Any Facebook post must be scheduled for 4am Pacific to be live before the first emails land.
