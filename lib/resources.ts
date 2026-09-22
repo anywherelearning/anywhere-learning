@@ -2406,7 +2406,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Engineering for kids is the most accessible part of STEM because it requires almost no specialist materials. Sticks, tape, cardboard, string, and a real problem to solve cover most of what a kid needs through age 14.',
+        text: 'Engineering for kids is the most accessible part of STEM because it requires almost no specialist materials. Sticks, tape, cardboard, string, and a real problem to solve cover most of what a kid needs through age 14. If the bin in the living room is LEGO, the [LEGO STEM challenges](/blog/lego-stem-activities) post turns it into 15 engineering problems sorted by age, no kit needed.',
       },
       {
         type: 'paragraph',
@@ -2586,7 +2586,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'The [STEM checklist](/ideas/stem-ideas) has 24 more no-kit builds like these, the [outdoor STEM challenges](/blog/outdoor-stem-challenges) post takes the same idea into the yard, and [STEM activities by age](/blog/stem-activities-by-age) tells you which ones suit a 6-year-old versus a 13-year-old.',
+        text: 'The [STEM checklist](/ideas/stem-ideas) has 24 more no-kit builds like these, the [outdoor STEM challenges](/blog/outdoor-stem-challenges) post takes the same idea into the yard, [STEM activities by age](/blog/stem-activities-by-age) tells you which ones suit a 6-year-old versus a 13-year-old, and [LEGO STEM challenges](/blog/lego-stem-activities) covers the bin that is already under your couch.',
       },
       {
         type: 'cta',

@@ -7083,7 +7083,7 @@ const posts: BlogPost[] = [
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-03-25',
-    dateModified: '2026-03-25',
+    dateModified: '2026-09-22',
     keywords: [
       'LEGO STEM activities',
       'LEGO STEM',
@@ -7120,7 +7120,7 @@ const posts: BlogPost[] = [
         'Iterate. The second build is always better than the first, and that is the whole point.',
       ]},
       { type: 'paragraph', text: 'The constraint is what makes this work. Unlimited pieces means no design pressure. A single bin forces trade-offs, which is exactly what real engineers do all day. If you only have three long flat pieces, you have to decide what they are for.' },
-      { type: 'heading', level: 2, text: '5 beginner challenges (ages 5-7)' },
+      { type: 'heading', level: 2, text: '5 beginner LEGO STEM challenges (ages 5 to 7)' },
       { type: 'paragraph', text: 'These are simple, fast, and forgiving. The point at this age is to get the loop going: build, test, notice what happened, try again. Each one should take 15 to 30 minutes.' },
       { type: 'list', ordered: true, items: [
         'Tallest free-standing tower. Must stand on its own for ten seconds without anyone touching it. Bonus round: do it again, taller, after the first one falls.',
@@ -7169,6 +7169,7 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'Try this on a wrecked afternoon', text: 'Dump one bin in the middle of the floor. Tell your kid: "Build a bridge that holds this book." Walk away. Do not check in for 30 minutes. When you come back, ask what is working and what is not. That is the whole activity.' },
       { type: 'cta', text: 'Want more open-ended build challenges your kids can run with on their own? Our free guide has real-world activities for kids ages 5-12. No curriculum, low prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
+        { question: 'Can you do LEGO STEM challenges without a kit?', answer: 'Yes, and the ones here assume you cannot buy anything. A shoebox of mixed bricks is enough for all 15: the challenges are about constraints (a bridge that spans a gap, a tower that survives a shake, a car that rolls furthest), not specific pieces. Mindstorms and Spike are great if you already have them, but they teach a different skill, coding, and none of these builds need them.' },
         { question: 'What is a LEGO STEM activity?', answer: 'A LEGO STEM activity is a build challenge with a specific goal and constraint (for example, "build a bridge that holds a book using only pieces from this bin"). The kid designs the solution rather than following set instructions. That design-build-test loop is what makes it engineering practice instead of just play.' },
         { question: 'What ages are LEGO engineering challenges good for?', answer: 'Roughly five through fourteen, with the type of challenge shifting by age. Five to seven year olds can do simple structural challenges (tallest tower, bridge that holds weight). Eight to ten year olds add moving parts and targets. Eleven to fourteen year olds can take on full mechanisms, gear-driven motion, and multi-step machines.' },
         { question: 'Do I need LEGO Mindstorms or Spike to teach engineering with LEGO?', answer: 'No. Regular bricks are enough for almost all engineering concepts: structure, mechanical advantage, motion, force, iteration. Robotics kits add coding and sensors, which is great if you have one, but it is not the entry point. Start with the bricks you already own.' },
