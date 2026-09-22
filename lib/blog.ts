@@ -9123,7 +9123,9 @@ const posts: BlogPost[] = [
     keywords: ['community impact project', 'community impact projects for kids', 'community project for kids', 'community service project ideas for kids', 'kids community project ideas', 'service learning at home', 'neighbourhood project for kids', 'community impact project ideas'],
     readTimeMinutes: 11,
     author: amelie,
-    heroImageAlt: '',
+    heroImage: '/images/community-impact-beach-hero.jpeg',
+    heroImageAlt: 'Kids and adults carrying white buckets along a windy Florida beach during a beach cleanup, seaweed on the tideline and dune grass to the right',
+    heroImageAspect: '4/3',
     recommendedProduct: 'community-impact',
     content: [
       { type: 'summary', text: 'A community impact project for kids is a project where a child finds one real problem in their own neighbourhood, works out who it affects, designs a fix and carries it out with real people involved. It teaches planning, communication, persuasion and follow-through, and the math and writing ride along inside the work. The eight projects below run from home with a parent alongside, for ages 6 to 14, and none of them needs a charity, a budget or a school.' },
