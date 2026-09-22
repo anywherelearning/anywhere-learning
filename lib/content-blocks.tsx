@@ -18,7 +18,8 @@ export type ContentBlock =
   | { type: 'tip'; title: string; text: string }
   | { type: 'faq'; items: { question: string; answer: string }[] }
   | { type: 'product-callout'; slug: string; context?: string; pinned?: boolean }
-  | { type: 'summary'; text: string; heading?: string };
+  | { type: 'summary'; text: string; heading?: string }
+  | { type: 'table'; headers: string[]; rows: string[][]; caption?: string };
 
 /** Backward-compatible alias */
 export type BlogContentBlock = ContentBlock;
@@ -114,6 +115,7 @@ export function getArticleBodyText(content: ContentBlock[]): string {
       if (b.type === 'list') return b.items.join(' ');
       if (b.type === 'tip') return b.text;
       if (b.type === 'summary') return b.text;
+      if (b.type === 'table') return [b.headers.join(' '), ...b.rows.map((r) => r.join(' '))].join(' ');
       return '';
     })
     .filter(Boolean)
@@ -232,6 +234,42 @@ export function renderBlock(block: ContentBlock, index: number, isFirstParagraph
             </li>
           ))}
         </ul>
+      );
+    case 'table':
+      // Comparison tables. First column is the row label, so it reads as a
+      // header for screen readers and stays bold when the row wraps on a phone.
+      return (
+        <div key={index} className="mb-10 overflow-x-auto rounded-2xl border border-[#D8D4C5]">
+          <table className="w-full min-w-[520px] border-collapse text-[15px] leading-[1.6] text-gray-600">
+            {block.caption && <caption className="sr-only">{block.caption}</caption>}
+            <thead>
+              <tr className="bg-[#F2EFE4]">
+                {block.headers.map((h, i) => (
+                  <th key={i} scope="col" className="px-4 py-3 text-left text-[13px] font-semibold uppercase tracking-[0.12em] text-forest-dark">
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, r) => (
+                <tr key={r} className="border-t border-[#E6E2D6] align-top">
+                  {row.map((cell, c) =>
+                    c === 0 ? (
+                      <th key={c} scope="row" className="px-4 py-3 text-left font-semibold text-forest-dark w-[22%]">
+                        {parseInlineLinks(cell)}
+                      </th>
+                    ) : (
+                      <td key={c} className="px-4 py-3">
+                        {parseInlineLinks(cell)}
+                      </td>
+                    ),
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       );
     case 'image':
       return (
