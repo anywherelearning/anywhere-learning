@@ -8,14 +8,14 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: '7 Days of Real-World Learning, Free Guide',
+  title: 'Real-World Activities for Kids: Free 7-Day Guide for Families',
   description:
     'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities across seven categories. Zero worksheets.',
   alternates: {
     canonical: 'https://anywherelearning.co/free-guide',
   },
   openGraph: {
-    title: '7 Days of Real-World Learning | Free Guide',
+    title: 'Real-World Activities for Kids: Free 7-Day Guide for Families',
     description:
       'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities across seven categories. Zero worksheets.',
     url: 'https://anywherelearning.co/free-guide',

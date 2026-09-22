@@ -82,6 +82,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to teach life skills, money, entrepreneurship, writing, and problem-solving through everyday experiences. Works for any family, no curriculum required.',
     topic: 'real-world-learning',
     publishedAt: '2026-03-21',
+    dateModified: '2026-09-22',
     keywords: [
       'real world learning', 'life skills for kids', 'teach kids money',
       'kids entrepreneurship', 'practical learning activities',
@@ -425,6 +426,7 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          { question: 'What are real-world learning activities for elementary kids?', answer: 'Real-world learning activities are tasks with a real outcome that happen to carry the academics inside them: planning a party on a budget (fractions, money), running a lemonade stand (pricing, writing, speaking), building a marble run (physics, iteration), keeping a nature journal (observation, writing). For ages 6 to 10 the test is simple: would the task still matter if nobody were grading it? The list below is sorted by subject and by age.' },
           {
             question: 'Is real-world learning enough on its own?',
             answer: 'Many families use real-world learning as the backbone of their entire approach, supplementing with reading and targeted practice in areas like math fluency. Whether you homeschool or use it alongside traditional school, the key is intentionality: knowing what skills your child is building through each experience.',
@@ -1242,6 +1244,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to nurture creativity, invention, and design thinking through hands-on projects, no artistic talent required.',
     topic: 'creativity-maker',
     publishedAt: '2026-03-21',
+    dateModified: '2026-09-22',
     keywords: [
       'maker activities for kids', 'creative learning', 'STEAM activities',
       'hands on projects for kids', 'design thinking for children',
@@ -1567,6 +1570,7 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          { question: 'What activities foster creativity in maker education?', answer: 'The ones with a problem and no instructions. Give a kid one material and a job (make something that holds a book off the table, using only newspaper), a build that has to work (a marble run, a paper bridge that carries a can), or a thing to fix rather than a thing to make. Instruction-following kits keep hands busy; open problems make kids invent. The guide below sorts these by age and by what you already have at home.' },
           {
             question: 'What ages are maker activities appropriate for?',
             answer: 'All ages, with different levels of complexity. A 3-year-old can stack blocks and experiment with balance. A 12-year-old can design a working catapult or edit a video. The principles are the same; only the materials and complexity change. Start where your child is and let them stretch when they\'re ready.',
@@ -2242,7 +2246,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no chemistry sets, no robotics camps required.',
     topic: 'stem-for-kids',
     publishedAt: '2026-03-21',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-22',
     keywords: [
       'STEM for kids', 'STEM activities for kids', 'STEM at home',
       'real world STEM', 'engineering for kids', 'science for kids',
@@ -2598,6 +2602,7 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          { question: 'What is STEM for kids?', answer: 'STEM for kids is science, technology, engineering and math learned by building, testing and fixing real things instead of reading about them: a bridge that has to hold weight, a garden that has to grow, a code that has to run. At home it needs no kit and no curriculum. The guide below covers what it looks like at 5, 8 and 12, and where to start if your kid says they hate math.' },
           {
             question: 'What is a STEM challenge for kids?',
             answer: 'A STEM challenge is a hands-on problem with a clear goal and a constraint, such as building the tallest tower from twenty straws or a boat that carries ten coins. Kids design, test, fail, and improve, which is the engineering process in miniature. The constraint matters more than the materials: it is what makes them think instead of just build.',

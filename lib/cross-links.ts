@@ -148,6 +148,7 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'board-game-studio': ['board-game-design-kids'],
   'build-a-museum': ['build-a-museum-exhibit-at-home', 'real-world-history-for-kids'],
   'theme-park': ['design-a-theme-park-kids'],
+  'community-impact': ['community-impact-projects-for-kids'],
   'road-trip-calculator': ['road-trip-math', 'real-world-math-activities'],
   'outdoor-stem-challenges': ['outdoor-stem-challenges', 'forest-school-activities'],
   'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age'],
