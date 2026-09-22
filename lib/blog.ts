@@ -8489,7 +8489,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Ages 9 to 11: perspective and nuance' },
       { type: 'paragraph', text: 'This is a big leap. Kids this age can genuinely take another’s perspective, understand that people can feel two things at once, and grasp that their actions affect others’ feelings. This is often when empathy becomes visibly real, a kid comforting a sibling unprompted, noticing a left-out classmate. Give them responsibility and real chances to help.' },
       { type: 'heading', level: 3, text: 'Ages 12 to 14: values and action' },
-      { type: 'paragraph', text: 'Tweens and young teens can extend empathy beyond people they know to strangers, groups, and causes, and they start to care about fairness and justice. Channel it: volunteering, standing up for others, real responsibility for people who depend on them. This is where empathy matures into character.' },
+      { type: 'paragraph', text: 'Tweens and young teens can extend empathy beyond people they know to strangers, groups, and causes, and they start to care about fairness and justice. Channel it: volunteering, standing up for others, real responsibility for people who depend on them. A [community impact project](/blog/community-impact-projects-for-kids) is the structured version: one problem near home, fixed by the kid. This is where empathy matures into character.' },
 
       { type: 'heading', level: 2, text: 'The sibling-fight scenario' },
       { type: 'paragraph', text: 'Since this is where empathy gets tested most, here is how to handle the classic sibling blowup in a way that builds it. In the moment, keep everyone safe and calm first; no one learns empathy mid-meltdown. Once things settle, bring them together and coach perspective-taking, not blame: "You were both upset. What do you think was going on for your sister?" Then move to repair: "What could you do to make things a little better between you?" You are not assigning guilt, you are walking them through noticing the other person and choosing to reconnect. Do this a hundred times over the years and it becomes how they handle conflict for life.' },
@@ -9119,7 +9119,6 @@ const posts: BlogPost[] = [
     category: 'future-ready-skills',
     pillarSlug: 'life-skills-for-kids',
     publishedAt: '2026-09-22',
-    draft: true,
     keywords: ['community impact project', 'community impact projects for kids', 'community project for kids', 'community service project ideas for kids', 'kids community project ideas', 'service learning at home', 'neighbourhood project for kids', 'community impact project ideas'],
     readTimeMinutes: 11,
     author: amelie,
