@@ -320,6 +320,30 @@ async function pullGa4(auth: AuthClient) {
       },
     });
 
+    // Which form captured each lead: the lead_source event parameter, registered
+    // as the event-scoped custom dimension "Lead source" on Sept 22 2026
+    // (inline:{page} vs popup:{magnet} vs challenge, quiz, ...). Collects from
+    // that date only; a missing dimension just leaves the table empty.
+    let leadSources: analyticsdata_v1beta.Schema$RunReportResponse = {};
+    try {
+      const r = await ad.properties.runReport({
+        property: GA4_PROPERTY,
+        requestBody: {
+          dateRanges,
+          dimensions: [{ name: 'customEvent:lead_source' }, { name: 'sessionDefaultChannelGroup' }],
+          metrics: [{ name: 'eventCount' }],
+          dimensionFilter: {
+            filter: { fieldName: 'eventName', stringFilter: { matchType: 'EXACT', value: 'generate_lead' } },
+          },
+          orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+          limit: '100',
+        },
+      });
+      leadSources = r.data;
+    } catch (e) {
+      console.warn(`GA4 ${days}d: lead_source breakdown unavailable (${(e as Error).message.slice(0, 80)})`);
+    }
+
     const toRows = (d: analyticsdata_v1beta.Schema$RunReportResponse) => {
       const dims = (d.dimensionHeaders ?? []).map((h) => h.name ?? '');
       const mets = (d.metricHeaders ?? []).map((h) => h.name ?? '');
@@ -336,6 +360,7 @@ async function pullGa4(auth: AuthClient) {
       channels: toRows(channels.data),
       organicLanding: toRows(landing.data),
       leadPages: toRows(leadPages.data),
+      leadSources: toRows(leadSources),
     };
     const totalSessions = toRows(channels.data).reduce((s, r) => s + Number(r.sessions), 0);
     const leads = toRows(channels.data).reduce((s, r) => s + Number(r['keyEvents:generate_lead']), 0);
@@ -456,6 +481,13 @@ function renderMarkdown(date: string, gsc: any, ga4: any, bing: any): string {
       d.leadPages.length
         ? mdTable(['Landing page', 'Channel', 'Sessions', 'Leads'], d.leadPages.map((r: any) => [r.landingPage, r.sessionDefaultChannelGroup, r.sessions, r['keyEvents:generate_lead']]))
         : '(none in this window)',
+      '',
+    );
+    parts.push('### Leads by form (lead_source, all channels)', '');
+    parts.push(
+      d.leadSources?.length
+        ? mdTable(['Lead source', 'Channel', 'Leads'], d.leadSources.map((r: any) => [r['customEvent:lead_source'] || '(not set)', r.sessionDefaultChannelGroup, r.eventCount]))
+        : '(none recorded; the dimension collects from Sept 22 2026)',
       '',
     );
   }
