@@ -35,6 +35,12 @@ export interface BlogPost {
    */
   metaDescription?: string;
   /**
+   * Optional <title> tag override (aim for 60 characters or fewer). Lets the
+   * SERP title chase search intent while the on-page H1 keeps the voice.
+   * Falls back to `title`.
+   */
+  seoTitle?: string;
+  /**
    * Optional curated one-line hook shown on blog cards. Hand-written teaser
    * that creates curiosity. Falls back to `excerpt` if not set.
    */
@@ -771,7 +777,8 @@ const posts: BlogPost[] = [
     slug: 'life-skills-before-12',
     title: '10 Life Skills Every Kid Should Learn Before They\u2019re 12',
     excerpt: 'Forget worksheets. These are the skills that actually matter, and your kids can learn them through everyday life, starting today.',
-    metaDescription: 'The 10 life skills a kid should have before 12: cooking, money, laundry, time, speaking up. What to expect at 8, 10 and 12, and how to teach each at home.',
+    metaDescription: 'What should a 12 year old be able to do? 10 life skills, from cooking and money to laundry and speaking up, with what to expect at 8, 10 and 12.',
+    seoTitle: '10 Life Skills Kids Need Before 12 (What to Expect by Age)',
     hook: 'Cook a meal. Read a map. Have a hard conversation. None of these show up on a report card.',
     category: 'future-ready-skills',
     pillarSlug: 'life-skills-for-kids',
@@ -4558,7 +4565,8 @@ const posts: BlogPost[] = [
     slug: 'forest-school-activities',
     title: '15 Forest School Activities You Can Do Without Any Training',
     excerpt: 'Fifteen forest school activities any parent can lead at home, from den building to whittling. No certification needed, just trees, sticks, and curious kids ready to explore.',
-    metaDescription: 'Fifteen forest school activities any parent can lead, from den building to whittling. No training needed, just trees, sticks, and curious kids.',
+    metaDescription: '15 simple forest school activities and ideas any parent can lead: den building, whittling, fire circles, sit spots. No certification needed, just trees.',
+    seoTitle: '15 Forest School Activities & Ideas for Kids (No Training)',
     hook: 'You do not need a certification to let your kid build a den out of sticks.',
     category: 'nature-learning',
     pillarSlug: 'nature-based-learning',
@@ -6510,7 +6518,8 @@ const posts: BlogPost[] = [
     slug: 'real-world-history-for-kids',
     title: 'How to Make History Fun for Kids: 20 Ways, No Textbook',
     excerpt: 'History is not a list of dates to memorize. It is woven through your family stories, your dinner plate, the buildings on your street, and the news on the radio. Here is how to make history fun for kids without a textbook, with 20 concrete starting points and age-by-age guidance.',
-    metaDescription: 'How to teach kids history in a fun way: 20 real-world starting points, from family stories to your own street, with what works at each age. No textbook.',
+    metaDescription: '20 fun ways to teach kids history without a textbook: family stories, food, your own street, the news. What works at ages 6 to 14, starting this week.',
+    seoTitle: 'How to Make History Interesting for Kids: 20 Fun Ways',
     hook: 'A kid who learns history through their grandmother\'s kitchen will remember more than one who spent a year on a textbook.',
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
@@ -8852,7 +8861,8 @@ const posts: BlogPost[] = [
     slug: 'shark-tank-for-kids',
     title: 'Shark Tank for Kids: Ideas, Rules, and How to Run the Activity',
     excerpt: 'A Shark Tank activity is one of the best real-world projects you can run with kids: they invent a business, build the numbers, and pitch it to the "sharks." Here is how to run it step by step, for ages 8 to 14, at home or in a classroom.',
-    metaDescription: 'How to run a Shark Tank activity for kids ages 8 to 14: invent a business, build the numbers, write the pitch, and face the sharks. Steps, rules, and ideas.',
+    metaDescription: 'Run a Shark Tank business pitch activity with kids ages 8 to 14, at home or in class: pitch ideas, rules, shark questions, and a step-by-step setup.',
+    seoTitle: 'Shark Tank Activity for Kids: How to Run a Business Pitch',
     hook: 'Give a kid a business to invent and a room to pitch it in, and watch them light up. Shark Tank for kids teaches more in one project than a month of worksheets.',
     category: 'real-world-skills',
     publishedAt: '2026-07-30',

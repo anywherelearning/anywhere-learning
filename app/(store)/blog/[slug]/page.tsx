@@ -46,11 +46,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const seoTitle = post.seoTitle ?? post.title;
 
   return {
     // Long titles drop the " | Anywhere Learning" suffix so the keyword-led
     // part survives the SERP cutoff. The brand is in the URL and breadcrumb.
-    title: post.title.length > 50 ? { absolute: post.title } : post.title,
+    title: seoTitle.length > 50 ? { absolute: seoTitle } : seoTitle,
     description: getSeoDescription(post),
     keywords: post.keywords,
     alternates: {
