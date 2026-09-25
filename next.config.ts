@@ -80,6 +80,9 @@ const nextConfig: NextConfig = {
       // not the top of the page, so anyone following an old membership link
       // arrives at the pricing block they were expecting. The hash is
       // client-side only, so search engines still treat this as "/".
+      // Challenge cohort #1 ended Sept 18 2026; the free email course replaces it.
+      // Temporary (307) so the URL can come back for a future cohort.
+      { source: "/challenge", destination: "/course?source=challenge-page", permanent: false },
       { source: "/join", destination: "/#membership", permanent: true },
       { source: "/membership", destination: "/#membership", permanent: true },
       { source: "/cart", destination: "/#membership", permanent: true },

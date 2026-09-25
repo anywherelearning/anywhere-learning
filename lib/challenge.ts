@@ -28,7 +28,11 @@ export const CHALLENGE = {
   //   Sept 14-18  the five daily broadcasts
   //   Sept 18  the pitch, Sept 20 the winners, Sept 21 the last one
   // Source HTML for all ten is in emails/kit-ready/challenge-*.html.
-  isLive: true,
+  //
+  // RETIRED Sept 25 2026 after cohort #1. /challenge now redirects to the free
+  // 5-day email course (see next.config.ts). Flip back to true, and remove that
+  // redirect, only when running a new cohort with new dates.
+  isLive: false,
 
   // Dates for cohort #1 (2026). Labels are pre-written so copy never has to
   // format a Date at render time. Moved Aug -> Sept 14-18: the founder is

@@ -92,8 +92,9 @@ const RESOURCES_ITEMS: ResourceEntry[] = [
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   {
     label: 'Free',
-    desc: CHALLENGE.isLive ? 'Five things you can take today' : 'Four things you can take today',
+    desc: CHALLENGE.isLive ? 'Six things you can take today' : 'Five things you can take today',
     children: [
+      { href: '/course', label: '5-Day Course', desc: 'Free, one short email a day' },
       ...(CHALLENGE.isLive
         ? [{ href: '/challenge', label: '5-Day Challenge', desc: 'Free, one real-world activity a day' }]
         : []),
@@ -387,10 +388,10 @@ export default function SiteHeader() {
                   {hasAccess ? null : (
                     <>
                       <Link
-                        href="/free-guide"
+                        href="/course?source=header"
                         className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                       >
-                        Free guide
+                        Free course
                       </Link>
                       <Link
                         href="/start-trial"
@@ -452,10 +453,10 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/free-guide"
+                    href="/course?source=header"
                     className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                   >
-                    Free 7-day guide
+                    Free 5-day course
                   </Link>
                   <span
                     aria-hidden="true"
@@ -590,10 +591,10 @@ export default function SiteHeader() {
                   ) : (
                     <>
                       <Link
-                        href="/quiz"
+                        href="/course?source=header-mobile"
                         className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold text-[15px] py-3 px-5 rounded-xl no-underline hover:bg-[#E6EBDF] transition-all"
                       >
-                        Take the 2-min quiz &rarr;
+                        Free 5-day course &rarr;
                       </Link>
                       <Link
                         href="/start-trial"
@@ -614,10 +615,10 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/quiz"
+                    href="/course?source=header-mobile"
                     className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold text-[15px] py-3 px-5 rounded-xl no-underline hover:bg-[#E6EBDF] transition-all"
                   >
-                    Take the 2-min quiz &rarr;
+                    Free 5-day course &rarr;
                   </Link>
                   <Link
                     href="/sign-in"

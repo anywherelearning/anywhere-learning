@@ -222,12 +222,6 @@ export default async function HomePage() {
                 A card is required to start. Cancel before day {TRIAL_DAYS + 1} and you pay
                 nothing, and we remind you first.
               </p>
-              <Link
-                href="/quiz"
-                className="inline-block border-b border-forest/30 pb-0.5 text-[15px] font-medium text-forest transition-colors hover:border-forest hover:text-forest-dark"
-              >
-                Not sure where your kid is? Take the 2-min quiz &rarr;
-              </Link>
             </div>
 
             {/* The playable next-stop card, floating over the photo wash. */}
