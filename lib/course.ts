@@ -19,7 +19,7 @@ export const COURSE = {
   //
   // Flip to true only once the Kit sequence is built and set to start on the
   // `course-rwl` tag (Day 1 must send the moment someone signs up).
-  isLive: false,
+  isLive: true,
 
   // Kit: signups get this tag (NOT the generic `lead` tag, which runs the
   // 7-day free guide sequence). The tag is what starts the course sequence.
