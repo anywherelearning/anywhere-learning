@@ -453,20 +453,20 @@ export default function SiteHeader() {
               ) : (
                 <>
                   <Link
-                    href="/course?source=header"
-                    className="hidden lg:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
+                    href="/sign-in"
+                    className="hidden md:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
                   >
-                    Free 5-day course
+                    Sign in
                   </Link>
                   <span
                     aria-hidden="true"
                     className="hidden lg:inline-block w-px h-4 bg-[#C9C5B7]"
                   />
                   <Link
-                    href="/sign-in"
-                    className="hidden md:inline-block text-gray-600 font-body font-medium text-[14.5px] py-1 hover:text-forest-dark transition-colors no-underline"
+                    href="/course?source=header"
+                    className="hidden lg:inline-flex items-center border border-forest/60 text-forest-dark font-body font-semibold text-[14.5px] px-4 py-[7px] rounded-full no-underline hover:bg-forest/10 hover:border-forest transition-colors"
                   >
-                    Sign in
+                    Free 5-day course
                   </Link>
                   <Link
                     href="/start-trial"
