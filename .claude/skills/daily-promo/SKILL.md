@@ -23,6 +23,8 @@ From promo-map.md, select:
 Skip anything done in the last entry of the log (Step 4). Never suggest promoting the same thing in the same group twice in one week.
 
 ## Step 2: Deliver the reminder
+**Every draft is pasted in full in the chat message. Never in a file, never "see the document", never summarized.** Amelie copies straight from the chat (her words, Sep 11 2026: "i always want to see them here, not in a document"). If there are five places, there are five full drafts in the message. Pre-drafted weekend slots get re-pasted on the day, not pointed to.
+
 One short message, formatted like:
 
 **Today (Tuesday): 2 places**
