@@ -14,6 +14,7 @@ Produce this week's social plan for Anywhere Learning: 3 Instagram reels (Tuesda
 - **Footage check, before any reel is written.** Look up the next 3 videos in the plan's batch order and ask Amelie, in one message: does she have the footage each one needs, and if not, what footage does she have from the week? Wait for the answer. Keep the plan's FORMAT (pillar, hook structure, keyword, text-visual-spoken layering) and swap only the topic to match the footage she actually has. Never write a reel around footage that doesn't exist.
 - Read memory: reel history, reels strategy, voice rules, core problem positioning. These are standing context, not suggestions.
 - Read the latest `WEEKLY-SOCIAL-*.md` and `REELS-AUDIT-*.md` on `~/Desktop/Anywhere Learning/` to know what was planned last week.
+- Read `~/Desktop/Anywhere Learning/REEL-QUEUE.md`: reels Amelie already approved with footage confirmed. Slot any whose target date falls in this week (replacing the next plan video in the same pillar), keep their wording, remind her of any ManyChat automation they still need, and remove them from the queue once posted.
 
 ## Step 1: Audit (both platforms, separately)
 Open Meta Business Suite content insights (business.facebook.com/latest/insights/content) in Amelie's Chrome (claude-in-chrome tools). If Chrome/extension is unavailable, say so plainly, draft from memory instead, and mark the plan "audit skipped".
