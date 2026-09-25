@@ -168,7 +168,7 @@ export default function QuizPage() {
                 thing to try on Saturday, and three activities to start with.
               </p>
               <a
-                href="#quiz"
+                href="#start-quiz"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-forest px-7 py-4 text-base font-semibold text-cream transition-colors hover:bg-forest-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
               >
                 Find out which one leads

@@ -64,6 +64,21 @@ export default function LifeSkillQuiz() {
     };
   }, [answers]);
 
+  // Links to #start-quiz (the "Find out which one leads" button under the
+  // type cards) skip the intro: start the questions and scroll up to them.
+  // Mid-quiz it only scrolls, so nobody loses their answers.
+  useEffect(() => {
+    function startFromHash() {
+      if (window.location.hash !== "#start-quiz") return;
+      setPhase((p) => (p === "intro" ? "questions" : p));
+      history.replaceState(null, "", window.location.pathname + window.location.search + "#quiz");
+      document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    startFromHash();
+    window.addEventListener("hashchange", startFromHash);
+    return () => window.removeEventListener("hashchange", startFromHash);
+  }, []);
+
   const total = QUESTIONS.length;
   const progress = Math.round(((current + (phase === "email" ? 1 : 0)) / total) * 100);
 
