@@ -80,6 +80,10 @@ const faqLd = {
   })),
 };
 
+// Tilt and drop for the fanned hand of type cards, outermost cards lowest.
+const HAND_ROT = [-6, -3, 0, 3, 6];
+const HAND_LIFT = [18, 6, 0, 6, 18];
+
 const linkClass =
   'text-forest-dark font-medium underline decoration-forest/30 underline-offset-2 hover:text-forest';
 
@@ -113,9 +117,9 @@ export default function QuizPage() {
             without this the page is 200 words of chrome to a crawler and
             Search Console filed it under "discovered, not indexed". It shows
             each type's recognition line only; the fix stays in the quiz. */}
-        <section className="bg-cream border-t border-[#D8D4C5] pt-16 pb-14 md:pt-24 md:pb-20">
-          <div className="mx-auto max-w-[1040px] px-6">
-            <header className="max-w-[640px]">
+        <section className="overflow-hidden bg-cream border-t border-[#D8D4C5] pt-16 pb-14 md:pt-24 md:pb-20">
+          <div className="mx-auto max-w-[1240px] px-6">
+            <header className="mx-auto max-w-[640px] text-center">
               <h2 className="font-display text-[clamp(2rem,4.2vw,3rem)] leading-[1.05] tracking-tight text-balance">
                 Which one sounds like <span className="italic text-forest">your kid?</span>
               </h2>
@@ -125,30 +129,40 @@ export default function QuizPage() {
               </p>
             </header>
 
-            <ul className="mt-12 md:mt-16 m-0 p-0 list-none border-b border-[#E1DBC6]">
-              {Object.values(RESULTS).map((r) => (
+            {/* A hand of five cards, one per type, fanned on desktop and
+                stacked as a slightly tilted pile on phones. Backgrounds are each type's accent
+                darkened a little so white text stays readable. */}
+            <ul className="mx-auto mt-12 flex max-w-[440px] list-none flex-col gap-4 p-0 pb-8 pt-2 md:mt-14 lg:max-w-none lg:flex-row lg:justify-center lg:gap-0 lg:pt-6">
+              {Object.values(RESULTS).map((r, i) => (
                 <li
                   key={r.id}
-                  className="grid grid-cols-1 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-x-14 gap-y-3 border-t border-[#E1DBC6] py-8 md:py-10"
+                  className="relative flex flex-col rounded-[22px] p-6 text-white shadow-[0_30px_50px_-30px_rgba(0,0,0,0.55)] transition-transform duration-300 [transform:rotate(var(--mr))] lg:-mx-2 lg:h-[380px] lg:w-[250px] lg:shrink-0 lg:[transform:rotate(var(--r))_translateY(var(--y))] lg:hover:z-10 lg:hover:[transform:rotate(0deg)_translateY(-14px)]"
+                  style={{
+                    background: `color-mix(in srgb, ${r.accent} 74%, #1f2a1e)`,
+                    ['--r' as string]: `${HAND_ROT[i]}deg`,
+                    ['--y' as string]: `${HAND_LIFT[i]}px`,
+                    ['--mr' as string]: `${i % 2 ? 1.2 : -1.2}deg`,
+                  }}
                 >
-                  <div className="flex items-start gap-3.5">
-                    <LeafMark className="mt-1 h-6 w-6 shrink-0" color={r.accent} />
-                    <div>
-                      <h3 className="font-display text-[25px] md:text-[28px] font-semibold leading-[1.08] tracking-tight text-ink">
-                        {r.title}
-                      </h3>
-                      <p className="mt-1.5 text-[15px] text-gray-600">{r.tagline}</p>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[12px] font-bold uppercase tracking-[0.16em] text-white/80">
+                      0{i + 1}
+                    </span>
+                    <LeafMark className="h-6 w-6" color="rgba(255,255,255,0.85)" />
                   </div>
-                  <p className="pl-[38px] md:pl-0 font-display italic text-[19px] md:text-[22px] leading-[1.5] text-[#3d4a3c] text-pretty max-w-[46ch]">
+                  <h3 className="mt-5 font-display text-[26px] font-semibold leading-[1.05] tracking-tight">
+                    {r.title}
+                  </h3>
+                  <p className="mt-1.5 text-[14px] text-white/85">{r.tagline}</p>
+                  <p className="mt-5 border-t border-white/25 pt-4 font-display text-[16.5px] italic leading-[1.5] lg:mt-auto">
                     {tellOf(r.description)}
                   </p>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-12 flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-[48ch] text-[17px] leading-[1.6] text-gray-700 text-pretty">
+            <div className="mx-auto mt-8 flex max-w-[640px] flex-col items-center gap-6 text-center">
+              <p className="text-[17px] leading-[1.6] text-gray-700 text-pretty">
                 <span className="font-semibold text-ink">Recognize one? Or two?</span> Eight
                 questions sort out which one leads, and give you the skill to build next, one
                 thing to try on Saturday, and three activities to start with.
@@ -157,7 +171,7 @@ export default function QuizPage() {
                 href="#quiz"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-forest px-7 py-4 text-base font-semibold text-cream transition-colors hover:bg-forest-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
               >
-                Take the quiz
+                Find out which one leads
                 <span aria-hidden="true" className="text-[19px] leading-none">&uarr;</span>
               </a>
             </div>
