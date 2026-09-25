@@ -41,35 +41,37 @@ export function isCoursePageVisible(): boolean {
 }
 
 // The five emails, as shown on the landing page. Titles match the email
-// subjects so what people are promised is what lands in their inbox.
+// subjects so what people are promised is what lands in their inbox. Blurbs
+// are summaries of each email, never lines lifted from it.
 export const COURSE_DAYS = [
   {
     day: 'Day 1',
     title: 'What real-world learning actually is',
     blurb:
-      'A plain definition, the one question that tells you whether something counts, and one ordinary afternoon at our house unpacked subject by subject.',
+      'A simple definition of real-world learning, and a one-question test you can run on anything your kid does.',
   },
   {
     day: 'Day 2',
     title: 'Better at school, worse at life',
     blurb:
-      'What I watched disappear in fifteen years of teaching, why real tasks stick when worksheets do not, and why it matters even more for our kids than it did for us.',
+      'Why so many kids do well at school and still struggle with real life, and why doing beats being told.',
   },
   {
     day: 'Day 3',
     title: 'Math, writing and science in one afternoon',
     blurb:
-      'How one real task carries the academics and the life skills at the same time, and a simple way to start spotting it in your own week.',
+      'How one real task can cover several subjects and life skills at once, and a five-minute way to spot it at home.',
   },
   {
     day: 'Day 4',
     title: 'The four moves I use every week',
     blurb:
-      'Exactly how we make real-world learning happen at home, on purpose, with real examples from my two, and what to hand over at different ages.',
+      'Four practical moves to make real-world learning happen on purpose, with what to hand over at different ages.',
   },
   {
     day: 'Day 5',
     title: 'Where to go from here',
-    blurb: 'The whole week in four lines, and how to keep it going.',
+    blurb:
+      'A quick recap of the week, and how to keep it going.',
   },
 ] as const;
