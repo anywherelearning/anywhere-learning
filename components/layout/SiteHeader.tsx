@@ -674,16 +674,32 @@ function ResourcesFlyout({
 }) {
   const [open, setOpen] = useState(false);
   const anyActive = group.children.some((c) => isActive(pathname, c.href));
+  // A short grace period before closing, so a diagonal mouse path from the
+  // row to a lower item in the flyout doesn't snap it shut on the way.
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+  };
+  useEffect(() => cancelClose, []);
 
   return (
     <div
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => {
+        cancelClose();
+        setOpen(true);
+      }}
+      onMouseLeave={() => {
+        cancelClose();
+        closeTimer.current = setTimeout(() => setOpen(false), 250);
+      }}
     >
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
+        // Hover already opened it for mouse users, so a mouse click must not
+        // toggle it shut. Keyboard activation (detail === 0) still toggles.
+        onClick={(e) => (e.detail === 0 ? setOpen((o) => !o) : setOpen(true))}
         aria-haspopup="menu"
         aria-expanded={open}
         className={`w-full flex items-center gap-2 px-4 py-3 text-left bg-transparent border-0 cursor-pointer hover:bg-[#F2EFE4] transition-colors ${
@@ -718,12 +734,15 @@ function ResourcesFlyout({
         </svg>
       </button>
 
+      {/* The left padding is a transparent hover bridge across the gap, so the
+          pointer never leaves this wrapper on its way to the flyout. */}
+      <div
+        className={`absolute left-full -top-2 pl-[7px] z-[75] ${open ? '' : 'hidden'}`}
+      >
       <div
         role="menu"
         aria-label={group.label}
-        className={`absolute left-[calc(100%+6px)] -top-2 w-[248px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2 z-[75] ${
-          open ? '' : 'hidden'
-        }`}
+        className="w-[248px] bg-cream border border-[#D8D4C5] rounded-[12px] shadow-[0_18px_40px_-16px_rgba(45,58,46,0.3)] py-2"
       >
         {group.children.map((child) => {
           const active = isActive(pathname, child.href);
@@ -749,6 +768,7 @@ function ResourcesFlyout({
             </Link>
           );
         })}
+      </div>
       </div>
     </div>
   );
