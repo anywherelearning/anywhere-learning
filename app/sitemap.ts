@@ -7,6 +7,7 @@ import { getAllResources } from '@/lib/resources';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { IDEAS_DATA } from '@/lib/ideas';
 import { CHALLENGE } from '@/lib/challenge';
+import { COURSE } from '@/lib/course';
 
 // When adding a new public page, add it to staticRoutes below.
 // Excluded (not indexable): /sign-in, /sign-up, /account/*, /checkout/success
@@ -31,6 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/free-guide': '2026-08-21',
     '/quiz': '2026-08-07',
     '/challenge': '2026-08-22',
+    '/course': '2026-09-23',
     '/guides/capable-kid': '2026-08-21',
     '/faq': '2026-08-07',
     '/contact': '2026-08-07',
@@ -97,6 +99,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: 'https://anywherelearning.co/challenge',
             lastModified: staticDate('/challenge'),
             changeFrequency: 'weekly' as const,
+            priority: 0.9,
+          },
+        ]
+      : []),
+    // The free 5-day email course. Listed only once live (same flag as the page).
+    ...(COURSE.isLive
+      ? [
+          {
+            url: 'https://anywherelearning.co/course',
+            lastModified: staticDate('/course'),
+            changeFrequency: 'monthly' as const,
             priority: 0.9,
           },
         ]
