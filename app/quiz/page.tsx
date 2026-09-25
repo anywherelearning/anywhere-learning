@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { RESULTS } from '@/lib/quiz';
 
 export const metadata: Metadata = {
-  title: "What's Your Kid's Missing Life Skill? Free 2-Minute Quiz",
+  // Absolute so the site suffix doesn't push it past the SERP cutoff
+  title: { absolute: "Kid's Missing Life Skill? Free 2-Minute Quiz" },
   description:
     "Take the free 2-minute quiz to find your kid's type and the one life skill to focus on next, plus real, low-prep activities to start with. For all parents.",
   alternates: {
@@ -66,25 +67,59 @@ export default function QuizPage() {
               How the quiz works
             </p>
             <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.4rem)] leading-[1.1] tracking-tight mt-3 text-balance">
-              Six questions, one skill to <span className="italic text-forest">work on next.</span>
+              Eight questions, one skill to <span className="italic text-forest">work on next.</span>
             </h2>
             <p className="mt-4 text-[16.5px] leading-[1.65] text-gray-600">
               The quiz asks how your kid handles a free afternoon, a problem that stumps them, a
               job that is theirs to finish, and a few other everyday moments. Nobody is scored.
-              The answers point to one of six patterns most kids between 6 and 14 fall into, and
+              The answers point to one of five patterns most kids between 6 and 14 fall into, and
               each pattern comes with the single life skill that moves it, plus three real-world
               activities to start with this week.
             </p>
 
-            <h3 className="font-display text-[22px] leading-[1.2] tracking-tight mt-10 mb-4">The six results</h3>
-            <ul className="m-0 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] leading-[1.15] tracking-tight mt-12 mb-2 text-balance">
+              The five results, and what each one means
+            </h2>
+            <p className="text-[15.5px] leading-[1.65] text-gray-600 mb-6">
+              Every result is a pattern, not a label. Most kids show a bit of two, and the quiz
+              tells you which one to start with.
+            </p>
+            <div className="space-y-4">
               {Object.values(RESULTS).map((r) => (
-                <li key={r.id} className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[12px] px-5 py-4">
-                  <span className="block font-semibold text-[15.5px] text-ink">{r.title}</span>
-                  <span className="block mt-1 text-[14px] text-gray-600">{r.tagline}</span>
-                </li>
+                <article
+                  key={r.id}
+                  className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[14px] px-6 py-6"
+                  style={{ borderLeft: `4px solid ${r.accent}` }}
+                >
+                  <h3 className="font-display text-[22px] leading-[1.2] tracking-tight text-ink">{r.title}</h3>
+                  <p className="mt-1 text-[14.5px] italic text-gray-600">{r.tagline}</p>
+                  <p className="mt-4 text-[15.5px] leading-[1.7] text-gray-700">{r.description}</p>
+                  <p className="mt-4 text-[15px] leading-[1.6] text-gray-700">
+                    <span className="font-semibold text-ink">The skill to work on: </span>
+                    {r.gapLabel.charAt(0).toLowerCase() + r.gapLabel.slice(1)}.
+                  </p>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-gray-700">
+                    <span className="font-semibold text-ink">Try this weekend: </span>
+                    {r.saturday.replace(/^This Saturday, /, '').replace(/^./, (c) => c.toUpperCase())}
+                  </p>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-gray-700">
+                    <span className="font-semibold text-ink">Activities to start with: </span>
+                    {r.activities.map((a, i) => (
+                      <span key={a.slug}>
+                        {i > 0 && (i === r.activities.length - 1 ? ', and ' : ', ')}
+                        <Link
+                          href={`/shop/${a.slug}`}
+                          className="text-forest-dark font-medium underline decoration-forest/30 underline-offset-2 hover:text-forest"
+                        >
+                          {a.name}
+                        </Link>
+                      </span>
+                    ))}
+                    .
+                  </p>
+                </article>
               ))}
-            </ul>
+            </div>
 
             <p className="mt-8 text-[15px] leading-[1.6] text-gray-600">
               Not sure a quiz is what you need? The{' '}

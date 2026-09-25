@@ -2180,7 +2180,7 @@ const resources: ResourcePage[] = [
       ]},
 
       { type: 'heading', level: 2, text: 'A life skills checklist by age' },
-      { type: 'paragraph', text: 'This is a starting point, not a rigid standard. Every child develops differently. Use it as a guide for what to aim for, not a scorecard.' },
+      { type: 'paragraph', text: 'This is a starting point, not a rigid standard. Every child develops differently. Use it as a guide for what to aim for, not a scorecard. If you would rather know where your own kid stands, [the free life skills quiz](/quiz) takes two minutes and names the one skill to work on next.' },
       { type: 'heading', level: 3, text: 'By age 6' },
       { type: 'list', ordered: false, items: [
         'Can name basic emotions and ask for help when upset',

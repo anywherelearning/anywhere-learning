@@ -33,30 +33,28 @@ export const metadata: Metadata = {
 
 const guideLd = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
+  '@type': 'CreativeWork',
+  genre: 'Parenting guide',
   name: 'The Capable Kid Guide',
   description:
     'A free, age-by-age guide to the real-world skills kids can own from 6 to 14, with a simple method for handing each one over. Covers kitchen, money, communication, and self-management.',
   image: 'https://anywherelearning.co/images/capable-kid-cover.jpg',
   url: 'https://anywherelearning.co/guides/capable-kid',
-  brand: { '@type': 'Brand', name: 'Anywhere Learning' },
+  publisher: { '@type': 'Organization', name: 'Anywhere Learning', url: 'https://anywherelearning.co' },
   author: {
     '@type': 'Person',
     name: 'Amelie',
     jobTitle: 'Former Teacher & Founder',
     url: 'https://anywherelearning.co/about',
   },
+  isAccessibleForFree: true,
+  inLanguage: 'en',
+  audience: { '@type': 'Audience', audienceType: 'Parents of kids 6 to 14' },
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    hasMerchantReturnPolicy: {
-      '@type': 'MerchantReturnPolicy',
-      applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
-      returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-      returnPolicyUrl: 'https://anywherelearning.co/terms#s4',
-    },
+    category: 'Free',
   },
 };
 

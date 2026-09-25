@@ -9,9 +9,14 @@ import { COURSE, COURSE_DAYS, isCoursePageVisible } from "@/lib/course";
 const DESCRIPTION =
   "A free 5-day email course from a former teacher of fifteen years: what real-world learning is, why it matters more now, how one real task carries the math, writing and life skills together, and the four moves to make it happen at home. Kids 6 to 14.";
 
+// Under 155 so Google shows it whole. The longer DESCRIPTION stays in the Course schema.
+const META_DESCRIPTION =
+  "A free 5-day email course from a former teacher: what real-world learning is, and four moves to make it happen at home. For kids 6 to 14.";
+
 export const metadata: Metadata = {
-  title: "Real-World Learning in 5 Days: Free Email Course",
-  description: DESCRIPTION,
+  // Absolute so the site suffix doesn't push it past the SERP cutoff
+  title: { absolute: "Real-World Learning in 5 Days: Free Email Course" },
+  description: META_DESCRIPTION,
   alternates: {
     canonical: "https://anywherelearning.co/course",
   },

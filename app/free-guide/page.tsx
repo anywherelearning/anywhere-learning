@@ -8,7 +8,8 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: 'Real-World Activities for Kids: Free 7-Day Guide for Families',
+  // Absolute so the site suffix doesn't push it past the SERP cutoff
+  title: { absolute: 'Real-World Activities for Kids: Free 7-Day Guide' },
   description:
     'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities across seven categories. Zero worksheets.',
   alternates: {
@@ -33,30 +34,28 @@ export const metadata: Metadata = {
 
 const freeGuideLd = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
+  '@type': 'CreativeWork',
+  genre: 'Parenting guide',
   name: '7 Days of Real-World Learning',
   description:
     'A free, low-prep activity guide with 7 hands-on activities for families across outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning. Ages 6 to 14.',
   image: 'https://anywherelearning.co/images/free-guide-og.jpg',
   url: 'https://anywherelearning.co/free-guide',
-  brand: { '@type': 'Brand', name: 'Anywhere Learning' },
+  publisher: { '@type': 'Organization', name: 'Anywhere Learning', url: 'https://anywherelearning.co' },
   author: {
     '@type': 'Person',
     name: 'Amelie',
     jobTitle: 'Former Teacher & Founder',
     url: 'https://anywherelearning.co/about',
   },
+  isAccessibleForFree: true,
+  inLanguage: 'en',
+  audience: { '@type': 'Audience', audienceType: 'Parents of kids 6 to 14' },
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    hasMerchantReturnPolicy: {
-      '@type': 'MerchantReturnPolicy',
-      applicableCountry: ['US', 'CA', 'GB', 'AU', 'NZ'],
-      returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-      returnPolicyUrl: 'https://anywherelearning.co/terms#s4',
-    },
+    category: 'Free',
   },
 };
 
