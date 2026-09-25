@@ -274,7 +274,7 @@ def email4():
     out += h('What to hand over, from my two')
     out += two_cards([
         ('My son, 13', 'He cooks and bakes on his own now and could feed himself for a few days on real food, not toast. He builds websites for small businesses.'),
-        ('My daughter, 10', 'She already thinks like an entrepreneur: a donut sale, a lemonade stand, collecting cans and bottles for the refund money, and she even hired her brother for that one.'),
+        ('My daughter, 10', 'She already thinks like an entrepreneur: a lemonade stand a few times, and right now she collects cans and bottles for the refund money. She even hired her brother for that one.'),
     ], white=True)
     out += p('With a younger kid, it&rsquo;s the same four moves with a smaller job.')
     out += h('Why it still slips')
