@@ -15,6 +15,7 @@ import HomeFaqAccordion from '@/components/home/v2/HomeFaqAccordion';
 import { MONTHLY_PLAN_PRICE, MONTHLY_PRICE_USD, TRIAL_DAYS } from '@/lib/membership';
 import { getMembership } from '@/lib/membership-runtime';
 import { CHALLENGE, CHALLENGE_DAYS } from '@/lib/challenge';
+import { isCoursePageVisible } from '@/lib/course';
 import {
   SHOP_CATEGORIES,
   SKILL_AREAS,
@@ -88,6 +89,9 @@ export default async function HomePage() {
   // Live founder state (DB-counted), so the founder framing and price close
   // themselves at the cap without a code change.
   const m = await getMembership();
+  // The free 5-day course button (hero + final CTA). Hidden in production until
+  // the Kit sequence is live; always shown on previews for review.
+  const showCourse = isCoursePageVisible();
   // The ticker runs the taxonomy, not activity titles: the 9 shop categories
   // followed by the 12 Skills Map areas. Exact duplicates between the two lists
   // (Real-World Math, Creativity & Making, AI & Digital) are dropped so the
@@ -185,6 +189,18 @@ export default async function HomePage() {
                   Start free trial
                   <ArrowIcon />
                 </Link>
+                {/* The free 5-day email course sits beside the trial as the second
+                    main door: the trial for parents ready to try the library, the
+                    course for everyone who wants to understand real-world learning
+                    first. Hidden in production until COURSE.isLive (lib/course.ts). */}
+                {showCourse ? (
+                  <Link
+                    href="/course?source=homepage-hero"
+                    className="inline-flex items-center gap-2.5 rounded-2xl border-2 border-forest px-8 py-4 text-lg font-semibold text-forest transition-all duration-200 hover:scale-[1.02] hover:bg-forest hover:text-cream active:scale-[0.97]"
+                  >
+                    Free 5-day course
+                  </Link>
+                ) : null}
                 {/* The per-month figure is the answer to "is $99 a lot?", and it
                     belongs at the moment of the decision, not in the pricing
                     section three screens down. m.priceMonth tracks the live
@@ -632,10 +648,12 @@ export default async function HomePage() {
               </p>
               <p className="mt-[30px]">
                 <Link
-                  href="/free-guide"
+                  href={showCourse ? '/course?source=homepage-final' : '/free-guide'}
                   className="text-[15px] text-gold-light/[0.92] underline-offset-4 transition-colors hover:text-gold-light hover:underline"
                 >
-                  Rather start free? Get the 7-day guide by email &rarr;
+                  {showCourse
+                    ? 'Rather start free? Take the 5-day email course \u2192'
+                    : 'Rather start free? Get the 7-day guide by email \u2192'}
                 </Link>
               </p>
             </ScrollReveal>
