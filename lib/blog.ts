@@ -8862,7 +8862,7 @@ const posts: BlogPost[] = [
     title: 'Shark Tank for Kids: Ideas, Rules, and How to Run the Activity',
     excerpt: 'A Shark Tank activity is one of the best real-world projects you can run with kids: they invent a business, build the numbers, and pitch it to the "sharks." Here is how to run it step by step, for ages 8 to 14, at home or in a classroom.',
     metaDescription: 'Run a Shark Tank business pitch activity with kids ages 8 to 14, at home or in class: pitch ideas, rules, shark questions, and a step-by-step setup.',
-    seoTitle: 'Shark Tank Activity for Kids & Students: Pitch Guide + Ideas',
+    seoTitle: 'Shark Tank Activity for Kids: How to Run a Business Pitch',
     hook: 'Give a kid a business to invent and a room to pitch it in, and watch them light up. Shark Tank for kids teaches more in one project than a month of worksheets.',
     category: 'real-world-skills',
     publishedAt: '2026-07-30',
