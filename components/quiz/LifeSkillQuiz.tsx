@@ -16,6 +16,17 @@ import LeafMark from "@/components/quiz/LeafMark";
 
 type Phase = "intro" | "questions" | "email" | "result";
 
+// Real photos scattered behind the sample question card: [file in
+// /images/quiz, size + position + tilt]. Listed back to front.
+const INTRO_PHOTOS: [string, string][] = [
+  ["cardboard-bus", "left-[30%] top-0 aspect-[4/3] w-[38%] rotate-[2deg]"],
+  ["first-fish", "left-0 top-[6%] aspect-[3/4] w-[36%] -rotate-[7deg]"],
+  ["cooking-dinner", "right-0 top-[3%] aspect-[3/4] w-[38%] rotate-[6deg]"],
+  ["making-popcorn", "left-[-4%] top-[40%] aspect-[3/4] w-[30%] -rotate-[4deg]"],
+  ["workbench", "right-[-3%] top-[38%] aspect-[3/4] w-[30%] rotate-[5deg]"],
+  ["planting", "left-[26%] top-[22%] aspect-[4/3] w-[40%] -rotate-[2deg]"],
+];
+
 export default function LifeSkillQuiz() {
   const [phase, setPhase] = useState<Phase>("intro");
   const [current, setCurrent] = useState(0);
@@ -132,19 +143,24 @@ export default function LifeSkillQuiz() {
   }
 
   // ─── INTRO ───
+  // Copy on the left; on the right a sample question card (question 2, one
+  // answer picked) in front of a scatter of real photos, so the quiz shows
+  // itself before anyone starts. The card is decoration: the real questions
+  // start with the button.
   if (phase === "intro") {
+    const sample = QUESTIONS[1];
     return (
-      <div className="mx-auto max-w-[680px] text-center">
-        <div className="rounded-[20px] border border-[#D8D4C5] bg-cream p-9 md:p-12 shadow-[0_24px_48px_-34px_rgba(45,58,46,0.4)]">
+      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14">
+        <div className="max-lg:text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#7A3D24] inline-flex items-center gap-2.5">
             <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
             2-minute quiz
           </p>
-          <h1 className="font-display text-[clamp(2.25rem,5.5vw,3.5rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+          <h1 className="font-display text-[clamp(2.4rem,5.4vw,4rem)] leading-[1.02] tracking-tight mt-4 text-balance">
             What&apos;s your kid&apos;s{" "}
             <span className="italic text-forest">missing life skill?</span>
           </h1>
-          <p className="mt-5 text-[17.5px] leading-[1.6] text-gray-600 max-w-[480px] mx-auto">
+          <p className="mt-6 max-w-[48ch] text-[17.5px] leading-[1.65] text-gray-600 max-lg:mx-auto">
             Eight quick questions. No judgment, no right answers. At the end you&apos;ll
             get your kid&apos;s Real-World Skills Plan: their type, the top two skills to
             build next, one thing to try this Saturday, and three activities to start with.
@@ -156,9 +172,54 @@ export default function LifeSkillQuiz() {
             Start the quiz
             <span className="font-display italic text-[19px] leading-none">&rarr;</span>
           </button>
-          <p className="mt-4 text-xs text-gray-400">
+          <p className="mt-4 text-xs text-gray-500">
             Free. Takes about 2 minutes.
           </p>
+        </div>
+
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-[520px] sm:aspect-[10/11]" aria-hidden="true">
+          {INTRO_PHOTOS.map(([file, box], i) => (
+            <div
+              key={file}
+              className={`absolute overflow-hidden rounded-[18px] border-[5px] border-white shadow-[0_22px_44px_-24px_rgba(45,58,46,0.6)] ${box}`}
+            >
+              <Image
+                src={`/images/quiz/${file}.jpg`}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 240px, 45vw"
+                priority={i < 3}
+                className="object-cover"
+              />
+            </div>
+          ))}
+
+          <div className="absolute inset-x-[7%] bottom-[4%] rounded-[22px] border border-[#E2DCC8] bg-cream p-5 text-left shadow-[0_36px_70px_-34px_rgba(45,58,46,0.7)] md:p-6">
+            <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-gray-500">
+              <span>Question 2 of 8</span>
+              <span className="text-forest">25%</span>
+            </div>
+            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-[#E6E1D1]">
+              <div className="h-full w-1/4 rounded-full bg-forest" />
+            </div>
+            <p className="mt-3.5 font-display text-[17px] leading-snug text-ink md:text-[19px]">
+              {sample.prompt}
+            </p>
+            <ul className="mt-3.5 space-y-2">
+              {sample.options.slice(0, 3).map((o, i) => (
+                <li
+                  key={o.label}
+                  className={`rounded-xl border px-4 py-2.5 text-[13.5px] md:text-[14.5px] ${i === 2 ? "max-sm:hidden" : ""} ${
+                    i === 1
+                      ? "border-forest bg-[#EAF0E6] font-semibold text-forest-dark"
+                      : "border-[#DDD7C4] bg-white text-gray-700"
+                  }`}
+                >
+                  {o.label}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );

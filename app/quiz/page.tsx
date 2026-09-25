@@ -96,8 +96,15 @@ export default function QuizPage() {
       />
       <SiteHeader />
       <main className="bg-[#F2EFE4] min-h-[70vh]">
-        <section id="quiz" className="scroll-mt-24 pt-12 md:pt-16 pb-14 md:pb-20">
-          <div className="mx-auto max-w-[1180px] px-6">
+        <section id="quiz" className="relative scroll-mt-24 pt-12 md:pt-16 pb-14 md:pb-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(120% 90% at 50% 0%, #ffffff 0%, #F2EFE4 55%, #EAE7D8 100%)',
+            }}
+          />
+          <div className="relative mx-auto max-w-[1180px] px-6">
             <LifeSkillQuiz />
           </div>
         </section>
