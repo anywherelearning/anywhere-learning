@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllCategories, getTotalIdeas, getListCount } from '@/lib/ideas';
-import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
+import { getAllCategories, getListCount } from '@/lib/ideas';
 import PageEyebrow from '@/components/shared/PageEyebrow';
 
 export const metadata: Metadata = {
   // Absolute so the keyword-led tag isn't pushed past the SERP cutoff
   title: { absolute: 'Activity Ideas for Kids: 15 Free Printable Checklists' },
   description:
-    '320 activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. Free to read in full, PDFs sent by email.',
+    '320+ activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. Free to read in full, PDFs sent by email.',
   alternates: { canonical: 'https://anywherelearning.co/ideas' },
   openGraph: {
     title: 'Activity Ideas for Kids: 15 Free Printable Checklists',
@@ -27,9 +26,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Each checklist hangs at a slight angle, held by a coloured magnet.
+const TILT = [-2, 1.5, -1, 2, -1.5, 1, -2.5, 1.5];
+const MAGNETS = ['#C97B5C', '#588157', '#d4a373', '#6b8e9e', '#c47a8f', '#3A5A40'];
+
 export default function IdeasPage() {
   const categories = getAllCategories();
   const totalLists = categories.reduce((sum, c) => sum + getListCount(c), 0);
+  const lists = categories.flatMap((category) => category.lists.map((l) => ({ ...l, category })));
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -92,166 +96,122 @@ export default function IdeasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
-      <main className="bg-[#faf9f6]">
-        {/* ---------------------------------------------------------------- */}
-        {/* HERO                                                             */}
-        {/* ---------------------------------------------------------------- */}
-        <section className="pt-12 md:pt-16 pb-8 md:pb-10">
+      <main className="bg-[#E9EEE6]">
+        {/* ── Hero: the answer block, then a chip per category ── */}
+        <section className="pb-8 pt-12 md:pt-14">
           <div className="mx-auto max-w-[820px] px-6 text-center">
             <PageEyebrow>Free printables</PageEyebrow>
-            <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
+            <h1 className="mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
               Activity <span className="italic text-forest">ideas for kids.</span>
             </h1>
-
-            {/* Subtitle: definitional answer block, then the warm line */}
-            <p className="mt-5 max-w-[640px] mx-auto text-[17.5px] md:text-[18.5px] leading-[1.55] text-[#5c5a54]">
-              15 free printable checklists with 320 activity ideas for kids,
-              across nature, kitchen, life skills, STEM, creative, travel,
-              AI, and mindset. Grab a list, pin it to the fridge, and check
-              things off together. Every list is free to read in full, and we email you the printable.
+            <p className="mx-auto mt-5 max-w-[640px] text-[17.5px] leading-[1.55] text-[#5c5a54] md:text-[18.5px]">
+              {totalLists} free printable checklists with 320+ activity ideas for kids,
+              across nature, kitchen, life skills, STEM, creative, travel, AI, and mindset. Grab a
+              list, pin it to the fridge, and check things off together. Every list is free to read
+              in full, and we email you the printable.
             </p>
-
-            {/* Pills */}
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {[
-                `${categories.length} categories`,
-                `${totalLists} idea lists`,
-                'Always free',
-              ].map((pill) => (
-                <span
-                  key={pill}
-                  className="inline-flex items-center gap-1.5 bg-[#f0e9d8] text-[#6b5d3e] font-medium text-[13px] px-3.5 py-1.5 rounded-full whitespace-nowrap"
+            <nav aria-label="Idea categories" className="mt-6 flex flex-wrap justify-center gap-2">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/ideas/${cat.slug}`}
+                  className="rounded-full border bg-white px-3.5 py-1.5 text-[13px] font-semibold no-underline transition-colors hover:bg-cream"
+                  style={{ color: cat.accent, borderColor: `${cat.accent}55` }}
                 >
-                  <span
-                    className="w-1.5 h-1.5 rounded-full bg-[#d4a373]"
-                    aria-hidden="true"
-                  />
-                  {pill}
-                </span>
+                  {cat.name}
+                </Link>
               ))}
-            </div>
+            </nav>
           </div>
         </section>
 
-        {/* ---------------------------------------------------------------- */}
-        {/* CATEGORY CARDS                                                   */}
-        {/* ---------------------------------------------------------------- */}
-        <section className="pb-12 md:pb-16">
-          <div className="mx-auto max-w-[1120px] px-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.map((cat) => {
-                const listCount = getListCount(cat);
-                const ideaCount = getTotalIdeas(cat);
-
+        {/* ── The fridge: every list as a checklist held up by a magnet ── */}
+        <section className="pb-14 md:pb-16">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <h2 className="text-center font-display text-[clamp(1.4rem,2.6vw,1.75rem)] italic text-forest-dark">
+              Pick a list. Pin it up. Check things off.
+            </h2>
+            <ul className="m-0 mt-10 grid list-none grid-cols-1 gap-x-6 gap-y-9 p-0 sm:grid-cols-2 lg:grid-cols-4">
+              {lists.map((list, i) => {
+                const items = list.sections.flatMap((sec) => sec.items);
                 return (
-                  <Link
-                    key={cat.slug}
-                    href={`/ideas/${cat.slug}`}
-                    className="group relative bg-white border border-[#e8e5de] rounded-xl flex flex-col h-full no-underline text-inherit hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden"
-                  >
-                    {/* Accent top band */}
-                    <div
-                      className="h-[6px] w-full shrink-0"
-                      style={{ backgroundColor: cat.accent }}
-                    />
-
-                    <div className="p-6 flex flex-col flex-1">
-                      {/* Icon */}
-                      <div
-                        className="w-14 h-14 rounded-full grid place-items-center mb-4"
-                        style={{
-                          background: `${cat.accent}1a`,
-                          color: cat.accent,
-                        }}
-                      >
-                        {IDEA_ICONS[cat.icon]}
-                      </div>
-
-                      {/* Name */}
-                      <h2
-                        className="font-display text-[22px] leading-[1.15] mb-2"
-                        style={{ color: cat.accent }}
-                      >
-                        {cat.name}
-                      </h2>
-
-                      {/* Blurb */}
-                      <p className="text-[14.5px] leading-[1.55] text-gray-600 mb-4 flex-1">
-                        {cat.blurb}
-                      </p>
-
-                      {/* Stats */}
-                      <span className="text-[12.5px] font-medium text-gray-500 mb-3">
-                        {listCount} {listCount === 1 ? 'list' : 'lists'} &middot; {ideaCount} ideas
-                      </span>
-
-                      {/* Browse link */}
+                  <li key={list.slug} style={{ transform: `rotate(${TILT[i % TILT.length]}deg)` }}>
+                    <Link
+                      href={`/ideas/${list.slug}`}
+                      className="relative block h-full bg-white p-5 pt-7 text-inherit no-underline shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] transition-transform duration-200 hover:-translate-y-1"
+                    >
                       <span
-                        className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold group-hover:gap-2 transition-all duration-200"
-                        style={{ color: cat.accent }}
-                      >
-                        Browse lists
-                        <span className="font-display italic text-base">
-                          &rarr;
-                        </span>
-                      </span>
-                    </div>
-                  </Link>
+                        aria-hidden="true"
+                        className="absolute left-1/2 top-[-10px] h-6 w-6 -translate-x-1/2 rounded-full shadow-[0_4px_8px_rgba(0,0,0,0.25),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+                        style={{ background: MAGNETS[i % MAGNETS.length] }}
+                      />
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: list.category.accent }}>
+                        {list.category.name}
+                      </p>
+                      <h3 className="mt-1 font-display text-[19px] leading-tight text-[#2b2a26]">{list.title}</h3>
+                      <ul className="m-0 mt-3 list-none space-y-1.5 border-t border-dashed border-[#E2DCC8] p-0 pt-3">
+                        {items.slice(0, 3).map((item, k) => (
+                          <li key={item} className={`flex gap-2 text-[13px] leading-snug text-gray-600 ${k === 2 ? 'max-sm:hidden' : ''}`}>
+                            <span aria-hidden="true" className="mt-[2px] h-3.5 w-3.5 shrink-0 rounded-[3px] border-[1.5px] border-[#CFC9B6]" />
+                            <span className="line-clamp-2">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-3 text-[12.5px] font-semibold text-forest-dark">
+                        {`See all ${items.length} ideas \u2192`}
+                      </p>
+                    </Link>
+                  </li>
                 );
               })}
 
-              {/* --- "More on the way" card --- */}
-              <div className="relative border-2 border-dashed border-[#d4a373] rounded-xl p-6 flex flex-col h-full bg-[#faf9f6]">
-                <h2 className="font-display text-[22px] leading-[1.15] text-[#d4a373] mb-2">
-                  More on the way
-                </h2>
-                <p className="text-[14.5px] leading-[1.55] text-gray-600 mb-5 flex-1">
-                  We add new lists all the time. Got a request? Tell us what
-                  your family wants to explore next.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1.5 font-semibold text-[13.5px] text-[#d4a373] hover:gap-2.5 transition-all duration-200"
-                >
-                  Suggest a list
-                  <span className="font-display italic text-base">
-                    &rarr;
-                  </span>
-                </Link>
-              </div>
-            </div>
+              {/* A blank note at the end: ask for the next list */}
+              <li style={{ transform: 'rotate(1.5deg)' }}>
+                <div className="relative flex h-full flex-col border-2 border-dashed border-[#d4a373] bg-[#FBF7EE] p-5 pt-7">
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-1/2 top-[-10px] h-6 w-6 -translate-x-1/2 rounded-full bg-[#d4a373] shadow-[0_4px_8px_rgba(0,0,0,0.25),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+                  />
+                  <h3 className="font-display text-[19px] leading-tight text-[#b5803e]">More on the way</h3>
+                  <p className="mt-2 flex-1 text-[13.5px] leading-[1.55] text-gray-600">
+                    We add new lists all the time. Got a request? Tell us what your family wants to
+                    explore next.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="mt-3 text-[13px] font-semibold text-[#b5803e] no-underline hover:underline"
+                  >
+                    Suggest a list &rarr;
+                  </Link>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
 
-        {/* ---------------------------------------------------------------- */}
-        {/* BOTTOM CTA                                                       */}
-        {/* ---------------------------------------------------------------- */}
+        {/* ── Bottom CTA: a note pinned to the fridge ── */}
         <section className="pb-16 md:pb-20">
-          <div className="mx-auto max-w-[640px] px-6 text-center">
-            <div className="bg-[#588157] rounded-[18px] p-8 md:p-10">
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/70 inline-flex items-center gap-2.5 mb-3">
-                <span className="w-[22px] h-px bg-white/40 inline-block" />
-                Want more than ideas?
-              </p>
-              <h2 className="font-display text-[clamp(1.4rem,2.8vw,2rem)] leading-[1.1] tracking-tight text-balance mb-3 text-white">
+          <div className="mx-auto max-w-[620px] px-6">
+            <div className="relative -rotate-1 bg-forest-dark p-8 pt-10 text-center text-cream shadow-[0_24px_44px_-24px_rgba(45,58,46,0.7)] md:p-10 md:pt-12">
+              <span
+                aria-hidden="true"
+                className="absolute left-1/2 top-[-12px] h-7 w-7 -translate-x-1/2 rounded-full bg-[#C97B5C] shadow-[0_4px_8px_rgba(0,0,0,0.3),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+              />
+              <p className="font-display text-[16px] italic text-gold-light">Want more than ideas?</p>
+              <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,2.1rem)] leading-[1.1] tracking-tight text-balance">
                 Want the step-by-step guides?
               </h2>
-              <p className="text-[15.5px] leading-[1.6] text-white/80 mb-6">
-                The library has 120+ hands-on activities with everything
-                planned out. Instructions, skill levels, and no prep
-                required.
+              <p className="mx-auto mt-3 max-w-[460px] text-[15.5px] leading-[1.6] text-cream/80">
+                The library has 120+ hands-on activities with everything planned out. Instructions,
+                skill levels, and no prep required.
               </p>
-              {/* Goes to /join, not /library: the library is auth-gated and
-                  noindex, so a logged-out visitor cannot see inside it. The
-                  label names what the click actually does. */}
+              {/* Goes to /#membership, not /library: the library is auth-gated
+                  and noindex, so a logged-out visitor cannot see inside it. */}
               <Link
                 href="/#membership"
-                className="inline-flex items-center gap-2.5 bg-white text-[#3d5c3b] font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_2px_8px_rgba(0,0,0,0.12)] hover:bg-[#faf9f6] hover:-translate-y-px transition-all duration-200"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-cream px-6 py-3.5 text-[15.5px] font-semibold text-forest-dark no-underline transition-colors hover:bg-white"
               >
-                See what&rsquo;s inside
-                <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-[#588157]/15">
-                  &rarr;
-                </span>
+                See what&rsquo;s inside <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
