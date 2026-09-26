@@ -15,7 +15,6 @@ import { getIdeaListDownloadPaths } from '@/lib/idea-list-pdfs';
 import { getIdeaListSeo } from '@/lib/idea-list-seo';
 import { getPostBySlug } from '@/lib/blog';
 import { IDEA_ICONS } from '@/components/ideas/IdeasIcons';
-import ScrollReveal from '@/components/shared/ScrollReveal';
 import IdeaListEmailCapture from '@/components/ideas/IdeaListEmailCapture';
 import IdeasChecklist from './IdeasChecklist';
 
@@ -204,6 +203,10 @@ export default async function IdeaSlugPage({
    LEVEL 2: Category page
    ══════════════════════════════════════════════════════════════════ */
 
+// Category pages hang each list on the fridge like /ideas does.
+const LIST_TILT = [-1.2, 1, -0.8, 1.4, -1.4, 0.8];
+const LIST_MAGNETS = ['#C97B5C', '#588157', '#d4a373', '#6b8e9e', '#c47a8f', '#3A5A40'];
+
 function CategoryView({ category }: { category: IdeaCategory }) {
   const listCount = getListCount(category);
   const ideaCount = getTotalIdeas(category);
@@ -268,230 +271,152 @@ function CategoryView({ category }: { category: IdeaCategory }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
 
-      <main className="bg-[#faf9f6] min-h-screen">
-        {/* Breadcrumb */}
-        <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <nav
-              aria-label="Breadcrumb"
-              className="py-3.5 flex items-center gap-2.5 text-[13px] text-gray-500"
-            >
-              <Link
-                href="/ideas"
-                className="hover:text-[#3d5c3b] transition-colors no-underline text-gray-600"
-              >
+      <main className="min-h-screen bg-[#E9EEE6]">
+        {/* ── Header on the fridge: breadcrumb, name, blurb, counts ── */}
+        <header className="pb-8 pt-6 md:pb-10">
+          <div className="mx-auto max-w-[1080px] px-6">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2.5 text-[13px] text-gray-500">
+              <Link href="/ideas" className="text-gray-600 no-underline transition-colors hover:text-[#3d5c3b]">
                 All idea lists
               </Link>
-              <span className="text-[#C9C5B7]" aria-hidden="true">
-                &rsaquo;
-              </span>
-              <span aria-current="page" className="text-gray-500 truncate max-w-[300px]">
-                {category.name}
-              </span>
+              <span className="text-[#B9B5A7]" aria-hidden="true">&rsaquo;</span>
+              <span aria-current="page" className="max-w-[300px] truncate">{category.name}</span>
             </nav>
-          </div>
-        </div>
-
-        {/* Category header */}
-        <header
-          className="pt-14 md:pt-20 pb-10 md:pb-14"
-          style={{
-            background: `linear-gradient(180deg, ${category.accent}11 0%, #faf9f6 100%)`,
-          }}
-        >
-          <div className="mx-auto max-w-[920px] px-6 text-center">
-              {/* Icon */}
+            <div className="mx-auto mt-8 max-w-[760px] text-center">
               <div
-                className="w-16 h-16 rounded-full grid place-items-center mx-auto mb-5"
-                style={{
-                  background: `${category.accent}16`,
-                  color: category.accent,
-                }}
+                className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-white shadow-[0_6px_14px_-6px_rgba(45,58,46,0.35)]"
+                style={{ color: category.accent }}
               >
                 {IDEA_ICONS[category.icon]}
               </div>
-
-              {/* Name */}
-              <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.06] tracking-tight text-balance">
+              <h1 className="font-display text-[clamp(2.25rem,5vw,3.6rem)] leading-[1.06] tracking-tight text-balance">
                 {category.name}
               </h1>
-
-              {/* Blurb */}
-              <p className="mt-4 max-w-[720px] mx-auto text-[17px] leading-[1.6] text-gray-600 text-balance">
+              <p className="mx-auto mt-4 max-w-[680px] text-[17px] leading-[1.6] text-gray-600 text-balance">
                 {category.blurb}
               </p>
-
-              {/* Stats */}
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-                <span
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                  style={{
-                    color: category.accent,
-                    borderColor: `${category.accent}40`,
-                    background: `${category.accent}10`,
-                  }}
-                >
-                  {listCount} {listCount === 1 ? 'list' : 'lists'}
-                </span>
-                <span
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                  style={{
-                    color: category.accent,
-                    borderColor: `${category.accent}40`,
-                    background: `${category.accent}10`,
-                  }}
-                >
-                  {ideaCount} ideas
-                </span>
-                <span
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                  style={{
-                    color: category.accent,
-                    borderColor: `${category.accent}40`,
-                    background: `${category.accent}10`,
-                  }}
-                >
-                  Free to print &amp; keep
-                </span>
-              </div>
+              <p className="mt-4 text-[13.5px] font-semibold" style={{ color: category.accent }}>
+                {`${listCount} ${listCount === 1 ? 'list' : 'lists'} \u00b7 ${ideaCount} ideas \u00b7 Free to print & keep`}
+              </p>
+            </div>
           </div>
         </header>
 
-        {/* List cards grid */}
-        <section className="pb-16 md:pb-20">
-          <div className="mx-auto max-w-[1080px] px-6">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {category.lists.map((list) => {
-                const itemCount = list.sections.reduce(
-                  (sum, s) => sum + s.items.length,
-                  0,
-                );
-                const sectionCount = list.sections.length;
-
+        {/* ── The lists, each pinned up with its printable cover ── */}
+        <section className="pb-14 md:pb-16">
+          <div className={`mx-auto px-6 ${listCount === 1 ? 'max-w-[820px]' : 'max-w-[1080px]'}`}>
+            <ul className={`m-0 grid list-none gap-x-8 gap-y-10 p-0 ${listCount === 1 ? '' : 'md:grid-cols-2'}`}>
+              {category.lists.map((list, i) => {
+                const items = list.sections.flatMap((sec) => sec.items);
+                const preview = items.slice(0, listCount === 1 ? 6 : 4);
                 return (
+                  <li key={list.slug} style={{ transform: `rotate(${LIST_TILT[i % LIST_TILT.length]}deg)` }}>
                     <Link
-                      key={list.slug}
                       href={`/ideas/${list.slug}`}
-                      className="group bg-white border border-[#e8e5de] rounded-xl overflow-hidden flex flex-col h-full no-underline text-inherit hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+                      className="group relative grid h-full grid-cols-[96px_1fr] gap-5 bg-white p-5 pt-7 text-inherit no-underline shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] transition-transform duration-200 hover:-translate-y-1 sm:grid-cols-[130px_1fr]"
                     >
-                      {/* Cover image */}
-                      <div className="relative aspect-[8.5/11] w-full bg-[#f0ede6] overflow-hidden">
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-1/2 top-[-10px] h-6 w-6 -translate-x-1/2 rounded-full shadow-[0_4px_8px_rgba(0,0,0,0.25),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+                        style={{ background: LIST_MAGNETS[i % LIST_MAGNETS.length] }}
+                      />
+                      <div className="relative aspect-[8.5/11] w-full self-start overflow-hidden rounded-[4px] border border-[#E6E0CD] bg-[#f0ede6]">
                         <Image
                           src={`/ideas/${list.slug}.jpg`}
-                          alt={list.title}
+                          alt={`${list.title} printable`}
                           fill
-                          className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-300"
-                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          className="object-cover object-top"
+                          sizes="130px"
                         />
                       </div>
-
-                      <div className="p-3.5 flex flex-col flex-1">
-                        {/* Title */}
-                        <h2
-                          className="font-display text-[16px] leading-[1.15] tracking-tight mb-2 group-hover:opacity-80 transition-opacity"
-                          style={{ color: category.accent }}
-                        >
+                      <div className="min-w-0">
+                        <h2 className="font-display text-[20px] leading-tight tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
                           {list.title}
                         </h2>
-
-                        {/* Link */}
-                        <div className="pt-2.5 mt-auto border-t border-[#e8e5de]">
-                          <span
-                            className="inline-flex items-center gap-1 text-[11.5px] font-semibold group-hover:gap-2 transition-all duration-200"
-                            style={{ color: category.accent }}
-                          >
-                            See list
-                            <span className="font-display italic text-sm">
-                              &rarr;
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          {list.sections.map((sec) => (
+                            <span
+                              key={sec.name}
+                              className="rounded-full px-2.5 py-0.5 text-[11.5px] font-semibold"
+                              style={{ color: category.accent, background: `${category.accent}14` }}
+                            >
+                              {sec.name}
                             </span>
-                          </span>
+                          ))}
                         </div>
+                        <ul className="m-0 mt-3 list-none space-y-1.5 border-t border-dashed border-[#E2DCC8] p-0 pt-3">
+                          {preview.map((item, k) => (
+                            <li
+                              key={item}
+                              className={`flex gap-2 text-[13.5px] leading-snug text-gray-600 ${k >= 3 ? 'max-sm:hidden' : ''}`}
+                            >
+                              <span aria-hidden="true" className="mt-[2px] h-3.5 w-3.5 shrink-0 rounded-[3px] border-[1.5px] border-[#CFC9B6]" />
+                              <span className="line-clamp-2">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="mt-3 text-[13px] font-semibold text-forest-dark">
+                          {`See all ${items.length} ideas →`}
+                        </p>
                       </div>
                     </Link>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         </section>
 
-        {/* More categories */}
-        <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] py-16 md:py-20">
-          <div className="mx-auto max-w-[1080px] px-6">
-            <div className="mb-10">
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#3d5c3b] inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-[#588157] inline-block" />
-                More categories
-              </p>
-              <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.4rem)] leading-[1.1] tracking-tight mt-3 text-balance">
-                Explore another <span className="italic text-[#588157]">category.</span>
-              </h2>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {otherCategories.map((cat) => {
-                const catListCount = getListCount(cat);
-                const catIdeaCount = getTotalIdeas(cat);
-                return (
-                  <Link
-                    key={cat.slug}
-                    href={`/ideas/${cat.slug}`}
-                    className="group bg-[#faf9f6] border border-[#D8D4C5] rounded-xl p-5 no-underline text-inherit hover:shadow-md hover:border-[#C9C5B7] transition-all duration-200"
-                  >
-                    <div
-                      className="w-10 h-10 rounded-full grid place-items-center mb-3"
-                      style={{
-                        background: `${cat.accent}14`,
-                        color: cat.accent,
-                      }}
-                    >
-                      {IDEA_ICONS[cat.icon]}
-                    </div>
-                    <h3
-                      className="font-display text-[17px] leading-[1.15] mb-1.5"
-                      style={{ color: cat.accent }}
-                    >
-                      {cat.name}
-                    </h3>
-                    <span className="text-[11.5px] font-medium text-gray-500">
-                      {catListCount} {catListCount === 1 ? 'list' : 'lists'} &middot; {catIdeaCount} ideas
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Bottom CTA */}
-        <section className="py-16 md:py-20">
-          <div className="mx-auto max-w-[640px] px-6 text-center">
-            <ScrollReveal>
-              <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-8 md:p-10">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#3d5c3b] inline-flex items-center gap-2.5 mb-3">
-                  <span className="w-[22px] h-px bg-[#588157] inline-block" />
-                  Want more than ideas?
-                </p>
-                <h2 className="font-display text-[clamp(1.4rem,2.8vw,2rem)] leading-[1.1] tracking-tight text-balance mb-3">
-                  Want the step-by-step guides?
-                </h2>
-                <p className="text-[15.5px] leading-[1.6] text-gray-600 mb-6">
-                  The library has 120+ hands-on activities with everything
-                  planned out: instructions, skill levels, and no prep
-                  required.
-                </p>
-                {/* Goes to /join, not /library: the library is auth-gated and
-                    noindex, so a logged-out visitor cannot see inside it. The
-                    label names what the click actually does. */}
+        {/* ── Other categories, as magnets ── */}
+        <section className="pb-12">
+          <div className="mx-auto max-w-[1080px] px-6 text-center">
+            <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] leading-tight tracking-tight">
+              Explore another <span className="italic text-forest">category.</span>
+            </h2>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              {otherCategories.map((cat) => (
                 <Link
-                  href="/#membership"
-                  className="inline-flex items-center gap-2.5 bg-[#588157] text-[#faf9f6] font-semibold py-3.5 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55)] hover:bg-[#3d5c3b] hover:-translate-y-px transition-all duration-200"
+                  key={cat.slug}
+                  href={`/ideas/${cat.slug}`}
+                  className="inline-flex items-center gap-2 rounded-full py-2 pl-2 pr-4 text-[14px] font-semibold text-white no-underline shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35),inset_0_-3px_0_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-0.5"
+                  style={{ background: `color-mix(in srgb, ${cat.accent} 82%, #1f2a1e)` }}
                 >
-                  See what&rsquo;s inside
-                  <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">
-                    &rarr;
+                  <span className="grid h-7 w-7 place-items-center rounded-full bg-white/20 [&_svg]:h-4 [&_svg]:w-4">
+                    {IDEA_ICONS[cat.icon]}
                   </span>
+                  {cat.name}
+                  <span className="text-[12px] font-medium text-white/75">{getTotalIdeas(cat)}</span>
                 </Link>
-              </div>
-            </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bottom CTA: a note pinned to the fridge ── */}
+        <section className="pb-16 md:pb-20">
+          <div className="mx-auto max-w-[620px] px-6">
+            <div className="relative -rotate-1 bg-forest-dark p-8 pt-10 text-center text-cream shadow-[0_24px_44px_-24px_rgba(45,58,46,0.7)] md:p-10 md:pt-12">
+              <span
+                aria-hidden="true"
+                className="absolute left-1/2 top-[-12px] h-7 w-7 -translate-x-1/2 rounded-full bg-[#C97B5C] shadow-[0_4px_8px_rgba(0,0,0,0.3),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+              />
+              <p className="font-display text-[16px] italic text-gold-light">Want more than ideas?</p>
+              <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,2.1rem)] leading-[1.1] tracking-tight text-balance">
+                Want the step-by-step guides?
+              </h2>
+              <p className="mx-auto mt-3 max-w-[460px] text-[15.5px] leading-[1.6] text-cream/80">
+                The library has 120+ hands-on activities with everything planned out: instructions,
+                skill levels, and no prep required.
+              </p>
+              {/* Goes to /#membership, not /library: the library is auth-gated
+                  and noindex, so a logged-out visitor cannot see inside it. */}
+              <Link
+                href="/#membership"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-cream px-6 py-3.5 text-[15.5px] font-semibold text-forest-dark no-underline transition-colors hover:bg-white"
+              >
+                See what&rsquo;s inside <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
           </div>
         </section>
       </main>
