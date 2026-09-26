@@ -101,3 +101,5 @@ Last updated: 2026-08-29 from Amelie's screenshots of each group's rules.
 ## Fact sources for drafts (check before describing any offer)
 - Free guide ("7 Days of Real-World Learning"): the seven activities live in the `days` array in `app/free-guide/page.tsx`. Describe ONLY those (Square Foot Safari, $20 Snack Mission, Household Orchestra, Three AIs One Question, Complaint to Product, Two-Minute Story, Plan a Mini Adventure). There is no writing activity in it. Sept 21 2026: a draft invented "writing that has a real reader" and Amelie caught it.
 - Membership: `lib/membership.ts` for prices, cap, trial. Guide count: `lib/home-showcase.ts` (120+).
+- Guide length: NEVER say every guide is "one afternoon" or "a single afternoon". Some run over a few days (Amelie, Sep 26 2026). Say "some take an afternoon, some run over a few days" or leave length out.
+- Big promo threads (Haven & Ember and similar): lead with the free ways in, the free course (/course) and the 14-day free trial (/choose-plan), instead of a price paragraph (Amelie, Sep 26 2026).
