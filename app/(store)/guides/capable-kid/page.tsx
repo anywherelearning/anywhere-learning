@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import EmailForm from '@/components/EmailForm';
-import ScrollReveal from '@/components/shared/ScrollReveal';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 const GUIDE = 'capable-kid';
@@ -58,25 +57,64 @@ const guideLd = {
   },
 };
 
-const ages = [
+// The skills as listed in the guide itself (pages 4 to 6), eight per band.
+const AGE_BANDS = [
   {
-    band: 'Ages 6 to 8',
-    cat: 'The Early Wins',
-    body: 'They desperately want to be big. Use it. A simple breakfast, dressing for the weather, ordering their own food, paying and waiting for the change. Small wins that teach a kid they can be trusted.',
+    band: '6 to 8',
+    name: 'The Early Wins',
     color: '#3A5A40',
+    note: 'They desperately want to be big. Use it.',
+    skills: [
+      'A Simple Breakfast',
+      'Pour and Pack',
+      'Dressed for the Weather',
+      'The Morning Routine',
+      'Order Their Own Food',
+      'Answer the Phone',
+      'Pay and Wait for Change',
+      'Bed, Pet, and Laundry',
+    ],
   },
   {
-    band: 'Ages 9 to 11',
-    cat: 'Growing Independence',
-    body: 'The sweet spot. Following a recipe start to finish, making a real phone call, doing their own laundry, saving up instead of buying now. One full grown-up system they can own completely.',
+    band: '9 to 11',
+    name: 'Growing Independence',
     color: '#588157',
+    note: 'The sweet spot. Push the independence harder than feels comfortable.',
+    skills: [
+      'Follow a Recipe',
+      'Pack and Clear',
+      'Make the Call',
+      'Introduce Yourself',
+      'Save and Wait',
+      'Spot the Better Deal',
+      'Laundry, Start to Finish',
+      'On Time, by the Clock',
+    ],
   },
   {
-    band: 'Ages 12 to 14',
-    cat: 'Real-World Ready',
-    body: 'The dress rehearsal for adulthood. Cooking for the family on a budget, booking their own appointment, running their own schedule, knowing what to do in an emergency. Fumbled now, while you are still nearby.',
+    band: '12 to 14',
+    name: 'Real-World Ready',
     color: '#C97B5C',
+    note: 'The dress rehearsal for adulthood. Better to fumble it now, with you nearby.',
+    skills: [
+      'Cook for the Family',
+      'Build a Budget',
+      'Earn Their Own Money',
+      'Make the Appointment',
+      'Speak for Themselves',
+      'Run Their Own Schedule',
+      'Handle an Emergency',
+      'Find Their Own Way',
+    ],
   },
+];
+
+// The four stages from "The method that actually works" (page 2), in the guide's words.
+const STAGES = [
+  ['Watch me', 'You do the whole thing while they observe and you narrate.'],
+  ['Help me', 'They do part, you do the rest. Hand over the easy, safe pieces first.'],
+  ['I watch you', 'They do the whole thing while you sit on your hands and let it be slow and imperfect.'],
+  ['You are on your own', 'They own it. You stop checking.'],
 ];
 
 const credentialed = [
@@ -93,49 +131,6 @@ const capable = [
   'Figures it out',
 ];
 
-const method = [
-  {
-    title: 'Capable, not compliant',
-    body: 'The goal was never a kid who obeys. It is a kid who can run their own life one day. Capability comes from doing, not from being told.',
-    accent: 'compliant',
-    bg: 'bg-[#E6EBDF]',
-    border: 'border-[#C9D3BE]',
-    color: 'text-forest-dark',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M20 6 9 17l-5-5" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Hand it over in stages',
-    body: 'Watch me, help me, I watch you, you are on your own. Most of us get stuck on stage one because doing it ourselves is faster today. It costs capability tomorrow.',
-    accent: 'stages',
-    bg: 'bg-[#F2DECF]',
-    border: 'border-[rgba(201,123,92,0.3)]',
-    color: 'text-[#C97B5C]',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M4 18h4l3-12 3 12h4" />
-      </svg>
-    ),
-  },
-  {
-    title: 'One skill a month',
-    body: 'Not a transformation. One thing. That is twelve a year, and a kid who learns twelve real skills a year is unrecognizable in three. Let it be lumpy.',
-    accent: 'month',
-    bg: 'bg-[#F5E7BC]',
-    border: 'border-[rgba(182,145,63,0.35)]',
-    color: 'text-[#B6913F]',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="4" width="18" height="18" rx="2" />
-        <path d="M16 2v4M8 2v4M3 10h18" />
-      </svg>
-    ),
-  },
-];
-
 export default function CapableKidGuidePage() {
   return (
     <>
@@ -144,310 +139,183 @@ export default function CapableKidGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(guideLd) }}
       />
       <main className="bg-cream">
-        {/* ════════════════════════════════════════
-            01 HERO
-        ════════════════════════════════════════ */}
-        <section className="pt-12 md:pt-16 pb-16 md:pb-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-16 items-center">
-              <ScrollReveal direction="right" immediate>
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                    <span className="w-[22px] h-px bg-forest inline-block" />
-                    Free download
-                  </p>
-                  <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                    Raise a kid who can{' '}
-                    <span className="italic text-forest">figure things out.</span>
-                  </h1>
-                  <p className="mt-5 text-[18px] md:text-[19.5px] leading-[1.55] text-gray-600 max-w-[520px]">
-                    A free, age-by-age guide to what your kid can{' '}
-                    <span className="font-display italic text-forest-dark">actually do</span> from
-                    6 to 14, and how to hand each skill over without the meltdown. Built by a former
-                    teacher.
-                  </p>
-                  <div className="mt-8 max-w-[480px]">
-                    <EmailForm
-                      variant="light"
-                      guide={GUIDE}
-                      buttonText="Send me the guide"
-                      successBody="While you wait, the membership turns every skill in here into a done-for-you activity."
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal direction="left" delay={100} immediate>
-                <div className="relative flex justify-center items-center min-h-[520px] md:min-h-[600px]">
-                  <div className="relative w-[330px] md:w-[400px] aspect-[8.5/11] -rotate-[3deg] rounded-[14px] border border-[#D8D4C5] overflow-hidden shadow-[0_30px_60px_-32px_rgba(45,58,46,0.45)]">
-                    <Image
-                      src="/images/capable-kid-cover.jpg"
-                      alt="The Capable Kid Guide free cover"
-                      fill
-                      sizes="(max-width: 768px) 330px, 400px"
-                      quality={85}
-                      priority
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    className="absolute top-3 right-[6%] w-[100px] h-[100px] md:w-[118px] md:h-[118px] rounded-full bg-[#C97B5C] text-cream grid place-items-center rotate-[10deg] shadow-[0_16px_26px_-10px_rgba(201,123,92,0.55)] z-10"
-                  >
-                    <div className="text-center font-display text-[13px] md:text-[15px] tracking-[0.04em] leading-none flex flex-col gap-1">
-                      <span>FREE</span>
-                      <span className="w-7 h-px bg-white/50 mx-auto" />
-                      <span>PDF</span>
-                      <span className="w-7 h-px bg-white/50 mx-auto" />
-                      <span>GUIDE</span>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            02 CREDENTIALED VS CAPABLE
-        ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[760px] mx-auto text-center mb-12">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  Credentialed vs capable
-                </p>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.875rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
-                  School measures one.{' '}
-                  <span className="italic text-forest">Life asks for the other.</span>
-                </h2>
-                <p className="mt-4 font-display italic text-[18px] text-[#C97B5C] text-balance">
-                  A kid can be brilliant on paper and still freeze the moment life needs them to act.
-                </p>
-              </div>
-            </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[820px] mx-auto">
-              {/* Credentialed, muted */}
-              <ScrollReveal>
-                <div className="h-full bg-cream border border-[#D8D4C5] rounded-[14px] p-7 md:p-8">
-                  <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-gray-400 mb-5">
-                    Credentialed
-                  </p>
-                  <ul className="flex flex-col gap-3.5 m-0 p-0 list-none">
-                    {credentialed.map((c) => (
-                      <li key={c} className="flex items-center gap-3 text-[16px] text-gray-400">
-                        <span
-                          aria-hidden="true"
-                          className="shrink-0 w-[22px] h-[22px] rounded-full border border-[#D8D4C5] grid place-items-center text-gray-400"
-                        >
-                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-                            <path d="M18 6 6 18M6 6l12 12" />
-                          </svg>
-                        </span>
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-              {/* Capable, highlighted */}
-              <ScrollReveal delay={100}>
-                <div className="h-full bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] p-7 md:p-8 shadow-[0_18px_34px_-26px_rgba(58,90,64,0.45)]">
-                  <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-forest-dark mb-5">
-                    Capable
-                  </p>
-                  <ul className="flex flex-col gap-3.5 m-0 p-0 list-none">
-                    {capable.map((c) => (
-                      <li key={c} className="flex items-center gap-3 text-[16px] font-medium text-ink">
-                        <span
-                          aria-hidden="true"
-                          className="shrink-0 w-[22px] h-[22px] rounded-full bg-forest text-cream grid place-items-center"
-                        >
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M20 6 9 17l-5-5" />
-                          </svg>
-                        </span>
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-            </div>
-            <ScrollReveal delay={200}>
-              <p className="mt-12 mx-auto max-w-[640px] text-center font-display italic text-[20px] md:text-[21px] leading-[1.4] text-ink text-balance">
-                This guide is the second list,{' '}
-                <span className="text-forest-dark">handed over one skill at a time.</span>
+        {/* ── 01 Hero: the promise and the form, beside a report card and a life card ── */}
+        <section className="overflow-hidden bg-forest-dark text-cream">
+          <div className="mx-auto grid max-w-[1140px] items-center gap-10 px-6 py-12 md:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+            <div>
+              <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-gold-light">
+                <span className="inline-block h-px w-[22px] bg-gold-light" />
+                Free guide · Ages 6 to 14
               </p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            03 WHAT'S INSIDE, BY AGE
-        ════════════════════════════════════════ */}
-        <section className="bg-cream py-20 md:py-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[760px] mx-auto text-center mb-12">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  What&apos;s inside
-                </p>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.875rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
-                  What they can do, <span className="italic text-forest">by age.</span>
-                </h2>
-                <p className="mt-4 text-[17.5px] text-gray-600">
-                  Three age bands, twenty-four real skills.{' '}
-                  <span className="font-display italic text-forest-dark">Pick one to start.</span>
-                </p>
+              <h1 className="mt-4 font-display text-[clamp(2.25rem,5vw,3.9rem)] leading-[1.04] tracking-tight text-balance">
+                Raise a kid who can{' '}
+                <span className="italic text-gold-light">figure things out.</span>
+              </h1>
+              <p className="mt-5 max-w-[520px] text-[18px] leading-[1.6] text-cream/80">
+                A free, age-by-age guide to what your kid can{' '}
+                <span className="font-display italic text-cream">actually do</span> from 6 to 14,
+                and how to hand each skill over without the meltdown. Built by a former teacher.
+              </p>
+              <div className="mt-7 max-w-[500px] rounded-[16px] bg-cream p-4 text-[#2b2a26]">
+                <EmailForm
+                  variant="light"
+                  guide={GUIDE}
+                  buttonText="Send me the guide"
+                  successBody="While you wait, the membership turns every skill in here into a done-for-you activity."
+                />
               </div>
-            </ScrollReveal>
-            <div className="max-w-[860px] mx-auto flex flex-col gap-[18px]">
-              {ages.map((a, i) => (
-                <ScrollReveal key={a.band} delay={(i % 3) * 60}>
-                  <div className="relative bg-cream border border-[#D8D4C5] rounded-[14px] p-7 md:p-8 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-6 md:gap-8 items-start overflow-hidden shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.28)] hover:border-[#C9C5B7]">
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-0 top-0 bottom-0 w-[3px]"
-                      style={{ background: a.color }}
-                    />
-                    <div className="pl-1.5 flex flex-col gap-1">
-                      <span
-                        className="font-display italic text-[28px] md:text-[30px] leading-none tracking-tight"
-                        style={{ color: a.color }}
-                      >
-                        {a.band}
-                      </span>
-                      <span
-                        className="text-[11.5px] font-semibold uppercase tracking-[0.16em]"
-                        style={{ color: a.color }}
-                      >
-                        {a.cat}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-[16px] leading-[1.65] text-gray-600 m-0">{a.body}</p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
             </div>
-          </div>
-        </section>
 
-        {/* ════════════════════════════════════════
-            04 MID EMAIL CAPTURE
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-16 md:pb-20">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[720px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
-                <p className="font-display italic text-[17px] text-forest-dark mb-1">
-                  The whole age-by-age breakdown.
-                </p>
-                <h3 className="font-display text-[clamp(1.625rem,3vw,2.125rem)] leading-[1.12] tracking-tight text-balance">
-                  Want it in your inbox{' '}
-                  <span className="italic text-forest-dark">right now?</span>
-                </h3>
-                <div className="mt-6 max-w-[480px] mx-auto">
-                  <EmailForm variant="light" guide={GUIDE} buttonText="Send me the guide" />
+            <figure className="m-0">
+              <div className="relative mx-auto h-[385px] w-full max-w-[440px] sm:h-[360px]">
+                <div className="absolute left-0 top-4 w-[80%] -rotate-6 sm:w-[66%] rounded-[14px] bg-[#F7F3E8] p-5 text-[#2b2a26] shadow-xl">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-400">Report card</p>
+                  <ul className="m-0 mt-3 list-none space-y-2 p-0">
+                    {credentialed.map((c) => (
+                      <li key={c} className="flex items-center justify-between gap-3 text-[14px] text-gray-500">
+                        {c}
+                        <span className="font-display text-[18px] text-gray-400">A+</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="mt-3.5 text-[13px] text-gray-500">
-                  Delivered instantly. No spam. Unsubscribe any time.
-                </p>
+                <div className="absolute bottom-0 right-0 w-[80%] rotate-3 sm:w-[68%] rounded-[14px] bg-white p-5 text-[#2b2a26] shadow-2xl">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-forest">Life card</p>
+                  <ul className="m-0 mt-3 list-none space-y-2 p-0">
+                    {capable.map((c) => (
+                      <li key={c} className="flex items-center gap-2.5 text-[14.5px] font-semibold">
+                        <span
+                          aria-hidden="true"
+                          className="grid h-5 w-5 shrink-0 place-items-center rounded-[5px] bg-forest text-[11px] text-white"
+                        >
+                          &#10003;
+                        </span>
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </ScrollReveal>
+              <figcaption className="mt-6 text-center font-display text-[17px] italic leading-snug text-cream/80">
+                School measures one. Life asks for the other.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
-        {/* ════════════════════════════════════════
-            05 THE METHOD
-        ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-20 md:py-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[800px] mx-auto text-center mb-12">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                  <span className="w-[22px] h-px bg-forest inline-block" />
-                  The method
-                </p>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.875rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
-                  Confidence does not come{' '}
-                  <span className="italic text-forest">first.</span>
-                </h2>
-                <p className="mt-4 font-display italic text-[clamp(1.25rem,2.4vw,1.625rem)] leading-[1.36] text-[#C97B5C] text-balance">
-                  Competence comes first, and confidence{' '}
-                  <span className="text-[#C97B5C]">follows it.</span>
-                </p>
-              </div>
-            </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[980px] mx-auto">
-              {method.map((v, i) => (
-                <ScrollReveal key={v.title} delay={i * 80}>
-                  <div className="h-full bg-cream border border-[#D8D4C5] rounded-[12px] p-7 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.22)]">
-                    <div
-                      className={`w-[44px] h-[44px] rounded-[12px] grid place-items-center mb-4 border ${v.bg} ${v.border} ${v.color}`}
+        {/* ── 02 The life card, by age: the 24 skills from the guide ── */}
+        <section className="bg-cream py-14 md:py-16">
+          <div className="mx-auto max-w-[1140px] px-6">
+            <div className="mx-auto max-w-[680px] text-center">
+              <h2 className="font-display text-[clamp(1.9rem,4vw,2.75rem)] leading-[1.08] tracking-tight text-balance">
+                The life card, <span className="italic text-forest">by age.</span>
+              </h2>
+              <p className="mt-2 text-[17px] text-gray-600">
+                Three age bands, twenty-four real skills.{' '}
+                <span className="font-display italic text-forest-dark">Pick one to start.</span>
+              </p>
+            </div>
+            <div className="mt-9 grid gap-5 md:grid-cols-3">
+              {AGE_BANDS.map((a) => (
+                <div
+                  key={a.band}
+                  className="rounded-[22px] bg-white p-6 outline-dashed outline-2 outline-offset-[-10px]"
+                  style={{ outlineColor: `${a.color}66` }}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-[23px] leading-tight" style={{ color: a.color }}>
+                      {a.name}
+                    </h3>
+                    <span
+                      className="mt-1 shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-[12px] font-bold text-white"
+                      style={{ background: a.color }}
                     >
-                      {v.icon}
-                    </div>
-                    <h4 className="font-display text-[22px] leading-[1.18] tracking-tight text-ink mb-2">
-                      {v.title.split(v.accent)[0]}
-                      <span className="italic text-forest">{v.accent}</span>
-                      {v.title.split(v.accent)[1]}
-                    </h4>
-                    <p className="text-[15.5px] leading-[1.6] text-gray-600 m-0">{v.body}</p>
+                      Ages {a.band}
+                    </span>
                   </div>
-                </ScrollReveal>
+                  <p className="mt-1.5 text-[14px] leading-[1.5] text-gray-500">{a.note}</p>
+                  <ul className="m-0 mt-4 list-none space-y-2 p-0">
+                    {a.skills.map((s) => (
+                      <li
+                        key={s}
+                        className="flex items-center gap-2.5 border-b border-dashed border-[#E6E0CD] pb-2 text-[15px] text-[#2b2a26] last:border-0"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="h-[18px] w-[18px] shrink-0 rounded-[4px] border-2 border-[#CFC9B6]"
+                        />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ════════════════════════════════════════
-            06 FINAL CTA + MEMBERSHIP PS
-        ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] py-20 md:py-24 text-center">
-          <div className="mx-auto max-w-[720px] px-6">
-            <ScrollReveal>
-              <h2 className="font-display text-[clamp(2.125rem,5vw,3.5rem)] leading-[1.06] tracking-tight text-balance">
+        {/* ── 03 The method: four stages ── */}
+        <section className="border-y border-[#D8D4C5] bg-[#F2EFE4] py-14 md:py-16">
+          <div className="mx-auto max-w-[1140px] px-6">
+            <div className="mx-auto max-w-[680px] text-center">
+              <h2 className="font-display text-[clamp(1.9rem,4vw,2.75rem)] leading-[1.08] tracking-tight text-balance">
+                Hand it over <span className="italic text-forest">in stages.</span>
+              </h2>
+              <p className="mt-2 text-[17px] leading-[1.55] text-gray-600">
+                Most of us live in stage one forever because doing it ourselves is faster today. It
+                costs capability tomorrow.
+              </p>
+            </div>
+            <ol className="m-0 mt-9 grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-4">
+              {STAGES.map(([t, d], i) => (
+                <li key={t} className="rounded-[16px] border border-[#E2DCC8] bg-white p-5">
+                  <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#C97B5C]">
+                    Stage {i + 1}
+                  </span>
+                  <h3 className="mt-1 font-display text-[20px] leading-tight">{t}</h3>
+                  <p className="mt-1.5 text-[14.5px] leading-[1.55] text-gray-600">{d}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ── 04 Final CTA with the cover ── */}
+        <section className="bg-cream py-14 md:py-16">
+          <div className="mx-auto grid max-w-[980px] items-center gap-10 px-6 md:grid-cols-[260px_1fr]">
+            <div className="relative mx-auto aspect-[8.5/11] w-[210px] -rotate-3 overflow-hidden rounded-[14px] border border-[#D8D4C5] shadow-[0_30px_60px_-32px_rgba(45,58,46,0.5)] md:w-full">
+              <Image
+                src="/images/capable-kid-cover.jpg"
+                alt="The Capable Kid Guide free cover"
+                fill
+                sizes="(max-width: 768px) 210px, 260px"
+                quality={85}
+                className="object-cover"
+              />
+            </div>
+            <div className="max-md:text-center">
+              <h2 className="font-display text-[clamp(2rem,4.6vw,3.1rem)] leading-[1.06] tracking-tight text-balance">
                 Pick one skill. <span className="italic text-forest">Hand it over.</span>
               </h2>
-              <p className="mt-5 text-[18px] leading-[1.55] text-gray-600 max-w-[520px] mx-auto">
+              <p className="mt-3 max-w-[500px] text-[17.5px] leading-[1.55] text-gray-600 max-md:mx-auto">
                 Get the free guide, choose one skill from your kid&apos;s age band, and start this
                 week. No curriculum. Low prep.
               </p>
-              <div className="mt-8 max-w-[480px] mx-auto">
+              <div className="mt-6 max-w-[480px] max-md:mx-auto">
                 <EmailForm variant="light" guide={GUIDE} buttonText="Send me the guide" />
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={120}>
-              <div className="mt-14 mx-auto max-w-[600px] bg-cream border border-[#D8D4C5] rounded-[14px] p-7 md:p-8 text-center">
-                <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">
-                  Already know you want more?
-                </span>
-                <p className="text-[15px] leading-[1.6] text-gray-600 m-0">
-                  The Anywhere Learning{' '}
-                  <span className="font-display italic text-ink text-[16px]">membership</span>{' '}
-                  turns every skill in this guide into a done-for-you activity, 120+ of them.{' '}
-                  {IS_FOUNDER_PHASE
-                    ? `Founding members pay ${MEMBERSHIP_PRICE_YEAR}, locked in for life.`
-                    : `${MEMBERSHIP_PRICE_YEAR}, cancel anytime.`}
-                </p>
-                <div className="mt-4 flex justify-center">
-                  <Link
-                    href="/#membership"
-                    className="inline-flex items-center gap-2 text-forest-dark font-semibold text-[14.5px] border-b border-forest/25 pb-0.5 hover:text-forest hover:border-forest-dark transition-colors"
-                  >
-                    See the membership
-                    <span className="font-display italic text-[17px] leading-none">&rarr;</span>
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
+              <p className="mt-5 text-[14.5px] text-gray-500">
+                Already know you want more? The{' '}
+                <Link
+                  href="/#membership"
+                  className="border-b border-forest/25 font-semibold text-forest-dark transition-colors hover:border-forest-dark hover:text-forest"
+                >
+                  membership
+                </Link>{' '}
+                turns every skill in this guide into a done-for-you activity
+                {IS_FOUNDER_PHASE ? `, ${MEMBERSHIP_PRICE_YEAR} for founding members.` : '.'}
+              </p>
+            </div>
           </div>
         </section>
       </main>
