@@ -602,13 +602,13 @@ function ListDetailView({
         />
       )}
 
-      <main className="bg-[#faf9f6] min-h-screen">
+      <main className="min-h-screen bg-[#E9EEE6] print:bg-white">
         {/* 3-level breadcrumb */}
-        <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
-          <div className="mx-auto max-w-[1180px] px-6">
+        <div className="print:hidden">
+          <div className="mx-auto max-w-[980px] px-6">
             <nav
               aria-label="Breadcrumb"
-              className="py-3.5 flex items-center gap-2.5 text-[13px] text-gray-500"
+              className="pt-6 flex items-center gap-2.5 text-[13px] text-gray-500"
             >
               <Link
                 href="/ideas"
@@ -640,13 +640,8 @@ function ListDetailView({
 
         {/* Hero header */}
         <header
-          className="pt-14 md:pt-20 pb-10 md:pb-14 print:hidden"
-          style={
-            {
-              '--accent': category.accent,
-              background: `linear-gradient(180deg, ${category.accent}11 0%, #faf9f6 100%)`,
-            } as React.CSSProperties
-          }
+          className="pt-8 md:pt-10 pb-8 md:pb-10 print:hidden"
+          style={{ '--accent': category.accent } as React.CSSProperties}
         >
           <div className="mx-auto max-w-[920px] px-6 text-center">
             {/* Category badge */}
@@ -684,47 +679,18 @@ function ListDetailView({
               {formatMonthYear(list.updated ?? list.published ?? '2026-06-10')}
             </p>
 
-            {/* Stat pills */}
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-              <span
-                className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                style={{
-                  color: category.accent,
-                  borderColor: `${category.accent}40`,
-                  background: `${category.accent}10`,
-                }}
-              >
-                {totalItems} ideas
-              </span>
-              <span
-                className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                style={{
-                  color: category.accent,
-                  borderColor: `${category.accent}40`,
-                  background: `${category.accent}10`,
-                }}
-              >
-                {themeCount} themes
-              </span>
-              <span
-                className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border"
-                style={{
-                  color: category.accent,
-                  borderColor: `${category.accent}40`,
-                  background: `${category.accent}10`,
-                }}
-              >
-                Free to print &amp; keep
-              </span>
-            </div>
+            {/* Counts */}
+            <p className="mt-4 text-[13.5px] font-semibold" style={{ color: category.accent }}>
+              {`${totalItems} ideas \u00b7 ${themeCount} themes \u00b7 Free to print & keep`}
+            </p>
           </div>
         </header>
 
         {/* Age x chore table: the "chart" search intent wants a real table,
             and tables are the most-extracted snippet format */}
         {list.slug === 'chores-by-age-ideas' && (
-          <section className="pb-10 print:hidden">
-            <div className="mx-auto max-w-[920px] px-6 overflow-x-auto">
+          <section className="pb-8 print:hidden">
+            <div className="mx-auto max-w-[980px] px-4 sm:px-6 overflow-x-auto">
               <table className="w-full border-collapse bg-white border border-[#e8e5de] rounded-xl overflow-hidden text-[15px]">
                 <caption className="text-left font-display text-[20px] tracking-tight pb-3">
                   Chore chart by age: what kids can own at each stage
@@ -887,22 +853,33 @@ function ListDetailView({
         </div>
 
         {/* Interactive checklist */}
-        <div className="print:hidden">
+        <div className="mx-auto max-w-[980px] px-4 sm:px-6 print:hidden">
+          <div className="relative bg-white pt-8 shadow-[0_24px_44px_-28px_rgba(45,58,46,0.55)]">
+            <span
+              aria-hidden="true"
+              className="absolute left-1/2 top-[-12px] z-40 h-7 w-7 -translate-x-1/2 rounded-full shadow-[0_4px_8px_rgba(0,0,0,0.25),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+              style={{ background: category.accent }}
+            />
           <IdeasChecklist
             list={list}
             accent={category.accent}
             pdfUrls={pdfUrls}
             categorySlug={category.slug}
           />
+          </div>
         </div>
 
         {/* How to use this list. Sits between the list and the offer: it is
             the context for what they just read, and it earns the offer that
             follows. The FAQ stays below the offer so the ask stays high. */}
         {seo && (
-          <section className="pt-4 pb-2 print:hidden">
-            <div className="mx-auto max-w-[920px] px-6">
-              <div id="how-to-use">
+          <section className="pt-12 pb-2 print:hidden">
+            <div className="mx-auto max-w-[820px] px-6">
+              <div id="how-to-use" className="relative -rotate-[0.6deg] bg-[#FBF3DC] p-6 pt-8 shadow-[0_18px_30px_-22px_rgba(45,58,46,0.5)] md:p-8 md:pt-9">
+                <span
+                  aria-hidden="true"
+                  className="absolute left-1/2 top-[-10px] h-6 w-6 -translate-x-1/2 rounded-full bg-[#d4a373] shadow-[0_4px_8px_rgba(0,0,0,0.25),inset_0_-3px_0_rgba(0,0,0,0.15)]"
+                />
                 <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance">
                   How to use this list
                 </h2>
@@ -942,10 +919,10 @@ function ListDetailView({
 
         {/* FAQ (crawlable SEO content + rich results) */}
         {seo && (
-          <section className="py-11 md:py-12 print:hidden border-t border-[#E8E5DC]">
-            <div className="mx-auto max-w-[920px] px-6">
+          <section className="py-10 md:py-12 print:hidden">
+            <div className="mx-auto max-w-[820px] px-6">
               {seo.faqs.length > 0 && (
-                <div>
+                <div className="bg-white p-6 shadow-[0_18px_30px_-22px_rgba(45,58,46,0.45)] md:p-8">
                   <h2 className="font-display text-[clamp(1.45rem,2.4vw,1.85rem)] leading-[1.12] tracking-tight text-balance mb-4">
                     Frequently asked questions
                   </h2>
@@ -984,8 +961,8 @@ function ListDetailView({
             The email capture above is this page's one real conversion action.
             A second competing button would just split the ask, and cold search
             traffic is not ready for a yearly plan on first visit anyway. */}
-        <section className="pb-14 print:hidden">
-          <div className="mx-auto max-w-[920px] px-6">
+        <section className="pb-12 print:hidden">
+          <div className="mx-auto max-w-[820px] px-6">
             <p className="text-[15px] leading-[1.6] text-[#6e6b64] text-center m-0">
               Already know you want the whole library?{' '}
               <Link
@@ -1002,44 +979,41 @@ function ListDetailView({
             Was two full card grids (ten cards, roughly a screen and a half).
             Same destinations, same crawlable anchor text, as a dense index. */}
         {relatedLists.length > 0 && (
-          <section className="bg-[#F2EFE4] border-t border-[#D8D4C5] py-12 md:py-14 print:hidden">
-            <div className="mx-auto max-w-[920px] px-6">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-5">
-                <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight m-0">
+          <section className="pb-16 print:hidden">
+            <div className="mx-auto max-w-[1080px] px-6">
+              <div className="mb-8 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                <h2 className="m-0 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.1] tracking-tight">
                   More free idea lists
                 </h2>
                 <Link
                   href="/ideas"
-                  className="text-[14px] font-semibold text-[#588157] hover:text-[#3d5c3b] no-underline transition-colors"
+                  className="text-[14px] font-semibold text-[#588157] no-underline transition-colors hover:text-[#3d5c3b]"
                 >
-                  See all {totalListCount} &rarr;
+                  {`See all ${totalListCount} \u2192`}
                 </Link>
               </div>
-
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-0 list-none p-0 m-0">
-                {relatedLists.map(({ list: l, category: c }) => {
-                  const count = l.sections.reduce(
-                    (n, s) => n + s.items.length,
-                    0,
-                  );
+              <ul className="m-0 grid list-none grid-cols-1 gap-x-5 gap-y-7 p-0 sm:grid-cols-2 lg:grid-cols-4">
+                {relatedLists.map(({ list: l, category: c }, i) => {
+                  const count = l.sections.reduce((n, s) => n + s.items.length, 0);
                   return (
-                    <li key={l.slug} className="border-b border-[#DDD8C7]">
+                    <li key={l.slug} style={{ transform: `rotate(${i % 2 ? 1 : -1}deg)` }}>
                       <Link
                         href={`/ideas/${l.slug}`}
-                        className="group flex items-baseline gap-3 py-3 no-underline text-inherit"
+                        className="relative block h-full bg-white p-4 pt-6 text-inherit no-underline shadow-[0_14px_26px_-18px_rgba(45,58,46,0.5)] transition-transform duration-200 hover:-translate-y-1"
                       >
                         <span
-                          className="flex-shrink-0 w-[7px] h-[7px] rounded-full translate-y-[-2px]"
-                          style={{ background: c.accent }}
                           aria-hidden="true"
+                          className="absolute left-1/2 top-[-9px] h-5 w-5 -translate-x-1/2 rounded-full shadow-[0_3px_6px_rgba(0,0,0,0.25),inset_0_-2px_0_rgba(0,0,0,0.15)]"
+                          style={{ background: c.accent }}
                         />
-                        <span className="min-w-0 flex-1">
-                          <span className="block text-[15.5px] leading-[1.35] font-medium text-[#3f3d38] group-hover:text-[#588157] transition-colors">
-                            {l.title}
-                          </span>
-                          <span className="block text-[12.5px] text-[#6b6860] mt-0.5">
-                            {c.name} &middot; {count} ideas
-                          </span>
+                        <span className="block text-[10.5px] font-bold uppercase tracking-[0.14em]" style={{ color: c.accent }}>
+                          {c.name}
+                        </span>
+                        <span className="mt-1 block text-[15px] font-medium leading-[1.35] text-[#3f3d38]">
+                          {l.title}
+                        </span>
+                        <span className="mt-2 block text-[12.5px] font-semibold text-forest-dark">
+                          {`${count} ideas \u2192`}
                         </span>
                       </Link>
                     </li>

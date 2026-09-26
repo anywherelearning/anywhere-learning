@@ -84,7 +84,7 @@ export default function IdeasChecklist({
       />
 
       {/* ── Sticky progress bar ── */}
-      <div className="sticky top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-md border-b border-[#D8D4C5] shadow-[0_4px_16px_-8px_rgba(45,58,46,0.1)]">
+      <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-y border-[#E6E0CD] shadow-[0_4px_16px_-8px_rgba(45,58,46,0.1)]">
         <div className="mx-auto max-w-[920px] px-6 py-3 flex items-center gap-4">
           {/* Count */}
           <span className="text-[14px] font-medium text-gray-700 whitespace-nowrap">
@@ -162,7 +162,7 @@ export default function IdeasChecklist({
                   return (
                     <label
                       key={key}
-                      className="flex items-start gap-2.5 py-[7px] px-2 -mx-2 rounded-md cursor-pointer select-none hover:bg-[#f2efe6] transition-colors"
+                      className="flex items-start gap-2.5 py-[7px] px-2 -mx-2 rounded-md cursor-pointer select-none hover:bg-[#f5f3ec] transition-colors"
                     >
                       <span
                         className="flex-shrink-0 w-[18px] h-[18px] rounded border-[1.5px] mt-[2px] grid place-items-center transition-colors duration-150"
