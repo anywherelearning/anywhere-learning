@@ -22,6 +22,7 @@ import MobileTOC from '@/components/blog/MobileTOC';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
+import { Tape, PAPER_SHADOW } from '@/components/shared/Paper';
 import TryItThisWeek from '@/components/blog/TryItThisWeek';
 import { RESOURCE_TOPIC_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
 import { getLeadMagnetForResource, INLINE_CAPTURE_GUIDES, inlineCaptureIndex } from '@/lib/lead-magnets';
@@ -279,13 +280,13 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
 
       <ReadingProgress />
 
-      <main className="bg-cream">
+      <main className="bg-[#F2EFE4]">
         {/* 01 BREADCRUMB */}
-        <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
+        <div>
           <div className="mx-auto max-w-[1180px] px-6">
             <nav
               aria-label="Breadcrumb"
-              className="py-3.5 flex flex-wrap items-center gap-2.5 text-[13px] text-gray-500"
+              className="pt-6 flex flex-wrap items-center gap-2.5 text-[13px] text-gray-500"
             >
               <Link href="/guides" className="text-gray-600 hover:text-forest-dark transition-colors no-underline">
                 Guides
@@ -297,7 +298,7 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
         </div>
 
         {/* 02 ARTICLE HEADER */}
-        <header className="text-center pt-12 md:pt-16 pb-8 md:pb-10">
+        <header className="text-center pt-10 md:pt-12 pb-8 md:pb-10">
           <div className="mx-auto max-w-[880px] px-6">
             <ScrollReveal immediate>
               <span
@@ -354,10 +355,13 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
         </header>
 
         {/* 03 HERO IMAGE */}
-        <div className="px-6 pb-12 md:pb-16">
+        <div className="px-4 pb-12 sm:px-6 md:pb-16">
           <ScrollReveal delay={80}>
+            <div className={`relative mx-auto max-w-[1000px] -rotate-[0.6deg] bg-white p-2.5 sm:p-3 ${PAPER_SHADOW}`}>
+            <Tape className="left-12 -rotate-6" />
+            <Tape className="right-12 rotate-6" color="rgba(169,193,163,0.85)" />
             <div
-              className="relative aspect-[16/9] max-w-[1100px] mx-auto rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]"
+              className="relative aspect-[16/9] overflow-hidden"
               style={{ background: imgBgByTopic[resource.topic] || '#E6EBDF' }}
             >
               {resource.heroImage ? (
@@ -379,21 +383,28 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
                 />
               )}
             </div>
+            </div>
           </ScrollReveal>
         </div>
 
         {/* 04 ARTICLE BODY */}
-        <div className="mx-auto max-w-[1180px] px-6" data-article>
-          <div className={toc.length >= 3 ? 'lg:grid lg:grid-cols-[260px_1fr] lg:gap-16' : ''}>
+        <div className="mx-auto max-w-[1180px] px-3 sm:px-6" data-article>
+          <div className={toc.length >= 3 ? 'lg:grid lg:grid-cols-[250px_1fr] lg:gap-12' : ''}>
             {toc.length >= 3 && (
               <aside className="hidden lg:block">
                 <div className="sticky top-24 pb-8 pt-2">
-                  <StickyTOC items={toc} />
+                  <div className={`rotate-[-1deg] bg-[#FBF3DC] p-5 ${PAPER_SHADOW}`}>
+                    <StickyTOC items={toc} />
+                  </div>
                 </div>
               </aside>
             )}
 
-            <article className="min-w-0 pb-12 md:pb-16 mx-auto max-w-[760px] lg:max-w-none">
+            <article
+              className={`relative min-w-0 mx-auto mb-12 max-w-[820px] rounded-r-[10px] bg-[#FFFDF8] py-7 pl-7 pr-4 sm:py-10 sm:pl-12 sm:pr-10 md:mb-16 md:pl-16 md:pr-14 lg:max-w-none ${PAPER_SHADOW}`}
+            >
+              <span aria-hidden="true" className="absolute inset-y-0 left-0 w-3 sm:w-4" style={{ background: topicMeta.color }} />
+              <span aria-hidden="true" className="absolute inset-y-0 left-3 w-px bg-black/10 sm:left-4" />
               <MobileTOC items={toc} />
               {(() => {
                 let firstParagraphRendered = false;
@@ -436,7 +447,8 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
               )}
 
               {/* Author bio */}
-              <aside className="mt-12 bg-[#F2EFE4] border border-[#D8D4C5] rounded-[14px] p-7 md:p-8 grid grid-cols-1 sm:grid-cols-[72px_1fr] gap-5 items-start">
+              <aside className={`relative mt-12 rotate-[0.6deg] bg-white p-7 pt-9 md:p-8 md:pt-10 grid grid-cols-1 sm:grid-cols-[72px_1fr] gap-5 items-start ${PAPER_SHADOW}`}>
+                <Tape />
                 {resource.author.avatarImage ? (
                   <Image
                     src={resource.author.avatarImage}
@@ -477,34 +489,23 @@ export default async function ResourceDetailPage({ params }: ResourcePageProps) 
         />
 
         {/* 05 QUIZ CTA */}
-        <BlogQuizCTA />
+        <div className="pt-10">
+          <BlogQuizCTA paper />
+        </div>
 
-        {/* 06 MEMBERSHIP POINTER */}
+        {/* 06 MEMBERSHIP, one quiet line */}
         <section className="pb-14">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[680px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-7 md:p-8 flex flex-wrap items-center gap-y-5 gap-x-8">
-                <div className="flex-1 min-w-[240px]">
-                  <span className="block font-display italic text-[18px] text-[#C97B5C] mb-1.5">
-                    Want more than reading?
-                  </span>
-                  <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
-                    The Anywhere Learning{' '}
-                    <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
-                    unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
-                  </p>
-                </div>
-                <Link
-                  href="/#membership"
-                  className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
-                >
-                  See what&apos;s in the membership
-                  <span className="font-display italic text-lg leading-none">&rarr;</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
+          <p className="mx-auto max-w-[620px] px-6 text-center text-[15px] leading-[1.6] text-gray-600">
+            Want more than reading? The{' '}
+            <Link
+              href="/#membership"
+              className="border-b border-forest/25 font-semibold text-forest-dark no-underline transition-colors hover:border-forest-dark hover:text-forest"
+            >
+              membership
+            </Link>{' '}
+            has 120+ guided activities you can do with your kids. Founding members pay{' '}
+            {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
+          </p>
         </section>
 
         {/* 07 RELATED BLOG POSTS */}

@@ -23,7 +23,7 @@ export default function TryItThisWeek({ productCategory, prefer, seed }: TryItTh
 
   return (
     <section
-      className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-14 md:py-16"
+      className="bg-[#F2EFE4] py-14 md:py-16"
       aria-labelledby="try-it-heading"
     >
       <div className="mx-auto max-w-[1180px] px-6">
@@ -66,7 +66,7 @@ export default function TryItThisWeek({ productCategory, prefer, seed }: TryItTh
                 <span className="inline-flex items-center gap-1.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-forest-dark">
                   <span className="w-1.5 h-1.5 rounded-full bg-forest" aria-hidden="true" />
                   {CATEGORY_LABELS[p.category] || p.category}
-                  {p.ageRange && <span className="text-gray-400 normal-case tracking-normal font-medium">· Ages {p.ageRange}</span>}
+                  {p.ageRange && <span className="text-gray-400 normal-case tracking-normal font-medium">· {/^ages\s/i.test(p.ageRange) ? p.ageRange : `Ages ${p.ageRange}`}</span>}
                 </span>
                 <h3 className="font-display italic text-[19px] leading-[1.18] text-ink mt-1.5 mb-2">
                   {p.name}
