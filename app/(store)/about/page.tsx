@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import ScrollReveal from '@/components/shared/ScrollReveal';
+import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import Testimonials from '@/components/home/Testimonials';
 import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 
@@ -47,12 +47,9 @@ const breadcrumbLd = {
 
 const beliefs = [
   {
-    bg: 'bg-[#E6EBDF]',
-    border: 'border-[#C9D3BE]',
-    color: 'text-forest-dark',
     title: 'The world is the classroom',
     description:
-      'Kitchens, parks, airports, backyards: learning happens everywhere when you know what to look for.',
+      'Kitchens, parks, airports, backyards. Learning happens everywhere once you know what to look for.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 11l9-7 9 7" />
@@ -62,12 +59,9 @@ const beliefs = [
     ),
   },
   {
-    bg: 'bg-[#F2DECF]',
-    border: 'border-[rgba(201,123,92,0.3)]',
-    color: 'text-[#C97B5C]',
     title: 'Together, side by side',
     description:
-      'Every activity is built for parent and kid to do together. Hands-on when it makes sense, screens when it does. The point is always the same: you, doing real things with your kid.',
+      'Every activity is built for parent and kid to do together: you, doing real things with your kid.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="9" cy="8" r="3" />
@@ -78,12 +72,9 @@ const beliefs = [
     ),
   },
   {
-    bg: 'bg-[#F5E7BC]',
-    border: 'border-[rgba(182,145,63,0.35)]',
-    color: 'text-[#B6913F]',
     title: 'Low prep, no stress',
     description:
-      'Open it, pick an activity, and go. I do the thinking so you can focus on being present with your family.',
+      'Open it, pick an activity, go. I do the thinking so you can be present.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M4 12l5 5L20 6" />
@@ -91,12 +82,9 @@ const beliefs = [
     ),
   },
   {
-    bg: 'bg-[#E0EAD9]',
-    border: 'border-[#C9D3BE]',
-    color: 'text-forest-dark',
     title: 'Flexible by design',
     description:
-      'No schedules, no sequences. Use the guides however you want, at home, travelling, or in between.',
+      'No schedules, no sequences. Use the guides at home, travelling, or anywhere in between.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 17c4-6 8-6 12 0s6 4 6 0" />
@@ -168,369 +156,338 @@ const profilePageLd = {
   url: 'https://anywherelearning.co/about',
 };
 
+const BELIEF_MAGNETS = ['#588157', '#C97B5C', '#d4a373', '#3A5A40'];
+const BELIEF_TILT = [-1.5, 1, -1, 1.5];
+
+/** A photo in a white border, taped at the top, with an optional caption. */
+function Snapshot({
+  src,
+  alt,
+  caption,
+  rot = 0,
+  aspect = 'aspect-[4/3]',
+  sizes = '260px',
+  priority = false,
+  className = '',
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  rot?: number;
+  aspect?: string;
+  sizes?: string;
+  priority?: boolean;
+  className?: string;
+}) {
+  return (
+    <figure
+      className={`relative m-0 bg-white p-2.5 pb-3 ${PAPER_SHADOW} ${className}`}
+      style={{ transform: `rotate(${rot}deg)` }}
+    >
+      <Tape />
+      <div className={`relative ${aspect} overflow-hidden`}>
+        <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
+      </div>
+      {caption && (
+        <figcaption className="mt-2 text-center font-display text-[15px] italic text-gray-700">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <main>
-        {/* ════════════════════════════════════════
-            01 HERO
-        ════════════════════════════════════════ */}
-        <header className="bg-cream pt-12 md:pt-16 pb-14 md:pb-20 overflow-hidden">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
-              <ScrollReveal direction="right" immediate>
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                    <span className="w-[22px] h-px bg-forest inline-block" />
-                    I&apos;m Amelie
-                  </p>
-                  <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                    After 15 years in the classroom, I left to give my own kids{' '}
-                    <span className="italic text-forest">something different.</span>
-                  </h1>
-                  <p className="mt-6 text-[17px] md:text-[18.5px] leading-[1.65] text-gray-600 max-w-[560px]">
-                    I left the classroom for more time with my own kids. Yes, time for academics.
-                    But mostly time for the things modern childhood doesn&apos;t make space for:
-                    how to plan a meal, manage a budget, fix what&apos;s broken, finish what they
-                    start. The{' '}
-                    <span className="font-display italic text-forest-dark">real-world skills</span>{' '}
-                    kids today rarely get the chance to practice.
-                  </p>
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {['B.Ed', 'M.Ed', '15 yrs in the classroom', 'Mom of 2'].map((cred) => (
-                      <span
-                        key={cred}
-                        className="bg-cream border border-[#D8D4C5] px-3.5 py-1.5 rounded-full text-[13px] text-gray-500"
-                      >
-                        {cred}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="mt-4 text-[13px] text-gray-500">
-                    As heard on the{' '}
-                    <a
-                      href="https://whereparentstalk.com/featured/how-to-teach-kids-life-skills-through-everyday-activities-real-world-learning-that-works/"
-                      target="_blank"
-                      rel="noopener"
-                      className="border-b border-gray-300 pb-px hover:text-forest-dark hover:border-forest transition-colors"
-                    >
-                      Where Parents Talk podcast
-                    </a>
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal direction="left" delay={120} immediate>
-                <div className="relative max-lg:max-w-[480px] max-lg:mx-auto lg:scale-[1.15] lg:origin-right">
-                  <div className="relative aspect-[4/3] -rotate-[2deg] rounded-[14px] border border-[#D8D4C5] overflow-hidden shadow-[0_30px_50px_-30px_rgba(45,58,46,0.45)]">
-                    <Image
-                      src="/about-hero-amelie.jpeg"
-                      alt="Amelie with her two kids on a mountain hike"
-                      fill
-                      sizes="(max-width: 1024px) 90vw, 42vw"
-                      quality={85}
-                      priority
-                      className="object-cover"
-                    />
-                  </div>
+      {/* The whole page is a letter from Amelie, taped to the fridge in
+          sheets, with photos clipped around it. */}
+      <main className="overflow-hidden bg-[#E9EEE6]">
+        {/* ── 01 Letter, page one: who I am ── */}
+        <header className="px-4 pb-8 pt-10 sm:px-6 md:pt-14">
+          <div className="relative mx-auto max-w-[780px]">
+            <div className={`relative -rotate-[0.5deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
+              <Tape className="left-10 -rotate-6" />
+              <Tape className="right-10 rotate-3" color="rgba(169,193,163,0.85)" />
+              <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
+                <span className="inline-block h-px w-[22px] bg-forest" />
+                I&apos;m Amelie
+              </p>
+              <h1 className="mt-4 font-display text-[clamp(2.1rem,4.6vw,3.4rem)] leading-[1.05] tracking-tight text-balance">
+                After 15 years in the classroom, I left to give my own kids{' '}
+                <span className="italic text-forest">something different.</span>
+              </h1>
+              <p className="mt-5 text-[17.5px] leading-[1.75] text-gray-700">
+                I left the classroom for more time with my own kids. Some of it for academics, but
+                mostly for what modern childhood doesn&apos;t make room for: planning a meal,
+                managing a budget, fixing what&apos;s broken, finishing what they start. The{' '}
+                <span className="font-display italic text-forest-dark">real-world skills</span> kids
+                rarely get to practice.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {['B.Ed', 'M.Ed', '15 yrs in the classroom', 'Mom of 2'].map((cred) => (
                   <span
-                    className="absolute -bottom-3 -right-3 lg:-bottom-4 lg:-right-4 bg-cream border border-[#D8D4C5] font-display italic text-[18px] text-[#C97B5C] px-5 py-2 rounded-full rotate-[4deg] shadow-[0_10px_20px_-12px_rgba(45,58,46,0.35)]"
-                    aria-hidden="true"
+                    key={cred}
+                    className="rounded-full border border-[#D8D4C5] bg-white px-3.5 py-1.5 text-[13px] text-gray-600"
                   >
-                    xo, Amelie
+                    {cred}
                   </span>
-                </div>
-              </ScrollReveal>
+                ))}
+              </div>
+              <p className="mt-4 text-[13px] text-gray-500">
+                As heard on the{' '}
+                <a
+                  href="https://whereparentstalk.com/featured/how-to-teach-kids-life-skills-through-everyday-activities-real-world-learning-that-works/"
+                  target="_blank"
+                  rel="noopener"
+                  className="border-b border-gray-300 pb-px transition-colors hover:border-forest hover:text-forest-dark"
+                >
+                  Where Parents Talk podcast
+                </a>
+              </p>
             </div>
+
+            {/* Photos clipped around the letter on wide screens */}
+            <div className="absolute -right-60 top-8 hidden w-[240px] xl:block">
+              <Snapshot
+                src="/about-hero-amelie.jpeg"
+                alt="Amelie with her two kids on a mountain hike"
+                caption="Us, most days"
+                rot={6}
+                priority
+              />
+            </div>
+            <div className="absolute -left-56 top-40 hidden w-[200px] xl:block">
+              <Snapshot
+                src="/images/about/selfie-on-the-rocks.jpg"
+                alt="Amelie and her son crouched on the rocks by the water"
+                rot={-5}
+                aspect="aspect-[3/4]"
+              />
+            </div>
+          </div>
+
+          {/* Same photos, side by side under the letter on smaller screens */}
+          <div className="mx-auto mt-10 grid max-w-[560px] grid-cols-2 items-start gap-5 xl:hidden">
+            <Snapshot
+              src="/about-hero-amelie.jpeg"
+              alt="Amelie with her two kids on a mountain hike"
+              caption="Us, most days"
+              rot={-3}
+              aspect="aspect-[3/4]"
+              priority
+            />
+            <Snapshot
+              src="/images/about/selfie-on-the-rocks.jpg"
+              alt="Amelie and her son crouched on the rocks by the water"
+              rot={3}
+              aspect="aspect-[3/4]"
+            />
           </div>
         </header>
 
-        {/* ════════════════════════════════════════
-            02 STORY PART 1
-        ════════════════════════════════════════ */}
-        <section className="bg-gradient-to-b from-[#FFFEFA] to-[#F2EFE4] border-y border-[#D8D4C5] py-16 md:py-20">
-          <div className="mx-auto max-w-[660px] px-6">
-            <ScrollReveal>
-              <div className="text-[18px] leading-[1.78] text-gray-600 space-y-6">
-                <p>
-                  <span className="font-display italic text-[60px] md:text-[74px] leading-none text-forest float-left pr-3 pt-1.5">I</span>
-                  loved teaching. I really did. Watching kids light up when something clicked.
-                  The small daily wins. The days when they were genuinely happy to be there,
-                  leaning in and learning.
-                </p>
-                <p>
-                  But over the years, a pattern kept showing up. The basic life skills that used
-                  to come standard with childhood, today&apos;s kids just weren&apos;t getting.
-                  Not because they were less capable. Because childhood today doesn&apos;t leave
-                  them much room to practice.
-                </p>
-                <p>
-                  Days scheduled wall-to-wall. Screens filling the in-between hours. Most chores
-                  and decisions handled by adults before kids ever get the chance to try. The{' '}
-                  <span className="font-display italic text-ink">real-world muscle</span>{' '}
-                  builds through repetition, and most kids today just aren&apos;t getting the reps.
-                </p>
-                <p>
-                  Twelve-year-olds who&apos;d never packed their own lunch. Teenagers who
-                  waited to be told what to do the moment a task came without step-by-step
-                  instructions. Kids who could solve algebra but freeze at the simplest
-                  real-world problem.
-                </p>
-                <p>
-                  And I knew, even as their teacher, I couldn&apos;t close that gap from inside
-                  the classroom. Not in the time we had, not within the system we worked in.
-                </p>
-                <p>
-                  Then I looked at my own kids. They were 12 and 9. Living the same childhood
-                  I was worried about for everyone else&apos;s.{' '}
-                  <span className="font-display italic text-ink">Growing up in the days I wasn&apos;t home.</span>
-                </p>
-                <p>
-                  So after 15 years, I made the hardest call of my career. I left the classroom
-                  to come home to them.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            03 IMAGE 1: The leap
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pt-14 md:pt-20 pb-10 md:pb-14">
-          <div className="mx-auto max-w-[920px] px-6">
-            <ScrollReveal>
-              <div className="relative aspect-[16/9] rounded-[14px] overflow-hidden border border-[#D8D4C5] bg-[#DDE5D2] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]">
-                <Image
-                  src="/about-leap.jpg"
-                  alt="Amelie and her kids at a mountain lake"
-                  fill
-                  sizes="(max-width: 920px) 100vw, 920px"
-                  quality={75}
-                  className="object-cover"
-                />
-              </div>
-              <p className="mt-4 text-center font-display italic text-[17px] text-[#C97B5C]">Coming home.</p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            04 STORY PART 2
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-20 md:pb-24">
-          <div className="mx-auto max-w-[760px] px-6">
-            <ScrollReveal>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                The shift
+        {/* ── 02 Letter, page two: what I saw in the classroom ── */}
+        <section className="px-4 py-8 sm:px-6">
+          <div className={`relative mx-auto max-w-[740px] rotate-[0.6deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
+            <Tape className="left-1/2 -translate-x-1/2 rotate-2" />
+            <div className="space-y-6 text-[17.5px] leading-[1.78] text-gray-700">
+              <p>
+                <span className="float-left pr-3 pt-1.5 font-display text-[60px] italic leading-none text-forest md:text-[72px]">
+                  I
+                </span>
+                loved teaching. The moments when something clicked, the small daily wins, the days
+                kids were genuinely happy to be there.
               </p>
-              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.75rem)] leading-[1.1] tracking-tight mt-3 text-balance">
-                I came home for more time with my kids. And built{' '}
-                <span className="italic text-forest">something for any parent</span> who wants
-                the same.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <div className="mt-8 max-w-[660px] text-[18px] leading-[1.78] text-gray-600 space-y-6">
-                <p>
-                  We do academics, of course. Math, reading, writing. Just not as a separate
-                  subject at a separate desk. Planning a meal is fractions and budgeting. Fixing
-                  the bike is measurement and problem-solving. Running a small business is
-                  pricing, writing and negotiating. The skills and the schoolwork arrive in the
-                  same task, and that is the part{' '}
-                  <span className="font-display italic text-ink">a school day never quite has room for.</span>
-                </p>
-                <p>
-                  Most of our days now happen at the kitchen table, in the backyard, at the
-                  grocery store, halfway up a hiking trail. Hands-on, low-prep, real-world.
-                  Nobody is miserable. I&apos;m not exhausted. My kids are more engaged than I
-                  ever saw them in a classroom.
-                </p>
-                <p>
-                  I started making simple guides for our own days. Step-by-step prompts I could
-                  grab on a rainy afternoon or pull out at the lake. Things that turn ordinary
-                  moments into the kind of learning that actually sticks.
-                </p>
-                <p>
-                  Not a curriculum. Not a replacement for school. Just a toolkit any parent can
-                  use to bring real-world learning into the rhythm you already have. Whether
-                  you homeschool, worldschool, send your kids to school, or just want more out of
-                  weekends and summers.
-                </p>
-                <p>
-                  Anywhere Learning is what I wish every parent had. The thinking, planning, and
-                  prep already done.{' '}
-                  <span className="font-display italic text-ink">Built by a teacher</span>, so
-                  you can spend the time you have actually doing things with your kids.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            05 BELIEFS
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-16 md:pb-20">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-10 md:p-14">
-                <div className="text-center max-w-[660px] mx-auto mb-10">
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                    <span className="w-[22px] h-px bg-forest inline-block" />
-                    What I believe
-                  </p>
-                  <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.1] tracking-tight mt-3.5 text-balance">
-                    Learning should fit your life,{' '}
-                    <span className="italic text-forest">not the other way around.</span>
-                  </h2>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[880px] mx-auto">
-                  {beliefs.map((b, i) => (
-                    <ScrollReveal key={b.title} delay={i * 60}>
-                      <div className="h-full bg-cream border border-[#D8D4C5] rounded-[12px] p-7 transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.22)]">
-                        <div className={`w-[42px] h-[42px] rounded-[12px] grid place-items-center mb-4 border ${b.bg} ${b.border} ${b.color}`}>
-                          {b.icon}
-                        </div>
-                        <h3 className="font-display text-[22px] leading-[1.2] tracking-tight mb-2 text-ink">{b.title}</h3>
-                        <p className="text-[15.5px] leading-[1.6] text-gray-600">{b.description}</p>
-                      </div>
-                    </ScrollReveal>
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            06 FOR ANY FAMILY
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-12 md:pb-16 text-center">
-          <div className="mx-auto max-w-[760px] px-6">
-            <ScrollReveal>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                For every family
+              <p>
+                But over the years, a pattern kept showing up. Kids weren&apos;t less capable. They
+                just had fewer chances to practice. Days scheduled wall to wall, screens filling the
+                in-between hours, and most chores and decisions handled by adults before kids got to
+                try. The <span className="font-display italic text-ink">real-world muscle</span>{' '}
+                builds through repetition, and they weren&apos;t getting the reps.
               </p>
-              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.75rem)] leading-[1.08] tracking-tight mt-3.5 text-balance">
+              <p>
+                I saw it in class every day. Kids who waited to be told what to do the moment a task
+                came without step-by-step instructions. Kids who stopped after one wrong answer. And
+                I couldn&apos;t close that gap from inside the classroom, not in the time we had.
+              </p>
+              <p>
+                Then I looked at my own kids, 12 and 9, living the same childhood I worried about
+                for everyone else&apos;s.{' '}
+                <span className="font-display italic text-ink">
+                  Growing up in the days I wasn&apos;t home.
+                </span>{' '}
+                So after 15 years, I made the hardest call of my career and came home to them.
+              </p>
+            </div>
+          </div>
+          <Snapshot
+            src="/about-leap.jpg"
+            alt="Amelie and her kids at a mountain lake"
+            caption="Coming home."
+            rot={-2}
+            aspect="aspect-[16/10]"
+            sizes="(max-width: 640px) 90vw, 520px"
+            className="mx-auto -mt-2 w-[88%] max-w-[520px]"
+          />
+        </section>
+
+        {/* ── 03 Letter, page three: what we do now ── */}
+        <section className="px-4 py-8 sm:px-6">
+          <div className={`relative mx-auto max-w-[740px] -rotate-[0.5deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
+            <Tape className="left-12 -rotate-3" color="rgba(169,193,163,0.85)" />
+            <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
+              <span className="inline-block h-px w-[22px] bg-forest" />
+              The shift
+            </p>
+            <h2 className="mt-3 font-display text-[clamp(1.7rem,3.4vw,2.5rem)] leading-[1.1] tracking-tight text-balance">
+              I came home for more time with my kids. And built{' '}
+              <span className="italic text-forest">something for any parent</span> who wants the
+              same.
+            </h2>
+            <div className="mt-7 space-y-6 text-[17.5px] leading-[1.78] text-gray-700">
+              <p>
+                We still do math, reading and writing, just not at a separate desk. Planning a meal
+                is fractions and budgeting. Fixing the bike is measurement. Running a small business
+                is pricing, writing and negotiating. The skills and the schoolwork arrive in the same
+                task, and that is the part{' '}
+                <span className="font-display italic text-ink">
+                  a school day never quite has room for.
+                </span>
+              </p>
+              <p>
+                Most of our days happen at the kitchen table, in the backyard, at the grocery store
+                or halfway up a hiking trail. Nobody is miserable, I&apos;m not exhausted, and my
+                kids are more engaged than I&apos;ve ever seen them.
+              </p>
+              <p>
+                I started writing simple guides for our own days, and Anywhere Learning grew out of
+                them. Not a curriculum, not a replacement for school. Just the thinking, planning and
+                prep already done,{' '}
+                <span className="font-display italic text-ink">built by a teacher</span>, so you can
+                spend your time doing things with your kids. At home, on the road, or on weekends and
+                summers around school.
+              </p>
+            </div>
+            <p className="mt-7 font-display text-[26px] italic text-[#C97B5C]">xo, Amelie</p>
+          </div>
+        </section>
+
+        {/* ── 04 What I believe: four cards held by magnets ── */}
+        <section className="px-6 py-12 md:py-14">
+          <div className="mx-auto max-w-[1080px]">
+            <h2 className="mx-auto max-w-[680px] text-center font-display text-[clamp(1.75rem,3.6vw,2.5rem)] leading-[1.1] tracking-tight text-balance">
+              Learning should fit your life,{' '}
+              <span className="italic text-forest">not the other way around.</span>
+            </h2>
+            <ul className="m-0 mt-10 grid list-none gap-x-5 gap-y-8 p-0 sm:grid-cols-2 lg:grid-cols-4">
+              {beliefs.map((b, i) => (
+                <li
+                  key={b.title}
+                  className={`relative bg-white p-6 pt-8 ${PAPER_SHADOW}`}
+                  style={{ transform: `rotate(${BELIEF_TILT[i]}deg)` }}
+                >
+                  <Magnet color={BELIEF_MAGNETS[i]} />
+                  <div className="grid h-10 w-10 place-items-center rounded-[10px] bg-[#F2EFE4] text-forest-dark">
+                    {b.icon}
+                  </div>
+                  <h3 className="mt-3 font-display text-[20px] leading-tight tracking-tight">{b.title}</h3>
+                  <p className="mt-2 text-[14.5px] leading-[1.6] text-gray-600">{b.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ── 05 For every family ── */}
+        <section className="px-6 pb-14">
+          <div className="mx-auto grid max-w-[1000px] items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+            <div className="max-md:text-center">
+              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.5rem)] leading-[1.1] tracking-tight text-balance">
                 You don&apos;t have to leave school to{' '}
                 <span className="italic text-forest">build real skills.</span>
               </h2>
-              <p className="mt-5 text-[17.5px] leading-[1.6] text-gray-600 max-w-[600px] mx-auto">
-                You don&apos;t need to homeschool to give your kids more. If your kids are in
-                school, these are the weekends, the summers, the after-dinner hour. If you
-                homeschool or worldschool, they slot right into the day. Real-world learning
-                fits any family, any approach.
+              <p className="mt-4 text-[17px] leading-[1.65] text-gray-600">
+                You don&apos;t need to homeschool. If your kids are in school, this is your weekends,
+                summers and the hour after dinner. If you homeschool or worldschool, it slots right
+                into your day.
               </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+              <div className="mt-6 flex flex-wrap gap-2 max-md:justify-center">
                 {approaches.map((a) => (
                   <span
                     key={a.label}
-                    className="inline-flex items-center text-ink bg-[#F2EFE4] font-medium text-[14px] px-4 py-2 rounded-full"
+                    className="rounded-full bg-white px-4 py-2 text-[14px] font-medium text-ink shadow-[0_4px_10px_-6px_rgba(45,58,46,0.35)]"
                   >
                     {a.label}
                   </span>
                 ))}
               </div>
-            </ScrollReveal>
+            </div>
+            <Snapshot
+              src="/about-family.jpg"
+              alt="The whole family on a backcountry adventure in the snow"
+              caption="Us, doing the work."
+              rot={3}
+              aspect="aspect-[4/5]"
+              sizes="(max-width: 768px) 80vw, 380px"
+              className="mx-auto w-[82%] max-w-[380px]"
+            />
           </div>
         </section>
 
-        {/* ════════════════════════════════════════
-            07 IMAGE 2: family
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-16 md:pb-20">
-          <div className="mx-auto max-w-[920px] px-6">
-            <ScrollReveal>
-              <div className="relative aspect-[16/9] rounded-[14px] overflow-hidden border border-[#D8D4C5] bg-[#CFDCC4] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.32)]">
-                <Image
-                  src="/about-family.jpg"
-                  alt="The whole family on a backcountry adventure in the snow"
-                  fill
-                  sizes="(max-width: 920px) 100vw, 920px"
-                  quality={75}
-                  className="object-cover"
-                />
-              </div>
-              <p className="mt-4 text-center font-display italic text-[17px] text-[#C97B5C]">Us, doing the work.</p>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            07b IN THEIR WORDS — third-party credibility (colleagues, parents,
-            students). Lives here on /about so the founder page carries real
-            endorsements, not just Amelie's own voice.
-        ════════════════════════════════════════ */}
+        {/* ── 06 In their words: third-party credibility ── */}
         <Testimonials />
 
-        {/* ════════════════════════════════════════
-            08 FINAL CTA
-        ════════════════════════════════════════ */}
-        <section className="bg-gradient-to-b from-cream to-[#F2EFE4] border-t border-[#D8D4C5] py-20 md:py-24 text-center mt-8">
-          <div className="mx-auto max-w-[720px] px-6">
-            <ScrollReveal>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                Ready when you are
-              </p>
-              <h2 className="font-display text-[clamp(2rem,4.4vw,3.25rem)] leading-[1.06] tracking-tight mt-3.5 text-balance">
-                Ready to try a <span className="italic text-forest">different kind</span> of learning?
-              </h2>
-              <p className="mt-5 text-[18px] leading-[1.55] text-gray-600 max-w-[560px] mx-auto">
-                Start with the free guide, or unlock the full library as a founding member.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/start-trial"
-                  className="inline-flex items-center gap-3 bg-forest text-cream font-semibold py-4 px-6 rounded-xl text-[15.5px] shadow-[0_1px_0_rgba(255,255,255,0.18)_inset,0_-1px_0_rgba(0,0,0,0.10)_inset,0_12px_26px_-14px_rgba(58,90,64,0.55),0_2px_0_rgba(45,58,46,0.05)] hover:bg-forest-dark hover:-translate-y-px transition-all duration-200"
-                >
-                  {JOIN_CTA_LABEL}, {MEMBERSHIP_PRICE_YEAR}
-                  <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-white/[0.18]">&rarr;</span>
-                </Link>
-                <Link
-                  href="/free-guide"
-                  className="inline-flex items-center gap-2.5 border-[1.5px] border-forest text-forest-dark font-semibold py-[14px] px-[22px] rounded-xl text-[15px] hover:bg-[#E6EBDF] hover:-translate-y-px transition-all duration-200"
-                >
-                  Get your free guide
-                  <span className="font-display italic text-base">&rarr;</span>
-                </Link>
-              </div>
-              <div className="mt-5 flex justify-center">
-                <Link
-                  href="/shop"
-                  className="inline-flex items-center gap-2 text-gray-500 font-medium text-[14.5px] border-b border-gray-300 pb-1 hover:text-forest-dark hover:border-forest transition-colors"
-                >
-                  Or browse the activities
-                  <span className="font-display italic text-[17px] leading-none">&rarr;</span>
-                </Link>
-              </div>
-              <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13px] text-gray-500">
-                <span>Founder rate {MEMBERSHIP_PRICE_YEAR} locked in for life, or {MONTHLY_PLAN_PRICE_MONTH}</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>14-day money-back guarantee</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>No credit card to try the free guide</span>
-              </div>
-              <p className="mt-4 text-[13px] text-gray-500">
-                Anywhere Learning is 100% secular. Part of the{' '}
-                <a
-                  href="https://seahomeschoolers.com/"
-                  target="_blank"
-                  rel="noopener"
-                  className="border-b border-gray-300 pb-px hover:text-forest-dark hover:border-forest transition-colors"
-                >
-                  SEA Homeschoolers
-                </a>{' '}
-                community.
-              </p>
-              <p className="mt-12 font-display italic text-[24px] text-[#C97B5C]">xo, Amelie</p>
-            </ScrollReveal>
+        {/* ── 07 Final CTA: a note pinned to the fridge ── */}
+        <section className="px-6 py-14 md:py-16">
+          <div className={`relative mx-auto max-w-[680px] -rotate-1 bg-forest-dark p-8 pt-11 text-center text-cream md:p-11 md:pt-12 ${PAPER_SHADOW}`}>
+            <Magnet color="#C97B5C" size={28} />
+            <h2 className="font-display text-[clamp(1.9rem,4.2vw,2.9rem)] leading-[1.06] tracking-tight text-balance">
+              Ready to try a <span className="italic text-gold-light">different kind</span> of
+              learning?
+            </h2>
+            <p className="mx-auto mt-4 max-w-[500px] text-[17px] leading-[1.55] text-cream/80">
+              Start with the free guide, or unlock the full library as a founding member.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/start-trial"
+                className="inline-flex items-center gap-2 rounded-xl bg-cream px-6 py-3.5 text-[15.5px] font-semibold text-forest-dark no-underline transition-colors hover:bg-white"
+              >
+                {JOIN_CTA_LABEL}, {MEMBERSHIP_PRICE_YEAR} <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <Link
+                href="/free-guide"
+                className="inline-flex items-center gap-2 rounded-xl border-[1.5px] border-cream/70 px-5 py-3 text-[15px] font-semibold text-cream no-underline transition-colors hover:bg-white/10"
+              >
+                Get your free guide <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+            <Link
+              href="/shop"
+              className="mt-5 inline-block border-b border-cream/40 pb-0.5 text-[14.5px] font-medium text-cream/80 no-underline transition-colors hover:text-cream"
+            >
+              Or browse the activities &rarr;
+            </Link>
+            <p className="mt-6 text-[13px] leading-[1.6] text-cream/70">
+              Founder rate {MEMBERSHIP_PRICE_YEAR} locked in for life, or {MONTHLY_PLAN_PRICE_MONTH}
+              {' · '}14-day money-back guarantee{' · '}No credit card to try the free guide
+            </p>
+            <p className="mt-2 text-[13px] text-cream/70">
+              Anywhere Learning is 100% secular. Part of the{' '}
+              <a
+                href="https://seahomeschoolers.com/"
+                target="_blank"
+                rel="noopener"
+                className="border-b border-cream/40 pb-px text-cream/85 hover:text-cream"
+              >
+                SEA Homeschoolers
+              </a>{' '}
+              community.
+            </p>
+            <p className="mt-7 font-display text-[24px] italic text-gold-light">xo, Amelie</p>
           </div>
         </section>
       </main>
