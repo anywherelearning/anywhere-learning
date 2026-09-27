@@ -291,7 +291,25 @@ export default function AboutPage() {
 
         {/* ── 02 Letter, page two: what I saw in the classroom ── */}
         <section className="px-4 py-8 sm:px-6">
-          <div className={`relative mx-auto max-w-[740px] rotate-[0.6deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
+          <div className="relative mx-auto max-w-[740px]">
+            <div className="absolute -right-60 top-10 hidden w-[220px] xl:block">
+              <Snapshot
+                src="/images/about/family-selfie.jpg"
+                alt="Amelie and her two kids in life jackets on a boat"
+                caption="My two"
+                rot={5}
+                aspect="aspect-[4/3]"
+              />
+            </div>
+            <div className="absolute -left-60 top-[45%] hidden w-[220px] xl:block">
+              <Snapshot
+                src="/images/about/hiking-trail.jpg"
+                alt="Two kids hiking a rocky mountain trail"
+                rot={-4}
+                aspect="aspect-[4/3]"
+              />
+            </div>
+          <div className={`relative rotate-[0.6deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
             <Tape className="left-1/2 -translate-x-1/2 rotate-2" />
             <div className="space-y-6 text-[17.5px] leading-[1.78] text-gray-700">
               <p>
@@ -323,6 +341,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          </div>
           <Snapshot
             src="/about-leap.jpg"
             alt="Amelie and her kids at a mountain lake"
@@ -336,7 +355,24 @@ export default function AboutPage() {
 
         {/* ── 03 Letter, page three: what we do now ── */}
         <section className="px-4 py-8 sm:px-6">
-          <div className={`relative mx-auto max-w-[740px] -rotate-[0.5deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
+          <div className="relative mx-auto max-w-[740px]">
+            <div className="absolute -left-56 top-16 hidden w-[220px] xl:block">
+              <Snapshot
+                src="/images/about/holding-a-find.jpg"
+                alt="Amelie's son holding a find in his open hands"
+                rot={-5}
+                aspect="aspect-[3/4]"
+              />
+            </div>
+            <div className="absolute -right-60 top-[50%] hidden w-[220px] xl:block">
+              <Snapshot
+                src="/images/about/paddleboard.jpg"
+                alt="Amelie's daughter paddleboarding on a mountain lake at sunset"
+                rot={4}
+                aspect="aspect-[4/3]"
+              />
+            </div>
+          <div className={`relative -rotate-[0.5deg] bg-[#FFFDF8] p-7 pt-10 md:p-12 ${PAPER_SHADOW}`}>
             <Tape className="left-12 -rotate-3" color="rgba(169,193,163,0.85)" />
             <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
               <span className="inline-block h-px w-[22px] bg-forest" />
@@ -372,6 +408,23 @@ export default function AboutPage() {
               </p>
             </div>
             <p className="mt-7 font-display text-[26px] italic text-[#C97B5C]">xo, Amelie</p>
+          </div>
+          </div>
+
+          {/* The same two photos under the letter on smaller screens */}
+          <div className="mx-auto mt-10 grid max-w-[560px] grid-cols-2 items-start gap-5 xl:hidden">
+            <Snapshot
+              src="/images/about/holding-a-find.jpg"
+              alt="Amelie's son holding a find in his open hands"
+              rot={-3}
+              aspect="aspect-[3/4]"
+            />
+            <Snapshot
+              src="/images/about/paddleboard.jpg"
+              alt="Amelie's daughter paddleboarding on a mountain lake at sunset"
+              rot={3}
+              aspect="aspect-[3/4]"
+            />
           </div>
         </section>
 
