@@ -12,7 +12,7 @@ Last updated: 2026-08-29 from Amelie's screenshots of each group's rules.
 | Thursday | value-post day |
 | Friday | Worldschoolers (Follow Friday) · In My Homeschool Era (Friday Self-Promo Thread) |
 | Saturday | Haven & Ember (Small Business Promotions) · Homeschool for You (promo thread) |
-| Sunday | Homeschool & Creative Learning (Small Business Sunday) |
+| Sunday | Homeschool & Creative Learning (Small Business Sunday) · TPT Creators Connect (Daily Promo Thread, weekly use) |
 | 1st of month | Homeschooling 101 (comment on Monthly Promotion Post) |
 
 ## Facebook groups
@@ -73,6 +73,12 @@ Last updated: 2026-08-29 from Amelie's screenshots of each group's rules.
 - Promo day: **any day** for a genuinely free resource. **Friday = "Extras Friday"** admin thread (seen Sep 25 2026): "Share an extracurricular printable or resource in the comments (foreign language, art, music, & more)". Replies are one line + link (e.g. "Real-world projects for kids! Ranging from free up to $15."). Amelie's pitch there: TPT store (free resources + $5.99 singles) with anywherelearning.co as "if you want them all", no membership price quoted.
 - What to promote: the challenge (free), the free guide, the idea-list printables, any single guide under $30. NOT the membership at $99 (over the cap); the $15/mo plan is borderline, don't test it without reading the rules.
 - Notes: this is a "free printables" audience, so lead with what they get and that it's free. Keep the "no printing needed" line, it stands out here.
+
+### TPT Creators Connect: Share, Promote, Grow
+- Added 2026-09-27 from Amelie's screenshot. Admin: Rae Whimsy Designs. Audience = other TPT sellers plus teachers/homeschoolers browsing (hashtags: #TeachersPayTeachers #HomeschoolResources #ClassroomResources).
+- Promo rules: ALL promo in the admin's "It's Promo Time!" **Daily Promo Thread** only (business links, services, products, deals). "Don't just drop your link, show love to others too" = comment on at least one other creator's post.
+- Promo day: **daily** thread, but use it about **once a week** (Sunday) so it stays fresh and doesn't read as spam. Vary the opening each time.
+- What to promote: the TPT store (Anywhere Learning Studio, teacherspayteachers.com/store/anywhere-learning-studio): free idea checklists + free guide, $5.99 singles, bundles. Classroom-friendly wording is fine here (teachers are the buyers), but no "curriculum-aligned" or "worksheets". NOT the membership.
 
 ## Other channels
 
