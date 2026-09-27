@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
-import ScrollReveal from '@/components/shared/ScrollReveal';
+import { PAPER_SHADOW } from '@/components/shared/Paper';
 import { getAllResources, resourceTopics, type ResourcePage } from '@/lib/resources';
 import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 
@@ -30,27 +30,18 @@ export const metadata: Metadata = {
   },
 };
 
-const motifByTopic: Record<string, string> = {
-  'real-world-learning': '$',
-  'nature-stem': '✿',
-  'worldschooling': '✈',
-  'creativity-maker': '✂',
-  'ai-digital-literacy': '⌘',
-  'homeschool-journey': '☘',
-  'future-ready-skills': '⊞',
-  'stem-for-kids': '⬡',
-};
-
-const imgBgByTopic: Record<string, string> = {
-  'real-world-learning': '#DDE5D2',
-  'nature-stem': '#CFDCC4',
-  'worldschooling': '#E8C8AE',
-  'creativity-maker': '#F2DECF',
-  'ai-digital-literacy': '#F5E7BC',
-  'homeschool-journey': '#DAD7CD',
-  'future-ready-skills': '#DDE5D2',
-  'stem-for-kids': '#CFDCC4',
-};
+// Reading order on the shelf, and a slight tilt for each notebook.
+const ORDER = [
+  'life-skills-for-kids',
+  'real-world-learning',
+  'stem-for-kids',
+  'nature-based-learning',
+  'creativity-maker-activities',
+  'ai-digital-literacy',
+  'worldschooling-guide',
+  'homeschool-journey',
+];
+const TILT = [-1.5, 1, -1, 1.5, -1.2, 0.8, -0.8, 1.2];
 
 function formatUpdated(r: ResourcePage): string {
   const date = r.dateModified || r.publishedAt;
@@ -58,114 +49,45 @@ function formatUpdated(r: ResourcePage): string {
   return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
-function GuideCard({
-  r,
-  variant = 'standard',
-}: {
-  r: ResourcePage;
-  variant?: 'featured' | 'tall' | 'standard' | 'wide';
-}) {
+/** A guide as a notebook: topic-coloured spine, its photo taped on the cover. */
+function GuideNotebook({ r, priority = false }: { r: ResourcePage; priority?: boolean }) {
   const topic = resourceTopics[r.topic];
-  const color = topic.color;
-  const bg = imgBgByTopic[r.topic] || '#E6EBDF';
-  const motif = motifByTopic[r.topic] || '◆';
-
-  const imageClass =
-    variant === 'featured'
-      ? 'flex-1 min-h-[420px]'
-      : variant === 'wide'
-      ? 'aspect-[16/10] md:aspect-auto md:h-full md:min-h-[320px]'
-      : variant === 'tall'
-      ? 'aspect-[16/9]'
-      : 'aspect-[16/10]';
-  const bodyPadding =
-    variant === 'featured' ? 'p-8 md:p-9' : variant === 'wide' ? 'p-7 md:p-9' : 'p-6 md:p-7';
-  const titleSize =
-    variant === 'featured' || variant === 'wide'
-      ? 'text-[clamp(1.55rem,2.4vw,2rem)] leading-[1.1]'
-      : 'text-[1.35rem] leading-[1.2]';
-
-  const outerClass =
-    variant === 'wide'
-      ? 'grid grid-cols-1 md:grid-cols-[1.1fr_1fr]'
-      : 'flex flex-col';
-  const imageBorderClass =
-    variant === 'wide'
-      ? 'border-b border-[#D8D4C5] md:border-b-0 md:border-r'
-      : 'border-b border-[#D8D4C5]';
-
   return (
     <Link
       href={`/guides/${r.slug}`}
-      className={`group ${outerClass} h-full bg-cream border-[3px] rounded-[14px] overflow-hidden text-ink no-underline shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.32)]`}
-      style={{ borderColor: `${color}80` }}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-l-[4px] rounded-r-[10px] bg-[#FFFDF8] pl-5 text-inherit no-underline transition-transform duration-200 hover:-translate-y-1 ${PAPER_SHADOW}`}
     >
-      <div
-        className={`relative ${imageClass} overflow-hidden ${imageBorderClass}`}
-        style={{ background: bg, borderColor: `${color}33` }}
-      >
-        {r.heroImage && (
-          <Image
-            src={r.heroImage}
-            alt={r.heroImageAlt || r.title}
-            fill
-            sizes={
-              variant === 'featured'
-                ? '(max-width: 980px) 100vw, 60vw'
-                : variant === 'wide'
-                ? '(max-width: 768px) 100vw, 55vw'
-                : '(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw'
-            }
-            quality={75}
-            className="object-cover"
-            style={
-              variant === 'wide'
-                ? { objectPosition: 'center 88%' }
-                : r.heroImagePosition
-                ? { objectPosition: r.heroImagePosition }
-                : undefined
-            }
-          />
-        )}
-        <span
-          className="absolute top-3 right-3 w-[44px] h-[44px] rounded-[12px] bg-cream/95 border border-[#D8D4C5] grid place-items-center text-[20px] shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)]"
-          style={{ color }}
-          aria-hidden="true"
-        >
-          {motif}
-        </span>
-      </div>
-      <div className={`flex flex-col ${variant === 'featured' ? '' : 'flex-1'} ${variant === 'wide' ? 'justify-center' : ''} ${bodyPadding}`}>
-        <span
-          className="inline-flex items-center gap-2 text-[11.5px] font-semibold uppercase tracking-[0.16em]"
-          style={{ color }}
-        >
-          <span
-            className="w-2 h-2 rounded-full shrink-0"
-            style={{ background: color }}
-            aria-hidden="true"
-          />
+      <span aria-hidden="true" className="absolute inset-y-0 left-0 w-5" style={{ background: topic.color }} />
+      <span aria-hidden="true" className="absolute inset-y-0 left-5 w-px bg-black/10" />
+      <div className="flex flex-1 flex-col p-4 pb-5">
+        <div className="relative -rotate-[1.5deg] bg-white p-1.5 shadow-[0_6px_14px_-8px_rgba(0,0,0,0.4)]">
+          <div className="relative aspect-[4/3] overflow-hidden bg-[#E6EBDF]">
+            {r.heroImage && (
+              <Image
+                src={r.heroImage}
+                alt={r.heroImageAlt || r.title}
+                fill
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 270px"
+                priority={priority}
+                className="object-cover"
+                style={r.heroImagePosition ? { objectPosition: r.heroImagePosition } : undefined}
+              />
+            )}
+          </div>
+        </div>
+        <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: topic.color }}>
           {topic.label}
-        </span>
-        <span className="mt-1.5 inline-flex flex-wrap items-center gap-2 text-[12.5px] text-gray-500 font-medium tracking-wide">
-          <span>Updated {formatUpdated(r)}</span>
-        </span>
-        <h3 className={`font-display ${titleSize} tracking-tight text-balance mt-3 text-ink`}>
-          {r.title}
-        </h3>
-        <p
-          className={`mt-2.5 font-display italic text-gray-600 leading-[1.5] ${
-            variant === 'featured' ? 'text-[18px]' : 'text-[15.5px]'
-          }`}
-        >
-          {r.hook}
         </p>
-        <span className="mt-auto pt-5 border-t border-dashed border-[#C9C5B7] inline-flex items-center gap-2 text-[14.5px] font-semibold text-forest-dark">
-          Read guide
-          <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
-            &rarr;
+        <h2 className="mt-1 font-display text-[19px] leading-tight tracking-tight text-[#2b2a26] text-balance">
+          {r.title}
+        </h2>
+        <p className="mt-2 font-display text-[14.5px] italic leading-snug text-gray-600">{r.hook}</p>
+        <p className="mt-auto flex items-center justify-between gap-2 pt-4 text-[12.5px]">
+          <span className="text-gray-500">Updated {formatUpdated(r)}</span>
+          <span className="font-semibold text-forest-dark">
+            Read <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </span>
-        </span>
+        </p>
       </div>
     </Link>
   );
@@ -173,20 +95,10 @@ function GuideCard({
 
 export default function ResourcesPage() {
   const resources = getAllResources();
-  const bySlug = (slug: string) => resources.find((r) => r.slug === slug);
-
-  // Two featured rows + wide card at the bottom:
-  // Row 1: Life Skills (big) + AI Digital (stacked) + Creativity (stacked)
-  // Row 2: Real-World Learning (big) + Nature (stacked) + Worldschooling (stacked)
-  // Row 3: Homeschool Journey (wide)
-  const featured1 = bySlug('life-skills-for-kids');
-  const stack1Top = bySlug('ai-digital-literacy');
-  const stack1Bottom = bySlug('creativity-maker-activities');
-  const featured2 = bySlug('real-world-learning');
-  const stack2Top = bySlug('nature-based-learning');
-  const stack2Bottom = bySlug('worldschooling-guide');
-  const wide = bySlug('homeschool-journey');
-  const wide2 = bySlug('stem-for-kids');
+  const guides = [
+    ...ORDER.map((slug) => resources.find((r) => r.slug === slug)).filter((r): r is ResourcePage => !!r),
+    ...resources.filter((r) => !ORDER.includes(r.slug)),
+  ];
 
   const collectionJsonLd = {
     '@context': 'https://schema.org',
@@ -217,138 +129,58 @@ export default function ResourcesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <main>
-        {/* ════════════════════════════════════════
-            01 PAGE HEADER
-        ════════════════════════════════════════ */}
-        <header className="bg-cream pt-12 pb-10 md:pt-16 md:pb-12 text-center">
-          <div className="mx-auto max-w-[940px] px-6">
-            <ScrollReveal immediate>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                Resource guides
-              </p>
-              <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                Everything you need to <span className="italic text-forest">know.</span>
-              </h1>
-              <p className="mt-4 text-[17px] md:text-[18px] leading-[1.55] text-gray-600 max-w-[620px] mx-auto">
-                In-depth guides on the topics that matter most to families who learn through
-                real life, at home, on the road, or after the school day ends. Written by{' '}
-                <span className="font-display italic text-forest-dark">Amelie,</span> a teacher
-                with 15 years in the classroom, now homeschooling her own.
-              </p>
-              <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[12.5px] text-gray-500 tracking-wide">
-                <span>Updated regularly</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>Free to read</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>Built for sharing</span>
-              </div>
-            </ScrollReveal>
+      <main className="bg-[#F2EFE4]">
+        {/* ── Header ── */}
+        <header className="pb-4 pt-12 text-center md:pt-14">
+          <div className="mx-auto max-w-[800px] px-6">
+            <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
+              <span className="inline-block h-px w-[22px] bg-forest" />
+              Resource guides
+            </p>
+            <h1 className="mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
+              Everything you need to <span className="italic text-forest">know.</span>
+            </h1>
+            <p className="mx-auto mt-4 max-w-[620px] text-[17px] leading-[1.55] text-gray-600 md:text-[18px]">
+              In-depth guides on the topics that matter most to families who learn through real
+              life, at home, on the road, or after the school day ends. Written by{' '}
+              <span className="font-display italic text-forest-dark">Amelie,</span> a teacher with 15
+              years in the classroom, now homeschooling her own.
+            </p>
+            <p className="mt-4 text-[12.5px] tracking-wide text-gray-500">
+              {'Updated regularly \u00b7 Free to read \u00b7 Built for sharing'}
+            </p>
           </div>
         </header>
-        <div className="mx-auto max-w-[1180px] border-b border-[#D8D4C5]" />
 
-        {/* ════════════════════════════════════════
-            02 GUIDES
-        ════════════════════════════════════════ */}
-        <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] pt-14 md:pt-20 pb-14 md:pb-20">
+        {/* ── The guides, as notebooks on the table ── */}
+        <section className="pb-14 pt-10 md:pb-16">
           <div className="mx-auto max-w-[1180px] px-6">
-            {/* Featured row 1: Life Skills + stacked */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_1fr] gap-6 mb-6 items-stretch">
-              {featured1 && (
-                <ScrollReveal className="h-full">
-                  <GuideCard r={featured1} variant="featured" />
-                </ScrollReveal>
-              )}
-              <div className="grid grid-rows-2 gap-6">
-                {stack1Top && (
-                  <ScrollReveal className="h-full" delay={80}>
-                    <GuideCard r={stack1Top} variant="tall" />
-                  </ScrollReveal>
-                )}
-                {stack1Bottom && (
-                  <ScrollReveal className="h-full" delay={160}>
-                    <GuideCard r={stack1Bottom} variant="tall" />
-                  </ScrollReveal>
-                )}
-              </div>
-            </div>
-
-            {/* Featured row 2: Real-World Learning + stacked */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.45fr] gap-6 mb-6 items-stretch">
-              <div className="grid grid-rows-2 gap-6 order-2 lg:order-1">
-                {stack2Top && (
-                  <ScrollReveal className="h-full" delay={80}>
-                    <GuideCard r={stack2Top} variant="tall" />
-                  </ScrollReveal>
-                )}
-                {stack2Bottom && (
-                  <ScrollReveal className="h-full" delay={160}>
-                    <GuideCard r={stack2Bottom} variant="tall" />
-                  </ScrollReveal>
-                )}
-              </div>
-              {featured2 && (
-                <ScrollReveal className="h-full order-1 lg:order-2">
-                  <GuideCard r={featured2} variant="featured" />
-                </ScrollReveal>
-              )}
-            </div>
-
-            {/* Row 3: Homeschool Journey + STEM side by side */}
-            {(wide || wide2) && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-                {wide && (
-                  <ScrollReveal className="h-full">
-                    <GuideCard r={wide} variant="featured" />
-                  </ScrollReveal>
-                )}
-                {wide2 && (
-                  <ScrollReveal className="h-full" delay={80}>
-                    <GuideCard r={wide2} variant="featured" />
-                  </ScrollReveal>
-                )}
-              </div>
-            )}
+            <ul className="m-0 grid list-none gap-x-7 gap-y-10 p-0 sm:grid-cols-2 lg:grid-cols-4">
+              {guides.map((r, i) => (
+                <li key={r.slug} style={{ transform: `rotate(${TILT[i % TILT.length]}deg)` }}>
+                  <GuideNotebook r={r} priority={i < 4} />
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        {/* ════════════════════════════════════════
-            03 QUIZ CTA
-        ════════════════════════════════════════ */}
-        <div className="bg-cream py-20 md:py-24">
-          <BlogQuizCTA />
-        </div>
+        {/* ── Quiz ── */}
+        <BlogQuizCTA paper />
 
-        {/* ════════════════════════════════════════
-            04 MEMBERSHIP POINTER
-        ════════════════════════════════════════ */}
-        <section className="bg-cream pb-20 md:pb-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[680px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-7 md:p-8 flex flex-wrap items-center gap-y-5 gap-x-8">
-                <div className="flex-1 min-w-[240px]">
-                  <span className="block font-display italic text-[18px] text-[#C97B5C] mb-1.5">
-                    Want more than reading?
-                  </span>
-                  <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
-                    The Anywhere Learning{' '}
-                    <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
-                    unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
-                  </p>
-                </div>
-                <Link
-                  href="/#membership"
-                  className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
-                >
-                  See what&apos;s in the membership
-                  <span className="font-display italic text-lg leading-none">&rarr;</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
+        {/* ── Membership, one quiet line ── */}
+        <section className="pb-16">
+          <p className="mx-auto max-w-[620px] px-6 text-center text-[15px] leading-[1.6] text-gray-600">
+            Want more than reading? The{' '}
+            <Link
+              href="/#membership"
+              className="border-b border-forest/25 font-semibold text-forest-dark no-underline transition-colors hover:border-forest-dark hover:text-forest"
+            >
+              membership
+            </Link>{' '}
+            has 120+ guided activities you can do with your kids. Founding members pay{' '}
+            {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
+          </p>
         </section>
       </main>
     </>

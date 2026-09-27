@@ -466,7 +466,7 @@ const resources: ResourcePage[] = [
         ],
       },
     ],
-    hook: 'Your kid can name every dinosaur but can\'t make a sandwich. Real-world learning fixes that.',
+    hook: 'Real-world learning is the stuff kids actually remember, because they did it.',
     relatedBlogSlugs: [
       'kitchen-learning-lab',
       'teach-kids-about-money',

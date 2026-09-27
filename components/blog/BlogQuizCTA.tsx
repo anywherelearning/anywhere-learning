@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import { Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 
 /**
  * End-of-article call to action: the "what's your kid's missing life skill?"
@@ -8,12 +9,18 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
  * to take a 2-minute quiz than sign up for a newsletter, and the quiz captures
  * their email at the result gate anyway (into the segmented quiz funnel).
  */
-export default function BlogQuizCTA() {
+export default function BlogQuizCTA({ paper = false }: { paper?: boolean }) {
+  // paper: a white note pinned with a magnet, for the pages dressed as paper
+  // on a fridge or table (/guides). Blog posts keep the green box.
+  const box = paper
+    ? `relative max-w-[640px] mx-auto -rotate-1 bg-white p-9 pt-11 md:p-11 md:pt-12 text-center ${PAPER_SHADOW}`
+    : 'max-w-[720px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]';
   return (
     <section className="pt-2 pb-12">
       <div className="mx-auto max-w-[1180px] px-6">
         <ScrollReveal>
-          <div className="max-w-[720px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
+          <div className={box}>
+            {paper && <Magnet color="#C97B5C" size={26} />}
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
               <span className="w-[22px] h-px bg-forest inline-block" />
               2-minute quiz
