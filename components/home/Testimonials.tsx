@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import { Tape, PAPER_SHADOW } from '@/components/shared/Paper';
 
 // Founder-credibility testimonials. Real endorsements of Amelie as an educator
 // from the people who know her work. No star ratings on purpose: stars read as
@@ -127,6 +128,10 @@ const ADULTS: Quote[] = [CLAUDIA, MYRIAM, VICKIE, WENDY, MARIE_CHRISTINE, CATHER
 
 type Variant = 'feature' | 'std' | 'mini';
 
+// Student notes: one sticky-note colour and tilt each.
+const STICKY: Record<string, string> = { Fleur: '#FBF3DC', Felix: '#F6E3D8', Jacob: '#E3ECDD' };
+const TILT: Record<string, number> = { Fleur: 2, Felix: -2, Jacob: 1.5 };
+
 function TCard({ t, variant }: { t: Quote; variant: Variant }) {
   const { ink, tint } = VOICE[t.voice];
   const isMini = variant === 'mini';
@@ -136,21 +141,22 @@ function TCard({ t, variant }: { t: Quote; variant: Variant }) {
     variant === 'feature'
       ? 'text-[20px] leading-[1.65]'
       : isMini
-      ? 'text-[14px] leading-[1.45] font-medium'
+      ? 'font-display italic text-[16px] leading-[1.4]'
       : 'text-[16px] leading-[1.6]';
   return (
     <blockquote
-      className={`tl-card h-full m-0 relative overflow-hidden bg-cream flex flex-col ${isMini || variant === 'feature' ? 'justify-center' : ''} ${cardGap} ${pad}`}
+      className={`tl-card h-full m-0 relative flex flex-col ${isMini || variant === 'feature' ? 'justify-center' : ''} ${cardGap} ${pad} ${PAPER_SHADOW}`}
       style={{
-        border: `3px solid ${ink}80`,
-        borderRadius: 14,
-        boxShadow: '0 1px 0 rgba(255,255,255,0.5) inset, 0 14px 26px -22px rgba(45,58,46,0.2)',
+        // The adult quotes are a letter on the fridge; the students' are sticky notes.
+        background: isMini ? STICKY[t.name] ?? '#FBF3DC' : '#FFFDF8',
+        transform: `rotate(${isMini ? TILT[t.name] ?? 0 : -0.5}deg)`,
       }}
     >
+      {!isMini && <Tape />}
       {variant === 'feature' && (
         <span
           aria-hidden="true"
-          className="font-display absolute -top-[24px] right-[14px] leading-none pointer-events-none select-none"
+          className="font-display absolute top-[4px] right-[18px] leading-none pointer-events-none select-none"
           style={{ fontWeight: 700, fontSize: 150, color: '#e8c99a', opacity: 0.4 }}
         >
           &#8221;
@@ -199,14 +205,14 @@ export default function Testimonials() {
   const prev = () => setIndex((i) => (i - 1 + ADULTS.length) % ADULTS.length);
   const next = () => setIndex((i) => (i + 1) % ADULTS.length);
   return (
-    <section className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-16 md:py-20">
+    <section className="py-12 md:py-14">
       <style>{`
         .tl-card { transition: box-shadow 200ms cubic-bezier(0.22,1,0.36,1); }
         @media (prefers-reduced-motion: reduce) { .tl-card { transition: none; } }
       `}</style>
       <div className="mx-auto max-w-[1180px] px-6">
         <ScrollReveal>
-          <div className="max-w-[760px] mx-auto text-center mb-14">
+          <div className="max-w-[760px] mx-auto text-center mb-12">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark flex items-center justify-center gap-2.5 mb-4">
               <span className="w-[22px] h-px bg-forest inline-block" />
               In their words
@@ -261,7 +267,7 @@ export default function Testimonials() {
             </div>
 
             {/* Students stay put (row 1, right column) */}
-            <div className="grid grid-rows-3 gap-4 lg:row-start-1 lg:col-start-2">
+            <div className="grid grid-rows-3 gap-5 px-2 lg:row-start-1 lg:col-start-2">
               <TCard t={FLEUR} variant="mini" />
               <TCard t={FELIX} variant="mini" />
               <TCard t={JACOB} variant="mini" />
