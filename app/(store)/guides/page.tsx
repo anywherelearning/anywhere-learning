@@ -132,13 +132,13 @@ export default function ResourcesPage() {
       <main className="bg-[#F2EFE4]">
         {/* ── Header ── */}
         <header className="pb-4 pt-12 text-center md:pt-14">
-          <div className="mx-auto max-w-[800px] px-6">
+          <div className="mx-auto max-w-[900px] px-6">
             <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
               <span className="inline-block h-px w-[22px] bg-forest" />
               Resource guides
             </p>
-            <h1 className="mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
-              Everything you need to <span className="italic text-forest">know.</span>
+            <h1 className="mt-4 font-display text-[clamp(2.6rem,6vw,4.9rem)] leading-[1.02] tracking-tight text-balance">
+              Guides for learning, <span className="italic text-forest">wherever you are.</span>
             </h1>
             <p className="mx-auto mt-4 max-w-[620px] text-[17px] leading-[1.55] text-gray-600 md:text-[18px]">
               In-depth guides on the topics that matter most to families who learn through real
