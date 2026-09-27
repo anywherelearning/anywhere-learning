@@ -187,7 +187,7 @@ def email2():
     n = 2
     out = header(n, 'Why it matters', 'What I watched disappear from my classroom')
     out += p('Yesterday was the definition. Today is why it matters, and why I think it matters more now than when we were kids.')
-    out += p('I taught for fifteen years. Somewhere around 2020 I started noticing something that worried me more than any test score. Kids were getting fewer and fewer chances to practise real life, and it showed.')
+    out += p('I taught for fifteen years. Over my last years in the classroom, I started noticing something that worried me more than any test score. Kids were getting fewer and fewer chances to practise real life, and it showed.')
     out += p('Hand them a task without step-by-step instructions and they&rsquo;d wait for someone to tell them what to do. Get one answer wrong and stop trying. Fall apart when the schedule changed.')
     out += p('One moment stays with me. A grade 4 class, independent work time, and one boy wasn&rsquo;t writing. By the time I noticed, five or maybe ten minutes had gone by.')
     out += pull('He didn&rsquo;t have a pencil.')
