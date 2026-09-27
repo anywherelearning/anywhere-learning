@@ -185,10 +185,10 @@ def photo(src, alt, width=320):
 # ── the emails ──
 def email2():
     n = 2
-    out = header(n, 'Why it matters', 'Better at school, worse at life')
+    out = header(n, 'Why it matters', 'What I watched disappear from my classroom')
     out += p('Yesterday was the definition. Today is why it matters, and why I think it matters more now than when we were kids.')
-    out += p('I taught for fifteen years. Somewhere around 2020 I started noticing something that worried me more than any test score. The kids were getting better at school and worse at life.')
-    out += p('They could fill in a worksheet. But hand them a task without step-by-step instructions and they&rsquo;d wait for someone to tell them what to do. Get one answer wrong and stop trying. Fall apart when the schedule changed.')
+    out += p('I taught for fifteen years. Somewhere around 2020 I started noticing something that worried me more than any test score. Kids were getting fewer and fewer chances to practise real life, and it showed.')
+    out += p('Hand them a task without step-by-step instructions and they&rsquo;d wait for someone to tell them what to do. Get one answer wrong and stop trying. Fall apart when the schedule changed.')
     out += p('One moment stays with me. A grade 4 class, independent work time, and one boy wasn&rsquo;t writing. By the time I noticed, five or maybe ten minutes had gone by.')
     out += pull('He didn&rsquo;t have a pencil.')
     out += p('There was a basket of extra pencils on my desk and a room full of kids who had one. He didn&rsquo;t try either. He waited for an adult to notice.')
@@ -222,7 +222,7 @@ def email2():
     out += footer(n)
     meta = ('<!--\n  REAL-WORLD LEARNING IN 5 DAYS (free email course) - Email 2 of 5\n'
             '  Kit sequence "Course: Real-World Learning in 5 Days" (id 2904485), position 2, 1 day after email 1, 7am ET.\n'
-            '  Subject: Better at school, worse at life\n  Preview: What I watched disappear in fifteen years of teaching.\n\n'
+            '  Subject: What I watched disappear from my classroom\n  Preview: And why it matters more for our kids than it did for us.\n\n'
             '  In Kit: paste as a custom template. Type ONLY the greeting in the Email tab, e.g.\n'
             '  Hi {{ subscriber.first_name | default: "there" }},\n-->\n')
     return meta + out, 'course-day2-faucet.jpg'

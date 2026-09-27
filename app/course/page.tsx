@@ -79,7 +79,7 @@ const courseLd = {
 
 const WHAT_YOU_LEARN = [
   "What real-world learning is, and the one-question test",
-  "Why kids who do well at school can struggle with real life",
+  "Why kids today get so little practice at real life",
   "How one afternoon holds the math, the writing and the life skills",
   "The four moves I use at home, with real examples",
 ];
@@ -268,8 +268,8 @@ export default function CoursePage() {
               </figure>
               <p className="font-display text-[15px] italic text-gold-dark">A note from me</p>
               <p className="mt-4 text-[17px] leading-[1.8] text-gray-800">
-                I taught for fifteen years, and somewhere along the way the kids started getting
-                better at school and worse at life. I took a year off to travel and homeschool my
+                I taught for fifteen years, and somewhere along the way kids stopped getting the
+                chance to practice real life. I took a year off to travel and homeschool my
                 own two, and I never went back.
               </p>
               <p className="mt-4 text-[17px] leading-[1.8] text-gray-800">

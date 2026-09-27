@@ -117,11 +117,12 @@ const STAGES = [
   ['You are on your own', 'They own it. You stop checking.'],
 ];
 
-const credentialed = [
-  'Aces the test',
-  'Memorizes the facts',
-  'Follows the instructions',
-  'Waits to be told what to do',
+// Left card: what we still do for them. Right card: what the guide hands over.
+const doneForThem = [
+  'Lunch packed for them',
+  'Reminded twice to get ready',
+  'Dentist called for them',
+  'Problem solved for them',
 ];
 
 const capable = [
@@ -139,7 +140,7 @@ export default function CapableKidGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(guideLd) }}
       />
       <main className="bg-cream">
-        {/* ── 01 Hero: the promise and the form, beside a report card and a life card ── */}
+        {/* ── 01 Hero: the promise and the form, beside a "done for them" card and a "done by them" card ── */}
         <section className="overflow-hidden bg-forest-dark text-cream">
           <div className="mx-auto grid max-w-[1140px] items-center gap-10 px-6 py-12 md:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div>
@@ -169,18 +170,18 @@ export default function CapableKidGuidePage() {
             <figure className="m-0">
               <div className="relative mx-auto h-[385px] w-full max-w-[440px] sm:h-[360px]">
                 <div className="absolute left-0 top-4 w-[80%] -rotate-6 sm:w-[66%] rounded-[14px] bg-[#F7F3E8] p-5 text-[#2b2a26] shadow-xl">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-400">Report card</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-400">Done for them</p>
                   <ul className="m-0 mt-3 list-none space-y-2 p-0">
-                    {credentialed.map((c) => (
-                      <li key={c} className="flex items-center justify-between gap-3 text-[14px] text-gray-500">
+                    {doneForThem.map((c) => (
+                      <li key={c} className="flex items-center gap-2.5 text-[14px] text-gray-500">
+                        <span aria-hidden="true" className="h-5 w-5 shrink-0 rounded-[5px] border-2 border-[#CFC9B6]" />
                         {c}
-                        <span className="font-display text-[18px] text-gray-400">A+</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="absolute bottom-0 right-0 w-[80%] rotate-3 sm:w-[68%] rounded-[14px] bg-white p-5 text-[#2b2a26] shadow-2xl">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-forest">Life card</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-forest">Done by them</p>
                   <ul className="m-0 mt-3 list-none space-y-2 p-0">
                     {capable.map((c) => (
                       <li key={c} className="flex items-center gap-2.5 text-[14.5px] font-semibold">
@@ -197,18 +198,18 @@ export default function CapableKidGuidePage() {
                 </div>
               </div>
               <figcaption className="mt-6 text-center font-display text-[17px] italic leading-snug text-cream/80">
-                School measures one. Life asks for the other.
+                Every skill starts as ours. The guide helps you hand it over.
               </figcaption>
             </figure>
           </div>
         </section>
 
-        {/* ── 02 The life card, by age: the 24 skills from the guide ── */}
+        {/* ── 02 What they can own, by age: the 24 skills from the guide ── */}
         <section className="bg-cream py-14 md:py-16">
           <div className="mx-auto max-w-[1140px] px-6">
             <div className="mx-auto max-w-[680px] text-center">
               <h2 className="font-display text-[clamp(1.9rem,4vw,2.75rem)] leading-[1.08] tracking-tight text-balance">
-                The life card, <span className="italic text-forest">by age.</span>
+                What they can own, <span className="italic text-forest">by age.</span>
               </h2>
               <p className="mt-2 text-[17px] text-gray-600">
                 Three age bands, twenty-four real skills.{' '}

@@ -52,9 +52,9 @@ export const COURSE_DAYS = [
   },
   {
     day: 'Day 2',
-    title: 'Better at school, worse at life',
+    title: 'What I watched disappear from my classroom',
     blurb:
-      'Why so many kids do well at school and still struggle with real life, and why doing beats being told.',
+      'What fifteen years of teaching showed me about kids and real life, and why doing beats being told.',
   },
   {
     day: 'Day 3',
