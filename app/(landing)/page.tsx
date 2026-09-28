@@ -173,8 +173,8 @@ export default async function HomePage() {
                 <Eyebrow>Real-world activities &middot; Ages 6&ndash;14</Eyebrow>
               </div>
               <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
-                Your kid is smart. But can they handle{' '}
-                <span className="italic text-forest">real life?</span>
+                Real learning,{' '}
+                <span className="italic text-forest">hiding in real life.</span>
               </h1>
               <p className="mb-9 max-w-[500px] text-[17px] leading-[1.62] text-gray-600 text-pretty md:text-xl">
                 We hand you the next real-world activity, matched to your kids, and you do it
