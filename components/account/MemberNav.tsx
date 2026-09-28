@@ -56,11 +56,14 @@ const RESOURCES: ResourceEntry[] = [
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   {
     label: 'Free',
-    desc: 'Three things you can take today',
+    desc: 'Five things you can take today',
+    // Same set and order as the public header (components/layout/SiteHeader.tsx).
     children: [
+      { href: '/course', label: '5-Day Course', desc: 'Free, one short email a day' },
       { href: '/ideas', label: 'Activity Ideas', desc: 'Printable checklists' },
       { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Age-by-age skills map' },
       { href: '/free-guide', label: '7-Day Guide', desc: 'Seven activities, sent to your inbox' },
+      { href: '/quiz', label: 'Take the Quiz', desc: 'Two minutes, a plan for your kid' },
     ],
   },
 ];
