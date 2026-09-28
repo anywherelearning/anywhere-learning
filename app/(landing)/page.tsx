@@ -201,17 +201,15 @@ export default async function HomePage() {
               <HeroSaleBadge />
               <ChallengeHeroSticker />
               <div data-reveal>
-                <Eyebrow>Real-world activities &middot; Ages 6&ndash;14</Eyebrow>
+                <Eyebrow>From a teacher of 15 years &middot; <span className="whitespace-nowrap">Ages 6&ndash;14</span></Eyebrow>
               </div>
               <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
                 Real learning,{' '}
                 <span className="italic text-forest">hiding in real life.</span>
               </h1>
               <p className="mb-9 max-w-[500px] text-[17px] leading-[1.62] text-gray-600 text-pretty md:text-xl">
-                We hand you the next real-world activity, matched to your kids, and you do it
-                whenever it suits you. Plan a party, that&apos;s fractions and budgeting. Run a
-                small business, that&apos;s pricing and persuasive writing. Real academics inside
-                real tasks. You just do it together.
+                We hand you the next real-world activity, matched to your kids. Plan a party:
+                that&apos;s fractions and budgeting. You just do it together.
               </p>
               <div className="mb-3.5 flex flex-wrap items-center gap-x-[22px] gap-y-4">
                 <Link
@@ -233,26 +231,12 @@ export default async function HomePage() {
                     Free 5-day course
                   </Link>
                 ) : null}
-                {/* The per-month figure is the answer to "is $99 a lot?", and it
-                    belongs at the moment of the decision, not in the pricing
-                    section three screens down. m.priceMonth tracks the live
-                    price, so it stays right once the founder rate closes. */}
-                <span className="text-[15px] leading-[1.5] text-gray-500">
-                  {/* One expression, not `{TRIAL_DAYS} days`: JSX drops the
-                      space between an expression and the text after it, so that
-                      form renders "14days free". */}
-                  {`${TRIAL_DAYS} days free · $0 today`}
-                  <br />
-                  {m.priceYr}
-                  {m.isFounderPhase ? ' founder rate' : ''}, about {m.priceMonth}
-                </span>
               </div>
-              {/* Checkout asks for a card. Saying so here rather than letting
-                  Stripe be the one to mention it: a surprise at the payment step
-                  costs more than the click it might have saved. */}
-              <p className="mb-5 max-w-[430px] text-[13.5px] leading-[1.55] text-gray-400">
-                A card is required to start. Cancel before day {TRIAL_DAYS + 1} and you pay
-                nothing, and we remind you first.
+              {/* One line: the per-month figure answers "is $99 a lot?" at the
+                  moment of decision, and the card requirement is said here so
+                  Stripe isn't the one to spring it. m.* tracks the live price. */}
+              <p className="mb-5 max-w-[470px] text-[14px] leading-[1.55] text-gray-500">
+                {`${TRIAL_DAYS} days free · $0 today · then ${m.priceYr}${m.isFounderPhase ? ' founder rate' : ''} (about ${m.priceMonth}). A card is needed; cancel before day ${TRIAL_DAYS + 1} and you pay nothing.`}
               </p>
             </div>
 

@@ -64,7 +64,11 @@ export default function HeroNextStop() {
 
   return (
     <div className="w-full max-w-[420px]">
-      <div className="motion-safe:animate-[alGentleFloat_6s_ease-in-out_infinite]">
+      <div className="relative motion-safe:animate-[alGentleFloat_6s_ease-in-out_infinite]">
+        {/* Says what this card is before anyone clicks it */}
+        <span className="absolute -top-3.5 left-6 z-10 -rotate-2 bg-[#FBF3DC] px-3 py-1 text-[12.5px] font-semibold text-forest-dark shadow-[0_6px_14px_-8px_rgba(45,58,46,0.6)]">
+          Try it: this is what members see
+        </span>
         <div className="relative overflow-hidden rounded-[22px] border border-white/50 bg-[rgba(247,245,238,0.86)] p-7 shadow-[0_28px_60px_-14px_rgba(45,58,46,0.32)] backdrop-blur-md max-md:p-6">
           {/* NEXT STOP · TOGETHER, with the live dot on the right */}
           <div className="mb-3 flex items-center justify-between">
@@ -169,7 +173,7 @@ export default function HeroNextStop() {
         </div>
       </div>
       <p className="mt-4 text-center text-[13.5px] text-gray-500">
-        Try it. Pick a different one, or mark it reached.
+        Open it, pick a different one, or mark it reached.
       </p>
     </div>
   );
