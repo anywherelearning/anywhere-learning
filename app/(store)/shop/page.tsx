@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getFallbackProducts, type FallbackProduct } from '@/lib/fallback-products';
 import EmailForm from '@/components/EmailForm';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import { Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import LibraryFilters, { type LibraryRow } from './LibraryFilters';
 import { getProductSkills } from '@/lib/skills';
 import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
@@ -441,9 +442,9 @@ export default function ShopPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }}
       />
-      <main className="bg-cream">
+      <main className="bg-[#F2EFE4]">
         {/* 01 HERO */}
-        <section className="bg-cream pt-12 md:pt-16 pb-8 md:pb-10">
+        <section className="pt-12 md:pt-16 pb-8 md:pb-10">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
               <ScrollReveal direction="right" immediate>
@@ -453,7 +454,7 @@ export default function ShopPage() {
                     All the activities
                   </p>
                   <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                    Every life-skills activity,{' '}
+                    Every activity,{' '}
                     <span className="italic text-forest">in one membership.</span>
                   </h1>
 
@@ -482,7 +483,7 @@ export default function ShopPage() {
                       (pill) => (
                         <span
                           key={pill}
-                          className="inline-flex items-center gap-1.5 bg-[#F2EFE4] text-gray-600 font-medium text-[13px] px-3.5 py-1.5 rounded-full whitespace-nowrap"
+                          className="inline-flex items-center gap-1.5 bg-white text-gray-600 font-medium text-[13px] px-3.5 py-1.5 rounded-full whitespace-nowrap shadow-[0_4px_10px_-6px_rgba(45,58,46,0.35)]"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-forest" aria-hidden="true" />
                           {pill}
@@ -521,10 +522,10 @@ export default function ShopPage() {
         </section>
 
         {/* 02 TRACKS — compact horizontal cards, scales as categories grow */}
-        <section className="bg-cream pt-6 pb-2">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="border-t border-[#D8D4C5]">
-              {TRACKS.map((t) => {
+        <section className="pt-6 pb-4">
+          <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
+            <div className="flex flex-col gap-7">
+              {TRACKS.map((t, ti) => {
                 const all = productsByCategory[t.category] || [];
                 const count = all.length;
                 const covers = all.map((p) => ({
@@ -549,7 +550,8 @@ export default function ShopPage() {
                   <article
                     key={t.category}
                     id={`track-${t.category}`}
-                    className="border-b border-[#D8D4C5] py-7 md:py-8 scroll-mt-24"
+                    className={`relative scroll-mt-24 border-t-[5px] bg-[#FFFDF8] px-5 py-7 sm:px-7 md:px-9 md:py-8 ${PAPER_SHADOW}`}
+                    style={{ borderColor: t.color, transform: `rotate(${ti % 2 ? 0.35 : -0.35}deg)` }}
                   >
                     <ScrollReveal>
                       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-5 md:gap-7 items-start">
@@ -627,8 +629,8 @@ export default function ShopPage() {
         </section>
 
         {/* 04 FULL LIBRARY LIST */}
-        <section className="bg-cream pt-8 md:pt-10 pb-8" id="full-library">
-          <div className="mx-auto max-w-[1180px] px-6">
+        <section className="pt-10 md:pt-12 pb-8" id="full-library">
+          <div className={`mx-auto max-w-[1180px] bg-[#FFFDF8] px-4 py-10 sm:px-8 md:px-10 md:py-12 ${PAPER_SHADOW}`}>
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-10">
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
@@ -736,7 +738,7 @@ export default function ShopPage() {
         </section>
 
         {/* 05 UNLOCK — Membership */}
-        <section className="bg-cream pt-8 md:pt-10 pb-12" id="membership">
+        <section className="pt-8 md:pt-10 pb-12" id="membership">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
               <div className="max-w-[760px] mx-auto text-center mb-10">
@@ -752,7 +754,8 @@ export default function ShopPage() {
             <ScrollReveal>
               <div className="max-w-[560px] mx-auto">
                 {/* Membership */}
-                <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-8 md:p-10 flex flex-col">
+                <div className={`relative -rotate-[0.8deg] bg-white p-8 pt-10 md:p-10 md:pt-12 flex flex-col ${PAPER_SHADOW}`}>
+                  <Magnet color="#C97B5C" size={26} />
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
                     All 120+ activities
@@ -801,8 +804,8 @@ export default function ShopPage() {
         </section>
 
         {/* 07 EMAIL CAPTURE — compact inline */}
-        <section className="bg-cream pt-2 pb-12">
-          <div className="mx-auto max-w-[760px] px-6 text-center">
+        <section className="pt-2 pb-12">
+          <div className={`mx-auto max-w-[620px] rotate-[0.8deg] bg-[#FBF3DC] px-6 py-8 text-center ${PAPER_SHADOW}`}>
             <ScrollReveal>
               <p className="font-display italic text-[18px] md:text-[20px] text-gray-700 leading-[1.4] max-w-[520px] mx-auto mb-4 text-balance">
                 Or just{' '}
@@ -823,8 +826,8 @@ export default function ShopPage() {
         </section>
 
         {/* 08 FAQ */}
-        <section className="bg-cream pb-12">
-          <div className="mx-auto max-w-[760px] px-6">
+        <section className="px-4 pb-14 sm:px-6">
+          <div className={`mx-auto max-w-[800px] bg-[#FFFDF8] px-6 py-10 md:px-10 ${PAPER_SHADOW}`}>
             <ScrollReveal>
               <div className="text-center mb-8">
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">

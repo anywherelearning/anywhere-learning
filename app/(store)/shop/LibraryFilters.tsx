@@ -128,7 +128,7 @@ export default function LibraryFilters({ rows, tracks, skills = [] }: Props) {
       <div id="library-top" className="scroll-mt-[80px] md:scroll-mt-[88px]" aria-hidden="true" />
 
       {/* Filter bar */}
-      <div className="sticky top-[65px] md:top-[73px] z-30 bg-[#F2EFE4] border border-[#D8D4C5] rounded-[14px] p-4 mb-6 shadow-none transition-shadow">
+      <div className="sticky top-[65px] md:top-[73px] z-30 bg-[#F2EFE4] border border-[#D8D4C5] rounded-[14px] p-4 mb-6 shadow-[0_10px_20px_-16px_rgba(45,58,46,0.5)] transition-shadow">
         <div className="flex items-center gap-3 flex-wrap">
           <label className="relative flex-1 min-w-[200px] max-w-[420px]">
             <svg
