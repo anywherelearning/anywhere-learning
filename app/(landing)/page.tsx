@@ -5,6 +5,7 @@ import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import Eyebrow from '@/components/shared/PageEyebrow';
+import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import ChallengeHeroSticker from '@/components/home/ChallengeHeroSticker';
 import HeroNextStop from '@/components/home/v2/HeroNextStop';
@@ -294,7 +295,8 @@ export default async function HomePage() {
                       them: at cream/0.07 they barely separated from the
                       background. Echoes the aged-paper panels in the member
                       world, so the two surfaces read as one product. */}
-                  <div className="h-full rounded-[20px] border border-[#e3dcc9] bg-[#f5f0e5] px-7 py-[30px] shadow-[0_14px_30px_-16px_rgba(0,0,0,0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_40px_-16px_rgba(0,0,0,0.5)]">
+                  <div className="relative h-full bg-[#f5f0e5] px-7 pb-[30px] pt-9 shadow-[0_14px_30px_-16px_rgba(0,0,0,0.5)]" style={{ transform: `rotate(${[-1.2, 0.8, -0.6][i]}deg)` }}>
+                    <Tape color={i === 1 ? 'rgba(169,193,163,0.85)' : undefined} />
                     <div className="mb-2.5 text-xl font-semibold text-forest-dark">{c.t}</div>
                     <div className="text-[15.5px] leading-[1.65] text-[#6b675e]">{c.b}</div>
                   </div>
@@ -346,10 +348,7 @@ export default async function HomePage() {
         {/* ════════ 05 WHAT'S INSIDE ════════ */}
         <section
           className="px-6 py-20 md:px-16 md:py-24"
-          style={{
-            background:
-              'linear-gradient(168deg, rgba(232,201,154,0.14) 0%, rgba(212,163,115,0.22) 50%, rgba(232,201,154,0.14) 100%)',
-          }}
+          style={{ background: '#F2EFE4' }}
         >
           <div className="mx-auto max-w-[1100px]">
             <ScrollReveal>
@@ -390,16 +389,23 @@ export default async function HomePage() {
             the content column every other section sits in. */}
         <section className="bg-cream px-6 py-20 md:px-16 md:py-24">
           <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-stretch gap-10 lg:grid-cols-[0.85fr_1fr] lg:gap-14">
-            <div className="relative min-h-[340px] overflow-hidden rounded-[20px] lg:min-h-[520px]">
-              <Image
-                src="/amelie.jpg"
-                alt="Amelie and her kids on a mountain hike"
-                fill
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                quality={90}
-                className="object-cover"
-              />
-            </div>
+            <figure className={`relative m-0 -rotate-[1.5deg] self-center bg-white p-3 pb-4 ${PAPER_SHADOW}`}>
+              <Tape className="left-10 -rotate-6" />
+              <Tape className="right-10 rotate-6" color="rgba(169,193,163,0.85)" />
+              <div className="relative min-h-[320px] overflow-hidden lg:min-h-[480px]">
+                <Image
+                  src="/amelie.jpg"
+                  alt="Amelie and her kids on a mountain hike"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  quality={90}
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-center font-display text-[20px] italic text-[#C97B5C]">
+                xo, Amelie
+              </figcaption>
+            </figure>
             <div className="flex flex-col justify-center">
             <ScrollReveal direction="right">
               <div>
@@ -443,10 +449,7 @@ export default async function HomePage() {
         {/* ════════ 07 TESTIMONIALS ════════ */}
         <section
           className="px-6 py-20 md:px-16 md:py-24"
-          style={{
-            background:
-              'linear-gradient(168deg, rgba(88,129,87,0.02) 0%, rgba(88,129,87,0.09) 50%, rgba(88,129,87,0.02) 100%)',
-          }}
+          style={{ background: '#E9EEE6' }}
         >
           <div className="mx-auto max-w-[1100px]">
             <ScrollReveal>
@@ -478,7 +481,8 @@ export default async function HomePage() {
                 },
               ].map((t, i) => (
                 <ScrollReveal key={t.initials} delay={i * 100} className="h-full">
-                  <figure className="h-full rounded-[20px] border border-gray-200/50 bg-white px-9 py-[34px] shadow-[0_1px_3px_0_rgba(60,50,30,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-14px_rgba(88,129,87,0.18)]">
+                  <figure className={`relative m-0 h-full bg-[#FFFDF8] px-9 pb-[34px] pt-10 ${PAPER_SHADOW}`} style={{ transform: `rotate(${i ? 0.9 : -0.9}deg)` }}>
+                    <Tape color={i ? 'rgba(169,193,163,0.85)' : undefined} />
                     <div
                       className="mb-[18px] text-[17px] tracking-[3px] text-gold"
                       aria-label="5 out of 5 stars"
@@ -509,10 +513,7 @@ export default async function HomePage() {
         <section
           className="px-6 py-20 md:px-16 md:py-24"
           id="membership"
-          style={{
-            background:
-              'linear-gradient(168deg, rgba(232,201,154,0.22) 0%, rgba(212,163,115,0.13) 45%, rgba(250,249,246,0.96) 100%)',
-          }}
+          style={{ background: '#F2EFE4' }}
         >
           <div className="mx-auto max-w-[1100px]">
             <ScrollReveal>
@@ -534,10 +535,11 @@ export default async function HomePage() {
                 entries themselves so the two can't drift. */}
             <ScrollReveal delay={60}>
               <div className="mb-9 grid grid-cols-1 gap-4 md:grid-cols-2">
-                {HOME_OBJECTIONS.map((f) => (
+                {HOME_OBJECTIONS.map((f, i) => (
                   <div
                     key={f.q}
-                    className="rounded-[18px] border border-[#e3dcc9] bg-white/70 px-6 py-5"
+                    className={`bg-[#FBF3DC] px-6 py-5 ${PAPER_SHADOW}`}
+                    style={{ transform: `rotate(${i ? 0.8 : -0.8}deg)` }}
                   >
                     <p className="mb-1.5 text-[15.5px] font-semibold text-forest-dark">{f.q}</p>
                     <p className="text-[15px] leading-[1.6] text-gray-600">{f.a}</p>
@@ -567,7 +569,8 @@ export default async function HomePage() {
             </p>
 
             <ScrollReveal delay={150}>
-              <div className="mb-10 rounded-[24px] border border-gray-200/60 bg-white px-11 py-10 shadow-[0_4px_12px_-2px_rgba(60,50,30,0.09)] max-md:px-6">
+              <div className={`relative mb-10 bg-[#FFFDF8] px-11 pb-10 pt-12 max-md:px-6 ${PAPER_SHADOW}`}>
+                <Magnet color="#588157" size={26} />
                 <Eyebrow>Everything in the membership</Eyebrow>
                 <div className="mt-6 grid grid-cols-1 gap-x-11 gap-y-[15px] md:grid-cols-2">
                   {MEMBERSHIP_INCLUDES.map((inc) => (
