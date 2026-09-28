@@ -385,6 +385,19 @@ export async function subscribeChecklistLead(
   );
 }
 
+/** Subscribe someone who only asked for the monthly newsletter (the blog's
+ * subscribe box).
+ *
+ * Deliberately does NOT apply `lead`: that tag runs the 7-day guide
+ * sequence, and these people signed up for one email a month, not a free
+ * guide. They get `newsletter-subscriber` (for segmenting and any welcome
+ * automation) plus the usual `from-{source}` attribution tag. The monthly
+ * newsletter itself is a broadcast, so they receive it like everyone else.
+ */
+export async function subscribeNewsletterOnly(email: string, source?: string) {
+  await subscribeAndTag(email, [`from-${source || 'organic'}`, 'newsletter-subscriber']);
+}
+
 /** Tag a buyer with product-specific, purchase-type, and cross-sell tags */
 export async function tagBuyerInConvertKit(
   email: string,

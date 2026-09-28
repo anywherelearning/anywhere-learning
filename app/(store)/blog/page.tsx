@@ -311,9 +311,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     Get my monthly <span className="italic text-forest">newsletter.</span>
                   </p>
                   <p className="mb-3 mt-1 text-[13px] leading-[1.5] text-gray-600">
-                    It starts with my free 7-day guide, then one email a month.
+                    One email a month, straight from me.
                   </p>
-                  <EmailForm variant="light" buttonText="Subscribe" stacked />
+                  <EmailForm
+                    variant="light"
+                    buttonText="Subscribe"
+                    stacked
+                    newsletter
+                    successHeading="You're on the list!"
+                    successBody="Your first newsletter arrives with the next monthly send."
+                  />
                 </div>
               </div>
             </section>

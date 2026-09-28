@@ -2,6 +2,7 @@ import { NextRequest, NextResponse, after } from "next/server";
 import {
   subscribeToConvertKit,
   subscribeChecklistLead,
+  subscribeNewsletterOnly,
 } from "@/lib/convertkit";
 import { cleanEventId, sendMetaLead } from "@/lib/meta-capi";
 import { strictLimiter, checkRateLimit } from "@/lib/rate-limit";
@@ -18,7 +19,7 @@ export async function POST(request: NextRequest) {
     if (limited) return limited;
 
     const body = await request.json();
-    const { email, source, guide, checklist, oncePerEmail, metaEventId } = body as {
+    const { email, source, guide, checklist, oncePerEmail, metaEventId, newsletter } = body as {
       email: string;
       source?: string;
       guide?: string;
@@ -29,6 +30,8 @@ export async function POST(request: NextRequest) {
       oncePerEmail?: boolean;
       /** Browser pixel event id, so the server-side Lead dedupes against it. */
       metaEventId?: string;
+      /** Set by the blog's subscribe box: monthly newsletter only, no guide. */
+      newsletter?: boolean;
     };
 
     // Simple email validation
@@ -65,7 +68,9 @@ export async function POST(request: NextRequest) {
     // never slows the signup, and reaches Meta even when an ad blocker ate
     // the browser pixel. Same event id as the pixel call = counted once.
     const leadEventId = cleanEventId(metaEventId);
-    const leadSource = cleanChecklist
+    const leadSource = newsletter
+      ? 'newsletter'
+      : cleanChecklist
       ? `ideas:${cleanChecklist}`
       : cleanGuide
         ? `free-guide:${cleanGuide}`
@@ -76,6 +81,14 @@ export async function POST(request: NextRequest) {
         sendMetaLead({ eventId: leadEventId, email, source: leadSource, request }),
       );
     };
+
+    // Newsletter-only signup (blog subscribe box): its own tag, and an early
+    // return so it never picks up `lead` and the 7-day guide sequence.
+    if (newsletter) {
+      await subscribeNewsletterOnly(email, cleanSource);
+      queueMetaLead();
+      return NextResponse.json({ success: true, alreadyClaimed: null });
+    }
 
     // Idea-list checklist signup: its own funnel, and an early return so it can
     // never pick up the `lead` tag and land in the 7-day guide sequence.

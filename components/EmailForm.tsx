@@ -14,9 +14,11 @@ interface EmailFormProps {
   /** Which free guide this form delivers, e.g. 'capable-kid'. Adds a `guide:{guide}`
    *  Kit tag so the matching delivery automation sends that specific PDF. */
   guide?: string;
+  /** Monthly newsletter only (no free guide, no `lead` tag). */
+  newsletter?: boolean;
 }
 
-export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides.", stacked = false, guide }: EmailFormProps) {
+export default function EmailForm({ variant = "light", buttonText = "Send me the free guide", successHeading = "Check your inbox! Your guide is on its way.", successBody = "While you wait, explore our ready-to-use activity guides.", stacked = false, guide, newsletter = false }: EmailFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -51,6 +53,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
           email,
           source: source || undefined,
           guide: guide || undefined,
+          newsletter: newsletter || undefined,
           metaEventId,
         }),
       });
@@ -66,7 +69,9 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
       }
 
       setStatus("success");
-      try { localStorage.setItem('free-guide-submitted', 'true'); } catch {}
+      if (!newsletter) {
+        try { localStorage.setItem('free-guide-submitted', 'true'); } catch {}
+      }
       // Push email into Pinterest enhanced match so any subsequent events
       // on this session (and future sessions if the cookie persists) carry
       // em coverage for Event Quality Score.
@@ -74,7 +79,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
         const { pinterestSetEnhancedMatch, trackLead } = await import('@/lib/tracking');
         pinterestSetEnhancedMatch(email);
         // Meta Lead conversion — this is the event a Meta Leads campaign optimizes toward.
-        trackLead(guide ? `free-guide:${guide}` : source || 'free-guide', metaEventId);
+        trackLead(newsletter ? 'newsletter' : guide ? `free-guide:${guide}` : source || 'free-guide', metaEventId);
       } catch {}
     } catch {
       setErrorMessage("Something went wrong. Please try again.");
