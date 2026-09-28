@@ -8,14 +8,14 @@ import {
   blogCategories,
   type BlogCategory,
   type BlogPost,
+  formatDate,
 } from '@/lib/blog';
-import ScrollReveal from '@/components/shared/ScrollReveal';
+import { PAPER_SHADOW } from '@/components/shared/Paper';
+import EmailForm from '@/components/EmailForm';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
-import BlogSidebar from './BlogSidebar';
 import PageDropdown from './PageDropdown';
 import AllPostsIndex from '@/components/blog/AllPostsIndex';
-import { categoryIcons } from '@/components/blog/CategoryIcons';
 
 const POSTS_PER_PAGE = 6;
 
@@ -74,162 +74,95 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
   };
 }
 
-const imgBgByCategory: Record<BlogCategory, string> = {
-  'ai-digital-literacy': '#F5E7BC',
-  'creativity-maker': '#F2DECF',
-  'future-ready-skills': '#DDE5D2',
-  'homeschool-journey': '#DAD7CD',
-  'nature-learning': '#CFDCC4',
-  'real-world-skills': '#DDE5D2',
-  'stem-for-kids': '#CFDCC4',
-  'travel-worldschool': '#E8C8AE',
-};
-
-function formatDate(date: string): string {
-  // Parse as local midnight (append time) so a date-only string like
-  // "2026-08-03" renders as Aug 3 in every timezone, not the day before.
-  const d = new Date(date + 'T00:00:00');
-  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+function Photo({ post, sizes, priority = false }: { post: BlogPost; sizes: string; priority?: boolean }) {
+  if (!post.heroImage) return null;
+  return (
+    <Image
+      src={post.heroImage}
+      alt={post.heroImageAlt || post.title}
+      fill
+      sizes={sizes}
+      priority={priority}
+      className="object-cover"
+      style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
+    />
+  );
 }
 
-function PostCard({ post }: { post: BlogPost }) {
+function Kicker({ post, extra }: { post: BlogPost; extra?: string }) {
   const cat = blogCategories[post.category];
-  const motif = categoryIcons[post.category] || null;
-  const bg = imgBgByCategory[post.category] || '#E6EBDF';
   return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="group flex flex-col h-full bg-cream border rounded-[12px] overflow-hidden text-ink no-underline shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.3)]"
-      style={{ borderColor: `${cat.color}55` }}
-    >
-      <div
-        className="relative aspect-[16/10] overflow-hidden border-b border-[#D8D4C5]"
-        style={{ background: bg }}
-      >
-        {post.heroImage && (
-          <Image
-            src={post.heroImage}
-            alt={post.heroImageAlt || post.title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={75}
-            className="object-cover"
-            style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
-          />
-        )}
-        <span
-          aria-hidden="true"
-          className="absolute top-3.5 right-3.5 w-[40px] h-[40px] rounded-[12px] bg-cream/95 border border-[#D8D4C5] grid place-items-center text-[20px] shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)]"
-          style={{ color: cat.color }}
-        >
-          {motif}
-        </span>
+    <span className="block text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: cat.color }}>
+      {extra ? `${extra} · ` : ''}
+      {cat.label}
+    </span>
+  );
+}
+
+/** The front-page lead story. */
+function LeadStory({ post }: { post: BlogPost }) {
+  return (
+    <Link href={`/blog/${post.slug}`} className="group block text-inherit no-underline">
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#E6EBDF]">
+        <Photo post={post} sizes="(max-width: 1024px) 100vw, 660px" priority />
       </div>
-      <div className="flex flex-col flex-1 p-6">
-        <span
-          className="inline-flex items-center gap-2 text-[11.5px] font-semibold uppercase tracking-[0.16em]"
-          style={{ color: cat.color }}
-        >
-          <span
-            className="w-2 h-2 rounded-full shrink-0"
-            style={{ background: cat.color }}
-            aria-hidden="true"
-          />
-          {cat.label}
-        </span>
-        <span className="mt-1.5 inline-flex flex-wrap items-center gap-2 text-[12.5px] text-gray-500 font-medium tracking-wide">
-          <span>{formatDate(post.publishedAt)}</span>
-        </span>
-        <h3 className="font-display text-[22px] leading-[1.18] tracking-tight text-balance mt-2 text-ink">
-          {post.title}
-        </h3>
-        <p className="mt-2.5 font-display italic text-[15.5px] leading-[1.45] text-gray-600">
-          {post.hook || post.excerpt}
-        </p>
-        <span className="mt-auto pt-5 border-t border-dashed border-[#C9C5B7] inline-flex items-center gap-2 text-[14.5px] font-semibold text-forest-dark">
-          Read article
-          <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
-            &rarr;
-          </span>
-        </span>
-      </div>
+      <p className="mt-4">
+        <Kicker post={post} extra="Lead story" />
+      </p>
+      <h2 className="mt-1 font-display text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.08] tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
+        {post.title}
+      </h2>
+      <p className="mt-2 font-display text-[17px] italic leading-[1.5] text-gray-600">{post.hook || post.excerpt}</p>
+      <p className="mt-3 text-[12.5px] text-gray-500">
+        {formatDate(post.publishedAt)} {'·'} {post.readTimeMinutes} min read
+      </p>
     </Link>
   );
 }
 
-function FeaturedPostCard({ post }: { post: BlogPost }) {
-  const cat = blogCategories[post.category];
-  const motif = categoryIcons[post.category] || null;
-  const bg = imgBgByCategory[post.category] || '#E6EBDF';
+/** A short story in the side column: headline beside a small square photo. */
+function SideStory({ post }: { post: BlogPost }) {
   return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="group grid grid-cols-1 md:grid-cols-[1.36fr_1fr] bg-cream border rounded-[14px] overflow-hidden text-ink no-underline shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_22px_40px_-28px_rgba(45,58,46,0.28)] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_32px_48px_-28px_rgba(45,58,46,0.35)]"
-      style={{ borderColor: `${cat.color}55` }}
-    >
-      <div
-        className="relative aspect-[16/10] md:aspect-auto md:min-h-full overflow-hidden md:border-r border-b md:border-b-0 border-[#D8D4C5]"
-        style={{ background: bg }}
-      >
-        {post.heroImage && (
-          <Image
-            src={post.heroImage}
-            alt={post.heroImageAlt || post.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 60vw"
-            quality={80}
-            priority
-            className="object-cover"
-            style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
-          />
-        )}
-        <span
-          aria-hidden="true"
-          className="absolute top-4 right-4 bg-[#C97B5C] text-cream font-semibold text-[10.5px] tracking-[0.18em] uppercase px-2.5 py-1 rounded-full shadow-[0_8px_16px_-10px_rgba(201,123,92,0.6)] z-[2]"
-        >
-          Featured
-        </span>
-        <span
-          aria-hidden="true"
-          className="absolute right-[18px] bottom-[18px] w-[48px] h-[48px] rounded-[14px] bg-cream/95 border border-[#D8D4C5] grid place-items-center text-[24px] shadow-[0_8px_16px_-10px_rgba(45,58,46,0.35)]"
-          style={{ color: cat.color }}
-        >
-          {motif}
-        </span>
-      </div>
-      <div className="flex flex-col justify-center p-8 md:p-12">
-        <span
-          className="inline-flex items-center gap-2 text-[11.5px] font-semibold uppercase tracking-[0.16em]"
-          style={{ color: cat.color }}
-        >
-          <span
-            className="w-2 h-2 rounded-full shrink-0"
-            style={{ background: cat.color }}
-            aria-hidden="true"
-          />
-          {cat.label}
-        </span>
-        <span className="mt-2 inline-flex flex-wrap items-center gap-2 text-[12.5px] text-gray-500 font-medium tracking-wide">
-          <span>Amelie</span>
-          <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-          <span>{formatDate(post.publishedAt)}</span>
-        </span>
-        <h2 className="font-display text-[clamp(1.875rem,3.4vw,2.75rem)] leading-[1.12] tracking-tight mt-2.5 text-balance">
+    <Link href={`/blog/${post.slug}`} className="group grid grid-cols-[1fr_84px] gap-4 text-inherit no-underline">
+      <span>
+        <Kicker post={post} />
+        <span className="mt-1 block font-display text-[17px] leading-tight text-[#2b2a26] group-hover:text-forest-dark">
           {post.title}
-        </h2>
-        <p className="mt-4 font-display italic text-[19px] leading-[1.45] text-gray-600">
-          {post.excerpt}
-        </p>
-        <span className="mt-6 self-start inline-flex items-center gap-2.5 text-[15.5px] font-semibold text-forest-dark">
-          Read article
-          <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
-            &rarr;
-          </span>
         </span>
-      </div>
+        <span className="mt-1 block text-[12px] text-gray-500">{formatDate(post.publishedAt)}</span>
+      </span>
+      <span className="relative block aspect-square overflow-hidden bg-[#E6EBDF]">
+        <Photo post={post} sizes="84px" />
+      </span>
     </Link>
   );
 }
+
+/** A story in the columns below the fold. */
+function ColumnStory({ post }: { post: BlogPost }) {
+  return (
+    <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col text-inherit no-underline">
+      <span className="relative block aspect-[16/10] overflow-hidden bg-[#E6EBDF]">
+        <Photo post={post} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 340px" />
+      </span>
+      <span className="mt-3">
+        <Kicker post={post} />
+      </span>
+      <h3 className="mt-1 font-display text-[20px] leading-tight tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
+        {post.title}
+      </h3>
+      <p className="mt-1.5 font-display text-[14.5px] italic leading-[1.5] text-gray-600">{post.hook || post.excerpt}</p>
+      <p className="mt-auto pt-3 text-[12px] text-gray-500">
+        {formatDate(post.publishedAt)} {'·'} {post.readTimeMinutes} min read
+      </p>
+    </Link>
+  );
+}
+
+const pagerLink =
+  'inline-flex items-center gap-2 border border-[#2b2a26]/70 bg-transparent px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#2b2a26] no-underline transition-colors hover:bg-[#2b2a26] hover:text-[#FBF8EF]';
+const pagerDead =
+  'inline-flex items-center gap-2 border border-[#2b2a26]/25 px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-gray-400';
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const { category, page } = await searchParams;
@@ -263,7 +196,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     : undefined;
 
   const posts = activeCategory ? getPostsByCategory(activeCategory) : allPosts;
-  const allGridPosts = activeCategory ? posts : posts.filter((p) => p.slug !== featured.slug);
+  // Unfiltered, the lead story and the three next-newest sit on the front
+  // page, so the columns (and every numbered page) start after them.
+  const sidePosts = activeCategory ? [] : posts.filter((p) => p.slug !== featured.slug).slice(0, 3);
+  const onFront = new Set([featured.slug, ...sidePosts.map((p) => p.slug)]);
+  const allGridPosts = activeCategory ? posts : posts.filter((p) => !onFront.has(p.slug));
 
   const totalPages = Math.max(1, Math.ceil(allGridPosts.length / POSTS_PER_PAGE));
   const safePage = Math.min(currentPage, totalPages);
@@ -293,6 +230,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     },
   };
 
+  const categoryHref = (value: string) => (value ? `/blog?category=${value}#blog-grid` : '/blog#blog-grid');
+
   const buildPageHref = (p: number) => {
     const params = new URLSearchParams();
     if (activeCategory) params.set('category', activeCategory);
@@ -311,166 +250,148 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <main className="bg-cream">
-        {/* 01 PAGE HEADER */}
-        <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-14 text-center">
-          <div className="mx-auto max-w-[760px] px-6">
-            <ScrollReveal immediate>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                The blog
-              </p>
-              <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight mt-4 text-balance">
-                Ideas for the everyday <span className="italic text-forest">explorer.</span>
-              </h1>
-              <p className="mt-5 text-[17px] md:text-[18.5px] leading-[1.55] text-gray-600 max-w-[620px] mx-auto">
-                Practical inspiration, honest encouragement, and real-world learning ideas, from
-                one family to another. Whether you homeschool or just want{' '}
-                <span className="font-display italic text-forest-dark">meaningful</span> time
-                together.
-              </p>
-              <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[12.5px] text-gray-500 tracking-wide">
-                <span>New posts weekly</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>Free to read</span>
-                <span className="w-[3px] h-[3px] rounded-full bg-[#C9C5B7]" aria-hidden="true" />
-                <span>Written by Amelie</span>
+      <main className="bg-[#F2EFE4] px-3 pb-4 pt-8 sm:px-6 md:pt-10">
+        {/* The whole index is one sheet of newsprint: masthead, sections,
+            the front page, then the columns and the page turner. */}
+        <div className={`mx-auto max-w-[1180px] bg-[#FBF8EF] px-5 py-8 sm:px-8 md:px-12 md:py-10 ${PAPER_SHADOW}`}>
+          {/* Masthead */}
+          <header className="border-b-4 border-double border-[#2b2a26] pb-5 text-center">
+            <p className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+              {'New posts weekly · Free to read · Written by Amelie'}
+            </p>
+            <h1 className="mt-3 font-display text-[clamp(2.4rem,6vw,4.75rem)] leading-[1.02] tracking-tight text-balance">
+              Ideas for the everyday <span className="italic text-forest">explorer.</span>
+            </h1>
+            <p className="mx-auto mt-3 max-w-[620px] text-[16.5px] leading-[1.55] text-gray-600">
+              Practical inspiration, honest encouragement, and real-world learning ideas, from one
+              family to another. Whether you homeschool or just want{' '}
+              <span className="font-display italic text-forest-dark">meaningful</span> time together.
+            </p>
+          </header>
+
+          {/* Sections: real links, so every category page is one crawlable hop away */}
+          <nav aria-label="Blog categories" className="-mx-5 border-b border-[#2b2a26] py-2.5 sm:mx-0">
+            {/* One swipeable row on phones, wrapped and centred from sm up */}
+            <ul className="m-0 flex list-none gap-x-5 gap-y-1.5 overflow-x-auto whitespace-nowrap px-5 py-0.5 [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible sm:whitespace-normal sm:px-0">
+              {categoryOptions.map((c) => {
+                const active = (activeCategory || '') === c.value;
+                const color = c.value ? blogCategories[c.value as BlogCategory].color : '#2b2a26';
+                return (
+                  <li key={c.value || 'all'}>
+                    <Link
+                      href={categoryHref(c.value)}
+                      aria-current={active ? 'page' : undefined}
+                      className={`text-[12.5px] font-semibold uppercase tracking-[0.12em] no-underline underline-offset-4 hover:underline ${active ? 'underline decoration-2' : ''}`}
+                      style={{ color }}
+                    >
+                      {c.label} <span className="font-medium text-gray-400">{c.count}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Front page: lead story, the next three, and the subscribe box */}
+          {!activeCategory && safePage === 1 && (
+            <section className="grid gap-8 border-b border-[#DCD6C4] py-8 lg:grid-cols-[1.65fr_1fr] lg:gap-0 lg:divide-x lg:divide-[#DCD6C4]">
+              <div className="lg:pr-8">
+                <LeadStory post={featured} />
               </div>
-            </ScrollReveal>
-          </div>
-        </header>
-        <div className="mx-auto max-w-[1180px] border-b border-[#D8D4C5]" />
+              <div className="lg:pl-8">
+                <ul className="m-0 list-none divide-y divide-[#DCD6C4] p-0">
+                  {sidePosts.map((p) => (
+                    <li key={p.slug} className="py-4 first:pt-0">
+                      <SideStory post={p} />
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 border-2 border-[#2b2a26] p-5">
+                  <p className="font-display text-[20px] leading-tight">
+                    Get new posts in your <span className="italic text-forest">inbox.</span>
+                  </p>
+                  <p className="mb-3 mt-1 text-[13px] leading-[1.5] text-gray-600">
+                    One email when there&apos;s something worth sending.
+                  </p>
+                  <EmailForm variant="light" buttonText="Subscribe" stacked />
+                </div>
+              </div>
+            </section>
+          )}
 
-        {/* 02 FEATURED */}
-        {!activeCategory && safePage === 1 && (
-          <section className="bg-cream pt-14 md:pt-20 pb-12 md:pb-14">
-            <div className="mx-auto max-w-[1180px] px-6">
-              <ScrollReveal>
-                <FeaturedPostCard post={featured} />
-              </ScrollReveal>
-            </div>
-          </section>
-        )}
+          {/* The columns */}
+          <section id="blog-grid" className="scroll-mt-[80px] pt-8 md:scroll-mt-[88px]">
+            <h2 className="mb-6 flex items-center gap-4 text-[12px] font-bold uppercase tracking-[0.2em] text-gray-500">
+              <span className="h-px flex-1 bg-[#DCD6C4]" aria-hidden="true" />
+              {activeCategory ? blogCategories[activeCategory].label : 'More stories'}
+              {safePage > 1 ? ` · Page ${safePage}` : ''}
+              <span className="h-px flex-1 bg-[#DCD6C4]" aria-hidden="true" />
+            </h2>
+            {gridPosts.length > 0 ? (
+              <ul className="m-0 grid list-none gap-x-8 gap-y-10 p-0 sm:grid-cols-2 lg:grid-cols-3">
+                {gridPosts.map((post) => (
+                  <li key={post.slug}>
+                    <ColumnStory post={post} />
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="py-12 text-center font-display text-[20px] italic text-gray-500">
+                No posts in this category yet. Check back soon.
+              </p>
+            )}
 
-        {/* 03 LAYOUT: SIDEBAR + GRID */}
-        <section
-          id="blog-grid"
-          className="bg-[#F2EFE4] border-y border-[#D8D4C5] py-14 md:py-20 scroll-mt-[80px] md:scroll-mt-[88px]"
-        >
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-8 lg:gap-12 items-start">
-              <aside>
-                <BlogSidebar
-                  categories={categoryOptions}
-                  activeValue={activeCategory || ''}
-                />
-              </aside>
-
-              <div>
-                {gridPosts.length > 0 ? (
-                  <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
-                      {gridPosts.map((post, i) => (
-                        <ScrollReveal key={post.slug} className="h-full" delay={(i % 3) * 60}>
-                          <PostCard post={post} />
-                        </ScrollReveal>
-                      ))}
-                    </div>
-
-                    {/* PAGINATION — Prev · 1 2 [3] 4 5 · Next */}
-                    {totalPages > 1 && (
-                      <nav
-                        className="mt-14 flex items-center justify-center gap-1.5 flex-wrap"
-                        aria-label="Pagination"
-                      >
-                        {safePage > 1 ? (
-                          <Link
-                            href={buildPageHref(safePage - 1)}
-                            className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all no-underline"
-                          >
-                            <span aria-hidden="true">&larr;</span>
-                            Prev
-                          </Link>
-                        ) : (
-                          <span
-                            aria-hidden="true"
-                            className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-gray-400 font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] opacity-40"
-                          >
-                            <span>&larr;</span>
-                            Prev
-                          </span>
-                        )}
-                        <PageDropdown
-                          currentPage={safePage}
-                          hrefs={Array.from({ length: totalPages }, (_, i) =>
-                            buildPageHref(i + 1),
-                          )}
-                        />
-                        {safePage < totalPages ? (
-                          <Link
-                            href={buildPageHref(safePage + 1)}
-                            className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-ink font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] hover:bg-[#F2EFE4] hover:border-[#C9C5B7] hover:-translate-y-px transition-all no-underline"
-                          >
-                            Next
-                            <span aria-hidden="true">&rarr;</span>
-                          </Link>
-                        ) : (
-                          <span
-                            aria-hidden="true"
-                            className="inline-flex items-center gap-2 bg-cream border border-[#D8D4C5] text-gray-400 font-body font-semibold text-[13.5px] py-2.5 px-3.5 rounded-[10px] opacity-40"
-                          >
-                            Next
-                            <span>&rarr;</span>
-                          </span>
-                        )}
-                      </nav>
-                    )}
-                  </>
+            {totalPages > 1 && (
+              <nav className="mt-12 flex flex-wrap items-center justify-center gap-2 border-t border-[#DCD6C4] pt-6" aria-label="Pagination">
+                {safePage > 1 ? (
+                  <Link href={buildPageHref(safePage - 1)} className={pagerLink}>
+                    <span aria-hidden="true">&larr;</span> Prev
+                  </Link>
                 ) : (
-                  <div className="text-center py-16 px-6 font-display italic text-[20px] text-gray-500">
-                    No posts in this category yet. Check back soon.
-                  </div>
+                  <span aria-hidden="true" className={pagerDead}>
+                    <span>&larr;</span> Prev
+                  </span>
                 )}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 03b FULL ARCHIVE: every post as a plain link, one hop from the hub */}
-        <AllPostsIndex />
-
-        {/* 04 QUIZ CTA */}
-        <div className="bg-cream py-20 md:py-24">
-          <BlogQuizCTA />
+                <PageDropdown
+                  currentPage={safePage}
+                  hrefs={Array.from({ length: totalPages }, (_, i) => buildPageHref(i + 1))}
+                />
+                {safePage < totalPages ? (
+                  <Link href={buildPageHref(safePage + 1)} className={pagerLink}>
+                    Next <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                ) : (
+                  <span aria-hidden="true" className={pagerDead}>
+                    Next <span>&rarr;</span>
+                  </span>
+                )}
+              </nav>
+            )}
+          </section>
         </div>
 
-        {/* 05 MEMBERSHIP POINTER */}
-        <section className="bg-cream pb-20 md:pb-24">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <ScrollReveal>
-              <div className="max-w-[680px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] border-l-[3px] border-l-[#C97B5C] rounded-[14px] p-7 md:p-8 flex flex-wrap items-center gap-y-5 gap-x-8">
-                <div className="flex-1 min-w-[240px]">
-                  <span className="block font-display italic text-[18px] text-[#C97B5C] mb-1.5">
-                    Want more than reading?
-                  </span>
-                  <p className="text-[15px] text-gray-600 leading-[1.6] m-0">
-                    The Anywhere Learning{' '}
-                    <span className="font-display italic text-ink text-[16.5px]">membership</span>{' '}
-                    unlocks 120+ guided activities you can actually do with your kids. Cooking,
-                    budgeting, building, planning. Founding members pay {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
-                  </p>
-                </div>
-                <Link
-                  href="/#membership"
-                  className="shrink-0 inline-flex items-center gap-2 text-forest-dark font-semibold text-[15px] border-b border-forest/25 pb-0.5 hover:border-forest-dark hover:text-forest transition-colors"
-                >
-                  See what&apos;s in the membership
-                  <span className="font-display italic text-lg leading-none">&rarr;</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
+        {/* Every post as a plain link, one hop from the hub */}
+        <div className="mx-auto mt-10 max-w-[1180px]">
+          <AllPostsIndex />
+        </div>
+
+        {/* Quiz */}
+        <div className="pt-6">
+          <BlogQuizCTA paper />
+        </div>
+
+        {/* Membership, one quiet line */}
+        <p className="mx-auto max-w-[620px] px-6 pb-12 text-center text-[15px] leading-[1.6] text-gray-600">
+          Want more than reading? The{' '}
+          <Link
+            href="/#membership"
+            className="border-b border-forest/25 font-semibold text-forest-dark no-underline transition-colors hover:border-forest-dark hover:text-forest"
+          >
+            membership
+          </Link>{' '}
+          has 120+ guided activities you can do with your kids. Founding members pay{' '}
+          {MEMBERSHIP_PRICE_YEAR}, locked in for life, or go monthly for {MONTHLY_PLAN_PRICE}.
+        </p>
       </main>
     </>
   );
