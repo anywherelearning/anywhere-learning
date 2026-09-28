@@ -563,3 +563,12 @@ img {
     background: white !important;
   }
 }
+
+/* ── Tilted paper never widens the page ──────────────────────────
+   Rotated cards and taped photos poke a few pixels past the screen edge
+   on phones, which let the whole page wobble sideways. `clip` (not
+   `hidden`) so sticky headers and sidebars keep working. */
+html,
+body {
+  overflow-x: clip;
+}
