@@ -6,13 +6,15 @@ import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
 // ─── Cached public reads ────────────────────────────────────────────
 // /shop/[slug] is force-dynamic (the access card is per-visitor), so every
 // request — overwhelmingly crawlers — used to wake Neon. Catalog and review
-// reads carry no per-user data, so they're served from the Data Cache for an
-// hour instead. Review writes bust the 'reviews' tag so authors see their own
+// reads carry no per-user data, so they're served from the Data Cache for a
+// day instead. (An hour was too short: with ~130 slugs x several keys, crawlers
+// still expired an entry every few minutes and kept Neon awake about half of
+// every day. Catalog edits via seed/stripe:sync can lag up to 24h.) Review writes bust the 'reviews' tag so authors see their own
 // review immediately. unstable_cache round-trips through JSON, so timestamp
 // columns come back as strings — wrappers below revive them to Dates.
 
-const CACHE_OPTS_PRODUCTS = { revalidate: 3600, tags: ['products'] };
-const CACHE_OPTS_REVIEWS = { revalidate: 3600, tags: ['reviews'] };
+const CACHE_OPTS_PRODUCTS = { revalidate: 86400, tags: ['products'] };
+const CACHE_OPTS_REVIEWS = { revalidate: 86400, tags: ['reviews'] };
 
 const _getActiveProducts = unstable_cache(
   async () => {
