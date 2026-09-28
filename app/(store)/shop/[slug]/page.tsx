@@ -436,7 +436,7 @@ export default async function ProductPage({
         returnMethod: "https://schema.org/ReturnByMail",
         returnFees: "https://schema.org/FreeReturn",
         refundType: "https://schema.org/FullRefund",
-        returnPolicyUrl: "https://anywherelearning.co/terms#s4",
+        returnPolicyUrl: "https://anywherelearning.co/terms#refund-policy",
       },
       itemOffered: {
         "@type": "Service",

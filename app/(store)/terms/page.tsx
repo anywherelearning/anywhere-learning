@@ -53,25 +53,25 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">When you join the Anywhere Learning membership, you agree to the following:</p>
         <ol className="list-decimal pl-6 space-y-2.5 marker:text-[#C97B5C] marker:font-display marker:italic">
           <li>
-            <strong className="text-ink font-semibold">Free trial.</strong> New members start with a <Em>14-day free trial.</Em> A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the rate for the plan you chose (yearly or monthly). We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
+            <strong className="text-ink font-semibold">Free trial.</strong>{' '}New members start with a <Em>14-day free trial.</Em>{' '}A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the rate for the plan you chose (yearly or monthly). We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Billing.</strong> The membership is available on two plans. The <Em>yearly plan</Em> is charged once per year, and the <Em>monthly plan</Em> is charged $15 once per month, in each case starting the day your free trial ends (or the day you join, if no trial applies).
+            <strong className="text-ink font-semibold">Billing.</strong>{' '}The membership is available on two plans. The <Em>yearly plan</Em>{' '}is charged once per year, and the <Em>monthly plan</Em>{' '}is charged $15 once per month, in each case starting the day your free trial ends (or the day you join, if no trial applies).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Founding member rate.</strong> The first 100 members pay <Em>$99/year.</Em> After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em> as long as their membership remains active and uninterrupted. The founding member rate applies to the yearly plan only; the monthly plan has a single rate for everyone and does not hold a founder spot rate.
+            <strong className="text-ink font-semibold">Founding member rate.</strong>{' '}The first 100 members pay <Em>$99/year.</Em>{' '}After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em>{' '}as long as their membership remains active and uninterrupted. The founding member rate applies to the yearly plan only; the monthly plan has a single rate for everyone and does not hold a founder spot rate.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Auto-renewal.</strong> Memberships automatically renew at the rate you joined at (founders renew at $99/year, post-founders at $149/year, monthly members at $15/month). For yearly memberships we send a renewal reminder email 14 days before your renewal date; monthly renewals are confirmed by the payment receipt.
+            <strong className="text-ink font-semibold">Auto-renewal.</strong>{' '}Memberships automatically renew at the rate you joined at (founders renew at $99/year, post-founders at $149/year, monthly members at $15/month). For yearly memberships we send a renewal reminder email 14 days before your renewal date; monthly renewals are confirmed by the payment receipt.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Cancellation.</strong> You can cancel anytime from your account or by emailing us. Your access continues until the end of the period you&apos;ve paid for (your year or your month), after which the membership ends and you won&apos;t be billed again.
+            <strong className="text-ink font-semibold">Cancellation.</strong>{' '}You can cancel anytime from your account or by emailing us. Your access continues until the end of the period you&apos;ve paid for (your year or your month), after which the membership ends and you won&apos;t be billed again.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Rejoining.</strong> If you cancel and rejoin later, you&apos;ll pay the membership price in effect at that time. Founder pricing does not return after cancellation.
+            <strong className="text-ink font-semibold">Rejoining.</strong>{' '}If you cancel and rejoin later, you&apos;ll pay the membership price in effect at that time. Founder pricing does not return after cancellation.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Content access.</strong> Your membership provides access to our library while your subscription is active. You can open and read every guide in your browser as much as you like. To keep the library fair for everyone, PDF downloads are limited to {DOWNLOAD_CAP_PER_WINDOW} different guides in any {DOWNLOAD_CAP_WINDOW_DAYS}-day period (re-downloading a guide you already saved doesn&apos;t count). Activities you&apos;ve downloaded to your devices remain yours to keep and use indefinitely, subject to the license terms below.
+            <strong className="text-ink font-semibold">Content access.</strong>{' '}Your membership provides access to our library while your subscription is active. You can open and read every guide in your browser as much as you like. To keep the library fair for everyone, PDF downloads are limited to {DOWNLOAD_CAP_PER_WINDOW} different guides in any {DOWNLOAD_CAP_WINDOW_DAYS}-day period (re-downloading a guide you already saved doesn&apos;t count). Activities you&apos;ve downloaded to your devices remain yours to keep and use indefinitely, subject to the license terms below.
           </li>
         </ol>
       </div>
@@ -83,7 +83,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p className="mb-3.5">
-          When you join the membership, you receive a <Em>personal license</Em> to:
+          When you join the membership, you receive a <Em>personal license</Em>{' '}to:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-forest">
           <li>Download and use the products with your own family.</li>
@@ -105,14 +105,14 @@ const sections: LegalSection[] = [
     ),
   },
   {
-    id: 's4',
+    id: 'refund-policy',
     title: 'Refund policy',
     content: (
       <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2 mb-4 space-y-4">
         <div className="pl-[18px] border-l border-[#D8D4C5]">
           <span className="block font-display italic text-[18px] text-[#C97B5C] mb-2">For the membership</span>
           <p>
-            <strong className="text-ink font-semibold">14-day money-back guarantee.</strong> If the membership isn&apos;t right for you, email <MailLink /> within 14 days of your first charge for a full refund, <Em>no questions asked.</Em> Refunds are processed within 5 to 10 business days to the original payment method. This guarantee applies on top of the free trial: cancel during the trial and you&apos;re never charged at all.
+            <strong className="text-ink font-semibold">14-day money-back guarantee.</strong>{' '}If the membership isn&apos;t right for you, email <MailLink /> within 14 days of your first charge for a full refund, <Em>no questions asked.</Em>{' '}Refunds are processed within 5 to 10 business days to the original payment method. This guarantee applies on top of the free trial: cancel during the trial and you&apos;re never charged at all.
           </p>
         </div>
         <div className="pl-[18px] border-l border-[#D8D4C5]">
@@ -145,7 +145,7 @@ const sections: LegalSection[] = [
     title: 'Intellectual property',
     content: (
       <p>
-        All content on this site, including activity guides, text, images, illustrations, icons, branding, and design, is the property of Anywhere Learning and is protected by copyright. You may not reproduce, distribute, or create derivative works without our written permission. Your membership grants you a <Em>personal-use license</Em> as described above. It does not transfer any ownership rights.
+        All content on this site, including activity guides, text, images, illustrations, icons, branding, and design, is the property of Anywhere Learning and is protected by copyright. You may not reproduce, distribute, or create derivative works without our written permission. Your membership grants you a <Em>personal-use license</Em>{' '}as described above. It does not transfer any ownership rights.
       </p>
     ),
   },
@@ -163,7 +163,7 @@ const sections: LegalSection[] = [
     title: 'Limitation of liability',
     content: (
       <p>
-        Our products are educational activity guides provided <Em>&ldquo;as is.&rdquo;</Em> While we work hard to create high-quality content, Anywhere Learning is not liable for any indirect, incidental, or consequential damages arising from the use of our products. Parents and guardians are responsible for supervising their children during all activities, evaluating the suitability of any activity for their children&apos;s ages and abilities, and following appropriate safety practices.
+        Our products are educational activity guides provided <Em>&ldquo;as is.&rdquo;</Em>{' '}While we work hard to create high-quality content, Anywhere Learning is not liable for any indirect, incidental, or consequential damages arising from the use of our products. Parents and guardians are responsible for supervising their children during all activities, evaluating the suitability of any activity for their children&apos;s ages and abilities, and following appropriate safety practices.
       </p>
     ),
   },
@@ -181,7 +181,7 @@ const sections: LegalSection[] = [
     title: 'Changes to these terms',
     content: (
       <p>
-        We may update these terms from time to time. Significant changes affecting active members will be communicated by email <Em>at least 30 days before</Em> taking effect. Continued use of our site or membership after changes take effect constitutes acceptance of the updated terms.
+        We may update these terms from time to time. Significant changes affecting active members will be communicated by email <Em>at least 30 days before</Em>{' '}taking effect. Continued use of our site or membership after changes take effect constitutes acceptance of the updated terms.
       </p>
     ),
   },

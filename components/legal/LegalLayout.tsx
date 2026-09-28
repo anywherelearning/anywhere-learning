@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type ReactNode } from 'react';
+import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 
 export interface LegalSection {
   id: string;
@@ -27,9 +28,9 @@ export default function LegalLayout({
 }: Props) {
   const [mobileTocOpen, setMobileTocOpen] = useState(false);
   return (
-    <main className="bg-cream">
+    <main className="bg-[#F2EFE4]">
       {/* HEADER */}
-      <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-12 text-center">
+      <header className="pt-12 md:pt-16 pb-8 md:pb-10 text-center">
         <div className="mx-auto max-w-[760px] px-6">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
             <span className="w-[22px] h-px bg-forest inline-block" />
@@ -46,28 +47,26 @@ export default function LegalLayout({
           </p>
         </div>
       </header>
-      <div className="mx-auto max-w-[1180px] border-b border-[#D8D4C5]" />
-
       {/* LAYOUT */}
-      <section className="pt-10 md:pt-12 pb-16 md:pb-20">
+      <section className="pt-4 pb-14 md:pb-16">
         <div className="mx-auto max-w-[1100px] px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-8 lg:gap-12 items-start">
             <aside>
               {/* Desktop TOC */}
               <nav
                 aria-label="On this page"
-                className="hidden lg:block sticky top-[96px]"
+                className={`hidden lg:block sticky top-[96px] -rotate-1 bg-[#FBF3DC] p-4 ${PAPER_SHADOW}`}
               >
                 <h2 className="font-medium text-[11.5px] tracking-[0.18em] uppercase text-gray-500 m-0 mb-4 px-3 flex items-center gap-2.5">
                   <span aria-hidden="true" className="w-3.5 h-px bg-[#C9C5B7]" />
                   In this document
                 </h2>
-                <ul className="list-none p-0 m-0 border-t border-[#D8D4C5]">
+                <ul className="list-none p-0 m-0 border-t border-[#E8DCB8]">
                   {sections.map((s) => (
-                    <li key={s.id} className="border-b border-[#D8D4C5]">
+                    <li key={s.id} className="border-b border-[#E8DCB8]">
                       <a
                         href={`#${s.id}`}
-                        className="block px-3 py-2.5 text-[14.5px] leading-[1.35] text-gray-600 hover:text-forest-dark hover:bg-[#F2EFE4] transition-colors no-underline border-l-[3px] border-transparent -ml-[3px]"
+                        className="block px-3 py-2.5 text-[14.5px] leading-[1.35] text-gray-600 hover:text-forest-dark hover:bg-white/60 transition-colors no-underline"
                       >
                         {s.title}
                       </a>
@@ -78,7 +77,7 @@ export default function LegalLayout({
 
               {/* Mobile TOC */}
               <details
-                className="lg:hidden bg-[#F2EFE4] border border-[#D8D4C5] rounded-[12px] overflow-hidden"
+                className={`lg:hidden bg-[#FBF3DC] overflow-hidden ${PAPER_SHADOW}`}
                 open={mobileTocOpen}
                 onToggle={(e) => setMobileTocOpen((e.target as HTMLDetailsElement).open)}
               >
@@ -109,11 +108,13 @@ export default function LegalLayout({
               </details>
             </aside>
 
-            <article className="max-w-[720px] text-[16.5px] leading-[1.7] text-gray-600 legal-content">
+            <article className={`relative max-w-[760px] bg-[#FFFDF8] px-6 pb-10 pt-12 text-[16.5px] leading-[1.7] text-gray-600 legal-content sm:px-10 md:px-12 ${PAPER_SHADOW}`}>
+              <Tape className="left-10 -rotate-6" />
+              <Tape className="right-10 rotate-6" color="rgba(169,193,163,0.85)" />
               {sections.map((s, i) => (
                 <section
                   key={s.id}
-                  className={i === 0 ? 'first-of-type:mt-0' : 'mt-12'}
+                  className={`${i === 0 ? 'first-of-type:mt-0' : 'mt-12'}`}
                 >
                   <h2
                     id={s.id}
@@ -131,7 +132,8 @@ export default function LegalLayout({
 
       {/* HELPLINE */}
       {helpline && (
-        <div className="max-w-[600px] mx-auto px-6 pb-14 text-center">
+        <div className={`relative max-w-[560px] mx-auto mb-16 rotate-1 bg-white px-8 pb-7 pt-9 text-center ${PAPER_SHADOW}`}>
+          <Magnet color="#C97B5C" />
           <p className="font-display italic text-[17px] text-[#C97B5C] m-0 mb-1.5">
             {helpline.lead}
           </p>

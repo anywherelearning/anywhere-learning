@@ -33,16 +33,16 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">When you use our site, we may collect:</p>
         <ul className="list-disc pl-6 space-y-2 marker:text-forest">
           <li>
-            <strong className="text-ink font-semibold">Account information:</strong> your name and email address when you create an account, sign up for the free guide, or make a purchase.
+            <strong className="text-ink font-semibold">Account information:</strong>{' '}your name and email address when you create an account, sign up for the free guide, or make a purchase.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Order and subscription information:</strong> what you purchased or which membership you joined, when, and your access history.
+            <strong className="text-ink font-semibold">Order and subscription information:</strong>{' '}what you purchased or which membership you joined, when, and your access history.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Your children&apos;s details (optional):</strong> if you set up your family in the member area, we store the first name and the age or birth month you enter for each child. You provide this, your child does not, and we use it only to suggest age-appropriate activities and build their learning roadmap. You can edit or remove it anytime in your account.
+            <strong className="text-ink font-semibold">Your children&apos;s details (optional):</strong>{' '}if you set up your family in the member area, we store the first name and the age or birth month you enter for each child. You provide this, your child does not, and we use it only to suggest age-appropriate activities and build their learning roadmap. You can edit or remove it anytime in your account.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Usage data:</strong> pages you visit and how you interact with our site (collected anonymously via analytics).
+            <strong className="text-ink font-semibold">Usage data:</strong>{' '}pages you visit and how you interact with our site (collected anonymously via analytics).
           </li>
         </ul>
       </>
@@ -91,7 +91,7 @@ const sections: LegalSection[] = [
     title: 'Analytics',
     content: (
       <p>
-        We use Google Analytics to understand how visitors use our site, which pages are most popular, how people find us, what to improve. Google Analytics may set its own cookies, and we keep this data <Em>aggregated.</Em> We don&apos;t use it to identify individual visitors or target you with ads.
+        We use Google Analytics to understand how visitors use our site, which pages are most popular, how people find us, what to improve. Google Analytics may set its own cookies, and we keep this data <Em>aggregated.</Em>{' '}We don&apos;t use it to identify individual visitors or target you with ads.
       </p>
     ),
   },
@@ -127,7 +127,7 @@ const sections: LegalSection[] = [
           </ul>
         </div>
         <p>
-          Each service has its own privacy policy governing how they handle your data. We only share <Em>what&apos;s strictly necessary</Em> to provide our service.
+          Each service has its own privacy policy governing how they handle your data. We only share <Em>what&apos;s strictly necessary</Em>{' '}to provide our service.
         </p>
       </>
     ),
@@ -147,10 +147,10 @@ const sections: LegalSection[] = [
     content: (
       <div className="bg-[#F2EFE4] border-l-[3px] border-[#C97B5C] rounded-r-[10px] px-7 py-5 my-2">
         <p className="mb-3.5">
-          Anywhere Learning is built for parents and guardians to use <Em>with</Em> their kids. We don&apos;t market to children or ask children to create accounts, and the activities are led by you.
+          Anywhere Learning is built for parents and guardians to use <Em>with</Em>{' '}their kids. We don&apos;t market to children or ask children to create accounts, and the activities are led by you.
         </p>
         <p>
-          If you set up your family in the member area, you can enter a first name and an age or birth month for each child. That information is provided by <Em>you, the parent,</Em> never collected from the child, and we use it only to tailor activity suggestions and their learning roadmap. We never ask children for personal information directly. You can view, edit, or delete your children&apos;s details anytime in your account, or email us at <MailLink /> and we&apos;ll remove them.
+          If you set up your family in the member area, you can enter a first name and an age or birth month for each child. That information is provided by <Em>you, the parent,</Em>{' '}never collected from the child, and we use it only to tailor activity suggestions and their learning roadmap. We never ask children for personal information directly. You can view, edit, or delete your children&apos;s details anytime in your account, or email us at <MailLink /> and we&apos;ll remove them.
         </p>
       </div>
     ),
@@ -197,7 +197,7 @@ const sections: LegalSection[] = [
     title: 'Data security',
     content: (
       <p>
-        We use SSL encryption across our entire site and rely on industry-standard security practices. Payments are handled by Stripe&apos;s secure infrastructure. While no system is 100% secure, we take <Em>reasonable measures</Em> to protect your information.
+        We use SSL encryption across our entire site and rely on industry-standard security practices. Payments are handled by Stripe&apos;s secure infrastructure. While no system is 100% secure, we take <Em>reasonable measures</Em>{' '}to protect your information.
       </p>
     ),
   },
