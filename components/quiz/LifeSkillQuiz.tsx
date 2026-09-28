@@ -12,6 +12,7 @@ import {
 } from "@/lib/quiz";
 import useAttributionSource from "@/components/useAttributionSource";
 import LeafMark from "@/components/quiz/LeafMark";
+import { Tape, Magnet, PAPER_SHADOW } from "@/components/shared/Paper";
 
 
 type Phase = "intro" | "questions" | "email" | "result";
@@ -251,10 +252,9 @@ export default function LifeSkillQuiz() {
 
     return (
       <div className="mx-auto max-w-[680px]">
-        <article
-          className="al-rise relative overflow-hidden rounded-[24px] bg-cream shadow-[0_40px_80px_-48px_rgba(45,58,46,0.55)]"
-          style={{ border: "1px solid rgba(45,58,46,0.14)" }}
-        >
+        <article className={`al-rise relative bg-[#FFFDF8] ${PAPER_SHADOW}`}>
+          <Tape className="left-10 -rotate-6 z-20" />
+          <Tape className="right-10 rotate-6 z-20" color="rgba(169,193,163,0.85)" />
           {/* accent ribbon along the very top: the one place the kid's color leads */}
           <span
             className="absolute inset-x-0 top-0 h-1.5"
@@ -447,7 +447,8 @@ export default function LifeSkillQuiz() {
     return (
       <div className="mx-auto max-w-[600px]">
         <ProgressBar progress={100} />
-        <div className="mt-6 rounded-[20px] border border-[#C9D3BE] bg-[#E6EBDF] p-9 md:p-11 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
+        <div className={`relative mt-8 -rotate-[0.6deg] bg-white p-9 pt-11 md:p-11 md:pt-12 text-center ${PAPER_SHADOW}`}>
+          <Magnet color="#C97B5C" size={26} />
           <p className="font-display italic text-[17px] text-forest-dark">
             That&apos;s the last one.
           </p>

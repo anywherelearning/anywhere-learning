@@ -60,7 +60,7 @@ export default function CourseSignup({ id = "top" }: { id?: string }) {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-[#C9D3BE] bg-[#E6EBDF] p-7 text-center">
+      <div className="-rotate-1 bg-[#FBF3DC] p-7 text-center shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)]">
         <p className="font-display text-[24px] leading-tight text-forest-dark">
           Day 1 is on its way.
         </p>

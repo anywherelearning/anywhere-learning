@@ -92,8 +92,8 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
   if (status === "success") {
     return (
       <div
-        className={`rounded-xl p-6 text-center ${
-          isLight ? "bg-forest/5" : "bg-cream/10"
+        className={`p-6 text-center ${
+          isLight ? "-rotate-1 bg-[#FBF3DC] shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)]" : "rounded-xl bg-cream/10"
         }`}
       >
         <p
