@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import { coverSrc } from '@/lib/cover';
 import Eyebrow from '@/components/shared/PageEyebrow';
 import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
@@ -437,6 +438,62 @@ export default async function HomePage() {
             <ScrollReveal delay={100}>
               <ActivityExplorer />
             </ScrollReveal>
+
+            {/* Peek inside one guide: a real step page, so "guided" means
+                something concrete before anyone signs up. */}
+            <div className="mt-16 grid items-center gap-10 md:grid-cols-[1fr_1.05fr] md:gap-14">
+              <div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#b5803e]">
+                  Peek inside a guide
+                </p>
+                <h3 className="mt-2 font-display text-[clamp(1.5rem,2.8vw,2.1rem)] leading-[1.1] tracking-tight text-balance">
+                  Every step tells you <span className="italic text-forest">who does what.</span>
+                </h3>
+                <p className="mt-3 text-[16.5px] leading-[1.65] text-gray-600">
+                  This is Step 3 of Party Planner Math, word for word. Every step in every guide
+                  works the same way.
+                </p>
+                <ul className="m-0 mt-5 list-none space-y-3 p-0">
+                  {[
+                    ['Their job and your job', 'so you always know which part to hand over.'],
+                    ['Questions to ask', 'so you guide with a question instead of the answer.'],
+                    ['Three levels', 'Explore, Develop, Extend, so a 6-year-old and a 12-year-old work on the same thing.'],
+                  ].map(([t, d]) => (
+                    <li key={t} className="flex gap-3 text-[15.5px] leading-[1.55] text-gray-700">
+                      <CheckIcon />
+                      <span>
+                        <strong className="font-semibold text-ink">{t}</strong>, {d}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative mx-auto h-[440px] w-full max-w-[460px] sm:h-[520px]">
+                <div className={`absolute left-0 top-6 w-[46%] -rotate-[6deg] bg-white p-1.5 ${PAPER_SHADOW}`}>
+                  <div className="relative aspect-[8.5/11] overflow-hidden">
+                    <Image
+                      src={coverSrc('/products/party-planner-math.jpg')!}
+                      alt="Party Planner Math guide cover"
+                      fill
+                      sizes="210px"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </div>
+                <div className={`absolute right-0 top-0 w-[70%] rotate-[2deg] bg-white p-1.5 ${PAPER_SHADOW}`}>
+                  <Tape className="left-1/2 -translate-x-1/2 -rotate-2" />
+                  <div className="relative aspect-[707/1000] overflow-hidden">
+                    <Image
+                      src="/images/home/party-planner-step3.jpg"
+                      alt="Step 3 of Party Planner Math: the child's job, the parent's job, prompts to ask, and three levels"
+                      fill
+                      sizes="(max-width: 640px) 70vw, 320px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

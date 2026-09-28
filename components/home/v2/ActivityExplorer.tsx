@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+import { coverSrc } from '@/lib/cover';
 import { useState } from 'react';
 import { SHOWCASE_ACTIVITIES, SHOP_CATEGORIES } from '@/lib/home-showcase';
 
@@ -58,6 +60,8 @@ export default function ActivityExplorer() {
               borderLeft: `3px solid ${a.color}`,
             }}
           >
+            <div className="flex gap-4">
+            <div className="min-w-0 flex-1">
             <div className="mb-2.5 flex items-center justify-between gap-2.5">
               <span
                 className="text-[11px] font-semibold uppercase tracking-[0.14em]"
@@ -71,7 +75,21 @@ export default function ActivityExplorer() {
               {a.title}
             </div>
             <div className="text-[15px] leading-[1.55] text-gray-500">{a.blurb}</div>
-            <span className="mt-4 text-[14px] font-semibold text-forest transition-colors group-hover:text-forest-dark">
+            </div>
+            {/* The guide's full cover, so parents see the real thing */}
+            <span className="relative mt-1 block w-[84px] shrink-0 rotate-[3deg] self-start bg-white p-1 shadow-[0_8px_16px_-8px_rgba(45,58,46,0.55)]">
+              <span className="relative block aspect-[8.5/11] overflow-hidden">
+                <Image
+                  src={coverSrc(`/products/${a.slug}.jpg`)!}
+                  alt={`${a.title} guide cover`}
+                  fill
+                  sizes="84px"
+                  className="object-cover object-top"
+                />
+              </span>
+            </span>
+            </div>
+            <span className="mt-auto pt-4 text-[14px] font-semibold text-forest transition-colors group-hover:text-forest-dark">
               Open the guide &rarr;
             </span>
           </Link>
