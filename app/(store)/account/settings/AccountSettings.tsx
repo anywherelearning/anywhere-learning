@@ -652,7 +652,7 @@ function PasswordManager({ hasPassword }: { hasPassword: boolean }) {
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold py-2 px-4 rounded-[10px] text-[13.5px] bg-cream hover:bg-[#E6EBDF] transition-all cursor-pointer"
         >
-          {hasPassword ? 'Change password' : 'Set a password'} &rarr;
+          {hasPassword ? 'Change password' : 'Set a password'} <span aria-hidden="true">&rarr;</span>
         </button>
       ) : (
         <form onSubmit={handleSubmit} className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[10px] p-4 flex flex-col gap-3">
