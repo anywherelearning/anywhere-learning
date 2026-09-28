@@ -465,7 +465,8 @@ export default function CustomSignInForm() {
 
       {/* SIGN-IN CARD */}
       <div className="max-lg:order-1 w-full lg:w-[440px] mx-auto">
-        <div className="relative bg-cream border border-[#D8D4C5] rounded-[18px] px-7 py-9 lg:px-11 lg:pt-10 lg:pb-9 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_24px_48px_-24px_rgba(45,58,46,0.18)]">
+        <div className="relative bg-[#FFFDF8] px-7 py-9 lg:px-11 lg:pt-11 lg:pb-9 shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)]">
+          <span aria-hidden="true" className="absolute -top-3 left-10 z-10 h-6 w-20 -rotate-6" style={{ background: 'rgba(232,201,154,0.8)' }} />
           {/* Corner ※ pressed-leaf stamp */}
           <div
             aria-hidden="true"

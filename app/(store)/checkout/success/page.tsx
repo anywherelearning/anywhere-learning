@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import Link from 'next/link';
 import Confetti from '@/components/checkout/Confetti';
 import MembershipConversionEvent from '@/components/checkout/MembershipConversionEvent';
@@ -151,7 +152,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         metaEventId={sp.session_id?.trim() || null}
       />
       <Confetti />
-      <main className="bg-cream pb-16">
+      <main className="bg-[#F2EFE4] pb-16">
         {/* HERO */}
         <section className="pt-20 md:pt-24 pb-12 text-center">
           <div className="mx-auto max-w-[720px] px-6">
@@ -199,7 +200,8 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         {/* RECEIPT */}
         <section className="pt-2 pb-8">
           <div className="mx-auto max-w-[720px] px-6">
-            <div className="bg-cream border border-[#D8D4C5] rounded-[12px] p-7 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className={`relative -rotate-[0.5deg] bg-[#FFFDF8] p-7 pt-10 md:p-8 md:pt-11 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 ${PAPER_SHADOW}`}>
+              <Tape />
               {/* Your purchase */}
               <div>
                 <h4 className="font-body font-semibold text-[11.5px] uppercase tracking-[0.18em] text-forest-dark m-0 mb-3">
@@ -251,7 +253,8 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps) {
         {/* AMELIE NOTE */}
         <section className="pt-2 pb-8">
           <div className="mx-auto max-w-[640px] px-6">
-            <div className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[12px] p-7 md:p-8 grid grid-cols-[48px_1fr] gap-4 md:gap-5 items-start">
+            <div className={`relative rotate-[0.8deg] bg-[#FBF3DC] p-7 pt-9 md:p-8 md:pt-10 grid grid-cols-[48px_1fr] gap-4 md:gap-5 items-start ${PAPER_SHADOW}`}>
+              <Magnet color="#C97B5C" size={24} />
               <div
                 aria-hidden="true"
                 className="w-12 h-12 rounded-full bg-[#E6EBDF] border border-[#C9D3BE] grid place-items-center text-forest-dark font-display italic text-[22px] leading-none"

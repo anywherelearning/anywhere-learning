@@ -1,3 +1,4 @@
+import { Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -41,7 +42,7 @@ export default function NotFound() {
   // renders cleanly (just without nav chrome) — acceptable for rare cases.
   return (
     <>
-      <main className="bg-cream">
+      <main className="min-h-screen bg-[#F2EFE4]">
         {/* Hero */}
         <section className="pt-24 md:pt-28 pb-12 text-center">
           <div className="mx-auto max-w-[680px] px-6">
@@ -78,13 +79,15 @@ export default function NotFound() {
 
         {/* Option cards */}
         <section className="pt-2 pb-14">
-          <div className="mx-auto max-w-[720px] px-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {OPTIONS.map((opt) => (
+          <div className="mx-auto max-w-[720px] px-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
+            {OPTIONS.map((opt, i) => (
               <Link
                 key={opt.href}
                 href={opt.href}
-                className="group bg-cream border border-[#D8D4C5] rounded-[12px] p-6 no-underline text-ink flex flex-col shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] hover:-translate-y-0.5 hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.3)] hover:border-[#C9D3BE] transition-all duration-200"
+                className={`group relative bg-white p-6 pt-8 no-underline text-ink flex flex-col transition-transform duration-200 hover:-translate-y-1 ${PAPER_SHADOW}`}
+                style={{ transform: `rotate(${[-1.2, 1, 0.8, -0.8][i % 4]}deg)` }}
               >
+                <Magnet color={['#C97B5C', '#588157', '#d4a373', '#3A5A40'][i % 4]} />
                 <p className="font-display italic text-[14px] text-[#C97B5C] m-0 mb-2">{opt.top}</p>
                 <h4 className="font-display italic text-[20px] leading-[1.18] tracking-[-0.006em] text-ink m-0 mb-5">
                   {opt.title}

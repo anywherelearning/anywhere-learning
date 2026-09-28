@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Tape, PAPER_SHADOW } from '@/components/shared/Paper';
 import Link from 'next/link';
 
 /**
@@ -14,8 +15,9 @@ export const metadata: Metadata = {
 
 export default function GoodbyePage() {
   return (
-    <main className="bg-cream px-6 pt-12 md:pt-16 pb-24 md:pb-32">
-      <div className="mx-auto max-w-[560px] text-center">
+    <main className="min-h-[70vh] bg-[#F2EFE4] px-6 pt-12 md:pt-16 pb-24 md:pb-32">
+      <div className={`relative mx-auto max-w-[600px] -rotate-[0.6deg] bg-[#FFFDF8] px-7 pb-10 pt-12 text-center md:px-12 ${PAPER_SHADOW}`}>
+        <Tape />
         <span className="inline-grid h-14 w-14 place-items-center rounded-full border border-[#C9D3BE] bg-[#E6EBDF] text-forest-dark">
           <svg
             width="24"

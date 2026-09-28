@@ -31,7 +31,7 @@ export default async function SignInPage() {
   if (signedInUserId) redirect('/post-sign-in');
 
   return (
-    <main className="relative min-h-screen bg-cream overflow-hidden">
+    <main className="relative min-h-screen bg-[#F2EFE4] overflow-hidden">
       {/* Faint horizon arcs bottom-right (decorative) */}
       <svg
         aria-hidden="true"
@@ -40,9 +40,9 @@ export default async function SignInPage() {
         height="360"
         viewBox="0 0 360 360"
       >
-        <circle cx="180" cy="180" r="160" stroke="#E6EBDF" strokeWidth="1" fill="none" />
-        <circle cx="180" cy="180" r="120" stroke="#E6EBDF" strokeWidth="1" fill="none" />
-        <circle cx="180" cy="180" r="80" stroke="#E6EBDF" strokeWidth="1" fill="none" />
+        <circle cx="180" cy="180" r="160" stroke="#DCD6C4" strokeWidth="1" fill="none" />
+        <circle cx="180" cy="180" r="120" stroke="#DCD6C4" strokeWidth="1" fill="none" />
+        <circle cx="180" cy="180" r="80" stroke="#DCD6C4" strokeWidth="1" fill="none" />
       </svg>
 
       {/* Top: centered logo + skill-focused tagline */}

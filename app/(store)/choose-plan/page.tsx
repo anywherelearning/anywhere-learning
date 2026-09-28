@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import Link from 'next/link';
 import { getMembership } from '@/lib/membership-runtime';
 import {
@@ -33,7 +34,7 @@ export default async function ChoosePlanPage() {
   const savings = annualSavingsPct(m.priceUSD);
 
   return (
-    <main className="bg-cream px-6 pt-12 md:pt-16 pb-16 md:pb-20">
+    <main className="bg-[#F2EFE4] px-6 pt-12 md:pt-16 pb-16 md:pb-20">
       <div className="mx-auto max-w-[880px]">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-[620px] text-center">
@@ -53,8 +54,9 @@ export default async function ChoosePlanPage() {
         {/* Plan cards */}
         <div className="grid gap-5 md:grid-cols-2 md:items-stretch">
           {/* Yearly — featured */}
-          <div className="relative flex flex-col rounded-[18px] border-2 border-forest bg-white px-8 py-9 shadow-[0_28px_50px_-32px_rgba(58,90,64,.45)]">
-            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-forest px-4 py-1.5 text-[11.5px] font-semibold uppercase tracking-[.12em] text-cream">
+          <div className={`relative flex flex-col -rotate-[0.6deg] border-t-[6px] border-forest bg-white px-8 pb-9 pt-11 ${PAPER_SHADOW}`}>
+            <Magnet color="#588157" size={26} />
+            <span className="absolute -top-4 right-5 rotate-3 whitespace-nowrap bg-[#FBF3DC] px-3.5 py-1.5 shadow-md text-[11.5px] font-semibold uppercase tracking-[.12em] text-forest-dark">
               Best value · Save {savings}%
             </span>
             <h2 className="font-display text-[26px] leading-tight text-gray-900">Yearly</h2>
@@ -105,7 +107,8 @@ export default async function ChoosePlanPage() {
           </div>
 
           {/* Monthly */}
-          <div className="flex flex-col rounded-[18px] border border-gray-200 bg-white px-8 py-9 shadow-[0_18px_36px_-28px_rgba(45,58,46,.3)]">
+          <div className={`relative flex flex-col rotate-[0.6deg] bg-[#FFFDF8] px-8 pb-9 pt-11 ${PAPER_SHADOW}`}>
+            <Tape />
             <h2 className="font-display text-[26px] leading-tight text-gray-900">Monthly</h2>
             <div className="mt-3 flex items-baseline gap-2">
               <span className="font-display text-[44px] italic leading-none text-forest-dark">

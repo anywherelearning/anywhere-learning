@@ -59,7 +59,7 @@ export default async function SignUpPage({
   if (signedInUserId) redirect(redirectUrl ?? '/post-sign-in');
 
   return (
-    <main className="min-h-[calc(100vh-200px)] bg-cream py-12 md:py-16">
+    <main className="min-h-[calc(100vh-200px)] bg-[#F2EFE4] py-12 md:py-16">
       <div className="mx-auto max-w-[1100px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-16 items-center">
           {/* Left: brand context */}
