@@ -394,7 +394,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       ],
     },
     seo: {
-      title: 'Outdoor STEM Challenge Cards Volume 2: No-Prep STEM Activities, Ages 6-14',
+      title: 'Outdoor STEM Challenge Cards Vol. 2: No-Prep, Ages 6-14',
       description:
         '20 new outdoor STEM challenges in five themes: rope-making, launchers, water, wind, and levers. No-prep STEM activities for kids ages 6-14 using found materials.',
     },

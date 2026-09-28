@@ -24,6 +24,8 @@ export interface ResourceAuthor {
 }
 
 export interface ResourcePage {
+  /** Optional <title> override (60 characters or fewer) for the SERP. */
+  seoTitle?: string;
   slug: string;
   title: string;
   excerpt: string;
@@ -943,6 +945,7 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'worldschooling-guide',
+    seoTitle: 'How to Start Worldschooling With Kids',
     title: 'How to Start Worldschooling With Kids (Without Quitting Everything)',
     excerpt: 'You don\'t need to sell the house to worldschool. Here\'s how families combine travel and learning long-term, what a real week actually looks like, and the 6 mistakes most new worldschoolers make in year one.',
     metaDescription: 'What worldschooling is, what it costs, what a real week looks like, and the 6 mistakes new families make in year one. No need to sell the house.',
@@ -1249,6 +1252,7 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'creativity-maker-activities',
+    seoTitle: 'Creativity & Maker Activities for Kids: Hands-On Ideas',
     title: 'Creativity & Maker Activities for Kids: Hands-On Learning That Sticks',
     excerpt: 'How to nurture creativity, invention, and design thinking through hands-on projects, no artistic talent required.',
     topic: 'creativity-maker',
@@ -1616,6 +1620,7 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'ai-digital-literacy',
+    seoTitle: 'AI & Digital Literacy for Kids: A Family Guide',
     title: 'AI & Digital Literacy for Kids: What Every Family Needs to Know',
     excerpt: 'How to teach kids to use AI tools wisely, think critically about digital information, and become confident digital citizens.',
     topic: 'ai-digital-literacy',
@@ -1932,6 +1937,7 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'homeschool-journey',
+    seoTitle: 'Your Homeschool Journey: From First Doubts to Rhythm',
     title: 'Your Homeschool Journey: From First Doubts to Finding Your Rhythm',
     excerpt: 'Everything you need to navigate the emotional and practical side of homeschooling, from the scary first step to the moment it finally clicks.',
     topic: 'homeschool-journey',

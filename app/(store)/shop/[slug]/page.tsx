@@ -159,9 +159,18 @@ export async function generateMetadata({
   ).seo;
   // An override is the whole title: the root layout's "%s | Anywhere Learning"
   // template would otherwise append to it and push it past the truncation point.
+  // Otherwise keep as much as fits Google's ~60-character cutoff, dropping
+  // the site suffix first, then the category keywords, never the name.
+  const withCategory = `${product.name} | ${suffix}`;
   const metaTitle: Metadata["title"] = seoOverride
     ? { absolute: seoOverride.title }
-    : `${product.name} | ${suffix}`;
+    : withCategory.length + 21 <= 60
+      ? withCategory
+      : withCategory.length <= 60
+        ? { absolute: withCategory }
+        : `${product.name}`.length + 21 <= 60
+          ? product.name
+          : { absolute: product.name };
   const metaDescription = seoOverride?.description ?? description;
 
   const imageUrl = product.imageUrl

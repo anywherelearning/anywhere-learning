@@ -24,7 +24,7 @@ export type IdeaListSeo = {
 
 export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   'nature-walk-ideas': {
-    seoTitle: 'Nature Walk Checklist for Kids: 50 Printable Ideas (Free PDF)',
+    seoTitle: 'Nature Walk Checklist for Kids: 50 Ideas (Free PDF)',
     metaDescription:
       'A printable nature walk checklist with 50 ideas for kids ages 2 to 12. No gear, no prep. Free to read in full, and we email you the PDF in color or black and white.',
     howToUse:
@@ -174,7 +174,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'kitchen-ideas': {
-    seoTitle: '30 Cooking Activities for Kids That Sneak In Real Math (Free)',
+    seoTitle: '30 Cooking Activities for Kids With Real Math (Free)',
     metaDescription:
       '30 cooking activities for kids that teach fractions, measuring, and budgeting at meals you already make. Free to read, printable PDF by email.',
     howToUse:
@@ -234,7 +234,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'chores-by-age-ideas': {
-    seoTitle: 'Chore List for Kids by Age: 2 to 14 (Free Printable Chore Chart)',
+    seoTitle: 'Chore List for Kids by Age: 2 to 14 (Free Chore Chart)',
     metaDescription:
       '30 chores by age (2-5, 6-8, tweens 9-11, teens 12-14) plus a daily chore list. Free printable chore chart, sent by email. Post it once and stop the reminding.',
     howToUse:
@@ -418,7 +418,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'travel-ideas': {
-    seoTitle: '22 Travel Activities for Kids: Road Trips to Abroad (Free PDF)',
+    seoTitle: '22 Travel Activities for Kids: Road Trips & Abroad (PDF)',
     metaDescription:
       '22 travel and worldschool activities that turn any road trip, city day, or trip abroad into real learning. Free to read, printable PDF by email.',
     howToUse:
@@ -448,7 +448,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'ai-digital-ideas': {
-    seoTitle: '18 AI & Digital Literacy Activities for Kids (Free Printable)',
+    seoTitle: '18 AI & Digital Literacy Activities for Kids (Free PDF)',
     metaDescription:
       'Help kids understand AI, use it wisely, and question what they see online: 18 activities on a free printable checklist. PDF by email, ages 8 and up.',
     howToUse:

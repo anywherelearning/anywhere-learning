@@ -57,7 +57,12 @@ export async function generateMetadata({
   if (!resource) return {};
 
   return {
-    title: resource.title,
+    // Add the site suffix only when the whole thing still fits Google's
+    // ~60-character cutoff; otherwise the keyword-led title stands alone.
+    title: (() => {
+      const t = resource.seoTitle ?? resource.title;
+      return t.length + 21 <= 60 ? t : { absolute: t };
+    })(),
     description: resource.metaDescription ?? resource.excerpt,
     keywords: resource.keywords,
     alternates: {

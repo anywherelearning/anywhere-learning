@@ -51,9 +51,10 @@ export async function generateMetadata({
   const seoTitle = post.seoTitle ?? post.title;
 
   return {
-    // Long titles drop the " | Anywhere Learning" suffix so the keyword-led
-    // part survives the SERP cutoff. The brand is in the URL and breadcrumb.
-    title: seoTitle.length > 50 ? { absolute: seoTitle } : seoTitle,
+    // The " | Anywhere Learning" suffix (21 chars) is added only when the whole
+    // title still fits Google's ~60-character cutoff; otherwise the
+    // keyword-led title stands alone. The brand is in the URL and breadcrumb.
+    title: seoTitle.length + 21 <= 60 ? seoTitle : { absolute: seoTitle },
     description: getSeoDescription(post),
     keywords: post.keywords,
     alternates: {

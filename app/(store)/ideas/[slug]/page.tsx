@@ -50,7 +50,8 @@ export async function generateMetadata({
     const description = `${category.blurb} Browse ${listCount} free idea lists with ${ideaCount} activities.`;
 
     return {
-      title,
+      // Suffix only when it still fits Google's ~60-character cutoff
+      title: title.length + 21 <= 60 ? title : { absolute: title },
       description,
       alternates: {
         canonical: `https://anywherelearning.co/ideas/${category.slug}`,

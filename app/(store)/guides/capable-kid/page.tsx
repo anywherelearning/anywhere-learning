@@ -7,7 +7,7 @@ import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 const GUIDE = 'capable-kid';
 
 export const metadata: Metadata = {
-  title: 'The Capable Kid Guide, Free by Age 6 to 14',
+  title: { absolute: 'The Capable Kid Guide: Free, by Age 6 to 14' },
   description:
     'A free, age-by-age guide to what your kid can actually do from 6 to 14, and how to hand each skill over without losing your mind. Built by a former teacher.',
   alternates: {

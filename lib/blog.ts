@@ -103,6 +103,7 @@ const posts: BlogPost[] = [
   {
     slug: 'kitchen-learning-lab',
     title: 'Kitchen Math: 20 Real-World Math Activities Without Worksheets',
+    seoTitle: 'Kitchen Math: 20 Real-World Math Activities for Kids',
     metaDescription: 'Kitchen math for kids: 20 real-world math activities, from doubling a recipe to pricing a meal. Fractions, measuring, money and time. No worksheets.',
     excerpt: 'Twenty kitchen math activities for kids ages 4 to 12, covering counting, fractions, measurement, geometry, estimation, and budgeting. No worksheets, no curriculum, just dinner.',
     hook: 'Doubling a recipe is fractions. Timing pasta is estimation. Dinner is already a math lesson, you just haven\u2019t named it yet.',
@@ -193,6 +194,7 @@ const posts: BlogPost[] = [
   {
     slug: 'nature-walks-science',
     title: 'Nature Walk Activities: 30 Things to Do With Kids on Any Walk',
+    seoTitle: 'Nature Walk Activities: 30 Things to Do With Kids',
     excerpt: 'Thirty nature walk activities for kids of any age, organized by what you do on the walk: observe, collect, experiment, create, and document. No equipment, no curriculum, just outside.',
     hook: 'A 30-minute walk covers gravity, erosion, ecosystems, weather, and 30 things to actually do on it. No lesson plan required.',
     category: 'nature-learning',
@@ -313,6 +315,7 @@ const posts: BlogPost[] = [
   {
     slug: 'is-ai-cheating-homework',
     title: 'Is It Cheating if My Kid Uses AI for Homework? A Parent’s Guide',
+    seoTitle: 'Is It Cheating if My Kid Uses AI for Homework?',
     excerpt: 'Is it cheating if your kid uses AI for homework? The honest answer, plus how to help them use AI to learn instead of skipping the learning.',
     hook: 'The question isn’t whether your kid will use AI for homework. It’s whether they’re still learning when they do.',
     category: 'ai-digital-literacy',
@@ -688,6 +691,7 @@ const posts: BlogPost[] = [
   {
     slug: 'seasonal-scavenger-hunts',
     title: 'Free Seasonal Nature Scavenger Hunts (Spring, Summer, Fall, Winter)',
+    seoTitle: 'Free Seasonal Nature Scavenger Hunts for Kids',
     excerpt: 'A free hub of seasonal nature scavenger hunts for kids ages 3 to 13. Twenty hunts organized by season (spring, summer, fall, winter), designed to build observation skills, nature literacy, and scientific thinking. Use year after year.',
     hook: 'One free scavenger hunt per season. Print once, use every year, watch your kid become a sensor.',
     category: 'nature-learning',
@@ -1152,6 +1156,7 @@ const posts: BlogPost[] = [
   {
     slug: 'five-stages-deschooling',
     title: 'The 5 Stages of Deschooling (and Why Stage 3 Almost Breaks Everyone)',
+    seoTitle: 'The 5 Stages of Deschooling (and Why Stage 3 Is Hardest)',
     excerpt: 'Deschooling is the messy unlearning period after leaving traditional school. Most families quit during stage 3, the middle. Here\u2019s what each stage actually looks like, how long it lasts, and what to do when it feels broken.',
     hook: 'Two weeks in, your kid is in pyjamas at 11am and you think you\u2019ve ruined everything.',
     category: 'homeschool-journey',
@@ -1234,6 +1239,7 @@ const posts: BlogPost[] = [
   {
     slug: 'what-no-prep-means',
     title: 'What "No Prep" Actually Means (and Why Low Prep Is What You Really Want)',
+    seoTitle: 'What "No Prep" Actually Means (and Why Low Prep Wins)',
     excerpt: '"No prep" is one of the most overused phrases in homeschool marketing. Most resources labelled that way still need you to read a manual, gather supplies, and print on cardstock. Here\u2019s why true no prep is mostly a myth, and why honest low prep is what actually saves your homeschool.',
     hook: 'If \u2018no prep\u2019 still needs you to read a manual, buy supplies, and laminate on cardstock, it\u2019s not no prep.',
     category: 'homeschool-journey',
@@ -1299,6 +1305,7 @@ const posts: BlogPost[] = [
   {
     slug: 'just-let-them-play',
     title: 'Why "Just Let Them Play" Is the Best Curriculum You\u2019ll Never Buy',
+    seoTitle: 'Why "Just Let Them Play" Is the Best Curriculum',
     excerpt: 'Play isn\u2019t the break between learning. It IS the learning. Here\u2019s the case for unstructured play as the most powerful educational tool your child has: backed by research and real family experience.',
     hook: 'We don\u2019t trust play because we can\u2019t measure it. That\u2019s exactly the problem.',
     category: 'homeschool-journey',
@@ -1527,6 +1534,7 @@ const posts: BlogPost[] = [
   {
     slug: 'raise-creative-kids',
     title: 'How to Raise Creative Kids (Without Buying More Craft Supplies)',
+    seoTitle: 'How to Raise Creative Kids (Without More Craft Supplies)',
     excerpt: 'Creativity isn\'t about glitter and pipe cleaners. It\'s about how your kids think. Here\'s how to nurture it through everyday life, no Pinterest projects required.',
     hook: 'Creativity isn\u2019t glitter and pipe cleaners. It\u2019s a kid finding an empty space and turning it into something nobody asked for.',
     category: 'creativity-maker',
@@ -1902,6 +1910,7 @@ const posts: BlogPost[] = [
   {
     slug: 'what-we-packed-worldschooling',
     title: 'What We Packed for 7 Months of Worldschooling (and What We Wish We\u2019d Left Behind)',
+    seoTitle: 'What We Packed for 7 Months of Worldschooling',
     excerpt: 'After seven months traveling from Florida to El Salvador with two kids, here\u2019s what actually earned its place in our bags, and the stuff we should have ditched on day one.',
     hook: 'Seven months, four countries, two kids. Here\u2019s what earned its place in the bag, and what should\u2019ve stayed home.',
     category: 'travel-worldschool',
@@ -2013,6 +2022,7 @@ const posts: BlogPost[] = [
   {
     slug: 'nature-based-learning-guide',
     title: 'Nature-Based Learning for Homeschool Families: The Complete Guide',
+    seoTitle: 'Nature-Based Learning for Homeschool Families',
     excerpt: 'Everything you need to turn the outdoors into your family\u2019s best classroom, from backyard walks to national park adventures, with low prep and zero curriculum.',
     hook: 'The backyard counts. The park counts. The puddle on the sidewalk counts. Nature-based learning starts wherever you are.',
     category: 'nature-learning',
@@ -2149,6 +2159,7 @@ const posts: BlogPost[] = [
   {
     slug: 'project-based-learning-homeschool',
     title: 'What Project-Based Learning Actually Looks Like in Our Family',
+    seoTitle: 'Project-Based Learning at Home: What It Actually Looks Like',
     excerpt: 'Forget the poster boards and rubrics. Here\u2019s how our kids chose their own research topics across four countries, and what they actually learned from the process.',
     hook: 'Nobody assigns a research project on vacation. That\u2019s exactly why the best ones happen there.',
     category: 'real-world-skills',
@@ -2490,6 +2501,7 @@ const posts: BlogPost[] = [
   {
     slug: 'teach-kids-prompt-ai',
     title: 'How to Teach Kids to Prompt AI (So It Actually Helps Them Learn)',
+    seoTitle: 'How to Teach Kids to Prompt AI So It Helps Them Learn',
     excerpt: 'Asking AI good questions is a real skill, and teaching kids to do it makes them better thinkers, not lazier ones. Here\u2019s how to start, with examples for every age.',
     hook: '\u201cTell me about volcanoes\u201d gets you a wall of nothing useful. The difference between a bad prompt and a good one is one question.',
     category: 'ai-digital-literacy',
@@ -2625,6 +2637,7 @@ const posts: BlogPost[] = [
   {
     slug: 'board-game-design-kids',
     title: 'Design a Board Game With Your Kids: Step-by-Step for Ages 5-12',
+    seoTitle: 'Design a Board Game With Kids: Step-by-Step, Ages 5-12',
     metaDescription: 'Design a board game with your kids at the kitchen table: start simple, playtest, fix the rules. The math and writing inside it, with steps by age.',
     excerpt: 'A step-by-step guide to designing a board game at your kitchen table. Covers rules, scoring, playtesting, and why kids learn maths, writing, and logic without realising it.',
     hook: 'A piece of cardboard, some dried beans, and a sibling who found every loophole. The rules got rewritten three times before dinner.',
@@ -3150,6 +3163,7 @@ const posts: BlogPost[] = [
   {
     slug: 'socialization-answer',
     title: 'How Do Homeschoolers Socialize? The Honest Answer (with Data)',
+    seoTitle: 'How Do Homeschoolers Socialize? The Honest Answer',
     metaDescription: 'How do homeschoolers socialize? What the research says, what it looks like day to day, and scripts for answering the concerned relative or a stranger.',
     excerpt: 'How do homeschoolers socialize? Through sports, co-ops, neighbourhood play, community groups, and conversations with people of every age. Here\'s what the research actually shows, plus ready-to-use scripts for the next family barbecue.',
     hook: 'The barbecue question every homeschool parent dreads. Here\u2019s what they\u2019re really asking and what to say back.',
@@ -3305,6 +3319,7 @@ const posts: BlogPost[] = [
   {
     slug: 'choosing-worldschool-destinations',
     title: 'How We Chose Where to Worldschool (And What Actually Mattered)',
+    seoTitle: 'How We Chose Where to Worldschool (What Mattered)',
     excerpt: 'Everyone asks how we picked our destinations. The truth is, some choices were brilliant and some were lucky. Here\u2019s what we considered, what surprised us, and what we\u2019d do differently.',
     hook: 'Walkability, cost, safety, wifi, community. The stuff that actually matters when picking a place to worldschool.',
     category: 'travel-worldschool',
@@ -3386,6 +3401,7 @@ const posts: BlogPost[] = [
   {
     slug: 'partner-doesnt-support',
     title: 'When Your Partner Doesn\'t Support Homeschooling: How to Get on the Same Page',
+    seoTitle: 'When Your Partner Doesn\'t Support Homeschooling',
     excerpt: 'You\'re convinced homeschooling is right for your family. Your partner isn\'t. Here\'s how to navigate the disagreement without it becoming a battle.',
     hook: 'You can\u2019t win this one with research links and TED talks. It\u2019s not about the data.',
     category: 'homeschool-journey',
@@ -3647,6 +3663,7 @@ const posts: BlogPost[] = [
   {
     slug: 'homeschool-methods-compared',
     title: 'Homeschool Methods Compared: Charlotte Mason, Waldorf, Montessori, Unschooling',
+    seoTitle: 'Homeschool Methods Compared: Charlotte Mason to Unschooling',
     excerpt: 'The five most-asked-about homeschool methods, compared honestly: Charlotte Mason, Waldorf, Montessori, unschooling, and real-world learning. What each one looks like in practice, who it\'s best for, and how to blend them.',
     hook: 'Every Facebook group debate ends with 200 comments and one frustrated parent. Here\u2019s the version that actually helps.',
     category: 'homeschool-journey',
@@ -4284,6 +4301,7 @@ const posts: BlogPost[] = [
   {
     slug: 'how-do-homeschoolers-make-friends',
     title: 'How Do Homeschoolers Make Friends? (And Why That Question Misses the Point)',
+    seoTitle: 'How Do Homeschoolers Make Friends? An Honest Answer',
     excerpt: 'How do homeschoolers make friends? Through co-ops, sports, neighbourhood play, libraries, family friendships, online communities, and at the parent\'s elbow in the real world. Here\'s a tactical playbook for any family, including the ones in rural areas, on the road, or with one only-child introvert.',
     hook: 'The friend question every grandma asks at Thanksgiving. Here\'s the tactical answer, no defensive scripts required.',
     category: 'homeschool-journey',
@@ -4818,6 +4836,7 @@ const posts: BlogPost[] = [
   {
     slug: 'backyard-science-experiments',
     title: 'Backyard Science Experiments: 15 No-Prep Ideas Kids Can Do Today',
+    seoTitle: 'Backyard Science Experiments: 15 No-Prep Ideas',
     metaDescription: '15 backyard science experiments kids can do today with water, ice, dirt, seeds and shadows. What each one teaches and the age it works at. Nothing to buy.',
     excerpt: 'Fifteen backyard science experiments that need zero prep and use stuff you already have. Covers water, weather, plants, bugs, and physics for kids ages 4 to 12.',
     hook: 'Your backyard is already a science lab. You just have not handed over the magnifying glass yet.',
@@ -5215,6 +5234,7 @@ const posts: BlogPost[] = [
   {
     slug: 'emotional-regulation-kids',
     title: 'How to Teach Kids Emotional Regulation (Without Saying "Calm Down")',
+    seoTitle: 'Emotional Regulation for Kids: Beyond "Calm Down"',
     excerpt: 'Practical strategies for helping kids manage big emotions at home, from co-regulation for younger children to self-regulation tools for tweens and teens.',
     hook: 'Telling a kid to calm down has never once in the history of parenting actually calmed anyone down.',
     category: 'future-ready-skills',
@@ -5354,6 +5374,7 @@ const posts: BlogPost[] = [
   {
     slug: 'teaching-kids-to-fail',
     title: 'Teaching Kids to Fail: Why Productive Struggle Is the Skill That Changes Everything',
+    seoTitle: 'Teaching Kids to Fail: Why Productive Struggle Matters',
     excerpt: 'How to help kids develop resilience, a growth mindset, and the ability to bounce back from failure, by letting them struggle on purpose.',
     hook: 'The kids who handle failure well at 10 are the adults who handle setbacks well at 30. And the skill is not innate. It is practiced.',
     category: 'future-ready-skills',
@@ -5506,6 +5527,7 @@ const posts: BlogPost[] = [
   {
     slug: 'executive-function-kids',
     title: 'Executive Function Skills: How to Help Your Kid Plan, Focus, and Follow Through',
+    seoTitle: 'Executive Function for Kids: Plan, Focus, Follow Through',
     excerpt: 'A practical guide to building the planning, focus, impulse control, and flexible thinking skills that kids need to manage themselves, no workbooks required.',
     hook: 'Executive function is the skill behind every other skill. And it does not come from a worksheet.',
     category: 'future-ready-skills',
@@ -5812,6 +5834,7 @@ const posts: BlogPost[] = [
   {
     slug: 'how-to-build-resilience-in-kids',
     title: 'How to Build Resilience in Kids: 12 Activities That Actually Work',
+    seoTitle: 'How to Build Resilience in Kids: 12 Activities',
     excerpt: 'Resilience is built, not taught. Twelve real-world activities that grow grit, recovery, and the ability to keep going when things get hard, at every age from 6 to 14.',
     hook: 'Resilient kids are not born. They are the kids who have been allowed to struggle, and to figure out the other side of it.',
     category: 'future-ready-skills',
@@ -5937,6 +5960,7 @@ const posts: BlogPost[] = [
   {
     slug: 'time-management-for-kids',
     title: 'How to Teach Kids Time Management (By Age, With Real Examples)',
+    seoTitle: 'How to Teach Kids Time Management, by Age',
     metaDescription: 'How to teach kids time management by age: feeling time at 6 to 8, estimating at 9 to 11, prioritizing at 12 to 14, with real activities that build it.',
     excerpt: 'Time management for kids is a learnable skill, not a personality type. Here is what it actually is, why kids struggle with it, and how to build it by age with real-world practice.',
     hook: 'Most kids have never managed their own time, because an adult has always managed it for them.',
@@ -6066,6 +6090,7 @@ const posts: BlogPost[] = [
   {
     slug: 'sample-homeschool-schedules',
     title: 'Sample Homeschool Schedules: From Flexible to Structured (3 Real Examples)',
+    seoTitle: 'Sample Homeschool Schedules: 3 Real Examples',
     excerpt: 'Three real homeschool schedules, from a fully flexible unschool rhythm to a structured block-based day. Hour-by-hour examples for ages 6 to 14, plus how to find the schedule that fits your family.',
     hook: 'There is no right homeschool schedule. There is only the one that fits your kids, your work, and your sanity.',
     category: 'homeschool-journey',
@@ -6206,6 +6231,7 @@ const posts: BlogPost[] = [
   {
     slug: 'nature-journaling-for-kids',
     title: 'Nature Journaling for Kids: How to Start (and Actually Stick With It)',
+    seoTitle: 'Nature Journaling for Kids: How to Start and Stick With It',
     metaDescription: 'How to start nature journaling with kids: a three-prompt framework, a cheap setup, what a first page looks like, and how to make it stick past week one.',
     excerpt: 'Nature journaling teaches kids to observe, ask questions, and record what they notice in the natural world. Here is the simple three-prompt framework that works for ages 4 to 14, plus how to make the habit stick beyond the first week.',
     hook: 'A kid who journals in nature for a year starts noticing things adults walk straight past.',
@@ -6433,6 +6459,7 @@ const posts: BlogPost[] = [
   {
     slug: 'allowance-vs-commission',
     title: 'Allowance vs Commission vs Paid Jobs: How to Teach Kids About Money',
+    seoTitle: 'Allowance vs Commission vs Paid Jobs for Kids',
     excerpt: 'Pure allowance breeds entitlement. Pure commission turns family relationships into a payroll. Here is the hybrid model that actually teaches kids how money works, with rules of thumb by age.',
     hook: 'A kid who gets paid for every dish they wash is learning the wrong lesson about being part of a family.',
     category: 'real-world-skills',
@@ -6653,6 +6680,7 @@ const posts: BlogPost[] = [
   {
     slug: 'bird-watching-with-kids',
     title: 'Bird Watching With Kids: A Beginner\'s Guide That Doesn\'t Require Expert Knowledge',
+    seoTitle: 'Bird Watching With Kids: A Beginner\'s Guide for Families',
     excerpt: 'Bird watching is the easiest way into nature observation with kids because the birds come to you. Here is exactly what you need (almost nothing), how to identify the 10 most common backyard birds, and how to make it stick when attention spans are short.',
     hook: 'You do not have to know a single bird to start bird watching with your kid. Curiosity beats knowledge every time.',
     category: 'nature-learning',
@@ -6875,6 +6903,7 @@ const posts: BlogPost[] = [
   {
     slug: 'engineering-for-kids',
     title: 'Engineering for Kids: 20 Hands-On Projects You Can Do Without a Kit',
+    seoTitle: 'Engineering for Kids: 20 Hands-On Projects, No Kit Needed',
     excerpt: 'Engineering for kids is about solving real problems with real materials. Twenty hands-on projects sorted by complexity, with no kit, no special tools, and the cardboard you already have in the recycling.',
     metaDescription: 'Engineering activities for kids: 20 hands-on projects by age, plus 8 quick challenges with a number to beat. No kit, no special tools, just the recycling.',
     hook: 'Most engineering projects for kids do not need a kit. They need a real problem and a roll of tape.',
@@ -7108,6 +7137,7 @@ const posts: BlogPost[] = [
   {
     slug: 'lego-stem-activities',
     title: 'LEGO STEM Activities: 15 Build Challenges That Teach Real Engineering',
+    seoTitle: 'LEGO STEM Activities: 15 Real Engineering Challenges',
     excerpt: 'Your kid already owns the best engineering kit ever made. Here are 15 LEGO STEM challenges, sorted by age, that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     metaDescription: '15 LEGO STEM challenges sorted by age that turn the pile in the living room into real practice in design, physics, and problem-solving.',
     hook: 'Following a LEGO set is sequencing. Free-building from a bin with constraints is engineering. Most kids never get to do the second one.',
@@ -7410,6 +7440,7 @@ const posts: BlogPost[] = [
   {
     slug: 'critical-thinking-for-kids',
     title: 'Critical Thinking for Kids: How to Raise a Kid Who Thinks for Themselves',
+    seoTitle: 'Critical Thinking for Kids: Raise a Kid Who Thinks',
     excerpt: 'Critical thinking is the skill underneath every other skill. Here is what it actually looks like in kids ages 6 to 14, three questions to practice every day, and activities that build it without turning dinner into a philosophy lecture.',
     hook: 'Your kid will live in a world where AI writes the essays and algorithms pick the answers. The only edge left is the ability to think.',
     category: 'future-ready-skills',
@@ -7580,6 +7611,7 @@ const posts: BlogPost[] = [
   {
     slug: 'what-to-do-when-kids-say-im-bored',
     title: 'What to Do When Your Kid Says "I’m Bored" (And Why You Should Almost Never Fix It)',
+    seoTitle: 'What to Do When Your Kid Says "I\'m Bored" (Don\'t Fix It)',
     excerpt: 'Boredom is not a problem to solve. It is where creativity, independence, and self-direction actually come from. Here is why you should resist the urge to fix it, the one phrase that ends the negotiation, and what boredom looks like by age.',
     hook: 'The next time your kid says they are bored, try the response almost no parent gives: nothing.',
     category: 'future-ready-skills',
@@ -7684,6 +7716,7 @@ const posts: BlogPost[] = [
   {
     slug: 'financial-literacy-for-kids-by-age',
     title: 'Financial Literacy for Kids: What to Teach at Every Age (6 to 14)',
+    seoTitle: 'Financial Literacy for Kids: What to Teach by Age',
     excerpt: 'Most kids leave school never having managed real money. Here is the by-age guide to financial literacy, what to teach at 6 to 8, 9 to 11, and 12 to 14, the four-jar foundation, how much allowance to give, and why the best money lessons cost your kid a little money.',
     hook: 'Schools spend years on algebra and almost no time on money. So the job of raising a financially capable kid lands on you. Here is the map.',
     category: 'real-world-skills',
@@ -7802,6 +7835,7 @@ const posts: BlogPost[] = [
   {
     slug: 'back-to-homeschool-routines',
     title: 'Back-to-Homeschool Routines: How to Ease Into a New Year (Without the Meltdown)',
+    seoTitle: 'Back-to-Homeschool Routines: Ease Into a New Year',
     excerpt: 'Restarting homeschool after summer is harder than it looks, because you are the one rebuilding the rhythm from scratch. Here is how to ease back in over a week, why a routine beats a schedule, and what a back-to-homeschool day can actually look like.',
     hook: 'The hardest part of a new homeschool year is not the curriculum. It is getting everyone, including you, back into a rhythm after a summer of none.',
     category: 'homeschool-journey',
@@ -7899,6 +7933,7 @@ const posts: BlogPost[] = [
   {
     slug: 'first-day-of-homeschool',
     title: 'First Day of Homeschool: 15 Ideas and Traditions Worth Starting',
+    seoTitle: 'First Day of Homeschool: 15 Ideas and Traditions',
     metaDescription: 'First day of homeschool ideas and traditions: a first-day interview, a sign photo, family goals, a keepsake to start. Plus permission to keep it low-key.',
     excerpt: 'The first day of homeschool is a chance to set the tone for the whole year, and it does not have to look anything like the first day of school. Here are 15 ideas, traditions, and keepsakes to make it feel special, plus permission to keep it low-key.',
     hook: 'The first day of homeschool is not about a perfect photo for the internet. It is a small ritual that tells your kids: this year is going to be good.',
@@ -8000,6 +8035,7 @@ const posts: BlogPost[] = [
   {
     slug: 'homeschool-morning-basket',
     title: 'Homeschool Morning Basket: What It Is and What to Put in Yours',
+    seoTitle: 'Homeschool Morning Basket: What It Is and What Goes In',
     excerpt: 'A morning basket is the gentlest, most connective way to start a homeschool day: a gathered time where the family learns together from a collection of good things. Here is what it is, why it works, what to put in yours, and a simple routine to follow.',
     hook: 'The best twenty minutes of our homeschool day happen on the couch, before anyone opens a single workbook.',
     category: 'homeschool-journey',
@@ -8197,6 +8233,7 @@ const posts: BlogPost[] = [
   {
     slug: 'how-to-raise-independent-kids',
     title: 'How to Raise an Independent Kid (Without It Feeling Reckless)',
+    seoTitle: 'How to Raise an Independent Kid Without It Feeling Reckless',
     excerpt: 'Independence is not an event you schedule; it is a thousand small handovers over years. Here is how to raise a capable, self-reliant kid by age, why we have over-supervised a whole generation, and how to quiet your own fear enough to let them try.',
     metaDescription: 'How to raise an independent kid by age, why a whole generation has been over-supervised, and how to quiet your own fear enough to let them try.',
     hook: 'We have raised the most supervised generation in history, then wondered why our kids cannot do anything on their own. It does not have to be this way.',
@@ -8428,6 +8465,7 @@ const posts: BlogPost[] = [
   {
     slug: 'teaching-empathy-to-kids',
     title: 'Teaching Empathy to Kids: 15 Real-Life Ways That Actually Stick',
+    seoTitle: 'Teaching Empathy to Kids: 15 Real-Life Ways',
     excerpt: 'You cannot lecture a kid into empathy, but you can absolutely build it. Here is what empathy really is, why it is caught as much as taught, 15 real-life ways to grow it, and what it looks like at every age.',
     hook: 'You can tell a kid to be kind a thousand times and change nothing. Empathy is not taught with words. It is built with experiences.',
     category: 'future-ready-skills',
@@ -8560,6 +8598,7 @@ const posts: BlogPost[] = [
   {
     slug: 'communication-skills-for-kids',
     title: 'Communication Skills for Kids: How to Raise a Kid Who Can Actually Talk to People',
+    seoTitle: 'Communication Skills for Kids: How to Teach Them at Home',
     excerpt: 'If you order for your kid at restaurants, this one is for you. Communication is a set of learnable skills, and the way kids build them is by doing them. Here is what to teach, real scripts for the hard moments, and how it grows at every age.',
     hook: 'The fastest way to raise a kid who cannot talk to people is to do all the talking for them. The fix is simple, and a little uncomfortable.',
     category: 'future-ready-skills',
@@ -8681,6 +8720,7 @@ const posts: BlogPost[] = [
   {
     slug: 'when-should-kids-get-a-phone',
     title: 'When Should Kids Get a Phone? A Real Framework (Not a Number)',
+    seoTitle: 'When Should Kids Get a Phone? A Real Framework',
     excerpt: 'Everyone in your kid’s grade has a phone. That does not mean yours needs one. Here is why readiness matters more than age, the three signals that actually count, the basic-phone middle path, and a real phone contract you can use.',
     hook: 'The question is not what age your kid should get a phone. It is whether they are ready, and those are very different things.',
     category: 'ai-digital-literacy',
@@ -9257,6 +9297,7 @@ const posts: BlogPost[] = [
   {
     slug: 'build-a-museum-exhibit-at-home',
     title: "How to Build a Museum Exhibit at Home: A Kids' Curation Project",
+    seoTitle: 'How to Build a Museum Exhibit at Home With Kids',
     excerpt: 'How to create a museum at home with your kid: pick a topic they will not stop talking about, research it, choose the six objects that earn a spot, write the labels, design the room, and open the doors to real visitors. Research, writing, design, and public speaking in one project, for ages 6 to 14.',
     metaDescription: 'How to build a museum exhibit at home: pick the topic, research and gather, build the displays, write the labels, test it, host the opening. Ages 6 to 14.',
     hook: 'Your kid already has a topic they will not stop talking about. Hand them a table and six index cards and let them turn it into a museum.',
