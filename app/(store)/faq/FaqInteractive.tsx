@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 
 interface FaqItem {
   question: string;
@@ -61,7 +62,7 @@ export default function FaqInteractive({ groups }: Props) {
   return (
     <>
       {/* SEARCH BAR */}
-      <div className="sticky top-[65px] md:top-[73px] z-40 bg-cream/95 backdrop-blur-sm border-y border-[#D8D4C5]">
+      <div className="sticky top-[65px] md:top-[73px] z-40 bg-[#F2EFE4]/95 backdrop-blur-sm">
         <div className="mx-auto max-w-[1180px] px-6">
           <div className="py-4 flex justify-center">
             <label className="relative w-full max-w-[540px]">
@@ -86,7 +87,7 @@ export default function FaqInteractive({ groups }: Props) {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search questions..."
                 aria-label="Search questions"
-                className="w-full appearance-none border-0 bg-[#F2EFE4] rounded-full pl-12 pr-12 py-3.5 text-[15.5px] text-ink outline-none focus:bg-cream focus:shadow-[0_0_0_1px_var(--color-forest),0_0_0_4px_rgba(88,129,87,0.18)] transition-all"
+                className="w-full appearance-none border-0 bg-white rounded-full pl-12 pr-12 py-3.5 shadow-[0_8px_18px_-12px_rgba(45,58,46,0.5)] text-[15.5px] text-ink outline-none focus:bg-cream focus:shadow-[0_0_0_1px_var(--color-forest),0_0_0_4px_rgba(88,129,87,0.18)] transition-all"
               />
               {query && (
                 <button
@@ -104,21 +105,21 @@ export default function FaqInteractive({ groups }: Props) {
       </div>
 
       {/* CATEGORY PILLS */}
-      <div className="border-b border-[#D8D4C5]">
+      <div>
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="flex flex-wrap justify-center gap-2.5 py-6">
+          <div className="flex flex-wrap justify-center gap-2.5 pb-4 pt-2">
             {groups.map((g) => (
               <a
                 key={g.id}
                 href={`#${g.id}`}
-                className="inline-flex items-center bg-[#F2EFE4] text-ink font-medium text-[13.5px] px-4 py-2 rounded-full hover:bg-[#E6EBDF] hover:text-forest-dark hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center bg-white text-ink font-medium text-[13.5px] px-4 py-2 rounded-full shadow-[0_4px_10px_-6px_rgba(45,58,46,0.35)] hover:text-forest-dark hover:-translate-y-0.5 transition-all"
               >
                 {g.eyebrow}
               </a>
             ))}
             <a
               href="#section-still"
-              className="inline-flex items-center bg-[#F2EFE4] text-ink font-medium text-[13.5px] px-4 py-2 rounded-full hover:bg-[#E6EBDF] hover:text-forest-dark hover:-translate-y-0.5 transition-all"
+              className="inline-flex items-center bg-white text-ink font-medium text-[13.5px] px-4 py-2 rounded-full shadow-[0_4px_10px_-6px_rgba(45,58,46,0.35)] hover:text-forest-dark hover:-translate-y-0.5 transition-all"
             >
               Still have questions?
             </a>
@@ -145,29 +146,25 @@ export default function FaqInteractive({ groups }: Props) {
 
       {/* FAQ SECTIONS — each section gets a distinct background to break the pattern */}
       {filteredGroups.map((g, i) => {
-        const bgClass = [
-          'bg-[#E6EBDF] border-y border-[#C9D3BE]',
-          'bg-cream',
-          'bg-[#F2EFE4] border-y border-[#D8D4C5]',
-          'bg-cream',
-        ][i % 4];
+        const tabColor = ['#588157', '#C97B5C', '#B6913F', '#3A5A40'][i % 4];
         return (
           <section
             key={g.id}
             id={g.id}
-            className={`scroll-mt-[180px] py-16 md:py-20 ${bgClass}`}
+            className="scroll-mt-[180px] px-4 py-6 sm:px-6 md:py-8"
           >
-            <div className="mx-auto max-w-[760px] px-6 mb-8">
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
-                <span className="w-[22px] h-px bg-forest inline-block" />
-                {g.eyebrow}
-              </p>
-              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.625rem)] leading-[1.08] tracking-tight mt-4 text-balance">
+            <div className="mx-auto max-w-[820px]">
+            <span className="ml-6 inline-block rounded-t-[10px] px-4 pb-2 pt-2.5 text-[12.5px] font-semibold text-white" style={{ background: tabColor }}>
+              {`${g.items.length} ${g.items.length === 1 ? 'question' : 'questions'}`}
+            </span>
+            <div className={`rounded-b-[6px] border-t-[5px] bg-[#FFFDF8] pb-6 pt-8 ${PAPER_SHADOW}`} style={{ borderColor: tabColor, transform: `rotate(${i % 2 ? 0.3 : -0.3}deg)` }}>
+            <div className="px-6 md:px-10 mb-5">
+              <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.3rem)] leading-[1.08] tracking-tight text-balance">
                 {g.title}{' '}
                 <span className="italic text-forest">{g.titleAccent}</span>
               </h2>
             </div>
-            <div className="mx-auto max-w-[760px] px-6">
+            <div className="px-6 md:px-10">
               {g.items.map((item, idx) => {
                 const key = `${g.id}-${idx}`;
                 const isOpen = openKey === key;
@@ -196,8 +193,10 @@ export default function FaqInteractive({ groups }: Props) {
                         +
                       </span>
                     </button>
-                    {isOpen && (
-                      <div className="pb-6 text-gray-600 text-[16.5px] leading-[1.7] max-w-[660px]">
+                    {/* Always rendered, hidden when closed, so the answers are in
+                        the page HTML for search engines, not only in the JSON-LD. */}
+                    {(
+                      <div hidden={!isOpen} className="pb-6 text-gray-600 text-[16.5px] leading-[1.7] max-w-[660px]">
                         {item.answer.split('\n\n').map((p, pi) => (
                           <p key={pi} className={pi > 0 ? 'mt-2.5' : ''}>
                             {renderAnswer(p)}
@@ -209,6 +208,8 @@ export default function FaqInteractive({ groups }: Props) {
                 );
               })}
             </div>
+            </div>
+            </div>
           </section>
         );
       })}
@@ -216,18 +217,11 @@ export default function FaqInteractive({ groups }: Props) {
       {/* STILL HAVE QUESTIONS — distinct CTA card on cream so it breaks the section pattern */}
       <section
         id="section-still"
-        className="bg-cream py-20 md:py-24 scroll-mt-[180px]"
+        className="px-4 pb-16 pt-10 sm:px-6 scroll-mt-[180px]"
       >
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="relative max-w-[760px] mx-auto bg-gradient-to-br from-[#F2DECF] to-[#E8C8AE] border border-[rgba(201,123,92,0.35)] rounded-[20px] p-10 md:p-14 text-center shadow-[0_28px_50px_-32px_rgba(201,123,92,0.45)] overflow-hidden">
-            <span
-              aria-hidden="true"
-              className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-white/40 blur-2xl"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-forest/10 blur-3xl"
-            />
+          <div className={`relative max-w-[700px] mx-auto -rotate-1 bg-[#FBF3DC] p-10 pt-12 md:p-12 md:pt-14 text-center ${PAPER_SHADOW}`}>
+            <Magnet color="#C97B5C" size={26} />
             <div className="relative">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />

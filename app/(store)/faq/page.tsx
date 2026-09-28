@@ -67,9 +67,9 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageLd) }}
       />
-      <main>
+      <main className="bg-[#F2EFE4]">
         {/* PAGE HEADER */}
-        <header className="bg-cream pt-12 md:pt-16 pb-12 md:pb-14 text-center">
+        <header className="pt-12 md:pt-16 pb-6 md:pb-8 text-center">
           <div className="mx-auto max-w-[760px] px-6">
             <ScrollReveal immediate>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
