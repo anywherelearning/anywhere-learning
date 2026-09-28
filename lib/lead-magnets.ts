@@ -1,4 +1,5 @@
 import { getListBySlug, getListByBlogSlug } from '@/lib/ideas';
+import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
 import type { BlogContentBlock } from '@/lib/blog';
 import type { ResourceTopic } from '@/lib/resources';
 
@@ -64,6 +65,10 @@ const FREE_GUIDE: LeadMagnet = {
 function ideasMagnet(listSlug: string): LeadMagnet | null {
   const found = getListBySlug(listSlug);
   if (!found) return null;
+  // No printable yet means nothing to send, and /api/subscribe rejects the
+  // signup. A new list can go live as a page first; its posts keep their old
+  // offer until the PDF is registered in lib/idea-list-pdfs.
+  if (!getIdeaListPdfUrls(found.list.slug)) return null;
   return {
     kind: 'ideas',
     slug: found.list.slug,
@@ -135,7 +140,8 @@ function resolve(choice: string | 'capable-kid' | 'free-guide' | undefined): Lea
 /** The single free offer for a blog post. */
 export function getLeadMagnetForPost(post: { slug: string; category: string }): LeadMagnet {
   const direct = getListByBlogSlug(post.slug);
-  if (direct) return ideasMagnet(direct.list.slug) ?? FREE_GUIDE;
+  const directMagnet = direct ? ideasMagnet(direct.list.slug) : null;
+  if (directMagnet) return directMagnet;
   return resolve(POST_OVERRIDES[post.slug] ?? CATEGORY_DEFAULT[post.category]);
 }
 

@@ -2547,6 +2547,8 @@ const posts: BlogPost[] = [
   {
     slug: 'media-literacy-kids',
     title: 'Media Literacy for Kids: How to Raise Critical Thinkers in a Digital World',
+    seoTitle: 'Media Literacy for Kids: How to Teach It at Home by Age',
+    metaDescription: 'How to teach media literacy at home, ages 5 to 13: spotting ads, fake news and AI images, with simple family habits by age. No lectures, no cynicism.',
     excerpt: 'Your kids are swimming in content, ads, videos, AI-generated images, influencer posts, and \u201cnews\u201d that isn\u2019t. Here\u2019s how to teach them to evaluate what they see and think critically about all of it.',
     hook: 'Your kid\u2019s favourite YouTuber says it\u2019s \u201cthe best slime in the world.\u201d Do they know who paid for that opinion?',
     category: 'ai-digital-literacy',
@@ -2709,13 +2711,14 @@ const posts: BlogPost[] = [
   {
     slug: 'invent-a-sport-kids',
     title: 'How to Invent a New Sport: A Kids\u2019 Project, Rules to Playtest',
+    seoTitle: 'How to Invent a New Sport With Kids, Step by Step',
     metaDescription: 'How to invent a sport with kids, step by step: pick the goal, write the rules, build the scoring, playtest with the family and fix what breaks. Ages 6 to 14.',
     excerpt: 'Inventing rules, negotiating fairness, and playtesting their own game teaches more than any PE class, and it\u2019s the kind of learning kids never forget.',
     hook: 'Give kids a trampoline, a ball, and no rules. They\u2019ll invent a sport with a scoring system adults can\u2019t follow, and that\u2019s the point.',
     category: 'creativity-maker',
     pillarSlug: 'creativity-maker-activities',
     publishedAt: '2025-12-09',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-28',
     keywords: ['how to invent a sport', 'invent a new sport', 'create a new sport', 'how to make a sport', 'new sport ideas', 'invent a sport kids', 'kids create games', 'homeschool physical education', 'game design PE', 'creative play learning', 'outdoor games kids create'],
     readTimeMinutes: 9,
     author: amelie,
@@ -2781,6 +2784,7 @@ const posts: BlogPost[] = [
       { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you real-world activities your kids can try this week. No curriculum, low prep.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How do you invent a new sport?', answer: 'Start with what the sport is for (a goal, a race, a target), pick the equipment you already own, write three rules and a way to score, then play it for ten minutes and change the one rule that made it boring or unfair. The playtest is the whole lesson: kids learn that rules exist to make a game work, not to be obeyed.' },
+        { question: 'What are some new sport ideas kids can invent?', answer: 'Start from a game they already know and change one thing: the ball, the goal, the number of players, or the way you score. Soccer with a pool noodle for a goal, tag where the \u201cit\u201d player has to carry a full cup of water, or bowling where distance scores instead of pins are all real starting points. The sport gets good in the playtest, when the first rule breaks and the kids have to fix it.' },
         { question: 'What if my kids just argue and never actually play?', answer: 'The arguing IS the learning. Give them time to work it out. If it escalates beyond productive disagreement, step in briefly to model negotiation: \u201cIt sounds like you both have different ideas. Can you try each version for 5 minutes and see which is more fun?\u201d Then step back again.' },
         { question: 'Does inventing a sport count as PE for homeschooling?', answer: 'Absolutely. Invented sports involve running, throwing, jumping, balancing, and sustained physical activity. Plus they add design thinking, rule-making, and social problem-solving that traditional PE often misses. Many homeschool families document invented games as both PE and creative thinking.' },
         { question: 'What if my child wants to play alone, can they still invent a sport?', answer: 'Yes! Solo sports and challenges are just as valuable. Think target games, obstacle courses, timed challenges, trick shot competitions (against their own record), or endurance challenges. The design thinking is the same; they\u2019re still creating rules, testing, and iterating.' },
@@ -3035,6 +3039,8 @@ const posts: BlogPost[] = [
   {
     slug: 'imaginary-worlds-kids',
     title: 'Why Building Imaginary Worlds Is Serious Learning',
+    seoTitle: 'Worldbuilding for Kids: How to Build an Imaginary World',
+    metaDescription: 'Worldbuilding for kids 6 to 14: how to start an imaginary world with maps, rules and history, and the writing, math and geography hiding inside it.',
     excerpt: 'Worldbuilding develops writing, logic, geography, history, and systems thinking, and your kids might already be doing it without you realising.',
     hook: 'An island divided into Candyland, Sportland, and Woodland, each with its own laws. That\u2019s not a doodle. That\u2019s systems thinking.',
     category: 'creativity-maker',
@@ -6477,7 +6483,7 @@ const posts: BlogPost[] = [
         'Ages 11 to 13: $10 to $20 per week base, paid jobs $5 to $20. This is where bigger jobs make sense. Detail the car for $20. Paint a fence for $40.',
         'Ages 14 and up: a small base if any, real outside work becomes the main source. Babysitting, lawn care, dog walking, small online side projects. Your job shifts to teaching them about taxes, banking, and decision-making on bigger sums.',
       ] },
-      { type: 'paragraph', text: 'A rough heuristic that holds up: a base allowance of about $0.50 to $1 per year of age, per week, plus a paid-jobs board for anything above that. Adjust to your budget. Less is fine. More is fine. Consistency matters more than the amount. Once the money starts flowing, real-world practice with it matters more than the dollar amount, which is why we pair this with hands-on activities from our [real-world math activities post](/blog/real-world-math-activities) (unit pricing, budgeting at the store, percentage discounts).' },
+      { type: 'paragraph', text: 'A rough heuristic that holds up: a base allowance of about $0.50 to $1 per year of age, per week, plus a paid-jobs board for anything above that. Adjust to your budget. Less is fine. More is fine. Consistency matters more than the amount. Once the money starts flowing, real-world practice with it matters more than the dollar amount, which is why we pair this with hands-on activities from our [real-world math activities post](/blog/real-world-math-activities) (unit pricing, budgeting at the store, percentage discounts). Past the jobs board, a kid who wants more can start something of their own: the [kid business ideas checklist](/ideas/kid-business-ideas) sorts twenty by age.' },
 
       { type: 'heading', level: 2, text: 'Save, spend, give: the three-jar approach' },
       { type: 'paragraph', text: 'Once money is coming in, the next move is teaching what to do with it. The simplest framework, which scales from age 5 to age 25, is the three-jar split. Every dollar that comes in gets divided into three categories the kid chooses about.' },
@@ -8952,7 +8958,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'At home, it scales down beautifully to one kid and a couple of parent-sharks at the kitchen table. You lose the class audience but you gain focus and one-on-one coaching, and you can stretch it across a lazy week or knock out a lighter version in an afternoon. Either way, the core learning is identical.' },
 
       { type: 'heading', level: 2, text: 'Take it further: a real micro-business' },
-      { type: 'paragraph', text: 'For the kid who catches fire, do not stop at the pretend pitch. Let them actually build the thing. A real lemonade stand, a small craft business, a service for neighbors. Turning a Shark Tank pitch into an actual [micro-business](/blog/micro-business) is where the biggest learning lives, because now the numbers are real and the customers are real. Some of the most capable teenagers you will meet started exactly here.' },
+      { type: 'paragraph', text: 'For the kid who catches fire, do not stop at the pretend pitch. Let them actually build the thing. A real lemonade stand, a small craft business, a service for neighbors. Turning a Shark Tank pitch into an actual [micro-business](/blog/micro-business) is where the biggest learning lives, because now the numbers are real and the customers are real. Some of the most capable teenagers you will meet started exactly here. If they need a starting point, the [kid business ideas checklist](/ideas/kid-business-ideas) has twenty real ones sorted by age, each with the number to work out first.' },
 
       { type: 'cta', text: 'Want more real-world projects that teach the skills school skips, with almost no prep? Our free guide is full of hands-on activities you can run this week, at home or in a classroom.', href: '/free-guide', label: 'Get the Free Guide' },
 
@@ -9202,7 +9208,7 @@ const posts: BlogPost[] = [
       { type: 'pull-quote', text: 'Small is fine. Real is required.' },
 
       { type: 'heading', level: 2, text: 'Take it further' },
-      { type: 'paragraph', text: 'If the fix turns out to be a service people would pay for, the snow crew or the tech hour, you are one step from a [kid-run business, Shark Tank style](/blog/shark-tank-for-kids). If the hardest part was the phone call, the [communication skills post](/blog/communication-skills-for-kids) has the practice for that. And if the project stalled at step 4 because they could not choose, [decision-making by age](/blog/decision-making-skills-kids) is the underlying skill. For the why behind all of it, see [teaching empathy to kids](/blog/teaching-empathy-to-kids): this is empathy with a to-do list.' },
+      { type: 'paragraph', text: 'If the fix turns out to be a service people would pay for, the snow crew or the tech hour, you are one step from a [kid-run business, Shark Tank style](/blog/shark-tank-for-kids), and the [kid business ideas checklist](/ideas/kid-business-ideas) has twenty more services and products sorted by age. If the hardest part was the phone call, the [communication skills post](/blog/communication-skills-for-kids) has the practice for that. And if the project stalled at step 4 because they could not choose, [decision-making by age](/blog/decision-making-skills-kids) is the underlying skill. For the why behind all of it, see [teaching empathy to kids](/blog/teaching-empathy-to-kids): this is empathy with a to-do list.' },
       { type: 'cta', text: 'Want more real-world projects that carry the academics inside them, with almost no prep? Our free guide is a week of them.', href: '/free-guide', label: 'Get the Free Guide' },
 
       { type: 'faq', items: [

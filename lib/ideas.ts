@@ -530,6 +530,54 @@ export const IDEAS_DATA: IdeaCategory[] = [
         ],
       },
       {
+        slug: 'kid-business-ideas',
+        blogSlug: 'shark-tank-for-kids',
+        title: 'Kid Business Ideas: 20 Real Ones, Sorted by Age',
+        cardExcerpt:
+          'Twenty businesses a kid can really start this month, each with the one number to work out before day one.',
+        published: '2026-09-28',
+        updated: '2026-09-28',
+        intro:
+          'This free checklist has 20 kid business ideas for ages 6 to 14, sorted into three age bands, and each one comes with the one number your kid has to work out before day one: what it costs, what to charge, or how many sales it takes to break even. That number is where the math lives. Every idea runs from home or the neighbourhood with a parent close by, and none of them need a kit.',
+        sections: [
+          {
+            name: 'Ages 6-8 (with a parent close by)',
+            items: [
+              'Lemonade or iced tea stand: cost per cup, and how many cups before you break even',
+              'Seedling table from seeds you started: cost per pot vs. the garden centre price',
+              'Neighbour car wash: how long one car takes, so you know what an hour earns',
+              'Hand-painted rocks or bookmarks on a market table: materials for ten, and the price that still sells',
+              'Dog-walking helper with a parent on the route: price per walk and walks per week',
+            ],
+          },
+          {
+            name: 'Ages 9-11',
+            items: [
+              'Pet-sitting visits while neighbours travel: price per visit, and the time each one takes',
+              'Leaf raking or snow shovelling route: how many driveways fit in one Saturday',
+              'Weeding and garden tidying: charge per job or per hour, and which one pays better',
+              'Baking to order from a weekly menu: ingredient cost per batch, then per cookie',
+              'Bottle and can returns from neighbours, where there is a deposit: refund per container, and how many bags make the trip worth it',
+              'Party helper for younger kids\u2019 birthdays (games, face paint): supplies per party and the price per party',
+              'Garage sale and thrift flips: buy price plus fix-up cost vs. what it resells for',
+              'Handmade items sold online through a parent\u2019s account: what fees and shipping take, and what is left',
+            ],
+          },
+          {
+            name: 'Ages 12-14',
+            items: [
+              'Tech help for older neighbours (phones, email, video calls): charge per hour or per visit',
+              'Tutoring or reading buddy for younger kids: hourly rate and sessions per week',
+              'Babysitting or mother\u2019s helper after a first aid course: the course cost, and the hours it takes to earn it back',
+              'Bike tune-ups (tires, chains, brakes): parts cost vs. what the bike shop charges for the same job',
+              'Pet or family photo sessions: hours per session including editing, and what locals charge',
+              'Hand-printed t-shirts or tote bags: cost per blank, and the smallest order worth setting up for',
+              'Mini day camp for younger neighbourhood kids: how many kids it takes to cover supplies and snacks',
+            ],
+          },
+        ],
+      },
+      {
         slug: 'history-ideas',
         blogSlug: 'real-world-history-for-kids',
         title: '11 Family History Activities for Kids',

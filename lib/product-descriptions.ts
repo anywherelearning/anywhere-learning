@@ -688,6 +688,15 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Communication', where: 'Writing a rulebook clear enough that others can play without asking' },
       ],
     },
+    // Sept 28 2026: the product page (639 impr at 8.0) and the post shared
+    // nearly the same title and split ~240 "how to invent a sport" impressions.
+    // The post takes the how-to searcher; this page speaks to the parent who
+    // wants the guide.
+    seo: {
+      title: 'Invent a Sport: Parent-Led Project Guide for Kids 6-14',
+      description:
+        'The guide your family follows to invent a sport: design the game, build equipment from household stuff, write the rulebook, playtest. Ages 6 to 14.',
+    },
     format: 'Project Guide',
   },
   'kinetic-sculpture': {
