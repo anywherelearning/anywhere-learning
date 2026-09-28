@@ -82,7 +82,7 @@ export default async function SignInPage() {
       <div className="absolute left-0 right-0 bottom-6 text-center z-10">
         <Link
           href="/"
-          className="text-[13px] text-gray-500 font-body border-b border-dashed border-[#C9C5B7] pb-0.5 hover:text-forest-dark hover:border-forest transition-colors"
+          className="text-[13px] text-gray-500 font-body border-b border-dashed border-[#C9C5B7] pb-0.5 hover:text-forest-dark hover:border-forest transition-colors relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
         >
           &larr; Back to home
         </Link>

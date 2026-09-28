@@ -568,7 +568,7 @@ export default function CustomSignInForm() {
                   New here?{' '}
                   <Link
                     href={signUpHref}
-                    className="text-forest-dark font-semibold border-b border-forest/25 hover:text-forest hover:border-forest transition-colors"
+                    className="text-forest-dark font-semibold border-b border-forest/25 hover:text-forest hover:border-forest transition-colors relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
                   >
                     Create your account
                   </Link>
@@ -684,7 +684,7 @@ function DefaultForm({
             <button
               type="button"
               onClick={onForgot}
-              className="font-body text-[12.5px] text-gray-500 border-b border-dashed border-[#C9C5B7] pb-px hover:text-forest-dark hover:border-forest transition-colors bg-transparent cursor-pointer"
+              className="font-body text-[12.5px] text-gray-500 border-b border-dashed border-[#C9C5B7] pb-px hover:text-forest-dark hover:border-forest transition-colors bg-transparent cursor-pointer relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
             >
               Forgot password?
             </button>
@@ -720,7 +720,7 @@ function DefaultForm({
           type="button"
           onClick={onSendCode}
           disabled={pending}
-          className="text-forest-dark font-semibold bg-transparent border-0 cursor-pointer hover:text-forest transition-colors"
+          className="text-forest-dark font-semibold bg-transparent border-0 cursor-pointer hover:text-forest transition-colors relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
         >
           Email me a code instead
         </button>

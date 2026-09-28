@@ -27,9 +27,10 @@ import {
 } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: 'All Activities: Real-World Learning for Kids Ages 6 to 14',
+  // Absolute so the site suffix doesn't push it past the SERP cutoff
+  title: { absolute: 'All Activities: Real-World Learning for Kids 6 to 14' },
   description:
-    'Every hands-on, real-world activity for kids ages 6 to 14, in one membership. The academics and the life skills arrive in the same task: plan a party and that is fractions and budgeting. Designed by a teacher for families who want learning that sticks.',
+    'Every hands-on, real-world activity for kids 6 to 14, in one membership. The academics and life skills arrive in the same task. Designed by a teacher.',
   alternates: { canonical: 'https://anywherelearning.co/shop' },
   openGraph: {
     title: 'All Activities: Real-World Learning for Kids Ages 6 to 14 | Anywhere Learning',
@@ -612,7 +613,7 @@ export default function ShopPage() {
                           <div className="flex items-center gap-4 flex-wrap">
                             <BrowseAllLink
                               track={t.category}
-                              className="font-semibold text-[13.5px] border-b border-current pb-[1px] opacity-85 hover:opacity-100 transition-opacity"
+                              className="font-semibold text-[13.5px] border-b border-current pb-[1px] opacity-85 hover:opacity-100 transition-opacity relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
                               style={{ color: t.deep }}
                             >
                               Browse all {count} &rarr;

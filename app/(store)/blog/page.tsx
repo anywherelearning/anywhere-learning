@@ -51,7 +51,9 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
       : BLOG_TITLE;
 
   return {
-    title,
+    // The main blog title is absolute so the site suffix doesn't push it
+    // past the SERP cutoff; category and page titles keep the suffix.
+    title: title === BLOG_TITLE ? { absolute: BLOG_TITLE } : title,
     description: BLOG_DESCRIPTION,
     alternates: { canonical },
     openGraph: {

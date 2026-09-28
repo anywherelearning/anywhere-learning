@@ -6,12 +6,12 @@ import Testimonials from '@/components/home/Testimonials';
 import { JOIN_CTA_LABEL, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 
 const ABOUT_DESC =
-  "I'm Amelie, former teacher (B.Ed, M.Ed, 15 years) and mom of two. I watched kids become less independent over 15 years in the classroom. Anywhere Learning is the hands-on, real-world activities I built so any parent can change that.";
+  "I'm Amelie, a former teacher (B.Ed, M.Ed, 15 years) and mom of two. Anywhere Learning is the real-world activities I built so any parent can do this at home.";
 const ABOUT_URL = 'https://anywherelearning.co/about';
 const ABOUT_OG_IMAGE = 'https://anywherelearning.co/about-hero-amelie.jpeg';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: { absolute: 'About Amelie: Former Teacher and Founder | Anywhere Learning' },
   description: ABOUT_DESC,
   alternates: { canonical: ABOUT_URL },
   openGraph: {

@@ -549,7 +549,7 @@ export default async function HomePage() {
                 </div>
                 <Link
                   href="/about"
-                  className="text-base font-semibold text-forest transition-colors hover:text-forest-dark"
+                  className="text-base font-semibold text-forest transition-colors hover:text-forest-dark relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
                 >
                   Read my full story &rarr;
                 </Link>

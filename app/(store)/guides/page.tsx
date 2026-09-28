@@ -7,9 +7,10 @@ import { getAllResources, resourceTopics, type ResourcePage } from '@/lib/resour
 import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 
 export const metadata: Metadata = {
-  title: 'Learning Guides for Families: Life Skills, Nature, Creativity & More',
+  // Absolute so the site suffix doesn't push it past the SERP cutoff
+  title: { absolute: 'Learning Guides for Families: Life Skills, Nature & More' },
   description:
-    'In-depth guides on real-world learning, life skills, nature education, creativity, AI literacy, and worldschooling. Written by a former teacher for families who want learning to fit their life.',
+    'In-depth guides on real-world learning, life skills, nature, creativity, AI literacy and worldschooling, written by a former teacher of 15 years.',
   alternates: {
     canonical: 'https://anywherelearning.co/guides',
   },

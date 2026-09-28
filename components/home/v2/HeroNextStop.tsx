@@ -113,7 +113,7 @@ export default function HeroNextStop() {
             <button
               type="button"
               onClick={differentOne}
-              className="underline underline-offset-4 transition-colors hover:text-[#2b2a26]"
+              className="underline underline-offset-4 transition-colors hover:text-[#2b2a26] relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
             >
               Different one
             </button>
@@ -121,7 +121,7 @@ export default function HeroNextStop() {
             <button
               type="button"
               onClick={skipArea}
-              className="underline underline-offset-4 transition-colors hover:text-[#2b2a26]"
+              className="underline underline-offset-4 transition-colors hover:text-[#2b2a26] relative after:absolute after:-inset-x-1 after:-inset-y-3 after:content-['']"
             >
               Skip this area
             </button>

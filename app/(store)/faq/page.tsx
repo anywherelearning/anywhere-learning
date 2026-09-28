@@ -12,7 +12,7 @@ import FaqInteractive from './FaqInteractive';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers about the Anywhere Learning membership: the 14-day free trial, pricing, refunds, ages, and how the real-world activities work for homeschool and worldschool families.',
+    'Answers about the Anywhere Learning membership: the 14-day free trial, pricing, refunds, ages, and how the real-world activities work for any family.',
   alternates: { canonical: 'https://anywherelearning.co/faq' },
 };
 
