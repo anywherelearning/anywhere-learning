@@ -148,6 +148,7 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'board-game-studio': ['board-game-design-kids'],
   'build-a-museum': ['build-a-museum-exhibit-at-home', 'real-world-history-for-kids'],
   'theme-park': ['design-a-theme-park-kids'],
+  'kinetic-sculpture': ['kinetic-sculpture-land-art'],
   'party-planner-math': ['plan-a-party-math-kids', 'real-world-math-activities'],
   'community-impact': ['community-impact-projects-for-kids'],
   'road-trip-calculator': ['road-trip-math', 'real-world-math-activities'],

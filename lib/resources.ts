@@ -481,11 +481,12 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'nature-based-learning',
-    title: 'Nature-Based Learning & Outdoor STEM: A Family Guide',
+    title: 'Nature-Based Learning: What It Is and How Families Do It',
+    metaDescription: 'Nature-based learning explained for parents: what it is, what the research says, and how to do it from a backyard or a city park. No training needed.',
     excerpt: 'How to turn nature walks, seasons, and your backyard into rich learning experiences, backed by research and tested by real families.',
     topic: 'nature-stem',
     publishedAt: '2026-03-21',
-    dateModified: '2026-08-16',
+    dateModified: '2026-09-28',
     keywords: [
       'nature based learning', 'outdoor STEM activities', 'nature learning for kids',
       'outdoor learning for kids', 'nature walks education',
@@ -879,6 +880,11 @@ const resources: ResourcePage[] = [
       {
         type: 'faq',
         items: [
+          {
+            question: 'What is nature-based learning?',
+            answer:
+              'Nature-based learning is any learning that uses the outdoors as the classroom: observing, collecting, measuring, building and asking questions in a real place instead of about one. It is not a curriculum or a program. A backyard, a city park or the walk to the shop counts, and research on green space links it to better attention and lower stress than the same time spent indoors.',
+          },
           {
             question: 'What is outdoor STEM?',
             answer: 'Outdoor STEM is hands-on science, technology, engineering, and math learning that takes place outside, using natural materials and real-world problems instead of worksheets or store-bought kits. Examples include building a bridge across a creek (engineering), measuring a tree\'s height using its shadow (math), testing which natural materials float (physics), and mapping the living things in a single square meter of ground (biology). It turns the outdoors into a working lab where concepts are discovered through problem-solving rather than memorized.',
