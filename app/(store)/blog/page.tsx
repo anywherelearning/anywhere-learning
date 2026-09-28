@@ -184,11 +184,52 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         {/* ── The recipe box: divider tabs, then the cards ── */}
         <section id="blog-grid" className="scroll-mt-[80px] px-3 pb-14 pt-8 sm:px-6 md:scroll-mt-[88px]">
           <div className="mx-auto max-w-[1160px]">
-            {/* Divider tabs: real links, so each category page is one crawlable hop away */}
-            <nav aria-label="Blog categories">
-              {/* Phones: wrapped pills so every topic is visible (a sideways
-                  scroll hid the active one). From sm up: divider tabs on the box. */}
-              <ul className="m-0 flex list-none flex-wrap items-end justify-center gap-1.5 px-3 pb-3 sm:gap-1 sm:px-0 sm:pb-0">
+            {/* Phones: one dropdown. A <details> of real links, so every
+                category stays a crawlable link and it works without JS. */}
+            <details className={`group relative mx-auto mb-4 max-w-[420px] bg-white sm:hidden ${PAPER_SHADOW}`}>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 marker:content-none [&::-webkit-details-marker]:hidden">
+                <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-gray-500">Topic</span>
+                <span className="flex min-w-0 flex-1 items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-2.5 w-2.5 shrink-0 rounded-full"
+                    style={{ background: activeCategory ? blogCategories[activeCategory].color : '#588157' }}
+                  />
+                  <span className="truncate text-[15px] font-semibold text-[#2b2a26]">
+                    {activeCategory ? blogCategories[activeCategory].label : 'All posts'}
+                  </span>
+                </span>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true" className="shrink-0 text-gray-500 transition-transform duration-200 group-open:rotate-180">
+                  <path d="M1 1.5 6 6.5l5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </summary>
+              <ul className="m-0 list-none border-t border-[#E6E0CD] p-1.5">
+                {categoryOptions.map((c) => {
+                  const active = (activeCategory || '') === c.value;
+                  const color = c.value ? blogCategories[c.value as BlogCategory].color : '#588157';
+                  return (
+                    <li key={c.value || 'all'}>
+                      <Link
+                        href={categoryHref(c.value)}
+                        aria-current={active ? 'page' : undefined}
+                        className={`flex items-center gap-2.5 rounded-[6px] px-3 py-2.5 text-[15px] no-underline ${
+                          active ? 'bg-[#F2EFE4] font-semibold text-[#2b2a26]' : 'text-gray-700'
+                        }`}
+                      >
+                        <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: color }} />
+                        <span className="flex-1">{c.label}</span>
+                        <span className="text-[13px] text-gray-400">{c.count}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+
+            {/* From sm up: divider tabs on the box. Real links, so each
+                category page is one crawlable hop away. */}
+            <nav aria-label="Blog categories" className="hidden sm:block">
+              <ul className="m-0 flex list-none flex-wrap items-end justify-center gap-1 p-0">
                 {categoryOptions.map((c) => {
                   const active = (activeCategory || '') === c.value;
                   const color = c.value ? blogCategories[c.value as BlogCategory].color : '#588157';
@@ -197,10 +238,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       <Link
                         href={categoryHref(c.value)}
                         aria-current={active ? 'page' : undefined}
-                        className={`block whitespace-nowrap rounded-full px-3.5 py-1.5 text-[12.5px] font-semibold text-white no-underline transition-all sm:rounded-b-none sm:rounded-t-[10px] sm:px-4 sm:text-[13px] ${
-                          active
-                            ? 'ring-2 ring-[#2b2a26]/50 ring-offset-2 ring-offset-[#E9EEE6] sm:ring-0 sm:pb-3 sm:pt-3'
-                            : 'opacity-80 hover:opacity-100 sm:pb-2 sm:pt-2'
+                        className={`block whitespace-nowrap rounded-t-[10px] px-4 text-[13px] font-semibold text-white no-underline transition-all ${
+                          active ? 'pb-3 pt-3' : 'pb-2 pt-2 opacity-80 hover:opacity-100'
                         }`}
                         style={{ background: color }}
                       >
