@@ -27,6 +27,8 @@ export interface ResourcePage {
   slug: string;
   title: string;
   excerpt: string;
+  /** Search snippet (aim for 155 characters or fewer). Falls back to `excerpt`. */
+  metaDescription?: string;
   topic: ResourceTopic;
   publishedAt: string;
   dateModified?: string;
@@ -937,6 +939,7 @@ const resources: ResourcePage[] = [
     slug: 'worldschooling-guide',
     title: 'How to Start Worldschooling With Kids (Without Quitting Everything)',
     excerpt: 'You don\'t need to sell the house to worldschool. Here\'s how families combine travel and learning long-term, what a real week actually looks like, and the 6 mistakes most new worldschoolers make in year one.',
+    metaDescription: 'What worldschooling is, what it costs, what a real week looks like, and the 6 mistakes new families make in year one. No need to sell the house.',
     topic: 'worldschooling',
     publishedAt: '2026-03-21',
     dateModified: '2026-04-30',

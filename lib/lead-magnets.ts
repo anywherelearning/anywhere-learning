@@ -108,6 +108,7 @@ const CATEGORY_DEFAULT: Record<string, string | 'capable-kid' | 'free-guide'> = 
  */
 const POST_OVERRIDES: Record<string, string | 'capable-kid' | 'free-guide'> = {
   'real-world-math-activities': 'kitchen-ideas',
+  'plan-a-party-math-kids': 'kitchen-ideas',
   'road-trip-math': 'travel-ideas',
   'teach-kids-about-money': 'life-skills-ideas',
   'allowance-vs-commission': 'life-skills-ideas',

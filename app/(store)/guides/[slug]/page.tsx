@@ -58,14 +58,14 @@ export async function generateMetadata({
 
   return {
     title: resource.title,
-    description: resource.excerpt,
+    description: resource.metaDescription ?? resource.excerpt,
     keywords: resource.keywords,
     alternates: {
       canonical: `https://anywherelearning.co/guides/${resource.slug}`,
     },
     openGraph: {
       title: resource.title,
-      description: resource.excerpt,
+      description: resource.metaDescription ?? resource.excerpt,
       type: 'article',
       publishedTime: resource.publishedAt,
       modifiedTime: resource.dateModified || resource.publishedAt,

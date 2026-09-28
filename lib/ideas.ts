@@ -633,13 +633,13 @@ export const IDEAS_DATA: IdeaCategory[] = [
       {
         slug: 'stem-ideas',
         blogSlug: 'outdoor-stem-challenges',
-        title: 'STEM Checklist: 24 No-Kit Builds',
+        title: 'STEM Challenges for Kids: 24 No-Kit Builds',
         cardExcerpt:
           'Cardboard, tape, and a challenge: 24 builds and experiments straight from the recycling bin.',
         published: '2026-06-10',
-        updated: '2026-06-11',
+        updated: '2026-09-28',
         intro:
-          'Twenty-four STEM builds and experiments for kids ages 5 to 12, split into build and engineer, science and experiment, and backyard STEM. Everything uses what you already have: cardboard, tape, kitchen supplies, and the recycling bin. The checklist is free to print.',
+          'A STEM challenge is a build or experiment with a goal and a limit: make it hold, make it fly, make it last, using only what is on the table. This checklist has twenty-four of them for kids ages 5 to 12, split into build and engineer, science and experiment, and backyard STEM. Everything uses what you already have: cardboard, tape, kitchen supplies, and the recycling bin. The checklist is free to print.',
         sections: [
           {
             name: 'Build & Engineer',

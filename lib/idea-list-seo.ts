@@ -263,6 +263,36 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
     ],
   },
 
+  'kid-business-ideas': {
+    seoTitle: 'Kid Business Ideas Checklist: 20 Real Ones by Age',
+    metaDescription:
+      '20 kid business ideas for ages 6 to 14, sorted by age, each with the one number to work out before day one. Free to read in full, no signup.',
+    howToUse:
+      'Let your kid pick the idea, then sit down together with the number next to it before anything gets bought or made. What does one cup, one walk, or one tune-up cost you, and what will people pay? Most first businesses change after that conversation, and that is the lesson. You stay close by for the safety and the money handling; your kid does the thinking, the asking, and the counting.',
+    faqs: [
+      {
+        question: 'What are good business ideas for kids?',
+        answer:
+          'Good business ideas for kids are small services or products they can run from home or the neighbourhood with a parent close by: a lemonade stand or seedling table at 6 to 8, pet-sitting, raking, or baking to order at 9 to 11, and tech help, tutoring, or bike tune-ups at 12 to 14. The best one is the one your kid can do well and explain the numbers for.',
+      },
+      {
+        question: 'What age can a kid start a business?',
+        answer:
+          'A kid can start a simple business around age 6 with a parent handling safety and money, like a lemonade stand or a seedling table. By 9 to 11 most kids can run a small route of customers, and by 12 to 14 they can price their own time and deal with customers directly.',
+      },
+      {
+        question: 'What math does a kid business teach?',
+        answer:
+          'A kid business teaches cost, price, profit, and break-even: what one item costs to make, what to charge, and how many sales it takes before any money is really theirs. Older kids add hourly rates, fees, and comparing per-job against per-hour pricing.',
+      },
+      {
+        question: 'Is the kid business ideas checklist free?',
+        answer:
+          'The kid business ideas checklist is free to read in full on this page. Pick one idea, work out its number together, and start small this month.',
+      },
+    ],
+  },
+
   'history-ideas': {
     seoTitle: 'Family History Activities for Kids: 11 Printable Ideas',
     metaDescription:
@@ -294,13 +324,17 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'stem-ideas': {
-    seoTitle: 'STEM Checklist for Kids: 24 No-Kit Builds (Free PDF)',
+    seoTitle: 'STEM Challenges for Kids: 24 No-Kit Builds (Free Checklist)',
     metaDescription:
-      '24 STEM builds and experiments for kids using cardboard, tape, and the recycling bin. Free to read, printable PDF by email, ages 5 to 12.',
+      '24 STEM challenges for kids using cardboard, tape, and the recycling bin: builds, experiments, backyard STEM. Free to read, PDF by email, ages 5 to 12.',
     howToUse:
       'STEM does not need a kit or a screen. Hand your kids cardboard, tape, and a clear challenge, then step back and let them think it through. When something fails, ask what they would change instead of fixing it for them. Pick a build that uses whatever is in your recycling bin today and let the engineering happen.',
     faqs: [
       {
+        question: 'What is a STEM challenge for kids?',
+        answer:
+          'A STEM challenge for kids is a build or experiment with a clear goal and a limit, like a bridge that has to hold a cup of coins or a boat that has to carry ten pennies, made from whatever is in the house. The limit is what makes it engineering: kids test, watch it fail, change one thing, and test again.',
+      },      {
         question: 'What is on the STEM checklist?',
         answer:
           'The STEM checklist holds 24 builds and experiments in three sections: build and engineer, science and experiment, and backyard STEM. Every one hands kids a real problem to solve with materials already in the house, from cardboard structures to invisible ink.',
