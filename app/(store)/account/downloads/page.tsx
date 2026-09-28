@@ -9,6 +9,7 @@ import {
   getUserByClerkId,
 } from "@/lib/db/queries";
 import DownloadList from "@/components/account/DownloadList";
+import MemberHero from "@/components/account/MemberHero";
 import ExploreMoreDivider from "@/components/account/ExploreMoreDivider";
 import PostPurchaseShare from "@/components/checkout/PostPurchaseShare";
 import { getOrCreateReferral } from "@/lib/referral";
@@ -17,7 +18,7 @@ import { ArrowRightIcon } from "@/components/shop/icons";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Your Activity Guides",
+  title: "Your Guides",
   description:
     "Access and download your purchased activity guides. Start learning anywhere.",
   robots: { index: false, follow: false },
@@ -36,6 +37,11 @@ export default async function DownloadsPage() {
   const email = clerkUser?.emailAddresses?.[0]?.emailAddress;
 
   const purchases = await getUserPurchases(clerkId, email);
+
+  // This page only matters to families who bought single guides in the old
+  // shop. Everyone else (every member) has the whole Library, so send them
+  // there instead of an empty "pick your first guide" page.
+  if (purchases.length === 0) redirect("/account");
 
   // Get referral code for the share block
   let referralCode: string | undefined;
@@ -77,20 +83,18 @@ export default async function DownloadsPage() {
     : null;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-16">
+    <div style={{ background: "linear-gradient(180deg,var(--am-bg1),var(--am-bg2))", minHeight: "100vh", color: "var(--am-ink)" }}>
       {blobOrigin && (
         <link rel="preconnect" href={blobOrigin} crossOrigin="" />
       )}
-      {/* ── Page header ── */}
-      <h1 className="font-display text-3xl text-forest sm:text-4xl">
-        Your Activity Guides
-      </h1>
+      <MemberHero kicker="Your purchases" title="Your guides" maxWidth={896} />
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-10">
       {/* Only render the subtitle when there's something to describe.
           For empty states, DownloadList renders its own richer empty state
           ("Your first adventure starts here") with a shop CTA, so we don't
           want two competing empty messages stacked. */}
       {guideCount > 0 && (
-        <p className="mt-2 text-gray-600">
+        <p className="m-0 text-gray-600">
           {guideCount} activity guide{guideCount === 1 ? "" : "s"} ready to open. Use them year after year.
         </p>
       )}
@@ -130,7 +134,7 @@ export default async function DownloadsPage() {
       {showReferralShare && (
         <section>
           <div className="text-center">
-            <h2 className="font-display text-2xl text-forest sm:text-3xl mb-1">
+            <h2 className="mb-1 text-2xl sm:text-3xl" style={{ fontFamily: "var(--font-plate),sans-serif", fontWeight: 800, color: "var(--am-ink)" }}>
               Know a family who&apos;d love these?
             </h2>
             <p className="text-sm text-gray-600 mb-5">
@@ -148,14 +152,15 @@ export default async function DownloadsPage() {
             Looking for something new?
           </p>
           <Link
-            href="/shop"
+            href="/account"
             className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-dark transition-colors"
           >
-            Browse all activity guides
+            Open the full library
             <ArrowRightIcon />
           </Link>
         </div>
       )}
+    </div>
     </div>
   );
 }

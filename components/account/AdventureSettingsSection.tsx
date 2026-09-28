@@ -98,7 +98,7 @@ export default function AdventureSettingsSection() {
                     {av ? (
                       <ExplorerHead avatar={av} size={56} />
                     ) : (
-                      <span className="font-display italic text-[22px] text-forest-dark">{childLabel(c, i).charAt(0).toUpperCase()}</span>
+                      <span className="text-[22px] text-forest-dark" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800 }}>{childLabel(c, i).charAt(0).toUpperCase()}</span>
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
@@ -200,8 +200,16 @@ function baseWord(av: KidAvatar) {
 
 function Card({ title, desc, children }: { title: string; desc: string; children: React.ReactNode }) {
   return (
-    <section className="bg-white border border-gold/20 rounded-2xl p-5 md:p-6">
-      <h2 className="font-display text-[clamp(1.25rem,2.4vw,1.5rem)] leading-[1.15] tracking-[-0.008em] text-ink m-0">{title}</h2>
+    <section
+      className="rounded-[20px] p-5 md:p-7"
+      style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
+    >
+      <h2
+        className="m-0 text-[clamp(1.25rem,2.4vw,1.5rem)] leading-[1.15]"
+        style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
+      >
+        {title}
+      </h2>
       <p className="m-0 mt-1 mb-4 font-body text-[13.5px] leading-[1.5] text-gray-500">{desc}</p>
       {children}
     </section>

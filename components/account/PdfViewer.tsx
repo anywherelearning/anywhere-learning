@@ -102,17 +102,17 @@ export default function PdfViewer({
   }
 
   return (
-    <main className="min-h-screen bg-[#E9E5DC]">
+    <main className="min-h-screen" style={{ background: "linear-gradient(180deg,var(--am-bg1),var(--am-bg2))" }}>
       {/* Reader toolbar */}
-      <div className="sticky top-0 z-40 bg-[#DAD7CD]/95 backdrop-blur-sm border-b border-[#C9C5B7]">
+      <div className="sticky top-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in srgb, var(--am-paper) 94%, transparent)", borderBottom: "1px solid rgba(58,44,23,0.12)" }}>
         <div className="mx-auto max-w-[1100px] px-5 py-3 flex items-center justify-between gap-4">
           <Link
             href="/account"
-            className="inline-flex items-center gap-1.5 font-body font-medium text-[13.5px] text-gray-600 no-underline hover:text-forest-dark transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-1.5 font-body font-medium text-[13.5px] no-underline hover:text-forest-dark transition-colors whitespace-nowrap" style={{ color: "var(--am-muted)" }}
           >
             <span aria-hidden="true">&larr;</span> Library
           </Link>
-          <h1 className="m-0 flex-1 min-w-0 truncate text-center font-display italic text-[16px] text-ink">
+          <h1 className="m-0 flex-1 min-w-0 truncate text-center text-[16px]" style={{ fontFamily: "var(--font-plate),sans-serif", fontWeight: 800, color: "var(--am-ink)", letterSpacing: "-0.01em" }}>
             {title}
           </h1>
           <a

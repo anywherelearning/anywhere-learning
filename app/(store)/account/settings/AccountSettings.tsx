@@ -1,5 +1,6 @@
 'use client';
 
+import MemberHero from '@/components/account/MemberHero';
 import { useState } from 'react';
 import Link from 'next/link';
 import { useUser, useReverification } from '@clerk/nextjs';
@@ -60,52 +61,39 @@ export default function AccountSettings({
   const [tab, setTab] = useState<Tab>(initialTab);
 
   return (
-    <main className="bg-cream pb-8">
-      {/* Header */}
-      <section className="pt-6 md:pt-8 pb-4">
-        <div className="mx-auto max-w-[960px] px-6">
-          <p className="font-body font-semibold text-[11.5px] uppercase tracking-[0.18em] text-[#C97B5C] inline-flex items-center gap-2.5">
-            <span className="w-[22px] h-px bg-[#C97B5C] inline-block" />
-            Settings &amp; billing
-          </p>
-          <h1 className="mt-3 font-display text-[clamp(1.875rem,3.4vw,2.5rem)] leading-[1.08] tracking-[-0.012em]">
-            Your{' '}
-            <em className="not-italic italic text-forest-dark">account.</em>
-          </h1>
-          <p className="mt-2 font-body text-[14.5px] text-gray-500">
-            Manage your profile, subscription, and email preferences in one place.
-          </p>
-        </div>
-      </section>
+    <main
+      className="pb-12"
+      style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))', minHeight: '100vh', color: 'var(--am-ink)' }}
+    >
+      <MemberHero
+        kicker="Settings & billing"
+        title="Your account"
+        lede="Your profile, your explorers, and your membership, all in one place."
+      />
 
-      {/* Tab nav */}
-      <div className="border-b border-[#D8D4C5]">
-        <div className="mx-auto max-w-[960px] px-6">
-          <nav aria-label="Account sections" className="flex gap-1 overflow-x-auto overflow-y-hidden">
-            {TABS.map((t) => {
-              const active = tab === t.value;
-              return (
-                <button
-                  key={t.value}
-                  type="button"
-                  onClick={() => setTab(t.value)}
-                  aria-current={active ? 'page' : undefined}
-                  className={`relative font-body font-medium text-[14px] px-3 py-3 cursor-pointer bg-transparent border-0 whitespace-nowrap transition-colors ${
-                    active ? 'text-forest-dark font-semibold' : 'text-gray-500 hover:text-forest-dark'
-                  }`}
-                >
-                  {t.label}
-                  {active && (
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-3 right-3 -bottom-px h-[2px] bg-forest rounded"
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </nav>
-        </div>
+      {/* Tabs as the same pill chips the kid selector uses across the member area */}
+      <div className="mx-auto max-w-[960px] px-6 pt-6">
+        <nav aria-label="Account sections" className="flex flex-wrap gap-2">
+          {TABS.map((t) => {
+            const active = tab === t.value;
+            return (
+              <button
+                key={t.value}
+                type="button"
+                onClick={() => setTab(t.value)}
+                aria-current={active ? 'page' : undefined}
+                className="cursor-pointer whitespace-nowrap rounded-full px-4 py-2 font-body text-[14px] font-semibold transition-colors"
+                style={{
+                  background: active ? '#588157' : '#fffdf9',
+                  color: active ? '#faf9f6' : '#54524b',
+                  border: `1.5px solid ${active ? '#588157' : 'rgba(61,92,59,0.2)'}`,
+                }}
+              >
+                {t.label}
+              </button>
+            );
+          })}
+        </nav>
       </div>
 
       <div className="mx-auto max-w-[960px] px-6 pt-5">
@@ -136,7 +124,7 @@ export default function AccountSettings({
                     <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
                       Current plan
                     </p>
-                    <p className="m-0 mt-1.5 font-display italic text-[22px] leading-[1.2] text-ink">
+                    <p className="m-0 mt-1.5 text-[21px] leading-[1.2]" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, color: 'var(--am-ink)' }}>
                       {member.tier}
                     </p>
                     <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">
@@ -244,8 +232,14 @@ function SettingsCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-white border border-gold/20 rounded-2xl p-5 md:p-6">
-      <h2 className="font-display text-[clamp(1.25rem,2.4vw,1.625rem)] leading-[1.15] tracking-[-0.008em] text-ink m-0">
+    <section
+      className="rounded-[20px] p-5 md:p-7"
+      style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
+    >
+      <h2
+        className="m-0 text-[clamp(1.25rem,2.4vw,1.6rem)] leading-[1.15]"
+        style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
+      >
         {title}
       </h2>
       <p className="m-0 mt-1 mb-4 font-body text-[14px] leading-[1.5] text-gray-500">
@@ -468,7 +462,7 @@ function TrialUpgradeCard({ member }: { member: Member }) {
           <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
             Current plan
           </p>
-          <p className="m-0 mt-1.5 font-display italic text-[22px] leading-[1.2] text-ink">
+          <p className="m-0 mt-1.5 text-[21px] leading-[1.2]" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, color: 'var(--am-ink)' }}>
             Free trial
           </p>
           <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">
@@ -829,7 +823,7 @@ function AvatarUploader() {
             // eslint-disable-next-line @next/next/no-img-element
             <img src={user.imageUrl} alt="" className="w-full h-full object-cover" />
           ) : (
-            <span className="font-display italic text-[26px] text-forest-dark">{initial}</span>
+            <span className="text-[26px] text-forest-dark" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800 }}>{initial}</span>
           )}
         </div>
         <div className="flex items-center gap-2 flex-wrap">

@@ -43,9 +43,9 @@ export default function OnboardingQuiz() {
   const isLast = idx >= kids.length - 1;
 
   return (
-    <div className="min-h-screen bg-cream flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: "linear-gradient(180deg,var(--am-sky1),var(--am-bg1) 45%,var(--am-bg2))" }}>
       <div className="w-full max-w-xl">
-        <p className="font-display italic text-[13px] text-gold-dark mb-4 text-center">
+        <p className="mb-4 text-center" style={{ fontFamily: "var(--font-catalog),monospace", fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--am-trail)" }}>
           Step 2 of 2 · Explorer {idx + 1} of {kids.length}
         </p>
         <ExplorerBuilder

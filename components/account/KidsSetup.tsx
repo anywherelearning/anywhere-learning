@@ -123,11 +123,11 @@ export default function KidsSetup({
     'h-11 rounded-xl border border-gray-200 bg-white px-2.5 text-[14px] text-ink focus:border-forest focus:outline-none cursor-pointer';
 
   const card = (
-    <div className="bg-white rounded-2xl border border-gold/20 p-6 sm:p-8">
-      <p className="font-display italic text-[13px] text-gold-dark mb-1">
+    <div className="rounded-[20px] p-6 sm:p-8" style={{ background: "var(--am-paper)", border: "1px solid rgba(58,44,23,0.12)", boxShadow: "0 10px 30px -18px rgba(58,44,23,0.35)" }}>
+      <p className="mb-2" style={{ fontFamily: "var(--font-catalog),monospace", fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--am-trail)" }}>
         {embedded ? 'Your kids' : 'Welcome to your library'}
       </p>
-      <h1 className="font-display text-[clamp(1.6rem,3vw,2.1rem)] leading-[1.1] text-forest-dark mb-5">
+      <h1 className="text-[clamp(1.6rem,3vw,2.1rem)] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-plate),sans-serif", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--am-ink)" }}>
         {title}
       </h1>
 
@@ -276,7 +276,7 @@ export default function KidsSetup({
   if (embedded) return card;
 
   return (
-    <div className="min-h-screen bg-cream flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: "linear-gradient(180deg,var(--am-sky1),var(--am-bg1) 45%,var(--am-bg2))" }}>
       <div className="w-full max-w-xl">
         {card}
         {onSkip && (
