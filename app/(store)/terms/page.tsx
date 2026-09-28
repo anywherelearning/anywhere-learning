@@ -30,17 +30,17 @@ const sections: LegalSection[] = [
     title: 'Our products',
     content: (
       <>
-        <p className="mb-3.5">Anywhere Learning offers two things, and only two:</p>
+        <p className="mb-3.5">Anywhere Learning offers:</p>
         <ul className="list-disc pl-6 mb-3.5 marker:text-forest space-y-2">
           <li>
-            <strong className="text-ink font-semibold">Free 7-day guide</strong>: a free 7-activity PDF (one activity across seven different categories), delivered to your inbox after you give us your email address.
+            <strong className="text-ink font-semibold">Free resources</strong>: the 7-day guide, the Capable Kid Guide, a free 5-day email course, a 2-minute quiz, and printable activity idea checklists. Some are delivered by email after you give us your email address, which also adds you to our mailing list (you can unsubscribe anytime).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that provides access to our complete library of activity guides, new content added quarterly, and member-only resources. It starts with a 14-day free trial.
+            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that gives access to our complete library of activity guides, new content added quarterly, and member-only features. It starts with a 14-day free trial.
           </li>
         </ul>
         <p>
-          All products are digital. We do not sell physical goods, individual activity guides, or any other bundles outside of the two offerings listed above. Our guides are designed for parents and guardians to use with their children (ages 6 to 14) for <Em>real-world, hands-on learning.</Em>
+          Everything is digital. We don&apos;t sell physical goods, and individual activity guides are not sold separately: the full library comes with the membership. Our guides are designed for parents and guardians to use with their children (ages 6 to 14) for <Em>real-world, hands-on learning.</Em>
         </p>
       </>
     ),
@@ -206,7 +206,7 @@ export default function TermsPage() {
         </>
       }
       sub="The agreement between you and Anywhere Learning when you use our site or join our membership."
-      lastUpdated="May 18, 2026"
+      lastUpdated="September 28, 2026"
       sections={sections}
       helpline={{
         lead: 'Have a question about these terms?',

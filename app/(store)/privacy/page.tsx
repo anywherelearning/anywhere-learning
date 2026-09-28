@@ -62,7 +62,7 @@ const sections: LegalSection[] = [
     title: 'Cookies & authentication',
     content: (
       <p>
-        We use essential cookies to keep you signed in to your account (powered by Clerk). These are necessary for the site to function and cannot be disabled. Our analytics may set its own cookies too (see below). <Em>We do not run advertising cookies or sell your data.</Em>
+        We use essential cookies to keep you signed in to your account (powered by Clerk). These are necessary for the site to function and cannot be disabled. We also use analytics and advertising cookies from Google, Meta and Pinterest, explained in the next two sections. <Em>We never sell your data.</Em>
       </p>
     ),
   },
@@ -91,8 +91,27 @@ const sections: LegalSection[] = [
     title: 'Analytics',
     content: (
       <p>
-        We use Google Analytics to understand how visitors use our site, which pages are most popular, how people find us, what to improve. Google Analytics may set its own cookies, and we keep this data <Em>aggregated.</Em>{' '}We don&apos;t use it to identify individual visitors or target you with ads.
+        We use Google Analytics and Vercel Analytics to understand how visitors use our site: which pages are popular, how people find us, and what to improve. These tools may set their own cookies, and we look at the data in <Em>aggregate,</Em>{' '}not visitor by visitor.
       </p>
+    ),
+  },
+  {
+    id: 's5b',
+    title: 'Advertising',
+    content: (
+      <>
+        <p className="mb-3.5">
+          We advertise on Facebook, Instagram and Pinterest, and we use the Meta Pixel, Meta&apos;s Conversions API and the Pinterest Tag to measure whether those ads work. These tools record visits to our pages and actions like signing up for a free guide or starting a membership, so we know which ads bring families here and don&apos;t keep paying for ones that don&apos;t.
+        </p>
+        <p className="mb-3.5">
+          When you sign up or start a membership, we may share your email address with Meta and Pinterest in <Em>hashed</Em>{' '}(scrambled) form so they can match the action to an ad you saw. They cannot read it, and we never share your children&apos;s details, your payment information, or anything you write to us.
+        </p>
+        <p>
+          Meta and Pinterest may use cookies to show you our ads on their platforms. You can turn off ad personalization in your{' '}
+          <InlineLink href="https://www.facebook.com/adpreferences">Meta ad settings</InlineLink>{' '}and{' '}
+          <InlineLink href="https://www.pinterest.com/settings/privacy">Pinterest privacy settings</InlineLink>, block third-party cookies in your browser, or email us at <MailLink />{' '}and we&apos;ll help.
+        </p>
+      </>
     ),
   },
   {
@@ -123,6 +142,15 @@ const sections: LegalSection[] = [
             </li>
             <li>
               <strong className="text-ink font-semibold">Google Analytics</strong>: aggregated site-usage data.
+            </li>
+            <li>
+              <strong className="text-ink font-semibold">Vercel Analytics</strong>: aggregated site-usage and performance data.
+            </li>
+            <li>
+              <strong className="text-ink font-semibold">Meta (Facebook and Instagram)</strong>: advertising measurement (Pixel and Conversions API).
+            </li>
+            <li>
+              <strong className="text-ink font-semibold">Pinterest</strong>: advertising measurement (Pinterest Tag).
             </li>
           </ul>
         </div>
@@ -231,7 +259,7 @@ export default function PrivacyPage() {
         </>
       }
       sub="How we collect, use, and protect your personal information, explained in plain language."
-      lastUpdated="August 4, 2026"
+      lastUpdated="September 28, 2026"
       sections={sections}
       helpline={{
         lead: 'Have a question about this policy?',
