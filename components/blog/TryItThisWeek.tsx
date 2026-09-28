@@ -23,7 +23,7 @@ export default function TryItThisWeek({ productCategory, prefer, seed }: TryItTh
 
   return (
     <section
-      className="bg-[#F2EFE4] py-14 md:py-16"
+      className="py-14 md:py-16"
       aria-labelledby="try-it-heading"
     >
       <div className="mx-auto max-w-[1180px] px-6">

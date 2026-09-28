@@ -28,6 +28,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import TryItThisWeek from '@/components/blog/TryItThisWeek';
+import IndexCard from '@/components/blog/IndexCard';
 import { PAPER_SHADOW } from '@/components/shared/Paper';
 import { BLOG_TO_PRODUCT_CATEGORY } from '@/lib/cross-links';
 
@@ -207,39 +208,6 @@ function injectCallouts(post: { content: BlogContentBlock[]; category: BlogCateg
   return result;
 }
 
-function RelatedCard({ post }: { post: BlogPost }) {
-  const cat = blogCategories[post.category];
-  return (
-    <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col text-inherit no-underline">
-      <span
-        className="relative block aspect-[16/10] overflow-hidden"
-        style={{ background: imgBgByCategory[post.category] || '#E6EBDF' }}
-      >
-        {post.heroImage && (
-          <Image
-            src={post.heroImage}
-            alt={post.heroImageAlt || post.title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 340px"
-            quality={75}
-            className={post.heroImageFit === 'contain' ? 'object-contain' : 'object-cover'}
-            style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
-          />
-        )}
-      </span>
-      <span className="mt-3 block text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: cat.color }}>
-        {cat.label}
-      </span>
-      <h3 className="mt-1 font-display text-[20px] leading-tight tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
-        {post.title}
-      </h3>
-      <p className="mt-1.5 font-display text-[14.5px] italic leading-[1.5] text-gray-600">{post.hook || post.excerpt}</p>
-      <p className="mt-auto pt-3 text-[12px] text-gray-500">
-        {formatDate(post.publishedAt)} {'\u00b7'} {post.readTimeMinutes} min read
-      </p>
-    </Link>
-  );
-}
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
@@ -349,24 +317,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <ReadingProgress />
 
-      <main className="bg-[#F2EFE4] px-3 pt-8 sm:px-6 md:pt-10">
-        {/* The post is a page of the family newspaper: a mini masthead, the
-            story, and the sidebar box, all on one sheet of newsprint. */}
-        <div className={`mx-auto max-w-[1180px] bg-[#FBF8EF] ${PAPER_SHADOW}`}>
-        {/* 01 MASTHEAD + BREADCRUMB */}
-        <div className="px-5 pt-6 sm:px-8 md:px-12">
-          <div className="flex items-baseline justify-between gap-4 border-b-4 border-double border-[#2b2a26] pb-2">
-            <Link href="/blog" className="font-display text-[20px] tracking-tight text-[#2b2a26] no-underline md:text-[24px]">
-              Ideas for the everyday <span className="italic text-forest">explorer.</span>
-            </Link>
-            <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500 sm:inline">
-              The Anywhere Learning blog
-            </span>
-          </div>
+      <main className="bg-[#E9EEE6] px-3 pt-8 sm:px-6 md:pt-10">
+        {/* The post is one big card pulled from the blog's recipe box: the
+            category tab on top, the category colour across the edge. */}
+        <div className="mx-auto max-w-[1180px]">
+          <Link
+            href={`/blog?category=${post.category}#blog-grid`}
+            className="ml-6 inline-block rounded-t-[10px] px-4 pb-2 pt-2.5 text-[13px] font-semibold text-white no-underline md:ml-12"
+            style={{ background: cat.color }}
+          >
+            {cat.label}
+          </Link>
+        </div>
+        <div className={`mx-auto max-w-[1180px] rounded-b-[6px] border-t-[6px] bg-white ${PAPER_SHADOW}`} style={{ borderColor: cat.color }}>
+        {/* 01 BREADCRUMB */}
+        <div className="px-5 pt-5 sm:px-8 md:px-12">
           <div>
             <nav
               aria-label="Breadcrumb"
-              className="py-3 flex flex-wrap items-center gap-2.5 text-[13px] text-gray-500 border-b border-[#2b2a26]"
+              className="py-1 flex flex-wrap items-center gap-2.5 text-[13px] text-gray-500"
             >
               <Link href="/blog" className="text-gray-600 hover:text-forest-dark transition-colors no-underline">
                 Blog
@@ -453,7 +422,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="px-5 pb-10 sm:px-8 md:px-12 md:pb-12">
           <ScrollReveal delay={80}>
             <div
-              className="relative max-w-[980px] mx-auto overflow-hidden border border-[#2b2a26]/15"
+              className="relative max-w-[980px] mx-auto overflow-hidden rounded-[4px]"
               style={{ background: imgBgByCategory[post.category] || '#E6EBDF', aspectRatio: post.heroImageAspect || '16 / 10' }}
             >
               <PinterestSaveButton
@@ -508,7 +477,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               })()}
 
               {/* Author bio */}
-              <aside className="mt-12 border-2 border-[#2b2a26] p-7 md:p-8 grid grid-cols-1 sm:grid-cols-[72px_1fr] gap-5 items-start">
+              <aside className={`mt-12 -rotate-[0.6deg] bg-[#FBF3DC] p-7 md:p-8 grid grid-cols-1 sm:grid-cols-[72px_1fr] gap-5 items-start ${PAPER_SHADOW}`}>
                 {post.author.avatarImage ? (
                   <Image
                     src={post.author.avatarImage}
@@ -542,7 +511,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {toc.length >= 3 && (
               <aside className="hidden lg:block">
                 <div className="sticky top-24 pb-8">
-                  <div className="border-y-2 border-[#2b2a26] py-4">
+                  <div className={`rotate-[1deg] border-t-4 bg-[#FFFDF8] p-4 ${PAPER_SHADOW}`} style={{ borderColor: cat.color }}>
                     <StickyTOC items={toc} />
                   </div>
                 </div>
@@ -571,10 +540,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             the mid-article product callout and the exit-intent popup.) */}
         {related.length > 0 && (
           <section className="pb-14">
-            <div className={`mx-auto max-w-[1180px] bg-[#FBF8EF] px-5 py-8 sm:px-8 md:px-12 md:py-10 ${PAPER_SHADOW}`}>
+            <div className="mx-auto max-w-[1180px] rounded-[16px] border-t-4 border-forest bg-[#DCE4D5] px-4 py-8 sm:px-8 md:px-10 md:py-10">
               <ScrollReveal>
-                <div className="mb-8 border-b-4 border-double border-[#2b2a26] pb-3">
-                  <p className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                <div className="mb-8">
+                  <p className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-forest-dark">
                     Keep reading
                   </p>
                   <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.4rem)] leading-[1.1] tracking-tight mt-3 text-balance">
@@ -582,10 +551,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </h2>
                 </div>
               </ScrollReveal>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 items-stretch">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {related.slice(0, 3).map((p, i) => (
                   <ScrollReveal key={p.slug} className="h-full" delay={i * 60}>
-                    <RelatedCard post={p} />
+                    <IndexCard post={p} />
                   </ScrollReveal>
                 ))}
               </div>

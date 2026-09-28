@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   getAllPosts,
   getFeaturedPost,
   getPostsByCategory,
   blogCategories,
   type BlogCategory,
-  type BlogPost,
-  formatDate,
 } from '@/lib/blog';
 import { PAPER_SHADOW } from '@/components/shared/Paper';
 import EmailForm from '@/components/EmailForm';
@@ -16,6 +13,7 @@ import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
 import { MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE } from '@/lib/membership';
 import PageDropdown from './PageDropdown';
 import AllPostsIndex from '@/components/blog/AllPostsIndex';
+import IndexCard from '@/components/blog/IndexCard';
 
 const POSTS_PER_PAGE = 6;
 
@@ -74,95 +72,12 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
   };
 }
 
-function Photo({ post, sizes, priority = false }: { post: BlogPost; sizes: string; priority?: boolean }) {
-  if (!post.heroImage) return null;
-  return (
-    <Image
-      src={post.heroImage}
-      alt={post.heroImageAlt || post.title}
-      fill
-      sizes={sizes}
-      priority={priority}
-      className="object-cover"
-      style={post.heroImagePosition ? { objectPosition: post.heroImagePosition } : undefined}
-    />
-  );
-}
-
-function Kicker({ post, extra }: { post: BlogPost; extra?: string }) {
-  const cat = blogCategories[post.category];
-  return (
-    <span className="block text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: cat.color }}>
-      {extra ? `${extra} · ` : ''}
-      {cat.label}
-    </span>
-  );
-}
-
-/** The front-page lead story. */
-function LeadStory({ post }: { post: BlogPost }) {
-  return (
-    <Link href={`/blog/${post.slug}`} className="group block text-inherit no-underline">
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#E6EBDF]">
-        <Photo post={post} sizes="(max-width: 1024px) 100vw, 660px" priority />
-      </div>
-      <p className="mt-4">
-        <Kicker post={post} extra="Lead story" />
-      </p>
-      <h2 className="mt-1 font-display text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.08] tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
-        {post.title}
-      </h2>
-      <p className="mt-2 font-display text-[17px] italic leading-[1.5] text-gray-600">{post.hook || post.excerpt}</p>
-      <p className="mt-3 text-[12.5px] text-gray-500">
-        {formatDate(post.publishedAt)} {'·'} {post.readTimeMinutes} min read
-      </p>
-    </Link>
-  );
-}
-
-/** A short story in the side column: headline beside a small square photo. */
-function SideStory({ post }: { post: BlogPost }) {
-  return (
-    <Link href={`/blog/${post.slug}`} className="group grid grid-cols-[1fr_84px] gap-4 text-inherit no-underline">
-      <span>
-        <Kicker post={post} />
-        <span className="mt-1 block font-display text-[17px] leading-tight text-[#2b2a26] group-hover:text-forest-dark">
-          {post.title}
-        </span>
-        <span className="mt-1 block text-[12px] text-gray-500">{formatDate(post.publishedAt)}</span>
-      </span>
-      <span className="relative block aspect-square overflow-hidden bg-[#E6EBDF]">
-        <Photo post={post} sizes="84px" />
-      </span>
-    </Link>
-  );
-}
-
-/** A story in the columns below the fold. */
-function ColumnStory({ post }: { post: BlogPost }) {
-  return (
-    <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col text-inherit no-underline">
-      <span className="relative block aspect-[16/10] overflow-hidden bg-[#E6EBDF]">
-        <Photo post={post} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 340px" />
-      </span>
-      <span className="mt-3">
-        <Kicker post={post} />
-      </span>
-      <h3 className="mt-1 font-display text-[20px] leading-tight tracking-tight text-[#2b2a26] group-hover:text-forest-dark">
-        {post.title}
-      </h3>
-      <p className="mt-1.5 font-display text-[14.5px] italic leading-[1.5] text-gray-600">{post.hook || post.excerpt}</p>
-      <p className="mt-auto pt-3 text-[12px] text-gray-500">
-        {formatDate(post.publishedAt)} {'·'} {post.readTimeMinutes} min read
-      </p>
-    </Link>
-  );
-}
+const TILT = [-1.2, 0.9, -0.7, 1.3, -1, 0.8];
 
 const pagerLink =
-  'inline-flex items-center gap-2 border border-[#2b2a26]/70 bg-transparent px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#2b2a26] no-underline transition-colors hover:bg-[#2b2a26] hover:text-[#FBF8EF]';
+  'inline-flex items-center gap-2 rounded-[10px] bg-white px-4 py-2.5 text-[13.5px] font-semibold text-[#2b2a26] no-underline shadow-[0_8px_16px_-10px_rgba(45,58,46,0.45)] transition-transform hover:-translate-y-px';
 const pagerDead =
-  'inline-flex items-center gap-2 border border-[#2b2a26]/25 px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-gray-400';
+  'inline-flex items-center gap-2 rounded-[10px] bg-white/50 px-4 py-2.5 text-[13.5px] font-semibold text-gray-400';
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const { category, page } = await searchParams;
@@ -196,11 +111,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     : undefined;
 
   const posts = activeCategory ? getPostsByCategory(activeCategory) : allPosts;
-  // Unfiltered, the lead story and the three next-newest sit on the front
-  // page, so the columns (and every numbered page) start after them.
-  const sidePosts = activeCategory ? [] : posts.filter((p) => p.slug !== featured.slug).slice(0, 3);
-  const onFront = new Set([featured.slug, ...sidePosts.map((p) => p.slug)]);
-  const allGridPosts = activeCategory ? posts : posts.filter((p) => !onFront.has(p.slug));
+  const allGridPosts = activeCategory ? posts : posts.filter((p) => p.slug !== featured.slug);
 
   const totalPages = Math.max(1, Math.ceil(allGridPosts.length / POSTS_PER_PAGE));
   const safePage = Math.min(currentPage, totalPages);
@@ -250,145 +161,145 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <main className="bg-[#F2EFE4] px-3 pb-4 pt-8 sm:px-6 md:pt-10">
-        {/* The whole index is one sheet of newsprint: masthead, sections,
-            the front page, then the columns and the page turner. */}
-        <div className={`mx-auto max-w-[1180px] bg-[#FBF8EF] px-5 py-8 sm:px-8 md:px-12 md:py-10 ${PAPER_SHADOW}`}>
-          {/* Masthead */}
-          <header className="border-b-4 border-double border-[#2b2a26] pb-5 text-center">
-            <p className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-gray-500">
-              {'New posts weekly · Free to read · Written by Amelie'}
-            </p>
-            <h1 className="mt-3 font-display text-[clamp(2.4rem,6vw,4.75rem)] leading-[1.02] tracking-tight text-balance">
-              Ideas for the everyday <span className="italic text-forest">explorer.</span>
-            </h1>
-            <p className="mx-auto mt-3 max-w-[620px] text-[16.5px] leading-[1.55] text-gray-600">
-              Practical inspiration, honest encouragement, and real-world learning ideas, from one
-              family to another. Whether you homeschool or just want{' '}
-              <span className="font-display italic text-forest-dark">meaningful</span> time together.
-            </p>
-          </header>
+      <main className="bg-[#E9EEE6]">
+        {/* ── Header ── */}
+        <header className="px-6 pb-2 pt-12 text-center md:pt-14">
+          <p className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-forest-dark">
+            <span className="inline-block h-px w-[22px] bg-forest" />
+            The blog
+          </p>
+          <h1 className="mt-4 font-display text-[clamp(2.4rem,5.4vw,4.2rem)] leading-[1.04] tracking-tight text-balance">
+            Ideas for the everyday <span className="italic text-forest">explorer.</span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-[600px] text-[17px] leading-[1.55] text-gray-600">
+            Practical inspiration, honest encouragement, and real-world learning ideas, from one
+            family to another. Whether you homeschool or just want{' '}
+            <span className="font-display italic text-forest-dark">meaningful</span> time together.
+          </p>
+          <p className="mt-3 text-[12.5px] tracking-wide text-gray-500">
+            {'New posts weekly · Free to read · Written by Amelie'}
+          </p>
+        </header>
 
-          {/* Sections: real links, so every category page is one crawlable hop away */}
-          <nav aria-label="Blog categories" className="-mx-5 border-b border-[#2b2a26] py-2.5 sm:mx-0">
-            {/* One swipeable row on phones, wrapped and centred from sm up */}
-            <ul className="m-0 flex list-none gap-x-5 gap-y-1.5 overflow-x-auto whitespace-nowrap px-5 py-0.5 [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible sm:whitespace-normal sm:px-0">
-              {categoryOptions.map((c) => {
-                const active = (activeCategory || '') === c.value;
-                const color = c.value ? blogCategories[c.value as BlogCategory].color : '#2b2a26';
-                return (
-                  <li key={c.value || 'all'}>
-                    <Link
-                      href={categoryHref(c.value)}
-                      aria-current={active ? 'page' : undefined}
-                      className={`text-[12.5px] font-semibold uppercase tracking-[0.12em] no-underline underline-offset-4 hover:underline ${active ? 'underline decoration-2' : ''}`}
-                      style={{ color }}
-                    >
-                      {c.label} <span className="font-medium text-gray-400">{c.count}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+        {/* ── The recipe box: divider tabs, then the cards ── */}
+        <section id="blog-grid" className="scroll-mt-[80px] px-3 pb-14 pt-8 sm:px-6 md:scroll-mt-[88px]">
+          <div className="mx-auto max-w-[1160px]">
+            {/* Divider tabs: real links, so each category page is one crawlable hop away */}
+            <nav aria-label="Blog categories" className="-mx-3 sm:mx-0">
+              <ul className="m-0 flex list-none items-end gap-1 overflow-x-auto px-3 [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
+                {categoryOptions.map((c) => {
+                  const active = (activeCategory || '') === c.value;
+                  const color = c.value ? blogCategories[c.value as BlogCategory].color : '#588157';
+                  return (
+                    <li key={c.value || 'all'} className="shrink-0">
+                      <Link
+                        href={categoryHref(c.value)}
+                        aria-current={active ? 'page' : undefined}
+                        className={`block whitespace-nowrap rounded-t-[10px] px-4 text-[13px] font-semibold text-white no-underline transition-all ${
+                          active ? 'pb-3 pt-3' : 'pb-2 pt-2 opacity-80 hover:opacity-100'
+                        }`}
+                        style={{ background: color }}
+                      >
+                        {c.label} <span className="font-medium text-white/75">{c.count}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
 
-          {/* Front page: lead story, the next three, and the subscribe box */}
-          {!activeCategory && safePage === 1 && (
-            <section className="grid gap-8 border-b border-[#DCD6C4] py-8 lg:grid-cols-[1.65fr_1fr] lg:gap-0 lg:divide-x lg:divide-[#DCD6C4]">
-              <div className="lg:pr-8">
-                <LeadStory post={featured} />
-              </div>
-              <div className="lg:pl-8">
-                <ul className="m-0 list-none divide-y divide-[#DCD6C4] p-0">
-                  {sidePosts.map((p) => (
-                    <li key={p.slug} className="py-4 first:pt-0">
-                      <SideStory post={p} />
+            <div
+              className="rounded-b-[16px] rounded-t-[4px] border-t-4 bg-[#DCE4D5] p-4 sm:p-6 md:p-8"
+              style={{ borderColor: activeCategory ? blogCategories[activeCategory].color : '#588157' }}
+            >
+              {activeCategory && (
+                <h2 className="mb-6 text-center font-display text-[24px] leading-tight">
+                  {blogCategories[activeCategory].label}
+                  {safePage > 1 ? `, page ${safePage}` : ''}
+                </h2>
+              )}
+
+              {/* Page 1: the latest post as a wide card, beside the newsletter card */}
+              {!activeCategory && safePage === 1 && (
+                <div className="mb-8 grid gap-6 lg:grid-cols-[2fr_1fr]">
+                  <div className="-rotate-[0.6deg]">
+                    <IndexCard post={featured} wide priority as="h2" />
+                  </div>
+                  <div className={`relative rotate-[1.2deg] bg-[#FBF3DC] p-6 ${PAPER_SHADOW}`}>
+                    <p className="font-display text-[22px] leading-tight">
+                      Get my monthly <span className="italic text-forest">newsletter.</span>
+                    </p>
+                    <p className="mb-4 mt-1.5 text-[14px] leading-[1.5] text-gray-600">
+                      One email a month, straight from me.
+                    </p>
+                    <EmailForm
+                      variant="light"
+                      buttonText="Subscribe"
+                      stacked
+                      newsletter
+                      successHeading="You're on the list!"
+                      successBody="Your first newsletter arrives with the next monthly send."
+                    />
+                  </div>
+                </div>
+              )}
+
+              {gridPosts.length > 0 ? (
+                <ul className="m-0 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
+                  {gridPosts.map((post, i) => (
+                    <li key={post.slug} style={{ transform: `rotate(${TILT[i % TILT.length]}deg)` }}>
+                      <IndexCard post={post} priority={!activeCategory && safePage === 1 ? false : i < 3} />
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 border-2 border-[#2b2a26] p-5">
-                  <p className="font-display text-[20px] leading-tight">
-                    Get my monthly <span className="italic text-forest">newsletter.</span>
-                  </p>
-                  <p className="mb-3 mt-1 text-[13px] leading-[1.5] text-gray-600">
-                    One email a month, straight from me.
-                  </p>
-                  <EmailForm
-                    variant="light"
-                    buttonText="Subscribe"
-                    stacked
-                    newsletter
-                    successHeading="You're on the list!"
-                    successBody="Your first newsletter arrives with the next monthly send."
+              ) : (
+                <p className="py-12 text-center font-display text-[20px] italic text-gray-500">
+                  No posts in this category yet. Check back soon.
+                </p>
+              )}
+
+              {totalPages > 1 && (
+                <nav className="mt-10 flex flex-wrap items-center justify-center gap-2" aria-label="Pagination">
+                  {safePage > 1 ? (
+                    <Link href={buildPageHref(safePage - 1)} className={pagerLink}>
+                      <span aria-hidden="true">&larr;</span> Prev
+                    </Link>
+                  ) : (
+                    <span aria-hidden="true" className={pagerDead}>
+                      <span>&larr;</span> Prev
+                    </span>
+                  )}
+                  <PageDropdown
+                    currentPage={safePage}
+                    hrefs={Array.from({ length: totalPages }, (_, i) => buildPageHref(i + 1))}
                   />
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* The columns */}
-          <section id="blog-grid" className="scroll-mt-[80px] pt-8 md:scroll-mt-[88px]">
-            <h2 className="mb-6 flex items-center gap-4 text-[12px] font-bold uppercase tracking-[0.2em] text-gray-500">
-              <span className="h-px flex-1 bg-[#DCD6C4]" aria-hidden="true" />
-              {activeCategory ? blogCategories[activeCategory].label : 'More stories'}
-              {safePage > 1 ? ` · Page ${safePage}` : ''}
-              <span className="h-px flex-1 bg-[#DCD6C4]" aria-hidden="true" />
-            </h2>
-            {gridPosts.length > 0 ? (
-              <ul className="m-0 grid list-none gap-x-8 gap-y-10 p-0 sm:grid-cols-2 lg:grid-cols-3">
-                {gridPosts.map((post) => (
-                  <li key={post.slug}>
-                    <ColumnStory post={post} />
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="py-12 text-center font-display text-[20px] italic text-gray-500">
-                No posts in this category yet. Check back soon.
-              </p>
-            )}
-
-            {totalPages > 1 && (
-              <nav className="mt-12 flex flex-wrap items-center justify-center gap-2 border-t border-[#DCD6C4] pt-6" aria-label="Pagination">
-                {safePage > 1 ? (
-                  <Link href={buildPageHref(safePage - 1)} className={pagerLink}>
-                    <span aria-hidden="true">&larr;</span> Prev
-                  </Link>
-                ) : (
-                  <span aria-hidden="true" className={pagerDead}>
-                    <span>&larr;</span> Prev
-                  </span>
-                )}
-                <PageDropdown
-                  currentPage={safePage}
-                  hrefs={Array.from({ length: totalPages }, (_, i) => buildPageHref(i + 1))}
-                />
-                {safePage < totalPages ? (
-                  <Link href={buildPageHref(safePage + 1)} className={pagerLink}>
-                    Next <span aria-hidden="true">&rarr;</span>
-                  </Link>
-                ) : (
-                  <span aria-hidden="true" className={pagerDead}>
-                    Next <span>&rarr;</span>
-                  </span>
-                )}
-              </nav>
-            )}
-          </section>
-        </div>
+                  {safePage < totalPages ? (
+                    <Link href={buildPageHref(safePage + 1)} className={pagerLink}>
+                      Next <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  ) : (
+                    <span aria-hidden="true" className={pagerDead}>
+                      Next <span>&rarr;</span>
+                    </span>
+                  )}
+                </nav>
+              )}
+            </div>
+          </div>
+        </section>
 
         {/* Every post as a plain link, one hop from the hub */}
-        <div className="mx-auto mt-10 max-w-[1180px]">
+        <div className="mx-auto max-w-[1160px] px-3 sm:px-6">
           <AllPostsIndex />
         </div>
 
         {/* Quiz */}
-        <div className="pt-6">
+        <div className="pt-10">
           <BlogQuizCTA paper />
         </div>
 
         {/* Membership, one quiet line */}
-        <p className="mx-auto max-w-[620px] px-6 pb-12 text-center text-[15px] leading-[1.6] text-gray-600">
+        <p className="mx-auto max-w-[620px] px-6 pb-14 text-center text-[15px] leading-[1.6] text-gray-600">
           Want more than reading? The{' '}
           <Link
             href="/#membership"

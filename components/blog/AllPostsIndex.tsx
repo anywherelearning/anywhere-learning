@@ -20,8 +20,8 @@ export default function AllPostsIndex() {
   const categories = (Object.keys(blogCategories) as BlogCategory[]).filter((c) => grouped.has(c));
 
   return (
-    <section className="bg-cream py-14 md:py-16 border-b border-[#D8D4C5]" aria-labelledby="all-posts-heading">
-      <div className="mx-auto max-w-[1180px] px-6">
+    <section className="bg-[#FFFDF8] py-10 md:py-12 shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)]" aria-labelledby="all-posts-heading">
+      <div className="mx-auto max-w-[1180px] px-6 md:px-10">
         <div className="mb-8">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
             <span className="w-[22px] h-px bg-forest inline-block" />

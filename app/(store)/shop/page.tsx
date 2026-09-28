@@ -807,10 +807,16 @@ export default function ShopPage() {
               <p className="font-display italic text-[18px] md:text-[20px] text-gray-700 leading-[1.4] max-w-[520px] mx-auto mb-4 text-balance">
                 Or just{' '}
                 <span className="text-forest-dark">stay in the loop</span>:{' '}
-                new activities and ideas, when we have something worth sharing.
+                new activities and ideas, one email a month.
               </p>
               <div className="max-w-[460px] mx-auto">
-                <EmailForm variant="light" buttonText="Subscribe" />
+                <EmailForm
+                  variant="light"
+                  buttonText="Subscribe"
+                  newsletter
+                  successHeading="You're on the list!"
+                  successBody="Your first newsletter arrives with the next monthly send."
+                />
               </div>
             </ScrollReveal>
           </div>
