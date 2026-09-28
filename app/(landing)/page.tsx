@@ -702,21 +702,40 @@ export default async function HomePage() {
                 <Magnet color="#588157" size={26} />
                 <Eyebrow>Everything in the membership</Eyebrow>
                 <div className="mt-6 grid grid-cols-1 gap-x-11 gap-y-[15px] md:grid-cols-2">
-                  {MEMBERSHIP_INCLUDES.map((inc) => (
+                  {MEMBERSHIP_INCLUDES.map((inc, i) => (
                     <div
                       key={inc}
-                      className="flex items-start gap-[11px] text-base leading-[1.6] text-gray-600"
+                      /* Phones show the first three; the rest open below. */
+                      className={`items-start gap-[11px] text-base leading-[1.6] text-gray-600 ${i < 3 ? 'flex' : 'hidden md:flex'}`}
                     >
                       <CheckIcon />
                       <span>{inc}</span>
                     </div>
                   ))}
                 </div>
+                {MEMBERSHIP_INCLUDES.length > 3 && (
+                  <details className="group mt-4 md:hidden">
+                    <summary className="flex cursor-pointer list-none items-center gap-2 text-[15px] font-semibold text-forest marker:content-none [&::-webkit-details-marker]:hidden">
+                      {`See all ${MEMBERSHIP_INCLUDES.length} included`}
+                      <span aria-hidden="true" className="transition-transform duration-200 group-open:rotate-180">&#8964;</span>
+                    </summary>
+                    <div className="mt-4 grid gap-y-[15px]">
+                      {MEMBERSHIP_INCLUDES.slice(3).map((inc) => (
+                        <div key={inc} className="flex items-start gap-[11px] text-base leading-[1.6] text-gray-600">
+                          <CheckIcon />
+                          <span>{inc}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+                )}
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="mb-20 flex flex-wrap justify-center gap-x-7 gap-y-3 text-[15.5px] text-gray-600">
+              {/* Desktop only: on phones the same lines already sit under the
+                  hero button and on the plan card. */}
+              <div className="mb-20 hidden flex-wrap justify-center gap-x-7 gap-y-3 text-[15.5px] text-gray-600 md:flex">
                 <span>14-day free trial</span>
                 <span className="text-gray-300">·</span>
                 <span>$0 charged today</span>
@@ -727,7 +746,7 @@ export default async function HomePage() {
               </div>
             </ScrollReveal>
 
-            <div className="mx-auto max-w-[1100px]">
+            <div className="mx-auto max-w-[1100px] max-md:mt-14">
               <ScrollReveal>
                 <h2 className="mb-7 text-center font-display text-[clamp(1.65rem,3vw,2.4rem)] leading-[1.08] tracking-tight text-balance">
                   You might be wondering&hellip;

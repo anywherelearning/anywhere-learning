@@ -25,7 +25,29 @@ export default function ActivityExplorer() {
           sideways. Free-wrapping pills stacked into seven ragged rows (360px);
           a fixed 2-up grid packs the same nine into five tidy ones. From sm up
           there is room to wrap them inline as normal. */}
-      <div className="mb-7 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[9px]">
+      {/* Phones: one dropdown instead of nine buttons (they took half a screen). */}
+      <label className="mb-6 flex items-center gap-3 rounded-full border border-gray-200/90 bg-white py-1 pl-5 pr-2 shadow-[0_6px_14px_-10px_rgba(45,58,46,0.4)] sm:hidden">
+        <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-gray-500">Topic</span>
+        <select
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
+          className="min-w-0 flex-1 appearance-none bg-transparent py-2.5 pr-8 text-[15px] font-semibold text-forest-dark outline-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%23588157' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")",
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right 10px center',
+          }}
+        >
+          {SHOP_CATEGORIES.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <div className="mb-7 hidden sm:flex sm:flex-wrap sm:gap-[9px]">
         {SHOP_CATEGORIES.map((t) => {
           const on = topic === t;
           return (
