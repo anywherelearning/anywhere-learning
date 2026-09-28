@@ -308,10 +308,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 </ul>
                 <div className="mt-4 border-2 border-[#2b2a26] p-5">
                   <p className="font-display text-[20px] leading-tight">
-                    Get new posts in your <span className="italic text-forest">inbox.</span>
+                    Get my monthly <span className="italic text-forest">newsletter.</span>
                   </p>
                   <p className="mb-3 mt-1 text-[13px] leading-[1.5] text-gray-600">
-                    One email when there&apos;s something worth sending.
+                    It starts with my free 7-day guide, then one email a month.
                   </p>
                   <EmailForm variant="light" buttonText="Subscribe" stacked />
                 </div>
