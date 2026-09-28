@@ -17,6 +17,7 @@ import PreviewButton from "@/components/shop/PreviewButton";
 import CheckoutButton from "@/components/checkout/CheckoutButton";
 import ReviewForm from "@/components/shop/ReviewForm";
 import ReadMoreFromBlog from "@/components/shop/ReadMoreFromBlog";
+import { Tape, Magnet, PAPER_SHADOW } from "@/components/shared/Paper";
 import { pinnedPostForProduct } from "@/lib/cross-links";
 import {
   IS_FOUNDER_PHASE,
@@ -489,7 +490,7 @@ export default async function ProductPage({
   };
 
   return (
-    <>
+    <div className="bg-[#F2EFE4]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -506,11 +507,11 @@ export default async function ProductPage({
       )}
 
       {/* BREADCRUMB */}
-      <div className="bg-[#F2EFE4] border-b border-[#D8D4C5]">
+      <div>
         <div className="mx-auto max-w-[1180px] px-6">
           <nav
             aria-label="Breadcrumb"
-            className="py-3.5 flex items-center gap-2.5 flex-wrap text-[13px] text-gray-500"
+            className="pt-6 flex items-center gap-2.5 flex-wrap text-[13px] text-gray-500"
           >
             <Link
               href="/shop"
@@ -541,13 +542,16 @@ export default async function ProductPage({
       </div>
 
       {/* HEADER */}
-      <header className="pt-12 md:pt-16 pb-8">
+      <header className="pt-10 md:pt-12 pb-10">
         <div className="mx-auto max-w-[1180px] px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-10 lg:gap-14 items-start">
             {/* LEFT: Cover + preview */}
             <div className="flex flex-col gap-3.5">
+              <div className={`relative w-full max-w-[460px] mx-auto lg:mx-0 -rotate-[1.2deg] bg-white p-2.5 ${PAPER_SHADOW}`}>
+              <Tape className="left-8 -rotate-6" />
+              <Tape className="right-8 rotate-6" color="rgba(169,193,163,0.85)" />
               <div
-                className="relative aspect-[4/5] w-full max-w-[460px] mx-auto lg:mx-0 rounded-[14px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_50px_-30px_rgba(45,58,46,0.4)]"
+                className="relative aspect-[4/5] w-full overflow-hidden"
                 style={{ background: theme.soft }}
               >
                 {product.imageUrl && (
@@ -560,6 +564,7 @@ export default async function ProductPage({
                     className="object-cover object-top"
                   />
                 )}
+              </div>
               </div>
               {hasPreview(product.slug) && (
                 <div className="w-full max-w-[460px] mx-auto lg:mx-0">
@@ -632,7 +637,7 @@ export default async function ProductPage({
                   {skillTags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-[#F2EFE4] text-gray-600 text-[12.5px] font-medium px-2.5 py-1 rounded-full"
+                      className="bg-white text-gray-600 text-[12.5px] font-medium px-2.5 py-1 rounded-full shadow-[0_4px_10px_-6px_rgba(45,58,46,0.35)]"
                     >
                       {tag}
                     </span>
@@ -643,7 +648,7 @@ export default async function ProductPage({
               {/* What's inside and the access card sit side by side so the
                   column ends near the bottom of the cover instead of running
                   long past it. Stacks on narrow screens. */}
-              <div className="mt-7 border-t border-[#E3DFD2] pt-6 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_252px] sm:gap-7 items-start">
+              <div className="mt-7 border-t border-[#DCD6C4] pt-6 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_252px] sm:gap-7 items-start">
                 <div>
                   {/* What's inside. Lives here beside the cover rather than in a
                       section below, so the product's own specifics sit next to the
@@ -678,7 +683,8 @@ export default async function ProductPage({
                     if (hasAccess) {
                       // Member or trial member — this activity is in their library
                       return (
-                        <div className="mt-6 max-w-[400px] bg-[#E6EBDF] border border-[#C9D3BE] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(58,90,64,0.28)]">
+                        <div className={`relative max-w-[400px] rotate-[1deg] bg-[#E6EBDF] px-4 pb-3 pt-6 ${PAPER_SHADOW}`}>
+                          <Magnet color="#588157" size={22} />
                           <div className="flex items-center justify-between gap-3 mb-2">
                             <span className="inline-flex items-center gap-1.5 bg-forest/15 text-forest-dark text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
                               <span aria-hidden="true">✓</span>
@@ -707,7 +713,8 @@ export default async function ProductPage({
 
                     // Guest (default)
                     return (
-                      <div className="max-w-[400px] bg-cream border border-[#D8D4C5] rounded-[14px] px-4 py-3 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_36px_-26px_rgba(45,58,46,0.28)]">
+                      <div className={`relative max-w-[400px] rotate-[1deg] bg-white px-4 pb-3 pt-6 ${PAPER_SHADOW}`}>
+                        <Magnet color="#C97B5C" size={22} />
                         <div className="flex items-center justify-between gap-3 mb-2">
                           <span className="inline-flex items-center gap-1.5 bg-[#F2EFE4] text-gray-500 text-[10.5px] font-semibold uppercase tracking-[0.16em] px-2.5 py-1 rounded-full">
                             <span aria-hidden="true">🔒</span>
@@ -747,9 +754,9 @@ export default async function ProductPage({
           the shared details grid so the unique content leads the page rather
           than following three sections of boilerplate. */}
       {insideTheLearning && (
-        <section className="pb-4">
-          <div className="mx-auto max-w-[1180px] px-6">
-            <div className="rounded-[14px] border border-[#D8D4C5] bg-[#F7F4EC] px-6 py-8 md:px-10 md:py-10">
+        <section className="pb-10">
+          <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
+            <div className={`border-t-[5px] bg-[#FFFDF8] px-6 py-8 md:px-10 md:py-10 ${PAPER_SHADOW}`} style={{ borderColor: theme.color }}>
               <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] leading-[1.14] tracking-tight text-ink text-balance">
                 What they are{" "}
                 <em
@@ -787,8 +794,8 @@ export default async function ProductPage({
       {/* FAQ: only where written (see lib/product-descriptions.ts) */}
       {faqs.length > 0 && (
         <section className="pb-10">
-          <div className="mx-auto max-w-[1100px] px-6">
-            <div className="max-w-[760px]">
+          <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
+            <div className={`max-w-[820px] bg-[#FFFDF8] px-6 py-8 md:px-10 ${PAPER_SHADOW}`}>
               <p
                 className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.18em]"
                 style={{ color: theme.deep }}
@@ -816,9 +823,9 @@ export default async function ProductPage({
       )}
 
       {/* WHY IT MATTERS */}
-      <section className="pb-8">
+      <section className="pb-12">
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="bg-[#F2DECF] border border-[#E8D4C2] rounded-[12px] py-5 px-6 max-w-[640px] mx-auto text-center">
+          <div className={`-rotate-1 bg-[#FBF3DC] py-6 px-6 max-w-[620px] mx-auto text-center ${PAPER_SHADOW}`}>
             <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A3D24] mb-2">
               Why it matters
             </span>
@@ -829,8 +836,11 @@ export default async function ProductPage({
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section className="py-12 border-t border-[#D8D4C5] bg-[#F7F4EC]">
+      {/* REVIEWS. Hidden from visitors until there's at least one review: an
+          empty "be the first" box reads as "nobody uses this". Members and
+          trial members still see it, with the form to write one. */}
+      {(reviews.length > 0 || tier === "member" || tier === "trial") && (
+      <section className="py-12">
         <div className="mx-auto max-w-[920px] px-6">
           <div className="mb-7 text-center">
             <p
@@ -867,8 +877,10 @@ export default async function ProductPage({
                 return (
                   <article
                     key={i}
-                    className="rounded-[14px] border border-[#D8D4C5] bg-cream px-6 py-6 shadow-[0_12px_24px_-22px_rgba(45,58,46,.18)]"
+                    className={`relative bg-[#FFFDF8] px-6 pb-6 pt-8 ${PAPER_SHADOW}`}
+                    style={{ transform: `rotate(${i % 2 ? 0.8 : -0.8}deg)` }}
                   >
+                    <Tape color={i % 2 ? "rgba(169,193,163,0.85)" : undefined} />
                     <header className="flex items-center gap-3 mb-3">
                       <span
                         className="w-10 h-10 rounded-full overflow-hidden border border-[#D8D4C5] bg-[#F2EFE4] grid place-items-center flex-shrink-0"
@@ -907,7 +919,7 @@ export default async function ProductPage({
               })}
             </div>
           ) : (
-            <div className="text-center bg-cream border border-[#D8D4C5] rounded-[14px] py-9 px-6">
+            <div className={`text-center bg-[#FFFDF8] py-9 px-6 ${PAPER_SHADOW}`}>
               <span
                 aria-hidden="true"
                 className="inline-grid place-items-center w-12 h-12 rounded-full mb-3"
@@ -970,6 +982,7 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* RELATED */}
       {relatedProducts.length > 0 && (
@@ -1001,10 +1014,10 @@ export default async function ProductPage({
                 <Link
                   key={p.slug}
                   href={`/shop/${p.slug}`}
-                  className="group bg-cream border border-[#D8D4C5] rounded-[12px] overflow-hidden no-underline text-ink flex flex-col shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_14px_26px_-22px_rgba(45,58,46,0.2)] hover:-translate-y-0.5 hover:shadow-[0_22px_36px_-22px_rgba(45,58,46,0.3)] hover:border-[#C9C5B7] transition-all duration-200"
+                  className={`group relative bg-white p-2.5 no-underline text-ink flex flex-col transition-transform duration-200 hover:-translate-y-1 ${PAPER_SHADOW}`}
                 >
                   <div
-                    className="relative aspect-[16/10] overflow-hidden border-b border-[#D8D4C5]"
+                    className="relative aspect-[16/10] overflow-hidden"
                     style={{ background: theme.soft }}
                   >
                     {p.imageUrl && (
@@ -1016,7 +1029,7 @@ export default async function ProductPage({
                       />
                     )}
                   </div>
-                  <div className="p-5 flex flex-col flex-1">
+                  <div className="px-2.5 pb-2 pt-4 flex flex-col flex-1">
                     <span
                       className="inline-flex items-center gap-1.5 text-[10.5px] font-semibold uppercase tracking-[0.16em]"
                       style={{ color: theme.color }}
@@ -1059,7 +1072,8 @@ export default async function ProductPage({
       {/* MEMBERSHIP OFFER */}
       <section className="py-12">
         <div className="mx-auto max-w-[1180px] px-6">
-          <div className="max-w-[1000px] mx-auto bg-[#E6EBDF] border border-[#C9D3BE] rounded-[18px] p-10 md:p-14 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-12 items-center">
+          <div className={`relative max-w-[1000px] mx-auto -rotate-[0.5deg] bg-white p-8 pt-11 md:p-14 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-12 items-center ${PAPER_SHADOW}`}>
+            <Magnet color="#C97B5C" size={28} />
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                 <span className="w-[22px] h-px bg-forest inline-block" />
@@ -1145,7 +1159,7 @@ export default async function ProductPage({
           </div>
           <div className="max-w-[560px] mx-auto">
             {/* Free Guide card — butter-tinted */}
-            <div className="bg-[#F7EFD3] border border-[#E3D8A8] rounded-[16px] p-7 text-center flex flex-col h-full">
+            <div className={`rotate-1 bg-[#FBF3DC] p-7 text-center flex flex-col h-full ${PAPER_SHADOW}`}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7A5E1F]">
                 Free 7-day guide
               </p>
@@ -1172,7 +1186,7 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

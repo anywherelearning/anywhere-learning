@@ -20,7 +20,7 @@ export default function ReadMoreFromBlog({ productCategory, seed, accentColor }:
   if (posts.length === 0 && !guide) return null;
 
   return (
-    <section className="py-12 border-t border-[#D8D4C5] bg-[#F7F4EC]" aria-labelledby="read-more-heading">
+    <section className="py-12" aria-labelledby="read-more-heading">
       <div className="mx-auto max-w-[1100px] px-6">
         <div className="mb-8">
           <p
@@ -45,7 +45,7 @@ export default function ReadMoreFromBlog({ productCategory, seed, accentColor }:
           {guide && (
             <Link
               href={`/guides/${guide.slug}`}
-              className="group bg-cream border border-[#D8D4C5] rounded-[12px] p-6 no-underline text-ink flex flex-col hover:-translate-y-0.5 hover:border-[#C9C5B7] transition-all duration-200"
+              className="group bg-[#FFFDF8] shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] p-6 no-underline text-ink flex flex-col hover:-translate-y-0.5 hover:border-[#C9C5B7] transition-all duration-200"
             >
               <span className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-forest-dark">
                 Family guide
@@ -63,7 +63,7 @@ export default function ReadMoreFromBlog({ productCategory, seed, accentColor }:
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group bg-cream border border-[#D8D4C5] rounded-[12px] p-6 no-underline text-ink flex flex-col hover:-translate-y-0.5 hover:border-[#C9C5B7] transition-all duration-200"
+                className="group bg-[#FFFDF8] shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] p-6 no-underline text-ink flex flex-col hover:-translate-y-0.5 hover:border-[#C9C5B7] transition-all duration-200"
               >
                 <span
                   className="inline-flex items-center gap-1.5 text-[10.5px] font-semibold uppercase tracking-[0.16em]"
