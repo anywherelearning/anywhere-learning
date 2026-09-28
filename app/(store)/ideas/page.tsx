@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   // Absolute so the keyword-led tag isn't pushed past the SERP cutoff
   title: { absolute: 'Activity Ideas for Kids: 15 Free Printable Checklists' },
   description:
-    '320+ activity ideas for kids in 15 free printable checklists: nature, STEM, life skills, cooking, travel, and more. Free to read in full, PDFs sent by email.',
+    '340+ activity ideas for kids in 16 free printable checklists: nature, STEM, life skills, cooking, travel, and more. Free to read in full, PDFs sent by email.',
   alternates: { canonical: 'https://anywherelearning.co/ideas' },
   openGraph: {
     title: 'Activity Ideas for Kids: 15 Free Printable Checklists',
     description:
-      '320+ activity ideas for kids in 15 free printable checklists. Browse by category: nature, kitchen, life skills, STEM, creative, travel, AI, and mindset.',
+      '340+ activity ideas for kids in 16 free printable checklists. Browse by category: nature, kitchen, life skills, STEM, creative, travel, AI, and mindset.',
     url: 'https://anywherelearning.co/ideas',
     type: 'website',
     images: [

@@ -113,7 +113,10 @@ const POST_OVERRIDES: Record<string, string | 'capable-kid' | 'free-guide'> = {
   'teach-kids-about-money': 'life-skills-ideas',
   'allowance-vs-commission': 'life-skills-ideas',
   'financial-literacy-for-kids-by-age': 'life-skills-ideas',
+  // shark-tank-for-kids is the kid-business-ideas list's own blogSlug, so it
+  // gets that list directly; this override only applies if that link is removed.
   'shark-tank-for-kids': 'capable-kid',
+  'community-impact-projects-for-kids': 'kid-business-ideas',
   'project-based-learning-homeschool': 'stem-ideas',
   'kids-making-videos-learning': 'creative-ideas',
   'real-world-writing-for-kids': 'creative-ideas',

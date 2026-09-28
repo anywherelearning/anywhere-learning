@@ -23,6 +23,7 @@ const SLUG_TO_FILENAME: Record<string, string> = {
   'travel-ideas': 'List - 22 Travel & Worldschool Ideas for Kids',
   'ai-digital-ideas': 'List - 18 AI & Digital Literacy Ideas for Kids',
   'resilience-ideas': 'List - 12 Resilience-Building  Activities',
+  'kid-business-ideas': 'List - 20 Business Ideas For Kids',
 }
 
 function blobUrl(filename: string): string {

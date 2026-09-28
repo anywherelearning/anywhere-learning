@@ -266,7 +266,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   'kid-business-ideas': {
     seoTitle: 'Kid Business Ideas Checklist: 20 Real Ones by Age',
     metaDescription:
-      '20 kid business ideas for ages 6 to 14, sorted by age, each with the one number to work out before day one. Free to read in full, no signup.',
+      '20 kid business ideas for ages 6 to 14, sorted by age, each with the one number to work out before day one. Free to read, PDF by email.',
     howToUse:
       'Let your kid pick the idea, then sit down together with the number next to it before anything gets bought or made. What does one cup, one walk, or one tune-up cost you, and what will people pay? Most first businesses change after that conversation, and that is the lesson. You stay close by for the safety and the money handling; your kid does the thinking, the asking, and the counting.',
     faqs: [
@@ -286,9 +286,9 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
           'A kid business teaches cost, price, profit, and break-even: what one item costs to make, what to charge, and how many sales it takes before any money is really theirs. Older kids add hourly rates, fees, and comparing per-job against per-hour pricing.',
       },
       {
-        question: 'Is the kid business ideas checklist free?',
+        question: 'Is the kid business ideas checklist free to download?',
         answer:
-          'The kid business ideas checklist is free to read in full on this page. Pick one idea, work out its number together, and start small this month.',
+          'The kid business ideas checklist is free to read in full on this page. Enter your email and we send the printable PDF, in color or black and white, to keep on the fridge while your kid picks one.',
       },
     ],
   },
