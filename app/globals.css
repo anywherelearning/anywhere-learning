@@ -549,3 +549,17 @@ img {
 .popup-stagger > *:nth-child(5) { animation-delay: 490ms; }
 .popup-stagger > *:nth-child(6) { animation-delay: 540ms; }
 .popup-stagger > *:nth-child(7) { animation-delay: 590ms; }
+
+/* ── Print: hide site chrome ─────────────────────────────────── */
+@media print {
+  header[class*="site-header"],
+  nav[aria-label="Main"],
+  footer,
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
