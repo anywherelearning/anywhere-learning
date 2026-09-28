@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { HOME_FAQS } from '@/lib/home-showcase';
+import { HOME_FAQS_ACCORDION as HOME_FAQS } from '@/lib/home-showcase';
 
 /**
  * Homepage FAQ. Single-open accordion, first item open on load so the section

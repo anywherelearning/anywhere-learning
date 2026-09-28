@@ -494,3 +494,11 @@ export const HOME_OBJECTIONS: ShowcaseFaq[] = OBJECTION_QUESTIONS.map((q) => {
   if (!faq) throw new Error(`HOME_OBJECTIONS: no FAQ matches "${q}"`);
   return faq;
 });
+
+/** The FAQ accordion's questions: HOME_FAQS minus the objections already
+ * answered above the price, so the same two answers don't appear twice on
+ * the page. The FAQPage JSON-LD still uses the full HOME_FAQS (both sets are
+ * visible on the page). */
+export const HOME_FAQS_ACCORDION: ShowcaseFaq[] = HOME_FAQS.filter(
+  (f) => !OBJECTION_QUESTIONS.includes(f.q),
+);

@@ -48,6 +48,37 @@ const homepageFaqLd = {
   })),
 };
 
+// Real weeks, not stock: [file in /images/home, caption, alt].
+const WHY_PHOTOS: [string, string, string][] = [
+  ['baking-day', 'Baking day', 'A girl mixing batter in a big bowl'],
+  ['sorting-cacao', 'Sorting cacao', 'A girl sorting cacao beans on a tray'],
+  ['bagged-to-sell', 'Bagged to sell', 'A girl with bags of popcorn she made to sell'],
+  ['sifting-finds', 'Sifting the finds', 'Two kids sifting through finds at an outdoor table'],
+  ['at-the-roastery', 'At the roastery', 'Two kids at a coffee roaster reading about the beans'],
+];
+
+// Short lines from the endorsements on /about, word for word.
+const TEACHER_QUOTES = [
+  {
+    quote:
+      'Years after leaving her classroom, students still talk about Amelie as the best teacher they ever had.',
+    who: 'Catherine',
+    role: 'Colleague',
+  },
+  {
+    quote:
+      'She gave them real-world projects that had them thinking, building, presenting, and collaborating with enthusiasm.',
+    who: 'Wendy',
+    role: 'Parent',
+  },
+  {
+    quote:
+      "She helps shift the mindset from 'I need educational experts and structured programs to teach my child' to 'I already have what it takes to support my child's learning.'",
+    who: 'Claudia, M.Sc.',
+    role: 'Parenting coach',
+  },
+];
+
 function ArrowIcon({ size = 17 }: { size?: number }) {
   return (
     <svg
@@ -304,6 +335,29 @@ export default async function HomePage() {
               ))}
             </div>
 
+            {/* Real weeks, taped up: the idea in pictures. */}
+            <ul className="-mx-2 mb-14 grid list-none grid-cols-2 gap-x-3 gap-y-5 p-0 sm:grid-cols-3 lg:grid-cols-5">
+              {WHY_PHOTOS.map(([file, caption, alt], i) => (
+                <li
+                  key={file}
+                  className={`relative bg-[#f5f0e5] p-2 pb-2.5 shadow-[0_14px_30px_-16px_rgba(0,0,0,0.6)] ${i === 4 ? 'max-lg:hidden' : ''} ${i === 3 ? 'sm:max-lg:hidden' : ''}`}
+                  style={{ transform: `rotate(${[-3, 2, -1.5, 2.5, -2][i]}deg)` }}
+                >
+                  <Tape className="left-1/2 -translate-x-1/2 -rotate-3 w-14 h-5" />
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={`/images/home/${file}.jpg`}
+                      alt={alt}
+                      fill
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 200px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="mt-2 text-center font-display text-[14px] italic text-forest-dark">{caption}</p>
+                </li>
+              ))}
+            </ul>
+
             <ScrollReveal delay={150}>
               <div className="grid grid-cols-3 border-t border-cream/[0.14] pt-11">
                 {[
@@ -415,7 +469,7 @@ export default async function HomePage() {
                 </h2>
                 <p className="mb-4 text-lg leading-[1.72] text-gray-600 text-pretty">
                   Fifteen years in classrooms, two degrees in education, a boy and a girl of my
-                  own. Last year I left teaching to homeschool them. Partly because I missed them,
+                  own. Then I left teaching to homeschool them. Partly because I missed them,
                   mostly because I wanted to be the one helping them get ready for the life
                   they&apos;re actually going to live.
                 </p>
@@ -444,6 +498,22 @@ export default async function HomePage() {
             </ScrollReveal>
             </div>
           </div>
+
+          {/* From the people who saw her teach (full quotes on /about). */}
+          <ul className="mx-auto mt-14 grid max-w-[1100px] list-none gap-6 p-0 md:grid-cols-3">
+            {TEACHER_QUOTES.map((t, i) => (
+              <li
+                key={t.who}
+                className={`bg-[#FBF3DC] px-6 py-5 ${PAPER_SHADOW}`}
+                style={{ transform: `rotate(${[-1.2, 0.9, -0.6][i]}deg)` }}
+              >
+                <p className="m-0 font-display text-[16.5px] italic leading-[1.5] text-[#2b2a26]">&ldquo;{t.quote}&rdquo;</p>
+                <p className="mb-0 mt-3 text-[13px] font-semibold text-forest-dark">
+                  {t.who} <span className="font-normal text-gray-500">&middot; {t.role}</span>
+                </p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* ════════ 07 TESTIMONIALS ════════ */}
