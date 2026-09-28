@@ -1,5 +1,6 @@
 'use client';
 
+import { Tape, PAPER_SHADOW } from '@/components/shared/Paper';
 import { useState, type FormEvent } from 'react';
 
 const TOPICS = [
@@ -92,7 +93,8 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-cream border border-[#D8D4C5] rounded-[18px] p-10 md:p-12 text-center shadow-[0_24px_44px_-34px_rgba(58,90,64,0.4)]">
+      <div className={`relative bg-[#FFFDF8] p-10 pt-12 md:p-12 md:pt-14 text-center ${PAPER_SHADOW}`}>
+        <Tape />
         <div className="w-16 h-16 mx-auto rounded-full bg-[#E6EBDF] border border-[#C9D3BE] grid place-items-center text-forest-dark mb-5">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M4 12l5 5L20 6" />
@@ -119,9 +121,11 @@ export default function ContactForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="bg-cream border border-[#D8D4C5] rounded-[18px] p-7 md:p-10 shadow-[0_24px_44px_-34px_rgba(58,90,64,0.3)]"
+      className={`relative -rotate-[0.4deg] bg-[#FFFDF8] p-7 pt-10 md:p-10 md:pt-12 ${PAPER_SHADOW}`}
     >
       {/* Honeypot */}
+      <Tape className="left-10 -rotate-6" />
+      <Tape className="right-10 rotate-6" color="rgba(169,193,163,0.85)" />
       <div className="hidden" aria-hidden="true">
         <label>
           Website

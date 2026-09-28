@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import ContactForm from './ContactForm';
 
@@ -81,9 +82,9 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactLd) }}
       />
-      <main className="bg-cream">
+      <main className="bg-[#F2EFE4]">
         {/* 01 PAGE HEADER */}
-        <header className="bg-cream pt-12 md:pt-16 pb-10 md:pb-14 text-center">
+        <header className="pt-12 md:pt-16 pb-10 md:pb-14 text-center">
           <div className="mx-auto max-w-[760px] px-6">
             <ScrollReveal immediate>
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
@@ -104,7 +105,7 @@ export default function ContactPage() {
         </header>
 
         {/* 02 MAIN TWO-COLUMN: form + info */}
-        <section className="bg-cream pb-16 md:pb-20">
+        <section className="pb-16 md:pb-20">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-start">
               {/* LEFT: form */}
@@ -114,9 +115,11 @@ export default function ContactPage() {
 
               {/* RIGHT: info card */}
               <ScrollReveal delay={80}>
-                <aside className="bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-7 md:p-8 space-y-6">
+                <aside className={`relative rotate-[0.6deg] bg-white p-7 pt-10 md:p-8 md:pt-11 space-y-6 ${PAPER_SHADOW}`}>
+                  <Magnet color="#C97B5C" size={26} />
                   <div className="flex items-center gap-4">
-                    <div className="relative w-[56px] h-[56px] rounded-full overflow-hidden border border-[#D8D4C5] shrink-0">
+                    <div className="relative w-[64px] h-[64px] shrink-0 -rotate-3 bg-white p-1 shadow-[0_6px_12px_-6px_rgba(0,0,0,0.45)]">
+                      <div className="relative h-full w-full overflow-hidden">
                       <Image
                         src="/amelie.jpg"
                         alt="Amelie"
@@ -125,6 +128,7 @@ export default function ContactPage() {
                         quality={80}
                         className="object-cover"
                       />
+                      </div>
                     </div>
                     <div className="flex flex-col leading-[1.3]">
                       <span className="font-display text-[20px] text-ink">Amelie</span>
@@ -161,10 +165,10 @@ export default function ContactPage() {
                     </p>
                   </div>
 
-                  <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-4 flex items-start gap-3">
+                  <div className={`-rotate-1 bg-[#FBF3DC] p-4 flex items-start gap-3 ${PAPER_SHADOW}`}>
                     <span
                       aria-hidden="true"
-                      className="w-8 h-8 shrink-0 rounded-full bg-cream border border-[#C9D3BE] grid place-items-center text-forest-dark"
+                      className="w-8 h-8 shrink-0 rounded-full bg-white grid place-items-center text-forest-dark"
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="9" />
@@ -247,10 +251,10 @@ export default function ContactPage() {
         </section>
 
         {/* 03 BEFORE YOU EMAIL */}
-        <section className="bg-cream pb-20 md:pb-24">
+        <section className="pb-20 md:pb-24">
           <div className="mx-auto max-w-[1180px] px-6">
             <ScrollReveal>
-              <div className="max-w-[1020px] mx-auto bg-[#F2EFE4] border border-[#D8D4C5] rounded-[18px] p-10 md:p-14">
+              <div className="max-w-[1020px] mx-auto">
                 <div className="max-w-[600px] mx-auto text-center mb-10">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-dark inline-flex items-center gap-2.5">
                     <span className="w-[22px] h-px bg-forest inline-block" />
@@ -268,7 +272,8 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px] max-w-[920px] mx-auto">
                   {quickCards.map((q, i) => (
                     <ScrollReveal key={q.title} delay={i * 70} className="h-full">
-                      <div className="h-full bg-cream border border-[#D8D4C5] rounded-[12px] p-7 text-center flex flex-col transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_30px_-22px_rgba(45,58,46,0.22)] hover:border-[#C9C5B7]">
+                      <div className={`relative h-full bg-white p-7 pt-9 text-center flex flex-col ${PAPER_SHADOW}`} style={{ transform: `rotate(${[-1, 0.8, -0.6][i % 3]}deg)` }}>
+                        <Magnet color={['#588157', '#C97B5C', '#d4a373'][i % 3]} />
                         <div className="w-[46px] h-[46px] rounded-[12px] bg-[#F2DECF] border border-[rgba(201,123,92,0.3)] text-[#C97B5C] grid place-items-center mx-auto mb-4">
                           {q.icon}
                         </div>
