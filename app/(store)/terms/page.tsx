@@ -190,7 +190,7 @@ const sections: LegalSection[] = [
     title: 'Questions',
     content: (
       <p>
-        If you have questions about these terms, our refund policy, or anything else, email us at <MailLink />. We respond to every email, <Em>usually within 48 hours.</Em>
+        If you have questions about these terms, our refund policy, or anything else, email us at <MailLink />. We respond to <Em>every email.</Em>
       </p>
     ),
   },

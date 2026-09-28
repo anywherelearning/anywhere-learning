@@ -90,7 +90,7 @@ export default function StoreError({
               info@anywherelearning.co
             </a>{' '}
             with a brief description of what you were doing when this happened. Amelie reads
-            every email and we&apos;ll get it sorted within 24 hours.
+            every email and we&apos;ll get it sorted as soon as we can.
           </p>
         </div>
       </div>

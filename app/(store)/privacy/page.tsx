@@ -215,7 +215,7 @@ const sections: LegalSection[] = [
     title: 'Questions',
     content: (
       <p>
-        If you have any questions about this privacy policy, reach out to us at <MailLink />. We respond to every email, <Em>usually within 48 hours.</Em>
+        If you have any questions about this privacy policy, reach out to us at <MailLink />. We respond to <Em>every email.</Em>
       </p>
     ),
   },

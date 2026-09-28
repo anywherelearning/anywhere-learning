@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    "Get in touch with Anywhere Learning. Questions about activity guides, the membership, or homeschooling? Amelie reads every email and replies within 48 hours.",
+    "Get in touch with Anywhere Learning. Questions about activity guides, the membership, or homeschooling? Amelie reads and replies to every email herself.",
   alternates: { canonical: 'https://anywherelearning.co/contact' },
 };
 
@@ -139,9 +139,8 @@ export default function ContactPage() {
                     membership, an activity, or homeschooling, or you just want to say hi,
                     I&apos;d love to hear from you.{' '}
                     <span className="font-display italic text-ink">
-                      Real replies come from this exact inbox,
-                    </span>{' '}
-                    usually within 48 hours.
+                      Real replies come from this exact inbox.
+                    </span>
                   </p>
 
                   <div>
@@ -174,12 +173,12 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <p className="text-[14px] font-semibold text-ink m-0 leading-[1.4]">
-                        Typical response time: within 48 hours, Mon to Fri.
+                        Every email gets a reply.
                       </p>
                       <p className="mt-1 text-[13px] text-gray-600 leading-[1.5] m-0">
-                        Weekend emails get answered{' '}
+                        We&apos;re often on the road, so it can take{' '}
                         <span className="font-display italic text-forest-dark">
-                          Monday morning. Always.
+                          a few days.
                         </span>
                       </p>
                     </div>

@@ -102,7 +102,7 @@ export default function ContactForm() {
           Got it. <span className="italic text-forest">Thanks for writing.</span>
         </h3>
         <p className="text-[15.5px] text-gray-600 max-w-[400px] mx-auto leading-[1.6]">
-          Amelie will be in touch soon. Usually within 48 hours, Monday to Friday.
+          Amelie will be in touch soon. We travel a lot, so it can take a few days, but every message gets a reply.
         </p>
         <button
           type="button"
@@ -257,7 +257,7 @@ export default function ContactForm() {
 
         <p className="text-[13px] text-gray-500 leading-[1.55] m-0">
           <span className="font-display italic text-forest-dark">We read every email.</span>{' '}
-          Replies come from Amelie directly, usually within 48 hours.
+          Replies come from Amelie directly.
         </p>
       </div>
     </form>

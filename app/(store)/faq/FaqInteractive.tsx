@@ -231,7 +231,7 @@ export default function FaqInteractive({ groups }: Props) {
                 We&apos;re <span className="italic text-forest">always happy</span> to help.
               </h2>
               <p className="mt-5 text-[17.5px] leading-[1.55] text-gray-700 max-w-[520px] mx-auto">
-                Reach out. We read every email and reply within 24 hours.
+                Reach out. Every email gets a real reply from Amelie.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
                 <Link
