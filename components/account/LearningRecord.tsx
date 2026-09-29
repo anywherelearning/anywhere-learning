@@ -161,6 +161,43 @@ function fmtDate(iso: string) {
 }
 
 const COVER_KEY = 'al_record_cover_v1';
+const FRAMES_KEY = 'al_photo_frames_v1';
+
+/* ── Photo framing ────────────────────────────────────────────────────────
+   Every work photo shows in a 4:3 frame (card, thumbnail, printout). A saved
+   frame is the image's size and offset as percentages of that frame, so it
+   renders the same at any size. r = the photo's width/height, z = zoom (1 =
+   just covers the frame), l/t = left/top offset in % of the frame. */
+type PhotoFrame = { r: number; z: number; l: number; t: number };
+const FRAME_RATIO = 4 / 3;
+
+/** A short, stable id for one photo (the stored photo is a long data URL). */
+function frameKey(photoKey: string, url: string): string {
+  let h = 5381;
+  for (let i = 0; i < url.length; i += Math.max(1, Math.floor(url.length / 4000))) h = ((h << 5) + h + url.charCodeAt(i)) | 0;
+  return `${photoKey}|${url.length}|${(h >>> 0).toString(36)}`;
+}
+
+/** Size of the photo in % of the frame at zoom z (before offsetting). */
+function frameSize(r: number, z: number) {
+  const w = r > FRAME_RATIO ? (r / FRAME_RATIO) * 100 : 100;
+  const h = r > FRAME_RATIO ? 100 : (FRAME_RATIO / r) * 100;
+  return { w: w * z, h: h * z };
+}
+const clampOff = (v: number, size: number) => Math.min(0, Math.max(100 - size, v));
+
+/** A photo filling its (position:relative, sized) parent, framed if saved. */
+function FramedImg({ src, alt, frame }: { src: string; alt: string; frame?: PhotoFrame }) {
+  if (!frame) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={src} alt={alt} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />;
+  }
+  const { w, h } = frameSize(frame.r, frame.z);
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={src} alt={alt} style={{ position: 'absolute', left: `${frame.l}%`, top: `${frame.t}%`, width: `${w}%`, height: `${h}%`, maxWidth: 'none', display: 'block' }} />
+  );
+}
 type CoverFields = { lastName: string; preparedBy: string; grade: string; schoolYear: string };
 const EMPTY_COVER: CoverFields = { lastName: '', preparedBy: '', grade: '', schoolYear: '' };
 
@@ -195,6 +232,18 @@ export default function LearningRecord({
   const [covers, setCovers] = useState<Record<string, CoverFields>>({});
   const [bw, setBw] = useState(false); // print in black & white (save colour ink)
   const [printOpen, setPrintOpen] = useState(false);
+  // how each work photo sits in its frame (drag + zoom), keyed per photo
+  const [frames, setFrames] = useState<Record<string, PhotoFrame>>({});
+  const [framing, setFraming] = useState<{ key: string; url: string; title: string } | null>(null);
+
+  function saveFrame(fk: string, f: PhotoFrame | null) {
+    setFrames((prev) => {
+      const next = { ...prev };
+      if (f) next[fk] = f; else delete next[fk];
+      try { localStorage.setItem(FRAMES_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      return next;
+    });
+  }
 
   function setOverride(key: string, base: { days: number; hours: number }, field: 'days' | 'hours', value: number) {
     setOverrides((prev) => {
@@ -224,6 +273,8 @@ export default function LearningRecord({
     } catch { /* ignore bad image */ }
   }
   function removePhoto(key: string, idx: number) {
+    const url = photos[key]?.[idx];
+    if (url) saveFrame(frameKey(key, url), null);
     setPhotos((prev) => {
       const next = { ...prev, [key]: (prev[key] ?? []).filter((_, i) => i !== idx) };
       if (next[key].length === 0) delete next[key];
@@ -283,6 +334,7 @@ export default function LearningRecord({
     setPhotos(loadPhotos());
     setCustomSkills(loadCustomSkills());
     setOverrides(loadOverrides());
+    try { setFrames(JSON.parse(localStorage.getItem(FRAMES_KEY) || '{}')); } catch { /* ignore */ }
     try { setCovers(JSON.parse(localStorage.getItem(COVER_KEY) || '{}')); } catch { /* ignore */ }
     setReady(true);
   }, [preview]);
@@ -405,6 +457,7 @@ export default function LearningRecord({
         @media (min-width:980px){.lr-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
         .lr-card{transition:transform .2s ease}
         .lr-card:hover{transform:rotate(0deg)!important}
+        .lr-adjust{transition:transform .15s ease}.lr-adjust:hover{transform:translateY(-1px)}
         .lr-drop:hover{border-color:rgba(88,129,87,.55)!important;color:#3d5c3b!important}
         .lr-time-pop{right:auto;left:0}
         @media print {
@@ -534,9 +587,13 @@ export default function LearningRecord({
                       <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#f1ece1', borderRadius: '14px 14px 0 0' }}>
                         {pics.length > 0 ? (
                           <>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={pics[0]} alt={`${kidName}'s work: ${r.a.title}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '14px 14px 0 0', display: 'block' }} />
+                            <span style={{ position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: '14px 14px 0 0' }}>
+                              <FramedImg src={pics[0]} alt={`${kidName}'s work: ${r.a.title}`} frame={frames[frameKey(pkey, pics[0])]} />
+                            </span>
                             <button type="button" onClick={() => removePhoto(pkey, 0)} aria-label="Remove this photo" title="Remove photo" style={photoX}>×</button>
+                            <button type="button" onClick={() => setFraming({ key: frameKey(pkey, pics[0]), url: pics[0], title: r.a.title })} className="lr-adjust" style={{ position: 'absolute', left: 10, bottom: 10, display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(255,253,248,0.94)', color: '#3d5c3b', fontSize: 12, fontWeight: 700, padding: '5px 10px', borderRadius: 999, border: 'none', cursor: 'pointer', boxShadow: '0 6px 14px -8px rgba(40,30,10,0.55)' }}>
+                              <CropIcon /> Adjust
+                            </button>
                           </>
                         ) : (
                           <label className="lr-drop" style={{ position: 'absolute', inset: 12, border: '2px dashed rgba(58,44,23,0.2)', borderRadius: 10, display: 'grid', placeItems: 'center', textAlign: 'center', color: 'var(--am-muted)', fontSize: 13, fontWeight: 600, cursor: 'pointer', transition: 'color .15s,border-color .15s' }}>
@@ -567,9 +624,10 @@ export default function LearningRecord({
                         {pics.length > 0 && (
                           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10, alignItems: 'center' }}>
                             {pics.slice(1).map((url, pi) => (
-                              <span key={pi} style={{ position: 'relative', width: 46, height: 46, borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(61,92,59,0.16)' }}>
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src={url} alt="Work sample" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                              <span key={pi} style={{ position: 'relative', width: 56, height: 42, borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(61,92,59,0.16)' }}>
+                                <button type="button" onClick={() => setFraming({ key: frameKey(pkey, url), url, title: r.a.title })} aria-label="Adjust this photo" title="Adjust photo" style={{ position: 'absolute', inset: 0, padding: 0, border: 'none', cursor: 'pointer', background: 'none' }}>
+                                  <FramedImg src={url} alt="Work sample" frame={frames[frameKey(pkey, url)]} />
+                                </button>
                                 <button type="button" onClick={() => removePhoto(pkey, pi + 1)} aria-label="Remove this photo" style={{ ...photoX, width: 16, height: 16, fontSize: 11, lineHeight: '14px', top: 2, right: 2 }}>×</button>
                               </span>
                             ))}
@@ -712,8 +770,9 @@ export default function LearningRecord({
                         {pics.length > 0 && (
                           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 8 }}>
                             {pics.map((url, pi) => (
-                              // eslint-disable-next-line @next/next/no-img-element
-                              <img key={pi} src={url} alt="Work sample" style={{ width: 170, height: 170, objectFit: 'cover', borderRadius: 8 }} />
+                              <span key={pi} style={{ position: 'relative', display: 'block', width: 172, aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden' }}>
+                                <FramedImg src={url} alt="Work sample" frame={frames[frameKey(`${r.slug}__${r.child}`, url)]} />
+                              </span>
                             ))}
                           </div>
                         )}
@@ -732,6 +791,16 @@ export default function LearningRecord({
           This record is generated from the family&apos;s completed Anywhere Learning activities. It is designed to support common homeschool portfolio requirements (a dated log of educational activities and progress across skill areas). Requirements vary by state; check your state&apos;s specific rules and, where required, have a qualified evaluator review your portfolio.
         </p>
       </div>
+
+      {framing && (
+        <PhotoFramer
+          url={framing.url}
+          title={framing.title}
+          initial={frames[framing.key]}
+          onSave={(f) => { saveFrame(framing.key, f); setFraming(null); }}
+          onClose={() => setFraming(null)}
+        />
+      )}
 
       {printOpen && (
         <PrintSetup
@@ -803,6 +872,108 @@ function PrintSetup({
       </div>
     </div>
   );
+}
+
+/* ── the drag + zoom framer ─────────────────────────────────────────────── */
+function PhotoFramer({ url, title, initial, onSave, onClose }: { url: string; title: string; initial?: PhotoFrame; onSave: (f: PhotoFrame | null) => void; onClose: () => void }) {
+  const trapRef = useFocusTrap(true);
+  const boxRef = useRef<HTMLDivElement>(null);
+  const drag = useRef<{ x: number; y: number; l: number; t: number } | null>(null);
+  const [f, setF] = useState<PhotoFrame | null>(initial ?? null);
+
+  // Learn the photo's shape, then start centred (or where it was saved).
+  useEffect(() => {
+    if (initial) return;
+    const img = new Image();
+    img.onload = () => {
+      const r = img.naturalWidth / Math.max(1, img.naturalHeight);
+      const { w, h } = frameSize(r, 1);
+      setF({ r, z: 1, l: (100 - w) / 2, t: (100 - h) / 2 });
+    };
+    img.src = url;
+  }, [url, initial]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
+
+  function move(dl: number, dt: number, from = f) {
+    if (!from) return;
+    const { w, h } = frameSize(from.r, from.z);
+    setF({ ...from, l: clampOff(from.l + dl, w), t: clampOff(from.t + dt, h) });
+  }
+  function zoomTo(z: number) {
+    if (!f) return;
+    const a = frameSize(f.r, f.z);
+    const b = frameSize(f.r, z);
+    // keep the point at the centre of the frame where it is
+    const u = (50 - f.l) / a.w;
+    const v = (50 - f.t) / a.h;
+    setF({ ...f, z, l: clampOff(50 - u * b.w, b.w), t: clampOff(50 - v * b.h, b.h) });
+  }
+  function onDown(e: React.PointerEvent) {
+    if (!f) return;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    drag.current = { x: e.clientX, y: e.clientY, l: f.l, t: f.t };
+  }
+  function onMove(e: React.PointerEvent) {
+    const d = drag.current;
+    const box = boxRef.current;
+    if (!d || !box || !f) return;
+    const dl = ((e.clientX - d.x) / box.clientWidth) * 100;
+    const dt = ((e.clientY - d.y) / box.clientHeight) * 100;
+    move(dl, dt, { ...f, l: d.l, t: d.t });
+  }
+  function onKeyMove(e: React.KeyboardEvent) {
+    const step = e.shiftKey ? 10 : 3;
+    const map: Record<string, [number, number]> = { ArrowLeft: [step, 0], ArrowRight: [-step, 0], ArrowUp: [0, step], ArrowDown: [0, -step] };
+    const m = map[e.key];
+    if (m) { e.preventDefault(); move(m[0], m[1]); }
+  }
+
+  const btn = (primary: boolean): React.CSSProperties => ({ fontSize: 14, fontWeight: 700, padding: '11px 18px', borderRadius: 12, border: primary ? 'none' : '1.5px solid rgba(61,92,59,0.25)', background: primary ? '#588157' : '#fffdf9', color: primary ? '#fff' : '#3d5c3b', cursor: 'pointer' });
+  return (
+    <div className="lr-noprint" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(30,24,16,0.6)', backdropFilter: 'blur(3px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}>
+      <div ref={trapRef} role="dialog" aria-modal="true" aria-label={`Adjust photo: ${title}`} style={{ width: '100%', maxWidth: 460, background: 'var(--am-paper)', borderRadius: 20, padding: 'clamp(18px,4vw,24px)', boxShadow: '0 40px 90px -30px rgba(20,14,6,0.7)' }}>
+        <h2 style={{ ...plate, fontSize: 22, color: 'var(--am-ink)', margin: '0 0 4px' }}>Adjust the photo</h2>
+        <p style={{ fontSize: 13.5, color: 'var(--am-muted)', margin: '0 0 14px' }}>Drag to move it, slide to zoom. This is how it shows on the card and in the printout.</p>
+        <div
+          ref={boxRef}
+          tabIndex={0}
+          role="img"
+          aria-label="Photo frame. Use the arrow keys to move the photo."
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={() => { drag.current = null; }}
+          onPointerCancel={() => { drag.current = null; }}
+          onKeyDown={onKeyMove}
+          style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 12, overflow: 'hidden', background: '#e9e3d6', cursor: drag.current ? 'grabbing' : 'grab', touchAction: 'none', userSelect: 'none', outlineOffset: 3 }}
+        >
+          {f && <FramedImg src={url} alt="" frame={f} />}
+          {/* rule-of-thirds guides help line things up */}
+          <span aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'linear-gradient(to right, transparent calc(33.33% - 0.5px), rgba(255,255,255,0.45) 33.33%, transparent calc(33.33% + 0.5px), transparent calc(66.66% - 0.5px), rgba(255,255,255,0.45) 66.66%, transparent calc(66.66% + 0.5px)), linear-gradient(to bottom, transparent calc(33.33% - 0.5px), rgba(255,255,255,0.45) 33.33%, transparent calc(33.33% + 0.5px), transparent calc(66.66% - 0.5px), rgba(255,255,255,0.45) 66.66%, transparent calc(66.66% + 0.5px))' }} />
+        </div>
+        <label style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 16, fontSize: 13, fontWeight: 600, color: 'var(--am-muted)' }}>
+          Zoom
+          <input type="range" min={1} max={3} step={0.01} value={f?.z ?? 1} onChange={(e) => zoomTo(Number(e.target.value))} style={{ flex: 1, accentColor: '#588157' }} />
+        </label>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 18 }}>
+          <button type="button" onClick={() => onSave(null)} style={{ background: 'none', border: 'none', padding: 0, fontSize: 13, color: 'var(--am-muted)', textDecoration: 'underline', textUnderlineOffset: 3, cursor: 'pointer' }}>Reset</button>
+          <span style={{ flex: 1 }} />
+          <button type="button" onClick={onClose} style={btn(false)}>Cancel</button>
+          <button type="button" onClick={() => f && onSave(f)} disabled={!f} style={btn(true)}>Save</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CropIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14" /><path d="M18 22V8a2 2 0 0 0-2-2H2" /></svg>;
 }
 
 function PrintIcon() {
