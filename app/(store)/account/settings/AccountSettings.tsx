@@ -1,11 +1,12 @@
 'use client';
 
 import MemberHero from '@/components/account/MemberHero';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useUser, useReverification } from '@clerk/nextjs';
 import { IS_FOUNDER_PHASE } from '@/lib/membership';
 import AdventureSettingsSection from '@/components/account/AdventureSettingsSection';
+import FamilyPassport from '@/components/account/FamilyPassport';
 
 interface Member {
   name: string;
@@ -52,66 +53,45 @@ export default function AccountSettings({
   const tierMeta = user?.publicMetadata?.tier as string | undefined;
   const hasAccess = previewAccess || !!isSignedIn || tierMeta === 'member';
 
-  const TABS: { value: Tab; label: string }[] = [
-    { value: 'profile', label: 'Profile' },
-    ...(hasAccess ? [{ value: 'kids' as Tab, label: 'Our Adventure' }] : []),
-    ...(member.hasSubscription ? [{ value: 'subscription' as Tab, label: 'Subscription' }] : []),
-  ];
+  // One page, laid out as a family passport: the passport up top, then the
+  // "pages" (explorers, route, membership, the grown-up). Old #tab links and
+  // the billing portal's return URL (#subscription) still land on their page.
+  useEffect(() => {
+    const target = window.location.hash.slice(1) || (initialTab !== 'profile' ? initialTab : '');
+    const id = target === 'kids' ? 'explorers' : target;
+    if (id) window.setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+  }, [initialTab]);
 
-  const [tab, setTab] = useState<Tab>(initialTab);
+  const joined = member.joinedAt && member.joinedAt !== '—'
+    ? new Date(member.joinedAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+    : '';
+  const stamp = member.isTrialing ? 'Free trial' : member.hasSubscription ? member.tier : 'Explorer';
+  const stampSub = member.isTrialing && member.trialEndsAt
+    ? `until ${new Date(member.trialEndsAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`
+    : joined ? `since ${joined}` : undefined;
 
   return (
     <main
       className="pb-12"
       style={{ background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))', minHeight: '100vh', color: 'var(--am-ink)' }}
     >
-      <MemberHero
-        kicker="Settings & billing"
-        title="Your account"
-        lede="Your profile, your explorers, and your membership, all in one place."
-      />
+      <MemberHero kicker="Settings & billing" title="Your account" />
 
-      {/* Tabs as the same pill chips the kid selector uses across the member area */}
-      <div className="mx-auto max-w-[960px] px-6 pt-6">
-        <nav aria-label="Account sections" className="flex flex-wrap gap-2">
-          {TABS.map((t) => {
-            const active = tab === t.value;
-            return (
-              <button
-                key={t.value}
-                type="button"
-                onClick={() => setTab(t.value)}
-                aria-current={active ? 'page' : undefined}
-                className="cursor-pointer whitespace-nowrap rounded-full px-4 py-2 font-body text-[14px] font-semibold transition-colors"
-                style={{
-                  background: active ? '#588157' : '#fffdf9',
-                  color: active ? '#faf9f6' : '#54524b',
-                  border: `1.5px solid ${active ? '#588157' : 'rgba(61,92,59,0.2)'}`,
-                }}
-              >
-                {t.label}
-              </button>
-            );
-          })}
-        </nav>
-      </div>
+      <div className="mx-auto max-w-[1000px] px-4 sm:px-6">
+        <FamilyPassport lastName={user?.lastName ?? member.name.split(/\s+/).slice(1).join(' ')} stamp={stamp} stampSub={stampSub} />
 
-      <div className="mx-auto max-w-[960px] px-6 pt-5">
-        {/* PROFILE — custom inline form, wired to Clerk via useUser / useClerk.
-            Name is editable here. Email + password use Clerk's portal because
-            both require verification flows (add → verify → make primary) that
-            we shouldn't reinvent. The portal button opens an in-page modal so
-            the user never leaves the settings page. */}
-        {tab === 'profile' && <ProfileTab fallback={member} />}
-
-        {/* OUR ADVENTURE — kids, explorers, trail format, focus areas */}
-        {tab === 'kids' && hasAccess && <AdventureSettingsSection />}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6 items-start">
+        {/* PAGE 1 + 2 — kids & explorers, then trail format & focus areas */}
+        {hasAccess && <AdventureSettingsSection part="explorers" />}
+        {hasAccess && <AdventureSettingsSection part="route" />}
 
         {/* SUBSCRIPTION */}
-        {tab === 'subscription' && member.hasSubscription && (
+        {member.hasSubscription && (
           <SettingsCard
-            title="Subscription"
-            description="Your membership plan, renewal, and payment method."
+            id="subscription"
+            kicker="Page 3"
+            title="Membership"
+            description="Your plan, renewal and payment method."
           >
             {/* Trial members get a distinct card: clear they're not paying yet,
                 with a one-tap path to start membership and unlock downloads. */}
@@ -198,6 +178,10 @@ export default function AccountSettings({
           </SettingsCard>
         )}
 
+        {/* PAGE 4 — the parent's own name, photo and sign-in */}
+        <ProfileTab fallback={member} />
+        </div>
+
         {/* Footer actions */}
         <div className="mt-6 pt-4 border-t border-[#D8D4C5] flex flex-wrap items-center justify-between gap-3">
           <p className="m-0 font-body text-[13px] text-gray-500">
@@ -223,19 +207,25 @@ export default function AccountSettings({
 }
 
 function SettingsCard({
+  id,
+  kicker,
   title,
   description,
   children,
 }: {
+  id?: string;
+  kicker?: string;
   title: string;
   description: string;
   children: React.ReactNode;
 }) {
   return (
     <section
-      className="rounded-[20px] p-5 md:p-7"
+      id={id}
+      className="scroll-mt-24 rounded-[20px] p-5 md:p-7"
       style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
     >
+      {kicker && <div className="font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)] mb-1">{kicker}</div>}
       <h2
         className="m-0 text-[clamp(1.25rem,2.4vw,1.6rem)] leading-[1.15]"
         style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
@@ -292,8 +282,10 @@ function ProfileTab({ fallback }: { fallback: Member }) {
 
   return (
     <SettingsCard
-      title="Profile"
-      description="Update your name and avatar. Email and password are managed below."
+      id="profile"
+      kicker="Page 4"
+      title="The grown-up"
+      description="Your name, photo and sign-in."
     >
       <AvatarUploader />
 

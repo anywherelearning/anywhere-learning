@@ -1,8 +1,10 @@
 'use client';
 
 /**
- * The "Our Adventure" tab in Account settings — everything about how the family
- * travels the map, in one place:
+ * The family's side of Account settings, as two "passport pages":
+ *   part="explorers": your kids (names + birthdays) and their explorers
+ *   part="route":     trail format + focus areas
+ * Covers:
  *   1. Your kids       — names + birthdays (the canonical KidsSetup editor)
  *   2. Explorers       — each kid's avatar, editable with the ExplorerBuilder
  *   3. Trail format    — one shared family trail, or one trail per kid
@@ -15,7 +17,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { loadProfile, type Child } from '@/lib/member-profile';
+import { loadProfile, childAge, type Child } from '@/lib/member-profile';
 import KidsSetup from '@/components/account/KidsSetup';
 import ExplorerBuilder from '@/components/account/ExplorerBuilder';
 import { ExplorerHead } from '@/components/account/ExplorerAvatar';
@@ -28,7 +30,8 @@ function childLabel(c: Child, i: number) {
   return c.name?.trim() || `Child ${i + 1}`;
 }
 
-export default function AdventureSettingsSection() {
+/** Which passport page to render: the kids + explorers, or the trail setup. */
+export default function AdventureSettingsSection({ part }: { part: 'explorers' | 'route' }) {
   const [ready, setReady] = useState(false);
   const [children, setChildren] = useState<Child[]>([]);
   const [avatars, setAvatars] = useState<Record<string, KidAvatar | null>>({});
@@ -36,6 +39,7 @@ export default function AdventureSettingsSection() {
   const [areas, setAreas] = useState<string[]>([]);
   const [editing, setEditing] = useState<string | null>(null);
   const [savedAreas, setSavedAreas] = useState(false);
+  const [kidsOpen, setKidsOpen] = useState(false); // the names + birthdays editor
   const editTrapRef = useFocusTrap(!!editing);
 
   function load() {
@@ -78,50 +82,10 @@ export default function AdventureSettingsSection() {
     ? children.map((c, i) => [c.id ?? childLabel(c, i), childLabel(c, i)] as const).find(([id]) => id === editing)
     : null;
 
-  return (
-    <div className="flex flex-col gap-5 mt-6">
-      {/* 1. Kids — KidsSetup renders its own titled block, so no extra card here */}
-      <KidsSetup embedded initialChildren={children} title="Manage your kids" submitLabel="Save changes" onDone={() => load()} />
-
-      {/* 2. Explorers */}
-      <Card title="Explorers" desc="Each kid gets an explorer that travels the adventure map and earns gear.">
-        {children.length === 0 ? (
-          <p className="font-body text-[13.5px] text-gray-500 m-0">Add a kid above and their explorer shows up here.</p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {children.map((c, i) => {
-              const id = c.id ?? childLabel(c, i);
-              const av = avatars[id] ?? null;
-              return (
-                <div key={id} className="flex items-center gap-3.5 bg-cream border border-[#E4E0D2] rounded-[14px] p-3.5">
-                  <div className="w-14 h-14 rounded-full overflow-hidden bg-[#EEF1E9] border border-[#D8D4C5] grid place-items-center flex-shrink-0">
-                    {av ? (
-                      <ExplorerHead avatar={av} size={56} />
-                    ) : (
-                      <span className="text-[22px] text-forest-dark" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800 }}>{childLabel(c, i).charAt(0).toUpperCase()}</span>
-                    )}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="m-0 font-body font-semibold text-[14.5px] text-ink truncate">{childLabel(c, i)}</p>
-                    <p className="m-0 font-body text-[12.5px] text-gray-500">{av ? `${baseWord(av)} explorer` : 'No explorer yet'}</p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setEditing(id)}
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 border-[1.5px] border-forest text-forest-dark font-body font-semibold py-2 px-3 rounded-[10px] text-[13px] bg-white cursor-pointer hover:bg-[#E6EBDF] transition-colors"
-                  >
-                    {av ? 'Edit' : 'Build'}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </Card>
-
-      {/* 3. Trail format */}
-      <Card title="Trail format" desc="Travel the map together, or give each kid their own path.">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+  if (part === 'route') {
+    return (
+      <Card id="route" kicker="Page 2" title="The route" desc="How the family travels the map, and what to see more of.">
+        <div className="grid grid-cols-1 gap-3">
           <ModeOption
             active={mode === 'family'}
             onClick={() => chooseMode('family')}
@@ -135,10 +99,9 @@ export default function AdventureSettingsSection() {
             desc="Each explorer follows their own path at their own pace."
           />
         </div>
-      </Card>
 
-      {/* 4. Focus areas */}
-      <Card title="Focus areas" desc="The skills you want to see more of. We still weave the rest in lightly.">
+        <h3 className="m-0 mt-6 font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)]">Focus areas</h3>
+        <p className="m-0 mt-1 mb-3 font-body text-[13px] leading-[1.5] text-gray-500">The skills you want to see more of. We still weave the rest in lightly.</p>
         <div className="flex flex-wrap gap-2">
           {TERRITORIES.map((t) => {
             const on = areas.includes(t.slug);
@@ -167,6 +130,57 @@ export default function AdventureSettingsSection() {
           {savedAreas && <span className="font-body text-[12.5px] text-forest-dark font-medium" role="status">✓ Saved</span>}
         </div>
       </Card>
+    );
+  }
+
+  return (
+    <Card id="explorers" kicker="Page 1" title="The explorers" desc="Your kids and the explorers that travel the map for them.">
+      {children.length > 0 && (
+        <div className="grid grid-cols-1 gap-2.5">
+          {children.map((c, i) => {
+            const id = c.id ?? childLabel(c, i);
+            const av = avatars[id] ?? null;
+            const age = childAge(c);
+            return (
+              <div key={id} className="flex items-center gap-3.5 bg-[rgba(58,44,23,0.035)] rounded-[14px] p-3">
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-[#EEF1E9] border-2 border-white shadow-[0_6px_14px_-8px_rgba(58,44,23,0.5)] grid place-items-center flex-shrink-0">
+                  {av ? (
+                    <ExplorerHead avatar={av} size={56} />
+                  ) : (
+                    <span className="text-[22px] text-forest-dark" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800 }}>{childLabel(c, i).charAt(0).toUpperCase()}</span>
+                  )}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="m-0 font-body font-semibold text-[15px] text-ink truncate">{childLabel(c, i)}</p>
+                  <p className="m-0 font-body text-[12.5px] text-gray-500">{age != null ? `Age ${age}` : 'Age not set'}{av ? '' : ' · no explorer yet'}</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setEditing(id)}
+                  className="flex-shrink-0 inline-flex items-center gap-1.5 border-[1.5px] border-forest text-forest-dark font-body font-semibold py-2 px-3 rounded-[10px] text-[13px] bg-white cursor-pointer hover:bg-[#E6EBDF] transition-colors"
+                >
+                  {av ? 'Edit explorer' : 'Build explorer'}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {children.length > 0 && !kidsOpen ? (
+        <button
+          type="button"
+          onClick={() => setKidsOpen(true)}
+          className="mt-4 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[13.5px] text-forest hover:text-forest-dark"
+        >
+          Edit names &amp; birthdays, or add a child →
+        </button>
+      ) : (
+        <div className="mt-4 pt-4 border-t border-dashed border-[rgba(58,44,23,0.16)]">
+          <h3 className="m-0 mb-3 font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)]">Names &amp; birthdays</h3>
+          <KidsSetup embedded bare initialChildren={children} submitLabel="Save changes" onDone={() => { load(); setKidsOpen(false); }} />
+        </div>
+      )}
 
       {/* Explorer builder modal */}
       {editing && editingChild && (
@@ -190,7 +204,7 @@ export default function AdventureSettingsSection() {
           </div>
         </div>
       )}
-    </div>
+    </Card>
   );
 }
 
@@ -198,12 +212,14 @@ function baseWord(av: KidAvatar) {
   return av.base;
 }
 
-function Card({ title, desc, children }: { title: string; desc: string; children: React.ReactNode }) {
+function Card({ id, kicker, title, desc, children }: { id?: string; kicker?: string; title: string; desc: string; children: React.ReactNode }) {
   return (
     <section
-      className="rounded-[20px] p-5 md:p-7"
+      id={id}
+      className="scroll-mt-24 rounded-[20px] p-5 md:p-7"
       style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
     >
+      {kicker && <div className="font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)] mb-1">{kicker}</div>}
       <h2
         className="m-0 text-[clamp(1.25rem,2.4vw,1.5rem)] leading-[1.15]"
         style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
