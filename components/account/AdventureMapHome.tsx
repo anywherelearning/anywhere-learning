@@ -432,8 +432,17 @@ export default function AdventureMapHome({
     const terr = TERRITORIES.find((t) => t.slug === nextTerritorySlug);
     if (!terr) return null;
     if (nudgeFor(engineScope) === terr.slug) return `You pointed the trail toward ${terr.name}`;
-    const done = terr.activities.filter((sl) => doneSlugs.has(sl)).length;
-    return done === 0 ? `New ground: you haven't explored ${terr.name} yet` : `${terr.name} is the area you've explored least`;
+    // Only claim "least explored" when it's true. The engine also weighs skips,
+    // so after "Skip this area" the next pick often isn't the least-done area.
+    const covOf = (t: (typeof TERRITORIES)[number]) => t.activities.filter((sl) => doneSlugs.has(sl)).length;
+    const done = covOf(terr);
+    if (done === 0) return `New ground: you haven't explored ${terr.name} yet`;
+    const others = TERRITORIES.filter((t) => enabledTerritories.size === 0 || enabledTerritories.has(t.slug)).map(covOf);
+    const min = Math.min(...others);
+    if (done > min) return null;
+    return others.filter((n) => n === min).length > 1
+      ? `${terr.name} is one of the areas you've explored least`
+      : `${terr.name} is the area you've explored least`;
   })();
   // Extra activities THIS explorer is doing on their own (earn gear only).
   const soloItems = laneItems;
@@ -1021,7 +1030,6 @@ export default function AdventureMapHome({
                       )}
                     </div>
                     <div className="am-avatar-name">{label}</div>
-                    <button className="am-backpack-toggle" onClick={() => setMenuView('backpack')}>Look inside the backpack</button>
                   </div>
 
                   <div className="am-options">
@@ -1031,14 +1039,13 @@ export default function AdventureMapHome({
                         <span><b>{collected}</b>of {catalogTotal} gear</span>
                         <span><b>{soloItems.length}</b>on their own</span>
                       </div>
-                      {pack.length > 0 && (
-                        <button type="button" className="am-journey-gear" onClick={() => setMenuView('backpack')} aria-label={`Look inside ${label}'s backpack`}>
-                          {pack.slice(-6).reverse().map((g, gi) => (
-                            <span key={`${g.id}-${gi}`} className="am-journey-slot"><span className="am-ico" dangerouslySetInnerHTML={{ __html: gearIconSVG(g.id, `amj${gi}`, false) }} /></span>
-                          ))}
-                          <span className="am-journey-more">Backpack →</span>
-                        </button>
-                      )}
+                      <button type="button" className="am-journey-gear" onClick={() => setMenuView('backpack')} aria-label={`Look inside ${label}'s backpack`}>
+                        {pack.length === 0 && <span style={{ fontSize: 12, color: 'var(--am-muted)' }}>Empty so far</span>}
+                        {pack.slice(-6).reverse().map((g, gi) => (
+                          <span key={`${g.id}-${gi}`} className="am-journey-slot"><span className="am-ico" dangerouslySetInnerHTML={{ __html: gearIconSVG(g.id, `amj${gi}`, false) }} /></span>
+                        ))}
+                        <span className="am-journey-more">Look inside the backpack →</span>
+                      </button>
                     </div>
                     <button className="am-option" onClick={() => setMenuView('builder')}>
                       <span className="am-option-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg></span>
