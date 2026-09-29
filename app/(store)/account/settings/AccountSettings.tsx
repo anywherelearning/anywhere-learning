@@ -80,12 +80,16 @@ export default function AccountSettings({
       <div className="mx-auto max-w-[1000px] px-4 sm:px-6">
         <FamilyPassport lastName={user?.lastName ?? member.name.split(/\s+/).slice(1).join(' ')} stamp={stamp} stampSub={stampSub} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6 items-start">
-        {/* PAGE 1 + 2 — kids & explorers, then trail format & focus areas */}
-        {hasAccess && <AdventureSettingsSection part="explorers" />}
-        {hasAccess && <AdventureSettingsSection part="route" />}
-
-        {/* SUBSCRIPTION */}
+        {/* Two independent columns so a short card never leaves a hole beside a
+            tall one. On phones the wrappers dissolve (display:contents) and the
+            order puts the pages back to 1, 2, 3, 4. */}
+        <div className="set-pages mt-6">
+          <div className="set-col">
+            <div style={{ order: 1 }}>{hasAccess && <AdventureSettingsSection part="explorers" />}</div>
+            <div style={{ order: 2 }}>{hasAccess && <AdventureSettingsSection part="route" />}</div>
+          </div>
+          <div className="set-col">
+            <div style={{ order: 3 }}>
         {member.hasSubscription && (
           <SettingsCard
             id="subscription"
@@ -177,10 +181,20 @@ export default function AccountSettings({
             </FooterRow>
           </SettingsCard>
         )}
-
-        {/* PAGE 4 — the parent's own name, photo and sign-in */}
-        <ProfileTab fallback={member} />
+            </div>
+            {/* PAGE 4 — the parent's own name, photo and sign-in */}
+            <div style={{ order: 4 }}><ProfileTab fallback={member} /></div>
+          </div>
         </div>
+        <style>{`
+          .set-pages{display:grid;grid-template-columns:1fr;gap:20px}
+          .set-col{display:contents}
+          .set-col>div:empty{display:none}
+          @media (min-width:1024px){
+            .set-pages{grid-template-columns:1fr 1fr;align-items:start}
+            .set-col{display:flex;flex-direction:column;gap:20px}
+          }
+        `}</style>
 
         {/* Footer actions */}
         <div className="mt-6 pt-4 border-t border-[#D8D4C5] flex flex-wrap items-center justify-between gap-3">
