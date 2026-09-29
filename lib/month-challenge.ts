@@ -9,6 +9,8 @@
  * those on the fly so nothing breaks.
  */
 
+import { notifyLocalChanged } from './account-sync';
+
 const KEY = 'al_month_challenge_v1';
 
 export type MonthChallengeStatus = 'accepted' | 'done';
@@ -48,6 +50,7 @@ export function writeChallenge(id: string, entry: MonthChallengeEntry): void {
     const all = JSON.parse(localStorage.getItem(KEY) || '{}');
     all[id] = entry;
     localStorage.setItem(KEY, JSON.stringify(all));
+    notifyLocalChanged();
   } catch {
     /* ignore */
   }
@@ -59,6 +62,7 @@ export function clearChallenge(id: string): void {
     const all = JSON.parse(localStorage.getItem(KEY) || '{}');
     delete all[id];
     localStorage.setItem(KEY, JSON.stringify(all));
+    notifyLocalChanged();
   } catch {
     /* ignore */
   }

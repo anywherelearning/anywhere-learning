@@ -1,6 +1,6 @@
 /**
- * Cross-device sync glue. Bundles the four localStorage stores (kids profile,
- * plan, completions, library status) into one blob that the server persists per
+ * Cross-device sync glue. Bundles the member's localStorage stores (kids,
+ * trail, completions, library status, This Month, Record edits) into one blob that the server persists per
  * member. The <AccountSync> component pulls on load and pushes on change; this
  * module just reads/writes the local keys and signals changes.
  */
@@ -13,6 +13,17 @@ const KEYS = {
   onboarded: 'al_onboarded_v1',
   roadmap: 'al_roadmap_v1',
   tourSeen: 'al_tour_seen_v1',
+  // the trail's rotation + the plan preferences behind it
+  planEngine: 'al_plan_engine_v1',
+  planPrefs: 'al_plan_prefs_v1',
+  // This Month: accepted / finished challenges and the streak days ticked
+  monthChallenge: 'al_month_challenge_v1',
+  // Learning Record: edited times, added skills, printout cover, photo framing.
+  // (The work photos themselves stay on the device: too big for this blob.)
+  timeOverrides: 'al_time_override_v1',
+  customSkills: 'al_custom_skills_v1',
+  recordCover: 'al_record_cover_v1',
+  photoFrames: 'al_photo_frames_v1',
 } as const;
 
 export type AccountState = Partial<Record<keyof typeof KEYS, unknown>>;
@@ -42,6 +53,12 @@ export function applyServerState(data: AccountState) {
       /* ignore */
     }
   }
+}
+
+/** True when this device holds a store the server copy doesn't have yet (e.g.
+ *  a store added to KEYS after the member's last sync), so it should be sent up. */
+export function hasLocalOnly(server: AccountState, local: AccountState): boolean {
+  return (Object.keys(local) as (keyof typeof KEYS)[]).some((k) => server[k] === undefined || server[k] === null);
 }
 
 export function isEmptyState(s: AccountState | null | undefined): boolean {

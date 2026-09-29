@@ -20,6 +20,7 @@ import { getProductSkills } from '@/lib/skills';
 import { type Effort } from '@/lib/activity-effort';
 import HeroScene from '@/components/account/HeroScene';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { notifyLocalChanged } from '@/lib/account-sync';
 import { TERRITORIES, territoriesForSlug } from '@/lib/roadmap';
 
 // Per-effort estimates of instructional days + hours. Rough by design (a Project
@@ -240,7 +241,7 @@ export default function LearningRecord({
     setFrames((prev) => {
       const next = { ...prev };
       if (f) next[fk] = f; else delete next[fk];
-      try { localStorage.setItem(FRAMES_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(FRAMES_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }
@@ -249,7 +250,7 @@ export default function LearningRecord({
     setOverrides((prev) => {
       const cur = prev[key] ?? base;
       const next = { ...prev, [key]: { ...cur, [field]: Math.max(0, value) } };
-      try { localStorage.setItem(TIME_OVERRIDE_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(TIME_OVERRIDE_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }
@@ -257,7 +258,7 @@ export default function LearningRecord({
     setOverrides((prev) => {
       const next = { ...prev };
       delete next[key];
-      try { localStorage.setItem(TIME_OVERRIDE_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(TIME_OVERRIDE_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }
@@ -290,7 +291,7 @@ export default function LearningRecord({
       const cur = prev[slug] ?? [];
       if (cur.some((s) => s.toLowerCase() === v.toLowerCase()) || baseSkills(slug).some((s) => s.toLowerCase() === v.toLowerCase())) return prev;
       const next = { ...prev, [slug]: [...cur, v] };
-      try { localStorage.setItem(CUSTOM_SKILLS_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(CUSTOM_SKILLS_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }
@@ -298,7 +299,7 @@ export default function LearningRecord({
     setCustomSkills((prev) => {
       const next = { ...prev, [slug]: (prev[slug] ?? []).filter((s) => s !== name) };
       if (next[slug].length === 0) delete next[slug];
-      try { localStorage.setItem(CUSTOM_SKILLS_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(CUSTOM_SKILLS_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }
@@ -397,7 +398,7 @@ export default function LearningRecord({
   function setCover(field: keyof CoverFields, value: string) {
     setCovers((prev) => {
       const next = { ...prev, [kidId]: { ...(prev[kidId] ?? EMPTY_COVER), [field]: value } };
-      try { localStorage.setItem(COVER_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      try { localStorage.setItem(COVER_KEY, JSON.stringify(next)); notifyLocalChanged(); } catch { /* ignore */ }
       return next;
     });
   }

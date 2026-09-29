@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useAuth } from '@clerk/nextjs';
-import { applyServerState, clearLocalState, gatherLocalState, isEmptyState } from '@/lib/account-sync';
+import { applyServerState, clearLocalState, gatherLocalState, hasLocalOnly, isEmptyState } from '@/lib/account-sync';
 
 const hasClerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -57,6 +57,12 @@ function SyncInner() {
         const server = json?.data as ReturnType<typeof gatherLocalState> | null;
         const local = gatherLocalState();
         if (server && !isEmptyState(server)) {
+          // Stores this device has that the server copy lacks go up first, so
+          // nothing kept only here is lost (applyServerState leaves them be).
+          if (hasLocalOnly(server, local)) {
+            const localOnly = Object.fromEntries(Object.entries(local).filter(([k]) => server[k as keyof typeof server] == null));
+            push({ ...server, ...localOnly });
+          }
           if (JSON.stringify(server) !== JSON.stringify(local)) {
             applyServerState(server);
             // Reload once so every component picks up the synced state.
