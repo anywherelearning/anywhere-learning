@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://anywherelearning.co/og-default.jpg?v=3",
+        url: "https://anywherelearning.co/og-default.jpg?v=4",
         width: 1200,
         height: 630,
         alt: "Real-World Learning in 5 Days, a free email course from Anywhere Learning",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Real-World Learning in 5 Days: Free Email Course",
     description:
       "Five short emails from a former teacher: what real-world learning is, why it matters, and the four moves to make it happen at home.",
-    images: ["https://anywherelearning.co/og-default.jpg?v=3"],
+    images: ["https://anywherelearning.co/og-default.jpg?v=4"],
   },
 };
 
