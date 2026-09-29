@@ -19,6 +19,8 @@ export interface MonthChallengeEntry {
   title: string;
   /** ISO timestamp of the last status change. */
   at: string;
+  /** Days of the month ticked on the This Month streak chart (1-based). */
+  days?: number[];
 }
 
 export function readChallenges(): Record<string, MonthChallengeEntry> {

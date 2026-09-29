@@ -1,14 +1,16 @@
 'use client';
 
 /**
- * This Month — the member zone's monthly editorial page. A warm, colorful,
- * image-forward layout: a seasonal hero, two themed sections of activity cards
- * built from real cover images (not icons), and one interactive family
- * challenge the parent can accept and check off (persisted to localStorage).
+ * This Month — the member zone's monthly editorial page. The hero is a wall
+ * calendar page: the month's family challenge as a streak chart the family
+ * ticks off day by day (saved with the challenge in lib/month-challenge, so
+ * the Adventure Map home still sees accepted and finished challenges). Below
+ * it, each themed set shows three covers fanned like a hand of cards; "See
+ * all" opens the full set, and a cover opens the activity card with "Add to
+ * a trail". The reading, books and tips sit in one slim strip.
  *
- * All data is resolved server-side in ../(store)/account/this-month/page.tsx and
- * passed in as plain props; this component only owns hover states + the
- * challenge toggle, so it stays a thin client layer.
+ * All data is resolved server-side in ../(store)/account/this-month/page.tsx
+ * (content in lib/this-month.ts) and passed in as plain props.
  */
 
 import { useEffect, useState } from 'react';
@@ -20,7 +22,7 @@ import { areaMetaForSlug } from '@/lib/roadmap';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { addToWeek, weekSlugs, FAMILY_TARGET } from '@/lib/week';
 import { loadProfile, childAge, type Child } from '@/lib/member-profile';
-import { readChallenges, writeChallenge, clearChallenge } from '@/lib/month-challenge';
+import { readChallenges, writeChallenge, clearChallenge, type MonthChallengeEntry } from '@/lib/month-challenge';
 import type { Effort } from '@/lib/activity-effort';
 
 export type MonthActivity = {
@@ -71,14 +73,14 @@ export type MonthSection = {
 
 export type ThisMonthData = {
   month: string;
+  /** Calendar year of `month`, for the hero calendar's weekdays. */
+  year: number;
   intro: string;
   challengeId: string;
   skill: MonthSection;
   seasonal: MonthSection;
-  challenge: { title: string; text: string };
+  challenge: { title: string; short: string; text: string };
 };
-
-type ChallengeState = 'idle' | 'accepted' | 'done';
 
 /* ── tiny cover with graceful fallback ─────────────────────────────────── */
 function Cover({ a, className, style }: { a: MonthActivity; className?: string; style?: React.CSSProperties }) {
@@ -114,65 +116,6 @@ function EffortPill({ effort, corner = 'tr' }: { effort: Effort; corner?: 'tr' |
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
       {minsLabel(effort)}
     </span>
-  );
-}
-
-/* ── cover carousel: one activity cover at a time; tap opens a detail modal ─ */
-function CoverCarousel({ activities, accent, accentDeep }: { activities: MonthActivity[]; accent: string; accentDeep: string }) {
-  const [index, setIndex] = useState(0);
-  const [open, setOpen] = useState(false);
-  if (activities.length === 0) return null;
-  const i = Math.min(index, activities.length - 1);
-  const a = activities[i];
-  const prev = () => setIndex((n) => (n - 1 + activities.length) % activities.length);
-  const next = () => setIndex((n) => (n + 1) % activities.length);
-  const arrow = (dir: 'left' | 'right'): React.CSSProperties => ({
-    position: 'absolute', top: 'calc(50% - 19px)', [dir === 'left' ? 'left' : 'right']: -13,
-    width: 36, height: 36, borderRadius: '50%', border: `1px solid ${hexToRgba(accent, 0.3)}`, cursor: 'pointer',
-    background: 'var(--am-paper)', color: accentDeep, display: 'grid', placeItems: 'center', zIndex: 3,
-    boxShadow: '0 8px 18px -10px rgba(40,30,10,0.5)',
-  } as React.CSSProperties);
-
-  return (
-    <div style={{ width: '100%', maxWidth: 230, margin: '0 auto' }} className="tm-cover-wrap">
-      <div style={{ position: 'relative' }} className="tm-cover-rel">
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          aria-label={`Open ${a.title}`}
-          style={{ display: 'block', width: '100%', padding: 0, cursor: 'pointer', position: 'relative', borderRadius: 14, overflow: 'hidden', border: `1px solid ${hexToRgba(accent, 0.3)}`, boxShadow: `0 22px 44px -26px ${hexToRgba(accentDeep, 0.6)}`, transform: 'rotate(-1.5deg)', background: 'var(--am-paper)' }}
-          className="tm-cover tm-cover-btn"
-        >
-          {activities.map((act, n) => (
-            <span key={act.slug} style={{ position: 'absolute', inset: 0, opacity: n === i ? 1 : 0, transition: 'opacity .3s ease' }}>
-              <Cover a={act} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
-            </span>
-          ))}
-          <span aria-hidden="true" style={{ position: 'absolute', top: 10, left: 10, zIndex: 2, width: 30, height: 30, borderRadius: '50%', display: 'grid', placeItems: 'center', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(4px)', boxShadow: '0 4px 12px -6px rgba(40,30,10,0.5)' }}>
-            <span style={{ width: 11, height: 11, borderRadius: '50%', background: areaMetaForSlug(a.slug)[0]?.color ?? accentDeep }} />
-          </span>
-          <EffortPill effort={a.effort} />
-        </button>
-
-        {activities.length > 1 && (
-          <>
-            <button type="button" onClick={prev} aria-label="Previous cover" style={arrow('left')}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6" /></svg>
-            </button>
-            <button type="button" onClick={next} aria-label="Next cover" style={arrow('right')}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>
-            </button>
-            {/* counter sits ON the cover so it doesn't add column height (keeps the
-                mindset note beside it bottom-aligned to the image) */}
-            <span style={{ position: 'absolute', bottom: 9, left: '50%', transform: 'translateX(-50%)', zIndex: 3, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(4px)', color: accentDeep, fontSize: 11, fontWeight: 600, padding: '3px 11px', borderRadius: 999, boxShadow: '0 4px 12px -6px rgba(40,30,10,0.5)' }}>
-              {i + 1} <span style={{ opacity: 0.5 }}>/</span> {activities.length}
-            </span>
-          </>
-        )}
-      </div>
-
-      {open && <ActivityModal a={a} accent={accent} accentDeep={accentDeep} onClose={() => setOpen(false)} />}
-    </div>
   );
 }
 
@@ -283,8 +226,8 @@ function AddToTrail({ slug, title, accent, accentDeep }: { slug: string; title: 
 }
 
 /* ── book cover (image, or a styled spine fallback) ────────────────────── */
-function BookCover({ book, accent, accentDeep }: { book: BookRec; accent: string; accentDeep: string }) {
-  const box: React.CSSProperties = { flexShrink: 0, width: 48, aspectRatio: '2 / 3', borderRadius: 6, overflow: 'hidden', boxShadow: '0 6px 14px -8px rgba(40,30,10,0.55)' };
+function BookCover({ book, accent, accentDeep, size = 48 }: { book: BookRec; accent: string; accentDeep: string; size?: number }) {
+  const box: React.CSSProperties = { flexShrink: 0, width: size, aspectRatio: '2 / 3', borderRadius: 6, overflow: 'hidden', boxShadow: '0 6px 14px -8px rgba(40,30,10,0.55)' };
   if (book.cover) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={book.cover} alt={`${book.title} cover`} loading="lazy" style={{ ...box, objectFit: 'cover' }} />;
@@ -296,239 +239,341 @@ function BookCover({ book, accent, accentDeep }: { book: BookRec; accent: string
   );
 }
 
-/* ── the three enrichment cards: Read this · Read together · Extra ──────── */
-function cardLabel(text: string, accentDeep: string, icon: React.ReactNode) {
-  return (
-    <div style={{ fontFamily: 'var(--font-catalog),monospace', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: accentDeep, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
-      <span style={{ display: 'grid', placeItems: 'center' }}>{icon}</span>{text}
-    </div>
-  );
-}
+/* ── a bottom-sheet style dialog shared by "See all" and the extras ─────── */
+function Sheet({ label, onClose, children, maxWidth = 560 }: { label: string; onClose: () => void; children: React.ReactNode; maxWidth?: number }) {
+  const [mounted, setMounted] = useState(false);
+  const trapRef = useFocusTrap(mounted);
+  useEffect(() => {
+    setMounted(true);
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prevOverflow; };
+  }, [onClose]);
+  if (!mounted) return null;
 
-function EnrichRow({ extras, accent, accentDeep }: { extras?: SectionExtras; accent: string; accentDeep: string }) {
-  if (!extras || (!extras.read && !extras.books?.length && !extras.extra)) return null;
-  // three graduated shades of the section accent so the row reads as a set
-  const shade = (n: 0 | 1 | 2): React.CSSProperties => ({
-    background: hexToRgba(accent, [0.06, 0.11, 0.16][n]),
-    border: `1px solid ${hexToRgba(accent, [0.18, 0.22, 0.26][n])}`,
-    borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%',
-  });
-  const body: React.CSSProperties = { padding: '14px 16px 16px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 };
-
-  return (
-    <div className="tm-cards">
-      {/* 1 · Read this — a blog post, with its hero image */}
-      {extras.read && (
-        <Link href={`/blog/${extras.read.slug}`} target="_blank" rel="noopener noreferrer" style={{ ...shade(0), textDecoration: 'none', color: 'inherit' }} className="tm-card">
-          <span style={{ position: 'relative', display: 'block', aspectRatio: '16 / 9', overflow: 'hidden', background: hexToRgba(accent, 0.14) }}>
-            {extras.read.heroImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={extras.read.heroImage} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            ) : (
-              <span style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: accentDeep }}><BookIcon /></span>
-            )}
-          </span>
-          <span style={body}>
-            {cardLabel('Read this', accentDeep, <BookIcon />)}
-            <span style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 15.5, fontWeight: 700, color: 'var(--am-ink)', lineHeight: 1.25 }}>{extras.read.title}</span>
-            <span style={{ marginTop: 'auto', fontSize: 12.5, fontWeight: 600, color: accentDeep }}>Read on the blog →</span>
-          </span>
-        </Link>
-      )}
-
-      {/* 2 · Read together — a younger and an older book pick */}
-      {extras.books && extras.books.length > 0 && (
-        <div style={shade(1)} className="tm-card">
-          <span style={body}>
-            {cardLabel('Read together', accentDeep, <OpenBookIcon />)}
-            <span style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {extras.books.map((b) => {
-                const inner = (
-                  <>
-                    <BookCover book={b} accent={accent} accentDeep={accentDeep} />
-                    <span style={{ minWidth: 0 }}>
-                      <span style={{ display: 'inline-block', fontFamily: 'var(--font-catalog),monospace', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: accentDeep, background: hexToRgba(accent, 0.16), padding: '2px 7px', borderRadius: 999, marginBottom: 4 }}>{b.ages}</span>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13.5, fontWeight: 600, color: 'var(--am-ink)', lineHeight: 1.25 }}>
-                        {b.title}{b.link && <ExtIcon />}
-                      </span>
-                      <span style={{ display: 'block', fontSize: 11.5, color: 'var(--am-muted)' }}>by {b.author}</span>
-                    </span>
-                  </>
-                );
-                return b.link ? (
-                  <a key={b.title} href={b.link} target="_blank" rel="noopener noreferrer" className="tm-linkrow" style={{ display: 'flex', gap: 11, alignItems: 'flex-start', textDecoration: 'none', color: 'inherit' }}>{inner}</a>
-                ) : (
-                  <span key={b.title} style={{ display: 'flex', gap: 11, alignItems: 'flex-start' }}>{inner}</span>
-                );
-              })}
-            </span>
-          </span>
-        </div>
-      )}
-
-      {/* 3 · Extra — flexible, changes every month */}
-      {extras.extra && (
-        <div style={shade(2)} className="tm-card">
-          <span style={body}>
-            {cardLabel(extras.extra.title, accentDeep, <SparkIcon />)}
-            {extras.extra.note && <span style={{ fontSize: 12.5, color: 'var(--am-muted)', lineHeight: 1.5, marginTop: -2 }}>{extras.extra.note}</span>}
-            <span style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {extras.extra.items.map((it) => it.url ? (
-                <a key={it.label} href={it.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 9, textDecoration: 'none', color: 'var(--am-ink)', fontSize: 13, fontWeight: 500 }} className="tm-linkrow">
-                  <span style={{ flexShrink: 0, width: 26, height: 26, borderRadius: 7, display: 'grid', placeItems: 'center', background: hexToRgba(accent, 0.18), color: accentDeep }}><PlayIcon /></span>
-                  <span style={{ minWidth: 0, flex: 1 }}>{it.label}</span>
-                  <ExtIcon />
-                </a>
-              ) : (
-                <span key={it.label} style={{ display: 'flex', gap: 9, fontSize: 13, color: 'var(--am-ink)', lineHeight: 1.45 }}>
-                  <span style={{ flexShrink: 0, marginTop: 6, width: 5, height: 5, borderRadius: '50%', background: accent }} />
-                  <span>{it.label}</span>
-                </span>
-              ))}
-            </span>
-          </span>
-        </div>
-      )}
-    </div>
-  );
-}
-
-/* ── a themed section (colored header + carousel + enrichment) ─────────── */
-function Section({ section }: { section: MonthSection }) {
-  const { accent, accentDeep } = section;
-  return (
-    <section
-      style={{
-        position: 'relative', borderRadius: 26,
-        padding: 'clamp(18px,3vw,30px)',
-        background: `linear-gradient(160deg, ${hexToRgba(accent, 0.12)}, ${hexToRgba(accent, 0.03)} 55%, var(--am-paper))`,
-        border: `1px solid ${hexToRgba(accent, 0.22)}`,
-      }}
+  return createPortal(
+    <div
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(30,24,16,0.55)', backdropFilter: 'blur(3px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}
     >
-      <div className="tm-block">
-        {section.activities.length > 0 && <CoverCarousel activities={section.activities} accent={accent} accentDeep={accentDeep} />}
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ display: 'inline-flex', alignSelf: 'flex-start', alignItems: 'center', gap: 8, background: hexToRgba(accent, 0.16), color: accentDeep, fontFamily: 'var(--font-catalog),monospace', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '6px 12px', borderRadius: 999, marginBottom: 12 }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: accent }} />
-            {section.eyebrow}
-          </div>
-          <h2 style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 'clamp(25px,4.2vw,36px)', fontWeight: 800, color: 'var(--am-ink)', margin: '0 0 8px', lineHeight: 1.06 }}>{section.title}</h2>
-          <p style={{ fontSize: 15, color: 'var(--am-muted)', lineHeight: 1.6, margin: 0, maxWidth: '54ch' }}>{section.blurb}</p>
-          {section.extras?.mindset && (
-            <div style={{ marginTop: 'auto', paddingTop: 18, maxWidth: '54ch' }}>
-              {/* Rich, dark accent card so the reflective note stands apart from
-                  the light enrichment cards below. */}
-              <div style={{ padding: '12px 15px', borderRadius: 16, background: `linear-gradient(150deg, ${accentDeep}, ${accent})`, color: '#fbf6ec', boxShadow: `0 16px 30px -22px ${hexToRgba(accentDeep, 0.9)}` }}>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-catalog),monospace', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.82)', marginBottom: 6 }}>
-                  <HeartIcon /> Keep in mind
-                </div>
-                <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.5, color: '#fbf6ec', fontStyle: 'italic' }}>{section.extras.mindset}</p>
-              </div>
-            </div>
-          )}
-        </div>
+      <div ref={trapRef} role="dialog" aria-modal="true" aria-label={label} className="tm-modal" style={{ position: 'relative', width: '100%', maxWidth, maxHeight: '88vh', overflowY: 'auto', background: 'var(--am-paper)', borderRadius: 20, padding: 'clamp(18px,4vw,26px)', boxShadow: '0 40px 90px -30px rgba(20,14,6,0.7)' }}>
+        <button type="button" onClick={onClose} aria-label="Close" style={{ position: 'absolute', top: 12, right: 12, width: 34, height: 34, borderRadius: '50%', border: 'none', cursor: 'pointer', background: 'rgba(58,44,23,0.08)', color: '#3d3527', display: 'grid', placeItems: 'center' }}>
+          <CloseIcon />
+        </button>
+        {children}
       </div>
-      <EnrichRow extras={section.extras} accent={accent} accentDeep={accentDeep} />
-    </section>
+    </div>,
+    document.body,
   );
 }
 
-/* ── interactive family challenge ──────────────────────────────────────── */
-function Challenge({ id, month, title, text }: { id: string; month: string; title: string; text: string }) {
-  const [state, setState] = useState<ChallengeState>('idle');
+const mono: React.CSSProperties = { fontFamily: 'var(--font-catalog),monospace', textTransform: 'uppercase', letterSpacing: '0.14em' };
+const plate: React.CSSProperties = { fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800 };
+const PAPER = '0 1px 0 rgba(58,44,23,0.06), 0 18px 36px -22px rgba(58,44,23,0.45)';
+
+/* ── the hero's wall calendar: the family challenge as a streak chart ──── */
+function CalendarLeaf({ id, month, year, title, short, text }: { id: string; month: string; year: number; title: string; short: string; text: string }) {
+  const [entry, setEntry] = useState<MonthChallengeEntry | null>(null);
   const [ready, setReady] = useState(false);
+  const [today, setToday] = useState<{ y: number; m: number; d: number } | null>(null);
 
   useEffect(() => {
-    const s = readChallenges()[id]?.status;
-    if (s === 'accepted' || s === 'done') setState(s);
+    setEntry(readChallenges()[id] ?? null);
+    const n = new Date();
+    setToday({ y: n.getFullYear(), m: n.getMonth(), d: n.getDate() });
     setReady(true);
   }, [id]);
 
-  // Accepting sets the family's active quest; finishing plants a keepsake medal.
-  // Both ripple to the Adventure Map home via the shared month-challenge store.
-  const save = (s: ChallengeState) => {
-    setState(s);
-    if (s === 'idle') clearChallenge(id);
-    else writeChallenge(id, { status: s, month, title, at: new Date().toISOString() });
+  const monthIndex = new Date(`${month} 1, ${year}`).getMonth();
+  const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+  // Monday-first grid: how many blank cells before the 1st.
+  const lead = (new Date(year, monthIndex, 1).getDay() + 6) % 7;
+  // Days you can tick: nothing in the future.
+  const lastTickable = !today ? 0
+    : today.y > year || (today.y === year && today.m > monthIndex) ? daysInMonth
+    : today.y === year && today.m === monthIndex ? today.d
+    : 0;
+  const isToday = (d: number) => !!today && today.y === year && today.m === monthIndex && today.d === d;
+
+  const status = entry?.status ?? 'idle';
+  const days = new Set(entry?.days ?? []);
+
+  const save = (next: MonthChallengeEntry | null) => {
+    setEntry(next);
+    if (next) writeChallenge(id, next); else clearChallenge(id);
+  };
+  const base = (s: 'accepted' | 'done'): MonthChallengeEntry => ({ status: s, month, title, at: new Date().toISOString(), days: [...days] });
+  const toggleDay = (d: number) => {
+    if (!entry) return;
+    const next = new Set(days);
+    if (next.has(d)) next.delete(d); else next.add(d);
+    save({ ...entry, days: [...next].sort((a, b) => a - b) });
   };
 
   const flag = '#d0684a';
+  const live = status !== 'idle';
   return (
-    <section
-      style={{
-        position: 'relative', overflow: 'hidden', borderRadius: 26,
-        padding: 'clamp(22px,3.5vw,34px)', color: '#fff',
-        background: 'linear-gradient(145deg, #d0684a 0%, #b8492f 60%, #9c3a24 100%)',
-        boxShadow: '0 30px 60px -30px rgba(156,58,36,0.7)',
-      }}
-    >
-      {/* soft glow motif */}
-      <span aria-hidden="true" style={{ position: 'absolute', top: -70, right: -50, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,0.22), transparent 70%)' }} />
-      <ChallengeMotif />
-      {state === 'done' && <Confetti />}
+    <div className="tm-leaf" style={{ position: 'relative', background: '#fffdf8', borderRadius: 6, boxShadow: '0 30px 60px -30px rgba(58,44,23,0.55)', padding: '30px clamp(16px,3vw,22px) 20px' }}>
+      <span aria-hidden="true" style={{ position: 'absolute', top: -9, left: 22, right: 22, display: 'flex', justifyContent: 'space-between' }}>
+        {Array.from({ length: 11 }).map((_, i) => <span key={i} style={{ width: 8, height: 18, borderRadius: 4, background: '#8d8474', boxShadow: 'inset 0 -3px 0 rgba(0,0,0,0.25)' }} />)}
+      </span>
+      {status === 'done' && <Confetti />}
 
-      <div style={{ position: 'relative', maxWidth: 620 }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.2)', fontFamily: 'var(--font-catalog),monospace', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '6px 12px', borderRadius: 999, marginBottom: 14 }}>
-          <FlagIcon />
-          This month&apos;s family challenge
-        </div>
-        <h2 style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 'clamp(26px,4.4vw,38px)', fontWeight: 800, margin: '0 0 10px', lineHeight: 1.05 }}>{title}</h2>
-        <p style={{ fontSize: 15.5, lineHeight: 1.6, margin: '0 0 20px', color: 'rgba(255,255,255,0.92)' }}>{text}</p>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 10 }}>
+        <span style={{ ...mono, display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 11, fontWeight: 700, color: '#b8492f' }}><FlagIcon /> Family challenge</span>
+        {live && <span style={{ ...mono, fontSize: 10.5, color: 'var(--am-muted)', letterSpacing: '0.08em' }}>{days.size} of {daysInMonth}</span>}
+      </div>
+      <h2 style={{ ...plate, fontSize: 'clamp(23px,3vw,27px)', letterSpacing: '-0.01em', color: 'var(--am-ink)', margin: '6px 0 4px', lineHeight: 1.05 }}>{title}</h2>
+      <p style={{ fontSize: 13.5, color: 'var(--am-muted)', margin: '0 0 12px', lineHeight: 1.5 }}>
+        {short}{live && status !== 'done' ? ' Tap a day when it happens.' : ''}
+      </p>
 
-        {!ready ? null : state === 'idle' ? (
-          <button onClick={() => save('accepted')} style={btnLight(flag)}>
-            Accept this challenge
-            <span aria-hidden="true">→</span>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', gap: 5, opacity: live ? 1 : 0.55, transition: 'opacity .3s' }}>
+        {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => <span key={i} aria-hidden="true" style={{ ...mono, fontSize: 9.5, textAlign: 'center', color: 'var(--am-muted)', letterSpacing: 0 }}>{d}</span>)}
+        {Array.from({ length: lead }).map((_, i) => <span key={`b${i}`} />)}
+        {Array.from({ length: daysInMonth }).map((_, i) => {
+          const d = i + 1;
+          const on = days.has(d);
+          const can = live && status !== 'done' && d <= lastTickable;
+          return (
+            <button
+              key={d}
+              type="button"
+              disabled={!can}
+              onClick={() => toggleDay(d)}
+              aria-pressed={on}
+              aria-label={`${month} ${d}${on ? ', done' : ''}`}
+              className="tm-day"
+              style={{
+                aspectRatio: '1', borderRadius: 7, display: 'grid', placeItems: 'center', padding: 0,
+                fontSize: 12, fontWeight: 600, cursor: can ? 'pointer' : 'default',
+                background: on ? flag : 'rgba(58,44,23,0.05)', color: on ? '#fff' : 'var(--am-muted)',
+                border: isToday(d) && !on ? `2px solid ${flag}` : '1px solid rgba(58,44,23,0.06)',
+              }}
+            >
+              {on ? <CheckIcon /> : d}
+            </button>
+          );
+        })}
+      </div>
+
+      <div style={{ marginTop: 14, display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, minHeight: 42 }}>
+        {!ready ? null : status === 'idle' ? (
+          <button type="button" onClick={() => save(base('accepted'))} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: flag, color: '#fff', fontWeight: 800, fontSize: 14, padding: '11px 20px', borderRadius: 999, border: 'none', cursor: 'pointer', boxShadow: '0 12px 26px -14px rgba(156,58,36,0.8)' }}>
+            Accept this challenge <span aria-hidden="true">&rarr;</span>
           </button>
-        ) : state === 'accepted' ? (
-          <button onClick={() => save('idle')} style={{ ...badgeSolid, border: 'none', cursor: 'pointer' }} title="Tap to undo">
-            <CheckIcon /> You&apos;re in
-          </button>
+        ) : status === 'accepted' ? (
+          <>
+            <button type="button" onClick={() => save(base('done'))} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: flag, color: '#fff', fontWeight: 800, fontSize: 13.5, padding: '10px 18px', borderRadius: 999, border: 'none', cursor: 'pointer' }}>
+              <MedalIcon small /> We did it
+            </button>
+            <button type="button" onClick={() => save(null)} style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+              Not this month
+            </button>
+          </>
         ) : (
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-plate),sans-serif', fontSize: 20, fontWeight: 800 }}>
-              <MedalIcon /> You did it!
-            </span>
-            <button onClick={() => save('accepted')} style={btnText}>Undo</button>
-          </div>
+          <>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, ...plate, fontSize: 19, color: '#b8492f' }}><MedalIcon /> You did it!</span>
+            <button type="button" onClick={() => save({ ...base('accepted'), days: [...days] })} style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+              Undo
+            </button>
+          </>
         )}
       </div>
-    </section>
+
+      <details className="tm-how" style={{ marginTop: 10, borderTop: '1px dashed rgba(58,44,23,0.18)', paddingTop: 10 }}>
+        <summary style={{ cursor: 'pointer', fontSize: 13, fontWeight: 600, color: '#b8492f' }}>How it works</summary>
+        <p style={{ fontSize: 13.5, color: 'var(--am-muted)', lineHeight: 1.6, margin: '8px 0 0' }}>{text}</p>
+      </details>
+    </div>
   );
 }
 
-/* Decorative animated motif for the challenge card — a flag planted on a summit
-   with a drifting dashed trail (an echo of the Adventure Map) and a few
-   twinkles. Translucent line-art on the terracotta; sits in the empty space to
-   the right of the copy on wider cards, hidden on small ones so it never
-   crowds the text. Respects reduced-motion. */
-function ChallengeMotif() {
+/* ── three covers fanned like a hand of cards ──────────────────────────── */
+function Fan({ section, onOpen, onAll }: { section: MonthSection; onOpen: (a: MonthActivity) => void; onAll: () => void }) {
+  const { activities, accentDeep } = section;
+  const three = activities.slice(0, 3);
+  // middle card on top
+  const pos = three.length === 3
+    ? [{ left: '6%', top: 26, rot: -8, z: 1 }, { left: '29%', top: 0, rot: 0, z: 3 }, { left: '52%', top: 26, rot: 8, z: 2 }]
+    : three.map((_, i) => ({ left: `${14 + i * 30}%`, top: 12, rot: i ? 5 : -5, z: i + 1 }));
   return (
-    <span aria-hidden="true" className="tm-chal-motif">
-      <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M-10 182 Q70 122 132 152 Q192 182 240 142 L240 210 L-10 210 Z" fill="rgba(255,255,255,0.06)" />
-        <path d="M-10 192 Q80 154 152 174 Q210 190 240 170 L240 210 L-10 210 Z" fill="rgba(255,255,255,0.05)" />
-        <path className="tm-chal-trail" d="M34 196 Q82 182 112 152 Q136 128 150 100" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="3.5" strokeLinecap="round" strokeDasharray="1 13" />
-        <line x1="150" y1="54" x2="150" y2="100" stroke="rgba(255,255,255,0.75)" strokeWidth="3.5" strokeLinecap="round" />
-        <path className="tm-chal-flag" d="M150 58 L185 66 L150 80 Z" fill="rgba(255,255,255,0.9)" />
-        <circle cx="150" cy="100" r="4" fill="rgba(255,255,255,0.85)" />
-        <circle className="tm-chal-spark" style={{ animationDelay: '0s' }} cx="196" cy="48" r="3" fill="rgba(255,255,255,0.75)" />
-        <circle className="tm-chal-spark" style={{ animationDelay: '1.1s' }} cx="66" cy="72" r="2.5" fill="rgba(255,255,255,0.6)" />
-        <circle className="tm-chal-spark" style={{ animationDelay: '2s' }} cx="120" cy="44" r="2" fill="rgba(255,255,255,0.55)" />
-      </svg>
-      <style>{`
-        .tm-chal-motif{position:absolute;right:0;bottom:0;width:min(240px,30%);pointer-events:none;display:none}
-        .tm-chal-motif svg{display:block;width:100%;height:auto}
-        .tm-chal-flag{transform-box:fill-box;transform-origin:left center;animation:tmFlag 2.6s ease-in-out infinite}
-        .tm-chal-trail{animation:tmTrail 1.4s linear infinite}
-        .tm-chal-spark{transform-box:fill-box;transform-origin:center;animation:tmSpark 2.4s ease-in-out infinite}
-        @keyframes tmFlag{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.72)}}
-        @keyframes tmTrail{to{stroke-dashoffset:-28}}
-        @keyframes tmSpark{0%,100%{opacity:.15;transform:scale(.5)}50%{opacity:.9;transform:scale(1)}}
-        @media (min-width:640px){.tm-chal-motif{display:block}}
-        @media (prefers-reduced-motion:reduce){.tm-chal-flag,.tm-chal-trail,.tm-chal-spark{animation:none}}
-      `}</style>
-    </span>
+    <div className="tm-fan">
+      {three.map((a, i) => (
+        <button
+          key={a.slug}
+          type="button"
+          onClick={() => onOpen(a)}
+          aria-label={`Open ${a.title}`}
+          className="tm-fan-card"
+          style={{ left: pos[i].left, top: pos[i].top, zIndex: pos[i].z, transform: `rotate(${pos[i].rot}deg)`, ['--r' as string]: `${pos[i].rot}deg` }}
+        >
+          <Cover a={a} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
+        </button>
+      ))}
+      {activities.length > 0 && (
+        <button type="button" onClick={onAll} className="tm-fan-all" style={{ background: accentDeep }}>
+          See all {activities.length} activities <span aria-hidden="true">&rarr;</span>
+        </button>
+      )}
+    </div>
+  );
+}
+
+/* ── every activity in a set, as covers ────────────────────────────────── */
+function AllSheet({ section, onPick, onClose }: { section: MonthSection; onPick: (a: MonthActivity) => void; onClose: () => void }) {
+  return (
+    <Sheet label={section.title} onClose={onClose} maxWidth={640}>
+      <div style={{ ...mono, fontSize: 11, fontWeight: 700, color: section.accentDeep }}>{section.eyebrow}</div>
+      <h3 style={{ ...plate, fontSize: 'clamp(22px,4vw,28px)', color: 'var(--am-ink)', margin: '6px 44px 16px 0', lineHeight: 1.08 }}>{section.title}</h3>
+      <div className="tm-all">
+        {section.activities.map((a) => (
+          <button key={a.slug} type="button" onClick={() => onPick(a)} className="tm-all-card">
+            <span style={{ position: 'relative', display: 'block', aspectRatio: '4 / 5', borderRadius: 10, overflow: 'hidden', boxShadow: PAPER, background: '#fffdf8' }}>
+              <Cover a={a} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
+            </span>
+            <span style={{ display: 'block', fontSize: 13.5, fontWeight: 700, color: 'var(--am-ink)', marginTop: 8, lineHeight: 1.25 }}>{a.title}</span>
+            <span style={{ display: 'block', fontSize: 12, color: 'var(--am-muted)', marginTop: 2 }}>{minsLabel(a.effort)}</span>
+          </button>
+        ))}
+      </div>
+    </Sheet>
+  );
+}
+
+/* ── the slim strip: Read this · Read together · Try this too ──────────── */
+function agesSpan(books: BookRec[]): string {
+  const nums = books.flatMap((b) => (b.ages.match(/\d+/g) ?? []).map(Number));
+  if (!nums.length) return '';
+  return `, ages ${Math.min(...nums)} to ${Math.max(...nums)}`;
+}
+
+function ExtrasStrip({ section }: { section: MonthSection }) {
+  const [open, setOpen] = useState<'books' | 'extra' | null>(null);
+  const { extras, accent, accentDeep } = section;
+  if (!extras || (!extras.read && !extras.books?.length && !extras.extra)) return null;
+
+  const label = (t: string) => <span style={{ ...mono, display: 'block', fontSize: 9.5, fontWeight: 700, color: accentDeep, marginBottom: 2 }}>{t}</span>;
+  const titleStyle: React.CSSProperties = { display: 'block', fontSize: 13.5, fontWeight: 700, color: 'var(--am-ink)', lineHeight: 1.25 };
+
+  return (
+    <div className="tm-strip">
+      {extras.read && (
+        <Link href={`/blog/${extras.read.slug}`} target="_blank" rel="noopener noreferrer" className="tm-chip">
+          {extras.read.heroImage ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={extras.read.heroImage} alt="" loading="lazy" style={{ width: 46, height: 46, objectFit: 'cover', borderRadius: 9, flexShrink: 0 }} />
+          ) : (
+            <span style={{ width: 46, height: 46, borderRadius: 9, flexShrink: 0, display: 'grid', placeItems: 'center', background: hexToRgba(accent, 0.16), color: accentDeep }}><BookIcon /></span>
+          )}
+          <span style={{ minWidth: 0 }}>{label('Read this')}<span style={titleStyle}>{extras.read.title.split(' (')[0]}</span></span>
+        </Link>
+      )}
+      {extras.books && extras.books.length > 0 && (
+        <button type="button" onClick={() => setOpen('books')} className="tm-chip">
+          <span style={{ display: 'flex', flexShrink: 0, width: 46, justifyContent: 'center' }}>
+            {extras.books.slice(0, 2).map((b, i) => (
+              <span key={b.title} style={{ marginLeft: i ? -12 : 0, transform: `rotate(${i ? 6 : -5}deg)` }}>
+                <BookCover book={b} accent={accent} accentDeep={accentDeep} size={30} />
+              </span>
+            ))}
+          </span>
+          <span style={{ minWidth: 0 }}>{label('Read together')}<span style={titleStyle}>{extras.books.length} {extras.books.length === 1 ? 'book' : 'books'}{agesSpan(extras.books)}</span></span>
+        </button>
+      )}
+      {extras.extra && (
+        <button type="button" onClick={() => setOpen('extra')} className="tm-chip">
+          <span style={{ width: 46, height: 46, borderRadius: 9, flexShrink: 0, display: 'grid', placeItems: 'center', background: hexToRgba(accent, 0.16), color: accentDeep }}><SparkIcon /></span>
+          <span style={{ minWidth: 0 }}>{label('Try this too')}<span style={titleStyle}>{extras.extra.title}</span></span>
+        </button>
+      )}
+
+      {open === 'books' && extras.books && (
+        <Sheet label="Read together" onClose={() => setOpen(null)} maxWidth={440}>
+          <div style={{ ...mono, fontSize: 11, fontWeight: 700, color: accentDeep, display: 'inline-flex', alignItems: 'center', gap: 7 }}><OpenBookIcon /> Read together</div>
+          <p style={{ fontSize: 14, color: 'var(--am-muted)', margin: '8px 40px 16px 0', lineHeight: 1.5 }}>A younger and an older pick for this theme.</p>
+          <div style={{ display: 'grid', gap: 16 }}>
+            {extras.books.map((b) => {
+              const inner = (
+                <>
+                  <BookCover book={b} accent={accent} accentDeep={accentDeep} size={56} />
+                  <span style={{ minWidth: 0 }}>
+                    <span style={{ display: 'inline-block', ...mono, fontSize: 9.5, fontWeight: 700, letterSpacing: '0.06em', color: accentDeep, background: hexToRgba(accent, 0.16), padding: '2px 7px', borderRadius: 999, marginBottom: 5 }}>{b.ages}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 15, fontWeight: 700, color: 'var(--am-ink)', lineHeight: 1.25 }}>{b.title}{b.link && <ExtIcon />}</span>
+                    <span style={{ display: 'block', fontSize: 12.5, color: 'var(--am-muted)', marginTop: 2 }}>by {b.author}</span>
+                  </span>
+                </>
+              );
+              return b.link ? (
+                <a key={b.title} href={b.link} target="_blank" rel="noopener noreferrer" className="tm-linkrow" style={{ display: 'flex', gap: 14, alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>{inner}</a>
+              ) : (
+                <span key={b.title} style={{ display: 'flex', gap: 14, alignItems: 'center' }}>{inner}</span>
+              );
+            })}
+          </div>
+        </Sheet>
+      )}
+
+      {open === 'extra' && extras.extra && (
+        <Sheet label={extras.extra.title} onClose={() => setOpen(null)} maxWidth={460}>
+          <div style={{ ...mono, fontSize: 11, fontWeight: 700, color: accentDeep, display: 'inline-flex', alignItems: 'center', gap: 7 }}><SparkIcon /> Try this too</div>
+          <h3 style={{ ...plate, fontSize: 24, color: 'var(--am-ink)', margin: '6px 40px 6px 0', lineHeight: 1.1 }}>{extras.extra.title}</h3>
+          {extras.extra.note && <p style={{ fontSize: 13.5, color: 'var(--am-muted)', lineHeight: 1.5, margin: '0 0 6px' }}>{extras.extra.note}</p>}
+          <div style={{ display: 'grid', gap: 10, marginTop: 12 }}>
+            {extras.extra.items.map((it) => it.url ? (
+              <a key={it.label} href={it.url} target="_blank" rel="noopener noreferrer" className="tm-linkrow" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'var(--am-ink)', fontSize: 14.5, fontWeight: 500 }}>
+                <span style={{ flexShrink: 0, width: 28, height: 28, borderRadius: 8, display: 'grid', placeItems: 'center', background: hexToRgba(accent, 0.18), color: accentDeep }}><PlayIcon /></span>
+                <span style={{ minWidth: 0, flex: 1 }}>{it.label}</span>
+                <ExtIcon />
+              </a>
+            ) : (
+              <span key={it.label} style={{ display: 'flex', gap: 10, fontSize: 14.5, color: 'var(--am-ink)', lineHeight: 1.5 }}>
+                <span style={{ flexShrink: 0, marginTop: 8, width: 6, height: 6, borderRadius: '50%', background: accent }} />
+                <span>{it.label}</span>
+              </span>
+            ))}
+          </div>
+        </Sheet>
+      )}
+    </div>
+  );
+}
+
+/* ── a themed set: text on one side, the fanned covers on the other ────── */
+function Section({ section, flip }: { section: MonthSection; flip?: boolean }) {
+  const [active, setActive] = useState<MonthActivity | null>(null);
+  const [all, setAll] = useState(false);
+  const { accent, accentDeep } = section;
+  return (
+    <section>
+      <div className={flip ? 'tm-sec tm-sec-flip' : 'tm-sec'}>
+        {section.activities.length > 0 && <Fan section={section} onOpen={setActive} onAll={() => setAll(true)} />}
+        <div className="tm-sec-text">
+          <div style={{ ...mono, fontSize: 11.5, fontWeight: 700, color: accentDeep }}>{section.eyebrow}</div>
+          <h2 style={{ ...plate, fontSize: 'clamp(28px,4.2vw,40px)', letterSpacing: '-0.02em', color: 'var(--am-ink)', margin: '6px 0 10px', lineHeight: 1.04 }}>{section.title}</h2>
+          <p style={{ fontSize: 15.5, color: 'var(--am-muted)', lineHeight: 1.6, margin: 0, maxWidth: '58ch' }}>{section.blurb}</p>
+          {section.extras?.mindset && (
+            <p style={{ margin: '16px 0 0', fontSize: 14.5, fontStyle: 'italic', lineHeight: 1.55, color: accentDeep, borderLeft: `3px solid ${accent}`, paddingLeft: 12, maxWidth: '58ch' }}>
+              {section.extras.mindset}
+            </p>
+          )}
+        </div>
+      </div>
+      <div style={{ marginTop: 24 }}>
+        <ExtrasStrip section={section} />
+      </div>
+
+      {all && (
+        <AllSheet
+          section={section}
+          onClose={() => setAll(false)}
+          onPick={(a) => { setAll(false); setActive(a); }}
+        />
+      )}
+      {active && <ActivityModal a={active} accent={accent} accentDeep={accentDeep} onClose={() => setActive(null)} />}
+    </section>
   );
 }
 
@@ -558,28 +603,13 @@ function PlusIcon() {
 function OpenBookIcon() {
   return <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>;
 }
-function HeartIcon() {
-  return <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-10-10c-1-3 1-6 4-6 2 0 3.5 1.5 4 2.5C11 6 12.5 4 15 4c3 0 5 3 4 6-2 5.4-10 11-10 11z" opacity="0.9" /></svg>;
-}
 function CheckIcon() {
   return <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>;
 }
-function MedalIcon() {
-  return <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="6" /><path d="M12 12v0M8.5 9 6 2h4l1.5 4M15.5 9 18 2h-4l-1.5 4" /><path d="m12 13.5 1 2 2 .2-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L9 15.7l2-.2z" /></svg>;
+function MedalIcon({ small }: { small?: boolean }) {
+  const n = small ? 17 : 26;
+  return <svg width={n} height={n} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="6" /><path d="M12 12v0M8.5 9 6 2h4l1.5 4M15.5 9 18 2h-4l-1.5 4" /><path d="m12 13.5 1 2 2 .2-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L9 15.7l2-.2z" /></svg>;
 }
-
-const btnLight = (color: string): React.CSSProperties => ({
-  display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color,
-  fontWeight: 800, fontSize: 15, padding: '13px 24px', borderRadius: 999, border: 'none', cursor: 'pointer',
-  boxShadow: '0 14px 30px -14px rgba(0,0,0,0.5)',
-});
-const btnText: React.CSSProperties = {
-  background: 'none', border: 'none', color: 'rgba(255,255,255,0.85)', fontWeight: 600, fontSize: 13.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3,
-};
-const badgeSolid: React.CSSProperties = {
-  display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#b8492f',
-  fontWeight: 800, fontSize: 14, padding: '11px 18px', borderRadius: 999,
-};
 
 function Confetti() {
   const bits = [
@@ -594,60 +624,88 @@ function Confetti() {
   );
 }
 
+
 /* ── page shell ────────────────────────────────────────────────────────── */
 export default function ThisMonthView(data: ThisMonthData) {
+  const lineup: [string, string, string][] = [
+    [data.skill.accent, data.skill.eyebrow, data.skill.title],
+    [data.seasonal.accent, data.seasonal.eyebrow, data.seasonal.title],
+    ['#d0684a', 'Family challenge', data.challenge.title],
+  ];
   return (
     <main style={{ position: 'relative', background: 'linear-gradient(180deg,var(--am-bg1),var(--am-bg2))', minHeight: '100vh', color: 'var(--am-ink)', overflow: 'hidden' }}>
       <style>{`
-        @keyframes tmFall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(320px) rotate(360deg)}}
+        @keyframes tmFall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(420px) rotate(360deg)}}
         @keyframes tmPop{0%{opacity:0;transform:translateY(10px) scale(.98)}100%{opacity:1;transform:none}}
-        .tm-block{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
-        @media (min-width:680px){.tm-block{grid-template-columns:230px 1fr;gap:30px;align-items:stretch}}
-        .tm-cover{transition:transform .3s ease}
-        .tm-cover:hover{transform:rotate(-0.5deg) scale(1.02)}
-        .tm-cover-btn{aspect-ratio:4 / 5}
-        /* On desktop the cover stretches to the text column's height so its
-           bottom always lines up with the mindset card beside it. */
-        @media (min-width:680px){
-          .tm-block .tm-cover-wrap{height:100%;display:flex;flex-direction:column}
-          .tm-block .tm-cover-rel{flex:1;min-height:270px}
-          .tm-block .tm-cover-btn{aspect-ratio:auto;height:100%}
+        .tm-modal{animation:tmPop .22s ease}
+        .tm-hero{display:grid;gap:34px;align-items:center}
+        @media (min-width:860px){.tm-hero{grid-template-columns:1fr 360px;gap:40px}}
+        .tm-leaf{transform:rotate(1.2deg)}
+        @media (max-width:520px){.tm-leaf{transform:none}}
+        .tm-day:not(:disabled):hover{box-shadow:0 0 0 2px rgba(208,104,74,.45)}
+        .tm-how summary{list-style:none}
+        .tm-how summary::-webkit-details-marker{display:none}
+        .tm-how summary::after{content:' +'}
+        .tm-how[open] summary::after{content:' \\2212'}
+        .tm-lineup{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:9px}
+        .tm-lineup li{display:grid;grid-template-columns:10px 1fr;column-gap:10px;align-items:baseline;font-size:15px}
+        .tm-lineup .k{font-family:var(--font-catalog),monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;color:var(--am-muted)}
+        @media (min-width:560px){.tm-lineup li{grid-template-columns:10px 150px 1fr}}
+        @media (max-width:559px){.tm-lineup .t{grid-column:2}}
+        .tm-sec{display:grid;gap:26px;align-items:center}
+        .tm-sec .tm-sec-text{order:-1}
+        @media (min-width:820px){
+          .tm-sec{grid-template-columns:380px 1fr;gap:48px}
+          .tm-sec .tm-sec-text{order:0}
+          .tm-sec-flip{grid-template-columns:1fr 380px}
+          .tm-sec-flip .tm-fan{order:2}
         }
+        .tm-fan{position:relative;height:clamp(250px,62vw,300px);max-width:400px;width:100%;margin:0 auto}
+        @media (min-width:820px){.tm-fan{height:290px}}
+        .tm-fan-card{position:absolute;width:42%;aspect-ratio:4/5;padding:0;border:5px solid #fffdf8;border-radius:9px;overflow:hidden;cursor:pointer;background:#fffdf8;box-shadow:0 22px 40px -22px rgba(58,44,23,.6);transition:transform .25s ease}
+        .tm-fan-card:hover,.tm-fan-card:focus-visible{transform:rotate(var(--r)) translateY(-8px)!important}
+        .tm-fan-all{position:absolute;bottom:0;left:50%;transform:translateX(-50%);z-index:4;color:#fff;font-weight:700;font-size:13.5px;padding:9px 17px;border-radius:999px;border:none;cursor:pointer;white-space:nowrap;box-shadow:${PAPER}}
+        .tm-fan-all:hover{filter:brightness(1.1)}
+        .tm-strip{display:grid;gap:10px}
+        @media (min-width:760px){.tm-strip{grid-template-columns:repeat(3,1fr)}}
+        .tm-chip{display:flex;gap:12px;align-items:center;min-width:0;text-align:left;background:#fffdf8;border:none;border-radius:12px;padding:12px 14px;box-shadow:${PAPER};cursor:pointer;text-decoration:none;color:inherit;font:inherit;transition:transform .2s ease}
+        .tm-chip:hover{transform:translateY(-2px)}
+        .tm-all{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+        @media (min-width:520px){.tm-all{grid-template-columns:repeat(3,1fr)}}
+        .tm-all-card{display:block;text-align:left;background:none;border:none;padding:0;cursor:pointer;font:inherit;transition:transform .2s ease}
+        .tm-all-card:hover{transform:translateY(-3px)}
         .tm-linkrow{transition:transform .15s ease}
         .tm-linkrow:hover{transform:translateX(2px)}
-        .tm-card{transition:transform .2s ease,box-shadow .2s ease}
-        a.tm-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(50,40,20,.5)}
-        .tm-modal{animation:tmPop .22s ease}
-        .tm-cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
-        @media (min-width:720px){.tm-cards{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+        @media (prefers-reduced-motion:reduce){.tm-fan-card,.tm-chip,.tm-all-card,.tm-linkrow{transition:none}}
       `}</style>
-      {/* warm color washes so the page never reads as flat beige */}
-      <span aria-hidden="true" style={{ position: 'absolute', top: -120, right: -120, width: 460, height: 460, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,123,92,0.20), transparent 68%)', pointerEvents: 'none' }} />
-      <span aria-hidden="true" style={{ position: 'absolute', top: 520, left: -160, width: 520, height: 520, borderRadius: '50%', background: 'radial-gradient(circle, rgba(58,90,64,0.16), transparent 68%)', pointerEvents: 'none' }} />
 
-      {/* hero */}
-      <header style={{ position: 'relative', overflow: 'hidden', minHeight: 'clamp(150px,20vw,206px)', background: 'linear-gradient(180deg, var(--am-sky1), var(--am-sky2))', padding: 'clamp(18px,2.5vw,26px) clamp(16px,4vw,40px) clamp(26px,3vw,38px)' }}>
-        <HeroScene tone="light" hillHeight={100} />
-        {/* summer sun glow */}
-        <span aria-hidden="true" style={{ position: 'absolute', top: 24, right: '10%', width: 130, height: 130, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,214,107,0.6), rgba(255,214,107,0) 70%)' }} />
-        <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(214,162,78,0.16)', color: '#9a6b1f', fontFamily: 'var(--font-catalog),monospace', fontSize: 12, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '6px 13px', borderRadius: 999, marginBottom: 14 }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#d6a24e' }} />
-            This month at Anywhere Learning
+      {/* hero: the month, its lineup, and the challenge calendar */}
+      <header style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, var(--am-sky1), var(--am-sky2))', padding: 'clamp(26px,3.5vw,40px) clamp(16px,4vw,40px) clamp(44px,5vw,64px)' }}>
+        <HeroScene tone="light" hillHeight={110} />
+        <div className="tm-hero" style={{ position: 'relative', maxWidth: 1040, margin: '0 auto' }}>
+          <div>
+            <div style={{ ...mono, fontSize: 12, fontWeight: 700, color: 'var(--am-trail)' }}>This month at Anywhere Learning</div>
+            <h1 style={{ ...plate, fontSize: 'clamp(46px,8vw,84px)', letterSpacing: '-0.035em', color: 'var(--am-ink)', margin: '10px 0 0', lineHeight: 0.95 }}>{data.month}</h1>
+            <p style={{ fontSize: 17, color: 'var(--am-muted)', margin: '14px 0 0', maxWidth: '40ch', lineHeight: 1.55 }}>{data.intro}</p>
+            <ul className="tm-lineup">
+              {lineup.map(([c, k, t]) => (
+                <li key={k}>
+                  <span aria-hidden="true" style={{ width: 10, height: 10, borderRadius: 3, background: c, transform: 'translateY(1px)' }} />
+                  <span className="k">{k}</span>
+                  <span className="t" style={{ fontWeight: 600 }}>{t}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <h1 style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 'clamp(32px,6vw,52px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--am-ink)', margin: 0, lineHeight: 1.02 }}>
-            {data.month}
-          </h1>
-          <p style={{ fontSize: 17, color: 'var(--am-muted)', margin: '14px 0 0', lineHeight: 1.55 }}>{data.intro}</p>
+          <CalendarLeaf id={data.challengeId} month={data.month} year={data.year} title={data.challenge.title} short={data.challenge.short} text={data.challenge.text} />
         </div>
       </header>
 
-      <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto', padding: 'clamp(22px,4vw,40px) clamp(16px,4vw,40px) 72px', display: 'flex', flexDirection: 'column', gap: 'clamp(20px,3vw,30px)' }}>
+      <div style={{ position: 'relative', maxWidth: 1000, margin: '0 auto', padding: 'clamp(30px,4vw,52px) clamp(16px,4vw,40px) 72px', display: 'flex', flexDirection: 'column', gap: 'clamp(48px,6vw,68px)' }}>
         <Section section={data.skill} />
-        <Section section={data.seasonal} />
-        <Challenge id={data.challengeId} month={data.month} title={data.challenge.title} text={data.challenge.text} />
+        <Section section={data.seasonal} flip />
 
-        <p style={{ textAlign: 'center', fontSize: 12.5, color: 'var(--am-muted)', margin: '6px 0 0' }}>
+        <p style={{ textAlign: 'center', fontSize: 12.5, color: 'var(--am-muted)', margin: 0 }}>
           Refreshed at the start of every month. Something new is always on the way.
         </p>
       </div>
