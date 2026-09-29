@@ -33,6 +33,7 @@ interface Member {
 }
 
 type Tab = 'profile' | 'kids' | 'subscription';
+type Page = 'explorers' | 'trail' | 'membership' | 'you';
 
 export default function AccountSettings({
   member,
@@ -53,14 +54,21 @@ export default function AccountSettings({
   const tierMeta = user?.publicMetadata?.tier as string | undefined;
   const hasAccess = previewAccess || !!isSignedIn || tierMeta === 'member';
 
-  // One page, laid out as a family passport: the passport up top, then the
-  // "pages" (explorers, route, membership, the grown-up). Old #tab links and
-  // the billing portal's return URL (#subscription) still land on their page.
+  // The family passport up top, then one short page at a time behind passport
+  // tabs. Old links still land on the right tab: #kids / #explorers, #route,
+  // #subscription (the billing portal's return URL) and #profile.
+  const PAGES: { value: Page; label: string }[] = [
+    ...(hasAccess ? [{ value: 'explorers' as Page, label: 'Explorers' }, { value: 'trail' as Page, label: 'Trail' }] : []),
+    ...(member.hasSubscription ? [{ value: 'membership' as Page, label: 'Membership' }] : []),
+    { value: 'you', label: 'You' },
+  ];
+  const [page, setPage] = useState<Page>(hasAccess ? 'explorers' : 'you');
   useEffect(() => {
-    const target = window.location.hash.slice(1) || (initialTab !== 'profile' ? initialTab : '');
-    const id = target === 'kids' ? 'explorers' : target;
-    if (id) window.setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+    const h = window.location.hash.slice(1) || (initialTab !== 'profile' ? initialTab : '');
+    const map: Record<string, Page> = { kids: 'explorers', explorers: 'explorers', route: 'trail', trail: 'trail', subscription: 'membership', membership: 'membership', profile: 'you', you: 'you' };
+    if (map[h]) setPage(map[h]);
   }, [initialTab]);
+  const current = PAGES.some((p) => p.value === page) ? page : PAGES[0].value;
 
   const joined = member.joinedAt && member.joinedAt !== '—'
     ? new Date(member.joinedAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
@@ -77,26 +85,21 @@ export default function AccountSettings({
     >
       <MemberHero kicker="Settings & billing" title="Your account" />
 
-      <div className="mx-auto max-w-[1000px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[760px] px-4 sm:px-6">
         <FamilyPassport lastName={user?.lastName ?? member.name.split(/\s+/).slice(1).join(' ')} stamp={stamp} stampSub={stampSub} />
 
-        {/* Two independent columns so a short card never leaves a hole beside a
-            tall one. On phones the wrappers dissolve (display:contents) and the
-            order puts the pages back to 1, 2, 3, 4. */}
-        <div className="set-pages mt-6">
-          <div className="set-col">
-            <div style={{ order: 1 }}>{hasAccess && <AdventureSettingsSection part="explorers" />}</div>
-            <div style={{ order: 2 }}>{hasAccess && <AdventureSettingsSection part="route" />}</div>
-          </div>
-          <div className="set-col">
-            <div style={{ order: 3 }}>
-        {member.hasSubscription && (
-          <SettingsCard
-            id="subscription"
-            kicker="Page 3"
-            title="Membership"
-            description="Your plan, renewal and payment method."
-          >
+        <nav aria-label="Account sections" className="set-tabs">
+          {PAGES.map((p) => (
+            <button key={p.value} type="button" onClick={() => setPage(p.value)} aria-current={current === p.value ? 'page' : undefined} className="set-tab" data-on={current === p.value || undefined}>
+              {p.label}
+            </button>
+          ))}
+        </nav>
+        <div className="set-sheet">
+        {current === 'explorers' && hasAccess && <AdventureSettingsSection part="explorers" />}
+        {current === 'trail' && hasAccess && <AdventureSettingsSection part="route" />}
+        {current === 'membership' && member.hasSubscription && (
+          <SettingsCard id="subscription">
             {/* Trial members get a distinct card: clear they're not paying yet,
                 with a one-tap path to start membership and unlock downloads. */}
             {member.isTrialing ? (
@@ -181,19 +184,14 @@ export default function AccountSettings({
             </FooterRow>
           </SettingsCard>
         )}
-            </div>
-            {/* PAGE 4 — the parent's own name, photo and sign-in */}
-            <div style={{ order: 4 }}><ProfileTab fallback={member} /></div>
-          </div>
+        {current === 'you' && <ProfileTab fallback={member} />}
         </div>
         <style>{`
-          .set-pages{display:grid;grid-template-columns:1fr;gap:20px}
-          .set-col{display:contents}
-          .set-col>div:empty{display:none}
-          @media (min-width:1024px){
-            .set-pages{grid-template-columns:1fr 1fr;align-items:start}
-            .set-col{display:flex;flex-direction:column;gap:20px}
-          }
+          .set-tabs{display:flex;gap:4px;margin-top:22px;padding-left:14px;overflow-x:auto}
+          .set-tab{flex:none;padding:10px 18px;border-radius:12px 12px 0 0;border:none;cursor:pointer;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;background:rgba(58,44,23,.07);color:var(--am-muted);transition:background .15s,color .15s}
+          .set-tab:hover{color:var(--am-ink)}
+          .set-tab[data-on]{background:#fffdf8;color:var(--am-ink)}
+          .set-sheet>section{border-radius:20px!important;background:#fffdf8!important;border:none!important;box-shadow:0 1px 0 rgba(58,44,23,.06),0 18px 36px -22px rgba(58,44,23,.45)!important}
         `}</style>
 
         {/* Footer actions */}
@@ -229,8 +227,8 @@ function SettingsCard({
 }: {
   id?: string;
   kicker?: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -240,15 +238,19 @@ function SettingsCard({
       style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
     >
       {kicker && <div className="font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)] mb-1">{kicker}</div>}
-      <h2
-        className="m-0 text-[clamp(1.25rem,2.4vw,1.6rem)] leading-[1.15]"
-        style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
-      >
-        {title}
-      </h2>
-      <p className="m-0 mt-1 mb-4 font-body text-[14px] leading-[1.5] text-gray-500">
-        {description}
-      </p>
+      {title && (
+        <h2
+          className="m-0 text-[clamp(1.25rem,2.4vw,1.6rem)] leading-[1.15]"
+          style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
+        >
+          {title}
+        </h2>
+      )}
+      {description && (
+        <p className="m-0 mt-1 mb-4 font-body text-[14px] leading-[1.5] text-gray-500">
+          {description}
+        </p>
+      )}
       {children}
     </section>
   );
@@ -295,12 +297,7 @@ function ProfileTab({ fallback }: { fallback: Member }) {
   }
 
   return (
-    <SettingsCard
-      id="profile"
-      kicker="Page 4"
-      title="The grown-up"
-      description="Your name, photo and sign-in."
-    >
+    <SettingsCard id="profile">
       <AvatarUploader />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">

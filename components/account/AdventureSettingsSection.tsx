@@ -84,24 +84,24 @@ export default function AdventureSettingsSection({ part }: { part: 'explorers' |
 
   if (part === 'route') {
     return (
-      <Card id="route" kicker="Page 2" title="The route" desc="How the family travels the map, and what to see more of.">
-        <div className="grid grid-cols-1 gap-3">
+      <Card id="route">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <ModeOption
             active={mode === 'family'}
             onClick={() => chooseMode('family')}
             title="One family trail"
-            desc="Everyone shares a single journey and reaches each milestone together."
+            desc="Everyone travels together."
           />
           <ModeOption
             active={mode === 'individual'}
             onClick={() => chooseMode('individual')}
             title="A trail per kid"
-            desc="Each explorer follows their own path at their own pace."
+            desc="Each kid gets their own path."
           />
         </div>
 
         <h3 className="m-0 mt-6 font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)]">Focus areas</h3>
-        <p className="m-0 mt-1 mb-3 font-body text-[13px] leading-[1.5] text-gray-500">The skills you want to see more of. We still weave the rest in lightly.</p>
+        <div className="mb-3" />
         <div className="flex flex-wrap gap-2">
           {TERRITORIES.map((t) => {
             const on = areas.includes(t.slug);
@@ -134,7 +134,7 @@ export default function AdventureSettingsSection({ part }: { part: 'explorers' |
   }
 
   return (
-    <Card id="explorers" kicker="Page 1" title="The explorers" desc="Your kids and the explorers that travel the map for them.">
+    <Card id="explorers">
       {children.length > 0 && (
         <div className="grid grid-cols-1 gap-2.5">
           {children.map((c, i) => {
@@ -152,14 +152,14 @@ export default function AdventureSettingsSection({ part }: { part: 'explorers' |
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="m-0 font-body font-semibold text-[15px] text-ink truncate">{childLabel(c, i)}</p>
-                  <p className="m-0 font-body text-[12.5px] text-gray-500">{age != null ? `Age ${age}` : 'Age not set'}{av ? '' : ' · no explorer yet'}</p>
+                  <p className="m-0 font-body text-[12.5px] text-gray-500">{age != null ? `Age ${age}` : 'Age not set'}</p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setEditing(id)}
                   className="flex-shrink-0 inline-flex items-center gap-1.5 border-[1.5px] border-forest text-forest-dark font-body font-semibold py-2 px-3 rounded-[10px] text-[13px] bg-white cursor-pointer hover:bg-[#E6EBDF] transition-colors"
                 >
-                  {av ? 'Edit explorer' : 'Build explorer'}
+                  {av ? 'Edit' : 'Build explorer'}
                 </button>
               </div>
             );
@@ -173,7 +173,7 @@ export default function AdventureSettingsSection({ part }: { part: 'explorers' |
           onClick={() => setKidsOpen(true)}
           className="mt-4 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[13.5px] text-forest hover:text-forest-dark"
         >
-          Edit names &amp; birthdays, or add a child →
+          + Add a child or change a name
         </button>
       ) : (
         <div className="mt-4 pt-4 border-t border-dashed border-[rgba(58,44,23,0.16)]">
@@ -212,7 +212,7 @@ function baseWord(av: KidAvatar) {
   return av.base;
 }
 
-function Card({ id, kicker, title, desc, children }: { id?: string; kicker?: string; title: string; desc: string; children: React.ReactNode }) {
+function Card({ id, kicker, title, desc, children }: { id?: string; kicker?: string; title?: string; desc?: string; children: React.ReactNode }) {
   return (
     <section
       id={id}
@@ -220,13 +220,15 @@ function Card({ id, kicker, title, desc, children }: { id?: string; kicker?: str
       style={{ background: 'var(--am-paper)', border: '1px solid rgba(58,44,23,0.12)', boxShadow: '0 16px 40px -24px rgba(45,55,40,0.45)' }}
     >
       {kicker && <div className="font-[family-name:var(--font-catalog)] text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--am-trail)] mb-1">{kicker}</div>}
+      {title && (
       <h2
         className="m-0 text-[clamp(1.25rem,2.4vw,1.5rem)] leading-[1.15]"
         style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--am-ink)' }}
       >
         {title}
       </h2>
-      <p className="m-0 mt-1 mb-4 font-body text-[13.5px] leading-[1.5] text-gray-500">{desc}</p>
+      )}
+      {desc && <p className="m-0 mt-1 mb-4 font-body text-[13.5px] leading-[1.5] text-gray-500">{desc}</p>}
       {children}
     </section>
   );

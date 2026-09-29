@@ -51,11 +51,7 @@ export default function FamilyPassport({
   }, []);
 
   const family = lastName?.trim() ? `The ${lastName.trim()} family` : 'Your family';
-  const facts = [
-    ...kids.map((k) => (k.age != null ? `${k.name}, ${k.age}` : k.name)),
-    mode === 'family' ? 'One family trail' : 'A trail per kid',
-    `${finished} ${finished === 1 ? 'activity' : 'activities'} finished`,
-  ];
+  const facts = kids.map((k) => (k.age != null ? `${k.name}, ${k.age}` : k.name));
 
   return (
     <section className="fp" aria-label="Family passport">
@@ -85,7 +81,7 @@ export default function FamilyPassport({
         ))}
       </div>
       <div style={{ minWidth: 0 }}>
-        <div className="fp-kick">Anywhere Learning · Family passport</div>
+        <div className="fp-kick">Family passport</div>
         <div className="fp-name">{family}</div>
         <div className="fp-facts">{ready ? (kids.length ? facts.join(' · ') : 'Add your kids below to start the trail.') : ' '}</div>
       </div>
