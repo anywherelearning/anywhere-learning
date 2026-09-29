@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { genChildId, saveProfile, type Child, type MemberProfile } from '@/lib/member-profile';
 import { setWalkMode } from '@/lib/kid-roadmap';
 import { TERRITORIES } from '@/lib/roadmap';
@@ -46,6 +46,8 @@ export default function KidsSetup({
   initialChildren,
   embedded = false,
   bare = false,
+  frameless = false,
+  onNamesChange,
   title = 'Who are we planning for?',
   submitLabel = 'Go to my library',
 }: {
@@ -56,6 +58,10 @@ export default function KidsSetup({
   embedded?: boolean;
   /** With `embedded`: just the fields, no card or heading (it sits inside another card). */
   bare?: boolean;
+  /** First-run only: render just the form (no card, no full-screen wrapper). */
+  frameless?: boolean;
+  /** Reports the names typed so far, for a live preview outside the form. */
+  onNamesChange?: (names: string[]) => void;
   title?: string;
   submitLabel?: string;
 }) {
@@ -79,6 +85,8 @@ export default function KidsSetup({
     if (n.has(v)) n.delete(v); else n.add(v);
     return n;
   };
+
+  useEffect(() => { onNamesChange?.(rows.map((r) => r.name.trim())); }, [rows, onNamesChange]);
 
   const valid = rows.length > 0 && rows.every((r) => r.name.trim() && r.mon && r.year);
 
@@ -126,8 +134,8 @@ export default function KidsSetup({
     'h-11 rounded-xl border border-gray-200 bg-white px-2.5 text-[14px] text-ink focus:border-forest focus:outline-none cursor-pointer';
 
   const card = (
-    <div className={bare ? '' : 'rounded-[20px] p-6 sm:p-8'} style={bare ? undefined : { background: "var(--am-paper)", border: "1px solid rgba(58,44,23,0.12)", boxShadow: "0 10px 30px -18px rgba(58,44,23,0.35)" }}>
-      {!bare && <>
+    <div className={bare || frameless ? '' : 'rounded-[20px] p-6 sm:p-8'} style={bare || frameless ? undefined : { background: "var(--am-paper)", border: "1px solid rgba(58,44,23,0.12)", boxShadow: "0 10px 30px -18px rgba(58,44,23,0.35)" }}>
+      {!bare && !frameless && <>
       <p className="mb-2" style={{ fontFamily: "var(--font-catalog),monospace", fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--am-trail)" }}>
         {embedded ? 'Your kids' : 'Welcome to your library'}
       </p>
@@ -278,7 +286,7 @@ export default function KidsSetup({
     </div>
   );
 
-  if (embedded) return card;
+  if (embedded || frameless) return card;
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: "linear-gradient(180deg,var(--am-sky1),var(--am-bg1) 45%,var(--am-bg2))" }}>

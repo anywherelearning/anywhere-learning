@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { KidAvatar } from '@/lib/kid-roadmap';
 import {
   ExplorerHead,
@@ -32,6 +32,8 @@ export default function ExplorerBuilder({
   onSave,
   onCancel,
   bare = false,
+  hidePreview = false,
+  onChange,
   saveLabel = 'Save explorer',
 }: {
   kidName: string;
@@ -39,6 +41,10 @@ export default function ExplorerBuilder({
   onSave: (a: KidAvatar) => void;
   onCancel?: () => void;
   bare?: boolean;
+  /** Skip the small preview + heading (the page shows the explorer big elsewhere). */
+  hidePreview?: boolean;
+  /** Called with the explorer as it's being built, for a live preview outside. */
+  onChange?: (a: KidAvatar) => void;
   saveLabel?: string;
 }) {
   const [base, setBase] = useState(initial?.base ?? 'girl');
@@ -49,10 +55,11 @@ export default function ExplorerBuilder({
 
   const av: KidAvatar = { base, color, skin, hair, hairStyle };
   const human = isHuman(base);
+  useEffect(() => { onChange?.({ base, color, skin, hair, hairStyle }); }, [base, color, skin, hair, hairStyle, onChange]);
 
   return (
     <div style={bare ? {} : { background: 'var(--am-paper)', border: '1px solid rgba(50,40,20,0.1)', borderRadius: 22, padding: 'clamp(18px,3vw,26px)', boxShadow: '0 16px 40px -20px rgba(45,55,40,0.4)' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 18 }}>
+      {!hidePreview && <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 18 }}>
         <span style={{ width: 130, height: 150, borderRadius: 18, flexShrink: 0, overflow: 'hidden', background: `linear-gradient(180deg, ${color}14, #fbfaf5)`, border: `1.5px solid ${color}55`, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', padding: '10px 6px 0' }}>
           <ExplorerFigure avatar={av} fill />
         </span>
@@ -64,7 +71,7 @@ export default function ExplorerBuilder({
             Starts with nothing but curiosity. Boots, a hat, a backpack and more get earned out on the trail.
           </p>
         </div>
-      </div>
+      </div>}
 
       {/* base */}
       {BASE_GROUPS.map((group) => (
@@ -76,7 +83,12 @@ export default function ExplorerBuilder({
               return (
                 <button
                   key={b}
-                  onClick={() => setBase(b)}
+                  onClick={() => {
+                    setBase(b);
+                    // a boy/girl pick swaps the default hairstyle to match
+                    if (b === 'boy' && hairStyle === 'ponytail') setHairStyle('short');
+                    if (b === 'girl' && hairStyle === 'short') setHairStyle('ponytail');
+                  }}
                   title={BASE_LABEL[b]}
                   style={{
                     display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 3,
