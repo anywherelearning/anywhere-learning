@@ -35,7 +35,7 @@ import { activeQuest, earnedMedals, writeChallenge, clearChallenge, type MonthCh
 import { nextForKid, territoryOf, engineFor, skipTerritory, passActivity, clearPassed } from '@/lib/plan-engine';
 import { loadPrefs } from '@/lib/plan-prefs';
 import { hexToRgba, minsLabel } from '@/lib/activity-visuals';
-import { areaMetaForSlug } from '@/lib/roadmap';
+import { areaMetaForSlug, TERRITORIES } from '@/lib/roadmap';
 import type { PlanActivity } from '@/lib/weekly-plan';
 import type { Effort } from '@/lib/activity-effort';
 
@@ -424,6 +424,17 @@ export default function AdventureMapHome({
   const nextAct = nextSlug ? bySlug.get(nextSlug) : undefined;
   const nextTerritorySlug = familyPick ? territoryOf(familyPick.slug)?.slug : enginePick?.territorySlug;
   const isEnginePick = !familyPick && !!enginePick;
+  // Why this stop, in the engine's own terms: a Library pick, a nudge toward an
+  // area, else the least-explored area (never done at all, or done least).
+  const whyLine = (() => {
+    if (!nextSlug) return null;
+    if (familyPick) return 'You added this one from the Library';
+    const terr = TERRITORIES.find((t) => t.slug === nextTerritorySlug);
+    if (!terr) return null;
+    if (nudgeFor(engineScope) === terr.slug) return `You pointed the trail toward ${terr.name}`;
+    const done = terr.activities.filter((sl) => doneSlugs.has(sl)).length;
+    return done === 0 ? `New ground: you haven't explored ${terr.name} yet` : `${terr.name} is the area you've explored least`;
+  })();
   // Extra activities THIS explorer is doing on their own (earn gear only).
   const soloItems = laneItems;
 
@@ -599,15 +610,21 @@ export default function AdventureMapHome({
         .am-tab:active{transform:translateY(1px)}
         .am-tab[data-on="true"]{background:var(--am-flag);color:#fff;border-color:transparent}
         .am-pin{position:absolute;transform:translate(-50%,-50%)}
+        /* explorers stand ON their spot: feet (just above the name tag) on the point */
+        .am-pin-me{transform:translate(-50%,calc(-100% + 30px));z-index:4}
         .am-find{width:clamp(38px,3.6vw,50px);height:clamp(38px,3.6vw,50px);border-radius:50%;background:rgba(247,242,232,.9);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 18px -7px rgba(50,40,20,.55);padding:7px;display:grid;place-items:center}
         .am-find::after{content:"";position:absolute;inset:auto 0 -9px 0;height:8px;margin:0 auto;width:60%;border-radius:50%;background:rgba(50,40,20,.18);filter:blur(3px)}
-        .am-token{position:relative;width:clamp(84px,8.4vw,124px);height:clamp(84px,8.4vw,124px);border-radius:50%;background:radial-gradient(circle at 50% 34%,#fff,rgba(247,242,232,.9));border:3px solid var(--am-flag);box-shadow:0 16px 34px -12px rgba(50,40,20,.6),0 0 0 8px rgba(208,104,74,.12);cursor:pointer;overflow:hidden;display:grid;place-items:center}
-        .am-token>div{width:80%}
+        .am-token{position:relative;display:flex;flex-direction:column;align-items:center;background:none;border:none;padding:0;cursor:pointer;width:clamp(96px,9vw,140px);transition:transform .2s ease}
+        .am-token:hover{transform:translateY(-4px)}
+        .am-token>div{position:relative;z-index:1;width:100%;aspect-ratio:26/34;filter:drop-shadow(0 10px 10px rgba(50,40,20,.28))}
+        .am-token::before{content:"";position:absolute;left:14%;right:14%;bottom:18px;height:14px;border-radius:50%;background:rgba(40,30,15,.28);filter:blur(4px)}
+        .am-token-name{position:relative;z-index:2;margin-top:-4px;font-family:var(--font-catalog),monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--am-ink);background:rgba(247,242,232,.92);padding:3px 9px;border-radius:999px;box-shadow:0 4px 10px -6px rgba(50,40,20,.5)}
+        .am-token-build{width:clamp(84px,8.4vw,124px);height:clamp(84px,8.4vw,124px);border-radius:50%;background:radial-gradient(circle at 50% 34%,#fff,rgba(247,242,232,.9));border:3px solid var(--am-flag);display:grid;place-items:center}
         .am-family-row{display:flex;align-items:flex-end;justify-content:center}
-        .am-token-fam{width:clamp(54px,6vw,84px);height:clamp(54px,6vw,84px);margin:0 -9px;border-width:2.5px;border-color:rgba(255,255,255,.85);box-shadow:0 10px 22px -10px rgba(50,40,20,.55);opacity:.92}
-        .am-token-fam.is-sel{border-color:var(--am-flag);box-shadow:0 15px 30px -12px rgba(50,40,20,.6),0 0 0 6px rgba(208,104,74,.14);opacity:1;z-index:3;transform:translateY(-5px)}
-        .am-token-fam>div{width:82%}
-        .am-here{position:absolute;top:-32px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-catalog),monospace;font-size:10px;letter-spacing:.08em;color:var(--am-ink);padding:4px 9px;border-radius:20px}
+        .am-token-fam{width:clamp(84px,7.6vw,120px);margin:0 -10px;opacity:.9}
+        .am-token-fam.is-sel{opacity:1;z-index:3;width:clamp(96px,9vw,140px)}
+        .am-token-fam.is-sel .am-token-name{background:var(--am-flag);color:#fff}
+        .am-here{position:absolute;top:-26px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-catalog),monospace;font-size:10px;letter-spacing:.08em;color:var(--am-ink);padding:4px 9px;border-radius:20px}
         .am-next{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:52px;height:52px}
         .am-next-glow{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(208,104,74,.5),transparent 68%);animation:amGlow 2.2s ease-in-out infinite}
         .am-next-dot{position:relative;width:24px;height:24px;border-radius:50%;background:var(--am-flag);border:3px solid #fff;box-shadow:0 6px 14px -5px rgba(50,40,20,.6)}
@@ -623,6 +640,13 @@ export default function AdventureMapHome({
         .am-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;border:none;border-radius:12px;padding:13px 16px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;transition:filter .15s,transform .12s}
         .am-btn:hover{filter:brightness(1.04)}.am-btn:active{transform:translateY(1px)}
         .am-btn-primary{background:var(--am-flag);color:#fff;box-shadow:0 10px 22px -10px rgba(208,104,74,.8)}
+        .am-btn-done{background:rgba(88,129,87,.14);color:#3d5c3b;border:1.5px solid rgba(88,129,87,.45)}
+        .am-btn-done:hover{background:#588157;color:#fff;filter:none}
+        .am-sign-top{display:flex;gap:13px;align-items:flex-start}
+        .am-sign-cover{flex:none;width:62px;aspect-ratio:4/5;border-radius:7px;overflow:hidden;border:3px solid #fffdf8;box-shadow:0 8px 16px -8px rgba(50,40,20,.55);transform:rotate(-3deg);transition:transform .2s}
+        .am-sign-cover:hover{transform:rotate(0) scale(1.04)}
+        .am-sign-cover img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+        .am-why{display:flex;align-items:center;gap:6px;margin:10px 0 0;font-size:12px;font-weight:600;color:#3d5c3b;background:rgba(88,129,87,.12);border-radius:8px;padding:6px 9px}
         .am-btn-ghost{background:rgba(255,255,255,.4);color:var(--am-ink);border:1px solid rgba(50,40,20,.16)}
         /* backpack */
         .am-pack{margin-top:16px;border-radius:22px;padding:clamp(18px,2.4vw,26px);background:rgba(247,242,232,.7);border:1px solid rgba(255,255,255,.6);box-shadow:0 24px 60px -40px rgba(50,40,20,.5)}
@@ -682,6 +706,13 @@ export default function AdventureMapHome({
         .am-backpack-toggle:hover{transform:translateY(-2px);filter:brightness(1.02)}
         .am-bp-count{font-weight:700;color:var(--am-trail)}
         .am-options{display:flex;flex-direction:column;gap:9px;justify-content:center}
+        .am-journey{background:#fff;border:1px solid rgba(50,40,20,.1);border-radius:14px;padding:12px 13px;margin-bottom:4px}
+        .am-journey-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+        .am-journey-stats span{display:flex;flex-direction:column;font-size:11px;color:var(--am-muted);line-height:1.2}
+        .am-journey-stats b{font-family:var(--font-plate),sans-serif;font-size:22px;font-weight:800;color:var(--am-ink);line-height:1.05}
+        .am-journey-gear{display:flex;align-items:center;gap:5px;width:100%;margin-top:11px;padding:9px 0 0;border:none;border-top:1px dashed rgba(50,40,20,.14);background:none;cursor:pointer;flex-wrap:wrap}
+        .am-journey-slot{width:30px;height:30px;border-radius:9px;background:#f6f1e6;display:grid;place-items:center;padding:4px}
+        .am-journey-more{margin-left:auto;font-size:12px;font-weight:700;color:var(--am-flag)}
         .am-option{display:flex;align-items:center;gap:11px;text-align:left;background:#fff;border:1px solid rgba(50,40,20,.1);border-radius:13px;padding:11px 13px;cursor:pointer;text-decoration:none;transition:transform .14s,box-shadow .14s,border-color .14s}
         .am-option:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(50,40,20,.42);border-color:rgba(191,124,72,.45)}
         .am-option-ic{flex:none;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:rgba(191,124,72,.13);color:var(--am-trail)}
@@ -878,7 +909,7 @@ export default function AdventureMapHome({
                 </span>
               )}
 
-              <span className="am-pin" style={{ left: px(tokenPt[0]), top: py(tokenPt[1]) }}>
+              <span className="am-pin am-pin-me" style={{ left: px(tokenPt[0]), top: py(tokenPt[1]) }}>
                 <span className="am-here am-glass">You are here</span>
                 {family && children.length > 1 ? (
                   <div className="am-family-row">
@@ -898,8 +929,9 @@ export default function AdventureMapHome({
                           {kav ? (
                             <div><ExplorerFigure avatar={kav} gear={kpack.map((g) => g.id)} fill /></div>
                           ) : (
-                            <span style={{ fontSize: 10, fontWeight: 700, color: 'var(--am-flag)' }}>{childLabel(kd, ki)}</span>
+                            <span className="am-token-build" style={{ fontSize: 10, fontWeight: 700, color: 'var(--am-flag)' }}>Build</span>
                           )}
+                          <span className="am-token-name">{childLabel(kd, ki)}</span>
                         </button>
                       );
                     })}
@@ -907,9 +939,10 @@ export default function AdventureMapHome({
                 ) : av ? (
                   <button className="am-token" onClick={(e) => openMenu(e, cid, i, label)} aria-label={`${label}'s options`}>
                     <div><ExplorerFigure avatar={av} gear={pack.map((g) => g.id)} fill /></div>
+                    <span className="am-token-name">{label}</span>
                   </button>
                 ) : (
-                  <button className="am-token" onClick={() => openBuilder(cid, i, label)} aria-label={`Build ${label}'s explorer`} style={{ fontSize: 11, fontWeight: 700, color: 'var(--am-flag)', padding: 8, textAlign: 'center' }}>Build {label}</button>
+                  <button className="am-token am-token-build" onClick={() => openBuilder(cid, i, label)} aria-label={`Build ${label}'s explorer`} style={{ fontSize: 11, fontWeight: 700, color: 'var(--am-flag)', padding: 8, textAlign: 'center' }}>Build {label}</button>
                 )}
               </span>
 
@@ -922,16 +955,35 @@ export default function AdventureMapHome({
             <div className="am-sign-body">
               {nextSlug ? (
                 <>
+                  <div className="am-sign-top">
+                  {nextAct?.imageUrl && (
+                    <Link href={`/api/download/activity/${nextSlug}?view=1`} target="_blank" rel="noopener noreferrer" prefetch={false} className="am-sign-cover" aria-label={`Open ${nextAct.title}`}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={nextAct.imageUrl} alt="" />
+                    </Link>
+                  )}
+                  <div style={{ minWidth: 0 }}>
                   <h2 className="am-plate" style={{ fontSize: 'clamp(18px,2.1vw,22px)', fontWeight: 700, lineHeight: 1.12, margin: 0, color: 'var(--am-ink)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.24em' }}>{nextAct?.title ?? nextSlug}</h2>
                   <div style={{ fontFamily: 'var(--font-catalog),monospace', fontSize: 10.5, letterSpacing: '.05em', textTransform: 'uppercase', color: 'var(--am-trail)', margin: '7px 0 0' }}>
                     {areaMetaForSlug(nextSlug)[0]?.name ? `${areaMetaForSlug(nextSlug)[0].name} · ` : ''}{minsLabel((effortBySlug[nextSlug] ?? 'Quick') as Effort)}
                   </div>
+                  </div>
+                  </div>
+                  {whyLine && (
+                    <div className="am-why">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M14.8 9.2l-1.8 4.6-4.6 1.8 1.8-4.6z" /></svg>
+                      {whyLine}
+                    </div>
+                  )}
                   {blurbFor(nextAct) && (
                     <p style={{ fontSize: 12.5, color: 'var(--am-muted)', margin: '6px 0 13px', lineHeight: 1.45, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.9em' }}>{blurbFor(nextAct)}</p>
                   )}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     <Link href={`/api/download/activity/${nextSlug}?view=1`} target="_blank" rel="noopener noreferrer" prefetch={false} className="am-btn am-btn-primary">Open the guide →</Link>
-                    <button className="am-btn am-btn-ghost" onClick={logNext} disabled={busy}>✓ We reached it</button>
+                    <button className="am-btn am-btn-done" onClick={logNext} disabled={busy}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>
+                      We did it!
+                    </button>
                     {isEnginePick && (
                       <div className="am-sub-actions">
                         <button onClick={differentOne}>Different one</button>
@@ -973,6 +1025,21 @@ export default function AdventureMapHome({
                   </div>
 
                   <div className="am-options">
+                    <div className="am-journey">
+                      <div className="am-journey-stats">
+                        <span><b>{total}</b>{total === 1 ? 'stop' : 'stops'} reached</span>
+                        <span><b>{collected}</b>of {catalogTotal} gear</span>
+                        <span><b>{soloItems.length}</b>on their own</span>
+                      </div>
+                      {pack.length > 0 && (
+                        <button type="button" className="am-journey-gear" onClick={() => setMenuView('backpack')} aria-label={`Look inside ${label}'s backpack`}>
+                          {pack.slice(-6).reverse().map((g, gi) => (
+                            <span key={`${g.id}-${gi}`} className="am-journey-slot"><span className="am-ico" dangerouslySetInnerHTML={{ __html: gearIconSVG(g.id, `amj${gi}`, false) }} /></span>
+                          ))}
+                          <span className="am-journey-more">Backpack →</span>
+                        </button>
+                      )}
+                    </div>
                     <button className="am-option" onClick={() => setMenuView('builder')}>
                       <span className="am-option-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg></span>
                       <span className="am-option-tx"><strong>Change the explorer</strong></span>
