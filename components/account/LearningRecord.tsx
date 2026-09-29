@@ -405,16 +405,21 @@ export default function LearningRecord({
         @media (min-width:980px){.lr-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
         .lr-card{transition:transform .2s ease}
         .lr-card:hover{transform:rotate(0deg)!important}
-        .lr-drop:hover{border-color:rgba(88,129,87,.55)!important;color:#3d5c3b!important}
+        .lr-add{transition:transform .15s ease}.lr-add:hover{transform:translateY(-1px)}
         .lr-time-pop{right:auto;left:0}
         @media print {
           .lr-noprint { display: none !important; }
           .lr-printonly { display: block !important; }
           nav, footer, header[class] { display: none !important; }
           .lr-page { background: #fff !important; padding: 0 !important; min-height: 0 !important; }
+          /* own inner margin too, so the sheet never touches the paper edge even
+             when the print window's margins are set to None */
+          .lr-doc { box-sizing: border-box; width: 100%; max-width: 100%; padding: 0.35in 0.4in; }
+          .lr-doc table { table-layout: fixed; width: 100%; }
+          .lr-doc td { overflow-wrap: anywhere; }
           .lr-doc, .lr-doc * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           .lr-log-row { break-inside: avoid; page-break-inside: avoid; }
-          @page { margin: 1.4cm; }
+          @page { margin: 0.5in; }
         }
       `}</style>
 
@@ -534,26 +539,38 @@ export default function LearningRecord({
                             <button type="button" onClick={() => removePhoto(pkey, 0)} aria-label="Remove this photo" title="Remove photo" style={photoX}>×</button>
                           </>
                         ) : (
-                          <label className="lr-drop" style={{ position: 'absolute', inset: 12, border: '2px dashed rgba(58,44,23,0.2)', borderRadius: 10, display: 'grid', placeItems: 'center', textAlign: 'center', color: 'var(--am-muted)', fontSize: 13, fontWeight: 600, cursor: 'pointer', transition: 'color .15s,border-color .15s' }}>
-                            <span>
-                              <CameraIcon />
-                              Add a photo of the work
+                          <>
+                            {/* no photo yet: the guide's cover, whole, on a soft tint of its colour */}
+                            <span aria-hidden="true" style={{ position: 'absolute', inset: 0, borderRadius: '14px 14px 0 0', overflow: 'hidden', background: `linear-gradient(160deg, ${r.a.trackColor}26, ${r.a.trackColor}10)`, display: 'grid', placeItems: 'center' }}>
+                              {r.a.imageUrl ? (
+                                // A 4:5 cover at 84% of the 4:3 slot's height is 50.4% of its width.
+                                <span style={{ position: 'absolute', top: '8%', left: '24.8%', width: '50.4%', height: '84%', borderRadius: 5, border: '4px solid #fffdf8', boxShadow: PAPER, overflow: 'hidden', background: '#fffdf8', transform: `rotate(${i % 2 ? 2.5 : -2.5}deg)` }}>
+                                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                                  <img src={r.a.imageUrl} alt="" loading="lazy" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+                                </span>
+                              ) : (
+                                <span style={{ ...plate, fontSize: 44, color: r.a.trackDeep, opacity: 0.5 }}>{r.a.title.charAt(0)}</span>
+                              )}
                             </span>
-                            <input type="file" accept="image/*" style={{ display: 'none' }} onChange={(e) => { const f = e.target.files?.[0]; if (f) addPhoto(pkey, f); e.currentTarget.value = ''; }} />
-                          </label>
+                            <label className="lr-add" style={{ position: 'absolute', right: 10, bottom: 10, display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(255,253,248,0.94)', color: '#3d5c3b', fontSize: 12, fontWeight: 700, padding: '6px 11px', borderRadius: 999, cursor: 'pointer', boxShadow: '0 6px 14px -8px rgba(40,30,10,0.55)' }}>
+                              <CameraIcon small />
+                              Add a photo
+                              <input type="file" accept="image/*" style={{ display: 'none' }} onChange={(e) => { const f = e.target.files?.[0]; if (f) addPhoto(pkey, f); e.currentTarget.value = ''; }} />
+                            </label>
+                          </>
                         )}
                         <span style={{ position: 'absolute', top: 10, left: 10, background: '#fffdf8', ...mono, fontSize: 10, fontWeight: 700, padding: '4px 8px', borderRadius: 6, letterSpacing: '0.06em', color: 'var(--am-ink)' }}>
                           {new Date(r.at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                         </span>
-                        <span style={{ position: 'absolute', right: 10, bottom: -18, width: 46, aspectRatio: '4 / 5', borderRadius: 5, border: '3px solid #fffdf8', boxShadow: PAPER, overflow: 'hidden', background: r.a.trackColor + '22' }}>
+                        {pics.length > 0 && <span style={{ position: 'absolute', right: 10, bottom: -18, width: 46, aspectRatio: '4 / 5', borderRadius: 5, border: '3px solid #fffdf8', boxShadow: PAPER, overflow: 'hidden', background: r.a.trackColor + '22' }}>
                           {r.a.imageUrl && (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={r.a.imageUrl} alt="" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
                           )}
-                        </span>
+                        </span>}
                       </div>
                       <div style={{ padding: '14px 16px 14px' }}>
-                        <h3 style={{ fontSize: 15, fontWeight: 700, lineHeight: 1.25, paddingRight: 44, margin: 0 }}>{r.a.title}</h3>
+                        <h3 style={{ fontSize: 15, fontWeight: 700, lineHeight: 1.25, paddingRight: pics.length ? 44 : 0, margin: 0 }}>{r.a.title}</h3>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 8 }}>
                           {areasOf(r.a.slug).map((t) => <span key={t.slug} style={{ fontSize: 11, fontWeight: 600, color: '#fff', background: t.color, padding: '2px 8px', borderRadius: 999 }}>{t.label}</span>)}
                         </div>
@@ -687,10 +704,10 @@ export default function LearningRecord({
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 11.5 }}>
               <thead>
                 <tr style={{ ...mono, fontSize: 8.5, color: '#b8862f', textAlign: 'left' }}>
-                  <th style={{ padding: '6px 6px 6px 0', fontWeight: 700, width: 72 }}>Date</th>
+                  <th style={{ padding: '6px 6px 6px 0', fontWeight: 700, width: 78 }}>Date</th>
                   <th style={{ padding: 6, fontWeight: 700 }}>Activity</th>
-                  <th style={{ padding: 6, fontWeight: 700, width: 130 }}>Areas</th>
-                  <th style={{ padding: '6px 0 6px 6px', fontWeight: 700, width: 86, textAlign: 'right' }}>Time</th>
+                  <th style={{ padding: 6, fontWeight: 700, width: 118 }}>Areas</th>
+                  <th style={{ padding: '6px 0 6px 6px', fontWeight: 700, width: 74, textAlign: 'right' }}>Time</th>
                 </tr>
               </thead>
               <tbody>
@@ -699,7 +716,7 @@ export default function LearningRecord({
                   const extra = customSkills[r.a.slug] ?? [];
                   return (
                     <tr key={rowKey(r)} className="lr-log-row" style={{ borderTop: '1px solid rgba(61,92,59,0.14)', verticalAlign: 'top' }}>
-                      <td style={{ padding: '10px 6px 10px 0', color: '#6f6c63', whiteSpace: 'nowrap' }}>{fmtDate(r.at)}</td>
+                      <td style={{ padding: '10px 6px 10px 0', color: '#6f6c63' }}>{fmtDate(r.at)}</td>
                       <td style={{ padding: '10px 6px' }}>
                         <div style={{ fontWeight: 700, fontSize: 12.5 }}>{r.a.title}</div>
                         <div style={{ color: '#6f6c63', marginTop: 2, lineHeight: 1.45 }}>{briefly(productDescriptions[r.a.slug]?.opening ?? r.a.excerpt)}</div>
@@ -714,7 +731,7 @@ export default function LearningRecord({
                         )}
                       </td>
                       <td style={{ padding: '10px 6px', color: '#6f6c63' }}>{areasOf(r.a.slug).map((t) => t.label).join(', ') || r.a.categoryLabel}</td>
-                      <td style={{ padding: '10px 0 10px 6px', textAlign: 'right', whiteSpace: 'nowrap' }}>{timeLabel(rowEst(r))}</td>
+                      <td style={{ padding: '10px 0 10px 6px', textAlign: 'right', lineHeight: 1.35 }}>{timeLabel(rowEst(r)).replace(' · ', '\n').split('\n').map((t, ti) => <span key={ti} style={{ display: 'block' }}>{t}</span>)}</td>
                     </tr>
                   );
                 })}
@@ -803,8 +820,9 @@ function PrintSetup({
 function PrintIcon() {
   return <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z" /></svg>;
 }
-function CameraIcon() {
-  return <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ display: 'block', margin: '0 auto 6px' }}><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>;
+function CameraIcon({ small }: { small?: boolean }) {
+  const n = small ? 14 : 26;
+  return <svg width={n} height={n} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={small ? undefined : { display: 'block', margin: '0 auto 6px' }}><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>;
 }
 
 function chip(sel: boolean): React.CSSProperties {
