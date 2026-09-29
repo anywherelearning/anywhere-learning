@@ -70,6 +70,8 @@ export default async function ActivityViewPage({
       trialEndsAt={trialEndsAt}
       priceLabel={isMonthlyPlan ? MONTHLY_PLAN_PRICE_MONTH : MEMBERSHIP_PRICE_YEAR}
       isFounder={isMonthlyPlan ? false : IS_FOUNDER_PHASE}
+      imageUrl={product?.imageUrl ?? null}
+      ageRange={product?.ageRange ?? null}
     />
   );
 }
