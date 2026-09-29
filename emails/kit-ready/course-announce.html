@@ -6,6 +6,9 @@
 
   In Kit: paste as a custom template. Type ONLY the greeting in the Email tab, e.g.
   Hi {{ subscriber.first_name | default: "there" }},
+
+  Images live in public/email/ (course-announce-hero.jpg, course-announce-title.png,
+  course-announce-title2.png) and must be deployed before sending.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +22,9 @@
   html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
   a { color:#588157; }
   @media (max-width: 620px) {
-    .lm-card { border-radius:0 !important; }
+    .lm-card { border-radius:0 !important; width:100% !important; }
     .lm-pad  { padding-left:24px !important; padding-right:24px !important; }
-    .stack   { display:block !important; width:100% !important; padding:0 0 10px 0 !important; }
+    .day-row td.day-tease { font-size:14px !important; }
   }
 </style>
 </head>
@@ -30,36 +33,109 @@
 <tr><td align="center" style="padding:30px 16px;">
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="lm-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:16px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13); color:#2f3a2e;">
 
-  <tr><td style="height:5px; line-height:5px; font-size:0; background:#588157;">&nbsp;</td></tr>
-
-  <tr><td align="center" style="padding:26px 40px 0;">
-    <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="180" style="display:inline-block; width:180px; max-width:70%; height:auto; border:0;">
+  <!-- Logo -->
+  <tr><td align="center" style="padding:24px 40px 20px;">
+    <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="170" style="display:inline-block; width:170px; max-width:70%; height:auto; border:0;">
   </td></tr>
 
-  <tr><td align="center" style="padding:22px 40px 0;">
+  <!-- Hero photos -->
+  <tr><td style="padding:0; font-size:0; line-height:0;">
+    <a href="https://anywherelearning.co/course?source=newsletter&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=course-announce" style="text-decoration:none;"><img src="https://anywherelearning.co/email/course-announce-hero.jpg" alt="Kids paying at a store, taking apart a kitchen faucet, and washing clothes by hand outside" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;"></a>
+  </td></tr>
+  <tr><td style="height:6px; line-height:6px; font-size:0; background:#d4a373;">&nbsp;</td></tr>
+
+  <!-- Pill + script headline -->
+  <tr><td align="center" style="padding:28px 40px 0;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
       <td align="center" bgcolor="#eef2ea" style="background:#eef2ea; border-radius:999px; padding:7px 18px; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#3d5c3b;">New &nbsp;&middot;&nbsp; Free email course</td>
     </tr></table>
   </td></tr>
-
-  <tr><td class="lm-pad" align="center" style="padding:20px 44px 0;">
-    <div style="font-size:31px; line-height:1.2; font-weight:700; color:#2f3a2e; letter-spacing:-0.01em;">I made you a free 5-day course</div>
+  <tr><td class="lm-pad" align="center" style="padding:18px 40px 0;">
+    <img src="https://anywherelearning.co/email/course-announce-title.png" alt="Real-World Learning" width="420" style="display:block; width:420px; max-width:100%; height:auto; border:0; margin:0 auto;">
+    <img src="https://anywherelearning.co/email/course-announce-title2.png" alt="in 5 days" width="184" style="display:block; width:184px; max-width:50%; height:auto; border:0; margin:4px auto 0;">
   </td></tr>
 
-  <tr><td class="lm-pad" style="padding:26px 40px 0;">
+  <!-- Intro -->
+  <tr><td class="lm-pad" style="padding:26px 44px 0;">
     <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 14px;">{{ message_content }}</div>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">Quick one, since you just heard from me last week.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">I made something new: a free email course called <strong style="color:#2f3a2e;">Real-World Learning in 5 Days</strong>.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">It&rsquo;s the ideas behind everything I make, put in order: what real-world learning actually is, why it matters more for our kids than it did for us, and the four moves I use every week with my own two to make it happen on purpose.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">One short email each morning for five days, a few minutes to read. There&rsquo;s nothing to prep. It&rsquo;s a new way to see the week you&rsquo;re already having.</p>
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="center" style="padding:10px 0 8px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#588157" style="background:#588157; border-radius:14px;"><a href="https://anywherelearning.co/course?source=newsletter&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=course-announce" style="display:inline-block; padding:15px 34px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Start the course</a></td></tr></table></td></tr></table>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">If you did the 5-day challenge with us in September, this is the why behind everything we did that week.</p>
+    <p style="font-size:19px; line-height:1.5; font-weight:700; color:#2f3a2e; margin:0 0 16px;">Your kids probably learned something real this week that didn&rsquo;t look like learning at all.</p>
+    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">Doubling the pancake recipe. Counting allowance to see if the toy is really in reach. Reading the trail map to find the way back to the car. Each one had math, reading or science hiding inside, plus a life skill, in the same task.</p>
+    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">So I made a <strong style="color:#2f3a2e;">free 5-day email course</strong> to show you how to spot it, and then how to make it happen on purpose without adding a thing to your to-do list. One short email each morning. Day 1 starts with a single question that changes how you see your whole week.</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="center" style="padding:10px 0 6px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#588157" style="background:#588157; border-radius:14px; box-shadow:0 6px 16px rgba(61,92,59,0.25);"><a href="https://anywherelearning.co/course?source=newsletter&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=course-announce" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Start the free course &rarr;</a></td></tr></table></td></tr></table>
   </td></tr>
 
-  <tr><td class="lm-pad" style="padding:20px 40px 0;">
+  <!-- What lands in your inbox -->
+  <tr><td style="padding:30px 24px 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f3efe6" style="background:#f3efe6; border-radius:14px;">
+      <tr><td align="center" style="padding:24px 24px 6px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8b7355;">What lands in your inbox</div>
+      </td></tr>
+      <tr><td style="padding:6px 20px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+          <tr class="day-row">
+            <td width="46" valign="top" style="padding:12px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="34" height="34" align="center" valign="middle" bgcolor="#d4a373" style="width:34px; height:34px; background:#d4a373; border-radius:50%; font-size:15px; font-weight:700; color:#ffffff; line-height:34px;">1</td></tr></table></td>
+            <td valign="top" style="padding:12px 0; border-bottom:1px solid #e3dccd;">
+              <div style="font-size:16px; font-weight:700; color:#2f3a2e; line-height:1.35;">What real-world learning actually is</div>
+              <div class="day-tease" style="font-size:14.5px; color:#6b6558; line-height:1.5; padding-top:2px;">One question tells you.</div>
+            </td>
+          </tr>
+          <tr class="day-row">
+            <td width="46" valign="top" style="padding:12px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="34" height="34" align="center" valign="middle" bgcolor="#c4836a" style="width:34px; height:34px; background:#c4836a; border-radius:50%; font-size:15px; font-weight:700; color:#ffffff; line-height:34px;">2</td></tr></table></td>
+            <td valign="top" style="padding:12px 0; border-bottom:1px solid #e3dccd;">
+              <div style="font-size:16px; font-weight:700; color:#2f3a2e; line-height:1.35;">What I watched disappear from my classroom</div>
+              <div class="day-tease" style="font-size:14.5px; color:#6b6558; line-height:1.5; padding-top:2px;">And why it matters more for our kids than it did for us.</div>
+            </td>
+          </tr>
+          <tr class="day-row">
+            <td width="46" valign="top" style="padding:12px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="34" height="34" align="center" valign="middle" bgcolor="#6b8e6b" style="width:34px; height:34px; background:#6b8e6b; border-radius:50%; font-size:15px; font-weight:700; color:#ffffff; line-height:34px;">3</td></tr></table></td>
+            <td valign="top" style="padding:12px 0; border-bottom:1px solid #e3dccd;">
+              <div style="font-size:16px; font-weight:700; color:#2f3a2e; line-height:1.35;">Math, writing and science in one afternoon</div>
+              <div class="day-tease" style="font-size:14.5px; color:#6b6558; line-height:1.5; padding-top:2px;">Nobody noticed. That&rsquo;s the point.</div>
+            </td>
+          </tr>
+          <tr class="day-row">
+            <td width="46" valign="top" style="padding:12px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="34" height="34" align="center" valign="middle" bgcolor="#c47a8f" style="width:34px; height:34px; background:#c47a8f; border-radius:50%; font-size:15px; font-weight:700; color:#ffffff; line-height:34px;">4</td></tr></table></td>
+            <td valign="top" style="padding:12px 0; border-bottom:1px solid #e3dccd;">
+              <div style="font-size:16px; font-weight:700; color:#2f3a2e; line-height:1.35;">The four moves I use every week</div>
+              <div class="day-tease" style="font-size:14.5px; color:#6b6558; line-height:1.5; padding-top:2px;">Plus the easier way to do them.</div>
+            </td>
+          </tr>
+          <tr class="day-row">
+            <td width="46" valign="top" style="padding:12px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="34" height="34" align="center" valign="middle" bgcolor="#588157" style="width:34px; height:34px; background:#588157; border-radius:50%; font-size:15px; font-weight:700; color:#ffffff; line-height:34px;">5</td></tr></table></td>
+            <td valign="top" style="padding:12px 0;">
+              <div style="font-size:16px; font-weight:700; color:#2f3a2e; line-height:1.35;">Where to go from here</div>
+              <div class="day-tease" style="font-size:14.5px; color:#6b6558; line-height:1.5; padding-top:2px;">The whole week in four lines.</div>
+            </td>
+          </tr>
+
+        </table>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <!-- Forest band -->
+  <tr><td style="padding:24px 24px 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#3d5c3b" style="background:#3d5c3b; border-radius:14px;">
+      <tr><td align="center" style="padding:28px 28px 8px;">
+        <p style="font-size:13px; font-weight:600; color:#e8c99a; letter-spacing:0.04em; line-height:1.6; margin:0;">5 short emails &nbsp;&middot;&nbsp; a few minutes each &nbsp;&middot;&nbsp; nothing to prep</p>
+      </td></tr>
+      <tr><td align="center" style="padding:6px 32px 0;">
+        <p style="font-size:17px; line-height:1.6; color:#faf9f6; margin:0;">Not more to do. A new way to see the week you&rsquo;re already having.</p>
+      </td></tr>
+      <tr><td align="center" style="padding:20px 28px 28px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#faf9f6" style="background:#faf9f6; border-radius:14px;"><a href="https://anywherelearning.co/course?source=newsletter&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=course-announce" style="display:inline-block; padding:15px 34px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:700; color:#3d5c3b; text-decoration:none; line-height:1;">Send me Day 1</a></td></tr></table>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <!-- Signature + P.S. -->
+  <tr><td class="lm-pad" style="padding:28px 44px 0;">
     <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="110" height="38" style="display:block; width:110px; height:auto; border:0;">
+    <p style="font-size:15px; line-height:1.65; color:#6b6558; margin:18px 0 0;"><strong style="color:#2f3a2e;">P.S.</strong> If you did the 5-day challenge with us in September, this is the why behind everything we did that week.</p>
   </td></tr>
 
+  <!-- Footer -->
   <tr><td class="lm-pad" align="center" style="padding:28px 40px 36px; text-align:center;">
     <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
     <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
