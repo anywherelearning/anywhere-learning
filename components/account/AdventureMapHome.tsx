@@ -564,7 +564,7 @@ export default function AdventureMapHome({
         .am-root{background:linear-gradient(180deg,var(--am-bg1),var(--am-bg2));min-height:100vh;font-family:var(--font-body),sans-serif;color:var(--am-ink);padding:clamp(14px,2.5vw,30px)}
         .am-plate{font-family:var(--font-plate),sans-serif}
         .am-mono{font-family:var(--font-catalog),monospace}
-        .am-wrap{max-width:1200px;margin:0 auto}
+        .am-wrap{max-width:1600px;margin:0 auto}
         .am-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0 6px;margin-bottom:14px}
         .am-kicker{font-family:var(--font-catalog),monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--am-trail)}
         .am-h1{font-family:var(--font-plate),sans-serif;font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-0.02em;line-height:1.02;margin:6px 0 0}
@@ -585,7 +585,7 @@ export default function AdventureMapHome({
         .am-modal-medals{margin-top:4px;padding-top:12px;border-top:1px solid rgba(50,40,20,.1)}
         .am-link:hover{color:var(--am-flag)}
         .am-frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 40px 90px -46px rgba(50,48,42,.55),0 2px 0 rgba(255,255,255,.5) inset}
-        .am-map{position:relative;width:100%;height:clamp(440px,68vh,640px)}
+        .am-map{position:relative;width:100%;height:clamp(460px,calc(100vh - 210px),900px)}
         @media (max-width:760px){.am-map{height:60vh;min-height:430px}}
         .am-svg{position:absolute;inset:0;width:100%;height:100%}
         .am-grain{position:absolute;inset:0;width:100%;height:100%;opacity:.10;mix-blend-mode:soft-light;pointer-events:none}
