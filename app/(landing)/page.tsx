@@ -116,7 +116,7 @@ function CheckIcon() {
   );
 }
 
-const HERO_FIT = `(function(){var g=document.getElementById('hero-grid');if(!g)return;var st=document.createElement('style');document.head.appendChild(st);function f(){var w=document.documentElement.clientWidth;if(w<1024){st.textContent='';return;}var z=Math.min(w/1280,2.4);st.textContent='#hero-grid{zoom:'+z.toFixed(4)+';max-width:1280px}#hero-grid h1{font-size:72px}#hero-grid .hero-photo{width:200px;right:calc(100% - 18px);top:-34px}#hero-grid .hero-photo figcaption{font-size:15px}#hero-grid>div:first-child{max-width:680px}#site-header-inner{zoom:'+z.toFixed(4)+';max-width:1280px}';}f();window.addEventListener('resize',f);})();`;
+const HERO_FIT = `(function(){var g=document.getElementById('hero-grid');if(!g)return;var st=document.createElement('style');document.head.appendChild(st);function f(){var w=document.documentElement.clientWidth;if(w<1024){st.textContent='';return;}var z=Math.min(w/1280,1);if(z>=1){st.textContent='';return;}st.textContent='#hero-grid{zoom:'+z.toFixed(4)+';max-width:1280px}#hero-grid h1{font-size:72px}#hero-grid .hero-photo{width:200px;right:calc(100% - 18px);top:-34px}#hero-grid .hero-photo figcaption{font-size:15px}#hero-grid>div:first-child{max-width:680px}#site-header-inner{zoom:'+z.toFixed(4)+';max-width:1280px}';}f();window.addEventListener('resize',f);})();`;
 
 export default async function HomePage() {
   // Live founder state (DB-counted), so the founder framing and price close
@@ -283,11 +283,12 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-          {/* Laptop and up: the hero is designed at 1280px and scaled as one
-              picture to the screen's width (zoom), so the title, card, photo
-              and map keep exactly the same layout on every screen instead of
-              reflowing. The header scales the same way, so the logo stays
-              lined up with the title. Runs inline, before first paint. */}
+          {/* Small laptops (1024 to 1280px): the hero is designed at 1280px and
+              shrunk as one picture (zoom), so the title, card, photo and map
+              keep the same layout instead of reflowing. The header shrinks the
+              same way so the logo stays lined up with the title. Past 1280px
+              nothing grows: the hero stays the same size as every other
+              section on the page. Runs inline, before first paint. */}
           <script dangerouslySetInnerHTML={{ __html: HERO_FIT }} />
         </section>
 
