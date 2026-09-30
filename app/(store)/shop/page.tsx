@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://anywherelearning.co/og-default.jpg?v=5',
+        url: 'https://anywherelearning.co/og-default.jpg?v=6',
         width: 1200,
         height: 630,
         alt: 'Anywhere Learning: real-world learning activities for kids ages 6 to 14',
