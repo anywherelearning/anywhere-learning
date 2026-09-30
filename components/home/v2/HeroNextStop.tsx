@@ -79,7 +79,7 @@ export default function HeroNextStop() {
           </div>
 
           <h2
-            className="mb-3 text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
+            className="mb-3 line-clamp-2 min-h-[2.24em] text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
           >
             {a.title}
           </h2>
@@ -90,7 +90,7 @@ export default function HeroNextStop() {
             {a.category} &middot; {a.time}
           </p>
 
-          <p className="mb-6 text-[15.5px] leading-[1.6] text-[#6b675e]">{a.blurb}</p>
+          <p className="mb-6 line-clamp-2 min-h-[3.2em] text-[15.5px] leading-[1.6] text-[#6b675e]">{a.blurb}</p>
 
           <Link
             href={`/shop/${a.slug}`}

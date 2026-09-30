@@ -248,7 +248,7 @@ export default async function HomePage() {
                   change to the card's height would close. */}
               {/* A real moment, taped over the map: the idea with a face on it.
                   Phones: above the card. Desktop: tucked left of the card. */}
-              <figure className="relative z-[3] mx-auto mb-8 w-[190px] -rotate-[5deg] bg-white p-2 pb-2.5 shadow-[0_22px_40px_-18px_rgba(45,58,46,0.6)] lg:absolute lg:left-[2%] lg:top-[10%] lg:mb-0 lg:w-[210px]">
+              <figure className="relative z-[3] mx-auto mb-8 w-[190px] -rotate-[5deg] bg-white p-2 pb-2.5 shadow-[0_22px_40px_-18px_rgba(45,58,46,0.6)] lg:absolute lg:-left-[6%] lg:top-[4%] lg:mb-0 lg:w-[196px]">
                 <Tape className="left-1/2 -translate-x-1/2 -rotate-3" />
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
@@ -264,7 +264,7 @@ export default async function HomePage() {
                   Grinding it by hand
                 </figcaption>
               </figure>
-              <div className="flex justify-center lg:absolute lg:right-0 lg:top-1/2 lg:translate-y-[calc(-50%-12px)]">
+              <div className="relative z-[4] flex justify-center lg:absolute lg:right-0 lg:top-1/2 lg:translate-y-[calc(-50%-12px)]">
                 <HeroNextStop />
               </div>
             </div>
