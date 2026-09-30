@@ -347,11 +347,11 @@ export const INSIDE_TABS: InsideTab[] = [
     img: '/product-shots/app-nextstop.webp',
     alt: "The family trail, with Liam and Elena partway along it and the next stop ready",
     fit: 'contain',
-    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v5.mp4',
-    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v5-poster.jpg',
-    // The clip runs 8.7s: open an explorer, peek in the backpack, reach
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v6.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-map-v6-poster.jpg',
+    // The clip runs 14.0s: open an explorer, peek in the backpack, reach
     // the next stop, collect the new finds. One full pass, then move on.
-    holdMs: 9200,
+    holdMs: 14400,
   },
   {
     n: '2',
@@ -362,10 +362,10 @@ export const INSIDE_TABS: InsideTab[] = [
     fit: 'contain',
     // Versioned filename: the Blob URL is cached for a year, so a replacement
     // clip gets a new name rather than an overwrite that visitors never see.
-    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v6.mp4',
-    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v6-poster.jpg',
-    // The clip runs 8.0s: down the month page to the family challenge.
-    holdMs: 8500,
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v7.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-month-v7-poster.jpg',
+    // The clip runs 13.3s: down the month page, skill set to seasonal set.
+    holdMs: 13700,
   },
   {
     n: '3',
@@ -374,10 +374,10 @@ export const INSIDE_TABS: InsideTab[] = [
     img: '/product-shots/app-record.webp',
     alt: "A child's learning record, showing coverage by skill area and a dated log of activities",
     fit: 'cover',
-    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v5.mp4',
-    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v5-poster.jpg',
-    // The clip runs 9.6s: one child's record, coverage bars, then the log.
-    holdMs: 10100,
+    video: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v6.mp4',
+    poster: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/home-inside/inside-record-v6-poster.jpg',
+    // The clip runs 13.5s: one child's record, switch kids, then the log.
+    holdMs: 13900,
   },
 ];
 
