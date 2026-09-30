@@ -84,7 +84,7 @@ export default function TryItThisWeek({ productCategory, prefer, seed }: TryItTh
           Every activity is included with the membership.{' '}
           <Link
             href="/#membership"
-            className="text-forest-dark font-medium underline decoration-forest/30 underline-offset-2 hover:text-forest"
+            className="tap text-forest-dark font-medium underline decoration-forest/30 underline-offset-2 hover:text-forest"
           >
             See how it works
           </Link>

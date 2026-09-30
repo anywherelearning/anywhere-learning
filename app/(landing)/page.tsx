@@ -251,7 +251,7 @@ export default async function HomePage() {
               {/* The photo is pinned to the card (tucked just behind its top-left
                   corner) so the two never collide at any screen width.
                   Phones: the photo sits above the card. */}
-              <div className="flex flex-col items-center lg:absolute lg:right-0 lg:top-1/2 lg:block lg:translate-y-[calc(-50%-12px)]">
+              <div className="flex flex-col items-center lg:absolute lg:right-0 lg:top-1/2 lg:block lg:w-[360px] lg:translate-y-[calc(-50%-12px)] xl:w-[420px]">
                 <figure className="relative mx-auto mb-8 w-[190px] -rotate-[5deg] bg-white p-2 pb-2.5 shadow-[0_22px_40px_-18px_rgba(45,58,46,0.6)] lg:absolute lg:right-[calc(100%-8px)] lg:top-[-26px] lg:mb-0 lg:w-[150px] xl:w-[200px]">
                   <Tape className="left-1/2 -translate-x-1/2 -rotate-3" />
                   <div className="relative aspect-[4/5] overflow-hidden">
@@ -268,7 +268,7 @@ export default async function HomePage() {
                     Grinding it by hand
                   </figcaption>
                 </figure>
-                <div className="relative z-[1]">
+                <div className="relative z-[1] flex w-full justify-center">
                   <HeroNextStop />
                 </div>
               </div>

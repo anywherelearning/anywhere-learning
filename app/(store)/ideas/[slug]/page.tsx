@@ -672,7 +672,7 @@ function ListDetailView({
               Put together by{' '}
               <Link
                 href="/about"
-                className="font-medium text-[#3d5c3b] hover:underline"
+                className="tap font-medium text-[#3d5c3b] hover:underline"
               >
                 Amelie
               </Link>

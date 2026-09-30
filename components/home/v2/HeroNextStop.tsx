@@ -63,7 +63,7 @@ export default function HeroNextStop() {
   }
 
   return (
-    <div className="w-full max-w-[420px] lg:max-w-[360px] xl:max-w-[420px]">
+    <div className="w-full max-w-[420px] lg:w-[360px] xl:w-[420px]">
       <div className="relative motion-safe:animate-[alGentleFloat_6s_ease-in-out_infinite]">
         {/* Says what this card is before anyone clicks it */}
         <span className="absolute -top-3.5 left-6 z-10 -rotate-2 bg-[#FBF3DC] px-3 py-1 text-[12.5px] font-semibold text-forest-dark shadow-[0_6px_14px_-8px_rgba(45,58,46,0.6)]">

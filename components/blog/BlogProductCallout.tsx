@@ -85,7 +85,7 @@ export default function BlogProductCallout({ slug, context }: BlogProductCallout
           </div>
           <Link
             href={`/shop/${product.slug}`}
-            className="mt-3 text-[13px] font-semibold text-forest-dark hover:text-forest transition-colors"
+            className="tap mt-3 text-[13px] font-semibold text-forest-dark hover:text-forest transition-colors"
           >
             See the activity &rarr;
           </Link>
