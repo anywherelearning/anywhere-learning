@@ -167,7 +167,7 @@ export default async function HomePage() {
               (the extra bottom padding makes room for them). A short fade at
               the top lets the text area stay clean. */}
           <div
-            className="absolute inset-x-0 bottom-0 top-[560px] z-0 bg-cover bg-[31%_bottom] lg:hidden"
+            className="absolute inset-x-0 bottom-0 top-[560px] z-0 bg-cover bg-[31%_bottom] opacity-[0.7] lg:hidden"
             style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
             aria-hidden="true"
           />
@@ -186,7 +186,7 @@ export default async function HomePage() {
               scripts/build-hero-trail.ts. */}
           <style>{`
             @media (min-width:1024px){
-              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(56vw + 220px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.85;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%)}
+              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(56vw + 220px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.6;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%)}
               .hero-map{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
               .hero-veil{background:rgba(250,249,246,.14)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
               .hero-glow{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 470px 360px at calc(max(50vw - 640px, 0px) + 330px) 46%,rgba(250,249,246,.97) 0%,rgba(250,249,246,.9) 50%,rgba(250,249,246,.45) 78%,rgba(250,249,246,0) 100%)}
@@ -194,7 +194,7 @@ export default async function HomePage() {
           `}</style>
           <div className="hero-land hidden" aria-hidden="true" />
           <div
-            className="hero-map absolute inset-y-0 right-0 z-0 hidden w-[56%] bg-[#e8eee4] bg-cover bg-[left_center] opacity-[0.85] lg:block"
+            className="hero-map absolute inset-y-0 right-0 z-0 hidden w-[56%] bg-[#e8eee4] bg-cover bg-[left_center] opacity-[0.6] lg:block"
             style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
             aria-hidden="true"
           />
@@ -307,12 +307,12 @@ export default async function HomePage() {
         </section>
 
         {/* ════════ 02 MARQUEE ════════ */}
-        <div className="relative overflow-hidden bg-forest-dark py-[18px]" aria-hidden="true">
+        <div className="relative overflow-hidden bg-forest py-[18px]" aria-hidden="true">
           <div className="flex w-max animate-marquee">
             {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                className="whitespace-nowrap pr-[34px] text-[15px] font-medium text-cream/[0.72]"
+                className="whitespace-nowrap pr-[34px] text-[15px] font-medium text-cream/[0.88]"
               >
                 {ticker}
                 {'  ·  '}
@@ -322,23 +322,19 @@ export default async function HomePage() {
         </div>
 
         {/* ════════ 03 WHY + STATS ════════ */}
-        <section
-          className="bg-forest-dark px-6 py-20 md:px-16 md:py-24"
-          style={{
-            backgroundImage:
-              'radial-gradient(ellipse 70% 60% at 12% 0%, rgba(88,129,87,0.55), transparent), radial-gradient(ellipse 60% 55% at 92% 100%, rgba(212,163,115,0.18), transparent)',
-          }}
-        >
+        {/* Soft sage, not dark green: the page flows light from the hero
+            down, and the green ticker above is the one strong accent. */}
+        <section className="bg-[#e8eee2] px-6 py-20 md:px-16 md:py-24">
           <div className="mx-auto max-w-[1100px]">
             <ScrollReveal>
-              <Eyebrow tone="dark">Why this exists</Eyebrow>
+              <Eyebrow>Why this exists</Eyebrow>
               {/* No max-w on either: the cards below run the full container
                   width, so a short measure up here leaves a ragged gap. */}
-              <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04] text-cream">
+              <h2 className="mb-[22px] mt-[22px] font-display text-[clamp(1.85rem,3.6vw,2.9rem)] leading-[1.04]">
                 Kids don&apos;t need better worksheets.{' '}
-                <span className="italic text-gold-light">They need a reason.</span>
+                <span className="italic text-forest">They need a reason.</span>
               </h2>
-              <p className="mb-14 text-[19px] leading-[1.7] text-cream/[0.78] text-pretty">
+              <p className="mb-14 text-[19px] leading-[1.7] text-gray-600 text-pretty">
                 Learning got separated from real life. Kids get taught all day and almost never get
                 to try.
               </p>
@@ -364,7 +360,7 @@ export default async function HomePage() {
                       them: at cream/0.07 they barely separated from the
                       background. Echoes the aged-paper panels in the member
                       world, so the two surfaces read as one product. */}
-                  <div className="relative h-full bg-[#f5f0e5] px-7 pb-[30px] pt-9 shadow-[0_14px_30px_-16px_rgba(0,0,0,0.5)]" style={{ transform: `rotate(${[-1.2, 0.8, -0.6][i]}deg)` }}>
+                  <div className="relative h-full bg-[#f5f0e5] px-7 pb-[30px] pt-9 shadow-[0_14px_30px_-16px_rgba(45,58,46,0.35)]" style={{ transform: `rotate(${[-1.2, 0.8, -0.6][i]}deg)` }}>
                     <Tape color={i === 1 ? 'rgba(169,193,163,0.85)' : undefined} />
                     <div className="mb-2.5 text-xl font-semibold text-forest-dark">{c.t}</div>
                     <div className="text-[15.5px] leading-[1.65] text-[#6b675e]">{c.b}</div>
@@ -378,7 +374,7 @@ export default async function HomePage() {
               {WHY_PHOTOS.map(([file, caption, alt], i) => (
                 <li
                   key={file}
-                  className={`relative bg-[#f5f0e5] p-2 pb-2.5 shadow-[0_14px_30px_-16px_rgba(0,0,0,0.6)] ${i === 4 ? 'max-lg:hidden' : ''} ${i === 3 ? 'sm:max-lg:hidden' : ''}`}
+                  className={`relative bg-[#f5f0e5] p-2 pb-2.5 shadow-[0_14px_30px_-16px_rgba(45,58,46,0.42)] ${i === 4 ? 'max-lg:hidden' : ''} ${i === 3 ? 'sm:max-lg:hidden' : ''}`}
                   style={{ transform: `rotate(${[-3, 2, -1.5, 2.5, -2][i]}deg)` }}
                 >
                   <Tape className="left-1/2 -translate-x-1/2 -rotate-3 w-14 h-5" />
@@ -397,7 +393,7 @@ export default async function HomePage() {
             </ul>
 
             <ScrollReveal delay={150}>
-              <div className="grid grid-cols-3 border-t border-cream/[0.14] pt-11">
+              <div className="grid grid-cols-3 border-t border-forest-dark/[0.16] pt-11">
                 {[
                   { n: '120+', l: 'Activities' },
                   { n: '9', l: 'Topics' },
@@ -405,12 +401,12 @@ export default async function HomePage() {
                 ].map((s, i) => (
                   <div
                     key={s.l}
-                    className={`text-center ${i < 2 ? 'border-r border-cream/[0.14]' : ''}`}
+                    className={`text-center ${i < 2 ? 'border-r border-forest-dark/[0.16]' : ''}`}
                   >
-                    <div className="font-display text-[clamp(2.2rem,4vw,3.2rem)] leading-none text-gold-light">
+                    <div className="font-display text-[clamp(2.2rem,4vw,3.2rem)] leading-none text-forest">
                       {s.n}
                     </div>
-                    <div className="mt-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-cream/60 md:text-[13px]">
+                    <div className="mt-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500 md:text-[13px]">
                       {s.l}
                     </div>
                   </div>
