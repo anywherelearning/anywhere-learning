@@ -38,50 +38,14 @@ import { hexToRgba, minsLabel } from '@/lib/activity-visuals';
 import { areaMetaForSlug, TERRITORIES } from '@/lib/roadmap';
 import type { PlanActivity } from '@/lib/weekly-plan';
 import type { Effort } from '@/lib/activity-effort';
+import { mapSceneSVG, TRAIL, SIGN_DY, VW, VH, type MapLayout } from '@/lib/map-art';
 
 function childLabel(c: Child, i: number) {
   return c.name.trim() || `Child ${i + 1}`;
 }
 
-// One trail shape per leg (cycled by leg index) so consecutive legs feel
-// different — rolling, zigzagging, climbing. All keep the same contract: 12
-// stops from the bottom-left to the right edge, evenly-ish spaced, with the
-// right end (x≳1080) held high so the token + avatars clear the signpost card.
-const TRAILS: [number, number][][] = [
-  // 0 — steady climb
-  [[150, 852], [292, 782], [430, 710], [560, 628], [674, 544], [784, 468], [888, 410], [996, 372], [1108, 350], [1232, 340], [1362, 336], [1500, 334]],
-  // 1 — rolling waves
-  [[150, 834], [278, 762], [404, 820], [528, 744], [652, 796], [774, 704], [892, 612], [1002, 490], [1112, 366], [1244, 348], [1378, 338], [1508, 332]],
-  // 2 — early climb, then gentle
-  [[150, 856], [272, 714], [398, 762], [524, 644], [650, 704], [774, 576], [894, 504], [1006, 416], [1116, 356], [1248, 342], [1382, 336], [1510, 332]],
-  // 3 — bigger zigzag
-  [[150, 812], [272, 868], [400, 730], [526, 808], [652, 678], [776, 748], [896, 576], [1006, 446], [1118, 362], [1250, 344], [1384, 338], [1512, 334]],
-  // 4 — gentle S, dipping past the trees
-  [[150, 860], [280, 786], [406, 704], [532, 782], [656, 628], [780, 704], [900, 528], [1010, 414], [1122, 358], [1252, 344], [1384, 336], [1512, 332]],
-];
-const STOPS = TRAILS[0].length; // 12 — same on every trail
-const VW = 1600, VH = 1000;
-const px = (x: number) => `${(x / VW) * 100}%`;
-const py = (y: number) => `${(y / VH) * 100}%`;
-
-function smooth(pts: [number, number][]) {
-  if (pts.length < 2) return '';
-  let d = `M ${pts[0][0]} ${pts[0][1]}`;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const xm = (pts[i][0] + pts[i + 1][0]) / 2;
-    const ym = (pts[i][1] + pts[i + 1][1]) / 2;
-    d += ` Q ${pts[i][0]} ${pts[i][1]} ${xm} ${ym}`;
-  }
-  const last = pts[pts.length - 1];
-  d += ` L ${last[0]} ${last[1]}`;
-  return d;
-}
-
-// Where the trees sit on the map (same spots every leg; the glyph changes).
-const TREES: [number, number][] = [
-  [120, 476], [192, 516], [70, 526], [1046, 616], [1116, 576], [1186, 636],
-  [1298, 476], [300, 776], [1430, 696], [560, 820], [980, 670],
-];
+// Trail layout, scenery and destinations live in lib/map-art (v2 maps).
+const STOPS = TRAIL.wide.length; // 12: start, 10 stops, destination
 
 type TreeKind = 'broadleaf' | 'pine' | 'cactus' | 'palm' | 'snowpine';
 
@@ -158,65 +122,6 @@ const REGIONS: Region[] = [
   },
 ];
 
-/** The tree canopy for a region (sits above a shared shadow + baseline y≈54). */
-function TreeGlyph({ kind }: { kind: TreeKind }) {
-  switch (kind) {
-    case 'pine':
-      return (
-        <>
-          <path d="M0,-24 L-22,6 L22,6 Z" fill="var(--r-foresttop)" />
-          <path d="M0,-8 L-26,30 L26,30 Z" fill="var(--r-forest)" />
-          <path d="M0,4 L-30,44 L30,44 Z" fill="var(--r-foresttop)" opacity="0.92" />
-          <rect x="-4" y="42" width="8" height="12" rx="2" fill="#6f5433" />
-        </>
-      );
-    case 'snowpine':
-      return (
-        <>
-          <path d="M0,-24 L-22,6 L22,6 Z" fill="var(--r-forest)" />
-          <path d="M0,-8 L-26,30 L26,30 Z" fill="var(--r-forest)" />
-          <path d="M0,4 L-30,44 L30,44 Z" fill="var(--r-forest)" />
-          <path d="M0,-24 L-9,-9 L9,-9 Z" fill="#ffffff" opacity="0.92" />
-          <path d="M0,-8 L-12,9 L12,9 Z" fill="#ffffff" opacity="0.8" />
-          <path d="M0,4 L-15,23 L15,23 Z" fill="#ffffff" opacity="0.68" />
-          <rect x="-4" y="42" width="8" height="12" rx="2" fill="#6f5433" />
-        </>
-      );
-    case 'cactus':
-      return (
-        <>
-          <rect x="-9" y="-20" width="18" height="74" rx="9" fill="var(--r-foresttop)" />
-          <rect x="-25" y="4" width="10" height="28" rx="5" fill="var(--r-foresttop)" />
-          <rect x="-25" y="-6" width="10" height="16" rx="5" fill="var(--r-foresttop)" />
-          <rect x="15" y="-2" width="10" height="26" rx="5" fill="var(--r-foresttop)" />
-          <rect x="15" y="-16" width="10" height="18" rx="5" fill="var(--r-foresttop)" />
-          <ellipse cx="0" cy="-14" rx="6" ry="8" fill="#ffffff" opacity="0.14" />
-        </>
-      );
-    case 'palm':
-      return (
-        <>
-          <path d="M2,54 Q-4,22 -3,-12" stroke="#8a6a44" strokeWidth="8" fill="none" strokeLinecap="round" />
-          <g fill="var(--r-foresttop)">
-            <path d="M-3,-12 Q-36,-20 -42,-4 Q-22,-14 -3,-6 Z" />
-            <path d="M-3,-12 Q30,-22 40,-8 Q20,-14 -3,-6 Z" />
-            <path d="M-3,-12 Q-22,-40 -8,-48 Q-3,-28 -3,-6 Z" />
-            <path d="M-3,-12 Q18,-38 8,-50 Q-1,-30 -3,-6 Z" />
-          </g>
-          <circle cx="-3" cy="-11" r="4" fill="var(--r-forest)" />
-        </>
-      );
-    default: // broadleaf
-      return (
-        <>
-          <circle cx="0" cy="6" r="24" fill="var(--r-foresttop)" />
-          <circle cx="-13" cy="20" r="17" fill="var(--r-forest)" opacity="0.9" />
-          <circle cx="13" cy="20" r="17" fill="var(--r-forest)" opacity="0.9" />
-          <rect x="-4" y="36" width="8" height="18" rx="2" fill="#7a5a38" />
-        </>
-      );
-  }
-}
 
 const TIER_ORDER: GearTier[] = ['find', 'everyday', 'big'];
 const TIER_LABEL: Record<GearTier, string> = { find: 'Trail finds', everyday: 'Everyday gear', big: 'Big gear' };
@@ -318,6 +223,16 @@ export default function AdventureMapHome({
   const [quest, setQuest] = useState<MonthChallengeEntry | null>(null); // this month's accepted challenge
   const [medals, setMedals] = useState<MonthChallengeEntry[]>([]); // finished monthly challenges
   const [medalDetail, setMedalDetail] = useState<MonthChallengeEntry | null>(null); // tapped-medal popup
+  // The map never stretches: measure it so the overlays (stickers, explorer)
+  // line up with the scene, and pick the wide or tall trail for its shape.
+  const [mapEl, setMapEl] = useState<HTMLDivElement | null>(null);
+  const [mapSize, setMapSize] = useState<{ w: number; h: number }>({ w: 0, h: 0 });
+  useEffect(() => {
+    if (!mapEl) return;
+    const ro = new ResizeObserver(([e]) => setMapSize({ w: e.contentRect.width, h: e.contentRect.height }));
+    ro.observe(mapEl);
+    return () => ro.disconnect();
+  }, [mapEl]);
 
   const bySlug = useMemo(() => {
     const m = new Map<string, PlanActivity>();
@@ -474,14 +389,17 @@ export default function AdventureMapHome({
   const PER_LEG = STOPS - 1;
   const leg = Math.floor(total / PER_LEG);
   const region = REGIONS[leg % REGIONS.length];
-  const legPoints = TRAILS[leg % TRAILS.length];
+  const layout: MapLayout = mapSize.w && mapSize.w / mapSize.h < 1.45 ? 'tall' : 'wide';
+  const legPoints = TRAIL[layout];
+  // scene → pixels for "xMidYMax slice"
+  const ms = mapSize.w ? Math.max(mapSize.w / VW, mapSize.h / VH) : 0;
+  const mox = (mapSize.w - VW * ms) / 2;
+  const moy = mapSize.h - VH * ms;
+  const px = (x: number) => `${mox + x * ms}px`;
+  const py = (y: number) => `${moy + y * ms}px`;
   const k = total % PER_LEG;
   const trailFinds = pack.slice(Math.max(0, pack.length - k));
   const tokenPt = legPoints[k];
-  const nextPt = legPoints[k + 1];
-  const futurePts = legPoints.slice(k + 2);
-  const traveled = smooth(legPoints.slice(0, k + 1));
-  const ahead = smooth(legPoints.slice(k));
 
   // backpack collection: earned (unique) vs the full catalog
   const earnedIds = new Set(pack.map((g) => g.id));
@@ -634,23 +552,23 @@ export default function AdventureMapHome({
         .am-pin{position:absolute;transform:translate(-50%,-50%)}
         /* explorers stand ON their spot: feet (just above the name tag) on the point */
         .am-pin-me{transform:translate(-50%,calc(-100% + 30px));z-index:4}
-        .am-find{width:clamp(38px,3.6vw,50px);height:clamp(38px,3.6vw,50px);border-radius:50%;background:rgba(247,242,232,.9);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 18px -7px rgba(50,40,20,.55);padding:7px;display:grid;place-items:center}
-        .am-find::after{content:"";position:absolute;inset:auto 0 -9px 0;height:8px;margin:0 auto;width:60%;border-radius:50%;background:rgba(50,40,20,.18);filter:blur(3px)}
-        .am-token{position:relative;display:flex;flex-direction:column;align-items:center;background:none;border:none;padding:0;cursor:pointer;width:clamp(96px,9vw,140px);transition:transform .2s ease}
+        .am-find{width:100%;height:100%;display:block;padding:0;background:none;border:none;box-shadow:none}
+        .am-token{position:relative;display:flex;flex-direction:column;align-items:center;background:none;border:none;padding:0;cursor:pointer;width:calc(118px * var(--ms,1));transition:transform .2s ease}
         .am-token:hover{transform:translateY(-4px)}
         .am-token>div{position:relative;z-index:1;width:100%;aspect-ratio:26/34;filter:drop-shadow(0 10px 10px rgba(50,40,20,.28))}
         .am-token::before{content:"";position:absolute;left:14%;right:14%;bottom:18px;height:14px;border-radius:50%;background:rgba(40,30,15,.28);filter:blur(4px)}
         .am-token-name{position:relative;z-index:2;margin-top:-4px;font-family:var(--font-catalog),monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--am-ink);background:rgba(247,242,232,.92);padding:3px 9px;border-radius:999px;box-shadow:0 4px 10px -6px rgba(50,40,20,.5)}
         .am-token-build{width:clamp(84px,8.4vw,124px);height:clamp(84px,8.4vw,124px);border-radius:50%;background:radial-gradient(circle at 50% 34%,#fff,rgba(247,242,232,.9));border:3px solid var(--am-flag);display:grid;place-items:center}
         .am-family-row{display:flex;align-items:flex-end;justify-content:center}
-        .am-token-fam{width:clamp(84px,7.6vw,120px);margin:0 -10px;opacity:.9}
-        .am-token-fam.is-sel{opacity:1;z-index:3;width:clamp(96px,9vw,140px)}
+        .am-token-fam{width:calc(100px * var(--ms,1));margin:0 calc(-8px * var(--ms,1));opacity:.9}
+        .am-token-fam.is-sel{opacity:1;z-index:3;width:calc(118px * var(--ms,1))}
         .am-token-fam.is-sel .am-token-name{background:var(--am-flag);color:#fff}
         .am-here{position:absolute;top:-26px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-catalog),monospace;font-size:10px;letter-spacing:.08em;color:var(--am-ink);padding:4px 9px;border-radius:20px}
         .am-next{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:52px;height:52px}
+        circle.am-next-glow{transform-box:fill-box;transform-origin:center}
         .am-next-glow{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(208,104,74,.5),transparent 68%);animation:amGlow 2.2s ease-in-out infinite}
         .am-next-dot{position:relative;width:24px;height:24px;border-radius:50%;background:var(--am-flag);border:3px solid #fff;box-shadow:0 6px 14px -5px rgba(50,40,20,.6)}
-        .am-signpost{position:absolute;right:18px;bottom:18px;z-index:6;width:min(350px,66%);border-radius:18px;overflow:hidden}
+        .am-signpost{position:absolute;right:18px;top:18px;z-index:6;width:min(350px,66%);border-radius:18px;overflow:hidden}
         @media (max-width:760px){.am-signpost{position:static;width:auto;margin:0;border-radius:0;border:none;border-top:1px solid rgba(255,255,255,.5)}.am-tabs{max-width:100%}}
         .am-sign-head{padding:10px 16px;font-family:var(--font-catalog),monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--am-trail);display:flex;justify-content:space-between;align-items:center}
         .am-sign-body{padding:2px 18px 18px}
@@ -680,8 +598,8 @@ export default function AdventureMapHome({
         .am-tier{margin-top:18px}
         .am-tier-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
         .am-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(46px,5vw,58px),1fr));gap:9px}
-        .am-slot{position:relative;aspect-ratio:1;border-radius:14px;display:grid;place-items:center;padding:9px}
-        .am-slot-on{background:#fff;border:1px solid rgba(50,40,20,.08);box-shadow:0 8px 16px -10px rgba(50,40,20,.4)}
+        .am-slot{position:relative;aspect-ratio:1;border-radius:14px;display:grid;place-items:center;padding:2px}.am-slot .am-ico{width:100%;height:100%}
+        .am-slot-on{background:transparent;border:none}
         .am-slot-off{background:rgba(50,40,20,.05);border:1px dashed rgba(50,40,20,.18)}
         .am-slot-off .am-ico{filter:grayscale(1);opacity:.4}
         .am-slot{transition:transform .12s ease}
@@ -696,7 +614,7 @@ export default function AdventureMapHome({
         .am-modal-body{padding:8px 24px 28px}
         .am-close{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(50,40,20,.15);background:rgba(50,40,20,.05);color:var(--am-ink);font-size:14px;cursor:pointer;display:grid;place-items:center}
         .am-close:hover{background:rgba(50,40,20,.1)}
-        .am-find{cursor:pointer;transition:transform .14s ease}
+        .am-find{cursor:pointer;transition:transform .14s ease}.am-find .am-ico{width:100%;height:100%}
         .am-pin:hover .am-find{transform:scale(1.08)}
         .am-slot{cursor:pointer}
         .am-detail{position:relative;width:min(360px,100%);text-align:center;background:var(--am-paper);border-radius:22px;padding:32px 26px 26px;box-shadow:0 50px 110px -34px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.6);animation:amRise .3s cubic-bezier(.22,1,.36,1) both}
@@ -735,7 +653,7 @@ export default function AdventureMapHome({
         .am-journey-stats span{display:flex;flex-direction:column;font-size:11px;color:var(--am-muted);line-height:1.2}
         .am-journey-stats b{font-family:var(--font-plate),sans-serif;font-size:22px;font-weight:800;color:var(--am-ink);line-height:1.05}
         .am-journey-gear{display:flex;align-items:center;gap:5px;width:100%;margin-top:11px;padding:9px 0 0;border:none;border-top:1px dashed rgba(50,40,20,.14);background:none;cursor:pointer;flex-wrap:wrap}
-        .am-journey-slot{width:30px;height:30px;border-radius:9px;background:#f6f1e6;display:grid;place-items:center;padding:4px}
+        .am-journey-slot{width:36px;height:37px;display:grid;place-items:center}.am-journey-slot .am-ico{width:100%;height:100%}
         .am-journey-more{margin-left:auto;font-size:12px;font-weight:700;color:var(--am-flag)}
         .am-option{display:flex;align-items:center;gap:11px;text-align:left;background:#fff;border:1px solid rgba(50,40,20,.1);border-radius:13px;padding:11px 13px;cursor:pointer;text-decoration:none;transition:transform .14s,box-shadow .14s,border-color .14s}
         .am-option:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(50,40,20,.42);border-color:rgba(191,124,72,.45)}
@@ -746,11 +664,9 @@ export default function AdventureMapHome({
         .am-option-arrow{margin-left:auto;color:var(--am-trail);font-size:16px}
         @media(max-width:480px){
           /* narrow maps: smaller explorers so the second kid isn't cut off at the edge */
-          .am-token{width:64px}
-          .am-token-fam{width:56px;margin:0 -6px}
-          .am-token-fam.is-sel{width:66px}
           .am-token-name{font-size:9px;padding:2px 6px}
           .am-pin-me{transform:translate(-50%,calc(-100% + 22px))}
+          .am-here{display:none}
           .am-quest-title{white-space:normal;font-size:15px}
           .am-quest{align-items:flex-start}
           .am-explorer-grid{grid-template-columns:1fr;gap:14px}
@@ -840,67 +756,8 @@ export default function AdventureMapHome({
         )}
 
         <div className="am-frame">
-          <div className="am-map" style={region.vars as React.CSSProperties}>
-            <svg className="am-svg" viewBox={`0 0 ${VW} ${VH}`} preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="amSky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="var(--r-sky1)" /><stop offset="1" stopColor="var(--r-sky2)" />
-                </linearGradient>
-                <linearGradient id="amHill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="var(--r-hilltop)" /><stop offset="1" stopColor="var(--r-hill)" />
-                </linearGradient>
-                <linearGradient id="amHill2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="var(--r-hill2top)" /><stop offset="1" stopColor="var(--r-hill2)" />
-                </linearGradient>
-                <linearGradient id="amForest" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="var(--r-foresttop)" /><stop offset="1" stopColor="var(--r-forest)" />
-                </linearGradient>
-                <linearGradient id="amMtn" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="var(--r-mtntop)" /><stop offset="1" stopColor="var(--r-mtn)" />
-                </linearGradient>
-                <linearGradient id="amWater" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="var(--r-water1)" /><stop offset="1" stopColor="var(--r-water2)" />
-                </linearGradient>
-                <radialGradient id="amSun" cx="0.5" cy="0.5" r="0.5">
-                  <stop offset="0" stopColor="var(--r-sun1)" /><stop offset="0.55" stopColor="var(--r-sun2)" /><stop offset="1" stopColor="var(--r-sun2)" stopOpacity="0" />
-                </radialGradient>
-                <filter id="amNoise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" /></filter>
-              </defs>
-
-              <rect width={VW} height={VH} fill="url(#amSky)" />
-              <circle cx="1320" cy="150" r="150" fill="url(#amSun)" />
-              <circle cx="1320" cy="150" r="46" fill="var(--r-suncore)" />
-              {/* atmospheric distant mountains */}
-              <path d="M0,330 L200,150 L360,330 Z" fill="url(#amMtn)" opacity="0.55" />
-              <path d="M250,330 L470,120 L520,190 L620,90 L800,330 Z" fill="url(#amMtn)" opacity="0.8" />
-              {region.snow && <>
-                <path d="M470,120 L520,190 L558,152 Z" fill="#f4f0e6" opacity="0.9" />
-                <path d="M620,90 L664,150 L706,116 Z" fill="#f4f0e6" opacity="0.9" />
-              </>}
-              {/* hill bands with soft haze seams */}
-              <path d="M0,300 Q400,234 820,292 Q1200,346 1600,282 L1600,1000 L0,1000 Z" fill="url(#amHill)" />
-              <path d="M0,300 Q400,234 820,292 Q1200,346 1600,282" fill="none" stroke="rgba(255,255,255,.4)" strokeWidth="6" />
-              <path d="M0,430 Q380,364 760,418 Q1150,472 1600,408 L1600,1000 L0,1000 Z" fill="url(#amHill2)" />
-              <path d="M0,560 Q420,480 900,538 Q1250,582 1600,518 L1600,1000 L0,1000 Z" fill="url(#amForest)" />
-              {/* river (skipped in dry regions like the desert) */}
-              {region.river && <>
-                <path d="M-20,410 C220,470 250,650 470,700 C690,748 660,900 940,952" fill="none" stroke="url(#amWater)" strokeWidth="30" strokeLinecap="round" opacity="0.92" />
-                <path d="M-20,410 C220,470 250,650 470,700 C690,748 660,900 940,952" fill="none" stroke="rgba(255,255,255,.35)" strokeWidth="7" strokeLinecap="round" />
-              </>}
-              {/* trees — the glyph changes with the region */}
-              {TREES.map(([tx, ty], ti) => (
-                <g key={ti} transform={`translate(${tx},${ty})`}>
-                  <ellipse cx="0" cy="52" rx="24" ry="7" fill="rgba(50,40,20,.16)" />
-                  <TreeGlyph kind={region.tree} />
-                </g>
-              ))}
-              {/* trail */}
-              <path className="am-draw" d={traveled} fill="none" stroke="var(--am-trail)" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round" />
-              <path className="am-draw" d={traveled} fill="none" stroke="rgba(255,255,255,.3)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-              <path d={ahead} fill="none" stroke="var(--am-trail)" strokeWidth="9" strokeLinecap="round" strokeDasharray="2 26" opacity="0.7" />
-            </svg>
-
-            <svg className="am-grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#amNoise)" /></svg>
+          <div className="am-map" ref={setMapEl} style={{ ...(region.vars as React.CSSProperties), ['--ms' as string]: ms || 1 }}>
+            <svg className="am-svg" viewBox={`0 0 ${VW} ${VH}`} preserveAspectRatio="xMidYMax slice" aria-hidden="true" dangerouslySetInnerHTML={{ __html: mapSceneSVG(leg, layout, k) }} />
             <div className="am-vignette" />
 
             <div className="am-chrome">
@@ -911,19 +768,14 @@ export default function AdventureMapHome({
                 <button className="am-tab" onClick={() => setEditKids(true)} style={{ borderStyle: 'dashed' }}>+ explorer</button>
               </div>
 
-              {futurePts.map(([x, y], fi) => (
-                <span key={`fut${fi}`} className="am-pin" style={{ left: px(x), top: py(y) }}>
-                  <span style={{ display: 'block', width: 14, height: 14, borderRadius: '50%', border: '2px dashed rgba(50,40,20,.4)' }} />
-                </span>
-              ))}
-
+              {ms > 0 && <>
               {trailFinds.map((g, gi) => {
                 const [x, y] = legPoints[gi];
                 return (
                   <span
                     key={gi}
                     className="am-pin am-rise"
-                    style={{ left: px(x), top: py(y) }}
+                    style={{ left: px(x), top: `${moy + (y - SIGN_DY) * ms}px`, width: `${64 * ms}px`, height: `${66 * ms}px`, marginLeft: `${-32 * ms}px`, marginTop: `${-33 * ms}px`, transform: 'none' }}
                     title={`${g.name} · ${TIER_META[g.tier].label}`}
                     role="button"
                     tabIndex={0}
@@ -933,13 +785,6 @@ export default function AdventureMapHome({
                   </span>
                 );
               })}
-
-              {nextSlug && nextPt && (
-                <span className="am-next" style={{ left: px(nextPt[0]), top: py(nextPt[1]) }}>
-                  <span className="am-next-glow" />
-                  <span className="am-next-dot" />
-                </span>
-              )}
 
               <span className="am-pin am-pin-me" style={{ left: px(tokenPt[0]), top: py(tokenPt[1]) }}>
                 <span className="am-here am-glass">You are here</span>
@@ -977,6 +822,7 @@ export default function AdventureMapHome({
                   <button className="am-token am-token-build" onClick={() => openBuilder(cid, i, label)} aria-label={`Build ${label}'s explorer`} style={{ fontSize: 11, fontWeight: 700, color: 'var(--am-flag)', padding: 8, textAlign: 'center' }}>Build {label}</button>
                 )}
               </span>
+              </>}
 
             </div>
           </div>
