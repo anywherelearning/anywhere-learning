@@ -11,6 +11,8 @@
  * Decorations automatically keep clear of the trail, water and landmarks.
  */
 
+import { softenSVG, grainFilter } from './art-soften';
+
 export type MapLayout = 'wide' | 'tall';
 type Pt = [number, number];
 
@@ -304,5 +306,6 @@ export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: num
   if (r.snowfall) {
     for (let i = 0; i < 40; i++) o.push(`<circle cx="${(i * 211) % 1600}" cy="${(i * 97) % 700}" r="${2 + (i % 3)}" fill="#fff" opacity=".8"/>`);
   }
-  return o.join('');
+  // soft storybook finish + a faint paper grain over the whole scene
+  return `<defs>${grainFilter('mGrain', 0.05)}</defs><g filter="url(#mGrain)">${softenSVG(o.join(''))}</g>`;
 }

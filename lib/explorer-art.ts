@@ -12,6 +12,7 @@
  */
 
 import { gearStickerSVG } from './gear-art';
+import { softenSVG, brandColor, softEdge, grainFilter } from './art-soften';
 
 // ─── palette + helpers ───
 function hx(c: string): number[] {
@@ -45,7 +46,10 @@ const ell = (cx: number, cy: number, rx: number, ry: number, fill: string, w = S
 const line = (d: string, w: number, c = INK, extra = '') =>
   `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${extra}/>`;
 /** A thick limb: an outlined round-capped stroke. */
-const limb = (d: string, w: number, fill: string) => line(d, w + SW * 2, INK) + line(d, w, fill);
+const limb = (d: string, w: number, fill: string) => {
+  const f = brandColor(fill);
+  return `<path d="${d}" fill="none" stroke="${softEdge(f)}" stroke-width="${w + 2}" stroke-opacity=".5" stroke-linecap="round" stroke-linejoin="round"/>` + line(d, w, f);
+};
 
 // ─── worn gear ───
 export interface ExplorerOpts {
@@ -333,8 +337,8 @@ export function explorerSVG(o: ExplorerOpts): string {
 
   const viewBox = isHead ? '40 0 140 140' : '0 0 200 260';
   const par = isHead ? 'xMidYMid meet' : 'xMidYMax meet';
-  void o.uid;
-  return `<svg viewBox="${viewBox}" preserveAspectRatio="${par}" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="display:block;width:100%;height:100%">${out.join('')}</svg>`;
+  const gid = `eg${(o.uid || 'x').replace(/[^a-z0-9]/gi, '')}`;
+  return `<svg viewBox="${viewBox}" preserveAspectRatio="${par}" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="display:block;width:100%;height:100%"><defs>${grainFilter(gid)}</defs><g filter="url(#${gid})">${softenSVG(out.join(''))}</g></svg>`;
 }
 
 /** Gear icon for the map, backpack and pop-ups (sticker style, see gear-art). */

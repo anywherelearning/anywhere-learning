@@ -512,11 +512,17 @@ export default function AdventureMapHome({
   return (
     <main className="am-root">
       <style>{`
-        .am-root{background:linear-gradient(180deg,var(--am-bg1),var(--am-bg2));min-height:100vh;font-family:var(--font-body),sans-serif;color:var(--am-ink);padding:clamp(14px,2.5vw,30px)}
+        .am-root{background:linear-gradient(180deg,var(--am-bg1),var(--am-bg2));min-height:100vh;font-family:var(--font-body),sans-serif;color:var(--am-ink);padding:0}
         .am-plate{font-family:var(--font-plate),sans-serif}
         .am-mono{font-family:var(--font-catalog),monospace}
-        .am-wrap{max-width:1600px;margin:0 auto}
-        .am-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0 6px;margin-bottom:14px}
+        .am-wrap{max-width:none;margin:0}
+        .am-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0;margin:0}
+        .am-hud{position:absolute;top:clamp(14px,2.4vw,30px);left:clamp(14px,2.8vw,40px);z-index:5;max-width:min(560px,52%);display:flex;flex-direction:column;align-items:flex-start;gap:10px;pointer-events:none}
+        .am-hud>*{pointer-events:auto}
+        .am-hud .am-h1{text-shadow:0 1px 0 rgba(255,255,255,.6),0 0 24px rgba(247,242,232,.9)}
+        .am-hud .am-kicker{text-shadow:0 0 12px rgba(247,242,232,.95)}
+        .am-hud .am-quest,.am-hud .am-medals{margin:0}
+        .am-hud .am-tabs{position:static;max-width:none}
         .am-kicker{font-family:var(--font-catalog),monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--am-trail)}
         .am-h1{font-family:var(--font-plate),sans-serif;font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-0.02em;line-height:1.02;margin:6px 0 0}
         .am-link{font-family:var(--font-catalog),monospace;font-size:12px;color:var(--am-muted);text-decoration:none}
@@ -535,9 +541,9 @@ export default function AdventureMapHome({
         .am-medal:hover{transform:translateY(-2px) scale(1.06)}
         .am-modal-medals{margin-top:4px;padding-top:12px;border-top:1px solid rgba(50,40,20,.1)}
         .am-link:hover{color:var(--am-flag)}
-        .am-frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 40px 90px -46px rgba(50,48,42,.55),0 2px 0 rgba(255,255,255,.5) inset}
-        .am-map{position:relative;width:100%;height:clamp(460px,calc(100vh - 210px),900px)}
-        @media (max-width:760px){.am-map{height:60vh;min-height:430px}}
+        .am-frame{position:relative;overflow:hidden}
+        .am-map{position:relative;width:100%;height:max(520px,calc(100vh - 55px))}
+        @media (max-width:760px){.am-map{height:calc(100vw * 1.52)}.am-hud{max-width:calc(100% - 28px)}.am-hud .am-h1{font-size:30px}}
         .am-svg{position:absolute;inset:0;width:100%;height:100%}
         .am-grain{position:absolute;inset:0;width:100%;height:100%;opacity:.10;mix-blend-mode:soft-light;pointer-events:none}
         .am-vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 140px rgba(50,40,20,.16)}
@@ -717,55 +723,57 @@ export default function AdventureMapHome({
       `}</style>
 
       <div className="am-wrap">
-        <div className="am-head">
-          <div>
-            <div className="am-kicker">Leg {leg + 1} · {region.name} · {total} {total === 1 ? 'stop' : 'stops'} reached{sideBySide ? ' together' : ''}</div>
-            <h1 className="am-h1">{sideBySide ? `${familyName}'s trail` : `${label}'s trail`}</h1>
-          </div>
-        </div>
-
-        {/* This month's family challenge, rippling in from the This Month page:
-            an accepted one is the active quest; finished ones become keepsake medals. */}
-        {quest && (
-          <div className="am-quest am-rise">
-            <span className="am-quest-flag">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 22V4M4 4h12l-2 4 2 4H4" /></svg>
-            </span>
-            <span style={{ minWidth: 0, flex: 1 }}>
-              <span className="am-quest-kicker">{quest.month} · Family quest</span>
-              <span className="am-quest-title">{quest.title}</span>
-            </span>
-            <span className="am-quest-actions">
-              <button
-                className="am-quest-done"
-                onClick={() => { writeChallenge(`${quest.month}:${quest.title}`, { ...quest, status: 'done', at: new Date().toISOString() }); setQuest(null); setMedals(earnedMedals()); }}
-              >✓ Done</button>
-              <button
-                className="am-quest-cancel"
-                onClick={() => { clearChallenge(`${quest.month}:${quest.title}`); setQuest(null); }}
-                aria-label="Cancel this challenge"
-              >Cancel</button>
-            </span>
-          </div>
-        )}
-        {medals.length > 0 && (
-          <div className="am-medals am-rise">
-            <span className="am-medals-label">Monthly challenges</span>
-            {medals.map((m) => <MonthMedal key={`${m.month}-${m.title}`} entry={m} onOpen={setMedalDetail} />)}
-          </div>
-        )}
-
         <div className="am-frame">
           <div className="am-map" ref={setMapEl} style={{ ...(region.vars as React.CSSProperties), ['--ms' as string]: ms || 1 }}>
             <svg className="am-svg" viewBox={`0 0 ${VW} ${VH}`} preserveAspectRatio="xMidYMax slice" aria-hidden="true" dangerouslySetInnerHTML={{ __html: mapSceneSVG(leg, layout, k) }} />
             <div className="am-vignette" />
 
             <div className="am-chrome">
-              <div className="am-tabs">
+              {/* Everything that used to sit above the map now floats on its sky. */}
+              <div className="am-hud">
+              <div className="am-head">
+                <div>
+                  <div className="am-kicker">Leg {leg + 1} · {region.name} · {total} {total === 1 ? 'stop' : 'stops'} reached{sideBySide ? ' together' : ''}</div>
+                  <h1 className="am-h1">{sideBySide ? `${familyName}'s trail` : `${label}'s trail`}</h1>
+                </div>
+              </div>
+
+              {/* This month's family challenge, rippling in from the This Month page:
+                  an accepted one is the active quest; finished ones become keepsake medals. */}
+              {quest && (
+                <div className="am-quest am-rise">
+                  <span className="am-quest-flag">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 22V4M4 4h12l-2 4 2 4H4" /></svg>
+                  </span>
+                  <span style={{ minWidth: 0, flex: 1 }}>
+                    <span className="am-quest-kicker">{quest.month} · Family quest</span>
+                    <span className="am-quest-title">{quest.title}</span>
+                  </span>
+                  <span className="am-quest-actions">
+                    <button
+                      className="am-quest-done"
+                      onClick={() => { writeChallenge(`${quest.month}:${quest.title}`, { ...quest, status: 'done', at: new Date().toISOString() }); setQuest(null); setMedals(earnedMedals()); }}
+                    >✓ Done</button>
+                    <button
+                      className="am-quest-cancel"
+                      onClick={() => { clearChallenge(`${quest.month}:${quest.title}`); setQuest(null); }}
+                      aria-label="Cancel this challenge"
+                    >Cancel</button>
+                  </span>
+                </div>
+              )}
+              {medals.length > 0 && (
+                <div className="am-medals am-rise">
+                  <span className="am-medals-label">Monthly challenges</span>
+                  {medals.map((m) => <MonthMedal key={`${m.month}-${m.title}`} entry={m} onOpen={setMedalDetail} />)}
+                </div>
+              )}
+                <div className="am-tabs">
                 {children.map((kd, ki) => (
                   <button key={kd.id ?? ki} className="am-tab" data-on={ki === i} aria-pressed={ki === i} onClick={() => setSel(ki)}>{childLabel(kd, ki)}</button>
                 ))}
                 <button className="am-tab" onClick={() => setEditKids(true)} style={{ borderStyle: 'dashed' }}>+ explorer</button>
+                </div>
               </div>
 
               {ms > 0 && <>

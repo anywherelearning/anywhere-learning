@@ -9,6 +9,7 @@
  */
 
 import { gearById, type GearTier } from './gear';
+import { softenSVG } from './art-soften';
 
 const K = '#3b3226';
 const W = 2.6;
@@ -115,9 +116,9 @@ const TIER_BG: Record<GearTier, [string, string]> = {
 
 function badge(tier: GearTier): string {
   const [bg, ring] = TIER_BG[tier];
-  if (tier === 'find') return `<circle cx="60" cy="62" r="52" fill="#fff"/><circle cx="60" cy="60" r="44" fill="${bg}" stroke="${ring}" stroke-width="5"/>`;
-  if (tier === 'everyday') return `<rect x="8" y="10" width="104" height="104" rx="30" fill="#fff"/><rect x="16" y="16" width="88" height="88" rx="24" fill="${bg}" stroke="${ring}" stroke-width="5"/>`;
-  return `<path d="M60,4 L110,20 L108,64 Q104,100 60,118 Q16,100 12,64 L10,20 Z" fill="#fff" stroke-linejoin="round"/><path d="M60,12 L102,26 L100,64 Q96,94 60,110 Q24,94 20,64 L18,26 Z" fill="${bg}" stroke="${ring}" stroke-width="5" stroke-linejoin="round"/>`;
+  if (tier === 'find') return `<circle cx="60" cy="62" r="52" fill="#fff"/><circle cx="60" cy="60" r="44" fill="${bg}" stroke="${ring}" stroke-width="3"/>`;
+  if (tier === 'everyday') return `<rect x="8" y="10" width="104" height="104" rx="30" fill="#fff"/><rect x="16" y="16" width="88" height="88" rx="24" fill="${bg}" stroke="${ring}" stroke-width="3"/>`;
+  return `<path d="M60,4 L110,20 L108,64 Q104,100 60,118 Q16,100 12,64 L10,20 Z" fill="#fff" stroke-linejoin="round"/><path d="M60,12 L102,26 L100,64 Q96,94 60,110 Q24,94 20,64 L18,26 Z" fill="${bg}" stroke="${ring}" stroke-width="3" stroke-linejoin="round"/>`;
 }
 
 /** A gear sticker as an <svg>. `muted` = not collected yet (greyed). */
@@ -126,7 +127,7 @@ export function gearStickerSVG(gearId: string, muted = false): string {
   const tier: GearTier = g?.tier ?? (gearId.split(':')[0] as GearTier) ?? 'find';
   const art = (g && ART[g.name]) || C(0, 0, 18, '#ddd');
   const style = muted ? 'display:block;width:100%;height:100%;filter:grayscale(1);opacity:.4' : 'display:block;width:100%;height:100%';
-  return `<svg viewBox="0 0 120 124" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="${style}"><g style="filter:drop-shadow(0 3px 3px rgba(40,30,15,.25))">${badge(tier)}</g><g transform="translate(60 61) scale(.92)">${art}</g></svg>`;
+  return `<svg viewBox="0 0 120 124" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="${style}"><g style="filter:drop-shadow(0 3px 4px rgba(40,30,15,.18))">${softenSVG(badge(tier))}</g><g transform="translate(60 61) scale(.92)">${softenSVG(art)}</g></svg>`;
 }
 
 /** Names that have art (for QA). */
