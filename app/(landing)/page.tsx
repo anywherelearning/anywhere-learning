@@ -152,11 +152,9 @@ export default async function HomePage() {
               the actual product world behind the card rather than a stock photo.
               Section-level (not grid-cell) so there's no seam where the row ends.
 
-              app-trail.svg is generated from the real scene in
-              components/account/AdventureMapHome.tsx (Highland Peaks region:
-              same geometry, palette and TREES coordinates), minus the chrome and
-              the activity card. It is a copy, not a live import, so if that
-              scene changes the SVG has to be regenerated to match. */}
+              app-trail.svg is generated from the real member art (lib/map-art,
+              explorer-art, gear-art) by scripts/build-hero-trail.ts. It is a
+              copy, so rerun that script whenever the member art changes. */}
           {/* Mobile: a band across the bottom, behind the card, where the hero
               copy has already ended. A fixed 340px keeps the crop close to the
               illustration's own 8:5 ratio; stretching it full-height zoomed a

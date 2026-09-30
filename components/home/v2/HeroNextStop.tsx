@@ -45,10 +45,11 @@ export default function HeroNextStop() {
   const a = SHOWCASE_ACTIVITIES[act];
   const titleRef = useRef<HTMLHeadingElement>(null);
   const blurbRef = useRef<HTMLParagraphElement>(null);
+  const catRef = useRef<HTMLParagraphElement>(null);
   // One line each for the title and the blurb, whatever the activity, so the
   // card never changes size (a longer one just sets a touch smaller).
   useLayoutEffect(() => {
-    const fit = () => { fitLine(titleRef.current, 16); fitLine(blurbRef.current, 13); };
+    const fit = () => { fitLine(titleRef.current, 16); fitLine(blurbRef.current, 13); fitLine(catRef.current, 9); };
     fit();
     window.addEventListener('resize', fit);
     return () => window.removeEventListener('resize', fit);
@@ -107,7 +108,8 @@ export default function HeroNextStop() {
           </h2>
 
           <p
-            className="mb-2.5 truncate text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
+            ref={catRef}
+            className="mb-2.5 overflow-hidden whitespace-nowrap text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
           >
             {a.category} &middot; {a.time}
           </p>
