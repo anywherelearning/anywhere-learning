@@ -62,14 +62,6 @@ const NAV_ITEMS_AFTER = [
   { href: '/about', label: 'About' },
 ];
 
-// Members see their own world instead of the marketing nav (no Membership
-// page, no marketing home, Library once). Exact-match active state.
-const MEMBER_NAV_ITEMS = [
-  { href: '/account/home', label: 'Home' },
-  { href: '/account', label: 'Library' },
-  { href: '/account/this-month', label: 'This Month' },
-  { href: '/account/record', label: 'Record' },
-];
 
 type ResourceLink = { href: string; label: string; desc: string };
 type ResourceGroup = { label: string; desc: string; children: ResourceLink[] };
@@ -203,7 +195,10 @@ export default function SiteHeader() {
   // Auth state is pushed up from <ClerkAuthBridge /> below, which only mounts
   // when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is set.
 
-  // The member nav is members-only (paid or trialing), and "member" has to mean
+  // Public pages keep the marketing nav for everyone, so the site looks the
+  // same signed in or out; members get a "My trail" button instead of the
+  // trial CTA (the member zone has its own nav, MemberNav).
+  // "Member" (paid or trialing) has to mean
   // the same thing here as it does inside /account. That answer lives in the
   // database, so we ask for it rather than reading Clerk's publicMetadata
   // mirror: the mirror only gets corrected by a Stripe webhook, so an account
@@ -234,26 +229,6 @@ export default function SiteHeader() {
             {/* Primary nav - desktop */}
             <nav aria-label="Primary" className="hidden lg:block">
               <ul className="flex items-center gap-8 list-none p-0 m-0">
-                {hasAccess ? (
-                  MEMBER_NAV_ITEMS.map((item) => {
-                    const active = pathname === item.href;
-                    return (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          aria-current={active ? 'page' : undefined}
-                          className={`relative inline-block font-[family-name:var(--font-catalog)] text-[12.5px] uppercase tracking-[0.08em] py-1.5 px-3 rounded-full transition-colors no-underline ${
-                            active
-                              ? 'text-forest-dark bg-[rgba(88,129,87,0.12)]'
-                              : 'text-gray-600 hover:text-forest-dark hover:bg-[rgba(88,129,87,0.06)]'
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    );
-                  })
-                ) : (
                   <>
                 {NAV_ITEMS_BEFORE.map((item) => {
                   const active = isActive(pathname, item.href);
@@ -377,7 +352,6 @@ export default function SiteHeader() {
                   );
                 })}
                   </>
-                )}
               </ul>
             </nav>
 
@@ -385,7 +359,15 @@ export default function SiteHeader() {
             <div className="flex items-center gap-3 lg:gap-4">
               {auth.isSignedIn ? (
                 <>
-                  {hasAccess ? null : (
+                  {hasAccess ? (
+                    <Link
+                      href="/account/home"
+                      className="hidden sm:inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[14.5px] px-4 py-2 rounded-full no-underline shadow-[0_8px_18px_-10px_rgba(58,90,64,0.5)] hover:bg-forest-dark hover:-translate-y-px transition-all"
+                    >
+                      My trail
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  ) : (
                     <>
                       <Link
                         href="/course?source=header"
@@ -440,7 +422,7 @@ export default function SiteHeader() {
                           )}
                         </div>
                         {hasAccess && (
-                          <AccountMenuItem href="/account/home">Go to Home</AccountMenuItem>
+                          <AccountMenuItem href="/account/home">My trail</AccountMenuItem>
                         )}
                         <AccountMenuItem href="/account/settings">Account settings</AccountMenuItem>
                         <AccountMenuItem href="/contact">Help &amp; support</AccountMenuItem>
@@ -540,19 +522,7 @@ export default function SiteHeader() {
             )}
 
             <ul className="list-none p-0 m-0 flex flex-col">
-              {hasAccess ? (
-                MEMBER_NAV_ITEMS.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="flex items-center py-4 border-b border-[#D8D4C5] font-display text-[24px] text-ink no-underline"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                <>
+              <>
                   {NAV_ITEMS_BEFORE.map((item) => (
                     <li key={item.href}>
                       <Link
@@ -575,7 +545,6 @@ export default function SiteHeader() {
                     </li>
                   ))}
                 </>
-              )}
             </ul>
 
             <div className="mt-8 flex flex-col gap-3.5 items-center">
@@ -586,7 +555,7 @@ export default function SiteHeader() {
                       href="/account/home"
                       className="w-full max-w-[380px] inline-flex items-center justify-center gap-2 bg-forest text-cream font-body font-semibold text-[15px] py-3.5 px-5 rounded-xl no-underline hover:bg-forest-dark transition-all"
                     >
-                      Go to Home &rarr;
+                      My trail &rarr;
                     </Link>
                   ) : (
                     <>
