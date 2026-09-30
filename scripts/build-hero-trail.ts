@@ -2,6 +2,8 @@
  * Regenerates public/product-shots/app-trail.svg, the homepage hero backdrop:
  * the real member trail map (Forest Valley, soft storybook art) with two
  * explorers part-way along and the gear they've earned on the signposts.
+ * Also writes app-land.svg (the scenery alone, mirrored) for the hero's
+ * left side on wide screens.
  * Run after changing lib/map-art, lib/explorer-art or lib/gear-art:
  *   npx tsx scripts/build-hero-trail.ts
  */
@@ -26,3 +28,9 @@ const elena = nest(explorerSVG({ base: 'girl', skin: '#f1c9a5', hair: '#3b2a1c',
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice">${mapSceneSVG(0, 'wide', reached)}${signs}${liam}${elena}</svg>`;
 writeFileSync('public/product-shots/app-trail.svg', svg);
 console.log('wrote public/product-shots/app-trail.svg', (svg.length / 1024).toFixed(0) + 'KB');
+
+// The land alone (no trail, water or signposts), mirrored, for the left side
+// of the hero on wide screens so the valley wraps around the title.
+const land = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice"><g transform="translate(1600 0) scale(-1 1)">${mapSceneSVG(0, 'wide', reached, true)}</g></svg>`;
+writeFileSync('public/product-shots/app-land.svg', land);
+console.log('wrote public/product-shots/app-land.svg', (land.length / 1024).toFixed(0) + 'KB');

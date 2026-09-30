@@ -180,8 +180,22 @@ export default async function HomePage() {
             }}
             aria-hidden="true"
           />
+          {/* Laptop and up: the land alone (no trail), mirrored,
+              fills the left side so the valley wraps around the title instead
+              of leaving a plain cream strip. A soft cream glow keeps the text
+              readable; the meadow still shows underneath it. Built by
+              scripts/build-hero-trail.ts. */}
+          <style>{`
+            @media (min-width:1024px){
+              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(50vw + 60px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.8;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%)}
+              .hero-map{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+              .hero-veil{background:rgba(250,249,246,.14)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+              .hero-glow{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 620px 440px at calc(max(50vw - 640px, 0px) + 364px) 44%,#faf9f6 0%,rgba(250,249,246,.96) 50%,rgba(250,249,246,.6) 75%,rgba(250,249,246,0) 100%),rgba(250,249,246,.35)}
+            }
+          `}</style>
+          <div className="hero-land hidden" aria-hidden="true" />
           <div
-            className="absolute inset-y-0 right-0 z-0 hidden w-[56%] bg-[#e8eee4] bg-cover bg-[left_center] opacity-[0.85] lg:block"
+            className="hero-map absolute inset-y-0 right-0 z-0 hidden w-[56%] bg-[#e8eee4] bg-cover bg-[left_center] opacity-[0.85] lg:block"
             style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
             aria-hidden="true"
           />
@@ -194,13 +208,14 @@ export default async function HomePage() {
               vertical line down the lower half. Keeping the ramp uniform costs
               some contrast on the explorers and is the right trade. */}
           <div
-            className="absolute inset-y-0 right-0 z-[1] hidden w-[56%] lg:block"
+            className="hero-veil absolute inset-y-0 right-0 z-[1] hidden w-[56%] lg:block"
             style={{
               background:
                 'linear-gradient(90deg, #faf9f6 0%, rgba(250,249,246,0.9) 4%, rgba(250,249,246,0.62) 11%, rgba(250,249,246,0.42) 19%, rgba(250,249,246,0.28) 30%, rgba(250,249,246,0.2) 45%, rgba(250,249,246,0.16) 70%, rgba(250,249,246,0.14) 100%)',
             }}
             aria-hidden="true"
           />
+          <div className="hero-glow hidden" aria-hidden="true" />
           <div id="hero-grid" className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-16 lg:pt-4">
             <div className="relative z-[2] max-w-[620px] xl:max-w-[680px]">
               <HeroSaleBadge />

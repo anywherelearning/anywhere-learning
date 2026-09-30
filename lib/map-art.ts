@@ -227,7 +227,9 @@ function decorAt(kind: RegionArt['decor'], x: number, y: number, i: number): str
  * The scene for one leg, as SVG inner markup for a 0 0 1600 1000 viewBox.
  * `reached` = stops reached on this leg (the explorer stands on trail[reached]).
  */
-export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: number): string {
+/** `scenery`: just the land (sky, hills, meadow, trees), no sun, water,
+ * landmark or trail. Used for the homepage hero's left-side backdrop. */
+export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: number, scenery = false): string {
   const r = REGION_ART[regionIndex % REGION_ART.length];
   const pts = TRAIL[layout];
   const dest = pts[pts.length - 1];
@@ -244,7 +246,7 @@ export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: num
 
   // sky, sun, clouds, birds
   o.push(`<rect width="${VW}" height="${VH}" fill="url(#mSky)"/>`);
-  o.push(`<circle cx="990" cy="230" r="190" fill="url(#mSun)"/><circle cx="990" cy="230" r="58" fill="${r.sun[0]}"/>`);
+  if (!scenery) o.push(`<circle cx="990" cy="230" r="190" fill="url(#mSun)"/><circle cx="990" cy="230" r="58" fill="${r.sun[0]}"/>`);
   const cloud = (x: number, y: number, s: number, op = 0.9) => `<g transform="translate(${x} ${y}) scale(${s})" opacity="${op}" fill="#fff"><ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="-28" cy="-14" rx="34" ry="26"/><ellipse cx="18" cy="-22" rx="40" ry="32"/><ellipse cx="52" cy="-6" rx="26" ry="18"/></g>`;
   [[330, 250, 1.1, 0.9], [640, 170, 0.8, 0.8], [1380, 330, 0.75, 0.75], [160, 380, 0.6, 0.7]].slice(0, r.clouds).forEach(([x, y, s, op]) => o.push(cloud(x, y, s, op)));
   if (r.birds === 'birds') o.push(`<g fill="none" stroke="#5a5a52" stroke-width="3" stroke-linecap="round" opacity=".5"><path d="M760,300 q10,-10 20,0 q10,-10 20,0"/><path d="M820,330 q8,-8 16,0 q8,-8 16,0"/><path d="M720,340 q7,-7 14,0 q7,-7 14,0"/></g>`);
@@ -264,12 +266,14 @@ export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: num
   o.push(`<path d="M0,700 Q360,646 760,690 T1600,662 L1600,1000 L0,1000 Z" fill="url(#mMeadow)"/>`);
 
   // water + landmark
-  o.push(water(r, layout));
-  o.push(landmark(r.landmark));
+  if (!scenery) {
+    o.push(water(r, layout));
+    o.push(landmark(r.landmark));
+  }
 
   // decorations, kept clear of the trail, water and landmarks
   const nearWater = (p: Pt) => r.water !== 'oasis' && (distPoly(p, RIVER) < 60 || ((p[0] - LAKE.cx) / (LAKE.rx + 40)) ** 2 + ((p[1] - LAKE.cy) / (LAKE.ry + 50)) ** 2 < 1);
-  const clear = (p: Pt, pad: number) => distPoly(p, pts) > pad && Math.hypot(p[0] - dest[0], p[1] - dest[1]) > 130 && Math.hypot(p[0] - LANDMARK[0], p[1] - LANDMARK[1]) > 120 && !nearWater(p);
+  const clear = (p: Pt, pad: number) => scenery || distPoly(p, pts) > pad && Math.hypot(p[0] - dest[0], p[1] - dest[1]) > 130 && Math.hypot(p[0] - LANDMARK[0], p[1] - LANDMARK[1]) > 120 && !nearWater(p);
   const TREE_SPOTS: [number, number, number][] = [
     [560, 700, 0.85], [360, 720, 0.7], [1000, 700, 0.8], [1240, 690, 0.9], [1420, 700, 1], [1540, 740, 1.1],
     [40, 880, 1.2], [230, 830, 0.95], [420, 1000, 1.1], [620, 1010, 1.05], [960, 1000, 1.15], [1180, 990, 1.1],
@@ -282,6 +286,9 @@ export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: num
     const y = 740 + ((i * 53) % 250);
     if (clear([x, y], 34)) o.push(decorAt(r.decor, x, y, i));
   }
+
+  const finish = (body: string) => `<defs>${grainFilter('mGrain', 0.05)}</defs><g filter="url(#mGrain)">${softenSVG(body)}</g>`;
+  if (scenery) return finish(o.join(''));
 
   // the trail: a dirt path; walked part solid, the rest dotted
   const all = smoothPath(pts);
@@ -307,5 +314,5 @@ export function mapSceneSVG(regionIndex: number, layout: MapLayout, reached: num
     for (let i = 0; i < 40; i++) o.push(`<circle cx="${(i * 211) % 1600}" cy="${(i * 97) % 700}" r="${2 + (i % 3)}" fill="#fff" opacity=".8"/>`);
   }
   // soft storybook finish + a faint paper grain over the whole scene
-  return `<defs>${grainFilter('mGrain', 0.05)}</defs><g filter="url(#mGrain)">${softenSVG(o.join(''))}</g>`;
+  return finish(o.join(''));
 }
