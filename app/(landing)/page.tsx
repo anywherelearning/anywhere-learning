@@ -200,13 +200,13 @@ export default async function HomePage() {
             aria-hidden="true"
           />
           <div className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-20">
-            <div className="relative z-[2] max-w-[620px]">
+            <div className="relative z-[2] max-w-[620px] xl:max-w-[680px]">
               <HeroSaleBadge />
               <ChallengeHeroSticker />
               <div data-reveal>
                 <Eyebrow><span>From a teacher of 15 years &middot; <span className="whitespace-nowrap">Ages 6&ndash;14</span></span></Eyebrow>
               </div>
-              <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
+              <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.5rem,5.6vw,5rem)] leading-[1.02] tracking-tight text-balance">
                 Real learning,{' '}
                 <span className="italic text-forest">hiding in real life.</span>
               </h1>
