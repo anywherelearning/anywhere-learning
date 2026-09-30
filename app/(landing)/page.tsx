@@ -187,7 +187,7 @@ export default async function HomePage() {
               scripts/build-hero-trail.ts. */}
           <style>{`
             @media (min-width:1024px){
-              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(50vw + 60px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%)}
+              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(56vw + 220px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.85;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 320px),transparent 100%)}
               .hero-map{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
               .hero-veil{background:rgba(250,249,246,.14)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
               .hero-glow{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 470px 360px at calc(max(50vw - 640px, 0px) + 330px) 46%,rgba(250,249,246,.97) 0%,rgba(250,249,246,.9) 50%,rgba(250,249,246,.45) 78%,rgba(250,249,246,0) 100%)}
