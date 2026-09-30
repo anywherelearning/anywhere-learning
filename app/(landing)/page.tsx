@@ -187,10 +187,10 @@ export default async function HomePage() {
               scripts/build-hero-trail.ts. */}
           <style>{`
             @media (min-width:1024px){
-              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(50vw + 60px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.8;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%)}
-              .hero-map{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
-              .hero-veil{background:rgba(250,249,246,.14)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
-              .hero-glow{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 620px 440px at calc(max(50vw - 640px, 0px) + 364px) 44%,#faf9f6 0%,rgba(250,249,246,.96) 50%,rgba(250,249,246,.6) 75%,rgba(250,249,246,0) 100%),rgba(250,249,246,.35)}
+              .hero-land{display:block;position:absolute;left:0;top:0;bottom:0;z-index:0;width:calc(50vw + 60px);background:url('/product-shots/app-land.svg') right bottom/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%);mask-image:linear-gradient(90deg,#000 calc(100% - 420px),transparent 100%)}
+              .hero-map{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
+              .hero-veil{background:rgba(250,249,246,.14)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
+              .hero-glow{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 470px 360px at calc(max(50vw - 640px, 0px) + 330px) 46%,rgba(250,249,246,.97) 0%,rgba(250,249,246,.9) 50%,rgba(250,249,246,.45) 78%,rgba(250,249,246,0) 100%)}
             }
           `}</style>
           <div className="hero-land hidden" aria-hidden="true" />
