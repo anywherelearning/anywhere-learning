@@ -248,24 +248,29 @@ export default async function HomePage() {
                   change to the card's height would close. */}
               {/* A real moment, taped over the map: the idea with a face on it.
                   Phones: above the card. Desktop: tucked left of the card. */}
-              <figure className="relative z-[3] mx-auto mb-8 w-[190px] -rotate-[5deg] bg-white p-2 pb-2.5 shadow-[0_22px_40px_-18px_rgba(45,58,46,0.6)] lg:absolute lg:left-[2%] lg:top-[10%] lg:mb-0 lg:w-[210px]">
-                <Tape className="left-1/2 -translate-x-1/2 -rotate-3" />
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src="/images/home/grinding-by-hand.jpg"
-                    alt="Amelie's son grinding grain with a giant wooden mortar and pestle"
-                    fill
-                    sizes="210px"
-                    priority
-                    className="object-cover object-[center_30%]"
-                  />
+              {/* The photo is pinned to the card (tucked just behind its top-left
+                  corner) so the two never collide at any screen width.
+                  Phones: the photo sits above the card. */}
+              <div className="flex flex-col items-center lg:absolute lg:right-0 lg:top-1/2 lg:block lg:translate-y-[calc(-50%-12px)]">
+                <figure className="relative mx-auto mb-8 w-[190px] -rotate-[5deg] bg-white p-2 pb-2.5 shadow-[0_22px_40px_-18px_rgba(45,58,46,0.6)] lg:absolute lg:right-[calc(100%-8px)] lg:top-[-26px] lg:mb-0 lg:w-[150px] xl:w-[200px]">
+                  <Tape className="left-1/2 -translate-x-1/2 -rotate-3" />
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      src="/images/home/grinding-by-hand.jpg"
+                      alt="Amelie's son grinding grain with a giant wooden mortar and pestle"
+                      fill
+                      sizes="210px"
+                      priority
+                      className="object-cover object-[center_30%]"
+                    />
+                  </div>
+                  <figcaption className="mt-1.5 text-center font-display text-[15px] italic text-forest-dark">
+                    Grinding it by hand
+                  </figcaption>
+                </figure>
+                <div className="relative z-[1]">
+                  <HeroNextStop />
                 </div>
-                <figcaption className="mt-1.5 text-center font-display text-[15px] italic text-forest-dark">
-                  Grinding it by hand
-                </figcaption>
-              </figure>
-              <div className="relative z-[4] flex justify-center lg:absolute lg:right-0 lg:top-1/2 lg:translate-y-[calc(-50%-12px)]">
-                <HeroNextStop />
               </div>
             </div>
           </div>

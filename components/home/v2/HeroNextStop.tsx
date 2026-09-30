@@ -63,7 +63,7 @@ export default function HeroNextStop() {
   }
 
   return (
-    <div className="w-full max-w-[420px]">
+    <div className="w-full max-w-[420px] lg:max-w-[360px] xl:max-w-[420px]">
       <div className="relative motion-safe:animate-[alGentleFloat_6s_ease-in-out_infinite]">
         {/* Says what this card is before anyone clicks it */}
         <span className="absolute -top-3.5 left-6 z-10 -rotate-2 bg-[#FBF3DC] px-3 py-1 text-[12.5px] font-semibold text-forest-dark shadow-[0_6px_14px_-8px_rgba(45,58,46,0.6)]">
@@ -79,13 +79,13 @@ export default function HeroNextStop() {
           </div>
 
           <h2
-            className="mb-3 line-clamp-2 min-h-[2.24em] text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
+            className="mb-3 line-clamp-2 min-h-[2.24em] text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px] lg:text-[26px] xl:text-[30px]"
           >
             {a.title}
           </h2>
 
           <p
-            className="mb-2.5 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
+            className="mb-2.5 truncate text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark lg:tracking-[0.1em] xl:tracking-[0.14em]"
           >
             {a.category} &middot; {a.time}
           </p>
