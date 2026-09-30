@@ -161,22 +161,21 @@ export default async function HomePage() {
               app-trail.svg is generated from the real member art (lib/map-art,
               explorer-art, gear-art) by scripts/build-hero-trail.ts. It is a
               copy, so rerun that script whenever the member art changes. */}
-          {/* Mobile: a band across the bottom, behind the card, where the hero
-              copy has already ended. A fixed 340px keeps the crop close to the
-              illustration's own 8:5 ratio; stretching it full-height zoomed a
-              1600-wide scene into an unreadable slice on a 375px screen. The
-              veil never drops below 0.42 here because the caption sits on top
-              of it. */}
+          {/* Phones and tablets: the valley rises from just under the buttons,
+              behind the photo and the card, so the hero isn't a wall of cream.
+              Anchored to the bottom so the explorers stand below the card
+              (the extra bottom padding makes room for them). A short fade at
+              the top lets the text area stay clean. */}
           <div
-            className="absolute inset-x-0 bottom-0 z-0 h-[340px] bg-cover bg-center opacity-[0.8] lg:hidden"
+            className="absolute inset-x-0 bottom-0 top-[560px] z-0 bg-cover bg-[31%_bottom] lg:hidden"
             style={{ backgroundImage: "url('/product-shots/app-trail.svg')" }}
             aria-hidden="true"
           />
           <div
-            className="absolute inset-x-0 bottom-0 z-[1] h-[340px] lg:hidden"
+            className="absolute inset-x-0 bottom-0 top-[560px] z-[1] lg:hidden"
             style={{
               background:
-                'linear-gradient(180deg, #faf9f6 0%, rgba(250,249,246,0.8) 22%, rgba(250,249,246,0.58) 48%, rgba(250,249,246,0.46) 75%, rgba(250,249,246,0.42) 100%)',
+                'linear-gradient(180deg, #faf9f6 0px, rgba(250,249,246,0.5) 70px, rgba(250,249,246,0.12) 200px, rgba(250,249,246,0.08) 100%)',
             }}
             aria-hidden="true"
           />
@@ -216,7 +215,7 @@ export default async function HomePage() {
             aria-hidden="true"
           />
           <div className="hero-glow hidden" aria-hidden="true" />
-          <div id="hero-grid" className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-16 lg:pt-4">
+          <div id="hero-grid" className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-[150px] pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-16 lg:pt-4">
             <div className="relative z-[2] max-w-[620px] xl:max-w-[680px]">
               <HeroSaleBadge />
               <ChallengeHeroSticker />
