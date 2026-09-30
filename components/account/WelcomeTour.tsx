@@ -15,97 +15,26 @@ const SEEN_KEY = 'al_tour_seen_v1';
 const VIDEO_SRC = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-v2.mp4';
 const VIDEO_POSTER = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-v2-poster.jpg';
 
-/** Icons (no emoji, per brand). Simple line marks that echo each card. */
-function MapIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" />
-      <path d="M9 4v14M15 6v14" />
-    </svg>
-  );
-}
-function FlagIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M5 21V4" />
-      <path d="M5 4h12l-2.2 4L17 12H5" />
-    </svg>
-  );
-}
-function MountainsIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 20 9 8l4 7 2.4-4L21 20Z" />
-    </svg>
-  );
-}
-function BookIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 6.5C10.4 5.5 7.8 5 4 5.6V19c3.8-.6 6.4-.1 8 .9M12 6.5C13.6 5.5 16.2 5 20 5.6V19c-3.8-.6-6.4-.1-8 .9M12 6.5V20" />
-    </svg>
-  );
-}
-function CalendarIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="16" rx="2" />
-      <path d="M3 9h18M8 3v4M16 3v4" />
-    </svg>
-  );
-}
-function ClipboardIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="5" y="4" width="14" height="17" rx="2" />
-      <path d="M9 4h6v3H9zM9 13l2 2 4-4" />
-    </svg>
-  );
-}
-
-const SLIDES = [
-  {
-    icon: <MapIcon />,
-    title: "This is your family's trail.",
-    body: 'Each child is an explorer who climbs the trail as you learn together. Every activity you finish earns a piece of gear and moves them to the next stop.',
-  },
-  {
-    icon: <FlagIcon />,
-    title: 'Your next stop, already picked.',
-    body: 'We choose the next activity for you. Open the guide, do it together, then tap "We reached it." Not feeling it? Swap for another or skip the whole area.',
-  },
-  {
-    icon: <MountainsIcon />,
-    title: 'The trail keeps growing.',
-    body: 'Fill every stop on a leg and the trail rolls on to a new region, from forest valleys to highland peaks, with more gear to collect the whole way.',
-  },
-  {
-    icon: <BookIcon />,
-    title: 'Every guide, in your Library.',
-    body: 'The full library is sorted by the real-world skills each activity builds. Browse it anytime and add any one straight onto your trail.',
-  },
-  {
-    icon: <CalendarIcon />,
-    title: 'Fresh picks in This Month.',
-    body: 'Each month we curate a skill to focus on, a handful of activities, book recommendations, and one simple family challenge to try together.',
-  },
-  {
-    icon: <ClipboardIcon />,
-    title: 'It all saves to your Record.',
-    body: "Everything you finish gathers into a portfolio you can filter by child and print anytime, great for records or just seeing how far you've come.",
-  },
+/** The six stops of the written walkthrough. Stills come from the tour video
+ * (public/images/tour); retake them when the member area changes. */
+const STEPS = [
+  { img: 'trail', kicker: 'Your trail', title: 'Each kid is an explorer.', body: "Your family's trail starts on Home. Every activity you finish together moves your explorers one stop along." },
+  { img: 'next-stop', kicker: 'Next stop', title: 'The next activity is already picked.', body: 'Matched to your kids and your time. Open the guide, do it together, then tap We did it! Not feeling it? Tap Different one or Skip this area.' },
+  { img: 'backpack', kicker: 'Gear', title: 'Every stop earns gear.', body: 'Tap an explorer to see their backpack. Each stop adds a new find, and a full leg rolls the trail on to a new region.' },
+  { img: 'library', kicker: 'Library', title: 'Every guide, sorted by skill.', body: 'Browse all 120+ by skill area or age. Open any guide, or tap Add to trail to make it an upcoming stop.' },
+  { img: 'this-month', kicker: 'This Month', title: 'Something fresh on the 1st.', body: 'A skill to focus on, a seasonal set, books to read together, and one family challenge.' },
+  { img: 'record', kicker: 'Record', title: 'It all lands in your Record.', body: 'Saved per child: days, hours, skill areas and photos of the work. Print it as a portfolio anytime.' },
 ];
 
 /**
  * First-run welcome. Opens on the video for a real member (autoOpen) and can
  * be reopened any time from the avatar menu via the `al:open-tour` event.
- * "Prefer to read?" flips to the six cards, which stay the source of truth
- * for the written explanation and are cheap to keep accurate.
+ * "Prefer to read?" flips to a one-page field guide: the six stops in one
+ * scroll, each with a still from the video, so readers can skim it all.
  */
 export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }) {
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState<'video' | 'cards'>('video');
-  const [i, setI] = useState(0);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -117,7 +46,6 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
       try {
         if (autoOpen && !localStorage.getItem(SEEN_KEY)) {
           setMode('video');
-          setI(0);
           setOpen(true);
         }
       } catch {
@@ -140,7 +68,6 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
 
     const onOpen = () => {
       setMode('video');
-      setI(0);
       setOpen(true);
     };
     window.addEventListener('al:open-tour', onOpen);
@@ -158,9 +85,6 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
     nextRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
-      if (mode !== 'cards') return;
-      if (e.key === 'ArrowRight' && i < SLIDES.length - 1) setI((n) => n + 1);
-      if (e.key === 'ArrowLeft' && i > 0) setI((n) => n - 1);
     };
     window.addEventListener('keydown', onKey);
     return () => {
@@ -168,7 +92,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
       window.removeEventListener('keydown', onKey);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, i, mode]);
+  }, [open, mode]);
 
   useEffect(() => {
     if (!open || mode !== 'video') return;
@@ -220,7 +144,7 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
             />
           </div>
           <div className="wt-actions">
-            <button className="wt-back" onClick={() => { setI(0); setMode('cards'); }}>
+            <button className="wt-back" onClick={() => setMode('cards')}>
               Prefer to read?
             </button>
             <button ref={nextRef} className="wt-next" onClick={close}>
@@ -233,37 +157,36 @@ export default function WelcomeTour({ autoOpen = false }: { autoOpen?: boolean }
     );
   }
 
-  const last = i >= SLIDES.length - 1;
-  const s = SLIDES[i];
-
   return (
     <div className="wt-scrim" role="dialog" aria-modal="true" aria-labelledby="wt-title" onClick={close}>
-      <div className="wt-card" onClick={(e) => e.stopPropagation()}>
+      <div className="wt-card wt-card-guide" onClick={(e) => e.stopPropagation()}>
         <button className="wt-skip" onClick={close}>
           Skip
         </button>
-        <div className="wt-icon">{s.icon}</div>
+        <div className="wt-kick">Field guide</div>
         <h2 id="wt-title" className="wt-title">
-          {s.title}
+          How it works, in six stops.
         </h2>
-        <p className="wt-body">{s.body}</p>
-        <div className="wt-dots" aria-hidden="true">
-          {SLIDES.map((_, k) => (
-            <span key={k} className={`wt-dot${k === i ? ' on' : ''}`} />
+        <ol className="wt-steps">
+          {STEPS.map((t, k) => (
+            <li key={t.img} className="wt-step">
+              <span className="wt-num" aria-hidden="true">{k + 1}</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="wt-shot" src={`/images/tour/${t.img}.webp`} alt="" loading="lazy" />
+              <div className="wt-text">
+                <div className="wt-kick wt-kick-sm">{t.kicker}</div>
+                <h3 className="wt-step-title">{t.title}</h3>
+                <p className="wt-body">{t.body}</p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
         <div className="wt-actions">
-          {i > 0 ? (
-            <button className="wt-back" onClick={() => setI(i - 1)}>
-              Back
-            </button>
-          ) : (
-            <button className="wt-back" onClick={() => setMode('video')}>
-              Watch instead
-            </button>
-          )}
-          <button ref={nextRef} className="wt-next" onClick={() => (last ? close() : setI(i + 1))}>
-            {last ? 'Start exploring' : 'Next'}
+          <button className="wt-back" onClick={() => setMode('video')}>
+            Watch instead
+          </button>
+          <button ref={nextRef} className="wt-next" onClick={close}>
+            Start exploring
           </button>
         </div>
       </div>
@@ -287,18 +210,29 @@ function TourStyles() {
         .wt-skip{position:absolute;top:14px;right:16px;background:none;border:none;
           font-size:13px;font-weight:600;color:#9a978c;cursor:pointer;padding:4px}
         .wt-skip:hover{color:#6f7468}
-        .wt-icon{width:56px;height:56px;margin:0 auto 16px;border-radius:16px;
-          display:grid;place-items:center;color:#3d5c3b;background:rgba(88,129,87,.13)}
-        .wt-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
-          font-size:clamp(26px,5.5vw,32px);line-height:1.08;color:#3d5c3b;margin:0 0 10px}
+        .wt-title{font-family:var(--font-plate),'DM Sans',sans-serif;font-weight:700;letter-spacing:-.01em;
+          font-size:clamp(23px,4.5vw,28px);line-height:1.1;color:#32302a;margin:0 0 10px}
+        .wt-kick{font-family:var(--font-catalog),monospace;font-size:11px;font-weight:500;
+          letter-spacing:.14em;text-transform:uppercase;color:#bf7c48;margin-bottom:6px}
+        .wt-kick-sm{font-size:10px;margin-bottom:3px}
+        .wt-card-guide{max-width:640px;text-align:left;padding:30px 30px 20px;
+          max-height:calc(100dvh - 40px);display:flex;flex-direction:column}
+        .wt-steps{list-style:none;margin:8px 0 0;padding:0 4px 0 0;overflow-y:auto;flex:1 1 auto;min-height:0;position:relative;
+          }
+        .wt-step{display:grid;grid-template-columns:38px 150px 1fr;gap:14px;align-items:start;padding:12px 0;position:relative}
+        .wt-step:not(:last-child)::before{content:'';position:absolute;left:17px;top:50px;bottom:-12px;border-left:3px dotted #d9b98f}
+        .wt-num{width:36px;height:36px;border-radius:99px;background:#fdfaf3;border:2.5px solid #bf7c48;
+          display:grid;place-items:center;font:700 15px var(--font-plate),sans-serif;color:#bf7c48;position:relative}
+        .wt-shot{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top left;
+          border-radius:10px;border:1px solid rgba(50,48,42,.1);background:#ebe4d5}
+        .wt-step-title{font:700 17px/1.2 var(--font-plate),sans-serif;color:#32302a;margin:0 0 4px}
+        .wt-card-guide .wt-body{font-size:14px;max-width:none;min-height:0;margin:0;color:#6b6152}
+        .wt-card-guide .wt-actions{margin-top:14px;padding-top:12px;border-top:1px solid rgba(50,48,42,.08)}
         .wt-sub{font-size:14.5px;color:#6f7468;margin:-4px 0 16px}
         .wt-frame{position:relative;width:100%;aspect-ratio:1600/692;min-height:160px;
           border-radius:14px;overflow:hidden;background:#1c2018;flex:0 0 auto}
         .wt-frame video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#1c2018}
         .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:342px;min-height:104px}
-        .wt-dots{display:flex;gap:7px;justify-content:center;margin:18px 0 20px}
-        .wt-dot{width:7px;height:7px;border-radius:50%;background:rgba(61,92,59,.22)}
-        .wt-dot.on{background:#588157}
         .wt-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
         .wt-card-video .wt-actions{margin-top:18px}
         .wt-back{background:none;border:none;font-size:14.5px;font-weight:600;color:#6f7468;
@@ -312,6 +246,12 @@ function TourStyles() {
         @media (max-width:520px){
           .wt-card-video{padding:26px 16px 16px}
           .wt-frame{border-radius:10px}
+          .wt-card-guide{padding:26px 18px 16px}
+          .wt-step{grid-template-columns:34px 1fr;gap:12px}
+          .wt-step .wt-shot{grid-column:2;grid-row:2}
+          .wt-step .wt-text{grid-column:2;grid-row:1}
+          .wt-num{grid-row:1 / span 2;width:32px;height:32px;font-size:14px}
+          .wt-step:not(:last-child)::before{left:15px;top:46px}
         }
     `}</style>
   );
