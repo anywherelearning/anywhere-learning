@@ -9,11 +9,11 @@ const SEEN_KEY = 'al_tour_seen_v1';
  * The "how it works" walkthrough video. Plays on a member's first sign-in;
  * the six cards below stay as the read-instead fallback and as the
  * "How it works" entry in the avatar menu. Hosted on Vercel Blob (compressed
- * 1280w H.264, ~2.5MB); re-upload to the same pathname to update it without
- * touching code. The Blob host is allowed under media-src in next.config.ts.
+ * 1600w H.264 with voiceover, ~5.5MB) under a versioned name: Blob URLs are
+ * cached for a year, so a new recording gets a new -vN filename here. The Blob host is allowed under media-src in next.config.ts.
  */
-const VIDEO_SRC = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour.mp4';
-const VIDEO_POSTER = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-poster.jpg';
+const VIDEO_SRC = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-v2.mp4';
+const VIDEO_POSTER = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/member-tour/member-tour-v2-poster.jpg';
 
 /** Icons (no emoji, per brand). Simple line marks that echo each card. */
 function MapIcon() {
@@ -292,7 +292,7 @@ function TourStyles() {
         .wt-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
           font-size:clamp(26px,5.5vw,32px);line-height:1.08;color:#3d5c3b;margin:0 0 10px}
         .wt-sub{font-size:14.5px;color:#6f7468;margin:-4px 0 16px}
-        .wt-frame{position:relative;width:100%;aspect-ratio:2142/950;min-height:160px;
+        .wt-frame{position:relative;width:100%;aspect-ratio:1600/692;min-height:160px;
           border-radius:14px;overflow:hidden;background:#1c2018;flex:0 0 auto}
         .wt-frame video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#1c2018}
         .wt-body{font-size:15px;line-height:1.55;color:#57604f;margin:0 auto;max-width:342px;min-height:104px}
