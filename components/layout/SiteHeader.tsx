@@ -227,7 +227,7 @@ export default function SiteHeader() {
             : 'border-b border-transparent'
         }`}
       >
-        <div className="mx-auto max-w-[1280px] px-6">
+        <div id="site-header-inner" className="mx-auto max-w-[1280px] px-6">
           <div className="flex items-center justify-between gap-6 py-4">
             <Logo />
 

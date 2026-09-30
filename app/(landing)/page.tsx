@@ -116,6 +116,8 @@ function CheckIcon() {
   );
 }
 
+const HERO_FIT = `(function(){var g=document.getElementById('hero-grid');if(!g)return;var st=document.createElement('style');document.head.appendChild(st);function f(){var w=document.documentElement.clientWidth,h=window.innerHeight;if(w<1280){st.textContent='';return;}var z=Math.max(1,Math.min(w/1280,(h-71)/640,2.4));st.textContent='#hero-grid{zoom:'+z.toFixed(3)+';max-width:'+Math.floor(w/z)+'px}#hero-grid h1{font-size:72px}#site-header-inner{max-width:none;padding-left:'+Math.round(64*z-40)+'px;padding-right:'+Math.round(64*z-40)+'px}';}f();window.addEventListener('resize',f);})();`;
+
 export default async function HomePage() {
   // Live founder state (DB-counted), so the founder framing and price close
   // themselves at the cap without a code change.
@@ -199,7 +201,7 @@ export default async function HomePage() {
             }}
             aria-hidden="true"
           />
-          <div className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-20">
+          <div id="hero-grid" className="relative z-[2] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-6 pb-14 pt-12 md:pt-16 lg:grid-cols-[1.02fr_1fr] lg:gap-0 lg:px-16 lg:pb-16 lg:pt-4">
             <div className="relative z-[2] max-w-[620px] xl:max-w-[680px]">
               <HeroSaleBadge />
               <ChallengeHeroSticker />
@@ -244,7 +246,7 @@ export default async function HomePage() {
             </div>
 
             {/* The playable next-stop card, floating over the photo wash. */}
-            <div className="relative lg:h-[640px]">
+            <div className="relative lg:h-[620px]">
               {/* A hair above dead centre. Centred, the card's bottom edge and
                   the lead explorer's head clear each other by 1px, which any
                   change to the card's height would close. */}
@@ -281,6 +283,14 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
+          {/* Wide screens: the hero is designed at 1280px. Past that, scale the
+              whole thing up (title, card, photo, buttons together) so it fills
+              the screen instead of floating in the middle with cream on both
+              sides. Height caps the scale so the card and buttons stay above
+              the fold; whatever width is left over widens the grid, so there
+              is never a side gap. The header widens with it so the logo
+              stays lined up with the title. Runs inline, before first paint. */}
+          <script dangerouslySetInnerHTML={{ __html: HERO_FIT }} />
         </section>
 
         {/* ════════ 02 MARQUEE ════════ */}
