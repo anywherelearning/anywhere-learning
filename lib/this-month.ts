@@ -2,9 +2,12 @@ import { getPlanActivities } from '@/lib/plan-activities';
 import { getPostBySlug } from '@/lib/blog';
 import type { MonthActivity, MonthSection, SectionExtras } from '@/components/account/ThisMonthView';
 
-// ─── Edit this block once a month. Everything below builds itself from it. ───
+// ─── Add each new month as its own block. Everything below builds itself. ───
+// The page switches on its own at midnight Pacific on the 1st: it shows the
+// block for the current month, or the newest one already started. So next
+// month can ship early and waits until its day.
 // `category` values must match a real activity category (lib/categories).
-export const THIS_MONTH = {
+const SEPTEMBER_2026 = {
   month: 'September',
   // The calendar in the hero is built from this, so it lands on the right weekdays.
   year: 2026,
@@ -95,6 +98,108 @@ export const THIS_MONTH = {
       "For the month, mornings belong to the kids. Waking up, breakfast, getting dressed, packing what they need, ready on time. Your job is the hard part: don't remind them. Expect a rough first week, keep a streak chart on the fridge, and watch what happens by week three. The point isn't a perfect morning. It's a kid who finds out they can run one without you.",
   },
 };
+
+const OCTOBER_2026 = {
+  month: 'October',
+  // The calendar in the hero is built from this, so it lands on the right weekdays.
+  year: 2026,
+  intro: 'A fresh focus, a seasonal set, and one family challenge. New every month.',
+  skill: {
+    // Six Critical Thinking picks (no overlap with any other month's set).
+    slugs: [
+      'secret-code-lab',         // make and crack real codes
+      'kitchen-science-lab',     // predict, test, change one thing, explain
+      'decomposition-detective', // a slow mystery in a jar: what breaks this down?
+      'camouflage-challenge',    // prove a rule of camouflage with a fair test
+      'probability-lab',         // test what's likely against what actually happens
+      'what-if-scenario-lab',    // think a problem through before it happens
+    ],
+    // Deep detective blue, distinct from the dusk plum of the seasonal set.
+    accent: '#3F5A8A',
+    accentDeep: '#263A5E',
+    eyebrow: 'Skill of the month',
+    title: 'The month of thinking like a detective',
+    blurb:
+      "October is for asking how we know what we know. This month kids crack codes, run real experiments, and solve slow mysteries, and every one of them runs on the same moves a detective uses: notice, guess, test, and change your mind when the evidence says so.",
+    extras: {
+      // 1 · Read this — an internal blog post. Its hero image is pulled in
+      // automatically from lib/blog.ts (keep the slug in sync).
+      read: { slug: 'critical-thinking-for-kids', title: 'Critical Thinking for Kids: How to Raise a Kid Who Thinks for Themselves' },
+      // 2 · Read together — a younger and an older pick. Cover images live in
+      // /public/books/; `link` points at the official author/publisher page.
+      books: [
+        { ages: 'Ages 8–11', title: 'Encyclopedia Brown, Boy Detective', author: 'Donald J. Sobol', cover: '/books/encyclopedia-brown-boy-detective.jpg', link: 'https://bookshop.org/book/9780142408889' },
+        { ages: 'Ages 10–14', title: 'The Westing Game', author: 'Ellen Raskin', cover: '/books/the-westing-game.jpg', link: 'https://bookshop.org/book/9780142401200' },
+      ],
+      // 3 · Extra — the flexible card. Swap it every month. Items with a `url`
+      // render as links; items without render as bullets. VERIFY links first.
+      extra: {
+        title: 'Set up a detective kit',
+        items: [
+          { label: 'A small notebook, a pencil, and a magnifying glass in a box by the door. Clues go in the notebook.' },
+          { label: 'Read one Encyclopedia Brown case out loud at dinner and stop before the answer. Everyone guesses first.' },
+          { label: 'When a kid asks you a question this month, answer with one of your own: "What do you think? How could we find out?"' },
+        ],
+      },
+      mindset: "The goal isn't a kid who always has the right answer. It's a kid who can tell a guess from a fact, and knows how to check. Every time they change their mind because of evidence, that's the skill working.",
+    },
+  },
+  seasonal: {
+    // Spooky season, all from the reserve pool so nothing overlaps another
+    // month or the detective set above. Kept to the four that genuinely fit;
+    // no padding to six.
+    slugs: [
+      'body-owners-manual', // what a scare does to your heart rate, measured
+      'creature-habitat',   // invent a creature of the night and keep it alive
+      'mini-movie',         // a spooky radio drama, scripted and recorded
+      'party-planner-math', // a Halloween or harvest party on a real budget
+    ],
+    // Dusk plum, distinct from the detective blue above.
+    accent: '#7A4E7E',
+    accentDeep: '#4A2B4D',
+    eyebrow: 'Seasonal pick',
+    title: 'Spooky season, for real',
+    blurb:
+      "Everyone's thinking about things that go bump in the night, so use it. Measure what a jump-scare does to your heart, invent a creature built for the dark, record a spooky radio drama, and plan the party on a real budget. However your family does October, there's something here.",
+    extras: {
+      read: { slug: 'backyard-science-experiments', title: 'Backyard Science Experiments: 15 No-Prep Ideas Kids Can Do Today' },
+      books: [
+        { ages: 'Ages 5–8', title: 'Stellaluna', author: 'Janell Cannon', cover: '/books/stellaluna.jpg', link: 'https://bookshop.org/book/9780358086994' },
+        { ages: 'Ages 8–12', title: 'In the Dark: The Science of What Happens at Night', author: 'Lisa Deresti Betik', cover: '/books/in-the-dark.jpg', link: 'https://bookshop.org/book/9781525301094' },
+      ],
+      extra: {
+        title: 'After dark',
+        items: [
+          { label: 'Take a night walk with flashlights. Stop, switch them off for one minute, and count every sound you hear.' },
+          { label: 'Carve the pumpkin, then keep one piece in a jar by the window and watch what happens to it all month.' },
+          { label: 'Tell ghost stories by candlelight, then ask: what made that one scary? The answer is usually the writing.' },
+        ],
+      },
+      mindset: "Kids love being a little bit scared, and that curiosity is worth using. Why do cats' eyes glow? Why does your heart pound at a scary part? A spooky question is still a real question.",
+    },
+  },
+  challenge: {
+    title: 'Says who?',
+    // One line for the calendar card; the full text sits under "How it works".
+    short: 'Anyone can ask "Says who?" about any claim. Then you check.',
+    text:
+      "For the month, anyone in the family can answer any claim with two words: \"Says who?\" A fact at dinner, a headline, an ad, something a friend said, something you said. Then you find out together: where did it come from, and how would we check? Keep a tally on the fridge of claims that held up and claims that didn't. The point isn't catching people out. It's a kid who stops taking things on trust, including from you.",
+  },
+};
+
+const MONTHS = [SEPTEMBER_2026, OCTOBER_2026];
+const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** The month to show right now, by the calendar in Nelson, BC (Pacific). */
+export function getThisMonth(now: Date = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Vancouver', year: 'numeric', month: 'numeric' }).formatToParts(now);
+  const y = Number(parts.find((p) => p.type === 'year')!.value);
+  const m = Number(parts.find((p) => p.type === 'month')!.value);
+  const key = (e: (typeof MONTHS)[number]) => e.year * 12 + MONTH_NAMES.indexOf(e.month);
+  const today = y * 12 + (m - 1);
+  const started = MONTHS.filter((e) => key(e) <= today).sort((a, b) => key(b) - key(a));
+  return started[0] ?? MONTHS[0];
+}
 
 // Pull each Read-this blog post's hero image in from lib/blog.ts at build time.
 function withHero(extras?: SectionExtras): SectionExtras | undefined {

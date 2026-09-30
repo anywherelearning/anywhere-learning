@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ThisMonthView from '@/components/account/ThisMonthView';
-import { THIS_MONTH, buildSection } from '@/lib/this-month';
+import { getThisMonth, buildSection } from '@/lib/this-month';
 
 export const metadata: Metadata = {
   title: 'This Month',
@@ -9,8 +9,11 @@ export const metadata: Metadata = {
 
 export const dynamic = 'force-dynamic';
 
-// The month's content lives in lib/this-month.ts. Edit it there once a month.
+// The month's content lives in lib/this-month.ts, one block per month. The
+// page picks the current one on each request, so a new month goes live at
+// midnight Pacific on the 1st without a deploy.
 export default function ThisMonthPage() {
+  const THIS_MONTH = getThisMonth();
   return (
     <ThisMonthView
       month={THIS_MONTH.month}
