@@ -380,9 +380,16 @@ export default function AdventureMapHome({
   // are the slugs present in every kid's log. A solo activity lands in only one
   // kid's log, so it never moves the token — it just adds a gear to the pack.
   const kidIds = children.map((kd, ki) => kd.id ?? childLabel(kd, ki));
-  const perKidSlugs = kidIds.map((id) => new Set(allLogs.filter((l) => l.child === id).map((l) => l.slug)));
-  const sharedCount = perKidSlugs.length
-    ? [...perKidSlugs[0]].filter((s) => perKidSlugs.every((set) => set.has(s))).length
+  // Count every time it was done together (repeats included, so re-doing a
+  // favourite still moves everyone forward): per activity, the number of times
+  // the kid who did it least did it.
+  const perKidCounts = kidIds.map((id) => {
+    const m = new Map<string, number>();
+    allLogs.forEach((l) => { if (l.child === id) m.set(l.slug, (m.get(l.slug) ?? 0) + 1); });
+    return m;
+  });
+  const sharedCount = perKidCounts.length
+    ? [...perKidCounts[0].keys()].reduce((n, slug) => n + Math.min(...perKidCounts.map((m) => m.get(slug) ?? 0)), 0)
     : 0;
   const total = family ? sharedCount : pack.length;
   // Legs of one long journey: fill the trail, then wrap to the next region.

@@ -86,7 +86,7 @@ export function nextForKid(opts: {
       const avail = fresh.length ? fresh : oldestFirst(eligibleSlugs);
       const coverage = t.activities.filter((s) => opts.doneSlugs.has(s)).length;
       const skips = opts.skips[t.slug] ?? 0;
-      return { t, order, avail, score: coverage + skips };
+      return { t, order, avail, fresh: fresh.length > 0, score: coverage + skips };
     }).filter((x) => x.avail.length > 0);
 
   if (ranked.length === 0) return null;
@@ -99,10 +99,12 @@ export function nextForKid(opts: {
 
   // compass nudge wins, if that territory still has anything available
   if (opts.nudge) {
-    const n = ranked.find((x) => x.t.slug === opts.nudge);
+    const n = ranked.find((x) => x.t.slug === opts.nudge && x.fresh);
     if (n) return pick(n);
   }
-  ranked.sort((a, b) => a.score - b.score || a.order - b.order);
+  // Areas that still have something new come first; only once every area is
+  // fully explored does the trail bring back the oldest finished activities.
+  ranked.sort((a, b) => Number(b.fresh) - Number(a.fresh) || a.score - b.score || a.order - b.order);
   return pick(ranked[0]);
 }
 
