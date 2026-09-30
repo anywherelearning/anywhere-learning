@@ -209,7 +209,7 @@ export default function NativeLibraryView({ products }: NativeLibraryViewProps) 
         {filtered.map((product) => (
           <Link
             key={product.id}
-            href={`/account/downloads`}
+            href={`/account/view/${product.slug}`}
             style={{
               display: 'block',
               backgroundColor: '#fff',
