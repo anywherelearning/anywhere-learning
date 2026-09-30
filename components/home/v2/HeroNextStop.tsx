@@ -1,7 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+
+/** Shrink an element's font until its single line fits (keeps the card one size). */
+function fitLine(el: HTMLElement | null, min: number) {
+  if (!el) return;
+  el.style.fontSize = '';
+  let size = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > el.clientWidth + 1 && size > min) {
+    size -= 0.5;
+    el.style.fontSize = `${size}px`;
+  }
+}
 import { SHOWCASE_ACTIVITIES } from '@/lib/home-showcase';
 
 /**
@@ -32,6 +43,16 @@ export default function HeroNextStop() {
   );
 
   const a = SHOWCASE_ACTIVITIES[act];
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const blurbRef = useRef<HTMLParagraphElement>(null);
+  // One line each for the title and the blurb, whatever the activity, so the
+  // card never changes size (a longer one just sets a touch smaller).
+  useLayoutEffect(() => {
+    const fit = () => { fitLine(titleRef.current, 16); fitLine(blurbRef.current, 13); };
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, [act]);
 
   function differentOne() {
     setReached(false);
@@ -63,7 +84,7 @@ export default function HeroNextStop() {
   }
 
   return (
-    <div className="w-full max-w-[420px] lg:w-[360px] xl:w-[420px]">
+    <div className="w-full max-w-[420px] lg:w-[340px]">
       <div className="relative motion-safe:animate-[alGentleFloat_6s_ease-in-out_infinite]">
         {/* Says what this card is before anyone clicks it */}
         <span className="absolute -top-3.5 left-6 z-10 -rotate-2 bg-[#FBF3DC] px-3 py-1 text-[12.5px] font-semibold text-forest-dark shadow-[0_6px_14px_-8px_rgba(45,58,46,0.6)]">
@@ -79,18 +100,19 @@ export default function HeroNextStop() {
           </div>
 
           <h2
-            className="mb-3 line-clamp-2 min-h-[2.24em] text-[30px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px] lg:text-[26px] xl:text-[30px]"
+            ref={titleRef}
+            className="mb-3 overflow-hidden whitespace-nowrap text-[30px] font-semibold leading-[34px] tracking-[-0.01em] text-[#2b2a26] max-md:text-[26px]"
           >
             {a.title}
           </h2>
 
           <p
-            className="mb-2.5 truncate text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark lg:tracking-[0.1em] xl:tracking-[0.14em]"
+            className="mb-2.5 truncate text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-dark"
           >
             {a.category} &middot; {a.time}
           </p>
 
-          <p className="mb-6 line-clamp-2 min-h-[3.2em] text-[15.5px] leading-[1.6] text-[#6b675e]">{a.blurb}</p>
+          <p ref={blurbRef} className="mb-6 overflow-hidden whitespace-nowrap text-[15.5px] leading-[25px] text-[#6b675e]">{a.blurb}</p>
 
           <Link
             href={`/shop/${a.slug}`}
