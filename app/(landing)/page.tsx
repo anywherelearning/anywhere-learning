@@ -19,8 +19,6 @@ import { getMembership } from '@/lib/membership-runtime';
 import { CHALLENGE, CHALLENGE_DAYS } from '@/lib/challenge';
 import { isCoursePageVisible } from '@/lib/course';
 import {
-  SHOP_CATEGORIES,
-  SKILL_AREAS,
   MEMBERSHIP_INCLUDES,
   HOME_FAQS,
   HOME_OBJECTIONS,
@@ -129,7 +127,13 @@ export default async function HomePage() {
   // followed by the 12 Skills Map areas. Exact duplicates between the two lists
   // (Real-World Math, Creativity & Making, AI & Digital) are dropped so the
   // strip doesn't visibly repeat itself.
-  const ticker = [...new Set([...SHOP_CATEGORIES, ...SKILL_AREAS])].join('  ·  ');
+  // Real things kids actually do in the guides: "real learning, hiding in real life" at a glance.
+  const ticker = [
+    'Plan a party on a budget', 'Run a market stall', 'Cook dinner for the family', 'Map a nature walk',
+    'Pitch a business idea', 'Plan a day trip', 'Write a real review', 'Invent a new sport',
+    'Shop the farmers market', 'Lead a tour of your town', 'Build a Rube Goldberg machine',
+    'Spot fake news', 'Design a board game', 'Fix a real problem at home',
+  ].join('  ·  ');
 
   return (
     <>
