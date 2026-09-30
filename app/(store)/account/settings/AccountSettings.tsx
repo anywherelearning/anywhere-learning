@@ -187,8 +187,8 @@ export default function AccountSettings({
         {current === 'you' && <ProfileTab fallback={member} />}
         </div>
         <style>{`
-          .set-tabs{display:flex;gap:4px;margin-top:22px;padding-left:14px;overflow-x:auto}
-          .set-tab{flex:none;padding:10px 18px;border-radius:12px 12px 0 0;border:none;cursor:pointer;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;background:rgba(58,44,23,.07);color:var(--am-muted);transition:background .15s,color .15s}
+          .set-tabs{display:flex;gap:4px;margin-top:22px;padding-left:clamp(6px,2vw,14px);overflow-x:auto}
+          .set-tab{flex:none;padding:10px clamp(11px,3.4vw,18px);border-radius:12px 12px 0 0;border:none;cursor:pointer;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;background:rgba(58,44,23,.07);color:var(--am-muted);transition:background .15s,color .15s}
           .set-tab:hover{color:var(--am-ink)}
           .set-tab[data-on]{background:#fffdf8;color:var(--am-ink)}
           .set-sheet>section{border-radius:20px!important;background:#fffdf8!important;border:none!important;box-shadow:0 1px 0 rgba(58,44,23,.06),0 18px 36px -22px rgba(58,44,23,.45)!important}
@@ -200,7 +200,7 @@ export default function AccountSettings({
             Need help?{' '}
             <Link
               href="/contact"
-              className="text-forest-dark font-semibold no-underline border-b border-forest/25 hover:text-forest hover:border-forest transition-colors"
+              className="tap text-forest-dark font-semibold no-underline border-b border-forest/25 hover:text-forest hover:border-forest transition-colors"
             >
               Email support
             </Link>
@@ -208,7 +208,7 @@ export default function AccountSettings({
           </p>
           <Link
             href="/contact"
-            className="font-body font-medium text-[13px] text-gray-500 no-underline hover:text-forest-dark transition-colors"
+            className="tap font-body font-medium text-[13px] text-gray-500 no-underline hover:text-forest-dark transition-colors"
           >
             Close your account? Email us
           </Link>

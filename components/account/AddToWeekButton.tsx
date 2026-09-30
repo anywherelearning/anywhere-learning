@@ -57,7 +57,7 @@ export default function AddToWeekButton({ slug, title, variant = 'icon' }: { slu
           type="button"
           onClick={handleClick}
           aria-label={added ? `${title} is on a trail. Add it again` : `Add ${title} to a trail`}
-          className={`inline-flex items-center gap-1 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[12.5px] whitespace-nowrap transition-colors ${added ? 'text-forest-dark' : 'text-forest hover:text-forest-dark'}`}
+          className={`tap inline-flex items-center gap-1 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[12.5px] whitespace-nowrap transition-colors ${added ? 'text-forest-dark' : 'text-forest hover:text-forest-dark'}`}
         >
           {added ? (
             <>

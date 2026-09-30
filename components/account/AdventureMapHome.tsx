@@ -656,8 +656,10 @@ export default function AdventureMapHome({
         .am-sign-body{padding:2px 18px 18px}
         .am-territory{font-family:var(--font-catalog),monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--am-gold);margin-bottom:5px}
         .am-sub-actions{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:3px}
-        .am-sub-actions button{background:none;border:none;cursor:pointer;font-family:var(--font-catalog),monospace;font-size:11.5px;color:var(--am-muted);padding:4px;text-decoration:underline;text-underline-offset:2px}
+        .am-sub-actions button{position:relative;background:none;border:none;cursor:pointer;font-family:var(--font-catalog),monospace;font-size:11.5px;color:var(--am-muted);padding:4px;text-decoration:underline;text-underline-offset:2px}
         .am-sub-actions button:hover{color:var(--am-flag)}
+        .am-sub-actions button::after,.am-quest-done::after,.am-quest-cancel::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+        .am-quest-done,.am-quest-cancel{position:relative}
         .am-sub-actions span{color:var(--am-muted);opacity:.5}
         .am-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;border:none;border-radius:12px;padding:13px 16px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;transition:filter .15s,transform .12s}
         .am-btn:hover{filter:brightness(1.04)}.am-btn:active{transform:translateY(1px)}
@@ -743,6 +745,14 @@ export default function AdventureMapHome({
         .am-option-count{flex:none;min-width:20px;height:20px;padding:0 6px;border-radius:999px;display:inline-grid;place-items:center;background:var(--am-flag);color:#fff;font-family:var(--font-catalog),monospace;font-size:11px;font-weight:700}
         .am-option-arrow{margin-left:auto;color:var(--am-trail);font-size:16px}
         @media(max-width:480px){
+          /* narrow maps: smaller explorers so the second kid isn't cut off at the edge */
+          .am-token{width:64px}
+          .am-token-fam{width:56px;margin:0 -6px}
+          .am-token-fam.is-sel{width:66px}
+          .am-token-name{font-size:9px;padding:2px 6px}
+          .am-pin-me{transform:translate(-50%,calc(-100% + 22px))}
+          .am-quest-title{white-space:normal;font-size:15px}
+          .am-quest{align-items:flex-start}
           .am-explorer-grid{grid-template-columns:1fr;gap:14px}
           .am-big-figure{width:clamp(140px,40vw,180px)}
           .am-option{padding:10px 12px;gap:10px}

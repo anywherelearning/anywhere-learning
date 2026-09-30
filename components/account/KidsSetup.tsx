@@ -148,13 +148,13 @@ export default function KidsSetup({
         {rows.map((r, i) => {
           const age = ageFrom(r.year, r.mon);
           return (
-            <div key={i} className="flex flex-wrap items-center gap-2.5">
+            <div key={i} className="flex flex-wrap items-center gap-2 sm:gap-2.5">
               <input
                 type="text"
                 value={r.name}
                 onChange={(e) => update(i, { name: e.target.value })}
                 placeholder="Name"
-                className="flex-1 min-w-[140px] h-11 rounded-xl border border-gray-200 px-3.5 text-[15px] text-ink placeholder:text-gray-400 focus:border-forest focus:outline-none"
+                className="basis-full sm:basis-auto sm:flex-1 sm:min-w-[140px] h-11 rounded-xl border border-gray-200 px-3.5 text-[15px] text-ink placeholder:text-gray-400 focus:border-forest focus:outline-none"
               />
               <select
                 value={r.mon}
@@ -182,7 +182,7 @@ export default function KidsSetup({
                   </option>
                 ))}
               </select>
-              <span className="w-14 shrink-0 text-[13px] text-gray-500 text-center">
+              <span className="shrink-0 sm:w-14 text-[13px] text-gray-500 text-center">
                 {age != null ? `age ${age}` : ''}
               </span>
               {rows.length > 1 && (
@@ -203,7 +203,7 @@ export default function KidsSetup({
       <button
         type="button"
         onClick={() => setRowsDirty((prev) => [...prev, { name: '', mon: '', year: '' }])}
-        className="mt-3 text-[14px] font-medium text-forest hover:text-forest-dark"
+        className="tap mt-3 text-[14px] font-medium text-forest hover:text-forest-dark"
       >
         + Add another child
       </button>

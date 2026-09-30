@@ -572,3 +572,8 @@ html,
 body {
   overflow-x: clip;
 }
+
+/* ── Bigger touch target for small text links/buttons ─────────────────
+   An invisible 44px-tall hit area centred on the element; looks the same. */
+.tap { position: relative; }
+.tap::after { content: ""; position: absolute; left: -4px; right: -4px; top: 50%; height: max(44px, 100%); transform: translateY(-50%); }

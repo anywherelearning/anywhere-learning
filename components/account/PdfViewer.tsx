@@ -193,7 +193,7 @@ export default function PdfViewer({
 
       <div className="rd-wrap">
         <aside className="rd-rail">
-          <Link href="/account" className="rd-back"><span aria-hidden="true">&larr;</span> Back to the Library</Link>
+          <Link href="/account" className="rd-back tap"><span aria-hidden="true">&larr;</span> Back to the Library</Link>
           <div className="rd-card">
             <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
               {imageUrl && (

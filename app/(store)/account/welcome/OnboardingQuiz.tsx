@@ -149,7 +149,7 @@ export default function OnboardingQuiz() {
           </>
         )}
 
-        <button type="button" onClick={goHome} className="ob-skip">Skip for now</button>
+        <button type="button" onClick={goHome} className="ob-skip tap">Skip for now</button>
       </section>
     </main>
   );

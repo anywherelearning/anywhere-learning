@@ -16,10 +16,10 @@ export default function MemberFooter() {
           <Image src="/logo-wordmark.png" alt="Anywhere Learning" width={220} height={45} className="mf-logo" priority />
         </Link>
         <nav className="mf-links" aria-label="Footer">
-          <Link href="/contact" target="_blank" rel="noopener noreferrer" className="mf-link">Help &amp; support</Link>
-          <Link href="/about" target="_blank" rel="noopener noreferrer" className="mf-link">About</Link>
-          <Link href="/privacy" target="_blank" rel="noopener noreferrer" className="mf-link">Privacy</Link>
-          <Link href="/terms" target="_blank" rel="noopener noreferrer" className="mf-link">Terms</Link>
+          <Link href="/contact" target="_blank" rel="noopener noreferrer" className="mf-link tap">Help &amp; support</Link>
+          <Link href="/about" target="_blank" rel="noopener noreferrer" className="mf-link tap">About</Link>
+          <Link href="/privacy" target="_blank" rel="noopener noreferrer" className="mf-link tap">Privacy</Link>
+          <Link href="/terms" target="_blank" rel="noopener noreferrer" className="mf-link tap">Terms</Link>
         </nav>
         <span className="mf-copy">&copy; {year} Anywhere Learning</span>
       </div>

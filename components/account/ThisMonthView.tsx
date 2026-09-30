@@ -369,14 +369,14 @@ function CalendarLeaf({ id, month, year, title, short, text }: { id: string; mon
             <button type="button" onClick={() => save(base('done'))} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: flag, color: '#fff', fontWeight: 800, fontSize: 13.5, padding: '10px 18px', borderRadius: 999, border: 'none', cursor: 'pointer' }}>
               <MedalIcon small /> We did it
             </button>
-            <button type="button" onClick={() => save(null)} style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+            <button type="button" onClick={() => save(null)} className="tap" style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               Not this month
             </button>
           </>
         ) : (
           <>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, ...plate, fontSize: 19, color: '#b8492f' }}><MedalIcon /> You did it!</span>
-            <button type="button" onClick={() => save({ ...base('accepted'), days: [...days] })} style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+            <button type="button" onClick={() => save({ ...base('accepted'), days: [...days] })} className="tap" style={{ background: 'none', border: 'none', color: 'var(--am-muted)', fontSize: 12.5, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               Undo
             </button>
           </>

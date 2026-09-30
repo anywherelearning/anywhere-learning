@@ -646,6 +646,7 @@ export default function LearningRecord({
                               type="button"
                               onClick={() => setEditTimeKey(editTimeKey === key ? null : key)}
                               title="Adjust the time for this activity"
+                              className="tap"
                               style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontSize: 12.5, color: overridden ? '#588157' : 'var(--am-muted)', fontWeight: overridden ? 600 : 400 }}
                             >
                               {timeLabel(est)}
@@ -672,6 +673,7 @@ export default function LearningRecord({
                             type="button"
                             onClick={() => setSkillsOpen(skillsOpen === key ? null : key)}
                             aria-expanded={skillsOpen === key}
+                            className="tap"
                             style={{ marginLeft: 'auto', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, color: '#588157' }}
                           >
                             Skills ({skills.length + extra.length}) {skillsOpen === key ? '−' : '+'}

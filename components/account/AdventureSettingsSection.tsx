@@ -171,7 +171,7 @@ export default function AdventureSettingsSection({ part }: { part: 'explorers' |
         <button
           type="button"
           onClick={() => setKidsOpen(true)}
-          className="mt-4 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[13.5px] text-forest hover:text-forest-dark"
+          className="tap mt-4 bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[13.5px] text-forest hover:text-forest-dark"
         >
           + Add a child or change a name
         </button>

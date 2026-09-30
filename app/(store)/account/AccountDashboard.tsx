@@ -305,7 +305,7 @@ export default function AccountDashboard({
             <button
               type="button"
               onClick={() => setCapModalOpen(true)}
-              className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12.5px] py-1.5 px-3.5 rounded-full border-0 cursor-pointer hover:bg-forest-dark transition-colors whitespace-nowrap"
+              className="tap inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold text-[12.5px] py-1.5 px-3.5 rounded-full border-0 cursor-pointer hover:bg-forest-dark transition-colors whitespace-nowrap"
             >
               Subscribe now to download
               <span aria-hidden="true">&rarr;</span>
@@ -515,7 +515,7 @@ export default function AccountDashboard({
                         )}
                       </Link>
                       <div className="min-w-0">
-                        <Link href={href} target="_blank" rel="noopener noreferrer" prefetch={false} className="block font-body font-bold text-[13.5px] leading-tight text-ink no-underline hover:text-forest-dark max-w-[220px] truncate">
+                        <Link href={href} target="_blank" rel="noopener noreferrer" prefetch={false} className="tap block font-body font-bold text-[13.5px] leading-tight text-ink no-underline hover:text-forest-dark max-w-[220px] truncate">
                           {a.title}
                         </Link>
                         <div className="flex items-center gap-3 mt-1">
@@ -528,12 +528,12 @@ export default function AccountDashboard({
                                 setSavedAdded(a.slug);
                                 window.setTimeout(() => setSavedAdded((s) => (s === a.slug ? null : s)), 2600);
                               }}
-                              className="bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[12px] text-forest hover:text-forest-dark"
+                              className="tap bg-transparent border-0 p-0 cursor-pointer font-body font-semibold text-[12px] text-forest hover:text-forest-dark"
                             >
                               {flashed ? '✓ Added' : '+ Add to trail'}
                             </button>
                           )}
-                          <button type="button" onClick={() => togglePin(a.slug)} className="bg-transparent border-0 p-0 cursor-pointer font-body text-[12px] text-gray-500 hover:text-[#C97B5C]">
+                          <button type="button" onClick={() => togglePin(a.slug)} className="tap bg-transparent border-0 p-0 cursor-pointer font-body text-[12px] text-gray-500 hover:text-[#C97B5C]">
                             Remove
                           </button>
                         </div>
@@ -639,7 +639,7 @@ export default function AccountDashboard({
                         target="_blank"
                         rel="noopener noreferrer"
                         prefetch={false}
-                        className="font-[family-name:var(--font-plate)] font-extrabold text-[17px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
+                        className="tap font-[family-name:var(--font-plate)] font-extrabold text-[17px] leading-[1.2] text-ink no-underline hover:text-forest-dark transition-colors"
                       >
                         {a.title}
                       </Link>
