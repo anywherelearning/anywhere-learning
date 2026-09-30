@@ -116,7 +116,7 @@ function CheckIcon() {
   );
 }
 
-const HERO_FIT = `(function(){var g=document.getElementById('hero-grid');if(!g)return;var st=document.createElement('style');document.head.appendChild(st);function f(){var w=document.documentElement.clientWidth,h=window.innerHeight;if(w<1280){st.textContent='';return;}var z=Math.max(1,Math.min(w/1280,(h-71)/640,2.4));st.textContent='#hero-grid{zoom:'+z.toFixed(3)+';max-width:'+Math.floor(w/z)+'px}#hero-grid h1{font-size:72px}#site-header-inner{max-width:none;padding-left:'+Math.round(64*z-40)+'px;padding-right:'+Math.round(64*z-40)+'px}';}f();window.addEventListener('resize',f);})();`;
+const HERO_FIT = `(function(){var g=document.getElementById('hero-grid');if(!g)return;var st=document.createElement('style');document.head.appendChild(st);function f(){var w=document.documentElement.clientWidth;if(w<1024){st.textContent='';return;}var z=Math.min(w/1280,2.4);st.textContent='#hero-grid{zoom:'+z.toFixed(4)+';max-width:1280px}#hero-grid h1{font-size:72px}#hero-grid .hero-photo{width:200px;right:calc(100% - 18px);top:-34px}#hero-grid .hero-photo figcaption{font-size:15px}#hero-grid>div:first-child{max-width:680px}#site-header-inner{zoom:'+z.toFixed(4)+';max-width:1280px}';}f();window.addEventListener('resize',f);})();`;
 
 export default async function HomePage() {
   // Live founder state (DB-counted), so the founder framing and price close
@@ -283,13 +283,11 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-          {/* Wide screens: the hero is designed at 1280px. Past that, scale the
-              whole thing up (title, card, photo, buttons together) so it fills
-              the screen instead of floating in the middle with cream on both
-              sides. Height caps the scale so the card and buttons stay above
-              the fold; whatever width is left over widens the grid, so there
-              is never a side gap. The header widens with it so the logo
-              stays lined up with the title. Runs inline, before first paint. */}
+          {/* Laptop and up: the hero is designed at 1280px and scaled as one
+              picture to the screen's width (zoom), so the title, card, photo
+              and map keep exactly the same layout on every screen instead of
+              reflowing. The header scales the same way, so the logo stays
+              lined up with the title. Runs inline, before first paint. */}
           <script dangerouslySetInnerHTML={{ __html: HERO_FIT }} />
         </section>
 
