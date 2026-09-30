@@ -464,7 +464,7 @@ export default async function HomePage() {
                   </p>
                   <Link
                     href="/shop"
-                    className="mt-4 inline-block whitespace-nowrap text-base font-semibold text-forest transition-colors hover:text-forest-dark md:col-start-2 md:row-start-1 md:mt-2"
+                    className="tap mt-4 inline-block whitespace-nowrap text-base font-semibold text-forest transition-colors hover:text-forest-dark md:col-start-2 md:row-start-1 md:mt-2"
                   >
                     Browse all activities &rarr;
                   </Link>
@@ -504,7 +504,7 @@ export default async function HomePage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative mx-auto h-[440px] w-full max-w-[460px] sm:h-[520px]">
+              <div className="relative mx-auto h-[calc(min(100vw-48px,460px)+28px)] w-full max-w-[460px] sm:h-[520px]">
                 <div className={`absolute left-0 top-6 w-[46%] -rotate-[6deg] bg-white p-1.5 ${PAPER_SHADOW}`}>
                   <div className="relative aspect-[8.5/11] overflow-hidden">
                     <Image
@@ -833,8 +833,8 @@ export default async function HomePage() {
                   className="text-[15px] text-gold-light/[0.92] underline-offset-4 transition-colors hover:text-gold-light hover:underline"
                 >
                   {showCourse
-                    ? 'Rather start free? Take the 5-day email course \u2192'
-                    : 'Rather start free? Get the 7-day guide by email \u2192'}
+                    ? 'Rather start free? Take the 5-day email course\u00a0\u2192'
+                    : 'Rather start free? Get the 7-day guide by email\u00a0\u2192'}
                 </Link>
               </p>
             </ScrollReveal>

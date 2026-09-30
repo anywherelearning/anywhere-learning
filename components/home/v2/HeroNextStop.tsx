@@ -196,9 +196,6 @@ export default function HeroNextStop() {
           )}
         </div>
       </div>
-      <p className="mt-4 text-center text-[13.5px] text-gray-500">
-        Open it, pick a different one, or mark it reached.
-      </p>
     </div>
   );
 }
