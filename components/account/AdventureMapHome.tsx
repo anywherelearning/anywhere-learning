@@ -283,6 +283,15 @@ function MonthMedal({ entry, onOpen }: { entry: MonthChallengeEntry; onOpen: (e:
   );
 }
 
+// Guest teaser: a demo family part-way along, so the backdrop behind the
+// paywall looks alive (built explorers, a few stops reached, some gear).
+const DEMO_AVATARS: Record<string, KidAvatar> = {
+  'demo-a': { base: 'girl', color: '#c4836a', skin: '#e8b48f', hair: '#6b4a2b', hairStyle: 'ponytail' },
+  'demo-b': { base: 'fox', color: '#6b8e6b' },
+};
+const DEMO_LOG = ['nature-walk-task-cards', 'farmers-market-challenge', 'boredom-toolkit', 'time-energy-planner', 'square-foot-safari']
+  .flatMap((slug, i) => ['demo-a', 'demo-b'].map((child) => ({ slug, child, at: new Date(Date.UTC(2026, 7, 4 + i * 6)).toISOString() })));
+
 export default function AdventureMapHome({
   activities,
   preview = false,
@@ -334,8 +343,12 @@ export default function AdventureMapHome({
     if (preview) {
       setChildren(DEMO_KIDS);
       setItems([]);
-      setAvatars({});
-      setPackByKid({});
+      setAvatars(DEMO_AVATARS);
+      const pk: Record<string, EarnedGear[]> = {};
+      for (const id of Object.keys(DEMO_AVATARS)) {
+        pk[id] = packFor(id, DEMO_LOG.filter((l) => l.child === id).map((l) => ({ slug: l.slug, at: l.at, effort: effortBySlug[l.slug] ?? ('Quick' as Effort) })));
+      }
+      setPackByKid(pk);
       setQuest(null);
       setMedals([]);
       setReady(true);
@@ -396,7 +409,7 @@ export default function AdventureMapHome({
     return `${ns.slice(0, -1).join(', ')} & ${ns[ns.length - 1]}`;
   })();
   const engineScope = family ? 'family' : cid;
-  const allLogs = completionLog();
+  const allLogs = preview ? DEMO_LOG : completionLog();
   // family: the shared trail's engine sees the whole family's history (so a
   // solo activity by one kid won't be offered to everyone); individual: just
   // this kid. doneSlugs (lifetime) ranks territory coverage; recentDone (last

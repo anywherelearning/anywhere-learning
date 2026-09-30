@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 
 /**
@@ -21,14 +21,12 @@ export default function MemberPaywallOverlay({
   annualPriceUsd: number;
   monthlyPriceUsd: number;
 }) {
-  const ctaRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
     const prevBody = document.body.style.overflow;
     const prevHtml = document.documentElement.style.overflow;
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
-    ctaRef.current?.focus();
     return () => {
       document.body.style.overflow = prevBody;
       document.documentElement.style.overflow = prevHtml;
@@ -52,13 +50,13 @@ export default function MemberPaywallOverlay({
           Members only
         </span>
         <h2 id="mpw-title" className="mpw-title">
-          Unlock the full membership
+          Start your family&apos;s trail
         </h2>
         <p className="mpw-body">
           Start your {trialDays}-day free trial to open every activity guide, your family&apos;s
           trail, This Month, and the Learning Record.
         </p>
-        <Link ref={ctaRef} href="/start-trial" className="mpw-btn">
+        <Link href="/start-trial" className="mpw-btn">
           Start free trial <span aria-hidden="true">&rarr;</span>
         </Link>
         <p className="mpw-fine">
@@ -71,7 +69,7 @@ export default function MemberPaywallOverlay({
       <style>{`
         .mpw{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;
           justify-content:flex-end;align-items:center;padding:0 20px
-          clamp(48px,14vh,132px);font-family:'DM Sans',system-ui,sans-serif}
+          clamp(20px,4vh,40px);font-family:'DM Sans',system-ui,sans-serif}
         .mpw-blur{position:absolute;inset:0;backdrop-filter:blur(7px);
           -webkit-backdrop-filter:blur(7px);
           -webkit-mask-image:linear-gradient(to bottom,transparent 44%,#000 66%);
@@ -79,28 +77,31 @@ export default function MemberPaywallOverlay({
         .mpw-tint{position:absolute;inset:0;background:linear-gradient(to bottom,
           rgba(250,249,246,0) 40%,rgba(250,249,246,.5) 58%,
           rgba(250,249,246,.92) 74%,var(--am-bg1,#faf9f6) 88%)}
-        .mpw-card{position:relative;text-align:center;max-width:440px;width:100%;
-          display:flex;flex-direction:column;align-items:center;gap:14px}
+        .mpw-card{position:relative;text-align:center;max-width:540px;width:100%;
+          display:flex;flex-direction:column;align-items:center;gap:13px;
+          background:rgba(247,242,232,.96);border:1px solid rgba(255,255,255,.7);border-radius:24px;
+          padding:clamp(22px,4vw,30px) clamp(18px,4vw,32px);
+          box-shadow:0 40px 80px -36px rgba(50,40,20,.55)}
         .mpw-eyebrow{display:inline-flex;align-items:center;gap:7px;
-          font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+          font-family:var(--font-catalog),monospace;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
           color:#3d5c3b;background:rgba(88,129,87,.12);
           padding:6px 13px;border-radius:999px}
-        .mpw-title{font-family:'Dancing Script','DM Sans',cursive;font-weight:700;
-          font-size:clamp(30px,6vw,40px);line-height:1.05;color:#3d5c3b;margin:0}
+        .mpw-title{font-family:var(--font-plate),sans-serif;font-weight:800;letter-spacing:-.02em;
+          font-size:clamp(28px,5.4vw,40px);line-height:1.05;color:var(--am-ink);margin:0}
         .mpw-body{font-size:15.5px;line-height:1.55;color:#57604f;margin:0;max-width:380px}
         .mpw-btn{display:inline-flex;align-items:center;gap:9px;margin-top:4px;
-          background:#588157;color:#faf9f6;font-weight:600;font-size:16px;
+          background:var(--am-flag);color:#faf9f6;font-weight:600;font-size:16px;
           padding:14px 30px;border-radius:14px;text-decoration:none;
-          box-shadow:0 8px 22px -8px rgba(61,92,59,.55);
+          box-shadow:0 10px 24px -10px rgba(184,73,47,.7);
           transition:background .15s ease,transform .15s ease,box-shadow .15s ease}
-        .mpw-btn:hover{background:#3d5c3b;transform:translateY(-1px);
+        .mpw-btn:hover{background:#b8492f;transform:translateY(-1px);
           box-shadow:0 12px 26px -8px rgba(61,92,59,.6)}
         .mpw-btn:active{transform:translateY(0)}
-        .mpw-btn:focus-visible{outline:3px solid #d4a373;outline-offset:3px}
+        .mpw-btn:focus-visible{outline:3px solid #588157;outline-offset:3px}
         .mpw-fine{font-size:13px;color:#7a8070;margin:0}
-        .mpw-link{font-size:13.5px;font-weight:600;color:#8a6a3a;text-decoration:underline;
+        .mpw-link{font-size:13.5px;font-weight:600;color:#3d5c3b;text-decoration:underline;
           text-underline-offset:3px}
-        .mpw-link:hover{color:#6f5227}
+        .mpw-link:hover{color:#2f4a2e}
       `}</style>
     </aside>
   );
