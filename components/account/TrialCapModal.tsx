@@ -10,6 +10,20 @@
  */
 
 import { useEffect, useState } from 'react';
+import HeroScene from '@/components/account/HeroScene';
+
+const CARD = 'w-full max-w-[440px] rounded-[22px] overflow-hidden text-center shadow-[0_40px_90px_-30px_rgba(20,14,6,0.7)]';
+const PLATE: React.CSSProperties = { fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--am-ink)' };
+
+/** Sky + hills band across the top of the card, with a round badge on it. */
+function Band({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative overflow-hidden h-[96px]" style={{ background: 'linear-gradient(180deg,var(--am-sky1),var(--am-sky2))' }}>
+      <HeroScene tone="light" hillHeight={60} />
+      <span className="absolute left-1/2 bottom-[-2px] -translate-x-1/2 inline-grid place-items-center w-14 h-14 rounded-full border-4 border-[var(--am-paper)] shadow-[0_10px_20px_-10px_rgba(50,40,20,0.5)]" style={{ background: '#588157', color: '#fff' }}>{children}</span>
+    </div>
+  );
+}
 
 interface Props {
   open: boolean;
@@ -77,22 +91,20 @@ export default function TrialCapModal({
   if (done) {
     return (
       <div
-        className="fixed inset-0 z-[80] grid place-items-center p-5 bg-[#2D3A2E]/45 backdrop-blur-[2px]"
+        className="fixed inset-0 z-[80] grid place-items-center p-5 bg-[rgba(30,24,16,0.55)] backdrop-blur-[3px]"
         role="dialog"
         aria-modal="true"
         aria-labelledby="trial-done-title"
       >
-        <div className="w-full max-w-[440px] bg-cream border border-[#D8D4C5] rounded-[18px] shadow-[0_32px_64px_-16px_rgba(45,58,46,0.35)] p-7 text-center">
-          <span
-            aria-hidden="true"
-            className="inline-grid place-items-center w-12 h-12 rounded-full bg-forest text-cream"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <div className={CARD} style={{ background: 'var(--am-paper)' }}>
+          <Band>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M20 6 9 17l-5-5" />
             </svg>
-          </span>
-          <h2 id="trial-done-title" className="mt-4 font-display text-[24px] leading-[1.15] tracking-tight text-ink">
-            You&apos;re in. <em className="not-italic italic text-forest">Welcome.</em>
+          </Band>
+          <div className="px-7 pt-5 pb-7">
+          <h2 id="trial-done-title" className="m-0 text-[26px] leading-[1.1]" style={PLATE}>
+            You&apos;re in. <span style={{ color: '#588157' }}>Welcome.</span>
           </h2>
           <p className="mt-3 font-body text-[14.5px] leading-[1.6] text-gray-600">
             Your membership is active and every guide is yours to download now. Thank you for
@@ -108,6 +120,7 @@ export default function TrialCapModal({
           <p className="mt-3.5 mb-0 font-body text-[12px] text-gray-400">
             xo, Amelie · A receipt is on its way to your inbox.
           </p>
+          </div>
         </div>
       </div>
     );
@@ -115,32 +128,31 @@ export default function TrialCapModal({
 
   return (
     <div
-      className="fixed inset-0 z-[80] grid place-items-center p-5 bg-[#2D3A2E]/45 backdrop-blur-[2px]"
+      className="fixed inset-0 z-[80] grid place-items-center p-5 bg-[rgba(30,24,16,0.55)] backdrop-blur-[3px]"
       role="dialog"
       aria-modal="true"
       aria-labelledby="trial-upgrade-title"
       onClick={() => !working && onClose()}
     >
       <div
-        className="w-full max-w-[440px] bg-cream border border-[#D8D4C5] rounded-[18px] shadow-[0_32px_64px_-16px_rgba(45,58,46,0.35)] p-7 text-center"
+        className={CARD}
+        style={{ background: 'var(--am-paper)' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <span
-          aria-hidden="true"
-          className="inline-grid place-items-center w-12 h-12 rounded-full bg-[#E6EBDF] border border-[#C9D3BE] text-forest-dark"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <Band>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 3v12" />
             <path d="M7 10l5 5 5-5" />
             <path d="M5 21h14" />
           </svg>
-        </span>
+        </Band>
+        <div className="px-7 pt-5 pb-7">
         <h2
           id="trial-upgrade-title"
-          className="mt-4 font-display text-[24px] leading-[1.15] tracking-tight text-ink"
+          className="m-0 text-[26px] leading-[1.1]"
+          style={PLATE}
         >
-          Downloads come with{' '}
-          <em className="not-italic italic text-forest">membership.</em>
+          Downloads come with <span style={{ color: '#588157' }}>membership.</span>
         </h2>
         <p className="mt-3 font-body text-[14.5px] leading-[1.6] text-gray-600">
           During your free trial you can open and read every guide in your browser, as
@@ -181,6 +193,7 @@ export default function TrialCapModal({
           </a>
           .
         </p>
+        </div>
       </div>
     </div>
   );

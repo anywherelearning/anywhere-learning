@@ -8,6 +8,8 @@ import { addToWeek, weekSlugs } from '@/lib/week';
 import type { Effort } from '@/lib/activity-effort';
 import { CategoryIcon, FOCI, TIMES, hexToRgba, minsLabel } from '@/lib/activity-visuals';
 import { childAge, type Child } from '@/lib/member-profile';
+import { avatarFor } from '@/lib/kid-roadmap';
+import { ExplorerHead } from '@/components/account/ExplorerAvatar';
 
 function childLabel(c: Child, i: number) {
   return c.name.trim() || `Child ${i + 1}`;
@@ -114,7 +116,7 @@ export default function PlannerModal({
         position: 'fixed',
         inset: 0,
         zIndex: 100,
-        background: 'rgba(45,55,40,0.42)',
+        background: 'rgba(30,24,16,0.55)',
         backdropFilter: 'blur(3px)',
         display: 'flex',
         alignItems: 'center',
@@ -129,21 +131,18 @@ export default function PlannerModal({
           width: 'min(460px,100%)',
           maxHeight: '90vh',
           overflowY: 'auto',
-          background: '#fffdf9',
+          background: 'var(--am-paper)',
           borderRadius: 'clamp(20px,4vw,26px)',
-          boxShadow: '0 30px 70px -20px rgba(45,55,40,0.5)',
+          boxShadow: '0 40px 90px -30px rgba(20,14,6,0.7)',
         }}
       >
         <div style={{ padding: 'clamp(18px,4vw,24px)' }}>
           {/* header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 14, marginBottom: 14 }}>
             <div>
-              <div style={eyebrow}>
-                <span style={eyebrowDash} />
-                Add to your plan
-              </div>
-              <h2 className="font-display" style={display(30)}>
-                {phase === 'results' ? 'Here is where we would start' : "Let us find a good fit"}
+              <div style={eyebrow}>Add to their own list</div>
+              <h2 style={display(28)}>
+                {phase === 'results' ? "Here's where we'd start" : "Let's find a good fit"}
               </h2>
             </div>
             <button onClick={onClose} aria-label="Close" style={closeBtn} className="hover:brightness-95">
@@ -178,7 +177,14 @@ export default function PlannerModal({
                             border: `1.5px solid ${sel ? '#588157' : 'rgba(61,92,59,0.16)'}`,
                           }}
                         >
-                          <span style={avatar(i)}>{childLabel(c, i).charAt(0)}</span>
+                          {(() => {
+                            const av = avatarFor(c.id ?? childLabel(c, i));
+                            return av ? (
+                              <span style={{ ...avatar(i), background: '#eef1e9', overflow: 'hidden' }}><ExplorerHead avatar={av} size={28} /></span>
+                            ) : (
+                              <span style={avatar(i)}>{childLabel(c, i).charAt(0)}</span>
+                            );
+                          })()}
                           {childLabel(c, i)}
                         </button>
                       );
@@ -276,7 +282,8 @@ export default function PlannerModal({
                 <article
                   className="al-pop"
                   style={{
-                    border: '1.5px solid #d4a373',
+                    border: '1px solid rgba(58,44,23,0.12)',
+                    background: '#fffdf8',
                     borderRadius: 18,
                     overflow: 'hidden',
                     boxShadow: '0 14px 34px -16px rgba(70,55,30,0.28)',
@@ -288,28 +295,35 @@ export default function PlannerModal({
                       alignItems: 'center',
                       gap: 8,
                       padding: '9px 16px',
-                      background: 'linear-gradient(110deg, rgba(88,129,87,0.13), rgba(212,163,115,0.18))',
-                      color: '#a9762f',
+                      background: 'linear-gradient(180deg,var(--am-sky1),var(--am-sky2))',
+                      color: 'var(--am-trail)',
                     }}
                   >
                     <svg width={15} height={15} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.9 6.7 19.4l1.2-6L3.4 9.3l6-.7z" />
                     </svg>
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-                      We would start here
+                    <span style={{ fontFamily: 'var(--font-catalog),monospace', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                      We'd start here
                     </span>
                   </div>
                   <div style={{ padding: '18px 18px 20px' }}>
                     <div style={{ display: 'flex', gap: 13, marginBottom: 11 }}>
-                      <span style={medTile(hero.trackColor, 48, 14)}>
-                        <CategoryIcon category={hero.category} color={hero.trackColor} size={26} />
-                      </span>
+                      {hero.imageUrl ? (
+                        <span style={coverStyle(64, -3)}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={hero.imageUrl} alt="" style={coverImg} />
+                        </span>
+                      ) : (
+                        <span style={medTile(hero.trackColor, 48, 14)}>
+                          <CategoryIcon category={hero.category} color={hero.trackColor} size={26} />
+                        </span>
+                      )}
                       <div style={{ minWidth: 0, paddingTop: 2 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 5 }}>
                           <span style={{ width: 8, height: 8, borderRadius: '50%', background: hero.trackColor }} />
                           <span style={subjectTag(hero.trackColor)}>{hero.categoryLabel}</span>
                         </div>
-                        <h3 style={{ fontSize: 20, fontWeight: 700, color: '#2b2a26', lineHeight: 1.2, margin: 0 }}>
+                        <h3 style={{ fontFamily: 'var(--font-plate),sans-serif', fontSize: 20, fontWeight: 800, color: 'var(--am-ink)', lineHeight: 1.15, margin: 0 }}>
                           {hero.title}
                         </h3>
                       </div>
@@ -318,9 +332,9 @@ export default function PlannerModal({
                       {hero.excerpt}
                     </p>
                     <div style={whyBox}>
-                      <Stroke d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.5 2.5M15.2 15.2l2.5 2.5M17.7 6.3l-2.5 2.5M8.8 15.2l-2.5 2.5" size={15} sw={1.8} color="#a9762f" />
-                      <span style={{ fontSize: 13, color: '#6b5a36', lineHeight: 1.5 }}>
-                        <strong style={{ color: '#8a6418' }}>Why this one.</strong> {focusOpt.reason}
+                      <Stroke d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.5 2.5M15.2 15.2l2.5 2.5M17.7 6.3l-2.5 2.5M8.8 15.2l-2.5 2.5" size={15} sw={1.8} color="#588157" />
+                      <span style={{ fontSize: 13, color: "#3d5c3b", lineHeight: 1.5 }}>
+                        <strong style={{ color: "#2f4a2e" }}>Why this one.</strong> {focusOpt.reason}
                       </span>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7, marginBottom: 16 }}>
@@ -341,9 +355,16 @@ export default function PlannerModal({
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {extras.map((a) => (
                       <article key={a.slug} style={extraCard}>
-                        <span style={chipTile(a.trackColor, 36, 10)}>
-                          <CategoryIcon category={a.category} color={a.trackColor} size={18} />
-                        </span>
+                        {a.imageUrl ? (
+                          <span style={coverStyle(38, 0)}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={a.imageUrl} alt="" style={coverImg} />
+                          </span>
+                        ) : (
+                          <span style={chipTile(a.trackColor, 36, 10)}>
+                            <CategoryIcon category={a.category} color={a.trackColor} size={18} />
+                          </span>
+                        )}
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 3 }}>
                             <span style={subjectTag(a.trackColor)}>{a.categoryLabel}</span>
@@ -484,29 +505,26 @@ function Stroke({ d, size, sw, color }: { d: string; size: number; sw: number; c
 
 // ---- shared style objects ----
 const eyebrow: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 9,
+  fontFamily: 'var(--font-catalog),monospace',
   fontSize: 11,
   fontWeight: 700,
-  letterSpacing: '0.18em',
+  letterSpacing: '0.14em',
   textTransform: 'uppercase',
-  color: '#a9762f',
+  color: 'var(--am-trail)',
 };
-const eyebrowDash: React.CSSProperties = {
-  width: 16,
-  height: 1.5,
-  background: 'currentColor',
-  opacity: 0.5,
-  borderRadius: 2,
-};
+function coverStyle(w: number, rot: number): React.CSSProperties {
+  return { flexShrink: 0, width: w, aspectRatio: '4 / 5', borderRadius: 6, overflow: 'hidden', border: '3px solid #fff', boxShadow: '0 8px 16px -8px rgba(50,40,20,0.5)', transform: rot ? `rotate(${rot}deg)` : undefined, background: '#fff' };
+}
+const coverImg: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' };
 function display(size: number): React.CSSProperties {
   return {
-    fontWeight: 700,
+    fontFamily: 'var(--font-plate),sans-serif',
+    fontWeight: 800,
+    letterSpacing: '-0.02em',
     fontSize: `clamp(24px,5vw,${size}px)`,
     lineHeight: 1.05,
-    color: '#588157',
-    margin: '7px 0 0',
+    color: 'var(--am-ink)',
+    margin: '6px 0 0',
   };
 }
 const closeBtn: React.CSSProperties = {
@@ -575,7 +593,7 @@ const whyBox: React.CSSProperties = {
   alignItems: 'flex-start',
   gap: 9,
   padding: '11px 13px',
-  background: 'rgba(212,163,115,0.1)',
+  background: 'rgba(88,129,87,0.1)',
   borderRadius: 11,
   marginBottom: 16,
 };
@@ -592,8 +610,8 @@ const extraCard: React.CSSProperties = {
   alignItems: 'center',
   gap: 13,
   padding: '12px 14px',
-  background: '#faf9f6',
-  border: '1px solid rgba(61,92,59,0.12)',
+  background: '#fffdf8',
+  border: '1px solid rgba(58,44,23,0.1)',
   borderRadius: 14,
 };
 const ghostBtn: React.CSSProperties = {
