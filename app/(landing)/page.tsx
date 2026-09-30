@@ -204,7 +204,7 @@ export default async function HomePage() {
               <HeroSaleBadge />
               <ChallengeHeroSticker />
               <div data-reveal>
-                <Eyebrow>From a teacher of 15 years &middot; <span className="whitespace-nowrap">Ages 6&ndash;14</span></Eyebrow>
+                <Eyebrow><span>From a teacher of 15 years &middot; <span className="whitespace-nowrap">Ages 6&ndash;14</span></span></Eyebrow>
               </div>
               <h1 className="mb-[26px] mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] tracking-tight text-balance">
                 Real learning,{' '}
