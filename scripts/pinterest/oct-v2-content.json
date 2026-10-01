@@ -1,0 +1,404 @@
+[
+ {
+  "n": 1,
+  "date": "oct01",
+  "slug": "fall-scavenger-v1",
+  "layout": "overlay",
+  "photo": "nature51.jpeg",
+  "focus": [
+   0.5,
+   0.55
+  ],
+  "kicker": "Free printable · ages 3 to 10",
+  "headline": "Fall Nature Scavenger Hunt",
+  "accent": [
+   "fall"
+  ],
+  "sub": "Leaves, seeds, animal clues. Print it free."
+ },
+ {
+  "n": 2,
+  "date": "oct02",
+  "slug": "chores-by-age-v1",
+  "layout": "band",
+  "photo": "IMG_0483.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "Free chore chart",
+  "headline": "Chores for Kids by Age",
+  "accent": [
+   "age"
+  ],
+  "sub": "30 real chores, ages 2 to 14",
+  "badge": [
+   "30",
+   "CHORES"
+  ]
+ },
+ {
+  "n": 3,
+  "date": "oct05",
+  "slug": "homeschool-1st-grade",
+  "layout": "frame",
+  "ground": "gold",
+  "photo": "IMG_0889.JPG",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "kicker": "No boxed curriculum",
+  "headline": "How to Homeschool 1st Grade",
+  "accent": [
+   "1st",
+   "grade"
+  ],
+  "sub": "What 6-year-olds actually need"
+ },
+ {
+  "n": 4,
+  "date": "oct06",
+  "slug": "nature-walk-v1",
+  "layout": "overlay",
+  "photo": "nature29.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "Free printable checklist",
+  "headline": "50 Nature Walk Ideas for Kids",
+  "accent": [
+   "50"
+  ],
+  "sub": "No gear, no prep. Ages 2 to 12"
+ },
+ {
+  "n": 5,
+  "date": "oct07",
+  "slug": "engineering-v1",
+  "layout": "band",
+  "photo": "IMG_3369.jpeg",
+  "focus": [
+   0.45,
+   0.5
+  ],
+  "kicker": "No kit needed",
+  "headline": "16 Engineering Challenges for Kids",
+  "accent": [
+   "engineering"
+  ],
+  "sub": "Cardboard, tape, real thinking. Free list"
+ },
+ {
+  "n": 6,
+  "date": "oct08",
+  "slug": "kitchen-v1",
+  "layout": "frame",
+  "ground": "terra",
+  "photo": "cooking5.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "Free checklist",
+  "headline": "30 Kitchen Activities for Kids",
+  "accent": [
+   "kitchen"
+  ],
+  "sub": "Real math in meals you already make"
+ },
+ {
+  "n": 7,
+  "date": "oct09",
+  "slug": "fall-scavenger-v2",
+  "layout": "band",
+  "photo": "nature60.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "Fall scavenger hunt",
+  "headline": "Can Your Kids Find These 4 Fall Clues?",
+  "accent": [
+   "4"
+  ],
+  "checklist": [
+   "Leaves changing color",
+   "A seed that travels",
+   "An animal getting ready for winter",
+   "Something decomposing"
+  ],
+  "sub": "Free printable, ages 3 to 10"
+ },
+ {
+  "n": 8,
+  "date": "oct12",
+  "slug": "chores-by-age-v2",
+  "layout": "frame",
+  "photo": "IMG_0099.jpeg",
+  "focus": [
+   0.5,
+   0.3
+  ],
+  "kicker": "Chores by age",
+  "headline": "What Chores Can a 10-Year-Old Do?",
+  "accent": [
+   "10-year-old"
+  ],
+  "sub": "More than you think. Free list, ages 2 to 14",
+  "ground": "cream"
+ },
+ {
+  "n": 9,
+  "date": "oct13",
+  "slug": "resilience-v1",
+  "layout": "band",
+  "ground": "sage",
+  "photo": "nature26.jpeg",
+  "focus": [
+   0.5,
+   0.35
+  ],
+  "kicker": "Free printable · ages 4 to 12",
+  "headline": "12 Resilience Activities for Kids",
+  "accent": [
+   "resilience"
+  ],
+  "sub": "Safe ways to fail and bounce back"
+ },
+ {
+  "n": 10,
+  "date": "oct14",
+  "slug": "project-based-learning",
+  "layout": "overlay",
+  "photo": "IMG_9308.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "No rubrics, no poster boards",
+  "headline": "Project-Based Learning at Home",
+  "accent": [
+   "home"
+  ],
+  "sub": "What it actually looks like in a real family"
+ },
+ {
+  "n": 11,
+  "date": "oct15",
+  "slug": "nature-walk-v2",
+  "layout": "frame",
+  "ground": "cream",
+  "photo": "nature46.jpeg",
+  "focus": [
+   0.5,
+   0.55
+  ],
+  "kicker": "Observe · collect · create",
+  "headline": "Turn Any Walk Into a Nature Lesson",
+  "accent": [
+   "nature"
+  ],
+  "sub": "50 nature walk ideas, free printable"
+ },
+ {
+  "n": 12,
+  "date": "oct16",
+  "slug": "creative-v1",
+  "layout": "overlay",
+  "photo": "IMG_6012.jpeg",
+  "focus": [
+   0.5,
+   0.55
+  ],
+  "kicker": "Free printable",
+  "headline": "26 Creative Activities for Kids",
+  "accent": [
+   "creative"
+  ],
+  "sub": "Make it, tell it, invent it"
+ },
+ {
+  "n": 13,
+  "date": "oct19",
+  "slug": "engineering-v2",
+  "layout": "frame",
+  "ground": "gold",
+  "photo": "IMG_0533.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "16 no-kit builds · ages 6 to 12",
+  "headline": "Engineering for Kids: Build, Test, Fix",
+  "accent": [
+   "build,",
+   "test,",
+   "fix"
+  ],
+  "sub": "Free engineering challenge list"
+ },
+ {
+  "n": 14,
+  "date": "oct20",
+  "slug": "backyard-science-v1",
+  "layout": "band",
+  "photo": "IMG_9894.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "No kit, no lab coat",
+  "headline": "15 Backyard Science Experiments",
+  "accent": [
+   "science"
+  ],
+  "sub": "Water, dirt, jars, sunlight. Free list"
+ },
+ {
+  "n": 15,
+  "date": "oct21",
+  "slug": "life-skills-v1",
+  "layout": "frame",
+  "photo": "lifeskill2.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "Free checklist",
+  "headline": "28 Life Skills for Kids",
+  "accent": [
+   "28"
+  ],
+  "sub": "Money, home, independence, thinking",
+  "ground": "gold"
+ },
+ {
+  "n": 16,
+  "date": "oct22",
+  "slug": "kitchen-v2",
+  "layout": "band",
+  "photo": "IMG_0156.jpeg",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "kicker": "Math without worksheets",
+  "headline": "Kitchen Math for Kids",
+  "accent": [
+   "math"
+  ],
+  "sub": "Fractions in the pancakes. 30 ideas, free",
+  "badge": [
+   "30",
+   "IDEAS"
+  ]
+ },
+ {
+  "n": 17,
+  "date": "oct23",
+  "slug": "stem-by-age",
+  "layout": "frame",
+  "photo": "IMG_2415.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "A real parent's guide",
+  "headline": "STEM Activities for Kids by Age",
+  "accent": [
+   "age"
+  ],
+  "sub": "What works at 5, 8, 11 and 14",
+  "ground": "sage"
+ },
+ {
+  "n": 18,
+  "date": "oct26",
+  "slug": "resilience-v2",
+  "layout": "overlay",
+  "photo": "IMG_2830.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "12 resilience challenges",
+  "headline": "Let Kids Fail Safely. It Builds Resilience.",
+  "accent": [
+   "safely."
+  ],
+  "sub": "Free printable, ages 4 to 12"
+ },
+ {
+  "n": 19,
+  "date": "oct27",
+  "slug": "creative-v2",
+  "layout": "frame",
+  "ground": "terra",
+  "photo": "IMG_6189.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "Fall afternoons, sorted",
+  "headline": "Bored Kids? 26 Creative Ideas",
+  "accent": [
+   "bored"
+  ],
+  "sub": "Free creative activities printable"
+ },
+ {
+  "n": 20,
+  "date": "oct28",
+  "slug": "life-skills-v2",
+  "layout": "band",
+  "photo": "IMG_0986.jpeg",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "kicker": "28 skills · free checklist",
+  "headline": "The Life Skills No Test Measures",
+  "accent": [
+   "life",
+   "skills"
+  ],
+  "sub": "Money, independence, home, thinking"
+ },
+ {
+  "n": 21,
+  "date": "oct29",
+  "slug": "independent-kids",
+  "layout": "frame",
+  "ground": "gold",
+  "photo": "IMG_1565.jpeg",
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "kicker": "Without it feeling reckless",
+  "headline": "How to Raise Independent Kids",
+  "accent": [
+   "independent"
+  ],
+  "sub": "A thousand small handovers, not one big leap"
+ },
+ {
+  "n": 22,
+  "date": "oct30",
+  "slug": "backyard-science-v2",
+  "layout": "overlay",
+  "photo": "IMG_0129.jpeg",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "kicker": "No kit needed · 15 experiments",
+  "headline": "Outdoor Science for Kids",
+  "accent": [
+   "science"
+  ],
+  "sub": "Water, plants, soil, bugs. Free list"
+ }
+]
