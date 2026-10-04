@@ -22,6 +22,8 @@ interface Props {
   homeUrl: string;
   /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
   plan?: 'annual' | 'monthly';
+  /** Discounted first charge (e.g. '$79' for the Fall offer). Overrides the plan price. */
+  priceOverride?: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
@@ -50,6 +52,7 @@ export default function TrialEndingReminder({
   manageUrl,
   homeUrl,
   plan,
+  priceOverride,
 }: Props) {
   const name = firstName?.trim() || 'there';
 
@@ -67,7 +70,7 @@ export default function TrialEndingReminder({
   const daysLabel = daysFromNow === 1 ? '1 day' : `${daysFromNow} days`;
 
   const isMonthly = plan === 'monthly';
-  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
+  const price = priceOverride ?? (isMonthly ? '$15' : isFounderPhase ? '$99' : '$149');
   /** "for the year" / "for the month" phrasing. */
   const forThe = isMonthly ? 'for the month' : 'for the year';
 

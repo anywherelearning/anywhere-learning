@@ -20,6 +20,8 @@ interface Props {
   homeUrl: string;
   /** Link to manage / cancel the subscription. */
   manageUrl: string;
+  /** Discounted first-year price (e.g. '$79' for the Fall offer). */
+  firstYearPrice?: string;
   /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
   plan?: 'annual' | 'monthly';
 }
@@ -49,6 +51,7 @@ export default function MembershipConverted({
   homeUrl,
   manageUrl,
   plan,
+  firstYearPrice,
 }: Props) {
   const name = firstName?.trim() || 'there';
   const isMonthly = plan === 'monthly';
@@ -140,7 +143,7 @@ export default function MembershipConverted({
                           />
                           <div style={{ ...ctaLabel, marginTop: '16px' }}>Membership active</div>
                           <div style={confirmLine}>
-                            {price} a {per}{isFounderPhase ? ', your founder rate, locked in for life' : ''}.
+                            {firstYearPrice ? `${firstYearPrice} for your first year, then ${price} a ${per}` : `${price} a ${per}`}{isFounderPhase ? ', your founder rate, locked in for life' : ''}.
                             Renews {longDate(renews)}.
                           </div>
                           <div style={{ marginTop: '16px' }}>
