@@ -397,7 +397,7 @@ export default async function FallOfferPage() {
               <Tape className="left-10 -rotate-6" />
               <Tape className="right-10 rotate-6" color="rgba(169,193,163,0.85)" />
               <div className="relative aspect-[4/5] overflow-hidden">
-                <Image src="/amelie.jpg" alt="Amelie and her kids on a mountain hike" fill sizes="380px" quality={90} className="object-cover" />
+                <Image src="/images/fall/amelie-portrait.jpg" alt="Amelie and her kids on a mountain hike" fill sizes="(max-width: 768px) 90vw, 380px" quality={90} className="object-cover" />
               </div>
               <figcaption className="mt-3 text-center font-display text-[20px] italic text-[#C97B5C]">xo, Amelie</figcaption>
             </figure>
