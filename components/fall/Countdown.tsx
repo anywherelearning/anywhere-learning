@@ -23,7 +23,7 @@ export default function Countdown({ endsAt, tone = 'light' }: { endsAt: string; 
 
   const cell =
     tone === 'dark'
-      ? 'bg-forest-dark text-cream'
+      ? 'border border-white/15 bg-white/10 text-cream'
       : 'bg-white text-ink shadow-[0_6px_16px_-10px_rgba(45,58,46,0.5)] border border-forest-dark/10';
 
   const units: [number | null, string][] = [

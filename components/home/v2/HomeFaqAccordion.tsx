@@ -1,14 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { HOME_FAQS_ACCORDION as HOME_FAQS } from '@/lib/home-showcase';
+import { HOME_FAQS_ACCORDION, type ShowcaseFaq } from '@/lib/home-showcase';
 
 /**
  * Homepage FAQ. Single-open accordion, first item open on load so the section
  * never reads as a wall of closed bars. Same array feeds the FAQPage JSON-LD
  * on the server, so the markup and the structured data can't drift.
  */
-export default function HomeFaqAccordion() {
+export default function HomeFaqAccordion({ faqs }: { faqs?: ShowcaseFaq[] } = {}) {
+  // Optional override so ad landing pages can show their own questions.
+  const HOME_FAQS = faqs ?? HOME_FAQS_ACCORDION;
   // -1 = all closed. Opening one by default makes the list look half-broken
   // and pushes the second question off a phone screen.
   const [open, setOpen] = useState(-1);

@@ -24,7 +24,17 @@ import { INSIDE_TABS } from '@/lib/home-showcase';
  * picture you cannot see. Three looping videos stacked in an accordion is the
  * wrong place for motion, and it saves the work on a battery.
  */
-export default function InsideMembership({ trialDays }: { trialDays: number }) {
+export default function InsideMembership({
+  trialDays,
+  ctaHref = '/start-trial',
+  ctaNote,
+}: {
+  trialDays: number;
+  /** Where the trial button goes. /fall passes its offer link. */
+  ctaHref?: string;
+  /** Line under the button. Defaults to the trial reminder. */
+  ctaNote?: string;
+}) {
   const [tab, setTab] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
@@ -157,7 +167,7 @@ export default function InsideMembership({ trialDays }: { trialDays: number }) {
 
         <div className="flex flex-col items-start gap-3">
           <Link
-            href="/start-trial"
+            href={ctaHref}
             className="inline-flex items-center gap-2.5 rounded-2xl bg-forest px-9 py-[18px] text-lg font-semibold text-cream shadow-[0_12px_28px_-8px_rgba(88,129,87,0.4)] transition-all duration-200 hover:scale-[1.02] hover:bg-forest-dark active:scale-[0.97]"
           >
             Start free trial
@@ -175,7 +185,7 @@ export default function InsideMembership({ trialDays }: { trialDays: number }) {
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </Link>
-          <span className="text-sm text-gray-500">{trialDays} days free. Cancel anytime.</span>
+          <span className="text-sm text-gray-500">{ctaNote ?? `${trialDays} days free. Cancel anytime.`}</span>
         </div>
       </div>
     </div>
