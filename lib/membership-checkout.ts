@@ -24,6 +24,7 @@ import {
   getAccessContextForClerkId,
   isTrialEligible,
 } from '@/lib/access';
+import { FALL_OFFER, FALL_OFFER_PRICE_USD, isFallOfferActive } from '@/lib/fall-offer';
 
 export type MembershipCheckoutResult =
   | { ok: true; url: string }
@@ -37,6 +38,8 @@ export async function createMembershipCheckout(opts: {
   origin: string;
   /** Billing plan. Annual (the featured, founder-eligible plan) by default. */
   plan?: MembershipPlan;
+  /** Promo the buyer arrived with (from /fall). Ignored once expired. */
+  offer?: 'fall';
 }): Promise<MembershipCheckoutResult> {
   const { clerkId, email, origin } = opts;
   const plan: MembershipPlan = opts.plan === 'monthly' ? 'monthly' : 'annual';
@@ -75,6 +78,12 @@ export async function createMembershipCheckout(opts: {
   // when Clerk isn't configured (bare local dev) there's no trial.
   const applyTrial = clerkId ? await isTrialEligible(clerkId) : false;
 
+  // Fall offer: $20 off the yearly founder rate, so the first year is $79.
+  // Founder-only because the coupon is sized against $99 (and restricted to
+  // the founder product at Stripe).
+  const applyFallOffer =
+    opts.offer === 'fall' && plan === 'annual' && offerFounderRate && isFallOfferActive();
+
   // Debug log (dev only): what the route decided about credit/trial/rate per
   // request. Gated so production checkout logs don't carry clerkIds.
   if (process.env.NODE_ENV !== 'production') {
@@ -83,6 +92,7 @@ export async function createMembershipCheckout(opts: {
       plan,
       trial: applyTrial,
       founderRate: offerFounderRate,
+      fallOffer: applyFallOffer,
     });
   }
 
@@ -93,7 +103,11 @@ export async function createMembershipCheckout(opts: {
     plan === 'monthly'
       ? `$${MONTHLY_PRICE_USD}/month`
       : `$${offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD}/year`;
-  const submitMessage = applyTrial
+  const submitMessage = applyFallOffer
+    ? applyTrial
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${FALL_OFFER_PRICE_USD} for your first year (${FALL_OFFER.name}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
+      : `${FALL_OFFER.name}: $${FALL_OFFER_PRICE_USD} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
+    : applyTrial
     ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts, ${priceLine}${offerFounderRate ? ', your founder rate locked in for life' : ''}. Cancel anytime before then and pay nothing.`
     : offerFounderRate
       ? `Founder rate: $${FOUNDER_PRICE_USD}/year, locked in for life.`
@@ -110,7 +124,10 @@ export async function createMembershipCheckout(opts: {
     expires_at: Math.floor(Date.now() / 1000) + 2 * 60 * 60,
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
-    allow_promotion_codes: true,
+    // Stripe rejects `discounts` together with `allow_promotion_codes`.
+    ...(applyFallOffer
+      ? { discounts: [{ coupon: FALL_OFFER.couponId }] }
+      : { allow_promotion_codes: true }),
     billing_address_collection: 'auto',
     customer_email: email,
     client_reference_id: clerkId || undefined,
@@ -127,11 +144,13 @@ export async function createMembershipCheckout(opts: {
         // founder status of THIS subscription.
         founder_phase: String(offerFounderRate),
         trial_applied: String(applyTrial),
+        ...(applyFallOffer && { offer: FALL_OFFER.slug }),
         ...(clerkId && { clerk_id: clerkId }),
       },
     },
     success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}${plan === 'monthly' ? '&plan=monthly' : ''}&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/?cancelled=1#membership`,
+    // Fall-offer buyers came from the ad landing page, so send them back there.
+    cancel_url: applyFallOffer ? `${origin}/fall?cancelled=1` : `${origin}/?cancelled=1#membership`,
     // Note: Stripe's `after_expiration.recovery` is NOT supported in
     // `subscription` mode — only `payment` mode. Abandoned-membership
     // emails fall back to /join (handled in the webhook's recoveryUrl
@@ -143,6 +162,7 @@ export async function createMembershipCheckout(opts: {
       // has the session (no subscription exists), and the abandoned email
       // needs to pitch the plan that was actually in the cart.
       plan,
+      ...(applyFallOffer && { offer: FALL_OFFER.slug }),
       ...(clerkId && { clerk_id: clerkId }),
     },
   });

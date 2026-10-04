@@ -37,6 +37,7 @@ import { users, subscriptions, stripeEvents, sentEmails, exitSurveys } from '@/l
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import { sendMetaEvent } from '@/lib/meta-capi';
+import { FALL_OFFER, FALL_OFFER_PRICE_USD } from '@/lib/fall-offer';
 import {
   sendMembershipWelcomeEmail,
   sendAbandonedCheckoutMembershipEmail,
@@ -323,6 +324,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         trialEndsAt: trialEndsAt?.toISOString(),
         // Monthly members get "$15 a month" wording instead of the annual copy.
         plan,
+        // Fall offer checkouts (offer=fall on the session) pay $79 the first year.
+        ...(session.metadata?.offer === FALL_OFFER.slug && { firstYearPrice: `$${FALL_OFFER_PRICE_USD}` }),
       });
     } catch (err) {
       console.error('[webhook] welcome email failed:', err);
@@ -622,6 +625,8 @@ async function handleTrialWillEnd(sub: Stripe.Subscription) {
       manageUrl: `${base}/account/settings`,
       homeUrl: `${base}/account/home`,
       plan: planForPriceId(trialPriceId),
+      // Fall offer subs carry offer=fall (set at checkout); their first year is $79.
+      ...(sub.metadata?.offer === FALL_OFFER.slug && { priceOverride: `$${FALL_OFFER_PRICE_USD}` }),
     });
     console.log(`[webhook] sent trial-ending email to ${user.email}`);
   } catch (err) {
@@ -805,6 +810,7 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
         homeUrl: `${base}/account/home`,
         manageUrl: `${base}/account/settings`,
         plan,
+        ...(sub.metadata?.offer === FALL_OFFER.slug && { firstYearPrice: `$${FALL_OFFER_PRICE_USD}` }),
       });
       console.log(`[webhook] sent membership-converted email to ${user.email}`);
     } catch (err) {

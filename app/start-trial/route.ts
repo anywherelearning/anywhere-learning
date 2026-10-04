@@ -18,6 +18,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { createMembershipCheckout } from '@/lib/membership-checkout';
+import { FALL_OFFER, OFFER_COOKIE, isFallOfferActive } from '@/lib/fall-offer';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,6 +44,27 @@ export async function GET(req: NextRequest) {
   }
   const plan = planParam;
 
+  // Fall offer from /fall: `?offer=fall`, or the cookie set on the way to
+  // sign-up (in case the query string doesn't survive the round trip).
+  const offer =
+    isFallOfferActive() &&
+    (req.nextUrl.searchParams.get('offer') === FALL_OFFER.slug ||
+      req.cookies.get(OFFER_COOKIE)?.value === FALL_OFFER.slug)
+      ? FALL_OFFER.slug
+      : undefined;
+  const withOffer = (res: NextResponse) => {
+    if (offer) {
+      res.cookies.set(OFFER_COOKIE, offer, {
+        expires: new Date(FALL_OFFER.endsAt.getTime() + 3 * 60 * 60 * 1000),
+        path: '/',
+        sameSite: 'lax',
+        httpOnly: true,
+        secure: origin.startsWith('https'),
+      });
+    }
+    return res;
+  };
+
   let clerkId: string | null = null;
   let clerkEmail: string | undefined;
   let clerkConfigured = false;
@@ -60,11 +82,13 @@ export async function GET(req: NextRequest) {
 
   // No account yet → create one first (sign-up returns here when done).
   if (clerkConfigured && !clerkId) {
-    return NextResponse.redirect(
-      `${origin}/sign-up?redirect_url=${encodeURIComponent(
-        plan === 'monthly' ? '/start-trial?plan=monthly' : '/start-trial',
-      )}`,
-      303,
+    const back = offer
+      ? `/start-trial?plan=${plan}&offer=${offer}`
+      : plan === 'monthly'
+        ? '/start-trial?plan=monthly'
+        : '/start-trial';
+    return withOffer(
+      NextResponse.redirect(`${origin}/sign-up?redirect_url=${encodeURIComponent(back)}`, 303),
     );
   }
 
@@ -74,8 +98,9 @@ export async function GET(req: NextRequest) {
       email: clerkEmail,
       origin,
       plan,
+      offer,
     });
-    if (result.ok) return NextResponse.redirect(result.url, 303);
+    if (result.ok) return withOffer(NextResponse.redirect(result.url, 303));
     if (result.reason === 'already_member') {
       // Active member or trial member: nothing to buy, open the library.
       return NextResponse.redirect(`${origin}/account`, 303);

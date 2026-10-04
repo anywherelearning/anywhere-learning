@@ -39,6 +39,7 @@ export async function sendMembershipWelcomeEmail({
   isTrial,
   trialEndsAt,
   plan,
+  firstYearPrice,
 }: {
   to: string;
   firstName?: string;
@@ -50,6 +51,8 @@ export async function sendMembershipWelcomeEmail({
   trialEndsAt?: string;
   /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
   plan?: 'annual' | 'monthly';
+  /** Discounted first-year price (e.g. '$79' for the Fall offer). */
+  firstYearPrice?: string;
 }) {
   const subject = isTrial
     ? `Your free trial is open${firstName ? `, ${firstName}` : ''}. Let's pick your first activity`
@@ -59,7 +62,7 @@ export async function sendMembershipWelcomeEmail({
     replyTo: REPLY_TO,
     to,
     subject,
-    react: MembershipWelcome({ firstName, signInUrl, isFounderPhase, isTrial, trialEndsAt, plan }),
+    react: MembershipWelcome({ firstName, signInUrl, isFounderPhase, isTrial, trialEndsAt, plan, firstYearPrice }),
   });
 }
 
@@ -139,6 +142,7 @@ export async function sendTrialEndingEmail({
   manageUrl,
   homeUrl,
   plan,
+  priceOverride,
 }: {
   to: string;
   firstName?: string;
@@ -149,13 +153,15 @@ export async function sendTrialEndingEmail({
   homeUrl: string;
   /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
   plan?: 'annual' | 'monthly';
+  /** Discounted first charge (e.g. '$79' for the Fall offer). */
+  priceOverride?: string;
 }) {
   return getResend().emails.send({
     from: FROM,
     replyTo: REPLY_TO,
     to,
     subject: 'Your free trial ends in 3 days. Here\'s exactly what happens',
-    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, homeUrl, plan }),
+    react: TrialEndingReminder({ firstName, isFounderPhase, trialEndDate, manageUrl, homeUrl, plan, priceOverride }),
   });
 }
 
@@ -168,6 +174,7 @@ export async function sendMembershipConvertedEmail({
   homeUrl,
   manageUrl,
   plan,
+  firstYearPrice,
 }: {
   to: string;
   firstName?: string;
@@ -178,6 +185,8 @@ export async function sendMembershipConvertedEmail({
   manageUrl: string;
   /** Billing plan — swaps price/interval wording. Defaults to 'annual'. */
   plan?: 'annual' | 'monthly';
+  /** Discounted first-year price (e.g. '$79' for the Fall offer). */
+  firstYearPrice?: string;
 }) {
   const subject = `It's official${firstName ? `, ${firstName}` : ''}. You're a member`;
   return getResend().emails.send({
@@ -185,7 +194,7 @@ export async function sendMembershipConvertedEmail({
     replyTo: REPLY_TO,
     to,
     subject,
-    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, homeUrl, manageUrl, plan }),
+    react: MembershipConverted({ firstName, isFounderPhase, renewalDate, homeUrl, manageUrl, plan, firstYearPrice }),
   });
 }
 

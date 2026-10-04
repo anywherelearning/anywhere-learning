@@ -20,6 +20,8 @@ interface Props {
   isTrial?: boolean;
   /** ISO date the trial converts to a paid membership. Only set when isTrial. */
   trialEndsAt?: string;
+  /** Discounted first-year price (e.g. '$79' for the Fall offer). */
+  firstYearPrice?: string;
   /** Billing plan. Monthly swaps the price/interval wording; defaults to annual. */
   plan?: 'annual' | 'monthly';
 }
@@ -67,6 +69,7 @@ export default function MembershipWelcome({
   isTrial,
   trialEndsAt,
   plan,
+  firstYearPrice,
 }: Props) {
   const name = firstName?.trim() || 'there';
   const isMonthly = plan === 'monthly';
@@ -296,7 +299,7 @@ export default function MembershipWelcome({
                                 <TrialDivider />
                                 <TrialRow label={pillDate(trialEnd)} last>
                                   <strong style={strongInk}>Membership begins.</strong> Your plan
-                                  starts at {price} for the {per} and downloads unlock.
+                                  starts at {firstYearPrice ?? price} for the {firstYearPrice ? 'first year' : per} and downloads unlock.
                                 </TrialRow>
                               </tbody>
                             </table>
