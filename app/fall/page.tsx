@@ -7,7 +7,6 @@ import Eyebrow from '@/components/shared/PageEyebrow';
 import { Tape, PAPER_SHADOW } from '@/components/shared/Paper';
 import InsideMembership from '@/components/home/v2/InsideMembership';
 import HomeFaqAccordion from '@/components/home/v2/HomeFaqAccordion';
-import Testimonials from '@/components/home/Testimonials';
 import { coverSrc } from '@/lib/cover';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD, isFallOfferActive } from '@/lib/fall-offer';
 import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD, TRIAL_DAYS, isFounderPhaseOpen } from '@/lib/membership';
@@ -41,16 +40,10 @@ const MONTHLY_HREF = '/start-trial?plan=monthly';
 const MOMENTS: { src: string; guide: string; skill: string; alt: string; rot: number }[] = [
   { src: '/images/fall/party-planner-math.jpg', guide: 'Party Planner Math', skill: 'budgets + fractions', alt: 'Two kids icing cupcakes for a party they planned', rot: -3 },
   { src: '/images/fall/market-stall.jpg', guide: 'Market Stall Pitch', skill: 'pricing + persuasive writing', alt: 'A girl at her popcorn stand with a $2 sign she made', rot: 2 },
-  { src: '/images/fall/kitchen-science-lab.jpg', guide: 'Kitchen Science Lab', skill: 'chemistry', alt: 'A girl with a rack of colourful test tubes', rot: -1.5 },
+  { src: '/images/fall/community-service-business.jpg', guide: 'Community Service Business', skill: 'planning + pitching', alt: 'A boy at a table presenting the babysitting service he designed', rot: -1.5 },
   { src: '/images/fall/grow-it-eat-it.jpg', guide: 'Grow It, Eat It', skill: 'biology', alt: 'A girl planting tomatoes in pots on the deck', rot: 2.5 },
   { src: '/images/fall/garden-plot-planner.jpg', guide: 'Garden Plot Planner', skill: 'measuring + area', alt: 'A girl and her dad building a garden box with a drill', rot: -2 },
   { src: '/images/fall/kitchen-math.jpg', guide: 'Kitchen Math Challenge', skill: 'fractions + measuring', alt: 'A girl mixing batter in a big bowl', rot: 1.5 },
-];
-
-const GET_CARDS: { title: string; body: string }[] = [
-  { title: '120+ step-by-step guides', body: 'Open on your phone, tablet or laptop and follow along. Printing is optional.' },
-  { title: 'Three levels in every guide', body: 'Explore, Develop, Extend, so a 6-year-old and a 12-year-old do the same activity together.' },
-  { title: 'Use them year after year', body: 'Every guide adjusts as your kids grow, so the library grows with them.' },
 ];
 
 // Invent a New Sport, word for word from the guide.
@@ -69,6 +62,25 @@ const PEEK_PINS: { n: number; top: string; title: string; body: string }[] = [
   { n: 2, top: '31%', title: 'Your job', body: 'so you always know which part to hand over.' },
   { n: 3, top: '56%', title: 'Questions to ask', body: 'so you guide with a question instead of the answer.' },
   { n: 4, top: '77%', title: 'Three levels', body: 'pick the one that fits each kid, from 6 to 14.' },
+];
+
+// Short, word-for-word excerpts from the testimonials on the homepage.
+const QUOTES: { quote: string; who: string; role: string }[] = [
+  {
+    quote: "She helps shift the mindset from 'I need educational experts and structured programs to teach my child' to 'I already have what it takes to support my child's learning.'",
+    who: 'Claudia, M.Sc.',
+    role: 'Certified parenting coach',
+  },
+  {
+    quote: 'She gave them real-world projects that had them thinking, building, presenting, and collaborating with enthusiasm.',
+    who: 'Wendy',
+    role: 'Parent',
+  },
+  {
+    quote: 'Years after leaving her classroom, students still talk about Amelie as the best teacher they ever had.',
+    who: 'Catherine',
+    role: 'Colleague',
+  },
 ];
 
 const FAQS = [
@@ -243,23 +255,6 @@ export default async function FallOfferPage() {
                 ctaNote={`${TRIAL_DAYS} days free, then $${FALL_OFFER_PRICE_USD} for your first year.`}
               />
             </ScrollReveal>
-            <ul className="m-0 mt-14 grid list-none gap-5 p-0 md:grid-cols-3">
-              {GET_CARDS.map((c, i) => (
-                <li
-                  key={c.title}
-                  className={`bg-[#fffdf9] px-6 py-5 ${PAPER_SHADOW}`}
-                  style={{ transform: `rotate(${[-0.8, 0.6, -0.4][i]}deg)` }}
-                >
-                  <div className="flex gap-3">
-                    <CheckIcon />
-                    <div>
-                      <p className="font-semibold text-ink">{c.title}</p>
-                      <p className="mt-1 text-[15px] leading-[1.55] text-gray-600">{c.body}</p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
@@ -367,7 +362,33 @@ export default async function FallOfferPage() {
         </section>
 
         {/* ════════ 04 TESTIMONIALS ════════ */}
-        <Testimonials />
+        <section className="px-6 py-20 md:px-16 md:py-24" style={{ background: '#F2EFE4' }}>
+          <div className="mx-auto max-w-[1100px]">
+            <ScrollReveal>
+              <div className="mb-10 text-center">
+                <Eyebrow center>In their words</Eyebrow>
+                <h2 className="mt-4 font-display text-[clamp(1.8rem,3.4vw,2.6rem)] leading-[1.06] tracking-tight">
+                  The people who <span className="italic text-forest">know my work.</span>
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ul className="m-0 grid list-none gap-6 p-0 md:grid-cols-3">
+              {QUOTES.map((q, i) => (
+                <li
+                  key={q.who}
+                  className={`relative bg-[#FBF3DC] px-6 pb-5 pt-7 ${PAPER_SHADOW}`}
+                  style={{ transform: `rotate(${[-1.2, 0.9, -0.6][i]}deg)` }}
+                >
+                  <Tape className="left-1/2 w-16 -translate-x-1/2 -rotate-2" />
+                  <p className="m-0 font-display text-[17px] italic leading-[1.5] text-ink">&ldquo;{q.quote}&rdquo;</p>
+                  <p className="mb-0 mt-4 text-[13.5px] font-semibold text-forest-dark">
+                    {q.who} <span className="font-normal text-gray-500">&middot; {q.role}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ════════ 05 AMELIE ════════ */}
         <section className="bg-cream px-6 py-20 md:px-16 md:py-24">
@@ -443,10 +464,7 @@ export default async function FallOfferPage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-7">
-                <Countdown endsAt={endsAt} />
-              </div>
-              <TrialButton className="mt-6 w-full">Start my free trial</TrialButton>
+              <TrialButton className="mt-7 w-full">Start my free trial</TrialButton>
             </div>
             <p className="mt-5 text-center text-[14.5px] text-gray-600">
               Prefer monthly?{' '}
