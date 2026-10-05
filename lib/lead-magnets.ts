@@ -124,6 +124,7 @@ const POST_OVERRIDES: Record<string, string | 'capable-kid' | 'free-guide'> = {
   'teaching-kids-to-fail': 'resilience-ideas',
   'what-to-do-when-kids-say-im-bored': 'resilience-ideas',
   'nature-journaling-for-kids': 'nature-walk-ideas',
+  'fall-nature-activities-kids': 'seasonal-scavenger-ideas',
   'bird-watching-with-kids': 'nature-walk-ideas',
   'risky-play-for-kids': 'forest-school-ideas',
   'outdoor-stem-by-age': 'stem-ideas',

@@ -9614,6 +9614,108 @@ const posts: BlogPost[] = [
     ],
     relatedSlugs: ['real-world-math-activities', 'kitchen-learning-lab', 'road-trip-math', 'design-a-theme-park-kids', 'financial-literacy-for-kids-by-age', 'shark-tank-for-kids'],
   },
+  {
+    slug: 'fall-nature-activities-kids',
+    title: 'Fall Nature Activities for Kids: 12 Investigations That Only Work in Autumn',
+    seoTitle: 'Fall Nature Activities for Kids: 12 Real Investigations',
+    excerpt: 'Fall is the one season when trees, seeds, animals and daylight all change fast enough for a kid to measure it. Twelve fall nature activities with something to count, time or predict, from logging one tree’s colour change to timing spinning maple seeds. Ages 6 to 14, no kit.',
+    metaDescription: 'Fall nature activities for kids 6 to 14 that only work in autumn: log one tree, count falling leaves, time spinning seeds, track daylight. No kit needed.',
+    hook: 'For about six weeks, your whole neighbourhood is running an experiment. Your kid just has to start taking notes.',
+    category: 'nature-learning',
+    pillarSlug: 'nature-based-learning',
+    publishedAt: '2026-10-05',
+    draft: true,
+    keywords: ['fall nature activities for kids', 'autumn nature activities for kids', 'fall nature study', 'fall science activities for kids', 'autumn science for kids', 'leaf chromatography', 'why do leaves change colour', 'maple seed helicopter experiment', 'mushroom spore print kids', 'fall outdoor activities for kids'],
+    readTimeMinutes: 11,
+    author: amelie,
+    recommendedProduct: 'seed-travelers',
+    heroImage: '/images/fall-nature-hero.jpeg',
+    heroImageAlt: 'Two kids on bikes holding hands as they ride down a gravel trail under a canopy of bright yellow autumn leaves',
+    content: [
+      { type: 'summary', text: 'Fall nature activities for kids work best as investigations: autumn is the one season when trees, seeds, animals and daylight all change fast enough for a child to measure the change from one week to the next. Logging one tree’s colour, counting falling leaves, timing spinning maple seeds and tracking how much daylight is lost each day turn an ordinary walk into real science, math and writing for ages 6 to 14, with no kit.' },
+
+      { type: 'paragraph', text: 'Most fall activity lists are crafts. Leaf rubbings, pinecone bird feeders, a wreath for the door. Those are lovely, and if your kids want to make them, make them. But fall has something better going for it. It is the one season when everything outside changes fast enough to measure.' },
+      { type: 'paragraph', text: 'The tree in your yard is a different colour on Friday than it was on Monday. You lose a few minutes of daylight every single day. Seeds are leaving, squirrels are burying, and the spiders are building bigger webs than they did all summer. For about six weeks, your whole neighbourhood is running an experiment. Your kid just has to start taking notes.' },
+      { type: 'paragraph', text: 'So these are investigations, not crafts. Each one has something to count, time or predict, which is where the math and the writing come in without anyone calling it a lesson. Most need nothing but a notebook, a phone camera and a walk you were going to take anyway. (If you live in the Southern Hemisphere, save this one for March.)' },
+
+      { type: 'heading', level: 2, text: 'The one fact that makes fall worth studying' },
+      { type: 'paragraph', text: 'Leaves don’t turn yellow in the fall. The yellow and orange were there all summer, hidden under the green. Green comes from chlorophyll, the pigment a leaf uses to make food from sunlight. When the days get shorter and the nights get cooler, trees stop replacing it, the green fades, and the yellows and oranges underneath finally show.' },
+      { type: 'paragraph', text: 'Reds are a different story. Many trees make their red pigment new in the fall, and a run of sunny days with cold nights makes it brighter. That is why some autumns are spectacular and others are mostly brown. Tell your kid this on the first walk, and three of the investigations below suddenly have a question behind them.' },
+
+      { type: 'heading', level: 2, text: 'Trees and leaves' },
+
+      { type: 'heading', level: 3, text: '1. One tree, every day' },
+      { type: 'paragraph', text: 'Pick one tree you pass every day. Same spot, same time of day, one photo. That’s it. After a week, line the photos up and ask: how much of it is still green? Kids can estimate it as a fraction or a percentage (“about three quarters green”) and graph it. After three weeks they have a real data set, and they can predict the day it will be bare. Younger kids just sort the printed photos in order and describe what changed. Older kids can track two trees of different kinds and find out which one turns first, and why.' },
+
+      { type: 'heading', level: 3, text: '2. The hidden colours in a green leaf' },
+      { type: 'paragraph', text: 'This is the experiment that proves the yellow was there all along. Tear a few green leaves into small pieces, put them in a small jar, and add just enough rubbing alcohol to cover them. Stand the jar in a bowl of hot tap water for about half an hour, until the alcohol turns green. Then hang a strip of coffee filter from a pencil laid across the jar, so the bottom of the strip just touches the liquid. Over the next hour or so, the liquid climbs the paper and splits into bands: green, and then yellow above it that nobody could see in the leaf.' },
+      { type: 'paragraph', text: 'An adult handles the alcohol, and the hot water comes from the tap, never the stove. Older kids can run it as a fair test: one green leaf, one yellow leaf, one red leaf, three strips side by side. Which bands show up in all three? Which ones are missing?' },
+
+      { type: 'heading', level: 3, text: '3. The falling leaf count' },
+      { type: 'paragraph', text: 'Mark off a square under one tree with four sticks and a string (a metre or a yard on each side is plenty). Every day, count the leaves that landed inside it, then clear them out. Tally marks for little ones, a table and a line graph for older kids. The graph climbs, peaks and drops off, and the big question is: when is the peak day, and can you predict it before it happens? Windy days and rainy days make great “what happened here?” moments on the graph. If your kid likes this kind of close-up ground study, a [Square Foot Safari](/shop/square-foot-safari) is the same idea taken further, across every living thing in one small square.' },
+
+      { type: 'heading', level: 3, text: '4. Leaf litter, layer by layer' },
+      { type: 'paragraph', text: 'Find a spot under trees that nobody rakes. Gently peel back the leaf litter, one layer at a time, and lay each layer out on a sheet in order. The top is this year’s leaves, whole and crisp. Underneath they get darker and full of holes. Further down they are broken into pieces, and at the bottom they have turned into something that looks like soil. That is decomposition in slow motion, a few centimetres deep. Kids count what lives in each layer (worms, pill bugs, white threads of fungus) and draw the layers like a cake. Wash hands after, and put every layer back when you’re done.' },
+      { type: 'product-callout', slug: 'decomposition-detective', pinned: true, context: 'If this one hooks them, Decomposition Detective turns it into a weeks-long experiment: a jar of leaves and soil, predictions, the decomposers behind it, and a real fair test.' },
+
+      { type: 'heading', level: 2, text: 'Seeds on the move' },
+
+      { type: 'heading', level: 3, text: '5. The helicopter seed drop' },
+      { type: 'paragraph', text: 'Collect a handful of maple seeds, the winged ones kids call helicopters. Drop them one at a time from the same height (the top of a slide or a step stool works), and time how long each one takes to land. Then pull the wing off one and drop the bare seed. It falls much faster. The wing makes the seed spin, the spin creates lift, and a slower fall gives the wind more time to carry it away from the parent tree. Kids can average five drops, compare two kinds of winged seed, or test whether a bigger wing means a longer fall. Ages 6 and up can time it; ages 10 and up can calculate averages and make a chart.' },
+
+      { type: 'heading', level: 3, text: '6. The hitchhiker test' },
+      { type: 'paragraph', text: 'Some seeds don’t fly. They hitch a ride. Walk through a weedy field edge in an old fleece or wool socks pulled over your shoes, then sit down and count what stuck. Sort the hitchhikers by how they grip: hooks, barbs, sticky coating. Then tell your kid this story. In 1941, a Swiss engineer named George de Mestral came home from a walk in the Alps with burdock burrs stuck to his clothes and all over his dog. He looked at one under a microscope, saw that it was covered in tiny hooks, and spent years turning that into Velcro. The challenge: which seed from your sock would make the best fastener, and why?' },
+      { type: 'product-callout', slug: 'seed-travelers', pinned: true, context: 'Seed Travelers walks your kid through collecting seeds and testing every way they travel, by wind, water, animal and gravity, then designing the ultimate seed.' },
+
+      { type: 'heading', level: 2, text: 'Animals getting ready' },
+
+      { type: 'heading', level: 3, text: '7. Ten minutes with a squirrel' },
+      { type: 'paragraph', text: 'Grey squirrels spend the fall scatter-hoarding: burying nuts one at a time in dozens of shallow holes instead of one big pile. They find many of them again weeks later using memory and smell, and the ones they forget can grow into trees. Pick one squirrel and watch it for ten minutes. Tally every nut buried, every hole dug up, and every time it seems to pretend to bury something (researchers have caught grey squirrels doing this when another squirrel is watching). Kids end up with a real behaviour log, and a much better question than “what do squirrels eat?” Birds work the same way; if your kid would rather count those, here is how to start [bird watching with kids](/blog/bird-watching-with-kids).' },
+
+      { type: 'heading', level: 3, text: '8. The spider web survey' },
+      { type: 'paragraph', text: 'If it feels like there are suddenly webs everywhere in early fall, there are. Orb weaver spiders hatch in spring and grow all summer, so by now they’re big, their webs are big, and many of them leave the web up during the day. Pick a short route you walk often and count the webs on it, on dewy mornings if you can, when every strand shows. Measure the widest ones with a ruler held close (no touching). Is the count going up or down as it gets colder? Kids who are nervous about spiders often get curious once they’re measuring instead of avoiding.' },
+
+      { type: 'heading', level: 3, text: '9. The camouflage hunt in fallen leaves' },
+      { type: 'paragraph', text: 'Cut ten short pieces of yarn in different colours: bright green, red, yellow, brown, blue. One person scatters them in a patch of fallen leaves, and the other gets one minute to find as many as they can. Write down which colours were found and which ones “survived.” Swap and repeat a few times, then add up the results. Usually the browns and oranges survive and the blue and green get caught, which is exactly why so many fall animals are brown. Kids who love this can go deeper with the [Camouflage Challenge](/shop/camouflage-challenge).' },
+
+      { type: 'heading', level: 2, text: 'Sky, weather and fungi' },
+
+      { type: 'heading', level: 3, text: '10. The daylight countdown' },
+      { type: 'paragraph', text: 'Day length changes fastest around the fall equinox in late September, so early October is the best time of year to catch it moving. Every day, write down the sunset time (a weather app has it, or kids can note when the streetlights come on). Subtract each day from the one before. In much of Canada, the northern US and the UK, you lose roughly two to four minutes of daylight a day right now; closer to the equator it barely changes. Kids can graph it, calculate a weekly total, and predict the date when it will be dark before dinner. Ages 6 to 8 can just mark it on a calendar and notice; ages 11 and up can work out the rate of change.' },
+
+      { type: 'heading', level: 3, text: '11. Predict the first frost' },
+      { type: 'paragraph', text: 'Put a cheap thermometer outside, somewhere shaded, and have your kid read the temperature at the same time every morning. Log it, graph it, and draw a line through the trend. When does the line hit zero (or 32°F)? That is their first-frost prediction. Then look up the average first-frost date for your area on a local gardening site and compare. The day the frost actually comes, you will have the most invested weather forecaster in the house.' },
+      { type: 'product-callout', slug: 'nature-data-tracker', pinned: true, context: 'For kids who love the numbers side, Nature Data Tracker walks them through tracking daylight, temperature or rain for a week or two, charting it and predicting what comes next.' },
+
+      { type: 'heading', level: 3, text: '12. A mushroom spore print' },
+      { type: 'paragraph', text: 'Fall is mushroom season, and a spore print is how people who study fungi tell many of them apart. Take a mushroom with an open cap and visible gills, cut off the stem, and set the cap gills-down on paper (half white, half dark, so any colour shows). Cover it with a bowl and leave it overnight. In the morning, lift the cap carefully: the spores have dropped into a print of every gill. An open-cap portobello from the grocery store works well (small button mushrooms are too young). If you use wild mushrooms, handle them with gloves, wash hands after, keep them away from little ones who put things in their mouths, and never eat a wild mushroom you have found.' },
+
+      { type: 'heading', level: 2, text: 'Picking by age' },
+      { type: 'paragraph', text: 'Every one of these works from 6 to 14. What changes is how much of the thinking your kid does on their own.' },
+      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
+      { type: 'paragraph', text: 'Counting, sorting and noticing. Tally marks for the leaf count, sorting tree photos in order, the yarn hunt, the spore print. Ask “what changed?” and “what do you think will happen tomorrow?” and write down their answers word for word. Their prediction being wrong is part of the fun.' },
+      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
+      { type: 'paragraph', text: 'Tables, graphs and averages. Timing seed drops and averaging them, graphing the falling leaf count, subtracting sunset times. This is the age for one real prediction with a date on it, written down before the data comes in.' },
+      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
+      { type: 'paragraph', text: 'Fair tests and write-ups. Change one thing at a time (wing size, leaf colour, yarn colour), run enough trials to trust the result, and explain it in a one-page report or a short talk at dinner. The leaf chromatography and the first-frost prediction both make good projects at this age.' },
+
+      { type: 'heading', level: 2, text: 'How to keep it going for six weeks' },
+      { type: 'paragraph', text: 'Don’t try to do all twelve. Pick one daily investigation (the tree, the leaf count, the daylight or the frost) and one or two one-off experiments for weekends. The daily one is the real learning, because it is the one where your kid sees a pattern show up that they couldn’t have guessed on day one.' },
+      { type: 'paragraph', text: 'Keep everything in one notebook, and give it a page a day. Even a three-word entry counts. If your kid likes drawing what they see, our guide to [nature journaling for kids](/blog/nature-journaling-for-kids) has a simple way to start that doesn’t require anyone to be good at art. For walks where you want something lighter, the [seasonal nature scavenger hunts](/blog/seasonal-scavenger-hunts) have a fall hunt ready to print.' },
+
+      { type: 'paragraph', text: 'Fall doesn’t wait. In six weeks the leaves are down and the experiment is over until next year. Pick one tree this week and take the first photo.' },
+      { type: 'paragraph', text: 'And if you would rather open a guide that walks your kid through it step by step, that is what the Anywhere Learning membership is for: real-world, hands-on activities for ages 6 to 14, from seed science to decomposition to tracking the weather, ready to open on any device.' },
+
+      { type: 'faq', items: [
+        { question: 'What are good fall nature activities for kids?', answer: 'The best fall nature activities are the ones that only work in autumn because something is changing: photographing one tree every day as it turns, counting falling leaves in a marked square, timing how long spinning maple seeds take to land, tracking daylight lost each day, and predicting the first frost from a daily temperature log.' },
+        { question: 'Why do leaves change colour in the fall?', answer: 'As days shorten and nights cool, trees stop replacing chlorophyll, the green pigment, so the yellow and orange pigments that were in the leaf all summer start to show. Red is different: many trees make red pigment new in the fall, and sunny days with cold nights make it brighter.' },
+        { question: 'How do you do leaf chromatography with kids?', answer: 'Tear green leaves into a small jar, cover them with rubbing alcohol, and stand the jar in hot tap water for about 30 minutes until the alcohol turns green. Hang a strip of coffee filter so it just touches the liquid. Over the next hour, the pigments separate into bands, showing the yellow hidden in a green leaf. An adult should handle the alcohol.' },
+        { question: 'What fall science activities work for older kids?', answer: 'For ages 12 to 14, turn any of them into a fair test: compare chromatography from green, yellow and red leaves, test how wing size changes a seed’s fall time, or build a first-frost prediction from two weeks of temperature data and check it against the real date.' },
+        { question: 'Do I need any supplies for fall nature activities?', answer: 'Mostly a notebook and a phone camera. A few investigations use household things: string and sticks to mark a square, a stopwatch, a thermometer, coffee filters and rubbing alcohol for chromatography, and paper and a bowl for a mushroom spore print.' },
+      ]},
+    ],
+    relatedSlugs: ['seasonal-scavenger-hunts', 'nature-walks-science', 'backyard-science-experiments', 'nature-journaling-for-kids', 'forest-school-activities', 'outdoor-stem-challenges'],
+  },
 ];
 
 // ─── Helper Functions ───
