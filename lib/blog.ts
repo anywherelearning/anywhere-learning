@@ -9630,13 +9630,13 @@ const posts: BlogPost[] = [
     author: amelie,
     recommendedProduct: 'seed-travelers',
     heroImage: '/images/fall-nature-hero.jpeg',
-    heroImageAlt: 'Two kids on bikes holding hands as they ride down a gravel trail under a canopy of bright yellow autumn leaves',
+    heroImageAlt: 'Two girls crouching on a forest trail lined with yellow autumn ferns, looking closely at something on the ground',
     content: [
       { type: 'summary', text: 'Fall nature activities for kids work best as investigations: autumn is the one season when trees, seeds, animals and daylight all change fast enough for a child to measure the change from one week to the next. Logging one tree’s colour, counting falling leaves, timing spinning maple seeds and tracking how much daylight is lost each day turn an ordinary walk into real science, math and writing for ages 6 to 14, with no kit.' },
 
-      { type: 'paragraph', text: 'Most fall activity lists are crafts. Leaf rubbings, pinecone bird feeders, a wreath for the door. Those are lovely, and if your kids want to make them, make them. But fall has something better going for it. It is the one season when everything outside changes fast enough to measure.' },
+      { type: 'paragraph', text: 'Fall is the one season when everything outside changes fast enough to measure. You don’t need a whole year to see it change, just a couple of weeks. That makes it the easiest time there is to do real science with your kids, without buying anything.' },
       { type: 'paragraph', text: 'The tree in your yard is a different colour on Friday than it was on Monday. You lose a few minutes of daylight every single day. Seeds are leaving, squirrels are burying, and the spiders are building bigger webs than they did all summer. For about six weeks, your whole neighbourhood is running an experiment. Your kid just has to start taking notes.' },
-      { type: 'paragraph', text: 'So these are investigations, not crafts. Each one has something to count, time or predict, which is where the math and the writing come in without anyone calling it a lesson. Most need nothing but a notebook, a phone camera and a walk you were going to take anyway. (If you live in the Southern Hemisphere, save this one for March.)' },
+      { type: 'paragraph', text: 'Every activity below has something to count, time or predict, which is where the math and the writing come in without anyone calling it a lesson. Most need nothing but a notebook, a phone camera and a walk you were going to take anyway. (If you live in the Southern Hemisphere, save this one for March.)' },
 
       { type: 'heading', level: 2, text: 'The one fact that makes fall worth studying' },
       { type: 'paragraph', text: 'Leaves don’t turn yellow in the fall. The yellow and orange were there all summer, hidden under the green. Green comes from chlorophyll, the pigment a leaf uses to make food from sunlight. When the days get shorter and the nights get cooler, trees stop replacing it, the green fades, and the yellows and oranges underneath finally show.' },
@@ -9701,6 +9701,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'How to keep it going for six weeks' },
       { type: 'paragraph', text: 'Don’t try to do all twelve. Pick one daily investigation (the tree, the leaf count, the daylight or the frost) and one or two one-off experiments for weekends. The daily one is the real learning, because it is the one where your kid sees a pattern show up that they couldn’t have guessed on day one.' },
+      { type: 'image', src: '/images/fall-nature-notes.jpeg', alt: 'Girl in a striped shirt standing on a forest trail among ferns, reading a small slip of paper in her hand', caption: 'Notes on the trail. A few words is enough.' },
       { type: 'paragraph', text: 'Keep everything in one notebook, and give it a page a day. Even a three-word entry counts. If your kid likes drawing what they see, our guide to [nature journaling for kids](/blog/nature-journaling-for-kids) has a simple way to start that doesn’t require anyone to be good at art. For walks where you want something lighter, the [seasonal nature scavenger hunts](/blog/seasonal-scavenger-hunts) have a fall hunt ready to print.' },
 
       { type: 'paragraph', text: 'Fall doesn’t wait. In six weeks the leaves are down and the experiment is over until next year. Pick one tree this week and take the first photo.' },
