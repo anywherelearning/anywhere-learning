@@ -14,11 +14,13 @@
  * item; action CTAs skip it entirely.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { createMembershipCheckout } from '@/lib/membership-checkout';
-import { FALL_OFFER, OFFER_COOKIE, isFallOfferActive } from '@/lib/fall-offer';
+import { FALL_OFFER, FALL_OFFER_PRICE_USD, OFFER_COOKIE, isFallOfferActive } from '@/lib/fall-offer';
+import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD } from '@/lib/membership';
+import { sendMetaEvent, userDataFromRequest } from '@/lib/meta-capi';
 
 export const dynamic = 'force-dynamic';
 
@@ -100,7 +102,29 @@ export async function GET(req: NextRequest) {
       plan,
       offer,
     });
-    if (result.ok) return withOffer(NextResponse.redirect(result.url, 303));
+    if (result.ok) {
+      // Meta Conversions API: someone is heading into Stripe Checkout. Far
+      // more frequent than StartTrial, so a new trial campaign has signal to
+      // learn from in its first days. Server-only (this is a redirect, no
+      // page for the browser pixel), so no dedupe pair is needed.
+      const value =
+        plan === 'monthly' ? MONTHLY_PRICE_USD : offer ? FALL_OFFER_PRICE_USD : FOUNDER_PRICE_USD;
+      after(() =>
+        sendMetaEvent({
+          eventName: 'InitiateCheckout',
+          eventId: crypto.randomUUID(),
+          sourceUrl: req.headers.get('referer'),
+          userData: { email: clerkEmail, ...userDataFromRequest(req) },
+          customData: {
+            value,
+            currency: 'USD',
+            content_name: `membership-${plan}`,
+            ...(offer && { offer }),
+          },
+        }),
+      );
+      return withOffer(NextResponse.redirect(result.url, 303));
+    }
     if (result.reason === 'already_member') {
       // Active member or trial member: nothing to buy, open the library.
       return NextResponse.redirect(`${origin}/account`, 303);

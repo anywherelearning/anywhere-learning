@@ -29,6 +29,7 @@ const GRAPH_API_VERSION = 'v21.0';
 /** Meta standard event names we send from the server. */
 export type MetaServerEventName =
   | 'Lead'
+  | 'InitiateCheckout'
   | 'StartTrial'
   | 'Purchase'
   | 'Subscribe'
