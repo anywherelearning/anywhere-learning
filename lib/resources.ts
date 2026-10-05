@@ -2140,7 +2140,7 @@ const resources: ResourcePage[] = [
       { type: 'paragraph', text: 'This is the most important window for life skill development. Your child is old enough to take on real responsibility but still young enough to learn without the self-consciousness that hits in the teen years. Developmentally, this is when the prefrontal cortex (planning, decision-making, impulse control) is maturing rapidly. The shift is from participation to independence: not just helping you cook, but following a recipe alone. Not just tidying their room when asked, but noticing it needs doing.' },
 
       { type: 'heading', level: 3, text: 'Practical competence (6-11)' },
-      { type: 'paragraph', text: 'Practical competence is the ability to take care of yourself and your environment without being told every step. By age 10 or 11, this means cooking a simple meal, doing a load of laundry, packing for a trip, cleaning a bathroom, using basic tools, and managing a morning routine independently. These are not "advanced" skills. They are baseline functioning for a person approaching middle school. What makes this a true life skill, and not just a chore, is that practical competence builds agency. (If you are not sure what to hand off at each age, our [age-appropriate chores guide](/blog/age-appropriate-chores-life-skills) lays it out year by year.) A child who knows they can feed themselves, take care of their space, and solve a basic household problem carries that confidence into every other area of life. A child who has always had everything done for them enters adolescence without it.' },
+      { type: 'paragraph', text: 'Practical competence is the ability to take care of yourself and your environment without being told every step. By age 10 or 11, this means cooking a simple meal, doing a load of laundry, packing for a trip, cleaning a bathroom, using basic tools, and managing a morning routine independently. These are not "advanced" skills. They are baseline functioning for a person approaching middle school. What makes this a true life skill, and not just a chore, is that practical competence builds agency. (If you are not sure what to hand off at each age, our [age-appropriate chores guide](/blog/age-appropriate-chores-life-skills) lays it out year by year, and the [daily chore list for kids](/ideas/chores-by-age-ideas) puts it on one printable page.) A child who knows they can feed themselves, take care of their space, and solve a basic household problem carries that confidence into every other area of life. A child who has always had everything done for them enters adolescence without it.' },
       { type: 'heading', level: 3, text: 'Financial awareness (6-11)' },
       { type: 'paragraph', text: 'Financial awareness is the understanding that money is finite, that every spending decision has a trade-off, and that value is not the same as price. At this age, kids are developmentally ready to understand earning, saving, spending decisions, the difference between needs and wants, and the idea that everything costs something. This is not about teaching budgeting spreadsheets. It is about building the mental model: if I spend this here, I cannot spend it there. A child who has never made a real financial decision with real consequences will reach adulthood without the instincts that make budgeting, saving, and investing feel natural. For a deeper dive on making financial learning hands-on, see our [real-world learning guide](/guides/real-world-learning).' },
       { type: 'heading', level: 3, text: 'Critical thinking (6-11)' },
@@ -2257,11 +2257,13 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'stem-for-kids',
+    seoTitle: "STEM Education for Kids: A Parent's Guide by Age",
     title: 'STEM for Kids: A Real-World Guide for Parents',
     excerpt: 'How to teach science, technology, engineering, and math through real-world projects kids actually want to do. No kits, no chemistry sets, no robotics camps required.',
+    metaDescription: 'STEM education for kids 6 to 14 without kits or a curriculum: what STEM really is, real-world projects by age, and how to start this week at home.',
     topic: 'stem-for-kids',
     publishedAt: '2026-03-21',
-    dateModified: '2026-09-22',
+    dateModified: '2026-10-05',
     keywords: [
       'STEM for kids', 'STEM activities for kids', 'STEM at home',
       'real world STEM', 'engineering for kids', 'science for kids',
@@ -2637,6 +2639,10 @@ const resources: ResourcePage[] = [
           {
             question: 'What ages does STEM education work for?',
             answer: 'All ages, with different focus. Ages 5 to 7 are about sensory exploration and language of investigation. Ages 8 to 10 are the sweet spot for hands-on engineering and structured experiments. Ages 11 to 13 can take on multi-week projects and start AI literacy. Ages 14 and up move from broad exposure to focused depth in chosen areas.',
+          },
+          {
+            question: 'What STEM activities work for kids 8 to 12?',
+            answer: 'This is the age where a build needs a real goal and a real limit: a bridge that has to hold a full water bottle, a budget for a family outing, a backyard rain gauge they check every day for a month. Kids 8 to 12 can measure, record and redesign on their own, so your job shifts from showing to asking "what would you change next time?"',
           },
           {
             question: 'Is STEM different from STEAM?',
