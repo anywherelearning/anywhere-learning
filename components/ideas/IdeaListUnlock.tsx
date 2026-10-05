@@ -12,6 +12,7 @@
 
 import Image from 'next/image';
 import { useIdeaOffer } from './useIdeaOffer';
+import { SpamTrap } from '@/components/SpamTrap';
 
 function DownloadIcon() {
   return (
@@ -47,7 +48,7 @@ export default function IdeaListUnlock({
   /** Null when this list has no printable built yet, which hides the ask. */
   pdfUrls: { color: string; bw: string } | null;
 }) {
-  const { email, setEmail, status, errorMessage, setErrorMessage, unlocked, submit } =
+  const { email, setEmail, status, errorMessage, setErrorMessage, unlocked, submit, trapRef } =
     useIdeaOffer(listSlug, categorySlug);
 
   // No printable for this list yet: nothing to trade, so don't ask.
@@ -125,6 +126,7 @@ export default function IdeaListUnlock({
             </div>
           ) : (
             <form onSubmit={submit} className="mt-auto pt-3.5">
+              <SpamTrap inputRef={trapRef} />
               <div className="flex flex-row gap-2">
                 <label htmlFor="ideas-unlock-email" className="sr-only">
                   Email address

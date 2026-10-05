@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import useAttributionSource from "@/components/useAttributionSource";
+import { SpamTrap, useSpamGuard } from "@/components/SpamTrap";
 
 interface EmailFormProps {
   variant?: "light" | "dark";
@@ -24,6 +25,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
   const [errorMessage, setErrorMessage] = useState("");
   const [shaking, setShaking] = useState(false);
   const source = useAttributionSource();
+  const spam = useSpamGuard();
 
   const isLight = variant === "light";
 
@@ -55,6 +57,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
           guide: guide || undefined,
           newsletter: newsletter || undefined,
           metaEventId,
+          ...spam.fields(),
         }),
       });
 
@@ -69,6 +72,8 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
       }
 
       setStatus("success");
+      // Bot guard tripped: the server skipped Kit, so skip the lead events too.
+      if (data.ignored) return;
       if (!newsletter) {
         try { localStorage.setItem('free-guide-submitted', 'true'); } catch {}
       }
@@ -126,6 +131,7 @@ export default function EmailForm({ variant = "light", buttonText = "Send me the
 
   return (
     <form onSubmit={handleSubmit} className={`w-full ${shaking ? "animate-shake" : ""}`}>
+      <SpamTrap inputRef={spam.trapRef} />
       <div className={`flex flex-col ${stacked ? 'gap-2' : 'gap-3 sm:flex-row'}`}>
         <div className="flex-1">
           <label htmlFor={`email-${variant}`} className="sr-only">

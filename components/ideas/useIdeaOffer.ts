@@ -32,6 +32,7 @@
 
 import { useState, useEffect, useCallback, type FormEvent } from 'react';
 import useAttributionSource from '@/components/useAttributionSource';
+import { useSpamGuard } from '@/components/SpamTrap';
 
 const STORAGE_KEY = 'al-ideas-offer-claimed';
 const SYNC_EVENT = 'al-ideas-offer-claimed';
@@ -56,6 +57,7 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
   const [status, setStatus] = useState<OfferStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [unlocked, setUnlocked] = useState(false);
+  const spam = useSpamGuard();
 
   // Pick up an earlier unlock, from this page load or a previous visit. One
   // email unlocks the printable on every list: they are the same ask repeated,
@@ -118,6 +120,7 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
             // resolves the slug, so an unknown one is rejected rather than
             // silently minting a junk Kit tag.
             checklist: listSlug,
+            ...spam.fields(),
           }),
         });
 
@@ -133,6 +136,9 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
 
         setUnlocked(true);
         setStatus('success');
+        // Bot guard tripped: the server skipped Kit and set no unlock cookie,
+        // so persist nothing and fire no lead events.
+        if (data.ignored) return;
 
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify({ at: Date.now() }));
@@ -155,7 +161,7 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
         setStatus('error');
       }
     },
-    [email, listSlug, categorySlug, attributionSource],
+    [email, listSlug, categorySlug, attributionSource, spam],
   );
 
   return {
@@ -168,5 +174,7 @@ export function useIdeaOffer(listSlug: string, categorySlug: string) {
      *  page's printable is theirs. One email unlocks every list's printable. */
     unlocked,
     submit,
+    /** Render `<SpamTrap inputRef={trapRef} />` inside the form. */
+    trapRef: spam.trapRef,
   };
 }

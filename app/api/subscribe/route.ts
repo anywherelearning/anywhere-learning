@@ -11,6 +11,7 @@ import { getFreeActivityBySlug } from "@/lib/ideas-free-activity";
 import { getListBySlug } from "@/lib/ideas";
 import { getIdeaListPdfUrls, getIdeaListEmailDownloadUrl } from "@/lib/idea-list-pdfs";
 import { signIdeaUnlockToken, ideaUnlockCookie } from "@/lib/idea-list-unlock";
+import { looksLikeBot } from "@/lib/spam-guard";
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,6 +34,13 @@ export async function POST(request: NextRequest) {
       /** Set by the blog's subscribe box: monthly newsletter only, no guide. */
       newsletter?: boolean;
     };
+
+    // Bot guard (components/SpamTrap.tsx): pretend it worked so the bot moves
+    // on, but never reach Kit or Meta. `ignored` tells our own forms to skip
+    // the browser lead events too, so GA4 and the pixel stay clean.
+    if (looksLikeBot(body)) {
+      return NextResponse.json({ success: true, alreadyClaimed: null, ignored: true });
+    }
 
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

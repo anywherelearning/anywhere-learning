@@ -13,6 +13,7 @@
 import { useState, useEffect, type FormEvent } from 'react';
 import Link from 'next/link';
 import useAttributionSource from '@/components/useAttributionSource';
+import { SpamTrap, useSpamGuard } from '@/components/SpamTrap';
 import type { LeadMagnet } from '@/lib/lead-magnets';
 
 const GUIDE_SUBMITTED_KEY = 'free-guide-submitted';
@@ -41,6 +42,7 @@ export default function BlogInlineEmailCapture({ magnet, pageSlug }: Props) {
   const [errorMessage, setErrorMessage] = useState('');
   const [hidden, setHidden] = useState(false);
   const source = useAttributionSource();
+  const spam = useSpamGuard();
 
   // Someone who already has this magnet (from here, the popup, or an idea
   // list) gets the article without the ask.
@@ -70,6 +72,7 @@ export default function BlogInlineEmailCapture({ magnet, pageSlug }: Props) {
           ...(magnet.kind === 'ideas' ? { checklist: magnet.slug } : {}),
           ...(magnet.kind === 'capable-kid' ? { guide: 'capable-kid' } : {}),
           metaEventId,
+          ...spam.fields(),
         }),
       });
       const data = await res.json();
@@ -79,6 +82,8 @@ export default function BlogInlineEmailCapture({ magnet, pageSlug }: Props) {
         return;
       }
       setStatus('success');
+      // Bot guard tripped: the server skipped Kit, so skip the lead events too.
+      if (data.ignored) return;
       try {
         localStorage.setItem(MAGNET_CLAIMED_KEY, '1');
         if (magnet.kind === 'ideas') {
@@ -136,6 +141,7 @@ export default function BlogInlineEmailCapture({ magnet, pageSlug }: Props) {
             {magnet.blurb}
           </p>
           <form onSubmit={handleSubmit} noValidate className="mt-5">
+            <SpamTrap inputRef={spam.trapRef} />
             <label htmlFor={`inline-capture-${pageSlug}`} className="sr-only">
               Email address
             </label>

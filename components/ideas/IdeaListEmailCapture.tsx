@@ -17,6 +17,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useIdeaOffer } from './useIdeaOffer';
+import { SpamTrap } from '@/components/SpamTrap';
 
 interface Props {
   /** This list's slug, for the counting tag and the cover image. */
@@ -35,7 +36,7 @@ export default function IdeaListEmailCapture({
   accent,
   pdfUrls,
 }: Props) {
-  const { email, setEmail, status, errorMessage, setErrorMessage, unlocked, submit } =
+  const { email, setEmail, status, errorMessage, setErrorMessage, unlocked, submit, trapRef } =
     useIdeaOffer(listSlug, categorySlug);
 
   if (!pdfUrls) return null;
@@ -112,6 +113,7 @@ export default function IdeaListEmailCapture({
                 </p>
 
                 <form onSubmit={submit} className="mt-6">
+                  <SpamTrap inputRef={trapRef} />
                   <div className="flex flex-col gap-2.5 sm:flex-row">
                     <div className="flex-1 min-w-0">
                       <label htmlFor="ideas-capture-email" className="sr-only">

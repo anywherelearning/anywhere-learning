@@ -7,6 +7,7 @@ import { useUser } from '@clerk/nextjs';
 import { useAccessTier } from '@/hooks/useAccessTier';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import useAttributionSource from '@/components/useAttributionSource';
+import { SpamTrap, useSpamGuard } from '@/components/SpamTrap';
 import type { LeadMagnet } from '@/lib/lead-magnets';
 import {
   MEMBERSHIP_PRICE_YEAR,
@@ -273,6 +274,7 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const source = useAttributionSource();
+  const spam = useSpamGuard();
 
   const cover =
     magnet.kind === 'capable-kid'
@@ -301,6 +303,7 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
           ...(magnet.kind === 'ideas' ? { checklist: magnet.slug } : {}),
           ...(magnet.kind === 'capable-kid' ? { guide: 'capable-kid' } : {}),
           metaEventId,
+          ...spam.fields(),
         }),
       });
       const data = await res.json();
@@ -310,6 +313,8 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
         return;
       }
       setStatus('success');
+      // Bot guard tripped: the server skipped Kit, so skip the lead events too.
+      if (data.ignored) return;
       try {
         localStorage.setItem(MAGNET_CLAIMED_KEY, '1');
         if (magnet.kind === 'ideas') {
@@ -403,6 +408,7 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
       </div>
 
       <form onSubmit={handleSubmit} noValidate>
+        <SpamTrap inputRef={spam.trapRef} />
         <label htmlFor="blog-exit-popup-email" className="sr-only">
           Email address
         </label>
