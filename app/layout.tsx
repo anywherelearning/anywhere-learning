@@ -12,6 +12,7 @@ import NativeHide from "@/components/mobile/NativeHide";
 import NativeRedirectGuard from "@/components/mobile/NativeRedirectGuard";
 import PinterestTracker from "@/components/analytics/PinterestTracker";
 import MetaPixelTracker from "@/components/analytics/MetaPixelTracker";
+import AttributionCookie from "@/components/analytics/AttributionCookie";
 import PinterestEnhancedMatch from "@/components/analytics/PinterestEnhancedMatch";
 import GoogleCustomerReviewsBadge from "@/components/analytics/GoogleCustomerReviewsBadge";
 import ImageProtection from "@/components/shared/ImageProtection";
@@ -203,6 +204,7 @@ export default function RootLayout({
             <NativeHide><SaleBanner /></NativeHide>
             {children}
             <PinterestEnhancedMatch />
+            <AttributionCookie />
             <MobileTabBar />
           </CapacitorProvider>
         </ClerkWrapper>

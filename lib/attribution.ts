@@ -20,6 +20,15 @@
 export const SOURCE_STORAGE_KEY = 'subscribe-source';
 
 /**
+ * First-party cookie mirroring the resolved source, so server routes that sit
+ * behind a plain link (no form to POST a source) can still attribute. The
+ * trial funnel is the reason: /fall -> /start-trial -> sign-up -> Stripe never
+ * passes a form, so without this every trial starter landed in Kit with no
+ * `from-` tag at all. Written by AttributionCookie in the root layout.
+ */
+export const SOURCE_COOKIE = 'al_src';
+
+/**
  * Referring hostname fragment to source tag. Checked in order, first match
  * wins, so put the specific entries above the general ones (`fb.com` before
  * anything that could also match, `youtu.be` alongside `youtube.`).

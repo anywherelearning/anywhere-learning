@@ -345,7 +345,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     // "former member who returns" case cleanly.
     await applyAndRemoveTags(email, {
       add: tags,
-      remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled'],
+      remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled', 'checkout-abandoned'],
     });
   } catch (err) {
     console.error('[webhook] kit tag failed:', err);
@@ -419,6 +419,19 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   } catch (err) {
     console.error('[webhook] expired-checkout DB lookup failed:', err);
     // Continue anyway — better to send a possibly-redundant email than miss it.
+  }
+
+  // Kit: mark them as a checkout abandoner so a Kit automation can follow up
+  // (the Resend "I held your spot" email below is a one-off). Applied before
+  // the email throttle on purpose: the tag is idempotent and should land even
+  // when the email is skipped. Removed again in the completed-checkout handler.
+  try {
+    const offer = session.metadata?.offer;
+    await applyAndRemoveTags(email, {
+      add: ['checkout-abandoned', ...(offer ? [`offer:${offer}`] : [])],
+    });
+  } catch (err) {
+    console.error('[webhook] checkout-abandoned kit tag failed:', err);
   }
 
   // Pull the recovery URL Stripe generates when `after_expiration.recovery`

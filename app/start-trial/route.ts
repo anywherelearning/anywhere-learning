@@ -21,6 +21,8 @@ import { createMembershipCheckout } from '@/lib/membership-checkout';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD, OFFER_COOKIE, isFallOfferActive } from '@/lib/fall-offer';
 import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD } from '@/lib/membership';
 import { sendMetaEvent, userDataFromRequest } from '@/lib/meta-capi';
+import { applyAndRemoveTags } from '@/lib/convertkit';
+import { SOURCE_COOKIE, sanitizeSource } from '@/lib/attribution';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,6 +34,18 @@ function getSiteOrigin(req: NextRequest): string {
 }
 
 export async function GET(req: NextRequest) {
+  // Client-side router requests (an RSC navigation or a <Link> prefetch) must
+  // not create a Stripe session. After sign-up, Clerk navigates back here with
+  // the Next router: its RSC fetch ran this whole handler (session #1), then
+  // the cross-origin redirect to Stripe failed and Next retried as a full page
+  // load (session #2). Every signup produced two sessions, two expired
+  // webhooks and two InitiateCheckout events. An empty 204 makes Next fall
+  // back to a hard navigation straight away, which is the one request that
+  // does the work.
+  if (req.headers.get('rsc') === '1' || req.headers.has('next-router-prefetch')) {
+    return new NextResponse(null, { status: 204 });
+  }
+
   const limited = await checkRateLimit(req, standardLimiter());
   if (limited) return limited;
 
@@ -103,6 +117,22 @@ export async function GET(req: NextRequest) {
       offer,
     });
     if (result.ok) {
+      // Kit attribution. The only other Kit write in this funnel is the Clerk
+      // webhook's `account-created`, which can't see where the visitor came
+      // from, so trial starters who abandoned at Stripe sat in Kit with no
+      // `from-` tag. The source cookie is set site-wide by AttributionCookie.
+      if (clerkEmail) {
+        const source =
+          sanitizeSource(decodeURIComponent(req.cookies.get(SOURCE_COOKIE)?.value || '')) ||
+          'organic';
+        const email = clerkEmail;
+        after(() =>
+          applyAndRemoveTags(email, {
+            add: [`from-${source}`, ...(offer ? [`offer:${offer}`] : [])],
+          }).catch((err) => console.error('[start-trial] kit tag failed:', err)),
+        );
+      }
+
       // Meta Conversions API: someone is heading into Stripe Checkout. Far
       // more frequent than StartTrial, so a new trial campaign has signal to
       // learn from in its first days. Server-only (this is a redirect, no
