@@ -231,32 +231,61 @@ export function applyLeadMagnetCta(
 //
 // Sept 2026: 235 organic sessions in 28 days produced one lead, and it came
 // from an idea list, where the ask sits inline on the page. The exit popup
-// was live on every top organic post and produced none. So the five pages
-// Google sends the most people to get the same ask inline, after the first
-// section, with the popup left as is. Read GA4 lead_source "inline:*" against
-// "popup:*" before widening the list.
+// was live on every top organic post and produced none. So the pages Google
+// sends the most people to got the same ask inline, with the popup left as is.
+//
+// Oct 2026: placed after the first full section, the inline ask produced zero
+// organic leads in three weeks (456 organic sessions, 12 leads site-wide from
+// search, none inline). Search visitors read the summary and the intro, get
+// their answer, and leave before section two. So the ask now sits right
+// before the first H2, under the summary box, and the list covers the top
+// organic landings from GSC. Read GA4 lead_source "inline:*" against
+// "popup:*" before moving it again.
 
 export const INLINE_CAPTURE_POSTS = new Set<string>([
   'outdoor-stem-challenges',
   'shark-tank-for-kids',
   'lego-stem-activities',
   'forest-school-activities',
+  'engineering-for-kids',
+  'life-skills-before-12',
+  'real-world-history-for-kids',
+  'rube-goldberg-kids',
+  'decision-making-skills-kids',
+  'kitchen-learning-lab',
+  'backyard-science-experiments',
+  'design-a-theme-park-kids',
 ]);
 
-export const INLINE_CAPTURE_GUIDES = new Set<string>(['life-skills-for-kids']);
+export const INLINE_CAPTURE_GUIDES = new Set<string>([
+  'life-skills-for-kids',
+  'stem-for-kids',
+  'creativity-maker-activities',
+]);
 
 /**
- * Where the inline capture goes: right before the second H2, so the reader
- * has finished the intro and one real section. -1 when the page has fewer
- * than two sections (then it is not worth interrupting).
+ * Life-skills pages lead with the 2-minute quiz instead: it has the lowest
+ * bounce rate on the site and asks for the email at the result, after the
+ * parent has had something back. On these pages the quiz card takes the early
+ * slot and the email form keeps the later one (before the second H2).
  */
-export function inlineCaptureIndex(content: BlogContentBlock[]): number {
+export const QUIZ_FIRST_PAGES = new Set<string>([
+  'life-skills-for-kids',
+  'life-skills-before-12',
+  'decision-making-skills-kids',
+]);
+
+/**
+ * Index of the nth H2 (1-based), the slot an inline ask is rendered before.
+ * -1 when the page has fewer H2s than that.
+ */
+export function inlineCaptureIndex(content: BlogContentBlock[], nth = 1): number {
   let seen = 0;
   for (let i = 0; i < content.length; i++) {
     const b = content[i];
     if (b.type === 'heading' && b.level === 2) {
       seen += 1;
-      if (seen === 2) return i;
+      if (seen === nth) return i;
     }
   }
   return -1;
