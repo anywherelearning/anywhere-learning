@@ -157,6 +157,7 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'nature-walk-task-cards': ['forest-school-activities'],
   'nature-journal-walks': ['nature-journaling-for-kids', 'forest-school-activities'],
   'outdoor-survival-planner': ['forest-school-activities'],
+  'family-debate-night': ['family-debate-night-kids'],
 };
 
 /**
