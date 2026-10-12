@@ -5,6 +5,7 @@
  *   - sendMembershipWelcomeEmail              → after successful membership signup
  *   - sendAbandonedCheckoutMembershipEmail    → membership checkout expired w/o payment
  *   - sendMembershipRenewalEmail              → 14 days before subscription renewal
+ *   - sendTrialMidpointEmail                  → day 7 of a free trial (daily cron)
  *   - sendTrialEndingEmail                    → 3 days before a free trial converts
  *   - sendTrialCanceledEmail                  → free trial canceled (never paid)
  *   - sendMembershipCancellationScheduledEmail → paid member set cancel_at_period_end
@@ -19,6 +20,8 @@ import MembershipConverted from '@/emails/MembershipConverted';
 import TrialCanceled from '@/emails/TrialCanceled';
 import MembershipCancellationScheduled from '@/emails/MembershipCancellationScheduled';
 import QuizPlanEmail from '@/emails/QuizPlanEmail';
+import TrialMidpoint, { midpointSubject } from '@/emails/TrialMidpoint';
+import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -130,6 +133,38 @@ export async function sendAbandonedCheckoutMembershipEmail({
     to,
     subject: 'I held your spot at Anywhere Learning',
     react: AbandonedCheckoutMembership({ firstName, isFounderPhase, resumeUrl, spotsLeft, plan }),
+  });
+}
+
+/** Day-7 trial check-in: one guide, sized to what they've done so far. */
+export async function sendTrialMidpointEmail({
+  to,
+  firstName,
+  variant,
+  guide,
+  next,
+  kids,
+  trialEndDate,
+  guideUrl,
+  nextUrl,
+}: {
+  to: string;
+  firstName?: string;
+  variant: MidpointVariant;
+  guide: MidpointGuide;
+  next?: MidpointGuide;
+  kids: string;
+  /** ISO date the trial converts. */
+  trialEndDate: string;
+  guideUrl: string;
+  nextUrl?: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: midpointSubject(variant, firstName),
+    react: TrialMidpoint({ firstName, variant, guide, next, kids, trialEndDate, guideUrl, nextUrl }),
   });
 }
 
