@@ -20,6 +20,8 @@ interface Props {
   next?: MidpointGuide;
   /** 'doing' only: every activity they marked done, most recent first. */
   done?: MidpointGuide[];
+  /** The suggested guide is one they added to their trail (not our pick). */
+  fromTrail?: boolean;
   /** "Kirin (6)" / "Elijah and Indie" / "". */
   kids: string;
   /** ISO date the trial converts. */
@@ -78,6 +80,7 @@ export default function TrialMidpoint({
   guide,
   next,
   done = [],
+  fromTrail = false,
   kids,
   trialEndDate,
   guideUrl,
@@ -99,7 +102,7 @@ export default function TrialMidpoint({
     onARoll
       ? `You've already done ${countWord(done.length)} activities together. Keep doing what you're doing.`
       : variant === 'doing'
-      ? `You already did ${guide.name}. Here's what's next on your map.`
+      ? `You already did ${guide.name}. Here's a good next one.`
       : variant === 'browsing'
         ? `${guide.name} caught your eye. Here's how to actually make it happen.`
         : `I picked one for you: ${guide.name}.`;
@@ -163,8 +166,10 @@ export default function TrialMidpoint({
                       </Text>
                       {next && (
                         <Text style={{ ...p, margin: '14px 0 0' }}>
-                          Whenever you&apos;re ready for the next one, here&apos;s one that builds
-                          on what you&apos;ve done{forKids}.
+                          Whenever you&apos;re ready for the next one,{' '}
+                          {fromTrail
+                            ? `you already have this one on your trail${forKids}.`
+                            : `here's one that builds on what you've done${forKids}.`}
                         </Text>
                       )}
                     </>
@@ -186,7 +191,7 @@ export default function TrialMidpoint({
                       {next && (
                         <Text style={{ ...p, margin: '14px 0 0' }}>
                           If you&apos;ve got a little time this week, here&apos;s a good next
-                          one{forKids}. It builds on what you just did.
+                          one{forKids}.{fromTrail ? " It's the one you already added to your trail." : ' It builds on what you just did.'}
                         </Text>
                       )}
                     </>
@@ -213,16 +218,25 @@ export default function TrialMidpoint({
 
                   {variant === 'not-started' && (
                     <>
-                      <div style={h1}>
-                        I picked one{' '}
-                        <span style={{ fontStyle: 'italic', color: C_FOREST }}>for you</span>
-                        {nameTail}
-                      </div>
+                      {fromTrail ? (
+                        <div style={h1}>
+                          Your first one is{' '}
+                          <span style={{ fontStyle: 'italic', color: C_FOREST }}>waiting</span>
+                          {nameTail}
+                        </div>
+                      ) : (
+                        <div style={h1}>
+                          I picked one{' '}
+                          <span style={{ fontStyle: 'italic', color: C_FOREST }}>for you</span>
+                          {nameTail}
+                        </div>
+                      )}
                       <Text style={p}>
                         A week goes fast. If you haven&apos;t opened anything yet, that&apos;s
-                        completely normal, and you haven&apos;t missed anything. Your map already
-                        has a first stop waiting{forKids}, so there&apos;s nothing to choose.
-                        Just open it.
+                        completely normal, and you haven&apos;t missed anything.{' '}
+                        {fromTrail
+                          ? `You already added ${guide.name} to your trail${forKids}, so there's nothing to choose. Just open it.`
+                          : `Here's a good first one${forKids}, so there's nothing to choose. Just open it.`}
                       </Text>
                     </>
                   )}
@@ -236,7 +250,13 @@ export default function TrialMidpoint({
                     guide={variant === 'doing' && next ? next : guide}
                     url={variant === 'doing' && next && nextUrl ? nextUrl : guideUrl}
                     label={
-                      onARoll ? 'One more you might like' : variant === 'doing' ? 'Next on your map' : variant === 'browsing' ? 'The one that caught your eye' : 'Your first stop'
+                      onARoll
+                        ? 'One more you might like'
+                        : variant === 'doing'
+                          ? fromTrail ? 'Next on your trail' : 'A good next one'
+                          : variant === 'browsing'
+                            ? 'The one that caught your eye'
+                            : fromTrail ? 'On your trail' : 'A good first one'
                     }
                   />
                 </td>

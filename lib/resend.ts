@@ -144,6 +144,7 @@ export async function sendTrialMidpointEmail({
   guide,
   next,
   done,
+  fromTrail,
   kids,
   trialEndDate,
   guideUrl,
@@ -155,6 +156,7 @@ export async function sendTrialMidpointEmail({
   guide: MidpointGuide;
   next?: MidpointGuide;
   done?: MidpointGuide[];
+  fromTrail?: boolean;
   kids: string;
   /** ISO date the trial converts. */
   trialEndDate: string;
@@ -166,7 +168,7 @@ export async function sendTrialMidpointEmail({
     replyTo: REPLY_TO,
     to,
     subject: midpointSubject(variant, firstName, done?.length ?? 0),
-    react: TrialMidpoint({ firstName, variant, guide, next, done, kids, trialEndDate, guideUrl, nextUrl }),
+    react: TrialMidpoint({ firstName, variant, guide, next, done, fromTrail, kids, trialEndDate, guideUrl, nextUrl }),
   });
 }
 

@@ -32,6 +32,7 @@ describe('pickMidpoint', () => {
       weekSlugs: ['family-electricity-audit'],
     });
     expect(pick?.next?.slug).toBe('family-electricity-audit');
+    expect(pick?.fromTrail).toBe(true);
   });
 
   it('browsing: pushes the map pick when they opened it', () => {
@@ -56,12 +57,14 @@ describe('pickMidpoint', () => {
     const pick = pickMidpoint({ ...base, weekSlugs: ['survival-base'] });
     expect(pick?.variant).toBe('not-started');
     expect(pick?.guide.slug).toBe('survival-base');
+    expect(pick?.fromTrail).toBe(true);
   });
 
   it('not started with no map pick: falls back to a quick default', () => {
     const pick = pickMidpoint(base);
     expect(pick?.variant).toBe('not-started');
     expect(pick?.guide.timeRange).toBe('30 min to 1 hour');
+    expect(pick?.fromTrail).toBe(false);
   });
 
   it('ignores slugs that are not real activity guides', () => {

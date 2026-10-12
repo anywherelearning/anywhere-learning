@@ -7,8 +7,8 @@
  *                     point at a good next one.
  *   - 'browsing'    : opened guides but hasn't done one yet. Name the guide
  *                     they're circling and make it easy to actually do.
- *   - 'not-started' : hasn't opened anything. Their map already picked a first
- *                     stop, so hand them that one.
+ *   - 'not-started' : hasn't opened anything. Hand them the guide they added to
+ *                     their trail, else a quick one that fits their kids.
  *
  * Pure (no DB) so it can be unit-tested. The cron route gathers the inputs.
  */
@@ -48,6 +48,11 @@ export interface MidpointPick {
   next?: MidpointGuide;
   /** 'doing' only: every activity they marked done, most recent first. */
   done?: MidpointGuide[];
+  /** True when the suggested guide (`next` for 'doing', else `guide`) is one the
+   *  parent added to their trail. Otherwise we chose it here, and the map may
+   *  show a different stop (its engine runs in the browser), so the email must
+   *  not call it "your map's pick". */
+  fromTrail: boolean;
 }
 
 /** First stop when a member has no map pick yet: quick and low-prep (ages 6+). */
@@ -122,7 +127,7 @@ export function pickMidpoint(inputs: MidpointInputs): MidpointPick | null {
       .reverse()
       .map(describeGuide)
       .filter((g): g is MidpointGuide => !!g);
-    return { variant: 'doing', guide, next, done };
+    return { variant: 'doing', guide, next, done, fromTrail: !!nextSlug && inputs.weekSlugs.includes(nextSlug) };
   }
 
   const viewed = Object.entries(inputs.views)
@@ -133,18 +138,19 @@ export function pickMidpoint(inputs: MidpointInputs): MidpointPick | null {
     // the guide they keep coming back to.
     const mapPick = inputs.weekSlugs.find((s) => inputs.views[s] && isActivity(s));
     const guide = describeGuide(mapPick ?? viewed[0][0]);
-    return guide ? { variant: 'browsing', guide } : null;
+    return guide ? { variant: 'browsing', guide, fromTrail: !!mapPick } : null;
   }
 
+  const trailPick = inputs.weekSlugs.find(isActivity);
   const firstStop =
-    inputs.weekSlugs.find(isActivity) ??
+    trailPick ??
     (fitsKids(DEFAULT_FIRST_STOP, inputs.kids)
       ? DEFAULT_FIRST_STOP
       : Object.keys(EFFORT_BY_SLUG).find(
           (s) => EFFORT_BY_SLUG[s] === 'Quick' && isActivity(s) && fitsKids(s, inputs.kids),
         ) ?? DEFAULT_FIRST_STOP);
   const guide = describeGuide(firstStop);
-  return guide ? { variant: 'not-started', guide } : null;
+  return guide ? { variant: 'not-started', guide, fromTrail: !!trailPick } : null;
 }
 
 /** Kid names for the email copy: "Kirin (6)", "Elijah and Indie", or "". */

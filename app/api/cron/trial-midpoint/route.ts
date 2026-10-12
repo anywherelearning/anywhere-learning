@@ -168,6 +168,7 @@ export async function GET(req: NextRequest) {
         guide: pick.guide,
         next: pick.next,
         done: pick.done,
+        fromTrail: pick.fromTrail,
         kids: kidsPhrase(kids),
         trialEndDate: row.trialEnd.toISOString(),
         guideUrl,
