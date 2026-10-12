@@ -23,7 +23,7 @@ export type MidpointVariant = 'doing' | 'browsing' | 'not-started';
 export interface MidpointInputs {
   /** Guide opens in the reader, slug → open count. */
   views: Record<string, number>;
-  /** Slugs marked "We did it!" (any kid), oldest first. */
+  /** Slugs marked "We did it!" (any kid), oldest first. Repeats are fine. */
   completed: string[];
   /** Slugs currently on their map's "this week" stop(s). */
   weekSlugs: string[];
@@ -46,6 +46,8 @@ export interface MidpointPick {
   guide: MidpointGuide;
   /** 'doing' only: what to try next. */
   next?: MidpointGuide;
+  /** 'doing' only: every activity they marked done, most recent first. */
+  done?: MidpointGuide[];
 }
 
 /** First stop when a member has no map pick yet: quick and low-prep (ages 6+). */
@@ -106,7 +108,9 @@ function pickNext(doneSlug: string, inputs: MidpointInputs): string | null {
 }
 
 export function pickMidpoint(inputs: MidpointInputs): MidpointPick | null {
-  const completed = inputs.completed.filter(isActivity);
+  const completed = inputs.completed
+    .filter(isActivity)
+    .filter((s, i, all) => all.lastIndexOf(s) === i);
 
   if (completed.length) {
     const doneSlug = completed[completed.length - 1];
@@ -114,7 +118,11 @@ export function pickMidpoint(inputs: MidpointInputs): MidpointPick | null {
     if (!guide) return null;
     const nextSlug = pickNext(doneSlug, inputs);
     const next = nextSlug ? describeGuide(nextSlug) ?? undefined : undefined;
-    return { variant: 'doing', guide, next };
+    const done = [...completed]
+      .reverse()
+      .map(describeGuide)
+      .filter((g): g is MidpointGuide => !!g);
+    return { variant: 'doing', guide, next, done };
   }
 
   const viewed = Object.entries(inputs.views)

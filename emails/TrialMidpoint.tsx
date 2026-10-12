@@ -18,6 +18,8 @@ interface Props {
   guide: MidpointGuide;
   /** 'doing' only: the suggested next guide. */
   next?: MidpointGuide;
+  /** 'doing' only: every activity they marked done, most recent first. */
+  done?: MidpointGuide[];
   /** "Kirin (6)" / "Elijah and Indie" / "". */
   kids: string;
   /** ISO date the trial converts. */
@@ -31,8 +33,33 @@ interface Props {
 const SITE = 'https://anywherelearning.co';
 const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
 
-export function midpointSubject(variant: MidpointVariant, firstName?: string): string {
+const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+const countWord = (n: number) => NUMBER_WORDS[n] ?? String(n);
+const capitalize = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
+
+/** "A", "A and B", "A, B and C", "A, B, C and 2 more". */
+function listNames(guides: MidpointGuide[]): React.ReactNode {
+  const shown = guides.slice(0, 3);
+  const extra = guides.length - shown.length;
+  const parts = shown.map((g) => <strong key={g.slug} style={strong}>{g.name}</strong>);
+  if (extra > 0) parts.push(<span key="more">{extra} more</span>);
+  return parts.map((part, i) => (
+    <span key={i}>
+      {i > 0 && (i === parts.length - 1 ? ' and ' : ', ')}
+      {part}
+    </span>
+  ));
+}
+
+export function midpointSubject(
+  variant: MidpointVariant,
+  firstName?: string,
+  doneCount = 0,
+): string {
   const name = firstName ? `, ${firstName}` : '';
+  if (variant === 'doing' && doneCount >= 2) {
+    return `${capitalize(countWord(doneCount))} activities in your first week${name}. Keep it going`;
+  }
   if (variant === 'doing') return `One down${name}. Here's a good next one`;
   if (variant === 'browsing') return `Halfway through your trial${name}. Let's get one done this week`;
   return `Your first activity is already picked${name}`;
@@ -50,11 +77,15 @@ export default function TrialMidpoint({
   variant,
   guide,
   next,
+  done = [],
   kids,
   trialEndDate,
   guideUrl,
   nextUrl,
 }: Props) {
+  // Two or more "We did it!"s is a different email: they've found a rhythm,
+  // so it's "keep going", not "you got over the first hump".
+  const onARoll = variant === 'doing' && done.length >= 2;
   // Headlines end ", Sarah." when we know the name, and just "." when we don't.
   const nameTail = firstName?.trim() ? `, ${firstName.trim()}.` : '.';
   const forKids = kids ? ` for ${kids}` : '';
@@ -65,7 +96,9 @@ export default function TrialMidpoint({
   });
 
   const preview =
-    variant === 'doing'
+    onARoll
+      ? `You've already done ${countWord(done.length)} activities together. Keep doing what you're doing.`
+      : variant === 'doing'
       ? `You already did ${guide.name}. Here's what's next on your map.`
       : variant === 'browsing'
         ? `${guide.name} caught your eye. Here's how to actually make it happen.`
@@ -113,7 +146,31 @@ export default function TrialMidpoint({
                     Halfway through your trial
                   </div>
 
-                  {variant === 'doing' && (
+                  {onARoll && (
+                    <>
+                      <div style={h1}>
+                        You&apos;re on a{' '}
+                        <span style={{ fontStyle: 'italic', color: C_FOREST }}>roll</span>
+                        {nameTail}
+                      </div>
+                      <Text style={p}>
+                        Your map says you&apos;ve already done {countWord(done.length)} activities
+                        together: {listNames(done)}. In your first week.
+                      </Text>
+                      <Text style={{ ...p, margin: '14px 0 0' }}>
+                        That&apos;s a real rhythm, and it&apos;s exactly how this is meant to work.
+                        Keep doing what you&apos;re doing. I really hope the kids are enjoying them.
+                      </Text>
+                      {next && (
+                        <Text style={{ ...p, margin: '14px 0 0' }}>
+                          Whenever you&apos;re ready for the next one, here&apos;s one that builds
+                          on what you&apos;ve done{forKids}.
+                        </Text>
+                      )}
+                    </>
+                  )}
+
+                  {variant === 'doing' && !onARoll && (
                     <>
                       <div style={h1}>
                         You already did{' '}
@@ -123,7 +180,8 @@ export default function TrialMidpoint({
                       <Text style={p}>
                         Your map says you finished <strong style={strong}>{guide.name}</strong>{' '}
                         together. That first one is the hardest to get to, honestly. Not because
-                        it&apos;s difficult, but because life fills the week. You made the time.
+                        it&apos;s difficult, but because life fills the week. You made the time. I
+                        hope the kids enjoyed it.
                       </Text>
                       {next && (
                         <Text style={{ ...p, margin: '14px 0 0' }}>
@@ -143,8 +201,12 @@ export default function TrialMidpoint({
                       </div>
                       <Text style={p}>
                         Looks like <strong style={strong}>{guide.name}</strong> caught your eye. Good
-                        pick. Reading the guides is the easy part though. Here&apos;s how to
-                        actually get the first one done together:
+                        pick.
+                      </Text>
+                      <Text style={{ ...p, margin: '14px 0 0' }}>
+                        Already did it? Amazing. Tap <strong style={strong}>We did it!</strong> in
+                        the guide so it lands on your map. If you haven&apos;t had the chance yet,
+                        here&apos;s how to actually get it done together this week:
                       </Text>
                     </>
                   )}
@@ -174,7 +236,7 @@ export default function TrialMidpoint({
                     guide={variant === 'doing' && next ? next : guide}
                     url={variant === 'doing' && next && nextUrl ? nextUrl : guideUrl}
                     label={
-                      variant === 'doing' ? 'Next on your map' : variant === 'browsing' ? 'The one that caught your eye' : 'Your first stop'
+                      onARoll ? 'One more you might like' : variant === 'doing' ? 'Next on your map' : variant === 'browsing' ? 'The one that caught your eye' : 'Your first stop'
                     }
                   />
                 </td>
@@ -211,7 +273,9 @@ export default function TrialMidpoint({
                     Your free trial runs until {ends}, and every guide is open to you until then.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    {variant === 'doing'
+                    {onARoll
+                      ? "Which one has been the favourite so far? Hit reply and tell me. I read every one, and it genuinely shapes what I build next."
+                      : variant === 'doing'
                       ? "If you feel like it, hit reply and tell me how it went. I read every one, and it genuinely shapes what I build next."
                       : "Stuck on something, or not sure which one fits your kids? Hit reply. This comes straight to my inbox and I read every one."}
                   </Text>

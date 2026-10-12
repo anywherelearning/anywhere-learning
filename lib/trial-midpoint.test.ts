@@ -12,6 +12,19 @@ describe('pickMidpoint', () => {
     expect(pick?.next?.slug).not.toBe('survival-base');
   });
 
+  it('lists every distinct finished activity, most recent first', () => {
+    const pick = pickMidpoint({
+      ...base,
+      completed: ['survival-base', 'my-review-column', 'survival-base', 'nature-journal-walks'],
+    });
+    expect(pick?.done?.map((g) => g.slug)).toEqual([
+      'nature-journal-walks',
+      'survival-base',
+      'my-review-column',
+    ]);
+    expect(pick?.next?.slug).not.toBe('my-review-column');
+  });
+
   it('prefers the map pick as the next one when it is not done yet', () => {
     const pick = pickMidpoint({
       ...base,

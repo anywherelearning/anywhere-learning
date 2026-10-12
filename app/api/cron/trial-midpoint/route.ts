@@ -132,8 +132,7 @@ export async function GET(req: NextRequest) {
       for (const v of viewRows) if (v.userId === row.userId) views[v.slug] = v.opens;
       const completed = [...(state.completions ?? [])]
         .sort((a, b) => a.at.localeCompare(b.at))
-        .map((c) => c.slug)
-        .filter((s, i, all) => all.indexOf(s) === i);
+        .map((c) => c.slug);
       const kids = state.profile?.children ?? [];
 
       const pick = pickMidpoint({
@@ -168,6 +167,7 @@ export async function GET(req: NextRequest) {
         variant: pick.variant,
         guide: pick.guide,
         next: pick.next,
+        done: pick.done,
         kids: kidsPhrase(kids),
         trialEndDate: row.trialEnd.toISOString(),
         guideUrl,
