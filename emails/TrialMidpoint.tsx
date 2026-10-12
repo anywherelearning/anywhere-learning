@@ -209,7 +209,6 @@ export default function TrialMidpoint({
                 <td style={{ padding: '30px 48px 0' }}>
                   <Text style={{ ...p, margin: 0 }}>
                     Your free trial runs until {ends}, and every guide is open to you until then.
-                    I&apos;ll email you 3 days before anything changes, no surprises.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     {variant === 'doing'
