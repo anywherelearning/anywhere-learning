@@ -396,7 +396,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Outdoor STEM Challenge Cards Vol. 2: No-Prep, Ages 6-14',
       description:
-        '20 new outdoor STEM challenges in five themes: rope-making, launchers, water, wind, and levers. No-prep STEM activities for kids ages 6-14 using found materials.',
+        '20 new outdoor STEM challenges: rope-making, launchers, water, wind and levers. No-prep STEM activities for kids 6-14 using found materials.',
     },
     format: 'Card Guide',
   },
@@ -1001,7 +1001,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Road Trip Math for Kids: Plan a Real Trip Budget, Ages 8-14',
       description:
-        'Road trip math for kids: real distances, fuel costs, driving times, and a full trip budget, worked out by your child before you leave. Guided project, ages 8-14, no prep.',
+        'Road trip math for kids: real distances, fuel costs, driving times and a full trip budget, worked out by your child before you leave. Ages 8-14.',
     },
     insideTheLearning: {
       lead:
@@ -1950,7 +1950,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Shark Tank Pitch for Kids: Business Pitch Project, Ages 8-14',
       description:
-        'A ready-to-run Shark Tank style pitch project. Kids build a business concept, work out profit and revenue, write the pitch, and present it live. Ages 8-14, no prep.',
+        'A ready-to-run Shark Tank pitch project. Kids build a business, work out profit, write the pitch and present it live. Ages 8-14, no prep.',
     },
     opening:
       'Develop and deliver a high-stakes business pitch, Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',

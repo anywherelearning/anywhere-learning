@@ -2080,6 +2080,7 @@ const resources: ResourcePage[] = [
   {
     slug: 'life-skills-for-kids',
     title: 'Life Skills for Kids by Age: What to Teach and When',
+    metaDescription: 'Life skills for kids by age, 6 to 14: what each skill is, why it matters, and what it looks like when kids actually have it. From a former teacher.',
     excerpt: 'The essential life skills every child needs, organized by age group. What each skill is, why it matters developmentally, and what it looks like when kids actually have it.',
     topic: 'future-ready-skills',
     publishedAt: '2026-03-21',

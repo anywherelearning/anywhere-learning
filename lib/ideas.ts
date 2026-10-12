@@ -26,6 +26,8 @@ export type IdeaCategory = {
   accent: string
   icon: string
   blurb: string
+  /** Search snippet when blurb + list count runs past ~160 characters. */
+  metaDescription?: string
   lists: IdeaList[]
 }
 
@@ -42,6 +44,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
     name: 'Nature & Outdoor',
     accent: '#6b8e6b',
     icon: 'Leaf',
+    metaDescription:
+      'Free printable nature checklists for kids: nature walks, backyard science, forest school, scavenger hunts and land art. No gear, no prep needed.',
     blurb:
       'Free printable nature and outdoor checklists for kids: nature walks, backyard science, forest school, scavenger hunts, and land art. Zero gear, zero prep, any patch of outside.',
     lists: [
@@ -320,6 +324,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
     name: 'Kitchen & Cooking',
     accent: '#8b7355',
     icon: 'ChefHat',
+    metaDescription:
+      'Free kitchen and cooking checklists for kids: counting, measuring, fractions and budgeting woven into real meals. The best classroom you own.',
     blurb:
       'Kitchen and cooking activity checklists for kids, free to print: counting, measuring, fractions, and budgeting woven into real meals. The best classroom you already own.',
     lists: [
@@ -397,6 +403,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
     name: 'Life Skills & Money',
     accent: '#c4836a',
     icon: 'Lightbulb',
+    metaDescription:
+      'Free printable life skills checklists for kids: money, chores by age, independence and family history. The everyday stuff that builds capable kids.',
     blurb:
       'Life skills checklists for kids you can print free: money, chores by age, independence, and family history. The everyday stuff that builds capable, confident kids.',
     lists: [
@@ -627,6 +635,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
     name: 'STEM & Engineering',
     accent: '#3d5c3b',
     icon: 'Cog',
+    metaDescription:
+      'Free printable STEM checklists for kids: hands-on builds, fair tests and what-happens-if experiments from household stuff. Science without a lab.',
     blurb:
       'STEM and engineering checklists for kids, free and printable: hands-on builds, fair tests, and what-happens-if experiments from household materials. Science without a lab.',
     lists: [
@@ -929,6 +939,8 @@ export const IDEAS_DATA: IdeaCategory[] = [
     name: 'Mindset & Emotional Skills',
     accent: '#9b7bb8',
     icon: 'Heart',
+    metaDescription:
+      'Free printable mindset and resilience checklists for kids: safe failure, bouncing back and perspective practice. The invisible skills that matter.',
     blurb:
       'Mindset and resilience checklists for kids, free and printable: safe failure, bouncing back, and perspective practice. The invisible skills that change everything.',
     lists: [

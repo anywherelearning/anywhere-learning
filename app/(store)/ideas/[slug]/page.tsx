@@ -47,7 +47,10 @@ export async function generateMetadata({
     const listCount = getListCount(category);
     const ideaCount = getTotalIdeas(category);
     const title = `${category.name} Ideas for Kids`;
-    const description = `${category.blurb} Browse ${listCount} free idea lists with ${ideaCount} activities.`;
+    const withCount = `${category.blurb} Browse ${listCount} free idea lists with ${ideaCount} activities.`;
+    // Google cuts snippets off around 160 characters
+    const description =
+      withCount.length <= 160 ? withCount : (category.metaDescription ?? category.blurb);
 
     return {
       // Suffix only when it still fits Google's ~60-character cutoff

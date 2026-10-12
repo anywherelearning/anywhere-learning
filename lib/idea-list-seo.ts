@@ -26,7 +26,7 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   'nature-walk-ideas': {
     seoTitle: 'Nature Walk Checklist for Kids: 50 Ideas (Free PDF)',
     metaDescription:
-      'A printable nature walk checklist with 50 ideas for kids ages 2 to 12. No gear, no prep. Free to read in full, and we email you the PDF in color or black and white.',
+      'A printable nature walk checklist with 50 ideas for kids ages 2 to 12. No gear, no prep. Free to read in full, and we email you the PDF in color.',
     howToUse:
       'Pick two or three ideas before you head out the door, or let your kids choose. The point is not to do all 50 in one walk. You lead by noticing out loud, asking questions, and slowing down enough to follow what catches their attention. Tuck the printed checklist in your bag and check things off together as you go.',
     faqs: [

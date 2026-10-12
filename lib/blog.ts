@@ -547,7 +547,7 @@ const posts: BlogPost[] = [
         { question: 'Will my child fall behind without structured lessons?', answer: 'Behind whom? Grade-level benchmarks are averages, not requirements. Children learn at different paces, and a child who\u2019s genuinely curious and engaged will fill their own gaps when they\u2019re ready.' },
       ]},
     ],
-    relatedSlugs: ['new-to-homeschooling', 'five-stages-deschooling', 'start-homeschooling-mid-year'],
+    relatedSlugs: ['new-to-homeschooling', 'wrecked-mom-permission-slip', 'five-stages-deschooling', 'deschooling-activities', 'start-homeschooling-mid-year'],
   },
   {
     slug: 'worldschool-two-kids',
@@ -610,6 +610,7 @@ const posts: BlogPost[] = [
         { question: 'How do you handle different ages while worldschooling?', answer: 'Give the same experience with different expectations. A younger child might count market stall items while an older one calculates exchange rates. Shared experiences with tiered depth keep everyone engaged.' },
       ]},
     ],
+    recommendedProduct: 'teach-it-to-learn-it',
     relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling', 'worldschool-day-structure'],
   },
   {
@@ -997,7 +998,7 @@ const posts: BlogPost[] = [
         { question: 'When should I consider putting my kids back in school?', answer: 'If burnout has lasted months, if your mental health is seriously suffering, or if the home environment has become consistently tense, it\u2019s worth considering all options. There\u2019s no shame in changing course. The goal is a thriving family, not homeschooling at any cost.' },
       ]},
     ],
-    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'partner-doesnt-support', 'new-to-homeschooling', 'what-no-prep-means'],
+    relatedSlugs: ['wrecked-mom-permission-slip', 'can-you-homeschool-with-a-full-time-job', 'curriculum-guilt-permission-slip', 'five-stages-deschooling', 'partner-doesnt-support', 'new-to-homeschooling', 'what-no-prep-means'],
   },
 
   {
@@ -1234,7 +1235,7 @@ const posts: BlogPost[] = [
         { question: 'How do I explain deschooling to my family?', answer: 'Describe it as a transition period, like adjusting to a new job or moving to a new country. Your child is adapting to a completely different way of learning, and that takes time. Share specific examples of what they\u2019re doing and learning to help relatives see the value.' },
       ] },
     ],
-    relatedSlugs: ['new-to-homeschooling', 'homeschool-methods-compared', 'curriculum-guilt-permission-slip', 'homeschool-burnout', 'start-homeschooling-mid-year'],
+    relatedSlugs: ['deschooling-activities', 'new-to-homeschooling', 'homeschool-methods-compared', 'curriculum-guilt-permission-slip', 'homeschool-burnout', 'start-homeschooling-mid-year'],
   },
 
   // ─── Post #6: What "No Prep" Actually Means ───
@@ -1531,6 +1532,7 @@ const posts: BlogPost[] = [
         { question: 'What about screen time while traveling?', answer: 'We use screens intentionally: language apps during transit, documentaries about where we\u2019re going, video calls with friends and family. Long travel days are a natural time for screens. The key is that screens don\u2019t replace the real-world experiences, they supplement them. On exploration days, screens stay in the bag.' },
       ]},
     ],
+    recommendedProduct: 'world-food-detective',
     relatedSlugs: ['road-trip-math', 'what-we-packed-worldschooling', 'slow-travel-over-bucket-list', 'worldschooling-el-salvador'],
   },
   {
@@ -2017,6 +2019,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Four countries in seven months. Honestly, it could have been three and I wouldn\u2019t have felt like we missed anything.' },
       { type: 'faq', items: [{ question: 'How long should you stay in one place for slow travel with kids?', answer: 'We found four weeks to be the sweet spot. The first week you\u2019re adjusting, the second week you find your rhythm, and by weeks three and four the magic happens: the deep curiosity, the local connections, the comfort.' }, { question: 'Don\u2019t kids get bored staying in one place too long?', answer: 'Ours haven\u2019t. Boredom usually comes from a lack of autonomy, not a lack of novelty. When kids have the freedom to explore, revisit places they love, and pursue their own interests, they stay engaged. Zach spent a full week on Panama Canal research by choice, no one assigned it.' }, { question: 'Is slow travel actually cheaper than regular travel?', answer: 'In our experience, yes, significantly. Monthly rentals, cooking at home, and fewer transportation costs make a huge difference.' }, { question: 'How do you handle schooling during slow travel?', answer: 'We don\u2019t follow a set curriculum. The travel itself becomes the learning. Spanish practice at the local shop, geography from actually being there, science from national park visits. The slow pace gives us time for deeper projects that a packed schedule wouldn\u2019t allow.' }, { question: 'What if we only have two or three weeks for a trip?', answer: 'You can still apply slow travel principles on a shorter timeline. Pick one or two places instead of five. Skip the \u201cmust-see\u201d attractions that don\u2019t genuinely interest your family. Leave unscheduled time for wandering. Even a small dose of slow travel changes the feel of a trip completely.' }] },
     ],
+    recommendedProduct: 'trail-guide-creator',
     relatedSlugs: ['worldschooling-el-salvador', 'homeschool-while-traveling', 'worldschool-day-structure'],
   },
 
@@ -2438,6 +2441,7 @@ const posts: BlogPost[] = [
         { question: 'Can this work if we\u2019re not traveling? Just having grandparents visit at home?', answer: 'Absolutely. The benefits aren\u2019t about the destination; they\u2019re about the intergenerational time. Cooking together, gardening, playing games, hearing stories, working on a project side by side. All of that happens just as well in your kitchen as in Costa Rica.' },
       ]},
     ],
+    recommendedProduct: 'family-history-detective',
     relatedSlugs: ['homeschool-while-traveling', 'worldschool-two-kids', 'slow-travel-over-bucket-list'],
   },
 
@@ -3317,6 +3321,7 @@ const posts: BlogPost[] = [
         { question: 'Will my kids get sick of each other on a long trip?', answer: 'Probably, at times. That\u2019s normal and even healthy. Build in alone time for each child, reading, drawing, their own projects. The key is balance: enough togetherness to bond, enough space to miss each other. Most families find the relationship is stronger after the trip, not weaker.' },
       ]},
     ],
+    recommendedProduct: 'conflict-fix',
     relatedSlugs: ['worldschool-day-structure', 'worldschooling-el-salvador', 'slow-travel-over-bucket-list'],
   },
   {
@@ -3399,6 +3404,7 @@ const posts: BlogPost[] = [
         { question: 'How much does worldschooling in Central America cost?', answer: 'Costs vary by country and lifestyle. Costa Rica is the most expensive in the region; El Salvador and Panama were more affordable for us. Monthly rent for a simple house ranged from a few hundred to over a thousand dollars depending on location. Cooking at home significantly reduces food costs. Spanish lessons were very affordable compared to North America.' },
       ]},
     ],
+    recommendedProduct: 'play-the-world',
     relatedSlugs: ['slow-travel-over-bucket-list', 'what-we-packed-worldschooling', 'worldschooling-el-salvador'],
   },
   {
@@ -3660,7 +3666,7 @@ const posts: BlogPost[] = [
         { question: 'How do I explain unschooling to skeptical family members?', answer: 'Focus on what your child IS doing, not what they\'re not. Instead of "we don\'t use a curriculum," try "she spent this week learning about marine biology because she\'s obsessed with dolphins, she read three books, watched documentaries, and wrote a report." Show the learning, not the philosophy.' },
       ]},
     ],
-    relatedSlugs: ['homeschool-methods-compared', 'five-stages-deschooling', 'curriculum-guilt-permission-slip', 'new-to-homeschooling', 'just-let-them-play'],
+    relatedSlugs: ['homeschool-methods-compared', 'five-stages-deschooling', 'deschooling-activities', 'curriculum-guilt-permission-slip', 'new-to-homeschooling', 'just-let-them-play'],
     pillarSlug: 'real-world-learning',
   },
   {
@@ -4594,7 +4600,7 @@ const posts: BlogPost[] = [
         { question: 'At what age do kids need to start formal schooling?', answer: 'Compulsory schooling ages vary by state and country, but many places do not require formal education until age 6, 7, or even 8. Finland, which consistently ranks among the top education systems globally, does not begin formal instruction until age 7. There is strong evidence that early academic pressure provides no long-term advantage over play-based learning in the early years.' },
       ]},
     ],
-    relatedSlugs: ['new-to-homeschooling', 'curriculum-guilt-permission-slip', 'homeschool-first-year-checklist', 'five-stages-deschooling', 'kitchen-learning-lab'],
+    relatedSlugs: ['homeschool-first-grade', 'new-to-homeschooling', 'curriculum-guilt-permission-slip', 'homeschool-first-year-checklist', 'five-stages-deschooling', 'kitchen-learning-lab'],
     recommendedProduct: 'nature-journal-walks',
   },
 
@@ -4926,7 +4932,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want a free guide packed with more nature-based learning ideas? Download it and get started today.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'nature-walks-science', 'seasonal-scavenger-hunts'],
+    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'summer-stem-activities-for-kids', 'nature-walks-science', 'seasonal-scavenger-hunts'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
   {
@@ -5371,6 +5377,7 @@ const posts: BlogPost[] = [
         { question: 'Does screen time affect emotional regulation?', answer: 'Research suggests excessive screen time can interfere with emotional development, particularly in younger children, because screens provide constant stimulation and reduce opportunities for boredom tolerance and self-directed play. That does not mean screens are inherently bad, but balance matters. Kids who spend more time in unstructured play, physical activity, and face-to-face interaction tend to develop stronger regulation skills.' },
       ]},
     ],
+    recommendedProduct: 'frustration-tolerance-cards',
     relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'how-much-screen-time-kids'],
     pillarSlug: 'life-skills-for-kids',
   },
@@ -5524,6 +5531,7 @@ const posts: BlogPost[] = [
         { question: 'Is growth mindset the same as positive thinking?', answer: 'No. Growth mindset is not about being positive or pretending failure does not hurt. It is about believing that ability develops through effort and that difficulty is information, not a verdict. A child with a growth mindset can say "This is terrible and I am upset" and also "I will try again tomorrow." Both things can be true at the same time.' },
       ]},
     ],
+    recommendedProduct: 'comeback-journal',
     relatedSlugs: ['life-skills-before-12', 'emotional-regulation-kids', 'raise-creative-kids'],
     pillarSlug: 'life-skills-for-kids',
   },
@@ -5654,6 +5662,7 @@ const posts: BlogPost[] = [
         { question: 'Are executive function apps and games effective?', answer: 'Some research shows modest benefits from targeted brain training, but the gains tend to be narrow (you get better at the game) and do not transfer well to real life. Real-world practice, cooking, planning a trip, managing a schedule, navigating social situations, builds executive function in context, which is where the skills actually need to work. Games can be a supplement, but they should not be the primary strategy.' },
       ]},
     ],
+    recommendedProduct: 'hard-thing-challenge',
     relatedSlugs: ['emotional-regulation-kids', 'life-skills-before-12', 'age-appropriate-chores-life-skills'],
     pillarSlug: 'life-skills-for-kids',
   },
@@ -5847,7 +5856,7 @@ const posts: BlogPost[] = [
     keywords: ['how to build resilience in kids', 'building resilience in children', 'resilience activities for kids', 'how to raise resilient kids', 'teaching kids resilience', 'grit for kids', 'growth mindset activities', 'raising mentally tough kids', 'helping kids cope with failure', 'resilience skills for children'],
     readTimeMinutes: 13,
     author: amelie,
-    recommendedProduct: 'future-ready-skills-map',
+    recommendedProduct: 'frustration-tolerance-cards',
     heroImage: '/images/resilience-hero-v4.jpeg',
     heroImageAlt: 'Kid in a pink helmet and knee pads riding a mountain bike over a rocky technical section on a forest trail',
     heroImageAspect: '4/3',
@@ -6229,7 +6238,7 @@ const posts: BlogPost[] = [
         { question: 'What if my schedule does not look like anyone else’s?', answer: 'That is the goal. The best homeschool schedule is the one that fits your specific kids, your work, your values, and your season of life. If yours does not look like the families on Instagram, that probably means yours is working. Schedules that look good in photos are not always the ones doing the real work.' },
       ] },
     ],
-    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'new-to-homeschooling', 'homeschool-methods-compared', 'homeschool-first-year-checklist', 'time-management-for-kids'],
+    relatedSlugs: ['can-you-homeschool-with-a-full-time-job', 'new-to-homeschooling', 'homeschool-first-grade', 'homeschool-methods-compared', 'homeschool-first-year-checklist', 'time-management-for-kids'],
   },
 
   {
@@ -7135,7 +7144,7 @@ const posts: BlogPost[] = [
         { question: 'How do I do STEM with multiple ages at once?', answer: 'Pick a project that scales: a garden, a marble run, a meal plan. Give the older kid the planning, measurement, or budget. Give the younger kid the physical building or sorting. Same project, different roles, no extra prep.' },
       ]},
     ],
-    relatedSlugs: ['lego-stem-activities', 'rube-goldberg-kids', 'engineering-for-kids', 'outdoor-stem-challenges', 'real-world-math-activities', 'kitchen-learning-lab'],
+    relatedSlugs: ['lego-stem-activities', 'rube-goldberg-kids', 'summer-stem-activities-for-kids', 'engineering-for-kids', 'outdoor-stem-challenges', 'real-world-math-activities', 'kitchen-learning-lab'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
   {
@@ -8611,7 +8620,7 @@ const posts: BlogPost[] = [
     keywords: ['communication skills for kids', 'how to teach kids communication skills', 'conflict resolution activities for kids', 'how to teach kids to apologize', 'teaching communication skills to kids', 'how to teach a child to communicate', 'conversation skills for kids', 'assertiveness for kids', 'communication activities for kids', 'social skills for kids'],
     readTimeMinutes: 12,
     author: amelie,
-    recommendedProduct: 'future-ready-skills-map',
+    recommendedProduct: 'reading-the-room',
     heroImage: '/images/communication-skills-hero.jpeg',
     heroImageAlt: 'A tween making his own phone call, focused and serious, learning to communicate by doing it himself',
     heroImageAspect: '16/10',
@@ -8819,7 +8828,7 @@ const posts: BlogPost[] = [
     slug: 'road-trip-math',
     title: 'Road Trip Math: Turn Your Next Trip Into a Real Math Project',
     excerpt: 'Road trip math is the easiest real-world math you will ever run: your kid works out the distance, the fuel, the driving time, and the budget for a trip the family is actually taking. Here is how to do it, plus nine car games that are actually games.',
-    metaDescription: 'Road trip math for kids: have your child plan the real trip. Distance, fuel cost, driving time, two-route comparison, and a budget, plus nine car math games kids ask to play again.',
+    metaDescription: 'Road trip math for kids: your child plans the real trip. Distance, fuel, driving time, a two-route comparison and a budget, plus nine car math games.',
     hook: 'Hand your kid the map and the gas price and let them tell you what the trip costs. That is more math than a week of worksheets, and it actually matters.',
     category: 'real-world-skills',
     pillarSlug: 'real-world-learning',
