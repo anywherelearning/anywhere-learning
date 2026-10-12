@@ -19,7 +19,7 @@ import {
 } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getHowToSteps } from '@/lib/content-blocks';
 import { getResourceBySlug } from '@/lib/resources';
-import { applyLeadMagnetCta, getLeadMagnetForPost, INLINE_CAPTURE_POSTS, inlineCaptureIndex } from '@/lib/lead-magnets';
+import { applyLeadMagnetCta, getLeadMagnetForPost, INLINE_CAPTURE_POSTS, inlineCaptureIndex, QUIZ_FIRST_PAGES } from '@/lib/lead-magnets';
 import BlogInlineEmailCapture from '@/components/blog/BlogInlineEmailCapture';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
@@ -27,6 +27,7 @@ import ReadingProgress from '@/components/blog/ReadingProgress';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import PinterestSaveButton from '@/components/blog/PinterestSaveButton';
 import BlogQuizCTA from '@/components/blog/BlogQuizCTA';
+import InlineQuizCard from '@/components/blog/InlineQuizCard';
 import TryItThisWeek from '@/components/blog/TryItThisWeek';
 import IndexCard from '@/components/blog/IndexCard';
 import { PAPER_SHADOW } from '@/components/shared/Paper';
@@ -459,12 +460,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <MobileTOC items={toc} />
               {(() => {
                 let firstParagraphRendered = false;
+                // Life-skills pages: quiz before the first H2, form before the
+                // second. Everywhere else in the set: form before the first H2.
+                const quizFirst = QUIZ_FIRST_PAGES.has(post.slug);
+                const quizAt = quizFirst ? inlineCaptureIndex(contentWithCallouts, 1) : -1;
                 const captureAt = INLINE_CAPTURE_POSTS.has(post.slug)
-                  ? inlineCaptureIndex(contentWithCallouts)
+                  ? inlineCaptureIndex(contentWithCallouts, quizFirst ? 2 : 1)
                   : -1;
                 return contentWithCallouts.map((block, i) => {
                   const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
                   if (isFirst) firstParagraphRendered = true;
+                  if (i === quizAt) {
+                    return (
+                      <Fragment key={`quiz-${i}`}>
+                        <InlineQuizCard />
+                        {renderBlock(block, i, isFirst)}
+                      </Fragment>
+                    );
+                  }
                   if (i === captureAt) {
                     return (
                       <Fragment key={`capture-${i}`}>
