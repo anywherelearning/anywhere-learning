@@ -488,7 +488,7 @@ const resources: ResourcePage[] = [
     excerpt: 'How to turn nature walks, seasons, and your backyard into rich learning experiences, backed by research and tested by real families.',
     topic: 'nature-stem',
     publishedAt: '2026-03-21',
-    dateModified: '2026-09-28',
+    dateModified: '2026-10-12',
     keywords: [
       'nature based learning', 'outdoor STEM activities', 'nature learning for kids',
       'outdoor learning for kids', 'nature walks education',
@@ -894,6 +894,10 @@ const resources: ResourcePage[] = [
           {
             question: 'What are some examples of nature-based learning activities?',
             answer: 'Common examples include walking the same trail weekly to track seasonal change, keeping a nature journal with "I notice / I wonder / it reminds me of" prompts, building shelters and bridges from sticks, running outdoor STEM challenges, seasonal scavenger hunts, backyard science experiments, and unstructured free play in a natural space. Most require no equipment beyond a notebook and a willingness to follow your child\'s curiosity.',
+          },
+          {
+            question: 'What are the benefits of nature-based learning?',
+            answer: 'Kids get real academics out there, measuring, observing, recording and explaining what they saw, plus things a desk cannot give: better focus after time outside, steadier moods, physical confidence and practice with small, manageable risks. And because the learning is attached to something they found with their own eyes, it sticks.',
           },
           {
             question: 'What if we live in a city with limited green space?',
@@ -2432,7 +2436,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'A few of the strongest engineering activities, organized loosely by complexity:',
+        text: 'A few of the strongest engineering activities, organized loosely by complexity. For 20 more, sorted by age, see our [engineering projects for kids](/blog/engineering-for-kids):',
       },
       {
         type: 'list',

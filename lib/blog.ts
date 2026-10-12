@@ -2509,6 +2509,7 @@ const posts: BlogPost[] = [
     slug: 'teach-kids-prompt-ai',
     title: 'How to Teach Kids to Prompt AI (So It Actually Helps Them Learn)',
     seoTitle: 'How to Teach Kids to Prompt AI So It Helps Them Learn',
+    metaDescription: 'How to teach kids to prompt AI: bad vs good prompts with real examples, what to try at each age, and why a clear prompt is a thinking skill, not a tech one.',
     excerpt: 'Asking AI good questions is a real skill, and teaching kids to do it makes them better thinkers, not lazier ones. Here\u2019s how to start, with examples for every age.',
     hook: '\u201cTell me about volcanoes\u201d gets you a wall of nothing useful. The difference between a bad prompt and a good one is one question.',
     category: 'ai-digital-literacy',
@@ -2840,7 +2841,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'What is a Rube Goldberg machine, exactly?' },
       { type: 'paragraph', text: 'Named after the American cartoonist who drew absurdly complicated inventions, a Rube Goldberg machine is a chain-reaction device that accomplishes a simple task through an elaborate series of steps. Think: a ball rolls down a ramp, hits a lever, which tips a bucket, which pulls a string, which turns on a fan, which blows a sailboat across a table.' },
-      { type: 'paragraph', text: 'The goal isn\u2019t efficiency. The goal is the chain, the longer and more creative, the better. Every step transfers energy to the next, and the whole thing only works if every single connection succeeds. It\u2019s engineering, physics, and creative thinking wrapped into one glorious, frustrating, deeply satisfying project.' },
+      { type: 'paragraph', text: 'The goal isn\u2019t efficiency. The goal is the chain, the longer and more creative, the better. Every step transfers energy to the next, and the whole thing only works if every single connection succeeds. It\u2019s engineering, physics, and creative thinking wrapped into one glorious, frustrating, deeply satisfying project. If it hooks your kid, our [engineering challenges for kids](/blog/engineering-for-kids) post has 20 more builds in the same spirit.' },
 
       { type: 'heading', level: 2, text: 'Why it\u2019s brilliant for learning' },
       { type: 'paragraph', text: 'Kids learn more physics from one afternoon of Rube Goldberg tinkering than from any textbook explanation. Not because textbooks are bad, but because when the ramp is too steep and the ball shoots off the table, they understand momentum in their bones. When the domino chain stops because one piece is too far from the next, they feel what energy transfer means.' },
@@ -6244,7 +6245,7 @@ const posts: BlogPost[] = [
   {
     slug: 'nature-journaling-for-kids',
     title: 'Nature Journaling for Kids: How to Start (and Actually Stick With It)',
-    seoTitle: 'Nature Journaling for Kids: How to Start and Stick With It',
+    seoTitle: 'Nature Journaling for Kids: A Beginner\'s Guide',
     metaDescription: 'How to start nature journaling with kids: a three-prompt framework, a cheap setup, what a first page looks like, and how to make it stick past week one.',
     excerpt: 'Nature journaling teaches kids to observe, ask questions, and record what they notice in the natural world. Here is the simple three-prompt framework that works for ages 4 to 14, plus how to make the habit stick beyond the first week.',
     hook: 'A kid who journals in nature for a year starts noticing things adults walk straight past.',
@@ -6472,7 +6473,8 @@ const posts: BlogPost[] = [
   {
     slug: 'allowance-vs-commission',
     title: 'Allowance vs Commission vs Paid Jobs: How to Teach Kids About Money',
-    seoTitle: 'Allowance vs Commission vs Paid Jobs for Kids',
+    seoTitle: 'Allowance vs Commission for Kids: Which Teaches Money?',
+    metaDescription: 'Allowance, commission or paid jobs? How each one shapes the way kids think about money and family work, and the hybrid that lasts, with amounts by age.',
     excerpt: 'Pure allowance breeds entitlement. Pure commission turns family relationships into a payroll. Here is the hybrid model that actually teaches kids how money works, with rules of thumb by age.',
     hook: 'A kid who gets paid for every dish they wash is learning the wrong lesson about being part of a family.',
     category: 'real-world-skills',
@@ -7179,7 +7181,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Following instructions is not engineering' },
       { type: 'paragraph', text: 'I want to say this clearly because it took me a while to see it. When a kid follows a LEGO instruction booklet, they are practicing sequencing, fine motor work, and visual matching. Useful skills, all of them. But they are not designing anything. The decisions have all been made. The kid is essentially assembling a piece of furniture from IKEA.' },
       { type: 'paragraph', text: 'Engineering happens when there is a problem to solve, a constraint, and no instructions. The kid has to ask: what do I have, what am I trying to make, what is going to hold this together, what happens if it falls over. That is the loop. Define, build, test, fix, build again. You cannot get to that loop from a set of step-by-step pictures.' },
-      { type: 'paragraph', text: 'The shift from following sets to free-building with a goal is the single biggest shift for using LEGO as a [STEM material](/guides/stem-for-kids). And the bricks you already own are enough.' },
+      { type: 'paragraph', text: 'The shift from following sets to free-building with a goal is the single biggest shift for using LEGO as a [STEM material](/guides/stem-for-kids). And the bricks you already own are enough. (No LEGO in the house? The same loop works with the recycling bin, and our [engineering for kids](/blog/engineering-for-kids) post has 20 projects that need nothing else.)' },
       { type: 'heading', level: 2, text: 'Why LEGO is a near-perfect engineering medium' },
       { type: 'paragraph', text: 'There is a reason engineering schools have actually used LEGO in classrooms for decades. The pieces are modular, which means they snap together in predictable ways. They are reusable, so a failed bridge becomes a successful catapult an hour later. The combinations are basically infinite. And the cost per use, if you already own them, is approximately zero.' },
       { type: 'paragraph', text: 'Compare that to most other "STEM kits" you can buy. Single-use cardboard. Specialty parts you cannot replace when one breaks. Packaging more elaborate than the project itself. LEGO sidesteps all of that. The pile in your living room is a lifetime engineering supply.' },
