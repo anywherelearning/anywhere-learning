@@ -9741,8 +9741,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 10,
     author: amelie,
     recommendedProduct: 'family-debate-night',
-    heroImage: '/images/family-debate-night-hero.jpeg',
-    heroImageAlt: 'A boy in glasses making his case at the dining table with a red pencil in hand while his dad listens, chin in hand, written arguments on the table between them',
+    heroImage: '/images/family-debate-night-hero-v2.jpeg',
+    heroImageAlt: 'A boy in glasses raising a red pencil as he makes his point at the dining table while his dad smiles and listens, written arguments on the table between them',
     heroImageAspect: '4 / 3',
     content: [
       { type: 'summary', text: 'A family debate night is a set time when kids and parents each argue their own opinion on a question in turns: a few minutes to write down reasons, an opening statement, a rebuttal that answers what the others actually said, and a closing. Then the family talks through which arguments were strongest, with no judge and often no winner. It builds persuasive speaking, listening and writing in one sitting, and it works from about age 6 with simple topics. The best topics are the ones where the answer changes something real in your house.' },
