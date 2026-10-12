@@ -17,7 +17,7 @@ export default function AddToWeekButton({ slug, title, variant = 'icon' }: { slu
   const [children, setChildren] = useState<Child[]>([]);
   const [added, setAdded] = useState(false);
   const [open, setOpen] = useState(false);
-  const [confirm, setConfirm] = useState<string | null>(null); // "on Zach's trail"
+  const [confirm, setConfirm] = useState<string | null>(null); // e.g. "on <kid name>'s trail"
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

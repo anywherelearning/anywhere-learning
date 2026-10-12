@@ -24,9 +24,9 @@ For the next five days, I'm going to send you one short email a day. Each one is
 
 Let's start with the grocery store.
 
-Last month, Julia (my 9-year-old) was comparing two boxes of granola bars. She flipped them both over, read the ingredients lists out loud, then told me we should get the one with "less weird stuff." She wasn't doing a health assignment. She was just shopping with me.
+Last month, my 9-year-old daughter was comparing two boxes of granola bars. She flipped them both over, read the ingredients lists out loud, then told me we should get the one with "less weird stuff." She wasn't doing a health assignment. She was just shopping with me.
 
-Meanwhile, Zach had the calculator out on my phone because I'd told him our budget was $120. He was running a tally as we went. When we hit the produce section, he weighed the apples and did the per-pound math without anyone asking him to.
+Meanwhile, my son had the calculator out on my phone because I'd told him our budget was $120. He was running a tally as we went. When we hit the produce section, he weighed the apples and did the per-pound math without anyone asking him to.
 
 Here's the thing -- none of that was a lesson. It was a Tuesday.
 
@@ -60,13 +60,13 @@ Hey,
 
 Let me tell you about yesterday.
 
-Zach and Julia were building a blanket fort. It started great. Then Zach wanted to add a second level and Julia wanted to decorate the inside. Voices went up. Someone said "that's not fair." Someone else said "you always get to decide." It devolved into a door slam and ten minutes of silence.
+My son and daughter were building a blanket fort. It started great. Then he wanted to add a second level and she wanted to decorate the inside. Voices went up. Someone said "that's not fair." Someone else said "you always get to decide." It devolved into a door slam and ten minutes of silence.
 
 I almost jumped in. The old teacher in me wanted to mediate, assign roles, find a compromise.
 
 But I didn't. I waited.
 
-After about ten minutes, Julia went back in. She said, "What if we do your second level but I get to make the flag for the top?" Zach thought about it and said, "Fine, but I'm picking the blankets."
+After about ten minutes, my daughter went back in. She said, "What if we do your second level but I get to make the flag for the top?" Her brother thought about it and said, "Fine, but I'm picking the blankets."
 
 They negotiated. Without me.
 
@@ -104,7 +104,7 @@ By the afternoon of day two, they were fully, dramatically bored.
 
 I almost caved. I almost pulled out one of the workbooks I'd been lugging through three airports (more on that mistake another day). But something in me just... waited.
 
-On the morning of day three, Zach said, "What if we made a blog about our trip?" Julia said she'd draw the pictures. Within an hour, they were interviewing each other about their favorite places, writing descriptions, arguing about what to include.
+On the morning of day three, my son said, "What if we made a blog about our trip?" My daughter said she'd draw the pictures. Within an hour, they were interviewing each other about their favorite places, writing descriptions, arguing about what to include.
 
 That blog is still going. They've posted dozens of entries. They film and edit YouTube videos to go with it. Nobody assigned it. Nobody graded it. It came from three rainy days and nothing to do.
 
@@ -146,9 +146,9 @@ That's it.
 
 We were on a boat in the Pacific, off the coast of El Salvador. A humpback whale surfaced about fifty meters from us. The kids were screaming, I was crying (I'm that person), and when things calmed down, I just said: "What do you notice?"
 
-Zach noticed that the whale blew air before diving. Julia noticed there was a smaller one swimming close -- a calf. Zach asked why they spray water. Julia wanted to know if whales sleep.
+My son noticed that the whale blew air before diving. My daughter noticed there was a smaller one swimming close -- a calf. He asked why they spray water. She wanted to know if whales sleep.
 
-That evening, without me suggesting it, Zach was reading about humpback migration on my phone and Julia was drawing the mother and calf from memory.
+That evening, without me suggesting it, my son was reading about humpback migration on my phone and my daughter was drawing the mother and calf from memory.
 
 All from "what do you notice?"
 
@@ -184,7 +184,7 @@ I spent fifteen years in a classroom. I have a B.Ed and an M.Ed. I've read more 
 
 I made lesson plans. I printed schedules. I bought workbooks. I timed subjects in 40-minute blocks. I was so deep in my own conditioning about what "real learning" looked like that I couldn't see the learning that was already happening every single day.
 
-It took months for me to let go. To trust that Zach reading about the Panama Canal for three hours -- in French, drawing cross-section diagrams nobody asked for -- was enough. To trust that Julia sorting shells by size and color on a beach in Panama was math and science and art all at once. To trust that my kids picking up Spanish by ordering food at a restaurant was more language learning than any app could deliver.
+It took months for me to let go. To trust that my son reading about the Panama Canal for three hours -- in French, drawing cross-section diagrams nobody asked for -- was enough. To trust that my daughter sorting shells by size and color on a beach in Panama was math and science and art all at once. To trust that my kids picking up Spanish by ordering food at a restaurant was more language learning than any app could deliver.
 
 The learning was already happening. It just didn't look like school.
 
@@ -216,7 +216,7 @@ I wasn't sure if I should send this email. The last five days felt so personal, 
 
 So I'm not going to be. I just want to tell you about something I made.
 
-After years of homeschooling and worldschooling Zach and Julia, I started writing down the things that actually worked for us. The nature walks that turned into science conversations. The grocery store math. The real-world challenges that got my kids thinking and problem-solving and working together.
+After years of homeschooling and worldschooling my son and daughter, I started writing down the things that actually worked for us. The nature walks that turned into science conversations. The grocery store math. The real-world challenges that got my kids thinking and problem-solving and working together.
 
 I turned those into simple digital activity guides. You open them on your phone, tablet, or laptop and follow along. No printing required (unless you want to). No prep. No special materials. And they're built with three flexible levels, so they work whether your kid is 5 or 12.
 

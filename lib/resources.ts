@@ -96,7 +96,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 22,
     author: amelie,
     heroImage: '/images/guide-real-world-hero.jpeg',
-    heroImageAlt: 'Zach learning to use a mitre saw with dad in the workshop',
+    heroImageAlt: 'My son learning to use a mitre saw with dad in the workshop',
     content: [
       {
         type: 'summary',
@@ -965,7 +965,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 25,
     author: amelie,
     heroImage: '/images/guide-worldschooling-hero.jpeg',
-    heroImageAlt: 'Julia standing in front of a traditional stilted hut in an indigenous village in Panama',
+    heroImageAlt: 'My daughter standing in front of a traditional stilted hut in an indigenous village in Panama',
     heroImagePosition: 'center 70%',
     content: [
       {
@@ -1129,7 +1129,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Less than you think. Our family travels with a laptop for Zach, an iPad for Julia, e-readers for both kids, two pencil cases, extra white sheets, and a laminated world map. We started with binders full of workbooks, but barely touched them after the first few months. The real world was teaching everything those pages were trying to cover.',
+        text: 'Less than you think. Our family travels with a laptop for my son, an iPad for my daughter, e-readers for both kids, two pencil cases, extra white sheets, and a laminated world map. We started with binders full of workbooks, but barely touched them after the first few months. The real world was teaching everything those pages were trying to cover.',
       },
       {
         type: 'paragraph',
@@ -1271,7 +1271,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 18,
     author: amelie,
     heroImage: '/images/guide-creativity-hero.jpeg',
-    heroImageAlt: 'Zach programming a LEGO robot with a tablet at a maker workshop',
+    heroImageAlt: 'My son programming a LEGO robot with a tablet at a maker workshop',
     content: [
       {
         type: 'summary',
@@ -1638,7 +1638,7 @@ const resources: ResourcePage[] = [
     readTimeMinutes: 20,
     author: amelie,
     heroImage: '/images/guide-ai-digital-hero.jpeg',
-    heroImageAlt: 'Zach and Julia working on laptops at a beachside terrace in El Salvador',
+    heroImageAlt: 'My kids working on laptops at a beachside terrace in El Salvador',
     content: [
       {
         type: 'summary',
