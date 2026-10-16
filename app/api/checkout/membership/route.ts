@@ -15,6 +15,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { createMembershipCheckout } from '@/lib/membership-checkout';
+import { userDataFromRequest } from '@/lib/meta-capi';
 
 function getSiteOrigin(req: NextRequest): string {
   if (process.env.NEXT_PUBLIC_URL) return process.env.NEXT_PUBLIC_URL.replace(/\/$/, '');
@@ -74,6 +75,7 @@ export async function POST(req: NextRequest) {
       email: clerkEmail || customerEmail,
       origin: getSiteOrigin(req),
       plan,
+      meta: userDataFromRequest(req),
     });
 
     if (!result.ok && result.reason === 'already_member') {

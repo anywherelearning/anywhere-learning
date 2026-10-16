@@ -6,6 +6,8 @@ import {
   userDataFromRequest,
   sendMetaEvent,
   sendMetaLead,
+  metaMatchToMetadata,
+  metaMatchFromMetadata,
 } from './meta-capi';
 
 const sha = (s: string) => createHash('sha256').update(s).digest('hex');
@@ -195,5 +197,35 @@ describe('sendMetaEvent', () => {
     expect(ev.user_data.client_ip_address).toBe('203.0.113.9');
     expect(ev.user_data.fbp).toBe('fb.1.2.3');
     expect(ev.custom_data).toEqual({ content_name: 'free-guide' });
+  });
+});
+
+describe('metaMatchToMetadata / metaMatchFromMetadata', () => {
+  it('round-trips fbc/fbp/IP/UA through Stripe metadata', () => {
+    const md = metaMatchToMetadata({
+      fbc: 'fb.1.1700000000000.AbCdEf',
+      fbp: 'fb.1.2.3',
+      clientIp: '203.0.113.9',
+      userAgent: 'Mozilla/5.0',
+    });
+    expect(md).toEqual({
+      meta_fbc: 'fb.1.1700000000000.AbCdEf',
+      meta_fbp: 'fb.1.2.3',
+      meta_ip: '203.0.113.9',
+      meta_ua: 'Mozilla/5.0',
+    });
+    expect(metaMatchFromMetadata(md)).toEqual({
+      fbc: 'fb.1.1700000000000.AbCdEf',
+      fbp: 'fb.1.2.3',
+      clientIp: '203.0.113.9',
+      userAgent: 'Mozilla/5.0',
+    });
+  });
+
+  it('skips missing values and caps length at Stripe\'s 500 chars', () => {
+    expect(metaMatchToMetadata(undefined)).toEqual({});
+    const md = metaMatchToMetadata({ fbc: null, fbp: null, clientIp: null, userAgent: 'x'.repeat(900) });
+    expect(md).toEqual({ meta_ua: 'x'.repeat(500) });
+    expect(metaMatchFromMetadata(null)).toEqual({ fbc: null, fbp: null, clientIp: null, userAgent: null });
   });
 });

@@ -36,7 +36,7 @@ import { db } from '@/lib/db';
 import { users, subscriptions, stripeEvents, sentEmails, exitSurveys } from '@/lib/db/schema';
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
-import { sendMetaEvent } from '@/lib/meta-capi';
+import { metaMatchFromMetadata, sendMetaEvent } from '@/lib/meta-capi';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD } from '@/lib/fall-offer';
 import {
   sendMembershipWelcomeEmail,
@@ -355,7 +355,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   //    page fires from the browser, using the session id as the shared event
   //    id so Meta keeps one copy. The server copy lands even when the buyer's
   //    ad blocker ate the pixel, which is what makes the ads optimizable.
-  //    No IP / user agent here on purpose: this request came from Stripe.
+  //    This request came from Stripe, so the buyer's IP / user agent / fbc /
+  //    fbp come from the session metadata, parked there at checkout creation.
   {
     const value =
       planValueUsd ?? (typeof session.amount_total === 'number' ? session.amount_total / 100 : 0);
@@ -363,7 +364,13 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       eventName: isTrial ? 'StartTrial' : 'Purchase',
       eventId: session.id,
       sourceUrl: `${process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co'}/checkout/success`,
-      userData: { email, firstName, lastName, externalId: stripeCustomerId },
+      userData: {
+        email,
+        firstName,
+        lastName,
+        externalId: stripeCustomerId,
+        ...metaMatchFromMetadata(session.metadata),
+      },
       customData: {
         value,
         currency: (session.currency || 'usd').toUpperCase(),
@@ -791,7 +798,11 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       await sendMetaEvent({
         eventName: 'Subscribe',
         eventId: `${sub.id}_converted`,
-        userData: { email: user.email, externalId: customerId },
+        userData: {
+          email: user.email,
+          externalId: customerId,
+          ...metaMatchFromMetadata(sub.metadata),
+        },
         customData: {
           value,
           currency: (sub.currency || 'usd').toUpperCase(),

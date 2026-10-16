@@ -115,6 +115,7 @@ export async function GET(req: NextRequest) {
       origin,
       plan,
       offer,
+      meta: userDataFromRequest(req),
     });
     if (result.ok) {
       // Kit attribution. The only other Kit write in this funnel is the Clerk

@@ -25,6 +25,7 @@ import {
   isTrialEligible,
 } from '@/lib/access';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD, isFallOfferActive } from '@/lib/fall-offer';
+import { metaMatchToMetadata, type MetaUserData } from '@/lib/meta-capi';
 
 export type MembershipCheckoutResult =
   | { ok: true; url: string }
@@ -40,6 +41,12 @@ export async function createMembershipCheckout(opts: {
   plan?: MembershipPlan;
   /** Promo the buyer arrived with (from /fall). Ignored once expired. */
   offer?: 'fall';
+  /**
+   * The buyer's Meta matching data (from userDataFromRequest). The Stripe
+   * webhook that sends the server-side StartTrial runs on Stripe's request,
+   * so it can only see these if we park them on the session here.
+   */
+  meta?: Pick<MetaUserData, 'clientIp' | 'userAgent' | 'fbp' | 'fbc'>;
 }): Promise<MembershipCheckoutResult> {
   const { clerkId, email, origin } = opts;
   const plan: MembershipPlan = opts.plan === 'monthly' ? 'monthly' : 'annual';
@@ -146,6 +153,8 @@ export async function createMembershipCheckout(opts: {
         trial_applied: String(applyTrial),
         ...(applyFallOffer && { offer: FALL_OFFER.slug }),
         ...(clerkId && { clerk_id: clerkId }),
+        // For the trial-to-paid Subscribe event 14 days later.
+        ...metaMatchToMetadata(opts.meta),
       },
     },
     success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}${plan === 'monthly' ? '&plan=monthly' : ''}&session_id={CHECKOUT_SESSION_ID}`,
@@ -164,6 +173,7 @@ export async function createMembershipCheckout(opts: {
       plan,
       ...(applyFallOffer && { offer: FALL_OFFER.slug }),
       ...(clerkId && { clerk_id: clerkId }),
+      ...metaMatchToMetadata(opts.meta),
     },
   });
 

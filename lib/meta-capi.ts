@@ -121,6 +121,36 @@ export function userDataFromRequest(request: Request): Pick<
 }
 
 /** Build the exact payload Meta expects. Exported for tests. */
+/**
+ * Park a visitor's Meta matching data on a Stripe Checkout session's metadata,
+ * so the Stripe webhook (which runs on Stripe's request, not the visitor's)
+ * can still send fbc/fbp/IP/UA with the server-side StartTrial / Purchase.
+ * Stripe caps metadata values at 500 chars.
+ */
+export function metaMatchToMetadata(
+  m: Pick<MetaUserData, 'clientIp' | 'userAgent' | 'fbp' | 'fbc'> | undefined,
+): Record<string, string> {
+  if (!m) return {};
+  const out: Record<string, string> = {};
+  if (m.fbc) out.meta_fbc = m.fbc.slice(0, 500);
+  if (m.fbp) out.meta_fbp = m.fbp.slice(0, 500);
+  if (m.clientIp) out.meta_ip = m.clientIp.slice(0, 500);
+  if (m.userAgent) out.meta_ua = m.userAgent.slice(0, 500);
+  return out;
+}
+
+/** Reverse of metaMatchToMetadata, for the Stripe webhook. */
+export function metaMatchFromMetadata(
+  md: Record<string, string> | null | undefined,
+): Pick<MetaUserData, 'clientIp' | 'userAgent' | 'fbp' | 'fbc'> {
+  return {
+    fbc: md?.meta_fbc || null,
+    fbp: md?.meta_fbp || null,
+    clientIp: md?.meta_ip || null,
+    userAgent: md?.meta_ua || null,
+  };
+}
+
 export function buildMetaPayload(event: MetaServerEvent) {
   const u = event.userData;
   const userData: Record<string, string | string[]> = {};
