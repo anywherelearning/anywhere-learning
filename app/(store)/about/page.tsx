@@ -247,16 +247,6 @@ export default function AboutPage() {
                 >
                   Where Parents Talk podcast
                 </a>
-                . Guest writer at{' '}
-                <a
-                  href="https://tidewindacademyhomeschool.com/the-errand-that-teaches-more-than-a-worksheet/"
-                  target="_blank"
-                  rel="noopener"
-                  className="border-b border-gray-300 pb-px transition-colors hover:border-forest hover:text-forest-dark"
-                >
-                  Tide Wind Academy Homeschool
-                </a>
-                .
               </p>
             </div>
 
