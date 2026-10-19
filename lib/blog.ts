@@ -9729,6 +9729,128 @@ const posts: BlogPost[] = [
     relatedSlugs: ['seasonal-scavenger-hunts', 'nature-walks-science', 'backyard-science-experiments', 'nature-journaling-for-kids', 'forest-school-activities', 'outdoor-stem-challenges'],
   },
   {
+    slug: 'winter-stem-activities-kids',
+    title: 'Winter STEM Activities for Kids: 12 Outdoor Experiments in the Cold',
+    seoTitle: 'Winter STEM Activities for Kids: 12 Outdoor Experiments',
+    excerpt: 'Winter is the one season when kids can hold the science in their hands: snow they can melt and measure, ice that pushes the lid off a jar, tracks that tell a story. Twelve winter STEM activities to do outside, each with something to count, time or test, sorted by age from 6 to 14.',
+    metaDescription: 'Winter STEM activities for kids 6 to 14, done outside: measure snow, catch snowflakes, test road salt, build snowshoes, track animals. No kit needed.',
+    hook: 'Cold days are short. That makes them perfect for one good experiment.',
+    category: 'nature-learning',
+    pillarSlug: 'stem-for-kids',
+    publishedAt: '2026-10-19',
+    draft: true,
+    keywords: ['winter stem activities', 'winter stem activities for kids', 'winter science activities for kids', 'outdoor winter activities for kids', 'snow science for kids', 'snow experiments for kids', 'ice experiments for kids', 'winter nature study', 'winter outdoor learning', 'snowflake science'],
+    readTimeMinutes: 11,
+    author: amelie,
+    recommendedProduct: 'outdoor-stem-challenges',
+    heroImage: '/images/winter-stem-hero.jpeg',
+    heroImageAlt: 'Two kids walking up a snowy forest trail between tall snow-covered evergreens, an adult a little way ahead',
+    heroImageAspect: '4 / 3',
+    content: [
+      { type: 'summary', text: 'Winter STEM activities for kids work best outside, where the cold does the experiment for you: melting a jar of fresh snow to find its snow-to-water ratio, catching snowflakes on dark paper to see how their shape changes with temperature, freezing water to watch it expand, and testing why salt melts ice. Most need a jar, a ruler, a thermometer and a notebook, and every one has something a child can measure, time or predict, from age 6 to 14.' },
+
+      { type: 'paragraph', text: 'Winter has a reputation as the season where everyone stays inside and waits for spring. But for doing real science with your kids, it might be the best one. You can hold snow in your hands, melt it, measure it, and freeze it again. You can watch water push the lid off a jar overnight. And fresh snow is the only time of year when every animal in your neighbourhood leaves a written record of where it went.' },
+      { type: 'paragraph', text: 'We live in the mountains of British Columbia, so winter is long here and we have had plenty of time to figure out what works when it is cold. The short answer: short sessions, one good question, and a warm drink waiting at the door.' },
+      { type: 'paragraph', text: 'Every activity below has something to count, time or test, which is where the math and the writing come in without anyone calling it a lesson. Most need nothing more than a jar, a ruler, a cheap thermometer and a notebook. And if you don’t get snow where you live, keep reading. About half of these work with frost, ice and cold mornings.' },
+
+      { type: 'heading', level: 2, text: 'Snow and ice' },
+
+      { type: 'heading', level: 3, text: '1. How much water is in snow?' },
+      { type: 'paragraph', text: 'Push a clear jar straight down into fresh snow until it is full, then level it off and measure how deep the snow is with a ruler. Bring it inside, let it melt, and measure the water. That is the snow-to-water ratio, and it is one of the numbers weather forecasters use. On average it is about 10 to 1 (ten centimetres of snow makes one centimetre of water), but wet, heavy snow can be closer to 5 to 1 and light, fluffy powder can be 20 to 1 or more.' },
+      { type: 'paragraph', text: 'Do it after every snowfall and keep a list. Younger kids compare “more water” and “less water.” Older kids calculate the ratio, notice that the fluffy storms are the ones with the big numbers, and check it against the air temperature on the day it fell.' },
+
+      { type: 'heading', level: 3, text: '2. Catch a snowflake' },
+      { type: 'paragraph', text: 'Put a piece of black paper or dark fabric in the freezer (or outside) for ten minutes so it is cold enough that flakes don’t melt on contact. Hold it out during a snowfall and look closely with a magnifying glass or a phone camera zoomed in. Every snowflake has six sides because of the way water molecules lock together when they freeze.' },
+      { type: 'paragraph', text: 'The interesting part is that the shape depends on the temperature where the flake grew. Around -5°C (23°F), snow tends to fall as thin needles and columns. Around -15°C (5°F), you get flat plates and the classic star shapes with branches. Write down the temperature each time you catch flakes and sketch what you see. After a few snowfalls, kids can start predicting what they will catch before they go out.' },
+
+      { type: 'heading', level: 3, text: '3. The jar that grows' },
+      { type: 'paragraph', text: 'Fill a plastic container (a yogurt tub or a plastic bottle with the top cut off, never glass) with water, mark the water line with a marker, and leave it outside overnight on a night below freezing. In the morning, measure how far the ice has risen above the line. Water expands by about 9% when it freezes, which is unusual. Almost everything else shrinks when it gets colder.' },
+      { type: 'paragraph', text: 'This is why pipes burst in winter and why potholes appear in spring: water gets into a crack, freezes, expands and pushes the crack wider. Older kids can measure the volume before and after and work out the percentage themselves, then walk the street and find cracks the ice has made.' },
+
+      { type: 'heading', level: 3, text: '4. The salt test' },
+      { type: 'paragraph', text: 'Why do we put salt on roads and sidewalks? Find out with four ice cubes (or four patches of ice on the porch). Sprinkle one with salt, one with sugar, one with sand, and leave one alone. Check every ten minutes and record which one melts first. Salt lowers the temperature water needs to freeze, so salty water stays liquid when plain water would turn to ice. Sand doesn’t melt anything, it just gives your boots something to grip.' },
+      { type: 'paragraph', text: 'For older kids, add a real-world twist. Ordinary road salt slows down a lot once it gets colder than about -10°C (around 15°F). Run the test on a mild day and on a very cold day, and compare. It explains why the roads still get icy in a deep freeze, even after the salt truck went by.' },
+
+      { type: 'heading', level: 2, text: 'Building in the cold' },
+
+      { type: 'heading', level: 3, text: '5. Cardboard snowshoes' },
+      { type: 'paragraph', text: 'Have your kid walk across deep snow in boots and measure how far they sink. Then challenge them to build something that keeps them on top: cardboard rectangles, a baking tray, branches tied with string, an old tennis racket. Strap each design on, take five steps, and measure how deep the footprints are.' },
+      { type: 'paragraph', text: 'What they will find is that bigger is better, up to the point where it is too clumsy to walk in. A wider footprint spreads the same body weight over more snow, so each part of the snow holds less, and you sink less. That is pressure, and it is the same reason a moose sinks and a snowshoe hare doesn’t. Older kids can trace each design on graph paper, count the squares to find the area, and graph area against how deep they sank.' },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges', pinned: true, context: 'If your kid loves building things that have to pass a real test, Outdoor STEM Challenge Cards has 20 more: bridges, shelters, boats and towers built from what you find outside, each with a test to pass.' },
+
+      { type: 'heading', level: 3, text: '6. The sled lab' },
+      { type: 'paragraph', text: 'Which slides fastest: a plastic sled, a piece of cardboard, a garbage bag, a baking tray? Pick one short hill, mark a start line and a finish line, and time each one three times from the same spot with the same rider. Average the three runs. Kids will want to push off harder for their favourite, so the rule is no pushing, just let go.' },
+      { type: 'paragraph', text: 'This is a lesson in friction and in fair testing, because they will quickly see that a heavier rider or a running start ruins the comparison. Older kids can add a twist: does the same sled go faster on packed snow or fresh snow, in the cold morning or the warmer afternoon?' },
+
+      { type: 'heading', level: 3, text: '7. How warm is it under the snow?' },
+      { type: 'paragraph', text: 'On a very cold day, take two thermometers outside. Leave one in the air, in the shade. Push the other one down to the bottom of a deep snowbank, right against the ground, and leave it for fifteen minutes. Compare the two. Under 15 to 20 centimetres (6 to 8 inches) of snow or more, the ground stays close to 0°C, even when the air above is far colder.' },
+      { type: 'paragraph', text: 'That pocket under the snow is where mice, voles and shrews spend the winter, running through tunnels that are much warmer than the air above them. Ask your kid: why does snow keep things warm when it is made of frozen water? (It is mostly trapped air, the same reason a puffy coat works.) Then build a small snow shelter for a toy with a thermometer inside, and see if they can beat the outside temperature.' },
+      { type: 'image', src: '/images/winter-stem-snow-window.jpeg', alt: 'A smiling girl in a flowered hat and blue mittens peeking through a window cut into a thick snow wall', caption: 'A snow wall is mostly trapped air, which is why it keeps the cold out.' },
+      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to design a whole shelter, Build a Survival Base has them pick a harsh place on Earth, from the Arctic to the desert, research what they would be up against, and plan and build a base to survive it.' },
+
+      { type: 'heading', level: 3, text: '8. Ice block engineering' },
+      { type: 'paragraph', text: 'For a stretch of days below freezing, fill milk cartons, yogurt tubs and ice cube trays with water and leave them outside. Add food colouring if you like. Once you have a stack of blocks, the challenge is to build the tallest tower or a bridge between two snowbanks. Kids figure out that a little slushy water poured into the joints freezes and acts like glue.' },
+      { type: 'paragraph', text: 'Count the blocks, measure the height, and keep track of what fails and why. Is a wide base better? Do the big blocks go on the bottom or does it not matter? An arch is the hardest challenge and the most satisfying one when it stands.' },
+
+      { type: 'heading', level: 2, text: 'Animals and trees in winter' },
+
+      { type: 'heading', level: 3, text: '9. Track detective' },
+      { type: 'paragraph', text: 'The morning after a fresh snowfall, go looking for tracks. Before anyone looks anything up, have your kid measure one print, sketch it, measure the distance between prints, and guess what made it. Then follow the trail. Where did it start? Where did it stop? Did it speed up?' },
+      { type: 'paragraph', text: 'Patterns tell you a lot. Rabbits and squirrels leave groups of four prints, with the two big back feet landing ahead of the small front ones. Cats and foxes walk almost in a straight line, each back foot landing in the front foot’s print. When the gap between prints suddenly gets longer, the animal started running. Older kids can work out the animal’s speed by comparing its stride to their own walking and running strides.' },
+
+      { type: 'heading', level: 3, text: '10. The winter bird count' },
+      { type: 'paragraph', text: 'Winter is the easiest time to watch birds, because there are no leaves to hide them and they come to food. Hang a feeder (or scatter seed on a flat stump) somewhere you can see from a window, and once a week, count the birds for fifteen minutes. Write down the biggest number of each kind you see at one time, so you don’t count the same chickadee five times.' },
+      { type: 'paragraph', text: 'This is real citizen science. Project FeederWatch, run by the Cornell Lab of Ornithology, collects counts like these from families across North America from November to April, and the Great Backyard Bird Count runs for four days every February, anywhere in the world. Your kid’s numbers go into the same data scientists use to track bird populations.' },
+
+      { type: 'heading', level: 3, text: '11. Name a tree with no leaves' },
+      { type: 'paragraph', text: 'Most people can’t tell trees apart without their leaves. Kids can learn to, and it is a great observation challenge. Start with how the branches grow. On most trees, the side twigs and buds alternate up the branch. On a few, they grow in matching pairs, directly across from each other. Tree people remember the pairs with the word “MAD Horse”: maple, ash, dogwood and horse chestnut (there are a few exceptions, so treat it as a first clue).' },
+      { type: 'paragraph', text: 'Then look at the buds (sharp or round, sticky or fuzzy), the bark, and the shape of the whole tree. Pick three trees near your house and make a page for each one. In spring, check whether you were right when the leaves come out.' },
+
+      { type: 'heading', level: 2, text: 'The sky' },
+
+      { type: 'heading', level: 3, text: '12. The noon shadow' },
+      { type: 'paragraph', text: 'Push a straight stick into the ground (or stand a broom against a fence), and once a week at the same time around midday, measure the length of its shadow. Weather apps list the exact time of solar noon, when the sun is highest, if you want to be precise. In the northern hemisphere, the noon shadow is longest around the winter solstice, December 21, because that is when the noon sun sits lowest in the sky. After that, the shadows start shrinking again.' },
+      { type: 'paragraph', text: 'Graph the shadow lengths and kids can literally see the solstice: the line goes up, flattens out and turns around. Older kids can divide the shadow length by the stick length and compare their number to a friend or relative who lives further north or south.' },
+      { type: 'product-callout', slug: 'nature-data-tracker', pinned: true, context: 'If the graph is the part they love, Nature Data Tracker has them track daylight, temperature or rain for a week or two, find the pattern, chart it and predict the next few days.' },
+
+      { type: 'heading', level: 3, text: 'Bonus: frozen bubbles on the coldest day' },
+      { type: 'paragraph', text: 'Save this one for the coldest, calmest morning of the year. Blow a soap bubble (store-bought bubble mix works, or dish soap and water with a little sugar), and catch it on the wand or let it land on snow. Below about -18°C (0°F), you can watch ice crystals spread across it like frost on a window. It can work a bit warmer than that, but with less detail, and wind ruins it every time. Have your kid write down the temperature each time you try, and you have a data set for next winter.' },
+
+      { type: 'heading', level: 2, text: 'No snow where you live?' },
+      { type: 'paragraph', text: 'You can still do most of this. The jar that grows, the salt test and the ice block building only need nights below freezing, or a freezer. The bird count, the tree ID and the noon shadow work anywhere, in any climate. And on frosty mornings, frost on a car windshield or a cold leaf is worth a close look with a magnifying glass: those crystals grew straight from the water vapour in the air, without ever being liquid.' },
+      { type: 'paragraph', text: 'If your winter is mild, our [backyard science experiments](/blog/backyard-science-experiments) work year round, and the [summer STEM activities](/blog/summer-stem-activities-for-kids) are waiting on the other side.' },
+
+      { type: 'heading', level: 2, text: 'Keeping it safe and short' },
+      { type: 'paragraph', text: 'Kids get cold faster than adults, and wet mittens end an experiment faster than anything. Plan for twenty or thirty minutes outside, bring a spare pair of mittens, and head in at the first sign of numb fingers or toes. A thermos of hot chocolate makes the measuring part a lot more popular.' },
+      { type: 'paragraph', text: 'And stay off frozen ponds, lakes and rivers, even when the ice looks thick. Every ice experiment here can be done in a container or on the porch.' },
+
+      { type: 'heading', level: 2, text: 'Picking by age' },
+      { type: 'paragraph', text: 'Every one of these works from 6 to 14. What changes is how much of the thinking your kid does on their own.' },
+      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
+      { type: 'paragraph', text: 'Noticing, comparing and guessing. Catching snowflakes, the salt test, following tracks, counting birds at the feeder. Ask “what do you think will happen?” before you start and write down their answer word for word. Being wrong is half the fun.' },
+      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
+      { type: 'paragraph', text: 'Measuring, averaging and graphing. The snow-to-water ratio, timing three sled runs and averaging them, measuring snowshoe footprints, graphing the noon shadow. This is the age for one real prediction with a date on it, written down before the data comes in.' },
+      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
+      { type: 'paragraph', text: 'Fair tests and explanations. Change one thing at a time (the slider, the snow, the temperature), run enough trials to trust the result, and explain why it happened in a one-page write-up or a short talk at dinner. The snowshoe area graph, the salt test on a mild day vs a deep freeze, and the snowflake-and-temperature log all make strong projects at this age.' },
+
+      { type: 'heading', level: 2, text: 'How to keep it going all winter' },
+      { type: 'paragraph', text: 'Don’t try to do all twelve. Pick one thing to track all season (the snow-to-water ratio after every storm, the weekly bird count or the noon shadow) and save one or two of the others for good snow days. The thing you track is where the real learning happens, because that is where your kid sees a pattern show up that nobody could have guessed in November.' },
+      { type: 'paragraph', text: 'Keep it all in one notebook. A date, a number and three words is enough for an entry. If your kid likes to draw what they see, [nature journaling for kids](/blog/nature-journaling-for-kids) has a simple way to start, and the [seasonal nature scavenger hunts](/blog/seasonal-scavenger-hunts) include a winter one for lighter walks. Autumn already gone? These [fall nature activities](/blog/fall-nature-activities-kids) are the ones to save for next year. And for how outdoor STEM changes as kids grow, see [outdoor STEM activities by age](/blog/outdoor-stem-by-age).' },
+      { type: 'paragraph', text: 'Winter is long. That is the good news. Pick one question this week, and put a jar by the door for the next snowfall.' },
+      { type: 'paragraph', text: 'And if you would rather open a guide that walks your kid through it step by step, that is what the Anywhere Learning membership is for: real-world, hands-on activities for ages 6 to 14, from engineering challenges to tracking the weather, ready to open on any device.' },
+
+      { type: 'faq', items: [
+        { question: 'What are good winter STEM activities for kids?', answer: 'The best winter STEM activities use the cold as the experiment: melting a jar of fresh snow to find its snow-to-water ratio, catching snowflakes on chilled dark paper, freezing water to measure how much it expands, testing salt, sugar and sand on ice, building cardboard snowshoes, and timing different sleds down the same hill. Each one has something to measure, time or test.' },
+        { question: 'What winter science can kids do outside?', answer: 'Kids can measure snow and the water inside it, compare air temperature with the temperature at the bottom of a snowbank, follow and measure animal tracks, count birds at a feeder for citizen science projects like Project FeederWatch, identify trees by their branches and buds, and track the noon shadow as it grows toward the winter solstice.' },
+        { question: 'What winter STEM activities work without snow?', answer: 'Ice experiments only need a night below freezing or a freezer: freezing water to watch it expand, the salt melting test and ice block building. Bird counts, winter tree identification and tracking the noon shadow work in any climate, and frost on a cold morning is worth a close look with a magnifying glass.' },
+        { question: 'How cold does it need to be to freeze a bubble?', answer: 'Frozen bubbles work best at about -18°C (0°F) or colder, on a calm day with no wind. They can freeze at warmer temperatures below zero, but more slowly and with fewer of the crystal patterns kids love to watch.' },
+        { question: 'Can kids do experiments on a frozen pond?', answer: 'Stay off frozen ponds, lakes and rivers, even when the ice looks thick. Every ice experiment in this list can be done in a plastic container, on a porch or in a snowbank in the yard.' },
+        { question: 'What winter STEM works for older kids?', answer: 'For ages 12 to 14, turn any activity into a fair test: graph snowshoe area against how deep you sink, compare road salt on a mild day and in a deep freeze, log snowflake shapes against the air temperature, or calculate the snow-to-water ratio after every storm and look for the pattern.' },
+      ]},
+    ],
+    relatedSlugs: ['fall-nature-activities-kids', 'outdoor-stem-challenges', 'outdoor-stem-by-age', 'backyard-science-experiments', 'summer-stem-activities-for-kids', 'seasonal-scavenger-hunts'],
+  },
+  {
     slug: 'family-debate-night-kids',
     title: 'Family Debate Night: How to Run One (With Topics by Age)',
     seoTitle: 'Family Debate Night: How to Run One, With Topics by Age',
