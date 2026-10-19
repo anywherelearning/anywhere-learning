@@ -358,12 +358,17 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'engineering-ideas': {
-    seoTitle: 'Engineering Challenge Checklist: 16 Builds for Kids (Free)',
+    seoTitle: 'Engineering Challenges for Kids: 16 Builds (Free Checklist)',
     metaDescription:
       '16 engineering build challenges for kids on one printable checklist: ziplines, drawbridges, water filters. Household materials. Free to read, PDF by email.',
     howToUse:
       'Give them the materials, give them the challenge, and then give them space. Engineering is learned by trying, failing, and trying again, so the best thing you can do is not rescue them too fast. Build alongside them if they want company. Start with a quick build before working up to the bigger projects.',
     faqs: [
+      {
+        question: 'What is an engineering challenge for kids?',
+        answer:
+          'An engineering challenge for kids is a build-it-and-test-it problem, like a bridge that has to hold a book or a zipline that has to deliver a toy, solved with cardboard, tape and whatever is in the recycling. The test is what makes it engineering: kids build, watch it fail, change one thing, and try again.',
+      },
       {
         question: 'What is a simple engineering project for kids?',
         answer:

@@ -273,6 +273,9 @@ export const QUIZ_FIRST_PAGES = new Set<string>([
   'life-skills-for-kids',
   'life-skills-before-12',
   'decision-making-skills-kids',
+  // Oct 19 2026: Shark Tank had 51 organic sessions in 28 days and 0 leads on
+  // the inline form, while quiz-first life-skills-before-12 took 5 of 8.
+  'shark-tank-for-kids',
 ]);
 
 /**

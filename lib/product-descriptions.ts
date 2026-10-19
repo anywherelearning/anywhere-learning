@@ -733,10 +733,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Grand opening planning and visitor experience',
     ],
     skillTags: ['Research', 'Writing', 'Design', 'Curation', 'Presentation'],
+    // Oct 19 2026: this page outranked the post for "how to create a museum
+    // exhibit" (16 impr at 22 vs 7). The post takes the how-to searcher; this
+    // page speaks to the parent who wants the guide (Invent a Sport pattern).
     seo: {
-      title: "Build a Museum at Home: Kids' Exhibit Project, Ages 6-14",
+      title: 'Build a Museum: Parent-Led Exhibit Project Guide, Ages 6-14',
       description:
-        'How to create a museum at home: your child picks a topic, researches it, curates objects, writes labels, designs the exhibit and hosts an opening. Ages 6-14.',
+        'The guide your family follows to build a museum: pick a topic, research it, curate objects, write labels and host an opening night. Ages 6 to 14.',
     },
     insideTheLearning: {
       lead:
@@ -977,6 +980,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Budget tracking and final cost analysis',
     ],
     skillTags: ['Multiplication', 'Budgeting', 'Estimation', 'Planning', 'Division'],
+    // Oct 19 2026: this page held "using math to make party plans" while the post sat deep.
+    // Guide framing here so the post can own the how-to search.
+    seo: {
+      title: 'Party Planner Math: A Parent-Led Project Guide for Kids',
+      description:
+        'The guide your family follows to plan a real party on a budget: guest list, food quantities, price comparisons and a timeline, all worked out by your kid.',
+    },
     insideTheLearning: {
       lead:
         'Your child plans a real party, and the maths is the only way to get there. Feeding a set number of guests means calculating quantities per guest and scaling the recipes up. Staying inside a fixed budget means comparing prices and making trade-offs about what makes the cut. They are not doing a worksheet about a party. They are doing the party, and the worksheet turns out to be unnecessary.',
@@ -1198,6 +1208,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Reflection and Version 2 thinking',
     ],
     skillTags: ['Leadership', 'Problem-Solving', 'Community'],
+    // Oct 19 2026: this page held "community impact project" while the post sat deep.
+    // Guide framing here so the post can own the how-to search.
+    seo: {
+      title: 'Community Impact: A Parent-Led Project Guide for Kids',
+      description:
+        'The guide your family follows to tackle a real neighbourhood problem: spot the need, find who it affects, plan a fix and carry it out together.',
+    },
     insideTheLearning: {
       lead:
         'Your child finds something their own neighbourhood actually needs, works out who it affects, and then does something about it. The logistics are real, which is the point. A plan that survives contact with other people teaches more than a plan that stays on paper.',
