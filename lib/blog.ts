@@ -1140,6 +1140,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Making it work for different ages' },
       { type: 'paragraph', text: 'Every challenge above works across ages with simple adjustments. Younger kids (4\u20136) do the building and observing. Older kids (7\u20139) add measurement and recording. Tweens (10\u201313) add hypothesis, controlled variables, and written conclusions. Same activity, different depth.' },
       { type: 'paragraph', text: 'The key is to resist turning it into a lesson. Don\u2019t explain the science before they do the activity. Let them discover it. Ask questions instead of giving answers. \u201cWhat do you think will happen? Why did that one fail? What would you change?\u201d' },
+      { type: 'paragraph', text: 'Most of these work in any season. For the cold months, these [winter STEM activities](/blog/winter-stem-activities-kids) are built around snow, ice and frost.' },
       { type: 'tip', title: 'Keep a field notebook', text: 'Give each child a small notebook dedicated to outdoor experiments. Sketches, measurements, observations, questions. Over time, this becomes a portfolio of genuine scientific thinking, and it\u2019s far more impressive than any worksheet.' },
       { type: 'paragraph', text: 'You don\u2019t need a lab or a curriculum to teach STEM. You need [a garden, a creek, a park, or a trail](/blog/nature-walks-science), or [a kitchen counter](/blog/kitchen-learning-lab). The materials are free. The learning is real. And the best part? Your kids will ask to do it again tomorrow.' },
       { type: 'cta', text: 'Want more ways to learn through doing? Our free guide gives you real-world activities your kids can try this week. No curriculum, low prep.', href: '/free-guide', label: 'Get the Free Guide' },
@@ -4827,7 +4828,7 @@ const posts: BlogPost[] = [
         'Follow the tangent. If the bridge experiment turns into a two-hour dam project, let it. The learning went where the interest went.',
         'Keep it short and repeatable. Ten focused minutes on the same trail every week beats one exhausting science marathon.',
       ]},
-      { type: 'paragraph', text: 'If your kid catches the bug, pair these with our [no-prep backyard science experiments](/blog/backyard-science-experiments) and turn ordinary [nature walks into science lessons](/blog/nature-walks-science). The cluster all reinforces the same idea: the outdoors is the most flexible classroom you will ever have.' },
+      { type: 'paragraph', text: 'If your kid catches the bug, pair these with our [no-prep backyard science experiments](/blog/backyard-science-experiments) and turn ordinary [nature walks into science lessons](/blog/nature-walks-science). The cluster all reinforces the same idea: the outdoors is the most flexible classroom you will ever have. And when the snow comes, these [winter STEM activities for kids](/blog/winter-stem-activities-kids) work the same way at every age.' },
 
       { type: 'faq', items: [
         { question: 'What age can kids start outdoor STEM?', answer: 'As early as age two. Toddlers are doing real STEM when they pour water between cups, sort rocks by texture, and roll objects down a slope, because they are exploring volume, classification, and gravity. The activities get more structured as kids grow, but the starting age is essentially “as soon as they can get outside and grab things.”' },
@@ -4922,7 +4923,7 @@ const posts: BlogPost[] = [
         'Talk about what happened at dinner. Retelling solidifies understanding.',
         'Connect experiments to each other. "Remember when we tested evaporation? That is the same water cycle making those clouds."',
       ]},
-      { type: 'paragraph', text: 'If your kids catch the outdoor science bug, take it further with [forest school activities](/blog/forest-school-activities) that blend nature exploration with hands-on experimentation.' },
+      { type: 'paragraph', text: 'If your kids catch the outdoor science bug, take it further with [forest school activities](/blog/forest-school-activities) that blend nature exploration with hands-on experimentation. When it gets cold, these [winter STEM activities](/blog/winter-stem-activities-kids) keep the experiments going outside with snow, ice and frost.' },
 
       { type: 'faq', items: [
         { question: 'What do you need for backyard science experiments?', answer: 'Nothing you have to buy. The 15 experiments here use water, ice, dirt, a few seeds, a ruler, a phone for photos and whatever is in the recycling. Where one works better with a thermometer or a magnifying glass we say so, and every one has a version without it.' },
@@ -7438,6 +7439,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Overplanning. A color-coded calendar with an activity every hour kills curiosity faster than anything. Plan the anchor hour. Leave the rest open.' },
       { type: 'paragraph', text: 'Over-supplying. Buying the kit, the workbook, the special goggles. Most of the best summer STEM uses things you already own. The kit becomes the project; the project should be the project.' },
       { type: 'paragraph', text: 'Not joining in. STEM activities work best when you do them with your kid, at least for the setup. Not as a teacher. As a partner. Sit on the grass while they engineer the water channel. Hand them the salt for the ice cream. Your presence is the real curriculum.' },
+      { type: 'paragraph', text: 'And when summer is over, the outdoor experiments don\u2019t have to stop. These [fall nature activities](/blog/fall-nature-activities-kids) and [winter STEM activities](/blog/winter-stem-activities-kids) pick up where summer leaves off.' },
       { type: 'cta', text: 'Want a week of summer-ready activities? Our free guide gives you real-world STEM your kids can try this week: low prep, no curriculum.', href: '/free-guide', label: 'Get the Free Guide' },
       { type: 'faq', items: [
         { question: 'How much STEM is enough for summer?', answer: 'Two or three focused sessions a week, 20 to 40 minutes each, is plenty for most kids ages 5 to 12. The rest of the time should be play, outdoor time, reading, and helping with the household. Consistency matters more than volume, and summer is also for rest.' },
@@ -9715,7 +9717,7 @@ const posts: BlogPost[] = [
       { type: 'image', src: '/images/fall-nature-notes.jpeg', alt: 'Girl in a striped shirt standing on a forest trail among ferns, reading a small slip of paper in her hand', caption: 'Notes on the trail. A few words is enough.' },
       { type: 'paragraph', text: 'Keep everything in one notebook, and give it a page a day. Even a three-word entry counts. If your kid likes drawing what they see, our guide to [nature journaling for kids](/blog/nature-journaling-for-kids) has a simple way to start that doesn’t require anyone to be good at art. For walks where you want something lighter, the [seasonal nature scavenger hunts](/blog/seasonal-scavenger-hunts) have a fall hunt ready to print.' },
 
-      { type: 'paragraph', text: 'Fall doesn’t wait. In six weeks the leaves are down and the experiment is over until next year. Pick one tree this week and take the first photo.' },
+      { type: 'paragraph', text: 'Fall doesn’t wait. In six weeks the leaves are down and the experiment is over until next year (and these [winter STEM activities](/blog/winter-stem-activities-kids) take over). Pick one tree this week and take the first photo.' },
       { type: 'paragraph', text: 'And if you would rather open a guide that walks your kid through it step by step, that is what the Anywhere Learning membership is for: real-world, hands-on activities for ages 6 to 14, from seed science to decomposition to tracking the weather, ready to open on any device.' },
 
       { type: 'faq', items: [
@@ -9726,7 +9728,7 @@ const posts: BlogPost[] = [
         { question: 'Do I need any supplies for fall nature activities?', answer: 'Mostly a notebook and a phone camera. A few investigations use household things: string and sticks to mark a square, a stopwatch, a thermometer, coffee filters and rubbing alcohol for chromatography, and paper and a bowl for a mushroom spore print.' },
       ]},
     ],
-    relatedSlugs: ['seasonal-scavenger-hunts', 'nature-walks-science', 'backyard-science-experiments', 'nature-journaling-for-kids', 'forest-school-activities', 'outdoor-stem-challenges'],
+    relatedSlugs: ['winter-stem-activities-kids', 'seasonal-scavenger-hunts', 'nature-walks-science', 'backyard-science-experiments', 'nature-journaling-for-kids', 'forest-school-activities'],
   },
   {
     slug: 'winter-stem-activities-kids',
@@ -9738,7 +9740,6 @@ const posts: BlogPost[] = [
     category: 'nature-learning',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-10-19',
-    draft: true,
     keywords: ['winter stem activities', 'winter stem activities for kids', 'winter science activities for kids', 'outdoor winter activities for kids', 'snow science for kids', 'snow experiments for kids', 'ice experiments for kids', 'winter nature study', 'winter outdoor learning', 'snowflake science'],
     readTimeMinutes: 11,
     author: amelie,
