@@ -1,0 +1,199 @@
+{
+  "slug": "directions-challenge",
+  "category": "Writing & Communication",
+  "title": "Directions Challenge",
+  "tagline": "Communication · Clarity · Problem-solving",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid writes step-by-step directions for a route or a task, then reads them to you while you follow them exactly, word for word. No pointing, no gestures, no showing. When you end up in the wrong place, your kid works out which words caused it, fixes them, and tries again. It's often hilarious, and it shows kids how hard it is to be truly clear, and how to fix it when they're not.",
+  "create": [
+    "A set of written directions for a route or a task",
+    "A fixed version someone can follow without help",
+    "A real sense of what makes instructions easy (or hard) to follow"
+  ],
+  "need": [
+    "A willing follower: you, a sibling, or a friend",
+    "A route to walk (around the house, the garden, the park) or a task to complete (build a block tower, make a sandwich, or the hidden drawing: your kid draws something, hides it, and guides you to draw the same thing)",
+    "Paper and pencil for writing the directions",
+    "Optional: a blindfold for an extra challenge"
+  ],
+  "howTo": {
+    "intro": "You don't need any teaching experience. Your main job is to be the follower: you do exactly what the directions say, even when you know what your kid meant. That's where all the learning comes from, and it's usually where the laughing starts too.",
+    "tips": [
+      {
+        "title": "Follow word for word",
+        "text": "If your kid says 'go forward,' keep walking until they say stop. If they say 'turn,' pick a direction yourself. Don't fill in what they meant. The gap between what they said and what they meant is the lesson."
+      },
+      {
+        "title": "Let them find the mistake",
+        "text": "When you end up in the wrong place, don't explain what went wrong. Just stop and wait. Give your kid the chance to look at their words and work it out."
+      },
+      {
+        "title": "Keep it light",
+        "text": "This activity is funniest when it goes wrong, so laugh together. A wrong turn isn't a failure. It's the clue that shows which words need fixing."
+      }
+    ],
+    "example": {
+      "title": "What a fix looks like",
+      "before": [
+        "Go to the kitchen.",
+        "Turn.",
+        "Open it."
+      ],
+      "after": [
+        "Walk 6 big steps to the kitchen door.",
+        "Turn left so the fridge is in front of you.",
+        "Open the fridge door."
+      ],
+      "why": "Same three steps, but the fixed version says how far to go, which way to turn, and what 'it' is. That's what your kid is aiming for."
+    },
+    "troubleshoot": [
+      {
+        "q": "Your kid doesn't like writing yet",
+        "a": "They say each step out loud and you write it down for them."
+      },
+      {
+        "q": "They get frustrated when it goes wrong",
+        "a": "Swap roles for one round, so you're the one giving confusing directions."
+      },
+      {
+        "q": "It's too easy",
+        "a": "Add the blindfold, or pick a task with more steps."
+      },
+      {
+        "q": "Siblings are arguing",
+        "a": "One gives the directions, the other follows, then they swap."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Clarity",
+      "text": "saying exactly what you mean, so nobody has to guess"
+    },
+    {
+      "name": "Sequencing",
+      "text": "putting steps in an order someone can follow"
+    },
+    {
+      "name": "Perspective-taking",
+      "text": "realising that what's obvious to you isn't obvious to someone else"
+    },
+    {
+      "name": "Problem-solving",
+      "text": "finding why something didn't work and fixing it"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Plan it and write it",
+      "why": "Your kid picks a challenge and writes the first set of directions.",
+      "kid": "Your kid chooses something to give directions for: a route (kitchen to mailbox) or a task (a block tower, a sandwich, or the hidden drawing, where they draw something and hide it). Then they write the directions one step per line, saying exactly how far or how many: 'take 4 steps,' not 'go a bit.'",
+      "you": "Help brainstorm a few ideas from the list below, then let your kid choose. Agree on the rule together: words only, no pointing or showing. While they write, don't look. You'll find out how clear the directions are in Step 2.",
+      "starters": [
+        "Couch to fridge",
+        "A house with one window",
+        "A 4-block tower",
+        "A paper plane",
+        "Front door to bedroom"
+      ],
+      "ask": [
+        "What's something you know how to do that would be hard to explain?",
+        "If you write 'turn,' how will I know which way?"
+      ],
+      "tip": "Pick something your kid knows well but has never had to explain out loud. Knowing how to do something and explaining it are very different skills.",
+      "levels": {
+        "explore": "Keep it to 5 steps or fewer, with simple action words like walk, turn, and stop.",
+        "develop": "Aim for 6 to 10 steps, using distances (12 steps) or landmarks (the big chair).",
+        "extend": "Have them add a checkpoint every few steps, like 'You should now see the front door.'"
+      }
+    },
+    {
+      "title": "Give the directions",
+      "why": "The first test run. You follow the directions exactly, and both of you see what happens.",
+      "kid": "Your kid reads the directions out loud, one step at a time, and waits while you do each one. Words only. If you go the wrong way, they don't correct you yet. They just watch and make a small mark next to the step where it happened.",
+      "you": "Do exactly what you hear, nothing more. If a direction is unclear, make your best guess and do that, even if you're pretty sure it's not what your kid meant. No questions on this first try. For the hidden drawing, reveal both drawings side by side at the end.",
+      "ask": [
+        "At which step did things start to go wrong?",
+        "Did I do what you said, or what you meant?"
+      ],
+      "tip": "This first run is supposed to go a bit wrong. That's not failure. It's exactly what Step 3 needs.",
+      "levels": {
+        "explore": "Your kid reads and watches, then points out afterward where things went off track.",
+        "develop": "Your kid gives no hints at all and marks every step where something unexpected happened.",
+        "extend": "After each step, your kid quietly writes down what they expected and what actually happened."
+      }
+    },
+    {
+      "title": "Find the breakdowns",
+      "why": "Together, you work out why each step went wrong.",
+      "kid": "Your kid goes back through the directions with you, line by line. For each step that went wrong, they figure out why: was it too vague, was a step missing, were the steps in the wrong order, or did they assume you knew something you didn't?",
+      "you": "Now you can talk. At each confusing step, say what went through your head: 'When you said turn, I didn't know which way.' Keep it about the words, never about your kid. Let them name the cause before you suggest one.",
+      "ask": [
+        "What did you assume I would know that I didn't?",
+        "Was the problem what you said, or what you didn't say?"
+      ],
+      "tip": "The big lesson here: when someone gets lost, the problem usually isn't the listener. It's the message.",
+      "levels": {
+        "explore": "Your kid circles the steps that didn't work and says what went wrong in their own words.",
+        "develop": "Next to each circled step, your kid writes the cause: vague, missing step, wrong order, or assumed.",
+        "extend": "Your kid makes a table: what they said, what you did, and why it went wrong. Then looks for a pattern."
+      }
+    },
+    {
+      "title": "Fix it and run it again",
+      "why": "Your kid rewrites what broke, and you test the new version.",
+      "kid": "Your kid rewrites only the steps they marked, adding what was missing: how far, which way, a landmark, an exact number. Then they read the new version to you from the start, the same way as Step 2, or try it on someone new.",
+      "you": "Don't rewrite it for them. If they're stuck, ask a question instead: 'How will I know when to stop?' Then follow the new version just as literally as before, and compare it with the first run together.",
+      "ask": [
+        "Could anyone get this new version wrong?",
+        "Was the second run better? Where exactly?"
+      ],
+      "tip": "When the second run works, say so out loud: 'I didn't have to guess once that time.' That moment is the payoff.",
+      "levels": {
+        "explore": "Your kid fixes the 2 or 3 steps that caused the most trouble, then tries again.",
+        "develop": "Your kid rewrites every step that went wrong and compares the second run to the first.",
+        "extend": "Test the new version on someone who has never seen it. Does it work for them too?"
+      }
+    },
+    {
+      "title": "Look back together",
+      "why": "You talk about what changed, and where else it matters.",
+      "kid": "Your kid talks about the whole activity: the biggest surprise, what they learned about giving clear directions, and where else in real life being clear matters (a recipe, a game, a new place).",
+      "you": "Share your side too: tell them about a time you got lost or confused because someone's directions weren't clear. Then celebrate the fix, not just the finish. Getting it right the second time is the whole point.",
+      "ask": [
+        "How is telling someone what to do different from showing them?",
+        "What would you tell someone doing this for the first time?"
+      ],
+      "tip": "End by picking the next challenge together: a route if you did a task, or a task if you did a route.",
+      "levels": {
+        "explore": "Your kid shares one thing that surprised them and one thing they'd do differently.",
+        "develop": "Your kid writes a few sentences about what they learned, with one real-life example.",
+        "extend": "Your kid compares giving directions for a route and for a task: which was harder, and why?"
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just found out how hard it is to be truly clear, and how to get better at it.",
+    "text": "They planned, tested, found what broke, fixed it, and tried again. Along the way they learned that what's obvious to you isn't always obvious to someone else, and that good communication means thinking about the person listening.",
+    "celebrate": "Take a moment to point out what your kid did: they found exactly where their words went wrong and fixed them. That's a skill plenty of adults are still working on.",
+    "extensions": [
+      "Try it blindfolded: the follower can't see and has to rely completely on the words",
+      "Swap roles: you give the directions and your kid follows them word for word",
+      "Write directions to a hidden treat and leave them for someone to find",
+      "Race the clock: can your partner finish in under 3 minutes using only your directions?"
+    ]
+  },
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "photo": {
+    "src": "public/email/course-day3-drawings.jpg",
+    "caption": "From our house: one stove, drawn twice. Every difference is a word that wasn't clear yet."
+  },
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "time": "About 45 minutes"
+}
