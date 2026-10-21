@@ -406,3 +406,236 @@ html,body,.pg{background:#fff!important}
 .before,.after,.example{background:#fff!important;border:1.5px solid #000}.after{border-width:2.5px}
 .before .tag,.after .tag{color:#000}.before li{text-decoration-color:#000}`;
 }
+
+// ─── The Future-Ready Skills Map: same design system, map-specific pages ───
+export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
+  const bw = mode === 'print-bw';
+  const layout = mode === 'phone' ? 'phone' : 'print';
+  let pn = 1; // cover is page 1
+  const foot = (label) => `<footer class="foot"><span>The Future-Ready Skills Map &middot; ${esc(label)}</span><span class="pnum">${++pn}</span></footer>`;
+  // Page numbers are fixed by structure, so the contents page can list them up front.
+  const P = { welcome: 2, toc: 3, start: 4, glance: 5 };
+  let n0 = 6; const bandStart = g.bands.map((b) => { const s0 = n0; n0 += b.pages.length + 2; return s0; });
+  const closingPage = n0;
+  const areaTag = (a) => `<span class="atag" style="--ac:${a.color}">${esc(a.name)}</span>`;
+
+  const cover = `
+<section class="pg cover map-cover">
+  ${contours()}
+  <div class="cover-in">
+    <div class="eyebrow">${esc(g.category)}</div>
+    <h1>${esc(g.title)}</h1>
+    <p class="tagline">${esc(g.tagline)}</p>
+    <div class="chips">${g.chips.map((c) => `<span>${esc(c)}</span>`).join('')}</div>
+    <div class="coverbody">
+      <figure class="snap mapsnap"><img src="${img(g.photo.src)}" alt=""></figure>
+      <div class="areadots">${g.areas.map((a) => `<span style="--ac:${a.color}">${esc(a.name)}</span>`).join('')}</div>
+    </div>
+  </div>
+  <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+</section>`;
+
+  const welcome = `
+<section class="pg">
+  <div class="eyebrow">Welcome</div>
+  <h2>Before you start</h2>
+  ${g.welcome.map((p, i) => `<p class="${i === 0 ? 'lead big' : 'lead'} blk">${esc(p)}</p>`).join('')}
+  <div class="box blk"><div class="label">A note about ages</div><p>${esc(g.agesNote)}</p></div>
+  <div class="box blk"><div class="label">About the checkboxes</div><p>${esc(g.checkNote)}</p></div>
+  <p class="legal blk">${esc(g.disclaimer)}</p>
+  ${foot('Welcome')}
+</section>`;
+
+  const toc = `
+<section class="pg" id="toc">
+  <div class="eyebrow">Contents</div>
+  <h2>Find your way</h2>
+  <div class="toc blk">
+    <a class="tocrow" href="#start"><span>Your first 10 minutes</span><i></i><b>${P.start}</b></a>
+    <a class="tocrow" href="#glance"><span>The whole map on one page</span><i></i><b>${P.glance}</b></a>
+  </div>
+  ${g.bands.map((b, bi) => `
+  <div class="tocband blk ${b.id}">
+    <a class="tochead" href="#band-${b.id}"><span class="tlabel">${esc(b.label)}</span><span class="tname">${esc(b.name)}</span><b>${bandStart[bi]}</b></a>
+    <div class="tocareas">${g.areas.map((ar, i) => `<a href="#${b.id}-${ar.slug}" style="--ac:${ar.color}"><span>${esc(ar.name)}</span><b>${bandStart[bi] + 1 + i}</b></a>`).join('')}
+      <a href="#week-${b.id}"><span>What a week could look like</span><b>${bandStart[bi] + 13}</b></a></div>
+  </div>`).join('')}
+  <div class="toc blk"><a class="tocrow" href="#closing"><span>You're raising someone ready</span><i></i><b>${closingPage}</b></a></div>
+  ${foot('Contents')}
+</section>`;
+
+  const start = `
+<section class="pg" id="start">
+  <div class="eyebrow">Start here</div>
+  <h2>Your first 10 minutes</h2>
+  <div class="startsteps blk">${g.start.map(([t, d], i) => `
+    <div class="ss"><span class="tipn">${i + 1}</span><div><h3>${esc(t)}</h3><p>${esc(d)}</p></div></div>`).join('')}
+  </div>
+  <p class="why blk">${esc(g.startClose)}</p>
+  ${foot('Start here')}
+</section>`;
+
+  const glance = `
+<section class="pg" id="glance">
+  <div class="eyebrow">At a glance</div>
+  <h2>The whole map on one page</h2>
+  <p class="why blk">Find your kid's column, read down, then turn to the areas you circle.</p>
+  <div class="glancet blk">
+    <div class="gh"></div><div class="gh">${esc(g.bands[0].label)}<b>${esc(g.bands[0].name)}</b></div><div class="gh">${esc(g.bands[1].label)}<b>${esc(g.bands[1].name)}</b></div>
+    ${g.areas.map((a, i) => `<div class="ga" style="--ac:${a.color}">${esc(a.name)}</div><div class="gc">${esc(g.glance[i][0])}</div><div class="gc">${esc(g.glance[i][1])}</div>`).join('')}
+  </div>
+  ${foot('At a glance')}
+</section>`;
+
+  const bandPages = g.bands.map((b) => {
+    const intro = `
+<section class="pg bandintro ${b.id}" id="band-${b.id}">
+  <div class="bandbanner"><span class="bblabel">${esc(b.label)}</span><span class="bbname">${esc(b.name)}</span></div>
+  <h2>${esc(b.title)}</h2>
+  ${b.intro.map((p) => `<p class="lead blk">${esc(p)}</p>`).join('')}
+  <div class="focusbox blk"><div class="label">Focus over formality</div><p>If you only do three things consistently, make them:</p>
+    <ol>${b.focus.map((f) => `<li>${esc(f)}</li>`).join('')}</ol></div>
+  ${foot(b.label)}
+</section>`;
+    const areas = b.pages.map((p, i) => {
+      const a = g.areas[i];
+      return `
+<section class="pg area" id="${b.id}-${a.slug}" style="--ac:${a.color}">
+  <header class="areahead">
+    <span class="abadge"></span>
+    <div><div class="bandpill ${b.id}">${esc(b.label)} &middot; ${esc(b.name)}</div><div class="eyebrow">Area ${i + 1} of 12</div><h2>${esc(a.name)}</h2><p class="asub">${esc(p.subtitle)}</p></div>
+  </header>
+  <div class="blk"><div class="label">What to develop</div><ul class="dots">${p.develop.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  <div class="box blk"><div class="label">${esc(b.by)}</div><ul class="checks">${p.looks.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  <div class="blk"><div class="label">${esc(b.waysLabel)}</div><ul class="ways">${p.ways.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  <div class="talk blk"><div class="label">Real talk${review && p.talkNew ? ' <span class="newflag">New, please review</span>' : ''}</div><p>${esc(p.talk)}</p></div>
+  <div class="lib blk"><div class="label">In the library</div><div class="libchips">${p.library.map((x) => `<span>${esc(x)}</span>`).join('')}</div></div>
+  ${foot(`${b.label} · ${a.name}`)}
+</section>`;
+    }).join('');
+    const tag = (s) => s.split(' & ').length ? `<span class="wtag">${esc(s)}</span>` : '';
+    const week = `
+<section class="pg" id="week-${b.id}">
+  <div class="bandpill ${b.id}">${esc(b.label)} &middot; ${esc(b.name)}</div>
+  <h2>What a week could look like</h2>
+  <p class="why blk">Not a schedule. Just a sketch of how these skills weave into everyday life.</p>
+  <div class="week blk">${b.week.map(([d, m, mt, a, at]) => `
+    <div class="wd">${esc(d)}</div>
+    <div class="wc"><span class="wl">Morning</span>${esc(m)} ${tag(mt)}</div>
+    <div class="wc"><span class="wl">Afternoon</span>${esc(a)} ${tag(at)}</div>`).join('')}
+  </div>
+  <div class="box blk"><div class="label">Weekend</div><p>${esc(b.weekend)}</p></div>
+  <div class="focusbox blk"><div class="label">If you only do three things this week</div><ol>${b.focus.map((f) => `<li>${esc(f)}</li>`).join('')}</ol><p class="wclose">${esc(b.weekClose)}</p></div>
+  ${foot(`${b.label} · A week`)}
+</section>`;
+    return intro + areas + week;
+  }).join('');
+
+  const closing = `
+<section class="pg finish" id="closing">
+  ${contours()}
+  <div class="eyebrow">One last thing</div>
+  <h2>You're raising someone ready</h2>
+  ${g.closing.map((p) => `<p class="lead blk">${esc(p)}</p>`).join('')}
+  ${bonus
+    ? `<div class="cta blk"><p>${esc(g.cta)}</p><span class="ctaurl">${esc(g.ctaUrl)}</span></div>`
+    : `<a class="donebox blk" href="${esc(g.memberUrl)}"><span class="donetick">&#10003;</span><span>${esc(g.memberClose)}</span><b>Open my trail &rarr;</b></a>`}
+  <p class="legal blk">&copy; Anywhere Learning &middot; For your family's use. Please don't share, resell or upload this guide. &middot; anywherelearning.co</p>
+  ${foot('The end')}
+</section>`;
+
+  const accent = '#bf7c48', soft = '#f6e9dc';
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(g.title)}</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>${css(layout, accent, soft, bw)}${mapCss(layout, bw)}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${welcome}${toc}${start}${glance}${bandPages}${closing}</body></html>`;
+}
+
+function mapCss(layout, bw) {
+  return `
+.lead.big{font-size:1.12em;font-weight:500}
+.pnum{font:800 13px 'Bricolage Grotesque';letter-spacing:0;color:var(--ink)}
+.toc{display:grid;gap:2px}
+.tocrow,.tocareas a,.tochead{display:flex;align-items:baseline;gap:8px;color:var(--ink);text-decoration:none}
+.tocrow{padding:9px 2px;border-bottom:1px dotted rgba(93,125,83,.35);font-weight:700}
+.tocrow i{flex:1}.toc b,.tocareas b,.tochead b{font:800 1em 'Bricolage Grotesque'}
+.tocband{border-radius:16px;overflow:hidden;border:1px solid rgba(93,125,83,.2);background:var(--card)}
+.tochead{padding:12px 16px;color:#fff;align-items:center}
+.tocband.build .tochead{background:#4f8aa0}.tocband.apply .tochead{background:#bf7c48}
+.tlabel{font:700 11px 'JetBrains Mono';letter-spacing:.12em;text-transform:uppercase}
+.tname{flex:1;font:800 22px 'Bricolage Grotesque'}
+.tochead b{font-size:18px}
+.tocareas{display:grid;padding:8px 16px 10px}
+.tocareas a{padding:5px 0;border-bottom:1px dotted rgba(93,125,83,.25);font-size:.95em}
+.tocareas a span{flex:1;position:relative;padding-left:16px}
+.tocareas a span:before{content:'';position:absolute;left:0;top:.42em;width:9px;height:9px;border-radius:3px;background:var(--ac,#999)}
+.bandbanner{display:flex;flex-direction:column;border-radius:20px;padding:22px 26px;color:#fff;margin-bottom:26px}
+.bandintro h2{margin:0 0 6px}
+.bandintro h2 + .lead{margin-top:10px}
+.bandintro.build .bandbanner{background:linear-gradient(135deg,#4f8aa0,#3f7187)}
+.bandintro.apply .bandbanner{background:linear-gradient(135deg,#c98552,#a8683b)}
+.bblabel{font:800 34px/1 'Bricolage Grotesque'}
+.bbname{font:700 14px 'JetBrains Mono';letter-spacing:.3em;text-transform:uppercase;margin-top:8px;opacity:.9}
+.bandpill{display:inline-block;align-self:flex-start;font:700 10.5px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:4px 9px;border-radius:6px;margin-bottom:4px}
+.bandpill.build{background:#4f8aa0}.bandpill.apply{background:#bf7c48}
+.atag{display:inline-block;font:700 11px 'JetBrains Mono';letter-spacing:.06em;padding:3px 8px;border-radius:6px;background:var(--ac);color:#fff}
+.areadots{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:18px}
+.areadots span{font:700 10.5px 'JetBrains Mono';letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--card);border:1.5px solid var(--ac);color:var(--ink)}
+.mapsnap img{aspect-ratio:4/3;object-fit:cover}
+.startsteps{display:grid;gap:12px}
+.ss{display:flex;gap:14px;background:var(--card);border:1px solid rgba(93,125,83,.16);border-radius:16px;padding:14px 18px}
+.ss h3{font-size:1.05em;margin-bottom:2px}
+.glancet{display:grid;grid-template-columns:1.05fr 1.5fr 1.5fr;border-radius:14px;overflow:hidden;border:1px solid rgba(93,125,83,.2);background:var(--card)}
+.gh{font:700 11px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:9px 10px;background:var(--paper2)}
+.gh b{display:block;font:800 15px 'Bricolage Grotesque';letter-spacing:0;text-transform:none;color:var(--ink)}
+.ga{font:700 .86em 'DM Sans';color:var(--ink);padding:8px 10px;border-top:1px solid rgba(93,125,83,.14);border-left:5px solid var(--ac);display:flex;align-items:center}
+.gc{font-size:.86em;line-height:1.35;padding:8px 10px;border-top:1px solid rgba(93,125,83,.14);border-left:1px solid rgba(93,125,83,.1)}
+.focusbox{background:var(--forest);color:#fff;border-radius:16px;padding:16px 20px}
+.focusbox .label{color:var(--gold)}.focusbox ol{margin:6px 0 0 20px}.focusbox li{margin:0 0 4px;font-weight:600}
+.wclose{margin-top:8px;font-style:italic;color:#e8ecdf}
+.areahead{display:flex;gap:14px;align-items:center}
+.abadge{flex:none;width:52px;height:52px;border-radius:14px;background:var(--ac);transform:rotate(-4deg);box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.area h2{margin:2px 0 0;color:var(--ink)}
+.asub{color:var(--ac);font-weight:700;margin-top:2px}
+.area .eyebrow{color:var(--ac)}
+.area .box{border-left:5px solid var(--ac)}
+.checks li{position:relative;padding-left:28px;margin:0 0 8px}
+.checks li:before{content:'';position:absolute;left:0;top:.2em;width:16px;height:16px;border:2px solid var(--ac);border-radius:4px;background:#fff}
+.ways li{position:relative;padding-left:22px;margin:0 0 7px}
+.ways li:before{content:'→';position:absolute;left:0;color:var(--ac);font-weight:700}
+.talk{background:#fbf1dc;border-radius:16px;padding:14px 18px;border:1px dashed rgba(214,162,78,.7)}
+.talk .label{color:#a9762f}.talk p{font-style:italic}
+.newflag{font:700 9.5px 'JetBrains Mono';letter-spacing:.06em;background:#d0684a;color:#fff;padding:2px 6px;border-radius:4px;margin-left:6px;text-transform:uppercase}
+.libchips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.libchips span{display:flex;align-items:center;justify-content:center;text-align:center;font:600 .82em/1.25 'DM Sans';padding:7px 10px;border-radius:14px;background:var(--card);border:1.5px solid var(--ac)}
+.week{display:grid;grid-template-columns:1.1in 1fr 1fr;gap:6px}
+.week,.week + .box,.focusbox{width:100%;box-sizing:border-box;align-self:stretch}
+.wd{font:800 15px 'Bricolage Grotesque';padding:10px 8px;background:var(--paper2);border-radius:10px;display:flex;align-items:center}
+.wc{background:var(--card);border:1px solid rgba(93,125,83,.16);border-radius:10px;padding:9px 11px;font-size:.9em;line-height:1.4}
+.wl{display:block;font:700 10px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--trail);margin-bottom:2px}
+.wtag{display:block;margin-top:4px;font:600 .82em 'DM Sans';color:var(--forest)}
+${layout === 'phone' ? `
+.glancet{grid-template-columns:1fr 1fr}.glancet .gh:first-child{display:none}.ga{grid-column:1/-1;background:var(--paper2)}
+.week{grid-template-columns:1fr}.wd{margin-top:6px}` : `
+.mapsnap{width:5.6in}
+.areadots{max-width:6.4in;margin:.25in auto 0}
+.blk{margin-top:calc(var(--sp,1) * 13px)}
+.startsteps{gap:calc(var(--sp,1) * 12px)}
+.ways{columns:2;column-gap:22px}.ways li{break-inside:avoid}
+.bandbanner{padding:.4in .45in}.bblabel{font-size:56px}.bbname{font-size:18px}
+.tocareas{grid-template-columns:1fr 1fr;column-gap:26px}
+.tocband{margin-top:calc(var(--sp,1) * 10px)}`}
+${bw ? `
+.atag,.abadge{background:#fff!important;border:2px solid #000;color:#000}
+.areadots span,.libchips span,.checks li:before{border-color:#000!important}
+.ga{border-left-color:#000!important}
+.focusbox{background:#fff;color:#000;border:2px solid #000}.focusbox .label{color:#000}.wclose{color:#000}
+.talk{background:#fff;border-color:#000}.talk .label,.asub,.area .eyebrow,.ways li:before,.wl,.wtag{color:#000!important}
+.area .box{border-left-color:#000!important}
+.ss,.wc{border-color:#000}.wd,.gh{background:#eee}
+.mapsnap img{filter:grayscale(1)}
+.bandbanner,.tochead,.bandpill{background:#fff!important;color:#000!important;border:2.5px solid #000}
+.tocareas a span:before{background:#fff;border:1.5px solid #000}` : ''}`;
+}

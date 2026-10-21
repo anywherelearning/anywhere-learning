@@ -5,13 +5,15 @@
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import { buildHtml } from './template.mjs';
+import { buildHtml, buildMapHtml } from './template.mjs';
 
 const args = process.argv.slice(2);
 const bonus = args.includes('--bonus');
+const review = args.includes('--review');
 const [contentPath, outArg] = args.filter((a) => !a.startsWith('--'));
 const g = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
-const tag = bonus ? '-bonus' : '';
+const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review }) : buildHtml(g, m, o));
+const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '');
 const outDir = outArg ?? path.join('notes', 'guides');
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -52,14 +54,14 @@ async function pdf(name) {
 await send('Page.enable');
 
 // Phone: every section becomes its own named page, sized to its content.
-let file = await load(buildHtml(g, 'phone', { bonus }), 430);
+let file = await load(build('phone', { bonus }), 430);
 const hs = await evaluate(`(() => { const ps=[...document.querySelectorAll('.pg')]; ps.forEach(p => p.style.minHeight = '0'); return ps.map(p => Math.max(Math.ceil(p.scrollHeight), 760)); })()`);
 await evaluate(`(() => { const hs=${JSON.stringify(hs)}; const s=document.createElement('style'); s.textContent = hs.map((h,i) => '@page p'+i+'{size:430px '+h+'px;margin:0} .pg:nth-of-type('+(i+1)+'){page:p'+i+';height:'+h+'px}').join(' '); document.head.appendChild(s); return true; })()`);
 console.log('phone page heights', hs.join(','), '->', await pdf(`${g.slug}${tag}-phone.pdf`));
 
 // Print: Letter pages in color and in ink-saving black and white. Warn on overflow.
 for (const m of ['print', 'print-bw']) {
-  file = await load(buildHtml(g, m, { bonus }), 816);
+  file = await load(build(m, { bonus }), 816);
   // Each page spreads its sections apart until it fills the page (text size stays fixed).
   await evaluate(`(() => { for (const p of document.querySelectorAll('.pg:not(.cover)')) { let sp = 1; p.style.setProperty('--sp', 1); while (p.scrollHeight > p.clientHeight && sp > 0.4) { sp -= 0.05; p.style.setProperty('--sp', sp); } let m = 0.7; while (p.scrollHeight > p.clientHeight && m > 0.5) { m -= 0.05; p.style.paddingTop = m + 'in'; p.style.paddingBottom = (m + 0.1) + 'in'; } while (sp < 2.1) { p.style.setProperty('--sp', sp + 0.05); if (p.scrollHeight > p.clientHeight) { p.style.setProperty('--sp', sp); break; } sp += 0.05; } } return true; })()`);
   const over = await evaluate(`[...document.querySelectorAll('.pg')].map((p,i) => ({ i: i + 1, over: p.scrollHeight - p.clientHeight })).filter(x => x.over > 2)`);
