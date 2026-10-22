@@ -434,7 +434,24 @@ export default async function ProductPage({
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "[data-speakable]"],
     },
-    offers: {
+    // The Skills Map is sold on its own (one-time, no refund); everything
+    // else is offered through the yearly membership.
+    offers: product.slug === SKILLS_MAP.slug ? {
+      "@type": "Offer",
+      url: `https://anywherelearning.co/shop/${SKILLS_MAP.slug}`,
+      priceCurrency: "USD",
+      price: SKILLS_MAP.priceUsd.toFixed(2),
+      availability: "https://schema.org/InStock",
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: ["US", "CA", "GB", "AU", "NZ"],
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      },
+      seller: {
+        "@type": "Organization",
+        name: "Anywhere Learning",
+      },
+    } : {
       "@type": "Offer",
       url: "https://anywherelearning.co/#membership",
       priceCurrency: "USD",
