@@ -188,7 +188,8 @@
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "photo": {
     "src": "public/email/course-day3-drawings.jpg",
-    "caption": "From our house: one stove, drawn twice. Every difference is a word that wasn't clear yet."
+    "caption": "From our house: one stove, drawn twice. Every difference is a word that wasn't clear yet.",
+    "alt": "Two drawings of a stove"
   },
   "done": {
     "text": "Done? Tap it on your trail so it shows up in your kid's record.",

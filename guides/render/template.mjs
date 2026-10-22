@@ -84,7 +84,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="coverbody">
       ${coverTrail(g.steps)}
       <ol class="htrail">${g.steps.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
-      ${g.photo ? `<figure class="snap"><img src="${img(g.photo.src)}" alt="Two drawings of a stove"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
+      ${g.photo ? `<figure class="snap"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
     </div>
   </div>
   <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
@@ -242,7 +242,7 @@ ul{list-style:none}
 .lv p{margin-top:3px}
 .biglevels{display:grid;gap:10px;margin-top:6px}
 .bl p{margin-top:6px}.focus{color:var(--muted);font-size:.92em}
-.skills{display:grid;gap:8px}.skills dt{font:700 1em 'DM Sans';color:var(--forest);display:inline}.skills dt:after{content:': '}.skills dd{display:inline;color:var(--ink)}
+.skills{display:grid;gap:0;margin:0}.skills div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.skills div:first-child{border-top:0;padding-top:2px}.skills dt{font:700 1em/1.3 'DM Sans';color:var(--forest);display:block}.skills dd{display:block;margin:2px 0 0;color:var(--muted);font-size:.92em;line-height:1.4}
 .ideagrid{display:grid;gap:0}
 .levelsline{display:flex;gap:12px;align-items:center;margin-top:16px;padding:12px 16px;border-radius:14px;border:1.5px dashed rgba(93,125,83,.35)}
 .lvdots{display:flex;gap:4px;flex:none}.lvdots i{width:12px;height:22px;border-radius:4px;display:block}
@@ -350,7 +350,6 @@ h2{font-size:40px}
 .levels{grid-template-columns:repeat(3,1fr)}
 .biglevels{grid-template-columns:repeat(3,1fr)}
 .tips{grid-template-columns:1fr 1fr}
-.skills{grid-template-columns:1fr 1fr}
 .finish .split{grid-template-columns:1fr 1fr}
 .eyebrow,.label,.jobl,.lvname{font-size:13px}
 .who{font-size:12px}
