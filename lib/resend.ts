@@ -9,6 +9,7 @@
  *   - sendTrialEndingEmail                    → 3 days before a free trial converts
  *   - sendTrialCanceledEmail                  → free trial canceled (never paid)
  *   - sendMembershipCancellationScheduledEmail → paid member set cancel_at_period_end
+ *   - sendSkillsMapDeliveryEmail              → one-time Skills Map purchase
  */
 
 import { Resend } from 'resend';
@@ -21,6 +22,7 @@ import TrialCanceled from '@/emails/TrialCanceled';
 import MembershipCancellationScheduled from '@/emails/MembershipCancellationScheduled';
 import QuizPlanEmail from '@/emails/QuizPlanEmail';
 import TrialMidpoint, { midpointSubject } from '@/emails/TrialMidpoint';
+import SkillsMapDelivery from '@/emails/SkillsMapDelivery';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -326,5 +328,24 @@ export async function sendMembershipCancellationScheduledEmail({
     to,
     subject: 'Cancellation confirmed, and thank you',
     react: MembershipCancellationScheduled({ firstName, accessUntil, plan, manageUrl, surveyToken }),
+  });
+}
+
+/** Skills Map one-time purchase: download links + the 72h owner offer. */
+export async function sendSkillsMapDeliveryEmail(props: {
+  to: string;
+  firstName?: string;
+  files: { label: string; url: string }[];
+  bonus: boolean;
+  offerUrl: string;
+  offerEndsLabel: string;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Your Future-Ready Skills Map is ready',
+    react: SkillsMapDelivery(rest),
   });
 }

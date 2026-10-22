@@ -11,6 +11,8 @@ import {
 } from "@/lib/fallback-products";
 import { CATEGORY_LABELS } from "@/lib/categories";
 import { getProductDescription } from "@/lib/product-descriptions";
+import SkillsMapBuyCard from "@/components/shop/SkillsMapBuyCard";
+import { SKILLS_MAP } from "@/lib/skills-map";
 import { hasPreview } from "@/lib/preview-map";
 import { coverSrc } from "@/lib/cover";
 import PreviewButton from "@/components/shop/PreviewButton";
@@ -92,7 +94,14 @@ const WHY_IT_MATTERS: Record<string, string> = {
     "Self-regulation, repair, resilience, and reading the room are the skills that quietly run every part of adult life. Schools never had time for them. Most of us parents were never taught them either. These activities teach them on purpose, while the weather is still good.",
 };
 
-function whyItMattersFor(category: string): string {
+/** Products whose "Why it matters" isn't their category's (the Map is a parent guide). */
+const WHY_IT_MATTERS_BY_SLUG: Record<string, string> = {
+  "future-ready-skills-map":
+    'Most parents carry a quiet worry: am I doing enough, and is it the right stuff? The answer is rarely "do more." It\'s knowing which two or three things matter at your kid\'s age, and trusting that the rest can wait. That clarity is what turns everyday moments into real learning, and it\'s what this map gives you.',
+};
+
+function whyItMattersFor(category: string, slug?: string): string {
+  if (slug && WHY_IT_MATTERS_BY_SLUG[slug]) return WHY_IT_MATTERS_BY_SLUG[slug];
   return WHY_IT_MATTERS[category] || WHY_IT_MATTERS["real-world-math"];
 }
 
@@ -704,7 +713,11 @@ export default async function ProductPage({
                             </span>
                           </div>
                           <Link
-                            href={`/api/download/activity/${product.slug}?view=1`}
+                            href={
+                              product.slug === SKILLS_MAP.slug
+                                ? "/account/view/skills-map-color"
+                                : `/api/download/activity/${product.slug}?view=1`
+                            }
                             target="_blank"
                             rel="noopener noreferrer"
                             prefetch={false}
@@ -718,6 +731,11 @@ export default async function ProductPage({
                           </p>
                         </div>
                       );
+                    }
+
+                    // The Skills Map is sold on its own: a buy button, not a members lock.
+                    if (product.slug === SKILLS_MAP.slug) {
+                      return <SkillsMapBuyCard priceLabel={`$${SKILLS_MAP.priceUsd}`} />;
                     }
 
                     // Guest (default)
@@ -839,7 +857,7 @@ export default async function ProductPage({
               Why it matters
             </span>
             <p className="m-0 font-display italic text-[16.5px] leading-[1.5] text-ink text-balance">
-              {whyItMattersFor(product.category)}
+              {whyItMattersFor(product.category, product.slug)}
             </p>
           </div>
         </div>
@@ -1089,10 +1107,21 @@ export default async function ProductPage({
                 All 120+ activities
               </p>
               <h2 className="mt-3.5 font-display text-[clamp(1.75rem,3.4vw,2.5rem)] leading-[1.08] tracking-tight text-balance">
-                This activity is one of{" "}
-                <em className="not-italic italic text-forest-dark">
-                  120+ in the membership.
-                </em>
+                {product.slug === SKILLS_MAP.slug ? (
+                  <>
+                    Every area in the map has{" "}
+                    <em className="not-italic italic text-forest-dark">
+                      activities waiting.
+                    </em>
+                  </>
+                ) : (
+                  <>
+                    This activity is one of{" "}
+                    <em className="not-italic italic text-forest-dark">
+                      120+ in the membership.
+                    </em>
+                  </>
+                )}
               </h2>
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
                 The membership covers nine topics (math, AI, communication,

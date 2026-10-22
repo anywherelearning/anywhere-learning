@@ -435,3 +435,33 @@ export async function tagBuyerInConvertKit(
 
   await subscribeAndTag(email, tags);
 }
+
+/**
+ * When a Kit subscriber got a tag, or null if they don't have it (or Kit is
+ * unreachable). Used for the Skills Map course bonus: the course emails link
+ * with `?ref={{ subscriber.id }}`, and the window counts from the
+ * `course-rwl` tag. Read-only; never throws.
+ */
+export async function subscriberTaggedAt(subscriberId: string, tagName: string): Promise<Date | null> {
+  const apiKey = process.env.CONVERTKIT_API_KEY;
+  if (!apiKey || !/^\d{1,15}$/.test(subscriberId)) return null;
+  try {
+    let after: string | undefined;
+    for (let page = 0; page < 5; page++) {
+      const url = `${KIT_API_BASE}/subscribers/${subscriberId}/tags?per_page=100${after ? `&after=${after}` : ''}`;
+      const res = await fetch(url, { headers: authHeaders(apiKey), signal: AbortSignal.timeout(4000) });
+      if (!res.ok) return null;
+      const data = (await res.json()) as {
+        tags: { name: string; tagged_at: string }[];
+        pagination?: { has_next_page?: boolean; end_cursor?: string };
+      };
+      const hit = data.tags.find((t) => t.name === tagName);
+      if (hit) return new Date(hit.tagged_at);
+      if (!data.pagination?.has_next_page) return null;
+      after = data.pagination.end_cursor;
+    }
+  } catch (err) {
+    console.warn('[kit] subscriberTaggedAt failed:', err);
+  }
+  return null;
+}

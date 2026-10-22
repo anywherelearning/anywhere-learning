@@ -281,3 +281,22 @@ export const activityEvents = pgTable('activity_events', {
   // Stats: most/least downloaded guides.
   index('idx_activity_events_slug_kind').on(table.slug, table.kind),
 ]);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Skills Map one-time purchases (Oct 2026). Account-free: keyed by email and
+// the Stripe Checkout session, never a Clerk user. Read by the owner-offer
+// check (20% off the first year within 72h) and the download link.
+// ─────────────────────────────────────────────────────────────────────────────
+export const mapPurchases = pgTable('map_purchases', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  /** Lowercased buyer email from Stripe Checkout. */
+  email: text('email').notNull(),
+  stripeSessionId: text('stripe_session_id').notNull(),
+  amountCents: integer('amount_cents').notNull(),
+  /** Bought within the course window, so the Directions Challenge is included. */
+  bonus: boolean('bonus').default(false).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+}, (table) => [
+  uniqueIndex('idx_map_purchases_session').on(table.stripeSessionId),
+  index('idx_map_purchases_email_created').on(table.email, table.createdAt),
+]);

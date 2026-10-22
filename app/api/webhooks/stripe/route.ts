@@ -33,11 +33,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClerkClient } from '@clerk/backend';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
-import { users, subscriptions, stripeEvents, sentEmails, exitSurveys } from '@/lib/db/schema';
+import { users, subscriptions, stripeEvents, sentEmails, exitSurveys, mapPurchases } from '@/lib/db/schema';
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import { metaMatchFromMetadata, sendMetaEvent } from '@/lib/meta-capi';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD } from '@/lib/fall-offer';
+import { FOUNDER_PRICE_USD, POST_FOUNDER_PRICE_USD } from '@/lib/membership';
 import {
   sendMembershipWelcomeEmail,
   sendAbandonedCheckoutMembershipEmail,
@@ -45,8 +46,27 @@ import {
   sendMembershipConvertedEmail,
   sendTrialCanceledEmail,
   sendMembershipCancellationScheduledEmail,
+  sendSkillsMapDeliveryEmail,
 } from '@/lib/resend';
+import {
+  OWNER_OFFER,
+  MAP_FILES,
+  makeDownloadToken,
+  downloadUrl,
+  filesFor,
+  ownerOfferEndsAt,
+} from '@/lib/skills-map';
 import type Stripe from 'stripe';
+
+/** Discounted first-year price for offer subscriptions ('fall' $79, 'map' 20% off), for emails. */
+function offerFirstYearPrice(offer: string | undefined, isFounder: boolean): string | undefined {
+  if (offer === FALL_OFFER.slug) return `$${FALL_OFFER_PRICE_USD}`;
+  if (offer === OWNER_OFFER.slug) {
+    const base = isFounder ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD;
+    return `$${(Math.round(base * (100 - OWNER_OFFER.percentOff)) / 100).toFixed(2)}`;
+  }
+  return undefined;
+}
 
 /** Pull a Clerk backend client. Returns null if Clerk isn't configured. */
 function getClerk() {
@@ -199,8 +219,87 @@ async function upsertUser(opts: {
   return inserted[0].id;
 }
 
+/**
+ * Skills Map one-time purchase (payment mode). Account-free on purpose: no
+ * Clerk user, no member tier, no member Kit tags. Records the purchase,
+ * emails the download links, tags the buyer for the follow-up sequence, and
+ * reports the Purchase to Meta. Idempotent on the session id.
+ */
+async function handleSkillsMapPurchase(session: Stripe.Checkout.Session) {
+  if (session.payment_status !== 'paid') {
+    console.log('[webhook] skills map session not paid, ignoring:', session.id);
+    return;
+  }
+  const email = (session.customer_details?.email || session.customer_email || '').toLowerCase();
+  if (!email) {
+    console.error('[webhook] skills map session without email:', session.id);
+    return;
+  }
+  const bonus = session.metadata?.bonus === '1';
+  const firstName = session.customer_details?.name?.trim().split(/\s+/)[0] || undefined;
+
+  const inserted = await db
+    .insert(mapPurchases)
+    .values({ email, stripeSessionId: session.id, amountCents: session.amount_total ?? 0, bonus })
+    .onConflictDoNothing({ target: mapPurchases.stripeSessionId })
+    .returning({ createdAt: mapPurchases.createdAt });
+  if (inserted.length === 0) {
+    console.log('[webhook] skills map purchase already recorded:', session.id);
+    return;
+  }
+
+  const origin = (process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co').replace(/\/$/, '');
+  const token = makeDownloadToken(session.id, bonus);
+  const endsLabel = ownerOfferEndsAt(inserted[0].createdAt).toLocaleDateString('en-US', {
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'America/Los_Angeles',
+  });
+
+  try {
+    await sendSkillsMapDeliveryEmail({
+      to: email,
+      firstName,
+      bonus,
+      files: filesFor(bonus).map((k) => ({ label: MAP_FILES[k].label, url: downloadUrl(origin, token, k) })),
+      offerUrl: `${origin}/map-offer`,
+      offerEndsLabel: endsLabel,
+    });
+  } catch (err) {
+    console.error('[webhook] skills map delivery email failed:', err);
+  }
+
+  try {
+    await applyAndRemoveTags(email, {
+      add: ['skills-map-buyer', ...(bonus ? ['skills-map-course-bonus'] : [])],
+    });
+  } catch (err) {
+    console.error('[webhook] skills map kit tag failed:', err);
+  }
+
+  await sendMetaEvent({
+    eventName: 'Purchase',
+    eventId: session.id,
+    sourceUrl: `${origin}/skills-map/thanks`,
+    userData: { email, firstName, ...metaMatchFromMetadata(session.metadata) },
+    customData: {
+      value: (session.amount_total ?? 0) / 100,
+      currency: (session.currency || 'usd').toUpperCase(),
+      content_name: 'skills-map',
+    },
+  });
+
+  console.log(`[webhook] skills map purchase recorded for ${email} (bonus=${bonus})`);
+}
+
 /** Handle a successful membership Checkout session. */
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
+  // One-time Skills Map purchases take their own, account-free path.
+  if (session.metadata?.kind === 'skills-map') {
+    await handleSkillsMapPurchase(session);
+    return;
+  }
   if (session.payment_status !== 'paid' && session.mode !== 'subscription') {
     console.log('[webhook] session not paid, ignoring:', session.id);
     return;
@@ -324,8 +423,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         trialEndsAt: trialEndsAt?.toISOString(),
         // Monthly members get "$15 a month" wording instead of the annual copy.
         plan,
-        // Fall offer checkouts (offer=fall on the session) pay $79 the first year.
-        ...(session.metadata?.offer === FALL_OFFER.slug && { firstYearPrice: `$${FALL_OFFER_PRICE_USD}` }),
+        // Offer checkouts (fall, map owner) show their discounted first year.
+        firstYearPrice: offerFirstYearPrice(session.metadata?.offer, isFounder),
       });
     } catch (err) {
       console.error('[webhook] welcome email failed:', err);
@@ -394,6 +493,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
  * expiry, so we use that as the lookup key.
  */
 async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
+  // The membership "I held your spot" flow doesn't apply to the Skills Map.
+  if (session.metadata?.kind === 'skills-map') return;
   const email = (
     session.customer_details?.email ||
     session.customer_email ||
@@ -586,9 +687,8 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
     return;
   }
 
-  // Non-invoice charges (one-time payments) no longer exist — the membership
-  // is the only product, and it always bills through a subscription invoice
-  // (Case 1 above). Anything else is nothing of ours to revoke.
+  // Non-invoice charges: the only one-time product is the Skills Map, an
+  // instant download with no access to revoke.
   console.log(`[webhook] refund on non-subscription charge ${charge.id} — nothing to revoke`);
 }
 
@@ -645,8 +745,8 @@ async function handleTrialWillEnd(sub: Stripe.Subscription) {
       manageUrl: `${base}/account/settings`,
       homeUrl: `${base}/account/home`,
       plan: planForPriceId(trialPriceId),
-      // Fall offer subs carry offer=fall (set at checkout); their first year is $79.
-      ...(sub.metadata?.offer === FALL_OFFER.slug && { priceOverride: `$${FALL_OFFER_PRICE_USD}` }),
+      // Offer subs (fall, map owner) carry `offer` from checkout: show the discounted first year.
+      priceOverride: offerFirstYearPrice(sub.metadata?.offer, isFounder),
     });
     console.log(`[webhook] sent trial-ending email to ${user.email}`);
   } catch (err) {
@@ -834,7 +934,7 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
         homeUrl: `${base}/account/home`,
         manageUrl: `${base}/account/settings`,
         plan,
-        ...(sub.metadata?.offer === FALL_OFFER.slug && { firstYearPrice: `$${FALL_OFFER_PRICE_USD}` }),
+        firstYearPrice: offerFirstYearPrice(sub.metadata?.offer, isFounder),
       });
       console.log(`[webhook] sent membership-converted email to ${user.email}`);
     } catch (err) {

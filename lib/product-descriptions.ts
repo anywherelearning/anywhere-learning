@@ -1490,26 +1490,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'future-ready-skills-map': {
     opening:
-      'A 44-page parent guide to the 12 skill areas that matter most for raising a future-ready child, from ages 0 to 16+. This is not a curriculum and it\'s not another activity pack. It\'s your roadmap, your "what matters now" guide, organised by age phase so you always know what to focus on next.',
+      'Ever wonder if you\'re actually preparing your kid for real life, or just keeping them busy? This map answers it. Twelve skill areas, from reading and real-world math to critical thinking, AI, and emotional intelligence, laid out by age so you can see what matters now and what comes next. Not a curriculum. A clear picture, with hands-on ideas for every area.',
     whatsIncluded: [
-      '44-page parent guide for kids ages 0–16+',
-      '12 skill areas: Emotional Intelligence, Physical Health + Movement, Reading + Media, Writing, Numeracy + Logic, Critical Thinking, Creativity + Making, Communication, Self-Management, AI + Digital Literacy, Citizenship + Character, Life Skills',
-      'Organised into three age phases: 0–6 Play, 6–11 Build, 11–16+ Apply',
-      'Each section: what to develop, what it looks like at each stage, and hands-on play-based or real-world activities',
-      'A "Focus over Formality" rule for each age band so you never feel behind',
-      'Sample weeks for each age phase showing how real-world skills fill a week',
-      'A one-page skills-at-a-glance overview to plan at a glance',
+      'The whole map on one page: all 12 skill areas, side by side for ages 6 to 11 and 11 to 14+',
+      '24 skill pages: what to develop, what progress looks like (with checkboxes), and 4 to 6 hands-on ideas each',
+      'A "Real talk" note from a former teacher in every area',
+      'A sample week for each age band, showing how it all fits into ordinary days',
+      'A "Your first 10 minutes" start page and a clickable table of contents',
+      'Phone, color print, and black & white versions, yours to keep',
     ],
-    skillTags: ['Parenting', 'Life Skills', 'Critical Thinking', 'Emotional Intelligence', 'Future-Ready'],
+    skillTags: ['Parent guide', 'Ages 6 to 14+', '12 skill areas', 'Life Skills', 'Critical Thinking'],
     insideTheLearning: {
       lead:
-        'A parent guide rather than a kid activity. Forty-four pages across twelve skill areas and every age band from 0 to 16 plus. You pick two or three focus areas for the month, choose a few ideas to try, and repeat what works. Checkboxes throughout, and a Focus over Formality rule at the end of each section for when it gets overwhelming.',
+        'It\'s for parents who want the big picture without a curriculum: you read your kid\'s column, circle two or three areas, and pick one idea for this week. It\'s not a lesson plan or a stack of worksheets, and it\'s not something your kid works through alone. It\'s a map for you, so the learning you do together has a direction.',
       skills: [
-        { skill: 'Parenting', where: 'A month-by-month way to focus on two or three areas instead of everything at once' },
-        { skill: 'Life Skills', where: 'Twelve skill areas mapped across every age band, with concrete ideas for each' },
-        { skill: 'Critical Thinking', where: 'Play-based, hands-on and real-world routes into reasoning at every stage' },
-        { skill: 'Emotional Intelligence', where: 'One of the twelve areas, tracked and built deliberately rather than hoped for' },
-        { skill: 'Future-Ready', where: 'A long view you revisit every couple of months and adjust as your child grows' },
+        { skill: 'Know what matters now', where: 'One page shows every area for your kid\'s age, so you stop guessing' },
+        { skill: 'See progress', where: 'Simple checkboxes for what your kid already does, not a list to feel behind on' },
+        { skill: 'Ideas that fit real life', where: 'Hands-on ways to build each skill at the kitchen table, outside, or on the road' },
+        { skill: 'A long view', where: 'Two age bands, 6 to 11 and 11 to 14+, so you can see where each skill is heading' },
       ],
     },
     format: 'Parent Guide',

@@ -227,7 +227,7 @@ doc = dict(
  memberClose="Every area in this map has activities waiting in your library, and your trail is organized by these same 12 areas.",
  memberUrl="https://anywherelearning.co/account/home",
  cta="Every area in this map has activities waiting in the Anywhere Learning library: 120+ guides with your job and your kid's job at every step.",
- ctaUrl="anywherelearning.co/choose-plan",
+ ctaUrl="anywherelearning.co/map-offer",
 )
 json.dump(doc, open('guides/content/future-ready-skills-map.json','w'), indent=2, ensure_ascii=False)
 print('ok', sum(len(b['pages']) for b in BANDS))
