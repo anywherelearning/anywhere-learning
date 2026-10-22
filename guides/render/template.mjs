@@ -96,14 +96,14 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <h2>The idea</h2>
   <p class="lead">${esc(g.goal)}</p>
   ${g.glance ? `<div class="glance">${g.glance.map((x) => `<div><span>${esc(x.k)}</span><b>${esc(x.v)}</b></div>`).join('')}</div>` : ''}
+  ${g.academics ? `<div class="box"><div class="label">What your kid learns</div>
+    <dl class="skills learns">${g.academics.map((a) => `<div><dt>${esc(a.subject)}</dt><dd>${esc(a.text)}</dd></div>`).join('')}</dl></div>` : `
   <div class="ideagrid">
     <div class="box"><div class="label">What your kid will make</div>
       <ul class="ticks">${g.create.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>
-    ${g.academics ? `<div class="box"><div class="label">What your kid learns</div>
-      <dl class="skills">${g.academics.map((a) => `<div><dt>${esc(a.subject)}</dt><dd>${esc(a.text)}</dd></div>`).join('')}</dl></div>`
-    : `<div class="box"><div class="label">Skills your kid builds</div>
-      <dl class="skills">${g.skills.map((s) => `<div><dt>${esc(s.name)}</dt><dd>${esc(s.text)}</dd></div>`).join('')}</dl></div>`}
-  </div>
+    <div class="box"><div class="label">Skills your kid builds</div>
+      <dl class="skills">${g.skills.map((s) => `<div><dt>${esc(s.name)}</dt><dd>${esc(s.text)}</dd></div>`).join('')}</dl></div>
+  </div>`}
   <div class="box"><div class="label">What you need</div>
     <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>
   <div class="levelsline"><span class="lvdots"><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i></span><p>${esc(g.levelsLine)}</p></div>
@@ -384,6 +384,7 @@ h2{font-size:40px}
 
 .ideagrid{grid-template-columns:1fr 1fr;gap:14px}
 .tips{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
+.learns{grid-template-columns:1fr 1fr;column-gap:28px}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}
