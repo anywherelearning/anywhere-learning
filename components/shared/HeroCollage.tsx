@@ -38,7 +38,7 @@ export default function HeroCollage() {
       <Link
         href="/shop/future-ready-skills-map"
         aria-label="The Future-Ready Skills Map, $17.99"
-        className="group absolute z-[5] w-[130px] sm:w-[220px] lg:w-[272px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)] hover:shadow-[0_34px_56px_-22px_rgba(45,58,46,0.55)] transition-shadow"
+        className="group absolute z-[5] w-[56.7%] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)] hover:shadow-[0_34px_56px_-22px_rgba(45,58,46,0.55)] transition-shadow"
         style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%) rotate(-2deg)' }}
       >
         <Image
@@ -64,7 +64,7 @@ export default function HeroCollage() {
           <div
             key={card.slug}
             aria-hidden="true"
-            className="absolute w-[112px] sm:w-[140px] lg:w-[186px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
+            className="absolute w-[38.75%] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
             style={{ ...pos.style, transform: finalTransform, zIndex: pos.z }}
           >
             <Image
