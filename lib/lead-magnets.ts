@@ -2,6 +2,7 @@ import { getListBySlug, getListByBlogSlug } from '@/lib/ideas';
 import { getIdeaListPdfUrls } from '@/lib/idea-list-pdfs';
 import type { BlogContentBlock } from '@/lib/blog';
 import type { ResourceTopic } from '@/lib/resources';
+import { SKILLS_MAP } from '@/lib/skills-map';
 
 // ─── The one free thing to offer a reader of a given post ───
 //
@@ -27,6 +28,15 @@ export type LeadMagnet =
     }
   | {
       kind: 'capable-kid';
+      title: string;
+      href: string;
+      eyebrow: string;
+      blurb: string;
+      cta: string;
+    }
+  | {
+      /** The one paid offer: posts where the Map is the exact answer. A link, no email form. */
+      kind: 'skills-map';
       title: string;
       href: string;
       eyebrow: string;
@@ -61,6 +71,32 @@ const FREE_GUIDE: LeadMagnet = {
     'A week of real-world activities you can run at home with almost no prep. The academics and the life skills happen in the same task.',
   cta: 'Send me the guide',
 };
+
+/**
+ * Oct 2026: posts where the reader is asking "what should my kid know or be
+ * doing at this age" get the Skills Map as their one offer instead of a free
+ * one. Kept to five so the email list keeps growing everywhere else; read
+ * Map sales by utm_campaign (the post slug) before adding more.
+ */
+export const SKILLS_MAP_POSTS = new Set<string>([
+  'what-kids-should-know-before-18',
+  'homeschool-middle-school',
+  'homeschool-first-grade',
+  'curriculum-guilt-permission-slip',
+  'critical-thinking-for-kids',
+]);
+
+function skillsMapMagnet(postSlug: string): LeadMagnet {
+  return {
+    kind: 'skills-map',
+    title: SKILLS_MAP.name,
+    href: `/shop/${SKILLS_MAP.slug}?utm_source=blog&utm_medium=offer&utm_campaign=${postSlug}`,
+    eyebrow: `Parent guide · $${SKILLS_MAP.priceUsd}`,
+    blurb:
+      'The 12 skill areas kids need for real life, and what each one looks like from 6 to 14 and beyond, with hands-on ideas for every area. Written by a former teacher.',
+    cta: 'See the Skills Map',
+  };
+}
 
 function ideasMagnet(listSlug: string): LeadMagnet | null {
   const found = getListBySlug(listSlug);
@@ -143,8 +179,9 @@ function resolve(choice: string | 'capable-kid' | 'free-guide' | undefined): Lea
   return ideasMagnet(choice) ?? FREE_GUIDE;
 }
 
-/** The single free offer for a blog post. */
+/** The single offer for a blog post (free, except the Skills Map posts). */
 export function getLeadMagnetForPost(post: { slug: string; category: string }): LeadMagnet {
+  if (SKILLS_MAP_POSTS.has(post.slug)) return skillsMapMagnet(post.slug);
   const direct = getListByBlogSlug(post.slug);
   const directMagnet = direct ? ideasMagnet(direct.list.slug) : null;
   if (directMagnet) return directMagnet;
@@ -183,6 +220,14 @@ function ctaBlockFor(magnet: LeadMagnet): BlogContentBlock | null {
       text: 'Want the age-by-age version? The Capable Kid Guide lays out what kids can actually do from 6 to 14, and how to hand each skill over. Free, from a former teacher.',
       href: magnet.href,
       label: 'Get the Capable Kid Guide',
+    };
+  }
+  if (magnet.kind === 'skills-map') {
+    return {
+      type: 'cta',
+      text: `Want the age-by-age version? The Future-Ready Skills Map lays out the 12 skill areas kids need for real life, and what each one looks like from 6 to 14 and beyond. $${SKILLS_MAP.priceUsd}, from a former teacher.`,
+      href: magnet.href,
+      label: 'See the Skills Map',
     };
   }
   return null;

@@ -102,6 +102,8 @@ function notExpired(key: string): boolean {
 }
 
 function magnetAlreadyClaimed(magnet: LeadMagnet): boolean {
+  // Grabbing a free guide says nothing about owning the Map.
+  if (magnet.kind === 'skills-map') return false;
   if (localStorage.getItem(MAGNET_CLAIMED_KEY)) return true;
   if (magnet.kind === 'ideas') return !!localStorage.getItem(IDEAS_CLAIMED_KEY);
   return !!localStorage.getItem(GUIDE_SUBMITTED_KEY);
@@ -283,6 +285,9 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
         ? '/images/free-guide-cover.jpg'
         : null;
 
+  // The paid offer is a link to the Map's page, never an email form.
+  if (magnet.kind === 'skills-map') return <SkillsMapOffer magnet={magnet} onDismiss={onDismiss} />;
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrorMessage('');
@@ -441,6 +446,55 @@ function MagnetVariant({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: (
           One email, no spam, unsubscribe any time.
         </p>
       </form>
+
+      <button
+        onClick={onDismiss}
+        className="mt-3 text-[12px] text-gray-400 hover:text-gray-500 transition-colors text-center w-full"
+      >
+        No thanks, I&rsquo;ll keep reading
+      </button>
+    </div>
+  );
+}
+
+/* ─── Variant 0b: the Skills Map, on the few posts where it is the one offer ─── */
+function SkillsMapOffer({ magnet, onDismiss }: { magnet: LeadMagnet; onDismiss: () => void }) {
+  return (
+    <div className="px-6 sm:px-8 pt-7 sm:pt-8 pb-6 sm:pb-7">
+      <div className="flex items-start gap-4 sm:gap-5 mb-5">
+        <div className="relative w-[72px] sm:w-[104px] flex-shrink-0 aspect-[800/1035] rounded-lg overflow-hidden shadow-md bg-[#E6EBDF]">
+          <Image
+            src="/skills-map-cover.jpg"
+            alt={`${magnet.title} cover`}
+            fill
+            sizes="(max-width: 640px) 72px, 104px"
+            className="object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="min-w-0">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C97B5C] mb-2">
+            {magnet.eyebrow}
+          </p>
+          <h2
+            id="blog-exit-popup-title"
+            className="font-display text-[1.45rem] sm:text-[1.8rem] text-forest leading-[1.08] mb-2 text-balance"
+          >
+            {magnet.title}
+          </h2>
+          <p className="text-[13.5px] sm:text-[14.5px] text-gray-500 leading-relaxed">
+            {magnet.blurb}
+          </p>
+        </div>
+      </div>
+
+      <Link
+        href={magnet.href}
+        onClick={onDismiss}
+        className="block w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-xl text-[15px] text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg shadow-md no-underline"
+      >
+        {magnet.cta}
+      </Link>
 
       <button
         onClick={onDismiss}

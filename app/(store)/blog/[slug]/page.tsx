@@ -464,7 +464,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 // second. Everywhere else in the set: form before the first H2.
                 const quizFirst = QUIZ_FIRST_PAGES.has(post.slug);
                 const quizAt = quizFirst ? inlineCaptureIndex(contentWithCallouts, 1) : -1;
-                const captureAt = INLINE_CAPTURE_POSTS.has(post.slug)
+                // The inline form is an email ask; a Skills Map post has no free thing to send.
+                const captureAt = INLINE_CAPTURE_POSTS.has(post.slug) && magnet.kind !== 'skills-map'
                   ? inlineCaptureIndex(contentWithCallouts, quizFirst ? 2 : 1)
                   : -1;
                 return contentWithCallouts.map((block, i) => {
