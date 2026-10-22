@@ -14,6 +14,15 @@ const tpt = args.includes('--tpt');
 const preview = args.includes('--preview');
 const [contentPath, outArg] = args.filter((a) => !a.startsWith('--'));
 const g = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
+// The cover's time chip uses the member zone's label for this activity
+// (lib/activity-effort.ts + minsLabel in lib/activity-visuals.tsx), so the
+// two can never disagree.
+if (g.type !== 'map') {
+  const effortSrc = fs.readFileSync(new URL('../../lib/activity-effort.ts', import.meta.url), 'utf8');
+  const effort = effortSrc.match(new RegExp(`'${g.slug}':\\s*'(Quick|Half-Day|Project)'`))?.[1];
+  if (effort) g.time = { Quick: 'Under an hour', 'Half-Day': 'Half-day', Project: 'Multi-day' }[effort];
+  else console.warn(`No effort for ${g.slug} in lib/activity-effort.ts; cover time: ${g.time ?? 'none'}`);
+}
 const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : buildHtml(g, m, o));
 const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '') + (tpt ? '-tpt' : '') + (preview ? '-preview' : '');
 const outDir = outArg ?? path.join('notes', 'guides');

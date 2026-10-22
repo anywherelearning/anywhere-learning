@@ -44,9 +44,9 @@ export const MAP_FILES = {
   'map-phone': { label: 'Skills Map, phone version', url: `${BLOB}/Skills%20Map%202026%20-%20Phone.pdf`, bonus: false },
   'map-color': { label: 'Skills Map, print in color', url: `${BLOB}/Skills%20Map%202026%20-%20Color.pdf`, bonus: false },
   'map-bw': { label: 'Skills Map, print in black & white', url: `${BLOB}/Skills%20Map%202026%20-%20Black%20and%20White.pdf`, bonus: false },
-  'bonus-phone': { label: 'Directions Challenge, phone version', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v2%20-%20Phone.pdf`, bonus: true },
-  'bonus-color': { label: 'Directions Challenge, print in color', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v2%20-%20Color.pdf`, bonus: true },
-  'bonus-bw': { label: 'Directions Challenge, print in black & white', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v2%20-%20Black%20and%20White.pdf`, bonus: true },
+  'bonus-phone': { label: 'Directions Challenge, phone version', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v3%20-%20Phone.pdf`, bonus: true },
+  'bonus-color': { label: 'Directions Challenge, print in color', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v3%20-%20Color.pdf`, bonus: true },
+  'bonus-bw': { label: 'Directions Challenge, print in black & white', url: `${BLOB}/Bonus%20-%20Directions%20Challenge%20v3%20-%20Black%20and%20White.pdf`, bonus: true },
 } as const;
 
 export type MapFileKey = keyof typeof MAP_FILES;
