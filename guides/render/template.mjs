@@ -299,6 +299,7 @@ ul{list-style:none}
 .cta{position:relative;margin-top:16px;background:var(--forest);color:#fff;border-radius:16px;padding:18px 20px}
 .cta p{font-weight:500}.ctaurl{display:inline-block;margin-top:8px;font:700 13px 'JetBrains Mono';color:var(--gold)}
 .legal{position:relative;margin-top:14px;font-size:11px;color:var(--muted);text-align:center}
+.box,.job,.role,.tip,.ss,.example,.trouble,.glance div,.role,.tryask{box-shadow:none!important}
 .foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;font:500 10px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:.8}
 ${mode === 'phone' ? phoneCss() : printCss()}
 ${bw ? bwCss() : ''}`;
@@ -408,19 +409,20 @@ html,body,.pg{background:#fff!important}
 }
 
 // ─── The Future-Ready Skills Map: same design system, map-specific pages ───
-export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
+export function buildMapHtml(g, mode, { bonus = false, review = false, tpt = false } = {}) {
   const bw = mode === 'print-bw';
   const layout = mode === 'phone' ? 'phone' : 'print';
   let pn = 1; // cover is page 1
   const foot = (label) => `<footer class="foot"><span>The Future-Ready Skills Map &middot; ${esc(label)}</span><span class="pnum">${++pn}</span></footer>`;
   // Page numbers are fixed by structure, so the contents page can list them up front.
-  const P = { welcome: 2, toc: 3, start: 4, glance: 5 };
-  let n0 = 6; const bandStart = g.bands.map((b) => { const s0 = n0; n0 += b.pages.length + 2; return s0; });
+  const o = tpt ? 1 : 0;
+  const P = { welcome: 2 + o, toc: 3 + o, start: 4 + o, glance: 5 + o };
+  let n0 = 6 + o; const bandStart = g.bands.map((b) => { const s0 = n0; n0 += b.pages.length + 2; return s0; });
   const closingPage = n0;
   const areaTag = (a) => `<span class="atag" style="--ac:${a.color}">${esc(a.name)}</span>`;
 
   const cover = `
-<section class="pg cover map-cover">
+<section class="pg cover map-cover" id="cover">
   ${contours()}
   <div class="cover-in">
     <div class="eyebrow">${esc(g.category)}</div>
@@ -434,6 +436,16 @@ export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
   </div>
   <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
 </section>`;
+
+  const terms = tpt ? `
+<section class="pg" id="terms">
+  <div class="eyebrow">Thank you</div>
+  <h2>Thank you for choosing this map</h2>
+  <p class="lead blk">I'm Amelie, a former teacher of fifteen years and a homeschooling mom of two. I made this map for the question I hear most from parents: am I actually preparing my kid for real life? I hope it gives you a clear, calm picture of what matters at every age, and a few good ideas to start with this week.</p>
+  <div class="box blk"><div class="label">Terms of use</div><p>This guide is for use by one family or one classroom. Please don't share, resell, or upload it, including to shared drives or websites.</p></div>
+  <div class="box blk"><div class="label">If it helps you</div><p>A review on TPT means the world to a small shop like mine, and it helps other parents and teachers find it. I read every one.</p></div>
+  ${foot('Thank you')}
+</section>` : '';
 
   const welcome = `
 <section class="pg">
@@ -509,7 +521,7 @@ export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
   <div class="box blk"><div class="label">${esc(b.by)}</div><ul class="checks">${p.looks.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
   <div class="blk"><div class="label">${esc(b.waysLabel)}</div><ul class="ways">${p.ways.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
   <div class="talk blk"><div class="label">Real talk${review && p.talkNew ? ' <span class="newflag">New, please review</span>' : ''}</div><p>${esc(p.talk)}</p></div>
-  <div class="lib blk"><div class="label">In the library</div><div class="libchips">${p.library.map((x) => `<span>${esc(x)}</span>`).join('')}</div></div>
+  <div class="lib blk"><div class="label">${tpt ? "Related Anywhere Learning activities" : "In the library"}</div><div class="libchips">${p.library.map((x) => `<span>${esc(x)}</span>`).join('')}</div></div>
   ${foot(`${b.label} · ${a.name}`)}
 </section>`;
     }).join('');
@@ -537,7 +549,9 @@ export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
   <div class="eyebrow">One last thing</div>
   <h2>You're raising someone ready</h2>
   ${g.closing.map((p) => `<p class="lead blk">${esc(p)}</p>`).join('')}
-  ${bonus
+  ${tpt
+    ? `<div class="box blk"><div class="label">Keep going</div><p>Every area in this map has hands-on activities in the Anywhere Learning Studio store, each with your job and your kid's job at every step.</p></div>`
+    : bonus
     ? `<div class="cta blk"><p>${esc(g.cta)}</p><span class="ctaurl">${esc(g.ctaUrl)}</span></div>`
     : `<a class="donebox blk" href="${esc(g.memberUrl)}"><span class="donetick">&#10003;</span><span>${esc(g.memberClose)}</span><b>Open my trail &rarr;</b></a>`}
   <p class="legal blk">&copy; Anywhere Learning &middot; For your family's use. Please don't share, resell or upload this guide. &middot; anywherelearning.co</p>
@@ -550,7 +564,7 @@ export function buildMapHtml(g, mode, { bonus = false, review = false } = {}) {
 <title>${esc(g.title)}</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw)}${mapCss(layout, bw)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${welcome}${toc}${start}${glance}${bandPages}${closing}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${terms}${welcome}${toc}${start}${glance}${bandPages}${closing}</body></html>`;
 }
 
 function mapCss(layout, bw) {
