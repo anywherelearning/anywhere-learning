@@ -82,6 +82,7 @@ const WHAT_YOU_LEARN = [
   "Why kids today get so little practice at real life",
   "How one afternoon holds the math, the writing and the life skills",
   "The four moves I use at home, with real examples",
+  "A simple plan for your first week",
 ];
 
 // Real photos from our own weeks, fanned across the hero like a scrapbook.

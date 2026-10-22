@@ -66,12 +66,12 @@ export const COURSE_DAYS = [
     day: 'Day 4',
     title: 'The four moves I use every week',
     blurb:
-      'Four practical moves to make real-world learning happen on purpose, with what to hand over at different ages.',
+      'Four practical moves to make real-world learning happen on purpose, with real examples of what to hand over.',
   },
   {
     day: 'Day 5',
     title: 'Where to go from here',
     blurb:
-      'A quick recap of the week, and how to keep it going.',
+      'The whole week in four lines, and a simple day-by-day plan for your first week.',
   },
 ] as const;
