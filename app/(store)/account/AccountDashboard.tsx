@@ -144,7 +144,6 @@ export default function AccountDashboard({
   const [savedAdded, setSavedAdded] = useState<string | null>(null); // "added to trail" flash
   const [capModalOpen, setCapModalOpen] = useState(!!initialCapModal);
   const [capBannerOpen, setCapBannerOpen] = useState(!!downloadCap);
-  const [skillsMapOpen, setSkillsMapOpen] = useState(false); // hero Skills Map menu
   const [filtersOpen, setFiltersOpen] = useState(false); // phones: the fold-out filter panel
 
   // Trial members are view-only: any download click opens the upgrade modal.
@@ -371,68 +370,9 @@ export default function AccountDashboard({
                 )}
               </p>
             </div>
-            <div className="relative flex items-center gap-x-3.5 gap-y-1 flex-wrap text-[13.5px]">
-              <button
-                type="button"
-                onClick={() => setSkillsMapOpen((o) => !o)}
-                aria-haspopup="menu"
-                aria-expanded={skillsMapOpen}
-                title="Open the Future-Ready Skills Map"
-                className="inline-flex items-center gap-1.5 bg-forest text-cream font-body font-semibold py-2 px-4 rounded-lg hover:bg-forest-dark transition-colors cursor-pointer"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4z" />
-                  <path d="M9 4v13M15 6.5v13" />
-                </svg>
-                Skills Map
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={`transition-transform ${skillsMapOpen ? 'rotate-180' : ''}`}>
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-              {skillsMapOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setSkillsMapOpen(false)} aria-hidden="true" />
-                  <div role="menu" className="absolute right-0 top-full mt-2 z-50 w-56 rounded-xl border border-[rgba(58,44,23,0.14)] bg-[var(--am-paper)] p-1.5 shadow-[0_20px_44px_-16px_rgba(45,58,46,0.5)]">
-                    <div className="px-2.5 pt-1.5 pb-1 font-[family-name:var(--font-catalog)] text-[10px] uppercase tracking-[0.12em] text-gold-dark">Open the Skills Map</div>
-                    <Link
-                      href="/api/download/activity/skills-map-phone?view=1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      prefetch={false}
-                      onClick={() => setSkillsMapOpen(false)}
-                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
-                    >
-                      <span className="w-4 h-4 rounded-[4px] border border-[rgba(58,44,23,0.25)] bg-[var(--am-paper)]" aria-hidden="true" />
-                      Phone
-                      <span className="ml-auto text-[11px] text-gray-500">read</span>
-                    </Link>
-                    <Link
-                      href="/api/download/activity/skills-map-color?view=1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      prefetch={false}
-                      onClick={() => setSkillsMapOpen(false)}
-                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
-                    >
-                      <span className="w-4 h-4 rounded-full" style={{ background: 'linear-gradient(135deg,#B6913F,#c4836a)' }} aria-hidden="true" />
-                      Full color
-                    </Link>
-                    <Link
-                      href="/api/download/activity/skills-map-bw?view=1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      prefetch={false}
-                      onClick={() => setSkillsMapOpen(false)}
-                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
-                    >
-                      <span className="w-4 h-4 rounded-full border border-[rgba(58,44,23,0.25)]" style={{ background: 'linear-gradient(135deg,#e8e6df,#9a968c)' }} aria-hidden="true" />
-                      Black &amp; white
-                      <span className="ml-auto text-[11px] text-gray-500">print</span>
-                    </Link>
-                  </div>
-                </>
-              )}
-            </div>
+            {/* The Skills Map: the guide the whole member area runs on, kept in
+                plain sight so parents come back to it. */}
+            <SkillsMapCard />
           </div>
         </header>
 
@@ -836,5 +776,57 @@ function Sep({ size = 'sm' }: { size?: 'xs' | 'sm' }) {
       className="inline-block rounded-full bg-[#C9C5B7] align-middle mx-2"
       style={{ width: dim, height: dim }}
     />
+  );
+}
+
+const SKILLS_MAP_VERSIONS = [
+  { slug: 'skills-map-phone', label: 'Phone', hint: 'read' },
+  { slug: 'skills-map-color', label: 'Color', hint: 'print' },
+  { slug: 'skills-map-bw', label: 'B&W', hint: 'print' },
+];
+
+function SkillsMapCard() {
+  return (
+    <div className="relative flex items-center gap-4 w-full sm:w-auto sm:max-w-[400px] rounded-2xl border border-[rgba(58,44,23,0.12)] bg-[var(--am-paper)]/95 p-3.5 pr-4 shadow-[0_16px_34px_-20px_rgba(45,58,46,0.55)]">
+      <a
+        href="/api/download/activity/skills-map-phone?view=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="shrink-0"
+        aria-label="Open the Skills Map"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/skills-map-cover.jpg"
+          alt=""
+          width={64}
+          height={83}
+          className="w-[58px] sm:w-[64px] h-auto rotate-[-3deg] rounded-[3px] shadow-[0_6px_14px_-6px_rgba(45,58,46,0.55)]"
+        />
+      </a>
+      <div className="min-w-0">
+        <div className="font-[family-name:var(--font-catalog)] text-[10.5px] uppercase tracking-[0.13em] text-gold-dark">
+          Your Skills Map
+        </div>
+        <p className="mt-1 font-body text-[13.5px] leading-[1.45] text-ink">
+          What to focus on at every age, across the 12 areas your trail follows.
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {SKILLS_MAP_VERSIONS.map((v) => (
+            <Link
+              key={v.slug}
+              href={`/api/download/activity/${v.slug}?view=1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              prefetch={false}
+              title={`Open the Skills Map (${v.label}, ${v.hint})`}
+              className="inline-flex items-center rounded-full border border-[rgba(58,44,23,0.18)] bg-white/70 px-2.5 py-1 font-body text-[12.5px] font-semibold text-forest no-underline hover:border-forest hover:bg-white transition-colors"
+            >
+              {v.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
