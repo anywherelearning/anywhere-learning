@@ -4,7 +4,7 @@
  *
  *   node --env-file=.env.local node_modules/.bin/tsx scripts/create-skills-map-stripe.ts
  *
- * 1. Finds the existing Skills Map product (metadata.slug) and adds a $17.99
+ * 1. Finds the existing Skills Map product (metadata.slug) and adds a $12.99
  *    one-time price, made the product's default. The old $9.99 price is
  *    archived. Prints the new price ID for lib/skills-map.ts.
  * 2. Creates coupon `map_owner_20`: 20% off, repeating 12 months (so it lands

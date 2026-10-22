@@ -82,7 +82,7 @@ function isResourceGroup(entry: ResourceEntry): entry is ResourceGroup {
 const RESOURCES_ITEMS: ResourceEntry[] = [
   { href: '/guides', label: 'Learn', desc: 'Guides and how-tos' },
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
-  { href: '/shop/future-ready-skills-map', label: 'The Skills Map', desc: 'What to focus on at every age · $17.99' },
+  { href: '/shop/future-ready-skills-map', label: 'The Skills Map', desc: 'What to focus on at every age · $12.99' },
   {
     label: 'Free',
     desc: CHALLENGE.isLive ? 'Six things you can take today' : 'Five things you can take today',

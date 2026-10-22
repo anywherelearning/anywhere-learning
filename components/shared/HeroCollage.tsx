@@ -37,7 +37,7 @@ export default function HeroCollage() {
           to its page and wears a small price tag. */}
       <Link
         href="/shop/future-ready-skills-map"
-        aria-label="The Future-Ready Skills Map, $17.99"
+        aria-label="The Future-Ready Skills Map, $12.99"
         className="group absolute z-[5] w-[56.7%] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)] hover:shadow-[0_34px_56px_-22px_rgba(45,58,46,0.55)] transition-shadow"
         style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%) rotate(-2deg)' }}
       >
@@ -51,7 +51,7 @@ export default function HeroCollage() {
           className="absolute inset-0 h-full w-full object-cover object-top"
         />
         <span className="absolute left-1/2 -translate-x-1/2 bottom-2 sm:bottom-3 whitespace-nowrap rounded-full bg-forest text-cream text-[10px] sm:text-[12px] font-semibold px-2.5 sm:px-3 py-1 shadow-md group-hover:bg-forest-dark transition-colors">
-          The Skills Map · $17.99 →
+          The Skills Map · $12.99 →
         </span>
       </Link>
 

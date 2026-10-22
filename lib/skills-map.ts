@@ -20,10 +20,10 @@ import crypto from 'node:crypto';
 export const SKILLS_MAP = {
   slug: 'future-ready-skills-map',
   name: 'The Future-Ready Skills Map',
-  priceUsd: 17.99,
-  priceCents: 1799,
+  priceUsd: 12.99,
+  priceCents: 1299,
   // Stripe price (live), created by scripts/create-skills-map-stripe.ts
-  stripePriceId: 'price_1UT9sDAkIBECpwGmry9PXL1O',
+  stripePriceId: 'price_1UTOgEAkIBECpwGmLbYMJIgI',
 } as const;
 
 export const COURSE_BONUS_DAYS = 5;

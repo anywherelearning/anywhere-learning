@@ -1283,9 +1283,9 @@ export const fallbackProducts: FallbackProduct[] = [
       "A parent guide to the 12 skill areas that matter most for raising a future-ready kid, organized by age: 6 to 11 (Build) and 11 to 14+ (Apply). Each area shows what to develop, what progress looks like, and hands-on ideas to try at home, plus a one-page map, sample weeks, and a quick-start page.",
     shortDescription:
       "Parent guide to the 12 skill areas kids need for real life, by age: 6 to 11 and 11 to 14+.",
-    priceCents: 1799,
+    priceCents: 1299,
     compareAtPriceCents: null,
-    stripePriceId: "price_1UT9sDAkIBECpwGmry9PXL1O",
+    stripePriceId: "price_1UTOgEAkIBECpwGmLbYMJIgI",
     blobUrl: "",
     imageUrl: "/products/future-ready-skills-map.jpg",
     previewFile: "Preview Skills Map 2026.pdf",
