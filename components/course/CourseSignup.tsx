@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Image from "next/image";
 import useAttributionSource from "@/components/useAttributionSource";
+import { SKILLS_MAP } from "@/lib/skills-map";
 
 /**
  * Email capture for the free 5-day course. Posts to /api/course (course-rwl
@@ -13,6 +15,7 @@ export default function CourseSignup({ id = "top" }: { id?: string }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [shaking, setShaking] = useState(false);
+  const [ref, setRef] = useState<string | undefined>();
   const source = useAttributionSource();
 
   function fail(message: string) {
@@ -47,6 +50,7 @@ export default function CourseSignup({ id = "top" }: { id?: string }) {
         fail(data.error || "Something went wrong. Please try again.");
         return;
       }
+      setRef(typeof data.ref === "string" ? data.ref : undefined);
       setStatus("success");
       try {
         const { pinterestSetEnhancedMatch, trackLead } = await import("@/lib/tracking");
@@ -69,6 +73,7 @@ export default function CourseSignup({ id = "top" }: { id?: string }) {
           in the morning. If you can&apos;t find it, look in Promotions and drag it
           into your main inbox.
         </p>
+        <SkillsMapNote refId={ref} source={source} />
       </div>
     );
   }
@@ -111,5 +116,42 @@ export default function CourseSignup({ id = "top" }: { id?: string }) {
         Free. One short email a day for five days. Unsubscribe any time.
       </p>
     </form>
+  );
+}
+
+/**
+ * The one paid offer, shown only after the free signup is done. `refId` is the
+ * reader's Kit id, so checkout can grant the course bonus (they joined seconds
+ * ago, well inside the bonus window).
+ */
+function SkillsMapNote({ refId, source }: { refId?: string; source?: string | null }) {
+  const params = new URLSearchParams({ utm_source: "site", utm_medium: "course-signup", utm_campaign: source || "course" });
+  if (refId) params.set("ref", refId);
+  return (
+    <a
+      href={`/shop/${SKILLS_MAP.slug}?${params.toString()}`}
+      className="group mt-6 flex items-center gap-4 rounded-xl border border-[#E6D3B3] bg-white/70 p-4 text-left transition-colors hover:border-forest/50 hover:bg-white"
+    >
+      <Image
+        src="/skills-map-cover.jpg"
+        alt="The Future-Ready Skills Map cover"
+        width={80}
+        height={104}
+        className="w-[64px] shrink-0 rotate-[-3deg] rounded-[3px] shadow-[0_6px_14px_-6px_rgba(45,58,46,0.5)]"
+      />
+      <span className="min-w-0">
+        <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B07A4A]">
+          While you wait for Day 1
+        </span>
+        <span className="mt-1 block text-[14.5px] leading-[1.5] text-gray-700">
+          The course gives you the how. The Skills Map gives you the what: 12 skill areas, and what
+          each looks like from 6 to 14 and beyond. ${SKILLS_MAP.priceUsd}, and get it this week
+          to add a full activity guide free.
+        </span>
+        <span className="mt-1.5 inline-block text-[14px] font-semibold text-forest group-hover:underline">
+          See the Skills Map &rarr;
+        </span>
+      </span>
+    </a>
   );
 }

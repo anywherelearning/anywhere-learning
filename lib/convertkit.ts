@@ -234,6 +234,7 @@ async function removeTagFromSubscriber(
  * sequence, so the field has to already hold its value when email 1 renders.
  *
  * Throws on any API failure so the caller can surface / log the error.
+ * Returns the Kit subscriber id (undefined when Kit isn't configured).
  */
 export async function subscribeAndTag(
   email: string,
@@ -241,8 +242,8 @@ export async function subscribeAndTag(
   fields?: Record<string, string>,
 ) {
   const apiKey = process.env.CONVERTKIT_API_KEY;
-  if (!apiKey) return;
-  if (tags.length === 0) return;
+  if (!apiKey) return undefined;
+  if (tags.length === 0) return undefined;
 
   if (fields) {
     for (const key of Object.keys(fields)) {
@@ -255,6 +256,7 @@ export async function subscribeAndTag(
     const tagId = await getOrCreateTag(apiKey, name);
     await applyTagToSubscriber(apiKey, tagId, subscriberId);
   }
+  return subscriberId;
 }
 
 /** Kit derives a field's `key` from its label, so these must stay paired. */

@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
       ? source.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 30) || undefined
       : undefined;
 
-    await subscribeAndTag(email, [
+    const subscriberId = await subscribeAndTag(email, [
       COURSE.signupTag,
       `from-${cleanSource || "course"}`,
     ]);
@@ -62,7 +62,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    return NextResponse.json({ success: true });
+    // The Kit id lets the success screen link to the Skills Map with `?ref=`,
+    // which is how the course bonus is checked at checkout.
+    return NextResponse.json({ success: true, ref: subscriberId ? String(subscriberId) : undefined });
   } catch (err) {
     console.error("Course subscribe error:", err);
     return NextResponse.json(
