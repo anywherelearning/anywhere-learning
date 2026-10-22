@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Eight real activity covers fanned around the Future-Ready Skills Map, with an
 // "Open and go" sticker. Extracted from the old homepage hero so it can be the
@@ -31,11 +32,13 @@ export default function HeroCollage() {
     <div
       data-hero-collage
       className="relative mx-auto aspect-square w-full max-w-[480px]"
-      aria-hidden="true"
     >
-      {/* Skills Map — centerpiece */}
-      <div
-        className="absolute z-[5] w-[130px] sm:w-[220px] lg:w-[272px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)]"
+      {/* Skills Map — centerpiece. The one thing sold on its own, so it links
+          to its page and wears a small price tag. */}
+      <Link
+        href="/shop/future-ready-skills-map"
+        aria-label="The Future-Ready Skills Map, $17.99"
+        className="group absolute z-[5] w-[130px] sm:w-[220px] lg:w-[272px] aspect-[3/4] rounded-[12px] overflow-hidden border border-[#D8D4C5] shadow-[0_28px_48px_-22px_rgba(45,58,46,0.45)] hover:shadow-[0_34px_56px_-22px_rgba(45,58,46,0.55)] transition-shadow"
         style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%) rotate(-2deg)' }}
       >
         <Image
@@ -47,7 +50,10 @@ export default function HeroCollage() {
           unoptimized
           className="absolute inset-0 h-full w-full object-cover object-top"
         />
-      </div>
+        <span className="absolute left-1/2 -translate-x-1/2 bottom-2 sm:bottom-3 whitespace-nowrap rounded-full bg-forest text-cream text-[10px] sm:text-[12px] font-semibold px-2.5 sm:px-3 py-1 shadow-md group-hover:bg-forest-dark transition-colors">
+          The Skills Map · $17.99 →
+        </span>
+      </Link>
 
       {HERO_CARDS.map((card, i) => {
         const pos = CARD_POSITIONS[i];
@@ -57,6 +63,7 @@ export default function HeroCollage() {
         return (
           <div
             key={card.slug}
+            aria-hidden="true"
             className="absolute w-[112px] sm:w-[140px] lg:w-[186px] aspect-[4/5] rounded-[10px] overflow-hidden border border-[#D8D4C5] bg-cream shadow-[0_16px_28px_-22px_rgba(45,58,46,0.42)] hover:shadow-[0_26px_42px_-22px_rgba(45,58,46,0.5)] hover:z-30 transition-all duration-250"
             style={{ ...pos.style, transform: finalTransform, zIndex: pos.z }}
           >
@@ -74,7 +81,7 @@ export default function HeroCollage() {
       })}
 
       {/* Open-and-go sticker */}
-      <div className="absolute right-[-40px] bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
+      <div aria-hidden="true" className="absolute right-[-40px] bottom-[-30px] max-sm:right-2 max-sm:bottom-2 w-[120px] h-[120px] max-sm:w-[96px] max-sm:h-[96px] rounded-full bg-[#C97B5C] text-cream grid place-items-center font-display italic text-center leading-[1.06] text-[16px] max-sm:text-[13px] rotate-[8deg] shadow-[0_14px_26px_-10px_rgba(201,123,92,0.55)] z-[6] p-2.5">
         <span>
           <span className="block text-[28px] max-sm:text-2xl mb-1">Open</span>
           and go
