@@ -99,8 +99,10 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <div class="ideagrid">
     <div class="box"><div class="label">What your kid will make</div>
       <ul class="ticks">${g.create.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>
-    <div class="box"><div class="label">Skills your kid builds</div>
-      <dl class="skills">${g.skills.map((s) => `<div><dt>${esc(s.name)}</dt><dd>${esc(s.text)}</dd></div>`).join('')}</dl></div>
+    ${g.academics ? `<div class="box"><div class="label">What your kid learns</div>
+      <dl class="skills">${g.academics.map((a) => `<div><dt>${esc(a.subject)}</dt><dd>${esc(a.text)}</dd></div>`).join('')}</dl></div>`
+    : `<div class="box"><div class="label">Skills your kid builds</div>
+      <dl class="skills">${g.skills.map((s) => `<div><dt>${esc(s.name)}</dt><dd>${esc(s.text)}</dd></div>`).join('')}</dl></div>`}
   </div>
   <div class="box"><div class="label">What you need</div>
     <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>
@@ -108,32 +110,28 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${foot('The idea')}
 </section>`;
 
-  // The teaching page: the core skill in plain words with one model, the
-  // school subjects hiding in the task, and what growth looks like.
+  // The core skill in plain words, shown as one worked example: the weak
+  // first try, then the fixed version with each part labelled. Replaces the
+  // plain before/after example when a guide has a lesson.
   const L = g.lesson;
-  const skill = L ? `
-<section class="pg skillpg">
-  <div class="eyebrow">Before you start</div>
-  <h2>The skill, in a minute</h2>
-  <p class="lead">${esc(L.text)}</p>
-  <div class="box model"><div class="label">${esc(L.modelLabel)}</div>
-    ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}
-    ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>
-  ${g.academics ? `<div class="box"><div class="label">The academics inside</div>
-    <dl class="acad">${g.academics.map((a) => `<div><dt>${esc(a.subject)}</dt><dd>${esc(a.text)}</dd></div>`).join('')}</dl></div>` : ''}
-  ${g.signs ? `<div class="box"><div class="label">Signs it's working</div><ul class="ticks">${g.signs.map((s) => `<li>${esc(s)}</li>`).join('')}</ul></div>` : ''}
-  ${foot('The skill')}
-</section>` : '';
+  const lessonBox = L ? `
+  <div class="box model"><div class="label">The skill, in a minute</div>
+    <p class="mlead">${esc(L.text)}</p>
+    ${L.before ? `<div class="mbefore"><span class="tag">First try</span><s>${esc(L.before)}</s></div>` : ''}
+    <div class="mafter"><span class="tag">After the fix</span>
+      ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}</div>
+    ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>` : '';
 
   const howto = `
 <section class="pg">
   <div class="eyebrow">Your role</div>
   <h2>How to run it</h2>
   <p class="lead">${esc(g.howTo.intro)}</p>
+  ${lessonBox}
   <div class="tips">${g.howTo.tips.map((t, i) => `
     <div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div></div>`).join('')}
   </div>
-  ${g.howTo.example ? `
+  ${g.howTo.example && !L ? `
   <div class="example">
     <div class="label">${esc(g.howTo.example.title)}</div>
     <div class="ba">
@@ -177,6 +175,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     ${c.reflect ? `<div class="box"><div class="label">Reflect</div><p>${esc(c.reflect)}</p></div>` : ''}
     <div class="box"><div class="label">Celebrate</div><p>${esc(c.celebrate)}</p></div>
   </div>
+  ${g.signs ? `<div class="box"><div class="label">Signs it's working</div><ul class="ticks">${g.signs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
   ${g.makeItReal ? `<div class="box real"><div class="label">Make it real</div><p>${esc(g.makeItReal)}</p></div>` : ''}
   <div class="box"><div class="label">Keep it going</div><ul class="dots">${c.extensions.map((e) => `<li>${esc(e)}</li>`).join('')}</ul></div>
   ${!bonus && g.done ? `<a class="donebox" href="${esc(g.done.url)}"><span class="donetick">&#10003;</span><span>${esc(g.done.text)}</span><b>${esc(g.done.label)} &rarr;</b></a>` : ''}
@@ -190,7 +189,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${skill}${howto}${steps}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw) {
@@ -261,9 +260,12 @@ ul{list-style:none}
 .biglevels{display:grid;gap:10px;margin-top:6px}
 .bl p{margin-top:6px}.focus{color:var(--muted);font-size:.92em}
 .skills{display:grid;gap:0;margin:0}.skills div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.skills div:first-child{border-top:0;padding-top:2px}.skills dt{font:700 1em/1.3 'DM Sans';color:var(--forest);display:block}.skills dd{display:block;margin:2px 0 0;color:var(--muted);font-size:.92em;line-height:1.4}
-.model .mrow{display:grid;grid-template-columns:5.2em 1fr;gap:12px;align-items:start;padding:9px 0;border-top:1px solid rgba(58,44,23,.12)}.model .label+.mrow{border-top:0;padding-top:4px}
+.model .mrow{display:grid;grid-template-columns:5.2em 1fr;gap:12px;align-items:start;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.model .label+.mrow{border-top:0;padding-top:4px}
 .mtag{font:700 .72em/1.2 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:6px;padding:5px 6px;text-align:center}
 .mrow p{margin:0}.model .why{margin-top:10px}
+.mlead{margin:2px 0 10px}.mbefore{display:flex;gap:10px;align-items:baseline;padding:8px 12px;border-radius:10px;background:#f6e3df;margin-bottom:8px}.mbefore s{color:#9a5b4c;text-decoration-color:rgba(154,91,76,.6)}
+.mafter{padding:8px 12px 2px;border-radius:10px;background:#e3ead9}.mafter .tag{display:block;margin-bottom:2px}.mafter .mrow:first-of-type{border-top:0}
+.mbefore .tag,.mafter .tag{font:700 .7em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
 .acad{display:grid;gap:0;margin:0}.acad div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.acad div:first-child{border-top:0;padding-top:2px}
 .acad dt{font:700 1em/1.3 'DM Sans';color:var(--accent)}.acad dd{margin:2px 0 0;line-height:1.45}
 .box.real{border-left:4px solid var(--trail)}
@@ -381,7 +383,8 @@ h2{font-size:40px}
 .foot{font-size:11px}
 
 .ideagrid{grid-template-columns:1fr 1fr;gap:14px}
-.tips{grid-template-columns:repeat(3,1fr)}
+.tips{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
+.tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}
 .photo img{height:1in;object-fit:cover}

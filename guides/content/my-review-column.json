@@ -21,35 +21,17 @@
     "tips": [
       {
         "title": "Real things only",
-        "text": "Let your kid review things they actually love or can't stand. A strong opinion about a park beats a polite one about a book they didn't finish."
-      },
-      {
-        "title": "Ask why, every time",
-        "text": "'It was great' is where a review starts. Ask 'what made it great?' until there's a reason someone else could use."
+        "text": "Let your kid review things they love or can't stand. A strong opinion about a park beats a polite one about a book they didn't finish."
       },
       {
         "title": "Make it real publishing",
         "text": "Give the column a name and its own folder. When kids know someone will use their review, the writing gets better on its own."
       }
     ],
-    "example": {
-      "title": "What a useful review sounds like",
-      "before": [
-        "The park was good.",
-        "I liked it.",
-        "5 stars."
-      ],
-      "after": [
-        "Riverside Park is the best park in town for climbing: the rope pyramid is twice as tall as the one at school.",
-        "The only bad part: the bathrooms were locked.",
-        "4 out of 5 acorns. Great for climbers, not for little ones."
-      ],
-      "why": "Same opinion, but now a stranger could decide. It names the place, gives a specific reason, is fair about the downside, and says who it's for."
-    },
     "troubleshoot": [
       {
         "q": "Your kid doesn't like writing yet",
-        "a": "They say the review out loud and you write it down word for word. They can still design the rating and name the column."
+        "a": "They say the review out loud and you write it down word for word. They still design the rating."
       },
       {
         "q": "Every review is 'it was good'",
@@ -61,7 +43,7 @@
       },
       {
         "q": "Siblings want to join",
-        "a": "Review the same thing separately, then compare. Different opinions about the same pizza make a great column."
+        "a": "Review the same thing separately, then compare. Two opinions about one pizza make a great column."
       }
     ]
   },
@@ -199,44 +181,48 @@
     "caption": "Fork up, opinion loading. Every meal out is a review waiting to be written."
   },
   "lesson": {
-    "text": "Every useful review, from a newspaper critic to a kid's column, does three things: it says what the reviewer thinks, gives a reason, and proves it with a detail the reader can picture. Teach the pattern once, then use the same three words all week: opinion, reason, proof.",
-    "modelLabel": "Opinion, reason, proof",
+    "text": "Every useful review does three things: says what you think, gives a reason, and proves it with a detail the reader can picture. Teach it once, then use the same three words all week.",
+    "before": "The park was good. I liked it. 5 stars.",
     "model": [
       {
         "part": "Opinion",
-        "line": "The new splash pad is worth the drive."
+        "line": "Riverside Park is the best park in town for climbing."
       },
       {
         "part": "Reason",
-        "line": "It has something for every age."
+        "line": "It has the biggest climbing structure around."
       },
       {
         "part": "Proof",
-        "line": "Little kids get a shallow corner with gentle sprays, and the giant bucket that tips every five minutes soaked my big brother from head to toe."
+        "line": "The rope pyramid is twice as tall as the one at school, with a net at the top you can lie in."
       },
       {
-        "part": "Who for",
-        "line": "Bring a towel. Skip it if you hate getting wet."
+        "part": "Fair",
+        "line": "The only bad part: the bathrooms were locked."
+      },
+      {
+        "part": "Rating",
+        "line": "4 out of 5 acorns. Great for climbers, not for little ones."
       }
     ],
-    "modelNote": "Most first reviews stop after the opinion. The proof is what makes a stranger trust it, so that's the part to ask for every time."
+    "modelNote": "Same opinion as the first try, but now a stranger could decide. When a review stops at the opinion, ask: what's your proof?"
   },
   "academics": [
     {
       "subject": "Writing",
-      "text": "Opinion writing, a clear opening sentence, paragraphs that stay on one idea, and swapping vague words ('good,' 'fun') for precise ones."
+      "text": "opinion writing, strong openings, precise words instead of 'good' and 'fun'"
     },
     {
       "subject": "Reading",
-      "text": "Reading real reviews closely and judging which ones are useful, and which are just trying to sell you something."
+      "text": "telling a useful review from one that's just selling something"
     },
     {
       "subject": "Math",
-      "text": "Designing a rating scale, and for older kids, averaging scores across categories (taste 4, value 3, fun 5)."
+      "text": "designing a rating scale, and averaging scores for older kids"
     },
     {
-      "subject": "Thinking skills",
-      "text": "Separating facts from feelings, weighing pros and cons, and comparing two similar things fairly."
+      "subject": "Thinking",
+      "text": "facts versus feelings, and weighing the good against the bad"
     }
   ],
   "signs": [
