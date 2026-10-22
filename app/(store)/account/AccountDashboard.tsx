@@ -395,6 +395,18 @@ export default function AccountDashboard({
                   <div role="menu" className="absolute right-0 top-full mt-2 z-50 w-56 rounded-xl border border-[rgba(58,44,23,0.14)] bg-[var(--am-paper)] p-1.5 shadow-[0_20px_44px_-16px_rgba(45,58,46,0.5)]">
                     <div className="px-2.5 pt-1.5 pb-1 font-[family-name:var(--font-catalog)] text-[10px] uppercase tracking-[0.12em] text-gold-dark">Open the Skills Map</div>
                     <Link
+                      href="/api/download/activity/skills-map-phone?view=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      prefetch={false}
+                      onClick={() => setSkillsMapOpen(false)}
+                      className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 no-underline text-ink font-body text-[13.5px] font-medium hover:bg-[#F2EFE4] transition-colors"
+                    >
+                      <span className="w-4 h-4 rounded-[4px] border border-[rgba(58,44,23,0.25)] bg-[var(--am-paper)]" aria-hidden="true" />
+                      Phone
+                      <span className="ml-auto text-[11px] text-gray-500">read</span>
+                    </Link>
+                    <Link
                       href="/api/download/activity/skills-map-color?view=1"
                       target="_blank"
                       rel="noopener noreferrer"

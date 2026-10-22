@@ -15,6 +15,7 @@ export const dynamic = 'force-dynamic';
 const SKILLS_MAP_TITLES: Record<string, string> = {
   'skills-map-color': 'The Future-Ready Skills Map (Color)',
   'skills-map-bw': 'The Future-Ready Skills Map (Black & White)',
+  'skills-map-phone': 'The Future-Ready Skills Map (Phone)',
 };
 
 /**
