@@ -1,0 +1,203 @@
+{
+  "slug": "family-recipe-book",
+  "category": "Writing & Communication",
+  "title": "Family Recipe Book",
+  "tagline": "Procedural writing · Interviewing · Family stories",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid collects real recipes from the people in your family, interviews them about the stories behind the food, cooks each recipe from their own notes, and writes it up so anyone could make it. Then it all goes into a mini cookbook with a cover and a table of contents. It's clear step-by-step writing with a real test (does the dish come out right?), and the finished book is a keepsake your family will actually use.",
+  "create": [
+    "3 to 5 family recipes, each with the story behind it",
+    "Recipe cards written so someone outside the family could cook from them",
+    "A mini cookbook with a cover, a table of contents and their name on it"
+  ],
+  "need": [
+    "Family members (or close friends) willing to share a favourite recipe, in person, by phone or by video call",
+    "Paper and pencil, or a notebook for interview notes",
+    "Your kitchen, and the ingredients for each recipe",
+    "Paper, a stapler or a folder to put the book together",
+    "Optional: a phone or camera for photos of each dish"
+  ],
+  "howTo": {
+    "intro": "You don't need any teaching experience. Your job is taste tester and kitchen safety supervisor: you handle the hot and sharp parts, your kid leads the rest. Spread it over a couple of weeks, one recipe at a time.",
+    "tips": [
+      {
+        "title": "Help them reach the cooks",
+        "text": "Set up the call with grandma or the visit with an uncle, then step back and let your kid ask the questions."
+      },
+      {
+        "title": "Supervise the stove, not the pen",
+        "text": "Keep them safe around knives and heat, but let them lead the cooking and the writing. A recipe that flops just means the instructions need fixing."
+      },
+      {
+        "title": "Ask for the story too",
+        "text": "Why is this made every birthday? Who taught it to you? The stories are what turn a stack of recipes into a family book."
+      }
+    ],
+    "example": {
+      "title": "From kitchen notes to a recipe anyone can follow",
+      "before": [
+        "Add some flour.",
+        "Mix it a bit.",
+        "Bake until done."
+      ],
+      "after": [
+        "Add 2 cups of flour, one cup at a time.",
+        "Stir with a wooden spoon until you can't see any dry flour.",
+        "Bake at 350°F for 25 minutes, until the top is golden."
+      ],
+      "why": "Family cooks say 'some' and 'until done' because they just know. Your kid's job is to turn that into amounts, times and signs a stranger can see."
+    },
+    "troubleshoot": [
+      {
+        "q": "Family is far away",
+        "a": "A video call works great. Your kid can even ask the cook to show each step on camera."
+      },
+      {
+        "q": "There aren't many family recipes",
+        "a": "Add your own go-to meals, or a friend's. A family recipe is any dish your people make."
+      },
+      {
+        "q": "Your kid doesn't like writing yet",
+        "a": "They tell you each step out loud and you write it down. They can still lead the interview and the cooking."
+      },
+      {
+        "q": "The dish didn't turn out",
+        "a": "That's useful. Something is missing from the notes. Call the cook back and ask about that exact step."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Step-by-step writing",
+      "text": "writing instructions someone else can follow without help"
+    },
+    {
+      "name": "Interviewing",
+      "text": "asking good questions and listening for the details"
+    },
+    {
+      "name": "Editing for clarity",
+      "text": "finding what's missing or vague and fixing it"
+    },
+    {
+      "name": "Real-world math",
+      "text": "measuring, timing and getting amounts exactly right"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Choose the recipes",
+      "why": "Your kid decides which family dishes go in the book, and who they come from.",
+      "kid": "Your kid makes a list of dishes that mean something to your family: holiday meals, comfort food, a grandparent's specialty, the thing you always make on Sundays. Then they pick 3 to 5, ideally from different people, and write down who each one comes from and why it matters.",
+      "you": "Help them think of dishes and people. Ask the questions below, then let them choose. Try to include at least one person they don't talk to often. The interview is a chance to connect.",
+      "starters": [
+        "A holiday dish",
+        "Grandma's specialty",
+        "Our birthday meal",
+        "Comfort food",
+        "A recipe from another country",
+        "Your own go-to dinner"
+      ],
+      "ask": [
+        "If you could only save 5 recipes from our family, which would they be?",
+        "Who's the best cook in our family? What's their signature dish?"
+      ],
+      "tip": "Mix everyday food and special occasions. The Tuesday spaghetti belongs in the book as much as the holiday turkey.",
+      "levels": {
+        "explore": "Pick 2 or 3 family recipes and write down who they come from.",
+        "develop": "Pick 3 or 4 recipes from different people, and note when each one is usually made.",
+        "extend": "Pick 4 or 5 recipes that together tell your family's food story, with a mix of everyday and special occasions."
+      }
+    },
+    {
+      "title": "Interview the cooks",
+      "why": "Your kid gets each recipe, and the story behind it, straight from the cook.",
+      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask about the story: where the recipe came from, who taught it, and what memory goes with it. They take notes on both.",
+      "you": "Set up the conversations, then let your kid do the asking. Before the first call, practise a couple of questions together. If the cook says 'a pinch' or 'until it looks right,' encourage your kid to ask what that means.",
+      "ask": [
+        "What's the one thing that makes this dish turn out right?",
+        "Who taught you this recipe, and how?"
+      ],
+      "tip": "If the cook says something memorable, write down their exact words. Those quotes make the best recipe introductions.",
+      "levels": {
+        "explore": "Ask the cook for the recipe and write down the ingredients and basic steps.",
+        "develop": "Ask about both the recipe and the story behind it, and take detailed notes on both.",
+        "extend": "Do a full interview: the recipe, the story, the secret tips, and what the dish means to the cook, with a few exact quotes."
+      }
+    },
+    {
+      "title": "Cook it from the notes",
+      "why": "The real test: can your kid make the dish from what they wrote down?",
+      "kid": "Your kid cooks each recipe using only their notes, with your help where it's needed. As they go, they mark anything that was unclear or missing: a step the cook forgot to mention, an amount like 'some,' or something the cook does by instinct. They write down the exact amounts, temperatures and times as they find them.",
+      "you": "Handle the hot and sharp parts, and let your kid lead everything else. When they get stuck, don't fill the gap from your own cooking knowledge. Ask what the notes say, and help them figure out what's missing.",
+      "ask": [
+        "Was there a step you had to figure out on your own?",
+        "If someone who's never made this used your notes, where would they get stuck?"
+      ],
+      "tip": "A dish that doesn't turn out isn't a failure. It shows exactly where the notes need more detail, and it's a good excuse to call the cook back.",
+      "levels": {
+        "explore": "Cook one recipe and mark any steps that were confusing or missing.",
+        "develop": "Cook 2 or 3 recipes, mark every place that needed more detail, and add exact amounts and times.",
+        "extend": "Cook every recipe, fix unclear steps on the spot, and note each trick and tip you discover."
+      }
+    },
+    {
+      "title": "Write the recipe cards",
+      "why": "Your kid turns the notes into clear recipe cards, then checks them like a stranger would.",
+      "kid": "Your kid writes a recipe card for each dish, all in the same format: the name, who it comes from, a short story or quote, the ingredients with exact amounts, and numbered steps in the right order. Then they read each card out loud and fix anything vague, like 'cook until done' or 'add some.'",
+      "you": "Read each card as if you've never made the dish. Could you cook it from this alone? Point out one or two spots that would trip you up, then let your kid do the fixing.",
+      "ask": [
+        "Could a friend make this without calling you?",
+        "Is every step in the right order? What happens if someone skips one?"
+      ],
+      "tip": "Look at the example near the start of this guide together. The jump from 'bake until done' to '25 minutes, until golden' is the whole skill.",
+      "levels": {
+        "explore": "Write a basic card for each recipe: an ingredients list and numbered steps.",
+        "develop": "Write detailed cards with exact amounts, clear numbered steps and a short story for each, then have someone read one and revise it.",
+        "extend": "Write polished cards with a story introduction, precise steps, the cook's tips, serving ideas and variations, checked so a stranger could follow them."
+      }
+    },
+    {
+      "title": "Make the cookbook and share it",
+      "why": "The cards become a real book, and it goes back to the people who shared their recipes.",
+      "kid": "Your kid puts the cards together into a mini cookbook: a cover with a title and their name, a table of contents, and the recipes in an order that makes sense (by person, by meal, or easy to hard). Then they give copies to the family, especially the cooks who shared their recipes, and talk about what they learned.",
+      "you": "Help with stapling, printing or copies, but let your kid decide how it looks and what order it goes in. This is their book. When it's done, be the first reader and tell them which page you love most.",
+      "ask": [
+        "Who would you dedicate this book to?",
+        "What did you learn about our family that you didn't know before?"
+      ],
+      "tip": "When a grandparent opens the book and sees their own recipe in their grandkid's writing, that's the moment this whole project was for.",
+      "levels": {
+        "explore": "Put the recipes together with a cover that has a title and your name, and give it to one family member.",
+        "develop": "Add a table of contents and a short introduction about your family's food, and share it with the cooks.",
+        "extend": "Add a dedication, photos or drawings, and a closing note, share it widely, and write about what the project taught you."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just collected, wrote and published a real family cookbook.",
+    "text": "They interviewed family members, tested recipes in the kitchen, wrote instructions a stranger could follow, and put it all into a finished book. That's step-by-step writing, interviewing and editing, used to make something your family will keep for years.",
+    "celebrate": "Point out what they did: they turned 'a pinch of this' and 'until it looks right' into a recipe anyone can make. And they saved a piece of your family's history while they were at it.",
+    "extensions": [
+      "Keep adding recipes and make a second volume",
+      "Interview someone from a different generation or background about their food",
+      "Make a seasonal edition with a recipe for each time of year",
+      "Photograph each dish and make a photo cookbook",
+      "Cook a family meal entirely from the book"
+    ]
+  },
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "time": "4 to 6 sessions over a couple of weeks",
+  "photo": {
+    "src": "guides/assets/family-recipe-book.jpg",
+    "alt": "A girl holding up a spoonful of sauce over a pot on the stove",
+    "caption": "Every family has a dish worth writing down."
+  }
+}
