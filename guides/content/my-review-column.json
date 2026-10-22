@@ -182,7 +182,7 @@
       "Review five things of the same kind, like five parks, and make a ranking",
       "Review the same thing as a friend or sibling and compare your opinions",
       "Record a video review and talk about how it feels different from writing one",
-      "With your help, send a review to a local paper, a library newsletter, or the place itself"
+      "Read a review from a real newspaper together and spot its opinion, reason and proof"
     ]
   },
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
@@ -197,5 +197,52 @@
     "src": "guides/assets/my-review-column.jpg",
     "alt": "A girl at a café with a fork raised over a chocolate crêpe",
     "caption": "Fork up, opinion loading. Every meal out is a review waiting to be written."
-  }
+  },
+  "lesson": {
+    "text": "Every useful review, from a newspaper critic to a kid's column, does three things: it says what the reviewer thinks, gives a reason, and proves it with a detail the reader can picture. Teach the pattern once, then use the same three words all week: opinion, reason, proof.",
+    "modelLabel": "Opinion, reason, proof",
+    "model": [
+      {
+        "part": "Opinion",
+        "line": "The new splash pad is worth the drive."
+      },
+      {
+        "part": "Reason",
+        "line": "It has something for every age."
+      },
+      {
+        "part": "Proof",
+        "line": "Little kids get a shallow corner with gentle sprays, and the giant bucket that tips every five minutes soaked my big brother from head to toe."
+      },
+      {
+        "part": "Who for",
+        "line": "Bring a towel. Skip it if you hate getting wet."
+      }
+    ],
+    "modelNote": "Most first reviews stop after the opinion. The proof is what makes a stranger trust it, so that's the part to ask for every time."
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "Opinion writing, a clear opening sentence, paragraphs that stay on one idea, and swapping vague words ('good,' 'fun') for precise ones."
+    },
+    {
+      "subject": "Reading",
+      "text": "Reading real reviews closely and judging which ones are useful, and which are just trying to sell you something."
+    },
+    {
+      "subject": "Math",
+      "text": "Designing a rating scale, and for older kids, averaging scores across categories (taste 4, value 3, fun 5)."
+    },
+    {
+      "subject": "Thinking skills",
+      "text": "Separating facts from feelings, weighing pros and cons, and comparing two similar things fairly."
+    }
+  ],
+  "signs": [
+    "They give a reason without being asked: 'It was good because...'",
+    "They notice details in the moment ('I'm putting this in my review')",
+    "They can tell you why a one-line online review isn't much help"
+  ],
+  "makeItReal": "Hand a finished review to the person it's about: the café owner, the librarian who recommended the book, the park's community board. Most places are thrilled to get one, and seeing a real person read it changes how kids write the next one."
 }
