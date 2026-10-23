@@ -130,9 +130,13 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <p class="lead">${esc(g.howTo.intro)}</p>
   ${L ? `  <div class="box"><div class="label">What you need</div>
     <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}
-  <div class="tips">${g.howTo.tips.map((t, i) => `
+  ${g.howTo.plan ? `<div class="box"><div class="label">A simple plan</div>
+    <dl class="plan">${g.howTo.plan.map((x) => `<div><dt>${esc(x.when)}</dt><dd>${esc(x.what)}</dd></div>`).join('')}</dl></div>` : ''}
+  ${g.howTo.tips?.length ? `<div class="tips">${g.howTo.tips.map((t, i) => `
     <div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div></div>`).join('')}
-  </div>
+  </div>` : ''}
+  ${g.fromHome ? `<div class="box home"><div class="label">From our house</div><p>${esc(g.fromHome.text)}</p>
+    ${g.fromHome.quotes.map((q) => `<blockquote>${esc(q)}</blockquote>`).join('')}</div>` : ''}
   ${g.howTo.example && !L ? `
   <div class="example">
     <div class="label">${esc(g.howTo.example.title)}</div>
@@ -272,6 +276,9 @@ ul{list-style:none}
 .acad{display:grid;gap:0;margin:0}.acad div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.acad div:first-child{border-top:0;padding-top:2px}
 .acad dt{font:700 1em/1.3 'DM Sans';color:var(--accent)}.acad dd{margin:2px 0 0;line-height:1.45}
 .box.real{border-left:4px solid var(--trail)}
+.plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
+.plan dt{font:700 .95em/1.35 'DM Sans';color:var(--trail)}.plan dd{margin:0;line-height:1.4}
+.box.home{background:#fbf3e4}.box.home p{margin:0 0 8px}.box.home blockquote{margin:6px 0 0;padding:4px 0 4px 12px;border-left:3px solid var(--gold);font-style:italic;line-height:1.45}
 .ideagrid{display:grid;gap:0}
 .levelsline{display:flex;gap:12px;align-items:center;margin-top:16px;padding:12px 16px;border-radius:14px;border:1.5px dashed rgba(93,125,83,.35)}
 .lvdots{display:flex;gap:4px;flex:none}.lvdots i{width:12px;height:22px;border-radius:4px;display:block}

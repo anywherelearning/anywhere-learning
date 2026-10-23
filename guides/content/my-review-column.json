@@ -4,29 +4,79 @@
   "title": "My Review Column",
   "tagline": "Opinion writing · Critical thinking · Writing for a reader",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid becomes a reviewer: they try real things from their own life (a book, a park, a pizza place), write reviews that help someone else decide, and collect them in their own named column with a rating system they invent. It's opinion writing with a real reader, and kids take it far more seriously than a worksheet.",
+  "goal": "Your kid becomes a reviewer. They try real things from their own life, decide what they really think, and write reviews good enough to help someone else choose. The reviews go into their own column, with a name and a rating system they invent. Because someone will actually read it, they try harder than they ever would on a worksheet.",
   "create": [
     "3 to 5 written reviews of real things they've tried",
     "A rating system they designed themselves",
     "Their own review column, with a name, that someone else can use to decide"
   ],
   "need": [
-    "Things to review: anything your kid already does, eats, reads, plays or visits",
+    "Things to review: anything your kid already eats, reads, plays or visits",
     "A notebook or folder just for the column",
-    "Optional: a phone for photos to go with each review"
+    "For the taste test: 3 snacks or cereals, and something to hide the boxes"
   ],
-  "howTo": {
-    "intro": "You don't need any teaching experience. You're the curious reader: the one who asks 'why?' and the one the reviews are written for. Do one short session at a time, over a week or two.",
-    "tips": [
+  "lesson": {
+    "text": "A useful review does three things. It says what you think, gives a reason, and proves it with a detail the reader can picture. Teach that once, then keep asking for it all week.",
+    "before": "The park was good. I liked it. 5 stars.",
+    "model": [
       {
-        "title": "Real things only",
-        "text": "Let your kid review things they love or can't stand. A strong opinion about a park beats a polite one about a book they didn't finish."
+        "part": "Opinion",
+        "line": "Riverside Park is the best park in town for climbing."
       },
       {
-        "title": "Make it real publishing",
-        "text": "Give the column a name and its own folder. When kids know someone will use their review, the writing gets better on its own."
+        "part": "Reason",
+        "line": "It has the biggest climbing structure around."
+      },
+      {
+        "part": "Proof",
+        "line": "The rope pyramid is twice as tall as the one at school, and there's a net at the top you can lie in."
+      },
+      {
+        "part": "Fair",
+        "line": "The only bad part: the bathrooms were locked."
+      },
+      {
+        "part": "Worth it?",
+        "line": "Totally. It's free, and better than the park we drive to. 4 acorns out of 5."
       }
     ],
+    "modelNote": "Same opinion, but now a stranger could decide. When a review stops at the opinion, ask: what's your proof?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "opinion writing, strong openings, precise words instead of 'good' and 'fun'"
+    },
+    {
+      "subject": "Reading",
+      "text": "telling a useful review from one that's just selling something"
+    },
+    {
+      "subject": "Math",
+      "text": "building a rating scale, adding up category scores, and comparing prices"
+    },
+    {
+      "subject": "Life skills",
+      "text": "deciding if something is worth the money, and weighing the good against the bad"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the curious reader: the one who asks 'why?' and the one the reviews are written for.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The taste test and the rating system (Steps 1 and 2). About 20 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "One review after each outing, meal or book (Steps 3 and 4)."
+      },
+      {
+        "when": "The weekend",
+        "what": "Put the column together and share it (Step 5)."
+      }
+    ],
+    "tips": [],
     "troubleshoot": [
       {
         "q": "Your kid doesn't like writing yet",
@@ -34,16 +84,16 @@
       },
       {
         "q": "Every review is 'it was good'",
-        "a": "Read two real reviews together, one helpful and one useless, and ask which one would help you decide. Then go back to theirs."
-      },
-      {
-        "q": "They run out of things to review",
-        "a": "Look back at the last week: what did you eat, watch, visit or play? Cereal counts."
-      },
-      {
-        "q": "Siblings want to join",
-        "a": "Review the same thing separately, then compare. Two opinions about one pizza make a great column."
+        "a": "Read two real reviews together, a helpful one and a useless one. Ask which would help you decide."
       }
+    ]
+  },
+  "fromHome": {
+    "text": "At the end of every trip, my kids review the country we just lived in and score it out of 100, ten points per category. Here's a bit of Panama's. We rated every Disney ride the same way.",
+    "quotes": [
+      "Nature and animals, 9/10. The nature and the animals are amazing, but I took off a point because there are too many mosquitoes.",
+      "Transport, 10/10. It was always easy to find a ride and the prices were super low. A 15 km taxi ride cost $4.",
+      "Grand total: 81/100."
     ]
   },
   "skills": [
@@ -66,106 +116,118 @@
   ],
   "steps": [
     {
-      "title": "Pick what to review",
-      "why": "Your kid chooses the things their column will review.",
-      "kid": "Your kid brainstorms 5 to 10 things they could review, then picks the 3 to 5 they have the strongest opinions about, good or bad. Next to each one, they write their first reaction in a few words.",
-      "you": "Help them remember: what have they eaten, read, played, watched or visited lately? Then let them choose. If they pick something they've only tried once, that's fine, as long as they'll try it again before writing.",
+      "title": "Start with a taste test",
+      "why": "A silly first review that teaches the whole skill, then a list of real things to review.",
+      "kid": "Hide the boxes of 3 snacks or cereals and have everyone try each one without knowing which is which. Your kid rates them and says why: which won, which lost, and what exactly made the difference. Then they make a list of real things they could review this week and pick 3 to 5 they have strong feelings about, good or bad.",
+      "you": "Set up the taste test and play along. When your kid says 'this one's better,' ask what makes it better until you get something specific, like 'crunchier' or 'less sweet.' Then help them remember what they've eaten, read, played or visited lately, and let them choose.",
       "starters": [
         "A book or comic",
         "A park or playground",
         "A restaurant or snack",
         "A game or app",
         "A movie or show",
-        "A recipe you made"
+        "A ride or an outing"
       ],
       "ask": [
-        "Is there something everyone loves that you think is overrated?",
-        "If a friend asked 'should I try this?', what would you say?"
+        "Which one won, and what exactly made it better?",
+        "Is there something everyone loves that you think is overrated?"
       ],
-      "tip": "Mix love and dislike. A column with one honest 'skip this' is more believable than five glowing reviews.",
+      "tip": "Pick things they actually love or can't stand. One honest 'skip this' makes a column more believable than five glowing reviews.",
       "levels": {
-        "explore": "Pick 2 or 3 things and say your opinion of each in one sentence.",
-        "develop": "Pick 3 or 4 things from at least 2 different kinds, like a book and a park.",
-        "extend": "Pick 4 or 5 things across different kinds, and note 2 or 3 reasons behind each first opinion."
+        "explore": "Do the taste test and say which snack won and why. Pick 2 or 3 things to review.",
+        "develop": "Rate the snacks with a reason for each. Pick 3 or 4 things of at least 2 different kinds.",
+        "extend": "Write a short review of the winning snack. Pick 4 or 5 things and note your first reasons for each."
       }
     },
     {
       "title": "Make the rating system",
-      "why": "Your kid decides how their column will score things, and what each score means.",
-      "kid": "Your kid designs a rating system they'll use for every review: stars, a number out of 10, thumbs, or something of their own (acorns, slices of pizza, rockets). Then they write down what each level means, like '5 = you have to try this' and '1 = don't bother.' They test it on one thing from their list to see if it feels right.",
-      "you": "Ask the questions that make it real: what's the difference between a 3 and a 4? Could a stranger look at the score and understand it? Let them change it after the test. That's what real reviewers do.",
+      "why": "Your kid decides how the column scores things, and what each score means.",
+      "kid": "Your kid invents the rating system they'll use for every review. It can be stars, a number out of 10, or something of their own like acorns or slices of pizza. Older kids can score out of 100 with categories, ten points each, and take points off with a reason. Then they write down what the top and bottom scores mean and test the system on the taste-test winner.",
+      "you": "Ask the questions that make it real. What's the difference between a 3 and a 4? Could a stranger understand the score without asking? Let them change it after the test.",
+      "starters": [
+        "Stars out of 5",
+        "A number out of 10",
+        "Their own unit (acorns, pizza slices)",
+        "Out of 100, by category"
+      ],
       "ask": [
         "What does it take to get your top score?",
-        "Would you rate the whole thing, or a few parts of it?"
+        "When you take a point off, can you say exactly why?"
       ],
-      "tip": "A rating system makes kids think about what 'good' actually means. That's the real thinking in this step.",
+      "tip": "Scoring out of 100 by category is what our kids use for every country we visit. Taking points off forces a reason every time.",
       "levels": {
-        "explore": "Choose a simple system, like 1 to 5 stars, and say what each star means.",
+        "explore": "Pick a simple system, like 1 to 5 stars, and say what each star means.",
         "develop": "Write a clear meaning for each level, test it on 2 things and adjust it.",
-        "extend": "Rate a few parts separately (like taste, value, fun) and add an overall score."
+        "extend": "Score by category (like taste, fun, value) and add them up, with a reason for every point taken off."
       }
     },
     {
       "title": "Try it with a reviewer's eye",
-      "why": "Before writing, your kid experiences each thing again and takes notes.",
-      "kid": "Your kid tries each thing again (reads the chapter, goes back to the park, eats the snack) and takes notes as they go: what they see, hear, taste or notice. They write down the good and the bad, and anything a reader would want to know before trying it.",
-      "you": "Try it alongside them if you can. Ask what they're noticing, not what they think of it yet. If their notes say 'fun' or 'yummy', ask what exactly made it fun.",
+      "why": "Before writing, your kid tries each thing again and takes notes.",
+      "kid": "Your kid tries each thing again, this time on purpose: rereads the chapter, goes back to the park, eats the snack slowly. They jot down what they notice, the good and the bad, and anything a reader would want to know first. If it costs money, they find out the price and compare it with something similar.",
+      "you": "Join them if you can. Ask what they're noticing, not what they think of it yet. If the notes say 'fun' or 'yummy,' ask what exactly made it fun.",
       "ask": [
-        "What's the first thing someone would notice?",
-        "What was better than you expected? What was worse?"
+        "What would someone want to know before trying this?",
+        "Was it worth the money, or is there something just as good for less?"
       ],
-      "tip": "Notes are for details, not opinions. 'The slide is so hot in the sun' is a note. 'Bad slide' isn't, yet.",
+      "tip": "Notes are details, not opinions. 'The slide gets so hot in the sun' is a note. 'Bad slide' isn't, yet.",
       "levels": {
-        "explore": "Write 3 to 5 things you noticed about each one, good or bad.",
-        "develop": "Take notes on what was good, what wasn't, and what a reader would want to know, with examples.",
-        "extend": "Add details for every sense, a comparison to something similar, and who would like it and who wouldn't."
+        "explore": "Write 3 to 5 things you noticed about each one.",
+        "develop": "Note what was good, what wasn't, and the price if there is one.",
+        "extend": "Add a comparison to something similar, who would like it, and whether it was worth what it cost."
       }
     },
     {
       "title": "Write the reviews",
-      "why": "Your kid turns the notes into reviews, then edits them for the reader.",
-      "kid": "Your kid writes a review for each thing: the opening says what it is and their opinion, the middle gives specific reasons with details from their notes, they mention one weakness to be fair, and they end with their rating and who should try it. Then they read each one out loud and swap vague words like 'good,' 'nice' and 'fun' for exact ones.",
-      "you": "Read each review as someone who has never tried the thing. Could you decide from it? Give one specific suggestion per review, like 'tell me why the pizza was the best,' then let them make the change.",
+      "why": "Your kid turns the notes into reviews, then fixes them for a reader.",
+      "kid": "Your kid writes each review the way the example at the start does: opinion first, then a reason, proof from their notes, one fair downside, and whether it was worth it, with the rating at the end. Then they read it out loud and swap vague words like 'good,' 'nice' and 'fun' for exact ones.",
+      "you": "Read each review as if you've never tried the thing. Could you decide from it? Give one suggestion per review, like 'tell me why the pizza was the best,' then let them make the change.",
       "ask": [
         "If someone only read your first sentence, would they know your opinion?",
         "Who would love this? Who would hate it? Did you say so?"
       ],
-      "tip": "The 'What a useful review sounds like' example at the start shows the jump from 'it was good' to a review a stranger can use. Look at it together before writing.",
+      "tip": "Keep the Riverside Park example open while they write. Pointing at 'proof' is easier than explaining it again.",
       "levels": {
         "explore": "Write 3 to 5 sentences per review: what it is, your opinion, and one reason why.",
-        "develop": "Write an opening opinion, 2 or 3 reasons, one weakness, and a rating with a recommendation.",
-        "extend": "Write polished reviews with a catchy opening, detailed reasons, fair pros and cons, and compare to real published reviews."
+        "develop": "Write an opinion, 2 or 3 reasons with proof, one downside, and a rating.",
+        "extend": "Write polished reviews with a catchy opening, fair pros and cons, a 'worth it?' verdict, and compare them to real published reviews."
       }
     },
     {
       "title": "Publish the column and share it",
       "why": "The reviews become a real column, and someone actually uses it.",
-      "kid": "Your kid names the column ('The Honest Review,' 'Slice Report'), makes a header, and puts the reviews together in the same format with the same rating system. Then they share it with at least two people and ask: which review was most useful? Did it make you want to try something, or skip it?",
-      "you": "Help put it together if needed, but let them design how it looks. Read it like a real reader, and tell them which review helped you most and why. Then talk about what's next: will the column keep going?",
+      "kid": "Your kid names the column, makes a header, and puts the reviews together with the same format and rating system. Then they share it with at least two people and ask which review was most useful, and whether it made them want to try something or skip it.",
+      "you": "Help put it together if needed, but let them decide how it looks. Read it like a real reader and tell them which review helped you most, and why. Then talk about whether the column keeps going.",
       "ask": [
         "If this were in a newspaper, would someone want to read it?",
-        "Did writing the review change your opinion about anything?"
+        "Did writing the review change your mind about anything?"
       ],
-      "tip": "Keep the folder somewhere easy to reach. The best review columns get a new entry after every outing.",
+      "tip": "Give it a real name and a real folder. Kids write differently once they know someone will read it.",
       "levels": {
-        "explore": "Give the column a name, put the reviews in order, and share them with one person.",
-        "develop": "Add a header and a matching format, share with two people, and write what you learned about giving reasons.",
-        "extend": "Add an introduction that explains your rating system, gather feedback from several readers, and write how your reviews improved."
+        "explore": "Name the column, put the reviews in order, and share them with one person.",
+        "develop": "Add a header and matching format, share with two people, and write down their feedback.",
+        "extend": "Add an introduction explaining your rating system, gather feedback from several readers, and write how your reviews improved."
       }
     }
   ],
   "conclusion": {
     "headline": "Your kid just wrote and published a real review column.",
-    "text": "They tried things with a critical eye, formed opinions, backed them up with reasons, and wrote for someone who wasn't there. That's opinion writing, critical thinking and writing for a reader, all in something genuinely useful to another person.",
-    "celebrate": "Point out what changed: they didn't stop at 'I liked it.' They explained why, in a way that could actually help someone decide. Plenty of adult reviews online never get there.",
+    "text": "They tried things on purpose, figured out what they really thought, backed it up, and wrote it for someone who wasn't there. Opinion writing, reasoning and a bit of money sense, all in something another person can actually use.",
+    "celebrate": "Point out what changed. They didn't stop at 'I liked it.' They explained why, in a way that could help someone decide. Plenty of grown-up reviews online never get that far.",
     "extensions": [
       "Keep the column going: one new review after every outing",
       "Review five things of the same kind, like five parks, and make a ranking",
-      "Review the same thing as a friend or sibling and compare your opinions",
-      "Record a video review and talk about how it feels different from writing one",
-      "Read a review from a real newspaper together and spot its opinion, reason and proof"
+      "Score your next trip or holiday out of 100, by category",
+      "Review the same thing as a sibling and compare your scores",
+      "Read a real newspaper review together and find its opinion, reason and proof"
     ]
   },
+  "signs": [
+    "They give a reason without being asked: 'It was good because...'",
+    "They notice details in the moment ('I'm putting this in my review')",
+    "They start asking what things cost, and whether they're worth it"
+  ],
+  "makeItReal": "Hand a finished review to the person it's about: the café owner, the librarian who recommended the book, the park's community board. Most places are thrilled to get one, and watching a real person read it changes how kids write the next one.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -178,56 +240,5 @@
     "src": "guides/assets/my-review-column.jpg",
     "alt": "A girl at a café with a fork raised over a chocolate crêpe",
     "caption": "Fork up, opinion loading. Every meal out is a review waiting to be written."
-  },
-  "lesson": {
-    "text": "Every useful review does three things: says what you think, gives a reason, and proves it with a detail the reader can picture. Teach it once, then use the same three words all week.",
-    "before": "The park was good. I liked it. 5 stars.",
-    "model": [
-      {
-        "part": "Opinion",
-        "line": "Riverside Park is the best park in town for climbing."
-      },
-      {
-        "part": "Reason",
-        "line": "It has the biggest climbing structure around."
-      },
-      {
-        "part": "Proof",
-        "line": "The rope pyramid is twice as tall as the one at school, with a net at the top you can lie in."
-      },
-      {
-        "part": "Fair",
-        "line": "The only bad part: the bathrooms were locked."
-      },
-      {
-        "part": "Rating",
-        "line": "4 out of 5 acorns. Great for climbers, not for little ones."
-      }
-    ],
-    "modelNote": "Same opinion, but now a stranger could decide. When a review stops at the opinion, ask: what's your proof?"
-  },
-  "academics": [
-    {
-      "subject": "Writing",
-      "text": "opinion writing, strong openings, precise words instead of 'good' and 'fun'"
-    },
-    {
-      "subject": "Reading",
-      "text": "telling a useful review from one that's just selling something"
-    },
-    {
-      "subject": "Math",
-      "text": "designing a rating scale, and averaging scores for older kids"
-    },
-    {
-      "subject": "Thinking",
-      "text": "facts versus feelings, and weighing the good against the bad"
-    }
-  ],
-  "signs": [
-    "They give a reason without being asked: 'It was good because...'",
-    "They notice details in the moment ('I'm putting this in my review')",
-    "They can tell you why a one-line online review isn't much help"
-  ],
-  "makeItReal": "Hand a finished review to the person it's about: the café owner, the librarian who recommended the book, the park's community board. Most places are thrilled to get one, and seeing a real person read it changes how kids write the next one."
+  }
 }
