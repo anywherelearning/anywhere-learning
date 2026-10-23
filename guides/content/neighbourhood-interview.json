@@ -214,7 +214,12 @@
   },
   "photo": {
     "src": "guides/assets/neighbourhood-interview.jpg",
-    "alt": "A boy at a shop counter talking with the shopkeeper",
-    "caption": "Every shop counter has a story behind it."
+    "alt": "A boy in a red-checked apron grinning in a bakery, flour sacks stacked behind him",
+    "caption": "Our class trip to the town bakery: questions for the baker, then sourdough.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "When I was teaching, I took my class, my son included, to a bakery in our town to learn about baking and about the baker. The kids asked their questions, then we learned to make sourdough bread, fougasse and cookies.",
+    "quotes": []
   }
 }

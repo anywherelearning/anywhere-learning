@@ -84,7 +84,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="coverbody">
       ${coverTrail(g.steps)}
       <ol class="htrail">${g.steps.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
-      ${g.photo ? `<figure class="snap"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
+      ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
     </div>
   </div>
   <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
@@ -375,6 +375,7 @@ h2{font-size:40px}
 .cover-trail{display:none}
 .snap{order:1;width:5.4in;max-width:none;margin:0 auto;padding:14px 14px 16px;transform:rotate(1.5deg)}
 .snap figcaption{font-size:14px;margin-top:10px}
+.snap.tall{width:3.3in}
 .htrail{order:2;display:flex;justify-content:space-between;list-style:none;position:relative;padding:0 .1in}
 .htrail:before{content:'';position:absolute;left:.5in;right:.5in;top:19px;border-top:3px dotted var(--trail)}
 .htrail .blaze.sm{width:40px;height:40px;border-radius:11px}.htrail .blaze.sm span{font-size:21px}
