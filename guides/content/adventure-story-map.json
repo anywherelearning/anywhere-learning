@@ -43,8 +43,8 @@
       "text": "drawing a place from above, compass directions, and a rough scale"
     },
     {
-      "subject": "Reading",
-      "text": "noticing how authors make a setting feel real"
+      "subject": "Reading aloud",
+      "text": "reading with expression, pacing and voices, if they record it as an audiobook"
     },
     {
       "subject": "Creativity",
@@ -183,7 +183,7 @@
       "levels": {
         "explore": "Mark 2 or 3 moments on the map and share the story with one person.",
         "develop": "Number every big moment, add a legend, and share with 2 people.",
-        "extend": "Add route arrows and notes that help readers switch between map and story, and gather feedback from several readers."
+        "extend": "Add route arrows and a legend, then record the story as an audiobook: read it aloud, scene by scene, with a picture for each."
       }
     }
   ],
@@ -192,10 +192,11 @@
     "text": "They walked a place on purpose, mapped it, planned a story with a real problem, and wrote it so a reader could follow along on the map. Storytelling, descriptive writing and map skills, all in one adventure.",
     "celebrate": "Point out what they did: they took somewhere completely ordinary and made it exciting, using details that were really there. That's how good writers work.",
     "extensions": [
-      "Write a sequel in the same place",
+      "Record it as an audiobook, reading every scene out loud",
       "Make a story map for a place from a trip",
       "Write the same adventure from another character's point of view",
-      "Illustrate the key scenes at their real spots on the map"
+      "Illustrate the key scenes at their real spots on the map",
+      "Write a sequel in the same place"
     ]
   },
   "signs": [
@@ -216,5 +217,9 @@
     "src": "guides/assets/adventure-story-map.jpg",
     "alt": "Two kids crouched on a sunny forest trail, looking at something on the ground",
     "caption": "Every trail has a story in it somewhere."
+  },
+  "fromHome": {
+    "text": "Last year in Florida, my kids each set a story in the places around us: one in a mysterious old house in the Keys, one about baby sea turtles hatching on the beach. Once the stories were written, they recorded them as audiobooks, reading every line themselves with pictures for each scene.",
+    "quotes": []
   }
 }
