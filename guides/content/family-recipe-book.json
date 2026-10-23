@@ -13,7 +13,7 @@
   "need": [
     "Family or friends willing to share a favourite recipe, in person, by phone or on video",
     "A notebook for interview notes, and your kitchen and ingredients",
-    "For the toast test: bread and a toaster, or what you need for hot chocolate"
+    "For the taste detective: one family dish everyone loves, homemade or leftovers"
   ],
   "lesson": {
     "text": "Good recipe writing gives three things at every step: the exact amount, the exact action, and a sign you can see when it's done. Family cooks skip all three because they just know. Your kid's job is to write them down.",
@@ -61,7 +61,7 @@
     "plan": [
       {
         "when": "Tonight",
-        "what": "The toast test, then choose the recipes (Step 1). About 20 minutes."
+        "what": "The taste detective game, then choose the recipes (Step 1). About 20 minutes."
       },
       {
         "when": "This week",
@@ -85,7 +85,7 @@
     ]
   },
   "fromHome": {
-    "text": "My son is 13 and cooks and bakes on his own now. He could feed himself for a few days on real food, not toast.",
+    "text": "Our kids each have a dish that's theirs now: my daughter's chili and my son's smashburgers. We also eat a pasta everyone calls Mamie's pastas, and their grand-maman makes a hazelnut cake, le gâteau aux avelines, that the kids ask for every single birthday.",
     "quotes": []
   },
   "skills": [
@@ -108,33 +108,33 @@
   ],
   "steps": [
     {
-      "title": "Start with the toast test",
-      "why": "A funny first recipe that shows why exact words matter, then the list of family dishes.",
-      "kid": "Your kid writes down how to make toast or a hot chocolate, step by step, without showing you. Then they read it out loud while you follow it exactly, word for word. ('Put the bread in.' In what?) Once you've both stopped laughing, they make a list of dishes that mean something to your family and pick 3 to 5, ideally from different people.",
-      "you": "Follow the toast recipe literally, even when you know what they meant. That's the whole lesson. Then help them think of family dishes and who makes them, and let them choose. Try to include someone they don't talk to often.",
+      "title": "Start as a taste detective",
+      "why": "A guessing game with a family dish, then the list of recipes for the book.",
+      "kid": "Your kid picks a family dish everyone loves and tastes it slowly, like a detective. They write down every ingredient they think is in it, and how they think it's made. They'll check their guesses against the real recipe in the interview. Then they make a list of dishes that mean something to your family and pick 3 to 5, ideally from different people.",
+      "you": "Serve the dish (leftovers work) and play along: write your own guesses and compare who got closer once the real recipe comes out. Then help them think of family dishes and who makes them, and let them choose. Try to include someone they don't talk to often.",
       "starters": [
         "A holiday dish",
         "A grandparent's specialty",
-        "Our birthday meal",
+        "Our birthday cake",
         "Comfort food",
         "A dish from a trip",
-        "Your own go-to dinner"
+        "A kid's own specialty"
       ],
       "ask": [
-        "What did your toast recipe forget to say?",
+        "What do you taste that you didn't expect?",
         "If we could only save 5 recipes from our family, which would they be?"
       ],
       "tip": "Mix everyday food and special occasions. The Tuesday spaghetti belongs in the book as much as the holiday dinner.",
       "levels": {
-        "explore": "Do the toast test, then pick 2 or 3 family recipes and write down who they come from.",
-        "develop": "Rewrite the toast recipe so it works, then pick 3 or 4 recipes from different people.",
-        "extend": "Pick 4 or 5 recipes that together tell your family's food story, everyday meals and special ones."
+        "explore": "Guess 3 ingredients in the mystery dish, then pick 2 or 3 family recipes and who they come from.",
+        "develop": "Guess every ingredient and one step of how it's made, then pick 3 or 4 recipes from different people.",
+        "extend": "Write a full guessed recipe for the mystery dish, then pick 4 or 5 recipes that tell your family's food story."
       }
     },
     {
       "title": "Interview the cooks",
       "why": "Your kid gets each recipe, and the story behind it, straight from the cook.",
-      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask where the recipe came from and what memory goes with it. They write down both.",
+      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask where the recipe came from and what memory goes with it. They write down both. For the taste-detective dish, they compare their guesses with the real list.",
       "you": "Set up the conversations, then let your kid do the asking. Practise a couple of questions together before the first call. When the cook says 'a pinch' or 'until it looks right,' nudge your kid to ask what that means.",
       "ask": [
         "What's the one thing that makes this dish turn out right?",
