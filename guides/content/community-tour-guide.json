@@ -4,49 +4,34 @@
   "title": "Community Tour Guide",
   "tagline": "Public speaking · Research · Storytelling",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid becomes the tour guide for a place they know: your street, a favourite park, the town centre, even your own garden. They dig up facts and stories about each stop, plan a route, write what they'll say, and then lead a real walking tour for family or friends. It's research and public speaking with a real audience walking right behind them, and kids are usually amazed by what they find out about a place they walk past every day.",
+  "goal": "Your kid becomes the tour guide for a place they know: your street, a favourite park, the town centre. They dig up stories about each stop, plan a route, and lead a real walking tour for family or friends. Kids are usually amazed by what they find out about a place they walk past every day.",
   "create": [
     "A route with 3 to 6 stops in a place they know",
     "Notes and a short script with the facts and stories for each stop",
     "A live walking tour, led by them, for family or friends"
   ],
   "need": [
-    "A local place to explore: your street, a park, the town centre, a trail, or your garden",
-    "Paper and pencil, or a notebook for notes and the script",
-    "Optional: the library, local history books or the internet for research",
-    "Comfortable shoes",
-    "A willing audience: family, friends, grandparents or neighbours"
+    "A local place to explore: your street, a park, the town centre, a trail, or even your garden",
+    "A notebook for notes and the script, and comfortable shoes",
+    "An audience: family, friends, grandparents or neighbours"
   ],
   "howTo": {
-    "intro": "You don't need any teaching experience. You're the behind-the-scenes producer, the most enthusiastic guest on tour day, and in charge of safety on the walk: crossings, traffic and where it's OK to stop.",
-    "tips": [
+    "intro": "No teaching experience needed. You're the behind-the-scenes producer, the most enthusiastic guest on tour day, and in charge of safety on the walk.",
+    "plan": [
       {
-        "title": "Let them pick the place",
-        "text": "A place they love makes a better tour than a famous one. Their own street or a favourite park works beautifully."
+        "when": "Tonight",
+        "what": "The house tour, then choose the place and the stops (Step 1). About 20 minutes."
       },
       {
-        "title": "Point to sources, not answers",
-        "text": "Suggest the library, a plaque or a long-time neighbour, then let them decide what's interesting enough to include."
+        "when": "This week",
+        "what": "Walk the route, dig up the stories, write the script (Steps 2 and 3)."
       },
       {
-        "title": "Be a great audience",
-        "text": "On tour day, ask questions, react to the surprising facts and give specific praise: 'I never knew that about our street!'"
+        "when": "Tour day",
+        "what": "One practice walk, then the real tour (Steps 4 and 5)."
       }
     ],
-    "example": {
-      "title": "What a good tour stop sounds like",
-      "before": [
-        "This is the library.",
-        "It's old.",
-        "Okay, next stop."
-      ],
-      "after": [
-        "Stop 2: the library. Look up above the door. See the date carved in the stone?",
-        "Can anyone guess how old that makes this building?",
-        "Here's something most people don't know about it..."
-      ],
-      "why": "Now the guide points at something real, asks a question and saves a surprise. That's what keeps a group walking behind you."
-    },
+    "tips": [],
     "troubleshoot": [
       {
         "q": "Your kid is shy about speaking",
@@ -54,15 +39,7 @@
       },
       {
         "q": "There's no history around here",
-        "a": "Tours can be about nature, food or personal stories too: the climbing tree, the bakery, where they learned to ride a bike."
-      },
-      {
-        "q": "Your kid is younger",
-        "a": "Keep it to 3 stops close together, like a tour of the garden or the house, with one fact at each."
-      },
-      {
-        "q": "The audience gets restless",
-        "a": "Cut the tour shorter and add a question or something to touch or look for at every stop."
+        "a": "Tours can be about nature, food or their own stories: the climbing tree, the bakery, where they learned to ride a bike."
       }
     ]
   },
@@ -86,10 +63,10 @@
   ],
   "steps": [
     {
-      "title": "Choose the place and the stops",
-      "why": "Your kid picks where the tour happens and the spots worth stopping at.",
-      "kid": "Your kid brainstorms 2 or 3 places they could give a tour of, picks the one they know and like best, and walks through it with fresh eyes. They look for spots someone visiting for the first time would find interesting, then choose their stops and write down why they picked each one.",
-      "you": "Help them think of places and walk the area together. Ask what they'd show a friend from another town. Let them choose, even if it isn't the place you'd pick.",
+      "title": "Start with a house tour",
+      "why": "A silly practice tour of your home, then the real place and its stops.",
+      "kid": "Your kid gives you a 3-minute tour of your own home, as if you were a visitor who's never been inside. At each room they point at something, tell you one thing about it, and ask you a question. Then they pick the real place for the tour, walk it with fresh eyes, and choose the stops a first-time visitor would find interesting.",
+      "you": "Play the clueless visitor for the house tour and ask silly questions. Then help them think of places and walk the area together. Ask what they'd show a friend from another town, and let them choose.",
       "starters": [
         "Our street",
         "A favourite park",
@@ -99,14 +76,14 @@
         "The library or market"
       ],
       "ask": [
-        "If a friend visited from another town, where would you take them first?",
-        "What's the most interesting thing here that most people don't know?"
+        "What would a visitor never notice here unless you pointed it out?",
+        "If a friend visited from another town, where would you take them first?"
       ],
-      "tip": "Walking the place on purpose changes how kids see it. They'll notice plaques, old signs and dates they've walked past a hundred times.",
+      "tip": "Walking a place on purpose changes how kids see it. They'll spot plaques, old signs and dates they've walked past a hundred times.",
       "levels": {
-        "explore": "Pick a familiar place and choose 3 or 4 stops you find interesting.",
-        "develop": "Walk the area, take notes on what stands out, and choose 5 or 6 stops.",
-        "extend": "Sketch a rough map as you walk, choose 6 or more stops, and write the questions you want to research about each."
+        "explore": "Give the house tour with one thing to say per room, then choose 3 or 4 stops.",
+        "develop": "Use point, tell, ask in every room, then walk the area and choose 5 or 6 stops.",
+        "extend": "Sketch a rough map of the real place as you walk, choose 6 or more stops, and note what to research at each."
       }
     },
     {
@@ -128,13 +105,13 @@
     {
       "title": "Plan the route and the script",
       "why": "Your kid puts the stops in order and writes what they'll say.",
-      "kid": "Your kid puts the stops in an order that makes sense to walk and draws a simple map. Then they write what they'll say: a welcome (who they are, what the tour is about), key points for each stop, what to say while walking between stops, and a closing that thanks everyone. Bullet points are fine. They don't need every word.",
+      "kid": "Your kid puts the stops in an order that makes sense to walk and draws a simple map. Then they write what they'll say: a welcome, point, tell and ask for each stop, what to say while walking, and a closing that thanks everyone. Bullet points are fine.",
       "you": "Walk the route together and time it. Then read or listen to the script and help with clarity, not content: is anything confusing? Is there a part that drags? Where's the best story? Let them decide what to change.",
       "ask": [
         "Should you start with your best stop, or save it for the end?",
         "How will you grab everyone's attention at the very first stop?"
       ],
-      "tip": "Aim for a tour of 15 to 30 minutes. Shorter and punchier beats long and complete, especially for a first tour.",
+      "tip": "Aim for 15 to 30 minutes. Shorter and punchier beats long and complete, especially for a first tour.",
       "levels": {
         "explore": "Put the stops in order, draw a simple route, and write 2 or 3 sentences per stop with a welcome and goodbye.",
         "develop": "Time the walk, adjust the order, and write a full script with an introduction, notes for each stop, transitions and a closing.",
@@ -176,7 +153,7 @@
   ],
   "conclusion": {
     "headline": "Your kid just researched, planned and led a real walking tour.",
-    "text": "They picked a place, dug up its stories, wrote a script, practised on location and led a real group through it. That's research, storytelling and public speaking, all with an audience walking right behind them.",
+    "text": "They picked a place, dug up its stories, planned a route and led a real group through it. Speaking, local history and map skills, with an audience walking right behind them.",
     "celebrate": "Point out what took courage: they stood in front of people, shared what they'd found and led the whole thing from start to finish. Lots of adults would find that hard.",
     "extensions": [
       "Give a tour of a completely different place: a market, a museum or a new neighbourhood",
@@ -198,5 +175,52 @@
     "src": "guides/assets/community-tour-guide.jpg",
     "alt": "Two kids on scooters riding toward a covered bridge, next to a tall clock tower",
     "caption": "Your town already has the stops. Your kid just has to find the stories."
-  }
+  },
+  "lesson": {
+    "text": "A good tour stop does three things: point at something people can see, tell one thing they didn't know, and ask them a question. Teach it at the first stop and your kid will use it at every one.",
+    "before": "This is the library. It's old. Okay, next stop.",
+    "model": [
+      {
+        "part": "Point",
+        "line": "Look up above the door. See the date carved in the stone?"
+      },
+      {
+        "part": "Tell",
+        "line": "That's the year it was built, when this street was still a dirt road."
+      },
+      {
+        "part": "Ask",
+        "line": "Who can guess what this building was used for before it was a library?"
+      },
+      {
+        "part": "Move on",
+        "line": "Follow me to the bridge. Watch for the plaque on the left."
+      }
+    ],
+    "modelNote": "Same stop, but now people are looking, thinking and following. When a stop is just a name and a fact, ask: what can they see, and what will you ask them?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "talking to a group, using your voice, looking up from your notes"
+    },
+    {
+      "subject": "History",
+      "text": "researching local stories and checking where facts come from"
+    },
+    {
+      "subject": "Geography & math",
+      "text": "drawing a route map, measuring distance, and timing each part"
+    },
+    {
+      "subject": "Life skills",
+      "text": "leading a group, finding your way, and staying safe on streets"
+    }
+  ],
+  "signs": [
+    "They point things out on walks without being asked",
+    "They start asking 'how old is that?' or 'who built this?'",
+    "They talk to the group and look up from their notes"
+  ],
+  "makeItReal": "Offer the tour to someone who's actually new: visiting grandparents, a new neighbour, a friend's family who just moved. A guest who really doesn't know the place makes every fact land."
 }
