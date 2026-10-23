@@ -1,0 +1,220 @@
+{
+  "slug": "trail-guide-creator",
+  "category": "Writing & Communication",
+  "title": "Trail Guide Creator",
+  "tagline": "Descriptive writing · Observation · Writing for a reader",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid designs a walking trail in a real place they know, a park, a trail, your neighbourhood, even the garden, and writes a printed trail guide that someone can pick up and follow completely on their own. No guide walking beside them: the writing has to do all the work. Then someone tests it for real, and your kid finds out whether their words were clear enough.",
+  "need": [
+    "A walkable place: a park, a trail, your neighbourhood or the garden",
+    "Paper, pencils and coloured markers (a clipboard helps outdoors)",
+    "Optional: a phone for photos of each stop"
+  ],
+  "lesson": {
+    "text": "A trail guide does two jobs at every stop: it tells the reader exactly where to go and where to look, and it gives them something worth noticing once they get there. Directions plus description.",
+    "before": "Stop 3: a tree. It's big and nice.",
+    "model": [
+      {
+        "part": "Where",
+        "line": "Stop 3: from the bench, walk 20 steps toward the pond and stop at the tree with the split trunk."
+      },
+      {
+        "part": "Look",
+        "line": "Put your hand on the bark. It peels like paper."
+      },
+      {
+        "part": "Fact",
+        "line": "It's a birch, and people once used this bark to build canoes."
+      },
+      {
+        "part": "Next",
+        "line": "Now follow the path left until you hear the water."
+      }
+    ],
+    "modelNote": "Same tree, but now a stranger can find it, notice it and move on. When a stop is just a name, ask: how will they find it, and what should they notice?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "descriptive language with all the senses, plus clear directions"
+    },
+    {
+      "subject": "Science",
+      "text": "observing and identifying plants, birds and features of the place"
+    },
+    {
+      "subject": "Geography & math",
+      "text": "a numbered trail map, counting steps and estimating distances"
+    },
+    {
+      "subject": "Life skills",
+      "text": "noticing your surroundings and finding your way"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the walking partner and the first reader, and on test day, the stranger who follows only what's written.",
+    "plan": [
+      {
+        "when": "First walk",
+        "what": "The blindfold sound walk, then walk and choose the stops (Steps 1 and 2). 45 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "Plan the map and write the guide (Steps 3 and 4)."
+      },
+      {
+        "when": "Test day",
+        "what": "Someone follows the guide alone, then your kid fixes it and shares it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Their descriptions are all 'big' and 'pretty'",
+        "a": "Ask about the other senses: what does it sound like, smell like, feel like? Real details come from noticing, not from adjectives."
+      },
+      {
+        "q": "No nature nearby",
+        "a": "A city block works: a mural, an old door, a shop with a story, a tree in a sidewalk. Every place has stops."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Descriptive writing",
+      "text": "bringing a place to life on paper"
+    },
+    {
+      "name": "Informational writing",
+      "text": "giving clear directions a reader can act on"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing details others walk right past"
+    },
+    {
+      "name": "Writing for a reader",
+      "text": "writing for someone who has never been there"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Try a sound walk",
+      "why": "A one-minute sensory game, then the place for the trail.",
+      "kid": "At the spot you're exploring, your kid closes their eyes for one minute (you keep watch) and counts every sound they hear. Then they open their eyes and find where each sound came from. Then they choose the place for their trail: somewhere they know and like, with enough to notice for at least 4 or 5 stops.",
+      "you": "Keep them safe during the sound minute and count sounds too. Then help brainstorm places and walk the top choice together. Let them pick somewhere that feels personal.",
+      "starters": [
+        "A park",
+        "A forest trail",
+        "Our street",
+        "The garden",
+        "A beach",
+        "The town centre"
+      ],
+      "ask": [
+        "How many sounds did you hear that you'd never noticed?",
+        "Would a visitor find this place interesting, or only someone who lives here?"
+      ],
+      "tip": "The best trail guides are written by someone who genuinely knows and loves the place.",
+      "levels": {
+        "explore": "Do the sound minute, then pick a place and list 3 things you like about it.",
+        "develop": "Walk the place and note at least 6 possible stops.",
+        "extend": "Walk 2 possible places, compare them, and pick the one with the best potential for a themed trail."
+      }
+    },
+    {
+      "title": "Walk and notice",
+      "why": "Your kid walks the trail slowly and gathers details at every stop.",
+      "kid": "Your kid walks the trail slowly, stopping at every spot that catches their attention. At each stop they write what they see, hear, smell and feel: colours, shapes, textures, sounds, movement. They look things up or ask about anything interesting (what plant is this? what's the story of that building?), and mark each stop on a rough sketch.",
+      "you": "Walk alongside and ask sensory questions: what does the air feel like here? Can you hear anything? Don't tell them what to write. Help them notice, and help find sources if they want to identify something.",
+      "ask": [
+        "What's the most interesting thing about this exact spot?",
+        "If someone couldn't see this place, how would you describe it in words?"
+      ],
+      "tip": "Bring the clipboard. Details written on the spot always beat the ones remembered at home.",
+      "levels": {
+        "explore": "Stop at 3 or 4 spots and write 2 or 3 things you notice at each.",
+        "develop": "Stop at 5 or 6 spots, use all your senses, and find one fact for each.",
+        "extend": "Stop at 6 or more spots, write a full sensory paragraph for each, and check your facts in a second source."
+      }
+    },
+    {
+      "title": "Plan the route and the map",
+      "why": "Your kid chooses the final stops, their order, and draws the map.",
+      "kid": "Your kid decides which stops make the final trail and in what order: start with the most exciting, or build up to it? They draw a trail map with numbered stops and a clear start and end, count steps or estimate distances between stops, and choose a theme if one fits (nature, history, hidden gems).",
+      "you": "Review the plan together. Is the order logical? Are the stops close enough to walk? Is there a clear beginning and end?",
+      "ask": [
+        "Is there a natural starting and ending point?",
+        "Could a theme tie the stops together?"
+      ],
+      "tip": "Counting steps between stops is great real-world math, and it makes the directions much easier to follow.",
+      "levels": {
+        "explore": "Put your stops in order and draw a simple map.",
+        "develop": "Draw a map with numbered stops, step counts and a clear start and end.",
+        "extend": "Draw a detailed map with distances, landmarks and a theme, and plan what the reader does between stops."
+      }
+    },
+    {
+      "title": "Write the trail guide",
+      "why": "Notes, facts and map come together into a guide a stranger can follow.",
+      "kid": "Your kid writes the guide: a short introduction (what this trail is about and what to expect), then each stop like the birch tree example, with where to go, what to look at, a fact, and how to get to the next one. They put it together with the map into something someone can hold.",
+      "you": "Read it as if you've never been there. Can you picture it? Would you find each stop? Point out one or two spots that would trip you up, then let them fix them.",
+      "ask": [
+        "Could a stranger find every stop without asking?",
+        "Which description is your favourite, and why?"
+      ],
+      "tip": "Keep the birch tree example open while they write. Pointing at 'where' and 'next' is easier than explaining again.",
+      "levels": {
+        "explore": "Write 2 to 4 sentences per stop: what you'll see and why it's interesting.",
+        "develop": "Write a paragraph per stop with sensory details, a fact and directions to the next, plus an introduction.",
+        "extend": "Write polished stops with vivid language, researched facts, clear directions, an introduction and a closing."
+      }
+    },
+    {
+      "title": "Test it, fix it and share it",
+      "why": "Someone follows the guide alone, your kid fixes what broke, and it gets published.",
+      "kid": "Your kid gives the guide to someone who hasn't walked the trail and watches them follow it without helping. Do they find every stop? Do they understand the descriptions? Afterward they ask what was clear and what was confusing, fix it, and give copies to family, friends or visitors.",
+      "you": "Be the test walker if no one else can: follow only what's written, don't ask for help, and mark every place you get confused. Give honest, specific feedback, then celebrate the finished guide like the real publication it is.",
+      "ask": [
+        "Did the reader find every stop without asking?",
+        "Where did the directions stop being clear?"
+      ],
+      "tip": "Watching someone stand still, guide in hand, looking for a stop is the best lesson in clear writing there is.",
+      "levels": {
+        "explore": "Give it to a family member, fix anything confusing, and share it with one person.",
+        "develop": "Have someone walk it using only the guide, revise 2 or 3 parts, and share it with 2 people.",
+        "extend": "Test it with 2 different people, revise from both, and make a final polished version to share."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just designed, wrote and published a real trail guide.",
+    "text": "They explored a place with fresh eyes, noticed what others walk past, researched it, and wrote a guide clear enough that a stranger could follow it alone. Descriptive writing, clear directions, science and map skills, in something genuinely useful.",
+    "celebrate": "Point out what they did: they turned a familiar place into an experience someone else can enjoy, using only their words.",
+    "extensions": [
+      "Make a seasonal edition of the same trail",
+      "Add photos or drawings for a visual edition",
+      "Make a themed guide: a nature trail, a history trail or a treasure hunt",
+      "Write a guide for a place you visit on a trip"
+    ]
+  },
+  "signs": [
+    "They notice sounds, smells and textures on ordinary walks",
+    "They give directions with landmarks and distances",
+    "They describe places with specific details instead of 'nice'"
+  ],
+  "makeItReal": "Offer the guide to the place itself: the park office, the library, a campground, the community board. Many are happy to put a kid-made trail guide out for visitors, and seeing strangers use it is unforgettable.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/trail-guide-creator.jpg",
+    "alt": "A family walking a jungle boardwalk past a giant tree",
+    "caption": "Every trail has stops worth writing down."
+  }
+}

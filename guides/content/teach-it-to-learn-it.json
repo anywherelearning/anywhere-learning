@@ -1,0 +1,224 @@
+{
+  "slug": "teach-it-to-learn-it",
+  "category": "Writing & Communication",
+  "title": "Teach It To Learn It",
+  "tagline": "Explaining · Structuring knowledge · Confidence",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes something they already know how to do, a card trick, a soccer move, a recipe, a drawing, and teaches it to someone else in a real, planned lesson. They break it into steps, find the tricky part, teach it, and check that their student can actually do it. You never understand something as well as when you have to teach it, and this puts your kid on the other side of the desk.",
+  "need": [
+    "A skill your kid already knows well, and whatever props it needs",
+    "A student: you, a sibling, a friend or a grandparent",
+    "Paper for planning the lesson"
+  ],
+  "lesson": {
+    "text": "Good teachers don't just explain. They show it, let the student try with help, then step back and check. Four moves: show, explain, try together, check.",
+    "before": "Okay, you just do this, then this, see? Easy. Got it?",
+    "model": [
+      {
+        "part": "Show",
+        "line": "Watch me do the whole card trick once, start to finish."
+      },
+      {
+        "part": "Explain",
+        "line": "Now slowly: first you shuffle, then you peek at the bottom card. That peek is the secret."
+      },
+      {
+        "part": "Try",
+        "line": "Your turn. I'll talk you through the peek."
+      },
+      {
+        "part": "Check",
+        "line": "Now do it on your own, without me saying anything."
+      }
+    ],
+    "modelNote": "Same trick, but now the student can actually do it. When a lesson is all talking, ask: when does your student get to try?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "explaining clearly, choosing the right words, and holding someone's attention"
+    },
+    {
+      "subject": "Thinking",
+      "text": "breaking a whole skill into ordered steps, and spotting the hardest one"
+    },
+    {
+      "subject": "Writing",
+      "text": "a simple lesson plan and a step-by-step card for the student"
+    },
+    {
+      "subject": "Life skills",
+      "text": "patience, reading someone's confusion, and adjusting on the fly"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the student. Really be one: follow their instructions exactly, get stuck where a beginner would, and let them find the gaps.",
+    "plan": [
+      {
+        "when": "First hour",
+        "what": "The terrible lesson, pick the skill, break it down (Steps 1 and 2)."
+      },
+      {
+        "when": "Second hour",
+        "what": "Plan the lesson and make one helper card (Step 3)."
+      },
+      {
+        "when": "After a break",
+        "what": "Teach it, check it, fix it and teach again (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They can't explain a step they do automatically",
+        "a": "Don't rescue them. Ask them to do it very slowly while you watch, and name each move out loud. That struggle is the understanding forming."
+      },
+      {
+        "q": "They get frustrated when you don't get it",
+        "a": "Remind them it's the lesson being tested, not you or them. Then ask: what could you show me differently?"
+      }
+    ]
+  },
+  "fromHome": {
+    "text": "I taught for fifteen years, and the one thing I'm surest of is this: you only really understand something once you've had to teach it. This guide lets your kid find that out for themselves.",
+    "quotes": []
+  },
+  "skills": [
+    {
+      "name": "Explaining",
+      "text": "turning something automatic into clear steps"
+    },
+    {
+      "name": "Structuring",
+      "text": "breaking a skill into an order that builds"
+    },
+    {
+      "name": "Confidence",
+      "text": "leading a lesson and holding attention"
+    },
+    {
+      "name": "Reflection",
+      "text": "understanding how they learned it themselves"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Watch a terrible lesson",
+      "why": "You teach them something badly on purpose, then they pick their own skill.",
+      "kid": "First, your kid watches you teach them something simple in the worst way possible: you mumble, skip steps, go too fast and never let them try. They spot everything that went wrong. Then they choose a skill they really know well, small enough to teach in one lesson and real enough that they're a bit of an expert.",
+      "you": "Ham it up: 'You just fold it, then, you know, do the thing. Done!' Then ask what would have made it a good lesson. Help them pick a skill, and steer away from anything too big for one sitting.",
+      "starters": [
+        "A card or coin trick",
+        "A soccer move",
+        "Drawing an animal",
+        "A friendship bracelet",
+        "A simple recipe",
+        "A few words in another language"
+      ],
+      "ask": [
+        "What made my lesson so bad?",
+        "What do you know how to do that you could teach me?"
+      ],
+      "tip": "The best skill to teach is one they already love. Their enthusiasm is half of a good lesson.",
+      "levels": {
+        "explore": "Say 2 things that were wrong with the bad lesson, then pick a simple, familiar skill.",
+        "develop": "List what a good lesson needs, then pick a skill with a few real steps.",
+        "extend": "Pick a skill where the order really matters, and write why you chose it."
+      }
+    },
+    {
+      "title": "Break it down and find the tricky bit",
+      "why": "Your kid turns the skill into clear steps and spots where beginners get stuck.",
+      "kid": "Your kid does the skill very slowly and writes each move as a step, in order: 'first you cross the laces, then you make a loop.' They'll skip the little automatic moves at first, and finding those is the whole discovery. Then they circle the step where beginners always get stuck and plan how to explain it extra clearly.",
+      "you": "Keep asking 'what do you do first? and then?' Play the confused beginner to help them find the tricky part: 'Wait, how did your fingers do that?'",
+      "ask": [
+        "What do you do that you almost didn't notice?",
+        "Which step will be hardest for me?"
+      ],
+      "tip": "The step they forgot to write down is exactly the one a beginner needs most.",
+      "levels": {
+        "explore": "List the 3 biggest steps and guess the hardest one.",
+        "develop": "Write every real step in order and plan how to explain the tricky one.",
+        "extend": "Include the small steps beginners always miss, and prepare a special tip for the tricky one."
+      }
+    },
+    {
+      "title": "Plan the lesson",
+      "why": "Your kid builds a real lesson using the four moves, and makes one helper.",
+      "kid": "Your kid plans the lesson like the card trick example: a hook to make the student want to learn (a quick demo, or why it's cool), then show, explain the steps, try together and check. They make one thing to help: a step-by-step card, a drawing, or a slow demo version.",
+      "you": "Treat their plan like a real teacher's plan. Ask the two questions every teacher asks: how will you start so I want to learn? When do I get to try it myself?",
+      "ask": [
+        "How will you start so I actually want to learn this?",
+        "Would a picture or a card make a step clearer?"
+      ],
+      "tip": "The best lessons aren't lectures, they're do-alongs. Make sure the plan has the student's hands busy, not just their ears.",
+      "levels": {
+        "explore": "Plan a start, the steps, and a try.",
+        "develop": "Add a hook, a try-together moment, and one helper card.",
+        "extend": "Plan the full lesson with all four moves, a tip for the tricky bit, and a small kit of materials."
+      }
+    },
+    {
+      "title": "Teach it for real",
+      "why": "The lesson, with a real student, and the real test at the end.",
+      "kid": "Your kid teaches the lesson following their plan: hook, show, explain, try together. When the student gets stuck, they think on their feet: rephrase, show it again, find another way to say it. At the end, they check: can the student now do the skill on their own, without help?",
+      "you": "Be a genuine, willing learner. Follow fuzzy instructions exactly and get it wrong where a beginner would. At the check, give an honest attempt. Success or fail, it's a clue about the teaching, not a grade on anyone.",
+      "ask": [
+        "How else could you explain that step?",
+        "Can your student do it on their own now?"
+      ],
+      "tip": "Watching your kid rephrase on the fly when you're stuck is the best part. That's teaching at its realest.",
+      "levels": {
+        "explore": "Teach the skill start to finish and watch the student try it alone.",
+        "develop": "Guide the student through a try, then check whether they learned the whole skill.",
+        "extend": "Adjust on the fly when the student struggles, and pinpoint exactly which step did or didn't land."
+      }
+    },
+    {
+      "title": "Teach it better",
+      "why": "Your kid fixes what didn't land, teaches again, and looks back.",
+      "kid": "Looking at where the student struggled, your kid revises the lesson: a clearer explanation for the tricky bit, a missing step, a better order. Then they teach it again, to the same person or someone new. Finally, they think about what teaching taught them about the skill itself.",
+      "you": "Point to the moment you got confused, kindly and specifically. Praise the teaching, not just the skill: 'That second explanation really helped me get it' means more than 'good job.'",
+      "ask": [
+        "What's the one change that made the lesson clearer?",
+        "Do you understand the skill better now than before you taught it?"
+      ],
+      "tip": "Teach, see what didn't land, fix it, teach again: that's the loop every real teacher runs.",
+      "levels": {
+        "explore": "Name one thing to improve and try the lesson again.",
+        "develop": "Fix the weak part of the lesson and teach it again.",
+        "extend": "Revise the whole lesson, teach it to a new student, and write what teaching taught you."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "The student became the teacher.",
+    "text": "Your kid taught a real person a real skill, and somewhere in breaking it down and explaining it, they understood it better than they ever had just doing it. They also led a lesson, held someone's attention, and fixed what didn't work.",
+    "celebrate": "Point out what they did: they didn't just know the skill, they made someone else able to do it. That's a different and harder thing.",
+    "extensions": [
+      "Teach the same skill to a younger kid and see how the lesson has to change",
+      "Run a family skill swap where everyone teaches everyone one thing",
+      "Teach something harder next, with more steps",
+      "Film the lesson as a real how-to video"
+    ]
+  },
+  "signs": [
+    "They explain things in steps instead of 'just do it like this'",
+    "They notice when someone is confused and try another way",
+    "They ask to teach things to younger kids or visitors"
+  ],
+  "makeItReal": "Teach someone who genuinely wants to learn the skill: a grandparent learning a card trick over video, a younger cousin learning to ride, a friend who's always wanted to braid. A real student who really learns it is the best feeling a teacher can have.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/teach-it-to-learn-it.jpg",
+    "alt": "A boy showing his sister how to work leather with a mallet",
+    "caption": "One sibling teaching the other is half the lesson."
+  }
+}

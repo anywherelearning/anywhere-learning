@@ -1,0 +1,220 @@
+{
+  "slug": "two-minute-story",
+  "category": "Writing & Communication",
+  "title": "The Two Minute Story",
+  "tagline": "Storytelling · Clarity · Speaking with confidence",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes a real moment from their own life and learns to tell it as a clear, gripping story in about two minutes. They find the story, give it a shape, cut the boring parts and tell it for real to the family. Telling a good short story is how people connect, persuade and get remembered, and it's a skill that can be practised starting tonight.",
+  "need": [
+    "No supplies: the story is already inside them",
+    "A timer (a phone works)",
+    "Optional: a phone to record the final telling"
+  ],
+  "lesson": {
+    "text": "Every good short story has three parts. The beginning sets the scene, the turn is the moment something changed, and the point is why it matters. Most weak stories are missing the turn.",
+    "before": "We went to the fair. We ate stuff. We went on rides. Then we went home.",
+    "model": [
+      {
+        "part": "Hook",
+        "line": "I have never been so scared at a fair in my life."
+      },
+      {
+        "part": "Beginning",
+        "line": "We were by the Ferris wheel, and I stopped to look at the giant teddy bears."
+      },
+      {
+        "part": "Turn",
+        "line": "When I turned around, my family was gone."
+      },
+      {
+        "part": "Point",
+        "line": "It was only ten minutes, but now I always pick a meeting spot first."
+      }
+    ],
+    "modelNote": "Same day at the fair, but now everyone leans in. When a story is 'and then, and then,' ask: what's the moment everything changed?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "telling a story out loud with pace, pauses and eye contact"
+    },
+    {
+      "subject": "Writing",
+      "text": "story structure: a hook, a beginning, a turn and a point"
+    },
+    {
+      "subject": "Thinking",
+      "text": "deciding what matters and cutting what doesn't"
+    },
+    {
+      "subject": "Life skills",
+      "text": "holding a room, and telling about your day so people want to listen"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the audience and the coach, not the writer. The story is theirs: help with the shape, not the words.",
+    "plan": [
+      {
+        "when": "10 minutes",
+        "what": "Two truths and a lie, then pick the story (Step 1)."
+      },
+      {
+        "when": "20 minutes",
+        "what": "Find the turn, cut it to two minutes, practise (Steps 2 to 4)."
+      },
+      {
+        "when": "5 minutes",
+        "what": "Tell it for real, at the table or on a call (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They pick a huge story ('my whole summer')",
+        "a": "Steer smaller. One moment, ten minutes long, almost always makes the better story."
+      },
+      {
+        "q": "They freeze or rush when telling it",
+        "a": "Tell it to just you first, then one more person. Three practice runs and it loosens up."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Storytelling",
+      "text": "shaping real life into something worth listening to"
+    },
+    {
+      "name": "Clarity",
+      "text": "saying what matters and cutting what doesn't"
+    },
+    {
+      "name": "Public speaking",
+      "text": "talking to an audience with confidence"
+    },
+    {
+      "name": "Connection",
+      "text": "learning that a well-told story is how people reach each other"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Play two truths and a lie",
+      "why": "A quick storytelling game, then the one true story worth telling.",
+      "kid": "Everyone tells three very short things that happened to them, two true and one made up, and the others guess the lie. Your kid notices which ones sounded most real, and why. Then they pick one true moment from their own life to turn into a two-minute story: something funny, scary, surprising, or that changed their mind.",
+      "you": "Play the game too. Then help them brainstorm real moments and let them choose. Steer them away from 'my whole trip' toward one small, specific moment.",
+      "starters": [
+        "When I got lost",
+        "The day something broke",
+        "My most embarrassing moment",
+        "The time I was really scared",
+        "When something surprised me",
+        "A moment on a trip"
+      ],
+      "ask": [
+        "What made the true ones sound true?",
+        "What's a moment you still remember clearly?"
+      ],
+      "tip": "The best stories are true and small. 'The time I got lost at the fair for ten minutes' beats 'my summer holidays' every time.",
+      "levels": {
+        "explore": "Play a round, then pick any true moment from your life.",
+        "develop": "Pick a moment with a clear turning point.",
+        "extend": "Pick a moment that changed how you felt or what you think."
+      }
+    },
+    {
+      "title": "Find the shape",
+      "why": "Your kid sorts the story into a beginning, a turn and a point.",
+      "kid": "Your kid tells you the story once, then finds its three parts like the fair example: where they were and what was happening (the beginning), the moment something changed (the turn), and why it matters or how it ended (the point).",
+      "you": "Listen to the whole thing once without interrupting. Then ask the shaping questions, but don't supply the answers. If they can't find a turn, the story might not be the right one, and that's useful to know.",
+      "ask": [
+        "What's the moment everything changed?",
+        "Why does this story matter, or how did it end?"
+      ],
+      "tip": "A story with no turn is just a list of events. Help them find the moment everything pivots on.",
+      "levels": {
+        "explore": "Name the beginning and the end.",
+        "develop": "Find all three: beginning, turn and point.",
+        "extend": "Make the turn land as a real surprise for the listener."
+      }
+    },
+    {
+      "title": "Cut it to two minutes",
+      "why": "Your kid tells it again, timed, and cuts what doesn't matter.",
+      "kid": "Your kid tells the story with a timer running. Too long? They cut: side details, extra characters, and 'and then, and then, and then' usually go. The beginning, the turn and the point always stay.",
+      "you": "Time them and help them spot what could go. Ask which details the story absolutely needs. Cutting feels like losing the story, so remind them it's the opposite.",
+      "ask": [
+        "What part could you cut and still keep the story?",
+        "Which detail does the story absolutely need?"
+      ],
+      "tip": "Every boring part removed makes the good parts shine brighter.",
+      "levels": {
+        "explore": "Tell it in under three minutes.",
+        "develop": "Get it to about two minutes with the boring parts cut.",
+        "extend": "Trim it so every single sentence earns its place."
+      }
+    },
+    {
+      "title": "Practise the telling",
+      "why": "Your kid works on how they tell it, not just what they say.",
+      "kid": "Your kid practises the delivery: a strong first line that grabs people ('I have never been so embarrassed in my life'), a pause right before the turn, slowing down at the important part, and looking up instead of at the floor. They tell it, not recite it.",
+      "you": "Coach pace, pauses and the opening line, one thing at a time. The first run is always stiff. By the third, it loosens up and starts to sound like them.",
+      "ask": [
+        "What's a great first line to grab people?",
+        "Where could a pause make it better?"
+      ],
+      "tip": "Don't let them memorise it word for word. A story that's told, not recited, is the one that feels alive.",
+      "levels": {
+        "explore": "Practise it once out loud.",
+        "develop": "Add a strong opening line and one well-placed pause.",
+        "extend": "Practise until the delivery feels natural and confident."
+      }
+    },
+    {
+      "title": "Tell it for real",
+      "why": "The real telling, to a real audience.",
+      "kid": "Your kid tells their two-minute story to the family at dinner, or to a grandparent on a call. Afterward, they talk about what landed and what they'd do differently next time.",
+      "you": "Give full attention: laugh, react, lean in. A kid who feels heard keeps telling stories for life. Then ask which part got the best reaction.",
+      "ask": [
+        "How did it feel to have people listening?",
+        "What part got the best reaction?"
+      ],
+      "tip": "Record it if they'd like to watch it back. Kids are usually surprised by how good it sounds.",
+      "levels": {
+        "explore": "Tell it to one person.",
+        "develop": "Tell it to the family, start to finish.",
+        "extend": "Tell it, record it, and watch it back to find one thing to improve."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just turned a real moment into a story worth hearing.",
+    "text": "They found it, shaped it, cut it and told it to a real audience. Structure, clarity and speaking, practised in a way they'll use every time they tell someone about their day.",
+    "celebrate": "Point out what they did: they held the room for two whole minutes, and everyone wanted to know what happened next.",
+    "extensions": [
+      "Make it a habit: one two-minute story at dinner each week",
+      "Swap stories on long car rides",
+      "Tell the same story to a different audience and adjust it",
+      "Write the story down after telling it"
+    ]
+  },
+  "signs": [
+    "They start their stories with a hook instead of 'so, um'",
+    "They get to the point faster when telling about their day",
+    "They pause for effect, and enjoy the reaction"
+  ],
+  "makeItReal": "Make it a family ritual: every Sunday dinner, one person tells a two-minute story, timer on the table. Kids who get a regular, guaranteed audience become confident speakers.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/two-minute-story.jpg",
+    "alt": "Two kids at the kitchen table, one mid-story with a big grin",
+    "caption": "Every kid has a story in them. The table is the stage."
+  }
+}

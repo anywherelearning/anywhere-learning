@@ -1,0 +1,220 @@
+{
+  "slug": "neighbourhood-interview",
+  "category": "Writing & Communication",
+  "title": "Neighbourhood Interview Project",
+  "tagline": "Interviewing · Listening · Writing a profile",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid interviews someone in your community, a neighbour, a shopkeeper, the baker, the librarian, about their work and their life, then writes a short profile of them that someone else would enjoy reading. It turns a stranger down the street into a person with a story, and it's the bravest kind of writing practice: you have to go and ask first.",
+  "need": [
+    "Someone willing to be interviewed: a neighbour, a shopkeeper, a coach, a family friend",
+    "A notebook, and a phone to record if the person agrees",
+    "A quiet moment and place for the interview"
+  ],
+  "lesson": {
+    "text": "A good profile doesn't list facts about a person. It shows them: a moment, their own words, and what makes them who they are.",
+    "before": "Mr. Patel owns the bakery. He makes bread. He is nice.",
+    "model": [
+      {
+        "part": "Scene",
+        "line": "At 4 a.m., while the street is still dark, Mr. Patel's ovens are already hot."
+      },
+      {
+        "part": "Quote",
+        "line": "'The bread doesn't wait for anybody,' he says, laughing."
+      },
+      {
+        "part": "Detail",
+        "line": "He makes 200 loaves before the shop opens, and he still tastes one from every batch."
+      },
+      {
+        "part": "Why",
+        "line": "He learned from his grandmother, and he says every loaf is a little bit hers."
+      }
+    ],
+    "modelNote": "Same baker, but now you'd recognise him if you walked in. When a profile sounds like a list, ask: what did they say, and what did you see?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking & listening",
+      "text": "introducing yourself, asking open questions, and following up"
+    },
+    {
+      "subject": "Writing",
+      "text": "a profile with a scene, real quotes, and a clear point"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how a community works, and the jobs that keep it running"
+    },
+    {
+      "subject": "Life skills",
+      "text": "talking to adults you don't know, politely and confidently"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the behind-the-scenes coach: you help find the person and make the first contact safe, then let your kid run the conversation.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The reporter warm-up, then choose the person and write questions (Steps 1 and 2). About 30 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "The interview itself (Step 3). 15 to 30 minutes."
+      },
+      {
+        "when": "After",
+        "what": "Write the profile and share it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Your kid is nervous to ask a stranger",
+        "a": "Start with someone you both know a little, like a neighbour or the librarian. Make the first ask together."
+      },
+      {
+        "q": "The answers are short",
+        "a": "Ask 'Can you tell me about a time when...?' or 'What's the hardest part of your job?' Stories hide behind those."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Open questions",
+      "text": "asking questions that get stories, not yes or no"
+    },
+    {
+      "name": "Active listening",
+      "text": "hearing the answer and asking the next question because of it"
+    },
+    {
+      "name": "Profile writing",
+      "text": "turning a conversation into a short, readable portrait"
+    },
+    {
+      "name": "Confidence",
+      "text": "talking to someone new in a respectful, curious way"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Be a reporter for 2 minutes",
+      "why": "A quick practice interview with you, then the real person to interview.",
+      "kid": "Your kid interviews you for 2 minutes like a TV reporter: microphone (a spoon works), serious voice, real questions about your job or your childhood. Then they make a list of 3 to 5 people in your community they're curious about, and pick one: someone whose work or life they'd genuinely like to know more about.",
+      "you": "Answer the practice interview for real, with a story or two. Then help brainstorm people and let your kid choose. A grandparent is a safe start, but encourage someone outside the family if they're ready: the baker, a neighbour with an interesting job, a coach.",
+      "starters": [
+        "The baker or grocer",
+        "A neighbour",
+        "The librarian",
+        "A coach",
+        "A farmer at the market",
+        "A family friend with a cool job"
+      ],
+      "ask": [
+        "What did you find out about me that surprised you?",
+        "Who do you walk past all the time but know nothing about?"
+      ],
+      "tip": "Pick someone your kid is curious about, not just the easiest option. Curiosity is what makes the follow-up questions come.",
+      "levels": {
+        "explore": "Interview a parent for 2 minutes, then choose a family member to interview.",
+        "develop": "Choose someone you know but haven't talked to much, and write what you want to find out.",
+        "extend": "Choose someone in your community you don't know well, and write a short paragraph on why."
+      }
+    },
+    {
+      "title": "Write the questions and ask",
+      "why": "Your kid prepares open questions, then makes the request.",
+      "kid": "Your kid writes at least 5 open questions, the kind that start with what, how, why or 'tell me about'. They order them from easy warm-ups to deeper ones, and add 1 or 2 follow-ups. Then, with you, they ask the person if they'd do a short interview, explaining the project in a sentence.",
+      "you": "Help turn closed questions into open ones: 'Do you like your job?' becomes 'What's your favourite part of your job, and why?' Don't rewrite them, guide. Then go with your kid to make the ask, and set a time and place you're comfortable with.",
+      "ask": [
+        "Which question do you think will get the longest answer?",
+        "What will you say when you ask them?"
+      ],
+      "tip": "Most people are flattered to be asked. Kids are often amazed by how quickly a busy adult says yes.",
+      "levels": {
+        "explore": "Write 5 open questions that start with what, how or why.",
+        "develop": "Write 7 to 10 questions from warm-up to deeper, with 2 follow-ups.",
+        "extend": "Group 10 or more questions by theme (their work, their past, their opinions) with follow-ups for each."
+      }
+    },
+    {
+      "title": "Do the interview",
+      "why": "The real conversation: ask, listen, follow the good bits.",
+      "kid": "Your kid greets the person, explains the project briefly, and asks their questions one at a time, listening to each answer fully before moving on. They take notes on key points (not everything), ask at least one follow-up based on something the person said, write down any great exact words, and thank them at the end.",
+      "you": "Stay nearby but in the background. Don't jump in unless your kid asks. Let pauses happen: the best answers often come right after a silence. Afterward, ask how it felt and what surprised them.",
+      "ask": [
+        "They just said something interesting. What could you ask next?",
+        "What was the most surprising thing they told you?"
+      ],
+      "tip": "If the person agrees, record it. Then your kid can listen to the answers instead of writing the whole time.",
+      "levels": {
+        "explore": "Ask your questions, listen, and write down one thing from each answer.",
+        "develop": "Ask all your questions, take notes, and ask 2 follow-ups that weren't on your list.",
+        "extend": "Let the conversation flow, ask follow-ups naturally, and note their exact words when they say something memorable."
+      }
+    },
+    {
+      "title": "Write the profile",
+      "why": "Your kid turns the notes into a short portrait of the person.",
+      "kid": "While it's fresh, your kid rereads their notes and stars the most interesting parts. Then they write the profile like the bakery example: open with a scene or a moment, use at least one real quote, add details that show who the person is, and end with what stayed with them.",
+      "you": "Read the draft and give feedback on clarity, not grammar: would someone who wasn't there understand this person? Is there a part that needs more? Point at the example if they've written a list of facts.",
+      "ask": [
+        "How would you describe this person to someone who's never met them?",
+        "Which quote best captures who they are?"
+      ],
+      "tip": "The best profiles start in the middle of something: the ovens at 4 a.m., the first customer of the day. Help them find that moment in their notes.",
+      "levels": {
+        "explore": "Write 5 to 10 sentences about who they are and what you learned.",
+        "develop": "Write a half-page profile with a scene, a quote and a short reflection.",
+        "extend": "Write a full profile that reads like a mini magazine article, with an engaging opening, quotes and a strong ending."
+      }
+    },
+    {
+      "title": "Share it and look back",
+      "why": "The profile goes back to the person, and your kid thinks about what they learned.",
+      "kid": "Your kid shares the profile: reads it to the family, and gives a copy to the person they interviewed. They ask whether they captured them right. Then they think about the whole project: what was hard, what surprised them, and who they'd interview next.",
+      "you": "Be an attentive audience and give specific praise: 'I loved how you started with the ovens.' Celebrate the courage it took to ask a stranger, not just the writing.",
+      "ask": [
+        "If you gave this to the person, what do you think they'd say?",
+        "What's easier now than before the interview?"
+      ],
+      "tip": "Delivering the finished profile in person is the best part. Watch the person's face when they read about themselves.",
+      "levels": {
+        "explore": "Read your profile to someone and tell them your favourite part.",
+        "develop": "Present it to the family, give a copy to the person, and write what you'd do differently next time.",
+        "extend": "Ask the person if you captured them accurately, and reflect on how you've grown as an interviewer."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just planned, conducted and published a real interview.",
+    "text": "They chose someone interesting, asked good questions, listened carefully and turned it into a profile someone else would enjoy. Speaking, listening and writing, with a real person on the other side of the table.",
+    "celebrate": "Point out what they did: they walked up to someone, asked for their time, and made them feel heard. That's a skill plenty of adults still find hard.",
+    "extensions": [
+      "Interview someone from a different background or generation",
+      "Record the interview and turn it into a mini podcast",
+      "Start a 'People of our neighbourhood' collection",
+      "Interview someone in another language, with a parent's help"
+    ]
+  },
+  "signs": [
+    "They ask follow-up questions in everyday conversations",
+    "They're more comfortable talking to adults they don't know",
+    "They notice the people behind everyday jobs around them"
+  ],
+  "makeItReal": "Ask the person if their profile can go somewhere public: a print-out in their shop window, the community board, or the local newsletter. Seeing their words on display makes both of them proud.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/neighbourhood-interview.jpg",
+    "alt": "A boy at a shop counter talking with the shopkeeper",
+    "caption": "Every shop counter has a story behind it."
+  }
+}
