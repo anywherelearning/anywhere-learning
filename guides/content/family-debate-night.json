@@ -1,0 +1,224 @@
+{
+  "slug": "family-debate-night",
+  "category": "Writing & Communication",
+  "title": "Family Debate Night",
+  "tagline": "Persuasion · Critical thinking · Respectful disagreement",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks a topic with two real sides, researches both, builds a case and argues it in a real family debate, with a timer, a judge and a verdict. They learn to back up what they say and to answer the other side's best point, without it turning into a fight. It's the kind of arguing you actually want to hear at the dinner table.",
+  "need": [
+    "A topic with two sides (ideas in Step 1), and a family member to debate or judge",
+    "Paper and pencil for notes",
+    "A timer (a phone works)"
+  ],
+  "lesson": {
+    "text": "Winning a debate isn't about being loudest. A good debater makes a claim, backs it with evidence, and answers the other side's best point before they can make it.",
+    "before": "Dogs are better. Cats are boring. I'm right.",
+    "model": [
+      {
+        "part": "Claim",
+        "line": "Dogs make better family pets than cats."
+      },
+      {
+        "part": "Because",
+        "line": "A dog gets the whole family outside every day."
+      },
+      {
+        "part": "Example",
+        "line": "Dogs need at least one walk a day, so someone is always moving, even in the rain."
+      },
+      {
+        "part": "They'll say",
+        "line": "'Cats are less work.'"
+      },
+      {
+        "part": "I answer",
+        "line": "True, but the walks are the best part, not the work."
+      }
+    ],
+    "modelNote": "Same opinion, but now it's an argument someone has to take seriously. When a point is just 'I'm right,' ask: what's your evidence, and what will they say back?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "presenting a case clearly, on time, and thinking on your feet"
+    },
+    {
+      "subject": "Writing",
+      "text": "persuasive structure: an opening, points in order, a closing"
+    },
+    {
+      "subject": "Thinking",
+      "text": "telling evidence from opinion, and seeing both sides of a question"
+    },
+    {
+      "subject": "Life skills",
+      "text": "disagreeing without fighting, listening, and changing your mind for a good reason"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the coach, the timekeeper and the fair referee. If there's no sibling to debate, you take the other side and argue it for real.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The lightning round, then choose the topic (Step 1). About 20 minutes."
+      },
+      {
+        "when": "The next few days",
+        "what": "Research both sides and build the case (Steps 2 and 3)."
+      },
+      {
+        "when": "Debate night",
+        "what": "After dinner: the debate and the verdict (Steps 4 and 5). About 30 minutes."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It turns into an argument",
+        "a": "Stop the clock. Remind everyone of the rules: no interrupting, attack the idea, never the person. Then restart."
+      },
+      {
+        "q": "Your kid only wants their own side",
+        "a": "Flip a coin for sides. Arguing what you don't believe is the fastest way to understand the other person."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Persuasion",
+      "text": "building a case with reasons and evidence"
+    },
+    {
+      "name": "Critical thinking",
+      "text": "looking at both sides before deciding"
+    },
+    {
+      "name": "Respectful disagreement",
+      "text": "challenging ideas without attacking people"
+    },
+    {
+      "name": "Listening",
+      "text": "hearing the other side and answering it"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Start with a lightning round",
+      "why": "Silly one-minute debates to warm up, then a real topic.",
+      "kid": "Flip a coin to pick sides, then debate a silly question for one minute each: is a hot dog a sandwich? Should pizza be eaten with a fork? Do a few rounds. Then your kid picks the topic for the real debate. It needs two sides people genuinely disagree on, and they decide which side they'll argue.",
+      "you": "Run the timer and play along, arguing your side with a straight face. Then help brainstorm topics and let them choose. Fun topics are great for a first debate. Serious ones can wait until they're comfortable with the format.",
+      "starters": [
+        "Should kids have a bedtime?",
+        "Dogs or cats?",
+        "Summer or winter?",
+        "Should kids get paid for chores?",
+        "Books or movies?",
+        "Should we have a screen-free day?"
+      ],
+      "ask": [
+        "Can you think of a good reason for the other side?",
+        "Do people really disagree about this, or is the answer obvious?"
+      ],
+      "tip": "If both sides of a topic aren't arguable, it'll be a short debate. Check that you can think of at least one good reason for each side.",
+      "levels": {
+        "explore": "Do a few lightning rounds, then pick a topic and say which side you're on and why.",
+        "develop": "Pick a topic and write one reason for each side, to check both are arguable.",
+        "extend": "Write a short paragraph on why your topic makes a good debate: what makes both sides strong?"
+      }
+    },
+    {
+      "title": "Research both sides",
+      "why": "Your kid finds the best arguments for their side, and for the other one.",
+      "kid": "Even though they've picked a side, your kid writes down reasons and evidence for both: at least 3 for each. Evidence means facts, examples or something they've seen, not just 'because.' Then they star the strongest point on each side.",
+      "you": "Help them find sources if needed, but don't do the research for them. Keep asking about the other side: what's the best thing someone who disagrees would say?",
+      "ask": [
+        "What's the strongest argument against your side?",
+        "Can you find a real example or fact to back that up?"
+      ],
+      "tip": "The other side's best point is the most important thing on the page. If your kid can answer it, they're ready.",
+      "levels": {
+        "explore": "Write 2 or 3 reasons for your side and 1 or 2 for the other side.",
+        "develop": "Write 3 or more arguments per side, each with an example or a fact.",
+        "extend": "Make a full research page for both sides, and mark which arguments will be hardest to answer."
+      }
+    },
+    {
+      "title": "Build the case and practise",
+      "why": "Your kid turns the notes into a short speech and says it out loud.",
+      "kid": "Your kid writes an opening (1 or 2 sentences that say their position), their main points in order with evidence, an answer to the other side's best point, and a closing. Then they practise out loud, standing up, looking up from their notes, in 2 or 3 minutes.",
+      "you": "Be the practice audience. Throw one counter-argument at them and let them answer. Then give one specific note: slower, louder, or look up more. Start with something they did well.",
+      "ask": [
+        "If you only had 30 seconds, what's the one thing you'd say?",
+        "What will you say if they make a really good point?"
+      ],
+      "tip": "Notes on small cards, one point per card, are easier to glance at than a full page.",
+      "levels": {
+        "explore": "Write your opening and your 2 or 3 reasons, then say them out loud once.",
+        "develop": "Write a full outline with an answer to one counter-argument, and practise twice with a timer.",
+        "extend": "Plan answers to the other side's top 2 or 3 points, and practise without reading your notes."
+      }
+    },
+    {
+      "title": "Hold the debate",
+      "why": "Debate night: a real format, a timer, and everyone listening.",
+      "kid": "Flip a coin for who goes first. Each side gives a 1-minute opening, 2 minutes for their main points, 1 minute to answer the other side, and a 1-minute closing. Your kid listens without interrupting and answers the other side's actual points, not just repeats their own.",
+      "you": "Be the referee (or the opponent). Keep time, enforce the rules (no interrupting, respect the person) and make sure both sides get the same time. Keep it a debate, not an argument.",
+      "ask": [
+        "They just made a point you didn't expect. How will you answer?",
+        "Did they use evidence, or just opinions?"
+      ],
+      "tip": "Write the format on a sheet of paper and put it in the middle of the table. Structure is what keeps it fun.",
+      "levels": {
+        "explore": "Share your argument, listen to one person's answer, and say one thing back.",
+        "develop": "Hold a timed debate with openings, main points and one round of answers.",
+        "extend": "Run the full timed format and change your argument on the fly to answer what they said."
+      }
+    },
+    {
+      "title": "Judge it and look back",
+      "why": "A fair verdict, and a conversation about what everyone learned.",
+      "kid": "After the debate, your kid judges it fairly, or a family member does: who had the stronger arguments? The better evidence? Who answered the other side best? They name the best point made by each side. Then they talk about what was hard, and whether the debate changed their mind at all.",
+      "you": "If you judge, explain your reasoning out loud. Praise the thinking, not just the winner: 'That was strong because you backed it up with a real example.' Then ask what was harder, building their case or answering the other side.",
+      "ask": [
+        "If you hadn't picked a side, would one side have convinced you?",
+        "Can you disagree with someone and still respect them? How?"
+      ],
+      "tip": "End by picking the next topic. Switching sides on the same topic is a great second debate.",
+      "levels": {
+        "explore": "Say who was more convincing and give one reason why.",
+        "develop": "Write a short judge's note: who was stronger, the best point on each side, one tip for each.",
+        "extend": "Write a full verdict on arguments, evidence, delivery and answers, then reflect on how the debate changed your thinking."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just researched, built and argued a real debate.",
+    "text": "They looked at both sides, backed up their claims, answered the other side's best point, and kept it respectful the whole time. Persuasion, critical thinking and listening, in a format they'll want to do again.",
+    "celebrate": "Point out what they did: they didn't just argue. They prepared, listened, and answered fairly. Lots of adults never learn to disagree that well.",
+    "extensions": [
+      "Debate the same topic again, switching sides",
+      "Run a family tournament with several topics",
+      "Watch a short real debate and judge it the same way",
+      "Write a persuasive letter on the topic after the debate"
+    ]
+  },
+  "signs": [
+    "They back up what they want with a reason, not just 'please'",
+    "They can say the other side's point before arguing against it",
+    "They ask 'how do you know?' when someone states something as fact"
+  ],
+  "makeItReal": "Debate a real family decision: where to go this weekend, what's for dinner on Friday, a house rule. Agree beforehand that the winning side decides. Real stakes make kids research harder than any topic list.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/family-debate-night.jpg",
+    "alt": "A family laughing around the kitchen table",
+    "caption": "The kitchen table is where the best arguments happen."
+  }
+}

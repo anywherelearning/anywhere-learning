@@ -1,0 +1,224 @@
+{
+  "slug": "market-stall-pitch",
+  "category": "Writing & Communication",
+  "title": "Market Stall Pitch",
+  "tagline": "Persuasive speaking · Confidence · Entrepreneurship",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks something to sell, figures out why someone would want it, writes a short pitch and sells it to real people at a stall. Family is fine for a first try; a real yard or market stall is even better. They learn to talk to strangers, handle a 'no,' and adjust on the fly, which matters far beyond selling.",
+  "need": [
+    "Something to sell: homemade (lemonade, cookies, crafts), something they own (books, toys) or a service (dog walking, garden help)",
+    "A table, paper and markers for a sign and price tags",
+    "Customers: family, friends or neighbours (play money works for a practice round)"
+  ],
+  "lesson": {
+    "text": "A pitch isn't a list of facts. In under 30 seconds it grabs attention, says what's in it for the buyer, and asks for the sale.",
+    "before": "Hi. This is lemonade. It's one dollar.",
+    "model": [
+      {
+        "part": "Hook",
+        "line": "Hot out today, isn't it?"
+      },
+      {
+        "part": "Benefit",
+        "line": "This lemonade is ice cold and made with real lemons we squeezed this morning."
+      },
+      {
+        "part": "Price",
+        "line": "Just one dollar, or two cups for $1.50."
+      },
+      {
+        "part": "Ask",
+        "line": "Want to try a sip first?"
+      }
+    ],
+    "modelNote": "Same lemonade, but now there's a reason to stop. When a pitch just names the product, ask: what does the customer get out of it?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "a short persuasive pitch, eye contact, and thinking on your feet"
+    },
+    {
+      "subject": "Math",
+      "text": "pricing, making change, counting money, and working out profit"
+    },
+    {
+      "subject": "Writing & design",
+      "text": "a sign people can read from far away, and short persuasive words"
+    },
+    {
+      "subject": "Life skills",
+      "text": "talking to strangers, handling a 'no,' and earning real money"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the first customer, then the honest coach, then the one who rounds up real customers.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The 'sell me this' game, then choose the product (Step 1). About 20 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "Know the product, write the pitch and practise (Steps 2 and 3)."
+      },
+      {
+        "when": "Stall day",
+        "what": "Set up, sell, and count up how it went (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Your kid freezes with real customers",
+        "a": "Start with family only, then one neighbour. A small card with their first line on it helps."
+      },
+      {
+        "q": "Nobody's buying",
+        "a": "That's real feedback. Try a different opening, a lower price or a free sample, and see what changes."
+      }
+    ]
+  },
+  "fromHome": {
+    "text": "My daughter has run a lemonade stand a few times, and right now she collects cans and bottles for the refund money. She even hired her brother for that one.",
+    "quotes": []
+  },
+  "skills": [
+    {
+      "name": "Persuasive speaking",
+      "text": "convincing someone it's worth their money"
+    },
+    {
+      "name": "Reading the customer",
+      "text": "noticing who's listening and adjusting"
+    },
+    {
+      "name": "Confidence",
+      "text": "speaking up and handling a 'no'"
+    },
+    {
+      "name": "Money sense",
+      "text": "pricing, value and what customers want"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Start with 'sell me this'",
+      "why": "A quick game that shows what a pitch is, then the product.",
+      "kid": "Grab any object in the room (a spoon, a sock, a pencil) and take turns selling it to each other in 30 seconds. Then your kid decides what they'll really sell: something they make, something they own, or a service. They pick something they're proud of and write down why someone would want it, not just what it is.",
+      "you": "Play the game and be a tough customer: 'Why would I need a spoon?' Then help brainstorm what they could sell, and let them choose. They'll pitch better if it really feels like theirs.",
+      "starters": [
+        "Lemonade or cookies",
+        "Homemade crafts",
+        "Old books or toys",
+        "Dog walking",
+        "Garden help",
+        "Car washing"
+      ],
+      "ask": [
+        "In the game, what made you want to buy the spoon?",
+        "Who would actually want what you're selling?"
+      ],
+      "tip": "The product doesn't need to be perfect. It needs to be something your kid can talk about with real excitement.",
+      "levels": {
+        "explore": "Play a few rounds, then pick a product and say one reason someone should buy it.",
+        "develop": "Pick a product, list 3 reasons it's worth buying, and say who the ideal customer is.",
+        "extend": "Pick a product and write a short paragraph on why it's the best option for that customer."
+      }
+    },
+    {
+      "title": "Know the product and the price",
+      "why": "Your kid gets ready for every question a customer could ask.",
+      "kid": "Your kid writes down everything about the product: what it's made of, how it's made, what makes it better than the alternatives. Then they turn features into benefits (a feature is what it is; a benefit is what it does for the buyer), work out a price that covers what it cost to make, and prepare answers to the tough questions.",
+      "you": "Ask tricky customer questions: 'Is it worth the price?' 'Why shouldn't I just make my own?' If they're selling something homemade, help them add up what the ingredients cost, so the price makes a profit.",
+      "ask": [
+        "What does it do for the person who buys it?",
+        "If a customer says 'that's too expensive,' what will you say?"
+      ],
+      "tip": "Working out the cost per cup or per cookie is the moment the math gets real. Let them do the dividing.",
+      "levels": {
+        "explore": "Write 3 great things about your product and pick a price.",
+        "develop": "List features and benefits separately, set a price that covers your costs, and prepare 3 tough answers.",
+        "extend": "Make a full product profile: benefits, target customer, why yours is better, cost and profit per item, and 5 tough answers."
+      }
+    },
+    {
+      "title": "Write the pitch and practise",
+      "why": "Your kid writes a 30-second pitch and gets comfortable saying it.",
+      "kid": "Your kid writes a short pitch like the lemonade example: a hook, the benefit, the price and the ask. They time it at under 30 seconds. Then they practise out loud with a family member playing customer, try different versions, and practise answering questions without reading.",
+      "you": "Be a realistic practice customer: hesitate, say 'I'm not sure,' ask a question. Then give one specific note: 'Your opening is great, can you make the middle shorter?' Start with what worked.",
+      "ask": [
+        "If you only had 10 seconds, what's the one thing you'd say?",
+        "What will you do if someone says no?"
+      ],
+      "tip": "A pitch in their own words always beats a memorised grown-up script. Help them organise it, but let them find the words.",
+      "levels": {
+        "explore": "Write a 2 or 3 sentence pitch and practise it 2 or 3 times.",
+        "develop": "Write a hook, benefits and an ask under 30 seconds, and practise with 3 different people.",
+        "extend": "Write a 10-second and a 30-second version, and practise until you can switch between them without notes."
+      }
+    },
+    {
+      "title": "Set up and sell",
+      "why": "Stall day: a real stall, real customers, real money.",
+      "kid": "Your kid sets up the stall: a sign that's easy to read from far away, price tags, the product arranged so it looks good. Then they greet each person, give their pitch, answer questions, make change and try to close the sale. They notice which lines work and which fall flat.",
+      "you": "Help with supplies but let them design the layout. Walk past as if you were a customer: does it catch your eye? Then bring the customers and step back. Let your kid handle every conversation.",
+      "ask": [
+        "If you saw this stall from across the street, would you walk over?",
+        "Did you change your pitch for different people?"
+      ],
+      "tip": "Stay close for safety, but out of the conversation. Customers talk to the kid, not the parent standing next to them.",
+      "levels": {
+        "explore": "Set up a simple stall with a sign and pitch to 2 or 3 customers.",
+        "develop": "Add price tags and an eye-catching layout, pitch to 4 or more customers and track which lines worked.",
+        "extend": "Offer a sample or demo, adapt your pitch to different customers, and try a completely new opening on the last one."
+      }
+    },
+    {
+      "title": "Count it up and look back",
+      "why": "The numbers, and what your kid learned about persuading people.",
+      "kid": "Your kid counts the money, subtracts what it cost, and works out the profit. Then they think about the whole experience: what worked, what was hardest, what made people say yes, and what they'd change at the next stall.",
+      "you": "Celebrate the courage, not just the sales. Standing in front of people and asking them to buy takes guts. Give specific praise: 'You handled that 'too expensive' question really well.'",
+      "ask": [
+        "What made people say yes?",
+        "If you gave a friend one tip about selling, what would it be?"
+      ],
+      "tip": "Decide together what happens to the money before stall day: save it, spend it, or split some for the next batch of supplies.",
+      "levels": {
+        "explore": "Count the money and tell someone one thing that went well and one you'd change.",
+        "develop": "Work out the profit and write a short reflection on what worked in your pitch.",
+        "extend": "Write a full sales review: what sold, which pitch lines worked best, profit, and your plan for next time."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just made, pitched and sold something to real people.",
+    "text": "They chose a product, worked out its value and price, wrote a pitch, and sold it face to face, adjusting as they went. Persuasion, money math and confidence, with real customers and real results.",
+    "celebrate": "Point out what took guts: asking strangers to buy something, hearing 'no,' and trying again anyway. That's a skill most adults still find hard.",
+    "extensions": [
+      "Run a stall at a real community event or market",
+      "Add a second product at a different price",
+      "Interview a real market vendor about how they sell",
+      "Film a 30-second ad for the product"
+    ]
+  },
+  "signs": [
+    "They explain why something is worth it, not just what it is",
+    "They bounce back after a 'no' and try a different approach",
+    "They start noticing how real shops and stalls catch their eye"
+  ],
+  "makeItReal": "Sell at a real yard sale, a farmers market kids' table or a community event, with real prices and real change. A stranger handing over money for something your kid made changes how they see themselves.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/market-stall-pitch.jpg",
+    "alt": "A girl behind a table of popcorn bags with a hand-drawn sign",
+    "caption": "My daughter's popcorn stand, sign and all."
+  }
+}

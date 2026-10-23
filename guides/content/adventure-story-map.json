@@ -1,0 +1,220 @@
+{
+  "slug": "adventure-story-map",
+  "category": "Writing & Communication",
+  "title": "Adventure Story Map",
+  "tagline": "Storytelling · Map-making · Descriptive writing",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid turns a real place they know into the setting of an adventure story. They walk it with a storyteller's eye, draw a map of it, and write a story that happens right there, on real paths and next to real landmarks. When they're done, someone can read the story with the map in hand and follow every step of the adventure.",
+  "need": [
+    "A real place your kid knows: your street, a park, the garden, a trail, a holiday spot",
+    "Paper, pencils and coloured markers for the map, and a notebook for the story",
+    "Comfortable shoes for the walk"
+  ],
+  "lesson": {
+    "text": "Stories feel real when the place is real and something is at stake. Your kid needs three things: real details from the place, a character who wants something, and a problem in the way.",
+    "before": "He went to the park. It was scary. Then he went home.",
+    "model": [
+      {
+        "part": "Real place",
+        "line": "Leo crept past the yellow slide at Riverside Park,"
+      },
+      {
+        "part": "Senses",
+        "line": "where the swing chains creaked in the wind and the air smelled like wet leaves."
+      },
+      {
+        "part": "Wants",
+        "line": "He had to reach the old oak by the creek before dark."
+      },
+      {
+        "part": "Problem",
+        "line": "Then, behind him, the gate clicked shut."
+      }
+    ],
+    "modelNote": "Same park, but now you can see it, hear it, and you want to know what happens. When a story is a list of events, ask: what does your character want, and what's stopping them?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "story structure, describing with the senses, and dialogue"
+    },
+    {
+      "subject": "Geography",
+      "text": "drawing a place from above, compass directions, and a rough scale"
+    },
+    {
+      "subject": "Reading",
+      "text": "noticing how authors make a setting feel real"
+    },
+    {
+      "subject": "Creativity",
+      "text": "turning an ordinary place into somewhere an adventure could happen"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the adventure companion on the walk and the first reader of the story. Let the story flow first; spelling can wait for the end.",
+    "plan": [
+      {
+        "when": "The weekend",
+        "what": "The what-if walk (Step 1). 30 to 45 minutes."
+      },
+      {
+        "when": "The next day",
+        "what": "Draw the map and plan the adventure (Steps 2 and 3)."
+      },
+      {
+        "when": "This week",
+        "what": "Write the story, link it to the map and share it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Your kid doesn't like writing yet",
+        "a": "They tell the story out loud while you write it down, or draw it as comic panels with a sentence under each."
+      },
+      {
+        "q": "They're stuck for ideas",
+        "a": "Go back to a what-if from the walk, or borrow a classic: a lost pet, a hidden treasure, a race before dark."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Narrative writing",
+      "text": "building a story with a beginning, middle and end"
+    },
+    {
+      "name": "Descriptive writing",
+      "text": "using real details to bring a setting to life"
+    },
+    {
+      "name": "Map-making",
+      "text": "turning a real place into a map someone can use"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing the details that make a place feel real"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Start with a what-if walk",
+      "why": "Your kid picks a real place and walks it, looking for where a story could happen.",
+      "kid": "Your kid picks a place they know well and walks it slowly with you. At each interesting spot, you both play 'what if': what if this drain led to a tunnel? What if someone hid something in that tree? They jot down the best what-ifs and the real details around them: sounds, smells, colours, hiding spots, paths.",
+      "you": "Walk with them and play along. Ask storyteller questions instead of grown-up ones: where would a character hide? What would you hear here at night? Let the silly ideas come. The good ones show up after the silly ones.",
+      "starters": [
+        "Our street",
+        "A park or playground",
+        "The garden",
+        "A forest trail",
+        "A beach",
+        "Somewhere from a trip"
+      ],
+      "ask": [
+        "What's the most mysterious spot here?",
+        "If a character had to hide right now, where would they go?"
+      ],
+      "tip": "Bring the notebook on the walk. Details written on the spot ('the gate squeaks') beat details remembered at the kitchen table.",
+      "levels": {
+        "explore": "Pick a place and write down 5 things you notice, plus your favourite what-if.",
+        "develop": "Note sights, sounds and smells at 5 spots, and a what-if for each.",
+        "extend": "Note how each spot feels, and which ones have the most story in them. Come back at another time of day if you can."
+      }
+    },
+    {
+      "title": "Draw the map",
+      "why": "Your kid maps the real place, accurately enough to find your way with it.",
+      "kid": "Your kid draws the place from above: the outline, the main paths, then landmarks like buildings, trees and benches. They label everything and add a compass (N, S, E, W). Older kids add a rough scale.",
+      "you": "Help with direction if needed: stand somewhere together and ask what's north of you. Then ask the real test question: could someone find their way using this map?",
+      "ask": [
+        "Are bigger things drawn bigger on your map?",
+        "Which spots on the map will matter in your story?"
+      ],
+      "tip": "Start with the paths. Once the paths are right, everything else has somewhere to go.",
+      "levels": {
+        "explore": "Draw the main paths and 3 or 4 landmarks.",
+        "develop": "Draw a detailed map with labels and a compass.",
+        "extend": "Add a legend, a rough scale and terrain, and make it both accurate and beautiful."
+      }
+    },
+    {
+      "title": "Plan the adventure",
+      "why": "Your kid builds the story before writing it, and puts it on the map.",
+      "kid": "Your kid creates a main character (a name, an age, what they want) and decides the problem: what's in the way? Then they plan a beginning, a middle where things get harder, and an ending. They mark on the map where each big moment happens.",
+      "you": "Ask the questions that turn a list of events into a story: what does the character want? What goes wrong? Help them plan a problem, not just a trip from one spot to the next.",
+      "ask": [
+        "What does your character want, and what's stopping them?",
+        "Where on the map does the most exciting part happen?"
+      ],
+      "tip": "If the plan is 'they walk here, then here, then home,' ask what could go wrong at the second spot. That's usually where the story is.",
+      "levels": {
+        "explore": "Create a character and plan a simple story: what's the problem, and how is it solved?",
+        "develop": "Plan a character, a problem, 2 or 3 things that go wrong, and an ending. Mark 3 moments on the map.",
+        "extend": "Plan several scenes with a twist, and mark every scene on the map."
+      }
+    },
+    {
+      "title": "Write the story",
+      "why": "Your kid writes the adventure, full of real details from the walk.",
+      "kid": "Your kid writes the story from beginning to end, using their notes: real names, real landmarks, the sounds and smells from the walk, and a bit of dialogue. The goal is that a reader feels like they're standing right there.",
+      "you": "Let them write without interrupting, and don't fix spelling yet. Afterward, give one piece of feedback: 'the chase felt real' or 'I want to hear more about the creek.' One thing, so it feels doable.",
+      "ask": [
+        "Can the reader picture exactly where your character is standing?",
+        "Did you use a real sound or smell from the walk?"
+      ],
+      "tip": "Keep the Riverside Park example from the start nearby. Pointing at 'senses' is easier than explaining it again.",
+      "levels": {
+        "explore": "Write half a page to a page, using at least 3 real details from the place.",
+        "develop": "Write several paragraphs with a clear plot, real settings and at least one bit of dialogue.",
+        "extend": "Write a full story with a twist, dialogue, and enough real detail that someone could walk the route."
+      }
+    },
+    {
+      "title": "Link the map, share and look back",
+      "why": "The story and the map come together, and a real reader follows the adventure.",
+      "kid": "Your kid numbers each big moment of the story on the map and adds a legend, then checks that the route makes sense (no teleporting). They fix unclear sentences and spelling, then give the story and map to someone to read together.",
+      "you": "Be the first reader, story in one hand, map in the other. Watch whether you can follow along. Give specific praise and one suggestion, then ask what they're most proud of.",
+      "ask": [
+        "Can someone follow your story on the map, or does your character teleport?",
+        "Did exploring the real place change how you see it?"
+      ],
+      "tip": "The best moment is watching someone trace the route with their finger while they read.",
+      "levels": {
+        "explore": "Mark 2 or 3 moments on the map and share the story with one person.",
+        "develop": "Number every big moment, add a legend, and share with 2 people.",
+        "extend": "Add route arrows and notes that help readers switch between map and story, and gather feedback from several readers."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just turned a real place into an adventure.",
+    "text": "They walked a place on purpose, mapped it, planned a story with a real problem, and wrote it so a reader could follow along on the map. Storytelling, descriptive writing and map skills, all in one adventure.",
+    "celebrate": "Point out what they did: they took somewhere completely ordinary and made it exciting, using details that were really there. That's how good writers work.",
+    "extensions": [
+      "Write a sequel in the same place",
+      "Make a story map for a place from a trip",
+      "Write the same adventure from another character's point of view",
+      "Illustrate the key scenes at their real spots on the map"
+    ]
+  },
+  "signs": [
+    "They point out 'story spots' on ordinary walks",
+    "They use real names, sounds and smells in their writing without being asked",
+    "Their stories have a problem, not just a list of things that happened"
+  ],
+  "makeItReal": "Turn it into a story walk: hand the story and map to a friend or grandparent and walk the real route while they read it out loud at each spot. Seeing someone stand exactly where the adventure happens is unforgettable.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/adventure-story-map.jpg",
+    "alt": "Two kids crouched on a sunny forest trail, looking at something on the ground",
+    "caption": "Every trail has a story in it somewhere."
+  }
+}

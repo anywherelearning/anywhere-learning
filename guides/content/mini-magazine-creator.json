@@ -1,0 +1,220 @@
+{
+  "slug": "mini-magazine-creator",
+  "category": "Writing & Communication",
+  "title": "Mini Magazine Creator",
+  "tagline": "Writing in many styles · Design · Publishing",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid makes their own mini magazine about something they love: dinosaurs, football, baking, their pet. They plan the issue, write different kinds of pieces (an article, a tips list, a quiz, a how-to), design the pages, and hand out real copies. One project, and they've practised almost every kind of writing there is.",
+  "need": [
+    "A topic your kid could talk about for hours",
+    "Paper folded into a booklet, pencils, markers, and a stapler (or a computer for layout)",
+    "A real magazine to flip through, if you have one"
+  ],
+  "lesson": {
+    "text": "A magazine isn't one long essay. It's short pieces that each do a different job, and each needs a headline that makes someone want to read it.",
+    "before": "Article: Dogs. Dogs are animals. They are nice.",
+    "model": [
+      {
+        "part": "Article",
+        "line": "Why Your Dog Tilts Its Head (Scientists Have a Theory)"
+      },
+      {
+        "part": "Tips",
+        "line": "5 Tricks You Can Teach Any Dog in a Week"
+      },
+      {
+        "part": "Quiz",
+        "line": "What Kind of Dog Are You? Take the Quiz!"
+      },
+      {
+        "part": "How-to",
+        "line": "Make Peanut Butter Dog Biscuits in 4 Steps"
+      }
+    ],
+    "modelNote": "Same topic, four completely different pieces, and every headline makes you want to turn the page. When a headline just names the topic, ask: why would a reader stop here?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "informational, persuasive, how-to and creative writing, all in one project"
+    },
+    {
+      "subject": "Research",
+      "text": "finding facts for articles and checking them in a second source"
+    },
+    {
+      "subject": "Design",
+      "text": "layout, headlines, white space, and a cover people want to pick up"
+    },
+    {
+      "subject": "Life skills",
+      "text": "planning a big project, meeting their own deadline, and finishing it"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You're the magazine editor: supportive, curious and honest. Give one suggestion per piece, never a full rewrite.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The cover remix game, then choose the topic and plan the issue (Step 1). About 30 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "Research and write the pieces, one or two a day (Steps 2 and 3)."
+      },
+      {
+        "when": "The weekend",
+        "what": "Design the pages, edit, print and hand it out (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Your kid doesn't like writing yet",
+        "a": "Lean on short pieces: a quiz, a top 5 list, a comic, a labelled diagram. They count."
+      },
+      {
+        "q": "It feels too big to finish",
+        "a": "Shrink it: one folded sheet makes an 8-page zine. A small finished magazine beats a big unfinished one."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Writing in many styles",
+      "text": "articles, tips, quizzes and how-tos in one project"
+    },
+    {
+      "name": "Research",
+      "text": "finding facts that make articles interesting and true"
+    },
+    {
+      "name": "Writing for a reader",
+      "text": "making something people want to read"
+    },
+    {
+      "name": "Design",
+      "text": "organising words and pictures on a page"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Start with a cover remix",
+      "why": "A quick look at how real magazines grab readers, then the topic and the plan.",
+      "kid": "Flip through a real magazine (or look one up together) and notice the cover: the big title, the headlines, the picture. Your kid rewrites 3 of the headlines about something silly, like the family cat or Tuesday's dinner. Then they pick their own magazine topic, decide who it's for, and plan the issue: a list of pieces, each labelled by type, in a rough table of contents.",
+      "you": "Play the remix game too, and laugh. Then help them think of a topic they could talk about for hours, and check they could write at least 4 different pieces about it. Aim for a mix: something long, something short, something interactive.",
+      "starters": [
+        "An article",
+        "A tips list",
+        "A quiz",
+        "A how-to",
+        "An interview",
+        "A review"
+      ],
+      "ask": [
+        "What makes you want to pick up a magazine?",
+        "Who's the reader: kids your age, younger kids, grown-ups?"
+      ],
+      "tip": "Give the magazine a real name before anything is written. It makes the whole project feel official.",
+      "levels": {
+        "explore": "Remix a headline or two, pick a topic and plan 3 or 4 pieces.",
+        "develop": "Plan 4 or 5 pieces in at least 3 different types, with a rough table of contents.",
+        "extend": "Write a one-line mission for the magazine and plan 5 or 6 pieces across 4 or more types."
+      }
+    },
+    {
+      "title": "Research the facts",
+      "why": "Even a fun magazine needs true information.",
+      "kid": "Your kid works out which pieces need facts (articles, fact pages, how-tos) and finds 2 or 3 for each, from books, websites or a person who knows. They note where each fact came from. If there's an interview piece, they plan the questions and do the interview.",
+      "you": "Help find sources if needed. Ask the checking questions: is that true? Where did you find it? Can you check it in a second place?",
+      "ask": [
+        "Is there a surprising fact that would make a great opening?",
+        "Can you check that fact somewhere else?"
+      ],
+      "tip": "One surprising fact makes a whole article. 'Octopuses have three hearts' does more work than ten ordinary ones.",
+      "levels": {
+        "explore": "Find 1 or 2 interesting facts for your main article.",
+        "develop": "Find facts for each piece that needs them, and check the key ones.",
+        "extend": "Research every piece, find a surprising fact or a quote for each, and do a real interview."
+      }
+    },
+    {
+      "title": "Write the pieces",
+      "why": "Your kid writes each piece in its own style, with a headline that makes you read it.",
+      "kid": "Your kid writes each piece in full, matching the style to the job: factual for articles, friendly for tips, fun for quizzes, clear and numbered for how-tos. Each gets a headline like the examples at the start. They add an 'about the editor' box with a short bio.",
+      "you": "Read each piece on its own and give one specific suggestion: 'This article needs a stronger opening' or 'Your quiz needs one more question.' Then let them fix it.",
+      "ask": [
+        "Does your first sentence make someone want to keep reading?",
+        "Would you actually want to take this quiz?"
+      ],
+      "tip": "One or two pieces a day keeps it fun. Writing the whole magazine in one sitting is how it turns into a chore.",
+      "levels": {
+        "explore": "Write 2 or 3 short pieces, at least a paragraph each, with a headline.",
+        "develop": "Write 4 or 5 pieces in different styles, each with a clear headline written for your reader.",
+        "extend": "Write 5 or 6 polished pieces that read like real magazine content, with strong openings."
+      }
+    },
+    {
+      "title": "Design the pages and edit",
+      "why": "The pieces become a magazine someone would pick up, then get polished.",
+      "kid": "Your kid designs the cover (title, a main headline, a picture), lays out each piece on its page with headings and illustrations, and makes a table of contents. Then they read the whole magazine like a first-time reader and fix anything unclear, messy or unfinished, including spelling.",
+      "you": "Help with practical layout if needed. Ask the reader's questions: is the text big enough? Does the cover grab you? Then be the final reader, mark anything that confused you, praise what works, and suggest one fix per page.",
+      "ask": [
+        "Would you pick up this magazine from the cover alone?",
+        "Is there enough white space, or does every page feel crowded?"
+      ],
+      "tip": "Fold the paper into a booklet before laying anything out. It's much easier to see what goes on which page.",
+      "levels": {
+        "explore": "Make a cover, put each piece on a page with a heading, and fix anything messy.",
+        "develop": "Add a table of contents and matching illustrations, then do a full edit with someone else's feedback.",
+        "extend": "Design consistent pages with a branded cover, and do a final edit for writing, design and accuracy."
+      }
+    },
+    {
+      "title": "Publish it and look back",
+      "why": "Real copies go to real readers, and your kid hears what they think.",
+      "kid": "Your kid assembles the magazine (staple, fold or bind), makes copies, and hands them out to at least 2 or 3 people. They ask which piece readers liked best. Then they think about which kind of writing was hardest, and what a second issue would include.",
+      "you": "Help with copies, then celebrate. A whole magazine, researched, written, designed and published, is a big deal. Ask what they're most proud of and which piece was hardest.",
+      "ask": [
+        "Which piece got the best reaction from readers?",
+        "If you made a second issue, what would you change?"
+      ],
+      "tip": "Hand-delivered copies feel like a real launch. Let your kid do the handing out.",
+      "levels": {
+        "explore": "Share the magazine with one person and tell them your favourite piece.",
+        "develop": "Share it with 2 or 3 people and write down what you learned about writing in different styles.",
+        "extend": "Share it widely, gather feedback, and plan what Issue 2 will include."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just planned, wrote, designed and published their own magazine.",
+    "text": "They picked a topic, researched it, wrote in four or five different styles, designed the pages and put real copies in real hands. Informational, persuasive and how-to writing, plus design, in one project they finished start to end.",
+    "celebrate": "Point out what they did: they didn't write one thing, they wrote a whole publication, and they finished it. Plenty of grown-ups have an unfinished project or two they never got to.",
+    "extensions": [
+      "Make Issue 2, with new pieces on the same topic",
+      "Team up with a sibling or friend on a joint issue",
+      "Make a digital version on a computer",
+      "Start a regular magazine with a new issue each season"
+    ]
+  },
+  "signs": [
+    "They notice headlines and covers when you're out",
+    "They change how they write depending on who it's for",
+    "They plan big projects in pieces instead of all at once"
+  ],
+  "makeItReal": "Get the magazine into real readers' hands outside the family: leave copies at the library's community shelf, mail one to a grandparent, or trade issues with a friend who makes one too.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/mini-magazine-creator.jpg",
+    "alt": "A boy standing proudly next to a big poster he made",
+    "caption": "Nothing beats showing off something you made yourself."
+  }
+}

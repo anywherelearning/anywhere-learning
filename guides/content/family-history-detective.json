@@ -1,0 +1,220 @@
+{
+  "slug": "family-history-detective",
+  "category": "Writing & Communication",
+  "title": "Family History Detective",
+  "tagline": "Interviewing · Listening · Storytelling",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid interviews the oldest person they can talk to, a grandparent, a great aunt, an old family friend, and uncovers the stories nobody has written down. They put that life in order on a timeline, sketch who connects to who, and write one story down so the family keeps it. Part detective, part reporter, all real.",
+  "need": [
+    "An older relative or family friend to interview, in person, by phone or on video",
+    "A notebook, and a phone to record if the person agrees",
+    "Old photos, if there are any: they unlock stories fast"
+  ],
+  "lesson": {
+    "text": "A good interview isn't a list of questions. It's one open question, then listening, then one more question about what they just said. The story is always behind the follow-up.",
+    "before": "Did you like school? (Yes.) Did you have a job? (Yes.)",
+    "model": [
+      {
+        "part": "Open",
+        "line": "What was school like when you were my age?"
+      },
+      {
+        "part": "Listen",
+        "line": "'We walked two miles, even in the snow.'"
+      },
+      {
+        "part": "Follow up",
+        "line": "Two miles? What happened on the worst snow day?"
+      },
+      {
+        "part": "Feeling",
+        "line": "What was that like for you?"
+      }
+    ],
+    "modelNote": "Yes-or-no questions get one word. Open questions and follow-ups get the story. When an answer is short, ask: what happened next?"
+  },
+  "academics": [
+    {
+      "subject": "Speaking & listening",
+      "text": "asking open questions, following up, and really listening"
+    },
+    {
+      "subject": "History",
+      "text": "how life was different when the person was young, and putting events in order"
+    },
+    {
+      "subject": "Writing",
+      "text": "turning a rambling memory into a story with a beginning, a turn and an end"
+    },
+    {
+      "subject": "Life skills",
+      "text": "talking with older people, and knowing where your family comes from"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed. You make the introductions; your kid does the asking. Sit in if you like, but it's their interview.",
+    "plan": [
+      {
+        "when": "Tonight",
+        "what": "The photo detective game, then pick the person and write the questions (Steps 1 and 2). About 30 minutes."
+      },
+      {
+        "when": "This week",
+        "what": "The interview, then the timeline and family tree (Steps 3 and 4)."
+      },
+      {
+        "when": "Next family gathering",
+        "what": "Write one story and share it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The answers are short",
+        "a": "Bring out an old photo and ask 'who's this?' Photos turn one-word answers into stories."
+      },
+      {
+        "q": "A story gets emotional",
+        "a": "That's usually a sign it's a real one. Let your kid sit with it kindly, and don't rush to the next question."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Interviewing",
+      "text": "asking real questions and following the answers"
+    },
+    {
+      "name": "Active listening",
+      "text": "hearing what someone said and asking the next question because of it"
+    },
+    {
+      "name": "Storytelling",
+      "text": "turning a memory into a story worth reading"
+    },
+    {
+      "name": "Connecting generations",
+      "text": "learning that the people around them are full of history"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Start as a photo detective",
+      "why": "A guessing game with an old photo, then the person to interview.",
+      "kid": "Find one old family photo. Your kid studies it like a detective and writes down guesses: who is it, how old are they, what year is it, where are they, what's happening? They'll check the guesses with someone who knows. Then they pick the person to interview, ideally the oldest person they can reach.",
+      "you": "Dig out a photo or two and play along with your own guesses. Then help choose the person, and make the ask together: 'Would you sit down with me for an interview about your life?' Most older people are delighted. Almost nobody asks them.",
+      "ask": [
+        "What clues in the photo tell you when it was taken?",
+        "Who in our family has the most stories to tell?"
+      ],
+      "tip": "Bring the same photo to the interview. 'Who's this?' is the easiest first question there is.",
+      "levels": {
+        "explore": "Make 3 guesses about the photo, then pick one person to talk to.",
+        "develop": "Guess who, when and where with a reason for each, then pick someone older with lots of history.",
+        "extend": "Write a full detective report on the photo, then line up 2 or 3 people to interview over time."
+      }
+    },
+    {
+      "title": "Write the questions",
+      "why": "Your kid prepares open questions that will unlock stories.",
+      "kid": "Your kid writes a list of questions, using the ideas below. Each one should be open, so it gets a story instead of a yes or no: 'What was your school like?' instead of 'Did you like school?' They star the ones they're most curious about.",
+      "you": "Help them turn yes-or-no questions into open ones. Then let them decide the order. A kid who walks in with a list, and the confidence to leave it when a story appears, is doing exactly what a real interviewer does.",
+      "starters": [
+        "What did you do for fun as a kid?",
+        "What got you in trouble?",
+        "What was your very first job?",
+        "What's a day you'll never forget?",
+        "What's changed most since you were young?",
+        "What did you learn the hard way?"
+      ],
+      "ask": [
+        "What do you most want to know about this person's life?",
+        "How can you ask it so they tell a story?"
+      ],
+      "tip": "Group the questions: childhood, school and work, big moments, the world back then. It makes the interview flow.",
+      "levels": {
+        "explore": "Write 3 open questions.",
+        "develop": "Write a list of open questions covering their whole life.",
+        "extend": "Group the questions by topic and plan a follow-up for each."
+      }
+    },
+    {
+      "title": "Do the interview",
+      "why": "The heart of it: asking, listening, and digging for the real stories.",
+      "kid": "Your kid asks their questions, listens closely, and follows the good bits with 'What happened next?' or 'What was that like?' They go past the facts (born here, worked there) to the real stories: the time they got in trouble, the scariest day, the day everything changed. They take notes, or record with permission.",
+      "you": "Sit back and let them run it. When the person pauses to remember, don't fill the silence: the best stories come right after the quiet. The first few minutes can be stiff. Then a memory catches, and suddenly they're off. Let it run long.",
+      "ask": [
+        "That sounds interesting, what happened next?",
+        "Is there a story about your life most people don't know?"
+      ],
+      "tip": "Facts are the skeleton. The good stuff is the time they were scared, proud, or in trouble. Nudge your kid toward 'what was that like?'",
+      "levels": {
+        "explore": "Ask your questions, listen, and find one surprising story.",
+        "develop": "Follow up on the good bits and draw out a few real stories.",
+        "extend": "Let the interview wander, chase the best stories deep, and ask about a hard or funny moment."
+      }
+    },
+    {
+      "title": "Build the timeline and the tree",
+      "why": "Your kid puts the life in order and maps who connects to who.",
+      "kid": "Memories come out jumbled. Your kid sorts them onto a timeline: birth, childhood, big moments, in order. When a date is fuzzy, they estimate from clues ('that was around when she started work'). Then they draw a family tree, starting with themselves and branching back through parents and grandparents, with a detail or story next to each person they can.",
+      "you": "Help sort the memories and fill in the branches your kid can't know. Point out connections the timeline shows: the move that came right before the new job, the hard year that came after a loss.",
+      "ask": [
+        "What came first, and what came after?",
+        "How far back can our tree go?"
+      ],
+      "tip": "Add a few world events to the timeline (when TV arrived, a war, the first moon landing). Suddenly a grandparent's life fits into history class.",
+      "levels": {
+        "explore": "Put 3 events in order and draw yourself, your parents and grandparents.",
+        "develop": "Build a full timeline of the person's life and extend the tree as far as the interview reaches.",
+        "extend": "Add world events to the timeline and a fact or story to each person on the tree."
+      }
+    },
+    {
+      "title": "Tell one story and share it",
+      "why": "One story gets written down for good, and the family hears it.",
+      "kid": "Your kid picks their favourite story from the interview and writes it up properly: how it starts, the moment it turns, and why it matters. In the person's spirit, but in your kid's words. Then they share it with the family: read it at dinner, walk everyone through the timeline, show the tree, or play a favourite recorded moment.",
+      "you": "Gather the family and make it an occasion. Treat the finished story like the keepsake it is, and make sure the person they interviewed gets a copy.",
+      "ask": [
+        "How would you tell it so someone who wasn't there can feel it?",
+        "How did it feel to be the one who caught these stories?"
+      ],
+      "tip": "The person who was interviewed should be the first to hear the finished story. Watching them hear their own life told back is unforgettable.",
+      "levels": {
+        "explore": "Write one story in a few sentences and tell it to the family.",
+        "develop": "Write it with a beginning and an ending, and present the story and the timeline.",
+        "extend": "Write a few stories into a small collection and give a copy to the person you interviewed."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "The stories were right there.",
+    "text": "A person your kid already knew was holding a whole history nobody had written down. Because they asked and listened, it's now caught in a timeline, a tree and a story the family gets to keep. And along the way, they learned to really talk to someone.",
+    "celebrate": "Point out what they did: they asked good questions and actually listened to the answers. That's rarer, and more useful, than most of what school teaches.",
+    "extensions": [
+      "Interview a second relative and connect their stories to the first",
+      "Record the interviews and keep a little archive of family voices",
+      "Scan old photos and pair each one with the story behind it",
+      "Turn the best stories into a small illustrated family history book"
+    ]
+  },
+  "signs": [
+    "They ask follow-up questions in everyday conversations",
+    "They're curious about older people's lives, not just polite",
+    "They can retell someone's story with its details and feeling"
+  ],
+  "makeItReal": "Print the story with an old photo and give it to the person as a gift, or send copies to relatives who live far away. Seeing their own words come back to them is something an older person never forgets.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/family-history-detective.jpg",
+    "alt": "An older woman and a child walking together down a busy street",
+    "caption": "The oldest people in your life are holding stories nobody has written down."
+  }
+}
