@@ -207,7 +207,7 @@
     "They can say the other side's point before arguing against it",
     "They ask 'how do you know?' when someone states something as fact"
   ],
-  "makeItReal": "Debate a real family decision: where to go this weekend, what's for dinner on Friday, a house rule. Agree beforehand that the winning side decides. Real stakes make kids research harder than any topic list.",
+  "makeItReal": "Debate a real family decision: where to go this weekend, what's for dinner on Friday, even where to travel next. Agree beforehand that the winning side decides. Real stakes make kids research harder than any topic list.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -218,7 +218,11 @@
   },
   "photo": {
     "src": "guides/assets/family-debate-night.jpg",
-    "alt": "A family laughing around the kitchen table",
-    "caption": "The kitchen table is where the best arguments happen."
+    "alt": "A dad and his son debating at the kitchen table with notes in front of them",
+    "caption": "Our debate: where to spend the last month of our trip."
+  },
+  "fromHome": {
+    "text": "This winter we're travelling for six months, and we debated where to spend the last month. Everyone made their case at the table, notes and all. My daughter won with Mexico, because her arguments met the whole family's needs, not just her own.",
+    "quotes": []
   }
 }
