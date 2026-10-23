@@ -182,7 +182,7 @@
       "tip": "The person who was interviewed should be the first to hear the finished story. Watching them hear their own life told back is unforgettable.",
       "levels": {
         "explore": "Write one story in a few sentences and tell it to the family.",
-        "develop": "Write it with a beginning and an ending, and present the story and the timeline.",
+        "develop": "Write it with a beginning and an ending, or make a poster of what you learned, and present it to the family.",
         "extend": "Write a few stories into a small collection and give a copy to the person you interviewed."
       }
     }
@@ -216,5 +216,9 @@
     "src": "guides/assets/family-history-detective.jpg",
     "alt": "A grandfather and his granddaughter cheek to cheek, both grinning",
     "caption": "Grandparents carry the stories nobody has written down yet."
+  },
+  "fromHome": {
+    "text": "My daughter interviewed her grandfather, my dad, about his life. Then she made a poster to show the rest of us what she had learned about him.",
+    "quotes": []
   }
 }
