@@ -58,7 +58,10 @@ async function load(html, width) {
 const PREVIEW_KEEP = ['cover', 'glance', 'build-critical-thinking'];
 async function trimForPreview() {
   if (!preview) return;
-  await evaluate(`(() => { const keep = ${JSON.stringify(PREVIEW_KEEP)}; document.querySelectorAll('.pg').forEach(p => { if (!keep.includes(p.id)) p.remove(); });
+  await evaluate(`(() => { const keep = ${JSON.stringify(PREVIEW_KEEP)}; const isMap = ${g.type === 'map'};
+    // Guides: cover, The idea, and the first step (the preview format).
+    const pgs = [...document.querySelectorAll('.pg')]; const firstStep = document.querySelector('.pg.step');
+    pgs.forEach((p, i) => { const k = isMap ? keep.includes(p.id) : (i < 2 || p === firstStep); if (!k) p.remove(); });
     const st = document.createElement('style'); st.textContent = '.stamp{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-18deg);font:900 120px Arial Black,Arial,sans-serif;color:rgba(40,40,40,.16);letter-spacing:.05em;pointer-events:none;z-index:9}';
     document.head.appendChild(st);
     document.querySelectorAll('.pg:not(.cover)').forEach(p => { const d = document.createElement('div'); d.className = 'stamp'; d.textContent = 'PREVIEW'; p.appendChild(d); }); return true; })()`);
