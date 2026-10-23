@@ -90,6 +90,19 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
 </section>`;
 
+  // The core skill in plain words, shown as one worked example: the weak
+  // first try, then the fixed version with each part labelled. Replaces the
+  // plain before/after example when a guide has a lesson.
+  const L = g.lesson;
+  const lessonBox = L ? `
+  <div class="box model"><div class="label">The skill, in a minute</div>
+    <p class="mlead">${esc(L.text)}</p>
+    ${L.before ? `<div class="mbefore"><span class="tag">First try</span><s>${esc(L.before)}</s></div>` : ''}
+    <div class="mafter"><span class="tag">After the fix</span>
+      ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}</div>
+    ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>` : '';
+
+  const levelsLine = `<div class="levelsline"><span class="lvdots"><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i></span><p>${esc(g.levelsLine)}</p></div>`;
   const idea = `
 <section class="pg">
   <div class="eyebrow">Before you start</div>
@@ -104,30 +117,19 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="box"><div class="label">Skills your kid builds</div>
       <dl class="skills">${g.skills.map((s) => `<div><dt>${esc(s.name)}</dt><dd>${esc(s.text)}</dd></div>`).join('')}</dl></div>
   </div>`}
-  <div class="box"><div class="label">What you need</div>
-    <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>
-  <div class="levelsline"><span class="lvdots"><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i></span><p>${esc(g.levelsLine)}</p></div>
+  ${L ? lessonBox : `  <div class="box"><div class="label">What you need</div>
+    <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>`}
+  ${L ? '' : levelsLine}
   ${foot('The idea')}
 </section>`;
-
-  // The core skill in plain words, shown as one worked example: the weak
-  // first try, then the fixed version with each part labelled. Replaces the
-  // plain before/after example when a guide has a lesson.
-  const L = g.lesson;
-  const lessonBox = L ? `
-  <div class="box model"><div class="label">The skill, in a minute</div>
-    <p class="mlead">${esc(L.text)}</p>
-    ${L.before ? `<div class="mbefore"><span class="tag">First try</span><s>${esc(L.before)}</s></div>` : ''}
-    <div class="mafter"><span class="tag">After the fix</span>
-      ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}</div>
-    ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>` : '';
 
   const howto = `
 <section class="pg">
   <div class="eyebrow">Your role</div>
   <h2>How to run it</h2>
   <p class="lead">${esc(g.howTo.intro)}</p>
-  ${lessonBox}
+  ${L ? `  <div class="box"><div class="label">What you need</div>
+    <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}
   <div class="tips">${g.howTo.tips.map((t, i) => `
     <div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div></div>`).join('')}
   </div>
@@ -142,6 +144,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <p class="why">${esc(g.howTo.example.why)}</p>
   </div>` : ''}
   ${g.howTo.troubleshoot ? `<div class="trouble"><div class="label">If it's not working</div><dl>${g.howTo.troubleshoot.map((t) => `<div><dt>${esc(t.q)}</dt><dd>${esc(t.a)}</dd></div>`).join('')}</dl></div>` : ''}
+  ${L ? levelsLine : ''}
   <div class="start">Let's start.</div>
   ${foot('How to run it')}
 </section>`;
