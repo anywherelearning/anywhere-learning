@@ -59,16 +59,16 @@
     "intro": "No teaching experience needed. You're the coach, the timekeeper and the fair referee. If there's no sibling to debate, you take the other side and argue it for real.",
     "plan": [
       {
-        "when": "Tonight",
-        "what": "The lightning round, then choose the topic (Step 1). About 20 minutes."
+        "when": "Warm-up",
+        "what": "The lightning round, then pick the topic and sides (Step 1). 10 minutes."
       },
       {
-        "when": "The next few days",
-        "what": "Research both sides and build the case (Steps 2 and 3)."
+        "when": "Prep",
+        "what": "Everyone builds their case at the table (Steps 2 and 3). 15 minutes."
       },
       {
-        "when": "Debate night",
-        "what": "After dinner: the debate and the verdict (Steps 4 and 5). About 30 minutes."
+        "when": "The debate",
+        "what": "The timed debate and the verdict (Steps 4 and 5). 20 to 30 minutes."
       }
     ],
     "tips": [],
@@ -103,7 +103,7 @@
   ],
   "steps": [
     {
-      "title": "Start with a lightning round",
+      "title": "Warm up with silly debates",
       "why": "Silly one-minute debates to warm up, then a real topic.",
       "kid": "Flip a coin to pick sides, then debate a silly question for one minute each: is a hot dog a sandwich? Should pizza be eaten with a fork? Do a few rounds. Then your kid picks the topic for the real debate. It needs two sides people genuinely disagree on, and they decide which side they'll argue.",
       "you": "Run the timer and play along, arguing your side with a straight face. Then help brainstorm topics and let them choose. Fun topics are great for a first debate. Serious ones can wait until they're comfortable with the format.",
@@ -128,24 +128,24 @@
     },
     {
       "title": "Research both sides",
-      "why": "Your kid finds the best arguments for their side, and for the other one.",
-      "kid": "Even though they've picked a side, your kid writes down reasons and evidence for both: at least 3 for each. Evidence means facts, examples or something they've seen, not just 'because.' Then they star the strongest point on each side.",
-      "you": "Help them find sources if needed, but don't do the research for them. Keep asking about the other side: what's the best thing someone who disagrees would say?",
+      "why": "Your kid quickly finds the best reasons on both sides.",
+      "kid": "In about 10 minutes, your kid writes down 2 or 3 reasons for their side and at least one for the other side, with an example for each if they can. Then they star the other side's strongest point: that's the one they'll need to answer.",
+      "you": "Keep it moving. Ask about the other side: what's the best thing someone who disagrees would say? If they want to look something up, a quick search is fine, but the debate is tonight.",
       "ask": [
         "What's the strongest argument against your side?",
         "Can you find a real example or fact to back that up?"
       ],
       "tip": "The other side's best point is the most important thing on the page. If your kid can answer it, they're ready.",
       "levels": {
-        "explore": "Write 2 or 3 reasons for your side and 1 or 2 for the other side.",
-        "develop": "Write 3 or more arguments per side, each with an example or a fact.",
-        "extend": "Make a full research page for both sides, and mark which arguments will be hardest to answer."
+        "explore": "Write 2 reasons for your side and 1 for the other side.",
+        "develop": "Write 3 reasons per side, each with an example.",
+        "extend": "Turn it into a bigger debate: take a few days to research both sides with real facts before debate night."
       }
     },
     {
       "title": "Build the case and practise",
       "why": "Your kid turns the notes into a short speech and says it out loud.",
-      "kid": "Your kid writes an opening (1 or 2 sentences that say their position), their main points in order with evidence, an answer to the other side's best point, and a closing. Then they practise out loud, standing up, looking up from their notes, in 2 or 3 minutes.",
+      "kid": "Your kid turns the notes into a short case: a one-sentence opening, their reasons in order, an answer to the other side's best point, and a closing line. They say it out loud once, standing up, in about 2 minutes.",
       "you": "Be the practice audience. Throw one counter-argument at them and let them answer. Then give one specific note: slower, louder, or look up more. Start with something they did well.",
       "ask": [
         "If you only had 30 seconds, what's the one thing you'd say?",
@@ -155,7 +155,7 @@
       "levels": {
         "explore": "Write your opening and your 2 or 3 reasons, then say them out loud once.",
         "develop": "Write a full outline with an answer to one counter-argument, and practise twice with a timer.",
-        "extend": "Plan answers to the other side's top 2 or 3 points, and practise without reading your notes."
+        "extend": "Plan answers to the other side's top 2 points, and practise once without notes."
       }
     },
     {

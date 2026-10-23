@@ -74,8 +74,8 @@
         "a": "Lean on short pieces: a quiz, a top 5 list, a comic, a labelled diagram. They count."
       },
       {
-        "q": "It feels too big to finish",
-        "a": "Shrink it: one folded sheet makes an 8-page zine. A small finished magazine beats a big unfinished one."
+        "q": "Your kid is 6 or 7, or it feels too big",
+        "a": "Make it one folded sheet: an 8-page zine of drawings with labels, a mini quiz and a top 3 list. That's a real magazine."
       }
     ]
   },
@@ -99,7 +99,7 @@
   ],
   "steps": [
     {
-      "title": "Start with a cover remix",
+      "title": "Remix a magazine cover",
       "why": "A quick look at how real magazines grab readers, then the topic and the plan.",
       "kid": "Flip through a real magazine (or look one up together) and notice the cover: the big title, the headlines, the picture. Your kid rewrites 3 of the headlines about something silly, like the family cat or Tuesday's dinner. Then they pick their own magazine topic, decide who it's for, and plan the issue: a list of pieces, each labelled by type, in a rough table of contents.",
       "you": "Play the remix game too, and laugh. Then help them think of a topic they could talk about for hours, and check they could write at least 4 different pieces about it. Aim for a mix: something long, something short, something interactive.",
@@ -117,7 +117,7 @@
       ],
       "tip": "Give the magazine a real name before anything is written. It makes the whole project feel official.",
       "levels": {
-        "explore": "Remix a headline or two, pick a topic and plan 3 or 4 pieces.",
+        "explore": "Remix a headline, pick a topic and plan 3 short pieces. Drawings with labels count.",
         "develop": "Plan 4 or 5 pieces in at least 3 different types, with a rough table of contents.",
         "extend": "Write a one-line mission for the magazine and plan 5 or 6 pieces across 4 or more types."
       }
