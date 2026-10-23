@@ -80,7 +80,7 @@
     ]
   },
   "fromHome": {
-    "text": "My daughter has run a lemonade stand a few times, and right now she collects cans and bottles for the refund money. She even hired her brother for that one.",
+    "text": "My daughter popped the popcorn herself, bagged it, drew her own sign and set up her stand: 'Mais moi ça!' (roughly, 'I want that one!'), $2 a bag. The sign was her pitch before she even said a word.",
     "quotes": []
   },
   "skills": [
@@ -219,6 +219,6 @@
   "photo": {
     "src": "guides/assets/market-stall-pitch.jpg",
     "alt": "A girl behind a table of popcorn bags with a hand-drawn sign",
-    "caption": "My daughter's popcorn stand, sign and all."
+    "caption": "My daughter's popcorn stand. The sign was her pitch."
   }
 }
