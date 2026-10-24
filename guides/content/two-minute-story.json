@@ -193,6 +193,7 @@
     "celebrate": "Point out what they did: they held the room for two whole minutes, and everyone wanted to know what happened next.",
     "extensions": [
       "Make it a habit: one two-minute story at dinner each week",
+      "Write a story about a sibling or friend, then perform it as a monologue",
       "Swap stories on long car rides",
       "Tell the same story to a different audience and adjust it",
       "Write the story down after telling it"
@@ -214,7 +215,11 @@
   },
   "photo": {
     "src": "guides/assets/two-minute-story.jpg",
-    "alt": "Two kids at the kitchen table, one mid-story with a big grin",
-    "caption": "Every kid has a story in them. The table is the stage."
+    "alt": "A girl and a boy each performing a monologue to the camera in the kitchen",
+    "caption": "Each wrote a story about the other, then performed it."
+  },
+  "fromHome": {
+    "text": "Last year my kids each wrote a story about the other one (not everything in them was true!) and then performed it as a monologue, straight to the camera.",
+    "quotes": []
   }
 }
