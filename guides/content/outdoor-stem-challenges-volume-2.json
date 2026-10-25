@@ -1,0 +1,301 @@
+{
+  "slug": "outdoor-stem-challenges-volume-2",
+  "category": "Outdoor Learning",
+  "title": "Outdoor STEM Challenge Cards Volume 2",
+  "tagline": "24 new engineering challenges · Fair testing · Simple machines",
+  "ages": "Ages 6 to 14",
+  "goal": "24 brand-new outdoor building challenges, none repeated from Volume 1 (and you don't need Volume 1). Your kid makes rope from grass, launches pinecones, moves water uphill, catches the wind and moves a too-heavy rock with a stick, testing fairly and measuring every time.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
+    "Everyday things: string, cups, foil, rubber bands, a spoon"
+  ],
+  "lesson": {
+    "text": "Volume 2 is about fair testing: change one thing at a time, and measure. Then you know what made the difference.",
+    "before": "We tried a bunch of stuff and it went farther.",
+    "model": [
+      {
+        "part": "Question",
+        "line": "Does a longer launcher arm send the pinecone farther?"
+      },
+      {
+        "part": "Keep same",
+        "line": "Same pinecone, same pull, same spot on the ground."
+      },
+      {
+        "part": "Change",
+        "line": "Only the arm: a short stick, then a long one."
+      },
+      {
+        "part": "Measure",
+        "line": "Short arm: 4 steps. Long arm: 7 steps. Tried 3 times each."
+      }
+    ],
+    "modelNote": "That's card 5, Fair Test Flight. When your kid changes three things at once, ask: which one made the difference? Change one, and test again."
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "forces, angles, water flow, wind and simple machines"
+    },
+    {
+      "subject": "Engineering",
+      "text": "fair testing: one change at a time, then measure"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring distance, counting, timing, comparing and averaging results"
+    },
+    {
+      "subject": "Life skills",
+      "text": "patience, careful work, and learning from what fails"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You're the measurer and the fair-test referee: hold them to changing one thing at a time. Use only fallen materials, keep water challenges to puddles, basins or a sink, and take builds apart when you're done.",
+    "plan": [
+      {
+        "when": "Before you go",
+        "what": "Pick a theme, or 3 to 5 cards, and pack string, cups and foil."
+      },
+      {
+        "when": "Each card",
+        "what": "Plan, build, test, improve, measuring every try. About 15 to 30 minutes each."
+      },
+      {
+        "when": "Before you leave",
+        "what": "Note the best result, then take builds apart and leave the space as you found it."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They change everything at once",
+        "a": "Ask which one change made the difference. Then go back and change just that one thing."
+      },
+      {
+        "q": "Results are all over the place",
+        "a": "Test 3 times and use the middle result. Real scientists repeat tests too."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Fair testing",
+      "text": "changing one thing at a time"
+    },
+    {
+      "name": "Measuring",
+      "text": "turning 'better' into a number"
+    },
+    {
+      "name": "Simple machines",
+      "text": "levers, ramps and pulleys that make work easier"
+    },
+    {
+      "name": "Persistence",
+      "text": "improving a design try after try"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: do the challenge. Develop: add the Deeper part. Extend: test 3 times, write the results down, and explain what made the difference.",
+  "themes": [
+    {
+      "title": "Ropes and knots",
+      "cards": [
+        {
+          "name": "Rope Maker",
+          "t": "Twist dry grass or long leaves into a cord as long as your arm.",
+          "d": "Make a thicker cord. Which one holds more weight before snapping?",
+          "icon": "spline"
+        },
+        {
+          "name": "Lash It Tight",
+          "t": "Join two sticks into a solid X, using only string.",
+          "d": "Lash 3 sticks into a triangle. Why is it harder to bend?",
+          "icon": "cross"
+        },
+        {
+          "name": "The Hanging Test",
+          "t": "Tie a stick between two supports with a different knot on each end. Which knot slips first?",
+          "d": "Learn one real knot and test again. What made it stronger?",
+          "icon": "link"
+        },
+        {
+          "name": "The Carrier",
+          "t": "Weave string between two sticks to make a stretcher that carries a load of pinecones.",
+          "d": "How loose can the weave get before the load falls through?",
+          "icon": "package"
+        },
+        {
+          "name": "Pulley Lift",
+          "t": "Loop a string over a low, strong branch and use it to lift a small bag of stones.",
+          "d": "Is pulling down easier than lifting up? Why do you think so?",
+          "icon": "arrow-down-up"
+        }
+      ]
+    },
+    {
+      "title": "Launch and aim",
+      "cards": [
+        {
+          "name": "Fair Test Flight",
+          "t": "Build a simple launcher (sticks, a rubber band, a spoon). Launch the same object 5 times and measure each flight.",
+          "d": "Results different? Find what you accidentally changed, and fix it.",
+          "icon": "rocket"
+        },
+        {
+          "name": "Angle Hunter",
+          "t": "Launch at a low, a middle and a high angle. Which one sends your object farthest?",
+          "d": "Predict a new angle's distance before you launch. How close were you?",
+          "icon": "triangle-right"
+        },
+        {
+          "name": "Target Tuner",
+          "t": "Set a target two steps away. Adjust one thing at a time until you hit it 3 times in a row.",
+          "d": "Move the target farther. Which change moves the landing spot most?",
+          "icon": "crosshair"
+        },
+        {
+          "name": "Payload Problem",
+          "t": "Launch a light, a medium and a heavy object with the same pull. Measure all three.",
+          "d": "Find the heaviest object that still clears a one-step line.",
+          "icon": "weight"
+        },
+        {
+          "name": "Stone Skipper",
+          "t": "On calm, shallow water with a grown-up, find the stone shape that skips the most times.",
+          "d": "Change one thing (the throw angle, the stone, the speed). Which matters most?",
+          "icon": "waves"
+        }
+      ]
+    },
+    {
+      "title": "Move the water",
+      "cards": [
+        {
+          "name": "The Aqueduct",
+          "t": "Move water from one cup to another a step away without carrying it. Build a channel from foil, straws or bark.",
+          "d": "Rebuild it to spill less. Measure how much you lose.",
+          "icon": "glass-water"
+        },
+        {
+          "name": "Uphill Problem",
+          "t": "Now the empty cup sits higher. Move the water anyway, without carrying the cups.",
+          "d": "Time your ideas. Which moves the most water per minute?",
+          "icon": "trending-up"
+        },
+        {
+          "name": "Splitter",
+          "t": "Build one channel that fills two cups at once from a single pour.",
+          "d": "Make the split unfair on purpose: two thirds and one third.",
+          "icon": "git-fork"
+        },
+        {
+          "name": "The Leak Patrol",
+          "t": "A partner secretly adds 3 leaks to your channel. Find them and patch them all.",
+          "d": "Patch with a leaf, foil or mud. Which survives a second pour?",
+          "icon": "droplets"
+        },
+        {
+          "name": "Water Wheel",
+          "t": "Build a small wheel from a stick and leaves or spoons that spins when you pour water over it.",
+          "d": "Add more paddles, or fewer. Which spins fastest?",
+          "icon": "ferris-wheel"
+        }
+      ]
+    },
+    {
+      "title": "Catch the wind",
+      "cards": [
+        {
+          "name": "Slow Fall",
+          "t": "Build a parachute that doubles a pinecone's fall time from shoulder height.",
+          "d": "Test two canopy sizes. When does bigger stop helping?",
+          "icon": "circle-dashed"
+        },
+        {
+          "name": "Wind Spinner",
+          "t": "Build a paper spinner that turns in the wind without flying off its stick.",
+          "d": "Add cup-shaped blades and count turns in 10 seconds. That's an anemometer.",
+          "icon": "fan"
+        },
+        {
+          "name": "Sail Power",
+          "t": "Attach a sail to something that rolls or slides. Move it one step with wind or your breath.",
+          "d": "Race two sail shapes: tall and narrow against short and wide.",
+          "icon": "sailboat"
+        },
+        {
+          "name": "Wind Finder",
+          "t": "Build a wind vane: a light arrow on a stick that shows where the wind comes from.",
+          "d": "Check the direction 3 times today. Does your wind have a favourite?",
+          "icon": "compass"
+        },
+        {
+          "name": "Leaf Kite",
+          "t": "Tie a string to a big, sturdy leaf and get it to fly on a breezy day.",
+          "d": "Move where the string is tied. Which spot makes it fly highest?",
+          "icon": "wind"
+        }
+      ]
+    },
+    {
+      "title": "Simple machines",
+      "cards": [
+        {
+          "name": "Rock Mover",
+          "t": "Move a too-heavy rock with a stick lever over a pivot stone. Try the pivot near, then far.",
+          "d": "In the easy setup you push farther but lighter. That's the lever's trade.",
+          "icon": "move-up"
+        },
+        {
+          "name": "Ramp vs Lift",
+          "t": "Get a heavy stone onto a ledge two ways: lifted straight up, and rolled up a ramp.",
+          "d": "A short steep ramp or a long gentle one: what does the long one cost?",
+          "icon": "trending-up"
+        },
+        {
+          "name": "Two-Machine Combo",
+          "t": "Chain a ramp and a lever together. Move a stone through both in one go.",
+          "d": "Draw your machine and mark the push, the pivot and the load.",
+          "icon": "git-merge"
+        },
+        {
+          "name": "The Stick Scale",
+          "t": "Hang a stick by its middle with a cup on each end. Use your scale to compare two objects.",
+          "d": "Slide one cup inward so a light object balances a heavy one.",
+          "icon": "scale"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just ran real experiments.",
+    "text": "They built, tested, measured, and changed one thing at a time until they knew exactly what made the difference. Fair testing, forces and simple machines, learned with sticks, string and water.",
+    "celebrate": "Point to a number: 'Your long arm sent it 7 steps instead of 4.' Measuring their own improvement is what makes it stick.",
+    "extensions": [
+      "Pick the best design from each theme and run a family championship",
+      "Keep a results notebook: card, what changed, what you measured",
+      "Combine three machines into one long chain reaction",
+      "Try Volume 1 for 24 more challenges"
+    ]
+  },
+  "signs": [
+    "They change one thing at a time without being reminded",
+    "They measure instead of saying 'it's better'",
+    "They spot levers, ramps and pulleys in everyday life"
+  ],
+  "makeItReal": "Find a real job for a simple machine: move a heavy log with a lever, get a wheelbarrow up a step with a ramp, lift a bucket into a treehouse with a pulley. When the machine does real work, kids feel the physics.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/outdoor-stem-challenges-volume-2.jpg",
+    "alt": "Two girls digging a water channel in the sand at the edge of a lake",
+    "caption": "Move the water: a channel dug by hand, tested by the waves."
+  }
+}
