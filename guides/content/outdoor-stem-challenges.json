@@ -264,7 +264,7 @@
           "name": "Shadow Clock",
           "t": "Push a stick into the ground and mark where its shadow ends every 30 minutes.",
           "d": "Predict where the shadow will be in an hour, then check.",
-          "icon": "sundial"
+          "icon": "clock"
         }
       ]
     }
