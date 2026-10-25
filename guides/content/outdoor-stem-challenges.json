@@ -1,0 +1,257 @@
+{
+  "slug": "outdoor-stem-challenges",
+  "category": "Outdoor Learning",
+  "title": "Outdoor STEM Challenge Cards",
+  "tagline": "20 engineering challenges · Design · Testing",
+  "ages": "Ages 6 to 14",
+  "goal": "20 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, no supplies, and the first design is supposed to fail.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
+    "Optional: a phone for 'design photos' of each version"
+  ],
+  "lesson": {
+    "text": "Every challenge runs on the same engineering loop: plan it, build it, test it, improve it. The improving is where the real learning happens, so the first try failing is part of the plan.",
+    "before": "It fell down. It doesn't work.",
+    "model": [
+      {
+        "part": "Plan",
+        "line": "Two long sticks across the gap, with small sticks laid across them like a deck."
+      },
+      {
+        "part": "Build",
+        "line": "Built it in five minutes between two rocks."
+      },
+      {
+        "part": "Test",
+        "line": "It held 2 stones, then sagged in the middle."
+      },
+      {
+        "part": "Improve",
+        "line": "Added a flat rock under the middle as a support. Now it holds 5."
+      }
+    ],
+    "modelNote": "That's card 2, the Bridge Builder. When your kid says 'it doesn't work,' ask: what exactly failed, and what's one thing you could change?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "forces, materials, water flow, insulation and seed dispersal"
+    },
+    {
+      "subject": "Engineering",
+      "text": "the design loop: plan, build, test, improve"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring height, counting loads, comparing designs, and timing tests"
+    },
+    {
+      "subject": "Life skills",
+      "text": "persistence, learning from failure, and respecting nature"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You're the tester and the cheerleader: blow on the shelter, add stones to the bridge, and celebrate the redesign more than the first success. Use only fallen materials, never break living plants, and take builds apart when you're done.",
+    "plan": [
+      {
+        "when": "Before you go",
+        "what": "Pick 3 to 5 cards, or let your kid choose."
+      },
+      {
+        "when": "Each card",
+        "what": "Plan, build, test, improve. About 15 to 30 minutes each."
+      },
+      {
+        "when": "Before you leave",
+        "what": "Take a photo of the best design, then take it apart and leave the space as you found it."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They get frustrated when it falls apart",
+        "a": "Say it out loud: engineers expect the first version to fail. Then ask about one thing to change, not everything."
+      },
+      {
+        "q": "Water challenges feel risky",
+        "a": "Use a puddle, a dish of water or a dry channel. Never block a real stream, and stay close near water."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Design thinking",
+      "text": "planning before building"
+    },
+    {
+      "name": "Testing",
+      "text": "finding out exactly what fails"
+    },
+    {
+      "name": "Persistence",
+      "text": "improving after the first try fails"
+    },
+    {
+      "name": "Materials sense",
+      "text": "knowing what's strong, flexible, waterproof or warm"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: do the challenge. Develop: add the Deeper part. Extend: build two versions, test both, and explain which worked better and why.",
+  "themes": [
+    {
+      "title": "Build it",
+      "cards": [
+        {
+          "name": "Windproof Shelter",
+          "t": "Build a mini shelter that blocks wind, using only fallen sticks, leaves and rocks.",
+          "d": "Test it by gently blowing or fanning, then improve it twice."
+        },
+        {
+          "name": "Bridge Builder",
+          "t": "Build a bridge that spans a small gap between two rocks or logs.",
+          "d": "Make it hold 5 small stones without collapsing."
+        },
+        {
+          "name": "Tallest Tower",
+          "t": "Build the tallest free-standing tower you can using found items.",
+          "d": "It must survive a gentle 'wind test' for 5 seconds."
+        },
+        {
+          "name": "Habitat Builder",
+          "t": "Design a micro-habitat for an imaginary tiny creature, using found items.",
+          "d": "Include three features: shelter, a water plan, and a food plan."
+        }
+      ]
+    },
+    {
+      "title": "Float and flow",
+      "cards": [
+        {
+          "name": "Leaf Boat Engineer",
+          "t": "Design a 'boat' from leaves and sticks that floats in a puddle or a dish of water.",
+          "d": "Change one thing to make it float longer, and explain why it helped."
+        },
+        {
+          "name": "Raft Challenge",
+          "t": "Build a tiny raft that can carry 3 pebbles on water.",
+          "d": "Redesign it to carry 5 pebbles."
+        },
+        {
+          "name": "Erosion Barrier",
+          "t": "Make a small barrier that would slow down water flowing down a slope.",
+          "d": "Build two versions and decide which works better, and why."
+        },
+        {
+          "name": "Mini Dam",
+          "t": "Build a mini dam across a dry channel or between rocks. Never block a real stream.",
+          "d": "Explain how it would change the water's path if it rained."
+        }
+      ]
+    },
+    {
+      "title": "Test the materials",
+      "cards": [
+        {
+          "name": "Strong vs Flexible",
+          "t": "Find 3 materials that are strong and 3 that are flexible.",
+          "d": "Use both kinds to build something that's stable and bendy."
+        },
+        {
+          "name": "The Waterproof Test",
+          "t": "Find 3 natural surfaces that look waterproof and 3 that look absorbent.",
+          "d": "Predict what would happen if water hit each one, and why."
+        },
+        {
+          "name": "The Best Insulator",
+          "t": "Collect 3 'insulation' materials, like leaf litter, pine needles and dry grass, and choose the best.",
+          "d": "Explain what insulation does, and why your pick would trap warmth."
+        },
+        {
+          "name": "Sun vs Shade Lab",
+          "t": "Find a sunny spot and a shady spot, and compare: temperature, moisture, plants.",
+          "d": "Predict which spot will change faster over 30 minutes, and explain why."
+        }
+      ]
+    },
+    {
+      "title": "Forces and motion",
+      "cards": [
+        {
+          "name": "Marble Run, No Marbles",
+          "t": "Build a track with sticks, rocks and leaves that guides a round object (an acorn, a seed, a pebble) downhill.",
+          "d": "Add a turn, and keep it from falling off."
+        },
+        {
+          "name": "Nature Catapult",
+          "t": "Make a simple launcher with a flexible fallen stick.",
+          "d": "Make it launch farther without pushing harder: change the angle or the design."
+        },
+        {
+          "name": "Balance Beam",
+          "t": "Make a balance beam line on the ground with sticks or rocks, and walk it.",
+          "d": "Redesign it to be harder (narrower, with turns) while still safe."
+        },
+        {
+          "name": "Force Finder",
+          "t": "Find 5 examples of forces at work: gravity, wind, water, friction.",
+          "d": "For two of them, explain how the force changes the object over time."
+        },
+        {
+          "name": "Seed Dispersal Designer",
+          "t": "Find 3 seeds and predict how each one travels: wind, water or animals.",
+          "d": "Build a model seed from found materials that would travel best by wind."
+        }
+      ]
+    },
+    {
+      "title": "Design a system",
+      "cards": [
+        {
+          "name": "Sorting System Engineer",
+          "t": "Create a system that sorts found items into 3 categories: size, texture, colour or weight.",
+          "d": "Make a 'rule card' that explains your system clearly."
+        },
+        {
+          "name": "Nature Signal System",
+          "t": "Create a silent signal system with rocks and sticks: 3 symbols for start, stop and danger.",
+          "d": "Teach it to someone and test whether they understand."
+        },
+        {
+          "name": "Redesign Challenge",
+          "t": "Build something (a bridge, a tower, a shelter), test it, then improve it.",
+          "d": "Say it out loud: 'My first design failed because... I improved it by...'"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just thought like an engineer.",
+    "text": "They planned, built, watched it fail, figured out why, and made it better, with nothing but what they found on the ground. The design loop, forces and materials, learned the way engineers actually learn them.",
+    "celebrate": "Celebrate the redesign, not just the success: 'Your second bridge held more because you added that support.' That's the habit that matters.",
+    "extensions": [
+      "Do the same card in a new place with different materials",
+      "Photograph version 1 and version 2 side by side",
+      "Let your kid invent a new challenge card for you",
+      "Try the Redesign Challenge on something at home"
+    ]
+  },
+  "signs": [
+    "They expect the first try to fail and keep going",
+    "They change one thing at a time and test again",
+    "They explain why a design worked, not just that it did"
+  ],
+  "makeItReal": "Hold a family engineering challenge: everyone gets the same card and 15 minutes, then you test all the designs together. Kids love beating a grown-up's bridge, and explaining why theirs held more.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/outdoor-stem-challenges.jpg",
+    "alt": "A lean-to shelter built from fallen sticks against a tree in the forest",
+    "caption": "Card 1, full size: a shelter built from nothing but fallen sticks."
+  }
+}

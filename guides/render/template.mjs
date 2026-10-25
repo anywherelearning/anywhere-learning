@@ -176,7 +176,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
   <div class="cardgrid">${pg.map((c) => `
     <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span></div>
-      <p class="tct">${esc(c.t)}</p><p class="tcd"><b>Deeper</b> ${esc(c.d)}</p></div>`).join('')}
+      ${c.name ? `<h3 class="tcname">${esc(c.name)}</h3>` : ''}<p class="tct">${esc(c.t)}</p><p class="tcd"><b>Deeper</b> ${esc(c.d)}</p></div>`).join('')}
   </div>
   ${foot(`Cards ${pg[0].num} to ${pg[pg.length - 1].num}`)}
 </section>`).join('');
@@ -322,7 +322,8 @@ ul{list-style:none}
 .tcard{background:#fff;border:1.5px dashed rgba(58,44,23,.28);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tchead{display:flex;align-items:center;gap:8px}.tcnum{font:800 1.05em 'Bricolage Grotesque';color:#fff;background:var(--accent);border-radius:8px;min-width:30px;height:28px;display:grid;place-items:center;padding:0 6px}
 .tctheme{font:700 .68em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
+.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcname{margin:0;font:800 1.15em/1.2 'Bricolage Grotesque';color:var(--ink)}.tcname+.tct{font-weight:400}
+.tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
 .plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
