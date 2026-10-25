@@ -373,9 +373,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-stem-challenges-volume-2': {
     opening:
-      '20 brand-new outdoor STEM challenges, the sequel to Outdoor STEM Challenge Cards. Twist real rope from grass. Tune a launcher until it hits the target three times straight. Move water uphill. Weigh things on a balance scale made from a stick and string. Five themes of four challenges each, arranged easy to hard, all built from what you find outside and around the house.',
+      '24 brand-new outdoor STEM challenges, the sequel to Outdoor STEM Challenge Cards. Twist real rope from grass. Tune a launcher until it hits the target three times straight. Move water uphill. Weigh things on a balance scale made from a stick and string. Five themes of challenges, from easier to harder, all built from what you find outside and around the house.',
     whatsIncluded: [
-      '20 new outdoor STEM challenge cards',
+      '24 new outdoor STEM challenge cards',
       'Five themes, from rope-making to levers',
       'A Deeper extension on every card',
       'Found and household materials only',
@@ -384,7 +384,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
     insideTheLearning: {
       lead:
-        'Twenty new build-and-test challenges in five themes that go deeper than one-off builds: a child can pull one random card, or ride a whole theme from making rope to strength-testing the knots. Plan, build, test, improve, the same loop as the first deck, aimed at new physics.',
+        'Twenty-four new build-and-test challenges in five themes that go deeper than one-off builds: a child can pull one random card, or ride a whole theme from making rope to strength-testing the knots. Plan, build, test, improve, the same loop as the first deck, aimed at new physics.',
       skills: [
         { skill: 'STEM', where: 'The engineering loop across rope, launchers, water, wind, and levers' },
         { skill: 'Engineering', where: 'Cranes, aqueducts, wind vanes, and balance scales that have to actually work' },

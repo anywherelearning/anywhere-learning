@@ -248,15 +248,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Outdoor STEM Challenge Cards Volume 2",
     slug: "outdoor-stem-challenges-volume-2",
     description:
-      "20 brand-new outdoor STEM challenges in five themes: Cordage & Knots, Launch Lab, Water Works, Wind & Air, and Lever & Ramp. Twist real rope from grass. Tune a launcher until it hits the target. Move water uphill. Build a wind vane, a balance scale, and a chain of simple machines. Same grab-and-go format as the original deck, every build new.",
+      "24 brand-new outdoor STEM challenges in five themes: Ropes and Knots, Launch and Aim, Move the Water, Catch the Wind, and Simple Machines. Twist real rope from grass. Tune a launcher until it hits the target. Move water uphill. Build a water wheel, a wind vane, a balance scale, and a chain of simple machines. Same grab-and-go format as the original deck, every build new.",
     shortDescription:
-      "20 new outdoor STEM challenges for kids ages 6-14 in 5 themes: rope, launchers, water, wind, and levers. Low-prep.",
+      "24 new outdoor STEM challenges for kids ages 6-14 in 5 themes: rope, launchers, water, wind, and levers. Low-prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1U9u9kAkIBECpwGmRuZKppWT",
     blobUrl: "",
     imageUrl: "/products/outdoor-stem-challenges-volume-2.jpg",
-    previewFile: "Preview Outdoor STEM Challenge Cards - Volume 2.pdf",
+    previewFile: "Preview Outdoor STEM Challenge Cards - Volume 2 v3.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,
