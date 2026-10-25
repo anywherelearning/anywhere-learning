@@ -252,6 +252,10 @@
   "photo": {
     "src": "guides/assets/outdoor-stem-challenges.jpg",
     "alt": "A lean-to shelter built from fallen sticks against a tree in the forest",
-    "caption": "Card 1, full size: a shelter built from nothing but fallen sticks."
+    "caption": "Card 1, full size: my son's shelter in the woods near our house."
+  },
+  "fromHome": {
+    "text": "My son and a friend spent an afternoon in the woods in our neighbourhood building a shelter like this one, from nothing but fallen sticks leaned against a tree. Nobody gave them instructions: they figured out the angles, the support and what kept it standing by trying, failing and fixing it.",
+    "quotes": []
   }
 }
