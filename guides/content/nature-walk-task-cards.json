@@ -414,6 +414,10 @@
   "photo": {
     "src": "guides/assets/nature-walk-task-cards.jpg",
     "alt": "A boy on a forest trail holding out his hand with a small bird perched on it",
-    "caption": "Slow down on a walk, and nature comes closer."
+    "caption": "Mamie's trick: seeds on a flat palm, and stand very still."
+  },
+  "fromHome": {
+    "text": "On a walk, their grandmother taught my kids to feed chickadees by hand: seeds on a flat palm, arm out, and stand completely still. It only works if you slow right down and pay attention, which is exactly what these cards are for.",
+    "quotes": []
   }
 }
