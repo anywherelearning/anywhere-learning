@@ -1,0 +1,212 @@
+{
+  "slug": "square-foot-safari",
+  "category": "Outdoor Learning",
+  "title": "Square Foot Safari",
+  "tagline": "Observation · Field notes · Life in one small patch",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks one small square of ground and gets to know it the way a field scientist would. Not a quick glance: a real study. They stay with one tiny patch long enough to notice what actually lives there, count it, sketch it, and come back to see what changed. Scientists call this a quadrat study, and kids discover that 'boring' ground is quietly full of life.",
+  "need": [
+    "String or four sticks to mark a square, and a ruler",
+    "A notebook, a pencil, and a magnifying glass (a phone zoom works)",
+    "A backyard, park, trail edge, or even a crack in the sidewalk"
+  ],
+  "lesson": {
+    "text": "Field scientists keep notes so anyone could picture what they saw. A good field note has the date and place, what was counted, and one detail that stood out.",
+    "before": "There were some bugs and grass.",
+    "model": [
+      {
+        "part": "Where",
+        "line": "October 25, by the back fence, in partial shade."
+      },
+      {
+        "part": "Count",
+        "line": "3 ants, 1 beetle, 2 kinds of grass, 1 clover, a tiny white mushroom."
+      },
+      {
+        "part": "Detail",
+        "line": "Under the flat rock: a pill bug that rolled into a ball when I touched it."
+      },
+      {
+        "part": "Wonder",
+        "line": "Why are all the ants walking toward the fence?"
+      }
+    ],
+    "modelNote": "Same square, but now a scientist could picture it. When notes say 'some bugs,' ask: how many, which kinds, and where?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "habitats, biodiversity, and how field scientists sample and compare"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring a square, tallying, and comparing counts over time"
+    },
+    {
+      "subject": "Writing & drawing",
+      "text": "field notes and observational sketches drawn from looking, not memory"
+    },
+    {
+      "subject": "Life skills",
+      "text": "patience, slowing down, and noticing what others walk past"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You're not the tour guide: hand them the square and let them be the scientist. When they ask 'what is that?', try 'what do you notice about it?' first.",
+    "plan": [
+      {
+        "when": "10 minutes",
+        "what": "The micro-hike warm-up, then mark the square (Step 1)."
+      },
+      {
+        "when": "30 minutes",
+        "what": "The first look, going in close, and field notes (Steps 2 to 4)."
+      },
+      {
+        "when": "Another day",
+        "what": "Come back and compare (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They say 'there's nothing here'",
+        "a": "Ask them to find five more things. There always are. The good stuff shows up around minute three or four, not minute one."
+      },
+      {
+        "q": "They're squeamish about bugs",
+        "a": "'You don't have to touch it, just watch it' is a fine rule. Watching counts."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "noticing small details instead of skimming past"
+    },
+    {
+      "name": "Sampling",
+      "text": "studying one small area closely, like real field scientists"
+    },
+    {
+      "name": "Recording",
+      "text": "field notes and sketches that someone else could picture"
+    },
+    {
+      "name": "Wonder",
+      "text": "discovering that ordinary ground is full of life"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Take a micro-hike",
+      "why": "A tiny adventure for a tiny explorer, then the square gets marked.",
+      "kid": "Your kid lays a 1-metre piece of string on the ground and 'hikes' along it with a magnifying glass, imagining they're as small as an ant. What mountains, forests and creatures do they meet on the way? Then they choose their own patch, about one foot by one foot, and mark the four corners with sticks, string or small rocks.",
+      "you": "Play along with the micro-hike ('a giant boulder ahead!'). Then let them pick the square, even if it's not the spot you'd choose. A spot near a tree, a fence, or a damp corner is usually busier.",
+      "ask": [
+        "What was the biggest 'mountain' on your micro-hike?",
+        "Why did you pick this spot? What do you think lives here?"
+      ],
+      "tip": "The first square often looks boring. That just means nobody has looked closely yet.",
+      "levels": {
+        "explore": "Do the micro-hike, then mark a rough square with sticks or rocks.",
+        "develop": "Measure a one-foot square and mark all four corners.",
+        "extend": "Mark two squares in different spots, one sunny and one shady, to compare."
+      }
+    },
+    {
+      "title": "The first look",
+      "why": "Your kid gets low and notices everything, without touching yet.",
+      "kid": "Your kid gets right down at ground level and just looks for a few minutes. No touching, no digging yet. At first they see grass and dirt. Then their eyes adjust: an ant, a tiny sprout, a spider thread. They count out loud how many different kinds of living things they can find.",
+      "you": "Stay quiet and let their eyes adjust to small things. If they say there's nothing, ask them to find five more.",
+      "ask": [
+        "What did you see later that you missed at first?",
+        "What's the smallest living thing you can find?"
+      ],
+      "tip": "The longer they look, the more appears. That shift is the whole magic, and it only happens if they stay still long enough.",
+      "levels": {
+        "explore": "Count three living things.",
+        "develop": "Count every different kind you can find.",
+        "extend": "Count the kinds and estimate how many of each fill the whole square."
+      }
+    },
+    {
+      "title": "Go in close",
+      "why": "Now they touch, gently, like a field scientist.",
+      "kid": "Your kid investigates hands-on: parts the grass and looks at the soil, gently turns over a leaf, rock or stick, zooms in on one small thing, and loosens the top of the soil with a stick to see what moves. Then they put everything back the way they found it.",
+      "you": "Let them dig and poke, and help only if asked. Remind them a good scientist leaves the habitat as they found it.",
+      "ask": [
+        "What did you find underneath something?",
+        "Is it different on top of the rock and underneath it? Why?"
+      ],
+      "tip": "Damp, dark spots hide the most life. The underside of a rock is a different world from the top.",
+      "levels": {
+        "explore": "Turn over one thing and see what's under it.",
+        "develop": "Look at all the layers: top, grass, and soil.",
+        "extend": "Notice how the living things in each layer are different, and guess why."
+      }
+    },
+    {
+      "title": "Keep field notes",
+      "why": "Your kid records what they found, like a real scientist.",
+      "kid": "Your kid writes a field note like the example at the start: the date and spot, a sketch of the square drawn from looking (not from memory), a tally of what they found, and one thing they wonder about.",
+      "you": "Treat the notes like they matter, because they do. The sketch doesn't need to be pretty. Drawing makes them look harder: they'll spot things they missed while just looking.",
+      "ask": [
+        "Could a scientist picture your square from your notes?",
+        "What do you wonder about this square?"
+      ],
+      "tip": "Keep all the notes in one notebook. When they come back, the comparison is where the science gets real.",
+      "levels": {
+        "explore": "Draw the square and label two things.",
+        "develop": "Write a full entry with a sketch, a tally, and a note.",
+        "extend": "Add a guess about why certain things live where they do."
+      }
+    },
+    {
+      "title": "Come back and compare",
+      "why": "One study is a snapshot. The science happens when you return.",
+      "kid": "Your kid visits the same square again: after rain, a week later, or in a new season. They take fresh notes, then compare. More bugs or fewer? Did something new grow? Is the same ant trail there? They become the only person who knows that patch of ground that well.",
+      "you": "Help them remember to come back (a reminder on the calendar works). The comparison is where the science gets real.",
+      "ask": [
+        "What changed since last time, and why do you think so?",
+        "What do you predict your square will look like next season?"
+      ],
+      "tip": "Try a visit right after rain. Squares come alive when the ground is wet.",
+      "levels": {
+        "explore": "Visit once more and notice one change.",
+        "develop": "Write a second set of notes and compare them to the first.",
+        "extend": "Study the same square across a season and sum up what changed, with your tallies."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just did what real field scientists do.",
+    "text": "They picked one small piece of the world, studied it closely, recorded what they found, and watched it change. Observation, sampling and field notes, done in your own backyard.",
+    "celebrate": "Point out the patience: they stayed with one tiny patch long enough for it to reveal itself. Paying close attention is its own kind of superpower.",
+    "extensions": [
+      "Mark new squares in new places as the seasons turn",
+      "Run two squares side by side, one in sun and one in shade",
+      "Do a square at the beach, in a forest, or on a trip, and compare",
+      "Try a night safari with a flashlight"
+    ]
+  },
+  "signs": [
+    "They crouch down to look at the ground on walks",
+    "They count and describe instead of saying 'some bugs'",
+    "They ask why things live where they do"
+  ],
+  "makeItReal": "Join a real citizen science project: apps like iNaturalist let kids photograph what they find, get help identifying it, and add it to data real scientists use. Their backyard square becomes part of a real study.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/square-foot-safari.jpg",
+    "alt": "Two kids crouched over a small patch of sand, looking closely",
+    "caption": "One small patch, looked at closely."
+  }
+}

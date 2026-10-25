@@ -1,0 +1,220 @@
+{
+  "slug": "camouflage-challenge",
+  "category": "Outdoor Learning",
+  "title": "Camouflage Challenge",
+  "tagline": "Observation · Fair testing · How animals survive",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid hides natural objects in plain sight, times how long you take to find each one, and works out the real rules of camouflage: the same survival trick a moth on bark or a frog in the leaves uses every day. It looks like a hiding game. Underneath, it's a real experiment with a stopwatch, a fair test and a rule built from evidence.",
+  "need": [
+    "3 to 5 small natural objects: a leaf, a stick, a pebble, a pinecone",
+    "An outdoor spot with a few different backgrounds: grass, dirt, bark, leaves",
+    "A timer (a phone works)"
+  ],
+  "lesson": {
+    "text": "Camouflage isn't about hiding behind something. It's about matching: the colour, the texture and the edges blend into the background, so the eye slides right past. A good observation says what, where, how long, and why.",
+    "before": "The leaf was hard to find.",
+    "model": [
+      {
+        "part": "What",
+        "line": "A small green leaf."
+      },
+      {
+        "part": "Where",
+        "line": "Lying flat on green grass, not covered."
+      },
+      {
+        "part": "Time",
+        "line": "Found after 42 seconds."
+      },
+      {
+        "part": "Why",
+        "line": "Same green as the grass, and its pointy edges disappeared between the blades."
+      }
+    ],
+    "modelNote": "Same leaf, but now it's evidence. When your kid says 'that one was hard,' ask: how long did it take, and why?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "adaptation, predators and prey, and running a fair test"
+    },
+    {
+      "subject": "Math",
+      "text": "timing with a stopwatch, comparing and ranking results"
+    },
+    {
+      "subject": "Writing",
+      "text": "recording observations and stating a rule from evidence"
+    },
+    {
+      "subject": "Life skills",
+      "text": "slowing down, noticing details, and backing up a claim"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You play the predator: the one who searches. Your kid runs the experiment, hides, times and explains.",
+    "plan": [
+      {
+        "when": "10 minutes",
+        "what": "The predator warm-up, then gather objects (Step 1)."
+      },
+      {
+        "when": "30 minutes",
+        "what": "Hide, time, then test the backgrounds (Steps 2 to 4)."
+      },
+      {
+        "when": "10 minutes",
+        "what": "Write the rule, then hunt for real camouflage (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "You find everything instantly",
+        "a": "Ask them to match more carefully: same colour AND same texture. A grey pebble on grey gravel beats a grey pebble on grass."
+      },
+      {
+        "q": "They want to bury things",
+        "a": "That's hiding, not camouflage. The rule is: in plain sight, nothing covered. That's what makes it science."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "catching colour, pattern and texture"
+    },
+    {
+      "name": "Fair testing",
+      "text": "changing one thing to see what matters"
+    },
+    {
+      "name": "Evidence",
+      "text": "building a rule from what they tested"
+    },
+    {
+      "name": "Adaptation",
+      "text": "understanding a real survival trick"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Be the prey for a minute",
+      "why": "You hide things for them first, then they gather their own test objects.",
+      "kid": "While your kid closes their eyes, you place 3 everyday things in plain sight outside (a green sock on the lawn, a brown pencil on the deck). They get 60 seconds to find them all. Which one was hardest, and why? Then they talk about animals that do this for real, and collect 3 to 5 small natural objects in different colours and textures for their own test.",
+      "you": "Hide the warm-up items on purpose: one that matches its background well and one that doesn't. Then help them think of camouflaged animals (a moth on bark, a frog in leaves, a snowshoe hare in winter), and let them pick their objects.",
+      "starters": [
+        "A green leaf",
+        "A brown stick",
+        "A grey pebble",
+        "A pinecone",
+        "A piece of bark",
+        "A pale flower"
+      ],
+      "ask": [
+        "Which of my items was hardest to find? Why?",
+        "Why would being hard to see keep an animal alive?"
+      ],
+      "tip": "Pick objects with different colours and textures. It makes the tests much more interesting later.",
+      "levels": {
+        "explore": "Play the warm-up, name one camouflaged animal, and gather 3 objects.",
+        "develop": "Explain why hiding helps an animal survive, and gather 5 objects in different colours.",
+        "extend": "Gather objects that each match a different background, and predict which will hide best."
+      }
+    },
+    {
+      "title": "Hide them in plain sight",
+      "why": "Your kid places each object where it blends in, without covering anything.",
+      "kid": "Your kid places each object somewhere it blends in on purpose: a grey pebble on grey gravel, a brown stick among brown leaves. Nothing is buried or covered. The trick is the matching background, and they predict which one will be hardest to find.",
+      "you": "Look away while they hide. Encourage the sneaky-obvious hides: fully in view, but matched so well your eyes slide right past.",
+      "ask": [
+        "Which background will make this object hardest to see?",
+        "Why do you think that spot will work?"
+      ],
+      "tip": "This is the opposite of hide-and-seek. Right in front of your eyes and still nearly invisible is exactly what real camouflage does.",
+      "levels": {
+        "explore": "Hide 3 objects in plain sight.",
+        "develop": "Match each object carefully to its background.",
+        "extend": "Hide them, then predict and write down the order you think they'll be found in."
+      }
+    },
+    {
+      "title": "Run the finding test",
+      "why": "You search, they time it, and the game becomes data.",
+      "kid": "Your kid times how long you take to find each object, and writes the times down. Then they look at the results and work out why some hid better: was it the colour, the texture, the shape breaking up against the background? They write it like the example: what, where, time, why.",
+      "you": "Be the seeker, and search honestly. Watching a grown-up struggle to find something that's right there is both hilarious and a real lightbulb moment.",
+      "ask": [
+        "Which object took longest? Which did I find instantly?",
+        "Was it the colour, the shape, or the texture that hid it?"
+      ],
+      "tip": "Set a limit, like 2 minutes per object. If you don't find it, write 'over 2 minutes' and call it a big win for camouflage.",
+      "levels": {
+        "explore": "Find the objects and notice which took longest.",
+        "develop": "Time each object and compare the results.",
+        "extend": "Rank the objects from best to worst hidden, with a reason for each."
+      }
+    },
+    {
+      "title": "Test the backgrounds",
+      "why": "A fair test: same object, different background.",
+      "kid": "Your kid takes one object, say a green leaf, and places it on two very different backgrounds: green grass, then brown dirt. Same object, same distance, only the background changes. You search again while they time it. Where does it disappear, and where does it stand out?",
+      "you": "Help keep everything the same except the background: same object, same distance from you, same search rules. That's what makes it a fair test.",
+      "ask": [
+        "Where did it disappear more? What changed?",
+        "What does that tell you about camouflage?"
+      ],
+      "tip": "This is the big moment: the same leaf is invisible in one spot and obvious in another. Camouflage is about the match, not the object.",
+      "levels": {
+        "explore": "Try one object on two backgrounds.",
+        "develop": "Test two objects across different backgrounds and compare the times.",
+        "extend": "Test enough times to be sure the background is what matters, and make a small results table."
+      }
+    },
+    {
+      "title": "Make the rule and find it in the wild",
+      "why": "Your kid turns the evidence into a rule, then spots real camouflage outside.",
+      "kid": "From everything they tested, your kid writes one simple rule, like 'an animal is hardest to see when its colour and texture match its background.' They set up one new test to prove it. Then you go on a hunt for real camouflage: a moth on bark, a spider on a leaf, a bird against the ground.",
+      "you": "Treat their rule like a real scientific finding. Then head out on the hunt together. Their new eyes will catch things you've both walked past a hundred times.",
+      "ask": [
+        "What's your camouflage rule, in one sentence?",
+        "Now that you know the trick, what can you spot outside?"
+      ],
+      "tip": "Once a kid builds the rule themselves, they can't un-see it. Camouflaged creatures start popping out everywhere.",
+      "levels": {
+        "explore": "Say one thing that makes camouflage work, and spot one camouflaged thing outside.",
+        "develop": "Write a full rule and prove it with one fresh test.",
+        "extend": "Write a rule that covers colour, texture and staying still, prove it, and find three real examples."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just proved how one of nature's best survival tricks works.",
+    "text": "They observed, measured with a stopwatch, ran a fair test and built a rule from their own evidence. That's the real scientific method, played as a game in the backyard.",
+    "celebrate": "Point out what they did: they didn't just learn a fact about camouflage, they discovered the rule themselves and proved it.",
+    "extensions": [
+      "Design the ultimate camouflaged object for a new background",
+      "Hunt for camouflaged creatures on your next walk and keep a list",
+      "Look up an animal that changes colour, like an octopus or a chameleon",
+      "Try the test in a new season, when the backgrounds change"
+    ]
+  },
+  "signs": [
+    "They spot camouflaged insects and birds on walks",
+    "They ask 'how long?' and 'why?' instead of just 'was it hard?'",
+    "They describe things by colour, texture and shape"
+  ],
+  "makeItReal": "Take the hunt somewhere new: a forest trail, the beach, a garden centre. Keep a running list of every camouflaged creature you find together, with where you found it. By the end of the season, it's a real field record.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/camouflage-challenge.jpg",
+    "alt": "A boy bent over the edge of a pond, searching the water",
+    "caption": "Look closely: the best hiders are right in front of you."
+  }
+}

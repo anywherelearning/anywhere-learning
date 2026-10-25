@@ -1,0 +1,221 @@
+{
+  "slug": "seed-travelers",
+  "category": "Outdoor Learning",
+  "title": "Seed Travelers",
+  "tagline": "Classification · Testing · How plants adapt",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid collects seeds and pods from outside and solves a small mystery hiding in each one: how does this thing travel? Plants can't walk, so every seed has a trick for getting away from its parent and finding a new place to grow. Some fly, some float, some hitch a ride, some just drop. Once a kid can read those tricks, a handful of seeds turns into a set of tiny inventions, each one a solution to the same problem.",
+  "need": [
+    "A handful of different seeds or pods: maple keys, burrs, acorns, dandelion puffs, dry grass heads",
+    "An old sock or fuzzy sweater, and a bowl of water",
+    "A notebook, and a yard, park or trail where things grow"
+  ],
+  "lesson": {
+    "text": "The shape of a seed almost always tells you how it moves. The skill is reading a feature, guessing its job, then testing it.",
+    "before": "This seed is weird.",
+    "model": [
+      {
+        "part": "Feature",
+        "line": "This maple key has a thin, papery wing on one side."
+      },
+      {
+        "part": "Guess",
+        "line": "I think it travels by wind."
+      },
+      {
+        "part": "Test",
+        "line": "Dropped from shoulder height, it spun like a helicopter and drifted a metre away."
+      },
+      {
+        "part": "So",
+        "line": "The wing slows the fall, so the wind can carry it away from the tree."
+      }
+    ],
+    "modelNote": "Same seed, but now it's a discovery. When your kid says 'it's weird,' ask: what feature do you see, and what might it be for?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "seed dispersal, adaptation, and testing a prediction"
+    },
+    {
+      "subject": "Math",
+      "text": "sorting into groups, measuring drop distance, and ranking results"
+    },
+    {
+      "subject": "Engineering",
+      "text": "design trade-offs, and inventing a seed of their own"
+    },
+    {
+      "subject": "Life skills",
+      "text": "noticing what's underfoot, and asking 'what is this built for?'"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed, and nobody needs to know the plant names. You hand over the seeds; they do the detective work. How it travels is the whole question.",
+    "plan": [
+      {
+        "when": "First hour",
+        "what": "The helicopter warm-up, the seed hunt, look closely and guess (Steps 1 and 2)."
+      },
+      {
+        "when": "Second hour",
+        "what": "Sort them, then test the fliers, stickers and floaters (Steps 3 and 4)."
+      },
+      {
+        "when": "After a break",
+        "what": "Design the ultimate travelling seed (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "There aren't many seeds around",
+        "a": "Try the kitchen too: a dried bean, a sunflower seed, an apple seed, a strawberry. Fall is the best season for a seed hunt."
+      },
+      {
+        "q": "A seed fits two groups",
+        "a": "That's worth talking about. Test it both ways and let the result decide."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Classification",
+      "text": "sorting things by what they do, not just how they look"
+    },
+    {
+      "name": "Prediction",
+      "text": "making a guess, then proving or fixing it"
+    },
+    {
+      "name": "Observation",
+      "text": "reading the shape of a thing for clues"
+    },
+    {
+      "name": "Adaptation",
+      "text": "seeing how a shape solves a survival problem"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Fly a paper helicopter",
+      "why": "A quick spinning toy, then the hunt for real seeds that do the same.",
+      "kid": "Cut a strip of paper, split the top into two flaps, fold them opposite ways and drop it from up high: it spins down slowly. That's exactly what a maple key does. Then head outside and gather 5 to 10 different seeds or pods. The more different, the better: a spinning maple key, a sticky burr, a heavy acorn, a fluffy dandelion.",
+      "you": "Help make the helicopter, then steer them toward variety on the hunt and let them lead. Seeds are everywhere once you look: in cracks, under trees, stuck to your own socks.",
+      "starters": [
+        "Maple keys",
+        "Burrs",
+        "Acorns",
+        "Dandelion puffs",
+        "Pine cone seeds",
+        "Grass heads"
+      ],
+      "ask": [
+        "Why did the paper helicopter fall so slowly?",
+        "Which seed looks the strangest, and why might it be shaped like that?"
+      ],
+      "tip": "Check your socks after walking through tall grass. Your kid will find seeds that hitched a ride on them.",
+      "levels": {
+        "explore": "Fly the helicopter, then collect 3 or 4 different seeds.",
+        "develop": "Collect 5 to 10 seeds with different shapes.",
+        "extend": "Collect a big mix, including a few that puzzle you."
+      }
+    },
+    {
+      "title": "Look closely and guess",
+      "why": "Your kid reads each seed's features and predicts how it travels.",
+      "kid": "Your kid examines each seed: is it light or heavy? Does it have wings, hooks, fluff or a hard shell? Then, like the maple key example, they guess how each one travels: on the wind, on water, on an animal, or just by dropping. They write the guesses down.",
+      "you": "Ask what they see, not what it's called. Take every guess seriously, right or wrong: the tests will check them. A magnifying glass or your phone's zoom helps.",
+      "ask": [
+        "Does it have anything that looks built for a job?",
+        "Does this look like it could fly, or is it too heavy?"
+      ],
+      "tip": "They'll be unsure about some, and that's perfect. The uncertain seeds are exactly the ones worth testing.",
+      "levels": {
+        "explore": "Describe two features on one seed, and guess wind or drop.",
+        "develop": "Note a feature on each seed, and guess between all four travel types.",
+        "extend": "Match each feature to a guess, and explain the reasoning."
+      }
+    },
+    {
+      "title": "Sort the travellers",
+      "why": "Your kid groups the seeds by how they travel.",
+      "kid": "Your kid lays the seeds out and sorts them into piles: wind travellers, water travellers, animal hitchhikers, and droppers. Some might fit two piles, and that's worth talking about.",
+      "you": "Let them build the groups their own way, then ask them to defend a few choices. This is real classification: grouping by what something does, not what it looks like.",
+      "ask": [
+        "Which seeds belong together, and why?",
+        "Are there any that could go in two groups?"
+      ],
+      "tip": "Flag the seeds they're unsure about. Those go first in the tests.",
+      "levels": {
+        "explore": "Sort into wind versus drop.",
+        "develop": "Sort into all four groups.",
+        "extend": "Sort, then flag the ones you're unsure about to test first."
+      }
+    },
+    {
+      "title": "Test them",
+      "why": "Drop, stick and float: proving the guesses.",
+      "kid": "Your kid tests each group. Fliers: drop each one from the same height and watch whether it spins and drifts or plops straight down. Hitchhikers: brush each against an old sock and see if it grabs on. Floaters: drop each into a bowl of water. They mark which guesses were right and fix the wrong ones.",
+      "you": "Help set a fair drop (same height for every seed) and set up the sock and the water bowl. A gentle puff of breath or a fan makes the wind test even clearer.",
+      "ask": [
+        "Did it spin and drift, or drop straight down?",
+        "Did it stick to the sock? Did it float?"
+      ],
+      "tip": "A wrong guess that gets corrected teaches more than a lucky right one. Celebrate both.",
+      "levels": {
+        "explore": "Drop one seed and try the sock test with another.",
+        "develop": "Test a few seeds in all three tests and compare.",
+        "extend": "Measure how far each flier drifts, and fix every wrong guess from before."
+      }
+    },
+    {
+      "title": "Design the ultimate seed",
+      "why": "Your kid ranks the travellers, then invents a seed of their own.",
+      "kid": "Your kid picks the best traveller and says why, using what they saw in the tests. Then the deeper question: is there a perfect seed? A sticky seed rides an animal for miles but can't fly. A fluffy seed flies beautifully but goes nowhere on a still day. Finally, they design their own seed: draw it, name it, explain how it travels, and name its one weakness.",
+      "you": "Push their thinking with 'what does it give up?' Treat the design like a real piece of engineering.",
+      "ask": [
+        "What does your best traveller give up to be so good at it?",
+        "Where would your invented seed struggle?"
+      ],
+      "tip": "Realising there's no perfect seed, only seeds that are great at one kind of travel, is a surprisingly grown-up idea.",
+      "levels": {
+        "explore": "Pick the best traveller, then draw a seed and say how it moves.",
+        "develop": "Rank several with reasons, then design a seed that borrows two real features.",
+        "extend": "Explain each top seed's trade-off, then design, name and test a paper model of your seed."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Seeds decoded.",
+    "text": "Your kid just found the hidden engineering in something most people crunch underfoot. A burr isn't annoying, it's brilliant. A maple key isn't litter, it's a tiny helicopter. Classification, prediction and testing, plus a way of looking: seeing a shape and asking what problem it solves.",
+    "celebrate": "Point out the question they can now ask about anything: what is this built for? It works on seeds, on tools, on nearly anything.",
+    "extensions": [
+      "Go on a seed hunt in a different season and compare",
+      "Plant a few of the seeds and see which ones grow",
+      "Count the hitchhikers on your clothes after a walk through tall grass",
+      "Build a paper seed and see how far you can make it fly"
+    ]
+  },
+  "signs": [
+    "They pick up seeds on walks and guess how they travel",
+    "They group things by what they do, not just how they look",
+    "They ask 'what is this shape for?'"
+  ],
+  "makeItReal": "Plant the seeds you collected in labelled pots and see which ones actually grow, and where. It turns a handful of things from the ground into a real experiment with a result in a few weeks.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/seed-travelers.jpg",
+    "alt": "A girl perched in a tree on a forest trail",
+    "caption": "Every tree started as a seed that travelled.",
+    "tall": true
+  }
+}

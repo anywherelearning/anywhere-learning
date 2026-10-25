@@ -1,0 +1,212 @@
+{
+  "slug": "decomposition-detective",
+  "category": "Outdoor Learning",
+  "title": "Decomposition Detective",
+  "tagline": "Observation over time · Fair testing · Nature's recycling",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid fills a jar with leaves and soil, sets it outside, and turns detective on a mystery that plays out over weeks: what is quietly making these leaves disappear, and why? They record what changes, meet the tiny decomposers doing the work, and run a fair test to find out what speeds it up. By the end, they've seen with their own eyes how a dead leaf becomes the soil that grows the next one.",
+  "need": [
+    "Two clear jars or containers",
+    "A handful of leaves, a pinch of soil from outside, and a little water",
+    "A shaded outdoor spot or windowsill, and a notebook"
+  ],
+  "lesson": {
+    "text": "Decomposition is slow, so the skill is noticing small changes over time. A good observation is dated, specific, and compares to last time.",
+    "before": "The leaves look different.",
+    "model": [
+      {
+        "part": "Date",
+        "line": "Day 10."
+      },
+      {
+        "part": "Look",
+        "line": "The leaves are darker brown, and two have holes in them."
+      },
+      {
+        "part": "Touch",
+        "line": "They feel soft and floppy, not crunchy."
+      },
+      {
+        "part": "Compared",
+        "line": "Since Day 5: white fuzz has appeared on the bottom leaf."
+      }
+    ],
+    "modelNote": "Same jar, but now there's a record of change. When an entry just says 'different,' ask: different how, and since when?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "decomposers, nutrient cycles, and running a fair test"
+    },
+    {
+      "subject": "Math",
+      "text": "counting days, comparing two conditions, and tracking change over time"
+    },
+    {
+      "subject": "Writing",
+      "text": "dated observation notes, sketches with labels, and a findings report"
+    },
+    {
+      "subject": "Life skills",
+      "text": "patience, follow-through, and checking on something day after day"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You guard the patience; your kid does the watching. Build it, leave it alone, and look a few times a week.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "The rot-or-not sort, build the jar, record Day One (Steps 1 and 2). 30 minutes."
+      },
+      {
+        "when": "Weeks 1 to 4",
+        "what": "Look 2 or 3 times a week, and set up the fair test (Steps 3 and 4). 5 minutes each."
+      },
+      {
+        "when": "The end",
+        "what": "Close the case and report the findings (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nothing is happening",
+        "a": "Normal for the first week. Check it's damp (not wet) and not sealed tight. Around week two, things speed up."
+      },
+      {
+        "q": "It smells bad",
+        "a": "Too wet or sealed. Open it up, add a few dry leaves, and give it air. Decomposers need to breathe too."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "noticing slow, small changes over weeks"
+    },
+    {
+      "name": "Cause and effect",
+      "text": "linking moisture, air and decomposers to what happens"
+    },
+    {
+      "name": "Fair testing",
+      "text": "changing one thing at a time and comparing"
+    },
+    {
+      "name": "Patience",
+      "text": "sticking with a project that rewards you slowly"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Sort rot or not",
+      "why": "A quick prediction game, then the jar gets built.",
+      "kid": "Gather a few small things: a leaf, a scrap of paper, a bit of apple, a plastic bottle cap, a pebble. Your kid sorts them into two piles, 'nature will break it down' and 'it won't,' and says why. Then they build the time capsule: a clear jar with a handful of leaves, a pinch of outdoor soil and a splash of water, damp but not soaking, loosely covered so it can breathe.",
+      "you": "Ask why for each guess, and don't mark anything wrong yet: they'll check later. Help with the jar, then hand it fully to them. Put it somewhere shaded where they'll remember to look.",
+      "ask": [
+        "Which of these do you think nature can break down?",
+        "Why do you think we added soil, and not just leaves?"
+      ],
+      "tip": "The soil is the secret ingredient. It carries the tiny living things that do the breaking down.",
+      "levels": {
+        "explore": "Sort 3 objects, then build one simple jar.",
+        "develop": "Sort 6 objects with a reason each, then build and label the jar.",
+        "extend": "Rank the objects from fastest to slowest to break down, then build two jars for a test later."
+      }
+    },
+    {
+      "title": "Record Day One",
+      "why": "Your kid captures the starting point, before anything changes.",
+      "kid": "Your kid draws the jar exactly as it looks today and writes a few words on the colour, size and feel of the leaves. This is the 'before' every experiment needs. Without it, they can't prove anything changed.",
+      "you": "Treat this first record like real scientific data. Date it. It feels dull because nothing has happened yet, and that's exactly why it matters.",
+      "ask": [
+        "What colour and size are the leaves right now?",
+        "Soft or crunchy? Wet or dry?"
+      ],
+      "tip": "A photo of the jar on Day One, next to the drawing, makes the final comparison really satisfying.",
+      "levels": {
+        "explore": "A quick Day One sketch.",
+        "develop": "A sketch plus a written description.",
+        "extend": "A labelled drawing detailed enough to compare against, plus a photo."
+      }
+    },
+    {
+      "title": "Watch it change",
+      "why": "Two or three times a week, your kid records what's different.",
+      "kid": "Your kid checks the jar a few times a week and writes a dated entry like the example: what it looks like, how the leaves feel, and what changed since last time. The leaves darken, soften, shrink and slowly turn toward soil. When a week barely changes, they write that too.",
+      "you": "Help them remember (a note on the fridge works). Before each look, ask them to predict what they'll find. Then introduce the culprits: decomposers, tiny fungi, bacteria and bugs eating the leaves and turning them into nutrients for plants.",
+      "ask": [
+        "What looks different from last time? What stayed the same?",
+        "Who do you think is doing the work in this jar?"
+      ],
+      "tip": "In science, 'no visible change' is real data, not a failure. Around week two, the changes usually speed up.",
+      "levels": {
+        "explore": "Notice one change after a week.",
+        "develop": "Record dated changes across several weeks, using the word decomposer.",
+        "extend": "Track the changes and explain the whole chain: leaf, decomposers, soil, the next plant."
+      }
+    },
+    {
+      "title": "Run the fair test",
+      "why": "Two jars, one difference, and a real question.",
+      "kid": "Your kid sets up two jars that are the same except for one thing. Moisture is a great first test: Jar A dry, Jar B damp. Or they pick their own: warm versus cool, torn leaves versus whole. They predict which will break down faster, then compare the two jars each time they look.",
+      "you": "Hold them to changing just one thing. Let their prediction lead the test, even if it's not the one you'd pick.",
+      "ask": [
+        "What's the one thing we're changing between the jars?",
+        "Which do you predict will break down faster, and why?"
+      ],
+      "tip": "This is the leap from watching nature to questioning it. They're asking a question and reading the answer.",
+      "levels": {
+        "explore": "Notice which jar changed more.",
+        "develop": "Describe the difference between the two jars with dated notes.",
+        "extend": "Test a second condition, and rank which conditions matter most."
+      }
+    },
+    {
+      "title": "Close the case",
+      "why": "Your kid reports what they found, like a real scientist.",
+      "kid": "Your kid writes or tells their findings: what broke down and what didn't (back to the rot-or-not sort), what made it faster or slower, and the big idea that nature is constantly recycling dead things into the soil that grows new life. They point to their drawings and jars as evidence.",
+      "you": "Take the report seriously: they earned it with weeks of watching. Then use the broken-down soil to plant a seed together and close the loop.",
+      "ask": [
+        "Which of your rot-or-not guesses were right?",
+        "If a friend asked why leaves disappear in the fall, what would you tell them?"
+      ],
+      "tip": "Ending by planting a seed in their own decomposed soil makes the whole cycle real.",
+      "levels": {
+        "explore": "Say one thing you learned.",
+        "develop": "Write a short conclusion with evidence from your notes.",
+        "extend": "Write a findings report with drawings, your fair test results, and what you'd test next."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Case closed: your kid watched nature recycle.",
+    "text": "Weeks ago they put leaves in a jar. Now they can tell you exactly what happened, who did it, and what made it faster. Observation over time, fair testing and the nutrient cycle, learned by watching something most people never stop to see.",
+    "celebrate": "Point out the patience: they stuck with a project that took weeks to pay off. That's a skill worth more than the science.",
+    "extensions": [
+      "Start a real compost bin and track kitchen scraps turning into soil",
+      "Bury a few objects in the yard and dig them up months later",
+      "Race a sealed bag against an open pile",
+      "Plant a seed in the finished soil"
+    ]
+  },
+  "signs": [
+    "They notice rotting logs and leaf piles on walks",
+    "They write dated notes and compare to last time",
+    "They ask 'what would happen if...' and want to test it"
+  ],
+  "makeItReal": "Turn it into a real family compost: decide together what goes in, who turns it, and where the finished soil goes in the spring. The jar was the experiment; the compost is the real-world version.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/decomposition-detective.jpg",
+    "alt": "A girl peeking over an old tree stump on the forest floor",
+    "caption": "Old wood, slowly turning back into soil."
+  }
+}

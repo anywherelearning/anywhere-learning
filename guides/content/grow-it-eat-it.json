@@ -1,0 +1,220 @@
+{
+  "slug": "grow-it-eat-it",
+  "category": "Outdoor Learning",
+  "title": "Grow It, Eat It",
+  "tagline": "Plant science · Responsibility · Food from seed to plate",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid plants something they can actually eat, looks after it from seed to plate, and then eats what they grew. That last part does more than it sounds like it should: a radish you pulled out of the dirt yourself tastes different from one in a bag, and a kid who grew it will usually eat it. Along the way they learn that food is grown, not bought, and that living things depend on someone showing up every day.",
+  "need": [
+    "Fast seeds: radishes, lettuce, cress, pea shoots, or basil",
+    "A pot, window box or small patch of dirt, and potting soil",
+    "Water, a sunny spot, and a notebook for tracking"
+  ],
+  "lesson": {
+    "text": "A plant can't talk, so the skill is reading its signals. Every problem has a symptom you can see, a cause, and a fix.",
+    "before": "The plant looks bad.",
+    "model": [
+      {
+        "part": "Symptom",
+        "line": "The leaves are drooping and the soil is pale and dry."
+      },
+      {
+        "part": "Cause",
+        "line": "It hasn't been watered in three days."
+      },
+      {
+        "part": "Fix",
+        "line": "Water it slowly until the soil is damp, not soaked."
+      },
+      {
+        "part": "Check",
+        "line": "By the next morning, the leaves are standing up again."
+      }
+    ],
+    "modelNote": "Same plant, but now there's a diagnosis. Droopy usually means thirsty, yellow can mean too much water, pale and stretched means it needs more light."
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "what plants need (light, water, soil), roots and growth, and diagnosing problems"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring growth weekly, reading seed packets, and counting days to harvest"
+    },
+    {
+      "subject": "Writing",
+      "text": "a growth log with sketches, measurements and notes"
+    },
+    {
+      "subject": "Life skills",
+      "text": "daily responsibility, patience, and preparing food they grew"
+    }
+  ],
+  "howTo": {
+    "intro": "No gardening experience needed. It's their plant, and that's the whole arrangement. Help with the first setup, then hand it over and mean it.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "The seed detective game, choose and plant (Steps 1 and 2). 30 minutes."
+      },
+      {
+        "when": "Weeks 1 to 4",
+        "what": "A daily check, a weekly measurement, and troubleshooting (Steps 3 and 4). 2 minutes a day."
+      },
+      {
+        "when": "Harvest day",
+        "what": "Pick it, cook it, eat it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They keep forgetting to water",
+        "a": "Let the plant give the feedback: a droop is a better reminder than you. Then help them pick a daily trigger, like right after breakfast."
+      },
+      {
+        "q": "Nothing came up",
+        "a": "Often planted too deep or too wet. Check the packet together and try again. It's a useful lesson about following instructions."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Responsibility",
+      "text": "caring for a living thing that depends on them"
+    },
+    {
+      "name": "Plant science",
+      "text": "seeing how seed, water, light and soil turn into food"
+    },
+    {
+      "name": "Patience",
+      "text": "sticking with something that pays off slowly"
+    },
+    {
+      "name": "Troubleshooting",
+      "text": "reading a plant's signals and fixing problems"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Be a seed detective",
+      "why": "A look inside a seed, then choosing what to grow.",
+      "kid": "Soak a few dried beans or peas in water overnight, then your kid gently splits one open: inside is a tiny baby plant, curled up with its food supply. Then they pick something edible and fast to grow. Radishes, lettuce, cress and pea shoots are ready in days or a few weeks. They read the seed packet together: how deep, how far apart, how many days to harvest.",
+      "you": "Let them pick, but nudge toward speed. A six-year-old won't wait two months for a tomato. Radishes are up in about a week and ready in three or four, and that speed is what keeps a kid coming back.",
+      "starters": [
+        "Cress (days)",
+        "Microgreens (1 to 2 weeks)",
+        "Radishes (3 to 4 weeks)",
+        "Lettuce leaves (3 to 5 weeks)",
+        "Pea shoots (2 to 3 weeks)",
+        "Basil (4 to 6 weeks)"
+      ],
+      "ask": [
+        "What did you find inside the seed?",
+        "How many days does the packet say until harvest?"
+      ],
+      "tip": "Read 'days to harvest' on the packet together and pick one that fits your kid's patience, and yours.",
+      "levels": {
+        "explore": "Open a soaked bean, then pick cress or sprouts, the fastest of all.",
+        "develop": "Draw the inside of the seed, then pick radishes or lettuce.",
+        "extend": "Label the parts of the seed, then pick two or three crops to compare."
+      }
+    },
+    {
+      "title": "Plant it and give it a home",
+      "why": "Your kid plants the seeds themselves and sets up a daily routine.",
+      "kid": "Your kid fills the pot with soil, pokes holes at the depth the packet says, drops the seeds, covers them and waters gently. Then they choose a sunny spot they walk past every day and pick a daily check-in time: after breakfast, before bed, whenever they'll remember.",
+      "you": "Help with the first setup, then let their hands do it. Kids plant an inch deep when the packet says a quarter inch. A few that don't come up is its own small lesson.",
+      "ask": [
+        "How deep and how far apart does the packet say?",
+        "Where's the sunniest spot you'll actually walk past every day?"
+      ],
+      "tip": "Out of sight is the fastest way for a plant to die. Put it where they'll see it.",
+      "levels": {
+        "explore": "Plant a shallow tray of cress on a sunny windowsill.",
+        "develop": "Plant seeds at the right depth and spacing, and set a daily check-in time.",
+        "extend": "Plant two pots, one sunny and one shady, to see which grows faster."
+      }
+    },
+    {
+      "title": "Keep it alive and track it",
+      "why": "The daily care, plus a weekly measurement.",
+      "kid": "Every day your kid checks: is the soil dry, is it getting light, does anything look off? A little water often beats a flood once a week. Once a week, they measure the tallest sprout or sketch the plant and write the date. They notice the plant leaning toward the window and roots coming before leaves.",
+      "you": "Remind once if you must, then let the plant give the feedback. Treat the tracking like it matters: the weekly numbers make slow change visible.",
+      "ask": [
+        "How much has it grown since last week?",
+        "Which way is it leaning, and why do you think that is?"
+      ],
+      "tip": "A simple growth chart (date and height) turns into a real line graph for older kids.",
+      "levels": {
+        "explore": "Water it and notice one change a week.",
+        "develop": "Keep a short daily check and measure it each week.",
+        "extend": "Track growth in a chart and explain what's driving it (light, water, warmth)."
+      }
+    },
+    {
+      "title": "Troubleshoot",
+      "why": "Something will go a bit wrong, and your kid diagnoses it.",
+      "kid": "A plant droops, a leaf yellows, the sprouts get leggy and pale. Your kid treats it like a puzzle, the way the example at the start does: what's the symptom, what's the likely cause, what's the fix? Then they check whether it worked.",
+      "you": "Ask what the plant is telling them before offering answers. A plant that struggles and gets rescued teaches more than one that sails through.",
+      "ask": [
+        "What does this plant seem to be telling you?",
+        "If it's drooping or yellow, what might it need more or less of?"
+      ],
+      "tip": "Droopy usually means thirsty. Yellow can mean too much water. Pale and stretched means reaching for more light.",
+      "levels": {
+        "explore": "Notice one thing that looks off.",
+        "develop": "Guess the cause of a problem and try a fix.",
+        "extend": "Diagnose an issue, fix it, and record whether it worked."
+      }
+    },
+    {
+      "title": "Harvest it and eat it",
+      "why": "The whole point: picking and eating what they grew.",
+      "kid": "Your kid judges when it's ready (a radish shoulder showing at the soil, lettuce leaves big enough to cut, basil bushy enough to snip) and picks it themselves. Then they eat it: in a salad, on a sandwich, or just rinsed and bitten straight.",
+      "you": "Help them judge the timing, then make a small moment of the first taste. It might not taste amazing, and that's fine. They grew it and they tried it.",
+      "ask": [
+        "How can you tell it's ready to pick?",
+        "Would you grow it again? What would you change?"
+      ],
+      "tip": "Even a kid who swears they hate vegetables usually eats the one they grew. Especially that kid.",
+      "levels": {
+        "explore": "Pick and taste what you grew.",
+        "develop": "Judge the right moment, harvest it, and add it to a real meal.",
+        "extend": "Harvest a bit at a time so the plant keeps producing, and cook a small dish around it."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "They ate it.",
+    "text": "Somewhere in those weeks of remembering to water a pot, your kid figured out that food is grown, not bought, and that living things don't thrive on good intentions. They thrive on Tuesday, and Wednesday, and the day nobody felt like it.",
+    "celebrate": "Point out the follow-through: weeks of small daily care, for one bite. That's what responsibility actually looks like.",
+    "extensions": [
+      "Plant the next crop straight away, something slower and harder",
+      "Give them a real patch of the garden to run",
+      "Regrow lettuce or green onions from kitchen scraps",
+      "Save seeds from what they grew"
+    ]
+  },
+  "signs": [
+    "They check on the plant without being reminded",
+    "They notice droops and pale leaves and know what they mean",
+    "They try vegetables they grew themselves"
+  ],
+  "makeItReal": "Cook a family meal where one ingredient came from their pot, and let them serve it and tell everyone how they grew it. Food they grew, on the family table, is the moment that sticks.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/grow-it-eat-it.jpg",
+    "alt": "A girl crouched next to her potted tomato plants on a deck",
+    "caption": "Her own pots, her own job."
+  }
+}
