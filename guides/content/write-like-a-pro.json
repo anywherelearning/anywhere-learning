@@ -318,6 +318,7 @@
     "celebrate": "Put Version 1 and Version 2 side by side and point at what changed. That gap is the skill.",
     "extensions": [
       "Turn an informative piece into a song: keep a tune everyone knows, rewrite the lyrics",
+      "Write the same story twice, from two characters' points of view",
       "Try every style card once over the next few weeks",
       "Write the same topic in two styles and compare",
       "Write a real letter to someone who'll write back",
@@ -341,10 +342,10 @@
   "photo": {
     "src": "guides/assets/write-like-a-pro.jpg",
     "alt": "A girl and a boy writing with pencils at a table by a big window",
-    "caption": "Writing at the table, somewhere on our trip."
+    "caption": "Panama City: the same story, written from two points of view."
   },
   "fromHome": {
-    "text": "In El Salvador, my kids each wrote an informative text about the country, then turned it into a song. They picked a kids' song we all knew, kept the tune, and rewrote the lyrics so the rest of us would learn about the country we were visiting.",
+    "text": "In Panama City, my kids wrote the same made-up adventure twice: a treasure hunt in Santa Catalina, once from my son's point of view and once from my daughter's. They turned it into a book with pictures and recorded themselves reading it. In El Salvador, they each turned an informative text about the country into a song, set to a kids' tune we all knew.",
     "quotes": []
   }
 }
