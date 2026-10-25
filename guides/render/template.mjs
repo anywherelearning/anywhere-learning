@@ -174,11 +174,11 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${foot('How to run it')}
 </section>`;
 
-  // Card decks: every card numbered across the deck, 8 per printed page,
+  // Card decks: every card numbered across the deck, 6 per printed page,
   // each tagged with its theme.
   const allCards = (g.themes || []).flatMap((th, ti) => th.cards.map((c) => ({ ...c, theme: th.title, ti })));
   const cardPages = [];
-  for (let i = 0; i < allCards.length; i += 8) cardPages.push(allCards.slice(i, i + 8).map((c, k) => ({ ...c, num: i + k + 1 })));
+  for (let i = 0; i < allCards.length; i += 6) cardPages.push(allCards.slice(i, i + 6).map((c, k) => ({ ...c, num: i + k + 1 })));
   const cards = cardPages.map((pg, pi) => `
 <section class="pg cardpg">
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
@@ -330,7 +330,7 @@ ul{list-style:none}
 .tcard{background:#fff;border:1.5px dashed rgba(58,44,23,.28);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tchead{display:flex;align-items:center;gap:8px}.tcnum{font:800 1.05em 'Bricolage Grotesque';color:#fff;background:var(--accent);border-radius:8px;min-width:30px;height:28px;display:grid;place-items:center;padding:0 6px}
 .tctheme{font:700 .68em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcicon{margin-left:auto;width:50px;height:50px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;flex:none;margin-top:-4px;margin-bottom:-8px}.tcicon svg{width:30px;height:30px;stroke-width:1.6}
+.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcicon{margin-left:auto;width:50px;height:50px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;flex:none;margin-top:-2px}.tcicon svg{width:30px;height:30px;stroke-width:1.6}
 .tcname{margin:0;font:800 1.15em/1.2 'Bricolage Grotesque';color:var(--ink)}.tcname+.tct{font-weight:400}
 .tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
@@ -456,8 +456,10 @@ h2{font-size:40px}
 .tips{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
 .learns{grid-template-columns:1fr 1fr;column-gap:28px}
 .refgrid{grid-template-columns:1fr 1fr}
-.cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px}
-.tcard{padding:14px 16px;gap:8px}.tct{font-size:1.18em;line-height:1.38}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
+.cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
+.cardpg{display:flex;flex-direction:column}.cardpg .cardgrid{flex:1;margin-bottom:.1in}
+.cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
+.tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}
