@@ -2,9 +2,9 @@
   "slug": "nature-walk-task-cards",
   "category": "Outdoor Learning",
   "title": "Nature Walk Task Cards",
-  "tagline": "64 read-aloud prompts · Observation · Curiosity",
+  "tagline": "66 read-aloud prompts · Observation · Curiosity",
   "ages": "Ages 6 to 14",
-  "goal": "64 read-aloud prompts that turn any walk into real outdoor learning, with no planning and nothing to explain. Grab a few cards, head outside, read one out loud, and let your kid do the noticing, thinking and talking. Each card has a Deeper question for when they want more. Works in a forest, a park, a backyard, a beach or a city block.",
+  "goal": "66 read-aloud prompts that turn any walk into real outdoor learning, with no planning and nothing to explain. Grab a few cards, head outside, read one out loud, and let your kid do the noticing, thinking and talking. Each card has a Deeper question for when they want more. Works in a forest, a park, a backyard, a beach or a city block.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Anywhere outside: a park, a trail, the backyard, a beach",
@@ -447,6 +447,16 @@
           "t": "Find a mystery object. Don't guess yet: list 5 facts about it first.",
           "d": "Now make your best guess using those facts.",
           "icon": "badge-help"
+        },
+        {
+          "t": "Find something with a strong smell: a pine needle, wet soil, a flower. Describe it without saying 'good' or 'bad'.",
+          "d": "Where do you think that smell comes from?",
+          "icon": "flower-2"
+        },
+        {
+          "t": "Before the next bend in the path (or under the next log), predict one thing you'll find. Then check.",
+          "d": "Were you right? What made you predict that?",
+          "icon": "compass"
         }
       ]
     }
