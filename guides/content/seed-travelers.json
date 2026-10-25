@@ -214,8 +214,7 @@
   },
   "photo": {
     "src": "guides/assets/seed-travelers.jpg",
-    "alt": "A girl perched in a tree on a forest trail",
-    "caption": "Every tree started as a seed that travelled.",
-    "tall": true
+    "alt": "Left: a smiling girl holding orange flowers. Right: a boy holding a branch of red and green coffee cherries",
+    "caption": "Flowers make seeds. Each coffee cherry hides two: the beans."
   }
 }
