@@ -1,0 +1,440 @@
+{
+  "slug": "land-art-challenges",
+  "category": "Outdoor Learning",
+  "title": "Land Art Challenge Cards",
+  "tagline": "48 nature art prompts · Pattern · Design",
+  "ages": "Ages 6 to 14",
+  "goal": "48 prompts for making temporary art outside with whatever nature leaves lying around: leaves, sticks, rocks, pinecones, petals, sand. Your kid creates a mandala, a spiral, a rock tower or a story path, photographs it, and leaves it for the wind. No art lessons, no supplies, and there's no wrong way to do it.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Fallen natural materials: leaves, sticks, rocks, pinecones, petals, sand, shells (where allowed)",
+    "A phone to photograph the finished art (highly recommended)"
+  ],
+  "lesson": {
+    "text": "Artists don't just make things, they make choices, and they can explain them. After each piece, your kid gives it a title and says what they chose and why. That's how 'pretty' turns into real design thinking.",
+    "before": "I made a circle with leaves.",
+    "model": [
+      {
+        "part": "Title",
+        "line": "'Autumn Fire.'"
+      },
+      {
+        "part": "Materials",
+        "line": "Red maple leaves, yellow birch leaves, and brown oak leaves."
+      },
+      {
+        "part": "Choice",
+        "line": "I went from yellow in the middle to red, then brown on the outside."
+      },
+      {
+        "part": "Why",
+        "line": "So it looks like it's glowing from the centre, like a fire."
+      }
+    ],
+    "modelNote": "That's card 1, the Nature Mandala. When your kid says 'I made a circle,' ask: what did you choose, and why?"
+  },
+  "academics": [
+    {
+      "subject": "Art",
+      "text": "pattern, symmetry, colour, texture and composition"
+    },
+    {
+      "subject": "Math",
+      "text": "symmetry, sequences, sorting by size, shapes and counting"
+    },
+    {
+      "subject": "Science",
+      "text": "natural materials, light and shadow, and the habitat around them"
+    },
+    {
+      "subject": "Life skills",
+      "text": "respecting nature, leaving no trace, and creative confidence"
+    }
+  ],
+  "howTo": {
+    "intro": "No art experience needed. You're the gallery visitor: ask for the title and the story behind each piece. Use only fallen items, never pick living plants or disturb animal homes, and when you're done, return the materials and leave the space as you found it.",
+    "plan": [
+      {
+        "when": "Before you go",
+        "what": "Pick 1 to 3 cards, or let your kid choose."
+      },
+      {
+        "when": "Each card",
+        "what": "Gather, create, try the Deeper part. About 10 to 20 minutes."
+      },
+      {
+        "when": "Before you leave",
+        "what": "Photograph it, give it a title, then gently return the materials."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They say 'I'm not good at art'",
+        "a": "Remind them there's no wrong way. Start with a pattern card: patterns feel like a puzzle, not a test."
+      },
+      {
+        "q": "Nothing much on the ground",
+        "a": "Pebbles, sand and a few twigs are enough. Draw in the sand with a stick for the rest."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Design",
+      "text": "making choices and explaining them"
+    },
+    {
+      "name": "Pattern",
+      "text": "seeing and building repeats, spirals and symmetry"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing colour and texture in nature"
+    },
+    {
+      "name": "Respect",
+      "text": "creating without harming the place"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: make the art. Develop: add the Deeper part. Extend: photograph it, title it, and explain one choice you made and why.",
+  "themes": [
+    {
+      "title": "Patterns and symmetry",
+      "cards": [
+        {
+          "name": "Nature Mandala",
+          "t": "Make a circle design using 4 different natural materials.",
+          "d": "Make 2 rings: tiny items inside, bigger items outside.",
+          "icon": "flower"
+        },
+        {
+          "name": "Repeating Pattern Strip",
+          "t": "Make a pattern that repeats at least 6 times.",
+          "d": "Try an ABC pattern: A, B, C, A, B, C.",
+          "icon": "repeat"
+        },
+        {
+          "name": "Spiral Builder",
+          "t": "Create a spiral that grows from small to large.",
+          "d": "Make it with only one material.",
+          "icon": "shell"
+        },
+        {
+          "name": "Symmetry Challenge",
+          "t": "Make a design with mirror symmetry down the middle.",
+          "d": "Make it symmetrical in 4 directions.",
+          "icon": "flip-horizontal"
+        },
+        {
+          "name": "Radial Burst",
+          "t": "Arrange sticks like sun rays from a centre point.",
+          "d": "Alternate long and short rays.",
+          "icon": "sun"
+        },
+        {
+          "name": "Checkerboard Nature",
+          "t": "Make a grid using two materials, like rocks and leaves.",
+          "d": "Add a third material and make a 3-colour pattern.",
+          "icon": "grid-3x3"
+        },
+        {
+          "name": "Gradient Mandala",
+          "t": "Arrange items from light to dark in a circle.",
+          "d": "Make two gradients cross: light to dark, and small to large.",
+          "icon": "sun-dim"
+        },
+        {
+          "name": "Zigzag Trail",
+          "t": "Build a zigzag line using only one type of item.",
+          "d": "Make the zigzag change size as it goes.",
+          "icon": "activity"
+        },
+        {
+          "name": "Dots and Dashes",
+          "t": "Create a code pattern using pebbles (dots) and sticks (dashes).",
+          "d": "Invent a message and have someone decode it.",
+          "icon": "binary"
+        },
+        {
+          "name": "Concentric Circles",
+          "t": "Make 3 circles, one inside the other.",
+          "d": "Each circle must use a different texture.",
+          "icon": "target"
+        },
+        {
+          "name": "Fractal Feel",
+          "t": "Make a small pattern, then repeat it in a bigger version.",
+          "d": "Repeat it 3 times: small, medium, large.",
+          "icon": "copy"
+        },
+        {
+          "name": "Border Design",
+          "t": "Create a frame around a space, like a picture frame.",
+          "d": "Make the corners different from the sides.",
+          "icon": "frame"
+        }
+      ]
+    },
+    {
+      "title": "Build and sculpt",
+      "cards": [
+        {
+          "name": "Mini Tower",
+          "t": "Build the tallest tower you can that's safe and stable.",
+          "d": "It must survive a gentle wind test.",
+          "icon": "tower-control"
+        },
+        {
+          "name": "Balanced Rock Line",
+          "t": "Make a line of rocks from smallest to largest.",
+          "d": "Add one balanced rock on top, only if it's safe.",
+          "icon": "align-vertical-justify-end"
+        },
+        {
+          "name": "Stick Bridge",
+          "t": "Build a bridge across a small gap.",
+          "d": "Test if it can hold 3 small stones.",
+          "icon": "rainbow"
+        },
+        {
+          "name": "Leaf Boat Art",
+          "t": "Create a boat shape using leaves and sticks.",
+          "d": "Give it a flag and a name.",
+          "icon": "sailboat"
+        },
+        {
+          "name": "Nature Castle",
+          "t": "Make walls and a gate using sticks and rocks.",
+          "d": "Add a moat line around it.",
+          "icon": "castle"
+        },
+        {
+          "name": "Tiny Shelter",
+          "t": "Build a shelter for an imaginary forest creature.",
+          "d": "Add bedding and an entrance.",
+          "icon": "tent"
+        },
+        {
+          "name": "Sculpture on a Stump",
+          "t": "Create a design on a flat surface, like a stump or a rock.",
+          "d": "Make it 3D by stacking layers.",
+          "icon": "layers-3"
+        },
+        {
+          "name": "Animal Silhouette",
+          "t": "Create an animal shape, as seen from above.",
+          "d": "Add details: a tail, ears, footprints.",
+          "icon": "squirrel"
+        },
+        {
+          "name": "Nature Symbol",
+          "t": "Create a simple symbol, like a heart or a star, using natural items.",
+          "d": "Decorate it with a border.",
+          "icon": "star"
+        },
+        {
+          "name": "Weaving",
+          "t": "Weave grass or pine needles through a forked stick, or between twigs.",
+          "d": "Use 2 colours of material to make a pattern.",
+          "icon": "git-branch"
+        },
+        {
+          "name": "Nature Necklace",
+          "t": "Arrange items like beads in a circle on the ground. No picking living plants.",
+          "d": "Make it tell a story, with 3 'chapters' around the circle.",
+          "icon": "circle-dot"
+        },
+        {
+          "name": "Stack and Shadow",
+          "t": "Build a small structure that casts an interesting shadow.",
+          "d": "Adjust it so the shadow changes shape.",
+          "icon": "sun-moon"
+        }
+      ]
+    },
+    {
+      "title": "Colour and texture",
+      "cards": [
+        {
+          "name": "One-Colour Art",
+          "t": "Make a picture using only one colour family, like greens or browns.",
+          "d": "Use at least 3 shades of that colour.",
+          "icon": "palette"
+        },
+        {
+          "name": "Warm vs Cool",
+          "t": "Make a design split into warm colours and cool colours.",
+          "d": "Add a neutral border to separate them.",
+          "icon": "thermometer-snowflake"
+        },
+        {
+          "name": "Texture Collage",
+          "t": "Fill a square with 6 different textures.",
+          "d": "Label each texture with one word: smooth, rough, fuzzy...",
+          "icon": "grid-2x2"
+        },
+        {
+          "name": "Shiny Hunt Art",
+          "t": "Make art using only items that reflect light a little.",
+          "d": "Arrange them from most shiny to least shiny.",
+          "icon": "sparkle"
+        },
+        {
+          "name": "Soft vs Hard",
+          "t": "Create two mini artworks side by side: one soft-looking, one hard-looking.",
+          "d": "Explain what makes something look soft or hard.",
+          "icon": "feather"
+        },
+        {
+          "name": "Light-to-Dark Line",
+          "t": "Create a straight line that fades from light to dark.",
+          "d": "Make it fade back from dark to light.",
+          "icon": "sunset"
+        },
+        {
+          "name": "Nature Rainbow",
+          "t": "Make a 'rainbow' using what you can find.",
+          "d": "Give your rainbow a name, like 'Forest Rainbow'.",
+          "icon": "rainbow"
+        },
+        {
+          "name": "Camouflage Art",
+          "t": "Make something that blends into the ground.",
+          "d": "Make one small part stand out on purpose.",
+          "icon": "eye-off"
+        },
+        {
+          "name": "Texture Gradient",
+          "t": "Arrange items from smooth to rough.",
+          "d": "Add a second gradient: small to large.",
+          "icon": "blend"
+        },
+        {
+          "name": "Leaf Layout",
+          "t": "Arrange leaves by their veins: big veins to tiny veins.",
+          "d": "Sort them into 3 groups and name the groups.",
+          "icon": "leaf"
+        },
+        {
+          "name": "Nature Mosaic",
+          "t": "Fill a shape (a circle, a square, a triangle) with tiny pieces.",
+          "d": "Make a second shape that contrasts: messy against neat.",
+          "icon": "shapes"
+        },
+        {
+          "name": "Shadow Drawing",
+          "t": "Place items so their shadows form a picture.",
+          "d": "Take a photo from above to capture it.",
+          "icon": "moon-star"
+        }
+      ]
+    },
+    {
+      "title": "Tell a story",
+      "cards": [
+        {
+          "name": "Land Art Name Tag",
+          "t": "Spell your name or initials with sticks and rocks.",
+          "d": "Add a decorative border.",
+          "icon": "type"
+        },
+        {
+          "name": "Emotion Art",
+          "t": "Make art that shows a feeling: calm, excited, angry.",
+          "d": "Explain which shapes and colours create that feeling.",
+          "icon": "smile"
+        },
+        {
+          "name": "Before and After",
+          "t": "Make a messy pile, then rearrange it into neat art.",
+          "d": "Photograph both and compare.",
+          "icon": "shuffle"
+        },
+        {
+          "name": "Mini Museum",
+          "t": "Create 3 small artworks in a row, like an art show.",
+          "d": "Give each one a title.",
+          "icon": "gallery-horizontal"
+        },
+        {
+          "name": "Nature Clock",
+          "t": "Make a clock face with 12 items around a circle.",
+          "d": "Add 'hands' showing the current time.",
+          "icon": "clock"
+        },
+        {
+          "name": "Trail Marker Art",
+          "t": "Make a clear, temporary symbol that points to something cool.",
+          "d": "Make a second symbol that means 'stop and look'. Remove both after.",
+          "icon": "flag"
+        },
+        {
+          "name": "Story Path",
+          "t": "Create a path that has a beginning, a middle and an end.",
+          "d": "Tell its story in 3 sentences.",
+          "icon": "milestone"
+        },
+        {
+          "name": "Habitat Portrait",
+          "t": "Make a picture that represents this place: forest, beach or field.",
+          "d": "Add 3 'signature' items that only belong here.",
+          "icon": "trees"
+        },
+        {
+          "name": "Frame a View",
+          "t": "Build a frame on the ground around something beautiful.",
+          "d": "Take a photo from above and give it a title.",
+          "icon": "scan"
+        },
+        {
+          "name": "Nature Letter Art",
+          "t": "Make one big letter using natural items.",
+          "d": "Decorate it with patterns inside the letter.",
+          "icon": "text"
+        },
+        {
+          "name": "Team Challenge",
+          "t": "Each person adds 5 items without talking. See what you create together.",
+          "d": "Then talk and adjust it together.",
+          "icon": "users"
+        },
+        {
+          "name": "Clean-Up Art",
+          "t": "Make art using only natural litter (fallen leaves, twigs) gathered from the area.",
+          "d": "Count how many pieces you used, then return them gently.",
+          "icon": "trash-2"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just made art from nothing but what was lying around.",
+    "text": "They built patterns, played with colour and texture, explained their choices, and left the place as they found it. Art, geometry and respect for nature, all in a few minutes outside.",
+    "celebrate": "Look at the photos together and ask for the title of each piece. Treat it like a real art show, because it is one.",
+    "extensions": [
+      "Make a photo album of every piece, with titles",
+      "Do the same card in every season and compare",
+      "Turn three pieces into a 'mini museum' tour for the family",
+      "Make land art at the beach with sand, shells and seaweed"
+    ]
+  },
+  "signs": [
+    "They notice colours, textures and patterns on walks",
+    "They give reasons for their art: 'I put the red ones in the middle because...'",
+    "They return materials and leave places as they found them"
+  ],
+  "makeItReal": "Hold a real art show: print the best photos with their titles and hang them at home, or make a slideshow for grandparents. Seeing their work displayed like art makes kids take it seriously.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/land-art-challenges.jpg",
+    "alt": "Several balanced rock towers stacked in a forest clearing",
+    "caption": "Card 13, times ten: rock towers, balanced by hand."
+  }
+}

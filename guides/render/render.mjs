@@ -88,7 +88,7 @@ for (const m of ['print', 'print-bw']) {
   file = await load(build(m, { bonus }), 816);
   await trimForPreview();
   // Each page spreads its sections apart until it fills the page (text size stays fixed).
-  await evaluate(`(() => { for (const p of document.querySelectorAll('.pg:not(.cover)')) { let sp = 1; p.style.setProperty('--sp', 1); while (p.scrollHeight > p.clientHeight && sp > 0.4) { sp -= 0.05; p.style.setProperty('--sp', sp); } let m = 0.7; while (p.scrollHeight > p.clientHeight && m > 0.5) { m -= 0.05; p.style.paddingTop = m + 'in'; p.style.paddingBottom = (m + 0.1) + 'in'; } while (sp < 2.1) { p.style.setProperty('--sp', sp + 0.05); if (p.scrollHeight > p.clientHeight) { p.style.setProperty('--sp', sp); break; } sp += 0.05; } } return true; })()`);
+  await evaluate(`(() => { for (const p of document.querySelectorAll('.pg:not(.cover):not(.cardpg)')) { let sp = 1; p.style.setProperty('--sp', 1); while (p.scrollHeight > p.clientHeight && sp > 0.4) { sp -= 0.05; p.style.setProperty('--sp', sp); } let m = 0.7; while (p.scrollHeight > p.clientHeight && m > 0.5) { m -= 0.05; p.style.paddingTop = m + 'in'; p.style.paddingBottom = (m + 0.1) + 'in'; } while (sp < 2.1) { p.style.setProperty('--sp', sp + 0.05); if (p.scrollHeight > p.clientHeight) { p.style.setProperty('--sp', sp); break; } sp += 0.05; } } return true; })()`);
   const over = await evaluate(`[...document.querySelectorAll('.pg')].map((p,i) => ({ i: i + 1, over: p.scrollHeight - p.clientHeight })).filter(x => x.over > 2)`);
   if (over?.length) console.log(m, 'OVERFLOW on pages:', JSON.stringify(over));
   console.log(m, '->', await pdf(`${g.slug}${tag}-${m === 'print' ? 'color' : 'bw'}.pdf`));

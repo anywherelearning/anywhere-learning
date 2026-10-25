@@ -459,7 +459,7 @@ h2{font-size:40px}
 .learns{grid-template-columns:1fr 1fr;column-gap:28px}
 .refgrid{grid-template-columns:1fr 1fr}
 .cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
-.cardpg{display:flex;flex-direction:column}.cardpg .cardgrid{flex:1;margin-bottom:.1in}
+.cardpg .cardgrid{height:8.55in;grid-template-rows:repeat(3,1fr);grid-auto-rows:auto}
 .cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
 .tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
