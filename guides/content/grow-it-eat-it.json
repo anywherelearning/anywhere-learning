@@ -215,6 +215,10 @@
   "photo": {
     "src": "guides/assets/grow-it-eat-it.jpg",
     "alt": "A girl crouched next to her potted tomato plants on a deck",
-    "caption": "Her own pots, her own job."
+    "caption": "This spring's garden: their picks, their pots."
+  },
+  "fromHome": {
+    "text": "This spring, my kids decided together what to plant in their small garden. Tomatoes were one of their picks, and the cherry tomatoes worked great: we ate quite a few, straight off the plant.",
+    "quotes": []
   }
 }
