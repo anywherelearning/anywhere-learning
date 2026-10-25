@@ -793,7 +793,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrpqAkIBECpwGm8YmLcIp8",
     blobUrl: "",
     imageUrl: "/products/write-like-a-pro.jpg",
-    previewFile: "Preview Communication & Writing - Write It Like a Pro.pdf",
+    previewFile: "Preview Communication & Writing - Write it like a pro v3.pdf",
     category: "communication-writing",
     isBundle: false,
     bundleProductIds: null,
