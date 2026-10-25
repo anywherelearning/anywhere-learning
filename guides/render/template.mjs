@@ -81,7 +81,9 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   const bw = mode === 'print-bw';
   const layout = mode === 'phone' ? 'phone' : 'print';
   const { accent, soft, paper } = ACCENTS[g.category] ?? ACCENTS.default;
-  const n = g.steps.length;
+  const n = (g.steps || []).length;
+  // Card decks have themes instead of steps; the cover trail shows the themes.
+  const coverItems = g.steps || g.themes || [];
   const foot = (label) => `<footer class="foot"><span>${esc(g.title)}</span><span>${esc(label)}</span></footer>`;
 
   const cover = `
@@ -93,8 +95,8 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <p class="tagline">${esc(g.tagline)}</p>
     <div class="chips"><span>${esc(g.ages)}</span>${g.time ? `<span>${esc(g.time)}</span>` : ''}<span>Three levels</span></div>
     <div class="coverbody">
-      ${coverTrail(g.steps)}
-      <ol class="htrail">${g.steps.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
+      ${coverTrail(coverItems)}
+      <ol class="htrail">${coverItems.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
       ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
     </div>
   </div>
@@ -164,7 +166,22 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${foot('How to run it')}
 </section>`;
 
-  const steps = g.steps.map((s, i) => `
+  // Card decks: every card numbered across the deck, 8 per printed page,
+  // each tagged with its theme.
+  const allCards = (g.themes || []).flatMap((th, ti) => th.cards.map((c) => ({ ...c, theme: th.title, ti })));
+  const cardPages = [];
+  for (let i = 0; i < allCards.length; i += 8) cardPages.push(allCards.slice(i, i + 8).map((c, k) => ({ ...c, num: i + k + 1 })));
+  const cards = cardPages.map((pg, pi) => `
+<section class="pg cardpg">
+  <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
+  <div class="cardgrid">${pg.map((c) => `
+    <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span></div>
+      <p class="tct">${esc(c.t)}</p><p class="tcd"><b>Deeper</b> ${esc(c.d)}</p></div>`).join('')}
+  </div>
+  ${foot(`Cards ${pg[0].num} to ${pg[pg.length - 1].num}`)}
+</section>`).join('');
+
+  const steps = (g.steps || []).map((s, i) => `
 <section class="pg step">
   <header class="stephead">
     ${blaze(i + 1)}
@@ -221,7 +238,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${reference}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${reference}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
@@ -301,6 +318,11 @@ ul{list-style:none}
 .acad{display:grid;gap:0;margin:0}.acad div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.acad div:first-child{border-top:0;padding-top:2px}
 .acad dt{font:700 1em/1.3 'DM Sans';color:var(--accent)}.acad dd{margin:2px 0 0;line-height:1.45}
 .box.real{border-left:4px solid var(--trail)}
+.cardgrid{display:grid;gap:10px;margin-top:8px}
+.tcard{background:#fff;border:1.5px dashed rgba(58,44,23,.28);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.tchead{display:flex;align-items:center;gap:8px}.tcnum{font:800 1.05em 'Bricolage Grotesque';color:#fff;background:var(--accent);border-radius:8px;min-width:30px;height:28px;display:grid;place-items:center;padding:0 6px}
+.tctheme{font:700 .68em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
 .plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
@@ -423,7 +445,9 @@ h2{font-size:40px}
 .ideagrid{grid-template-columns:1fr 1fr;gap:14px}
 .tips{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
 .learns{grid-template-columns:1fr 1fr;column-gap:28px}
-.refgrid{grid-template-columns:1fr 1fr}.learns div:nth-child(2){border-top:0;padding-top:2px}
+.refgrid{grid-template-columns:1fr 1fr}
+.cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px}
+.tcard{padding:16px 18px;gap:9px}.tct{font-size:1.18em;line-height:1.38}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}

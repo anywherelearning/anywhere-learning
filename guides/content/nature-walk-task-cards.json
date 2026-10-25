@@ -1,0 +1,419 @@
+{
+  "slug": "nature-walk-task-cards",
+  "category": "Outdoor Learning",
+  "title": "Nature Walk Task Cards",
+  "tagline": "64 read-aloud prompts · Observation · Curiosity",
+  "ages": "Ages 6 to 14",
+  "goal": "64 read-aloud prompts that turn any walk into real outdoor learning, with no planning and nothing to explain. Grab a few cards, head outside, read one out loud, and let your kid do the noticing, thinking and talking. Each card has a Deeper question for when they want more. Works in a forest, a park, a backyard, a beach or a city block.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Anywhere outside: a park, a trail, the backyard, a beach",
+    "Optional: a notebook and pencil, or a phone for quick photos"
+  ],
+  "lesson": {
+    "text": "Every card works better with the same three-part answer, the one real naturalists use: I notice (something specific), I wonder (a question), it reminds me of (a comparison).",
+    "before": "There's green stuff.",
+    "model": [
+      {
+        "part": "I notice",
+        "line": "The moss is bright and fuzzy, the fern is darker and shiny, the pine needles are almost blue."
+      },
+      {
+        "part": "I wonder",
+        "line": "Why is the moss so much brighter? Does it get more sun?"
+      },
+      {
+        "part": "Reminds me",
+        "line": "The moss looks like a tiny forest for ants."
+      }
+    ],
+    "modelNote": "That's card 7 (three different greens). When an answer is one word, ask: what do you notice, what do you wonder, what does it remind you of?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "observation, habitats, animal signs, water and weather, forces"
+    },
+    {
+      "subject": "Math",
+      "text": "estimating, comparing sizes, shapes, symmetry, patterns and counting"
+    },
+    {
+      "subject": "Language",
+      "text": "precise describing words, comparisons, similes and explaining a find"
+    },
+    {
+      "subject": "Life skills",
+      "text": "slowing down, paying attention, and finding something interesting anywhere"
+    }
+  ],
+  "howTo": {
+    "intro": "No prep and no nature knowledge needed. You read the card out loud; your kid does the looking and the talking. You never need to know the answer: 'I don't know, let's look closer' is the perfect reply.",
+    "plan": [
+      {
+        "when": "Before you go",
+        "what": "Pick 5 to 10 cards, or shuffle and draw as you walk."
+      },
+      {
+        "when": "On the walk",
+        "what": "Read one card, wait, and add the Deeper question if they want more."
+      },
+      {
+        "when": "On the way home",
+        "what": "Ask for their favourite find of the day, and why."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They rush through the cards",
+        "a": "Do fewer cards and stay longer on each. The Deeper question is the brake."
+      },
+      {
+        "q": "A younger kid loses interest",
+        "a": "Stick to the 'Find something...' cards and make it a race to find it first."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "noticing details most people walk past"
+    },
+    {
+      "name": "Describing",
+      "text": "finding precise words for what they see"
+    },
+    {
+      "name": "Questioning",
+      "text": "asking why, and wondering out loud"
+    },
+    {
+      "name": "Curiosity",
+      "text": "finding something interesting anywhere"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: do the card. Develop: answer the Deeper question too. Extend: record it in a notebook with a quick sketch and one sentence. Siblings can do the same card at different levels.",
+  "themes": [
+    {
+      "title": "Notice it",
+      "cards": [
+        {
+          "t": "Stop where you are. Name 5 things you see that you didn't notice at first.",
+          "d": "Which one is the most interesting? Why?"
+        },
+        {
+          "t": "Find something tiny and something huge. Describe both without naming them.",
+          "d": "What makes each one important here?"
+        },
+        {
+          "t": "Find something with lines. Trace the lines in the air with your finger.",
+          "d": "Where do the lines lead?"
+        },
+        {
+          "t": "Choose one object and describe it using only three words.",
+          "d": "Now add three more words that are even better."
+        },
+        {
+          "t": "Find something old and something new.",
+          "d": "What clues helped you decide?"
+        },
+        {
+          "t": "Find something that looks soft and something that looks tough.",
+          "d": "What job might each one be doing?"
+        },
+        {
+          "t": "Look for 3 different greens (or 3 different browns).",
+          "d": "Which one blends in best here?"
+        },
+        {
+          "t": "Find something that seems out of place.",
+          "d": "Why might it be here?"
+        },
+        {
+          "t": "Choose a spot and stare at it for 15 seconds. What changes?",
+          "d": "What stayed the same?"
+        },
+        {
+          "t": "Find something you think most people would walk past. Show me.",
+          "d": "Why do you think it gets ignored?"
+        }
+      ]
+    },
+    {
+      "title": "Shapes and patterns",
+      "cards": [
+        {
+          "t": "Find a pattern: spots, stripes, or something that repeats. Point to it.",
+          "d": "What might that pattern help with?"
+        },
+        {
+          "t": "Find a spiral, or something that curves like one.",
+          "d": "Where else do you see spirals in real life?"
+        },
+        {
+          "t": "Find something symmetrical and something that isn't.",
+          "d": "Which one looks more 'designed' to you?"
+        },
+        {
+          "t": "Find 3 things that are the same shape but different sizes.",
+          "d": "Put them in order, smallest to biggest."
+        },
+        {
+          "t": "Find something with a triangle shape.",
+          "d": "Why are triangles so strong?"
+        },
+        {
+          "t": "Find something with a circle shape.",
+          "d": "Where else do circles show up in nature?"
+        },
+        {
+          "t": "Pick a stick and estimate: is it longer or shorter than your forearm?",
+          "d": "Now test your guess."
+        },
+        {
+          "t": "Find two things and compare: which one looks heavier? Why?",
+          "d": "What clues make you think that?"
+        },
+        {
+          "t": "Find something that branches in a 'Y' shape.",
+          "d": "Why might branching be useful?"
+        },
+        {
+          "t": "Count 10 steps. What's the most common thing you see in those 10 steps?",
+          "d": "Why do you think it's so common here?"
+        }
+      ]
+    },
+    {
+      "title": "Animal detective",
+      "cards": [
+        {
+          "t": "Find evidence that something ate something.",
+          "d": "What do you think was eaten?"
+        },
+        {
+          "t": "Find evidence that something travelled through here.",
+          "d": "How can you tell it wasn't random?"
+        },
+        {
+          "t": "Find a place where a small creature could hide.",
+          "d": "What makes it a good hiding spot?"
+        },
+        {
+          "t": "Find a home clue: a nest, a web, a hole, or a shelter.",
+          "d": "Who might live there?"
+        },
+        {
+          "t": "Find a feather, fur, or a shed skin. Look only, don't touch.",
+          "d": "What might that tell you?"
+        },
+        {
+          "t": "Pick a plant and look closely. Do you see any damage?",
+          "d": "What could have caused it?"
+        },
+        {
+          "t": "Listen. Do you hear any animals? Point to where the sound comes from.",
+          "d": "Near or far? How do you know?"
+        },
+        {
+          "t": "Where would insects be most active here: in the sun or in the shade?",
+          "d": "What makes you think that?"
+        },
+        {
+          "t": "Find a 'meeting place' where animals might cross paths.",
+          "d": "What signs would you look for?"
+        },
+        {
+          "t": "Find something that looks built: a web, an anthill, a nest, stacked sticks.",
+          "d": "What problem does it solve?"
+        }
+      ]
+    },
+    {
+      "title": "Weather and water",
+      "cards": [
+        {
+          "t": "Look up. Describe the clouds using a creative comparison.",
+          "d": "What weather might come next?"
+        },
+        {
+          "t": "Find a place that feels windy and a place that feels sheltered.",
+          "d": "What blocks the wind?"
+        },
+        {
+          "t": "Touch two safe surfaces. Which one feels warmer?",
+          "d": "Why would that happen?"
+        },
+        {
+          "t": "Find a sign of moisture: damp soil, dew, a puddle, wet leaves.",
+          "d": "Where is the moisture coming from?"
+        },
+        {
+          "t": "Find a spot where water would collect if it rained hard.",
+          "d": "What makes you think so?"
+        },
+        {
+          "t": "Find a tiny path where water would run: a groove, a slope, a channel.",
+          "d": "Where does it lead?"
+        },
+        {
+          "t": "Find something that helps hold water in the ground: moss, soil, leaf litter.",
+          "d": "How does it help?"
+        },
+        {
+          "t": "Find something that helps water move faster: smooth rock, a slope, bare ground.",
+          "d": "Is faster always better? Why or why not?"
+        },
+        {
+          "t": "Find a puddle reflection: sky, trees, clouds.",
+          "d": "How does it change when you move?"
+        },
+        {
+          "t": "Find evidence the weather changed recently: mud, broken twigs, dry crunch.",
+          "d": "What do you think happened?"
+        }
+      ]
+    },
+    {
+      "title": "How nature works",
+      "cards": [
+        {
+          "t": "Find something strong and something flexible.",
+          "d": "Why would nature need both?"
+        },
+        {
+          "t": "Find a natural 'bridge': a root, branch or rock that spans a gap.",
+          "d": "Would it hold weight? Why?"
+        },
+        {
+          "t": "Find something that looks waterproof, like a waxy leaf or bark.",
+          "d": "How can you tell?"
+        },
+        {
+          "t": "Find something that looks like it soaks up water, like soil or moss.",
+          "d": "What clues show that?"
+        },
+        {
+          "t": "Find a stable shape: wide, low, or spreading.",
+          "d": "Why is it hard to tip over?"
+        },
+        {
+          "t": "Find something that looks designed to travel, like a seed or a burr.",
+          "d": "How might it travel: wind, water, or animals?"
+        },
+        {
+          "t": "Find something that seems balanced.",
+          "d": "What would knock it over?"
+        },
+        {
+          "t": "Find evidence of the forces of nature: wind, water, or gravity.",
+          "d": "Which force is strongest here today?"
+        },
+        {
+          "t": "Find something that shows change: decay, growth, or something broken and healing.",
+          "d": "Is change good, bad, or both?"
+        },
+        {
+          "t": "Find something that's a sign of time passing: growth rings, worn rock, new shoots.",
+          "d": "What do you think it looked like a month ago?"
+        }
+      ]
+    },
+    {
+      "title": "Imagine and create",
+      "cards": [
+        {
+          "t": "Choose 3 found items and make a 'mini invention' on the ground.",
+          "d": "What is it for?"
+        },
+        {
+          "t": "Find a 'problem spot': slippery, steep or tangled. How would you solve it safely?",
+          "d": "What would you change if you could?"
+        },
+        {
+          "t": "Close your eyes for 10 seconds. What do you hear now?",
+          "d": "Which sound is closest?"
+        },
+        {
+          "t": "Find something beautiful. Tell me why you chose it.",
+          "d": "What makes it beautiful: the colour, the shape, or what it means?"
+        },
+        {
+          "t": "Find something that looks like a character from a story.",
+          "d": "What would its personality be?"
+        },
+        {
+          "t": "Choose one object and give it a new name.",
+          "d": "Explain why that name fits."
+        },
+        {
+          "t": "Find 3 things that match: same colour, same texture, or same shape.",
+          "d": "Which category did you choose, and why?"
+        },
+        {
+          "t": "Describe one thing like a poet, using 'like...'.",
+          "d": "Now describe it like a scientist."
+        },
+        {
+          "t": "Find a place that feels calm. Stand there for 15 seconds.",
+          "d": "What makes it feel calm?"
+        }
+      ]
+    },
+    {
+      "title": "Think like a scientist",
+      "cards": [
+        {
+          "t": "Find one sign that people were here: a footprint, a wrapper, a cut branch, a sign.",
+          "d": "What's one way people could help this place?"
+        },
+        {
+          "t": "Pick your favourite find today. Teach me one thing about it.",
+          "d": "What question do you still have?"
+        },
+        {
+          "t": "Find something that shows teamwork in nature: a group, many of the same thing, a shared space.",
+          "d": "How does teamwork help them survive?"
+        },
+        {
+          "t": "Find two things that look alike but are actually different. Tell me how you know.",
+          "d": "Which differences matter most?"
+        },
+        {
+          "t": "Find a mystery object. Don't guess yet: list 5 facts about it first.",
+          "d": "Now make your best guess using those facts."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just learned to really look.",
+    "text": "Card by card, they noticed details most people walk past, described them precisely, and asked questions about how nature works. Observation, describing and wondering: the habits every scientist, writer and artist starts with.",
+    "celebrate": "Ask about their favourite find of the day, and really listen. When a kid knows their noticing matters, they keep doing it.",
+    "extensions": [
+      "Keep a nature notebook: one card, one sketch, one sentence per walk",
+      "Do the same card in a new place and compare",
+      "Let your kid invent new cards for you to do",
+      "Try the cards in a city: they work on any block"
+    ]
+  },
+  "signs": [
+    "They point things out on walks without being asked",
+    "They describe with specific words instead of 'cool' or 'nice'",
+    "They ask 'why?' and 'I wonder...' about what they find"
+  ],
+  "makeItReal": "Have your kid lead a walk for a grandparent, a friend or a younger cousin, choosing and reading the cards themselves. Being the one who asks the questions is when the noticing becomes theirs.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/nature-walk-task-cards.jpg",
+    "alt": "A boy on a forest trail holding out his hand with a small bird perched on it",
+    "caption": "Slow down on a walk, and nature comes closer."
+  }
+}
