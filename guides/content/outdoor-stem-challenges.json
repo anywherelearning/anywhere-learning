@@ -2,9 +2,9 @@
   "slug": "outdoor-stem-challenges",
   "category": "Outdoor Learning",
   "title": "Outdoor STEM Challenge Cards",
-  "tagline": "20 engineering challenges · Design · Testing",
+  "tagline": "24 engineering challenges · Design · Testing",
   "ages": "Ages 6 to 14",
-  "goal": "20 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, no supplies, and the first design is supposed to fail.",
+  "goal": "24 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, no supplies, and the first design is supposed to fail.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
@@ -125,6 +125,12 @@
           "t": "Design a micro-habitat for an imaginary tiny creature, using found items.",
           "d": "Include three features: shelter, a water plan, and a food plan.",
           "icon": "bug"
+        },
+        {
+          "name": "Egg Nest",
+          "t": "Build a nest from leaves, grass and sticks that keeps a raw egg safe when it's dropped from knee height.",
+          "d": "Raise the drop to waist height. What did you have to change?",
+          "icon": "egg"
         }
       ]
     },
@@ -154,6 +160,12 @@
           "t": "Build a mini dam across a dry channel or between rocks. Never block a real stream.",
           "d": "Explain how it would change the water's path if it rained.",
           "icon": "waves"
+        },
+        {
+          "name": "Rain Catcher",
+          "t": "Design a collector from leaves or bark that catches the most 'rain' from a watering can.",
+          "d": "Measure each design's catch in a cup. Which shape wins?",
+          "icon": "cloud-rain"
         }
       ]
     },
@@ -183,6 +195,12 @@
           "t": "Find a sunny spot and a shady spot, and compare: temperature, moisture, plants.",
           "d": "Predict which spot will change faster over 30 minutes, and explain why.",
           "icon": "sun"
+        },
+        {
+          "name": "Muddy Water Filter",
+          "t": "Layer sand, gravel and leaves in a cut-off bottle to make muddy water clearer. Look only, never drink it.",
+          "d": "Change the order of the layers. Does the water come out clearer?",
+          "icon": "filter"
         }
       ]
     },
@@ -241,6 +259,12 @@
           "t": "Build something (a bridge, a tower, a shelter), test it, then improve it.",
           "d": "Say it out loud: 'My first design failed because... I improved it by...'",
           "icon": "repeat"
+        },
+        {
+          "name": "Shadow Clock",
+          "t": "Push a stick into the ground and mark where its shadow ends every 30 minutes.",
+          "d": "Predict where the shadow will be in an hour, then check.",
+          "icon": "sundial"
         }
       ]
     }
