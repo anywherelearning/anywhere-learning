@@ -164,7 +164,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrpfAkIBECpwGmYYJRzrKV",
     blobUrl: "",
     imageUrl: "/products/nature-walk-task-cards.jpg",
-    previewFile: "Preview Nature Walk Task Cards.pdf",
+    previewFile: "Preview Outdoor Learning - Nature Walk Task Cards v3.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,
