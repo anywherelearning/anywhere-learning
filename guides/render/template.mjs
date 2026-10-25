@@ -7,6 +7,14 @@ import path from 'node:path';
 // Local photos are inlined so the PDF never depends on the network.
 const img = (src) => src.startsWith('http') ? src : `data:image/jpeg;base64,${fs.readFileSync(path.resolve(src)).toString('base64')}`;
 
+// Card icons: Lucide line icons (ISC licence, guides/icons/LICENSE-lucide.txt),
+// inlined so they take the category accent colour.
+const icon = (name) => {
+  if (!name) return '';
+  const svg = fs.readFileSync(path.resolve('guides/icons', `${name}.svg`), 'utf8').replace(/<!--.*?-->/s, '');
+  return `<span class="tcicon" aria-hidden="true">${svg}</span>`;
+};
+
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Category accents. Add one line per category as guides move over.
@@ -175,7 +183,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <section class="pg cardpg">
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
   <div class="cardgrid">${pg.map((c) => `
-    <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span></div>
+    <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span>${icon(c.icon)}</div>
       ${c.name ? `<h3 class="tcname">${esc(c.name)}</h3>` : ''}<p class="tct">${esc(c.t)}</p><p class="tcd"><b>Deeper</b> ${esc(c.d)}</p></div>`).join('')}
   </div>
   ${foot(`Cards ${pg[0].num} to ${pg[pg.length - 1].num}`)}
@@ -322,7 +330,8 @@ ul{list-style:none}
 .tcard{background:#fff;border:1.5px dashed rgba(58,44,23,.28);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tchead{display:flex;align-items:center;gap:8px}.tcnum{font:800 1.05em 'Bricolage Grotesque';color:#fff;background:var(--accent);border-radius:8px;min-width:30px;height:28px;display:grid;place-items:center;padding:0 6px}
 .tctheme{font:700 .68em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcname{margin:0;font:800 1.15em/1.2 'Bricolage Grotesque';color:var(--ink)}.tcname+.tct{font-weight:400}
+.tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcicon{margin-left:auto;width:50px;height:50px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;flex:none;margin-top:-4px;margin-bottom:-8px}.tcicon svg{width:30px;height:30px;stroke-width:1.6}
+.tcname{margin:0;font:800 1.15em/1.2 'Bricolage Grotesque';color:var(--ink)}.tcname+.tct{font-weight:400}
 .tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
@@ -448,7 +457,7 @@ h2{font-size:40px}
 .learns{grid-template-columns:1fr 1fr;column-gap:28px}
 .refgrid{grid-template-columns:1fr 1fr}
 .cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px}
-.tcard{padding:16px 18px;gap:9px}.tct{font-size:1.18em;line-height:1.38}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
+.tcard{padding:14px 16px;gap:8px}.tct{font-size:1.18em;line-height:1.38}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}

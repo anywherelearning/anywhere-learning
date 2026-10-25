@@ -105,22 +105,26 @@
         {
           "name": "Windproof Shelter",
           "t": "Build a mini shelter that blocks wind, using only fallen sticks, leaves and rocks.",
-          "d": "Test it by gently blowing or fanning, then improve it twice."
+          "d": "Test it by gently blowing or fanning, then improve it twice.",
+          "icon": "tent"
         },
         {
           "name": "Bridge Builder",
           "t": "Build a bridge that spans a small gap between two rocks or logs.",
-          "d": "Make it hold 5 small stones without collapsing."
+          "d": "Make it hold 5 small stones without collapsing.",
+          "icon": "rainbow"
         },
         {
           "name": "Tallest Tower",
           "t": "Build the tallest free-standing tower you can using found items.",
-          "d": "It must survive a gentle 'wind test' for 5 seconds."
+          "d": "It must survive a gentle 'wind test' for 5 seconds.",
+          "icon": "tower-control"
         },
         {
           "name": "Habitat Builder",
           "t": "Design a micro-habitat for an imaginary tiny creature, using found items.",
-          "d": "Include three features: shelter, a water plan, and a food plan."
+          "d": "Include three features: shelter, a water plan, and a food plan.",
+          "icon": "bug"
         }
       ]
     },
@@ -130,22 +134,26 @@
         {
           "name": "Leaf Boat Engineer",
           "t": "Design a 'boat' from leaves and sticks that floats in a puddle or a dish of water.",
-          "d": "Change one thing to make it float longer, and explain why it helped."
+          "d": "Change one thing to make it float longer, and explain why it helped.",
+          "icon": "sailboat"
         },
         {
           "name": "Raft Challenge",
           "t": "Build a tiny raft that can carry 3 pebbles on water.",
-          "d": "Redesign it to carry 5 pebbles."
+          "d": "Redesign it to carry 5 pebbles.",
+          "icon": "ship"
         },
         {
           "name": "Erosion Barrier",
           "t": "Make a small barrier that would slow down water flowing down a slope.",
-          "d": "Build two versions and decide which works better, and why."
+          "d": "Build two versions and decide which works better, and why.",
+          "icon": "mountain-snow"
         },
         {
           "name": "Mini Dam",
           "t": "Build a mini dam across a dry channel or between rocks. Never block a real stream.",
-          "d": "Explain how it would change the water's path if it rained."
+          "d": "Explain how it would change the water's path if it rained.",
+          "icon": "waves"
         }
       ]
     },
@@ -155,22 +163,26 @@
         {
           "name": "Strong vs Flexible",
           "t": "Find 3 materials that are strong and 3 that are flexible.",
-          "d": "Use both kinds to build something that's stable and bendy."
+          "d": "Use both kinds to build something that's stable and bendy.",
+          "icon": "shield-check"
         },
         {
           "name": "The Waterproof Test",
           "t": "Find 3 natural surfaces that look waterproof and 3 that look absorbent.",
-          "d": "Predict what would happen if water hit each one, and why."
+          "d": "Predict what would happen if water hit each one, and why.",
+          "icon": "droplet"
         },
         {
           "name": "The Best Insulator",
           "t": "Collect 3 'insulation' materials, like leaf litter, pine needles and dry grass, and choose the best.",
-          "d": "Explain what insulation does, and why your pick would trap warmth."
+          "d": "Explain what insulation does, and why your pick would trap warmth.",
+          "icon": "thermometer-sun"
         },
         {
           "name": "Sun vs Shade Lab",
           "t": "Find a sunny spot and a shady spot, and compare: temperature, moisture, plants.",
-          "d": "Predict which spot will change faster over 30 minutes, and explain why."
+          "d": "Predict which spot will change faster over 30 minutes, and explain why.",
+          "icon": "sun"
         }
       ]
     },
@@ -180,27 +192,32 @@
         {
           "name": "Marble Run, No Marbles",
           "t": "Build a track with sticks, rocks and leaves that guides a round object (an acorn, a seed, a pebble) downhill.",
-          "d": "Add a turn, and keep it from falling off."
+          "d": "Add a turn, and keep it from falling off.",
+          "icon": "circle-dot"
         },
         {
           "name": "Nature Catapult",
           "t": "Make a simple launcher with a flexible fallen stick.",
-          "d": "Make it launch farther without pushing harder: change the angle or the design."
+          "d": "Make it launch farther without pushing harder: change the angle or the design.",
+          "icon": "rocket"
         },
         {
           "name": "Balance Beam",
           "t": "Make a balance beam line on the ground with sticks or rocks, and walk it.",
-          "d": "Redesign it to be harder (narrower, with turns) while still safe."
+          "d": "Redesign it to be harder (narrower, with turns) while still safe.",
+          "icon": "move-horizontal"
         },
         {
           "name": "Force Finder",
           "t": "Find 5 examples of forces at work: gravity, wind, water, friction.",
-          "d": "For two of them, explain how the force changes the object over time."
+          "d": "For two of them, explain how the force changes the object over time.",
+          "icon": "wind"
         },
         {
           "name": "Seed Dispersal Designer",
           "t": "Find 3 seeds and predict how each one travels: wind, water or animals.",
-          "d": "Build a model seed from found materials that would travel best by wind."
+          "d": "Build a model seed from found materials that would travel best by wind.",
+          "icon": "sprout"
         }
       ]
     },
@@ -210,17 +227,20 @@
         {
           "name": "Sorting System Engineer",
           "t": "Create a system that sorts found items into 3 categories: size, texture, colour or weight.",
-          "d": "Make a 'rule card' that explains your system clearly."
+          "d": "Make a 'rule card' that explains your system clearly.",
+          "icon": "list-filter"
         },
         {
           "name": "Nature Signal System",
           "t": "Create a silent signal system with rocks and sticks: 3 symbols for start, stop and danger.",
-          "d": "Teach it to someone and test whether they understand."
+          "d": "Teach it to someone and test whether they understand.",
+          "icon": "signpost"
         },
         {
           "name": "Redesign Challenge",
           "t": "Build something (a bridge, a tower, a shelter), test it, then improve it.",
-          "d": "Say it out loud: 'My first design failed because... I improved it by...'"
+          "d": "Say it out loud: 'My first design failed because... I improved it by...'",
+          "icon": "repeat"
         }
       ]
     }
