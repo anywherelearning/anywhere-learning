@@ -296,6 +296,10 @@
   "photo": {
     "src": "guides/assets/outdoor-stem-challenges-volume-2.jpg",
     "alt": "Two girls digging a water channel in the sand at the edge of a lake",
-    "caption": "Move the water: a channel dug by hand, tested by the waves."
+    "caption": "Move the water: one of my kids' favourite beach builds."
+  },
+  "fromHome": {
+    "text": "Building water channels is one of my kids' favourite things to do at the beach. They dig, the waves test it, something collapses, and they dig again, deeper or at a new angle. Nobody calls it engineering, but that's exactly what it is.",
+    "quotes": []
   }
 }
