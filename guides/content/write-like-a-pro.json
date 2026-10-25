@@ -1,0 +1,328 @@
+{
+  "slug": "write-like-a-pro",
+  "category": "Writing & Communication",
+  "title": "Write It Like a Pro",
+  "tagline": "Voice and style · Writing for a reader · Revision",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story or a news report), picks a topic they actually care about, and writes something real for a real reader. Not a five-paragraph essay: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
+  "need": [
+    "Paper and pencil, or a notes app",
+    "The Writing Style Cards near the end of this guide",
+    "A real reader: you, a grandparent, a friend"
+  ],
+  "lesson": {
+    "text": "Every style does a different job, so the same topic sounds completely different depending on who's reading and why. Before writing a word, your kid answers two questions: who is this for, and what do they need from me?",
+    "before": "Bedtime should be later because I want it to be.",
+    "model": [
+      {
+        "part": "To a parent",
+        "line": "Dear Mom, I'd like to propose a 9 p.m. bedtime on weekends. Here's my plan."
+      },
+      {
+        "part": "As a review",
+        "line": "Bedtime at 8: two stars. Too early for summer, when it's still light out."
+      },
+      {
+        "part": "As news",
+        "line": "Local kid campaigns for later bedtime. Parents 'considering it.'"
+      },
+      {
+        "part": "As a how-to",
+        "line": "How to get a later bedtime: Step 1, show you can wake up on time."
+      }
+    ],
+    "modelNote": "Same topic, four different voices, and each one fits its reader. When a piece sounds flat, ask: who's reading this, and what do they need?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "six real styles, each with its own structure and voice"
+    },
+    {
+      "subject": "Reading",
+      "text": "noticing how real reviews, letters and news reports are built"
+    },
+    {
+      "subject": "Thinking",
+      "text": "audience awareness: what this reader already knows and needs"
+    },
+    {
+      "subject": "Life skills",
+      "text": "asking for what you want in writing, and taking feedback well"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching experience needed, and you don't need to be a writer. You're the sounding board and the first reader: respond as a reader, not a teacher. 'I got confused here' helps more than 'fix your comma.'",
+    "plan": [
+      {
+        "when": "First hour",
+        "what": "The style switch game, pick style and topic, think about the reader (Steps 1 and 2)."
+      },
+      {
+        "when": "Second hour",
+        "what": "Write the first draft, then read it out loud for feedback (Steps 3 and 4)."
+      },
+      {
+        "when": "After a break",
+        "what": "Revise and send it to its real reader (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They freeze at a blank page",
+        "a": "Say it out loud: 'Version 1 is supposed to be messy.' Then ask: what's the first thing you want your reader to know?"
+      },
+      {
+        "q": "They get defensive about feedback",
+        "a": "Normal. Ask them to give you feedback on something you wrote first. It shows them how it works."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Voice and style",
+      "text": "writing differently depending on the situation"
+    },
+    {
+      "name": "Audience awareness",
+      "text": "thinking about who's reading and what they need"
+    },
+    {
+      "name": "Revision",
+      "text": "seeing the gap between what you meant and what you wrote"
+    },
+    {
+      "name": "Confidence",
+      "text": "finishing a piece of writing and knowing it's good"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Play style switch",
+      "why": "A quick game that shows how much style matters, then the style and topic.",
+      "kid": "Pick something silly, like the family dog or last night's dinner. Your kid says one sentence about it as a news reporter, then as a restaurant critic, then as a letter to the dog. Then they flip through the Writing Style Cards, choose a style, and pick a topic they actually care about or know a lot about. They write it as one line: 'I'm writing a [style] about [topic].'",
+      "you": "Play the game too, the more dramatic the better. Then help them find a style and topic combination with enough to say, and let them choose.",
+      "starters": [
+        "Review + a game or book",
+        "How-to + something they're good at",
+        "Opinion + a rule they'd change",
+        "Letter + someone real",
+        "News + something in the family",
+        "Story + an idea they've been carrying"
+      ],
+      "ask": [
+        "Which voice was the funniest, and why?",
+        "Who would actually want to read this?"
+      ],
+      "tip": "A kid who's bored by the topic will write bored. Let them pick something they really care about.",
+      "levels": {
+        "explore": "Play one round, then pick a style and topic from the ideas.",
+        "develop": "Pick your own topic, and explain why your style fits it.",
+        "extend": "Pick two styles for the same topic, and predict how the pieces will differ."
+      }
+    },
+    {
+      "title": "Know your reader",
+      "why": "Your kid figures out who they're writing for and what that person needs.",
+      "kid": "Before writing a word, your kid answers four questions: who exactly is reading this? What do they already know? What do they want: to be entertained, informed or convinced? And what tone fits: casual, formal, funny or serious?",
+      "you": "Ask the questions that make them think past themselves. A how-to for a five-year-old looks nothing like one for a teenager, and a letter to Grandma has a different tone than a letter to a company.",
+      "ask": [
+        "If this person picked up your writing, what would make them keep reading?",
+        "Would you write this differently if your reader were five?"
+      ],
+      "tip": "When kids know a real person will read it, they suddenly care whether it makes sense.",
+      "levels": {
+        "explore": "Name your reader and pick a tone.",
+        "develop": "Answer all four questions, and write one sentence about how your reader changes your writing.",
+        "extend": "Write the opening line for two different readers, and compare them."
+      }
+    },
+    {
+      "title": "Write the first draft",
+      "why": "The messy part: get the whole thing down, start to finish.",
+      "kid": "Your kid writes the whole piece in one go, using their style card as a loose guide. They keep going without stopping to fix spelling or rewrite sentences, and they say what they actually think. Bland and safe is worse than rough and honest.",
+      "you": "Protect the momentum: no corrections yet. If they get stuck, ask 'what's the next thing you want your reader to know?'",
+      "ask": [
+        "What's the most important thing you want to say?",
+        "Are you writing what you think, or what you think sounds right?"
+      ],
+      "tip": "Professional writers don't get it right the first time either. Saying that out loud helps more kids than you'd think.",
+      "levels": {
+        "explore": "Write half a page to a page, using the style card as a guide.",
+        "develop": "Write a full page with a clear opening, middle and ending.",
+        "extend": "Write a full piece with a specific example, a strong opinion and an ending that lands."
+      }
+    },
+    {
+      "title": "Read it out loud for feedback",
+      "why": "Your kid hears their piece through a reader's ears.",
+      "kid": "Your kid reads the draft out loud to you or another family member and listens to the reaction. Then they write down 2 or 3 things to change: not everything, just what will make the biggest difference.",
+      "you": "Respond as a real audience, not a proofreader. Start with what works, then name one or two things that confused you: 'I got really interested when you talked about...', 'I got a little lost in the middle.'",
+      "ask": [
+        "What part are you most proud of?",
+        "If you could change just one thing, what would it be?"
+      ],
+      "tip": "If it sounds weird out loud, it reads weird on paper. Kids catch their own mistakes faster when they hear them.",
+      "levels": {
+        "explore": "Read it out loud and write down 1 thing to keep and 1 to change.",
+        "develop": "Write down 2 or 3 specific changes based on the feedback.",
+        "extend": "Get feedback from two different people, and decide which suggestions to use."
+      }
+    },
+    {
+      "title": "Revise and send it",
+      "why": "Version 2, then the piece goes to its real reader.",
+      "kid": "Your kid makes their changes: an opening that grabs, the main point clear early, no sentences that don't add anything, an ending that feels finished. They put Version 1 and Version 2 side by side and notice what changed. Then they send it to its real reader: mail the letter, test the how-to on someone, read the opinion piece at dinner.",
+      "you": "Help them see the gap between the two versions: that gap is the learning. Then help find a real (and safe) way to get it in front of someone.",
+      "ask": [
+        "What's the biggest change between Version 1 and Version 2?",
+        "Who would enjoy reading this most?"
+      ],
+      "tip": "If they don't want to share, ask why gently. Sometimes 'I don't want to' means 'I'm not sure it's good enough.'",
+      "levels": {
+        "explore": "Write a clean final version, circle one thing that's better, and share it with one person.",
+        "develop": "Rewrite the full piece with all edits, and send it to a real reader.",
+        "extend": "Send it, then write a second piece in a different style on the same topic."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Writing Style Cards",
+    "intro": "Flip through these to choose a style. Each one says what the style does, how it's built, and what it sounds like.",
+    "items": [
+      {
+        "name": "Review",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "help someone decide if something is worth it."
+          },
+          {
+            "k": "Build:",
+            "v": "what it is, what's good, what's not, who'd like it, your rating."
+          },
+          {
+            "k": "Sounds:",
+            "v": "honest, specific, opinionated."
+          }
+        ]
+      },
+      {
+        "name": "Letter",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "say something to one specific person."
+          },
+          {
+            "k": "Build:",
+            "v": "greeting, why you're writing, the details, what you're asking, closing."
+          },
+          {
+            "k": "Sounds:",
+            "v": "like you're talking to that person."
+          }
+        ]
+      },
+      {
+        "name": "Opinion piece",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "make your case so it's hard to ignore."
+          },
+          {
+            "k": "Build:",
+            "v": "your opinion, best reason, second reason, the other side, what should change."
+          },
+          {
+            "k": "Sounds:",
+            "v": "confident, direct, backed by facts."
+          }
+        ]
+      },
+      {
+        "name": "Short story",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "bring an idea to life."
+          },
+          {
+            "k": "Build:",
+            "v": "setting and character, a problem, what happens next, how it ends."
+          },
+          {
+            "k": "Sounds:",
+            "v": "whatever fits the story: funny, spooky, quiet."
+          }
+        ]
+      },
+      {
+        "name": "How-to guide",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "teach something so it actually works."
+          },
+          {
+            "k": "Build:",
+            "v": "what you're teaching, what you need, numbered steps, tips."
+          },
+          {
+            "k": "Sounds:",
+            "v": "friendly, clear, patient."
+          }
+        ]
+      },
+      {
+        "name": "News report",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "give the facts, fast."
+          },
+          {
+            "k": "Build:",
+            "v": "headline, who/what/when/where first, details, a quote, what's next."
+          },
+          {
+            "k": "Sounds:",
+            "v": "clear, factual, neutral. Short sentences."
+          }
+        ]
+      }
+    ]
+  },
+  "conclusion": {
+    "headline": "Your kid just wrote something real, for a real reader.",
+    "text": "They picked a style, thought about who'd read it, wrote a messy first draft, listened to feedback and made it better. Voice, audience and revision, the three things that make every kind of writing work.",
+    "celebrate": "Put Version 1 and Version 2 side by side and point at what changed. That gap is the skill.",
+    "extensions": [
+      "Try every style card once over the next few weeks",
+      "Write the same topic in two styles and compare",
+      "Write a real letter to someone who'll write back",
+      "Keep a folder of finished pieces, one per style"
+    ]
+  },
+  "signs": [
+    "They ask 'who's this for?' before writing",
+    "They change their tone for different readers without being told",
+    "They accept feedback and make the piece better"
+  ],
+  "makeItReal": "Send it for real: mail the letter to a grandparent, send the complaint letter to the company, test the how-to on a friend. A real reader writing back is the best motivation a young writer can get.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/write-like-a-pro.jpg",
+    "alt": "A girl writing and drawing at a table covered in markers",
+    "caption": "Real writing has a real reader."
+  }
+}

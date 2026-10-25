@@ -182,6 +182,20 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${foot(`Step ${i + 1}`)}
 </section>`).join('');
 
+  // Optional reference page (style cards, prompt cards): a titled grid of
+  // short cards the kid flips through while working.
+  const R = g.reference;
+  const reference = R ? `
+<section class="pg refpg">
+  <div class="eyebrow">Keep this open</div>
+  <h2>${esc(R.title)}</h2>
+  ${R.intro ? `<p class="lead">${esc(R.intro)}</p>` : ''}
+  <div class="refgrid">${R.items.map((it) => `
+    <div class="refcard"><h3>${esc(it.name)}</h3>${it.lines.map((l) => `<p><b>${esc(l.k)}</b> ${esc(l.v)}</p>`).join('')}</div>`).join('')}
+  </div>
+  ${foot(R.title)}
+</section>` : '';
+
   const c = g.conclusion;
   const finish = `
 <section class="pg finish">
@@ -207,7 +221,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${reference}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
@@ -287,6 +301,8 @@ ul{list-style:none}
 .acad{display:grid;gap:0;margin:0}.acad div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.acad div:first-child{border-top:0;padding-top:2px}
 .acad dt{font:700 1em/1.3 'DM Sans';color:var(--accent)}.acad dd{margin:2px 0 0;line-height:1.45}
 .box.real{border-left:4px solid var(--trail)}
+.refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
+.refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
 .plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
 .plan dt{font:700 .95em/1.35 'DM Sans';color:var(--trail)}.plan dd{margin:0;line-height:1.4}
 .box.home{background:#fbf3e4}.box.home p{margin:0 0 8px}.box.home blockquote{margin:6px 0 0;padding:4px 0 4px 12px;border-left:3px solid var(--gold);font-style:italic;line-height:1.45}
@@ -406,7 +422,8 @@ h2{font-size:40px}
 
 .ideagrid{grid-template-columns:1fr 1fr;gap:14px}
 .tips{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
-.learns{grid-template-columns:1fr 1fr;column-gap:28px}.learns div:nth-child(2){border-top:0;padding-top:2px}
+.learns{grid-template-columns:1fr 1fr;column-gap:28px}
+.refgrid{grid-template-columns:1fr 1fr}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
 .photo{margin-top:0}
