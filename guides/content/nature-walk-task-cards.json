@@ -100,43 +100,53 @@
       "cards": [
         {
           "t": "Stop where you are. Name 5 things you see that you didn't notice at first.",
-          "d": "Which one is the most interesting? Why?"
+          "d": "Which one is the most interesting? Why?",
+          "icon": "eye"
         },
         {
           "t": "Find something tiny and something huge. Describe both without naming them.",
-          "d": "What makes each one important here?"
+          "d": "What makes each one important here?",
+          "icon": "zoom-in"
         },
         {
           "t": "Find something with lines. Trace the lines in the air with your finger.",
-          "d": "Where do the lines lead?"
+          "d": "Where do the lines lead?",
+          "icon": "spline"
         },
         {
           "t": "Choose one object and describe it using only three words.",
-          "d": "Now add three more words that are even better."
+          "d": "Now add three more words that are even better.",
+          "icon": "tag"
         },
         {
           "t": "Find something old and something new.",
-          "d": "What clues helped you decide?"
+          "d": "What clues helped you decide?",
+          "icon": "hourglass"
         },
         {
           "t": "Find something that looks soft and something that looks tough.",
-          "d": "What job might each one be doing?"
+          "d": "What job might each one be doing?",
+          "icon": "shield"
         },
         {
           "t": "Look for 3 different greens (or 3 different browns).",
-          "d": "Which one blends in best here?"
+          "d": "Which one blends in best here?",
+          "icon": "leaf"
         },
         {
           "t": "Find something that seems out of place.",
-          "d": "Why might it be here?"
+          "d": "Why might it be here?",
+          "icon": "scan-search"
         },
         {
           "t": "Choose a spot and stare at it for 15 seconds. What changes?",
-          "d": "What stayed the same?"
+          "d": "What stayed the same?",
+          "icon": "timer"
         },
         {
           "t": "Find something you think most people would walk past. Show me.",
-          "d": "Why do you think it gets ignored?"
+          "d": "Why do you think it gets ignored?",
+          "icon": "eye-off"
         }
       ]
     },
@@ -145,43 +155,53 @@
       "cards": [
         {
           "t": "Find a pattern: spots, stripes, or something that repeats. Point to it.",
-          "d": "What might that pattern help with?"
+          "d": "What might that pattern help with?",
+          "icon": "layers"
         },
         {
           "t": "Find a spiral, or something that curves like one.",
-          "d": "Where else do you see spirals in real life?"
+          "d": "Where else do you see spirals in real life?",
+          "icon": "shell"
         },
         {
           "t": "Find something symmetrical and something that isn't.",
-          "d": "Which one looks more 'designed' to you?"
+          "d": "Which one looks more 'designed' to you?",
+          "icon": "shapes"
         },
         {
           "t": "Find 3 things that are the same shape but different sizes.",
-          "d": "Put them in order, smallest to biggest."
+          "d": "Put them in order, smallest to biggest.",
+          "icon": "list-ordered"
         },
         {
           "t": "Find something with a triangle shape.",
-          "d": "Why are triangles so strong?"
+          "d": "Why are triangles so strong?",
+          "icon": "triangle"
         },
         {
           "t": "Find something with a circle shape.",
-          "d": "Where else do circles show up in nature?"
+          "d": "Where else do circles show up in nature?",
+          "icon": "circle"
         },
         {
           "t": "Pick a stick and estimate: is it longer or shorter than your forearm?",
-          "d": "Now test your guess."
+          "d": "Now test your guess.",
+          "icon": "ruler"
         },
         {
           "t": "Find two things and compare: which one looks heavier? Why?",
-          "d": "What clues make you think that?"
+          "d": "What clues make you think that?",
+          "icon": "weight"
         },
         {
           "t": "Find something that branches in a 'Y' shape.",
-          "d": "Why might branching be useful?"
+          "d": "Why might branching be useful?",
+          "icon": "git-fork"
         },
         {
           "t": "Count 10 steps. What's the most common thing you see in those 10 steps?",
-          "d": "Why do you think it's so common here?"
+          "d": "Why do you think it's so common here?",
+          "icon": "footprints"
         }
       ]
     },
@@ -190,43 +210,53 @@
       "cards": [
         {
           "t": "Find evidence that something ate something.",
-          "d": "What do you think was eaten?"
+          "d": "What do you think was eaten?",
+          "icon": "apple"
         },
         {
           "t": "Find evidence that something travelled through here.",
-          "d": "How can you tell it wasn't random?"
+          "d": "How can you tell it wasn't random?",
+          "icon": "route"
         },
         {
           "t": "Find a place where a small creature could hide.",
-          "d": "What makes it a good hiding spot?"
+          "d": "What makes it a good hiding spot?",
+          "icon": "bug"
         },
         {
           "t": "Find a home clue: a nest, a web, a hole, or a shelter.",
-          "d": "Who might live there?"
+          "d": "Who might live there?",
+          "icon": "house"
         },
         {
           "t": "Find a feather, fur, or a shed skin. Look only, don't touch.",
-          "d": "What might that tell you?"
+          "d": "What might that tell you?",
+          "icon": "feather"
         },
         {
           "t": "Pick a plant and look closely. Do you see any damage?",
-          "d": "What could have caused it?"
+          "d": "What could have caused it?",
+          "icon": "leaf"
         },
         {
           "t": "Listen. Do you hear any animals? Point to where the sound comes from.",
-          "d": "Near or far? How do you know?"
+          "d": "Near or far? How do you know?",
+          "icon": "ear"
         },
         {
           "t": "Where would insects be most active here: in the sun or in the shade?",
-          "d": "What makes you think that?"
+          "d": "What makes you think that?",
+          "icon": "sun-medium"
         },
         {
           "t": "Find a 'meeting place' where animals might cross paths.",
-          "d": "What signs would you look for?"
+          "d": "What signs would you look for?",
+          "icon": "waypoints"
         },
         {
           "t": "Find something that looks built: a web, an anthill, a nest, stacked sticks.",
-          "d": "What problem does it solve?"
+          "d": "What problem does it solve?",
+          "icon": "egg"
         }
       ]
     },
@@ -235,43 +265,53 @@
       "cards": [
         {
           "t": "Look up. Describe the clouds using a creative comparison.",
-          "d": "What weather might come next?"
+          "d": "What weather might come next?",
+          "icon": "cloud"
         },
         {
           "t": "Find a place that feels windy and a place that feels sheltered.",
-          "d": "What blocks the wind?"
+          "d": "What blocks the wind?",
+          "icon": "wind"
         },
         {
           "t": "Touch two safe surfaces. Which one feels warmer?",
-          "d": "Why would that happen?"
+          "d": "Why would that happen?",
+          "icon": "thermometer"
         },
         {
           "t": "Find a sign of moisture: damp soil, dew, a puddle, wet leaves.",
-          "d": "Where is the moisture coming from?"
+          "d": "Where is the moisture coming from?",
+          "icon": "droplets"
         },
         {
           "t": "Find a spot where water would collect if it rained hard.",
-          "d": "What makes you think so?"
+          "d": "What makes you think so?",
+          "icon": "cloud-rain"
         },
         {
           "t": "Find a tiny path where water would run: a groove, a slope, a channel.",
-          "d": "Where does it lead?"
+          "d": "Where does it lead?",
+          "icon": "waves"
         },
         {
           "t": "Find something that helps hold water in the ground: moss, soil, leaf litter.",
-          "d": "How does it help?"
+          "d": "How does it help?",
+          "icon": "sprout"
         },
         {
           "t": "Find something that helps water move faster: smooth rock, a slope, bare ground.",
-          "d": "Is faster always better? Why or why not?"
+          "d": "Is faster always better? Why or why not?",
+          "icon": "mountain"
         },
         {
           "t": "Find a puddle reflection: sky, trees, clouds.",
-          "d": "How does it change when you move?"
+          "d": "How does it change when you move?",
+          "icon": "glass-water"
         },
         {
           "t": "Find evidence the weather changed recently: mud, broken twigs, dry crunch.",
-          "d": "What do you think happened?"
+          "d": "What do you think happened?",
+          "icon": "cloud-lightning"
         }
       ]
     },
@@ -280,43 +320,53 @@
       "cards": [
         {
           "t": "Find something strong and something flexible.",
-          "d": "Why would nature need both?"
+          "d": "Why would nature need both?",
+          "icon": "dumbbell"
         },
         {
           "t": "Find a natural 'bridge': a root, branch or rock that spans a gap.",
-          "d": "Would it hold weight? Why?"
+          "d": "Would it hold weight? Why?",
+          "icon": "rainbow"
         },
         {
           "t": "Find something that looks waterproof, like a waxy leaf or bark.",
-          "d": "How can you tell?"
+          "d": "How can you tell?",
+          "icon": "umbrella"
         },
         {
           "t": "Find something that looks like it soaks up water, like soil or moss.",
-          "d": "What clues show that?"
+          "d": "What clues show that?",
+          "icon": "droplet"
         },
         {
           "t": "Find a stable shape: wide, low, or spreading.",
-          "d": "Why is it hard to tip over?"
+          "d": "Why is it hard to tip over?",
+          "icon": "mountain-snow"
         },
         {
           "t": "Find something that looks designed to travel, like a seed or a burr.",
-          "d": "How might it travel: wind, water, or animals?"
+          "d": "How might it travel: wind, water, or animals?",
+          "icon": "plane"
         },
         {
           "t": "Find something that seems balanced.",
-          "d": "What would knock it over?"
+          "d": "What would knock it over?",
+          "icon": "scale"
         },
         {
           "t": "Find evidence of the forces of nature: wind, water, or gravity.",
-          "d": "Which force is strongest here today?"
+          "d": "Which force is strongest here today?",
+          "icon": "atom"
         },
         {
           "t": "Find something that shows change: decay, growth, or something broken and healing.",
-          "d": "Is change good, bad, or both?"
+          "d": "Is change good, bad, or both?",
+          "icon": "refresh-ccw"
         },
         {
           "t": "Find something that's a sign of time passing: growth rings, worn rock, new shoots.",
-          "d": "What do you think it looked like a month ago?"
+          "d": "What do you think it looked like a month ago?",
+          "icon": "trees"
         }
       ]
     },
@@ -325,39 +375,48 @@
       "cards": [
         {
           "t": "Choose 3 found items and make a 'mini invention' on the ground.",
-          "d": "What is it for?"
+          "d": "What is it for?",
+          "icon": "puzzle"
         },
         {
           "t": "Find a 'problem spot': slippery, steep or tangled. How would you solve it safely?",
-          "d": "What would you change if you could?"
+          "d": "What would you change if you could?",
+          "icon": "triangle-alert"
         },
         {
           "t": "Close your eyes for 10 seconds. What do you hear now?",
-          "d": "Which sound is closest?"
+          "d": "Which sound is closest?",
+          "icon": "ear"
         },
         {
           "t": "Find something beautiful. Tell me why you chose it.",
-          "d": "What makes it beautiful: the colour, the shape, or what it means?"
+          "d": "What makes it beautiful: the colour, the shape, or what it means?",
+          "icon": "sparkles"
         },
         {
           "t": "Find something that looks like a character from a story.",
-          "d": "What would its personality be?"
+          "d": "What would its personality be?",
+          "icon": "smile"
         },
         {
           "t": "Choose one object and give it a new name.",
-          "d": "Explain why that name fits."
+          "d": "Explain why that name fits.",
+          "icon": "pencil-line"
         },
         {
           "t": "Find 3 things that match: same colour, same texture, or same shape.",
-          "d": "Which category did you choose, and why?"
+          "d": "Which category did you choose, and why?",
+          "icon": "copy"
         },
         {
           "t": "Describe one thing like a poet, using 'like...'.",
-          "d": "Now describe it like a scientist."
+          "d": "Now describe it like a scientist.",
+          "icon": "quote"
         },
         {
           "t": "Find a place that feels calm. Stand there for 15 seconds.",
-          "d": "What makes it feel calm?"
+          "d": "What makes it feel calm?",
+          "icon": "heart"
         }
       ]
     },
@@ -366,23 +425,28 @@
       "cards": [
         {
           "t": "Find one sign that people were here: a footprint, a wrapper, a cut branch, a sign.",
-          "d": "What's one way people could help this place?"
+          "d": "What's one way people could help this place?",
+          "icon": "trash-2"
         },
         {
           "t": "Pick your favourite find today. Teach me one thing about it.",
-          "d": "What question do you still have?"
+          "d": "What question do you still have?",
+          "icon": "lightbulb"
         },
         {
           "t": "Find something that shows teamwork in nature: a group, many of the same thing, a shared space.",
-          "d": "How does teamwork help them survive?"
+          "d": "How does teamwork help them survive?",
+          "icon": "users"
         },
         {
           "t": "Find two things that look alike but are actually different. Tell me how you know.",
-          "d": "Which differences matter most?"
+          "d": "Which differences matter most?",
+          "icon": "split"
         },
         {
           "t": "Find a mystery object. Don't guess yet: list 5 facts about it first.",
-          "d": "Now make your best guess using those facts."
+          "d": "Now make your best guess using those facts.",
+          "icon": "badge-help"
         }
       ]
     }
