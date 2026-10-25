@@ -10,9 +10,20 @@ const img = (src) => src.startsWith('http') ? src : `data:image/jpeg;base64,${fs
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Category accents. Add one line per category as guides move over.
+// One color per category, drawn from the brand palette and never repeated,
+// so members can tell categories apart at a glance. `paper` is the light
+// page tint (color PDFs and phone only; black & white stays plain).
 export const ACCENTS = {
-  'Writing & Communication': { accent: '#4f8aa0', soft: '#e3eff2' },
-  default: { accent: '#bf7c48', soft: '#f6e9dc' },
+  'Writing & Communication': { accent: '#4f8aa0', soft: '#e3eff2', paper: '#f1f5f4' },
+  'Outdoor Learning': { accent: '#588157', soft: '#e1e9d8', paper: '#f2f5ec' },
+  'Real-World Math': { accent: '#b08a35', soft: '#f2e6c2', paper: '#f8f3e6' },
+  'Creativity & Maker': { accent: '#c4836a', soft: '#f4e0d6', paper: '#f9f0eb' },
+  'Emotional & Social Skills': { accent: '#b6748a', soft: '#f2e1e7', paper: '#f8eff2' },
+  'Entrepreneurship': { accent: '#8b7355', soft: '#ece2d6', paper: '#f6f0e8' },
+  'AI & Digital Literacy': { accent: '#6f86a0', soft: '#e2e8ef', paper: '#f1f3f6' },
+  'Worldschooling': { accent: '#8a8470', soft: '#e7e4d9', paper: '#f4f2ec' },
+  'Planning & Problem-Solving': { accent: '#5c7b6a', soft: '#dfe8e2', paper: '#eff4f1' },
+  default: { accent: '#bf7c48', soft: '#f6e9dc', paper: '#f7f2e8' },
 };
 
 const contours = (id) => `
@@ -69,7 +80,7 @@ const levelRow = (lv) => `
 export function buildHtml(g, mode, { bonus = false } = {}) {
   const bw = mode === 'print-bw';
   const layout = mode === 'phone' ? 'phone' : 'print';
-  const { accent, soft } = ACCENTS[g.category] ?? ACCENTS.default;
+  const { accent, soft, paper } = ACCENTS[g.category] ?? ACCENTS.default;
   const n = g.steps.length;
   const foot = (label) => `<footer class="foot"><span>${esc(g.title)}</span><span>${esc(label)}</span></footer>`;
 
@@ -195,13 +206,13 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <title>${esc(g.title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>${css(layout, accent, soft, bw)}</style></head>
+<style>${css(layout, accent, soft, bw, paper)}</style></head>
 <body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${finish}</body></html>`;
 }
 
-function css(mode, accent, soft, bw) {
+function css(mode, accent, soft, bw, paper = '#f7f2e8') {
   return `
-:root{--paper:#f7f2e8;--paper2:#efe7d6;--card:#fffdf8;--ink:#32302a;--muted:#6b6152;--forest:#5d7d53;--forest2:#7d9c6d;--trail:#bf7c48;--gold:#d6a24e;--accent:${accent};--soft:${soft};
+:root{--paper:${paper};--paper2:#efe7d6;--card:#fffdf8;--ink:#32302a;--muted:#6b6152;--forest:#5d7d53;--forest2:#7d9c6d;--trail:#bf7c48;--gold:#d6a24e;--accent:${accent};--soft:${soft};
 --l1:#eef3e6;--l2:#dde9cf;--l3:#c7dbb3}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
