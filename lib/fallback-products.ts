@@ -156,9 +156,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Walk Task Cards",
     slug: "nature-walk-task-cards",
     description:
-      "Task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Works in any outdoor space, any season, any weather.",
+      "66 read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three different greens, stay still for 15 seconds and watch what changes, look for evidence that something ate something. Works in any outdoor space, any season, any weather.",
     shortDescription:
-      "Nature walk task cards for kids ages 6-14: turn any walk into focused outdoor learning. Low-prep, any trail, any season.",
+      "66 nature walk task cards for kids ages 6-14: turn any walk into focused outdoor learning. Low-prep, any trail, any season.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpfAkIBECpwGmYYJRzrKV",
@@ -225,9 +225,9 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Outdoor STEM Challenge Cards",
     slug: "outdoor-stem-challenges",
     description:
-      "20 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a waterproof shelter. Measure tree heights using shadows. Engineer a boat that floats. Each challenge has constraints that force creative problem-solving with no instructions, just goals.",
+      "24 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a windproof shelter. Make a shadow clock. Engineer a raft that carries pebbles. Each challenge has constraints that force creative problem-solving with no instructions, just goals.",
     shortDescription:
-      "20 outdoor STEM challenges for kids ages 6-14: build, test, and engineer using what nature provides. Low-prep.",
+      "24 outdoor STEM challenges for kids ages 6-14: build, test, and engineer using what nature provides. Low-prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpgAkIBECpwGmDo8WjG4Z",

@@ -278,9 +278,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-walk-task-cards': {
     opening:
-      'Read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three textures, listen for five sounds, sketch the smallest thing you can find. Perfect for parents who want a simple, low-prep way to make walks more engaging.',
+      '66 read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three different greens, stay still for 15 seconds and watch what changes, look for evidence that something ate something. Perfect for parents who want a simple, low-prep way to make walks more engaging.',
     whatsIncluded: [
-      'Read-aloud outdoor learning prompt cards',
+      '66 read-aloud cards in 7 themes, each with a Deeper question',
       'Each card focuses on a specific sense or skill',
       'Works in parks, backyards, trails, beaches, or neighbourhoods',
       'Designed for parent-led or independent use',
@@ -349,9 +349,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-stem-challenges': {
     opening:
-      '20 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a waterproof shelter. Measure tree heights using shadows. Engineer a boat that floats. Each challenge is a hands-on engineering adventure using only what you find outside.',
+      '24 outdoor STEM challenges that use the natural world as a laboratory. Build a bridge from sticks. Design a windproof shelter. Make a shadow clock. Engineer a raft that carries pebbles. Each challenge is a hands-on engineering adventure using only what you find outside.',
     whatsIncluded: [
-      '20 outdoor STEM challenge cards',
+      '24 outdoor STEM challenge cards in 5 themes',
       'Engineering: bridges, shelters, boats, towers, and structures',
       'Science: measurement, forces, materials, buoyancy',
       'Each challenge uses found natural materials only',
