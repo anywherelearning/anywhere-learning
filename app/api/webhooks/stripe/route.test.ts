@@ -44,6 +44,7 @@ vi.mock('@/lib/db', () => ({
     // (e.g. upsertUser) don't blow up on an empty result.
     insert: () => ({ values: () => ({ returning: () => [{ id: 'user_test' }], onConflictDoNothing: () => ({ returning: () => [{ id: 'evt_test' }] }) }) }),
     update: () => ({ set: () => ({ where: () => ({ returning: () => [] }) }) }),
+    delete: () => ({ where: () => Promise.resolve() }),
   },
 }));
 
@@ -301,5 +302,63 @@ describe('Stripe webhook checkout.session.expired', () => {
     // Still ack'd (200) so Stripe stops retrying, but no email goes out.
     expect(res.status).toBe(200);
     expect(sendAbandonedCheckoutMembershipEmail).not.toHaveBeenCalled();
+  });
+});
+
+describe('Stripe webhook trial-canceled email', () => {
+  const user = { id: 'u1', email: 'trial@example.com', clerkId: 'user_test', stripeCustomerId: 'cus_trial' };
+  const trialEnd = Math.floor(Date.now() / 1000) + 5 * 86400;
+
+  function trialSub(overrides: Record<string, unknown> = {}) {
+    return {
+      id: 'sub_trial',
+      status: 'trialing',
+      customer: 'cus_trial',
+      items: { data: [{ price: { id: 'price_test' } }] },
+      current_period_end: trialEnd,
+      trial_end: trialEnd,
+      cancel_at_period_end: true,
+      ...overrides,
+    };
+  }
+
+  it('sends when the first event seen already has the cancel scheduled', async () => {
+    const { sendTrialCanceledEmail } = await import('@/lib/resend');
+    // user lookup → user; no subscription row yet; nothing in sent_emails.
+    selectResults.queue = [[user], [], []];
+    mockConstructEvent.mockReturnValue(fakeEvent('customer.subscription.updated', trialSub()));
+
+    const res = await POST(makeRequest('body'));
+
+    expect(res.status).toBe(200);
+    expect(sendTrialCanceledEmail).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(sendTrialCanceledEmail).mock.calls[0][0]).toMatchObject({ to: user.email });
+  });
+
+  it('skips when the confirmation already went out for this subscription', async () => {
+    const { sendTrialCanceledEmail } = await import('@/lib/resend');
+    selectResults.queue = [[user], [{ status: 'trialing', cancelAtPeriodEnd: true }], [{ id: 'sent_row' }]];
+    mockConstructEvent.mockReturnValue(fakeEvent('customer.subscription.updated', trialSub()));
+
+    await POST(makeRequest('body'));
+
+    expect(sendTrialCanceledEmail).not.toHaveBeenCalled();
+  });
+
+  it('sends at trial end when the scheduled-cancel email never went out', async () => {
+    const { sendTrialCanceledEmail } = await import('@/lib/resend');
+    // Our row already says cancelAtPeriodEnd = true, but sent_emails is empty.
+    selectResults.queue = [[user], [{ status: 'trialing', cancelAtPeriodEnd: true, stripePriceId: 'price_test' }], []];
+    mockConstructEvent.mockReturnValue(
+      fakeEvent('customer.subscription.deleted', trialSub({
+        status: 'canceled',
+        current_period_end: Math.floor(Date.now() / 1000) - 60,
+        trial_end: Math.floor(Date.now() / 1000) - 60,
+      })),
+    );
+
+    await POST(makeRequest('body'));
+
+    expect(sendTrialCanceledEmail).toHaveBeenCalledTimes(1);
   });
 });

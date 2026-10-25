@@ -171,6 +171,49 @@ async function createExitSurvey(
   }
 }
 
+/**
+ * Send the trial-canceled confirmation at most once per subscription.
+ * Two webhook paths can fire it (cancel scheduled mid-trial, and the
+ * deletion when the trial ends), so the send is claimed in `sent_emails`
+ * under a per-subscription kind first. A failed send releases the claim so
+ * the next event can retry.
+ */
+async function sendTrialCanceledOnce(
+  user: { email: string; clerkId: string | null },
+  subscriptionId: string,
+  priceId: string | null | undefined,
+) {
+  const kind = `trial_canceled:${subscriptionId}`;
+  let claimId: string | undefined;
+  try {
+    const already = await db
+      .select({ id: sentEmails.id })
+      .from(sentEmails)
+      .where(and(eq(sentEmails.email, user.email), eq(sentEmails.kind, kind)))
+      .limit(1);
+    if (already.length > 0) return;
+    const claimed = await db
+      .insert(sentEmails)
+      .values({ email: user.email, kind })
+      .returning({ id: sentEmails.id });
+    claimId = claimed[0]?.id;
+
+    const { planForPriceId } = await import('@/lib/stripe-prices');
+    const plan = planForPriceId(priceId);
+    const firstName = await firstNameForClerkId(user.clerkId);
+    const surveyToken = await createExitSurvey(user.email, 'trial-cancel', plan);
+    // Resend reports failures in the result instead of throwing.
+    const result = await sendTrialCanceledEmail({ to: user.email, firstName, plan, surveyToken });
+    if (result?.error) throw new Error(result.error.message);
+    console.log(`[webhook] sent trial-canceled email to ${user.email}`);
+  } catch (err) {
+    console.error('[webhook] trial-canceled email failed:', err);
+    if (claimId) {
+      await db.delete(sentEmails).where(eq(sentEmails.id, claimId)).catch(() => {});
+    }
+  }
+}
+
 /** Best-effort Clerk firstName lookup for email personalization. */
 async function firstNameForClerkId(clerkId: string | null): Promise<string | undefined> {
   try {
@@ -828,6 +871,15 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   }
   console.log(`[webhook] subscription ${sub.id} → ${sub.status} for ${user.email}`);
 
+  // A trial member scheduled their trial to expire: they'll never pay, so
+  // they get the "nothing will be charged" confirmation now. Keyed on the
+  // current state rather than the false → true transition, because the first
+  // event we see can already carry cancel_at_period_end = true (no prior row
+  // to compare against). sendTrialCanceledOnce dedupes per subscription.
+  if (sub.status === 'trialing' && (sub.cancel_at_period_end ?? false) === true) {
+    await sendTrialCanceledOnce(user, sub.id, priceId);
+  }
+
   // Cancellation scheduled: cancel_at_period_end flipped false → true (the
   // billing portal's "Cancel plan"). Confirm by email right away — the
   // subscription stays active until period end, so the deletion event (and
@@ -837,35 +889,27 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
     !!existing[0] &&
     existing[0].cancelAtPeriodEnd === false &&
     (sub.cancel_at_period_end ?? false) === true;
-  if (capTurnedOn && (sub.status === 'active' || sub.status === 'trialing')) {
+  if (capTurnedOn && sub.status === 'active') {
     const { planForPriceId } = await import('@/lib/stripe-prices');
     const plan = planForPriceId(priceId);
     const firstName = await firstNameForClerkId(user.clerkId);
     const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
     try {
-      if (sub.status === 'trialing') {
-        // A trial member scheduled their trial to expire: they'll never pay,
-        // so they get the "nothing will be charged" confirmation now.
-        const surveyToken = await createExitSurvey(user.email, 'trial-cancel', plan);
-        await sendTrialCanceledEmail({ to: user.email, firstName, plan, surveyToken });
-        console.log(`[webhook] sent trial-canceled email to ${user.email} (scheduled)`);
-      } else {
-        const surveyToken = await createExitSurvey(user.email, 'member-cancel', plan);
-        await sendMembershipCancellationScheduledEmail({
-          to: user.email,
-          firstName,
-          accessUntil: periodEnd.toISOString(),
-          plan,
-          manageUrl: `${base}/account/settings`,
-          surveyToken,
-        });
-        console.log(`[webhook] sent cancellation-scheduled email to ${user.email}`);
-        // Win-back segment starts now, not months later at period end.
-        try {
-          await subscribeAndTag(user.email, ['member-canceled']);
-        } catch (err) {
-          console.warn('[webhook] kit member-canceled tagging failed:', err);
-        }
+      const surveyToken = await createExitSurvey(user.email, 'member-cancel', plan);
+      await sendMembershipCancellationScheduledEmail({
+        to: user.email,
+        firstName,
+        accessUntil: periodEnd.toISOString(),
+        plan,
+        manageUrl: `${base}/account/settings`,
+        surveyToken,
+      });
+      console.log(`[webhook] sent cancellation-scheduled email to ${user.email}`);
+      // Win-back segment starts now, not months later at period end.
+      try {
+        await subscribeAndTag(user.email, ['member-canceled']);
+      } catch (err) {
+        console.warn('[webhook] kit member-canceled tagging failed:', err);
       }
     } catch (err) {
       console.error('[webhook] cancellation email failed:', err);
@@ -974,21 +1018,9 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
           add: ['trial-canceled'],
           remove: ['trial-member', 'member', 'founder'],
         });
-        // Confirmation email — unless they scheduled the cancel earlier in
-        // the trial (cancelAtPeriodEnd already true on our row), in which
-        // case the capTurnedOn branch above emailed them at that moment.
-        if (!existing[0]?.cancelAtPeriodEnd) {
-          try {
-            const { planForPriceId } = await import('@/lib/stripe-prices');
-            const plan = planForPriceId(priceId || existing[0]?.stripePriceId);
-            const firstName = await firstNameForClerkId(user.clerkId);
-            const surveyToken = await createExitSurvey(user.email, 'trial-cancel', plan);
-            await sendTrialCanceledEmail({ to: user.email, firstName, plan, surveyToken });
-            console.log(`[webhook] sent trial-canceled email to ${user.email}`);
-          } catch (err) {
-            console.error('[webhook] trial-canceled email failed:', err);
-          }
-        }
+        // Confirmation email. A no-op if it already went out when they
+        // scheduled the cancel earlier in the trial.
+        await sendTrialCanceledOnce(user, sub.id, priceId || existing[0]?.stripePriceId);
       } else {
         const expired = periodEnd <= new Date();
         if (expired) {
