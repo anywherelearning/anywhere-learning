@@ -99,7 +99,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${contours()}
   <div class="cover-in">
     <div class="eyebrow">${esc(g.category)}</div>
-    <h1>${esc(g.title)}</h1>
+    <h1${g.title.length > 30 ? ' class="longtitle"' : ''}>${esc(g.title)}</h1>
     <p class="tagline">${esc(g.tagline)}</p>
     <div class="chips"><span>${esc(g.ages)}</span>${g.time ? `<span>${esc(g.time)}</span>` : ''}<span>Three levels</span></div>
     <div class="coverbody">
@@ -408,6 +408,7 @@ body{font-size:17px}
 .foot{padding:0 22px 16px}
 h2{font-size:30px}
 .cover h1{font-size:54px}
+.cover h1.longtitle{font-size:44px}
 
 `;
 }
@@ -427,6 +428,7 @@ h2{font-size:40px}
 .trail{margin:10px 0 2px}
 .lvlabel{margin-top:12px}
 .cover h1{font-size:84px}
+.cover h1.longtitle{font-size:68px}
 
 .cover-in{flex:1;display:flex;flex-direction:column;text-align:center;max-width:none}
 .cover .chips{justify-content:center}
