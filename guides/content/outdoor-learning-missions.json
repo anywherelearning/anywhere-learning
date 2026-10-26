@@ -1,0 +1,740 @@
+{
+  "slug": "outdoor-learning-missions",
+  "category": "Outdoor Learning",
+  "title": "Outdoor Learning Missions",
+  "tagline": "10 scavenger hunts · 120 finds · Real evidence",
+  "ages": "Ages 6 to 14",
+  "levelsChip": "10 missions",
+  "goal": "Ten scavenger hunt missions you can take on any walk: a micro-world hunt, a signs-of-life hunt, a water cycle hunt, a geologist's rock hunt and more. Each one has 12 things to find and 3 Extras for going deeper. Your kid searches, ticks off finds and explains why each one counts. Observation, science thinking and clear describing, on a plain old walk.",
+  "need": [
+    "These missions, on your phone or printed",
+    "Any outdoor place: a yard, a park, a trail, a beach",
+    "Optional: a pencil to tick off finds"
+  ],
+  "lesson": {
+    "text": "A find only counts when your kid can say why it fits. That's the difference between a scavenger hunt and real science: evidence.",
+    "before": "Found an animal sign.",
+    "model": [
+      {
+        "part": "Find",
+        "line": "A pinecone chewed right down to the core."
+      },
+      {
+        "part": "Where",
+        "line": "On a stump under a big spruce tree."
+      },
+      {
+        "part": "Clue",
+        "line": "A pile of scales all around it, and tooth marks."
+      },
+      {
+        "part": "Claim",
+        "line": "A squirrel sat here and ate it, probably this morning."
+      }
+    ],
+    "modelNote": "That's from Mission 2, Signs of life. When your kid says 'found one,' ask: where, what's the clue, and what do you think happened?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "habitats, animal evidence, water cycle, plants, rocks and soil"
+    },
+    {
+      "subject": "Writing",
+      "text": "precise describing words and short claims backed by clues"
+    },
+    {
+      "subject": "Math",
+      "text": "counting, sorting, ranking and mapping"
+    },
+    {
+      "subject": "Life skills",
+      "text": "patience, curiosity and caring for a place"
+    }
+  ],
+  "howTo": {
+    "intro": "No teaching background needed, and you don't need to know the answers. Read the mission out loud, let your kid lead the search, and ask 'why does that count?' When they're stuck, give a hint, not the answer: 'Where might you find that: near water, in the shade, on a tree?'",
+    "plan": [
+      {
+        "when": "Before",
+        "what": "Pick one mission and a place, and set a boundary."
+      },
+      {
+        "when": "The hunt",
+        "what": "Search and tick off finds, then try an Extra. About 20 to 45 minutes."
+      },
+      {
+        "when": "After",
+        "what": "Ask: favourite find? Trickiest one? What should we hunt next time?"
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They can't find all 12",
+        "a": "That's fine. Circle the missing ones and finish the mission another day, or in another place."
+      },
+      {
+        "q": "They rush to tick everything",
+        "a": "Slow it down with the Claim: each find needs one clue that proves it counts."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "finding details most people walk past"
+    },
+    {
+      "name": "Evidence",
+      "text": "backing up a find with a clue"
+    },
+    {
+      "name": "Vocabulary",
+      "text": "describing exactly what they see"
+    },
+    {
+      "name": "Stewardship",
+      "text": "noticing how people affect a place"
+    }
+  ],
+  "levelsLine": "Every mission has three levels. Explore: find what you can. Develop: find all 12. Extend: do the Extras and explain your best evidence.",
+  "boardMode": true,
+  "themes": [
+    {
+      "title": "Micro-world hunt",
+      "rule": "Become a mini scientist: find the small details most people walk right past.",
+      "cards": [
+        {
+          "t": "Something smaller than your pinky nail",
+          "art": "wc/micro-magnifier.jpg"
+        },
+        {
+          "t": "A tiny hole in soil, wood or a leaf",
+          "art": "wc/micro-wood-holes.jpg"
+        },
+        {
+          "t": "A tiny bug",
+          "art": "wc/micro-beetle.jpg"
+        },
+        {
+          "t": "A tiny seed",
+          "art": "wc/micro-seeds.jpg"
+        },
+        {
+          "t": "A tiny feather",
+          "art": "wc/micro-down-feather.jpg"
+        },
+        {
+          "t": "A tiny hook: a thorn or a burr",
+          "art": "wc/micro-burr.jpg"
+        },
+        {
+          "t": "A tiny shelter under bark or a stone",
+          "art": "wc/micro-leaf-shelter.jpg"
+        },
+        {
+          "t": "A tiny trail: an ant line or a snail path",
+          "art": "wc/micro-ants.jpg"
+        },
+        {
+          "t": "Moss or lichen",
+          "art": "wc/micro-moss-stone.jpg"
+        },
+        {
+          "t": "A miniature forest of moss or grass",
+          "art": "wc/micro-moss-forest.jpg"
+        },
+        {
+          "t": "A nibbled leaf edge",
+          "art": "wc/micro-caterpillar.jpg"
+        },
+        {
+          "t": "Something tiny and bright: a flower, a berry, a beetle",
+          "art": "wc/micro-strawberry.jpg"
+        }
+      ],
+      "extras": [
+        "Explore a 1-foot square for 3 minutes and list everything in it.",
+        "Draw a micro-map showing where 5 of your finds are.",
+        "Describe 3 finds with size words: speck-sized, grainy, pinhead."
+      ],
+      "short": "Micro"
+    },
+    {
+      "title": "Signs of life hunt",
+      "rule": "You're not looking for animals. You're looking for evidence that they were here.",
+      "cards": [
+        {
+          "t": "Tracks of any kind",
+          "art": "wc/signs-tracks.jpg"
+        },
+        {
+          "t": "Droppings",
+          "art": "wc/signs-droppings.jpg"
+        },
+        {
+          "t": "A feather",
+          "art": "wc/signs-feather.jpg"
+        },
+        {
+          "t": "Fur or hair caught on something",
+          "art": "wc/signs-fur.jpg"
+        },
+        {
+          "t": "Chewed leaves",
+          "art": "wc/signs-chewed-leaf.jpg"
+        },
+        {
+          "t": "A chewed cone, nut or seed shell",
+          "art": "wc/signs-chewed-cone.jpg"
+        },
+        {
+          "t": "A burrow or hole that looks used",
+          "art": "wc/signs-burrow.jpg"
+        },
+        {
+          "t": "A resting spot: flattened grass or a worn patch",
+          "art": "wc/signs-resting-spot.jpg"
+        },
+        {
+          "t": "Scratch marks on dirt or wood",
+          "art": "wc/signs-claw-marks.jpg"
+        },
+        {
+          "t": "An animal path through the grass",
+          "art": "wc/signs-animal-path.jpg"
+        },
+        {
+          "t": "A spider web with repairs or prey",
+          "art": "wc/signs-spider-web.jpg"
+        },
+        {
+          "t": "A nest or anything an animal built",
+          "art": "wc/signs-nest.jpg"
+        }
+      ],
+      "extras": [
+        "For 3 signs, make a claim: 'I think ___ did this because ___.'",
+        "Rank your 3 strongest clues and say why they convince you.",
+        "Make a case file: evidence, suspect, reason."
+      ],
+      "short": "Signs"
+    },
+    {
+      "title": "Texture hunt",
+      "rule": "Use your sense of touch to compare surfaces and find out how nature protects, soaks up and adapts.",
+      "cards": [
+        {
+          "t": "Smooth",
+          "art": "wc/texture-smooth.jpg"
+        },
+        {
+          "t": "Rough",
+          "art": "wc/texture-rough.jpg"
+        },
+        {
+          "t": "Soft",
+          "art": "wc/texture-soft.jpg"
+        },
+        {
+          "t": "Prickly (careful!)",
+          "art": "wc/texture-prickly.jpg"
+        },
+        {
+          "t": "Grainy: sand, soil or stone",
+          "art": "wc/texture-grainy.jpg"
+        },
+        {
+          "t": "Wet or damp",
+          "art": "wc/texture-wet.jpg"
+        },
+        {
+          "t": "Flaky or peeling",
+          "art": "wc/texture-flaky.jpg"
+        },
+        {
+          "t": "Sticky: sap or burrs",
+          "art": "wc/texture-sticky.jpg"
+        },
+        {
+          "t": "Fuzzy or hairy",
+          "art": "wc/texture-fuzzy.jpg"
+        },
+        {
+          "t": "Dry and crispy",
+          "art": "wc/texture-dry.jpg"
+        },
+        {
+          "t": "Bumpy",
+          "art": "wc/texture-bumpy.jpg"
+        },
+        {
+          "t": "Springy, like moss",
+          "art": "wc/texture-springy.jpg"
+        }
+      ],
+      "extras": [
+        "Describe 5 textures with comparisons: like sandpaper, like velvet.",
+        "Sort them: armour (protects), sponge (soaks up), blanket (keeps warm).",
+        "Pick the best texture for a shelter wall and defend your choice."
+      ],
+      "short": "Texture"
+    },
+    {
+      "title": "Colour hunt",
+      "rule": "Collect nature's colours like a designer: find the shades and hidden colours, not just red and blue.",
+      "cards": [
+        {
+          "t": "Light green",
+          "swatch": "#a9c98a"
+        },
+        {
+          "t": "Dark green",
+          "swatch": "#3f6b3a"
+        },
+        {
+          "t": "Yellow-green",
+          "swatch": "#c6cf5a"
+        },
+        {
+          "t": "Tan",
+          "swatch": "#d2b48c"
+        },
+        {
+          "t": "Dark brown",
+          "swatch": "#5b3e2b"
+        },
+        {
+          "t": "Grey",
+          "swatch": "#9a9a94"
+        },
+        {
+          "t": "Black",
+          "swatch": "#2b2b2b"
+        },
+        {
+          "t": "White or cream",
+          "swatch": "#f6f1e4"
+        },
+        {
+          "t": "Reddish-brown",
+          "swatch": "#8e4a32"
+        },
+        {
+          "t": "Orange or gold",
+          "swatch": "#e0a23a"
+        },
+        {
+          "t": "Purple or pink",
+          "swatch": "#b06a9c"
+        },
+        {
+          "t": "A surprise colour you didn't expect",
+          "swatch": "conic-gradient(#c4775a,#e0a23a,#c6cf5a,#5f8a5e,#4f8aa0,#8b6f8f,#c4775a)"
+        }
+      ],
+      "extras": [
+        "Line up your finds from lightest to darkest and take a photo.",
+        "Make a habitat palette and give it a name, like 'Rainy Trail Neutrals'.",
+        "Find 2 camouflage colours. What could each one help hide?"
+      ],
+      "short": "Colour"
+    },
+    {
+      "title": "Nature engineering hunt",
+      "rule": "Spot nature's engineering: how things handle wind, water, weight and time.",
+      "cards": [
+        {
+          "t": "Something strong",
+          "art": "wc/eng-strong.jpg"
+        },
+        {
+          "t": "Something that soaks up water: moss or soil",
+          "art": "wc/eng-soaks.jpg"
+        },
+        {
+          "t": "Something shaped to travel: a winged seed, a burr",
+          "art": "wc/eng-travels.jpg"
+        },
+        {
+          "t": "Something that bends without breaking",
+          "art": "wc/eng-bends.jpg"
+        },
+        {
+          "t": "Something waterproof: a waxy leaf, bark",
+          "art": "wc/eng-waterproof.jpg"
+        },
+        {
+          "t": "A natural anchor: roots or a wedged rock",
+          "art": "wc/eng-anchor.jpg"
+        },
+        {
+          "t": "A natural roof or canopy",
+          "art": "wc/eng-canopy.jpg"
+        },
+        {
+          "t": "A natural bridge",
+          "art": "wc/eng-bridge.jpg"
+        },
+        {
+          "t": "A wide, low, stable base",
+          "art": "wc/eng-base.jpg"
+        },
+        {
+          "t": "Something balanced",
+          "art": "wc/eng-balanced.jpg"
+        },
+        {
+          "t": "Erosion by water or wind",
+          "art": "wc/eng-erosion.jpg"
+        },
+        {
+          "t": "A hollow that holds something",
+          "art": "wc/eng-hollow.jpg"
+        }
+      ],
+      "extras": [
+        "Build a mini bridge, tower or shelter from fallen things, then do a wind test.",
+        "Name the force at work in 3 finds: gravity, wind, water or weight.",
+        "Pick one nature invention people could copy. How would they use it?"
+      ],
+      "short": "Engineer"
+    },
+    {
+      "title": "Soundscape hunt",
+      "rule": "Listen like a scientist and find the sounds that make this place feel alive.",
+      "cards": [
+        {
+          "t": "A bird",
+          "art": "wc/sound-bird.jpg"
+        },
+        {
+          "t": "An insect",
+          "art": "wc/sound-insect.jpg"
+        },
+        {
+          "t": "Wind",
+          "art": "wc/sound-wind.jpg"
+        },
+        {
+          "t": "Water",
+          "art": "wc/sound-water.jpg"
+        },
+        {
+          "t": "Leaves or branches moving",
+          "art": "wc/sound-leaves.jpg"
+        },
+        {
+          "t": "Footsteps",
+          "art": "wc/sound-footsteps.jpg"
+        },
+        {
+          "t": "A human voice",
+          "art": "wc/sound-voice.jpg"
+        },
+        {
+          "t": "A vehicle",
+          "art": "wc/sound-vehicle.jpg"
+        },
+        {
+          "t": "A mystery sound you can't name",
+          "art": "wc/sound-mystery.jpg"
+        },
+        {
+          "t": "A very quiet sound",
+          "art": "wc/sound-quiet.jpg"
+        },
+        {
+          "t": "A loud sound",
+          "art": "wc/sound-loud.jpg"
+        },
+        {
+          "t": "A sound that changes when you move",
+          "art": "wc/sound-moving.jpg"
+        }
+      ],
+      "extras": [
+        "Draw a sound map: you in the middle, each sound placed where it came from.",
+        "Compare two spots, like open field and forest. Which has more kinds of sound?",
+        "Try 60 seconds of total silence, then list what you heard."
+      ],
+      "short": "Sound"
+    },
+    {
+      "title": "Human impact hunt",
+      "rule": "Notice how people affect nature, and choose one small thing you can do to help.",
+      "cards": [
+        {
+          "t": "Something reused or recycled",
+          "art": "wc/impact-reused.jpg"
+        },
+        {
+          "t": "Worn ground or trail erosion",
+          "art": "wc/impact-worn.jpg"
+        },
+        {
+          "t": "Trampled plants",
+          "art": "wc/impact-trampled.jpg"
+        },
+        {
+          "t": "A branch broken by people",
+          "art": "wc/impact-broken.jpg"
+        },
+        {
+          "t": "A sign that protects a place",
+          "art": "wc/impact-sign.jpg"
+        },
+        {
+          "t": "A healthy spot: clean, lots of growth",
+          "art": "wc/impact-healthy.jpg"
+        },
+        {
+          "t": "A stressed spot: bare or damaged",
+          "art": "wc/impact-stressed.jpg"
+        },
+        {
+          "t": "Noise from traffic or machines",
+          "art": "wc/impact-noise.jpg"
+        },
+        {
+          "t": "Something built to help: a bridge, steps, a marked path",
+          "art": "wc/impact-built.jpg"
+        },
+        {
+          "t": "A footprint in mud, sand or snow",
+          "art": "wc/impact-footprint.jpg"
+        },
+        {
+          "t": "A piece of litter (pick up only if it's safe)",
+          "art": "wc/impact-litter.jpg"
+        },
+        {
+          "t": "One helpful thing you can do today",
+          "art": "wc/impact-helpful.jpg"
+        }
+      ],
+      "extras": [
+        "Pick one problem and think of 3 solutions: one a kid can do, one a whole town could do.",
+        "Write a one-sentence promise to this place, and why it matters.",
+        "Do a tiny cleanup with gloves, if it's safe, and count what you collect."
+      ],
+      "short": "Impact"
+    },
+    {
+      "title": "Water cycle hunt",
+      "rule": "Find how water moves around you: above ground, below ground and in the air.",
+      "cards": [
+        {
+          "t": "A water source: a stream, a puddle, a lake",
+          "art": "wc/water-source.jpg"
+        },
+        {
+          "t": "Wet soil or mud",
+          "art": "wc/water-wet-soil.jpg"
+        },
+        {
+          "t": "Dry soil nearby",
+          "art": "wc/water-dry-soil.jpg"
+        },
+        {
+          "t": "A place where water collects",
+          "art": "wc/water-collects.jpg"
+        },
+        {
+          "t": "A place where water runs",
+          "art": "wc/water-runs.jpg"
+        },
+        {
+          "t": "Erosion: washed-out soil or bare roots",
+          "art": "wc/water-erosion.jpg"
+        },
+        {
+          "t": "A plant that loves wet ground",
+          "art": "wc/water-wet-plant.jpg"
+        },
+        {
+          "t": "A plant that likes it dry",
+          "art": "wc/water-dry-plant.jpg"
+        },
+        {
+          "t": "Dew or a foggy surface",
+          "art": "wc/water-dew.jpg"
+        },
+        {
+          "t": "A drip line under leaves or a roof edge",
+          "art": "wc/water-drip.jpg"
+        },
+        {
+          "t": "A filter spot: moss, gravel or roots",
+          "art": "wc/water-filter.jpg"
+        },
+        {
+          "t": "A puddle reflection",
+          "art": "wc/water-reflection.jpg"
+        }
+      ],
+      "extras": [
+        "Follow a drop: pick a spot and trace where water would go in a big rain.",
+        "Find 2 water helpers, like roots or moss, and explain what they do.",
+        "Pour a little water on the ground and watch where it flows."
+      ],
+      "short": "Water"
+    },
+    {
+      "title": "Plant detective hunt",
+      "rule": "Notice plant features like a real naturalist: shape, bark, leaves and survival tricks.",
+      "cards": [
+        {
+          "t": "A tree with rough bark",
+          "art": "wc/plants-rough-bark.jpg"
+        },
+        {
+          "t": "A tree with smooth bark",
+          "art": "wc/plants-smooth-bark.jpg"
+        },
+        {
+          "t": "A needle or scale leaf",
+          "art": "wc/plants-needles.jpg"
+        },
+        {
+          "t": "A leaf with jagged edges",
+          "art": "wc/plants-jagged-leaf.jpg"
+        },
+        {
+          "t": "A seed container: a cone or a pod",
+          "art": "wc/plants-seed-pod.jpg"
+        },
+        {
+          "t": "A thorn, a prickle or a burr",
+          "art": "wc/plants-thorns.jpg"
+        },
+        {
+          "t": "A bud on a branch",
+          "art": "wc/plants-bud.jpg"
+        },
+        {
+          "t": "A climbing or creeping plant",
+          "art": "wc/plants-climber.jpg"
+        },
+        {
+          "t": "A plant growing in a tough spot",
+          "art": "wc/plants-tough-spot.jpg"
+        },
+        {
+          "t": "A plant that's been nibbled",
+          "art": "wc/plants-nibbled.jpg"
+        },
+        {
+          "t": "A plant with a strong smell",
+          "art": "wc/plants-smell.jpg"
+        },
+        {
+          "t": "A berry or fruit (look, don't eat)",
+          "art": "wc/plants-berries.jpg"
+        }
+      ],
+      "extras": [
+        "Pick 3 finds and explain what helps each plant survive: defence, saving water, spreading seeds.",
+        "Make a mini key: 4 questions that help identify a tree.",
+        "Compare two trees. Which looks older, and what are your clues?"
+      ],
+      "short": "Plants"
+    },
+    {
+      "title": "Rock and soil hunt",
+      "rule": "Explore the ground like a geologist, and notice how rocks and soil shape a place.",
+      "cards": [
+        {
+          "t": "A smooth rock",
+          "art": "wc/rocks-smooth.jpg"
+        },
+        {
+          "t": "A rough rock",
+          "art": "wc/rocks-rough.jpg"
+        },
+        {
+          "t": "A rock that sparkles",
+          "art": "wc/rocks-sparkle.jpg"
+        },
+        {
+          "t": "A rock with layers or bands",
+          "art": "wc/rocks-layers.jpg"
+        },
+        {
+          "t": "A rock with sharp edges",
+          "art": "wc/rocks-sharp.jpg"
+        },
+        {
+          "t": "A rounded stone",
+          "art": "wc/rocks-rounded.jpg"
+        },
+        {
+          "t": "Dark soil",
+          "art": "wc/rocks-dark-soil.jpg"
+        },
+        {
+          "t": "Light soil",
+          "art": "wc/rocks-light-soil.jpg"
+        },
+        {
+          "t": "Soil washing away",
+          "art": "wc/rocks-washing.jpg"
+        },
+        {
+          "t": "Soil building up: leaf piles, drifts",
+          "art": "wc/rocks-building.jpg"
+        },
+        {
+          "t": "Sand",
+          "art": "wc/rocks-sand.jpg"
+        },
+        {
+          "t": "Clay-like soil that sticks together",
+          "art": "wc/rocks-clay.jpg"
+        }
+      ],
+      "extras": [
+        "Sort your rocks by how they formed: worn by water, broken, or layered.",
+        "Squeeze-test the soils with your fingers. Which holds together best, and why might plants care?",
+        "Predict which soil grows taller plants, then check what's actually growing."
+      ],
+      "short": "Rocks"
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just turned a walk into fieldwork.",
+    "text": "They searched with a goal, backed up their finds with clues, and noticed things most people walk past every day. Animal evidence, the water cycle, plants, rocks and soil, learned on an ordinary walk.",
+    "celebrate": "Ask about their best evidence: 'Tell me again how you knew a squirrel ate that cone.' Explaining it is what makes it stick.",
+    "extensions": [
+      "Do the same mission in a new season and compare",
+      "Do the same mission in a new place: a beach, a city park, a forest",
+      "Let your kid write a 12-find mission for you",
+      "Keep every finished mission in a folder as a year of fieldwork"
+    ]
+  },
+  "signs": [
+    "They point out tracks, nibbles and nests on ordinary walks",
+    "They explain why something counts instead of just pointing",
+    "They ask 'which mission today?' before you head out"
+  ],
+  "makeItReal": "Take a mission on your next trip. A new place changes every answer: the colours, the sounds, the rocks. Your kid becomes the one teaching you about where you are.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "boardLabel": "Mission",
+  "photo": {
+    "src": "guides/assets/outdoor-learning-missions.jpg",
+    "alt": "Two girls poking sticks into water-filled holes in smooth sandstone rock pools",
+    "caption": "Rock pools: tiny crabs and tadpoles hiding in the holes.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "On a trip to Vancouver Island, we found smooth carved rock full of water-filled holes. My daughter and her friend went from hole to hole, catching tiny crabs and tadpoles. Each hole was its own little world, and that is what these missions are about: slowing down and looking closely at what is right in front of you.",
+    "quotes": []
+  }
+}

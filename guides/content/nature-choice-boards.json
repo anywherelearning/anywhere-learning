@@ -108,51 +108,51 @@
       "cards": [
         {
           "t": "Find 3 textures: smooth, rough and soft.",
-          "icon": "hand"
+          "art": "wc/starter-textures.jpg"
         },
         {
           "t": "Find 5 different greens or browns.",
-          "icon": "palette"
+          "art": "wc/starter-colours.jpg"
         },
         {
           "t": "Close your eyes. Listen for 3 sounds and name them.",
-          "icon": "ear"
+          "art": "wc/starter-sounds.jpg"
         },
         {
           "t": "Find a tiny world under a leaf or in moss. Describe it.",
-          "icon": "search"
+          "art": "wc/starter-tiny-world.jpg"
         },
         {
           "t": "Draw your favourite thing you can see.",
-          "icon": "pencil"
+          "art": "wc/starter-draw.jpg"
         },
         {
           "t": "Walk 20 slow steps. What changes as you go?",
-          "icon": "footprints"
+          "art": "wc/starter-slow-steps.jpg"
         },
         {
           "t": "Find 3 shapes: a circle, a triangle and a straight line.",
-          "icon": "shapes"
+          "art": "wc/starter-shapes.jpg"
         },
         {
           "t": "Say 3 'I wonder...' questions out loud.",
-          "icon": "circle-help"
+          "art": "wc/starter-wonder.jpg"
         },
         {
           "t": "Find 2 patterns: stripes, spots or repeating shapes.",
-          "icon": "grid-3x3"
+          "art": "wc/starter-patterns.jpg"
         },
         {
           "t": "Make a tiny museum of 6 fallen things. Then put them back.",
-          "icon": "landmark"
+          "art": "wc/starter-museum.jpg"
         },
         {
           "t": "Find one sign an animal was here: a web, a nibble, a track.",
-          "icon": "paw-print"
+          "art": "wc/starter-animal-sign.jpg"
         },
         {
           "t": "Line up 5 fallen leaves from smallest to biggest.",
-          "icon": "leaf"
+          "art": "wc/starter-leaves.jpg"
         }
       ]
     },
@@ -163,51 +163,51 @@
       "cards": [
         {
           "t": "Make a sound map: you in the middle, sounds all around.",
-          "icon": "map"
+          "art": "wc/explorer-sound-map.jpg"
         },
         {
           "t": "Find 2 things that look alike but aren't. What's different?",
-          "icon": "copy"
+          "art": "wc/explorer-alike.jpg"
         },
         {
           "t": "Find the best hiding spot for a tiny creature. Why there?",
-          "icon": "bug"
+          "art": "wc/explorer-hiding.jpg"
         },
         {
           "t": "Make a pattern line: leaf, stone, leaf, stone.",
-          "icon": "repeat"
+          "art": "wc/explorer-pattern-line.jpg"
         },
         {
           "t": "Find 3 clues, like an eaten leaf or tracks. Guess the story.",
-          "icon": "search"
+          "art": "wc/explorer-clues.jpg"
         },
         {
           "t": "Find a weather clue: clouds, wind direction, damp soil.",
-          "icon": "cloud-sun"
+          "art": "wc/explorer-weather.jpg"
         },
         {
           "t": "Build a stick frame and 'photograph' a view through it.",
-          "icon": "frame"
+          "art": "wc/explorer-frame.jpg"
         },
         {
           "t": "Tell a 3-sentence nature story: beginning, middle, end.",
-          "icon": "book-open"
+          "art": "wc/explorer-story.jpg"
         },
         {
           "t": "Stand in the sun, then in the shade. What feels different?",
-          "icon": "sun"
+          "art": "wc/explorer-sun-shade.jpg"
         },
         {
           "t": "Draw a tiny trail map: start, landmark, turn, end.",
-          "icon": "route"
+          "art": "wc/explorer-trail-map.jpg"
         },
         {
           "t": "Find something strong, something bendy and something waterproof.",
-          "icon": "shield-check"
+          "art": "wc/explorer-strong-bendy.jpg"
         },
         {
           "t": "Sit still for 2 minutes. List everything you notice.",
-          "icon": "timer"
+          "art": "wc/explorer-sit-still.jpg"
         }
       ]
     },
@@ -218,51 +218,51 @@
       "cards": [
         {
           "t": "Compare a dark soil and a light soil. Which seems richer? Why?",
-          "icon": "shovel"
+          "art": "wc/scientist-soils.jpg"
         },
         {
           "t": "Find 3 seeds. Guess how each one travels: wind, water or animal.",
-          "icon": "sprout"
+          "art": "wc/scientist-seeds.jpg"
         },
         {
           "t": "Trace a water path: where would rain flow from here?",
-          "icon": "droplets"
+          "art": "wc/scientist-water-path.jpg"
         },
         {
           "t": "Find 3 signs of time passing: rot, new growth, worn rock.",
-          "icon": "hourglass"
+          "art": "wc/scientist-time.jpg"
         },
         {
           "t": "Test it: is a rock warmer than the dirt beside it? Try 2 spots.",
-          "icon": "thermometer"
+          "art": "wc/scientist-test.jpg"
         },
         {
           "t": "Describe one plant like a scientist: shape, edges, colour.",
-          "icon": "flower-2"
+          "art": "wc/scientist-plant.jpg"
         },
         {
           "t": "Find where two places meet, like forest and field. List 5 differences.",
-          "icon": "split"
+          "art": "wc/scientist-edge.jpg"
         },
         {
           "t": "Make a claim about this place. Back it up with 2 clues.",
-          "icon": "badge-check"
+          "art": "wc/scientist-claim.jpg"
         },
         {
           "t": "Find 5 textures. Sort them: protection, comfort or camouflage.",
-          "icon": "layers"
+          "art": "wc/scientist-textures.jpg"
         },
         {
           "t": "Draw a tiny habitat. Label its shelter, food and water.",
-          "icon": "house"
+          "art": "wc/scientist-habitat.jpg"
         },
         {
           "t": "Count every bird or insect you notice in 5 minutes.",
-          "icon": "hash"
+          "art": "wc/scientist-count.jpg"
         },
         {
           "t": "Write 5 questions you could investigate next time.",
-          "icon": "notebook-pen"
+          "art": "wc/scientist-questions.jpg"
         }
       ]
     },
@@ -273,51 +273,51 @@
       "cards": [
         {
           "t": "Make a tool from nature, like a scoop or a brush. What's its job?",
-          "icon": "wrench"
+          "art": "wc/builder-tool.jpg"
         },
         {
           "t": "Make a mini obstacle course. Time yourself, then beat it.",
-          "icon": "flag"
+          "art": "wc/builder-obstacle.jpg"
         },
         {
           "t": "Build a wind shield for a leaf. Test it with a big breath.",
-          "icon": "wind"
+          "art": "wc/builder-wind-shield.jpg"
         },
         {
           "t": "Make leaf rubbings: paper on top, rub with a crayon.",
-          "icon": "stamp"
+          "art": "wc/builder-rubbing.jpg"
         },
         {
           "t": "Build a balanced arrangement. Explain what makes it balanced.",
-          "icon": "scale"
+          "art": "wc/builder-balanced.jpg"
         },
         {
           "t": "Build something, test it, then improve ONE thing.",
-          "icon": "repeat"
+          "art": "wc/builder-redesign.jpg"
         },
         {
           "t": "Find sticks or stones that make different notes. Play a tune.",
-          "icon": "music"
+          "art": "wc/builder-music.jpg"
         },
         {
           "t": "Invent a game for 5 pinecones and a stick. Teach it to someone.",
-          "icon": "dices"
+          "art": "wc/builder-game.jpg"
         },
         {
           "t": "Make a measuring stick marked in hand-spans. Measure 5 things.",
-          "icon": "ruler"
+          "art": "wc/builder-measure.jpg"
         },
         {
           "t": "Make a paintbrush from grass and a twig. Paint a rock with mud.",
-          "icon": "paintbrush"
+          "art": "wc/builder-paintbrush.jpg"
         },
         {
           "t": "Build a ramp that rolls a pinecone as far as possible.",
-          "icon": "trending-down"
+          "art": "wc/builder-ramp.jpg"
         },
         {
           "t": "Make land art with one rule: only circles.",
-          "icon": "circle"
+          "art": "wc/builder-circles.jpg"
         }
       ]
     },
@@ -328,51 +328,51 @@
       "cards": [
         {
           "t": "Write a field note: what, where, evidence, questions.",
-          "icon": "clipboard"
+          "art": "wc/researcher-field-note.jpg"
         },
         {
           "t": "Tell the story of your walk in 5 photos, with a title for each.",
-          "icon": "camera"
+          "art": "wc/researcher-photos.jpg"
         },
         {
           "t": "Draw a micro-map of this spot with a legend of 5 symbols.",
-          "icon": "map-pinned"
+          "art": "wc/researcher-micro-map.jpg"
         },
         {
           "t": "Sit for 10 minutes. Note what changes every 2 minutes.",
-          "icon": "timer"
+          "art": "wc/researcher-sit.jpg"
         },
         {
           "t": "Find 3 human impacts here. Suggest one fix for each.",
-          "icon": "recycle"
+          "art": "wc/researcher-impacts.jpg"
         },
         {
           "t": "Argue it: 'This place is healthy, or not, because...' Give 3 reasons.",
-          "icon": "message-square"
+          "art": "wc/researcher-healthy.jpg"
         },
         {
           "t": "Mix soil, clay or charcoal with water into paint. Paint a map of the area.",
-          "icon": "palette"
+          "art": "wc/researcher-pigments.jpg"
         },
         {
           "t": "Draw 5 symbol tiles. Tell a 5-sentence story using them.",
-          "icon": "puzzle"
+          "art": "wc/researcher-tiles.jpg"
         },
         {
           "t": "Predict which of two spots has more insects. Then count.",
-          "icon": "bug"
+          "art": "wc/researcher-insects.jpg"
         },
         {
           "t": "Sort 12 fallen items into 3 groups. Write your rules.",
-          "icon": "list-filter"
+          "art": "wc/researcher-sort.jpg"
         },
         {
           "t": "Set up a ground museum exhibit with labels. Then return everything.",
-          "icon": "landmark"
+          "art": "wc/researcher-exhibit.jpg"
         },
         {
           "t": "Write 5 open questions (no yes or no) about one thing you saw.",
-          "icon": "circle-help"
+          "art": "wc/researcher-questions.jpg"
         }
       ]
     }

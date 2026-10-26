@@ -9,6 +9,8 @@ const img = (src) => src.startsWith('http') ? src : `data:image/jpeg;base64,${fs
 
 // Card icons: Lucide line icons (ISC licence, guides/icons/LICENSE-lucide.txt),
 // inlined so they take the category accent colour.
+// Clipart: Microsoft Fluent Emoji (MIT, see guides/clipart/LICENSE).
+const art = (file) => `<img class="bart${file.endsWith('.svg') ? '' : ' wc'}" alt="" src="data:image/${file.endsWith('.svg') ? 'svg+xml' : 'jpeg'};base64,${fs.readFileSync(path.resolve('guides/clipart', file)).toString('base64')}">`;
 const icon = (name) => {
   if (!name) return '';
   const svg = fs.readFileSync(path.resolve('guides/icons', `${name}.svg`), 'utf8').replace(/<!--.*?-->/s, '');
@@ -104,7 +106,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="chips"><span>${esc(g.ages)}</span>${g.time ? `<span>${esc(g.time)}</span>` : ''}<span>${esc(g.levelsChip || 'Three levels')}</span></div>
     <div class="coverbody">
       ${coverTrail(coverItems)}
-      <ol class="htrail">${coverItems.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
+      <ol class="htrail">${coverItems.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.short || st.title)}</span></li>`).join('')}</ol>
       ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
     </div>
   </div>
@@ -184,15 +186,16 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   // Choice boards: one theme per page, a grid of numbered options, no Deeper line.
   const boards = g.boardMode ? (g.themes || []).map((th, ti) => `
 <section class="pg cardpg boardpg">
-  <div class="board" style="--b:${BOARD_COLORS[ti % 5][0]};--bs:${BOARD_COLORS[ti % 5][1]}">
+  <div class="board${th.extras ? ' hasx' : ''}" style="--b:${BOARD_COLORS[ti % 5][0]};--bs:${BOARD_COLORS[ti % 5][1]}">
     <div class="bhead">
-      <div class="bnum">Board ${ti + 1}${th.ages ? ` &middot; ${esc(th.ages)}` : ''}</div>
+      <div class="bnum">${esc(g.boardLabel || 'Board')} ${ti + 1}${th.ages ? ` &middot; ${esc(th.ages)}` : ''}</div>
       <h2>${esc(th.title)}</h2>
       <p class="boardrule">${esc(th.rule || g.boardRule)}</p>
     </div>
     <div class="boardgrid">${th.cards.map((c) => `
-      <div class="btile"><span class="btick"></span>${icon(c.icon)}<p class="tct">${esc(c.t)}</p></div>`).join('')}
+      <div class="btile"><span class="btick"></span>${c.art ? art(c.art) : c.swatch ? `<span class="tcicon swatch" style="background:${c.swatch}"></span>` : icon(c.icon)}<p class="tct">${esc(c.t)}</p></div>`).join('')}
     </div>
+    ${th.extras ? `<div class="bextras"><div class="bxlabel">Extras</div><ul>${th.extras.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
   </div>
   ${foot(esc(th.title))}
 </section>`).join('') : '';
@@ -255,6 +258,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${!bonus && g.done ? `<a class="donebox" href="${esc(g.done.url)}"><span class="donetick">&#10003;</span><span>${esc(g.done.text)}</span><b>${esc(g.done.label)} &rarr;</b></a>` : ''}
   ${bonus ? `<div class="cta"><p>${esc(g.cta)}</p><span class="ctaurl">${esc(g.ctaUrl)}</span></div>` : ''}
   <p class="legal">&copy; Anywhere Learning &middot; For your family's use. Please don't share, resell or upload this guide. &middot; anywherelearning.co</p>
+  ${/"art": ?"[^"]+\.svg"/.test(JSON.stringify(g)) ? `<p class="legal">Illustrations: Fluent Emoji &copy; Microsoft Corporation, MIT License.</p>` : ''}
 </section>`;
 
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -361,6 +365,8 @@ ul{list-style:none}
 .btile .tct{font-weight:600;color:var(--ink)}
 .btile .tcicon{margin:0;width:44px;height:44px;background:var(--b);color:#fff;box-shadow:0 0 0 4px #fff}
 .btile .tcicon svg{width:24px;height:24px;stroke-width:1.9}
+.bextras{margin:0 14px 14px;background:var(--bs);border-radius:14px;padding:12px 16px;text-align:left}.bxlabel{font:700 .74em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:4px}.bextras ul{margin:0;padding-left:18px}.bextras li{margin:3px 0;line-height:1.4}.board.hasx .boardgrid{padding-bottom:10px}.btile .tcicon.swatch{border:2px solid rgba(58,44,23,.18)}
+.bart{width:48px;height:48px;display:block;filter:drop-shadow(0 2px 2px rgba(58,44,23,.15))}.bart.wc{filter:none;mix-blend-mode:multiply;width:64px;height:64px}.boardpg .bart.wc{width:62px;height:62px}.boardpg .bart{width:52px;height:52px}.btile .tcicon.swatch{width:50px;height:50px}
 .btick{position:absolute;top:9px;right:9px;width:16px;height:16px;border:2px solid var(--b);border-radius:50%;background:#fff;opacity:.75}
 .tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
@@ -491,7 +497,7 @@ h2{font-size:40px}
 .cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
 .cardpg .cardgrid{height:8.55in;grid-template-rows:repeat(3,1fr);grid-auto-rows:auto}
 .cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
-.boardpg .board{margin-top:14px}.boardpg .bhead{padding:26px 26px 20px}.boardpg .bhead h2{font-size:2.6em}.boardpg .boardrule{font-size:1.08em}.boardpg .boardgrid{grid-template-columns:repeat(3,1fr);grid-template-rows:none;grid-auto-rows:1fr;min-height:6.7in;padding:18px}.boardpg .btile{padding:14px 16px}.boardpg .btile:nth-child(odd){background:#fff}.boardpg .btile:nth-child(even){background:var(--bs)}.boardpg .btile:nth-child(3n+1){border-radius:0}.boardpg .btile:nth-child(1){border-top-left-radius:14px}.boardpg .btile:nth-child(3){border-top-right-radius:14px}.boardpg .btile:nth-child(10){border-bottom-left-radius:14px}.boardpg .btile:nth-child(12){border-bottom-right-radius:14px}.boardpg .tct{font-size:1.13em;line-height:1.36}
+.boardpg .board{margin-top:14px}.boardpg .bhead{padding:26px 26px 20px}.boardpg .bhead h2{font-size:2.6em}.boardpg .boardrule{font-size:1.08em}.boardpg .boardgrid{grid-template-columns:repeat(3,1fr);grid-template-rows:none;grid-auto-rows:1fr;min-height:6.5in;padding:18px}.boardpg .btile{padding:10px 14px;gap:6px}.boardpg .btile:nth-child(odd){background:#fff}.boardpg .btile:nth-child(even){background:var(--bs)}.boardpg .btile:nth-child(3n+1){border-radius:0}.boardpg .btile:nth-child(1){border-top-left-radius:14px}.boardpg .btile:nth-child(3){border-top-right-radius:14px}.boardpg .btile:nth-child(10){border-bottom-left-radius:14px}.boardpg .btile:nth-child(12){border-bottom-right-radius:14px}.boardpg .tct{font-size:1.13em;line-height:1.36}.boardpg .board.hasx .boardgrid{min-height:4.8in}.boardpg .board.hasx .btile{padding:8px 12px}.boardpg .board.hasx .bextras li{margin:1px 0}.boardpg .board.hasx .bhead{padding:22px 26px 16px}.boardpg .bextras{margin:0 18px 18px;font-size:1.02em}
 .cardpg.compact .tct{font-size:1.2em;line-height:1.36}.cardpg.compact .tcd{font-size:.98em}.cardpg.compact .tcard{padding:16px 20px;gap:8px}
 .tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}

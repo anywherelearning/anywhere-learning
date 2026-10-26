@@ -29,7 +29,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'nature-journal-walks': 'Quick',
   'nature-walk-task-cards': 'Quick',
   'nature-choice-boards': 'Quick',
-  'outdoor-learning-missions': 'Half-Day',
+  'outdoor-learning-missions': 'Quick',
   'outdoor-stem-challenges': 'Half-Day',
   'outdoor-stem-challenges-volume-2': 'Half-Day',
   'outdoor-movement-challenge-cards': 'Quick',

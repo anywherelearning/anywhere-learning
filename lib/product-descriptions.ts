@@ -325,13 +325,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-learning-missions': {
     opening:
-      'Mission-style outdoor challenges that get kids moving, observing, and problem-solving in nature. Each mission has a clear objective, steps to follow, and a reflection prompt. From building shelters to mapping ecosystems, these turn any outdoor space into an adventure zone.',
+      'Ten scavenger hunt missions that turn any walk into fieldwork. Each one has 12 things to find and 3 Extras for going deeper, from animal signs and the water cycle to rocks, plants and sounds. Kids search, tick off finds, and back each one up with a clue.',
     whatsIncluded: [
-      'Structured outdoor mission challenge cards',
-      'Each mission: clear objective, steps, and reflection prompt',
-      'Building, mapping, observing, and problem-solving challenges',
+      '10 scavenger hunt missions, 12 finds each',
+      '3 Extras per mission for going deeper',
+      'Watercolour illustrations kids can tick off',
       'Works in backyards, parks, forests, and beaches',
-      'Designed for solo or group missions',
+      'Under an hour per mission',
     ],
     skillTags: ['Problem-Solving', 'Nature', 'Engineering', 'Observation', 'Science'],
     insideTheLearning: {
