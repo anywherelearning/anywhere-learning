@@ -1,0 +1,306 @@
+{
+  "slug": "outdoor-movement-challenge-cards",
+  "category": "Outdoor Learning",
+  "title": "Outdoor Movement Challenge Cards",
+  "tagline": "24 challenges · Personal records · Daily streaks",
+  "ages": "Ages 6 to 14",
+  "goal": "24 outdoor challenges your kid plays against yesterday's self: time a tree sit and beat it, keep a daily outside streak alive through a rainy week, sample new ways to move and pick one that's theirs, and race a faster sibling with a handicap you tune until it's fair. No equipment, no sports background: a body, a timer, and outside.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Any outdoor space: a yard, a park, a trail, a beach",
+    "A timer (a phone works), and a stick or stone to mark distances"
+  ],
+  "lesson": {
+    "text": "Every card runs on one idea: the first try is just a number. Then you beat your own number, a little at a time. Nobody else's score counts.",
+    "before": "I'm bad at this.",
+    "model": [
+      {
+        "part": "Baseline",
+        "line": "Tree sit, first try: 38 seconds."
+      },
+      {
+        "part": "Target",
+        "line": "Tomorrow: 43 seconds. Just 5 more."
+      },
+      {
+        "part": "Try",
+        "line": "Day 3: 48 seconds. Day 4: 45. Tired legs."
+      },
+      {
+        "part": "Record",
+        "line": "Best this week: 52 seconds. Up 14 from day 1."
+      }
+    ],
+    "modelNote": "That's card 1, the Tree Sit. When your kid says 'I'm bad at this,' ask: what's your number today? Then: what would beat it by a little?"
+  },
+  "academics": [
+    {
+      "subject": "Physical",
+      "text": "strength, balance, endurance and coordination"
+    },
+    {
+      "subject": "Math",
+      "text": "timing, measuring distance, charting a streak, and tuning a fair handicap"
+    },
+    {
+      "subject": "Science",
+      "text": "how a body gets stronger with practice and rest"
+    },
+    {
+      "subject": "Life skills",
+      "text": "building a habit, planning a backup, and doing hard things on purpose"
+    }
+  ],
+  "howTo": {
+    "intro": "No sports background needed. You're the timekeeper and a competitor: do the challenges too, and keep your own numbers. Two sets of records beat one. Climb only what you could climb down from, keep balance challenges near soft ground, and match the effort to each body today.",
+    "plan": [
+      {
+        "when": "Before you start",
+        "what": "Pick a card together and grab a timer."
+      },
+      {
+        "when": "Each card",
+        "what": "First try is the baseline, then three tries to beat it. About 10 to 20 minutes."
+      },
+      {
+        "when": "After",
+        "what": "Write the best number somewhere you'll both see it tomorrow."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They quit when they don't beat it",
+        "a": "Say it plainly: the first try was data. Tired days happen. Try again tomorrow, not ten more times today."
+      },
+      {
+        "q": "A sibling always wins",
+        "a": "Race only against your own number, or use card 22, the Fair Handicap, until races finish close."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Perseverance",
+      "text": "today's self against yesterday's number"
+    },
+    {
+      "name": "Habit building",
+      "text": "routines and backups that outlast motivation"
+    },
+    {
+      "name": "Self-measuring",
+      "text": "turning 'I'm better' into a number"
+    },
+    {
+      "name": "Outdoor confidence",
+      "text": "long walks, heavy packs and imperfect weather"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: do the challenge. Develop: add the Deeper part. Extend: track it on paper for a week and explain what made the number move.",
+  "themes": [
+    {
+      "title": "Personal record",
+      "cards": [
+        {
+          "name": "The Tree Sit",
+          "t": "Wall sit against a tree, or plank on the grass, as long as you can. Time it: that's your record.",
+          "d": "Beat it by 5 seconds a day for one week.",
+          "icon": "tree-pine"
+        },
+        {
+          "name": "The Long Throw",
+          "t": "Ten throws for distance with a pinecone or a stone. Mark your best with a stick.",
+          "d": "Ten more with your other arm. How close can it get?",
+          "icon": "send"
+        },
+        {
+          "name": "The Sprint Loop",
+          "t": "Mark a loop around the yard or park. Time one lap, then take three tries to beat it.",
+          "d": "Same loop next week. What does a rested body do to your time?",
+          "icon": "rotate-cw"
+        },
+        {
+          "name": "The Jump Line",
+          "t": "Scratch a line in the dirt. Standing jump, mark your landing, three tries to beat the mark.",
+          "d": "Add a quiet landing rule: a thud costs you the attempt.",
+          "icon": "arrow-up-from-line"
+        },
+        {
+          "name": "The Hang",
+          "t": "Hang from a low, sturdy branch you can drop from safely. Time how long you hold on.",
+          "d": "Hang once a day for a week. Watch the number climb.",
+          "icon": "hand"
+        }
+      ]
+    },
+    {
+      "title": "Daily streak",
+      "cards": [
+        {
+          "name": "The Daily Lap",
+          "t": "Pick one two-minute outside move, like a lap of the yard. Same time every day. Start a streak chart.",
+          "d": "Get past day 4. That's where most streaks die.",
+          "icon": "calendar-check"
+        },
+        {
+          "name": "Morning Minute",
+          "t": "Sixty seconds of moving outside before breakfast, every day this week. Rain counts.",
+          "d": "Make it the same sixty seconds every day. Routines beat decisions.",
+          "icon": "sunrise"
+        },
+        {
+          "name": "The Same Loop",
+          "t": "Walk or run the same short outdoor route every day this week. Count the days out loud.",
+          "d": "Notice one thing on the route that changed each day.",
+          "icon": "route"
+        },
+        {
+          "name": "Streak Saver",
+          "t": "Plan a one-minute rain-gear or porch version of your daily move, ready before a rough day comes.",
+          "d": "Rough day, backup done, streak alive. That's a win, not a cheat.",
+          "icon": "umbrella"
+        },
+        {
+          "name": "Family Streak",
+          "t": "Everyone moves outside for 10 minutes a day. One person skips, the family streak resets.",
+          "d": "Who carried the streak on a hard day? Thank them out loud.",
+          "icon": "users"
+        }
+      ]
+    },
+    {
+      "title": "Try it on",
+      "cards": [
+        {
+          "name": "Style Sampler",
+          "t": "Try three new ways to move outside: climb, cross something narrow, hit a target. Rate each out of 10.",
+          "d": "Give your lowest score a second honest try.",
+          "icon": "dices"
+        },
+        {
+          "name": "The Remix",
+          "t": "Take an outdoor movement you love and one you avoid. Invent one game that needs both.",
+          "d": "Play it twice. Change the rules if one half takes over.",
+          "icon": "shuffle"
+        },
+        {
+          "name": "Copy the Athlete",
+          "t": "Pick a sport you've never played. Learn one real move and practise it outside until it looks right.",
+          "d": "Teach the move to someone else.",
+          "icon": "medal"
+        },
+        {
+          "name": "Barefoot Test",
+          "t": "Walk barefoot on three safe surfaces: grass, sand, dirt or smooth rock. Rate each out of 10.",
+          "d": "Now in shoes. What do your feet notice that shoes hide?",
+          "icon": "footprints"
+        },
+        {
+          "name": "Find Your Thing",
+          "t": "Pick YOUR outdoor movement for this month and put it on the calendar twice a week.",
+          "d": "Still your thing in two weeks? Keep it. Not? Sample again. Both count.",
+          "icon": "heart"
+        }
+      ]
+    },
+    {
+      "title": "Adventure mode",
+      "cards": [
+        {
+          "name": "The Instinct Walk",
+          "t": "With your adult, walk a new route. Make three turns by instinct, then find your way back, no phone.",
+          "d": "Get back using landmarks you called out loud on the way in.",
+          "icon": "compass"
+        },
+        {
+          "name": "The Long Haul",
+          "t": "Pick a far point you can see: a hill, a tower, the end of the beach. Get there on foot.",
+          "d": "No complaints allowed for the last third. That's the training part.",
+          "icon": "mountain"
+        },
+        {
+          "name": "Pack Weight",
+          "t": "Load a backpack (books, water) and take your usual walk. How far is still comfortable?",
+          "d": "Same distance, one more water bottle.",
+          "icon": "backpack"
+        },
+        {
+          "name": "Weather Proof",
+          "t": "Twenty minutes outside in imperfect weather, on purpose. Dress for it, move in it, come back warm.",
+          "d": "Rate the weather out of 10 before and after.",
+          "icon": "cloud-rain"
+        },
+        {
+          "name": "The Night Walk",
+          "t": "With your adult, walk a known path after dark. Switch off the flashlight for one minute and stand still.",
+          "d": "In that dark minute, name three sounds you never hear by day.",
+          "icon": "flashlight"
+        }
+      ]
+    },
+    {
+      "title": "Versus",
+      "cards": [
+        {
+          "name": "Balance Duel",
+          "t": "Face off on the grass: one leg, eyes closed, last one standing wins. Best of five.",
+          "d": "The winner balances with arms crossed in the next round.",
+          "icon": "person-standing"
+        },
+        {
+          "name": "The Fair Handicap",
+          "t": "Race someone faster, but they hop, bear-crawl or run backwards. Adjust until races finish close.",
+          "d": "Find the exact handicap that makes it 50-50. That's real math.",
+          "icon": "scale"
+        },
+        {
+          "name": "The Relay Invention",
+          "t": "Invent a three-part relay: under a branch, between two trees, carry a stone. Race it.",
+          "d": "The loser designs the next relay.",
+          "icon": "flag"
+        },
+        {
+          "name": "Coach Swap",
+          "t": "Teach each other your best outdoor skill, then perform them back. Loud cheering required.",
+          "d": "One week later, retest both skills. Did the coaching stick?",
+          "icon": "megaphone"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just learned that effort is trainable.",
+    "text": "They set a number, beat it, kept a streak alive through bad weather, tried new ways to move and picked one of their own. Strength, balance and endurance, plus the habit that matters most: showing up again tomorrow.",
+    "celebrate": "Point to a number: 'You started at 38 seconds. Now it's 52.' Seeing their own progress is what keeps them going.",
+    "extensions": [
+      "Keep a family record board on the fridge, kids and grown-ups",
+      "Redo your baseline cards in a month and compare",
+      "Let your kid invent a new challenge card for you",
+      "Run a family Versus afternoon with a relay to finish"
+    ]
+  },
+  "signs": [
+    "They ask to time things without being asked",
+    "They keep going after a bad try instead of quitting",
+    "They head outside on a grey day without complaining"
+  ],
+  "makeItReal": "Pick one card as the family challenge for the month: everyone does it, everyone keeps a number, and you compare on the last day. Kids love beating their own number, and they love it even more when a grown-up is trying just as hard.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "compactCards": true,
+  "photo": {
+    "src": "guides/assets/outdoor-movement-challenge-cards.jpg",
+    "alt": "A smiling boy in a red cap hiking up a narrow mountain ridge trail, with peaks and glaciers behind him",
+    "caption": "Card 17, the Long Haul: almost at the top of a hard summer hike."
+  },
+  "fromHome": {
+    "text": "Every summer, I take the kids on a few hard hikes: steep switchbacks, long climbs above the trees, and one backpacking trip with heavy packs. There is always some complaining on the way up. And at the top, there is always the same thing: two kids who are proud of themselves, because they did something hard with their own legs.",
+    "quotes": []
+  }
+}

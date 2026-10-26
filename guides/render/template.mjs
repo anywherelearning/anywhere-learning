@@ -180,7 +180,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   const cardPages = [];
   for (let i = 0; i < allCards.length; i += 6) cardPages.push(allCards.slice(i, i + 6).map((c, k) => ({ ...c, num: i + k + 1 })));
   const cards = cardPages.map((pg, pi) => `
-<section class="pg cardpg">
+<section class="pg cardpg${g.compactCards ? ' compact' : ''}">
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
   <div class="cardgrid">${pg.map((c) => `
     <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span>${icon(c.icon)}</div>
@@ -461,6 +461,7 @@ h2{font-size:40px}
 .cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
 .cardpg .cardgrid{height:8.55in;grid-template-rows:repeat(3,1fr);grid-auto-rows:auto}
 .cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
+.cardpg.compact .tct{font-size:1.2em;line-height:1.36}.cardpg.compact .tcd{font-size:.98em}.cardpg.compact .tcard{padding:16px 20px;gap:8px}
 .tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
 .trouble dl{grid-template-columns:1fr 1fr;gap:10px 18px}
