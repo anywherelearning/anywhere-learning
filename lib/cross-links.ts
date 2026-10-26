@@ -156,7 +156,8 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age'],
   'nature-walk-task-cards': ['forest-school-activities'],
   'nature-journal-walks': ['nature-journaling-for-kids', 'forest-school-activities'],
-  'outdoor-survival-planner': ['forest-school-activities'],
+  'outdoor-survival-planner': ['outdoor-survival-skills-for-kids', 'forest-school-activities'],
+  'survival-base': ['outdoor-survival-skills-for-kids'],
   'family-debate-night': ['family-debate-night-kids'],
 };
 

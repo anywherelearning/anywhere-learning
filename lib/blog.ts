@@ -9851,6 +9851,109 @@ const posts: BlogPost[] = [
     relatedSlugs: ['fall-nature-activities-kids', 'outdoor-stem-challenges', 'outdoor-stem-by-age', 'backyard-science-experiments', 'summer-stem-activities-for-kids', 'seasonal-scavenger-hunts'],
   },
   {
+    slug: 'outdoor-survival-skills-for-kids',
+    title: 'Outdoor Survival Skills for Kids: 10 to Teach Before They Need Them',
+    seoTitle: 'Outdoor Survival Skills for Kids: 10 to Teach by Age',
+    excerpt: 'Survival skills for kids aren’t about scaring them or turning them into wilderness experts. They’re about the kid who knows how to stay put, stay warm and get found. Ten outdoor survival skills to practise as games on regular family walks, sorted by age from 6 to 14.',
+    metaDescription: 'Outdoor survival skills for kids 6 to 14: what to do if lost, how to signal, stay warm, build a shelter, find north and stay safe around fire. Practised as games.',
+    hook: 'The best survival skill a kid can have is knowing how to get found.',
+    category: 'nature-learning',
+    pillarSlug: 'nature-based-learning',
+    publishedAt: '2026-10-26',
+    draft: true,
+    keywords: ['outdoor survival skills for kids', 'survival skills for kids', 'wilderness survival for kids', 'what to do if lost in the woods', 'hug a tree', 'teaching kids outdoor safety', 'shelter building for kids', 'how to find north without a compass', 'campfire safety for kids', 'hiking safety for kids'],
+    readTimeMinutes: 12,
+    author: amelie,
+    recommendedProduct: 'outdoor-survival-planner',
+    heroImage: '/images/outdoor-survival-hero.jpeg',
+    heroImageAlt: 'Two kids with backpacks sitting on a rock slope above an alpine meadow and a small lake, with mountains behind them',
+    heroImageAspect: '4 / 3',
+    content: [
+      { type: 'summary', text: 'Outdoor survival skills for kids come down to three things: knowing how to get found, how to stay warm and dry, and how to make one good decision when something goes wrong. The most important one is to stay in one place when lost (the "Hug-a-Tree" rule taught by search and rescue teams), followed by signalling with three whistle blasts, layering against the cold, building a quick shelter, finding direction from the sun, and staying safe around water and fire. Kids from 6 to 14 learn them best as games on ordinary family walks.' },
+
+      { type: 'paragraph', text: 'When people hear “survival skills for kids,” they picture a 10-year-old rubbing two sticks together in the middle of nowhere. That’s not really what this is about. The skills that actually keep kids safe outside are much simpler, and most of them are about what to do in the first five minutes after they realize they’re lost.' },
+      { type: 'paragraph', text: 'We live in the mountains of British Columbia, so the woods start pretty much at the end of the street. My kids don’t have phones, which means every time they head out, we agree on the plan first: who they’re with, where they’re going, what happens if it changes, and where to get help. That habit came before any shelter building or fire lighting, and honestly, it’s the survival skill I care about most.' },
+      { type: 'paragraph', text: 'Everything below is meant to be practised the same way you’d practise crossing the street: calmly, often, and as part of a normal day out. There’s real learning packed into it too. Finding north with a stick is geometry and astronomy. Choosing what goes in a small pack is weight, trade-offs and planning. Writing a trip plan someone else can follow is writing with a real reason behind it.' },
+
+      { type: 'heading', level: 2, text: 'Start here: the one rule every kid needs' },
+      { type: 'paragraph', text: 'If your kid learns only one thing from this post, make it this one: when you’re lost, stay where you are.' },
+      { type: 'paragraph', text: 'It sounds too simple, but it’s the rule search and rescue teams teach first. The Hug-a-Tree and Survive program started after a 9-year-old boy got separated from his family on Palomar Mountain in California in 1981. He kept moving, the search grew into the biggest the county had ever seen, and he died of hypothermia before he was found. The searchers who looked for him built a program so other kids would know what helps most: pick a tree and stay with it. A child who stays in one place is found much faster than one who keeps walking. Canada’s version, run through AdventureSmart, is still taught to kids 5 to 11 today.' },
+      { type: 'paragraph', text: 'For older kids, add the STOP rule that search and rescue groups use with adults: Stop, Think, Observe, Plan. Stop moving. Think about where you last knew where you were. Observe what’s around you (a trail, water, a clearing someone could see you from). Then make a plan, and most of the time the plan is to stay put and make yourself easy to find.' },
+
+      { type: 'heading', level: 2, text: '10 outdoor survival skills to teach kids' },
+
+      { type: 'heading', level: 3, text: '1. Leave a plan someone else can follow' },
+      { type: 'paragraph', text: 'Before any walk where your kid might be out of sight, have them tell you (or write down) where they’re going, who they’re with and when they’ll be back. Then ask the “what if” question: what if your friend wants to go somewhere else? What if it gets dark early?' },
+      { type: 'paragraph', text: 'Younger kids say it out loud. Older kids write a short trip plan on a sticky note and leave it on the counter: the route, the time they’ll be back, and what they’re carrying. It’s the same plan a search team asks for first, and it’s a great little writing job, because the test is whether someone who wasn’t there could understand it.' },
+
+      { type: 'heading', level: 3, text: '2. Hug a tree, then make yourself easy to find' },
+      { type: 'paragraph', text: 'Practise staying put on a regular walk. At a spot with a good tree, say “pretend you just realized you’re lost. Show me what you do.” Your kid picks a tree, sits with it, and then works on being findable. Bright clothes help, so put the brightest jacket or hat on top. Answering when someone calls your name helps, even if you’re scared you’re in trouble (some lost kids hide from searchers because they’re afraid of getting in trouble). Stamping clear footprints in mud or snow helps too, and so does leaving a sign like an X made of sticks.' },
+      { type: 'paragraph', text: 'Make it a game for younger kids: they hide close to a tree within sight of the trail, and you have to find them. Then swap roles so they see how hard it is to spot someone in dark clothes who isn’t making noise.' },
+
+      { type: 'heading', level: 3, text: '3. Signal with three' },
+      { type: 'paragraph', text: 'Three of anything means “help”: three whistle blasts, three flashes of a light, three shouts. A whistle is the one to practise, because it carries much farther than a voice and takes almost no energy, which matters for a kid who’s cold or tired. The pattern is three blasts, a pause to listen, and repeat.' },
+      { type: 'paragraph', text: 'Here’s a good way to see it for yourselves. One person stands still and the other walks away down the trail, counting steps, until they can no longer hear a normal voice. Mark the spot. Then keep going until they can’t hear the whistle. Count both distances and compare. Kids remember a number they measured themselves far better than a rule you told them.' },
+
+      { type: 'heading', level: 3, text: '4. Stay warm and dry first' },
+      { type: 'paragraph', text: 'Survival experts use a rough rule called the rule of threes: a person can last about three minutes without air, three hours without shelter in harsh weather, three days without water and three weeks without food. The numbers aren’t exact, but the order is the lesson. Kids usually think food is the big worry when you’re lost. It isn’t. Getting cold is.' },
+      { type: 'paragraph', text: 'So the skill is staying warm and dry: dress in layers you can add and remove, keep a hat and an extra layer in the pack even when it’s sunny, sit on your backpack instead of the cold ground, and get out of the wind. Older kids can learn the early signs of getting too cold in someone else, which are often remembered as “the umbles”: stumbles, mumbles, fumbles and grumbles. A friend who suddenly can’t do up a zipper and gets cranky needs to warm up now.' },
+
+      { type: 'heading', level: 3, text: '5. Build a quick shelter' },
+      { type: 'paragraph', text: 'A real emergency shelter is small and quick, not a fort. The idea is to get off the ground, out of the wind and wrapped in something that traps air. Leaves and dry pine needles are great insulation because they’re mostly trapped air, which is why a thick pile of them is warmer than it looks.' },
+      { type: 'paragraph', text: 'Turn it into an experiment before you build. Fill two jars or bottles with warm tap water and check the temperature of each. Bury one in a big pile of dry leaves and leave the other on bare ground. After 30 minutes, check both again. Your kid predicts first which one will lose more heat and by how much. Then build a lean-to: a long branch propped against a tree or a fallen log, with shorter sticks leaned along one side and piled thick with leaves. My son built one with a friend in the woods near our house, and it’s a great first build because the materials are lying right there.' },
+      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to go bigger, Build a Survival Base has them pick a harsh place on Earth, research what they would be up against, and design and build a base that could survive it.' },
+
+      { type: 'heading', level: 3, text: '6. Find north without a compass' },
+      { type: 'paragraph', text: 'On a sunny day, push a straight stick into flat ground and put a small stone at the tip of its shadow. Wait 15 minutes and put a second stone at the new tip. The shadow moves the opposite way to the sun, so the first stone is west and the second is east, anywhere on Earth. Stand with the first stone on your left and the second on your right, and you’re facing roughly north.' },
+      { type: 'paragraph', text: 'Younger kids love that the shadow moves at all. Older kids can ask why the sun moves across the sky, then compare the stick’s answer with a compass or a phone. How close did it get? And does it work better at noon or late in the day?' },
+
+      { type: 'heading', level: 3, text: '7. Read the trail and pick a landmark' },
+      { type: 'paragraph', text: 'Most kids follow the person in front of them and never look up. Next walk, hand them the map (or the trail sign photo) and let them lead. At every junction, they say which way and why. On the way out, have them pick a landmark they’ll recognize on the way back, like a split boulder, a bent tree or a bridge, and turn around to look at it, because a trail looks completely different in the other direction.' },
+      { type: 'paragraph', text: 'For older kids, teach the idea of a “handrail”: something long you can follow, like a creek, a road or a power line. If you know the trail runs along the creek, the creek is your way back. That’s map reading with a real reason behind it.' },
+
+      { type: 'heading', level: 3, text: '8. Know which water is safe' },
+      { type: 'paragraph', text: 'Clear stream water can still make you sick, so the rule is simple: drink the water you brought. If you ever have to use water from a stream or lake, it needs to be treated first, and boiling is the most reliable way. The CDC says to bring it to a rolling boil for one minute, or three minutes above about 6,500 feet (roughly 2,000 metres), and let it cool.' },
+      { type: 'paragraph', text: 'This one is mostly a conversation and a habit: everyone carries their own water bottle, and kids help figure out how much the family needs for a longer hike. A fun estimate: how many sips are in one bottle, and how many sips does each person take in an hour?' },
+
+      { type: 'heading', level: 3, text: '9. Fire, with an adult, every time' },
+      { type: 'paragraph', text: 'Kids are fascinated by fire, and the safest thing you can do is teach it properly instead of making it forbidden. Start with the fire triangle: a fire needs heat, fuel and oxygen, and taking away any one of the three puts it out. That one idea explains everything else, from blowing gently on embers to drowning a fire with water.' },
+      { type: 'image', src: '/images/outdoor-survival-campfire.jpeg', alt: 'A boy in a hoodie holding a long stick with a marshmallow next to a campfire on a sandy lakeshore at dusk, with mountains behind the water', caption: 'A real fire, an adult right there, and a job to do. That’s how fire safety sticks.' },
+      { type: 'paragraph', text: 'Then the rules, always with an adult: check whether fires are allowed (fire bans are common in summer), use an existing fire ring when there is one, and clear an area about 10 feet (3 metres) across of leaves, twigs and anything that can burn. To put it out, drown it with water, stir the ashes, and drown it again until there’s no more steam or sizzle and it’s cold to the touch. Kids can be in charge of the bucket and the stirring stick, which is a real job and a real responsibility.' },
+
+      { type: 'heading', level: 3, text: '10. Pack their own small kit' },
+      { type: 'paragraph', text: 'Give your kid their own small pack for outings and let them be responsible for it. A good kid kit is short: a whistle on a string, a water bottle, a snack, an extra warm layer and hat, a small flashlight, and a big bright garbage bag that works as a rain poncho or a windbreak to sit in. Write the list together and tape it inside the pack.' },
+      { type: 'paragraph', text: 'My kids pack their own bags for day trips now. My daughter still gets a quick last check from me, and my son is fully on his own. The trade-offs are where the thinking happens: everything has to fit, it all has to be carried, and “I might need it” isn’t a good enough reason to bring the heavy thing.' },
+      { type: 'product-callout', slug: 'outdoor-survival-planner', pinned: true, context: 'If your kid loves the planning part, Outdoor Survival Planner has them plan a real expedition: research the terrain, weigh the risks, choose what makes the pack and work through shelter, water and navigation scenarios when the plan changes.' },
+
+      { type: 'heading', level: 2, text: 'Survival skills by age' },
+      { type: 'paragraph', text: 'All ten work from 6 to 14. What changes is how much your kid decides on their own.' },
+      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
+      { type: 'paragraph', text: 'The core rules, practised as games: stay put and hug a tree, answer when someone calls your name, three whistle blasts, wear the bright layer. They can carry their own small pack with a whistle and a snack, and they can tell you the plan out loud before you leave the house.' },
+      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
+      { type: 'paragraph', text: 'Measuring and leading. The whistle-versus-voice distance test, the shadow stick, the warm-water shelter experiment, leading at trail junctions and choosing landmarks. This is a great age for writing their own trip plan and packing their own kit from a checklist they made.' },
+      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
+      { type: 'paragraph', text: 'Decisions and responsibility. STOP as a habit, spotting the early signs of cold in someone else, helping plan water for the whole family, using the map and a handrail to find the way back, and taking charge of putting the fire out (with you right there). Some kids this age love planning a full overnight trip on paper: route, gear, food and a plan B.' },
+
+      { type: 'tip', title: 'Practise it like a game, never like a scare', text: 'Kids who are frightened don’t remember rules, they freeze or run. Keep every practice light: a game of hide and find at a tree, a whistle contest, a shadow-stick race against the compass. The calmer the practice, the calmer they’ll be if they ever need it.' },
+
+      { type: 'heading', level: 2, text: 'How to fit it into normal family walks' },
+      { type: 'paragraph', text: 'Don’t try to teach all ten at once. Pick one skill per outing and practise it for ten minutes, then go back to just being outside. Over a season, that adds up to a kid who knows what to do without you having to explain it in a panic.' },
+      { type: 'paragraph', text: 'If your family already spends time in the woods, these [forest school activities](/blog/forest-school-activities) pair really well with the shelter and fire skills. For the bigger picture on why some risk is good for kids, read [the case for risky play](/blog/risky-play-for-kids), and for independence closer to home, see [how to raise independent kids](/blog/how-to-raise-independent-kids). And if it’s getting cold where you live, these [winter STEM activities](/blog/winter-stem-activities-kids) are a fun way to keep going outside all season.' },
+      { type: 'paragraph', text: 'The goal isn’t a kid who could survive alone in the wilderness. It’s a kid who stays calm, knows what to do first, and is easy to find. That’s a skill you can start this weekend with a whistle and a tree.' },
+      { type: 'paragraph', text: 'And if you’d rather open a guide that walks your kid through it step by step, that’s what the Anywhere Learning membership is for: real-world, hands-on activities for ages 6 to 14, from planning an expedition to building a survival base, ready to open on any device.' },
+
+      { type: 'faq', items: [
+        { question: 'What survival skills should kids learn first?', answer: 'The first skill is what to do when lost: stay in one place, hug a tree, and help searchers find you. After that come signalling with three whistle blasts, staying warm and dry with layers, and leaving a plan with an adult before heading out. Shelter, navigation, water and fire safety build on those.' },
+        { question: 'What should a child do if they get lost in the woods?', answer: 'Stop and stay where they are, ideally next to a tree or another landmark. Put on the brightest layer, blow three whistle blasts and pause to listen, and answer when they hear their name called. Search and rescue teams teach this as the Hug-a-Tree rule, because a child who stays in one place is found much faster than one who keeps walking.' },
+        { question: 'What age should kids start learning survival skills?', answer: 'Kids as young as 5 can learn the core rules (stay put, use a whistle, answer when called), and programs like Hug-a-Tree are taught to children aged 5 to 11. From 9 or 10, kids can add navigation, shelter building and trip planning, and by 12 to 14 they can take on real responsibility such as planning water and putting out a campfire with an adult.' },
+        { question: 'What should be in a kid’s survival kit?', answer: 'Keep it small enough for them to carry: a whistle on a string, a water bottle, a snack, an extra warm layer and hat, a small flashlight, and a large bright garbage bag to use as a rain poncho or windbreak. Let them pack it themselves from a checklist.' },
+        { question: 'How do you find north without a compass?', answer: 'On a sunny day, put a stick upright in flat ground, mark the tip of its shadow, wait 15 minutes and mark the new tip. The first mark is west and the second is east. Standing with the first mark on your left and the second on your right, you are facing roughly north.' },
+        { question: 'Should kids learn to make a fire?', answer: 'Yes, with an adult, and the safety rules come first: check for fire bans, use a fire ring or clear about 10 feet (3 metres) around the fire, and put it out by drowning it with water, stirring and drowning again until it is cold to the touch. Teaching the fire triangle (heat, fuel and oxygen) helps kids understand both how to start a fire and how to put one out.' },
+      ]},
+    ],
+    relatedSlugs: ['forest-school-activities', 'risky-play-for-kids', 'how-to-raise-independent-kids', 'outdoor-stem-challenges', 'winter-stem-activities-kids', 'nature-walks-science'],
+  },
+  {
     slug: 'family-debate-night-kids',
     title: 'Family Debate Night: How to Run One (With Topics by Age)',
     seoTitle: 'Family Debate Night: How to Run One, With Topics by Age',
