@@ -84,9 +84,11 @@ export const IDEA_LIST_SEO: Record<string, IdeaListSeo> = {
   },
 
   'forest-school-ideas': {
-    seoTitle: 'Forest School Checklist: 13 Activities to Print (Free PDF)',
+    // Oct 26 2026: lead with the searched phrase "forest school activities"
+    // (the list converts; "checklist" is not what people type).
+    seoTitle: 'Forest School Activities: 13 Ideas to Print (Free PDF)',
     metaDescription:
-      'A printable forest school checklist with 13 activities for any patch of trees. Free to read, PDF by email. Den building, mud paint, sit spots, and safe risk.',
+      '13 forest school activities for any patch of trees, ages 6 to 14: den building, mud paint, sit spots and safe risk. Free to read, PDF by email.',
     howToUse:
       'Your job here is to give your kids time, a loose challenge, and the freedom to take small risks while you stay close. Pick one activity per visit and let them lead. The repetition is the point: the same patch of woods teaches something new every season.',
     faqs: [

@@ -565,6 +565,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Flexible timeline: expand as deep as your child wants',
     ],
     skillTags: ['Writing', 'Art', 'Geography', 'Worldbuilding', 'Imagination'],
+    // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
+    seo: {
+      title: 'Build an Imaginary World: Worldbuilding Guide, Ages 6-14',
+      description:
+        'The guide your family follows to build an imaginary world: draw the map, design the creatures, set the rules and write its stories. Ages 6 to 14.',
+    },
     insideTheLearning: {
       lead:
         'Your child builds an entire world and it has to hold together. If the climate is like that, the food has to come from somewhere. If the geography is like that, the cities go here and not there. Invention plus consequences, which is much harder and much more interesting than invention alone.',
@@ -688,14 +694,14 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Communication', where: 'Writing a rulebook clear enough that others can play without asking' },
       ],
     },
-    // Sept 28 2026: the product page (639 impr at 8.0) and the post shared
-    // nearly the same title and split ~240 "how to invent a sport" impressions.
-    // The post takes the how-to searcher; this page speaks to the parent who
-    // wants the guide.
+    // Sept 28 2026: split the how-to search off to the post. Oct 26 2026:
+    // Google kept this page for the whole cluster ("create a new sport",
+    // "make a sport") and the post never got a click, so this page owns it
+    // and the title uses the searchers' words.
     seo: {
-      title: 'Invent a Sport: Parent-Led Project Guide for Kids 6-14',
+      title: 'Create a New Sport With Kids: Step-by-Step Guide, 6-14',
       description:
-        'The guide your family follows to invent a sport: design the game, build equipment from household stuff, write the rulebook, playtest. Ages 6 to 14.',
+        'Make up a new sport with your kids: pick the goal, build equipment from household stuff, write the rulebook and playtest it together. Ages 6 to 14.',
     },
     format: 'Project Guide',
   },
@@ -1335,6 +1341,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Presentation of final AI helper concept',
     ],
     skillTags: ['STEM', 'AI Literacy', 'Design Thinking', 'Ethics', 'Planning', 'Creativity'],
+    // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
+    seo: {
+      title: 'Build Your Own AI Helper: A Kids Project Guide, Ages 9-14',
+      description:
+        'The guide your family follows to design an AI helper: what it does, what data it needs and the rules it must follow. No coding. Ages 9 to 14.',
+    },
     insideTheLearning: {
       lead:
         'Your child designs an AI helper for a job that actually needs doing in your house. They work out what it would need to know, what it must never be given, and how to write instructions clear enough that it behaves. Then they test it, find where it falls over, and fix it.',
@@ -1527,6 +1539,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Extension ideas for longer narratives',
     ],
     skillTags: ['Creative Writing', 'Storytelling', 'Planning', 'Narrative', 'Art'],
+    // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
+    seo: {
+      title: 'Adventure Story Map: Plan and Write a Story, Ages 6-14',
+      description:
+        'The guide your family follows to map an adventure story first, then write it: characters, settings, plot twists and an ending. Ages 6 to 14.',
+    },
     insideTheLearning: {
       lead:
         'Your child maps a real place they know well, then sets an invented story inside it. The map forces them to translate a three-dimensional place they can walk through into a flat drawing, and the story forces them to notice the details that make a made-up event feel true. Descriptive writing gets much easier when the setting is a place they can go and stand in.',
@@ -2294,6 +2312,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Discussion starters for the whole family',
     ],
     skillTags: ['Cultural Awareness', 'Observation', 'Reflection', 'Critical Thinking'],
+    // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
+    seo: {
+      title: 'Everyday Life Comparison: A Worldschooling Guide for Kids',
+      description:
+        'The guide your family follows to compare daily life somewhere new with home: transport, food, school and play, and why they differ. Ages 6 to 14.',
+    },
     insideTheLearning: {
       lead:
         'Your child looks closely at how ordinary life works somewhere else, transport, food, school, play, and compares it with their own. The interesting part is never the difference itself, it is working out why it is that way. Curiosity aimed at things they normally walk past.',
