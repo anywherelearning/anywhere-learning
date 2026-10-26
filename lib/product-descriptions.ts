@@ -256,9 +256,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape, any weather.',
     whatsIncluded: [
-      'Guided journaling prompts for outdoor observation',
-      'Sketching, drawing, and descriptive writing activities',
-      'Observation focuses: shadows, textures, sounds, patterns, colour',
+      '36 illustrated journal prompt cards, by season',
+      'A full printable journal: one page for every prompt',
+      'Draw first, write second: sound maps, trees, snowflakes, buds',
       'Seasonal variations that work year-round',
       'Reusable format: use again and again across seasons',
     ],

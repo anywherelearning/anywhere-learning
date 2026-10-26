@@ -133,15 +133,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "My Nature Journal",
     slug: "nature-journal-walks",
     description:
-      "A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape: backyard, park, trail, or beach. No nature expertise required from you. Just open it up, step outside, and let curiosity lead.",
+      "A nature journal for every season: 36 illustrated prompt cards for you, plus a full printable journal with a page for every prompt. Kids map the sounds around them, adopt a tree, catch snowflakes on a mitten and watch buds open, drawing first and writing second. No nature expertise needed. Use any notebook, or print the journal pages and keep them all year.",
     shortDescription:
-      "Nature journal for kids ages 6-14: guided prompts for sketching, writing, and outdoor observation. Any season, any trail.",
+      "Nature journal for kids ages 6-14: 36 seasonal prompts plus a full printable journal. Sketching, writing and outdoor observation.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpeAkIBECpwGm6cacYS90",
     blobUrl: "",
     imageUrl: "/products/nature-journal-walks.jpg",
-    previewFile: "Preview My nature journal.pdf",
+    previewFile: "Preview Outdoor Learning - My nature journal v3.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,

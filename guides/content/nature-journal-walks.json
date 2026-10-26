@@ -1,0 +1,431 @@
+{
+  "slug": "nature-journal-walks",
+  "category": "Outdoor Learning",
+  "title": "My Nature Journal",
+  "tagline": "36 journal prompts · Every season · Draw, notice, wonder",
+  "ages": "Ages 6 to 14",
+  "goal": "36 nature journal prompts for any season: map the sounds around you, adopt a tree, catch a snowflake on a mitten, watch buds open. Your kid draws what they see, then writes three short lines: what they notice, what they wonder, what it reminds them of. The cards are for you; the full journal at the back has a page for every card, ready to print, or use any notebook. Over a year, it becomes a real record of their place.",
+  "need": [
+    "These cards, on your phone or printed",
+    "Any notebook, or print the journal pages at the back",
+    "A pencil, and something to sit on outside"
+  ],
+  "lesson": {
+    "text": "A naturalist's journal isn't about pretty drawings. It's a record of looking closely. Under every drawing, three short lines turn a sketch into thinking.",
+    "before": "I drew a leaf.",
+    "model": [
+      {
+        "part": "Draw",
+        "line": "A big maple leaf, with arrows to the stem and the holes."
+      },
+      {
+        "part": "I notice",
+        "line": "Three holes near the edge, and the veins all start at the stem."
+      },
+      {
+        "part": "I wonder",
+        "line": "What made the holes? A caterpillar, or hail?"
+      },
+      {
+        "part": "Reminds me of",
+        "line": "The veins look like the map of rivers near our house."
+      }
+    ],
+    "modelNote": "Same leaf, but now it's real observation. When your kid says 'done,' ask: what do you notice, what do you wonder, what does it remind you of?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "observing plants, animals, weather and seasonal change"
+    },
+    {
+      "subject": "Writing",
+      "text": "precise descriptions, questions, comparisons and short poems"
+    },
+    {
+      "subject": "Art",
+      "text": "scientific drawing: shapes, details, labels and arrows"
+    },
+    {
+      "subject": "Life skills",
+      "text": "slowing down, patience, and noticing change over time"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need to know any plant or bird names. Read the card, sit with your kid, and journal too if you like: kids take it more seriously when you have your own page. Drawing comes first, words second, and nobody grades the art.",
+    "plan": [
+      {
+        "when": "Before",
+        "what": "Pick a card that fits the season, and grab a notebook and pencil."
+      },
+      {
+        "when": "Outside",
+        "what": "10 to 20 minutes: draw first, then the three lines. Add the date and weather."
+      },
+      {
+        "when": "After",
+        "what": "Share one wonder each. Flip back through old pages once a month."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They say they can't draw",
+        "a": "It's a record, not art. Shapes, labels and arrows count. Draw for 3 minutes, then write."
+      },
+      {
+        "q": "They write one word and stop",
+        "a": "Use the three starters out loud: I notice, I wonder, it reminds me of. Let them answer by talking first."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "seeing details others miss"
+    },
+    {
+      "name": "Scientific drawing",
+      "text": "recording, not decorating"
+    },
+    {
+      "name": "Curiosity",
+      "text": "turning what they see into questions"
+    },
+    {
+      "name": "Seasonal awareness",
+      "text": "noticing how one place changes"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: draw it and say one thing you notice. Develop: add the three lines. Extend: do the Deeper part and come back to the same spot in another season.",
+  "compactCards": true,
+  "themes": [
+    {
+      "title": "Any season",
+      "cards": [
+        {
+          "name": "Small Details",
+          "t": "Choose one small thing: a mushroom, a flower, a bug. Draw it bigger than real life.",
+          "d": "Describe its texture and smell in three words each.",
+          "art": "wc/journal-01.jpg",
+          "jp": "Look closely at a small part of nature, like a flower or a mushroom. Draw it up close and describe its texture and smell."
+        },
+        {
+          "name": "Sound Map",
+          "t": "Sit still for 3 minutes. Put yourself in the middle of the page and draw each sound where it comes from.",
+          "d": "Which sound was closest? Which one was farthest?",
+          "art": "wc/journal-02.jpg",
+          "mapbox": true,
+          "jp": "Sit quietly and listen to the sounds around you. Draw a map showing where each sound comes from."
+        },
+        {
+          "name": "Cloud Stories",
+          "t": "Draw the shapes you see in the clouds right now.",
+          "d": "Write a short story about one of the clouds.",
+          "art": "wc/journal-03.jpg",
+          "jp": "Look at the clouds and draw the shapes you see. Write a short story about one of the clouds."
+        },
+        {
+          "name": "Adopt a Tree",
+          "t": "Pick a tree near home. Draw its shape, one leaf and a bark rubbing.",
+          "d": "Visit it once a season and draw it again on a new page.",
+          "art": "wc/journal-04.jpg",
+          "jp": "Find a tree you like. Draw its leaves and bark, and write how you think it might change through the seasons."
+        },
+        {
+          "name": "Animal Watch",
+          "t": "Watch one animal or insect for 2 minutes. Draw what it's doing.",
+          "d": "Where do you think it lives? What is it looking for?",
+          "art": "wc/journal-05.jpg",
+          "jp": "Spot an animal or an insect. Draw what you see and describe what it does. Where do you think it lives?"
+        },
+        {
+          "name": "Weather Report",
+          "t": "Draw the sky. Write the temperature, the wind and how it feels outside.",
+          "d": "What will the weather do next? Check tomorrow.",
+          "art": "wc/journal-06.jpg",
+          "jp": "Look at the weather today. Draw the sky and describe how you feel outside. What changes do you notice?"
+        },
+        {
+          "name": "Shape Hunt",
+          "t": "Find a circle, a spiral and a triangle in nature. Draw each one.",
+          "d": "Why might a plant or an animal be that shape?",
+          "art": "wc/journal-07.jpg",
+          "jp": "Find different shapes in nature, like circles, triangles or spirals. Draw them and describe where you found them."
+        },
+        {
+          "name": "Rock Portrait",
+          "t": "Find a rock that interests you. Draw it and describe its colour, texture and shape.",
+          "d": "Where do you think it came from, and how did it get here?",
+          "art": "wc/journal-08.jpg",
+          "jp": "Find a rock that interests you. Draw it and describe its texture, colour and shape. Where do you think it comes from?"
+        },
+        {
+          "name": "Wind Watch",
+          "t": "Draw how the wind moves the grass, the leaves or the water.",
+          "d": "Write where you think the wind is going next.",
+          "art": "wc/journal-09.jpg",
+          "jp": "Feel the wind on your face. Draw the wind moving through the trees or the grass, and write a story about where the wind is going."
+        },
+        {
+          "name": "Insect-Eye View",
+          "t": "Get down low. Draw the world the way a beetle sees it.",
+          "d": "Write about the beetle's day, from its point of view.",
+          "art": "wc/journal-10.jpg",
+          "jp": "Imagine you are an insect. Draw what the world looks like from down there, and write about your day."
+        },
+        {
+          "name": "Colour Palette",
+          "t": "Find 6 different colours in nature. Make a swatch of each and name it.",
+          "d": "Give your palette a name, like 'Rainy Trail'.",
+          "art": "wc/journal-11.jpg",
+          "jp": "Make a colour palette by finding different colours in nature. Draw and name the colours you find."
+        },
+        {
+          "name": "Nature Poem",
+          "t": "Write a 3-line poem about something you see or hear right now.",
+          "d": "Draw a small picture beside your poem.",
+          "art": "wc/journal-12.jpg",
+          "jp": "Write a short poem inspired by something you see or hear in nature today. Draw a picture to go with your poem."
+        }
+      ]
+    },
+    {
+      "title": "Fall",
+      "cards": [
+        {
+          "name": "Falling Leaf",
+          "t": "Watch a leaf fall. Draw its path from the branch to the ground.",
+          "d": "What will happen to the leaf next? Write its journey.",
+          "art": "wc/journal-13.jpg",
+          "jp": "Watch and draw a leaf falling. Write about its journey from the branch to the ground, and what might happen to it next."
+        },
+        {
+          "name": "Getting Ready",
+          "t": "Choose an animal and draw how it gets ready for winter.",
+          "d": "How does it stay warm or find food when it's cold?",
+          "art": "wc/journal-14.jpg",
+          "jp": "Choose an animal and draw how it gets ready for winter (thicker fur, a hiding place...). Write about what this animal does to stay warm."
+        },
+        {
+          "name": "Leaf Investigation",
+          "t": "Pick up a leaf. Draw it and label the stem, the veins and the edge.",
+          "d": "How does each part help the plant?",
+          "art": "wc/journal-15.jpg",
+          "jp": "Pick up a leaf. Draw it and label its parts. Write how each part helps the plant stay healthy."
+        },
+        {
+          "name": "Wild Homes",
+          "t": "Find a place an animal might live: a hole, a nest, a hollow log. Draw it.",
+          "d": "Who might live there? What clues tell you?",
+          "art": "wc/journal-16.jpg",
+          "jp": "Find a place where an animal might live, like a hole in a tree or a nest. Draw it and write about who might live there."
+        },
+        {
+          "name": "Seed Hunt",
+          "t": "Find 3 different seeds. Draw each one beside how you think it travels.",
+          "d": "Which seed would travel the farthest? Why?",
+          "art": "wc/journal-17.jpg"
+        },
+        {
+          "name": "Mushroom Watch",
+          "t": "Find a mushroom. Draw the top, the underside and where it grows. Look, don't touch.",
+          "d": "Come back in 3 days. What changed?",
+          "art": "wc/journal-18.jpg",
+          "split": [
+            "Today",
+            "3 days later"
+          ]
+        },
+        {
+          "name": "Same Spot, New Season",
+          "t": "Draw one spot as it is today, then draw it the way you think it will look in winter.",
+          "d": "Come back in winter and check your prediction.",
+          "art": "wc/journal-19.jpg",
+          "split": [
+            "Today",
+            "Another season"
+          ],
+          "jp": "Describe how this place might look in another season. Draw it today, then draw it the way you imagine it will change."
+        },
+        {
+          "name": "Leaf Mandala",
+          "t": "Make a circle design with fallen leaves on the ground. Draw it.",
+          "d": "Why did you put the colours in that order?",
+          "art": "wc/journal-20.jpg",
+          "jp": "Collect small things from nature, like leaves, stones or twigs, and arrange them into a mandala. Draw it."
+        }
+      ]
+    },
+    {
+      "title": "Winter",
+      "cards": [
+        {
+          "name": "Winter Sounds",
+          "t": "Stand still in the snow. Draw a sound map of winter: crunch, drip, wind.",
+          "d": "How are winter sounds different from summer sounds?",
+          "art": "wc/journal-21.jpg",
+          "mapbox": true,
+          "jp": "Sit quietly and listen to the sounds of winter, like snow crunching underfoot or wind in the trees. Draw a sound map and write how these sounds make you feel."
+        },
+        {
+          "name": "Winter Sky",
+          "t": "Draw the winter sky and the light at this time of day.",
+          "d": "What time does it get dark now? Write it down each week.",
+          "art": "wc/journal-22.jpg",
+          "jp": "Look at the sky in winter. Draw the winter clouds. Write about how the sky changes in winter."
+        },
+        {
+          "name": "Snowflakes Up Close",
+          "t": "Catch snowflakes on a dark mitten. Draw three different shapes.",
+          "d": "How many points does each one have?",
+          "art": "wc/journal-23.jpg",
+          "jp": "Look closely at snowflakes. Draw their shapes and write what you find fascinating about them."
+        },
+        {
+          "name": "After the Storm",
+          "t": "Draw the landscape during a snowfall, then again after.",
+          "d": "What changed? What disappeared under the snow?",
+          "art": "wc/journal-24.jpg",
+          "split": [
+            "During",
+            "After"
+          ],
+          "jp": "Draw the landscape during and after a snowstorm. Write about the changes you see."
+        },
+        {
+          "name": "Under the Snow",
+          "t": "Draw what you think is happening under the snow: sleeping animals, waiting plants.",
+          "d": "Write a story about one of them.",
+          "art": "wc/journal-25.jpg",
+          "jp": "Imagine what is happening under the snow, where animals hide and plants wait for spring. Draw this hidden world and write a story about it."
+        },
+        {
+          "name": "Bare Branches",
+          "t": "Choose a tree with no leaves. Draw its branches and buds.",
+          "d": "What will this tree look like in spring?",
+          "art": "wc/journal-26.jpg",
+          "jp": "Choose a tree and look at it without its leaves. Draw its branches and imagine how the tree feels in winter. Write about how it gets ready for spring."
+        },
+        {
+          "name": "Tracks in the Snow",
+          "t": "Find tracks in the snow. Draw them and the path they make.",
+          "d": "Who made them? Where were they going?",
+          "art": "wc/journal-27.jpg",
+          "jp": "Look for animal tracks. Draw the tracks and guess which animal made them. Write a story about where the animal was going."
+        },
+        {
+          "name": "Ice Patterns",
+          "t": "Find frost or ice. Draw the patterns you see up close.",
+          "d": "What shapes repeat? Where else have you seen them?",
+          "art": "wc/journal-28.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Spring",
+      "cards": [
+        {
+          "name": "First Shoots",
+          "t": "Find something new poking out of the ground. Draw it.",
+          "d": "Draw it again in one week. How much did it grow?",
+          "art": "wc/journal-29.jpg",
+          "jp": "Look for the first shoots coming out of the soil. Draw them and write about what these young plants will become."
+        },
+        {
+          "name": "Spring Rain",
+          "t": "Watch the rain. Draw the drops, the puddles and the ripples.",
+          "d": "How does rain help nature wake up?",
+          "art": "wc/journal-30.jpg",
+          "jp": "Watch a rainy spring day. Draw the raindrops or the puddles and write about how rain helps nature wake up."
+        },
+        {
+          "name": "Soil Detective",
+          "t": "Dig up a small scoop of soil. Draw the roots, bugs and stones you find.",
+          "d": "Put it all back. What lives in soil, and why?",
+          "art": "wc/journal-31.jpg",
+          "jp": "Dig up a little soil and look at what you find. Draw and describe the roots, insects or stones you see."
+        },
+        {
+          "name": "Bud Watch",
+          "t": "Find a branch with buds. Draw one bud every few days as it opens.",
+          "d": "Does it turn into a leaf or a flower?",
+          "art": "wc/journal-32.jpg",
+          "jp": "Look at the buds on the trees. Draw a bud and write about how it turns into a leaf or a flower."
+        },
+        {
+          "name": "New Nests",
+          "t": "Look for a nest in a tree or a bush. Draw it from a distance.",
+          "d": "What do you think it's made of? Who built it?",
+          "art": "wc/journal-33.jpg",
+          "jp": "Look for bird nests in trees or bushes. Draw a nest and write about the birds that might live there and raise their young."
+        },
+        {
+          "name": "Flower Focus",
+          "t": "Find one flower. Draw its petals, stem and leaves in detail.",
+          "d": "Count the petals. Do other flowers of the same kind match?",
+          "art": "wc/journal-34.jpg",
+          "jp": "Find a flower. Draw it in detail, with its petals, stem and leaves. Write about how it might change as it grows."
+        },
+        {
+          "name": "First Insects",
+          "t": "Find the first insects of spring. Draw them and what they're doing.",
+          "d": "Why do you think they're out now and not in winter?",
+          "art": "wc/journal-35.jpg"
+        },
+        {
+          "name": "Puddle and Pond Life",
+          "t": "Look closely at the edge of a puddle or pond. Draw what moves.",
+          "d": "Come back in a week. What changed?",
+          "art": "wc/journal-36.jpg"
+        }
+      ]
+    }
+  ],
+  "journalPages": [
+    {
+      "season": "Extra page",
+      "title": "My own page",
+      "art": "wc/journal-12.jpg"
+    },
+    {
+      "season": "Extra page",
+      "title": "My own page",
+      "art": "wc/journal-01.jpg"
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just started a real naturalist's journal.",
+    "text": "They looked closely, drew what they saw, and turned it into notices, wonders and comparisons. Observation, scientific drawing and writing, in a notebook that grows with every season.",
+    "celebrate": "Flip back through the pages together and point to a wonder: 'You asked what made those holes. Did you ever find out?'",
+    "extensions": [
+      "Pick one spot and journal it every season for a year",
+      "Start a family journal: everyone adds a page on the same walk",
+      "Look up the answer to one 'I wonder' each week",
+      "Take the journal on your next trip and compare places"
+    ]
+  },
+  "signs": [
+    "They stop on walks to look closely at something",
+    "They ask 'I wonder...' questions on their own",
+    "They notice when something has changed since last time"
+  ],
+  "makeItReal": "Bring the journal everywhere for a month: the backyard, a park, a road trip stop. At the end of the month, read it together. Kids are amazed by how much they noticed, and it's a record you'll keep for years.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/nature-journal-walks.jpg",
+    "alt": "A boy in a yellow jacket and knit hat sitting on a camp chair in the snow, sketching the lake as snow falls",
+    "caption": "A sit spot on a snowy day: sketching the lake while the snow falls."
+  },
+  "journalFromCards": true,
+  "fromHome": {
+    "text": "On a snowy day, my son set up a camp chair on the shore and sketched the lake while the snow fell. It was his idea: a sit spot moment, one place, one chair, and time to really look. Nobody told him what to draw.",
+    "quotes": []
+  }
+}

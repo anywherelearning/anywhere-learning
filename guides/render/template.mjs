@@ -230,6 +230,43 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   // Optional reference page (style cards, prompt cards): a titled grid of
   // short cards the kid flips through while working.
   const R = g.reference;
+  // Printable journal pages (optional): one per season, used with any card.
+  // Full journal: one page per card, after the parent cards.
+  const jbox = (c) => c.split
+    ? `<div class="jdraw jsplit">${c.split.map((l) => `<div><span>${esc(l)}</span></div>`).join('')}</div>`
+    : `<div class="jdraw${c.mapbox ? ' jmap' : ''}"><span>${c.mapbox ? 'You are the dot. Draw each sound where it comes from.' : 'Draw it. Add labels and arrows.'}</span>${c.mapbox ? '<b class="jdot">me</b>' : ''}</div>`;
+  const jlines = `<div class="jwrite">${'<i></i>'.repeat(8)}</div>`;
+  const jfields = `<div class="jfields">${['Date', 'Season', 'Weather', 'Temperature'].map((f) => `<div><span>${f}</span><i></i></div>`).join('')}</div>`;
+  const fullJournal = g.journalFromCards ? `
+<section class="pg jcover">
+  <div class="jframe">
+    ${[['journal-13.jpg','tl'],['journal-04.jpg','tr'],['journal-18.jpg','bl'],['journal-34.jpg','br'],['journal-17.jpg','ml'],['journal-33.jpg','mr'],['journal-23.jpg','tm'],['journal-29.jpg','bm']].map(([f, pos]) => `<span class="jdeco ${pos}">${art('wc/' + f)}</span>`).join('')}
+    <div class="jcin">
+      <div class="jbrand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+      <h2><span class="jmy">My</span>Nature<br>Journal</h2>
+      <div class="jseasons"><span>Fall</span><i></i><span>Winter</span><i></i><span>Spring</span><i></i><span>Summer</span></div>
+      <div class="jname"><span>Name</span><i></i></div>
+      <div class="jname"><span>Started on</span><i></i></div>
+      <div class="jname"><span>My special place</span><i></i></div>
+    </div>
+  </div>
+</section>` + allCards.map((c, k) => `
+<section class="pg jpage" style="--b:${BOARD_COLORS[c.ti % 5][0]};--bs:${BOARD_COLORS[c.ti % 5][1]}">
+  <div class="eyebrow">${esc(c.theme)} &middot; Card ${k + 1}</div>
+  <div class="jhead"><div><h2>${esc(c.name)}</h2><p class="jprompt">${esc(c.jp || c.t)}</p></div>${c.art ? art(c.art) : ''}</div>
+  ${jfields}${jbox(c)}${jlines}
+  ${foot('Journal: ' + esc(c.name))}
+</section>`).join('') : '';
+  const journal = fullJournal + (g.journalPages || []).map((jp, ji) => `
+<section class="pg jpage" style="--b:${BOARD_COLORS[ji % 5][0]};--bs:${BOARD_COLORS[ji % 5][1]}">
+  <div class="eyebrow">Journal page &middot; ${esc(jp.season)}</div>
+  <div class="jhead"><h2>${esc(jp.title || 'My nature journal')}</h2>${jp.art ? art(jp.art) : ''}</div>
+  <div class="jfields">${['Date', 'Place', 'Weather', 'Card no.'].map((f) => `<div><span>${f}</span><i></i></div>`).join('')}</div>
+  <div class="jdraw"><span>Draw it. Add labels and arrows.</span></div>
+  ${['I notice...', 'I wonder...', 'It reminds me of...'].map((q) => `<div class="jlines"><b>${q}</b><i></i><i></i></div>`).join('')}
+  ${foot('Journal page: ' + esc(jp.season))}
+</section>`).join('');
+
   const reference = R ? `
 <section class="pg refpg">
   <div class="eyebrow">Keep this open</div>
@@ -267,7 +304,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${reference}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${journal}${reference}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
@@ -366,6 +403,22 @@ ul{list-style:none}
 .btile .tcicon{margin:0;width:44px;height:44px;background:var(--b);color:#fff;box-shadow:0 0 0 4px #fff}
 .btile .tcicon svg{width:24px;height:24px;stroke-width:1.9}
 .tchead .bart{margin-left:auto;margin-top:-6px;margin-bottom:-6px}.cardpg .tchead .bart.wc{width:82px;height:82px;margin-top:-14px;margin-bottom:-14px}
+.jpage .eyebrow{color:var(--b)}.jhead{display:flex;align-items:center;justify-content:space-between}.jhead h2{margin:0}.jhead .bart.wc{width:84px;height:84px}
+.jfields{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:14px 0 16px}.jfields div{display:flex;align-items:flex-end;gap:8px}.jfields span{font:700 .78em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--b);white-space:nowrap}.jfields i{flex:1;border-bottom:1.5px solid rgba(58,44,23,.35);height:1.3em}
+.jdraw{position:relative;height:3.9in;border:2.5px solid var(--b);border-radius:18px;background:#fff;margin-bottom:16px}.jdraw span{position:absolute;top:10px;left:14px;font-size:.85em;color:var(--muted)}
+.jlines{margin-top:10px}.jlines b{display:block;font:700 1.05em 'DM Sans';color:var(--b);margin-bottom:2px}.jlines i{display:block;border-bottom:1.5px solid rgba(58,44,23,.3);height:1.9em}
+.jhead .jprompt{margin:4px 0 0;font-size:1.05em;line-height:1.4;max-width:5.4in}.jhead{align-items:flex-start;gap:16px}
+.jsplit{display:grid;grid-template-columns:1fr 1fr}.jsplit div{position:relative}.jsplit div+div{border-left:2px dashed var(--b)}.jsplit span{position:absolute;top:10px;left:14px;font:700 .8em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--b)}
+.jmap .jdot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;font:700 .8em 'DM Sans'}
+.jcover{display:flex;align-items:center;justify-content:center;padding:.55in!important}
+.jframe{position:relative;width:100%;height:100%;border:3px solid #d4a373;outline:1.5px solid #d4a373;outline-offset:8px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:transparent}
+.jdeco{position:absolute}.jdeco .bart.wc{width:150px;height:150px}.jdeco.tl{top:-46px;left:-40px}.jdeco.tr{top:-52px;right:-36px}.jdeco.bl{bottom:-42px;left:-38px}.jdeco.br{bottom:-46px;right:-34px}
+.jdeco.ml{top:42%;left:-52px}.jdeco.mr{top:40%;right:-50px}.jdeco.tm{top:-48px;left:50%;margin-left:-55px}.jdeco.bm{bottom:-44px;left:50%;margin-left:-50px}.jdeco.ml .bart.wc,.jdeco.mr .bart.wc,.jdeco.tm .bart.wc,.jdeco.bm .bart.wc{width:110px;height:110px}
+.jcin{text-align:center;width:72%}.jbrand img{height:34px;opacity:.9}.jmy{display:block;font:700 .42em/1 'Bricolage Grotesque';letter-spacing:.3em;text-transform:uppercase;color:#d4a373;margin-bottom:10px}
+.jcin h2{font:800 6.6em/0.92 'Bricolage Grotesque';color:#588157;margin:40px 0 22px;letter-spacing:-.01em}
+.jseasons{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 56px;font:700 .85em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8b7355}.jseasons i{width:6px;height:6px;border-radius:50%;background:#d4a373}
+.jcin .jname{display:flex;align-items:flex-end;gap:10px;width:100%;margin:0 0 30px}.jcin .jname span{white-space:nowrap;font:600 1.05em 'DM Sans';color:#3d5c3b}.jcin .jname i{flex:1;border-bottom:1.5px solid #d4a373;height:1.3em}
+.jpage .jdraw{height:3.55in}.jwrite i{display:block;border-bottom:1.5px solid rgba(58,44,23,.3);height:2.05em}
 .bextras{margin:0 14px 14px;background:var(--bs);border-radius:14px;padding:12px 16px;text-align:left}.bxlabel{font:700 .74em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:4px}.bextras ul{margin:0;padding-left:18px}.bextras li{margin:3px 0;line-height:1.4}.board.hasx .boardgrid{padding-bottom:10px}.btile .tcicon.swatch{border:2px solid rgba(58,44,23,.18)}
 .bart{width:48px;height:48px;display:block;filter:drop-shadow(0 2px 2px rgba(58,44,23,.15))}.bart.wc{filter:none;mix-blend-mode:multiply;width:64px;height:64px}.boardpg .bart.wc{width:62px;height:62px}.boardpg .bart{width:52px;height:52px}.btile .tcicon.swatch{width:50px;height:50px}
 .btick{position:absolute;top:9px;right:9px;width:16px;height:16px;border:2px solid var(--b);border-radius:50%;background:#fff;opacity:.75}
