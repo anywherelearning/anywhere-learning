@@ -4670,7 +4670,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '11. Whittling' },
       { type: 'paragraph', text: 'For kids around age seven and up, a basic whittling knife and a soft wood stick is all you need. Teach the safety rules (cut away from your body, keep your fingers behind the blade), then let them carve a point, a wand, or a little figure. This builds focus, patience, and respect for tools.' },
       { type: 'heading', level: 3, text: '12. Fire circle' },
-      { type: 'paragraph', text: 'If you have a safe outdoor space, build a small campfire together. Teach fire safety, how to build a fire lay, and how to extinguish it properly. Even just striking a flint and steel is a powerful experience for a child. Roast marshmallows or make popcorn to make it memorable. An adult job at every age; from about 10, kids can build and light the fire lay with you right beside them.' },
+      { type: 'paragraph', text: 'If you have a safe outdoor space, build a small campfire together. Teach fire safety, how to build a fire lay, and how to extinguish it properly. Even just striking a flint and steel is a powerful experience for a child. Roast marshmallows or make popcorn to make it memorable. An adult job at every age; from about 10, kids can build and light the fire lay with you right beside them. The fire rules, plus the other basics worth teaching before kids head into the woods, are in [outdoor survival skills for kids](/blog/outdoor-survival-skills-for-kids).' },
 
       { type: 'heading', level: 2, text: 'Free play and imagination' },
       { type: 'paragraph', text: 'Sometimes the best forest school activity is no activity at all. Unstructured time in nature is where the deepest learning happens.' },
@@ -4733,7 +4733,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want a free guide to getting started with nature-based learning? Grab our free download and start this week.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['outdoor-stem-challenges', 'outdoor-stem-by-age', 'nature-based-learning-guide', 'nature-walks-science', 'seasonal-scavenger-hunts', 'backyard-science-experiments', 'nature-journaling-for-kids'],
+    relatedSlugs: ['outdoor-survival-skills-for-kids', 'outdoor-stem-challenges', 'outdoor-stem-by-age', 'nature-based-learning-guide', 'nature-walks-science', 'seasonal-scavenger-hunts', 'backyard-science-experiments', 'nature-journaling-for-kids'],
     recommendedProduct: 'nature-journal-walks',
   },
 
@@ -6904,7 +6904,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What this looks like in practice' },
       { type: 'paragraph', text: 'In our house, the rule is roughly: if it can heal in two weeks, it is yours to figure out. Scrapes, bruises, splinters, the occasional small cut, sore muscles, hurt feelings. All of that is the cost of learning to be a competent human, and it is a fair cost.' },
       { type: 'paragraph', text: 'The exceptions are head, neck, eyes, and anything involving traffic or deep water. Those get the full attention. Everything else gets a glance and a "you got this."' },
-      { type: 'paragraph', text: 'If you want a structured way to start, point your family at outdoor challenges that have built-in risk: real tool use, fire-building, balancing, navigation. Our [forest school activities](/blog/forest-school-activities) and [outdoor STEM challenges](/blog/outdoor-stem-challenges) are full of these. The point is to give kids enough real experiences that risk stops feeling exotic and starts feeling like a skill they have.' },
+      { type: 'paragraph', text: 'If you want a structured way to start, point your family at outdoor challenges that have built-in risk: real tool use, fire-building, balancing, navigation. Our [forest school activities](/blog/forest-school-activities), [outdoor STEM challenges](/blog/outdoor-stem-challenges) and [outdoor survival skills for kids](/blog/outdoor-survival-skills-for-kids) are full of these. The point is to give kids enough real experiences that risk stops feeling exotic and starts feeling like a skill they have.' },
       { type: 'faq', items: [
         { question: 'But what about injuries? Are not kids going to get hurt?', answer: 'Yes, sometimes. Bumps, scrapes, the occasional sprain. The research consistently shows that kids who get regular risky play have fewer serious injuries over time, not more, because they develop better body awareness and risk assessment. The kids who end up with the worst playground injuries are often the ones who have not had enough practice. A scraped knee at 6 is the price of avoiding a broken arm at 12.' },
         { question: 'What age should I start letting my kid do risky play?', answer: 'From toddlerhood. A 2 year old climbing on a couch is doing risky play. A 4 year old up a low tree branch is doing risky play. The activities scale with age, but the principle (let them push their own edge with you nearby and quiet) starts as soon as they can move on their own.' },
@@ -6914,7 +6914,7 @@ const posts: BlogPost[] = [
         { question: 'Is risky play different from being reckless?', answer: 'Yes, completely. Risky play is the kid carefully calculating the next move at the edge of their ability. Reckless play is the kid doing something with no calculation at all, often because they have never been allowed to build the skill of self-assessment. The cure for recklessness is more risky play with attention, not less.' },
       ] },
     ],
-    relatedSlugs: ['forest-school-activities', 'nature-walks-science', 'just-let-them-play', 'outdoor-stem-challenges'],
+    relatedSlugs: ['forest-school-activities', 'outdoor-survival-skills-for-kids', 'nature-walks-science', 'just-let-them-play', 'outdoor-stem-challenges'],
   },
 
   {
@@ -8318,7 +8318,7 @@ const posts: BlogPost[] = [
         'Cooking a simple meal for the family, start to finish, with supervision fading over time.',
         'Managing their own money and small budget, and living with the results (see our guide to [financial literacy by age](/blog/financial-literacy-for-kids-by-age)).',
         'Getting themselves ready and out the door on time, managing their own morning without reminders.',
-        'More independent errands: walking or biking somewhere nearby alone, if your context allows.',
+        'More independent errands: walking or biking somewhere nearby alone, if your context allows. Before the first solo trips, teach them [what to do if they get lost](/blog/outdoor-survival-skills-for-kids).',
         'Owning a real chore that the household depends on, not busywork, but something that actually matters if they skip it.',
       ]},
       { type: 'paragraph', text: 'The shift here is from doing things for themselves to doing things for others. That is where responsibility is really born, and it is closely tied to building [executive function](/blog/executive-function-kids) and [time management](/blog/time-management-for-kids).' },
@@ -8371,7 +8371,7 @@ const posts: BlogPost[] = [
         { question: 'How do I stop myself from doing everything for my kid?', answer: 'Start by noticing the urge, which usually shows up as impatience or a need to fix an imperfect result. Then practice replacing rescuing with a question ("What have you tried? What could you do next?"), and deliberately let good enough be good enough. Slow down, especially when you are in a hurry, since that is exactly when we take tasks back. Your ability to step back is a skill that grows with practice, just like your child’s competence does.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'age-appropriate-chores-life-skills', 'executive-function-kids', 'homeschool-middle-school'],
+    relatedSlugs: ['life-skills-before-12', 'age-appropriate-chores-life-skills', 'executive-function-kids', 'homeschool-middle-school', 'outdoor-survival-skills-for-kids'],
     pillarSlug: 'life-skills-for-kids',
   },
 
@@ -9860,7 +9860,6 @@ const posts: BlogPost[] = [
     category: 'nature-learning',
     pillarSlug: 'nature-based-learning',
     publishedAt: '2026-10-26',
-    draft: true,
     keywords: ['outdoor survival skills for kids', 'survival skills for kids', 'wilderness survival for kids', 'what to do if lost in the woods', 'hug a tree', 'teaching kids outdoor safety', 'shelter building for kids', 'how to find north without a compass', 'campfire safety for kids', 'hiking safety for kids'],
     readTimeMinutes: 12,
     author: amelie,
