@@ -301,13 +301,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-choice-boards': {
     opening:
-      'Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from: observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what they do and how deep they go.',
+      'Choose-your-own-adventure style nature activities. Five boards, 12 options each: observe, create, build, or investigate. Perfect for self-directed learners who want to choose what they do and how deep they go.',
     whatsIncluded: [
       '5 nature choice board activity menus',
-      '9 options per board, a mix of observation, art, science, and movement',
+      '12 options per board, a mix of observation, art, science, and building',
       'Self-directed format builds independence and decision-making',
       'Works outdoors in any environment',
-      'Flexible: complete one activity or the whole board',
+      'Boards for ages 6 to 8 up to 10 and up',
     ],
     skillTags: ['Self-Direction', 'Nature', 'Science', 'Art', 'Decision-Making'],
     insideTheLearning: {

@@ -1,0 +1,415 @@
+{
+  "slug": "nature-choice-boards",
+  "category": "Outdoor Learning",
+  "title": "Nature Choice Boards",
+  "tagline": "5 boards · 60 outdoor options · Kids choose",
+  "ages": "Ages 6 to 14",
+  "goal": "Five outdoor menus, from a first-time explorer to a 12-year-old field researcher. You pick the board and the boundary, your kid picks 3 options and heads out, then comes back to show you their best discovery. Observation, science thinking, building and writing, chosen by them, so they actually want to do it.",
+  "need": [
+    "These boards, on your phone or printed",
+    "A safe outdoor space with a clear boundary: a yard, a park, a campsite",
+    "A notebook and pencil, and a timer"
+  ],
+  "lesson": {
+    "text": "The board is the menu. The real skill is the show-and-tell at the end: telling one discovery clearly, with details and a question.",
+    "before": "I found a bug.",
+    "model": [
+      {
+        "part": "What",
+        "line": "A shiny green beetle with a stripe down its back."
+      },
+      {
+        "part": "Where",
+        "line": "Under the log by the fence, where it was damp."
+      },
+      {
+        "part": "Detail",
+        "line": "It played dead when I touched the log, then ran."
+      },
+      {
+        "part": "Wonder",
+        "line": "Why does it hide in the wet spot and not the dry one?"
+      }
+    ],
+    "modelNote": "Same bug, but now it's a real discovery. When your kid says 'I found a bug,' ask: where was it, what did it do, and what do you wonder about it?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "observing, classifying, testing small ideas and backing up a claim"
+    },
+    {
+      "subject": "Writing",
+      "text": "field notes, short stories and good questions"
+    },
+    {
+      "subject": "Math",
+      "text": "counting, sorting, measuring and timing"
+    },
+    {
+      "subject": "Life skills",
+      "text": "making choices, managing time, and staying inside a boundary"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need to know any nature facts. You choose the board and set the boundary and the return time. Your kid chooses the options. Do the first one together if they're new to it, then let them go, and be the audience when they come back.",
+    "plan": [
+      {
+        "when": "Before",
+        "what": "Pick a board, set the boundary ('between the fence and the big tree') and a return time."
+      },
+      {
+        "when": "Outside",
+        "what": "They do 3 options in any order. About 30 to 45 minutes."
+      },
+      {
+        "when": "After",
+        "what": "They show you their best discovery: what, where, a detail, a wonder."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They pick the easiest options every time",
+        "a": "Let them. Next time, you pick one of the three and they pick the other two."
+      },
+      {
+        "q": "An option feels too hard",
+        "a": "Skip it and choose another. Or try the board below: ages are only a guide."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "noticing details most people walk past"
+    },
+    {
+      "name": "Independence",
+      "text": "choosing, planning and finishing on their own"
+    },
+    {
+      "name": "Science thinking",
+      "text": "turning a hunch into a claim with evidence"
+    },
+    {
+      "name": "Communication",
+      "text": "telling a discovery clearly"
+    }
+  ],
+  "levelsLine": "Five boards, from ages 6 to 12 and up. Ages are only a guide: start where your kid feels confident, and move up or down anytime. Siblings can use different boards side by side.",
+  "boardMode": true,
+  "boardRule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
+  "themes": [
+    {
+      "title": "Curious starter",
+      "ages": "Ages 6 to 8",
+      "rule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
+      "cards": [
+        {
+          "t": "Find 3 textures: smooth, rough and soft.",
+          "icon": "hand"
+        },
+        {
+          "t": "Find 5 different greens or browns.",
+          "icon": "palette"
+        },
+        {
+          "t": "Close your eyes. Listen for 3 sounds and name them.",
+          "icon": "ear"
+        },
+        {
+          "t": "Find a tiny world under a leaf or in moss. Describe it.",
+          "icon": "search"
+        },
+        {
+          "t": "Draw your favourite thing you can see.",
+          "icon": "pencil"
+        },
+        {
+          "t": "Walk 20 slow steps. What changes as you go?",
+          "icon": "footprints"
+        },
+        {
+          "t": "Find 3 shapes: a circle, a triangle and a straight line.",
+          "icon": "shapes"
+        },
+        {
+          "t": "Say 3 'I wonder...' questions out loud.",
+          "icon": "circle-help"
+        },
+        {
+          "t": "Find 2 patterns: stripes, spots or repeating shapes.",
+          "icon": "grid-3x3"
+        },
+        {
+          "t": "Make a tiny museum of 6 fallen things. Then put them back.",
+          "icon": "landmark"
+        },
+        {
+          "t": "Find one sign an animal was here: a web, a nibble, a track.",
+          "icon": "paw-print"
+        },
+        {
+          "t": "Line up 5 fallen leaves from smallest to biggest.",
+          "icon": "leaf"
+        }
+      ]
+    },
+    {
+      "title": "Explorer mode",
+      "ages": "Ages 7 to 9",
+      "rule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
+      "cards": [
+        {
+          "t": "Make a sound map: you in the middle, sounds all around.",
+          "icon": "map"
+        },
+        {
+          "t": "Find 2 things that look alike but aren't. What's different?",
+          "icon": "copy"
+        },
+        {
+          "t": "Find the best hiding spot for a tiny creature. Why there?",
+          "icon": "bug"
+        },
+        {
+          "t": "Make a pattern line: leaf, stone, leaf, stone.",
+          "icon": "repeat"
+        },
+        {
+          "t": "Find 3 clues, like an eaten leaf or tracks. Guess the story.",
+          "icon": "search"
+        },
+        {
+          "t": "Find a weather clue: clouds, wind direction, damp soil.",
+          "icon": "cloud-sun"
+        },
+        {
+          "t": "Build a stick frame and 'photograph' a view through it.",
+          "icon": "frame"
+        },
+        {
+          "t": "Tell a 3-sentence nature story: beginning, middle, end.",
+          "icon": "book-open"
+        },
+        {
+          "t": "Stand in the sun, then in the shade. What feels different?",
+          "icon": "sun"
+        },
+        {
+          "t": "Draw a tiny trail map: start, landmark, turn, end.",
+          "icon": "route"
+        },
+        {
+          "t": "Find something strong, something bendy and something waterproof.",
+          "icon": "shield-check"
+        },
+        {
+          "t": "Sit still for 2 minutes. List everything you notice.",
+          "icon": "timer"
+        }
+      ]
+    },
+    {
+      "title": "Young scientist",
+      "ages": "Ages 8 to 10",
+      "rule": "Pick 3 to 5. Do them in any order. Then show your grown-up your best discovery.",
+      "cards": [
+        {
+          "t": "Compare a dark soil and a light soil. Which seems richer? Why?",
+          "icon": "shovel"
+        },
+        {
+          "t": "Find 3 seeds. Guess how each one travels: wind, water or animal.",
+          "icon": "sprout"
+        },
+        {
+          "t": "Trace a water path: where would rain flow from here?",
+          "icon": "droplets"
+        },
+        {
+          "t": "Find 3 signs of time passing: rot, new growth, worn rock.",
+          "icon": "hourglass"
+        },
+        {
+          "t": "Test it: is a rock warmer than the dirt beside it? Try 2 spots.",
+          "icon": "thermometer"
+        },
+        {
+          "t": "Describe one plant like a scientist: shape, edges, colour.",
+          "icon": "flower-2"
+        },
+        {
+          "t": "Find where two places meet, like forest and field. List 5 differences.",
+          "icon": "split"
+        },
+        {
+          "t": "Make a claim about this place. Back it up with 2 clues.",
+          "icon": "badge-check"
+        },
+        {
+          "t": "Find 5 textures. Sort them: protection, comfort or camouflage.",
+          "icon": "layers"
+        },
+        {
+          "t": "Draw a tiny habitat. Label its shelter, food and water.",
+          "icon": "house"
+        },
+        {
+          "t": "Count every bird or insect you notice in 5 minutes.",
+          "icon": "hash"
+        },
+        {
+          "t": "Write 5 questions you could investigate next time.",
+          "icon": "notebook-pen"
+        }
+      ]
+    },
+    {
+      "title": "Builder and designer",
+      "ages": "Ages 9 to 11",
+      "rule": "Pick 2 or 3. Do them in any order. Then show your grown-up what you made.",
+      "cards": [
+        {
+          "t": "Make a tool from nature, like a scoop or a brush. What's its job?",
+          "icon": "wrench"
+        },
+        {
+          "t": "Make a mini obstacle course. Time yourself, then beat it.",
+          "icon": "flag"
+        },
+        {
+          "t": "Build a wind shield for a leaf. Test it with a big breath.",
+          "icon": "wind"
+        },
+        {
+          "t": "Make leaf rubbings: paper on top, rub with a crayon.",
+          "icon": "stamp"
+        },
+        {
+          "t": "Build a balanced arrangement. Explain what makes it balanced.",
+          "icon": "scale"
+        },
+        {
+          "t": "Build something, test it, then improve ONE thing.",
+          "icon": "repeat"
+        },
+        {
+          "t": "Find sticks or stones that make different notes. Play a tune.",
+          "icon": "music"
+        },
+        {
+          "t": "Invent a game for 5 pinecones and a stick. Teach it to someone.",
+          "icon": "dices"
+        },
+        {
+          "t": "Make a measuring stick marked in hand-spans. Measure 5 things.",
+          "icon": "ruler"
+        },
+        {
+          "t": "Make a paintbrush from grass and a twig. Paint a rock with mud.",
+          "icon": "paintbrush"
+        },
+        {
+          "t": "Build a ramp that rolls a pinecone as far as possible.",
+          "icon": "trending-down"
+        },
+        {
+          "t": "Make land art with one rule: only circles.",
+          "icon": "circle"
+        }
+      ]
+    },
+    {
+      "title": "Field researcher",
+      "ages": "Ages 10 and up",
+      "rule": "Pick 2 or 3. Do them in any order. Then present your findings to your grown-up.",
+      "cards": [
+        {
+          "t": "Write a field note: what, where, evidence, questions.",
+          "icon": "clipboard"
+        },
+        {
+          "t": "Tell the story of your walk in 5 photos, with a title for each.",
+          "icon": "camera"
+        },
+        {
+          "t": "Draw a micro-map of this spot with a legend of 5 symbols.",
+          "icon": "map-pinned"
+        },
+        {
+          "t": "Sit for 10 minutes. Note what changes every 2 minutes.",
+          "icon": "timer"
+        },
+        {
+          "t": "Find 3 human impacts here. Suggest one fix for each.",
+          "icon": "recycle"
+        },
+        {
+          "t": "Argue it: 'This place is healthy, or not, because...' Give 3 reasons.",
+          "icon": "message-square"
+        },
+        {
+          "t": "Mix soil, clay or charcoal with water into paint. Paint a map of the area.",
+          "icon": "palette"
+        },
+        {
+          "t": "Draw 5 symbol tiles. Tell a 5-sentence story using them.",
+          "icon": "puzzle"
+        },
+        {
+          "t": "Predict which of two spots has more insects. Then count.",
+          "icon": "bug"
+        },
+        {
+          "t": "Sort 12 fallen items into 3 groups. Write your rules.",
+          "icon": "list-filter"
+        },
+        {
+          "t": "Set up a ground museum exhibit with labels. Then return everything.",
+          "icon": "landmark"
+        },
+        {
+          "t": "Write 5 open questions (no yes or no) about one thing you saw.",
+          "icon": "circle-help"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just led their own outdoor learning.",
+    "text": "They chose, planned, went out on their own inside a safe boundary, and came back with something to show. Observation, science thinking and clear explaining, done because they picked it.",
+    "celebrate": "Ask about the discovery, not the number of options done: 'Show me the beetle spot. What do you think it was doing?'",
+    "extensions": [
+      "Repeat the same board in a new season and compare discoveries",
+      "Move up one board when the current one feels easy",
+      "Let your kid design a 12-option board for you",
+      "Keep the best discoveries in one notebook all year"
+    ]
+  },
+  "signs": [
+    "They ask to 'do a board' on their own",
+    "They come back with a detail and a question, not just 'it was fun'",
+    "They stay inside the boundary without reminders"
+  ],
+  "makeItReal": "Bring a board on your next trip: a campsite, a beach, a grandparent's yard. A new place makes every option new again, and your kid gets to be the one showing you around.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "levelsChip": "Five boards",
+  "photo": {
+    "src": "guides/assets/nature-choice-boards.jpg",
+    "alt": "A smiling girl on a pebble beach holding up a shell and a yellow pail",
+    "caption": "Beach treasures: look closely, then leave them on the beach.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "When we go to the coast, the kids spend hours exploring the beach and finding treasures. They used to put everything in a pail and carry it back to the cottage. They learned the hard way that a pail of beach treasures smells terrible after a few days, so now the treasures stay on the beach. They still find them. They just leave them where they belong.",
+    "quotes": []
+  }
+}

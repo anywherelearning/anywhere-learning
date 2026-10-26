@@ -179,15 +179,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Choice Boards",
     slug: "nature-choice-boards",
     description:
-      "Choose-your-own-adventure style nature activities. Each board gives kids 9 options to pick from: observe, create, explore, or investigate. Perfect for self-directed learners who want to choose what to do outside. Works in backyards, parks, forests, and beaches.",
+      "Five outdoor choice boards, from a first-time explorer (ages 6 to 8) to a 12-year-old field researcher. Each board gives kids 12 options to pick from: observe, create, build, or investigate. You set the boundary, they choose 3 and head out, then come back to show you their best discovery. Works in backyards, parks, forests, and beaches.",
     shortDescription:
-      "Outdoor choice boards for kids ages 6-14: 9 options per board for self-directed nature-based learning. Low-prep.",
+      "Outdoor choice boards for kids ages 6-14: 5 boards, 12 options each, for self-directed nature-based learning. Low-prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpgAkIBECpwGml7Y7qQVt",
     blobUrl: "",
     imageUrl: "/products/nature-choice-boards.jpg",
-    previewFile: "Preview Nature Choice Boards.pdf",
+    previewFile: "Preview Outdoor Learning - Nature Choice Boards v3.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,

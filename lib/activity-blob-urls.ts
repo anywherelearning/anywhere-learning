@@ -76,7 +76,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "mini-magazine-creator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Mini%20Magazine%20Creator%20v4.pdf",
   "mini-movie": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Mini%20Movie%2C%20Stop-Motion%20or%20Radio%20Drama%20v2.pdf",
   "my-review-column": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20My%20Review%20Column%20v4.pdf",
-  "nature-choice-boards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Choice%20Boards%20v2.pdf",
+  "nature-choice-boards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Choice%20Boards%20v3.pdf",
   "nature-crafts": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20crafts%20for%20kids%20v2.pdf",
   "nature-data-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Nature%20Data%20Tracker%20v2.pdf",
   "nature-geography-field-study": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Nature%20and%20Geography%20Field%20Study%20v2.pdf",

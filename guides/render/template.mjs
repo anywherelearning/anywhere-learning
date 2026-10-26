@@ -101,7 +101,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="eyebrow">${esc(g.category)}</div>
     <h1${g.title.length > 30 ? ' class="longtitle"' : ''}>${esc(g.title)}</h1>
     <p class="tagline">${esc(g.tagline)}</p>
-    <div class="chips"><span>${esc(g.ages)}</span>${g.time ? `<span>${esc(g.time)}</span>` : ''}<span>Three levels</span></div>
+    <div class="chips"><span>${esc(g.ages)}</span>${g.time ? `<span>${esc(g.time)}</span>` : ''}<span>${esc(g.levelsChip || 'Three levels')}</span></div>
     <div class="coverbody">
       ${coverTrail(coverItems)}
       <ol class="htrail">${coverItems.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.title)}</span></li>`).join('')}</ol>
@@ -179,7 +179,24 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   const allCards = (g.themes || []).flatMap((th, ti) => th.cards.map((c) => ({ ...c, theme: th.title, ti })));
   const cardPages = [];
   for (let i = 0; i < allCards.length; i += 6) cardPages.push(allCards.slice(i, i + 6).map((c, k) => ({ ...c, num: i + k + 1 })));
-  const cards = cardPages.map((pg, pi) => `
+  // Each board gets its own colour from the brand's category accents.
+  const BOARD_COLORS = [['#5f8a5e', '#e6eedf'], ['#4f8aa0', '#ddecf1'], ['#c4775a', '#f6e4dc'], ['#b9824d', '#f5e8d6'], ['#8b6f8f', '#ece2ee']];
+  // Choice boards: one theme per page, a grid of numbered options, no Deeper line.
+  const boards = g.boardMode ? (g.themes || []).map((th, ti) => `
+<section class="pg cardpg boardpg">
+  <div class="board" style="--b:${BOARD_COLORS[ti % 5][0]};--bs:${BOARD_COLORS[ti % 5][1]}">
+    <div class="bhead">
+      <div class="bnum">Board ${ti + 1}${th.ages ? ` &middot; ${esc(th.ages)}` : ''}</div>
+      <h2>${esc(th.title)}</h2>
+      <p class="boardrule">${esc(th.rule || g.boardRule)}</p>
+    </div>
+    <div class="boardgrid">${th.cards.map((c) => `
+      <div class="btile"><span class="btick"></span>${icon(c.icon)}<p class="tct">${esc(c.t)}</p></div>`).join('')}
+    </div>
+  </div>
+  ${foot(esc(th.title))}
+</section>`).join('') : '';
+  const cards = g.boardMode ? boards : cardPages.map((pg, pi) => `
 <section class="pg cardpg${g.compactCards ? ' compact' : ''}">
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
   <div class="cardgrid">${pg.map((c) => `
@@ -332,6 +349,19 @@ ul{list-style:none}
 .tctheme{font:700 .68em 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .tct{margin:0;font:600 1.02em/1.35 'DM Sans';color:var(--ink)}.tcicon{margin-left:auto;width:50px;height:50px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;flex:none;margin-top:-2px}.tcicon svg{width:30px;height:30px;stroke-width:1.6}
 .tcname{margin:0;font:800 1.15em/1.2 'Bricolage Grotesque';color:var(--ink)}.tcname+.tct{font-weight:400}
+.board{position:relative;background:#fff;border:3px solid var(--b);border-radius:26px;text-align:center;box-shadow:0 10px 24px rgba(58,44,23,.12);overflow:visible}
+.board::before{content:'';position:absolute;top:-14px;left:50%;width:1.5in;height:28px;margin-left:-.75in;background:rgba(214,162,78,.55);transform:rotate(-2deg);border-radius:3px}
+.bhead{background:var(--b);color:#fff;border-radius:22px 22px 0 0;padding:22px 18px 16px;background-image:radial-gradient(circle at 12% 30%,rgba(255,255,255,.14) 0 34px,transparent 35px),radial-gradient(circle at 90% 80%,rgba(255,255,255,.1) 0 46px,transparent 47px)}
+.bnum{font:700 .74em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.bhead h2{color:#fff;margin:4px 0 6px}
+.boardrule{margin:0;font-weight:600;color:#fff;opacity:.95}
+.boardgrid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0;padding:14px;background:#fff;border-radius:0 0 22px 22px}
+.btile{position:relative;background:#fff;border:1.5px solid var(--bs);padding:12px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+.btile:nth-child(odd){background:var(--bs)}
+.btile .tct{font-weight:600;color:var(--ink)}
+.btile .tcicon{margin:0;width:44px;height:44px;background:var(--b);color:#fff;box-shadow:0 0 0 4px #fff}
+.btile .tcicon svg{width:24px;height:24px;stroke-width:1.9}
+.btick{position:absolute;top:9px;right:9px;width:16px;height:16px;border:2px solid var(--b);border-radius:50%;background:#fff;opacity:.75}
 .tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
@@ -461,6 +491,7 @@ h2{font-size:40px}
 .cardgrid{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
 .cardpg .cardgrid{height:8.55in;grid-template-rows:repeat(3,1fr);grid-auto-rows:auto}
 .cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
+.boardpg .board{margin-top:14px}.boardpg .bhead{padding:26px 26px 20px}.boardpg .bhead h2{font-size:2.6em}.boardpg .boardrule{font-size:1.08em}.boardpg .boardgrid{grid-template-columns:repeat(3,1fr);grid-template-rows:none;grid-auto-rows:1fr;min-height:6.7in;padding:18px}.boardpg .btile{padding:14px 16px}.boardpg .btile:nth-child(odd){background:#fff}.boardpg .btile:nth-child(even){background:var(--bs)}.boardpg .btile:nth-child(3n+1){border-radius:0}.boardpg .btile:nth-child(1){border-top-left-radius:14px}.boardpg .btile:nth-child(3){border-top-right-radius:14px}.boardpg .btile:nth-child(10){border-bottom-left-radius:14px}.boardpg .btile:nth-child(12){border-bottom-right-radius:14px}.boardpg .tct{font-size:1.13em;line-height:1.36}
 .cardpg.compact .tct{font-size:1.2em;line-height:1.36}.cardpg.compact .tcd{font-size:.98em}.cardpg.compact .tcard{padding:16px 20px;gap:8px}
 .tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
