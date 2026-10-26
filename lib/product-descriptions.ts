@@ -431,10 +431,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'land-art-challenges': {
     opening:
-      '15 land art challenges that turn natural materials into beautiful, temporary art. Create a mandala from stones. Build a spiral from leaves. Arrange colours from the forest floor. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
+      '48 land art challenges that turn natural materials into beautiful, temporary art. Make a mandala from stones, balance a rock tower, sort the forest floor by colour, build a story path. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
     whatsIncluded: [
-      '15 land art challenge cards',
-      'Mandalas, spirals, mosaics, patterns, and sculptures',
+      '48 land art challenge cards in 4 themes',
+      'Mandalas, rock towers, colour sorts, story paths, and sculptures',
       'Uses only natural materials: stones, leaves, sticks, petals, bark',
       'Teaches pattern, symmetry, colour theory, and composition',
       'Temporary art: photograph and leave no trace',

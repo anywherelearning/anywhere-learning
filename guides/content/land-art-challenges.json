@@ -434,8 +434,9 @@
   },
   "photo": {
     "src": "guides/assets/land-art-challenges.jpg",
-    "alt": "Several balanced rock towers stacked in a forest clearing",
-    "caption": "Card 13, times ten: rock towers, balanced by hand."
+    "alt": "A smiling girl crouched on a granite slab beside two small stacked-rock inukshuks, with evergreens behind",
+    "caption": "Card 13, then a story: two rock towers became an inukshuk family.",
+    "tall": true
   },
   "fromHome": {
     "text": "On a fall hike, while we stopped for lunch, my daughter and her friend built a whole family of inuksuit out of the rocks around them, and then made up a story about each one. Building it was the art. The story turned it into something they talked about for the rest of the hike.",
