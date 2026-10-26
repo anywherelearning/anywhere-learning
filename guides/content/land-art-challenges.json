@@ -106,73 +106,85 @@
           "name": "Nature Mandala",
           "t": "Make a circle design using 4 different natural materials.",
           "d": "Make 2 rings: tiny items inside, bigger items outside.",
-          "icon": "flower"
+          "icon": "flower",
+          "art": "wc/landart-01.jpg"
         },
         {
           "name": "Repeating Pattern Strip",
           "t": "Make a pattern that repeats at least 6 times.",
           "d": "Try an ABC pattern: A, B, C, A, B, C.",
-          "icon": "repeat"
+          "icon": "repeat",
+          "art": "wc/landart-02.jpg"
         },
         {
           "name": "Spiral Builder",
           "t": "Create a spiral that grows from small to large.",
           "d": "Make it with only one material.",
-          "icon": "shell"
+          "icon": "shell",
+          "art": "wc/landart-03.jpg"
         },
         {
           "name": "Symmetry Challenge",
           "t": "Make a design with mirror symmetry down the middle.",
           "d": "Make it symmetrical in 4 directions.",
-          "icon": "flip-horizontal"
+          "icon": "flip-horizontal",
+          "art": "wc/landart-04.jpg"
         },
         {
           "name": "Radial Burst",
           "t": "Arrange sticks like sun rays from a centre point.",
           "d": "Alternate long and short rays.",
-          "icon": "sun"
+          "icon": "sun",
+          "art": "wc/landart-05.jpg"
         },
         {
           "name": "Checkerboard Nature",
           "t": "Make a grid using two materials, like rocks and leaves.",
           "d": "Add a third material and make a 3-colour pattern.",
-          "icon": "grid-3x3"
+          "icon": "grid-3x3",
+          "art": "wc/landart-06.jpg"
         },
         {
           "name": "Gradient Mandala",
           "t": "Arrange items from light to dark in a circle.",
           "d": "Make two gradients cross: light to dark, and small to large.",
-          "icon": "sun-dim"
+          "icon": "sun-dim",
+          "art": "wc/landart-07.jpg"
         },
         {
           "name": "Zigzag Trail",
           "t": "Build a zigzag line using only one type of item.",
           "d": "Make the zigzag change size as it goes.",
-          "icon": "activity"
+          "icon": "activity",
+          "art": "wc/landart-08.jpg"
         },
         {
           "name": "Dots and Dashes",
           "t": "Create a code pattern using pebbles (dots) and sticks (dashes).",
           "d": "Invent a message and have someone decode it.",
-          "icon": "binary"
+          "icon": "binary",
+          "art": "wc/landart-09.jpg"
         },
         {
           "name": "Concentric Circles",
           "t": "Make 3 circles, one inside the other.",
           "d": "Each circle must use a different texture.",
-          "icon": "target"
+          "icon": "target",
+          "art": "wc/landart-10.jpg"
         },
         {
           "name": "Fractal Feel",
           "t": "Make a small pattern, then repeat it in a bigger version.",
           "d": "Repeat it 3 times: small, medium, large.",
-          "icon": "copy"
+          "icon": "copy",
+          "art": "wc/landart-11.jpg"
         },
         {
           "name": "Border Design",
           "t": "Create a frame around a space, like a picture frame.",
           "d": "Make the corners different from the sides.",
-          "icon": "frame"
+          "icon": "frame",
+          "art": "wc/landart-12.jpg"
         }
       ]
     },
@@ -183,73 +195,85 @@
           "name": "Mini Tower",
           "t": "Build the tallest tower you can that's safe and stable.",
           "d": "It must survive a gentle wind test.",
-          "icon": "tower-control"
+          "icon": "tower-control",
+          "art": "wc/landart-13.jpg"
         },
         {
           "name": "Balanced Rock Line",
           "t": "Make a line of rocks from smallest to largest.",
           "d": "Add one balanced rock on top, only if it's safe.",
-          "icon": "align-vertical-justify-end"
+          "icon": "align-vertical-justify-end",
+          "art": "wc/landart-14.jpg"
         },
         {
           "name": "Stick Bridge",
           "t": "Build a bridge across a small gap.",
           "d": "Test if it can hold 3 small stones.",
-          "icon": "rainbow"
+          "icon": "rainbow",
+          "art": "wc/landart-15.jpg"
         },
         {
           "name": "Leaf Boat Art",
           "t": "Create a boat shape using leaves and sticks.",
           "d": "Give it a flag and a name.",
-          "icon": "sailboat"
+          "icon": "sailboat",
+          "art": "wc/landart-16.jpg"
         },
         {
           "name": "Nature Castle",
           "t": "Make walls and a gate using sticks and rocks.",
           "d": "Add a moat line around it.",
-          "icon": "castle"
+          "icon": "castle",
+          "art": "wc/landart-17.jpg"
         },
         {
           "name": "Tiny Shelter",
           "t": "Build a shelter for an imaginary forest creature.",
           "d": "Add bedding and an entrance.",
-          "icon": "tent"
+          "icon": "tent",
+          "art": "wc/landart-18.jpg"
         },
         {
           "name": "Sculpture on a Stump",
           "t": "Create a design on a flat surface, like a stump or a rock.",
           "d": "Make it 3D by stacking layers.",
-          "icon": "layers-3"
+          "icon": "layers-3",
+          "art": "wc/landart-19.jpg"
         },
         {
           "name": "Animal Silhouette",
           "t": "Create an animal shape, as seen from above.",
           "d": "Add details: a tail, ears, footprints.",
-          "icon": "squirrel"
+          "icon": "squirrel",
+          "art": "wc/landart-20.jpg"
         },
         {
           "name": "Nature Symbol",
           "t": "Create a simple symbol, like a heart or a star, using natural items.",
           "d": "Decorate it with a border.",
-          "icon": "star"
+          "icon": "star",
+          "art": "wc/landart-21.jpg"
         },
         {
           "name": "Weaving",
           "t": "Weave grass or pine needles through a forked stick, or between twigs.",
           "d": "Use 2 colours of material to make a pattern.",
-          "icon": "git-branch"
+          "icon": "git-branch",
+          "art": "wc/landart-22.jpg"
         },
         {
           "name": "Nature Necklace",
           "t": "Arrange items like beads in a circle on the ground. No picking living plants.",
           "d": "Make it tell a story, with 3 'chapters' around the circle.",
-          "icon": "circle-dot"
+          "icon": "circle-dot",
+          "art": "wc/landart-23.jpg"
         },
         {
           "name": "Stack and Shadow",
           "t": "Build a small structure that casts an interesting shadow.",
           "d": "Adjust it so the shadow changes shape.",
-          "icon": "sun-moon"
+          "icon": "sun-moon",
+          "art": "wc/landart-24.jpg"
         }
       ]
     },
@@ -260,73 +284,85 @@
           "name": "One-Colour Art",
           "t": "Make a picture using only one colour family, like greens or browns.",
           "d": "Use at least 3 shades of that colour.",
-          "icon": "palette"
+          "icon": "palette",
+          "art": "wc/landart-25.jpg"
         },
         {
           "name": "Warm vs Cool",
           "t": "Make a design split into warm colours and cool colours.",
           "d": "Add a neutral border to separate them.",
-          "icon": "thermometer-snowflake"
+          "icon": "thermometer-snowflake",
+          "art": "wc/landart-26.jpg"
         },
         {
           "name": "Texture Collage",
           "t": "Fill a square with 6 different textures.",
           "d": "Label each texture with one word: smooth, rough, fuzzy...",
-          "icon": "grid-2x2"
+          "icon": "grid-2x2",
+          "art": "wc/landart-27.jpg"
         },
         {
           "name": "Shiny Hunt Art",
           "t": "Make art using only items that reflect light a little.",
           "d": "Arrange them from most shiny to least shiny.",
-          "icon": "sparkle"
+          "icon": "sparkle",
+          "art": "wc/landart-28.jpg"
         },
         {
           "name": "Soft vs Hard",
           "t": "Create two mini artworks side by side: one soft-looking, one hard-looking.",
           "d": "Explain what makes something look soft or hard.",
-          "icon": "feather"
+          "icon": "feather",
+          "art": "wc/landart-29.jpg"
         },
         {
           "name": "Light-to-Dark Line",
           "t": "Create a straight line that fades from light to dark.",
           "d": "Make it fade back from dark to light.",
-          "icon": "sunset"
+          "icon": "sunset",
+          "art": "wc/landart-30.jpg"
         },
         {
           "name": "Nature Rainbow",
           "t": "Make a 'rainbow' using what you can find.",
           "d": "Give your rainbow a name, like 'Forest Rainbow'.",
-          "icon": "rainbow"
+          "icon": "rainbow",
+          "art": "wc/landart-31.jpg"
         },
         {
           "name": "Camouflage Art",
           "t": "Make something that blends into the ground.",
           "d": "Make one small part stand out on purpose.",
-          "icon": "eye-off"
+          "icon": "eye-off",
+          "art": "wc/landart-32.jpg"
         },
         {
           "name": "Texture Gradient",
           "t": "Arrange items from smooth to rough.",
           "d": "Add a second gradient: small to large.",
-          "icon": "blend"
+          "icon": "blend",
+          "art": "wc/landart-33.jpg"
         },
         {
           "name": "Leaf Layout",
           "t": "Arrange leaves by their veins: big veins to tiny veins.",
           "d": "Sort them into 3 groups and name the groups.",
-          "icon": "leaf"
+          "icon": "leaf",
+          "art": "wc/landart-34.jpg"
         },
         {
           "name": "Nature Mosaic",
           "t": "Fill a shape (a circle, a square, a triangle) with tiny pieces.",
           "d": "Make a second shape that contrasts: messy against neat.",
-          "icon": "shapes"
+          "icon": "shapes",
+          "art": "wc/landart-35.jpg"
         },
         {
           "name": "Shadow Drawing",
           "t": "Place items so their shadows form a picture.",
           "d": "Take a photo from above to capture it.",
-          "icon": "moon-star"
+          "icon": "moon-star",
+          "art": "wc/landart-36.jpg"
         }
       ]
     },
@@ -337,73 +373,85 @@
           "name": "Land Art Name Tag",
           "t": "Spell your name or initials with sticks and rocks.",
           "d": "Add a decorative border.",
-          "icon": "type"
+          "icon": "type",
+          "art": "wc/landart-37.jpg"
         },
         {
           "name": "Emotion Art",
           "t": "Make art that shows a feeling: calm, excited, angry.",
           "d": "Explain which shapes and colours create that feeling.",
-          "icon": "smile"
+          "icon": "smile",
+          "art": "wc/landart-38.jpg"
         },
         {
           "name": "Before and After",
           "t": "Make a messy pile, then rearrange it into neat art.",
           "d": "Photograph both and compare.",
-          "icon": "shuffle"
+          "icon": "shuffle",
+          "art": "wc/landart-39.jpg"
         },
         {
           "name": "Mini Museum",
           "t": "Create 3 small artworks in a row, like an art show.",
           "d": "Give each one a title.",
-          "icon": "gallery-horizontal"
+          "icon": "gallery-horizontal",
+          "art": "wc/landart-40.jpg"
         },
         {
           "name": "Nature Clock",
           "t": "Make a clock face with 12 items around a circle.",
           "d": "Add 'hands' showing the current time.",
-          "icon": "clock"
+          "icon": "clock",
+          "art": "wc/landart-41.jpg"
         },
         {
           "name": "Trail Marker Art",
           "t": "Make a clear, temporary symbol that points to something cool.",
           "d": "Make a second symbol that means 'stop and look'. Remove both after.",
-          "icon": "flag"
+          "icon": "flag",
+          "art": "wc/landart-42.jpg"
         },
         {
           "name": "Story Path",
           "t": "Create a path that has a beginning, a middle and an end.",
           "d": "Tell its story in 3 sentences.",
-          "icon": "milestone"
+          "icon": "milestone",
+          "art": "wc/landart-43.jpg"
         },
         {
           "name": "Habitat Portrait",
           "t": "Make a picture that represents this place: forest, beach or field.",
           "d": "Add 3 'signature' items that only belong here.",
-          "icon": "trees"
+          "icon": "trees",
+          "art": "wc/landart-44.jpg"
         },
         {
           "name": "Frame a View",
           "t": "Build a frame on the ground around something beautiful.",
           "d": "Take a photo from above and give it a title.",
-          "icon": "scan"
+          "icon": "scan",
+          "art": "wc/landart-45.jpg"
         },
         {
           "name": "Nature Letter Art",
           "t": "Make one big letter using natural items.",
           "d": "Decorate it with patterns inside the letter.",
-          "icon": "text"
+          "icon": "text",
+          "art": "wc/landart-46.jpg"
         },
         {
           "name": "Team Challenge",
           "t": "Each person adds 5 items without talking. See what you create together.",
           "d": "Then talk and adjust it together.",
-          "icon": "users"
+          "icon": "users",
+          "art": "wc/landart-47.jpg"
         },
         {
           "name": "Clean-Up Art",
           "t": "Make art using only natural litter (fallen leaves, twigs) gathered from the area.",
           "d": "Count how many pieces you used, then return them gently.",
-          "icon": "trash-2"
+          "icon": "trash-2",
+          "art": "wc/landart-48.jpg"
         }
       ]
     }

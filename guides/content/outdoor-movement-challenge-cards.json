@@ -106,31 +106,36 @@
           "name": "The Tree Sit",
           "t": "Wall sit against a tree, or plank on the grass, as long as you can. Time it: that's your record.",
           "d": "Beat it by 5 seconds a day for one week.",
-          "icon": "tree-pine"
+          "icon": "tree-pine",
+          "art": "wc/move-01.jpg"
         },
         {
           "name": "The Long Throw",
           "t": "Ten throws for distance with a pinecone or a stone. Mark your best with a stick.",
           "d": "Ten more with your other arm. How close can it get?",
-          "icon": "send"
+          "icon": "send",
+          "art": "wc/move-02.jpg"
         },
         {
           "name": "The Sprint Loop",
           "t": "Mark a loop around the yard or park. Time one lap, then take three tries to beat it.",
           "d": "Same loop next week. What does a rested body do to your time?",
-          "icon": "rotate-cw"
+          "icon": "rotate-cw",
+          "art": "wc/move-03.jpg"
         },
         {
           "name": "The Jump Line",
           "t": "Scratch a line in the dirt. Standing jump, mark your landing, three tries to beat the mark.",
           "d": "Add a quiet landing rule: a thud costs you the attempt.",
-          "icon": "arrow-up-from-line"
+          "icon": "arrow-up-from-line",
+          "art": "wc/move-04.jpg"
         },
         {
           "name": "The Hang",
           "t": "Hang from a low, sturdy branch you can drop from safely. Time how long you hold on.",
           "d": "Hang once a day for a week. Watch the number climb.",
-          "icon": "hand"
+          "icon": "hand",
+          "art": "wc/move-05.jpg"
         }
       ]
     },
@@ -141,31 +146,36 @@
           "name": "The Daily Lap",
           "t": "Pick one two-minute outside move, like a lap of the yard. Same time every day. Start a streak chart.",
           "d": "Get past day 4. That's where most streaks die.",
-          "icon": "calendar-check"
+          "icon": "calendar-check",
+          "art": "wc/move-06.jpg"
         },
         {
           "name": "Morning Minute",
           "t": "Sixty seconds of moving outside before breakfast, every day this week. Rain counts.",
           "d": "Make it the same sixty seconds every day. Routines beat decisions.",
-          "icon": "sunrise"
+          "icon": "sunrise",
+          "art": "wc/move-07.jpg"
         },
         {
           "name": "The Same Loop",
           "t": "Walk or run the same short outdoor route every day this week. Count the days out loud.",
           "d": "Notice one thing on the route that changed each day.",
-          "icon": "route"
+          "icon": "route",
+          "art": "wc/move-08.jpg"
         },
         {
           "name": "Streak Saver",
           "t": "Plan a one-minute rain-gear or porch version of your daily move, ready before a rough day comes.",
           "d": "Rough day, backup done, streak alive. That's a win, not a cheat.",
-          "icon": "umbrella"
+          "icon": "umbrella",
+          "art": "wc/move-09.jpg"
         },
         {
           "name": "Family Streak",
           "t": "Everyone moves outside for 10 minutes a day. One person skips, the family streak resets.",
           "d": "Who carried the streak on a hard day? Thank them out loud.",
-          "icon": "users"
+          "icon": "users",
+          "art": "wc/move-10.jpg"
         }
       ]
     },
@@ -176,31 +186,36 @@
           "name": "Style Sampler",
           "t": "Try three new ways to move outside: climb, cross something narrow, hit a target. Rate each out of 10.",
           "d": "Give your lowest score a second honest try.",
-          "icon": "dices"
+          "icon": "dices",
+          "art": "wc/move-11.jpg"
         },
         {
           "name": "The Remix",
           "t": "Take an outdoor movement you love and one you avoid. Invent one game that needs both.",
           "d": "Play it twice. Change the rules if one half takes over.",
-          "icon": "shuffle"
+          "icon": "shuffle",
+          "art": "wc/move-12.jpg"
         },
         {
           "name": "Copy the Athlete",
           "t": "Pick a sport you've never played. Learn one real move and practise it outside until it looks right.",
           "d": "Teach the move to someone else.",
-          "icon": "medal"
+          "icon": "medal",
+          "art": "wc/move-13.jpg"
         },
         {
           "name": "Barefoot Test",
           "t": "Walk barefoot on three safe surfaces: grass, sand, dirt or smooth rock. Rate each out of 10.",
           "d": "Now in shoes. What do your feet notice that shoes hide?",
-          "icon": "footprints"
+          "icon": "footprints",
+          "art": "wc/move-14.jpg"
         },
         {
           "name": "Find Your Thing",
           "t": "Pick YOUR outdoor movement for this month and put it on the calendar twice a week.",
           "d": "Still your thing in two weeks? Keep it. Not? Sample again. Both count.",
-          "icon": "heart"
+          "icon": "heart",
+          "art": "wc/move-15.jpg"
         }
       ]
     },
@@ -211,31 +226,36 @@
           "name": "The Instinct Walk",
           "t": "With your adult, walk a new route. Make three turns by instinct, then find your way back, no phone.",
           "d": "Get back using landmarks you called out loud on the way in.",
-          "icon": "compass"
+          "icon": "compass",
+          "art": "wc/move-16.jpg"
         },
         {
           "name": "The Long Haul",
           "t": "Pick a far point you can see: a hill, a tower, the end of the beach. Get there on foot.",
           "d": "No complaints allowed for the last third. That's the training part.",
-          "icon": "mountain"
+          "icon": "mountain",
+          "art": "wc/move-17.jpg"
         },
         {
           "name": "Pack Weight",
           "t": "Load a backpack (books, water) and take your usual walk. How far is still comfortable?",
           "d": "Same distance, one more water bottle.",
-          "icon": "backpack"
+          "icon": "backpack",
+          "art": "wc/move-18.jpg"
         },
         {
           "name": "Weather Proof",
           "t": "Twenty minutes outside in imperfect weather, on purpose. Dress for it, move in it, come back warm.",
           "d": "Rate the weather out of 10 before and after.",
-          "icon": "cloud-rain"
+          "icon": "cloud-rain",
+          "art": "wc/move-19.jpg"
         },
         {
           "name": "The Night Walk",
           "t": "With your adult, walk a known path after dark. Switch off the flashlight for one minute and stand still.",
           "d": "In that dark minute, name three sounds you never hear by day.",
-          "icon": "flashlight"
+          "icon": "flashlight",
+          "art": "wc/move-20.jpg"
         }
       ]
     },
@@ -246,25 +266,29 @@
           "name": "Balance Duel",
           "t": "Face off on the grass: one leg, eyes closed, last one standing wins. Best of five.",
           "d": "The winner balances with arms crossed in the next round.",
-          "icon": "person-standing"
+          "icon": "person-standing",
+          "art": "wc/move-21.jpg"
         },
         {
           "name": "The Fair Handicap",
           "t": "Race someone faster, but they hop, bear-crawl or run backwards. Adjust until races finish close.",
           "d": "Find the exact handicap that makes it 50-50. That's real math.",
-          "icon": "scale"
+          "icon": "scale",
+          "art": "wc/move-22.jpg"
         },
         {
           "name": "The Relay Invention",
           "t": "Invent a three-part relay: under a branch, between two trees, carry a stone. Race it.",
           "d": "The loser designs the next relay.",
-          "icon": "flag"
+          "icon": "flag",
+          "art": "wc/move-23.jpg"
         },
         {
           "name": "Coach Swap",
           "t": "Teach each other your best outdoor skill, then perform them back. Loud cheering required.",
           "d": "One week later, retest both skills. Did the coaching stick?",
-          "icon": "megaphone"
+          "icon": "megaphone",
+          "art": "wc/move-24.jpg"
         }
       ]
     }

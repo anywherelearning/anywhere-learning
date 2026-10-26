@@ -106,31 +106,36 @@
           "name": "Rope Maker",
           "t": "Twist dry grass or long leaves into a cord as long as your arm.",
           "d": "Make a thicker cord. Which one holds more weight before snapping?",
-          "icon": "spline"
+          "icon": "spline",
+          "art": "wc/stem2-01.jpg"
         },
         {
           "name": "Lash It Tight",
           "t": "Join two sticks into a solid X, using only string.",
           "d": "Lash 3 sticks into a triangle. Why is it harder to bend?",
-          "icon": "cross"
+          "icon": "cross",
+          "art": "wc/stem2-02.jpg"
         },
         {
           "name": "The Hanging Test",
           "t": "Tie a stick between two supports with a different knot on each end. Which knot slips first?",
           "d": "Learn one real knot and test again. What made it stronger?",
-          "icon": "link"
+          "icon": "link",
+          "art": "wc/stem2-03.jpg"
         },
         {
           "name": "The Carrier",
           "t": "Weave string between two sticks to make a stretcher that carries a load of pinecones.",
           "d": "How loose can the weave get before the load falls through?",
-          "icon": "package"
+          "icon": "package",
+          "art": "wc/stem2-04.jpg"
         },
         {
           "name": "Pulley Lift",
           "t": "Loop a string over a low, strong branch and use it to lift a small bag of stones.",
           "d": "Is pulling down easier than lifting up? Why do you think so?",
-          "icon": "arrow-down-up"
+          "icon": "arrow-down-up",
+          "art": "wc/stem2-05.jpg"
         }
       ]
     },
@@ -141,31 +146,36 @@
           "name": "Fair Test Flight",
           "t": "Build a simple launcher (sticks, a rubber band, a spoon). Launch the same object 5 times and measure each flight.",
           "d": "Results different? Find what you accidentally changed, and fix it.",
-          "icon": "rocket"
+          "icon": "rocket",
+          "art": "wc/stem2-06.jpg"
         },
         {
           "name": "Angle Hunter",
           "t": "Launch at a low, a middle and a high angle. Which one sends your object farthest?",
           "d": "Predict a new angle's distance before you launch. How close were you?",
-          "icon": "triangle-right"
+          "icon": "triangle-right",
+          "art": "wc/stem2-07.jpg"
         },
         {
           "name": "Target Tuner",
           "t": "Set a target two steps away. Adjust one thing at a time until you hit it 3 times in a row.",
           "d": "Move the target farther. Which change moves the landing spot most?",
-          "icon": "crosshair"
+          "icon": "crosshair",
+          "art": "wc/stem2-08.jpg"
         },
         {
           "name": "Payload Problem",
           "t": "Launch a light, a medium and a heavy object with the same pull. Measure all three.",
           "d": "Find the heaviest object that still clears a one-step line.",
-          "icon": "weight"
+          "icon": "weight",
+          "art": "wc/stem2-09.jpg"
         },
         {
           "name": "Stone Skipper",
           "t": "On calm, shallow water with a grown-up, find the stone shape that skips the most times.",
           "d": "Change one thing (the throw angle, the stone, the speed). Which matters most?",
-          "icon": "waves"
+          "icon": "waves",
+          "art": "wc/stem2-10.jpg"
         }
       ]
     },
@@ -176,31 +186,36 @@
           "name": "The Aqueduct",
           "t": "Move water from one cup to another a step away without carrying it. Build a channel from foil, straws or bark.",
           "d": "Rebuild it to spill less. Measure how much you lose.",
-          "icon": "glass-water"
+          "icon": "glass-water",
+          "art": "wc/stem2-11.jpg"
         },
         {
           "name": "Uphill Problem",
           "t": "Now the empty cup sits higher. Move the water anyway, without carrying the cups.",
           "d": "Time your ideas. Which moves the most water per minute?",
-          "icon": "trending-up"
+          "icon": "trending-up",
+          "art": "wc/stem2-12.jpg"
         },
         {
           "name": "Splitter",
           "t": "Build one channel that fills two cups at once from a single pour.",
           "d": "Make the split unfair on purpose: two thirds and one third.",
-          "icon": "git-fork"
+          "icon": "git-fork",
+          "art": "wc/stem2-13.jpg"
         },
         {
           "name": "The Leak Patrol",
           "t": "A partner secretly adds 3 leaks to your channel. Find them and patch them all.",
           "d": "Patch with a leaf, foil or mud. Which survives a second pour?",
-          "icon": "droplets"
+          "icon": "droplets",
+          "art": "wc/stem2-14.jpg"
         },
         {
           "name": "Water Wheel",
           "t": "Build a small wheel from a stick and leaves or spoons that spins when you pour water over it.",
           "d": "Add more paddles, or fewer. Which spins fastest?",
-          "icon": "ferris-wheel"
+          "icon": "ferris-wheel",
+          "art": "wc/stem2-15.jpg"
         }
       ]
     },
@@ -211,31 +226,36 @@
           "name": "Slow Fall",
           "t": "Build a parachute that doubles a pinecone's fall time from shoulder height.",
           "d": "Test two canopy sizes. When does bigger stop helping?",
-          "icon": "circle-dashed"
+          "icon": "circle-dashed",
+          "art": "wc/stem2-16.jpg"
         },
         {
           "name": "Wind Spinner",
           "t": "Build a paper spinner that turns in the wind without flying off its stick.",
           "d": "Add cup-shaped blades and count turns in 10 seconds. That's an anemometer.",
-          "icon": "fan"
+          "icon": "fan",
+          "art": "wc/stem2-17.jpg"
         },
         {
           "name": "Sail Power",
           "t": "Attach a sail to something that rolls or slides. Move it one step with wind or your breath.",
           "d": "Race two sail shapes: tall and narrow against short and wide.",
-          "icon": "sailboat"
+          "icon": "sailboat",
+          "art": "wc/stem2-18.jpg"
         },
         {
           "name": "Wind Finder",
           "t": "Build a wind vane: a light arrow on a stick that shows where the wind comes from.",
           "d": "Check the direction 3 times today. Does your wind have a favourite?",
-          "icon": "compass"
+          "icon": "compass",
+          "art": "wc/stem2-19.jpg"
         },
         {
           "name": "Leaf Kite",
           "t": "Tie a string to a big, sturdy leaf and get it to fly on a breezy day.",
           "d": "Move where the string is tied. Which spot makes it fly highest?",
-          "icon": "wind"
+          "icon": "wind",
+          "art": "wc/stem2-20.jpg"
         }
       ]
     },
@@ -246,25 +266,29 @@
           "name": "Rock Mover",
           "t": "Move a too-heavy rock with a stick lever over a pivot stone. Try the pivot near, then far.",
           "d": "In the easy setup you push farther but lighter. That's the lever's trade.",
-          "icon": "move-up"
+          "icon": "move-up",
+          "art": "wc/stem2-21.jpg"
         },
         {
           "name": "Ramp vs Lift",
           "t": "Get a heavy stone onto a ledge two ways: lifted straight up, and rolled up a ramp.",
           "d": "A short steep ramp or a long gentle one: what does the long one cost?",
-          "icon": "trending-up"
+          "icon": "trending-up",
+          "art": "wc/stem2-22.jpg"
         },
         {
           "name": "Two-Machine Combo",
           "t": "Chain a ramp and a lever together. Move a stone through both in one go.",
           "d": "Draw your machine and mark the push, the pivot and the load.",
-          "icon": "git-merge"
+          "icon": "git-merge",
+          "art": "wc/stem2-23.jpg"
         },
         {
           "name": "The Stick Scale",
           "t": "Hang a stick by its middle with a cup on each end. Use your scale to compare two objects.",
           "d": "Slide one cup inward so a light object balances a heavy one.",
-          "icon": "scale"
+          "icon": "scale",
+          "art": "wc/stem2-24.jpg"
         }
       ]
     }

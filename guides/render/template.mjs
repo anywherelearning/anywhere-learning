@@ -203,7 +203,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <section class="pg cardpg${g.compactCards ? ' compact' : ''}">
   <div class="eyebrow">The cards &middot; ${pg[0].num} to ${pg[pg.length - 1].num}</div>
   <div class="cardgrid">${pg.map((c) => `
-    <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span>${icon(c.icon)}</div>
+    <div class="tcard th${c.ti % 7}"><div class="tchead"><span class="tcnum">${c.num}</span><span class="tctheme">${esc(c.theme)}</span>${c.art ? art(c.art) : icon(c.icon)}</div>
       ${c.name ? `<h3 class="tcname">${esc(c.name)}</h3>` : ''}<p class="tct">${esc(c.t)}</p><p class="tcd"><b>Deeper</b> ${esc(c.d)}</p></div>`).join('')}
   </div>
   ${foot(`Cards ${pg[0].num} to ${pg[pg.length - 1].num}`)}
@@ -365,6 +365,7 @@ ul{list-style:none}
 .btile .tct{font-weight:600;color:var(--ink)}
 .btile .tcicon{margin:0;width:44px;height:44px;background:var(--b);color:#fff;box-shadow:0 0 0 4px #fff}
 .btile .tcicon svg{width:24px;height:24px;stroke-width:1.9}
+.tchead .bart{margin-left:auto;margin-top:-6px;margin-bottom:-6px}.cardpg .tchead .bart.wc{width:82px;height:82px;margin-top:-14px;margin-bottom:-14px}
 .bextras{margin:0 14px 14px;background:var(--bs);border-radius:14px;padding:12px 16px;text-align:left}.bxlabel{font:700 .74em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:4px}.bextras ul{margin:0;padding-left:18px}.bextras li{margin:3px 0;line-height:1.4}.board.hasx .boardgrid{padding-bottom:10px}.btile .tcicon.swatch{border:2px solid rgba(58,44,23,.18)}
 .bart{width:48px;height:48px;display:block;filter:drop-shadow(0 2px 2px rgba(58,44,23,.15))}.bart.wc{filter:none;mix-blend-mode:multiply;width:64px;height:64px}.boardpg .bart.wc{width:62px;height:62px}.boardpg .bart{width:52px;height:52px}.btile .tcicon.swatch{width:50px;height:50px}
 .btick{position:absolute;top:9px;right:9px;width:16px;height:16px;border:2px solid var(--b);border-radius:50%;background:#fff;opacity:.75}
@@ -498,6 +499,7 @@ h2{font-size:40px}
 .cardpg .cardgrid{height:8.55in;grid-template-rows:repeat(3,1fr);grid-auto-rows:auto}
 .cardpg .tcard{padding:20px 22px}.cardpg .tct{font-size:1.32em;line-height:1.4}.cardpg .tcname{font-size:1.3em}.cardpg .tcd{font-size:1.05em}.cardpg .tctheme{font-size:.78em}
 .boardpg .board{margin-top:14px}.boardpg .bhead{padding:26px 26px 20px}.boardpg .bhead h2{font-size:2.6em}.boardpg .boardrule{font-size:1.08em}.boardpg .boardgrid{grid-template-columns:repeat(3,1fr);grid-template-rows:none;grid-auto-rows:1fr;min-height:6.5in;padding:18px}.boardpg .btile{padding:10px 14px;gap:6px}.boardpg .btile:nth-child(odd){background:#fff}.boardpg .btile:nth-child(even){background:var(--bs)}.boardpg .btile:nth-child(3n+1){border-radius:0}.boardpg .btile:nth-child(1){border-top-left-radius:14px}.boardpg .btile:nth-child(3){border-top-right-radius:14px}.boardpg .btile:nth-child(10){border-bottom-left-radius:14px}.boardpg .btile:nth-child(12){border-bottom-right-radius:14px}.boardpg .tct{font-size:1.13em;line-height:1.36}.boardpg .board.hasx .boardgrid{min-height:4.8in}.boardpg .board.hasx .btile{padding:8px 12px}.boardpg .board.hasx .bextras li{margin:1px 0}.boardpg .board.hasx .bhead{padding:22px 26px 16px}.boardpg .bextras{margin:0 18px 18px;font-size:1.02em}
+.cardpg .tcard{justify-content:space-evenly}.cardpg .tcard .tcd{margin:0}.bart.wc{-webkit-mask-image:radial-gradient(circle at center,#000 58%,transparent 71%);mask-image:radial-gradient(circle at center,#000 58%,transparent 71%)}
 .cardpg.compact .tct{font-size:1.2em;line-height:1.36}.cardpg.compact .tcd{font-size:.98em}.cardpg.compact .tcard{padding:16px 20px;gap:8px}
 .tcard{padding:18px 20px;gap:10px}.tchead{margin-bottom:4px}.tct{font-size:1.25em;line-height:1.42}.tcd{font-size:.95em}.learns div:nth-child(2){border-top:0;padding-top:2px}
 .tips:has(.tip:nth-child(2):last-child) .tip{flex-direction:row;gap:12px}
