@@ -9866,7 +9866,7 @@ const posts: BlogPost[] = [
     author: amelie,
     recommendedProduct: 'outdoor-survival-planner',
     heroImage: '/images/outdoor-survival-hero.jpeg',
-    heroImageAlt: 'Two kids with backpacks sitting on a rock slope above an alpine meadow and a small lake, with mountains behind them',
+    heroImageAlt: 'Two kids crouched in a natural shelter under a big rock overhang on a mountain ridge, with a stone cairn on top and mountains behind',
     heroImageAspect: '4 / 3',
     content: [
       { type: 'summary', text: 'Outdoor survival skills for kids come down to three things: knowing how to get found, how to stay warm and dry, and how to make one good decision when something goes wrong. The most important one is to stay in one place when lost (the "Hug-a-Tree" rule taught by search and rescue teams), followed by signalling with three whistle blasts, layering against the cold, building a quick shelter, finding direction from the sun, and staying safe around water and fire. Kids from 6 to 14 learn them best as games on ordinary family walks.' },
@@ -9889,6 +9889,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '2. Hug a tree, then make yourself easy to find' },
       { type: 'paragraph', text: 'Practise staying put on a regular walk. At a spot with a good tree, say “pretend you just realized you’re lost. Show me what you do.” Your kid picks a tree, sits with it, and then works on being findable. Bright clothes help, so put the brightest jacket or hat on top. Answering when someone calls your name helps, even if you’re scared you’re in trouble (some lost kids hide from searchers because they’re afraid of getting in trouble). Stamping clear footprints in mud or snow helps too, and so does leaving a sign like an X made of sticks.' },
       { type: 'paragraph', text: 'Make it a game for younger kids: they hide close to a tree within sight of the trail, and you have to find them. Then swap roles so they see how hard it is to spot someone in dark clothes who isn’t making noise.' },
+      { type: 'image', src: '/images/outdoor-survival-stump-shelter.jpeg', alt: 'A child sitting inside a hollow made by an old broken tree stump in a forest', caption: 'Staying put is easier when you pick a good spot: out of the wind, next to something big and easy to describe.' },
 
       { type: 'heading', level: 3, text: '3. Signal with three' },
       { type: 'paragraph', text: 'Three of anything means “help”: three whistle blasts, three flashes of a light, three shouts. A whistle is the one to practise, because it carries much farther than a voice and takes almost no energy, which matters for a kid who’s cold or tired. The pattern is three blasts, a pause to listen, and repeat.' },
@@ -9901,6 +9902,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '5. Build a quick shelter' },
       { type: 'paragraph', text: 'A real emergency shelter is small and quick, not a fort. The idea is to get off the ground, out of the wind and wrapped in something that traps air. Leaves and dry pine needles are great insulation because they’re mostly trapped air, which is why a thick pile of them is warmer than it looks.' },
       { type: 'paragraph', text: 'Turn it into an experiment before you build. Fill two jars or bottles with warm tap water and check the temperature of each. Bury one in a big pile of dry leaves and leave the other on bare ground. After 30 minutes, check both again. Your kid predicts first which one will lose more heat and by how much. Then build a lean-to: a long branch propped against a tree or a fallen log, with shorter sticks leaned along one side and piled thick with leaves. My son built one with a friend in the woods near our house, and it’s a great first build because the materials are lying right there.' },
+      { type: 'image', src: '/images/outdoor-survival-lean-to.jpeg', alt: 'A lean-to shelter made of long sticks propped against a tall tree in a forest, a child standing beside it', caption: 'My son’s stick shelter in the woods near our house. Long branches against a tree, and the forest floor supplies the rest.' },
       { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to go bigger, Build a Survival Base has them pick a harsh place on Earth, research what they would be up against, and design and build a base that could survive it.' },
 
       { type: 'heading', level: 3, text: '6. Find north without a compass' },
@@ -9910,6 +9912,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '7. Read the trail and pick a landmark' },
       { type: 'paragraph', text: 'Most kids follow the person in front of them and never look up. Next walk, hand them the map (or the trail sign photo) and let them lead. At every junction, they say which way and why. On the way out, have them pick a landmark they’ll recognize on the way back, like a split boulder, a bent tree or a bridge, and turn around to look at it, because a trail looks completely different in the other direction.' },
       { type: 'paragraph', text: 'For older kids, teach the idea of a “handrail”: something long you can follow, like a creek, a road or a power line. If you know the trail runs along the creek, the creek is your way back. That’s map reading with a real reason behind it.' },
+      { type: 'image', src: '/images/outdoor-survival-trail-bridge.jpeg', alt: 'Two kids standing on a narrow wooden boardwalk bridge over a rocky creek on a forest trail', caption: 'A bridge over a creek is a perfect landmark: easy to remember, and the creek is a handrail back.' },
 
       { type: 'heading', level: 3, text: '8. Know which water is safe' },
       { type: 'paragraph', text: 'Clear stream water can still make you sick, so the rule is simple: drink the water you brought. If you ever have to use water from a stream or lake, it needs to be treated first, and boiling is the most reliable way. The CDC says to bring it to a rolling boil for one minute, or three minutes above about 6,500 feet (roughly 2,000 metres), and let it cool.' },
@@ -9923,6 +9926,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '10. Pack their own small kit' },
       { type: 'paragraph', text: 'Give your kid their own small pack for outings and let them be responsible for it. A good kid kit is short: a whistle on a string, a water bottle, a snack, an extra warm layer and hat, a small flashlight, and a big bright garbage bag that works as a rain poncho or a windbreak to sit in. Write the list together and tape it inside the pack.' },
       { type: 'paragraph', text: 'My kids pack their own bags for day trips now. My daughter still gets a quick last check from me, and my son is fully on his own. The trade-offs are where the thinking happens: everything has to fit, it all has to be carried, and “I might need it” isn’t a good enough reason to bring the heavy thing.' },
+      { type: 'image', src: '/images/outdoor-survival-packs.jpeg', alt: 'Two kids with their own backpacks taking a break on a rock slope above an alpine meadow and a small lake', caption: 'Their own packs, packed by them. Everything in there has to be carried, which makes for good decisions.' },
       { type: 'product-callout', slug: 'outdoor-survival-planner', pinned: true, context: 'If your kid loves the planning part, Outdoor Survival Planner has them plan a real expedition: research the terrain, weigh the risks, choose what makes the pack and work through shelter, water and navigation scenarios when the plan changes.' },
 
       { type: 'heading', level: 2, text: 'Survival skills by age' },
