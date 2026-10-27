@@ -1,0 +1,274 @@
+{
+  "slug": "nature-crafts",
+  "category": "Outdoor Learning",
+  "title": "Nature Crafts for Kids",
+  "tagline": "6 crafts · Found materials · Art meets science",
+  "ages": "Ages 6 to 14",
+  "goal": "Six real crafts made from what's lying on the ground: a frame that turns any view into art, a wind chime you tune by ear, prints stamped with bark and ferns, paint mixed from soil, drawings traced from shadows, and story stones that become a game. Every craft hides a bit of science or storytelling, and every one starts with your kid making choices: which materials, where, and why.",
+  "need": [
+    "Fallen natural materials: sticks, leaves, ferns, bark, pinecones, flat stones, soil",
+    "Home basics: string or tape, paper, washable paint or markers, a plate, a jar lid of water",
+    "A sunny day for the shadow craft"
+  ],
+  "lesson": {
+    "text": "A craft is a string of choices. The skill is noticing your choice, testing it, and changing one thing to make it better. That's how real makers work.",
+    "before": "I just hung some stuff on a stick.",
+    "model": [
+      {
+        "part": "Material",
+        "line": "Two flat stones and three pinecones."
+      },
+      {
+        "part": "Choice",
+        "line": "Stones at the bottom, pinecones higher up."
+      },
+      {
+        "part": "Test",
+        "line": "The stones clinked, but the pinecones made no sound at all."
+      },
+      {
+        "part": "Change",
+        "line": "Moved two pinecones next to the stones so they tap together."
+      }
+    ],
+    "modelNote": "That's Craft 2, the Wind Chime. When your kid says 'done,' ask: what did you choose, how did you test it, and what would you change?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "sound and vibration, light and shadow, soil and natural pigments"
+    },
+    {
+      "subject": "Math",
+      "text": "patterns, measuring lengths, symmetry and sorting"
+    },
+    {
+      "subject": "Writing",
+      "text": "titles, descriptions, and oral and written storytelling"
+    },
+    {
+      "subject": "Life skills",
+      "text": "planning, patience, and respecting nature while using it"
+    }
+  ],
+  "howTo": {
+    "intro": "No art skills needed. You gather materials together, set out the home basics, and ask about their choices. Use only fallen materials, never pick living plants, leave nests and webs alone, and put things back when you're done.",
+    "plan": [
+      {
+        "when": "First hour",
+        "what": "Gather materials together, then make one or two crafts."
+      },
+      {
+        "when": "Second hour",
+        "what": "Make one or two more, testing and changing as you go."
+      },
+      {
+        "when": "After",
+        "what": "Set out everything you made like a small gallery, and title each piece."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want it to look perfect",
+        "a": "Nature crafts are meant to look found, not bought. Ask what they'd change next time, then let it be."
+      },
+      {
+        "q": "They rush and finish in 5 minutes",
+        "a": "Use the Develop or Extend level: a second version, a pattern, or a title and a description."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Creativity",
+      "text": "turning found things into something new"
+    },
+    {
+      "name": "Testing",
+      "text": "trying, noticing, and changing one thing"
+    },
+    {
+      "name": "Observation",
+      "text": "seeing texture, colour, sound and shadow"
+    },
+    {
+      "name": "Storytelling",
+      "text": "giving every piece a title and a story"
+    }
+  ],
+  "levelsLine": "Every craft has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same craft at different levels, side by side.",
+  "steps": [
+    {
+      "title": "Make a nature frame",
+      "why": "A simple frame that turns any view into a picture worth looking at.",
+      "kid": "Your kid lays 4 similar sticks in a rectangle, overlapping at the corners, and ties or tapes each corner so the frame holds when lifted. They can tuck a few leaves or needles along the edges. Then they hold it up and frame the world: bark up close, sky through branches, a rock's texture, water. They choose a favourite view and give it a title.",
+      "you": "Help with the knots if needed, then follow them around and look through the frame too. Ask why they chose that view. You'll be surprised what they notice once it's framed.",
+      "starters": [
+        "4 sticks",
+        "String or tape",
+        "Fallen leaves",
+        "A phone (optional)"
+      ],
+      "ask": [
+        "What makes this view worth framing?",
+        "What title would you give it?"
+      ],
+      "tip": "A frame slows kids down. Something they walked past a hundred times suddenly becomes a picture.",
+      "levels": {
+        "explore": "Build the frame and title one view.",
+        "develop": "Frame 3 views and title each one, like a mini gallery.",
+        "extend": "Pick a theme (only textures, only patterns) and frame 3 matches, then write: 'This place feels ___ because ___.'"
+      },
+      "art": "wc/crafts-frame.jpg"
+    },
+    {
+      "title": "Build a wind chime",
+      "why": "A hanging sculpture that makes sound in the wind: art, engineering and careful listening.",
+      "kid": "Your kid ties 4 to 8 strings of different lengths to a sturdy stick, then attaches one sound maker to the end of each: a seed pod, a pinecone, a flat stone, a shell if allowed. They hang it up and listen. Which piece is loudest? Which is softest? They move pieces and change string lengths until they like how it sounds and looks, like the example.",
+      "you": "Hold the top stick while they tie, and be the listener. Ask about each change: did it sound better or worse? That's the testing.",
+      "starters": [
+        "A sturdy stick",
+        "String or yarn",
+        "Seed pods",
+        "Pinecones",
+        "Flat stones"
+      ],
+      "ask": [
+        "Which piece is the loudest? Why do you think so?",
+        "What happens if you shorten that string?"
+      ],
+      "tip": "Pieces only make sound when they touch. Spacing is the whole trick, and kids figure it out by testing.",
+      "levels": {
+        "explore": "Hang 4 pieces and listen.",
+        "develop": "Sort the sounds: clink, tap or rustle, and arrange them on purpose.",
+        "extend": "Make a repeating pattern (ABAB or ABC), then name the chime with two describing words, like 'soft and rainy.'"
+      },
+      "art": "wc/crafts-chime.jpg"
+    },
+    {
+      "title": "Print with textures",
+      "why": "Printmaking with found objects: patterns and pictures made from nature's textures.",
+      "kid": "Your kid picks 3 to 6 objects with clear texture (a fern, a piece of bark, a pine sprig, a bumpy rock), puts a little paint on a plate, and does test prints in a corner of the page first. Then they make a final piece: a border, a repeating strip, a texture landscape, or a mystery creature. They let it dry and title it.",
+      "you": "Set out the paint and the paper and stay close for the first prints. Point out what makes a print clear: a thin layer of paint and even pressure.",
+      "starters": [
+        "Ferns or leaves",
+        "Bark",
+        "A bumpy rock",
+        "Washable paint",
+        "Paper and a plate"
+      ],
+      "ask": [
+        "Which object makes the clearest print? Why?",
+        "What does this texture remind you of?"
+      ],
+      "tip": "The test prints are where the learning is. Too much paint, too little, a wobble: each one teaches something.",
+      "levels": {
+        "explore": "Print with 3 objects and make a strip.",
+        "develop": "Make 3 patterns: ABAB, AAB and ABCABC.",
+        "extend": "Print the same object 3 times changing only one thing (pressure or paint), then turn your prints into a scene with drawn details."
+      },
+      "art": "wc/crafts-prints.jpg"
+    },
+    {
+      "title": "Make earth paint",
+      "why": "Paint mixed from soil: part art studio, part science experiment.",
+      "kid": "Your kid collects tiny pinches of 3 to 6 different soils from different spots (dark, light, sandy, clay-like), puts each on a palette like a jar lid, and adds a few drops of water to make a paste. Then they paint with a stick or a finger: a map, a landscape, a mandala, symbols. When it dries, they compare how each colour changed.",
+      "you": "Help find different soils, the more different the better. Keep the water to a few drops at a time. Thick paste and thin paint behave very differently.",
+      "starters": [
+        "3 to 6 soils",
+        "Water",
+        "A jar lid palette",
+        "A stick brush",
+        "Paper or cardboard"
+      ],
+      "ask": [
+        "Why do you think these soils are different colours?",
+        "How did the colour change when it dried?"
+      ],
+      "tip": "People painted with earth for tens of thousands of years. Kids love knowing they're using the oldest paint there is.",
+      "levels": {
+        "explore": "Mix 3 soil colours and paint a picture.",
+        "develop": "Make a swatch strip and name each colour, like 'Trail Tan' or 'Forest Brown.'",
+        "extend": "Paint the same shape with thick paste and thin paint and compare, then match each colour to an object nearby."
+      },
+      "art": "wc/crafts-earth.jpg"
+    },
+    {
+      "title": "Trace the shadows",
+      "why": "Drawing with sunlight: light, shadow and layered art.",
+      "kid": "On a sunny day, your kid puts paper on the ground and holds a leaf, fern or twig so its shadow falls clearly on the page. They trace the outline, then move the object and trace again so the shapes overlap, like stained glass. They can add colour or small details at the end.",
+      "you": "Help hold things steady, and point out how the shadow changes when the object moves closer to the paper. Ask what makes a shadow sharp or blurry.",
+      "starters": [
+        "Leaves or ferns",
+        "Twigs",
+        "Paper",
+        "A pencil or crayon",
+        "Sunshine"
+      ],
+      "ask": [
+        "When is the shadow sharpest?",
+        "Why does the shadow move?"
+      ],
+      "tip": "Come back in 10 minutes and the shadow has moved. That's the Earth turning, and kids can see it on their own page.",
+      "levels": {
+        "explore": "Trace 3 overlapping shadows and colour them.",
+        "develop": "Make a shadow creature from 3 traced shapes: a body, a head and a tail.",
+        "extend": "Trace the same object now and again in 10 minutes, then trace one in sun and one in shade, and explain the differences."
+      },
+      "art": "wc/crafts-shadow.jpg"
+    },
+    {
+      "title": "Paint story stones",
+      "why": "A craft that becomes a storytelling game you can play again and again.",
+      "kid": "Your kid chooses 6 to 10 flat stones or bark pieces and draws one simple symbol on each: a sun, a storm, a river, an animal, a shelter. They mix the stones face down, pick 3, and tell a story that uses all three. What's the problem in the story, and how does it get solved? Then swap stones and play again.",
+      "you": "Play too. Take turns picking stones and telling stories. Ask about the problem and the solution, because that's what makes it a real story.",
+      "starters": [
+        "6 to 10 flat stones",
+        "A marker or charcoal",
+        "Mud and a stick (optional)",
+        "A small bag"
+      ],
+      "ask": [
+        "What's the problem in your story?",
+        "How does it get solved?"
+      ],
+      "tip": "Keep the stones in a bag by the door. They become a car game, a campfire game and a bedtime game.",
+      "levels": {
+        "explore": "Draw 6 symbols and tell a 3-stone story out loud.",
+        "develop": "Tell the same 3-stone story twice: once as a mystery, once as an adventure.",
+        "extend": "Use 5 stones for a full story (setting, character, problem, attempt, solution), then write it in 3 to 5 sentences."
+      },
+      "art": "wc/crafts-stones.jpg"
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just made art from what was lying on the ground.",
+    "text": "They chose materials, tested ideas, changed what didn't work and gave every piece a title. Sound, light, soil and story, learned with sticks, stones and leaves.",
+    "celebrate": "Ask about one choice: 'Why did you put the stones at the bottom?' Explaining a choice is what turns a craft into thinking.",
+    "extensions": [
+      "Set up a family gallery and give a tour",
+      "Make the same craft in a new season with new materials",
+      "Give a story stone set as a gift",
+      "Invent a seventh craft of your own"
+    ]
+  },
+  "signs": [
+    "They pick up interesting materials on walks 'for a craft'",
+    "They test and change things without being asked",
+    "They give their creations titles and stories"
+  ],
+  "makeItReal": "Make a gift: a wind chime for a grandparent's porch, a set of story stones for a younger cousin, an earth-paint card for a friend. When a craft goes to someone, kids take more care with every choice.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/nature-crafts.jpg",
+    "alt": "Watercolour illustration of six finished nature crafts on a wooden picnic table",
+    "caption": "All six crafts, made from what was lying on the ground."
+  }
+}

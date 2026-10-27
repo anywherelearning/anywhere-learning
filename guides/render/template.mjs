@@ -213,7 +213,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <section class="pg step">
   <header class="stephead">
     ${blaze(i + 1)}
-    <div><div class="eyebrow">Step ${i + 1} of ${n}</div><h2>${esc(s.title)}</h2></div>
+    <div><div class="eyebrow">Step ${i + 1} of ${n}</div><h2>${esc(s.title)}</h2></div>${s.art ? `<span class="stepart">${art(s.art)}</span>` : ''}
   </header>
   ${trail(n, i + 1)}
   <p class="why">${esc(s.why)}</p>
@@ -419,6 +419,7 @@ ul{list-style:none}
 .jseasons{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 56px;font:700 .85em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8b7355}.jseasons i{width:6px;height:6px;border-radius:50%;background:#d4a373}
 .jcin .jname{display:flex;align-items:flex-end;gap:10px;width:100%;margin:0 0 30px}.jcin .jname span{white-space:nowrap;font:600 1.05em 'DM Sans';color:#3d5c3b}.jcin .jname i{flex:1;border-bottom:1.5px solid #d4a373;height:1.3em}
 .jpage .jdraw{height:3.55in}.jwrite i{display:block;border-bottom:1.5px solid rgba(58,44,23,.3);height:2.05em}
+.stepart{margin-left:auto;flex:none}.stepart .bart.wc{width:118px;height:118px;margin:-22px 0 -30px}
 .bextras{margin:0 14px 14px;background:var(--bs);border-radius:14px;padding:12px 16px;text-align:left}.bxlabel{font:700 .74em 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:4px}.bextras ul{margin:0;padding-left:18px}.bextras li{margin:3px 0;line-height:1.4}.board.hasx .boardgrid{padding-bottom:10px}.btile .tcicon.swatch{border:2px solid rgba(58,44,23,.18)}
 .bart{width:48px;height:48px;display:block;filter:drop-shadow(0 2px 2px rgba(58,44,23,.15))}.bart.wc{filter:none;mix-blend-mode:multiply;width:64px;height:64px}.boardpg .bart.wc{width:62px;height:62px}.boardpg .bart{width:52px;height:52px}.btile .tcicon.swatch{width:50px;height:50px}
 .btick{position:absolute;top:9px;right:9px;width:16px;height:16px;border:2px solid var(--b);border-radius:50%;background:#fff;opacity:.75}

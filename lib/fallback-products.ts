@@ -317,7 +317,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Crafts for Kids",
     slug: "nature-crafts",
     description:
-      "Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation. Kids collect materials, then create something beautiful with what they find.",
+      "Six real crafts made from what's lying on the ground: a nature frame, a wind chime tuned by ear, prints stamped with ferns and bark, paint mixed from soil, drawings traced from shadows, and story stones that become a game. Each craft hides a bit of science or storytelling, and kids learn to test and change their choices like real makers.",
     shortDescription:
       "Nature crafts for kids ages 6-14: hands-on outdoor craft projects using materials found in your backyard or on a trail.",
     priceCents: 799,
@@ -325,7 +325,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrphAkIBECpwGmHzBJOSW0",
     blobUrl: "",
     imageUrl: "/products/nature-crafts.jpg",
-    previewFile: "Preview Nature crafts for kids.pdf",
+    previewFile: "Preview Outdoor Learning - Nature crafts for kids v3.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,

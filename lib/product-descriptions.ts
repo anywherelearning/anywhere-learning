@@ -455,10 +455,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-crafts': {
     opening:
-      'Hands-on nature craft projects using materials found outdoors. Leaf pressing, stick weaving, flower pounding, bark rubbings, and more. Each project connects creativity with nature observation. Kids collect materials mindfully and create something meaningful from them.',
+      'Six real crafts made from found materials: a nature frame, a wind chime, texture prints, earth paint, shadow tracing and story stones. Each one hides a bit of science or storytelling, and kids learn to test and change their choices like real makers.',
     whatsIncluded: [
-      'Nature craft project guides using found materials',
-      'Leaf pressing, flower pounding, bark rubbings, stick weaving',
+      '6 step-by-step craft guides using found materials',
+      'Nature frame, wind chime, texture prints, earth paint, shadow tracing, story stones',
       'Each project combines collection, observation, and creation',
       'Minimal additional supplies, mostly found materials',
       'Suitable for all seasons with seasonal variations',
