@@ -1,0 +1,221 @@
+{
+  "slug": "family-electricity-audit",
+  "category": "Real-World Math",
+  "title": "Family Electricity Audit",
+  "tagline": "Watts · Kilowatt-hours · Real savings",
+  "ages": "Ages 8 to 14",
+  "goal": "Your kid becomes the family energy detective: they hunt down every device that plugs in, read the labels, work out how much electricity each one uses and what it costs, then design a plan to save and test it on the family for a week. Multiplication, decimals and data, done on your real house and your real bill.",
+  "need": [
+    "Your home's appliances and their labels",
+    "Paper, a pencil and a calculator",
+    "Your electricity rate per kWh (on your bill, or look it up for your area)",
+    "Optional: a plug-in energy meter, and past bills to compare"
+  ],
+  "lesson": {
+    "text": "Every appliance follows the same chain: watts, times hours, gives watt-hours. Divide by 1,000 for kilowatt-hours, the unit on your bill. Times your rate gives the cost.",
+    "before": "The kettle uses a lot of power.",
+    "model": [
+      {
+        "part": "Watts",
+        "line": "The kettle label says 1,500 W."
+      },
+      {
+        "part": "Hours",
+        "line": "Used about 15 minutes a day: 0.25 hours."
+      },
+      {
+        "part": "Energy",
+        "line": "1,500 × 0.25 = 375 Wh, which is 0.375 kWh."
+      },
+      {
+        "part": "Cost",
+        "line": "0.375 × $0.15 = about 6 cents a day."
+      }
+    ],
+    "modelNote": "Big wattage, small cost, because it's only on for minutes. When your kid says 'that one uses a lot,' ask: how many watts, for how many hours?"
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "multiplication, decimals, converting units, totals, rankings and percentages"
+    },
+    {
+      "subject": "Science",
+      "text": "power, energy, and why time matters as much as wattage"
+    },
+    {
+      "subject": "Data",
+      "text": "building a table, sorting and comparing"
+    },
+    {
+      "subject": "Life skills",
+      "text": "reading a bill, making a plan, and getting a family to stick to it"
+    }
+  ],
+  "howTo": {
+    "intro": "No science background needed. You're the energy advisor: you provide the electricity rate, help find tricky labels, and let your kid do every calculation. The plan in Step 4 is theirs, and the family follows it.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Hunt the appliances, read the labels, estimate the hours (Steps 1 and 2)."
+      },
+      {
+        "when": "Day 2",
+        "what": "Calculate energy and cost, rank them, and make the saving plan (Steps 3 and 4)."
+      },
+      {
+        "when": "The next week",
+        "what": "Try the plan for 7 days, then calculate the savings and present the report (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "A label is missing or unreadable",
+        "a": "Look up the model or '[device] wattage' online, and mark it as an estimate. Real numbers matter more than perfect ones."
+      },
+      {
+        "q": "The total doesn't match the bill",
+        "a": "That's normal: heating, hot water and estimates add up. Getting within the same range is a real win. Ask what might be missing."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Calculation",
+      "text": "multiplying and converting real numbers"
+    },
+    {
+      "name": "Data thinking",
+      "text": "collecting, sorting and ranking"
+    },
+    {
+      "name": "Planning",
+      "text": "turning numbers into a plan"
+    },
+    {
+      "name": "Persuasion",
+      "text": "getting the family on board"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Hunt the appliances and read the labels",
+      "why": "A full inventory of everything that uses electricity, with its wattage.",
+      "kid": "Your kid walks through the house room by room and lists every device that uses electricity, including the hidden ones: phone chargers, the Wi-Fi router, a game console on standby. Then they find the wattage on each label (on the back or the bottom, or in the manual) and write it next to the item. If a label says kW, they multiply by 1,000 to get watts.",
+      "you": "Walk with them, but let them lead. Point to the rooms they skip, like the laundry room or the garage. Help with labels that are hard to read or to find online.",
+      "starters": [
+        "The fridge",
+        "The Wi-Fi router",
+        "Phone chargers",
+        "The kettle",
+        "The TV on standby",
+        "The dryer"
+      ],
+      "ask": [
+        "How many devices did you find? More or fewer than you guessed?",
+        "If the kettle says 1.5 kW, how many watts is that?"
+      ],
+      "tip": "Watts tell you how fast a device uses electricity, not how much it uses in a day. That part comes next.",
+      "levels": {
+        "explore": "List and find the watts for at least 8 appliances.",
+        "develop": "List 15 or more by room, including standby devices.",
+        "extend": "Do the whole house, and note for each one: always on, sometimes on, or standby."
+      }
+    },
+    {
+      "title": "Estimate the hours",
+      "why": "How long each device is actually on in a normal day.",
+      "kid": "For each appliance, your kid estimates the hours it's on in a day, honestly. They turn minutes into fractions of an hour: 30 minutes is 0.5, 15 minutes is 0.25, 10 minutes is about 0.17. Some things are on all day (the router), some for minutes (the toaster).",
+      "you": "Help them be realistic. Is the TV really on for 6 hours? The fridge is plugged in all day, but its motor switches on and off, so count it as about 8 hours.",
+      "ask": [
+        "How many hours a day is the TV really on in our house?",
+        "How do you write 10 minutes of hairdryer as hours?"
+      ],
+      "tip": "Time it for real on 2 or 3 devices. Kids are often shocked by how far off their guess was.",
+      "levels": {
+        "explore": "Estimate the daily hours for 8 appliances.",
+        "develop": "Estimate for all of them, converting minutes into hours.",
+        "extend": "Time 2 or 3 devices for a real day, and mark which estimates are solid and which are rough guesses."
+      }
+    },
+    {
+      "title": "Calculate the energy and the cost",
+      "why": "Turning watts and hours into kilowatt-hours, then into money.",
+      "kid": "For each appliance, your kid follows the chain from the example: watts × hours = watt-hours per day, divided by 1,000 = kWh per day, times the rate = cost per day. Then they multiply by 7 for a week and by 30 for a month, and add up the whole house.",
+      "you": "Give them the rate per kWh from the bill, and walk through the first appliance together. Then step back and let them calculate the rest.",
+      "ask": [
+        "Which uses more in a day: a 150 W fridge or a 2,000 W oven used for one hour?",
+        "What does the whole house cost to run in a month, by your numbers?"
+      ],
+      "tip": "This is where a big lesson lands: a small device that's on all day can cost more than a powerful one used for minutes.",
+      "levels": {
+        "explore": "Calculate the daily cost of 8 appliances and add them up.",
+        "develop": "Calculate daily, weekly and monthly costs for everything.",
+        "extend": "Add up totals by room, find each room's percentage of the total, and compare your monthly total to a real bill."
+      }
+    },
+    {
+      "title": "Rank them and make a plan",
+      "why": "Finding the energy-hungry devices, then a plan to use less.",
+      "kid": "Your kid ranks the appliances from most to least expensive and finds the biggest surprises. Then they choose 3 to 5 specific changes the family could try (turn off standby, shorter dryer loads, lights off when leaving a room) and calculate how much each one would save in a week. They write the plan so the whole family can follow it.",
+      "you": "Let them come up with the ideas: don't hand them a list. Ask which change is easiest and which would save the most. Those are often different.",
+      "ask": [
+        "What's our number one energy user? Did you guess right?",
+        "Which change costs nothing but still saves money?"
+      ],
+      "tip": "A plan written by a kid gets followed more than a plan written by a parent. Let them present it.",
+      "levels": {
+        "explore": "Rank the top 5, then list 3 changes and estimate the weekly saving of each.",
+        "develop": "Rank everything, choose 5 changes, add up the weekly saving and present the plan.",
+        "extend": "Rank the changes from easiest to hardest and from biggest to smallest saving, and show the calculation behind each one."
+      }
+    },
+    {
+      "title": "Test it for a week and report",
+      "why": "Plan versus reality, then real results for a real audience.",
+      "kid": "The family follows the plan for 7 days while your kid tracks which changes happened each day. At the end of the week, they recalculate the savings based on what actually happened, not the plan, and project the yearly saving if you kept going. Then they present their findings and recommend which changes to keep.",
+      "you": "Support the plan without taking it over. If someone forgets, let your kid be the one to remind them. Be a real audience for the final report.",
+      "ask": [
+        "If we stuck to 4 changes out of 5, how does that change the savings?",
+        "What would our family save in a year if we kept this up?"
+      ],
+      "tip": "The gap between the plan and the real week is a lesson too. Changes that are easy to keep matter more than big ones nobody sticks to.",
+      "levels": {
+        "explore": "Try 3 changes for a week, check off each day, and estimate what you saved.",
+        "develop": "Track every change daily, calculate the real versus the planned saving, and project a year.",
+        "extend": "Calculate a follow-through rate for each change (days kept out of 7), write a one-page family energy report, and recommend what to keep."
+      }
+    }
+  ],
+  "conclusion": {
+    "headline": "Your kid just ran a real energy audit of your home.",
+    "text": "They found every device, read the labels, calculated energy and cost, made a plan, tested it on the family and measured the result. Multiplication, decimals and data, with real money on the line.",
+    "celebrate": "Point to a number they found: 'You worked out the dryer costs more in one load than the TV does in a whole day.' That's a discovery they'll remember.",
+    "extensions": [
+      "Check next month's bill to see if the savings show up",
+      "Audit a grandparent's home and give them a report",
+      "Do the same audit for water: which habits use the most?",
+      "Research solar panels and calculate if they'd pay for themselves"
+    ]
+  },
+  "signs": [
+    "They turn off lights and standby devices without being asked",
+    "They read labels and do quick wattage maths in their head",
+    "They ask what things cost to run before using them"
+  ],
+  "makeItReal": "Put the savings to work: agree as a family that the money saved in a month goes to something your kid chooses, like a family outing or a donation. When their plan saves real money, the maths suddenly matters.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/family-electricity-audit.jpg",
+    "alt": "Watercolour illustration of a home energy audit on a kitchen table: notebook, calculator, electricity bill, light bulb, kettle and charger",
+    "caption": "Everything you need: a notebook, a calculator and your real bill."
+  }
+}

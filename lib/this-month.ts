@@ -187,7 +187,94 @@ const OCTOBER_2026 = {
   },
 };
 
-const MONTHS = [SEPTEMBER_2026, OCTOBER_2026];
+const NOVEMBER_2026 = {
+  month: 'November',
+  // The calendar in the hero is built from this, so it lands on the right weekdays.
+  year: 2026,
+  intro: 'A fresh focus, a seasonal set, and one family challenge. New every month.',
+  skill: {
+    // Six Citizenship & Character picks (no overlap with any other month's set).
+    slugs: [
+      'community-impact',              // pick a real local problem and do something about it
+      'neighbourhood-problem-spotter', // walk the block and notice what needs fixing
+      'community-service-business',    // a small business built around helping
+      'people-stories-interview',      // listen to someone's story and tell it with care
+      'family-history-detective',      // the oldest person you know, and the stories nobody wrote down
+      'decision-lab',                  // weigh what's fair and what's right, then choose
+    ],
+    // Deep cranberry, distinct from the candlelight ochre of the seasonal set.
+    accent: '#9A3B4A',
+    accentDeep: '#5E1F2A',
+    eyebrow: 'Skill of the month',
+    title: 'The month of giving back',
+    blurb:
+      "November is about the people around us. This month kids spot real problems on their own street, listen to the stories of people who came before them, and do something useful for someone else. Not a bake sale for a cause they've never met. Something close to home, that they can see working.",
+    extras: {
+      // 1 · Read this — an internal blog post. Its hero image is pulled in
+      // automatically from lib/blog.ts (keep the slug in sync).
+      read: { slug: 'community-impact-projects-for-kids', title: 'Community Impact Projects for Kids: 8 Real Ones to Start' },
+      // 2 · Read together — a younger and an older pick. Cover images live in
+      // /public/books/; `link` points at the official author/publisher page.
+      books: [
+        { ages: 'Ages 5–8', title: 'Miss Rumphius', author: 'Barbara Cooney', cover: '/books/miss-rumphius.jpg', link: 'https://bookshop.org/book/9780140505399' },
+        { ages: 'Ages 10–14', title: 'Seedfolks', author: 'Paul Fleischman', cover: '/books/seedfolks.jpg', link: 'https://bookshop.org/book/9780064472074' },
+      ],
+      // 3 · Extra — the flexible card. Swap it every month. Items with a `url`
+      // render as links; items without render as bullets. VERIFY links first.
+      extra: {
+        title: 'Start close to home',
+        items: [
+          { label: 'Take one slow walk around the block together and list everything that could be better. Pick one thing a kid could actually fix.' },
+          { label: 'Call or visit the oldest person in the family and let the kids ask the questions. Record it if they say yes.' },
+          { label: "Ask a neighbour what would help them this month, then let the kids do it. Shovelling, raking, a meal, a fixed fence." },
+        ],
+      },
+      mindset: "Kids don't learn to care about their community from a lecture about it. They learn it the first time they fix something real and someone notices. Keep it small, keep it local, and let them see the difference they made.",
+    },
+  },
+  seasonal: {
+    // Cozy season and gratitude, all from the reserve pool so nothing overlaps
+    // another month or the giving-back set above. Kept to the three that
+    // genuinely fit; no padding to six.
+    slugs: [
+      'swap-day-challenge',  // trade jobs for a day and find out what everyone else does
+      'family-debate-night', // a long dark evening, a good argument, everyone at the table
+      'rube-goldberg-machine', // a big indoor build for the cold, rainy weekends
+    ],
+    // Candlelight ochre, distinct from the cranberry above.
+    accent: '#A8742A',
+    accentDeep: '#64420F',
+    eyebrow: 'Seasonal pick',
+    title: 'Cozy season and gratitude',
+    blurb:
+      "The days get short and everyone ends up inside. This set makes the most of it: a swap day where kids find out how much everyone else does around here, long evenings around the table, and one gloriously over-complicated machine to build on a rainy weekend.",
+    extras: {
+      read: { slug: 'family-debate-night-kids', title: 'Family Debate Night: How to Run One (With Topics by Age)' },
+      books: [
+        { ages: 'Ages 4–8', title: 'Thank You, Omu!', author: 'Oge Mora', cover: '/books/thank-you-omu.jpg', link: 'https://bookshop.org/book/9780316431248' },
+        { ages: 'Ages 8–12', title: 'The Wild Robot', author: 'Peter Brown', cover: '/books/the-wild-robot.jpg', link: 'https://bookshop.org/book/9780316381994' },
+      ],
+      extra: {
+        title: 'Warm and together',
+        items: [
+          { label: 'Make one big pot of soup together on a cold day and let the kids decide who gets the extra bowls.' },
+          { label: 'Keep a gratitude jar on the table. Anyone can drop a note in. Read them all on the last night of the month.' },
+          { label: 'Pick one evening a week with no screens: a board game, a read-aloud, or a debate topic pulled from a hat.' },
+        ],
+      },
+      mindset: "Gratitude isn't something you can make a kid say. It shows up when they've done the job themselves and finally see how much work it was. A swap day teaches more thank-yous than any reminder at the dinner table.",
+    },
+  },
+  challenge: {
+    title: 'The give-it-forward month',
+    // One line for the calendar card; the full text sits under "How it works".
+    short: 'Every family member does one useful thing for someone else each week.',
+    text:
+      "For the month, everyone in the family does one useful thing for someone outside the house each week. Rake a neighbour's leaves, drop off a meal, write a real letter, help someone carry something. Nobody has to announce it. Track them on the fridge with a mark for each one, and at the end of the month talk about which one felt best. The point isn't a good-deed count. It's a kid who starts noticing what other people need without being asked.",
+  },
+};
+
+const MONTHS = [SEPTEMBER_2026, OCTOBER_2026, NOVEMBER_2026];
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 /** The month to show right now, by the calendar in Nelson, BC (Pacific). */

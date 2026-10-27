@@ -1092,7 +1092,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Family Electricity Audit",
     slug: "family-electricity-audit",
     description:
-      "Audit your household electricity use, read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. A real-world STEM project that combines science, engineering, and math applied to your actual electricity bill.",
+      "Kids hunt down every device that plugs in, read the wattage labels, and work out what each one costs to run, using your real electricity rate. Then they design a family saving plan, test it for a week, and calculate the real savings. A STEM project that turns kilowatt-hours, decimals and data into money your family actually keeps.",
     shortDescription:
       "STEM project for kids ages 8-14: audit electricity use, calculate kilowatt-hours, and find real ways to save. Math and science combined.",
     priceCents: 599,
@@ -1100,7 +1100,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrqDAkIBECpwGmfW75ZUM3",
     blobUrl: "",
     imageUrl: "/products/family-electricity-audit.jpg",
-    previewFile: "Preview Real-world math - Family Electricity Audit.pdf",
+    previewFile: "Preview Real-world math - Family Electricity Audit v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

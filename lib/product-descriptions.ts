@@ -884,13 +884,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'family-electricity-audit': {
     opening:
-      'Audit your household electricity use: read meters, calculate costs, compare appliances, and find real ways to save. Kids learn about kilowatt-hours, unit pricing, and the maths behind energy bills. Practical environmental maths that makes a real difference at home.',
+      'Kids hunt every device that plugs in, read the wattage labels, and work out what each one costs to run with your real electricity rate. Then they design a family saving plan, test it for a week, and calculate the real savings.',
     whatsIncluded: [
       'Household electricity audit guide',
-      'Meter reading and usage tracking',
+      'Wattage labels and daily-use estimates',
       'Appliance comparison and cost calculations',
       'Energy-saving plan with estimated savings',
-      'Kilowatt-hour and unit pricing activities',
+      'A one-week family test with real savings',
     ],
     skillTags: ['STEM', 'Measurement', 'Data Analysis', 'Environmental Maths', 'Budgeting'],
     insideTheLearning: {

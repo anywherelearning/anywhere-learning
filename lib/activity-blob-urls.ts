@@ -47,7 +47,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "everyday-redesign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Everyday%20Redesign%20Challenge%20v2.pdf",
   "fall-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Fall%20v2.pdf",
   "family-debate-night": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20Debate%20Night%20v4.pdf",
-  "family-electricity-audit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Family%20Electricity%20Audit%20v2.pdf",
+  "family-electricity-audit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Family%20Electricity%20Audit%20v3.pdf",
   "family-history-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20History%20Detective%20v4.pdf",
   "family-recipe-book": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20Recipe%20Book%20v4.pdf",
   "farmers-market-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Farmers%20Market%20Challenge%20v2.pdf",
