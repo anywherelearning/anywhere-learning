@@ -216,7 +216,7 @@ const NOVEMBER_2026 = {
       // 2 · Read together: a younger and an older pick. Cover images live in
       // /public/books/; `link` points at the official author/publisher page.
       books: [
-        { ages: 'Ages 5–8', title: 'Miss Rumphius', author: 'Barbara Cooney', cover: '/books/miss-rumphius.jpg', link: 'https://bookshop.org/book/9780140505399' },
+        { ages: 'Ages 4–8', title: 'Last Stop on Market Street', author: 'Matt de la Peña', cover: '/books/last-stop-on-market-street.jpg', link: 'https://bookshop.org/book/9780399257742' },
         { ages: 'Ages 10–14', title: 'Seedfolks', author: 'Paul Fleischman', cover: '/books/seedfolks.jpg', link: 'https://bookshop.org/book/9780064472074' },
       ],
       // 3 · Extra: the flexible card. Swap it every month. Items with a `url`
@@ -252,7 +252,7 @@ const NOVEMBER_2026 = {
       read: { slug: 'family-debate-night-kids', title: 'Family Debate Night: How to Run One (With Topics by Age)' },
       books: [
         { ages: 'Ages 4–8', title: 'Thank You, Omu!', author: 'Oge Mora', cover: '/books/thank-you-omu.jpg', link: 'https://bookshop.org/book/9780316431248' },
-        { ages: 'Ages 8–12', title: 'The Wild Robot', author: 'Peter Brown', cover: '/books/the-wild-robot.jpg', link: 'https://bookshop.org/book/9780316381994' },
+        { ages: 'Ages 8–12', title: 'Pollyanna', author: 'Eleanor H. Porter', cover: '/books/pollyanna.jpg', link: 'https://bookshop.org/book/9781382052337' },
       ],
       extra: {
         title: 'Warm and together',

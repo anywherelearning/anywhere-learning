@@ -288,8 +288,8 @@ function CalendarLeaf({ id, month, year, title, short, text }: { id: string; mon
 
   const monthIndex = new Date(`${month} 1, ${year}`).getMonth();
   const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
-  // Monday-first grid: how many blank cells before the 1st.
-  const lead = (new Date(year, monthIndex, 1).getDay() + 6) % 7;
+  // Sunday-first grid: how many blank cells before the 1st.
+  const lead = new Date(year, monthIndex, 1).getDay();
   // Days you can tick: nothing in the future.
   const lastTickable = !today ? 0
     : today.y > year || (today.y === year && today.m > monthIndex) ? daysInMonth
@@ -331,7 +331,7 @@ function CalendarLeaf({ id, month, year, title, short, text }: { id: string; mon
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', gap: 5, opacity: live ? 1 : 0.55, transition: 'opacity .3s' }}>
-        {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => <span key={i} aria-hidden="true" style={{ ...mono, fontSize: 9.5, textAlign: 'center', color: 'var(--am-muted)', letterSpacing: 0 }}>{d}</span>)}
+        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <span key={i} aria-hidden="true" style={{ ...mono, fontSize: 9.5, textAlign: 'center', color: 'var(--am-muted)', letterSpacing: 0 }}>{d}</span>)}
         {Array.from({ length: lead }).map((_, i) => <span key={`b${i}`} />)}
         {Array.from({ length: daysInMonth }).map((_, i) => {
           const d = i + 1;

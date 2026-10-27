@@ -11,9 +11,15 @@ export const dynamic = 'force-dynamic';
 
 // The month's content lives in lib/this-month.ts, one block per month. The
 // page picks the current one on each request, so a new month goes live at
-// midnight Pacific on the 1st without a deploy.
-export default function ThisMonthPage() {
-  const THIS_MONTH = getThisMonth();
+// midnight Eastern on the 1st without a deploy.
+// Local dev only: ?preview=2026-11 shows that month before it goes live.
+export default async function ThisMonthPage({ searchParams }: { searchParams: Promise<{ preview?: string }> }) {
+  const { preview } = await searchParams;
+  const previewDate =
+    process.env.NODE_ENV !== 'production' && preview && /^\d{4}-\d{2}$/.test(preview)
+      ? new Date(`${preview}-15T12:00:00Z`)
+      : undefined;
+  const THIS_MONTH = getThisMonth(previewDate);
   return (
     <ThisMonthView
       month={THIS_MONTH.month}

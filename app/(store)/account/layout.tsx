@@ -42,7 +42,10 @@ export default async function AccountLayout({
       // so a database blip shows the teaser rather than leaking the zone. Rare,
       // and downloads gate independently, so we favor no-leak here.
       const tier = await getAccessTierForClerkId(userId);
-      showPaywall = tier === "guest";
+      // Local dev only: DEV_SKIP_PAYWALL=1 in .env.development.local lets the
+      // owner preview the member zone with a non-member dev account.
+      const devSkip = process.env.NODE_ENV !== "production" && process.env.DEV_SKIP_PAYWALL === "1";
+      showPaywall = tier === "guest" && !devSkip;
     }
   }
   // The member zone has its own header (MemberNav); SiteHeader hides itself on
