@@ -513,6 +513,8 @@ function ExtrasStrip({ section }: { section: MonthSection }) {
               );
             })}
           </div>
+          {/* Bookshop US only ships to US addresses, and most families borrow anyway. */}
+          <p style={{ fontSize: 13, color: 'var(--am-muted)', margin: '16px 0 0', lineHeight: 1.5 }}>Or borrow them from your local library.</p>
         </Sheet>
       )}
 
