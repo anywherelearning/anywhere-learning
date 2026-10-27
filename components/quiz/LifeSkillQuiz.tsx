@@ -423,7 +423,7 @@ export default function LifeSkillQuiz() {
               </p>
               <p className="mx-auto mt-2.5 max-w-[42ch] text-[15px] leading-[1.6] text-cream/85">
                 Your membership opens 120+ guided activities like these, built to
-                close exactly this gap. No planning, no prep. Free for 14 days.
+                close exactly this gap. No planning, no prep. Free for 7 days.
               </p>
               <Link
                 href="/start-trial"
@@ -433,7 +433,7 @@ export default function LifeSkillQuiz() {
                 <span className="font-display text-[17px] leading-none">&rarr;</span>
               </Link>
               <p className="mt-3 text-[12.5px] text-cream/70">
-                14 days free · $0 today · cancel anytime
+                7 days free · $0 today · cancel anytime
               </p>
             </div>
           </div>

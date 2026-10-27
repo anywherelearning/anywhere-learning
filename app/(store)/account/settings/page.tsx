@@ -171,7 +171,7 @@ export default async function AccountSettingsPage() {
     // ISO trial end (== currentPeriodEnd while trialing) for the upgrade card.
     trialEndsAt: isTrialing && nextRenewalAt ? nextRenewalAt.toISOString() : null,
     isFounder: isFounderSubscriber,
-    // True when a trial is set to expire at day 14 instead of converting.
+    // True when a trial is set to expire at its end instead of converting.
     cancelAtPeriodEnd,
   };
 

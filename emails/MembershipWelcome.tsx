@@ -286,7 +286,7 @@ export default function MembershipWelcome({
                             >
                               <tbody>
                                 <TrialRow label="TODAY" first>
-                                  <strong style={strongInk}>$0 charged.</strong> For 14 days,
+                                  <strong style={strongInk}>$0 charged.</strong> For 7 days,
                                   read every guide in your browser, on any device, as much as you
                                   like. Want to save guides as PDFs? Start your membership anytime.
                                 </TrialRow>
@@ -377,7 +377,7 @@ export default function MembershipWelcome({
                   <Text style={legal}>
                     {isTrial && trialEnd ? (
                       <>
-                        You&apos;re receiving this note because you started a 14-day free trial
+                        You&apos;re receiving this note because you started a 7-day free trial
                         of Anywhere Learning with this email address on {longDate(trialStart)}.
                         Your card on file was not charged today. Unless you cancel, your
                         membership begins on {longDate(trialEnd)} and renews each {per} at {price}{' '}

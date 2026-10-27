@@ -2,8 +2,8 @@
  * POST /api/checkout/cancel-trial — cancel a free trial the RIGHT way.
  *
  * Sets `cancel_at_period_end` on the trialing subscription instead of deleting
- * it. The member keeps full (view-only) trial access until day 14, then the
- * subscription ends with NO charge. This honors the "14 days free" promise:
+ * it. The member keeps full (view-only) trial access until the trial ends, then the
+ * subscription ends with NO charge. This honors the "7 days free" promise:
  * canceling turns off the conversion, it doesn't end the trial early.
  *
  * POST body: { resume?: true } to undo a pending cancel (cancel_at_period_end

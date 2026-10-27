@@ -134,14 +134,14 @@ export default async function SkillsMapThanks({
           </h2>
           <p className="mt-3 text-[16px] leading-[1.6] text-gray-600 max-w-[480px] mx-auto">
             Every area in the map has activities waiting: 120+ guides with your job and your kid&apos;s job at
-            every step. Start with 14 days free. Nothing is charged today.
+            every step. Start with 7 days free. Nothing is charged today.
           </p>
           <Link
             href="/map-offer"
             prefetch={false}
             className="mt-5 inline-flex items-center gap-2 bg-forest text-cream font-semibold py-3.5 px-6 rounded-xl text-[15.5px] hover:bg-forest-dark transition-colors"
           >
-            Try the library free for 14 days <span aria-hidden="true">→</span>
+            Try the library free for 7 days <span aria-hidden="true">→</span>
           </Link>
           <p className="mt-2 text-[12.5px] text-gray-500">Applied automatically · Yearly plan</p>
         </div>

@@ -1,5 +1,5 @@
 /**
- * Day-7 trial check-in: which version of the email a trial member gets, and
+ * Early trial check-in (day 2 or 3): which version of the email a trial member gets, and
  * which guide it points at.
  *
  * Three versions, decided by what they've actually done in the member zone:

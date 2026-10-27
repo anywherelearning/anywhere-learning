@@ -773,7 +773,7 @@ export default function ShopPage() {
                   <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 120+ activities, all categories</span>
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> New content every quarter</span>
-                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Start with a 14-day free trial</span>
+                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Start with a 7-day free trial</span>
                     {IS_FOUNDER_PHASE && (
                       <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Founder rate locked for life</span>
                     )}
@@ -844,11 +844,11 @@ export default function ShopPage() {
               {[
                 {
                   q: 'Can I buy individual activities?',
-                  a: `No. Every activity comes with one membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}). The free 7-day guide is the lowest-commitment way to try us out, and every membership starts with a 14-day free trial, so you can look before you pay.`,
+                  a: `No. Every activity comes with one membership (${MEMBERSHIP_PRICE_YEAR}${IS_FOUNDER_PHASE ? ' founder rate' : ''}). The free 7-day guide is the lowest-commitment way to try us out, and every membership starts with a 7-day free trial, so you can look before you pay.`,
                 },
                 {
                   q: 'How does the free trial work?',
-                  a: `Every membership starts with a 14-day free trial. You are not charged today. During the trial you can read every guide in your browser. Downloads unlock when your membership starts, and you can cancel anytime before then and pay nothing.`,
+                  a: `Every membership starts with a 7-day free trial. You are not charged today. During the trial you can read every guide in your browser. Downloads unlock when your membership starts, and you can cancel anytime before then and pay nothing.`,
                 },
               ].map((item, i) => (
                 <details

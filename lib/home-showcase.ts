@@ -464,7 +464,7 @@ export const HOME_FAQS: ShowcaseFaq[] = [
   },
   {
     q: 'What happens when the trial ends?',
-    a: 'You are charged your chosen plan on day 15, and we email you before that. Cancel any time in the trial and you are never charged at all.',
+    a: 'You are charged your chosen plan on day 8, and we email you before that. Cancel any time in the trial and you are never charged at all.',
   },
   {
     q: 'Can I cancel, and what about refunds?',

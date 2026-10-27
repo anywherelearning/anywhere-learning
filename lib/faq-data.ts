@@ -88,7 +88,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'Do you offer a free trial?',
     answer:
-      "Yes. Every membership starts with a 14-day free trial. You enter a card but pay $0 today. During the trial you can open and read every guide in the library, on any device, as much as you like. Downloading guides to keep is a membership perk, so if you want to save them as PDFs you can start your membership in one click anytime during the trial. If it's not for you, cancel before day 14 and you're never charged, and you keep reading access right through the end of the trial either way. One free trial per customer. There's also a free 7-day guide if you'd like to try a couple of activities before signing up at all.",
+      "Yes. Every membership starts with a 7-day free trial. You enter a card but pay $0 today. During the trial you can open and read every guide in the library, on any device, as much as you like. Downloading guides to keep is a membership perk, so if you want to save them as PDFs you can start your membership in one click anytime during the trial. If it's not for you, cancel before day 8 and you're never charged, and you keep reading access right through the end of the trial either way. One free trial per customer. There's also a free 7-day guide if you'd like to try a couple of activities before signing up at all.",
   },
   {
     question: "Is my family's information safe?",
@@ -143,17 +143,17 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: "What's your refund policy?",
     answer:
-      "You get a 14-day free trial first, so if you cancel during the trial you're never charged at all. After your membership starts, there's a 14-day money-back guarantee on top: email within 14 days of your first charge for a full refund, no questions asked.",
+      "You get a 7-day free trial first, so if you cancel during the trial you're never charged at all. After your membership starts, there's a 14-day money-back guarantee on top: email within 14 days of your first charge for a full refund, no questions asked.",
   },
   {
     question: 'How do I pay?',
     answer:
-      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, and Google Pay where your device supports them. The membership is one annual charge of $99 (or $149 after founder pricing ends), or $15/month on the monthly plan, and it starts with a 14-day free trial, so nothing is charged the day you sign up.",
+      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, and Google Pay where your device supports them. The membership is one annual charge of $99 (or $149 after founder pricing ends), or $15/month on the monthly plan, and it starts with a 7-day free trial, so nothing is charged the day you sign up.",
   },
   {
     question: 'Do you offer monthly billing?',
     answer:
-      "Yes. You can join for $15/month instead of paying for the year, with the same full library, the same 14-day free trial, and cancel anytime. Yearly is the better value (the founder rate works out to about $8/month), but the monthly plan is there if you'd rather ease in. You can switch to yearly anytime from your account.",
+      "Yes. You can join for $15/month instead of paying for the year, with the same full library, the same 7-day free trial, and cancel anytime. Yearly is the better value (the founder rate works out to about $8/month), but the monthly plan is there if you'd rather ease in. You can switch to yearly anytime from your account.",
   },
   {
     question: 'Will my membership auto-renew?',

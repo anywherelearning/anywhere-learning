@@ -31,7 +31,7 @@ interface PageProps {
     email?: string;
     /** Order number to display, e.g. AW-2026-04829 */
     order?: string;
-    /** '1' when this signup started a 14-day free trial ($0 charged today). */
+    /** '1' when this signup started a 7-day free trial ($0 charged today). */
     trial?: string;
     /** 'monthly' when the buyer picked the $15/month plan (annual otherwise). */
     plan?: string;

@@ -2229,7 +2229,7 @@ const resources: ResourcePage[] = [
         'Uses AI tools with judgment, not dependency',
         'Can handle 48 hours independently (safely, not perfectly)',
       ]},
-      { type: 'cta', text: 'Want the complete breakdown with hands-on activity ideas for every skill area and age band? The Future-Ready Skills Map comes with the membership, and you can start with a 14-day free trial.', href: '/#membership', label: 'Start Your Free Trial' },
+      { type: 'cta', text: 'Want the complete breakdown with hands-on activity ideas for every skill area and age band? The Future-Ready Skills Map comes with the membership, and you can start with a 7-day free trial.', href: '/#membership', label: 'Start Your Free Trial' },
 
       { type: 'faq', items: [
         { question: 'What are life skills for kids?', answer: 'Life skills are the practical abilities a child needs to run their own day and, eventually, their own life: feeding themselves, handling money, managing time, speaking up, solving a problem without an adult, and recovering when something goes wrong. They are learned by doing real tasks with real stakes, not by being told about them. This guide sorts them by the age a kid can realistically own each one.' },

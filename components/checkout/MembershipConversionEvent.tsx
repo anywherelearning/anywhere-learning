@@ -11,7 +11,7 @@ import {
 } from '@/lib/tracking';
 
 interface Props {
-  /** True when this signup started a 14-day free trial ($0 charged today). */
+  /** True when this signup started a 7-day free trial ($0 charged today). */
   isTrial: boolean;
   /** Annual membership price in USD (99 founder / 149 post-founder). */
   priceUSD: number;
@@ -39,7 +39,7 @@ interface Props {
  *
  * A ref guard + sessionStorage dedupe prevents double-firing on refresh.
  *
- * Note: the trial→paid conversion 14 days later happens off-site and is sent
+ * Note: the trial→paid conversion 7 days later happens off-site and is sent
  * to Meta from the Stripe webhook via the Conversions API (lib/meta-capi.ts).
  */
 export default function MembershipConversionEvent({

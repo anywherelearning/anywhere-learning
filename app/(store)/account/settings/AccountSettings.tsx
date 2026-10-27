@@ -28,7 +28,7 @@ interface Member {
   trialEndsAt: string | null;
   /** Whether they locked the founder rate (for trial-upgrade copy). */
   isFounder: boolean;
-  /** True when a trial is set to expire at day 14 instead of converting. */
+  /** True when a trial is set to expire at its end instead of converting. */
   cancelAtPeriodEnd: boolean;
 }
 
@@ -484,7 +484,7 @@ function TrialUpgradeCard({ member }: { member: Member }) {
       )}
 
       {ending ? (
-        /* Trial set to expire on day 14: reassure + offer to keep it going. */
+        /* Trial set to expire at its end: reassure + offer to keep it going. */
         <div className="mt-4 pt-4 border-t border-[#C9D3BE]">
           <p className="m-0 font-body text-[13.5px] leading-[1.55] text-gray-700">
             Your trial is set to end on <strong className="text-forest-dark">{startsLabel}</strong>{' '}

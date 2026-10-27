@@ -1,8 +1,8 @@
 /**
- * Daily cron: the day-7 trial check-in email.
+ * Daily cron: the early trial check-in email.
  *
  * Trials get a welcome email on day 0 and the "ends in 3 days" heads-up on
- * day 11 (Stripe's trial_will_end). Nothing in between, which is exactly when
+ * day 4 of the 7-day trial (Stripe's trial_will_end). Nothing in between, which is exactly when
  * people either start using the library or forget it. This fills that gap with
  * one personal note pointing at one guide.
  *
@@ -10,8 +10,9 @@
  *   1. Vercel Cron hits GET /api/cron/trial-midpoint daily (vercel.json),
  *      authed with CRON_SECRET like the renewal-reminders cron.
  *   2. Match subscriptions that are still trialing, not set to cancel, started
- *      at least 6 days ago, and end 6 to 8 days from now (the 14-day trial's
- *      midpoint, with a day of slack so a missed run doesn't skip anyone).
+ *      at least 2 days ago, and end 3.5 to 5.5 days from now (day 2 or 3 of
+ *      the 7-day trial, with slack so a missed run doesn't skip anyone, and
+ *      before the day-4 trial_will_end heads-up).
  *   3. Skip anyone already in sent_emails with kind 'trial_midpoint', so the
  *      2-day window never sends twice.
  *   4. Read their activity (reader opens) and member state (kids, map pick,
@@ -62,9 +63,9 @@ export async function GET(req: NextRequest) {
       and(
         eq(subscriptions.status, 'trialing'),
         eq(subscriptions.cancelAtPeriodEnd, false),
-        lte(subscriptions.createdAt, new Date(now - 6 * DAY)),
-        gte(subscriptions.currentPeriodEnd, new Date(now + 6 * DAY)),
-        lt(subscriptions.currentPeriodEnd, new Date(now + 8 * DAY)),
+        lte(subscriptions.createdAt, new Date(now - 2 * DAY)),
+        gte(subscriptions.currentPeriodEnd, new Date(now + 3.5 * DAY)),
+        lt(subscriptions.currentPeriodEnd, new Date(now + 5.5 * DAY)),
       ),
     );
 

@@ -26,9 +26,9 @@ import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD, TRIAL_DAYS, isFounderPhaseOpen } 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Try Anywhere Learning free for 14 days' },
+  title: { absolute: 'Try Anywhere Learning free for 7 days' },
   description:
-    'Real-world activities for kids 6 to 14, step by step, made to do together. 14 days free, then your first year for $79.',
+    'Real-world activities for kids 6 to 14, step by step, made to do together. 7 days free, then your first year for $79.',
   robots: { index: false, follow: false },
 };
 

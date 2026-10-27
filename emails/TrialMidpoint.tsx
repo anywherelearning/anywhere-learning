@@ -60,17 +60,17 @@ export function midpointSubject(
 ): string {
   const name = firstName ? `, ${firstName}` : '';
   if (variant === 'doing' && doneCount >= 2) {
-    return `${capitalize(countWord(doneCount))} activities in your first week${name}. Keep it going`;
+    return `${capitalize(countWord(doneCount))} activities in your first few days${name}. Keep it going`;
   }
   if (variant === 'doing') return `One down${name}. Here's a good next one`;
-  if (variant === 'browsing') return `Halfway through your trial${name}. Let's get one done this week`;
+  if (variant === 'browsing') return `A few days into your trial${name}. Let's get one done this week`;
   return `Your first activity is already picked${name}`;
 }
 
 /**
- * Day-7 trial check-in, sent by the daily trial-midpoint cron halfway through
- * the 14-day trial. Fills the gap between the welcome email (day 0) and the
- * trial-ending heads-up (day 11). Three versions, one guide each, decided by
+ * Early trial check-in, sent by the daily trial-midpoint cron around day 2 or 3
+ * of the 7-day trial. Fills the gap between the welcome email (day 0) and the
+ * trial-ending heads-up (day 4, three days before the trial ends). Three versions, one guide each, decided by
  * lib/trial-midpoint.ts from what they've actually done in the member zone.
  * Not a sales email: the goal is one activity done together this week.
  */
@@ -146,7 +146,7 @@ export default function TrialMidpoint({
                 <td style={{ padding: '34px 48px 0' }}>
                   <div style={eyebrow}>
                     <span style={eyebrowRule} />
-                    Halfway through your trial
+                    A few days into your trial
                   </div>
 
                   {onARoll && (
@@ -158,7 +158,7 @@ export default function TrialMidpoint({
                       </div>
                       <Text style={p}>
                         Your map says you&apos;ve already done {countWord(done.length)} activities
-                        together: {listNames(done)}. In your first week.
+                        together: {listNames(done)}. In your first few days.
                       </Text>
                       <Text style={{ ...p, margin: '14px 0 0' }}>
                         That&apos;s a real rhythm, and it&apos;s exactly how this is meant to work.
@@ -232,7 +232,7 @@ export default function TrialMidpoint({
                         </div>
                       )}
                       <Text style={p}>
-                        A week goes fast. If you haven&apos;t opened anything yet, that&apos;s
+                        A trial week goes fast. If you haven&apos;t opened anything yet, that&apos;s
                         completely normal, and you haven&apos;t missed anything.{' '}
                         {fromTrail
                           ? `You already added ${guide.name} to your trail${forKids}, so there's nothing to choose. Just open it.`

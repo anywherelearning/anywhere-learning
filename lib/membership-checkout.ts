@@ -189,7 +189,7 @@ export async function createMembershipCheckout(opts: {
         ...(applyFallOffer && { offer: FALL_OFFER.slug }),
         ...(applyMapOffer && { offer: OWNER_OFFER.slug }),
         ...(clerkId && { clerk_id: clerkId }),
-        // For the trial-to-paid Subscribe event 14 days later.
+        // For the trial-to-paid Subscribe event 7 days later.
         ...metaMatchToMetadata(opts.meta),
       },
     },

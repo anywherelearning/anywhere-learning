@@ -97,10 +97,10 @@ export default function SkillsMapDelivery({ firstName, files, bonus, offerUrl, o
                     activities waiting in the Anywhere Learning library, 120+ guides with your job and
                     your kid&apos;s job at every step. As a Skills Map owner, you get{' '}
                     <strong style={{ color: C_INK }}>20% off your first year</strong> until{' '}
-                    {offerEndsLabel}. Start with 14 days free; nothing is charged today.
+                    {offerEndsLabel}. Start with 7 days free; nothing is charged today.
                   </Text>
                   <div style={{ marginTop: '18px' }}>
-                    <Link href={offerUrl} style={button}>Try the library free for 14 days</Link>
+                    <Link href={offerUrl} style={button}>Try the library free for 7 days</Link>
                   </div>
                   <Text style={small}>Your 20% is applied automatically. Yearly plan only.</Text>
                 </td>

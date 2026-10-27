@@ -767,7 +767,7 @@ export default async function HomePage() {
               {/* Desktop only: on phones the same lines already sit under the
                   hero button and on the plan card. */}
               <div className="mb-20 hidden flex-wrap justify-center gap-x-7 gap-y-3 text-[15.5px] text-gray-600 md:flex">
-                <span>14-day free trial</span>
+                <span>7-day free trial</span>
                 <span className="text-gray-300">·</span>
                 <span>$0 charged today</span>
                 <span className="text-gray-300">·</span>

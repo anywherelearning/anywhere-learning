@@ -80,7 +80,7 @@ export const DOWNLOAD_CAP_WINDOW_DAYS = 30;
 // server-side in /api/download/activity/[slug]. One trial per customer, ever:
 // anyone with a prior subscription row checks out without a trial (see
 // isTrialEligible in lib/access).
-export const TRIAL_DAYS = 14;
+export const TRIAL_DAYS = 7;
 
 // Active price for the current phase (in whole dollars).
 export const MEMBERSHIP_PRICE_USD = IS_FOUNDER_PHASE

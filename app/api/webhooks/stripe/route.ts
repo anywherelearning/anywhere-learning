@@ -996,7 +996,7 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
     }
 
     // Meta Conversions API: the moment real money changes hands. Happens
-    // off-site 14 days after signup, so only the server can report it. This
+    // off-site 7 days after signup, so only the server can report it. This
     // is the event a trial campaign should ultimately optimize toward.
     {
       const unitAmount = sub.items.data[0]?.price.unit_amount;

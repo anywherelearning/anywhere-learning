@@ -36,7 +36,7 @@ const sections: LegalSection[] = [
             <strong className="text-ink font-semibold">Free resources</strong>: the 7-day guide, the Capable Kid Guide, a free 5-day email course, a 2-minute quiz, and printable activity idea checklists. Some are delivered by email after you give us your email address, which also adds you to our mailing list (you can unsubscribe anytime).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that gives access to our complete library of activity guides, new content added quarterly, and member-only features. It starts with a 14-day free trial.
+            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that gives access to our complete library of activity guides, new content added quarterly, and member-only features. It starts with a 7-day free trial.
           </li>
         </ul>
         <p>
@@ -53,7 +53,7 @@ const sections: LegalSection[] = [
         <p className="mb-3.5">When you join the Anywhere Learning membership, you agree to the following:</p>
         <ol className="list-decimal pl-6 space-y-2.5 marker:text-[#C97B5C] marker:font-display marker:italic">
           <li>
-            <strong className="text-ink font-semibold">Free trial.</strong>{' '}New members start with a <Em>14-day free trial.</Em>{' '}A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the rate for the plan you chose (yearly or monthly). We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 14 days and you will not be charged. One free trial per customer.
+            <strong className="text-ink font-semibold">Free trial.</strong>{' '}New members start with a <Em>7-day free trial.</Em>{' '}A payment card is required to start, but you are charged $0 during the trial. During the trial you can open and read every guide in your browser. Downloading guides as PDFs is a membership benefit and is not available during the trial; you can start your membership anytime to unlock downloads. Unless you cancel before the trial ends, your membership starts automatically and your card is charged the rate for the plan you chose (yearly or monthly). We email you 3 days before your trial ends. Cancel anytime during the trial from your account settings: you keep reading access through the end of your 7 days and you will not be charged. One free trial per customer.
           </li>
           <li>
             <strong className="text-ink font-semibold">Billing.</strong>{' '}The membership is available on two plans. The <Em>yearly plan</Em>{' '}is charged once per year, and the <Em>monthly plan</Em>{' '}is charged $15 once per month, in each case starting the day your free trial ends (or the day you join, if no trial applies).
@@ -206,7 +206,7 @@ export default function TermsPage() {
         </>
       }
       sub="The agreement between you and Anywhere Learning when you use our site or join our membership."
-      lastUpdated="September 28, 2026"
+      lastUpdated="October 27, 2026"
       sections={sections}
       helpline={{
         lead: 'Have a question about these terms?',

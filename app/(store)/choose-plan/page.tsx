@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Choose Your Plan',
-  description: 'Pick yearly or monthly. Both start with a 14-day free trial.',
+  description: 'Pick yearly or monthly. Both start with a 7-day free trial.',
   robots: { index: false, follow: false },
 };
 
