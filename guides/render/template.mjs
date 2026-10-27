@@ -273,8 +273,9 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <h2>${esc(R.title)}</h2>
   ${R.intro ? `<p class="lead">${esc(R.intro)}</p>` : ''}
   <div class="refgrid">${R.items.map((it) => `
-    <div class="refcard"><h3>${esc(it.name)}</h3>${it.lines.map((l) => `<p><b>${esc(l.k)}</b> ${esc(l.v)}</p>`).join('')}</div>`).join('')}
+    <div class="refcard"><h3>${esc(it.name)}</h3>${it.lines.map((l) => `<p><b>${esc(l.k)}</b> ${esc(l.v)}</p>`).join('')}${it.ask ? `<p class="refask">${esc(it.ask)}</p>` : ''}</div>`).join('')}
   </div>
+  ${R.after ? `<div class="box refafter"><div class="label">${esc(R.after.label)}</div>${R.after.lines.map((l) => `<p>${esc(l)}</p>`).join('')}</div>` : ''}
   ${foot(R.title)}
 </section>` : '';
 
@@ -426,6 +427,7 @@ ul{list-style:none}
 .tcd{margin:auto 0 0;font-size:.86em;line-height:1.35;color:var(--muted)}.tcd b{color:var(--accent);margin-right:4px}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
+.refcard .refask{margin-top:7px;padding-top:6px;border-top:1px dashed rgba(58,44,23,.2);font-style:italic}.refafter{margin-top:12px}.refafter p{margin:4px 0 0}
 .plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
 .plan dt{font:700 .95em/1.35 'DM Sans';color:var(--trail)}.plan dd{margin:0;line-height:1.4}
 .box.home{background:#fbf3e4}.box.home p{margin:0 0 8px}.box.home blockquote{margin:6px 0 0;padding:4px 0 4px 12px;border-left:3px solid var(--gold);font-style:italic;line-height:1.45}

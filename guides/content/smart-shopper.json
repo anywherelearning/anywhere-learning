@@ -201,7 +201,7 @@
         "lines": [
           {
             "k": "Urgency:",
-            "v": "'Only 2 left!' or a countdown timer"
+            "v": "'Only 2 left in stock!'"
           },
           {
             "k": "Fake scarcity:",
@@ -210,8 +210,13 @@
           {
             "k": "Today only:",
             "v": "a deal that's back next week"
+          },
+          {
+            "k": "Countdown clock:",
+            "v": "'Sale ends in 02:14:37' ticking on the page"
           }
-        ]
+        ],
+        "ask": "Ask yourself: would I still want it if the deal were here next month?"
       },
       {
         "name": "Proof",
@@ -227,8 +232,13 @@
           {
             "k": "Best seller:",
             "v": "a badge that doesn't say who decided"
+          },
+          {
+            "k": "Unboxing videos:",
+            "v": "a fun video that's really an ad"
           }
-        ]
+        ],
+        "ask": "Ask yourself: who is saying this, and do they get paid if I buy?"
       },
       {
         "name": "Price games",
@@ -244,8 +254,13 @@
           {
             "k": "Ends in .99:",
             "v": "$19.99 feels much less than $20"
+          },
+          {
+            "k": "Bundles:",
+            "v": "'Buy 2, get 1 free' when you only needed one"
           }
-        ]
+        ],
+        "ask": "Ask yourself: what is the real price of the thing I actually need?"
       },
       {
         "name": "Feelings",
@@ -261,10 +276,23 @@
           {
             "k": "Fresh and new:",
             "v": "'Upgrade now' when the old one still works"
+          },
+          {
+            "k": "Happy pictures:",
+            "v": "smiling kids, sunny days, friends laughing"
           }
-        ]
+        ],
+        "ask": "Ask yourself: am I buying the thing or the feeling in the picture?"
       }
-    ]
+    ],
+    "after": {
+      "label": "Before you buy: the 3-question check",
+      "lines": [
+        "1. Would I still want this if nobody was selling it to me?",
+        "2. What does it cost per use, not just at the till?",
+        "3. Will I still want it in two weeks?"
+      ]
+    }
   },
   "conclusion": {
     "headline": "That's buying on purpose.",
