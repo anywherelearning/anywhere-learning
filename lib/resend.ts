@@ -304,7 +304,7 @@ export async function sendTrialCanceledEmail({
   });
 }
 
-/** Payment-failed note: card declined, access stays on, one button to fix it. */
+/** Payment-failed note: card declined, library paused, one button to fix it. */
 export async function sendPaymentFailedEmail({
   to,
   firstName,
@@ -322,7 +322,7 @@ export async function sendPaymentFailedEmail({
     from: FROM,
     replyTo: REPLY_TO,
     to,
-    subject: "Your payment didn't go through (your access is still on)",
+    subject: "Your payment didn't go through",
     react: PaymentFailed({ firstName, amount, payUrl }),
   });
 }

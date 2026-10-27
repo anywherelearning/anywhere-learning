@@ -23,7 +23,7 @@ const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/emai
 /**
  * Payment-failed note. Sent once per invoice when a renewal or a trial's
  * first charge is declined (status goes 'past_due'). Calm and practical:
- * access stays on while Stripe retries, one button fixes it. Never names the
+ * the library pauses until the payment goes through, one button fixes it. Never names the
  * bank's decline reason; "insufficient funds" in an inbox is nobody's business.
  */
 export default function PaymentFailed({ firstName, amount, payUrl }: Props) {
@@ -37,7 +37,7 @@ export default function PaymentFailed({ firstName, amount, payUrl }: Props) {
         `}</style>
       </Head>
       <Preview>
-        Your payment didn&apos;t go through. Your access is still on, and it&apos;s a one-minute fix.
+        Your payment didn&apos;t go through. It&apos;s a one-minute fix to get your library back.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -85,9 +85,9 @@ export default function PaymentFailed({ firstName, amount, payUrl }: Props) {
                     a card limit, and it&apos;s an easy fix.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Nothing is lost. Your access is still on, so keep using the library while you
-                    sort it out. We&apos;ll try the card again automatically over the next couple
-                    of weeks, or you can fix it right now.
+                    Your library is paused for now, and nothing is lost. As soon as the payment
+                    goes through, everything is right where you left it. We&apos;ll try the card
+                    again automatically over the next couple of weeks, or you can fix it right now.
                   </Text>
                 </td>
               </tr>

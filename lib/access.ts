@@ -8,10 +8,7 @@
  *   2. else → 'guest'
  *
  * "Active" means status === 'active' OR ('canceled' with currentPeriodEnd in
- * the future, they paid through the year, we honour it) OR 'past_due' (a
- * renewal or trial-conversion charge failed and Stripe is still retrying;
- * they keep access while they fix their card, and Stripe cancels the
- * subscription if every retry fails). A trial canceled
+ * the future, they paid through the year, we honour it). A trial canceled
  * early never lands in that bucket: the webhook sets periodEnd = now when a
  * trial is canceled, so the date guard drops them to guest immediately.
  */
@@ -67,7 +64,6 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
             eq(subscriptions.status, 'active'),
             eq(subscriptions.status, 'trialing'),
             eq(subscriptions.status, 'canceled'),
-            eq(subscriptions.status, 'past_due'),
           ),
           gt(subscriptions.currentPeriodEnd, new Date()),
         ),

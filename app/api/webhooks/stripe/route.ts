@@ -217,10 +217,10 @@ async function sendTrialCanceledOnce(
 
 /**
  * A renewal or trial-conversion charge was declined. Stripe retries on its
- * own schedule and the subscription sits in 'past_due' (which keeps access,
- * see lib/access.ts). We send one friendly "update your payment" email per
- * invoice, not one per retry, linking to Stripe's hosted invoice page so they
- * can pay with a new card without signing in.
+ * own schedule and the subscription sits in 'past_due', which has no access
+ * (see lib/access.ts) until a payment succeeds. We send one friendly "update
+ * your payment" email per invoice, not one per retry, linking to Stripe's
+ * hosted invoice page so they can pay with a new card without signing in.
  */
 async function handlePaymentFailed(inv: Stripe.Invoice) {
   const customerId = typeof inv.customer === 'string' ? inv.customer : inv.customer?.id;
