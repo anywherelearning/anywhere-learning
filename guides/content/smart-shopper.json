@@ -288,7 +288,7 @@
     "after": {
       "label": "Before you buy: the 3-question check",
       "lines": [
-        "1. Would I still want this if nobody was selling it to me?",
+        "1. Is this a need or a want?",
         "2. What does it cost per use, not just at the till?",
         "3. Will I still want it in two weeks?"
       ]
