@@ -30,11 +30,10 @@ interface Props {
 
 // Absolute, always-live host for email assets + links (never localhost).
 const SITE = 'https://anywherelearning.co';
-const EMAIL_LOGO =
-  'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
+const LOGO_CREAM = `${SITE}/email-logo-cream.png`;
 
 /**
- * Quiz result email — the SURPRISE, not a re-run of the page.
+ * Quiz result email. The SURPRISE, not a re-run of the page.
  *
  * The recipient just read their full plan (type, skills, Saturday action,
  * activities) on the result page seconds ago, so this email deliberately does
@@ -55,73 +54,72 @@ export default function QuizPlanEmail({
 }: Props) {
   return (
     <Html>
-      <Head>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap');
-        `}</style>
-      </Head>
+      <Head />
       <Preview>A little surprise for taking the quiz: your free {guideName} guide is inside.</Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={card}>
             <tbody>
 
-              {/* accent ribbon */}
+              {/* ── Header band ── */}
               <tr>
-                <td style={{ height: '6px', backgroundColor: accent, borderTopLeftRadius: '18px', borderTopRightRadius: '18px', lineHeight: '6px', fontSize: '1px' }}>&nbsp;</td>
-              </tr>
-
-              {/* ── Brand header ── */}
-              <tr>
-                <td style={{ padding: '32px 48px 20px', textAlign: 'center' as const }}>
-                  <Img src={EMAIL_LOGO} alt="Anywhere Learning" width="42" height="42" style={{ display: 'inline-block', width: '42px', height: '42px' }} />
-                  <div style={brandName}>
-                    anywhere <span style={{ fontStyle: 'italic', color: C_FOREST }}>learning</span>
-                  </div>
+                <td style={band}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: 'middle' }}>
+                          <Img src={LOGO_CREAM} alt="Anywhere Learning" width="38" style={{ display: 'block', width: '38px', height: 'auto' }} />
+                        </td>
+                        <td style={{ verticalAlign: 'middle', textAlign: 'right' as const }}>
+                          <span style={badge}>FREE GIFT INSIDE</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={h1}>I tucked a free gift in with your plan.</div>
+                  <div style={subline}>Thanks for taking the quiz. This one is yours to keep.</div>
                 </td>
               </tr>
 
-              {/* ── The surprise (hero) ── */}
+              {/* ── Intro ── */}
               <tr>
-                <td style={{ padding: '6px 48px 0', textAlign: 'center' as const }}>
-                  <div style={{ ...eyebrow, color: C_GOLD_DARK }}>A little surprise, just for you</div>
-                  <div style={h1}>
-                    I tucked a{' '}
-                    <span style={{ fontStyle: 'italic', color: accent }}>free gift</span>{' '}
-                    in with your plan.
-                  </div>
-                  <Text style={{ ...p, textAlign: 'center' as const, maxWidth: '400px', margin: '12px auto 0' }}>
-                    Thanks for taking the quiz. On top of the plan you just saw, here&apos;s a whole
-                    guide I normally sell, yours to keep.
+                <td style={{ padding: '28px 36px 0' }}>
+                  <Text style={p}>
+                    On top of the plan you just saw, here&apos;s a whole guide I normally sell for{' '}
+                    {priceLabel}. No strings, just download it and use it.
                   </Text>
                 </td>
               </tr>
 
               {/* ── Gift card ── */}
               <tr>
-                <td style={{ padding: '22px 48px 0' }}>
+                <td style={{ padding: '22px 36px 0' }}>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={giftCard}>
                     <tbody>
                       <tr>
-                        <td style={{ padding: '26px 26px 28px', textAlign: 'center' as const }}>
+                        <td style={{ padding: '24px 24px 26px', textAlign: 'center' as const }}>
                           <Img
                             src={`${SITE}/products/${guideSlug}.jpg`}
                             alt={guideName}
-                            width="150"
-                            height="150"
-                            style={{ display: 'inline-block', width: '150px', height: 'auto', borderRadius: '10px', border: '1px solid rgba(181,128,62,0.4)' }}
+                            width="170"
+                            style={{ display: 'inline-block', width: '170px', height: 'auto', borderRadius: '10px', border: `1px solid ${C_RULE}` }}
                           />
-                          <div style={{ ...giftEyebrow, marginTop: '18px' }}>Your free gift · {priceLabel} value</div>
+                          <div style={{ ...label, color: C_FOREST, marginTop: '18px' }}>YOUR FREE GUIDE &middot; {priceLabel.toUpperCase()} VALUE</div>
                           <div style={giftHeadline}>{guideName}</div>
                           <div style={giftBody}>
-                            The complete guide, the same one I sell for {priceLabel}. Your kid plans a
-                            real family meal, prices out the ingredients, scales the recipes, and keeps
-                            it all within a grocery budget. Yours free.
+                            Your kid plans a real family meal, prices out the ingredients, scales the
+                            recipes, and keeps it all within a grocery budget. You lead, they do the math.
                           </div>
-                          <div style={{ marginTop: '18px' }}>
-                            <Link href={downloadUrl} style={giftBtn}>Download my free guide &darr;</Link>
-                          </div>
-                          <div style={giftMicro}>A PDF you can open on any device, or print if you like.</div>
+                          <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '20px auto 0' }}>
+                            <tbody>
+                              <tr>
+                                <td style={btnCell}>
+                                  <Link href={downloadUrl} style={btn}>Download my free guide &darr;</Link>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div style={micro}>A PDF you can open on any device, or print if you like.</div>
                         </td>
                       </tr>
                     </tbody>
@@ -129,23 +127,28 @@ export default function QuizPlanEmail({
                 </td>
               </tr>
 
-              {/* ── One personal tie: their type + the Saturday action ── */}
+              {/* ── Their type + the Saturday action ── */}
               <tr>
-                <td style={{ padding: '26px 48px 0' }}>
-                  <div style={fadeDivider} />
-                  <Text style={{ ...p, margin: '22px 0 0' }}>
-                    Your quiz says you&apos;ve got{' '}
-                    <span style={{ fontWeight: 600, color: accent }}>{archetypeTitle}</span> on your
-                    hands ({tagline.toLowerCase().replace(/\.$/, '')}). Your full plan is back on the
-                    results page whenever you want it, but if you only do one thing this week, make it
-                    this:
+                <td style={{ padding: '28px 36px 0' }}>
+                  <div style={{ ...label, color: C_MUTED }}>YOUR QUIZ RESULT</div>
+                  <div style={{ ...typeName, color: accent }}>{archetypeTitle}</div>
+                  <Text style={{ ...p, margin: '6px 0 0' }}>
+                    {tagline} Your full plan is back on the results page whenever you want it, but if
+                    you only do one thing this week, make it this one.
                   </Text>
-                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ ...saturdayCard, marginTop: '14px' }}>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: '18px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
                     <tbody>
                       <tr>
-                        <td style={{ padding: '16px 20px' }}>
-                          <div style={saturdayLabel}>Try this together on Saturday</div>
-                          <div style={saturdayBody}>{saturday}</div>
+                        <td style={{ width: '46px', verticalAlign: 'top' }}>
+                          <div style={{ ...stepDot, backgroundColor: C_TERRA, fontFamily: FONT_MONO, fontSize: '10px', fontWeight: 700, letterSpacing: '0.04em' }}>SAT</div>
+                        </td>
+                        <td style={{ verticalAlign: 'top', padding: '3px 0 4px 16px' }}>
+                          <div style={{ ...label, color: C_TERRA }}>TRY THIS TOGETHER ON SATURDAY</div>
+                          <div style={stepBody}>{saturday}</div>
                         </td>
                       </tr>
                     </tbody>
@@ -153,41 +156,48 @@ export default function QuizPlanEmail({
                 </td>
               </tr>
 
-              {/* ── Sign-off + soft trial PS ── */}
+              {/* ── Membership aside ── */}
               <tr>
-                <td style={{ padding: '28px 48px 0' }}>
-                  <Text style={p}>
-                    Try it, then hit reply and tell me how it went. I read every one.
-                  </Text>
-                  <div style={{ fontSize: '15px', color: C_BODY, marginTop: '14px' }}>xo,</div>
-                  <div style={signature}>Amelie</div>
-                  <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '2px' }}>Founder · Anywhere Learning</div>
-                  <Text style={{ ...ps, margin: '20px 0 0' }}>
-                    <strong style={{ color: C_INK }}>PS</strong> &mdash; there are 120+ guides like this
-                    one inside the membership, built to close exactly the gap your kid&apos;s plan
-                    pointed to. You can{' '}
-                    <Link href={`${SITE}/#membership`} style={{ color: C_FOREST, fontWeight: 600 }}>try it all free for 7 days</Link>.
-                  </Text>
+                <td style={{ padding: '24px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={aside}>
+                    <tbody>
+                      <tr>
+                        <td style={{ padding: '16px 20px', fontSize: '15px', lineHeight: 1.6, color: C_BODY, fontFamily: FONT_BODY }}>
+                          <strong style={{ color: C_INK }}>Want more like this?</strong> There are 120+
+                          guides like this one inside the membership, built to close exactly the gap
+                          your kid&apos;s plan pointed to.{' '}
+                          <Link href={`${SITE}/#membership`} style={{ color: C_FOREST, fontWeight: 600 }}>
+                            Try it all free for 7 days &rarr;
+                          </Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
               </tr>
 
-              {/* ── Fine print ── */}
+              {/* ── Sign-off ── */}
               <tr>
-                <td style={{ padding: '26px 48px 32px' }}>
-                  <div style={fadeDivider} />
+                <td style={{ padding: '26px 36px 0' }}>
+                  <Text style={{ ...p, margin: '0 0 6px' }}>Have fun with it,</Text>
+                  <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
+                </td>
+              </tr>
+
+              {/* ── Footer ── */}
+              <tr>
+                <td style={{ padding: '28px 36px 30px', textAlign: 'center' as const }}>
+                  <div style={rule} />
+                  <div style={motto}>Meaningful Learning, Wherever You Are</div>
                   <Text style={legal}>
                     You&apos;re getting this because you took the What&apos;s Your Kid&apos;s Missing
-                    Life Skill quiz at anywherelearning.co with this email address. Questions? Just
-                    reply, it lands straight in my inbox.
+                    Life Skill quiz at anywherelearning.co with this email address.
                   </Text>
                 </td>
               </tr>
 
             </tbody>
           </table>
-          <div style={credit}>
-            Anywhere Learning · <em style={{ fontStyle: 'italic' }}>Built by Amelie</em> · Made in Nelson, BC
-          </div>
         </Container>
       </Body>
     </Html>
@@ -207,107 +217,55 @@ QuizPlanEmail.PreviewProps = {
   downloadUrl: 'https://anywherelearning.co',
 } satisfies Props;
 
-/* ── Brand tokens (shared with MembershipWelcome) ── */
-const FONT_BODY = "'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif";
-const FONT_DISPLAY = "'DM Serif Display', Georgia, 'Times New Roman', serif";
-const FONT_SCRIPT = "'Dancing Script', 'Brush Script MT', cursive";
+/* ── "Trail map" tokens (match the Kit sequence emails, Oct 2026) ── */
+const FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
+const FONT_DISPLAY = "Georgia, 'Times New Roman', serif";
+const FONT_MONO = "'Courier New', Courier, monospace";
 
-const C_CREAM = '#FAF8F3';
-const C_INK = '#2D3A2E';
-const C_BODY = '#4F5A50';
-const C_MUTED = '#7B8378';
+const C_CARD = '#FAF9F6';
+const C_INK = '#2F3A2E';
+const C_BODY = '#4B5563';
+const C_MUTED = '#8A8578';
 const C_RULE = '#D8D4C5';
 const C_FOREST = '#588157';
-const C_GOLD_DARK = '#8A6A22';
-const C_TERRA = '#C97B5C';
+const C_TERRA = '#C4836A';
+const C_SAGE = '#EEF2EC';
 
-const body = { backgroundColor: '#E9E5DC', fontFamily: FONT_BODY, margin: 0, padding: '24px 12px' };
-
-const envelope = {
+const body = { backgroundColor: '#EBE9E2', fontFamily: FONT_BODY, margin: 0, padding: '32px 12px' };
+const card = {
   width: '100%',
   borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
+  overflow: 'hidden' as const,
 };
-
-const brandName = { fontFamily: FONT_DISPLAY, fontSize: '24px', color: C_INK, marginTop: '9px' };
-
-const fadeDivider = {
-  height: '1px',
-  backgroundColor: C_RULE,
-  backgroundImage: `linear-gradient(to right, rgba(216,212,197,0), ${C_RULE}, rgba(216,212,197,0))`,
-};
-
-const eyebrow = {
-  fontSize: '11px',
-  fontWeight: 700,
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
-};
-
-const h1 = { fontFamily: FONT_DISPLAY, fontSize: '29px', lineHeight: 1.18, color: C_INK, marginTop: '10px' };
-
-const giftCard = {
-  width: '100%',
-  borderCollapse: 'separate' as const,
-  backgroundImage: 'linear-gradient(140deg, #FBF3E2 0%, #F2E2C1 100%)',
-  backgroundColor: '#FBF3E2',
-  border: '1px solid rgba(181,128,62,0.42)',
-  borderRadius: '16px',
-};
-const giftEyebrow = {
-  fontSize: '10.5px',
-  fontWeight: 700,
-  letterSpacing: '0.16em',
-  color: C_GOLD_DARK,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
-};
-const giftHeadline = { fontFamily: FONT_DISPLAY, fontSize: '25px', color: C_INK, marginTop: '6px' };
-const giftBody = {
-  fontSize: '14px',
-  lineHeight: 1.6,
-  color: '#5c4a2e',
-  marginTop: '9px',
-  maxWidth: '400px',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  fontFamily: FONT_BODY,
-};
-const giftBtn = {
+const band = { backgroundColor: C_FOREST, padding: '26px 36px 28px', borderTopLeftRadius: '17px', borderTopRightRadius: '17px' };
+const badge = {
   display: 'inline-block',
-  backgroundColor: C_FOREST,
-  color: '#F7F4EA',
-  fontSize: '15.5px',
-  fontWeight: 600,
-  textDecoration: 'none',
-  padding: '14px 32px',
-  borderRadius: '11px',
-  fontFamily: FONT_BODY,
-};
-const giftMicro = { fontSize: '12px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
-
-const saturdayCard = {
-  width: '100%',
-  borderCollapse: 'separate' as const,
-  backgroundColor: '#FBF3E2',
-  border: '1px solid rgba(181,128,62,0.32)',
-  borderRadius: '13px',
-};
-const saturdayLabel = {
-  fontSize: '11px',
+  backgroundColor: '#E8C99A',
+  color: C_INK,
+  fontFamily: FONT_MONO,
+  fontSize: '12px',
   fontWeight: 700,
-  letterSpacing: '0.13em',
-  color: C_GOLD_DARK,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
+  letterSpacing: '0.12em',
+  padding: '7px 13px',
+  borderRadius: '999px',
 };
-const saturdayBody = { fontSize: '14.5px', lineHeight: 1.6, color: '#5c4a2e', marginTop: '7px', fontFamily: FONT_BODY };
-
-const p = { fontSize: '15px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
-const ps = { fontSize: '13.5px', lineHeight: 1.6, color: C_MUTED, fontFamily: FONT_BODY };
-const signature = { fontFamily: FONT_SCRIPT, fontSize: '42px', fontWeight: 600, color: C_TERRA, lineHeight: 1.15, marginTop: '2px' };
-const legal = { fontSize: '12px', lineHeight: 1.6, color: C_MUTED, margin: '16px 0 0', fontFamily: FONT_BODY };
-const credit = { textAlign: 'center' as const, fontSize: '12px', color: C_MUTED, paddingTop: '10px', fontFamily: FONT_BODY };
+const h1 = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1.18, color: C_CARD, margin: '20px 0 8px' };
+const subline = { fontSize: '15px', lineHeight: 1.5, color: '#DFE8DC', fontFamily: FONT_BODY };
+const p = { fontSize: '16px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
+const label = { fontFamily: FONT_MONO, fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em' };
+const giftCard = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '14px' };
+const giftHeadline = { fontFamily: FONT_DISPLAY, fontSize: '25px', lineHeight: 1.25, color: C_INK, marginTop: '6px' };
+const giftBody = { fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '9px', maxWidth: '420px', marginLeft: 'auto', marginRight: 'auto', fontFamily: FONT_BODY };
+const btnCell = { backgroundColor: C_INK, borderRadius: '12px', textAlign: 'center' as const };
+const btn = { display: 'inline-block', padding: '16px 34px', fontSize: '16px', fontWeight: 700, color: C_CARD, textDecoration: 'none', lineHeight: 1, fontFamily: FONT_BODY };
+const micro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
+const typeName = { fontFamily: FONT_DISPLAY, fontSize: '24px', lineHeight: 1.25, marginTop: '6px' };
+const stepDot = { width: '34px', height: '34px', borderRadius: '50%', color: '#FFFFFF', fontFamily: FONT_DISPLAY, fontSize: '17px', lineHeight: '34px', textAlign: 'center' as const };
+const stepBody = { fontSize: '15.5px', lineHeight: 1.6, color: C_BODY, marginTop: '5px', fontFamily: FONT_BODY };
+const aside = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '12px' };
+const rule = { height: '1px', lineHeight: '1px', fontSize: 0, backgroundColor: '#E3E0D6', marginBottom: '18px' };
+const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '14px', color: C_MUTED, marginBottom: '8px' };
+const legal = { fontSize: '12px', lineHeight: 1.7, color: '#A09A8C', margin: 0, fontFamily: FONT_BODY };
