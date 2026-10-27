@@ -3,7 +3,7 @@ import { getPostBySlug } from '@/lib/blog';
 import type { MonthActivity, MonthSection, SectionExtras } from '@/components/account/ThisMonthView';
 
 // ─── Add each new month as its own block. Everything below builds itself. ───
-// The page switches on its own at midnight Pacific on the 1st: it shows the
+// The page switches on its own at midnight Eastern on the 1st: it shows the
 // block for the current month, or the newest one already started. So next
 // month can ship early and waits until its day.
 // `category` values must match a real activity category (lib/categories).
@@ -210,16 +210,16 @@ const NOVEMBER_2026 = {
     blurb:
       "November is about the people around us. This month kids spot real problems on their own street, listen to the stories of people who came before them, and do something useful for someone else. Not a bake sale for a cause they've never met. Something close to home, that they can see working.",
     extras: {
-      // 1 · Read this — an internal blog post. Its hero image is pulled in
+      // 1 · Read this: an internal blog post. Its hero image is pulled in
       // automatically from lib/blog.ts (keep the slug in sync).
       read: { slug: 'community-impact-projects-for-kids', title: 'Community Impact Projects for Kids: 8 Real Ones to Start' },
-      // 2 · Read together — a younger and an older pick. Cover images live in
+      // 2 · Read together: a younger and an older pick. Cover images live in
       // /public/books/; `link` points at the official author/publisher page.
       books: [
         { ages: 'Ages 5–8', title: 'Miss Rumphius', author: 'Barbara Cooney', cover: '/books/miss-rumphius.jpg', link: 'https://bookshop.org/book/9780140505399' },
         { ages: 'Ages 10–14', title: 'Seedfolks', author: 'Paul Fleischman', cover: '/books/seedfolks.jpg', link: 'https://bookshop.org/book/9780064472074' },
       ],
-      // 3 · Extra — the flexible card. Swap it every month. Items with a `url`
+      // 3 · Extra: the flexible card. Swap it every month. Items with a `url`
       // render as links; items without render as bullets. VERIFY links first.
       extra: {
         title: 'Start close to home',
@@ -237,8 +237,8 @@ const NOVEMBER_2026 = {
     // another month or the giving-back set above. Kept to the three that
     // genuinely fit; no padding to six.
     slugs: [
-      'swap-day-challenge',  // trade jobs for a day and find out what everyone else does
-      'family-debate-night', // a long dark evening, a good argument, everyone at the table
+      'swap-day-challenge',    // trade jobs for a day and find out what everyone else does
+      'family-debate-night',   // a long dark evening, a good argument, everyone at the table
       'rube-goldberg-machine', // a big indoor build for the cold, rainy weekends
     ],
     // Candlelight ochre, distinct from the cranberry above.
@@ -277,9 +277,9 @@ const NOVEMBER_2026 = {
 const MONTHS = [SEPTEMBER_2026, OCTOBER_2026, NOVEMBER_2026];
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-/** The month to show right now, by the calendar in Nelson, BC (Pacific). */
+/** The month to show right now, by the Eastern-time calendar. */
 export function getThisMonth(now: Date = new Date()) {
-  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Vancouver', year: 'numeric', month: 'numeric' }).formatToParts(now);
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: 'numeric' }).formatToParts(now);
   const y = Number(parts.find((p) => p.type === 'year')!.value);
   const m = Number(parts.find((p) => p.type === 'month')!.value);
   const key = (e: (typeof MONTHS)[number]) => e.year * 12 + MONTH_NAMES.indexOf(e.month);

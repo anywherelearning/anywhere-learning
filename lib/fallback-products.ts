@@ -2579,7 +2579,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/snack-mission.jpg",
-    previewFile: "Preview Real-world math - The $20 Snack Mission.pdf",
+    previewFile: "Preview Real-world math - The $20 Snack Mission v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
