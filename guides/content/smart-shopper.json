@@ -1,0 +1,304 @@
+{
+  "slug": "smart-shopper",
+  "category": "Real-World Math",
+  "title": "Smart Shopper Lab",
+  "tagline": "Compare · Calculate · Decide on purpose",
+  "ages": "Ages 9 to 14",
+  "goal": "Your kid compares two real options before buying: sneakers, headphones, a water bottle, a family tent. They build their own scoring rubric, work out what each one really costs, spot the marketing tricks, and write a recommendation they can defend. The point isn't picking the right product. It's the habit of stopping and thinking before spending.",
+  "need": [
+    "Paper and a pencil, or a notes app",
+    "A calculator",
+    "Optional: a device to look up real products, prices and reviews"
+  ],
+  "lesson": {
+    "text": "The price tag isn't the real cost. Divide the price by how many times you'll use it, and the cheap option is often the expensive one.",
+    "before": "The $5 water bottle is cheaper, obviously.",
+    "model": [
+      {
+        "part": "Option A",
+        "line": "$30 bottle, used every day for a year: $30 ÷ 365 = about 8¢ per use."
+      },
+      {
+        "part": "Option B",
+        "line": "$5 bottle, lost after a month: $5 ÷ 30 = about 17¢ per use."
+      },
+      {
+        "part": "So",
+        "line": "The 'cheap' bottle costs twice as much every time you drink from it."
+      },
+      {
+        "part": "Decision",
+        "line": "Buy A, if you'll really keep it. That 'if' is the honest part."
+      }
+    ],
+    "modelNote": "Same two bottles, a completely different answer. When your kid says 'it's cheaper,' ask: cheaper per what?"
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "division, cost per use, percentages and totals"
+    },
+    {
+      "subject": "Money",
+      "text": "needs and wants, hidden costs, opportunity cost"
+    },
+    {
+      "subject": "Media literacy",
+      "text": "spotting how ads try to decide for you"
+    },
+    {
+      "subject": "Writing",
+      "text": "a recommendation with evidence"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need to teach anything. You're the calm coach, not the shopping expert. Let them pick something they actually want, don't lead the verdict, and treat 'I changed my mind' as a win: it means the process worked.",
+    "plan": [
+      {
+        "when": "First hour",
+        "what": "Pick the two options, sort need or want, build the rubric, and work out the true cost (Steps 1 to 3)."
+      },
+      {
+        "when": "Second hour",
+        "what": "Spot the marketing tricks, add a twist and write the recommendation (Steps 4 and 5)."
+      },
+      {
+        "when": "Two weeks later",
+        "what": "Ask: do you still want it? That's the final test."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They picked the pricier one",
+        "a": "That's fine if they can explain it. The goal is a decision with reasons, not the cheapest choice."
+      },
+      {
+        "q": "The rubric says the 'wrong' one won",
+        "a": "Perfect. Ask which score they'd change and why. That's where the real thinking happens."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Comparing",
+      "text": "scoring options on what matters"
+    },
+    {
+      "name": "Cost thinking",
+      "text": "price per use, not price per tag"
+    },
+    {
+      "name": "Skepticism",
+      "text": "seeing the selling behind the product"
+    },
+    {
+      "name": "Explaining",
+      "text": "a recommendation someone could follow"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick two options to compare",
+      "why": "A real choice between two specific things, and a gut guess before the work.",
+      "kid": "Your kid picks what they're shopping for: something they want, something the family needs, a gift, or a set budget like '$50 for new shoes.' Then they pick two specific options, like Brand A or Brand B, or the $20 version or the $45 version. They write: 'I'm comparing ___ and ___. My gut says I'd pick ___.'",
+      "you": "Help them pick something real enough to care about. If they're stuck, offer two choices: 'Want to compare water bottles or headphones?' gets a faster answer than an open question.",
+      "starters": [
+        "Sneakers",
+        "Headphones",
+        "Water bottle",
+        "Backpack",
+        "Family tent"
+      ],
+      "ask": [
+        "Which one do you think you'd pick right now?",
+        "Is this something you need or something you want?"
+      ],
+      "tip": "Write the gut pick down and keep it. You'll come back to it in Step 5.",
+      "levels": {
+        "explore": "Pick a scenario and two options, and write the sentence.",
+        "develop": "Pick a real purchase and look up two real options with prices.",
+        "extend": "Add a budget limit, and predict which option will win and why."
+      }
+    },
+    {
+      "title": "Need or want, then build the rubric",
+      "why": "An honest label, and a scorecard built on what matters to them.",
+      "kid": "First, your kid decides: need or want? A need is something you'd replace if it broke, like a winter coat. A want is something you'd enjoy but could live without. Then they pick criteria (price, quality, reviews, features, style, how long it lasts) and draw a rubric: criteria down the side, both options across the top, a score from 1 to 5 in every box.",
+      "you": "Ask questions, don't judge. If colour matters more than durability to them, let the rubric show the trade-off. Watch for the moment a 'need' turns out to be a 'want.'",
+      "ask": [
+        "If you could only check two things before buying, what would they be?",
+        "What would make you return it after a week?"
+      ],
+      "tip": "Most purchases are wants dressed up as needs. That pause when they realise it is the whole lesson.",
+      "levels": {
+        "explore": "Label need or want, pick 3 or 4 criteria, score and add up.",
+        "develop": "Explain the need or want label, pick 5 criteria and rank them by importance.",
+        "extend": "Pick 6 criteria and give the important ones double points (a weighted rubric)."
+      }
+    },
+    {
+      "title": "Work out the true cost",
+      "why": "What it really costs, not what the tag says.",
+      "kid": "Your kid looks past the sticker price three ways. Cost per use: price ÷ number of uses. Hidden costs: batteries, refills, accessories, shipping, a subscription. Opportunity cost: 'If I don't buy this, I could use the money for ___.' Then they update the rubric if anything changed.",
+      "you": "Help with the division if needed: the idea matters more than perfect maths. Estimating uses is fine ('about twice a week for a year is about 100 uses').",
+      "ask": [
+        "Which one is cheaper once you count how long it lasts?",
+        "Is anything hiding behind the price tag?"
+      ],
+      "tip": "Once kids do cost-per-use maths, they start seeing the cheap version differently. Let them find it in their own numbers.",
+      "levels": {
+        "explore": "Work out cost per use for both options.",
+        "develop": "Add one hidden cost each and name the opportunity cost.",
+        "extend": "Build a full true-cost breakdown for both and rescore the rubric."
+      }
+    },
+    {
+      "title": "Spot the marketing tricks",
+      "why": "Stop looking at the product. Look at the selling.",
+      "kid": "Your kid looks at how each option is sold (the product page, the box, the ad) and finds at least 3 tricks from the Marketing Tricks page at the back: urgency, fake scarcity, crossed-out prices, star counts, paid influencers, free shipping thresholds, 'you deserve this' language. Then they ask: did any of these sneak into my scores?",
+      "you": "Let them go down the rabbit hole. This step is the one they'll use for life.",
+      "ask": [
+        "Is the product good, or is the marketing just good?",
+        "What would this page say with only facts?"
+      ],
+      "tip": "Once kids start spotting tricks, they can't unsee them. Expect running commentary on every ad for a while. Worth it.",
+      "levels": {
+        "explore": "Spot 2 or 3 tricks across both options.",
+        "develop": "Spot 4 tricks and say which one almost worked on you.",
+        "extend": "Rewrite one product description with zero marketing, only facts, and compare."
+      }
+    },
+    {
+      "title": "Add a twist and write the recommendation",
+      "why": "A curveball, then a decision someone else could follow.",
+      "kid": "You pick a twist: the price drops 30%, a review says Option A breaks after 3 months, the budget drops by 25%, or two weeks pass (do you still want it?). Your kid adjusts, then writes a real recommendation: what they compared, the top criteria, the rubric result, what the true cost showed, and the final pick in one sentence. Last: was the gut pick from Step 1 right?",
+      "you": "Praise a changed mind. Revising with better information is a strength, not a weakness.",
+      "starters": [
+        "Price drops 30%",
+        "Bad review",
+        "Budget drops 25%",
+        "Wait two weeks"
+      ],
+      "ask": [
+        "What's the strongest reason for your pick?",
+        "Could someone who's never seen these follow your reasoning?"
+      ],
+      "tip": "The 'wait two weeks' twist is the sneakiest. If they still want it, it's real. If they forgot, they just saved money.",
+      "levels": {
+        "explore": "Apply 1 twist and write a 3 or 4 sentence recommendation.",
+        "develop": "Apply 2 twists and back the recommendation with rubric and cost evidence.",
+        "extend": "Apply 2 twists, add a confidence level, and write 5 Smart Shopper Rules for your future self."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Marketing Tricks",
+    "intro": "How products get sold to you. Find at least 3 in Step 4. Most ads use more than one at once.",
+    "items": [
+      {
+        "name": "Pressure",
+        "lines": [
+          {
+            "k": "Urgency:",
+            "v": "'Only 2 left!' or a countdown timer"
+          },
+          {
+            "k": "Fake scarcity:",
+            "v": "'Limited edition' that never really runs out"
+          },
+          {
+            "k": "Today only:",
+            "v": "a deal that's back next week"
+          }
+        ]
+      },
+      {
+        "name": "Proof",
+        "lines": [
+          {
+            "k": "Social proof:",
+            "v": "'10,000 five-star reviews!'"
+          },
+          {
+            "k": "Influencers:",
+            "v": "someone famous, often paid to say it"
+          },
+          {
+            "k": "Best seller:",
+            "v": "a badge that doesn't say who decided"
+          }
+        ]
+      },
+      {
+        "name": "Price games",
+        "lines": [
+          {
+            "k": "Anchoring:",
+            "v": "a high 'original price' crossed out"
+          },
+          {
+            "k": "Free shipping:",
+            "v": "'Spend $10 more to save $5'"
+          },
+          {
+            "k": "Ends in .99:",
+            "v": "$19.99 feels much less than $20"
+          }
+        ]
+      },
+      {
+        "name": "Feelings",
+        "lines": [
+          {
+            "k": "You deserve it:",
+            "v": "spending as a reward"
+          },
+          {
+            "k": "Fear of missing out:",
+            "v": "'Everyone has one'"
+          },
+          {
+            "k": "Fresh and new:",
+            "v": "'Upgrade now' when the old one still works"
+          }
+        ]
+      }
+    ]
+  },
+  "conclusion": {
+    "headline": "That's buying on purpose.",
+    "text": "Your kid did what most adults skip: they stopped, compared, worked out the true cost, saw through the marketing and made a decision they could explain. Pick, compare, calculate, decide: it works on a water bottle, a phone plan, a car. The purchase doesn't matter. The habit does.",
+    "celebrate": "Ask what surprised them most: 'Did the cost-per-use maths change which one you'd buy?'",
+    "extensions": [
+      "Run the rubric on a real family purchase coming up",
+      "Compare three options instead of two",
+      "Keep a list of every marketing trick you spot for a week",
+      "Next time someone says 'I need this,' do the need or want check out loud together"
+    ]
+  },
+  "signs": [
+    "They ask how long something will last before buying",
+    "They point out crossed-out prices and countdown timers",
+    "They say 'let me wait a few days' about something they want"
+  ],
+  "makeItReal": "Use the rubric on the next real thing your kid wants to buy with their own money. Let them make the call, then check in a month later: do they still use it? That's the cost-per-use maths coming true.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My son went back and forth between a Switch 2 and a PS5. The Switch 2 was cheaper, but that's not what decided it. It had more of the games he loves, and it travels with us, which matters a lot right now since we're on the road all the time. He picked the one that fit how he actually lives.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/smart-shopper.jpg",
+    "alt": "A boy in a car holding a new Nintendo Switch 2 box and smiling",
+    "caption": "Switch 2 or PS5? He chose the travel one.",
+    "tall": true
+  }
+}

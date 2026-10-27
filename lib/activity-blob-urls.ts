@@ -113,7 +113,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "skills-map-bw": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Black%20and%20White.pdf",
   "skills-map-color": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Color.pdf",
   "skills-map-phone": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Phone.pdf",
-  "smart-shopper": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Smart%20shopper%20lab%20v2.pdf",
+  "smart-shopper": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Smart%20shopper%20lab%20v3.pdf",
   "snack-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20The%20%2420%20Snack%20Mission%20v3.pdf",
   "solo-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Solo%20Mission%20v2.pdf",
   "sports-stats-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Sports%20Stats%20Lab%20v2.pdf",

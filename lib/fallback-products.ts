@@ -724,7 +724,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrppAkIBECpwGmFDhNrYWB",
     blobUrl: "",
     imageUrl: "/products/smart-shopper.jpg",
-    previewFile: "Preview Real-world math - Smart shopper lab.pdf",
+    previewFile: "Preview Real-world math - Smart shopper lab v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
