@@ -107,7 +107,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <div class="coverbody">
       ${coverTrail(coverItems)}
       <ol class="htrail">${coverItems.map((st, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(st.short || st.title)}</span></li>`).join('')}</ol>
-      ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>` : ''}
+      ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption>${g.photo.inset ? `<div class="snapin"><img src="${img(g.photo.inset.src)}" alt="${esc(g.photo.inset.alt || '')}"></div>` : ''}</figure>` : ''}
     </div>
   </div>
   <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
@@ -479,6 +479,7 @@ ul{list-style:none}
 .snap:before{content:'';position:absolute;top:-10px;left:50%;width:90px;height:22px;margin-left:-45px;background:rgba(214,162,78,.55);transform:rotate(-3deg)}
 .snap img{display:block;width:100%;border-radius:2px}
 .snap figcaption{margin-top:8px;font-size:12.5px;line-height:1.35;color:var(--muted);text-align:center}
+.snapin{position:absolute;right:-16px;bottom:74px;width:34%;background:#fff;padding:5px 5px 7px;border-radius:3px;box-shadow:0 8px 18px -6px rgba(50,40,20,.5);transform:rotate(-6deg)}.snapin img{display:block;width:100%;border-radius:2px}
 .start{margin:20px 0 14px;font:800 30px 'Bricolage Grotesque';color:var(--trail);transform:rotate(-2deg)}
 .finish h2{font-size:28px}
 .finish .lead{position:relative}
@@ -528,6 +529,7 @@ h2{font-size:40px}
 .snap{order:1;width:5.4in;max-width:none;margin:0 auto;padding:14px 14px 16px;transform:rotate(1.5deg)}
 .snap figcaption{font-size:14px;margin-top:10px}
 .snap.tall{width:3.3in}
+.snapin{position:absolute;right:-1.55in;bottom:.55in;width:1.75in;background:#fff;padding:7px 7px 9px;border-radius:3px;box-shadow:0 10px 22px -8px rgba(50,40,20,.5);transform:rotate(-6deg)}.snapin img{display:block;width:100%;border-radius:2px}
 .htrail{order:2;display:flex;justify-content:space-between;list-style:none;position:relative;padding:0 .1in}
 .htrail:before{content:'';position:absolute;left:.5in;right:.5in;top:19px;border-top:3px dotted var(--trail)}
 .htrail .blaze.sm{width:40px;height:40px;border-radius:11px}.htrail .blaze.sm span{font-size:21px}
@@ -600,7 +602,7 @@ html,body,.pg{background:#fff!important}
 .chips span{border-color:#000;color:#000}
 .cta{background:#fff;color:#000;border:2px solid #000}.ctaurl{color:#000}
 .brand img{filter:grayscale(1) contrast(1.4)}
-.role,.tryask,.snap{background:#fff!important;border:1.5px solid #000;box-shadow:none!important}.role.kid,.role.you{border-left-width:5px}.tryask .rolel,.tip2 b{color:#000}.snap img{filter:grayscale(1)}.snap:before{background:#ccc}
+.role,.tryask,.snap{background:#fff!important;border:1.5px solid #000;box-shadow:none!important}.role.kid,.role.you{border-left-width:5px}.tryask .rolel,.tip2 b{color:#000}.snap img{filter:grayscale(1)}.snapin{border:1.5px solid #000;box-shadow:none!important}.snap:before{background:#ccc}
 .before,.after,.example,.glance div,.say,.trouble,.donebox{background:#fff!important;border:1.5px solid #000}.donetick{background:#000}.donebox b,.saylab,.glance span{color:#000}.photo img{filter:grayscale(1)}
 .before,.after,.example{background:#fff!important;border:1.5px solid #000}.after{border-width:2.5px}
 .before .tag,.after .tag{color:#000}.before li{text-decoration-color:#000}`;

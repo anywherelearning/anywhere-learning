@@ -50,7 +50,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
 
   // Real-World Math
   'budget-challenge': 'Half-Day',
-  'kitchen-math-challenge': 'Project',
+  'kitchen-math-challenge': 'Half-Day',
   'smart-shopper': 'Half-Day',
   'backyard-campout-planner': 'Project',
   'clothing-swap-thrift-math': 'Project',

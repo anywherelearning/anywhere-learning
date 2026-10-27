@@ -791,24 +791,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kitchen-math-challenge': {
     opening:
-      'Your child plans a real meal for the family, figures out what it costs, scales a recipe up or down, and stays within a grocery budget. They do unit price comparisons, handle a kitchen curveball, and learn the kind of math adults actually use every time they cook or shop.',
+      'Your child plans a full day of meals and snacks, prices every item, scales the plan for the whole family, and turns it into a real shopping list. Then you add a constraint, like a budget cap or a travel day, and they rebuild the plan to fit. No cooking needed: this is the math behind every grocery run.',
     whatsIncluded: [
-      'Real meal planning with grocery budget constraints',
-      'Recipe scaling and portion math',
-      'Unit price comparison and smart shopping',
-      'Kitchen curveball that forces quick problem-solving',
-      'Version 2 revision to improve the plan',
+      '5 steps, from picking the day to a Version 2 plan',
+      'Per-serving vs per-package pricing (the bread loaf lesson)',
+      'Scaling for the family and turning meals into a shopping list',
+      'Five constraints to choose from: budget cap, minimal waste, travel-friendly, quick, no-cook',
+      'Price Menu page so it works fully offline',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Planning', 'Life Skills'],
     insideTheLearning: {
       lead:
-        'Your child plans and cooks real meals against a real grocery budget. Recipes get scaled, portions get calculated, unit prices get compared in the shop. Then a curveball lands, an ingredient is out or the budget moves, and they have to solve it with the trolley in front of them.',
+        'Your child plans a real day of food against real prices. The surprise comes at the shopping list: one sandwich costs $4 on paper and $15 at the store, because you cannot buy one slice of bread. Working out why, and planning around package sizes and leftovers, is where the math gets real.',
       skills: [
-        { skill: 'Math', where: 'Scaling recipes, working out portions and comparing unit prices while shopping' },
-        { skill: 'Budgeting', where: 'Planning meals that feed everyone and still land inside the grocery limit' },
-        { skill: 'Planning', where: 'Organising the whole thing, from plan to shopping list to cooked meal' },
-        { skill: 'Problem-Solving', where: 'Handling the curveball without abandoning the plan' },
-        { skill: 'Self-Direction', where: 'Running it themselves rather than being walked through it' },
+        { skill: 'Math', where: 'Adding block totals, estimating, and multiplying servings for the family' },
+        { skill: 'Number Sense', where: 'Comparing the price per serving with the price per package' },
+        { skill: 'Budgeting', where: 'Rebuilding the plan to fit a budget cap' },
+        { skill: 'Planning', where: 'Turning a day of meals into an ingredient list without duplicates' },
+        { skill: 'Problem-Solving', where: 'Handling a constraint like minimal waste or a travel day' },
       ],
     },
     format: 'Project Guide',

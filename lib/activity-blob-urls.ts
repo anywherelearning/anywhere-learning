@@ -65,7 +65,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "investor-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Investor%20Pitch%20Portfolio%20v2.pdf",
   "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v2.pdf",
   "kinetic-sculpture": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Kinetic%20Sculpture%20or%20Art%20Installation%20v2.pdf",
-  "kitchen-math-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Kitchen%20math%20%26%20meal%20planning%20challenge%20v2.pdf",
+  "kitchen-math-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Kitchen%20math%20%26%20meal%20planning%20challenge%20v3.pdf",
   "kitchen-science-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Kitchen%20Science%20Lab%20v2.pdf",
   "land-art-challenges": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Land%20Art%20Challenge%20Cards%20v4.pdf",
   "local-language-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Local%20Language%20Mission%20v2.pdf",
