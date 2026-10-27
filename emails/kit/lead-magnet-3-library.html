@@ -1,8 +1,11 @@
 <!--
   LEAD MAGNET SEQUENCE (trial-focused) - Email 3 of 5: The library reveal
   Trigger: tag "lead" | Send: 5 days after Email 1
-  Subject: 7 days was just the start
+  Subject: One guide was just the start
   Preview: 120+ real-world activities and a roadmap for every age.
+
+  PERSONALIZED: uses {{ subscriber.last_guide }} so it names whichever guide
+  they actually took. Falls back to the 7-day guide, so it is never blank.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +44,10 @@
           <!-- HOOK -->
           <tr>
             <td class="lm-pad" style="padding:26px 40px 0;">
-              <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:10px;">Beyond the 7 days</div>
+              <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:10px;">When they want the next one</div>
               <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 8px;">{{ message_content }}</div>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">The free guide gives you 7 days. Which is great, right up until day 8, when your kid asks the next big question and you're back to wondering what on earth to do with it.</p>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">That gap is exactly why I built the full library. It's everything the guide hints at, just a whole lot more of it.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">By now you've had a go at <strong style="color:#2f3a2e;">{{ subscriber.last_guide }}</strong>. One guide carries you a surprisingly long way, right up until your kid finishes it and looks at you for the next thing.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">That gap is exactly why I built the full library. It's everything one guide hints at, just a whole lot more of it.</p>
             </td>
           </tr>
 
@@ -58,18 +61,28 @@
           <!-- BODY -->
           <tr>
             <td class="lm-pad" style="padding:14px 40px 0;">
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;">Inside you'll find <strong style="color:#2f3a2e;">120+ guided activities</strong> across nine life-skill categories, the stuff school tends to skip:</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;">Inside you'll find <strong style="color:#2f3a2e;">120+ guided activities</strong> across twelve life-skill areas, the stuff school tends to skip:</p>
 
               <!-- CATEGORY BOX -->
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#eef2ec; border-radius:12px;"><tr>
                 <td align="center" style="padding:18px 22px; font-size:15px; line-height:2; color:#3d5c3b; font-weight:600; text-align:center;">
-                  Outdoor &amp; Nature&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Real-World Math&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Creativity&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;AI &amp; Digital&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Entrepreneurship&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Communication&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Life Skills &amp; Planning&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Emotional &amp; Social Skills&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Worldschooling
+                  Reading &amp; Media&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Writing&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Real-World Math&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Critical Thinking&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;AI &amp; Digital&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Communication&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Emotional Intelligence&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Self-Management&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Creativity &amp; Making&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Citizenship &amp; Character&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Life Skills&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Physical &amp; Outdoor
                 </td>
               </tr></table>
 
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:20px 0 16px;">Plus the <strong style="color:#2f3a2e;">Future-Ready Skills Map</strong>, a simple roadmap showing which skills to focus on at which age, so you're never guessing what comes next. New activities get added every quarter, so it keeps growing right alongside your family.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:20px 0 18px;">Every activity comes in three levels, so your six year old and your eleven year old do the same thing at the same table without anyone feeling lost or bored. That's the whole idea: one activity, everyone in, less work for you.</p>
 
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">Everything opens on any device, follows along step by step, and works year after year. It all lives in one place, and you can try the whole thing free for two weeks.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;">But the activities are the easy part. What you're really getting is everything around them.</p>
+
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">You stop choosing.</strong> Tell it how much time you've got and what you're hoping for, and it picks. No scrolling a library at 9pm deciding on nothing.</p>
+
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">Each month is already set up.</strong> A fresh set pulled together at the start of every month, plus one family challenge to take on together.</p>
+
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">It keeps the record for you.</strong> Everything your family finishes gathers itself into a portfolio, one per kid, that you can print any time. You never have to remember what you did back in March.</p>
+
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;"><strong style="color:#2f3a2e;">And your kids get a map.</strong> Most families walk one trail together, everyone reaching each milestone side by side. Every activity you finish becomes a stop behind you and earns a piece of gear for the backpack. It turns out kids will do a lot for a piece of gear.</p>
+
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">Plus the <strong style="color:#2f3a2e;">Future-Ready Skills Map</strong>, showing which skills to focus on at which age. New activities every quarter. Everything opens on any device, follows along step by step, and works year after year. You can try the whole thing free for a week.</p>
 
               <!-- CTA -->
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
