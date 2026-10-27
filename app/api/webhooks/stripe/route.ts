@@ -10,7 +10,7 @@
  *   - customer.subscription.deleted      → mark subscriptions row canceled
  *   - customer.subscription.trial_will_end → "trial ends in 3 days" email
  *   - invoice.paid                       → extend currentPeriodEnd on renewal
- *   - invoice.payment_failed             → log + future: email "update card"
+ *   - invoice.payment_failed             → "update your payment" email, once per invoice
  *
  * Free trial lifecycle (status 'trialing'):
  *   - signup  → trial welcome email + Kit tag 'trial-member'
@@ -45,6 +45,7 @@ import {
   sendTrialEndingEmail,
   sendMembershipConvertedEmail,
   sendTrialCanceledEmail,
+  sendPaymentFailedEmail,
   sendMembershipCancellationScheduledEmail,
   sendSkillsMapDeliveryEmail,
 } from '@/lib/resend';
@@ -208,6 +209,67 @@ async function sendTrialCanceledOnce(
     console.log(`[webhook] sent trial-canceled email to ${user.email}`);
   } catch (err) {
     console.error('[webhook] trial-canceled email failed:', err);
+    if (claimId) {
+      await db.delete(sentEmails).where(eq(sentEmails.id, claimId)).catch(() => {});
+    }
+  }
+}
+
+/**
+ * A renewal or trial-conversion charge was declined. Stripe retries on its
+ * own schedule and the subscription sits in 'past_due' (which keeps access,
+ * see lib/access.ts). We send one friendly "update your payment" email per
+ * invoice, not one per retry, linking to Stripe's hosted invoice page so they
+ * can pay with a new card without signing in.
+ */
+async function handlePaymentFailed(inv: Stripe.Invoice) {
+  const customerId = typeof inv.customer === 'string' ? inv.customer : inv.customer?.id;
+  if (!customerId || !inv.id || !inv.hosted_invoice_url) {
+    console.warn('[webhook] payment_failed without customer/invoice url:', inv.id);
+    return;
+  }
+  const userRows = await db
+    .select()
+    .from(users)
+    .where(eq(users.stripeCustomerId, customerId))
+    .limit(1);
+  const user = userRows[0];
+  if (!user) {
+    console.warn('[webhook] payment_failed for unknown customer:', customerId);
+    return;
+  }
+
+  const kind = `payment_failed:${inv.id}`;
+  let claimId: string | undefined;
+  try {
+    const already = await db
+      .select({ id: sentEmails.id })
+      .from(sentEmails)
+      .where(and(eq(sentEmails.email, user.email), eq(sentEmails.kind, kind)))
+      .limit(1);
+    if (already.length > 0) return;
+    const claimed = await db
+      .insert(sentEmails)
+      .values({ email: user.email, kind })
+      .returning({ id: sentEmails.id });
+    claimId = claimed[0]?.id;
+
+    const amount = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: (inv.currency || 'usd').toUpperCase(),
+      minimumFractionDigits: inv.amount_due % 100 === 0 ? 0 : 2,
+    }).format(inv.amount_due / 100);
+    const firstName = await firstNameForClerkId(user.clerkId);
+    const result = await sendPaymentFailedEmail({
+      to: user.email,
+      firstName,
+      amount,
+      payUrl: inv.hosted_invoice_url,
+    });
+    if (result?.error) throw new Error(result.error.message);
+    console.log(`[webhook] sent payment-failed email to ${user.email} (${inv.id})`);
+  } catch (err) {
+    console.error('[webhook] payment-failed email failed:', err);
     if (claimId) {
       await db.delete(sentEmails).where(eq(sentEmails.id, claimId)).catch(() => {});
     }
@@ -1104,12 +1166,9 @@ export async function POST(req: NextRequest) {
         }
         break;
       }
-      case 'invoice.payment_failed': {
-        const inv = event.data.object as Stripe.Invoice & { subscription?: string };
-        console.warn('[webhook] payment failed for subscription:', inv.subscription);
-        // TODO: trigger "please update your card" email
+      case 'invoice.payment_failed':
+        await handlePaymentFailed(event.data.object as Stripe.Invoice);
         break;
-      }
       case 'charge.refunded':
         await handleChargeRefunded(event.data.object as Stripe.Charge);
         break;

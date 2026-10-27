@@ -23,6 +23,7 @@ import MembershipCancellationScheduled from '@/emails/MembershipCancellationSche
 import QuizPlanEmail from '@/emails/QuizPlanEmail';
 import TrialMidpoint, { midpointSubject } from '@/emails/TrialMidpoint';
 import SkillsMapDelivery from '@/emails/SkillsMapDelivery';
+import PaymentFailed from '@/emails/PaymentFailed';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -300,6 +301,29 @@ export async function sendTrialCanceledEmail({
     to,
     subject: 'Your trial is canceled, nothing will be charged',
     react: TrialCanceled({ firstName, plan, surveyToken }),
+  });
+}
+
+/** Payment-failed note: card declined, access stays on, one button to fix it. */
+export async function sendPaymentFailedEmail({
+  to,
+  firstName,
+  amount,
+  payUrl,
+}: {
+  to: string;
+  firstName?: string;
+  /** Formatted amount, e.g. "$79". */
+  amount: string;
+  /** Stripe hosted invoice page. */
+  payUrl: string;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: "Your payment didn't go through (your access is still on)",
+    react: PaymentFailed({ firstName, amount, payUrl }),
   });
 }
 

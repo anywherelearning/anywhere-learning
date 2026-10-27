@@ -87,6 +87,7 @@ vi.mock('@/lib/resend', () => ({
   sendTrialEndingEmail: vi.fn(),
   sendMembershipConvertedEmail: vi.fn(),
   sendTrialCanceledEmail: vi.fn(),
+  sendPaymentFailedEmail: vi.fn(),
   sendMembershipCancellationScheduledEmail: vi.fn(),
 }));
 
@@ -360,5 +361,43 @@ describe('Stripe webhook trial-canceled email', () => {
     await POST(makeRequest('body'));
 
     expect(sendTrialCanceledEmail).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Stripe webhook invoice.payment_failed', () => {
+  const user = { id: 'u2', email: 'pastdue@example.com', clerkId: 'user_test', stripeCustomerId: 'cus_pd' };
+  const failedInvoice = {
+    id: 'in_failed',
+    customer: 'cus_pd',
+    amount_due: 7900,
+    currency: 'usd',
+    hosted_invoice_url: 'https://invoice.stripe.com/i/test',
+  };
+
+  it('sends the update-your-payment email with the hosted invoice link', async () => {
+    const { sendPaymentFailedEmail } = await import('@/lib/resend');
+    // user lookup → user; nothing in sent_emails for this invoice.
+    selectResults.queue = [[user], []];
+    mockConstructEvent.mockReturnValue(fakeEvent('invoice.payment_failed', failedInvoice));
+
+    const res = await POST(makeRequest('body'));
+
+    expect(res.status).toBe(200);
+    expect(sendPaymentFailedEmail).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(sendPaymentFailedEmail).mock.calls[0][0]).toMatchObject({
+      to: user.email,
+      amount: '$79',
+      payUrl: failedInvoice.hosted_invoice_url,
+    });
+  });
+
+  it('sends only once per invoice when Stripe retries fail again', async () => {
+    const { sendPaymentFailedEmail } = await import('@/lib/resend');
+    selectResults.queue = [[user], [{ id: 'sent_row' }]];
+    mockConstructEvent.mockReturnValue(fakeEvent('invoice.payment_failed', failedInvoice));
+
+    await POST(makeRequest('body'));
+
+    expect(sendPaymentFailedEmail).not.toHaveBeenCalled();
   });
 });
