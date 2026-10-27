@@ -14,6 +14,7 @@
   4. Preview text: Seven days, the whole library, and one thing to try this week.
   5. Send a test to yourself, then activate.
   Images load from anywherelearning.co. No Google Fonts (Kit strips them); script text is pre-rendered PNGs.
+  Design: "Trail map" (Oct 2026).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,68 +28,134 @@
     html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
     a { color:#588157; }
     @media (max-width: 620px) {
-      .q-card { border-radius:0 !important; }
-      .q-pad  { padding-left:26px !important; padding-right:26px !important; }
+      .tr-card { border-radius:0 !important; }
+      .tr-pad { padding-left:24px !important; padding-right:24px !important; }
+      .tr-h1 { font-size:27px !important; }
     }
   </style>
 </head>
-<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
-   <tr><td align="center" style="padding:36px 16px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="q-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="tr-card" style="width:600px; max-width:100%; background:#faf9f6; border:1px solid #d8d4c5; border-collapse:separate; border-radius:18px; overflow:hidden;">
 
-      <!-- HEADER -->
-      <tr><td class="q-pad" align="center" style="padding:34px 40px 0;">
-        <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
-        <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="200" style="display:inline-block; width:200px; max-width:78%; height:auto; border:0; margin:10px 0 0;">
-      </td></tr>
-      <tr><td class="q-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+          <!-- Header band -->
+          <tr>
+            <td class="tr-pad" bgcolor="#588157" style="background:#588157; padding:26px 36px 28px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                <td valign="middle"><img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" height="27" style="display:block; width:38px; height:auto; border:0;"></td>
+                <td valign="middle" align="right"><span style="display:inline-block; background:#e8c99a; color:#2f3a2e; font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.12em; padding:7px 13px; border-radius:999px;">FREE FOR 7 DAYS</span></td>
+              </tr></table>
+              <div class="tr-h1" style="font-family:Georgia, 'Times New Roman', serif; font-size:32px; line-height:1.15; color:#faf9f6; margin:20px 0 8px;">Ready to see the rest?</div>
+              <div style="font-size:15px; line-height:1.5; color:#dfe8dc;">Your quiz result was just the doorway.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:9px;">The whole library</div>
-        <div style="font-size:24px; font-weight:700; line-height:1.2; color:#2f3a2e;">Ready to see the rest?</div>
-      </td></tr>
+          <!-- Greeting + intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 10px;">{{ message_content }}</div>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Your quiz result came with three activities to start, but those are really just the doorway.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">Inside the membership there are 120+ guided activities across twelve real-world skills, from money and cooking to building, inventing, and AI. New ones land every quarter, and you open them on any device and do them together. No printing required.</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:22px 40px 0;">
-        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
-      </td></tr>
+          <!-- Visual -->
+          <tr>
+            <td class="tr-pad" style="padding:20px 36px 0;">
+              <img src="https://anywherelearning.co/email-library-hero-v2.jpg" alt="The Anywhere Learning library" width="340" style="display:block; margin:0 auto; width:340px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:6px 40px 0;">
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Your quiz result came with three activities to start, but those are really just the doorway.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Inside the membership there are 120+ guided activities across twelve real-world skills, from money and cooking to building, inventing, and AI. New ones land every quarter, and you open them on any device and do them together. No printing required.</p>
-<p align="center" style="margin:20px 0 0;"><img src="https://anywherelearning.co/email-library-hero.png" alt="The Anywhere Learning library" width="340" style="display:inline-block; width:340px; max-width:80%; height:auto; border:0;"></p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px; margin-top:14px;">You can try the whole thing free for 7 days. Cancel in a tap if it's not for you, and if you're one of the first hundred families in, your founding rate is locked in for life.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">And if now isn't the moment, no pressure at all. Here's the free version you can do this week: pick one afternoon, hand your kid something real, a grocery run, a meal to plan, a fort to build, and then do the hard part, which is not stepping in. That's the whole method. The library is right here whenever you want more.</p>
-      </td></tr>
+          <!-- Trial -->
+          <tr>
+            <td class="tr-pad" style="padding:20px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">You can try the whole thing free for 7 days. Cancel in a tap if it's not for you, and if you're one of the first hundred families in, your founding rate is locked in for life.</p>
+            </td>
+          </tr>
 
-      <tr><td align="center" style="padding:22px 40px 6px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-            <a href="https://anywherelearning.co/join?utm_source=kit&utm_medium=email&utm_campaign=quiz-nurture-2" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start your free trial &rarr;</a>
-          </td>
-        </tr></table>
-        <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7-day free trial. Cancel anytime.</div>
-      </td></tr>
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:24px 36px 4px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#2f3a2e" style="background:#2f3a2e; border-radius:12px;">
+                  <a href="https://anywherelearning.co/join?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="display:inline-block; padding:16px 36px; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start your free trial &rarr;</a>
+                </td>
+              </tr></table>
+              <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7-day free trial. Cancel anytime.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">You've got this,</p>
-        <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
-      </td></tr>
+          <!-- Free version intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">And if now isn't the moment, no pressure at all. Here's the free version you can do this week:</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
-        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
-        <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
-        <p style="font-size:13px; margin:0 0 12px;">
-          <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
-        </p>
-        <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you took the quiz at anywherelearning.co.<br>
-          <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
-      </td></tr>
+          <!-- Trail steps -->
+          <tr>
+            <td class="tr-pad" style="padding:18px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">1</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#c4836a;">PICK ONE AFTERNOON</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">Just one this week. That is plenty.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">2</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#588157;">HAND THEM SOMETHING REAL</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">A grocery run, a meal to plan, a fort to build.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">3</div></td>
+                  <td valign="top" style="padding:3px 0 4px 16px; border-left:2px solid transparent;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#8b7355;">DON'T STEP IN</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">That's the hard part, and it's the whole method.</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-    </table>
-   </td></tr>
+          <!-- Closing note -->
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td style="padding:16px 20px; font-size:15px; line-height:1.6; color:#4b5563;">The library is right here whenever you want more.</td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Sign-off -->
+          <tr>
+            <td class="tr-pad" style="padding:26px 36px 0;">
+              <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">You've got this,</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="130" style="display:block; width:130px; height:auto; border:0;">
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="tr-pad" align="center" style="padding:28px 36px 30px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+              <p style="font-family:Georgia, serif; font-style:italic; font-size:14px; color:#8a8578; margin:0 0 8px;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 10px;">
+                <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=quiz-nurture-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+              </p>
+              <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you took the quiz at anywherelearning.co.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
   </table>
-
 </body>
 </html>

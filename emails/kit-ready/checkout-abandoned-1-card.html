@@ -10,6 +10,7 @@
   visual editor add ONLY the greeting: Hi {{ subscriber.first_name | strip | default: "there" }},
   CTA goes to /fall, which shows the fall offer until Oct 19 and then redirects
   to /choose-plan on its own, so the link never goes stale.
+  Design: "Trail map" (Oct 2026). Green header band, numbered trail steps, dark button.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -23,67 +24,120 @@
     html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
     a { color:#588157; }
     @media (max-width: 620px) {
-      .q-card { border-radius:0 !important; }
-      .q-pad  { padding-left:26px !important; padding-right:26px !important; }
+      .tr-card { border-radius:0 !important; }
+      .tr-pad { padding-left:24px !important; padding-right:24px !important; }
+      .tr-h1 { font-size:27px !important; }
     }
   </style>
 </head>
-<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
-   <tr><td align="center" style="padding:36px 16px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="q-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="tr-card" style="width:600px; max-width:100%; background:#faf9f6; border:1px solid #d8d4c5; border-collapse:separate; border-radius:18px; overflow:hidden;">
 
-      <!-- HEADER -->
-      <tr><td class="q-pad" align="center" style="padding:34px 40px 0;">
-        <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
-        <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="200" style="display:inline-block; width:200px; max-width:78%; height:auto; border:0; margin:10px 0 0;">
-      </td></tr>
-      <tr><td class="q-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+          <!-- Header band -->
+          <tr>
+            <td class="tr-pad" bgcolor="#588157" style="background:#588157; padding:26px 36px 28px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                <td valign="middle"><img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" height="27" style="display:block; width:38px; height:auto; border:0;"></td>
+                <td valign="middle" align="right"><span style="display:inline-block; background:#e8c99a; color:#2f3a2e; font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.12em; padding:7px 13px; border-radius:999px;">$0 TODAY</span></td>
+              </tr></table>
+              <div class="tr-h1" style="font-family:Georgia, 'Times New Roman', serif; font-size:32px; line-height:1.15; color:#faf9f6; margin:20px 0 8px;">The card question.</div>
+              <div style="font-size:15px; line-height:1.5; color:#dfe8dc;">$0 today, and you hear from me before anything changes.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:9px;">Your free trial</div>
-        <div style="font-size:24px; font-weight:700; line-height:1.2; color:#2f3a2e;">The card question</div>
-      </td></tr>
+          <!-- Greeting + intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 10px;">{{ message_content }}</div>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 14px;">You started signing up for the free trial yesterday and stopped at the payment page. That's the step where most people pause, so I figured I'd answer the question I get asked most.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">Why do I need a card for a free trial? Because the trial turns into a membership on its own if you love it, so you don't have to remember to come back and sign up again. Here's exactly how it works:</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:22px 40px 0;">
-        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
-      </td></tr>
+          <!-- Trail steps: how the trial works -->
+          <tr>
+            <td class="tr-pad" style="padding:24px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">1</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#c4836a;">$0 TODAY</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">Nothing is charged for 7 days.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">2</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#588157;">A REMINDER 3 DAYS BEFORE</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">I email you before the trial ends, so it never sneaks up on you.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">3</div></td>
+                  <td valign="top" style="padding:3px 0 4px 16px; border-left:2px solid transparent;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#8b7355;">CANCEL IN TWO CLICKS</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">From your account, any time during the trial, and you pay nothing.</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:6px 40px 0;">
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">You started signing up for the free trial yesterday and stopped at the payment page. That's the step where most people pause, so I figured I'd answer the question I get asked most.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Why do I need a card for a free trial? Because the trial turns into a membership on its own if you love it, so you don't have to remember to come back and sign up again. Here's exactly how it works:</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;"><strong>$0 today.</strong> Nothing is charged for 7 days.<br><strong>A reminder 3 days before.</strong> I email you before the trial ends, so it never sneaks up on you.<br><strong>Cancel in two clicks</strong> from your account, any time during the trial, and you pay nothing.<br><strong>And a 14-day refund</strong> after the first charge if you change your mind.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">If it was something else that stopped you (the price, wondering if it fits your kid's age, or just a kid needing you right at that moment), hit reply and tell me. This comes straight to me and I answer every one myself.</p>
-      </td></tr>
+          <!-- Refund note -->
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td style="padding:16px 20px; font-size:15px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">And a 14-day refund</strong> after the first charge if you change your mind.</td>
+              </tr></table>
+            </td>
+          </tr>
 
-      <tr><td align="center" style="padding:22px 40px 6px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-            <a href="https://anywherelearning.co/fall?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Pick up where you left off &rarr;</a>
-          </td>
-        </tr></table>
-        <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7 days free. $0 today.</div>
-      </td></tr>
+          <!-- Other reasons -->
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">And if it was something else that stopped you (the price, wondering if it fits your kid's age, or just a kid needing you right at that moment), that's okay too. Your spot is still there whenever you're ready.</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
-        <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
-      </td></tr>
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:28px 36px 4px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#2f3a2e" style="background:#2f3a2e; border-radius:12px;">
+                  <a href="https://anywherelearning.co/fall?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="display:inline-block; padding:16px 36px; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Pick up where you left off &rarr;</a>
+                </td>
+              </tr></table>
+              <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7 days free. $0 today.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
-        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
-        <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
-        <p style="font-size:13px; margin:0 0 12px;">
-          <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
-        </p>
-        <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you started a free trial signup at anywherelearning.co.<br>
-          <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
-      </td></tr>
+          <!-- Sign-off -->
+          <tr>
+            <td class="tr-pad" style="padding:26px 36px 0;">
+              <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="130" style="display:block; width:130px; height:auto; border:0;">
+            </td>
+          </tr>
 
-    </table>
-   </td></tr>
+          <!-- Footer -->
+          <tr>
+            <td class="tr-pad" align="center" style="padding:28px 36px 30px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+              <p style="font-family:Georgia, serif; font-style:italic; font-size:14px; color:#8a8578; margin:0 0 8px;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 10px;">
+                <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-1" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+              </p>
+              <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you started a free trial signup at anywherelearning.co.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
   </table>
-
 </body>
 </html>

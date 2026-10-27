@@ -5,6 +5,7 @@
   Subject: Your Skills Map, every week (20% ends tomorrow)
   Preview: The 12 areas you circled are how the whole membership works.
   HOW TO USE: paste as a custom HTML template. Greeting only in the visual editor.
+  Design: "Trail map" (Oct 2026).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,109 +19,132 @@
     html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
     a { color:#588157; }
     @media (max-width: 620px) {
-      .q-card { border-radius:0 !important; }
-      .q-pad  { padding-left:26px !important; padding-right:26px !important; }
+      .tr-card { border-radius:0 !important; }
+      .tr-pad { padding-left:24px !important; padding-right:24px !important; }
+      .tr-h1 { font-size:27px !important; }
     }
   </style>
 </head>
-<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
-   <tr><td align="center" style="padding:36px 16px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="q-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="tr-card" style="width:600px; max-width:100%; background:#faf9f6; border:1px solid #d8d4c5; border-collapse:separate; border-radius:18px; overflow:hidden;">
 
-      <!-- HEADER -->
-      <tr><td class="q-pad" align="center" style="padding:34px 40px 0;">
-        <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
-        <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="200" style="display:inline-block; width:200px; max-width:78%; height:auto; border:0; margin:10px 0 0;">
-      </td></tr>
-      <tr><td class="q-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+          <!-- Header band -->
+          <tr>
+            <td class="tr-pad" bgcolor="#588157" style="background:#588157; padding:26px 36px 28px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                <td valign="middle"><img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" height="27" style="display:block; width:38px; height:auto; border:0;"></td>
+                <td valign="middle" align="right"><span style="display:inline-block; background:#e8c99a; color:#2f3a2e; font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.12em; padding:7px 13px; border-radius:999px;">SKILLS MAP OWNERS</span></td>
+              </tr></table>
+              <div class="tr-h1" style="font-family:Georgia, 'Times New Roman', serif; font-size:32px; line-height:1.15; color:#faf9f6; margin:20px 0 8px;">From the map to every week.</div>
+              <div style="font-size:15px; line-height:1.5; color:#dfe8dc;">The 12 areas you circled are how the whole membership works.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:9px;">Your Skills Map</div>
-        <div style="font-size:24px; font-weight:700; line-height:1.2; color:#2f3a2e;">From the map to every week</div>
-      </td></tr>
+          <!-- Greeting + intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 10px;">{{ message_content }}</div>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">The Skills Map shows you what matters at each age. The harder part is what comes next: what do you actually do on a Tuesday afternoon to work on Critical Thinking, or Self-Management?</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">That&rsquo;s what the membership is built for. Everything inside runs on the same 12 areas as your map, so the areas you circled become your plan. Here&rsquo;s what&rsquo;s waiting inside:</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:22px 40px 0;">
-        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
-      </td></tr>
+          <!-- Trail steps -->
+          <tr>
+            <td class="tr-pad" style="padding:24px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">1</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#c4836a;">THE ADVENTURE MAP</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;"><strong style="color:#2f3a2e;">Your next activity, already picked.</strong> Each kid gets their own illustrated trail. The next stop is always an activity that fits their age, from the area they&rsquo;ve done least so far. Want to lean into the areas you circled? Set them as focus areas and the trail follows. Every finished activity earns new gear for their explorer&rsquo;s backpack.</div>
+                    <img src="https://anywherelearning.co/email/skills-map-buyer-trail.jpg" alt="An illustrated trail with the next activity already picked" width="466" style="display:block; width:100%; max-width:466px; height:auto; border:1px solid #d8d4c5; border-radius:12px; margin-top:12px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">2</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#588157;">THE LIBRARY</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;"><strong style="color:#2f3a2e;">123 activities, sorted by the map.</strong> Filter by any of the 12 areas and by age. Every guide walks you through your part and your kid&rsquo;s part, step by step, so you can open it and start the same day.</div>
+                    <img src="https://anywherelearning.co/email/skills-map-buyer-library.jpg" alt="The library, filtered by the 12 skill areas" width="466" style="display:block; width:100%; max-width:466px; height:auto; border:1px solid #d8d4c5; border-radius:12px; margin-top:12px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">3</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#8b7355;">THIS MONTH</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;"><strong style="color:#2f3a2e;">A new focus every month.</strong> Each month, one area of the map gets the spotlight with six activities, plus a seasonal set, books to read together, and one family challenge to try all month.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#8b7355; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">4</div></td>
+                  <td valign="top" style="padding:3px 0 4px 16px; border-left:2px solid transparent;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#8b7355;">THE LEARNING RECORD</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;"><strong style="color:#2f3a2e;">Watch the map fill in.</strong> Every activity you finish lands in your kid&rsquo;s record on its own, sorted into the 12 areas. You see which areas are growing and which ones need a turn. When you need it, print it as a portfolio.</div>
+                    <img src="https://anywherelearning.co/email/skills-map-buyer-record.jpg" alt="A learning record showing coverage across the 12 areas" width="466" style="display:block; width:100%; max-width:466px; height:auto; border:1px solid #d8d4c5; border-radius:12px; margin-top:12px;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:6px 40px 0;">
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">The Skills Map shows you what matters at each age. The harder part is what comes next: what do you actually do on a Tuesday afternoon to work on Critical Thinking, or Self-Management?</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">That&rsquo;s what the membership is built for. Everything inside runs on the same 12 areas as your map, so the areas you circled become your plan.</p>
-<p style="font-size:16px; line-height:1.65; color:#2f3a2e; font-weight:700; margin:0 0 14px;">Here&rsquo;s what&rsquo;s waiting inside:</p>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 14px; background:#ffffff; border:1px solid #e6e1d4; border-left:4px solid #588157; border-radius:10px;">
-          <tr><td style="padding:18px 20px 18px;">
-            <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; color:#588157; margin-bottom:6px;">The Adventure Map</div>
-            <div style="font-size:17px; font-weight:700; line-height:1.3; color:#2f3a2e; margin-bottom:6px;">Your next activity, already picked</div>
-            <div style="font-size:15px; line-height:1.6; color:#4b5563;">Each kid gets their own illustrated trail. The next stop is always an activity that fits their age, from the area they&rsquo;ve done least so far. Want to lean into the areas you circled? Set them as focus areas and the trail follows. Every finished activity earns new gear for their explorer&rsquo;s backpack.</div>
-          
-            <img src="https://anywherelearning.co/email/skills-map-buyer-trail.jpg" alt="An illustrated trail with the next activity already picked" width="476" style="display:block; width:100%; max-width:476px; height:auto; border:1px solid #e6e1d4; border-radius:8px; margin:14px 0 0;">
-          </td></tr>
+          <!-- Bridge -->
+          <tr>
+            <td class="tr-pad" style="padding:24px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">The map tells you where you&rsquo;re going. The membership walks you there, one activity at a time.</p>
+            </td>
+          </tr>
+
+          <!-- Owner offer -->
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td align="center" style="padding:22px 22px 20px; font-size:15px; line-height:1.6; color:#4b5563;"><div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#3d5c3b; margin-bottom:8px;">SKILLS MAP OWNERS &middot; ENDS TOMORROW</div>
+                  <div style="font-family:Georgia, 'Times New Roman', serif; font-size:24px; line-height:1.25; color:#2f3a2e; margin-bottom:8px;">20% off your first year</div>
+                  <div style="font-size:15px; line-height:1.6; color:#4b5563;">Start with 7 days free. Nothing is charged today.</div></td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:22px 36px 4px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#2f3a2e" style="background:#2f3a2e; border-radius:12px;">
+                  <a href="https://anywherelearning.co/map-offer?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="display:inline-block; padding:16px 36px; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start my 7 free days &rarr;</a>
+                </td>
+              </tr></table>
+              <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">Your 20% is applied automatically. Yearly plan.</div>
+            </td>
+          </tr>
+
+          <!-- Sign-off -->
+          <tr>
+            <td class="tr-pad" style="padding:26px 36px 0;">
+              <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="130" style="display:block; width:130px; height:auto; border:0;">
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="tr-pad" align="center" style="padding:28px 36px 30px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+              <p style="font-family:Georgia, serif; font-style:italic; font-size:14px; color:#8a8578; margin:0 0 8px;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 10px;">
+                <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+              </p>
+              <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you bought The Future-Ready Skills Map at anywherelearning.co.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+            </td>
+          </tr>
+
         </table>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 14px; background:#ffffff; border:1px solid #e6e1d4; border-left:4px solid #c4836a; border-radius:10px;">
-          <tr><td style="padding:18px 20px 18px;">
-            <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; color:#c4836a; margin-bottom:6px;">The library</div>
-            <div style="font-size:17px; font-weight:700; line-height:1.3; color:#2f3a2e; margin-bottom:6px;">123 activities, sorted by the map</div>
-            <div style="font-size:15px; line-height:1.6; color:#4b5563;">Filter by any of the 12 areas and by age. Every guide walks you through your part and your kid&rsquo;s part, step by step, so you can open it and start the same day.</div>
-          
-            <img src="https://anywherelearning.co/email/skills-map-buyer-library.jpg" alt="The library, filtered by the 12 skill areas" width="476" style="display:block; width:100%; max-width:476px; height:auto; border:1px solid #e6e1d4; border-radius:8px; margin:14px 0 0;">
-          </td></tr>
-        </table>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 14px; background:#ffffff; border:1px solid #e6e1d4; border-left:4px solid #d4a373; border-radius:10px;">
-          <tr><td style="padding:18px 20px 18px;">
-            <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; color:#d4a373; margin-bottom:6px;">This Month</div>
-            <div style="font-size:17px; font-weight:700; line-height:1.3; color:#2f3a2e; margin-bottom:6px;">A new focus every month</div>
-            <div style="font-size:15px; line-height:1.6; color:#4b5563;">Each month, one area of the map gets the spotlight with six activities, plus a seasonal set, books to read together, and one family challenge to try all month.</div>
-          </td></tr>
-        </table>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 14px; background:#ffffff; border:1px solid #e6e1d4; border-left:4px solid #8b7355; border-radius:10px;">
-          <tr><td style="padding:18px 20px 18px;">
-            <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; color:#8b7355; margin-bottom:6px;">The Learning Record</div>
-            <div style="font-size:17px; font-weight:700; line-height:1.3; color:#2f3a2e; margin-bottom:6px;">Watch the map fill in</div>
-            <div style="font-size:15px; line-height:1.6; color:#4b5563;">Every activity you finish lands in your kid&rsquo;s record on its own, sorted into the 12 areas. You see which areas are growing and which ones need a turn. When you need it, print it as a portfolio.</div>
-          
-            <img src="https://anywherelearning.co/email/skills-map-buyer-record.jpg" alt="A learning record showing coverage across the 12 areas" width="476" style="display:block; width:100%; max-width:476px; height:auto; border:1px solid #e6e1d4; border-radius:8px; margin:14px 0 0;">
-          </td></tr>
-        </table>
-
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px; margin-top:8px;">The map tells you where you&rsquo;re going. The membership walks you there, one activity at a time.</p>
-      </td></tr>
-
-      <tr><td class="q-pad" style="padding:10px 40px 0;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#eef2ea; border:1px solid #c9d3be; border-radius:12px;">
-          <tr><td align="center" style="padding:22px 22px 20px; text-align:center;">
-            <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#3d5c3b; margin-bottom:8px;">Skills Map owners &middot; ends tomorrow</div>
-            <div style="font-size:20px; font-weight:700; line-height:1.3; color:#2f3a2e; margin-bottom:8px;">20% off your first year</div>
-            <div style="font-size:15px; line-height:1.6; color:#4b5563; margin-bottom:18px;">Start with 7 days free. Nothing is charged today.</div>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
-              <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-                <a href="https://anywherelearning.co/map-offer?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="display:inline-block; padding:16px 34px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start my 14 free days &rarr;</a>
-              </td>
-            </tr></table>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:11px;">Your 20% is applied automatically. Yearly plan.</div>
-          </td></tr>
-        </table>
-      </td></tr>
-
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
-        <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
-      </td></tr>
-
-      <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
-        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
-        <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
-        <p style="font-size:13px; margin:0 0 12px;">
-          <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=skills-map-buyer-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
-        </p>
-        <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you bought The Future-Ready Skills Map at anywherelearning.co.<br>
-          <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
-      </td></tr>
-
-    </table>
-   </td></tr>
+      </td>
+    </tr>
   </table>
-
 </body>
 </html>

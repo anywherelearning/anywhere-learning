@@ -6,6 +6,7 @@
 
   PERSONALIZED: uses {{ subscriber.last_guide }} so it names whichever guide
   they actually took. Falls back to the 7-day guide, so it is never blank.
+  Design: "Trail map" (Oct 2026).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,98 +20,141 @@
     html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
     a { color:#588157; }
     @media (max-width: 620px) {
-      .lm-card { border-radius:0 !important; }
-      .lm-pad  { padding-left:26px !important; padding-right:26px !important; }
+      .tr-card { border-radius:0 !important; }
+      .tr-pad { padding-left:24px !important; padding-right:24px !important; }
+      .tr-h1 { font-size:27px !important; }
     }
   </style>
 </head>
-<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
     <tr>
-      <td align="center" style="padding:36px 16px;">
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="tr-card" style="width:600px; max-width:100%; background:#faf9f6; border:1px solid #d8d4c5; border-collapse:separate; border-radius:18px; overflow:hidden;">
 
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="lm-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
-
-          <!-- HEADER -->
+          <!-- Header band -->
           <tr>
-            <td class="lm-pad" align="center" style="padding:34px 40px 0;">
-              <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
-              <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="222" height="34" style="display:inline-block; width:222px; max-width:80%; height:auto; border:0; margin:10px 0 0;">
-            </td>
-          </tr>
-          <tr><td class="lm-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
-
-          <!-- HOOK -->
-          <tr>
-            <td class="lm-pad" style="padding:26px 40px 0;">
-              <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:10px;">When they want the next one</div>
-              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 8px;">{{ message_content }}</div>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">By now you've had a go at <strong style="color:#2f3a2e;">{{ subscriber.last_guide }}</strong>. One guide carries you a surprisingly long way, right up until your kid finishes it and looks at you for the next thing.</p>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">That gap is exactly why I built the full library. It's everything one guide hints at, just a whole lot more of it.</p>
-            </td>
-          </tr>
-
-          <!-- LIBRARY IMAGE -->
-          <tr>
-            <td align="center" style="padding:18px 40px 6px;">
-              <img src="https://anywherelearning.co/email-library-hero.png" alt="A fan of Anywhere Learning activities and the Future-Ready Skills Map" width="440" style="display:inline-block; width:100%; max-width:440px; height:auto; border:0;">
-            </td>
-          </tr>
-
-          <!-- BODY -->
-          <tr>
-            <td class="lm-pad" style="padding:14px 40px 0;">
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;">Inside you'll find <strong style="color:#2f3a2e;">120+ guided activities</strong> across twelve life-skill areas, the stuff school tends to skip:</p>
-
-              <!-- CATEGORY BOX -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#eef2ec; border-radius:12px;"><tr>
-                <td align="center" style="padding:18px 22px; font-size:15px; line-height:2; color:#3d5c3b; font-weight:600; text-align:center;">
-                  Reading &amp; Media&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Writing&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Real-World Math&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Critical Thinking&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;AI &amp; Digital&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Communication&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Emotional Intelligence&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Self-Management&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Creativity &amp; Making&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Citizenship &amp; Character&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Life Skills&nbsp;&nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp;&nbsp;Physical &amp; Outdoor
-                </td>
-              </tr></table>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:20px 0 18px;">Every activity comes in three levels, so your six year old and your eleven year old do the same thing at the same table without anyone feeling lost or bored. That's the whole idea: one activity, everyone in, less work for you.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;">But the activities are the easy part. What you're really getting is everything around them.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">You stop choosing.</strong> Tell it how much time you've got and what you're hoping for, and it picks. No scrolling a library at 9pm deciding on nothing.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">Each month is already set up.</strong> A fresh set pulled together at the start of every month, plus one family challenge to take on together.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 12px;"><strong style="color:#2f3a2e;">It keeps the record for you.</strong> Everything your family finishes gathers itself into a portfolio, one per kid, that you can print any time. You never have to remember what you did back in March.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 18px;"><strong style="color:#2f3a2e;">And your kids get a map.</strong> Most families walk one trail together, everyone reaching each milestone side by side. Every activity you finish becomes a stop behind you and earns a piece of gear for the backpack. It turns out kids will do a lot for a piece of gear.</p>
-
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">Plus the <strong style="color:#2f3a2e;">Future-Ready Skills Map</strong>, showing which skills to focus on at which age. New activities every quarter. Everything opens on any device, follows along step by step, and works year after year. You can try the whole thing free for a week.</p>
-
-              <!-- CTA -->
+            <td class="tr-pad" bgcolor="#588157" style="background:#588157; padding:26px 36px 28px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-                <td align="center" style="padding:26px 0 6px;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-                    <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-                      <a href="https://anywherelearning.co/start-trial?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-3" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">See what's inside</a>
-                    </td>
-                  </tr></table>
+                <td valign="middle"><img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" height="27" style="display:block; width:38px; height:auto; border:0;"></td>
+                <td valign="middle" align="right"><span style="display:inline-block; background:#e8c99a; color:#2f3a2e; font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.12em; padding:7px 13px; border-radius:999px;">THE LIBRARY</span></td>
+              </tr></table>
+              <div class="tr-h1" style="font-family:Georgia, 'Times New Roman', serif; font-size:32px; line-height:1.15; color:#faf9f6; margin:20px 0 8px;">One guide was just the start.</div>
+              <div style="font-size:15px; line-height:1.5; color:#dfe8dc;">For when they finish it and look at you for the next one.</div>
+            </td>
+          </tr>
+
+          <!-- Greeting + intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 10px;">{{ message_content }}</div>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">By now you've had a go at <strong style="color:#2f3a2e;">{{ subscriber.last_guide }}</strong>. One guide carries you a surprisingly long way, right up until your kid finishes it and looks at you for the next thing.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 0px;">That gap is exactly why I built the full library. It's everything one guide hints at, just a whole lot more of it.</p>
+            </td>
+          </tr>
+
+          <!-- Visual -->
+          <tr>
+            <td align="center" class="tr-pad" style="padding:18px 36px 0;">
+              <img src="https://anywherelearning.co/email-library-hero-v2.jpg" alt="A fan of Anywhere Learning activities and the Future-Ready Skills Map" width="440" style="display:inline-block; width:100%; max-width:440px; height:auto; border:0;">
+            </td>
+          </tr>
+
+          <!-- Twelve areas -->
+          <tr>
+            <td class="tr-pad" style="padding:20px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 14px;">Inside you'll find <strong style="color:#2f3a2e;">120+ guided activities</strong> across twelve life-skill areas, the stuff school tends to skip:</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td align="center" style="padding:16px 20px; font-size:15px; line-height:1.6; color:#4b5563; text-align:center; font-weight:600; color:#3d5c3b; line-height:2;"><span style="white-space:nowrap;">Reading &amp; Media</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Writing</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Real-World Math</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Critical Thinking</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">AI &amp; Digital</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Communication</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Emotional Intelligence</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Self-Management</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Creativity &amp; Making</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Citizenship &amp; Character</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Life Skills</span> &nbsp;<span style="color:#d4a373;">&middot;</span>&nbsp; <span style="white-space:nowrap;">Physical &amp; Outdoor</span></td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Levels -->
+          <tr>
+            <td class="tr-pad" style="padding:20px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Every activity comes in three levels, so your six year old and your eleven year old do the same thing at the same table without anyone feeling lost or bored. One activity, everyone in, less work for you.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 0px;">But the activities are the easy part. What you're really getting is everything around them.</p>
+            </td>
+          </tr>
+
+          <!-- Trail steps -->
+          <tr>
+            <td class="tr-pad" style="padding:24px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">1</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#c4836a;">YOU STOP CHOOSING</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">Tell it how much time you've got and what you're hoping for, and it picks. No scrolling a library at 9pm deciding on nothing.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">2</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#588157;">EACH MONTH IS SET UP</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">A fresh set pulled together at the start of every month, plus one family challenge to take on together.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">3</div></td>
+                  <td valign="top" style="padding:3px 0 20px 16px; border-left:2px dashed #d8d4c5;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#8b7355;">IT KEEPS THE RECORD</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">Everything your family finishes gathers itself into a portfolio, one per kid, that you can print any time. You never have to remember what you did back in March.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="46" valign="top"><div style="width:34px; height:34px; border-radius:50%; background:#3d5c3b; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">4</div></td>
+                  <td valign="top" style="padding:3px 0 4px 16px; border-left:2px solid transparent;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.14em; color:#3d5c3b;">YOUR KIDS GET A MAP</div>
+                    <div style="font-size:15.5px; line-height:1.6; color:#4b5563; margin-top:5px;">Most families walk one trail together. Every activity you finish becomes a stop behind you and earns a piece of gear for the backpack. It turns out kids will do a lot for a piece of gear.</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Skills Map -->
+          <tr>
+            <td class="tr-pad" style="padding:24px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td align="left" style="padding:16px 20px; font-size:15px; line-height:1.6; color:#4b5563; text-align:left;"><strong style="color:#2f3a2e;">Plus the Future-Ready Skills Map,</strong> showing which skills to focus on at which age. New activities every quarter. Everything opens on any device and works year after year.</td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Trial line -->
+          <tr>
+            <td class="tr-pad" style="padding:20px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 0px;">You can try the whole thing free for a week.</p>
+            </td>
+          </tr>
+
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:22px 36px 4px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#2f3a2e" style="background:#2f3a2e; border-radius:12px;">
+                  <a href="https://anywherelearning.co/start-trial?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-3" style="display:inline-block; padding:16px 36px; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">See what's inside &rarr;</a>
                 </td>
               </tr></table>
             </td>
           </tr>
 
-          <!-- SIGN-OFF -->
+          <!-- Sign-off -->
           <tr>
-            <td class="lm-pad" style="padding:22px 40px 0;">
+            <td class="tr-pad" style="padding:26px 36px 0;">
               <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">More soon,</p>
-              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="110" height="38" style="display:block; width:110px; height:auto; border:0;">
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="130" style="display:block; width:130px; height:auto; border:0;">
             </td>
           </tr>
 
-          <!-- FOOTER -->
+          <!-- Footer -->
           <tr>
-            <td class="lm-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
-              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
-              <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
-              <p style="font-size:13px; margin:0 0 12px;">
+            <td class="tr-pad" align="center" style="padding:28px 36px 30px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+              <p style="font-family:Georgia, serif; font-style:italic; font-size:14px; color:#8a8578; margin:0 0 8px;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 10px;">
                 <a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-3" style="color:#588157; text-decoration:none; font-weight:600;">Free idea lists</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-3" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=lead-3" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
               </p>
               <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you grabbed the free guide.<br>
@@ -119,10 +163,8 @@
           </tr>
 
         </table>
-
       </td>
     </tr>
   </table>
-
 </body>
 </html>

@@ -5,6 +5,7 @@
   Preview: You need a reason to do math. Here's what that looks like.
 
   HOW TO USE: same as email 1. Greeting only in the visual editor.
+  Design: "Trail map" (Oct 2026). Green header band, framed guide cover, dark button.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,69 +19,104 @@
     html, body { margin:0; padding:0; background:#ebe9e2; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
     a { color:#588157; }
     @media (max-width: 620px) {
-      .q-card { border-radius:0 !important; }
-      .q-pad  { padding-left:26px !important; padding-right:26px !important; }
+      .tr-card { border-radius:0 !important; }
+      .tr-pad { padding-left:24px !important; padding-right:24px !important; }
+      .tr-h1 { font-size:27px !important; }
     }
   </style>
 </head>
-<body style="background-color:#ebe9e2; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
-
+<body style="background-color:#ebe9e2; margin:0; padding:0;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ebe9e2" style="background:#ebe9e2;">
-   <tr><td align="center" style="padding:36px 16px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="q-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:14px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13), 0 2px 8px rgba(60,50,30,0.05); color:#2f3a2e;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="tr-card" style="width:600px; max-width:100%; background:#faf9f6; border:1px solid #d8d4c5; border-collapse:separate; border-radius:18px; overflow:hidden;">
 
-      <!-- HEADER -->
-      <tr><td class="q-pad" align="center" style="padding:34px 40px 0;">
-        <img src="https://anywherelearning.co/logo-icon-transparent.png" alt="" width="40" height="40" style="display:inline-block; height:40px; width:auto; border:0;"><br>
-        <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="200" style="display:inline-block; width:200px; max-width:78%; height:auto; border:0; margin:10px 0 0;">
-      </td></tr>
-      <tr><td class="q-pad" style="padding:22px 40px 0;"><div style="height:1px; line-height:1px; font-size:0; background:#e6d3b3;">&nbsp;</div></td></tr>
+          <!-- Header band -->
+          <tr>
+            <td class="tr-pad" bgcolor="#588157" style="background:#588157; padding:26px 36px 28px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+                <td valign="middle"><img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" height="27" style="display:block; width:38px; height:auto; border:0;"></td>
+                <td valign="middle" align="right"><span style="display:inline-block; background:#e8c99a; color:#2f3a2e; font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.12em; padding:7px 13px; border-radius:999px;">WHAT'S INSIDE</span></td>
+              </tr></table>
+              <div class="tr-h1" style="font-family:Georgia, 'Times New Roman', serif; font-size:32px; line-height:1.15; color:#faf9f6; margin:20px 0 8px;">A reason to do math.</div>
+              <div style="font-size:15px; line-height:1.5; color:#dfe8dc;">Here's what that looks like in real life.</div>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:9px;">What's inside</div>
-        <div style="font-size:24px; font-weight:700; line-height:1.2; color:#2f3a2e;">A reason to do math</div>
-      </td></tr>
+          <!-- Greeting + intro -->
+          <tr>
+            <td class="tr-pad" style="padding:28px 36px 0;">
+              <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 10px;">{{ message_content }}</div>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 14px;">After fifteen years as a teacher, here's the thing I'm most sure of: kids don't need more worksheets to learn math. They need a reason to do it.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">Take Party Planner Math, one of the guides in the library. Your kid plans a real party on a real budget. How many cups for twelve guests? Does the recipe need doubling? Is the big bag of chips actually cheaper? That's multiplication, division, scaling and comparing prices, and they work hard at it because it's their party and the money is real.</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:22px 40px 0;">
-        <div style="font-size:16px; line-height:1.65; color:#2f3a2e;">{{ message_content }}</div>
-      </td></tr>
+          <!-- Visual -->
+          <tr>
+            <td class="tr-pad" align="center" style="padding:22px 36px 0;">
+              <img src="https://anywherelearning.co/products/party-planner-math.jpg" alt="Party Planner Math guide" width="260" style="display:inline-block; width:260px; max-width:70%; height:auto; border:1px solid #d8d4c5; border-radius:12px;">
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:6px 40px 0;">
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">After fifteen years as a teacher, here's the thing I'm most sure of: kids don't need more worksheets to learn math. They need a reason to do it.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Take Party Planner Math, one of the guides in the library. Your kid plans a real party on a real budget. How many cups for twelve guests? Does the recipe need doubling? Is the big bag of chips actually cheaper? That's multiplication, division, scaling and comparing prices, and they work hard at it because it's their party and the money is real.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Every activity in the library works like that. Real math, real writing, real planning, tucked inside something your family actually does together. And the life skills (budgeting, planning ahead, making trade-offs) come along for free.</p>
-<p align="center" style="margin:6px 0 18px;"><img src="https://anywherelearning.co/products/party-planner-math.jpg" alt="Party Planner Math guide" width="260" style="display:inline-block; width:260px; max-width:70%; height:auto; border:0; border-radius:8px;"></p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">You open a guide on any device and follow the steps with your kid. No printing, no prep night, and each one has levels so siblings can do it together.</p>
-<p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Your free trial is still there whenever you want it.</p>
-      </td></tr>
+          <!-- Body -->
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 14px;">Every activity in the library works like that. Real math, real writing, real planning, tucked inside something your family actually does together. And the life skills (budgeting, planning ahead, making trade-offs) come along for free.</p>
+            </td>
+          </tr>
 
-      <tr><td align="center" style="padding:22px 40px 6px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-            <a href="https://anywherelearning.co/fall?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start your free trial &rarr;</a>
-          </td>
-        </tr></table>
-        <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7 days free. Cancel anytime.</div>
-      </td></tr>
+          <!-- How it works note -->
+          <tr>
+            <td class="tr-pad" style="padding:8px 36px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eef2ec" style="background:#eef2ec; border-radius:12px;"><tr>
+                <td style="padding:16px 20px; font-size:15px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">Open and follow along.</strong> You open a guide on any device and follow the steps with your kid. No printing, no prep night, and each one has levels so siblings can do it together.</td>
+              </tr></table>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" style="padding:24px 40px 0;">
-        <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
-        <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="108" style="display:block; width:108px; height:auto; border:0;">
-      </td></tr>
+          <tr>
+            <td class="tr-pad" style="padding:22px 36px 0;">
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0;">Your free trial is still there whenever you want it.</p>
+            </td>
+          </tr>
 
-      <tr><td class="q-pad" align="center" style="padding:30px 40px 40px; text-align:center;">
-        <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:20px;">&nbsp;</div>
-        <p style="font-size:13px; color:#8a8578; margin:0 0 8px; font-style:italic;">Meaningful Learning, Wherever You Are</p>
-        <p style="font-size:13px; margin:0 0 12px;">
-          <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
-        </p>
-        <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you started a free trial signup at anywherelearning.co.<br>
-          <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
-      </td></tr>
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:26px 36px 4px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#2f3a2e" style="background:#2f3a2e; border-radius:12px;">
+                  <a href="https://anywherelearning.co/fall?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="display:inline-block; padding:16px 36px; font-size:16px; font-weight:700; color:#faf9f6; text-decoration:none; line-height:1;">Start your free trial &rarr;</a>
+                </td>
+              </tr></table>
+              <div style="font-size:12.5px; color:#8a8578; margin-top:11px;">7 days free. Cancel anytime.</div>
+            </td>
+          </tr>
 
-    </table>
-   </td></tr>
+          <!-- Sign-off -->
+          <tr>
+            <td class="tr-pad" style="padding:26px 36px 0;">
+              <p style="font-size:16px; line-height:1.6; color:#4b5563; margin:0 0 6px;">Talk soon,</p>
+              <img src="https://anywherelearning.co/email-fn-amelie.png" alt="Amelie" width="130" style="display:block; width:130px; height:auto; border:0;">
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="tr-pad" align="center" style="padding:28px 36px 30px; text-align:center;">
+              <div style="height:1px; line-height:1px; font-size:0; background:#e3e0d6; margin-bottom:18px;">&nbsp;</div>
+              <p style="font-family:Georgia, serif; font-style:italic; font-size:14px; color:#8a8578; margin:0 0 8px;">Meaningful Learning, Wherever You Are</p>
+              <p style="font-size:13px; margin:0 0 10px;">
+                <a href="https://anywherelearning.co/blog?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Blog</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co/ideas?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Activity ideas</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://anywherelearning.co?utm_source=kit&amp;utm_medium=email&amp;utm_campaign=checkout-abandoned-2" style="color:#588157; text-decoration:none; font-weight:600;">Website</a>
+              </p>
+              <p style="font-size:12px; color:#a09a8c; margin:0; line-height:1.7;">You're getting this because you started a free trial signup at anywherelearning.co.<br>
+                <a href="{{ unsubscribe_url }}" style="color:#a09a8c; text-decoration:underline;">Unsubscribe</a> any time, no hard feelings.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
   </table>
-
 </body>
 </html>
