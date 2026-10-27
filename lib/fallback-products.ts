@@ -586,7 +586,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrpmAkIBECpwGmgi9i7P74",
     blobUrl: "",
     imageUrl: "/products/budget-challenge.jpg",
-    previewFile: "Preview Real-world math - Real-Life Budget Challenge.pdf",
+    previewFile: "Preview Real-world math - Real-Life Budget Challenge v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
