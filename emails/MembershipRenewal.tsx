@@ -2,8 +2,6 @@ import {
   Body,
   Container,
   Head,
-  Heading,
-  Hr,
   Html,
   Img,
   Link,
@@ -30,21 +28,26 @@ interface Props {
 
 const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
 
+// Absolute, always-live host for email assets (never localhost).
+const SITE = 'https://anywherelearning.co';
+const LOGO_CREAM = `${SITE}/email-logo-cream.png`;
+
 /**
- * Membership renewal reminder — v2 design.
+ * Membership renewal reminder, "Trail map" design (Oct 2026).
  *
  * Sent 14 days before currentPeriodEnd by the daily cron at
  * /api/cron/renewal-reminders. Honest heads-up, not a sales pitch.
+ * (The 14 here is the annual renewal notice, unrelated to the 7-day trial.)
  *
- * Sections shipped in v1:
- *   - Brand header
- *   - Heads-up greeting + body
+ * Sections:
+ *   - Green header band with the days-to-renewal badge
+ *   - Heads-up body
  *   - Renewal summary card (date, card on file, what's renewing)
  *   - One-click sign-in CTA
- *   - "What's coming in year two" panel (hardcoded roadmap — edit per quarter)
+ *   - "What's coming in year two" trail (hardcoded roadmap, edit per quarter)
  *   - "Need to change something?" manage rows (Update card, Cancel)
- *   - Founder banner (if applicable)
- *   - Signoff + fine print + footer
+ *   - Founder aside (if applicable)
+ *   - Sign-off + fine print + footer
  *
  * Deferred for a later sprint:
  *   - Year-in-review stats (needs progress tracking in DB; localStorage only today)
@@ -61,8 +64,8 @@ export default function MembershipRenewal({
 }: Props) {
   const name = firstName?.trim() || 'there';
 
-  // Renewal date in two formats: full ("Wed, June 4 · 2026") for the
-  // summary card, short ("June 4") for the headline.
+  // Renewal date in two formats: full ("Wed, June 4") for the summary card,
+  // long ("Wednesday, June 4") for sentences.
   const dateObj = new Date(renewalDate);
   const fullDate = dateObj.toLocaleDateString('en-US', {
     weekday: 'short',
@@ -76,287 +79,284 @@ export default function MembershipRenewal({
     day: 'numeric',
   });
 
-  // Days from now until renewal — approximate (timezone-naive) but good
+  // Days from now until renewal, approximate (timezone-naive) but good
   // enough for the "14 days from today" microcopy.
   const daysFromNow = Math.max(
     1,
     Math.round((dateObj.getTime() - Date.now()) / (1000 * 60 * 60 * 24)),
   );
+  const daysLabel = daysFromNow === 1 ? '1 day' : `${daysFromNow} days`;
 
   const priceLabel = isFounderPhase ? '$99' : '$149';
   const rateLine = isFounderPhase ? '/year · founder rate' : '/year';
 
   return (
     <Html>
-      <Head>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
-        `}</style>
-      </Head>
+      <Head />
       <Preview>
         Your membership renews {sentenceDate}. A quick heads-up so it doesn&apos;t land out of nowhere.
       </Preview>
       <Body style={body}>
-        <Container style={envelope}>
+        <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={card}>
+            <tbody>
 
-          {/* ── Brand header ── */}
-          <div style={brandHead}>
-            <Img
-              src={`${baseUrl}/logo-icon-transparent.png`}
-              width="68"
-              height="49"
-              alt=""
-              style={brandIcon}
-            />
-            <Text style={brandName}>
-              anywhere <span style={brandItalic}>learning</span>
-            </Text>
-            <Text style={tagline}>
-              Hands-on activities for raising capable kids, ready for real life.
-            </Text>
-          </div>
+              {/* ── Header band ── */}
+              <tr>
+                <td style={band}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: 'middle' }}>
+                          <Img src={LOGO_CREAM} alt="Anywhere Learning" width="38" style={{ display: 'block', width: '38px', height: 'auto' }} />
+                        </td>
+                        <td style={{ verticalAlign: 'middle', textAlign: 'right' as const }}>
+                          <span style={badge}>RENEWS IN {daysLabel.toUpperCase()}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={h1}>Hi {name}, your membership renews in {daysLabel}.</div>
+                  <div style={subline}>A friendly heads-up, so the charge never lands out of nowhere.</div>
+                </td>
+              </tr>
 
-          {/* ── A friendly heads-up ── */}
-          <div style={pad}>
-            <Text style={eyebrow}>
-              <span style={eyebrowRule} />A friendly heads-up
-            </Text>
-            <Heading style={h1Greet}>
-              Hi {name}, your membership renews{' '}
-              <span style={italicAccent}>in {daysFromNow === 1 ? '1 day' : `${daysFromNow} days`}.</span>
-            </Heading>
-            <Text style={p}>
-              I never want a renewal charge to land out of nowhere, so here&apos;s a heads-up. On{' '}
-              <strong style={strongInk}>{sentenceDate}</strong> your Anywhere Learning membership
-              renews for another year{isFounderPhase ? ', at the founder rate you locked in when you joined' : ''}.
-            </Text>
-            <Text style={pTight}>
-              Nothing for you to do, unless you&apos;d like to change something. No awkwardness,
-              no buried buttons. Everything you need is below.
-            </Text>
-          </div>
+              {/* ── Intro ── */}
+              <tr>
+                <td style={{ padding: '28px 36px 0' }}>
+                  <Text style={p}>
+                    On <strong style={strongInk}>{sentenceDate}</strong> your Anywhere Learning
+                    membership renews for another year
+                    {isFounderPhase ? ', at the founder rate you locked in when you joined' : ''}.
+                  </Text>
+                  <Text style={{ ...p, margin: '14px 0 0' }}>
+                    Nothing for you to do, unless you&apos;d like to change something. No awkwardness,
+                    no buried buttons. Everything you need is below.
+                  </Text>
+                </td>
+              </tr>
 
-          {/* ── Renewal summary card ── */}
-          <div style={summaryWrap}>
-            <div style={summary}>
-              {/* Row 1: Renews on + amount */}
-              <table role="presentation" cellPadding={0} cellSpacing={0} width="100%" style={summaryRow}>
-                <tbody>
-                  <tr>
-                    <td style={summaryLeftCol}>
-                      <Text style={summaryKey}>Renews on</Text>
-                      <Text style={summaryValue}>
-                        {fullDate}{' '}
-                        <span style={summaryValueItalic}>· {year}</span>
-                      </Text>
-                      <Text style={summarySmall}>
-                        {daysFromNow === 1 ? '1 day from today' : `${daysFromNow} days from today`}
-                      </Text>
-                    </td>
-                    <td style={summaryRightCol}>
-                      <Text style={summaryAmount}>{priceLabel}</Text>
-                      <Text style={summaryAmountSmall}>{rateLine}</Text>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              {/* ── Renewal summary card ── */}
+              <tr>
+                <td style={{ padding: '24px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={summaryCard}>
+                    <tbody>
+                      {/* Row 1: Renews on + amount */}
+                      <tr>
+                        <td style={summaryCell}>
+                          <div style={{ ...label, color: C_MUTED }}>RENEWS ON</div>
+                          <div style={summaryValue}>
+                            {fullDate} <span style={{ color: C_FOREST }}>· {year}</span>
+                          </div>
+                          <div style={summarySmall}>{daysLabel} from today</div>
+                        </td>
+                        <td style={{ ...summaryCell, textAlign: 'right' as const, whiteSpace: 'nowrap' as const }}>
+                          <div style={summaryAmount}>{priceLabel}</div>
+                          <div style={summarySmall}>{rateLine}</div>
+                        </td>
+                      </tr>
 
-              {/* Row 2: Card on file */}
-              {cardLast4 && (
-                <table role="presentation" cellPadding={0} cellSpacing={0} width="100%" style={summaryRowMid}>
-                  <tbody>
-                    <tr>
-                      <td style={summaryLeftCol}>
-                        <Text style={summaryKey}>Card on file</Text>
-                        <Text style={summaryCardLine}>
-                          <span style={cardBrandPill}>{cardBrand.toUpperCase()}</span>
-                          {' '}•••• {cardLast4}
-                          {cardExp ? ` · expires ${cardExp}` : ''}
-                        </Text>
-                      </td>
-                      <td style={summaryRightColLink}>
-                        <Link href={manageUrl} style={summaryLink}>
-                          Update card →
-                        </Link>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      {/* Row 2: Card on file */}
+                      {cardLast4 && (
+                        <tr>
+                          <td style={summaryCellTop}>
+                            <div style={{ ...label, color: C_MUTED }}>CARD ON FILE</div>
+                            <div style={summaryCardLine}>
+                              <span style={cardBrandPill}>{cardBrand.toUpperCase()}</span>
+                              {' '}•••• {cardLast4}
+                              {cardExp ? ` · expires ${cardExp}` : ''}
+                            </div>
+                          </td>
+                          <td style={{ ...summaryCellTop, textAlign: 'right' as const, whiteSpace: 'nowrap' as const }}>
+                            <Link href={manageUrl} style={textLink}>Update card &rarr;</Link>
+                          </td>
+                        </tr>
+                      )}
+
+                      {/* Row 3: What's renewing */}
+                      <tr>
+                        <td colSpan={2} style={summaryCellTop}>
+                          <div style={{ ...label, color: C_MUTED }}>WHAT&apos;S RENEWING</div>
+                          <div style={{ ...summaryCardLine, lineHeight: 1.5 }}>
+                            Full library · your family&apos;s trail and record · quarterly drops · Skills Map
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              {/* ── One-click sign-in CTA ── */}
+              <tr>
+                <td style={{ padding: '26px 36px 0', textAlign: 'center' as const }}>
+                  <div style={{ ...label, color: C_FOREST }}>KEEP USING YOUR MEMBERSHIP</div>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '14px auto 0' }}>
+                    <tbody>
+                      <tr>
+                        <td style={btnCell}>
+                          <Link href={`${baseUrl}/account/home`} style={btn}>Continue our adventure &rarr;</Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={micro}>Signs you straight in. No password needed.</div>
+                </td>
+              </tr>
+
+              {/* ── What's coming in year two ──
+                  EDITORIAL NOTE: hardcoded roadmap. Refresh these 3 stops each
+                  quarter (or whenever the renewal cohort changes) so they reflect
+                  what's actually shipping next. Keep one line each. */}
+              <tr>
+                <td style={{ padding: '32px 36px 0' }}>
+                  <div style={{ ...label, color: C_MUTED }}>WHAT&apos;S COMING IN YEAR TWO</div>
+                  <div style={h2}>Plenty of new ground ahead.</div>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: '18px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <TrailStep n={1} dot={C_TERRA} labelColor={C_TERRA} title="40+ NEW ACTIVITIES">
+                        Four quarterly drops, included with your membership. The next drop lands
+                        within weeks.
+                      </TrailStep>
+                      <TrailStep n={2} dot={C_FOREST} labelColor={C_FOREST} title="NEW CATEGORIES IN DEVELOPMENT">
+                        Shaped by what members keep asking for.
+                      </TrailStep>
+                      <TrailStep n={3} dot={C_GOLD} labelColor={C_EARTH} title="THE BLOG KEEPS GROWING" last>
+                        Real stories from our days, life-skills and parenting takes, no fluff.
+                      </TrailStep>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              {/* ── Need to change something? ── */}
+              <tr>
+                <td style={{ padding: '32px 36px 0' }}>
+                  <div style={{ ...label, color: C_MUTED }}>NEED TO CHANGE SOMETHING?</div>
+                  <div style={h2}>No buried buttons, I promise.</div>
+                  <Text style={{ ...p, margin: '8px 0 0' }}>
+                    Whatever you need, I&apos;d rather make it easy than make it sticky.
+                  </Text>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={manageList}>
+                    <tbody>
+                      <tr>
+                        <td style={manageBodyCol}>
+                          <div style={manageName}>Update your card</div>
+                          <div style={manageDesc}>Card expiring or new number? Swap it in a few clicks.</div>
+                        </td>
+                        <td style={manageLinkCol}>
+                          <Link href={manageUrl} style={textLink}>Update card &rarr;</Link>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={manageBodyCol}>
+                          <div style={manageName}>Cancel my membership</div>
+                          <div style={manageDesc}>
+                            One click. No questions. No hard-feelings email. You keep access until{' '}
+                            {sentenceDate}.
+                          </div>
+                        </td>
+                        <td style={manageLinkCol}>
+                          <Link href={manageUrl} style={textLink}>Cancel &rarr;</Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              {/* ── Founder aside (conditional) ── */}
+              {isFounderPhase && (
+                <tr>
+                  <td style={{ padding: '24px 36px 0' }}>
+                    <table role="presentation" cellPadding={0} cellSpacing={0} style={aside}>
+                      <tbody>
+                        <tr>
+                          <td style={{ padding: '18px 20px' }}>
+                            <div style={{ ...label, color: C_FOREST }}>STILL LOCKED IN · FOUNDER RATE, YEAR 2</div>
+                            <div style={{ fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '6px', fontFamily: FONT_BODY }}>
+                              Renewing keeps your <strong style={strongInk}>$99/year</strong> for as long
+                              as you stay a member. New members are paying $149 now, your price
+                              doesn&apos;t move.
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
               )}
 
-              {/* Row 3: What's renewing */}
-              <div style={summaryRowLast}>
-                <Text style={summaryKey}>What&apos;s renewing</Text>
-                <Text style={summaryValueSmall}>
-                  Full library · your family&apos;s trail and record · quarterly drops · Skills Map
-                </Text>
-              </div>
-            </div>
-          </div>
+              {/* ── Sign-off ── */}
+              <tr>
+                <td style={{ padding: '26px 36px 0' }}>
+                  <Text style={{ ...p, margin: '0 0 6px' }}>xo,</Text>
+                  <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
+                </td>
+              </tr>
 
-          {/* ── One-click sign-in CTA ── */}
-          <div style={ctaCardWrap}>
-            <div style={ctaCard}>
-              <div style={ctaSeal}>✦</div>
-              <Text style={ctaLabel}>Keep using your membership</Text>
-              <Link href={`${baseUrl}/account/home`} style={btn}>
-                Continue our adventure →
-              </Link>
-              <Text style={ctaMicro}>Signs you straight in. No password needed.</Text>
-            </div>
-          </div>
-
-          {/* ── What's coming in year two ──
-              EDITORIAL NOTE: hardcoded roadmap. Refresh these 3 bullets each
-              quarter (or whenever the renewal cohort changes) so they reflect
-              what's actually shipping next. Keep one line each. */}
-          <div style={panelWrap}>
-            <div style={panel}>
-              <Text style={eyebrow}>
-                <span style={eyebrowRule} />What&apos;s coming in year two
-              </Text>
-              <Heading as="h2" style={h2}>
-                Plenty of{' '}
-                <span style={italicAccent}>new ground</span> ahead.
-              </Heading>
-              <Bullet icon="+" first>
-                <strong style={bulletStrong}>40+ new activities</strong>, four quarterly drops,
-                included with your membership. The next drop lands within weeks.
-              </Bullet>
-              <Bullet icon="★">
-                <strong style={bulletStrong}>New categories in development</strong>, shaped by
-                what members keep asking for.
-              </Bullet>
-              <Bullet icon="✎">
-                <strong style={bulletStrong}>The blog keeps growing</strong>, real stories from
-                our days, life-skills and parenting takes, no fluff.
-              </Bullet>
-            </div>
-          </div>
-
-          {/* ── Need to change something? ── */}
-          <div style={pad}>
-            <Text style={eyebrow}>
-              <span style={eyebrowRule} />Need to change something?
-            </Text>
-            <Heading as="h2" style={h2}>
-              No buried buttons,{' '}
-              <span style={italicAccent}>I promise.</span>
-            </Heading>
-            <Text style={pSmaller}>
-              Whatever you need, I&apos;d rather make it easy than make it sticky.
-            </Text>
-
-            <table role="presentation" cellPadding={0} cellSpacing={0} width="100%" style={manageList}>
-              <tbody>
-                <tr style={manageRow}>
-                  <td style={manageBodyCol}>
-                    <Text style={manageName}>Update your card</Text>
-                    <Text style={manageDesc}>
-                      Card expiring or new number? Swap it in a few clicks.
-                    </Text>
-                  </td>
-                  <td style={manageLinkCol}>
-                    <Link href={manageUrl} style={manageLink}>
-                      Update card →
+              {/* ── Footer ── */}
+              <tr>
+                <td style={{ padding: '28px 36px 30px', textAlign: 'center' as const }}>
+                  <div style={rule} />
+                  <div style={motto}>Meaningful Learning, Wherever You Are</div>
+                  <Text style={legal}>
+                    On {sentenceDate}, {year} your card{cardLast4 ? ` ending in ${cardLast4}` : ''} will
+                    be charged {priceLabel} USD for one year of Anywhere Learning membership
+                    {isFounderPhase ? ' at the founder rate' : ''}. You can update or cancel anytime
+                    from{' '}
+                    <Link href={manageUrl} style={legalLink}>
+                      your account settings
                     </Link>
-                  </td>
-                </tr>
-                <tr style={manageRowLast}>
-                  <td style={manageBodyCol}>
-                    <Text style={manageName}>Cancel my membership</Text>
-                    <Text style={manageDesc}>
-                      One click. No questions. No hard-feelings email. You keep access until{' '}
-                      {sentenceDate}.
-                    </Text>
-                  </td>
-                  <td style={manageLinkCol}>
-                    <Link href={manageUrl} style={manageLink}>
-                      Cancel →
-                    </Link>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                    {' '}before that date, and there&apos;s no charge on cancel.
+                  </Text>
+                </td>
+              </tr>
 
-          {/* ── Founder banner (conditional) ── */}
-          {isFounderPhase && (
-            <div style={founderWrap}>
-              <div style={founderBox}>
-                <div style={founderStamp}>Still locked in</div>
-                <Text style={founderHeadline}>Founder rate · year 2</Text>
-                <Text style={founderBody}>
-                  Renewing keeps your $99/year for as long as you stay a member. New members are
-                  paying $149 now, your price doesn&apos;t move.
-                </Text>
-              </div>
-            </div>
-          )}
-
-          {/* ── Signature ── */}
-          <div style={signoffBlock}>
-            <Text style={xo}>xo,</Text>
-            <Text style={nameSignoff}>Amelie</Text>
-            <Text style={signoffRole}>Founder · Anywhere Learning</Text>
-          </div>
-
-          <Hr style={dashHr} />
-
-          {/* ── Fine print ── */}
-          <Text style={legal}>
-            On {sentenceDate}, {year} your card{cardLast4 ? ` ending in ${cardLast4}` : ''} will
-            be charged {priceLabel} USD for one year of Anywhere Learning membership
-            {isFounderPhase ? ' at the founder rate' : ''}. You can update or cancel anytime
-            from{' '}
-            <Link href={manageUrl} style={legalLink}>
-              your account settings
-            </Link>
-            {' '}before that date, and there&apos;s no charge on cancel.
-          </Text>
-
-          {/* ── Footer ── */}
-          <div style={credit}>
-            <Text style={creditText}>
-              Anywhere Learning · <em style={creditItalic}>Built by Amelie</em> · Made in Nelson, BC
-            </Text>
-          </div>
-
+            </tbody>
+          </table>
         </Container>
       </Body>
     </Html>
   );
 }
 
-// ── Reusable: one "What's coming" bullet (matches MembershipWelcome shape) ──
-function Bullet({
-  icon,
-  first,
+// ── Reusable: one numbered trail stop with the dashed connector ──
+function TrailStep({
+  n,
+  dot,
+  labelColor,
+  title,
+  last,
   children,
 }: {
-  icon: string;
-  first?: boolean;
+  n: number;
+  dot: string;
+  labelColor: string;
+  title: string;
+  last?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <table
-      role="presentation"
-      cellPadding={0}
-      cellSpacing={0}
-      width="100%"
-      style={first ? bulletRowFirst : bulletRow}
-    >
-      <tbody>
-        <tr>
-          <td style={bulletIconCol}>
-            <div style={bulletDot}>{icon}</div>
-          </td>
-          <td style={bulletBodyCol}>
-            <Text style={bulletText}>{children}</Text>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <tr>
+      <td style={{ width: '46px', verticalAlign: 'top' }}>
+        <div style={{ ...stepDot, backgroundColor: dot }}>{n}</div>
+      </td>
+      <td
+        style={{
+          verticalAlign: 'top',
+          padding: last ? '3px 0 4px 16px' : '3px 0 20px 16px',
+          borderLeft: last ? '2px solid transparent' : `2px dashed ${C_RULE}`,
+        }}
+      >
+        <div style={{ ...label, color: labelColor }}>{title}</div>
+        <div style={stepBody}>{children}</div>
+      </td>
+    </tr>
   );
 }
 
@@ -371,525 +371,86 @@ MembershipRenewal.PreviewProps = {
   cardExp: '09/28',
 } satisfies Props;
 
-// ─────────────────────────────────────────────────────────────
-// Brand tokens — kept in sync with MembershipWelcome
-// ─────────────────────────────────────────────────────────────
+/* ── "Trail map" tokens (match QuizPlanEmail + the Kit sequence emails, Oct 2026) ── */
+const FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
+const FONT_DISPLAY = "Georgia, 'Times New Roman', serif";
+const FONT_MONO = "'Courier New', Courier, monospace";
 
-const FONT_BODY = '"DM Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif';
-const FONT_DISPLAY = '"DM Serif Display", Georgia, "Times New Roman", serif';
-const FONT_SCRIPT = '"Dancing Script", "Brush Script MT", cursive';
-
-const C_CREAM = '#FAF8F3';
-const C_CREAM_2 = '#F2EFE4';
-const C_SAGE_SOFT = '#E6EBDF';
-const C_SAGE_BORDER = '#C9D3BE';
-const C_INK = '#2D3A2E';
-const C_BODY = '#4F5A50';
-const C_MUTED = '#7B8378';
+const C_CARD = '#FAF9F6';
+const C_INK = '#2F3A2E';
+const C_BODY = '#4B5563';
+const C_MUTED = '#8A8578';
 const C_RULE = '#D8D4C5';
-const C_BEIGE_2 = '#C9C5B7';
 const C_FOREST = '#588157';
-const C_FOREST_DARK = '#3A5A40';
-const C_TERRA = '#C97B5C';
-const C_TERRA_DARK = '#7A3D24';
-const C_TERRA_SOFT = '#F2DECF';
+const C_TERRA = '#C4836A';
+const C_GOLD = '#D4A373';
+const C_EARTH = '#8B7355';
+const C_SAGE = '#EEF2EC';
 
-// ── Layout ──
-const body = {
-  backgroundColor: '#E9E5DC',
-  fontFamily: FONT_BODY,
-  margin: 0,
-  padding: '24px 12px',
-};
-
-const envelope = {
+const body = { backgroundColor: '#EBE9E2', fontFamily: FONT_BODY, margin: 0, padding: '32px 12px' };
+const card = {
   width: '100%',
-  maxWidth: '600px',
-  margin: '0 auto',
-  backgroundColor: C_CREAM,
+  borderCollapse: 'separate' as const,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
   overflow: 'hidden' as const,
 };
-
-// ── Brand header ──
-const brandHead = { textAlign: 'center' as const, padding: '36px 24px 8px' };
-const brandIcon = { display: 'block' as const, margin: '0 auto 12px' };
-const brandName = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '22px',
-  lineHeight: '1',
+const band = { backgroundColor: C_FOREST, padding: '26px 36px 28px', borderTopLeftRadius: '17px', borderTopRightRadius: '17px' };
+const badge = {
+  display: 'inline-block',
+  backgroundColor: '#E8C99A',
   color: C_INK,
-  margin: '0 0 6px',
-  letterSpacing: '-0.005em',
+  fontFamily: FONT_MONO,
+  fontSize: '12px',
+  fontWeight: 700,
+  letterSpacing: '0.12em',
+  padding: '7px 13px',
+  borderRadius: '999px',
 };
-const brandItalic = { fontStyle: 'italic' as const, color: C_FOREST };
-const tagline = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '14px',
-  color: C_MUTED,
-  margin: '0',
-};
-
-// ── Section padding ──
-const pad = { padding: '6px 36px 4px' };
-
-// ── Eyebrow ──
-const eyebrow = {
-  fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '11.5px',
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
-  color: C_FOREST_DARK,
-  margin: '24px 0 12px',
-  display: 'inline-flex' as const,
-  alignItems: 'center' as const,
-};
-const eyebrowRule = {
-  display: 'inline-block' as const,
-  width: '22px',
-  height: '1px',
-  backgroundColor: C_FOREST,
-  marginRight: '10px',
-  verticalAlign: 'middle' as const,
-};
-
-// ── Headlines ──
-const h1Greet = {
-  fontFamily: FONT_DISPLAY,
-  fontWeight: 400,
-  fontSize: '32px',
-  lineHeight: '1.08',
-  letterSpacing: '-0.014em',
-  color: C_INK,
-  margin: '0 0 18px',
-};
-const h2 = {
-  fontFamily: FONT_DISPLAY,
-  fontWeight: 400,
-  fontSize: '25px',
-  lineHeight: '1.15',
-  letterSpacing: '-0.01em',
-  color: C_INK,
-  margin: '0 0 12px',
-};
-const italicAccent = { fontStyle: 'italic' as const, color: C_FOREST };
-
-// ── Body ──
-const p = {
-  fontFamily: FONT_BODY,
-  color: C_BODY,
-  fontSize: '15.5px',
-  lineHeight: '1.65',
-  margin: '0 0 14px',
-};
-const pTight = { ...p, marginBottom: '4px' };
-const pSmaller = { ...p, fontSize: '15px', margin: '0 0 6px' };
+const h1 = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1.18, color: C_CARD, margin: '20px 0 8px' };
+const h2 = { fontFamily: FONT_DISPLAY, fontSize: '24px', lineHeight: 1.25, color: C_INK, marginTop: '6px' };
+const subline = { fontSize: '15px', lineHeight: 1.5, color: '#DFE8DC', fontFamily: FONT_BODY };
+const p = { fontSize: '16px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
 const strongInk = { color: C_INK, fontWeight: 600 };
+const label = { fontFamily: FONT_MONO, fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em' };
+const btnCell = { backgroundColor: C_INK, borderRadius: '12px', textAlign: 'center' as const };
+const btn = { display: 'inline-block', padding: '16px 34px', fontSize: '16px', fontWeight: 700, color: C_CARD, textDecoration: 'none', lineHeight: 1, fontFamily: FONT_BODY };
+const micro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
+const stepDot = { width: '34px', height: '34px', borderRadius: '50%', color: '#FFFFFF', fontFamily: FONT_DISPLAY, fontSize: '17px', lineHeight: '34px', textAlign: 'center' as const };
+const stepBody = { fontSize: '15.5px', lineHeight: 1.6, color: C_BODY, marginTop: '5px', fontFamily: FONT_BODY };
+const aside = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '12px' };
+const rule = { height: '1px', lineHeight: '1px', fontSize: 0, backgroundColor: '#E3E0D6', marginBottom: '18px' };
+const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '14px', color: C_MUTED, marginBottom: '8px' };
+const legal = { fontSize: '12px', lineHeight: 1.7, color: '#A09A8C', margin: 0, fontFamily: FONT_BODY };
+const legalLink = { color: '#A09A8C', textDecoration: 'underline' };
 
 // ── Renewal summary card ──
-const summaryWrap = { margin: '24px 28px 0', padding: 0 };
-
-const summary = {
-  backgroundColor: C_CREAM,
-  border: `1px solid ${C_RULE}`,
-  borderRadius: '14px',
-  overflow: 'hidden' as const,
-};
-
-const summaryRow = {
-  borderBottom: `1px dashed ${C_BEIGE_2}`,
-};
-
-const summaryRowMid = {
-  borderBottom: `1px dashed ${C_BEIGE_2}`,
-};
-
-const summaryRowLast = {
-  padding: '16px 22px',
-};
-
-const summaryLeftCol = {
-  padding: '16px 22px',
-  verticalAlign: 'middle' as const,
-};
-
-const summaryRightCol = {
-  padding: '16px 22px',
-  verticalAlign: 'middle' as const,
-  textAlign: 'right' as const,
-  whiteSpace: 'nowrap' as const,
-};
-
-const summaryRightColLink = {
-  padding: '16px 22px',
-  verticalAlign: 'middle' as const,
-  textAlign: 'right' as const,
-  whiteSpace: 'nowrap' as const,
-};
-
-const summaryKey = {
-  fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '11.5px',
-  letterSpacing: '0.16em',
-  textTransform: 'uppercase' as const,
-  color: C_MUTED,
-  margin: '0 0 3px',
-};
-
-const summaryValue = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '18px',
-  lineHeight: '1.2',
-  color: C_INK,
-  margin: '0',
-};
-
-const summaryValueSmall = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '15.5px',
-  lineHeight: '1.3',
-  color: C_INK,
-  margin: '0',
-};
-
-const summaryValueItalic = {
-  fontStyle: 'italic' as const,
-  color: C_FOREST_DARK,
-};
-
-const summarySmall = {
-  fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '12.5px',
-  letterSpacing: '0.02em',
-  color: C_MUTED,
-  margin: '3px 0 0',
-};
-
-const summaryAmount = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '30px',
-  lineHeight: '1',
-  color: C_INK,
-  margin: '0',
-};
-
-const summaryAmountSmall = {
-  fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '11.5px',
-  letterSpacing: '0.04em',
-  color: C_MUTED,
-  margin: '6px 0 0',
-  textAlign: 'right' as const,
-};
-
-const summaryCardLine = {
-  fontFamily: FONT_BODY,
-  fontSize: '14.5px',
-  color: C_INK,
-  fontWeight: 500,
-  margin: '0',
-};
-
+const summaryCard = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '14px' };
+const summaryCell = { padding: '18px 20px', verticalAlign: 'middle' as const };
+const summaryCellTop = { ...summaryCell, borderTop: `1px dashed ${C_RULE}` };
+const summaryValue = { fontFamily: FONT_DISPLAY, fontSize: '19px', lineHeight: 1.25, color: C_INK, marginTop: '6px' };
+const summarySmall = { fontSize: '12.5px', color: C_MUTED, marginTop: '4px', fontFamily: FONT_BODY };
+const summaryAmount = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1, color: C_INK };
+const summaryCardLine = { fontSize: '15px', color: C_INK, marginTop: '6px', fontFamily: FONT_BODY };
 const cardBrandPill = {
-  display: 'inline-block' as const,
-  backgroundColor: C_CREAM_2,
+  display: 'inline-block',
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '6px',
-  padding: '3px 8px',
-  fontFamily: FONT_BODY,
+  padding: '2px 7px',
+  fontFamily: FONT_MONO,
   fontWeight: 700,
-  fontSize: '10.5px',
-  letterSpacing: '0.12em',
-  color: C_BODY,
-  marginRight: '4px',
-};
-
-const summaryLink = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '13.5px',
-  color: C_FOREST_DARK,
-  textDecoration: 'none',
-  borderBottom: '1px solid rgba(58,90,64,0.25)',
-  paddingBottom: '1px',
-};
-
-// ── CTA card ──
-const ctaCardWrap = { margin: '18px 28px 4px', padding: 0 };
-
-const ctaCard = {
-  backgroundColor: C_SAGE_SOFT,
-  border: `1px solid ${C_SAGE_BORDER}`,
-  borderRadius: '14px',
-  padding: '24px',
-  textAlign: 'center' as const,
-  position: 'relative' as const,
-};
-
-const ctaSeal = {
-  width: '36px',
-  height: '36px',
-  borderRadius: '50%',
-  backgroundColor: C_CREAM,
-  border: `1px solid ${C_SAGE_BORDER}`,
-  color: C_FOREST_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '18px',
-  lineHeight: '36px',
-  textAlign: 'center' as const,
-  margin: '-38px auto 0',
-};
-
-const ctaLabel = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
   fontSize: '11px',
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
-  color: C_FOREST_DARK,
-  margin: '6px 0 12px',
-};
-
-const btn = {
-  display: 'inline-block' as const,
-  backgroundColor: C_FOREST,
-  color: C_CREAM,
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '15.5px',
-  textDecoration: 'none',
-  padding: '13px 28px',
-  borderRadius: '11px',
-};
-
-const ctaMicro = {
-  fontFamily: FONT_BODY,
-  fontSize: '12.5px',
-  lineHeight: '1.55',
-  color: C_MUTED,
-  margin: '14px 0 0',
-};
-
-// ── "What's coming in year two" panel ──
-const panelWrap = { margin: '20px 28px', padding: 0 };
-
-const panel = {
-  backgroundColor: C_CREAM_2,
-  border: `1px solid ${C_RULE}`,
-  borderRadius: '14px',
-  padding: '24px 28px 22px',
-};
-
-const bulletRow = { borderTop: `1px dashed ${C_BEIGE_2}` };
-const bulletRowFirst = { borderTop: '0' };
-
-const bulletIconCol = {
-  width: '32px',
-  verticalAlign: 'top' as const,
-  paddingTop: '14px',
-};
-
-const bulletDot = {
-  width: '20px',
-  height: '20px',
-  borderRadius: '50%',
-  backgroundColor: C_SAGE_SOFT,
-  color: C_FOREST_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '12px',
-  lineHeight: '20px',
-  textAlign: 'center' as const,
-};
-
-const bulletBodyCol = {
-  verticalAlign: 'top' as const,
-  padding: '12px 0',
-};
-
-const bulletText = {
-  fontFamily: FONT_BODY,
-  fontSize: '14.5px',
-  lineHeight: '1.55',
+  letterSpacing: '0.1em',
   color: C_BODY,
-  margin: '0',
+  marginRight: '2px',
 };
-
-const bulletStrong = { color: C_INK, fontWeight: 600 };
+const textLink = { fontSize: '14px', fontWeight: 600, color: C_FOREST, textDecoration: 'none', fontFamily: FONT_BODY };
 
 // ── Manage options ──
-const manageList = {
-  marginTop: '14px',
-  borderTop: `1px solid ${C_RULE}`,
-};
-
-const manageRow = {
-  borderBottom: `1px solid ${C_RULE}`,
-};
-
-const manageRowLast = {
-  borderBottom: `1px solid ${C_RULE}`,
-};
-
-const manageBodyCol = {
-  padding: '14px 0',
-  verticalAlign: 'middle' as const,
-};
-
-const manageLinkCol = {
-  padding: '14px 0',
-  verticalAlign: 'middle' as const,
-  textAlign: 'right' as const,
-  whiteSpace: 'nowrap' as const,
-};
-
-const manageName = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '17px',
-  lineHeight: '1.2',
-  color: C_INK,
-  margin: '0 0 2px',
-};
-
-const manageDesc = {
-  fontFamily: FONT_BODY,
-  fontSize: '13.5px',
-  color: C_BODY,
-  lineHeight: '1.45',
-  margin: '0',
-};
-
-const manageLink = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '13.5px',
-  color: C_FOREST_DARK,
-  textDecoration: 'none',
-  borderBottom: '1px solid rgba(58,90,64,0.25)',
-  paddingBottom: '1px',
-};
-
-// ── Founder banner ──
-const founderWrap = { margin: '20px 28px', padding: 0 };
-
-const founderBox = {
-  backgroundColor: C_TERRA_SOFT,
-  border: `1px solid rgba(201, 123, 92, 0.35)`,
-  borderRadius: '14px',
-  padding: '18px 24px 20px',
-  textAlign: 'center' as const,
-  position: 'relative' as const,
-};
-
-const founderStamp = {
-  position: 'absolute' as const,
-  top: '-12px',
-  left: '50%',
-  transform: 'translateX(-50%) rotate(-3deg)',
-  backgroundColor: C_CREAM,
-  border: `1px solid rgba(201, 123, 92, 0.35)`,
-  color: C_TERRA_DARK,
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '14px',
-  padding: '4px 12px',
-  borderRadius: '999px',
-  boxShadow: '0 6px 12px -8px rgba(201,123,92,0.5)',
-  whiteSpace: 'nowrap' as const,
-};
-
-const founderHeadline = {
-  fontFamily: FONT_BODY,
-  fontWeight: 600,
-  fontSize: '11px',
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase' as const,
-  color: C_TERRA_DARK,
-  margin: '10px 0 8px',
-};
-
-const founderBody = {
-  fontFamily: FONT_BODY,
-  fontSize: '14px',
-  lineHeight: '1.55',
-  color: C_TERRA_DARK,
-  margin: '0',
-};
-
-// ── Signoff ──
-const signoffBlock = { padding: '24px 36px 8px' };
-
-const xo = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  fontSize: '16px',
-  color: C_MUTED,
-  margin: '0',
-};
-
-const nameSignoff = {
-  fontFamily: FONT_SCRIPT,
-  fontWeight: 700,
-  fontSize: '42px',
-  lineHeight: '1',
-  color: C_TERRA,
-  margin: '4px 0 4px',
-};
-
-const signoffRole = {
-  fontFamily: FONT_BODY,
-  fontWeight: 500,
-  fontSize: '12.5px',
-  letterSpacing: '0.04em',
-  color: C_MUTED,
-  margin: '0',
-};
-
-// ── Misc ──
-const dashHr = {
-  borderColor: C_RULE,
-  borderStyle: 'dashed' as const,
-  borderWidth: '1px 0 0',
-  margin: '16px 36px 18px',
-};
-
-const legal = {
-  fontFamily: FONT_BODY,
-  fontSize: '12.5px',
-  lineHeight: '1.55',
-  color: C_MUTED,
-  margin: '0 36px 8px',
-};
-
-const legalLink = {
-  color: C_MUTED,
-  textDecoration: 'underline',
-};
-
-// ── Footer ──
-const credit = {
-  textAlign: 'center' as const,
-  padding: '8px 24px 28px',
-};
-
-const creditText = {
-  fontFamily: FONT_BODY,
-  fontSize: '12px',
-  color: C_BEIGE_2,
-  letterSpacing: '0.04em',
-  margin: '0',
-};
-
-const creditItalic = {
-  fontFamily: FONT_DISPLAY,
-  fontStyle: 'italic' as const,
-  color: C_MUTED,
-};
+const manageList = { width: '100%', marginTop: '14px', borderCollapse: 'collapse' as const, borderTop: `1px solid ${C_RULE}` };
+const manageBodyCol = { padding: '14px 12px 14px 0', verticalAlign: 'middle' as const, borderBottom: `1px solid ${C_RULE}` };
+const manageLinkCol = { padding: '14px 0', verticalAlign: 'middle' as const, textAlign: 'right' as const, whiteSpace: 'nowrap' as const, borderBottom: `1px solid ${C_RULE}` };
+const manageName = { fontFamily: FONT_DISPLAY, fontSize: '17px', lineHeight: 1.25, color: C_INK };
+const manageDesc = { fontSize: '14px', lineHeight: 1.5, color: C_BODY, marginTop: '3px', fontFamily: FONT_BODY };

@@ -26,10 +26,10 @@ interface Props {
   plan?: 'annual' | 'monthly';
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
-
-const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
-const EMAIL_COLLAGE = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-library-hero.png';
+// Absolute, always-live host for email assets (never localhost).
+const SITE = 'https://anywherelearning.co';
+const LOGO_CREAM = `${SITE}/email-logo-cream.png`;
+const EMAIL_COLLAGE = `${SITE}/email-library-hero-v2.jpg`;
 
 /** "June 26, 2026" for fine print. */
 function longDate(d: Date): string {
@@ -37,8 +37,8 @@ function longDate(d: Date): string {
 }
 
 /**
- * Membership-converted email — fires when a free trial converts to a paid
- * membership (Stripe subscription 'trialing' → 'active'). A short, warm
+ * Membership-converted email. Fires when a free trial converts to a paid
+ * membership (Stripe subscription 'trialing' to 'active'). A short, warm
  * confirmation: the moment they became a paying member, acknowledged.
  *
  * The welcome email (MembershipWelcome) already went out on day 0, so this one
@@ -61,99 +61,79 @@ export default function MembershipConverted({
 
   return (
     <Html>
-      <Head>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap');
-        `}</style>
-      </Head>
+      <Head />
       <Preview>
-        It&apos;s official, {name} — your trial just became a membership. Thank you for backing this.
+        It&apos;s official, {name}. Your trial just became a membership. Thank you for backing this.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={card}>
             <tbody>
 
-              {/* ── 1 · Brand header ── */}
+              {/* ── Header band ── */}
               <tr>
-                <td style={{ padding: '38px 48px 26px', textAlign: 'center' as const }}>
-                  <Img
-                    src={EMAIL_LOGO}
-                    alt="Anywhere Learning"
-                    width="46"
-                    height="46"
-                    style={{ display: 'inline-block', width: '46px', height: '46px' }}
-                  />
-                  <div style={brandName}>
-                    anywhere <span style={{ fontStyle: 'italic', color: C_FOREST }}>learning</span>
-                  </div>
-                  <div style={tagline}>
-                    Hands-on activities for raising capable kids, ready for real life.
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style={{ padding: '0 48px' }}>
-                  <div style={fadeDivider} />
+                <td style={band}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: 'middle' }}>
+                          <Img src={LOGO_CREAM} alt="Anywhere Learning" width="38" style={{ display: 'block', width: '38px', height: 'auto' }} />
+                        </td>
+                        <td style={{ verticalAlign: 'middle', textAlign: 'right' as const }}>
+                          <span style={badge}>YOU&apos;RE A MEMBER</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={h1}>You&apos;re a member now, {name}.</div>
+                  <div style={subline}>Your free trial just turned into a real membership. Thank you.</div>
                 </td>
               </tr>
 
-              {/* ── 2 · It's official ── */}
+              {/* ── Intro ── */}
               <tr>
-                <td style={{ padding: '34px 48px 0' }}>
-                  <div style={eyebrow}>
-                    <span style={eyebrowRule} />
-                    It&apos;s official
-                  </div>
-                  <div style={h1}>
-                    You&apos;re a{' '}
-                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>member</span> now, {name}.
-                  </div>
+                <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
-                    Your free trial just turned into a real membership, which means it earned its
-                    place in your week. That&apos;s the whole hope behind this, so thank you,
-                    genuinely. I don&apos;t take it lightly.
+                    It earned its place in your week, and that&apos;s the whole hope behind this. So
+                    thank you, genuinely. I don&apos;t take it lightly.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     Nothing changes about how you use it. Same library, same activities, same one
-                    good hour at a time. The only difference is you can now save and print every
-                    guide whenever you like, and the whole thing is yours for the {per} ahead.
+                    good hour at a time with your kids. The only difference is you can now save and
+                    print every guide whenever you like, and the whole thing is yours for the {per}{' '}
+                    ahead.
                   </Text>
                 </td>
               </tr>
 
-              {/* ── 3 · Confirmation + CTA card ── */}
+              {/* ── Confirmation + CTA card ── */}
               <tr>
-                <td style={{ padding: '30px 48px 0' }}>
+                <td style={{ padding: '24px 36px 0' }}>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
                     <tbody>
                       <tr>
-                        <td style={{ padding: '24px 28px', textAlign: 'center' as const }}>
+                        <td style={{ padding: '24px 24px 26px', textAlign: 'center' as const }}>
                           <Img
                             src={EMAIL_COLLAGE}
                             alt="A fan of Anywhere Learning activity guides with the Skills Map in front"
-                            width="280"
-                            height="216"
-                            style={{
-                              display: 'inline-block',
-                              width: '280px',
-                              height: 'auto',
-                              maxWidth: '100%',
-                            }}
+                            width="300"
+                            style={{ display: 'inline-block', width: '300px', maxWidth: '100%', height: 'auto', borderRadius: '10px' }}
                           />
-                          <div style={{ ...ctaLabel, marginTop: '16px' }}>Membership active</div>
+                          <div style={{ ...label, color: C_FOREST, marginTop: '18px' }}>MEMBERSHIP ACTIVE</div>
                           <div style={confirmLine}>
                             {firstYearPrice ? `${firstYearPrice} for your first year, then ${price} a ${per}` : `${price} a ${per}`}{isFounderPhase ? ', your founder rate, locked in for life' : ''}.
                             Renews {longDate(renews)}.
                           </div>
-                          <div style={{ marginTop: '16px' }}>
-                            <Link href={homeUrl} style={btn}>
-                              Continue our adventure &rarr;
-                            </Link>
-                          </div>
-                          <div style={ctaMicro}>
-                            Changed your mind? You have 14 days for a full refund.
-                          </div>
+                          <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '20px auto 0' }}>
+                            <tbody>
+                              <tr>
+                                <td style={btnCell}>
+                                  <Link href={homeUrl} style={btn}>Continue our adventure &rarr;</Link>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div style={micro}>Changed your mind? You have 14 days for a full refund.</div>
                         </td>
                       </tr>
                     </tbody>
@@ -161,31 +141,23 @@ export default function MembershipConverted({
                 </td>
               </tr>
 
-              {/* ── 4 · Sign-off ── */}
+              {/* ── Sign-off ── */}
               <tr>
-                <td style={{ padding: '36px 48px 0' }}>
-                  <Text style={{ ...p, margin: '0 0 4px' }}>
-                    So glad you stayed. Now go do something real with your kids this week, they&apos;ll
-                    remember it.
+                <td style={{ padding: '26px 36px 0' }}>
+                  <Text style={p}>
+                    So glad you stayed. Now go do something real together this week, your kids
+                    will remember it.
                   </Text>
-                  <Text style={{ ...p, margin: '14px 0 0' }}>
-                    And a genuine ask: as you and your kids dig in, tell me what they love and what
-                    falls flat. I build every bit of this for families like yours, so what you notice
-                    really does shape what comes next. Just hit reply, it lands straight in my inbox
-                    and I read every one.
-                  </Text>
-                  <div style={{ fontSize: '15.5px', color: C_BODY, marginTop: '16px' }}>xo,</div>
-                  <div style={signature}>Amelie</div>
-                  <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
-                    Founder · Anywhere Learning
-                  </div>
+                  <Text style={{ ...p, margin: '16px 0 6px' }}>xo,</Text>
+                  <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
                 </td>
               </tr>
 
-              {/* ── 5 · Fine print ── */}
+              {/* ── Footer ── */}
               <tr>
-                <td style={{ padding: '28px 48px 32px' }}>
-                  <div style={fadeDivider} />
+                <td style={{ padding: '28px 36px 30px', textAlign: 'center' as const }}>
+                  <div style={rule} />
+                  <div style={motto}>Meaningful Learning, Wherever You Are</div>
                   <Text style={legal}>
                     You&apos;re receiving this note because your free trial of Anywhere Learning
                     converted to a paid membership today. Your membership renews each {per} at {price}{' '}
@@ -193,21 +165,16 @@ export default function MembershipConverted({
                     right fit, you have 14 days from today for a full refund, no questions asked,
                     just email info@anywherelearning.co.
                   </Text>
-                  <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
-                    <Link href={manageUrl} style={{ color: C_MUTED }}>
+                  <Text style={{ ...legal, marginTop: '10px' }}>
+                    <Link href={manageUrl} style={{ color: '#A09A8C', textDecoration: 'underline' }}>
                       Manage account
                     </Link>
-                  </div>
+                  </Text>
                 </td>
               </tr>
 
             </tbody>
           </table>
-
-          <div style={credit}>
-            Anywhere Learning · <em style={{ fontStyle: 'italic' }}>Built by Amelie</em> · Made in
-            Nelson, BC
-          </div>
         </Container>
       </Body>
     </Html>
@@ -223,142 +190,49 @@ MembershipConverted.PreviewProps = {
   manageUrl: 'https://anywherelearning.co/account/settings',
 } satisfies Props;
 
-/* ── Brand tokens (shared with the other transactional emails) ── */
+/* ── "Trail map" tokens (match QuizPlanEmail + the Kit sequence emails, Oct 2026) ── */
+const FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
+const FONT_DISPLAY = "Georgia, 'Times New Roman', serif";
+const FONT_MONO = "'Courier New', Courier, monospace";
 
-const FONT_BODY = "'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif";
-const FONT_DISPLAY = "'DM Serif Display', Georgia, 'Times New Roman', serif";
-const FONT_SCRIPT = "'Dancing Script', 'Brush Script MT', cursive";
-
-const C_CREAM = '#FAF8F3';
-const C_SAGE_SOFT = '#E6EBDF';
-const C_SAGE_BORDER = '#C9D3BE';
-const C_INK = '#2D3A2E';
-const C_BODY = '#4F5A50';
-const C_MUTED = '#7B8378';
+const C_CARD = '#FAF9F6';
+const C_INK = '#2F3A2E';
+const C_BODY = '#4B5563';
+const C_MUTED = '#8A8578';
 const C_RULE = '#D8D4C5';
 const C_FOREST = '#588157';
-const C_FOREST_DARK = '#3A5A40';
-const C_TERRA = '#C97B5C';
+const C_SAGE = '#EEF2EC';
 
-const body = {
-  backgroundColor: '#E9E5DC',
-  fontFamily: FONT_BODY,
-  margin: 0,
-  padding: '24px 12px',
-};
-
-const envelope = {
+const body = { backgroundColor: '#EBE9E2', fontFamily: FONT_BODY, margin: 0, padding: '32px 12px' };
+const card = {
   width: '100%',
   borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
+  overflow: 'hidden' as const,
 };
-
-const brandName = { fontFamily: FONT_DISPLAY, fontSize: '25px', color: C_INK, marginTop: '10px' };
-const tagline = { fontSize: '13px', color: C_MUTED, marginTop: '5px', fontFamily: FONT_BODY };
-
-const fadeDivider = {
-  height: '1px',
-  backgroundColor: C_RULE,
-  backgroundImage: `linear-gradient(to right, rgba(216,212,197,0), ${C_RULE}, rgba(216,212,197,0))`,
-};
-
-const eyebrow = {
-  fontSize: '11px',
-  fontWeight: 700,
-  letterSpacing: '0.2em',
-  color: C_MUTED,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
-};
-
-const eyebrowRule = {
+const band = { backgroundColor: C_FOREST, padding: '26px 36px 28px', borderTopLeftRadius: '17px', borderTopRightRadius: '17px' };
+const badge = {
   display: 'inline-block',
-  width: '26px',
-  height: '1px',
-  backgroundColor: C_FOREST,
-  verticalAlign: '3px',
-  marginRight: '10px',
-};
-
-const h1 = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '31px',
-  lineHeight: 1.22,
+  backgroundColor: '#E8C99A',
   color: C_INK,
-  marginTop: '12px',
-};
-
-const p = {
-  fontSize: '15.5px',
-  lineHeight: 1.68,
-  color: C_BODY,
-  margin: '18px 0 0',
-  fontFamily: FONT_BODY,
-};
-
-const sageCard = {
-  width: '100%',
-  borderCollapse: 'separate' as const,
-  backgroundColor: C_SAGE_SOFT,
-  border: `1px solid ${C_SAGE_BORDER}`,
-  borderRadius: '14px',
-};
-
-const ctaLabel = {
-  fontSize: '10.5px',
-  fontWeight: 700,
-  letterSpacing: '0.22em',
-  color: C_FOREST_DARK,
-  textTransform: 'uppercase' as const,
-  marginTop: '12px',
-  fontFamily: FONT_BODY,
-};
-
-const confirmLine = {
-  fontSize: '14px',
-  lineHeight: 1.6,
-  color: C_BODY,
-  marginTop: '8px',
-  fontFamily: FONT_BODY,
-};
-
-const btn = {
-  display: 'inline-block',
-  backgroundColor: C_FOREST,
-  color: '#F7F4EA',
-  fontSize: '15px',
-  fontWeight: 600,
-  textDecoration: 'none',
-  padding: '13px 32px',
-  borderRadius: '11px',
-  fontFamily: FONT_BODY,
-};
-
-const ctaMicro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
-
-const signature = {
-  fontFamily: FONT_SCRIPT,
-  fontSize: '46px',
-  fontWeight: 600,
-  color: C_TERRA,
-  lineHeight: 1.15,
-  marginTop: '2px',
-};
-
-const legal = {
-  fontSize: '12.5px',
-  lineHeight: 1.6,
-  color: C_MUTED,
-  margin: '18px 0 0',
-  fontFamily: FONT_BODY,
-};
-
-const credit = {
-  textAlign: 'center' as const,
+  fontFamily: FONT_MONO,
   fontSize: '12px',
-  color: C_MUTED,
-  paddingTop: '10px',
-  fontFamily: FONT_BODY,
+  fontWeight: 700,
+  letterSpacing: '0.12em',
+  padding: '7px 13px',
+  borderRadius: '999px',
 };
+const h1 = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1.18, color: C_CARD, margin: '20px 0 8px' };
+const subline = { fontSize: '15px', lineHeight: 1.5, color: '#DFE8DC', fontFamily: FONT_BODY };
+const p = { fontSize: '16px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
+const label = { fontFamily: FONT_MONO, fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em' };
+const sageCard = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '14px' };
+const confirmLine = { fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '8px', maxWidth: '420px', marginLeft: 'auto', marginRight: 'auto', fontFamily: FONT_BODY };
+const btnCell = { backgroundColor: C_INK, borderRadius: '12px', textAlign: 'center' as const };
+const btn = { display: 'inline-block', padding: '16px 34px', fontSize: '16px', fontWeight: 700, color: C_CARD, textDecoration: 'none', lineHeight: 1, fontFamily: FONT_BODY };
+const micro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
+const rule = { height: '1px', lineHeight: '1px', fontSize: 0, backgroundColor: '#E3E0D6', marginBottom: '18px' };
+const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '14px', color: C_MUTED, marginBottom: '8px' };
+const legal = { fontSize: '12px', lineHeight: 1.7, color: '#A09A8C', margin: 0, fontFamily: FONT_BODY };

@@ -26,24 +26,22 @@ interface Props {
   priceOverride?: string;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
-
-// Email images live on the Vercel Blob CDN, NOT the app domain. A stable
-// public URL means they render in every inbox regardless of deploy state or
-// NEXT_PUBLIC_URL (localhost in dev would otherwise yield broken images).
-const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
-const EMAIL_COLLAGE = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-library-hero.png';
+// Absolute, always-live host for email assets (never localhost), so images
+// render in every inbox regardless of deploy state or NEXT_PUBLIC_URL.
+const SITE = 'https://anywherelearning.co';
+const LOGO_CREAM = `${SITE}/email-logo-cream.png`;
+const EMAIL_COLLAGE = `${SITE}/email-library-hero-v2.jpg`;
 
 /**
- * Trial-ending heads-up — v2, implemented from the Claude Design handoff
- * ("Free trial" project, Reminder Email.dc.html, Jun 2026). Sent by the
- * Stripe webhook when customer.subscription.trial_will_end fires, 3 days
- * before the trial converts. Honest billing: what happens, when, and how
- * to stop it. No dark patterns.
+ * Trial-ending heads-up, "Trail map" design (Oct 2026, matches QuizPlanEmail
+ * and the Kit sequence emails). Sent by the Stripe webhook when
+ * customer.subscription.trial_will_end fires, 3 days before the trial
+ * converts (day 4 of the 7-day trial). Honest billing: what happens, when,
+ * and how to stop it. No dark patterns.
  *
- * One deliberate deviation from the design: the footer ships "Manage
- * account" only (no "Email preferences · Unsubscribe" — this is a
- * transactional email and those destinations don't exist yet).
+ * The footer ships "Manage account" only (no "Email preferences" or
+ * "Unsubscribe": this is a transactional email and those destinations
+ * don't exist yet).
  */
 export default function TrialEndingReminder({
   firstName,
@@ -76,54 +74,38 @@ export default function TrialEndingReminder({
 
   return (
     <Html>
-      <Head>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap');
-        `}</style>
-      </Head>
+      <Head />
       <Preview>
         Your free trial ends {shortDate}. A quick heads-up so nothing lands out of nowhere.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={card}>
             <tbody>
 
-              {/* ── 1 · Brand header ── */}
+              {/* ── Header band ── */}
               <tr>
-                <td style={{ padding: '38px 48px 26px', textAlign: 'center' as const }}>
-                  <Img
-                    src={EMAIL_LOGO}
-                    alt="Anywhere Learning"
-                    width="46"
-                    height="46"
-                    style={{ display: 'inline-block', width: '46px', height: '46px' }}
-                  />
-                  <div style={brandName}>
-                    anywhere <span style={{ fontStyle: 'italic', color: C_FOREST }}>learning</span>
-                  </div>
-                  <div style={tagline}>
-                    Hands-on activities for raising capable kids, ready for real life.
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style={{ padding: '0 48px' }}>
-                  <div style={fadeDivider} />
+                <td style={band}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: 'middle' }}>
+                          <Img src={LOGO_CREAM} alt="Anywhere Learning" width="38" style={{ display: 'block', width: '38px', height: 'auto' }} />
+                        </td>
+                        <td style={{ verticalAlign: 'middle', textAlign: 'right' as const }}>
+                          <span style={badge}>{daysLabel.toUpperCase()} LEFT</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={h1}>Hi {name}, your trial ends in {daysLabel}.</div>
+                  <div style={subline}>A friendly heads-up, so nothing lands out of nowhere.</div>
                 </td>
               </tr>
 
-              {/* ── 2 · The heads-up ── */}
+              {/* ── The heads-up ── */}
               <tr>
-                <td style={{ padding: '34px 48px 0' }}>
-                  <div style={eyebrow}>
-                    <span style={eyebrowRule} />
-                    A friendly heads-up
-                  </div>
-                  <div style={h1}>
-                    Hi {name}, your trial ends{' '}
-                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>in {daysLabel}.</span>
-                  </div>
+                <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
                     I promised no surprise charges, so here it is in plain words: on {shortDate},
                     your free trial ends and your membership starts. Your card will be charged{' '}
@@ -141,53 +123,43 @@ export default function TrialEndingReminder({
                 </td>
               </tr>
 
-              {/* ── 3 · Plain summary card ── */}
+              {/* ── Plain summary ── */}
               <tr>
-                <td style={{ padding: '28px 48px 0' }}>
-                  <table role="presentation" cellPadding={0} cellSpacing={0} style={summaryCard}>
+                <td style={{ padding: '24px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
                     <tbody>
                       <tr>
-                        <td style={{ padding: '22px 26px 20px' }}>
-                          <div style={summaryLabel}>The plain summary</div>
+                        <td style={{ padding: '20px 24px 18px' }}>
+                          <div style={{ ...label, color: C_FOREST }}>THE PLAIN SUMMARY</div>
                           <table
                             role="presentation"
                             cellPadding={0}
                             cellSpacing={0}
-                            style={{
-                              width: '100%',
-                              borderCollapse: 'collapse' as const,
-                              marginTop: '10px',
-                            }}
+                            style={{ width: '100%', borderCollapse: 'collapse' as const, marginTop: '8px' }}
                           >
                             <tbody>
                               <tr>
-                                <td style={{ ...summaryKey, width: '150px' }}>
-                                  Membership begins
-                                </td>
+                                <td style={{ ...summaryKey, width: '150px' }}>Membership begins</td>
                                 <td style={summaryValue}>{fullDate}</td>
                               </tr>
                               <tr>
                                 <td style={summaryKey}>Your price</td>
                                 <td style={summaryValue}>
-                                  <span style={{ fontSize: '14.5px', fontWeight: 600, color: C_INK }}>
-                                    {price} {forThe}
-                                  </span>
+                                  {price} {forThe}
                                   {isFounderPhase && (
                                     <>
                                       <br />
-                                      <span style={founderPill}>
-                                        Founder rate, locked for life
-                                      </span>
+                                      <span style={founderPill}>FOUNDER RATE, LOCKED FOR LIFE</span>
                                     </>
                                   )}
                                 </td>
                               </tr>
                               <tr>
-                                <td style={{ ...summaryKeyLast }}>What unlocks</td>
+                                <td style={summaryKeyLast}>What unlocks</td>
                                 <td style={summaryValueLast}>
                                   Unlimited downloads
                                   <br />
-                                  <span style={{ fontSize: '13px', fontWeight: 400, color: C_BODY }}>
+                                  <span style={{ fontSize: '13.5px', fontWeight: 400, color: C_BODY }}>
                                     plus new guide drops every quarter
                                   </span>
                                 </td>
@@ -201,37 +173,35 @@ export default function TrialEndingReminder({
                 </td>
               </tr>
 
-              {/* ── 4 · One more activity CTA ── */}
+              {/* ── One more activity CTA ── */}
               <tr>
-                <td style={{ padding: '32px 48px 0' }}>
-                  <table role="presentation" cellPadding={0} cellSpacing={0} style={sageCard}>
+                <td style={{ padding: '24px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
                     <tbody>
                       <tr>
-                        <td style={{ padding: '24px 28px', textAlign: 'center' as const }}>
+                        <td style={{ padding: '0', textAlign: 'center' as const }}>
                           <Img
                             src={EMAIL_COLLAGE}
-                            alt="A fan of Anywhere Learning activity guides with the Skills Map in front"
-                            width="280"
-                            height="216"
-                            style={{
-                              display: 'inline-block',
-                              width: '280px',
-                              height: 'auto',
-                              maxWidth: '100%',
-                            }}
+                            alt="A fan of Anywhere Learning activities and the Future-Ready Skills Map"
+                            width="240"
+                            style={{ display: 'inline-block', width: '240px', maxWidth: '100%', height: 'auto' }}
                           />
-                          <div style={{ ...ctaLabel, marginTop: '16px' }}>
-                            Three days is one more activity
+                          <div style={{ ...label, color: C_FOREST, marginTop: '16px' }}>
+                            THREE DAYS IS ONE MORE ACTIVITY
                           </div>
-                          <div style={{ marginTop: '14px' }}>
-                            <Link href={homeUrl} style={btn}>
-                              Continue our adventure &rarr;
-                            </Link>
-                          </div>
+                          <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '16px auto 0' }}>
+                            <tbody>
+                              <tr>
+                                <td style={btnCell}>
+                                  <Link href={homeUrl} style={btn}>Continue our adventure &rarr;</Link>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                           {/* The button lands on the map, where the next stop is
                               already chosen. Telling them to pick one would
                               describe a product we deliberately don't ship. */}
-                          <div style={ctaMicro}>
+                          <div style={micro}>
                             Your next stop is already waiting. Grab what you have at home and see
                             how it feels to do something real together. That&apos;s the whole test.
                           </div>
@@ -242,32 +212,19 @@ export default function TrialEndingReminder({
                 </td>
               </tr>
 
-              {/* ── 5 · Need to change something ── */}
+              {/* ── Need to change something ── */}
               <tr>
-                <td style={{ padding: '38px 48px 0' }}>
-                  <div style={eyebrow}>
-                    <span style={eyebrowRule} />
-                    Need to change something?
-                  </div>
-                  <div style={h2}>
-                    No buried buttons,{' '}
-                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>I promise.</span>
-                  </div>
+                <td style={{ padding: '32px 36px 0' }}>
+                  <div style={{ ...label, color: C_MUTED }}>NEED TO CHANGE SOMETHING?</div>
+                  <div style={h2}>No buried buttons, I promise.</div>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={cancelCard}>
                     <tbody>
                       <tr>
                         <td style={{ padding: '16px 20px', verticalAlign: 'middle' as const }}>
-                          <div style={{ fontSize: '15px', fontWeight: 600, color: C_INK }}>
+                          <div style={{ fontSize: '15.5px', fontWeight: 700, color: C_INK, fontFamily: FONT_BODY }}>
                             Cancel my trial
                           </div>
-                          <div
-                            style={{
-                              fontSize: '13.5px',
-                              lineHeight: 1.55,
-                              color: C_BODY,
-                              marginTop: '3px',
-                            }}
-                          >
+                          <div style={{ fontSize: '14.5px', lineHeight: 1.55, color: C_BODY, marginTop: '3px', fontFamily: FONT_BODY }}>
                             One click before {shortDate} and you&apos;re never charged. We part as
                             friends.
                           </div>
@@ -287,36 +244,25 @@ export default function TrialEndingReminder({
                       </tr>
                     </tbody>
                   </table>
-                  <div
-                    style={{
-                      fontSize: '13.5px',
-                      lineHeight: 1.6,
-                      color: C_MUTED,
-                      marginTop: '14px',
-                      fontFamily: FONT_BODY,
-                    }}
-                  >
-                    Questions before then? Just reply, it lands straight in my inbox and I read
-                    every one.
-                  </div>
+                  <Text style={{ ...p, fontSize: '14.5px', color: C_MUTED, margin: '14px 0 0' }}>
+                    Questions before then? Just reply.
+                  </Text>
                 </td>
               </tr>
 
-              {/* ── 6 · Sign-off ── */}
+              {/* ── Sign-off ── */}
               <tr>
-                <td style={{ padding: '34px 48px 0' }}>
-                  <div style={{ fontSize: '15.5px', color: C_BODY }}>xo,</div>
-                  <div style={signature}>Amelie</div>
-                  <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
-                    Founder · Anywhere Learning
-                  </div>
+                <td style={{ padding: '26px 36px 0' }}>
+                  <Text style={{ ...p, margin: '0 0 6px' }}>xo,</Text>
+                  <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
                 </td>
               </tr>
 
-              {/* ── 7 · Fine print ── */}
+              {/* ── Footer ── */}
               <tr>
-                <td style={{ padding: '28px 48px 32px' }}>
-                  <div style={fadeDivider} />
+                <td style={{ padding: '28px 36px 30px', textAlign: 'center' as const }}>
+                  <div style={rule} />
+                  <div style={motto}>Meaningful Learning, Wherever You Are</div>
                   <Text style={legal}>
                     Unless you cancel before {fullDate}, the card you saved at sign-up will be
                     charged {price} USD for one {isMonthly ? 'month' : 'year'} of Anywhere
@@ -326,22 +272,16 @@ export default function TrialEndingReminder({
                     mind after the charge, the 14-day money-back guarantee still applies. Reply
                     within 14 days and I&apos;ll refund you in full, no questions asked.
                   </Text>
-                  <div style={{ fontSize: '12px', color: C_MUTED, marginTop: '12px' }}>
-                    <Link href={manageUrl} style={{ color: C_MUTED }}>
+                  <Text style={{ ...legal, marginTop: '10px' }}>
+                    <Link href={manageUrl} style={{ color: '#A09A8C' }}>
                       Manage account
                     </Link>
-                  </div>
+                  </Text>
                 </td>
               </tr>
 
             </tbody>
           </table>
-
-          {/* Outside-the-envelope credit line */}
-          <div style={credit}>
-            Anywhere Learning · <em style={{ fontStyle: 'italic' }}>Built by Amelie</em> · Made in
-            Nelson, BC
-          </div>
         </Container>
       </Body>
     </Html>
@@ -357,252 +297,91 @@ TrialEndingReminder.PreviewProps = {
   homeUrl: 'https://anywherelearning.co/account/home',
 } satisfies Props;
 
-/* ─────────────────────────────────────────────────────────────
-   Brand tokens — from the Claude Design handoff (Free trial project),
-   kept in sync with MembershipWelcome.
-   ───────────────────────────────────────────────────────────── */
+/* ── "Trail map" tokens (match QuizPlanEmail + the Kit sequence emails, Oct 2026) ── */
+const FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
+const FONT_DISPLAY = "Georgia, 'Times New Roman', serif";
+const FONT_MONO = "'Courier New', Courier, monospace";
 
-const FONT_BODY = "'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif";
-const FONT_DISPLAY = "'DM Serif Display', Georgia, 'Times New Roman', serif";
-const FONT_SCRIPT = "'Dancing Script', 'Brush Script MT', cursive";
-
-const C_CREAM = '#FAF8F3';
-const C_CREAM_2 = '#F2EFE4';
-const C_SAGE_SOFT = '#E6EBDF';
-const C_SAGE_BORDER = '#C9D3BE';
-const C_INK = '#2D3A2E';
-const C_BODY = '#4F5A50';
-const C_MUTED = '#7B8378';
+const C_CARD = '#FAF9F6';
+const C_INK = '#2F3A2E';
+const C_BODY = '#4B5563';
+const C_MUTED = '#8A8578';
 const C_RULE = '#D8D4C5';
 const C_FOREST = '#588157';
-const C_FOREST_DARK = '#3A5A40';
-const C_TERRA = '#C97B5C';
-const C_TERRA_DARK = '#7A3D24';
-const C_TERRA_SOFT = '#F2DECF';
+const C_SAGE = '#EEF2EC';
 
-const body = {
-  backgroundColor: '#E9E5DC',
-  fontFamily: FONT_BODY,
-  margin: 0,
-  padding: '24px 12px',
-};
-
-const envelope = {
+const body = { backgroundColor: '#EBE9E2', fontFamily: FONT_BODY, margin: 0, padding: '32px 12px' };
+const card = {
   width: '100%',
   borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
+  overflow: 'hidden' as const,
 };
-
-const brandName = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '25px',
-  color: C_INK,
-  marginTop: '10px',
-};
-
-const tagline = {
-  fontSize: '13px',
-  color: C_MUTED,
-  marginTop: '5px',
-  fontFamily: FONT_BODY,
-};
-
-// Solid fallback color + fading gradient where supported.
-const fadeDivider = {
-  height: '1px',
-  backgroundColor: C_RULE,
-  backgroundImage: `linear-gradient(to right, rgba(216,212,197,0), ${C_RULE}, rgba(216,212,197,0))`,
-};
-
-const eyebrow = {
-  fontSize: '11px',
-  fontWeight: 700,
-  letterSpacing: '0.2em',
-  color: C_MUTED,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
-};
-
-const eyebrowRule = {
+const band = { backgroundColor: C_FOREST, padding: '26px 36px 28px', borderTopLeftRadius: '17px', borderTopRightRadius: '17px' };
+const badge = {
   display: 'inline-block',
-  width: '26px',
-  height: '1px',
-  backgroundColor: C_FOREST,
-  verticalAlign: '3px',
-  marginRight: '10px',
-};
-
-const h1 = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '31px',
-  lineHeight: 1.22,
+  backgroundColor: '#E8C99A',
   color: C_INK,
-  marginTop: '12px',
-};
-
-const h2 = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '23px',
-  color: C_INK,
-  marginTop: '10px',
-};
-
-const p = {
-  fontSize: '15.5px',
-  lineHeight: 1.68,
-  color: C_BODY,
-  margin: '18px 0 0',
-  fontFamily: FONT_BODY,
-};
-
-const summaryCard = {
-  width: '100%',
-  borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM_2,
-  borderRadius: '14px',
-};
-
-const summaryLabel = {
-  fontSize: '10.5px',
+  fontFamily: FONT_MONO,
+  fontSize: '12px',
   fontWeight: 700,
-  letterSpacing: '0.22em',
-  color: C_MUTED,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
+  letterSpacing: '0.12em',
+  padding: '7px 13px',
+  borderRadius: '999px',
 };
+const h1 = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1.18, color: C_CARD, margin: '20px 0 8px' };
+const h2 = { fontFamily: FONT_DISPLAY, fontSize: '24px', lineHeight: 1.25, color: C_INK, marginTop: '6px' };
+const subline = { fontSize: '15px', lineHeight: 1.5, color: '#DFE8DC', fontFamily: FONT_BODY };
+const p = { fontSize: '16px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
+const label = { fontFamily: FONT_MONO, fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em' };
+const sageCard = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '14px' };
+const btnCell = { backgroundColor: C_INK, borderRadius: '12px', textAlign: 'center' as const };
+const btn = { display: 'inline-block', padding: '16px 34px', fontSize: '16px', fontWeight: 700, color: C_CARD, textDecoration: 'none', lineHeight: 1, fontFamily: FONT_BODY };
+const micro = { fontSize: '13px', lineHeight: 1.55, color: C_MUTED, marginTop: '12px', maxWidth: '400px', marginLeft: 'auto', marginRight: 'auto', fontFamily: FONT_BODY };
 
-const summaryKey = {
-  padding: '12px 0',
-  borderBottom: `1px dashed ${C_RULE}`,
-  fontSize: '13.5px',
-  color: C_MUTED,
-  verticalAlign: 'top' as const,
-  fontFamily: FONT_BODY,
-};
-
+const summaryCell = { padding: '12px 0', verticalAlign: 'top' as const, fontFamily: FONT_BODY };
+const summaryKey = { ...summaryCell, borderBottom: `1px dashed ${C_RULE}`, fontSize: '14px', color: C_MUTED };
 const summaryValue = {
-  padding: '12px 0',
+  ...summaryCell,
   borderBottom: `1px dashed ${C_RULE}`,
-  fontSize: '14.5px',
-  fontWeight: 600,
+  fontSize: '15px',
+  fontWeight: 700,
   color: C_INK,
   textAlign: 'right' as const,
-  verticalAlign: 'top' as const,
-  fontFamily: FONT_BODY,
 };
-
-const summaryKeyLast = {
-  padding: '12px 0 4px',
-  fontSize: '13.5px',
-  color: C_MUTED,
-  verticalAlign: 'top' as const,
-  fontFamily: FONT_BODY,
-};
-
-const summaryValueLast = {
-  padding: '12px 0 4px',
-  fontSize: '14.5px',
-  fontWeight: 600,
-  color: C_INK,
-  textAlign: 'right' as const,
-  verticalAlign: 'top' as const,
-  fontFamily: FONT_BODY,
-};
-
+const summaryKeyLast = { ...summaryCell, padding: '12px 0 4px', fontSize: '14px', color: C_MUTED };
+const summaryValueLast = { ...summaryCell, padding: '12px 0 4px', fontSize: '15px', fontWeight: 700, color: C_INK, textAlign: 'right' as const };
 const founderPill = {
   display: 'inline-block',
-  marginTop: '5px',
-  backgroundColor: C_TERRA_SOFT,
+  marginTop: '6px',
+  backgroundColor: '#E8C99A',
+  color: C_INK,
   borderRadius: '999px',
-  fontSize: '10px',
-  fontWeight: 700,
-  letterSpacing: '0.1em',
-  color: C_TERRA_DARK,
-  textTransform: 'uppercase' as const,
-  padding: '3px 9px',
-  whiteSpace: 'nowrap' as const,
-  fontFamily: FONT_BODY,
-};
-
-const sageCard = {
-  width: '100%',
-  borderCollapse: 'separate' as const,
-  backgroundColor: C_SAGE_SOFT,
-  border: `1px solid ${C_SAGE_BORDER}`,
-  borderRadius: '14px',
-};
-
-const ctaLabel = {
+  fontFamily: FONT_MONO,
   fontSize: '10.5px',
   fontWeight: 700,
-  letterSpacing: '0.22em',
-  color: C_FOREST_DARK,
-  textTransform: 'uppercase' as const,
-  marginTop: '12px',
-  fontFamily: FONT_BODY,
+  letterSpacing: '0.08em',
+  padding: '4px 9px',
+  whiteSpace: 'nowrap' as const,
 };
-
-const btn = {
-  display: 'inline-block',
-  backgroundColor: C_FOREST,
-  color: '#F7F4EA',
-  fontSize: '15px',
-  fontWeight: 600,
-  textDecoration: 'none',
-  padding: '13px 32px',
-  borderRadius: '11px',
-  fontFamily: FONT_BODY,
-};
-
-const ctaMicro = {
-  fontSize: '12.5px',
-  color: C_MUTED,
-  marginTop: '12px',
-  lineHeight: 1.55,
-  fontFamily: FONT_BODY,
-};
-
 const cancelCard = {
   width: '100%',
   borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '12px',
   marginTop: '16px',
 };
-
 const cancelLink = {
-  fontSize: '14.5px',
-  fontWeight: 600,
+  fontSize: '15px',
+  fontWeight: 700,
   color: C_FOREST,
   textDecoration: 'none',
   whiteSpace: 'nowrap' as const,
   fontFamily: FONT_BODY,
 };
-
-const signature = {
-  fontFamily: FONT_SCRIPT,
-  fontSize: '46px',
-  fontWeight: 600,
-  color: C_TERRA,
-  lineHeight: 1.15,
-  marginTop: '2px',
-};
-
-const legal = {
-  fontSize: '12.5px',
-  lineHeight: 1.6,
-  color: C_MUTED,
-  margin: '18px 0 0',
-  fontFamily: FONT_BODY,
-};
-
-const credit = {
-  textAlign: 'center' as const,
-  fontSize: '12px',
-  color: C_MUTED,
-  paddingTop: '10px',
-  fontFamily: FONT_BODY,
-};
+const rule = { height: '1px', lineHeight: '1px', fontSize: 0, backgroundColor: '#E3E0D6', marginBottom: '18px' };
+const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '14px', color: C_MUTED, marginBottom: '8px' };
+const legal = { fontSize: '12px', lineHeight: 1.7, color: '#A09A8C', margin: 0, fontFamily: FONT_BODY };

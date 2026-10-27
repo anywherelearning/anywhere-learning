@@ -18,7 +18,9 @@ interface Props {
   payUrl: string;
 }
 
-const EMAIL_LOGO = 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/email-assets/email-logo-mark.png';
+// Absolute, always-live host for email assets (never localhost).
+const SITE = 'https://anywherelearning.co';
+const LOGO_CREAM = `${SITE}/email-logo-cream.png`;
 
 /**
  * Payment-failed note. Sent once per invoice when a renewal or a trial's
@@ -31,92 +33,95 @@ export default function PaymentFailed({ firstName, amount, payUrl }: Props) {
 
   return (
     <Html>
-      <Head>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap');
-        `}</style>
-      </Head>
+      <Head />
       <Preview>
         Your payment didn&apos;t go through. It&apos;s a one-minute fix to get your library back.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <table role="presentation" cellPadding={0} cellSpacing={0} style={envelope}>
+          <table role="presentation" cellPadding={0} cellSpacing={0} style={card}>
             <tbody>
 
-              {/* ── 1 · Brand header ── */}
+              {/* ── Header band ── */}
               <tr>
-                <td style={{ padding: '38px 48px 26px', textAlign: 'center' as const }}>
-                  <Img
-                    src={EMAIL_LOGO}
-                    alt="Anywhere Learning"
-                    width="46"
-                    height="46"
-                    style={{ display: 'inline-block', width: '46px', height: '46px' }}
-                  />
-                  <div style={brandName}>
-                    anywhere <span style={{ fontStyle: 'italic', color: C_FOREST }}>learning</span>
-                  </div>
-                  <div style={tagline}>
-                    Hands-on activities for raising capable kids, ready for real life.
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style={{ padding: '0 48px' }}>
-                  <div style={fadeDivider} />
+                <td style={band}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: 'middle' }}>
+                          <Img src={LOGO_CREAM} alt="Anywhere Learning" width="38" style={{ display: 'block', width: '38px', height: 'auto' }} />
+                        </td>
+                        <td style={{ verticalAlign: 'middle', textAlign: 'right' as const }}>
+                          <span style={badge}>QUICK HEADS-UP</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={h1}>Your payment didn&apos;t go through, {name}.</div>
+                  <div style={subline}>It happens all the time, and it&apos;s an easy fix.</div>
                 </td>
               </tr>
 
-              {/* ── 2 · What happened ── */}
+              {/* ── What happened ── */}
               <tr>
-                <td style={{ padding: '34px 48px 0' }}>
-                  <div style={eyebrow}>
-                    <span style={eyebrowRule} />
-                    Quick heads-up
-                  </div>
-                  <div style={h1}>
-                    Your payment didn&apos;t go through,{' '}
-                    <span style={{ fontStyle: 'italic', color: C_FOREST }}>{name}</span>.
-                  </div>
+                <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
-                    Your <strong style={strongInk}>{amount}</strong> payment for Anywhere Learning
-                    was declined by your bank. It happens all the time, usually an expired card or
-                    a card limit, and it&apos;s an easy fix.
-                  </Text>
-                  <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Your library is paused for now, and nothing is lost. As soon as the payment
-                    goes through, everything is right where you left it. We&apos;ll try the card
-                    again automatically over the next couple of weeks, or you can fix it right now.
+                    Your <strong style={{ color: C_INK }}>{amount}</strong> payment for Anywhere Learning
+                    was declined by your bank. Usually it&apos;s an expired card or a card limit.
                   </Text>
                 </td>
               </tr>
 
-              {/* ── 3 · The fix ── */}
+              {/* ── Status aside ── */}
               <tr>
-                <td style={{ padding: '28px 48px 0', textAlign: 'center' as const }}>
-                  <Link href={payUrl} style={btn}>
-                    Update my payment
-                  </Link>
-                  <div style={ctaMicro}>Secure Stripe page. Takes a minute, no sign-in needed.</div>
+                <td style={{ padding: '22px 36px 0' }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={aside}>
+                    <tbody>
+                      <tr>
+                        <td style={{ padding: '18px 22px 20px' }}>
+                          <div style={{ ...label, color: C_FOREST }}>WHERE THINGS STAND</div>
+                          <div style={{ fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '8px', fontFamily: FONT_BODY }}>
+                            <strong style={{ color: C_INK }}>Your library is paused for now, and nothing is lost.</strong>{' '}
+                            As soon as the payment goes through, everything is right where you left
+                            it. We&apos;ll try the card again automatically over the next couple of
+                            weeks, or you can fix it right now.
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
               </tr>
 
-              {/* ── 4 · Sign-off ── */}
+              {/* ── The fix ── */}
               <tr>
-                <td style={{ padding: '30px 48px 0' }}>
-                  <div style={{ fontSize: '15.5px', color: C_BODY }}>xo,</div>
-                  <div style={signature}>Amelie</div>
-                  <div style={{ fontSize: '13px', color: C_MUTED, marginTop: '4px' }}>
-                    Founder · Anywhere Learning
-                  </div>
+                <td style={{ padding: '26px 36px 0', textAlign: 'center' as const }}>
+                  <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '0 auto' }}>
+                    <tbody>
+                      <tr>
+                        <td style={btnCell}>
+                          <Link href={payUrl} style={btn}>Update my payment</Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={micro}>Secure Stripe page. Takes a minute, no sign-in needed.</div>
                 </td>
               </tr>
 
-              {/* ── 5 · Fine print ── */}
+              {/* ── Sign-off ── */}
               <tr>
-                <td style={{ padding: '28px 48px 32px' }}>
-                  <div style={fadeDivider} />
+                <td style={{ padding: '26px 36px 0' }}>
+                  <Text style={{ ...p, margin: '0 0 6px' }}>xo,</Text>
+                  <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
+                </td>
+              </tr>
+
+              {/* ── Footer ── */}
+              <tr>
+                <td style={{ padding: '28px 36px 30px', textAlign: 'center' as const }}>
+                  <div style={rule} />
+                  <div style={motto}>Meaningful Learning, Wherever You Are</div>
                   <Text style={legal}>
                     You&apos;re receiving this note because a payment for your Anywhere Learning
                     membership didn&apos;t go through. If you&apos;d rather not continue, you
@@ -128,11 +133,6 @@ export default function PaymentFailed({ firstName, amount, payUrl }: Props) {
 
             </tbody>
           </table>
-
-          <div style={credit}>
-            Anywhere Learning · <em style={{ fontStyle: 'italic' }}>Built by Amelie</em> · Made in
-            Nelson, BC
-          </div>
         </Container>
       </Body>
     </Html>
@@ -146,118 +146,48 @@ PaymentFailed.PreviewProps = {
   payUrl: 'https://invoice.stripe.com/i/preview',
 } satisfies Props;
 
-/* ── Brand tokens (shared with the other transactional emails) ── */
+/* ── "Trail map" tokens (match QuizPlanEmail + the Kit sequence emails, Oct 2026) ── */
+const FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
+const FONT_DISPLAY = "Georgia, 'Times New Roman', serif";
+const FONT_MONO = "'Courier New', Courier, monospace";
 
-const FONT_BODY = "'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif";
-const FONT_DISPLAY = "'DM Serif Display', Georgia, 'Times New Roman', serif";
-const FONT_SCRIPT = "'Dancing Script', 'Brush Script MT', cursive";
-
-const C_CREAM = '#FAF8F3';
-const C_INK = '#2D3A2E';
-const C_BODY = '#4F5A50';
-const C_MUTED = '#7B8378';
+const C_CARD = '#FAF9F6';
+const C_INK = '#2F3A2E';
+const C_BODY = '#4B5563';
+const C_MUTED = '#8A8578';
 const C_RULE = '#D8D4C5';
 const C_FOREST = '#588157';
-const C_FOREST_DARK = '#3A5A40';
+const C_SAGE = '#EEF2EC';
 
-const body = {
-  backgroundColor: '#E9E5DC',
-  fontFamily: FONT_BODY,
-  margin: 0,
-  padding: '24px 12px',
-};
-
-const envelope = {
+const body = { backgroundColor: '#EBE9E2', fontFamily: FONT_BODY, margin: 0, padding: '32px 12px' };
+const card = {
   width: '100%',
   borderCollapse: 'separate' as const,
-  backgroundColor: C_CREAM,
+  backgroundColor: C_CARD,
   border: `1px solid ${C_RULE}`,
   borderRadius: '18px',
+  overflow: 'hidden' as const,
 };
-
-const brandName = { fontFamily: FONT_DISPLAY, fontSize: '25px', color: C_INK, marginTop: '10px' };
-const tagline = { fontSize: '13px', color: C_MUTED, marginTop: '5px', fontFamily: FONT_BODY };
-
-const fadeDivider = {
-  height: '1px',
-  backgroundColor: C_RULE,
-  backgroundImage: `linear-gradient(to right, rgba(216,212,197,0), ${C_RULE}, rgba(216,212,197,0))`,
-};
-
-const eyebrow = {
-  fontSize: '11px',
-  fontWeight: 700,
-  letterSpacing: '0.2em',
-  color: C_MUTED,
-  textTransform: 'uppercase' as const,
-  fontFamily: FONT_BODY,
-};
-
-const eyebrowRule = {
+const band = { backgroundColor: C_FOREST, padding: '26px 36px 28px', borderTopLeftRadius: '17px', borderTopRightRadius: '17px' };
+const badge = {
   display: 'inline-block',
-  width: '26px',
-  height: '1px',
-  backgroundColor: C_FOREST,
-  verticalAlign: '3px',
-  marginRight: '10px',
-};
-
-const h1 = {
-  fontFamily: FONT_DISPLAY,
-  fontSize: '31px',
-  lineHeight: 1.22,
+  backgroundColor: '#E8C99A',
   color: C_INK,
-  marginTop: '12px',
-};
-
-const p = {
-  fontSize: '15.5px',
-  lineHeight: 1.68,
-  color: C_BODY,
-  margin: '18px 0 0',
-  fontFamily: FONT_BODY,
-};
-
-const strongInk = { color: C_INK, fontWeight: 600 };
-
-const signature = {
-  fontFamily: FONT_SCRIPT,
-  fontSize: '30px',
-  color: C_FOREST_DARK,
-  lineHeight: 1.2,
-};
-
-const legal = {
+  fontFamily: FONT_MONO,
   fontSize: '12px',
-  lineHeight: 1.6,
-  color: C_MUTED,
-  margin: '16px 0 0',
-  fontFamily: FONT_BODY,
+  fontWeight: 700,
+  letterSpacing: '0.12em',
+  padding: '7px 13px',
+  borderRadius: '999px',
 };
-
-const credit = {
-  textAlign: 'center' as const,
-  fontSize: '12px',
-  color: C_MUTED,
-  padding: '18px 0 6px',
-  fontFamily: FONT_BODY,
-};
-
-const btn = {
-  display: 'inline-block',
-  backgroundColor: C_FOREST,
-  color: '#F7F4EA',
-  fontSize: '15px',
-  fontWeight: 600,
-  textDecoration: 'none',
-  padding: '13px 32px',
-  borderRadius: '11px',
-  fontFamily: FONT_BODY,
-};
-
-const ctaMicro = {
-  fontSize: '12.5px',
-  color: C_MUTED,
-  marginTop: '12px',
-  fontFamily: FONT_BODY,
-};
+const h1 = { fontFamily: FONT_DISPLAY, fontSize: '30px', lineHeight: 1.18, color: C_CARD, margin: '20px 0 8px' };
+const subline = { fontSize: '15px', lineHeight: 1.5, color: '#DFE8DC', fontFamily: FONT_BODY };
+const p = { fontSize: '16px', lineHeight: 1.65, color: C_BODY, margin: 0, fontFamily: FONT_BODY };
+const label = { fontFamily: FONT_MONO, fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em' };
+const btnCell = { backgroundColor: C_INK, borderRadius: '12px', textAlign: 'center' as const };
+const btn = { display: 'inline-block', padding: '16px 34px', fontSize: '16px', fontWeight: 700, color: C_CARD, textDecoration: 'none', lineHeight: 1, fontFamily: FONT_BODY };
+const micro = { fontSize: '12.5px', color: C_MUTED, marginTop: '12px', fontFamily: FONT_BODY };
+const aside = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: C_SAGE, borderRadius: '12px' };
+const rule = { height: '1px', lineHeight: '1px', fontSize: 0, backgroundColor: '#E3E0D6', marginBottom: '18px' };
+const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '14px', color: C_MUTED, marginBottom: '8px' };
+const legal = { fontSize: '12px', lineHeight: 1.7, color: '#A09A8C', margin: 0, fontFamily: FONT_BODY };
