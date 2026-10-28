@@ -1,0 +1,332 @@
+{
+  "slug": "garden-plot-planner",
+  "category": "Real-World Math",
+  "title": "Garden Plot Planner",
+  "tagline": "Measure · Space it out · Grow it",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid designs and plants a real garden: a backyard plot, a raised bed or a few pots on a balcony. They measure the space, work out how many plants really fit, budget the seeds, set harvest dates, then plant it and track what grows.",
+  "need": [
+    "A spot to grow: a garden bed, a raised bed, pots or a sunny windowsill",
+    "A tape measure, paper and a pencil (graph paper helps)",
+    "Seeds or seedlings, soil and water",
+    "Optional: a small budget for seeds and supplies, $5 to $15"
+  ],
+  "lesson": {
+    "text": "Spacing decides what fits, not how small the seed is. Divide the bed by the space each plant needs.",
+    "before": "Lettuce seeds are tiny. We'll fit 50 in this bed.",
+    "model": [
+      {
+        "part": "Bed",
+        "line": "4 ft × 2 ft = 48 in × 24 in."
+      },
+      {
+        "part": "Lettuce",
+        "line": "Needs about 8 in. 48 ÷ 8 = 6 across, 24 ÷ 8 = 3 rows. 6 × 3 = 18 plants."
+      },
+      {
+        "part": "Tomatoes",
+        "line": "Need about 24 in. 48 ÷ 24 = 2, 24 ÷ 24 = 1. Just 2 plants."
+      },
+      {
+        "part": "Mix it",
+        "line": "1 tomato on one half, 3 × 3 = 9 lettuces on the other."
+      }
+    ],
+    "modelNote": "That's the maths this guide practises: measure, divide by the spacing, then decide what's worth the space."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "area, division, multiplying, counting days"
+    },
+    {
+      "subject": "Science",
+      "text": "sun, water, seasons and plant growth"
+    },
+    {
+      "subject": "Money",
+      "text": "budgets, cost per plant, grown versus bought"
+    },
+    {
+      "subject": "Data",
+      "text": "a growth log and growth rates"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the garden assistant, not the gardener. Let them choose what to grow, start small (a few pots count), and treat anything that doesn't grow as data, not failure.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Pick the spot, measure it and choose what to grow (Steps 1 and 2)."
+      },
+      {
+        "when": "Day 2",
+        "what": "Lay it out, budget it and set the dates (Steps 3 and 4)."
+      },
+      {
+        "when": "Planting day, then weekly",
+        "what": "Plant, track the growth and do the final maths (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It's the wrong season to plant outside",
+        "a": "Grow fast things indoors on a sunny windowsill: herbs, lettuce or radishes in pots. The measuring, spacing and budgeting work the same way."
+      },
+      {
+        "q": "Nothing came up",
+        "a": "Make it a science question: too deep, too dry, too cold, too old? Have them check the seed packet and try again with one change."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Measuring",
+      "text": "real spaces with a real tape"
+    },
+    {
+      "name": "Planning ahead",
+      "text": "dates weeks and months away"
+    },
+    {
+      "name": "Patience",
+      "text": "waiting for sprouts"
+    },
+    {
+      "name": "Observing",
+      "text": "noticing small changes over time"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the spot and measure it",
+      "why": "Sun, water and space decide everything else.",
+      "kid": "Your kid looks at 2 or 3 possible spots and checks the sun (most vegetables need 6 hours or more), how far the water is, and how much room there is. They pick the best one, measure the length and width, and work out the area. Using pots? They measure each one.",
+      "you": "Walk it together and let them choose. If you're not sure about the sun, check the spot in the morning, at noon and in the late afternoon.",
+      "ask": [
+        "How many hours of sun does this spot get?",
+        "What could help or hurt a garden here: shade, wind, animals?"
+      ],
+      "tip": "Have them note the sun on the spot at three times of day. It's their first piece of real garden data.",
+      "levels": {
+        "explore": "Pick a spot, say why, and measure the length and width.",
+        "develop": "Compare 2 or 3 spots on sun, water and space, then work out the usable area.",
+        "extend": "Score each spot from 1 to 5 on sun hours, water and space, and draw the winner to scale."
+      }
+    },
+    {
+      "title": "Choose what to grow",
+      "why": "Matching what they want with what will actually work.",
+      "kid": "Your kid lists 5 to 10 things they'd like to grow, then checks each one on the seed packet or the cheat sheet at the back: sun, spacing, days to harvest and the right season. They narrow it down to the ones that fit their spot and their time.",
+      "you": "Help them find the information on seed packets, at a garden centre or online. Ask 'does it fit?' and 'is there time before the cold?'",
+      "ask": [
+        "What do you actually like to eat?",
+        "If it takes 90 days and it's already late in the season, will it make it?"
+      ],
+      "tip": "Put one fast crop in the plan, like radishes. Sprouts in a week keep kids interested while the slow ones grow.",
+      "levels": {
+        "explore": "Pick 2 or 3 plants and find out how much space and sun each needs.",
+        "develop": "Check 5 plants for sun, water, spacing and harvest time, and choose the best fits.",
+        "extend": "Build a table for 8 plants with a fit score for your spot, plus which plants grow well together."
+      }
+    },
+    {
+      "title": "Lay it out with real spacing",
+      "why": "Division decides how many plants fit.",
+      "kid": "Your kid divides the length and width of the bed by each plant's spacing to work out how many fit, then draws a layout: tall plants at the back so they don't shade the short ones, and room to reach in. For pots, it's one big plant or a few small ones per pot.",
+      "you": "Ask 'did you check the spacing?' and 'can you reach the middle without stepping on anything?' Let them redraw if it doesn't fit.",
+      "ask": [
+        "Your row is 48 inches and lettuce needs 8. How many fit?",
+        "Which plants go at the back, and why?"
+      ],
+      "tip": "Lay string or sticks on the real bed to mark the rows before drawing. Seeing the spacing on the ground makes the numbers make sense.",
+      "levels": {
+        "explore": "Draw a simple map with a label for each plant.",
+        "develop": "Work out how many of each plant fits and draw the layout using real measurements.",
+        "extend": "Draw it to scale on graph paper and find what percentage of the bed each crop uses."
+      }
+    },
+    {
+      "title": "Budget it and set the dates",
+      "why": "What it costs, and when you'll eat it.",
+      "kid": "Your kid lists what they need (seeds, soil, pots, labels), marks what you already have, prices the rest and checks it against the budget. Then they add each plant's days to harvest to the planting date to find its harvest date, and put it all on a calendar. Building a raised bed? They also work out the wood to cut and how much soil fills it: length × width × depth.",
+      "you": "Set a real budget, like $5 to $15. Ask 'can you grow it from seed instead of buying plants?' and 'what could you use instead of a new pot?'",
+      "ask": [
+        "A bed 4 ft × 2 ft × 1 ft deep: how many cubic feet of soil?",
+        "Plant carrots today, 70 days to harvest: what's the date?"
+      ],
+      "tip": "Yogurt tubs with holes poked in the bottom make good free pots.",
+      "levels": {
+        "explore": "List what to buy, estimate the total, and write when each plant should sprout.",
+        "develop": "Price everything, make 2 trade-offs to stay on budget, and build a planting calendar.",
+        "extend": "Work out cost per plant, and plan a second planting a few weeks later for a longer harvest."
+      }
+    },
+    {
+      "title": "Plant it, track it, do the final maths",
+      "why": "The plan becomes real, and the data starts coming in.",
+      "kid": "Your kid plants following their layout, at the depth on the packet, then waters and labels everything. Every few days they record what sprouted and how tall each plant is. At the end they work out the growth per day and the cost per plant, and whether growing it beat buying it.",
+      "you": "Let them do the planting and the measuring. Remind them to check in, and ask 'what changed since last time?'",
+      "ask": [
+        "It grew 6 cm in 3 days. How much is that per day?",
+        "$12 for 20 plants: what did each one cost?"
+      ],
+      "tip": "A ruler pushed into the soil next to one plant makes measuring easy, and gives a great photo every week.",
+      "levels": {
+        "explore": "Plant everything, label it, and check it 3 times in the first week.",
+        "develop": "Keep a growth log for 2 weeks and work out the cost per plant.",
+        "extend": "Graph the growth, compare sprout days with the packet, and work out how many harvests until the garden pays for itself."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Garden Cheat Sheet",
+    "intro": "Ballpark spacing and timing. Seed packets differ by variety, so always check yours.",
+    "items": [
+      {
+        "name": "Close together",
+        "lines": [
+          {
+            "k": "Radishes:",
+            "v": "2 in apart, about 25 to 30 days"
+          },
+          {
+            "k": "Lettuce:",
+            "v": "about 8 in, about 45 to 55 days"
+          },
+          {
+            "k": "Spinach:",
+            "v": "about 4 in, about 40 to 50 days"
+          },
+          {
+            "k": "Peas:",
+            "v": "2 to 3 in, about 60 days"
+          },
+          {
+            "k": "Carrots:",
+            "v": "2 to 3 in, about 70 days"
+          },
+          {
+            "k": "Bush beans:",
+            "v": "4 to 6 in, about 50 to 60 days"
+          }
+        ],
+        "ask": "Check it: which of these could you harvest in 2 months?"
+      },
+      {
+        "name": "Need room",
+        "lines": [
+          {
+            "k": "Basil:",
+            "v": "10 to 12 in, about 60 days"
+          },
+          {
+            "k": "Peppers:",
+            "v": "about 18 in, 60 to 90 days from a seedling"
+          },
+          {
+            "k": "Zucchini:",
+            "v": "24 to 36 in, about 50 to 60 days"
+          },
+          {
+            "k": "Tomatoes:",
+            "v": "about 24 in, 60 to 80 days from a seedling"
+          },
+          {
+            "k": "Pumpkins:",
+            "v": "several feet, 90 to 120 days"
+          }
+        ],
+        "ask": "Check it: is one big plant worth the space of many small ones?"
+      },
+      {
+        "name": "Sun",
+        "lines": [
+          {
+            "k": "Full sun, 6+ hours:",
+            "v": "tomatoes, zucchini, beans, peppers"
+          },
+          {
+            "k": "Part sun, 3 to 6 hours:",
+            "v": "lettuce, spinach, peas, parsley"
+          },
+          {
+            "k": "Windowsill:",
+            "v": "herbs, lettuce, radishes in pots"
+          },
+          {
+            "k": "Too shady:",
+            "v": "under 3 hours, so try another spot"
+          }
+        ],
+        "ask": "Check it: does your spot match what your plants need?"
+      },
+      {
+        "name": "Grow on a budget",
+        "lines": [
+          {
+            "k": "Seed packets:",
+            "v": "a few dollars, often dozens of seeds or more"
+          },
+          {
+            "k": "Free pots:",
+            "v": "yogurt tubs and cans with drainage holes"
+          },
+          {
+            "k": "Share:",
+            "v": "split a packet with a friend or a neighbour"
+          },
+          {
+            "k": "Save seeds:",
+            "v": "beans and peas are the easiest"
+          }
+        ],
+        "ask": "Check it: what can you reuse instead of buying?"
+      }
+    ],
+    "after": {
+      "label": "The garden maths",
+      "lines": [
+        "Plants in a row = row length ÷ spacing",
+        "Soil to fill a bed = length × width × depth",
+        "Harvest date = planting date + days to harvest",
+        "Cost per plant = total spent ÷ number of plants"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They grew a plan into a garden.",
+    "text": "Your kid measured a real space, worked out how many plants fit, budgeted the seeds, set harvest dates, planted it and tracked the growth. Area, division, money and science, growing right outside the door.",
+    "celebrate": "Ask them to give the family a garden tour: what's planted where, why, and when it'll be ready.",
+    "extensions": [
+      "Weigh every harvest and work out what it would cost at the store",
+      "Plan next season's garden with what you learned",
+      "Try the same plant in a pot and in the ground, and compare",
+      "Build your own raised bed: measure, cut the wood and estimate the soil"
+    ]
+  },
+  "signs": [
+    "They read the back of a seed packet without being asked",
+    "They count the days to a harvest on the calendar",
+    "They notice which spots in the yard get the most sun"
+  ],
+  "makeItReal": "Give your kid one real growing space that's theirs to plan, even if it's a single pot. Let them buy the seeds with the budget and make every decision. A garden they designed is a garden they'll check every morning.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In the spring, the kids built our garden. They chose the spot (flat, with lots of sun), measured it, worked out the wood, cut it with their dad, built the bed and estimated how much soil it would take. Then they grew radishes, carrots, beets, cucumbers and tomatoes.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/garden-plot-planner.jpg",
+    "alt": "A dad, a girl and a boy screwing together the wooden sides of a raised garden bed outside",
+    "caption": "Measured, cut and built together."
+  }
+}

@@ -54,7 +54,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "fix-it-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Fix-it%20detective%20v2.pdf",
   "frustration-tolerance-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Frustration%20Tolerance%20Challenge%20Cards%20v2.pdf",
   "garage-sale-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garage%20sale%20math%20v3.pdf",
-  "garden-plot-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garden%20Plot%20Planner%20v2.pdf",
+  "garden-plot-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garden%20Plot%20Planner%20v3.pdf",
   "grow-it-eat-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20GROW%20IT%2C%20EAT%20IT%20v3.pdf",
   "hallucination-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HALLUCINATION%20DETECTIVE%20v2.pdf",
   "hard-thing-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Hard%20Thing%20Challenge%20v2.pdf",

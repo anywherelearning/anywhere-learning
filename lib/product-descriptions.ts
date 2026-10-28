@@ -954,13 +954,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'garden-plot-planner': {
     opening:
-      'Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. Geometry, budgeting, and science growing together.',
+      'Your child designs and plants a real garden, from a backyard bed to a few pots. They measure the space, divide by plant spacing to see what really fits, budget the seeds, work out the soil, set harvest dates, then plant it and track the growth. Geometry, budgeting and science growing together.',
     whatsIncluded: [
-      'Garden plot design and planning guide',
-      'Area and measurement calculations',
-      'Plant spacing and row planning',
-      'Seed budget and cost estimation',
-      'Seasonal planting schedule',
+      '5 steps from picking the spot to tracking the growth, each with your job and your kid\'s job',
+      'A worked example on plant spacing: why the same bed fits 18 lettuces or 2 tomatoes',
+      'Seed budget, soil estimate and a harvest-date calendar',
+      'Garden Cheat Sheet: spacing, days to harvest, sun needs and growing on a budget',
+      'Three levels at every step (Explore, Develop, Extend)',
     ],
     skillTags: ['STEM', 'Geometry', 'Measurement', 'Budgeting', 'Science', 'Planning'],
     insideTheLearning: {

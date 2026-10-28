@@ -1161,15 +1161,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Garden Plot Planner",
     slug: "garden-plot-planner",
     description:
-      "Design a garden plot using real measurements, area calculations, plant spacing, seed budgets, and seasonal planning. Kids measure, sketch to scale, calculate costs, and plan a planting schedule. A real STEM project rooted in dirt: geometry, biology, budgeting, and seasonal planning in one build.",
+      "Your child designs and plants a real garden, from a backyard bed to a few pots. They measure the space, divide by plant spacing to see what really fits, budget the seeds, work out the soil, set harvest dates, then plant it and track the growth. A real STEM project rooted in dirt: geometry, biology and budgeting in one build.",
     shortDescription:
-      "STEM math activity for kids ages 6-14: design a garden with real measurements, plant spacing, area calculations, and seasonal budgets.",
+      "STEM math activity for kids ages 6-14: measure a garden, work out plant spacing and soil, budget the seeds, then plant and track it.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqEAkIBECpwGmjGJs2vEP",
     blobUrl: "",
     imageUrl: "/products/garden-plot-planner.jpg",
-    previewFile: "Preview Real-world math - Garden Plot Planner.pdf",
+    previewFile: "Preview Real-world math - Garden Plot Planner v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
