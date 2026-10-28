@@ -840,13 +840,14 @@ export const productDescriptions: Record<string, ProductDescription> = {
 
   'backyard-campout-planner': {
     opening:
-      'Plan a backyard campout from start to finish: gear checklists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.',
+      'Your child plans a real backyard campout from scratch: scouting and measuring the site, drawing a layout that fits, building the gear list and budget, working out food for everyone, and writing the schedule. Then you all camp out and compare the plan with the real night. Measurement, area, budgeting and time maths, with marshmallows at the end.',
     whatsIncluded: [
-      'Complete campout planning guide with step-by-step phases',
-      'Gear checklist with quantity and cost calculations',
-      'Meal planning with shopping list and budget',
-      'Stargazing schedule with time and direction planning',
-      'Campfire activity plan with timing estimates',
+      '5 steps from scouting the site to camping out, each with your job and your kid\'s job',
+      'A worked example on fitting a camp into a measured space',
+      'Gear list and budget, with make-it, borrow-it or skip-it trade-offs',
+      'Food quantities per camper and a schedule with buffer time',
+      'Campout Numbers page: sizes, food per person, setup times and safety',
+      'Three levels at every step (Explore, Develop, Extend)',
     ],
     skillTags: ['Measurement', 'Budgeting', 'Time Planning', 'Estimation', 'Organisation'],
     insideTheLearning: {

@@ -1046,15 +1046,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Backyard Campout Planner",
     slug: "backyard-campout-planner",
     description:
-      "Plan a backyard campout from start to finish: gear lists, meal prep, a stargazing schedule, and a campfire activity plan. Kids use measurement, budgeting, time planning, and estimation to organise a real overnight adventure. Maths that ends with marshmallows.",
+      "Your child plans a real backyard campout from scratch: scouting and measuring the site, drawing a layout that fits, building the gear list and budget, working out food for everyone, and writing the schedule. Then you all camp out and compare the plan with the real night. Measurement, area, budgeting and time maths, with marshmallows at the end.",
     shortDescription:
-      "Real-world math for kids ages 6-14: plan a backyard campout with gear, meals, stargazing, and budgets.",
+      "Real-world math for kids ages 6-14: measure the site, budget the gear, plan the food and the schedule, then camp out.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqBAkIBECpwGmhykBV8al",
     blobUrl: "",
     imageUrl: "/products/backyard-campout-planner.jpg",
-    previewFile: "Preview Real-world math - Backyard Campout Planner.pdf",
+    previewFile: "Preview Real-world math - Backyard Campout Planner v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
