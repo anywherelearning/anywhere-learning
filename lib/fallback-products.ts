@@ -1115,15 +1115,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Farmers Market Challenge",
     slug: "farmers-market-challenge",
     description:
-      "Navigate a farmers market with a real budget. Compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.",
+      "Your child takes a real budget to a farmers market, walks every stall before buying, compares unit prices from stall to stall, and plans a meal from what's in season. They talk to the growers, handle every purchase, then cook the meal with you and work out the cost per serving. Real money maths that ends with dinner.",
     shortDescription:
-      "Real-world math for kids ages 6-14: budget and shop at a farmers market. Prices, change, and smart choices.",
+      "Real-world math for kids ages 6-14: scout a farmers market, compare unit prices, shop on a budget and cook what's in season.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqDAkIBECpwGmYmZ9kCi1",
     blobUrl: "",
     imageUrl: "/products/farmers-market-challenge.jpg",
-    previewFile: "Preview Real-world math - Farmers Market Challenge.pdf",
+    previewFile: "Preview Real-world math - Farmers Market Challenge v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

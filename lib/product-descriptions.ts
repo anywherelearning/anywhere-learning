@@ -908,13 +908,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'farmers-market-challenge': {
     opening:
-      'Navigate a farmers market with a real budget. Compare prices, weigh options, calculate change, and make smart choices. Kids practise mental maths, estimation, and decision-making while shopping for real food. The kind of maths lesson that ends with a great meal.',
+      'Your child takes a real budget to a farmers market, walks every stall before buying, compares unit prices from stall to stall, and plans a meal from what's in season. They talk to the growers, handle every purchase, then cook the meal with you and work out the cost per serving. Real money maths that ends with dinner.',
     whatsIncluded: [
-      'Farmers market shopping challenge guide',
-      'Budget planning and tracking sheet',
-      'Price comparison and mental maths activities',
-      'Change calculation and estimation practice',
-      'Post-shop reflection and value assessment',
+      '5 steps from scouting the market to cooking the meal, each with your job and your kid\'s job',
+      'A worked example on unit prices from two stalls',
+      'Meal planning from what\'s in season and affordable',
+      'Market Guide page: questions for growers, how produce is priced, a season chart and money tips',
+      'Three levels at every step (Explore, Develop, Extend)',
     ],
     skillTags: ['Mental Maths', 'Budgeting', 'Estimation', 'Decision-Making'],
     insideTheLearning: {

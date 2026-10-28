@@ -1,0 +1,337 @@
+{
+  "slug": "farmers-market-challenge",
+  "category": "Real-World Math",
+  "title": "Farmers Market Challenge",
+  "tagline": "Scout · Compare · Cook what's in season",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes a real budget to a farmers market. They walk the whole market before buying anything, compare unit prices from stall to stall, plan a meal from what's in season, and handle every purchase themselves. Then you cook it together and work out what each serving cost.",
+  "need": [
+    "A farmers market, a roadside stand or a grocery store with a produce section",
+    "A budget of $10 to $25, in cash if you can",
+    "Paper, a pencil and a calculator",
+    "A bag for the haul, and your kitchen for the meal"
+  ],
+  "lesson": {
+    "text": "The lower price isn't always the better deal. Unit price tells you what one apple, one pound or one bunch really costs.",
+    "before": "The $2.50 bag is cheaper, so it's the better deal.",
+    "model": [
+      {
+        "part": "Stall A",
+        "line": "6 apples for $3. $3 ÷ 6 = 50¢ per apple."
+      },
+      {
+        "part": "Stall B",
+        "line": "4 apples for $2.50. $2.50 ÷ 4 = about 63¢ per apple."
+      },
+      {
+        "part": "So",
+        "line": "Stall A is cheaper per apple, even though the bag costs more."
+      },
+      {
+        "part": "But",
+        "line": "Only need 4 apples? Stall B costs less in total. The best deal depends on what you'll use."
+      }
+    ],
+    "modelNote": "That's the thinking this guide builds: work out the unit price, then check it against what you actually need."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "division, unit prices, running totals, making change"
+    },
+    {
+      "subject": "Money",
+      "text": "budgets, value and planned versus actual"
+    },
+    {
+      "subject": "Science",
+      "text": "what grows when, and why it's in season"
+    },
+    {
+      "subject": "Communication",
+      "text": "asking growers real questions"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the shopping buddy, not the shopper. Hand over the cash, let them talk to the growers, and stand nearby without stepping in.",
+    "plan": [
+      {
+        "when": "Before you go",
+        "what": "Set the budget and the goal (Step 1)."
+      },
+      {
+        "when": "At the market",
+        "what": "Scout, compare unit prices, plan the meal, then shop (Steps 1 to 4)."
+      },
+      {
+        "when": "Back home",
+        "what": "Cook it together and do the final maths (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "No farmers market nearby",
+        "a": "Use the produce section of a grocery store, a roadside stand, or a pretend market at home with real flyer prices. The maths is the same."
+      },
+      {
+        "q": "They're too shy to talk to the growers",
+        "a": "Go first with one easy question, then let them ask the next one. Most growers love telling kids about what they grow."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Unit pricing",
+      "text": "what one really costs"
+    },
+    {
+      "name": "Patience",
+      "text": "looking before buying"
+    },
+    {
+      "name": "Confidence",
+      "text": "talking to adults and handling money"
+    },
+    {
+      "name": "Flexibility",
+      "text": "planning around what's actually there"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Set the budget and scout the market",
+      "why": "Smart shoppers never buy at the first stall.",
+      "kid": "Your kid counts the budget and writes the goal: a meal for the family, snacks for the week, ingredients for one recipe. At the market they walk every stall before buying anything, writing down what's for sale and the prices, and circling anything sold at more than one stall.",
+      "you": "Hand over the cash and walk with them, but don't point things out. Let them notice. Afterward, ask what surprised them.",
+      "starters": [
+        "Family dinner",
+        "Snacks for the week",
+        "One recipe",
+        "Breakfast"
+      ],
+      "ask": [
+        "With $20 and 5 things to buy, about how much can you spend on each?",
+        "Did you see the same thing at two stalls? Same price?"
+      ],
+      "tip": "Waiting to buy is the hardest part for kids. It's also the best part of the lesson.",
+      "levels": {
+        "explore": "Count the budget and write down 5 items and their prices from 2 stalls.",
+        "develop": "Split the budget into categories, then map every stall with its key prices.",
+        "extend": "Keep 10% of the budget for surprises, and record stall, item, amount and price for 10 items."
+      }
+    },
+    {
+      "title": "Compare unit prices",
+      "why": "The lower price isn't always the better deal.",
+      "kid": "Your kid picks 3 to 5 items sold at more than one stall or in different sizes. For each one they write the price and the amount, then divide: price ÷ amount = unit price, per apple, per pound or per bunch. Which stall wins?",
+      "you": "Help with the division if needed, but let them set up the problem. Ask 'is bigger always cheaper?' and 'does cheapest always mean best?'",
+      "ask": [
+        "6 apples for $3 or 4 for $2.50: which is cheaper per apple?",
+        "Is the cheaper one just as fresh?"
+      ],
+      "tip": "Some stalls price by the pound and some by the basket. Ask if you can weigh a basket. It turns a guess into real maths.",
+      "levels": {
+        "explore": "Compare one item at two stalls and say which is cheaper.",
+        "develop": "Find unit prices for 3 to 5 items and pick the best stall for each.",
+        "extend": "Work out how much more the pricier option costs, as a percentage, and write a best-value pick for each item."
+      }
+    },
+    {
+      "title": "Plan the meal from what's there",
+      "why": "Cook what's in season and what's affordable, not what's on a recipe card.",
+      "kid": "Using what they saw and the prices they found, your kid plans one meal: a main and at least one side. They list the ingredients, check what's already at home, and write a shopping list with the stall, amount and estimated price for each item. Then they add it up against the budget.",
+      "you": "Don't plan the meal for them. Ask 'what could you make with what you saw today?' and 'what will you cut if it's over budget?'",
+      "ask": [
+        "What's in season right now, and what could you make with it?",
+        "If your list comes to $22 and you have $20, what goes?"
+      ],
+      "tip": "Asking a grower 'what's best right now?' often decides the whole meal.",
+      "levels": {
+        "explore": "Pick a simple meal and list 3 to 5 ingredients with prices.",
+        "develop": "Plan a main and a side, and check the list total fits the budget.",
+        "extend": "Plan for the whole family, add a backup for anything that might sell out, and rank must-haves and nice-to-haves."
+      }
+    },
+    {
+      "title": "Shop and talk to the growers",
+      "why": "Real money, real people and a real budget in real time.",
+      "kid": "Your kid goes stall to stall, asks at least one grower a question, pays, counts the change and writes down each real price. They keep a running total and adjust if something costs more than expected or is sold out.",
+      "you": "Let them handle every purchase. Stand nearby, and step in only if they ask. Afterward, ask how it felt to handle the money.",
+      "ask": [
+        "How much have you spent, and how much is left?",
+        "Did you check your change?"
+      ],
+      "tip": "Small bills and coins make paying easier for kids, and for the growers too.",
+      "levels": {
+        "explore": "Buy your items and write down what each one actually cost.",
+        "develop": "Keep a running total and record planned versus actual prices.",
+        "extend": "Track every purchase and the change received, and note each on-the-spot decision and why."
+      }
+    },
+    {
+      "title": "Cook it and do the final maths",
+      "why": "The payoff, plus the numbers that only show up afterward.",
+      "kid": "Back home, your kid cooks or puts together the meal with you. Then they add up what they spent, compare it with the plan, and work out the cost per serving: total ÷ number of servings. Last question: would this meal have cost more or less at the supermarket?",
+      "you": "Handle the knives and the heat as needed, but let them lead the meal. If the numbers don't add up, ask 'can you check that?' rather than correcting it.",
+      "ask": [
+        "Were you over or under budget, and by how much?",
+        "What did one serving cost?"
+      ],
+      "tip": "Eat it together and let them tell the family what each serving cost. They'll be proud of that number.",
+      "levels": {
+        "explore": "Make a simple dish, and say if you were over or under budget.",
+        "develop": "Cook the meal, compare planned and actual spending, and find the cost per serving.",
+        "extend": "Compare the cost per serving with supermarket prices and write a short verdict: which was the better value?"
+      }
+    }
+  ],
+  "reference": {
+    "title": "Market Guide",
+    "intro": "Questions, prices and seasons for market day. Every market is different, so ask the growers.",
+    "items": [
+      {
+        "name": "Questions to ask a grower",
+        "lines": [
+          {
+            "k": "Season:",
+            "v": "What's best right now?"
+          },
+          {
+            "k": "Fresh:",
+            "v": "When was this picked?"
+          },
+          {
+            "k": "Grown:",
+            "v": "Do you grow it yourself?"
+          },
+          {
+            "k": "Deal:",
+            "v": "Is a bigger bag cheaper?"
+          },
+          {
+            "k": "Cooking:",
+            "v": "What's your favourite way to eat it?"
+          }
+        ],
+        "ask": "Check it: ask at least one before you buy."
+      },
+      {
+        "name": "How things are priced",
+        "lines": [
+          {
+            "k": "Per item:",
+            "v": "1 melon, 1 squash"
+          },
+          {
+            "k": "Per pound or kilo:",
+            "v": "potatoes, apples, tomatoes"
+          },
+          {
+            "k": "Per bunch:",
+            "v": "carrots, herbs, kale"
+          },
+          {
+            "k": "Per basket:",
+            "v": "berries, cherry tomatoes"
+          },
+          {
+            "k": "Per bag:",
+            "v": "greens, apples"
+          }
+        ],
+        "ask": "Check it: divide to find the price for one."
+      },
+      {
+        "name": "What's in season (roughly)",
+        "lines": [
+          {
+            "k": "Spring:",
+            "v": "asparagus, peas, radishes, greens, strawberries"
+          },
+          {
+            "k": "Summer:",
+            "v": "tomatoes, corn, zucchini, berries, peaches"
+          },
+          {
+            "k": "Fall:",
+            "v": "apples, squash, pears, potatoes, pumpkins"
+          },
+          {
+            "k": "Winter:",
+            "v": "root vegetables, cabbage, stored apples"
+          }
+        ],
+        "ask": "Check it: does your meal use something in season?"
+      },
+      {
+        "name": "Money tips",
+        "lines": [
+          {
+            "k": "Cash:",
+            "v": "bring small bills and coins"
+          },
+          {
+            "k": "Cards:",
+            "v": "some stalls take them, some don't"
+          },
+          {
+            "k": "Half:",
+            "v": "ask 'how much for half?'"
+          },
+          {
+            "k": "Late:",
+            "v": "some stalls offer deals near closing"
+          },
+          {
+            "k": "Tracking:",
+            "v": "write each price down as you pay"
+          }
+        ],
+        "ask": "Check it: does your running total match what's left in your wallet?"
+      }
+    ],
+    "after": {
+      "label": "The market maths",
+      "lines": [
+        "Unit price = price ÷ amount",
+        "Left to spend = budget − running total",
+        "Cost per serving = meal cost ÷ number of servings"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They shopped like a pro.",
+    "text": "Your kid set a budget, scouted the whole market, compared unit prices, planned a meal from what was in season, paid with their own hands and worked out the cost per serving. Division, money and planning, and dinner at the end.",
+    "celebrate": "Ask about their best deal: 'Which stall had it, and how did you know it was the best?'",
+    "extensions": [
+      "Go back in a different season and compare what's for sale and the prices",
+      "Try the same meal on half the budget",
+      "Track the price of one item for a month and graph it",
+      "Write a market guide for a friend who's never been"
+    ]
+  },
+  "signs": [
+    "They walk the whole store before choosing",
+    "They read the price per pound on the shelf tag",
+    "They ask what's in season before planning a meal"
+  ],
+  "makeItReal": "Make it a regular thing: once a month, your kid gets the market budget and plans one family dinner. Each time, the prices and the season change, and so does the maths.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When we stayed in Santa Catalina, Panama, the kids were in charge of our fruit and vegetables. Every day they went to la frutería, picked what we needed, checked the prices and paid. It was their job, not mine, and they took it seriously.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/farmers-market-challenge.jpg",
+    "alt": "A girl and a boy walking up to a fruit stand piled with pineapples, bananas and watermelons",
+    "caption": "Their daily job in Panama: the fruit run."
+  }
+}
