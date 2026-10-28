@@ -933,13 +933,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'garage-sale-math': {
     opening:
-      'Plan, price, and run a real garage sale using maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling, all in one hands-on project.',
+      'Your child runs a real garage sale, or a pretend one at home. They price their outgrown things, set a lowest price before anyone haggles, practise with tricky customers, make change and keep a sales log. Then they work out the real profit once the float goes back, and split it into spend, save and give.',
     whatsIncluded: [
-      'Complete garage sale planning and running guide',
-      'Pricing strategy and research activities',
-      'Change-making and money handling practice',
-      'Earnings tracking and profit calculation',
-      'Post-sale analysis and reflection',
+      '5 steps from pricing to splitting the profit, each with your job and your kid\'s job',
+      'A worked example on sales versus real profit',
+      'Practice rounds with 4 tricky customers, including a haggle and a big bill',
+      'Seller\'s Cheat Sheet: ballpark prices, making change and what not to sell',
+      'Three levels at every step (Explore, Develop, Extend)',
     ],
     skillTags: ['Money Handling', 'Pricing', 'Percentages', 'Multiplication', 'Entrepreneurship'],
     insideTheLearning: {

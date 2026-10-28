@@ -1138,15 +1138,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Garage Sale Math",
     slug: "garage-sale-math",
     description:
-      "Plan, price, and run a garage sale using real-world maths and money skills. Kids sort items, research prices, create price tags, make change, and track earnings. Addition, subtraction, multiplication, percentages, and money handling, all in one hands-on project.",
+      "Your child runs a real garage sale, or a pretend one at home. They price their outgrown things, set a lowest price before anyone haggles, practise with tricky customers, make change and keep a sales log. Then they work out the real profit once the float goes back, and split it into spend, save and give.",
     shortDescription:
-      "Real-world math for kids ages 6-14: price, sell, and count change at a real garage sale. Hands-on money skills.",
+      "Real-world math for kids ages 6-14: price, haggle, make change and work out the real profit at a garage sale.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqEAkIBECpwGm1TSe6jkj",
     blobUrl: "",
     imageUrl: "/products/garage-sale-math.jpg",
-    previewFile: "Preview Real-world math - Garage sale math.pdf",
+    previewFile: "Preview Real-world math - Garage sale math v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

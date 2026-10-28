@@ -1,0 +1,329 @@
+{
+  "slug": "garage-sale-math",
+  "category": "Real-World Math",
+  "title": "Garage Sale Math",
+  "tagline": "Pricing · Making change · Profit",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid runs a real garage sale, or a pretend one at home. They pick what to sell, price it, decide their lowest price before anyone haggles, make change for real customers, keep a sales log, and work out what they really earned.",
+  "need": [
+    "Things to sell: outgrown toys, books, games, sports gear, clean clothes",
+    "Sticky notes or scrap paper, markers and tape for price tags",
+    "A notebook for the sales log, and a calculator",
+    "For a real sale: a float of about $20 in small bills and coins, in a cash box an adult looks after. For practice: play money."
+  ],
+  "lesson": {
+    "text": "The money in the cash box isn't your profit. First the float goes back, then you pay for what the sale cost to run.",
+    "before": "There's $67.50 in the box. We made $67.50!",
+    "model": [
+      {
+        "part": "Float",
+        "line": "$67.50 − $20 float = $47.50 in sales."
+      },
+      {
+        "part": "Costs",
+        "line": "$47.50 − $3 for tags and tape = $44.50."
+      },
+      {
+        "part": "So",
+        "line": "The profit is $44.50, not $67.50."
+      },
+      {
+        "part": "And",
+        "line": "What the toys cost new isn't part of it. They were already yours."
+      }
+    ],
+    "modelNote": "That's the maths this guide builds to: money in, minus what it took to make it."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "percentages, adding, subtracting, making change"
+    },
+    {
+      "subject": "Money",
+      "text": "pricing, sales, costs and profit"
+    },
+    {
+      "subject": "Data",
+      "text": "a sales log and what it shows"
+    },
+    {
+      "subject": "Communication",
+      "text": "greeting customers and haggling politely"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the customer during practice and the cash box keeper on sale day. Let them set the prices and make the calls. For a real sale, an adult holds the money and stays at the table the whole time.",
+    "plan": [
+      {
+        "when": "One afternoon",
+        "what": "Pick, price and tag everything, then practise with tricky customers (Steps 1 and 2)."
+      },
+      {
+        "when": "Sale morning",
+        "what": "Run the sale and keep the log (Step 3). A pretend sale at home takes about 30 minutes."
+      },
+      {
+        "when": "After the sale",
+        "what": "Count up the profit, then try a new price and split the money (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They priced everything too high",
+        "a": "Let a few things not sell. Step 5 is where they test a lower price, and finding out for themselves sticks."
+      },
+      {
+        "q": "They want to sell something that isn't theirs",
+        "a": "Only sell what's theirs, or what the owner says yes to. Ask the owner together."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Judging value",
+      "text": "what someone will actually pay"
+    },
+    {
+      "name": "Holding firm",
+      "text": "knowing your lowest price"
+    },
+    {
+      "name": "Quick maths",
+      "text": "change counted back to a stranger"
+    },
+    {
+      "name": "Record keeping",
+      "text": "what it sold for, not what the tag said"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick it, price it, tag it",
+      "why": "A good price starts with what someone would actually pay.",
+      "kid": "Your kid walks through the house and picks things they've outgrown or don't use. For each one they set a price, using the rule of thumb at the back: about 10% to 30% of the price new. They write a lowest price on the back of each tag before the sale, then make big, clear tags.",
+      "you": "Don't tell them the price. Ask 'is it in good condition?' and 'what would you pay?' Skip anything broken or unsafe, and skip car seats and bike helmets, since you can't know if they've been in a crash.",
+      "ask": [
+        "Why would someone want to buy this?",
+        "A puzzle was $20 new. What's 10% and 30% of that?"
+      ],
+      "tip": "Big price on the front, lowest price on the back in small pencil. Tape tags where they won't damage anything, never on book covers.",
+      "levels": {
+        "explore": "Pick 5 to 8 things and price them between 25¢ and $2.",
+        "develop": "Pick 15 to 20 things, price them from 25¢ to $10, and explain each price.",
+        "extend": "Look up what similar things sell for secondhand online and set price zones, like all books 50¢."
+      }
+    },
+    {
+      "title": "Practise with tricky customers",
+      "why": "Every hard moment at the table, tried out at home first.",
+      "kid": "Your kid sets up the table and practises selling, with you as the customer. They greet you, answer questions, take the money and count the change back by counting up from the price. You play a different tricky customer each round, using the four on the back page.",
+      "you": "Play the customer and have fun with it. Start with the hello: 'Hi! Everything's priced. Let me know if you have questions.' Then haggle, pay with a big bill, and ask for a bundle deal.",
+      "starters": [
+        "The browser",
+        "The haggler",
+        "The big bill",
+        "The bundle buyer"
+      ],
+      "ask": [
+        "A $1.50 toy, paid with $5: count up the change out loud.",
+        "Tag $8, lowest $5, offer $4. What do you say?"
+      ],
+      "tip": "Counter halfway: ($8 + $4) ÷ 2 = $6. 'I can do $6.' If they say $5, that's the lowest, so they can say yes.",
+      "levels": {
+        "explore": "Role-play 3 to 5 simple sales with no haggling.",
+        "develop": "Handle 8 to 10 sales, including a haggle and a big bill.",
+        "extend": "Plan answers for every tricky customer, including returns ('all sales final')."
+      }
+    },
+    {
+      "title": "Run the sale and keep the log",
+      "why": "Real customers, real money, and a record of every sale.",
+      "kid": "Your kid runs the sale: greets people, sells, makes change and handles the haggles. For every sale they write down the item, the tag price, what it actually sold for, and a running total.",
+      "you": "Hold the cash box and stay at the table the whole time. Let them do the talking and the change. Step in only if they ask.",
+      "ask": [
+        "Which things are selling first?",
+        "What's the total so far?"
+      ],
+      "tip": "Write down what it SOLD for, not the tag price. If the $4 puzzle went for $3, the log says $3. That's what ends up in the box.",
+      "levels": {
+        "explore": "Log 5 to 8 sales in a simple list.",
+        "develop": "Log 10 to 15 sales with a running total.",
+        "extend": "Log every sale, then note what sold first, what made the most and what didn't sell."
+      }
+    },
+    {
+      "title": "Count up the profit",
+      "why": "Finding out what they really earned.",
+      "kid": "Your kid counts the cash box, takes out the float and gives it back, and what's left is the sales. Then they subtract what the sale cost to run: tags, tape, sign supplies. That's the profit. They check it against the total in the sales log.",
+      "you": "Help them see that their own old toys didn't cost anything to sell today. 'Money out' is only what was spent to run the sale.",
+      "ask": [
+        "What did it cost to run the sale?",
+        "Does the cash box match the sales log? If not, why?"
+      ],
+      "tip": "If the box and the log don't match, don't fix it for them. Finding the missing sale is great maths.",
+      "levels": {
+        "explore": "Add up total sales and work out the profit.",
+        "develop": "Find sales, costs and profit, and which items earned the most.",
+        "extend": "Work out profit as a percentage of sales, like $44.50 ÷ $47.50 = about 94%."
+      }
+    },
+    {
+      "title": "Try a new price and split the money",
+      "why": "Different choices make different profits, and money needs a plan.",
+      "kid": "Your kid changes one thing for a second sale, real or pretend: a lower price, a bundle deal, different items. They compare the profit with the first sale. Then they split the profit three ways before it gets spent: some to spend, some to save, some to give.",
+      "you": "Let them choose what to change and how to split the money. Ask them to explain both choices.",
+      "ask": [
+        "Books at $1 sold 4. Books at 50¢ sold 12. Which made more?",
+        "How will you split the profit, and why?"
+      ],
+      "tip": "Cheaper often earns more: 4 × $1 = $4, but 12 × 50¢ = $6. And fewer books to carry back inside.",
+      "levels": {
+        "explore": "Run a pretend second sale with new prices, and choose a spend, save, give split.",
+        "develop": "Run a second sale with one change, compare the profit, and explain the split.",
+        "extend": "Predict the profit before the second sale, compare with the real result, and present the plan for next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Seller's Cheat Sheet",
+    "intro": "Ballpark prices, what to say and what to skip. Every neighbourhood is different, so watch what sells.",
+    "items": [
+      {
+        "name": "Ballpark prices",
+        "lines": [
+          {
+            "k": "Book:",
+            "v": "25¢ to $1"
+          },
+          {
+            "k": "Toy:",
+            "v": "50¢ to $3"
+          },
+          {
+            "k": "Puzzle or game:",
+            "v": "$2 to $4"
+          },
+          {
+            "k": "Clean clothes:",
+            "v": "50¢ to $2"
+          },
+          {
+            "k": "Sports gear:",
+            "v": "$2 to $10"
+          },
+          {
+            "k": "Bike:",
+            "v": "$10 to $20"
+          }
+        ],
+        "ask": "Check it: is your price about 10% to 30% of the price new?"
+      },
+      {
+        "name": "Tricky customers",
+        "lines": [
+          {
+            "k": "The browser:",
+            "v": "looks at everything, buys nothing. Stay friendly."
+          },
+          {
+            "k": "The haggler:",
+            "v": "'Would you take $1?' Check the back of the tag."
+          },
+          {
+            "k": "The big bill:",
+            "v": "$10 for a $2.50 toy. Count up the change."
+          },
+          {
+            "k": "The bundle buyer:",
+            "v": "'All three books?' Make a deal on the spot."
+          }
+        ],
+        "ask": "Check it: can you handle all four in practice?"
+      },
+      {
+        "name": "Making change",
+        "lines": [
+          {
+            "k": "Start:",
+            "v": "at the price, not at zero"
+          },
+          {
+            "k": "Count up:",
+            "v": "$1.50... 50¢ makes $2... $3 makes $5"
+          },
+          {
+            "k": "Hand it over:",
+            "v": "say each amount as you go"
+          },
+          {
+            "k": "Check:",
+            "v": "price + change = what they paid"
+          }
+        ],
+        "ask": "Check it: does your change add up to what they gave you?"
+      },
+      {
+        "name": "Don't sell",
+        "lines": [
+          {
+            "k": "Car seats and bike helmets:",
+            "v": "you can't know if they've been in a crash"
+          },
+          {
+            "k": "Broken or unsafe things:",
+            "v": "toss or recycle them"
+          },
+          {
+            "k": "Not yours:",
+            "v": "only with the owner's yes"
+          },
+          {
+            "k": "Recalled items:",
+            "v": "check if you're not sure"
+          }
+        ],
+        "ask": "Check it: is everything on the table safe and yours to sell?"
+      }
+    ],
+    "after": {
+      "label": "The garage sale maths",
+      "lines": [
+        "Garage sale price = about 10% to 30% of the price new",
+        "Sales = cash box − float",
+        "Profit = sales − costs"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They ran a real business.",
+    "text": "Your kid priced their own things, held their ground on a haggle (or caved and learned something), counted change for strangers, and found out what they really earned once the float went back. Next time they want to sell something, they'll already know to ask 'what's my lowest price?'",
+    "celebrate": "Tell them which moment impressed you most: the haggle they held, the change they counted, or the profit they worked out.",
+    "extensions": [
+      "Give the 'give' part of the profit to a cause they choose",
+      "Plan a bigger sale with friends or family",
+      "Buy a few things at someone else's sale, clean them up and resell them. Now what you paid is a real cost.",
+      "Compare selling online, at a sale and through a consignment store"
+    ]
+  },
+  "signs": [
+    "They ask 'what's the lowest you'd take?' when shopping",
+    "They count change up instead of down",
+    "They know the difference between sales and profit"
+  ],
+  "makeItReal": "Before the next round of decluttering, let your kid run the sale and keep the profit split they choose. Real customers and their own money make every price count.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/garage-sale-math.jpg",
+    "alt": "Watercolour illustration of a garage sale table on a driveway with books, a teddy bear, toys and a cash box, a kid's bike leaning against it",
+    "caption": "Outgrown, priced and ready to sell."
+  }
+}
