@@ -862,13 +862,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'clothing-swap-thrift-math': {
     opening:
-      'Organise a clothing swap or plan a thrift store haul using real budgeting and value skills. Kids calculate cost-per-wear, compare prices, assess quality versus cost, and make smart spending decisions. Financial literacy meets sustainability.',
+      'Your child audits their closet, works out cost per wear, prices their own clothes, then runs a clothing swap or shops a thrift store on a small budget. They finish by proving what secondhand saves with real percentages. Division, percentages and budgeting, used on clothes they actually wear.',
     whatsIncluded: [
-      'Clothing swap organisation and planning guide',
-      'Cost-per-wear calculation activities',
-      'Price comparison and value assessment',
-      'Budget planning and tracking',
-      'Sustainability and smart spending reflection',
+      '5 steps from closet audit to new-versus-secondhand savings, each with your job and your kid\'s job',
+      'A worked example on percent off and cost per wear',
+      'Swap rules with a point system, or a thrift trip on a small budget',
+      'Value Guide page: condition ratings, ballpark thrift prices, swap points and a quality check',
+      'Three levels at every step (Explore, Develop, Extend)',
     ],
     skillTags: ['Financial Literacy', 'Budgeting', 'Value Assessment', 'Sustainability'],
     insideTheLearning: {

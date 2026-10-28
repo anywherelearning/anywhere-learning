@@ -1069,15 +1069,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Clothing Swap & Thrift Math",
     slug: "clothing-swap-thrift-math",
     description:
-      "Organise a clothing swap or plan a thrift store haul using real budgeting and value skills. Kids calculate cost-per-wear, compare prices, assess quality, and make smart spending decisions. Financial literacy meets sustainability. Maths with purpose.",
+      "Your child audits their closet, works out cost per wear, prices their own clothes, then runs a clothing swap or shops a thrift store on a small budget. They finish by proving what secondhand saves with real percentages. Division, percentages and budgeting, used on clothes they actually wear.",
     shortDescription:
-      "Real-world math for kids ages 8-14: thrift shopping and swap math. Budgets, value, and smart spending.",
+      "Real-world math for kids ages 8-14: cost per wear, pricing, a swap or thrift trip, and the percentage saved.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqCAkIBECpwGm23iixQgo",
     blobUrl: "",
     imageUrl: "/products/clothing-swap-thrift-math.jpg",
-    previewFile: "Preview Real-world math - Clothing Swap & Thrift Math.pdf",
+    previewFile: "Preview Real-world math - Clothing Swap & Thrift Math v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

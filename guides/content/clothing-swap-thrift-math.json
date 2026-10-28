@@ -1,0 +1,335 @@
+{
+  "slug": "clothing-swap-thrift-math",
+  "category": "Real-World Math",
+  "title": "Clothing Swap & Thrift Math",
+  "tagline": "Sort · Price · Find the real value",
+  "ages": "Ages 8 to 14",
+  "goal": "Your kid goes through their closet, works out what their clothes are really worth, and then runs a clothing swap with friends or shops a thrift store on a small budget. Along the way they calculate cost per wear, price their own items, and find out exactly how much secondhand saves.",
+  "need": [
+    "Your kid's closet, or one drawer of it",
+    "Paper, a pencil and a calculator",
+    "A thrift store, a friends-and-family swap, or both",
+    "Optional: a small thrift budget, $5 to $15"
+  ],
+  "lesson": {
+    "text": "\"Cheap\" isn't a number. A percentage tells you how good a deal really is, and cost per wear tells you if it was worth it.",
+    "before": "It was cheap, like half off.",
+    "model": [
+      {
+        "part": "Saved",
+        "line": "New: $40. Thrift: $6. Saved: $40 − $6 = $34."
+      },
+      {
+        "part": "Percent off",
+        "line": "$34 ÷ $40 = 0.85, so 85% off. Way better than half."
+      },
+      {
+        "part": "Per wear",
+        "line": "Worn 20 times: $6 ÷ 20 = 30¢ per wear."
+      },
+      {
+        "part": "So",
+        "line": "An 85% saving on something you'll actually wear. That's a real deal."
+      }
+    ],
+    "modelNote": "That's the maths this guide practises: savings, percentages and cost per wear, on clothes your kid really owns."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "division, percentages, adding and subtracting money"
+    },
+    {
+      "subject": "Money",
+      "text": "budgets, fair prices, new versus secondhand"
+    },
+    {
+      "subject": "Data",
+      "text": "sorting, counting and comparing categories"
+    },
+    {
+      "subject": "Reasoning",
+      "text": "deciding what 'value' really means"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the shopping advisor, not the closet judge. Let them decide what stays and what goes, and keep it low-cost: a swap is free, and a thrift trip needs only a few dollars.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Audit the closet and work out cost per wear (Steps 1 and 2)."
+      },
+      {
+        "when": "Day 2",
+        "what": "Price the swap pile and plan the swap or the thrift trip (Steps 3 and 4)."
+      },
+      {
+        "when": "Swap or shop day",
+        "what": "Do it, then compare new and secondhand and add up the savings (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They won't let go of anything",
+        "a": "That's fine. Don't push. The cost-per-wear maths often changes their mind on its own, and keeping things is a decision too."
+      },
+      {
+        "q": "No one to swap with",
+        "a": "Swap within the family, or skip the swap and do the thrift trip. Pricing the pile still works for a donation or a garage sale."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Judging value",
+      "text": "price, condition and use, all at once"
+    },
+    {
+      "name": "Percentages",
+      "text": "how big a saving really is"
+    },
+    {
+      "name": "Fair trades",
+      "text": "making a swap work for both sides"
+    },
+    {
+      "name": "Sticking to a budget",
+      "text": "tracking every dollar on the trip"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Audit the closet",
+      "why": "Knowing what you own before deciding what's worth anything.",
+      "kid": "Your kid goes through their clothes, all of them or one section at a time, and sorts every item into four piles: keep, swap, donate, sell. They count each pile and rate the condition of everything leaving: excellent, good or fair.",
+      "you": "Let them make every call. Ask 'when did you last wear this?' and 'does it still fit?', but don't push them to give away things they love.",
+      "starters": [
+        "Keep",
+        "Swap",
+        "Donate",
+        "Sell"
+      ],
+      "ask": [
+        "How many things haven't you worn in 3 months?",
+        "What makes something worth swapping instead of donating?"
+      ],
+      "tip": "Lay the piles out on the bed or the floor. Seeing the size of each one is half the lesson.",
+      "levels": {
+        "explore": "Sort at least 15 items into the 4 piles and count each pile.",
+        "develop": "Sort everything, count it and rate the condition of everything leaving.",
+        "extend": "Work out what percentage of the closet stays and what percentage goes."
+      }
+    },
+    {
+      "title": "Work out cost per wear",
+      "why": "The real price of a piece of clothing is what it costs each time you wear it.",
+      "kid": "Your kid picks 5 to 10 items, a mix of favourites and things they hardly wear. For each one they write the price (or an estimate) and how many times they've worn it, then divide: price ÷ wears = cost per wear. Which item was the best value, and which was the worst?",
+      "you": "Help them estimate prices and wears if they don't remember: once a week, once a month, just once? The guess only needs to be reasonable.",
+      "ask": [
+        "A $25 jacket worn 50 times: what does each wear cost?",
+        "Is your best-value item the one you expected?"
+      ],
+      "tip": "The surprise is usually the favourite hoodie that cost the most and turns out to be the cheapest per wear.",
+      "levels": {
+        "explore": "Work out cost per wear for 5 items and name the best value.",
+        "develop": "Do 10 items, rank them best to worst, and explain what makes good value.",
+        "extend": "Find the average cost per wear, and compare your most expensive item with your most worn."
+      }
+    },
+    {
+      "title": "Price the swap pile",
+      "why": "Pricing is part maths, part judgement.",
+      "kid": "Your kid sets a fair price on every item they're swapping or selling. They use the condition rating and look up what similar things sell for at a thrift store or a secondhand site. Then they write one line explaining each price.",
+      "you": "Ask 'would you pay that for it?' and 'why is this one worth more than that one?' Help them check real secondhand prices, in a store or online.",
+      "ask": [
+        "Would a small stain or a missing button change the price?",
+        "If the same brand sells for $8 at the thrift store, is $10 fair?"
+      ],
+      "tip": "Most kids price their own things too high at first. Real reference prices bring the numbers down fast.",
+      "levels": {
+        "explore": "Price 5 to 10 items based on condition and what someone would pay.",
+        "develop": "Price everything, check 3 to 5 real reference prices, and explain each price.",
+        "extend": "Work out what percentage of the original price each item is worth now."
+      }
+    },
+    {
+      "title": "Swap or shop",
+      "why": "Real decisions about value, with real people and real money.",
+      "kid": "Your kid picks a clothing swap, a thrift trip, or both. For a swap, they set the rules for fair trades (the point system at the back helps) and invite people. For a thrift trip, they set a budget and a needs list. Then they do it and record every trade or purchase.",
+      "you": "Help with the logistics, then let them run it. At the store, ask 'need or want?' and 'did you check it for stains and holes?' At a swap, ask 'was that trade fair for both sides?'",
+      "starters": [
+        "Family swap",
+        "Friends swap",
+        "Thrift trip",
+        "Both"
+      ],
+      "ask": [
+        "Your item is worth 3 points and theirs is worth 1. How do you make it fair?",
+        "How much of your budget is left?"
+      ],
+      "tip": "Have them check every thrift find against the Quality Check before it goes in the basket.",
+      "levels": {
+        "explore": "Plan and do a simple family swap or a short thrift trip, and write down what you got.",
+        "develop": "Set swap rules or a budget and needs list, and keep a running total.",
+        "extend": "Record every trade or purchase and every decision you made along the way, with the reason for each."
+      }
+    },
+    {
+      "title": "Compare new and secondhand",
+      "why": "Where percentages prove whether secondhand was worth it.",
+      "kid": "For 3 to 5 things they got, your kid looks up the price new and works out the saving and the percentage off. Then they predict how many times they'll wear each one, find the predicted cost per wear, and add up the totals: spent, saved, and items given a second life.",
+      "you": "Help them look up new prices. Ask 'is the secondhand one just as good?' and 'if you did this every season, how much would you save in a year?'",
+      "ask": [
+        "A $40 jacket for $6: how much did you save, and what percentage off is that?",
+        "Which find will be the best value a few months from now?"
+      ],
+      "tip": "Have them write the yearly total big at the bottom of the page. It's usually a number that surprises the whole family.",
+      "levels": {
+        "explore": "Compare 3 items, new versus secondhand, and say how much you saved on each.",
+        "develop": "Compare 5 items with savings and percentages, and rank them by biggest saving.",
+        "extend": "Total everything, project the yearly savings, and write a short verdict: is secondhand worth it?"
+      }
+    }
+  ],
+  "reference": {
+    "title": "Value Guide",
+    "intro": "Ballpark numbers for pricing and swapping. Prices vary a lot by store, so real local prices always win.",
+    "items": [
+      {
+        "name": "Condition",
+        "lines": [
+          {
+            "k": "Excellent:",
+            "v": "looks new, no marks, no fading"
+          },
+          {
+            "k": "Good:",
+            "v": "worn but clean, no holes or stains"
+          },
+          {
+            "k": "Fair:",
+            "v": "small marks, some fading, still wearable"
+          },
+          {
+            "k": "Donate or recycle:",
+            "v": "holes, stains, broken zips"
+          }
+        ],
+        "ask": "Check it: would you be happy to get this in a swap?"
+      },
+      {
+        "name": "Thrift ballpark prices",
+        "lines": [
+          {
+            "k": "T-shirt:",
+            "v": "$3 to $5"
+          },
+          {
+            "k": "Hoodie:",
+            "v": "$5 to $8"
+          },
+          {
+            "k": "Jeans:",
+            "v": "$6 to $10"
+          },
+          {
+            "k": "Jacket:",
+            "v": "$8 to $15"
+          },
+          {
+            "k": "Sneakers:",
+            "v": "$8 to $15"
+          }
+        ],
+        "ask": "Check it: find 3 real prices and compare them with these."
+      },
+      {
+        "name": "Swap points",
+        "lines": [
+          {
+            "k": "1 point:",
+            "v": "t-shirts, shorts, hats"
+          },
+          {
+            "k": "2 points:",
+            "v": "jeans, hoodies, dresses"
+          },
+          {
+            "k": "3 points:",
+            "v": "jackets, shoes, boots"
+          },
+          {
+            "k": "Rule:",
+            "v": "trade equal points, or add a small item to even it out"
+          }
+        ],
+        "ask": "Check it: would both people call the trade fair?"
+      },
+      {
+        "name": "Quality check",
+        "lines": [
+          {
+            "k": "Stains:",
+            "v": "check the cuffs, the collar and the front"
+          },
+          {
+            "k": "Holes:",
+            "v": "hold it up to the light"
+          },
+          {
+            "k": "Zips and buttons:",
+            "v": "open and close them all"
+          },
+          {
+            "k": "Seams:",
+            "v": "give them a gentle pull"
+          },
+          {
+            "k": "Size:",
+            "v": "try it on, or measure against something that fits"
+          }
+        ],
+        "ask": "Check it: does it pass all five before you pay?"
+      }
+    ],
+    "after": {
+      "label": "The thrift maths",
+      "lines": [
+        "Cost per wear = price ÷ number of wears",
+        "Saved = new price − secondhand price",
+        "Percent off = saved ÷ new price × 100"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They found the real value.",
+    "text": "Your kid audited their closet, worked out cost per wear, priced their own things, ran a swap or a thrift trip, and proved what secondhand saves. Division, percentages and budgeting, all used on things they actually wear.",
+    "celebrate": "Ask about their best find: 'What did it cost, what would it cost new, and how many times will you wear it?'",
+    "extensions": [
+      "Do a closet audit every season and watch how cost per wear changes",
+      "Run a bigger swap with a few families and a shared point system",
+      "Compare three ways to buy: new, thrift store and a secondhand app",
+      "Count how many items the swap kept out of the garbage this year"
+    ]
+  },
+  "signs": [
+    "They check the tag before they check the price",
+    "They work out cost per wear in their head",
+    "They suggest a swap before asking for something new"
+  ],
+  "makeItReal": "Next time your kid needs something, like a jacket for the season, hand them the thrift budget and let them find it. Afterward, look up the new price together and work out the percentage they saved.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/clothing-swap-thrift-math.jpg",
+    "alt": "Watercolour illustration of a thrift store rack of secondhand kids' clothes with a price tag on a denim jacket and a basket holding sneakers and jeans",
+    "caption": "Same jacket, a fraction of the price."
+  }
+}
