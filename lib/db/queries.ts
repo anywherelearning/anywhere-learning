@@ -3,49 +3,34 @@ import { db } from './index';
 import { products, orders, users, reviews } from './schema';
 import { eq, and, desc, ne, avg, count, gt, inArray, sql } from 'drizzle-orm';
 
-// ─── Cached public reads ────────────────────────────────────────────
-// /shop/[slug] is force-dynamic (the access card is per-visitor), so every
-// request — overwhelmingly crawlers — used to wake Neon. Catalog and review
-// reads carry no per-user data, so they're served from the Data Cache for a
-// day instead. (An hour was too short: with ~130 slugs x several keys, crawlers
-// still expired an entry every few minutes and kept Neon awake about half of
-// every day. Catalog edits via seed/stripe:sync can lag up to 24h.) Review writes bust the 'reviews' tag so authors see their own
-// review immediately. unstable_cache round-trips through JSON, so timestamp
-// columns come back as strings — wrappers below revive them to Dates.
-
-const CACHE_OPTS_PRODUCTS = { revalidate: 86400, tags: ['products'] };
-const CACHE_OPTS_REVIEWS = { revalidate: 86400, tags: ['reviews'] };
-
-const _getActiveProducts = unstable_cache(
-  async () => {
-    return db.select().from(products)
-      .where(eq(products.active, true))
-      .orderBy(products.sortOrder);
-  },
-  ['active-products'],
-  CACHE_OPTS_PRODUCTS,
-);
+// ─── Build-time catalog reads ───────────────────────────────────────
+// /shop/[slug] is built once per deploy, so these run at build (plus when a
+// review triggers revalidatePath), never per visitor. They are deliberately
+// NOT wrapped in unstable_cache: its 1-day revalidate leaks into the page and
+// turns it back into daily ISR, and with ~120 slugs each regeneration woke
+// Neon for 5+ minutes. (When the page was force-dynamic, crawler hits kept
+// Neon awake ~60% of the day even with this cache; Oct 2026.) Catalog edits
+// via seed/stripe:sync show up on the next deploy.
 
 export async function getActiveProducts() {
-  const rows = await _getActiveProducts();
-  return rows.map((p) => ({ ...p, createdAt: new Date(p.createdAt) }));
+  return db.select().from(products)
+    .where(eq(products.active, true))
+    .orderBy(products.sortOrder);
 }
-
-const _getProductBySlug = unstable_cache(
-  async (slug: string) => {
-    const result = await db.select().from(products)
-      .where(and(eq(products.slug, slug), eq(products.active, true)))
-      .limit(1);
-    return result[0] || null;
-  },
-  ['product-by-slug'],
-  CACHE_OPTS_PRODUCTS,
-);
 
 export async function getProductBySlug(slug: string) {
-  const row = await _getProductBySlug(slug);
-  return row ? { ...row, createdAt: new Date(row.createdAt) } : null;
+  const result = await db.select().from(products)
+    .where(and(eq(products.slug, slug), eq(products.active, true)))
+    .limit(1);
+  return result[0] || null;
 }
+
+// ─── Cached public reads ────────────────────────────────────────────
+// Review writes bust the 'reviews' tag so authors see their own review
+// immediately. unstable_cache round-trips through JSON, so timestamp columns
+// come back as strings — wrappers below revive them to Dates.
+
+const CACHE_OPTS_REVIEWS = { revalidate: 86400, tags: ['reviews'] };
 
 export async function getProductsByCategory(category: string) {
   return db.select().from(products)
@@ -271,27 +256,20 @@ export async function getProductReviews(productId: string) {
  * and image snapshots. Used by the product page for the visible review strip
  * and the JSON-LD aggregate rating.
  */
-const _getRecentReviewsBySlug = unstable_cache(
-  async (slug: string) => {
-    return db.select({
-      rating: reviews.rating,
-      comment: reviews.comment,
-      createdAt: reviews.createdAt,
-      authorName: reviews.authorName,
-      authorImageUrl: reviews.authorImageUrl,
-    })
-      .from(reviews)
-      .where(eq(reviews.productSlug, slug))
-      .orderBy(desc(reviews.createdAt))
-      .limit(12);
-  },
-  ['recent-reviews-by-slug'],
-  CACHE_OPTS_REVIEWS,
-);
-
+// Uncached for the same reason as the catalog reads above: it runs when
+// /shop/[slug] is built, and a new review rebuilds that page via revalidatePath.
 export async function getRecentReviewsBySlug(slug: string) {
-  const rows = await _getRecentReviewsBySlug(slug);
-  return rows.map((r) => ({ ...r, createdAt: new Date(r.createdAt) }));
+  return db.select({
+    rating: reviews.rating,
+    comment: reviews.comment,
+    createdAt: reviews.createdAt,
+    authorName: reviews.authorName,
+    authorImageUrl: reviews.authorImageUrl,
+  })
+    .from(reviews)
+    .where(eq(reviews.productSlug, slug))
+    .orderBy(desc(reviews.createdAt))
+    .limit(12);
 }
 
 export async function getUserReviewForProduct(userId: string, productId: string) {

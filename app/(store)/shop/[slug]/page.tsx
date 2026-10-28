@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +17,7 @@ import { coverSrc } from "@/lib/cover";
 import PreviewButton from "@/components/shop/PreviewButton";
 import CheckoutButton from "@/components/checkout/CheckoutButton";
 import ReviewForm from "@/components/shop/ReviewForm";
+import AccessTierSwitch from "@/components/shop/AccessTierSwitch";
 import ReadMoreFromBlog from "@/components/shop/ReadMoreFromBlog";
 import { Tape, Magnet, PAPER_SHADOW } from "@/components/shared/Paper";
 import { pinnedPostForProduct } from "@/lib/cross-links";
@@ -28,11 +28,13 @@ import {
 } from "@/lib/membership";
 import { getProductSkills } from "@/lib/skills";
 
-// Render per-request so the access card reflects the visitor's real tier.
-// (Was statically generated with `revalidate = 86400`, which served every
-// visitor the build-time 'guest' state and made members see "Unlock with
-// membership" on activities they actually owned.)
-export const dynamic = "force-dynamic";
+// Built once per deploy and never re-rendered on a timer. These pages used to
+// render per request, and every crawler visit woke the Neon database for 5+
+// minutes (about 85 wake-ups a day, Oct 2026). The guest version is what gets
+// built; the member/trial state is swapped in on the client by
+// AccessTierSwitch. A new review refreshes the page via revalidatePath in
+// /api/reviews.
+export const revalidate = false;
 
 /* ─────────────────────────────────────────────────────────────────
    Per-category accent + content maps
@@ -230,51 +232,12 @@ export async function generateMetadata({
    Page
    ───────────────────────────────────────────────────────────────── */
 
-import type { AccessTier } from "@/lib/access";
-
-// Resolve the visitor's access tier. Real lookup goes through Clerk auth →
-// the `users` table → a subscription (member, or trial while the free trial
-// runs). Falls back to a query param (development-only) when Clerk isn't
-// configured.
-async function detectAccessTier(searchParams: {
-  tier?: string;
-}): Promise<AccessTier> {
-  // Dev/preview override (NEVER in production — only affects the "in your
-  // library" badge here; content is gated by the download endpoint).
-  if (process.env.NODE_ENV !== "production") {
-    if (searchParams.tier === "member") return "member";
-    if (searchParams.tier === "trial") return "trial";
-    if (searchParams.tier === "guest") return "guest";
-  }
-
-  // Real lookup: Clerk → DB
-  let tier: AccessTier = "guest";
-  try {
-    const { auth } = await import("@clerk/nextjs/server");
-    const { getAccessTierForClerkId } = await import("@/lib/access");
-    const { userId } = await auth();
-    if (userId) tier = await getAccessTierForClerkId(userId);
-  } catch {
-    /* Clerk or DB not configured */
-  }
-
-  // The old sandbox `al_tier_preview` cookie fallback was removed — it
-  // persisted access for 7 days in the browser, letting refunded users
-  // continue to see member content. DB is now the only source of truth.
-
-  return tier;
-}
-
 export default async function ProductPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ tier?: string }>;
 }) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const tier = await detectAccessTier(sp);
 
   let product;
   try {
@@ -713,11 +676,8 @@ export default async function ProductPage({
                 </div>
                 <div>
                   {(() => {
-                    const hasAccess = tier === "member" || tier === "trial";
-
-                    if (hasAccess) {
-                      // Member or trial member — this activity is in their library
-                      return (
+                    // Member or trial member: this activity is in their library
+                    const libraryCard = (tierLabel: string) => (
                         <div className={`relative max-w-[400px] rotate-[1deg] bg-[#E6EBDF] px-4 pb-3 pt-6 ${PAPER_SHADOW}`}>
                           <Magnet color="#588157" size={22} />
                           <div className="flex items-center justify-between gap-3 mb-2">
@@ -726,7 +686,7 @@ export default async function ProductPage({
                               In your library
                             </span>
                             <span className="font-display italic text-[13px] text-forest-dark">
-                              {tier === "member" ? "Member" : "Free trial"}
+                              {tierLabel}
                             </span>
                           </div>
                           <Link
@@ -747,16 +707,12 @@ export default async function ProductPage({
                             Use on any device · Year after year
                           </p>
                         </div>
-                      );
-                    }
+                    );
 
                     // The Skills Map is sold on its own: a buy button, not a members lock.
-                    if (product.slug === SKILLS_MAP.slug) {
-                      return <SkillsMapBuyCard priceLabel={`$${SKILLS_MAP.priceUsd}`} />;
-                    }
-
-                    // Guest (default)
-                    return (
+                    const guestCard = product.slug === SKILLS_MAP.slug ? (
+                      <SkillsMapBuyCard priceLabel={`$${SKILLS_MAP.priceUsd}`} />
+                    ) : (
                       <div className={`relative max-w-[400px] rotate-[1deg] bg-white px-4 pb-3 pt-6 ${PAPER_SHADOW}`}>
                         <Magnet color="#C97B5C" size={22} />
                         <div className="flex items-center justify-between gap-3 mb-2">
@@ -779,6 +735,14 @@ export default async function ProductPage({
                           In the Membership · 14-day refund
                         </p>
                       </div>
+                    );
+
+                    return (
+                      <AccessTierSwitch
+                        guest={guestCard}
+                        member={libraryCard("Member")}
+                        trial={libraryCard("Free trial")}
+                      />
                     );
                   })()}
                   {/* Trust line lives under the card, filling the column the
@@ -883,7 +847,8 @@ export default async function ProductPage({
       {/* REVIEWS. Hidden from visitors until there's at least one review: an
           empty "be the first" box reads as "nobody uses this". Members and
           trial members still see it, with the form to write one. */}
-      {(reviews.length > 0 || tier === "member" || tier === "trial") && (
+      {(() => {
+      const reviewsSection = (isMember: boolean) => (
       <section className="py-12">
         <div className="mx-auto max-w-[920px] px-6">
           <div className="mb-7 text-center">
@@ -983,33 +948,20 @@ export default async function ProductPage({
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </span>
-              {tier === "member" || tier === "trial" ? (
-                <>
-                  <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
-                    Tried it with your kids? Be the first to tell other members
-                    what worked.
-                  </p>
-                  <p className="m-0 mt-1.5 text-[14px] text-gray-500">
-                    No reviews yet for {product.name}.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
-                    Be the first to share your experience with {product.name}.
-                  </p>
-                  <p className="m-0 mt-1.5 text-[14px] text-gray-500">
-                    Reviews come from members who&rsquo;ve actually done the
-                    activity with their kids.
-                  </p>
-                </>
-              )}
+              {/* Only members reach this: visitors don't see an empty section. */}
+              <p className="m-0 font-display italic text-[18px] leading-[1.4] text-ink">
+                Tried it with your kids? Be the first to tell other members
+                what worked.
+              </p>
+              <p className="m-0 mt-1.5 text-[14px] text-gray-500">
+                No reviews yet for {product.name}.
+              </p>
             </div>
           )}
 
           {/* Write a review — inline form for members and trial members */}
           <div className="mt-7">
-            {tier === "member" || tier === "trial" ? (
+            {isMember ? (
               <ReviewForm slug={product.slug} productName={product.name} />
             ) : (
               <p className="text-center text-[14px] text-gray-500">
@@ -1026,7 +978,14 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
-      )}
+      );
+      return (
+        <AccessTierSwitch
+          guest={reviews.length > 0 ? reviewsSection(false) : null}
+          member={reviewsSection(true)}
+        />
+      );
+      })()}
 
       {/* RELATED */}
       {relatedProducts.length > 0 && (
