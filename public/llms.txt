@@ -2,7 +2,7 @@
 
 > Real-world skills for kids. A homeschool and worldschool membership: 120+ low-prep, real-world activity guides across nine categories, for ages 6-14 (with a skills roadmap spanning 0-16+). Download, open on any device, and follow along with your kids -- no curriculum, no worksheets.
 
-> Membership model: join to access the full activity library. Founder rate $99/year (first 100 members), then $149/year, or $15/month. New members start with a 14-day free trial. Every activity is included with membership; individual activities are not sold a la carte on the site.
+> Membership model: join to access the full activity library. Founder rate $99/year (first 100 members), then $149/year, or $15/month. New members start with a 7-day free trial. Every activity is included with membership; individual activities are not sold a la carte on the site.
 
 > Full-text companion with pillar guides, blog posts, and FAQ inlined: https://anywherelearning.co/llms-full.txt
 
@@ -14,7 +14,7 @@
 
 ## Membership and Access
 
-- [Membership and pricing](https://anywherelearning.co/faq): Membership unlocks the full library of 120+ real-world activities across nine categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month. Includes a 14-day free trial.
+- [Membership and pricing](https://anywherelearning.co/faq): Membership unlocks the full library of 120+ real-world activities across nine categories. Founder rate $99/year for the first 100 members, then $149/year, or $15/month. Includes a 7-day free trial.
 - [The Future-Ready Skills Map](https://anywherelearning.co/shop/future-ready-skills-map): A parent guide mapping essential real-world skills by age (0-16+) with activities, milestones, and sample weekly rhythms. The starting point for the whole approach.
 
 ## Activity Library (included with membership)
@@ -81,7 +81,7 @@ In-depth reference guides. These are the most complete, most citable pages on th
 ## Key Facts
 
 - Created by Amelie, a former classroom teacher (B.Ed, M.Ed) with 15 years of teaching experience, now a homeschool and worldschool parent
-- Membership model: full library access; founder rate $99/year (first 100 members), then $149/year, or $15/month; new members start with a 14-day free trial
+- Membership model: full library access; founder rate $99/year (first 100 members), then $149/year, or $15/month; new members start with a 7-day free trial
 - 120+ real-world activities across nine categories
 - Activities designed for ages 6-14 with built-in adaptation for different ability levels; the Skills Map roadmap spans ages 0-16+
 - Every activity includes 3 flexible levels (Explore, Develop, Extend) for multi-age use

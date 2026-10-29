@@ -3246,7 +3246,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['new-to-homeschooling', 'curriculum-guilt-permission-slip', 'life-skills-before-12', 'homeschool-burnout', 'just-let-them-play'],
-    recommendedProduct: 'community-impact',
+    recommendedProduct: 'people-scientist',
     pillarSlug: 'real-world-learning',
   },
   {
@@ -9048,6 +9048,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Take it further: a real micro-business' },
       { type: 'paragraph', text: 'For the kid who catches fire, do not stop at the pretend pitch. Let them actually build the thing. A real lemonade stand, a small craft business, a service for neighbors. Turning a Shark Tank pitch into an actual [micro-business](/blog/micro-business) is where the biggest learning lives, because now the numbers are real and the customers are real. Some of the most capable teenagers you will meet started exactly here. If they need a starting point, the [kid business ideas checklist](/ideas/kid-business-ideas) has twenty real ones sorted by age, each with the number to work out first.' },
+      { type: 'paragraph', text: 'Each stage of a real business has its own project in the library. [Product Design Lab](/shop/product-design-lab) turns the idea into a prototype someone can hold, [Pricing Experiment](/shop/pricing-experiment) tests what customers will actually pay, [Supply Chain Detective](/shop/supply-chain-detective) traces where the materials come from and what they cost, and [Trade It Up](/shop/trade-it-up) starts the whole thing from one small object and a few good trades.' },
 
       { type: 'cta', text: 'Want more real-world projects that teach the skills school skips, with almost no prep? Our free guide is full of hands-on activities you can run this week, at home or in a classroom.', href: '/free-guide', label: 'Get the Free Guide' },
 
@@ -9855,7 +9856,7 @@ const posts: BlogPost[] = [
     title: 'Outdoor Survival Skills for Kids: 10 to Teach Before They Need Them',
     seoTitle: 'Outdoor Survival Skills for Kids: 10 to Teach by Age',
     excerpt: 'Survival skills for kids aren’t about scaring them or turning them into wilderness experts. They’re about the kid who knows how to stay put, stay warm and get found. Ten outdoor survival skills to practise as games on regular family walks, sorted by age from 6 to 14.',
-    metaDescription: 'Outdoor survival skills for kids 6 to 14: what to do if lost, how to signal, stay warm, build a shelter, find north and stay safe around fire. Practised as games.',
+    metaDescription: 'Outdoor survival skills for kids 6 to 14: what to do if lost, signaling, staying warm, building a shelter, finding north and fire safety, practised as games.',
     hook: 'The best survival skill a kid can have is knowing how to get found.',
     category: 'nature-learning',
     pillarSlug: 'nature-based-learning',
