@@ -1,0 +1,338 @@
+{
+  "slug": "nature-data-tracker",
+  "category": "Real-World Math",
+  "title": "Nature Data Tracker",
+  "tagline": "Track · Chart · Predict",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks one thing in nature that changes every day, like the temperature, the rain or the sunset time, and tracks it for one or two weeks. They record real numbers, work out the daily changes, chart them, find the trend and use it to predict what comes next. It's what forecasters do, with a window and a notebook.",
+  "need": [
+    "A notebook, or a note on a phone",
+    "Something to measure with: an outdoor thermometer, a clear straight-sided jar and a ruler for rain, or sunset times from a weather app",
+    "A set spot to check from: a window, a porch, a yard",
+    "Two minutes at the same time every day"
+  ],
+  "lesson": {
+    "text": "One day doesn't make a trend. Compare averages, not single days, to see where the numbers are really going.",
+    "before": "Today was colder than yesterday, so it's getting colder.",
+    "model": [
+      {
+        "part": "A week",
+        "line": "12°, 15°, 11°, 14°, 16°, 13°, 17°."
+      },
+      {
+        "part": "Day to day",
+        "line": "+3, −4, +3, +2, −3, +4. Bumpy, up and down."
+      },
+      {
+        "part": "Averages",
+        "line": "First 3 days: 38 ÷ 3 ≈ 12.7°. Last 3 days: 46 ÷ 3 ≈ 15.3°."
+      },
+      {
+        "part": "So",
+        "line": "It's warming up by about 2.6°, even with a few colder days in the middle."
+      }
+    ],
+    "modelNote": "That's the thinking this guide builds: look past the daily bumps to the bigger direction."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "differences, averages, reading and making charts"
+    },
+    {
+      "subject": "Science",
+      "text": "weather, seasons and fair measurements"
+    },
+    {
+      "subject": "Data",
+      "text": "collecting, comparing and spotting trends"
+    },
+    {
+      "subject": "Reasoning",
+      "text": "making a prediction and testing it"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You keep it short and steady; they collect the data. Two minutes at the same time each day is plenty. Don't point out the pattern. After a few days, ask what they notice.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Pick what to track, set it up and start the routine (Steps 1 and 2)."
+      },
+      {
+        "when": "Every day for 1 to 2 weeks",
+        "what": "Guess, check, record and work out the change (Steps 2 and 3)."
+      },
+      {
+        "when": "At the end",
+        "what": "Chart it, find the trend, then predict and check (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They forgot a day",
+        "a": "Leave a gap in the log and keep going. Real scientists have missing data too. It's a good talk about why gaps matter."
+      },
+      {
+        "q": "The numbers barely change",
+        "a": "Record them anyway. A flat stretch is part of the pattern. Or add a second thing to track that moves more, like rain."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Consistency",
+      "text": "same time, same place, every day"
+    },
+    {
+      "name": "Estimating",
+      "text": "a guess before every check"
+    },
+    {
+      "name": "Seeing patterns",
+      "text": "the trend under the bumps"
+    },
+    {
+      "name": "Testing ideas",
+      "text": "a prediction checked against reality"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick what to track and set it up",
+      "why": "The best thing to track has a clear number and changes a little every day.",
+      "kid": "Your kid picks one thing to measure: the temperature at one time each day, the rain in a jar, the sunset time, the birds at a feeder. Then they set it up: a thermometer in the shade, a rain gauge made from a straight-sided jar and a ruler, or a weather app for sunset times.",
+      "you": "Help them pick something easy to check at the same time every day. 'The temperature after breakfast' gives sharper data than 'the weather'.",
+      "starters": [
+        "Temperature",
+        "Rain",
+        "Sunset time",
+        "Birds at a feeder",
+        "The moon"
+      ],
+      "ask": [
+        "What changes outside that you could put a number on?",
+        "Why does the thermometer go in the shade, not the sun?"
+      ],
+      "tip": "Building the rain gauge is a great first job: tape a ruler to the outside of a clear jar, with the zero at the bottom.",
+      "levels": {
+        "explore": "Pick something simple to notice, like sunny, cloudy or rainy.",
+        "develop": "Pick something with a real number, and set up the tool.",
+        "extend": "Pick two things to track at once, like temperature and sunset time."
+      }
+    },
+    {
+      "title": "Guess, check, record",
+      "why": "Same time, same place, every day turns checks into data you can compare.",
+      "kid": "Your kid picks a check-in time and a spot they'll stick to. Every day, they guess today's number first, then check and record it in a log: the date, the guess and the real number. A week is the minimum, two weeks is better.",
+      "you": "Help them remember, and prompt the guess. Ask 'what might make you forget, and how can we fix that now?'",
+      "ask": [
+        "What do you think today's number will be?",
+        "Was your guess too high or too low?"
+      ],
+      "tip": "Tie the check to something that already happens every day, like breakfast or brushing teeth. The habit sticks much better.",
+      "levels": {
+        "explore": "Make a daily mark or symbol for a week, like a sun or a cloud.",
+        "develop": "Record a real number every day for a week, with a guess first.",
+        "extend": "Record for two weeks, and keep track of how close each guess was."
+      }
+    },
+    {
+      "title": "Work out the daily changes",
+      "why": "The difference between days is where the story starts.",
+      "kid": "Next to each number, your kid writes the change from the day before: +3 for 3 degrees warmer, −2 for 2 millimetres less rain, +2 for a sunset 2 minutes later. Then they find the biggest jump and the smallest change.",
+      "you": "Keep the maths conversational, in real-life words: warmer by, colder by, later than. Ask 'how do you know?'",
+      "ask": [
+        "Was today warmer or colder than yesterday, and by how much?",
+        "Which day had the biggest change?"
+      ],
+      "tip": "Negative numbers show up naturally here. 'It went down by 4' is −4, and kids get it right away.",
+      "levels": {
+        "explore": "Say which day stood out, and whether it went up or down.",
+        "develop": "Work out the change from one day to the next for the whole week.",
+        "extend": "Find the biggest and smallest changes, and the typical change per day."
+      }
+    },
+    {
+      "title": "Chart it and find the trend",
+      "why": "A chart makes the pattern jump off the page.",
+      "kid": "Your kid makes a simple chart: days along the bottom, the number up the side, a dot or a bar for each day. Then they look at the whole thing and decide: is it climbing, dropping or staying flat? They compare the average of the first few days with the average of the last few.",
+      "you": "Keep the chart simple. Let them find the trend before you say anything. Ask 'do any days break the pattern?'",
+      "ask": [
+        "Is the line climbing, dropping or bumpy?",
+        "What's the average of your first 3 days and your last 3 days?"
+      ],
+      "tip": "Graph paper or a squared notebook makes the chart much easier, with one square for each degree or minute.",
+      "levels": {
+        "explore": "Make a simple bar or dot chart and say if it went up or down.",
+        "develop": "Chart the data and describe the trend in one sentence.",
+        "extend": "Draw the average line, mark the days far from it, and explain why they might be odd."
+      }
+    },
+    {
+      "title": "Predict and check",
+      "why": "A forecaster's payoff: using the trend to see ahead.",
+      "kid": "Using the trend, your kid predicts the next few days and writes each prediction with a reason: 'Sunset will keep getting about 2 minutes earlier each day.' Then they keep tracking and check. Were they right, close or way off?",
+      "you": "Treat their prediction like a real forecast. A miss is a great result: 'why didn't it go the way the pattern said?' is the best question in the guide.",
+      "ask": [
+        "What will tomorrow's number be, and why?",
+        "How close did you get?"
+      ],
+      "tip": "Race their forecast against a weather app for a few days. Kids love beating the app, even once.",
+      "levels": {
+        "explore": "Guess whether tomorrow goes up or down, then check.",
+        "develop": "Predict tomorrow's number with a reason, then check it.",
+        "extend": "Forecast 3 days ahead, then work out how far off each prediction was."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Tracker Toolkit",
+    "intro": "Ideas, tools and rules for good data. Pick one thing and check it at the same time every day.",
+    "items": [
+      {
+        "name": "Things to track",
+        "lines": [
+          {
+            "k": "Weather:",
+            "v": "temperature, rain, cloud cover out of 10"
+          },
+          {
+            "k": "Light:",
+            "v": "sunrise, sunset, hours of daylight"
+          },
+          {
+            "k": "Living things:",
+            "v": "birds at a feeder, a plant's height, falling leaves"
+          },
+          {
+            "k": "Sky:",
+            "v": "the moon's shape, stars you can count"
+          },
+          {
+            "k": "At home:",
+            "v": "cups of water you drink, steps walked"
+          }
+        ],
+        "ask": "Check it: does yours have a clear number?"
+      },
+      {
+        "name": "Make a rain gauge",
+        "lines": [
+          {
+            "k": "Jar:",
+            "v": "clear, with straight sides"
+          },
+          {
+            "k": "Ruler:",
+            "v": "taped to the outside, zero at the bottom"
+          },
+          {
+            "k": "Spot:",
+            "v": "in the open, away from roofs and trees"
+          },
+          {
+            "k": "Read it:",
+            "v": "at eye level, at the same time each day"
+          },
+          {
+            "k": "Reset:",
+            "v": "empty it after every reading"
+          }
+        ],
+        "ask": "Check it: is the zero lined up with the bottom inside the jar?"
+      },
+      {
+        "name": "Fair readings",
+        "lines": [
+          {
+            "k": "Thermometer:",
+            "v": "in the shade, never in the sun"
+          },
+          {
+            "k": "Same time:",
+            "v": "every day"
+          },
+          {
+            "k": "Same spot:",
+            "v": "every day"
+          },
+          {
+            "k": "Guess first:",
+            "v": "before you look"
+          },
+          {
+            "k": "Write it now:",
+            "v": "not later from memory"
+          }
+        ],
+        "ask": "Check it: would another person get the same number?"
+      },
+      {
+        "name": "Reading a chart",
+        "lines": [
+          {
+            "k": "Climbing:",
+            "v": "the numbers go up over time"
+          },
+          {
+            "k": "Dropping:",
+            "v": "the numbers go down over time"
+          },
+          {
+            "k": "Flat:",
+            "v": "not much change"
+          },
+          {
+            "k": "Bumpy:",
+            "v": "up and down, so compare averages"
+          },
+          {
+            "k": "Odd day:",
+            "v": "one dot far from the rest"
+          }
+        ],
+        "ask": "Check it: which word describes your chart?"
+      }
+    ],
+    "after": {
+      "label": "The tracker maths",
+      "lines": [
+        "Change = today − yesterday",
+        "Average = total ÷ number of days",
+        "Prediction = last number + typical daily change"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "The numbers told a story.",
+    "text": "Your kid collected real data, tracked it every day, worked out the changes, charted it, found the trend and used it to see ahead. Differences, averages and charts, about the real world outside the window.",
+    "celebrate": "Ask them to explain the chart to someone else in the family: what it shows, and what they predict next.",
+    "extensions": [
+      "Keep one tracker going for a whole month and watch a bigger trend appear",
+      "Track two things at once and see if their lines rise and fall together",
+      "Compare your data with a friend's in another city",
+      "Track the same thing again in a different season and compare"
+    ]
+  },
+  "signs": [
+    "They guess the temperature before checking",
+    "They notice the days getting longer or shorter",
+    "They ask 'is that a trend or just one day?'"
+  ],
+  "makeItReal": "Put the log somewhere everyone sees it, like the fridge or the door. When the whole family checks the numbers and asks about the trend, your kid becomes the house forecaster.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/nature-data-tracker.jpg",
+    "alt": "Watercolour illustration of a homemade jar rain gauge on a fence post beside a garden thermometer and an open notebook with a hand-drawn line chart",
+    "caption": "One jar, one ruler, two weeks of data."
+  }
+}

@@ -2782,15 +2782,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature Data Tracker",
     slug: "nature-data-tracker",
     description:
-      "Your child picks something in nature that changes day to day, daylight, temperature, rainfall, and tracks it for a week or two. They record real numbers, find the pattern, chart it, and predict what comes next. Real-world STEM maths and data literacy, done with a window and a notebook, exactly what scientists and forecasters do.",
+      "Your child picks one thing in nature that changes day to day, temperature, rainfall or sunset time, and tracks it for one to two weeks. They build a jar rain gauge, guess before every reading, work out the daily changes, chart the numbers and use averages to find the real trend. Then they predict tomorrow and race a weather app. Real-world STEM maths, done with a jar and a notebook.",
     shortDescription:
-      "Real-world STEM maths for kids ages 6-14: track daylight, temperature, or rain over weeks, find the pattern, and predict what comes next.",
+      "Real-world STEM maths for kids ages 6-14: track temperature, rain or sunset time, chart it, find the trend and predict tomorrow.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/nature-data-tracker.jpg",
-    previewFile: "Preview Real-world math - Nature Data Tracker.pdf",
+    previewFile: "Preview Real-world math - Nature Data Tracker v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

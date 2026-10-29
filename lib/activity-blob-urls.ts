@@ -78,7 +78,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "my-review-column": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20My%20Review%20Column%20v4.pdf",
   "nature-choice-boards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Choice%20Boards%20v5.pdf",
   "nature-crafts": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20crafts%20for%20kids%20v3.pdf",
-  "nature-data-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Nature%20Data%20Tracker%20v2.pdf",
+  "nature-data-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Nature%20Data%20Tracker%20v3.pdf",
   "nature-geography-field-study": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Nature%20and%20Geography%20Field%20Study%20v2.pdf",
   "nature-journal-walks": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20My%20nature%20journal%20v3.pdf",
   "nature-walk-task-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Walk%20Task%20Cards%20v6.pdf",

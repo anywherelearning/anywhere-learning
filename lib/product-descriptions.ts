@@ -908,7 +908,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'farmers-market-challenge': {
     opening:
-      'Your child takes a real budget to a farmers market, walks every stall before buying, compares unit prices from stall to stall, and plans a meal from what's in season. They talk to the growers, handle every purchase, then cook the meal with you and work out the cost per serving. Real money maths that ends with dinner.',
+      'Your child takes a real budget to a farmers market, walks every stall before buying, compares unit prices from stall to stall, and plans a meal from what\'s in season. They talk to the growers, handle every purchase, then cook the meal with you and work out the cost per serving. Real money maths that ends with dinner.',
     whatsIncluded: [
       '5 steps from scouting the market to cooking the meal, each with your job and your kid\'s job',
       'A worked example on unit prices from two stalls',
@@ -3041,13 +3041,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-data-tracker': {
     opening:
-      'Your child picks something in nature that changes day to day, daylight, temperature, rainfall, and tracks it for a week or two. They record real numbers, find the pattern, chart it, and predict what comes next. Real-world STEM maths and data literacy, done with a window and a notebook.',
+      'Your child picks one thing in nature that changes day to day, temperature, rainfall or sunset time, and tracks it for one to two weeks. They build a jar rain gauge, guess before every reading, work out the daily changes, chart the numbers and use averages to find the real trend. Then they predict tomorrow and race a weather app. Real-world STEM maths, done with a jar and a notebook.',
     whatsIncluded: [
-      'Track something in nature over a week or two',
-      'Record real numbers and compare the daily changes',
-      'Spot the trend hidden in the data',
-      'Chart it to see the pattern',
-      'Predict the next few days and check',
+      'Pick what to track and build a jar rain gauge',
+      'Guess, check and record every day',
+      'Work out the daily changes, ups and downs',
+      'Chart it and use averages to find the trend',
+      'Predict tomorrow and race the weather app',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Data', 'Pattern Recognition', 'Prediction'],
     insideTheLearning: {
