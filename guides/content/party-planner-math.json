@@ -1,0 +1,332 @@
+{
+  "slug": "party-planner-math",
+  "category": "Real-World Math",
+  "title": "Party Planner Math",
+  "tagline": "Budget · Per guest · Timeline",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid plans a real party from start to finish: the guests, the budget, the food, the decorations and the timeline. The catch is $5 per guest, and every slice of pizza and every balloon has to fit inside it. Then they host it and work out what it really cost.",
+  "need": [
+    "A reason to celebrate: a birthday, a new season, a family milestone, or just because",
+    "Paper, a pencil and a calculator",
+    "A budget of $5 per guest, real money if you can. For 8 guests, that's $40.",
+    "A kitchen for food prep and a space for the party: living room, backyard or park",
+    "Craft supplies for decorations (optional)"
+  ],
+  "lesson": {
+    "text": "When you divide food into packs, the answer is often a fraction. You can't buy half a bottle, so you round up, then check it still fits the budget.",
+    "before": "9 guests × 2 cups = 18 cups. A bottle holds 4 cups, so we need 4 bottles.",
+    "model": [
+      {
+        "part": "Divide",
+        "line": "18 cups ÷ 4 cups per bottle = 4.5 bottles."
+      },
+      {
+        "part": "Round",
+        "line": "You can't buy half a bottle. 4 bottles leaves two guests with nothing, so buy 5."
+      },
+      {
+        "part": "Check",
+        "line": "5 bottles × $2 = $10. Does that fit the food budget?"
+      },
+      {
+        "part": "So",
+        "line": "Food rounds up. The budget decides what's on the menu."
+      }
+    ],
+    "modelNote": "That's the maths at every step of this guide: multiply by the guests, divide into packs, round up, then check it fits."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "multiplying, dividing, rounding up, adding"
+    },
+    {
+      "subject": "Money",
+      "text": "a budget, estimates vs real prices, cost per guest"
+    },
+    {
+      "subject": "Time",
+      "text": "schedules and counting back from a start time"
+    },
+    {
+      "subject": "Planning",
+      "text": "what comes first, and a backup plan"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the party advisor, not the planner. Let them make the calls and run the numbers, and help only when they're stuck. You handle the knives, the oven and checking allergies with the guests' families.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the party, count the guests and split the budget (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Work out the food per guest and price it (Step 3)."
+      },
+      {
+        "when": "The day before",
+        "what": "Shop, prep and count back the timeline (Step 4)."
+      },
+      {
+        "when": "Party day",
+        "what": "Host it, then do the final maths (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to invite 25 people",
+        "a": "Let the budget do the talking. 25 × $5 is $125, and they'll scale it down on their own once they price the food."
+      },
+      {
+        "q": "They went over budget",
+        "a": "Don't fix it. Ask what could be homemade, borrowed or cut. Making that trade-off is the real lesson."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Planning ahead",
+      "text": "what has to happen first"
+    },
+    {
+      "name": "Trade-offs",
+      "text": "spending on what matters most"
+    },
+    {
+      "name": "Hosting",
+      "text": "making guests feel welcome"
+    },
+    {
+      "name": "Adapting",
+      "text": "when the plan changes on the day"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the party and the guests",
+      "why": "The guest count sets everything else, starting with the budget.",
+      "kid": "Your kid decides what they're celebrating and picks a theme, a date and a time. Then they write the guest list and count the total, including family. Their budget is $5 per guest, so the headcount decides how much they have to spend.",
+      "you": "Help brainstorm if they're stuck, but let them choose. Ask 'do we have room for that many?' and remind them a small party counts. A backyard picnic for 4 is a real party.",
+      "ask": [
+        "8 guests at $5 each. What's your budget?",
+        "If you invite 4 more people, what changes?"
+      ],
+      "tip": "Count yourself and your family in the headcount. They eat too.",
+      "levels": {
+        "explore": "A family party for 3 to 5 people. Pick a theme and count the guests.",
+        "develop": "8 to 12 guests, with a list of yes, no and maybe, and the budget worked out.",
+        "extend": "Work out the smallest and largest headcount, and the budget for each."
+      }
+    },
+    {
+      "title": "Split the budget",
+      "why": "Every dollar gets a job before anything gets bought.",
+      "kid": "Your kid splits the budget into food and drinks, decorations, activities and a little for surprises, and gives each one a dollar amount. For decorations they sort every idea into three piles: make it, already have it, buy it. Then they check the amounts add up to the total.",
+      "you": "Ask 'what matters most to spend on?' and 'what could you make or borrow instead?' Let them decide the split, even if you'd do it differently.",
+      "ask": [
+        "You have $40 and food costs $32. How much is left?",
+        "Which decoration makes the biggest difference for the least money?"
+      ],
+      "tip": "8 guests: food $32, decorations $4, activities $0 (games you own), surprises $4. Check: 32 + 4 + 0 + 4 = $40.",
+      "levels": {
+        "explore": "Split the budget into 2 or 3 parts and write down each amount.",
+        "develop": "Use 4 categories, check they add up, and plan one free decoration.",
+        "extend": "Price every item in each category and work out the cost per guest for each one."
+      }
+    },
+    {
+      "title": "Work out the food per guest",
+      "why": "Multiply, divide, round up, then check the budget.",
+      "kid": "Your kid picks the food and drinks. For each one they multiply by the guests, divide by the pack size, round up and price it. Then they add it all up and check it fits the food budget.",
+      "you": "Before they plan, check with each guest's family about allergies and foods they can't eat, and pass that on. Then let them run the numbers.",
+      "ask": [
+        "8 guests × 2 slices. A pizza has 8 slices. How many pizzas?",
+        "You're $3 over the food budget. What do you swap or cut?"
+      ],
+      "tip": "Plot twist, the day before shopping: 'Two more guests are coming, and the budget stays at $40.' Now it's 3 pizzas ($36) and 5 bottles ($10). Let them find the fix, like homemade pizza for about $22.",
+      "levels": {
+        "explore": "Choose 3 or 4 foods and work out how many of each you need.",
+        "develop": "Plan the whole menu, work out amounts and prices, and check the food budget.",
+        "extend": "Handle the plot twist and plan a backup if something is too expensive or sold out."
+      }
+    },
+    {
+      "title": "Shop and count back the timeline",
+      "why": "Real prices, and a plan for party day that starts at the end.",
+      "kid": "Your kid shops from their list and writes down the real price next to each guess. Then they build the party-day schedule by counting back from when guests arrive: setup time, food out, last check, plus a buffer in case something runs late.",
+      "you": "Let them lead the shopping and prep. Help with knives and the oven, not with decisions. Ask 'how long will setup really take?'",
+      "ask": [
+        "Setup takes 90 minutes and the party starts at 2:00. When do you start?",
+        "Was anything cheaper or more expensive than you guessed?"
+      ],
+      "tip": "2:00 minus 90 minutes is 12:30. Add a 15-minute buffer and start at 12:15.",
+      "levels": {
+        "explore": "Gather what you need and write a timeline with 5 time slots.",
+        "develop": "Record real prices vs guesses and write an hour-by-hour plan with a buffer.",
+        "extend": "Keep a running total while shopping, and plan for 2 things that could go wrong on the day."
+      }
+    },
+    {
+      "title": "Host it and do the final maths",
+      "why": "The party is the test, and the numbers are the report.",
+      "kid": "Your kid sets up from their plan and hosts: welcomes guests, serves the food, runs the games and handles small surprises. After, before anything is thrown out, they count what's left. Then they add up the receipts, compare with the budget and work out the cost per guest.",
+      "you": "Help with heavy things during setup, then let them be the host. When the juice runs low or a game flops, wait before you help.",
+      "ask": [
+        "Which guess was furthest off?",
+        "If you had $5 less, what would you cut?"
+      ],
+      "tip": "Spent $35.90 of $40, so $4.10 under. Per guest: $35.90 ÷ 8 = about $4.49. 16 slices, 3 left, 13 eaten: 2 pizzas was right.",
+      "levels": {
+        "explore": "Host the party, then add up what you spent. Over or under?",
+        "develop": "Compare planned vs real costs, and work out the cost per guest.",
+        "extend": "Write a party report: budget vs real, leftovers, and what you'd change next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Party Planner's Cheat Sheet",
+    "intro": "Ballpark amounts for a kids' party of about 2 hours. Every crowd is different, so count the leftovers and adjust next time.",
+    "items": [
+      {
+        "name": "How much per guest",
+        "lines": [
+          {
+            "k": "Pizza:",
+            "v": "2 to 3 slices"
+          },
+          {
+            "k": "Drinks:",
+            "v": "2 to 3 cups"
+          },
+          {
+            "k": "Cake or cupcakes:",
+            "v": "1 each, plus a few spare"
+          },
+          {
+            "k": "Fruit or veggies:",
+            "v": "a small handful"
+          },
+          {
+            "k": "Balloons:",
+            "v": "1 per guest is plenty"
+          }
+        ],
+        "ask": "Check it: did you multiply by every guest, including family?"
+      },
+      {
+        "name": "Pack sizes to divide by",
+        "lines": [
+          {
+            "k": "Large pizza:",
+            "v": "8 slices"
+          },
+          {
+            "k": "1-litre bottle:",
+            "v": "about 4 cups"
+          },
+          {
+            "k": "2-litre bottle:",
+            "v": "about 8 cups"
+          },
+          {
+            "k": "Balloons and cups:",
+            "v": "check the pack, often 12, 20 or 50"
+          }
+        ],
+        "ask": "Check it: did you round up after dividing?"
+      },
+      {
+        "name": "A budget split that works",
+        "lines": [
+          {
+            "k": "Food and drinks:",
+            "v": "about 80%"
+          },
+          {
+            "k": "Decorations:",
+            "v": "about 10%"
+          },
+          {
+            "k": "Surprises:",
+            "v": "about 10%"
+          },
+          {
+            "k": "Activities:",
+            "v": "games you already own, $0"
+          }
+        ],
+        "ask": "Check it: do your categories add up to the total?"
+      },
+      {
+        "name": "Count back from the start",
+        "lines": [
+          {
+            "k": "Doors open:",
+            "v": "the party time"
+          },
+          {
+            "k": "Last check:",
+            "v": "10 minutes before"
+          },
+          {
+            "k": "Food out:",
+            "v": "20 to 30 minutes before"
+          },
+          {
+            "k": "Decorating:",
+            "v": "an hour or more before"
+          },
+          {
+            "k": "Buffer:",
+            "v": "add 15 minutes"
+          }
+        ],
+        "ask": "Check it: what's the first job, and what time does it start?"
+      }
+    ],
+    "after": {
+      "label": "Party formulas",
+      "lines": [
+        "Budget = guests × $5",
+        "How many = guests × per guest ÷ pack size, rounded up",
+        "Cost per guest = total spent ÷ guests"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They threw a real party.",
+    "text": "From the guest list to the last slice of pizza, your kid made the calls: how many people, how much food, what it would cost, and what to do when the plan changed. They multiplied, divided, rounded up, added receipts and worked to a clock. And they did it for people they care about.",
+    "celebrate": "Tell them what you noticed: the moment they figured out the juice wouldn't stretch, or how calmly they handled a guest who showed up early.",
+    "extensions": [
+      "Plan for a bigger group and see how the budget and amounts scale",
+      "Plan a themed dinner with 3 courses and work out the cost per course",
+      "Compare a homemade party with a party at a venue for the same guests",
+      "Plan a surprise party, and keep it secret while working with others"
+    ]
+  },
+  "signs": [
+    "They ask 'how many people?' before 'how much food?'",
+    "They round up when they divide food into packs",
+    "They count back from a start time to plan their day"
+  ],
+  "makeItReal": "For the next birthday or family dinner, hand them the headcount and the budget. The planning is theirs, and so is the credit.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/party-planner-math.jpg",
+    "alt": "Kids at a red-covered table in a kitchen decorated with Italian flags, each topping their own pizza from bowls of cheese, olives and sauce",
+    "caption": "Italian night: every guest builds their own pizza."
+  },
+  "fromHome": {
+    "text": "My daughter organized an Italian party where every guest made their own pizza. She worked out how much dough, sauce and cheese she needed per guest, wrote the shopping list and did the shopping. She made all the decorations herself, the flags, the garland and the ITALY sign, and even made Italian money so her friends could play restaurant.",
+    "quotes": []
+  }
+}

@@ -1184,15 +1184,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Party Planner Math",
     slug: "party-planner-math",
     description:
-      "Plan a party from guest list to budget. Calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real event. Maths that ends with a party.",
+      "Your child plans a real party from start to finish on $5 per guest. They pick the guests, split the budget, work out how much food each person needs, divide it into packs and round up, then shop from their list and count back the party-day timeline. Then they host it and work out what it really cost per guest. Maths that ends with a party.",
     shortDescription:
-      "Real-world math for kids ages 6-14: plan a party with real budgets, quantities, and timing. Life-skill math.",
+      "Real-world math for kids ages 6-14: plan and host a real party on $5 per guest, from food per guest to the party-day timeline.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqFAkIBECpwGmmj18jxPy",
     blobUrl: "",
     imageUrl: "/products/party-planner-math.jpg",
-    previewFile: "Preview Real-world math - Party Planner Math.pdf",
+    previewFile: "Preview Real-world math - Party Planner Math v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

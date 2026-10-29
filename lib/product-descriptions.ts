@@ -978,13 +978,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'party-planner-math': {
     opening:
-      'Plan a party from guest list to budget. Calculate food quantities, compare supply costs, figure out timing, and stay within budget. Kids use multiplication, division, estimation, and budgeting to throw a real celebration. Maths that ends with a party.',
+      'Your child plans a real party from start to finish on $5 per guest. They pick the guests, split the budget, work out how much food each person needs, divide it into packs and round up, then shop from their list and count back the party-day timeline. Then they host it and work out what it really cost per guest. Maths that ends with a party.',
     whatsIncluded: [
-      'Complete party planning guide with maths challenges',
-      'Guest list and food quantity calculations',
-      'Supply cost comparison and budgeting',
-      'Timeline planning and scheduling',
-      'Budget tracking and final cost analysis',
+      '5 steps from the guest list to the final cost per guest',
+      'Food per guest: multiply, divide into packs, round up',
+      'A budget split, with decorations sorted into make, have, buy',
+      'A party-day timeline counted back from the start',
+      'A cheat sheet with amounts per guest and pack sizes',
     ],
     skillTags: ['Multiplication', 'Budgeting', 'Estimation', 'Planning', 'Division'],
     // Oct 19 2026: this page held "using math to make party plans" while the post sat deep.
