@@ -8,7 +8,7 @@
   "need": [
     "Paper and a pencil, or a notes app",
     "A calculator (fine to use)",
-    "Optional: a store flyer, a receipt or a grocery website. The Price Menu at the back works fully offline."
+    "Optional: a store flyer, a receipt or a grocery website. The Price Menu at the end of the guide works fully offline."
   ],
   "lesson": {
     "text": "Food has two prices: what one serving costs, and what you pay at the store. You can't buy one slice of bread. A good plan uses both.",
@@ -124,7 +124,7 @@
     {
       "title": "Choose the foods and price them",
       "why": "Every item on the plan gets a number next to it.",
-      "kid": "For each block, your kid writes what they'll eat and the price per serving, using the Price Menu at the back or real prices from a flyer, a receipt or a store website. Simple is fine: nobody needs a three-course dinner.",
+      "kid": "For each block, your kid writes what they'll eat and the price per serving, using the Price Menu at the end of the guide or real prices from a flyer, a receipt or a store website. Simple is fine: nobody needs a three-course dinner.",
       "you": "No judging the food. If they plan sandwiches and granola bars, the maths still works. Ask where each price came from.",
       "ask": [
         "What will be easiest to make or pack?",

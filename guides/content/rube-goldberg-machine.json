@@ -102,7 +102,7 @@
     {
       "title": "Pick the ending first",
       "why": "You can't build toward something if you don't know where you're going.",
-      "kid": "Your kid decides what happens at the very end: one clear, satisfying moment, like a bell ringing or a cup tower falling. Pick one from the endings at the back. Then they test the ending on its own to make sure it works.",
+      "kid": "Your kid decides what happens at the very end: one clear, satisfying moment, like a bell ringing or a cup tower falling. Pick one from the Endings card in the Chain Reaction Toolkit at the end of the guide. Then they test the ending on its own to make sure it works.",
       "you": "Help them pick something simple enough to work. Steer them away from popping balloons, turning on lights or anything that needs perfect timing.",
       "ask": [
         "What do you want the audience to see at the very end?",
@@ -118,7 +118,7 @@
     {
       "title": "Build a 3-step chain",
       "why": "A start, a middle and the ending. Three steps that work beat eight that don't.",
-      "kid": "Your kid works backwards from the ending: what triggers it, and what triggers that? They pick steps from the step menu at the back, like a ramp, a domino run or a lever, and build a 3-step chain.",
+      "kid": "Your kid works backwards from the ending: what triggers it, and what triggers that? They pick steps from the Step menu card in the toolkit, like a ramp, a domino run or a lever, and build a 3-step chain.",
       "you": "Help them see cause and effect. Point at a connection and ask what makes the next step go.",
       "ask": [
         "What exactly makes the next step start?",
@@ -134,7 +134,7 @@
     {
       "title": "Test and fix, one change at a time",
       "why": "This is the real activity. Most of the time goes here.",
-      "kid": "Your kid runs step 1 into step 2 only. When it fails, they check the fix list at the back, change one thing and run it again. A connection counts as working when it works 3 times in a row. Then they add step 3 and test the whole chain.",
+      "kid": "Your kid runs step 1 into step 2 only. When it fails, they check the 'When it fails, check' card in the toolkit, change one thing and run it again. A connection counts as working when it works 3 times in a row. Then they add step 3 and test the whole chain.",
       "you": "Slow them down. The instinct is to change everything at once. Ask 'what's the one thing you'll change this time?'",
       "ask": [
         "What's the smallest change we could try?",

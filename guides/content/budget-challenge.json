@@ -8,7 +8,7 @@
   "need": [
     "Paper and a pencil, or a notes app",
     "A calculator (fine to use)",
-    "Optional: a device for real prices. The Price Menu at the back works fully offline."
+    "Optional: a device for real prices. The Price Menu at the end of the guide works fully offline."
   ],
   "lesson": {
     "text": "A budget is a plan that has to add up. When it doesn't, you don't change the budget: you choose what to cut, and say why.",
@@ -124,7 +124,7 @@
     {
       "title": "Choose the categories and prices",
       "why": "Every kind of spending, with a price for each.",
-      "kid": "Your kid lists every category the day needs: getting there, food and drinks, activities, supplies, treats, tips. For each one, they write what they're buying, how many, and the price each, using the Price Menu at the back or real prices online.",
+      "kid": "Your kid lists every category the day needs: getting there, food and drinks, activities, supplies, treats, tips. For each one, they write what they're buying, how many, and the price each, using the Price Menu at the end of the guide or real prices online.",
       "you": "Watch for the boring stuff: parking, gas, tips. If they forget, don't point it out yet. The surprise cost in Step 4 will teach that lesson better.",
       "ask": [
         "What will you actually spend money on?",
