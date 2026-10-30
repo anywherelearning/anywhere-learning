@@ -4,75 +4,101 @@ import { deliveryLabel } from '@/lib/gift';
 
 /**
  * The gift card for a gift membership, used by /gift/card/[id] and
- * /gift/thanks.
+ * /gift/thanks. One flat page: on screen it's a paper card, in print it fills
+ * a single letter sheet (no folding).
  *
- * On screen: the front cover beside the open inside spread.
- * In print: a quarter-fold card on one sheet. The top half (back cover +
- * front cover) is printed upside down, so after folding the sheet in half
- * across the middle and then again like a book, the wreath is on the front,
- * the chickadee on the back and the note + details inside.
- *
- * Every size inside a panel is in `em`, so one `fontSize` on the panel scales
- * the whole thing between the screen preview and the printed sheet.
+ * Every size inside is in `em`, so one `fontSize` scales the whole card
+ * between the screen preview and the printed page.
  */
 export default function GiftCard({ card }: { card: GiftCardData }) {
+  const opens = card.scheduled ? deliveryLabel(card.startsAt) : null;
+  const forLine = card.recipientName ? `For ${card.recipientName}'s family` : 'For your family';
+
   return (
-    <>
-      {/* Screen preview */}
-      <div className="gift-card-screen mx-auto flex max-w-[1000px] flex-col items-center gap-6 print:hidden lg:flex-row lg:items-start lg:justify-center">
-        <Panel style={screenPanel}>
-          <FrontCover card={card} />
-        </Panel>
-        {/* The open inside spread; stacked on phones, where two pages don't fit side by side. */}
-        <div className="flex flex-col shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] sm:flex-row [&>*:first-child]:border-b [&>*:first-child]:border-dashed [&>*:first-child]:border-[#E3DCCB] sm:[&>*:first-child]:border-b-0 sm:[&>*:first-child]:border-r">
-          <Panel style={{ ...screenPanel, boxShadow: 'none' }}>
-            <InsideLeft card={card} />
-          </Panel>
-          <Panel style={{ ...screenPanel, boxShadow: 'none' }}>
-            <InsideRight card={card} />
-          </Panel>
+    <div className="gift-card mx-auto w-full max-w-[600px] shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] print:max-w-none print:shadow-none">
+      <div className="gift-card-page" style={page}>
+        {/* corner watercolours */}
+        <Art src="/gift/ivy.png" style={{ width: '17%', top: '-1%', left: '-2%', transform: 'rotate(160deg)' }} />
+        <Art src="/gift/maple.png" style={{ width: '13%', top: '4%', right: '5%', transform: 'rotate(18deg)' }} />
+        <Art src="/gift/berries.png" style={{ width: '14%', bottom: '3%', left: '4%', transform: 'rotate(-12deg)' }} />
+        <Art src="/gift/acorns.png" style={{ width: '13%', bottom: '3%', right: '5%', transform: 'rotate(-6deg)' }} />
+
+        <div style={frame}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          {/* wreath */}
+          <div style={{ position: 'relative', width: '44%', margin: '0 auto', aspectRatio: '340 / 351' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/gift/wreath.png" alt="" aria-hidden="true" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ ...script, fontSize: '2.15em', lineHeight: 1, color: FOREST }}>
+                A gift
+                <br />
+                for you
+              </div>
+            </div>
+          </div>
+
+          <div style={{ ...caps, fontSize: '0.72em', color: GOLD, marginTop: '1.6em' }}>{forLine}</div>
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: '2.1em', lineHeight: 1.15, marginTop: '0.35em' }}>
+            A year of real-world adventures
+          </div>
+          <div style={{ fontSize: '0.95em', color: BODY, lineHeight: 1.55, margin: '0.8em auto 0', maxWidth: '30em' }}>
+            Twelve months of Anywhere Learning: hands-on activities to cook, build, grow, budget and invent,
+            together.
+          </div>
+
+          {card.giftMessage && (
+            <div
+              style={{
+                fontFamily: 'Georgia, serif',
+                fontStyle: 'italic',
+                fontSize: '1.2em',
+                lineHeight: 1.55,
+                margin: '1.4em auto 0',
+                maxWidth: '24em',
+                whiteSpace: 'pre-line',
+              }}
+            >
+              &ldquo;{card.giftMessage}&rdquo;
+            </div>
+          )}
+
+          <div style={{ ...caps, fontSize: '0.7em', color: BODY, letterSpacing: '0.16em', marginTop: '1.5em' }}>with love from</div>
+          <div style={{ ...script, fontSize: '2.4em', color: FOREST, marginTop: '0.1em' }}>{card.giftFrom}</div>
+
+          <div style={{ width: '30%', margin: '1.3em auto 0', borderTop: '1px dashed #D8D4C5' }} />
+          <div style={{ fontSize: '0.92em', lineHeight: 1.5, margin: '1em auto 0', maxWidth: '26em' }}>
+            {opens ? (
+              <>
+                Your library opens on <strong>{opens}</strong>. Look for an email from Anywhere Learning that
+                morning.
+              </>
+            ) : (
+              <>It&apos;s already waiting in your inbox. Look for an email from Anywhere Learning.</>
+            )}
+          </div>
+          </div>
+
+          <div style={{ paddingTop: '1.6em', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6em', color: BODY, fontSize: '0.78em' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/email-logo-mark.png" alt="" aria-hidden="true" style={{ width: '2.2em', height: '2.2em' }} />
+            <span>
+              <strong style={{ color: INK }}>Anywhere Learning</strong> · anywherelearning.co
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* Printed sheet: quarter fold */}
-      <div className="gift-card-sheet hidden print:grid">
-        <div className="gift-card-top">
-          <Panel style={printPanel}>
-            <BackCover />
-          </Panel>
-          <Panel style={printPanel}>
-            <FrontCover card={card} />
-          </Panel>
-        </div>
-        <div className="gift-card-bottom">
-          <Panel style={printPanel}>
-            <InsideLeft card={card} />
-          </Panel>
-          <Panel style={printPanel}>
-            <InsideRight card={card} />
-          </Panel>
-        </div>
-        <style>{`
+      <style>{`
+        .gift-card-page { font-size: clamp(9px, 2.3vw, 13.5px); }
+        @media print {
           @page { size: letter portrait; margin: 0; }
-          .gift-card-sheet { width: 100vw; height: 100vh; grid-template-rows: 1fr 1fr; }
-          .gift-card-top, .gift-card-bottom { display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
-          .gift-card-top { transform: rotate(180deg); }
-          /* faint fold guides */
-          .gift-card-bottom { border-top: 0.5pt dashed #d8d4c5; }
-          .gift-card-top > :first-child, .gift-card-bottom > :first-child { border-right: 0.5pt dashed #d8d4c5; }
-        `}</style>
-      </div>
-    </>
+          .gift-card-page { width: 100vw; height: 100vh; aspect-ratio: auto !important; font-size: 15pt; }
+        }
+      `}</style>
+    </div>
   );
 }
-
-const screenPanel: CSSProperties = {
-  width: 320,
-  height: 414,
-  fontSize: 12.5,
-  boxShadow: '0 18px 30px -20px rgba(45,58,46,0.55)',
-};
-const printPanel: CSSProperties = { width: '100%', height: '100%', fontSize: '11pt' };
 
 const INK = '#2F3A2E';
 const BODY = '#5B6270';
@@ -81,125 +107,30 @@ const FOREST = '#3d5c3b';
 const script: CSSProperties = { fontFamily: 'var(--font-display), cursive', fontWeight: 700 };
 const caps: CSSProperties = { textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: 600 };
 
-function Panel({ style, children }: { style: CSSProperties; children: React.ReactNode }) {
-  return (
-    <div
-      style={{
-        position: 'relative',
-        overflow: 'hidden',
-        background: '#FFFCF6',
-        color: INK,
-        boxSizing: 'border-box',
-        WebkitPrintColorAdjust: 'exact',
-        printColorAdjust: 'exact',
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
-}
+const page: CSSProperties = {
+  position: 'relative',
+  overflow: 'hidden',
+  aspectRatio: '8.5 / 11',
+  background: '#FFFCF6',
+  color: INK,
+  padding: '7%',
+  boxSizing: 'border-box',
+  WebkitPrintColorAdjust: 'exact',
+  printColorAdjust: 'exact',
+};
+
+const frame: CSSProperties = {
+  position: 'relative',
+  height: '100%',
+  boxSizing: 'border-box',
+  border: '1.5px dashed #D4A373',
+  padding: '7% 8% 4%',
+  display: 'flex',
+  flexDirection: 'column',
+  textAlign: 'center',
+};
 
 function Art({ src, style }: { src: string; style: CSSProperties }) {
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt="" aria-hidden="true" style={{ position: 'absolute', height: 'auto', ...style }} />;
-}
-
-function FrontCover({ card }: { card: GiftCardData }) {
-  return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '2em' }}>
-      <div style={{ position: 'relative', width: '78%', aspectRatio: '340 / 351' }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/gift/wreath.png" alt="" aria-hidden="true" style={{ width: '100%', height: 'auto', display: 'block' }} />
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ ...script, fontSize: '3em', lineHeight: 0.95, color: FOREST }}>
-            A gift
-            <br />
-            for you
-          </div>
-        </div>
-      </div>
-      <div style={{ ...caps, fontSize: '0.72em', color: GOLD, marginTop: '1.8em' }}>
-        {card.recipientName ? `For ${card.recipientName}'s family` : 'For your family'}
-      </div>
-      <div style={{ fontSize: '1.05em', color: BODY, marginTop: '0.5em' }}>A year of real-world adventures</div>
-    </div>
-  );
-}
-
-function BackCover() {
-  return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '2em' }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/gift/chickadee.png" alt="" aria-hidden="true" style={{ width: '42%', height: 'auto' }} />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/email-logo-mark.png" alt="" aria-hidden="true" style={{ width: '2.6em', height: '2.6em', marginTop: '2.2em' }} />
-      <div style={{ fontSize: '0.95em', fontWeight: 600, marginTop: '0.7em' }}>Anywhere Learning</div>
-      <div style={{ fontSize: '0.8em', color: BODY, marginTop: '0.25em', fontStyle: 'italic' }}>Meaningful Learning, Wherever You Are</div>
-      <div style={{ fontSize: '0.75em', color: BODY, marginTop: '0.9em' }}>anywherelearning.co</div>
-    </div>
-  );
-}
-
-function InsideLeft({ card }: { card: GiftCardData }) {
-  return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '3em 2.4em' }}>
-      <Art src="/gift/ivy.png" style={{ width: '34%', top: '-2%', left: '-6%', transform: 'rotate(160deg)' }} />
-      <Art src="/gift/berries.png" style={{ width: '28%', bottom: '3%', left: '4%', transform: 'rotate(-12deg)' }} />
-      {card.giftMessage ? (
-        <>
-          <div style={{ ...caps, fontSize: '0.68em', color: GOLD }}>A note for you</div>
-          <div style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.2em', lineHeight: 1.55, marginTop: '1em', whiteSpace: 'pre-line' }}>
-            &ldquo;{card.giftMessage}&rdquo;
-          </div>
-          <div style={{ fontSize: '0.72em', color: BODY, marginTop: '1.4em', ...caps, letterSpacing: '0.16em' }}>with love from</div>
-          <div style={{ ...script, fontSize: '2em', color: FOREST, marginTop: '0.15em' }}>{card.giftFrom}</div>
-        </>
-      ) : (
-        <>
-          <div style={{ ...script, fontSize: '2.2em', lineHeight: 1.1, color: FOREST }}>Made for the days you&apos;ll remember</div>
-          <div style={{ fontSize: '0.95em', color: BODY, marginTop: '0.9em', lineHeight: 1.5 }}>
-            Cooking, building, growing and exploring, side by side.
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function InsideRight({ card }: { card: GiftCardData }) {
-  const opens = card.scheduled ? deliveryLabel(card.startsAt) : null;
-  return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '2.6em 2.2em' }}>
-      <Art src="/gift/maple.png" style={{ width: '22%', top: '3%', right: '4%', transform: 'rotate(18deg)' }} />
-      <Art src="/gift/acorns.png" style={{ width: '24%', bottom: '3%', right: '4%', transform: 'rotate(-8deg)' }} />
-      <div style={{ ...caps, fontSize: '0.68em', color: GOLD }}>
-        {card.recipientName ? `For ${card.recipientName}'s family` : 'For your family'}
-      </div>
-      <div style={{ fontFamily: 'Georgia, serif', fontSize: '1.65em', lineHeight: 1.2, marginTop: '0.5em' }}>
-        A year of real-world adventures
-      </div>
-      <div style={{ fontSize: '0.92em', color: BODY, lineHeight: 1.55, marginTop: '0.9em' }}>
-        Twelve months of Anywhere Learning: hands-on activities to cook, build, grow, budget and
-        invent, together.
-      </div>
-      <div style={{ width: '40%', margin: '1.2em auto 0', borderTop: '1px dashed #D8D4C5' }} />
-      <div style={{ fontSize: '0.9em', color: INK, lineHeight: 1.5, marginTop: '1em' }}>
-        {opens ? (
-          <>
-            Your library opens on <strong>{opens}</strong>. Look for an email from Anywhere Learning that morning.
-          </>
-        ) : (
-          <>It&apos;s already waiting in your inbox. Look for an email from Anywhere Learning.</>
-        )}
-      </div>
-      {/* With a note, the giver signs it on the left page; without one, sign here. */}
-      {!card.giftMessage && (
-        <>
-          <div style={{ fontSize: '0.72em', color: BODY, marginTop: '1.3em', ...caps, letterSpacing: '0.16em' }}>with love from</div>
-          <div style={{ ...script, fontSize: '2em', color: FOREST, marginTop: '0.15em' }}>{card.giftFrom}</div>
-        </>
-      )}
-    </div>
-  );
+  return <img src={src} alt="" aria-hidden="true" style={{ position: 'absolute', height: 'auto', zIndex: 1, ...style }} />;
 }

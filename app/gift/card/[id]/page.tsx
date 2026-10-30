@@ -23,14 +23,8 @@ export default async function GiftCardPage({ params }: { params: Promise<{ id: s
 
   return (
     <main className="min-h-screen bg-[#F2EFE4] px-4 py-10 print:bg-white print:p-0">
-      <div className="mx-auto mb-8 flex max-w-[1000px] flex-wrap items-start justify-between gap-4 print:hidden">
-        <div className="max-w-[560px] text-[15px] leading-relaxed text-gray-600">
-          <p className="font-semibold text-gray-900">Prints as a little folded card on one sheet.</p>
-          <p className="mt-1">
-            Fold the sheet in half across the middle, so the upside-down half is on the outside. Then fold it in
-            half again like a book, with the leaf wreath on the front.
-          </p>
-        </div>
+      <div className="mx-auto mb-6 flex max-w-[600px] flex-wrap items-center justify-between gap-3 print:hidden">
+        <p className="text-[15px] text-gray-600">Print it on one page, tuck it in a card, or screenshot it to send.</p>
         <PrintButton />
       </div>
       <GiftCard card={card} />
