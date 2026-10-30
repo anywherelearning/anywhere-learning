@@ -1,0 +1,324 @@
+{
+  "slug": "rube-goldberg-machine",
+  "category": "Creativity & Maker",
+  "title": "Rube Goldberg Machine",
+  "tagline": "Build · Test · Fix",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds a chain reaction that uses way too many steps to do one simple thing: a ball rolls down a ramp, knocks over a cup, which pulls a string, which rings a bell. They plan it backwards, build it, watch it fail, figure out why and try again. That cycle is how engineers think.",
+  "need": [
+    "Things that roll, fall and tip: balls, marbles, toy cars, dominoes, cups, books",
+    "Ramps: cardboard, paper towel tubes, cutting boards",
+    "String, tape, wooden spoons, empty cans, sticks",
+    "A phone to film the final run (optional)"
+  ],
+  "lesson": {
+    "text": "When a step fails, change one thing, then test again. Change three things at once and you won't know which one fixed it.",
+    "before": "It missed! Move the ramp, swap the ball and add more books.",
+    "model": [
+      {
+        "part": "Problem",
+        "line": "The ball rolls off the ramp and misses the cup by 2 inches."
+      },
+      {
+        "part": "One change",
+        "line": "Move the cup 2 inches closer. Nothing else."
+      },
+      {
+        "part": "Test",
+        "line": "Run it 3 times. Hits every time? Fixed. Still missing? Try the next idea."
+      },
+      {
+        "part": "So",
+        "line": "One change per test, so you always know what worked."
+      }
+    ],
+    "modelNote": "That's the engineering cycle this guide runs on: test, change one thing, test again."
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "gravity, friction, force, energy passed along"
+    },
+    {
+      "subject": "Engineering",
+      "text": "plan, build, test, improve"
+    },
+    {
+      "subject": "Math",
+      "text": "angles, distances, a success rate"
+    },
+    {
+      "subject": "Communication",
+      "text": "explaining a sequence step by step"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the coach and the extra pair of hands, not the engineer. When something fails, don't fix it. Ask 'what do you think went wrong?' The machine won't work on the first try, or the fifth. That's the activity.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the ending and build a 3-step chain (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Test and fix, then make it bigger (Steps 3 and 4)."
+      },
+      {
+        "when": "Demo day",
+        "what": "Practise, reset and run it for an audience (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They get frustrated when it keeps failing",
+        "a": "That means they care. Shrink it: 'Let's make just these two steps work perfectly.' Then add the rest back."
+      },
+      {
+        "q": "They built 8 steps before testing any",
+        "a": "Very common. Test from the start: step 1 into step 2 only, then add one connection at a time."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Persistence",
+      "text": "the fifth try, and the sixth"
+    },
+    {
+      "name": "Problem-solving",
+      "text": "finding why a step fails"
+    },
+    {
+      "name": "Patience",
+      "text": "one change at a time"
+    },
+    {
+      "name": "Creative thinking",
+      "text": "a silly idea made to work"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the ending first",
+      "why": "You can't build toward something if you don't know where you're going.",
+      "kid": "Your kid decides what happens at the very end: one clear, satisfying moment, like a bell ringing or a cup tower falling. Pick one from the endings at the back. Then they test the ending on its own to make sure it works.",
+      "you": "Help them pick something simple enough to work. Steer them away from popping balloons, turning on lights or anything that needs perfect timing.",
+      "ask": [
+        "What do you want the audience to see at the very end?",
+        "Does the ending work on its own if you nudge it by hand?"
+      ],
+      "tip": "Bell idea: hang a spoon from a string next to a cup or a pot. Whatever hits the spoon last makes it ring.",
+      "levels": {
+        "explore": "Pick an ending and make it work by hand.",
+        "develop": "Pick an ending and draw the machine backwards from it.",
+        "extend": "Pick an ending with a twist, like raising a flag, and plan 6 or more steps backwards."
+      }
+    },
+    {
+      "title": "Build a 3-step chain",
+      "why": "A start, a middle and the ending. Three steps that work beat eight that don't.",
+      "kid": "Your kid works backwards from the ending: what triggers it, and what triggers that? They pick steps from the step menu at the back, like a ramp, a domino run or a lever, and build a 3-step chain.",
+      "you": "Help them see cause and effect. Point at a connection and ask what makes the next step go.",
+      "ask": [
+        "What exactly makes the next step start?",
+        "Where does the energy run out?"
+      ],
+      "tip": "The connection between steps is where everything breaks. The ball misses the cup by two inches. That's normal, and it's what Step 3 is for.",
+      "levels": {
+        "explore": "Build 3 steps that run, even with a little help.",
+        "develop": "Build 3 steps using 2 different kinds from the step menu.",
+        "extend": "Build 3 steps and sketch the full machine with arrows."
+      }
+    },
+    {
+      "title": "Test and fix, one change at a time",
+      "why": "This is the real activity. Most of the time goes here.",
+      "kid": "Your kid runs step 1 into step 2 only. When it fails, they check the fix list at the back, change one thing and run it again. A connection counts as working when it works 3 times in a row. Then they add step 3 and test the whole chain.",
+      "you": "Slow them down. The instinct is to change everything at once. Ask 'what's the one thing you'll change this time?'",
+      "ask": [
+        "What's the smallest change we could try?",
+        "Should we change the angle, the distance or the object?"
+      ],
+      "tip": "20 minutes spent adjusting one ramp to tip one cup isn't wasted. That's engineering.",
+      "levels": {
+        "explore": "Fix the chain until it runs all the way once.",
+        "develop": "Make every connection work 3 times in a row.",
+        "extend": "Log each failed run: what went wrong, the one change, and the result."
+      }
+    },
+    {
+      "title": "Make it bigger",
+      "why": "More steps, more surprises, still tested one at a time.",
+      "kid": "Your kid adds one new step at a time between the start and the end, testing after each one. They try a kind of step they haven't used yet, and add a sound or a surprise. Then they make it quick to reset: tape marks, a tray for loose balls, numbered steps.",
+      "you": "Encourage variety. If every step is 'ball rolls down a ramp,' nudge them toward a lever or a string pull.",
+      "ask": [
+        "What kind of step haven't you used yet?",
+        "What would make the audience say 'whoa'?"
+      ],
+      "tip": "5 to 7 steps is the sweet spot: impressive enough to watch, small enough to reset. Easy wins: a zigzag of ramps, a spoon catapult, a long domino run.",
+      "levels": {
+        "explore": "Add 1 or 2 steps and keep it working.",
+        "develop": "Reach 4 to 6 steps with at least 3 different kinds.",
+        "extend": "Reach 6 to 10 steps with a twist step, and mark every reset position."
+      }
+    },
+    {
+      "title": "Run the demo",
+      "why": "Showing it off, and explaining how it works.",
+      "kid": "Your kid does a practice run or two, names the machine and picks an audience. Then they do the countdown, start it and explain their favourite step and the hardest one. If it fails, they fix it live and explain what usually happens.",
+      "you": "Be the audience. Ask real questions and film it. Slow motion is especially good.",
+      "ask": [
+        "Which step was the hardest to get working?",
+        "If you built Version 2, what would you change?"
+      ],
+      "tip": "Extend challenge: run it 10 times and count the full successes. 7 out of 10 is a 70% success rate. Then fix the weakest step and try again.",
+      "levels": {
+        "explore": "Run it for someone and tell them your favourite step.",
+        "develop": "Run it, explain each step in order and film it.",
+        "extend": "Work out its success rate over 10 runs, and draw a diagram with arrows."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Chain Reaction Toolkit",
+    "intro": "Steps to choose from, endings that work, what to check when it fails, and how to reset fast.",
+    "items": [
+      {
+        "name": "Step menu",
+        "lines": [
+          {
+            "k": "Ramp:",
+            "v": "a ball rolls down and hits something"
+          },
+          {
+            "k": "Domino run:",
+            "v": "each one knocks over the next"
+          },
+          {
+            "k": "Lever:",
+            "v": "a stick on a rock, one end down, one up"
+          },
+          {
+            "k": "String pull:",
+            "v": "something moving pulls a string"
+          },
+          {
+            "k": "Drop:",
+            "v": "something falls off an edge"
+          },
+          {
+            "k": "Catapult:",
+            "v": "a spoon balanced on a block"
+          }
+        ],
+        "ask": "Check it: have you used at least 2 kinds of step?"
+      },
+      {
+        "name": "Endings",
+        "lines": [
+          {
+            "k": "Work well:",
+            "v": "ring a bell, knock over a cup tower, push a car over a finish line, raise a paper flag, drop a ball in a bucket"
+          },
+          {
+            "k": "Skip:",
+            "v": "popping a balloon, turning on a light, anything with perfect timing"
+          }
+        ],
+        "ask": "Check it: does your ending work on its own?"
+      },
+      {
+        "name": "When it fails, check",
+        "lines": [
+          {
+            "k": "Too far apart:",
+            "v": "move things closer"
+          },
+          {
+            "k": "Too light:",
+            "v": "swap for something heavier"
+          },
+          {
+            "k": "Wrong angle:",
+            "v": "steeper is faster, but harder to aim"
+          },
+          {
+            "k": "Wobbly:",
+            "v": "tape it down, or use books as rails"
+          },
+          {
+            "k": "Dominoes:",
+            "v": "closer together than they are tall"
+          }
+        ],
+        "ask": "Check it: did you change only one thing?"
+      },
+      {
+        "name": "Quick reset",
+        "lines": [
+          {
+            "k": "Tape marks:",
+            "v": "where every piece goes"
+          },
+          {
+            "k": "A tray:",
+            "v": "a parking spot for balls and marbles"
+          },
+          {
+            "k": "Short domino runs:",
+            "v": "8 to 10 per section"
+          },
+          {
+            "k": "Catch cups:",
+            "v": "at the bottom of each ramp"
+          },
+          {
+            "k": "Numbered steps:",
+            "v": "reset from the end"
+          }
+        ],
+        "ask": "Check it: could someone else reset it without you?"
+      }
+    ],
+    "after": {
+      "label": "Engineer's rules",
+      "lines": [
+        "Start from the ending and work backwards.",
+        "Test every connection before adding more.",
+        "Change one thing at a time.",
+        "Working means 3 runs in a row."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "Their machine worked.",
+    "text": "And even the failed runs taught something. Your kid imagined it, built it, watched it fail, figured out why, fixed it and tried again, dozens of times. That cycle won't show up on a test, but it's one of the most useful ways of thinking a kid can build.",
+    "celebrate": "Tell them what impressed you: the connection they fixed after many tries, the cleverest step, or how they handled the demo.",
+    "extensions": [
+      "Build a second machine and compare which is more reliable",
+      "Set a limit: it must fit in a shoebox, or use only outdoor materials",
+      "Challenge a sibling or friend to build one, then compare designs",
+      "Build one where every step is a different kind"
+    ]
+  },
+  "signs": [
+    "They say 'let me change one thing' when something doesn't work",
+    "They talk about angles, weight and distance",
+    "They test small before building big"
+  ],
+  "makeItReal": "Next time something at home doesn't work, a wobbly shelf or a stuck drawer, ask them how they'd test it one change at a time.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/rube-goldberg-machine.jpg",
+    "alt": "Watercolour illustration of a homemade chain reaction on a living room floor: a cardboard tube ramp on books, a line of dominoes, a spoon lever and a small pot as a bell",
+    "caption": "Ramp, dominoes, lever, bell. Way too many steps, on purpose."
+  }
+}

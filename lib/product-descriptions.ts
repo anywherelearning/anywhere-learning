@@ -505,13 +505,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'rube-goldberg-machine': {
     opening:
-      'Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials like dominoes, ramps, balls, and levers. Each step teaches engineering principles, cause-and-effect, and creative problem-solving through the joy of building something gloriously over-engineered.',
+      'Your child builds a chain reaction that takes way too many steps to do one simple thing, like ringing a bell. They pick the ending first, build backwards with ramps, dominoes and levers, then test and fix one change at a time until every step works 3 runs in a row. A classic STEM engineering project where failure is part of the fun.',
     whatsIncluded: [
-      'Complete project guide with engineering principles',
-      'Chain reaction design and planning steps',
-      'Materials list using everyday household items',
-      'Testing, troubleshooting, and iteration framework',
-      'Extension challenges for more complex builds',
+      '5 steps from picking the ending to the final demo',
+      'A step menu: ramp, dominoes, lever, string pull, drop, catapult',
+      'Endings that work, and ones to skip',
+      'A fix list for when a step fails',
+      'Quick reset tricks, plus a success rate challenge',
     ],
     skillTags: ['STEM', 'Engineering', 'Physics', 'Problem-Solving', 'Design', 'Cause & Effect'],
     seo: {

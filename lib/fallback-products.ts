@@ -367,15 +367,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build a Rube Goldberg Machine",
     slug: "rube-goldberg-machine",
     description:
-      "Build an absurdly complicated machine to do something simple. Kids design chain reactions using everyday materials: dominoes, ramps, balls, levers. Each step teaches engineering principles, cause-and-effect thinking, and creative problem-solving. A classic STEM engineering project that turns physics into something kids actually want to finish. Failure is part of the fun.",
+      "Your child builds a chain reaction that takes way too many steps to do one simple thing, like ringing a bell. They pick the ending first, build backwards with ramps, dominoes and levers, then test and fix one change at a time until every step works 3 runs in a row. A classic STEM engineering project where failure is part of the fun.",
     shortDescription:
-      "STEM engineering project for kids ages 6-14: build an absurdly complicated machine to do something simple. Design thinking, cause-and-effect, and creativity meet.",
+      "STEM engineering project for kids ages 6-14: build a chain reaction machine, then test and fix it one change at a time.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpiAkIBECpwGms3N113ga",
     blobUrl: "",
     imageUrl: "/products/rube-goldberg-machine.jpg",
-    previewFile: "Preview Creativity & Maker Build a Rube Goldberg Machine.pdf",
+    previewFile: "Preview Creativity & Maker Build a Rube Goldberg Machine v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,
