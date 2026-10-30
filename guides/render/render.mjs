@@ -23,6 +23,15 @@ if (g.type !== 'map') {
   if (effort) g.time = { Quick: 'Under an hour', 'Half-Day': 'Half-day', Project: 'Multi-day' }[effort];
   else console.warn(`No effort for ${g.slug} in lib/activity-effort.ts; cover time: ${g.time ?? 'none'}`);
 }
+// The reference pages sit near the end, not on the back cover. Point to them
+// by name and "at the end of the guide", never "at the back". Stops the render
+// unless the phrase is about something real (tall plants at the back of a bed).
+const backRefs = JSON.stringify(g).match(/[^."]*\b(?:(?:at|from) the back(?! of)|the back page)\b[^."]*/gi)
+  ?.filter((s) => !/plants? (go )?at the back|at the back so/i.test(s));
+if (backRefs?.length) {
+  console.error(`Says "at the back" for a page in the guide. Name the page and say "at the end of the guide":\n  ${backRefs.join('\n  ')}`);
+  process.exit(1);
+}
 const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : buildHtml(g, m, o));
 const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '') + (tpt ? '-tpt' : '') + (preview ? '-preview' : '');
 const outDir = outArg ?? path.join('notes', 'guides');
