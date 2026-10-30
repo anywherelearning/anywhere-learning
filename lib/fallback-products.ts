@@ -344,15 +344,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Board Game Studio",
     slug: "board-game-studio",
     description:
-      "Design, build, and playtest an original board game from scratch. Kids brainstorm themes, create rules, design the board, craft game pieces, and iterate based on playtesting. A complete creative project that builds design thinking, strategic reasoning, and communication skills.",
+      "Your child invents a board game from nothing: the theme, how you win, what happens each turn, the board and the cards. Then they write 5 rules, hand it to someone who has never seen it, watch what goes wrong and build Version 2. Design thinking, clear writing and a little maths, ending with a family game night.",
     shortDescription:
-      "Creativity project for kids ages 6-14: design, build, and playtest an original board game from scratch. Low-prep, open-ended.",
+      "Creativity project for kids ages 6-14: invent, build and playtest an original board game, then make Version 2.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpiAkIBECpwGmNCltdHtY",
     blobUrl: "",
     imageUrl: "/products/board-game-studio.jpg",
-    previewFile: "Preview Creativity & Maker Board Game Studio.pdf",
+    previewFile: "Preview Creativity & Maker Board Game Studio v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

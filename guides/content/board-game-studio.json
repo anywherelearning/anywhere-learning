@@ -1,0 +1,335 @@
+{
+  "slug": "board-game-studio",
+  "category": "Creativity & Maker",
+  "title": "Board Game Studio",
+  "tagline": "Invent · Build · Playtest",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid invents a board game from nothing: the theme, how you win, the board, the cards and the rules. Then they hand it to someone else, watch what happens, and fix it. That last part is where the real design thinking happens.",
+  "need": [
+    "Paper or poster board, and markers",
+    "Index cards or cut paper, tape, scissors and cardboard",
+    "Tokens: buttons, coins, small rocks or LEGO pieces",
+    "Dice, or a paperclip and a pencil for a spinner (optional)"
+  ],
+  "lesson": {
+    "text": "A game is fun when something happens on most turns. If a turn is just 'roll, move, nothing happens,' players get bored fast.",
+    "before": "Roll a 3, move 3. Roll a 5, move 5. First to the end wins.",
+    "model": [
+      {
+        "part": "Turn",
+        "line": "Roll, move, done. Nobody decides anything, so nobody cares."
+      },
+      {
+        "part": "Add a surprise",
+        "line": "Land on a star space and draw a card: 'Swap places with any player.'"
+      },
+      {
+        "part": "Add a choice",
+        "line": "A fork: a short path with traps, or a long safe one."
+      },
+      {
+        "part": "So",
+        "line": "A surprise or a choice on most turns, even a small one."
+      }
+    ],
+    "modelNote": "That's the design question behind every step: what is the player doing, and is it fun?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "rules someone else can follow"
+    },
+    {
+      "subject": "Math",
+      "text": "scoring, chance, fair rewards and penalties"
+    },
+    {
+      "subject": "Design",
+      "text": "prototype, test, fix"
+    },
+    {
+      "subject": "Art",
+      "text": "the board, the cards and the box cover"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the playtester, not the designer. Ask questions instead of suggesting answers, play honestly, and help cut cards. Expect a messy first version: that's the data for Version 2.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the type, theme and win, and choose what happens each turn (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the ugly prototype (Step 3)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Write the rules, playtest, fix it and make it official (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to build a huge game",
+        "a": "Let them sketch all of it, then build one corner first. A small game that works beats a big one that never gets played."
+      },
+      {
+        "q": "They're upset the playtest went badly",
+        "a": "That's the data. Ask what they'd change first. Every good game had a rough first playtest."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Creative thinking",
+      "text": "an idea turned into a real thing"
+    },
+    {
+      "name": "Taking feedback",
+      "text": "watching, listening, fixing"
+    },
+    {
+      "name": "Clear explaining",
+      "text": "rules a stranger can follow"
+    },
+    {
+      "name": "Persistence",
+      "text": "Version 2, and maybe 3"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the type, theme and win",
+      "why": "A simple goal keeps the first version playable.",
+      "kid": "Your kid picks a game type from the menu at the back, like a race, a collecting game or a co-op game, and a theme. The weirder the better. Then they finish one sentence: 'You win by...'",
+      "you": "Help them keep Version 1 simple. Big ideas can grow later. If they're stuck, offer two choices: 'race or mystery?' gets an answer faster than 'what kind of game?'",
+      "ask": [
+        "What will players do on their turn?",
+        "How will you know when someone has won?"
+      ],
+      "tip": "If they can't say how you win in one sentence, the game is too big for Version 1. Save the extra ideas for an expansion pack.",
+      "levels": {
+        "explore": "Pick a type and a theme, and draw what the game looks like.",
+        "develop": "Write the win in one sentence and sketch what a turn looks like.",
+        "extend": "Decide how long a game should take, and how to keep it close until the end."
+      }
+    },
+    {
+      "title": "Choose what happens each turn",
+      "why": "The turn is the engine of the game.",
+      "kid": "Your kid picks one or two things players do each turn from the turn ideas at the back: roll and move, draw a card, choose a path, collect and trade, a mini-challenge or push your luck. Then they act out a pretend turn out loud.",
+      "you": "Listen to the pretend turn and ask what's interesting about it. Let them pick what fits their theme.",
+      "ask": [
+        "What makes each turn interesting?",
+        "How do players feel they're getting closer to winning?"
+      ],
+      "tip": "'Roll, move, nothing happens' is how homemade games die. Make something happen most turns: a card, a choice, a gain or a loss.",
+      "levels": {
+        "explore": "Pick one thing players do each turn.",
+        "develop": "Pick two that fit the theme, and plan where the surprises are.",
+        "extend": "Add a risk choice: a safe move, or a risky one with a bigger reward."
+      }
+    },
+    {
+      "title": "Build an ugly prototype",
+      "why": "It needs to work, not look good. Yet.",
+      "kid": "Your kid builds a playable version: a board (a path, a map, a spiral or forked paths), tokens, a small stack of cards and a spinner or dice. Fast and rough is the goal.",
+      "you": "Remind them it's a test version. Ugly is fine, playable is the goal. Help cut cards, and resist making it neat for them.",
+      "ask": [
+        "Where do players make decisions on the board?",
+        "What do players collect or lose?"
+      ],
+      "tip": "10 to 15 cards is plenty for a first test. For a giant version, chalk the board on the driveway and use rocks and leaves as tokens.",
+      "levels": {
+        "explore": "A path with 5 special spaces and a few cards.",
+        "develop": "A full board, 10 to 15 cards and tokens.",
+        "extend": "Forked paths or a map, and work out how often a player lands on a special space: if 1 space in 4 is special, about every 4th move."
+      }
+    },
+    {
+      "title": "Write 5 rules, then playtest",
+      "why": "The game meets someone who didn't make it.",
+      "kid": "Your kid writes the 5 rules every game needs, listed at the back. Then they hand the game to someone who's never seen it and watch them set up and play without helping. They write down every question, every confused face and every boring moment.",
+      "you": "Play honestly, and say out loud what you're thinking. Don't pretend a broken rule works. If they jump in to explain, gently remind them to write the question down instead.",
+      "ask": [
+        "Could someone play this without you explaining?",
+        "Where did the players get stuck or bored?"
+      ],
+      "tip": "Sit on your hands. Every time you want to explain, write down the question. Each one is a rule to fix.",
+      "levels": {
+        "explore": "Tell the rules out loud and play one game together.",
+        "develop": "Write 5 rules, playtest with someone new, and note 3 problems.",
+        "extend": "Run two playtests with different players, time each game and tally the confusing moments."
+      }
+    },
+    {
+      "title": "Fix it and make it official",
+      "why": "Version 2 is where it becomes a real game.",
+      "kid": "Your kid picks one or two changes from the playtest, not everything at once, and plays again. Then they make it official: a title, a box cover, a back-of-box line ('A game for 2 to 4 players where you...') and a clean rule sheet. Last, they host a game night and teach it.",
+      "you": "Be the first customer. At game night, let them run it and teach it, even when it's slow.",
+      "ask": [
+        "What changed between Version 1 and Version 2?",
+        "What makes your game different from games you've played?"
+      ],
+      "tip": "The most common fixes: shorten the board, add better cards, make one rule clearer, or make the scores closer at the end.",
+      "levels": {
+        "explore": "Change one thing and play again.",
+        "develop": "Fix 2 problems, give it a name and make a cover.",
+        "extend": "A full rulebook, a box with a back-of-box blurb, and a game night with one-line player reviews."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Game Designer's Toolkit",
+    "intro": "Menus to pick from, card ideas to steal, and what to watch for when someone plays.",
+    "items": [
+      {
+        "name": "Game types",
+        "lines": [
+          {
+            "k": "Race:",
+            "v": "first to the finish"
+          },
+          {
+            "k": "Collecting:",
+            "v": "gather a set first"
+          },
+          {
+            "k": "Mystery:",
+            "v": "solve the clues"
+          },
+          {
+            "k": "Co-op:",
+            "v": "everyone against the game"
+          },
+          {
+            "k": "Cards only:",
+            "v": "no board needed"
+          }
+        ],
+        "ask": "Check it: can you say how you win in one sentence?"
+      },
+      {
+        "name": "Turn ideas",
+        "lines": [
+          {
+            "k": "Roll and move:",
+            "v": "classic for race games"
+          },
+          {
+            "k": "Draw a card:",
+            "v": "surprises and events"
+          },
+          {
+            "k": "Choose a path:",
+            "v": "short and risky, or long and safe"
+          },
+          {
+            "k": "Collect and trade:",
+            "v": "tokens, cards, points"
+          },
+          {
+            "k": "Mini-challenge:",
+            "v": "draw it, act it, answer it"
+          }
+        ],
+        "ask": "Check it: does something happen on most turns?"
+      },
+      {
+        "name": "Card ideas",
+        "lines": [
+          {
+            "k": "Good:",
+            "v": "move ahead 2, take an extra turn"
+          },
+          {
+            "k": "Bad:",
+            "v": "go back 3, skip a turn"
+          },
+          {
+            "k": "Sneaky:",
+            "v": "swap places, steal a token"
+          },
+          {
+            "k": "Wild:",
+            "v": "everyone moves 1, reverse the order"
+          }
+        ],
+        "ask": "Check it: is there a mix of good, bad and surprise cards?"
+      },
+      {
+        "name": "Playtest checklist",
+        "lines": [
+          {
+            "k": "Confused:",
+            "v": "where did they stop and ask?"
+          },
+          {
+            "k": "Slow:",
+            "v": "when did it drag?"
+          },
+          {
+            "k": "Bored:",
+            "v": "who looked away, and when?"
+          },
+          {
+            "k": "Lucky:",
+            "v": "did the winner earn it?"
+          },
+          {
+            "k": "Argued:",
+            "v": "which rule caused it?"
+          }
+        ],
+        "ask": "Check it: did you stay quiet while they played?"
+      }
+    ],
+    "after": {
+      "label": "The 5 rules every game needs",
+      "lines": [
+        "1. How to set up",
+        "2. What you do on your turn",
+        "3. How you move or draw",
+        "4. How you win",
+        "5. What happens in a tie or an argument"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "Their game is published.",
+    "text": "Your kid came up with an idea, built a rough version, tested it on real people, listened, fixed what was broken and shared it. That's exactly how professional game designers work. And they found out that writing rules a stranger can follow is much harder than it looks.",
+    "celebrate": "Tell them what impressed you: a card idea that made everyone laugh, the rule they fixed, or how well they took the feedback.",
+    "extensions": [
+      "Make an expansion pack: new cards, a new board area or a new turn idea",
+      "Add a co-op mode or a speed round",
+      "Turn it into a travel version that fits in a bag",
+      "Design a different game with the same theme"
+    ]
+  },
+  "signs": [
+    "They point out what makes a game fun or boring",
+    "They write instructions with the reader in mind",
+    "They ask for feedback instead of dreading it"
+  ],
+  "makeItReal": "Put their game in the family game pile and play it on a real game night. Being picked next to store-bought games is the best review there is.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/board-game-studio.jpg",
+    "alt": "A boy and a girl at a kitchen table playing a homemade world map board game with cut-out paper continents, wooden tokens and play money",
+    "caption": "Playtesting Globe-Trotteurs, her world travel game."
+  },
+  "fromHome": {
+    "text": "My daughter made Globe-Trotteurs: travel the world by boat, car or plane, and answer questions about each country to earn money. My son made Imperium, where the Roman empire falls on round 20. His playtest notes say:",
+    "quotes": [
+      "Change one rule at a time. If you change five rules at once and the game gets better, you will not know which change did it."
+    ]
+  }
+}

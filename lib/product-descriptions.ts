@@ -483,13 +483,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'board-game-studio': {
     opening:
-      'Design, build, and playtest an original board game from scratch. Kids brainstorm themes, create rules, design the board, craft game pieces, and iterate based on playtesting. A complete creative project that builds design thinking, maths, writing, and strategic reasoning.',
+      'Your child invents a board game from nothing: the theme, how you win, what happens each turn, the board and the cards. Then they write 5 rules, hand it to someone who has never seen it, watch what goes wrong and build Version 2. Design thinking, clear writing and a little maths, ending with a family game night.',
     whatsIncluded: [
-      'Complete project guide with step-by-step phases',
-      'Theme brainstorming and game mechanic design',
-      'Board layout, game piece creation, and rule writing',
-      'Playtesting framework with feedback prompts',
-      'Iteration cycle: improve based on real play',
+      '5 steps from the first idea to a family game night',
+      'Menus of game types, turn ideas and card ideas',
+      'The 5 rules every game needs',
+      'A playtest checklist: confused, slow, bored, lucky, argued',
+      'Version 2, a box cover and a back-of-box line',
     ],
     skillTags: ['Design Thinking', 'Maths', 'Writing', 'Strategy', 'Art'],
     insideTheLearning: {
