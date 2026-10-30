@@ -413,15 +413,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build an Imaginary World",
     slug: "imaginary-world",
     description:
-      "Create an entire imaginary world from scratch, including its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that can last days or weeks.",
+      "Your child invents a whole world around one big idea, like a land with no night. They design the land and who lives there, build the culture and its rules, draw the map, build one corner in 3D, then tell a legend and give a tour to someone who has never been there. Writing, geography and art in one big creative project.",
     shortDescription:
-      "Creativity project for kids ages 6-14: create an entire imaginary world with geography, creatures, rules, and stories.",
+      "Creativity project for kids ages 6-14: invent a whole imaginary world, map it, build a corner of it and tell its legends.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpjAkIBECpwGmY5nHhpP3",
     blobUrl: "",
     imageUrl: "/products/imaginary-world.jpg",
-    previewFile: "Preview Creativity & Maker Build an Imaginary World.pdf",
+    previewFile: "Preview Creativity & Maker Build an Imaginary World v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

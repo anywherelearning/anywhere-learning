@@ -556,13 +556,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'imaginary-world': {
     opening:
-      'Create an entire imaginary world from scratch, including its geography, creatures, rules, languages, and stories. Kids build maps, design ecosystems, invent civilisations, and write lore. A massive open-ended creative project that spans writing, art, science, and worldbuilding.',
+      'Your child invents a whole world around one big idea, like a land with no night. They design the land and who lives there, build the culture and its rules, draw the map, build one corner in 3D, then tell a legend and give a tour to someone who has never been there. Writing, geography and art in one big creative project.',
     whatsIncluded: [
-      'Complete worldbuilding project guide',
-      'Geography, climate, and ecosystem design',
-      'Creature invention and civilisation building',
-      'Map-making, language creation, and lore writing',
-      'Flexible timeline: expand as deep as your child wants',
+      '5 steps from one big idea to a guided tour',
+      'Land and creatures that fit together, and why',
+      'A culture with rules that have reasons',
+      'A real map and one corner built in 3D',
+      'A worldbuilding toolkit with 5 traveller questions',
     ],
     skillTags: ['Writing', 'Art', 'Geography', 'Worldbuilding', 'Imagination'],
     // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.

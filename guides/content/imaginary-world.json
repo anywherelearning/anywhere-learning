@@ -1,0 +1,336 @@
+{
+  "slug": "imaginary-world",
+  "category": "Creativity & Maker",
+  "title": "Imaginary World",
+  "tagline": "Invent · Map · Tell",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid invents a whole world: what the land looks like, who lives there, how they live together and the legends they tell. Then they map it, build one corner of it, and give a tour to someone who's never been there.",
+  "need": [
+    "Paper, markers or coloured pencils",
+    "Cardboard, tape and scissors",
+    "Clay or playdough, small figurines or natural objects for scale",
+    "Outdoor option: sticks, rocks, mud, leaves and sand for the model"
+  ],
+  "lesson": {
+    "text": "A world feels real when everything follows from one big idea. Ten random cool things feel like a pile, not a place.",
+    "before": "There are dragons, a castle, a rainbow sea and robots.",
+    "model": [
+      {
+        "part": "Big idea",
+        "line": "In my world, there's no night. The sun never sets."
+      },
+      {
+        "part": "Land",
+        "line": "So the ground never cools. People live in caves and deep forests for shade."
+      },
+      {
+        "part": "Life",
+        "line": "Creatures have thick eyelids to sleep in bright light."
+      },
+      {
+        "part": "Rules",
+        "line": "A bell tells everyone when to sleep, because there's no dark to do it."
+      }
+    ],
+    "modelNote": "One strong idea, and everything else follows from it. That's the question behind every step: why is it like that?"
+  },
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "land, climate and where people settle"
+    },
+    {
+      "subject": "Science",
+      "text": "ecosystems: what lives where, and why"
+    },
+    {
+      "subject": "Writing",
+      "text": "legends, place names, a tour"
+    },
+    {
+      "subject": "Art",
+      "text": "a map and a 3D model"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the curious traveller, not the designer. Ask 'what would I see if I stepped off a boat here?' instead of suggesting answers. The world can be as weird as they like. It doesn't need to be realistic, just consistent.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the world and design the land and who lives there (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the culture and rules, then map it (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Build one corner, tell a legend and give the tour (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to put in everything they love from books and movies",
+        "a": "Ask 'what's YOUR thing that nobody else's world has?' Borrowed pieces can stay, as long as they fit the big idea."
+      },
+      {
+        "q": "They don't want to write",
+        "a": "The legend can be told out loud, drawn as a comic or recorded. Jot down the key points while they talk."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Creative thinking",
+      "text": "something new, from nothing"
+    },
+    {
+      "name": "Systems thinking",
+      "text": "how one thing changes another"
+    },
+    {
+      "name": "Storytelling",
+      "text": "legends with a reason behind them"
+    },
+    {
+      "name": "Explaining",
+      "text": "a world someone else can picture"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the world and its big idea",
+      "why": "One strong idea is better than ten vague ones.",
+      "kid": "Your kid picks a world type from the World types card in the Worldbuilder's Toolkit at the end of the guide: a planet, a hidden land, a floating world, a tiny world. Then they name the one big difference from Earth, like no night, water that flows up or sound you can see.",
+      "you": "Help them commit to one idea before building everything at once. Ask what their world has that nobody else's does.",
+      "ask": [
+        "If you could tell someone one thing about your world, what would it be?",
+        "What's the first thing a visitor would notice?"
+      ],
+      "tip": "Test the big idea: does it change daily life? 'Everything is purple' doesn't. 'There's no night' changes when people sleep, where they live and what grows.",
+      "levels": {
+        "explore": "Pick a world type and draw the big difference.",
+        "develop": "Write the big difference and 3 ways it changes daily life.",
+        "extend": "Work out what the big difference does to the weather, the food and how people travel."
+      }
+    },
+    {
+      "title": "Design the land and who lives there",
+      "why": "Where creatures live should explain how they live.",
+      "kid": "Your kid sketches a rough layout with at least 3 regions and any strange terrain: crystal fields, fog forests, lava plains. Then they fill it with creatures or groups: what they look like, what they eat, whether they're friendly or dangerous, and how they get around.",
+      "you": "Connect the land to the life with one question: 'Why do they live there and not over there?'",
+      "ask": [
+        "How does the land change how the creatures live?",
+        "What's the most dangerous place in your world?"
+      ],
+      "tip": "Creatures should fit where they live. A fire-breathing animal in the ice region needs a really good reason.",
+      "levels": {
+        "explore": "Draw 3 regions and one creature for each.",
+        "develop": "Draw 3 or more regions, with creatures that fit them, and explain why.",
+        "extend": "Show how creatures depend on each other: who eats what, who trades with whom."
+      }
+    },
+    {
+      "title": "Build the culture and the rules",
+      "why": "Every world needs a way of living together.",
+      "kid": "Your kid decides how the people or creatures organise themselves (one leader, a council, no leader, something unusual), what they value most, and 2 or 3 rules everyone follows, each with a reason. Then they invent a consequence for breaking a rule that fits their world.",
+      "you": "Ask 'why?' a lot. The sentence you're after is 'They have that rule because...'",
+      "ask": [
+        "What does a regular day look like for someone there?",
+        "What would shock a visitor from our world?"
+      ],
+      "tip": "Push past 'they go to jail.' A society of sky-dwellers might ground someone, literally: no flying for a week.",
+      "levels": {
+        "explore": "Say who's in charge and one rule.",
+        "develop": "Write how they organise, what they value and 3 rules with reasons.",
+        "extend": "Add a disagreement between two groups and how their rules settle it."
+      }
+    },
+    {
+      "title": "Map it and build one corner",
+      "why": "A map makes it a place. A model makes it real.",
+      "kid": "Your kid makes the real map: every region, where each group lives, important places, place names and a compass rose. Then they build the most interesting corner in 3D: a shoebox diorama, a clay landscape, a block city, or outside with sticks, mud and sand.",
+      "you": "Help with materials and anything that won't stay together. Let them direct.",
+      "ask": [
+        "Which part of your world would you most want to visit?",
+        "What detail makes the model feel like it belongs in your world?"
+      ],
+      "tip": "Make one corner feel real instead of building everything. A shoebox is plenty.",
+      "levels": {
+        "explore": "Draw a map with names and build one small piece.",
+        "develop": "Draw a full map using the Map checklist card, and build one corner in 3D.",
+        "extend": "Add a scale (1 cm = 10 km) and work out the travel distance between 2 places."
+      }
+    },
+    {
+      "title": "Tell a legend and give the tour",
+      "why": "Stories explain the world, and the tour tests if it holds together.",
+      "kid": "Your kid invents one legend that explains something they built: why a region is forbidden, or how the river got its colour. They tell it, write it or draw it. Then they give a tour to someone who's never been there: the big idea, the map, the model and the legend.",
+      "you": "Listen to the legend without editing it. On the tour, be a real traveller and ask the questions from the Traveller's questions card.",
+      "ask": [
+        "What happened in your world before the legend starts?",
+        "What would you add if you had another week?"
+      ],
+      "tip": "A question they can't answer isn't a failure. It's the next thing to invent.",
+      "levels": {
+        "explore": "Tell a short legend out loud and show the map.",
+        "develop": "Write or draw the legend, and give a full tour.",
+        "extend": "Film the tour, and answer all 5 traveller's questions without stopping to invent."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Worldbuilder's Toolkit",
+    "intro": "World types to start from, big ideas to steal, the questions travellers ask and what goes on the map.",
+    "items": [
+      {
+        "name": "World types",
+        "lines": [
+          {
+            "k": "A planet:",
+            "v": "with different physics"
+          },
+          {
+            "k": "A hidden land:",
+            "v": "inside a tree, a whale or a mountain"
+          },
+          {
+            "k": "A floating world:",
+            "v": "islands in the sky"
+          },
+          {
+            "k": "A tiny world:",
+            "v": "under a leaf or in a drawer"
+          },
+          {
+            "k": "After something:",
+            "v": "humans left, or magic arrived"
+          }
+        ],
+        "ask": "Check it: what's your one big difference?"
+      },
+      {
+        "name": "Big idea starters",
+        "lines": [
+          {
+            "k": "No night:",
+            "v": "the sun never sets"
+          },
+          {
+            "k": "Upside down:",
+            "v": "water flows up"
+          },
+          {
+            "k": "Seeing sound:",
+            "v": "every noise has a colour"
+          },
+          {
+            "k": "Shifting gravity:",
+            "v": "it changes with the seasons"
+          },
+          {
+            "k": "Talking animals:",
+            "v": "and they vote"
+          }
+        ],
+        "ask": "Check it: does your idea change daily life?"
+      },
+      {
+        "name": "Traveller's questions",
+        "lines": [
+          {
+            "k": "1.",
+            "v": "What do they eat in winter?"
+          },
+          {
+            "k": "2.",
+            "v": "How do they get around?"
+          },
+          {
+            "k": "3.",
+            "v": "Who's in charge?"
+          },
+          {
+            "k": "4.",
+            "v": "What's forbidden, and why?"
+          },
+          {
+            "k": "5.",
+            "v": "What happens when two groups meet?"
+          }
+        ],
+        "ask": "Check it: can you answer all five?"
+      },
+      {
+        "name": "Map checklist",
+        "lines": [
+          {
+            "k": "Regions:",
+            "v": "at least 3"
+          },
+          {
+            "k": "People:",
+            "v": "where each group lives"
+          },
+          {
+            "k": "Names:",
+            "v": "for places, rivers, mountains"
+          },
+          {
+            "k": "Key places:",
+            "v": "a capital, a forbidden zone, a ruin"
+          },
+          {
+            "k": "Extras:",
+            "v": "a compass rose and a scale"
+          }
+        ],
+        "ask": "Check it: could a visitor find their way?"
+      }
+    ],
+    "after": {
+      "label": "Worldbuilding rules",
+      "lines": [
+        "One big idea, and everything follows from it.",
+        "Every creature fits where it lives.",
+        "Every rule has a reason.",
+        "Every legend explains something you built."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "Their world exists now.",
+    "text": "Your kid did what writers, game designers and filmmakers spend years learning: they built a world that holds together. They connected the land to the life, invented a culture with reasons behind its rules, told a legend that explains it, and showed it to someone clearly enough to make them believe in it.",
+    "celebrate": "Tell them which part pulled you in: the big idea, a creature that fit its home perfectly, or the legend.",
+    "extensions": [
+      "Write a longer story set in the world: a quest, a mystery, a day in the life",
+      "Build a second region in 3D",
+      "Make a travel guide or field journal with drawings",
+      "Invent a board game set in the world, with the Board Game Studio guide"
+    ]
+  },
+  "signs": [
+    "They ask 'but why?' about worlds in books and movies",
+    "They notice how land and weather shape how people live",
+    "They explain their ideas so others can picture them"
+  ],
+  "makeItReal": "Next time you travel or read about a new place, ask them what the land makes people there do: what they eat, how they build, how they get around. Real places follow the same rules as their world.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/imaginary-world.jpg",
+    "alt": "A girl drawing a map of her fantasy world with mushroom houses and creatures, surrounded by markers and pencils",
+    "caption": "Mushroom houses first, then the rest of the map."
+  },
+  "fromHome": {
+    "text": "My daughter invented a fantastic, magical world inspired by her favourite books, filled with mystical creatures with superpowers, mushroom houses, a tree of life, and magic spells. Then she recorded her story.",
+    "quotes": []
+  }
+}
