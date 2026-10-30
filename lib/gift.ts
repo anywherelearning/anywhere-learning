@@ -36,3 +36,17 @@ export function deliveryMoment(ymd: string | null | undefined, now = new Date())
 export function deliveryLabel(at: Date): string {
   return at.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
 }
+
+/**
+ * Holiday gift season: the sitewide GiftBanner shows between these moments.
+ * Nov 20 00:00 PT → Dec 22 23:59 PT (the last day a scheduled Christmas gift
+ * is still comfortable to set up). Move the dates for next year.
+ */
+export const GIFT_SEASON = {
+  startsAt: new Date('2026-11-20T08:00:00.000Z'),
+  endsAt: new Date('2026-12-23T07:59:59.000Z'),
+} as const;
+
+export function isGiftSeason(now: Date = new Date()): boolean {
+  return now >= GIFT_SEASON.startsAt && now <= GIFT_SEASON.endsAt;
+}
