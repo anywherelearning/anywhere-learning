@@ -96,6 +96,47 @@ async function createExitSurvey(
 }
 
 /**
+ * Owner heads-up email (signup, conversion, cancel, Skills Map sale), sent
+ * once per `key`. Stripe retries webhooks and two events can describe the
+ * same moment, so the send is claimed in `sent_emails` first, the same way
+ * sendTrialCanceledOnce dedupes. Never throws: a missed alert must not fail
+ * the webhook.
+ */
+async function notifyOwnerOnce(key: string, subject: string, lines: (string | null)[]) {
+  const kind = `owner_alert:${key}`;
+  let claimId: string | undefined;
+  try {
+    const already = await db
+      .select({ id: sentEmails.id })
+      .from(sentEmails)
+      .where(and(eq(sentEmails.email, 'owner'), eq(sentEmails.kind, kind)))
+      .limit(1);
+    if (already.length > 0) return;
+    const claimed = await db
+      .insert(sentEmails)
+      .values({ email: 'owner', kind })
+      .returning({ id: sentEmails.id });
+    claimId = claimed[0]?.id;
+    const result = await sendOwnerAlertEmail({ subject, text: lines.filter((l) => l !== null).join('\n') });
+    if (result?.error) throw new Error(result.error.message);
+  } catch (err) {
+    console.error('[webhook] owner alert failed:', key, err);
+    if (claimId) {
+      await db.delete(sentEmails).where(eq(sentEmails.id, claimId)).catch(() => {});
+    }
+  }
+}
+
+function planLabel(plan: 'annual' | 'monthly', offer?: string): string {
+  const base = plan === 'monthly' ? 'Monthly ($15/month)' : 'Yearly';
+  return offer ? `${base}, offer: ${offer}` : base;
+}
+
+function shortDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+/**
  * Send the trial-canceled confirmation at most once per subscription.
  * Two webhook paths can fire it (cancel scheduled mid-trial, and the
  * deletion when the trial ends), so the send is claimed in `sent_emails`
@@ -108,6 +149,15 @@ async function sendTrialCanceledOnce(
   priceId: string | null | undefined,
 ) {
   const kind = `trial_canceled:${subscriptionId}`;
+  {
+    const { planForPriceId } = await import('@/lib/stripe-prices');
+    await notifyOwnerOnce(`trial_cancel:${subscriptionId}`, `Trial canceled: ${user.email}`, [
+      'A free trial was canceled. They will not be charged.',
+      '',
+      `Email: ${user.email}`,
+      `Plan: ${planLabel(planForPriceId(priceId))}`,
+    ]);
+  }
   let claimId: string | undefined;
   try {
     const already = await db
@@ -241,6 +291,15 @@ async function handleSkillsMapPurchase(session: Stripe.Checkout.Session) {
     console.log('[webhook] skills map purchase already recorded:', session.id);
     return;
   }
+
+  await notifyOwnerOnce(`map_sale:${session.id}`, `Skills Map sold: ${email}`, [
+    'Someone just bought the Future-Ready Skills Map.',
+    '',
+    `Name: ${session.customer_details?.name?.trim() || '(no name)'}`,
+    `Email: ${email}`,
+    `Paid: $${((session.amount_total ?? 0) / 100).toFixed(2)} ${(session.currency || 'usd').toUpperCase()}`,
+    bonus ? 'Bought from the free course (gets the Directions Challenge bonus).' : null,
+  ]);
 
   const origin = (process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co').replace(/\/$/, '');
   const token = makeDownloadToken(session.id, bonus);
@@ -523,6 +582,25 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     } catch (err) {
       console.error('[webhook] welcome email failed:', err);
     }
+  }
+
+  // 3b. Owner heads-up: a new trial or member just signed up.
+  if (session.subscription) {
+    const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id;
+    const who = [firstName, lastName].filter(Boolean).join(' ') || '(no name)';
+    await notifyOwnerOnce(
+      `signup:${subId}`,
+      isTrial ? `New free trial: ${who}` : `New member: ${who}`,
+      [
+        isTrial ? 'Someone just started a free trial.' : 'Someone just joined as a paying member.',
+        '',
+        `Name: ${who}`,
+        `Email: ${email}`,
+        `Plan: ${planLabel(plan, session.metadata?.offer)}`,
+        isTrial && trialEndsAt ? `Trial ends: ${shortDate(trialEndsAt)}` : null,
+        isFirstMembership ? null : 'Returning: they had a membership before.',
+      ],
+    );
   }
 
   // 4. Kit tags — segment members so we can run member-only broadcasts,
@@ -964,6 +1042,13 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
   if (capTurnedOn && sub.status === 'active') {
     const { planForPriceId } = await import('@/lib/stripe-prices');
     const plan = planForPriceId(priceId);
+    await notifyOwnerOnce(`member_cancel:${sub.id}:${periodEnd.toISOString().slice(0, 10)}`, `Membership canceled: ${user.email}`, [
+      'A paying member canceled. Their access stays on until the end of what they paid for.',
+      '',
+      `Email: ${user.email}`,
+      `Plan: ${planLabel(plan, sub.metadata?.offer)}`,
+      `Access ends: ${shortDate(periodEnd)}`,
+    ]);
     const firstName = await firstNameForClerkId(user.clerkId);
     const base = process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co';
     try {
@@ -1004,6 +1089,12 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
     } catch (err) {
       console.warn('[webhook] kit trial-conversion tagging failed:', err);
     }
+    await notifyOwnerOnce(`converted:${sub.id}`, `Trial converted to paid: ${user.email}`, [
+      'A free trial just turned into a paying membership.',
+      '',
+      `Email: ${user.email}`,
+      `Plan: ${planLabel(plan, sub.metadata?.offer)}`,
+    ]);
 
     // Meta Conversions API: the moment real money changes hands. Happens
     // off-site 7 days after signup, so only the server can report it. This
