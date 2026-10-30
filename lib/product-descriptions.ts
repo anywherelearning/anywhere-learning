@@ -533,13 +533,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'survival-base': {
     opening:
-      'Design and build a survival base for an imaginary expedition. Kids choose a biome, research challenges, plan their base layout, create models, and present their design. Combines geography, engineering, science, and creative design into one epic project.',
+      'Your child picks an imaginary expedition, maps the dangers and builds a base camp where every zone answers a danger: shelter, water, food, safety. They write the systems and a survival manual, then face a surprise scenario card and upgrade the base on the fly. Geography, engineering and creative writing in one immersive project.',
     whatsIncluded: [
-      'Complete project guide from concept to presentation',
-      'Biome research and environmental challenge analysis',
-      'Base layout design with practical problem-solving',
-      'Model building with everyday materials',
-      'Presentation and defence of design choices',
+      '5 steps from picking the destination to the final briefing',
+      'Dangers matched to zones, so every zone has a reason',
+      'Three ways to build: life-size, a model or a map',
+      'Systems, a survival manual and ration maths',
+      'Scenario cards to test the base, then upgrade it',
     ],
     skillTags: ['Geography', 'Engineering', 'Science', 'Design', 'Presentation'],
     insideTheLearning: {

@@ -390,15 +390,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build a Survival Base",
     slug: "survival-base",
     description:
-      "Design and build a survival base for an imaginary expedition. Kids choose a biome, research challenges, plan their base layout, create models, and present their design. Combines geography, engineering, creative writing, and problem-solving in one immersive project.",
+      "Your child picks an imaginary expedition, maps the dangers and builds a base camp where every zone answers a danger: shelter, water, food, safety. They write the systems and a survival manual, then face a surprise scenario card and upgrade the base on the fly. Geography, engineering and creative writing in one immersive project.",
     shortDescription:
-      "Design project for kids ages 6-14: design a survival base for an imaginary expedition. Geography meets engineering.",
+      "Design project for kids ages 6-14: plan and build a survival base for an imaginary expedition, then survive a surprise.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpjAkIBECpwGmCLDpj9tF",
     blobUrl: "",
     imageUrl: "/products/survival-base.jpg",
-    previewFile: "Preview Creativity & Maker Build a Survival Base for an Imaginary Expedition.pdf",
+    previewFile: "Preview Creativity & Maker Build a Survival Base for an Imaginary Expedition v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

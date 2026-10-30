@@ -1,0 +1,324 @@
+{
+  "slug": "survival-base",
+  "category": "Creativity & Maker",
+  "title": "Survival Base",
+  "tagline": "Imagine · Build · Survive",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks an imaginary expedition, like a jungle, an arctic station, an alien planet or dinosaur island, works out what could go wrong there, and builds a base camp designed to handle it. Then you throw a surprise at them, a storm, a predator or lost supplies, and they adapt the base on the fly.",
+  "need": [
+    "Outdoor: sticks, rocks, leaves, string, a tarp or blanket, buckets, chalk",
+    "Indoor: blankets, pillows, chairs, cardboard boxes, tape",
+    "Paper, markers and sticky notes for signs and the manual",
+    "A flashlight and a phone to film the briefing (optional)"
+  ],
+  "lesson": {
+    "text": "A base isn't a checklist. Every zone is there because of a danger it handles.",
+    "before": "Shelter, water, food. Done.",
+    "model": [
+      {
+        "part": "Floods",
+        "line": "Heavy rain is a risk, so the shelter goes on high ground."
+      },
+      {
+        "part": "Clean water",
+        "line": "The water zone goes uphill and far from the toilet, so it stays clean."
+      },
+      {
+        "part": "Animals",
+        "line": "Food is stored away from where people sleep."
+      },
+      {
+        "part": "So",
+        "line": "Every zone answers a danger. That's design, not a list."
+      }
+    ],
+    "modelNote": "That's the question behind every step: what could go wrong, and how does the base handle it?"
+  },
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "climates, landscapes and real dangers"
+    },
+    {
+      "subject": "Science",
+      "text": "weather, water and shelter"
+    },
+    {
+      "subject": "Writing",
+      "text": "a survival manual for a newcomer"
+    },
+    {
+      "subject": "Communication",
+      "text": "a briefing for an audience"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the expedition advisor, not the leader. Ask 'what's the biggest danger here?' instead of telling them what to build. The base will have gaps, and the surprise in Step 5 is what finds them.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the destination, map the dangers and plan the zones (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the base and write the systems (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Survive the challenge and give the briefing (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They just want to build a fort",
+        "a": "Let them build first, then ask what could go wrong in it. The dangers and zones can come after the fun part."
+      },
+      {
+        "q": "They get upset when the scenario 'breaks' their base",
+        "a": "That's the best part. Ask what they'd change, then let them upgrade. A base that survived a storm beats one that looked good on paper."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Planning ahead",
+      "text": "solving problems before they happen"
+    },
+    {
+      "name": "Adapting",
+      "text": "when the storm hits anyway"
+    },
+    {
+      "name": "Creative thinking",
+      "text": "a whole world, invented"
+    },
+    {
+      "name": "Explaining",
+      "text": "a system someone else can follow"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the destination and the mission",
+      "why": "Where you are decides every danger you'll face.",
+      "kid": "Your kid picks a destination, real-ish like a desert or the arctic, or imaginary like an alien planet. Then they write the mission in one sentence: 'We're here to...'",
+      "you": "Help them commit to one idea. If they're stuck, offer two choices: 'hot and dry, or cold and icy?' gets an answer faster than 'where do you want to go?'",
+      "ask": [
+        "What's the main goal of the expedition?",
+        "What's the biggest problem you'll face there?"
+      ],
+      "tip": "Missions that work: rescue a lost explorer, collect rare samples, build the first base on a new planet, or survive until the rescue ship comes.",
+      "levels": {
+        "explore": "Pick a place and draw what it looks like.",
+        "develop": "Write the mission sentence and 3 real facts about a place like it.",
+        "extend": "Research a real place that matches the imaginary one, like Mars and a desert, and list its conditions."
+      }
+    },
+    {
+      "title": "Map the dangers, plan the zones",
+      "why": "Each zone needs a reason to be where it is.",
+      "kid": "Your kid lists 3 to 5 dangers of their destination, using the Dangers and zones card in the Expedition Toolkit at the end of the guide. Then they plan the zones the base needs, like shelter, water, food, safety and a lookout, and connect every danger to at least one zone. They sketch the layout from above.",
+      "you": "Help them connect dangers to solutions: 'Floods are a risk. So where should the shelter go?' Push past the first answer.",
+      "ask": [
+        "Which danger worries you most?",
+        "Where do people sleep, and why there?"
+      ],
+      "tip": "Draw the layout from above first, with arrows for the wind, the water and the way in.",
+      "levels": {
+        "explore": "Pick 3 dangers and 3 zones.",
+        "develop": "Connect 4 or 5 dangers to zones, and explain where each zone goes.",
+        "extend": "Add a backup for the biggest danger, and a rule for when two zones need the same spot."
+      }
+    },
+    {
+      "title": "Build the base",
+      "why": "The plan becomes something you can walk through.",
+      "kid": "Your kid builds the base in whichever format fits: life-size (a blanket fort, a stick shelter, zones chalked on the ground), a model (a shoebox, a baking sheet, LEGO) or a detailed map. Then they make signs for every zone.",
+      "you": "Help with materials and safety, and resist taking over the building. A wobbly base they built beats a solid one you built.",
+      "ask": [
+        "How will someone know where each zone starts and ends?",
+        "What's the first thing a new team member sees?"
+      ],
+      "tip": "Signs make it real. 'WATER ZONE: boil before drinking' on a sticky note taped to a bucket changes the whole thing.",
+      "levels": {
+        "explore": "Build a base with a few zones.",
+        "develop": "Build every zone from the plan, with signs.",
+        "extend": "Build it to match the layout exactly, and mark the way in, the lookout and the meeting point."
+      }
+    },
+    {
+      "title": "Write the systems and the manual",
+      "why": "Zones are a start. Systems keep people alive.",
+      "kid": "Your kid picks 2 or 3 systems from the Systems card in the Expedition Toolkit, like water, food, signals or safety, and writes how each one works. Then they write the survival manual: what a new person arriving tomorrow needs to know, including 3 rules everyone follows.",
+      "you": "Keep asking 'how would that actually work?' and 'what if it fails?'",
+      "ask": [
+        "What if you run out of water? What's Plan B?",
+        "What are the 3 rules everyone has to follow?"
+      ],
+      "tip": "Ration maths: 4 people × 2 litres to drink a day × 3 days = 24 litres of water to store.",
+      "levels": {
+        "explore": "Tell how one system works, out loud or in a drawing.",
+        "develop": "Write 2 systems with a Plan B, and 3 base rules.",
+        "extend": "Write the full manual, with the ration maths for food and water."
+      }
+    },
+    {
+      "title": "Survive the challenge, then brief",
+      "why": "The surprise shows what the plan missed.",
+      "kid": "You read one of the scenario cards from the Expedition Toolkit out loud. Your kid works out how the base handles it, then upgrades something: moves a zone, adds a backup or changes a rule. Then they give a briefing tour: the mission, the dangers, how the base handles them, and what they changed.",
+      "you": "Read the scenario, then step back. Don't give the answer. At the briefing, be a real audience and ask real questions.",
+      "ask": [
+        "What's the first thing you do?",
+        "Which upgrade made the biggest difference?"
+      ],
+      "tip": "If the shelter 'floods,' ask 'what would you change?' not 'move it uphill.' The gap between the plan and the storm is where the learning is.",
+      "levels": {
+        "explore": "Face one scenario, make one fix and give a quick tour.",
+        "develop": "Face two scenarios, upgrade the base and give a narrated tour.",
+        "extend": "Face a surprise you didn't see coming, log every upgrade, and film a full briefing with the manual and map."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Expedition Toolkit",
+    "intro": "Places to go, dangers to plan for, systems to run and surprises to throw.",
+    "items": [
+      {
+        "name": "Destinations",
+        "lines": [
+          {
+            "k": "Real-ish:",
+            "v": "rainforest, desert, arctic, volcanic island, deep ocean"
+          },
+          {
+            "k": "Imaginary:",
+            "v": "alien planet, dinosaur island, underwater city, cloud kingdom"
+          },
+          {
+            "k": "Mission:",
+            "v": "'We're here to...' in one sentence"
+          }
+        ],
+        "ask": "Check it: can you say the mission in one sentence?"
+      },
+      {
+        "name": "Dangers and zones",
+        "lines": [
+          {
+            "k": "Storms:",
+            "v": "shelter on high ground, tied down"
+          },
+          {
+            "k": "Heat:",
+            "v": "shade and extra water"
+          },
+          {
+            "k": "Cold:",
+            "v": "insulation and a windbreak"
+          },
+          {
+            "k": "Animals:",
+            "v": "a lookout, food away from beds"
+          },
+          {
+            "k": "Getting lost:",
+            "v": "a signal zone and a meeting point"
+          }
+        ],
+        "ask": "Check it: does every danger have a zone?"
+      },
+      {
+        "name": "Systems",
+        "lines": [
+          {
+            "k": "Water:",
+            "v": "collect it, store it, keep it clean"
+          },
+          {
+            "k": "Food:",
+            "v": "where it comes from, how much a day"
+          },
+          {
+            "k": "Signals:",
+            "v": "flags, a whistle code, a password"
+          },
+          {
+            "k": "Safety:",
+            "v": "a watch schedule, buddies, a meeting point"
+          }
+        ],
+        "ask": "Check it: what's Plan B if a system fails?"
+      },
+      {
+        "name": "Scenario cards",
+        "lines": [
+          {
+            "k": "1.",
+            "v": "A storm hits: wind and rain for 24 hours."
+          },
+          {
+            "k": "2.",
+            "v": "A predator is spotted near the water."
+          },
+          {
+            "k": "3.",
+            "v": "Half the water leaked overnight."
+          },
+          {
+            "k": "4.",
+            "v": "A teammate went exploring and hasn't come back."
+          },
+          {
+            "k": "5.",
+            "v": "Animals raided the food."
+          }
+        ],
+        "ask": "Check it: what did you upgrade after each one?"
+      }
+    ],
+    "after": {
+      "label": "Base rules",
+      "lines": [
+        "Every zone answers a danger.",
+        "Every system has a Plan B.",
+        "Every zone has a sign.",
+        "After every surprise, upgrade one thing."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "Base camp established.",
+    "text": "Your kid imagined a place, worked out what could go wrong, planned a base to handle it, built it, tested it under pressure and fixed what broke. That's how real expedition planners and engineers work: build, break, rebuild, explain.",
+    "celebrate": "Tell them what impressed you: a zone placed for a smart reason, how they handled the surprise, or the briefing itself.",
+    "extensions": [
+      "Build a second base for a different climate or season",
+      "Plan a rescue mission with a mapped route to a second location",
+      "Invent a tool or vehicle made for this environment",
+      "Turn the expedition into a story, a comic or a radio drama"
+    ]
+  },
+  "signs": [
+    "They ask 'what could go wrong?' before starting something",
+    "They explain the reason behind where things go",
+    "They upgrade a plan instead of giving up when it breaks"
+  ],
+  "makeItReal": "Next time you camp or plan a day out, ask them to name the 3 biggest risks and how you'll handle each one. Then let them pack for it.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/survival-base.jpg",
+    "alt": "A living room fort made of blankets draped over chairs, sofa cushions and the sofa",
+    "caption": "Their gaming base: chairs, cushions, blankets and the sofa."
+  },
+  "fromHome": {
+    "text": "My son and his friend turned the living room into a gaming room. They planned it like a real base: a sitting spot, a snack corner, a door, and one rule, no girls allowed. Then they wanted to sleep in it, and found out it was too small. That's exactly the kind of surprise Step 5 is for: change the plan, upgrade the base.",
+    "quotes": []
+  }
+}
