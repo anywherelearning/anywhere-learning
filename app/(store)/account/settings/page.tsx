@@ -8,6 +8,8 @@ import { users, subscriptions } from '@/lib/db/schema';
 import { eq, desc } from 'drizzle-orm';
 import { stripe } from '@/lib/stripe';
 import type Stripe from 'stripe';
+import { getActiveGrant } from '@/lib/access';
+import { GRANT_SOURCE_LABELS, type GrantSource } from '@/lib/access-grants';
 
 export const metadata: Metadata = {
   title: 'Account Settings',
@@ -53,6 +55,7 @@ export default async function AccountSettingsPage() {
   let stripeCustomerId: string | null = null;
   let stripeSubscriptionId: string | null = null;
   let subPriceId: string | null = null;
+  let grant: { endsAt: Date; source: string } | null = null;
 
   if (clerkUser?.id) {
     try {
@@ -78,6 +81,20 @@ export default async function AccountSettingsPage() {
           cancelAtPeriodEnd = subRows[0].cancelAtPeriodEnd;
           stripeSubscriptionId = subRows[0].stripeSubscriptionId;
           subPriceId = subRows[0].stripePriceId;
+        }
+        // Prepaid grant (gift, ESA order, co-op). Only shown when no live
+        // subscription covers them, so a grantee who later subscribes sees
+        // their real plan.
+        const subLive =
+          !!subRows[0] &&
+          ['active', 'trialing', 'past_due'].includes(subRows[0].status) &&
+          subRows[0].currentPeriodEnd > new Date();
+        if (!subLive) {
+          try {
+            grant = await getActiveGrant(user.id);
+          } catch {
+            /* access_grants table not created yet */
+          }
         }
         // Walk subscriptions to find the EARLIEST one (real signup date)
         const earliestSub = await db
@@ -173,6 +190,13 @@ export default async function AccountSettingsPage() {
     isFounder: isFounderSubscriber,
     // True when a trial is set to expire at its end instead of converting.
     cancelAtPeriodEnd,
+    grant: grant
+      ? {
+          endsAt: formatDate(grant.endsAt),
+          sourceLabel: GRANT_SOURCE_LABELS[grant.source as GrantSource] ?? 'Prepaid',
+          isGift: grant.source === 'gift',
+        }
+      : null,
   };
 
   return <AccountSettings member={member} />;

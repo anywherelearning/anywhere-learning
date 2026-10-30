@@ -29,6 +29,7 @@ import { subscriptions, users } from '@/lib/db/schema';
 import { stripe } from '@/lib/stripe';
 import { sendMembershipRenewalEmail } from '@/lib/resend';
 import { STRIPE_PRICES } from '@/lib/stripe-prices';
+import { runGrantLifecycle } from '@/lib/access-grants';
 
 export const dynamic = 'force-dynamic';
 
@@ -37,6 +38,16 @@ export async function GET(req: NextRequest) {
   const auth = req.headers.get('authorization');
   if (process.env.CRON_SECRET && auth !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+  }
+
+  // Prepaid grants first (gifts, ESA orders, co-ops): their "ends soon"
+  // email and end-of-grant Kit tags. Runs before the early return below.
+  let grants: Awaited<ReturnType<typeof runGrantLifecycle>> | { error: string };
+  try {
+    grants = await runGrantLifecycle();
+  } catch (err) {
+    console.error('[cron] grant lifecycle failed:', err);
+    grants = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
   const now = new Date();
@@ -71,7 +82,7 @@ export async function GET(req: NextRequest) {
     );
 
   if (rows.length === 0) {
-    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.' });
+    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants });
   }
 
   // Try to grab first names from Clerk in one round-trip. Clerk doesn't
@@ -158,5 +169,6 @@ export async function GET(req: NextRequest) {
     sent,
     failed: rows.length - sent,
     results,
+    grants,
   });
 }

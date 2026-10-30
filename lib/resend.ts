@@ -10,6 +10,8 @@
  *   - sendTrialCanceledEmail                  → free trial canceled (never paid)
  *   - sendMembershipCancellationScheduledEmail → paid member set cancel_at_period_end
  *   - sendSkillsMapDeliveryEmail              → one-time Skills Map purchase
+ *   - sendGrantWelcomeEmail                   → prepaid access grant (gift, ESA, co-op)
+ *   - sendGrantEndingEmail                    → 14 days before a grant ends
  */
 
 import { Resend } from 'resend';
@@ -24,6 +26,8 @@ import QuizPlanEmail from '@/emails/QuizPlanEmail';
 import TrialMidpoint, { midpointSubject } from '@/emails/TrialMidpoint';
 import SkillsMapDelivery from '@/emails/SkillsMapDelivery';
 import PaymentFailed from '@/emails/PaymentFailed';
+import GrantWelcome, { grantWelcomeSubject } from '@/emails/GrantWelcome';
+import GrantEnding from '@/emails/GrantEnding';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -371,5 +375,46 @@ export async function sendSkillsMapDeliveryEmail(props: {
     to,
     subject: 'Your Future-Ready Skills Map is ready',
     react: SkillsMapDelivery(rest),
+  });
+}
+
+type GrantSource = 'gift' | 'odyssey' | 'charter' | 'coop' | 'school' | 'comp';
+
+/** Welcome for a prepaid access grant (lib/access-grants.ts). */
+export async function sendGrantWelcomeEmail(props: {
+  to: string;
+  firstName?: string;
+  signInUrl: string;
+  source: GrantSource;
+  giftFrom?: string;
+  months: number;
+  endsAt: string;
+  extended?: boolean;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: grantWelcomeSubject(rest),
+    react: GrantWelcome(rest),
+  });
+}
+
+/** "Your membership ends on X", once, ~14 days before a grant ends. */
+export async function sendGrantEndingEmail(props: {
+  to: string;
+  firstName?: string;
+  endsAt: string;
+  source: GrantSource;
+  signInUrl: string;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Your Anywhere Learning membership ends in 2 weeks',
+    react: GrantEnding(rest),
   });
 }

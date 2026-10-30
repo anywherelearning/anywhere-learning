@@ -38,5 +38,6 @@ export default defineConfig({
     'guide_claims',
     'activity_events',
     'map_purchases',
+    'access_grants',
   ],
 });

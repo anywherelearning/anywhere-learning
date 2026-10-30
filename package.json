@@ -15,6 +15,7 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "npx tsx scripts/seed.ts",
     "db:create-activity-events": "npx tsx scripts/create-activity-events-table.ts",
+    "db:create-access-grants": "npx tsx scripts/create-access-grants-table.ts",
     "stats:downloads": "npx tsx scripts/download-stats.ts",
     "ads:report": "npx tsx scripts/meta-ads-report.ts",
     "stripe:sync": "node --env-file=.env.local node_modules/.bin/tsx scripts/create-stripe-products.ts",

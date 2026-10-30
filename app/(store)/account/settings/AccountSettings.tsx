@@ -30,9 +30,39 @@ interface Member {
   isFounder: boolean;
   /** True when a trial is set to expire at its end instead of converting. */
   cancelAtPeriodEnd: boolean;
+  /** Prepaid access with no card (gift, ESA order, co-op). Set only when no
+   *  live subscription covers them. */
+  grant: { endsAt: string; sourceLabel: string; isGift: boolean } | null;
 }
 
 type Tab = 'profile' | 'kids' | 'subscription';
+
+/** Membership tab for prepaid access: when it ends, and that nothing charges. */
+function GrantCard({ grant }: { grant: NonNullable<Member['grant']> }) {
+  return (
+    <SettingsCard id="subscription">
+      <div className="bg-[#E6EBDF] border border-[#C9D3BE] rounded-[12px] p-5 mb-4">
+        <p className="m-0 font-body font-semibold text-[11.5px] uppercase tracking-[0.16em] text-forest-dark">
+          Current plan
+        </p>
+        <p className="m-0 mt-1.5 text-[21px] leading-[1.2]" style={{ fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, color: 'var(--am-ink)' }}>
+          {grant.isGift ? 'Gift membership' : 'Prepaid membership'}
+        </p>
+        <p className="m-0 mt-1 font-body text-[13.5px] text-gray-600">{grant.sourceLabel} · nothing renews</p>
+      </div>
+      <StatRow label="Access through" value={grant.endsAt} />
+      <StatRow label="Payment method" value="No card on file" />
+      <FooterRow>
+        <Link
+          href="/choose-plan"
+          className="inline-flex items-center gap-2 border-[1.5px] border-forest text-forest-dark font-body font-semibold py-2.5 px-4 rounded-[10px] text-[13.5px] no-underline hover:bg-[#E6EBDF] transition-all"
+        >
+          Keep going after {grant.endsAt} &rarr;
+        </Link>
+      </FooterRow>
+    </SettingsCard>
+  );
+}
 type Page = 'explorers' | 'trail' | 'membership' | 'you';
 
 export default function AccountSettings({
@@ -59,7 +89,7 @@ export default function AccountSettings({
   // #subscription (the billing portal's return URL) and #profile.
   const PAGES: { value: Page; label: string }[] = [
     ...(hasAccess ? [{ value: 'explorers' as Page, label: 'Explorers' }, { value: 'trail' as Page, label: 'Trail' }] : []),
-    ...(member.hasSubscription ? [{ value: 'membership' as Page, label: 'Membership' }] : []),
+    ...(member.hasSubscription || member.grant ? [{ value: 'membership' as Page, label: 'Membership' }] : []),
     { value: 'you', label: 'You' },
   ];
   const [page, setPage] = useState<Page>(hasAccess ? 'explorers' : 'you');
@@ -73,8 +103,10 @@ export default function AccountSettings({
   const joined = member.joinedAt && member.joinedAt !== '—'
     ? new Date(member.joinedAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
     : '';
-  const stamp = member.isTrialing ? 'Free trial' : member.hasSubscription ? member.tier : 'Explorer';
-  const stampSub = member.isTrialing && member.trialEndsAt
+  const stamp = member.grant ? (member.grant.isGift ? 'Gift member' : 'Member') : member.isTrialing ? 'Free trial' : member.hasSubscription ? member.tier : 'Explorer';
+  const stampSub = member.grant
+    ? `until ${member.grant.endsAt}`
+    : member.isTrialing && member.trialEndsAt
     ? `until ${new Date(member.trialEndsAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`
     : joined ? `since ${joined}` : undefined;
 
@@ -98,7 +130,8 @@ export default function AccountSettings({
         <div className="set-sheet">
         {current === 'explorers' && hasAccess && <AdventureSettingsSection part="explorers" />}
         {current === 'trail' && hasAccess && <AdventureSettingsSection part="route" />}
-        {current === 'membership' && member.hasSubscription && (
+        {current === 'membership' && member.grant && <GrantCard grant={member.grant} />}
+        {current === 'membership' && !member.grant && member.hasSubscription && (
           <SettingsCard id="subscription">
             {/* Trial members get a distinct card: clear they're not paying yet,
                 with a one-tap path to start membership and unlock downloads. */}

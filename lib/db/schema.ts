@@ -300,3 +300,34 @@ export const mapPurchases = pgTable('map_purchases', {
   uniqueIndex('idx_map_purchases_session').on(table.stripeSessionId),
   index('idx_map_purchases_email_created').on(table.email, table.createdAt),
 ]);
+
+/**
+ * Prepaid membership time with no Stripe subscription behind it: gifts,
+ * ESA / charter orders (Odyssey), co-op and school licenses, comps. Access
+ * resolves to 'member' while startsAt <= now < endsAt and not revoked
+ * (lib/access.ts). Nothing renews: no card, no auto-charge. Managed from
+ * /admin/grants via lib/access-grants.ts.
+ */
+export const accessGrants = pgTable('access_grants', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id).notNull(),
+  /** Lowercased recipient email, kept for the admin list and reminders. */
+  email: text('email').notNull(),
+  /** 'gift' | 'odyssey' | 'charter' | 'coop' | 'school' | 'comp' */
+  source: text('source').notNull(),
+  /** Gift giver's name, shown in the welcome email ("A gift from Grandma Jo"). */
+  giftFrom: text('gift_from'),
+  /** Free-text admin note: order number, co-op name, invoice ref. */
+  note: text('note'),
+  startsAt: timestamp('starts_at').defaultNow().notNull(),
+  endsAt: timestamp('ends_at').notNull(),
+  revokedAt: timestamp('revoked_at'),
+  /** "Your year ends soon" email sent (once, ~14 days before endsAt). */
+  reminderSentAt: timestamp('reminder_sent_at'),
+  /** End-of-grant housekeeping done (Kit tags swapped to lapsed). */
+  endedAt: timestamp('ended_at'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+}, (table) => [
+  index('idx_access_grants_user_ends').on(table.userId, table.endsAt),
+  index('idx_access_grants_ends').on(table.endsAt),
+]);

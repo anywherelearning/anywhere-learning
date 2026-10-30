@@ -5,7 +5,10 @@
  *   1. Subscription in `subscriptions` table → 'member' (paid) or 'trial'
  *      (status 'trialing': free trial, view everything in the in-app reader
  *      but no downloads — downloading is a paid-member benefit)
- *   2. else → 'guest'
+ *   2. Active access grant in `access_grants` → 'member' (prepaid time with
+ *      no Stripe subscription: gifts, ESA orders, co-ops; see
+ *      lib/access-grants.ts). stripePriceId is null for these.
+ *   3. else → 'guest'
  *
  * "Active" means status === 'active' OR ('canceled' with currentPeriodEnd in
  * the future, they paid through the year, we honour it). A trial canceled
@@ -14,8 +17,8 @@
  */
 
 import { db } from '@/lib/db';
-import { users, subscriptions } from '@/lib/db/schema';
-import { eq, and, or, gt, sql } from 'drizzle-orm';
+import { users, subscriptions, accessGrants } from '@/lib/db/schema';
+import { eq, and, or, gt, lte, isNull, sql } from 'drizzle-orm';
 
 export type AccessTier = 'guest' | 'member' | 'trial';
 
@@ -87,11 +90,36 @@ export async function getAccessContextForClerkId(clerkId: string): Promise<Acces
       };
     }
 
+    // 2) Prepaid grant. Checked after subscriptions so a grantee who also
+    // subscribes reads as their real plan.
+    if (await getActiveGrant(u.userId)) {
+      return { tier: 'member', userId: u.userId, trialEndsAt: null, stripePriceId: null };
+    }
+
     return { ...guest, userId: u.userId };
   } catch (err) {
     console.error('[access] getAccessContextForClerkId failed:', err);
     return guest;
   }
+}
+
+/** The user's live grant (started, not ended, not revoked), latest end first. */
+export async function getActiveGrant(userId: string) {
+  const now = new Date();
+  const rows = await db
+    .select({ id: accessGrants.id, source: accessGrants.source, endsAt: accessGrants.endsAt })
+    .from(accessGrants)
+    .where(
+      and(
+        eq(accessGrants.userId, userId),
+        isNull(accessGrants.revokedAt),
+        lte(accessGrants.startsAt, now),
+        gt(accessGrants.endsAt, now),
+      ),
+    )
+    .orderBy(sql`${accessGrants.endsAt} desc`)
+    .limit(1);
+  return rows[0] ?? null;
 }
 
 /** Resolve tier for a signed-in Clerk user. Returns 'guest' if anything fails. */
