@@ -97,7 +97,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "play-the-world": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Play%20The%20World%20v2.pdf",
   "pricing-experiment": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Pricing%20Experiment%20v2.pdf",
   "privacy-footprint": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20PRIVACY%20%26%20DIGITAL%20FOOTPRINT%20MAP%20v2.pdf",
-  "probability-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20The%20Probability%20Lab%20v2.pdf",
+  "probability-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20The%20Probability%20Lab%20v3.pdf",
   "problem-solver": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Problem-Solver%20Studio%20v2.pdf",
   "product-design-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Product%20Design%20Lab%20v2.pdf",
   "prompt-like-a-coach": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20PROMPT%20LIKE%20A%20COACH%20v2.pdf",

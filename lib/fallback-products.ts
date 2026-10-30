@@ -2859,7 +2859,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/probability-lab.jpg",
-    previewFile: "Preview Real-world math - The Probability Lab.pdf",
+    previewFile: "Preview Real-world math - The Probability Lab v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

@@ -3115,11 +3115,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Your child builds a carnival game, works out the real odds of winning it, then sets a price and prize so the house comes out ahead. They test the maths against real games played and discover why every prize wall and scratch ticket is built to win slowly. Real-world STEM maths that turns probability into a game they can feel.',
     whatsIncluded: [
-      'Build a simple carnival game of chance',
-      'Work out the real odds of winning',
-      'Test the odds against dozens of rounds',
-      'Set a price and prize that turn a profit',
-      'Connect it to prize walls, scratch tickets, and apps',
+      '5 steps from a first guess to counting the till',
+      'Build a carnival game: a paper-plate spinner, cups or dice',
+      'Count the odds, then test them over 40 plays',
+      'Set a price and prize so the house wins, but players still win sometimes',
+      'An odds toolkit, plus where the trick hides: claw machines, prize walls, scratch tickets',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Probability', 'Expected Value', 'Healthy Skepticism'],
     insideTheLearning: {

@@ -1,0 +1,319 @@
+{
+  "slug": "probability-lab",
+  "category": "Real-World Math",
+  "title": "The Probability Lab",
+  "tagline": "Odds · Price and prize · The house edge",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds a carnival game, like a spinner, a cup shuffle or a dice game, and works out the real odds of winning it. Then they set a price and a prize so the game makes money over time, run it for the family, and watch the maths come true.",
+  "need": [
+    "Something to build a simple game: a paper plate and a paperclip for a spinner, 3 cups and a ball, dice or a deck of cards",
+    "Paper and a pencil for the odds and the tally",
+    "A pile of tokens, buttons or pennies to play with as pretend money",
+    "Players: the rest of the family"
+  ],
+  "lesson": {
+    "text": "Winning once doesn't make a game a good deal. To see who comes out ahead, look at lots of plays, not one.",
+    "before": "I paid 1 token and won 4! This game is a great deal.",
+    "model": [
+      {
+        "part": "Odds",
+        "line": "Roll a six to win: 1 way to win out of 6. You win about once every 6 rolls."
+      },
+      {
+        "part": "Pay",
+        "line": "6 rolls at 1 token each = 6 tokens in."
+      },
+      {
+        "part": "Win",
+        "line": "About 1 win = 4 tokens back."
+      },
+      {
+        "part": "So",
+        "line": "6 in, 4 out. The house keeps about 2 tokens every 6 plays, even though you won."
+      }
+    ],
+    "modelNote": "That's the trick inside every carnival game, and your kid is about to build it themselves."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "chance as 1 in something, fractions, multiplying"
+    },
+    {
+      "subject": "Money",
+      "text": "price, prize and profit over many plays"
+    },
+    {
+      "subject": "Data",
+      "text": "tallies, and predicted vs real results"
+    },
+    {
+      "subject": "Science",
+      "text": "testing a prediction with enough rounds"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the paying customer. Play for real, try hard to win, and don't do the maths for them. Keep the numbers friendly: 'out of 10 tries, how many would you win?' comes before any fractions.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Play first, guess the odds, then build the game (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Count the odds and test them with lots of rounds (Step 3)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Set the price and prize, open the booth and count the till (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to be generous and give big prizes",
+        "a": "Let them. Watch the house go broke, then let them fix it. Going broke once teaches it faster than any explanation."
+      },
+      {
+        "q": "The results don't match the odds",
+        "a": "In 10 rounds they can be way off. Play more. The more rounds, the closer the real results get to the odds."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Healthy skepticism",
+      "text": "asking the real odds before paying"
+    },
+    {
+      "name": "Game design",
+      "text": "not too easy, not too hard"
+    },
+    {
+      "name": "Testing a hunch",
+      "text": "a guess checked with real data"
+    },
+    {
+      "name": "Record keeping",
+      "text": "every token in and out"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Play first, guess the odds",
+      "why": "A gut feeling first makes the maths mean something later.",
+      "kid": "Before building anything, your kid plays a quick game of pure chance with you: roll for a six, flip for heads or draw a heart. First they write a guess: out of 12 tries, how many wins? Then they play 12 rounds, tally the wins and compare with their guess.",
+      "you": "Play along and say out loud how it feels: 'I almost never get a six!' Don't explain the odds yet. The hunch that it's harder than it looks is what you want.",
+      "ask": [
+        "Out of 12 rolls, how many sixes do you think you'll get?",
+        "Did winning feel likely, or like a long shot?"
+      ],
+      "tip": "Keep the guess. In Step 3 they'll work out the real odds and see how close they were.",
+      "levels": {
+        "explore": "Play a coin or dice game a few times and count the wins.",
+        "develop": "Guess the wins out of 12, play, and compare with the guess.",
+        "extend": "Play two different games and rank which one is harder to win."
+      }
+    },
+    {
+      "title": "Build your game",
+      "why": "Simple games are easy to play and easy to count later.",
+      "kid": "Your kid invents a carnival game of chance: a paper-plate spinner with one prize wedge, a ball hidden under one of 3 shuffled cups, roll a six, or draw a heart. They build it and play it for fun, lots of times, with no maths yet.",
+      "you": "Be the first player, and the second, and the tenth. Ask how it feels to play. Simple is better, so steer them away from games with too many rules to count.",
+      "ask": [
+        "Does it feel fair, too easy or too hard?",
+        "Would you pay to play it? Why?"
+      ],
+      "tip": "First games are often impossible to win or impossible to lose. Too easy and the house goes broke, too hard and nobody plays. Good games live in the middle.",
+      "levels": {
+        "explore": "Build a game and play it a few times.",
+        "develop": "Build one simple enough to count the ways to win later.",
+        "extend": "Build a game with two different ways to win."
+      }
+    },
+    {
+      "title": "Count the odds, then test them",
+      "why": "A prediction, then real data to check it.",
+      "kid": "Your kid counts the ways to win and all the possible outcomes, and writes the chance as 1 in something. Then they predict how many wins they should get in 40 plays, play all 40, keep a tally and compare.",
+      "you": "Keep it to 'how many out of how many.' Keep an honest tally with them, and don't help the results along.",
+      "ask": [
+        "A spinner has 4 equal wedges and 1 is the prize. What's the chance of winning?",
+        "We expected 10 wins and got 7. Is the spinner broken?"
+      ],
+      "tip": "1 in 4 over 40 plays: 40 ÷ 4 = about 10 wins. In 10 plays the results can be way off. Over 100, they settle close to the odds.",
+      "levels": {
+        "explore": "Count the winning outcomes, then play 10 rounds and compare.",
+        "develop": "Write the chance as 1 in something, predict, play 40 rounds and compare.",
+        "extend": "Work out the odds for a game with more than one way to win, and keep playing until the results settle."
+      }
+    },
+    {
+      "title": "Set the price and the prize",
+      "why": "The odds, the price and the prize decide who comes out ahead.",
+      "kid": "Your kid sets a price to play and a prize for winning. Using the odds, they work out what happens over many plays: how many tokens come in, how many go out as prizes, and who's ahead. Then they adjust until the house makes money, but players still win sometimes.",
+      "you": "Pay up and let them run the numbers. If they set a huge prize, don't warn them. Let the house go broke once, then let them fix it.",
+      "ask": [
+        "10 people pay 1 token and 1 wins 5 tokens. Who's ahead?",
+        "What prize makes the game exactly fair?"
+      ],
+      "tip": "A 1 in 4 game at 1 token: 4 plays bring in 4 tokens. Prize 3: the house keeps 1. Prize 4: it's fair. Prize 5: the house loses 1.",
+      "levels": {
+        "explore": "Pick a price and a prize, play, and see who ends up ahead.",
+        "develop": "Predict who profits, then adjust until the house wins.",
+        "extend": "Work out the house's profit for 40 plays before a single game is played."
+      }
+    },
+    {
+      "title": "Open the booth and count the till",
+      "why": "Real players trying to win, and a tally that tells the truth.",
+      "kid": "Your kid opens for business. The family plays, and they take tokens in, pay prizes out and tally both, for 30 plays or more. Then they count the till and explain how the house came out ahead even though people won. Last, they find the same trick in real life.",
+      "you": "Play honestly, try hard to win, and cheer when you do. When the house ends up richer than the players, don't soften it. That's the whole point.",
+      "ask": [
+        "Players won a few times. How did the house still come out ahead?",
+        "Where else is this trick being played on people?"
+      ],
+      "tip": "1 in 4, prize 3, 30 plays: 30 tokens in, about 7 or 8 wins × 3 = about 22 out. The house should end up about 7 or 8 tokens ahead.",
+      "levels": {
+        "explore": "Run the game, count the winners, and see if the house came out ahead.",
+        "develop": "Tally tokens in and out, and explain where the profit came from.",
+        "extend": "Predict the next session's profit, run it and check, then name 3 real games that use the same trick."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Odds Toolkit",
+    "intro": "The odds for common games, a spinner you can make in five minutes, and where the trick hides out in the world.",
+    "items": [
+      {
+        "name": "Odds worth knowing",
+        "lines": [
+          {
+            "k": "Coin, heads:",
+            "v": "1 in 2"
+          },
+          {
+            "k": "Die, one number:",
+            "v": "1 in 6"
+          },
+          {
+            "k": "Die, an even number:",
+            "v": "3 in 6, so 1 in 2"
+          },
+          {
+            "k": "Card, a heart:",
+            "v": "13 in 52, so 1 in 4"
+          },
+          {
+            "k": "3 cups, 1 ball:",
+            "v": "1 in 3"
+          }
+        ],
+        "ask": "Check it: did you count every outcome, not just the wins?"
+      },
+      {
+        "name": "Make a spinner",
+        "lines": [
+          {
+            "k": "Plate:",
+            "v": "fold a paper plate in half, then in half again, for 4 equal wedges"
+          },
+          {
+            "k": "Prize:",
+            "v": "colour one wedge"
+          },
+          {
+            "k": "Spinner:",
+            "v": "a pencil tip through a paperclip at the centre"
+          },
+          {
+            "k": "Spin:",
+            "v": "flick the paperclip"
+          }
+        ],
+        "ask": "Check it: are all the wedges really the same size?"
+      },
+      {
+        "name": "Price and prize",
+        "lines": [
+          {
+            "k": "1 in 4 game, 1 token to play:",
+            "v": "4 plays bring in 4 tokens"
+          },
+          {
+            "k": "Prize 3:",
+            "v": "the house wins 1"
+          },
+          {
+            "k": "Prize 4:",
+            "v": "fair, nobody wins over time"
+          },
+          {
+            "k": "Prize 5:",
+            "v": "the house loses 1"
+          }
+        ],
+        "ask": "Check it: what does the house keep every 4 plays?"
+      },
+      {
+        "name": "Where the trick hides",
+        "lines": [
+          {
+            "k": "Claw machines:",
+            "v": "many can be set to grip hard only some of the time"
+          },
+          {
+            "k": "Scratch tickets:",
+            "v": "the prizes add up to less than all the tickets cost"
+          },
+          {
+            "k": "Prize walls:",
+            "v": "the big prize takes far more tickets than it's worth"
+          },
+          {
+            "k": "'You could win!':",
+            "v": "ask the odds first"
+          }
+        ],
+        "ask": "Check it: what are the real odds before you pay?"
+      }
+    ],
+    "after": {
+      "label": "Odds formulas",
+      "lines": [
+        "Chance = ways to win ÷ all outcomes",
+        "Expected wins = plays × chance",
+        "House profit = tokens in − prizes paid out"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "The house always wins.",
+    "text": "Your kid built a game that looks fair, feels winnable and quietly takes everyone's tokens anyway. Because they built the trick, they can see it from the inside now: the prize wall, the claw machine, the scratch ticket and every small price for a big prize. Next time, a little voice will ask what the real odds are before they hand over the coin.",
+    "celebrate": "Tell them which moment impressed you: the guess that was close, the fix after the house went broke, or the till that came out ahead.",
+    "extensions": [
+      "Rebuild the booth with a harder game and see how the profit changes",
+      "Run family game night and set fair odds so everyone has a real chance",
+      "Work out the odds behind a claw machine or scratch ticket you see out in the world",
+      "Design a perfectly fair game where the house breaks even, and see how different it has to be"
+    ]
+  },
+  "signs": [
+    "They ask 'what are the odds?' before they pay to play",
+    "They know one win doesn't make a game fair",
+    "They spot the trick at arcades and prize walls"
+  ],
+  "makeItReal": "Next time you pass a claw machine or an arcade, let them guess the odds before anyone spends a coin. The game they built is the best defence they have.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/probability-lab.jpg",
+    "alt": "Watercolour illustration of a homemade paper-plate spinner with four coloured wedges, two dice, a pile of buttons and pennies as tokens, and a tally sheet on a wooden table",
+    "caption": "One spinner, a pile of buttons, and the real odds."
+  }
+}
