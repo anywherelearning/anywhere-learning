@@ -1,5 +1,6 @@
 <!--
   GRANDPARENTS GIFT - one-off broadcast, send Fri Nov 20 2026, 9am PT (same day the site's holiday gift banner turns on)
+  Kit draft: broadcast 26706890
   Subject: For the grandparents (forward this one)
   Preview: The gift that isn't more stuff, for when someone asks what the kids want.
   Send to: everyone (members can gift it to a friend's family too).
@@ -8,8 +9,9 @@
   Hi {{ subscriber.first_name | strip | default: "there" }},
 
   Price is hardcoded at $99 (the current yearly price). If the founder rate has closed before
-  Nov 20, change the two "$99" mentions below to $149.
-  Needs anywherelearning.co/email/gift-card-hero.jpg to be live (deployed Oct 30 2026).
+  Nov 20, change the "$99" in the green band to $149.
+  Images live on anywherelearning.co/email/ (gift-headline.png, gift-grandparents.png,
+  gift-card-hero.jpg) and /products/ (activity covers).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +27,8 @@
   @media (max-width: 620px) {
     .lm-card { border-radius:0 !important; width:100% !important; }
     .lm-pad  { padding-left:24px !important; padding-right:24px !important; }
+    .lm-tag  { padding-left:20px !important; padding-right:20px !important; }
+    .lm-cover-cap { font-size:12px !important; }
   }
 </style>
 </head>
@@ -33,65 +37,89 @@
 <tr><td align="center" style="padding:30px 16px;">
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="lm-card" style="width:600px; max-width:100%; background:#faf9f6; border-collapse:separate; border-radius:16px; overflow:hidden; box-shadow:0 16px 46px rgba(60,50,30,0.13); color:#2f3a2e;">
 
-  <!-- Logo -->
-  <tr><td align="center" style="padding:24px 40px 18px;">
-    <img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning" width="170" style="display:inline-block; width:170px; max-width:70%; height:auto; border:0;">
-  </td></tr>
-
-  <!-- Pill -->
-  <tr><td align="center" style="padding:0 40px 22px;">
+  <!-- Green header -->
+  <tr><td align="center" bgcolor="#3d5c3b" style="background:#3d5c3b; padding:26px 32px 30px;">
+    <img src="https://anywherelearning.co/email-logo-cream.png" alt="Anywhere Learning" width="38" style="display:block; width:38px; height:auto; border:0; margin:0 auto 18px;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
-      <td align="center" bgcolor="#f3efe6" style="background:#f3efe6; border-radius:999px; padding:7px 18px; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8b7355;">A holiday gift idea</td>
+      <td align="center" bgcolor="#e8c99a" style="background:#e8c99a; border-radius:999px; padding:6px 16px; font-family:'Courier New', Courier, monospace; font-size:11.5px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#2f3a2e;">A holiday gift idea</td>
     </tr></table>
+    <img src="https://anywherelearning.co/email/gift-headline.png" alt="A gift that isn't more stuff" width="460" style="display:block; width:460px; max-width:100%; height:auto; border:0; margin:20px auto 0;">
+    <p style="font-size:15.5px; line-height:1.55; color:#dfe8dc; margin:12px auto 0; max-width:420px;">For everyone who keeps asking what the kids want this year.</p>
   </td></tr>
+  <tr><td style="height:6px; line-height:6px; font-size:0; background:#d4a373;">&nbsp;</td></tr>
 
   <!-- To the parent -->
-  <tr><td class="lm-pad" style="padding:0 44px;">
+  <tr><td class="lm-pad" style="padding:30px 44px 0;">
     <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 14px;">{{ message_content }}</div>
     <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">Every year someone asks what the kids want for the holidays, and every year I have a hard time answering without adding to the toy pile. So this year I made something you can point them to.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 22px;">You can now give Anywhere Learning as a gift: a full year of real-world projects for a family, paid once. No card on the family&rsquo;s end, and nothing renews. If a grandparent, an aunt or a godparent has been asking, <strong style="color:#2f3a2e;">forward them this email</strong>. The part below is written for them.</p>
+    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0;">You can now give Anywhere Learning as a gift: a full year of real-world projects for a family, paid once. No card on the family&rsquo;s end, and nothing renews. If a grandparent, an aunt or a godparent has been asking, <strong style="color:#2f3a2e;">forward them this email</strong>. The part below is written for them.</p>
   </td></tr>
 
-  <!-- Forward line -->
-  <tr><td class="lm-pad" style="padding:4px 44px 0;">
+  <!-- Forward divider -->
+  <tr><td class="lm-pad" style="padding:30px 44px 0;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-      <td style="border-top:2px dashed #d9b98f; font-size:0; line-height:0;">&nbsp;</td>
+      <td width="45%" style="border-top:2px dashed #d9b98f; font-size:0; line-height:0;">&nbsp;</td>
+      <td align="center" style="padding:0 10px; white-space:nowrap; font-family:'Courier New', Courier, monospace; font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#b5803e;">Forward from here</td>
+      <td width="45%" style="border-top:2px dashed #d9b98f; font-size:0; line-height:0;">&nbsp;</td>
     </tr></table>
-    <p style="font-size:11.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#b5803e; text-align:center; margin:14px 0 0;">For the grandparents, and anyone asking what to get the kids</p>
   </td></tr>
 
-  <!-- To the grandparents -->
-  <tr><td class="lm-pad" style="padding:22px 44px 0;">
-    <p style="font-size:22px; line-height:1.35; font-weight:700; color:#2f3a2e; margin:0 0 14px;">A gift they&rsquo;ll remember doing, not unwrapping.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">Hello. I&rsquo;m Amelie. I taught for fifteen years, and now I make Anywhere Learning: a library of real-world projects for kids about 6 to 14 that a parent does right alongside them.</p>
-    <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 22px;">Plan a party on a budget. Work out the cost of a road trip. Run a market stall. Cook dinner for the whole family. The math, the writing and the life skills happen inside things kids actually care about, and the family gets time together doing them.</p>
+  <!-- Gift tag: to the grandparents -->
+  <tr><td style="padding:24px 28px 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#fbf3e8" style="background:#fbf3e8; border:1.5px dashed #d4a373; border-radius:16px; border-collapse:separate;">
+      <tr><td class="lm-tag" style="padding:26px 28px 6px;">
+        <img src="https://anywherelearning.co/email/gift-grandparents.png" alt="For the grandparents" width="270" style="display:block; width:270px; max-width:90%; height:auto; border:0;">
+        <p style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b5803e; margin:10px 0 16px;">and anyone asking what to get the kids</p>
+        <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 16px;">Hello. I&rsquo;m Amelie. I taught for fifteen years, and now I make Anywhere Learning: a library of real-world projects for kids about 6 to 14 that a parent does right alongside them.</p>
+        <p style="font-size:16.5px; line-height:1.68; color:#4b5563; margin:0 0 20px;">The math, the writing and the life skills happen inside things kids actually care about. And the family gets real time together doing them. A gift they&rsquo;ll remember doing, not unwrapping.</p>
+      </td></tr>
+
+      <!-- Three real activities -->
+      <tr><td class="lm-tag" style="padding:0 20px 24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+          <td width="33%" valign="top" align="center" style="padding:0 6px;">
+            <img src="https://anywherelearning.co/products/party-planner-math.jpg" alt="Party Planner Math guide" width="150" style="display:block; width:100%; max-width:150px; height:auto; border:4px solid #ffffff; border-radius:4px; box-shadow:0 8px 16px -10px rgba(60,50,30,0.5);">
+            <p class="lm-cover-cap" style="font-size:13.5px; line-height:1.4; font-weight:600; color:#2f3a2e; margin:10px 0 0;">Plan a party on a real budget</p>
+          </td>
+          <td width="33%" valign="top" align="center" style="padding:0 6px;">
+            <img src="https://anywherelearning.co/products/road-trip-calculator.jpg" alt="Road Trip Calculator guide" width="150" style="display:block; width:100%; max-width:150px; height:auto; border:4px solid #ffffff; border-radius:4px; box-shadow:0 8px 16px -10px rgba(60,50,30,0.5);">
+            <p class="lm-cover-cap" style="font-size:13.5px; line-height:1.4; font-weight:600; color:#2f3a2e; margin:10px 0 0;">Work out the cost of a road trip</p>
+          </td>
+          <td width="33%" valign="top" align="center" style="padding:0 6px;">
+            <img src="https://anywherelearning.co/products/market-stall-pitch.jpg" alt="Market Stall Pitch guide" width="150" style="display:block; width:100%; max-width:150px; height:auto; border:4px solid #ffffff; border-radius:4px; box-shadow:0 8px 16px -10px rgba(60,50,30,0.5);">
+            <p class="lm-cover-cap" style="font-size:13.5px; line-height:1.4; font-weight:600; color:#2f3a2e; margin:10px 0 0;">Run a real market stall</p>
+          </td>
+        </tr></table>
+      </td></tr>
+    </table>
   </td></tr>
 
-  <!-- Card image -->
-  <tr><td align="center" style="padding:0; font-size:0; line-height:0;">
+  <!-- How giving works -->
+  <tr><td class="lm-pad" style="padding:32px 44px 0;">
+    <p style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8a8578; margin:0 0 4px;">How giving works</p>
+    <p style="font-family:Georgia, 'Times New Roman', serif; font-size:24px; line-height:1.25; color:#2f3a2e; margin:0 0 18px;">Three steps, about two minutes.</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr>
+        <td width="46" valign="top" style="padding:0;"><div style="width:34px; height:34px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">1</div></td>
+        <td valign="top" style="padding:3px 0 18px 14px; border-left:2px dashed #d8d4c5; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">Pick the day.</strong> Right away, a birthday, or Christmas morning. The family&rsquo;s 12 months start that day.</td>
+      </tr>
+      <tr>
+        <td width="46" valign="top" style="padding:0;"><div style="width:34px; height:34px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">2</div></td>
+        <td valign="top" style="padding:3px 0 18px 14px; border-left:2px dashed #d8d4c5; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">Add a note.</strong> It goes in the gift email the family receives, and on a card you can print and wrap.</td>
+      </tr>
+      <tr>
+        <td width="46" valign="top" style="padding:0;"><div style="width:34px; height:34px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:17px; line-height:34px; text-align:center;">3</div></td>
+        <td valign="top" style="padding:3px 0 4px 14px; border-left:2px solid transparent; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">They open it.</strong> One button takes them into the library. Nothing to install, nothing to pay, nothing renews.</td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- Printable card -->
+  <tr><td align="center" style="padding:26px 0 0; font-size:0; line-height:0;">
     <a href="https://anywherelearning.co/gift?source=grandparents-email&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=grandparents-gift" style="text-decoration:none;"><img src="https://anywherelearning.co/email/gift-card-hero.jpg" alt="A printable gift card reading: A gift for you. A year of real-world adventures, with love from Grandma Jo" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;"></a>
   </td></tr>
   <tr><td align="center" class="lm-pad" style="padding:8px 44px 0;">
-    <p style="font-size:13px; line-height:1.5; color:#8a8578; font-style:italic; margin:0;">The printable card you get right after you order, with your name and your note.</p>
-  </td></tr>
-
-  <!-- How it works -->
-  <tr><td class="lm-pad" style="padding:26px 44px 0;">
-    <p style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8a8578; margin:0 0 14px;">How giving works</p>
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-      <tr>
-        <td width="44" valign="top" style="padding:0 0 16px;"><div style="width:32px; height:32px; border-radius:50%; background:#c4836a; color:#ffffff; font-family:Georgia, serif; font-size:16px; line-height:32px; text-align:center;">1</div></td>
-        <td valign="top" style="padding:4px 0 16px; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">Pick the day.</strong> Right away, a birthday, or Christmas morning. The family&rsquo;s 12 months start that day.</td>
-      </tr>
-      <tr>
-        <td width="44" valign="top" style="padding:0 0 16px;"><div style="width:32px; height:32px; border-radius:50%; background:#588157; color:#ffffff; font-family:Georgia, serif; font-size:16px; line-height:32px; text-align:center;">2</div></td>
-        <td valign="top" style="padding:4px 0 16px; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">Add a note.</strong> It goes in the gift email the family receives, and on a card you can print and wrap.</td>
-      </tr>
-      <tr>
-        <td width="44" valign="top" style="padding:0;"><div style="width:32px; height:32px; border-radius:50%; background:#d4a373; color:#ffffff; font-family:Georgia, serif; font-size:16px; line-height:32px; text-align:center;">3</div></td>
-        <td valign="top" style="padding:4px 0 0; font-size:16px; line-height:1.6; color:#4b5563;"><strong style="color:#2f3a2e;">They open it.</strong> One button takes them into the library. Nothing to install, nothing to pay, nothing renews.</td>
-      </tr>
-    </table>
+    <p style="font-size:13px; line-height:1.5; color:#8a8578; font-style:italic; margin:0;">You also get this card to print and wrap, with your name and your note.</p>
   </td></tr>
 
   <!-- CTA band -->
@@ -101,7 +129,7 @@
         <p style="font-size:13px; font-weight:600; color:#e8c99a; letter-spacing:0.04em; line-height:1.6; margin:0;">$99 once &nbsp;&middot;&nbsp; 12 months &nbsp;&middot;&nbsp; nothing renews</p>
       </td></tr>
       <tr><td align="center" style="padding:6px 32px 0;">
-        <p style="font-size:17px; line-height:1.6; color:#faf9f6; margin:0;">The gift that isn&rsquo;t more stuff.</p>
+        <p style="font-size:17px; line-height:1.6; color:#faf9f6; margin:0;">A year of real-world adventures, for the whole family.</p>
       </td></tr>
       <tr><td align="center" style="padding:20px 28px 28px;">
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#faf9f6" style="background:#faf9f6; border-radius:14px;"><a href="https://anywherelearning.co/gift?source=grandparents-email&amp;utm_source=kit&amp;utm_medium=email&amp;utm_campaign=grandparents-gift" style="display:inline-block; padding:15px 34px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:700; color:#3d5c3b; text-decoration:none; line-height:1;">Give a year of adventures &rarr;</a></td></tr></table>
