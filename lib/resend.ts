@@ -12,6 +12,8 @@
  *   - sendSkillsMapDeliveryEmail              → one-time Skills Map purchase
  *   - sendGrantWelcomeEmail                   → prepaid access grant (gift, ESA, co-op)
  *   - sendGrantEndingEmail                    → 14 days before a grant ends
+ *   - sendGiftReceiptEmail                    → gift buyer's receipt + printable card
+ *   - sendOwnerAlertEmail                     → plain-text alert to the owner inbox
  */
 
 import { Resend } from 'resend';
@@ -28,6 +30,7 @@ import SkillsMapDelivery from '@/emails/SkillsMapDelivery';
 import PaymentFailed from '@/emails/PaymentFailed';
 import GrantWelcome, { grantWelcomeSubject } from '@/emails/GrantWelcome';
 import GrantEnding from '@/emails/GrantEnding';
+import GiftReceipt from '@/emails/GiftReceipt';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -417,5 +420,37 @@ export async function sendGrantEndingEmail(props: {
     to,
     subject: 'Your Anywhere Learning membership ends in 2 weeks',
     react: GrantEnding(rest),
+  });
+}
+
+/** Receipt + printable gift card link for the person who bought a gift. */
+export async function sendGiftReceiptEmail(props: {
+  to: string;
+  firstName?: string;
+  recipientName: string;
+  recipientEmail: string;
+  deliverAt?: string;
+  cardUrl: string;
+  amountLabel: string;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: rest.deliverAt
+      ? `Your gift for ${rest.recipientName} is scheduled (printable card inside)`
+      : `Your gift is on its way to ${rest.recipientName} (printable card inside)`,
+    react: GiftReceipt(rest),
+  });
+}
+
+/** Plain-text heads-up to the owner inbox when something needs a human. */
+export async function sendOwnerAlertEmail({ subject, text }: { subject: string; text: string }) {
+  return getResend().emails.send({
+    from: FROM,
+    to: REPLY_TO,
+    subject: `[Anywhere Learning] ${subject}`,
+    text,
   });
 }

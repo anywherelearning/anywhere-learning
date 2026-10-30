@@ -33,7 +33,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { getClerk, findOrCreateClerkUser, generateSignInUrl, upsertUser } from '@/lib/member-provision';
 import { db } from '@/lib/db';
-import { users, subscriptions, stripeEvents, sentEmails, exitSurveys, mapPurchases } from '@/lib/db/schema';
+import { users, subscriptions, stripeEvents, sentEmails, exitSurveys, mapPurchases, accessGrants } from '@/lib/db/schema';
 import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import { metaMatchFromMetadata, sendMetaEvent } from '@/lib/meta-capi';
@@ -48,7 +48,11 @@ import {
   sendPaymentFailedEmail,
   sendMembershipCancellationScheduledEmail,
   sendSkillsMapDeliveryEmail,
+  sendGiftReceiptEmail,
+  sendOwnerAlertEmail,
 } from '@/lib/resend';
+import { grantAccess } from '@/lib/access-grants';
+import { GIFT_MONTHS, deliveryMoment } from '@/lib/gift';
 import {
   OWNER_OFFER,
   MAP_FILES,
@@ -283,11 +287,111 @@ async function handleSkillsMapPurchase(session: Stripe.Checkout.Session) {
   console.log(`[webhook] skills map purchase recorded for ${email} (bonus=${bonus})`);
 }
 
+/**
+ * Gift membership purchase (payment mode, from /gift). The buyer paid; the
+ * recipient gets an access grant: now, or on the chosen date via the daily
+ * cron. The buyer gets a receipt with a printable gift card. Idempotent on the
+ * session id (unique on access_grants.stripe_session_id).
+ */
+async function handleGiftPurchase(session: Stripe.Checkout.Session) {
+  if (session.payment_status !== 'paid') {
+    console.log('[webhook] gift session not paid, ignoring:', session.id);
+    return;
+  }
+  const md = session.metadata || {};
+  const buyerEmail = (session.customer_details?.email || session.customer_email || '').toLowerCase();
+  const buyerFirstName = session.customer_details?.name?.trim().split(/\s+/)[0] || undefined;
+  const recipientEmail = (md.recipient_email || '').toLowerCase();
+  if (!recipientEmail) {
+    console.error('[webhook] gift session without recipient:', session.id);
+    await sendOwnerAlertEmail({
+      subject: 'Gift paid but no recipient email',
+      text: `Stripe session ${session.id} (buyer ${buyerEmail}) has no recipient email. Grant it by hand at /admin/grants.`,
+    }).catch(() => {});
+    return;
+  }
+  // Re-validated here: a date that has since passed (slow payment) delivers now.
+  const startsOn = deliveryMoment(md.deliver_on) ?? undefined;
+
+  const result = await grantAccess({
+    email: recipientEmail,
+    months: GIFT_MONTHS,
+    source: 'gift',
+    firstName: md.recipient_name || undefined,
+    giftFrom: md.gift_from || undefined,
+    giftMessage: md.gift_message || undefined,
+    note: `Gift from ${buyerEmail}`,
+    startsOn,
+    buyerEmail,
+    stripeSessionId: session.id,
+    allowWhilePaying: true,
+  });
+  if (!result.ok) {
+    if (result.error.includes('already created')) {
+      console.log('[webhook] gift already granted:', session.id);
+      return;
+    }
+    console.error('[webhook] gift grant failed:', session.id, result.error);
+    await sendOwnerAlertEmail({
+      subject: 'Gift paid but the grant failed',
+      text: `Stripe session ${session.id}: ${buyerEmail} paid a gift for ${recipientEmail}, but the grant failed (${result.error}). Grant it by hand at /admin/grants.`,
+    }).catch(() => {});
+    return;
+  }
+  if (result.warning) {
+    await sendOwnerAlertEmail({
+      subject: 'Gift for someone who already pays',
+      text: `${buyerEmail} gifted a membership to ${recipientEmail}. ${result.warning}`,
+    }).catch(() => {});
+  }
+
+  const origin = (process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co').replace(/\/$/, '');
+  if (buyerEmail) {
+    try {
+      await sendGiftReceiptEmail({
+        to: buyerEmail,
+        firstName: buyerFirstName,
+        recipientName: md.recipient_name || 'the family',
+        recipientEmail,
+        deliverAt: result.scheduled ? result.startsAt.toISOString() : undefined,
+        cardUrl: `${origin}/gift/card/${result.grantId}`,
+        amountLabel: `$${((session.amount_total ?? 0) / 100).toFixed(2).replace(/\.00$/, '')}`,
+      });
+    } catch (err) {
+      console.error('[webhook] gift receipt email failed:', err);
+    }
+    try {
+      await applyAndRemoveTags(buyerEmail, { add: ['gift-buyer'] });
+    } catch (err) {
+      console.error('[webhook] gift buyer kit tag failed:', err);
+    }
+  }
+
+  await sendMetaEvent({
+    eventName: 'Purchase',
+    eventId: session.id,
+    sourceUrl: `${origin}/gift/thanks`,
+    userData: { email: buyerEmail, firstName: buyerFirstName, ...metaMatchFromMetadata(session.metadata) },
+    customData: {
+      value: (session.amount_total ?? 0) / 100,
+      currency: (session.currency || 'usd').toUpperCase(),
+      content_name: 'gift-membership',
+    },
+  });
+
+  console.log(`[webhook] gift granted: ${buyerEmail} -> ${recipientEmail} (scheduled=${result.scheduled})`);
+}
+
 /** Handle a successful membership Checkout session. */
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // One-time Skills Map purchases take their own, account-free path.
   if (session.metadata?.kind === 'skills-map') {
     await handleSkillsMapPurchase(session);
+    return;
+  }
+  // Gift memberships: the payer isn't the member, so no Clerk user for them.
+  if (session.metadata?.kind === 'gift') {
+    await handleGiftPurchase(session);
     return;
   }
   if (session.payment_status !== 'paid' && session.mode !== 'subscription') {
@@ -484,7 +588,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
  */
 async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
   // The membership "I held your spot" flow doesn't apply to the Skills Map.
-  if (session.metadata?.kind === 'skills-map') return;
+  if (session.metadata?.kind === 'skills-map' || session.metadata?.kind === 'gift') return;
   const email = (
     session.customer_details?.email ||
     session.customer_email ||
@@ -677,9 +781,27 @@ async function handleChargeRefunded(charge: Stripe.Charge) {
     return;
   }
 
-  // Non-invoice charges: the only one-time product is the Skills Map, an
-  // instant download with no access to revoke.
-  console.log(`[webhook] refund on non-subscription charge ${charge.id} — nothing to revoke`);
+  // Non-invoice charges: a gift membership (revoke its grant) or the Skills
+  // Map (an instant download, nothing to revoke).
+  const piId = typeof charge.payment_intent === 'string' ? charge.payment_intent : charge.payment_intent?.id;
+  if (piId) {
+    try {
+      const sessions = await stripe.checkout.sessions.list({ payment_intent: piId, limit: 1 });
+      const s = sessions.data[0];
+      if (s?.metadata?.kind === 'gift') {
+        const revoked = await db
+          .update(accessGrants)
+          .set({ revokedAt: new Date() })
+          .where(eq(accessGrants.stripeSessionId, s.id))
+          .returning({ email: accessGrants.email });
+        console.log(`[webhook] gift refunded, grant revoked for ${revoked[0]?.email ?? 'unknown'} (${s.id})`);
+        return;
+      }
+    } catch (err) {
+      console.error('[webhook] gift refund lookup failed:', err);
+    }
+  }
+  console.log(`[webhook] refund on non-subscription charge ${charge.id}, nothing to revoke`);
 }
 
 /**

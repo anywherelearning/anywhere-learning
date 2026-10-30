@@ -9,6 +9,8 @@ interface Props {
   source: Source;
   /** Gift giver's name ("Grandma Jo"). Gift grants only. */
   giftFrom?: string;
+  /** Personal note from the giver, shown inside the gift tag. */
+  giftMessage?: string;
   months: number;
   /** ISO date the access ends. */
   endsAt: string;
@@ -38,7 +40,7 @@ export function grantWelcomeSubject({ source, giftFrom, firstName, extended, mon
  * header band, (gift tag), library collage + one-tap CTA, how it works, a peek
  * at the adventure map, then the plain facts: access date, no card, no renewal.
  */
-export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, months, endsAt, extended }: Props) {
+export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, giftMessage, months, endsAt, extended }: Props) {
   const name = firstName?.trim() || 'there';
   const isGift = source === 'gift' && !extended;
   const endDate = new Date(endsAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
@@ -103,6 +105,7 @@ export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, m
                           <td style={{ padding: '18px 22px' }}>
                             <div style={{ ...label, color: C_TERRA }}>A GIFT FROM</div>
                             <div style={giftFromName}>{giftFrom || 'someone who loves your family'}</div>
+                            {giftMessage && <div style={giftQuote}>&ldquo;{giftMessage}&rdquo;</div>}
                             <div style={giftNote}>
                               {spanLabel(months).replace(/^a /, 'A ')} of real-world learning for the whole family,
                               through {endDate}.
@@ -285,6 +288,7 @@ GrantWelcome.PreviewProps = {
   signInUrl: 'https://anywherelearning.co/sign-in',
   source: 'gift',
   giftFrom: 'Grandma Jo',
+  giftMessage: 'For all the adventures ahead. I can\'t wait to hear what you build first!',
   months: 12,
   endsAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
 } satisfies Props;
@@ -337,6 +341,7 @@ const motto = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize
 const giftTag = { width: '100%', borderCollapse: 'separate' as const, backgroundColor: '#FBF3E8', border: `1.5px dashed ${C_GOLD}`, borderRadius: '14px' };
 const giftRibbon = { width: '10px', backgroundColor: C_TERRA, borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px', fontSize: 0, lineHeight: 0 };
 const giftFromName = { fontFamily: FONT_DISPLAY, fontSize: '26px', lineHeight: 1.2, color: C_INK, marginTop: '6px' };
+const giftQuote = { fontFamily: FONT_DISPLAY, fontStyle: 'italic' as const, fontSize: '16.5px', lineHeight: 1.55, color: C_INK, marginTop: '10px', paddingLeft: '12px', borderLeft: `2px solid ${C_GOLD}`, whiteSpace: 'pre-line' as const };
 const giftNote = { fontSize: '14.5px', lineHeight: 1.55, color: C_BODY, marginTop: '6px', fontFamily: FONT_BODY };
 
 // ── Map peek ──

@@ -39,6 +39,15 @@ async function main() {
   `;
   await sql`CREATE INDEX IF NOT EXISTS idx_access_grants_user_ends ON access_grants (user_id, ends_at)`;
   await sql`CREATE INDEX IF NOT EXISTS idx_access_grants_ends ON access_grants (ends_at)`;
+
+  // Gift checkout + scheduled delivery (Oct 30 2026). Additive columns.
+  await sql`ALTER TABLE access_grants ADD COLUMN IF NOT EXISTS gift_message text`;
+  await sql`ALTER TABLE access_grants ADD COLUMN IF NOT EXISTS buyer_email text`;
+  await sql`ALTER TABLE access_grants ADD COLUMN IF NOT EXISTS stripe_session_id text`;
+  await sql`ALTER TABLE access_grants ADD COLUMN IF NOT EXISTS welcome_sent_at timestamp`;
+  // Grants made before scheduling existed were activated on creation.
+  await sql`UPDATE access_grants SET welcome_sent_at = created_at WHERE welcome_sent_at IS NULL AND starts_at <= created_at + interval '1 minute'`;
+  await sql`CREATE UNIQUE INDEX IF NOT EXISTS idx_access_grants_stripe_session ON access_grants (stripe_session_id)`;
   console.log('✓ access_grants ready');
 }
 

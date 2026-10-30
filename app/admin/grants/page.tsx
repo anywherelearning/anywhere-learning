@@ -57,7 +57,7 @@ async function createGrant(formData: FormData) {
   revalidatePath('/admin/grants');
   if (!result.ok) redirect(`/admin/grants?error=${encodeURIComponent(result.error)}`);
   const until = result.endsAt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const msg = `${result.extended ? 'Extended' : 'Granted'} through ${until}.${result.emailed ? ' Welcome email sent.' : ' No email sent.'}`;
+  const msg = `${result.extended ? 'Extended' : 'Granted'} through ${until}.${result.emailed ? ' Welcome email sent.' : ' No email sent.'}${result.warning ? ` Warning: ${result.warning}` : ''}`;
   redirect(`/admin/grants?ok=${encodeURIComponent(msg)}`);
 }
 
