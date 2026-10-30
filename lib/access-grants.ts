@@ -52,13 +52,24 @@ export interface GrantInput {
   firstName?: string;
   lastName?: string;
   giftFrom?: string;
+  giftMessage?: string;
   note?: string;
   /** Send the welcome email with the one-tap sign-in link. Default true. */
   sendEmail?: boolean;
+  /** Scheduled gift: access, tags and the welcome email all wait until this
+   *  moment (the daily cron activates it). Omit to start now. */
+  startsOn?: Date;
+  /** Gift checkout: the buyer's email and the paying Stripe session. */
+  buyerEmail?: string;
+  stripeSessionId?: string;
+  /** Gift checkout only: the money is already taken, so grant even when the
+   *  recipient already pays for a membership. The result carries a warning
+   *  so the owner can cancel their renewal or refund. */
+  allowWhilePaying?: boolean;
 }
 
 export type GrantResult =
-  | { ok: true; grantId: string; endsAt: Date; extended: boolean; emailed: boolean }
+  | { ok: true; grantId: string; startsAt: Date; endsAt: Date; extended: boolean; emailed: boolean; scheduled: boolean; warning?: string }
   | { ok: false; error: string };
 
 /**
@@ -93,8 +104,12 @@ export async function grantAccess(input: GrantInput): Promise<GrantResult> {
       ),
     )
     .limit(1);
+  let warning: string | undefined;
   if (paying.length > 0) {
-    return { ok: false, error: `${email} already has an active paid membership in Stripe.` };
+    const msg = `${email} already has an active paid membership in Stripe.`;
+    if (!input.allowWhilePaying) return { ok: false, error: msg };
+    warning = `${msg} Cancel their renewal or refund so they aren't charged on top of the gift.`;
+    console.warn('[grants]', warning);
   }
 
   const live = await db
@@ -104,8 +119,13 @@ export async function grantAccess(input: GrantInput): Promise<GrantResult> {
     .orderBy(desc(accessGrants.endsAt))
     .limit(1);
   const extended = live.length > 0;
-  const startsAt = extended ? live[0].endsAt : now;
+  const requested = input.startsOn && input.startsOn > now ? input.startsOn : now;
+  // Stacked grants start when the current one ends, so the record shows the
+  // real coverage window. Access stays continuous either way.
+  const startsAt = extended && live[0].endsAt > requested ? live[0].endsAt : requested;
   const endsAt = addMonths(startsAt, months);
+  // A top-up announces itself now; a scheduled gift waits for its date.
+  const scheduled = !extended && startsAt > now;
 
   const inserted = await db
     .insert(accessGrants)
@@ -114,19 +134,49 @@ export async function grantAccess(input: GrantInput): Promise<GrantResult> {
       email,
       source: input.source,
       giftFrom: input.giftFrom?.trim() || null,
+      giftMessage: input.giftMessage?.trim() || null,
+      buyerEmail: input.buyerEmail?.trim().toLowerCase() || null,
+      stripeSessionId: input.stripeSessionId || null,
       note: input.note?.trim() || null,
-      // Stacked grants start when the current one ends, so the record shows
-      // the real coverage window. Access stays continuous either way.
       startsAt,
       endsAt,
     })
-    .returning({ id: accessGrants.id });
+    .onConflictDoNothing({ target: accessGrants.stripeSessionId })
+    .returning();
+  if (inserted.length === 0) return { ok: false, error: 'This payment already created a grant.' };
+  const grant = inserted[0];
 
+  let emailed = false;
+  if (!scheduled) {
+    emailed = await activateGrant(grant, clerkUser.id, {
+      firstName: input.firstName?.trim() || undefined,
+      sendEmail: input.sendEmail !== false,
+      extended,
+      months,
+    });
+  }
+
+  return { ok: true, grantId: grant.id, startsAt, endsAt, extended, emailed, scheduled, warning };
+}
+
+type GrantRow = typeof accessGrants.$inferSelect;
+
+/**
+ * Turn a grant on for the member: Kit tags, Clerk badge, welcome email. Runs
+ * at grant time, or from the daily cron when a scheduled gift's date arrives.
+ * Stamps welcomeSentAt either way so it runs once. Returns whether the email
+ * went out.
+ */
+async function activateGrant(
+  grant: GrantRow,
+  clerkId: string,
+  opts: { firstName?: string; sendEmail: boolean; extended: boolean; months: number },
+): Promise<boolean> {
   // Kit: same 'member' tag paying members get, plus where the grant came from
   // so each channel can be counted and emailed on its own.
   try {
-    await applyAndRemoveTags(email, {
-      add: ['member', `grant-${input.source}`],
+    await applyAndRemoveTags(grant.email, {
+      add: ['member', `grant-${grant.source}`],
       remove: ['lapsed-member', 'refunded', 'member-canceled', 'trial-canceled', 'checkout-abandoned'],
     });
   } catch (err) {
@@ -135,25 +185,26 @@ export async function grantAccess(input: GrantInput): Promise<GrantResult> {
 
   // Header badge mirror (the DB stays the source of truth; see /api/user/access).
   try {
-    await getClerk()?.users.updateUserMetadata(clerkUser.id, { publicMetadata: { tier: 'member', founder: false } });
+    await getClerk()?.users.updateUserMetadata(clerkId, { publicMetadata: { tier: 'member', founder: false } });
   } catch (err) {
     console.warn('[grants] could not write tier metadata:', err);
   }
 
   let emailed = false;
-  if (input.sendEmail !== false) {
+  if (opts.sendEmail) {
     try {
-      const firstName = input.firstName?.trim() || (await clerkFirstName(clerkUser.id));
-      const signInUrl = await generateSignInUrl(clerkUser.id, '/account/welcome');
+      const firstName = opts.firstName || (await clerkFirstName(clerkId));
+      const signInUrl = await generateSignInUrl(clerkId, '/account/welcome');
       await sendGrantWelcomeEmail({
-        to: email,
+        to: grant.email,
         firstName,
         signInUrl,
-        source: input.source,
-        giftFrom: input.giftFrom?.trim() || undefined,
-        months,
-        endsAt: endsAt.toISOString(),
-        extended,
+        source: grant.source as GrantSource,
+        giftFrom: grant.giftFrom || undefined,
+        giftMessage: grant.giftMessage || undefined,
+        months: opts.months,
+        endsAt: grant.endsAt.toISOString(),
+        extended: opts.extended,
       });
       emailed = true;
     } catch (err) {
@@ -161,7 +212,13 @@ export async function grantAccess(input: GrantInput): Promise<GrantResult> {
     }
   }
 
-  return { ok: true, grantId: inserted[0].id, endsAt, extended, emailed };
+  await db.update(accessGrants).set({ welcomeSentAt: new Date() }).where(eq(accessGrants.id, grant.id));
+  return emailed;
+}
+
+/** Whole months between two dates, for the welcome email's "a year" copy. */
+function monthsBetween(a: Date, b: Date): number {
+  return Math.max(1, Math.round((b.getTime() - a.getTime()) / (30.44 * DAY_MS)));
 }
 
 /** End a grant now (refund, mistake, duplicate). Access drops immediately. */
@@ -207,17 +264,39 @@ async function coveredAfter(userId: string, after: Date, excludeGrantId: string)
 
 /**
  * Daily housekeeping, called from the renewal-reminders cron:
+ *   0. Scheduled gifts whose start date has arrived get activated.
  *   1. "Your year ends on X" email, once, inside the last 14 days. The
  *      reminderSentAt stamp (not a 24h window) makes it safe if a run is
  *      missed or doubled.
  *   2. Grants that ended: swap Kit tags to lapsed, once (endedAt stamp).
  * Both skip members who stay covered by a stacked grant or a subscription.
  */
-export async function runGrantLifecycle(): Promise<{ reminded: number; ended: number; errors: number }> {
+export async function runGrantLifecycle(): Promise<{ activated: number; reminded: number; ended: number; errors: number }> {
   const now = new Date();
+  let activated = 0;
   let reminded = 0;
   let ended = 0;
   let errors = 0;
+
+  // Scheduled gifts whose day has come: tags, badge, welcome email.
+  const due = await db
+    .select({ grant: accessGrants, clerkId: users.clerkId })
+    .from(accessGrants)
+    .innerJoin(users, eq(accessGrants.userId, users.id))
+    .where(and(isNull(accessGrants.revokedAt), isNull(accessGrants.welcomeSentAt), lte(accessGrants.startsAt, now)));
+  for (const { grant, clerkId } of due) {
+    try {
+      await activateGrant(grant, clerkId, {
+        sendEmail: true,
+        extended: false,
+        months: monthsBetween(grant.startsAt, grant.endsAt),
+      });
+      activated++;
+    } catch (err) {
+      errors++;
+      console.error(`[grants] activation failed for ${grant.email}:`, err);
+    }
+  }
 
   const dueReminders = await db
     .select({ grant: accessGrants, clerkId: users.clerkId })
@@ -268,5 +347,5 @@ export async function runGrantLifecycle(): Promise<{ reminded: number; ended: nu
     }
   }
 
-  return { reminded, ended, errors };
+  return { activated, reminded, ended, errors };
 }

@@ -387,6 +387,7 @@ export async function sendGrantWelcomeEmail(props: {
   signInUrl: string;
   source: GrantSource;
   giftFrom?: string;
+  giftMessage?: string;
   months: number;
   endsAt: string;
   extended?: boolean;

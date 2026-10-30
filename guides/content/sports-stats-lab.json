@@ -1,0 +1,323 @@
+{
+  "slug": "sports-stats-lab",
+  "category": "Real-World Math",
+  "title": "Sports Stats Lab",
+  "tagline": "Averages · Percentages · Who's really best",
+  "ages": "Ages 8 to 14",
+  "goal": "Your kid picks a sport they care about and a question they want answered. They collect real stats, from their own play, a game they watch or a backyard shooting test, and use averages and percentages to compare fairly, find the trend and predict the next game.",
+  "need": [
+    "A sport your kid plays, watches or follows. Video game stats count too.",
+    "A way to collect stats: games to watch, their own practice, or a team's stats online",
+    "A ball and a target for a backyard shooting test (optional)",
+    "Paper, a pencil and a calculator"
+  ],
+  "lesson": {
+    "text": "Most isn't always best. To compare two players fairly, divide by how many tries each one had.",
+    "before": "Player A scored 12 goals and Player B scored 10, so A is the better shooter.",
+    "model": [
+      {
+        "part": "A",
+        "line": "12 goals from 30 shots: 12 ÷ 30 = 0.4, so 40%."
+      },
+      {
+        "part": "B",
+        "line": "10 goals from 20 shots: 10 ÷ 20 = 0.5, so 50%."
+      },
+      {
+        "part": "So",
+        "line": "B scored fewer, but B is the more accurate shooter."
+      },
+      {
+        "part": "And",
+        "line": "A took 10 more shots. The total hid that."
+      }
+    ],
+    "modelNote": "That's the question behind every stat in this guide: compared to what?"
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "averages, percentages, dividing, decimals"
+    },
+    {
+      "subject": "Data",
+      "text": "tables, charts and the range"
+    },
+    {
+      "subject": "Science",
+      "text": "a question, a prediction and a check"
+    },
+    {
+      "subject": "Communication",
+      "text": "explaining what the numbers show"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the stats coach and the audience. Let them pick the sport and the question, keep the data real, and let them do the maths. Their own play makes the best data, because they care about every number.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the question and build the data sheet (Steps 1 and 2)."
+      },
+      {
+        "when": "Over 1 or 2 weeks",
+        "what": "Collect stats from at least 5 games or sessions (Step 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Work out the averages and percentages (Steps 3 and 4)."
+      },
+      {
+        "when": "After the next game",
+        "what": "Chart it, predict, and check the prediction (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They don't play or watch a sport",
+        "a": "Try the backyard shooting test: 10 shots from close and 10 from far, every day for a week. Or look up a team they like. Video game stats work too."
+      },
+      {
+        "q": "The data is messy or a game is missing",
+        "a": "Real data always is. Write down what happened, like rain or a missed game, and keep going. Explaining odd games is part of the work."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Fair thinking",
+      "text": "asking 'compared to what?'"
+    },
+    {
+      "name": "Patience",
+      "text": "collecting before concluding"
+    },
+    {
+      "name": "Spotting patterns",
+      "text": "a streak, a slump, a trend"
+    },
+    {
+      "name": "Backing it up",
+      "text": "an opinion with numbers behind it"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the sport and the question",
+      "why": "Good stats start with a question worth answering.",
+      "kid": "Your kid picks a sport and decides what to track: their own play, a player or a team. Then they write one question they want the numbers to answer, and list the stats they'd need to answer it.",
+      "you": "Help them narrow it down. Ask 'what do you want to find out?' A clear question makes everything after it easier.",
+      "ask": [
+        "What do you want to find out?",
+        "What numbers would answer that?"
+      ],
+      "tip": "Questions that work: 'Am I better from close or far?' 'Who's the most accurate shooter on the team?' 'Is our team getting better?'",
+      "levels": {
+        "explore": "Pick one player or team and one question.",
+        "develop": "Write a clear question and list 3 to 5 stats you'll need.",
+        "extend": "Add which numbers might be misleading, like more goals just from playing more games."
+      }
+    },
+    {
+      "title": "Build the sheet and collect the data",
+      "why": "Real numbers, recorded the same way every time.",
+      "kid": "Your kid designs a table: the date, the game and a column for each stat, including the tries, not just the successes. Then they collect from at least 5 games or sessions: tallying a game they watch, tracking their own play, or a backyard shooting test.",
+      "you": "Help them find games or stats if they need to. Ask if anything unusual happened in a game, and remind them to write it in a notes column.",
+      "ask": [
+        "Can you fill this in fast while you watch?",
+        "Did anything unusual happen in that game?"
+      ],
+      "tip": "Backyard shooting test: 10 shots from close and 10 from far, once a day for 5 days. Tally during, add up after.",
+      "levels": {
+        "explore": "A table with 3 or 4 columns, filled in for 3 games.",
+        "develop": "5 or more columns, filled in for 5 games, with notes on anything unusual.",
+        "extend": "7 or more games, plus a mark beside any result much higher or lower than normal, with a reason."
+      }
+    },
+    {
+      "title": "Work out the averages",
+      "why": "An average shows what's typical, if no odd game is pulling it.",
+      "kid": "Your kid adds up each stat and divides by the number of games to find the average. They find the highest and lowest results and the range between them. Then they check whether one unusual game is pulling the average up or down.",
+      "you": "Let them do the maths. Ask 'does that average look like a normal game?'",
+      "ask": [
+        "8, 12, 6, 10 and 9 points in 5 games. What's the average?",
+        "Swap the 9 for a 30-point game. What happens to the average?"
+      ],
+      "tip": "8 + 12 + 6 + 10 + 9 = 45, and 45 ÷ 5 = 9. With 30 instead of 9, it's 66 ÷ 5 = 13.2, higher than 4 of the 5 games.",
+      "levels": {
+        "explore": "Add up the main stat and find the average.",
+        "develop": "Find the averages for every stat, plus the highest, lowest and range.",
+        "extend": "Show how one odd game changes the average, and decide if the average is fair."
+      }
+    },
+    {
+      "title": "Use percentages to compare fairly",
+      "why": "Totals reward whoever had the most chances. Percentages don't.",
+      "kid": "Your kid turns stats into percentages or per-game rates: shots made ÷ shots taken, goals ÷ games. Then they compare players, teams or their own close and far shots, and rank them by the total and by the percent. They notice when the order changes.",
+      "you": "Ask 'what stat are you ranking by?' and 'would the ranking change with a different one?' There often isn't one best, and that's a great thing to find out.",
+      "ask": [
+        "15 shots in from 25. What's the percent?",
+        "A scored 20 goals in 40 games, B scored 15 in 25. Who scores more per game?"
+      ],
+      "tip": "Percent = made ÷ tries × 100. 15 ÷ 25 = 0.6, so 60%. Per game: A is 20 ÷ 40 = 0.5, B is 15 ÷ 25 = 0.6. B wins.",
+      "levels": {
+        "explore": "Work out one percentage and say what it means.",
+        "develop": "Work out 2 or 3 percentages and rank by total and by percent.",
+        "extend": "Find a case where the total and the percent disagree, and explain which is fairer."
+      }
+    },
+    {
+      "title": "Chart it, predict, check",
+      "why": "The real test of a stat is whether it can predict.",
+      "kid": "Your kid draws a chart: a bar chart to compare, a line graph to show change over time. They look at the last few games against the average to spot a trend. Then they predict the next game as a range, write down what could make it wrong, and check it after the game.",
+      "you": "Be the audience. Ask what the chart shows that the numbers didn't, and what their prediction is based on.",
+      "ask": [
+        "The average is 9, but the last 3 games were 11, 12 and 13. What do you predict?",
+        "What could make your prediction wrong?"
+      ],
+      "tip": "Predict a range, not one number: 'between 10 and 14.' A range that comes true beats an exact guess that misses.",
+      "levels": {
+        "explore": "Draw one chart and predict one stat for the next game.",
+        "develop": "Draw a chart with labels, predict a range and explain why.",
+        "extend": "Predict 2 or 3 stats, say how sure you are, check against the real game and explain the difference."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Stats Toolkit",
+    "intro": "What to track for each sport, how to compare fairly, and which chart to use.",
+    "items": [
+      {
+        "name": "What to track",
+        "lines": [
+          {
+            "k": "Basketball:",
+            "v": "shots made, shots taken, points"
+          },
+          {
+            "k": "Soccer or hockey:",
+            "v": "goals, shots, saves"
+          },
+          {
+            "k": "Baseball:",
+            "v": "hits and times at bat"
+          },
+          {
+            "k": "Running or swimming:",
+            "v": "times, every session"
+          },
+          {
+            "k": "Tennis:",
+            "v": "first serves in, points won"
+          }
+        ],
+        "ask": "Check it: are you tracking the tries, not just the successes?"
+      },
+      {
+        "name": "Average and range",
+        "lines": [
+          {
+            "k": "Average:",
+            "v": "add them all, divide by how many"
+          },
+          {
+            "k": "Range:",
+            "v": "highest − lowest"
+          },
+          {
+            "k": "Big range:",
+            "v": "the games were very different"
+          },
+          {
+            "k": "Watch for:",
+            "v": "one odd game pulling the average"
+          }
+        ],
+        "ask": "Check it: does your average look like a typical game?"
+      },
+      {
+        "name": "Fair comparisons",
+        "lines": [
+          {
+            "k": "Percent:",
+            "v": "made ÷ tries × 100"
+          },
+          {
+            "k": "Per game:",
+            "v": "total ÷ games played"
+          },
+          {
+            "k": "Same conditions:",
+            "v": "close with close, home with home"
+          },
+          {
+            "k": "More games:",
+            "v": "more trustworthy stats"
+          }
+        ],
+        "ask": "Check it: did both players have the same chances?"
+      },
+      {
+        "name": "Pick the chart",
+        "lines": [
+          {
+            "k": "Bar chart:",
+            "v": "compare players or teams"
+          },
+          {
+            "k": "Line graph:",
+            "v": "change over time"
+          },
+          {
+            "k": "Tally chart:",
+            "v": "during the game"
+          },
+          {
+            "k": "Always:",
+            "v": "a title and labels on both sides"
+          }
+        ],
+        "ask": "Check it: could someone read your chart without you explaining it?"
+      }
+    ],
+    "after": {
+      "label": "Stats formulas",
+      "lines": [
+        "Average = total ÷ number of games",
+        "Percent = made ÷ tries × 100",
+        "Range = highest − lowest"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They read the game like an analyst.",
+    "text": "Your kid asked a real question, collected real numbers, and found out that the biggest total isn't always the best stat. They worked out averages, compared fairly with percentages, spotted a trend and put a prediction on the line. Next time someone says 'they're the best,' your kid will ask 'by which stat?'",
+    "celebrate": "Tell them what impressed you: the question they picked, the moment the ranking flipped, or how close their prediction came.",
+    "extensions": [
+      "Track a whole season and see how the stats change over months",
+      "Test whether home advantage is real: home vs away stats",
+      "Invent a scoring system for a fantasy team using weighted stats",
+      "Track your own practice for a month and chart how you improve"
+    ]
+  },
+  "signs": [
+    "They ask 'out of how many?' when someone quotes a stat",
+    "They talk about averages and percentages while watching a game",
+    "They back up 'who's best' with a number"
+  ],
+  "makeItReal": "Next time you watch a game together, ask them to track one player. At half-time, ask them who's really playing best, and by which stat.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/sports-stats-lab.jpg",
+    "alt": "A boy in a white shirt shooting a free throw in a gym, the ball in the air toward the hoop while players wait along the lane",
+    "caption": "Free throws: made ÷ tries."
+  }
+}

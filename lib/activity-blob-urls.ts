@@ -116,7 +116,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "smart-shopper": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Smart%20shopper%20lab%20v5.pdf",
   "snack-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20The%20%2420%20Snack%20Mission%20v3.pdf",
   "solo-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Solo%20Mission%20v2.pdf",
-  "sports-stats-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Sports%20Stats%20Lab%20v2.pdf",
+  "sports-stats-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Sports%20Stats%20Lab%20v3.pdf",
   "spring-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Spring%20v2.pdf",
   "square-foot-safari": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Square%20Foot%20Safari%20v3.pdf",
   "street-explorer-map-maker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Street%20Explorer%20Map%20Maker%20v2.pdf",

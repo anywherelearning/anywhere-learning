@@ -317,11 +317,22 @@ export const accessGrants = pgTable('access_grants', {
   source: text('source').notNull(),
   /** Gift giver's name, shown in the welcome email ("A gift from Grandma Jo"). */
   giftFrom: text('gift_from'),
+  /** Personal message from the gift giver, shown in the welcome email. */
+  giftMessage: text('gift_message'),
+  /** Who paid, for gift checkouts (the buyer's receipt email). */
+  buyerEmail: text('buyer_email'),
+  /** Stripe Checkout session that paid for it (gift checkout). Unique, so a
+   *  replayed webhook can't grant twice. */
+  stripeSessionId: text('stripe_session_id'),
   /** Free-text admin note: order number, co-op name, invoice ref. */
   note: text('note'),
+  /** Future for a scheduled gift: access and the welcome email start then. */
   startsAt: timestamp('starts_at').defaultNow().notNull(),
   endsAt: timestamp('ends_at').notNull(),
   revokedAt: timestamp('revoked_at'),
+  /** Activation done: Kit tags, Clerk badge, welcome email (or skipped by
+   *  choice). Null on a scheduled gift until its startsAt passes. */
+  welcomeSentAt: timestamp('welcome_sent_at'),
   /** "Your year ends soon" email sent (once, ~14 days before endsAt). */
   reminderSentAt: timestamp('reminder_sent_at'),
   /** End-of-grant housekeeping done (Kit tags swapped to lapsed). */
@@ -330,4 +341,5 @@ export const accessGrants = pgTable('access_grants', {
 }, (table) => [
   index('idx_access_grants_user_ends').on(table.userId, table.endsAt),
   index('idx_access_grants_ends').on(table.endsAt),
+  uniqueIndex('idx_access_grants_stripe_session').on(table.stripeSessionId),
 ]);

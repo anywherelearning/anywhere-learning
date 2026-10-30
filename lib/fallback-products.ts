@@ -1253,15 +1253,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Sports Stats Lab",
     slug: "sports-stats-lab",
     description:
-      "Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player stats. STEM math through the sports they care about. Statistics, data visualisation, and analytical thinking that stick because the data matters to them.",
+      "Your child picks a sport and a question, then collects real stats from their own play, a game they watch or a backyard shooting test. They work out averages, use percentages to compare players fairly, spot the trend and predict the next game. STEM maths through the sport they care about, where the biggest total is not always the best stat.",
     shortDescription:
-      "STEM math activity for kids ages 8-14: analyse real sports stats. Averages, percentages, and data visualisation.",
+      "STEM math activity for kids ages 8-14: track real sports stats, compare fairly with percentages and predict the next game.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqHAkIBECpwGm34eVhwIE",
     blobUrl: "",
     imageUrl: "/products/sports-stats-lab.jpg",
-    previewFile: "Preview Real-world math - Sports Stats Lab.pdf",
+    previewFile: "Preview Real-world math - Sports Stats Lab v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

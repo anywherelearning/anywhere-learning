@@ -1057,13 +1057,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'sports-stats-lab': {
     opening:
-      'Collect, analyse, and visualise real sports data. Kids track scores, calculate averages, work out percentages, create charts, and compare player or team stats. Data literacy and statistics brought to life through the sports they love.',
+      'Your child picks a sport and a question, then collects real stats from their own play, a game they watch or a backyard shooting test. They work out averages, use percentages to compare players fairly, spot the trend and predict the next game. STEM maths through the sport they care about, where the biggest total is not always the best stat.',
     whatsIncluded: [
-      'Sports data collection and analysis guide',
-      'Average and percentage calculation activities',
-      'Chart and graph creation',
-      'Player and team comparison',
-      'Data interpretation and prediction challenges',
+      '5 steps from a question to a prediction checked against the next game',
+      'A backyard shooting test for kids without a team',
+      'Averages, the range, and the odd game that pulls them',
+      'Percentages and per-game rates for fair comparisons',
+      'A stats toolkit: what to track, fair comparisons, which chart',
     ],
     skillTags: ['STEM', 'Statistics', 'Data Visualisation', 'Averages', 'Percentages', 'Analysis'],
     insideTheLearning: {
