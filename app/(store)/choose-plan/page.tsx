@@ -7,6 +7,8 @@ import {
   POST_FOUNDER_PRICE_USD,
   MONTHLY_PRICE_USD,
   annualSavingsPct,
+  DOWNLOAD_CAP_PER_WINDOW,
+  MONTHLY_DOWNLOAD_CAP_PER_WINDOW,
 } from '@/lib/membership';
 
 /**
@@ -46,7 +48,7 @@ export default async function ChoosePlanPage() {
             <em className="font-display not-italic text-forest">to join.</em>
           </h1>
           <p className="mt-4 text-[17px] leading-relaxed text-gray-500">
-            Both plans open the full library and start with {TRIAL_DAYS} days
+            Both plans let you read the full library and start with {TRIAL_DAYS} days
             free. $0 today, cancel anytime during the trial and pay nothing.
           </p>
         </div>
@@ -83,6 +85,7 @@ export default async function ChoosePlanPage() {
             <ul className="mt-5 flex flex-col gap-2 text-[14.5px] text-gray-600">
               {[
                 'Full library, all 120+ activities',
+                `Save up to ${DOWNLOAD_CAP_PER_WINDOW} guides a month as PDFs`,
                 'New activities every quarter',
                 m.isFounderPhase
                   ? `Your ${m.priceYear} rate never goes up`
@@ -119,7 +122,8 @@ export default async function ChoosePlanPage() {
             <p className="mt-1.5 text-[14px] text-gray-400">billed monthly, cancel anytime</p>
             <ul className="mt-5 flex flex-col gap-2 text-[14.5px] text-gray-600">
               {[
-                'Same full library, all 120+ activities',
+                'Read all 120+ activities in your browser',
+                `Save ${MONTHLY_DOWNLOAD_CAP_PER_WINDOW} guides a month as PDFs`,
                 'Same new activities every quarter',
                 'No yearly commitment',
                 'Switch to yearly anytime and save',

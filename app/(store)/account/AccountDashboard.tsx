@@ -11,7 +11,7 @@ import { completionLog } from '@/lib/completions';
 import { addToWeek, FAMILY_TARGET } from '@/lib/week';
 import { effortFor } from '@/lib/activity-effort';
 import { notifyLocalChanged } from '@/lib/account-sync';
-import { DOWNLOAD_CAP_WINDOW_DAYS, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
+import { DOWNLOAD_CAP_PER_WINDOW, DOWNLOAD_CAP_WINDOW_DAYS, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR } from '@/lib/membership';
 
 export interface DashboardActivity {
   slug: string;
@@ -49,7 +49,7 @@ interface Props {
   initialCapModal?: boolean;
   /** Set when the download endpoint bounced a member here for hitting the
    *  rolling download cap (?reason=download-cap). Renders the banner. */
-  downloadCap?: { used: number; cap: number; resetsAt: string | null } | null;
+  downloadCap?: { used: number; cap: number; resetsAt: string | null; isMonthly?: boolean } | null;
 }
 
 const AGE_OPTIONS = ['All ages', '6–8', '8–10', '10–12', '12–14'];
@@ -313,7 +313,8 @@ export default function AccountDashboard({
         </div>
       )}
       {/* DOWNLOAD CAP STRIP: a member tried to download past the rolling
-          cap. Reading stays unlimited; say when a slot frees up. */}
+          cap. Reading stays unlimited; say when a slot frees up. Monthly
+          members get the yearly plan's bigger allowance as the way out. */}
       {tier === 'member' && downloadCap && capBannerOpen && (
         <div className="border-b border-[#E8D4C2] bg-[#F7EBE2]" role="status">
           <div className="mx-auto max-w-[1180px] px-6 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-[13.5px] text-[#7A3D24]">
@@ -327,6 +328,15 @@ export default function AccountDashboard({
                 : 'More open up as older downloads age out'}
               <Sep />
               Keep reading every guide in your browser, as much as you like
+              {downloadCap.isMonthly && (
+                <>
+                  <Sep />
+                  Yearly members save up to {DOWNLOAD_CAP_PER_WINDOW} a month.{' '}
+                  <a href="/api/billing/portal" className="font-semibold underline underline-offset-2">
+                    Switch to yearly
+                  </a>
+                </>
+              )}
             </span>
             <button
               type="button"

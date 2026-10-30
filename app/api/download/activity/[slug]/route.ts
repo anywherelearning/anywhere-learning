@@ -10,7 +10,8 @@
  *   - signed-out → redirect to /sign-in
  *
  * Download cap (members): DOWNLOAD_CAP_PER_WINDOW distinct guides per rolling
- * DOWNLOAD_CAP_WINDOW_DAYS (lib/membership.ts). Re-downloading a guide already
+ * DOWNLOAD_CAP_WINDOW_DAYS, or MONTHLY_DOWNLOAD_CAP_PER_WINDOW on the monthly
+ * plan (lib/membership.ts). Re-downloading a guide already
  * taken inside the window is free. Viewing is never capped. Over the cap →
  * bounce to /account with a banner explaining when a slot frees up.
  *
@@ -32,6 +33,8 @@ import { getAccessContextForClerkId } from '@/lib/access';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
 import { getDownloadAllowance, logActivityEvent } from '@/lib/activity-events';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
+import { downloadCapForPlan } from '@/lib/membership';
+import { planForPriceId } from '@/lib/stripe-prices';
 
 export async function GET(
   req: NextRequest,
@@ -76,6 +79,7 @@ export async function GET(
     return friendlyRedirect('/', 'membership-required');
   }
   // 'member' / 'trial' → no further slug-level checks
+  const cap = downloadCapForPlan(planForPriceId(access.stripePriceId));
 
   const isView = req.nextUrl.searchParams.get('view') === '1';
   const isCheck = req.nextUrl.searchParams.get('check') === '1';
@@ -92,7 +96,7 @@ export async function GET(
     if (tier === 'trial') {
       return NextResponse.json({ allowed: false, reason: 'trial' });
     }
-    const allowance = await getDownloadAllowance(access.userId, slug);
+    const allowance = await getDownloadAllowance(access.userId, slug, cap);
     return NextResponse.json({
       allowed: allowance.allowed,
       reason: allowance.allowed ? null : 'cap',
@@ -111,7 +115,7 @@ export async function GET(
 
   // Download cap. Enforced here for the same reason: a pasted URL hits the
   // wall too. Fails open if the DB is unreachable (see lib/activity-events).
-  const allowance = await getDownloadAllowance(access.userId, slug);
+  const allowance = await getDownloadAllowance(access.userId, slug, cap);
   if (!allowance.allowed) {
     return friendlyRedirect('/account', 'download-cap');
   }

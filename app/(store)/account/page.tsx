@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { CATEGORY_LABELS } from '@/lib/categories';
-import { DOWNLOAD_CAP_PER_WINDOW, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
+import { downloadCapForPlan, IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { planForPriceId } from '@/lib/stripe-prices';
 import { getDownloadAllowanceForClerkId } from '@/lib/activity-events';
 import AccountDashboard, { type DashboardActivity } from './AccountDashboard';
@@ -136,23 +136,26 @@ export default async function AccountPage({
   // A member who hit the download cap gets bounced here by the download
   // endpoint; look up when their oldest download ages out so the banner can
   // say when the next slot frees up.
-  let downloadCap: { used: number; cap: number; resetsAt: string | null } | null = null;
+  let downloadCap: { used: number; cap: number; resetsAt: string | null; isMonthly: boolean } | null = null;
   if (tier === 'member' && sp.reason === 'download-cap') {
+    const isMonthly = planForPriceId(stripePriceId) === 'monthly';
+    const cap = downloadCapForPlan(isMonthly ? 'monthly' : 'annual');
     try {
       const { auth } = await import('@clerk/nextjs/server');
       const { userId } = await auth();
-      const allowance = userId ? await getDownloadAllowanceForClerkId(userId) : null;
+      const allowance = userId ? await getDownloadAllowanceForClerkId(userId, '', cap) : null;
       if (allowance) {
         downloadCap = {
           used: allowance.used,
           cap: allowance.cap,
           resetsAt: allowance.resetsAt?.toISOString() ?? null,
+          isMonthly,
         };
       }
     } catch {
       /* banner falls back to generic copy */
     }
-    if (!downloadCap) downloadCap = { used: DOWNLOAD_CAP_PER_WINDOW, cap: DOWNLOAD_CAP_PER_WINDOW, resetsAt: null };
+    if (!downloadCap) downloadCap = { used: cap, cap, resetsAt: null, isMonthly };
   }
 
   return (

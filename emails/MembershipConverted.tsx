@@ -100,7 +100,7 @@ export default function MembershipConverted({
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     Nothing changes about how you use it. Same library, same activities, same one
                     good hour at a time with your kids. The only difference is you can now save and
-                    print every guide whenever you like, and the whole thing is yours for the {per}{' '}
+                    print {isMonthly ? '5 guides a month' : 'every guide whenever you like'}, and the whole thing is yours for the {per}{' '}
                     ahead.
                   </Text>
                 </td>

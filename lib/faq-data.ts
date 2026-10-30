@@ -153,7 +153,7 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: 'Do you offer monthly billing?',
     answer:
-      "Yes. You can join for $15/month instead of paying for the year, with the same 7-day free trial, and cancel anytime. Monthly members can read every guide in their browser and save 5 guides a month as PDFs; yearly members can save up to 40 a month. Yearly is the better value (the founder rate works out to about $8/month), but the monthly plan is there if you'd rather ease in. You can switch to yearly anytime from your account.",
+      "Yes. You can join for $15/month instead of paying for the year, with the same 7-day free trial, and cancel anytime. Monthly members can read every guide in their browser and save 5 guides a month as PDFs; yearly members can save up to 20 a month. Yearly is the better value (the founder rate works out to about $8/month), but the monthly plan is there if you'd rather ease in. You can switch to yearly anytime from your account.",
   },
   {
     question: 'Will my membership auto-renew?',

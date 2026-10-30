@@ -113,7 +113,7 @@ export default function TrialEndingReminder({
                     {isFounderPhase
                       ? ', at the founder rate you locked in when you signed up'
                       : ''}
-                    . From that moment, you can download any guide to keep.
+                    . From that moment, {isMonthly ? 'you can save 5 guides a month to keep' : 'you can download any guide to keep'}.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     If Anywhere Learning has earned a spot in your family&apos;s weeks, you
@@ -157,7 +157,7 @@ export default function TrialEndingReminder({
                               <tr>
                                 <td style={summaryKeyLast}>What unlocks</td>
                                 <td style={summaryValueLast}>
-                                  Unlimited downloads
+                                  {isMonthly ? '5 downloads a month' : 'Up to 20 downloads a month'}
                                   <br />
                                   <span style={{ fontSize: '13.5px', fontWeight: 400, color: C_BODY }}>
                                     plus new guide drops every quarter

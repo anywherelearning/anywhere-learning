@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { MONTHLY_DOWNLOAD_CAP_PER_WINDOW } from '@/lib/membership';
 
 interface MembershipPlansProps {
   /** Live founder-aware yearly price, e.g. "$99". */
@@ -76,7 +77,7 @@ export default function MembershipPlans({
         <p className="mb-[26px] text-[16.5px] text-gray-600">
           {yearly
             ? `Works out to ${priceMonthly} a month, saves $${savings} against monthly.`
-            : 'Same library, same everything. Switch to yearly any time.'}
+            : `Read the whole library, save ${MONTHLY_DOWNLOAD_CAP_PER_WINDOW} guides a month. Switch to yearly any time.`}
         </p>
 
         <a

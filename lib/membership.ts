@@ -65,15 +65,15 @@ export type MembershipPlan = 'annual' | 'monthly';
 // ─── DOWNLOAD CAP ───────────────────────────────────────────
 // Members may download this many DISTINCT guides per rolling window. Viewing
 // in the in-app reader is never capped, and re-downloading a guide already
-// taken inside the window is free. The number is deliberately generous for a
-// family (a guide a day, with room to spare) while keeping a pay-one-month-
-// and-grab-everything run to a third of the library. Enforced server-side in
+// taken inside the window is free. 20 is about five a week, still far above
+// real use (no member has saved more than 3 in a month as of Oct 30 2026),
+// while capping a pay-then-refund grab at a sixth of the library. Enforced server-side in
 // /api/download/activity/[slug] via lib/activity-events.
-export const DOWNLOAD_CAP_PER_WINDOW = 40;
+export const DOWNLOAD_CAP_PER_WINDOW = 20;
 export const DOWNLOAD_CAP_WINDOW_DAYS = 30;
 
 // Monthly members get far fewer downloads in the same rolling window. A $15
-// month with 40 downloads was a pay-once-and-grab-everything run (Oct 28 2026:
+// month with the full cap was a pay-once-and-grab-everything run (Oct 28 2026:
 // trial upgraded, 10 guides saved, cancelled the same day). Reading stays
 // unlimited on both plans; the gap is the reason to switch to yearly.
 export const MONTHLY_DOWNLOAD_CAP_PER_WINDOW = 5;

@@ -11,6 +11,7 @@
 
 import { useEffect, useState } from 'react';
 import HeroScene from '@/components/account/HeroScene';
+import { DOWNLOAD_CAP_PER_WINDOW, MONTHLY_DOWNLOAD_CAP_PER_WINDOW } from '@/lib/membership';
 
 const CARD = 'w-full max-w-[440px] rounded-[22px] overflow-hidden text-center shadow-[0_40px_90px_-30px_rgba(20,14,6,0.7)]';
 const PLATE: React.CSSProperties = { fontFamily: 'var(--font-plate),sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--am-ink)' };
@@ -107,8 +108,9 @@ export default function TrialCapModal({
             You&apos;re in. <span style={{ color: '#588157' }}>Welcome.</span>
           </h2>
           <p className="mt-3 font-body text-[14.5px] leading-[1.6] text-gray-600">
-            Your membership is active and every guide is yours to download now. Thank you for
-            being one of the early ones, it means the world.
+            {isMonthlyPlan
+              ? `Your membership is active. You can save ${MONTHLY_DOWNLOAD_CAP_PER_WINDOW} guides a month as PDFs, and read every guide in your browser anytime. Thank you for being one of the early ones, it means the world.`
+              : 'Your membership is active and every guide is yours to download now. Thank you for being one of the early ones, it means the world.'}
           </p>
           <button
             type="button"
@@ -159,6 +161,8 @@ export default function TrialCapModal({
           much as you like. To save guides as PDFs, start your membership, it&apos;s the
           same {priceLabel}{isFounder ? ' founder rate' : ''} that begins
           {endLabel ? ` on ${endLabel}` : ' when your trial ends'} anyway.
+          {isMonthlyPlan &&
+            ` The monthly plan includes ${MONTHLY_DOWNLOAD_CAP_PER_WINDOW} downloads a month (yearly includes ${DOWNLOAD_CAP_PER_WINDOW}).`}
         </p>
 
         {error && (
