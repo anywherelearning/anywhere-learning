@@ -1207,15 +1207,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Road Trip Calculator",
     slug: "road-trip-calculator",
     description:
-      "Plan a road trip using real distances, fuel costs, driving times, and travel budgets. Kids calculate mileage, compare routes, estimate fuel expenses, plan stops, and build a complete trip budget. Geography meets maths on the open road.",
+      "Your child plans a real road trip: maps the route, works out the driving time with real stops, figures out the gas from miles per gallon and the price at the pump, and budgets the whole trip. Then they ride along as navigator, log what really happens and compare it with their plan. Geography meets maths on the open road.",
     shortDescription:
-      "Real-world math for kids ages 8-14: calculate distances, fuel costs, and budgets for a real road trip.",
+      "Real-world math for kids ages 8-14: plan a real road trip, from driving time and gas to the full budget, then navigate it.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqFAkIBECpwGmlCHUbfKk",
     blobUrl: "",
     imageUrl: "/products/road-trip-calculator.jpg",
-    previewFile: "Preview Real-world math - Road trip calculator.pdf",
+    previewFile: "Preview Real-world math - Road trip calculator v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

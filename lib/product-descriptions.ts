@@ -1006,13 +1006,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'road-trip-calculator': {
     opening:
-      'Plan a road trip using real distances, fuel costs, driving times, and travel budgets. Kids calculate mileage, compare routes, estimate fuel expenses, plan stops, and build a complete trip budget. Geography meets maths on the open road.',
+      'Your child plans a real road trip: maps the route, works out the driving time with real stops, figures out the gas from miles per gallon and the price at the pump, and budgets the whole trip. Then they ride along as navigator, log what really happens and compare it with their plan. Geography meets maths on the open road.',
     whatsIncluded: [
-      'Road trip planning and calculation guide',
-      'Distance and driving time calculations',
-      'Fuel cost estimation and route comparison',
-      'Stop planning and scheduling',
-      'Complete trip budget with contingency',
+      '5 steps from mapping the route to comparing the plan with the real drive',
+      'Driving time with real speeds and real stops',
+      'Gas cost from miles per gallon and the price at the pump',
+      'A full trip budget with a buffer for surprises',
+      'A cheat sheet with road trip numbers and twist cards',
     ],
     skillTags: ['Geography', 'Estimation', 'Budgeting', 'Distance', 'Planning'],
     seo: {

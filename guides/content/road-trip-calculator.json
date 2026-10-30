@@ -1,0 +1,328 @@
+{
+  "slug": "road-trip-calculator",
+  "category": "Real-World Math",
+  "title": "Road Trip Calculator",
+  "tagline": "Distance · Time · Fuel · Budget",
+  "ages": "Ages 8 to 14",
+  "goal": "Your kid plans a real road trip: the route, the distance, the driving time with real stops, the fuel and the whole budget. Then, if you can, they ride along as navigator and compare their plan with what really happened.",
+  "need": [
+    "A map: paper, or an app like Google Maps",
+    "Today's gas price, from a local station or a gas app",
+    "Your car's fuel use (miles per gallon). Ask, or check the manual.",
+    "Paper, a pencil and a calculator",
+    "A destination: a relative's house, a beach, a park, a city"
+  ],
+  "lesson": {
+    "text": "The speed limit isn't how fast you really travel. Towns, traffic and stops all slow you down, so a real plan adds them in.",
+    "before": "It's 240 miles and the speed limit is 60, so we'll be there in 4 hours.",
+    "model": [
+      {
+        "part": "Drive",
+        "line": "240 ÷ 60 = 4 hours, only if you never slow down."
+      },
+      {
+        "part": "Real speed",
+        "line": "With towns and traffic, more like 50 mph. 240 ÷ 50 = 4.8 hours, about 4 hours 48 minutes."
+      },
+      {
+        "part": "Stops",
+        "line": "2 breaks × 15 minutes + a 45-minute lunch = 1 hour 15 minutes."
+      },
+      {
+        "part": "So",
+        "line": "About 6 hours, not 4. Leave at 9:00, arrive around 3:00."
+      }
+    ],
+    "modelNote": "That's the kind of planning this guide builds: the maths, plus what really happens on the road."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "dividing, multiplying, decimals"
+    },
+    {
+      "subject": "Money",
+      "text": "fuel costs and a full trip budget"
+    },
+    {
+      "subject": "Geography",
+      "text": "maps, scale and comparing routes"
+    },
+    {
+      "subject": "Time",
+      "text": "hours and minutes, working back from arrival"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the co-planner, and on the day, the driver. Use real prices and a real place if you can. The closer it is to a trip you'd actually take, the more the numbers matter.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the trip, map the route and work out the driving time (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Work out the fuel and budget the whole trip (Steps 3 and 4)."
+      },
+      {
+        "when": "Trip day",
+        "what": "Ride along as navigator and compare the plan with reality (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "We're not taking a trip soon",
+        "a": "Plan a real one anyway, like a visit to family, and use the twist cards at the back for Step 5. Or plan the next drive you're already doing."
+      },
+      {
+        "q": "Hours and minutes confuse them",
+        "a": "0.8 hours isn't 80 minutes. Multiply the decimal by 60: 0.8 × 60 = 48 minutes."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Planning ahead",
+      "text": "time, money and stops before you go"
+    },
+    {
+      "name": "Navigation",
+      "text": "reading the map and the route"
+    },
+    {
+      "name": "Trade-offs",
+      "text": "what to cut when it costs too much"
+    },
+    {
+      "name": "Adapting",
+      "text": "when the road has other plans"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the trip and map the route",
+      "why": "Where you go decides the distance, the time and the cost.",
+      "kid": "Your kid picks a destination and guesses how far it is. Then they map the route: start, finish, main roads and possible stops. They find the real distance on the map and compare two routes, like the fastest and the prettiest.",
+      "you": "Help them read the map, or show them where the app shows the distance and the route options. Let them pick the route and explain why.",
+      "ask": [
+        "How far do you think it is? Guess before you look.",
+        "Fastest or prettiest route: which would you pick, and why?"
+      ],
+      "tip": "On a paper map, use the scale. If 1 inch = 10 miles and the road measures 7 inches, it's about 70 miles. Lay a piece of string along a curvy road, then measure the string.",
+      "levels": {
+        "explore": "A trip 2 to 3 hours away, with one simple route.",
+        "develop": "A trip 6 to 8 hours away, comparing 2 or 3 routes.",
+        "extend": "A trip with 2 or 3 destinations, mapped in the best order."
+      }
+    },
+    {
+      "title": "Work out the driving time",
+      "why": "Real speed and real stops, not just the speed limit.",
+      "kid": "Your kid divides the distance by a real average speed to get the driving time. Then they plan the stops, a short break about every 2 hours and a meal, and add them in. Last, they work back from when you want to arrive to find when you need to leave.",
+      "you": "Share what you know from real drives: how long a stop really takes with kids, and where traffic usually slows down. Let them do the maths.",
+      "ask": [
+        "At 50 mph, how long does 150 miles take?",
+        "Lunch takes 45 minutes. What time do we arrive now?"
+      ],
+      "tip": "Work back from arrival. To arrive at 4:00 after 6 hours of driving and stops, leave by 10:00.",
+      "levels": {
+        "explore": "Work out the driving time and add 2 stops.",
+        "develop": "Plan all the stops, and work back from the arrival time to the departure time.",
+        "extend": "Plan the time for every leg of a multi-stop trip, including an overnight."
+      }
+    },
+    {
+      "title": "Work out the fuel",
+      "why": "Often the biggest cost of a road trip.",
+      "kid": "Your kid works out how many gallons the trip takes: distance ÷ miles per gallon. Then they multiply by today's price to find the cost. Then they double it for the drive home.",
+      "you": "Find your car's miles per gallon and today's gas price with them. Then hand them a 'what if': gas goes up 50¢ a gallon.",
+      "ask": [
+        "300 miles at 25 mpg. How many gallons?",
+        "Gas goes from $3.50 to $4. How much more does the trip cost?"
+      ],
+      "tip": "300 ÷ 25 = 12 gallons. 12 × $3.50 = $42 one way, $84 there and back. At $4, it's $48 one way.",
+      "levels": {
+        "explore": "Work out the gas for a 200-mile trip, one way.",
+        "develop": "Work out the gas there and back, and what happens if the price goes up.",
+        "extend": "Compare 2 cars or 2 routes, and work out which costs less."
+      }
+    },
+    {
+      "title": "Budget the whole trip",
+      "why": "Gas is only the start.",
+      "kid": "Your kid lists every cost: gas, food for everyone in the car, snacks, activities and a hotel if it's overnight. They add a buffer of about 10% for surprises and find the total. If it's over the budget, they decide what to cut.",
+      "you": "Help them look up real prices for food and things to do there. When it's too much, ask what matters most, then let them choose.",
+      "ask": [
+        "Which cost is the biggest?",
+        "You're $30 over. What would you cut?"
+      ],
+      "tip": "Day trip for 4: gas $84 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $164. Add 10% ($16.40) for $180.40.",
+      "levels": {
+        "explore": "Total 3 costs: gas, food and one activity.",
+        "develop": "Total 5 or more costs, add a buffer and fit a set budget.",
+        "extend": "Budget a multi-day trip with hotels, and compare it with packing your own food."
+      }
+    },
+    {
+      "title": "Take the trip and compare",
+      "why": "The real road is the final test of the plan.",
+      "kid": "On a real drive, your kid is the navigator. They write down when you leave, each stop, when you arrive, the odometer at the start and end, and what the gas cost. Then they compare the plan with what really happened and work out your car's real miles per gallon.",
+      "you": "You drive, they track. Talk numbers at the stops, not on the highway. Not taking the trip? Pull 2 twist cards from the back page and let them fix the plan.",
+      "ask": [
+        "Which guess was furthest off, the time or the cost?",
+        "What made the real trip slower or faster than the plan?"
+      ],
+      "tip": "Real miles per gallon: odometer miles ÷ gallons at the fill-up. 312 miles ÷ 12 gallons = 26 mpg.",
+      "levels": {
+        "explore": "Track the leaving and arriving times and compare them with the plan.",
+        "develop": "Track time, stops and gas, and compare every part of the plan.",
+        "extend": "Work out the real mpg and average speed, then fix the plan for next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Road Trip Numbers",
+    "intro": "Ballpark numbers for planning. Real ones beat these every time, so use today's prices and your own car when you can.",
+    "items": [
+      {
+        "name": "Speed and stops",
+        "lines": [
+          {
+            "k": "Highway speed limit:",
+            "v": "often 55 to 70 mph"
+          },
+          {
+            "k": "Real average with towns and traffic:",
+            "v": "about 50 mph"
+          },
+          {
+            "k": "Short break:",
+            "v": "every 2 hours, about 15 minutes"
+          },
+          {
+            "k": "Meal stop:",
+            "v": "30 to 45 minutes"
+          }
+        ],
+        "ask": "Check it: did you add the stops to the driving time?"
+      },
+      {
+        "name": "Fuel",
+        "lines": [
+          {
+            "k": "Small car:",
+            "v": "about 30 to 40 mpg"
+          },
+          {
+            "k": "Family car or SUV:",
+            "v": "about 20 to 30 mpg"
+          },
+          {
+            "k": "Van or truck:",
+            "v": "about 15 to 20 mpg"
+          },
+          {
+            "k": "Gas price:",
+            "v": "check today, it changes often"
+          },
+          {
+            "k": "In kilometres:",
+            "v": "litres = km ÷ 100 × litres per 100 km"
+          }
+        ],
+        "ask": "Check it: did you count the drive home too?"
+      },
+      {
+        "name": "Food and fun, per person",
+        "lines": [
+          {
+            "k": "Breakfast:",
+            "v": "$5 to $10"
+          },
+          {
+            "k": "Lunch:",
+            "v": "$8 to $15"
+          },
+          {
+            "k": "Dinner:",
+            "v": "$12 to $25"
+          },
+          {
+            "k": "Snacks:",
+            "v": "$2 to $5 a day"
+          },
+          {
+            "k": "Parks and beaches:",
+            "v": "often free or a small fee"
+          }
+        ],
+        "ask": "Check it: did you multiply by everyone in the car?"
+      },
+      {
+        "name": "Twist cards",
+        "lines": [
+          {
+            "k": "1.",
+            "v": "Gas goes up 50¢ a gallon."
+          },
+          {
+            "k": "2.",
+            "v": "Traffic adds an hour."
+          },
+          {
+            "k": "3.",
+            "v": "A 50-mile detour to see something great."
+          },
+          {
+            "k": "4.",
+            "v": "Lunch costs double what you planned."
+          }
+        ],
+        "ask": "Check it: what does each twist do to your time or your total?"
+      }
+    ],
+    "after": {
+      "label": "Road trip formulas",
+      "lines": [
+        "Time = distance ÷ speed",
+        "Gallons = distance ÷ miles per gallon",
+        "Gas cost = gallons × price per gallon"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They planned a real trip.",
+    "text": "Your kid mapped a route, worked out how long it really takes and what it really costs, and made the trade-offs when the budget didn't stretch. If you took the trip, they also saw where the plan held and where the road had other ideas. Those are the same calls adults make before every long drive.",
+    "celebrate": "Tell them which part impressed you: the route they chose, the stops they planned, or how close their time or cost guess came.",
+    "extensions": [
+      "Look up flights or a train to the same place and compare the cost and the time",
+      "Plan a longer trip with an overnight and a hotel budget",
+      "Track the spending on a real trip and compare it with the plan",
+      "Let them plan the next family drive from start to finish"
+    ]
+  },
+  "signs": [
+    "They ask 'how far is it?' and work out the time themselves",
+    "They add stops when they guess how long a drive takes",
+    "They notice the gas price on the sign as you drive past"
+  ],
+  "makeItReal": "Next time you have a drive, hand them the job of navigator and timekeeper. Let them tell you when to leave and when to expect to arrive.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/road-trip-calculator.jpg",
+    "alt": "A boy and a girl waving from the open door of a white pickup truck on a sunny road lined with evergreens and autumn trees",
+    "caption": "My navigators, ready to roll."
+  },
+  "fromHome": {
+    "text": "When it's just me and the kids on the road, my son is my navigator. He gives me the directions while I drive. And at the pump, we guess what the fill-up will cost before the numbers stop.",
+    "quotes": []
+  }
+}

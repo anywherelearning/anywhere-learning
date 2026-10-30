@@ -103,7 +103,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "prompt-like-a-coach": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20PROMPT%20LIKE%20A%20COACH%20v2.pdf",
   "reading-the-room": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Reading%20the%20Room%20v2.pdf",
   "repair-conversation": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Repair%20Conversation%20v2.pdf",
-  "road-trip-calculator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Road%20trip%20calculator%20v2.pdf",
+  "road-trip-calculator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Road%20trip%20calculator%20v3.pdf",
   "rube-goldberg-machine": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20a%20Rube%20Goldberg%20Machine%20v2.pdf",
   "savings-goal-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Savings%20Goal%20Tracker%20v2.pdf",
   "scavenger-hunt-designer": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Scavenger%20Hunt%20Designer%20v2.pdf",
