@@ -436,15 +436,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Create a Creature + Build Its Habitat",
     slug: "creature-habitat",
     description:
-      "Invent a brand-new creature and build its entire habitat. Kids design anatomy, diet, behaviour, and environment. Then they construct a physical model of the habitat. Combines biology, art, engineering, and creative writing in one unforgettable project.",
+      "Your child invents an animal that has never existed and gives every feature a survival job, borrowing tricks from real animals like the fennec fox and the poison dart frog. They sculpt the creature, build a shoebox habitat that fits its body, and make a field guide page like a scientist presenting a new species. Biology, art and engineering in one project.",
     shortDescription:
-      "Science + art project for kids ages 6-14: invent a creature and build its habitat. Biology meets art and engineering.",
+      "Science and art project for kids ages 6-14: invent a creature, give every feature a job and build the habitat it needs.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpkAkIBECpwGm1v6HUls3",
     blobUrl: "",
     imageUrl: "/products/creature-habitat.jpg",
-    previewFile: "Preview Creativity & Maker Create a Creature and Build Its Habitat.pdf",
+    previewFile: "Preview Creativity & Maker Create a Creature and Build Its Habitat v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

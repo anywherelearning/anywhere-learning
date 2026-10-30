@@ -584,13 +584,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'creature-habitat': {
     opening:
-      'Invent a brand-new creature and build its entire habitat. Kids design anatomy, diet, behaviour, and environment. Then they construct a physical model of the habitat. Combines biology, art, engineering, and scientific thinking into one creative adventure.',
+      'Your child invents an animal that has never existed and gives every feature a survival job, borrowing tricks from real animals like the fennec fox and the poison dart frog. They sculpt the creature, build a shoebox habitat that fits its body, and make a field guide page like a scientist presenting a new species. Biology, art and engineering in one project.',
     whatsIncluded: [
-      'Complete creature + habitat design guide',
-      'Anatomy, diet, behaviour, and adaptation design',
-      'Habitat environment planning and ecosystem thinking',
-      'Physical model construction with everyday materials',
-      'Scientific presentation of creature and habitat',
+      '5 steps from the first sketch to the big reveal',
+      'Real animal tricks to borrow, all true',
+      'Body part jobs and a habitat match guide',
+      'A clay creature and a shoebox habitat',
+      'A field guide checklist, like a real scientist',
     ],
     skillTags: ['Biology', 'Art', 'Engineering', 'Scientific Thinking', 'Design'],
     insideTheLearning: {

@@ -1,0 +1,333 @@
+{
+  "slug": "creature-habitat",
+  "category": "Creativity & Maker",
+  "title": "Creature Habitat",
+  "tagline": "Invent · Adapt · Build",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid invents an animal that has never existed, works out exactly how it stays alive, builds it with their hands and creates the habitat where it thrives. Then they document it like a scientist who just discovered a new species. Part art, part biology, part storytelling.",
+  "need": [
+    "Paper and markers or coloured pencils",
+    "Clay or playdough, cardboard, small boxes, tape, glue and scissors",
+    "A shoebox for the habitat",
+    "Natural materials if you're outside: sticks, leaves, rocks, bark, mud",
+    "Fabric scraps, pipe cleaners or foil (optional)"
+  ],
+  "lesson": {
+    "text": "Every body part a real animal has does a job. An invented creature works the same way: if a feature can't answer 'how does this help it survive?', it doesn't belong.",
+    "before": "My creature has wings, horns, fur, gills and laser eyes.",
+    "model": [
+      {
+        "part": "Big ears",
+        "line": "It lives in the desert. Huge ears let body heat out, like a fennec fox's."
+      },
+      {
+        "part": "Red spots",
+        "line": "They warn predators it's poisonous, like a poison dart frog's bright colours."
+      },
+      {
+        "part": "Weakness",
+        "line": "It can't see well at night, so owls are its biggest danger."
+      },
+      {
+        "part": "So",
+        "line": "Every feature has a job, and the creature has a weakness too."
+      }
+    ],
+    "modelNote": "That's the question behind every step: how does this help it survive?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "adaptations, camouflage, food chains"
+    },
+    {
+      "subject": "Art",
+      "text": "drawing and sculpting the creature"
+    },
+    {
+      "subject": "Writing",
+      "text": "a field guide entry"
+    },
+    {
+      "subject": "Engineering",
+      "text": "a model that stands up"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You ask the questions, they make the choices. If they want a flying fish with fur, let them, then ask 'how does the fur help it survive?' And resist fixing the build. 'Tell me about this part' beats 'maybe try it this way.'",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Invent the creature and design how it survives (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the creature and its habitat (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Make the field guide page and reveal the discovery (Step 5). It also works as one long afternoon."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to draw a dragon or a unicorn",
+        "a": "Fine as a start. Ask 'what makes yours different from every other dragon?' and let the survival questions do the rest."
+      },
+      {
+        "q": "They don't want to make the field guide",
+        "a": "Let it go, or let them dictate while you write. The learning is in the inventing and building."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Creative thinking",
+      "text": "an animal nobody has seen"
+    },
+    {
+      "name": "Reasoning",
+      "text": "a reason for every feature"
+    },
+    {
+      "name": "Making",
+      "text": "turning a sketch into something solid"
+    },
+    {
+      "name": "Presenting",
+      "text": "a discovery, explained"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Invent your creature",
+      "why": "The name and personality shape every choice that follows.",
+      "kid": "Your kid sketches an animal that has never existed. They decide what it's covered in (scales, feathers, fur, skin), how big it is and what colour, and why. Then they name it and give it a personality: shy, fierce, goofy.",
+      "you": "Ask questions that push their thinking without steering it. If they start from a dragon or a unicorn, ask what makes theirs different.",
+      "ask": [
+        "What's the first thing someone would notice about it?",
+        "Where did the idea for this animal come from?"
+      ],
+      "tip": "Real animals are the best idea bank. Mix two, like half owl and half octopus, then make it their own.",
+      "levels": {
+        "explore": "Draw the creature and give it a name.",
+        "develop": "Draw it, name it, and explain its colour and covering.",
+        "extend": "Draw it from two angles, with its size compared to something real."
+      }
+    },
+    {
+      "title": "Design how it survives",
+      "why": "Every feature needs a job.",
+      "kid": "Your kid works out what the creature eats and how it finds food, how it defends itself when something bigger shows up, and what its weakness is. They use the Real animal tricks card in the Creature Lab Toolkit at the end of the guide for ideas, and give every feature a reason.",
+      "you": "Push them to connect each feature to a purpose. If they're stuck, flip it: pick a danger first, then design the body part that handles it.",
+      "ask": [
+        "If it went a whole day without eating, what would happen?",
+        "What is your creature most afraid of?"
+      ],
+      "tip": "No invincible creatures. Even the toughest real animals have something that threatens them.",
+      "levels": {
+        "explore": "Say what it eats and how it stays safe.",
+        "develop": "Give every feature a job, and name its weakness.",
+        "extend": "Borrow 2 real animal tricks and explain how each one works."
+      }
+    },
+    {
+      "title": "Build the creature",
+      "why": "From a sketch to something they can hold.",
+      "kid": "Your kid builds their creature: a detailed drawing, a clay sculpture or a cardboard and craft-supply model. First they pick which features matter most, since they probably can't build every detail.",
+      "you": "Help with tricky construction moments, but keep your hands off the creative choices. If it falls apart, that's a problem to solve together.",
+      "ask": [
+        "Which feature was hardest to build, and how did you solve it?",
+        "What would you change if you built it again?"
+      ],
+      "tip": "A lopsided clay creature they built themselves teaches more than a perfect one you shaped.",
+      "levels": {
+        "explore": "Build the creature from clay, paper or cardboard.",
+        "develop": "Build it with its most important survival features showing.",
+        "extend": "Build it so it stands on its own, and make one part move or open."
+      }
+    },
+    {
+      "title": "Build its habitat",
+      "why": "The home has to match the body.",
+      "kid": "Your kid decides exactly where their creature lives, not just 'forest' but a dark cave with underground rivers or a windy cliff covered in moss. They check it against the Habitat match card, then build it in a shoebox or outside in a real spot.",
+      "you": "Connect their habitat to the features they designed: thick white fur doesn't make sense on a tropical beach.",
+      "ask": [
+        "What's the most dangerous part of this habitat for your creature?",
+        "What would happen if the weather changed a lot?"
+      ],
+      "tip": "A shoebox world full of details beats a big empty one. Paint the inside, add paper trees, use sand or soil for the ground.",
+      "levels": {
+        "explore": "Build a habitat with a place to sleep, eat and hide.",
+        "develop": "Build a habitat that matches every survival feature.",
+        "extend": "Add a food chain: a plant at the bottom, what your creature eats, and what eats it."
+      }
+    },
+    {
+      "title": "Make the field guide and reveal it",
+      "why": "Scientists document a discovery, then share it.",
+      "kid": "Your kid makes a field guide page as if they just discovered a new species, using the Field guide checklist card. Then they set the creature in its habitat and present it to someone: what it is, how it survives, why it lives there.",
+      "you": "Be a curious audience. Ask real questions, not quiz questions.",
+      "ask": [
+        "Would another scientist have enough to identify it?",
+        "What if two of these creatures competed for the same food?"
+      ],
+      "tip": "Don't worry about spelling. Younger kids can dictate while you write, or just draw and label.",
+      "levels": {
+        "explore": "Draw and label it, then show it to someone.",
+        "develop": "Fill in every part of the checklist and present it.",
+        "extend": "Add a range map of where it lives, and film the reveal."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Creature Lab Toolkit",
+    "intro": "Tricks real animals use, what body parts are for, how to match a home, and what goes in a field guide.",
+    "items": [
+      {
+        "name": "Real animal tricks",
+        "lines": [
+          {
+            "k": "Fennec fox:",
+            "v": "giant ears let off heat in the desert"
+          },
+          {
+            "k": "Arctic fox:",
+            "v": "a white winter coat hides it in snow"
+          },
+          {
+            "k": "Poison dart frog:",
+            "v": "bright colours warn 'don't eat me'"
+          },
+          {
+            "k": "Octopus:",
+            "v": "changes colour and squirts ink"
+          },
+          {
+            "k": "Camel:",
+            "v": "its hump stores fat, not water"
+          }
+        ],
+        "ask": "Check it: which trick did you borrow?"
+      },
+      {
+        "name": "Body part jobs",
+        "lines": [
+          {
+            "k": "Big ears:",
+            "v": "hear danger or prey, or let off heat"
+          },
+          {
+            "k": "Eyes in front:",
+            "v": "judge distance, common in hunters"
+          },
+          {
+            "k": "Eyes on the sides:",
+            "v": "see all around, common in prey"
+          },
+          {
+            "k": "Colour:",
+            "v": "hide, warn or show off"
+          },
+          {
+            "k": "Feet:",
+            "v": "dig, grip, swim or run"
+          }
+        ],
+        "ask": "Check it: does every feature have a job?"
+      },
+      {
+        "name": "Habitat match",
+        "lines": [
+          {
+            "k": "Cold:",
+            "v": "thick fur or a layer of fat"
+          },
+          {
+            "k": "Hot and dry:",
+            "v": "big ears, stored fat, active at night"
+          },
+          {
+            "k": "Water:",
+            "v": "fins or webbed feet"
+          },
+          {
+            "k": "Dark:",
+            "v": "big eyes, whiskers, sharp hearing"
+          },
+          {
+            "k": "Trees:",
+            "v": "claws, grip, a long tail"
+          }
+        ],
+        "ask": "Check it: does your creature fit its home?"
+      },
+      {
+        "name": "Field guide checklist",
+        "lines": [
+          {
+            "k": "Name:",
+            "v": "and a labelled drawing"
+          },
+          {
+            "k": "Home:",
+            "v": "where it lives"
+          },
+          {
+            "k": "Food:",
+            "v": "what it eats, and how it finds it"
+          },
+          {
+            "k": "Defence:",
+            "v": "and one weakness"
+          },
+          {
+            "k": "Fact:",
+            "v": "one surprising thing"
+          }
+        ],
+        "ask": "Check it: could someone identify it from your page?"
+      }
+    ],
+    "after": {
+      "label": "Creature rules",
+      "lines": [
+        "Every feature has a job.",
+        "Every creature has a weakness.",
+        "The habitat fits the body.",
+        "It eats something, and something eats it."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "A new species, discovered.",
+    "text": "Your kid invented a species, worked out how it survives, built it with their hands, designed its home, documented it like a scientist and presented it. That's biology, art, engineering and writing in one project, all held together by one question: how does this help it survive?",
+    "celebrate": "Tell them which part impressed you: a clever feature, a weakness that made sense, or how they solved a building problem.",
+    "extensions": [
+      "Invent a second creature for the same habitat and work out how the two get along",
+      "Write a short story starring the creature",
+      "Compare their habitat with a real ecosystem",
+      "Make a whole field guide, one page per creature"
+    ]
+  },
+  "signs": [
+    "They ask 'what is that for?' about real animals",
+    "They notice camouflage and warning colours outside",
+    "They explain choices with a reason, not just 'because it's cool'"
+  ],
+  "makeItReal": "Next time you see an animal, at a zoo, on a walk or in a documentary, ask them to spot one feature and guess its job. Then look it up together.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/creature-habitat.jpg",
+    "alt": "Watercolour illustration of a handmade clay creature with big ears and red spots in front of a shoebox habitat with a painted cave, a tree and sand, beside a sketch and markers",
+    "caption": "Big ears, red spots, and a cave that fits."
+  }
+}
