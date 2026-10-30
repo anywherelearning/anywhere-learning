@@ -72,6 +72,17 @@ export type MembershipPlan = 'annual' | 'monthly';
 export const DOWNLOAD_CAP_PER_WINDOW = 40;
 export const DOWNLOAD_CAP_WINDOW_DAYS = 30;
 
+// Monthly members get far fewer downloads in the same rolling window. A $15
+// month with 40 downloads was a pay-once-and-grab-everything run (Oct 28 2026:
+// trial upgraded, 10 guides saved, cancelled the same day). Reading stays
+// unlimited on both plans; the gap is the reason to switch to yearly.
+export const MONTHLY_DOWNLOAD_CAP_PER_WINDOW = 5;
+
+/** Distinct-guide download cap for a plan. Grants and annual get the full cap. */
+export function downloadCapForPlan(plan: MembershipPlan): number {
+  return plan === 'monthly' ? MONTHLY_DOWNLOAD_CAP_PER_WINDOW : DOWNLOAD_CAP_PER_WINDOW;
+}
+
 // ─── FREE TRIAL ─────────────────────────────────────────────
 // New members start with a free trial (card required, $0 today, auto-converts
 // via Stripe `trial_period_days`). During the trial they can VIEW every guide

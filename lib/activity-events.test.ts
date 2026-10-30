@@ -43,4 +43,12 @@ describe('computeDownloadAllowance', () => {
     const oldest = new Date(now.getTime() - 10 * DAY);
     expect(a.resetsAt?.getTime()).toBe(oldest.getTime() + DOWNLOAD_CAP_WINDOW_DAYS * DAY);
   });
+
+  it('applies a smaller cap when one is passed (monthly plan)', () => {
+    const a = computeDownloadAllowance(rows(5), 'guide-new', now, 5);
+    expect(a.allowed).toBe(false);
+    expect(a.cap).toBe(5);
+    expect(computeDownloadAllowance(rows(4), 'guide-new', now, 5).allowed).toBe(true);
+    expect(computeDownloadAllowance(rows(5), 'guide-0', now, 5).allowed).toBe(true);
+  });
 });

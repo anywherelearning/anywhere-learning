@@ -1230,15 +1230,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Savings Goal Tracker",
     slug: "savings-goal-tracker",
     description:
-      "Set a real savings goal and track progress with actual money maths. Kids choose a goal, calculate how long it will take, track deposits, visualise progress, and learn about interest and opportunity cost. Financial literacy that builds real habits.",
+      "Your child picks something real they want, finds the true price and turns it into a date: the gap divided by what they can save each week. They find ways to earn more, track every deposit and the percent of the goal, and do the maths when tempted to spend, until they buy it with their own money. Financial literacy that builds real habits.",
     shortDescription:
-      "Real-world math for kids ages 6-14: set and track a real savings goal. Deposits, progress, and money math.",
+      "Real-world math for kids ages 6-14: save for a real goal, work out the timeline, earn more and track the percent saved.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrqGAkIBECpwGmxshVtOia",
     blobUrl: "",
     imageUrl: "/products/savings-goal-tracker.jpg",
-    previewFile: "Preview Real-world math - Savings Goal Tracker.pdf",
+    previewFile: "Preview Real-world math - Savings Goal Tracker v3.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

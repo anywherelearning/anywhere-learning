@@ -1033,13 +1033,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'savings-goal-tracker': {
     opening:
-      'Set a real savings goal and track progress with actual money maths. Kids choose a goal, calculate how long it will take, track deposits, visualise progress, and learn about the power of consistent saving. Financial literacy that builds real habits.',
+      'Your child picks something real they want, finds the true price and turns it into a date: the gap divided by what they can save each week. They find ways to earn more, track every deposit and the percent of the goal, and do the maths when tempted to spend, until they buy it with their own money. Financial literacy that builds real habits.',
     whatsIncluded: [
-      'Savings goal setting and planning guide',
-      'Timeline and deposit calculations',
-      'Progress tracking and visualisation',
-      'Deposit schedule and consistency tracking',
-      'Reflection on saving habits and strategies',
+      '5 steps from picking the goal to buying it with their own money',
+      'The gap and the timeline: how many weeks, rounded up',
+      'Ways to earn more, with an hourly rate for each',
+      'A tracker with the percent of the goal, plus the spending test',
+      'A toolkit with tracker columns and milestones',
     ],
     skillTags: ['Financial Literacy', 'Goal Setting', 'Data Tracking', 'Percentages'],
     insideTheLearning: {

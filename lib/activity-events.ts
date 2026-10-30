@@ -4,7 +4,8 @@
  * Every viewer open and PDF download by a member or trial lands in
  * `activity_events` (fire-and-forget, never blocks the response). The download
  * cap reads the same table: a member may download DOWNLOAD_CAP_PER_WINDOW
- * distinct guides in any rolling DOWNLOAD_CAP_WINDOW_DAYS window. Viewing is
+ * distinct guides (MONTHLY_DOWNLOAD_CAP_PER_WINDOW on the monthly plan) in any
+ * rolling DOWNLOAD_CAP_WINDOW_DAYS window. Viewing is
  * never capped, and re-downloading a guide already taken inside the window is
  * free (it does not use another slot).
  *
@@ -25,7 +26,7 @@ export interface DownloadAllowance {
   allowed: boolean;
   /** Distinct guides downloaded inside the window (before this one). */
   used: number;
-  /** DOWNLOAD_CAP_PER_WINDOW, echoed for UI copy. */
+  /** The cap that applied (per plan), echoed for UI copy. */
   cap: number;
   /** True when this exact guide was already downloaded inside the window
    *  (allowed regardless of the cap, uses no slot). */
@@ -49,6 +50,7 @@ export function computeDownloadAllowance(
   rows: WindowRow[],
   slug: string,
   now: Date = new Date(),
+  cap: number = DOWNLOAD_CAP_PER_WINDOW,
 ): DownloadAllowance {
   const used = rows.length;
   const alreadyDownloaded = rows.some((r) => r.slug === slug);
@@ -62,9 +64,9 @@ export function computeDownloadAllowance(
   // Defensive: a clock skew should never produce a reset date in the past.
   const safeResetsAt = resetsAt && resetsAt < now ? now : resetsAt;
   return {
-    allowed: alreadyDownloaded || used < DOWNLOAD_CAP_PER_WINDOW,
+    allowed: alreadyDownloaded || used < cap,
     used,
-    cap: DOWNLOAD_CAP_PER_WINDOW,
+    cap,
     alreadyDownloaded,
     resetsAt: safeResetsAt,
   };
@@ -75,7 +77,11 @@ function windowStart(now: Date = new Date()): Date {
 }
 
 /** Resolve the download allowance for an internal user id. */
-export async function getDownloadAllowance(userId: string, slug: string): Promise<DownloadAllowance> {
+export async function getDownloadAllowance(
+  userId: string,
+  slug: string,
+  cap: number = DOWNLOAD_CAP_PER_WINDOW,
+): Promise<DownloadAllowance> {
   try {
     const rows = await db
       .select({
@@ -91,13 +97,13 @@ export async function getDownloadAllowance(userId: string, slug: string): Promis
         ),
       )
       .groupBy(activityEvents.slug);
-    return computeDownloadAllowance(rows, slug);
+    return computeDownloadAllowance(rows, slug, new Date(), cap);
   } catch (err) {
     console.error('[activity-events] getDownloadAllowance failed, allowing:', err);
     return {
       allowed: true,
       used: 0,
-      cap: DOWNLOAD_CAP_PER_WINDOW,
+      cap,
       alreadyDownloaded: false,
       resetsAt: null,
     };
@@ -108,6 +114,7 @@ export async function getDownloadAllowance(userId: string, slug: string): Promis
 export async function getDownloadAllowanceForClerkId(
   clerkId: string,
   slug = '',
+  cap: number = DOWNLOAD_CAP_PER_WINDOW,
 ): Promise<DownloadAllowance | null> {
   try {
     const rows = await db
@@ -116,7 +123,7 @@ export async function getDownloadAllowanceForClerkId(
       .where(eq(users.clerkId, clerkId))
       .limit(1);
     if (!rows[0]) return null;
-    return getDownloadAllowance(rows[0].id, slug);
+    return getDownloadAllowance(rows[0].id, slug, cap);
   } catch (err) {
     console.error('[activity-events] getDownloadAllowanceForClerkId failed:', err);
     return null;

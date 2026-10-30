@@ -105,7 +105,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "repair-conversation": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Repair%20Conversation%20v2.pdf",
   "road-trip-calculator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Road%20trip%20calculator%20v3.pdf",
   "rube-goldberg-machine": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20a%20Rube%20Goldberg%20Machine%20v2.pdf",
-  "savings-goal-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Savings%20Goal%20Tracker%20v2.pdf",
+  "savings-goal-tracker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Savings%20Goal%20Tracker%20v3.pdf",
   "scavenger-hunt-designer": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Scavenger%20Hunt%20Designer%20v2.pdf",
   "secret-code-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Secret%20Code%20Lab%20v2.pdf",
   "seed-travelers": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Seed%20Travelers%20v3.pdf",

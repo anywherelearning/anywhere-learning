@@ -1,0 +1,328 @@
+{
+  "slug": "savings-goal-tracker",
+  "category": "Real-World Math",
+  "title": "Savings Goal Tracker",
+  "tagline": "Goal · Timeline · Percent saved",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks something real they want, finds the true price, and works out how long it will take to save for it. Then they find ways to earn more, track every deposit, do the maths when they're tempted to spend, and watch the total climb until they can buy it with their own money.",
+  "need": [
+    "A real goal your kid picked: a game, a toy, gear, a gift for someone, a trip fund",
+    "A jar, an envelope or a bank account for the savings",
+    "A way to get money: pocket money, extra jobs, birthday money",
+    "Paper, a pencil and a calculator"
+  ],
+  "lesson": {
+    "text": "A small spend doesn't just cost money. It pushes the goal back. Measure it in weeks, not dollars.",
+    "before": "It's only $4. That's nothing.",
+    "model": [
+      {
+        "part": "Goal",
+        "line": "A $60 game. You have $12, so the gap is $48."
+      },
+      {
+        "part": "Plan",
+        "line": "Save $4 a week: $48 ÷ $4 = 12 weeks."
+      },
+      {
+        "part": "Spend",
+        "line": "Buy a $4 snack and the gap is $52: $52 ÷ $4 = 13 weeks."
+      },
+      {
+        "part": "So",
+        "line": "That $4 snack costs a whole extra week of waiting."
+      }
+    ],
+    "modelNote": "Your kid decides if it's worth it. The maths just makes the choice clear."
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "subtracting, dividing, percentages, rounding up"
+    },
+    {
+      "subject": "Money",
+      "text": "saving, earning and what a spend really costs"
+    },
+    {
+      "subject": "Data",
+      "text": "a tracker and a progress chart"
+    },
+    {
+      "subject": "Time",
+      "text": "weeks and a target date"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the advisor, not the bank. Let them choose the goal, keep the money real, and don't say no to their spending for them. Ask the question, then let them decide and live with it.",
+    "plan": [
+      {
+        "when": "Week 1",
+        "what": "Pick the goal, work out the timeline and find ways to earn (Steps 1 to 3)."
+      },
+      {
+        "when": "Every deposit",
+        "what": "Update the tracker, and do the maths before any spend (Step 4)."
+      },
+      {
+        "when": "After 2 to 4 weeks",
+        "what": "Check the plan, chart it and keep going to the goal (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The goal would take a year",
+        "a": "Let them see it on paper, then ask what would make it shorter: a cheaper version, buying used, or earning more. Or pick a smaller first goal."
+      },
+      {
+        "q": "They spent the money anyway",
+        "a": "Don't rescue them or lecture. Ask them to redo the timeline. Seeing the new date is the lesson."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Patience",
+      "text": "waiting for something worth it"
+    },
+    {
+      "name": "Self-control",
+      "text": "pausing before a spend"
+    },
+    {
+      "name": "Earning",
+      "text": "what their time is worth"
+    },
+    {
+      "name": "Following through",
+      "text": "a plan kept for weeks"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the goal and find the real price",
+      "why": "A real goal with a real price is what makes saving worth it.",
+      "kid": "Your kid picks something specific they want and finds its real price in at least two places. They check new vs used, and add tax and shipping if there are any. Then they write down the goal and the exact target.",
+      "you": "Don't pick the goal. It has to matter to them. Ask 'is there a cheaper version that would work just as well?' and let them do the looking.",
+      "ask": [
+        "Did you check more than one place? Which was cheaper?",
+        "Is there a used one that would be just as good?"
+      ],
+      "tip": "The target is the total you'll actually pay, not the price on the tag. A $55 game with $4 tax is a $59 goal.",
+      "levels": {
+        "explore": "Pick a goal and find out how much it costs.",
+        "develop": "Check 2 places and new vs used, and pick the best deal.",
+        "extend": "Compare 3 options and explain which is the best value and why."
+      }
+    },
+    {
+      "title": "Work out the gap and the timeline",
+      "why": "Division turns a far-off wish into a date.",
+      "kid": "Your kid counts what they already have and subtracts it from the goal to find the gap. They list where their money comes from and how much a week. Then they divide the gap by what they could save each week, try two different amounts, and pick a target date.",
+      "you": "Help them be honest about what comes in each week. Ask 'what if you saved $1 more a week?' and let them see how much faster they'd get there.",
+      "ask": [
+        "Goal $30, you have $8. How much more do you need?",
+        "You need $22 and save $3 a week. How many weeks?"
+      ],
+      "tip": "Round the weeks up. $22 ÷ $3 = 7.3, so it's 8 weeks. After 7 weeks you'd have $21, still $1 short.",
+      "levels": {
+        "explore": "Count what you have, find the gap and how many weeks it takes.",
+        "develop": "Try 2 or 3 weekly amounts, pick a realistic one and set a date.",
+        "extend": "Work out what percent of your weekly money each plan uses, and pick one you can keep up."
+      }
+    },
+    {
+      "title": "Find ways to earn more",
+      "why": "Earning is the fast lane to the goal.",
+      "kid": "Your kid brainstorms ways to earn: extra jobs at home, helping a neighbour, returning cans and bottles, selling outgrown things, a baking stand. For each one they estimate the pay and the time, and work out the hourly rate. They pick one or two and redo the timeline with the extra money.",
+      "you": "Brainstorm with them, but don't hand over the money. Decide together which jobs are extra and paid, and which are just part of family life. Keep jobs safe, and go with them to any neighbour's door.",
+      "ask": [
+        "Washing a car pays $5 and takes 30 minutes. What's your hourly rate?",
+        "An extra $6 this week: how much sooner do you reach the goal?"
+      ],
+      "tip": "Hourly rate = pay ÷ hours. $5 for half an hour is $10 an hour. $6 for 2 hours of weeding is $3 an hour.",
+      "levels": {
+        "explore": "List 3 to 5 ways to earn and what each one pays.",
+        "develop": "List 5 ideas with pay and time, and rank them by hourly rate.",
+        "extend": "Plan the extra earnings for each week and redo the timeline with them."
+      }
+    },
+    {
+      "title": "Track it and face the spending test",
+      "why": "Real numbers, and a real choice when temptation shows up.",
+      "kid": "Your kid sets up a tracker: date, amount, where it came from, the new total and the percent of the goal. They update it every time money goes in or out. When they want to spend on something else, they stop and work out how many weeks it adds before deciding.",
+      "you": "Remind them to update the tracker. When they want to spend, don't say no. Ask 'how many weeks does that add?' and let them choose.",
+      "ask": [
+        "After this deposit, what percent of the goal do you have?",
+        "A $4 snack: how many weeks does that add?"
+      ],
+      "tip": "Percent of goal = saved ÷ goal × 100. $15 of $60 is 15 ÷ 60 = 0.25, so 25%.",
+      "levels": {
+        "explore": "Record each deposit with the date and the new total.",
+        "develop": "Track the percent of the goal, and do the maths before any spend.",
+        "extend": "Keep a spending log: what you skipped, what you bought, and the weeks each one cost."
+      }
+    },
+    {
+      "title": "Check it, chart it, reach it",
+      "why": "Plans drift. Checking keeps the goal in sight.",
+      "kid": "After 2 to 4 weeks, your kid compares what they planned to have with what they really have, and fixes the plan if they're behind. They draw a chart of the total with a goal line. When they reach it, they buy it with their own money. If not yet, they work out the new date.",
+      "you": "Celebrate the saving, not just the buying. If they're behind, ask what made it harder and what they'll change, then let them decide.",
+      "ask": [
+        "You planned $24 by now and have $18. What's the new date?",
+        "What was harder than you expected?"
+      ],
+      "tip": "Thermometer chart: draw a tall thermometer, mark 25%, 50%, 75% and the goal, and colour it up after every deposit.",
+      "levels": {
+        "explore": "Colour in a thermometer chart and check if you're on track.",
+        "develop": "Compare planned vs real, fix the timeline, and draw a line chart with a goal line.",
+        "extend": "Chart planned vs real on one graph, mark the big moments, and write what the chart shows."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Saver's Toolkit",
+    "intro": "Everything for the weeks of saving: finding the real price, ways to earn, the tracker and the milestones.",
+    "items": [
+      {
+        "name": "Find the real price",
+        "lines": [
+          {
+            "k": "Check:",
+            "v": "2 or 3 places, in stores and online"
+          },
+          {
+            "k": "Used:",
+            "v": "often half the price or less"
+          },
+          {
+            "k": "Sales:",
+            "v": "holidays and back-to-school"
+          },
+          {
+            "k": "Add:",
+            "v": "tax and shipping"
+          }
+        ],
+        "ask": "Check it: is your target the total you'll actually pay?"
+      },
+      {
+        "name": "Ways kids can earn",
+        "lines": [
+          {
+            "k": "Extra jobs at home:",
+            "v": "the ones beyond the usual"
+          },
+          {
+            "k": "Neighbours:",
+            "v": "pet or plant sitting, raking, with you"
+          },
+          {
+            "k": "Selling:",
+            "v": "outgrown toys, books, clothes"
+          },
+          {
+            "k": "Cans and bottles:",
+            "v": "return them for the deposit refund"
+          },
+          {
+            "k": "Making:",
+            "v": "a baking or lemonade stand"
+          }
+        ],
+        "ask": "Check it: what's the hourly rate for each one?"
+      },
+      {
+        "name": "Tracker columns",
+        "lines": [
+          {
+            "k": "Date:",
+            "v": "when the money moved"
+          },
+          {
+            "k": "Amount:",
+            "v": "in, or out with a minus"
+          },
+          {
+            "k": "From:",
+            "v": "pocket money, job, gift"
+          },
+          {
+            "k": "Total:",
+            "v": "the new running total"
+          },
+          {
+            "k": "% of goal:",
+            "v": "total ÷ goal × 100"
+          }
+        ],
+        "ask": "Check it: does the total match the jar?"
+      },
+      {
+        "name": "Milestones for a $60 goal",
+        "lines": [
+          {
+            "k": "25%:",
+            "v": "$15, a quarter of the way"
+          },
+          {
+            "k": "50%:",
+            "v": "$30, halfway"
+          },
+          {
+            "k": "75%:",
+            "v": "$45, almost there"
+          },
+          {
+            "k": "100%:",
+            "v": "$60, buy it"
+          }
+        ],
+        "ask": "Check it: which week will you hit halfway?"
+      }
+    ],
+    "after": {
+      "label": "Saver's formulas",
+      "lines": [
+        "Gap = goal − what you have",
+        "Weeks = gap ÷ weekly savings, rounded up",
+        "% of goal = saved ÷ goal × 100"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They saved for it themselves.",
+    "text": "Your kid picked a goal, found the real price, turned it into a date, earned extra, tracked every dollar and did the maths every time they were tempted. Whether they've bought it yet or they're still on the way, they know what saving actually takes, and what a small spend really costs.",
+    "celebrate": "Tell them which part impressed you most: the spend they skipped, the job they took on, or the week they stuck with it when it was hard.",
+    "extensions": [
+      "Set a bigger goal and see how the plan scales",
+      "Track spending for a month next to saving and see where the money goes",
+      "Look up how a savings account pays interest and work out what it adds",
+      "Set a family goal together and see how pooling money changes the timeline"
+    ]
+  },
+  "signs": [
+    "They ask how many weeks a spend would cost them",
+    "They check more than one place before buying",
+    "They know their percent of the goal without asking"
+  ],
+  "makeItReal": "Next time they ask you to buy them something, ask them to work out how long it would take to save for it. Then let them decide if it's worth it.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/savings-goal-tracker.jpg",
+    "alt": "A girl sorting empty cans into blue crates on a metal table at a recycling depot",
+    "caption": "Sorting cans for her wand fund.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "My daughter saves her can money, the refund from sorting and returning cans at the recycling depot. She saved it up for a magic wand at Universal Studios, and now she's saving for a spring concert with a friend.",
+    "quotes": []
+  }
+}
