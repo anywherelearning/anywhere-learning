@@ -800,6 +800,9 @@ async function upsertSubscriptionFromStripe(sub: Stripe.Subscription) {
       .update(subscriptions)
       .set({
         status: sub.status,
+        // Plan switches in the billing portal (monthly <-> yearly) change the
+        // price on the same subscription; the download cap and emails read it.
+        ...(priceId && { stripePriceId: priceId }),
         currentPeriodEnd: periodEnd,
         cancelAtPeriodEnd: sub.cancel_at_period_end ?? false,
         updatedAt: new Date(),
