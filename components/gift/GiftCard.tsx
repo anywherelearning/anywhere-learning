@@ -17,12 +17,20 @@ export default function GiftCard({ card }: { card: GiftCardData }) {
   return (
     <div className="gift-card mx-auto w-full max-w-[600px] shadow-[0_18px_30px_-20px_rgba(45,58,46,0.55)] print:max-w-none print:shadow-none">
       <div className="gift-card-page" style={page}>
+        {/* washi tape on two corners, like the paper pieces around the site */}
+        <span aria-hidden="true" style={{ ...tape, top: '4.2%', left: '2.5%', transform: 'rotate(-38deg)' }} />
+        <span aria-hidden="true" style={{ ...tape, bottom: '4.2%', right: '2.5%', transform: 'rotate(-38deg)', background: 'rgba(196,131,106,0.5)' }} />
+
         <div style={frame}>
+          {/* trail stops on the border, like the stops on the adventure map */}
+          {STOPS.map((st, i) => (
+            <span key={i} aria-hidden="true" style={{ ...stop, ...st.at, background: st.color }} />
+          ))}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ ...script, fontSize: '2.6em', lineHeight: 1, color: FOREST }}>A gift for you</div>
 
           {/* a fan of real activities from the library */}
-          <div style={{ position: 'relative', width: '86%', margin: '1.2em auto 0', aspectRatio: '2.25 / 1' }}>
+          <div style={{ position: 'relative', width: '80%', margin: '1em auto 0', aspectRatio: '2.25 / 1' }}>
             {FAN.map((c, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -46,7 +54,7 @@ export default function GiftCard({ card }: { card: GiftCardData }) {
           </div>
 
           <div style={{ ...caps, fontSize: '0.72em', color: GOLD, marginTop: '1.8em' }}>{forLine}</div>
-          <div style={{ fontFamily: 'Georgia, serif', fontSize: '2.1em', lineHeight: 1.15, marginTop: '0.35em' }}>
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: '1.95em', lineHeight: 1.15, marginTop: '0.35em' }}>
             A year of real-world adventures
           </div>
           <div style={{ fontSize: '0.95em', color: BODY, lineHeight: 1.55, margin: '0.8em auto 0', maxWidth: '30em' }}>
@@ -59,9 +67,9 @@ export default function GiftCard({ card }: { card: GiftCardData }) {
               style={{
                 fontFamily: 'Georgia, serif',
                 fontStyle: 'italic',
-                fontSize: '1.2em',
-                lineHeight: 1.55,
-                margin: '1.4em auto 0',
+                fontSize: '1.12em',
+                lineHeight: 1.5,
+                margin: '1.2em auto 0',
                 maxWidth: '24em',
                 whiteSpace: 'pre-line',
               }}
@@ -118,6 +126,19 @@ const FAN = [
   { slug: 'board-game-studio', tilt: 10, lift: '4%', z: 1 },
 ];
 
+/** Stops along the trail border: corners and midpoints, in the map's colours. */
+const STOP_HALF = '-0.75em';
+const STOPS: { at: CSSProperties; color: string }[] = [
+  { at: { top: STOP_HALF, left: '12%' }, color: '#C4836A' },
+  { at: { top: STOP_HALF, left: 'calc(50% - 0.65em)' }, color: '#588157' },
+  { at: { top: STOP_HALF, right: '12%' }, color: '#D4A373' },
+  { at: { top: 'calc(50% - 0.65em)', left: STOP_HALF }, color: '#D4A373' },
+  { at: { top: 'calc(50% - 0.65em)', right: STOP_HALF }, color: '#C4836A' },
+  { at: { bottom: STOP_HALF, left: '12%' }, color: '#588157' },
+  { at: { bottom: STOP_HALF, left: 'calc(50% - 0.65em)' }, color: '#C4836A' },
+  { at: { bottom: STOP_HALF, right: '12%' }, color: '#588157' },
+];
+
 const INK = '#2F3A2E';
 const BODY = '#5B6270';
 const GOLD = '#B5803E';
@@ -130,18 +151,38 @@ const page: CSSProperties = {
   overflow: 'hidden',
   background: '#FFFCF6',
   color: INK,
-  padding: '7%',
+  padding: '6.5%',
   boxSizing: 'border-box',
   WebkitPrintColorAdjust: 'exact',
   printColorAdjust: 'exact',
+};
+
+const stop: CSSProperties = {
+  position: 'absolute',
+  width: '1.3em',
+  height: '1.3em',
+  borderRadius: '50%',
+  border: '0.28em solid #FFFCF6',
+  boxShadow: '0 0 0 0.12em #D9B98F',
+  boxSizing: 'border-box',
+  zIndex: 2,
+};
+
+const tape: CSSProperties = {
+  position: 'absolute',
+  width: '13%',
+  height: '2.6%',
+  background: 'rgba(232,201,154,0.75)',
+  zIndex: 3,
 };
 
 const frame: CSSProperties = {
   position: 'relative',
   height: '100%',
   boxSizing: 'border-box',
-  border: '1.5px dashed #D4A373',
-  padding: '7% 8% 4%',
+  border: '0.2em dashed #D9B98F',
+  borderRadius: '1.4em',
+  padding: '6% 6.5% 3.5%',
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
