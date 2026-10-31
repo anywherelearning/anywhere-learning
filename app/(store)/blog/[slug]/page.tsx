@@ -19,7 +19,7 @@ import {
 } from '@/lib/blog';
 import { renderBlock, getTableOfContents, getHowToSteps } from '@/lib/content-blocks';
 import { getResourceBySlug } from '@/lib/resources';
-import { applyLeadMagnetCta, getLeadMagnetForPost, INLINE_CAPTURE_POSTS, inlineCaptureIndex, QUIZ_FIRST_PAGES } from '@/lib/lead-magnets';
+import { applyLeadMagnetCta, earlyAskFor, getLeadMagnetForPost, inlineCaptureIndex } from '@/lib/lead-magnets';
 import BlogInlineEmailCapture from '@/components/blog/BlogInlineEmailCapture';
 import StickyTOC from '@/components/blog/StickyTOC';
 import MobileTOC from '@/components/blog/MobileTOC';
@@ -460,14 +460,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <MobileTOC items={toc} />
               {(() => {
                 let firstParagraphRendered = false;
-                // Life-skills pages: quiz before the first H2, form before the
-                // second. Everywhere else in the set: form before the first H2.
-                const quizFirst = QUIZ_FIRST_PAGES.has(post.slug);
+                // Every post: one ask under the summary, chosen by earlyAskFor
+                // (the post's own checklist form, or the quiz for life-skills
+                // and character posts, which then get the form before the
+                // second H2).
+                const { quizFirst, formSlot } = earlyAskFor(post.slug, magnet);
                 const quizAt = quizFirst ? inlineCaptureIndex(contentWithCallouts, 1) : -1;
-                // The inline form is an email ask; a Skills Map post has no free thing to send.
-                const captureAt = INLINE_CAPTURE_POSTS.has(post.slug) && magnet.kind !== 'skills-map'
-                  ? inlineCaptureIndex(contentWithCallouts, quizFirst ? 2 : 1)
-                  : -1;
+                const captureAt = formSlot ? inlineCaptureIndex(contentWithCallouts, formSlot) : -1;
                 return contentWithCallouts.map((block, i) => {
                   const isFirst = block.type === 'paragraph' && !firstParagraphRendered;
                   if (isFirst) firstParagraphRendered = true;

@@ -289,20 +289,12 @@ export function applyLeadMagnetCta(
 // organic landings from GSC. Read GA4 lead_source "inline:*" against
 // "popup:*" before moving it again.
 
-export const INLINE_CAPTURE_POSTS = new Set<string>([
-  'outdoor-stem-challenges',
-  'shark-tank-for-kids',
-  'lego-stem-activities',
-  'forest-school-activities',
-  'engineering-for-kids',
-  'life-skills-before-12',
-  'real-world-history-for-kids',
-  'rube-goldberg-kids',
-  'decision-making-skills-kids',
-  'kitchen-learning-lab',
-  'backyard-science-experiments',
-  'design-a-theme-park-kids',
-]);
+// Oct 31 2026: every post gets the early ask, not a hand-picked list. 84 of
+// 96 posts made their first ask after 90% of the page, and only about 8% of
+// readers scroll that far (family-debate-night: 220 views, 18 deep scrolls).
+// Meanwhile life-skills-before-12, with the quiz under its summary, turned
+// 24 sessions into 6 leads. Which ask goes first is decided per post by
+// earlyAskFor() below, so it always matches what the reader came for.
 
 export const INLINE_CAPTURE_GUIDES = new Set<string>([
   'life-skills-for-kids',
@@ -324,6 +316,33 @@ export const QUIZ_FIRST_PAGES = new Set<string>([
   // the inline form, while quiz-first life-skills-before-12 took 5 of 8.
   'shark-tank-for-kids',
 ]);
+
+/**
+ * Which early ask a blog post shows under its summary.
+ *
+ * - A post with its own printable checklist leads with that checklist's
+ *   email form: the most relevant free thing on the site for that reader.
+ *   (Shark Tank is the known exception: 0 leads on the form, then 0 from 80
+ *   sessions on the quiz. Much of its search traffic is teachers and
+ *   students after a classroom activity, so neither ask fits; it stays
+ *   quiz-first until a classroom offer exists.)
+ * - Life-skills and character posts (the QUIZ_FIRST_PAGES list, plus any
+ *   post whose offer is the general Capable Kid guide or the paid Skills
+ *   Map) lead with the quiz, the best free converter, and keep the email
+ *   form for the second slot.
+ * - The Skills Map is paid, so it never gets an email form.
+ */
+export function earlyAskFor(
+  postSlug: string,
+  magnet: LeadMagnet,
+): { quizFirst: boolean; formSlot: 0 | 1 | 2 } {
+  const quizFirst =
+    QUIZ_FIRST_PAGES.has(postSlug) ||
+    magnet.kind === 'capable-kid' ||
+    magnet.kind === 'skills-map';
+  if (magnet.kind === 'skills-map') return { quizFirst, formSlot: 0 };
+  return { quizFirst, formSlot: quizFirst ? 2 : 1 };
+}
 
 /**
  * Index of the nth H2 (1-based), the slot an inline ask is rendered before.
