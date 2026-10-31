@@ -607,13 +607,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'theme-park': {
     opening:
-      'Design a theme park or adventure course from concept to completion. Kids plan rides, map layouts, calculate budgets, design marketing materials, and build scale models. A project that combines maths, art, engineering, writing, and business thinking.',
+      'Your child designs a whole theme park or backyard adventure course: the theme, the star rides, the map and the prices. They plan how visitors move, build it as a model, a drawing or a life-size course, work out what a family of four would spend, then test it on a real visitor and hold a grand opening. Maths, design and business thinking in one big project.',
     whatsIncluded: [
-      'Complete theme park design project guide',
-      'Ride and attraction design with safety considerations',
-      'Park layout mapping and visitor flow planning',
-      'Budget calculations and pricing decisions',
-      'Marketing design and scale model building',
+      '5 steps from the theme to the grand opening',
+      'Map flow: where the big ride goes, and why',
+      'Three ways to build: tabletop, drawn or a backyard course',
+      'Park maths: a family day total and wait times',
+      'A park designer toolkit with an attraction mix and a map checklist',
     ],
     skillTags: ['Maths', 'Design', 'Engineering', 'Business', 'Art'],
     insideTheLearning: {

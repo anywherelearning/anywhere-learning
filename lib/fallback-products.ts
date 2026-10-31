@@ -459,15 +459,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Create a Theme Park or Adventure Course",
     slug: "theme-park",
     description:
-      "Design a theme park or adventure course from concept to completion. Kids plan rides, map layouts, calculate budgets, design marketing materials, and build scale models. A project that combines maths, art, engineering, and business thinking.",
+      "Your child designs a whole theme park or backyard adventure course: the theme, the star rides, the map and the prices. They plan how visitors move, build it as a model, a drawing or a life-size course, work out what a family of four would spend, then test it on a real visitor and hold a grand opening. Maths, design and business thinking in one big project.",
     shortDescription:
-      "Design project for kids ages 6-14: design a theme park. Plan rides, map layouts, and build scale models.",
+      "Design project for kids ages 6-14: design, build and open a theme park, from the map and the flow to the prices.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpkAkIBECpwGmWo13CnUU",
     blobUrl: "",
     imageUrl: "/products/theme-park.jpg",
-    previewFile: "Preview Creativity & Maker Create a Theme Park or Adventure Course.pdf",
+    previewFile: "Preview Creativity & Maker Create a Theme Park or Adventure Course v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

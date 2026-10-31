@@ -125,7 +125,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "survival-base": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20a%20Survival%20Base%20for%20an%20Imaginary%20Expedition%20v3.pdf",
   "swap-day-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20The%20Swap%20Day%20Challenge%20v2.pdf",
   "teach-it-to-learn-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Teach%20It%20To%20Learn%20It%20v4.pdf",
-  "theme-park": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Theme%20Park%20or%20Adventure%20Course%20v2.pdf",
+  "theme-park": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Theme%20Park%20or%20Adventure%20Course%20v3.pdf",
   "three-ais-one-question": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%2B%20Digital%20Literacy%20-%20THREE%20AIs%2C%20ONE%20QUESTION%20v2.pdf",
   "time-energy-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Time%20%26%20Energy%20Planner%20v2.pdf",
   "trade-it-up": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Trade%20It%20Up%20v2.pdf",

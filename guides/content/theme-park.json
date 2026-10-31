@@ -1,0 +1,321 @@
+{
+  "slug": "theme-park",
+  "category": "Creativity & Maker",
+  "title": "Theme Park",
+  "tagline": "Design · Build · Open",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid designs a whole theme park or adventure course: the theme, the star rides, the map, the prices and the signs. They build it as a tabletop model, a drawn park or a life-size course in the yard, test it on a real visitor, fix one thing, and hold a grand opening.",
+  "need": [
+    "Cardboard, boxes, paper towel rolls, tape, scissors and string",
+    "Paper and markers for the map, signs and tickets",
+    "Small toys or figurines as visitors",
+    "Outdoor option: chalk, pool noodles, cones, jump ropes, buckets",
+    "Play money or homemade tickets (optional)"
+  ],
+  "lesson": {
+    "text": "Where you put things decides how people move. A good park map pulls visitors through the whole park instead of jamming them at the gate.",
+    "before": "The roller coaster, the snack stand and the bathrooms are all right by the gate.",
+    "model": [
+      {
+        "part": "Problem",
+        "line": "Everyone stops at the gate at once. Instant traffic jam."
+      },
+      {
+        "part": "Big ride",
+        "line": "Put it at the far end of the park, so people walk past everything else to get there."
+      },
+      {
+        "part": "Food",
+        "line": "Put the snack stand between two thrill rides, where people get hungry."
+      },
+      {
+        "part": "So",
+        "line": "The map decides where people go, so plan it on purpose."
+      }
+    ],
+    "modelNote": "That's the question behind every step: what does a visitor do here, and where do they go next?"
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "prices, a family's day total, wait times"
+    },
+    {
+      "subject": "Design",
+      "text": "layout, flow and zones"
+    },
+    {
+      "subject": "Engineering",
+      "text": "rides and paths that hold up"
+    },
+    {
+      "subject": "Writing",
+      "text": "names, signs, menus and a tour"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the visitor, not the designer. Let them pick the theme and build it their way. When they're ready, walk through it as a real guest: your honest confusion or delight is the best feedback they'll get.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the theme and rides, and draw the map (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the park and add the details and prices (Steps 3 and 4)."
+      },
+      {
+        "when": "Opening day",
+        "what": "Test it, fix one thing, then open the gates (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want every idea they've ever had",
+        "a": "Start with 3 to 5 star attractions. The rest go on a 'coming soon' sign for Season 2."
+      },
+      {
+        "q": "They spend hours on one ride",
+        "a": "That's fine. Some kids perfect one ride, others make five in twenty minutes. The goal is a park someone can tour."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Spatial thinking",
+      "text": "how people move through a space"
+    },
+    {
+      "name": "Business sense",
+      "text": "what visitors want, and what it costs"
+    },
+    {
+      "name": "Taking feedback",
+      "text": "watching a real visitor"
+    },
+    {
+      "name": "Hosting",
+      "text": "running opening day"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the theme and the star rides",
+      "why": "One theme, and a few rides worth the trip.",
+      "kid": "Your kid picks one theme, like a jungle adventure, a space station or a pirate cove, and names 3 to 5 star attractions. They use the Attraction mix card in the Park Designer's Toolkit at the end of the guide to get something thrilling, something calm and something hands-on.",
+      "you": "Help them commit to one theme instead of cramming in everything. Ask what kind of park they would want to visit.",
+      "ask": [
+        "What's the one ride people would travel far to try?",
+        "What do you want visitors talking about on the way home?"
+      ],
+      "tip": "Name everything. 'The Jungle Drop' sells better than 'the drop ride,' and naming makes the theme stick.",
+      "levels": {
+        "explore": "Pick a theme and draw 3 rides.",
+        "develop": "Pick a theme and name 4 or 5 rides of at least 3 different kinds.",
+        "extend": "Plan themed zones, with a star ride and a snack stand in each."
+      }
+    },
+    {
+      "title": "Draw the map and plan the flow",
+      "why": "The map decides where people go.",
+      "kid": "Your kid draws the park from above on a big sheet: the entrance, the zones, the paths, the food and the bathrooms. Then they walk a finger through it as a pretend visitor and fix where it gets crowded or where nobody would go.",
+      "you": "Ask about flow: 'I just walked in the gate. Where do I go first?' Let them find the problems with the finger walk.",
+      "ask": [
+        "If 100 people walked in at once, where would the traffic jam be?",
+        "What do visitors see first when they come through the gate?"
+      ],
+      "tip": "Real parks put a big attraction at the far end so people walk past everything else on the way. Try it.",
+      "levels": {
+        "explore": "Draw a map with the entrance, the rides and paths.",
+        "develop": "Draw a map with zones, food, bathrooms and paths, then do the finger walk.",
+        "extend": "Use the Map checklist card, and add a one-way route that passes every ride."
+      }
+    },
+    {
+      "title": "Build the park",
+      "why": "The map becomes something you can walk through.",
+      "kid": "Your kid builds the park their way: a tabletop model (boxes for buildings, tubes for towers, string for zip lines, toys as riders), a drawn park with a blueprint of each ride, or a life-size course in the yard with chalk paths, pool noodle tunnels and cone obstacles.",
+      "you": "Help with tricky construction, and remind them that working matters more than pretty.",
+      "ask": [
+        "What's the hardest part to build, and how could you simplify it?",
+        "Does the build match your map, or did you change things?"
+      ],
+      "tip": "For a life-size course, time each visitor and post the results. Kids will run it again and again.",
+      "levels": {
+        "explore": "Build 3 attractions any way you like.",
+        "develop": "Build every star attraction, laid out like the map.",
+        "extend": "Build it with a working moving part, like a zip line, a ramp or a spinner."
+      }
+    },
+    {
+      "title": "Add the details and the prices",
+      "why": "Signs, tickets and a menu turn rides into a place.",
+      "kid": "Your kid adds an entrance sign, tickets or wristbands and a menu for at least one food stand, with prices. Then they work out what a family of four would spend in a day. Extras if they want: a gift shop, a mascot or a safety rules poster.",
+      "you": "Nudge the business side: 'What does a hot dog cost at your park?' Let the maths happen without pointing it out.",
+      "ask": [
+        "What would a family of four spend for a whole day?",
+        "What souvenir would people buy to remember it?"
+      ],
+      "tip": "Family of 4: tickets 4 × $12 = $48, lunch 4 × $6 = $24, one souvenir $5. That's $77. Would they pay it?",
+      "levels": {
+        "explore": "Make a sign, tickets and a menu with prices.",
+        "develop": "Price everything and work out a family's day total.",
+        "extend": "Work out wait times: 40 people in line, 8 riders per trip, 2 minutes a trip = 10 minutes."
+      }
+    },
+    {
+      "title": "Test it, fix one thing, open the gates",
+      "why": "A real visitor shows what the plan missed.",
+      "kid": "Your kid gives someone a full tour: the entrance, a ticket, the paths, every ride. They watch what confuses the visitor, then fix the one thing that would help most. Then the grand opening: a ribbon, the park's name announced, tickets taken, tours given, food served.",
+      "you": "Be an honest visitor first. Don't fake excitement for parts that don't work yet. On opening day, bring the energy of someone who waited in line all morning.",
+      "ask": [
+        "What part of the tour surprised you?",
+        "If you built a second park, what would you change?"
+      ],
+      "tip": "Fix one thing, not everything. Pick the change that makes the biggest difference for a visitor.",
+      "levels": {
+        "explore": "Give one tour, fix one thing, and open the park.",
+        "develop": "Run 2 tours, fix the biggest problem, and hold an opening with roles for helpers.",
+        "extend": "Collect visitor feedback in a guest book, and film a 'welcome to the park' commercial."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Park Designer's Toolkit",
+    "intro": "Themes to pick from, the mix of rides that works, what goes on the map and the maths behind a day at the park.",
+    "items": [
+      {
+        "name": "Theme ideas",
+        "lines": [
+          {
+            "k": "Wild:",
+            "v": "jungle adventure, dinosaur island"
+          },
+          {
+            "k": "Far away:",
+            "v": "space station, underwater world"
+          },
+          {
+            "k": "Long ago:",
+            "v": "medieval kingdom, pirate cove"
+          },
+          {
+            "k": "Secret:",
+            "v": "spy academy, enchanted forest"
+          }
+        ],
+        "ask": "Check it: does every ride fit the theme?"
+      },
+      {
+        "name": "Attraction mix",
+        "lines": [
+          {
+            "k": "Thrill:",
+            "v": "a coaster, a drop tower"
+          },
+          {
+            "k": "Calm:",
+            "v": "a boat ride, a garden walk"
+          },
+          {
+            "k": "Hands-on:",
+            "v": "a maze, a game booth"
+          },
+          {
+            "k": "Show:",
+            "v": "a parade, a stage"
+          },
+          {
+            "k": "Rest:",
+            "v": "benches and shade"
+          }
+        ],
+        "ask": "Check it: do you have at least 3 kinds?"
+      },
+      {
+        "name": "Map checklist",
+        "lines": [
+          {
+            "k": "Gate:",
+            "v": "the way in and the way out"
+          },
+          {
+            "k": "Zones:",
+            "v": "rides grouped by theme"
+          },
+          {
+            "k": "Paths:",
+            "v": "connecting everything"
+          },
+          {
+            "k": "Food and bathrooms:",
+            "v": "easy to find"
+          },
+          {
+            "k": "Big ride:",
+            "v": "at the far end, a reason to walk"
+          }
+        ],
+        "ask": "Check it: where would the traffic jam happen?"
+      },
+      {
+        "name": "Park maths",
+        "lines": [
+          {
+            "k": "Family day:",
+            "v": "tickets × 4 + food + a souvenir"
+          },
+          {
+            "k": "Wait time:",
+            "v": "people in line ÷ riders per trip × minutes per trip"
+          },
+          {
+            "k": "Price check:",
+            "v": "would you pay it?"
+          }
+        ],
+        "ask": "Check it: would a family of four say it's worth it?"
+      }
+    ],
+    "after": {
+      "label": "Park rules",
+      "lines": [
+        "One theme, and everything fits it.",
+        "The big ride goes at the far end.",
+        "Food near the thrills, benches near the food.",
+        "After every tour, fix one thing."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "The park is open.",
+    "text": "Your kid started with a vision, fit it into a real space, built it from whatever was around, priced it, tested it on a real visitor and ran opening day. That's how designers, architects and business owners work: plan, build, test, fix, open.",
+    "celebrate": "Tell them what impressed you: a smart spot on the map, a ride name that made you laugh, or how they ran opening day.",
+    "extensions": [
+      "Design a Season 2 expansion with a new zone",
+      "Build a water park, zoo or museum next door",
+      "Make a park brochure or a poster",
+      "Turn the yard course into a timed challenge and beat your record"
+    ]
+  },
+  "signs": [
+    "They notice how real parks, stores and museums move people around",
+    "They work out what a day out would cost",
+    "They ask a visitor what confused them, and fix it"
+  ],
+  "makeItReal": "Next time you visit a park, zoo or museum, ask them to find where the big attraction is and why it's there. Real designers made the same choices they did.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/theme-park.jpg",
+    "alt": "Watercolour illustration of a cardboard tabletop theme park with tube towers, a zip line, a ramp coaster, a snack stand, toy visitors and a hand-drawn park map",
+    "caption": "Tube towers, a zip line and a map that moves people."
+  }
+}
