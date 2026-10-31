@@ -707,13 +707,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kinetic-sculpture': {
     opening:
-      'Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Combines physics, engineering, and artistic expression into a single hands-on project.',
+      'Your child builds art that moves: a hanging mobile, a spinner, a wobbling balance sculpture or a piece that turns in the wind. They pick the movement, build a base that holds, then balance it using the real physics of weight times distance. Then they name it and show it in a family gallery. Pure STEAM: art, engineering and physics in the same build.',
     whatsIncluded: [
-      'Complete kinetic art project guide',
-      'Movement principles: balance, wind, gravity, rotation',
-      'Material exploration and construction techniques',
-      'Design iteration: test, adjust, refine',
-      'Exhibition planning and artist statement writing',
+      '5 steps from picking the movement to a gallery show',
+      'The balance rule: heavy close to the middle, light far out',
+      'Bases and spinning joints from recycling bin finds',
+      'A title card and an artist statement',
+      'A moving art toolkit with five movement types',
     ],
     skillTags: ['STEM', 'Physics', 'Art', 'Engineering', 'Design', 'Expression'],
     insideTheLearning: {

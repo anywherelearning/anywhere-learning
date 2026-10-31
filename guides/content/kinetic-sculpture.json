@@ -1,0 +1,325 @@
+{
+  "slug": "kinetic-sculpture",
+  "category": "Creativity & Maker",
+  "title": "Kinetic Sculpture",
+  "tagline": "Balance · Spin · Swing",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds a piece of art that moves: a hanging mobile, a spinner, a wobbling balance sculpture or something that turns in the wind. They pick the movement, build a base that holds, get the moving part working through a lot of trial and error, then name it and show it in a family gallery.",
+  "need": [
+    "Cardboard, string, tape, straws and sticks",
+    "Wire, pipe cleaners, coat hangers and paperclips",
+    "Beads, coins or small rocks as weights",
+    "Markers or paint for decorating",
+    "Outdoor option: hang it from a branch, or use fabric scraps to catch the wind"
+  ],
+  "lesson": {
+    "text": "A mobile balances when weight × distance is the same on both sides. Heavy things go close to the middle, light things far out.",
+    "before": "I hung the bird and the fish the same distance from the string, and it tipped.",
+    "model": [
+      {
+        "part": "Problem",
+        "line": "The bird weighs 2 paperclips, the fish weighs 1. Both hang 10 cm out. It tips toward the bird."
+      },
+      {
+        "part": "Rule",
+        "line": "Weight × distance has to match on each side."
+      },
+      {
+        "part": "Fix",
+        "line": "Move the bird to 5 cm: 2 × 5 = 10. The fish stays at 10 cm: 1 × 10 = 10. Level."
+      },
+      {
+        "part": "So",
+        "line": "Heavy close to the middle, light far out."
+      }
+    ],
+    "modelNote": "That's the physics hiding inside every mobile, and the question behind every step: what makes it move, and what makes it stop?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "gravity, balance, pivots, wind"
+    },
+    {
+      "subject": "Math",
+      "text": "weight × distance, measuring"
+    },
+    {
+      "subject": "Engineering",
+      "text": "bases and joints that hold"
+    },
+    {
+      "subject": "Art",
+      "text": "colour, shape, a title and a statement"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the supplier and the extra pair of hands. Ask 'what do you want it to do?' instead of deciding for them. It will fall over and the tape won't hold. That's the actual learning, so ask 'what could you try instead?' rather than fixing it.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the movement, sketch it and gather materials (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the base and add the movement (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Decorate, name it and hold the gallery show (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It keeps falling over and they want to quit",
+        "a": "Shrink the goal: get just the base standing, or just one arm of the mobile level. Then add the next part."
+      },
+      {
+        "q": "They want it to do everything at once",
+        "a": "One clear movement first. Once that works, they can add a second."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Problem-solving",
+      "text": "why it tips, and what to change"
+    },
+    {
+      "name": "Patience",
+      "text": "tape, untape, retape"
+    },
+    {
+      "name": "Creative thinking",
+      "text": "art that does something"
+    },
+    {
+      "name": "Presenting",
+      "text": "a title card and a gallery talk"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the movement",
+      "why": "One clear movement makes the first build possible.",
+      "kid": "Your kid tries out movements with things from around the house: swing a sock on a string, balance a spoon on a finger, roll a marble down a book, blow on a paper strip. Then they pick one from the Movement types card in the Moving Art Toolkit at the end of the guide.",
+      "you": "Demonstrate a few movements, then let them choose. Ask what they want the sculpture to do.",
+      "ask": [
+        "Which kind of movement is most interesting to you?",
+        "Where on the sculpture will the moving part be?"
+      ],
+      "tip": "Most kids want everything at once. One movement that works beats three that don't.",
+      "levels": {
+        "explore": "Try 3 movements and pick a favourite.",
+        "develop": "Pick one movement and explain what makes it move.",
+        "extend": "Pick two movements to combine, like a spinner at the end of a swinging arm."
+      }
+    },
+    {
+      "title": "Sketch it and gather materials",
+      "why": "A plan shows what holds, what moves and what connects them.",
+      "kid": "Your kid sketches the sculpture and marks where it moves. Then they go on a scavenger hunt for three kinds of materials: something to build with (cardboard, sticks, a hanger), something to connect with (string, tape, wire) and something to decorate with.",
+      "you": "Help them think about what will hold weight. The recycling bin is the best supply store.",
+      "ask": [
+        "What's the strongest thing you found for the base?",
+        "How will the moving part attach and still move freely?"
+      ],
+      "tip": "Grab more than they think they need. Running out mid-build kills the momentum.",
+      "levels": {
+        "explore": "Draw it and collect materials with help.",
+        "develop": "Sketch it with labels: base, moving part, joints.",
+        "extend": "Sketch it from two sides and list which material does each job, and why."
+      }
+    },
+    {
+      "title": "Build a base that holds",
+      "why": "Nothing moves well on a base that wobbles.",
+      "kid": "Your kid builds the part that holds everything up. Standing sculpture: a shoebox weighted with rocks, thick cardboard with supports, or a container with coins in the bottom. Hanging sculpture: a strong top bar like a stick, a hanger or a dowel.",
+      "you": "Stay close for an extra hand, but let them solve the wobble. Ask questions instead of rebuilding it.",
+      "ask": [
+        "Is the base heavy enough to hold the moving parts?",
+        "What could make it more stable?"
+      ],
+      "tip": "A wider bottom and a heavier bottom both make things harder to tip. Try one, then the other.",
+      "levels": {
+        "explore": "Build a base that stands or hangs on its own.",
+        "develop": "Build a base that holds the weight of the moving parts.",
+        "extend": "Test how much weight the base holds before it tips, using coins, and write it down."
+      }
+    },
+    {
+      "title": "Add the movement",
+      "why": "This is where most of the time and most of the learning goes.",
+      "kid": "Your kid attaches the moving parts and gets them working. A swing needs a pivot and the right string length. A spinner needs an axis that turns freely. A mobile needs balance, using the Balance rule card. They tape, test, untape and try again.",
+      "you": "Stay patient. Offer to hold things while they tape, but don't redesign it.",
+      "ask": [
+        "Does it move the way you imagined?",
+        "What's stopping it from moving freely?"
+      ],
+      "tip": "Build a mobile from the bottom up: balance the lowest bar first, then hang it from the next one.",
+      "levels": {
+        "explore": "Get one part moving.",
+        "develop": "Get it moving smoothly, and fix one thing that stopped it.",
+        "extend": "Balance a mobile with 3 or more bars using weight × distance, and measure each one."
+      }
+    },
+    {
+      "title": "Name it and hold the gallery show",
+      "why": "A title turns a contraption into art.",
+      "kid": "Your kid decorates it, then checks it still moves, since decoration adds weight. They write a title card and a one-sentence artist statement. Then they set up a gallery on a table or shelf and present it: the name, how it moves and why they made their choices.",
+      "you": "Ask about their choices instead of suggesting what looks good. Be a real gallery visitor.",
+      "ask": [
+        "Why did you pick that title?",
+        "Did decorating it change how it moves?"
+      ],
+      "tip": "One sentence is enough: 'Wind Dancer: the top spins when you blow on it.'",
+      "levels": {
+        "explore": "Decorate it, name it and show it to someone.",
+        "develop": "Write a title card and artist statement, and present it.",
+        "extend": "Film it moving, and compare it with the work of a real kinetic artist like Alexander Calder."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Moving Art Toolkit",
+    "intro": "Ways to make things move, the balance rule, how to build bases and joints, and what goes on the title card.",
+    "items": [
+      {
+        "name": "Movement types",
+        "lines": [
+          {
+            "k": "Spin:",
+            "v": "something turns on an axis"
+          },
+          {
+            "k": "Swing:",
+            "v": "hangs from a pivot and sways"
+          },
+          {
+            "k": "Balance:",
+            "v": "weights on a bar, like a mobile"
+          },
+          {
+            "k": "Wind:",
+            "v": "light, flat shapes catch the air"
+          },
+          {
+            "k": "Wobble:",
+            "v": "a heavy, rounded bottom rocks back up"
+          }
+        ],
+        "ask": "Check it: where exactly does it move?"
+      },
+      {
+        "name": "Balance rule",
+        "lines": [
+          {
+            "k": "Rule:",
+            "v": "weight × distance matches on both sides"
+          },
+          {
+            "k": "Heavy:",
+            "v": "close to the string"
+          },
+          {
+            "k": "Light:",
+            "v": "far out"
+          },
+          {
+            "k": "Test weights:",
+            "v": "paperclips or coins"
+          },
+          {
+            "k": "Mobiles:",
+            "v": "balance from the bottom bar up"
+          }
+        ],
+        "ask": "Check it: does each bar hang level on its own?"
+      },
+      {
+        "name": "Bases and joints",
+        "lines": [
+          {
+            "k": "Standing:",
+            "v": "a shoebox weighted with rocks"
+          },
+          {
+            "k": "Hanging:",
+            "v": "a stick, a hanger or a dowel"
+          },
+          {
+            "k": "Spinning joint:",
+            "v": "a straw over a skewer, a bead under it"
+          },
+          {
+            "k": "Strong join:",
+            "v": "knot or twist it first, then tape"
+          }
+        ],
+        "ask": "Check it: can the moving part move freely?"
+      },
+      {
+        "name": "Title card",
+        "lines": [
+          {
+            "k": "Title:",
+            "v": "a name that hints at the movement"
+          },
+          {
+            "k": "Made of:",
+            "v": "the materials"
+          },
+          {
+            "k": "Moves by:",
+            "v": "spinning, swinging, wind..."
+          },
+          {
+            "k": "Statement:",
+            "v": "one sentence about why"
+          }
+        ],
+        "ask": "Check it: would a visitor know how it moves?"
+      }
+    ],
+    "after": {
+      "label": "Kinetic art rules",
+      "lines": [
+        "One clear movement first.",
+        "A base heavy enough to hold it.",
+        "Heavy close to the middle, light far out.",
+        "When it fails, change one thing."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "Their art moves.",
+    "text": "Your kid built art that does something. Along the way they worked with gravity, balance and pivots, figured out why it fell over and fixed it, made real artistic choices, and explained them to an audience. That's art, physics and engineering in the same build.",
+    "celebrate": "Tell them what impressed you: the moment it finally moved, a clever fix, or the title they chose.",
+    "extensions": [
+      "Build a second piece with a different movement",
+      "Make a group piece where each person adds one moving part",
+      "Look up Alexander Calder's mobiles and Theo Jansen's wind-walking sculptures",
+      "Take it outside and see how the wind changes it"
+    ]
+  },
+  "signs": [
+    "They notice mobiles, wind chimes and spinners and ask how they work",
+    "They move the heavy thing closer to the middle without being told",
+    "They try another fix instead of giving up when it tips"
+  ],
+  "makeItReal": "Hang their finished piece somewhere everyone sees it every day. Each time it moves, it reminds them they made it work.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/kinetic-sculpture.jpg",
+    "alt": "Watercolour illustration of a homemade stick mobile with a bird, a fish, a leaf and a star hanging by a window, with a paper pinwheel, string and coins on the table",
+    "caption": "Heavy close to the middle, light far out."
+  }
+}

@@ -528,15 +528,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Kinetic Sculpture or Art Installation",
     slug: "kinetic-sculpture",
     description:
-      "Design and build a kinetic sculpture or interactive art installation. Kids explore movement, balance, wind, and gravity to create art that moves. Pure STEAM in one project: art, engineering, and physics in the same build. A hands-on project that produces something genuinely impressive.",
+      "Your child builds art that moves: a hanging mobile, a spinner, a wobbling balance sculpture or a piece that turns in the wind. They pick the movement, build a base that holds, then balance it using the real physics of weight times distance. Then they name it and show it in a family gallery. Pure STEAM: art, engineering and physics in the same build.",
     shortDescription:
-      "STEAM project for kids ages 6-14: build a kinetic sculpture. Art that moves using physics and engineering.",
+      "STEAM project for kids ages 6-14: build a kinetic sculpture that moves, using balance, gravity and a little physics.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGmq63l93oU",
     blobUrl: "",
     imageUrl: "/products/kinetic-sculpture.jpg",
-    previewFile: "Preview Creativity & Maker Kinetic Sculpture or Art Installation.pdf",
+    previewFile: "Preview Creativity & Maker Kinetic Sculpture or Art Installation v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,
