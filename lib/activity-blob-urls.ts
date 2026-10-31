@@ -61,7 +61,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "healthy-tech-boundaries": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HEALTHY%20TECH%20%26%20AI%20BOUNDARIES%20PLAN%20v2.pdf",
   "household-orchestra": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Household%20Orchestra%20v2.pdf",
   "imaginary-world": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20an%20Imaginary%20World%20v3.pdf",
-  "invent-a-sport": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Invent%20a%20New%20Sport%20v2.pdf",
+  "invent-a-sport": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Invent%20a%20New%20Sport%20v3.pdf",
   "investor-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Investor%20Pitch%20Portfolio%20v2.pdf",
   "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v2.pdf",
   "kinetic-sculpture": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Kinetic%20Sculpture%20or%20Art%20Installation%20v2.pdf",

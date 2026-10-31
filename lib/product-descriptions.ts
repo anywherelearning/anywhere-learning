@@ -653,13 +653,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'invent-a-sport': {
     opening:
-      'Create an entirely new sport with original rules, equipment, and scoring. Kids design the game, build equipment from everyday materials, write a rulebook, playtest with family, and iterate. A masterclass in design thinking, physical literacy, and creative problem-solving.',
+      'Your child invents a sport that has never existed: the field, the equipment, the scoring and the rulebook. They mark out the playing area, make gear from household things, set points that match how hard each move is, then playtest, fix what feels unfair and host the first championship. Design thinking, fair play and a lot of running around.',
     whatsIncluded: [
-      'Complete sport invention project guide',
-      'Game mechanic and rule design framework',
-      'DIY equipment building with household materials',
-      'Rulebook writing with clear, testable rules',
-      'Playtesting and iteration cycle',
+      '5 steps from one way to win to the championship',
+      'A field that starts smaller than they think',
+      'Scoring that matches how hard each move is',
+      'Equipment swaps from around the house',
+      'Fair play checks and the 5 rules every sport needs',
     ],
     skillTags: ['Design Thinking', 'Writing', 'Physical Literacy', 'Problem-Solving', 'Creativity'],
     faqs: [

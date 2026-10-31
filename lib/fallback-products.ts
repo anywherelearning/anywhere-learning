@@ -505,15 +505,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Invent a New Sport",
     slug: "invent-a-sport",
     description:
-      "Create an entirely new sport with original rules, equipment, and scoring. Kids design the game, build equipment from everyday materials, write a rulebook, playtest with family, and iterate. A masterclass in creative thinking, negotiation, and physical activity.",
+      "Your child invents a sport that has never existed: the field, the equipment, the scoring and the rulebook. They mark out the playing area, make gear from household things, set points that match how hard each move is, then playtest, fix what feels unfair and host the first championship. Design thinking, fair play and a lot of running around.",
     shortDescription:
-      "Creativity project for kids ages 6-14: invent a new sport. Design rules, build equipment, and playtest with family.",
+      "Creativity project for kids ages 6-14: invent a new sport, from the field and the gear to fair scoring and a championship.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGmD8WCPsXt",
     blobUrl: "",
     imageUrl: "/products/invent-a-sport.jpg",
-    previewFile: "Preview Creativity & Maker Invent a New Sport.pdf",
+    previewFile: "Preview Creativity & Maker Invent a New Sport v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

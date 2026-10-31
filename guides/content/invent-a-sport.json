@@ -1,0 +1,338 @@
+{
+  "slug": "invent-a-sport",
+  "category": "Creativity & Maker",
+  "title": "Invent a Sport",
+  "tagline": "Design · Play · Fix",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid invents a sport that has never existed: its own field, equipment, scoring and rulebook. They mark out the playing area, make the gear from household things, playtest it, fix what doesn't work and host the first championship. It works solo, with siblings or with a group, in the yard, the park or the living room.",
+  "need": [
+    "Balls of any size, or rolled-up socks indoors",
+    "Cones, buckets or shoes as markers",
+    "Sidewalk chalk outside, painter's tape inside",
+    "Pool noodles, laundry baskets, hula hoops, pillows",
+    "A timer, paper and markers for the rulebook"
+  ],
+  "lesson": {
+    "text": "Points should match how hard something is. When they do, players have real choices to make.",
+    "before": "Every goal is 1 point, from anywhere.",
+    "model": [
+      {
+        "part": "Problem",
+        "line": "Everyone just runs up close and scores. No skill, no choice."
+      },
+      {
+        "part": "Fix",
+        "line": "Close shot: 1 point. Shot from behind the far line: 3 points."
+      },
+      {
+        "part": "Test",
+        "line": "Nobody tries the far shot? It's not worth enough. Everyone does? It's worth too much."
+      },
+      {
+        "part": "So",
+        "line": "Points that match the difficulty make players choose. That's what makes a sport interesting."
+      }
+    ],
+    "modelNote": "Basketball's 3-point line works the same way. The question behind every step: is it fair, and is it fun?"
+  },
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "scoring, point values, distances, timing"
+    },
+    {
+      "subject": "Design",
+      "text": "build, test, fix, test again"
+    },
+    {
+      "subject": "Writing",
+      "text": "rules a stranger can follow"
+    },
+    {
+      "subject": "Movement",
+      "text": "running, throwing, aiming, balance"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the first player, not the coach. Let them choose the rules and what to change. Play for real and give honest reactions. Expect chaos in round one: someone will score in a way nobody expected. That's playtest data.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the type and the win, and mark out the field (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Write the rules and make the equipment (Steps 3 and 4)."
+      },
+      {
+        "when": "Game day",
+        "what": "Playtest, fix, and hold the championship (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to combine every sport into one mega-sport",
+        "a": "Start with one clear way to win. Every other idea goes on a list for Version 2, after the first playtest."
+      },
+      {
+        "q": "Players of different ages can't play fairly",
+        "a": "Ask them to design a handicap: younger players start closer, get an extra turn or score double. Fairness is part of the design."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Fair thinking",
+      "text": "rules that work for everyone"
+    },
+    {
+      "name": "Design thinking",
+      "text": "play, watch, fix, play again"
+    },
+    {
+      "name": "Clear explaining",
+      "text": "rules without you standing there"
+    },
+    {
+      "name": "Sportsmanship",
+      "text": "winning, losing and settling arguments"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the type and the win",
+      "why": "One clear goal makes the first version playable today.",
+      "kid": "Your kid picks a type of sport from the Sport types card in the Sport Designer's Toolkit at the end of the guide: target, race, capture, endurance, relay, or a mix of two. Then they finish one sentence: 'You win by...'",
+      "you": "Help them keep Version 1 simple enough to play today. Ask whether it's solo, teams, or either.",
+      "ask": [
+        "Is it a solo sport, a team sport, or either?",
+        "How will you know when someone has won?"
+      ],
+      "tip": "If they can't say how you win in one sentence, the sport is too big for round one.",
+      "levels": {
+        "explore": "Pick a type and say how you win.",
+        "develop": "Write the win in one sentence and name the sport.",
+        "extend": "Plan how a game stays close until the end, so the losing side can still come back."
+      }
+    },
+    {
+      "title": "Mark out the field",
+      "why": "The space shapes the game.",
+      "kid": "Your kid sketches the playing area on paper first: where players start, the goals or targets, any zones and the out-of-bounds lines. Then they mark it for real with chalk, tape, cones or sticks.",
+      "you": "Help them think about space and safety: no glass, no stairs, no hard corners in the way.",
+      "ask": [
+        "Where do the most exciting moments happen on your field?",
+        "What happens when someone goes out of bounds?"
+      ],
+      "tip": "Kids almost always make the field too big the first time. Start smaller than they think and grow it after the first game.",
+      "levels": {
+        "explore": "Mark a start, a goal and the edges.",
+        "develop": "Sketch it first, then mark zones and out-of-bounds lines.",
+        "extend": "Measure it, and add a line or zone worth extra points."
+      }
+    },
+    {
+      "title": "Write the rules and the scoring",
+      "why": "Rules someone else can follow without you explaining.",
+      "kid": "Your kid writes the 5 rules every sport needs, listed at the bottom of the toolkit page. Then they set the scoring, using the Scoring ideas card: points that match how hard each move is.",
+      "you": "Don't write the rules. Ask questions that find the gaps: 'What if two people grab it at once?'",
+      "ask": [
+        "What's the one rule players will argue about most?",
+        "Can you explain the scoring in one sentence?"
+      ],
+      "tip": "Simple scoring is fine. '1 point per goal' works. If there are bonus points, they must say exactly when each one counts.",
+      "levels": {
+        "explore": "Say the rules out loud with one way to score.",
+        "develop": "Write the 5 rules and a scoring system.",
+        "extend": "Give harder moves more points, and explain why each value is fair."
+      }
+    },
+    {
+      "title": "Make the equipment",
+      "why": "Function first, decoration later.",
+      "kid": "Your kid builds or gathers everything needed. For each piece they ask what it needs to do, then find something that does that job, using the Equipment swaps card: a pool noodle bat, a laundry basket goal, a rolled-sock ball. Then they walk the field for a safety check.",
+      "you": "Help them problem-solve materials, but don't build it for them. Do the safety walk together before anyone plays.",
+      "ask": [
+        "What's the most important piece of equipment in your sport?",
+        "Could someone play it with totally different things from their house?"
+      ],
+      "tip": "No decorating before the first game. Play first, then make it look good.",
+      "levels": {
+        "explore": "Gather the equipment from around the house.",
+        "develop": "Make each piece fit its job, and do the safety walk.",
+        "extend": "Make a version for indoors and one for outdoors, and list the swaps."
+      }
+    },
+    {
+      "title": "Playtest, fix and play the championship",
+      "why": "Playing it twice is what turns an idea into a sport.",
+      "kid": "Your kid hands the rules to the players and watches them set up and play without explaining. After a full round, they check the Fair play checks card, pick 1 or 2 things to change, and play again. Then the championship: a name, announced teams, a public scoreboard and a winner.",
+      "you": "Play honestly and don't fake-lose. Give real feedback. On championship day, be a loud fan.",
+      "ask": [
+        "Was the score close, or did someone run away with it?",
+        "What would you change before playing again?"
+      ],
+      "tip": "Common fixes: make the field smaller, simplify a confusing rule, change a point value, or add something to a dull stretch.",
+      "levels": {
+        "explore": "Play, change one thing, play again and crown a winner.",
+        "develop": "Playtest with someone new, fix 2 things, and hold a best-of-3 championship.",
+        "extend": "Track the scores over 5 games. If the same side wins by a lot every time, rebalance it."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Sport Designer's Toolkit",
+    "intro": "Types of sport, household equipment, scoring ideas and the checks that keep it fair.",
+    "items": [
+      {
+        "name": "Sport types",
+        "lines": [
+          {
+            "k": "Target:",
+            "v": "throw or kick at a goal"
+          },
+          {
+            "k": "Race:",
+            "v": "fastest time wins"
+          },
+          {
+            "k": "Capture:",
+            "v": "grab the flag or the territory"
+          },
+          {
+            "k": "Endurance:",
+            "v": "last one standing, or most in a time limit"
+          },
+          {
+            "k": "Relay:",
+            "v": "teams pass it on"
+          }
+        ],
+        "ask": "Check it: can you say how you win in one sentence?"
+      },
+      {
+        "name": "Equipment swaps",
+        "lines": [
+          {
+            "k": "Bat:",
+            "v": "a pool noodle"
+          },
+          {
+            "k": "Ball:",
+            "v": "rolled-up socks or a soft ball"
+          },
+          {
+            "k": "Goal:",
+            "v": "a laundry basket or two shoes"
+          },
+          {
+            "k": "Bases:",
+            "v": "pillows or chalk circles"
+          },
+          {
+            "k": "Lines:",
+            "v": "chalk outside, painter's tape inside"
+          }
+        ],
+        "ask": "Check it: what job does each piece do?"
+      },
+      {
+        "name": "Scoring ideas",
+        "lines": [
+          {
+            "k": "Simple:",
+            "v": "1 point per goal"
+          },
+          {
+            "k": "Harder means more:",
+            "v": "a far shot is worth 3"
+          },
+          {
+            "k": "Zones:",
+            "v": "different areas, different points"
+          },
+          {
+            "k": "Time:",
+            "v": "most points in 3 minutes"
+          },
+          {
+            "k": "First to:",
+            "v": "first to 10 wins"
+          }
+        ],
+        "ask": "Check it: do the points match how hard it is?"
+      },
+      {
+        "name": "Fair play checks",
+        "lines": [
+          {
+            "k": "Turns:",
+            "v": "does everyone get a go?"
+          },
+          {
+            "k": "Comebacks:",
+            "v": "can the losing side still catch up?"
+          },
+          {
+            "k": "Ties:",
+            "v": "is there a rule for them?"
+          },
+          {
+            "k": "Ages:",
+            "v": "can a younger kid play too?"
+          },
+          {
+            "k": "Safety:",
+            "v": "is anyone likely to get hurt?"
+          }
+        ],
+        "ask": "Check it: did every player think it was fair?"
+      }
+    ],
+    "after": {
+      "label": "The 5 rules every sport needs",
+      "lines": [
+        "1. How the game starts",
+        "2. What players can't do",
+        "3. How you score",
+        "4. How you win",
+        "5. What happens in a tie, a foul or an argument"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They invented a sport.",
+    "text": "Every sport in history started this way: someone made up a game, played it, found out the rules didn't work, fixed them and played again. Your kid designed a field, made equipment from household things, wrote rules other people could follow and balanced the scoring so it felt fair.",
+    "celebrate": "Tell them what impressed you: a rule that fixed an argument, a clever piece of equipment, or how close they made the championship.",
+    "extensions": [
+      "Make a rainy-day or winter version",
+      "Design a training drill for new players",
+      "Write a 'history of the sport' as if it's 100 years old",
+      "Teach it to friends at the park and see if they play it again"
+    ]
+  },
+  "signs": [
+    "They change the rules of games to make them fairer",
+    "They explain rules clearly before playing",
+    "They notice when a game is unbalanced"
+  ],
+  "makeItReal": "Next time a game at the park turns into an argument, ask them to invent the rule that would fix it. Then try it.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/invent-a-sport.jpg",
+    "alt": "Kids playing a homemade ball game on a backyard trampoline: one throws from outside while two inside jump to block the ball",
+    "caption": "Get Blocked: their own trampoline sport."
+  },
+  "fromHome": {
+    "text": "The kids invented Get Blocked on our trampoline. One player stands outside and throws the ball in, trying to make it touch the trampoline floor. The players inside block it and send it back out. If the ball touches the floor, the thrower has to touch the net before the ball comes back out.",
+    "quotes": []
+  }
+}
