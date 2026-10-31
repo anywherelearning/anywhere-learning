@@ -1,0 +1,329 @@
+{
+  "slug": "mini-movie",
+  "category": "Creativity & Maker",
+  "title": "Mini Movie",
+  "tagline": "Write · Build · Premiere",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid becomes the writer, director and producer of their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent the characters, plan the story, build the set, rehearse, record or perform it, and hold a premiere. No tech needed: a live show in the kitchen counts.",
+  "need": [
+    "Paper, markers, cardboard and tape",
+    "Toys, figurines, LEGO or clay for characters",
+    "Blankets, flashlights and costumes from home",
+    "Outdoor option: a natural set with sticks, rocks and chalk signs",
+    "Optional: a phone or tablet, propped on books, to film or record"
+  ],
+  "lesson": {
+    "text": "A story needs a character who wants something, and something in the way. Without that, things just happen.",
+    "before": "A dragon flies around. Then it lands. The end.",
+    "model": [
+      {
+        "part": "Want",
+        "line": "The dragon wants to find its lost egg."
+      },
+      {
+        "part": "In the way",
+        "line": "The egg is on top of a mountain, and the dragon is afraid of heights."
+      },
+      {
+        "part": "Ending",
+        "line": "It climbs anyway, scared the whole way, and gets the egg back."
+      },
+      {
+        "part": "So",
+        "line": "Want, a problem, and an ending that solves it."
+      }
+    ],
+    "modelNote": "That's the shape of almost every story kids love, and the question behind every step: what does the character want, and what's stopping them?"
+  },
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "characters, a short script, story shape"
+    },
+    {
+      "subject": "Math",
+      "text": "scene timing, frames per second"
+    },
+    {
+      "subject": "Art",
+      "text": "sets, props and costumes"
+    },
+    {
+      "subject": "Communication",
+      "text": "performing for an audience"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the coach and the first audience, not the director. Ask 'what do you want the audience to feel?' instead of suggesting a plot. And say this early: 'Let's do a rough Version 1, then improve one thing.' It takes the pressure off.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the format and story, and create the characters (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Plan the story and build the set (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Rehearse, record or perform, and premiere (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want six characters and a 20-page script",
+        "a": "Steer them to 2 or 3 characters. A 3-minute show might have only 15 lines in total. Ask 'what's the most important line in this scene?'"
+      },
+      {
+        "q": "They spent the whole afternoon on the set",
+        "a": "Set a 20 to 30 minute timer for building next time. The show matters more than the scenery."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Storytelling",
+      "text": "a want, a problem, an ending"
+    },
+    {
+      "name": "Planning",
+      "text": "scenes in the right order"
+    },
+    {
+      "name": "Performing",
+      "text": "speaking up for an audience"
+    },
+    {
+      "name": "Problem-solving",
+      "text": "when the take goes wrong"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the format and the story",
+      "why": "One sentence of story is enough to start.",
+      "kid": "Your kid picks a format from the Formats card in the Studio Toolkit at the end of the guide: a live show, a mini movie, stop-motion or a radio drama. Then they pick a story seed and say the whole story in one sentence.",
+      "you": "Help them pick a format that fits what you have, and a story small enough to finish. If they're overthinking it: 'Pick the one that sounds most fun. We can change it.'",
+      "ask": [
+        "What kind of show sounds most exciting right now?",
+        "Can you tell your story in one sentence?"
+      ],
+      "tip": "A one-sentence story has a who, a want and a problem: 'A mouse wants the cheese, but the cat sleeps next to it.'",
+      "levels": {
+        "explore": "Pick a format and a story seed.",
+        "develop": "Write the story in one sentence with a who, a want and a problem.",
+        "extend": "Write two possible story sentences and pick the stronger one, and say why."
+      }
+    },
+    {
+      "title": "Create the characters",
+      "why": "A weakness is what makes a character worth watching.",
+      "kid": "Your kid invents 1 to 3 main characters. For each one: a name, what they want, one strength, one weakness or fear, and maybe a catchphrase. Then they decide who plays them: themselves, a sibling, a stuffed animal, a LEGO figure, a clay shape or just a voice.",
+      "you": "Keep it to 2 or 3 characters. Ask about the weakness, since it's the part kids skip.",
+      "ask": [
+        "What does your character want more than anything?",
+        "What are they afraid of?"
+      ],
+      "tip": "'She's brave but afraid of the dark' is much more interesting than 'she's brave and strong and nice.'",
+      "levels": {
+        "explore": "Name 1 or 2 characters and say what they want.",
+        "develop": "Give each character a want, a strength and a weakness.",
+        "extend": "Give the two main characters wants that clash, so they have to face each other."
+      }
+    },
+    {
+      "title": "Plan the story",
+      "why": "A plan keeps the show short and the ending strong.",
+      "kid": "Your kid plans what happens: a beginning, middle and end in 3 sentences or drawings, a storyboard with 4 to 8 boxes, or a scene list. Then they write the key lines. For stop-motion, the plan is a shot list: what moves in each shot.",
+      "you": "Help them pick a planning style that fits. Younger kids can do a talking plan, no writing at all. If they're writing pages, help them cut.",
+      "ask": [
+        "What happens first that grabs the audience?",
+        "How does it end in a way that feels right?"
+      ],
+      "tip": "Stop-motion maths: at 12 photos a second, a 10-second scene takes 120 photos. Plan short scenes.",
+      "levels": {
+        "explore": "Tell the beginning, middle and end out loud.",
+        "develop": "Draw a storyboard with 4 to 8 boxes and write the key lines.",
+        "extend": "Write a short script with scenes, lines and sound cues, and time each scene."
+      }
+    },
+    {
+      "title": "Build the set and rehearse",
+      "why": "Simple sets, then a full run-through before anything counts.",
+      "kid": "Your kid builds the world with what's around: a blanket fort cave, a cardboard box spaceship, a shoebox stage for stop-motion, sound effects for radio. Then they do one full run-through, ask what the best part was and what's one thing to make clearer, and fix that one thing.",
+      "you": "Keep the building short and simple. Be the first audience: say the best part first, then one specific thing to fix.",
+      "ask": [
+        "What's the most important place in your story?",
+        "What's one thing we should fix before the real version?"
+      ],
+      "tip": "Give the set 20 to 30 minutes, with a timer. A scarf is a cape, a stick is a sword, a flashlight is dramatic lighting.",
+      "levels": {
+        "explore": "Make one set and one prop, and run it once.",
+        "develop": "Make the sets and props for every scene, rehearse and fix one thing.",
+        "extend": "Add sound effects or lighting cues, rehearse twice and fix the weakest scene."
+      }
+    },
+    {
+      "title": "Record it and premiere",
+      "why": "A real audience makes it a real show.",
+      "kid": "Your kid performs it live or records it: films scene by scene, takes stop-motion photos, or records the radio drama in a quiet room. Then they hold a premiere: introduce the show, play or perform it, and take questions.",
+      "you": "Hold the camera if needed. At the premiere, watch for real, laugh at the funny parts and ask real questions.",
+      "ask": [
+        "Which scene was hardest to get right?",
+        "If you made a sequel, what would happen next?"
+      ],
+      "tip": "If a take goes wrong, do it again. Real movies do dozens of takes. Done beats perfect.",
+      "levels": {
+        "explore": "Perform or record the show for one person.",
+        "develop": "Record or perform the whole show and hold a premiere with tickets.",
+        "extend": "Add a title card, credits and sound, then hand out audience awards."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Studio Toolkit",
+    "intro": "Formats to pick from, story seeds, sound effects from the kitchen and stop-motion tips.",
+    "items": [
+      {
+        "name": "Formats",
+        "lines": [
+          {
+            "k": "Live show:",
+            "v": "perform it, no tech at all"
+          },
+          {
+            "k": "Mini movie:",
+            "v": "film it scene by scene"
+          },
+          {
+            "k": "Stop-motion:",
+            "v": "move toys a little, one photo per move"
+          },
+          {
+            "k": "Radio drama:",
+            "v": "only voices and sound effects"
+          }
+        ],
+        "ask": "Check it: does the format fit what you have?"
+      },
+      {
+        "name": "Story seeds",
+        "lines": [
+          {
+            "k": "1.",
+            "v": "Something important goes missing."
+          },
+          {
+            "k": "2.",
+            "v": "A hero has to deliver something."
+          },
+          {
+            "k": "3.",
+            "v": "Two characters want the same thing."
+          },
+          {
+            "k": "4.",
+            "v": "A normal day turns weird."
+          },
+          {
+            "k": "5.",
+            "v": "A secret door leads somewhere."
+          }
+        ],
+        "ask": "Check it: can you say your story in one sentence?"
+      },
+      {
+        "name": "Kitchen sound effects",
+        "lines": [
+          {
+            "k": "Thunder:",
+            "v": "wobble a baking sheet"
+          },
+          {
+            "k": "Rain:",
+            "v": "pour rice slowly onto a pan"
+          },
+          {
+            "k": "Fire:",
+            "v": "crinkle foil or a chip bag"
+          },
+          {
+            "k": "Horse:",
+            "v": "clop two cups on a table"
+          },
+          {
+            "k": "Creaky door:",
+            "v": "open a real one, slowly"
+          }
+        ],
+        "ask": "Check it: did you test it close to the mic?"
+      },
+      {
+        "name": "Stop-motion tips",
+        "lines": [
+          {
+            "k": "Camera:",
+            "v": "prop it so it never moves"
+          },
+          {
+            "k": "Moves:",
+            "v": "tiny, a little each photo"
+          },
+          {
+            "k": "Speed:",
+            "v": "12 photos make about 1 second"
+          },
+          {
+            "k": "Light:",
+            "v": "close the curtains, use a lamp"
+          }
+        ],
+        "ask": "Check it: did you take 5 to 10 test photos first?"
+      }
+    ],
+    "after": {
+      "label": "Story shape",
+      "lines": [
+        "1. Who is it about?",
+        "2. What do they want?",
+        "3. What's in the way?",
+        "4. How does it end?"
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "The show premiered.",
+    "text": "Your kid imagined a story, built it from nothing, figured out how to share it and put it in front of an audience. They made creative calls, solved problems when the take went wrong, and finished something. That's what filmmakers, playwrights and podcasters do.",
+    "celebrate": "Tell them which moment got you: a funny line, a clever prop, or how they kept going after a bad take.",
+    "extensions": [
+      "Make a sequel with a new problem",
+      "Try a different format: a movie becomes a radio drama",
+      "Remake one scene with a different ending and compare",
+      "Turn the story into a comic or a poster"
+    ]
+  },
+  "signs": [
+    "They ask 'what does the character want?' while watching a movie",
+    "They plan before they start making",
+    "They redo a take instead of giving up"
+  ],
+  "makeItReal": "Next time you watch a movie together, pause in the middle and ask them what the main character wants and what's in the way. Then see if they called the ending.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/mini-movie.jpg",
+    "alt": "A dad, a girl and a boy acting out an argument on a sofa for their homemade movie",
+    "caption": "Opening scene: the whole cast, filmed in Costa Rica."
+  },
+  "fromHome": {
+    "text": "In Costa Rica, my kids wrote a script together, built the set, rehearsed and performed it. Then they turned it into a real movie in iMovie, credits and all.",
+    "quotes": []
+  }
+}

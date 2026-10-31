@@ -74,7 +74,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "media-info-check": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%2B%20Digital%20Literacy%20-%20MEDIA%20%26%20INFO%20CHECK%20v2.pdf",
   "micro-business": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Micro-business%20challenge%20v2.pdf",
   "mini-magazine-creator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Mini%20Magazine%20Creator%20v4.pdf",
-  "mini-movie": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Mini%20Movie%2C%20Stop-Motion%20or%20Radio%20Drama%20v2.pdf",
+  "mini-movie": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Mini%20Movie%2C%20Stop-Motion%20or%20Radio%20Drama%20v3.pdf",
   "my-review-column": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20My%20Review%20Column%20v4.pdf",
   "nature-choice-boards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Choice%20Boards%20v5.pdf",
   "nature-crafts": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20crafts%20for%20kids%20v3.pdf",

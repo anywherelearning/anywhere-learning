@@ -630,13 +630,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-movie': {
     opening:
-      'Create a mini movie, stop-motion animation, or radio drama from scratch. Kids write scripts, design sets, create characters, record audio, and edit their production. A full creative process from concept to premiere, combining storytelling, technology, and artistic expression all in one.',
+      'Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, plan the story, build a simple set, rehearse, then record or perform it and hold a premiere. No tech needed, though a phone works too. Storytelling, planning and performing, from script to premiere.',
     whatsIncluded: [
-      'Complete production guide (movie, animation, or radio drama)',
-      'Scriptwriting, storyboarding, and character design',
-      'Set design, costume, and prop creation',
-      'Recording, editing, and production tips',
-      'Premiere planning: share with family and friends',
+      '5 steps from a one-sentence story to the premiere',
+      'Characters with a want, a strength and a weakness',
+      'A storyboard or scene list, and a short script',
+      'Kitchen sound effects and stop-motion tips',
+      'Four formats, and no tech required',
     ],
     skillTags: ['Storytelling', 'Writing', 'Technology', 'Art', 'Collaboration'],
     insideTheLearning: {
