@@ -197,10 +197,10 @@
       "cards": [
         {
           "name": "Mini Tower",
-          "t": "Build the tallest tower you can from sticks, pinecones and loose stones, away from trails and water.",
-          "d": "It must survive a gentle wind test. Then take it down so nobody mistakes it for a trail marker.",
+          "t": "Build the tallest tower you can from loose stones, sticks or pinecones, away from trails and water.",
+          "d": "It must survive a gentle wind test. Take it down before you leave, so nobody mistakes it for a trail marker.",
           "icon": "tower-control",
-          "art": "wc/rev-tower.jpg"
+          "art": "wc/landart-13.jpg"
         },
         {
           "name": "Balanced Rock Line",

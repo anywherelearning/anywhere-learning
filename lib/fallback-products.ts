@@ -302,7 +302,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrphAkIBECpwGmqj1htffA",
     blobUrl: "",
     imageUrl: "/products/land-art-challenges.jpg",
-    previewFile: "Preview Outdoor Learning - Land Art Challenge Cards v8.pdf",
+    previewFile: "Preview Outdoor Learning - Land Art Challenge Cards v9.pdf",
     category: "outdoor-learning",
     isBundle: false,
     bundleProductIds: null,
