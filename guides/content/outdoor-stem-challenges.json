@@ -242,14 +242,14 @@
           "t": "Put a stone, a pinecone and a leaf on a flat piece of bark. Tilt it slowly. Which slides first?",
           "d": "Wet the bark or add sand. What changes?",
           "icon": "move-horizontal",
-          "art": "wc/stem-18.jpg"
+          "art": "wc/rev-friction.jpg"
         },
         {
           "name": "Sink or Float",
           "t": "Predict which of 8 found items will float, then test them in a puddle or dish.",
           "d": "Make one sinker float by changing its shape or adding something.",
           "icon": "wind",
-          "art": "wc/stem-19.jpg"
+          "art": "wc/rev-sinkfloat.jpg"
         },
         {
           "name": "Seed Dispersal Designer",
@@ -282,7 +282,7 @@
           "t": "Build a roof that keeps a dry leaf dry under a cup of 'rain'.",
           "d": "Say it out loud: 'My first roof leaked because... I fixed it by...'",
           "icon": "repeat",
-          "art": "wc/stem-23.jpg"
+          "art": "wc/rev-leafroof.jpg"
         },
         {
           "name": "Shadow Clock",

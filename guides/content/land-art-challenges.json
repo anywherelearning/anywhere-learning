@@ -200,7 +200,7 @@
           "t": "Build the tallest tower you can from sticks, pinecones and loose stones, away from trails and water.",
           "d": "It must survive a gentle wind test. Then take it down so nobody mistakes it for a trail marker.",
           "icon": "tower-control",
-          "art": "wc/landart-13.jpg"
+          "art": "wc/rev-tower.jpg"
         },
         {
           "name": "Balanced Rock Line",
@@ -214,14 +214,14 @@
           "t": "Build an arch from flat stones or bark that stands on its own.",
           "d": "Take out one piece at a time. Which one brings it all down?",
           "icon": "rainbow",
-          "art": "wc/landart-15.jpg"
+          "art": "wc/rev-arch.jpg"
         },
         {
           "name": "Wind Art",
           "t": "Make a design from only light things: seeds, feathers, dry leaves. Photograph it, then watch the wind.",
           "d": "Rebuild it so it lasts one full minute of wind.",
           "icon": "sailboat",
-          "art": "wc/landart-16.jpg"
+          "art": "wc/rev-windart.jpg"
         },
         {
           "name": "Nature Castle",
@@ -455,7 +455,7 @@
           "t": "Pick up human litter with gloves (no glass or sharp things) and make art from it first.",
           "d": "Count and sort what you found, then put it all in the bin.",
           "icon": "trash-2",
-          "art": "wc/landart-48.jpg"
+          "art": "wc/rev-litter.jpg"
         }
       ]
     }
