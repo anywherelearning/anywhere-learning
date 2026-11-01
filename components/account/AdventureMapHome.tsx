@@ -200,9 +200,12 @@ const DEMO_LOG = ['nature-walk-task-cards', 'farmers-market-challenge', 'boredom
 export default function AdventureMapHome({
   activities,
   preview = false,
+  basecamp = null,
 }: {
   activities: PlanActivity[];
   preview?: boolean;
+  /** The next members' live session, shown as a chip under the trail title. */
+  basecamp?: { dayLabel: string; timeLabel: string } | null;
 }) {
   const [ready, setReady] = useState(false);
   const [children, setChildren] = useState<Child[]>([]);
@@ -534,6 +537,9 @@ export default function AdventureMapHome({
         .am-h1{font-family:var(--font-plate),sans-serif;font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-0.02em;line-height:1.02;margin:6px 0 0}
         .am-link{font-family:var(--font-catalog),monospace;font-size:12px;color:var(--am-muted);text-decoration:none}
         .am-quest{display:flex;align-items:center;gap:11px;margin:0 6px 12px;padding:10px 15px;border-radius:15px;color:#fff;background:linear-gradient(145deg,#d9ac52,#c0873f 60%,#a86f2c);box-shadow:0 18px 36px -22px rgba(150,100,25,.75)}
+        .am-basecamp{display:flex;align-items:center;gap:11px;margin:0 6px 12px;padding:10px 15px;border-radius:15px;color:#F6F1E4;text-decoration:none;background:linear-gradient(145deg,#2F5D4A,#1C3B2E);box-shadow:0 18px 36px -22px rgba(28,59,46,.75);transition:transform .15s}
+        .am-basecamp:hover{transform:translateY(-1px)}
+        .am-basecamp .am-quest-kicker{color:#E8C99A}
         .am-quest-flag{flex-shrink:0;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.22)}
         .am-quest-kicker{display:block;font-family:var(--font-catalog),monospace;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.92}
         .am-quest-title{display:block;font-family:var(--font-plate),sans-serif;font-size:clamp(16px,2vw,19px);font-weight:800;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -768,6 +774,18 @@ export default function AdventureMapHome({
                     >Cancel</button>
                   </span>
                 </div>
+              )}
+              {basecamp && !preview && (
+                <a className="am-basecamp am-rise" href="/account/this-month#basecamp">
+                  <span className="am-quest-flag" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h18M6 20l6-12 6 12M12 8V4" /></svg>
+                  </span>
+                  <span style={{ minWidth: 0, flex: 1 }}>
+                    <span className="am-quest-kicker">Next Basecamp · Live with Amelie</span>
+                    <span className="am-quest-title">{basecamp.dayLabel} · {basecamp.timeLabel}</span>
+                  </span>
+                  <span aria-hidden="true" style={{ flexShrink: 0, fontWeight: 700 }}>&rarr;</span>
+                </a>
               )}
               {medals.length > 0 && (
                 <div className="am-medals am-rise">

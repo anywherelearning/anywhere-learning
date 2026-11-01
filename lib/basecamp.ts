@@ -30,6 +30,16 @@ export const BASECAMP_DATES = [
   '2027-12-02',
 ];
 
+/**
+ * One-time "Introducing Basecamp" email: session date -> the Eastern date it
+ * goes to every member. Only the first session needs one; later members hear
+ * about Basecamp in their welcome email.
+ */
+export const BASECAMP_ANNOUNCEMENTS: Record<string, string> = {
+  // Waiting for Amelie's OK on the email text; uncomment to send on Nov 24.
+  // '2026-12-03': '2026-11-24',
+};
+
 /** Replays, newest first. Add one after each session (unlisted video link). */
 export const BASECAMP_REPLAYS: { date: string; title: string; url: string }[] = [];
 

@@ -8,6 +8,7 @@ import {
   Preview,
   Text,
 } from '@react-email/components';
+import { nextBasecamp } from '@/lib/basecamp';
 
 interface Props {
   /** The recipient's first name (or empty string if we don't know it). */
@@ -68,6 +69,7 @@ export default function MembershipWelcome({
   firstYearPrice,
 }: Props) {
   const name = firstName?.trim() || 'there';
+  const basecamp = nextBasecamp();
   const isMonthly = plan === 'monthly';
   const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
   /** "for the year" / "for the month" phrasing. */
@@ -232,6 +234,21 @@ export default function MembershipWelcome({
                   </table>
                 </td>
               </tr>
+
+              {/* ── Basecamp: the monthly live session ── */}
+              {basecamp && (
+                <tr>
+                  <td style={{ padding: '26px 36px 0' }}>
+                    <div style={{ ...label, color: C_FOREST }}>LIVE WITH ME, EVERY MONTH</div>
+                    <Text style={{ ...p, margin: '8px 0 0' }}>
+                      Once a month we meet live on Zoom at <strong>Basecamp</strong>: families share what
+                      they did, kids show what they made, and you can ask me anything. The next one is{' '}
+                      <strong>{basecamp.dayLabel} at {basecamp.timeLabel}</strong>. You&apos;ll find the link
+                      on your This Month page, and I&apos;ll send it again the day before.
+                    </Text>
+                  </td>
+                </tr>
+              )}
 
               {/* ── Your free trial, plainly (trial signups only) ── */}
               {isTrial && trialEnd && headsUp && (

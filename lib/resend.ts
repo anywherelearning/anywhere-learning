@@ -31,6 +31,7 @@ import PaymentFailed from '@/emails/PaymentFailed';
 import GrantWelcome, { grantWelcomeSubject } from '@/emails/GrantWelcome';
 import GrantEnding from '@/emails/GrantEnding';
 import BasecampReminder from '@/emails/BasecampReminder';
+import BasecampAnnouncement from '@/emails/BasecampAnnouncement';
 import GiftReceipt from '@/emails/GiftReceipt';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
@@ -440,6 +441,24 @@ export async function sendBasecampReminderEmail(props: {
     to,
     subject: `Basecamp is tomorrow, ${props.timeLabel}`,
     react: BasecampReminder(rest),
+  });
+}
+
+/** "Introducing Basecamp", once to every member before the first session. */
+export async function sendBasecampAnnouncementEmail(props: {
+  to: string;
+  firstName?: string;
+  dayLabel: string;
+  timeLabel: string;
+  topic: string;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: 'Introducing Basecamp: live with me, once a month',
+    react: BasecampAnnouncement(rest),
   });
 }
 

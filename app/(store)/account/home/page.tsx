@@ -3,6 +3,7 @@ import { auth } from '@clerk/nextjs/server';
 import AdventureMapHome from '@/components/account/AdventureMapHome';
 import { getPlanActivities } from '@/lib/plan-activities';
 import { getAccessTierForClerkId } from '@/lib/access';
+import { nextBasecamp } from '@/lib/basecamp';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -21,5 +22,12 @@ export default async function MemberHomePage() {
   } catch {
     /* Clerk not configured — render the normal member view */
   }
-  return <AdventureMapHome activities={getPlanActivities()} preview={preview} />;
+  const session = nextBasecamp();
+  return (
+    <AdventureMapHome
+      activities={getPlanActivities()}
+      preview={preview}
+      basecamp={session ? { dayLabel: session.dayLabel, timeLabel: session.timeLabel } : null}
+    />
+  );
 }
