@@ -86,6 +86,7 @@ export default async function ChoosePlanPage() {
               {[
                 'Full library, all 120+ activities',
                 `Save up to ${DOWNLOAD_CAP_PER_WINDOW} guides a month as PDFs`,
+                'Basecamp: a live session with Amelie every month',
                 'New activities every quarter',
                 m.isFounderPhase
                   ? `Your ${m.priceYear} rate never goes up`
@@ -124,6 +125,7 @@ export default async function ChoosePlanPage() {
               {[
                 'Read all 120+ activities in your browser',
                 `Save ${MONTHLY_DOWNLOAD_CAP_PER_WINDOW} guides a month as PDFs`,
+                'Basecamp, the same monthly live session',
                 'Same new activities every quarter',
                 'No yearly commitment',
                 'Switch to yearly anytime and save',

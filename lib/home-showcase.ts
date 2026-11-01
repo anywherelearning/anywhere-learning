@@ -418,6 +418,7 @@ export const SKILL_AREAS = [
 /** What the one membership price covers, shown as a two-column checklist. */
 export const MEMBERSHIP_INCLUDES = [
   'All 120+ activity guides, across nine topics',
+  'Basecamp: a live session with Amelie every month',
   'Three skill levels in every guide: Explore, Develop, Extend',
   'Your next stop picked for you, matched to each child',
   'An explorer, a trail and a backpack per child, 72 finds',

@@ -31,6 +31,7 @@ import { sendMembershipRenewalEmail } from '@/lib/resend';
 import { STRIPE_PRICES } from '@/lib/stripe-prices';
 import { runGrantLifecycle } from '@/lib/access-grants';
 import { runMemberCheckins } from '@/lib/member-checkin';
+import { runBasecampReminders } from '@/lib/basecamp-reminders';
 
 export const dynamic = 'force-dynamic';
 
@@ -58,6 +59,15 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error('[cron] member check-ins failed:', err);
     checkins = { error: err instanceof Error ? err.message : 'unknown' };
+  }
+
+  // "Basecamp is tomorrow" to every member, the day before each session.
+  let basecamp: Awaited<ReturnType<typeof runBasecampReminders>> | { error: string };
+  try {
+    basecamp = await runBasecampReminders();
+  } catch (err) {
+    console.error('[cron] basecamp reminders failed:', err);
+    basecamp = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
   const now = new Date();
@@ -92,7 +102,7 @@ export async function GET(req: NextRequest) {
     );
 
   if (rows.length === 0) {
-    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins });
+    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins, basecamp });
   }
 
   // Try to grab first names from Clerk in one round-trip. Clerk doesn't
@@ -181,5 +191,6 @@ export async function GET(req: NextRequest) {
     results,
     grants,
     checkins,
+    basecamp,
   });
 }

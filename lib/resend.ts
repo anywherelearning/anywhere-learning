@@ -30,6 +30,7 @@ import SkillsMapDelivery from '@/emails/SkillsMapDelivery';
 import PaymentFailed from '@/emails/PaymentFailed';
 import GrantWelcome, { grantWelcomeSubject } from '@/emails/GrantWelcome';
 import GrantEnding from '@/emails/GrantEnding';
+import BasecampReminder from '@/emails/BasecampReminder';
 import GiftReceipt from '@/emails/GiftReceipt';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
@@ -420,6 +421,25 @@ export async function sendGrantEndingEmail(props: {
     to,
     subject: 'Your Anywhere Learning membership ends in 2 weeks',
     react: GrantEnding(rest),
+  });
+}
+
+/** "Basecamp is tomorrow", the day before each members' live session. */
+export async function sendBasecampReminderEmail(props: {
+  to: string;
+  firstName?: string;
+  dayLabel: string;
+  timeLabel: string;
+  topic: string;
+  zoomUrl: string;
+}) {
+  const { to, ...rest } = props;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: `Basecamp is tomorrow, ${props.timeLabel}`,
+    react: BasecampReminder(rest),
   });
 }
 

@@ -24,6 +24,7 @@ import { addToWeek, weekSlugs, FAMILY_TARGET } from '@/lib/week';
 import { loadProfile, childAge, type Child } from '@/lib/member-profile';
 import { readChallenges, writeChallenge, clearChallenge, type MonthChallengeEntry } from '@/lib/month-challenge';
 import type { Effort } from '@/lib/activity-effort';
+import BasecampCard, { type BasecampCardData } from '@/components/account/BasecampCard';
 
 export type MonthActivity = {
   slug: string;
@@ -80,6 +81,8 @@ export type ThisMonthData = {
   skill: MonthSection;
   seasonal: MonthSection;
   challenge: { title: string; short: string; text: string };
+  /** The next members' live session, or null when none is scheduled. */
+  basecamp?: BasecampCardData | null;
 };
 
 /* ── tiny cover with graceful fallback ─────────────────────────────────── */
@@ -704,6 +707,7 @@ export default function ThisMonthView(data: ThisMonthData) {
       </header>
 
       <div style={{ position: 'relative', maxWidth: 1000, margin: '0 auto', padding: 'clamp(30px,4vw,52px) clamp(16px,4vw,40px) 72px', display: 'flex', flexDirection: 'column', gap: 'clamp(48px,6vw,68px)' }}>
+        {data.basecamp && <BasecampCard data={data.basecamp} />}
         <Section section={data.skill} />
         <Section section={data.seasonal} flip />
 
