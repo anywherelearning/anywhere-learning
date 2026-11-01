@@ -8,7 +8,7 @@
   "need": [
     "A map: paper, or an app like Google Maps",
     "Today's gas price, from a local station or a gas app",
-    "Your car's fuel use (miles per gallon). Ask, or check the manual.",
+    "Your car's fuel use: miles per gallon, or litres per 100 km. Ask, or check the manual.",
     "Paper, a pencil and a calculator",
     "A destination: a relative's house, a beach, a park, a city"
   ],
@@ -141,7 +141,7 @@
         "300 miles at 25 mpg. How many gallons?",
         "Gas goes from $3.50 to $4. How much more does the trip cost?"
       ],
-      "tip": "300 ÷ 25 = 12 gallons. 12 × $3.50 = $42 one way, $84 there and back. At $4, it's $48 one way.",
+      "tip": "300 ÷ 25 = 12 gallons. 12 × $3.50 = $42 one way, $84 there and back. At $4, it's $48 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way.",
       "levels": {
         "explore": "Work out the gas for a 200-mile trip, one way.",
         "develop": "Work out the gas there and back, and what happens if the price goes up.",
@@ -157,7 +157,7 @@
         "Which cost is the biggest?",
         "You're $30 over. What would you cut?"
       ],
-      "tip": "Day trip for 4: gas $84 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $164. Add 10% ($16.40) for $180.40.",
+      "tip": "Day trip for 4, 150 miles each way: gas 12 gallons × $3.50 = $42 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $122. Add 10% ($12.20) for $134.20.",
       "levels": {
         "explore": "Total 3 costs: gas, food and one activity.",
         "develop": "Total 5 or more costs, add a buffer and fit a set budget.",
@@ -173,7 +173,7 @@
         "Which guess was furthest off, the time or the cost?",
         "What made the real trip slower or faster than the plan?"
       ],
-      "tip": "Real miles per gallon: odometer miles ÷ gallons at the fill-up. 312 miles ÷ 12 gallons = 26 mpg.",
+      "tip": "Real miles per gallon: fill the tank before you leave and note the odometer. At the next fill-up, divide the miles driven by the gallons it takes to fill up again. 312 miles ÷ 12 gallons = 26 mpg.",
       "levels": {
         "explore": "Track the leaving and arriving times and compare them with the plan.",
         "develop": "Track time, stops and gas, and compare every part of the plan.",

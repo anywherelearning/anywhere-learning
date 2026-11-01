@@ -17,11 +17,11 @@
     "model": [
       {
         "part": "Problem",
-        "line": "The ball rolls off the ramp and misses the cup by 2 inches."
+        "line": "The ball rolls off the ramp and misses the cup by 5 cm."
       },
       {
         "part": "One change",
-        "line": "Move the cup 2 inches closer. Nothing else."
+        "line": "Move the cup 5 cm closer. Nothing else."
       },
       {
         "part": "Test",
@@ -124,7 +124,7 @@
         "What exactly makes the next step start?",
         "Where does the energy run out?"
       ],
-      "tip": "The connection between steps is where everything breaks. The ball misses the cup by two inches. That's normal, and it's what Step 3 is for.",
+      "tip": "The connection between steps is where everything breaks. The ball misses the cup by 5 cm. That's normal, and it's what Step 3 is for.",
       "levels": {
         "explore": "Build 3 steps that run, even with a little help.",
         "develop": "Build 3 steps using 2 different kinds from the step menu.",

@@ -118,7 +118,7 @@
     {
       "title": "Run the tests",
       "why": "A fair test is the same every time except the one thing you're testing.",
-      "kid": "Your kid draws a results table: the five suspects down the side, four tests across the top. For each powder they run the same four tests with the same amount, one level teaspoon: stir it into warm water, drop vinegar on it, add cabbage juice, and add a few drops of water to make a paste. They write what happens in every box.",
+      "kid": "Your kid draws a results table: the five suspects down the side, four tests across the top. For each powder they run the same four tests with the same amount, one level teaspoon: stir it into warm water, drop vinegar on it, add cabbage juice, and add about half a teaspoon of water to make a paste. They write what happens in every box.",
       "you": "Help keep the amounts equal and the cups clean. Wipe the spoon between powders.",
       "ask": [
         "Which powders did something in vinegar?",
@@ -206,16 +206,16 @@
             "v": "baking soda"
           },
           {
-            "k": "Cloudy, sinks:",
-            "v": "cornstarch"
-          },
-          {
-            "k": "Paste goes hard when poked:",
+            "k": "Cloudy, paste goes hard:",
             "v": "cornstarch"
           },
           {
             "k": "Disappears in water:",
             "v": "sugar or salt"
+          },
+          {
+            "k": "Melts brown in a dry pan:",
+            "v": "sugar (a grown-up heats it)"
           }
         ],
         "ask": "Check it: what does your next test rule out?"

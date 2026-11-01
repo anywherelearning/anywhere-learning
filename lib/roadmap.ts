@@ -378,7 +378,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'outdoor-learning-missions', 'survival-base', 'square-foot-safari', 'invent-a-sport',
+      'outdoor-learning-missions', 'square-foot-safari', 'invent-a-sport',
       'backyard-campout-planner', 'outdoor-survival-planner', 'plan-a-mini-adventure',
       'nature-journal-walks', 'nature-walk-task-cards', 'outdoor-stem-challenges', 'land-art-challenges',
     ],
@@ -413,6 +413,28 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'frustration-tolerance-cards': ['emotional', 'self-management'],
   // bias-fairness-lab is an AI-bias activity but was never tagged AI & Digital.
   'bias-fairness-lab': ['ai-digital'],
+  // Nov 2026 guide review: second and third areas each guide genuinely builds.
+  'backyard-campout-planner': ['life-skills'],
+  'board-game-studio': ['writing'],
+  'build-a-museum': ['communication', 'reading-media'],
+  'clothing-swap-thrift-math': ['life-skills'],
+  'creature-habitat': ['critical-thinking', 'writing'],
+  'family-electricity-audit': ['critical-thinking', 'communication'],
+  'garage-sale-math': ['communication'],
+  'garden-plot-planner': ['self-management'],
+  'household-orchestra': ['math'],
+  'imaginary-world': ['writing', 'critical-thinking'],
+  'kinetic-sculpture': ['math'],
+  'mini-movie': ['writing'],
+  'nature-data-tracker': ['critical-thinking'],
+  'party-planner-math': ['life-skills'],
+  'road-trip-calculator': ['life-skills'],
+  'savings-goal-tracker': ['self-management'],
+  'smart-shopper': ['critical-thinking'],
+  'snack-mission': ['life-skills'],
+  'sports-stats-lab': ['critical-thinking'],
+  'survival-base': ['critical-thinking'],
+  'theme-park': ['math', 'communication'],
 };
 
 /**
@@ -438,6 +460,18 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   'product-design-lab': 'creativity',
   'supply-chain-detective': 'critical-thinking',
   'trade-it-up': 'communication',
+  // Creativity & Maker guides keep Creativity as the lead after the Nov 2026
+  // review added second areas that sort ahead of it.
+  'board-game-studio': 'creativity',
+  'build-a-museum': 'creativity',
+  'creature-habitat': 'creativity',
+  'household-orchestra': 'creativity',
+  'imaginary-world': 'creativity',
+  'kinetic-sculpture': 'creativity',
+  'mini-movie': 'creativity',
+  'theme-park': 'creativity',
+  'survival-base': 'creativity',
+  'kitchen-science-lab': 'critical-thinking',
 };
 
 // Fold the supplemental tags into the territory lists once, at load, so

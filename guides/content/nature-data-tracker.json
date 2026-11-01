@@ -29,7 +29,7 @@
       },
       {
         "part": "So",
-        "line": "It's warming up by about 2.6°, even with a few colder days in the middle."
+        "line": "It's warming up by about 2.7°, even with a few colder days in the middle."
       }
     ],
     "modelNote": "That's the thinking this guide builds: look past the daily bumps to the bigger direction."
@@ -141,7 +141,7 @@
     {
       "title": "Work out the daily changes",
       "why": "The difference between days is where the story starts.",
-      "kid": "Next to each number, your kid writes the change from the day before: +3 for 3 degrees warmer, −2 for 2 millimetres less rain, +2 for a sunset 2 minutes later. Then they find the biggest jump and the smallest change.",
+      "kid": "Next to each number, your kid writes the change from the day before: +3 for 3 degrees warmer, +2 for a sunset 2 minutes later. Then they find the biggest jump and the smallest change. Tracking rain? Each day's rain stands on its own, so keep a running total instead and count the rainy days.",
       "you": "Keep the maths conversational, in real-life words: warmer by, colder by, later than. Ask 'how do you know?'",
       "ask": [
         "Was today warmer or colder than yesterday, and by how much?",

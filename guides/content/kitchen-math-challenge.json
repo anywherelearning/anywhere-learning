@@ -12,11 +12,11 @@
   ],
   "lesson": {
     "text": "Food has two prices: what one serving costs, and what you pay at the store. You can't buy one slice of bread. A good plan uses both.",
-    "before": "Sandwiches for lunch, so that's $4.",
+    "before": "Sandwiches for lunch, so that's $2.50.",
     "model": [
       {
         "part": "On paper",
-        "line": "1 sandwich = $4. Lunch for 4 = 4 × $4 = $16."
+        "line": "1 sandwich = $2.50. Lunch for 4 = 4 × $2.50 = $10."
       },
       {
         "part": "At the store",
@@ -24,7 +24,7 @@
       },
       {
         "part": "So",
-        "line": "Lunch for 1 really costs $15. Lunch for 4 costs $15, with bread left over."
+        "line": "Lunch for 1 really costs $15. Lunch for 4 still costs $15, with bread left over."
       },
       {
         "part": "Fix",
@@ -162,7 +162,7 @@
         "What's actually in that meal?",
         "Why is the shopping list total different from the plan total?"
       ],
-      "tip": "This is the 'aha': one sandwich costs $4 on paper and $15 at the store. Let them find the gap themselves.",
+      "tip": "This is the 'aha': one sandwich costs $2.50 on paper and $15 at the store. Let them find the gap themselves.",
       "levels": {
         "explore": "Scale one meal for 2 people and list 6 to 10 ingredients.",
         "develop": "Scale the whole day for 2 to 4 people and sort the list by aisle (produce, dairy, pantry).",
@@ -202,7 +202,7 @@
         "lines": [
           {
             "k": "Sandwich:",
-            "v": "$4"
+            "v": "$2.50"
           },
           {
             "k": "Pasta with sauce:",

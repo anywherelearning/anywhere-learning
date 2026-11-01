@@ -22,7 +22,7 @@
       },
       {
         "part": "Round",
-        "line": "You can't buy half a bottle. 4 bottles leaves two guests with nothing, so buy 5."
+        "line": "You can't buy half a bottle. 4 bottles leaves one guest with nothing, so buy 5."
       },
       {
         "part": "Check",

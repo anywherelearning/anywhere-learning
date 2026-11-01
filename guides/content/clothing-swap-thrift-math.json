@@ -181,7 +181,7 @@
       "kid": "For 3 to 5 things they got, your kid looks up the price new and works out the saving and the percentage off. Then they predict how many times they'll wear each one, find the predicted cost per wear, and add up the totals: spent, saved, and items given a second life.",
       "you": "Help them look up new prices. Ask 'is the secondhand one just as good?' and 'if you did this every season, how much would you save in a year?'",
       "ask": [
-        "A $40 jacket for $6: how much did you save, and what percentage off is that?",
+        "A $40 jacket for $10: how much did you save, and what percentage off is that?",
         "Which find will be the best value a few months from now?"
       ],
       "tip": "Have them write the yearly total big at the bottom of the page. It's usually a number that surprises the whole family.",

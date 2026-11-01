@@ -21,15 +21,15 @@
       },
       {
         "part": "Add it up",
-        "line": "Tent 7 × 7 = 49, snack blanket 5 × 5 = 25, chairs 4 × 6 = 24. Total: 98 square feet."
+        "line": "Tent 8 × 8 = 64, snack blanket 5 × 5 = 25, 2 chairs 3 × 3 = 18. Total: 107 square feet."
       },
       {
         "part": "So",
-        "line": "98 is less than 120, so it fits. But the path to the house is squeezed to 1 foot wide."
+        "line": "107 is less than 120, so it fits. But the path to the house is squeezed to 1 foot wide."
       },
       {
         "part": "Fix",
-        "line": "Turn the blanket sideways and move the chairs to the far edge. Now the path is 2 feet wide."
+        "line": "Move the blanket and the chairs to the far edge, against the fence. Now the path is 2 feet wide."
       }
     ],
     "modelNote": "That's the thinking this guide builds: do the maths, then check it against the real ground."
@@ -226,7 +226,7 @@
         "lines": [
           {
             "k": "S'mores:",
-            "v": "2 each = 2 marshmallows, 2 graham crackers, 2 chocolate squares"
+            "v": "2 each = 2 marshmallows, 2 graham crackers snapped in half, 2 pieces of chocolate"
           },
           {
             "k": "Hot dogs:",

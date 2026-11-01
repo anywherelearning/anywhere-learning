@@ -77,6 +77,10 @@
       {
         "q": "The results don't match the odds",
         "a": "In 10 rounds they can be way off. Play more. The more rounds, the closer the real results get to the odds."
+      },
+      {
+        "q": "The house lost on opening day",
+        "a": "Over 30 plays that happens about 1 time in 5. It's the best proof in the guide: the edge only shows over many plays. Add the next session's tally to this one and watch the house pull ahead."
       }
     ]
   },
@@ -172,7 +176,7 @@
         "Players won a few times. How did the house still come out ahead?",
         "Where else is this trick being played on people?"
       ],
-      "tip": "1 in 4, prize 3, 30 plays: 30 tokens in, about 7 or 8 wins × 3 = about 22 out. The house should end up about 7 or 8 tokens ahead.",
+      "tip": "1 in 4, prize 3, 30 plays: 30 tokens in. Expect about 7 or 8 wins, so about 22 tokens out on average. The house should end up about 7 or 8 tokens ahead.",
       "levels": {
         "explore": "Run the game, count the winners, and see if the house came out ahead.",
         "develop": "Tally tokens in and out, and explain where the profit came from.",
@@ -205,7 +209,7 @@
           },
           {
             "k": "3 cups, 1 ball:",
-            "v": "1 in 3"
+            "v": "1 in 3, if the shuffle is out of sight"
           }
         ],
         "ask": "Check it: did you count every outcome, not just the wins?"

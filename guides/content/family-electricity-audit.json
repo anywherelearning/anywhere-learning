@@ -76,7 +76,7 @@
       },
       {
         "q": "The total doesn't match the bill",
-        "a": "That's normal: heating, hot water and estimates add up. Getting within the same range is a real win. Ask what might be missing."
+        "a": "That's normal. Labels show the most a device can draw, and most use less, so totals often come out high. Heating, hot water and fixed charges also change the bill. Getting within the same range is a real win."
       }
     ]
   },
@@ -102,7 +102,7 @@
     {
       "title": "Hunt the appliances and read the labels",
       "why": "A full inventory of everything that uses electricity, with its wattage.",
-      "kid": "Your kid walks through the house room by room and lists every device that uses electricity, including the hidden ones: phone chargers, the Wi-Fi router, a game console on standby. Then they find the wattage on each label (on the back or the bottom, or in the manual) and write it next to the item. If a label says kW, they multiply by 1,000 to get watts.",
+      "kid": "Your kid walks through the house room by room and lists every device that uses electricity, including the hidden ones: phone chargers, the Wi-Fi router, a game console on standby. Then they find the wattage on each label (on the back or the bottom, or in the manual) and write it next to the item. No label, or only volts and amps? The Typical watts and Reading a label cards in the Energy Toolkit at the end of the guide help.",
       "you": "Walk with them, but let them lead. Point to the rooms they skip, like the laundry room or the garage. Help with labels that are hard to read or to find online.",
       "starters": [
         "The fridge",
@@ -126,7 +126,7 @@
     {
       "title": "Estimate the hours",
       "why": "How long each device is actually on in a normal day.",
-      "kid": "For each appliance, your kid estimates the hours it's on in a day, honestly. They turn minutes into fractions of an hour: 30 minutes is 0.5, 15 minutes is 0.25, 10 minutes is about 0.17. Some things are on all day (the router), some for minutes (the toaster).",
+      "kid": "For each appliance, your kid estimates the hours it's on in a day, honestly. They turn minutes into hours with the Minutes to hours card: 30 minutes is 0.5, 15 minutes is 0.25. Some things are on all day (the router), some for minutes (the toaster).",
       "you": "Help them be realistic. Is the TV really on for 6 hours? The fridge is plugged in all day, but its motor switches on and off, so count it as about 8 hours.",
       "ask": [
         "How many hours a day is the TV really on in our house?",
@@ -145,7 +145,7 @@
       "kid": "For each appliance, your kid follows the chain from the example: watts × hours = watt-hours per day, divided by 1,000 = kWh per day, times the rate = cost per day. Then they multiply by 7 for a week and by 30 for a month, and add up the whole house.",
       "you": "Give them the rate per kWh from the bill, and walk through the first appliance together. Then step back and let them calculate the rest.",
       "ask": [
-        "Which uses more in a day: a 150 W fridge or a 2,000 W oven used for one hour?",
+        "Which uses more in a day: a 10 W router on all day, or a 1,000 W toaster used for 6 minutes?",
         "What does the whole house cost to run in a month, by your numbers?"
       ],
       "tip": "This is where a big lesson lands: a small device that's on all day can cost more than a powerful one used for minutes.",
@@ -217,5 +217,132 @@
     "src": "guides/assets/family-electricity-audit.jpg",
     "alt": "Watercolour illustration of a home energy audit on a kitchen table: notebook, calculator, electricity bill, light bulb, kettle and charger",
     "caption": "Everything you need: a notebook, a calculator and your real bill."
+  },
+  "reference": {
+    "title": "Energy Toolkit",
+    "intro": "Typical watts when a label is missing, how to read a label, minutes as hours and where to find the numbers on your bill.",
+    "items": [
+      {
+        "name": "Typical watts",
+        "lines": [
+          {
+            "k": "LED bulb:",
+            "v": "9 W"
+          },
+          {
+            "k": "Phone charger:",
+            "v": "5 W"
+          },
+          {
+            "k": "Wi-Fi router:",
+            "v": "10 W"
+          },
+          {
+            "k": "TV:",
+            "v": "100 W"
+          },
+          {
+            "k": "Fridge:",
+            "v": "150 W, running about 8 hours a day"
+          },
+          {
+            "k": "Toaster, microwave:",
+            "v": "1,000 W"
+          },
+          {
+            "k": "Kettle, hair dryer:",
+            "v": "1,500 W"
+          }
+        ],
+        "ask": "Check it: mark any number from this card as an estimate."
+      },
+      {
+        "name": "Reading a label",
+        "lines": [
+          {
+            "k": "kW:",
+            "v": "× 1,000 = watts"
+          },
+          {
+            "k": "Only volts and amps:",
+            "v": "watts = volts × amps (120 V × 1.5 A = 180 W)"
+          },
+          {
+            "k": "The label number:",
+            "v": "the most it can draw; most of the time it uses less"
+          },
+          {
+            "k": "Yellow energy label:",
+            "v": "kWh per year ÷ 365 = kWh per day"
+          }
+        ],
+        "ask": "Check it: can you find a label that gives amps instead of watts?"
+      },
+      {
+        "name": "Minutes to hours",
+        "lines": [
+          {
+            "k": "5 minutes:",
+            "v": "0.08 hours"
+          },
+          {
+            "k": "10 minutes:",
+            "v": "0.17"
+          },
+          {
+            "k": "15 minutes:",
+            "v": "0.25"
+          },
+          {
+            "k": "20 minutes:",
+            "v": "0.33"
+          },
+          {
+            "k": "30 minutes:",
+            "v": "0.5"
+          },
+          {
+            "k": "45 minutes:",
+            "v": "0.75"
+          }
+        ],
+        "ask": "Check it: how would you write 6 minutes?"
+      },
+      {
+        "name": "Reading your bill",
+        "lines": [
+          {
+            "k": "Rate:",
+            "v": "the price per kWh, often 10 to 25 cents"
+          },
+          {
+            "k": "Used:",
+            "v": "kWh for this billing period"
+          },
+          {
+            "k": "Days:",
+            "v": "how long the period was"
+          },
+          {
+            "k": "Fixed charges:",
+            "v": "the same however much you use"
+          },
+          {
+            "k": "Peak hours:",
+            "v": "some places charge more at busy times"
+          }
+        ],
+        "ask": "Check it: kWh used ÷ days = what your home uses per day."
+      }
+    ],
+    "after": {
+      "label": "The energy chain",
+      "lines": [
+        "Watts × hours = watt-hours",
+        "Watt-hours ÷ 1,000 = kWh",
+        "kWh × rate = cost per day",
+        "Cost per day × 30 = cost per month"
+      ]
+    }
   }
 }

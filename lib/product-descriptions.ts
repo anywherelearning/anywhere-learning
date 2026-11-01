@@ -524,7 +524,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         'Your child builds a chain reaction machine out of household junk, and it will not work. Not at first, not at the tenth try. Each failure is a physics problem with a specific cause, and finding it is the entire activity.',
       skills: [
         { skill: 'Engineering', where: 'Designing a chain reaction where each step reliably triggers the next' },
-        { skill: 'Science', where: 'Working with momentum, gravity and force until the physics cooperates' },
+        { skill: 'Science', where: 'Working with gravity, energy and friction until the physics cooperates' },
         { skill: 'Problem-Solving', where: 'Troubleshooting the step that keeps failing, then rebuilding it' },
         { skill: 'Communication', where: 'Explaining how the machine works and why each stage is there' },
       ],
@@ -544,11 +544,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Geography', 'Engineering', 'Science', 'Design', 'Presentation'],
     insideTheLearning: {
       lead:
-        'Your child designs a base that could survive somewhere hostile, real or invented. They research the biome first, so the design has to answer actual conditions: this cold, this water supply, this terrain. Then they build a model of it.',
+        'Your child designs a base that could survive somewhere hostile, real or invented. Every zone has to answer a real danger: this cold, this water supply, this terrain. Then a surprise scenario card tests it, and they upgrade on the fly.',
       skills: [
-        { skill: 'Science', where: 'Researching the biome and designing around the environmental challenges it sets' },
+        { skill: 'Science', where: 'Designing around the dangers of a place: cold, water, storms and animals' },
         { skill: 'Planning', where: 'Laying out the base so it solves the practical problems in the right order' },
-        { skill: 'Creative Thinking', where: 'Inventing a base that is genuinely theirs, then building the model' },
+        { skill: 'Creative Thinking', where: 'Inventing a base that is genuinely theirs, built around real dangers' },
         { skill: 'Communication', where: 'Presenting the design and defending why it would work' },
       ],
     },
@@ -577,7 +577,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       skills: [
         { skill: 'Systems Thinking', where: 'Making geography, climate and ecosystem consistent with each other' },
         { skill: 'Creative Thinking', where: 'Inventing creatures, civilisations and the lore that connects them' },
-        { skill: 'Storytelling', where: 'Map-making, language building and writing the world\'s history' },
+        { skill: 'Storytelling', where: 'Map-making, legends, place names and a guided tour' },
       ],
     },
     format: 'Project Guide',
@@ -615,14 +615,14 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Park maths: a family day total and wait times',
       'A park designer toolkit with an attraction mix and a map checklist',
     ],
-    skillTags: ['Maths', 'Design', 'Engineering', 'Business', 'Art'],
+    skillTags: ['Maths', 'Design', 'Engineering', 'Planning', 'Art'],
     insideTheLearning: {
       lead:
-        'Your child designs a theme park: the rides, the layout, the visitor flow, and the budget that has to cover it. Rides need to be safe, the park needs to make money, and the paths need to stop everyone bottlenecking at the entrance.',
+        'Your child designs a theme park: the rides, the layout, the visitor flow, what a family of four would spend and how long the lines are. Rides need to be safe, prices need to add up for a family, and the paths need to stop everyone bottlenecking at the entrance.',
       skills: [
         { skill: 'Spatial Thinking', where: 'Laying out the park and planning how visitors move through it' },
         { skill: 'Engineering', where: 'Designing rides that work and are safe' },
-        { skill: 'Entrepreneurship', where: 'Budgeting, pricing, and making the park add up as a business' },
+        { skill: 'Maths', where: 'Pricing a family day out and working out how long the line is' },
         { skill: 'Communication', where: 'Presenting the park and explaining the decisions behind the layout' },
       ],
     },
@@ -638,10 +638,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Kitchen sound effects and stop-motion tips',
       'Four formats, and no tech required',
     ],
-    skillTags: ['Storytelling', 'Writing', 'Technology', 'Art', 'Collaboration'],
+    skillTags: ['Storytelling', 'Writing', 'Performing', 'Art', 'Collaboration'],
     insideTheLearning: {
       lead:
-        'Your child makes an actual film, animation or radio drama: script, storyboard, sets, costumes, recording, editing. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
+        'Your child makes a play, film, stop-motion or radio drama: story, characters, plan, set, rehearsal and a premiere. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
       skills: [
         { skill: 'Storytelling', where: 'Writing the script and designing the characters that carry it' },
         { skill: 'Planning', where: 'Storyboarding and sequencing so the whole thing can actually be shot' },
@@ -666,7 +666,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       {
         question: 'What do kids actually make in this project?',
         answer:
-          'A playable sport with a name, equipment built from what is in the house, a written rulebook, and a scoring system. Families have ended up with pool-noodle hockey played on knees, a three-team tag with safe zones, and a backyard game bounded by a garden hose. The test of done is that someone else can play it from the rulebook alone.',
+          'A playable sport with a name, equipment built from what is in the house, a written rulebook, and a scoring system. Our kids invented Get Blocked on the trampoline: one thrower outside trying to land the ball, everyone inside blocking it. The test of done is that someone else can play it from the rulebook alone.',
       },
       {
         question: 'How long does inventing a sport take?',
@@ -676,7 +676,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       {
         question: 'What age is invent a sport for?',
         answer:
-          'Ages 8 to 14. Younger kids invent simpler games with two or three rules and need help writing them down. Older kids handle scoring systems, fairness arguments, and equipment that has to be built to a measurement.',
+          'Ages 6 to 14. Younger kids invent simpler games with two or three rules and need help writing them down. Older kids handle scoring systems, fairness arguments, and equipment that has to be built to a measurement.',
       },
       {
         question: 'Do we need any equipment?',
@@ -766,13 +766,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'budget-challenge': {
     opening:
-      'Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan to you. Real budgeting with real trade-offs, not a worksheet with pretend numbers.',
+      'Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan to you. Real budgeting with real prices and real trade-offs.',
     whatsIncluded: [
       'Pick-your-own scenario with real budget constraints',
       'Price research using included Price Menu or real sources',
       'Surprise cost step that forces real trade-off decisions',
       'Schedule building and plan pitching',
-      'Version 2 revision after testing the plan',
+      'Version 2 revision after pitching the plan',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Problem-Solving'],
     insideTheLearning: {
@@ -887,18 +887,18 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Kids hunt every device that plugs in, read the wattage labels, and work out what each one costs to run with your real electricity rate. Then they design a family saving plan, test it for a week, and calculate the real savings.',
     whatsIncluded: [
-      'Household electricity audit guide',
-      'Wattage labels and daily-use estimates',
+      '5 steps from the label hunt to a family test week',
+      'An Energy Toolkit: typical watts, reading labels and your bill',
       'Appliance comparison and cost calculations',
       'Energy-saving plan with estimated savings',
       'A one-week family test with real savings',
     ],
-    skillTags: ['STEM', 'Measurement', 'Data Analysis', 'Environmental Maths', 'Budgeting'],
+    skillTags: ['STEM', 'Measurement', 'Data Analysis', 'Energy', 'Budgeting'],
     insideTheLearning: {
       lead:
         'Your child audits what your house actually spends on electricity, appliance by appliance. Watts times hours, then kilowatt-hours times the rate, and suddenly the numbers on the bill mean something. Then they rank the appliances, find where the waste is, and build a plan to cut it.',
       skills: [
-        { skill: 'Number Sense', where: 'Multiplying watts by hours and kilowatt-hours by the rate, then dividing to get averages and per-day costs' },
+        { skill: 'Number Sense', where: 'Multiplying watts by hours and kilowatt-hours by the rate, then scaling up to daily, weekly and monthly costs' },
         { skill: 'Organisation', where: 'Recording appliance data in tables, then sorting and ranking by what it costs' },
         { skill: 'Percentages', where: 'Working out what share of the total each appliance is responsible for' },
         { skill: 'Problem-Solving', where: 'Turning the findings into practical changes with estimated savings attached' },
@@ -919,10 +919,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Mental Maths', 'Budgeting', 'Estimation', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Your child shops a real market against a real budget, and every stall is a maths problem. Cost per kilo against cost per item. A running total in their head. Change checked before they walk away. They also have to talk to vendors, ask questions, and sometimes negotiate.',
+        'Your child shops a real market against a real budget, and every stall is a maths problem. Cost per kilo against cost per item. A running total in their head. Change checked before they walk away. They also have to talk to vendors, ask questions, and ask how much for half.',
       skills: [
         { skill: 'Number Sense', where: 'Running totals, calculating change, and scaling quantities on the spot' },
-        { skill: 'Math', where: 'Unit pricing, working out cost per kilo, per item or per litre to compare properly' },
+        { skill: 'Math', where: 'Unit pricing, working out cost per kilo, per bunch or per item to compare properly' },
         { skill: 'Financial Literacy', where: 'Staying inside a fixed budget and making the trade-offs that requires' },
         { skill: 'Pricing & Sales', where: 'Evaluating value across different vendors selling the same thing' },
         { skill: 'Planning', where: 'Choosing ingredients that work together as meals and still fit the budget' },
@@ -996,10 +996,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     insideTheLearning: {
       lead:
-        'Your child plans a real party, and the maths is the only way to get there. Feeding a set number of guests means calculating quantities per guest and scaling the recipes up. Staying inside a fixed budget means comparing prices and making trade-offs about what makes the cut. They are not doing a worksheet about a party. They are doing the party, and the worksheet turns out to be unnecessary.',
+        'Your child plans a real party, and the maths is the only way to get there. Every food gets multiplied by the guests, divided into packs and rounded up, and every dollar has to fit inside the budget per guest. Then they host it and find out what it really cost.',
       skills: [
-        { skill: 'Number Sense', where: 'Calculating quantities per guest, scaling recipes up, and splitting costs across the list' },
-        { skill: 'Financial Literacy', where: 'Working inside a fixed budget, comparing prices and making the trade-offs that keeps it there' },
+        { skill: 'Number Sense', where: 'Multiplying per guest, dividing into packs and rounding up' },
+        { skill: 'Financial Literacy', where: 'Working inside a fixed budget, comparing prices and making the trade-offs that keep it there' },
       ],
     },
     format: 'Project Guide',
@@ -1022,7 +1022,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     insideTheLearning: {
       lead:
-        'Your child plans a real road trip with real distances. Multiply distance by fuel cost, add the stops, work out driving times, compare two routes and find out one is cheaper but three hours longer. Then build a budget that survives the whole trip.',
+        'Your child plans a real road trip with real distances. Divide the distance by the car\'s fuel use, multiply by the price at the pump, add the stops, work out driving times, compare two routes and find out one is cheaper but three hours longer. Then build a budget that survives the whole trip.',
       skills: [
         { skill: 'Math', where: 'Reading maps and calculating distances, then multi-step maths across fuel, time and expenses' },
         { skill: 'Budgeting', where: 'Estimating the real costs, comparing options and staying inside the total' },
@@ -2833,6 +2833,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Track a running total in the store',
       'Make real trade-offs when it does not all fit',
       'Check out, count the change, and review',
+      'A Shopper\'s Toolkit: rounding, shelf tags and counting change',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Decision-Making'],
     insideTheLearning: {
@@ -2857,13 +2858,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A rhythm builder with beats, layers and rests',
       'Piece shapes to give the music a beginning and an end',
     ],
-    skillTags: ['Creativity', 'Improvisation', 'Rhythm', 'Confidence', 'Music'],
+    skillTags: ['Creativity', 'Science of Sound', 'Rhythm', 'Composition', 'Music'],
     insideTheLearning: {
       lead:
-        'Your child builds instruments out of what is in the house and then plays them in front of people. Rhythm is maths you feel rather than calculate. Improvising means trying, listening and adjusting with no plan to fall back on.',
+        'Your child turns five household objects into instruments, finds out why some sound high and others low, and shapes the sounds into a piece they perform. Rhythm is maths you feel rather than calculate.',
       skills: [
         { skill: 'Creativity', where: 'Making instruments and music out of nothing' },
-        { skill: 'Improvisation', where: 'Trying, listening and adjusting in the moment without a plan' },
+        { skill: 'Science of Sound', where: 'Finding out why bigger, looser things sound lower and smaller, tighter things higher' },
         { skill: 'Rhythm', where: 'The maths hiding inside music, felt rather than worked out on paper' },
         { skill: 'Music', where: 'Building something that genuinely makes sound and learning to play it' },
         { skill: 'Confidence', where: 'Performing something of their own in front of other people' },
@@ -3100,9 +3101,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['STEM', 'Science', 'Scientific Method', 'Prediction', 'Chemistry'],
     insideTheLearning: {
       lead:
-        'Your child runs real experiments in the kitchen: predict, test, observe, conclude. That is the actual scientific method, not a demonstration of it. And chemistry you can eat holds attention in a way a diagram never does.',
+        'Your child identifies a mystery powder with evidence, not guesses: an indicator they made themselves, a fair-test results table, and tests chosen for what they rule out. That is the actual scientific method, not a demonstration of it.',
       skills: [
-        { skill: 'STEM', where: 'Running the full method rather than watching a demonstration' },
+        { skill: 'Logic', where: 'Ruling suspects out, test by test, until only one is left' },
         { skill: 'Science', where: 'Predicting, testing, observing and concluding for real' },
         { skill: 'Scientific Method', where: 'Following the process properly, including when the result is not what they wanted' },
         { skill: 'Prediction', where: 'Committing to what they think will happen before finding out' },

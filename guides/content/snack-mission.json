@@ -2,7 +2,7 @@
   "slug": "snack-mission",
   "category": "Real-World Math",
   "title": "The $20 Snack Mission",
-  "tagline": "Budgeting · Mental math · Trade-offs",
+  "tagline": "Budgeting · Mental maths · Trade-offs",
   "ages": "Ages 6 to 14",
   "goal": "Your kid takes a real budget into a real store with a real mission: snacks for the week, a movie night spread, or the ingredients for a meal they'll help cook. They plan, guess prices, keep a running total, make the hard trade-offs, and pay. Math sticks when going over budget means putting back the thing you want.",
   "need": [
@@ -11,7 +11,7 @@
     "A real reason to shop, and any grocery or corner store (a flyer or an online store works too)"
   ],
   "lesson": {
-    "text": "Good shoppers round each price as they go and keep a running total in their head. Then they know where they stand long before the till.",
+    "text": "Good shoppers round each price up as they go and keep a running total in their head. Rounding up means the real total comes in a little under, never over.",
     "before": "I think it's around twenty.",
     "model": [
       {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You're the wallet, not the manager. Hand over the list, the math and the choices, even the ones you wouldn't make. Let them go over budget at the till and fix it: that's the best lesson in the store. When they're adding, wait. The pause is the work.",
+    "intro": "You're the wallet, not the manager. Hand over the list, the maths and the choices, even the ones you wouldn't make. Let them go over budget at the till and fix it: that's the best lesson in the store. When they're adding, wait. The pause is the work.",
     "plan": [
       {
         "when": "At home",
@@ -74,8 +74,12 @@
         "a": "Hand it back: 'It's your mission. What matters most to you?' The choice is the lesson."
       },
       {
-        "q": "They freeze on the mental math",
+        "q": "They freeze on the mental maths",
         "a": "Round to the nearest dollar first. Exact numbers can wait until the till."
+      },
+      {
+        "q": "The till total was higher than ours",
+        "a": "In many places, snacks like chips, candy and pop get tax added at the till. Keep $1 or $2 spare next time."
       }
     ]
   },
@@ -85,7 +89,7 @@
       "text": "matching what you want to what you have"
     },
     {
-      "name": "Mental math",
+      "name": "Mental maths",
       "text": "adding and rounding on the fly"
     },
     {
@@ -139,7 +143,7 @@
     {
       "title": "Shop and keep a running total",
       "why": "The plan meets real prices, and the total stays in their hands.",
-      "kid": "In the store, your kid finds each item and checks the real price against their guess. Every time something goes in the cart, they round it and add it to a running total, like the example, on paper, a calculator or in their head. They compare two similar items to find the better deal.",
+      "kid": "In the store, your kid finds each item and checks the real price against their guess. Every time something goes in the cart, they round it up and add it to a running total, using the Round as you go card in the Shopper's Toolkit at the end of the guide, on paper, a calculator or in their head. They compare two similar items with the Read the shelf tag card to find the better deal.",
       "you": "Walk with them and let them do the adding. Show them one pro move: the small unit price on the shelf tag. The bigger bag isn't always the better deal.",
       "ask": [
         "How close was the real price to your guess?",
@@ -161,7 +165,7 @@
         "What will you put back, and why that one?",
         "Was anything not worth the price once you saw it?"
       ],
-      "tip": "This is the moment that sticks. The small sting of putting back a treat teaches more about subtraction than any worksheet.",
+      "tip": "Expect a small sting when a treat goes back on the shelf. Don't top it up from your wallet. Ask what they'd put back to keep it, and let them do the swap maths.",
       "levels": {
         "explore": "Choose one thing to put back to fit the budget.",
         "develop": "Rebalance the whole cart to land under budget.",
@@ -171,13 +175,13 @@
     {
       "title": "Check out and look back",
       "why": "Paying, counting the change, and turning one trip into a skill.",
-      "kid": "At the till, your kid pays and counts the change. Was the final total close to their running total? Did they come in under budget? Back home, they take two minutes to look back: what worked, what surprised them, and what they'd do differently with the same twenty dollars next time.",
+      "kid": "At the till, your kid pays and counts the change up, like the Count the change up card. Was the final total close to their running total? Did they come in under budget? Back home, they take two minutes to look back: what worked, what surprised them, and what they'd do differently with the same twenty dollars next time.",
       "you": "Let them hand over the money and count the change back themselves. Then ask the look-back questions and really listen.",
       "ask": [
         "Did you come in under budget? By how much?",
         "What would you do differently with the same money next time?"
       ],
-      "tip": "Counting real change is mental math with a reason. Let the cashier wait a few seconds.",
+      "tip": "Counting real change is mental maths with a reason. Let the cashier wait a few seconds.",
       "levels": {
         "explore": "Pay and check if the change is right.",
         "develop": "Compare the final total to the running total they kept.",
@@ -219,5 +223,119 @@
   "fromHome": {
     "text": "During our 5-day challenge week, my kids put their $20 each together and had $40 to make dinner for the family: a drink, a meal and a dessert. They planned it at the table with a cookbook, shopped for everything themselves, and made it. We just ate.",
     "quotes": []
+  },
+  "reference": {
+    "title": "Shopper's Toolkit",
+    "intro": "How to round as you go, read a shelf tag, count the change and decide what goes back.",
+    "items": [
+      {
+        "name": "Round as you go",
+        "lines": [
+          {
+            "k": "$3.49:",
+            "v": "round up to $3.50"
+          },
+          {
+            "k": "$4.79:",
+            "v": "round up to $5"
+          },
+          {
+            "k": "$6.29:",
+            "v": "round up to $6.50"
+          },
+          {
+            "k": "Always up:",
+            "v": "so the till never surprises you"
+          },
+          {
+            "k": "Tax:",
+            "v": "keep $1 or $2 spare"
+          }
+        ],
+        "ask": "Check it: is your running total a little over the real prices?"
+      },
+      {
+        "name": "Read the shelf tag",
+        "lines": [
+          {
+            "k": "Big number:",
+            "v": "the price"
+          },
+          {
+            "k": "Small number:",
+            "v": "the unit price, per 100 g or each"
+          },
+          {
+            "k": "500 g for $3.50:",
+            "v": "70¢ per 100 g"
+          },
+          {
+            "k": "200 g for $1.80:",
+            "v": "90¢ per 100 g"
+          },
+          {
+            "k": "2 for $5:",
+            "v": "$2.50 each, so check the single price"
+          }
+        ],
+        "ask": "Check it: are you comparing the same unit?"
+      },
+      {
+        "name": "Count the change up",
+        "lines": [
+          {
+            "k": "Total:",
+            "v": "$18.56, paid with $20"
+          },
+          {
+            "k": "+4¢:",
+            "v": "$18.60"
+          },
+          {
+            "k": "+40¢:",
+            "v": "$19"
+          },
+          {
+            "k": "+$1:",
+            "v": "$20"
+          },
+          {
+            "k": "Change:",
+            "v": "4¢ + 40¢ + $1 = $1.44"
+          }
+        ],
+        "ask": "Check it: does the money in your hand match?"
+      },
+      {
+        "name": "When it won't all fit",
+        "lines": [
+          {
+            "k": "First:",
+            "v": "put back a maybe"
+          },
+          {
+            "k": "Swap:",
+            "v": "the store brand"
+          },
+          {
+            "k": "Size:",
+            "v": "a smaller one"
+          },
+          {
+            "k": "Make it:",
+            "v": "popcorn kernels instead of bags"
+          }
+        ],
+        "ask": "Check it: did you keep every must-have?"
+      }
+    ],
+    "after": {
+      "label": "Shopper's maths",
+      "lines": [
+        "Running total = last total + rounded price",
+        "Change = money paid − total",
+        "Unit price = price ÷ amount"
+      ]
+    }
   }
 }
