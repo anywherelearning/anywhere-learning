@@ -440,11 +440,11 @@ export const HOME_FAQS: ShowcaseFaq[] = [
   },
   {
     q: 'What ages does this work for?',
-    a: 'Ages 6 to 14. Every activity has three levels, Explore, Develop and Extend, so siblings work side by side without anyone feeling overwhelmed or bored.',
+    a: 'Ages 6 to 14. Every activity has three levels, Explore, Develop and Extend, so siblings work side by side without anyone feeling overwhelmed or bored. The levels follow your kid, not their age or grade.',
   },
   {
-    q: "What about a kid who can't sit still?",
-    a: 'Nothing here is timed or graded, and you pitch each activity where your kid actually is. If the table is where it all falls apart in your house, none of this happens at a table.',
+    q: "What about a neurodivergent kid, or one who can't sit still?",
+    a: 'Often a good fit, diagnosis or not. Steps are short, bodies move, and nothing is timed or graded. You pitch each activity where your kid actually is, and you can stop halfway and pick it up tomorrow. If the table is where it all falls apart in your house, none of this happens at a table.',
   },
   {
     q: 'How many kids can I add?',

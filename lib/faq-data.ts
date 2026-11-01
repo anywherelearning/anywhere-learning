@@ -28,7 +28,12 @@ export const familyFaqItems: FAQItem[] = [
   {
     question: 'What ages does this work for?',
     answer:
-      'Designed for ages 6 to 14. Every activity includes three skill levels: Explore for getting started, Develop for building confidence, Extend for going deeper. The levels are about where your kid is with that specific skill, not their age. Siblings can do the same activity side by side at different levels without anyone feeling overwhelmed or under-challenged.',
+      'Designed for ages 6 to 14. Every activity includes three skill levels: Explore for getting started, Develop for building confidence, Extend for going deeper. The levels are about where your kid is with that specific skill, not their age or grade, so a kid who is ahead in one area and still building another fits right in. Siblings can do the same activity side by side at different levels without anyone feeling overwhelmed or under-challenged.',
+  },
+  {
+    question: 'Will this work for my neurodivergent kid?',
+    answer:
+      "Often, yes. Whether your kid has a diagnosis, is waiting on one, or is just wired differently, the format tends to suit kids who fight anything that looks like schoolwork. Steps are short, bodies move, and there's a real reason for the task: a real budget, a real customer, a real game to play. Every activity has three levels, so you can start at Explore and stay there as long as you need. You do it with them, you can stop halfway and pick it up tomorrow, and there's no page to get wrong. If big feelings are the hard part, start with the Frustration Tolerance Challenge Cards.",
   },
   {
     question: "We're already doing a lot. Do we really need more activities?",
