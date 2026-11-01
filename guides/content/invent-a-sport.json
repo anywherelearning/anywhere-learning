@@ -103,13 +103,13 @@
     {
       "title": "Pick the type and the win",
       "why": "One clear goal makes the first version playable today.",
-      "kid": "Your kid picks a type of sport from the Sport types card in the Sport Designer's Toolkit at the end of the guide: target, race, capture, endurance, relay, or a mix of two. Then they finish one sentence: 'You win by...'",
+      "kid": "Your kid picks a type of sport from the Sport types card in the Sport Designer's Toolkit at the end of the guide: target, race, capture, endurance, relay, or a mix of two. Then they grab a ball and whatever's nearby and try the idea for 2 minutes before deciding how you win.",
       "you": "Help them keep Version 1 simple enough to play today. Ask whether it's solo, teams, or either.",
       "ask": [
         "Is it a solo sport, a team sport, or either?",
-        "How will you know when someone has won?"
+        "What was the best moment in the 2-minute trial?"
       ],
-      "tip": "If they can't say how you win in one sentence, the sport is too big for round one.",
+      "tip": "If it isn't fun in a 2-minute trial, change the type, not the rules. Rules can't rescue a dull idea.",
       "levels": {
         "explore": "Pick a type and say how you win.",
         "develop": "Write the win in one sentence and name the sport.",
@@ -135,7 +135,7 @@
     {
       "title": "Write the rules and the scoring",
       "why": "Rules someone else can follow without you explaining.",
-      "kid": "Your kid writes the 5 rules on The 5 rules every sport needs list in the Sport Designer's Toolkit at the end of the guide. Then they set the scoring, using the Scoring ideas card: points that match how hard each move is.",
+      "kid": "Your kid writes a rulebook that answers The referee's questions in the Sport Designer's Toolkit at the end of the guide: where the lines are, what counts as a foul, how play restarts and what ends the game. Then they set the scoring, using the Scoring ideas card: points that match how hard each move is.",
       "you": "Don't write the rules. Ask questions that find the gaps: 'What if two people grab it at once?'",
       "ask": [
         "What's the one rule players will argue about most?",
@@ -167,7 +167,7 @@
     {
       "title": "Playtest, fix and play the championship",
       "why": "Playing it twice is what turns an idea into a sport.",
-      "kid": "Your kid hands the rules to the players and watches them set up and play without explaining. After a full round, they check the Fair play checks card, pick 1 or 2 things to change, and play again. Then the championship: a name, announced teams, a public scoreboard and a winner.",
+      "kid": "Your kid explains the rules once, in under a minute, then everyone plays a full round while they referee and someone keeps score. After the round, they check the Fair play checks card, pick 1 or 2 things to change, and play again. Then the championship: a name, announced teams, a public scoreboard and a winner.",
       "you": "Play honestly and don't fake-lose. Give real feedback. On championship day, be a loud fan.",
       "ask": [
         "Was the score close, or did someone run away with it?",
@@ -209,7 +209,7 @@
             "v": "teams pass it on"
           }
         ],
-        "ask": "Can you say how you win in one sentence?"
+        "ask": "Which type suits the space you have?"
       },
       {
         "name": "Equipment swaps",
@@ -291,13 +291,13 @@
       }
     ],
     "after": {
-      "label": "The 5 rules every sport needs",
+      "label": "The referee's questions",
       "lines": [
-        "1. How the game starts",
-        "2. What players can't do",
-        "3. How you score",
-        "4. How you win",
-        "5. What happens in a tie, a foul or an argument"
+        "1. Where are the lines, and what happens if you cross one?",
+        "2. What counts as a foul, and what's the penalty?",
+        "3. How does play start, and restart after a point?",
+        "4. What ends the game: time, points or rounds?",
+        "5. Who decides when players disagree?"
       ]
     }
   },
