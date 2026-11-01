@@ -1138,7 +1138,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Pick one bird species visible from your garden or park. Observe it for 15 minutes a day for a week. What does it eat? Where does it go? How does it interact with other birds? This is genuine ethology, the study of animal behaviour, and it builds patience, attention, and scientific observation skills.' },
       { type: 'pull-quote', text: 'Real science doesn\u2019t happen in a textbook. It happens when a curious kid gets muddy trying to figure something out.' },
       { type: 'heading', level: 2, text: 'Making it work for different ages' },
-      { type: 'paragraph', text: 'Every challenge above works across ages with simple adjustments. Younger kids (4\u20136) do the building and observing. Older kids (7\u20139) add measurement and recording. Tweens (10\u201313) add hypothesis, controlled variables, and written conclusions. Same activity, different depth.' },
+      { type: 'paragraph', text: 'Every challenge above works across ages with simple adjustments. Younger kids (4\u20136) do the building and observing. Older kids (7\u20139) add measurement and recording. Tweens (10\u201313) add hypothesis, controlled variables, and written conclusions. Same activity, different depth. For 11 to 14, these [outdoor STEM projects for teens](/blog/outdoor-stem-for-teens) add real measuring and fair tests.' },
       { type: 'paragraph', text: 'The key is to resist turning it into a lesson. Don\u2019t explain the science before they do the activity. Let them discover it. Ask questions instead of giving answers. \u201cWhat do you think will happen? Why did that one fail? What would you change?\u201d' },
       { type: 'paragraph', text: 'Most of these work in any season. For the cold months, these [winter STEM activities](/blog/winter-stem-activities-kids) are built around snow, ice and frost.' },
       { type: 'tip', title: 'Keep a field notebook', text: 'Give each child a small notebook dedicated to outdoor experiments. Sketches, measurements, observations, questions. Over time, this becomes a portfolio of genuine scientific thinking, and it\u2019s far more impressive than any worksheet.' },
@@ -1152,7 +1152,7 @@ const posts: BlogPost[] = [
         { question: 'Can I do outdoor STEM in a small garden or urban area?', answer: 'Absolutely. Shadow tracking, erosion experiments, weather stations, invertebrate surveys, and decomposition studies all work in a small garden or local park. You don\u2019t need wilderness, you just need a patch of ground and some curiosity.' },
       ]},
     ],
-    relatedSlugs: ['engineering-for-kids', 'forest-school-activities', 'rube-goldberg-kids', 'lego-stem-activities', 'stem-activities-by-age', 'seasonal-scavenger-hunts', 'nature-walks-science'],
+    relatedSlugs: ['outdoor-stem-for-teens', 'engineering-for-kids', 'forest-school-activities', 'rube-goldberg-kids', 'lego-stem-activities', 'stem-activities-by-age', 'seasonal-scavenger-hunts', 'nature-walks-science'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
 
@@ -4796,7 +4796,7 @@ const posts: BlogPost[] = [
       { type: 'image', src: '/images/outdoor-stem-by-age-shelter.jpeg', alt: 'Two children building a lean-to shelter from long sticks propped against a large tree trunk in a forest', caption: 'Building a shelter is engineering you can climb inside. One solid trunk, a pile of sticks, and a lot of testing what actually holds.' },
 
       { type: 'heading', level: 2, text: 'Middle school and up (ages 12 to 14): give them data and a deadline' },
-      { type: 'paragraph', text: 'Tweens and young teens can run projects that stretch across weeks, collect their own data, and interpret what it means. Abstraction is finally on the table, so they can model systems they cannot see directly. Treat them like junior scientists, because at this point they nearly are.' },
+      { type: 'paragraph', text: 'Tweens and young teens can run projects that stretch across weeks, collect their own data, and interpret what it means. Abstraction is finally on the table, so they can model systems they cannot see directly. Treat them like junior scientists, because at this point they nearly are. For eight full projects built this way, see [outdoor STEM for teens](/blog/outdoor-stem-for-teens).' },
       { type: 'list', ordered: false, items: [
         'Microclimate log: measure the temperature in four spots (open sun, shade, pavement, under a tree) at the same time each day for two weeks, then graph it. They will discover the urban heat-island effect on their own street.',
         'Creek health check: test a local stream’s clarity and temperature and note which insects live in it, since some species only survive in clean water. Compare a spot upstream to one downstream.',
@@ -4839,7 +4839,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want more real-world activities your kids can do this week? Grab our free guide and start with what is already in your backyard.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'backyard-science-experiments', 'stem-activities-by-age', 'nature-walks-science'],
+    relatedSlugs: ['outdoor-stem-for-teens', 'forest-school-activities', 'outdoor-stem-challenges', 'backyard-science-experiments', 'stem-activities-by-age', 'nature-walks-science'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
 
@@ -6991,7 +6991,7 @@ const posts: BlogPost[] = [
       { type: 'product-callout', slug: 'rube-goldberg-machine' },
 
       { type: 'heading', level: 2, text: '8 engineering challenges for kids with a number to beat' },
-      { type: 'paragraph', text: 'A project can take an afternoon. A challenge takes 20 minutes and ends with a number. The number is what turns a craft into engineering: it gives the kid something to beat next time, and it makes "did it work?" a question with a real answer. Write the result on the fridge. Run the same challenge again next week and see if the number moves. These all work from about age 6, and an 11-year-old will happily spend an hour on any of them.' },
+      { type: 'paragraph', text: 'A project can take an afternoon. A challenge takes 20 minutes and ends with a number. The number is what turns a craft into engineering: it gives the kid something to beat next time, and it makes "did it work?" a question with a real answer. Write the result on the fridge. Run the same challenge again next week and see if the number moves. These all work from about age 6, and an 11-year-old will happily spend an hour on any of them. When they want the numbers too, try these [outdoor STEM projects for teens](/blog/outdoor-stem-for-teens).' },
       { type: 'list', ordered: true, items: [
         'Paper column: one sheet of paper and tape, rolled or folded into a column. How many books can it hold before it crumples? Round, square and triangle columns give different numbers. Beat: books.',
         'Newspaper tower: one sheet of newspaper and 30 cm of tape, tallest free-standing tower in 10 minutes. It has to stand for 10 seconds with nobody touching it. Beat: centimetres.',
@@ -7052,7 +7052,7 @@ const posts: BlogPost[] = [
         { question: 'Can engineering for kids be done without buying anything?', answer: 'Yes, almost entirely. Most projects use cardboard from the recycling, sticks from outside, tape and string, and household items like rubber bands and paper clips. Specialty items (a hot glue gun, a few specific materials) are nice to have but not required. The constraint of working with what is on hand is often where the most creative solutions come from.' },
       ] },
     ],
-    relatedSlugs: ['rube-goldberg-kids', 'design-a-theme-park-kids', 'lego-stem-activities', 'stem-activities-by-age', 'outdoor-stem-challenges', 'real-world-math-activities', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
+    relatedSlugs: ['outdoor-stem-for-teens', 'rube-goldberg-kids', 'design-a-theme-park-kids', 'lego-stem-activities', 'stem-activities-by-age', 'outdoor-stem-challenges', 'real-world-math-activities', 'project-based-learning-homeschool', 'kids-making-videos-learning'],
     recommendedProduct: 'rube-goldberg-machine',
   },
   {
@@ -8206,7 +8206,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'It will be messy at first, and that is the point. A kid who has never managed their own time cannot learn to by being managed. The middle years are the low-stakes practice ground for the self-direction they will need in high school, work, and life. Your role shifts from teacher to mentor: available, interested, checking in, but no longer running the show. It is uncomfortable to loosen the grip. Do it anyway. Building [executive function](/blog/executive-function-kids) and [time management](/blog/time-management-for-kids) is one of the most valuable things you can do in these years, and it only happens through real practice.' },
 
       { type: 'heading', level: 2, text: 'Follow the interests, seriously' },
-      { type: 'paragraph', text: 'If there is one thing homeschooling middle school can do that traditional school cannot, it is let a kid go deep on what they love. This is the age where a passion can become a genuine skill, a project can become a body of work, and an interest can even become an income. Give it real time and real respect, not just a leftover half-hour on Fridays.' },
+      { type: 'paragraph', text: 'If there is one thing homeschooling middle school can do that traditional school cannot, it is let a kid go deep on what they love. This is the age where a passion can become a genuine skill, a project can become a body of work, and an interest can even become an income. Give it real time and real respect, not just a leftover half-hour on Fridays. For hands-on science at this age, these [outdoor STEM projects for teens](/blog/outdoor-stem-for-teens) come with real data to collect.' },
       { type: 'paragraph', text: 'A middle schooler with time and freedom might teach themselves to code, build a following making videos, get seriously good at an instrument, write a novel, or start a small business. Our own older kid runs his own business, and it has taught him more about math, communication, resilience, and real-world problem solving than any curriculum could. That is not a rare exception. It is what tweens do when you give them room and take them seriously. The deep dive is not a distraction from their education. Increasingly, it is the point.' },
 
       { type: 'product-callout', slug: 'micro-business', context: 'For the middle schooler ready to turn an interest into income, a guided first business they actually run. Real math, real communication, real stakes.', pinned: true },
@@ -8242,7 +8242,7 @@ const posts: BlogPost[] = [
         { question: 'Do you need a curriculum to homeschool middle school?', answer: 'Not a full boxed curriculum for every subject. Many families use a structured math program because sequence matters there, then handle writing, reading, science, and history through real books, real projects, discussion, and interest-led deep dives. What matters is that the core skills are solid and the learning is genuine. Plenty of successful middle school homeschools run on a library card, a math program, and a lot of real-world projects.' },
       ]},
     ],
-    relatedSlugs: ['life-skills-before-12', 'what-kids-should-know-before-18', 'sample-homeschool-schedules', 'back-to-homeschool-routines'],
+    relatedSlugs: ['outdoor-stem-for-teens', 'life-skills-before-12', 'what-kids-should-know-before-18', 'sample-homeschool-schedules', 'back-to-homeschool-routines'],
     pillarSlug: 'homeschool-journey',
   },
 
@@ -9966,7 +9966,6 @@ const posts: BlogPost[] = [
     category: 'stem-for-kids',
     pillarSlug: 'stem-for-kids',
     publishedAt: '2026-11-01',
-    draft: true,
     keywords: ['outdoor stem for teens', 'outdoor stem activities for teens', 'stem activities for middle school', 'outdoor science activities for middle school', 'engineering projects for teens', 'stem projects for tweens', 'outdoor science for teens', 'real world stem projects', 'stem for 12 year olds', 'homeschool middle school science'],
     readTimeMinutes: 11,
     author: amelie,
