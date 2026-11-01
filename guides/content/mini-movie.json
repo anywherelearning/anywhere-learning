@@ -4,7 +4,7 @@
   "title": "Mini Movie",
   "tagline": "Write · Build · Premiere",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid becomes the writer, director and producer of their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent the characters, plan the story, build the set, rehearse, record or perform it, and hold a premiere. No tech needed: a live show in the kitchen counts.",
+  "goal": "Your kid becomes the writer, director and producer of their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent the characters, storyboard it shot by shot, build the set, rehearse, then record and edit it, or perform it live, and hold a premiere. No tech needed: a live show in the kitchen counts.",
   "need": [
     "Paper, markers, cardboard and tape",
     "Toys, figurines, LEGO or clay for characters",
@@ -45,8 +45,8 @@
       "text": "scene timing, frames per second"
     },
     {
-      "subject": "Art",
-      "text": "sets, props and costumes"
+      "subject": "Media",
+      "text": "shot types, storyboards and editing"
     },
     {
       "subject": "Communication",
@@ -62,11 +62,11 @@
       },
       {
         "when": "Session 2",
-        "what": "Plan the story and build the set (Steps 3 and 4)."
+        "what": "Storyboard it, build the set and rehearse (Steps 3 and 4)."
       },
       {
         "when": "Session 3",
-        "what": "Rehearse, record or perform, and premiere (end of Step 4, and Step 5)."
+        "what": "Record, edit and premiere (Step 5)."
       }
     ],
     "tips": [],
@@ -87,8 +87,8 @@
       "text": "a want, a problem, an ending"
     },
     {
-      "name": "Planning",
-      "text": "scenes in the right order"
+      "name": "Directing",
+      "text": "choosing what the audience sees"
     },
     {
       "name": "Performing",
@@ -133,19 +133,19 @@
       }
     },
     {
-      "title": "Plan the story",
-      "why": "A plan keeps the show short and the ending strong.",
-      "kid": "Your kid plans what happens: a beginning, middle and end in 3 sentences or drawings, a storyboard with 4 to 8 boxes, or a scene list. Then they write the key lines. For stop-motion, the plan is a shot list: what moves in each shot.",
-      "you": "Help them pick a planning style that fits. Younger kids can do a talking plan, no writing at all. If they're writing pages, help them cut.",
+      "title": "Storyboard it, shot by shot",
+      "why": "Directors decide what the audience sees before anyone picks up a camera.",
+      "kid": "Your kid draws a storyboard: 4 to 8 boxes, one shot or moment in each, with the line said underneath. For a film or stop-motion, they mark each box wide, medium or close-up, using the Shot types card in the Studio Toolkit at the end of the guide. For a live show, they mark where each actor stands. For radio, which sound comes first.",
+      "you": "Help them pick boxes over pages: younger kids can draw three pictures and talk the rest. If the plan runs long, help them cut a scene.",
       "ask": [
-        "What happens first that grabs the audience?",
-        "How does it end in a way that feels right?"
+        "What's the first thing the audience sees?",
+        "Which moment needs a close-up, and why that one?"
       ],
       "tip": "Stop-motion maths: at 12 photos a second, a 10-second scene takes 120 photos. Plan short scenes.",
       "levels": {
-        "explore": "Tell the beginning, middle and end out loud.",
-        "develop": "Draw a storyboard with 4 to 8 boxes and write the key lines.",
-        "extend": "Write a short script and plan each shot as wide, medium or close-up (for radio: near or far sounds), saving close-ups for feelings."
+        "explore": "Draw the beginning, middle and end as 3 pictures, and tell them out loud.",
+        "develop": "Draw 4 to 8 boxes, write the key line under each, and mark each one wide, medium or close-up.",
+        "extend": "Plan one scene with a close-up only where the audience needs to see a feeling, and explain why there and nowhere else."
       }
     },
     {
@@ -165,25 +165,25 @@
       }
     },
     {
-      "title": "Record it and premiere",
-      "why": "A real audience makes it a real show.",
-      "kid": "Your kid performs it live or records it: films scene by scene, takes stop-motion photos, or records the radio drama in a quiet room. Then they hold a premiere: introduce the show, play or perform it, and take questions.",
-      "you": "Hold the camera if needed. At the premiere, watch for real, laugh at the funny parts and ask real questions.",
+      "title": "Record, edit and premiere",
+      "why": "A finished show and a real audience make it a real production.",
+      "kid": "Your kid records it shot by shot, following the storyboard, with the phone propped so it doesn't move. Then they edit: trim the start and end of each clip, put the clips in order, and add a title and credits in any free video app. Live show? A full dress rehearsal instead. Last, the premiere: introduce the show, play it, take questions.",
+      "you": "Hold the camera if needed, and help with the app if they ask. At the premiere, watch for real, laugh at the funny parts and ask real questions.",
       "ask": [
-        "Which scene was hardest to get right?",
-        "If you made a sequel, what would happen next?"
+        "Which shot was hardest to get right?",
+        "What did you cut in the edit, and why?"
       ],
-      "tip": "If a take goes wrong, do it again. Real movies do dozens of takes. Done beats perfect.",
+      "tip": "Leave two seconds of quiet before and after each line when filming. It makes trimming the clips much easier.",
       "levels": {
         "explore": "Perform or record the show for one person.",
-        "develop": "Record or perform the whole show and hold a premiere with tickets.",
+        "develop": "Record it shot by shot, trim each clip and put them in order, then hold a premiere.",
         "extend": "If you're filming, keep each character on the same side of the screen in every shot of one conversation (the 180-degree rule). Then break it once: did anyone notice?"
       }
     }
   ],
   "reference": {
     "title": "Studio Toolkit",
-    "intro": "Formats to pick from, story seeds, sound effects from the kitchen and stop-motion tips.",
+    "intro": "Formats to pick from, story seeds, the three shots every director uses and tips for each format.",
     "items": [
       {
         "name": "Formats",
@@ -234,52 +234,52 @@
         "ask": "Can you say your story in one sentence?"
       },
       {
-        "name": "Kitchen sound effects",
+        "name": "Shot types",
         "lines": [
           {
-            "k": "Thunder:",
-            "v": "wobble a baking sheet"
+            "k": "Wide:",
+            "v": "the whole set, so we know where we are"
           },
           {
-            "k": "Rain:",
-            "v": "pour rice slowly onto a pan"
+            "k": "Medium:",
+            "v": "waist up, for who's talking"
           },
           {
-            "k": "Fire:",
-            "v": "crinkle foil or a chip bag"
+            "k": "Close-up:",
+            "v": "a face, a feeling or a clue"
           },
           {
-            "k": "Horse:",
-            "v": "clop two cups on a table"
+            "k": "Over the shoulder:",
+            "v": "one character looking at another"
           },
-          {
-            "k": "Creaky door:",
-            "v": "open a real one, slowly"
-          }
-        ],
-        "ask": "Did you test it close to the mic?"
-      },
-      {
-        "name": "Stop-motion tips",
-        "lines": [
           {
             "k": "Camera:",
-            "v": "prop it so it never moves"
-          },
-          {
-            "k": "Moves:",
-            "v": "tiny, a little each photo"
-          },
-          {
-            "k": "Speed:",
-            "v": "12 photos make about 1 second"
-          },
-          {
-            "k": "Light:",
-            "v": "close the curtains, use a lamp"
+            "v": "keep it still, propped on books"
           }
         ],
-        "ask": "Did you take 5 to 10 test photos first?"
+        "ask": "Which shot does each box need?"
+      },
+      {
+        "name": "Format tips",
+        "lines": [
+          {
+            "k": "Stop-motion:",
+            "v": "tiny moves; 12 photos make about 1 second"
+          },
+          {
+            "k": "Radio:",
+            "v": "rice on a pan for rain, a wobbly baking sheet for thunder"
+          },
+          {
+            "k": "Live show:",
+            "v": "face the audience, speak to the back row"
+          },
+          {
+            "k": "Mini movie:",
+            "v": "2 seconds of quiet before and after each line"
+          }
+        ],
+        "ask": "Did you test it once before the real take?"
       }
     ],
     "after": {

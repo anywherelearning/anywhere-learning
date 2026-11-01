@@ -482,15 +482,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Create a Mini Movie or Radio Drama",
     slug: "mini-movie",
     description:
-      "Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, plan the story, build a simple set, rehearse, then record or perform it and hold a premiere. No tech needed, though a phone works too. Storytelling, planning and performing, from script to premiere.",
+      "Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.",
     shortDescription:
-      "Creativity project for kids ages 6-14: write, build and premiere a mini movie, stop-motion, radio drama or live show.",
+      "Creativity project for kids ages 6-14: storyboard, film, edit and premiere a mini movie, stop-motion, radio drama or live show.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGm8e5ZKzXB",
     blobUrl: "",
     imageUrl: "/products/mini-movie.jpg",
-    previewFile: "Preview Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama v5.pdf",
+    previewFile: "Preview Creativity & Maker Create a Mini Movie, Stop-Motion or Radio Drama v6.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

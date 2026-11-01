@@ -630,21 +630,21 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-movie': {
     opening:
-      'Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, plan the story, build a simple set, rehearse, then record or perform it and hold a premiere. No tech needed, though a phone works too. Storytelling, planning and performing, from script to premiere.',
+      'Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.',
     whatsIncluded: [
       '5 steps from a one-sentence story to the premiere',
       'Characters with a want, a strength and a weakness',
-      'A storyboard or scene list, and a short script',
-      'Kitchen sound effects and stop-motion tips',
-      'Four formats, and no tech required',
+      'A shot-by-shot storyboard with wide, medium and close-up shots',
+      'Editing basics: trim, order, title and credits',
+      'Four formats, tips for each, and no tech required',
     ],
     skillTags: ['Storytelling', 'Writing', 'Performing', 'Art', 'Collaboration'],
     insideTheLearning: {
       lead:
-        'Your child makes a play, film, stop-motion or radio drama: story, characters, plan, set, rehearsal and a premiere. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
+        'Your child makes a play, film, stop-motion or radio drama, and directs it like a real crew: a storyboard, shot choices, a rehearsal, an edit and a premiere. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
       skills: [
         { skill: 'Storytelling', where: 'Writing the script and designing the characters that carry it' },
-        { skill: 'Planning', where: 'Storyboarding and sequencing so the whole thing can actually be shot' },
+        { skill: 'Directing', where: 'Choosing wide, medium or close-up shots, then trimming and ordering the clips' },
         { skill: 'Problem-Solving', where: 'Solving the practical failures with what is on hand' },
         { skill: 'Public Speaking', where: 'Performing it, then presenting the finished thing to an audience' },
       ],
