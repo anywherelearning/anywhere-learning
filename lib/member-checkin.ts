@@ -66,10 +66,19 @@ export interface CheckinDraft {
  */
 export function draftCheckin(opts: {
   firstName?: string;
+  /** Used to sanity-check the first name (see greetingName). */
+  email?: string;
+  /** When their membership started; older members don't get "a few weeks ago". */
+  joinedAt?: Date;
   kids: Child[];
   /** Activities marked done, most recent first. */
   done: string[];
 }): CheckinDraft {
+  const days = opts.joinedAt ? (Date.now() - opts.joinedAt.getTime()) / DAY : 21;
+  const joined =
+    days <= 42 || !opts.joinedAt
+      ? 'You joined a few weeks ago'
+      : `You joined back in ${opts.joinedAt.toLocaleDateString('en-US', { month: 'long', timeZone: 'America/New_York' })}`;
   // Names without ages: "you and Eva (11)" reads like a form, not a note.
   const kids = kidsPhrase(opts.kids.map((k) => ({ ...k, birthMonth: null, age: null })));
 
@@ -88,8 +97,8 @@ export function draftCheckin(opts: {
   return {
     subject: 'A thank you from Amelie',
     body: [
-      `Hi ${opts.firstName || 'there'},`,
-      "I'm Amelie, the person behind Anywhere Learning. You joined a few weeks ago, and I wanted to write to you myself to say thank you. It really means a lot to me.",
+      `Hi ${greetingName(opts.firstName, opts.email) || 'there'},`,
+      `I'm Amelie, the person behind Anywhere Learning. ${joined}, and I wanted to write to you myself to say thank you. It really means a lot to me.`,
       noticed,
       `Anywhere Learning isn't a big company. It's me, a former teacher and homeschooling mom, building every guide with one goal: that it's genuinely useful for your family, easy to use, and full of real learning for ${
         kids || 'your kids'
@@ -99,6 +108,22 @@ export function draftCheckin(opts: {
       'Warmly,\nAmelie',
     ].join('\n\n'),
   };
+}
+
+/**
+ * The account's first name can belong to someone else in the house (a
+ * partner signed up with their own name on a shared email). When the email
+ * starts with a clear name ("stephaniesmv@") that doesn't match the account
+ * name ("Victor"), say "Hi there" rather than guess wrong. Short or coded
+ * addresses ("jlt8392@") keep the account name.
+ */
+export function greetingName(firstName?: string, email?: string): string | undefined {
+  if (!firstName) return undefined;
+  if (!email) return firstName;
+  const local = email.split('@')[0].toLowerCase();
+  const lead = local.match(/^[a-z]+/)?.[0] ?? '';
+  if (lead.length < 5) return firstName;
+  return local.includes(firstName.toLowerCase().slice(0, 3)) ? firstName : undefined;
 }
 
 /** Opens the note in Gmail as info@, ready to edit and send. */
@@ -277,7 +302,13 @@ export async function runMemberCheckins({
       `   Library: ${doneCount} marked done, ${Object.keys(views).length} guides opened`,
     ];
 
-    const draft = draftCheckin({ firstName: firstNames[d.clerkId], kids, done: doneNames });
+    const draft = draftCheckin({
+      firstName: firstNames[d.clerkId],
+      email: d.email,
+      joinedAt: d.startedAt,
+      kids,
+      done: doneNames,
+    });
     sections.push(
       [
         ...header,
