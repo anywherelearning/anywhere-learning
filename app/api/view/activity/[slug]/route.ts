@@ -78,3 +78,36 @@ export async function GET(
     },
   });
 }
+
+/**
+ * The step reader shows a guide from its content file instead of the PDF, so
+ * it never calls GET above. It posts here once per open so reads are still
+ * counted the same way.
+ */
+export async function POST(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> },
+) {
+  const limited = await checkRateLimit(req, relaxedLimiter());
+  if (limited) return limited;
+
+  const { slug } = await params;
+  let clerkId: string | null = null;
+  try {
+    clerkId = (await auth()).userId;
+  } catch {
+    /* Clerk not configured */
+  }
+  if (!clerkId) return NextResponse.json({ error: 'Sign in required' }, { status: 401 });
+
+  const access = await getAccessContextForClerkId(clerkId);
+  if (access.tier === 'guest' || !access.userId) {
+    return NextResponse.json({ error: 'Membership required' }, { status: 403 });
+  }
+  if (!getActivityBlobUrl(slug)) return NextResponse.json({ error: 'Activity not found' }, { status: 404 });
+
+  const ipAddress = req.headers.get('x-forwarded-for');
+  const { userId, tier } = access;
+  after(() => logActivityEvent({ userId, slug, kind: 'view', tier, ipAddress }));
+  return new NextResponse(null, { status: 204 });
+}

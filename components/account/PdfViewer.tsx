@@ -33,6 +33,8 @@ interface Props {
   /** Cover image, for the guide card beside the pages. */
   imageUrl?: string | null;
   ageRange?: string | null;
+  /** When the guide also has a step-by-step view, a button to switch to it. */
+  onShowSteps?: () => void;
 }
 
 export default function PdfViewer({
@@ -44,6 +46,7 @@ export default function PdfViewer({
   isFounder,
   imageUrl,
   ageRange,
+  onShowSteps,
 }: Props) {
   const thumbsRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(1);
@@ -213,6 +216,11 @@ export default function PdfViewer({
             <div className="rd-actions">
               {effort && <div className="rd-trail"><AddToWeekButton slug={slug} title={title} variant="text" /></div>}
               {effort && <WeDidIt slug={slug} />}
+              {onShowSteps && (
+                <button type="button" onClick={onShowSteps} className="rd-btn rd-btn-ghost">
+                  <span className="rd-long">Step-by-step view</span><span className="rd-short">Steps</span>
+                </button>
+              )}
               <a href={downloadHref} onClick={handleDownloadClick} className="rd-btn rd-btn-ghost">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12" /><path d="M7 10l5 5 5-5" /><path d="M5 21h14" /></svg>
                 {tier === 'trial' ? <><span className="rd-long">Download with membership</span><span className="rd-short">Download</span></> : 'Download'}

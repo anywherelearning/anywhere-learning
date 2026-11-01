@@ -37,6 +37,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // The step reader reads guide content files and their pictures from disk.
+  outputFileTracingIncludes: {
+    "/account/view/[slug]": ["./guides/content/*.json"],
+    "/api/guide-art/[...path]": ["./guides/clipart/wc/*", "./guides/assets/*"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Next 16 enforces this allowlist: any <Image quality={…}> NOT listed here

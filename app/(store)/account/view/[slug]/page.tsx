@@ -3,7 +3,8 @@ import { redirect } from 'next/navigation';
 import { getFallbackProducts } from '@/lib/fallback-products';
 import { IS_FOUNDER_PHASE, MEMBERSHIP_PRICE_YEAR, MONTHLY_PLAN_PRICE_MONTH } from '@/lib/membership';
 import { planForPriceId } from '@/lib/stripe-prices';
-import PdfViewer from '@/components/account/PdfViewer';
+import GuideReader from '@/components/account/GuideReader';
+import { loadGuideContent } from '@/lib/guide-content';
 
 export const metadata: Metadata = {
   title: 'Activity Guide',
@@ -63,8 +64,11 @@ export default async function ActivityViewPage({
   const product = getFallbackProducts().find((p) => p.slug === slug);
   const title = product?.name || SKILLS_MAP_TITLES[slug] || 'Activity Guide';
 
+  const guide = await loadGuideContent(slug);
+
   return (
-    <PdfViewer
+    <GuideReader
+      guide={guide}
       slug={slug}
       title={title}
       tier={tier}
