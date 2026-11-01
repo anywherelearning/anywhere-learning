@@ -20,7 +20,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v2.pdf",
   "brand-builder": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Brand%20builder%20v2.pdf",
   "budget-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Real-Life%20Budget%20Challenge%20v4.pdf",
-  "build-a-museum": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20build%20a%20museum%20or%20interactive%20exhibit%20v2.pdf",
+  "build-a-museum": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20build%20a%20museum%20or%20interactive%20exhibit%20v3.pdf",
   "build-ai-helper": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20BUILD%20YOUR%20OWN%20AI%20HELPER%20v2.pdf",
   "business-failure-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Business%20Failure%20Lab%20v2.pdf",
   "calm-down-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Calm-Down%20Toolkit%20v2.pdf",

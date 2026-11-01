@@ -730,13 +730,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'build-a-museum': {
     opening:
-      'Create a museum or interactive exhibit on any topic your child loves. Research, curate, design displays, write labels, build interactive elements, and host a grand opening. A project that teaches research skills, writing, design, and the art of sharing knowledge.',
+      'Your child builds a real museum at home on a topic they love. They narrow it to an angle, research and pick the 5 to 8 pieces that tell the story, lay out a visitor path, write short labels that say what each piece is and why it matters, add a hands-on station, then open the doors with a guest book. Research, writing and design, driven by their own interests.',
     whatsIncluded: [
-      'Complete museum/exhibit design project guide',
-      'Topic selection and research framework',
-      'Exhibit layout, display design, and label writing',
-      'Interactive element creation',
-      'Grand opening planning and visitor experience',
+      '5 steps from a topic to opening day',
+      'Topic to angle: turning a big subject into a museum',
+      'A label formula that fits on a sticky note',
+      'Interactive station ideas',
+      'A visitor walk-through and a guest book',
     ],
     skillTags: ['Research', 'Writing', 'Design', 'Curation', 'Presentation'],
     // Oct 19 2026: this page outranked the post for "how to create a museum

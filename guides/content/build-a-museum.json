@@ -1,0 +1,329 @@
+{
+  "slug": "build-a-museum",
+  "category": "Creativity & Maker",
+  "title": "Build a Museum",
+  "tagline": "Research · Curate · Open",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds a real museum at home on a topic they care about. They find an angle, pick the pieces that tell the story, lay out the exhibits, write the labels, add something visitors can do, then open the doors and watch people learn from what they made.",
+  "need": [
+    "Poster board or large paper, markers and tape",
+    "Index cards or sticky notes for labels",
+    "Cardboard boxes, trays and containers for displays",
+    "Real objects, printed photos or drawings for the exhibits",
+    "Outdoor option: set up exhibits along a path or a porch"
+  ],
+  "lesson": {
+    "text": "A museum isn't everything you know about a topic. It's a few pieces that tell one story, each with a reason to look.",
+    "before": "Here are all 40 rocks I found.",
+    "model": [
+      {
+        "part": "Angle",
+        "line": "How rocks are made."
+      },
+      {
+        "part": "Pick",
+        "line": "One from a volcano, one made of layers, one squeezed and heated deep underground."
+      },
+      {
+        "part": "Label",
+        "line": "'Pumice: made from lava full of gas bubbles. That's why it can float.'"
+      },
+      {
+        "part": "So",
+        "line": "Three rocks that tell a story beat 40 in a pile."
+      }
+    ],
+    "modelNote": "That's what curators do: choose what matters, and make visitors care. The question behind every step: what should a visitor remember?"
+  },
+  "academics": [
+    {
+      "subject": "Research",
+      "text": "finding facts and checking them"
+    },
+    {
+      "subject": "Writing",
+      "text": "short, clear labels"
+    },
+    {
+      "subject": "Design",
+      "text": "layout and visitor flow"
+    },
+    {
+      "subject": "Communication",
+      "text": "a guided tour"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience. You're the visitor, not the curator. Ask 'what do you want people to learn from this?' instead of telling them what to include. The first setup will look more like a pile than a museum. Turning it into something a visitor can follow is the whole skill.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick the topic and angle, and research and pick the pieces (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Lay out the museum, build the exhibits, write the labels (Steps 3 and 4)."
+      },
+      {
+        "when": "Opening day",
+        "what": "Test the walk-through and open the doors (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The research never ends",
+        "a": "Set a limit: 'Pick 5 to 8 things, and we start building tomorrow.' More can go in a Season 2 room."
+      },
+      {
+        "q": "A visitor asks a question they can't answer",
+        "a": "That's not a problem. That's the next exhibit. Write the question down together."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Curating",
+      "text": "choosing what matters most"
+    },
+    {
+      "name": "Clear writing",
+      "text": "two sentences that explain"
+    },
+    {
+      "name": "Spatial thinking",
+      "text": "a path a visitor can follow"
+    },
+    {
+      "name": "Presenting",
+      "text": "guiding a tour, answering questions"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pick the topic and the angle",
+      "why": "A topic is too big. An angle is a museum.",
+      "kid": "Your kid picks a topic they know about or want to know about: rocks, a favourite animal, space, bugs, a place they've visited, their family history. Then they narrow it to an angle using the Topic to angle card in the Curator's Toolkit at the end of the guide, and pick a museum type.",
+      "you": "Help them narrow it. 'Everything about dinosaurs' is too big. 'The weirdest dinosaur teeth and what they ate' is a museum.",
+      "ask": [
+        "What do you know about this that most people don't?",
+        "If a visitor remembers one thing, what should it be?"
+      ],
+      "tip": "The best topics are ones where they have something to say, not ones that sound impressive.",
+      "levels": {
+        "explore": "Pick a topic you love.",
+        "develop": "Turn the topic into an angle in one sentence.",
+        "extend": "Write the one sentence a visitor should remember, and plan the museum around it."
+      }
+    },
+    {
+      "title": "Research and pick the pieces",
+      "why": "Every piece has to earn its spot.",
+      "kid": "Your kid researches the angle in books, online, by asking family or by looking closely. They gather real objects, photos, drawings, maps and facts. Then they choose the 5 to 8 pieces that tell the story best and leave the rest out.",
+      "you": "Help them find good sources and check a fact when something sounds off. Set a time limit so research doesn't go on forever.",
+      "ask": [
+        "What surprised you while researching?",
+        "Which pieces tell the most interesting story?"
+      ],
+      "tip": "For each piece, ask: what does this one show that the others don't? If nothing, it stays out.",
+      "levels": {
+        "explore": "Gather 3 or 4 things for the museum.",
+        "develop": "Research the angle and pick 5 to 8 pieces that tell its story.",
+        "extend": "Use at least 2 kinds of sources, and write where each fact came from."
+      }
+    },
+    {
+      "title": "Lay out the museum and build the exhibits",
+      "why": "The order is part of the story.",
+      "kid": "Your kid sketches the layout: where visitors come in, what they see first, what's the big finish. They choose one table, a walking path, stations, or a trail in the yard. Then they build each exhibit: mounted on cardboard, set in a shoebox diorama, on a tray or propped on a chair.",
+      "you": "Help with which room and which table. Don't redesign their layout.",
+      "ask": [
+        "What should a visitor see first, and why?",
+        "Which exhibit is the big finish?"
+      ],
+      "tip": "Kid eye level and adult eye level are very different. If the visitors are adults, raise the exhibits.",
+      "levels": {
+        "explore": "Arrange the pieces on one table, left to right.",
+        "develop": "Sketch a layout with a clear start and finish, and build every exhibit.",
+        "extend": "Build a walking path through rooms or the yard, with signs and a big finish."
+      }
+    },
+    {
+      "title": "Write the labels and add something to do",
+      "why": "Labels explain. Something to do makes it a museum.",
+      "kid": "Your kid writes a label for every exhibit using the Label formula card: a title, what it is and why it's interesting, small enough for a sticky note. Then they add at least one thing visitors can do, from the Interactive ideas card.",
+      "you": "Be the test reader. If a label confuses you, say so kindly.",
+      "ask": [
+        "What's one thing a visitor can do here, not just look at?",
+        "If you covered the label, would anyone understand the exhibit?"
+      ],
+      "tip": "Explaining something in 2 sentences is harder than writing a page. That's why it's such good writing practice.",
+      "levels": {
+        "explore": "Write a title for each exhibit and add one hands-on station.",
+        "develop": "Write a full label for every exhibit, and add 2 things to do.",
+        "extend": "Add a curator's welcome sign and a quiz or sorting challenge with an answer flap."
+      }
+    },
+    {
+      "title": "Test the walk-through and open the doors",
+      "why": "A real visitor shows what's confusing, then the museum opens.",
+      "kid": "Your kid watches you walk through as if you've never seen it, then fixes what was confusing or wobbly. Then the grand opening: a museum name at the entrance, a guided or self-guided tour, and a guest book at the exit asking each visitor for their favourite exhibit.",
+      "you": "Walk in like a stranger. Read every label and try every station. Then invite at least one person who wasn't involved.",
+      "ask": [
+        "What would confuse a first-time visitor?",
+        "Which exhibit got the biggest reaction?"
+      ],
+      "tip": "Common fixes: add arrows or 'next' signs, raise labels that are too low, or remove one piece that doesn't fit the angle.",
+      "levels": {
+        "explore": "Do one walk-through, fix one thing, and show it to someone.",
+        "develop": "Fix what the test visitor found, and give a guided tour.",
+        "extend": "Collect guest book feedback and write what you'd change for the next museum."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Curator's Toolkit",
+    "intro": "How to find an angle, the kinds of museums, how to write a label and ways to get visitors doing things.",
+    "items": [
+      {
+        "name": "Topic to angle",
+        "lines": [
+          {
+            "k": "Dinosaurs:",
+            "v": "the weirdest teeth, and what they ate"
+          },
+          {
+            "k": "Rocks:",
+            "v": "how rocks are made"
+          },
+          {
+            "k": "A place you visited:",
+            "v": "5 things that surprised you there"
+          },
+          {
+            "k": "Bugs:",
+            "v": "bugs in our own backyard"
+          }
+        ],
+        "ask": "Check it: can you say your angle in one sentence?"
+      },
+      {
+        "name": "Museum types",
+        "lines": [
+          {
+            "k": "Collection:",
+            "v": "real objects with labels"
+          },
+          {
+            "k": "Information:",
+            "v": "posters, diagrams and facts"
+          },
+          {
+            "k": "Art:",
+            "v": "creations with artist statements"
+          },
+          {
+            "k": "Interactive:",
+            "v": "stations where visitors do things"
+          },
+          {
+            "k": "Mix:",
+            "v": "some of each"
+          }
+        ],
+        "ask": "Check it: which type fits your angle best?"
+      },
+      {
+        "name": "Label formula",
+        "lines": [
+          {
+            "k": "Title:",
+            "v": "short and clear"
+          },
+          {
+            "k": "What:",
+            "v": "one sentence on what it is"
+          },
+          {
+            "k": "Why:",
+            "v": "one sentence on why it's interesting"
+          },
+          {
+            "k": "Size:",
+            "v": "fits on a sticky note"
+          },
+          {
+            "k": "Height:",
+            "v": "the visitors' eye level"
+          }
+        ],
+        "ask": "Check it: would it make sense without you there?"
+      },
+      {
+        "name": "Interactive ideas",
+        "lines": [
+          {
+            "k": "Touch:",
+            "v": "a feel-it station"
+          },
+          {
+            "k": "Guess:",
+            "v": "'Which one is oldest?'"
+          },
+          {
+            "k": "Look closer:",
+            "v": "a magnifying glass station"
+          },
+          {
+            "k": "Lift the flap:",
+            "v": "a sticky note over the answer"
+          },
+          {
+            "k": "Sort:",
+            "v": "put these in order"
+          }
+        ],
+        "ask": "Check it: is there something to do, not just look at?"
+      }
+    ],
+    "after": {
+      "label": "Curator rules",
+      "lines": [
+        "One angle, not everything.",
+        "Every piece earns its spot.",
+        "Every label says what it is and why it matters.",
+        "Visitors do something, not just look."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "The museum is open.",
+    "text": "Your kid did what curators and exhibit designers do: picked a subject, decided what mattered, figured out how to make other people care, and built a space that teaches. Research, writing, layout and presenting, all in one project driven by their own interests.",
+    "celebrate": "Tell them what impressed you: the angle they found, a label that taught you something, or how they guided the tour.",
+    "extensions": [
+      "Build a second museum on a different topic",
+      "Make a travelling exhibit that fits in a box",
+      "Add a gift shop with handmade postcards or bookmarks",
+      "Turn the best exhibit into a short video"
+    ]
+  },
+  "signs": [
+    "They read museum labels and notice which ones are good",
+    "They choose a few strong examples instead of listing everything",
+    "They explain things to visitors in two clear sentences"
+  ],
+  "makeItReal": "Next time you visit a real museum, ask them to find the best label and the worst one, and say why. Then ask what they'd add to their own museum.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/build-a-museum.jpg",
+    "alt": "Watercolour illustration of a homemade museum on a table: three rocks with label cards, a volcano poster, a shoebox diorama, a magnifying glass and paper arrows showing the visitor path",
+    "caption": "Three rocks, three labels, one story."
+  }
+}

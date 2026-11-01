@@ -551,15 +551,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Build a Museum or Interactive Exhibit",
     slug: "build-a-museum",
     description:
-      "Create a museum or interactive exhibit on any topic your child loves. Research, curate, design displays, write labels, build interactive elements, and host a grand opening. A project that teaches research, writing, presentation, and design, all driven by your child's own interests.",
+      "Your child builds a real museum at home on a topic they love. They narrow it to an angle, research and pick the 5 to 8 pieces that tell the story, lay out a visitor path, write short labels that say what each piece is and why it matters, add a hands-on station, then open the doors with a guest book. Research, writing and design, driven by their own interests.",
     shortDescription:
-      "Creativity project for kids ages 6-14: create a museum exhibit. Research, curate, design, and host a grand opening.",
+      "Creativity project for kids ages 6-14: build a museum at home, from finding an angle to labels and a grand opening.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpmAkIBECpwGm849TJdAW",
     blobUrl: "",
     imageUrl: "/products/build-a-museum.jpg",
-    previewFile: "Preview Creativity & Maker Build a Museum or Interactive Exhibit.pdf",
+    previewFile: "Preview Creativity & Maker build a museum or interactive exhibit v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,
