@@ -70,6 +70,8 @@ export function draftCheckin(opts: {
   email?: string;
   /** When their membership started; older members don't get "a few weeks ago". */
   joinedAt?: Date;
+  /** Grant members only: a gift reads differently from a free year they won. */
+  grantSource?: string;
   kids: Child[];
   /** Activities marked done, most recent first. */
   done: string[];
@@ -98,7 +100,11 @@ export function draftCheckin(opts: {
     subject: 'A thank you from Amelie',
     body: [
       `Hi ${greetingName(opts.firstName, opts.email) || 'there'},`,
-      `I'm Amelie, the person behind Anywhere Learning. ${joined}, and I wanted to write to you myself to say thank you. It really means a lot to me.`,
+      opts.grantSource === 'gift'
+        ? `I'm Amelie, the person behind Anywhere Learning. Someone who loves your family gave you this year, and I wanted to write to you myself to say welcome and thank you. It really means a lot to me.`
+        : opts.grantSource === 'comp'
+          ? `I'm Amelie, the person behind Anywhere Learning. ${joined} with a free year, and I wanted to write to you myself to say congratulations again and thank you. It really means a lot to me.`
+          : `I'm Amelie, the person behind Anywhere Learning. ${joined}, and I wanted to write to you myself to say thank you. It really means a lot to me.`,
       noticed,
       `Anywhere Learning isn't a big company. It's me, a former teacher and homeschooling mom, building every guide with one goal: that it's genuinely useful for your family, easy to use, and full of real learning for ${
         kids || 'your kids'
@@ -147,6 +153,7 @@ interface Due {
   /** 'Monthly', 'Annual', or the grant source, e.g. 'Gift'. */
   plan: string;
   cancelling: boolean;
+  grantSource?: string;
 }
 
 const fmt = (d: Date) =>
@@ -225,6 +232,7 @@ export async function runMemberCheckins({
       startedAt: r.startedAt,
       plan: GRANT_SOURCE_LABELS[r.source as GrantSource] ?? 'Prepaid',
       cancelling: false,
+      grantSource: r.source,
     });
   }
 
@@ -306,6 +314,7 @@ export async function runMemberCheckins({
       firstName: firstNames[d.clerkId],
       email: d.email,
       joinedAt: d.startedAt,
+      grantSource: d.grantSource,
       kids,
       done: doneNames,
     });
