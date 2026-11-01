@@ -30,6 +30,7 @@ import { stripe } from '@/lib/stripe';
 import { sendMembershipRenewalEmail } from '@/lib/resend';
 import { STRIPE_PRICES } from '@/lib/stripe-prices';
 import { runGrantLifecycle } from '@/lib/access-grants';
+import { runMemberCheckins } from '@/lib/member-checkin';
 
 export const dynamic = 'force-dynamic';
 
@@ -48,6 +49,15 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error('[cron] grant lifecycle failed:', err);
     grants = { error: err instanceof Error ? err.message : 'unknown' };
+  }
+
+  // The 3-week personal check-in digest to the owner (lib/member-checkin.ts).
+  let checkins: Awaited<ReturnType<typeof runMemberCheckins>> | { error: string };
+  try {
+    checkins = await runMemberCheckins();
+  } catch (err) {
+    console.error('[cron] member check-ins failed:', err);
+    checkins = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
   const now = new Date();
@@ -82,7 +92,7 @@ export async function GET(req: NextRequest) {
     );
 
   if (rows.length === 0) {
-    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants });
+    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins });
   }
 
   // Try to grab first names from Clerk in one round-trip. Clerk doesn't
@@ -170,5 +180,6 @@ export async function GET(req: NextRequest) {
     failed: rows.length - sent,
     results,
     grants,
+    checkins,
   });
 }
