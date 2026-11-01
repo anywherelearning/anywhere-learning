@@ -274,7 +274,88 @@ const NOVEMBER_2026 = {
   },
 };
 
-const MONTHS = [SEPTEMBER_2026, OCTOBER_2026, NOVEMBER_2026];
+const DECEMBER_2026 = {
+  month: 'December',
+  year: 2026,
+  intro: 'A fresh focus, a seasonal set, and one family challenge. New every month.',
+  skill: {
+    // Six Creativity & Making picks. December is busy, so the quick ones come
+    // first and the multi-day builds wait for the winter break.
+    slugs: [
+      'household-orchestra', // a family concert from pots, jars and rubber bands
+      'nature-crafts',       // handmade gifts from what the kids collect outside
+      'board-game-studio',   // invent a game, playtest it, give it as a present
+      'survival-base',       // the living-room fort, built for a real expedition
+      'kinetic-sculpture',   // a sculpture that moves, for the long break days
+      'build-a-museum',      // curate a family museum and open it on visiting day
+    ],
+    // Warm walnut, the colour of a workbench, distinct from the evergreen below.
+    accent: '#8B5E3C',
+    accentDeep: '#4F3220',
+    eyebrow: 'Skill of the month',
+    title: 'The month of making it by hand',
+    blurb:
+      "December is for making things. This month kids build a game the family will actually play, put on a concert with kitchen instruments, turn what they find outside into gifts, and fill the long break days with a fort or a museum of their own. Real things, made with their hands, that someone else gets to enjoy.",
+    extras: {
+      read: { slug: 'raise-creative-kids', title: 'How to Raise Creative Kids (Without Buying More Craft Supplies)' },
+      books: [
+        { ages: 'Ages 4–8', title: 'The Most Magnificent Thing', author: 'Ashley Spires', cover: '/books/the-most-magnificent-thing.jpg', link: 'https://bookshop.org/book/9781554537044' },
+        { ages: 'Ages 9–12', title: 'The Invention of Hugo Cabret', author: 'Brian Selznick', cover: '/books/the-invention-of-hugo-cabret.jpg', link: 'https://bookshop.org/book/9780439813785' },
+      ],
+      extra: {
+        title: 'Set up a making corner',
+        items: [
+          { label: 'Clear one shelf or one box for the month: tape, string, cardboard, scissors, glue. Kids can use anything in it without asking.' },
+          { label: 'Keep the recycling for a week before it goes out. Boxes, tubes and jars are the best supplies you will ever have.' },
+          { label: 'When something goes wrong, ask "what would you change for version two?" instead of fixing it for them.' },
+        ],
+      },
+      mindset: "The best thing a kid can make in December isn't the prettiest one. It's the one they planned, got wrong, fixed and finished themselves. Let it look homemade. That's the point.",
+    },
+  },
+  seasonal: {
+    // Holidays and winter break, from the reserve pool so nothing overlaps
+    // another month or the making set above.
+    slugs: [
+      'cultural-celebration-journal',     // how other families, near and far, celebrate this season
+      'imaginary-world',                  // a whole world to invent over the long break
+      'invent-a-sport',                   // burn off energy with a game nobody has played before
+      'theme-park',                       // design and open a theme park on a stay-home day
+      'outdoor-movement-challenge-cards', // grab a card and go, for the snow days
+    ],
+    // Deep evergreen, distinct from the walnut above.
+    accent: '#2F6B4F',
+    accentDeep: '#1B3F2E',
+    eyebrow: 'Seasonal pick',
+    title: 'Holidays and the long break',
+    blurb:
+      "The holidays bring traditions, family, and a lot of days at home. This set makes the most of them: noticing how different families celebrate, inventing a whole world or a brand new sport, opening a theme park in the living room, and a deck of cards for the days you all need to get outside.",
+    extras: {
+      read: { slug: 'winter-stem-activities-kids', title: 'Winter STEM Activities for Kids: 12 Outdoor Experiments in the Cold' },
+      books: [
+        { ages: 'Ages 3–7', title: 'The Snowy Day', author: 'Ezra Jack Keats', cover: '/books/the-snowy-day.jpg', link: 'https://bookshop.org/book/9780670654000' },
+        { ages: 'Ages 11–14', title: "Brian's Winter", author: 'Gary Paulsen', cover: '/books/brians-winter.jpg', link: 'https://bookshop.org/book/9780307929587' },
+      ],
+      extra: {
+        title: 'Slow holiday days',
+        items: [
+          { label: "Ask each person to share one tradition from their own childhood at dinner. Let the kids pick one to try this year." },
+          { label: 'Plan one "yes day" over the break where the kids plan the whole day, inside a budget you set.' },
+          { label: 'Go outside every day, even for ten minutes. Snow, rain or sun, the mood of the whole house changes.' },
+        ],
+      },
+      mindset: "Long breaks can feel like they need filling. They don't. Leave space, and kids start building, inventing and playing on their own. Your job is mostly to keep the cardboard coming.",
+    },
+  },
+  challenge: {
+    title: 'No-store gifts',
+    short: 'This year every family member makes, does or gives one gift that never came from a store.',
+    text:
+      "For the month, everyone in the family gives at least one gift that wasn't bought. Something they made, something they cooked, or something they do for the person: a board game, a framed drawing, a jar of cookies, an hour of help, a coupon for a walk together. Plan them early on a list on the fridge so nobody runs out of time. The point isn't saving money. It's a kid who learns that the best gifts take thought and effort, and who gets to watch someone open something they made.",
+  },
+};
+
+const MONTHS = [SEPTEMBER_2026, OCTOBER_2026, NOVEMBER_2026, DECEMBER_2026];
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 /** The month to show right now, by the Eastern-time calendar. */
