@@ -166,6 +166,7 @@ const POST_OVERRIDES: Record<string, string | 'capable-kid' | 'free-guide'> = {
   'risky-play-for-kids': 'forest-school-ideas',
   'outdoor-survival-skills-for-kids': 'forest-school-ideas',
   'outdoor-stem-by-age': 'stem-ideas',
+  'outdoor-stem-for-teens': 'stem-ideas',
   'lego-stem-activities': 'engineering-ideas',
   'science-fair-project-ideas': 'backyard-science-ideas',
   'just-let-them-play': 'creative-ideas',

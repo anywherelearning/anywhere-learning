@@ -153,7 +153,7 @@ const PRODUCT_POST_PINS: Record<string, string[]> = {
   'community-impact': ['community-impact-projects-for-kids'],
   'road-trip-calculator': ['road-trip-math', 'real-world-math-activities'],
   'outdoor-stem-challenges': ['outdoor-stem-challenges', 'forest-school-activities'],
-  'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age'],
+  'outdoor-stem-challenges-volume-2': ['outdoor-stem-challenges', 'outdoor-stem-by-age', 'outdoor-stem-for-teens'],
   'nature-walk-task-cards': ['forest-school-activities'],
   'nature-journal-walks': ['nature-journaling-for-kids', 'forest-school-activities'],
   'outdoor-survival-planner': ['outdoor-survival-skills-for-kids', 'forest-school-activities'],

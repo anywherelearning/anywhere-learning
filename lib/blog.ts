@@ -9957,6 +9957,107 @@ const posts: BlogPost[] = [
     relatedSlugs: ['forest-school-activities', 'risky-play-for-kids', 'how-to-raise-independent-kids', 'outdoor-stem-challenges', 'winter-stem-activities-kids', 'nature-walks-science'],
   },
   {
+    slug: 'outdoor-stem-for-teens',
+    title: 'Outdoor STEM for Teens: 8 Real-Data Projects for Ages 11 to 14',
+    seoTitle: 'Outdoor STEM Activities for Teens: 8 Real-Data Projects',
+    excerpt: 'By 11 or 12, building a bridge out of sticks isn’t enough anymore. Older kids want a real question, real numbers and a result that means something. Eight outdoor STEM projects for tweens and teens, from measuring a tree without climbing it to clocking the speed of sound with an echo.',
+    metaDescription: 'Outdoor STEM activities for teens and tweens 11 to 14: measure a tree, time a creek, clock the speed of sound, test launch angles. Real data, no kit needed.',
+    hook: 'At 12, the build isn’t the point anymore. The numbers are.',
+    category: 'stem-for-kids',
+    pillarSlug: 'stem-for-kids',
+    publishedAt: '2026-11-01',
+    draft: true,
+    keywords: ['outdoor stem for teens', 'outdoor stem activities for teens', 'stem activities for middle school', 'outdoor science activities for middle school', 'engineering projects for teens', 'stem projects for tweens', 'outdoor science for teens', 'real world stem projects', 'stem for 12 year olds', 'homeschool middle school science'],
+    readTimeMinutes: 11,
+    author: amelie,
+    recommendedProduct: 'outdoor-stem-challenges-volume-2',
+    heroImage: '/images/teen-stem-shadow-clock.jpeg',
+    heroImageAlt: 'A stick standing upright in dry dirt with a row of stones curving around it, each stone marking where the stick’s shadow pointed',
+    heroImageAspect: '4 / 3',
+    content: [
+      { type: 'summary', text: 'Outdoor STEM for teens works when the project has a real question and real data: measuring a tree’s height with a stick and similar triangles, calculating how much water a creek carries, timing echoes to find the speed of sound, or running a fair test on launch angles. For ages 11 to 14, the build matters less than the measuring, the repeated trials and the explanation at the end. Most projects need only a tape measure, a phone stopwatch, a notebook and what you find outside.' },
+
+      { type: 'paragraph', text: 'Somewhere around 11 or 12, the outdoor challenges that worked so well at 8 stop landing. Build a bridge out of sticks? Done that. Float a leaf boat? Sure, for about four minutes. It isn’t that older kids are too cool for outside. It’s that they can tell when a challenge doesn’t really need them.' },
+      { type: 'paragraph', text: 'What works at this age is a real question with a real answer you can’t look up beforehand. How tall is that tree, exactly? How much water is going past us every second? Is 45 degrees really the best angle, or is that just what the textbook says? Give a 12-year-old a question like that, a tape measure and a deadline, and they’ll stay with it far longer than you expect.' },
+      { type: 'paragraph', text: 'Every project below works the same way: predict first, measure more than once, and explain the result out loud or on one page. That’s where the math and the writing live, and it’s also the part that makes it feel like real science instead of an activity.' },
+
+      { type: 'heading', level: 2, text: 'What changes at 11 to 14' },
+      { type: 'list', ordered: false, items: [
+        'They design the test. You give the question, they decide what to measure and how many times.',
+        'One change at a time. If they change the angle and the ball at once, they can’t tell which one made the difference. That idea (a fair test) is the single most useful science skill at this age.',
+        'Three trials, then an average. One result is a story. Three results are data.',
+        'Real tools. A tape measure, a phone stopwatch, a cheap thermometer and a compass app are plenty.',
+        'An ending. A one-page write-up, a graph or a two-minute explanation at dinner. Something someone else will see.',
+      ]},
+
+      { type: 'heading', level: 2, text: '8 outdoor STEM projects for teens' },
+
+      { type: 'heading', level: 3, text: '1. Measure a tree without climbing it' },
+      { type: 'paragraph', text: 'Find a stick exactly as long as the distance from your kid’s eye to their hand with their arm stretched out. Holding the stick straight up at arm’s length, they walk backward until the bottom of the stick lines up with the base of the tree and the top lines up with the top. Their distance from the tree is roughly the tree’s height. It works because of similar triangles, the same geometry surveyors use.' },
+      { type: 'paragraph', text: 'Then check it a second way. On a sunny day, measure the tree’s shadow and the shadow of a stick of known height at the same moment. The ratio is the same, so tree height = stick height × tree shadow ÷ stick shadow. Two methods, two answers: how far apart are they, as a percentage? Which one would they trust, and why? Older kids can add a third method with a clinometer app and a bit of trigonometry.' },
+
+      { type: 'heading', level: 3, text: '2. How much water is in that creek?' },
+      { type: 'paragraph', text: 'Pick a calm, shallow, straight stretch of creek, with an adult right there. Measure 10 metres along the bank. Drop an orange or a stick in upstream and time how long it takes to float the 10 metres, three times. Then measure the width and take the depth at a few points across to get an average. Width × average depth gives the area of the water’s cross-section, and area × speed gives how much water passes each second.' },
+      { type: 'paragraph', text: 'One real-world catch: the surface moves faster than the water near the bottom, so stream surveyors multiply by a correction factor, about 0.8 for a rocky bottom and 0.9 for a smooth, sandy one. Convert the answer to litres per second (one cubic metre is 1,000 litres) and it gets very real, very fast. Come back after a big rain and do it again.' },
+
+      { type: 'heading', level: 3, text: '3. Clock the speed of sound with an echo' },
+      { type: 'paragraph', text: 'You need a big flat wall (a school building, a gym or a cliff face) with open ground in front of it. Pace or measure 50 to 100 metres back from it. Your kid claps, hears the echo, and adjusts their clapping until each clap lands exactly on the echo of the one before. Someone starts a stopwatch on one clap, counting it as zero, and stops it on clap 20. In the time between two claps, the sound went to the wall and back, so it travelled twice the distance.' },
+      { type: 'paragraph', text: 'Speed = (2 × distance × 20) ÷ total time. The textbook value is about 343 metres per second in air at 20°C, and a bit faster in warm air. Getting within 10% with your hands and a phone is a real result. Talking about why they were off (reaction time, wind, a slightly wrong distance) is the part that turns it into science.' },
+
+      { type: 'heading', level: 3, text: '4. Find the best launch angle' },
+      { type: 'paragraph', text: 'Most kids have heard that 45 degrees throws the farthest. Put it to the test. Build a simple launcher from a stick, a rubber band and something to rest the stick on so you can set the angle, then launch the same pinecone or small ball at 15, 30, 45 and 60 degrees, three times each, pulling back the same distance every time. Measure where it lands and average each angle.' },
+      { type: 'paragraph', text: 'Here’s the interesting part: in real air, the best angle usually comes out a bit below 45. The 45-degree answer assumes no air pushing back, and launching from above the ground lowers it too. If their data shows that, they just found the difference between a textbook model and the real world, which is exactly what scientists spend their careers doing.' },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges-volume-2', pinned: true, context: 'Outdoor STEM Challenge Cards Volume 2 is built around exactly this kind of fair testing: launchers you tune until they hit the target, water you move uphill, levers that shift a too-heavy rock. Every card has an Extend level for older kids: test three times, write the results down and explain what made the difference.' },
+
+      { type: 'heading', level: 3, text: '5. Move a rock you can’t lift' },
+      { type: 'paragraph', text: 'Find a rock that’s too heavy to lift comfortably (and keep toes well clear). Use a sturdy branch as a lever and a log as the pivot. Try the pivot close to the rock, then far from it, and notice how much easier one way is. Then measure: the distance from the pivot to the rock and from the pivot to where they push.' },
+      { type: 'paragraph', text: 'The rule behind it is one of the oldest in physics: force × distance on one side balances force × distance on the other. If the push side is four times longer, they need roughly a quarter of the force. Older kids can predict where the pivot needs to go before they try it, then check with a luggage scale or a bathroom scale pushed by hand.' },
+
+      { type: 'heading', level: 3, text: '6. Map the hot spots' },
+      { type: 'paragraph', text: 'On a sunny afternoon, take one thermometer to six or eight spots around your neighbourhood: grass, pavement, a dark roof or car hood (touch carefully), bare dirt, deep shade, near water. Hold it at the same height each time and give it a couple of minutes to settle. Mark every reading on a hand-drawn map and colour it from coolest to hottest.' },
+      { type: 'paragraph', text: 'The difference between pavement and grass in full sun surprises almost everyone. It’s a small version of the urban heat island, the reason cities stay hotter than the countryside. The question to finish with: if they were designing a schoolyard or a parking lot, what would they change, and how would they prove it worked?' },
+
+      { type: 'heading', level: 3, text: '7. Count the edge' },
+      { type: 'paragraph', text: 'Lay a long rope or string in a straight line from inside a forest out into a meadow or field. Every 5 metres, mark out a one-metre square and count how many different kinds of plants are in it (they don’t need names, just “different”). Graph the count against the distance along the line.' },
+      { type: 'paragraph', text: 'Ecologists often find the most variety right where two habitats meet, because species from both sides overlap there. Does your line show it? If not, why not? Kids who want to go further can photograph what they find and add it to iNaturalist, where real scientists use the records. Accounts are for 13 and up, younger kids need a parent to set one up, and the free Seek app works without an account.' },
+
+      { type: 'heading', level: 3, text: '8. Map your patch to scale' },
+      { type: 'paragraph', text: 'First, your kid walks a measured 100 metres and counts their steps. That’s their pace count, and it’s how people measured distance long before GPS. Then they map a park, a beach or the trail behind your house: pace each straight stretch, take the direction with a compass app, and draw it on graph paper at a scale like one square = 10 metres.' },
+      { type: 'paragraph', text: 'The finish line is checking it against a satellite map. Where did it go wrong, and by how much? Most kids are shocked by how close they get. It’s geometry, measurement and map reading in one, and it pairs well with the navigation skills in [outdoor survival skills for kids](/blog/outdoor-survival-skills-for-kids).' },
+
+      { type: 'image', src: '/images/teen-stem-measuring.jpeg', alt: 'A boy in a purple cap kneeling over a long board with a yellow tape measure, an adult leaning in beside him next to a mitre saw', caption: 'Measure twice. At this age, being exact matters because the result is real.' },
+
+      { type: 'heading', level: 2, text: 'Turn any project into a one-page report' },
+      { type: 'paragraph', text: 'The write-up is where a fun afternoon becomes something they’re proud of. Keep it to one page with the same five parts every time:' },
+      { type: 'list', ordered: true, items: [
+        'The question, in one sentence.',
+        'The prediction, written before they started.',
+        'What they kept the same and what they changed.',
+        'The numbers: a small table, and a graph if it helps.',
+        'What happened, why they think it happened, and what they’d change next time.',
+      ]},
+      { type: 'paragraph', text: 'That’s a real lab report, and the writing has a reason to exist. Some kids like to present it at dinner instead, which is great practice too.' },
+
+      { type: 'tip', title: 'Let them be wrong', text: 'The best moment in any of these projects is when the data disagrees with the prediction. Resist the urge to explain it away. Ask “why do you think that happened?” and wait. That question is the whole point.' },
+
+      { type: 'heading', level: 2, text: 'Making it harder at 13 and 14' },
+      { type: 'paragraph', text: 'For older kids, add one layer: error. How far apart were their three trials? Which measurement was the least reliable? Would a different method give a better answer? A 14-year-old who can say “my result was 320 metres per second, about 7% low, probably because of reaction time” is thinking like a scientist, and it’s the kind of thinking that carries into any subject.' },
+      { type: 'paragraph', text: 'If your younger kids want in, these [outdoor STEM challenges](/blog/outdoor-stem-challenges) work for the whole family, and [outdoor STEM activities by age](/blog/outdoor-stem-by-age) shows how the same idea grows from 4 to 14. For building projects, see [engineering for kids](/blog/engineering-for-kids), and for the cold months ahead, these [winter STEM activities](/blog/winter-stem-activities-kids). If you’re figuring out the bigger picture for this age, [how to homeschool middle school](/blog/homeschool-middle-school) is a good next read.' },
+      { type: 'paragraph', text: 'Pick one question this weekend, grab a tape measure, and let them run it.' },
+      { type: 'paragraph', text: 'And if you’d rather open a guide that walks your kid through it step by step, that’s what the Anywhere Learning membership is for: real-world, hands-on activities for ages 6 to 14, with harder levels built in for older kids, ready to open on any device.' },
+
+      { type: 'faq', items: [
+        { question: 'What are good outdoor STEM activities for teens?', answer: 'The best outdoor STEM activities for teens have a real question and real measurements: estimating a tree’s height with similar triangles, calculating a creek’s flow from its width, depth and speed, timing echoes to find the speed of sound, testing launch angles, using a lever to move a heavy rock, mapping temperatures around the neighbourhood, and counting plant species along a line from forest to field.' },
+        { question: 'How do you make STEM interesting for a 12 year old?', answer: 'Give them a question with an answer they can’t look up first, real tools, and ownership of the test. Ask them to predict before they start, repeat each measurement three times, and explain the result to someone. The surprise when the data disagrees with the prediction is what keeps them hooked.' },
+        { question: 'What outdoor science activities work for middle school?', answer: 'Middle schoolers do well with projects that combine measuring and explaining: stream flow, the speed of sound by echo, a temperature map of the neighbourhood, a plant survey along a transect, and mapping a park to scale with a pace count and a compass. Each one ends with a short write-up or graph.' },
+        { question: 'Do teens need a kit for STEM projects?', answer: 'No. A tape measure, a phone stopwatch, a cheap thermometer, string, a notebook and what you find outside cover every project in this list. The challenge comes from the question and the measuring, not from special equipment.' },
+        { question: 'How do you measure the height of a tree without climbing it?', answer: 'Hold a stick as long as the distance from your eye to your outstretched hand, upright at arm’s length, and walk back until it covers the tree exactly from base to top. Your distance from the tree is roughly its height. You can check it with shadows: tree height equals stick height times tree shadow divided by stick shadow.' },
+        { question: 'What is a fair test in science?', answer: 'A fair test changes only one thing at a time and keeps everything else the same, so you know what caused the difference. For example, to test launch angle, use the same ball, the same pull and the same spot, and change only the angle. Repeating each trial three times and averaging makes the result more reliable.' },
+      ]},
+    ],
+    relatedSlugs: ['outdoor-stem-by-age', 'outdoor-stem-challenges', 'engineering-for-kids', 'homeschool-middle-school', 'winter-stem-activities-kids', 'outdoor-survival-skills-for-kids'],
+  },
+  {
     slug: 'family-debate-night-kids',
     title: 'Family Debate Night: How to Run One (With Topics by Age)',
     seoTitle: 'Family Debate Night: How to Run One, With Topics by Age',
