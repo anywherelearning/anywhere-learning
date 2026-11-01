@@ -450,6 +450,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'neighbourhood-interview': ['writing', 'citizenship'],
   'trail-guide-creator': ['physical'],
   'write-like-a-pro': ['communication'],
+  'emergency-ready': ['critical-thinking'],
 };
 
 /**
@@ -500,6 +501,7 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   'outdoor-learning-missions': 'physical',
   'outdoor-stem-challenges': 'physical',
   'outdoor-stem-challenges-volume-2': 'physical',
+  'emergency-ready': 'life-skills',
 };
 
 // Fold the supplemental tags into the territory lists once, at load, so

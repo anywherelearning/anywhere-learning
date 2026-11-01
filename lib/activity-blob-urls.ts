@@ -42,7 +42,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "deepfake-spotter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20DEEPFAKE%20%26%20MANIPULATION%20SPOTTER%20v2.pdf",
   "directions-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Directions%20Challenge%20v5.pdf",
   "disappointment-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Disappointment%20Lab%20v2.pdf",
-  "emergency-ready": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Emergency%20Ready%20Challenge%20v2.pdf",
+  "emergency-ready": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Emergency%20Ready%20Challenge%20v3.pdf",
   "everyday-life-comparison": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Everyday%20Life%20Comparison%20v2.pdf",
   "everyday-redesign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Everyday%20Redesign%20Challenge%20v2.pdf",
   "fall-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Fall%20v2.pdf",

@@ -1775,15 +1775,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Emergency Ready Challenge",
     slug: "emergency-ready",
     description:
-      "Help kids think clearly under pressure and build confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real-world scenarios. Life skills that build genuine confidence.",
+      "Your child builds the family emergency plan for real: a map with two ways out of every room, a meeting spot outside, a fire drill you actually run and time, a three-day stay-home kit with the water worked out, and a contact card in every pocket. Then a surprise drill with a twist tests it. Calm, practical readiness that kids feel safer for knowing.",
     shortDescription:
-      "Life skills for kids ages 8-14: emergency preparedness and clear thinking under pressure. Real-world readiness.",
+      "Life skills for kids ages 8-14: build a real family emergency plan, run the fire drill and pack a three-day kit.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmPgLRtzrj",
     blobUrl: "",
     imageUrl: "/products/emergency-ready.jpg",
-    previewFile: "Preview Planning & Problem-Solving Emergency Ready Challenge.pdf",
+    previewFile: "Preview Planning & Problem-Solving Emergency Ready Challenge v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

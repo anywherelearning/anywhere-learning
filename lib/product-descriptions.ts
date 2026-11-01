@@ -2014,20 +2014,20 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'emergency-ready': {
     opening:
-      'Help kids think clearly under pressure and build genuine confidence handling the unexpected. Activities cover emergency preparedness, decision-making under stress, and practical planning for real scenarios. Life skills that matter, not fear-based, just empowering.',
+      'Your child builds the family emergency plan for real: a map with two ways out of every room, a meeting spot outside, a fire drill you actually run and time, a three-day stay-home kit with the water worked out, and a contact card in every pocket. Then a surprise drill with a twist tests it. Calm, practical readiness that kids feel safer for knowing.',
     whatsIncluded: [
-      'Emergency preparedness challenge guide',
-      'Scenario-based decision-making activities',
-      'Emergency plan creation for home and travel',
-      'Calm-under-pressure thinking frameworks',
-      'Family emergency communication planning',
+      '5 steps from walking the house to a surprise drill',
+      'Two ways out of every room, mapped and tested',
+      'A timed fire drill and a meeting spot',
+      'Three-day kit maths: people × litres × days',
+      'Contact cards and twist cards in a Ready Toolkit',
     ],
     skillTags: ['Critical Thinking', 'Life Skills', 'Planning', 'Decision-Making', 'Resilience'],
     insideTheLearning: {
       lead:
-        'Your child builds a real emergency plan for your home, thinking through scenarios and deciding what matters first. Not fear-based. It is practical readiness, and the thinking is genuinely hard: prioritising under pressure, sequencing, and writing instructions clear enough for someone else to use.',
+        'Your child builds a real emergency plan for your home and learns that emergencies come in two kinds: two minutes to get out, or three days at home. One needs speed, the other needs supplies, and planning both is genuinely hard thinking. Not fear-based: practical readiness the whole family uses.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Assessing a scenario, prioritising what matters and deciding fast' },
+        { skill: 'Critical Thinking', where: 'Sorting emergencies into leave-fast and stay-home, then finding the weakest link' },
         { skill: 'Planning', where: 'Sequencing and organising the plan so it works when it is needed' },
         { skill: 'Communication', where: 'Writing it clearly enough that anyone in the house could follow it' },
         { skill: 'Life Skills', where: 'Practical safety awareness they carry for good' },

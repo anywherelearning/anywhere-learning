@@ -1,0 +1,340 @@
+{
+  "slug": "emergency-ready",
+  "category": "Planning & Problem-Solving",
+  "title": "Emergency Ready Challenge",
+  "tagline": "Two minutes · Three days · One plan",
+  "ages": "Ages 8 to 14",
+  "goal": "Your kid builds your family's emergency plan for real: a map with two ways out of every room, a meeting spot, a fire drill you actually run, a three-day stay-home kit with the water worked out, and a contact card in every pocket. Planning, maths and calm thinking, for the kind of day nobody wants and every family should be ready for.",
+  "need": [
+    "Paper and a pencil, and a timer",
+    "Your home and its smoke alarms (and a step stool to reach them)",
+    "Phone numbers for a trusted adult nearby and a relative in another town",
+    "A bag or a bin for the kit, and whatever supplies you already have"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "people × litres × days, timing a drill"
+    },
+    {
+      "subject": "Planning",
+      "text": "what happens first, jobs and backups"
+    },
+    {
+      "subject": "Maps",
+      "text": "drawing your home from above, exits and routes"
+    },
+    {
+      "subject": "Communication",
+      "text": "a contact card and a text that says enough"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Keep it calm and practical, never scary: this is about knowing what to do, not imagining the worst. You handle the parts only adults can, like the smoke alarm on the ceiling, the phone numbers and the water shut-off. The map, the meeting spot and the kit list can all be theirs.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Walk the house, map the exits and pick the two plans to build (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "The two-minute plan and the drill (Step 3)."
+      },
+      {
+        "when": "Session 3",
+        "what": "The three-day kit, the contact cards and the surprise drill (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It's making my kid anxious",
+        "a": "Slow down and point at the plan: 'This is why we practise, so nobody has to guess.' Most kids feel safer once they know their job. Skip any scenario they're not ready for."
+      },
+      {
+        "q": "The drill turns into a game",
+        "a": "Fine for the first run. Then do it once for real, timed, and talk about the number."
+      },
+      {
+        "q": "We live in an apartment",
+        "a": "Use the stairs, never the elevator. Find the building's two exits and the alarm pull, and pick a meeting spot outside, across from the front door."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Emergencies come in two kinds. Some give you two minutes to get out. Others keep you home for three days. They need opposite plans.",
+    "before": "In an emergency, we grab the important stuff and leave.",
+    "model": [
+      {
+        "part": "Fire",
+        "line": "About two minutes to get out. Grab nothing. Meet at the big tree by the mailbox."
+      },
+      {
+        "part": "Outage",
+        "line": "Could last three days. Stay home: water, food that needs no cooking, light and warmth."
+      },
+      {
+        "part": "Water",
+        "line": "4 people × 4 litres × 3 days = 48 litres."
+      },
+      {
+        "part": "So",
+        "line": "Fast plan: get out and meet. Slow plan: stay in and have enough."
+      }
+    ],
+    "modelNote": "'Grab the important stuff' works for neither. In a fire it wastes the two minutes you have, and in a storm it doesn't tell you what you'll need on day three."
+  },
+  "steps": [
+    {
+      "title": "Walk the house and find two ways out",
+      "why": "Every room needs a second way out, in case the first one is where the danger is.",
+      "kid": "Your kid walks every room with you and finds two ways out of each, usually the door and a window. They check the windows open, test the smoke alarms with you, then draw the home from above, marking both exits from every room and the path outside. The Two ways out card in the Ready Toolkit at the end of the guide lists what to check.",
+      "you": "Press the smoke alarm test buttons (warn everyone, they're loud), and show them where the water shut-off and the electrical panel are. A stuck or high window is a finding, not a failure: write it down.",
+      "ask": [
+        "If the hallway is full of smoke, how do you get out of your room?",
+        "Which room is the hardest to get out of, and why?"
+      ],
+      "tip": "Start with the bedrooms. A fire at night is the most dangerous kind, because everyone is asleep.",
+      "levels": {
+        "explore": "Walk your bedroom with a grown-up and point to two ways out. Draw them with arrows.",
+        "develop": "Draw the whole home from above, with two exits from every room and the path outside.",
+        "extend": "Time the walk from each bedroom to the front door. Find the slowest room and decide what would make it faster."
+      }
+    },
+    {
+      "title": "Pick the two plans you need",
+      "why": "A fire and a three-day storm need opposite plans. You need one of each.",
+      "kid": "Your kid lists what could actually happen where you live: a fire, a power outage, a big storm, a water leak, a road closed by snow. Then they sort each one: a two-minute emergency where you leave fast, or a three-day emergency where you stay home. They pick one of each to plan for.",
+      "you": "Ask which of these has happened to you or someone you know. Real memories make the risks concrete without making them scary.",
+      "ask": [
+        "Which of these is most likely where we live?",
+        "Would this one make us leave, or keep us home?"
+      ],
+      "tip": "Keep fire as the two-minute plan. Every family needs that one, wherever they live.",
+      "levels": {
+        "explore": "Name 3 things that could happen and sort them into 'leave fast' and 'stay home'.",
+        "develop": "List 5 or more, sort them, and explain your pick for each plan.",
+        "extend": "Find one emergency that could be either, like a wildfire nearby, and decide what would make you switch from staying to leaving."
+      }
+    },
+    {
+      "title": "Build the two-minute plan, then run the drill",
+      "why": "When the alarm goes, there's no time to think. The thinking happens now.",
+      "kid": "Your kid writes the fire plan: the nearest safe way out, crawl low under smoke, close doors behind you, meet at one spot outside that everyone can find, and never go back in. They give everyone a job, like who helps the youngest. Then the whole family runs the drill, from the bedrooms to the meeting spot, while they time it.",
+      "you": "Start the drill with the alarm test button and walk it with everyone. Teach the rule that matters most: once you're out, stay out, and call the emergency number (911 in Canada and the US) from outside.",
+      "ask": [
+        "Where do we meet, and why there?",
+        "What's the one thing you never go back in for?"
+      ],
+      "tip": "Fire departments say you may have only one or two minutes to get out once the alarm sounds. Use that to judge the drill time.",
+      "levels": {
+        "explore": "Practise the route from your bedroom to the meeting spot, holding a grown-up's hand.",
+        "develop": "Write the plan with a job for everyone, then run the drill and time it.",
+        "extend": "Find the weakest link: the one thing that, if it fails, stops someone getting out (a stuck window, a heavy sleeper). Add a backup just for it."
+      }
+    },
+    {
+      "title": "Pack the three-day kit",
+      "why": "If the power is out for three days, the plan is mostly maths.",
+      "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Then food that needs no cooking, light, warmth, first aid and a phone charger. They find what's already in the house, gather it in one bag or bin, and list what's missing.",
+      "you": "Help them find what's at home before anything gets bought. Pick a spot for the kit everyone can reach, and add what only you can: medications and copies of important documents.",
+      "ask": [
+        "How much water does our family need for three days?",
+        "What would be hardest to go without?"
+      ],
+      "tip": "Canada's guidance is 2 litres of drinking water per person per day, plus 2 more for cooking and washing. The US says about a gallon, which is close.",
+      "levels": {
+        "explore": "Collect 5 things for the kit from around the house, and count the people it has to cover.",
+        "develop": "Work out the water, gather what's at home and list what's missing.",
+        "extend": "Write each food's expiry date on the list and set a swap date, so the kit is still good a year from now."
+      }
+    },
+    {
+      "title": "Make the contact cards, then the surprise drill",
+      "why": "A good plan still works when something goes wrong.",
+      "kid": "Your kid makes a small card for every pocket or backpack, using the Contact card: the emergency number, a trusted adult nearby, a relative in another town, the meeting spot and a short text to send ('We're OK, at the big tree'). Then you call a surprise drill with a twist from the Twist cards, and they adjust the plan as it happens.",
+      "you": "Pick a twist that fits your kid's age. Afterward, ask what broke and fix one thing on the plan. Put the next drill on the calendar, at night this time.",
+      "ask": [
+        "What part of the plan broke?",
+        "What will you change before the next drill?"
+      ],
+      "tip": "Texts often get through when calls don't, because they need far less of the network. That's why the card has a short text ready to send.",
+      "levels": {
+        "explore": "Make your own card with a grown-up and say the meeting spot out loud.",
+        "develop": "Make a card for everyone, run the surprise drill and fix one thing.",
+        "extend": "After the drill, write the first five minutes of the plan as a numbered list a babysitter could follow."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Ready Toolkit",
+    "intro": "What to check in every room, what goes in the kit, what goes on the contact card, and twists for the surprise drill.",
+    "items": [
+      {
+        "name": "Two ways out",
+        "lines": [
+          {
+            "k": "Every room:",
+            "v": "a door and a window, or two doors"
+          },
+          {
+            "k": "Windows:",
+            "v": "open easily, not stuck or painted shut"
+          },
+          {
+            "k": "Smoke alarms:",
+            "v": "in bedrooms, outside sleeping areas, every level"
+          },
+          {
+            "k": "Path:",
+            "v": "clear of toys, boxes and shoes"
+          },
+          {
+            "k": "Meeting spot:",
+            "v": "outside, in front, easy to find in the dark"
+          }
+        ],
+        "ask": "Which room has only one way out?"
+      },
+      {
+        "name": "Three-day kit",
+        "lines": [
+          {
+            "k": "Water:",
+            "v": "4 litres per person per day × 3 days"
+          },
+          {
+            "k": "Food:",
+            "v": "no cooking: crackers, nut butter, canned fish, dried fruit"
+          },
+          {
+            "k": "Light:",
+            "v": "a flashlight and spare batteries"
+          },
+          {
+            "k": "Warmth:",
+            "v": "a blanket for each person"
+          },
+          {
+            "k": "First aid:",
+            "v": "a kit and any medications"
+          },
+          {
+            "k": "Power:",
+            "v": "a charged battery pack"
+          }
+        ],
+        "ask": "Is it all there, and does anything expire?"
+      },
+      {
+        "name": "Contact card",
+        "lines": [
+          {
+            "k": "Emergency:",
+            "v": "911 in Canada and the US"
+          },
+          {
+            "k": "Nearby:",
+            "v": "a trusted adult who lives close"
+          },
+          {
+            "k": "Out of town:",
+            "v": "a relative in another town"
+          },
+          {
+            "k": "Meet:",
+            "v": "our spot outside"
+          },
+          {
+            "k": "Text:",
+            "v": "'We're OK, at the big tree'"
+          }
+        ],
+        "ask": "Could you find this card in the dark?"
+      },
+      {
+        "name": "Twist cards",
+        "lines": [
+          {
+            "k": "1.",
+            "v": "It's the middle of the night."
+          },
+          {
+            "k": "2.",
+            "v": "The hallway is blocked."
+          },
+          {
+            "k": "3.",
+            "v": "A grown-up isn't home."
+          },
+          {
+            "k": "4.",
+            "v": "The phone is dead."
+          },
+          {
+            "k": "5.",
+            "v": "The meeting spot is under snow or water."
+          }
+        ],
+        "ask": "What's your backup?"
+      }
+    ],
+    "after": {
+      "label": "Emergency rules",
+      "lines": [
+        "Get out, stay out.",
+        "Crawl low under smoke.",
+        "Call from outside.",
+        "Never go back in."
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Calm thinking",
+      "text": "a plan to follow instead of panic"
+    },
+    {
+      "name": "Planning ahead",
+      "text": "the first five minutes, decided now"
+    },
+    {
+      "name": "Problem-solving",
+      "text": "a backup when the plan breaks"
+    },
+    {
+      "name": "Responsibility",
+      "text": "a job in the family plan"
+    }
+  ],
+  "conclusion": {
+    "headline": "Everyone knows where to meet.",
+    "text": "Any day this month, ask how they'd get out of their room if the door were blocked. They should answer without stopping to think. That quick answer is what the drill was for.",
+    "celebrate": "After the timed drill, tell them the number and what it means: 'Everyone out in 48 seconds. You made that plan.'",
+    "extensions": [
+      "Run the drill at night, as fire departments recommend",
+      "Make a smaller kit for the car",
+      "Plan for another home: a cabin, a rental, a grandparent's",
+      "Check the kit every six months and swap anything that expires"
+    ]
+  },
+  "signs": [
+    "They point out the exits when you walk into a new building",
+    "They remind you to check the smoke alarm battery",
+    "They start listing steps instead of panicking when something goes wrong"
+  ],
+  "makeItReal": "In any hotel or rental you stay at, give them two minutes to find the two ways out and pick a meeting spot before you unpack.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/emergency-ready.jpg",
+    "alt": "Watercolour of a family emergency kit on a kitchen table: a backpack, water bottles, a flashlight, a blanket, a first aid kit, canned food, a battery pack and a hand-drawn floor plan with arrows to a meeting-spot tree",
+    "caption": "Two ways out, one meeting spot, three days covered."
+  }
+}
