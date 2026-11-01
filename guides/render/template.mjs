@@ -125,6 +125,11 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
       ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}</div>
     ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>` : '';
 
+  // The generic Explore / Develop / Extend explainer lives on the website. Card
+  // guides (and any guide with its own wording) define what each level means
+  // for their cards, so that line still prints.
+  const levelsLine = g.levelsLine && !/Pick the one that fits your kid today/.test(g.levelsLine)
+    ? `<div class="levelsline"><span class="lvdots"><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i></span><p>${esc(g.levelsLine)}</p></div>` : '';
   const idea = `
 <section class="pg">
   <div class="eyebrow">Before you start</div>
@@ -141,6 +146,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   </div>`}
   ${L ? lessonBox : `  <div class="box"><div class="label">What you need</div>
     <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>`}
+  ${L ? '' : levelsLine}
   ${foot('The idea')}
 </section>`;
 
@@ -169,6 +175,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <p class="why">${esc(g.howTo.example.why)}</p>
   </div>` : ''}
   ${g.howTo.troubleshoot ? `<div class="trouble"><div class="label">If it's not working</div><dl>${g.howTo.troubleshoot.map((t) => `<div><dt>${esc(t.q)}</dt><dd>${esc(t.a)}</dd></div>`).join('')}</dl></div>` : ''}
+  ${L ? levelsLine : ''}
   <div class="start">Let's start.</div>
   ${foot('How to run it')}
 </section>`;
