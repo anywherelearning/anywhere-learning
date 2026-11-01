@@ -36,8 +36,7 @@ export const BASECAMP_DATES = [
  * about Basecamp in their welcome email.
  */
 export const BASECAMP_ANNOUNCEMENTS: Record<string, string> = {
-  // Waiting for Amelie's OK on the email text; uncomment to send on Nov 24.
-  // '2026-12-03': '2026-11-24',
+  '2026-12-03': '2026-11-24', // approved by Amelie Nov 1 2026
 };
 
 /** Replays, newest first. Add one after each session (unlisted video link). */
