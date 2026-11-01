@@ -241,8 +241,9 @@ export default function MembershipWelcome({
                   <td style={{ padding: '26px 36px 0' }}>
                     <div style={{ ...label, color: C_FOREST }}>LIVE WITH ME, EVERY MONTH</div>
                     <Text style={{ ...p, margin: '8px 0 0' }}>
-                      Once a month we meet live on Zoom at <strong>Basecamp</strong>: families share what
-                      they did, kids show what they made, and you can ask me anything. The next one is{' '}
+                      Once a month we meet live on Zoom at <strong>Basecamp</strong>: we get ready for the
+                      month&apos;s trail together, you can ask me anything, and kids can show what they made at the
+                      end. The next one is{' '}
                       <strong>{basecamp.dayLabel} at {basecamp.timeLabel}</strong>. You&apos;ll find the link
                       on your This Month page, and I&apos;ll send it again the day before.
                     </Text>

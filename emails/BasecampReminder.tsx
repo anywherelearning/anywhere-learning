@@ -43,8 +43,8 @@ export default function BasecampReminder({ firstName, dayLabel, timeLabel, topic
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>Hi {name},</Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Tomorrow evening we meet at Basecamp, and I&apos;d love to see you there. Come as you are, with or
-                    without the kids, camera on or off.
+                    Tomorrow evening we meet at Basecamp, and I&apos;d love to see you there. Come as you are, camera
+                    on or off. Nobody has to talk unless they want to.
                   </Text>
                 </td>
               </tr>
@@ -54,10 +54,10 @@ export default function BasecampReminder({ firstName, dayLabel, timeLabel, topic
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={steps}>
                     <tbody>
                       {[
-                        ['Trail reports', 'What your family did this month. Kids can show what they made, or you can show it for them.'],
+                        ['Welcome', 'A quick hello, and your name and where you are joining from, out loud or in the chat.'],
                         ["This month's trail", `${topic}: how to start this month's activities in ten minutes.`],
                         ['Ask the teacher', 'Your questions, about anything from motivation to mixed ages.'],
-                        ['Gear up', 'Everyone picks one activity for the month ahead.'],
+                        ['Campfire show-and-tell', 'Optional, at the end. Kids are welcome to join just for this part.'],
                       ].map(([t, d], i) => (
                         <tr key={t}>
                           <td style={num}>{i + 1}</td>

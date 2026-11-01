@@ -60,10 +60,10 @@ export default function BasecampAnnouncement({ firstName, dayLabel, timeLabel, t
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={steps}>
                     <tbody>
                       {[
-                        ['Trail reports', 'What your family did this month, what worked and what flopped. Kids can show what they made, or you can show it for them.'],
+                        ['Welcome', "A quick hello. I'll introduce myself, and you can share your name and where you're joining from, out loud or in the chat."],
                         ["This month's trail", `${topic}: how to start this month's activities in ten minutes, and how to adjust them for your kids' ages.`],
                         ['Ask the teacher', 'Your questions, about anything from motivation to mixed ages to "is this enough?"'],
-                        ['Gear up', 'Everyone picks one activity for the month ahead.'],
+                        ['Campfire show-and-tell', 'Optional, for the last few minutes. If your kids made something, they can show it. They are welcome to join just for this part.'],
                       ].map(([t, d], i) => (
                         <tr key={t}>
                           <td style={num}>{i + 1}</td>
@@ -80,8 +80,8 @@ export default function BasecampAnnouncement({ firstName, dayLabel, timeLabel, t
               <tr>
                 <td style={{ padding: '20px 36px 0' }}>
                   <Text style={p}>
-                    Come as you are, camera on or off, with or without the kids. Can&apos;t make it live? I&apos;ll
-                    record the parts after the show-and-tell and put the replay in your member zone.
+                    Come as you are, camera on or off. Nobody has to talk unless they want to. Can&apos;t make it
+                    live? I&apos;ll record the trail and the questions and put the replay in your member zone.
                   </Text>
                 </td>
               </tr>
