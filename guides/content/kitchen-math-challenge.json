@@ -2,13 +2,14 @@
   "slug": "kitchen-math-challenge",
   "category": "Real-World Math",
   "title": "Kitchen Math & Meal Planning Challenge",
-  "tagline": "Costs · Scaling · A shopping list that works",
+  "tagline": "Servings · Packages · A meal you actually eat",
   "ages": "Ages 9 to 14",
-  "goal": "Your kid plans a full day of meals and snacks, prices every item, scales the plan for the whole family, and turns it into a real shopping list. Then you add a constraint, like a budget cap or a travel day, and they rebuild it. No cooking needed.",
+  "goal": "Your kid plans one to three real meals for the family, checks what's already at home, turns the meals into a shopping list, prices it by the package, shops it and helps make it. Then the receipt goes next to the plan. It's the maths of every grocery run: what one serving costs, and what the store makes you buy.",
   "need": [
-    "Paper and a pencil, or a notes app",
-    "A calculator (fine to use)",
-    "Optional: a store flyer, a receipt or a grocery website. The Price Menu at the end of the guide works fully offline."
+    "A day this week when your kid plans one to three family meals",
+    "Paper and a pencil, or a notes app, and a calculator",
+    "A store flyer, receipt or grocery website for prices (the Price Menu at the end of the guide works too)",
+    "A grocery trip, and a basket for your kid to carry"
   ],
   "lesson": {
     "text": "Food has two prices: what one serving costs, and what you pay at the store. You can't buy one slice of bread. A good plan uses both.",
@@ -36,166 +37,159 @@
   "academics": [
     {
       "subject": "Math",
-      "text": "adding, multiplying, estimating, cost per serving"
+      "text": "multiplying servings, cost per serving, estimating"
     },
     {
       "subject": "Money",
-      "text": "budgets, value, package sizes and waste"
+      "text": "value, package sizes and waste"
     },
     {
       "subject": "Planning",
-      "text": "turning a day of meals into a shopping list"
+      "text": "meals into a list, what's at home first"
     },
     {
-      "subject": "Reasoning",
-      "text": "explaining trade-offs under a constraint"
+      "subject": "Life skills",
+      "text": "shopping from a list and cooking it"
     }
   ],
   "howTo": {
-    "intro": "Use what your family eats on a normal Tuesday, not a perfect menu, and leave nutrition out of it today. The first plan will price servings while the store sells packages. Let them find that gap on their own.",
+    "intro": "Use what your family eats on a normal Tuesday, not a perfect menu, and leave nutrition out of it today. You handle the stove, the oven and the knives. The plan, the list and the basket are theirs. The first plan will price servings while the store sells packages, so let them find that gap on their own.",
     "plan": [
       {
-        "when": "To start",
-        "what": "Pick the day and the meal blocks, choose the foods and price them, add it all up (Steps 1 to 3)."
+        "when": "Before the day",
+        "what": "Check what's home, write the list and price it (Steps 1 to 3)."
       },
       {
-        "when": "Once it's priced",
-        "what": "Scale it for the family and write the shopping list (Step 4)."
+        "when": "Shopping trip",
+        "what": "Shop from their own list (Step 4)."
       },
       {
-        "when": "Another day",
-        "what": "Add a constraint and build Version 2 (Step 5)."
+        "when": "The day",
+        "what": "Cook it, eat it, then check the receipt (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
-        "q": "They planned granola bars all day",
-        "a": "That's fine. The maths still works. Variety can be a constraint in Step 5 if you want it."
-      },
-      {
         "q": "The shopping list is a mess",
         "a": "Ask 'what's actually in that sandwich?' Breaking meals into ingredients is the hardest part, and the most useful."
+      },
+      {
+        "q": "The store is out of something",
+        "a": "Ask what would do the same job, and what it costs. Swapping on the spot is part of the skill."
       }
     ]
   },
   "skills": [
     {
       "name": "Estimating",
-      "text": "guessing totals before calculating"
+      "text": "guessing the total before the till"
     },
     {
       "name": "Scaling",
-      "text": "planning for more than one person"
+      "text": "one plate into a family meal"
     },
     {
       "name": "Value",
       "text": "per serving versus per package"
     },
     {
-      "name": "Trade-offs",
-      "text": "rebuilding a plan under a limit"
+      "name": "Waste",
+      "text": "planning so nothing gets thrown out"
     }
   ],
   "steps": [
     {
-      "title": "Pick the day and the meal blocks",
-      "why": "A real day of eating, split into chunks small enough to plan.",
-      "kid": "Your kid picks what kind of day they're planning food for: a normal day at home, a travel day, a picnic, a road trip, a camping day. Then they choose the meal blocks: breakfast, lunch, dinner, snack 1, snack 2. Three or four blocks is the sweet spot.",
-      "you": "Keep it realistic. 'What do you normally eat in a day?' is a better start than 'plan a perfect menu.' Five blocks is ambitious, so let them try only if they want to.",
+      "title": "Pick the day and check what's home",
+      "why": "Plan from the fridge first. What's already there is already paid for.",
+      "kid": "Your kid picks a day this week and the meals that are theirs to plan: breakfast, lunch, dinner or a snack, one to three of them. Before choosing any food, they check the fridge and the cupboards and write down what's there and how much is left: half a loaf, 5 eggs, a bag of rice.",
+      "you": "Agree on the day and which meals are theirs, and keep it to food your family really eats. Say yes to simple: pasta night counts.",
       "starters": [
         "Home day",
-        "Travel day",
         "Picnic",
-        "Road trip",
-        "Camping day"
+        "Packed lunches",
+        "Pasta night",
+        "Pancake breakfast"
       ],
       "ask": [
-        "Where will you be eating: home, the car, outside?",
-        "Which meals matter most that day?"
+        "Which meals are you planning, and for how many people?",
+        "What's already at home that you could use?"
       ],
-      "tip": "Check the fridge and the cupboards together first. What's already at home changes the whole plan.",
+      "tip": "Check the dates while you're in there. Something that needs eating soon is the best place to start a plan.",
       "levels": {
-        "explore": "Plan 1 day with 3 blocks, like lunch and 2 snacks.",
-        "develop": "Plan 1 day with 4 or 5 blocks, including one packed meal.",
-        "extend": "Plan a travel day backward from leaving time: what gets packed when?"
+        "explore": "Plan one meal, like lunch, and find 3 things for it already at home.",
+        "develop": "Plan 2 or 3 meals and list what's at home, with how much is left.",
+        "extend": "Plan the day around 2 things in the fridge that need eating soon, and say what each one saves."
       }
     },
     {
-      "title": "Choose the foods and price them",
-      "why": "Every item on the plan gets a number next to it.",
-      "kid": "For each block, your kid writes what they'll eat and the price per serving, using the Price Menu at the end of the guide or real prices from a flyer, a receipt or a store website. Simple is fine: nobody needs a three-course dinner.",
-      "you": "No judging the food. If they plan sandwiches and granola bars, the maths still works. Ask where each price came from.",
-      "ask": [
-        "What will be easiest to make or pack?",
-        "Which item do you think is the most expensive?"
-      ],
-      "tip": "Real prices are worth it when you can. Kids are always surprised by what a box of cereal actually costs.",
-      "levels": {
-        "explore": "One food per item, Price Menu only.",
-        "develop": "Use at least 2 real prices, and pick a backup option for one block.",
-        "extend": "Compare two options for the same item and find the better value per serving."
-      }
-    },
-    {
-      "title": "Add it all up",
-      "why": "Block by block, then the whole day.",
-      "kid": "Your kid adds the cost of each block, then adds the blocks together for the day total. Older kids estimate first (round each price to the nearest dollar) and then calculate exactly.",
-      "you": "Let them try before you help. A calculator is fine: the thinking matters more than the arithmetic. When they see the total, ask what they think of it.",
-      "ask": [
-        "Which block costs the most?",
-        "How close was your estimate to the real total?"
-      ],
-      "tip": "Most kids are shocked by how fast a day of food adds up. Let the number sink in before moving on.",
-      "levels": {
-        "explore": "Add each block, then the day, on a calculator.",
-        "develop": "Estimate first, then calculate, and compare the two.",
-        "extend": "Find the block that takes the biggest share of the total, and a swap that cuts it by 25%."
-      }
-    },
-    {
-      "title": "Scale it and write the shopping list",
-      "why": "From one person on paper to a whole family at the store.",
-      "kid": "Your kid scales the plan for the family: how many servings of everything? Then they turn meals into ingredients ('sandwich' becomes bread, turkey, cheese) and price the shopping list using package prices, not serving prices.",
-      "you": "Help them catch overlaps: if bread shows up in breakfast and lunch, it goes on the list once. Then ask them to compare the shopping list total with the plan total.",
+      "title": "Turn the meals into a shopping list",
+      "why": "'Sandwich' isn't on any shelf. Bread, turkey and cheese are.",
+      "kid": "Your kid breaks each meal into ingredients and scales them for everyone eating: 4 sandwiches is 8 slices of bread, 8 slices of turkey, 4 slices of cheese. Then they cross off what's already at home, write anything used twice only once, and sort what's left by aisle.",
+      "you": "Help them catch overlaps: if bread shows up at breakfast and lunch, it goes on the list once. Let them do the multiplying.",
       "ask": [
         "What's actually in that meal?",
-        "Why is the shopping list total different from the plan total?"
+        "What can you cross off because it's already at home?"
       ],
-      "tip": "This is the 'aha': one sandwich costs $2.50 on paper and $15 at the store. Let them find the gap themselves.",
+      "tip": "Set out a plate for each person and point at what goes on it. Kids who can't picture 'servings' can count plates.",
       "levels": {
-        "explore": "Set out 2 plates for one meal and list what goes on both.",
-        "develop": "Scale the whole day for 2 to 4 people and sort the list by aisle (produce, dairy, pantry).",
+        "explore": "Set out a plate for each person at one meal, and list what goes on all of them.",
+        "develop": "Scale every meal for the family, cross off what's at home and sort the list by aisle.",
+        "extend": "Find one ingredient that can do two meals, like rice tonight and fried rice tomorrow, and show what it saves."
+      }
+    },
+    {
+      "title": "Price it by the package",
+      "why": "The store sells packages, not servings. That's where the plan meets the till.",
+      "kid": "Your kid prices the shopping list using a flyer, a grocery website or the Price Menu at the end of the guide. Every line gets the package price, not the serving price: the whole loaf, the whole pack of turkey. They add it up, then work out what one plate of one meal really costs.",
+      "you": "Ask them to compare the list total with what they guessed one meal would cost. Let them find the gap before you explain it.",
+      "ask": [
+        "What does the whole list cost?",
+        "What does one plate of lunch really cost?"
+      ],
+      "tip": "This is the 'aha' from the lesson: one sandwich costs $2.50 on paper, but the store wants $15 for the packages.",
+      "levels": {
+        "explore": "Find the price of 3 packages on the Price Menu or a flyer, and add them on a calculator.",
+        "develop": "Price the whole list by package, then work out what one serving of one meal really costs.",
         "extend": "Price one sandwich (2 bread, 2 turkey, 1 cheese) from the packages. Why isn't it $2.50 or $15?"
       }
     },
     {
-      "title": "Add a constraint and build Version 2",
-      "why": "A new limit turns the plan into a puzzle.",
-      "kid": "You pick one constraint and your kid rebuilds the plan to fit it: a budget cap ($15, $25 or $40), minimal waste, travel-friendly (no fridge, no mess), quick to make, or no cooking at all. Then they explain what they changed and why.",
-      "you": "Choose the constraint and step back. If they want to scrap everything, ask 'what's the weakest part of your plan?' instead. Celebrate the smart swaps.",
-      "starters": [
-        "Budget cap",
-        "Minimal waste",
-        "Travel-friendly",
-        "Quick to make",
-        "No cooking"
-      ],
+      "title": "Shop it",
+      "why": "Their list, their basket, real prices on the shelf.",
+      "kid": "At the store, your kid shops from their own list and checks each shelf price against their plan. When there's a bigger size, they decide if it's really a deal: cheaper per serving only counts if you'll use it before it goes off. Before the till, they estimate the total, then compare it with the receipt.",
+      "you": "Push the cart and stay out of the choices. If something is missing or costs more, ask what they'd swap and let them decide.",
       "ask": [
-        "What will you cut or swap?",
-        "What did you keep because it matters most?"
+        "Is the big pack a deal if half of it gets thrown out?",
+        "How close was your estimate to the till?"
       ],
-      "tip": "Kids who were bored by the adding often light up here. If they're into it, stack two constraints.",
+      "tip": "Rounding each price to the nearest dollar as it goes in the basket makes the estimate quick, and usually close.",
       "levels": {
-        "explore": "Handle 1 constraint with 1 change, and explain it.",
-        "develop": "Handle 1 constraint and update the shopping list to match.",
-        "extend": "Work out what the unused part of each package costs. Which one wastes the most?"
+        "explore": "Find 3 things from the list in the store and put them in the basket yourself.",
+        "develop": "Shop the whole list, compare one bigger and smaller size, and estimate the total before the till.",
+        "extend": "For one bigger size, work out how much you'd have to use before it beats the small one, and decide if you will."
+      }
+    },
+    {
+      "title": "Cook it and check the plan",
+      "why": "The meal is the test. The receipt and the leftovers are the results.",
+      "kid": "Your kid helps make the meals, from washing and stirring to setting the table. Afterward, they check the plan: were there enough plates of food, what's left over, and how does the receipt compare with the priced list? Then they work out what one meal cost per person.",
+      "you": "You handle the hot and sharp jobs. They do everything else they can, and they serve it. Ask about the leftovers before anything goes in the fridge.",
+      "ask": [
+        "Did everyone get enough, or was there lots left?",
+        "What did one person's dinner cost?"
+      ],
+      "tip": "Leftovers aren't waste if they have a plan. Ask where they'll go: tomorrow's lunch, a snack, the freezer.",
+      "levels": {
+        "explore": "Help make one meal, and count how many plates it filled.",
+        "develop": "Make the meals, compare the receipt with the plan and work out the cost per person for one meal.",
+        "extend": "Work out what the leftovers cost, and plan how they get eaten before they're wasted."
       }
     }
   ],
   "reference": {
     "title": "Price Menu",
-    "intro": "Ballpark prices for planning offline. Use per-serving prices for the plan (Steps 2 and 3) and package prices for the shopping list (Step 4). Real local prices are even better.",
+    "intro": "Ballpark prices for when you can't check a flyer or website. Use package prices for the shopping list (Step 3) and per-serving prices to see what one plate costs. Real local prices are even better.",
     "items": [
       {
         "name": "Per serving: meals",
@@ -332,10 +326,10 @@
     "text": "On the next grocery run, hand them one item, like yogurt, and ask which is cheaper per serving: single cups or the tub of 6. They'll divide before they answer. Expect them to check the fridge before anything goes in the cart.",
     "celebrate": "Name the leftover they planned for: 'Tomorrow's toast comes out of today's loaf. Nothing wasted. Good catch.'",
     "extensions": [
-      "Cook one meal from the plan together and check if the portions were right",
-      "Take the shopping list to a real store and compare the prices",
-      "Plan the same day on half the budget",
-      "Plan a week of packed lunches using shared ingredients"
+      "Plan the same meals on half the budget",
+      "Add a constraint: travel-friendly, no cooking or minimal waste",
+      "Plan a week of packed lunches using shared ingredients",
+      "Let them plan and shop one meal every week"
     ]
   },
   "signs": [
@@ -343,7 +337,7 @@
     "They check what's at home before writing a list",
     "They notice when a bigger size is the better deal"
   ],
-  "makeItReal": "Let them plan one day of family meals next week and shop it with their own list. Afterward, lay the receipt next to the plan and circle every line that came out different.",
+  "makeItReal": "Put one meal a week on the calendar as theirs to plan, shop and make. Keep the receipts in a folder, and compare the cost per person after a month.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

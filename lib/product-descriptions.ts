@@ -791,24 +791,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kitchen-math-challenge': {
     opening:
-      'Your child plans a full day of meals and snacks, prices every item, scales the plan for the whole family, and turns it into a real shopping list. Then you add a constraint, like a budget cap or a travel day, and they rebuild the plan to fit. No cooking needed: this is the math behind every grocery run.',
+      'Your child plans one to three real meals for the family, checks what is already at home, turns the meals into a shopping list and prices it by the package. Then they shop it with their own list, help make it, and lay the receipt next to the plan. Real-world STEM maths about what one serving costs, and what the store makes you buy.',
     whatsIncluded: [
-      '5 steps, from picking the day to a Version 2 plan',
+      '5 steps from checking the fridge to checking the receipt',
       'Per-serving vs per-package pricing (the bread loaf lesson)',
-      'Scaling for the family and turning meals into a shopping list',
-      'Five constraints to choose from: budget cap, minimal waste, travel-friendly, quick, no-cook',
-      'Price Menu page so it works fully offline',
+      'Turning meals into a shopping list for the whole family',
+      'Shopping from their own list, and when a bigger size is really a deal',
+      'Price Menu page for when you cannot check a flyer',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Planning', 'Life Skills'],
     insideTheLearning: {
       lead:
-        'Your child plans a real day of food against real prices. The surprise comes at the shopping list: one sandwich costs $4 on paper and $15 at the store, because you cannot buy one slice of bread. Working out why, and planning around package sizes and leftovers, is where the math gets real.',
+        'Your child plans real meals against real prices, then shops and cooks them. The surprise comes at the shopping list: one sandwich costs $2.50 on paper and $15 at the store, because you cannot buy one slice of bread. Planning around that, and the leftovers it creates, is the skill.',
       skills: [
-        { skill: 'Math', where: 'Adding block totals, estimating, and multiplying servings for the family' },
+        { skill: 'Math', where: 'Multiplying servings for the family and estimating the total before the till' },
         { skill: 'Number Sense', where: 'Comparing the price per serving with the price per package' },
-        { skill: 'Budgeting', where: 'Rebuilding the plan to fit a budget cap' },
+        { skill: 'Budgeting', where: 'Comparing the priced list with the real receipt' },
         { skill: 'Planning', where: 'Turning a day of meals into an ingredient list without duplicates' },
-        { skill: 'Problem-Solving', where: 'Handling a constraint like minimal waste or a travel day' },
+        { skill: 'Problem-Solving', where: 'Swapping on the spot when the store is out, and planning the leftovers' },
       ],
     },
     format: 'Project Guide',

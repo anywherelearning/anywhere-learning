@@ -624,15 +624,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Kitchen Math & Meal Planning Challenge",
     slug: "kitchen-math-challenge",
     description:
-      "Your child plans a full day of meals and snacks, prices every item, scales it for the family, and turns it into a real shopping list. Then a constraint lands, like a budget cap or a travel day, and they rebuild the plan. Real-world STEM math with per-serving and per-package prices, no cooking needed.",
+      "Your child plans one to three real meals for the family, checks what is already at home, turns the meals into a shopping list and prices it by the package. Then they shop it with their own list, help make it, and lay the receipt next to the plan. Real-world STEM maths about what one serving costs, and what the store makes you buy.",
     shortDescription:
-      "Real-world math (STEM) for kids ages 9-14: plan a day of meals, price it, scale it for the family, and build a shopping list.",
+      "Real-world maths (STEM) for kids ages 9-14: plan real family meals, price them by the package, shop the list and cook it.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpnAkIBECpwGmH6nVrxMI",
     blobUrl: "",
     imageUrl: "/products/kitchen-math-challenge.jpg",
-    previewFile: "Preview Real-world math - Kitchen math & meal planning challenge v6.pdf",
+    previewFile: "Preview Real-world math - Kitchen math & meal planning challenge v7.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
