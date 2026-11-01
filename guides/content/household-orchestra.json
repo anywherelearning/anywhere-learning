@@ -1,0 +1,324 @@
+{
+  "slug": "household-orchestra",
+  "category": "Creativity & Maker",
+  "title": "Household Orchestra",
+  "tagline": "Explore · Rhythm · Perform",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds a piece of music out of exactly five objects from around the house. No instruments, no lessons. They find every sound hiding in those five things, build a rhythm, shape it into a real piece and perform it for the family. The five-object limit is what makes it creative.",
+  "need": [
+    "Five objects that make a sound: pots, wooden spoons, a tin, a box, a jar of dried beans, rubber bands, a comb",
+    "A bowl or box to stretch rubber bands over",
+    "Glasses with water and a spoon, if your kid is gentle (optional)",
+    "A phone to record the performance (optional)"
+  ],
+  "lesson": {
+    "text": "Music is sound with a pattern. Random noise becomes a rhythm once something repeats.",
+    "before": "Bang, crash, tap, rattle, bang bang.",
+    "model": [
+      {
+        "part": "Beat",
+        "line": "Tap the box on every count: 1, 2, 3, 4."
+      },
+      {
+        "part": "Pattern",
+        "line": "Shake the beans on count 3 only: tap, tap, shake, tap."
+      },
+      {
+        "part": "Repeat",
+        "line": "Play it 4 times in a row without stopping."
+      },
+      {
+        "part": "So",
+        "line": "A steady beat, a pattern on top, repeated. That's a rhythm."
+      }
+    ],
+    "modelNote": "Every song you know is built this way. The question behind every step: what repeats, and what changes?"
+  },
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "sound, pitch, high and low"
+    },
+    {
+      "subject": "Math",
+      "text": "counting beats, patterns, repeats"
+    },
+    {
+      "subject": "Music",
+      "text": "rhythm, layers, a piece with a shape"
+    },
+    {
+      "subject": "Confidence",
+      "text": "performing for an audience"
+    }
+  ],
+  "howTo": {
+    "intro": "You don't need teaching experience or any music training. You're the audience, not the conductor. Hold them to five objects, let it be noisy and strange, and don't fix their ideas. If they want to play a cheese grater with a fork, that's an instrument.",
+    "plan": [
+      {
+        "when": "First 20 minutes",
+        "what": "Gather the five and find every sound (Steps 1 and 2)."
+      },
+      {
+        "when": "Next 30 minutes",
+        "what": "Build a rhythm and compose the piece (Steps 3 and 4)."
+      },
+      {
+        "when": "To finish",
+        "what": "Perform it for whoever is home (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want a sixth object, then a seventh",
+        "a": "Hold the line. With the whole house, nothing feels special. With five, every choice counts."
+      },
+      {
+        "q": "The rhythm falls apart when they add a layer",
+        "a": "That happens to real musicians too. Go back to the steady beat alone, then add the next sound again."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Creativity",
+      "text": "something from almost nothing"
+    },
+    {
+      "name": "Listening",
+      "text": "hearing high, low, short and long"
+    },
+    {
+      "name": "Patterns",
+      "text": "the maths inside music"
+    },
+    {
+      "name": "Confidence",
+      "text": "playing through a mistake"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Gather your five instruments",
+      "why": "The limit is what makes every choice count.",
+      "kid": "Your kid hunts the house for exactly five objects that make a sound and are okay to play. The Instrument ideas card in the Orchestra Toolkit at the end of the guide helps: try to get a mix, like something to hit, something to shake and something to scrape.",
+      "you": "Hold them to five, and let the choices be theirs. Check that everything is safe to bang on.",
+      "ask": [
+        "Why did you pick these five?",
+        "Which one will make the most interesting sound?"
+      ],
+      "tip": "A mix of kinds makes a better band: one drum, one shaker, one scraper, one with strings, one wild card.",
+      "levels": {
+        "explore": "Pick five things that make noise.",
+        "develop": "Pick five with at least 3 different kinds of sound.",
+        "extend": "Build one instrument, like rubber bands stretched over a box, as one of the five."
+      }
+    },
+    {
+      "title": "Find every sound",
+      "why": "Each object hides more than one sound.",
+      "kid": "Your kid explores each object: tap it, shake it, scrape it, hit it soft, hit it hard, on the rim, in the middle. They sort the sounds into high and low, short and long. Then they test the High or low card: does a bigger or tighter thing sound higher or lower?",
+      "you": "Stay curious and out of the way. The best sound is usually one they find by accident.",
+      "ask": [
+        "How many different sounds can you get from one object?",
+        "Which sound surprised you most?"
+      ],
+      "tip": "Try water glasses: tap each gently with a spoon. More water makes a lower note. Line them up from high to low.",
+      "levels": {
+        "explore": "Find 2 sounds from each object.",
+        "develop": "Find 3 or more sounds from each, and sort them high to low.",
+        "extend": "Tune 3 objects to a high, a middle and a low note, and explain what changed the pitch."
+      }
+    },
+    {
+      "title": "Build a rhythm",
+      "why": "A steady beat holds everything together.",
+      "kid": "Your kid picks one object for a steady beat and counts 1, 2, 3, 4 over and over. Then they add a second sound on some of the counts in a pattern that repeats. Once that's solid, they can layer a third.",
+      "you": "Clap along if they invite you. Don't take over the beat.",
+      "ask": [
+        "What's your steady beat, and what sits on top of it?",
+        "Can you keep the pattern going for a whole minute?"
+      ],
+      "tip": "A rest counts too. Tap, tap, (nothing), tap. Silence is part of the rhythm.",
+      "levels": {
+        "explore": "Keep a steady beat and add one sound on top.",
+        "develop": "Layer 2 sounds over the beat and keep it going for a minute.",
+        "extend": "Make two different patterns, A and B, and switch between them."
+      }
+    },
+    {
+      "title": "Compose the piece",
+      "why": "A piece has a shape. It goes somewhere.",
+      "kid": "Your kid shapes their rhythms into a piece with a beginning, a middle and an end, using a shape from the Piece shapes card, like quiet, then loud and busy, then quiet again. They give it a name and a feeling: a thunderstorm, a busy kitchen, a robot waking up.",
+      "you": "Treat it like a real composition, because it is. Ask where it starts and where it ends.",
+      "ask": [
+        "How does your piece start, and how does it end?",
+        "If your piece were a place or a feeling, what would it be?"
+      ],
+      "tip": "No need to write it down. The plan can live in their head and hands. It just has to go somewhere.",
+      "levels": {
+        "explore": "Play a start, a middle and an end.",
+        "develop": "Give it a name, a feeling and a quiet-loud-quiet shape.",
+        "extend": "Write a simple score with symbols for each sound, so someone else could play it."
+      }
+    },
+    {
+      "title": "Perform it",
+      "why": "Music is meant to be heard.",
+      "kid": "Your kid sets up their five instruments, announces the name of the piece and performs it start to finish for whoever is home. If they make a mistake, they keep playing. Then they take a bow.",
+      "you": "Sit down, give it your full attention and clap like you mean it. Record it if they'd like to keep it.",
+      "ask": [
+        "How did it feel to perform it?",
+        "What part are you most proud of?"
+      ],
+      "tip": "Playing through a mistake is a real skill. Most audiences never notice if you don't stop.",
+      "levels": {
+        "explore": "Play the piece for one person.",
+        "develop": "Announce it and play it start to finish for the family.",
+        "extend": "Teach one part to a sibling or parent, and perform it as a duet."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Orchestra Toolkit",
+    "intro": "Instrument ideas from the kitchen, why some things sound high and others low, how to build a rhythm and shapes for a piece.",
+    "items": [
+      {
+        "name": "Instrument ideas",
+        "lines": [
+          {
+            "k": "Drum:",
+            "v": "a box, a pot, an upside-down bucket"
+          },
+          {
+            "k": "Shaker:",
+            "v": "dried beans or rice in a jar"
+          },
+          {
+            "k": "Scraper:",
+            "v": "a grater and a fork, a comb"
+          },
+          {
+            "k": "Strings:",
+            "v": "rubber bands over a box or bowl"
+          },
+          {
+            "k": "Ringer:",
+            "v": "a pot lid, spoons on a string"
+          }
+        ],
+        "ask": "Check it: do you have at least 3 kinds?"
+      },
+      {
+        "name": "High or low?",
+        "lines": [
+          {
+            "k": "Bigger or looser:",
+            "v": "lower"
+          },
+          {
+            "k": "Smaller or tighter:",
+            "v": "higher"
+          },
+          {
+            "k": "Rubber bands:",
+            "v": "thin or stretched tight = higher"
+          },
+          {
+            "k": "Water glasses:",
+            "v": "more water = lower when tapped"
+          }
+        ],
+        "ask": "Check it: can you play a high, a middle and a low sound?"
+      },
+      {
+        "name": "Rhythm builder",
+        "lines": [
+          {
+            "k": "Count:",
+            "v": "1, 2, 3, 4, over and over"
+          },
+          {
+            "k": "Beat:",
+            "v": "one sound on every count"
+          },
+          {
+            "k": "Layer:",
+            "v": "a second sound on some counts"
+          },
+          {
+            "k": "Rest:",
+            "v": "a silent count still counts"
+          },
+          {
+            "k": "Repeat:",
+            "v": "4 times makes a section"
+          }
+        ],
+        "ask": "Check it: can you keep it going for a minute?"
+      },
+      {
+        "name": "Piece shapes",
+        "lines": [
+          {
+            "k": "Storm:",
+            "v": "quiet, loud, quiet"
+          },
+          {
+            "k": "Wake-up:",
+            "v": "slow, then faster and faster"
+          },
+          {
+            "k": "Echo:",
+            "v": "one sound plays, another copies"
+          },
+          {
+            "k": "Train:",
+            "v": "starts slow, speeds up, stops"
+          }
+        ],
+        "ask": "Check it: does it start and end on purpose?"
+      }
+    ],
+    "after": {
+      "label": "Musician's rules",
+      "lines": [
+        "Five objects, no more.",
+        "Find every sound before choosing.",
+        "Steady beat first, then layers.",
+        "Start on purpose, end on purpose."
+      ]
+    }
+  },
+  "conclusion": {
+    "headline": "They made music from scratch.",
+    "text": "Your kid turned five ordinary objects into music that didn't exist this morning. They explored, listened, found out why some things sound high and others low, built a pattern, shaped a piece and performed it. A kid who can make music out of five spoons won't be stuck staring at a blank page.",
+    "celebrate": "Tell them what got you: a sound they discovered, the name of the piece, or how they kept going after a mistake.",
+    "extensions": [
+      "Swap in five new objects and compose a second piece",
+      "Start a family band where everyone brings one instrument",
+      "Record the piece and add a second layer on top",
+      "Play along with a favourite song using only the five instruments"
+    ]
+  },
+  "signs": [
+    "They tap rhythms on tables and count beats",
+    "They notice high and low sounds around the house",
+    "They make things from what's around instead of asking for new stuff"
+  ],
+  "makeItReal": "Next time you're waiting somewhere, give them three objects from your bag and one minute to make a rhythm. Constraints work anywhere.",
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/household-orchestra.jpg",
+    "alt": "Watercolour illustration of five homemade instruments on a kitchen rug: a pot and wooden spoon, a jar of dried beans, a box with rubber bands, a cheese grater and fork, and water glasses",
+    "caption": "Five objects, one orchestra."
+  }
+}

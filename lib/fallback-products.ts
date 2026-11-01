@@ -2594,15 +2594,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Household Orchestra",
     slug: "household-orchestra",
     description:
-      "Your child builds a piece of music out of five random household objects. No instruments, no lessons. They explore the sounds, build a rhythm, shape a real piece, and perform it. Real creativity comes from constraints, not unlimited options.",
+      "Your child builds a piece of music from five household objects. No instruments, no lessons. They find every sound each object can make, sort them high to low, build a steady beat with layers on top, shape it into a piece with a beginning and an end, then perform it for the family. Real creativity, with the science of pitch built in.",
     shortDescription:
-      "Creativity for kids ages 6-14: turn five random household objects into real music. No instruments, no lessons, just invention.",
+      "Creativity for kids ages 6-14: turn five household objects into real music, from finding sounds to a family performance.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/household-orchestra.jpg",
-    previewFile: "Preview Creativity & Maker Household Orchestra.pdf",
+    previewFile: "Preview Creativity & Maker Household Orchestra v3.pdf",
     category: "creativity-maker",
     isBundle: false,
     bundleProductIds: null,

@@ -2849,13 +2849,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'household-orchestra': {
     opening:
-      'Your child builds a piece of music out of five random household objects. No instruments, no lessons. They explore the sounds, build a rhythm, shape a real piece, and perform it. Real creativity comes from constraints, not unlimited options.',
+      'Your child builds a piece of music from five household objects. No instruments, no lessons. They find every sound each object can make, sort them high to low, build a steady beat with layers on top, shape it into a piece with a beginning and an end, then perform it for the family. Real creativity, with the science of pitch built in.',
     whatsIncluded: [
-      'Build five instruments from household objects',
-      'Discover the full range of sounds in each',
-      'Build a repeating rhythm and layer it',
-      'Shape a real piece with a beginning and end',
-      'Perform it for a real audience',
+      '5 steps from five objects to a live performance',
+      'Instrument ideas from around the house',
+      'High or low: why some things sound higher',
+      'A rhythm builder with beats, layers and rests',
+      'Piece shapes to give the music a beginning and an end',
     ],
     skillTags: ['Creativity', 'Improvisation', 'Rhythm', 'Confidence', 'Music'],
     insideTheLearning: {
