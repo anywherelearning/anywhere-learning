@@ -119,6 +119,18 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
     });
   }
 
+  // The member menu is pinned to the top of the page; pin the reader bar just below it.
+  const [navH, setNavH] = useState(0);
+  useEffect(() => {
+    const nav = document.querySelector<HTMLElement>('.mn-nav');
+    if (!nav) return;
+    const measure = () => setNavH(nav.getBoundingClientRect().height);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(nav);
+    return () => ro.disconnect();
+  }, []);
+
   // Keep the screen on while the guide is open: hands are often full.
   useEffect(() => {
     type Lock = { release: () => Promise<void> };
@@ -204,7 +216,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
   return (
     <main
       className="sr"
-      style={{ '--ac': c.accent, '--soft': c.soft, '--paper': c.paper } as React.CSSProperties}
+      style={{ '--ac': c.accent, '--soft': c.soft, '--paper': c.paper, '--navh': `${navH}px` } as React.CSSProperties}
       onTouchStart={(e) => { touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }; }}
       onTouchEnd={(e) => {
         const t = touch.current; touch.current = null;
@@ -215,7 +227,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
     >
       <style>{`
         .sr{min-height:100vh;background:var(--paper);color:var(--am-ink,#32302a);font-family:var(--font-body),system-ui,sans-serif;padding-bottom:92px}
-        .sr-top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,44,23,.08)}
+        .sr-top{position:sticky;top:var(--navh,0px);z-index:20;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,44,23,.08)}
         .sr-bar{display:flex;align-items:center;gap:10px;padding:10px 16px 6px}
         .sr-back{font-size:13px;color:var(--am-muted,#6b6152);text-decoration:none;white-space:nowrap}
         .sr-name{flex:1;min-width:0;font-family:var(--font-plate),sans-serif;font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
@@ -299,7 +311,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
         .sr-resume button{flex:1;border-radius:10px;padding:10px;font-size:14px;font-weight:700;cursor:pointer}
         .sr-resume-go{background:var(--ac);color:#fff;border:none}
         .sr-resume-no{background:#fff;color:#4a4436;border:1.5px solid rgba(58,44,23,.14)}
-        .sr-sheet-bg{position:fixed;inset:0;z-index:60;background:rgba(40,34,24,.35);display:flex;align-items:flex-end}
+        .sr-sheet-bg{position:fixed;inset:0;z-index:80;background:rgba(40,34,24,.35);display:flex;align-items:flex-end}
         .sr-sheet{width:100%;max-width:640px;margin:0 auto;max-height:82vh;background:var(--paper);border-radius:20px 20px 0 0;display:flex;flex-direction:column;box-shadow:0 -18px 40px -20px rgba(0,0,0,.4)}
         .sr-sheet-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;border-bottom:1px solid rgba(58,44,23,.1);font-family:var(--font-plate),sans-serif;font-size:16px}
         .sr-sheet-head button{border:none;background:var(--soft);color:var(--ac);font-weight:700;font-size:13.5px;border-radius:999px;padding:6px 12px;cursor:pointer}
