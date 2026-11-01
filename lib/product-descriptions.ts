@@ -766,24 +766,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'budget-challenge': {
     opening:
-      'Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan to you. Real budgeting with real prices and real trade-offs.',
+      'Your child plans a day out the family will actually do, inside a real budget. They find the real prices, hold back a buffer, rank a cut list and pitch the plan to you. Then they run the money on the day, track every spend against the plan and see which line was furthest off. Real-world STEM maths with a day out at the end.',
     whatsIncluded: [
-      'Pick-your-own scenario with real budget constraints',
-      'Price research using included Price Menu or real sources',
-      'Surprise cost step that forces real trade-off decisions',
-      'Schedule building and plan pitching',
-      'Version 2 revision after pitching the plan',
+      '5 steps from picking the day to tracking it',
+      'Finding real prices: websites, menus, a phone call',
+      'A 10% buffer and a ranked cut list',
+      'Two what-ifs to test the plan before you go',
+      'A Day Out Toolkit with a day tracker',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Problem-Solving'],
     insideTheLearning: {
       lead:
-        'Your child picks a scenario and plans it against a real budget with real prices they research themselves. Then a surprise cost lands, and something has to give. Working out what to cut, and being able to say why, is where this stops being arithmetic and starts being judgement.',
+        'Your child plans a day out against a real budget with prices they find themselves, builds in a buffer, then runs the money on the day. When something costs more than planned, they decide on the spot what gives, and afterwards they see how close the plan came.',
       skills: [
         { skill: 'Budgeting', where: 'Holding a whole plan inside a fixed limit when the prices are real' },
         { skill: 'Number Sense', where: 'Researching actual prices and totalling them up accurately' },
-        { skill: 'Problem-Solving', where: 'Absorbing the surprise cost without blowing the budget' },
+        { skill: 'Problem-Solving', where: 'Handling surprises on the day with the buffer and the cut list' },
         { skill: 'Decision-Making', where: 'Choosing what gets cut when something has to go' },
-        { skill: 'Planning', where: 'Building the schedule that makes the plan actually happen' },
+        { skill: 'Planning', where: 'A plan, a buffer and a cut list the family really follows' },
         { skill: 'Communication', where: 'Defending the trade-offs they made and explaining why' },
       ],
     },

@@ -578,15 +578,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Real-Life Budget Challenge",
     slug: "budget-challenge",
     description:
-      "Your child picks a fun day out, gets a real budget, and has to make it work. They choose what to spend on, research prices, handle a surprise cost, build a schedule, and pitch the whole plan. Real-world STEM math meets planning and decision-making in one project.",
+      "Your child plans a day out the family will actually do, inside a real budget. They find the real prices, hold back a buffer, rank a cut list and pitch the plan to you. Then they run the money on the day, track every spend against the plan and see which line was furthest off. Real-world STEM maths with a day out at the end.",
     shortDescription:
-      "Real-world math (STEM) for kids ages 9-14: plan a real day with a real budget. Price research, surprise costs, and trade-off decisions.",
+      "Real-world maths (STEM) for kids ages 9-14: plan a real day out on a real budget, then run the money on the day.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrpmAkIBECpwGmgi9i7P74",
     blobUrl: "",
     imageUrl: "/products/budget-challenge.jpg",
-    previewFile: "Preview Real-world math - Real-Life Budget Challenge v5.pdf",
+    previewFile: "Preview Real-world math - Real-Life Budget Challenge v6.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,

@@ -2,13 +2,14 @@
   "slug": "budget-challenge",
   "category": "Real-World Math",
   "title": "Real-Life Budget Challenge",
-  "tagline": "Budgets · Trade-offs · A plan you pitch",
+  "tagline": "Real prices · A buffer · A day you actually do",
   "ages": "Ages 9 to 14",
-  "goal": "Your kid plans a real day out within a real budget: a beach day, a birthday party, a camping weekend. They find the prices, build the plan, handle a surprise cost, and pitch it to you. It's the maths every adult uses: can I afford this, and what do I cut when I can't?",
+  "goal": "Your kid plans a day out the family will actually do, inside a real budget: a beach day, a birthday outing, a day trip. They find the real prices, build in a buffer, pitch it to you, then run the money on the day and see how close they came. It's the maths every adult uses: can I afford this, and what do I cut when I can't?",
   "need": [
-    "Paper and a pencil, or a notes app",
-    "A calculator (fine to use)",
-    "Optional: a device for real prices. The Price Menu at the end of the guide works fully offline."
+    "A day out you're willing to do in the next few weeks, and a budget for it",
+    "Paper and a pencil, or a notes app, and a calculator",
+    "A phone or computer to find real prices",
+    "On the day: the cash, or a card and the job of tracking every spend"
   ],
   "lesson": {
     "text": "A budget is a plan that has to add up. When it doesn't, you don't change the budget: you choose what to cut, and say why.",
@@ -36,46 +37,46 @@
   "academics": [
     {
       "subject": "Math",
-      "text": "adding, multiplying, subtracting, totals and cost per person"
+      "text": "totals, quantities, a 10% buffer, planned against real"
     },
     {
       "subject": "Money",
-      "text": "budgets, categories, buffers and trade-offs"
+      "text": "budgets, hidden costs and trade-offs"
     },
     {
       "subject": "Planning",
-      "text": "turning an idea into a schedule"
+      "text": "a cut list and what-ifs"
     },
     {
       "subject": "Communication",
-      "text": "explaining and defending a plan out loud"
+      "text": "pitching a plan and defending it"
     }
   ],
   "howTo": {
     "intro": "Let the first plan blow the budget. That's where the good part starts. They pick the scenario and every price, and your main line is 'what would you cut?', asked far more often than 'what's the answer?'",
     "plan": [
       {
-        "when": "First hour",
-        "what": "Pick the scenario, set the budget, choose the categories and prices (Steps 1 and 2)."
+        "when": "Planning",
+        "what": "Pick the day, find the real prices and build the plan (Steps 1 to 3)."
       },
       {
-        "when": "Second hour",
-        "what": "Build the plan, do the maths, then handle the surprise cost (Steps 3 and 4)."
+        "when": "Pitch night",
+        "what": "Pitch it and survive the what-ifs (Step 4)."
       },
       {
-        "when": "After a break",
-        "what": "Schedule, pitch, and write Version 2 (Step 5)."
+        "when": "The day",
+        "what": "Run the money, then total it up at home (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
         "q": "Their prices are way off",
-        "a": "Good. Let them find out. Real or Price Menu numbers in Step 2 will fix it, and the surprise is the lesson."
+        "a": "Good. The website, the menu or the phone call in Step 2 will fix it, and the surprise is the lesson."
       },
       {
-        "q": "They're stuck over budget",
-        "a": "Ask 'want to double-check the food column?' instead of pointing to the mistake. Then ask what matters least."
+        "q": "We can't do a big day this month",
+        "a": "Do a small real one: a $20 park-and-treat afternoon uses the same five steps. Keep the big plan for later."
       }
     ]
   },
@@ -99,255 +100,231 @@
   ],
   "steps": [
     {
-      "title": "Pick the scenario and set the budget",
-      "why": "A day your kid actually wants, and a number it has to fit inside.",
-      "kid": "Your kid chooses a fun scenario to plan: a birthday party, a family day trip, a camping weekend, a beach day, a movie night with dinner out. Then they set the total budget and write it down: 'My scenario is ___ and my budget is $___.'",
-      "you": "Help them pick something they're excited about: the more they care about the day, the more they'll care about the maths. Rough guides: a simple day out $50 to $75, a party or bigger outing $100 to $150, a day trip or camping $150 to $200.",
+      "title": "Pick a real day and set the budget",
+      "why": "A day your kid wants, a number it has to fit inside, and a promise: if it fits, you go.",
+      "kid": "Your kid picks a day out the family will really do in the next few weeks: a beach day, a birthday outing, a day trip, a movie and dinner. You set the budget together, and they write it at the top of the page: 'Our day is ___ on ___, and the budget is $___.'",
+      "you": "Pick a budget you'd truly spend, and say the deal out loud: if the plan fits, we do it. Rough guides: a simple day out $50 to $75, a bigger outing $100 to $150, a day trip $150 to $200.",
       "starters": [
-        "Birthday party",
         "Beach day",
-        "Camping weekend",
+        "Birthday outing",
         "Day trip",
-        "Movie and dinner out"
+        "Movie and dinner",
+        "Park and a treat"
       ],
       "ask": [
-        "What kind of day would be really fun to plan?",
-        "How much do you think a day like that actually costs?"
+        "What day would be really fun to plan?",
+        "How much do you think a day like that costs?"
       ],
-      "tip": "Kids who've never handled money misjudge prices wildly. Let them find out on their own.",
+      "tip": "A day they can't wait for makes every number matter. Kids who've never handled money misjudge prices wildly, so let them find out.",
       "levels": {
-        "explore": "Pick from the list and count out $50 to $100 in play money.",
-        "develop": "Pick or invent a scenario, and explain why your budget makes sense.",
-        "extend": "Say the family has $300 a month for fun. What share should this day get, and what's left for other weekends?"
+        "explore": "Pick a small day, like the park and a treat, with $20 to $40 in cash you can hold.",
+        "develop": "Pick a bigger day and explain why the budget makes sense for it.",
+        "extend": "Say the family has $300 a month for fun. What share should this day get, and what does that leave for other weekends?"
       }
     },
     {
-      "title": "Choose the categories and prices",
-      "why": "Every kind of spending, with a price for each.",
-      "kid": "Your kid lists every category the day needs: getting there, food and drinks, activities, supplies, treats, tips. For each one, they write what they're buying, how many, and the price each, using the Price Menu at the end of the guide or real prices online.",
-      "you": "Watch for the boring stuff: parking, gas, tips. If they forget, don't point it out yet. The surprise cost in Step 4 will teach that lesson better.",
+      "title": "Find the real prices",
+      "why": "Not guesses: what it actually costs, and where that number came from.",
+      "kid": "Your kid lists everything the day will cost, from getting there to the last treat, and finds the real price of each: the place's website, a menu online, last time's receipt or a phone call. They write how many, the price each and where it came from. The Hidden costs card in the Day Out Toolkit at the end of the guide catches the ones everyone forgets.",
+      "you": "Help with the phone call or the website if they need it, then let them write it down. Don't point out a missing cost yet. The day itself will.",
       "ask": [
         "What will you actually spend money on?",
-        "How many people are you planning for?"
+        "Where did that price come from?"
       ],
-      "tip": "The boring categories are where real budgets fall apart. Most adults learned that the hard way.",
+      "tip": "Restaurant prices don't include tax or a tip. Adding about a quarter on top keeps the bill from surprising anyone.",
       "levels": {
-        "explore": "Pick 3 or 4 categories and find their prices on the Price Menu.",
-        "develop": "Pick 5 or 6 categories, mixing the Price Menu and real prices, and note where each price came from.",
-        "extend": "For 2 items, find 3 prices each, online or in stores. Plan with the middle one, not the cheapest, and say why."
+        "explore": "Find real prices for 3 or 4 things with a grown-up, and write each one down.",
+        "develop": "Price every item, and note where each price came from.",
+        "extend": "For 2 items, find 3 prices each. Plan with the middle one, not the cheapest, and say why."
       }
     },
     {
-      "title": "Build the plan and do the maths",
-      "why": "Does it fit? If not, what goes?",
-      "kid": "For each category, your kid writes the item, the quantity, the price each and the total, then adds everything into a grand total, like the beach day example. Under budget? They decide what to do with the leftover. Over? They choose what to cut, and why.",
-      "you": "Let them struggle with the maths before jumping in. 'I want bowling AND the arcade, but I can only afford one' is the best lesson in the guide.",
+      "title": "Build the plan, the buffer and a cut list",
+      "why": "Does it fit with room to spare? If not, what goes?",
+      "kid": "Your kid writes each item, how many, the price each and the line total, then adds a grand total, like the beach day example. Then they hold back a buffer for surprises, about 10% of the budget, and rank a cut list: what goes first if the day costs more. Over budget? They cut now, and say why.",
+      "you": "Let them struggle with it before you jump in. 'I want bowling and the arcade, but I can only afford one' is the best lesson in the guide.",
       "ask": [
-        "What's your grand total? Over or under?",
-        "If you're over, what would you cut first? Why?"
+        "What's your grand total, and how much is in the buffer?",
+        "What's first on your cut list, and why?"
       ],
-      "tip": "Don't correct the maths right away. A nudge toward the column with the mistake beats pointing at it.",
+      "tip": "Use the Buffer and cut list card: a $100 budget means $10 held back, so the plan has to fit in $90.",
       "levels": {
-        "explore": "Add up 3 or 4 categories on a calculator and check the budget.",
-        "develop": "Build a plan with 5 or 6 categories and revise it until it fits.",
-        "extend": "Find each category's percentage of the budget, set a rule like 'nothing over 40%', and test the plan."
+        "explore": "Add up the plan on a calculator, then hold back $5 for surprises.",
+        "develop": "Build the full plan with a 10% buffer and a cut list of 3 things.",
+        "extend": "Find each category's share of the budget, set a rule like 'nothing over 40%', and check the plan passes."
       }
     },
     {
-      "title": "Handle a surprise cost",
-      "why": "In real life, something always costs more than planned.",
-      "kid": "You announce a surprise: parking costs $8, rain means a $10 umbrella, gas went up $6, the backup activity costs $5 more per person. The budget hasn't changed, but the total just went up. Your kid decides what gives, and explains why.",
-      "you": "Pick a realistic surprise, then watch them problem-solve. Don't offer more money. That's the whole point.",
+      "title": "Pitch it and survive the what-ifs",
+      "why": "A plan is only ready when it holds up to a surprise.",
+      "kid": "Your kid pitches the day to you: what it costs, what's in the buffer and why it's worth it. You throw two what-ifs at it: parking is $8, it rains, gas went up $6, one place is closed. For each one, they show where the money comes from, using the buffer or the cut list. If the plan holds, you approve it and pick the date.",
+      "you": "Listen like you're really deciding, because you are. Don't offer more money. If a what-if breaks the plan, send it back for one fix, not a rebuild.",
       "starters": [
         "Parking $8",
-        "Rain umbrella $10",
+        "Rain: a $10 umbrella",
         "Gas up $6",
-        "ATM fee $3",
-        "Activity +$5 each"
+        "A place is closed",
+        "Tickets +$5 each"
       ],
       "ask": [
-        "Where does this extra money come from?",
-        "Is there a way to make the surprise cost smaller?"
+        "Where does the money for that come from?",
+        "What would make you cut the activity instead of the snacks?"
       ],
-      "tip": "This is the most important step. Kids who left a buffer in Step 3 suddenly understand why adults do.",
+      "tip": "Kids who built a buffer in Step 3 suddenly understand why adults do. Kids who didn't usually add one now, on their own.",
       "levels": {
-        "explore": "Pay the surprise in play money, then drop or shrink one item.",
-        "develop": "Find two ways to handle it, and choose the better one.",
-        "extend": "Before the surprise, set aside 10% and rank a cut list. Handle it using only those."
+        "explore": "Tell the plan out loud and handle one what-if with the buffer.",
+        "develop": "Pitch with the numbers, handle two what-ifs, and fix the plan if one breaks it.",
+        "extend": "Work out the cost per hour of fun for each activity, and use it to defend your priciest choice."
       }
     },
     {
-      "title": "Schedule it, pitch it, improve it",
-      "why": "A real plan with times, a pitch to you, then a better Version 2.",
-      "kid": "Your kid turns the budget into a schedule (time, what happens, cost at each stop) and pitches the whole day to you: what it costs, how they handled the surprise, and why it's worth it. Then they write Version 2 at the top of a new page and improve the plan: better prices, more buffer, a less packed schedule.",
-      "you": "Listen like you're really deciding whether to approve it. Ask one or two tough 'what if' questions. Praise the changes in Version 2: a changed mind is growth.",
+      "title": "Do the day and track it",
+      "why": "The real day is the test. The receipts are the results.",
+      "kid": "On the day, your kid carries the plan and keeps score with the Day tracker card: each time money is spent, they write the planned price, the real one and the difference. When something costs more, they decide on the spot: buffer first, then the cut list. At home, they total it up. Over or under, and which line was furthest off?",
+      "you": "Hand them the cash, or the job of tracking every spend, and let them make the calls, even ones you'd make differently. Save your opinions for the drive home.",
       "ask": [
-        "Walk me through the day from start to finish.",
-        "What's the biggest thing you changed in Version 2, and why?"
+        "Which line was furthest off, and why?",
+        "What will you plan differently next time?"
       ],
-      "tip": "Want to make it extra real? Do the day, then compare planned to actual spending. 'You budgeted $12 for lunch and we spent $18' teaches more than a month of homework.",
+      "tip": "'We planned $36 for lunch and spent $44' sticks in a way no practice plan does. Write what they'd change at the top of the plan, for next time.",
       "levels": {
-        "explore": "Draw the day as a simple timeline, tell the plan out loud, and change 1 or 2 things.",
-        "develop": "Pitch with the budget breakdown, answer one 'what if', and rewrite the budget as Version 2.",
-        "extend": "Work out the cost per hour of fun for each activity, and use it to defend your priciest choice in the pitch."
+        "explore": "Hold the cash for one part of the day, like lunch, and count what's left.",
+        "develop": "Track every spend against the plan and handle a real surprise with the buffer or the cut list.",
+        "extend": "Work out how far off each category was as a percentage, and write two rules for planning the next day out."
       }
     }
   ],
   "reference": {
-    "title": "Price Menu",
-    "intro": "Ballpark prices for planning offline. Prices vary by place, so real prices are even better if you can look them up.",
+    "title": "Day Out Toolkit",
+    "intro": "The costs everyone forgets, where to find real prices, how to build a buffer and how to track the day.",
     "items": [
       {
-        "name": "Food and drinks",
+        "name": "Hidden costs",
         "lines": [
           {
-            "k": "Fast food meal:",
-            "v": "$12"
+            "k": "Parking:",
+            "v": "check the lot price before you go"
           },
           {
-            "k": "Sit-down meal:",
-            "v": "$18"
+            "k": "Gas:",
+            "v": "there and back"
           },
           {
-            "k": "Whole pizza:",
-            "v": "$16"
+            "k": "Tax:",
+            "v": "often added at the till"
           },
           {
-            "k": "Sandwich or wrap:",
-            "v": "$9"
+            "k": "Tips:",
+            "v": "restaurants and delivery"
           },
           {
-            "k": "Snack:",
-            "v": "$2"
+            "k": "Fees:",
+            "v": "booking, card or service fees"
           },
           {
-            "k": "Water bottle:",
-            "v": "$2"
-          },
-          {
-            "k": "Juice or soda:",
-            "v": "$3"
-          },
-          {
-            "k": "Ice cream:",
-            "v": "$6"
+            "k": "Little extras:",
+            "v": "water, snacks, a souvenir"
           }
-        ]
+        ],
+        "ask": "Which of these does your day have?"
       },
       {
-        "name": "Activities",
+        "name": "Finding real prices",
         "lines": [
           {
-            "k": "Movie ticket:",
-            "v": "$14"
+            "k": "Website:",
+            "v": "tickets, hours and deals"
           },
           {
-            "k": "Bowling, 1 game:",
-            "v": "$10"
+            "k": "Menu online:",
+            "v": "food prices before you go"
           },
           {
-            "k": "Mini golf:",
-            "v": "$12"
+            "k": "Phone call:",
+            "v": "'How much for a family of 4?'"
           },
           {
-            "k": "Museum or zoo:",
-            "v": "$15"
+            "k": "Last receipt:",
+            "v": "what it cost last time"
           },
           {
-            "k": "Amusement park:",
-            "v": "$45"
-          },
-          {
-            "k": "Pool entry:",
-            "v": "$6"
-          },
-          {
-            "k": "Arcade tokens:",
-            "v": "$10"
-          },
-          {
-            "k": "Kayak, per hour:",
-            "v": "$15"
+            "k": "Can't find it?",
+            "v": "estimate high and mark it"
           }
-        ]
+        ],
+        "ask": "Where did each of your prices come from?"
       },
       {
-        "name": "Getting there",
+        "name": "Buffer and cut list",
         "lines": [
           {
-            "k": "Bus fare, one way:",
-            "v": "$3"
+            "k": "Buffer:",
+            "v": "about 10% of the budget"
           },
           {
-            "k": "Ride share, one way:",
-            "v": "$12"
+            "k": "$100 budget:",
+            "v": "$10 held back, plan in $90"
           },
           {
-            "k": "Gas, nearby:",
-            "v": "$6"
+            "k": "Cut list:",
+            "v": "3 things, in the order they go"
           },
           {
-            "k": "Gas, day trip:",
-            "v": "$15"
+            "k": "First to go:",
+            "v": "what you'd miss least"
           },
           {
-            "k": "Street parking:",
-            "v": "$3"
-          },
-          {
-            "k": "Parking lot:",
-            "v": "$8"
-          },
-          {
-            "k": "Bike rental, per hour:",
-            "v": "$5"
+            "k": "Never on it:",
+            "v": "the reason for the day"
           }
-        ]
+        ],
+        "ask": "If parking costs $8, where does it come from?"
       },
       {
-        "name": "Supplies and extras",
+        "name": "Day tracker",
         "lines": [
           {
-            "k": "Party decorations:",
-            "v": "$10"
+            "k": "Write:",
+            "v": "item, planned, real, difference"
           },
           {
-            "k": "Balloons:",
-            "v": "$5"
+            "k": "Lunch:",
+            "v": "planned $36, real $44, +$8"
           },
           {
-            "k": "Plates and cups:",
-            "v": "$6"
+            "k": "Over?",
+            "v": "buffer first, then the cut list"
           },
           {
-            "k": "Goody bags:",
-            "v": "$15"
+            "k": "Under?",
+            "v": "save it or spend it, your call"
           },
           {
-            "k": "Sunscreen:",
-            "v": "$8"
-          },
-          {
-            "k": "Disposable camera:",
-            "v": "$12"
-          },
-          {
-            "k": "Tip, food service:",
-            "v": "$5"
+            "k": "At home:",
+            "v": "add up the differences"
           }
-        ]
+        ],
+        "ask": "Which line was furthest off, and why?"
       }
-    ]
+    ],
+    "after": {
+      "label": "Budget maths",
+      "lines": [
+        "Line total = how many × price each",
+        "Plan total + buffer = budget",
+        "Difference = real − planned"
+      ]
+    }
   },
   "conclusion": {
     "headline": "Every dollar has a job.",
-    "text": "Bring up the same day with $20 less and see what goes first. Listen for a reason tied to what the family cares about, not just the biggest price on the list.",
-    "celebrate": "When they cover the surprise without asking for more, say: 'You found that money inside your own plan. I'd have reached for my wallet.'",
+    "text": "Lay their plan next to the receipts and find the line that was furthest off. Ask why, and listen: 'I forgot tax' or 'we stayed longer' is exactly what they'll catch before it happens next time.",
+    "celebrate": "When they cover a surprise on the day without asking for more, say: 'You found that money inside your own plan. I'd have reached for my wallet.'",
     "extensions": [
-      "Do the day for real and compare planned and actual spending",
-      "Plan the same kind of day with half the money",
-      "Give them the budget for a real family snack run",
-      "Plan a family vacation where everyone gets one must-have category"
+      "Plan the same day with half the money",
+      "Run a second day using the two rules they wrote",
+      "Give them a small monthly fun budget to manage",
+      "Plan a family trip where everyone gets one must-have category"
     ]
   },
   "signs": [
@@ -355,7 +332,7 @@
     "They leave a little extra for surprises",
     "They say 'we can do this if we skip that'"
   ],
-  "makeItReal": "Let your kid plan the next family outing within a set budget, and actually go. Afterward, lay the receipts next to their plan and circle every line that came out different.",
+  "makeItReal": "Give them a small monthly fun budget of their own, and let them plan how it gets spent, one outing at a time.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
