@@ -4,7 +4,7 @@
   "title": "Family History Detective",
   "tagline": "Interviewing · Listening · Storytelling",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid interviews the oldest person they can talk to, a grandparent, a great aunt, an old family friend, and uncovers the stories nobody has written down. They put that life in order on a timeline, sketch who connects to who, and write one story down so the family keeps it. Part detective, part reporter, all real.",
+  "goal": "Your kid interviews the oldest person they can talk to, a grandparent, a great aunt, an old family friend, and uncovers the stories nobody has written down. They put that life in order on a timeline, sketch who connects to who, and write one story down so the family keeps it.",
   "need": [
     "An older relative or family friend to interview, in person, by phone or on video",
     "A notebook, and a phone to record if the person agrees",
@@ -31,7 +31,7 @@
         "line": "What was that like for you?"
       }
     ],
-    "modelNote": "Yes-or-no questions get one word. Open questions and follow-ups get the story. When an answer is short, ask: what happened next?"
+    "modelNote": "Two yes-or-no questions got two words. The fix asks one open question, then builds the next from the answer: two miles, the snow, the worst day."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You make the introductions; your kid does the asking. Sit in if you like, but it's their interview.",
+    "intro": "Set up the call or visit, then hand it over. If you sit in, stay quiet through the long pauses: a story often comes right after one.",
     "plan": [
       {
         "when": "Tonight",
@@ -111,7 +111,7 @@
       "levels": {
         "explore": "Make 3 guesses about the photo, then pick one person to talk to.",
         "develop": "Guess who, when and where with a reason for each, then pick someone older with lots of history.",
-        "extend": "Write a full detective report on the photo, then line up 2 or 3 people to interview over time."
+        "extend": "For each guess, note the clue in the photo that backs it (clothes, cars, a sign) and how sure you are."
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "Group the questions: childhood, school and work, big moments, the world back then. It makes the interview flow.",
       "levels": {
-        "explore": "Write 3 open questions.",
+        "explore": "Say 3 'what was it like' questions for a grown-up to write.",
         "develop": "Write a list of open questions covering their whole life.",
-        "extend": "Group the questions by topic and plan a follow-up for each."
+        "extend": "Order them: easy, happy questions first, big ones once they're talking."
       }
     },
     {
@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Ask your questions, listen, and find one surprising story.",
         "develop": "Follow up on the good bits and draw out a few real stories.",
-        "extend": "Let the interview wander, chase the best stories deep, and ask about a hard or funny moment."
+        "extend": "Check one memory against something you can look up later, like a date, a place or a price they mention."
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "Add a few world events to the timeline (when TV arrived, a war, the first moon landing). Suddenly a grandparent's life fits into history class.",
       "levels": {
-        "explore": "Put 3 events in order and draw yourself, your parents and grandparents.",
+        "explore": "Lay 3 drawn events in order, then draw yourself, your parents and grandparents.",
         "develop": "Build a full timeline of the person's life and extend the tree as far as the interview reaches.",
-        "extend": "Add world events to the timeline and a fact or story to each person on the tree."
+        "extend": "Work out fuzzy dates from clues ('9 when her brother was born in 1958' means about 1949) and mark them."
       }
     },
     {
@@ -181,16 +181,16 @@
       ],
       "tip": "The person who was interviewed should be the first to hear the finished story. Watching them hear their own life told back is unforgettable.",
       "levels": {
-        "explore": "Write one story in a few sentences and tell it to the family.",
+        "explore": "Tell your favourite story to the family, then draw one picture of it.",
         "develop": "Write it with a beginning and an ending, or make a poster of what you learned, and present it to the family.",
-        "extend": "Write a few stories into a small collection and give a copy to the person you interviewed."
+        "extend": "Write it once for your cousins and once for the person who lived it. What do you add or leave out?"
       }
     }
   ],
   "conclusion": {
     "headline": "The stories were right there.",
-    "text": "A person your kid already knew was holding a whole history nobody had written down. Because they asked and listened, it's now caught in a timeline, a tree and a story the family gets to keep. And along the way, they learned to really talk to someone.",
-    "celebrate": "Point out what they did: they asked good questions and actually listened to the answers. That's rarer, and more useful, than most of what school teaches.",
+    "text": "Tell them about your day in one flat sentence, then wait. See if a follow-up comes, like 'what happened after?' or 'what was that like?' That second question is where the interview skill shows.",
+    "celebrate": "Pick the story their follow-up question pulled out, the one that got a laugh or a pause, and tell them: 'I'd never heard that one. Your question is what brought it out.'",
     "extensions": [
       "Interview a second relative and connect their stories to the first",
       "Record the interviews and keep a little archive of family voices",
@@ -199,11 +199,11 @@
     ]
   },
   "signs": [
-    "They ask follow-up questions in everyday conversations",
+    "Follow-up questions start showing up in everyday conversations",
     "They're curious about older people's lives, not just polite",
     "They can retell someone's story with its details and feeling"
   ],
-  "makeItReal": "Print the story with an old photo and give it to the person as a gift, or send copies to relatives who live far away. Seeing their own words come back to them is something an older person never forgets.",
+  "makeItReal": "Print the story with an old photo and give it to the person as a gift, or send copies to relatives who live far away. Have your kid read it aloud to them first and ask if they got it right.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

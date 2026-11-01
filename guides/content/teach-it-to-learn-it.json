@@ -4,7 +4,7 @@
   "title": "Teach It To Learn It",
   "tagline": "Explaining · Structuring knowledge · Confidence",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid takes something they already know how to do, a card trick, a soccer move, a recipe, a drawing, and teaches it to someone else in a real, planned lesson. They break it into steps, find the tricky part, teach it, and check that their student can actually do it. You never understand something as well as when you have to teach it, and this puts your kid on the other side of the desk.",
+  "goal": "Your kid takes something they already know how to do, a card trick, a soccer move, a recipe, a drawing, and teaches it to someone else in a real, planned lesson. They break it into steps, find the tricky part, teach it, and check that their student can actually do it.",
   "need": [
     "A skill your kid already knows well, and whatever props it needs",
     "A student: you, a sibling, a friend or a grandparent",
@@ -31,7 +31,7 @@
         "line": "Now make one on your own, and I won't say anything."
       }
     ],
-    "modelNote": "Same pupusa, but now the student can actually make one. When a lesson is all talking, ask: when does your student get to try?"
+    "modelNote": "Asking 'got it?' checks nothing. The fix ends with the student making one alone, teacher silent, and that's when you see what landed."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the student. Really be one: follow their instructions exactly, get stuck where a beginner would, and let them find the gaps.",
+    "intro": "Play the student and do exactly what they say, not what you know they mean. If they skip a step, skip it too. That's how they find the gaps.",
     "plan": [
       {
         "when": "First hour",
@@ -123,7 +123,7 @@
       "levels": {
         "explore": "Say 2 things that were wrong with the bad lesson, then pick a simple, familiar skill.",
         "develop": "List what a good lesson needs, then pick a skill with a few real steps.",
-        "extend": "Pick a skill where the order really matters, and write why you chose it."
+        "extend": "Pick a skill you do without thinking, and guess which step you'll forget to teach."
       }
     },
     {
@@ -137,9 +137,9 @@
       ],
       "tip": "The step they forgot to write down is exactly the one a beginner needs most.",
       "levels": {
-        "explore": "List the 3 biggest steps and guess the hardest one.",
+        "explore": "Draw the 3 biggest steps in order and point to the hardest.",
         "develop": "Write every real step in order and plan how to explain the tricky one.",
-        "extend": "Include the small steps beginners always miss, and prepare a special tip for the tricky one."
+        "extend": "Find the step that has to come before the tricky one, and check your student can do that step first."
       }
     },
     {
@@ -153,9 +153,9 @@
       ],
       "tip": "The best lessons aren't lectures, they're do-alongs. Make sure the plan has the student's hands busy, not just their ears.",
       "levels": {
-        "explore": "Plan a start, the steps, and a try.",
+        "explore": "Plan 3 boxes: show, steps, their try.",
         "develop": "Add a hook, a try-together moment, and one helper card.",
-        "extend": "Plan the full lesson with all four moves, a tip for the tricky bit, and a small kit of materials."
+        "extend": "Write what your student must do alone at the end first, then plan backwards from that check."
       }
     },
     {
@@ -171,7 +171,7 @@
       "levels": {
         "explore": "Teach the skill start to finish and watch the student try it alone.",
         "develop": "Guide the student through a try, then check whether they learned the whole skill.",
-        "extend": "Adjust on the fly when the student struggles, and pinpoint exactly which step did or didn't land."
+        "extend": "When they get stuck, show it a different way, not the same words louder, and note which way worked."
       }
     },
     {
@@ -187,14 +187,14 @@
       "levels": {
         "explore": "Name one thing to improve and try the lesson again.",
         "develop": "Fix the weak part of the lesson and teach it again.",
-        "extend": "Revise the whole lesson, teach it to a new student, and write what teaching taught you."
+        "extend": "Check a new student again a day later. What did they keep, and what does that say about your lesson?"
       }
     }
   ],
   "conclusion": {
-    "headline": "The student became the teacher.",
-    "text": "Your kid taught a real person a real skill, and somewhere in breaking it down and explaining it, they understood it better than they ever had just doing it. They also led a lesson, held someone's attention, and fixed what didn't work.",
-    "celebrate": "Point out what they did: they didn't just know the skill, they made someone else able to do it. That's a different and harder thing.",
+    "headline": "Their student can do it alone now.",
+    "text": "Say you want to learn their skill too, then do one step wrong on purpose. They should spot it, name the step, and know how to explain it better the second time.",
+    "celebrate": "The first time their student does it alone, say quietly: 'You didn't touch it once. They did that because of how you taught it.'",
     "extensions": [
       "Teach the same skill to a younger kid and see how the lesson has to change",
       "Run a family skill swap where everyone teaches everyone one thing",
@@ -205,9 +205,9 @@
   "signs": [
     "They explain things in steps instead of 'just do it like this'",
     "They notice when someone is confused and try another way",
-    "They ask to teach things to younger kids or visitors"
+    "They offer to teach things to younger kids or visitors"
   ],
-  "makeItReal": "Teach someone who genuinely wants to learn the skill: a grandparent learning a card trick over video, a younger cousin learning to ride, a friend who's always wanted to braid. A real student who really learns it is the best feeling a teacher can have.",
+  "makeItReal": "Teach someone who genuinely wants the skill: a grandparent learning a card trick over video, a younger cousin learning to ride, a friend who's always wanted to braid. Let your kid set the time, run the lesson and do the final check.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

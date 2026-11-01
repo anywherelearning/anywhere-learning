@@ -31,7 +31,7 @@
         "line": "So it looks like it's glowing from the centre, like a fire."
       }
     ],
-    "modelNote": "That's card 1, the Nature Mandala. When your kid says 'I made a circle,' ask: what did you choose, and why?"
+    "modelNote": "The leaves didn't change. The order did: yellow to red to brown, on purpose, so the whole thing glows from the centre."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No art experience needed. You're the gallery visitor: ask for the title and the story behind each piece. Use only fallen items, never pick living plants or disturb animal homes, and when you're done, return the materials and leave the space as you found it.",
+    "intro": "Praise can end the conversation: say 'beautiful!' and they're off to the next one. Ask for a title and the story behind each piece instead. Use only fallen items, never pick living plants or disturb animal homes, and leave the spot as you found it.",
     "plan": [
       {
         "when": "Before you go",
@@ -457,9 +457,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just made art from nothing but what was lying around.",
-    "text": "They built patterns, played with colour and texture, explained their choices, and left the place as they found it. Art, geometry and respect for nature, all in a few minutes outside.",
-    "celebrate": "Look at the photos together and ask for the title of each piece. Treat it like a real art show, because it is one.",
+    "headline": "Every piece had a title, and a reason behind it.",
+    "text": "Put two of their photos side by side and ask which one they'd build again. Listen for a choice they made on purpose, like the colour order or the size of the rings, rather than 'I just like it.'",
+    "celebrate": "When they explain their Gradient Mandala, say it back: 'Light in the middle, dark outside. My eye goes right to the centre.'",
     "extensions": [
       "Make a photo album of every piece, with titles",
       "Do the same card in every season and compare",
@@ -472,7 +472,7 @@
     "They give reasons for their art: 'I put the red ones in the middle because...'",
     "They return materials and leave places as they found them"
   ],
-  "makeItReal": "Hold a real art show: print the best photos with their titles and hang them at home, or make a slideshow for grandparents. Seeing their work displayed like art makes kids take it seriously.",
+  "makeItReal": "Print the best photos with their titles and hang them down a hallway, or put together a slideshow for grandparents and let your kid narrate every piece, title first.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

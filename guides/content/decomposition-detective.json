@@ -31,7 +31,7 @@
         "line": "Since Day 5: white fuzz has appeared on the bottom leaf."
       }
     ],
-    "modelNote": "Same jar, but now there's a record of change. When an entry just says 'different,' ask: different how, and since when?"
+    "modelNote": "'Different' gives next week nothing to compare. The fix has a date, a look, a feel and what's new since Day 5."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No science background needed. You guard the patience; your kid does the watching. Build it, leave it alone, and look a few times a week.",
+    "intro": "The hard part is the waiting. Build the jar, leave it alone, and look a few times a week. Keep the lid loose and wash hands after each check.",
     "plan": [
       {
         "when": "Day 1",
@@ -111,7 +111,7 @@
       "levels": {
         "explore": "Sort 3 objects, then build one simple jar.",
         "develop": "Sort 6 objects with a reason each, then build and label the jar.",
-        "extend": "Rank the objects from fastest to slowest to break down, then build two jars for a test later."
+        "extend": "Sort again by 'was it once alive?' Does that rule predict rot better than your first guess?"
       }
     },
     {
@@ -127,7 +127,7 @@
       "levels": {
         "explore": "A quick Day One sketch.",
         "develop": "A sketch plus a written description.",
-        "extend": "A labelled drawing detailed enough to compare against, plus a photo."
+        "extend": "Tape-mark the leaf layer's height on the jar so shrinking becomes a number."
       }
     },
     {
@@ -159,7 +159,7 @@
       "levels": {
         "explore": "Notice which jar changed more.",
         "develop": "Describe the difference between the two jars with dated notes.",
-        "extend": "Test a second condition, and rank which conditions matter most."
+        "extend": "Before looking, decide what counts as 'faster', so the result can't be bent."
       }
     },
     {
@@ -175,14 +175,14 @@
       "levels": {
         "explore": "Say one thing you learned.",
         "develop": "Write a short conclusion with evidence from your notes.",
-        "extend": "Write a findings report with drawings, your fair test results, and what you'd test next."
+        "extend": "Name one thing that could have fooled your test, like more sun on one jar, and how you'd rule it out."
       }
     }
   ],
   "conclusion": {
-    "headline": "Case closed: your kid watched nature recycle.",
-    "text": "Weeks ago they put leaves in a jar. Now they can tell you exactly what happened, who did it, and what made it faster. Observation over time, fair testing and the nutrient cycle, learned by watching something most people never stop to see.",
-    "celebrate": "Point out the patience: they stuck with a project that took weeks to pay off. That's a skill worth more than the science.",
+    "headline": "Case closed: they know where the leaves went.",
+    "text": "Turn over the leaf pile under a tree together and find a soft, dark leaf with holes in it. They can tell you what's breaking it down, and why the bottom layer is further along than the top.",
+    "celebrate": "The day the leaves first feel soft instead of crunchy, say: 'You've checked this jar for weeks, and you caught the moment it changed.'",
     "extensions": [
       "Start a real compost bin and track kitchen scraps turning into soil",
       "Bury a few objects in the yard and dig them up months later",
@@ -193,9 +193,9 @@
   "signs": [
     "They notice rotting logs and leaf piles on walks",
     "They write dated notes and compare to last time",
-    "They ask 'what would happen if...' and want to test it"
+    "They want to test their own 'what if' ideas"
   ],
-  "makeItReal": "Turn it into a real family compost: decide together what goes in, who turns it, and where the finished soil goes in the spring. The jar was the experiment; the compost is the real-world version.",
+  "makeItReal": "Start a family compost: decide together what goes in, who turns it, and where the finished soil goes in the spring. Let them be the one who checks whether it's too dry.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

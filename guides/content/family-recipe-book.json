@@ -36,7 +36,7 @@
         "line": "It's ready when the top is golden and springs back when you press it."
       }
     ],
-    "modelNote": "Same recipe, but now a stranger could make it. When a step says 'some' or 'until done,' ask: how much exactly, and how will I know?"
+    "modelNote": "A family cook reads 'some' and 'until done' and just knows. A stranger needs a number, an action and a sign they can see."
   },
   "academics": [
     {
@@ -57,7 +57,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the taste tester and the kitchen safety supervisor: you handle the hot and sharp parts, your kid leads the rest.",
+    "intro": "You handle the hot and sharp parts. When the notes say 'some flour', don't quietly add the right amount: let the gap show so it ends up on the card.",
     "plan": [
       {
         "when": "Tonight",
@@ -128,7 +128,7 @@
       "levels": {
         "explore": "Guess 3 ingredients in the mystery dish, then pick 2 or 3 family recipes and who they come from.",
         "develop": "Guess every ingredient and one step of how it's made, then pick 3 or 4 recipes from different people.",
-        "extend": "Write a full guessed recipe for the mystery dish, then pick 4 or 5 recipes that tell your family's food story."
+        "extend": "Guess the amounts by ratio too: more flour than sugar? About twice as much? Check your ratios in the interview."
       }
     },
     {
@@ -144,7 +144,7 @@
       "levels": {
         "explore": "Ask for the recipe and write down the ingredients and basic steps.",
         "develop": "Ask about both the recipe and the story behind it, and take notes on both.",
-        "extend": "Do a full interview: the recipe, the story, the secret tips, and what the dish means to the cook, with a few exact quotes."
+        "extend": "Ask the cook to make it while you watch, and write down every step they do but didn't mention."
       }
     },
     {
@@ -160,7 +160,7 @@
       "levels": {
         "explore": "Cook one recipe and mark any steps that were confusing or missing.",
         "develop": "Cook 2 or 3 recipes, mark every gap, and add exact amounts and times.",
-        "extend": "Cook every recipe, fix unclear steps on the spot, and write down every trick you discover."
+        "extend": "When a step says 'a handful', measure one 3 times and write down the middle amount."
       }
     },
     {
@@ -174,9 +174,9 @@
       ],
       "tip": "For a bigger challenge, have them add a line for doubling the recipe for a crowd. It's fractions with a real reason.",
       "levels": {
-        "explore": "Write a basic card for each recipe: an ingredients list and numbered steps.",
+        "explore": "Draw each step in its own box, in order, and add the amounts with a grown-up.",
         "develop": "Write detailed cards with exact amounts, clear steps and a short story, then have someone read one and revise.",
-        "extend": "Add the cook's tips, serving ideas and a doubled version of each recipe, checked so a stranger could follow it."
+        "extend": "Rescale one recipe to serve 2 or 12, and flag what doesn't scale neatly, like one egg or a pinch of salt."
       }
     },
     {
@@ -192,14 +192,14 @@
       "levels": {
         "explore": "Put the recipes together with a cover and your name, and give it to one family member.",
         "develop": "Add a table of contents and a short introduction about your family's food, and share it with the cooks.",
-        "extend": "Add a dedication, photos or drawings and a closing note, and write about what the project taught you."
+        "extend": "Choose the book's order on purpose (by person, season or meal) and write a short intro explaining why."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just collected, wrote and published a real family cookbook.",
-    "text": "They interviewed family, tested recipes in a real kitchen, wrote instructions a stranger could follow, and turned it all into a book. Step-by-step writing, kitchen math and family history, in something your family will keep for years.",
-    "celebrate": "Point out what they did: they turned 'a pinch of this' and 'until it looks right' into a recipe anyone can make. And they saved a piece of your family's history along the way.",
+    "headline": "'A bit of this' is written down properly now.",
+    "text": "Hand them a recipe from a website or an old recipe box and have them read one step aloud. Watch for them catching a vague word or a missing sign that it's done. They can tell you why 'bake until done' isn't really an instruction.",
+    "celebrate": "When the dish they cooked from their own notes tastes like the cook's version, say it: 'That tastes just like theirs, and your notes got it there.'",
     "extensions": [
       "Keep adding recipes and make a second volume",
       "Cook a whole family meal from the book, start to finish",
@@ -209,11 +209,11 @@
     ]
   },
   "signs": [
-    "They ask 'how much exactly?' without being told",
+    "They check amounts and times before cooking",
     "They catch vague words in recipes ('some,' 'a bit,' 'until done')",
     "They want to cook from the book on their own"
   ],
-  "makeItReal": "Cook one recipe from the book for the person who shared it, and serve it with their recipe card on the table. Or bring copies to the next family gathering. Watching someone use their writing is when it clicks for kids.",
+  "makeItReal": "Cook one recipe from the book for the person who shared it, and serve it with their recipe card on the table. Or bring copies to the next family gathering and let someone cook from one.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

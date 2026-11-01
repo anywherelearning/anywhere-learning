@@ -31,7 +31,7 @@
         "line": "Moved two pinecones next to the stones so they tap together."
       }
     ],
-    "modelNote": "That's Craft 2, the Wind Chime. When your kid says 'done,' ask: what did you choose, how did you test it, and what would you change?"
+    "modelNote": "Nobody noticed the silent pinecones until they listened. One move fixed it, and every craft in this guide improves the same way."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No art skills needed. You gather materials together, set out the home basics, and ask about their choices. Use only fallen materials, never pick living plants, leave nests and webs alone, and put things back when you're done.",
+    "intro": "Set the gathering rules before you head out: fallen materials only, never pick living plants, leave nests and webs alone, and put things back when you're done. After that, your part is the home basics and one question about each choice.",
     "plan": [
       {
         "when": "First hour",
@@ -118,7 +118,7 @@
       "levels": {
         "explore": "Build the frame and title one view.",
         "develop": "Frame 3 views and title each one, like a mini gallery.",
-        "extend": "Pick a theme (only textures, only patterns) and frame 3 matches, then write: 'This place feels ___ because ___.'"
+        "extend": "Frame one subject twice, centred and then a third of the way in. Which feels more alive, and why?"
       },
       "art": "wc/crafts-frame.jpg"
     },
@@ -142,7 +142,7 @@
       "levels": {
         "explore": "Hang 4 pieces and listen.",
         "develop": "Sort the sounds: clink, tap or rustle, and arrange them on purpose.",
-        "extend": "Make a repeating pattern (ABAB or ABC), then name the chime with two describing words, like 'soft and rainy.'"
+        "extend": "Tap a big and a small stone as they hang: which rings higher? Does string length change the note, or only the swing?"
       },
       "art": "wc/crafts-chime.jpg"
     },
@@ -190,7 +190,7 @@
       "levels": {
         "explore": "Mix 3 soil colours and paint a picture.",
         "develop": "Make a swatch strip and name each colour, like 'Trail Tan' or 'Forest Brown.'",
-        "extend": "Paint the same shape with thick paste and thin paint and compare, then match each colour to an object nearby."
+        "extend": "Find out why soils differ: dark often means rotted plant matter, red or orange means iron. Which of yours is which?"
       },
       "art": "wc/crafts-earth.jpg"
     },
@@ -214,7 +214,7 @@
       "levels": {
         "explore": "Trace 3 overlapping shadows and colour them.",
         "develop": "Make a shadow creature from 3 traced shapes: a body, a head and a tail.",
-        "extend": "Trace the same object now and again in 10 minutes, then trace one in sun and one in shade, and explain the differences."
+        "extend": "Trace the leaf close to the paper, then held high: why does the high one blur? Trace again in 10 minutes: which way did it move?"
       },
       "art": "wc/crafts-shadow.jpg"
     },
@@ -237,15 +237,15 @@
       "levels": {
         "explore": "Draw 6 symbols and tell a 3-stone story out loud.",
         "develop": "Tell the same 3-stone story twice: once as a mystery, once as an adventure.",
-        "extend": "Use 5 stones for a full story (setting, character, problem, attempt, solution), then write it in 3 to 5 sentences."
+        "extend": "Tell the story, then retell it from the storm's or the villain's side. What changes, and what stays the same?"
       },
       "art": "wc/crafts-stones.jpg"
     }
   ],
   "conclusion": {
-    "headline": "Your kid just made art from what was lying on the ground.",
-    "text": "They chose materials, tested ideas, changed what didn't work and gave every piece a title. Sound, light, soil and story, learned with sticks, stones and leaves.",
-    "celebrate": "Ask about one choice: 'Why did you put the stones at the bottom?' Explaining a choice is what turns a craft into thinking.",
+    "headline": "Six pieces, each with a choice they can explain.",
+    "text": "Move one piece on the wind chime while they watch. They'll probably move it back, and they can tell you why it sounded better there.",
+    "celebrate": "If their three-stone story solves its problem, tell them: 'I didn't see that ending coming, and it used all three stones.'",
     "extensions": [
       "Set up a family gallery and give a tour",
       "Make the same craft in a new season with new materials",
@@ -255,10 +255,10 @@
   },
   "signs": [
     "They pick up interesting materials on walks 'for a craft'",
-    "They test and change things without being asked",
+    "They test a change, then test it again",
     "They give their creations titles and stories"
   ],
-  "makeItReal": "Make a gift: a wind chime for a grandparent's porch, a set of story stones for a younger cousin, an earth-paint card for a friend. When a craft goes to someone, kids take more care with every choice.",
+  "makeItReal": "Make a gift: a wind chime for a grandparent's porch, a set of story stones for a younger cousin, an earth-paint card for a friend. Let them match the craft to the person and say why.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

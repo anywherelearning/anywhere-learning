@@ -4,7 +4,7 @@
   "title": "Family Debate Night",
   "tagline": "Persuasion · Critical thinking · Respectful disagreement",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks a topic with two real sides, researches both, builds a case and argues it in a real family debate, with a timer, a judge and a verdict. They learn to back up what they say and to answer the other side's best point, without it turning into a fight. It's the kind of arguing you actually want to hear at the dinner table.",
+  "goal": "Your kid picks a topic with two real sides, researches both, builds a case and argues it in a real family debate, with a timer, a judge and a verdict. They learn to back up what they say and to answer the other side's best point, without it turning into a fight.",
   "need": [
     "A topic with two sides (ideas in Step 1), and a family member to debate or judge",
     "Paper and pencil for notes",
@@ -35,7 +35,7 @@
         "line": "True, but the walks are the best part, not the work."
       }
     ],
-    "modelNote": "Same opinion, but now it's an argument someone has to take seriously. When a point is just 'I'm right,' ask: what's your evidence, and what will they say back?"
+    "modelNote": "Three opinions in a row don't make an argument. A reason, an example and an answer to 'cats are less work' before anyone says it do, and that last part is the one most kids skip."
   },
   "academics": [
     {
@@ -56,7 +56,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the coach, the timekeeper and the fair referee. If there's no sibling to debate, you take the other side and argue it for real.",
+    "intro": "Run the clock and keep it fair: no interrupting, and go after the idea, never the person. If there's no sibling to debate, take the other side yourself and argue it properly.",
     "plan": [
       {
         "when": "Warm-up",
@@ -123,7 +123,7 @@
       "levels": {
         "explore": "Do a few lightning rounds, then pick a topic and say which side you're on and why.",
         "develop": "Pick a topic and write one reason for each side, to check both are arguable.",
-        "extend": "Write a short paragraph on why your topic makes a good debate: what makes both sides strong?"
+        "extend": "Could a quick search settle your topic? Then it's a fact, not a debate. Reword it until both sides can win."
       }
     },
     {
@@ -137,9 +137,9 @@
       ],
       "tip": "The other side's best point is the most important thing on the page. If your kid can answer it, they're ready.",
       "levels": {
-        "explore": "Write 2 reasons for your side and 1 for the other side.",
+        "explore": "Say 2 reasons for your side and 1 for the other while a grown-up writes them.",
         "develop": "Write 3 reasons per side, each with an example.",
-        "extend": "Turn it into a bigger debate: take a few days to research both sides with real facts before debate night."
+        "extend": "Sort every reason into evidence (something you could check) or opinion. Swap one opinion for evidence."
       }
     },
     {
@@ -153,9 +153,9 @@
       ],
       "tip": "Notes on small cards, one point per card, are easier to glance at than a full page.",
       "levels": {
-        "explore": "Write your opening and your 2 or 3 reasons, then say them out loud once.",
+        "explore": "Say your case out loud, holding up one finger for each reason.",
         "develop": "Write a full outline with an answer to one counter-argument, and practise twice with a timer.",
-        "extend": "Plan answers to the other side's top 2 points, and practise once without notes."
+        "extend": "Try your strongest reason first, then last. Which order makes your closing land harder?"
       }
     },
     {
@@ -171,7 +171,7 @@
       "levels": {
         "explore": "Share your argument, listen to one person's answer, and say one thing back.",
         "develop": "Hold a timed debate with openings, main points and one round of answers.",
-        "extend": "Run the full timed format and change your argument on the fly to answer what they said."
+        "extend": "Jot their key words while they talk, and start your answer by quoting them back."
       }
     },
     {
@@ -187,14 +187,14 @@
       "levels": {
         "explore": "Say who was more convincing and give one reason why.",
         "develop": "Write a short judge's note: who was stronger, the best point on each side, one tip for each.",
-        "extend": "Write a full verdict on arguments, evidence, delivery and answers, then reflect on how the debate changed your thinking."
+        "extend": "Write a verdict based only on what was said. Could you vote for the side you disagree with, and would you?"
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just researched, built and argued a real debate.",
-    "text": "They looked at both sides, backed up their claims, answered the other side's best point, and kept it respectful the whole time. Persuasion, critical thinking and listening, in a format they'll want to do again.",
-    "celebrate": "Point out what they did: they didn't just argue. They prepared, listened, and answered fairly. Lots of adults never learn to disagree that well.",
+    "headline": "They argued hard and kept it fair.",
+    "text": "At dinner, state an opinion as if it were fact, like 'winter is the best season'. Listen for 'how do you know?' or a reason of their own. If they guess what you'll say back, that's their prep, used without a timer.",
+    "celebrate": "Their answer to the other side's starred point deserves its own line: 'You answered what they actually said, not what you'd planned. Best minute of the debate.'",
     "extensions": [
       "Debate the same topic again, switching sides",
       "Run a family tournament with several topics",
@@ -205,9 +205,9 @@
   "signs": [
     "They back up what they want with a reason, not just 'please'",
     "They can say the other side's point before arguing against it",
-    "They ask 'how do you know?' when someone states something as fact"
+    "'How do you know?' becomes their reply to anything stated as fact"
   ],
-  "makeItReal": "Debate a real family decision: where to go this weekend, what's for dinner on Friday, even where to travel next. Agree beforehand that the winning side decides. Real stakes make kids research harder than any topic list.",
+  "makeItReal": "Debate an actual family decision: where to go this weekend, what's for dinner on Friday, even where to travel next. Agree beforehand that the winning side decides, then let the judge call it.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

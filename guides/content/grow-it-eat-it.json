@@ -31,7 +31,7 @@
         "line": "By the next morning, the leaves are standing up again."
       }
     ],
-    "modelNote": "Same plant, but now there's a diagnosis. Droopy usually means thirsty, yellow can mean too much water, pale and stretched means it needs more light."
+    "modelNote": "Droopy usually means thirsty, yellow can mean too much water, pale and stretched means it needs more light. Naming the symptom is what makes a fix possible."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No gardening experience needed. It's their plant, and that's the whole arrangement. Help with the first setup, then hand it over and mean it.",
+    "intro": "Help with the setup, then hand the plant over and mean it. The temptation is quietly watering it when they forget: a day of droop teaches more than a rescue.",
     "plan": [
       {
         "when": "Day 1",
@@ -119,7 +119,7 @@
       "levels": {
         "explore": "Open a soaked bean, then pick cress or sprouts, the fastest of all.",
         "develop": "Draw the inside of the seed, then pick radishes or lettuce.",
-        "extend": "Label the parts of the seed, then pick two or three crops to compare."
+        "extend": "Work backward from 'days to harvest' so two crops are ready the same week."
       }
     },
     {
@@ -135,7 +135,7 @@
       "levels": {
         "explore": "Plant a shallow tray of cress on a sunny windowsill.",
         "develop": "Plant seeds at the right depth and spacing, and set a daily check-in time.",
-        "extend": "Plant two pots, one sunny and one shady, to see which grows faster."
+        "extend": "Sow a few 3 times too deep. Does the seed's stored food last the climb?"
       }
     },
     {
@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Water it and notice one change a week.",
         "develop": "Keep a short daily check and measure it each week.",
-        "extend": "Track growth in a chart and explain what's driving it (light, water, warmth)."
+        "extend": "Chart its height each week, then find the week it grew fastest and what was different."
       }
     },
     {
@@ -167,7 +167,7 @@
       "levels": {
         "explore": "Notice one thing that looks off.",
         "develop": "Guess the cause of a problem and try a fix.",
-        "extend": "Diagnose an issue, fix it, and record whether it worked."
+        "extend": "Yellow can mean too much water or too little. How can you tell?"
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Pick and taste what you grew.",
         "develop": "Judge the right moment, harvest it, and add it to a real meal.",
-        "extend": "Harvest a bit at a time so the plant keeps producing, and cook a small dish around it."
+        "extend": "Weigh the harvest, price it at the shop, and see if it paid back the seeds and soil."
       }
     }
   ],
   "conclusion": {
     "headline": "They ate it.",
-    "text": "Somewhere in those weeks of remembering to water a pot, your kid figured out that food is grown, not bought, and that living things don't thrive on good intentions. They thrive on Tuesday, and Wednesday, and the day nobody felt like it.",
-    "celebrate": "Point out the follow-through: weeks of small daily care, for one bite. That's what responsibility actually looks like.",
+    "text": "Point to a droopy houseplant and watch: they'll push a finger into the soil before saying a word. They know a plant needs checking, not guessing, and that it won't wait for a day they feel like it.",
+    "celebrate": "At the first bite, say: 'Every day you checked on it, and this is what all those mornings made.'",
     "extensions": [
       "Plant the next crop straight away, something slower and harder",
       "Give them a real patch of the garden to run",
@@ -199,11 +199,11 @@
     ]
   },
   "signs": [
-    "They check on the plant without being reminded",
+    "They check the plant before you mention it",
     "They notice droops and pale leaves and know what they mean",
     "They try vegetables they grew themselves"
   ],
-  "makeItReal": "Cook a family meal where one ingredient came from their pot, and let them serve it and tell everyone how they grew it. Food they grew, on the family table, is the moment that sticks.",
+  "makeItReal": "Cook a family meal where one ingredient came from their pot, and let them serve it and tell everyone how they grew it, from seed to plate.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

@@ -31,7 +31,7 @@
         "line": "He learned from his grandmother, and he says every loaf is a little bit hers."
       }
     ],
-    "modelNote": "Same baker, but now you'd recognise him if you walked in. When a profile sounds like a list, ask: what did they say, and what did you see?"
+    "modelNote": "'He is nice' is the writer's opinion. The fix lets you decide for yourself: what he does at 4 a.m., his own words, and why the bread matters to him."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the behind-the-scenes coach: you help find the person and make the first contact safe, then let your kid run the conversation.",
+    "intro": "Find the person and make first contact together, and stay close by. Then let your kid run it, and resist filling the silences: a pause is often where the best answer comes.",
     "plan": [
       {
         "when": "Tonight",
@@ -119,7 +119,7 @@
       "levels": {
         "explore": "Interview a parent for 2 minutes, then choose a family member to interview.",
         "develop": "Choose someone you know but haven't talked to much, and write what you want to find out.",
-        "extend": "Choose someone in your community you don't know well, and write a short paragraph on why."
+        "extend": "Choose someone you don't know well and predict one answer. See if you were right afterwards."
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "Most people are flattered to be asked. Kids are often amazed by how quickly a busy adult says yes.",
       "levels": {
-        "explore": "Write 5 open questions that start with what, how or why.",
+        "explore": "Make up 3 'what, how or why' questions out loud.",
         "develop": "Write 7 to 10 questions from warm-up to deeper, with 2 follow-ups.",
-        "extend": "Group 10 or more questions by theme (their work, their past, their opinions) with follow-ups for each."
+        "extend": "Turn 3 yes-or-no questions into open ones, and cut any question you could answer with a quick search."
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "If the person agrees, record it. Then your kid can listen to the answers instead of writing the whole time.",
       "levels": {
-        "explore": "Ask your questions, listen, and write down one thing from each answer.",
+        "explore": "Ask your questions, listen, and draw or say back one thing from each answer.",
         "develop": "Ask all your questions, take notes, and ask 2 follow-ups that weren't on your list.",
-        "extend": "Let the conversation flow, ask follow-ups naturally, and note their exact words when they say something memorable."
+        "extend": "Mark each answer as a fact or an opinion, and ask a follow-up on one opinion: 'why do you think that?'"
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "The best profiles start in the middle of something: the ovens at 4 a.m., the first customer of the day. Help them find that moment in their notes.",
       "levels": {
-        "explore": "Write 5 to 10 sentences about who they are and what you learned.",
+        "explore": "Draw them at work and write or say 3 things you learned.",
         "develop": "Write a half-page profile with a scene, a quote and a short reflection.",
-        "extend": "Write a full profile that reads like a mini magazine article, with an engaging opening, quotes and a strong ending."
+        "extend": "Write two openings, one with a scene and one with a quote. Read both to someone and keep the one that pulls them in."
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Read your profile to someone and tell them your favourite part.",
         "develop": "Present it to the family, give a copy to the person, and write what you'd do differently next time.",
-        "extend": "Ask the person if you captured them accurately, and reflect on how you've grown as an interviewer."
+        "extend": "Ask the person what you got wrong or left out. Decide whether to fix it or keep it as your view, and say why."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just planned, conducted and published a real interview.",
-    "text": "They chose someone interesting, asked good questions, listened carefully and turned it into a profile someone else would enjoy. Speaking, listening and writing, with a real person on the other side of the table.",
-    "celebrate": "Point out what they did: they walked up to someone, asked for their time, and made them feel heard. That's a skill plenty of adults still find hard.",
+    "headline": "Someone nearby has a story now, and your kid wrote it.",
+    "text": "Listen the next time they meet a new adult, at a shop counter or a friend's house. You may hear a second question built on the first answer, like 'how did you learn that?' That follow-up is what turned their notes into a profile.",
+    "celebrate": "On the walk home, say: 'You asked a question that wasn't on your list, and look how much they told you.'",
     "extensions": [
       "Interview someone from a different background or generation",
       "Record the interview and turn it into a mini podcast",
@@ -199,11 +199,11 @@
     ]
   },
   "signs": [
-    "They ask follow-up questions in everyday conversations",
+    "Follow-up questions show up in their everyday conversations",
     "They're more comfortable talking to adults they don't know",
     "They notice the people behind everyday jobs around them"
   ],
-  "makeItReal": "Ask the person if their profile can go somewhere public: a print-out in their shop window, the community board, or the local newsletter. Seeing their words on display makes both of them proud.",
+  "makeItReal": "Ask the person if their profile can go somewhere public: their shop window, the community board, or the local newsletter. Then go together and see it up.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

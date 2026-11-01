@@ -31,7 +31,7 @@
         "line": "How to get a later bedtime: Step 1, show you can wake up on time."
       }
     ],
-    "modelNote": "Same topic, four different voices, and each one fits its reader. When a piece sounds flat, ask: who's reading this, and what do they need?"
+    "modelNote": "'Because I want it to be' only convinces the writer. Each fix gives its reader what they need: Mom gets a plan, the review gives a reason, the news gives facts."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed, and you don't need to be a writer. You're the sounding board and the first reader: respond as a reader, not a teacher. 'I got confused here' helps more than 'fix your comma.'",
+    "intro": "Respond to what the words do to you: 'I got confused here' or 'this bit made me laugh' helps more than 'fix your comma.' Leave spelling for the final version.",
     "plan": [
       {
         "when": "First hour",
@@ -135,7 +135,7 @@
       "levels": {
         "explore": "Name your reader and pick a tone.",
         "develop": "Answer all four questions, and write one sentence about how your reader changes your writing.",
-        "extend": "Write the opening line for two different readers, and compare them."
+        "extend": "Guess your reader's first 'but...', and plan your answer to it."
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "Professional writers don't get it right the first time either. Saying that out loud helps more kids than you'd think.",
       "levels": {
-        "explore": "Write half a page to a page, using the style card as a guide.",
+        "explore": "Say it aloud, then write or dictate a few lines.",
         "develop": "Write a full page with a clear opening, middle and ending.",
-        "extend": "Write a full piece with a specific example, a strong opinion and an ending that lands."
+        "extend": "Mark each sentence as opinion or evidence, and give every opinion at least one piece of evidence."
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "If it sounds weird out loud, it reads weird on paper. Kids catch their own mistakes faster when they hear them.",
       "levels": {
-        "explore": "Read it out loud and write down 1 thing to keep and 1 to change.",
+        "explore": "Read it out loud and pick 1 thing to keep and 1 to change.",
         "develop": "Write down 2 or 3 specific changes based on the feedback.",
-        "extend": "Get feedback from two different people, and decide which suggestions to use."
+        "extend": "Have someone who doesn't know the topic read it, and fix what confused them."
       }
     },
     {
@@ -183,7 +183,7 @@
       "levels": {
         "explore": "Write a clean final version, circle one thing that's better, and share it with one person.",
         "develop": "Rewrite the full piece with all edits, and send it to a real reader.",
-        "extend": "Send it, then write a second piece in a different style on the same topic."
+        "extend": "Cut it by a third, keep the main point, and send the shorter one."
       }
     }
   ],
@@ -313,9 +313,9 @@
     ]
   },
   "conclusion": {
-    "headline": "Your kid just wrote something real, for a real reader.",
-    "text": "They picked a style, thought about who'd read it, wrote a messy first draft, listened to feedback and made it better. Voice, audience and revision, the three things that make every kind of writing work.",
-    "celebrate": "Put Version 1 and Version 2 side by side and point at what changed. That gap is the skill.",
+    "headline": "Version 2 went to the person it was written for.",
+    "text": "When there's a birthday card to sign or a note for a neighbour, watch what they do before the first word. You may see them stop and think about who's reading. And after feedback, see if they pick the change that matters most.",
+    "celebrate": "Point at the new opening in Version 2 and say: 'This one pulled me in. Read it to me again.'",
     "extensions": [
       "Turn an informative piece into a song: keep a tune everyone knows, rewrite the lyrics",
       "Write the same story twice, from two characters' points of view",
@@ -326,11 +326,11 @@
     ]
   },
   "signs": [
-    "They ask 'who's this for?' before writing",
-    "They change their tone for different readers without being told",
+    "'Who's this for?' comes up before they start writing",
+    "They write differently for Grandma than for a friend",
     "They accept feedback and make the piece better"
   ],
-  "makeItReal": "Send it for real: mail the letter to a grandparent, send the complaint letter to the company, test the how-to on a friend. A real reader writing back is the best motivation a young writer can get.",
+  "makeItReal": "Send it off: mail the letter to a grandparent, send the complaint to the company, test the how-to on a friend. When a reply comes, read it together and decide what to write back.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

@@ -31,7 +31,7 @@
         "line": "Same green as the grass, and its pointy edges disappeared between the blades."
       }
     ],
-    "modelNote": "Same leaf, but now it's evidence. When your kid says 'that one was hard,' ask: how long did it take, and why?"
+    "modelNote": "The fix adds what the first line lacked: 42 seconds anyone can check, and a reason the next test can prove wrong."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No science background needed. You play the predator: the one who searches. Your kid runs the experiment, hides, times and explains.",
+    "intro": "You play the predator, so search properly: no pretending to miss one, or the times stop meaning anything. Your kid hides, runs the clock and explains.",
     "plan": [
       {
         "when": "10 minutes",
@@ -119,7 +119,7 @@
       "levels": {
         "explore": "Play the warm-up, name one camouflaged animal, and gather 3 objects.",
         "develop": "Explain why hiding helps an animal survive, and gather 5 objects in different colours.",
-        "extend": "Gather objects that each match a different background, and predict which will hide best."
+        "extend": "Add one boldly patterned object. Will breaking up its outline beat matching the colour?"
       }
     },
     {
@@ -135,7 +135,7 @@
       "levels": {
         "explore": "Hide 3 objects in plain sight.",
         "develop": "Match each object carefully to its background.",
-        "extend": "Hide them, then predict and write down the order you think they'll be found in."
+        "extend": "Hide two twins, one flat and one propped up to cast a shadow. Which gets found first?"
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "Set a limit, like 2 minutes per object. If you don't find it, write 'over 2 minutes' and call it a big win for camouflage.",
       "levels": {
-        "explore": "Find the objects and notice which took longest.",
+        "explore": "Count aloud while the searcher looks: which took longest?",
         "develop": "Time each object and compare the results.",
-        "extend": "Rank the objects from best to worst hidden, with a reason for each."
+        "extend": "Time 3 searchers and rank by the middle time, so one lucky glance can't win."
       }
     },
     {
@@ -167,7 +167,7 @@
       "levels": {
         "explore": "Try one object on two backgrounds.",
         "develop": "Test two objects across different backgrounds and compare the times.",
-        "extend": "Test enough times to be sure the background is what matters, and make a small results table."
+        "extend": "Use a fresh searcher for each background, since anyone who just found the leaf knows where to look."
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Say one thing that makes camouflage work, and spot one camouflaged thing outside.",
         "develop": "Write a full rule and prove it with one fresh test.",
-        "extend": "Write a rule that covers colour, texture and staying still, prove it, and find three real examples."
+        "extend": "Tug the best-hidden object along on a thread while they search. Does your rule need a 'stays still' part?"
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just proved how one of nature's best survival tricks works.",
-    "text": "They observed, measured with a stopwatch, ran a fair test and built a rule from their own evidence. That's the real scientific method, played as a game in the backyard.",
-    "celebrate": "Point out what they did: they didn't just learn a fact about camouflage, they discovered the rule themselves and proved it.",
+    "headline": "They worked out why matching beats hiding.",
+    "text": "On your next walk, set a fallen leaf on the bare path, then in the leaf litter, and ask where a bird would spot it first. Watch them check colour, texture and edges before they answer.",
+    "celebrate": "Right after the leaf vanished on the grass and stood out on the dirt, tell them: 'Same leaf, and you hid it just by moving it.'",
     "extensions": [
       "Design the ultimate camouflaged object for a new background",
       "Hunt for camouflaged creatures on your next walk and keep a list",
@@ -200,10 +200,10 @@
   },
   "signs": [
     "They spot camouflaged insects and birds on walks",
-    "They ask 'how long?' and 'why?' instead of just 'was it hard?'",
+    "They want a time and a reason, not just 'was it hard?'",
     "They describe things by colour, texture and shape"
   ],
-  "makeItReal": "Take the hunt somewhere new: a forest trail, the beach, a garden centre. Keep a running list of every camouflaged creature you find together, with where you found it. By the end of the season, it's a real field record.",
+  "makeItReal": "Take the hunt somewhere new: a forest trail, the beach, a garden centre. Keep a running list of every camouflaged creature you find together and where it was, and add to it each time you go out.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

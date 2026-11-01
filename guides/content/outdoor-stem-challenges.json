@@ -31,7 +31,7 @@
         "line": "Added a flat rock under the middle as a support. Now it holds 5."
       }
     ],
-    "modelNote": "That's card 2, the Bridge Builder. When your kid says 'it doesn't work,' ask: what exactly failed, and what's one thing you could change?"
+    "modelNote": "'It doesn't work' became 'it sagged in the middle', and that one detail showed exactly where the support rock had to go."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No science background needed. You're the tester and the cheerleader: blow on the shelter, add stones to the bridge, and celebrate the redesign more than the first success. Use only fallen materials, never break living plants, and take builds apart when you're done.",
+    "intro": "Resist building it for them when the first version collapses. Be the test instead: blow on the shelter, add stones to the bridge, and get more excited about version 2 than version 1. Use only fallen materials, never break living plants, and take builds apart when you're done.",
     "plan": [
       {
         "when": "Before you go",
@@ -294,9 +294,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just thought like an engineer.",
-    "text": "They planned, built, watched it fail, figured out why, and made it better, with nothing but what they found on the ground. The design loop, forces and materials, learned the way engineers actually learn them.",
-    "celebrate": "Celebrate the redesign, not just the success: 'Your second bridge held more because you added that support.' That's the habit that matters.",
+    "headline": "Version 2 held more, and they knew why.",
+    "text": "The next block tower or blanket fort that collapses will tell you. If they look for the exact spot it gave way before rebuilding, the loop from these cards has stuck. If they start over from scratch, ask where it broke first.",
+    "celebrate": "The moment the second bridge beats the first, put a finger on the support they added and say: 'This rock is why it held five. You found that.'",
     "extensions": [
       "Do the same card in a new place with different materials",
       "Photograph version 1 and version 2 side by side",
@@ -309,7 +309,7 @@
     "They change one thing at a time and test again",
     "They explain why a design worked, not just that it did"
   ],
-  "makeItReal": "Hold a family engineering challenge: everyone gets the same card and 15 minutes, then you test all the designs together. Kids love beating a grown-up's bridge, and explaining why theirs held more.",
+  "makeItReal": "Give everyone the same card and 15 minutes, grown-ups too. Then test every design together, one at a time, and let whoever built the strongest one explain to the rest of you what made it hold.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

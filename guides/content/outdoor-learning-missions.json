@@ -5,7 +5,7 @@
   "tagline": "10 scavenger hunts · 120 finds · Real evidence",
   "ages": "Ages 6 to 14",
   "levelsChip": "10 missions",
-  "goal": "Ten scavenger hunt missions you can take on any walk: a micro-world hunt, a signs-of-life hunt, a water cycle hunt, a geologist's rock hunt and more. Each one has 12 things to find and 3 Extras for going deeper. Your kid searches, ticks off finds and explains why each one counts. Observation, science thinking and clear describing, on a plain old walk.",
+  "goal": "Ten scavenger hunt missions you can take on any walk: a micro-world hunt, a signs-of-life hunt, a water cycle hunt, a geologist's rock hunt and more. Each one has 12 things to find and 3 Extras for going deeper. Your kid searches, ticks off finds and explains why each one counts.",
   "need": [
     "These missions, on your phone or printed",
     "Any outdoor place: a yard, a park, a trail, a beach",
@@ -32,7 +32,7 @@
         "line": "A squirrel sat here and ate it, probably this morning."
       }
     ],
-    "modelNote": "That's from Mission 2, Signs of life. When your kid says 'found one,' ask: where, what's the clue, and what do you think happened?"
+    "modelNote": "The tick became a claim backed by two clues: the pile of scales and the tooth marks. Without them it's only a guess."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching background needed, and you don't need to know the answers. Read the mission out loud, let your kid lead the search, and ask 'why does that count?' When they're stuck, give a hint, not the answer: 'Where might you find that: near water, in the shade, on a tree?'",
+    "intro": "Read the mission out loud, then follow. Your kid leads the search, and you hold one question for every tick: 'why does that count?' When they're stuck, hand them a place to look, not the find itself: 'Would you see that near water, in the shade, or on a tree?'",
     "plan": [
       {
         "when": "Before",
@@ -703,9 +703,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just turned a walk into fieldwork.",
-    "text": "They searched with a goal, backed up their finds with clues, and noticed things most people walk past every day. Animal evidence, the water cycle, plants, rocks and soil, learned on an ordinary walk.",
-    "celebrate": "Ask about their best evidence: 'Tell me again how you knew a squirrel ate that cone.' Explaining it is what makes it stick.",
+    "headline": "A tick on the list now comes with a clue.",
+    "text": "Ask them how they'd know if a deer had walked through your yard overnight. Listen for clues before a yes or no: nibbled tips, droppings, prints in soft ground. If they want to go out and check, go with them.",
+    "celebrate": "When they hand you a find with its clue before you've even asked, tell them: 'You showed me the clue first. That's what convinced me.'",
     "extensions": [
       "Do the same mission in a new season and compare",
       "Do the same mission in a new place: a beach, a city park, a forest",
@@ -716,9 +716,9 @@
   "signs": [
     "They point out tracks, nibbles and nests on ordinary walks",
     "They explain why something counts instead of just pointing",
-    "They ask 'which mission today?' before you head out"
+    "They pick a mission for the walk before you've left the house"
   ],
-  "makeItReal": "Take a mission on your next trip. A new place changes every answer: the colours, the sounds, the rocks. Your kid becomes the one teaching you about where you are.",
+  "makeItReal": "Pack one mission for a trip somewhere new, like the Rock and soil hunt on a beach or the Water cycle hunt in a city, and let your kid show you which finds look different from home.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

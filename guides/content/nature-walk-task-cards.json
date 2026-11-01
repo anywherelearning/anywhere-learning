@@ -27,7 +27,7 @@
         "line": "The moss looks like a tiny forest for ants."
       }
     ],
-    "modelNote": "That's card 7 (three different greens). When an answer is one word, ask: what do you notice, what do you wonder, what does it remind you of?"
+    "modelNote": "Three named greens replaced 'green stuff'. Once the words were specific, the question about the sun followed on its own."
   },
   "academics": [
     {
@@ -48,7 +48,7 @@
     }
   ],
   "howTo": {
-    "intro": "No prep and no nature knowledge needed. You read the card out loud; your kid does the looking and the talking. You never need to know the answer: 'I don't know, let's look closer' is the perfect reply.",
+    "intro": "Read the card, then stop talking. The pull is to point at the answer or fill the quiet with facts. When they ask something you can't answer, 'I don't know, let's look closer' is the best reply you have.",
     "plan": [
       {
         "when": "Before you go",
@@ -528,9 +528,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just learned to really look.",
-    "text": "Card by card, they noticed details most people walk past, described them precisely, and asked questions about how nature works. Observation, describing and wondering: the habits every scientist, writer and artist starts with.",
-    "celebrate": "Ask about their favourite find of the day, and really listen. When a kid knows their noticing matters, they keep doing it.",
+    "headline": "Three greens where they used to see one.",
+    "text": "Hand them one leaf and a minute, and count the details they give you before they run out: the edge, the veins, a hole, the colour underneath. Try the same thing in a month and compare the count.",
+    "celebrate": "'I'd have walked right past that.' Say it the moment they show you something small you missed, then ask how they spotted it.",
     "extensions": [
       "Keep a nature notebook: one card, one sketch, one sentence per walk",
       "Do the same card in a new place and compare",
@@ -539,11 +539,11 @@
     ]
   },
   "signs": [
-    "They point things out on walks without being asked",
+    "They stop mid-walk to show you something small",
     "They describe with specific words instead of 'cool' or 'nice'",
-    "They ask 'why?' and 'I wonder...' about what they find"
+    "They start sentences with 'I wonder' about what they find"
   ],
-  "makeItReal": "Have your kid lead a walk for a grandparent, a friend or a younger cousin, choosing and reading the cards themselves. Being the one who asks the questions is when the noticing becomes theirs.",
+  "makeItReal": "Hand the cards to your kid before a walk with a grandparent or a younger cousin. They choose which ones to read, read them out loud and wait for the answers, while you walk along as a guest.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

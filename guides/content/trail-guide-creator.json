@@ -31,7 +31,7 @@
         "line": "Now follow the path left until you hear the water."
       }
     ],
-    "modelNote": "Same tree, but now a stranger can find it, notice it and move on. When a stop is just a name, ask: how will they find it, and what should they notice?"
+    "modelNote": "Nobody could find that tree without the writer there. The fix gives a starting point, a step count and the split trunk, then something to touch and the way on."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the walking partner and the first reader, and on test day, the stranger who follows only what's written.",
+    "intro": "On test day, follow only what's written, even when you know the way. If it says the wrong bench, go to that bench. Before that, you're the walking partner.",
     "plan": [
       {
         "when": "First walk",
@@ -117,9 +117,9 @@
       ],
       "tip": "No forest? A park bench, a lamp post or a planter works, and indoors you can guide them from the couch to a door frame.",
       "levels": {
-        "explore": "Play one round each way, then pick a place and list 3 things you like about it.",
+        "explore": "Play one round each way, then pick a place and name 3 things you like about it.",
         "develop": "Count steps and turns out loud while blindfolded, then walk the place and note 6 possible stops.",
-        "extend": "Write the blindfolded route down as directions and see if someone else can follow them, then pick the place for your trail."
+        "extend": "Guide the walker with words only, no touching. Which words worked better: left and right, steps, or what's underfoot?"
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "Bring the clipboard. Details written on the spot always beat the ones remembered at home.",
       "levels": {
-        "explore": "Stop at 3 or 4 spots and write 2 or 3 things you notice at each.",
+        "explore": "Stop at 3 or 4 spots and say or draw 2 things you notice at each.",
         "develop": "Stop at 5 or 6 spots, use all your senses, and find one fact for each.",
-        "extend": "Stop at 6 or more spots, write a full sensory paragraph for each, and check your facts in a second source."
+        "extend": "Find one thing a fast walker would miss at each stop, and cut any fact you can't find in two sources."
       }
     },
     {
@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Put your stops in order and draw a simple map.",
         "develop": "Draw a map with numbered stops, step counts and a clear start and end.",
-        "extend": "Draw a detailed map with distances, landmarks and a theme, and plan what the reader does between stops."
+        "extend": "Measure your step length, turn step counts into metres, and add a scale bar to the map."
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "Keep the birch tree example open while they write. Pointing at 'where' and 'next' is easier than explaining again.",
       "levels": {
-        "explore": "Write 2 to 4 sentences per stop: what you'll see and why it's interesting.",
+        "explore": "For each stop, say what to look at and draw it. A grown-up writes one line under each.",
         "develop": "Write a paragraph per stop with sensory details, a fact and directions to the next, plus an introduction.",
-        "extend": "Write polished stops with vivid language, researched facts, clear directions, an introduction and a closing."
+        "extend": "Fit each stop on a card someone can read while walking: 40 words, directions first. Cut until it fits."
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Give it to a family member, fix anything confusing, and share it with one person.",
         "develop": "Have someone walk it using only the guide, revise 2 or 3 parts, and share it with 2 people.",
-        "extend": "Test it with 2 different people, revise from both, and make a final polished version to share."
+        "extend": "Mark where your tester hesitated, fix the line just before each spot, and retest with someone new."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just designed, wrote and published a real trail guide.",
-    "text": "They explored a place with fresh eyes, noticed what others walk past, researched it, and wrote a guide clear enough that a stranger could follow it alone. Descriptive writing, clear directions, science and map skills, in something genuinely useful.",
-    "celebrate": "Point out what they did: they turned a familiar place into an experience someone else can enjoy, using only their words.",
+    "headline": "A stranger can walk their trail without them.",
+    "text": "On your next walk somewhere new, let them give the directions back to the start. Listen for landmarks and counts, like 'left at the split tree, then about 50 steps', instead of 'over there'.",
+    "celebrate": "Watch the tester find a stop without looking up. Then tell your kid: 'They got there on your words alone. You weren't even pointing.'",
     "extensions": [
       "Make a seasonal edition of the same trail",
       "Add photos or drawings for a visual edition",
@@ -203,7 +203,7 @@
     "They give directions with landmarks and distances",
     "They describe places with specific details instead of 'nice'"
   ],
-  "makeItReal": "Offer the guide to the place itself: the park office, the library, a campground, the community board. Many are happy to put a kid-made trail guide out for visitors, and seeing strangers use it is unforgettable.",
+  "makeItReal": "Offer the guide to the place itself: the park office, the library, a campground, the community board. If they say yes, go back a week later and count how many copies are gone.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

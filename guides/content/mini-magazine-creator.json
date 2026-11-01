@@ -4,7 +4,7 @@
   "title": "Mini Magazine Creator",
   "tagline": "Writing in many styles · Design · Publishing",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid makes their own mini magazine about something they love: dinosaurs, football, baking, their pet. They plan the issue, write different kinds of pieces (an article, a tips list, a quiz, a how-to), design the pages, and hand out real copies. One project, and they've practised almost every kind of writing there is.",
+  "goal": "Your kid makes their own mini magazine about something they love: dinosaurs, football, baking, their pet. They plan the issue, write different kinds of pieces (an article, a tips list, a quiz, a how-to), design the pages, and hand out real copies.",
   "need": [
     "A topic your kid could talk about for hours",
     "Paper folded into a booklet, pencils, markers, and a stapler (or a computer for layout)",
@@ -31,7 +31,7 @@
         "line": "Make Peanut Butter Dog Biscuits in 4 Steps"
       }
     ],
-    "modelNote": "Same topic, four completely different pieces, and every headline makes you want to turn the page. When a headline just names the topic, ask: why would a reader stop here?"
+    "modelNote": "Each fixed headline promises the reader something (a reason, a trick, a result, a recipe), where 'Dogs' just named the topic. Your kid will write one for every page."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the magazine editor: supportive, curious and honest. Give one suggestion per piece, never a full rewrite.",
+    "intro": "Resist turning editor. Give one suggestion per piece, never a rewrite, and let spelling wait until the design stage.",
     "plan": [
       {
         "when": "Tonight",
@@ -117,9 +117,9 @@
       ],
       "tip": "Give the magazine a real name before anything is written. It makes the whole project feel official.",
       "levels": {
-        "explore": "Remix a headline, pick a topic and plan 3 short pieces. Drawings with labels count.",
+        "explore": "Remix one headline out loud, pick a topic, and draw 3 boxes for 3 pieces with a picture in each.",
         "develop": "Plan 4 or 5 pieces in at least 3 different types, with a rough table of contents.",
-        "extend": "Write a one-line mission for the magazine and plan 5 or 6 pieces across 4 or more types."
+        "extend": "Write the issue for a reader who knows nothing about your topic. Which piece goes first, and why?"
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "One surprising fact makes a whole article. 'Octopuses have three hearts' does more work than ten ordinary ones.",
       "levels": {
-        "explore": "Find 1 or 2 interesting facts for your main article.",
+        "explore": "Find 1 or 2 facts for your main article in a book.",
         "develop": "Find facts for each piece that needs them, and check the key ones.",
-        "extend": "Research every piece, find a surprising fact or a quote for each, and do a real interview."
+        "extend": "For each fact, find a second source that agrees. If two sources disagree, say which you trust and why."
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "One or two pieces a day keeps it fun. Writing the whole magazine in one sitting is how it turns into a chore.",
       "levels": {
-        "explore": "Write 2 or 3 short pieces, at least a paragraph each, with a headline.",
+        "explore": "Make 2 or 3 short pieces with headlines. Telling a grown-up the words counts.",
         "develop": "Write 4 or 5 pieces in different styles, each with a clear headline written for your reader.",
-        "extend": "Write 5 or 6 polished pieces that read like real magazine content, with strong openings."
+        "extend": "Each page fits only 100 words. Write each piece long, then cut it to fit without losing the best line."
       }
     },
     {
@@ -167,7 +167,7 @@
       "levels": {
         "explore": "Make a cover, put each piece on a page with a heading, and fix anything messy.",
         "develop": "Add a table of contents and matching illustrations, then do a full edit with someone else's feedback.",
-        "extend": "Design consistent pages with a branded cover, and do a final edit for writing, design and accuracy."
+        "extend": "Give it to someone who doesn't know your topic and watch where they slow down or skip. Fix those pages first."
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Share the magazine with one person and tell them your favourite piece.",
         "develop": "Share it with 2 or 3 people and write down what you learned about writing in different styles.",
-        "extend": "Share it widely, gather feedback, and plan what Issue 2 will include."
+        "extend": "Note which piece each reader turned to first, and plan Issue 2 around that."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just planned, wrote, designed and published their own magazine.",
-    "text": "They picked a topic, researched it, wrote in four or five different styles, designed the pages and put real copies in real hands. Informational, persuasive and how-to writing, plus design, in one project they finished start to end.",
-    "celebrate": "Point out what they did: they didn't write one thing, they wrote a whole publication, and they finished it. Plenty of grown-ups have an unfinished project or two they never got to.",
+    "headline": "Their magazine is out, and people read it.",
+    "text": "Hand them a magazine at the library or the shop and ask which headline they'd read first, and why. Then see if they can tell you what kind of piece each one is: an article, a tips list, a quiz.",
+    "celebrate": "When a reader stops on a page and reads a line out loud, catch your kid's eye and say: 'That headline did its job. They stopped right there.'",
     "extensions": [
       "Make Issue 2, with new pieces on the same topic",
       "Team up with a sibling or friend on a joint issue",

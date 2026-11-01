@@ -31,7 +31,7 @@
         "line": "Why are all the ants walking toward the fence?"
       }
     ],
-    "modelNote": "Same square, but now a scientist could picture it. When notes say 'some bugs,' ask: how many, which kinds, and where?"
+    "modelNote": "'Some bugs' could be any yard. The fix has a place, numbers and a pill bug, so a return visit can tell if anything changed."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No science background needed. You're not the tour guide: hand them the square and let them be the scientist. When they ask 'what is that?', try 'what do you notice about it?' first.",
+    "intro": "When they ask 'what is that?', try 'what do you notice about it?' first. A name ends the looking, and the looking is the study. Hand them the square, and keep hands off anything that stings.",
     "plan": [
       {
         "when": "10 minutes",
@@ -111,7 +111,7 @@
       "levels": {
         "explore": "Do the micro-hike, then mark a rough square with sticks or rocks.",
         "develop": "Measure a one-foot square and mark all four corners.",
-        "extend": "Mark two squares in different spots, one sunny and one shady, to compare."
+        "extend": "Toss a stick and mark the square where it lands. Why would scientists choose at random?"
       }
     },
     {
@@ -127,7 +127,7 @@
       "levels": {
         "explore": "Count three living things.",
         "develop": "Count every different kind you can find.",
-        "extend": "Count the kinds and estimate how many of each fill the whole square."
+        "extend": "Count one plant in a quarter of the square, times 4, then count it all to check."
       }
     },
     {
@@ -143,7 +143,7 @@
       "levels": {
         "explore": "Turn over one thing and see what's under it.",
         "develop": "Look at all the layers: top, grass, and soil.",
-        "extend": "Notice how the living things in each layer are different, and guess why."
+        "extend": "Compare under the rock with the open soil: which is damper, and who lives in each?"
       }
     },
     {
@@ -159,7 +159,7 @@
       "levels": {
         "explore": "Draw the square and label two things.",
         "develop": "Write a full entry with a sketch, a tally, and a note.",
-        "extend": "Add a guess about why certain things live where they do."
+        "extend": "Log kinds and totals. Is 50 ants richer than 8 kinds?"
       }
     },
     {
@@ -175,14 +175,14 @@
       "levels": {
         "explore": "Visit once more and notice one change.",
         "develop": "Write a second set of notes and compare them to the first.",
-        "extend": "Study the same square across a season and sum up what changed, with your tallies."
+        "extend": "Note the weather and time on each visit. Was a change the season, or just a rainy morning?"
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just did what real field scientists do.",
-    "text": "They picked one small piece of the world, studied it closely, recorded what they found, and watched it change. Observation, sampling and field notes, done in your own backyard.",
-    "celebrate": "Point out the patience: they stayed with one tiny patch long enough for it to reveal itself. Paying close attention is its own kind of superpower.",
+    "headline": "Nobody knows that square foot better.",
+    "text": "Stand at their square and ask who's missing today. They'll know, because they have last time's tallies to check against. Then watch how they look at a lawn or a trail edge now: down low, and slowly.",
+    "celebrate": "'I've stepped on that spot a hundred times and never knew that was there.' Say it when they show you what lives under the rock.",
     "extensions": [
       "Mark new squares in new places as the seasons turn",
       "Run two squares side by side, one in sun and one in shade",
@@ -193,9 +193,9 @@
   "signs": [
     "They crouch down to look at the ground on walks",
     "They count and describe instead of saying 'some bugs'",
-    "They ask why things live where they do"
+    "They wonder why things live where they do"
   ],
-  "makeItReal": "Join a real citizen science project: apps like iNaturalist let kids photograph what they find, get help identifying it, and add it to data real scientists use. Their backyard square becomes part of a real study.",
+  "makeItReal": "Join a citizen science project: on iNaturalist, kids can photograph what they find, get help identifying it, and add it to data scientists use. Upload one find from the square together.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

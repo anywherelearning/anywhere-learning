@@ -31,7 +31,7 @@
         "line": "The veins look like the map of rivers near our house."
       }
     ],
-    "modelNote": "Same leaf, but now it's real observation. When your kid says 'done,' ask: what do you notice, what do you wonder, what does it remind you of?"
+    "modelNote": "Three short lines turn any leaf into this leaf: its holes, a question about them, and a link to the rivers near home."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need to know any plant or bird names. Read the card, sit with your kid, and journal too if you like: kids take it more seriously when you have your own page. Drawing comes first, words second, and nobody grades the art.",
+    "intro": "Read the card, sit down beside your kid, and journal too if you like: kids take it more seriously when you have your own page. Drawing comes first, words second, and nobody grades the art. Plant and bird names can wait.",
     "plan": [
       {
         "when": "Before",
@@ -395,9 +395,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just started a real naturalist's journal.",
-    "text": "They looked closely, drew what they saw, and turned it into notices, wonders and comparisons. Observation, scientific drawing and writing, in a notebook that grows with every season.",
-    "celebrate": "Flip back through the pages together and point to a wonder: 'You asked what made those holes. Did you ever find out?'",
+    "headline": "A journal full of their own questions.",
+    "text": "Lay the first page next to the latest one. The 'I notice' lines have likely grown longer and more exact. Pick one 'I wonder' and look up the answer together this week.",
+    "celebrate": "Keep this line for the day they reach for the journal before you suggest it: 'You didn't need a card for that one. You just saw it.'",
     "extensions": [
       "Pick one spot and journal it every season for a year",
       "Start a family journal: everyone adds a page on the same walk",
@@ -407,10 +407,10 @@
   },
   "signs": [
     "They stop on walks to look closely at something",
-    "They ask 'I wonder...' questions on their own",
+    "'I wonder' starts their sentences on walks",
     "They notice when something has changed since last time"
   ],
-  "makeItReal": "Bring the journal everywhere for a month: the backyard, a park, a road trip stop. At the end of the month, read it together. Kids are amazed by how much they noticed, and it's a record you'll keep for years.",
+  "makeItReal": "Bring the journal everywhere for a month: the backyard, a park, a road trip stop. On the last day, read it start to finish together and count the wonders you answered.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

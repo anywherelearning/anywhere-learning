@@ -17,7 +17,7 @@
     "Optional: a blindfold for an extra challenge"
   ],
   "howTo": {
-    "intro": "You don't need any teaching experience. Your main job is to be the follower: you do exactly what the directions say, even when you know what your kid meant. That's where all the learning comes from, and it's usually where the laughing starts too.",
+    "intro": "The hardest part is playing dumb. You'll know exactly what they mean, and you follow only what they said anyway. Each wrong turn points straight at the words that need fixing, and it's usually where the laughing starts too.",
     "tips": [
       {
         "title": "Follow word for word",
@@ -44,7 +44,7 @@
         "Turn left so the fridge is in front of you.",
         "Open the fridge door."
       ],
-      "why": "Same three steps, but the fixed version says how far to go, which way to turn, and what 'it' is. That's what your kid is aiming for."
+      "why": "The fixed version says how far to go, which way to turn, and what 'it' is. That's what your kid is aiming for."
     },
     "troubleshoot": [
       {
@@ -168,14 +168,14 @@
       "levels": {
         "explore": "Your kid shares one thing that surprised them and one thing they'd do differently.",
         "develop": "Your kid writes a few sentences about what they learned, with one real-life example.",
-        "extend": "Your kid compares giving directions for a route and for a task: which was harder, and why?"
+        "extend": "Your kid rewrites the directions for someone starting at another door. Which words only worked from their spot?"
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just found out how hard it is to be truly clear, and how to get better at it.",
-    "text": "They planned, tested, found what broke, fixed it, and tried again. Along the way they learned that what's obvious to you isn't always obvious to someone else, and that good communication means thinking about the person listening.",
-    "celebrate": "Take a moment to point out what your kid did: they found exactly where their words went wrong and fixed them. That's a skill plenty of adults are still working on.",
+    "headline": "They can find the exact words that sent you the wrong way.",
+    "text": "Ask them for directions to something in the house, no pointing. Listen for numbers, left and right, and landmarks like 'past the big chair'. If they pause to picture what you'd see from where you stand, they're thinking like the listener now.",
+    "celebrate": "On the second run, the moment you land exactly where they meant, say it: 'Same route, new words, and I didn't go wrong once. You fixed that.'",
     "extensions": [
       "Try it blindfolded: the follower can't see and has to rely completely on the words",
       "Swap roles: you give the directions and your kid follows them word for word",

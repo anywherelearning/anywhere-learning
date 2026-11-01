@@ -4,7 +4,7 @@
   "title": "Nature Choice Boards",
   "tagline": "5 boards · 60 outdoor options · Kids choose",
   "ages": "Ages 6 to 14",
-  "goal": "Five outdoor menus, from a first-time explorer to a 12-year-old field researcher. You pick the board and the boundary, your kid picks 3 options and heads out, then comes back to show you their best discovery. Observation, science thinking, building and writing, chosen by them, so they actually want to do it.",
+  "goal": "Five outdoor menus, from a first-time explorer to a 12-year-old field researcher. You pick the board and the boundary, your kid picks 3 options and heads out, then comes back to show you their best discovery.",
   "need": [
     "These boards, on your phone or printed",
     "A safe outdoor space with a clear boundary: a yard, a park, a campsite",
@@ -31,7 +31,7 @@
         "line": "Why does it hide in the wet spot and not the dry one?"
       }
     ],
-    "modelNote": "Same bug, but now it's a real discovery. When your kid says 'I found a bug,' ask: where was it, what did it do, and what do you wonder about it?"
+    "modelNote": "Where it was and what it did turned 'a bug' into a green beetle that hides in damp spots, and that is what led to a question."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need to know any nature facts. You choose the board and set the boundary and the return time. Your kid chooses the options. Do the first one together if they're new to it, then let them go, and be the audience when they come back.",
+    "intro": "Before they head out, say two things out loud: the boundary and the return time. Pick the board yourself, then hand over every other choice. Do the first option together if they're new to it, and save your questions for the show-and-tell.",
     "plan": [
       {
         "when": "Before",
@@ -378,9 +378,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just led their own outdoor learning.",
-    "text": "They chose, planned, went out on their own inside a safe boundary, and came back with something to show. Observation, science thinking and clear explaining, done because they picked it.",
-    "celebrate": "Ask about the discovery, not the number of options done: 'Show me the beetle spot. What do you think it was doing?'",
+    "headline": "They chose the plan and came back with a question.",
+    "text": "On an ordinary walk with no board, wait and see what they bring back to you. If it comes with a where, a what-it-did and an 'I wonder', the show-and-tell habit has stuck, board or no board.",
+    "celebrate": "Crouch down at the spot they lead you to and say: 'You remembered exactly where it was. Show me what it did.'",
     "extensions": [
       "Repeat the same board in a new season and compare discoveries",
       "Move up one board when the current one feels easy",
@@ -389,11 +389,11 @@
     ]
   },
   "signs": [
-    "They ask to 'do a board' on their own",
+    "They reach for a board on a free afternoon",
     "They come back with a detail and a question, not just 'it was fun'",
     "They stay inside the boundary without reminders"
   ],
-  "makeItReal": "Bring a board on your next trip: a campsite, a beach, a grandparent's yard. A new place makes every option new again, and your kid gets to be the one showing you around.",
+  "makeItReal": "Pack a board for a campsite, a beach or a grandparent's yard. Let your kid pick the three options, then follow as they walk you around the new place.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

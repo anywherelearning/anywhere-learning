@@ -31,7 +31,7 @@
         "line": "Short arm: 4 steps. Long arm: 7 steps. Tried 3 times each."
       }
     ],
-    "modelNote": "That's card 5, Fair Test Flight. When your kid changes three things at once, ask: which one made the difference? Change one, and test again."
+    "modelNote": "Before, three things changed and nobody could say which one mattered. Now only the arm changes, so the 3 extra steps belong to the arm."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No science background needed. You're the measurer and the fair-test referee: hold them to changing one thing at a time. Use only fallen materials, keep water challenges to puddles, basins or a sink, and take builds apart when you're done.",
+    "intro": "Hold the line at one change per test: three changes at once can't tell you which one worked. Carry the measuring (steps, seconds, counts), use only fallen materials, keep water challenges to puddles, basins or a sink, and take builds apart when you're done.",
     "plan": [
       {
         "when": "Before you go",
@@ -294,9 +294,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just ran real experiments.",
-    "text": "They built, tested, measured, and changed one thing at a time until they knew exactly what made the difference. Fair testing, forces and simple machines, learned with sticks, string and water.",
-    "celebrate": "Point to a number: 'Your long arm sent it 7 steps instead of 4.' Measuring their own improvement is what makes it stick.",
+    "headline": "Each change gets its own test.",
+    "text": "Watch them try to fix anything at home, from a paper aeroplane to a wobbly chair. If they change one thing, test it, and only then change the next, they're running a fair test without calling it one.",
+    "celebrate": "If they catch themselves about to change two things at once and stop, say: 'You just saved the experiment. Which one goes first?'",
     "extensions": [
       "Pick the best design from each theme and run a family championship",
       "Keep a results notebook: card, what changed, what you measured",
@@ -309,7 +309,7 @@
     "They measure instead of saying 'it's better'",
     "They spot levers, ramps and pulleys in everyday life"
   ],
-  "makeItReal": "Find a real job for a simple machine: move a heavy log with a lever, get a wheelbarrow up a step with a ramp, lift a bucket into a treehouse with a pulley. When the machine does real work, kids feel the physics.",
+  "makeItReal": "Find a job for a simple machine around the yard: shift a heavy log with a lever, roll a wheelbarrow up a step on a ramp board, or lift a bucket into a treehouse with a pulley. Let your kid set it up.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

@@ -31,7 +31,7 @@
         "line": "Then, behind him, the gate clicked shut."
       }
     ],
-    "modelNote": "Same park, but now you can see it, hear it, and you want to know what happens. When a story is a list of events, ask: what does your character want, and what's stopping them?"
+    "modelNote": "'It was scary' tells the reader how to feel. The fix gives them creaking chains, a deadline and a gate clicking shut, so they feel it on their own. That swap is the one to look for in every draft."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the adventure companion on the walk and the first reader of the story. Let the story flow first; spelling can wait for the end.",
+    "intro": "The trap here is fixing spelling while the story is still coming out. On the walk, play what-if with them. At the desk, read for the story and save spelling for the end.",
     "plan": [
       {
         "when": "The weekend",
@@ -117,9 +117,9 @@
       ],
       "tip": "Bring the notebook on the walk. Details written on the spot ('the gate squeaks') beat details remembered at the kitchen table.",
       "levels": {
-        "explore": "Pick a place and write down 5 things you notice, plus your favourite what-if.",
+        "explore": "Point at 5 things you notice and say your best what-if for a grown-up to write.",
         "develop": "Note sights, sounds and smells at 5 spots, and a what-if for each.",
-        "extend": "Note how each spot feels, and which ones have the most story in them. Come back at another time of day if you can."
+        "extend": "Describe one spot twice: once as a safe, happy place and once as a creepy one. Which details change the mood?"
       }
     },
     {
@@ -135,7 +135,7 @@
       "levels": {
         "explore": "Draw the main paths and 3 or 4 landmarks.",
         "develop": "Draw a detailed map with labels and a compass.",
-        "extend": "Add a legend, a rough scale and terrain, and make it both accurate and beautiful."
+        "extend": "Pace out one path and pick a scale, like 1 cm for 10 steps, so distances match."
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "If the plan is 'they walk here, then here, then home,' ask what could go wrong at the second spot. That's usually where the story is.",
       "levels": {
-        "explore": "Create a character and plan a simple story: what's the problem, and how is it solved?",
+        "explore": "Draw your character, then draw the problem and how it gets solved in 3 boxes.",
         "develop": "Plan a character, a problem, 2 or 3 things that go wrong, and an ending. Mark 3 moments on the map.",
-        "extend": "Plan several scenes with a twist, and mark every scene on the map."
+        "extend": "Plan the ending first, then plant an early clue so the twist feels fair."
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "Keep the Riverside Park example from the start nearby. Pointing at 'senses' is easier than explaining it again.",
       "levels": {
-        "explore": "Write half a page to a page, using at least 3 real details from the place.",
+        "explore": "Tell the story aloud while a grown-up writes it, using 3 things you noticed on the walk.",
         "develop": "Write several paragraphs with a clear plot, real settings and at least one bit of dialogue.",
-        "extend": "Write a full story with a twist, dialogue, and enough real detail that someone could walk the route."
+        "extend": "Write the full story, then cut a quarter of it: keep every landmark and lose the words that repeat."
       }
     },
     {
@@ -181,16 +181,16 @@
       ],
       "tip": "The best moment is watching someone trace the route with their finger while they read.",
       "levels": {
-        "explore": "Mark 2 or 3 moments on the map and share the story with one person.",
+        "explore": "Put stickers on 2 or 3 story spots and share the story with one person.",
         "develop": "Number every big moment, add a legend, and share with 2 people.",
-        "extend": "Add route arrows and a legend, then record the story as an audiobook: read it aloud, scene by scene, with a picture for each."
+        "extend": "Give the story and map to someone who's never been there and watch them follow it. Rewrite every spot where they got lost."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just turned a real place into an adventure.",
-    "text": "They walked a place on purpose, mapped it, planned a story with a real problem, and wrote it so a reader could follow along on the map. Storytelling, descriptive writing and map skills, all in one adventure.",
-    "celebrate": "Point out what they did: they took somewhere completely ordinary and made it exciting, using details that were really there. That's how good writers work.",
+    "headline": "An ordinary place has a story in it now.",
+    "text": "Walk past one of the story spots and ask what happens there. They'll point to the exact place and tell you what the character wanted and what got in the way. That pair is the engine of every story they'll write.",
+    "celebrate": "Read back the line built from something you both noticed on the walk, and add: 'I remember that exact sound. You put me right back there.'",
     "extensions": [
       "Record it as an audiobook, reading every scene out loud",
       "Make a story map for a place from a trip",
@@ -201,10 +201,10 @@
   },
   "signs": [
     "They point out 'story spots' on ordinary walks",
-    "They use real names, sounds and smells in their writing without being asked",
+    "Their writing starts to include names, sounds and smells from the place",
     "Their stories have a problem, not just a list of things that happened"
   ],
-  "makeItReal": "Turn it into a story walk: hand the story and map to a friend or grandparent and walk the real route while they read it out loud at each spot. Seeing someone stand exactly where the adventure happens is unforgettable.",
+  "makeItReal": "Turn it into a story walk: hand the story and map to a friend or grandparent and walk the route together while they read each scene out loud at its spot. Let your kid lead and stop the group at every numbered mark.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

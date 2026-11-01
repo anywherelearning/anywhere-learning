@@ -4,7 +4,7 @@
   "title": "Outdoor Movement Challenge Cards",
   "tagline": "24 challenges · Personal records · Daily streaks",
   "ages": "Ages 6 to 14",
-  "goal": "24 outdoor challenges your kid plays against yesterday's self: time a tree sit and beat it, keep a daily outside streak alive through a rainy week, sample new ways to move and pick one that's theirs, and race a faster sibling with a handicap you tune until it's fair. No equipment, no sports background: a body, a timer, and outside.",
+  "goal": "24 outdoor challenges your kid plays against yesterday's self: time a tree sit and beat it, keep a daily outside streak alive through a rainy week, sample new ways to move and pick one that's theirs, and race a faster sibling with a handicap you tune until it's fair.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Any outdoor space: a yard, a park, a trail, a beach",
@@ -31,7 +31,7 @@
         "line": "Best this week: 52 seconds. Up 14 from day 1."
       }
     ],
-    "modelNote": "That's card 1, the Tree Sit. When your kid says 'I'm bad at this,' ask: what's your number today? Then: what would beat it by a little?"
+    "modelNote": "'I'm bad at this' has no number in it. 38 seconds does, and so does 52, which is how they can see 14 seconds of progress, slow day 4 included."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No sports background needed. You're the timekeeper and a competitor: do the challenges too, and keep your own numbers. Two sets of records beat one. Climb only what you could climb down from, keep balance challenges near soft ground, and match the effort to each body today.",
+    "intro": "Do the challenges with them and keep your own numbers. A grown-up trying to beat 40 seconds turns it into a game instead of a test. Climb only what you could climb down from, keep balance challenges near soft ground, and match the effort to each body today.",
     "plan": [
       {
         "when": "Before you start",
@@ -294,9 +294,9 @@
     }
   ],
   "conclusion": {
-    "headline": "Your kid just learned that effort is trainable.",
-    "text": "They set a number, beat it, kept a streak alive through bad weather, tried new ways to move and picked one of their own. Strength, balance and endurance, plus the habit that matters most: showing up again tomorrow.",
-    "celebrate": "Point to a number: 'You started at 38 seconds. Now it's 52.' Seeing their own progress is what keeps them going.",
+    "headline": "Their own number went up, and they watched it happen.",
+    "text": "Pick a card they haven't tried yet and listen to what they say after the first go. If it's 'that's my baseline' instead of 'I can't do this', the idea has landed. Write the number down and let them choose the day they try to beat it.",
+    "celebrate": "Write their first time and their best time on one sticky note and hand it over: 'Look at the gap. Every second of that is yours.'",
     "extensions": [
       "Keep a family record board on the fridge, kids and grown-ups",
       "Redo your baseline cards in a month and compare",
@@ -305,11 +305,11 @@
     ]
   },
   "signs": [
-    "They ask to time things without being asked",
+    "They grab a timer and set their own challenges",
     "They keep going after a bad try instead of quitting",
     "They head outside on a grey day without complaining"
   ],
-  "makeItReal": "Pick one card as the family challenge for the month: everyone does it, everyone keeps a number, and you compare on the last day. Kids love beating their own number, and they love it even more when a grown-up is trying just as hard.",
+  "makeItReal": "Choose one card as the family challenge for the month, like The Tree Sit or The Long Throw. Everyone keeps a number on the fridge, grown-ups included, and on the last day you each try once more to beat your own first try.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

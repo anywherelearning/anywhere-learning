@@ -4,7 +4,7 @@
   "title": "The Two Minute Story",
   "tagline": "Storytelling · Clarity · Speaking with confidence",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid takes a real moment from their own life and learns to tell it as a clear, gripping story in about two minutes. They find the story, give it a shape, cut the boring parts and tell it for real to the family. Telling a good short story is how people connect, persuade and get remembered, and it's a skill that can be practised starting tonight.",
+  "goal": "Your kid takes a real moment from their own life and learns to tell it as a clear, gripping story in about two minutes. They find the story, give it a shape, cut the boring parts and tell it for real to the family.",
   "need": [
     "No supplies: the story is already inside them",
     "A timer (a phone works)",
@@ -31,7 +31,7 @@
         "line": "It was only ten minutes, but now I always pick a meeting spot first."
       }
     ],
-    "modelNote": "Same day at the fair, but now everyone leans in. When a story is 'and then, and then,' ask: what's the moment everything changed?"
+    "modelNote": "The first version had no turn, just events in a row. The fix drops the rides and builds it all around one moment: the family was gone."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "No teaching experience needed. You're the audience and the coach, not the writer. The story is theirs: help with the shape, not the words.",
+    "intro": "Help with the shape, never the words. Then be a good audience: lean in, laugh at the funny part, and ask 'then what?'",
     "plan": [
       {
         "when": "10 minutes",
@@ -119,7 +119,7 @@
       "levels": {
         "explore": "Play a round, then pick any true moment from your life.",
         "develop": "Pick a moment with a clear turning point.",
-        "extend": "Pick a moment that changed how you felt or what you think."
+        "extend": "Pick the moment a stranger would care about most, and say why."
       }
     },
     {
@@ -135,7 +135,7 @@
       "levels": {
         "explore": "Name the beginning and the end.",
         "develop": "Find all three: beginning, turn and point.",
-        "extend": "Make the turn land as a real surprise for the listener."
+        "extend": "Decide what to keep secret until the turn."
       }
     },
     {
@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Tell it in under three minutes.",
         "develop": "Get it to about two minutes with the boring parts cut.",
-        "extend": "Trim it so every single sentence earns its place."
+        "extend": "Cut it to 60 seconds, then add back only what you missed."
       }
     },
     {
@@ -167,7 +167,7 @@
       "levels": {
         "explore": "Practise it once out loud.",
         "develop": "Add a strong opening line and one well-placed pause.",
-        "extend": "Practise until the delivery feels natural and confident."
+        "extend": "Try two first lines and keep the one that gets a reaction."
       }
     },
     {
@@ -183,14 +183,14 @@
       "levels": {
         "explore": "Tell it to one person.",
         "develop": "Tell it to the family, start to finish.",
-        "extend": "Tell it, record it, and watch it back to find one thing to improve."
+        "extend": "Adjust it for two listeners, one older, one younger. What changed?"
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just turned a real moment into a story worth hearing.",
-    "text": "They found it, shaped it, cut it and told it to a real audience. Structure, clarity and speaking, practised in a way they'll use every time they tell someone about their day.",
-    "celebrate": "Point out what they did: they held the room for two whole minutes, and everyone wanted to know what happened next.",
+    "headline": "Two minutes, and the whole table was listening.",
+    "text": "At dinner this week, ask how their day was and listen for the shape. You might get a hook and a turn, 'you won't believe what happened at the park', instead of everything in order.",
+    "celebrate": "After the telling, mention the pause: 'Everyone stopped eating right before the turn. You made that happen.'",
     "extensions": [
       "Make it a habit: one two-minute story at dinner each week",
       "Write a story about a sibling or friend, then perform it as a monologue",
@@ -204,7 +204,7 @@
     "They get to the point faster when telling about their day",
     "They pause for effect, and enjoy the reaction"
   ],
-  "makeItReal": "Make it a family ritual: every Sunday dinner, one person tells a two-minute story, timer on the table. Kids who get a regular, guaranteed audience become confident speakers.",
+  "makeItReal": "Make it a family ritual: every Sunday dinner, one person tells a two-minute story, timer on the table, and the teller picks who goes next week.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
