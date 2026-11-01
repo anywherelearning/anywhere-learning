@@ -12,9 +12,9 @@
  * note drafted from that, and an "Open in Gmail" link that opens it ready to
  * edit and send from info@.
  *
- * The draft reuses the trial check-in's guide picking (lib/trial-midpoint.ts):
- * celebrate what they did and suggest a next one, name the guide they keep
- * opening, or hand a first one to someone who hasn't started.
+ * The draft is a thank-you, not a nudge: who Amelie is, why she builds this,
+ * and an open door for feedback. It never suggests an activity (the member
+ * zone does that); it only mentions what they've already done.
  */
 
 import { and, eq, gte, inArray, isNull, lte, sql } from 'drizzle-orm';
@@ -32,7 +32,8 @@ import { childAge, type Child } from '@/lib/member-profile';
 import { sendOwnerAlertEmail } from '@/lib/resend';
 import { planForPriceId } from '@/lib/stripe-prices';
 import { GRANT_SOURCE_LABELS, type GrantSource } from '@/lib/access-grants';
-import { kidsPhrase, pickMidpoint, type MidpointPick } from '@/lib/trial-midpoint';
+import { kidsPhrase } from '@/lib/trial-midpoint';
+import { getFallbackProductBySlug } from '@/lib/fallback-products';
 
 const DAY = 24 * 60 * 60 * 1000;
 const EMAIL_KIND = 'member_checkin';
@@ -46,8 +47,6 @@ const OWNER_INBOX = 'info@anywherelearning.co';
 
 const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-const REACH_OUT ="If you ever need anything, you can always reach out. I'm happy to help.";
-
 interface StateData {
   profile?: { children?: Child[] };
   week?: { items?: { slug: string }[] };
@@ -59,63 +58,45 @@ export interface CheckinDraft {
   body: string;
 }
 
-/** The note itself, in Amelie's voice. Pure, so it can be tested. */
+/**
+ * The note itself, in Amelie's voice. A thank-you from a real person, not a
+ * nudge: no activity suggestions (the member zone already picks the next one).
+ * The one personal detail is what they've done, when they've done something.
+ * Pure, so it can be tested.
+ */
 export function draftCheckin(opts: {
   firstName?: string;
   kids: Child[];
-  pick: MidpointPick;
+  /** Activities marked done, most recent first. */
+  done: string[];
 }): CheckinDraft {
-  const { pick } = opts;
   // Names without ages: "you and Eva (11)" reads like a form, not a note.
   const kids = kidsPhrase(opts.kids.map((k) => ({ ...k, birthMonth: null, age: null })));
-  const hello = `Hi ${opts.firstName || 'there'},`;
-  const intro =
-    "It's Amelie from Anywhere Learning. You've been a member for a few weeks now, so I wanted to check in personally.";
-  const time = (t: string | null) =>
-    !t ? '' : /day/i.test(t) ? ' It runs over a few sessions.' : ` It takes about ${t.toLowerCase()}.`;
 
-  if (pick.variant === 'doing') {
-    const extra = (pick.done?.length ?? 1) - 1;
-    const more = extra === 1 ? 'one more' : extra < 10 ? `${NUMBER_WORDS[extra]} more` : `${extra} more`;
-    const did = `I saw ${kids ? `you and ${kids}` : 'you'} did ${pick.guide.name}${
-      extra > 0 ? `, and ${more} after it` : ''
-    }. That's exactly how this is meant to work: one real thing, done together.`;
-    const next = pick.next
-      ? `If you're looking for the next one, I'd try ${pick.next.name}. ${pick.next.blurb}${time(pick.next.timeRange)}`
-      : '';
-    return {
-      subject: `Loved seeing ${pick.guide.name}`,
-      body: [hello, intro, did, next, REACH_OUT, 'Amelie'].filter(Boolean).join('\n\n'),
-    };
-  }
-
-  if (pick.variant === 'browsing') {
-    return {
-      subject: 'A pick for your week',
-      body: [
-        hello,
-        intro,
-        `With a library this big, the hardest part is picking one and actually starting. If I were choosing for ${
-          kids || 'your kids'
-        }, it would be ${pick.guide.name}. ${pick.guide.blurb}${time(pick.guide.timeRange)}`,
-        "Open the guide on your phone and follow along, it walks you through every step. One activity a week is plenty. If that's all you do this month, you're doing it right.",
-        REACH_OUT,
-        'Amelie',
-      ].join('\n\n'),
-    };
+  let noticed: string;
+  if (opts.done.length) {
+    const extra = opts.done.length - 1;
+    const more = extra < 10 ? `${NUMBER_WORDS[extra]} more` : `${extra} more`;
+    noticed = `I saw ${kids ? `you and ${kids}` : 'you'} did ${opts.done[0]}${
+      extra > 0 ? `, and ${more} besides` : ''
+    }. That honestly made my day. It's exactly what I hope for when I write these guides.`;
+  } else {
+    noticed =
+      "Whether you've already dived in or life has been busy (it happens to all of us), I hope it's been a good fit for your family so far.";
   }
 
   return {
-    subject: 'An easy first one',
+    subject: 'A thank you from Amelie',
     body: [
-      hello,
-      intro,
-      `Life gets full, and something new is easy to put off. So here's one easy place to start${
-        kids ? ` with ${kids}` : ''
-      }: ${pick.guide.name}. ${pick.guide.blurb}${time(pick.guide.timeRange)}`,
-      "Open the guide on your phone and follow along, it walks you through every step. One activity a week is plenty.",
-      REACH_OUT,
-      'Amelie',
+      `Hi ${opts.firstName || 'there'},`,
+      "I'm Amelie, the person behind Anywhere Learning. You joined a few weeks ago, and I wanted to write to you myself to say thank you. It really means a lot to me.",
+      noticed,
+      `Anywhere Learning isn't a big company. It's me, a former teacher and homeschooling mom, building every guide with one goal: that it's genuinely useful for your family, easy to use, and full of real learning for ${
+        kids || 'your kids'
+      }.`,
+      "So I'd love to hear how it's going. If something is confusing, missing, or just not working for your family, please tell me. And if something worked, I'd love to hear that too. Your feedback shapes what I build next.",
+      "I'm always here if you need anything.",
+      'Warmly,\nAmelie',
     ].join('\n\n'),
   };
 }
@@ -277,12 +258,9 @@ export async function runMemberCheckins({
       .sort((a, b) => a.at.localeCompare(b.at))
       .map((c) => c.slug);
     const kids = state.profile?.children ?? [];
-    const pick = pickMidpoint({
-      views,
-      completed,
-      weekSlugs: (state.week?.items ?? []).map((w) => w.slug),
-      kids,
-    });
+    const doneNames = [...new Set([...completed].reverse())]
+      .map((s) => getFallbackProductBySlug(s)?.name)
+      .filter((n): n is string => !!n);
 
     const kidLine = kids.length
       ? kids
@@ -299,11 +277,7 @@ export async function runMemberCheckins({
       `   Library: ${doneCount} marked done, ${Object.keys(views).length} guides opened`,
     ];
 
-    if (!pick) {
-      sections.push([...header, '   (No guide to suggest. Write this one from scratch.)'].join('\n'));
-      continue;
-    }
-    const draft = draftCheckin({ firstName: firstNames[d.clerkId], kids, pick });
+    const draft = draftCheckin({ firstName: firstNames[d.clerkId], kids, done: doneNames });
     sections.push(
       [
         ...header,
@@ -325,7 +299,7 @@ export async function runMemberCheckins({
   const n = due.length;
   const subject = `Check in with ${n} ${n === 1 ? 'family' : 'families'} at 3 weeks`;
   const text = [
-    `${n === 1 ? 'One member has' : `${n} members have`} been with you about 3 weeks. Each note below is drafted from what they've done in the library. Tap "Open in Gmail", make it yours, and send.`,
+    `${n === 1 ? 'One member has' : `${n} members have`} been with you about 3 weeks. Each note below is a thank-you drafted for that family. Tap "Open in Gmail", make it yours, and send.`,
     ...sections,
     'You get this once per member, around day 21, so monthly members hear from you between their first and second charge.',
   ].join('\n\n');
