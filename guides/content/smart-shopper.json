@@ -4,11 +4,11 @@
   "title": "Smart Shopper Lab",
   "tagline": "Compare · Calculate · Decide on purpose",
   "ages": "Ages 9 to 14",
-  "goal": "Your kid compares two real options before buying: sneakers, headphones, a water bottle, a family tent. They build their own scoring rubric, work out what each one really costs, spot the marketing tricks, and write a recommendation they can defend. The point isn't picking the right product. It's the habit of stopping and thinking before spending.",
+  "goal": "Your kid makes a real purchase decision: something they're buying with their own money, or something the family needs. They compare two options, build their own scoring rubric, see both in person if they can, work out what each really costs, spot the marketing tricks, then wait before buying. The point is the habit of stopping and thinking before spending.",
   "need": [
-    "Paper and a pencil, or a notes app",
-    "A calculator",
-    "Optional: a device to look up real products, prices and reviews"
+    "A real purchase coming up: something your kid is buying with their own money, or something the family needs",
+    "Paper and a pencil, or a notes app, and a calculator",
+    "A store to see both options, or a device to look up products, prices and reviews"
   ],
   "lesson": {
     "text": "The price tag isn't the real cost. Divide the price by how many times you'll use it, and the cheap option is often the expensive one.",
@@ -55,16 +55,16 @@
     "intro": "The trap here is steering them toward the sensible choice. Let them pick something they actually want, keep your verdict to yourself, and treat 'I changed my mind' as a win: it means the process worked.",
     "plan": [
       {
-        "when": "First hour",
-        "what": "Pick the two options, sort need or want, build the rubric, and work out the true cost (Steps 1 to 3)."
+        "when": "First session",
+        "what": "Pick the two options, sort need or want and build the rubric (Steps 1 and 2)."
       },
       {
-        "when": "Second hour",
-        "what": "Spot the marketing tricks, add a twist and write the recommendation (Steps 4 and 5)."
+        "when": "At the store or online",
+        "what": "See both, work out the true cost and spot the tricks (Steps 3 and 4)."
       },
       {
         "when": "Two weeks later",
-        "what": "Ask: do you still want it? That's the final test."
+        "what": "Decide, buy it or don't, and set a date to check (Step 5)."
       }
     ],
     "tips": [],
@@ -101,8 +101,8 @@
     {
       "title": "Pick two options to compare",
       "why": "A real choice between two specific things, and a gut guess before the work.",
-      "kid": "Your kid picks what they're shopping for: something they want, something the family needs, a gift, or a set budget like '$50 for new shoes.' Then they pick two specific options, like Brand A or Brand B, or the $20 version or the $45 version. They write: 'I'm comparing ___ and ___. My gut says I'd pick ___.'",
-      "you": "Help them pick something real enough to care about. If they're stuck, offer two choices: 'Want to compare water bottles or headphones?' gets a faster answer than an open question.",
+      "kid": "Your kid picks something they're really about to buy: with their own money, as a gift, or something the family needs, like new shoes. Then they pick two specific options, like Brand A or Brand B, or the $20 version or the $45 version. They write: 'I'm comparing ___ and ___. My gut says I'd pick ___.'",
+      "you": "Help them pick a purchase that's actually coming up, so the decision counts. If they're stuck, offer two choices: 'Want to compare water bottles or headphones?' gets a faster answer than an open question.",
       "starters": [
         "Sneakers",
         "Headphones",
@@ -138,18 +138,18 @@
       }
     },
     {
-      "title": "Work out the true cost",
-      "why": "What it really costs, not what the tag says.",
-      "kid": "Your kid looks past the sticker price three ways. Cost per use: price ÷ number of uses. Hidden costs: batteries, refills, accessories, shipping, a subscription. Opportunity cost: 'If I don't buy this, I could use the money for ___.' Then they update the rubric if anything changed.",
-      "you": "Help with the division if needed: the idea matters more than perfect maths. Estimating uses is fine ('about twice a week for a year is about 100 uses').",
+      "title": "See them, then work out the true cost",
+      "why": "What it's like in your hands, and what it really costs, not what the tag says.",
+      "kid": "If they can, your kid goes to see both options: holds them, tries them on, reads the box for what's included. Then they look past the sticker price three ways. Cost per use: price ÷ number of uses. Hidden costs: batteries, refills, accessories, shipping, a subscription. Opportunity cost: 'If I don't buy this, I could use the money for ___.' Then they update the rubric.",
+      "you": "Take them to the store if you can, and let them handle both. Help with the division if needed. Estimating uses is fine: about twice a week for a year is about 100 uses.",
       "ask": [
-        "Which one is cheaper once you count how long it lasts?",
-        "Is anything hiding behind the price tag?"
+        "What did you notice in person that the picture didn't show?",
+        "Which one is cheaper once you count how long it lasts?"
       ],
-      "tip": "Once kids do cost-per-use maths, they start seeing the cheap version differently. Let them find it in their own numbers.",
+      "tip": "Shoes that pinch, a lid that won't close, headphones that hurt after ten minutes: holding the thing settles more than any review.",
       "levels": {
-        "explore": "Divide each price by its uses, on a calculator.",
-        "develop": "Add one hidden cost each and name the opportunity cost.",
+        "explore": "Hold both and say one thing you'd only know in person. Then divide each price by its uses on a calculator.",
+        "develop": "See both if you can, add one hidden cost each, and name the opportunity cost.",
         "extend": "Per month: $45 shoes lasting 12 months or $20 lasting 4? How long must the $45 pair last to win?"
       }
     },
@@ -170,25 +170,25 @@
       }
     },
     {
-      "title": "Add a twist and write the recommendation",
-      "why": "A curveball, then a decision someone else could follow.",
-      "kid": "You pick a twist: the price drops 30%, a review says Option A breaks after 3 months, the budget drops by 25%, or two weeks pass (do you still want it?). Your kid adjusts, then writes a real recommendation: what they compared, the top criteria, the rubric result, what the true cost showed, and the final pick in one sentence. Last: was the gut pick from Step 1 right?",
-      "you": "Praise a changed mind. Revising with better information is a strength, not a weakness.",
+      "title": "Decide, wait, then buy",
+      "why": "A decision someone else could follow, and time to find out if it's real.",
+      "kid": "Your kid writes the pick in one sentence with the top reasons from the rubric and the true cost, and checks the gut pick from Step 1. Then the decision waits: two weeks for a want, a few days for a need. If they still want it, they buy it, with their own money if it's theirs, and put a date on the calendar a month later: do I still use it?",
+      "you": "Hold the wait, even if they beg. If the price drops or a bad review shows up during it, let them adjust: that's real information. Praise a changed mind out loud.",
       "starters": [
-        "Price drops 30%",
+        "Price drops",
         "Bad review",
-        "Budget drops 25%",
-        "Wait two weeks"
+        "A better option appears",
+        "Don't want it anymore"
       ],
       "ask": [
         "What's the strongest reason for your pick?",
-        "Could someone who's never seen these follow your reasoning?"
+        "Do you still want it as much as two weeks ago?"
       ],
-      "tip": "The 'wait two weeks' twist is the sneakiest. If they still want it, it's real. If they forgot, they just saved money.",
+      "tip": "If they've forgotten about it by the end of the wait, they just saved money, and learned something no rubric could teach.",
       "levels": {
-        "explore": "Try 1 twist, then tell me your pick in 3 sentences while I write.",
-        "develop": "Apply 2 twists and back the recommendation with rubric and cost evidence.",
-        "extend": "Imagine it's a year later and the purchase was a mistake. Write what went wrong, and check if your pick survives it."
+        "explore": "Tell me your pick and why in 3 sentences while I write, then wait a few days before buying.",
+        "develop": "Write the recommendation with rubric and cost evidence, wait two weeks, then decide.",
+        "extend": "Before buying, imagine it's a year later and the purchase was a mistake. Write what went wrong, and check if your pick survives it."
       }
     }
   ],
@@ -299,10 +299,10 @@
     "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use maths stuck.",
     "celebrate": "Repeat back the number that decided it: 'So the $45 pair is cheaper per month. That's going to change how I shop too.'",
     "extensions": [
-      "Run the rubric on a real family purchase coming up",
+      "Run the rubric on the next big family purchase",
       "Compare three options instead of two",
       "Keep a list of every marketing trick you spot for a week",
-      "Next time someone says 'I need this,' do the need or want check out loud together"
+      "When someone says 'I need this,' do the need or want check out loud together"
     ]
   },
   "signs": [
@@ -310,7 +310,7 @@
     "They point out crossed-out prices and countdown timers",
     "They say 'let me wait a few days' about something they want"
   ],
-  "makeItReal": "Use the rubric on the next thing your kid wants to buy with their own money. Let them make the call, then put a date on the calendar a month out to ask if they still use it.",
+  "makeItReal": "Make the two-week wait a family rule for any want over a set amount, like $20, with the date on a sticky note on the fridge.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

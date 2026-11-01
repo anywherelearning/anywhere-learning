@@ -815,23 +815,23 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'smart-shopper': {
     opening:
-      'Your child picks two real products to compare and builds their own rubric to figure out which one is actually worth buying. They do cost-per-use math, spot marketing tricks, handle a real-world curveball, and write a recommendation they can defend. The habit of stopping and thinking before spending money.',
+      'Your child makes a real purchase decision, with their own money or for something the family needs. They compare two options, build their own rubric, see both in person if they can, work out cost per use and hidden costs, and spot the marketing tricks. Then they wait two weeks before buying. Real-world STEM maths and media literacy, and the habit of thinking before spending.',
     whatsIncluded: [
-      'Real product comparison with a DIY rubric',
-      'Needs vs. wants analysis',
-      'Cost-per-use and hidden cost calculations',
-      'Marketing tactics identification',
-      'Written recommendation with evidence-based reasoning',
+      '5 steps from a gut pick to a real purchase',
+      'A rubric they build themselves, plus a need or want check',
+      'Cost per use, hidden costs and opportunity cost',
+      'A Marketing Tricks page with a 3-question check',
+      'The two-week wait, and a calendar check a month later',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Critical Thinking', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Your child compares two real products and builds their own rubric to judge them. Cost per use, hidden costs, needs against wants. Then they spot the marketing tactics being used on them, and write a recommendation they have to defend.',
+        'Your child compares two things they are really about to buy and builds their own rubric to judge them. Cost per use, hidden costs, needs against wants. Then they spot the marketing aimed at them, make the call, and wait before spending, so the decision has to hold up.',
       skills: [
         { skill: 'Critical Thinking', where: 'Building a rubric and separating what they need from what they want' },
         { skill: 'Financial Literacy', where: 'Working out cost per use and the hidden costs nobody advertises' },
         { skill: 'Media Literacy', where: 'Naming the specific marketing tactics aimed at them' },
-        { skill: 'Decision-Making', where: 'Making the call and living with it' },
+        { skill: 'Decision-Making', where: 'Making the call, waiting two weeks, then living with it' },
         { skill: 'Communication', where: 'Writing a recommendation they can actually defend' },
       ],
     },

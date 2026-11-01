@@ -716,15 +716,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Smart Shopper Lab",
     slug: "smart-shopper",
     description:
-      "Your child picks two real products to compare, builds their own rubric, does cost-per-use math, spots marketing tricks, handles a curveball, and writes a recommendation they can defend. Real-world STEM math meets media literacy in one project. The habit of thinking before spending.",
+      "Your child makes a real purchase decision, with their own money or for something the family needs. They compare two options, build their own rubric, see both in person if they can, work out cost per use and hidden costs, and spot the marketing tricks. Then they wait two weeks before buying. Real-world STEM maths and media literacy, and the habit of thinking before spending.",
     shortDescription:
-      "Real-world math (STEM) for kids ages 9-14: compare products, build a rubric, spot marketing tricks, and make smart buying decisions.",
+      "Real-world maths (STEM) for kids ages 9-14: compare two real options, work out cost per use, spot the marketing, then wait before buying.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrppAkIBECpwGmFDhNrYWB",
     blobUrl: "",
     imageUrl: "/products/smart-shopper.jpg",
-    previewFile: "Preview Real-world math - Smart shopper lab v8.pdf",
+    previewFile: "Preview Real-world math - Smart shopper lab v9.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
