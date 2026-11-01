@@ -401,7 +401,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'nature-geography-field-study': ['physical', 'critical-thinking'],
   'street-explorer-map-maker': ['creativity', 'critical-thinking', 'physical'],
   'grow-it-eat-it': ['physical', 'self-management', 'critical-thinking'],
-  'kitchen-science-lab': ['critical-thinking', 'creativity'],
+  'kitchen-science-lab': ['critical-thinking', 'math'],
   'probability-lab': ['math', 'critical-thinking'],
   'secret-code-lab': ['critical-thinking', 'math'],
   'body-owners-manual': ['physical', 'critical-thinking', 'math'],

@@ -3089,13 +3089,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kitchen-science-lab': {
     opening:
-      'Your child turns the kitchen into a science lab, running real chemistry and physics experiments with everyday ingredients. They predict, test, change one thing, and figure out why it happened, then design their own experiment and put on a science show. Hands-on STEM science that proves science is a way of poking at the world, not a subject in a book.',
+      'Your child solves a real chemistry mystery in the kitchen: five white powders that look almost the same. They make a colour-changing juice from red cabbage, run fair tests with water and vinegar, build a results table, then identify a secret powder you hand them, ruling suspects out one test at a time. Hands-on STEM science that teaches kids to think with evidence, not guesses.',
     whatsIncluded: [
-      'Run real experiments with kitchen ingredients',
-      'Predict, test, and explain what happened',
-      'Change one thing to see what shifts',
-      'Design an original experiment',
-      'Put on a science show for the family',
+      '5 steps from five suspects to a solved mystery',
+      'Make a colour-changing juice from red cabbage',
+      'A fair-test results table for five powders',
+      'A clue key for ruling suspects out',
+      'Question ideas for their own experiment',
     ],
     skillTags: ['STEM', 'Science', 'Scientific Method', 'Prediction', 'Chemistry'],
     insideTheLearning: {

@@ -1,0 +1,325 @@
+{
+  "slug": "kitchen-science-lab",
+  "category": "Planning & Problem-Solving",
+  "title": "Kitchen Science Lab",
+  "tagline": "Test · Rule out · Solve",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid turns the kitchen into a real chemistry lab and solves a mystery: five white powders that look almost the same. They make a colour-changing juice from red cabbage, run fair tests with water and vinegar, build a results table, then identify a secret powder you hand them. No guessing allowed. Every test has to rule something out.",
+  "need": [
+    "Five white powders: baking soda, baking powder, cornstarch, sugar and salt",
+    "Half a red cabbage, hot water and a strainer",
+    "Vinegar, lemon juice and warm water",
+    "Small clear cups or jars, teaspoons and masking tape for labels",
+    "A tray to catch spills, and paper for a results table"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "acids, bases, chemical reactions"
+    },
+    {
+      "subject": "Math",
+      "text": "equal amounts, tables, comparing"
+    },
+    {
+      "subject": "Reasoning",
+      "text": "ruling out until one answer fits"
+    },
+    {
+      "subject": "Writing",
+      "text": "lab notes and explaining results"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need a science background. You're the lab assistant and the keeper of the secret powder. Handle the hot water and the stove, keep the tray under everything, and resist telling them which powder is which. The fun is in figuring it out.",
+    "plan": [
+      {
+        "when": "First 40 minutes",
+        "what": "Set up the lab and make the cabbage juice (Steps 1 and 2)."
+      },
+      {
+        "when": "Next 40 minutes",
+        "what": "Run every test on the five suspects (Step 3)."
+      },
+      {
+        "when": "To finish, or another day",
+        "what": "Solve the mystery powder and test their own question (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Two powders gave the same result",
+        "a": "That's the point. A test only rules things out. Look at the table and find a test where those two behave differently."
+      },
+      {
+        "q": "They want to taste it to check",
+        "a": "Hold the lab rule: no tasting, ever. Real scientists don't taste unknown powders, and the tests can tell them everything."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Scientists don't guess. Every test rules something out, until only one answer fits.",
+    "before": "It's white and powdery. It's probably sugar.",
+    "model": [
+      {
+        "part": "Look",
+        "line": "White and fine. That's true of all 5 suspects."
+      },
+      {
+        "part": "Test",
+        "line": "A spoonful in vinegar fizzes."
+      },
+      {
+        "part": "Rule out",
+        "line": "Only baking soda and baking powder fizz in vinegar. 3 suspects gone."
+      },
+      {
+        "part": "So",
+        "line": "One more test, warm water, tells which. That's evidence, not a guess."
+      }
+    ],
+    "modelNote": "This is how real scientists work, in labs and at crime scenes. The question behind every step: what does this test rule out?"
+  },
+  "steps": [
+    {
+      "title": "Set up the lab",
+      "why": "Good science starts with careful looking.",
+      "kid": "Your kid sets up a lab corner on a tray and labels five cups with the names of the suspects: baking soda, baking powder, cornstarch, sugar and salt. They put a spoonful in each, then look closely, rub a pinch between their fingers and write down what they notice about each one.",
+      "you": "Go over the Lab rules in the Lab Toolkit at the end of the guide together: no tasting, a tray under everything, a grown-up for anything hot.",
+      "ask": [
+        "Which two look the most alike?",
+        "Could you tell them apart just by looking?"
+      ],
+      "tip": "Rub cornstarch between your fingers: it squeaks and feels silky. Salt and sugar feel gritty. Clues are already appearing.",
+      "levels": {
+        "explore": "Describe each powder in a few words.",
+        "develop": "Write how each one looks and feels, and circle the ones that seem the same.",
+        "extend": "Use a magnifying glass and sketch the grains of each powder."
+      }
+    },
+    {
+      "title": "Make the colour-changing juice",
+      "why": "Some liquids are acids, some are bases. Cabbage can tell.",
+      "kid": "Your kid chops up red cabbage. A grown-up pours hot water over it, and after 15 to 30 minutes it turns purple. Strain it. First they add a splash to plain water: that's the 'nothing happening' colour to compare against. Then they test lemon juice, vinegar and baking soda water, and line the cups up by colour using the Cabbage colours card in the Lab Toolkit at the end of the guide.",
+      "you": "Handle the hot water. Then step back and let them name the colours.",
+      "ask": [
+        "What colour did the lemon juice turn it?",
+        "Why test plain water first?"
+      ],
+      "tip": "Plain water is the 'control': what the juice looks like when nothing is changing it. Every other colour is compared to it.",
+      "levels": {
+        "explore": "Test 3 liquids and say which changed colour.",
+        "develop": "Test 5 liquids and sort them from acid to base.",
+        "extend": "Find 3 more liquids in the kitchen to test and predict each colour first."
+      }
+    },
+    {
+      "title": "Run the tests",
+      "why": "A fair test is the same every time except the one thing you're testing.",
+      "kid": "Your kid draws a results table: the five suspects down the side, four tests across the top. For each powder they run the same four tests with the same amount, one level teaspoon: stir it into warm water, drop vinegar on it, add cabbage juice, and add a few drops of water to make a paste. They write what happens in every box.",
+      "you": "Help keep the amounts equal and the cups clean. Wipe the spoon between powders.",
+      "ask": [
+        "Which powders did something in vinegar?",
+        "Did any powder surprise you?"
+      ],
+      "tip": "If the amount changes, the test isn't fair. Level the teaspoon with a knife every time.",
+      "levels": {
+        "explore": "Run 2 tests on every powder.",
+        "develop": "Run all 4 tests and fill in the whole table.",
+        "extend": "Repeat one test to check you get the same result twice."
+      }
+    },
+    {
+      "title": "Solve the mystery powder",
+      "why": "Now the table becomes a tool.",
+      "kid": "While your kid looks away, you put a spoonful of one suspect in a cup marked 'Mystery'. Your kid uses their results table and the Clue key card to pick which test to run first, then the next, until only one suspect is left. The challenge: solve it in as few tests as possible.",
+      "you": "Keep the secret. If sugar and salt are the last two left, run the heat test with them: a pinch of each in a dry pan on low heat. Sugar melts and turns brown. Salt does nothing.",
+      "ask": [
+        "What did that test rule out?",
+        "Why did you pick that test first?"
+      ],
+      "tip": "Vinegar first splits the suspects into fizzers and non-fizzers. One test, two groups.",
+      "levels": {
+        "explore": "Solve one mystery powder.",
+        "develop": "Solve three, and explain how you knew each time.",
+        "extend": "Solve a mystery that's a mix of two powders."
+      }
+    },
+    {
+      "title": "Ask your own question",
+      "why": "Real scientists test questions nobody handed them.",
+      "kid": "Your kid picks a 'what would happen if' question, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
+      "you": "Treat their question like real research. Ask what they're changing and what stays the same.",
+      "ask": [
+        "What's the one thing you're changing?",
+        "Was your prediction right?"
+      ],
+      "tip": "If two things change and the result changes, you can't know which one did it. One change at a time.",
+      "levels": {
+        "explore": "Test one question and say what happened.",
+        "develop": "Predict first, test fairly and explain the result.",
+        "extend": "Run it three times and present the results on a chart."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Lab Toolkit",
+    "intro": "What the cabbage colours mean, what to look for in each test, how to keep a test fair and questions to try next.",
+    "items": [
+      {
+        "name": "Cabbage colours",
+        "lines": [
+          {
+            "k": "Pink or red:",
+            "v": "acid, like lemon or vinegar"
+          },
+          {
+            "k": "Purple:",
+            "v": "close to plain water"
+          },
+          {
+            "k": "Blue or green:",
+            "v": "base, like baking soda"
+          },
+          {
+            "k": "Control:",
+            "v": "always test plain water first"
+          }
+        ],
+        "ask": "Check it: did you compare every cup to plain water?"
+      },
+      {
+        "name": "Clue key",
+        "lines": [
+          {
+            "k": "Fizzes in vinegar:",
+            "v": "baking soda or baking powder"
+          },
+          {
+            "k": "Bubbles in warm water:",
+            "v": "baking powder"
+          },
+          {
+            "k": "Turns juice blue-green:",
+            "v": "baking soda"
+          },
+          {
+            "k": "Cloudy, sinks:",
+            "v": "cornstarch"
+          },
+          {
+            "k": "Paste goes hard when poked:",
+            "v": "cornstarch"
+          },
+          {
+            "k": "Disappears in water:",
+            "v": "sugar or salt"
+          }
+        ],
+        "ask": "Check it: what does your next test rule out?"
+      },
+      {
+        "name": "Fair test",
+        "lines": [
+          {
+            "k": "Change:",
+            "v": "one thing only"
+          },
+          {
+            "k": "Keep the same:",
+            "v": "amount, cup, time"
+          },
+          {
+            "k": "Predict:",
+            "v": "before you start"
+          },
+          {
+            "k": "Repeat:",
+            "v": "to check it wasn't luck"
+          }
+        ],
+        "ask": "Check it: what stayed the same?"
+      },
+      {
+        "name": "Question ideas",
+        "lines": [
+          {
+            "k": "Fizz:",
+            "v": "warm vinegar or cold?"
+          },
+          {
+            "k": "Amount:",
+            "v": "more powder, bigger fizz?"
+          },
+          {
+            "k": "Speed:",
+            "v": "sugar or salt, which dissolves first?"
+          },
+          {
+            "k": "Colour:",
+            "v": "what turns the juice greenest?"
+          }
+        ],
+        "ask": "Check it: can you test it fairly?"
+      }
+    ],
+    "after": {
+      "label": "Lab rules",
+      "lines": [
+        "No tasting, ever.",
+        "A tray under everything.",
+        "A grown-up for anything hot.",
+        "Label every cup."
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "noticing small differences"
+    },
+    {
+      "name": "Fair testing",
+      "text": "changing one thing at a time"
+    },
+    {
+      "name": "Logic",
+      "text": "ruling out until one is left"
+    },
+    {
+      "name": "Curiosity",
+      "text": "asking what would happen if"
+    }
+  ],
+  "conclusion": {
+    "headline": "They solved it like a scientist.",
+    "text": "Your kid took five powders that looked the same and told them apart with evidence. They made an indicator, ran fair tests, built a results table and used it to solve a mystery, then tested a question of their own. A kid who asks what a test rules out will think more clearly about everything, not just chemistry.",
+    "celebrate": "Tell them what impressed you: the test they picked first, a careful table, or how they solved it without guessing.",
+    "extensions": [
+      "Hide a mix of two powders and solve it",
+      "Use the cabbage juice to test every drink in the fridge",
+      "Write up a one-page lab report with a chart",
+      "Set a mystery for a friend or grandparent to solve"
+    ]
+  },
+  "signs": [
+    "They ask 'how do you know?' about everyday claims",
+    "They change one thing at a time when something doesn't work",
+    "They notice small differences other people miss"
+  ],
+  "makeItReal": "Next time the bread doesn't rise or the cookies spread flat, ask what changed. Baking is chemistry, and every flop is a test result.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/kitchen-science-lab.jpg",
+    "alt": "Watercolour illustration of a kitchen science lab on a tray: five cups of white powder, a row of cabbage-juice cups from pink to blue-green, half a red cabbage, a lemon, vinegar, spoons and a results table",
+    "caption": "Five white powders, one mystery."
+  }
+}
