@@ -60,7 +60,7 @@ export default function BasecampAnnouncement({ firstName, dayLabel, timeLabel, t
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={steps}>
                     <tbody>
                       {[
-                        ['Welcome', "A quick hello. I'll introduce myself, and you can share your name and where you're joining from, out loud or in the chat."],
+                        ['Welcome', "A quick hello, and a little about who I am and why I started Anywhere Learning."],
                         ["This month's trail", `${topic}: how to start this month's activities in ten minutes, and how to adjust them for your kids' ages.`],
                         ['Ask the teacher', 'Your questions, about anything from motivation to mixed ages to "is this enough?"'],
                         ['Campfire show-and-tell', 'Optional, for the last few minutes. If your kids made something, they can show it. They are welcome to join just for this part.'],

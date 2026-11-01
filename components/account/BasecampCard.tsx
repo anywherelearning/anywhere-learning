@@ -69,8 +69,8 @@ export default function BasecampCard({ data }: { data: BasecampCardData }) {
             <div style={{ ...mono, fontSize: 11.5, fontWeight: 700, color: '#E8C99A' }}>Live with Amelie · Members only</div>
             <h2 style={{ ...plate, fontSize: 'clamp(30px,4.6vw,44px)', letterSpacing: '-0.02em', margin: '8px 0 0', lineHeight: 1 }}>Basecamp</h2>
             <p style={{ fontSize: 16, lineHeight: 1.55, margin: '12px 0 0', maxWidth: '46ch', color: 'rgba(246,241,228,0.88)' }}>
-              Once a month, explorers come back to Basecamp. Say hello to the other families, get ready for this month&apos;s trail,
-              ask me anything, and stay for an optional show-and-tell at the end. 40 minutes on Zoom.
+              Once a month, explorers come back to Basecamp. Get ready for this month&apos;s trail with me, ask me anything, and
+              stay for an optional show-and-tell at the end. 40 minutes on Zoom.
             </p>
 
             <div style={{ marginTop: 18, display: 'grid', gap: 6 }}>

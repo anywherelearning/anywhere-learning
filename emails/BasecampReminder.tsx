@@ -54,7 +54,7 @@ export default function BasecampReminder({ firstName, dayLabel, timeLabel, topic
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={steps}>
                     <tbody>
                       {[
-                        ['Welcome', 'A quick hello, and your name and where you are joining from, out loud or in the chat.'],
+                        ['Welcome', 'A quick hello and a little about me.'],
                         ["This month's trail", `${topic}: how to start this month's activities in ten minutes.`],
                         ['Ask the teacher', 'Your questions, about anything from motivation to mixed ages.'],
                         ['Campfire show-and-tell', 'Optional, at the end. Kids are welcome to join just for this part.'],
