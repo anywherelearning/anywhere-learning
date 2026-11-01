@@ -76,6 +76,10 @@
       {
         "q": "A story gets emotional",
         "a": "That's usually a sign it's a real one. Let your kid sit with it kindly, and don't rush to the next question."
+      },
+      {
+        "q": "No grandparents, or a complicated family tree",
+        "a": "An old family friend or neighbour makes a great interview. For the tree, draw the people who raised your kid, as a web if that fits better. Your kid decides who goes on it."
       }
     ]
   },
@@ -100,7 +104,7 @@
   "steps": [
     {
       "title": "Play photo detective",
-      "why": "A guessing game with an old photo, then the person to interview.",
+      "why": "Your kid reads an old photo for clues before choosing who to interview.",
       "kid": "Find one old family photo. Your kid studies it like a detective and writes down guesses: who is it, how old are they, what year is it, where are they, what's happening? They'll check the guesses with someone who knows. Then they pick the person to interview, ideally the oldest person they can reach.",
       "you": "Dig out a photo or two and play along with your own guesses. Then help choose the person, and make the ask together: 'Would you sit down with me for an interview about your life?' Most older people are delighted. Almost nobody asks them.",
       "ask": [
@@ -134,15 +138,15 @@
       "tip": "Group the questions: childhood, school and work, big moments, the world back then. It makes the interview flow.",
       "levels": {
         "explore": "Say 3 'what was it like' questions for a grown-up to write.",
-        "develop": "Write a list of open questions covering their whole life.",
-        "extend": "Order them: easy, happy questions first, big ones once they're talking."
+        "develop": "Write 8 to 10 open questions, at least two for each group: childhood, school and work, big moments, the world back then.",
+        "extend": "For each starred question, write the follow-up for a one-word answer, and the one for an answer that turns sad."
       }
     },
     {
       "title": "Do the interview",
       "why": "The heart of it: asking, listening, and digging for the real stories.",
       "kid": "Your kid asks their questions, listens closely, and follows the good bits with 'What happened next?' or 'What was that like?' They go past the facts (born here, worked there) to the real stories: the time they got in trouble, the scariest day, the day everything changed. They take notes, or record with permission.",
-      "you": "Sit back and let them run it. When the person pauses to remember, don't fill the silence: the best stories come right after the quiet. The first few minutes can be stiff. Then a memory catches, and suddenly they're off. Let it run long.",
+      "you": "Sit back and let them run it. When the person pauses to remember, don't fill the silence: the best stories come right after the quiet. The first few minutes can be stiff. Then a memory catches, and suddenly they're off. Let it run long, or split it into two shorter visits if your kid tires.",
       "ask": [
         "That sounds interesting, what happened next?",
         "Is there a story about your life most people don't know?"

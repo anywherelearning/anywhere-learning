@@ -76,6 +76,10 @@
       {
         "q": "They get frustrated when you don't get it",
         "a": "Remind them it's the lesson being tested, not you or them. Then ask: what could you show me differently?"
+      },
+      {
+        "q": "A sibling student won't take it seriously",
+        "a": "Keep it under 10 minutes and let them pick a prize for passing the check. Or you play student first, and the sibling gets Step 5's lesson."
       }
     ]
   },
@@ -105,8 +109,8 @@
     {
       "title": "Watch a terrible lesson",
       "why": "You teach them something badly on purpose, then they pick their own skill.",
-      "kid": "First, your kid watches you teach them something simple in the worst way possible: you mumble, skip steps, go too fast and never let them try. They spot everything that went wrong. Then they choose a skill they really know well, small enough to teach in one lesson and real enough that they're a bit of an expert.",
-      "you": "Ham it up: 'You just fold it, then, you know, do the thing. Done!' Then ask what would have made it a good lesson. Help them pick a skill, and steer away from anything too big for one sitting.",
+      "kid": "First, your kid watches you teach them something simple in the worst way possible: you mumble, skip steps, go too fast and never let them try. They spot everything that went wrong. Then they choose a skill they really know well, small enough to teach in one lesson and something they're a bit of an expert in.",
+      "you": "Teach something small, like a paper plane, and ham it up: 'You just fold it, then, you know, do the thing. Done!' Then ask what would have made it a good lesson. Help them pick a skill, and steer away from anything too big for one sitting.",
       "starters": [
         "A card or coin trick",
         "A soccer move",
@@ -122,7 +126,7 @@
       "tip": "The best skill to teach is one they already love. Their enthusiasm is half of a good lesson.",
       "levels": {
         "explore": "Say 2 things that were wrong with the bad lesson, then pick a simple, familiar skill.",
-        "develop": "List what a good lesson needs, then pick a skill with a few real steps.",
+        "develop": "List what a good lesson needs, then pick a skill with at least 4 steps.",
         "extend": "Pick a skill you do without thinking, and guess which step you'll forget to teach."
       }
     },
@@ -138,15 +142,15 @@
       "tip": "The step they forgot to write down is exactly the one a beginner needs most.",
       "levels": {
         "explore": "Draw the 3 biggest steps in order and point to the hardest.",
-        "develop": "Write every real step in order and plan how to explain the tricky one.",
+        "develop": "Write every step in order, even the tiny automatic ones, and plan the tricky one.",
         "extend": "Find the step that has to come before the tricky one, and check your student can do that step first."
       }
     },
     {
       "title": "Plan the lesson",
-      "why": "Your kid builds a real lesson using the four moves, and makes one helper.",
+      "why": "Your kid builds a lesson using the four moves, and makes one helper.",
       "kid": "Your kid plans the lesson like the pupusa example: a hook to make the student want to learn (a quick demo, or why it's cool), then show, explain the steps, try together and check. They make one thing to help: a step-by-step card, a drawing, or a slow demo version.",
-      "you": "Treat their plan like a real teacher's plan. Ask the two questions every teacher asks: how will you start so I want to learn? When do I get to try it myself?",
+      "you": "Read their plan the way a teacher would, and ask about it. Ask the two questions every teacher asks: how will you start so I want to learn? When do I get to try it myself?",
       "ask": [
         "How will you start so I actually want to learn this?",
         "Would a picture or a card make a step clearer?"
@@ -160,14 +164,14 @@
     },
     {
       "title": "Teach it for real",
-      "why": "The lesson, with a real student, and the real test at the end.",
+      "why": "The lesson itself, and the test at the end: can the student do it alone?",
       "kid": "Your kid teaches the lesson following their plan: hook, show, explain, try together. When the student gets stuck, they think on their feet: rephrase, show it again, find another way to say it. At the end, they check: can the student now do the skill on their own, without help?",
       "you": "Be a genuine, willing learner. Follow fuzzy instructions exactly and get it wrong where a beginner would. At the check, give an honest attempt. Success or fail, it's a clue about the teaching, not a grade on anyone.",
       "ask": [
         "How else could you explain that step?",
         "Can your student do it on their own now?"
       ],
-      "tip": "Watching your kid rephrase on the fly when you're stuck is the best part. That's teaching at its realest.",
+      "tip": "Watching your kid rephrase on the fly when you're stuck is the best part. That second explanation is where the teaching happens.",
       "levels": {
         "explore": "Teach the skill start to finish and watch the student try it alone.",
         "develop": "Guide the student through a try, then check whether they learned the whole skill.",
@@ -183,11 +187,11 @@
         "What's the one change that made the lesson clearer?",
         "Do you understand the skill better now than before you taught it?"
       ],
-      "tip": "Teach, see what didn't land, fix it, teach again: that's the loop every real teacher runs.",
+      "tip": "Change one thing between lessons, not everything. Then you both know which change made the difference.",
       "levels": {
         "explore": "Name one thing to improve and try the lesson again.",
         "develop": "Fix the weak part of the lesson and teach it again.",
-        "extend": "Check a new student again a day later. What did they keep, and what does that say about your lesson?"
+        "extend": "Check your student again a day later, with no reminder. What did they keep, and what does that say about your lesson?"
       }
     }
   ],

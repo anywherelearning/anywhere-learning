@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "When they ask 'what is that?', try 'what do you notice about it?' first. A name ends the looking, and the looking is the study. Hand them the square, and keep hands off anything that stings.",
+    "intro": "When they ask 'what is that?', try 'what do you notice about it?' first. A name ends the looking, and the looking is the study. Hand them the square, and keep hands off anything that stings. Check for ticks after.",
     "plan": [
       {
         "when": "10 minutes",
@@ -76,6 +76,10 @@
       {
         "q": "They're squeamish about bugs",
         "a": "'You don't have to touch it, just watch it' is a fine rule. Watching counts."
+      },
+      {
+        "q": "The square got mowed or trampled",
+        "a": "Photograph it with a fence post or tree in the shot so you can find it again. Mowing is a change too: log it."
       }
     ]
   },
@@ -102,7 +106,7 @@
       "title": "Take a micro-hike",
       "why": "A tiny adventure for a tiny explorer, then the square gets marked.",
       "kid": "Your kid lays a 1-metre piece of string on the ground and 'hikes' along it with a magnifying glass, imagining they're as small as an ant. What mountains, forests and creatures do they meet on the way? Then they choose their own patch, about one foot by one foot, and mark the four corners with sticks, string or small rocks.",
-      "you": "Play along with the micro-hike ('a giant boulder ahead!'). Then let them pick the square, even if it's not the spot you'd choose. A spot near a tree, a fence, or a damp corner is usually busier.",
+      "you": "Play along with the micro-hike ('a giant boulder ahead!'). Then let them pick the square, even if it's not the spot you'd choose. A spot near a tree, a fence, or a damp corner is usually busier. Scientists pick at random so they can't choose the busiest spot and fool themselves.",
       "ask": [
         "What was the biggest 'mountain' on your micro-hike?",
         "Why did you pick this spot? What do you think lives here?"
@@ -134,7 +138,7 @@
       "title": "Go in close",
       "why": "Now they touch, gently, like a field scientist.",
       "kid": "Your kid investigates hands-on: parts the grass and looks at the soil, gently turns over a leaf, rock or stick, zooms in on one small thing, and loosens the top of the soil with a stick to see what moves. Then they put everything back the way they found it.",
-      "you": "Let them dig and poke, and help only if asked. Remind them a good scientist leaves the habitat as they found it.",
+      "you": "Let them dig and poke, and help only if asked. Lift rocks and logs toward you, so anything underneath scuttles away from your hand. Put everything back, and wash hands after.",
       "ask": [
         "What did you find underneath something?",
         "Is it different on top of the rock and underneath it? Why?"
@@ -148,18 +152,18 @@
     },
     {
       "title": "Keep field notes",
-      "why": "Your kid records what they found, like a real scientist.",
+      "why": "Your kid records what they found, so a return visit has something to check against.",
       "kid": "Your kid writes a field note like the example at the start: the date and spot, a sketch of the square drawn from looking (not from memory), a tally of what they found, and one thing they wonder about.",
-      "you": "Treat the notes like they matter, because they do. The sketch doesn't need to be pretty. Drawing makes them look harder: they'll spot things they missed while just looking.",
+      "you": "Date the page together before they start. The sketch doesn't need to be pretty. Drawing makes them look harder: they'll spot things they missed while just looking. For Extend: scientists call 8 kinds more diverse, even with fewer animals.",
       "ask": [
         "Could a scientist picture your square from your notes?",
         "What do you wonder about this square?"
       ],
-      "tip": "Keep all the notes in one notebook. When they come back, the comparison is where the science gets real.",
+      "tip": "Keep all the notes in one notebook, so next visit's tally sits on the page beside this one.",
       "levels": {
         "explore": "Draw the square and label two things.",
         "develop": "Write a full entry with a sketch, a tally, and a note.",
-        "extend": "Log kinds and totals. Is 50 ants richer than 8 kinds?"
+        "extend": "Log kinds and totals. Which square has more life: 50 ants, or 8 different kinds?"
       }
     },
     {

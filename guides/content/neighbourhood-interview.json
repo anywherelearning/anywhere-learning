@@ -76,6 +76,10 @@
       {
         "q": "The answers are short",
         "a": "Ask 'Can you tell me about a time when...?' or 'What's the hardest part of your job?' Stories hide behind those."
+      },
+      {
+        "q": "The person says no, or is too busy",
+        "a": "Thank them, ask who they'd suggest, and try the next name from Step 1. Shopkeepers say yes more often outside their busy hours."
       }
     ]
   },
@@ -100,7 +104,7 @@
   "steps": [
     {
       "title": "Be a reporter for 2 minutes",
-      "why": "A quick practice interview with you, then the real person to interview.",
+      "why": "Two minutes with a spoon microphone, then the person to interview.",
       "kid": "Your kid interviews you for 2 minutes like a TV reporter: microphone (a spoon works), serious voice, real questions about your job or your childhood. Then they make a list of 3 to 5 people in your community they're curious about, and pick one: someone whose work or life they'd genuinely like to know more about.",
       "you": "Answer the practice interview for real, with a story or two. Then help brainstorm people and let your kid choose. A grandparent is a safe start, but encourage someone outside the family if they're ready: the baker, a neighbour with an interesting job, a coach.",
       "starters": [
@@ -135,7 +139,7 @@
       "levels": {
         "explore": "Make up 3 'what, how or why' questions out loud.",
         "develop": "Write 7 to 10 questions from warm-up to deeper, with 2 follow-ups.",
-        "extend": "Turn 3 yes-or-no questions into open ones, and cut any question you could answer with a quick search."
+        "extend": "Guess the one-line answer to each question. Cut any you can guess, and ask what only this person could answer."
       }
     },
     {
@@ -151,7 +155,7 @@
       "levels": {
         "explore": "Ask your questions, listen, and draw or say back one thing from each answer.",
         "develop": "Ask all your questions, take notes, and ask 2 follow-ups that weren't on your list.",
-        "extend": "Mark each answer as a fact or an opinion, and ask a follow-up on one opinion: 'why do you think that?'"
+        "extend": "When an answer surprises you, stay on it for three follow-ups before going back to your list."
       }
     },
     {

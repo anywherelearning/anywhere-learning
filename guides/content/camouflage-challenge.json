@@ -76,6 +76,10 @@
       {
         "q": "They want to bury things",
         "a": "That's hiding, not camouflage. The rule is: in plain sight, nothing covered. That's what makes it science."
+      },
+      {
+        "q": "They keep glancing at the hiding spot",
+        "a": "Have them stand behind you and only say 'go' and 'stop'. Their eyes give it away faster than the camouflage fails."
       }
     ]
   },
@@ -101,8 +105,8 @@
     {
       "title": "Be the prey for a minute",
       "why": "You hide things for them first, then they gather their own test objects.",
-      "kid": "While your kid closes their eyes, you place 3 everyday things in plain sight outside (a green sock on the lawn, a brown pencil on the deck). They get 60 seconds to find them all. Which one was hardest, and why? Then they talk about animals that do this for real, and collect 3 to 5 small natural objects in different colours and textures for their own test.",
-      "you": "Hide the warm-up items on purpose: one that matches its background well and one that doesn't. Then help them think of camouflaged animals (a moth on bark, a frog in leaves, a snowshoe hare in winter), and let them pick their objects.",
+      "kid": "While your kid closes their eyes, you place 3 everyday things in plain sight outside (a green sock on the lawn, a brown pencil on the deck). They get 60 seconds to find them all. Which one was hardest, and why? Then they talk about animals that do this to stay alive, and collect 3 to 5 small natural objects in different colours and textures for their own test.",
+      "you": "Hide the warm-up items on purpose: one that matches its background well and one that doesn't. Then help them think of camouflaged animals (a moth on bark, a frog in leaves, a snowshoe hare in winter), and let them pick their objects. Bold patches can hide an outline, which is why many moths look blotchy.",
       "starters": [
         "A green leaf",
         "A brown stick",
@@ -126,7 +130,7 @@
       "title": "Hide them in plain sight",
       "why": "Your kid places each object where it blends in, without covering anything.",
       "kid": "Your kid places each object somewhere it blends in on purpose: a grey pebble on grey gravel, a brown stick among brown leaves. Nothing is buried or covered. The trick is the matching background, and they predict which one will be hardest to find.",
-      "you": "Look away while they hide. Encourage the sneaky-obvious hides: fully in view, but matched so well your eyes slide right past.",
+      "you": "Look away while they hide. Encourage the sneaky-obvious hides: fully in view, but matched so well your eyes slide right past. A shadow gives a shape away, which is why hiding animals press flat.",
       "ask": [
         "Which background will make this object hardest to see?",
         "Why do you think that spot will work?"
@@ -142,7 +146,7 @@
       "title": "Run the finding test",
       "why": "You search, they time it, and the game becomes data.",
       "kid": "Your kid times how long you take to find each object, and writes the times down. Then they look at the results and work out why some hid better: was it the colour, the texture, the shape breaking up against the background? They write it like the example: what, where, time, why.",
-      "you": "Be the seeker, and search honestly. Watching a grown-up struggle to find something that's right there is both hilarious and a real lightbulb moment.",
+      "you": "Be the seeker, and search honestly. Watching a grown-up struggle to find something that's right there is both hilarious and a lightbulb moment.",
       "ask": [
         "Which object took longest? Which did I find instantly?",
         "Was it the colour, the shape, or the texture that hid it?"
@@ -151,13 +155,13 @@
       "levels": {
         "explore": "Count aloud while the searcher looks: which took longest?",
         "develop": "Time each object and compare the results.",
-        "extend": "Time 3 searchers and rank by the middle time, so one lucky glance can't win."
+        "extend": "Time 3 searchers, one at a time and out of sight of each other, then rank by the middle time."
       }
     },
     {
       "title": "Test the backgrounds",
       "why": "A fair test: same object, different background.",
-      "kid": "Your kid takes one object, say a green leaf, and places it on two very different backgrounds: green grass, then brown dirt. Same object, same distance, only the background changes. You search again while they time it. Where does it disappear, and where does it stand out?",
+      "kid": "Your kid takes one object, say a green leaf, and places it on two very different backgrounds: green grass, then brown dirt. Same object, same distance, only the background changes. They move it to a fresh spot at the same distance, and you search again while they time it. Where does it disappear, and where does it stand out?",
       "you": "Help keep everything the same except the background: same object, same distance from you, same search rules. That's what makes it a fair test.",
       "ask": [
         "Where did it disappear more? What changed?",
@@ -166,15 +170,15 @@
       "tip": "This is the big moment: the same leaf is invisible in one spot and obvious in another. Camouflage is about the match, not the object.",
       "levels": {
         "explore": "Try one object on two backgrounds.",
-        "develop": "Test two objects across different backgrounds and compare the times.",
+        "develop": "Test two objects on different backgrounds, swapping which background goes first for the second one.",
         "extend": "Use a fresh searcher for each background, since anyone who just found the leaf knows where to look."
       }
     },
     {
       "title": "Make the rule and find it in the wild",
-      "why": "Your kid turns the evidence into a rule, then spots real camouflage outside.",
+      "why": "Your kid turns the evidence into a rule, then spots camouflage in the wild.",
       "kid": "From everything they tested, your kid writes one simple rule, like 'an animal is hardest to see when its colour and texture match its background.' They set up one new test to prove it. Then you go on a hunt for real camouflage: a moth on bark, a spider on a leaf, a bird against the ground.",
-      "you": "Treat their rule like a real scientific finding. Then head out on the hunt together. Their new eyes will catch things you've both walked past a hundred times.",
+      "you": "Write their rule at the top of a page and date it. Moving gives camouflage away, which is why hiding animals freeze. Then head out on the hunt together. Their new eyes will catch things you've both walked past a hundred times.",
       "ask": [
         "What's your camouflage rule, in one sentence?",
         "Now that you know the trick, what can you spot outside?"

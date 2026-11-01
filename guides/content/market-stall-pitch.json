@@ -20,7 +20,7 @@
       },
       {
         "part": "Benefit",
-        "line": "This lemonade is ice cold and made with real lemons we squeezed this morning."
+        "line": "Ice-cold lemonade to cool you right down, squeezed this morning."
       },
       {
         "part": "Price",
@@ -31,7 +31,7 @@
         "line": "Want to try a sip first?"
       }
     ],
-    "modelNote": "Naming the product gives a passer-by no reason to stop. Start with them (it's hot), say what they get (ice cold), then ask."
+    "modelNote": "Naming the product gives a passer-by no reason to stop. Start with them (it's hot), say what they get (cooled down), then ask."
   },
   "academics": [
     {
@@ -76,6 +76,10 @@
       {
         "q": "Nobody's buying",
         "a": "That's real feedback. Try a different opening, a lower price or a free sample, and see what changes."
+      },
+      {
+        "q": "We have nowhere to sell",
+        "a": "A table at your door on a busy afternoon, a garage sale, or a service door to door with you. Check local rules before selling homemade food."
       }
     ]
   },
@@ -104,9 +108,9 @@
   "steps": [
     {
       "title": "Play 'sell me this'",
-      "why": "A quick game that shows what a pitch is, then the product.",
+      "why": "Selling a spoon to each other shows what a pitch is before your kid picks a product.",
       "kid": "Grab any object in the room (a spoon, a sock, a pencil) and take turns selling it to each other in 30 seconds. Then your kid decides what they'll really sell: something they make, something they own, or a service. They pick something they're proud of and write down why someone would want it, not just what it is.",
-      "you": "Play the game and be a tough customer: 'Why would I need a spoon?' Then help brainstorm what they could sell, and let them choose. They'll pitch better if it really feels like theirs.",
+      "you": "Play the game and be a tough customer: 'Why would I need a spoon?' Then help brainstorm what they could sell, and let them choose. They'll pitch better if it feels like theirs.",
       "starters": [
         "Lemonade or cookies",
         "Homemade crafts",
@@ -135,7 +139,7 @@
         "What does it do for the person who buys it?",
         "If a customer says 'that's too expensive,' what will you say?"
       ],
-      "tip": "Working out the cost per cup or per cookie is the moment the math gets real. Let them do the dividing.",
+      "tip": "Working out the cost per cup or per cookie is the moment the math decides something. Let them do the dividing.",
       "levels": {
         "explore": "Say 3 great things about it, then pick a price by laying out coins.",
         "develop": "List features and benefits separately, set a price that covers your costs, and prepare 3 tough answers.",
@@ -146,7 +150,7 @@
       "title": "Write the pitch and practise",
       "why": "Your kid writes a 30-second pitch and gets comfortable saying it.",
       "kid": "Your kid writes a short pitch like the lemonade example: a hook, the benefit, the price and the ask. They time it at under 30 seconds. Then they practise out loud with a family member playing customer, try different versions, and practise answering questions without reading.",
-      "you": "Be a realistic practice customer: hesitate, say 'I'm not sure,' ask a question. Then give one specific note: 'Your opening is great, can you make the middle shorter?' Start with what worked.",
+      "you": "Be a realistic practice customer: hesitate, say 'I'm not sure,' ask a question. Then give one specific note: 'Your opening is great, can you make the middle shorter?'",
       "ask": [
         "If you only had 10 seconds, what's the one thing you'd say?",
         "What will you do if someone says no?"
@@ -160,9 +164,9 @@
     },
     {
       "title": "Set up and sell",
-      "why": "Stall day: a real stall, real customers, real money.",
+      "why": "Stall day: a sign, a table, and customers who can say no.",
       "kid": "Your kid sets up the stall: a sign that's easy to read from far away, price tags, the product arranged so it looks good. Then they greet each person, give their pitch, answer questions, make change and try to close the sale. They notice which lines work and which fall flat.",
-      "you": "Help with supplies but let them design the layout. Walk past as if you were a customer: does it catch your eye? Then bring the customers and step back. Let your kid handle every conversation.",
+      "you": "Help with supplies but let them design the layout. Walk past as if you were a customer: does it catch your eye? Then bring the customers, tell family they're allowed to say no, and step back. Let your kid handle every conversation.",
       "ask": [
         "If you saw this stall from across the street, would you walk over?",
         "Did you change your pitch for different people?"

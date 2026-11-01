@@ -83,7 +83,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'my-review-column', 'media-info-check', 'three-ais-one-question', 'bias-fairness-lab',
+      'media-info-check', 'three-ais-one-question', 'bias-fairness-lab',
       'hallucination-detective', 'deepfake-spotter', 'algorithm-awareness', 'supply-chain-detective',
     ],
   },
@@ -393,20 +393,20 @@ export const TERRITORIES: readonly Territory[] = [
  * or it disappears from the member Library/Record area filters.
  */
 const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
-  'nature-choice-boards': ['physical', 'self-management', 'creativity'],
-  'outdoor-stem-challenges-volume-2': ['physical', 'critical-thinking', 'creativity'],
+  'nature-choice-boards': ['physical', 'self-management', 'critical-thinking'],
+  'outdoor-stem-challenges-volume-2': ['physical', 'critical-thinking', 'creativity', 'math'],
   'outdoor-movement-challenge-cards': ['physical', 'self-management'],
   'problem-solver': ['critical-thinking', 'creativity'],
   'farmers-market-challenge': ['math', 'life-skills'],
   'nature-geography-field-study': ['physical', 'critical-thinking'],
   'street-explorer-map-maker': ['creativity', 'critical-thinking', 'physical'],
-  'grow-it-eat-it': ['physical', 'self-management', 'critical-thinking'],
+  'grow-it-eat-it': ['self-management', 'critical-thinking', 'life-skills'],
   'kitchen-science-lab': ['critical-thinking', 'math'],
   'probability-lab': ['math', 'critical-thinking'],
   'secret-code-lab': ['critical-thinking', 'math'],
   'body-owners-manual': ['physical', 'critical-thinking', 'math'],
   'family-history-detective': ['communication', 'writing', 'citizenship'],
-  'teach-it-to-learn-it': ['communication', 'self-management'],
+  'teach-it-to-learn-it': ['communication', 'emotional'],
   'trade-it-up': ['communication', 'math', 'life-skills'],
   'play-the-world': ['citizenship', 'physical'],
   'people-scientist': ['emotional', 'critical-thinking'],
@@ -435,6 +435,21 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'sports-stats-lab': ['critical-thinking'],
   'survival-base': ['critical-thinking'],
   'theme-park': ['math', 'communication'],
+  'nature-walk-task-cards': ['critical-thinking', 'communication'],
+  'outdoor-learning-missions': ['critical-thinking'],
+  'outdoor-stem-challenges': ['critical-thinking', 'creativity'],
+  'decomposition-detective': ['self-management'],
+  'square-foot-safari': ['critical-thinking'],
+  'nature-crafts': ['physical'],
+  'adventure-story-map': ['creativity'],
+  'community-tour-guide': ['reading-media'],
+  'directions-challenge': ['writing'],
+  'market-stall-pitch': ['math', 'life-skills'],
+  'mini-magazine-creator': ['creativity'],
+  'my-review-column': ['critical-thinking'],
+  'neighbourhood-interview': ['writing', 'citizenship'],
+  'trail-guide-creator': ['physical'],
+  'write-like-a-pro': ['communication'],
 };
 
 /**
@@ -472,6 +487,19 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   'theme-park': 'creativity',
   'survival-base': 'creativity',
   'kitchen-science-lab': 'critical-thinking',
+  'decomposition-detective': 'critical-thinking',
+  'square-foot-safari': 'physical',
+  'nature-crafts': 'creativity',
+  'community-tour-guide': 'communication',
+  'directions-challenge': 'communication',
+  'market-stall-pitch': 'communication',
+  'neighbourhood-interview': 'communication',
+  // Outdoor card decks keep Physical & Outdoor as the lead after the review added areas.
+  'nature-choice-boards': 'physical',
+  'nature-walk-task-cards': 'physical',
+  'outdoor-learning-missions': 'physical',
+  'outdoor-stem-challenges': 'physical',
+  'outdoor-stem-challenges-volume-2': 'physical',
 };
 
 // Fold the supplemental tags into the territory lists once, at load, so

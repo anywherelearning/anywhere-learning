@@ -20,11 +20,11 @@
       },
       {
         "part": "Look",
-        "line": "Put your hand on the bark. It peels like paper."
+        "line": "Put your hand on the bark. It feels like paper, but don't peel it: that hurts a living tree."
       },
       {
         "part": "Fact",
-        "line": "It's a birch, and people once used this bark to build canoes."
+        "line": "It's a paper birch, and Indigenous peoples have built canoes from this bark for centuries."
       },
       {
         "part": "Next",
@@ -76,6 +76,10 @@
       {
         "q": "No nature nearby",
         "a": "A city block works: a mural, an old door, a shop with a story, a tree in a sidewalk. Every place has stops."
+      },
+      {
+        "q": "The tester's step counts don't match",
+        "a": "A kid's step is shorter than an adult's. Pin every count to a landmark: 'about 30 steps, to the green bin'."
       }
     ]
   },
@@ -119,14 +123,14 @@
       "levels": {
         "explore": "Play one round each way, then pick a place and name 3 things you like about it.",
         "develop": "Count steps and turns out loud while blindfolded, then walk the place and note 6 possible stops.",
-        "extend": "Guide the walker with words only, no touching. Which words worked better: left and right, steps, or what's underfoot?"
+        "extend": "On open grass, guide with words only, a step behind and ready to catch an arm. Which worked best: left and right, steps, or what's underfoot?"
       }
     },
     {
       "title": "Walk and notice",
       "why": "Your kid walks the trail slowly and gathers details at every stop.",
       "kid": "Your kid walks the trail slowly, stopping at every spot that catches their attention. At each stop they write what they see, hear, smell and feel: colours, shapes, textures, sounds, movement. They look things up or ask about anything interesting (what plant is this? what's the story of that building?), and mark each stop on a rough sketch.",
-      "you": "Walk alongside and ask sensory questions: what does the air feel like here? Can you hear anything? Don't tell them what to write. Help them notice, and help find sources if they want to identify something.",
+      "you": "Check any plant isn't poison ivy, poison oak or nettle before they touch or sniff it, and leave taste off the list. Then ask sensory questions: what does the air feel like here? Can you hear anything? Don't tell them what to write. Help them notice, and help find sources if they want to identify something.",
       "ask": [
         "What's the most interesting thing about this exact spot?",
         "If someone couldn't see this place, how would you describe it in words?"

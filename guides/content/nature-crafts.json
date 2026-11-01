@@ -126,7 +126,7 @@
       "title": "Build a wind chime",
       "why": "A hanging sculpture that makes sound in the wind: art, engineering and careful listening.",
       "kid": "Your kid ties 4 to 8 strings of different lengths to a sturdy stick, then attaches one sound maker to the end of each: a seed pod, a pinecone, a flat stone, a shell if allowed. They hang it up and listen. Which piece is loudest? Which is softest? They move pieces and change string lengths until they like how it sounds and looks, like the example.",
-      "you": "Hold the top stick while they tie, and be the listener. Ask about each change: did it sound better or worse? That's the testing.",
+      "you": "Hold the top stick while they tie, and be the listener. Ask about each change: did it sound better or worse? Stones have no hole: wrap the string both ways like a parcel and knot it on top. For Extend: the smaller stone usually rings higher, and string length changes only the swing.",
       "starters": [
         "A sturdy stick",
         "String or yarn",
@@ -174,7 +174,7 @@
       "title": "Make earth paint",
       "why": "Paint mixed from soil: part art studio, part science experiment.",
       "kid": "Your kid collects tiny pinches of 3 to 6 different soils from different spots (dark, light, sandy, clay-like), puts each on a palette like a jar lid, and adds a few drops of water to make a paste. Then they paint with a stick or a finger: a map, a landscape, a mandala, symbols. When it dries, they compare how each colour changed.",
-      "you": "Help find different soils, the more different the better. Keep the water to a few drops at a time. Thick paste and thin paint behave very differently.",
+      "you": "Help find different soils, the more different the better. Keep the water to a few drops at a time. Thick paste and thin paint behave very differently. Soil paint rubs off once dry; a drop of white glue per colour makes it last.",
       "starters": [
         "3 to 6 soils",
         "Water",
@@ -198,7 +198,7 @@
       "title": "Trace the shadows",
       "why": "Drawing with sunlight: light, shadow and layered art.",
       "kid": "On a sunny day, your kid puts paper on the ground and holds a leaf, fern or twig so its shadow falls clearly on the page. They trace the outline, then move the object and trace again so the shapes overlap, like stained glass. They can add colour or small details at the end.",
-      "you": "Help hold things steady, and point out how the shadow changes when the object moves closer to the paper. Ask what makes a shadow sharp or blurry.",
+      "you": "Help hold things steady, and point out how the shadow changes when the object moves closer to the paper. Ask what makes a shadow sharp or blurry. The sun is a wide disc, not a dot, so the farther the leaf sits from the paper, the more its edges spread.",
       "starters": [
         "Leaves or ferns",
         "Twigs",
@@ -210,11 +210,11 @@
         "When is the shadow sharpest?",
         "Why does the shadow move?"
       ],
-      "tip": "Come back in 10 minutes and the shadow has moved. That's the Earth turning, and kids can see it on their own page.",
+      "tip": "Come back in 20 minutes and a twig's shadow has moved. That's the Earth turning, and kids can see it on their own page.",
       "levels": {
         "explore": "Trace 3 overlapping shadows and colour them.",
         "develop": "Make a shadow creature from 3 traced shapes: a body, a head and a tail.",
-        "extend": "Trace the leaf close to the paper, then held high: why does the high one blur? Trace again in 10 minutes: which way did it move?"
+        "extend": "Trace the leaf close to the paper, then held high: why does the high one blur? Tape the paper down, push a twig upright beside it, and trace its shadow now and in 20 minutes."
       },
       "art": "wc/crafts-shadow.jpg"
     },

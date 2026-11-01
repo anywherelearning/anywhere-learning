@@ -4,11 +4,12 @@
   "title": "Outdoor STEM Challenge Cards",
   "tagline": "24 engineering challenges · Design · Testing",
   "ages": "Ages 6 to 14",
-  "goal": "24 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, no supplies, and the first design is supposed to fail.",
+  "goal": "24 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, just a few kitchen extras, and the first design is supposed to fail.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
-    "Optional: a phone for 'design photos' of each version"
+    "Optional: a phone for 'design photos' of each version",
+    "For 3 cards: a raw egg, a cup or watering can, and a plastic bottle (you cut it)"
   ],
   "lesson": {
     "text": "Every challenge runs on the same engineering loop: plan it, build it, test it, improve it. The improving is where the real learning happens, so the first try failing is part of the plan.",
@@ -132,7 +133,7 @@
         },
         {
           "name": "Egg Nest",
-          "t": "Build a nest from leaves, grass and sticks that keeps a raw egg safe when it's dropped from knee height.",
+          "t": "Build a nest from leaves, grass and sticks that keeps a raw egg safe when it's dropped from knee height. Wash hands after.",
           "d": "Raise the drop to waist height. What did you have to change?",
           "icon": "egg",
           "art": "wc/stem-05.jpg"
@@ -192,14 +193,14 @@
         {
           "name": "The Waterproof Test",
           "t": "Find 3 natural surfaces that look waterproof and 3 that look absorbent.",
-          "d": "Predict what would happen if water hit each one, and why.",
+          "d": "Drip water on each and count the seconds until it soaks in or rolls off. Was your guess right?",
           "icon": "droplet",
           "art": "wc/stem-12.jpg"
         },
         {
           "name": "The Best Insulator",
-          "t": "Collect 3 'insulation' materials, like leaf litter, pine needles and dry grass, and choose the best.",
-          "d": "Explain what insulation does, and why your pick would trap warmth.",
+          "t": "Bury your hand for a minute in 3 piles: leaf litter, pine needles, dry grass. Which feels warmest on a cool day?",
+          "d": "Fluff one pile, pack one hard. Which is warmer? (Trapped air.)",
           "icon": "thermometer-sun",
           "art": "wc/stem-13.jpg"
         },
@@ -212,7 +213,7 @@
         },
         {
           "name": "Muddy Water Filter",
-          "t": "Layer sand, gravel and leaves in a cut-off bottle to make muddy water clearer. Look only, never drink it.",
+          "t": "Layer sand, gravel and leaves in a bottle your grown-up cuts, to make muddy water clearer. Never drink it.",
           "d": "Change the order of the layers. Does the water come out clearer?",
           "icon": "filter",
           "art": "wc/stem-15.jpg"
@@ -237,16 +238,16 @@
           "art": "wc/stem-17.jpg"
         },
         {
-          "name": "Balance Beam",
-          "t": "Make a balance beam line on the ground with sticks or rocks, and walk it.",
-          "d": "Redesign it to be harder (narrower, with turns) while still safe.",
+          "name": "Friction Test",
+          "t": "Put a stone, a pinecone and a leaf on a flat piece of bark. Tilt it slowly. Which slides first?",
+          "d": "Wet the bark or add sand. What changes?",
           "icon": "move-horizontal",
           "art": "wc/stem-18.jpg"
         },
         {
-          "name": "Force Finder",
-          "t": "Find 5 examples of forces at work: gravity, wind, water, friction.",
-          "d": "For two of them, explain how the force changes the object over time.",
+          "name": "Sink or Float",
+          "t": "Predict which of 8 found items will float, then test them in a puddle or dish.",
+          "d": "Make one sinker float by changing its shape or adding something.",
           "icon": "wind",
           "art": "wc/stem-19.jpg"
         },
@@ -264,7 +265,7 @@
       "cards": [
         {
           "name": "Sorting System Engineer",
-          "t": "Create a system that sorts found items into 3 categories: size, texture, colour or weight.",
+          "t": "Pick one rule (size, texture, colour or weight) and sort 12 found items into 3 groups by it.",
           "d": "Make a 'rule card' that explains your system clearly.",
           "icon": "list-filter",
           "art": "wc/stem-21.jpg"
@@ -277,15 +278,15 @@
           "art": "wc/stem-22.jpg"
         },
         {
-          "name": "Redesign Challenge",
-          "t": "Build something (a bridge, a tower, a shelter), test it, then improve it.",
-          "d": "Say it out loud: 'My first design failed because... I improved it by...'",
+          "name": "Leaf Roof",
+          "t": "Build a roof that keeps a dry leaf dry under a cup of 'rain'.",
+          "d": "Say it out loud: 'My first roof leaked because... I fixed it by...'",
           "icon": "repeat",
           "art": "wc/stem-23.jpg"
         },
         {
           "name": "Shadow Clock",
-          "t": "Push a stick into the ground and mark where its shadow ends every 30 minutes.",
+          "t": "Push a stick into the ground and mark the shadow tip now, then again each time you finish another card.",
           "d": "Predict where the shadow will be in an hour, then check.",
           "icon": "clock",
           "art": "wc/stem-24.jpg"
@@ -301,7 +302,7 @@
       "Do the same card in a new place with different materials",
       "Photograph version 1 and version 2 side by side",
       "Let your kid invent a new challenge card for you",
-      "Try the Redesign Challenge on something at home"
+      "Try the plan, build, test, improve loop on something at home"
     ]
   },
   "signs": [

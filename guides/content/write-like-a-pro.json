@@ -4,10 +4,10 @@
   "title": "Write It Like a Pro",
   "tagline": "Voice and style · Writing for a reader · Revision",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story or a news report), picks a topic they actually care about, and writes something real for a real reader. Not a five-paragraph essay: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
+  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story, a news report or a song), picks a topic they actually care about, and writes something real for a real reader. Not a five-paragraph essay: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
   "need": [
     "Paper and pencil, or a notes app",
-    "The Writing Style Cards near the end of this guide",
+    "The Writing Style Cards at the end of the guide",
     "A real reader: you, a grandparent, a friend"
   ],
   "lesson": {
@@ -36,7 +36,7 @@
   "academics": [
     {
       "subject": "Writing",
-      "text": "six real styles, each with its own structure and voice"
+      "text": "seven styles, each with its own structure and voice"
     },
     {
       "subject": "Reading",
@@ -76,6 +76,10 @@
       {
         "q": "They get defensive about feedback",
         "a": "Normal. Ask them to give you feedback on something you wrote first. It shows them how it works."
+      },
+      {
+        "q": "They stop every line to ask how to spell a word",
+        "a": "Write it how it sounds and underline it. You'll fix the underlined words together in Version 2."
       }
     ]
   },
@@ -100,8 +104,8 @@
   "steps": [
     {
       "title": "Play style switch",
-      "why": "A quick game that shows how much style matters, then the style and topic.",
-      "kid": "Pick something silly, like the family dog or last night's dinner. Your kid says one sentence about it as a news reporter, then as a restaurant critic, then as a letter to the dog. Then they flip through the Writing Style Cards, choose a style, and pick a topic they actually care about or know a lot about. They write it as one line: 'I'm writing a [style] about [topic].'",
+      "why": "One sentence about the dog in three voices, then the style and topic.",
+      "kid": "Pick something silly, like the family dog or last night's dinner. Your kid says one sentence about it as a news reporter, then as a restaurant critic, then as a letter to the dog. Then they flip through the Writing Style Cards at the end of the guide, choose a style, and pick a topic they actually care about or know a lot about. They write it as one line: 'I'm writing a [style] about [topic].'",
       "you": "Play the game too, the more dramatic the better. Then help them find a style and topic combination with enough to say, and let them choose.",
       "starters": [
         "Review + a game or book",
@@ -135,7 +139,7 @@
       "levels": {
         "explore": "Name your reader and pick a tone.",
         "develop": "Answer all four questions, and write one sentence about how your reader changes your writing.",
-        "extend": "Guess your reader's first 'but...', and plan your answer to it."
+        "extend": "Write down the first question or 'but...' your reader will have, and plan where you'll answer it."
       }
     },
     {
@@ -151,14 +155,14 @@
       "levels": {
         "explore": "Say it aloud, then write or dictate a few lines.",
         "develop": "Write a full page with a clear opening, middle and ending.",
-        "extend": "Mark each sentence as opinion or evidence, and give every opinion at least one piece of evidence."
+        "extend": "Label each paragraph with the part of your card's Build line it does. Fix any that does two jobs, or none."
       }
     },
     {
       "title": "Read it out loud for feedback",
       "why": "Your kid hears their piece through a reader's ears.",
       "kid": "Your kid reads the draft out loud to you or another family member and listens to the reaction. Then they write down 2 or 3 things to change: not everything, just what will make the biggest difference.",
-      "you": "Respond as a real audience, not a proofreader. Start with what works, then name one or two things that confused you: 'I got really interested when you talked about...', 'I got a little lost in the middle.'",
+      "you": "Respond as a reader, not a proofreader. Start with what works, then name one or two things that confused you: 'I got really interested when you talked about...', 'I got a little lost in the middle.'",
       "ask": [
         "What part are you most proud of?",
         "If you could change just one thing, what would it be?"
@@ -167,21 +171,21 @@
       "levels": {
         "explore": "Read it out loud and pick 1 thing to keep and 1 to change.",
         "develop": "Write down 2 or 3 specific changes based on the feedback.",
-        "extend": "Have someone who doesn't know the topic read it, and fix what confused them."
+        "extend": "Ask your listener to say back, in one sentence, what the piece wanted from them. If it isn't what you meant, fix the opening."
       }
     },
     {
       "title": "Revise and send it",
-      "why": "Version 2, then the piece goes to its real reader.",
+      "why": "Version 2, then the piece goes to the person it was written for.",
       "kid": "Your kid makes their changes: an opening that grabs, the main point clear early, no sentences that don't add anything, an ending that feels finished. They put Version 1 and Version 2 side by side and notice what changed. Then they send it to its real reader: mail the letter, test the how-to on someone, read the opinion piece at dinner.",
-      "you": "Help them see the gap between the two versions: that gap is the learning. Then help find a real (and safe) way to get it in front of someone.",
+      "you": "Help them see the gap between the two versions: that gap is the learning. Then help find a safe way to get it in front of someone.",
       "ask": [
         "What's the biggest change between Version 1 and Version 2?",
         "Who would enjoy reading this most?"
       ],
       "tip": "If they don't want to share, ask why gently. Sometimes 'I don't want to' means 'I'm not sure it's good enough.'",
       "levels": {
-        "explore": "Write a clean final version, circle one thing that's better, and share it with one person.",
+        "explore": "Fix the one thing you picked, read the new version to your reader, and point to the part that's better.",
         "develop": "Rewrite the full piece with all edits, and send it to a real reader.",
         "extend": "Cut it by a third, keep the main point, and send the shorter one."
       }

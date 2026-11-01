@@ -4,11 +4,11 @@
   "title": "Outdoor STEM Challenge Cards Volume 2",
   "tagline": "24 new engineering challenges · Fair testing · Simple machines",
   "ages": "Ages 6 to 14",
-  "goal": "24 brand-new outdoor building challenges, none repeated from Volume 1 (and you don't need Volume 1). Your kid makes rope from grass, launches pinecones, moves water uphill, catches the wind and moves a too-heavy rock with a stick, testing fairly and measuring every time.",
+  "goal": "24 brand-new outdoor building challenges, (and you don't need Volume 1). Your kid makes rope from grass, launches pinecones, moves water uphill, catches the wind and moves a too-heavy rock with a stick, testing fairly and measuring every time.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
-    "Everyday things: string, cups, foil, rubber bands, a spoon"
+    "Everyday things: string, cups, foil, rubber bands, a spoon, paper, a plastic bag, straws, a pin"
   ],
   "lesson": {
     "text": "Volume 2 is about fair testing: change one thing at a time, and measure. Then you know what made the difference.",
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Hold the line at one change per test: three changes at once can't tell you which one worked. Carry the measuring (steps, seconds, counts), use only fallen materials, keep water challenges to puddles, basins or a sink, and take builds apart when you're done.",
+    "intro": "Hold the line at one change per test: three changes at once can't tell you which one worked. Carry the measuring (steps, seconds, counts), use only fallen materials, keep water challenges to puddles, basins or a sink (Stone Skipper is the exception: a calm, shallow shore with you beside them), and take builds apart when you're done.",
     "plan": [
       {
         "when": "Before you go",
@@ -76,6 +76,10 @@
       {
         "q": "Results are all over the place",
         "a": "Test 3 times and use the middle result. Real scientists repeat tests too."
+      },
+      {
+        "q": "They're stuck on Uphill Problem",
+        "a": "A siphon only moves water downhill. Hint at a sponge they squeeze, a scoop on a lever, or a tube wound round a stick and turned."
       }
     ]
   },
@@ -104,22 +108,22 @@
       "cards": [
         {
           "name": "Rope Maker",
-          "t": "Twist dry grass or long leaves into a cord as long as your arm.",
-          "d": "Make a thicker cord. Which one holds more weight before snapping?",
+          "t": "Twist two grass bundles one way, then wind them together the other way so the cord locks.",
+          "d": "Make a thicker cord. Which holds more?",
           "icon": "spline",
           "art": "wc/stem2-01.jpg"
         },
         {
           "name": "Lash It Tight",
-          "t": "Join two sticks into a solid X, using only string.",
-          "d": "Lash 3 sticks into a triangle. Why is it harder to bend?",
+          "t": "Lash two sticks into a solid X: 4 wraps each way across the cross, then pull tight.",
+          "d": "Lash 3 sticks into a triangle. Why won't it bend?",
           "icon": "cross",
           "art": "wc/stem2-02.jpg"
         },
         {
           "name": "The Hanging Test",
           "t": "Tie a stick between two supports with a different knot on each end. Which knot slips first?",
-          "d": "Learn one real knot and test again. What made it stronger?",
+          "d": "Learn a clove hitch and test again. Why is it stronger?",
           "icon": "link",
           "art": "wc/stem2-03.jpg"
         },
@@ -132,8 +136,8 @@
         },
         {
           "name": "Pulley Lift",
-          "t": "Loop a string over a low, strong branch and use it to lift a small bag of stones.",
-          "d": "Is pulling down easier than lifting up? Why do you think so?",
+          "t": "Loop a string over a low, strong branch to lift a small bag of stones.",
+          "d": "Is pulling down easier? The bag isn't lighter; you lean on it. Never stand under it.",
           "icon": "arrow-down-up",
           "art": "wc/stem2-05.jpg"
         }
@@ -144,15 +148,15 @@
       "cards": [
         {
           "name": "Fair Test Flight",
-          "t": "Build a simple launcher (sticks, a rubber band, a spoon). Launch the same object 5 times and measure each flight.",
-          "d": "Results different? Find what you accidentally changed, and fix it.",
+          "t": "Build a launcher from sticks, a rubber band and a spoon. Launch one pinecone 5 times, never at a person.",
+          "d": "Measure each flight. Results differ? Find what changed.",
           "icon": "rocket",
           "art": "wc/stem2-06.jpg"
         },
         {
           "name": "Angle Hunter",
           "t": "Launch at a low, a middle and a high angle. Which one sends your object farthest?",
-          "d": "Predict a new angle's distance before you launch. How close were you?",
+          "d": "Predict a new angle, then launch. (On paper 45 degrees goes farthest; air drag lowers it.)",
           "icon": "triangle-right",
           "art": "wc/stem2-07.jpg"
         },
@@ -172,8 +176,8 @@
         },
         {
           "name": "Stone Skipper",
-          "t": "On calm, shallow water with a grown-up, find the stone shape that skips the most times.",
-          "d": "Change one thing (the throw angle, the stone, the speed). Which matters most?",
+          "t": "On calm, shallow water with a grown-up, find the stone shape that skips most.",
+          "d": "Change angle, stone or speed. Which matters most? Scientists found about a 20 degree tilt skips best.",
           "icon": "waves",
           "art": "wc/stem2-10.jpg"
         }
@@ -224,7 +228,7 @@
       "cards": [
         {
           "name": "Slow Fall",
-          "t": "Build a parachute that doubles a pinecone's fall time from shoulder height.",
+          "t": "Drop a bare pinecone and one with your parachute at the same moment. Make yours land clearly last.",
           "d": "Test two canopy sizes. When does bigger stop helping?",
           "icon": "circle-dashed",
           "art": "wc/stem2-16.jpg"
@@ -245,14 +249,14 @@
         },
         {
           "name": "Wind Finder",
-          "t": "Build a wind vane: a light arrow on a stick that shows where the wind comes from.",
-          "d": "Check the direction 3 times today. Does your wind have a favourite?",
+          "t": "Build a wind vane: a light arrow on a stick, with a big fin on the tail so the point swings into the wind.",
+          "d": "Check it 3 times today. Does your wind have a favourite?",
           "icon": "compass",
           "art": "wc/stem2-19.jpg"
         },
         {
           "name": "Leaf Kite",
-          "t": "Tie a string to a big, sturdy leaf and get it to fly on a breezy day.",
+          "t": "Fly a big, sturdy leaf on a string on a breezy day, far from power lines.",
           "d": "Move where the string is tied. Which spot makes it fly highest?",
           "icon": "wind",
           "art": "wc/stem2-20.jpg"
@@ -264,8 +268,8 @@
       "cards": [
         {
           "name": "Rock Mover",
-          "t": "Move a too-heavy rock with a stick lever over a pivot stone. Try the pivot near, then far.",
-          "d": "In the easy setup you push farther but lighter. That's the lever's trade.",
+          "t": "Lever a too-heavy rock over a pivot stone, pivot near, then far. Keep fingers and toes clear.",
+          "d": "The easy setup means pushing farther but lighter. That's the lever's trade.",
           "icon": "move-up",
           "art": "wc/stem2-21.jpg"
         },
@@ -285,8 +289,8 @@
         },
         {
           "name": "The Stick Scale",
-          "t": "Hang a stick by its middle with a cup on each end. Use your scale to compare two objects.",
-          "d": "Slide one cup inward so a light object balances a heavy one.",
+          "t": "Hang a stick by its middle, a cup on each end, to compare two objects.",
+          "d": "Slide the heavy cup inward until a light object balances it. Compare the two distances.",
           "icon": "scale",
           "art": "wc/stem2-24.jpg"
         }

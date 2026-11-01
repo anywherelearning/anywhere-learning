@@ -32,7 +32,7 @@
       },
       {
         "part": "I answer",
-        "line": "True, but the walks are the best part, not the work."
+        "line": "True, but the work is shared: one walk each, and everyone gets outside."
       }
     ],
     "modelNote": "Three opinions in a row don't make an argument. A reason, an example and an answer to 'cats are less work' before anyone says it do, and that last part is the one most kids skip."
@@ -80,6 +80,10 @@
       {
         "q": "Your kid only wants their own side",
         "a": "Flip a coin for sides. Arguing what you don't believe is the fastest way to understand the other person."
+      },
+      {
+        "q": "The younger one is outmatched",
+        "a": "Put a grown-up on their team, or make the older one answer the younger one's point before making their own."
       }
     ]
   },
@@ -104,12 +108,12 @@
   "steps": [
     {
       "title": "Warm up with silly debates",
-      "why": "Silly one-minute debates to warm up, then a real topic.",
+      "why": "One-minute arguments about hot dogs and pizza loosen everyone up before the topic is chosen.",
       "kid": "Flip a coin to pick sides, then debate a silly question for one minute each: is a hot dog a sandwich? Should pizza be eaten with a fork? Do a few rounds. Then your kid picks the topic for the real debate. It needs two sides people genuinely disagree on, and they decide which side they'll argue.",
       "you": "Run the timer and play along, arguing your side with a straight face. Then help brainstorm topics and let them choose. Fun topics are great for a first debate. Serious ones can wait until they're comfortable with the format.",
       "starters": [
         "Should kids have a bedtime?",
-        "Dogs or cats?",
+        "Should kids pick their own clothes?",
         "Summer or winter?",
         "Should kids get paid for chores?",
         "Books or movies?",
@@ -146,7 +150,7 @@
       "title": "Build the case and practise",
       "why": "Your kid turns the notes into a short speech and says it out loud.",
       "kid": "Your kid turns the notes into a short case: a one-sentence opening, their reasons in order, an answer to the other side's best point, and a closing line. They say it out loud once, standing up, in about 2 minutes.",
-      "you": "Be the practice audience. Throw one counter-argument at them and let them answer. Then give one specific note: slower, louder, or look up more. Start with something they did well.",
+      "you": "Be the practice audience. Throw one counter-argument at them and let them answer. Name the line that worked best, then give one specific note: slower, louder, or look up more.",
       "ask": [
         "If you only had 30 seconds, what's the one thing you'd say?",
         "What will you say if they make a really good point?"
@@ -160,7 +164,7 @@
     },
     {
       "title": "Hold the debate",
-      "why": "Debate night: a real format, a timer, and everyone listening.",
+      "why": "Debate night: a set format, a timer, and everyone listening.",
       "kid": "Flip a coin for who goes first. Each side gives a 1-minute opening, 2 minutes for their main points, 1 minute to answer the other side, and a 1-minute closing. Your kid listens without interrupting and answers the other side's actual points, not just repeats their own.",
       "you": "Be the referee (or the opponent). Keep time, enforce the rules (no interrupting, respect the person) and make sure both sides get the same time. Keep it a debate, not an argument.",
       "ask": [
@@ -178,7 +182,7 @@
       "title": "Judge it and look back",
       "why": "A fair verdict, and a conversation about what everyone learned.",
       "kid": "After the debate, your kid judges it fairly, or a family member does: who had the stronger arguments? The better evidence? Who answered the other side best? They name the best point made by each side. Then they talk about what was hard, and whether the debate changed their mind at all.",
-      "you": "If you judge, explain your reasoning out loud. Praise the thinking, not just the winner: 'That was strong because you backed it up with a real example.' Then ask what was harder, building their case or answering the other side.",
+      "you": "If you judge, name each side's best point before the verdict, and explain your reasoning. Praise the thinking: 'That was strong because you backed it up with an example.' Then ask what was harder, building their case or answering the other side.",
       "ask": [
         "If you hadn't picked a side, would one side have convinced you?",
         "Can you disagree with someone and still respect them? How?"

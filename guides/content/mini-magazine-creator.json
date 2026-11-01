@@ -36,7 +36,7 @@
   "academics": [
     {
       "subject": "Writing",
-      "text": "informational, persuasive, how-to and creative writing, all in one project"
+      "text": "informational, opinion (a review), how-to and playful writing (a quiz), all in one project"
     },
     {
       "subject": "Research",
@@ -76,6 +76,10 @@
       {
         "q": "Your kid is 6 or 7, or it feels too big",
         "a": "Make it one folded sheet: an 8-page zine of drawings with labels, a mini quiz and a top 3 list. That's a real magazine."
+      },
+      {
+        "q": "It stalls halfway through the week",
+        "a": "Shrink the issue, not the deadline. Publish the finished pieces with a cover as Issue 1, and save the rest for Issue 2."
       }
     ]
   },
@@ -100,7 +104,7 @@
   "steps": [
     {
       "title": "Remix a magazine cover",
-      "why": "A quick look at how real magazines grab readers, then the topic and the plan.",
+      "why": "Rewrite three magazine headlines about the cat, then plan an issue of your own.",
       "kid": "Flip through a real magazine (or look one up together) and notice the cover: the big title, the headlines, the picture. Your kid rewrites 3 of the headlines about something silly, like the family cat or Tuesday's dinner. Then they pick their own magazine topic, decide who it's for, and plan the issue: a list of pieces, each labelled by type, in a rough table of contents.",
       "you": "Play the remix game too, and laugh. Then help them think of a topic they could talk about for hours, and check they could write at least 4 different pieces about it. Aim for a mix: something long, something short, something interactive.",
       "starters": [
@@ -119,7 +123,7 @@
       "levels": {
         "explore": "Remix one headline out loud, pick a topic, and draw 3 boxes for 3 pieces with a picture in each.",
         "develop": "Plan 4 or 5 pieces in at least 3 different types, with a rough table of contents.",
-        "extend": "Write the issue for a reader who knows nothing about your topic. Which piece goes first, and why?"
+        "extend": "Plan the issue for a reader who knows nothing about your topic. Put the pieces in reading order: what does that reader need first?"
       }
     },
     {
@@ -133,7 +137,7 @@
       ],
       "tip": "One surprising fact makes a whole article. 'Octopuses have three hearts' does more work than ten ordinary ones.",
       "levels": {
-        "explore": "Find 1 or 2 facts for your main article in a book.",
+        "explore": "Find 1 or 2 facts for your main article. A grown-up can read the book aloud, or ask someone who knows.",
         "develop": "Find facts for each piece that needs them, and check the key ones.",
         "extend": "For each fact, find a second source that agrees. If two sources disagree, say which you trust and why."
       }
@@ -172,7 +176,7 @@
     },
     {
       "title": "Publish it and look back",
-      "why": "Real copies go to real readers, and your kid hears what they think.",
+      "why": "Copies go out to readers, and your kid hears what they think.",
       "kid": "Your kid assembles the magazine (staple, fold or bind), makes copies, and hands them out to at least 2 or 3 people. They ask which piece readers liked best. Then they think about which kind of writing was hardest, and what a second issue would include.",
       "you": "Help with copies, then celebrate. A whole magazine, researched, written, designed and published, is a big deal. Ask what they're most proud of and which piece was hardest.",
       "ask": [
@@ -182,7 +186,7 @@
       "tip": "Hand-delivered copies feel like a real launch. Let your kid do the handing out.",
       "levels": {
         "explore": "Share the magazine with one person and tell them your favourite piece.",
-        "develop": "Share it with 2 or 3 people and write down what you learned about writing in different styles.",
+        "develop": "Share it with 2 or 3 people and ask each which piece they'd cut. Decide if you agree, and why.",
         "extend": "Note which piece each reader turned to first, and plan Issue 2 around that."
       }
     }

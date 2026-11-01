@@ -81,6 +81,10 @@
       {
         "q": "The dish didn't turn out",
         "a": "That's useful. Something is missing from the notes. Call the cook back and ask about that exact step."
+      },
+      {
+        "q": "The cook doesn't measure anything",
+        "a": "Ask them to cook while your kid catches each handful or splash in a measuring cup or spoon before it goes in, and writes it down."
       }
     ]
   },
@@ -109,9 +113,9 @@
   "steps": [
     {
       "title": "Play taste detective",
-      "why": "A guessing game with a family dish, then the list of recipes for the book.",
-      "kid": "Your kid picks a family dish everyone loves and tastes it slowly, like a detective. They write down every ingredient they think is in it, and how they think it's made. They'll check their guesses against the real recipe in the interview. Then they make a list of dishes that mean something to your family and pick 3 to 5, ideally from different people.",
-      "you": "Serve the dish (leftovers work) and play along: write your own guesses and compare who got closer once the real recipe comes out. Then help them think of family dishes and who makes them, and let them choose. Try to include someone they don't talk to often.",
+      "why": "Tasting a dish everyone loves gets your kid asking how it's made, and that's where the book starts.",
+      "kid": "Your kid picks a family dish everyone loves and tastes it slowly, one bite at a time. They write down every ingredient they think is in it, and how they think it's made. The cook's recipe will settle it in the interview. Then they make a list of dishes that mean something to your family and pick 3 to 5, ideally from different people.",
+      "you": "Serve the dish (leftovers work) and play along: write your own guesses and compare who got closer once the cook tells you. Then help them think of family dishes and who makes them, and let them choose. Try to include someone they don't talk to often.",
       "starters": [
         "A holiday dish",
         "A grandparent's specialty",
@@ -134,7 +138,7 @@
     {
       "title": "Interview the cooks",
       "why": "Your kid gets each recipe, and the story behind it, straight from the cook.",
-      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask where the recipe came from and what memory goes with it. They write down both. For the taste-detective dish, they compare their guesses with the real list.",
+      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask where the recipe came from and what memory goes with it. They write down both. For the taste-detective dish, they compare their guesses with the cook's list.",
       "you": "Set up the conversations, then let your kid do the asking. Practise a couple of questions together before the first call. When the cook says 'a pinch' or 'until it looks right,' nudge your kid to ask what that means.",
       "ask": [
         "What's the one thing that makes this dish turn out right?",
@@ -153,12 +157,12 @@
       "kid": "Your kid cooks each recipe using only their notes, with your help where needed. As they go, they mark anything unclear or missing: a step the cook forgot, an amount like 'some,' something the cook does by feel. They write down the real amounts, temperatures and times as they find them.",
       "you": "Handle the hot and sharp parts and let your kid lead everything else. When they get stuck, don't fill the gap from your own cooking. Ask what the notes say, and help them work out what's missing.",
       "ask": [
-        "Was there a step you had to figure out on your own?",
+        "What did the heat change: did something melt, rise, thicken or brown? That's the sign for the card.",
         "Where would someone who's never made this get stuck?"
       ],
       "tip": "A dish that flops isn't a failure. It shows exactly where the notes need more detail, and it's a great excuse to call the cook back.",
       "levels": {
-        "explore": "Cook one recipe and mark any steps that were confusing or missing.",
+        "explore": "Cook one recipe while a grown-up reads the notes aloud. Add a sticker each time you ask 'how much?' or 'how long?'",
         "develop": "Cook 2 or 3 recipes, mark every gap, and add exact amounts and times.",
         "extend": "When a step says 'a handful', measure one 3 times and write down the middle amount."
       }
@@ -166,13 +170,13 @@
     {
       "title": "Write the recipe cards",
       "why": "Your kid turns the notes into recipe cards a stranger could follow.",
-      "kid": "Your kid writes a card for each dish, all in the same format: the name, who it comes from, a short story or quote, the ingredients with exact amounts, and numbered steps. Every step gets an amount, an action and a sign, like the example at the start. Then they read each card out loud and fix anything vague.",
+      "kid": "Your kid writes a card for each dish, all in the same format: the name, who it comes from, a short story or quote, the ingredients with exact amounts, and numbered steps. Every step gets an action and a sign it's done, plus an amount whenever something goes in, like the example at the start. Then they read each card out loud and fix anything vague.",
       "you": "Read each card as if you've never made the dish. Could you cook it from this alone? Point out one or two spots that would trip you up, then let your kid fix them.",
       "ask": [
         "Could a friend make this without calling you?",
         "How would someone know when this step is done?"
       ],
-      "tip": "For a bigger challenge, have them add a line for doubling the recipe for a crowd. It's fractions with a real reason.",
+      "tip": "List the ingredients in the order they get used. It's the first thing a cook checks.",
       "levels": {
         "explore": "Draw each step in its own box, in order, and add the amounts with a grown-up.",
         "develop": "Write detailed cards with exact amounts, clear steps and a short story, then have someone read one and revise.",
@@ -192,7 +196,7 @@
       "levels": {
         "explore": "Put the recipes together with a cover and your name, and give it to one family member.",
         "develop": "Add a table of contents and a short introduction about your family's food, and share it with the cooks.",
-        "extend": "Choose the book's order on purpose (by person, season or meal) and write a short intro explaining why."
+        "extend": "Give one card to someone outside the family to cook alone. Note every question they ask, and fix the card before it goes in."
       }
     }
   ],

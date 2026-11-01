@@ -1,7 +1,7 @@
 {
   "slug": "two-minute-story",
   "category": "Writing & Communication",
-  "title": "The Two Minute Story",
+  "title": "The Two-Minute Story",
   "tagline": "Storytelling · Clarity · Speaking with confidence",
   "ages": "Ages 6 to 14",
   "goal": "Your kid takes a real moment from their own life and learns to tell it as a clear, gripping story in about two minutes. They find the story, give it a shape, cut the boring parts and tell it for real to the family.",
@@ -76,6 +76,10 @@
       {
         "q": "They freeze or rush when telling it",
         "a": "Tell it to just you first, then one more person. Three practice runs and it loosens up."
+      },
+      {
+        "q": "'Nothing interesting has happened to me'",
+        "a": "Ask about firsts and mistakes: the first time they did something alone, the time they broke something. Small is better."
       }
     ]
   },
@@ -100,8 +104,8 @@
   "steps": [
     {
       "title": "Play two truths and a lie",
-      "why": "A quick storytelling game, then the one true story worth telling.",
-      "kid": "Everyone tells three very short things that happened to them, two true and one made up, and the others guess the lie. Your kid notices which ones sounded most real, and why. Then they pick one true moment from their own life to turn into a two-minute story: something funny, scary, surprising, or that changed their mind.",
+      "why": "Two truths and a lie, then the one true story worth telling.",
+      "kid": "Everyone tells three very short things that happened to them, two true and one made up, and the others guess the lie. Your kid notices which ones sounded most true, and why. Then they pick one true moment from their own life to turn into a two-minute story: something funny, scary, surprising, or that changed their mind.",
       "you": "Play the game too. Then help them brainstorm real moments and let them choose. Steer them away from 'my whole trip' toward one small, specific moment.",
       "starters": [
         "When I got lost",
@@ -131,11 +135,11 @@
         "What's the moment everything changed?",
         "Why does this story matter, or how did it end?"
       ],
-      "tip": "A story with no turn is just a list of events. Help them find the moment everything pivots on.",
+      "tip": "No turn? Ask 'what did you think would happen, and what happened instead?' The gap between those is the turn.",
       "levels": {
         "explore": "Name the beginning and the end.",
         "develop": "Find all three: beginning, turn and point.",
-        "extend": "Decide what to keep secret until the turn."
+        "extend": "Plant one small detail early that only matters at the turn, like the teddy bears at the fair."
       }
     },
     {
@@ -147,10 +151,10 @@
         "What part could you cut and still keep the story?",
         "Which detail does the story absolutely need?"
       ],
-      "tip": "Every boring part removed makes the good parts shine brighter.",
+      "tip": "Listen for 'and then'. Each one usually marks a moment that can go.",
       "levels": {
         "explore": "Tell it in under three minutes.",
-        "develop": "Get it to about two minutes with the boring parts cut.",
+        "develop": "Write the beginning, turn and point as three short lines on a card, then get it to about two minutes using only the card.",
         "extend": "Cut it to 60 seconds, then add back only what you missed."
       }
     },
@@ -165,24 +169,24 @@
       ],
       "tip": "Don't let them memorise it word for word. A story that's told, not recited, is the one that feels alive.",
       "levels": {
-        "explore": "Practise it once out loud.",
+        "explore": "Practise it out loud with one pause before the turn. A grown-up can tap the table when it's time.",
         "develop": "Add a strong opening line and one well-placed pause.",
-        "extend": "Try two first lines and keep the one that gets a reaction."
+        "extend": "Tell it once ending on the point, once on the turn. If your listener got the point anyway, end on the turn."
       }
     },
     {
       "title": "Tell it for real",
-      "why": "The real telling, to a real audience.",
+      "why": "Showtime: the family at dinner, or a grandparent on a call.",
       "kid": "Your kid tells their two-minute story to the family at dinner, or to a grandparent on a call. Afterward, they talk about what landed and what they'd do differently next time.",
-      "you": "Give full attention: laugh, react, lean in. A kid who feels heard keeps telling stories for life. Then ask which part got the best reaction.",
+      "you": "Give full attention: laugh, react, lean in. Put your fork down and look at them, so everyone else does too. Then ask which part got the best reaction.",
       "ask": [
         "How did it feel to have people listening?",
         "What part got the best reaction?"
       ],
       "tip": "Record it if they'd like to watch it back. Kids are usually surprised by how good it sounds.",
       "levels": {
-        "explore": "Tell it to one person.",
-        "develop": "Tell it to the family, start to finish.",
+        "explore": "Tell it to one person and ask which part they'd want more of.",
+        "develop": "Tell it to the family without notes, then ask someone to say the turn back in one line.",
         "extend": "Adjust it for two listeners, one older, one younger. What changed?"
       }
     }

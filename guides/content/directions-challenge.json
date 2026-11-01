@@ -16,6 +16,24 @@
     "Paper and pencil for writing the directions",
     "Optional: a blindfold for an extra challenge"
   ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "step-by-step instructions, precise words (left, right, numbers, landmarks), and revising for a reader"
+    },
+    {
+      "subject": "Math",
+      "text": "counting and estimating distance, left and right, and quarter turns"
+    },
+    {
+      "subject": "Speaking & listening",
+      "text": "reading instructions aloud and noticing exactly where a listener gets lost"
+    },
+    {
+      "subject": "Thinking",
+      "text": "tracing a problem back to its cause and testing the fix"
+    }
+  ],
   "howTo": {
     "intro": "The hardest part is playing dumb. You'll know exactly what they mean, and you follow only what they said anyway. Each wrong turn points straight at the words that need fixing, and it's usually where the laughing starts too.",
     "tips": [
@@ -57,11 +75,11 @@
       },
       {
         "q": "It's too easy",
-        "a": "Add the blindfold, or pick a task with more steps."
+        "a": "Add the blindfold for table tasks like drawing or blocks. On a route, walk right beside the follower, never near stairs."
       },
       {
-        "q": "Siblings are arguing",
-        "a": "One gives the directions, the other follows, then they swap."
+        "q": "They say you're going wrong on purpose",
+        "a": "Agree up front: when a step could mean two things, you say both and pick one. 'Turn could be left or right. I'm picking right.'"
       }
     ]
   },
@@ -102,7 +120,7 @@
       ],
       "tip": "Pick something your kid knows well but has never had to explain out loud. Knowing how to do something and explaining it are very different skills.",
       "levels": {
-        "explore": "Keep it to 5 steps or fewer, with simple action words like walk, turn, and stop.",
+        "explore": "Draw each step as a picture card (a foot with a number, an arrow, a door), up to 5 cards, and say each one out loud.",
         "develop": "Aim for 6 to 10 steps, using distances (12 steps) or landmarks (the big chair).",
         "extend": "Have them add a checkpoint every few steps, like 'You should now see the front door.'"
       }
@@ -152,7 +170,7 @@
       "levels": {
         "explore": "Your kid fixes the 2 or 3 steps that caused the most trouble, then tries again.",
         "develop": "Your kid rewrites every step that went wrong and compares the second run to the first.",
-        "extend": "Test the new version on someone who has never seen it. Does it work for them too?"
+        "extend": "'6 big steps' depends on whose legs. Test one step with a short and a tall follower, then add a landmark so it works for both."
       }
     },
     {
@@ -177,12 +195,18 @@
     "text": "Ask them for directions to something in the house, no pointing. Listen for numbers, left and right, and landmarks like 'past the big chair'. If they pause to picture what you'd see from where you stand, they're thinking like the listener now.",
     "celebrate": "On the second run, the moment you land exactly where they meant, say it: 'Same route, new words, and I didn't go wrong once. You fixed that.'",
     "extensions": [
-      "Try it blindfolded: the follower can't see and has to rely completely on the words",
+      "Try it blindfolded at the table: the follower can't see and has to rely completely on the words",
       "Swap roles: you give the directions and your kid follows them word for word",
       "Write directions to a hidden treat and leave them for someone to find",
       "Race the clock: can your partner finish in under 3 minutes using only your directions?"
     ]
   },
+  "signs": [
+    "'Left' and 'right' start turning up whenever they explain something",
+    "Ask where something is and you get a number or a landmark back",
+    "When someone misunderstands, they check their own words first"
+  ],
+  "makeItReal": "Write directions for an actual visitor, like front door to the guest bed, or the bus stop to your door. Leave them out for the next guest and see if they get there alone.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

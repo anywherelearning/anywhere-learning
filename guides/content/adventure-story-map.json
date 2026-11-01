@@ -76,6 +76,10 @@
       {
         "q": "They're stuck for ideas",
         "a": "Go back to a what-if from the walk, or borrow a classic: a lost pet, a hidden treasure, a race before dark."
+      },
+      {
+        "q": "They want dragons, not our street",
+        "a": "Let the dragon land at the actual playground. Keep the map true to the place and let anything happen on it."
       }
     ]
   },
@@ -100,8 +104,8 @@
   "steps": [
     {
       "title": "Go on a what-if walk",
-      "why": "Your kid picks a real place and walks it, looking for where a story could happen.",
-      "kid": "Your kid picks a place they know well and walks it slowly with you. At each interesting spot, you both play 'what if': what if this drain led to a tunnel? What if someone hid something in that tree? They jot down the best what-ifs and the real details around them: sounds, smells, colours, hiding spots, paths.",
+      "why": "Your kid picks a place they know and walks it, looking for where a story could happen.",
+      "kid": "Your kid picks a place they know well and walks it slowly with you. At each interesting spot, you both play 'what if': what if this drain led to a tunnel? What if someone hid something in that tree? They jot down the best what-ifs and the details around them: sounds, smells, colours, hiding spots, paths.",
       "you": "Walk with them and play along. Ask storyteller questions instead of grown-up ones: where would a character hide? What would you hear here at night? Let the silly ideas come. The good ones show up after the silly ones.",
       "starters": [
         "Our street",
@@ -124,18 +128,18 @@
     },
     {
       "title": "Draw the map",
-      "why": "Your kid maps the real place, accurately enough to find your way with it.",
+      "why": "Your kid maps the place, accurately enough to find your way with it.",
       "kid": "Your kid draws the place from above: the outline, the main paths, then landmarks like buildings, trees and benches. They label everything and add a compass (N, S, E, W). Older kids add a rough scale.",
-      "you": "Help with direction if needed: stand somewhere together and ask what's north of you. Then ask the real test question: could someone find their way using this map?",
+      "you": "Help with direction if needed: stand somewhere together and ask what's north of you. Then ask the test question that matters: could someone find their way using this map?",
       "ask": [
         "Are bigger things drawn bigger on your map?",
         "Which spots on the map will matter in your story?"
       ],
       "tip": "Start with the paths. Once the paths are right, everything else has somewhere to go.",
       "levels": {
-        "explore": "Draw the main paths and 3 or 4 landmarks.",
+        "explore": "Build the place on the floor first: string for the path, a shoe for the house, a cup for the big tree. Then trace around them on paper together.",
         "develop": "Draw a detailed map with labels and a compass.",
-        "extend": "Pace out one path and pick a scale, like 1 cm for 10 steps, so distances match."
+        "extend": "Pace out the longest path, measure your paper, and pick a scale that makes it fit, like 1 cm for 20 steps. Check one short path against it."
       }
     },
     {
@@ -156,9 +160,9 @@
     },
     {
       "title": "Write the story",
-      "why": "Your kid writes the adventure, full of real details from the walk.",
-      "kid": "Your kid writes the story from beginning to end, using their notes: real names, real landmarks, the sounds and smells from the walk, and a bit of dialogue. The goal is that a reader feels like they're standing right there.",
-      "you": "Let them write without interrupting, and don't fix spelling yet. Afterward, give one piece of feedback: 'the chase felt real' or 'I want to hear more about the creek.' One thing, so it feels doable.",
+      "why": "Your kid writes the adventure, full of details from the walk.",
+      "kid": "Your kid writes the story from beginning to end, using their notes: street and park names, landmarks, the sounds and smells from the walk, and a bit of dialogue. The goal is that a reader feels like they're standing right there.",
+      "you": "Let them write without interrupting, and don't fix spelling yet. Afterward, give one piece of feedback: 'the chase made my heart race' or 'I want to hear more about the creek.' One thing, so it feels doable.",
       "ask": [
         "Can the reader picture exactly where your character is standing?",
         "Did you use a real sound or smell from the walk?"
@@ -166,15 +170,15 @@
       "tip": "Keep the Riverside Park example from the start nearby. Pointing at 'senses' is easier than explaining it again.",
       "levels": {
         "explore": "Tell the story aloud while a grown-up writes it, using 3 things you noticed on the walk.",
-        "develop": "Write several paragraphs with a clear plot, real settings and at least one bit of dialogue.",
+        "develop": "Write several paragraphs with a clear plot, settings from your map and at least one bit of dialogue.",
         "extend": "Write the full story, then cut a quarter of it: keep every landmark and lose the words that repeat."
       }
     },
     {
       "title": "Link the map, share and look back",
-      "why": "The story and the map come together, and a real reader follows the adventure.",
+      "why": "The story and the map come together, and a reader follows the adventure, map in hand.",
       "kid": "Your kid numbers each big moment of the story on the map and adds a legend, then checks that the route makes sense (no teleporting). They fix unclear sentences and spelling, then give the story and map to someone to read together.",
-      "you": "Be the first reader, story in one hand, map in the other. Watch whether you can follow along. Give specific praise and one suggestion, then ask what they're most proud of.",
+      "you": "Be the first reader, story in one hand, map in the other. Watch whether you can follow along. Tell them the spot where you could picture it best, add one suggestion, then ask which scene they'd read aloud first.",
       "ask": [
         "Can someone follow your story on the map, or does your character teleport?",
         "Did exploring the real place change how you see it?"

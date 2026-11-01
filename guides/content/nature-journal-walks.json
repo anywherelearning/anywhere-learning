@@ -8,7 +8,7 @@
   "need": [
     "These cards, on your phone or printed",
     "Any notebook, or print the journal pages at the end of the guide",
-    "A pencil, and something to sit on outside"
+    "A pencil, a crayon for bark rubbings, and something to sit on outside"
   ],
   "lesson": {
     "text": "A naturalist's journal isn't about pretty drawings. It's a record of looking closely. Under every drawing, three short lines turn a sketch into thinking.",
@@ -97,7 +97,7 @@
       "text": "noticing how one place changes"
     }
   ],
-  "levelsLine": "Three levels on every card. Explore: draw it and say one thing you notice. Develop: add the three lines. Extend: do the Deeper part and come back to the same spot in another season.",
+  "levelsLine": "Three levels on every card. Explore: draw it and say one thing you notice. Develop: add the three lines. Extend: do the Deeper part, add one measurement (a count, length, time or temperature), and write one 'I wonder' you could actually test.",
   "compactCards": true,
   "themes": [
     {
@@ -144,7 +144,7 @@
           "t": "Draw the sky. Write the temperature, the wind and how it feels outside.",
           "d": "What will the weather do next? Check tomorrow.",
           "art": "wc/journal-06.jpg",
-          "jp": "Look at the weather today. Draw the sky and describe how you feel outside. What changes do you notice?"
+          "jp": "Draw the sky. Write the temperature, the wind and how it feels outside. What will the weather do next?"
         },
         {
           "name": "Shape Hunt",
@@ -229,7 +229,7 @@
         },
         {
           "name": "Mushroom Watch",
-          "t": "Find a mushroom. Draw the top, the underside and where it grows. Look, don't touch.",
+          "t": "Find a mushroom. Draw the top, the underside (get low or use a phone camera) and where it grows. Look, don't touch.",
           "d": "Come back in 3 days. What changed?",
           "art": "wc/journal-18.jpg",
           "split": [
@@ -273,12 +273,12 @@
           "t": "Draw the winter sky and the light at this time of day.",
           "d": "What time does it get dark now? Write it down each week.",
           "art": "wc/journal-22.jpg",
-          "jp": "Look at the sky in winter. Draw the winter clouds. Write about how the sky changes in winter."
+          "jp": "Draw the winter sky and the light right now. Write down what time it gets dark."
         },
         {
           "name": "Snowflakes Up Close",
           "t": "Catch snowflakes on a dark mitten. Draw three different shapes.",
-          "d": "How many points does each one have?",
+          "d": "How many points does each one have? (Whole ones always have six.)",
           "art": "wc/journal-23.jpg",
           "jp": "Look closely at snowflakes. Draw their shapes and write what you find fascinating about them."
         },
@@ -316,7 +316,7 @@
         },
         {
           "name": "Ice Patterns",
-          "t": "Find frost or ice. Draw the patterns you see up close.",
+          "t": "Find frost or ice on a window, car or puddle (never step onto pond ice). Draw the patterns up close.",
           "d": "What shapes repeat? Where else have you seen them?",
           "art": "wc/journal-28.jpg"
         }
@@ -375,7 +375,7 @@
         },
         {
           "name": "Puddle and Pond Life",
-          "t": "Look closely at the edge of a puddle or pond. Draw what moves.",
+          "t": "Look closely at the edge of a puddle or pond, with a grown-up within arm's reach. Draw what moves.",
           "d": "Come back in a week. What changed?",
           "art": "wc/journal-36.jpg"
         }

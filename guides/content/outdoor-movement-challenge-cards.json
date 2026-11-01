@@ -76,6 +76,10 @@
       {
         "q": "A sibling always wins",
         "a": "Race only against your own number, or use card 22, the Fair Handicap, until races finish close."
+      },
+      {
+        "q": "Their number keeps going down",
+        "a": "Check sleep and how many days in a row they've tested. Bodies get stronger on rest days, so try the hold cards every other day."
       }
     ]
   },
@@ -105,13 +109,13 @@
         {
           "name": "The Tree Sit",
           "t": "Wall sit against a tree, or plank on the grass, as long as you can. Time it: that's your record.",
-          "d": "Beat it by 5 seconds a day for one week.",
+          "d": "Try once a day for a week. Aim for 5 seconds past your best, not 5 more every day.",
           "icon": "tree-pine",
           "art": "wc/move-01.jpg"
         },
         {
           "name": "The Long Throw",
-          "t": "Ten throws for distance with a pinecone or a stone. Mark your best with a stick.",
+          "t": "Ten throws for distance with a pinecone, or a stone only where nobody is ahead and nothing can break. Mark your best with a stick.",
           "d": "Ten more with your other arm. How close can it get?",
           "icon": "send",
           "art": "wc/move-02.jpg"
@@ -145,14 +149,14 @@
         {
           "name": "The Daily Lap",
           "t": "Pick one two-minute outside move, like a lap of the yard. Same time every day. Start a streak chart.",
-          "d": "Get past day 4. That's where most streaks die.",
+          "d": "Circle the day you most wanted to skip. What got you out the door anyway?",
           "icon": "calendar-check",
           "art": "wc/move-06.jpg"
         },
         {
           "name": "Morning Minute",
           "t": "Sixty seconds of moving outside before breakfast, every day this week. Rain counts.",
-          "d": "Make it the same sixty seconds every day. Routines beat decisions.",
+          "d": "Choose the exact move and the exact spot tonight, so tomorrow there's nothing to decide.",
           "icon": "sunrise",
           "art": "wc/move-07.jpg"
         },
@@ -205,7 +209,7 @@
         },
         {
           "name": "Barefoot Test",
-          "t": "Walk barefoot on three safe surfaces: grass, sand, dirt or smooth rock. Rate each out of 10.",
+          "t": "Walk barefoot on three safe surfaces: grass, sand, dirt or smooth rock. Rate each out of 10. Check the ground first for glass, thorns and bees in the clover.",
           "d": "Now in shoes. What do your feet notice that shoes hide?",
           "icon": "footprints",
           "art": "wc/move-14.jpg"
@@ -224,7 +228,7 @@
       "cards": [
         {
           "name": "The Instinct Walk",
-          "t": "With your adult, walk a new route. Make three turns by instinct, then find your way back, no phone.",
+          "t": "With your adult, walk a new route. Make three turns by instinct, then find your way back without a map (your adult keeps a phone in a pocket for backup).",
           "d": "Get back using landmarks you called out loud on the way in.",
           "icon": "compass",
           "art": "wc/move-16.jpg"
@@ -232,20 +236,20 @@
         {
           "name": "The Long Haul",
           "t": "Pick a far point you can see: a hill, a tower, the end of the beach. Get there on foot.",
-          "d": "No complaints allowed for the last third. That's the training part.",
+          "d": "Before the last third, pick what carries you: a song, a game, a snack stop. Did it work?",
           "icon": "mountain",
           "art": "wc/move-17.jpg"
         },
         {
           "name": "Pack Weight",
-          "t": "Load a backpack (books, water) and take your usual walk. How far is still comfortable?",
+          "t": "Load a backpack (books, water), no more than about a tenth of your body weight, and take your usual walk. How far is still comfortable?",
           "d": "Same distance, one more water bottle.",
           "icon": "backpack",
           "art": "wc/move-18.jpg"
         },
         {
           "name": "Weather Proof",
-          "t": "Twenty minutes outside in imperfect weather, on purpose. Dress for it, move in it, come back warm.",
+          "t": "Twenty minutes outside in imperfect weather, on purpose (rain, wind or cold, never thunder or lightning). Dress for it, move in it, come back warm.",
           "d": "Rate the weather out of 10 before and after.",
           "icon": "cloud-rain",
           "art": "wc/move-19.jpg"
@@ -271,8 +275,8 @@
         },
         {
           "name": "The Fair Handicap",
-          "t": "Race someone faster, but they hop, bear-crawl or run backwards. Adjust until races finish close.",
-          "d": "Find the exact handicap that makes it 50-50. That's real math.",
+          "t": "Race someone faster, but they start behind the line. Move their start back one step at a time until races finish close.",
+          "d": "Now double the race length. Does the same head start still work, or does it need to double too?",
           "icon": "scale",
           "art": "wc/move-22.jpg"
         },

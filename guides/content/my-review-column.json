@@ -16,7 +16,7 @@
     "For the taste test: 3 snacks, cereals or drinks (like 3 juices or 3 kinds of milk), with the labels hidden"
   ],
   "lesson": {
-    "text": "A useful review does three things. It says what you think, gives a reason, and proves it with a detail the reader can picture. Teach that once, then keep asking for it all week.",
+    "text": "A useful review says what you think, gives a reason, and proves it with a detail the reader can picture. The best ones also admit one downside and say whether it was worth it.",
     "before": "The park was good. I liked it. 5 stars.",
     "model": [
       {
@@ -85,6 +85,10 @@
       {
         "q": "Every review is 'it was good'",
         "a": "Read two real reviews together, a helpful one and a useless one. Ask which would help you decide."
+      },
+      {
+        "q": "Everything gets top marks",
+        "a": "Have them rank three things of the same kind first, then score them. Two can't both be the best, and the score has to show the gap."
       }
     ]
   },
@@ -117,8 +121,8 @@
   "steps": [
     {
       "title": "Run a blind taste test",
-      "why": "A silly first review that teaches the whole skill, then a list of real things to review.",
-      "kid": "Hide the labels on 3 snacks, cereals or drinks (3 juices, 3 sodas, 3 kinds of milk) and have everyone try each one without knowing which is which. Your kid rates them and says why: which won, which lost, and what exactly made the difference. Then they make a list of real things they could review this week and pick 3 to 5 they have strong feelings about, good or bad.",
+      "why": "A silly first review that teaches the whole skill, then a list of things to review.",
+      "kid": "You hide the labels on 3 snacks, cereals or drinks (3 juices, 3 sodas, 3 kinds of milk), and everyone, your kid included, tries each one blind. Your kid rates them and says why: which won, which lost, and what exactly made the difference. Then they make a list of real things they could review this week and pick 3 to 5 they have strong feelings about, good or bad.",
       "you": "Set up the taste test and play along. When your kid says 'this one's better,' ask what makes it better until you get something specific, like 'crunchier' or 'less sweet.' Then help them remember what they've eaten, read, played or visited lately, and let them choose.",
       "starters": [
         "A book or comic",
@@ -143,7 +147,7 @@
       "title": "Make the rating system",
       "why": "Your kid decides how the column scores things, and what each score means.",
       "kid": "Your kid invents the rating system they'll use for every review. It can be stars, a number out of 10, or something of their own like acorns or slices of pizza. Older kids can score out of 100 with categories, ten points each, and take points off with a reason. Then they write down what the top and bottom scores mean and test the system on the taste-test winner.",
-      "you": "Ask the questions that make it real. What's the difference between a 3 and a 4? Could a stranger understand the score without asking? Let them change it after the test.",
+      "you": "Ask the questions that pin it down. What's the difference between a 3 and a 4? Could a stranger understand the score without asking? Let them change it after the test.",
       "starters": [
         "Stars out of 5",
         "A number out of 10",
@@ -186,7 +190,7 @@
         "If someone only read your first sentence, would they know your opinion?",
         "Who would love this? Who would hate it? Did you say so?"
       ],
-      "tip": "Keep the Riverside Park example open while they write. Pointing at 'proof' is easier than explaining it again.",
+      "tip": "If a review has no proof, ask 'what would I see if I went?' Whatever they answer is the proof sentence.",
       "levels": {
         "explore": "Say it first: what it is, what you think, and one 'because'. Then write or dictate it.",
         "develop": "Write an opinion, 2 or 3 reasons with proof, one downside, and a rating.",
@@ -202,11 +206,11 @@
         "If this were in a newspaper, would someone want to read it?",
         "Did writing the review change your mind about anything?"
       ],
-      "tip": "Give it a real name and a real folder. Kids write differently once they know someone will read it.",
+      "tip": "Tell them who the first reader will be before the final copy. A named reader changes the writing more than any correction.",
       "levels": {
         "explore": "Name the column, put the reviews in order, and share them with one person.",
         "develop": "Add a header and matching format, share with two people, and write down their feedback.",
-        "extend": "Ask readers which review they'd trust enough to act on, find why, and add that to your weakest review."
+        "extend": "Ask each reader which review they'd trust enough to act on, and what made them trust it. Add that to your weakest review."
       }
     }
   ],

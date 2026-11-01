@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Help with the setup, then hand the plant over and mean it. The temptation is quietly watering it when they forget: a day of droop teaches more than a rescue.",
+    "intro": "Help with the setup, then hand the plant over and mean it. The temptation is quietly watering it when they forget: a day of droop teaches more than a rescue. Until seedlings have their first true leaves, one quiet reminder is fine.",
     "plan": [
       {
         "when": "Day 1",
@@ -76,6 +76,10 @@
       {
         "q": "Nothing came up",
         "a": "Often planted too deep or too wet. Check the packet together and try again. It's a useful lesson about following instructions."
+      },
+      {
+        "q": "The sprouts are tall, pale and flopping",
+        "a": "Not enough light, common on a fall or winter windowsill. Move them to your brightest window and turn the pot daily."
       }
     ]
   },
@@ -101,7 +105,7 @@
     {
       "title": "Be a seed detective",
       "why": "A look inside a seed, then choosing what to grow.",
-      "kid": "Soak a few dried beans or peas in water overnight, then your kid gently splits one open: inside is a tiny baby plant, curled up with its food supply. Then they pick something edible and fast to grow. Radishes, lettuce, cress and pea shoots are ready in days or a few weeks. They read the seed packet together: how deep, how far apart, how many days to harvest.",
+      "kid": "Soak a few dried beans or peas in water overnight, then your kid gently splits one open: inside is a tiny baby plant, curled up with its food supply. They lay one soaked bean on a damp paper towel in a clear jar to watch later. Then they pick something edible and fast to grow. Radishes, lettuce, cress and pea shoots are ready in days or a few weeks. They read the seed packet together: how deep, how far apart, how many days to harvest.",
       "you": "Let them pick, but nudge toward speed. A six-year-old won't wait two months for a tomato. Radishes are up in about a week and ready in three or four, and that speed is what keeps a kid coming back.",
       "starters": [
         "Cress (days)",
@@ -117,7 +121,7 @@
       ],
       "tip": "Read 'days to harvest' on the packet together and pick one that fits your kid's patience, and yours.",
       "levels": {
-        "explore": "Open a soaked bean, then pick cress or sprouts, the fastest of all.",
+        "explore": "Open a soaked bean, then pick cress or pea shoots, the fastest of all.",
         "develop": "Draw the inside of the seed, then pick radishes or lettuce.",
         "extend": "Work backward from 'days to harvest' so two crops are ready the same week."
       }
@@ -126,7 +130,7 @@
       "title": "Plant it and give it a home",
       "why": "Your kid plants the seeds themselves and sets up a daily routine.",
       "kid": "Your kid fills the pot with soil, pokes holes at the depth the packet says, drops the seeds, covers them and waters gently. Then they choose a sunny spot they walk past every day and pick a daily check-in time: after breakfast, before bed, whenever they'll remember.",
-      "you": "Help with the first setup, then let their hands do it. Kids plant an inch deep when the packet says a quarter inch. A few that don't come up is its own small lesson.",
+      "you": "Help with the first setup, then let their hands do it. Kids plant an inch deep when the packet says a quarter inch. A few that don't come up is its own small lesson. Too deep, a seed can use up its stored food before it reaches light.",
       "ask": [
         "How deep and how far apart does the packet say?",
         "Where's the sunniest spot you'll actually walk past every day?"
@@ -141,8 +145,8 @@
     {
       "title": "Keep it alive and track it",
       "why": "The daily care, plus a weekly measurement.",
-      "kid": "Every day your kid checks: is the soil dry, is it getting light, does anything look off? A little water often beats a flood once a week. Once a week, they measure the tallest sprout or sketch the plant and write the date. They notice the plant leaning toward the window and roots coming before leaves.",
-      "you": "Remind once if you must, then let the plant give the feedback. Treat the tracking like it matters: the weekly numbers make slow change visible.",
+      "kid": "Every day your kid checks: is the soil dry, is it getting light, does anything look off? A little water often beats a flood once a week. Once a week, they measure the tallest sprout or sketch the plant and write the date. They notice the plant leaning toward the window and, in the bean jar, the root pushing out before any leaf.",
+      "you": "Remind once if you must, then let the plant give the feedback. Write the first measurement down with them: the weekly numbers make slow change visible.",
       "ask": [
         "How much has it grown since last week?",
         "Which way is it leaning, and why do you think that is?"
@@ -158,12 +162,12 @@
       "title": "Troubleshoot",
       "why": "Something will go a bit wrong, and your kid diagnoses it.",
       "kid": "A plant droops, a leaf yellows, the sprouts get leggy and pale. Your kid treats it like a puzzle, the way the example at the start does: what's the symptom, what's the likely cause, what's the fix? Then they check whether it worked.",
-      "you": "Ask what the plant is telling them before offering answers. A plant that struggles and gets rescued teaches more than one that sails through.",
+      "you": "Ask what the plant is telling them before offering answers. A plant that struggles and gets rescued teaches more than one that sails through. For Extend: wet soil with yellow leaves points to too much water, dry crumbly soil to too little.",
       "ask": [
         "What does this plant seem to be telling you?",
         "If it's drooping or yellow, what might it need more or less of?"
       ],
-      "tip": "Droopy usually means thirsty. Yellow can mean too much water. Pale and stretched means reaching for more light.",
+      "tip": "Push a finger into the soil to the first knuckle before watering. Dry there means water, damp means wait.",
       "levels": {
         "explore": "Notice one thing that looks off.",
         "develop": "Guess the cause of a problem and try a fix.",

@@ -72,6 +72,10 @@
       {
         "q": "A younger kid loses interest",
         "a": "Stick to the 'Find something...' cards and make it a race to find it first."
+      },
+      {
+        "q": "My older kid finds it too easy",
+        "a": "Hand them the deck. They choose and read the cards for you or a younger sibling, and they do the notebook level on their own."
       }
     ]
   },
@@ -171,7 +175,7 @@
         },
         {
           "t": "Find a spiral, or something that curves like one.",
-          "d": "Where else do you see spirals in real life?",
+          "d": "Where else have you seen a spiral: in food, at home, on your own body?",
           "icon": "shell",
           "art": "wc/walk-12.jpg"
         },
@@ -189,7 +193,7 @@
         },
         {
           "t": "Find something with a triangle shape.",
-          "d": "Why are triangles so strong?",
+          "d": "Make a triangle and a square from sticks and press a corner of each. Which one squashes?",
           "icon": "triangle",
           "art": "wc/walk-15.jpg"
         },
@@ -413,8 +417,8 @@
           "art": "wc/walk-49.jpg"
         },
         {
-          "t": "Find something that's a sign of time passing: growth rings, worn rock, new shoots.",
-          "d": "What do you think it looked like a month ago?",
+          "t": "Find the oldest thing you can see. What's your evidence?",
+          "d": "Now the youngest. Roughly how much older is the first?",
           "icon": "trees",
           "art": "wc/walk-50.jpg"
         }
@@ -436,8 +440,8 @@
           "art": "wc/walk-52.jpg"
         },
         {
-          "t": "Close your eyes for 10 seconds. What do you hear now?",
-          "d": "Which sound is closest?",
+          "t": "Hear a bird or bug you can't see. Invent a name for it from its sound alone.",
+          "d": "Copy the sound. Can someone else find the maker?",
           "icon": "ear",
           "art": "wc/walk-53.jpg"
         },
@@ -495,8 +499,8 @@
           "art": "wc/walk-61.jpg"
         },
         {
-          "t": "Find something that shows teamwork in nature: a group, many of the same thing, a shared space.",
-          "d": "How does teamwork help them survive?",
+          "t": "Find animals working together: an ant line, a flock, bees on the same flowers.",
+          "d": "What can the group do that one alone can't?",
           "icon": "users",
           "art": "wc/walk-62.jpg"
         },
@@ -519,7 +523,7 @@
           "art": "wc/walk-65.jpg"
         },
         {
-          "t": "Before the next bend in the path (or under the next log), predict one thing you'll find. Then check.",
+          "t": "Before the next bend in the path (or under the next log: roll it toward you, then put it back), predict one thing you'll find. Then check.",
           "d": "Were you right? What made you predict that?",
           "icon": "compass",
           "art": "wc/walk-66.jpg"

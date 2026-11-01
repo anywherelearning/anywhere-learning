@@ -52,15 +52,15 @@
     }
   ],
   "howTo": {
-    "intro": "The hard part is the waiting. Build the jar, leave it alone, and look a few times a week. Keep the lid loose and wash hands after each check.",
+    "intro": "The hard part is the waiting. Build the jar, leave it alone, and look a few times a week. Keep the lid loose, look at mould through the glass instead of sniffing it, and wash hands after each check.",
     "plan": [
       {
         "when": "Day 1",
-        "what": "The rot-or-not sort, build the jar, record Day One (Steps 1 and 2). 30 minutes."
+        "what": "The rot-or-not sort, build both jars, record Day One (Steps 1, 2 and 4). 30 minutes."
       },
       {
         "when": "Weeks 1 to 4",
-        "what": "Look 2 or 3 times a week, and set up the fair test (Steps 3 and 4). 5 minutes each."
+        "what": "Look 2 or 3 times a week and compare the two jars (Steps 3 and 4). 5 minutes each."
       },
       {
         "when": "The end",
@@ -76,6 +76,10 @@
       {
         "q": "It smells bad",
         "a": "Too wet or sealed. Open it up, add a few dry leaves, and give it air. Decomposers need to breathe too."
+      },
+      {
+        "q": "It's freezing at night",
+        "a": "Bring the jar inside to a cool, shaded spot. Below freezing the decomposers stop, and a damp glass jar can crack."
       }
     ]
   },
@@ -101,8 +105,8 @@
     {
       "title": "Sort rot or not",
       "why": "A quick prediction game, then the jar gets built.",
-      "kid": "Gather a few small things: a leaf, a scrap of paper, a bit of apple, a plastic bottle cap, a pebble. Your kid sorts them into two piles, 'nature will break it down' and 'it won't,' and says why. Then they build the time capsule: a clear jar with a handful of leaves, a pinch of outdoor soil and a splash of water, damp but not soaking, loosely covered so it can breathe.",
-      "you": "Ask why for each guess, and don't mark anything wrong yet: they'll check later. Help with the jar, then hand it fully to them. Put it somewhere shaded where they'll remember to look.",
+      "kid": "Gather a few small things: a leaf, a scrap of paper, a bit of apple, a plastic bottle cap, a pebble. Your kid sorts them into two piles, 'nature will break it down' and 'it won't,' and says why. Then they build the time capsule: a clear jar with a handful of leaves, a pinch of outdoor soil and a splash of water, damp but not soaking, loosely covered so it can breathe. They push one thing from each pile against the glass: the paper, a bit of apple, the bottle cap.",
+      "you": "Ask why for each guess, and don't mark anything wrong yet: they'll check later. Help with the jar, then hand it fully to them. Put it somewhere shaded where they'll remember to look. Paper was once a tree, which is why it rots.",
       "ask": [
         "Which of these do you think nature can break down?",
         "Why do you think we added soil, and not just leaves?"
@@ -118,7 +122,7 @@
       "title": "Record Day One",
       "why": "Your kid captures the starting point, before anything changes.",
       "kid": "Your kid draws the jar exactly as it looks today and writes a few words on the colour, size and feel of the leaves. This is the 'before' every experiment needs. Without it, they can't prove anything changed.",
-      "you": "Treat this first record like real scientific data. Date it. It feels dull because nothing has happened yet, and that's exactly why it matters.",
+      "you": "Write the date at the top together. It feels dull because nothing has happened yet, and that's exactly why it matters.",
       "ask": [
         "What colour and size are the leaves right now?",
         "Soft or crunchy? Wet or dry?"
@@ -133,24 +137,24 @@
     {
       "title": "Watch it change",
       "why": "Two or three times a week, your kid records what's different.",
-      "kid": "Your kid checks the jar a few times a week and writes a dated entry like the example: what it looks like, how the leaves feel, and what changed since last time. The leaves darken, soften, shrink and slowly turn toward soil. When a week barely changes, they write that too.",
-      "you": "Help them remember (a note on the fridge works). Before each look, ask them to predict what they'll find. Then introduce the culprits: decomposers, tiny fungi, bacteria and bugs eating the leaves and turning them into nutrients for plants.",
+      "kid": "Your kid checks the jar a few times a week and writes a dated entry like the example: what it looks like, how the leaves feel, and what changed since last time. The leaves darken, soften and grow fuzz, and the thinnest bits start to fall apart. When a week barely changes, they write that too.",
+      "you": "Help them remember (a note on the fridge works). Before each look, ask them to predict what they'll find. Then introduce the culprits: decomposers, tiny fungi, bacteria and bugs eating the leaves and turning them into nutrients for plants. For Extend: most of a missing leaf leaves as carbon dioxide the decomposers breathe out.",
       "ask": [
         "What looks different from last time? What stayed the same?",
         "Who do you think is doing the work in this jar?"
       ],
-      "tip": "In science, 'no visible change' is real data, not a failure. Around week two, the changes usually speed up.",
+      "tip": "'No visible change' counts as data, not a failure. White or green fuzz is mould, one of the decomposers: the jar is working.",
       "levels": {
         "explore": "Notice one change after a week.",
         "develop": "Record dated changes across several weeks, using the word decomposer.",
-        "extend": "Track the changes and explain the whole chain: leaf, decomposers, soil, the next plant."
+        "extend": "The leaves are shrinking. Where did the missing leaf go?"
       }
     },
     {
       "title": "Run the fair test",
       "why": "Two jars, one difference, and a real question.",
       "kid": "Your kid sets up two jars that are the same except for one thing. Moisture is a great first test: Jar A dry, Jar B damp. Or they pick their own: warm versus cool, torn leaves versus whole. They predict which will break down faster, then compare the two jars each time they look.",
-      "you": "Hold them to changing just one thing. Let their prediction lead the test, even if it's not the one you'd pick.",
+      "you": "Build the second jar on Day 1 so both start together; the Step 1 jar can be one of the pair. Hold them to changing just one thing. Let their prediction lead the test, even if it's not the one you'd pick.",
       "ask": [
         "What's the one thing we're changing between the jars?",
         "Which do you predict will break down faster, and why?"
@@ -164,14 +168,14 @@
     },
     {
       "title": "Close the case",
-      "why": "Your kid reports what they found, like a real scientist.",
+      "why": "Your kid reports what they found, with weeks of notes behind it.",
       "kid": "Your kid writes or tells their findings: what broke down and what didn't (back to the rot-or-not sort), what made it faster or slower, and the big idea that nature is constantly recycling dead things into the soil that grows new life. They point to their drawings and jars as evidence.",
-      "you": "Take the report seriously: they earned it with weeks of watching. Then use the broken-down soil to plant a seed together and close the loop.",
+      "you": "Take the report seriously: they earned it with weeks of watching. Then tip the jar into a pot, plant a seed in it together, and let the decomposers keep working while it grows.",
       "ask": [
         "Which of your rot-or-not guesses were right?",
         "If a friend asked why leaves disappear in the fall, what would you tell them?"
       ],
-      "tip": "Ending by planting a seed in their own decomposed soil makes the whole cycle real.",
+      "tip": "A seed planted in the jar's soil and leaves shows where all that rotting is headed.",
       "levels": {
         "explore": "Say one thing you learned.",
         "develop": "Write a short conclusion with evidence from your notes.",
@@ -187,7 +191,7 @@
       "Start a real compost bin and track kitchen scraps turning into soil",
       "Bury a few objects in the yard and dig them up months later",
       "Race a sealed bag against an open pile",
-      "Plant a seed in the finished soil"
+      "Plant a seed in the jar's soil and leaves"
     ]
   },
   "signs": [

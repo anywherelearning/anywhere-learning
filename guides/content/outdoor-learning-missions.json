@@ -25,7 +25,7 @@
       },
       {
         "part": "Clue",
-        "line": "A pile of scales all around it, and tooth marks."
+        "line": "A pile of fresh, pale scales all around it, and tooth marks."
       },
       {
         "part": "Claim",
@@ -77,6 +77,10 @@
       {
         "q": "They rush to tick everything",
         "a": "Slow it down with the Claim: each find needs one clue that proves it counts."
+      },
+      {
+        "q": "The mission doesn't fit where we are",
+        "a": "Swap it: in a city, run Sound, Colour or Human impact. Save Water cycle for a rainy day, when every gutter is a stream."
       }
     ]
   },
@@ -130,7 +134,7 @@
           "art": "wc/micro-burr.jpg"
         },
         {
-          "t": "A tiny shelter under bark or a stone",
+          "t": "A tiny shelter under a stone (roll it toward you, then put it back)",
           "art": "wc/micro-leaf-shelter.jpg"
         },
         {
@@ -138,7 +142,7 @@
           "art": "wc/micro-ants.jpg"
         },
         {
-          "t": "Moss or lichen",
+          "t": "Lichen: a crusty or leafy patch on bark or rock",
           "art": "wc/micro-moss-stone.jpg"
         },
         {
@@ -170,11 +174,11 @@
           "art": "wc/signs-tracks.jpg"
         },
         {
-          "t": "Droppings",
+          "t": "Droppings (look only, never touch)",
           "art": "wc/signs-droppings.jpg"
         },
         {
-          "t": "A feather",
+          "t": "A feather (look, don't pick up)",
           "art": "wc/signs-feather.jpg"
         },
         {
@@ -223,7 +227,7 @@
     },
     {
       "title": "Texture hunt",
-      "rule": "Use your sense of touch to compare surfaces and find out how nature protects, soaks up and adapts.",
+      "rule": "Use your sense of touch to compare surfaces and find out how nature protects, soaks up and adapts. Touch only what your grown-up says is safe: no leaves of three, no nettles, no fuzzy caterpillars, and wash hands after.",
       "cards": [
         {
           "t": "Smooth",
@@ -258,7 +262,7 @@
           "art": "wc/texture-sticky.jpg"
         },
         {
-          "t": "Fuzzy or hairy",
+          "t": "Fuzzy or hairy (plants, not caterpillars)",
           "art": "wc/texture-fuzzy.jpg"
         },
         {
@@ -396,7 +400,7 @@
       ],
       "extras": [
         "Build a mini bridge, tower or shelter from fallen things, then do a wind test.",
-        "Name the force at work in 3 finds: gravity, wind, water or weight.",
+        "Name the force at work in 3 finds: gravity, pushing wind, flowing water, or friction.",
         "Pick one nature invention people could copy. How would they use it?"
       ],
       "short": "Engineer"
@@ -515,7 +519,7 @@
         }
       ],
       "extras": [
-        "Pick one problem and think of 3 solutions: one a kid can do, one a whole town could do.",
+        "Pick one problem and think of 3 fixes: for a kid, a family and a whole town.",
         "Write a one-sentence promise to this place, and why it matters.",
         "Do a tiny cleanup with gloves, if it's safe, and count what you collect."
       ],
@@ -523,7 +527,7 @@
     },
     {
       "title": "Water cycle hunt",
-      "rule": "Find how water moves around you: above ground, below ground and in the air.",
+      "rule": "Find how water moves around you. Near a stream or lake, stay within arm's reach of your grown-up.",
       "cards": [
         {
           "t": "A water source: a stream, a puddle, a lake",
@@ -550,7 +554,7 @@
           "art": "wc/water-erosion.jpg"
         },
         {
-          "t": "A plant that loves wet ground",
+          "t": "A plant that loves wet ground (moss, ferns)",
           "art": "wc/water-wet-plant.jpg"
         },
         {
@@ -646,7 +650,7 @@
       "rule": "Explore the ground like a geologist, and notice how rocks and soil shape a place.",
       "cards": [
         {
-          "t": "A smooth rock",
+          "t": "A rock with a plant growing out of a crack",
           "art": "wc/rocks-smooth.jpg"
         },
         {
@@ -695,7 +699,7 @@
         }
       ],
       "extras": [
-        "Sort your rocks by how they formed: worn by water, broken, or layered.",
+        "Sort your rocks by their story: rounded by water, broken off something bigger, or built in layers (those probably formed from settled sand or mud).",
         "Squeeze-test the soils with your fingers. Which holds together best, and why might plants care?",
         "Predict which soil grows taller plants, then check what's actually growing."
       ],

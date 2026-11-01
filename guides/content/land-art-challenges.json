@@ -4,7 +4,7 @@
   "title": "Land Art Challenge Cards",
   "tagline": "48 nature art prompts · Pattern · Design",
   "ages": "Ages 6 to 14",
-  "goal": "48 prompts for making temporary art outside with whatever nature leaves lying around: leaves, sticks, rocks, pinecones, petals, sand. Your kid creates a mandala, a spiral, a rock tower or a story path, photographs it, and leaves it for the wind. No art lessons, no supplies, and there's no wrong way to do it.",
+  "goal": "48 prompts for making temporary art outside with whatever nature leaves lying around: leaves, sticks, rocks, pinecones, petals, sand. Your kid creates a mandala, a spiral, a rock tower or a story path, photographs it, and puts the pieces back where they came from. No art lessons, no supplies, and there's no wrong way to do it.",
   "need": [
     "These cards, on your phone or printed and cut out",
     "Fallen natural materials: leaves, sticks, rocks, pinecones, petals, sand, shells (where allowed)",
@@ -76,6 +76,10 @@
       {
         "q": "Nothing much on the ground",
         "a": "Pebbles, sand and a few twigs are enough. Draw in the sand with a stick for the rest."
+      },
+      {
+        "q": "My 13-year-old says it's babyish",
+        "a": "Make them the photographer: the piece has to be built for one exact camera angle. Start with Symmetry Challenge or Fractal Feel."
       }
     ]
   },
@@ -161,7 +165,7 @@
         {
           "name": "Dots and Dashes",
           "t": "Create a code pattern using pebbles (dots) and sticks (dashes).",
-          "d": "Invent a message and have someone decode it.",
+          "d": "Spell SOS in Morse code (3 dots, 3 dashes, 3 dots), then invent your own code for one word and teach it.",
           "icon": "binary",
           "art": "wc/landart-09.jpg"
         },
@@ -174,8 +178,8 @@
         },
         {
           "name": "Fractal Feel",
-          "t": "Make a small pattern, then repeat it in a bigger version.",
-          "d": "Repeat it 3 times: small, medium, large.",
+          "t": "Make a small triangle from 3 pebbles. Then use 3 of those triangles to make a bigger triangle.",
+          "d": "Go one level bigger again. How many pebbles does it need? (3, then 9, then 27.)",
           "icon": "copy",
           "art": "wc/landart-11.jpg"
         },
@@ -193,29 +197,29 @@
       "cards": [
         {
           "name": "Mini Tower",
-          "t": "Build the tallest tower you can that's safe and stable.",
-          "d": "It must survive a gentle wind test.",
+          "t": "Build the tallest tower you can from sticks, pinecones and loose stones, away from trails and water.",
+          "d": "It must survive a gentle wind test. Then take it down so nobody mistakes it for a trail marker.",
           "icon": "tower-control",
           "art": "wc/landart-13.jpg"
         },
         {
           "name": "Balanced Rock Line",
           "t": "Make a line of rocks from smallest to largest.",
-          "d": "Add one balanced rock on top, only if it's safe.",
+          "d": "Add one balanced rock on top for the photo, then take the line apart. Never move rocks from a stream: they're somebody's home.",
           "icon": "align-vertical-justify-end",
           "art": "wc/landart-14.jpg"
         },
         {
-          "name": "Stick Bridge",
-          "t": "Build a bridge across a small gap.",
-          "d": "Test if it can hold 3 small stones.",
+          "name": "Stone Arch",
+          "t": "Build an arch from flat stones or bark that stands on its own.",
+          "d": "Take out one piece at a time. Which one brings it all down?",
           "icon": "rainbow",
           "art": "wc/landart-15.jpg"
         },
         {
-          "name": "Leaf Boat Art",
-          "t": "Create a boat shape using leaves and sticks.",
-          "d": "Give it a flag and a name.",
+          "name": "Wind Art",
+          "t": "Make a design from only light things: seeds, feathers, dry leaves. Photograph it, then watch the wind.",
+          "d": "Rebuild it so it lasts one full minute of wind.",
           "icon": "sailboat",
           "art": "wc/landart-16.jpg"
         },
@@ -250,7 +254,7 @@
         {
           "name": "Nature Symbol",
           "t": "Create a simple symbol, like a heart or a star, using natural items.",
-          "d": "Decorate it with a border.",
+          "d": "Make it with half the pieces. Can someone still tell what it is?",
           "icon": "star",
           "art": "wc/landart-21.jpg"
         },
@@ -339,14 +343,14 @@
         {
           "name": "Texture Gradient",
           "t": "Arrange items from smooth to rough.",
-          "d": "Add a second gradient: small to large.",
+          "d": "Close your eyes and put them in order by touch alone.",
           "icon": "blend",
           "art": "wc/landart-33.jpg"
         },
         {
           "name": "Leaf Layout",
-          "t": "Arrange leaves by their veins: big veins to tiny veins.",
-          "d": "Sort them into 3 groups and name the groups.",
+          "t": "Sort leaves by vein pattern: lines side by side (grass), a feather from one middle vein (oak, birch), or a hand spreading from one point (maple).",
+          "d": "Find the group you have the fewest of. Why is it rarer here?",
           "icon": "leaf",
           "art": "wc/landart-34.jpg"
         },
@@ -360,7 +364,7 @@
         {
           "name": "Shadow Drawing",
           "t": "Place items so their shadows form a picture.",
-          "d": "Take a photo from above to capture it.",
+          "d": "Come back in 30 minutes. How has the picture changed, and why?",
           "icon": "moon-star",
           "art": "wc/landart-36.jpg"
         }
@@ -372,7 +376,7 @@
         {
           "name": "Land Art Name Tag",
           "t": "Spell your name or initials with sticks and rocks.",
-          "d": "Add a decorative border.",
+          "d": "Make it readable in a photo taken standing up from 10 steps away. What had to change?",
           "icon": "type",
           "art": "wc/landart-37.jpg"
         },
@@ -435,7 +439,7 @@
         {
           "name": "Nature Letter Art",
           "t": "Make one big letter using natural items.",
-          "d": "Decorate it with patterns inside the letter.",
+          "d": "Fill the letter with things that start with that letter's sound.",
           "icon": "text",
           "art": "wc/landart-46.jpg"
         },
@@ -448,8 +452,8 @@
         },
         {
           "name": "Clean-Up Art",
-          "t": "Make art using only natural litter (fallen leaves, twigs) gathered from the area.",
-          "d": "Count how many pieces you used, then return them gently.",
+          "t": "Pick up human litter with gloves (no glass or sharp things) and make art from it first.",
+          "d": "Count and sort what you found, then put it all in the bin.",
           "icon": "trash-2",
           "art": "wc/landart-48.jpg"
         }

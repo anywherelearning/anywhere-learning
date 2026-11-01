@@ -101,8 +101,8 @@
     {
       "title": "Fly a paper helicopter",
       "why": "A quick spinning toy, then the hunt for real seeds that do the same.",
-      "kid": "Cut a strip of paper, split the top into two flaps, fold them opposite ways and drop it from up high: it spins down slowly. That's exactly what a maple key does. Then head outside and gather 5 to 10 different seeds or pods. The more different, the better: a spinning maple key, a sticky burr, a heavy acorn, a fluffy dandelion.",
-      "you": "Help make the helicopter, then steer them toward variety on the hunt and let them lead. Seeds are everywhere once you look: in cracks, under trees, stuck to your own socks.",
+      "kid": "Cut a strip of paper, split the top into two flaps, fold them opposite ways, fold the bottom up for weight and drop it from up high: it spins down slowly. That's the same trick a maple key uses. Then head outside and gather 5 to 10 different seeds or pods. The more different, the better: a spinning maple key, a sticky burr, a heavy acorn, a fluffy dandelion.",
+      "you": "Help make the helicopter, then steer them toward variety on the hunt and let them lead. Seeds are everywhere once you look: in cracks, under trees, stuck to your own socks. Longer wings usually fall slower: more paper pushing against the air.",
       "starters": [
         "Maple keys",
         "Burrs",
@@ -115,7 +115,7 @@
         "Why did the paper helicopter fall so slowly?",
         "Which seed looks the strangest, and why might it be shaped like that?"
       ],
-      "tip": "Check your socks after walking through tall grass. Your kid will find seeds that hitched a ride on them.",
+      "tip": "Check your socks after walking through tall grass for seeds that hitched a ride, and check for ticks at the same time.",
       "levels": {
         "explore": "Fly the helicopter, then collect 3 or 4 different seeds.",
         "develop": "Collect 5 to 10 seeds with different shapes.",
@@ -126,7 +126,7 @@
       "title": "Look closely and guess",
       "why": "Your kid reads each seed's features and predicts how it travels.",
       "kid": "Your kid examines each seed: is it light or heavy? Does it have wings, hooks, fluff or a hard shell? Then, like the maple key example, they guess how each one travels: on the wind, on water, on an animal, or just by dropping. They write the guesses down.",
-      "you": "Ask what they see, not what it's called. Take every guess seriously, right or wrong: the tests will check them. A magnifying glass or your phone's zoom helps.",
+      "you": "Ask what they see, not what it's called. Take every guess seriously, right or wrong: the tests will check them. A magnifying glass or your phone's zoom helps. For Extend: animals eat the fruit, carry the seeds off and drop them in their droppings.",
       "ask": [
         "Does it have anything that looks built for a job?",
         "Does this look like it could fly, or is it too heavy?"
@@ -142,7 +142,7 @@
       "title": "Sort the travellers",
       "why": "Your kid groups the seeds by how they travel.",
       "kid": "Your kid lays the seeds out and sorts them into piles: wind travellers, water travellers, animal hitchhikers, and droppers. Some might fit two piles, and that's worth talking about.",
-      "you": "Let them build the groups their own way, then ask them to defend a few choices. This is real classification: grouping by what something does, not what it looks like.",
+      "you": "Let them build the groups their own way, then ask them to defend a few choices. Acorns drop, but squirrels and jays carry and bury them, so they're animal travellers too, which the sock test can't show.",
       "ask": [
         "Which seeds belong together, and why?",
         "Are there any that could go in two groups?"
@@ -157,8 +157,8 @@
     {
       "title": "Test them",
       "why": "Drop, stick and float: proving the guesses.",
-      "kid": "Your kid tests each group. Fliers: drop each one from the same height and watch whether it spins and drifts or plops straight down. Hitchhikers: brush each against an old sock and see if it grabs on. Floaters: drop each into a bowl of water. They mark which guesses were right and fix the wrong ones.",
-      "you": "Help set a fair drop (same height for every seed) and set up the sock and the water bowl. A gentle puff of breath or a fan makes the wind test even clearer.",
+      "kid": "Your kid tests each group. Fliers: drop each one from the same height and watch whether it spins and drifts or plops straight down. Hitchhikers: brush each against an old sock and see if it grabs on. Floaters: drop each into a bowl of water, wait an hour, then stir. Many seeds float at first; water travellers stay up longest. They mark which guesses were right and fix the wrong ones.",
+      "you": "Help set a fair drop (same height for every seed) and set up the sock and the water bowl. A gentle puff of breath or a fan makes the wind test even clearer. Slow fallers spend longer in the air, so the fan usually pushes them farthest.",
       "ask": [
         "Did it spin and drift, or drop straight down?",
         "Did it stick to the sock? Did it float?"
@@ -174,7 +174,7 @@
       "title": "Design the ultimate seed",
       "why": "Your kid ranks the travellers, then invents a seed of their own.",
       "kid": "Your kid picks the best traveller and says why, using what they saw in the tests. Then the deeper question: is there a perfect seed? A sticky seed rides an animal for miles but can't fly. A fluffy seed flies beautifully but goes nowhere on a still day. Finally, they design their own seed: draw it, name it, explain how it travels, and name its one weakness.",
-      "you": "Push their thinking with 'what does it give up?' Treat the design like a real piece of engineering.",
+      "you": "Push their thinking with 'what does it give up?' For Extend there's no right answer: big seeds get a strong start, tiny ones reach more places.",
       "ask": [
         "What does your best traveller give up to be so good at it?",
         "Where would your invented seed struggle?"

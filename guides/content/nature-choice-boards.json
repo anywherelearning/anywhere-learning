@@ -4,11 +4,11 @@
   "title": "Nature Choice Boards",
   "tagline": "5 boards · 60 outdoor options · Kids choose",
   "ages": "Ages 6 to 14",
-  "goal": "Five outdoor menus, from a first-time explorer to a 12-year-old field researcher. You pick the board and the boundary, your kid picks 3 options and heads out, then comes back to show you their best discovery.",
+  "goal": "Five outdoor menus, from a first-time explorer to a 10-and-up field researcher. You pick the board and the boundary, your kid picks 3 options and heads out, then comes back to show you their best discovery.",
   "need": [
     "These boards, on your phone or printed",
     "A safe outdoor space with a clear boundary: a yard, a park, a campsite",
-    "A notebook and pencil, and a timer"
+    "A notebook and pencil, a timer, a phone for photos, and a small bottle of water"
   ],
   "lesson": {
     "text": "The board is the menu. The real skill is the show-and-tell at the end: telling one discovery clearly, with details and a question.",
@@ -76,6 +76,10 @@
       {
         "q": "An option feels too hard",
         "a": "Skip it and choose another. Or try the board below: ages are only a guide."
+      },
+      {
+        "q": "They lift logs and rocks to look underneath",
+        "a": "Roll it toward you so anything underneath escapes away from your hands, look, then roll it back exactly as it was."
       }
     ]
   },
@@ -97,14 +101,14 @@
       "text": "telling a discovery clearly"
     }
   ],
-  "levelsLine": "Five boards, from ages 6 to 12 and up. Ages are only a guide: start where your kid feels confident, and move up or down anytime. Siblings can use different boards side by side.",
+  "levelsLine": "Five boards, from ages 6 to 10 and up. Ages are only a guide: start where your kid feels confident, and move up or down anytime. Siblings can use different boards side by side.",
   "boardMode": true,
   "boardRule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
   "themes": [
     {
       "title": "Curious starter",
       "ages": "Ages 6 to 8",
-      "rule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
+      "rule": "Pick any 3. Your grown-up comes too. Then show them your best discovery.",
       "cards": [
         {
           "t": "Find 3 textures: smooth, rough and soft.",
@@ -131,7 +135,7 @@
           "art": "wc/starter-slow-steps.jpg"
         },
         {
-          "t": "Find 3 shapes: a circle, a triangle and a straight line.",
+          "t": "Find 3 shapes: a circle, a triangle and a spiral.",
           "art": "wc/starter-shapes.jpg"
         },
         {
@@ -186,7 +190,7 @@
           "art": "wc/explorer-weather.jpg"
         },
         {
-          "t": "Build a stick frame and 'photograph' a view through it.",
+          "t": "Follow one ant or beetle for 2 minutes. Where did it go, and what did it carry?",
           "art": "wc/explorer-frame.jpg"
         },
         {
@@ -249,7 +253,7 @@
           "art": "wc/scientist-claim.jpg"
         },
         {
-          "t": "Find 5 textures. Sort them: protection, comfort or camouflage.",
+          "t": "Find 5 textures on plants. Guess each one's job: protect, hold water or hide.",
           "art": "wc/scientist-textures.jpg"
         },
         {
@@ -284,7 +288,7 @@
           "art": "wc/builder-wind-shield.jpg"
         },
         {
-          "t": "Make leaf rubbings: paper on top, rub with a crayon.",
+          "t": "Press bark, a pinecone or a fern into mud. Which makes the clearest print?",
           "art": "wc/builder-rubbing.jpg"
         },
         {
@@ -367,7 +371,7 @@
           "art": "wc/researcher-sort.jpg"
         },
         {
-          "t": "Set up a ground museum exhibit with labels. Then return everything.",
+          "t": "Measure 10 leaves from one plant in finger-widths. Which size is most common?",
           "art": "wc/researcher-exhibit.jpg"
         },
         {

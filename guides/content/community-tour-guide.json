@@ -40,6 +40,10 @@
       {
         "q": "There's no history around here",
         "a": "Tours can be about nature, food or their own stories: the climbing tree, the bakery, where they learned to ride a bike."
+      },
+      {
+        "q": "Little siblings in the audience wander off",
+        "a": "Give them a job: the spotter who has to find the thing your kid is pointing at first."
       }
     ]
   },
@@ -64,7 +68,7 @@
   "steps": [
     {
       "title": "Give a house tour",
-      "why": "A silly practice tour of your home, then the real place and its stops.",
+      "why": "Your kid practises guiding at home, where nothing can go wrong, before choosing the stops.",
       "kid": "Your kid gives you a 3-minute tour of your own home, as if you were a visitor who's never been inside. At each room they point at something, tell you one thing about it, and ask you a question. Then they pick the real place for the tour, walk it with fresh eyes, and choose the stops a first-time visitor would find interesting.",
       "you": "Play the clueless visitor for the house tour and ask silly questions. Then help them think of places and walk the area together. Ask what they'd show a friend from another town, and let them choose.",
       "starters": [
@@ -90,14 +94,14 @@
       "title": "Dig up the stories",
       "why": "Your kid finds the facts and stories that make each stop worth stopping for.",
       "kid": "For each stop, your kid looks for 2 or 3 things the audience won't already know: when it was built, who used to live or work there, something about the plants or animals, or a story that happened there. They look closely, read signs and plaques, look things up, and ask people who know the area. They note where each fact came from.",
-      "you": "Help them get to sources: the library, a local history website, an old photo, or a long-time neighbour. Don't do the research for them. If a fact sounds too good to be true, ask how they could check it.",
+      "you": "Help them get to sources: the library, a local history website, an old photo, or a long-time neighbour, and go along when they talk to neighbours or shop owners. Don't do the research for them. If a fact sounds too good to be true, ask how they could check it.",
       "ask": [
         "What could you tell someone about this place that would surprise them?",
         "Who would know more about this? Could we ask them?"
       ],
       "tip": "Neighbours and local shop owners are the best sources. A story from someone who was there beats anything in a book, and kids love collecting them.",
       "levels": {
-        "explore": "Find one fact per stop from a sign or someone who knows.",
+        "explore": "At each stop, find one thing you can point at (a date, a carving, a nest) and ask a grown-up one question about it.",
         "develop": "Find 2 or 3 facts per stop from at least two sources, and mark the most surprising ones.",
         "extend": "When two sources disagree on a date or a story, decide which one to trust and say why on the tour."
       }
@@ -111,7 +115,7 @@
         "Should you start with your best stop, or save it for the end?",
         "How will you grab everyone's attention at the very first stop?"
       ],
-      "tip": "Aim for 15 to 30 minutes. Shorter and punchier beats long and complete, especially for a first tour.",
+      "tip": "Plan about 3 minutes per stop plus the walking: 10 minutes is plenty for a first tour, and 30 is the most.",
       "levels": {
         "explore": "Draw each stop on its own card, lay the cards in walking order, and say one line for each.",
         "develop": "Time the walk, adjust the order, and write a full script with an introduction, notes for each stop, transitions and a closing.",
@@ -122,7 +126,7 @@
       "title": "Practise on location",
       "why": "Your kid rehearses the whole tour, out loud, on the real route.",
       "kid": "Your kid walks the route and gives the tour out loud at each stop, as if the audience were there. They practise speaking loud enough for a group, looking up from their notes, and pointing at what they're talking about. They time it, then fix anything that feels too long, too short or awkward.",
-      "you": "Be the practice audience. Afterward, give feedback on volume, pace and eye contact: 'Could I hear you? Did you look at me or at your notes?' Start with something they did well.",
+      "you": "Be the practice audience. Afterward, give feedback on volume, pace and eye contact: 'Could I hear you? Did you look at me or at your notes?' Open with the stop where they sounded most sure.",
       "ask": [
         "Did you look at your audience, or mostly at your notes?",
         "Which part do you feel most confident about?"
@@ -136,9 +140,9 @@
     },
     {
       "title": "Lead the tour and look back",
-      "why": "The real tour, with a real audience, and a look back at how it went.",
+      "why": "Tour day, with an audience who came to listen, and a look back at how it went.",
       "kid": "Your kid welcomes the group, leads them from stop to stop and gives the tour. At each stop, they share their facts and stories, and get the audience involved: a question, something to look for, a surprising fact. They close by thanking everyone. Afterward, they ask the audience what they liked most and think about what they'd change next time.",
-      "you": "Be an engaged, enthusiastic guest. Ask a question or two, take photos, and celebrate the effort no matter how it goes. Afterward, give specific praise: 'The story about the old tree was my favourite part.' Then ask what they're most proud of.",
+      "you": "Be an engaged, enthusiastic guest. Ask a question or two, take photos, and celebrate the effort no matter how it goes. Afterward, give specific praise: 'The story about the old tree was my favourite part.' Then ask which stop they'd keep if the tour could only have one.",
       "ask": [
         "Did you notice the audience react to anything you said?",
         "If you gave the tour again tomorrow, what would you change?"

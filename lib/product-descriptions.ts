@@ -257,7 +257,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A guided nature journal that helps kids slow down, observe, and connect with the outdoors. Packed with prompts for sketching, writing, and recording what they see, hear, and wonder about. Works in any season, any landscape, any weather.',
     whatsIncluded: [
       '36 illustrated journal prompt cards, by season',
-      'A full printable journal: one page for every prompt',
+      'A full journal: one page for every prompt, ready to print or copy into any notebook',
       'Draw first, write second: sound maps, trees, snowflakes, buds',
       'Seasonal variations that work year-round',
       'Reusable format: use again and again across seasons',
@@ -265,9 +265,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Observation', 'Journaling', 'Science', 'Art', 'Writing'],
     insideTheLearning: {
       lead:
-        'A nature journal your child fills in outdoors, in whatever order suits. Sketching what they see, writing what they notice, following shadows and textures and sounds. Gentle and flexible by design, so it survives contact with a real week.',
+        'A nature journal your child fills in outdoors, in whatever order suits. Sketching what they see, writing what they notice, following clouds and textures and sounds. Gentle and flexible by design, so it survives contact with a real week.',
       skills: [
-        { skill: 'Observation', where: 'Focused prompts on shadows, textures and sounds rather than look at nature' },
+        { skill: 'Observation', where: 'Focused prompts on light, textures and sounds rather than look at nature' },
         { skill: 'Journaling', where: 'Building the habit of recording outdoors, page by page, over time' },
         { skill: 'Writing', where: 'Descriptive writing about something directly in front of them' },
         { skill: 'Art', where: 'Sketching and drawing closely enough to actually see the thing' },
@@ -281,7 +281,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '66 read-aloud task cards that turn any walk into a focused nature exploration. Each card gives kids a specific mission: find three different greens, stay still for 15 seconds and watch what changes, look for evidence that something ate something. Perfect for parents who want a simple, low-prep way to make walks more engaging.',
     whatsIncluded: [
       '66 read-aloud cards in 7 themes, each with a Deeper question',
-      'Each card focuses on a specific sense or skill',
+      'Each card asks for one specific find, then a Deeper why',
       'Works in parks, backyards, trails, beaches, or neighbourhoods',
       'Designed for parent-led or independent use',
       'Reusable across seasons, with different results every time',
@@ -289,7 +289,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Observation', 'Nature', 'Sensory Learning', 'Science'],
     insideTheLearning: {
       lead:
-        'Sixty-four cards you read out loud on a walk, and your child does the noticing. No planning and no teaching script to invent on the spot. Each card has a main prompt plus a deeper question if they want to push further.',
+        'Sixty-six cards you read out loud on a walk, and your child does the noticing. No planning and no teaching script to invent on the spot. Each card has a main prompt plus a deeper question if they want to push further.',
       skills: [
         { skill: 'Observation', where: 'Prompts that make them find detail they would have walked straight past' },
         { skill: 'Nature', where: 'Works on a hike, at a beach, in a park or in the back garden' },
@@ -312,7 +312,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Self-Direction', 'Nature', 'Science', 'Art', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Five boards of nine activities each, and your child picks. That is the design. Choosing what to do and committing to it is the skill being built, alongside the observation, art and science on the board itself.',
+        'Five boards of twelve options each, and your child picks. That is the design. Choosing what to do and committing to it is the skill being built, alongside the observation, art and science on the board itself.',
       skills: [
         { skill: 'Self-Direction', where: 'Choosing their own activity from a menu instead of being assigned one' },
         { skill: 'Decision-Making', where: 'Committing to a choice and seeing it through' },
@@ -336,12 +336,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Problem-Solving', 'Nature', 'Engineering', 'Observation', 'Science'],
     insideTheLearning: {
       lead:
-        'Scavenger-hunt missions with an objective, steps and a reflection at the end. Each hunt has twelve things to find plus extras if they want to go further. No teaching background needed, which is the point of the format.',
+        'Scavenger-hunt missions with a goal, 12 finds, 3 Extras and a why-it-counts for every tick. Each hunt has twelve things to find plus extras if they want to go further. No teaching background needed, which is the point of the format.',
       skills: [
         { skill: 'Observation', where: 'Noticing details, patterns and changes rather than skimming past them' },
         { skill: 'Science', where: 'Making guesses, using evidence and comparing what they found' },
         { skill: 'Problem-Solving', where: 'Working out how to complete a mission with what is actually around' },
-        { skill: 'Engineering', where: 'Building and mapping challenges mixed in with the finding' },
+        { skill: 'Engineering', where: 'The Nature engineering hunt: spotting how plants and rocks handle wind, water and weight' },
         { skill: 'Nature', where: 'Runs in a backyard, a park, a forest or a beach' },
       ],
     },
@@ -354,13 +354,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '24 outdoor STEM challenge cards in 5 themes',
       'Engineering: bridges, shelters, boats, towers, and structures',
       'Science: measurement, forces, materials, buoyancy',
-      'Each challenge uses found natural materials only',
+      'Found natural materials, plus a cup, a bottle and an egg for three cards',
       'Includes testing criteria and reflection prompts',
     ],
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
     insideTheLearning: {
       lead:
-        'Twenty build-and-test challenges outdoors, using sticks, rocks and whatever else is on the ground. Plan, build, test, improve. Change one thing and test again, which is exactly how engineers work and nothing like how building usually gets taught.',
+        'Twenty-four build-and-test challenges outdoors, using sticks, rocks and whatever else is on the ground. Plan, build, test, improve. Change one thing and test again, which is exactly how engineers work and nothing like how building usually gets taught.',
       skills: [
         { skill: 'STEM', where: 'The full engineering loop: plan, build, test, then change one thing and retest' },
         { skill: 'Engineering', where: 'Bridges, shelters, boats, towers and structures that have to actually stand up' },
@@ -387,22 +387,22 @@ export const productDescriptions: Record<string, ProductDescription> = {
         'Twenty-four new build-and-test challenges in five themes that go deeper than one-off builds: a child can pull one random card, or ride a whole theme from making rope to strength-testing the knots. Plan, build, test, improve, the same loop as the first deck, aimed at new physics.',
       skills: [
         { skill: 'STEM', where: 'The engineering loop across rope, launchers, water, wind, and levers' },
-        { skill: 'Engineering', where: 'Cranes, aqueducts, wind vanes, and balance scales that have to actually work' },
+        { skill: 'Engineering', where: 'Pulleys, aqueducts, wind vanes, and balance scales that have to actually work' },
         { skill: 'Science', where: 'Fair testing: change one thing at a time, measure, and explain the result' },
         { skill: 'Problem-Solving', where: 'Finding the leak, the slipping knot, or the wobble, and fixing that exact thing' },
         { skill: 'Nature', where: 'Built from fallen sticks, stones, and grass, then taken apart afterwards' },
       ],
     },
     seo: {
-      title: 'Outdoor STEM Challenge Cards Vol. 2: No-Prep, Ages 6-14',
+      title: 'Outdoor STEM Challenge Cards Vol. 2: Low-Prep, Ages 6-14',
       description:
-        '20 new outdoor STEM challenges: rope-making, launchers, water, wind and levers. No-prep STEM activities for kids 6-14 using found materials.',
+        '24 new outdoor STEM challenges: rope-making, launchers, water, wind and levers. Low-prep STEM activities for kids 6-14 using found materials.',
     },
     format: 'Card Guide',
   },
   'outdoor-movement-challenge-cards': {
     opening:
-      '24 outdoor physical challenges built on personal records, streaks, and real effort. Kids time a tree sit and beat it by five seconds a day, race their own lap time, keep a daily outside streak alive with a rain-gear backup, sample ways of moving until they find their thing, and duel a faster sibling with a handicap they tune until races finish even.',
+      '24 outdoor physical challenges built on personal records, streaks, and real effort. Kids time a tree sit and beat it a few seconds at a time, race their own lap time, keep a daily outside streak alive with a rain-gear backup, sample ways of moving until they find their thing, and duel a faster sibling with a handicap they tune until races finish even.',
     whatsIncluded: [
       '24 outdoor movement challenge cards',
       'Five themes, from PRs to adventures',
@@ -413,7 +413,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Physical Challenge', 'Healthy Habits', 'Perseverance', 'Outdoor Confidence', 'Movement'],
     insideTheLearning: {
       lead:
-        'Movement here is a game played against yesterday’s self: time it, measure it, beat it. Streak cards build the daily habit, sampler cards help kids find their thing, and the adult plays every challenge too. Two sets of personal records beat one.',
+        'Movement here is a game played against yesterday’s self: time it, measure it, beat it. Streak cards build the daily habit, sampler cards help kids find their thing, and the adult can keep a number too. Two sets of personal records beat one.',
       skills: [
         { skill: 'Physical Challenge', where: 'Tree sits, sprint loops, long hauls, and loaded packs, measured and beaten' },
         { skill: 'Healthy Habits', where: 'A daily outside streak with a designed backup for rough days' },
@@ -425,17 +425,17 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Outdoor Movement Challenge Cards for Kids Ages 6-14',
       description:
-        '20 outdoor movement challenges built on personal records and streaks. Brain breaks for big kids ages 6-14: no equipment, works in any yard, park, or trail.',
+        '24 outdoor movement challenges built on personal records and streaks for kids ages 6-14: no equipment, works in any yard, park, or trail.',
     },
     format: 'Card Guide',
   },
   'land-art-challenges': {
     opening:
-      '48 land art challenges that turn natural materials into beautiful, temporary art. Make a mandala from stones, balance a rock tower, sort the forest floor by colour, build a story path. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
+      '48 land art challenges that turn natural materials into beautiful, temporary art. Make a mandala from stones, build a stick-and-stone tower, sort the forest floor by colour, build a story path. Kids learn about patterns, symmetry, colour, and composition, all while spending time outside.',
     whatsIncluded: [
       '48 land art challenge cards in 4 themes',
       'Mandalas, rock towers, colour sorts, story paths, and sculptures',
-      'Uses only natural materials: stones, leaves, sticks, petals, bark',
+      'Uses only natural materials: stones, leaves, sticks, petals, fallen bark',
       'Teaches pattern, symmetry, colour theory, and composition',
       'Temporary art: photograph and leave no trace',
     ],
@@ -461,18 +461,18 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Nature frame, wind chime, texture prints, earth paint, shadow tracing, story stones',
       'Each project combines collection, observation, and creation',
       'Minimal additional supplies, mostly found materials',
-      'Suitable for all seasons with seasonal variations',
+      'A gallery and a gift idea to finish',
     ],
     skillTags: ['Art', 'Nature', 'Crafts', 'Observation', 'Fine Motor Skills'],
     insideTheLearning: {
       lead:
-        'Six nature crafts using what your child collects themselves: leaf pressing, flower pounding, bark rubbings, stick weaving. Collection first, then observation, then making. The gathering is half the activity.',
+        'Six crafts made from what your child gathers: a frame for looking, a wind chime tuned by testing, texture prints, paint mixed from soil, shadow tracings and story stones. Gathering first, then making, then changing one thing to make it better.',
       skills: [
-        { skill: 'Art', where: 'Making real objects from pressed leaves, pounded flowers, bark and woven sticks' },
+        { skill: 'Art', where: 'Prints, earth paint and shadow drawings made from found materials' },
         { skill: 'Nature', where: 'Collecting the materials outdoors before anything gets made' },
-        { skill: 'Observation', where: 'Looking closely enough at leaves and bark to choose the right ones' },
-        { skill: 'Crafts', where: 'Real technique: pressing, pounding, rubbing and weaving' },
-        { skill: 'Fine Motor Skills', where: 'Careful hand work that needs patience to come out well' },
+        { skill: 'Observation', where: 'Choosing textures, soils and views closely enough to see the difference' },
+        { skill: 'Crafts', where: 'Real technique: knots, printing with even pressure, mixing pigment' },
+        { skill: 'Fine Motor Skills', where: 'Tying knots, tracing shadows and painting with a stick' },
       ],
     },
     format: 'Activity Guide',
@@ -1235,9 +1235,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'write-like-a-pro': {
     opening:
-      'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, or news report), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, not a five-paragraph essay for nobody.',
+      'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, news report, or song), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, not a five-paragraph essay for nobody.',
     whatsIncluded: [
-      'Six writing style cards with real-world examples',
+      'Seven Writing Style Cards with real-world examples',
       'Topic selection and audience targeting',
       'Drafting with structure and voice',
       'Self-editing and revision process',
@@ -1246,7 +1246,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Writing', 'Communication', 'Creative Thinking'],
     insideTheLearning: {
       lead:
-        'Your child writes the same idea six ways for six different readers, and discovers that voice is a choice rather than a personality. Then they revise their own draft, which means seeing the gap between what they meant and what they actually put on the page.',
+        'Your child picks one style and one real reader, and finds out the reader decides the words: what goes first, what gets cut, how formal to sound. Then they revise their own draft, which means seeing the gap between what they meant and what they actually put on the page.',
       skills: [
         { skill: 'Audience Awareness', where: 'Thinking about who is reading and letting that change the words, tone and detail' },
         { skill: 'Persuasion', where: 'Making a point and supporting it so someone else can follow the thinking' },
@@ -1531,20 +1531,20 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'adventure-story-map': {
     opening:
-      'A visual story-mapping project that guides kids through planning and writing their own adventure narrative. They map out characters, settings, plot twists, and story arcs, then write the story. Creative writing meets spatial thinking in one hands-on project.',
+      'Your kid walks a place they know like a storyteller, draws a map of it, and writes an adventure that happens right there, on its paths and next to its landmarks. A reader can follow the whole story with the map in hand. Descriptive writing, map-making and story structure in one project.',
     whatsIncluded: [
-      'Visual story map template and planning guide',
-      'Character and setting development prompts',
-      'Plot structure and story arc planning',
-      'Writing prompts tied to each map section',
-      'Extension ideas for longer narratives',
+      'A what-if walk to collect story spots and sense details',
+      'Drawing a map from above, with a compass and a paced-out scale',
+      'Planning a character, a problem and an ending on the map',
+      'Writing the story with sounds, smells and dialogue from the walk',
+      'Linking story to map so someone else can follow the route',
     ],
     skillTags: ['Creative Writing', 'Storytelling', 'Planning', 'Narrative', 'Art'],
     // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
     seo: {
       title: 'Adventure Story Map: Plan and Write a Story, Ages 6-14',
       description:
-        'The guide your family follows to map an adventure story first, then write it: characters, settings, plot twists and an ending. Ages 6 to 14.',
+        'The guide your family follows to map a real place your kid knows, then write an adventure set right there that a reader can follow on the map. Ages 6 to 14.',
     },
     insideTheLearning: {
       lead:
@@ -1560,11 +1560,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'community-tour-guide': {
     opening:
-      'Research, write, and present a guided tour of your community. Kids choose what matters most about where they live, practise descriptive language, and build presentation confidence. A project that connects writing skills with local knowledge and pride in place.',
+      'Research, write, and present a guided tour of your community. Kids choose what matters most about where they live, dig up its stories, and lead a real walking tour. A project that connects writing skills with local knowledge and pride in place.',
     whatsIncluded: [
       'Community research and tour planning guide',
-      'Descriptive writing prompts for each tour stop',
-      'Interview tips for gathering local stories',
+      'Point, tell, ask: a three-part formula for every stop',
+      'A practice house tour, then facts and stories from signs, neighbours and local sources',
       'Presentation and delivery practice',
       'Extension ideas for digital or illustrated guides',
     ],
@@ -1587,11 +1587,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Write clear, step-by-step directions and test whether someone else can follow them. Kids discover how hard precise communication really is, and get better at it through practice, testing, and feedback. The kind of writing skill they will use every day of their lives.',
     whatsIncluded: [
-      'Direction-writing challenge guide',
-      'Clarity and precision writing frameworks',
-      'Peer testing and feedback activities',
-      'Increasingly complex direction challenges',
-      'Reflection on communication breakdowns',
+      'Pick a route or task and write the first directions',
+      'A word-for-word test run where you follow only what was said',
+      'Finding the breakdown: vague, missing, out of order or assumed',
+      'Rewrite and run it again',
+      'Look back: where else being clear matters',
     ],
     skillTags: ['Procedural Writing', 'Clarity', 'Communication', 'Logic', 'Testing'],
     insideTheLearning: {
@@ -1610,7 +1610,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A structured debate framework for the whole family. Kids prepare arguments, present their case, respond to counterpoints, and learn to disagree respectfully. Builds persuasive speaking, active listening, and the confidence to express opinions clearly.',
     whatsIncluded: [
       'Family debate structure and rules guide',
-      'Age-appropriate debate topic cards',
+      'Topic ideas and a check that both sides are arguable',
       'Argument preparation framework',
       'Active listening and rebuttal practice',
       'Reflection prompts on persuasion and respect',
@@ -1618,7 +1618,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Persuasion', 'Critical Thinking', 'Listening', 'Public Speaking', 'Respect'],
     insideTheLearning: {
       lead:
-        'Your child argues a real position in front of the family, with reasons and evidence rather than volume. They have to prepare both sides before they know which one they are taking, then actually listen to the rebuttal and respond to what was said. Disagreeing well is a rarer skill than winning.',
+        'Your child argues a real position in front of the family, with reasons and evidence rather than volume. They pick a side, research the best point on the other side so they can answer it first, then actually listen to the rebuttal and respond to what was said. Disagreeing well is a rarer skill than winning.',
       skills: [
         { skill: 'Persuasion', where: 'Building a case out of reasons and evidence instead of opinion' },
         { skill: 'Critical Thinking', where: 'Working through both sides of an issue before deciding, then reasoning to a conclusion' },
@@ -1630,13 +1630,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'family-recipe-book': {
     opening:
-      'Create a family recipe book that captures both the food and the stories behind it. Kids interview family members, write clear procedural instructions, and design pages that connect recipes with memories. Procedural writing meets family storytelling in a meaningful keepsake.',
+      'Create a family recipe book that captures both the food and the stories behind it. Kids interview family members, cook each dish from their own notes, and write instructions clear enough for anyone to follow. Procedural writing meets family storytelling in a meaningful keepsake.',
     whatsIncluded: [
-      'Recipe book project guide with page templates',
-      'Family interview prompts for recipe stories',
-      'Procedural writing framework for clear instructions',
-      'Page design and illustration guidance',
-      'Book binding and finishing ideas',
+      'Taste detective: guess the ingredients, then check with the cook',
+      'Interviewing the cooks for the recipe and the story',
+      'Cooking from their own notes to find the gaps',
+      'Recipe cards a stranger could follow',
+      'Putting the cookbook together and giving it back',
     ],
     skillTags: ['Procedural Writing', 'Interviewing', 'Design', 'Family History', 'Storytelling'],
     insideTheLearning: {
@@ -1651,13 +1651,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'market-stall-pitch': {
     opening:
-      'Create and deliver a persuasive pitch for a product or service, as if running a market stall. Kids choose their words, read their audience, and present with confidence. Communication meets entrepreneurship in a project that makes persuasion tangible and fun.',
+      'Your kid picks something to sell, prices it to make a profit, writes a 30-second pitch and sells it to real customers at a stall, then counts up the money. Persuasion, money math and the nerve to handle a no.',
     whatsIncluded: [
       'Pitch planning and writing guide',
       'Persuasive language and techniques',
       'Audience awareness and adaptation tips',
       'Delivery and presentation practice',
-      'Feedback and iteration framework',
+      'Pricing that covers costs, making change and working out profit',
     ],
     skillTags: ['Persuasion', 'Communication', 'Entrepreneurship', 'Public Speaking', 'Confidence'],
     insideTheLearning: {
@@ -1675,20 +1675,20 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-magazine-creator': {
     opening:
-      'Write and design a mini magazine from scratch: headlines, feature articles, illustrations, advertisements, and more. Kids work with multiple text types in one project, learning how different writing styles serve different purposes. A publishing project that builds real writing range.',
+      'Your child picks a topic they could talk about for hours and makes a whole magazine about it: an article, a tips list, a quiz, a how-to, each with a headline that makes someone want to read it. They research the facts, design the pages, and hand copies to real readers.',
     whatsIncluded: [
-      'Magazine creation project guide',
-      'Multiple text type templates (articles, ads, editorials)',
-      'Layout and design guidance',
-      'Illustration and visual storytelling tips',
-      'Publishing and sharing ideas',
+      'Cover remix warm-up and issue planning',
+      'Research with a second-source check',
+      'Four kinds of writing, each with its own headline',
+      'Booklet layout and a first-time-reader edit',
+      'Publishing to readers and planning Issue 2',
     ],
     skillTags: ['Writing', 'Design', 'Multiple Text Types', 'Creativity', 'Publishing'],
     insideTheLearning: {
       lead:
-        'Your child produces a whole magazine, and the point is that no two pages are the same kind of writing. An article, an advert, an editorial, a how-to, something interactive. Five writing styles in one project, each with a different job, all edited to hold together.',
+        'Your child produces a whole magazine, and the point is that no two pages are the same kind of writing. An article, a tips list, a quiz, a how-to. Four writing styles in one project, each with a different job, all edited to hold together.',
       skills: [
-        { skill: 'Writing', where: 'Informational, persuasive, creative, procedural and interactive writing in one publication, then edited for consistency' },
+        { skill: 'Writing', where: 'Informational, opinion, procedural and playful writing in one publication, then edited to hold together' },
         { skill: 'Research', where: 'Finding real facts and information to stand the articles up' },
         { skill: 'Audience Awareness', where: 'Writing something a reader would actually enjoy and use, and laying it out to be read' },
       ],
@@ -1697,15 +1697,15 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'my-review-column': {
     opening:
-      'Write reviews of books, movies, products, or experiences, and learn that opinions backed by evidence are powerful. Kids develop critical analysis skills, learn to structure arguments, and discover that their perspective matters. Opinion writing that builds confidence and voice.',
+      'Your child becomes a reviewer: a blind taste test, a rating system they invent, then reviews of real things from their own week, each with an opinion, a reason, proof and one fair downside, good enough for someone else to decide from.',
     whatsIncluded: [
-      'Review writing guide with structure templates',
-      'Critical analysis prompts and frameworks',
-      'Opinion vs evidence balance guidance',
-      'Multiple review formats (short, long, star rating)',
-      'Sharing and publishing review ideas',
+      'A blind taste test warm-up',
+      'Invent your own rating system',
+      'Reviewer\'s-eye notes and cost per use',
+      'Opinion, reason, proof, downside, verdict',
+      'Publish the column and test it on readers',
     ],
-    skillTags: ['Opinion Writing', 'Critical Analysis', 'Communication', 'Voice', 'Persuasion'],
+    skillTags: ['Opinion Writing', 'Critical Analysis', 'Communication', 'Voice', 'Math'],
     insideTheLearning: {
       lead:
         'Your child writes reviews of real things and has to be fair rather than just enthusiastic. An opinion needs specific reasons behind it. A description needs enough detail that a reader can picture it. Doing several in the same format is where the discipline comes in.',
@@ -1721,16 +1721,16 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Interview people in your community, from neighbours and shop owners to local heroes, and share their stories. Kids prepare questions, practise active listening, and present what they learn. Builds interviewing skills, empathy, and the ability to tell someone else\'s story with care.',
     whatsIncluded: [
-      'Interview project guide with question templates',
-      'Active listening techniques and note-taking',
-      'Story writing and presentation frameworks',
-      'Ethical interviewing guidelines',
-      'Portfolio ideas for collected stories',
+      'A 2-minute reporter warm-up',
+      'Turning closed questions into open ones',
+      'Running the interview and following up',
+      'Writing a profile: scene, quote, detail, why',
+      'Giving the profile back to the person',
     ],
     skillTags: ['Interviewing', 'Listening', 'Empathy', 'Writing', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child interviews someone in the neighbourhood they do not know well. Open questions rather than yes-or-no ones. Notes while the person is still talking. Then a long conversation turned into a short, clear account of what was said.',
+        'Your child interviews someone in your community, from a grandparent to the baker. Open questions rather than yes-or-no ones. Notes while the person is still talking. Then a long conversation turned into a short profile that opens with a scene and uses the person\'s own words.',
       skills: [
         { skill: 'Communication', where: 'Asking open questions that invite a real answer, and taking notes while someone speaks' },
         { skill: 'Listening', where: 'Paying genuine attention rather than waiting for their turn' },
@@ -1743,11 +1743,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Create a written guide to a local trail or walking path. Kids walk the route, observe carefully, take notes, and write a guide someone else could follow. Outdoor observation meets descriptive writing in a project that connects kids to nature and place.',
     whatsIncluded: [
-      'Trail guide creation project',
-      'Observation and note-taking frameworks',
-      'Descriptive writing prompts for each trail section',
-      'Map-making and wayfinding guidance',
-      'Design ideas for a polished guide',
+      'Find-my-tree blindfold game',
+      'Walk-and-notice with all the senses',
+      'Numbered map with step counts (scale bar for older kids)',
+      'Stop pattern: where, look, fact, next',
+      'A test walk by someone who has never been, then fixes',
     ],
     skillTags: ['Descriptive Writing', 'Observation', 'Nature', 'Geography', 'Design'],
     insideTheLearning: {
@@ -2920,7 +2920,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'two-minute-story': {
     opening:
-      'Your child takes a real moment from their own life and learns to tell it as a clear, gripping story in two minutes. They find the shape, cut it to the bone, and tell it for real. One of the most useful skills a person can have.',
+      'Your child takes a real moment from their own life and learns to tell it as a clear, gripping story in two minutes. They find the shape, cut it to the bone, and tell it for real.',
     whatsIncluded: [
       'Find a true story worth telling',
       'Shape it: beginning, turn, and point',
@@ -2936,7 +2936,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Storytelling', where: 'Shaping real life into something someone would want to hear' },
         { skill: 'Communication', where: 'Saying what matters and cutting what does not' },
         { skill: 'Public Speaking', where: 'Talking to an audience with confidence, which most adults still avoid' },
-        { skill: 'Confidence', where: 'Finding out that a well-told story is how people reach each other' },
+        { skill: 'Confidence', where: 'Telling it to the whole table and finding out they can hold a room' },
       ],
     },
     format: 'Activity Guide',
@@ -3077,7 +3077,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['STEM', 'Science', 'Responsibility', 'Patience', 'Observation'],
     insideTheLearning: {
       lead:
-        'Your child grows food and then eats it, which takes months and cannot be rushed. Something living depends on them every day, not only on the days they feel like it. When one of seed, water, light or soil is missing, the plant tells them.',
+        'Your child grows food and then eats it, which takes weeks and cannot be rushed. Something living depends on them every day, not only on the days they feel like it. When one of seed, water, light or soil is missing, the plant tells them.',
       skills: [
         { skill: 'STEM', where: 'Watching how the variables interact and what happens when one is missing' },
         { skill: 'Science', where: 'Seeing first-hand how a seed, water, light and soil turn into food' },
@@ -3225,7 +3225,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       skills: [
         { skill: 'Teaching', where: 'Turning something automatic into clear steps another person can follow' },
         { skill: 'Structuring Ideas', where: 'Breaking a whole skill into an order that builds' },
-        { skill: 'Public Speaking', where: 'Standing up, leading a lesson and holding a listener\'s attention' },
+        { skill: 'Public Speaking', where: 'Leading a lesson and holding one listener\'s attention start to finish' },
         { skill: 'Communication', where: 'Adjusting the explanation when the person in front of them is lost' },
         { skill: 'Metacognition', where: 'Understanding how they themselves learned it in the first place' },
       ],
