@@ -9971,8 +9971,8 @@ const posts: BlogPost[] = [
     readTimeMinutes: 11,
     author: amelie,
     recommendedProduct: 'outdoor-stem-challenges-volume-2',
-    heroImage: '/images/teen-stem-shadow-clock.jpeg',
-    heroImageAlt: 'A stick standing upright in dry dirt with a row of stones curving around it, each stone marking where the stick’s shadow pointed',
+    heroImage: '/images/teen-stem-hero.jpeg',
+    heroImageAlt: 'A teen in an orange beanie setting a long stick across a stump on a grassy forest trail, a big log beside him',
     heroImageAspect: '4 / 3',
     content: [
       { type: 'summary', text: 'Outdoor STEM for teens works when the project has a real question and real data: measuring a tree’s height with a stick and similar triangles, calculating how much water a creek carries, timing echoes to find the speed of sound, or running a fair test on launch angles. For ages 11 to 14, the build matters less than the measuring, the repeated trials and the explanation at the end. Most projects need only a tape measure, a phone stopwatch, a notebook and what you find outside.' },
@@ -10025,7 +10025,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'First, your kid walks a measured 100 metres and counts their steps. That’s their pace count, and it’s how people measured distance long before GPS. Then they map a park, a beach or the trail behind your house: pace each straight stretch, take the direction with a compass app, and draw it on graph paper at a scale like one square = 10 metres.' },
       { type: 'paragraph', text: 'The finish line is checking it against a satellite map. Where did it go wrong, and by how much? Most kids are shocked by how close they get. It’s geometry, measurement and map reading in one, and it pairs well with the navigation skills in [outdoor survival skills for kids](/blog/outdoor-survival-skills-for-kids).' },
 
-      { type: 'image', src: '/images/teen-stem-measuring.jpeg', alt: 'A boy in a purple cap kneeling over a long board with a yellow tape measure, an adult leaning in beside him next to a mitre saw', caption: 'Measure twice. At this age, being exact matters because the result is real.' },
+      { type: 'image', src: '/images/teen-stem-building.jpeg', alt: 'A teen in a green beanie bent over a pile of sticks in a grassy clearing, setting one against a rock', caption: 'Build first, then measure. At this age, the numbers are what turn it into a project.' },
 
       { type: 'heading', level: 2, text: 'Turn any project into a one-page report' },
       { type: 'paragraph', text: 'The write-up is where a fun afternoon becomes something they’re proud of. Keep it to one page with the same five parts every time:' },
