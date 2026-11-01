@@ -125,7 +125,6 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
       ${L.model.map((m) => `<div class="mrow"><span class="mtag">${esc(m.part)}</span><p>${esc(m.line)}</p></div>`).join('')}</div>
     ${L.modelNote ? `<p class="why">${esc(L.modelNote)}</p>` : ''}</div>` : '';
 
-  const levelsLine = `<div class="levelsline"><span class="lvdots"><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i></span><p>${esc(g.levelsLine)}</p></div>`;
   const idea = `
 <section class="pg">
   <div class="eyebrow">Before you start</div>
@@ -142,7 +141,6 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   </div>`}
   ${L ? lessonBox : `  <div class="box"><div class="label">What you need</div>
     <ul class="dots">${g.need.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>`}
-  ${L ? '' : levelsLine}
   ${foot('The idea')}
 </section>`;
 
@@ -171,7 +169,6 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
     <p class="why">${esc(g.howTo.example.why)}</p>
   </div>` : ''}
   ${g.howTo.troubleshoot ? `<div class="trouble"><div class="label">If it's not working</div><dl>${g.howTo.troubleshoot.map((t) => `<div><dt>${esc(t.q)}</dt><dd>${esc(t.a)}</dd></div>`).join('')}</dl></div>` : ''}
-  ${L ? levelsLine : ''}
   <div class="start">Let's start.</div>
   ${foot('How to run it')}
 </section>`;
@@ -428,6 +425,11 @@ ul{list-style:none}
 .refgrid{display:grid;gap:10px;margin-top:6px}.refcard{background:var(--card);border:1px solid rgba(58,44,23,.12);border-top:4px solid var(--accent);border-radius:12px;padding:11px 13px}
 .refcard h3{font:800 1.02em 'Bricolage Grotesque';margin:0 0 5px;color:var(--ink)}.refcard p{margin:3px 0 0;font-size:.9em;line-height:1.4}.refcard b{color:var(--accent);font-weight:700}
 .refcard .refask{margin-top:7px;padding-top:6px;border-top:1px dashed rgba(58,44,23,.2);font-style:italic}.refafter{margin-top:12px}.refafter p{margin:4px 0 0}
+/* Print: render.mjs grows --rs until the toolkit page is full, so the cards
+   fill the page instead of sitting in a band with empty space around them. */
+.refpg .refgrid{gap:calc(var(--rs,1) * 10px)}.refpg .refcard{padding:calc(var(--rs,1) * 11px) 13px}
+.refpg .refcard h3{margin-bottom:calc(var(--rs,1) * 5px)}.refpg .refcard p{margin-top:calc(var(--rs,1) * 3px);line-height:calc(1.4 + (var(--rs,1) - 1) * .25)}
+.refpg .refcard .refask{margin-top:calc(var(--rs,1) * 7px);padding-top:calc(var(--rs,1) * 6px)}.refpg .refafter p{margin-top:calc(var(--rs,1) * 4px)}
 .plan{display:grid;gap:0;margin:0}.plan div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:6px 0;border-top:1px solid rgba(58,44,23,.12)}.plan div:first-child{border-top:0;padding-top:2px}
 .plan dt{font:700 .95em/1.35 'DM Sans';color:var(--trail)}.plan dd{margin:0;line-height:1.4}
 .box.home{background:#fbf3e4}.box.home p{margin:0 0 8px}.box.home blockquote{margin:6px 0 0;padding:4px 0 4px 12px;border-left:3px solid var(--gold);font-style:italic;line-height:1.45}
