@@ -32,7 +32,7 @@
         "line": "A bell tells everyone when to sleep, because there's no dark to do it."
       }
     ],
-    "modelNote": "One strong idea, and everything else follows from it. That's the question behind every step: why is it like that?"
+    "modelNote": "Dragons, a castle, a rainbow sea and robots are just a list. Choose one rule, like no night, and the land, creatures and people all have to answer to it."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the curious traveller, not the designer. Ask 'what would I see if I stepped off a boat here?' instead of suggesting answers. The world can be as weird as they like. It doesn't need to be realistic, just consistent.",
+    "intro": "The trap here is filling the gaps for them. When a question has no answer yet, ask 'what would I see if I stepped off a boat here?' and wait. The world can be as weird as they like. It doesn't need to be realistic, just consistent, so the thing to push on is why.",
     "plan": [
       {
         "when": "Session 1",
@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Pick a world type and draw the big difference.",
         "develop": "Write the big difference and 3 ways it changes daily life.",
-        "extend": "Work out what the big difference does to the weather, the food and how people travel."
+        "extend": "Follow the big difference two steps on: if there's no night, what happens to the plants, and then to the animals that eat them?"
       }
     },
     {
@@ -124,11 +124,11 @@
         "How does the land change how the creatures live?",
         "What's the most dangerous place in your world?"
       ],
-      "tip": "Creatures should fit where they live. A fire-breathing animal in the ice region needs a really good reason.",
+      "tip": "Put water on the map first. Rivers start in high ground and run downhill to a lake or the sea, and most early towns grew up beside one.",
       "levels": {
         "explore": "Draw 3 regions and one creature for each.",
-        "develop": "Draw 3 or more regions, with creatures that fit them, and explain why.",
-        "extend": "Show how creatures depend on each other: who eats what, who trades with whom."
+        "develop": "Draw 3 or more regions, put each group where the land gives it water, food and shelter, and explain why.",
+        "extend": "Decide where the first town was founded and why (water, a river crossing, a safe harbour), and draw the trade route between two groups."
       }
     },
     {
@@ -176,7 +176,7 @@
       "levels": {
         "explore": "Tell a short legend out loud and show the map.",
         "develop": "Write or draw the legend, and give a full tour.",
-        "extend": "Film the tour, and answer all 5 traveller's questions without stopping to invent."
+        "extend": "Tell the legend twice: once as the winners tell it, once as the losers would. What changed, and who decides which one gets told?"
       }
     }
   ],
@@ -208,7 +208,7 @@
             "v": "humans left, or magic arrived"
           }
         ],
-        "ask": "Check it: what's your one big difference?"
+        "ask": "What's your one big difference?"
       },
       {
         "name": "Big idea starters",
@@ -234,7 +234,7 @@
             "v": "and they vote"
           }
         ],
-        "ask": "Check it: does your idea change daily life?"
+        "ask": "Does your idea change daily life?"
       },
       {
         "name": "Traveller's questions",
@@ -260,7 +260,7 @@
             "v": "What happens when two groups meet?"
           }
         ],
-        "ask": "Check it: can you answer all five?"
+        "ask": "Can you answer all five?"
       },
       {
         "name": "Map checklist",
@@ -286,7 +286,7 @@
             "v": "a compass rose and a scale"
           }
         ],
-        "ask": "Check it: could a visitor find their way?"
+        "ask": "Could a visitor find their way?"
       }
     ],
     "after": {
@@ -300,9 +300,9 @@
     }
   },
   "conclusion": {
-    "headline": "Their world exists now.",
-    "text": "Your kid did what writers, game designers and filmmakers spend years learning: they built a world that holds together. They connected the land to the life, invented a culture with reasons behind its rules, told a legend that explains it, and showed it to someone clearly enough to make them believe in it.",
-    "celebrate": "Tell them which part pulled you in: the big idea, a creature that fit its home perfectly, or the legend.",
+    "headline": "Every corner of their world has a reason.",
+    "text": "Pick any detail on their map, a forbidden region or a strange river, and ask why it's like that. They'll trace it back through the rules and the land to the big idea, without stopping to make something up. Try the same question on the world in the next book you read together.",
+    "celebrate": "During the tour, repeat back the detail that sold you and why: 'The sleep bell makes sense. With no night, how else would anyone know it's bedtime?'",
     "extensions": [
       "Write a longer story set in the world: a quest, a mystery, a day in the life",
       "Build a second region in 3D",
@@ -315,7 +315,7 @@
     "They notice how land and weather shape how people live",
     "They explain their ideas so others can picture them"
   ],
-  "makeItReal": "Next time you travel or read about a new place, ask them what the land makes people there do: what they eat, how they build, how they get around. Real places follow the same rules as their world.",
+  "makeItReal": "When you travel or read about a new place, ask them what the land makes people there do: what they eat, how they build, how they get around. Then look up one answer together.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

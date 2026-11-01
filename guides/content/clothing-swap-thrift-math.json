@@ -32,7 +32,7 @@
         "line": "An 85% saving on something you'll actually wear. That's a real deal."
       }
     ],
-    "modelNote": "That's the maths this guide practises: savings, percentages and cost per wear, on clothes your kid really owns."
+    "modelNote": "'Half off' was a guess. Dividing the saving by the new price gives 85%, and asking 'will I wear it?' decides if it's a deal at all."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the shopping advisor, not the closet judge. Let them decide what stays and what goes, and keep it low-cost: a swap is free, and a thrift trip needs only a few dollars.",
+    "intro": "Keep your opinions about their clothes to yourself, even about the hoodie you've wanted gone for a year. What stays and what goes is their call. Keep it cheap too: a swap is free, and a thrift trip needs only a few dollars.",
     "plan": [
       {
         "when": "Day 1",
@@ -118,7 +118,7 @@
       "levels": {
         "explore": "Sort at least 15 items into the 4 piles and count each pile.",
         "develop": "Sort everything, count it and rate the condition of everything leaving.",
-        "extend": "Work out what percentage of the closet stays and what percentage goes."
+        "extend": "How many t-shirts get you to laundry day? Compare that with how many you own."
       }
     },
     {
@@ -132,9 +132,9 @@
       ],
       "tip": "The surprise is usually the favourite hoodie that cost the most and turns out to be the cheapest per wear.",
       "levels": {
-        "explore": "Work out cost per wear for 5 items and name the best value.",
+        "explore": "Tally wears for 5 items. Of two that cost the same, which was the better buy?",
         "develop": "Do 10 items, rank them best to worst, and explain what makes good value.",
-        "extend": "Find the average cost per wear, and compare your most expensive item with your most worn."
+        "extend": "How many wears would something you want new need to match your best-value item's cost per wear?"
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "tip": "Most kids price their own things too high at first. Real reference prices bring the numbers down fast.",
       "levels": {
-        "explore": "Price 5 to 10 items based on condition and what someone would pay.",
+        "explore": "Sort 5 to 10 items into $1, $3 and $5 piles by condition.",
         "develop": "Price everything, check 3 to 5 real reference prices, and explain each price.",
-        "extend": "Work out what percentage of the original price each item is worth now."
+        "extend": "Should 'fair' mean $2 off or a third off? Test both on a $3 tee and a $15 jacket."
       }
     },
     {
@@ -170,9 +170,9 @@
       ],
       "tip": "Have them check every thrift find against the Quality Check before it goes in the basket.",
       "levels": {
-        "explore": "Plan and do a simple family swap or a short thrift trip, and write down what you got.",
+        "explore": "Plan and do a simple family swap or a short thrift trip, and draw or write what you got.",
         "develop": "Set swap rules or a budget and needs list, and keep a running total.",
-        "extend": "Record every trade or purchase and every decision you made along the way, with the reason for each."
+        "extend": "With 3 or more swappers, set 1 point per $3 of thrift price and keep a ledger. Do the points balance?"
       }
     },
     {
@@ -186,9 +186,9 @@
       ],
       "tip": "Have them write the yearly total big at the bottom of the page. It's usually a number that surprises the whole family.",
       "levels": {
-        "explore": "Compare 3 items, new versus secondhand, and say how much you saved on each.",
+        "explore": "For 3 items, count up from the thrift price to the new price to find what you saved.",
         "develop": "Compare 5 items with savings and percentages, and rank them by biggest saving.",
-        "extend": "Total everything, project the yearly savings, and write a short verdict: is secondhand worth it?"
+        "extend": "By cost per wear, when does a bargain you'll rarely wear lose to a full-price item you wear all the time?"
       }
     }
   ],
@@ -216,7 +216,7 @@
             "v": "holes, stains, broken zips"
           }
         ],
-        "ask": "Check it: would you be happy to get this in a swap?"
+        "ask": "Would you be happy to get this in a swap?"
       },
       {
         "name": "Thrift ballpark prices",
@@ -242,7 +242,7 @@
             "v": "$8 to $15"
           }
         ],
-        "ask": "Check it: find 3 real prices and compare them with these."
+        "ask": "Do 3 prices from a store near you match these?"
       },
       {
         "name": "Swap points",
@@ -264,7 +264,7 @@
             "v": "trade equal points, or add a small item to even it out"
           }
         ],
-        "ask": "Check it: would both people call the trade fair?"
+        "ask": "Would both people call the trade fair?"
       },
       {
         "name": "Quality check",
@@ -290,7 +290,7 @@
             "v": "try it on, or measure against something that fits"
           }
         ],
-        "ask": "Check it: does it pass all five before you pay?"
+        "ask": "Does it pass all five before you pay?"
       }
     ],
     "after": {
@@ -303,9 +303,9 @@
     }
   },
   "conclusion": {
-    "headline": "They found the real value.",
-    "text": "Your kid audited their closet, worked out cost per wear, priced their own things, ran a swap or a thrift trip, and proved what secondhand saves. Division, percentages and budgeting, all used on things they actually wear.",
-    "celebrate": "Ask about their best find: 'What did it cost, what would it cost new, and how many times will you wear it?'",
+    "headline": "Half off turned out to be 85% off.",
+    "text": "Hold up two shirts from the keep pile and ask which one was the better buy. Expect an answer about how often each one got worn, not which one was cheaper.",
+    "celebrate": "As they show you their best find, say it back: 'Six dollars, and you'll wear it all winter. Better than most of my closet.'",
     "extensions": [
       "Do a closet audit every season and watch how cost per wear changes",
       "Run a bigger swap with a few families and a shared point system",
@@ -318,7 +318,7 @@
     "They work out cost per wear in their head",
     "They suggest a swap before asking for something new"
   ],
-  "makeItReal": "Next time your kid needs something, like a jacket for the season, hand them the thrift budget and let them find it. Afterward, look up the new price together and work out the percentage they saved.",
+  "makeItReal": "When your kid needs something, like a jacket for the season, hand them the thrift budget and let them find it. Afterward, look up the new price together and work out the percentage they saved.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

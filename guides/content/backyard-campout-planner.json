@@ -32,7 +32,7 @@
         "line": "Move the blanket and the chairs to the far edge, against the fence. Now the path is 2 feet wide."
       }
     ],
-    "modelNote": "That's the thinking this guide builds: do the maths, then check it against the real ground."
+    "modelNote": "Fitting is only half of it. Once the path to the house is counted as space too, the same 107 square feet works."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the campout coordinator, not the planner. Let them choose the spot and make the calls, and use what you already have at home.",
+    "intro": "The trap is buying gear. Use what's already at home, and let them choose the spot, the menu and lights-out. You run anything with fire and walk the dark path to the house with them.",
     "plan": [
       {
         "when": "Day 1",
@@ -110,9 +110,9 @@
       ],
       "tip": "Have them lie down on the spot for a minute. Bumps and slopes they'd miss standing up show up fast.",
       "levels": {
-        "explore": "Pick a spot, measure the length and width, and find the area with a calculator.",
+        "explore": "Measure the spot with the tape, then lay a sleeping bag on it. How many fit side by side?",
         "develop": "Compare 2 spots with a pros and cons list, then measure the winner and subtract any unusable areas.",
-        "extend": "Score 3 spots from 1 to 5 on flatness, shelter, distance and safety, then measure and calculate the usable area."
+        "extend": "Score 3 spots from 1 to 5 on flatness, shelter, distance and safety, counting the most important one double."
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "Real items beat guesses. Lay the blankets out on the lawn and measure them before drawing.",
       "levels": {
-        "explore": "Draw a simple map with labelled shapes for each zone.",
+        "explore": "Mark each zone with a towel, then draw a simple map.",
         "develop": "Draw the layout using the real measurements for each zone.",
-        "extend": "Draw it to scale on graph paper (1 square = 1 foot) and work out what percentage of the space each zone uses."
+        "extend": "Draw it to scale (1 square = 1 foot). Why won't a 5 × 5 blanket fit a 2 × 13 strip, even though 26 is more than 25?"
       }
     },
     {
@@ -149,9 +149,9 @@
       ],
       "tip": "Most families already own almost everything. The interesting part is the trade-offs on the few things you don't.",
       "levels": {
-        "explore": "List at least 10 items in 2 or 3 groups, and price up to 5 things to buy.",
+        "explore": "Gather 10 camp things into 2 or 3 piles, then name anything you'd still need to get.",
         "develop": "List 15 items, mark each 'have it' or 'need it', and make 2 trade-offs to stay on budget.",
-        "extend": "Rank every item essential, useful or nice to have, and track how much each swap or borrow saved."
+        "extend": "For each thing to buy, find its cost per campout if used 1, 3 or 5 times. When does buying beat borrowing?"
       }
     },
     {
@@ -165,9 +165,9 @@
       ],
       "tip": "Have them add a 15-minute buffer somewhere in the schedule. They'll understand why on campout night.",
       "levels": {
-        "explore": "Plan 1 or 2 snacks and a drink, and write a schedule with 5 time slots.",
+        "explore": "Bag one snack per camper, then order the evening on 5 sticky notes.",
         "develop": "Plan the full menu with quantities for everyone, and an hour-by-hour schedule with durations.",
-        "extend": "Add a cost per person, total hours, and a backup plan for 2 things that could go wrong."
+        "extend": "Work backward from sunset, minus 30 minutes, setup time and a 15-minute buffer. When do you start?"
       }
     },
     {
@@ -181,9 +181,9 @@
       ],
       "tip": "Things won't go perfectly, and that's the point. The gap between the plan and the night is the best lesson in the guide.",
       "levels": {
-        "explore": "Set up, enjoy the campout, and add up what was spent against the budget.",
+        "explore": "Set up and enjoy it. In the morning, check off what got used.",
         "develop": "Note every change to the plan and why, then compare planned and actual time, food and cost.",
-        "extend": "Write a one-page campout report: plan versus reality, the biggest difference and why, and advice for next time."
+        "extend": "Work out each time estimate's error as a percentage (planned 30, took 45 = 50% over) and set the next buffer from it."
       }
     }
   ],
@@ -219,7 +219,7 @@
             "v": "at least 2 ft wide"
           }
         ],
-        "ask": "Check it: does your tent fit with a 2 ft path all around it?"
+        "ask": "Does your tent fit with a 2 ft path all around it?"
       },
       {
         "name": "Food per person",
@@ -245,7 +245,7 @@
             "v": "1 muffin or 1 bowl of cereal"
           }
         ],
-        "ask": "Check it: multiply every line by the number of campers."
+        "ask": "Have you multiplied every line by the number of campers?"
       },
       {
         "name": "Time (first-time estimates)",
@@ -271,7 +271,7 @@
             "v": "look up tonight's time and be set up 30 minutes before"
           }
         ],
-        "ask": "Check it: add all the times up. Is it longer than you thought?"
+        "ask": "When you add all the times up, is it longer than you thought?"
       },
       {
         "name": "Light and safety",
@@ -297,7 +297,7 @@
             "v": "only if your area allows it, and an adult runs it"
           }
         ],
-        "ask": "Check it: walk the path to the house in the dark before bedtime."
+        "ask": "Have you walked the path to the house in the dark before bedtime?"
       }
     ],
     "after": {
@@ -310,9 +310,9 @@
     }
   },
   "conclusion": {
-    "headline": "They planned a night outside.",
-    "text": "Your kid scouted a site, measured it, fit a camp into it, built a gear list and a budget, worked out food for everyone and wrote a schedule. Then they ran it and checked their numbers against the real night. That's measurement, budgeting, multiplication and time maths, used for something they'll remember.",
-    "celebrate": "Ask what they're proudest of: the plan or the night? Then ask what they'd change next time.",
+    "headline": "The tent went where they measured.",
+    "text": "Point at any patch of the yard and ask whether a tent would fit there. Watch them pace it out or reach for the tape before they answer. When the next outing comes up, listen for them asking what time it gets dark.",
+    "celebrate": "In the tent, tell them: 'We're sleeping right where you measured, with room to walk to the house.'",
     "extensions": [
       "Plan a campout for friends and scale the space, food and budget up",
       "Try it somewhere new: a park, a campground, a friend's backyard",
@@ -325,7 +325,7 @@
     "They ask 'how many people?' before planning food",
     "They add buffer time without being reminded"
   ],
-  "makeItReal": "Put the campout on the calendar before they start planning, so the deadline is real. Then hand over the real decisions: where the tent goes, what's for breakfast, what time lights go out. A plan they know they'll sleep in gets their best thinking.",
+  "makeItReal": "Put the campout on the calendar before they start planning, so the deadline is fixed. Then hand over the decisions that matter: where the tent goes, what's for breakfast, what time lights go out. Stick to their answers.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

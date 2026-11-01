@@ -31,7 +31,7 @@
         "line": "Buy A, if you'll really keep it. That 'if' is the honest part."
       }
     ],
-    "modelNote": "Same two bottles, a completely different answer. When your kid says 'it's cheaper,' ask: cheaper per what?"
+    "modelNote": "Price tags hide how long a thing lasts. Cost per use counts that, plus the month the cheap bottle goes missing."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need to teach anything. You're the calm coach, not the shopping expert. Let them pick something they actually want, don't lead the verdict, and treat 'I changed my mind' as a win: it means the process worked.",
+    "intro": "The trap here is steering them toward the sensible choice. Let them pick something they actually want, keep your verdict to yourself, and treat 'I changed my mind' as a win: it means the process worked.",
     "plan": [
       {
         "when": "First hour",
@@ -116,9 +116,9 @@
       ],
       "tip": "Write the gut pick down and keep it. You'll come back to it in Step 5.",
       "levels": {
-        "explore": "Pick a scenario and two options, and write the sentence.",
-        "develop": "Pick a real purchase and look up two real options with prices.",
-        "extend": "Add a budget limit, and predict which option will win and why."
+        "explore": "Pick a real thing you want and two options you can see or hold.",
+        "develop": "Look up two real options with prices, online or in a flyer.",
+        "extend": "Set a budget, predict the winner, and name the one fact that would flip your pick."
       }
     },
     {
@@ -132,9 +132,9 @@
       ],
       "tip": "Most purchases are wants dressed up as needs. That pause when they realise it is the whole lesson.",
       "levels": {
-        "explore": "Label need or want, pick 3 or 4 criteria, score and add up.",
+        "explore": "Need or want? Pick 3 things that matter and tick the winner of each.",
         "develop": "Explain the need or want label, pick 5 criteria and rank them by importance.",
-        "extend": "Pick 6 criteria and give the important ones double points (a weighted rubric)."
+        "extend": "Weight the top criteria double, then check: does changing one weight change the winner?"
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "tip": "Once kids do cost-per-use maths, they start seeing the cheap version differently. Let them find it in their own numbers.",
       "levels": {
-        "explore": "Work out cost per use for both options.",
+        "explore": "Divide each price by its uses, on a calculator.",
         "develop": "Add one hidden cost each and name the opportunity cost.",
-        "extend": "Build a full true-cost breakdown for both and rescore the rubric."
+        "extend": "Per month: $45 shoes lasting 12 months or $20 lasting 4? How long must the $45 pair last to win?"
       }
     },
     {
@@ -166,7 +166,7 @@
       "levels": {
         "explore": "Spot 2 or 3 tricks across both options.",
         "develop": "Spot 4 tricks and say which one almost worked on you.",
-        "extend": "Rewrite one product description with zero marketing, only facts, and compare."
+        "extend": "Rewrite one product description with only facts, then list what the seller left out on purpose."
       }
     },
     {
@@ -186,9 +186,9 @@
       ],
       "tip": "The 'wait two weeks' twist is the sneakiest. If they still want it, it's real. If they forgot, they just saved money.",
       "levels": {
-        "explore": "Apply 1 twist and write a 3 or 4 sentence recommendation.",
+        "explore": "Try 1 twist, then tell me your pick in 3 sentences while I write.",
         "develop": "Apply 2 twists and back the recommendation with rubric and cost evidence.",
-        "extend": "Apply 2 twists, add a confidence level, and write 5 Smart Shopper Rules for your future self."
+        "extend": "Imagine it's a year later and the purchase was a mistake. Write what went wrong, and check if your pick survives it."
       }
     }
   ],
@@ -295,9 +295,9 @@
     }
   },
   "conclusion": {
-    "headline": "That's buying on purpose.",
-    "text": "Your kid did what most adults skip: they stopped, compared, worked out the true cost, saw through the marketing and made a decision they could explain. Pick, compare, calculate, decide: it works on a water bottle, a phone plan, a car. The purchase doesn't matter. The habit does.",
-    "celebrate": "Ask what surprised them most: 'Did the cost-per-use maths change which one you'd buy?'",
+    "headline": "They check cost per use now, not just the tag.",
+    "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use maths stuck.",
+    "celebrate": "Repeat back the number that decided it: 'So the $45 pair is cheaper per month. That's going to change how I shop too.'",
     "extensions": [
       "Run the rubric on a real family purchase coming up",
       "Compare three options instead of two",
@@ -310,7 +310,7 @@
     "They point out crossed-out prices and countdown timers",
     "They say 'let me wait a few days' about something they want"
   ],
-  "makeItReal": "Use the rubric on the next real thing your kid wants to buy with their own money. Let them make the call, then check in a month later: do they still use it? That's the cost-per-use maths coming true.",
+  "makeItReal": "Use the rubric on the next thing your kid wants to buy with their own money. Let them make the call, then put a date on the calendar a month out to ask if they still use it.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -4,7 +4,7 @@
   "title": "Creature Habitat",
   "tagline": "Invent · Adapt · Build",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid invents an animal that has never existed, works out exactly how it stays alive, builds it with their hands and creates the habitat where it thrives. Then they document it like a scientist who just discovered a new species. Part art, part biology, part storytelling.",
+  "goal": "Your kid invents an animal that has never existed, works out exactly how it stays alive, builds it with their hands and creates the habitat where it thrives. Then they document it like a scientist who just discovered a new species. Every feature has to earn its place.",
   "need": [
     "Paper and markers or coloured pencils",
     "Clay or playdough, cardboard, small boxes, tape, glue and scissors",
@@ -33,7 +33,7 @@
         "line": "Every feature has a job, and the creature has a weakness too."
       }
     ],
-    "modelNote": "That's the question behind every step: how does this help it survive?"
+    "modelNote": "The first try was a pile of cool parts. The fix keeps fewer features, gives each one a job and adds a weakness, the way real animals work."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You ask the questions, they make the choices. If they want a flying fish with fur, let them, then ask 'how does the fur help it survive?' And resist fixing the build. 'Tell me about this part' beats 'maybe try it this way.'",
+    "intro": "Your best tool here is one question: 'how does that help it survive?' If they want a flying fish with fur, let them, then ask it. Resist fixing the build. 'Tell me about this part' beats 'maybe try it this way.'",
     "plan": [
       {
         "when": "Session 1",
@@ -113,7 +113,7 @@
       "levels": {
         "explore": "Draw the creature and give it a name.",
         "develop": "Draw it, name it, and explain its colour and covering.",
-        "extend": "Draw it from two angles, with its size compared to something real."
+        "extend": "Draw it to scale next to a real animal of the same size, and decide what that size means for how much it eats and where it can hide."
       }
     },
     {
@@ -127,9 +127,9 @@
       ],
       "tip": "No invincible creatures. Even the toughest real animals have something that threatens them.",
       "levels": {
-        "explore": "Say what it eats and how it stays safe.",
+        "explore": "Draw what it eats and one way it stays safe.",
         "develop": "Give every feature a job, and name its weakness.",
-        "extend": "Borrow 2 real animal tricks and explain how each one works."
+        "extend": "Give each feature a cost as well as a job. Huge ears let heat out in the desert but would lose too much in the Arctic, which is why arctic foxes have small ears. Name the cost of each feature."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Draw and label it, then show it to someone.",
         "develop": "Fill in every part of the checklist and present it.",
-        "extend": "Add a range map of where it lives, and film the reveal."
+        "extend": "Give it a two-part scientific name, like Vulpes zerda for the fennec fox, and add a 'not to be confused with' line saying how to tell it from a real animal."
       }
     }
   ],
@@ -209,7 +209,7 @@
             "v": "its hump stores fat, not water"
           }
         ],
-        "ask": "Check it: which trick did you borrow?"
+        "ask": "Which trick did you borrow?"
       },
       {
         "name": "Body part jobs",
@@ -235,7 +235,7 @@
             "v": "dig, grip, swim or run"
           }
         ],
-        "ask": "Check it: does every feature have a job?"
+        "ask": "Does every feature have a job?"
       },
       {
         "name": "Habitat match",
@@ -261,7 +261,7 @@
             "v": "claws, grip, a long tail"
           }
         ],
-        "ask": "Check it: does your creature fit its home?"
+        "ask": "Does your creature fit its home?"
       },
       {
         "name": "Field guide checklist",
@@ -287,7 +287,7 @@
             "v": "one surprising thing"
           }
         ],
-        "ask": "Check it: could someone identify it from your page?"
+        "ask": "Could someone identify it from your page?"
       }
     ],
     "after": {
@@ -302,8 +302,8 @@
   },
   "conclusion": {
     "headline": "A new species, discovered.",
-    "text": "Your kid invented a species, worked out how it survives, built it with their hands, designed its home, documented it like a scientist and presented it. That's biology, art, engineering and writing in one project, all held together by one question: how does this help it survive?",
-    "celebrate": "Tell them which part impressed you: a clever feature, a weakness that made sense, or how they solved a building problem.",
+    "text": "Point to any part of their creature and ask what it's for. They'll have an answer, and a weakness to go with it. Expect the same question about real animals on your next walk.",
+    "celebrate": "Name the one feature that convinced you, and say why in a sentence: 'The webbed feet make sense. It lives where the river floods.'",
     "extensions": [
       "Invent a second creature for the same habitat and work out how the two get along",
       "Write a short story starring the creature",
@@ -316,7 +316,7 @@
     "They notice camouflage and warning colours outside",
     "They explain choices with a reason, not just 'because it's cool'"
   ],
-  "makeItReal": "Next time you see an animal, at a zoo, on a walk or in a documentary, ask them to spot one feature and guess its job. Then look it up together.",
+  "makeItReal": "At the zoo, on a walk or during a documentary, ask them to spot one feature and guess its job. Then look it up together and see who was right.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -32,7 +32,7 @@
         "line": "A took 10 more shots. The total hid that."
       }
     ],
-    "modelNote": "That's the question behind every stat in this guide: compared to what?"
+    "modelNote": "Totals reward whoever shot more. Divided by shots, both players are on the same scale, and the order flips."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the stats coach and the audience. Let them pick the sport and the question, keep the data real, and let them do the maths. Their own play makes the best data, because they care about every number.",
+    "intro": "Keep the data real, even when it's unflattering. Let them pick the sport and the question, and let them do the maths, with a calculator if they like. Their own play makes the best data, because they care about every number, bad games included.",
     "plan": [
       {
         "when": "Session 1",
@@ -130,9 +130,9 @@
       ],
       "tip": "Backyard shooting test: 10 shots from close and 10 from far, once a day for 5 days. Tally during, add up after.",
       "levels": {
-        "explore": "A table with 3 or 4 columns, filled in for 3 games.",
+        "explore": "Tally 2 or 3 stats for 3 games on a ready-made table.",
         "develop": "5 or more columns, filled in for 5 games, with notes on anything unusual.",
-        "extend": "7 or more games, plus a mark beside any result much higher or lower than normal, with a reason."
+        "extend": "Keep one thing the same every session, like the spot or the ball, and explain what would go wrong if it changed."
       }
     },
     {
@@ -146,9 +146,9 @@
       ],
       "tip": "8 + 12 + 6 + 10 + 9 = 45, and 45 ÷ 5 = 9. With 30 instead of 9, it's 66 ÷ 5 = 13.2, higher than 4 of the 5 games.",
       "levels": {
-        "explore": "Add up the main stat and find the average.",
+        "explore": "Deal all the goals out as counters, one pile per game. A pile is the average.",
         "develop": "Find the averages for every stat, plus the highest, lowest and range.",
-        "extend": "Show how one odd game changes the average, and decide if the average is fair."
+        "extend": "Find the median too. For 8, 12, 6, 10 and 30, the average is 13.2 but the median is 10. Which fits a typical game?"
       }
     },
     {
@@ -162,9 +162,9 @@
       ],
       "tip": "Percent = made ÷ tries × 100. 15 ÷ 25 = 0.6, so 60%. Per game: A is 20 ÷ 40 = 0.5, B is 15 ÷ 25 = 0.6. B wins.",
       "levels": {
-        "explore": "Work out one percentage and say what it means.",
+        "explore": "Take exactly 10 shots so the percent is easy: 6 in out of 10 is 60%.",
         "develop": "Work out 2 or 3 percentages and rank by total and by percent.",
-        "extend": "Find a case where the total and the percent disagree, and explain which is fairer."
+        "extend": "2 for 2 is 100%. Set a minimum number of tries before a percent counts, like leagues do, and explain your cut-off."
       }
     },
     {
@@ -180,7 +180,7 @@
       "levels": {
         "explore": "Draw one chart and predict one stat for the next game.",
         "develop": "Draw a chart with labels, predict a range and explain why.",
-        "extend": "Predict 2 or 3 stats, say how sure you are, check against the real game and explain the difference."
+        "extend": "After your best game, predict the next one. Explain why a record game is usually followed by a lower score."
       }
     }
   ],
@@ -212,7 +212,7 @@
             "v": "first serves in, points won"
           }
         ],
-        "ask": "Check it: are you tracking the tries, not just the successes?"
+        "ask": "Are you tracking the tries, not just the successes?"
       },
       {
         "name": "Average and range",
@@ -234,7 +234,7 @@
             "v": "one odd game pulling the average"
           }
         ],
-        "ask": "Check it: does your average look like a typical game?"
+        "ask": "Does your average look like a typical game?"
       },
       {
         "name": "Fair comparisons",
@@ -256,7 +256,7 @@
             "v": "more trustworthy stats"
           }
         ],
-        "ask": "Check it: did both players have the same chances?"
+        "ask": "Did both players have the same chances?"
       },
       {
         "name": "Pick the chart",
@@ -278,7 +278,7 @@
             "v": "a title and labels on both sides"
           }
         ],
-        "ask": "Check it: could someone read your chart without you explaining it?"
+        "ask": "Could someone read your chart without you explaining it?"
       }
     ],
     "after": {
@@ -291,9 +291,9 @@
     }
   },
   "conclusion": {
-    "headline": "They read the game like an analyst.",
-    "text": "Your kid asked a real question, collected real numbers, and found out that the biggest total isn't always the best stat. They worked out averages, compared fairly with percentages, spotted a trend and put a prediction on the line. Next time someone says 'they're the best,' your kid will ask 'by which stat?'",
-    "celebrate": "Tell them what impressed you: the question they picked, the moment the ranking flipped, or how close their prediction came.",
+    "headline": "Now they ask how many tries it took.",
+    "text": "When a commentator says a player is on fire, listen to what your kid asks. If it's 'out of how many shots?', the lesson stuck. They can also tell you why one huge game makes an average look better than a normal day.",
+    "celebrate": "When the ranking flips in Step 4, say it out loud with them: 'So the one with fewer goals is the better shooter. I'd have got that wrong.'",
     "extensions": [
       "Track a whole season and see how the stats change over months",
       "Test whether home advantage is real: home vs away stats",
@@ -306,7 +306,7 @@
     "They talk about averages and percentages while watching a game",
     "They back up 'who's best' with a number"
   ],
-  "makeItReal": "Next time you watch a game together, ask them to track one player. At half-time, ask them who's really playing best, and by which stat.",
+  "makeItReal": "When you watch a game together, give them one player to track. At half-time, ask who's really playing best, and by which stat.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -32,7 +32,7 @@
         "line": "A steady beat, a pattern on top, repeated. That's a rhythm."
       }
     ],
-    "modelNote": "Every song you know is built this way. The question behind every step: what repeats, and what changes?"
+    "modelNote": "The first try had no beat, so nothing could repeat. Once the box keeps the count, the beans have somewhere to land. Every song your kid knows is built on that same idea."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience or any music training. You're the audience, not the conductor. Hold them to five objects, let it be noisy and strange, and don't fix their ideas. If they want to play a cheese grater with a fork, that's an instrument.",
+    "intro": "Expect noise, and maybe a cheese grater played with a fork. Your job is to hold the line at five objects and keep your own ideas out of it. Kids build a piece by playing it over and over, so let the repeats happen, even the loud ones.",
     "plan": [
       {
         "when": "First 20 minutes",
@@ -128,7 +128,7 @@
       "levels": {
         "explore": "Find 2 sounds from each object.",
         "develop": "Find 3 or more sounds from each, and sort them high to low.",
-        "extend": "Tune 3 objects to a high, a middle and a low note, and explain what changed the pitch."
+        "extend": "Tune 3 objects to a high, a middle and a low note. Then touch each one while it rings: what do you feel, and what happens to the sound when you grab it?"
       }
     },
     {
@@ -142,9 +142,9 @@
       ],
       "tip": "A rest counts too. Tap, tap, (nothing), tap. Silence is part of the rhythm.",
       "levels": {
-        "explore": "Keep a steady beat and add one sound on top.",
+        "explore": "Tap a steady beat while you count out loud to 4, and add one shake on count 1.",
         "develop": "Layer 2 sounds over the beat and keep it going for a minute.",
-        "extend": "Make two different patterns, A and B, and switch between them."
+        "extend": "Play a pattern that repeats every 3 counts over a beat of 4. After how many counts do they start together again, and why that number?"
       }
     },
     {
@@ -175,7 +175,7 @@
       "tip": "Playing through a mistake is a real skill. Most audiences never notice if you don't stop.",
       "levels": {
         "explore": "Play the piece for one person.",
-        "develop": "Announce it and play it start to finish for the family.",
+        "develop": "Record it, listen back together, change one part, then play it again for the family.",
         "extend": "Teach one part to a sibling or parent, and perform it as a duet."
       }
     }
@@ -208,7 +208,7 @@
             "v": "a pot lid, spoons on a string"
           }
         ],
-        "ask": "Check it: do you have at least 3 kinds?"
+        "ask": "Do you have at least 3 kinds?"
       },
       {
         "name": "High or low?",
@@ -230,7 +230,7 @@
             "v": "more water = lower when tapped"
           }
         ],
-        "ask": "Check it: can you play a high, a middle and a low sound?"
+        "ask": "Can you play a high, a middle and a low sound?"
       },
       {
         "name": "Rhythm builder",
@@ -256,7 +256,7 @@
             "v": "4 times makes a section"
           }
         ],
-        "ask": "Check it: can you keep it going for a minute?"
+        "ask": "Can you keep it going for a minute?"
       },
       {
         "name": "Piece shapes",
@@ -278,7 +278,7 @@
             "v": "starts slow, speeds up, stops"
           }
         ],
-        "ask": "Check it: does it start and end on purpose?"
+        "ask": "Does it start and end on purpose?"
       }
     ],
     "after": {
@@ -292,9 +292,9 @@
     }
   },
   "conclusion": {
-    "headline": "They made music from scratch.",
-    "text": "Your kid turned five ordinary objects into music that didn't exist this morning. They explored, listened, found out why some things sound high and others low, built a pattern, shaped a piece and performed it. A kid who can make music out of five spoons won't be stuck staring at a blank page.",
-    "celebrate": "Tell them what got you: a sound they discovered, the name of the piece, or how they kept going after a mistake.",
+    "headline": "This morning, those were just pots and spoons.",
+    "text": "Ask them which glass sang lowest and why. They'll tell you it was the fullest one, and they found that out by ear. Then ask them to play the piece again. They probably can, from memory, because they built it beat by beat.",
+    "celebrate": "Say the name of their piece back to them and tell them the exact moment you liked: 'When the beans came in on three, it sounded like rain starting.'",
     "extensions": [
       "Swap in five new objects and compose a second piece",
       "Start a family band where everyone brings one instrument",
@@ -307,7 +307,7 @@
     "They notice high and low sounds around the house",
     "They make things from what's around instead of asking for new stuff"
   ],
-  "makeItReal": "Next time you're waiting somewhere, give them three objects from your bag and one minute to make a rhythm. Constraints work anywhere.",
+  "makeItReal": "In a waiting room, hand them three things from your bag and give them one minute to make a beat. Then it's your turn to copy it.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

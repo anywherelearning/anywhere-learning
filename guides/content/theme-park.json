@@ -33,7 +33,7 @@
         "line": "The map decides where people go, so plan it on purpose."
       }
     ],
-    "modelNote": "That's the question behind every step: what does a visitor do here, and where do they go next?"
+    "modelNote": "Everything by the gate means everyone stops at the gate. Spread the big draws out and visitors walk the whole park."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the visitor, not the designer. Let them pick the theme and build it their way. When they're ready, walk through it as a real guest: your honest confusion or delight is the best feedback they'll get.",
+    "intro": "The most useful thing you'll do is walk through the park as a guest. Your confusion or delight at each turn is better feedback than any suggestion. Until then, let them pick the theme and build it their way.",
     "plan": [
       {
         "when": "Session 1",
@@ -113,7 +113,7 @@
       "levels": {
         "explore": "Pick a theme and draw 3 rides.",
         "develop": "Pick a theme and name 4 or 5 rides of at least 3 different kinds.",
-        "extend": "Plan themed zones, with a star ride and a snack stand in each."
+        "extend": "Set a minimum height for each ride, then check that a 4-year-old still has at least 2 things to do."
       }
     },
     {
@@ -159,9 +159,9 @@
       ],
       "tip": "Family of 4: tickets 4 × $12 = $48, lunch 4 × $6 = $24, one souvenir $5. That's $77. Would they pay it?",
       "levels": {
-        "explore": "Make a sign, tickets and a menu with prices.",
+        "explore": "Make a sign, tickets and a menu with whole-dollar prices, and buy a snack with play coins.",
         "develop": "Price everything and work out a family's day total.",
-        "extend": "Work out wait times: 40 people in line, 8 riders per trip, 2 minutes a trip = 10 minutes."
+        "extend": "Offer a $12 wristband or $2 a ride. After how many rides does the wristband win, and which would you rather sell?"
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Give one tour, fix one thing, and open the park.",
         "develop": "Run 2 tours, fix the biggest problem, and hold an opening with roles for helpers.",
-        "extend": "Collect visitor feedback in a guest book, and film a 'welcome to the park' commercial."
+        "extend": "The star ride takes 8 riders every 2 minutes. How many is that in an hour, and if 300 want it, how many are still waiting?"
       }
     }
   ],
@@ -205,7 +205,7 @@
             "v": "spy academy, enchanted forest"
           }
         ],
-        "ask": "Check it: does every ride fit the theme?"
+        "ask": "Does every ride fit the theme?"
       },
       {
         "name": "Attraction mix",
@@ -231,7 +231,7 @@
             "v": "benches and shade"
           }
         ],
-        "ask": "Check it: do you have at least 3 kinds?"
+        "ask": "Do you have at least 3 kinds?"
       },
       {
         "name": "Map checklist",
@@ -257,7 +257,7 @@
             "v": "at the far end, a reason to walk"
           }
         ],
-        "ask": "Check it: where would the traffic jam happen?"
+        "ask": "Where would the traffic jam happen?"
       },
       {
         "name": "Park maths",
@@ -275,7 +275,7 @@
             "v": "would you pay it?"
           }
         ],
-        "ask": "Check it: would a family of four say it's worth it?"
+        "ask": "Would a family of four say it's worth it?"
       }
     ],
     "after": {
@@ -289,9 +289,9 @@
     }
   },
   "conclusion": {
-    "headline": "The park is open.",
-    "text": "Your kid started with a vision, fit it into a real space, built it from whatever was around, priced it, tested it on a real visitor and ran opening day. That's how designers, architects and business owners work: plan, build, test, fix, open.",
-    "celebrate": "Tell them what impressed you: a smart spot on the map, a ride name that made you laugh, or how they ran opening day.",
+    "headline": "Opening day, and the crowd went where they planned.",
+    "text": "Hand them the family-of-four total from Step 4 and ask how they'd bring it down by $15 without losing visitors. Listen for them weighing ticket prices against food, then checking the new total.",
+    "celebrate": "On opening day, tell them the moment the map worked on you: 'I walked past three rides to get to the big one, just like you planned.'",
     "extensions": [
       "Design a Season 2 expansion with a new zone",
       "Build a water park, zoo or museum next door",
@@ -304,7 +304,7 @@
     "They work out what a day out would cost",
     "They ask a visitor what confused them, and fix it"
   ],
-  "makeItReal": "Next time you visit a park, zoo or museum, ask them to find where the big attraction is and why it's there. Real designers made the same choices they did.",
+  "makeItReal": "At a zoo, museum or park, ask them to find the big attraction and guess why it's there. Then follow the crowd and see if they were right.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -32,7 +32,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need a science background. You're the lab assistant and the keeper of the secret powder. Handle the hot water and the stove, keep the tray under everything, and resist telling them which powder is which. The fun is in figuring it out.",
+    "intro": "No hints about the secret powder, even when they're one test away and pleading. You handle the hot water and the stove, and the tray goes under everything. The fun is in figuring it out.",
     "plan": [
       {
         "when": "First 40 minutes",
@@ -80,7 +80,7 @@
         "line": "One more test, warm water, tells which. That's evidence, not a guess."
       }
     ],
-    "modelNote": "This is how real scientists work, in labs and at crime scenes. The question behind every step: what does this test rule out?"
+    "modelNote": "The first try named a powder from how it looked, and all five look alike. The fix runs a test that rules three out, then one more to settle it."
   },
   "steps": [
     {
@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Test 3 liquids and say which changed colour.",
         "develop": "Test 5 liquids and sort them from acid to base.",
-        "extend": "Find 3 more liquids in the kitchen to test and predict each colour first."
+        "extend": "Add baking soda water to pink vinegar juice a few drops at a time. When does it turn purple, and why?"
       }
     },
     {
@@ -160,7 +160,7 @@
       "levels": {
         "explore": "Test one question and say what happened.",
         "develop": "Predict first, test fairly and explain the result.",
-        "extend": "Run it three times and present the results on a chart."
+        "extend": "Test your change at 3 levels, like 1, 2 and 3 spoons. Does the result grow evenly?"
       }
     }
   ],
@@ -188,7 +188,7 @@
             "v": "always test plain water first"
           }
         ],
-        "ask": "Check it: did you compare every cup to plain water?"
+        "ask": "Did you compare every cup to plain water?"
       },
       {
         "name": "Clue key",
@@ -218,7 +218,7 @@
             "v": "sugar (a grown-up heats it)"
           }
         ],
-        "ask": "Check it: what does your next test rule out?"
+        "ask": "What does your next test rule out?"
       },
       {
         "name": "Fair test",
@@ -240,7 +240,7 @@
             "v": "to check it wasn't luck"
           }
         ],
-        "ask": "Check it: what stayed the same?"
+        "ask": "What stayed the same?"
       },
       {
         "name": "Question ideas",
@@ -262,7 +262,7 @@
             "v": "what turns the juice greenest?"
           }
         ],
-        "ask": "Check it: can you test it fairly?"
+        "ask": "Can you test it fairly?"
       }
     ],
     "after": {
@@ -294,9 +294,9 @@
     }
   ],
   "conclusion": {
-    "headline": "They solved it like a scientist.",
-    "text": "Your kid took five powders that looked the same and told them apart with evidence. They made an indicator, ran fair tests, built a results table and used it to solve a mystery, then tested a question of their own. A kid who asks what a test rules out will think more clearly about everything, not just chemistry.",
-    "celebrate": "Tell them what impressed you: the test they picked first, a careful table, or how they solved it without guessing.",
+    "headline": "They can tell five white powders apart.",
+    "text": "Tomorrow, put a spoonful of one powder in a cup and ask which it is. Watch which test they reach for first. If it's vinegar, they know one drop splits the five suspects into two groups, and they can tell you why.",
+    "celebrate": "Save your praise for the reveal: 'You didn't guess once. Every test crossed something off, and that's how you knew.'",
     "extensions": [
       "Hide a mix of two powders and solve it",
       "Use the cabbage juice to test every drink in the fridge",
@@ -309,7 +309,7 @@
     "They change one thing at a time when something doesn't work",
     "They notice small differences other people miss"
   ],
-  "makeItReal": "Next time the bread doesn't rise or the cookies spread flat, ask what changed. Baking is chemistry, and every flop is a test result.",
+  "makeItReal": "If the bread doesn't rise or the cookies spread flat, ask what changed, and let them pick one thing to change on the next batch.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

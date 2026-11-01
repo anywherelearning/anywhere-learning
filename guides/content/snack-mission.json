@@ -4,7 +4,7 @@
   "title": "The $20 Snack Mission",
   "tagline": "Budgeting · Mental maths · Trade-offs",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid takes a real budget into a real store with a real mission: snacks for the week, a movie night spread, or the ingredients for a meal they'll help cook. They plan, guess prices, keep a running total, make the hard trade-offs, and pay. Math sticks when going over budget means putting back the thing you want.",
+  "goal": "Your kid takes a real budget into a real store with a real mission: snacks for the week, a movie night spread, or the ingredients for a meal they'll help cook. They plan, guess prices, keep a running total, make the hard trade-offs, and pay. If the total goes over, something they wanted goes back on the shelf.",
   "need": [
     "A set budget in real money ($20 works, any amount is fine)",
     "A notebook and a pencil, and a calculator if they want one",
@@ -31,7 +31,7 @@
         "line": "$3.99, round to $4. Total: $19. About $1 left."
       }
     ],
-    "modelNote": "Four items, and they know the total before checkout. When your kid says 'around twenty,' ask: what's your running total right now?"
+    "modelNote": "'Around twenty' was a guess at the end. The fix rounds each price up as it goes in the cart, so they know the total before the till."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You're the wallet, not the manager. Hand over the list, the maths and the choices, even the ones you wouldn't make. Let them go over budget at the till and fix it: that's the best lesson in the store. When they're adding, wait. The pause is the work.",
+    "intro": "The hardest part is staying quiet. Hand over the list, the maths and the choices, even the ones you wouldn't make. If they go over budget at the till, let them fix it right there. When they're adding in their head, wait it out.",
     "plan": [
       {
         "when": "At home",
@@ -121,7 +121,7 @@
       "levels": {
         "explore": "A small budget for two or three items.",
         "develop": "A full budget for a real weekly or family goal.",
-        "extend": "A budget with a challenge, like the most snacks for the lowest cost."
+        "extend": "A week's budget: count the snack times and split it, like $20 for 10 snacks is $2 each."
       }
     },
     {
@@ -135,9 +135,9 @@
       ],
       "tip": "Kids' first price guesses are usually way off, high or low. By the second mission, they're much closer.",
       "levels": {
-        "explore": "A short list with a guess for each item.",
+        "explore": "Draw 3 or 4 items and guess each price: more or less than $5?",
         "develop": "A full list, a guessed total, and a trimmed plan that fits.",
-        "extend": "A ranked list, so they know exactly what to cut first if needed."
+        "extend": "Rank the list, then look up 3 real prices online. Did your guesses run high or low?"
       }
     },
     {
@@ -151,9 +151,9 @@
       ],
       "tip": "A running total feels slow at first. Stick with it. Knowing the total before the till is what keeps them in control.",
       "levels": {
-        "explore": "Check prices and add them up with your help.",
+        "explore": "Carry the cash in an envelope. Move each item's dollars, rounded up, to your pocket.",
         "develop": "Keep the running total on their own.",
-        "extend": "Compare unit prices to find the best value for each item."
+        "extend": "Compare unit prices across deals: is '2 for $5' cheaper than the $2.29 single?"
       }
     },
     {
@@ -169,7 +169,7 @@
       "levels": {
         "explore": "Choose one thing to put back to fit the budget.",
         "develop": "Rebalance the whole cart to land under budget.",
-        "extend": "Hit the mission and finish with the most money left over."
+        "extend": "Build two carts that both hit the mission, and keep the one with the lower cost per serving."
       }
     },
     {
@@ -183,16 +183,16 @@
       ],
       "tip": "Counting real change is mental maths with a reason. Let the cashier wait a few seconds.",
       "levels": {
-        "explore": "Pay and check if the change is right.",
+        "explore": "Pay, then count the change into your hand with a grown-up.",
         "develop": "Compare the final total to the running total they kept.",
-        "extend": "Work out how much they saved compared to their first plan."
+        "extend": "Price the same cart at a second store or online, and decide if the saving is worth the trip."
       }
     }
   ],
   "conclusion": {
-    "headline": "Your kid just ran a real budget.",
-    "text": "They set a plan, guessed prices, kept a running total, made hard trade-offs and paid. Adding, rounding and subtracting, with real money and real consequences.",
-    "celebrate": "Point to a choice: 'You put the chips back so you could get the fruit and still have a dollar left.' That's budgeting.",
+    "headline": "They knew the total before the cashier did.",
+    "text": "Halfway through your next shop, ask for their running total. If they can give you a number within a dollar or two of the real one, rounding up as they go has become a habit.",
+    "celebrate": "At the till, when the total lands under budget, say: 'You put the chips back for the fruit and still had a dollar left. I saw that.'",
     "extensions": [
       "Hand them the budget for a real family meal",
       "Give them a budget for a small gift for someone",
@@ -205,7 +205,7 @@
     "They round and add in their head at the store",
     "They talk about value: 'this one's a better deal'"
   ],
-  "makeItReal": "Make it a regular job: once a month, your kid gets the budget for the family's snacks or one meal. Every mission, their guesses get closer, their totals get faster, and they start noticing prices everywhere.",
+  "makeItReal": "Make it a regular job: once a month, your kid gets the budget for the family's snacks or one meal, and keeps their guess list so they can see how close they get each time.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
@@ -252,7 +252,7 @@
             "v": "keep $1 or $2 spare"
           }
         ],
-        "ask": "Check it: is your running total a little over the real prices?"
+        "ask": "Is your running total a little over the real prices?"
       },
       {
         "name": "Read the shelf tag",
@@ -278,7 +278,7 @@
             "v": "$2.50 each, so check the single price"
           }
         ],
-        "ask": "Check it: are you comparing the same unit?"
+        "ask": "Are you comparing the same unit?"
       },
       {
         "name": "Count the change up",
@@ -304,7 +304,7 @@
             "v": "4¢ + 40¢ + $1 = $1.44"
           }
         ],
-        "ask": "Check it: does the money in your hand match?"
+        "ask": "Does the money in your hand match?"
       },
       {
         "name": "When it won't all fit",
@@ -326,7 +326,7 @@
             "v": "popcorn kernels instead of bags"
           }
         ],
-        "ask": "Check it: did you keep every must-have?"
+        "ask": "Did you keep every must-have?"
       }
     ],
     "after": {

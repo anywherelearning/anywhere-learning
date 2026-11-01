@@ -32,7 +32,7 @@
         "line": "What the toys cost new isn't part of it. They were already yours."
       }
     ],
-    "modelNote": "That's the maths this guide builds to: money in, minus what it took to make it."
+    "modelNote": "The float was never earnings. Give it back, pay for the supplies, and what's left is the profit."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the customer during practice and the cash box keeper on sale day. Let them set the prices and make the calls. For a real sale, an adult holds the money and stays at the table the whole time.",
+    "intro": "Practice is where you earn your keep: play the haggler, the browser and the customer with a $10 bill for a $2.50 toy. On sale day, let them set prices and make the calls. For a real sale, an adult holds the money and stays at the table the whole time.",
     "plan": [
       {
         "when": "One afternoon",
@@ -102,7 +102,7 @@
     {
       "title": "Pick it, price it, tag it",
       "why": "A good price starts with what someone would actually pay.",
-      "kid": "Your kid walks through the house and picks things they've outgrown or don't use. For each one they set a price, using the rule of thumb in the Seller's Cheat Sheet at the end of the guide: about 10% to 30% of the price new for toys, games and gear, and less for books and clothes for toys, games and gear, and less for books and clothes for toys, games and gear, and less for books and clothes. They write a lowest price on the back of each tag before the sale, then make big, clear tags.",
+      "kid": "Your kid walks through the house and picks things they've outgrown or don't use. For each one they set a price, using the rule of thumb in the Seller's Cheat Sheet at the end of the guide: about 10% to 30% of the price new for toys, games and gear, and less for books and clothes. They write a lowest price on the back of each tag before the sale, then make big, clear tags.",
       "you": "Don't tell them the price. Ask 'is it in good condition?' and 'what would you pay?' Skip anything broken or unsafe, and skip car seats and bike helmets, since you can't know if they've been in a crash.",
       "ask": [
         "Why would someone want to buy this?",
@@ -110,9 +110,9 @@
       ],
       "tip": "Big price on the front, lowest price on the back in small pencil. Tape tags where they won't damage anything, never on book covers.",
       "levels": {
-        "explore": "Pick 5 to 8 things and price them between 25¢ and $2.",
+        "explore": "Pick 5 to 8 things and sort them into 25¢, $1 and $2 piles.",
         "develop": "Pick 15 to 20 things, price them from 25¢ to $10, and explain each price.",
-        "extend": "Look up what similar things sell for secondhand online and set price zones, like all books 50¢."
+        "extend": "Check 3 secondhand listings against the 10% to 30% rule, then set your own percentage per category."
       }
     },
     {
@@ -132,9 +132,9 @@
       ],
       "tip": "Counter halfway: ($8 + $4) ÷ 2 = $6. 'I can do $6.' If they say $5, that's the lowest, so they can say yes.",
       "levels": {
-        "explore": "Role-play 3 to 5 simple sales with no haggling.",
+        "explore": "Role-play 3 to 5 sales paid with exact change.",
         "develop": "Handle 8 to 10 sales, including a haggle and a big bill.",
-        "extend": "Plan answers for every tricky customer, including returns ('all sales final')."
+        "extend": "A buyer offers $2 for books tagged $1, $1 and 50¢. What percentage off is that, and will you take it?"
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "tip": "Write down what it SOLD for, not the tag price. If the $4 puzzle went for $3, the log says $3. That's what ends up in the box.",
       "levels": {
-        "explore": "Log 5 to 8 sales in a simple list.",
+        "explore": "Make a tally mark for each sale.",
         "develop": "Log 10 to 15 sales with a running total.",
-        "extend": "Log every sale, then note what sold first, what made the most and what didn't sell."
+        "extend": "Log every sale and find the average gap between tag and sold price. What does it say about your tags?"
       }
     },
     {
@@ -164,9 +164,9 @@
       ],
       "tip": "If the box and the log don't match, don't fix it for them. Finding the missing sale is great maths.",
       "levels": {
-        "explore": "Add up total sales and work out the profit.",
+        "explore": "Set the float aside first, then count what's left.",
         "develop": "Find sales, costs and profit, and which items earned the most.",
-        "extend": "Work out profit as a percentage of sales, like $44.50 ÷ $47.50 = about 94%."
+        "extend": "Find profit as a percentage of sales, then again as if tags and tape had cost $10."
       }
     },
     {
@@ -180,9 +180,9 @@
       ],
       "tip": "Cheaper often earns more: 4 × $1 = $4, but 12 × 50¢ = $6. And fewer books to carry back inside.",
       "levels": {
-        "explore": "Run a pretend second sale with new prices, and choose a spend, save, give split.",
+        "explore": "Run a pretend second sale, then split the coins into three jars: spend, save, give.",
         "develop": "Run a second sale with one change, compare the profit, and explain the split.",
-        "extend": "Predict the profit before the second sale, compare with the real result, and present the plan for next time."
+        "extend": "Predict first: if a $2 toy drops to $1 and 3 sell instead of 1, do you earn more? Then test one price drop."
       }
     }
   ],
@@ -218,7 +218,7 @@
             "v": "$10 to $20"
           }
         ],
-        "ask": "Check it: is your price in the range on this card?"
+        "ask": "Is your price in the range on this card?"
       },
       {
         "name": "Tricky customers",
@@ -240,7 +240,7 @@
             "v": "'All three books?' Make a deal on the spot."
           }
         ],
-        "ask": "Check it: can you handle all four in practice?"
+        "ask": "Can you handle all four in practice?"
       },
       {
         "name": "Making change",
@@ -262,7 +262,7 @@
             "v": "price + change = what they paid"
           }
         ],
-        "ask": "Check it: does your change add up to what they gave you?"
+        "ask": "Does your change add up to what they gave you?"
       },
       {
         "name": "Don't sell",
@@ -284,7 +284,7 @@
             "v": "check if you're not sure"
           }
         ],
-        "ask": "Check it: is everything on the table safe and yours to sell?"
+        "ask": "Is everything on the table safe and yours to sell?"
       }
     ],
     "after": {
@@ -297,9 +297,9 @@
     }
   },
   "conclusion": {
-    "headline": "They ran a real business.",
-    "text": "Your kid priced their own things, held their ground on a haggle (or caved and learned something), counted change for strangers, and found out what they really earned once the float went back. Next time they want to sell something, they'll already know to ask 'what's my lowest price?'",
-    "celebrate": "Tell them which moment impressed you most: the haggle they held, the change they counted, or the profit they worked out.",
+    "headline": "They know sales from profit.",
+    "text": "Mention a lemonade stand that took in $30 and ask what it made. They should want to know what the lemons and cups cost before they answer. And when they want to sell something, expect them to pick a lowest price before anyone asks.",
+    "celebrate": "Right after they hold a price on a haggle, tell them: 'You said no to a grown-up and stayed friendly. That's harder than the maths.'",
     "extensions": [
       "Give the 'give' part of the profit to a cause they choose",
       "Plan a bigger sale with friends or family",
@@ -312,7 +312,7 @@
     "They count change up instead of down",
     "They know the difference between sales and profit"
   ],
-  "makeItReal": "Before the next round of decluttering, let your kid run the sale and keep the profit split they choose. Real customers and their own money make every price count.",
+  "makeItReal": "Before the next round of decluttering, let your kid run the sale and keep the profit split they choose, with the float counted out before the first customer arrives.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

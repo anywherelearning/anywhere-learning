@@ -4,7 +4,7 @@
   "title": "Board Game Studio",
   "tagline": "Invent · Build · Playtest",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid invents a board game from nothing: the theme, how you win, the board, the cards and the rules. Then they hand it to someone else, watch what happens, and fix it. That last part is where the real design thinking happens.",
+  "goal": "Your kid invents a board game from nothing: the theme, how you win, the board, the cards and the rules. Then they hand it to someone else, watch what happens, and fix it.",
   "need": [
     "Paper or poster board, and markers",
     "Index cards or cut paper, tape, scissors and cardboard",
@@ -32,7 +32,7 @@
         "line": "A surprise or a choice on most turns, even a small one."
       }
     ],
-    "modelNote": "That's the design question behind every step: what is the player doing, and is it fun?"
+    "modelNote": "In the first try, the dice played the game. The fix gives players a choice or a surprise on most turns."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the playtester, not the designer. Ask questions instead of suggesting answers, play honestly, and help cut cards. Expect a messy first version: that's the data for Version 2.",
+    "intro": "Play it straight. When a rule doesn't work, don't quietly fix it mid-game: let the game break and ask what happened. Help cut cards, and expect a messy first version. It's the data for Version 2.",
     "plan": [
       {
         "when": "Session 1",
@@ -144,7 +144,7 @@
       "levels": {
         "explore": "A path with 5 special spaces and a few cards.",
         "develop": "A full board, 10 to 15 cards and tokens.",
-        "extend": "Forked paths or a map, and work out how often a player lands on a special space: if 1 space in 4 is special, about every 4th move."
+        "extend": "Roll 2 dice 36 times and tally the totals. Why does 7 win? (6 of the 36 ways to roll make 7.) Put the biggest space where a 7 lands."
       }
     },
     {
@@ -160,7 +160,7 @@
       "levels": {
         "explore": "Tell the rules out loud and play one game together.",
         "develop": "Write 5 rules, playtest with someone new, and note 3 problems.",
-        "extend": "Run two playtests with different players, time each game and tally the confusing moments."
+        "extend": "Track who goes first and who wins over several games. If going first wins too often, invent a fix for player two."
       }
     },
     {
@@ -176,7 +176,7 @@
       "levels": {
         "explore": "Change one thing and play again.",
         "develop": "Fix 2 problems, give it a name and make a cover.",
-        "extend": "A full rulebook, a box with a back-of-box blurb, and a game night with one-line player reviews."
+        "extend": "Cut every rule nobody used in the playtests, then write a 3-line quick start that gets players going in one minute."
       }
     }
   ],
@@ -208,7 +208,7 @@
             "v": "no board needed"
           }
         ],
-        "ask": "Check it: can you say how you win in one sentence?"
+        "ask": "Can you say how you win in one sentence?"
       },
       {
         "name": "Turn ideas",
@@ -234,7 +234,7 @@
             "v": "draw it, act it, answer it"
           }
         ],
-        "ask": "Check it: does something happen on most turns?"
+        "ask": "Does something happen on most turns?"
       },
       {
         "name": "Card ideas",
@@ -256,7 +256,7 @@
             "v": "everyone moves 1, reverse the order"
           }
         ],
-        "ask": "Check it: is there a mix of good, bad and surprise cards?"
+        "ask": "Is there a mix of good, bad and surprise cards?"
       },
       {
         "name": "Playtest checklist",
@@ -282,7 +282,7 @@
             "v": "which rule caused it?"
           }
         ],
-        "ask": "Check it: did you stay quiet while they played?"
+        "ask": "Did you stay quiet while they played?"
       }
     ],
     "after": {
@@ -297,9 +297,9 @@
     }
   },
   "conclusion": {
-    "headline": "Their game is published.",
-    "text": "Your kid came up with an idea, built a rough version, tested it on real people, listened, fixed what was broken and shared it. That's exactly how professional game designers work. And they found out that writing rules a stranger can follow is much harder than it looks.",
-    "celebrate": "Tell them what impressed you: a card idea that made everyone laugh, the rule they fixed, or how well they took the feedback.",
+    "headline": "Strangers can play it without them in the room.",
+    "text": "Pull out a store-bought game you both know and ask what happens on a typical turn, and whether it's a choice or luck. They'll judge it like a designer now, and they can tell you why rules a stranger can follow are so hard to write.",
+    "celebrate": "After the second playtest, tell them which fix you noticed: 'Nobody asked what the star spaces do this time. Your new rule did that.'",
     "extensions": [
       "Make an expansion pack: new cards, a new board area or a new turn idea",
       "Add a co-op mode or a speed round",
@@ -312,7 +312,7 @@
     "They write instructions with the reader in mind",
     "They ask for feedback instead of dreading it"
   ],
-  "makeItReal": "Put their game in the family game pile and play it on a real game night. Being picked next to store-bought games is the best review there is.",
+  "makeItReal": "Put their game in the family game pile with the store-bought ones, and on game night, let a guest choose what to play.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

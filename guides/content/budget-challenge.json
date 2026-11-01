@@ -31,7 +31,7 @@
         "line": "Bring snacks from home ($8) instead of ice cream. New total: $89, with $11 left for surprises."
       }
     ],
-    "modelNote": "Same beach day, now a plan that works. When your kid says 'and stuff,' ask: what exactly, and how much each?"
+    "modelNote": "'And stuff' hides the money. With every item priced, the $5 over shows up right away, and one swap fixes it."
   },
   "academics": [
     {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need to teach anything. You're the budget advisor, not the math teacher. Let them pick the scenario, let them blow the budget on the first try, and ask 'what would you cut?' more often than 'what's the answer?'",
+    "intro": "Let the first plan blow the budget. That's where the good part starts. They pick the scenario and every price, and your main line is 'what would you cut?', asked far more often than 'what's the answer?'",
     "plan": [
       {
         "when": "First hour",
@@ -116,9 +116,9 @@
       ],
       "tip": "Kids who've never handled money misjudge prices wildly. Let them find out on their own.",
       "levels": {
-        "explore": "Pick from the list and set a budget between $50 and $100.",
+        "explore": "Pick from the list and count out $50 to $100 in play money.",
         "develop": "Pick or invent a scenario, and explain why your budget makes sense.",
-        "extend": "Invent a detailed scenario, research typical costs, and set a budget that's slightly tight on purpose."
+        "extend": "Say the family has $300 a month for fun. What share should this day get, and what's left for other weekends?"
       }
     },
     {
@@ -132,9 +132,9 @@
       ],
       "tip": "The boring categories are where real budgets fall apart. Most adults learned that the hard way.",
       "levels": {
-        "explore": "Pick 3 or 4 categories and use the Price Menu.",
+        "explore": "Pick 3 or 4 categories and find their prices on the Price Menu.",
         "develop": "Pick 5 or 6 categories, mixing the Price Menu and real prices, and note where each price came from.",
-        "extend": "Pick 6 or more, research every price, and include at least one per-person calculation."
+        "extend": "For 2 items, find 3 prices each, online or in stores. Plan with the middle one, not the cheapest, and say why."
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "tip": "Don't correct the maths right away. A nudge toward the column with the mistake beats pointing at it.",
       "levels": {
-        "explore": "Add up 3 or 4 categories and check against the budget.",
+        "explore": "Add up 3 or 4 categories on a calculator and check the budget.",
         "develop": "Build a plan with 5 or 6 categories and revise it until it fits.",
-        "extend": "Calculate the cost per person, and find two different ways to cut, then explain which you'd choose."
+        "extend": "Find each category's percentage of the budget, set a rule like 'nothing over 40%', and test the plan."
       }
     },
     {
@@ -171,9 +171,9 @@
       ],
       "tip": "This is the most important step. Kids who left a buffer in Step 3 suddenly understand why adults do.",
       "levels": {
-        "explore": "Remove or reduce one item to fit the surprise.",
+        "explore": "Pay the surprise in play money, then drop or shrink one item.",
         "develop": "Find two ways to handle it, and choose the better one.",
-        "extend": "Handle two surprise costs, revise the whole budget, and explain your trade-offs in writing."
+        "extend": "Before the surprise, set aside 10% and rank a cut list. Handle it using only those."
       }
     },
     {
@@ -187,9 +187,9 @@
       ],
       "tip": "Want to make it extra real? Do the day, then compare planned to actual spending. 'You budgeted $12 for lunch and we spent $18' teaches more than a month of homework.",
       "levels": {
-        "explore": "Write a simple schedule, tell the plan out loud, and change 1 or 2 things.",
+        "explore": "Draw the day as a simple timeline, tell the plan out loud, and change 1 or 2 things.",
         "develop": "Pitch with the budget breakdown, answer one 'what if', and rewrite the budget as Version 2.",
-        "extend": "Pitch with a poster or slides, answer 2 or 3 tough questions, and compare Version 1 and 2 side by side in writing."
+        "extend": "Work out the cost per hour of fun for each activity, and use it to defend your priciest choice in the pitch."
       }
     }
   ],
@@ -340,9 +340,9 @@
     ]
   },
   "conclusion": {
-    "headline": "That's real money maths.",
-    "text": "Your kid planned a real day with a real budget. They chose what to spend on, worked out the costs, handled a surprise, built a schedule and defended their choices out loud. How much do I have, what do I want, and what am I willing to trade: that's every money decision they'll ever make.",
-    "celebrate": "Ask about their hardest trade-off: 'What did you cut to pay for parking, and was it worth it?'",
+    "headline": "Every dollar has a job.",
+    "text": "Bring up the same day with $20 less and see what goes first. Listen for a reason tied to what the family cares about, not just the biggest price on the list.",
+    "celebrate": "When they cover the surprise without asking for more, say: 'You found that money inside your own plan. I'd have reached for my wallet.'",
     "extensions": [
       "Do the day for real and compare planned and actual spending",
       "Plan the same kind of day with half the money",
@@ -355,7 +355,7 @@
     "They leave a little extra for surprises",
     "They say 'we can do this if we skip that'"
   ],
-  "makeItReal": "Let your kid plan the next real family outing within a real budget, and actually go. Afterward, sit down with the receipts and compare. Seeing their own plan meet reality is when budgeting clicks.",
+  "makeItReal": "Let your kid plan the next family outing within a set budget, and actually go. Afterward, lay the receipts next to their plan and circle every line that came out different.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

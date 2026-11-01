@@ -32,7 +32,7 @@
         "line": "Every zone answers a danger. That's design, not a list."
       }
     ],
-    "modelNote": "That's the question behind every step: what could go wrong, and how does the base handle it?"
+    "modelNote": "A checklist says what's in the base. A plan says why each zone sits where it does, and every answer is a danger."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the expedition advisor, not the leader. Ask 'what's the biggest danger here?' instead of telling them what to build. The base will have gaps, and the surprise in Step 5 is what finds them.",
+    "intro": "Hold back the obvious advice, like 'put the shelter uphill.' Ask 'what's the biggest danger here?' and let them decide. The base will have gaps, and that's fine: the surprise you throw at them in Step 5 is what finds them.",
     "plan": [
       {
         "when": "Session 1",
@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Pick a place and draw what it looks like.",
         "develop": "Write the mission sentence and 3 real facts about a place like it.",
-        "extend": "Research a real place that matches the imaginary one, like Mars and a desert, and list its conditions."
+        "extend": "Find a place on Earth like it, such as a desert for Mars, and list what a person would struggle with there."
       }
     },
     {
@@ -144,7 +144,7 @@
       "levels": {
         "explore": "Build a base with a few zones.",
         "develop": "Build every zone from the plan, with signs.",
-        "extend": "Build it to match the layout exactly, and mark the way in, the lookout and the meeting point."
+        "extend": "Test the wall material: fill two cups with the same warm water, wrap one, and check which is warmer after 20 minutes. Use the winner where the base must stay warm."
       }
     },
     {
@@ -160,7 +160,7 @@
       "levels": {
         "explore": "Tell how one system works, out loud or in a drawing.",
         "develop": "Write 2 systems with a Plan B, and 3 base rules.",
-        "extend": "Write the full manual, with the ration maths for food and water."
+        "extend": "Work out the water for 4 people for 3 days, then its weight: 1 litre weighs about 1 kg. Can the team carry it, or do they need a source?"
       }
     },
     {
@@ -176,7 +176,7 @@
       "levels": {
         "explore": "Face one scenario, make one fix and give a quick tour.",
         "develop": "Face two scenarios, upgrade the base and give a narrated tour.",
-        "extend": "Face a surprise you didn't see coming, log every upgrade, and film a full briefing with the manual and map."
+        "extend": "Score each danger 1 to 3 for how likely and 1 to 3 for how bad, multiply, and spend your upgrade on the highest score."
       }
     }
   ],
@@ -200,7 +200,7 @@
             "v": "'We're here to...' in one sentence"
           }
         ],
-        "ask": "Check it: can you say the mission in one sentence?"
+        "ask": "Can you say the mission in one sentence?"
       },
       {
         "name": "Dangers and zones",
@@ -226,7 +226,7 @@
             "v": "a signal zone and a meeting point"
           }
         ],
-        "ask": "Check it: does every danger have a zone?"
+        "ask": "Does every danger have a zone?"
       },
       {
         "name": "Systems",
@@ -248,7 +248,7 @@
             "v": "a watch schedule, buddies, a meeting point"
           }
         ],
-        "ask": "Check it: what's Plan B if a system fails?"
+        "ask": "What's Plan B if a system fails?"
       },
       {
         "name": "Scenario cards",
@@ -274,7 +274,7 @@
             "v": "Animals raided the food."
           }
         ],
-        "ask": "Check it: what did you upgrade after each one?"
+        "ask": "What did you upgrade after each one?"
       }
     ],
     "after": {
@@ -288,9 +288,9 @@
     }
   },
   "conclusion": {
-    "headline": "Base camp established.",
-    "text": "Your kid imagined a place, worked out what could go wrong, planned a base to handle it, built it, tested it under pressure and fixed what broke. That's how real expedition planners and engineers work: build, break, rebuild, explain.",
-    "celebrate": "Tell them what impressed you: a zone placed for a smart reason, how they handled the surprise, or the briefing itself.",
+    "headline": "The surprise hit, and their base adapted.",
+    "text": "Point at any zone in their base and ask why it's there. They should be able to name the danger it answers. Then throw one more scenario at them over dinner, like a broken water filter, and listen for a Plan B.",
+    "celebrate": "Pick the upgrade they made after the surprise and say it back: 'When the storm came, you moved the shelter instead of starting over. I'd want you planning my next trip.'",
     "extensions": [
       "Build a second base for a different climate or season",
       "Plan a rescue mission with a mapped route to a second location",
@@ -303,7 +303,7 @@
     "They explain the reason behind where things go",
     "They upgrade a plan instead of giving up when it breaks"
   ],
-  "makeItReal": "Next time you camp or plan a day out, ask them to name the 3 biggest risks and how you'll handle each one. Then let them pack for it.",
+  "makeItReal": "Before your next camping trip or day out, ask them to name the 3 biggest risks and how you'll handle each one. Then let them pack for it.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

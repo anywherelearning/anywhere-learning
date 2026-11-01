@@ -33,7 +33,7 @@
         "line": "Three rocks that tell a story beat 40 in a pile."
       }
     ],
-    "modelNote": "That's what curators do: choose what matters, and make visitors care. The question behind every step: what should a visitor remember?"
+    "modelNote": "Three rocks with one angle beat every rock in the house. Each label gives a visitor a reason to look, like why pumice floats."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the visitor, not the curator. Ask 'what do you want people to learn from this?' instead of telling them what to include. The first setup will look more like a pile than a museum. Turning it into something a visitor can follow is the whole skill.",
+    "intro": "The first setup will look more like a pile than a museum. When you want to suggest what to include, ask 'what do you want people to learn from this?' instead. Turning the pile into something a visitor can follow is the work, and it belongs to them.",
     "plan": [
       {
         "when": "Session 1",
@@ -129,7 +129,7 @@
       "levels": {
         "explore": "Gather 3 or 4 things for the museum.",
         "develop": "Research the angle and pick 5 to 8 pieces that tell its story.",
-        "extend": "Use at least 2 kinds of sources, and write where each fact came from."
+        "extend": "Check one surprising fact in a second source. If they disagree, decide which to trust and why."
       }
     },
     {
@@ -145,7 +145,7 @@
       "levels": {
         "explore": "Arrange the pieces on one table, left to right.",
         "develop": "Sketch a layout with a clear start and finish, and build every exhibit.",
-        "extend": "Build a walking path through rooms or the yard, with signs and a big finish."
+        "extend": "Put the pieces in an order on purpose, like oldest to newest, and explain why it tells the story best."
       }
     },
     {
@@ -159,9 +159,9 @@
       ],
       "tip": "Explaining something in 2 sentences is harder than writing a page. That's why it's such good writing practice.",
       "levels": {
-        "explore": "Write a title for each exhibit and add one hands-on station.",
+        "explore": "Say a title for each exhibit for a grown-up to write, and add one thing to touch.",
         "develop": "Write a full label for every exhibit, and add 2 things to do.",
-        "extend": "Add a curator's welcome sign and a quiz or sorting challenge with an answer flap."
+        "extend": "Write two versions of one label, one for a 6-year-old and one for an adult, and test each on the right visitor."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Do one walk-through, fix one thing, and show it to someone.",
         "develop": "Fix what the test visitor found, and give a guided tour.",
-        "extend": "Collect guest book feedback and write what you'd change for the next museum."
+        "extend": "Watch where visitors stop longest and where they walk past. Move or cut the exhibit nobody stopped at."
       }
     }
   ],
@@ -205,7 +205,7 @@
             "v": "bugs in our own backyard"
           }
         ],
-        "ask": "Check it: can you say your angle in one sentence?"
+        "ask": "Can you say your angle in one sentence?"
       },
       {
         "name": "Museum types",
@@ -231,7 +231,7 @@
             "v": "some of each"
           }
         ],
-        "ask": "Check it: which type fits your angle best?"
+        "ask": "Which type fits your angle best?"
       },
       {
         "name": "Label formula",
@@ -257,7 +257,7 @@
             "v": "the visitors' eye level"
           }
         ],
-        "ask": "Check it: would it make sense without you there?"
+        "ask": "Would it make sense without you there?"
       },
       {
         "name": "Interactive ideas",
@@ -283,7 +283,7 @@
             "v": "put these in order"
           }
         ],
-        "ask": "Check it: is there something to do, not just look at?"
+        "ask": "Is there something to do, not just look at?"
       }
     ],
     "after": {
@@ -297,9 +297,9 @@
     }
   },
   "conclusion": {
-    "headline": "The museum is open.",
-    "text": "Your kid did what curators and exhibit designers do: picked a subject, decided what mattered, figured out how to make other people care, and built a space that teaches. Research, writing, layout and presenting, all in one project driven by their own interests.",
-    "celebrate": "Tell them what impressed you: the angle they found, a label that taught you something, or how they guided the tour.",
+    "headline": "Their visitors left knowing something new.",
+    "text": "Have them give a grandparent or friend the tour over a video call, with no notes. Listen for whether they open with the angle and pick a few pieces to show. If they do, they've learned that a museum tells one story, not everything.",
+    "celebrate": "Stand at the exhibit that taught you the most and tell them: 'I didn't know this before today, and I'll remember it because of your label.'",
     "extensions": [
       "Build a second museum on a different topic",
       "Make a travelling exhibit that fits in a box",
@@ -312,7 +312,7 @@
     "They choose a few strong examples instead of listing everything",
     "They explain things to visitors in two clear sentences"
   ],
-  "makeItReal": "Next time you visit a real museum, ask them to find the best label and the worst one, and say why. Then ask what they'd add to their own museum.",
+  "makeItReal": "At a real museum, ask them to find the best label and the worst one, and say why. Then have them pick one idea to steal for their own museum.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

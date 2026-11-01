@@ -32,7 +32,7 @@
         "line": "6 in, 4 out. The house keeps about 2 tokens every 6 plays, even though you won."
       }
     ],
-    "modelNote": "That's the trick inside every carnival game, and your kid is about to build it themselves."
+    "modelNote": "One win says nothing about the game. Over 6 plays, 6 tokens go in and about 4 come out: the house stays ahead."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the paying customer. Play for real, try hard to win, and don't do the maths for them. Keep the numbers friendly: 'out of 10 tries, how many would you win?' comes before any fractions.",
+    "intro": "Play to win. If you go easy, the till won't tell the truth. Don't do the maths for them, and keep the numbers friendly: 'out of 10 tries, how many would you win?' comes before any fractions.",
     "plan": [
       {
         "when": "Session 1",
@@ -116,7 +116,7 @@
       "levels": {
         "explore": "Play a coin or dice game a few times and count the wins.",
         "develop": "Guess the wins out of 12, play, and compare with the guess.",
-        "extend": "Play two different games and rank which one is harder to win."
+        "extend": "Which is harder: a six on one die, or a double on two? Play 20 of each, then count the 36 outcomes."
       }
     },
     {
@@ -148,7 +148,7 @@
       "levels": {
         "explore": "Count the winning outcomes, then play 10 rounds and compare.",
         "develop": "Write the chance as 1 in something, predict, play 40 rounds and compare.",
-        "extend": "Work out the odds for a game with more than one way to win, and keep playing until the results settle."
+        "extend": "Win on a total of 7: draw the 6 × 6 grid of two dice, find the likeliest total and its chance."
       }
     },
     {
@@ -164,7 +164,7 @@
       "levels": {
         "explore": "Pick a price and a prize, play, and see who ends up ahead.",
         "develop": "Predict who profits, then adjust until the house wins.",
-        "extend": "Work out the house's profit for 40 plays before a single game is played."
+        "extend": "Set a price and prize so the house keeps exactly 10% of what comes in."
       }
     },
     {
@@ -180,7 +180,7 @@
       "levels": {
         "explore": "Run the game, count the winners, and see if the house came out ahead.",
         "develop": "Tally tokens in and out, and explain where the profit came from.",
-        "extend": "Predict the next session's profit, run it and check, then name 3 real games that use the same trick."
+        "extend": "Compare the till after 10 plays and after 30. Which is closer to what the odds predicted, and why?"
       }
     }
   ],
@@ -212,7 +212,7 @@
             "v": "1 in 3, if the shuffle is out of sight"
           }
         ],
-        "ask": "Check it: did you count every outcome, not just the wins?"
+        "ask": "Did you count every outcome, not just the wins?"
       },
       {
         "name": "Make a spinner",
@@ -234,7 +234,7 @@
             "v": "flick the paperclip"
           }
         ],
-        "ask": "Check it: are all the wedges really the same size?"
+        "ask": "Are all the wedges really the same size?"
       },
       {
         "name": "Price and prize",
@@ -256,7 +256,7 @@
             "v": "the house loses 1"
           }
         ],
-        "ask": "Check it: what does the house keep every 4 plays?"
+        "ask": "What does the house keep every 4 plays?"
       },
       {
         "name": "Where the trick hides",
@@ -278,7 +278,7 @@
             "v": "ask the odds first"
           }
         ],
-        "ask": "Check it: what are the real odds before you pay?"
+        "ask": "What are the real odds before you pay?"
       }
     ],
     "after": {
@@ -291,9 +291,9 @@
     }
   },
   "conclusion": {
-    "headline": "The house always wins.",
-    "text": "Your kid built a game that looks fair, feels winnable and quietly takes everyone's tokens anyway. Because they built the trick, they can see it from the inside now: the prize wall, the claw machine, the scratch ticket and every small price for a big prize. Next time, a little voice will ask what the real odds are before they hand over the coin.",
-    "celebrate": "Tell them which moment impressed you: the guess that was close, the fix after the house went broke, or the till that came out ahead.",
+    "headline": "Now they can see the trick.",
+    "text": "At the next claw machine or prize wall, wait before anyone pays and see what they say. Expect them to count the ways to win and the ways to lose, and to wonder out loud what the house keeps.",
+    "celebrate": "Count the till together, then say: 'People won all afternoon, and your till still came out ahead. You set that up.'",
     "extensions": [
       "Rebuild the booth with a harder game and see how the profit changes",
       "Run family game night and set fair odds so everyone has a real chance",
@@ -306,7 +306,7 @@
     "They know one win doesn't make a game fair",
     "They spot the trick at arcades and prize walls"
   ],
-  "makeItReal": "Next time you pass a claw machine or an arcade, let them guess the odds before anyone spends a coin. The game they built is the best defence they have.",
+  "makeItReal": "Before a fair or a school carnival, let them pick one game to study and guess its odds and the house's cut before anyone spends a coin.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

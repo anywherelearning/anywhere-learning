@@ -4,7 +4,7 @@
   "title": "Nature Data Tracker",
   "tagline": "Track · Chart · Predict",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks one thing in nature that changes every day, like the temperature, the rain or the sunset time, and tracks it for one or two weeks. They record real numbers, work out the daily changes, chart them, find the trend and use it to predict what comes next. It's what forecasters do, with a window and a notebook.",
+  "goal": "Your kid picks one thing in nature that changes every day, like the temperature, the rain or the sunset time, and tracks it for one or two weeks. They record real numbers, work out the daily changes, chart them, find the trend and use it to predict what comes next.",
   "need": [
     "A notebook, or a note on a phone",
     "Something to measure with: an outdoor thermometer, a clear straight-sided jar and a ruler for rain, or sunset times from a weather app",
@@ -32,7 +32,7 @@
         "line": "It's warming up by about 2.7°, even with a few colder days in the middle."
       }
     ],
-    "modelNote": "That's the thinking this guide builds: look past the daily bumps to the bigger direction."
+    "modelNote": "Two days can't show a trend. Averaging 3 days at each end means one cold morning can't fool you."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You keep it short and steady; they collect the data. Two minutes at the same time each day is plenty. Don't point out the pattern. After a few days, ask what they notice.",
+    "intro": "The hard part is day 6, when the novelty wears off. Tie the check to something that already happens, like breakfast, and keep it to two minutes. Don't point out the pattern; after a few days, ask what they notice.",
     "plan": [
       {
         "when": "Day 1",
@@ -117,9 +117,9 @@
       ],
       "tip": "Building the rain gauge is a great first job: tape a ruler to the outside of a clear jar, with the zero at the bottom.",
       "levels": {
-        "explore": "Pick something simple to notice, like sunny, cloudy or rainy.",
+        "explore": "Tally birds at the feeder for 2 minutes, or read the big thermometer number together.",
         "develop": "Pick something with a real number, and set up the tool.",
-        "extend": "Pick two things to track at once, like temperature and sunset time."
+        "extend": "Pick two things you think are linked, like temperature and daylight, and write your hunch."
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "tip": "Tie the check to something that already happens every day, like breakfast or brushing teeth. The habit sticks much better.",
       "levels": {
-        "explore": "Make a daily mark or symbol for a week, like a sun or a cloud.",
+        "explore": "Guess more or less than yesterday, then tally or copy the number.",
         "develop": "Record a real number every day for a week, with a guess first.",
-        "extend": "Record for two weeks, and keep track of how close each guess was."
+        "extend": "Before you start, decide how many days you'd need to trust a trend, and why."
       }
     },
     {
@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Say which day stood out, and whether it went up or down.",
         "develop": "Work out the change from one day to the next for the whole week.",
-        "extend": "Find the biggest and smallest changes, and the typical change per day."
+        "extend": "Find the typical change as an average and as a median. Which does one wild day throw off?"
       }
     },
     {
@@ -183,7 +183,7 @@
       "levels": {
         "explore": "Guess whether tomorrow goes up or down, then check.",
         "develop": "Predict tomorrow's number with a reason, then check it.",
-        "extend": "Forecast 3 days ahead, then work out how far off each prediction was."
+        "extend": "Forecast 3 days ahead as a range, note the app's forecast too, and score who was closer."
       }
     }
   ],
@@ -215,7 +215,7 @@
             "v": "cups of water you drink, steps walked"
           }
         ],
-        "ask": "Check it: does yours have a clear number?"
+        "ask": "Does yours have a clear number?"
       },
       {
         "name": "Make a rain gauge",
@@ -241,7 +241,7 @@
             "v": "empty it after every reading"
           }
         ],
-        "ask": "Check it: is the zero lined up with the bottom inside the jar?"
+        "ask": "Is the zero lined up with the bottom inside the jar?"
       },
       {
         "name": "Fair readings",
@@ -267,7 +267,7 @@
             "v": "not later from memory"
           }
         ],
-        "ask": "Check it: would another person get the same number?"
+        "ask": "Would another person get the same number?"
       },
       {
         "name": "Reading a chart",
@@ -293,7 +293,7 @@
             "v": "one dot far from the rest"
           }
         ],
-        "ask": "Check it: which word describes your chart?"
+        "ask": "Which word describes your chart?"
       }
     ],
     "after": {
@@ -306,9 +306,9 @@
     }
   },
   "conclusion": {
-    "headline": "The numbers told a story.",
-    "text": "Your kid collected real data, tracked it every day, worked out the changes, charted it, found the trend and used it to see ahead. Differences, averages and charts, about the real world outside the window.",
-    "celebrate": "Ask them to explain the chart to someone else in the family: what it shows, and what they predict next.",
+    "headline": "They can tell a bump from a trend.",
+    "text": "The next time someone says 'it's getting colder' after one chilly morning, listen for your kid to ask about the last few days. Then ask what they'd forecast for tomorrow, and how sure they are.",
+    "celebrate": "If a forecast lands close, read it next to the real number: 'You called that from a chart on the fridge.'",
     "extensions": [
       "Keep one tracker going for a whole month and watch a bigger trend appear",
       "Track two things at once and see if their lines rise and fall together",
@@ -321,7 +321,7 @@
     "They notice the days getting longer or shorter",
     "They ask 'is that a trend or just one day?'"
   ],
-  "makeItReal": "Put the log somewhere everyone sees it, like the fridge or the door. When the whole family checks the numbers and asks about the trend, your kid becomes the house forecaster.",
+  "makeItReal": "Tape the log to the fridge where everyone walks past it. Each evening, your kid posts tomorrow's forecast, and at breakfast you check it together.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

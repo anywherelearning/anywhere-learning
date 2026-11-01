@@ -32,7 +32,7 @@
         "line": "Only need 4 apples? Stall B costs less in total. The best deal depends on what you'll use."
       }
     ],
-    "modelNote": "That's the thinking this guide builds: work out the unit price, then check it against what you actually need."
+    "modelNote": "Bag prices can't be compared until they become a price per apple. Then the cheaper bag is easy to spot, and the shopping list says how many you need."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the shopping buddy, not the shopper. Hand over the cash, let them talk to the growers, and stand nearby without stepping in.",
+    "intro": "The hard part is keeping quiet when they're about to overpay for carrots. Hand over the cash, let them talk to the growers, and stay near enough to help if they ask.",
     "plan": [
       {
         "when": "Before you go",
@@ -116,9 +116,9 @@
       ],
       "tip": "Waiting to buy is the hardest part for kids. It's also the best part of the lesson.",
       "levels": {
-        "explore": "Count the budget and write down 5 items and their prices from 2 stalls.",
+        "explore": "Count the cash together, then read out 5 prices while you write them.",
         "develop": "Split the budget into categories, then map every stall with its key prices.",
-        "extend": "Keep 10% of the budget for surprises, and record stall, item, amount and price for 10 items."
+        "extend": "Map 10 items, and for anything sold at 3 or more stalls, find the lowest, highest and middle price."
       }
     },
     {
@@ -132,9 +132,9 @@
       ],
       "tip": "Some stalls price by the pound and some by the basket. Ask if you can weigh a basket. It turns a guess into real maths.",
       "levels": {
-        "explore": "Compare one item at two stalls and say which is cheaper.",
+        "explore": "Compare one squash at two stalls: which is cheaper?",
         "develop": "Find unit prices for 3 to 5 items and pick the best stall for each.",
-        "extend": "Work out how much more the pricier option costs, as a percentage, and write a best-value pick for each item."
+        "extend": "Compare something sold per pound at one stall and per item at another. Ask or estimate how many make a pound, then compare."
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "tip": "Asking a grower 'what's best right now?' often decides the whole meal.",
       "levels": {
-        "explore": "Pick a simple meal and list 3 to 5 ingredients with prices.",
+        "explore": "Pick a simple meal and draw 3 to 5 ingredients with their prices.",
         "develop": "Plan a main and a side, and check the list total fits the budget.",
-        "extend": "Plan for the whole family, add a backup for anything that might sell out, and rank must-haves and nice-to-haves."
+        "extend": "Set a target cost per serving before you plan, then build the meal to hit it. Which ingredient decides whether you make it?"
       }
     },
     {
@@ -164,9 +164,9 @@
       ],
       "tip": "Small bills and coins make paying easier for kids, and for the growers too.",
       "levels": {
-        "explore": "Buy your items and write down what each one actually cost.",
+        "explore": "Pay for each item yourself and count the change into your hand.",
         "develop": "Keep a running total and record planned versus actual prices.",
-        "extend": "Track every purchase and the change received, and note each on-the-spot decision and why."
+        "extend": "Ask one grower 'how much for two?' and work out whether that unit price beats the other stall."
       }
     },
     {
@@ -180,9 +180,9 @@
       ],
       "tip": "Eat it together and let them tell the family what each serving cost. They'll be proud of that number.",
       "levels": {
-        "explore": "Make a simple dish, and say if you were over or under budget.",
+        "explore": "Make a simple dish together, then count what's left of the cash.",
         "develop": "Cook the meal, compare planned and actual spending, and find the cost per serving.",
-        "extend": "Compare the cost per serving with supermarket prices and write a short verdict: which was the better value?"
+        "extend": "Add what the ingredients from home would have cost to buy, and see how much the true cost per serving changes."
       }
     }
   ],
@@ -214,7 +214,7 @@
             "v": "What's your favourite way to eat it?"
           }
         ],
-        "ask": "Check it: ask at least one before you buy."
+        "ask": "Did you ask at least one before you bought anything?"
       },
       {
         "name": "How things are priced",
@@ -240,7 +240,7 @@
             "v": "greens, apples"
           }
         ],
-        "ask": "Check it: divide to find the price for one."
+        "ask": "What's the price for one?"
       },
       {
         "name": "What's in season (roughly)",
@@ -262,7 +262,7 @@
             "v": "root vegetables, cabbage, stored apples"
           }
         ],
-        "ask": "Check it: does your meal use something in season?"
+        "ask": "Does your meal use something in season?"
       },
       {
         "name": "Money tips",
@@ -288,7 +288,7 @@
             "v": "write each price down as you pay"
           }
         ],
-        "ask": "Check it: does your running total match what's left in your wallet?"
+        "ask": "Does your running total match what's left in your wallet?"
       }
     ],
     "after": {
@@ -301,9 +301,9 @@
     }
   },
   "conclusion": {
-    "headline": "They shopped like a pro.",
-    "text": "Your kid set a budget, scouted the whole market, compared unit prices, planned a meal from what was in season, paid with their own hands and worked out the cost per serving. Division, money and planning, and dinner at the end.",
-    "celebrate": "Ask about their best deal: 'Which stall had it, and how did you know it was the best?'",
+    "headline": "Dinner came from their list.",
+    "text": "At the grocery store, stop at two sizes of the same thing and ask which is the better deal. See whether they divide first, and whether they ask how much you'll actually use.",
+    "celebrate": "Once the plates are down, say their cost per serving out loud: 'Two dollars a plate, and our shopper did all the maths.'",
     "extensions": [
       "Go back in a different season and compare what's for sale and the prices",
       "Try the same meal on half the budget",
@@ -316,7 +316,7 @@
     "They read the price per pound on the shelf tag",
     "They ask what's in season before planning a meal"
   ],
-  "makeItReal": "Make it a regular thing: once a month, your kid gets the market budget and plans one family dinner. Each time, the prices and the season change, and so does the maths.",
+  "makeItReal": "Make it a regular thing: once a month, your kid gets the market budget and plans one family dinner. Keep their price notes, and have them compare with the last trip before they shop.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

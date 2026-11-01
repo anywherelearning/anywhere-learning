@@ -33,7 +33,7 @@
         "line": "Points that match the difficulty make players choose. That's what makes a sport interesting."
       }
     ],
-    "modelNote": "Basketball's 3-point line works the same way. The question behind every step: is it fair, and is it fun?"
+    "modelNote": "With every goal worth 1, nobody tries a hard shot. The far line gives players a choice, like basketball's 3-point line."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the first player, not the coach. Let them choose the rules and what to change. Play for real and give honest reactions. Expect chaos in round one: someone will score in a way nobody expected. That's playtest data.",
+    "intro": "Play it for real, and react honestly. That's your whole job; the rule changes are theirs to make. Round one will be chaos. Someone will score in a way nobody expected, and that's exactly the playtest data they need.",
     "plan": [
       {
         "when": "Session 1",
@@ -129,7 +129,7 @@
       "levels": {
         "explore": "Mark a start, a goal and the edges.",
         "develop": "Sketch it first, then mark zones and out-of-bounds lines.",
-        "extend": "Measure it, and add a line or zone worth extra points."
+        "extend": "Measure it and draw it to scale on squared paper, 1 square for 1 metre, so someone else could mark the same field."
       }
     },
     {
@@ -145,7 +145,7 @@
       "levels": {
         "explore": "Say the rules out loud with one way to score.",
         "develop": "Write the 5 rules and a scoring system.",
-        "extend": "Give harder moves more points, and explain why each value is fair."
+        "extend": "Take 10 shots from each line. If close shots go in 6 times and far ones 2, a far shot is worth 3, because 6 × 1 = 2 × 3."
       }
     },
     {
@@ -161,7 +161,7 @@
       "levels": {
         "explore": "Gather the equipment from around the house.",
         "develop": "Make each piece fit its job, and do the safety walk.",
-        "extend": "Make a version for indoors and one for outdoors, and list the swaps."
+        "extend": "Test two options for one piece the same way, like dropping two balls from the same height, and pick the winner on the evidence."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Play, change one thing, play again and crown a winner.",
         "develop": "Playtest with someone new, fix 2 things, and hold a best-of-3 championship.",
-        "extend": "Track the scores over 5 games. If the same side wins by a lot every time, rebalance it."
+        "extend": "Play 6 games, swapping who starts. If whoever starts wins most of them, the start is unfair: change it and test again."
       }
     }
   ],
@@ -209,7 +209,7 @@
             "v": "teams pass it on"
           }
         ],
-        "ask": "Check it: can you say how you win in one sentence?"
+        "ask": "Can you say how you win in one sentence?"
       },
       {
         "name": "Equipment swaps",
@@ -235,7 +235,7 @@
             "v": "chalk outside, painter's tape inside"
           }
         ],
-        "ask": "Check it: what job does each piece do?"
+        "ask": "What job does each piece do?"
       },
       {
         "name": "Scoring ideas",
@@ -261,7 +261,7 @@
             "v": "first to 10 wins"
           }
         ],
-        "ask": "Check it: do the points match how hard it is?"
+        "ask": "Do the points match how hard it is?"
       },
       {
         "name": "Fair play checks",
@@ -287,7 +287,7 @@
             "v": "is anyone likely to get hurt?"
           }
         ],
-        "ask": "Check it: did every player think it was fair?"
+        "ask": "Did every player think it was fair?"
       }
     ],
     "after": {
@@ -302,9 +302,9 @@
     }
   },
   "conclusion": {
-    "headline": "They invented a sport.",
-    "text": "Every sport in history started this way: someone made up a game, played it, found out the rules didn't work, fixed them and played again. Your kid designed a field, made equipment from household things, wrote rules other people could follow and balanced the scoring so it felt fair.",
-    "celebrate": "Tell them what impressed you: a rule that fixed an argument, a clever piece of equipment, or how close they made the championship.",
+    "headline": "The rules they wrote held up on game day.",
+    "text": "Watch the next game they play, any game at all. Before long they'll spot the rule that makes it lopsided and suggest a fix, like a point value or a smaller field. Let them try it, and see if the game gets closer.",
+    "celebrate": "After the championship, name the playtest fix that made the final work: 'That far line you added made everyone stop and think before they shot.'",
     "extensions": [
       "Make a rainy-day or winter version",
       "Design a training drill for new players",
@@ -317,7 +317,7 @@
     "They explain rules clearly before playing",
     "They notice when a game is unbalanced"
   ],
-  "makeItReal": "Next time a game at the park turns into an argument, ask them to invent the rule that would fix it. Then try it.",
+  "makeItReal": "When a game at the park turns into an argument, ask them for the rule that would fix it, then play a round with it.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

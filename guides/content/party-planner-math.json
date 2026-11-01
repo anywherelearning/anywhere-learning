@@ -33,7 +33,7 @@
         "line": "Food rounds up. The budget decides what's on the menu."
       }
     ],
-    "modelNote": "That's the maths at every step of this guide: multiply by the guests, divide into packs, round up, then check it fits."
+    "modelNote": "The first try forgot that juice comes in whole bottles. Divide, round up, then check the price: your kid will run those three moves on every food on the list."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the party advisor, not the planner. Let them make the calls and run the numbers, and help only when they're stuck. You handle the knives, the oven and checking allergies with the guests' families.",
+    "intro": "Your two jobs are safety and allergies: knives, the oven, and checking with each guest's family about foods they can't eat. Everything else is theirs to decide, including choices you wouldn't make. When they ask 'is this okay?', ask back what the budget says.",
     "plan": [
       {
         "when": "Session 1",
@@ -115,9 +115,9 @@
       ],
       "tip": "Count yourself and your family in the headcount. They eat too.",
       "levels": {
-        "explore": "A family party for 3 to 5 people. Pick a theme and count the guests.",
+        "explore": "A family party for 3 to 5 people. Count the guests on your fingers, then set out $5 for each one so you can see the budget.",
         "develop": "8 to 12 guests, with a list of yes, no and maybe, and the budget worked out.",
-        "extend": "Work out the smallest and largest headcount, and the budget for each."
+        "extend": "Your list has maybes. Work out the budget for the smallest and largest headcount, then sort every cost into 'stays the same' (decorations) and 'grows with each guest' (food). Which one breaks the budget if every maybe says yes?"
       }
     },
     {
@@ -131,9 +131,9 @@
       ],
       "tip": "8 guests: food $32, decorations $4, activities $0 (games you own), surprises $4. Check: 32 + 4 + 0 + 4 = $40.",
       "levels": {
-        "explore": "Split the budget into 2 or 3 parts and write down each amount.",
+        "explore": "Split the money into 2 or 3 envelopes, like food, decorations and a little extra, and write the amount on each.",
         "develop": "Use 4 categories, check they add up, and plan one free decoration.",
-        "extend": "Price every item in each category and work out the cost per guest for each one."
+        "extend": "Set a rule, like 'food gets at least three quarters of the money'. Work out what that is in dollars, and show your split follows it."
       }
     },
     {
@@ -147,9 +147,9 @@
       ],
       "tip": "Plot twist, the day before shopping: 'Two more guests are coming, and the budget stays at $40.' Now it's 3 pizzas ($36) and 5 bottles ($10). Let them find the fix, like homemade pizza for about $22.",
       "levels": {
-        "explore": "Choose 3 or 4 foods and work out how many of each you need.",
+        "explore": "Set out one plate per guest and put on it what each guest gets, like 2 crackers and 1 cupcake. Count how many of each you need in all.",
         "develop": "Plan the whole menu, work out amounts and prices, and check the food budget.",
-        "extend": "Handle the plot twist and plan a backup if something is too expensive or sold out."
+        "extend": "Compare two ways to feed the same guests, like store pizza and homemade, and work out the cost per guest for each. Is the cheaper one worth the extra work?"
       }
     },
     {
@@ -163,9 +163,9 @@
       ],
       "tip": "2:00 minus 90 minutes is 12:30. Add a 15-minute buffer and start at 12:15.",
       "levels": {
-        "explore": "Gather what you need and write a timeline with 5 time slots.",
+        "explore": "Draw the party day as 5 pictures in order, from setup to guests arriving, and write a time under each one together.",
         "develop": "Record real prices vs guesses and write an hour-by-hour plan with a buffer.",
-        "extend": "Keep a running total while shopping, and plan for 2 things that could go wrong on the day."
+        "extend": "Find the step that pushes everything back if it runs late, usually food in the oven. Plan the schedule around it, and decide what you'd drop if it runs 20 minutes over."
       }
     },
     {
@@ -179,9 +179,9 @@
       ],
       "tip": "Spent $35.90 of $40, so $4.10 under. Per guest: $35.90 ÷ 8 = about $4.49. 16 slices, 3 left, 13 eaten: 2 pizzas was right.",
       "levels": {
-        "explore": "Host the party, then add up what you spent. Over or under?",
+        "explore": "Host it, then count the money left in the envelopes. Did you spend less than you had, or more?",
         "develop": "Compare planned vs real costs, and work out the cost per guest.",
-        "extend": "Write a party report: budget vs real, leftovers, and what you'd change next time."
+        "extend": "Work out what each food really cost per serving eaten (leftovers count against it), and write a rule you'd use next time, like '2 slices per kid, 1 for under-6s'."
       }
     }
   ],
@@ -213,7 +213,7 @@
             "v": "1 per guest is plenty"
           }
         ],
-        "ask": "Check it: did you multiply by every guest, including family?"
+        "ask": "Did you multiply by every guest, family included?"
       },
       {
         "name": "Pack sizes to divide by",
@@ -235,7 +235,7 @@
             "v": "check the pack, often 12, 20 or 50"
           }
         ],
-        "ask": "Check it: did you round up after dividing?"
+        "ask": "Did you round up after dividing?"
       },
       {
         "name": "A budget split that works",
@@ -257,7 +257,7 @@
             "v": "games you already own, $0"
           }
         ],
-        "ask": "Check it: do your categories add up to the total?"
+        "ask": "Do your categories add up to the total?"
       },
       {
         "name": "Count back from the start",
@@ -283,7 +283,7 @@
             "v": "add 15 minutes"
           }
         ],
-        "ask": "Check it: what's the first job, and what time does it start?"
+        "ask": "What's the first job, and what time does it start?"
       }
     ],
     "after": {
@@ -296,9 +296,9 @@
     }
   },
   "conclusion": {
-    "headline": "They threw a real party.",
-    "text": "From the guest list to the last slice of pizza, your kid made the calls: how many people, how much food, what it would cost, and what to do when the plan changed. They multiplied, divided, rounded up, added receipts and worked to a clock. And they did it for people they care about.",
-    "celebrate": "Tell them what you noticed: the moment they figured out the juice wouldn't stretch, or how calmly they handled a guest who showed up early.",
+    "headline": "The party happened because their numbers worked.",
+    "text": "Ask them how many pizzas a party for 10 would need. Watch them multiply, divide by 8 and round up to 3 without being told. That's the maths from this guide, and they learned it feeding people they care about.",
+    "celebrate": "When the last guest leaves, tell them one thing that happened because of their plan: 'Did you see your cousin go back for seconds? You planned exactly enough.'",
     "extensions": [
       "Plan for a bigger group and see how the budget and amounts scale",
       "Plan a themed dinner with 3 courses and work out the cost per course",
@@ -311,7 +311,7 @@
     "They round up when they divide food into packs",
     "They count back from a start time to plan their day"
   ],
-  "makeItReal": "For the next birthday or family dinner, hand them the headcount and the budget. The planning is theirs, and so is the credit.",
+  "makeItReal": "For the next birthday or family dinner, hand them the headcount and a budget, and stay out of the planning until they ask.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

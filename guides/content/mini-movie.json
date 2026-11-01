@@ -33,7 +33,7 @@
         "line": "Want, a problem, and an ending that solves it."
       }
     ],
-    "modelNote": "That's the shape of almost every story kids love, and the question behind every step: what does the character want, and what's stopping them?"
+    "modelNote": "A dragon that wants nothing can't lose anything. Give it an egg to find and a fear to beat, and now there's something to watch for."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the coach and the first audience, not the director. Ask 'what do you want the audience to feel?' instead of suggesting a plot. And say this early: 'Let's do a rough Version 1, then improve one thing.' It takes the pressure off.",
+    "intro": "Say this before anything gets made: 'Let's do a rough Version 1, then improve one thing.' It takes the pressure off for the whole project. After that, stay in the audience and ask 'what do you want people to feel?' instead of suggesting a plot.",
     "plan": [
       {
         "when": "Session 1",
@@ -145,7 +145,7 @@
       "levels": {
         "explore": "Tell the beginning, middle and end out loud.",
         "develop": "Draw a storyboard with 4 to 8 boxes and write the key lines.",
-        "extend": "Write a short script with scenes, lines and sound cues, and time each scene."
+        "extend": "Write a short script and plan each shot as wide, medium or close-up (for radio: near or far sounds), saving close-ups for feelings."
       }
     },
     {
@@ -161,7 +161,7 @@
       "levels": {
         "explore": "Make one set and one prop, and run it once.",
         "develop": "Make the sets and props for every scene, rehearse and fix one thing.",
-        "extend": "Add sound effects or lighting cues, rehearse twice and fix the weakest scene."
+        "extend": "Light one scene two ways, a flashlight from below and one from the side, and keep the one that matches the feeling."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Perform or record the show for one person.",
         "develop": "Record or perform the whole show and hold a premiere with tickets.",
-        "extend": "Add a title card, credits and sound, then hand out audience awards."
+        "extend": "If you're filming, keep each character on the same side of the screen in every shot of one conversation (the 180-degree rule). Then break it once: did anyone notice?"
       }
     }
   ],
@@ -205,7 +205,7 @@
             "v": "only voices and sound effects"
           }
         ],
-        "ask": "Check it: does the format fit what you have?"
+        "ask": "Does the format fit what you have?"
       },
       {
         "name": "Story seeds",
@@ -231,7 +231,7 @@
             "v": "A secret door leads somewhere."
           }
         ],
-        "ask": "Check it: can you say your story in one sentence?"
+        "ask": "Can you say your story in one sentence?"
       },
       {
         "name": "Kitchen sound effects",
@@ -257,7 +257,7 @@
             "v": "open a real one, slowly"
           }
         ],
-        "ask": "Check it: did you test it close to the mic?"
+        "ask": "Did you test it close to the mic?"
       },
       {
         "name": "Stop-motion tips",
@@ -279,7 +279,7 @@
             "v": "close the curtains, use a lamp"
           }
         ],
-        "ask": "Check it: did you take 5 to 10 test photos first?"
+        "ask": "Did you take 5 to 10 test photos first?"
       }
     ],
     "after": {
@@ -293,9 +293,9 @@
     }
   },
   "conclusion": {
-    "headline": "The show premiered.",
-    "text": "Your kid imagined a story, built it from nothing, figured out how to share it and put it in front of an audience. They made creative calls, solved problems when the take went wrong, and finished something. That's what filmmakers, playwrights and podcasters do.",
-    "celebrate": "Tell them which moment got you: a funny line, a clever prop, or how they kept going after a bad take.",
+    "headline": "The audience wanted to know how it ended.",
+    "text": "Pull any toy off the shelf and ask for a story about it in one sentence. Listen for a who, a want and a problem, without a reminder. That sentence is the plan for their next show, so write it down.",
+    "celebrate": "After the premiere, quote back the line that got the biggest reaction and say what it did: 'That line got a laugh, and after it everyone wanted your character to win.'",
     "extensions": [
       "Make a sequel with a new problem",
       "Try a different format: a movie becomes a radio drama",
@@ -308,7 +308,7 @@
     "They plan before they start making",
     "They redo a take instead of giving up"
   ],
-  "makeItReal": "Next time you watch a movie together, pause in the middle and ask them what the main character wants and what's in the way. Then see if they called the ending.",
+  "makeItReal": "During your next family movie, pause in the middle and ask what the main character wants and what's in the way. Then see if they call the ending.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

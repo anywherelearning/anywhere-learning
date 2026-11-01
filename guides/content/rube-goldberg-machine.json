@@ -32,7 +32,7 @@
         "line": "One change per test, so you always know what worked."
       }
     ],
-    "modelNote": "That's the engineering cycle this guide runs on: test, change one thing, test again."
+    "modelNote": "Changing three things at once hides which one worked. One change per run gives a clear answer every time."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the coach and the extra pair of hands, not the engineer. When something fails, don't fix it. Ask 'what do you think went wrong?' The machine won't work on the first try, or the fifth. That's the activity.",
+    "intro": "The machine won't work on the first try, or the fifth, and the hard part for you is keeping your hands off it. When a run fails, ask 'what do you think went wrong?' and let them make the next change. Help with holding and taping, not fixing.",
     "plan": [
       {
         "when": "Session 1",
@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Pick an ending and make it work by hand.",
         "develop": "Pick an ending and draw the machine backwards from it.",
-        "extend": "Pick an ending with a twist, like raising a flag, and plan 6 or more steps backwards."
+        "extend": "Plan 6 steps backwards on sticky notes, then mark the riskiest connection and build and test that one first."
       }
     },
     {
@@ -128,7 +128,7 @@
       "levels": {
         "explore": "Build 3 steps that run, even with a little help.",
         "develop": "Build 3 steps using 2 different kinds from the step menu.",
-        "extend": "Build 3 steps and sketch the full machine with arrows."
+        "extend": "Include one step that changes the kind of motion, like a falling weight that pulls a string to lift a flag, and explain where its energy comes from."
       }
     },
     {
@@ -144,7 +144,7 @@
       "levels": {
         "explore": "Fix the chain until it runs all the way once.",
         "develop": "Make every connection work 3 times in a row.",
-        "extend": "Log each failed run: what went wrong, the one change, and the result."
+        "extend": "Move the cup 1 cm at a time to find the closest and farthest spots that still work 3 times out of 3, then set it in the middle."
       }
     },
     {
@@ -160,7 +160,7 @@
       "levels": {
         "explore": "Add 1 or 2 steps and keep it working.",
         "develop": "Reach 4 to 6 steps with at least 3 different kinds.",
-        "extend": "Reach 6 to 10 steps with a twist step, and mark every reset position."
+        "extend": "Time a full reset. Then change the layout so it resets in half the time without losing a step."
       }
     },
     {
@@ -176,7 +176,7 @@
       "levels": {
         "explore": "Run it for someone and tell them your favourite step.",
         "develop": "Run it, explain each step in order and film it.",
-        "extend": "Work out its success rate over 10 runs, and draw a diagram with arrows."
+        "extend": "If 5 connections each work 9 times in 10, the machine works only about 6 times in 10. Run it 10 times and fix the step that fails most."
       }
     }
   ],
@@ -212,7 +212,7 @@
             "v": "a spoon balanced on a block"
           }
         ],
-        "ask": "Check it: have you used at least 2 kinds of step?"
+        "ask": "Have you used at least 2 kinds of step?"
       },
       {
         "name": "Endings",
@@ -226,7 +226,7 @@
             "v": "popping a balloon, turning on a light, anything with perfect timing"
           }
         ],
-        "ask": "Check it: does your ending work on its own?"
+        "ask": "Does your ending work on its own?"
       },
       {
         "name": "When it fails, check",
@@ -252,7 +252,7 @@
             "v": "closer together than they are tall"
           }
         ],
-        "ask": "Check it: did you change only one thing?"
+        "ask": "Did you change only one thing?"
       },
       {
         "name": "Quick reset",
@@ -278,7 +278,7 @@
             "v": "reset from the end"
           }
         ],
-        "ask": "Check it: could someone else reset it without you?"
+        "ask": "Could someone else reset it without you?"
       }
     ],
     "after": {
@@ -292,9 +292,9 @@
     }
   },
   "conclusion": {
-    "headline": "Their machine worked.",
-    "text": "And even the failed runs taught something. Your kid imagined it, built it, watched it fail, figured out why, fixed it and tried again, dozens of times. That cycle won't show up on a test, but it's one of the most useful ways of thinking a kid can build.",
-    "celebrate": "Tell them what impressed you: the connection they fixed after many tries, the cleverest step, or how they handled the demo.",
+    "headline": "It ran start to finish, after a lot of runs that didn't.",
+    "text": "Give them something that's acting up at home, a wobbly chair or a pen that won't click. Watch whether they try one thing and test it before trying the next, instead of everything at once. That one-change habit is what got the machine running.",
+    "celebrate": "Name the connection they fought with longest, and say it out loud: 'That ramp missed the cup all afternoon, and now it hits every single time.'",
     "extensions": [
       "Build a second machine and compare which is more reliable",
       "Set a limit: it must fit in a shoebox, or use only outdoor materials",
@@ -307,7 +307,7 @@
     "They talk about angles, weight and distance",
     "They test small before building big"
   ],
-  "makeItReal": "Next time something at home doesn't work, a wobbly shelf or a stuck drawer, ask them how they'd test it one change at a time.",
+  "makeItReal": "Hand them the next thing at home that stops working, a wobbly shelf or a stuck drawer, and ask for one change at a time, testing after each.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

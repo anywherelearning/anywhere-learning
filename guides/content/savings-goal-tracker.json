@@ -32,7 +32,7 @@
         "line": "That $4 snack costs a whole extra week of waiting."
       }
     ],
-    "modelNote": "Your kid decides if it's worth it. The maths just makes the choice clear."
+    "modelNote": "In dollars, $4 looks like nothing. In weeks, it's one more week of waiting."
   },
   "academics": [
     {
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the advisor, not the bank. Let them choose the goal, keep the money real, and don't say no to their spending for them. Ask the question, then let them decide and live with it.",
+    "intro": "Watching them spend $4 on something you know they'll regret is the tough bit. Ask how many weeks it adds, then let them decide and live with it. Let them choose the goal, too, and keep the money real.",
     "plan": [
       {
         "when": "Week 1",
@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Pick a goal and find out how much it costs.",
         "develop": "Check 2 places and new vs used, and pick the best deal.",
-        "extend": "Compare 3 options and explain which is the best value and why."
+        "extend": "Price 3 options per year of use or per hour of fun. Is the cheapest the best value?"
       }
     },
     {
@@ -126,9 +126,9 @@
       ],
       "tip": "Round the weeks up. $22 ÷ $3 = 7.3, so it's 8 weeks. After 7 weeks you'd have $21, still $1 short.",
       "levels": {
-        "explore": "Count what you have, find the gap and how many weeks it takes.",
+        "explore": "Draw a box for each dollar, colour what you have, and skip-count the empty ones by your weekly amount.",
         "develop": "Try 2 or 3 weekly amounts, pick a realistic one and set a date.",
-        "extend": "Work out what percent of your weekly money each plan uses, and pick one you can keep up."
+        "extend": "Pick a fixed date, like before a trip, and work backward: how much a week do you need to save to make it?"
       }
     },
     {
@@ -144,7 +144,7 @@
       "levels": {
         "explore": "List 3 to 5 ways to earn and what each one pays.",
         "develop": "List 5 ideas with pay and time, and rank them by hourly rate.",
-        "extend": "Plan the extra earnings for each week and redo the timeline with them."
+        "extend": "At your best hourly rate, how many hours of work is the gap? Is it still worth it?"
       }
     },
     {
@@ -158,9 +158,9 @@
       ],
       "tip": "Percent of goal = saved ÷ goal × 100. $15 of $60 is 15 ÷ 60 = 0.25, so 25%.",
       "levels": {
-        "explore": "Record each deposit with the date and the new total.",
+        "explore": "Put each deposit in the jar, count it all, and write the new total.",
         "develop": "Track the percent of the goal, and do the maths before any spend.",
-        "extend": "Keep a spending log: what you skipped, what you bought, and the weeks each one cost."
+        "extend": "If a $3 spend happens every two weeks, how many weeks does it add to the plan?"
       }
     },
     {
@@ -176,7 +176,7 @@
       "levels": {
         "explore": "Colour in a thermometer chart and check if you're on track.",
         "develop": "Compare planned vs real, fix the timeline, and draw a line chart with a goal line.",
-        "extend": "Chart planned vs real on one graph, mark the big moments, and write what the chart shows."
+        "extend": "Use the slope of your real line to predict your finish date, and compare it with the date you planned."
       }
     }
   ],
@@ -204,7 +204,7 @@
             "v": "tax and shipping"
           }
         ],
-        "ask": "Check it: is your target the total you'll actually pay?"
+        "ask": "Is your target the total you'll actually pay?"
       },
       {
         "name": "Ways kids can earn",
@@ -230,7 +230,7 @@
             "v": "a baking or lemonade stand"
           }
         ],
-        "ask": "Check it: what's the hourly rate for each one?"
+        "ask": "What's the hourly rate for each one?"
       },
       {
         "name": "Tracker columns",
@@ -256,7 +256,7 @@
             "v": "total ÷ goal × 100"
           }
         ],
-        "ask": "Check it: does the total match the jar?"
+        "ask": "Does the total match the jar?"
       },
       {
         "name": "Milestones for a $60 goal",
@@ -278,7 +278,7 @@
             "v": "$60, buy it"
           }
         ],
-        "ask": "Check it: which week will you hit halfway?"
+        "ask": "Which week will you hit halfway?"
       }
     ],
     "after": {
@@ -291,9 +291,9 @@
     }
   },
   "conclusion": {
-    "headline": "They saved for it themselves.",
-    "text": "Your kid picked a goal, found the real price, turned it into a date, earned extra, tracked every dollar and did the maths every time they were tempted. Whether they've bought it yet or they're still on the way, they know what saving actually takes, and what a small spend really costs.",
-    "celebrate": "Tell them which part impressed you most: the spend they skipped, the job they took on, or the week they stuck with it when it was hard.",
+    "headline": "They can price a snack in weeks.",
+    "text": "When they want something small, wait a beat and see if they count the weeks it would cost before asking. Whatever they decide, ask how far off the goal is now. They'll know without checking the jar.",
+    "celebrate": "When they hand over their own money at the till, say: 'You skipped things for this, week after week. It's all yours.'",
     "extensions": [
       "Set a bigger goal and see how the plan scales",
       "Track spending for a month next to saving and see where the money goes",
@@ -306,7 +306,7 @@
     "They check more than one place before buying",
     "They know their percent of the goal without asking"
   ],
-  "makeItReal": "Next time they ask you to buy them something, ask them to work out how long it would take to save for it. Then let them decide if it's worth it.",
+  "makeItReal": "If they ask you to buy them something, have them work out how many weeks it would take to save for it. Then hand the decision back to them.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

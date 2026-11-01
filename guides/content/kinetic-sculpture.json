@@ -33,7 +33,7 @@
         "line": "Heavy close to the middle, light far out."
       }
     ],
-    "modelNote": "That's the physics hiding inside every mobile, and the question behind every step: what makes it move, and what makes it stop?"
+    "modelNote": "The bird is twice as heavy, so it has to hang half as far out. That's the fix the first try was missing."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the supplier and the extra pair of hands. Ask 'what do you want it to do?' instead of deciding for them. It will fall over and the tape won't hold. That's the actual learning, so ask 'what could you try instead?' rather than fixing it.",
+    "intro": "Plan on it falling over, often, and on the tape giving up. Those collapses are where the physics gets learned, so when it tips, ask 'what could you try instead?' rather than reaching in. Your part is supplies, a spare pair of hands and one question: 'what do you want it to do?'",
     "plan": [
       {
         "when": "Session 1",
@@ -145,7 +145,7 @@
       "levels": {
         "explore": "Build a base that stands or hangs on its own.",
         "develop": "Build a base that holds the weight of the moving parts.",
-        "extend": "Test how much weight the base holds before it tips, using coins, and write it down."
+        "extend": "Hang coins on the end of the arm until it tips. Try again with a wider base, then with a heavier one: which holds more coins?"
       }
     },
     {
@@ -161,7 +161,7 @@
       "levels": {
         "explore": "Get one part moving.",
         "develop": "Get it moving smoothly, and fix one thing that stopped it.",
-        "extend": "Balance a mobile with 3 or more bars using weight × distance, and measure each one."
+        "extend": "Mobile: balance 3+ bars, counting each lower bar and its load as one weight. Swing: does a string 4 times longer swing half as fast? Spinner: test 3 blade angles."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Decorate it, name it and show it to someone.",
         "develop": "Write a title card and artist statement, and present it.",
-        "extend": "Film it moving, and compare it with the work of a real kinetic artist like Alexander Calder."
+        "extend": "Look at photos of Alexander Calder's mobiles, find one thing he did that yours doesn't, and try it."
       }
     }
   ],
@@ -209,7 +209,7 @@
             "v": "a heavy, rounded bottom rocks back up"
           }
         ],
-        "ask": "Check it: where exactly does it move?"
+        "ask": "Where exactly does it move?"
       },
       {
         "name": "Balance rule",
@@ -235,7 +235,7 @@
             "v": "balance from the bottom bar up"
           }
         ],
-        "ask": "Check it: does each bar hang level on its own?"
+        "ask": "Does each bar hang level on its own?"
       },
       {
         "name": "Bases and joints",
@@ -257,7 +257,7 @@
             "v": "knot or twist it first, then tape"
           }
         ],
-        "ask": "Check it: can the moving part move freely?"
+        "ask": "Can the moving part move freely?"
       },
       {
         "name": "Title card",
@@ -279,7 +279,7 @@
             "v": "one sentence about why"
           }
         ],
-        "ask": "Check it: would a visitor know how it moves?"
+        "ask": "Would a visitor know how it moves?"
       }
     ],
     "after": {
@@ -293,9 +293,9 @@
     }
   },
   "conclusion": {
-    "headline": "Their art moves.",
-    "text": "Your kid built art that does something. Along the way they worked with gravity, balance and pivots, figured out why it fell over and fixed it, made real artistic choices, and explained them to an audience. That's art, physics and engineering in the same build.",
-    "celebrate": "Tell them what impressed you: the moment it finally moved, a clever fix, or the title they chose.",
+    "headline": "It moves the way they planned, and they can say why.",
+    "text": "Set a ruler across your finger and give them a spoon and a pencil to balance on it. Watch them slide the heavier one toward the middle before you say a word. That one move is the balance rule, and they found it in their own sculpture.",
+    "celebrate": "The first time it moves without falling, stop and say what you saw: 'It tipped all morning, and now it hangs perfectly level. You worked that out.'",
     "extensions": [
       "Build a second piece with a different movement",
       "Make a group piece where each person adds one moving part",
@@ -308,7 +308,7 @@
     "They move the heavy thing closer to the middle without being told",
     "They try another fix instead of giving up when it tips"
   ],
-  "makeItReal": "Hang their finished piece somewhere everyone sees it every day. Each time it moves, it reminds them they made it work.",
+  "makeItReal": "Hang it somewhere everyone passes every day, and when it stops working, let them be the one who fixes it.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

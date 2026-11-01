@@ -33,7 +33,7 @@
         "line": "About 6 hours, not 4. Leave at 9:00, arrive around 3:00."
       }
     ],
-    "modelNote": "That's the kind of planning this guide builds: the maths, plus what really happens on the road."
+    "modelNote": "Speed limit, no stops: that's the trap. Fixing both turns 4 hours into about 6."
   },
   "academics": [
     {
@@ -54,7 +54,7 @@
     }
   ],
   "howTo": {
-    "intro": "You don't need teaching experience. You're the co-planner, and on the day, the driver. Use real prices and a real place if you can. The closer it is to a trip you'd actually take, the more the numbers matter.",
+    "intro": "Pick a trip you'd actually take, with today's gas price and your own car, so the numbers matter. The first time estimate usually forgets the stops. Let the Speed and stops card catch it, not you.",
     "plan": [
       {
         "when": "Session 1",
@@ -111,7 +111,7 @@
       ],
       "tip": "On a paper map, use the scale. If 1 inch = 10 miles and the road measures 7 inches, it's about 70 miles. Lay a piece of string along a curvy road, then measure the string.",
       "levels": {
-        "explore": "A trip 2 to 3 hours away, with one simple route.",
+        "explore": "Somewhere you've been, under 2 hours. Trace the route and read the distance off the map.",
         "develop": "A trip 6 to 8 hours away, comparing 2 or 3 routes.",
         "extend": "A trip with 2 or 3 destinations, mapped in the best order."
       }
@@ -127,9 +127,9 @@
       ],
       "tip": "Work back from arrival. To arrive at 4:00 after 6 hours of driving and stops, leave by 10:00.",
       "levels": {
-        "explore": "Work out the driving time and add 2 stops.",
+        "explore": "Divide the miles by 50 on a calculator, then add 15 minutes per stop.",
         "develop": "Plan all the stops, and work back from the arrival time to the departure time.",
-        "extend": "Plan the time for every leg of a multi-stop trip, including an overnight."
+        "extend": "Add a fixed time, like a ferry, and decide how much buffer to plan before it."
       }
     },
     {
@@ -141,11 +141,11 @@
         "300 miles at 25 mpg. How many gallons?",
         "Gas goes from $3.50 to $4. How much more does the trip cost?"
       ],
-      "tip": "300 ÷ 25 = 12 gallons. 12 × $3.50 = $42 one way, $84 there and back. At $4, it's $48 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way.",
+      "tip": "300 ÷ 25 = 12 gallons. 12 × $3.50 = $42 one way, $84 there and back. At $4, it's $48 one way. In kilometres: 500 km at 8 L per 100 km = 40 litres, × $1.60 = $64 one way.",
       "levels": {
-        "explore": "Work out the gas for a 200-mile trip, one way.",
+        "explore": "Use a calculator: 200 miles ÷ your car's mpg = gallons, one way.",
         "develop": "Work out the gas there and back, and what happens if the price goes up.",
-        "extend": "Compare 2 cars or 2 routes, and work out which costs less."
+        "extend": "Which uses less gas: 200 twisty miles at 22 mpg, or 230 highway miles at 30 mpg?"
       }
     },
     {
@@ -161,7 +161,7 @@
       "levels": {
         "explore": "Total 3 costs: gas, food and one activity.",
         "develop": "Total 5 or more costs, add a buffer and fit a set budget.",
-        "extend": "Budget a multi-day trip with hotels, and compare it with packing your own food."
+        "extend": "Sort costs into per-passenger (food) and fixed (gas). What does one more person add?"
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Track the leaving and arriving times and compare them with the plan.",
         "develop": "Track time, stops and gas, and compare every part of the plan.",
-        "extend": "Work out the real mpg and average speed, then fix the plan for next time."
+        "extend": "Work out your average speed with and without stops. Which should you plan with?"
       }
     }
   ],
@@ -205,7 +205,7 @@
             "v": "30 to 45 minutes"
           }
         ],
-        "ask": "Check it: did you add the stops to the driving time?"
+        "ask": "Did you add the stops to the driving time?"
       },
       {
         "name": "Fuel",
@@ -231,7 +231,7 @@
             "v": "litres = km ÷ 100 × litres per 100 km"
           }
         ],
-        "ask": "Check it: did you count the drive home too?"
+        "ask": "Did you count the drive home too?"
       },
       {
         "name": "Food and fun, per person",
@@ -257,7 +257,7 @@
             "v": "often free or a small fee"
           }
         ],
-        "ask": "Check it: did you multiply by everyone in the car?"
+        "ask": "Did you multiply by everyone in the car?"
       },
       {
         "name": "Twist cards",
@@ -279,7 +279,7 @@
             "v": "Lunch costs double what you planned."
           }
         ],
-        "ask": "Check it: what does each twist do to your time or your total?"
+        "ask": "What does each twist do to your time or your total?"
       }
     ],
     "after": {
@@ -292,9 +292,9 @@
     }
   },
   "conclusion": {
-    "headline": "They planned a real trip.",
-    "text": "Your kid mapped a route, worked out how long it really takes and what it really costs, and made the trade-offs when the budget didn't stretch. If you took the trip, they also saw where the plan held and where the road had other ideas. Those are the same calls adults make before every long drive.",
-    "celebrate": "Tell them which part impressed you: the route they chose, the stops they planned, or how close their time or cost guess came.",
+    "headline": "Now they know when to leave.",
+    "text": "Before any drive over an hour, ask how long it will take. Listen for them to divide by a real average speed, not the speed limit, and add the stops. Then ask what one more passenger would change, and what it wouldn't.",
+    "celebrate": "At the stop they planned, say: 'This came exactly when we needed it. Good call, navigator.'",
     "extensions": [
       "Look up flights or a train to the same place and compare the cost and the time",
       "Plan a longer trip with an overnight and a hotel budget",
@@ -307,7 +307,7 @@
     "They add stops when they guess how long a drive takes",
     "They notice the gas price on the sign as you drive past"
   ],
-  "makeItReal": "Next time you have a drive, hand them the job of navigator and timekeeper. Let them tell you when to leave and when to expect to arrive.",
+  "makeItReal": "On your next drive, hand them the navigator and timekeeper jobs. They tell you when to leave and when you'll arrive.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
