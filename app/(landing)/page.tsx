@@ -623,7 +623,7 @@ export default async function HomePage() {
                 </p>
               </div>
             </ScrollReveal>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {[
                 {
                   quote:
@@ -639,10 +639,18 @@ export default async function HomePage() {
                   bg: '#c4836a',
                   who: 'Diana · Texas · Boy 10, boy 13',
                 },
+                {
+                  // Member email, Nov 1 2026, shared with her permission (first name only).
+                  quote:
+                    'Everything we have done so far has kept them so engaged and they have had so much fun. Our family recipe book project has involved interviewing family members, recording recipes and exploring the memories and stories behind them, bringing together literacy, communication, family history and life skills in such a natural way.',
+                  initials: 'V',
+                  bg: '#8b7355',
+                  who: 'Victoria · UK · Two kids',
+                },
               ].map((t, i) => (
                 <ScrollReveal key={t.initials} delay={i * 100} className="h-full">
-                  <figure className={`relative m-0 h-full bg-[#FFFDF8] px-9 pb-[34px] pt-10 ${PAPER_SHADOW}`} style={{ transform: `rotate(${i ? 0.9 : -0.9}deg)` }}>
-                    <Tape color={i ? 'rgba(169,193,163,0.85)' : undefined} />
+                  <figure className={`relative m-0 h-full bg-[#FFFDF8] px-9 pb-[34px] pt-10 ${PAPER_SHADOW}`} style={{ transform: `rotate(${[-0.9, 0.9, -0.6][i]}deg)` }}>
+                    <Tape color={i === 1 ? 'rgba(169,193,163,0.85)' : undefined} />
                     <div
                       className="mb-[18px] text-[17px] tracking-[3px] text-gold"
                       aria-label="5 out of 5 stars"
