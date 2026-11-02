@@ -56,14 +56,15 @@ const RESOURCES: ResourceEntry[] = [
   { href: '/blog', label: 'Blog', desc: 'Stories and ideas' },
   {
     label: 'Free',
-    desc: 'Five things you can take today',
-    // Same set and order as the public header (components/layout/SiteHeader.tsx).
+    desc: 'Four things you can take today',
+    // Same order as the public header (components/layout/SiteHeader.tsx), minus
+    // the quiz: it's a non-member lead magnet, and members read "a plan for
+    // your kid" as setting up their map (the welcome setup does that).
     children: [
       { href: '/course', label: '5-Day Course', desc: 'Free, one short email a day' },
       { href: '/ideas', label: 'Activity Ideas', desc: 'Printable checklists' },
       { href: '/guides/capable-kid', label: 'Capable Kid Guide', desc: 'Age-by-age skills map' },
       { href: '/free-guide', label: '7-Day Guide', desc: 'Seven activities, sent to your inbox' },
-      { href: '/quiz', label: 'Take the Quiz', desc: 'Two minutes, a plan for your kid' },
     ],
   },
 ];
