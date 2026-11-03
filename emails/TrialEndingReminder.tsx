@@ -12,7 +12,7 @@ import {
 interface Props {
   /** The recipient's first name (or undefined if we don't know it). */
   firstName?: string;
-  /** Whether they locked the founder rate ($99/yr) or the standard rate ($149/yr). */
+  /** Whether they locked the founder rate ($99/yr) or the standard rate ($129/yr). */
   isFounderPhase: boolean;
   /** ISO date string for the trial end / first charge. */
   trialEndDate: string;
@@ -68,7 +68,7 @@ export default function TrialEndingReminder({
   const daysLabel = daysFromNow === 1 ? '1 day' : `${daysFromNow} days`;
 
   const isMonthly = plan === 'monthly';
-  const price = priceOverride ?? (isMonthly ? '$15' : isFounderPhase ? '$99' : '$149');
+  const price = priceOverride ?? (isMonthly ? '$15' : isFounderPhase ? '$99' : '$129');
   /** "for the year" / "for the month" phrasing. */
   const forThe = isMonthly ? 'for the month' : 'for the year';
 

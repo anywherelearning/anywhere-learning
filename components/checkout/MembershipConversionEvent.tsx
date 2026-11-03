@@ -13,7 +13,7 @@ import {
 interface Props {
   /** True when this signup started a 7-day free trial ($0 charged today). */
   isTrial: boolean;
-  /** Annual membership price in USD (99 founder / 149 post-founder). */
+  /** Annual membership price in USD (99 founder / 129 post-founder). */
   priceUSD: number;
   /** Order number shown on the receipt, used as the conversion's transaction id. */
   orderId: string;

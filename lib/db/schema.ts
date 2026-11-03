@@ -106,7 +106,7 @@ export const deviceTokens = pgTable('device_tokens', {
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Membership subscriptions ($99/yr founder, $149/yr standard). Written by the
+// Membership subscriptions ($99/yr founder, $129/yr standard). Written by the
 // Stripe webhook (customer.subscription.* + invoice.paid), read by the access
 // tier resolver in lib/access. During a free trial the Stripe status is
 // 'trialing' and currentPeriodEnd holds the trial end date.

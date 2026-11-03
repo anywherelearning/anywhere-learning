@@ -1,7 +1,7 @@
 /**
  * Stripe webhook for the membership product line:
  *
- *   • Membership ($99/yr founder or $149/yr standard, recurring subscription)
+ *   • Membership ($99/yr founder or $129/yr standard, recurring subscription)
  *
  * Events handled:
  *   - checkout.session.completed         → provision user + send welcome email

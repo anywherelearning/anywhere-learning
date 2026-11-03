@@ -25,7 +25,7 @@ interface StripePriceIds {
 const LIVE_PRICES: StripePriceIds = {
   /** Subscription, $99/year — locked in for the first 100 members. (LIVE) */
   MEMBERSHIP_FOUNDER: 'price_1TZd7YAkIBECpwGmljfvhird',
-  /** Subscription, $149/year — applies to member 101+. (LIVE) */
+  /** Subscription, standard yearly price after the founder phase. (LIVE) NOTE: this Stripe price is still $149; the decided price is $129 (Nov 2026). Create a $129 price and swap this ID before IS_FOUNDER_PHASE goes false. */
   MEMBERSHIP_STANDARD: 'price_1TZd7ZAkIBECpwGmLH4ogWnu',
   /** Subscription, $15/month — one rate for everyone, no founder split. (LIVE) */
   MEMBERSHIP_MONTHLY: 'price_1TtEAIAkIBECpwGmebueXC9Q',

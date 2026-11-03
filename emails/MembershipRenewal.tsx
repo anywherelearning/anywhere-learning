@@ -12,7 +12,7 @@ import {
 interface Props {
   /** The recipient's first name (or undefined if we don't know it). */
   firstName?: string;
-  /** Whether they're on the founder rate ($99/yr locked) or the standard rate ($149/yr). */
+  /** Whether they're on the founder rate ($99/yr locked) or the standard rate ($129/yr). */
   isFounderPhase: boolean;
   /** ISO date string for the upcoming renewal (e.g. "2027-05-20"). */
   renewalDate: string;
@@ -87,7 +87,7 @@ export default function MembershipRenewal({
   );
   const daysLabel = daysFromNow === 1 ? '1 day' : `${daysFromNow} days`;
 
-  const priceLabel = isFounderPhase ? '$99' : '$149';
+  const priceLabel = isFounderPhase ? '$99' : '$129';
   const rateLine = isFounderPhase ? '/year · founder rate' : '/year';
 
   return (
@@ -280,7 +280,7 @@ export default function MembershipRenewal({
                             <div style={{ ...label, color: C_FOREST }}>STILL LOCKED IN · FOUNDER RATE, YEAR 2</div>
                             <div style={{ fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '6px', fontFamily: FONT_BODY }}>
                               Renewing keeps your <strong style={strongInk}>$99/year</strong> for as long
-                              as you stay a member. New members are paying $149 now, your price
+                              as you stay a member. New members are paying $129 now, your price
                               doesn&apos;t move.
                             </div>
                           </td>

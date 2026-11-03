@@ -7,7 +7,7 @@
  *   - Cohort framing ("the first 100 are shaping this")
  *
  * Post-founder phase (101+):
- *   - $149/year, standard renewal
+ *   - $129/year, standard renewal
  *   - Generic "Member" labels, no special rate framing
  *   - No cohort framing
  *
@@ -34,7 +34,7 @@ export const IS_FOUNDER_PHASE = true;
 
 // ─── PRICING ────────────────────────────────────────────────
 export const FOUNDER_PRICE_USD = 99;
-export const POST_FOUNDER_PRICE_USD = 149;
+export const POST_FOUNDER_PRICE_USD = 129;
 export const FOUNDER_CAP = 100;
 
 // ─── MONTHLY PLAN ───────────────────────────────────────────
@@ -99,30 +99,30 @@ export const MEMBERSHIP_PRICE_USD = IS_FOUNDER_PHASE
   : POST_FOUNDER_PRICE_USD;
 
 // ─── DISPLAY HELPERS ────────────────────────────────────────
-/** "$99" or "$149" — bare price with no /year suffix. */
+/** "$99" or "$129" — bare price with no /year suffix. */
 export const MEMBERSHIP_PRICE = `$${MEMBERSHIP_PRICE_USD}`;
 
-/** "$99/year" or "$149/year" — the most common rendering. */
+/** "$99/year" or "$129/year" — the most common rendering. */
 export const MEMBERSHIP_PRICE_YEAR = `$${MEMBERSHIP_PRICE_USD}/year`;
 
-/** "$99/yr" or "$149/yr" — short form for tight UI. */
+/** "$99/yr" or "$129/yr" — short form for tight UI. */
 export const MEMBERSHIP_PRICE_YR = `$${MEMBERSHIP_PRICE_USD}/yr`;
 
-/** "$99.00" or "$149.00" — for receipts and Stripe price displays. */
+/** "$99.00" or "$129.00" — for receipts and Stripe price displays. */
 export const MEMBERSHIP_PRICE_FORMATTED = `$${MEMBERSHIP_PRICE_USD}.00`;
 
 /**
  * Per-month equivalent of the annual price, for conversion-moment framing.
  * The membership is billed once per year — this is a psychological display
  * only ("$8.25/mo, billed yearly"), never an actual monthly plan.
- * $99/yr → $8.25/mo · $149/yr → $12.42/mo.
+ * $99/yr → $8.25/mo · $129/yr → $10.75/mo.
  */
 export const MEMBERSHIP_PRICE_MONTHLY_USD = MEMBERSHIP_PRICE_USD / 12;
 
-/** "$8.25" or "$12.42" — bare per-month figure, no suffix. */
+/** "$8.25" or "$10.75" — bare per-month figure, no suffix. */
 export const MEMBERSHIP_PRICE_MONTHLY = `$${MEMBERSHIP_PRICE_MONTHLY_USD.toFixed(2)}`;
 
-/** "$8.25/month" or "$12.42/month" — per-month framing for CTAs. */
+/** "$8.25/month" or "$10.75/month" — per-month framing for CTAs. */
 export const MEMBERSHIP_PRICE_MONTH = `${MEMBERSHIP_PRICE_MONTHLY}/month`;
 
 // ─── COPY HELPERS ───────────────────────────────────────────
@@ -168,7 +168,7 @@ export const FOUNDER_TAGLINE = IS_FOUNDER_PHASE
 // Runtime founder-phase helpers
 //
 // Async because they hit the DB. Used by:
-//   - The membership checkout endpoint (picks $99 vs $149 price at runtime)
+//   - The membership checkout endpoint (picks $99 vs $129 price at runtime)
 //   - The Stripe webhook (decides which welcome email variant to send)
 //
 // Kept out of SSR-rendered site copy on purpose — the static

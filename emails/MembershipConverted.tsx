@@ -12,7 +12,7 @@ import {
 interface Props {
   /** The recipient's first name (or empty string if we don't know it). */
   firstName?: string;
-  /** Whether they're on the locked founder rate ($99/yr instead of $149/yr). */
+  /** Whether they're on the locked founder rate ($99/yr instead of $129/yr). */
   isFounderPhase: boolean;
   /** ISO date the membership renews (the current paid period end). */
   renewalDate: string;
@@ -55,7 +55,7 @@ export default function MembershipConverted({
 }: Props) {
   const name = firstName?.trim() || 'there';
   const isMonthly = plan === 'monthly';
-  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
+  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$129';
   const per = isMonthly ? 'month' : 'year';
   const renews = new Date(renewalDate);
 

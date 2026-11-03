@@ -20,7 +20,7 @@ interface AuthState {
    *  uploaded one (we show their initial as a letter avatar instead). */
   imageUrl: string | null;
   /** True only if the user paid the founder rate ($99/yr first-100). False
-   *  for post-founder members ($149/yr). Read from Clerk's publicMetadata,
+   *  for post-founder members ($129/yr). Read from Clerk's publicMetadata,
    *  which the webhook sets after each purchase. Cosmetic only — never gate
    *  the member nav on it, see hasAccess below. */
   founder: boolean;

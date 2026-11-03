@@ -53,7 +53,7 @@ export default function AbandonedCheckoutMembership({
   // phase is, so suppress every founder line to match their cart.
   const founder = isFounderPhase && !isMonthly;
   const showFounderStamp = founder && typeof spotsLeft === 'number' && spotsLeft > 0;
-  const priceLabel = isMonthly ? '$15' : founder ? '$99' : '$149';
+  const priceLabel = isMonthly ? '$15' : founder ? '$99' : '$129';
   const subhead = founder
     ? 'Your spot, your founder rate, and the whole library, still waiting.'
     : 'Your spot and the whole library, still waiting.';
@@ -142,7 +142,7 @@ export default function AbandonedCheckoutMembership({
                               </>
                             ) : (
                               <>
-                                Membership · {isMonthly ? '$15/month' : '$149/year'}, cancel anytime.
+                                Membership · {isMonthly ? '$15/month' : '$129/year'}, cancel anytime.
                                 <br />
                                 14-day full refund if it&apos;s not for you.
                               </>
@@ -258,7 +258,7 @@ export default function AbandonedCheckoutMembership({
                             </table>
                             <div style={{ fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '8px', fontFamily: FONT_BODY }}>
                               <strong style={{ color: C_INK }}>$99/year</strong>, locked in for as long
-                              as you stay a member, the first 100 only. After that, it&apos;s $149 for
+                              as you stay a member, the first 100 only. After that, it&apos;s $129 for
                               everyone else. Your spot is still being held.
                             </div>
                           </td>

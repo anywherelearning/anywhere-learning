@@ -59,10 +59,10 @@ const sections: LegalSection[] = [
             <strong className="text-ink font-semibold">Billing.</strong>{' '}The membership is available on two plans. The <Em>yearly plan</Em>{' '}is charged once per year, and the <Em>monthly plan</Em>{' '}is charged $15 once per month, in each case starting the day your free trial ends (or the day you join, if no trial applies).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Founding member rate.</strong>{' '}The first 100 members pay <Em>$99/year.</Em>{' '}After the first 100 founders, the membership price increases to $149/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em>{' '}as long as their membership remains active and uninterrupted. The founding member rate applies to the yearly plan only; the monthly plan has a single rate for everyone and does not hold a founder spot rate.
+            <strong className="text-ink font-semibold">Founding member rate.</strong>{' '}The first 100 members pay <Em>$99/year.</Em>{' '}After the first 100 founders, the membership price increases to $129/year for new members. Founding members keep their $99/year rate <Em>locked in for life</Em>{' '}as long as their membership remains active and uninterrupted. The founding member rate applies to the yearly plan only; the monthly plan has a single rate for everyone and does not hold a founder spot rate.
           </li>
           <li>
-            <strong className="text-ink font-semibold">Auto-renewal.</strong>{' '}Memberships automatically renew at the rate you joined at (founders renew at $99/year, post-founders at $149/year, monthly members at $15/month). For yearly memberships we send a renewal reminder email 14 days before your renewal date; monthly renewals are confirmed by the payment receipt.
+            <strong className="text-ink font-semibold">Auto-renewal.</strong>{' '}Memberships automatically renew at the rate you joined at (founders renew at $99/year, post-founders at $129/year, monthly members at $15/month). For yearly memberships we send a renewal reminder email 14 days before your renewal date; monthly renewals are confirmed by the payment receipt.
           </li>
           <li>
             <strong className="text-ink font-semibold">Cancellation.</strong>{' '}You can cancel anytime from your account or by emailing us. Your access continues until the end of the period you&apos;ve paid for (your year or your month), after which the membership ends and you won&apos;t be billed again.

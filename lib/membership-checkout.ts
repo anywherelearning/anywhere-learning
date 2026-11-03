@@ -84,7 +84,7 @@ export async function createMembershipCheckout(opts: {
   }
 
   // Real-time founder check: if 120+ active members already exist, this
-  // returns false and the buyer goes to the $149 standard tier — even
+  // returns false and the buyer goes to the standard tier — even
   // though the static IS_FOUNDER_PHASE flag is still true. Existing
   // founders keep their $99 rate; only NEW signups are affected.
   //

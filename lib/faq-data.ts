@@ -63,12 +63,12 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: "What's 'founding member' pricing?",
     answer:
-      "The first 100 members pay $99/year, locked in for life. After the 100th founder joins, the price goes up to $149/year for new members. Your $99 rate stays the same forever, as long as you stay subscribed. Early members shape what this becomes, and I'd rather have 100 families actually using and shaping it than charge full price to a smaller group.",
+      "The first 100 members pay $99/year, locked in for life. After the 100th founder joins, the price goes up to $129/year for new members. Your $99 rate stays the same forever, as long as you stay subscribed. Early members shape what this becomes, and I'd rather have 100 families actually using and shaping it than charge full price to a smaller group.",
   },
   {
     question: 'Does my founder rate really lock in for life?',
     answer:
-      "Yes. As long as you stay subscribed, your annual renewal stays at $99, even when new members are paying $149 or more. If you cancel and rejoin later, you rejoin at the current public price, so it's worth holding onto.",
+      "Yes. As long as you stay subscribed, your annual renewal stays at $99, even when new members are paying $129 or more. If you cancel and rejoin later, you rejoin at the current public price, so it's worth holding onto.",
   },
   {
     question: 'How do I access the activities?',
@@ -88,7 +88,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'What happens after I cancel?',
     answer:
-      "You keep access until the end of the period you've paid for (your year, or your month on the monthly plan), then your membership ends. You won't be billed again. If you rejoin later, you pay whatever the public price is at that point (currently $149/year or $15/month for non-founders).",
+      "You keep access until the end of the period you've paid for (your year, or your month on the monthly plan), then your membership ends. You won't be billed again. If you rejoin later, you pay whatever the public price is at that point (currently $129/year or $15/month for non-founders).",
   },
   {
     question: 'Do you offer a free trial?',
@@ -153,7 +153,7 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: 'How do I pay?',
     answer:
-      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, and Google Pay where your device supports them. The membership is one annual charge of $99 (or $149 after founder pricing ends), or $15/month on the monthly plan, and it starts with a 7-day free trial, so nothing is charged the day you sign up.",
+      "Checkout is handled by Stripe. You'll see whatever payment methods are available on your device and in your region: card, Apple Pay, and Google Pay where your device supports them. The membership is one annual charge of $99 (or $129 after founder pricing ends), or $15/month on the monthly plan, and it starts with a 7-day free trial, so nothing is charged the day you sign up.",
   },
   {
     question: 'Do you offer monthly billing?',
@@ -163,12 +163,12 @@ export const buyingFaqItems: FAQItem[] = [
   {
     question: 'Will my membership auto-renew?',
     answer:
-      "Yes, it auto-renews at the rate you signed up at (founders renew at $99/year, after-founders at $149/year, monthly members at $15/month). For yearly memberships I send a reminder email 14 days before renewal, so there are no surprises. You can cancel anytime from your account.",
+      "Yes, it auto-renews at the rate you signed up at (founders renew at $99/year, after-founders at $129/year, monthly members at $15/month). For yearly memberships I send a reminder email 14 days before renewal, so there are no surprises. You can cancel anytime from your account.",
   },
   {
     question: 'Will my price go up at renewal?',
     answer:
-      "If you joined as a founding member (first 100), your $99/year is locked in for life. If you joined after that at $149, your price stays at $149 for renewal. I'd give you 60 days' notice if I ever changed pricing for existing members, and I have no plans to.",
+      "If you joined as a founding member (first 100), your $99/year is locked in for life. If you joined after that at $129, your price stays at $129 for renewal. I'd give you 60 days' notice if I ever changed pricing for existing members, and I have no plans to.",
   },
   {
     question: 'Is there a multi-family or co-op rate?',

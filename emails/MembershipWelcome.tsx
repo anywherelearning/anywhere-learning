@@ -15,7 +15,7 @@ interface Props {
   firstName?: string;
   /** Magic-link sign-in URL from Clerk. Signs them in + creates their account on first click. */
   signInUrl: string;
-  /** Whether the buyer locked in the founder rate ($99/yr instead of $149/yr). */
+  /** Whether the buyer locked in the founder rate ($99/yr instead of $129/yr). */
   isFounderPhase: boolean;
   /** True when this signup started a free trial (no charge yet). */
   isTrial?: boolean;
@@ -71,7 +71,7 @@ export default function MembershipWelcome({
   const name = firstName?.trim() || 'there';
   const basecamp = nextBasecamp();
   const isMonthly = plan === 'monthly';
-  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$149';
+  const price = isMonthly ? '$15' : isFounderPhase ? '$99' : '$129';
   /** "for the year" / "for the month" phrasing. */
   const per = isMonthly ? 'month' : 'year';
 
@@ -311,7 +311,7 @@ export default function MembershipWelcome({
                             <div style={founderHeadline}>$99 a year, for as long as you stay.</div>
                             <div style={founderBody}>
                               You&apos;re joining in our founding season. When new members pay
-                              $149, your price won&apos;t move an inch.
+                              $129, your price won&apos;t move an inch.
                             </div>
                           </td>
                         </tr>

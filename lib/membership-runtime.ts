@@ -36,18 +36,18 @@ export interface MembershipState {
   isStaticallyFounder: boolean;
   founderCap: number;
 
-  /** "$99" or "$149" — bare price with no /year suffix. */
+  /** "$99" or "$129" — bare price with no /year suffix. */
   price: string;
-  /** "$99/year" or "$149/year" — most common rendering. */
+  /** "$99/year" or "$129/year" — most common rendering. */
   priceYear: string;
-  /** "$99/yr" or "$149/yr" — short form for tight UI. */
+  /** "$99/yr" or "$129/yr" — short form for tight UI. */
   priceYr: string;
-  /** "$99.00" or "$149.00" — receipts and Stripe price displays. */
+  /** "$99.00" or "$129.00" — receipts and Stripe price displays. */
   priceFormatted: string;
   priceUSD: number;
-  /** "$8.25" or "$12.42" — per-month equivalent, bare (billed yearly). */
+  /** "$8.25" or "$10.75" — per-month equivalent, bare (billed yearly). */
   priceMonthly: string;
-  /** "$8.25/month" or "$12.42/month" — per-month framing for CTAs. */
+  /** "$8.25/month" or "$10.75/month" — per-month framing for CTAs. */
   priceMonth: string;
 
   /** "Founder rate" during phase, empty string after. */
