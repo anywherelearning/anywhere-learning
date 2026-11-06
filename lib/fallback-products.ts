@@ -1798,15 +1798,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Everyday Redesign Challenge",
     slug: "everyday-redesign",
     description:
-      "Look at everyday objects and systems with fresh eyes, then redesign them to work better. Kids practise systems thinking, observation, and creative problem-solving by improving the things they use every day. Design thinking applied to real life.",
+      "Your child picks something at home that bugs everyone, like lost shoes, a cluttered counter or the dinner rush, and redesigns it for real. They count the problem for a week, interview the family, keep asking why until they find the real cause, then build a fix that makes the right thing the easy thing. A second week of counting shows whether it worked.",
     shortDescription:
-      "Design thinking for kids ages 6-14: redesign everyday objects and systems. Low-prep creativity lab.",
+      "Design thinking for kids ages 6-14: measure a real problem at home, find the cause and test a fix for a week.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmMHOmPEht",
     blobUrl: "",
     imageUrl: "/products/everyday-redesign.jpg",
-    previewFile: "Preview Planning & Problem-Solving Everyday Redesign Challenge.pdf",
+    previewFile: "Preview Planning & Problem-Solving Everyday Redesign Challenge v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

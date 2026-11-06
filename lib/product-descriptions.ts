@@ -2038,24 +2038,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'everyday-redesign': {
     opening:
-      'Look at everyday objects and systems with fresh eyes, then redesign them to work better. Kids practise observation, systems thinking, and creative problem-solving by improving the things they already use. Design thinking applied to real, everyday life.',
+      'Your child picks something at home that bugs everyone, like lost shoes, a cluttered counter or the dinner rush, and redesigns it for real. They count the problem for a week, interview the family, keep asking why until they find the real cause, then build a fix that makes the right thing the easy thing. A second week of counting shows whether it worked.',
     whatsIncluded: [
-      'Everyday redesign challenge guide',
-      'Observation and analysis frameworks',
-      'Problem identification and improvement planning',
-      'Sketch and prototype activities',
-      'Testing and iteration with real users',
+      '5 steps from counting the problem to a week-long test',
+      'Family interviews about what really bugs everyone',
+      'Five whys to get past the symptom to the cause',
+      'Redesign rules that make the right thing the easy thing',
+      'Before and after numbers in a Redesign Toolkit',
     ],
-    skillTags: ['Design Thinking', 'Systems Thinking', 'Creativity', 'Observation', 'Problem-Solving'],
+    skillTags: ['Design Thinking', 'Critical Thinking', 'Systems Thinking', 'Life Skills', 'Problem-Solving'],
     insideTheLearning: {
       lead:
-        'Your child picks something in your house that does not work well and redesigns it properly. Investigate, design, test, iterate. They interview the people who use it, find the root cause rather than the annoying symptom, then prototype a fix and see whether it survives being used.',
+        'Your child learns that most everyday problems are not about people trying too little: they are about a system that makes the wrong thing easy. Telling everyone to try harder rarely works. Moving the shoe basket to where shoes actually come off does, and the count proves it.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Root cause analysis, getting past the symptom to the actual problem' },
-        { skill: 'Systems Thinking', where: 'Seeing how the parts of a household routine connect to each other' },
-        { skill: 'Design Thinking', where: 'Investigating, designing, testing, then iterating on what failed' },
-        { skill: 'Communication', where: 'Interviewing the people who use it and presenting the proposed fix' },
-        { skill: 'Life Skills', where: 'Real home management and organisation, improved by them' },
+        { skill: 'Critical Thinking', where: 'Asking why until they reach the real cause, not the annoying symptom' },
+        { skill: 'Math', where: 'Tallying the problem for a week, then comparing before and after' },
+        { skill: 'Communication', where: 'Interviewing the family and getting everyone on board with the fix' },
+        { skill: 'Creativity', where: 'Designing a fix that fits how people actually behave' },
+        { skill: 'Life Skills', where: 'Running a real part of the home better, with their own system' },
       ],
     },
     format: 'Project Guide',

@@ -44,7 +44,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "disappointment-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Disappointment%20Lab%20v2.pdf",
   "emergency-ready": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Emergency%20Ready%20Challenge%20v3.pdf",
   "everyday-life-comparison": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Everyday%20Life%20Comparison%20v2.pdf",
-  "everyday-redesign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Everyday%20Redesign%20Challenge%20v2.pdf",
+  "everyday-redesign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Everyday%20Redesign%20Challenge%20v3.pdf",
   "fall-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Fall%20v2.pdf",
   "family-debate-night": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20Debate%20Night%20v6.pdf",
   "family-electricity-audit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Family%20Electricity%20Audit%20v5.pdf",

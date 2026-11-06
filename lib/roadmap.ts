@@ -451,6 +451,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'trail-guide-creator': ['physical'],
   'write-like-a-pro': ['communication'],
   'emergency-ready': ['critical-thinking'],
+  'everyday-redesign': ['life-skills'],
 };
 
 /**
