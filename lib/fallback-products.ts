@@ -1238,7 +1238,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrqGAkIBECpwGmxshVtOia",
     blobUrl: "",
     imageUrl: "/products/savings-goal-tracker.jpg",
-    previewFile: "Preview Real-world math - Savings Goal Tracker v5.pdf",
+    previewFile: "Preview Real-world math - Savings Goal Tracker v6.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
