@@ -1215,7 +1215,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "price_1TLrqFAkIBECpwGmlCHUbfKk",
     blobUrl: "",
     imageUrl: "/products/road-trip-calculator.jpg",
-    previewFile: "Preview Real-world math - Road trip calculator v7.pdf",
+    previewFile: "Preview Real-world math - Road trip calculator v8.pdf",
     category: "real-world-math",
     isBundle: false,
     bundleProductIds: null,
