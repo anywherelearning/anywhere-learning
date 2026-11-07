@@ -342,17 +342,13 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When we planned three days at Universal Studios, my son did the budget with me. He hunted for the best ticket prices, compared hotels, and looked up what the restaurants actually charge. He estimated about $3,000 Canadian. When we added up what we really spent, it came to $3,400.",
+    "text": "When we planned three days at Universal Studios, my son did the budget with me. He hunted for the best ticket prices, compared hotels, and looked up what the restaurants actually charge. He estimated about $3,200 Canadian. When we added up what we really spent, it came to $3,400.",
     "quotes": []
   },
   "photo": {
     "src": "guides/assets/budget-challenge-total.jpg",
     "alt": "A boy at the table adding up the real cost of the trip on a big sheet of paper",
     "caption": "Adding up what the trip really cost.",
-    "tall": true,
-    "inset": {
-      "src": "guides/assets/budget-challenge-sheet.jpg",
-      "alt": "His handwritten total for the trip"
-    }
+    "tall": true
   }
 }
