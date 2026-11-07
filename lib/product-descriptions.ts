@@ -1152,23 +1152,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'travel-day': {
     opening:
-      'Your child plans a real day trip from scratch: picks the destination, sets priorities, builds a time-and-money budget, creates a full itinerary, handles a curveball, and makes a backup plan. Planning, budgeting, and problem-solving all in one project that feels like an adventure.',
+      'Your child plans a real day out, like a theme park, a zoo, a city or a travel day. They collect a must-do from each person, put the stops in the order that wastes the least time, build a timeline with buffers and a budget, and write a Plan B for what could go wrong. Then they lead the day and compare the plan with what really happened.',
     whatsIncluded: [
-      'Destination research with priority setting',
-      'Time-and-money budget planning',
-      'Full itinerary building with realistic timing',
-      'Curveball step that forces real-time problem-solving',
-      'Backup plan and Version 2 revision',
+      '5 steps from must-dos to leading the day',
+      'Order rules that stop the day doubling back',
+      'Time math with buffers, slack and a budget',
+      'Plan B swaps for rain, closures and tired kids',
+      'A Plan vs real table in a Day Planner Toolkit',
     ],
-    skillTags: ['Planning', 'Budgeting', 'Problem-Solving'],
+    skillTags: ['Planning', 'Time Management', 'Budgeting', 'Problem-Solving', 'Flexibility'],
     insideTheLearning: {
       lead:
-        'Your child plans an entire day out: researches it, sets the priorities, builds an itinerary with realistic timings, and holds it inside a time and money budget. Then a curveball lands mid-day and the plan has to bend without breaking.',
+        'Your child learns that a good day out is not the one with the most in it. It is the one in the right order, with room for things to go wrong. The same list in a different order can save an hour, and a Plan B turns a change into a decision instead of a meltdown.',
       skills: [
-        { skill: 'Planning', where: 'Researching the options and building an itinerary with timings that actually work' },
-        { skill: 'Decision-Making', where: 'Setting priorities and budgeting the time and the money together' },
-        { skill: 'Problem-Solving', where: 'Handling the curveball in real time and reworking the rest of the day' },
-        { skill: 'Communication', where: 'Making the case for their plan and coordinating everyone through it' },
+        { skill: 'Planning', where: 'Collecting must-dos, fixed times and prices before the day' },
+        { skill: 'Critical Thinking', where: 'Finding the order that saves the most time on the map' },
+        { skill: 'Math', where: 'Elapsed time, buffers, slack and adding up the costs' },
+        { skill: 'Communication', where: 'Hearing what everyone wants and leading the family through the day' },
+        { skill: 'Self-Management', where: 'Staying calm and switching to Plan B when something changes' },
       ],
     },
     format: 'Project Guide',

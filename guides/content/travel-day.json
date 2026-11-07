@@ -1,0 +1,340 @@
+{
+  "slug": "travel-day",
+  "category": "Planning & Problem-Solving",
+  "title": "Travel Day Itinerary Challenge",
+  "tagline": "Must-dos · Order · Timeline · Plan B",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid plans a real day out, like a theme park, a zoo, a city or a travel day. They collect everyone's must-dos, put them in the order that wastes the least time, build a timeline with buffers and a budget, plan for what could go wrong, then lead the day and compare the plan with what really happened.",
+  "need": [
+    "A real day out on the calendar: a theme park, zoo, museum, city or travel day",
+    "The place's map and website, for hours and times",
+    "Paper, a pencil and a watch or phone"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "elapsed time, adding up minutes and costs"
+    },
+    {
+      "subject": "Geography",
+      "text": "reading a map and planning a route"
+    },
+    {
+      "subject": "Planning",
+      "text": "priorities, sequencing and buffers"
+    },
+    {
+      "subject": "Communication",
+      "text": "hearing everyone and leading the day"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Let them plan a day you're actually taking. Set the outer limits, like the date, the budget and when you need to be home, and leave the order to them. The order is where most of the day is won or lost, so that's the part to hand over.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Collect the must-dos and put them in order (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Build the timeline and the Plan B (Steps 3 and 4)."
+      },
+      {
+        "when": "The day",
+        "what": "Lead the day, then compare plan and real (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "No big day out coming up",
+        "a": "Plan an ordinary Saturday instead: the library, the park, groceries and one treat. Same steps, smaller map."
+      },
+      {
+        "q": "Everyone wants something different",
+        "a": "One must-do each. Their job is to fit them all in, not to pick a winner."
+      },
+      {
+        "q": "They want to run everything",
+        "a": "The order and the timing are theirs. Safety, money and bedtime stay yours. Say it before the day."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good day out isn't the one with the most in it. It's the one in the right order, with room for things to go wrong.",
+    "before": "See the gorillas, the sea lions and the reptiles. Lunch whenever.",
+    "model": [
+      {
+        "part": "Anchor",
+        "line": "Sea lion feeding at 11:00. The zoo closes at 5:00."
+      },
+      {
+        "part": "Order",
+        "line": "Gorillas first at the far end, then work back toward the gate."
+      },
+      {
+        "part": "Buffer",
+        "line": "10 minutes between areas. Lunch at 12:00, before anyone is hungry."
+      },
+      {
+        "part": "Plan B",
+        "line": "If it rains, the reptile house moves up."
+      }
+    ],
+    "modelNote": "The first plan was a list of places. The second has fixed times, an order that never doubles back, and a way out when the weather turns."
+  },
+  "steps": [
+    {
+      "title": "Collect everyone's must-dos",
+      "why": "A day that works for one person is a plan. A day that works for everyone is a good plan.",
+      "kid": "Your kid picks a real day out and asks each person for one must-do and one nice-to-have. Then they look up what can't move: opening and closing times, show or feeding times, tickets and prices. It all goes on the Must-do list card in the Day Planner Toolkit at the end of the guide.",
+      "you": "Give a real must-do of your own, including the unglamorous ones: lunch, a rest, home by 6. Those are part of the plan too.",
+      "ask": [
+        "What one thing would make the day for each person?",
+        "Which times can't move?"
+      ],
+      "tip": "Check the place's own website for hours and show times, not a blog. They change with the season.",
+      "levels": {
+        "explore": "Ask everyone for one thing they really want to do, and draw each one.",
+        "develop": "Collect a must-do and a nice-to-have from everyone, and find the times that can't move.",
+        "extend": "Find out when the place is busiest and quietest (the website or reviews often say), and decide what that changes."
+      }
+    },
+    {
+      "title": "Put it in order",
+      "why": "The same list in a different order can save an hour.",
+      "kid": "Your kid finds each stop on a map, like the park map, the zoo map or a city map, and numbers them using the Order rules card: fixed times first, finish one area before the next, popular things early, and food before anyone gets hungry.",
+      "you": "Ask 'Where are we at 11 o'clock?' and let them find it on the map. Spotting a zigzag themselves teaches more than being told.",
+      "ask": [
+        "Where do we cross back over the same path?",
+        "What has to happen at a set time?"
+      ],
+      "tip": "Trace the route with a pencil. If the line crosses itself a lot, there's a better order.",
+      "levels": {
+        "explore": "Put a dot on the map for each must-do and draw a line from one to the next.",
+        "develop": "Number the stops in order using the Order rules, fixed times first.",
+        "extend": "Make two different orders, measure the walking on the map for each, and pick the shorter one."
+      }
+    },
+    {
+      "title": "Build the timeline",
+      "why": "A plan without minutes is a wish list.",
+      "kid": "Your kid gives every stop a start time and a length, then adds the time to get there and a buffer between moves, using the Time math card. They check it all fits between opening and closing, then add the money: tickets, food and a treat.",
+      "you": "Hold the budget and the hard stops, like a nap, the drive home or bedtime. If it doesn't fit, they decide what goes, not you.",
+      "ask": [
+        "How long does it take to get from here to there?",
+        "What happens if one thing runs 20 minutes late?"
+      ],
+      "tip": "Lines, washrooms and snacks always take longer than planned. Ten minutes between moves isn't wasted time.",
+      "levels": {
+        "explore": "Sort the stops into morning, lunch and afternoon.",
+        "develop": "Give each stop a time, add buffers, and check it fits the day and the budget.",
+        "extend": "Work out the slack: the total buffer minutes, and how late things can run before a must-do gets cut."
+      }
+    },
+    {
+      "title": "Plan for what goes wrong",
+      "why": "Something always changes. With a Plan B, it's a decision, not a meltdown.",
+      "kid": "Your kid lists what could go wrong: a closed ride or exhibit, rain, a long line, a tired sibling, a late start. For each one, they write the swap on the Plan B card: what moves, what gets cut, and what never gets cut.",
+      "you": "Add the curveball you know your family has, like the kid who melts at 3 pm. Then agree on who makes the call on the day.",
+      "ask": [
+        "What's the one thing we never cut?",
+        "If it rains, what moves first?"
+      ],
+      "tip": "Decide what gets cut first before you leave. Choosing on the spot, with everyone tired, is how days fall apart.",
+      "levels": {
+        "explore": "Pick one thing that could go wrong and say what we'd do instead.",
+        "develop": "Write a Plan B for three things that could go wrong, and mark what never gets cut.",
+        "extend": "Rank every stop from 'cut first' to 'never cut', then have someone throw a curveball and rework the afternoon in five minutes."
+      }
+    },
+    {
+      "title": "Lead the day and compare",
+      "why": "Plan versus real is where the next plan gets better.",
+      "kid": "On the day, your kid holds the plan: they call the time, lead to the next stop and make the swap when a curveball hits. Afterwards, they fill in the Plan vs real table on the Day Planner Toolkit page and find the stop that ran furthest off, and why.",
+      "you": "Follow their plan even when you'd do it differently, and step in only for safety. When it goes wrong, ask 'What's your Plan B?' before offering yours.",
+      "ask": [
+        "What ran later than planned, and why?",
+        "What would you change for the next day out?"
+      ],
+      "tip": "Take a photo at each stop. The timestamps give you the real times without anyone writing them down.",
+      "levels": {
+        "explore": "Carry the plan and tell everyone what's next.",
+        "develop": "Lead the day, note the real times and compare plan and real after.",
+        "extend": "Work out the average delay per stop and write your own buffer rule for the next day out."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Day Planner Toolkit",
+    "intro": "What to collect, how to order it, the time math and the swaps for when things change.",
+    "items": [
+      {
+        "name": "Must-do list",
+        "lines": [
+          {
+            "k": "Everyone:",
+            "v": "one must-do"
+          },
+          {
+            "k": "Everyone:",
+            "v": "one nice-to-have"
+          },
+          {
+            "k": "Hours:",
+            "v": "opening and closing"
+          },
+          {
+            "k": "Fixed times:",
+            "v": "shows, feedings, departures"
+          },
+          {
+            "k": "Money:",
+            "v": "tickets and prices"
+          }
+        ],
+        "ask": "Does everyone have a must-do?"
+      },
+      {
+        "name": "Order rules",
+        "lines": [
+          {
+            "k": "Fixed first:",
+            "v": "shows, feedings, bookings"
+          },
+          {
+            "k": "Close together:",
+            "v": "finish one area first"
+          },
+          {
+            "k": "Popular early:",
+            "v": "lines grow through the day"
+          },
+          {
+            "k": "Food on time:",
+            "v": "eat before anyone is hungry"
+          },
+          {
+            "k": "Big, then calm:",
+            "v": "a quiet stop after a big one"
+          }
+        ],
+        "ask": "Does the route cross itself?"
+      },
+      {
+        "name": "Time math",
+        "lines": [
+          {
+            "k": "Each stop:",
+            "v": "how long it takes"
+          },
+          {
+            "k": "Getting there:",
+            "v": "walk or drive time"
+          },
+          {
+            "k": "Buffer:",
+            "v": "10 minutes per move"
+          },
+          {
+            "k": "Fits?",
+            "v": "total ≤ closing − opening"
+          },
+          {
+            "k": "Money:",
+            "v": "tickets + food + extras"
+          }
+        ],
+        "ask": "How much slack is left?"
+      },
+      {
+        "name": "Plan B swaps",
+        "lines": [
+          {
+            "k": "Closed:",
+            "v": "the next nice-to-have moves up"
+          },
+          {
+            "k": "Rain:",
+            "v": "indoor stops first"
+          },
+          {
+            "k": "Long line:",
+            "v": "come back later"
+          },
+          {
+            "k": "Tired:",
+            "v": "cut a nice-to-have"
+          },
+          {
+            "k": "Late start:",
+            "v": "drop the last nice-to-have"
+          }
+        ],
+        "ask": "What never gets cut?"
+      }
+    ],
+    "after": {
+      "label": "Plan vs real",
+      "lines": [
+        "Stop",
+        "Planned time",
+        "Real time",
+        "Difference and why"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Prioritising",
+      "text": "fitting in what matters to everyone"
+    },
+    {
+      "name": "Sequencing",
+      "text": "finding the order that saves time"
+    },
+    {
+      "name": "Time math",
+      "text": "minutes, buffers and slack"
+    },
+    {
+      "name": "Flexibility",
+      "text": "switching to Plan B calmly"
+    }
+  ],
+  "conclusion": {
+    "headline": "They ran the day, Plan B and all.",
+    "text": "Watch the next outing. If they ask 'What time does it close?' before 'Can we go?', the planning habit has stuck.",
+    "celebrate": "When the Plan B kicks in and works, say it right then: 'It started raining and you already knew what we'd do. That was your plan.'",
+    "extensions": [
+      "Plan a real travel day with an airport, train or ferry, check-in and connection times",
+      "Plan a day around a grandparent's pace",
+      "Plan a day out on a set budget, like $20 a person",
+      "Plan the same place for a different season and compare"
+    ]
+  },
+  "signs": [
+    "They check opening hours before suggesting a place",
+    "They build in time for food and washrooms",
+    "They offer a swap when a plan changes, instead of giving up"
+  ],
+  "makeItReal": "Hand them the plan for your next big day out, and let the whole family follow their order.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "At Universal, my son planned our ride order. With early entry, he started with the most popular rides, the ones with the longest waits. When I got motion sick the first morning, he replanned around me. We never waited more than 60 minutes.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/travel-day.jpg",
+    "alt": "A boy in a cap checking the ride plan on his phone at a theme park",
+    "caption": "Running his ride plan at the park.",
+    "tall": true
+  }
+}
