@@ -1,0 +1,341 @@
+{
+  "slug": "pack-like-a-pro",
+  "category": "Planning & Problem-Solving",
+  "title": "Pack Like a Pro",
+  "tagline": "Read the trip · Cut · Pack · Test",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid packs their own bag for a real trip or outing. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, pack it, test it with some what-ifs, and build a packing list they can use year after year.",
+  "need": [
+    "A real trip, sleepover or day out coming up",
+    "The bag they'll actually carry",
+    "Their own clothes and things to choose from",
+    "Paper and a pencil (a kitchen or bathroom scale is a bonus)"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "counting days, outfits and weight"
+    },
+    {
+      "subject": "Science",
+      "text": "reading a weather forecast"
+    },
+    {
+      "subject": "Planning",
+      "text": "priorities and trade-offs"
+    },
+    {
+      "subject": "Writing",
+      "text": "making a list someone can really use"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to be a good packer. Your job is to ask tricky questions and then let them choose, even when you'd pack differently. A kid who carries the wrong shoes for one afternoon learns more than a kid whose bag was packed for them.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Read the trip, list everything and cut it down (Steps 1 to 3)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Pack the bag and test it (Step 4)."
+      },
+      {
+        "when": "After the trip",
+        "what": "Unpack, see what went unused and build the list (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to bring everything",
+        "a": "Let them pack it all, then carry it around the block. The bag makes the argument for you."
+      },
+      {
+        "q": "No trip coming up",
+        "a": "Pack for a sleepover, a day at the beach or a pretend trip. Or try the five-minute version: 'We're leaving tonight. Grab your bag.'"
+      },
+      {
+        "q": "I'm afraid they'll forget something important",
+        "a": "Passports, medicine, money and tickets stay with you. Everything else is theirs, and a forgotten swimsuit is a fine way to remember next time."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Good packers don't pack for everything that might happen. They pack for this trip, with a few things that can do more than one job.",
+    "before": "Five shirts, all my books and the big stuffed dog, just in case.",
+    "model": [
+      {
+        "part": "The trip",
+        "line": "2 nights at Grandma's. Rain on Saturday. One small backpack."
+      },
+      {
+        "part": "Need",
+        "line": "Pyjamas, toothbrush, 2 shirts, rain jacket."
+      },
+      {
+        "part": "Cut",
+        "line": "Five shirts became two. One book, and the small stuffed dog."
+      },
+      {
+        "part": "Test",
+        "line": "Carried it around the block. Found the rain jacket in 10 seconds."
+      }
+    ],
+    "modelNote": "The first bag was packed for every possible weekend. The second was packed for this one, and they can lift it."
+  },
+  "steps": [
+    {
+      "title": "Read the trip",
+      "why": "Every packing mistake starts with not asking what the trip is.",
+      "kid": "Your kid picks a real trip or outing and answers the Read the trip card in the Packing Toolkit at the end of the guide: how long, what the weather will be, what you'll be doing, what bag they get, and what they could buy or borrow there.",
+      "you": "Look up the forecast together, and tell them the real plans for each day. Then ask what makes this trip tricky to pack for.",
+      "ask": [
+        "What makes this trip different from the last one?",
+        "What's the worst thing to forget?"
+      ],
+      "tip": "Check the weather for where you're going, at the time you'll be there. It's often not what it's doing at home.",
+      "levels": {
+        "explore": "Say where you're going, how long for and what the weather will be.",
+        "develop": "Answer every question on the Read the trip card.",
+        "extend": "Do it for two different trips and write down what stays the same and what changes."
+      }
+    },
+    {
+      "title": "List everything you want",
+      "why": "Going big first makes the cutting a real decision.",
+      "kid": "Your kid writes down everything they'd like to bring, with no limits at all. Then they sort it using the Sort it card: need, comfort, fun and just in case.",
+      "you": "Let the list get silly. Don't cut anything yet, and hold back the 'You won't need that.' Add only what they truly can't go without.",
+      "ask": [
+        "What would really happen if you left this at home?",
+        "How many of these do you actually need for that many days?"
+      ],
+      "tip": "Most 'just in case' things are for a case that won't happen. Keep the sorting honest by asking when they last needed it.",
+      "levels": {
+        "explore": "List eight to ten things you'd like to bring.",
+        "develop": "List 12 to 15 things and sort them with the Sort it card.",
+        "extend": "List 20 or more, then count how many days of clothes you truly need and work out how to wash or rewear."
+      }
+    },
+    {
+      "title": "Set the limits and cut",
+      "why": "The bag doesn't care what you want. Choosing is the whole skill.",
+      "kid": "Your kid gets real limits: one bag, a weight they can carry, or a set number of things. Then they make the cuts themselves and keep going until it fits, looking for things that can do two jobs.",
+      "you": "Set the limit, then stay out of the choosing. If the limit is real, like an airline's size rule or the space in the car, show them where it comes from.",
+      "ask": [
+        "What's the first thing to go?",
+        "What small thing could do two jobs?"
+      ],
+      "tip": "A scarf can be a blanket, a sunshade or a pillow. Finding double-duty things is the fun part.",
+      "levels": {
+        "explore": "Cut your list to seven things you'd really bring.",
+        "develop": "Use two limits, and say why each thing got cut.",
+        "extend": "Use three limits, weigh the bag, and defend every single thing that stays."
+      }
+    },
+    {
+      "title": "Pack it and test it",
+      "why": "A list always fits. A bag might not.",
+      "kid": "Your kid packs the real bag using the Packing tricks card. Then they carry it around the block, time how long it takes to find something, and face the What-ifs card. Anything that fails gets fixed.",
+      "you": "Play the trip. Call out 'It's raining!' or 'Where's your toothbrush?' and watch them dig. Keep it light, and let them repack.",
+      "ask": [
+        "Can you carry it for 15 minutes?",
+        "What do you need first when you get there?"
+      ],
+      "tip": "Last in, first out. What they'll need first goes on top.",
+      "levels": {
+        "explore": "Pack your bag and check that it closes and you can lift it.",
+        "develop": "Pack it, carry it around the block and answer two what-ifs.",
+        "extend": "Pack it, time how fast you can find five things, and handle every what-if. Then repack it faster."
+      }
+    },
+    {
+      "title": "Take it, then build your list",
+      "why": "The trip is the real test. The bag tells you what you got wrong.",
+      "kid": "Your kid takes the bag on the trip. When you get home, they unpack and make three piles: used every day, used once, never touched. Then they write their own My always list so that next time takes half as long.",
+      "you": "Make no comment on what they forgot or overpacked. Ask what they'd change, and keep the list somewhere you'll find it before the next trip.",
+      "ask": [
+        "What came home without being used?",
+        "What do you wish you'd had?"
+      ],
+      "tip": "Keep the list inside the bag or take a photo of it. A packing list that's easy to find gets used.",
+      "levels": {
+        "explore": "Show which things you used, and pick five that always come with you.",
+        "develop": "Make the three piles and fill in My always list.",
+        "extend": "Build a system for different kinds of trips, then teach it to someone by packing their bag with them."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Packing Toolkit",
+    "intro": "What to ask about the trip, how to sort, how to pack and what to test.",
+    "items": [
+      {
+        "name": "Read the trip",
+        "lines": [
+          {
+            "k": "How long:",
+            "v": "days and nights"
+          },
+          {
+            "k": "Weather:",
+            "v": "hot, cold, wet, all three?"
+          },
+          {
+            "k": "Doing:",
+            "v": "what's the plan each day?"
+          },
+          {
+            "k": "Bag:",
+            "v": "which one, and who carries it?"
+          },
+          {
+            "k": "There:",
+            "v": "what can you buy, borrow or wash?"
+          }
+        ],
+        "ask": "What makes this trip tricky?"
+      },
+      {
+        "name": "Sort it",
+        "lines": [
+          {
+            "k": "Need:",
+            "v": "the trip doesn't work without it"
+          },
+          {
+            "k": "Comfort:",
+            "v": "makes it nicer"
+          },
+          {
+            "k": "Fun:",
+            "v": "pick your favourite, not all"
+          },
+          {
+            "k": "Just in case:",
+            "v": "when did you last need it?"
+          },
+          {
+            "k": "Two jobs:",
+            "v": "these get a bonus point"
+          }
+        ],
+        "ask": "Would you carry this for an hour?"
+      },
+      {
+        "name": "Packing tricks",
+        "lines": [
+          {
+            "k": "Heavy:",
+            "v": "close to your back"
+          },
+          {
+            "k": "Soft clothes:",
+            "v": "roll them tight"
+          },
+          {
+            "k": "Top:",
+            "v": "what you'll need first"
+          },
+          {
+            "k": "Small stuff:",
+            "v": "together in one pouch"
+          },
+          {
+            "k": "Leaky stuff:",
+            "v": "in a sealed bag"
+          }
+        ],
+        "ask": "Can you find it without unpacking?"
+      },
+      {
+        "name": "What-ifs",
+        "lines": [
+          {
+            "k": "Rain:",
+            "v": "what stays dry?"
+          },
+          {
+            "k": "Colder:",
+            "v": "what can you layer?"
+          },
+          {
+            "k": "Hungry:",
+            "v": "what's within reach?"
+          },
+          {
+            "k": "Spill:",
+            "v": "what can you change into?"
+          },
+          {
+            "k": "One more day:",
+            "v": "what would you rewear?"
+          }
+        ],
+        "ask": "What's the fix with what you've got?"
+      }
+    ],
+    "after": {
+      "label": "My always list",
+      "lines": [
+        "Always comes with me",
+        "If it's cold or wet",
+        "For this kind of trip",
+        "Never touched last time"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Thinking ahead",
+      "text": "picturing the trip before it happens"
+    },
+    {
+      "name": "Trade-offs",
+      "text": "choosing what stays and what goes"
+    },
+    {
+      "name": "Independence",
+      "text": "being in charge of their own things"
+    },
+    {
+      "name": "Reflection",
+      "text": "learning from what came home unused"
+    }
+  ],
+  "conclusion": {
+    "headline": "One less bag for you to pack, for good.",
+    "text": "Watch what happens before the next trip. If they check the forecast, get out their list or ask how many days it is before you've said a word, the packing is starting to belong to them.",
+    "celebrate": "On the trip, when they pull out exactly the thing that was needed, say: 'You thought of that. I didn't.'",
+    "extensions": [
+      "Pack for a totally different climate and compare",
+      "Plan the car or suitcase space for the whole family",
+      "Make a five-minute emergency overnight bag",
+      "Help a younger sibling or a grandparent pack"
+    ]
+  },
+  "signs": [
+    "They ask about the weather and the plan before they pack",
+    "They bring less, and use more of what they bring",
+    "They keep track of their own bag on the trip"
+  ],
+  "makeItReal": "From now on, your kid packs their own bag for every trip, using their list. You only check the things that would stop the trip.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/pack-like-a-pro.jpg",
+    "alt": "A smiling girl packing her open suitcase on the couch",
+    "caption": "Everything for six months, one small suitcase.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "Before our six-month trip, each kid had to fit everything in one small suitcase and explain every choice. My son took only three shirts and made room for his Switch. My daughter packed clothes for four days and a photo of her friends. She forgot her Crocs.",
+    "quotes": []
+  }
+}

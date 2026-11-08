@@ -2135,24 +2135,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'pack-like-a-pro': {
     opening:
-      'Master strategic packing: priorities, weight, space management, and trip logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep challenge that builds executive function skills through a real, practical task.',
+      'Your child packs their own bag for a real trip. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, then pack it and test it with some what-ifs. After the trip, they see what came home unused and build a packing list they can use year after year.',
     whatsIncluded: [
-      'Strategic packing challenge guide',
-      'Priority-setting and trade-off activities',
-      'Weight and space optimisation challenges',
-      'Scenario-based packing for different trips',
-      'Reflection on planning and decision-making',
+      'A 5-step guide from reading the trip to a reusable list',
+      'A worked example that cuts one overstuffed bag down',
+      'Read the trip card and Sort it card',
+      'Packing tricks card and What-ifs card',
+      'My always list to use on every trip',
     ],
-    skillTags: ['Planning', 'Decision-Making', 'Logic', 'Organisation', 'Life Skills'],
+    skillTags: ['Planning', 'Life Skills', 'Critical Thinking', 'Independence', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Your child packs for a real trip inside a real weight and space limit, which means things get left behind. Every item has to earn its place. Then the conditions change and the whole plan gets reassessed. It is a decision-making exercise wearing a suitcase.',
+        'Your child takes charge of their own bag and finds out what trade-offs really feel like. They read the forecast, make the cuts themselves, carry what they chose, and learn from what came home unused. Passports, medicine and money stay with you.',
       skills: [
-        { skill: 'Planning', where: 'Organising, prioritising and sequencing what goes in and in what order' },
-        { skill: 'Critical Thinking', where: 'Evaluating each item and making the trade-off when it will not all fit' },
-        { skill: 'Decision-Making', where: 'Choosing under a hard constraint they cannot argue with' },
-        { skill: 'Adaptability', where: 'Adjusting the whole plan when the conditions change' },
-        { skill: 'Life Skills', where: 'Practical independence and being genuinely ready to travel' },
+        { skill: 'Planning', where: 'Working out what the trip actually needs before packing' },
+        { skill: 'Critical Thinking', where: 'Sorting need from want and defending every choice' },
+        { skill: 'Math', where: 'Counting days, outfits and what fits the limit' },
+        { skill: 'Problem-Solving', where: 'Finding things that do two jobs and handling the what-ifs' },
+        { skill: 'Life Skills', where: 'Being in charge of their own things, year after year' },
       ],
     },
     format: 'Project Guide',

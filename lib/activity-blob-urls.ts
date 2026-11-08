@@ -89,7 +89,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "outdoor-stem-challenges": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Outdoor%20STEM%20Challenge%20Cards%20v9.pdf",
   "outdoor-stem-challenges-volume-2": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20STEM%20Challenge%20Cards%20-%20Volume%202%20v8.pdf",
   "outdoor-survival-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Outdoor%20survival%20planner%20v3.pdf",
-  "pack-like-a-pro": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Pack%20Like%20a%20Pro%20v2.pdf",
+  "pack-like-a-pro": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Pack%20Like%20a%20Pro%20v3.pdf",
   "party-planner-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Party%20Planner%20Math%20v5.pdf",
   "people-scientist": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Be%20a%20People%20Scientist%20v2.pdf",
   "people-stories-interview": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20People%20%26%20Stories%20Interview%20Project%20v2.pdf",

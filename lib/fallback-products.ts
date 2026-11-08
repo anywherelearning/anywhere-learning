@@ -1890,15 +1890,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Pack Like a Pro",
     slug: "pack-like-a-pro",
     description:
-      "Master the art of strategic packing: priorities, weight, space management, and logistics. Kids learn to think ahead, make trade-offs, and plan for different scenarios. A surprisingly deep planning challenge that builds executive function skills.",
+      "Your child packs their own bag for a real trip. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, then pack it and test it with some what-ifs. After the trip, they see what came home unused and build a packing list they can use year after year.",
     shortDescription:
-      "Life skill for kids ages 6-14: master strategic packing and planning. Low-prep, travel-ready thinking.",
+      "Life skill for kids ages 6-14: pack their own bag for a real trip, make real trade-offs and build a reusable list.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmvgkmKSbD",
     blobUrl: "",
     imageUrl: "/products/pack-like-a-pro.jpg",
-    previewFile: "Preview Planning & Problem-Solving Pack Like a Pro.pdf",
+    previewFile: "Preview Planning & Problem-Solving Pack Like a Pro v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,
