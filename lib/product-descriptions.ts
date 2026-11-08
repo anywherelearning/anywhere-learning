@@ -2159,28 +2159,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'scavenger-hunt-designer': {
     opening:
-      'Design, create, and test your own scavenger hunts for friends and family. Kids plan clues, set challenge levels, think about pacing and flow, and iterate based on real feedback. A creative planning project that builds logic, writing, and design thinking.',
+      'Your child designs and runs a real scavenger hunt for the family. They pick a theme, scout the spots, write clues that make players think, map the route and set the rules. Then they test it, run the whole event from the welcome to the prize, and make it better for the next round.',
     whatsIncluded: [
-      'Scavenger hunt design guide',
-      'Clue writing and difficulty balancing',
-      'Route planning and flow design',
-      'Testing with real participants',
-      'Iteration and improvement based on feedback',
+      'A 5-step guide from theme to a full event',
+      'A worked example that tests and fixes one clue',
+      'Themes card and Clue types card',
+      'Rules to decide card and Twists card',
+      'Hunt plan page for every spot, clue and hint',
     ],
-    skillTags: ['Planning', 'Creativity', 'Writing', 'Logic', 'Design Thinking'],
-    seo: {
-      title: "Design Your Own Scavenger Hunt: Kids' Project, Ages 6-14",
-      description:
-        'Kids design their own scavenger hunt: write the clues, set the difficulty, plan the route, run it for the family and improve it. Ages 6-14, no prep.',
-    },
+    skillTags: ['Planning', 'Creative Writing', 'Problem-Solving', 'Leadership', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child designs a scavenger hunt for other people, which is much harder than doing one. Clues have to be solvable but not obvious. The route has to flow. Then real participants run it, get stuck in the wrong place, and the design gets fixed.',
+        'Your child is in charge of an event other people actually play. They have to think like someone who does not know the answer, write just enough, test it on you and fix what breaks. Then they run the whole thing.',
       skills: [
-        { skill: 'Planning', where: 'Sequencing the hunt, mapping the route and planning distances that work' },
-        { skill: 'Creative Thinking', where: 'Writing clues that are solvable but not obvious, and theming the whole thing' },
-        { skill: 'Communication', where: 'Writing instructions clear enough to follow without a hint' },
-        { skill: 'Problem-Solving', where: 'Testing it on real people and fixing the clue that stopped everyone' },
+        { skill: 'Writing', where: 'Writing riddles and rules a new player can follow' },
+        { skill: 'Planning', where: 'Sequencing the clues and building the route backwards from the finish' },
+        { skill: 'Geography', where: 'Scouting spots, using landmarks and drawing the map' },
+        { skill: 'Math', where: 'Counting steps, estimating time and keeping score' },
+        { skill: 'Communication', where: 'Hosting the event and giving hints without giving it away' },
       ],
     },
     format: 'Project Guide',

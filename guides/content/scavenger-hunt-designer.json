@@ -1,0 +1,340 @@
+{
+  "slug": "scavenger-hunt-designer",
+  "category": "Planning & Problem-Solving",
+  "title": "Scavenger Hunt Designer",
+  "tagline": "Theme · Clues · Route · Run",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid designs and runs a real scavenger hunt for the family. They pick a theme, scout the spots, write clues that make players think, map the route, set the rules, test it on you, then run the whole event and make it better.",
+  "need": [
+    "A place to hide clues: a yard, a park or the house",
+    "Paper, a pencil and something to keep clues dry",
+    "At least one player who isn't the designer",
+    "A small treat for the finish (optional)"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "riddles and clear instructions"
+    },
+    {
+      "subject": "Geography",
+      "text": "mapping a route and using landmarks"
+    },
+    {
+      "subject": "Math",
+      "text": "counting steps, timing and scoring"
+    },
+    {
+      "subject": "Planning",
+      "text": "sequencing and running an event"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to be an event planner. Your job is to be the first player, and a slightly confused one. They plan, you play. When something goes wrong, resist fixing it, because a clue nobody can solve teaches more than a clue you rewrote for them.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick a theme, scout the spots and write the clues (Steps 1 to 3)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Map the route and set the rules (Step 4)."
+      },
+      {
+        "when": "The day",
+        "what": "Test it, run it and make it better (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "We don't have much space",
+        "a": "Run it indoors, in one room or along a hallway. Five good clues in a small space beat twenty in a big one."
+      },
+      {
+        "q": "Their clues are impossible",
+        "a": "Don't rewrite them. Play and get stuck out loud. Then ask what would have helped, and let them add a hint."
+      },
+      {
+        "q": "There's nobody to play it",
+        "a": "You're enough. Or save it for the next visit from a grandparent, a cousin or a friend, and let them run it then."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good clue makes the player think, and then makes them feel smart. The only way to know if it does is to try it on someone.",
+    "before": "Go to the front door mat.",
+    "model": [
+      {
+        "part": "Spot",
+        "line": "The front door mat."
+      },
+      {
+        "part": "Clue",
+        "line": "I say welcome but I can't talk. Everybody wipes their feet on me."
+      },
+      {
+        "part": "Test",
+        "line": "Mom got it in 20 seconds. My little brother couldn't read it."
+      },
+      {
+        "part": "Fix",
+        "line": "Added a small drawing of a shoe for him."
+      }
+    ],
+    "modelNote": "The first version is an instruction. The second is a small puzzle, tested on real players and fixed for the youngest one."
+  },
+  "steps": [
+    {
+      "title": "Pick a theme and your players",
+      "why": "A hunt with a story feels like an adventure. A list of things feels like a list of things.",
+      "kid": "Your kid thinks about who's playing and picks a theme from the Themes card in the Hunt Toolkit at the end of the guide, or invents one. Then they decide what the prize or finish will be, and how long the hunt should last.",
+      "you": "Help them narrow it down to one idea. Ask about the players: how old, how fast, can everyone read?",
+      "ask": [
+        "What would make your players excited?",
+        "What makes a hunt boring, and what makes it brilliant?"
+      ],
+      "tip": "Start from the ending. Knowing what's at the finish makes the rest of the hunt easier to plan.",
+      "levels": {
+        "explore": "Pick a theme and say what players will look for.",
+        "develop": "Pick a theme and explain how every clue will connect to it.",
+        "extend": "Invent your own theme and describe the whole experience, start to finish, from a player's point of view."
+      }
+    },
+    {
+      "title": "Scout the spots",
+      "why": "The best clues come from looking closely at the real place.",
+      "kid": "Your kid walks the space with you and picks spots for the clues, looking for landmarks, good hiding places and things only a careful player would notice. They jot down each spot and how far it is from the last one.",
+      "you": "Walk with them and set the boundaries: no roads, no neighbours' yards without asking, nothing players would have to climb. Then let them choose inside those lines.",
+      "ask": [
+        "What's a spot most people never look at?",
+        "How will you stop players from skipping ahead?"
+      ],
+      "tip": "Spread the spots out and zigzag a little. A hunt that keeps players moving feels longer and better.",
+      "levels": {
+        "explore": "Pick five spots in one small area.",
+        "develop": "Pick eight spots along a route and note a landmark for each.",
+        "extend": "Pick ten or more, and plan which spots will be easy, medium and hard."
+      }
+    },
+    {
+      "title": "Write the clues",
+      "why": "Too easy is boring. Too hard is the end of the game.",
+      "kid": "Your kid writes a clue for each spot using the Clue types card, then writes the matching spot and a hint on the Hunt plan page at the end of the guide. Each clue sends the players to the next spot.",
+      "you": "Read each clue as if you've never been here before. If you'd be stuck, say so. Help a younger kid by writing down what they tell you or drawing together.",
+      "ask": [
+        "Could someone who's never been here follow this?",
+        "What's the hint if they get stuck?"
+      ],
+      "tip": "Work backwards. Write the last clue first, then keep going back to the start, so each one points to the right place.",
+      "levels": {
+        "explore": "Write or draw five clues that describe each spot.",
+        "develop": "Write eight clues using at least two clue types.",
+        "extend": "Write ten or more that get harder as they go, including one code players have to crack."
+      }
+    },
+    {
+      "title": "Map the route and set the rules",
+      "why": "An event needs someone in charge. That's them.",
+      "kid": "Your kid draws a map with numbered spots, a start and a finish, and estimates how long each part will take. Then they use the Rules to decide card and write the rules so a new player could start without asking anything.",
+      "you": "Play the confused player. Ask 'Can we split up?', 'What if we get stuck?' and 'How do you know we found it?' Every question you ask is a gap they can fill.",
+      "ask": [
+        "Does the route double back on itself?",
+        "What happens if two players disagree?"
+      ],
+      "tip": "Keep the map for the designer. Players get the first clue and nothing else.",
+      "levels": {
+        "explore": "Draw a simple map with numbered spots and say three rules.",
+        "develop": "Draw the route with time estimates, and write rules that include a hint system.",
+        "extend": "Add scoring or rounds, and write a Plan B for rain using the Twists card."
+      }
+    },
+    {
+      "title": "Test it, run it, make it better",
+      "why": "Nothing survives first contact with real players. That's the fun part.",
+      "kid": "Your kid walks the route and tests every clue, then hides them and runs the event: gives the welcome, starts the clock, gives hints and hands out the prize. Afterwards they collect every clue, ask the players what to change, and make Version 2.",
+      "you": "Be a real player and play to win. Throw in a twist if it's going too smoothly. Save your feedback for the end, and start with what worked.",
+      "ask": [
+        "Which clue was the favourite, and why?",
+        "Where did people get stuck?"
+      ],
+      "tip": "Weigh clues down or tuck them in a jar. And hide them just before you start, or the wind will run your hunt for you.",
+      "levels": {
+        "explore": "Hide your clues, run the hunt and pick one thing to change.",
+        "develop": "Test it first, run it, then fix at least two clues.",
+        "extend": "Time it, collect feedback from every player, and run Version 2 for a new group."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Hunt Toolkit",
+    "intro": "Themes to borrow, ways to write a clue, rules to settle and surprises to plan for.",
+    "items": [
+      {
+        "name": "Themes",
+        "lines": [
+          {
+            "k": "Nature detective:",
+            "v": "leaf shapes, tracks, textures"
+          },
+          {
+            "k": "Colour quest:",
+            "v": "find a colour sequence"
+          },
+          {
+            "k": "Riddle trail:",
+            "v": "each answer is the next spot"
+          },
+          {
+            "k": "Photo mission:",
+            "v": "snap each thing as proof"
+          },
+          {
+            "k": "Story trail:",
+            "v": "each clue tells the next part"
+          }
+        ],
+        "ask": "What would your players love?"
+      },
+      {
+        "name": "Clue types",
+        "lines": [
+          {
+            "k": "Riddle:",
+            "v": "I say welcome but can't talk"
+          },
+          {
+            "k": "Directions:",
+            "v": "10 steps from the big rock"
+          },
+          {
+            "k": "Description:",
+            "v": "rough and round, near the fence"
+          },
+          {
+            "k": "Picture:",
+            "v": "draw part of the next spot"
+          },
+          {
+            "k": "Code:",
+            "v": "swap each letter for a number"
+          }
+        ],
+        "ask": "Could a new player solve it?"
+      },
+      {
+        "name": "Rules to decide",
+        "lines": [
+          {
+            "k": "Time:",
+            "v": "against the clock or not?"
+          },
+          {
+            "k": "Teams:",
+            "v": "solo, pairs or everyone together?"
+          },
+          {
+            "k": "Proof:",
+            "v": "a photo, a token, a stamp?"
+          },
+          {
+            "k": "Win:",
+            "v": "points, or just finishing?"
+          },
+          {
+            "k": "Stuck:",
+            "v": "how do you get a hint?"
+          }
+        ],
+        "ask": "Could they start without asking you?"
+      },
+      {
+        "name": "Twists",
+        "lines": [
+          {
+            "k": "Rain:",
+            "v": "what moves or gets covered?"
+          },
+          {
+            "k": "Little player:",
+            "v": "what if they can't read?"
+          },
+          {
+            "k": "Blocked:",
+            "v": "a spot is taken, now what?"
+          },
+          {
+            "k": "Too hard:",
+            "v": "players want to quit"
+          },
+          {
+            "k": "Half the time:",
+            "v": "what gets cut?"
+          }
+        ],
+        "ask": "How does the fun keep going?"
+      }
+    ],
+    "after": {
+      "label": "Hunt plan",
+      "lines": [
+        "Spot",
+        "Clue that leads here",
+        "Hint if they're stuck",
+        "Time to get here"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Sequencing",
+      "text": "making each step lead to the next"
+    },
+    {
+      "name": "Perspective",
+      "text": "thinking like a player who doesn't know"
+    },
+    {
+      "name": "Clear writing",
+      "text": "saying just enough"
+    },
+    {
+      "name": "Leadership",
+      "text": "running an event from start to finish"
+    }
+  ],
+  "conclusion": {
+    "headline": "They ran the whole thing, and everyone had fun because of it.",
+    "text": "Watch how they talk about it afterwards. If they're already saying 'Next time, I'd put that clue later' or planning one for the cousins, they've started thinking like someone who makes things happen for other people.",
+    "celebrate": "Ask them to take a bow at the finish, and say: 'You made this whole afternoon happen.'",
+    "extensions": [
+      "Design a hunt for a birthday party or a family visit",
+      "Make a hunt for a new place you're visiting",
+      "Build a hunt around a story they've written",
+      "Swap hunts with another family and play each other's"
+    ]
+  },
+  "signs": [
+    "They think about what someone else knows or doesn't know",
+    "They test their ideas on people before they call them done",
+    "They offer to plan the next family event"
+  ],
+  "makeItReal": "Hand them the next family celebration: they design a hunt for the birthday kid or the visiting grandparents.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/scavenger-hunt-designer.jpg",
+    "alt": "A boy in a feathered mohawk and sunglasses reading a clue to girls holding goody bags at a birthday party",
+    "caption": "The rockstar host, reading the next riddle."
+  },
+  "fromHome": {
+    "text": "For my daughter's 9th birthday, a rockstar party, my son made a scavenger hunt all by himself. He wrote about 10 riddles and hid them around the house. Each one led the girls to a treat and the next clue, so by the end they each had a full goody bag.",
+    "quotes": []
+  }
+}

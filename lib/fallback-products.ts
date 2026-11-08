@@ -1913,15 +1913,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Scavenger Hunt Designer",
     slug: "scavenger-hunt-designer",
     description:
-      "Design, create, and test your own scavenger hunts for friends and family. Kids plan clues, set challenge levels, think about pacing, and iterate based on feedback. A creative planning project that builds logic, writing, and design thinking.",
+      "Your child designs and runs a real scavenger hunt for the family. They pick a theme, scout the spots, write clues that make players think, map the route and set the rules. Then they test it, run the whole event from the welcome to the prize, and make it better for the next round.",
     shortDescription:
-      "Activity for kids ages 6-14: design your own scavenger hunts. Planning, creativity, and outdoor play in one project.",
+      "Planning activity for kids ages 6-14: design and run a real scavenger hunt with original clues, a route and rules.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmZmbCzTvu",
     blobUrl: "",
     imageUrl: "/products/scavenger-hunt-designer.jpg",
-    previewFile: "Preview Planning & Problem-Solving Scavenger Hunt Designer.pdf",
+    previewFile: "Preview Planning & Problem-Solving Scavenger Hunt Designer v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,
