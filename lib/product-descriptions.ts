@@ -2063,24 +2063,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'fix-it-detective': {
     opening:
-      'Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot, building practical skills and the confidence to figure things out. Problem-solving that\'s genuinely useful in everyday life.',
+      'Your child becomes the household repair detective. They hunt for things that are loose, stuck or not working, describe exactly what is wrong, check the easy suspects first, then plan a fix with you and test whether it held. A clear safety card spells out what kids can open and what stays with an adult.',
     whatsIncluded: [
-      'Fix-it challenge guide with real scenarios',
-      'Troubleshooting and diagnosis frameworks',
-      'Tool basics and safe handling guidance',
-      'Step-by-step repair challenges',
-      'Reflection on problem-solving strategies',
+      'A 5-step guide from spotting the problem to testing the fix',
+      'A worked example that diagnoses a flashlight step by step',
+      'Easy suspects card: power, loose, dirty, dry, worn',
+      'Safety rules card and common fixes card',
+      'Fix-it log to record each repair',
     ],
-    skillTags: ['Problem-Solving', 'Life Skills', 'Logic', 'Resourcefulness', 'Practical Skills'],
+    skillTags: ['Problem-Solving', 'Life Skills', 'Critical Thinking', 'Planning', 'Practical Skills'],
     insideTheLearning: {
       lead:
-        'Your child diagnoses and fixes things that are actually broken in your house. Diagnosis before repair, which means researching how the thing works, comparing methods, and deciding which fix is worth doing. Real tools, handled safely, with something working at the end.',
+        'Your child learns to diagnose before they repair. They describe the symptom exactly, rule out the easy causes one at a time, plan the fix with you and then test it. Real household things, handled safely, with a parent beside them.',
       skills: [
-        { skill: 'Problem-Solving', where: 'Identifying what is wrong, diagnosing why, and fixing it' },
-        { skill: 'Research', where: 'Finding out how it works and comparing repair methods before starting' },
-        { skill: 'Critical Thinking', where: 'Prioritising what to tackle and evaluating which solution is worth it' },
-        { skill: 'Planning', where: 'Sequencing the steps and gathering materials before opening anything up' },
-        { skill: 'Life Skills', where: 'Using tools properly, and the beginnings of maintaining a home' },
+        { skill: 'Problem-Solving', where: 'Working from the symptom to the cause to a fix that holds' },
+        { skill: 'Critical Thinking', where: 'Testing one suspect at a time and ruling causes out' },
+        { skill: 'Planning', where: 'Listing the tools and the steps before opening anything' },
+        { skill: 'Research', where: 'Looking up how the thing works and how others have fixed it' },
+        { skill: 'Life Skills', where: 'Using tools safely and knowing when to call an adult or a pro' },
       ],
     },
     format: 'Project Guide',

@@ -1,0 +1,344 @@
+{
+  "slug": "fix-it-detective",
+  "category": "Planning & Problem-Solving",
+  "title": "Fix-It Detective",
+  "tagline": "Describe · Check · Fix · Test",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid hunts down something at home that's broken, sticky, squeaky or wobbly and fixes it like a detective. They describe exactly what's wrong, check the easy suspects one at a time, research and plan the fix with you, then fix it, test it three times and log what they found.",
+  "need": [
+    "Something at home that's broken, sticky, squeaky or wobbly",
+    "Basic tools: screwdrivers, pliers, tape and a flashlight",
+    "From the cupboard: a candle or bar soap, a pencil, glue and toothpicks"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "how simple machines and circuits work"
+    },
+    {
+      "subject": "Logic",
+      "text": "testing one change at a time"
+    },
+    {
+      "subject": "Math",
+      "text": "the cost of fixing against replacing"
+    },
+    {
+      "subject": "Communication",
+      "text": "describing a problem precisely"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Be the assistant, not the repair person. Hand over the tools, keep the safety rules, and let them be the one who figures it out. Your best line is 'What have you checked so far?'",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Hunt for problems and describe the symptom (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Check the easy suspects and plan the fix (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Fix it, test it and log it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nothing's broken at our house",
+        "a": "Listen for squeaks and look for wobbles and sticky drawers. Or ask a grandparent or neighbour for their list."
+      },
+      {
+        "q": "It can't be fixed",
+        "a": "That's a real answer. Log why it failed, then take it apart, unplugged with the batteries out, to see how it worked."
+      },
+      {
+        "q": "It's beyond what we can do",
+        "a": "Call someone who can, and let your kid watch and ask questions. Their diagnosis still counts."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Good fixers don't start by fixing. They start by finding out exactly what's wrong, and they check the easy things first.",
+    "before": "The flashlight's broken. We need a new one.",
+    "model": [
+      {
+        "part": "Symptom",
+        "line": "It flickers, then goes out when I shake it."
+      },
+      {
+        "part": "Suspects",
+        "line": "New batteries: still flickers. The contacts: dull and dirty."
+      },
+      {
+        "part": "Fix",
+        "line": "Rubbed the contacts clean with a pencil eraser."
+      },
+      {
+        "part": "Test",
+        "line": "On 3 times out of 3. No new flashlight needed."
+      }
+    ],
+    "modelNote": "The flashlight wasn't broken. One dirty contact was, and checking the easy suspects in order found it in ten minutes."
+  },
+  "steps": [
+    {
+      "title": "Hunt for things to fix",
+      "why": "A house is full of small problems everyone has learned to ignore.",
+      "kid": "Your kid walks the house with a clipboard and lists everything that's broken, sticky, squeaky, wobbly or loose, and asks the family for theirs. Then they pick one with the Worth fixing card in the Fix-It Toolkit at the end of the guide.",
+      "you": "Add the things you've been working around for months. Then go through the Safety rules card together and cross off anything that's not for you to fix, like wall wiring or gas.",
+      "ask": [
+        "What do people work around without noticing?",
+        "Which one would be easiest to try first?"
+      ],
+      "tip": "Listen as well as look. Squeaks, rattles and drips give themselves away.",
+      "levels": {
+        "explore": "Find three things that squeak, stick or wobble, and show me.",
+        "develop": "List at least five problems, check them against the Safety rules and pick one.",
+        "extend": "Rank the list by how often each problem happens and how hard it looks to fix, and choose the best value."
+      }
+    },
+    {
+      "title": "Describe the symptom",
+      "why": "'It's broken' can't be fixed. 'It sticks halfway, only when it's full' can.",
+      "kid": "Your kid makes the problem happen again and describes it like a detective: exactly what happens, when, and what still works. They write it as one clear sentence in the Fix-it log.",
+      "you": "Ask the follow-up a repair person would: 'Every time, or only sometimes? Since when?' Then write down their answer, not yours.",
+      "ask": [
+        "When does it happen, and when doesn't it?",
+        "What still works fine?"
+      ],
+      "tip": "Take a short video of the problem. You'll want it to compare after the fix.",
+      "levels": {
+        "explore": "Show me the problem and tell me what it does.",
+        "develop": "Write one sentence: what happens, when, and what still works.",
+        "extend": "Find what makes it worse or better, like full or empty, warm or cold, and write it down."
+      }
+    },
+    {
+      "title": "Check the easy suspects",
+      "why": "Most problems are simple ones. Checking those first saves the most time.",
+      "kid": "Your kid works down the Easy suspects card in order: power, loose, dirty, dry, worn. They change one thing at a time, test after each, and tick off what they've checked.",
+      "you": "Keep things unplugged, with the batteries out, while they look inside. If they change two things at once, ask 'So which one fixed it?'",
+      "ask": [
+        "What have you ruled out so far?",
+        "What changed when you tried that?"
+      ],
+      "tip": "Take a phone photo before anything comes apart. It shows how it goes back together.",
+      "levels": {
+        "explore": "Check one easy suspect with me, like the batteries or a loose screw.",
+        "develop": "Work through the Easy suspects in order, one change at a time, and find the cause.",
+        "extend": "Before testing, predict the cause and explain why, then see if the checks prove you right."
+      }
+    },
+    {
+      "title": "Plan the fix",
+      "why": "Five minutes of research beats an hour of guessing.",
+      "kid": "Your kid finds out how the thing works and how others fix it: the manual, a how-to video watched together, or the Common fixes card. They compare two ways to fix it, list the tools and materials, and run the Safety rules check.",
+      "you": "Agree on the plan before anything opens. Take on anything sharp, hot or high yourself, and talk through what you're doing as you go.",
+      "ask": [
+        "Which fix is cheaper, and which will last longer?",
+        "What could go wrong, and how would we undo it?"
+      ],
+      "tip": "Check the cupboard before the store. Soap, wax, a pencil and a toothpick fix more than you'd think.",
+      "levels": {
+        "explore": "Pick the fix from the Common fixes card and gather what we need.",
+        "develop": "Compare two ways to fix it, choose one and list the tools and steps.",
+        "extend": "Work out the cost of fixing against replacing, including your time, and decide if it's worth it."
+      }
+    },
+    {
+      "title": "Fix it, test it, log it",
+      "why": "It's only fixed if it still works on the third try.",
+      "kid": "Your kid does the fix with you beside them, then tests it three times the way the problem first showed up. They finish the Fix-it log on the Fix-It Toolkit page and tell the family what they found.",
+      "you": "Hand over the tools and stay close. If it doesn't work, say 'Good, that's one suspect ruled out' and go back to the card together.",
+      "ask": [
+        "Does it pass the same test that failed before?",
+        "What would you check first next time?"
+      ],
+      "tip": "Play the video from Step 2 next to the fixed thing. Before and after side by side is very satisfying.",
+      "levels": {
+        "explore": "Help with the fix and test it once.",
+        "develop": "Do the fix, test it three times and fill in the Fix-it log.",
+        "extend": "Teach the fix to someone else, then set a monthly check so it doesn't come back."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Fix-It Toolkit",
+    "intro": "What's worth fixing, where to look first, how to stay safe and the fixes that work most often.",
+    "items": [
+      {
+        "name": "Worth fixing",
+        "lines": [
+          {
+            "k": "Squeaky:",
+            "v": "doors, hinges, chairs"
+          },
+          {
+            "k": "Sticky:",
+            "v": "drawers, zippers, windows"
+          },
+          {
+            "k": "Wobbly:",
+            "v": "chairs, tables, shelves"
+          },
+          {
+            "k": "Loose:",
+            "v": "knobs, handles, screws"
+          },
+          {
+            "k": "Dim or dead:",
+            "v": "flashlights, toys, remotes"
+          }
+        ],
+        "ask": "Is it safe for us to fix?"
+      },
+      {
+        "name": "Easy suspects",
+        "lines": [
+          {
+            "k": "Power:",
+            "v": "battery, plug, switch"
+          },
+          {
+            "k": "Loose:",
+            "v": "screws, clips, connections"
+          },
+          {
+            "k": "Dirty:",
+            "v": "hair, crumbs, rust, dust"
+          },
+          {
+            "k": "Dry:",
+            "v": "needs wax, soap or oil"
+          },
+          {
+            "k": "Worn:",
+            "v": "a part that's bent or worn down"
+          }
+        ],
+        "ask": "Did you change one thing at a time?"
+      },
+      {
+        "name": "Safety rules",
+        "lines": [
+          {
+            "k": "Unplug:",
+            "v": "and batteries out before opening"
+          },
+          {
+            "k": "Water:",
+            "v": "shut the valve off first"
+          },
+          {
+            "k": "Adults:",
+            "v": "blades, ladders, power tools"
+          },
+          {
+            "k": "Never open:",
+            "v": "wall wiring, gas, microwaves, TVs"
+          },
+          {
+            "k": "Stop if:",
+            "v": "sparks, smoke or a burning smell"
+          }
+        ],
+        "ask": "Who's the adult on this one?"
+      },
+      {
+        "name": "Common fixes",
+        "lines": [
+          {
+            "k": "Sticky drawer:",
+            "v": "wax or soap on the runners"
+          },
+          {
+            "k": "Squeaky hinge:",
+            "v": "lift the pin, rub on soap"
+          },
+          {
+            "k": "Stuck zipper:",
+            "v": "pencil lead on the teeth"
+          },
+          {
+            "k": "Stripped screw hole:",
+            "v": "toothpick and glue, then the screw"
+          },
+          {
+            "k": "Dim flashlight:",
+            "v": "clean the contacts with an eraser"
+          }
+        ],
+        "ask": "What's in the cupboard already?"
+      }
+    ],
+    "after": {
+      "label": "Fix-it log",
+      "lines": [
+        "What broke",
+        "Symptom",
+        "Cause",
+        "Fix and what it saved"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "describing exactly what's wrong"
+    },
+    {
+      "name": "Logic",
+      "text": "one change at a time"
+    },
+    {
+      "name": "Research",
+      "text": "finding out how it works"
+    },
+    {
+      "name": "Resourcefulness",
+      "text": "fixing with what's on hand"
+    }
+  ],
+  "conclusion": {
+    "headline": "Something works again, and they're the reason.",
+    "text": "Watch what happens the next time something stops working. If they ask 'Is it plugged in? Is it loose?' before 'Can we buy a new one?', the detective habit has stuck.",
+    "celebrate": "Use the fixed thing together right away and say: 'This was broken this morning. You found out why.'",
+    "extensions": [
+      "Take apart something already broken, unplugged with the batteries out, to see how it worked",
+      "Fix something for a grandparent or a neighbour",
+      "Keep a family fix-it log for a month",
+      "Learn one bike repair, like putting a chain back on"
+    ]
+  },
+  "signs": [
+    "They describe problems precisely instead of saying 'it's broken'",
+    "They check the simple things first",
+    "They try a repair before asking for a replacement"
+  ],
+  "makeItReal": "Make them the family's first call when something stops working: they diagnose it before anyone buys a replacement.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "Our kitchen faucet handle kept coming loose. My daughter and her dad tightened it a couple of times, then decided it was time for a new one. She unscrewed the connections under the sink, took the old faucet out and put the new one in. She wasn't strong enough to tighten it all the way, so her dad finished it up.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/fix-it-detective.jpg",
+    "alt": "A smiling girl in the kitchen holding up the old faucet she just took out",
+    "caption": "Out with the old faucet.",
+    "inset": {
+      "src": "guides/assets/fix-it-detective-under.jpg",
+      "alt": "The girl under the kitchen sink unscrewing the connections"
+    },
+    "tall": true
+  }
+}

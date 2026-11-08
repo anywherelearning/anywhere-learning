@@ -1821,15 +1821,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Fix-It Detective",
     slug: "fix-it-detective",
     description:
-      "Diagnose and fix real household problems using logic, observation, and resourcefulness. Kids learn to troubleshoot, from a leaky tap to a stuck drawer, building practical skills and the confidence to figure things out. Problem-solving that's genuinely useful.",
+      "Your child becomes the household repair detective. They hunt for things that are loose, stuck or not working, describe exactly what is wrong, check the easy suspects first, then plan a fix with you and test whether it held. A clear safety card spells out what kids can open and what stays with an adult.",
     shortDescription:
-      "Problem-solving for kids ages 6-14: fix real household problems with logic and resourcefulness. Hands-on life skills.",
+      "Problem-solving for kids ages 6-14: diagnose and fix real things around the house, safely and step by step.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmoBhiAkgI",
     blobUrl: "",
     imageUrl: "/products/fix-it-detective.jpg",
-    previewFile: "Preview Planning & Problem-Solving Fix-it detective.pdf",
+    previewFile: "Preview Planning & Problem-Solving Fix-it detective v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,
