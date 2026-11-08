@@ -1,0 +1,226 @@
+{
+  "slug": "community-impact",
+  "category": "Planning & Problem-Solving",
+  "title": "Community Impact Project",
+  "tagline": "Ask · Plan · Do · Keep it going",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid does something real for people around them. They pick a group they're part of, ask what would actually help, plan the smallest useful thing, do it themselves, then go back to find out if it worked and how to keep it going.",
+  "need": [
+    "A group of people your kid is part of",
+    "Paper and a pencil",
+    "A phone for before and after photos",
+    "Simple supplies, depending on what they choose"
+  ],
+  "academics": [
+    { "subject": "Social Studies", "text": "how a community works and who looks after what" },
+    { "subject": "Communication", "text": "asking real people real questions" },
+    { "subject": "Math", "text": "counting, timing and measuring what changed" },
+    { "subject": "Planning", "text": "steps, permission and follow-through" }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to organize anything. You're the reality check and the ride. Keep asking 'What's the smallest version of this that would really help someone?' Go with them when they talk to people, and let them do the talking. It'll probably take longer than you think and go sideways once. That's part of it.",
+    "plan": [
+      { "when": "Session 1", "what": "Pick your people and ask what they need (Steps 1 and 2)." },
+      { "when": "Session 2", "what": "Plan the smallest useful thing, then do it (Steps 3 and 4)." },
+      { "when": "A week later", "what": "Go back, find out if it helped and keep it going (Step 5)." }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      { "q": "They want to save the whole world", "a": "Good. Ask 'What's one part of that you can see from here?' Then ask what they could finish this week." },
+      { "q": "They're too shy to ask anyone", "a": "Practise in the car, let them bring the question on a card, and stand right beside them. One person is plenty." },
+      { "q": "Nobody seems to need anything", "a": "Ask what's annoying instead of what's needed. Or start close to home: a grandparent, a neighbour and a sibling all count." }
+    ]
+  },
+  "lesson": {
+    "text": "Helping isn't doing what you think people need. It starts with asking them, and it isn't finished until you've gone back to see if it worked.",
+    "before": "I'll make a poster that says don't litter.",
+    "model": [
+      { "part": "Ask", "line": "The park volunteer says the bins overflow after the weekend." },
+      { "part": "Plan", "line": "Pick up on Sunday evening, with gloves and two bags." },
+      { "part": "Do", "line": "Two full bags in 30 minutes. Before and after photos." },
+      { "part": "Go back", "line": "She says it helped. Next month, a friend's family takes a turn." }
+    ],
+    "modelNote": "The poster was a guess. The second plan came from someone who's there every week, and it didn't end on the first day."
+  },
+  "steps": [
+    {
+      "title": "Pick your people",
+      "why": "Community doesn't mean city hall. It means people you already know.",
+      "kid": "Your kid names the groups they're part of, using the Who's around you card in the Impact Toolkit at the end of the guide. They think about who's in each one, and pick the group they'd most like to do something for.",
+      "you": "Keep it close. Wherever you're living or staying right now counts. Share who you've noticed could use a hand.",
+      "ask": [
+        "Who do you see all the time but never really think about?",
+        "Who around here could use a hand?"
+      ],
+      "tip": "Start with people they already wave at. It's much easier to knock on a door when you know who's behind it.",
+      "levels": {
+        "explore": "Name two groups you're part of and pick the people you'd like to help.",
+        "develop": "List three groups and who's in each one, then choose and say why.",
+        "extend": "Compare two groups, what each might need, and where you could make the most difference."
+      }
+    },
+    {
+      "title": "Ask what they need",
+      "why": "If you don't ask, you end up helping yourself.",
+      "kid": "Your kid writes down their guess first. Then they ask at least one person what would really help, using the Good questions card, and go and see it for themselves. They write down what they heard, and whether their guess was right.",
+      "you": "Make the introduction if it's needed, then stand beside them and let them do the talking. Don't finish their sentences, even when it's slow.",
+      "ask": [
+        "What did you think they'd say?",
+        "What did they say that surprised you?"
+      ],
+      "tip": "People rarely say they need help, but they'll happily tell you what's annoying. Ask about that.",
+      "levels": {
+        "explore": "Ask one person what would help, and tell someone what they said.",
+        "develop": "Ask two people, go and look for yourself and write down what you found.",
+        "extend": "Ask three people, find out what's been tried before and write up why it hasn't been fixed."
+      }
+    },
+    {
+      "title": "Plan the smallest useful thing",
+      "why": "A small thing that gets finished beats a big thing that doesn't.",
+      "kid": "Your kid picks an idea from the Ways to help card that matches what they heard. Then they fill in Our project at the end of the guide: who it's for, what they'll do, who has to say yes and how they'll know it helped.",
+      "you": "Check that it's safe, then ask 'Who has to say yes?' Help them make that call or write that note themselves.",
+      "ask": [
+        "What's the smallest version that would still help?",
+        "What's step one? Just step one."
+      ],
+      "tip": "Ask if it can be done in under an hour. If it can, start there. They can always do more.",
+      "levels": {
+        "explore": "Pick one simple thing to do and say the three steps.",
+        "develop": "Write five steps with a date, what you need and what success looks like.",
+        "extend": "Write the full plan with a timeline, permissions and what you'll do if it doesn't work."
+      }
+    },
+    {
+      "title": "Do it",
+      "why": "Now it's real, and real things go sideways.",
+      "kid": "Your kid runs the project and follows the plan, taking a before photo and counting what they can: bags, minutes, people. When the plan stops working, they decide what to change and carry on.",
+      "you": "Work alongside them and let them lead, even if you'd do it differently. Stay close around traffic, water and people you don't know. If it stalls, ask 'What's the version we can finish today?'",
+      "ask": [
+        "What's harder than you expected?",
+        "What do you need to change?"
+      ],
+      "tip": "Take the before photo even if it feels silly. You'll forget what it looked like.",
+      "levels": {
+        "explore": "Do one action for 15 to 30 minutes, and take a before and after photo.",
+        "develop": "Finish a project with a few steps and record each one.",
+        "extend": "Run the whole thing, get others to help and count exactly what changed."
+      }
+    },
+    {
+      "title": "Go back and keep it going",
+      "why": "It's not done when you leave. It's done when it lasts.",
+      "kid": "Your kid goes back to the person they asked and finds out if it helped. Then they use the Keep it going card to decide what happens next, and tell someone in 60 seconds what the problem was, what they did and what happened.",
+      "you": "Help them find someone real to tell, just outside their comfort zone. Then tell them exactly what you saw them do.",
+      "ask": [
+        "How do you know it helped?",
+        "Who could keep this going without you?"
+      ],
+      "tip": "'A little' and 'I'm not sure' are honest answers. Write those down too.",
+      "levels": {
+        "explore": "Ask one person if it helped, and say one thing you'd change.",
+        "develop": "Tell someone outside the family what happened, and choose how to keep it going.",
+        "extend": "Write down who does what and how often, and hand it over to someone who'll keep it going."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Impact Toolkit",
+    "intro": "Who to think about, what to ask, ways to help and how to make it last.",
+    "items": [
+      {
+        "name": "Who's around you",
+        "lines": [
+          { "k": "Home:", "v": "family, grandparents, whoever visits" },
+          { "k": "Street:", "v": "who's new, who's on their own?" },
+          { "k": "Places:", "v": "library, park, shop, beach" },
+          { "k": "Groups:", "v": "team, club, class" },
+          { "k": "Travelling:", "v": "wherever you're staying" }
+        ],
+        "ask": "Who could use a hand?"
+      },
+      {
+        "name": "Good questions",
+        "lines": [
+          { "k": "Annoying:", "v": "what's the annoying part?" },
+          { "k": "Wish:", "v": "what do you wish someone would do?" },
+          { "k": "Tried:", "v": "has anyone tried to fix it?" },
+          { "k": "Not helpful:", "v": "what wouldn't help?" },
+          { "k": "Who else:", "v": "who else should I ask?" }
+        ],
+        "ask": "What did you not expect?"
+      },
+      {
+        "name": "Ways to help",
+        "lines": [
+          { "k": "Clean up:", "v": "a spot that's always a mess" },
+          { "k": "Make:", "v": "a sign, a map or a guide" },
+          { "k": "Welcome:", "v": "someone new or left out" },
+          { "k": "Give time:", "v": "read, rake, carry, visit" },
+          { "k": "Thank:", "v": "people whose work nobody sees" }
+        ],
+        "ask": "What's the smallest version?"
+      },
+      {
+        "name": "Keep it going",
+        "lines": [
+          { "k": "Again:", "v": "same thing, next month" },
+          { "k": "Hand over:", "v": "who could take it on?" },
+          { "k": "Teach it:", "v": "show someone how" },
+          { "k": "Fix it:", "v": "one change for Version 2" },
+          { "k": "Tell it:", "v": "who should know what happened?" }
+        ],
+        "ask": "Who keeps this going without you?"
+      }
+    ],
+    "after": {
+      "label": "Our project",
+      "lines": [
+        "I want to help",
+        "By doing",
+        "Who has to say yes",
+        "How we'll know it helped"
+      ]
+    }
+  },
+  "skills": [
+    { "name": "Citizenship", "text": "deciding to do something about it" },
+    { "name": "Listening", "text": "finding out what people really need" },
+    { "name": "Follow-through", "text": "finishing, even the boring part" },
+    { "name": "Leadership", "text": "starting something that lasts" }
+  ],
+  "conclusion": {
+    "headline": "They saw something, and they did something about it.",
+    "text": "Watch for it in the weeks after. If they notice who's struggling with the door, or say 'We could do something about that', they've started to see themselves as someone who can.",
+    "celebrate": "Stand back and look at it together, and say: 'That's better now because of you.'",
+    "extensions": [
+      "Do a project somewhere you're visiting",
+      "Write a how-to so another kid could do the same thing",
+      "Bring another family in on it",
+      "Pick a bigger problem and find the piece you can do"
+    ]
+  },
+  "signs": [
+    "They notice who could use a hand",
+    "They ask people what they need before jumping in",
+    "They finish what they start, even the boring part"
+  ],
+  "makeItReal": "Put the next round on the calendar, so it turns into something your family does.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/community-impact.jpg",
+    "alt": "A family walking along a beach with white buckets, seen from behind, under a big blue sky",
+    "caption": "Cleaning the beach for the sea turtles."
+  },
+  "fromHome": {
+    "text": "At Loggerhead Park in Florida, we joined a program to clean the beach and help the sea turtles. More than 12,000 loggerhead nests were counted along that stretch of coast in a single season. We each took a bucket and walked the sand.",
+    "quotes": []
+  }
+}

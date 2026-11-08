@@ -27,7 +27,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "camouflage-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Camouflage%20Challenge%20v5.pdf",
   "clothing-swap-thrift-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Clothing%20Swap%20%26%20Thrift%20Math%20v6.pdf",
   "comeback-journal": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Comeback%20Journal%20v2.pdf",
-  "community-impact": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Community%20Impact%20Project%20v2.pdf",
+  "community-impact": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Community%20Impact%20Project%20v3.pdf",
   "community-service-business": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Community%20Service%20Business%20v2.pdf",
   "community-tour-guide": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Community%20Tour%20Guide%20v6.pdf",
   "complaint-to-product": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Complaint%20to%20Product%20v2.pdf",
