@@ -1982,15 +1982,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "What Would You Do? Decision Lab",
     slug: "decision-lab",
     description:
-      "Work through real decision scenarios, weigh options, consider consequences, and justify choices. Kids practise the kind of thoughtful decision-making that builds confidence and independence. Critical thinking applied to everyday life.",
+      "Your child works through tough little decisions, the kind with no easy answer. They say a gut reaction, find the options nobody mentioned, stand on each one to see who it touches, hold up under pressure, then use what they learned on a real decision of their own and check back a week later.",
     shortDescription:
-      "Life skill for kids ages 6-14: practise real-world decision-making. Build confidence in everyday choices.",
+      "Life skill for kids ages 6-14: think through tough choices, handle pressure and make a real decision of their own.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8aAkIBECpwGmi9IQ5bOz",
     blobUrl: "",
     imageUrl: "/products/decision-lab.jpg",
-    previewFile: "Preview Planning & Problem-Solving What Would You Do Decision Lab.pdf",
+    previewFile: "Preview Planning & Problem-Solving What Would You Do Decision Lab v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

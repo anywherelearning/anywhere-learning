@@ -37,7 +37,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "cultural-celebration-journal": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Cultural%20Celebration%20Journal%20v2.pdf",
   "currency-market-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Currency%20%26%20Market%20Math%20v2.pdf",
   "customer-discovery": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Customer%20Discovery%20Challenge%20v2.pdf",
-  "decision-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20What%20Would%20You%20Do%20Decision%20Lab%20v2.pdf",
+  "decision-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20What%20Would%20You%20Do%20Decision%20Lab%20v3.pdf",
   "decomposition-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Decomposition%20Detective%20v5.pdf",
   "deepfake-spotter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20DEEPFAKE%20%26%20MANIPULATION%20SPOTTER%20v2.pdf",
   "directions-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Directions%20Challenge%20v5.pdf",

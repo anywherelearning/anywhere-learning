@@ -1,0 +1,227 @@
+{
+  "slug": "decision-lab",
+  "category": "Planning & Problem-Solving",
+  "title": "What Would You Do? Decision Lab",
+  "tagline": "Gut · Options · Weigh · Decide",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes on tough little decisions, the kind with no easy answer. They say their gut reaction, find the options nobody mentioned, follow each one to see who it touches, decide and hold up under pressure, then use what they learned on a real decision of their own.",
+  "need": [
+    "Paper and a pencil",
+    "A few sheets to lay on the floor",
+    "A real decision coming up, big or small",
+    "Somewhere to talk: supper or the car works well"
+  ],
+  "academics": [
+    { "subject": "Communication", "text": "explaining and defending a choice" },
+    { "subject": "Social Studies", "text": "fairness and how choices touch others" },
+    { "subject": "Writing", "text": "putting reasoning into words" },
+    { "subject": "Planning", "text": "thinking ahead to what comes next" }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need the right answers. Your job is to be the curious one. Ask why instead of whether it's right, share how you'd think it through, and let them change their mind. It works best at supper or in the car, one card at a time.",
+    "plan": [
+      { "when": "Session 1", "what": "Sort the cards, say your gut answers and find the options (Steps 1 and 2)." },
+      { "when": "Session 2", "what": "Follow each option, decide and face the pressure (Steps 3 and 4)." },
+      { "when": "This week", "what": "Make a real decision, and check back after a week (Step 5)." }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      { "q": "They just say what I want to hear", "a": "Go first and give the less noble answer. Or have everyone write it down secretly and flip at the same time." },
+      { "q": "Their answer worries me", "a": "Don't pounce. Ask 'Who's on the other side of this?' and then say what you'd want them to know. A secret that could hurt a friend is one to tell a trusted adult, whatever they promised." },
+      { "q": "They can't decide", "a": "Good, that means it's a hard one. Ask which option they could live with if it went badly." }
+    ]
+  },
+  "lesson": {
+    "text": "A good decision isn't one that turns out perfectly. It's one where you looked past the first two options and thought about who it touches before you chose.",
+    "before": "I'd keep the extra change. Nobody would know.",
+    "model": [
+      { "part": "Gut", "line": "Keep it. Nobody would know." },
+      { "part": "Options", "line": "Keep it, go back now, bring it next time, ask Mom." },
+      { "part": "Other side", "line": "The clerk has to explain why the till is short." },
+      { "part": "Choose", "line": "Go back. Five minutes in line. I'm 8 out of 10 sure." }
+    ],
+    "modelNote": "The first answer only looked at one person. The second found four options and thought about who was on the other side of the counter."
+  },
+  "steps": [
+    {
+      "title": "Say it before you think",
+      "why": "Your first answer shows you what you already believe.",
+      "kid": "Your kid reads the Nobody would know and With other people cards in the Decision Toolkit at the end of the guide, and sorts the situations into easy calls and tough choices. Then everyone writes a gut answer in secret and flips at the same time.",
+      "you": "Play too, and answer honestly. No correcting yet. Just notice out loud where you all landed in different places.",
+      "ask": [
+        "Why was that one easy for you?",
+        "Do you think most people would choose the same thing?"
+      ],
+      "tip": "If everyone agrees right away, pick a harder one. The good talks start where you disagree.",
+      "levels": {
+        "explore": "Pick two situations and say or draw what you'd do.",
+        "develop": "Pick four, at least two of them tough. Write your answer and who else it affects.",
+        "extend": "Pick six, add one from your own life, and predict what most people would choose."
+      }
+    },
+    {
+      "title": "Find the options",
+      "why": "Most people see two choices. There are usually five.",
+      "kid": "Your kid picks one situation and uses the Four options card to find every way out of it: the obvious one, the safe one, the brave one and the one nobody's said yet. They count them on their fingers and keep going.",
+      "you": "Add one they wouldn't think of, even a silly one. Then ask 'Is there one we haven't said?' and wait longer than feels comfortable.",
+      "ask": [
+        "What would someone you admire do here?",
+        "What if doing nothing is also a choice?"
+      ],
+      "tip": "The silly options are useful. They often have a good idea hiding inside them.",
+      "levels": {
+        "explore": "Find two different things you could do.",
+        "develop": "Find three or four, including one unexpected option.",
+        "extend": "Find five or more, and label each one safe, brave, creative or risky."
+      }
+    },
+    {
+      "title": "Follow each option",
+      "why": "Every choice lands on somebody.",
+      "kid": "Your kid writes each option on its own sheet and lays them on the floor. They stand on one and follow it out loud: what happens next, who's glad, who's upset and who's on the other side of it. Then they step onto the next one.",
+      "you": "Keep asking 'Who's on the other side of this?' Stand on a sheet yourself as that person, like the clerk or the new kid, and say how it looks from there.",
+      "ask": [
+        "Who's on the other side of this one?",
+        "What would they say if they knew?"
+      ],
+      "tip": "Try each option for tomorrow and for a year from now. Something that feels great tonight can look different from there.",
+      "levels": {
+        "explore": "Say one good thing and one bad thing that could happen for each option.",
+        "develop": "For each option, say who's glad, who's upset and what happens next.",
+        "extend": "Compare tomorrow with a year from now for each option, then rank them and defend the order."
+      }
+    },
+    {
+      "title": "Decide, then get pushed",
+      "why": "It's easy to decide when nothing's pushing back.",
+      "kid": "Your kid stands on the option they choose, says why and gives their sureness out of 10. Then you lean on them with something from the Pressure card and they decide again, and say whether it changed their mind or just made it harder.",
+      "you": "Listen to the reasoning, not the answer. Then play the friend and really lean on them. Afterwards, tell them which part of their thinking you noticed.",
+      "ask": [
+        "What's the main reason behind your choice?",
+        "Did that change your mind, or just make it harder?"
+      ],
+      "tip": "Save Two minutes for last. Set a timer and notice together what rushing does to good thinking.",
+      "levels": {
+        "explore": "Pick your option, say why in one sentence and have someone lean on you once.",
+        "develop": "Pick, explain, add a backup plan, and face the pressure on two situations.",
+        "extend": "Argue your choice with someone who disagrees, face a different pressure each time and name the one that's hardest for you."
+      }
+    },
+    {
+      "title": "Use it for real",
+      "why": "A pretend decision doesn't cost anything. A real one does.",
+      "kid": "Your kid looks back and picks the questions that helped most, and writes them down as their own. Then they use them on a real decision coming up, fill in My real decision at the end of the guide, make the call and check back in a week.",
+      "you": "Hand over one decision that's truly theirs, and let the result stand. Tell them about a hard decision of your own too, and what you'd do now.",
+      "ask": [
+        "Which question made the biggest difference?",
+        "What would you tell yourself from the beginning?"
+      ],
+      "tip": "Pick something small enough to live with if it goes badly. That's where most of the learning is.",
+      "levels": {
+        "explore": "Choose your three best questions and use them on one small decision.",
+        "develop": "Write five questions and one thing to watch out for. Make a real decision and check back in a week.",
+        "extend": "Write your own decision guide with steps and common traps, use it on a family decision and report back in a week."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Decision Toolkit",
+    "intro": "Situations to argue about, more ways out, and the pressure that makes it harder.",
+    "items": [
+      {
+        "name": "Nobody would know",
+        "lines": [
+          { "k": "Extra change:", "v": "the clerk gave you too much" },
+          { "k": "The spill:", "v": "nobody saw you do it" },
+          { "k": "Lucky mistake:", "v": "a score wrongly in your favour" },
+          { "k": "Found wallet:", "v": "cash, a name, nobody around" },
+          { "k": "Last treat:", "v": "you had yesterday's, they forgot" }
+        ],
+        "ask": "What would you do?"
+      },
+      {
+        "name": "With other people",
+        "lines": [
+          { "k": "The dare:", "v": "risky, and everyone's watching" },
+          { "k": "New kid:", "v": "friends say don't go over" },
+          { "k": "A secret:", "v": "it worries you, and you promised" },
+          { "k": "Mean plan:", "v": "you overhear someone being left out" },
+          { "k": "Double booked:", "v": "you promised, then got invited" }
+        ],
+        "ask": "Who else does this touch?"
+      },
+      {
+        "name": "Four options",
+        "lines": [
+          { "k": "Obvious:", "v": "what most people would do" },
+          { "k": "Safe:", "v": "the one with the least risk" },
+          { "k": "Brave:", "v": "the one that costs you something" },
+          { "k": "Unexpected:", "v": "the one nobody's said yet" },
+          { "k": "Not yet:", "v": "can you wait, or ask someone?" }
+        ],
+        "ask": "Is there a fifth one?"
+      },
+      {
+        "name": "Pressure",
+        "lines": [
+          { "k": "Everyone:", "v": "says they've all done it" },
+          { "k": "Teasing:", "v": "they say you're being boring" },
+          { "k": "A reward:", "v": "someone offers to pay you" },
+          { "k": "Family:", "v": "someone you love disagrees" },
+          { "k": "Two minutes:", "v": "that's all the time you've got" }
+        ],
+        "ask": "Does it change your mind?"
+      }
+    ],
+    "after": {
+      "label": "My real decision",
+      "lines": [
+        "The decision",
+        "My best options",
+        "What I chose and why",
+        "What happened a week later"
+      ]
+    }
+  },
+  "skills": [
+    { "name": "Weighing options", "text": "seeing more than two choices" },
+    { "name": "Empathy", "text": "standing where someone else stands" },
+    { "name": "Steadiness", "text": "thinking clearly under pressure" },
+    { "name": "Self-knowledge", "text": "knowing what matters to them" }
+  ],
+  "conclusion": {
+    "headline": "They know how to think through a hard call now.",
+    "text": "Listen for it over the next few weeks. If they stop and say 'Wait, what else could we do?' or ask who else a choice affects before you've said anything, it's starting to be how they think.",
+    "celebrate": "When they tell you how the real decision went, however it went, say: 'You thought that through yourself.'",
+    "extensions": [
+      "Write three new situations to try on a friend or a sibling",
+      "Ask a grandparent about the hardest decision they've made, and map it",
+      "Find a hard choice in a book or a film and argue what should have happened",
+      "Make Decision of the Week a family habit"
+    ]
+  },
+  "signs": [
+    "They look for more than two options",
+    "They think about who else a decision touches",
+    "They can say why they chose, and change their mind when they learn more"
+  ],
+  "makeItReal": "The next time a real choice comes up at home, hand them their questions before you give your opinion.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/decision-lab.jpg",
+    "alt": "A brother and sister walking side by side across a cobblestone square, seen from behind, mid-conversation",
+    "caption": "The best debates happen on the way somewhere.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "We do this pretty much every week: in the car, at dinner, walking somewhere, on a hike. One question is all it takes to start a great conversation, and usually a debate.",
+    "quotes": []
+  }
+}

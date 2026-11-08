@@ -2231,23 +2231,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'decision-lab': {
     opening:
-      'Work through real decision scenarios, weigh options, consider consequences, and justify choices. Kids practise the kind of thoughtful, structured decision-making that builds confidence and independence. Critical thinking applied to real-world situations they actually face.',
+      'Your child works through tough little decisions, the kind with no easy answer. They say a gut reaction, find the options nobody mentioned, stand on each one to see who it touches, hold up under pressure, then use what they learned on a real decision of their own and check back a week later.',
     whatsIncluded: [
-      'Decision-making scenario cards',
-      'Pros and cons analysis framework',
-      'Consequence mapping activities',
-      'Values-based decision-making practice',
-      'Reflection on decision quality and outcomes',
+      'A 5-step guide from gut reaction to a real decision',
+      'A worked example that shows how to look past the first two options',
+      'Nobody would know card and With other people card',
+      'Four options card and Pressure card',
+      'My real decision page to fill in and check a week later',
     ],
-    skillTags: ['Decision-Making', 'Critical Thinking', 'Ethics', 'Analysis', 'Independence'],
+    skillTags: ['Decision-Making', 'Critical Thinking', 'Empathy', 'Communication', 'Independence'],
     insideTheLearning: {
       lead:
-        'Your child works through real decision scenarios, weighs the options, maps out the consequences and then has to justify what they chose. Not the tidy version. The kind where the values matter and someone disagrees with them.',
+        'Your child learns to slow down on the choices that are actually hard. They find more options than they thought they had, stand where someone else stands, feel the pressure to change their mind and then make a real call of their own.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Analysing the options and reasoning through what each one leads to' },
-        { skill: 'Decision-Making', where: 'Weighing choices and predicting the outcomes before committing' },
-        { skill: 'Communication', where: 'Explaining and justifying the decision, then defending it in a debate' },
-        { skill: 'Empathy', where: 'Considering the perspectives of everyone the decision touches' },
+        { skill: 'Critical Thinking', where: 'Finding more than two options and following each one through' },
+        { skill: 'Decision-Making', where: 'Choosing, saying how sure they are and checking back a week later' },
+        { skill: 'Empathy', where: 'Standing where the other person stands and saying how it looks from there' },
+        { skill: 'Communication', where: 'Explaining a choice and defending it when people lean on them' },
+        { skill: 'Self-Awareness', where: 'Noticing what matters to them and which pressure is hardest' },
       ],
     },
     format: 'Project Guide',
