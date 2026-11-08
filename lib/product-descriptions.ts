@@ -2207,24 +2207,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'what-if-scenario-lab': {
     opening:
-      'Explore hypothetical "what if" scenarios, predict outcomes, and plan responses. Kids work through situations that stretch their thinking, from everyday dilemmas to wildly creative scenarios. Speculative thinking that builds planning skills, creative reasoning, and adaptability.',
+      'Your child takes a big what-if, like a week with no electricity, and thinks it all the way through. They map what would really happen by Day 3 and Day 7, ask someone who has lived something like it, make a plan, try a small slice of it for real, then handle a twist and convince the family.',
     whatsIncluded: [
-      'What-if scenario challenge cards',
-      'Outcome prediction and planning frameworks',
-      'Risk assessment and contingency thinking',
-      'Creative scenario generation',
-      'Discussion prompts and reflection activities',
+      'A 5-step guide from the first reaction to a plan the family agrees on',
+      'A worked example that shows how to go past the first answer',
+      'What-ifs card and Keep asking card',
+      'Try a slice card and Twists card',
+      'Our plan page to fill in and present',
     ],
-    skillTags: ['Creative Thinking', 'Planning', 'Critical Thinking', 'Adaptability', 'Risk Assessment'],
+    skillTags: ['Critical Thinking', 'Planning', 'Curiosity', 'Trade-Offs', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child takes a what-if scenario and thinks it all the way through. Not the fun first answer, the second and third order consequences. They research, predict outcomes, plan for the risks, then argue their reasoning against someone who disagrees.',
+        'Your child follows one big question past the first easy answer. They talk to someone who has lived something like it, make hard choices, test a small piece for real and then have to convince the family.',
       skills: [
-        { skill: 'Creative Thinking', where: 'Imagining and inventing the scenario properly rather than stopping at the obvious' },
-        { skill: 'Critical Thinking', where: 'Analysing the outcomes and reasoning through what actually follows' },
-        { skill: 'Research', where: 'Finding real information and comparing it against their predictions' },
-        { skill: 'Planning', where: 'Sequencing the consequences and thinking through the contingencies' },
-        { skill: 'Communication', where: 'Presenting the case and arguing it when someone pushes back' },
+        { skill: 'Critical Thinking', where: 'Asking and then what, day by day, until the real problems show up' },
+        { skill: 'Research', where: 'Asking someone who has lived it and finding out what surprised them' },
+        { skill: 'Planning', where: 'Working out Day 1, the biggest problems and what to give up' },
+        { skill: 'Science', where: 'Seeing how food, energy and water actually reach a home' },
+        { skill: 'Communication', where: 'Presenting the plan and answering every doubt' },
       ],
     },
     format: 'Project Guide',
