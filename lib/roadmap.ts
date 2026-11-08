@@ -455,6 +455,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'travel-day': ['critical-thinking'],
   'fix-it-detective': ['critical-thinking'],
   'neighbourhood-problem-spotter': ['critical-thinking'],
+  'outdoor-survival-planner': ['critical-thinking'],
 };
 
 /**

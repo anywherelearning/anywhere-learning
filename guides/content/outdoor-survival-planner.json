@@ -1,0 +1,340 @@
+{
+  "slug": "outdoor-survival-planner",
+  "category": "Planning & Problem-Solving",
+  "title": "Outdoor Survival Planner",
+  "tagline": "Priorities · Supplies · Skills · Plan B",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid works through an outdoor emergency the calm way. They pick a scenario, put the priorities in order, take stock of what's in the pack, practise real skills outside with you, handle a twist, then write the plan your family takes on its next real outing.",
+  "need": [
+    "An outdoor space: a yard, a park or a trail",
+    "Sticks and leaves, or a tarp and some rope",
+    "A small pack, a water bottle and a whistle",
+    "Paper and a pencil (a compass is a bonus)"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "weather, body heat and staying dry"
+    },
+    {
+      "subject": "Geography",
+      "text": "landmarks, directions and reading a place"
+    },
+    {
+      "subject": "Math",
+      "text": "time, distance and daylight left"
+    },
+    {
+      "subject": "Planning",
+      "text": "priorities with limited supplies"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need survival training. Keep it adventurous, not scary, and make sure every scenario ends with being found. Let them decide first and ask before you answer. Then go outside, because a shelter that looks great on paper tends to leak.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick a scenario, order the priorities and check the pack (Steps 1 to 3)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Go outside and try the skills (Step 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Throw a twist and write the real trip plan (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It's making them nervous",
+        "a": "Start with the If you're lost card, because it's mostly good news: stay put and people come to you. Say so out loud, and end every scenario with being found."
+      },
+      {
+        "q": "We don't really hike",
+        "a": "Set it in the park you go to, a beach or a big campground. Getting separated at a busy park uses the same thinking."
+      },
+      {
+        "q": "They keep giving action-movie answers",
+        "a": "Don't correct it. Ask 'And then what happens?' or go try it. Walking off to find the trail stops sounding smart once you talk through who's looking where."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "When something goes wrong outside, the first job isn't to do something. It's to stop, think, and do things in the right order.",
+    "before": "If we got lost I'd keep walking until I found the trail.",
+    "model": [
+      {
+        "part": "Stop",
+        "line": "Sit down, take a sip of water, take three slow breaths."
+      },
+      {
+        "part": "Stay",
+        "line": "Pick a tree and stay with it, so searchers can find me."
+      },
+      {
+        "part": "Signal",
+        "line": "Three whistle blasts, listen, then do it again."
+      },
+      {
+        "part": "Stay warm",
+        "line": "Rain jacket on, sit on my pack, off the cold ground."
+      }
+    ],
+    "modelNote": "The first plan makes you harder to find with every step. The second one keeps you warm, in one place and easy to hear."
+  },
+  "steps": [
+    {
+      "title": "Pick a scenario",
+      "why": "You can't plan for 'something bad'. You can plan for a storm at 4 pm.",
+      "kid": "Your kid picks one situation from the Scenarios card in the Survival Toolkit at the end of the guide and pictures it in a place you actually go. They describe it: where you are, the weather, the time of day and who's with you.",
+      "you": "Set the scene like the start of a story, and make the details real: 'It's 4 o'clock, it's October, and we're on the trail by the lake.' Keep your voice light.",
+      "ask": [
+        "What's the biggest danger here?",
+        "How much daylight is left?"
+      ],
+      "tip": "Doing the storm? If you hear thunder, the safe places are a building or a metal-roofed car. Tall trees, hilltops and picnic shelters are the wrong places.",
+      "levels": {
+        "explore": "Pick one scenario and draw or describe what's happening around you.",
+        "develop": "Pick two scenarios and compare the biggest challenge in each.",
+        "extend": "Rank all five from easiest to hardest to handle, and defend the order."
+      }
+    },
+    {
+      "title": "Put the priorities in order",
+      "why": "Most people think about food first. It's almost always last.",
+      "kid": "Your kid uses the Priorities card to decide what comes first in their scenario, and why. Then they check whether their scenario changes the usual order, like water moving up on a very hot day.",
+      "you": "Ask 'Why that first?' and hold your answer for a minute. Being wrong and working it out sticks much better than being told.",
+      "ask": [
+        "Why does staying warm come before eating?",
+        "Would this order change in the snow, or in the desert?"
+      ],
+      "tip": "Being cold and wet is a bigger danger than being hungry, even on a day that doesn't feel that cold.",
+      "levels": {
+        "explore": "Choose the top three things to do, in order.",
+        "develop": "Put all five priorities in order for your scenario and say why.",
+        "extend": "Do it for two different scenarios and explain exactly why the order changes."
+      }
+    },
+    {
+      "title": "See what you've got",
+      "why": "Survival is mostly using ordinary things in clever ways.",
+      "kid": "Your kid unpacks a real day pack on the floor and lists everything in it, plus what's around them in the scenario. For each thing they find a use, then a second use. Then they decide the five things they'd always bring.",
+      "you": "Limit it to keep it interesting: 'Your bottle is half full and that's all you've got.' Pack it together the way you'd really pack it.",
+      "ask": [
+        "What in this pack can do two jobs?",
+        "What do you wish you had?"
+      ],
+      "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof.",
+      "levels": {
+        "explore": "Pick five things from the pack and say how each one could help.",
+        "develop": "List everything and match each item to a priority.",
+        "extend": "Cut the pack down to five items only, and argue for each one."
+      }
+    },
+    {
+      "title": "Try it outside",
+      "why": "It always looks easier in your head.",
+      "kid": "Your kid goes outside with you and tries real skills from the Skills to try card: a shelter from sticks or a tarp, three whistle blasts, finding the way back using landmarks, or a ground signal you could see from far away. Then they test each one.",
+      "you": "Be the tester. Pour a cup of water on the shelter roof with them inside, or walk away until you can't hear the whistle. Do this one with them, start to finish.",
+      "ask": [
+        "What was harder than you expected?",
+        "How would you build it differently now?"
+      ],
+      "tip": "Skip real fires and tasting anything wild. Those stay out of this project.",
+      "levels": {
+        "explore": "Try one skill and tell someone how it went.",
+        "develop": "Try two skills, test them and rate how well each one worked.",
+        "extend": "Try three, fix what failed and test them again."
+      }
+    },
+    {
+      "title": "Handle the twist, write the real plan",
+      "why": "Plans change. The calm person is the one who's already thought about it.",
+      "kid": "You announce a twist from the Twists line of the Scenarios card, and your kid reworks the plan. Then they turn everything into a real Trip plan for your next outing: where you're going, when you'll be back, who knows, and what each person carries.",
+      "you": "Throw the twist with no warning. Then go on the outing, leave the plan with someone at home, and let them check it at the trailhead.",
+      "ask": [
+        "Does this change the first thing you'd do?",
+        "Who needs to know where we are today?"
+      ],
+      "tip": "The most useful survival skill is boring: telling someone where you're going and when you'll be back.",
+      "levels": {
+        "explore": "Hear one twist and say what you'd change. Pick what goes in your own pack.",
+        "develop": "Handle two twists, then fill in the Trip plan.",
+        "extend": "Handle every twist, write a worst-case plan, and teach the If you're lost card to someone younger."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Survival Toolkit",
+    "intro": "Situations to plan for, what comes first, and what to do when it counts.",
+    "items": [
+      {
+        "name": "Scenarios",
+        "lines": [
+          {
+            "k": "Lost:",
+            "v": "the trail disappears, it's getting late"
+          },
+          {
+            "k": "Storm:",
+            "v": "wind, rain and thunder on the way"
+          },
+          {
+            "k": "Soaked:",
+            "v": "camp flooded, gear wet"
+          },
+          {
+            "k": "Hurt:",
+            "v": "a twisted ankle, far from the car"
+          },
+          {
+            "k": "Twists:",
+            "v": "dark comes early, bottle leaks, someone wants to split up"
+          }
+        ],
+        "ask": "What's the biggest danger here?"
+      },
+      {
+        "name": "Priorities",
+        "lines": [
+          {
+            "k": "1. Safety:",
+            "v": "move away from danger"
+          },
+          {
+            "k": "2. Shelter:",
+            "v": "stay warm and dry"
+          },
+          {
+            "k": "3. Water:",
+            "v": "sip what you have"
+          },
+          {
+            "k": "4. Signal:",
+            "v": "help people find you"
+          },
+          {
+            "k": "5. Food:",
+            "v": "last, and nothing wild"
+          }
+        ],
+        "ask": "Does this scenario change the order?"
+      },
+      {
+        "name": "If you're lost",
+        "lines": [
+          {
+            "k": "Stop:",
+            "v": "sit down and breathe"
+          },
+          {
+            "k": "Stay:",
+            "v": "hug a tree, don't wander"
+          },
+          {
+            "k": "Whistle:",
+            "v": "3 blasts, listen, repeat"
+          },
+          {
+            "k": "Be seen:",
+            "v": "hang up something bright"
+          },
+          {
+            "k": "Answer:",
+            "v": "call back when you hear people"
+          }
+        ],
+        "ask": "Are we staying together?"
+      },
+      {
+        "name": "Skills to try",
+        "lines": [
+          {
+            "k": "Shelter:",
+            "v": "lean sticks or tie a tarp, test it"
+          },
+          {
+            "k": "Whistle:",
+            "v": "how far away can you hear it?"
+          },
+          {
+            "k": "Landmarks:",
+            "v": "look back, name 3 things"
+          },
+          {
+            "k": "Ground signal:",
+            "v": "a big X in sticks or stones"
+          },
+          {
+            "k": "Compass:",
+            "v": "find north, walk a line"
+          }
+        ],
+        "ask": "Did it pass the test?"
+      }
+    ],
+    "after": {
+      "label": "Trip plan",
+      "lines": [
+        "Where we're going and back by",
+        "Who knows our plan",
+        "What each person carries",
+        "If we get separated, we will"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Priorities",
+      "text": "knowing what comes first"
+    },
+    {
+      "name": "Calm thinking",
+      "text": "stopping before acting"
+    },
+    {
+      "name": "Resourcefulness",
+      "text": "making ordinary things work harder"
+    },
+    {
+      "name": "Observation",
+      "text": "reading the weather and the place"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know what to do now, and that's a calm feeling.",
+    "text": "Watch them on your next outing. If they look back at the trail to name a landmark, ask who knows where you're going, or check there's a whistle in the pack, the thinking has come with them.",
+    "celebrate": "Clip the whistle to their pack for good and say: 'You know what to do now. That's yours to keep.'",
+    "extensions": [
+      "Plan for a different season in the same place",
+      "Sleep one night in the yard in a shelter you built",
+      "Ask a park ranger or search and rescue volunteer what they wish kids knew",
+      "Build a small safety kit for each person in the family"
+    ]
+  },
+  "signs": [
+    "They think about what comes first before they act",
+    "They notice the weather and how much daylight is left",
+    "They stay calmer when plans go wrong"
+  ],
+  "makeItReal": "Make the Trip plan a family habit: your kid fills it in before every outing and leaves it with someone at home.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/outdoor-survival-planner.jpg",
+    "alt": "A kid with a red backpack stepping across a mountain stream on rocks, with peaks behind",
+    "caption": "Picking the way across the stream."
+  },
+  "fromHome": {
+    "text": "Before we head into the mountains, we go over the plan with the kids: if we get separated, stop, stay put and blow the whistle. They've heard it enough times to say it back to us.",
+    "quotes": []
+  }
+}

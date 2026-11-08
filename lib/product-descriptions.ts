@@ -2111,24 +2111,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-survival-planner': {
     opening:
-      'Plan outdoor expeditions, think through survival scenarios, and build real outdoor planning skills. Kids research terrain, assess risks, plan supplies, and make decisions about shelter, water, and navigation. Adventure planning that builds critical thinking and practical confidence.',
+      'Your child learns what to do when something goes wrong outside, the calm way. They pick a scenario like a lost trail or a storm, put the priorities in order, take stock of what is in the pack and practise real skills with you. Then they handle a twist and write the trip plan your family takes on its next outing.',
     whatsIncluded: [
-      'Outdoor survival planning guide',
-      'Terrain research and risk assessment',
-      'Supply planning and prioritisation',
-      'Shelter, water, and navigation scenarios',
-      'Expedition plan creation and review',
+      'A 5-step guide from choosing a scenario to a real trip plan',
+      'A worked example of what to do if you get lost',
+      'Scenarios card and Priorities card',
+      'If you are lost card and Skills to try card',
+      'Trip plan to fill in before every outing',
     ],
-    skillTags: ['Planning', 'Risk Assessment', 'Nature', 'Critical Thinking', 'Survival Skills'],
+    skillTags: ['Planning', 'Critical Thinking', 'Outdoor Skills', 'Resourcefulness', 'Life Skills'],
     insideTheLearning: {
       lead:
-        'Your child plans a real expedition: researches the terrain, assesses the risks, and decides what makes the pack and what does not. Then the scenarios start, water, shelter, navigation, and priorities have to be set fast with incomplete information.',
+        'Your child learns that the first job in an emergency is to stop and think. They work out what comes first in a realistic situation, use what is actually in the pack, then go outside with you and test whether their shelter and signals really work.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Assessing the terrain and risks, then prioritising what matters most' },
-        { skill: 'Planning', where: 'Sequencing the expedition and allocating limited supplies' },
-        { skill: 'Problem-Solving', where: 'Improvising and adapting when the scenario changes the plan' },
-        { skill: 'Nature Connection', where: 'Real outdoor awareness and reading the environment they are in' },
-        { skill: 'Resilience', where: 'Staying calm enough to think clearly under pressure' },
+        { skill: 'Critical Thinking', where: 'Deciding what comes first and when the usual order changes' },
+        { skill: 'Planning', where: 'Writing a real trip plan and leaving it with someone at home' },
+        { skill: 'Problem-Solving', where: 'Finding two uses for ordinary things and handling a twist' },
+        { skill: 'Science', where: 'Weather, body heat and how to stay warm and dry' },
+        { skill: 'Geography', where: 'Using landmarks and directions to read a place' },
       ],
     },
     format: 'Project Guide',
