@@ -1844,15 +1844,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Neighbourhood Problem Spotter",
     slug: "neighbourhood-problem-spotter",
     description:
-      "Walk your neighbourhood with fresh eyes. Spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. The kind of problem-solving that connects kids to their community.",
+      "Your child walks the neighbourhood with you and looks at it like a detective. They spot what could work better, pick one problem worth solving, gather real evidence and find out why it happens. Then they design the simplest fix that could work, pitch it to someone who can say yes, and take care of one small part themselves.",
     shortDescription:
-      "Problem-solving for kids ages 6-14: spot and solve real neighbourhood problems. Observation meets action.",
+      "Civic problem-solving for kids ages 6-14: spot a real problem nearby, find the cause and pitch a simple fix.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8ZAkIBECpwGmeHYEEPmY",
     blobUrl: "",
     imageUrl: "/products/neighbourhood-problem-spotter.jpg",
-    previewFile: "Preview Planning & Problem-Solving Neighbourhood Problem Spotter.pdf",
+    previewFile: "Preview Planning & Problem-Solving Neighbourhood Problem Spotter v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

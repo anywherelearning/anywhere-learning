@@ -1,0 +1,335 @@
+{
+  "slug": "neighbourhood-problem-spotter",
+  "category": "Planning & Problem-Solving",
+  "title": "Neighbourhood Problem Spotter",
+  "tagline": "Notice · Dig · Design · Pitch",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid walks your neighbourhood with you and looks at it like a detective. They spot what could work better, pick one problem worth solving, find out why it's there, design the simplest fix that could work, and pitch it to someone who can say yes.",
+  "need": [
+    "A place you can walk together: your street, a park, a campground or a market",
+    "Paper, a pencil and something to lean on",
+    "A phone for photos (optional)"
+  ],
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "drawing a map and reading patterns on it"
+    },
+    {
+      "subject": "Math",
+      "text": "counting, tallying and comparing"
+    },
+    {
+      "subject": "Civics",
+      "text": "who looks after shared places"
+    },
+    {
+      "subject": "Communication",
+      "text": "making a short, convincing case"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to know anything about city planning. Your job is to be the walking partner: go slowly, ask why, and take what they notice seriously. A kid's eye level catches things adults stopped seeing years ago.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Walk, notice and map what you find (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Find the real cause and design the fix (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Pitch it and do the part you can do (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Our neighbourhood is fine",
+        "a": "Look for what's missing, not what's broken: no bench on the hill, no shade at the bus stop, nowhere for kids to meet."
+      },
+      {
+        "q": "We live rurally, or we're travelling",
+        "a": "Use the closest shared place: the community hall, a trail, the campground, a market. Same steps, different map."
+      },
+      {
+        "q": "The problem is too big",
+        "a": "Shrink it. Not 'traffic', but 'nobody can see around this corner'. A small problem can get a real answer."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Most complaints stop at what's wrong. A proposal says where, who it affects, why it happens, what would help and who can say yes.",
+    "before": "The park is always gross. Someone should clean it.",
+    "model": [
+      {
+        "part": "Where",
+        "line": "The bin by the playground gate, full on 3 of our 4 visits."
+      },
+      {
+        "part": "Cause",
+        "line": "It's the only bin in the park, and it fills up on weekends."
+      },
+      {
+        "part": "Fix",
+        "line": "A second bin near the picnic tables, or emptying it on Monday."
+      },
+      {
+        "part": "Ask",
+        "line": "An email to the parks department, with our count."
+      }
+    ],
+    "modelNote": "The first version is a grumble. The second has a count, a cause and a person to send it to."
+  },
+  "steps": [
+    {
+      "title": "Walk and notice",
+      "why": "You walk past most of your neighbourhood without seeing it.",
+      "kid": "Your kid walks a loop with you, slowly, and looks for what works and what could work better, using the What to look for card in the Spotter Toolkit at the end of the guide. They jot or sketch each thing and where it was.",
+      "you": "Walk at their pace and let them stop. Add 'Who would have trouble here?' and try it from a stroller, a wheelchair or a very small kid's point of view.",
+      "ask": [
+        "What do you walk past every day and never really look at?",
+        "Who would have the hardest time here?"
+      ],
+      "tip": "Photograph places, not people or licence plates. Stay on public paths, and stay together.",
+      "levels": {
+        "explore": "Find two things that could be better and draw or describe each one.",
+        "develop": "Find three or four and sort them by type: safety, clean, access, nature, together.",
+        "extend": "Find five or more, photograph each place, and note who is most affected."
+      }
+    },
+    {
+      "title": "Map it and pick one",
+      "why": "You can't solve everything. Picking is the first real decision.",
+      "kid": "Your kid draws a simple map with home, the main streets and a numbered mark for each thing they found. Then they use the Pick one card to choose the problem worth their time.",
+      "you": "Help with which way the streets run if they get stuck. Then keep your favourite to yourself. The problem has to be one they care about.",
+      "ask": [
+        "Are the problems spread out or all in one spot?",
+        "Which one bothers you the most, and why?"
+      ],
+      "tip": "Choose something a person could actually change. 'No crossing near the park' works. 'Winter is too long' doesn't.",
+      "levels": {
+        "explore": "Draw the route and mark your problems, then pick the one you care about most.",
+        "develop": "Colour-code the map by type, and compare three problems using the Pick one card.",
+        "extend": "Score every problem for how many people it affects and how doable it is, and defend the top choice."
+      }
+    },
+    {
+      "title": "Find the real cause",
+      "why": "Fix the symptom and it comes back next week.",
+      "kid": "Your kid goes back and gathers evidence: a count, a few visits at different times, a photo. They talk to one or two people it affects, then keep asking why until they reach a cause, and use the Who looks after it card to find out whose job it is.",
+      "you": "Come along for every conversation with a neighbour or shop owner, and stand beside them while they ask. Help them find the right page on your town's website.",
+      "ask": [
+        "If someone fixed it today, would it come back?",
+        "Whose job is this, really?"
+      ],
+      "tip": "Go back at a different time of day. Lots of problems only show up at school pickup or after a weekend.",
+      "levels": {
+        "explore": "Come up with two reasons the problem might be happening.",
+        "develop": "Count it on three visits, ask one person about it, and name the cause and who looks after it.",
+        "extend": "Find a place that solved a similar problem and work out what they did differently."
+      }
+    },
+    {
+      "title": "Design the simplest fix",
+      "why": "The fix that gets done beats the perfect one that doesn't.",
+      "kid": "Your kid comes up with at least two fixes, then picks the simplest one that could really work. They write down what it needs, who would have to agree and how long it would take, then fill in the Proposal page in the Spotter Toolkit.",
+      "you": "Ask 'How would that actually work?' Then play the other side: 'There's no money for this' or 'My neighbour likes it the way it is.' Let them answer.",
+      "ask": [
+        "What's the smallest version that would still help?",
+        "Who might say no, and why?"
+      ],
+      "tip": "Cheap and small gets a yes more often. A sign, a bin or a painted line is easier to agree to than a new park.",
+      "levels": {
+        "explore": "Draw your fix and say in a few sentences how it helps.",
+        "develop": "Fill in the Proposal page with what, who and how long, and answer one objection.",
+        "extend": "Compare two fixes for cost and effort, cost out the winner, and answer every objection you can think of."
+      }
+    },
+    {
+      "title": "Pitch it and do your part",
+      "why": "An idea nobody hears doesn't change anything.",
+      "kid": "Your kid practises the 30-second pitch from the Pitch it card on the family, fixes the weak spots from your questions, then shares it with someone who can say yes. They also pick one small part of the problem they can take care of themselves this week.",
+      "you": "Be the tough but kind audience. Send or deliver anything that goes outside the family with them, and read it first. Then help with their small part.",
+      "ask": [
+        "What question couldn't you answer?",
+        "What can we do this week without asking anyone?"
+      ],
+      "tip": "A short, polite email from a kid, with a count and a photo, tends to get read. An answer isn't guaranteed, and that's a real lesson too.",
+      "levels": {
+        "explore": "Tell the family the problem and your fix, then do one small thing to help.",
+        "develop": "Give the 30-second pitch, improve it, and share it with a neighbour or a local group.",
+        "extend": "Send your proposal to the person responsible, follow up after two weeks, and report back on what happened."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Spotter Toolkit",
+    "intro": "What to look for, how to choose, who to ask and how to make the case.",
+    "items": [
+      {
+        "name": "What to look for",
+        "lines": [
+          {
+            "k": "Safety:",
+            "v": "broken paths, dark spots, blind corners"
+          },
+          {
+            "k": "Clean:",
+            "v": "litter, full bins, dumping"
+          },
+          {
+            "k": "Access:",
+            "v": "no ramp, blocked paths, no benches"
+          },
+          {
+            "k": "Nature:",
+            "v": "dead trees, bare or neglected spots"
+          },
+          {
+            "k": "Together:",
+            "v": "nowhere to meet or play"
+          }
+        ],
+        "ask": "Who would have trouble here?"
+      },
+      {
+        "name": "Pick one",
+        "lines": [
+          {
+            "k": "How many:",
+            "v": "people does it affect?"
+          },
+          {
+            "k": "How serious:",
+            "v": "annoying or dangerous?"
+          },
+          {
+            "k": "Doable:",
+            "v": "could a small fix help?"
+          },
+          {
+            "k": "Tried before:",
+            "v": "what happened?"
+          },
+          {
+            "k": "You:",
+            "v": "do you actually care about it?"
+          }
+        ],
+        "ask": "Which one would you still care about next week?"
+      },
+      {
+        "name": "Who looks after it",
+        "lines": [
+          {
+            "k": "Roads, sidewalks:",
+            "v": "your town or city"
+          },
+          {
+            "k": "Parks, trails:",
+            "v": "the parks department"
+          },
+          {
+            "k": "Shops:",
+            "v": "the owner or manager"
+          },
+          {
+            "k": "Apartments:",
+            "v": "the building manager"
+          },
+          {
+            "k": "Not sure:",
+            "v": "check the town's website"
+          }
+        ],
+        "ask": "Who can actually say yes?"
+      },
+      {
+        "name": "Pitch it",
+        "lines": [
+          {
+            "k": "Problem:",
+            "v": "one sentence, and where"
+          },
+          {
+            "k": "Evidence:",
+            "v": "your count or photo"
+          },
+          {
+            "k": "Why it matters:",
+            "v": "who it affects"
+          },
+          {
+            "k": "Fix:",
+            "v": "the simplest version"
+          },
+          {
+            "k": "Ask:",
+            "v": "exactly what you want them to do"
+          }
+        ],
+        "ask": "Could you say it in 30 seconds?"
+      }
+    ],
+    "after": {
+      "label": "Proposal page",
+      "lines": [
+        "The problem and where it is",
+        "Who it affects and my evidence",
+        "The real cause",
+        "My fix and who can say yes"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "seeing what others walk past"
+    },
+    {
+      "name": "Reasoning",
+      "text": "getting from symptom to cause"
+    },
+    {
+      "name": "Empathy",
+      "text": "thinking about who it affects"
+    },
+    {
+      "name": "Persuasion",
+      "text": "making a case to someone who can act"
+    }
+  ],
+  "conclusion": {
+    "headline": "They'll never walk that street the same way again.",
+    "text": "Watch what happens on your next walk. If they point at something and say 'Why is it like that?' or 'Who looks after that?', they've started to see their neighbourhood as something people make, and something they can have a say in.",
+    "celebrate": "Go back together to the spot it all started and do their small fix there. Then say: 'You noticed this. Most people just walk by.'",
+    "extensions": [
+      "Do the same walk in a different neighbourhood and compare",
+      "Interview neighbours about what they'd love to see changed",
+      "Organize a clean-up or planting morning with a few families",
+      "Look for what works really well nearby and thank whoever looks after it"
+    ]
+  },
+  "signs": [
+    "They point out things that could work better on ordinary walks",
+    "They ask why something is the way it is, and whose job it is",
+    "They bring evidence when they want to change your mind"
+  ],
+  "makeItReal": "Keep the proposal somewhere visible and check back in a month: did anything change, and who should they follow up with?",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/neighbourhood-problem-spotter.jpg",
+    "alt": "Watercolour of a quiet neighbourhood street corner with a bench, a tree, a crosswalk and a clipboard on a low wall",
+    "caption": "Walk slowly. Look closely."
+  }
+}

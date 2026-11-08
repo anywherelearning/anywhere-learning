@@ -83,7 +83,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "nature-journal-walks": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20My%20nature%20journal%20v7.pdf",
   "nature-walk-task-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Nature%20Walk%20Task%20Cards%20v9.pdf",
   "neighbourhood-interview": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Neighbourhood%20Interview%20Project%20v6.pdf",
-  "neighbourhood-problem-spotter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Neighbourhood%20Problem%20Spotter%20v2.pdf",
+  "neighbourhood-problem-spotter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Neighbourhood%20Problem%20Spotter%20v3.pdf",
   "outdoor-learning-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Outdoor%20learning%20missions%20v8.pdf",
   "outdoor-movement-challenge-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Movement%20Challenge%20Cards%20v7.pdf",
   "outdoor-stem-challenges": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Outdoor%20STEM%20Challenge%20Cards%20v9.pdf",

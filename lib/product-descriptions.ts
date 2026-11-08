@@ -2087,23 +2087,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'neighbourhood-problem-spotter': {
     opening:
-      'Walk your neighbourhood with fresh eyes. Spot real problems, think about causes, and brainstorm solutions. Kids practise observation, critical thinking, and civic engagement. Problem-solving that connects kids to the place they live and the people around them.',
+      'Your child walks the neighbourhood with you and looks at it like a detective. They spot what could work better, pick one problem worth solving, gather real evidence and find out why it happens. Then they design the simplest fix that could work, pitch it to someone who can say yes, and take care of one small part themselves.',
     whatsIncluded: [
-      'Neighbourhood observation walk guide',
-      'Problem identification and categorisation',
-      'Root cause analysis activities',
-      'Solution brainstorming and feasibility assessment',
-      'Community proposal or presentation project',
+      'A 5-step guide from the first walk to a real pitch',
+      'A worked example that turns a grumble into a proposal',
+      'What to look for card and Pick one card',
+      'Who looks after it card and 30-second Pitch it card',
+      'Proposal page to fill in and send',
     ],
-    skillTags: ['Observation', 'Critical Thinking', 'Civic Engagement', 'Problem-Solving', 'Community'],
+    skillTags: ['Critical Thinking', 'Civic Engagement', 'Problem-Solving', 'Observation', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child walks their own neighbourhood looking for what does not work, then researches why. Root cause, not symptom. They propose a fix, check whether it is actually feasible, and then have to persuade somebody it is worth doing.',
+        'Your child learns the difference between a complaint and a proposal. They walk their own neighbourhood, count what they see, talk to the people it affects and keep asking why. Then they make a short case to the person who can actually do something about it.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Observing, analysing and evaluating what is really wrong with a shared space' },
-        { skill: 'Research', where: 'Investigating the causes and the options that already exist' },
-        { skill: 'Problem-Solving', where: 'Proposing a solution and assessing honestly whether it could work' },
-        { skill: 'Communication', where: 'Presenting the case and persuading someone who can act on it' },
+        { skill: 'Critical Thinking', where: 'Getting from what they see to what is really causing it' },
+        { skill: 'Math', where: 'Counting, tallying and comparing across several visits' },
+        { skill: 'Geography', where: 'Mapping the route and looking for patterns on the map' },
+        { skill: 'Problem-Solving', where: 'Choosing the simplest fix and answering objections' },
+        { skill: 'Communication', where: 'Making a 30-second case to someone who can say yes' },
       ],
     },
     format: 'Project Guide',
