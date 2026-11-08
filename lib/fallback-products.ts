@@ -1936,15 +1936,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "The Swap Day Challenge",
     slug: "swap-day-challenge",
     description:
-      "Plan and execute a swap day where kids take on someone else's role or responsibilities. Builds empathy, planning skills, and appreciation for what others do. A unique challenge that changes how kids see the people around them.",
+      "Your child runs the house for a day or half a day while you work for them. They find all the work that keeps a home going, including the remembering and deciding nobody sees, then plan the day and the meals and handle what goes wrong. Afterwards they keep one job for good.",
     shortDescription:
-      "Empathy activity for kids ages 6-14: swap roles for a day. Empathy through experience, low-prep and memorable.",
+      "Life skills activity for kids ages 6-14: run the house for a day, see the invisible work and keep one job for good.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLo8YAkIBECpwGmkzNQZEYe",
     blobUrl: "",
     imageUrl: "/products/swap-day-challenge.jpg",
-    previewFile: "Preview Planning & Problem-Solving The Swap Day Challenge.pdf",
+    previewFile: "Preview Planning & Problem-Solving The Swap Day Challenge v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

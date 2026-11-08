@@ -1,0 +1,336 @@
+{
+  "slug": "swap-day-challenge",
+  "category": "Planning & Problem-Solving",
+  "title": "The Swap Day Challenge",
+  "tagline": "Notice · Plan · Run · Keep one",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid runs the house for a day, or half a day, while you work for them. They find all the work that keeps a home going, choose what they'll take on, plan the day and the meals, run it, handle what goes wrong, and keep one job for good.",
+  "need": [
+    "A day or half a day at home with nothing big planned",
+    "Paper, a pencil and a clock",
+    "Whatever's already in the kitchen",
+    "A willingness to do it their way"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "elapsed time, portions and quantities"
+    },
+    {
+      "subject": "Health",
+      "text": "planning meals that feed everyone"
+    },
+    {
+      "subject": "Planning",
+      "text": "scheduling, order and priorities"
+    },
+    {
+      "subject": "Communication",
+      "text": "asking people to help, kindly"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Today you work for them. Your best phrase is 'What do you think?' Stay close for anything with heat, blades or risk, and otherwise let them lead, even when they do it differently. It's the only way they'll feel how much there is to hold in your head.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Find the work and choose the swap (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Plan the day and the meals (Step 3)."
+      },
+      {
+        "when": "Swap Day",
+        "what": "Run the day, then talk about it and keep one job (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They're done by lunch",
+        "a": "That's real information. Let them hand over the afternoon and talk about why it got heavy. A half day counts."
+      },
+      {
+        "q": "A sibling won't listen to them",
+        "a": "Back them up by being a good employee yourself. Then ask them 'How could you ask so they'd want to help?'"
+      },
+      {
+        "q": "I can't watch them do it wrong",
+        "a": "Find something to do in another room. If nobody's hurt and supper's late, the day is going just fine."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Running a home isn't a list of chores. Most of it is the remembering, the noticing and the deciding that nobody sees.",
+    "before": "Supper just happens.",
+    "model": [
+      {
+        "part": "Decide",
+        "line": "What will everyone actually eat tonight?"
+      },
+      {
+        "part": "Check",
+        "line": "Is there rice? Enough eggs? Someone doesn't like peppers."
+      },
+      {
+        "part": "Time",
+        "line": "Start at 5:00 to eat at 6:00, and set the table at 5:45."
+      },
+      {
+        "part": "After",
+        "line": "Dishes, wipe the counter, and write 'rice' on the list."
+      }
+    ],
+    "modelNote": "One line on a chore list turned out to be about ten jobs, and half of them happened before anyone touched a pot."
+  },
+  "steps": [
+    {
+      "title": "Find all the work",
+      "why": "You can't run what you can't see.",
+      "kid": "Your kid follows a normal day and lists every job that keeps the house going, using the Where to look card in the Swap Day Toolkit at the end of the guide. Then they use The invisible work card to find the jobs nobody can see.",
+      "you": "Say your invisible jobs out loud for a day: 'I'm checking if we need milk.' 'I'm remembering the dentist.' Most kids have no idea these exist.",
+      "ask": [
+        "What happens here every day that you've never noticed?",
+        "Who does this job right now?"
+      ],
+      "tip": "Ask them to guess how many jobs there are before they start. The real number is usually a surprise.",
+      "levels": {
+        "explore": "Name five jobs that happen in your home every day.",
+        "develop": "List the jobs by morning, afternoon and evening, and mark who does each one.",
+        "extend": "Time a few of the jobs over a couple of days and add up the hours each person does in a week."
+      }
+    },
+    {
+      "title": "Choose your swap",
+      "why": "Too small and they won't feel it. Too big and they'll quit at lunch.",
+      "kid": "Your kid looks at the list and decides what they'll take over and for how long, using the Swap rules card to see what's theirs and what needs an adult. They pick the job they're most nervous about too.",
+      "you": "Agree on the safety line together, then trust it. Tell them what you'll do as the employee, and ask what they need from you.",
+      "ask": [
+        "Is this enough to really feel what it's like?",
+        "Which job makes you the most nervous?"
+      ],
+      "tip": "Include at least one job from The invisible work card. Remembering is where the real swap happens.",
+      "levels": {
+        "explore": "Pick three jobs to take over for half a day.",
+        "develop": "Take over a full day of jobs, and say who will do what.",
+        "extend": "Take over the whole day, including meals, the family schedule and all the remembering."
+      }
+    },
+    {
+      "title": "Plan the day and the meals",
+      "why": "A day with no plan runs you. A day with a plan is yours.",
+      "kid": "Your kid fills in the Swap Day plan at the end of the guide, with times, jobs and breaks. They plan at least one meal: what to make, what's already in the house, how long it takes and who won't eat it.",
+      "you": "Check that it's safe and leave the rest alone, even if lunch is cereal. Ask 'What has to happen before that can happen?' and let them work out the order.",
+      "ask": [
+        "What takes longer than you think?",
+        "What's the backup if the meal goes wrong?"
+      ],
+      "tip": "Leave some empty space in the plan. Everything at home takes longer than it should.",
+      "levels": {
+        "explore": "Write the times for your three jobs, and plan one simple meal.",
+        "develop": "Plan the whole day hour by hour, with two meals and what they need.",
+        "extend": "Plan all the meals and snacks, with a shopping list and buffer time."
+      }
+    },
+    {
+      "title": "Run the day",
+      "why": "This is the part you can't learn from a list.",
+      "kid": "Your kid runs Swap Day: following the plan, checking things off and noting what took longer. When something goes wrong, they decide what to do, using the Twists card if the day is going too smoothly.",
+      "you": "Clock in as the employee. Ask 'What would you like me to do next?' Stay in the kitchen for anything with heat or knives. Otherwise only step in for safety, or when you're asked.",
+      "ask": [
+        "How's it going compared to the plan?",
+        "When two things clash, what comes first?"
+      ],
+      "tip": "A real twist will almost certainly turn up by itself. Only add one if the day needs it.",
+      "levels": {
+        "explore": "Do your three jobs and check them off.",
+        "develop": "Run the full day and write down what went on time and what didn't.",
+        "extend": "Run the day, handle a twist, and rework the rest of the schedule on the spot."
+      }
+    },
+    {
+      "title": "Talk about it and keep one job",
+      "why": "The swap ends tonight. What they noticed doesn't have to.",
+      "kid": "Your kid talks through what went well, what surprised them and what took the longest, and compares the plan with what really happened. Then they choose one job to keep for good, including the remembering part.",
+      "you": "Tell them something specific you saw them do well. Then tell them honestly what it was like to be the employee.",
+      "ask": [
+        "What was harder than it looks?",
+        "What would you do differently next time?"
+      ],
+      "tip": "Save this talk for after supper, once everyone has eaten and sat down.",
+      "levels": {
+        "explore": "Say one thing that was hard and one you're proud of, and pick a job to keep.",
+        "develop": "Compare the plan with the real day, and choose a job to keep, with a day and a time.",
+        "extend": "Propose a better way to share the jobs in your home, and try it for a month."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Swap Day Toolkit",
+    "intro": "Where the work hides, who's allowed to do what, and what might go wrong.",
+    "items": [
+      {
+        "name": "Where to look",
+        "lines": [
+          {
+            "k": "Morning:",
+            "v": "breakfast, getting going, pets"
+          },
+          {
+            "k": "Meals:",
+            "v": "planning, cooking, dishes, snacks"
+          },
+          {
+            "k": "Clean:",
+            "v": "laundry, floors, counters, garbage"
+          },
+          {
+            "k": "Who's where:",
+            "v": "rides, times, activities"
+          },
+          {
+            "k": "Outside:",
+            "v": "plants, yard, mail"
+          }
+        ],
+        "ask": "What happens before anyone's awake?"
+      },
+      {
+        "name": "The invisible work",
+        "lines": [
+          {
+            "k": "Remembering:",
+            "v": "dentist, birthdays, library books"
+          },
+          {
+            "k": "Noticing:",
+            "v": "we're low on milk"
+          },
+          {
+            "k": "Deciding:",
+            "v": "what's for supper?"
+          },
+          {
+            "k": "Restocking:",
+            "v": "soap, paper, snacks"
+          },
+          {
+            "k": "Sorting out:",
+            "v": "the arguments"
+          }
+        ],
+        "ask": "Who does this right now?"
+      },
+      {
+        "name": "Swap rules",
+        "lines": [
+          {
+            "k": "Kid leads:",
+            "v": "the schedule, menu, tidying"
+          },
+          {
+            "k": "With an adult:",
+            "v": "stove, oven, sharp knives"
+          },
+          {
+            "k": "Adults keep:",
+            "v": "driving, money, medicine"
+          },
+          {
+            "k": "The boss:",
+            "v": "asks nicely"
+          },
+          {
+            "k": "Anyone:",
+            "v": "can call a time-out"
+          }
+        ],
+        "ask": "Who's the adult for this one?"
+      },
+      {
+        "name": "Twists",
+        "lines": [
+          {
+            "k": "New mess:",
+            "v": "right after you cleaned"
+          },
+          {
+            "k": "Missing:",
+            "v": "a key ingredient"
+          },
+          {
+            "k": "Forgot:",
+            "v": "someone's due somewhere in 30 minutes"
+          },
+          {
+            "k": "Too slow:",
+            "v": "a job takes twice as long"
+          },
+          {
+            "k": "Clash:",
+            "v": "two things at the same time"
+          }
+        ],
+        "ask": "What comes first?"
+      }
+    ],
+    "after": {
+      "label": "Swap Day plan",
+      "lines": [
+        "Time",
+        "Job",
+        "Who helps",
+        "How long it really took"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Empathy",
+      "text": "feeling what someone else carries"
+    },
+    {
+      "name": "Time sense",
+      "text": "learning how long things really take"
+    },
+    {
+      "name": "Priorities",
+      "text": "choosing when two things clash"
+    },
+    {
+      "name": "Responsibility",
+      "text": "owning a job from start to finish"
+    }
+  ],
+  "conclusion": {
+    "headline": "They've run the place, and now they know what it takes.",
+    "text": "Watch the week after. If they notice the dishwasher is full, write something on the list, or ask 'Do you need help with that?', they've started to see the work that used to be invisible.",
+    "celebrate": "When you all sit down that night, say: 'Thank you for today. I know exactly what that took.'",
+    "extensions": [
+      "Swap with a sibling and compare how each of you ran the day",
+      "Run a Swap Day for a grandparent or a neighbour who could use one",
+      "Plan and cook the family's meals for a whole week",
+      "Hold a family meeting to share out the invisible work"
+    ]
+  },
+  "signs": [
+    "They notice what needs doing without being asked",
+    "They say thank you for things they used not to see",
+    "They think about what has to happen first"
+  ],
+  "makeItReal": "They keep one job from Swap Day for good, and that includes remembering it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/swap-day-challenge.jpg",
+    "alt": "Watercolour of a kitchen counter with a clipboard schedule, a clock, a bowl of eggs, a wooden spoon and an apron",
+    "caption": "Most of the work is the part nobody sees."
+  }
+}

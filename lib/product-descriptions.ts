@@ -2183,21 +2183,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'swap-day-challenge': {
     opening:
-      'Plan and run a swap day where kids take on someone else\'s role or responsibilities for a full day. A unique challenge that builds empathy, planning skills, and genuine appreciation for what the people around them do every day.',
+      'Your child runs the house for a day or half a day while you work for them. They find all the work that keeps a home going, including the remembering and deciding nobody sees, then plan the day and the meals and handle what goes wrong. Afterwards they keep one job for good.',
     whatsIncluded: [
-      'Swap day planning and execution guide',
-      'Role research and preparation activities',
-      'Schedule planning and logistics',
-      'Observation and empathy reflection prompts',
-      'Post-swap discussion and appreciation activities',
+      'A 5-step guide from finding the work to keeping one job',
+      'A worked example that shows what is inside one chore',
+      'Where to look card and The invisible work card',
+      'Swap rules card and Twists card',
+      'Swap Day plan to fill in and compare with the real day',
     ],
-    skillTags: ['Empathy', 'Planning', 'Life Skills', 'Responsibility', 'Reflection'],
+    skillTags: ['Life Skills', 'Planning', 'Empathy', 'Time Management', 'Responsibility'],
     insideTheLearning: {
       lead:
-        'Your child takes over a parent\'s role for a day, properly. The cooking, the cleaning, the scheduling, the whole thing. Most of the learning arrives about three hours in, when they realise how much of it was invisible to them.',
+        'Your child finds out what it takes to keep a home going, and most of it is the part nobody sees. They plan the day, make the calls, run it with you as the employee and then keep one job for good.',
       skills: [
-        { skill: 'Planning', where: 'Scheduling and sequencing a whole day of real responsibilities' },
-        { skill: 'Life Skills', where: 'Cooking, cleaning and household management, done for real rather than helped with' },
+        { skill: 'Planning', where: 'Scheduling the day and working out what has to happen first' },
+        { skill: 'Math', where: 'Elapsed time, portions and how long things really take' },
+        { skill: 'Empathy', where: 'Feeling what other people in the home carry' },
+        { skill: 'Problem-Solving', where: 'Deciding what comes first when two things clash' },
+        { skill: 'Life Skills', where: 'Cooking, cleaning and keeping one job for good' },
       ],
     },
     format: 'Project Guide',

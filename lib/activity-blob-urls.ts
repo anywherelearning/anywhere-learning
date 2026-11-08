@@ -123,7 +123,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "summer-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Summer%20v2.pdf",
   "supply-chain-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Supply%20Chain%20Detective%20v2.pdf",
   "survival-base": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20a%20Survival%20Base%20for%20an%20Imaginary%20Expedition%20v5.pdf",
-  "swap-day-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20The%20Swap%20Day%20Challenge%20v2.pdf",
+  "swap-day-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20The%20Swap%20Day%20Challenge%20v3.pdf",
   "teach-it-to-learn-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Teach%20It%20To%20Learn%20It%20v6.pdf",
   "theme-park": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Theme%20Park%20or%20Adventure%20Course%20v4.pdf",
   "three-ais-one-question": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%2B%20Digital%20Literacy%20-%20THREE%20AIs%2C%20ONE%20QUESTION%20v2.pdf",

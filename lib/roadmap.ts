@@ -458,6 +458,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'outdoor-survival-planner': ['critical-thinking'],
   'pack-like-a-pro': ['critical-thinking'],
   'scavenger-hunt-designer': ['self-management', 'creativity'],
+  'swap-day-challenge': ['self-management'],
 };
 
 /**
