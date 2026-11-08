@@ -1207,29 +1207,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'community-impact': {
     opening:
-      'Your child picks a real problem in their neighbourhood, figures out who it affects, designs a solution, builds a plan, and does something about it. Leadership, empathy, and project management through a project that actually matters to real people.',
+      'Your child does something real for people around them. They pick a group they are part of, ask what would actually help, plan the smallest useful thing and do it themselves. Then they go back to find out if it worked, and decide how to keep it going after they leave.',
     whatsIncluded: [
-      'Neighbourhood needs spotting with 6 project idea cards',
-      'Who-does-this-affect research step',
-      'Solution design and action planning',
-      'Project execution with real-world logistics',
-      'Reflection and Version 2 thinking',
+      'A 5-step guide from picking your people to keeping it going',
+      'A worked example that shows why asking beats guessing',
+      'Who is around you card and Good questions card',
+      'Ways to help card and Keep it going card',
+      'Our project page to fill in together',
     ],
-    skillTags: ['Leadership', 'Problem-Solving', 'Community'],
-    // Oct 19 2026: this page held "community impact project" while the post sat deep.
-    // Guide framing here so the post can own the how-to search.
-    seo: {
-      title: 'Community Impact: A Parent-Led Project Guide for Kids',
-      description:
-        'The guide your family follows to tackle a real neighbourhood problem: spot the need, find who it affects, plan a fix and carry it out together.',
-    },
+    skillTags: ['Citizenship', 'Listening', 'Planning', 'Leadership', 'Follow-Through'],
     insideTheLearning: {
       lead:
-        'Your child finds something their own neighbourhood actually needs, works out who it affects, and then does something about it. The logistics are real, which is the point. A plan that survives contact with other people teaches more than a plan that stays on paper.',
+        'Your child finds out that helping starts with asking. They talk to real people, do something small and useful with their own hands, then go back to see if it made a difference and who could keep it going.',
       skills: [
-        { skill: 'Planning', where: 'Designing the project and handling the real logistics that make it happen' },
-        { skill: 'Communication', where: 'Talking to the people it affects, before and after' },
-        { skill: 'Reflection', where: 'Working out what actually changed, and what they would do differently' },
+        { skill: 'Citizenship', where: 'Noticing who could use a hand and choosing to do something about it' },
+        { skill: 'Communication', where: 'Asking real people what would help and telling someone what happened' },
+        { skill: 'Planning', where: 'Working out the smallest useful thing and who has to say yes' },
+        { skill: 'Math', where: 'Counting and timing what changed from before to after' },
+        { skill: 'Follow-Through', where: 'Going back to check and deciding how to keep it going' },
       ],
     },
     format: 'Project Guide',

@@ -461,6 +461,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'swap-day-challenge': ['self-management'],
   'what-if-scenario-lab': ['communication'],
   'decision-lab': ['critical-thinking', 'emotional'],
+  'community-impact': ['communication', 'self-management'],
 };
 
 /**
