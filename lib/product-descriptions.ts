@@ -1216,6 +1216,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Our project page to fill in together',
     ],
     skillTags: ['Citizenship', 'Listening', 'Planning', 'Leadership', 'Follow-Through'],
+    // Guide framing (A42, restored Nov 9 2026 after the listing rewrite) so the post can own the how-to search.
+    seo: {
+      title: 'Community Impact: A Parent-Led Project Guide for Kids',
+      description:
+        'The guide your family follows to do something real for people nearby: ask what would help, do the smallest useful thing, then go back and keep it going.',
+    },
     insideTheLearning: {
       lead:
         'Your child finds out that helping starts with asking. They talk to real people, do something small and useful with their own hands, then go back to see if it made a difference and who could keep it going.',
@@ -2163,6 +2169,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Hunt plan page for every spot, clue and hint',
     ],
     skillTags: ['Planning', 'Creative Writing', 'Problem-Solving', 'Leadership', 'Communication'],
+    seo: {
+      title: "Design Your Own Scavenger Hunt: Kids' Project, Ages 6-14",
+      description:
+        'Kids design and run their own scavenger hunt: pick a theme, write the clues, map the route, test it on the family and make it better. Ages 6 to 14.',
+    },
     insideTheLearning: {
       lead:
         'Your child is in charge of an event other people actually play. They have to think like someone who does not know the answer, write just enough, test it on you and fix what breaks. Then they run the whole thing.',

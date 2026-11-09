@@ -211,6 +211,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'In Costa Rica, the kids spotted a crocodile on a trail in Corcovado. In El Salvador, we walked the beach and noticed the cliffs were crumbling, erosion, right there in front of us. In Panama, my son spent an entire boat ride identifying different species of monkeys. None of this came from a lesson plan. You just need to be outside. Our [full guide to nature-based learning](/guides/nature-based-learning) covers the bigger framework if you want to lean into this as a way of life.' },
       { type: 'paragraph', text: 'This is what real outdoor learning looks like. Not a fill-in-the-blank worksheet about ecosystems, but a real, living creature that sparks genuine wonder. And it costs nothing.' },
       { type: 'paragraph', text: 'The trick to making walks feel rich is having a deep bench of things to actually DO on them. Below are 30 nature walk activities, organized by mode: observe, collect, experiment, create, document, slow. Pick one or two before you head out. Or print the list and let your kid pick. And when the walk ends in the garden, the [backyard science experiments](/blog/backyard-science-experiments) pick up where the walk left off.' },
+      { type: 'paragraph', text: 'If you’d rather have it all on one page, here’s our [free nature walk checklist](/ideas/nature-walk-ideas): 50 ideas to print or screenshot before you head out.' },
       { type: 'heading', level: 2, text: 'Observe (10 ways to look harder)' },
       { type: 'paragraph', text: 'The skill of observation is the foundation of every science. These activities sharpen what a kid notices on a walk they have done a hundred times.' },
       { type: 'heading', level: 3, text: '1. Find five different leaf shapes' },
@@ -762,6 +763,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'If you\u2019ve got a 4-year-old and a 10-year-old, give them the same hunt but different expectations. The little one finds \u201csomething soft.\u201d The older one has to explain why it\u2019s soft: is it a texture thing? A structural thing? Does it serve a purpose?' },
       { type: 'paragraph', text: 'You can also use a tiered system: the base hunt has 10 items everyone can find, plus 5 bonus challenges for older kids that require measurement, sketching, or written observation. Everyone feels successful.' },
       { type: 'tip', title: 'Don\u2019t over-explain', text: 'Resist the urge to turn every find into a lecture. Ask questions instead. \u201cWhy do you think that mushroom is growing there and not over here?\u201d Let their curiosity do the teaching.' },
+      { type: 'paragraph', text: 'For a looser option that works across ages, our [nature walk checklist for kids](/ideas/nature-walk-ideas) has 50 ideas, so everyone can pick their own.' },
       { type: 'heading', level: 2, text: 'Beyond the checklist' },
       { type: 'paragraph', text: 'The best scavenger hunts end in questions, not answers. \u201cWe found this weird insect, what is it?\u201d becomes the evening\u2019s research project. \u201cWhy do these two trees lose their leaves at different times?\u201d becomes a genuine scientific enquiry.' },
       { type: 'paragraph', text: 'That\u2019s the difference between a scavenger hunt that fills 20 minutes and one that sparks a week of curiosity. The checklist is just the starting point.' },
@@ -1082,6 +1084,8 @@ const posts: BlogPost[] = [
   {
     slug: 'outdoor-stem-challenges',
     title: '15 Outdoor STEM Challenges That Don\u2019t Feel Like School',
+    seoTitle: 'Outdoor STEM Activities for Kids: 15 Challenges, No Kit',
+    metaDescription: '15 outdoor STEM activities for kids, built from sticks, mud, water and whatever is outside. Build it, test it, measure it, try again. Nothing to buy.',
     excerpt: 'No lab coat required. These outdoor STEM activities use sticks, mud, water, and curiosity to teach engineering, physics, biology, and problem-solving.',
     hook: 'A creek, a pile of sticks, and a challenge. That\u2019s three hours of engineering no worksheet can match.',
     category: 'nature-learning',
@@ -4626,7 +4630,7 @@ const posts: BlogPost[] = [
     content: [
       { type: 'summary', text: 'Forest school is a child-led, outdoor learning approach that uses nature as the classroom. You do not need formal training to start. The 15 activities below, from shelter building and nature art to fire circles and free play, give you everything you need to run forest school sessions in your own backyard or nearest patch of woods.' },
       { type: 'paragraph', text: 'Forest school started in Scandinavia, where kids spend entire school days outside in all weather. The philosophy is simple: children learn best through hands-on, self-directed play in natural settings. Risk is managed, not eliminated. And the adult is a facilitator, not an instructor.' },
-      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to [nature-based learning](/guides/nature-based-learning), our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start.' },
+      { type: 'paragraph', text: 'The good news? You do not need a forest school practitioner certification to bring this into your family life. If you have access to trees, dirt, and sticks, you already have the classroom. If you are new to [nature-based learning](/guides/nature-based-learning), our guide to [turning nature walks into science lessons](/blog/nature-walks-science) is a great place to start. For an easy first outing, this [nature walk checklist for kids](/ideas/nature-walk-ideas) has 50 things to look for and try, no gear needed.' },
 
       { type: 'heading', level: 2, text: 'What forest school actually does for kids' },
       { type: 'paragraph', text: 'Forest school is not just fresh air and running around, though those matter more than we give them credit for. A growing body of research links regular forest school sessions to real gains in confidence, social skills, concentration, and physical coordination. A 2023 systematic review of preschool forest school programs found that children who attended showed advantages over their indoor-schooled peers in cognitive function, creative thinking, social skills, and connection to nature.' },
@@ -6290,6 +6294,7 @@ const posts: BlogPost[] = [
       ] },
       { type: 'paragraph', text: 'That is it. Every page has at least one of each. Three prompts cover sensory observation, scientific curiosity, and connection-making, which are the building blocks of how scientists, naturalists, and good thinkers process the world. It pairs naturally with our post on [turning nature walks into science lessons](/blog/nature-walks-science), where the same kinds of questions drive what you do with your feet instead of your pencil.' },
 
+      { type: 'paragraph', text: 'Stuck on what to record? Bring this [nature walk checklist](/ideas/nature-walk-ideas) and let your kid pick one thing from it to notice and put on the page.' },
       { type: 'image', src: '/images/nature-journaling-shells.jpeg', alt: 'Kid on a stony beach examining a single shell from her collection bucket, the kind of close-up observation that fuels a nature journal entry', caption: 'A nature journal entry can start anywhere. A shell on a beach. A weed in a sidewalk crack. The point is the noticing, not the location.' },
 
       { type: 'tip', title: 'The "I wonder" trap', text: 'Resist the urge to answer your kid\'s "I wonder" questions, even when you know the answer. The wondering itself is the skill. If you supply the answer too fast, the prompt stops being generative. Better response: "Hmm, good question. How could we find out?"' },

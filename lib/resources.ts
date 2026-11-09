@@ -620,7 +620,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'We wrote a full guide on [turning nature walks into science lessons](/blog/nature-walks-science) with specific questions and observation techniques for different ages. The key takeaway: the best science questions come from your child, not from you. Your job is to create the conditions where those questions emerge naturally, and that means slowing down, getting off the main path, and giving your child time to notice things at their own pace.',
+        text: 'We wrote a full guide on [turning nature walks into science lessons](/blog/nature-walks-science) with specific questions and observation techniques for different ages. The key takeaway: the best science questions come from your child, not from you. Your job is to create the conditions where those questions emerge naturally, and that means slowing down, getting off the main path, and giving your child time to notice things at their own pace. If you want something in your pocket for the walk itself, our free [nature walk checklist](/ideas/nature-walk-ideas) has 50 ideas to pick from.',
       },
       {
         type: 'heading',
