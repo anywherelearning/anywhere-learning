@@ -18,7 +18,8 @@ import { NextRequest, NextResponse, after } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { standardLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { createMembershipCheckout } from '@/lib/membership-checkout';
-import { FALL_OFFER, FALL_OFFER_PRICE_USD, OFFER_COOKIE, isFallOfferActive } from '@/lib/fall-offer';
+import { OFFER_COOKIE } from '@/lib/fall-offer';
+import { BLACK_FRIDAY_OFFER, BLACK_FRIDAY_PRICE_USD, isBlackFridayActive } from '@/lib/black-friday';
 import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD } from '@/lib/membership';
 import { OWNER_OFFER, OWNER_OFFER_HOURS } from '@/lib/skills-map';
 import { sendMetaEvent, userDataFromRequest } from '@/lib/meta-capi';
@@ -63,13 +64,13 @@ export async function GET(req: NextRequest) {
 
   // Offer the buyer arrived with, from `?offer=` or the cookie set on the way
   // to sign-up (in case the query string doesn't survive the round trip):
-  //   - 'fall' from /fall, while the fall window is open
+  //   - 'bf' from /black-friday, while the sale window is open
   //   - 'map' from a Skills Map purchase; eligibility (bought within 72h) is
   //     checked against the signed-in email in createMembershipCheckout
   const offerParam = req.nextUrl.searchParams.get('offer') || req.cookies.get(OFFER_COOKIE)?.value;
-  const offer: 'fall' | 'map' | undefined =
-    offerParam === FALL_OFFER.slug && isFallOfferActive()
-      ? 'fall'
+  const offer: 'bf' | 'map' | undefined =
+    offerParam === BLACK_FRIDAY_OFFER.slug && isBlackFridayActive()
+      ? 'bf'
       : offerParam === OWNER_OFFER.slug
         ? 'map'
         : undefined;
@@ -77,8 +78,8 @@ export async function GET(req: NextRequest) {
     if (offer) {
       res.cookies.set(OFFER_COOKIE, offer, {
         expires:
-          offer === 'fall'
-            ? new Date(FALL_OFFER.endsAt.getTime() + 3 * 60 * 60 * 1000)
+          offer === 'bf'
+            ? new Date(BLACK_FRIDAY_OFFER.endsAt.getTime() + 3 * 60 * 60 * 1000)
             : new Date(Date.now() + OWNER_OFFER_HOURS * 60 * 60 * 1000),
         path: '/',
         sameSite: 'lax',
@@ -147,7 +148,7 @@ export async function GET(req: NextRequest) {
       // learn from in its first days. Server-only (this is a redirect, no
       // page for the browser pixel), so no dedupe pair is needed.
       const value =
-        plan === 'monthly' ? MONTHLY_PRICE_USD : offer === 'fall' ? FALL_OFFER_PRICE_USD : FOUNDER_PRICE_USD;
+        plan === 'monthly' ? MONTHLY_PRICE_USD : offer === 'bf' ? BLACK_FRIDAY_PRICE_USD : FOUNDER_PRICE_USD;
       after(() =>
         sendMetaEvent({
           eventName: 'InitiateCheckout',

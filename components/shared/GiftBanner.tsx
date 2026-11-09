@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { isGiftSeason } from '@/lib/gift';
+import { isBlackFridayActive } from '@/lib/black-friday';
 
 /**
  * Sitewide holiday strip for gift memberships, mounted with the other banners
@@ -23,7 +24,8 @@ export default function GiftBanner() {
 
   useEffect(() => {
     const forced = new URLSearchParams(window.location.search).get('giftbanner') === '1';
-    setShow(forced || isGiftSeason());
+    // Steps aside during Black Friday so two sale strips don't stack.
+    setShow(forced || (isGiftSeason() && !isBlackFridayActive()));
   }, []);
 
   if (!show) return null;

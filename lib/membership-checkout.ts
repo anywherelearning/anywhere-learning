@@ -24,7 +24,7 @@ import {
   getAccessContextForClerkId,
   isTrialEligible,
 } from '@/lib/access';
-import { FALL_OFFER, FALL_OFFER_PRICE_USD, isFallOfferActive } from '@/lib/fall-offer';
+import { BLACK_FRIDAY_OFFER, BLACK_FRIDAY_PRICE_USD, isBlackFridayActive } from '@/lib/black-friday';
 import { metaMatchToMetadata, type MetaUserData } from '@/lib/meta-capi';
 import { OWNER_OFFER, OWNER_OFFER_HOURS } from '@/lib/skills-map';
 import { db } from '@/lib/db';
@@ -60,9 +60,10 @@ export async function createMembershipCheckout(opts: {
   origin: string;
   /** Billing plan. Annual (the featured, founder-eligible plan) by default. */
   plan?: MembershipPlan;
-  /** Promo the buyer arrived with: 'fall' (from /fall, ignored once expired)
-   *  or 'map' (Skills Map owners, verified against map_purchases by email). */
-  offer?: 'fall' | 'map';
+  /** Promo the buyer arrived with: 'bf' (from /black-friday, ignored outside
+   *  the sale window) or 'map' (Skills Map owners, verified against
+   *  map_purchases by email). */
+  offer?: 'bf' | 'map';
   /**
    * The buyer's Meta matching data (from userDataFromRequest). The Stripe
    * webhook that sends the server-side StartTrial runs on Stripe's request,
@@ -107,16 +108,16 @@ export async function createMembershipCheckout(opts: {
   // when Clerk isn't configured (bare local dev) there's no trial.
   const applyTrial = clerkId ? await isTrialEligible(clerkId) : false;
 
-  // Fall offer: $20 off the yearly founder rate, so the first year is $79.
+  // Black Friday: $20 off the yearly founder rate, so the first year is $79.
   // Founder-only because the coupon is sized against $99 (and restricted to
   // the founder product at Stripe).
-  const applyFallOffer =
-    opts.offer === 'fall' && plan === 'annual' && offerFounderRate && isFallOfferActive();
+  const applyBlackFriday =
+    opts.offer === 'bf' && plan === 'annual' && offerFounderRate && isBlackFridayActive();
 
   // Skills Map owners: 20% off the first year of the yearly plan, for 72h
   // after buying the Map. The coupon is limited to the yearly products.
   const applyMapOffer =
-    !applyFallOffer && opts.offer === 'map' && plan === 'annual' && (await hasRecentMapPurchase(email));
+    !applyBlackFriday && opts.offer === 'map' && plan === 'annual' && (await hasRecentMapPurchase(email));
   const mapFirstYear = Math.round((offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD) * (100 - OWNER_OFFER.percentOff)) / 100;
 
   // Debug log (dev only): what the route decided about credit/trial/rate per
@@ -127,7 +128,7 @@ export async function createMembershipCheckout(opts: {
       plan,
       trial: applyTrial,
       founderRate: offerFounderRate,
-      fallOffer: applyFallOffer,
+      blackFriday: applyBlackFriday,
       mapOffer: applyMapOffer,
     });
   }
@@ -143,10 +144,10 @@ export async function createMembershipCheckout(opts: {
     ? applyTrial
       ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${mapFirstYear.toFixed(2)} for your first year (Skills Map owner, ${OWNER_OFFER.percentOff}% off), and ${priceLine} after that. Cancel anytime before your trial ends and pay nothing.`
       : `Skills Map owner: ${OWNER_OFFER.percentOff}% off your first year ($${mapFirstYear.toFixed(2)}), then ${priceLine}.`
-    : applyFallOffer
+    : applyBlackFriday
     ? applyTrial
-      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${FALL_OFFER_PRICE_USD} for your first year (${FALL_OFFER.name}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
-      : `${FALL_OFFER.name}: $${FALL_OFFER_PRICE_USD} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${BLACK_FRIDAY_PRICE_USD} for your first year (${BLACK_FRIDAY_OFFER.name}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
+      : `${BLACK_FRIDAY_OFFER.name}: $${BLACK_FRIDAY_PRICE_USD} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
     : applyTrial
     ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts, ${priceLine}${offerFounderRate ? ', your founder rate locked in for life' : ''}. Cancel anytime before then and pay nothing.`
     : offerFounderRate
@@ -165,8 +166,8 @@ export async function createMembershipCheckout(opts: {
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
     // Stripe rejects `discounts` together with `allow_promotion_codes`.
-    ...(applyFallOffer
-      ? { discounts: [{ coupon: FALL_OFFER.couponId }] }
+    ...(applyBlackFriday
+      ? { discounts: [{ coupon: BLACK_FRIDAY_OFFER.couponId }] }
       : applyMapOffer
         ? { discounts: [{ coupon: OWNER_OFFER.couponId }] }
         : { allow_promotion_codes: true }),
@@ -186,7 +187,7 @@ export async function createMembershipCheckout(opts: {
         // founder status of THIS subscription.
         founder_phase: String(offerFounderRate),
         trial_applied: String(applyTrial),
-        ...(applyFallOffer && { offer: FALL_OFFER.slug }),
+        ...(applyBlackFriday && { offer: BLACK_FRIDAY_OFFER.slug }),
         ...(applyMapOffer && { offer: OWNER_OFFER.slug }),
         ...(clerkId && { clerk_id: clerkId }),
         // For the trial-to-paid Subscribe event 7 days later.
@@ -194,8 +195,8 @@ export async function createMembershipCheckout(opts: {
       },
     },
     success_url: `${origin}/checkout/success?tier=member${applyTrial ? '&trial=1' : ''}${plan === 'monthly' ? '&plan=monthly' : ''}&session_id={CHECKOUT_SESSION_ID}`,
-    // Fall-offer buyers came from the ad landing page, so send them back there.
-    cancel_url: applyFallOffer ? `${origin}/fall?cancelled=1` : `${origin}/?cancelled=1#membership`,
+    // Black Friday buyers came from the offer page, so send them back there.
+    cancel_url: applyBlackFriday ? `${origin}/black-friday?cancelled=1` : `${origin}/?cancelled=1#membership`,
     // Note: Stripe's `after_expiration.recovery` is NOT supported in
     // `subscription` mode — only `payment` mode. Abandoned-membership
     // emails fall back to /join (handled in the webhook's recoveryUrl
@@ -207,7 +208,7 @@ export async function createMembershipCheckout(opts: {
       // has the session (no subscription exists), and the abandoned email
       // needs to pitch the plan that was actually in the cart.
       plan,
-      ...(applyFallOffer && { offer: FALL_OFFER.slug }),
+      ...(applyBlackFriday && { offer: BLACK_FRIDAY_OFFER.slug }),
       ...(applyMapOffer && { offer: OWNER_OFFER.slug }),
       ...(clerkId && { clerk_id: clerkId }),
       ...metaMatchToMetadata(opts.meta),

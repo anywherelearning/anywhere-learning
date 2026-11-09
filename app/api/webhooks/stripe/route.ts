@@ -38,6 +38,7 @@ import { eq, and, ne, gt } from 'drizzle-orm';
 import { subscribeAndTag, applyAndRemoveTags } from '@/lib/convertkit';
 import { metaMatchFromMetadata, sendMetaEvent } from '@/lib/meta-capi';
 import { FALL_OFFER, FALL_OFFER_PRICE_USD } from '@/lib/fall-offer';
+import { BLACK_FRIDAY_OFFER, BLACK_FRIDAY_PRICE_USD } from '@/lib/black-friday';
 import { FOUNDER_PRICE_USD, POST_FOUNDER_PRICE_USD } from '@/lib/membership';
 import {
   sendMembershipWelcomeEmail,
@@ -63,9 +64,10 @@ import {
 } from '@/lib/skills-map';
 import type Stripe from 'stripe';
 
-/** Discounted first-year price for offer subscriptions ('fall' $79, 'map' 20% off), for emails. */
+/** Discounted first-year price for offer subscriptions ('fall' and 'bf' $79, 'map' 20% off), for emails. */
 function offerFirstYearPrice(offer: string | undefined, isFounder: boolean): string | undefined {
   if (offer === FALL_OFFER.slug) return `$${FALL_OFFER_PRICE_USD}`;
+  if (offer === BLACK_FRIDAY_OFFER.slug) return `$${BLACK_FRIDAY_PRICE_USD}`;
   if (offer === OWNER_OFFER.slug) {
     const base = isFounder ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD;
     return `$${(Math.round(base * (100 - OWNER_OFFER.percentOff)) / 100).toFixed(2)}`;
