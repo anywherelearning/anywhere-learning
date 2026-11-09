@@ -396,7 +396,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'nature-choice-boards': ['physical', 'self-management', 'critical-thinking'],
   'outdoor-stem-challenges-volume-2': ['physical', 'critical-thinking', 'creativity', 'math'],
   'outdoor-movement-challenge-cards': ['physical', 'self-management'],
-  'problem-solver': ['critical-thinking', 'creativity'],
+  'problem-solver': ['critical-thinking', 'creativity', 'self-management'],
   'farmers-market-challenge': ['math', 'life-skills'],
   'nature-geography-field-study': ['physical', 'critical-thinking'],
   'street-explorer-map-maker': ['creativity', 'critical-thinking', 'physical'],

@@ -1129,23 +1129,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'problem-solver': {
     opening:
-      'Your child picks a real problem, figures out who it affects, brainstorms solutions, builds a prototype from whatever is around the house, tests it, gets feedback, and makes it better. Design thinking the way real engineers and inventors actually work, applied to everyday life.',
+      'Your child takes something that keeps bugging them, like the water bottle they lose every week, and solves it for good. They find out why it keeps happening, get every idea out, build the simplest fix from what is around the house, test it for real and make a Version 2 that still works on a tired day.',
     whatsIncluded: [
-      'Real problem identification with 8 starter cards',
-      'Who-does-this-affect research step',
-      'Brainstorming with constraints',
-      'Prototype building with household materials',
-      'Testing, feedback, and Version 2 revision',
+      'A 5-step guide from what keeps bugging you to Version 2',
+      'A worked example that shows why trying harder never lasts',
+      'Everyday problems card and Keep asking card',
+      'Idea starters card and The tests card',
+      'My fix page to fill in and keep',
     ],
-    skillTags: ['Critical Thinking', 'Problem-Solving', 'Creativity'],
+    skillTags: ['Problem-Solving', 'Critical Thinking', 'Creativity', 'Testing', 'Independence'],
     insideTheLearning: {
       lead:
-        'Your child picks a real problem, works out who it actually affects, then builds a prototype out of what is in the house and tests it on someone. It fails somewhere, gets revised, and gets tested again. The revision loop is the whole point.',
+        'Your child finds out that most fixes fail because they go after the part you can see. They keep asking why something keeps happening, build a simple fix for the real reason, and test it for a few days until it works without anyone having to remember.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Identifying a problem worth solving and researching who it really affects' },
-        { skill: 'Problem-Solving', where: 'Brainstorming inside real constraints and building a prototype from household materials' },
-        { skill: 'Planning', where: 'Sequencing the build so it gets finished, not just started' },
-        { skill: 'Communication', where: 'Testing it on a real person and taking what they say seriously' },
+        { skill: 'Critical Thinking', where: 'Asking why it keeps happening until they find the real reason' },
+        { skill: 'Creativity', where: 'Getting every idea out and going past the first one' },
+        { skill: 'Science', where: 'Testing a fix, then changing one thing at a time' },
+        { skill: 'Math', where: 'Counting and timing how often it happens before and after' },
+        { skill: 'Independence', where: 'Building something that works without being reminded' },
       ],
     },
     format: 'Project Guide',

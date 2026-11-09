@@ -1,0 +1,222 @@
+{
+  "slug": "problem-solver",
+  "category": "Planning & Problem-Solving",
+  "title": "Problem-Solver Studio",
+  "tagline": "Why · Ideas · Build · Better",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes something that keeps bugging them, like the water bottle they lose every week, and solves it for good. They find out why it keeps happening, get every idea out, build the simplest fix, test it for real and make a better version.",
+  "need": [
+    "A problem that keeps coming back",
+    "Paper, a pencil and a timer",
+    "Whatever's around the house: hooks, tape, boxes, labels",
+    "A few days to test it"
+  ],
+  "academics": [
+    { "subject": "Science", "text": "testing an idea and changing one thing" },
+    { "subject": "Math", "text": "counting, timing, before and after" },
+    { "subject": "Writing", "text": "saying exactly what the problem is" },
+    { "subject": "Planning", "text": "steps, timing and follow-through" }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You're the coach, not the problem-solver. Let them pick something that truly annoys them, even if it isn't what annoys you. Slow them down at 'why', because kids want to jump straight to fixing. And keep it light: a test that fails is the most useful part.",
+    "plan": [
+      { "when": "Session 1", "what": "Pick the problem and find the because (Steps 1 and 2)." },
+      { "when": "Session 2", "what": "Get every idea out, then pick one and build it (Steps 3 and 4)." },
+      { "when": "Over a few days", "what": "Test it and make Version 2 (Step 5)." }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      { "q": "The problem seems small to me", "a": "Small is perfect. A hook for a water bottle teaches the same thinking as a big fix, and they can finish it this week." },
+      { "q": "Their fix depends on someone else", "a": "Ask 'What part of this is yours?' Putting up a divider works. 'My sister should stop' doesn't." },
+      { "q": "The test failed", "a": "Good, now you've got something to work with. Ask what happened right before it failed, and change one thing." }
+    ]
+  },
+  "lesson": {
+    "text": "Most fixes fail because they go after the part you can see. A good fix goes after the reason it keeps happening, and it still works on a tired day.",
+    "before": "I'll try harder to remember my water bottle.",
+    "model": [
+      { "part": "Problem", "line": "I lose my water bottle about three times a week." },
+      { "part": "Because", "line": "I put it down wherever I am when I walk in." },
+      { "part": "Fix", "line": "A hook right by the door, at my height." },
+      { "part": "Test", "line": "Four days, lost it once. Moved the hook closer." }
+    ],
+    "modelNote": "Trying harder lasts about a day. The hook keeps working when they're tired, because there's nothing to remember."
+  },
+  "steps": [
+    {
+      "title": "Pick what keeps bugging you",
+      "why": "The best problems are small, real and happen all the time.",
+      "kid": "Your kid picks something that happens at least a few times a week, using the Everyday problems card in the Studio Toolkit at the end of the guide or an idea of their own. They say it in one specific sentence.",
+      "you": "Let them choose, even if you'd pick something else. If the sentence is vague, ask them to show you exactly what happens.",
+      "ask": [
+        "How often does this really happen?",
+        "What would fixed look like?"
+      ],
+      "tip": "'My sister is annoying' can't be worked on. 'Her stuff ends up on my bed' can.",
+      "levels": {
+        "explore": "Pick one problem and say it in one sentence.",
+        "develop": "Pick one that happens at least three times a week, and count it for two days.",
+        "extend": "Pick one that affects other people too, and write down who and how."
+      }
+    },
+    {
+      "title": "Find the because",
+      "why": "Fix the wrong thing and it comes right back.",
+      "kid": "Your kid watches the problem happen and uses the Keep asking card to dig into it. Then they finish this sentence: 'When I ___, I often ___, because ___.' That last blank is the whole point.",
+      "you": "Keep asking why, and hold them back from fixing it yet. Watch it happen with them, and tell them what you notice.",
+      "ask": [
+        "What happens right before it goes wrong?",
+        "What makes it worse?"
+      ],
+      "tip": "Watch it happen instead of trying to remember it. Things look different when you're paying attention.",
+      "levels": {
+        "explore": "Finish the sentence with your because.",
+        "develop": "Finish the sentence and find two different causes.",
+        "extend": "Find the causes, then write down one limit you can't change, like time, space or rules."
+      }
+    },
+    {
+      "title": "Get every idea out",
+      "why": "The first idea is rarely the good one.",
+      "kid": "Your kid sets a timer for five minutes and writes or draws every idea they can, using the Idea starters card when they get stuck. Silly and impossible ones count. When the timer goes, they circle the ones that could really happen.",
+      "you": "Add a few terrible ideas of your own. No one says 'that won't work' until the timer stops.",
+      "ask": [
+        "What would you do if time and money didn't matter?",
+        "Can you combine two of these?"
+      ],
+      "tip": "'Hire a robot butler' really means 'I want the boring part to happen by itself.' Ask what that could look like in real life.",
+      "levels": {
+        "explore": "Come up with four ideas, out loud or in drawings.",
+        "develop": "Come up with six to eight, and circle the ones that could really happen.",
+        "extend": "Come up with ten or more, then combine two into something new."
+      }
+    },
+    {
+      "title": "Pick one and build it",
+      "why": "The best idea is the one you'll still do when you're tired.",
+      "kid": "Your kid runs their circled ideas through The tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
+      "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
+      "ask": [
+        "What's the simplest version of this?",
+        "Will it work on a tired day?"
+      ],
+      "tip": "Put the fix exactly where the problem happens. A checklist in a drawer doesn't check anything.",
+      "levels": {
+        "explore": "Pick one idea and build the simplest version.",
+        "develop": "Pick one, list what you need and how you'll count whether it worked, then build it.",
+        "extend": "Build two small versions, and decide how you'll test which one wins."
+      }
+    },
+    {
+      "title": "Test it and make Version 2",
+      "why": "The first version almost never works. That's what it's for.",
+      "kid": "Your kid uses their fix for a few days and counts what they said they'd count. Then they work out what went wrong, change one thing and try again. When it works, they show someone else how it works.",
+      "you": "Don't remind them, because reminding ruins the test. Check in after a few days and ask what they noticed.",
+      "ask": [
+        "Did it work on the tired day?",
+        "What's the smallest change that would help the most?"
+      ],
+      "tip": "Count before and after, even roughly. Finding your shoes in ten seconds is very satisfying.",
+      "levels": {
+        "explore": "Try it once, change one thing and tell someone what you changed.",
+        "develop": "Test it for two or three days, count the results and make two changes.",
+        "extend": "Test it for five days, rate each day and make a guide someone else could follow."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Studio Toolkit",
+    "intro": "Problems to borrow, how to dig, ways to get unstuck and how to choose.",
+    "items": [
+      {
+        "name": "Everyday problems",
+        "lines": [
+          { "k": "Lost stuff:", "v": "the same thing, over and over" },
+          { "k": "Shared space:", "v": "their stuff ends up on your side" },
+          { "k": "Food:", "v": "it keeps going bad in the fridge" },
+          { "k": "Getting started:", "v": "45 minutes and nothing yet" },
+          { "k": "Screens:", "v": "30 minutes turned into two hours" }
+        ],
+        "ask": "What bugs you every week?"
+      },
+      {
+        "name": "Keep asking",
+        "lines": [
+          { "k": "When:", "v": "what time, what day?" },
+          { "k": "Where:", "v": "exactly where does it happen?" },
+          { "k": "Just before:", "v": "what happened right before?" },
+          { "k": "Why:", "v": "and why is that?" },
+          { "k": "Worse:", "v": "what makes it worse?" }
+        ],
+        "ask": "What's your because?"
+      },
+      {
+        "name": "Idea starters",
+        "lines": [
+          { "k": "Move it:", "v": "put it where you use it" },
+          { "k": "Fewer:", "v": "what if there was less of it?" },
+          { "k": "A cue:", "v": "something you can't miss" },
+          { "k": "Stack it:", "v": "tie it to something you already do" },
+          { "k": "Swap:", "v": "change who, or change when" }
+        ],
+        "ask": "What would make it easy?"
+      },
+      {
+        "name": "The tests",
+        "lines": [
+          { "k": "This week:", "v": "can you start it now?" },
+          { "k": "Because:", "v": "does it fix the real cause?" },
+          { "k": "Tired day:", "v": "would it still work?" },
+          { "k": "Alone:", "v": "no one has to remind you" },
+          { "k": "Proof:", "v": "what will you count?" }
+        ],
+        "ask": "Will you still do it next week?"
+      }
+    ],
+    "after": {
+      "label": "My fix",
+      "lines": [
+        "The problem",
+        "Because",
+        "My fix",
+        "What I'll count"
+      ]
+    }
+  },
+  "skills": [
+    { "name": "Finding causes", "text": "asking why it keeps happening" },
+    { "name": "Idea making", "text": "going past the first idea" },
+    { "name": "Testing", "text": "trying, counting, changing one thing" },
+    { "name": "Independence", "text": "solving it without being reminded" }
+  ],
+  "conclusion": {
+    "headline": "One less thing bugging them, and they fixed it themselves.",
+    "text": "Listen for it in the weeks after. If they say 'Why does that keep happening?' instead of complaining, or quietly put up another hook, they've started to see problems as something they can work on.",
+    "celebrate": "The first time it works on a tired day, say: 'You built that, and it's still working.'",
+    "extensions": [
+      "Solve a shared family problem the same way, like what's for supper",
+      "Turn your fix into a seven-day challenge and track it",
+      "Make a list of three small systems that make life easier",
+      "Help a friend or a grandparent fix something that bugs them"
+    ]
+  },
+  "signs": [
+    "They ask why something keeps happening",
+    "They try a small fix before complaining",
+    "They change one thing and try again"
+  ],
+  "makeItReal": "The next time someone in the family complains about the same thing twice, ask: 'What's the because?'",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/problem-solver.jpg",
+    "alt": "Watercolour of a homemade rope and pulley basket carrying folded laundry and a stuffed toy up a staircase, with a squashed cardboard first attempt on the bottom step",
+    "caption": "Will it work on a tired day?"
+  }
+}
